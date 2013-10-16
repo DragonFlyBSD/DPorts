@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ports/www/mod_amazon_proxy/Makefile,v 1.3 2012/11/17 06:02:40 svnexp Exp $
+# $FreeBSD: www/mod_amazon_proxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_amazon_proxy
 PORTVERSION=	20100913
@@ -20,6 +20,7 @@ CONFDIR=	${PREFIX}/${APACHEETCDIR}/Includes
 PORTDOCS=	README
 PORTEXAMPLES=	rpaproxy.yaml
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|modules|${APACHEMODDIR}|' ${WRKSRC}/${CONFFILE}.sample
 
