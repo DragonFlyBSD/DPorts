@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-imglikeopera
-# Date created:		24 May 2006
-# Whom:			Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-#
-# $FreeBSD: ports/www/xpi-imglikeopera/Makefile,v 1.6 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
+# $FreeBSD: www/xpi-imglikeopera/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	imglikeopera
 PORTVERSION=	0.6.20
@@ -15,5 +11,6 @@ COMMENT=	Load only the images that you want in Firefox
 
 XPI_ID=		imglikeopera@imfo.ru
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
