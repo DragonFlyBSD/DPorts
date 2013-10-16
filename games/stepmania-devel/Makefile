@@ -1,5 +1,5 @@
 # Created by: Brad Allen <braddo@tranceaddict.net>
-# $FreeBSD: games/stepmania-devel/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: games/stepmania-devel/Makefile 329747 2013-10-07 23:40:23Z marino $
 
 PORTNAME=	stepmania
 PORTVERSION=	5.0.a3
@@ -38,8 +38,9 @@ SHEBANG_FILES=	Utils/*.pl \
 		extern/zlib/zlib2ansi
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lX11 -lpthread
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
