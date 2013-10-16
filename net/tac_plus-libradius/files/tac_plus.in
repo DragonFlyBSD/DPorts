@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/net/tac_plus-libradius/files/tac_plus.in,v 1.3 2012/11/17 06:00:22 svnexp Exp $
+# $FreeBSD: net/tac_plus-libradius/files/tac_plus.in 300897 2012-07-14 14:29:18Z beat $
 #
 
 # PROVIDE: tac_plus
