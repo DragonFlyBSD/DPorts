@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Template-Plugin-Monta
-# Date created:				14 June 2005
-# Whom:					TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: www/p5-Template-Plugin-Monta/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: www/p5-Template-Plugin-Monta/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Plugin-Monta
 PORTVERSION=	0.03
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Template::Plugin::Monta.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
