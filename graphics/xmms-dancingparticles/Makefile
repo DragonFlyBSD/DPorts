@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-dancingparticles/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-dancingparticles/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	dancingparticles
 PORTVERSION=	0.6
@@ -21,6 +21,7 @@ USE_GNOME=	gtk12
 USE_SDL=	sdl
 CFLAGS+=	-I${PREFIX}/include
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\(#include.*\)SDL/\(SDL.*\)|\1\2| ; \
 		s|/usr/local|${PREFIX}|' ${WRKSRC}/*.cc ${WRKSRC}/*.h
