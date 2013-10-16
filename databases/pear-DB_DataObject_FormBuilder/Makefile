@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
-# $FreeBSD: ports/databases/pear-DB_DataObject_FormBuilder/Makefile,v 1.23 2012/12/17 02:17:58 svnexp Exp $
+# $FreeBSD: databases/pear-DB_DataObject_FormBuilder/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DB_DataObject_FormBuilder
 PORTVERSION=	1.0.2
@@ -20,6 +20,7 @@ PEAR_HTML_TABLE_DESC=	PEAR::HTML_Table support
 
 PEAR_AUTOINSTALL=yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_DATE}
