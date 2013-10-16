@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/pear-Services_ShortURL/Makefile 314411 2013-03-17 08:27:46Z miwi $
+# $FreeBSD: www/pear-Services_ShortURL/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Services_ShortURL
 PORTVERSION=	0.3.1
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 USE_PHP=	simplexml pcre spl
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
