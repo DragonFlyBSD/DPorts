@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Functions/Makefile 326706 2013-09-08 08:16:43Z az $
+# $FreeBSD: devel/p5-Module-Functions/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Functions
 PORTVERSION=	2.1.3
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Module::Functions.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
