@@ -1,8 +1,8 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-Parse-CPAN-Packages-Fast/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Parse-CPAN-Packages-Fast/Makefile 328380 2013-09-26 16:46:57Z sunpoet $
 
 PORTNAME=	Parse-CPAN-Packages-Fast
-PORTVERSION=	0.06
+PORTVERSION=	0.07
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,13 +13,10 @@ COMMENT=	Parse CPAN's package index
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-CPAN-DistnameInfo>=0:${PORTSDIR}/devel/p5-CPAN-DistnameInfo \
-		p5-PerlIO-gzip>=0:${PORTSDIR}/archivers/p5-PerlIO-gzip
+BUILD_DEPENDS=	p5-CPAN-DistnameInfo>=0:${PORTSDIR}/devel/p5-CPAN-DistnameInfo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Parse::CPAN::Packages::Fast.3
 
 .include <bsd.port.mk>
