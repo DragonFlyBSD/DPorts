@@ -1,4 +1,4 @@
-# $FreeBSD: ports/print/rubygem-colortools/Makefile,v 1.13 2012/11/17 06:00:54 svnexp Exp $
+# $FreeBSD: print/rubygem-colortools/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	colortools
 PORTVERSION=	1.3.0
@@ -14,4 +14,5 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
