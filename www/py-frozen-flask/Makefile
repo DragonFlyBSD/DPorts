@@ -1,5 +1,5 @@
 # Created by: Oleg Pudeyev <oleg@bsdpower.com>
-# $FreeBSD: www/py-frozen-flask/Makefile 323478 2013-07-22 16:47:52Z olivierd $
+# $FreeBSD: www/py-frozen-flask/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Frozen-Flask
 PORTVERSION=	0.11
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0:${PORTSDIR}/www/py-flask
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
