@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: www/hastymail2-devel/Makefile 322304 2013-07-05 06:29:55Z bapt $
+# $FreeBSD: www/hastymail2-devel/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	hastymail2
 PORTVERSION=	1.1.${HASTYMAIL_REV:S/.//g}
@@ -33,6 +33,7 @@ HASTYMAIL_REV=	2011.08.22
 OPTIONS_DEFINE=	PGSQL MYSQL DB
 DB_DESC=	Use older pear DB (instead of MDB2)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
