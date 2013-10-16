@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Ruby-property
-# Date created:		7 Aug 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: devel/ruby-property/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: devel/ruby-property/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	property
 PORTVERSION=	19990308
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	${RUBY} -i -pe 'gsub /rubyapi\.css/, "../rubyapi.css"' ${WRKSRC}/Properties-ja.html
 
