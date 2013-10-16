@@ -1,5 +1,5 @@
 # Created by: chinsan	<chinsan@mail2000.com.tw>
-# $FreeBSD: textproc/scim-input-pad/Makefile 327338 2013-09-15 12:27:30Z antoine $
+# $FreeBSD: textproc/scim-input-pad/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scim-input-pad
 PORTVERSION=	0.1.3.1
@@ -28,6 +28,7 @@ DESKTOP_ENTRIES="SCIM Input Pad" \
 
 DOCS=		ChangeLog README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
