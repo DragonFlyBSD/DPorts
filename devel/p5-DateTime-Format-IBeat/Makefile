@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Format-IBeat/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-IBeat/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-IBeat
 PORTVERSION=	0.16.1
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Format::IBeat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
