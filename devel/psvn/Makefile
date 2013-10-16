@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/psvn/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: devel/psvn/Makefile 328357 2013-09-26 13:47:57Z wg $
 
 PORTNAME=	psvn
 PORTVERSION=	20120326.212349
@@ -28,16 +28,13 @@ PLIST_FILES=	${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}/psvn.el \
 		${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}/psvn.elc
 PLIST_DIRS=	${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
 
-ELISPDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
+ELISPDIR=	${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
 
 do-build:
 	cd ${WRKSRC}; ${EMACS_CMD} -batch -q -f batch-byte-compile psvn.el
 
 do-install:
-	${MKDIR} ${ELISPDIR}
+	@${MKDIR} ${ELISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/psvn.* ${ELISPDIR}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
