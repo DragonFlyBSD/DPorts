@@ -1,9 +1,5 @@
-# New ports collection makefile for:	courier-authlib-ldap
-# Date created:				02 Apr 2005
-# Whom:					Yarema <yds@CoolRat.org>
-#
-# $FreeBSD: ports/net/courier-authlib-ldap/Makefile,v 1.22 2012/11/17 05:59:58 svnexp Exp $
-#
+# Created by: Yarema <yds@CoolRat.org>
+# $FreeBSD: net/courier-authlib-ldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PKGNAMESUFFIX=	-ldap
 
@@ -12,4 +8,5 @@ CATEGORIES=	net mail
 
 MASTERDIR=	${.CURDIR}/../../security/courier-authlib
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
