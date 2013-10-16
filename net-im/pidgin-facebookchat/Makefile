@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pidgin-facebookchat
-# Date created:		2008-07-27
-# Whom:			ports@c0decafe.net <ports@c0decafe.net>
-#
-# $FreeBSD: ports/net-im/pidgin-facebookchat/Makefile,v 1.21 2012/11/17 06:00:28 svnexp Exp $
-#
+# Created by: ports@c0decafe.net <ports@c0decafe.net>
+# $FreeBSD: net-im/pidgin-facebookchat/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgin-facebookchat
 PORTVERSION=	1.69
@@ -28,6 +24,7 @@ USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/purple-2/libfacebook.so
 
+NO_STAGE=	yes
 do-patch:
 	${REINPLACE_CMD} -e "s#i686-pc-freebsd6.0-gcc#${CC}#; \
 	s#/usr/local/#${LOCALBASE}/#g; \
