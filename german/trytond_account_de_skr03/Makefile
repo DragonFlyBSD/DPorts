@@ -1,4 +1,4 @@
-# $FreeBSD: german/trytond_account_de_skr03/Makefile 318479 2013-05-19 03:19:18Z wen $
+# $FreeBSD: german/trytond_account_de_skr03/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	trytond_account_de_skr03
 PORTVERSION=	2.4.0
@@ -18,4 +18,5 @@ CONFLICTS=	trytond_account_de_skr03-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
