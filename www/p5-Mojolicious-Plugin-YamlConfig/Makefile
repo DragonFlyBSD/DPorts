@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mojolicious-Plugin-YamlConfig
-# Date created:		2012-04-25
-# Whom:			Steven Kreuzer <skreuzer@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Mojolicious-Plugin-YamlConfig/Makefile 326021 2013-09-02 16:07:56Z az $
-#
+# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
+# $FreeBSD: www/p5-Mojolicious-Plugin-YamlConfig/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Mojolicious-Plugin-YamlConfig
 PORTVERSION=	0.1.5
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Mojolicious::Plugin::YamlConfig.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
