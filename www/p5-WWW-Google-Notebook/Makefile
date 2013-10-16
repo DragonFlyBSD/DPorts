@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Google-Notebook
-# Date created:		2006-10-15
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: www/p5-WWW-Google-Notebook/Makefile 326033 2013-09-02 16:56:12Z az $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: www/p5-WWW-Google-Notebook/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Google-Notebook
 PORTVERSION=	0.01
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Google::Notebook.3 WWW::Google::Notebook::Note.3 WWW::Google::Notebook::Notebook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
