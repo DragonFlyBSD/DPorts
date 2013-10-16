@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-mplayerthumbs/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: multimedia/kdemultimedia4-mplayerthumbs/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	mplayerthumbs
 PORTVERSION=	${KDE4_VERSION}
@@ -23,4 +23,5 @@ USE_KDE4=	automoc4 kdehier kdelibs kdeprefix
 USE_QT4=	phonon moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
