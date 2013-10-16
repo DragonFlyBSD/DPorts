@@ -1,5 +1,5 @@
 # Created by: Emil Smolenski <am@raisa.eu.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery/Makefile 326245 2013-09-04 03:27:37Z az $
+# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	FusionInventory-Agent-Task-SNMPQuery
 PORTVERSION=	1.3
@@ -23,4 +23,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
