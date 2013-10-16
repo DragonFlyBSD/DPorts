@@ -1,9 +1,4 @@
-# New ports collection makefile for:	HTTPD::Log::Filter
-# Date created:		15 Feb 2002
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTTPD-Log-Filter/Makefile 325974 2013-09-02 11:04:10Z az $
-#
+# $FreeBSD: www/p5-HTTPD-Log-Filter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTPD-Log-Filter
 PORTVERSION=	1.08
@@ -23,4 +18,5 @@ USE_PERL5=	configure
 MAN1=		exclude_robots.1
 MAN3=		HTTPD::Log::Filter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
