@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: editors/p5-Vimana/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: editors/p5-Vimana/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	Vimana
 PORTVERSION=	2010.09303
@@ -51,4 +51,5 @@ MAN3=		Vimana.3 \
 		Vimana::Recursive.3 \
 		Vimana::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
