@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-django-annoying/Makefile 321922 2013-06-28 02:10:18Z clsung $
+# $FreeBSD: www/py-django-annoying/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-annoying
 PORTVERSION=	0.7.7
@@ -17,4 +17,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
