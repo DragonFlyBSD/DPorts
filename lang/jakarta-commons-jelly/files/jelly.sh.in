@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/lang/jakarta-commons-jelly/files/jelly.sh.in,v 1.2 2012/11/17 05:58:51 svnexp Exp $
+# $FreeBSD: lang/jakarta-commons-jelly/files/jelly.sh.in 300896 2012-07-14 13:54:48Z beat $
 
 JELLY_HOME="${JELLY_HOME:-"%%DATADIR%%"}"
 CLASSPATH="${CLASSPATH}:${JELLY_HOME}/lib/forehead-1.0-beta-5.jar"

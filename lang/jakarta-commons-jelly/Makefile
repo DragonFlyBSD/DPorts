@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/lang/jakarta-commons-jelly/Makefile,v 1.7 2012/12/10 13:24:59 svnexp Exp $
+# $FreeBSD: lang/jakarta-commons-jelly/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	commons-jelly
 PORTVERSION=	1.0
@@ -29,6 +29,7 @@ PORTDOCS=	*
 SUB_FILES=	jelly.sh
 PLIST_FILES=	bin/jelly
 
+NO_STAGE=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/bin/jelly.bat ${WRKSRC}/bin/jelly
 
