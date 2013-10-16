@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 326271 2013-09-04 12:28:16Z az $
+# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	vlogin
 PORTVERSION=	3.10.2
@@ -19,6 +19,7 @@ USE_SM_COMPAT=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 # We need to rearrange, install and cleanup documentation pre-install
