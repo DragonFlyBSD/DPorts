@@ -1,5 +1,5 @@
 # Created by: steve@stevenwills.com
-# $FreeBSD: net/DarwinStreamingServer/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net/DarwinStreamingServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	DarwinStreamingServer
 PORTVERSION=	6.0.3
@@ -35,6 +35,7 @@ MAKE_ENV+=	MAKE="${MAKE}"				\
 		PTHREAD_LIBS="${PTHREAD_LIBS}"		\
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
