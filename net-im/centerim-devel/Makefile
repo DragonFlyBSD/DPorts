@@ -1,5 +1,5 @@
 # Created by: Frank Altpeter <frank@altpeter.de>
-# $FreeBSD: net-im/centerim-devel/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: net-im/centerim-devel/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	centerim
 PORTVERSION=	4.22.10.11
@@ -41,6 +41,7 @@ MAN1=	cimconv.1 centerim.1
 
 PORTDOCS=	FAQ README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
