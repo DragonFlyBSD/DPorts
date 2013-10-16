@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/www/py-cherrypy-old/pkg-plist,v 1.7 2012/11/17 06:02:59 svnexp Exp $
+@comment $FreeBSD: www/py-cherrypy-old/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/cherrypy/_cpwsgiserver3.py
 %%PYTHON_SITELIBDIR%%/cherrypy/_cpwsgiserver3.pyc
 %%PYTHON_SITELIBDIR%%/cherrypy/_cpwsgiserver3.pyo
