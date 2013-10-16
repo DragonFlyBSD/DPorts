@@ -1,9 +1,5 @@
-# New ports collection makefile for:    bsdgroup-firefox-searchplugin
-# Date created:                         2007-01-17
-# Whom:                                 Stefan 'Steve' Tell <stefan.tell@crashmail.de>
-#
-# $FreeBSD: ports/german/bsdgroup-firefox-searchplugin/Makefile,v 1.13 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Stefan 'Steve' Tell <stefan.tell@crashmail.de>
+# $FreeBSD: german/bsdgroup-firefox-searchplugin/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	bsdgroup-firefox-searchplugin
 PORTVERSION=	0.2
@@ -21,6 +17,7 @@ USE_FIREFOX=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/bsdgroup.src ${WRKSRC}
