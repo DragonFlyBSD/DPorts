@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: security/p5-Crypt-Simple/Makefile 326998 2013-09-11 17:56:03Z az $
+# $FreeBSD: security/p5-Crypt-Simple/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-Simple
 PORTVERSION=	0.06
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Crypt::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
