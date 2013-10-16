@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-google-api-python-client/Makefile 313999 2013-03-12 20:22:03Z nivit $
+# $FreeBSD: www/py-google-api-python-client/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	google-api-python-client
 PORTVERSION=	1.1
@@ -28,6 +28,7 @@ DJANGO_DESC=	Use the library with Django
 GAE_DESC=	Use the library with Google App Engine
 WEBTEST_DESC=	Use WebTest helper to test WSGI apps (Python 2.6+)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
