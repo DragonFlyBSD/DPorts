@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Dancer-Plugin-Email/Makefile 326265 2013-09-04 09:48:54Z az $
+# $FreeBSD: mail/p5-Dancer-Plugin-Email/Makefile 329844 2013-10-08 22:42:35Z gblach $
 
 PORTNAME=	Dancer-Plugin-Email
 PORTVERSION=	1.0100
@@ -22,7 +22,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Dancer::Plugin::Email.3
 
 .include <bsd.port.mk>
