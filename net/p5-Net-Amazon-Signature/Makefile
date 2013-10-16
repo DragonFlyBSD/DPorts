@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Amazon-Signature
-# Date created:		2008-03-20
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Amazon-Signature/Makefile 326468 2013-09-06 07:00:15Z az $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Amazon-Signature/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Amazon-Signature
 PORTVERSION=	0.03
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Amazon::Signature.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
