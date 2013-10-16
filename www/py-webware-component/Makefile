@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-webware-component
-# Date created:		2005-03-25
-# Whom:			Choe, Cheng-Dae
-#
-# $FreeBSD: www/py-webware-component/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Choe, Cheng-Dae
+# $FreeBSD: www/py-webware-component/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Component
 PORTVERSION=	0.2
@@ -18,6 +14,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webware>0:${PORTSDIR}/www/py-webware
 
 USE_PYTHON=	-2.7
 
+NO_STAGE=	yes
 do-build:
 	@${ECHO_MSG} -n ">> Compiling ..."
 	@${PYTHON_CMD} -c "import compileall; compileall.compile_dir('${WRKSRC}')"
