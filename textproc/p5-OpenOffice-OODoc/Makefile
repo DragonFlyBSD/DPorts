@@ -1,5 +1,5 @@
 # Created by: meyser@xenet.de
-# $FreeBSD: textproc/p5-OpenOffice-OODoc/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-OpenOffice-OODoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	OpenOffice-OODoc
 PORTVERSION=	2.124
@@ -26,4 +26,5 @@ MAN3=		OpenOffice::OODoc.3 OpenOffice::OODoc::Document.3 \
 		OpenOffice::OODoc::Meta.3 OpenOffice::OODoc::Styles.3 \
 		OpenOffice::OODoc::Text.3 OpenOffice::OODoc::XPath.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
