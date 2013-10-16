@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-ExpatXS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-SAX-ExpatXS/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SAX-ExpatXS
 PORTVERSION=	1.33
@@ -22,4 +22,5 @@ CONFIGURE_ARGS=	EXPATLIBPATH=${LOCALBASE}/lib \
 MAN3=		XML::SAX::ExpatXS.3 XML::SAX::ExpatXS::Encoding.3 \
 		XML::SAX::ExpatXS::Preload.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
