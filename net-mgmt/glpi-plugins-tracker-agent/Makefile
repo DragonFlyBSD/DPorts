@@ -1,9 +1,5 @@
-# New ports collection makefile for:   glpi-plugins-tracker-agent
-# Date created:        01 November 2009
-# Whom:                ddurieux <d.durieux@siprossii.com>
-#
-# $FreeBSD: net-mgmt/glpi-plugins-tracker-agent/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: ddurieux <d.durieux@siprossii.com>
+# $FreeBSD: net-mgmt/glpi-plugins-tracker-agent/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	agent
 DISTVERSION=	1.5.3
@@ -23,7 +19,7 @@ RUN_DEPENDS=	p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP \
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
 		p5-Parallel-ForkManager>=0:${PORTSDIR}/devel/p5-Parallel-ForkManager
 
-USE_PERL5=	yes
+USES=		perl5
 WRKSRC=		${WRKDIR}/agent_tracker
 NO_BUILD=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -31,6 +27,7 @@ CPIOARGS=	--quiet -pdum
 
 TRACKERAGENTDIR?=	share/tracker_agent
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-configure:
