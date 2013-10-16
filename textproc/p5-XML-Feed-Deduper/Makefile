@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: textproc/p5-XML-Feed-Deduper/Makefile 327459 2013-09-17 09:00:42Z bapt $
+# $FreeBSD: textproc/p5-XML-Feed-Deduper/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Feed-Deduper
 PORTVERSION=	0.06
@@ -23,6 +23,7 @@ USE_PERL5=	modbuild
 
 MAN3=		XML::Feed::Deduper.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
