@@ -1,7 +1,5 @@
-# New ports collection makefile for:	alphabet_sounds_fr
-# Date created:				6 July 2004
-# Whom:					bruno
-# $FreeBSD: ports/french/alphabet_sounds_fr/Makefile,v 1.18 2012/11/17 05:57:28 svnexp Exp $
+# Created by: bruno
+# $FreeBSD: french/alphabet_sounds_fr/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	alphabet_sounds_fr
 PORTVERSION=	0.3
@@ -18,6 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s@PREFIX=/usr/local@PREFIX=${PREFIX}@g " ${WRKSRC}/install.sh
 
