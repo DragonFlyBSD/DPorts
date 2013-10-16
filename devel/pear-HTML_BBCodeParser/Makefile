@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: devel/pear-HTML_BBCodeParser/Makefile 318051 2013-05-13 09:52:59Z miwi $
+# $FreeBSD: devel/pear-HTML_BBCodeParser/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_BBCodeParser
 PORTVERSION=	1.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/HTML/Common.php:${PORTSDIR}/devel/pear-HTML_Common
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
