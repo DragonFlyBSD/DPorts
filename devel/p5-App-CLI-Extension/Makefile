@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-App-CLI-Extension/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-App-CLI-Extension/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	App-CLI-Extension
 PORTVERSION=	1.42.1
@@ -32,4 +32,5 @@ MAN3=		App::CLI::Extension.3 \
 		App::CLI::Extension::Exception.3 \
 		App::CLI::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
