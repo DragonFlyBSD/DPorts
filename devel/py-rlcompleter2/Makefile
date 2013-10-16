@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-rlcompleter2/Makefile 318600 2013-05-20 13:57:45Z miwi $
+# $FreeBSD: devel/py-rlcompleter2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	rlcompleter2
 PORTVERSION=	0.98
@@ -19,4 +19,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/rlcompleter2.py \
 		%%PYTHON_SITELIBDIR%%/rlcompleter2.pyc \
 		%%PYTHON_SITELIBDIR%%/rlcompleter2.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
