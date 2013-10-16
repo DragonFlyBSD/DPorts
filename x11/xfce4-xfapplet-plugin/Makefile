@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11/xfce4-xfapplet-plugin/Makefile 325735 2013-08-30 23:38:43Z bapt $
+# $FreeBSD: x11/xfce4-xfapplet-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-xfapplet-plugin
 PORTVERSION=	0.1.0
@@ -20,4 +20,5 @@ USES=		gettext gmake pkgconfig
 USE_GNOME=	gtk20 intltool intlhack orbit2
 USE_XFCE=	configenv libgui libutil panel
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
