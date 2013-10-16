@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-tabextensions-ru
-# Date created:		24 May 2006
-# Whom:			Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-#
-# $FreeBSD: ports/russian/xpi-tabextensions/Makefile,v 1.3 2012/11/17 06:00:56 svnexp Exp $
-#
+# Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
+# $FreeBSD: russian/xpi-tabextensions/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	tabextensions
 PORTVERSION=	2.1.2006031301
@@ -24,5 +20,6 @@ XPI_FILES=	chrome/tabextensions.jar chrome.manifest install.js install.rdf \
 		locale.inf options.inf
 XPI_DIRS=	chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
