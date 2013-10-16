@@ -1,8 +1,5 @@
-# New ports collection makefile for:		squirrelmail-plugins
-# Date created:		02 Jan 2008
-# Whom:		Gerrit Beine <gerrit.beine@gmx.de>
-#
-# $FreeBSD: ports/mail/squirrelmail-plugins/Makefile,v 1.5 2012/11/17 05:59:15 svnexp Exp $
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: mail/squirrelmail-plugins/Makefile 328218 2013-09-24 23:43:57Z bdrewery $
 
 PORTNAME=		squirrelmail-plugins
 PORTVERSION=		1.0
@@ -15,6 +12,7 @@ MAINTAINER=		ports@FreeBSD.org
 COMMENT=		A "meta-port" to install SquirrelMail plugins
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 .ifdef SQUIRRELDIR
 PLIST_SUB+=	SQUIRRELDIR=${SQUIRRELDIR}
