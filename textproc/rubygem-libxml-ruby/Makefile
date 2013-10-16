@@ -1,5 +1,5 @@
 # Created by: Michael Schout <mschout@gkg.net>
-# $FreeBSD: textproc/rubygem-libxml-ruby/Makefile 319741 2013-06-03 01:21:13Z swills $
+# $FreeBSD: textproc/rubygem-libxml-ruby/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libxml-ruby
 PORTVERSION=	2.6.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
