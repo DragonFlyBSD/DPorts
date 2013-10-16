@@ -1,4 +1,4 @@
-# $FreeBSD: databases/animenfo-client-gtk/Makefile 316407 2013-04-24 07:35:40Z ak $
+# $FreeBSD: databases/animenfo-client-gtk/Makefile 329583 2013-10-06 15:09:37Z dinoex $
 
 PORTNAME=	animenfo
 PORTVERSION=	20020819
