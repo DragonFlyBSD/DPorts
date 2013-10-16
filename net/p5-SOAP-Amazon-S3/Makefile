@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-SOAP-Amazon-S3/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-SOAP-Amazon-S3/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	SOAP-Amazon-S3
 PORTVERSION=	0.040.1
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		SOAP::Amazon::S3.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
