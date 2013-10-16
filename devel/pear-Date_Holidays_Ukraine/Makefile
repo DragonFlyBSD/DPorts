@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pear-Date_Holidays_Ukraine
-# Date created:		2008-06-05
-# Whom:			Thomas Abthorpe <tabthorpe@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-Date_Holidays_Ukraine/Makefile,v 1.6 2012/11/17 05:56:38 svnexp Exp $
-#
+# $FreeBSD: devel/pear-Date_Holidays_Ukraine/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date_Holidays_Ukraine
 PORTVERSION=	0.1.2
@@ -19,6 +14,7 @@ CATEGORY=	Date
 FILES=		Holidays/Driver/Ukraine.php
 TESTS=		Date_Holidays_Driver_Ukraine_TestSuite.php
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
