@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-Pushover/Makefile 325965 2013-09-02 10:00:38Z az $
+# $FreeBSD: www/p5-WebService-Pushover/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Pushover
 DISTVERSION=	v0.0.6
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		WebService::Pushover.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
