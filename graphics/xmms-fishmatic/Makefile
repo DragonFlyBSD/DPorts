@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-fishmatic/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: graphics/xmms-fishmatic/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmms-fishmatic
 PORTVERSION=	0.0.1
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LIBS="-lGL -lXext ${LIBS}"
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/config.cache
 	@${REINPLACE_CMD} -e 's|-O2||; \
