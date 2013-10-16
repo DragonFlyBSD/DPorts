@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-View-ClearSilver/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-View-ClearSilver/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-ClearSilver
 PORTVERSION=	0.02
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN3=		Catalyst::Helper::View::ClearSilver.3 \
 		Catalyst::View::ClearSilver.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
