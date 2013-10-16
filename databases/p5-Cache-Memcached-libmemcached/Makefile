@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: databases/p5-Cache-Memcached-libmemcached/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-Cache-Memcached-libmemcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Cache-Memcached-libmemcached
 PORTVERSION=	0.02011
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Cache::Memcached::libmemcached.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
