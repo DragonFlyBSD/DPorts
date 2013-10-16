@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Log-Dispatch-Perl/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Log-Dispatch-Perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Dispatch-Perl
 PORTVERSION=	0.04
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::Perl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
