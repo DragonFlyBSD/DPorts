@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: games/crossfire-client/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/crossfire-client/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	crossfire-client
 PORTVERSION=	1.70.0
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN6=	crossfire-client-gtk2.6
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/#include <curl\/types.h>/d' \
 		${WRKSRC}/common/metaserver.c
