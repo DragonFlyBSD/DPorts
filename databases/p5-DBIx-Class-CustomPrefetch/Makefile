@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: databases/p5-DBIx-Class-CustomPrefetch/Makefile 325201 2013-08-22 14:44:05Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-CustomPrefetch/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-CustomPrefetch
 PORTVERSION=	0.09
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Class::CustomPrefetch.3 DBIx::Class::ResultSet::CustomPrefetch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
