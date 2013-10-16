@@ -1,5 +1,5 @@
 # Created by: Robert Felber <robtone@ek-muc.de>
-# $FreeBSD: ports/mail/postfix-policyd-weight/Makefile,v 1.20 2012/11/17 05:59:11 svnexp Exp $
+# $FreeBSD: mail/postfix-policyd-weight/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	policyd-weight
 PORTVERSION=	0.1.15.1
@@ -22,12 +22,13 @@ USERS=		polw
 GROUPS=		polw
 
 USE_RC_SUBR+=	policyd-weight
-USE_PERL5=	yes
+USES=		perl5
 NO_BUILD=	yes
 
 MAN8+=	policyd-weight.8
 MAN5+=	policyd-weight.conf.5
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
