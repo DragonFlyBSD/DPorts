@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tuxpaint-stamps
-# Date created:				15 Jul 2005
-# Whom:					Alejandro Pulver <alejandro@varnet.biz>
-#
-# $FreeBSD: ports/games/tuxpaint-stamps/Makefile,v 1.18 2012/11/17 05:57:55 svnexp Exp $
-#
+# Created by: Alejandro Pulver <alejandro@varnet.biz>
+# $FreeBSD: games/tuxpaint-stamps/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tuxpaint-stamps
 PORTVERSION=	2009.06.28
@@ -20,6 +16,7 @@ INSTALL_TARGET=	install-all
 
 DATADIR=	${PREFIX}/share/tuxpaint
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' ${WRKSRC}/${MAKEFILE}
 
