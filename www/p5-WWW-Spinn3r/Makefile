@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Spinn3r
 PORTVERSION=	3.00700001
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN3=		WWW::Spinn3r.3 \
 		WWW::Spinn3r::Synced.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
