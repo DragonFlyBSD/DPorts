@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Tree/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-DBIx-Class-Tree/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Tree
 PORTVERSION=	0.03003
@@ -22,4 +22,5 @@ MAN3=	DBIx::Class::Tree.3 \
 	DBIx::Class::Tree::AdjacencyList.3 \
 	DBIx::Class::Tree::AdjacencyList::Ordered.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
