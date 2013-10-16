@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Regexp-Common-Email-Address/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Regexp-Common-Email-Address/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Regexp-Common-Email-Address
 PORTVERSION=	1.01
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Regexp::Common::Email::Address.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
