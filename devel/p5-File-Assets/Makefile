@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Assets/Makefile 326592 2013-09-07 10:16:46Z az $
+# $FreeBSD: devel/p5-File-Assets/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Assets
 PORTVERSION=	0.064
@@ -42,4 +42,5 @@ USE_PERL5=	configure
 
 MAN3=	File::Assets.3 File::Assets::Asset.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
