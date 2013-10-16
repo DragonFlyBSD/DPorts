@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: x11-themes/gtk-cleanice-engine/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-themes/gtk-cleanice-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	gtk-cleanice-engine
 PORTVERSION=	2.4.1
@@ -21,6 +21,7 @@ USE_AUTOTOOLS=	libtool
 THEME=		cleanice-theme-1.2.7
 THEMEDIR=	${WRKDIR}/${THEME}/Theme
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${PREFIX}/share/themes/CleanIce
 	${INSTALL_DATA} ${THEMEDIR}/cleanice/index.theme \
