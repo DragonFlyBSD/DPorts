@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@netability.ie>
-# $FreeBSD: www/drupal6-nodewords/Makefile 313236 2013-03-02 14:38:46Z miwi $
+# $FreeBSD: www/drupal6-nodewords/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nodewords
 DISTVERSION=	6.x-1.14
@@ -26,4 +26,5 @@ MODULE_FILES=	includes/forum.inc includes/image.inc includes/node.inc \
 		nodewords_og/nodewords_og.module
 DOC_FILES=	README.txt CHANGELOG.txt API.txt LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
