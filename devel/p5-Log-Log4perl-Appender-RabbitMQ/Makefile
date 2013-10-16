@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Log-Log4perl-Appender-RabbitMQ/Makefile 325875 2013-09-01 16:51:08Z az $
+# $FreeBSD: devel/p5-Log-Log4perl-Appender-RabbitMQ/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Log4perl-Appender-RabbitMQ
 PORTVERSION=	0.102220
@@ -26,4 +26,5 @@ MAN3=		Log::Log4perl::Appender::RabbitMQ.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
