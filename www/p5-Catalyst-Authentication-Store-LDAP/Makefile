@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-LDAP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Authentication-Store-LDAP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Authentication-Store-LDAP
 PORTVERSION=	1.014
@@ -24,4 +24,5 @@ MAN3=		Catalyst::Authentication::Store::LDAP.3 \
 		Catalyst::Authentication::Store::LDAP::Backend.3 \
 		Catalyst::Authentication::Store::LDAP::User.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
