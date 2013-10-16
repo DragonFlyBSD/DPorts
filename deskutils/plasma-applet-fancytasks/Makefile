@@ -1,9 +1,5 @@
-# New ports collection makefile for:	plasma-applet-fancytasks
-# Date created:		2009-12-06
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: deskutils/plasma-applet-fancytasks/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: deskutils/plasma-applet-fancytasks/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	fancytasks
 PORTVERSION=	1.1.0
@@ -25,4 +21,5 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
