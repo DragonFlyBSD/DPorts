@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Cache-Memcached-Tie/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Cache-Memcached-Tie/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Cache-Memcached-Tie
 PORTVERSION=	0.09
@@ -17,4 +17,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Cache::Memcached::Tie.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
