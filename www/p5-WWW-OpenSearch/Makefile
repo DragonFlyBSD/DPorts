@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-OpenSearch/Makefile 326068 2013-09-02 19:32:09Z az $
+# $FreeBSD: www/p5-WWW-OpenSearch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-OpenSearch
 PORTVERSION=	0.17
@@ -30,4 +30,5 @@ MAN3=		WWW::OpenSearch.3 \
 		WWW::OpenSearch::Request.3 \
 		WWW::OpenSearch::Url.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
