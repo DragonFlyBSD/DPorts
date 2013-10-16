@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: textproc/p5-Template-Plugin-Autoformat/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-Template-Plugin-Autoformat/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Template-Plugin-Autoformat
 PORTVERSION=	2.71
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Template::Plugin::Autoformat.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
