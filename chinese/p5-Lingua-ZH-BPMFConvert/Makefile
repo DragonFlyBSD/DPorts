@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/p5-Lingua-ZH-BPMFConvert/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: chinese/p5-Lingua-ZH-BPMFConvert/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Lingua-ZH-BPMFConvert
 PORTVERSION=	0.01
@@ -12,7 +12,5 @@ COMMENT=	Rule-based conversion of BPMF (bopomofo) into Hanyu Pinyin
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Lingua::ZH::BPMFConvert.3
 
 .include <bsd.port.mk>
