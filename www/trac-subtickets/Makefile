@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-subtickets/Makefile 323087 2013-07-16 05:41:40Z miwi $
+# $FreeBSD: www/trac-subtickets/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	subtickets
 PORTVERSION=	0.2.0.${GITDATE}
@@ -30,4 +30,5 @@ PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/${GITDATE}//g}dev
 PLIST_FILES=		bin/check-trac-subtickets \
 			%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
