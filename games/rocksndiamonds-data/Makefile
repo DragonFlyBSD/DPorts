@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rocksndiamonds-data/Makefile 314981 2013-03-23 02:31:44Z beech $
+# $FreeBSD: games/rocksndiamonds-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rocksndiamonds-data
 PORTVERSION=	20130322
@@ -55,6 +55,7 @@ RnD_jue_DESC=	Levels default for R'n'D jue
 
 PREFIX=		/usr/local
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRnD}
