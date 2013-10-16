@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/nunnimcax/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: textproc/nunnimcax/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	NunniMCAX
 PORTVERSION=	1.4.1
