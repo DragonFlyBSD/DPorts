@@ -1,5 +1,5 @@
 # Created by: Deni Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: x11-themes/gtk-equinox-engine/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-themes/gtk-equinox-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	equinox
 PORTVERSION=	1.50
@@ -36,6 +36,7 @@ OPTIONS_DEFINE=	ANIMATION EXAMPLES DOCS
 OPTIONS_DEFAULT=	ANIMATION
 ANIMATION_DESC=	Enable animation support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMATION}
