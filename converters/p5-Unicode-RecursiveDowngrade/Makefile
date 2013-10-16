@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Unicode-RecursiveDowngrade/Makefile 326872 2013-09-10 07:55:33Z az $
+# $FreeBSD: converters/p5-Unicode-RecursiveDowngrade/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-RecursiveDowngrade
 PORTVERSION=	0.04
@@ -13,4 +13,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Unicode::RecursiveDowngrade.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
