@@ -1,6 +1,5 @@
-# Created by:		Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: databases/py-flask-sqlalchemy/Makefile 323988 2013-07-30 19:46:05Z olivierd $
-#
+# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
+# $FreeBSD: databases/py-flask-sqlalchemy/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Flask-SQLAlchemy
 PORTVERSION=	1.0
@@ -19,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.10:${PORTSDIR}/www/py-flask \
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
