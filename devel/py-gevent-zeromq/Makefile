@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-gevent-zeromq/Makefile,v 1.3 2012/11/17 05:56:47 svnexp Exp $
+# $FreeBSD: devel/py-gevent-zeromq/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gevent-zeromq
 PORTVERSION=	0.2.5
@@ -18,6 +18,7 @@ USE_PYTHON=	2.7
 USE_PYDISTUTILS=	yes
 
 # Avoid warning
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|install_requires|#install_requires|' \
 		${WRKSRC}/setup.py
