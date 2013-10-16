@@ -1,10 +1,5 @@
-# ex:ts=8
-# New ports collection makefile for:	dictd-database
-# Date created:		Jan 29, 2001
-# Whom:			clive
-#
-# $FreeBSD: ports/net/dictd-database/Makefile,v 1.18 2012/11/17 05:59:59 svnexp Exp $
-#
+# Created by: clive
+# $FreeBSD: net/dictd-database/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dictd-database
 PORTVERSION=	20031009
@@ -31,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/dictd:${PORTSDIR}/net/dictd
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/dict
 	@${INSTALL_DATA} ${WRKDIR}/*.index ${PREFIX}/lib/dict
