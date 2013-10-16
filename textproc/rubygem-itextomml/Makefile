@@ -1,9 +1,5 @@
-# New ports collection makefile for:	textproc/rubygem-itextomml
-# Date created:				23 Oct, 2011
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/rubygem-itextomml/Makefile,v 1.4 2012/11/17 06:02:20 svnexp Exp $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: textproc/rubygem-itextomml/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	itextomml
 PORTVERSION=	1.4.10
@@ -17,4 +13,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
