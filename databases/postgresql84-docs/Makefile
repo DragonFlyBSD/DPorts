@@ -1,13 +1,10 @@
-# New ports collection makefile for:	PostgreSQL docs
-# Date created:		August 26, 2002
-# Whom:			Palle Girgensohn <girgen@pingpong.net>
-#
-# $FreeBSD: ports/databases/postgresql84-docs/Makefile,v 1.2 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: Palle Girgensohn <girgen@pingpong.net>
+# $FreeBSD: databases/postgresql84-docs/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
-PKGNAMESUFFIX=	-docs
+PKGNAMESUFFIX?=        ${DISTV:S/.//}-docs
+DISTV= ${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The PostgreSQL documentation set
@@ -19,10 +16,12 @@ WANT_PGSQL_VER?=84
 
 NO_BUILD=	YES
 SLAVE_ONLY=	YES
+COMPONENT=	-docs
 PATCHDIR=	mustnotexist
 
 PGDOCSDIR?=	${DOCSDIR}/release-${PGSQL_VER}
 
+NO_STAGE=	yes
 do-install:
 	@ $(MKDIR) ${PGDOCSDIR}; \
 	${GZIP_CMD} -dc ${WRKSRC}/doc/postgres.tar.gz | \
