@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: mail/p5-Mail-Address-MobileJp/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-Address-MobileJp/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Address-MobileJp
 PORTVERSION=	0.09
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Address::MobileJp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
