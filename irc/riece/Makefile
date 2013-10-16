@@ -1,5 +1,5 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: irc/riece/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: irc/riece/Makefile 328360 2013-09-26 13:55:26Z wg $
 
 PORTNAME=	riece
 PORTVERSION=	9.0.0
@@ -15,25 +15,20 @@ COMMENT=	IRC client for Emacs
 
 LICENSE=	GPLv3
 
+USES=		gmake
 USE_EMACS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-emacs=${EMACS_CMD} \
-		--with-lispdir=${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
-USE_GMAKE=	yes
+		--with-lispdir=${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 
 OPTIONS_DEFINE=	DOCS
 
 INFO=	riece-en riece-ja
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in AUTHORS ChangeLog NEWS NEWS.ja README README.ja doc/HACKING doc/HACKING.ja
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
