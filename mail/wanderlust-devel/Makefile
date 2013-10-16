@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: mail/wanderlust-devel/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: mail/wanderlust-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	wanderlust
 PORTVERSION=	2.15.9.b.${SNAPDATE}
@@ -25,6 +25,7 @@ SNAPTIME=	0900
 CONFLICTS=	wanderlust-*-2.14.*
 NO_LATEST_LINK=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 MIMEUI_PORT_NAME=	${MIMEUI_PRODUCT}
