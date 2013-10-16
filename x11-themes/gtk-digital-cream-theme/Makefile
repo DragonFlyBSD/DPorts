@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Digital Cream (gtk20 theme/master)
-# Date created:				08 Sep 2006
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gtk-digital-cream-theme/Makefile,v 1.9 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: x11-themes/gtk-digital-cream-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	digital-cream
 PORTVERSION=	1.0
@@ -34,6 +30,7 @@ PLIST_SUB+=	GTK20="@comment " METACITY=""
 USE_GNOME=	gnomehier
 .endif
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type f -print0 | ${XARGS} -0 ${CHMOD} 644
 
