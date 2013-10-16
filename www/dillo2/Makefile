@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: www/dillo2/Makefile 327169 2013-09-13 17:27:07Z marino $
+# $FreeBSD: www/dillo2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	dillo
 DISTVERSION=	3.0.3
@@ -36,6 +36,7 @@ COOKIES_DESC=		Cookie support
 HYPHENATION_DESC=	Hyphenation file(s) for HYPHENATION_LANGS
 SSL_DESC=		Experimental HTTPS support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOOKIES}
