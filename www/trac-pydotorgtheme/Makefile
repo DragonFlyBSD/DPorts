@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-pydotorgtheme/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-pydotorgtheme/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;:tl}
 PORTVERSION=	2.0
@@ -20,4 +20,5 @@ PYDISTUTILS_PKGNAME=	TracPyDotOrgTheme
 WRKSRC=			${WRKDIR}/${PORTNAME}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
