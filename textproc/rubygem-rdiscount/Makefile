@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: textproc/rubygem-rdiscount/Makefile 321657 2013-06-23 21:26:52Z swills $
+# $FreeBSD: textproc/rubygem-rdiscount/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rdiscount
 PORTVERSION=	2.1.6
@@ -15,4 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/rdiscount
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
