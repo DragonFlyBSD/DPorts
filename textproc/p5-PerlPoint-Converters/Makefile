@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	PerlPoint-Converters
 PORTVERSION=	1.02.05
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure patch
+NO_STAGE=	yes
 
 MAN1=		pp2html.1 pp2latex.1
 MAN3=		Bundle::PerlPoint.3 \
