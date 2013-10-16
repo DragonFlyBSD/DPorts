@@ -1,6 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: sysutils/xfce4-power-manager/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: sysutils/xfce4-power-manager/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfce4-power-manager
 PORTVERSION=	1.2.0
@@ -27,6 +26,7 @@ CONFIGURE_ARGS=	--disable-network-manager \
 
 MAN1=		xfce4-power-manager.1 xfce4-power-manager-settings.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|--libs "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g; \
 		s|--cflags "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g' \
