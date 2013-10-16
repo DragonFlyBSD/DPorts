@@ -1,5 +1,5 @@
 # Created by: Sergey Kandaurov <pluknet@gmail.com>
-# $FreeBSD: russian/p5-Convert-Cyrillic/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: russian/p5-Convert-Cyrillic/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	Convert-Cyrillic
 PORTVERSION=	1.05
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=		Convert::Cyrillic.3 \
 		Lingua::DetectCharset.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
