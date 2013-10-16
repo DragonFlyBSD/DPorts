@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/p5-POE-Component-Logger/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-POE-Component-Logger/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Component-Logger
 PORTVERSION=	1.10
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::Logger.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
