@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-MicroMason/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-Text-MicroMason/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-MicroMason
 PORTVERSION=	2.13
@@ -51,4 +51,5 @@ MAN3=	Text::MicroMason.3 \
 	Text::MicroMason::TemplatePath.3 \
 	Text::MicroMason::TextTemplate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
