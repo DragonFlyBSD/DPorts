@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: devel/p5-Module-Install-Template/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Module-Install-Template/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Install-Template
 PORTVERSION=	0.08
@@ -18,4 +18,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=	Module::Install::Template.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
