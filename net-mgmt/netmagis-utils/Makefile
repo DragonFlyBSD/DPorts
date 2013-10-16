@@ -1,5 +1,5 @@
 # Created by: Pierre David <pdagog@gmail.com>, Jean Benoit <jean@unistra.fr>
-# $FreeBSD: ports/net-mgmt/netmagis-utils/Makefile,v 1.2 2012/11/17 06:00:34 svnexp Exp $
+# $FreeBSD: net-mgmt/netmagis-utils/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	netmagis
 PKGNAMESUFFIX=	-utils
@@ -10,4 +10,5 @@ MASTERDIR=	${.CURDIR}/../netmagis-common
 
 PLIST=		${.CURDIR}/pkg-plist
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
