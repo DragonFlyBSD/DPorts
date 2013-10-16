@@ -1,5 +1,5 @@
 # Created by: tiger <tiger@whitetigersd.com>
-# $FreeBSD: devel/p5-SSN-Validate/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-SSN-Validate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SSN-Validate
 PORTVERSION=	0.18
@@ -20,4 +20,5 @@ MAN3=		SSN::Validate.3
 test: all
 	cd ${WRKSRC} && ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
