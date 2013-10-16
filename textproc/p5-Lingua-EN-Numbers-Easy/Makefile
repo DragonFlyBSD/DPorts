@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua-EN-Numbers-Easy
-# Date created:				15 September 2003
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
-# $FreeBSD: textproc/p5-Lingua-EN-Numbers-Easy/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
+# $FreeBSD: textproc/p5-Lingua-EN-Numbers-Easy/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-Numbers-Easy
 PORTVERSION=	2009110701
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Lingua::EN::Numbers::Easy.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
