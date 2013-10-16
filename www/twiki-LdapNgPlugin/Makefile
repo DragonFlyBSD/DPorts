@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/twiki-LdapNgPlugin/Makefile 316241 2013-04-22 15:37:34Z bdrewery $
+# $FreeBSD: www/twiki-LdapNgPlugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LdapNgPlugin
 SVNREV=		15577
@@ -10,5 +10,6 @@ COMMENT=	Query and display data from an LDAP directory
 
 TWDEP=		LdapContrib>=0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
