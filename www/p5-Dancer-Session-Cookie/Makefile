@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Dancer-Session-Cookie/Makefile 324567 2013-08-11 02:02:16Z kuriyama $
+# $FreeBSD: www/p5-Dancer-Session-Cookie/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Dancer-Session-Cookie
 PORTVERSION=	0.22
@@ -28,4 +28,5 @@ USE_PERL5=	configure
 
 MAN3=	Dancer::Session::Cookie.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
