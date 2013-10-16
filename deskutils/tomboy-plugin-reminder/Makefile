@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: deskutils/tomboy-plugin-reminder/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: deskutils/tomboy-plugin-reminder/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tomboy-plugin-reminder
 PORTVERSION=	0.9.2
@@ -17,4 +17,5 @@ RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
