@@ -1,9 +1,4 @@
-# New ports collection makefile for:	plasma-applet-geekclock
-# Date Created:				2009-07-08
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: x11-clocks/plasma-applet-geekclock/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: x11-clocks/plasma-applet-geekclock/Makefile 329138 2013-10-03 04:20:03Z jhale $
 
 PORTNAME=	geekclock
 PORTVERSION=	1.0
@@ -14,7 +9,7 @@ PKGNAMEPREFIX=	plasma-applet-
 DISTNAME=	geek-clock-plasmoid-${PORTVERSION}-src
 
 MAINTAINER=	jhale@FreeBSD.org
-COMMENT=	Geeky analog clock plasma applet for KDE4
+COMMENT=	KDE4 geeky analog clock plasma applet
 
 USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs workspace
