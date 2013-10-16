@@ -1,5 +1,5 @@
 # Created by: Vasil Dimov <vd@datamax.bg>
-# $FreeBSD: sysutils/rdiff-backup-devel/Makefile 319280 2013-05-27 19:15:03Z bsam $
+# $FreeBSD: sysutils/rdiff-backup-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rdiff-backup
 PORTVERSION=	1.3.3
@@ -30,6 +30,7 @@ PORTDOCS=	CHANGELOG README COPYING FAQ.html
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
