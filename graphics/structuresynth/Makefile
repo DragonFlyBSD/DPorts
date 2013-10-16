@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/structuresynth/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/structuresynth/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	structuresynth
 PORTVERSION=	1.5.0
@@ -17,6 +17,7 @@ USE_QT4=	qmake_build corelib gui opengl moc_build rcc_build xml script
 WRKSRC=		${WRKDIR}/structure-synth
 USE_DOS2UNIX=	*.cpp *.h
 
+NO_STAGE=	yes
 post-extract:
 	@${MV} "${WRKDIR}/Structure Synth Source Code" ${WRKSRC}
 	@${RM} -rf ${WRKSRC}/Examples/DontDeploy
