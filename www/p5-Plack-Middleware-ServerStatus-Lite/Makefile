@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-ServerStatus-Lite/Makefile 324546 2013-08-10 15:35:52Z kuriyama $
+# $FreeBSD: www/p5-Plack-Middleware-ServerStatus-Lite/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-ServerStatus-Lite
 PORTVERSION=	0.18
@@ -26,4 +26,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Plack::Middleware::ServerStatus::Lite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
