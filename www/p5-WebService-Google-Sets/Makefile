@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WebService-Google-Sets/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-WebService-Google-Sets/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Google-Sets
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	WebService::Google::Sets.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
