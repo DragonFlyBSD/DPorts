@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/another-htmllint/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/another-htmllint/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	another-htmllint
 PORTVERSION=	20060601
@@ -25,6 +25,7 @@ SEDSUB=		${SED} -e 's@%PREFIX%@${PREFIX}@'
 # Please set this!
 HTMLLINT_ADMIN?=	kuriyama@FreeBSD.org
 
+NO_STAGE=	yes
 do-build:
 	@${SEDSUB} ${FILESDIR}/htmllint > ${WRKSRC}/htmllint
 	@${SEDSUB} ${WRKSRC}/htmllintenv > ${WRKSRC}/htmllint.env
