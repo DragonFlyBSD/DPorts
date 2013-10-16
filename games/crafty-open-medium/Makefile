@@ -1,9 +1,5 @@
-# New ports collection makefile for:	crafty-open-medium
-# Date created:				1 June 1998
-# Whom:					Stefan Eggers <seggers@semyam.dinoco.de>
-#
-# $FreeBSD: ports/games/crafty-open-medium/Makefile,v 1.18 2012/11/17 05:57:35 svnexp Exp $
-#
+# Created by: Stefan Eggers <seggers@semyam.dinoco.de>
+# $FreeBSD: games/crafty-open-medium/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	crafty-open-medium
 PORTVERSION=	20070909
@@ -24,6 +20,7 @@ USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
 CONFLICTS=	crafty-open-enormous-* crafty-open-large-* crafty-open-default-*
 
+NO_STAGE=	yes
 do-build:
 	@${ECHO_MSG} '================================================================'
 	@${ECHO_MSG} 'Ignore warnings about illegal moves.  These warnings are normal.'
