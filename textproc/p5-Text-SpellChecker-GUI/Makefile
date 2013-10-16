@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: textproc/p5-Text-SpellChecker-GUI/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-Text-SpellChecker-GUI/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-SpellChecker-GUI
 PORTVERSION=	0.0.2
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN3=		Text::SpellChecker::GUI.3 \
 		Text::SpellChecker::GUI::Curses.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
