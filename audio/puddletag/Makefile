@@ -1,4 +1,4 @@
-# $FreeBSD: audio/puddletag/Makefile 322705 2013-07-10 15:25:37Z makc $
+# $FreeBSD: audio/puddletag/Makefile 328368 2013-09-26 14:47:00Z pawel $
 
 PORTNAME=	puddletag
 PORTVERSION=	1.0.1
@@ -24,7 +24,5 @@ USE_PYTHON=	2.6-2.7
 USE_PYDISTUTILS=yes
 INSTALLS_ICONS=	yes
 NO_BUILD=	yes
-
-MAN1=		puddletag.1
 
 .include <bsd.port.mk>
