@@ -1,9 +1,5 @@
-# New ports collection makefile for:   freeradius-client
-# Date created:			Wed Nov 26 18:14:37 EET 2008
-# Whom:				netch@netch.kiev.ua
-#
-# $FreeBSD: ports/net/freeradius-client/Makefile,v 1.4 2012/11/17 06:00:00 svnexp Exp $
-#
+# Created by: netch@netch.kiev.ua
+# $FreeBSD: net/freeradius-client/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	freeradius-client
 PORTVERSION=	1.1.6
@@ -22,4 +18,5 @@ USE_LDCONFIG=	yes
 
 CONFLICTS=	radiusclient-ng-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
