@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: net-mgmt/p5-Tie-NetAddr-IP/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: net-mgmt/p5-Tie-NetAddr-IP/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Tie-NetAddr-IP
 PORTVERSION=	1.51
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Tie::NetAddr::IP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
