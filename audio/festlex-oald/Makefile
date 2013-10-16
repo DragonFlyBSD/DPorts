@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festlex-oald/Makefile 311049 2013-01-27 05:55:20Z tabthorpe $
+# $FreeBSD: audio/festlex-oald/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festlex-oald
 PORTVERSION=	1.4.1
@@ -20,6 +20,7 @@ RESTRICTED=	no-commercial-use
 WRKSRC=		${WRKDIR}/festival
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 FHOME=		${PREFIX}/share/festival
 
