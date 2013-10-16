@@ -1,5 +1,5 @@
 # Created by: Anish Mistry (<amistry@am-productions.biz>)
-# $FreeBSD: devel/pear-Validate_Finance/Makefile 318097 2013-05-13 14:39:41Z miwi $
+# $FreeBSD: devel/pear-Validate_Finance/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Validate_Finance
 PORTVERSION=	0.5.6
@@ -13,6 +13,7 @@ RUN_DEPENDS=	pear-Validate>=0.5.0:${PORTSDIR}/devel/pear-Validate
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
