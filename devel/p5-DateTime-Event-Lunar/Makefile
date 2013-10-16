@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-DateTime-Event-Lunar/Makefile 326868 2013-09-10 06:44:11Z az $
+# $FreeBSD: devel/p5-DateTime-Event-Lunar/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Event-Lunar
 PORTVERSION=	0.06
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Lunar.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
