@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-p2p/p5-Net-BitTorrent/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-p2p/p5-Net-BitTorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	Net-BitTorrent
 PORTVERSION=	0.052
@@ -35,5 +35,6 @@ MAN3=		Net::BitTorrent.3 \
 		Net::BitTorrent::Util.3 \
 		Net::BitTorrent::Version.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
 
