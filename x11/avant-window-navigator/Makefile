@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/avant-window-navigator/Makefile 330213 2013-10-13 06:15:19Z eadler $
 
 PORTNAME=	avant-window-navigator
 PORTVERSION=	0.3.2.1
@@ -17,8 +17,7 @@ LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig gettext
+USES=		pathfix pkgconfig gettext gmake
 USE_GNOME=	glib20 gtk20 pygtk2
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
@@ -32,15 +31,15 @@ AWN_DESKTOP?=	agnostic
 .if ${AWN_DESKTOP} == "gnome"
 USE_GNOME+=	gnomedesktop libgnomeui
 CONFIGURE_ARGS+=	--with-desktop=gnome
-PKGNAMESUFFIX=	-gnome
 CONFLICTS=	${PORTNAME}-xfce4-[0-9]* ${PORTNAME}-[0-9]*
 WITH_GCONF=	yes
+PKGNAMESUFFIX=	-gnome
 .elif ${AWN_DESKTOP} == "xfce4"
 OPTIONS_DEFINE=	GCONF
 USE_XFCE+=	thunar
 CONFIGURE_ARGS+=	--with-desktop=xfce4
-PKGNAMESUFFIX=	-xfce4
 CONFLICTS=	${PORTNAME}-gnome-[0-9]* ${PORTNAME}-[0-9]*
+PKGNAMESUFFIX=	-xfce4
 .else
 # agnostic desktop
 OPTIONS_DEFINE=	GCONF
@@ -48,6 +47,7 @@ CONFIGURE_ARGS+=	--with-desktop=agnostic
 CONFLICTS=	${PORTNAME}-gnome-[0-9]* ${PORTNAME}-xfce4-[0-9]*
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCONF}
