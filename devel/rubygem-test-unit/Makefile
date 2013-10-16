@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-test-unit/Makefile 323794 2013-07-27 16:06:01Z swills $
+# $FreeBSD: devel/rubygem-test-unit/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	test-unit
 PORTVERSION=	2.5.5
@@ -13,4 +13,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
