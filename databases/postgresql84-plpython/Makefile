@@ -1,6 +1,7 @@
-# $FreeBSD: ports/databases/postgresql84-plpython/Makefile,v 1.1 2013/01/20 10:44:07 svnexp Exp $
+# $FreeBSD: databases/postgresql84-plpython/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 USE_PYTHON=	-2.7
 WANT_PGSQL_VER=	84
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../postgresql90-plpython/Makefile"
