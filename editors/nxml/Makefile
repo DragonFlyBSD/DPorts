@@ -1,5 +1,5 @@
 # Created by: Fritz Heinrichmeyer
-# $FreeBSD: editors/nxml/Makefile 317072 2013-05-02 05:43:40Z hrs $
+# $FreeBSD: editors/nxml/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	nxml-mode
 PORTVERSION=	${NXML_VER}
@@ -27,6 +27,7 @@ NXML_EXCLEXP=	nxml-mode.xml\|nxml-mode.rnc\|test.invalid.xml\|test.valid.xml
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
