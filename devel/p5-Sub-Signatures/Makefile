@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Signatures/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Sub-Signatures/Makefile 329843 2013-10-08 22:41:35Z gblach $
 
 PORTNAME=	Sub-Signatures
 PORTVERSION=	0.21
@@ -17,7 +17,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Sub::Signatures.3
 
 .include <bsd.port.mk>
