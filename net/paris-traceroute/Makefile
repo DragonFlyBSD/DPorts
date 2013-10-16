@@ -1,9 +1,5 @@
-# New ports collection makefile for:  paris-traceroute
-# Date created:		10 January 2007
-# Whom:			dikshie@sfc.wide.ad.jp
-#
-# $FreeBSD: ports/net/paris-traceroute/Makefile,v 1.5 2012/11/17 06:00:14 svnexp Exp $
-#
+# Created by: dikshie@sfc.wide.ad.jp
+# $FreeBSD: net/paris-traceroute/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	paris-traceroute
 PORTVERSION=	0.92
@@ -21,4 +17,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-current
 
 PLIST_FILES=	bin/paris-traceroute
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
