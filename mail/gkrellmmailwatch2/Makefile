@@ -1,5 +1,5 @@
-# Created by:			Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: mail/gkrellmmailwatch2/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: mail/gkrellmmailwatch2/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	gkrellmmailwatch
 PORTVERSION=	2.4.3
@@ -23,4 +23,5 @@ USE_LDCONFIG=	yes
 
 MAKE_ENV+=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
