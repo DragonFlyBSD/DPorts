@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-ParseBinary/Makefile 324224 2013-08-04 12:39:45Z az $
+# $FreeBSD: devel/p5-Data-ParseBinary/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-ParseBinary
 PORTVERSION=	0.31
@@ -28,4 +28,5 @@ MAN3=	Data::ParseBinary::Graphics::WMF.3 \
 	Data::ParseBinary::Graphics::PNG.3 \
 	Data::ParseBinary::FileSystem::MBR.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
