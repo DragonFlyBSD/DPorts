@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: lang/p5-JavaScript-Squish/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: lang/p5-JavaScript-Squish/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	JavaScript-Squish
 PORTVERSION=	0.07
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 MAN1=	js_compactor.1
 MAN3=	JavaScript::Squish.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
