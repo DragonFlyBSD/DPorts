@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/spamass-rules/Makefile,v 1.29 2013/01/24 11:45:38 svnexp Exp $
+# $FreeBSD: mail/spamass-rules/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spamass-rules
 PORTVERSION=	20120817
@@ -64,6 +64,7 @@ SPAMASS_FILES=
 USE_BZIP2=	yes
 INSTALL_DIR=	${PREFIX}/${SPAMASS_CONF}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAHBL}
