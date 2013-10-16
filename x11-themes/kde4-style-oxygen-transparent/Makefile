@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: x11-themes/kde4-style-oxygen-transparent/Makefile 316184 2013-04-21 16:11:39Z dbn $
+# $FreeBSD: x11-themes/kde4-style-oxygen-transparent/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	oxygen-transparent
 PORTVERSION=	2013.01.02
@@ -15,4 +15,5 @@ USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 USES=		cmake
 USE_XZ=		yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
