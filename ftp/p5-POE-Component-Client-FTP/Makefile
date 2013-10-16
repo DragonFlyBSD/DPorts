@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: ftp/p5-POE-Component-Client-FTP/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: ftp/p5-POE-Component-Client-FTP/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	POE-Component-Client-FTP
 PORTVERSION=	0.22
@@ -19,6 +19,7 @@ CONFIGURE_ENV=	PERL_MM_USE_DEFAULT=yes
 
 MAN3=		POE::Component::Client::FTP.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
