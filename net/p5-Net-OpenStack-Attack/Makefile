@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-OpenStack-Attack/Makefile 326481 2013-09-06 09:21:19Z az $
+# $FreeBSD: net/p5-Net-OpenStack-Attack/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-OpenStack-Attack
 PORTVERSION=	1.0500
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN1=		stackattack.1
 MAN3=		Net::OpenStack::Attack.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
