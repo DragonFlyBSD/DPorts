@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/qscintilla2-designerplugin/Makefile 322588 2013-07-09 22:05:09Z rakuco $
+# $FreeBSD: devel/qscintilla2-designerplugin/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	designerplugin
 PORTVERSION=	${QSCI2_VERSION}
@@ -22,6 +22,7 @@ QMAKE_ARGS=	-unix PREFIX=${PREFIX}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/designer-Qt4Qt5
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 .include <bsd.port.pre.mk>
 
