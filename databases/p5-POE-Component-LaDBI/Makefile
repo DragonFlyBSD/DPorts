@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-POE-Component-LaDBI/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: databases/p5-POE-Component-LaDBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	POE-Component-LaDBI
 PORTVERSION=	1.2.1
@@ -22,6 +22,7 @@ MAN3=		POE::Component::LaDBI.3 POE::Component::LaDBI::Commands.3 \
 		POE::Component::LaDBI::Request.3 \
 		POE::Component::LaDBI::Response.3
 
+NO_STAGE=	yes
 post-extract:
 	${RM} ${WRKSRC}/*.pl
 
