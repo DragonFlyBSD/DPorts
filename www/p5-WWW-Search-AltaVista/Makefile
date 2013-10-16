@@ -1,5 +1,5 @@
 # Created by: Fanying Jen <fanying@fynet.com>
-# $FreeBSD: www/p5-WWW-Search-AltaVista/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-Search-AltaVista/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Search-AltaVista
 PORTVERSION=	2.154
@@ -29,4 +29,5 @@ MAN3=		WWW::Search::AltaVista.3 \
 		WWW::Search::AltaVista::Intranet.3 \
 		WWW::Search::AltaVista::Intranet3.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
