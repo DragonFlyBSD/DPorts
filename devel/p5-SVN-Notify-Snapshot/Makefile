@@ -1,9 +1,5 @@
-# New ports collection makefile for:	SVN-Notify-Snapshot
-# Date created:		2008-02-14
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/p5-SVN-Notify-Snapshot/Makefile,v 1.7 2012/11/17 05:56:28 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: devel/p5-SVN-Notify-Snapshot/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Notify-Snapshot
 PORTVERSION=	0.04
@@ -20,8 +16,10 @@ RUN_DEPENDS=	${LOCALBASE}/bin/svnnotify:${PORTSDIR}/devel/p5-SVN-Notify
 OPTIONS_DEFINE=	CONFIG
 CONFIG_DESC=	Enable YAML syntax for post-commit hook
 
-PERL_MODBUILD=	yes
+USES=		perl5
+USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCONFIG}
