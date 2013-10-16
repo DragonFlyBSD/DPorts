@@ -1,4 +1,4 @@
-# $FreeBSD: finance/trytond_sale_opportunity/Makefile 318531 2013-05-19 14:48:21Z wen $
+# $FreeBSD: finance/trytond_sale_opportunity/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_sale_opportunity
 PORTVERSION=	2.4.1
@@ -18,4 +18,5 @@ CONFLICTS=	trytond_sale_opportunity-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
