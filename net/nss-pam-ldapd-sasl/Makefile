@@ -1,5 +1,5 @@
 # Created by: rflynn@acsalaska.net
-# $FreeBSD: net/nss-pam-ldapd-sasl/Makefile 315818 2013-04-16 15:11:33Z zi $
+# $FreeBSD: net/nss-pam-ldapd-sasl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	nss-pam-ldapd
 PKGNAMESUFFIX=	-sasl
@@ -14,4 +14,5 @@ OPTIONS_SET+=	SASL
 SLAVE_PORT=	sasl # In case we come up with more
 MASTERDIR=	${.CURDIR}/../nss-pam-ldapd
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
