@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/pear-DBA_Relational/Makefile 314451 2013-03-17 14:59:02Z miwi $
+# $FreeBSD: databases/pear-DBA_Relational/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBA_Relational
 PORTVERSION=	0.2.0
@@ -15,6 +15,7 @@ PORTSCOUT=	skipv:0.19
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
