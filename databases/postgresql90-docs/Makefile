@@ -1,10 +1,8 @@
-# New ports collection makefile for:	PostgreSQL docs
-# Date created:		August 26, 2002
-# Whom:			Palle Girgensohn <girgen@pingpong.net>
-#
-# $FreeBSD: ports/databases/postgresql90-docs/Makefile,v 1.2 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: Palle Girgensohn <girgen@pingpong.net>
+# $FreeBSD: databases/postgresql90-docs/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 WANT_PGSQL_VER=90
+COMPONENT=	-docs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../postgresql91-docs/Makefile"
