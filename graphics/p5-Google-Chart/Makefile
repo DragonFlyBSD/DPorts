@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Google-Chart/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: graphics/p5-Google-Chart/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Google-Chart
 PORTVERSION=	0.05014
@@ -39,4 +39,5 @@ MAN3=		Google::Chart.3 Google::Chart::Axis.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
