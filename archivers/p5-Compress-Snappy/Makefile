@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Snappy/Makefile 328386 2013-09-26 16:47:22Z sunpoet $
 
 PORTNAME=	Compress-Snappy
-PORTVERSION=	0.20
+PORTVERSION=	0.22
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,11 +13,9 @@ COMMENT=	Perl interface to Google Snappy (de)compressor
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	snappy:${PORTSDIR}/archivers/snappy
+LIB_DEPENDS=	libsnappy.so:${PORTSDIR}/archivers/snappy
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Compress::Snappy.3
 
 .include <bsd.port.mk>
