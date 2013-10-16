@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/deadbeef-mpris-plugin/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: audio/deadbeef-mpris-plugin/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	deadbeef-mpris-plugin
 PORTVERSION=	2.1.3
@@ -18,6 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 USES=		pkgconfig
+NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/deadbeef-${PORTVERSION}
 
