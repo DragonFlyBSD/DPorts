@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ldapdb
 PORTVERSION=	2.1.26
@@ -59,6 +59,7 @@ PLIST_FILES=	lib/sasl2/libldapdb.a \
 		lib/sasl2/libldapdb.so \
 		lib/sasl2/libldapdb.so.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OPENSSLBASE} == /usr
