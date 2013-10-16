@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scim-kmfl-varamozhi-malayalam
-# Date created:		10 October 2009
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/kmfl-varamozhi-malayalam/Makefile,v 1.6 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/kmfl-varamozhi-malayalam/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	kmfl-varamozhi-malayalam
 PORTVERSION=	1.1.1
@@ -31,6 +27,7 @@ PLIST_FILES=	${KMFL_DIR}/mozhi_1.1.0.kmn \
 PLIST_DIRSTRY=	${KMFL_ICONS_DIR} \
 		${KMFL_DIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${LOCALBASE}/${KMFL_DIR} ${LOCALBASE}/${KMFL_ICONS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/*.kmn ${LOCALBASE}/${KMFL_DIR}
