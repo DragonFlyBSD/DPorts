@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: www/p5-Apache-Singleton/Makefile 326054 2013-09-02 18:41:05Z az $
+# $FreeBSD: www/p5-Apache-Singleton/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-Singleton
 PORTVERSION=	0.15
@@ -22,4 +22,5 @@ MAN3=	Apache::Singleton.3 \
 	Apache::Singleton::Process.3 \
 	Apache::Singleton::Request.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
