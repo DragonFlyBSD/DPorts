@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libgnomeprintuimm/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: x11-toolkits/libgnomeprintuimm/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	libgnomeprintuimm
 PORTVERSION=	2.5.2
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.5" API_VERSION="2.6"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|2\.0|2.6|' ${WRKSRC}/tools/m4/Makefile.in
 	@${REINPLACE_CMD} -e "s|\(-lglibmm\)|-L\$$(GMM_PROCDIR)/../.. \1|" \
