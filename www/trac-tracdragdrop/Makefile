@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-tracdragdrop/Makefile 323089 2013-07-16 05:43:05Z miwi $
+# $FreeBSD: www/trac-tracdragdrop/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tracdragdrop
 PORTVERSION=	0.12.0.10.${SVN_REV}
@@ -28,4 +28,5 @@ PYDISTUTILS_PKGNAME=	TracDragDrop
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/.${SVN_REV}//g}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
