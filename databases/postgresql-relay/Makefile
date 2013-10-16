@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: databases/postgresql-relay/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/postgresql-relay/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	postgresql-relay
 PORTVERSION=	1.3.2
@@ -18,6 +18,7 @@ USE_RC_SUBR=	postgresql-relay
 USES=		perl5
 USE_PERL5=	build
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/postgresql-relay ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/postgresql-relay.conf-sample ${PREFIX}/etc/postgresql-relay.conf-sample
