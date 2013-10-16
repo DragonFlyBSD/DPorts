@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-watchlist/Makefile 325829 2013-08-31 19:01:59Z rm $
+# $FreeBSD: www/trac-watchlist/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	watchlist
 PORTVERSION=	1.0.${SVN_REV}
@@ -28,6 +28,7 @@ FETCH_BEFORE_ARGS=	-o ${DISTFILES}
 PYDISTUTILS_PKGNAME=	TracWatchlistPlugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/.${SVN_REV}//g}
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${CHMOD} 644
 	@${FIND} ${WRKSRC} -type d | ${XARGS} ${CHMOD} 755
