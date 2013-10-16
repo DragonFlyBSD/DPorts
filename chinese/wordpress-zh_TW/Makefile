@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: chinese/wordpress-zh_TW/Makefile 327284 2013-09-14 14:10:31Z sunpoet $
+# $FreeBSD: chinese/wordpress-zh_TW/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	wordpress
 PORTVERSION=	3.6.1
@@ -30,6 +30,7 @@ OPTIONS_DEFINE=	DOCS
 SUB_FILES+=	pkg-message
 SUB_LISTS+=	WWWDIR=${WWWDIR}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_CMD} "If you want to upgrade, you must read upgrade document."
 	@${ECHO_CMD} ""
