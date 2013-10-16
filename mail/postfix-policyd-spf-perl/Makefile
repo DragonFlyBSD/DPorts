@@ -1,9 +1,5 @@
-# New ports collection makefile for:	postfix-policyd-spf-perl
-# Date created:				2008-01-25
-# Whom:					Darren Pilgrim <ports.maintainer@evilphi.com>
-#
-# $FreeBSD: mail/postfix-policyd-spf-perl/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: Darren Pilgrim <ports.maintainer@evilphi.com>
+# $FreeBSD: mail/postfix-policyd-spf-perl/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	postfix-policyd-spf-perl
 PORTVERSION=	2.007
@@ -31,6 +27,7 @@ SPF_TEMPERROR?=	DEFER_IF_PERMIT
 REINPLACE=	s/%%SPF_FAIL%%/${SPF_FAIL}/g;\
 		s/%%SPF_TEMPERROR%%/${SPF_TEMPERROR}/g;
 
+NO_STAGE=	yes
 pre-patch:
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You can change the actions returned by the server by setting the following"
