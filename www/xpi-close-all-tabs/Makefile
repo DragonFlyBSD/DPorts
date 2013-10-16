@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-close-all-tabs
-# Date created:			18 April 2008
-# Whom:				Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/www/xpi-close-all-tabs/Makefile,v 1.4 2013/02/20 16:45:27 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: www/xpi-close-all-tabs/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	close-all-tabs
 PORTVERSION=	1.1
@@ -19,5 +15,6 @@ XPI_NUM=	2914
 XPI_FILES=	chrome/closealltabs.jar chrome.manifest install.rdf
 XPI_DIRS=	chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
