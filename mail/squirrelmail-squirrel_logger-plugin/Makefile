@@ -1,5 +1,5 @@
 # Created by: Satoru Suzuki <xsuzu@yokohama.riken.jp>
-# $FreeBSD: mail/squirrelmail-squirrel_logger-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-squirrel_logger-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	squirrel_logger
 PORTVERSION=	2.3
@@ -15,6 +15,7 @@ COMMENT=	Logging functionality for your webmail interface
 
 USE_SM_COMPAT=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 .include <bsd.port.mk>
