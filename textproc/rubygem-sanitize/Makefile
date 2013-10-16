@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-sanitize/Makefile 323860 2013-07-28 22:33:04Z swills $
+# $FreeBSD: textproc/rubygem-sanitize/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sanitize
 PORTVERSION=	2.0.6
@@ -15,4 +15,5 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
