@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Shorten-0rz
-# Date created:				2006-07-16
-# Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-WWW-Shorten-0rz/Makefile 325965 2013-09-02 10:00:38Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-WWW-Shorten-0rz/Makefile 329367 2013-10-04 19:43:20Z az $
 
 PORTNAME=	WWW-Shorten-0rz
 PORTVERSION=	0.07
@@ -22,6 +18,7 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Shorten::0rz.3
+post-patch:
+	@${REINPLACE_CMD} -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
