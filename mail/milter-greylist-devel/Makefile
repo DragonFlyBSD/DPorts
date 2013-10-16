@@ -1,5 +1,5 @@
 # Created by: Cyril Guibourg
-# $FreeBSD: mail/milter-greylist-devel/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/milter-greylist-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	milter-greylist
 PORTVERSION=	4.3.9
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	LIBSPF2 GEOIP CURL LDAP POSTFIX
 LIBSPF2_DESC=	Include SPF support
 POSTFIX_DESC=	Use Postfix instead of Sendmail
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 ##
