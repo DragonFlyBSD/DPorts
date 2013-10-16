@@ -1,10 +1,5 @@
-# New ports collection makefile for:	rubygem-ramaze
-# Date created:		2010-01-20
-# Whom:			Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-#
-# $FreeBSD: ports/www/rubygem-ramaze/Makefile,v 1.9 2012/11/17 06:03:04 svnexp Exp $
-#
-# note, innate version is typically an exact requirement
+# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
+# $FreeBSD: www/rubygem-ramaze/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ramaze
 PORTVERSION=	2011.10.23
@@ -22,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
