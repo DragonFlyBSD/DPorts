@@ -1,9 +1,5 @@
-# New ports collection makefile for:   glpi-plugins-AdditionalReports
-# Date created:        01 November 2009
-# Whom:                ddurieux <d.durieux@siprossii.com>
-#
-# $FreeBSD: ports/textproc/glpi-plugins-AdditionalReports/Makefile,v 1.2 2012/11/17 06:01:56 svnexp Exp $
-#
+# Created by: ddurieux <d.durieux@siprossii.com>
+# $FreeBSD: textproc/glpi-plugins-AdditionalReports/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	AdditionalReports
 DISTVERSION=	1.3.0
@@ -25,6 +21,7 @@ CPIOARGS=	--quiet -pdum -R
 
 GLPIPLUGINDIR?=	www/glpi/plugins/reports
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
