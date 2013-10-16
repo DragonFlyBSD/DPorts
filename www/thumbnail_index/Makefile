@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@FreeBSD.org>
-# $FreeBSD: ports/www/thumbnail_index/Makefile,v 1.14 2013/01/26 16:56:14 svnexp Exp $
+# $FreeBSD: www/thumbnail_index/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	thumbnail_index
 PORTVERSION=	1998.08.10
@@ -14,9 +14,10 @@ COMMENT=	Make an HTML index file for a bunch of images
 RUN_DEPENDS=	djpeg:${PORTSDIR}/graphics/jpeg \
 		pnmscale:${PORTSDIR}/graphics/netpbm
 
+NO_STAGE=	yes
+NO_BUILD=	yes
+
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		thumbnail_index.1
-
-NO_BUILD=	yes
 
 .include <bsd.port.mk>
