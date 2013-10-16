@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	WebService::Technorati
-# Date created:			May 25, 2005
-# Whom:				ijliao
-#
-# $FreeBSD: www/p5-WebService-Technorati/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: www/p5-WebService-Technorati/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-Technorati
 PORTVERSION=	0.04
@@ -39,4 +34,5 @@ MAN3=	WebService::Technorati.3 \
 	WebService::Technorati::SearchMatch.3 \
 	WebService::Technorati::SearchTerm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
