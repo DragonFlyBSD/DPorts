@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: editors/mp/Makefile 317525 2013-05-06 15:34:17Z bapt $
+# $FreeBSD: editors/mp/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	mp
 PORTVERSION=	5.2.6
@@ -25,6 +25,7 @@ MAN1=		mp-5.1
 
 DATADIR=	${PREFIX}/share/mp-5
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
