@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WebService-BuzzurlAPI/Makefile 326042 2013-09-02 17:29:36Z az $
+# $FreeBSD: www/p5-WebService-BuzzurlAPI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-BuzzurlAPI
 PORTVERSION=	0.02
@@ -31,4 +31,5 @@ MAN3=		WebService::BuzzurlAPI.3 \
 		WebService::BuzzurlAPI::Response.3 \
 		WebService::BuzzurlAPI::Request.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
