@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-Pager/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-DBIx-Skinny-Pager/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Skinny-Pager
 PORTVERSION=	0.11
@@ -30,4 +30,5 @@ MAN3=	DBIx::Skinny::Mixin::Pager.3 \
 	DBIx::Skinny::Pager::Logic::PlusOne.3 \
 	DBIx::Skinny::Pager::Page.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
