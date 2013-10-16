@@ -1,5 +1,5 @@
 # Created by: Michael Schout <mschout@gkg.net>
-# $FreeBSD: devel/pear-HTML_Select/Makefile 318090 2013-05-13 14:35:03Z miwi $
+# $FreeBSD: devel/pear-HTML_Select/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_Select
 PORTVERSION=	1.3.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/HTML/Common.php:${PORTSDIR}/devel/pear-HTML_Common
 
 PEAR_AUTOINSTALL=	YES
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
