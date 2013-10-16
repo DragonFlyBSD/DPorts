@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-POM-View-HTML-Filter/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Pod-POM-View-HTML-Filter/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Pod-POM-View-HTML-Filter
 PORTVERSION=	0.09
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	Pod::POM::View::HTML::Filter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
