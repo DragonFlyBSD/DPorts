@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Math-BigInt-FastCalc/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-BigInt-FastCalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-BigInt-FastCalc
 PORTVERSION=	0.30
@@ -20,4 +20,5 @@ MAN3=		Math::BigInt::FastCalc.3
 
 PORTSCOUT=	skipv:0.251
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
