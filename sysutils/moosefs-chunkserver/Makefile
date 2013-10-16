@@ -1,10 +1,11 @@
 # Created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: sysutils/moosefs-chunkserver/Makefile 318402 2013-05-17 20:09:11Z madpilot $
+# $FreeBSD: sysutils/moosefs-chunkserver/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	moosefs
 PORTVERSION=	#
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-chunkserver
+NO_STAGE=	yes
 .include "${.CURDIR}/../moosefs-master/bsd.port.moosefs.mk"
 
 MAINTAINER=	chifeng@gmail.com
