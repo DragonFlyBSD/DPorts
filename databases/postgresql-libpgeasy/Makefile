@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpgeasy/Makefile 322415 2013-07-07 00:15:47Z jgh $
+# $FreeBSD: databases/postgresql-libpgeasy/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PKGNAMEPREFIX=	postgresql-
 PORTNAME=	libpgeasy
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	YES
 DOCSDIR=	${PREFIX}/share/doc/postgresql/${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/postgresql/${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@- ${MKDIR} -m 755 ${EXAMPLESDIR} ;\
