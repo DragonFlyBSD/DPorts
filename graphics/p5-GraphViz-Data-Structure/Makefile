@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-GraphViz-Data-Structure/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-GraphViz-Data-Structure/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GraphViz-Data-Structure
 PORTVERSION=	0.19
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	GraphViz::Data::Structure.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
