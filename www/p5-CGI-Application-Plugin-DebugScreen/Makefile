@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-DebugScreen/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: www/p5-CGI-Application-Plugin-DebugScreen/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-DebugScreen
 PORTVERSION=	1.00
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	CGI::Application::Plugin::DebugScreen.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
