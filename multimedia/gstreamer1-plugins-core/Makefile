@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins-core/Makefile 316750 2013-04-28 21:04:11Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins-core/Makefile 327747 2013-09-20 20:57:48Z bapt $
 #    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.17 2006/07/17 01:39:57 ahze Exp $
 
 PORTNAME=	gstreamer1-plugins-core
@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	DVD
 OPTIONS_DEFAULT=DVD
 DVD_DESC=	Include DVD related plugins
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Audio plugins
