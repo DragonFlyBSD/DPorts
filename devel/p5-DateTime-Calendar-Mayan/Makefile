@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Calendar-Mayan/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Calendar-Mayan/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Calendar-Mayan
 PORTVERSION=	0.06.01
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		DateTime::Calendar::Mayan.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
