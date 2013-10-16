@@ -1,5 +1,5 @@
 # Created by: Anton Hryciuk <gnixua@gmail.com>
-# $FreeBSD: net-im/pidgin-audacious-remote/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: net-im/pidgin-audacious-remote/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgin-audacious-remote
 PORTVERSION=	0.5
@@ -23,4 +23,5 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--prefix=${PREFIX}"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
