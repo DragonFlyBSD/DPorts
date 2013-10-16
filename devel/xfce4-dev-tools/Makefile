@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/xfce4-dev-tools/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/xfce4-dev-tools/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	xfce4-dev-tools
 PORTVERSION=	4.10.0
@@ -18,4 +18,5 @@ USE_XFCE=	configenv	# to get MASTER_SITE_SUBDIR something has to be defined
 USE_GNOME=	glib20
 USES=		pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
