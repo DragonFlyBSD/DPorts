@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-MooseX-Types-DateTimeX/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-MooseX-Types-DateTimeX/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Types-DateTimeX
 PORTVERSION=	0.10
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	MooseX::Types::DateTimeX.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
