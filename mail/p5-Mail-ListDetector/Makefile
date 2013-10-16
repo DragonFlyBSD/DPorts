@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: mail/p5-Mail-ListDetector/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-ListDetector/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-ListDetector
 PORTVERSION=	1.04
@@ -44,6 +44,7 @@ MAN3=	Mail::ListDetector.3 \
 	Mail::ListDetector::Detector::Yahoogroups.3 \
 	Mail::ListDetector::List.3
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/sample.pl ${EXAMPLESDIR}
