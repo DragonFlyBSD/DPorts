@@ -1,5 +1,5 @@
 # Created by: Rene Hexel <rh@netbsd.org>
-# $FreeBSD: textproc/scrollkeeper/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: textproc/scrollkeeper/Makefile 327773 2013-09-20 23:17:30Z bapt $
 #    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.12 2007/10/17 21:36:13 mezz Exp $
 
 PORTNAME=	scrollkeeper
@@ -46,6 +46,7 @@ MAN7=	scrollkeeper.7
 MAN8=	scrollkeeper-preinstall.8 scrollkeeper-rebuilddb.8 \
 	scrollkeeper-update.8
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
