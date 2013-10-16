@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/devel/jakarta-commons-configuration/Makefile,v 1.9 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/jakarta-commons-configuration/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	commons-configuration
 PORTVERSION=	1.3
@@ -25,6 +25,7 @@ PORTDOCS=	*
 .endif
 PLIST_FILES+=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
