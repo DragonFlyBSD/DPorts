@@ -1,9 +1,5 @@
-# New ports collection makefile for: DBIx::SQLEngine
-# Date created:   31.7.2003
-# Whom:           Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
-#
-# $FreeBSD: databases/p5-DBIx-SQLEngine/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
+# $FreeBSD: databases/p5-DBIx-SQLEngine/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-SQLEngine
 PORTVERSION=	0.93
@@ -84,4 +80,5 @@ MAN3=	DBIx::SQLEngine.3 \
 	DBIx::SQLEngine::Schema::TableSet.3 \
 	DBIx::SQLEngine::Utility::CloneWithParams.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
