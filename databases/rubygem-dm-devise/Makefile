@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: databases/rubygem-dm-devise/Makefile 319945 2013-06-05 01:52:36Z swills $
+# $FreeBSD: databases/rubygem-dm-devise/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dm-devise
 PORTVERSION=	2.2.1
@@ -20,4 +20,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
