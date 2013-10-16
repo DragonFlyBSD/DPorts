@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: devel/p5-Class-ObjectTemplate-DB/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-ObjectTemplate-DB/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-ObjectTemplate-DB
 PORTVERSION=	0.27
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Class::ObjectTemplate::DB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
