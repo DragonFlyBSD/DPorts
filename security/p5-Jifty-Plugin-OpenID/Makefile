@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/p5-Jifty-Plugin-OpenID/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: security/p5-Jifty-Plugin-OpenID/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Jifty-Plugin-OpenID
 PORTVERSION=	1.02
@@ -28,4 +28,5 @@ MAN3=		Jifty::Plugin::OpenID::View.3 \
 		Jifty::Plugin::OpenID::Action::CreateOpenIDUser.3 \
 		Jifty::Plugin::OpenID::Dispatcher.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
