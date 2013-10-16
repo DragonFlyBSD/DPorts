@@ -1,7 +1,5 @@
-# Whom: 				Adam Weinberger <adamw@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/squirrelmail-translations/Makefile,v 1.3 2012/11/17 05:59:16 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: mail/squirrelmail-translations/Makefile 329503 2013-10-05 20:56:22Z adamw $
 
 PORTNAME=		squirrelmail-translations
 PORTVERSION=	1.4.18	# Translations updated less often than SM
@@ -31,9 +29,9 @@ post-patch:
 	@${RM} -r ${WRKSRC}/help/en_US
 
 do-install:
-	${MKDIR} ${SQUIRRELDIR}
+	${MKDIR} ${STAGEDIR}${SQUIRRELDIR}
 .for DIR in help images locale
-	cd ${WRKSRC} && ${FIND} ${DIR} | ${CPIO} -pdmu --quiet ${SQUIRRELDIR}
+	cd ${WRKSRC} && ${FIND} ${DIR} | ${CPIO} -pdmu --quiet ${STAGEDIR}${SQUIRRELDIR}
 .endfor
 
 .include <bsd.port.mk>
