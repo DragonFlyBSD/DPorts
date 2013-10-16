@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Helpers/Makefile 324673 2013-08-13 16:47:38Z tj $
+# $FreeBSD: databases/p5-DBIx-Class-Helpers/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Helpers
 PORTVERSION=	2.018002
@@ -71,4 +71,5 @@ MAN3=	DBIx::Class::Helpers.3 \
 	DBIx::Class::Helper::VirtualView.3 \
 	DBIx::Class::Helpers::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
