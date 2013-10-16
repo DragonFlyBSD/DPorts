@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/clearlooks-themes-extras/Makefile,v 1.23 2012/12/31 17:09:13 svnexp Exp $
+# $FreeBSD: x11-themes/clearlooks-themes-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	clearlooks-themes-extras
 PORTVERSION=	0.6
@@ -16,6 +16,7 @@ USE_GNOME=	gtk20
 
 THEME_DIR=	${PREFIX}/share/themes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc) || defined(WITH_GTKENGINE)
