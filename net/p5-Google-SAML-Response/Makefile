@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Google-SAML-Response/Makefile 325815 2013-08-31 15:47:33Z tobez $
+# $FreeBSD: net/p5-Google-SAML-Response/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Google-SAML-Response
 PORTVERSION=	0.13
@@ -27,4 +27,5 @@ USE_PERL5=	configure
 
 MAN3=		Google::SAML::Response.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
