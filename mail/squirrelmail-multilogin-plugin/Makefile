@@ -1,8 +1,5 @@
-# New ports collection makefile for:		squirrelmail-multilogin-plugin
-# Date created:		07 Sep 2006
-# Whom:		Gerrit Beine <gerrit.beine@gmx.de>
-#
-# $FreeBSD: mail/squirrelmail-multilogin-plugin/Makefile 324191 2013-08-03 13:44:00Z mat $
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: mail/squirrelmail-multilogin-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	multilogin
 PORTVERSION=	2.4
@@ -45,6 +42,7 @@ USE_PERL5=		build
 USE_PHP=		yes
 WANT_PHP_WEB=		yes
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO} ""
 .ifndef WITHOUT_ACTIVATE
