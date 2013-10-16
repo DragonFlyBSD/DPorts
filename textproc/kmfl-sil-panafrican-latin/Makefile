@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scim-kmfl-sil-panafrican-latin
-# Date created:		1 September 2009
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/kmfl-sil-panafrican-latin/Makefile,v 1.5 2012/11/17 06:02:00 svnexp Exp $
-#
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/kmfl-sil-panafrican-latin/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	kmfl-sil-panafrican-latin
 PORTVERSION=	20090831
@@ -31,6 +27,7 @@ DOCSDIR=	${PREFIX}/${DOCSDIR_REL}
 KMFL_DIR=	share/kmfl
 KMFL_ICONS_DIR=	share/kmfl/icons
 
+NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e 's|^BITMAP AFR|BITMAP AFR.bmp|' \
 			${WRKSRC}/PanAfricaMnemonic/AfricaDeadKey.kmn \
