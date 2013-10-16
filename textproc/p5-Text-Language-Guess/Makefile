@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: textproc/p5-Text-Language-Guess/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-Text-Language-Guess/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Language-Guess
 PORTVERSION=	0.02
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN1=		language-guess.1
 MAN3=		Text::Language::Guess.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
