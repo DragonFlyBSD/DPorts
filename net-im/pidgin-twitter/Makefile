@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: net-im/pidgin-twitter/Makefile 325748 2013-08-31 00:18:11Z bapt $
+# $FreeBSD: net-im/pidgin-twitter/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgin-twitter
 PORTVERSION=	0.9.2
@@ -22,6 +22,7 @@ PLIST_FILES=	lib/pidgin/pidgin-twitter.so \
 		${DATADIR_REL}/prefs.ui
 PLIST_DIRS=	${DATADIR_REL}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||g' ${WRKSRC}/Makefile.in
 
