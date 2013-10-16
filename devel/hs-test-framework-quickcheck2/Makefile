@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-test-framework-quickcheck2/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-test-framework-quickcheck2/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	test-framework-quickcheck2
 PORTVERSION=	0.3.0.1
@@ -12,5 +12,6 @@ LICENSE=	BSD
 
 USE_CABAL=	QuickCheck>=2.4 test-framework>=0.7.1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
