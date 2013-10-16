@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-AnyTemplate/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: www/p5-CGI-Application-Plugin-AnyTemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-AnyTemplate
 PORTVERSION=	0.18
@@ -28,4 +28,5 @@ MAN3=	CGI::Application::Plugin::AnyTemplate.3 \
 	CGI::Application::Plugin::AnyTemplate::Driver::HTMLTemplateExpr.3 \
 	CGI::Application::Plugin::AnyTemplate::Driver::Petal.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
