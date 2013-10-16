@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: archivers/liblzxcomp/Makefile 316230 2013-04-22 13:27:47Z bapt $
+# $FreeBSD: archivers/liblzxcomp/Makefile 328244 2013-09-25 03:17:42Z vanilla $
 
 PORTNAME=	liblzxcomp
 PORTVERSION=	20020619
@@ -13,9 +13,6 @@ COMMENT=	LZX compression library
 USE_LDCONFIG=	YES
 SHLIB_MAJOR=	1
 PLIST_SUB=	SHLIB_MAJOR="${SHLIB_MAJOR}"
-
-MAN3=		lzxcomp.3
-MANCOMPRESSED=	yes
 
 .if defined(NOPROFILE)
 PLIST_SUB+=	PROFILE="@comment "
