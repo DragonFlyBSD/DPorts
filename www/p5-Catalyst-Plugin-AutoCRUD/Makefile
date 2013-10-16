@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 324240 2013-08-04 15:08:42Z az $
+# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-AutoCRUD
 PORTVERSION=	2.131.210
@@ -39,4 +39,5 @@ MAN3=		Catalyst::Plugin::AutoCRUD.3 \
 		Catalyst::Plugin::AutoCRUD::Manual::Limitations.3 \
 		Catalyst::Plugin::AutoCRUD::Manual::Troubleshooting.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
