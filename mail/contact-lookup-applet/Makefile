@@ -1,5 +1,5 @@
 # Created by: kwm@rainbow-runner.nl
-# $FreeBSD: mail/contact-lookup-applet/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: mail/contact-lookup-applet/Makefile 327742 2013-09-20 19:59:12Z bapt $
 #   $MCom: ports/mail/contact-lookup-applet/Makefile,v 1.15 2007/07/29 22:17:31 mezz Exp $
 
 PORTNAME=	contact
@@ -20,4 +20,5 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
