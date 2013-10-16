@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: net/p5-Net-Google-SafeBrowsing2/Makefile 323711 2013-07-26 10:46:37Z az $
+# $FreeBSD: net/p5-Net-Google-SafeBrowsing2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Google-SafeBrowsing2
 PORTVERSION=	1.09
@@ -31,7 +31,8 @@ Postgres_DESC=	uses Postgres as the storage backend
 
 OPTIONS_DEFAULT=SQLite
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Net::Google::SafeBrowsing2::Storage.3 \
 	Net::Google::SafeBrowsing2::Lookup.3 \
@@ -41,6 +42,7 @@ MAN3=	Net::Google::SafeBrowsing2::Storage.3 \
 	Net::Google::SafeBrowsing2::MySQL.3 \
 	Net::Google::SafeBrowsing2::Sqlite.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLite}
