@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-live_http_headers
-# Date created:			29 June 2008
-# Whom:				Dominic Fandrey <kamikaze@bsdforen.de>
-#
-# $FreeBSD: ports/www/xpi-live_http_headers/Makefile,v 1.8 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Dominic Fandrey <kamikaze@bsdforen.de>
+# $FreeBSD: www/xpi-live_http_headers/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	live_http_headers
 PORTVERSION=	0.17
@@ -38,6 +34,7 @@ XPI_DIRS=	chrome/icons/default \
 USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(js|rdf|txt)
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name \*.orig -exec ${RM} \{} \;
 
