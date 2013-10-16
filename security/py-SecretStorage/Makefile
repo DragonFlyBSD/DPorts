@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-SecretStorage/Makefile 319330 2013-05-29 00:35:48Z miwi $
+# $FreeBSD: security/py-SecretStorage/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	SecretStorage
 PORTVERSION=	1.0.0
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.84.0:${PORTSDIR}/devel/py-dbus
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
