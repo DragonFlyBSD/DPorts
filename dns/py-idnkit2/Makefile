@@ -1,5 +1,5 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: ports/dns/py-idnkit2/Makefile,v 1.4 2013/01/12 11:42:04 svnexp Exp $
+# $FreeBSD: dns/py-idnkit2/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	idnkit-python
 PORTVERSION=	2.2
@@ -18,6 +18,7 @@ USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/idnkit.so
 
+NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		    ${WRKSRC}/setup.py
