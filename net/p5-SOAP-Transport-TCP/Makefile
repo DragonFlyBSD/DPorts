@@ -1,5 +1,4 @@
-# Created by: Andrej Zverev <az@FreeBSD.org>
-# $FreeBSD: net/p5-SOAP-Transport-TCP/Makefile 325198 2013-08-22 13:51:18Z mat $
+# $FreeBSD: net/p5-SOAP-Transport-TCP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	SOAP-Transport-TCP
 PORTVERSION=	0.717
@@ -18,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=	SOAP::Transport::TCP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
