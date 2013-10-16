@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-yawp/Makefile 327022 2013-09-12 00:55:25Z jhale $
+# $FreeBSD: deskutils/plasma-applet-yawp/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	yawp
 PORTVERSION=	0.4.5
@@ -16,4 +16,5 @@ USES=		cmake gettext
 USE_KDE4=	automoc4 kdeprefix workspace
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
