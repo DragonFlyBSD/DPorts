@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Precompressed/Makefile 326156 2013-09-03 15:07:52Z az $
+# $FreeBSD: www/p5-Plack-Middleware-Precompressed/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Precompressed
 PORTVERSION=	1.101
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Precompressed.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
