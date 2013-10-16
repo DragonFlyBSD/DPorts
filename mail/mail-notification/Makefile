@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: mail/mail-notification/Makefile 325012 2013-08-19 18:46:44Z kwm $
+# $FreeBSD: mail/mail-notification/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mail-notification
 DISTVERSION=	5.4
@@ -43,6 +43,7 @@ POP3_DESC=	POP3 support
 SYLPHEED_DESC=	Sylpheed support
 YAHOO_DESC=	Yahoo! Mail support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MMBOX}
