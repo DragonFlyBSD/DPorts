@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_fileiri
-# Date created:				2008/05/27
-# Whom:					chinsan
-#
-# $FreeBSD: www/mod_fileiri/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: chinsan
+# $FreeBSD: www/mod_fileiri/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_fileiri
 PORTVERSION=	1.15
@@ -22,4 +18,5 @@ USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
