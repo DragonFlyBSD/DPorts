@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-feed-normalizer
-# Date created:		2009-07-13
-# Whom:			TERAMOTO Masahiro <markun@onohara.to>
-#
-# $FreeBSD: ports/www/rubygem-feed-normalizer/Makefile,v 1.4 2012/11/17 06:03:04 svnexp Exp $
-#
+# Created by: TERAMOTO Masahiro <markun@onohara.to>
+# $FreeBSD: www/rubygem-feed-normalizer/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	feed-normalizer
 PORTVERSION=	1.5.2
@@ -21,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
