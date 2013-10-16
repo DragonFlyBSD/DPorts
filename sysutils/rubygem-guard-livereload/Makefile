@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-guard-livereload/Makefile 320302 2013-06-08 22:38:38Z sunpoet $
+# $FreeBSD: sysutils/rubygem-guard-livereload/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	guard-livereload
 PORTVERSION=	1.4.0
@@ -19,4 +19,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
