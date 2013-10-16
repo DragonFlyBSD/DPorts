@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-mark_read-plugin/Makefile 326257 2013-09-04 07:19:56Z az $
+# $FreeBSD: mail/squirrelmail-mark_read-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mark_read
 PORTVERSION=	1.4.2
@@ -16,6 +16,7 @@ USE_PERL5=	run
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/${SQUIRREL_PLUGIN_NAME}/mark_read.php.orig
 
