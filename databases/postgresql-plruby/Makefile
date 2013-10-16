@@ -1,9 +1,5 @@
-# New ports collection makefile for:	PL/Ruby
-# Date created:		28 June 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/databases/postgresql-plruby/Makefile,v 1.44 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: databases/postgresql-plruby/Makefile 330027 2013-10-10 18:27:06Z tabthorpe $
 
 PORTNAME=	plruby
 PORTVERSION=	0.5.4
@@ -43,6 +39,7 @@ DOCS=		Changes plruby.html plruby.rd
 
 PKGMESSAGE=	${WRKDIR}/createlang.sql
 
+NO_STAGE=	yes
 pre-patch:
 	cd ${PGSQL_PORTDIR} && ${MAKE} -DBATCH patch
 
@@ -65,7 +62,7 @@ post-install:
 		's,^${PREFIX}/?,,' >> ${TMPPLIST}
 	@${FIND} -ds ${RUBY_MODDOCDIR} -type d -print | ${SED} -E -e \
 		's,^${PREFIX}/?,@dirrm ,' >> ${TMPPLIST}
-	@${ECHO_CMD} "@unexec rmdir %D/share/doc/ruby18/ 2>/dev/null || true" \
+	@${ECHO_CMD} "@unexec rmdir %D/share/doc/ruby19/ 2>/dev/null || true" \
 		>> ${TMPPLIST}
 .endif
 	@${CAT} ${PKGMESSAGE}

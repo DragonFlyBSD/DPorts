@@ -1,7 +1,7 @@
 --
 -- Execute the following SQL statements to enable PL/Ruby.
 --
--- $FreeBSD: ports/databases/postgresql-plruby/files/createlang.sql,v 1.3 2012/11/17 05:55:20 svnexp Exp $
+-- $FreeBSD: databases/postgresql-plruby/files/createlang.sql 300896 2012-07-14 13:54:48Z beat $
 --
 
 CREATE FUNCTION plruby_call_handler() RETURNS language_handler
