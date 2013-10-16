@@ -1,6 +1,5 @@
 # Created by: Martin Wilke (freebsd@unixfreunde.de)
-# $FreeBSD: net-im/xfce4-messenger-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: net-im/xfce4-messenger-plugin/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	xfce4-messenger-plugin
 PORTVERSION=	0.1.0
@@ -22,6 +21,7 @@ USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libgui libutil panel
 USE_XORG=	x11 xt xaw
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|--libs "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g; \
 		s|--cflags "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g' \
