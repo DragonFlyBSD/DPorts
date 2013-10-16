@@ -1,9 +1,4 @@
-# New ports collection makefile for:	rubygem-ruport
-# Date created:		7 April 2009
-# Whom:			Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: devel/rubygem-ruport/Makefile 321917 2013-06-28 01:12:53Z swills $
-#
+# $FreeBSD: devel/rubygem-ruport/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	ruport
 PORTVERSION=	1.6.3
@@ -22,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
