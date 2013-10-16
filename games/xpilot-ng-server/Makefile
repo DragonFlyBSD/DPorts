@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/xpilot-ng-server/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/xpilot-ng-server/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xpilot-ng
 PORTVERSION=	4.7.3
@@ -53,6 +53,7 @@ DESKTOP_ENTRIES=	"Xpilot-ng X11" "Xpilot game client program" \
 			"" "xpilot-ng-xp-mapedit" "Game;ArcadeGame;" false
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PKGNAMESUFFIX} == "-server"
