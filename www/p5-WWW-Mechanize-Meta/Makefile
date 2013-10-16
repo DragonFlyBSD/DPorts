@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-URI-SmartURI
-# Date created:				2008-07-09
-# Whom:					Oleg Mamontov <oleg@mamontov.net>
-#
-# $FreeBSD: www/p5-WWW-Mechanize-Meta/Makefile 326033 2013-09-02 16:56:12Z az $
-#
+# Created by: Oleg Mamontov <oleg@mamontov.net>
+# $FreeBSD: www/p5-WWW-Mechanize-Meta/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize-Meta
 PORTVERSION=	0.07
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Mechanize::Meta.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
