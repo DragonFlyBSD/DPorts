@@ -1,5 +1,5 @@
 # Created by: Sugimoto Sadahiro <ixtl@utmc.or.jp>
-# $FreeBSD: japanese/latex2html/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/latex2html/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	latex2html
 PORTVERSION=	${VERSION}j${JP_VERSION}
@@ -39,6 +39,7 @@ TEXMFDIR?=	share/texmf
 DOC_FILES=	FAQ INSTALL LICENSE README README.patch-2002jp \
 		README.patch-99.1jp
 
+NO_STAGE=	yes
 post-install:
 	(cd ${WRKSRC}; csh mkwrapper ${PREFIX})
 .if !defined(NOPORTDOCS)
