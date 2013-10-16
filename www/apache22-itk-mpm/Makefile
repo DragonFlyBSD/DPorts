@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22-itk-mpm/Makefile 313288 2013-03-02 19:46:37Z ohauer $
+# $FreeBSD: www/apache22-itk-mpm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 # To build this port with the additional mpm-itk-perdir-regex
 # patch use -DWITH_ITK_PERDIR_REGEX
@@ -22,6 +22,7 @@ LATEST_LINK=		apache22-${WITH_MPM}-mpm
 DESCR=			${.CURDIR}/pkg-descr
 
 MPM_ITK_VERSION?=	20110321-01
+NO_STAGE=	yes
 
 EXTRA_PATCHES+=		${.CURDIR}/files/mpm-itk-${MPM_ITK_VERSION}
 
