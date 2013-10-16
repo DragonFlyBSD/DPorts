@@ -1,9 +1,5 @@
-# New ports collection makefile for:	feedfinder
-# Date created:		23 April 2007
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: www/py-feedfinder/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/py-feedfinder/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	feedfinder
 PORTVERSION=	1.3.7.1
@@ -21,4 +17,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/feedfinder.py \
 		%%PYTHON_SITELIBDIR%%/feedfinder.pyc \
 		%%PYTHON_SITELIBDIR%%/feedfinder.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
