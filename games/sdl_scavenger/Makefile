@@ -1,4 +1,4 @@
-# $FreeBSD: games/sdl_scavenger/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/sdl_scavenger/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	sdl_scavenger
 PORTVERSION=	145.1.2010.11.5
@@ -28,6 +28,7 @@ PORTDOCS=	CREDITS DOC NEW_FEATURES README STRATEGY
 DESKTOP_ENTRIES="SDL Scavenger" "${COMMENT}" "sdlscavenger" \
 		"sdlscavenger" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
