@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: ports/devel/jakarta-commons-jxpath/Makefile,v 1.11 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/jakarta-commons-jxpath/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	commons-jxpath
 PORTVERSION=	1.3
@@ -16,6 +16,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(NOPORTDOCS)
