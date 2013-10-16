@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: finance/p5-Data-Currency/Makefile 325120 2013-08-21 12:49:52Z mat $
+# $FreeBSD: finance/p5-Data-Currency/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Data-Currency
 PORTVERSION=	0.06000
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Currency.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
