@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/textproc/jdictionary-int-eng/Makefile,v 1.9 2013/01/09 20:05:13 svnexp Exp $
+# $FreeBSD: textproc/jdictionary-int-eng/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	jdictionary-int-eng
 PORTVERSION=	1.0
@@ -12,4 +12,5 @@ COMMENT=	JDictionary plugin: Interlingua-English dictionary
 
 MASTERDIR=	${.CURDIR}/../../textproc/jdictionary
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.plugin"
