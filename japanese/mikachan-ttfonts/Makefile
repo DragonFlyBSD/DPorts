@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: japanese/mikachan-ttfonts/Makefile 314968 2013-03-22 21:26:40Z tota $
+# $FreeBSD: japanese/mikachan-ttfonts/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	mikachan-ttfonts
 PORTVERSION=	9.1
@@ -25,6 +25,7 @@ PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
 FONTSDIR=	lib/X11/fonts/TrueType
 
+NO_STAGE=	yes
 do-install:
 	${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 	${INSTALL_DATA} \
