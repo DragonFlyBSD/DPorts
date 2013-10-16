@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11-clocks/xfce4-timer-plugin/Makefile 317909 2013-05-11 19:52:07Z olivierd $
+# $FreeBSD: x11-clocks/xfce4-timer-plugin/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	xfce4-timer-plugin
 PORTVERSION=	1.5.0
@@ -19,4 +19,5 @@ USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
 USES=		pkgconfig gettext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
