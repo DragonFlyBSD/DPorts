@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ocsinventory-agent/Makefile 325888 2013-09-01 17:23:33Z az $
+# $FreeBSD: net-mgmt/ocsinventory-agent/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Ocsinventory
 PORTVERSION=	2.0.5
@@ -30,6 +30,7 @@ MAN3=		Ocsinventory::Agent::XML::Inventory.3 \
 SUB_FILES=	pkg-message
 SUB_LIST=	SITE_PERL=${SITE_PERL}
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
