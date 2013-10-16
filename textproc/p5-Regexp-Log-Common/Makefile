@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Regexp-Log-Common/Makefile 324630 2013-08-12 14:14:23Z culot $
+# $FreeBSD: textproc/p5-Regexp-Log-Common/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Regexp-Log-Common
 PORTVERSION=	0.08
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Regexp::Log::Common.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
