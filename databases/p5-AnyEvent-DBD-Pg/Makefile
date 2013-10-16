@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-AnyEvent-DBD-Pg/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-AnyEvent-DBD-Pg/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	AnyEvent-DBD-Pg
 PORTVERSION=	0.03
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=	AnyEvent::DBD::Pg.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
