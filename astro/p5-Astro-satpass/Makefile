@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-satpass/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-satpass/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Astro-satpass
 PORTVERSION=	0.057
@@ -29,6 +29,7 @@ USGS_DESC=		Add support for Geo::WebService::Elevation::USGS
 CONFIGURE_ARGS=	-y
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN1=		satpass.1
 MAN3=		Astro::Coord::ECI.3 \
