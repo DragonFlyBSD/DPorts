@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-MooseX-Types-JSON/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-MooseX-Types-JSON/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Types-JSON
 PORTVERSION=	0.02
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		MooseX::Types::JSON.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
