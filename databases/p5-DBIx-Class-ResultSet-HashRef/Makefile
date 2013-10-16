@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: databases/p5-DBIx-Class-ResultSet-HashRef/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: databases/p5-DBIx-Class-ResultSet-HashRef/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-ResultSet-HashRef
 PORTVERSION=	1.002
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Class::ResultSet::HashRef.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
