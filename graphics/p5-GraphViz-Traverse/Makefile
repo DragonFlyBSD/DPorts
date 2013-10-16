@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-GraphViz-Traverse/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-GraphViz-Traverse/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GraphViz-Traverse
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ MAN3=	GraphViz::Traverse.3 GraphViz::Traverse::Filesystem.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
