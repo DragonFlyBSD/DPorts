@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-CGI-Application-Plugin-ValidateRM/Makefile 326455 2013-09-05 23:57:35Z lippe $
+# $FreeBSD: www/p5-CGI-Application-Plugin-ValidateRM/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-ValidateRM
 PORTVERSION=	2.5
@@ -22,4 +22,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN3=		CGI::Application::Plugin::ValidateRM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
