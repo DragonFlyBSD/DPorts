@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: ports/devel/py-jsonrpclib/Makefile,v 1.3 2012/11/17 05:56:48 svnexp Exp $
+# $FreeBSD: devel/py-jsonrpclib/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	jsonrpclib
 PORTVERSION=	0.1.3
@@ -20,6 +20,7 @@ OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
 OPTIONS_DEFINE=	CJSON
 CJSON_DESC=	Use cjson instead of json or simplejson
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCJSON}
