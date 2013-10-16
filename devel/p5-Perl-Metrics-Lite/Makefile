@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Perl-Metrics-Lite/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-Perl-Metrics-Lite/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Perl-Metrics-Lite
 PORTVERSION=	0.080
@@ -26,4 +26,5 @@ MAN3=	Perl::Metrics::Lite.3 \
 	Perl::Metrics::Lite::Analysis::Util.3 \
 	Perl::Metrics::Lite::FileFinder.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
