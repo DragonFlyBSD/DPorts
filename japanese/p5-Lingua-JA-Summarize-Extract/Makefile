@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Lingua-JA-Summarize-Extract
-# Date created:		2007-04-10
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/japanese/p5-Lingua-JA-Summarize-Extract/Makefile,v 1.6 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: japanese/p5-Lingua-JA-Summarize-Extract/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Lingua-JA-Summarize-Extract
 PORTVERSION=	0.02
@@ -19,7 +15,8 @@ BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		Lingua::JA::Summarize::Extract::Plugin::Sentence::Base.3 \
 		Lingua::JA::Summarize::Extract::Plugin::Parser::Ngram.3 \
@@ -27,6 +24,7 @@ MAN3=		Lingua::JA::Summarize::Extract::Plugin::Sentence::Base.3 \
 		Lingua::JA::Summarize::Extract.3 \
 		Lingua::JA::Summarize::Extract::Plugin::Parser::NgramSimple.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
