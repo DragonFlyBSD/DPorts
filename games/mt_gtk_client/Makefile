@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/mt_gtk_client/Makefile 326092 2013-09-02 21:27:53Z bapt $
+# $FreeBSD: games/mt_gtk_client/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		mt_gtk_client
 PORTVERSION=		0.1.98
@@ -26,4 +26,5 @@ RUN_DEPENDS+=		${LOCALBASE}/bin/maitretarot_server:${PORTSDIR}/games/maitretarot
 RUN_DEPENDS+=		${LOCALBASE}/bin/mt_dolphin_ia:${PORTSDIR}/games/mt_dolphin_ia
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
