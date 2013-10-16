@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Net-FTP-Recursive
-# Date Created:				11 April, 2005
-# Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ftp/p5-Net-FTP-Recursive/Makefile 325955 2013-09-02 09:22:47Z az $
-#
+# $FreeBSD: ftp/p5-Net-FTP-Recursive/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	Net-FTP-Recursive
 PORTVERSION=	2.04
@@ -24,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::FTP::Recursive.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
