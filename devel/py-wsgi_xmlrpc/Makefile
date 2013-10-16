@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-wsgi_xmlrpc
-# Date created:				2008-08-27
-# Whom:					Yevgen Drachenko <geka@sippysoft.com>
-#
-# $FreeBSD: ports/devel/py-wsgi_xmlrpc/Makefile,v 1.5 2012/11/17 05:56:52 svnexp Exp $
-#
+# Created by: Yevgen Drachenko <geka@sippysoft.com>
+# $FreeBSD: devel/py-wsgi_xmlrpc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	wsgi_xmlrpc
 PORTVERSION=	0.2.8
@@ -21,4 +17,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
