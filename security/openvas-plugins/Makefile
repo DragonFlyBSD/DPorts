@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: security/openvas-plugins/Makefile 321486 2013-06-21 17:48:03Z wg $
+# $FreeBSD: security/openvas-plugins/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openvas-plugins
 PORTVERSION=	1.0.7
@@ -24,6 +24,7 @@ GNU_CONFIGURE=	yes
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 CPPFLAGS+=	"`${LIBNET_CONFIG} --cflags`"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../openvas-libraries/Makefile.common"
 
