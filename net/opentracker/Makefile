@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	opentracker
-# Date created:				27 July 2009
-# Whom:					utisoft@gmail.com
-#
-# $FreeBSD: net/opentracker/Makefile 316567 2013-04-26 04:03:43Z gjb $
-#
+# Created by: utisoft@gmail.com
+# $FreeBSD: net/opentracker/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	opentracker
 PORTVERSION=	0.2010.05.30
@@ -35,6 +31,7 @@ DEBUG_HTTPERROR_DESC=	Verbose HTTPERRORs
 FULLSCRAPE_DESC=	Can query tracker for all torrents
 RESTRICT_STATS_DESC=	Limit stats access based on IP
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MACCESSLIST_BLACK}
