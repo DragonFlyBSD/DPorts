@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/moveable-type-fonts/Makefile,v 1.6 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-fonts/moveable-type-fonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	moveable-type-fonts
 PORTVERSION=	20100801
@@ -26,6 +26,7 @@ USE_ZIP=	yes
 FONTSDIR?=	${PREFIX}/lib/X11/fonts/${PORTNAME}
 PLIST_SUB=	FONTSDIR="${FONTSDIR:S|${PREFIX}/||}"
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKDIR} -name __MACOSX | ${XARGS} ${RM} -r
 
