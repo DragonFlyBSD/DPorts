@@ -1,14 +1,11 @@
-# New ports collection makefile for:	php53-interbase
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/php53-interbase/Makefile,v 1.2 2012/11/17 05:55:19 svnexp Exp $
-#
+# $FreeBSD: databases/php53-interbase/Makefile 328902 2013-09-30 23:43:16Z acm $
 
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-interbase
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
