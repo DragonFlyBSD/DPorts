@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Catalyst-Plugin-CookiedSession
-# Date created:	   21 Nov 2008
-# Whom:		   Denis Pokataev <catone@cpan.org>
-#
-# $FreeBSD: www/p5-Catalyst-Plugin-CookiedSession/Makefile 326139 2013-09-03 12:27:09Z az $
-#
+# Created by: Denis Pokataev <catone@cpan.org>
+# $FreeBSD: www/p5-Catalyst-Plugin-CookiedSession/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-CookiedSession
 PORTVERSION=	0.35
@@ -27,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Catalyst::Plugin::CookiedSession.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
