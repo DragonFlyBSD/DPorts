@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/www/trac-scrumburndown/Makefile,v 1.5 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-scrumburndown/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scrumburndown
 PORTVERSION=	1.9.2
@@ -22,6 +22,7 @@ PYDISTUTILS_PKGNAME=	TracBurndown
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.r/_r/}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
