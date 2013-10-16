@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-genshi-devel
-# Date created:				Wed 06 May 2009
-# Whom:					Alexey V. Degtyarev <alexey@renatasystems.org>
-#
-# $FreeBSD: ports/textproc/py-genshi-devel/Makefile,v 1.14 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
+# $FreeBSD: textproc/py-genshi-devel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Genshi
 PORTVERSION=	0.6.1052
@@ -33,6 +29,7 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
 # This target is only meant to be used by the port maintainer.
+NO_STAGE=	yes
 x-generate-plist:
 	(${PORTSDIR}/Tools/scripts/plist -d -m ${MTREE_FILE} ${PREFIX} \
 	| ${SED} -E \
