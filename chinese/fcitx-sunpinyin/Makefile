@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-sunpinyin/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: chinese/fcitx-sunpinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	fcitx-sunpinyin
 PORTVERSION=	0.3.9
@@ -21,6 +21,7 @@ INSTALLS_ICONS=	yes
 
 PROJECTHOST=	fcitx
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
