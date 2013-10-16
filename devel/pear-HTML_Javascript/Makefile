@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-HTML_Javascript/Makefile 314253 2013-03-15 06:24:57Z miwi $
+# $FreeBSD: devel/pear-HTML_Javascript/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_Javascript
 PORTVERSION=	1.1.2
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
