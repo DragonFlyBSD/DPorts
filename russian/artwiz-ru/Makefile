@@ -1,9 +1,5 @@
-# New ports collection makefile for:	artwiz-ru
-# Date created:		2004-10-31
-# Whom:			Roman Bogorodskiy <bogorodskiy@inbox.ru>
-#
-# $FreeBSD: ports/russian/artwiz-ru/Makefile,v 1.7 2012/11/17 06:00:55 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
+# $FreeBSD: russian/artwiz-ru/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	artwiz-ru
 PORTVERSION=	20041031
@@ -27,6 +23,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 FONTDIR=	${LOCALBASE}/lib/X11/fonts/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${SED} -e 's,LOCALBASE,${LOCALBASE},g' ${FILESDIR}/pkg-message.in > ${PKGMESSAGE}
 
