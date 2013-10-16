@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTTP-Cookies-w3m
-# Date created:		2006-08-27
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: www/p5-HTTP-Cookies-w3m/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: www/p5-HTTP-Cookies-w3m/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTTP-Cookies-w3m
 PORTVERSION=	0.01
@@ -23,4 +19,5 @@ MAN3=		HTTP::Cookies::w3m.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
