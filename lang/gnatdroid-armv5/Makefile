@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-armv5/Makefile 326316 2013-09-04 20:01:05Z bsam $
+# $FreeBSD: lang/gnatdroid-armv5/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	armv5
 PORTVERSION=	${SNAPSHOT}
@@ -21,6 +21,7 @@ BUILD_DEPENDS=	gnatdroid-sysroot>=9:${PORTSDIR}/lang/gnatdroid-sysroot \
 RUN_DEPENDS:=	gnatdroid-sysroot>=9:${PORTSDIR}/lang/gnatdroid-sysroot \
 		gnatdroid-binutils>=2.21:${PORTSDIR}/lang/gnatdroid-binutils
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../gnat-aux/Makefile.common"
 
 LANGS=		c ada
