@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: ports/security/pear-Auth_PrefManager/Makefile,v 1.8 2013/02/04 09:31:07 svnexp Exp $
+# $FreeBSD: security/pear-Auth_PrefManager/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Auth_PrefManager
 PORTVERSION=	1.2.2
@@ -13,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
