@@ -1,5 +1,5 @@
 # Created by: wenheping<wenheping@gmail.com>
-# $FreeBSD: databases/pear-XML_Query2XML/Makefile 314405 2013-03-17 08:11:40Z miwi $
+# $FreeBSD: databases/pear-XML_Query2XML/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	XML_Query2XML
 PORTVERSION=	1.7.2
@@ -18,6 +18,7 @@ PEAR_NET_LDAP2_DESC=	Add support for pear-Net_LDAP2
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_MDB2}
