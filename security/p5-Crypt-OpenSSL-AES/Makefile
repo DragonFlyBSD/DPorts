@@ -1,5 +1,5 @@
 # Created by: John Ferrell <jdferrell3@yahoo.com>
-# $FreeBSD: security/p5-Crypt-OpenSSL-AES/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Crypt-OpenSSL-AES/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-OpenSSL-AES
 PORTVERSION=	0.02
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::OpenSSL::AES.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
