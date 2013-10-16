@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/penguin-command/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/penguin-command/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	penguin-command
 PORTVERSION=	1.6.11
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 
 MAN6=		penguin-command.6 penguin-command.ja.6
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's| -lSDL | |g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} 's|LIBS="-lSDL_image|LIBS="-lSDL_image $$SDL_LIBS|g' \
