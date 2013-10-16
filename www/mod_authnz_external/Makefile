@@ -1,9 +1,5 @@
-# New ports collection makefile for:   	mod_authnz_external
-# Date created:        			March 26, 2007
-# Whom:                			José García Juanino <jjuanino@gmail.com>
-#
-# $FreeBSD: www/mod_authnz_external/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: José García Juanino <jjuanino@gmail.com>
+# $FreeBSD: www/mod_authnz_external/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_authnz_external
 PORTVERSION=	3.1.2
@@ -25,6 +21,7 @@ PROJECTHOST=	mod-auth-external
 PORTDOCS=	AUTHENTICATORS INSTALL README	\
 		CHANGES UPGRADE INSTALL.HARDCODE
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
