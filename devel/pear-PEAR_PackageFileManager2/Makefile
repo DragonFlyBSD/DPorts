@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: devel/pear-PEAR_PackageFileManager2/Makefile 319667 2013-06-02 15:00:30Z miwi $
+# $FreeBSD: devel/pear-PEAR_PackageFileManager2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PEAR_PackageFileManager2
 PORTVERSION=	1.0.2
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
