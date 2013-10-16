@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Many/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Many/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
 
 PORTNAME=	Geo-Coder-Many
 PORTVERSION=	0.40
@@ -34,24 +34,6 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Geo::Coder::Many.3 \
-		Geo::Coder::Many::Bing.3 \
-		Geo::Coder::Many::Generic.3 \
-		Geo::Coder::Many::Google.3 \
-		Geo::Coder::Many::Googlev3.3 \
-		Geo::Coder::Many::Mapquest.3 \
-		Geo::Coder::Many::OSM.3 \
-		Geo::Coder::Many::Ovi.3 \
-		Geo::Coder::Many::PlaceFinder.3 \
-		Geo::Coder::Many::Response.3 \
-		Geo::Coder::Many::Scheduler.3 \
-		Geo::Coder::Many::Scheduler::OrderedList.3 \
-		Geo::Coder::Many::Scheduler::Selective.3 \
-		Geo::Coder::Many::Scheduler::UniquenessScheduler.3 \
-		Geo::Coder::Many::Scheduler::UniquenessScheduler::WRR.3 \
-		Geo::Coder::Many::Scheduler::UniquenessScheduler::WeightedRandom.3 \
-		Geo::Coder::Many::Util.3
 
 .include <bsd.port.pre.mk>
 
