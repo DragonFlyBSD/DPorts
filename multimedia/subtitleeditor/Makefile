@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/subtitleeditor/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: multimedia/subtitleeditor/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	subtitleeditor
 PORTVERSION=	0.40.0
@@ -33,6 +33,7 @@ MAN1=		subtitleeditor.1
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
