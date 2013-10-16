@@ -1,5 +1,5 @@
 # Created by: Paul Dlug <paul@aps.org>
-# $FreeBSD: sysutils/radmind/Makefile 316744 2013-04-28 20:01:07Z bapt $
+# $FreeBSD: sysutils/radmind/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	radmind
 PORTVERSION=	1.14.1
@@ -36,6 +36,7 @@ DOCS=		COPYRIGHT README SPEC
 OPTIONS_DEFINE=	IGNORE_TIMESTAMPS DOCS
 IGNORE_TIMESTAMPS_DESC=	Add '-t' option to fsdiff
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIGNORE_TIMESTAMPS}
