@@ -1,5 +1,5 @@
 # Created by: Henrik Friedrichsen <hrkfdn@gmail.com>
-# $FreeBSD: audio/mpdbrowser/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: audio/mpdbrowser/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mpdbrowser
 PORTVERSION=	0.9.15
@@ -17,6 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpd>=0.2.0:${PORTSDIR}/audio/py-mpd
 
 PYDISTUTILS_PKGNAME=	mpdBrowser
 USES=		gettext iconv
+NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_GNOME=	intltool pygtk2
