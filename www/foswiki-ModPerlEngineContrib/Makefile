@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/foswiki-ModPerlEngineContrib/Makefile 322376 2013-07-06 09:53:46Z ohauer $
+# $FreeBSD: www/foswiki-ModPerlEngineContrib/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ModPerlEngineContrib
 MASTER_SITES=	http://protey.ru/freebsd/distfiles/ \
@@ -16,5 +16,6 @@ SVNREV=		8600
 
 USE_APACHE_RUN=	22+
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../foswiki/bsd.foswiki.mk"
 .include <bsd.port.mk>
