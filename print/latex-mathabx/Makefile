@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-mathabx
-# Date created:		24 Jan 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: print/latex-mathabx/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: print/latex-mathabx/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-mathabx
 PORTVERSION=	1.0.20050518
@@ -59,6 +56,7 @@ TYPE1_FILES=	matha10.pfb matha12.pfb matha5.pfb matha6.pfb matha7.pfb \
 DVIPSDIR=	${TEXMFLOCALDIR}/fonts/map/dvips/mathabx
 DVIPS_FILES=	mathabx.map
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${CLASSDIR}
 	${INSTALL_DATA} ${WRKSRC}/mathtest.tex\
