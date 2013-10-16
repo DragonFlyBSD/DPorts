@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon <avg@icyb.net.ua>
-# $FreeBSD: ports/devel/universalindentgui/Makefile,v 1.9 2013/02/17 16:42:12 svnexp Exp $
+# $FreeBSD: devel/universalindentgui/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	universalindentgui
 PORTVERSION=	1.2.0
@@ -23,6 +23,7 @@ QMAKE_ARGS=	-unix PREFIX=${PREFIX}
 
 DESKTOP_ENTRIES="UniversalIndentGUI" "${COMMENT}" "" "${PORTNAME}" "" true
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#/usr/#${PREFIX}/#g' -e 's#/share/man/#/man/#g' \
 		${WRKSRC}/UniversalIndentGUI.pro ${WRKSRC}/src/SettingsPaths.cpp
