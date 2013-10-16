@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: mail/p5-Net-SMTP-Server/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Net-SMTP-Server/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-SMTP-Server
 PORTVERSION=	1.1
@@ -23,4 +23,5 @@ MAN3=		Net::SMTP::Server.3 \
 		Net::SMTP::Server::Client.3 \
 		Net::SMTP::Server::Relay.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
