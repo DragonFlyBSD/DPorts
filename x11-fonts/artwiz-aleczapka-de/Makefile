@@ -1,8 +1,5 @@
-# New ports collection makefile for:	artwiz-aleczapka-de
-# Date created:			2004-08-28
-# Whom:				Herbert J. Skuhra <herbert.skuhra@gmx.at>
-#
-# $FreeBSD: ports/x11-fonts/artwiz-aleczapka-de/Makefile,v 1.6 2012/11/17 06:03:27 svnexp Exp $
+# Created by: Herbert J. Skuhra <herbert.skuhra@gmx.at>
+# $FreeBSD: x11-fonts/artwiz-aleczapka-de/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=		artwiz-aleczapka-de
 PORTVERSION=		1.3
@@ -24,6 +21,7 @@ FONTDIR=	${LOCALBASE}/lib/X11/fonts/${PORTNAME}/
 FILES=	${FONTS:S,$,.pcf,} ${WRKSRC}/fonts.alias \
 	${WRKSRC}/fonts.dir
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
