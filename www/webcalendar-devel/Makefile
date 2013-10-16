@@ -1,4 +1,4 @@
-# $FreeBSD: www/webcalendar-devel/Makefile 314915 2013-03-22 11:53:34Z bapt $
+# $FreeBSD: www/webcalendar-devel/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebCalendar
 PORTVERSION=	1.2.5
@@ -29,6 +29,7 @@ GRADIENTBG_DESC=	Gradient background image support
 REMINDERS_DESC=		Email reminder support
 PALM_DESC=		Palm export support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
