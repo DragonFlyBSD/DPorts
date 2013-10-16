@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-pinba
-# Date created:				24 Dec 2009
-# Whom:					raven428 <raven428@gmail.com>
-#
-# $FreeBSD: devel/php5-pinba/Makefile 314580 2013-03-18 15:14:27Z vanilla $
-#
+# Created by: raven428 <raven428@gmail.com>
+# $FreeBSD: devel/php5-pinba/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pinba
 PORTVERSION=	2012.03.20
@@ -27,4 +23,5 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	pinba
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
