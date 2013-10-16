@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: net-im/p5-Net-Async-XMPP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-Net-Async-XMPP/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Net-Async-XMPP
 PORTVERSION=	0.002
@@ -24,4 +24,5 @@ MAN3=		Net::Async::XMPP.3 \
 		Net::Async::XMPP::Protocol.3 \
 		Net::Async::XMPP::Server.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
