@@ -1,5 +1,5 @@
 # Created by: Espen Volden aka voldern <voldern@hoeggen.net>
-# $FreeBSD: databases/rubygem-do_sqlite3/Makefile 322877 2013-07-13 02:15:02Z swills $
+# $FreeBSD: databases/rubygem-do_sqlite3/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	do_sqlite3
 PORTVERSION=	0.10.13
@@ -18,4 +18,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 CONFIGURE_ARGS=	--with-sqlite3-dir=${LOCALBASE}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
