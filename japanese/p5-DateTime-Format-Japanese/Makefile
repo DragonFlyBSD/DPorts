@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-DateTime-Format-Japanese
-# Date created:		2007-11-06
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/japanese/p5-DateTime-Format-Japanese/Makefile,v 1.5 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: japanese/p5-DateTime-Format-Japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	DateTime-Format-Japanese
 PORTVERSION=	0.04000
@@ -21,12 +17,14 @@ BUILD_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-Params-Validate>=0:${PORTSDIR}/devel/p5-Params-Validate
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		DateTime::Format::Japanese.3 \
 		DateTime::Format::Japanese::Common.3 \
 		DateTime::Format::Japanese::Traditional.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
