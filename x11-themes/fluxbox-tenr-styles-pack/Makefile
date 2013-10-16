@@ -1,9 +1,5 @@
-# New ports collection makefile for:	fluxbox-tenr-styles-pack
-# Date created:		2007-12-15
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/fluxbox-tenr-styles-pack/Makefile,v 1.5 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: x11-themes/fluxbox-tenr-styles-pack/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	fluxbox-tenr-styles-pack
 PORTVERSION=	20071215
@@ -25,6 +21,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/tenr.de-styles-pkg
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${INSTALL_DIR}
 	cd ${WRKSRC}; ${COPYTREE_SHARE} \* ${INSTALL_DIR}
