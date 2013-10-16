@@ -1,5 +1,5 @@
 # Created by: frase@frase.id.au
-# $FreeBSD: devel/hs-git-annex/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/hs-git-annex/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	git-annex
 PORTVERSION=	4.20130601
@@ -41,6 +41,7 @@ PAIRING_DESC=		Enable pairing (requires web application)
 PRODUCTION_DESC=	Production build
 TDFA_DESC=		Use regex-tdfa for wildcards
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MS3}
