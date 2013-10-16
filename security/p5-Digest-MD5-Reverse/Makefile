@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-MD5-Reverse/Makefile 326980 2013-09-11 13:54:50Z az $
+# $FreeBSD: security/p5-Digest-MD5-Reverse/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-MD5-Reverse
 PORTVERSION=	1.3
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Digest::MD5::Reverse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
