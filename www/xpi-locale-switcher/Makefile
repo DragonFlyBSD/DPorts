@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-locale-switcher
-# Date created:		21 May 2006
-# Whom:			Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-#
-# $FreeBSD: ports/www/xpi-locale-switcher/Makefile,v 1.4 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
+# $FreeBSD: www/xpi-locale-switcher/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	locale-switcher
 PORTVERSION=	2.1
@@ -20,5 +16,6 @@ XPI_FILES=	chrome/content/switch-tbird.xul chrome/content/switch.js \
 		chrome/content/switch.xul chrome.manifest install.rdf
 XPI_DIRS=	chrome/content chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
