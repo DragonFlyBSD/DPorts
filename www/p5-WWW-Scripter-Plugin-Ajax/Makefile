@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Scripter-Plugin-Ajax/Makefile 326021 2013-09-02 16:07:56Z az $
+# $FreeBSD: www/p5-WWW-Scripter-Plugin-Ajax/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Scripter-Plugin-Ajax
 PORTVERSION=	0.09
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Scripter::Plugin::Ajax.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
