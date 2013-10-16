@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text-Diff-Parser
-# Date created:	   24 Dec 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: textproc/p5-Text-Diff-Parser/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: textproc/p5-Text-Diff-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Diff-Parser
 PORTVERSION=	0.1001
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Diff::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
