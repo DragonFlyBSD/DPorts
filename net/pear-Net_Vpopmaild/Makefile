@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>)
-# $FreeBSD: net/pear-Net_Vpopmaild/Makefile 318023 2013-05-13 09:13:55Z miwi $
+# $FreeBSD: net/pear-Net_Vpopmaild/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net_Vpopmaild
 PORTVERSION=	0.3.2
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
