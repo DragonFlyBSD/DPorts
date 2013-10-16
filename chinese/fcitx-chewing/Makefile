@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-chewing/Makefile 327338 2013-09-15 12:27:30Z antoine $
+# $FreeBSD: chinese/fcitx-chewing/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	fcitx-chewing
 PORTVERSION=	0.1.3
@@ -19,4 +19,5 @@ USE_XZ=		yes
 USES=		cmake gettext pkgconfig
 USE_GNOME=	intltool
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
