@@ -1,4 +1,4 @@
-# $FreeBSD: ports/graphics/py-blockdiagcontrib-cisco/Makefile,v 1.4 2012/11/17 05:58:20 svnexp Exp $
+# $FreeBSD: graphics/py-blockdiagcontrib-cisco/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	blockdiagcontrib-cisco
 PORTVERSION=	0.1.7
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}blockdiag>=0.8.0:${PORTSDIR}/graphics/py-blockdiag
 USE_PYTHON=	2.4-2.7
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 x-generate-plist:
 	${FIND} ${PYTHON_SITELIBDIR}/${PYEASYINSTALL_EGG} -type f | ${SORT} | \
 	${SED} -e 's,${PYTHON_SITELIBDIR},%%PYTHON_SITELIBDIR%%,' \
