@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_stock_split/Makefile 324525 2013-08-10 14:22:41Z wg $
+# $FreeBSD: finance/trytond_stock_split/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_stock_split
 PORTVERSION=	2.4.1
@@ -19,4 +19,5 @@ CONFLICTS=	trytond_stock_split-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
