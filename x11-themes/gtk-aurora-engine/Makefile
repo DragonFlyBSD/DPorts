@@ -1,5 +1,5 @@
 # Created by: okeeblow <root@cooltrainer.org>
-# $FreeBSD: x11-themes/gtk-aurora-engine/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: x11-themes/gtk-aurora-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	aurora
 PORTVERSION=	1.5.1
@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/aurora-1.5
 
+NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKDIR}
