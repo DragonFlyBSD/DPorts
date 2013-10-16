@@ -1,17 +1,13 @@
-# New ports collection makefile for:	PostgreSQL PL/Tcl
-# Date created:		January 14, 2002
-# Whom:			Palle Girgensohn <girgen@partitur.se>
-#
-# $FreeBSD: ports/databases/postgresql91-pltcl/Makefile,v 1.2 2012/11/17 05:55:21 svnexp Exp $
-#
+# Created by: Palle Girgensohn <girgen@partitur.se>
+# $FreeBSD: databases/postgresql91-pltcl/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	3
 CATEGORIES=	databases tcl
-PKGNAMESUFFIX=	-pltcl
+PKGNAMESUFFIX?= ${DISTV:S/.//}-pltcl
 
 MAINTAINER=	pgsql@FreeBSD.org
-COMMENT=	A module for using Tcl to write SQL functions
+COMMENT=	Module for using Tcl to write SQL functions
 
 MASTERDIR=	${.CURDIR}/../../databases/postgresql${WANT_PGSQL_VER}-server
 
@@ -33,5 +29,7 @@ MAKE_ENV+=	TCL_INCDIR="${TCL_INCLUDEDIR}"
 BUILD_DIRS=	src/backend src/pl/tcl
 INSTALL_DIRS=	src/pl/tcl
 SLAVE_ONLY=	yes
+COMPONENT=	-pltcl
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
