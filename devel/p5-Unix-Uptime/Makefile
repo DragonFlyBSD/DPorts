@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: devel/p5-Unix-Uptime/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Unix-Uptime/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Unix-Uptime
 PORTVERSION=	0.3701
@@ -18,4 +18,5 @@ MAN3=		Unix::Uptime.3 \
 		Unix::Uptime::BSD.3 \
 		Unix::Uptime::Linux.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
