@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/p5-Net-FTPServer/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: ftp/p5-Net-FTPServer/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	Net-FTPServer
 PORTVERSION=	1.125
@@ -50,6 +50,7 @@ DOCS=	README TODO doc/*
 PORTDOCS=	*
 PORTEXAMPLES=	ftpd.conf
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s/root,root/root,wheel/" \
 		-e "s,/usr/sbin,${PREFIX}/sbin," \
