@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: devel/p5-Tie-Array-Pack/Makefile 326803 2013-09-09 11:55:30Z az $
+# $FreeBSD: devel/p5-Tie-Array-Pack/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-Array-Pack
 PORTVERSION=	0.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Tie::Array::Pack.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
