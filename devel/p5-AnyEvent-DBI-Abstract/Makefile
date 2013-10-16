@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-AnyEvent-DBI-Abstract/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-AnyEvent-DBI-Abstract/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent-DBI-Abstract
 PORTVERSION=	0.01
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		AnyEvent::DBI::Abstract.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
