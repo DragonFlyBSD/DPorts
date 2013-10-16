@@ -1,5 +1,5 @@
 # Created by: Zahemszky, Gábor <Gabor@Zahemszky.HU>
-# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	xfce4-xmms-plugin
 PORTVERSION=	0.5.3
@@ -24,6 +24,7 @@ XMMS_DESC=	xmms support
 BEEP_DESC=	beep-media-player support
 AUDACIOUS_DESC=	audacious support
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MBEEP}
