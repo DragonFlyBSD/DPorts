@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-fullblognotification/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-fullblognotification/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.2.1
@@ -17,6 +17,7 @@ RUN_DEPENDS+=	trac-fullblog>=0.1.1:${PORTSDIR}/www/trac-fullblog
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
+NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	TracFullBlogNotificationPlugin
 
 .if defined(BOOTSTRAP)
