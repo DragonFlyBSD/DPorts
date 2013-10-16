@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize-Shell/Makefile 326216 2013-09-03 19:33:03Z sunpoet $
+# $FreeBSD: www/p5-WWW-Mechanize-Shell/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize-Shell
 PORTVERSION=	0.53
@@ -32,6 +32,7 @@ MAN3=		WWW::Mechanize::Shell.3
 PORTDOCS=	Changes README
 PORTEXAMPLES=	banking.postbank.de.mech hotmail.signup.mech wwwshell.pl
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
