@@ -1,9 +1,5 @@
-# New ports collection makefile for:	libdwarf
-# Date created:		11 Feb 2005
-# Whom:			joerg@FreeBSD.org
-#
-# $FreeBSD: devel/libdwarf/Makefile 316404 2013-04-24 07:15:57Z joerg $
-#
+# Created by: joerg@FreeBSD.org
+# $FreeBSD: devel/libdwarf/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libdwarf
 PORTVERSION=	20130207
@@ -25,6 +21,7 @@ USE_DOS2UNIX=	*.h
 
 PS_FILES=	dwarf.v2.pdf index.v2.pdf libdwarf2.1.pdf libdwarf2p.1.pdf mips_extensions.pdf
 
+NO_STAGE=	yes
 do-install:
 		${INSTALL_DATA} ${WRKSRC}/libdwarf.a ${PREFIX}/lib
 		${INSTALL_DATA} ${WRKSRC}/dwarf.h ${PREFIX}/include
