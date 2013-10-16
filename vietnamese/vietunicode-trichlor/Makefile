@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vietunicode-trichlor
-# Date created:		2007/01/06
-# Whom:			chinsan
-#
-# $FreeBSD: vietnamese/vietunicode-trichlor/Makefile 321284 2013-06-19 16:03:12Z rafan $
-#
+# Created by: chinsan
+# $FreeBSD: vietnamese/vietunicode-trichlor/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	vietunicode-trichlor
 PORTVERSION=	2004.04.30
@@ -34,6 +30,7 @@ TTF=		vuUHoai_bold.ttf vuUHoai_bolditalic.ttf vuUHoai_italic.ttf \
 		vuThaHuong.ttf vuThaHuong_bold.ttf vuThaHuong_bolditalic.ttf \
 		vuThaHuong_italic.ttf vuUHoai.ttf
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${FONTSDIR}
 .for i in ${TTF}
