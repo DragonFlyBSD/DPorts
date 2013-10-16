@@ -1,9 +1,4 @@
-# New ports collection makefile for:	plasma-applet-serverstatuswidget
-# Date Created:				2011-02-23
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	serverstatuswidget
 PORTVERSION=	1.5.1
@@ -26,6 +21,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 
 	${ECHO_CMD} >> ${WRKSRC}/src/serverstatus.h
