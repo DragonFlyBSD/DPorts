@@ -1,5 +1,5 @@
 # Created by: Shawn Bell <decept@gmail.com>
-# $FreeBSD: ports/x11-themes/cursor-polar-theme/Makefile,v 1.10 2013/02/08 10:55:14 svnexp Exp $
+# $FreeBSD: x11-themes/cursor-polar-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	polar-theme
 PORTVERSION=	1.4
@@ -17,6 +17,7 @@ USE_BZIP2=	yes
 
 WRKSRC=		${WRKDIR}
 
+NO_STAGE=	yes
 do-install:
 		@${MKDIR} ${PREFIX}/lib/X11/icons/polar/cursors
 		cd ${WRKSRC}/PolarCursorTheme/cursors \
