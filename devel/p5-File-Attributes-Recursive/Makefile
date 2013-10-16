@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Attributes-Recursive/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-File-Attributes-Recursive/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Attributes-Recursive
 PORTVERSION=	0.02
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	File::Attributes::Recursive.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
