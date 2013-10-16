@@ -1,8 +1,5 @@
-# New ports collection makefile for:	php5-blitz-devel
-# Date created:				2011-08-19
-# Whom:					Valery Komarov <komarov@valerka.net>
-#
-# $FreeBSD: ports/devel/php5-blitz-devel/Makefile,v 1.5 2012/11/17 05:56:41 svnexp Exp $
+# Created by: Valery Komarov <komarov@valerka.net>
+# $FreeBSD: devel/php5-blitz-devel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	blitz-devel
 PORTVERSION=	0.7.2
@@ -21,4 +18,5 @@ USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	blitz
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
