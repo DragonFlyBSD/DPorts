@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: news/p5-POE-Component-Server-NNTP/Makefile 324036 2013-07-31 11:56:17Z az $
+# $FreeBSD: news/p5-POE-Component-Server-NNTP/Makefile 327759 2013-09-20 22:31:15Z bapt $
 
 PORTNAME=	POE-Component-Server-NNTP
 PORTVERSION=	1.04
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=		POE::Component::Server::NNTP.3 \
 		POE::Component::Server::NNTP::Constants.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
