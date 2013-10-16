@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WebService-MoviePosterDB
-# Date created:		2011-06-13
-# Whom:			Christopher Key <cjk32@cam.ac.uk>
-#
-# $FreeBSD: www/p5-WebService-MoviePosterDB/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Christopher Key <cjk32@cam.ac.uk>
+# $FreeBSD: www/p5-WebService-MoviePosterDB/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-MoviePosterDB
 PORTVERSION=	0.18
@@ -27,4 +23,5 @@ MAN3=		WebService::MoviePosterDB.3 \
 		WebService::MoviePosterDB::Movie.3 \
 		WebService::MoviePosterDB::Poster.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
