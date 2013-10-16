@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/hotwire-shell/Makefile 313402 2013-03-04 10:55:23Z lwhsu $
+# $FreeBSD: x11/hotwire-shell/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	hotwire-shell
 PORTVERSION=	0.721
@@ -27,4 +27,5 @@ INSTALLS_ICONS=	yes
 
 PYDISTUTILS_PKGNAME=	hotwire
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
