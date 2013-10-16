@@ -1,6 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11/xfce4-wmdock-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: x11/xfce4-wmdock-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-wmdock-plugin
 PORTVERSION=	0.3.4
@@ -20,4 +19,5 @@ USE_GNOME=	gtk20 intltool intlhack libwnck
 USE_XFCE=	configenv libgui panel
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
