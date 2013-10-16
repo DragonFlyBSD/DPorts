@@ -1,5 +1,5 @@
 # Created by: Ismail YENIGUL
-# $FreeBSD: mail/qmailadmin-devel/Makefile 314324 2013-03-15 22:03:42Z bdrewery $
+# $FreeBSD: mail/qmailadmin-devel/Makefile 329692 2013-10-07 11:09:05Z bapt $
 
 PORTNAME=	qmailadmin
 PORTVERSION=	1.2.13
@@ -9,6 +9,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 
 MAINTAINER=	ismail.yenigul@endersys.com.tr
 COMMENT=	CGI program for administering Qmail with vchkpw/vpopmail
+
+PKGNAMESUFFIX=	-devel
 
 # vpopmail installation directory
 #
@@ -34,7 +36,6 @@ RUN_DEPENDS+=	ezmlm-idx:${PORTSDIR}/mail/ezmlm-idx
 .endif
 
 CONFLICTS=	qmailadmin-1.*
-LATEST_LINK=	qmailadmin-devel
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
@@ -77,6 +78,7 @@ WEBDATAURL?=
 PLIST_SUB+=	CGIBINDIR="${CGIBINDIR}" CGIBINSUBDIR="${CGIBINSUBDIR}" \
 		WEBDATADIR="${WEBDATADIR}" WEBDATASUBDIR="${WEBDATASUBDIR}"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # End of user-configurable variables
