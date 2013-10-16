@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Apache-Session-SQLite3
-# Date created:				March 17, 2005
-# Whom:					clsung
-#
-# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: clsung
+# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-Session-SQLite3
 PORTVERSION=	0.03
@@ -23,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Apache::Session::SQLite3.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
