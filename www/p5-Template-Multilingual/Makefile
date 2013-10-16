@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Template-Multilingual
-# Date created:		19 June 2005
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: www/p5-Template-Multilingual/Makefile 326053 2013-09-02 18:23:34Z az $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: www/p5-Template-Multilingual/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Multilingual
 PORTVERSION=	1.00
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 MAN3=		Template::Multilingual.3 \
 		Template::Multilingual::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
