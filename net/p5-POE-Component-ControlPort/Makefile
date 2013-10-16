@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: net/p5-POE-Component-ControlPort/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: net/p5-POE-Component-ControlPort/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-ControlPort
 PORTVERSION=	0.01
@@ -23,6 +23,7 @@ MAN3=	POE::Component::ControlPort.3 \
 	POE::Component::ControlPort::Command.3 \
 	POE::Component::ControlPort::DefaultCommands.3
 
+NO_STAGE=	yes
 post-extract:
 	@${PERL} -pi -e 's/my \$$ret =.*/my \$$ret = 0;/' ${WRKSRC}/Makefile.PL
 
