@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: devel/p5-Regexp-Grammars/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Regexp-Grammars/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Regexp-Grammars
 PORTVERSION=	1.026
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Regexp::Grammars.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
