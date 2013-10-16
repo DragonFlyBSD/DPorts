@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-rightgogrid
-# Date created:			23 Apr 2008
-# Whom:				Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/net/rubygem-rightgogrid/Makefile,v 1.3 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: net/rubygem-rightgogrid/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	rightgogrid
 PORTVERSION=	0.1.0
@@ -22,4 +18,5 @@ GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
 UNIQUENAME=	${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
