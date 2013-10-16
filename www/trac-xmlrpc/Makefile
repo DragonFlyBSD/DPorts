@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-xmlrpc/Makefile 323188 2013-07-17 22:04:43Z glarkin $
+# $FreeBSD: www/trac-xmlrpc/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xmlrpc
 PORTVERSION=	1.1.2.r${SVN_REV}
@@ -27,4 +27,5 @@ PYDISTUTILS_PKGNAME=	TracXMLRPC
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/.r${SVN_REV}//g}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
