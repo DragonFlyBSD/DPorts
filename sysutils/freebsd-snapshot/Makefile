@@ -1,9 +1,5 @@
-# New ports collection makefile for:	freebsd-snapshot
-# Date created:				2005-09-07
-# Whom:					gtodd@bellanet.org
-#
-# $FreeBSD: ports/sysutils/freebsd-snapshot/Makefile,v 1.14 2012/11/17 06:01:30 svnexp Exp $
-#
+# Created by: gtodd@bellanet.org
+# $FreeBSD: sysutils/freebsd-snapshot/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	freebsd-snapshot
 DISTVERSION=	20091208.1
@@ -26,6 +22,7 @@ SUB_FILES=	pkg-message pkg-deinstall
 PKGMESSAGE=	${WRKDIR}/pkg-message
 PKGDEINSTALLL=	${WRKDIR}/pkg-deinstall
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" \
 		${WRKSRC}/amd.map.snap ${WRKSRC}/snapshot \
