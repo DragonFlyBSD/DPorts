@@ -1,5 +1,5 @@
 # Created by: Jeff Putsch <jdputsch@comcast.net>
-# $FreeBSD: net/p5-POE-Component-Jabber/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-POE-Component-Jabber/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Jabber
 PORTVERSION=	3.00
@@ -35,6 +35,7 @@ MAN3=		POE::Component::Jabber.3 \
 		POE::Component::Jabber::ProtocolFactory.3 \
 		POE::Component::Jabber::XMPP.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
