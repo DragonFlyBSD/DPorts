@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-BBS-UserInfo-Maple3
-# Date created:		2006-08-20
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net/p5-BBS-UserInfo-Maple3/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-BBS-UserInfo-Maple3/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	BBS-UserInfo-Maple3
 PORTVERSION=	0.01
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		BBS::UserInfo::Maple3.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
