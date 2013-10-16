@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: databases/mysql-connector-c++/Makefile 316412 2013-04-24 08:11:17Z gahr $
+# $FreeBSD: databases/mysql-connector-c++/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql-connector-c++
 PORTVERSION=	1.1.3
@@ -52,4 +52,5 @@ regression-test: build
 	test/unit/classes/statement )
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
