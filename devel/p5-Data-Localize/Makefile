@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Localize/Makefile 324489 2013-08-10 11:54:04Z kuriyama $
+# $FreeBSD: devel/p5-Data-Localize/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Localize
 PORTVERSION=	0.00025
@@ -36,6 +36,7 @@ MAN3=	Data::Localize.3 \
 	Data::Localize::Util.3 \
 	Data::Localize::Storage::Hash.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
