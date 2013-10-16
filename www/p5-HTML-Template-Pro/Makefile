@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Template-Pro/Makefile 326054 2013-09-02 18:41:05Z az $
+# $FreeBSD: www/p5-HTML-Template-Pro/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-Template-Pro
 PORTVERSION=	0.9510
@@ -20,4 +20,5 @@ MAN3=	HTML::Template::PerlInterface.3 \
 	HTML::Template::Pro.3 \
 	HTML::Template::SYNTAX.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
