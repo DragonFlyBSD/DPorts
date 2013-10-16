@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/qtcurve-qt4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-themes/qtcurve-qt4/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.14
@@ -24,4 +24,5 @@ CMAKE_ARGS+=	-DQTC_QT_ONLY:BOOL=ON \
 PLIST_FILES=	${QT_PLUGINDIR_REL}/styles/qtcurve.so
 PLIST_DIRSTRY=	${QT_PLUGINDIR_REL}/styles
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
