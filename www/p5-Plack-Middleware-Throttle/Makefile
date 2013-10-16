@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Middleware::Throttle
-# Date created:		04 Sep 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Middleware-Throttle/Makefile 326033 2013-09-02 16:56:12Z az $
-#
+# $FreeBSD: www/p5-Plack-Middleware-Throttle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Throttle
 PORTVERSION=	0.01
@@ -30,4 +25,5 @@ MAN3=	Plack::Middleware::Throttle.3 \
 	Plack::Middleware::Throttle::Interval.3 \
 	Plack::Middleware::Throttle::Limiter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
