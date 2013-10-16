@@ -1,5 +1,4 @@
-# Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: devel/rubygem-streetaddress/Makefile 322059 2013-06-29 21:30:08Z swills $
+# $FreeBSD: devel/rubygem-streetaddress/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	StreetAddress
 PORTVERSION=	1.0.5
@@ -15,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
