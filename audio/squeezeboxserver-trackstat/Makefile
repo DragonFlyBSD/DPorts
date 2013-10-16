@@ -1,9 +1,5 @@
-# New ports collection makefile for:	squeezeboxserver-trackstat
-# Date created:		21 June 2008
-# Whom:			Tim Bishop <tdb@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/squeezeboxserver-trackstat/Makefile,v 1.12 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: Tim Bishop <tdb@FreeBSD.org>
+# $FreeBSD: audio/squeezeboxserver-trackstat/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	trackstat
 PORTVERSION=	2.11.3435
@@ -21,6 +17,7 @@ RUN_DEPENDS=	softsqueeze:${PORTSDIR}/audio/squeezeboxserver
 
 FETCH_BEFORE_ARGS=	-o ${DISTFILES}
 USE_ZIP=	yes
+NO_STAGE=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
