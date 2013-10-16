@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-Authen-Passphrase/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-Authen-Passphrase/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-InflateColumn-Authen-Passphrase
 PORTVERSION=	0.01
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::Class::InflateColumn::Authen::Passphrase.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
