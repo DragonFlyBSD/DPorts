@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Algorithm-Combinatorics/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Algorithm-Combinatorics/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Algorithm-Combinatorics
 PORTVERSION=	0.27
@@ -19,4 +19,5 @@ MAN3=		Algorithm::Combinatorics.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
