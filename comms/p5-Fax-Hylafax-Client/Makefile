@@ -1,5 +1,5 @@
 # Created by: Tony Shadwick <tshadwick@oss-solutions.com>
-# $FreeBSD: comms/p5-Fax-Hylafax-Client/Makefile 324166 2013-08-02 16:55:05Z az $
+# $FreeBSD: comms/p5-Fax-Hylafax-Client/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	Fax-Hylafax-Client
 PORTVERSION=	1.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Fax::Hylafax::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
