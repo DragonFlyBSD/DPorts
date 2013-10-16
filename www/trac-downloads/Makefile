@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-downloads/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-downloads/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;:tl}
 PORTVERSION=	${TRAC_VERSION}.${PLUGIN_VERSION}.${SVN_REV}
@@ -16,6 +16,7 @@ COMMENT=	Trac plugin providing a downloads section
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
 TRAC_VERSION=	0.12
+NO_STAGE=	yes
 PLUGIN_VERSION=	0.3
 SVN_REV=	10047
 
