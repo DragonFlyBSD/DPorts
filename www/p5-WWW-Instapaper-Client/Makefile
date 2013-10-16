@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/p5-WWW-Instapaper-Client/Makefile 326033 2013-09-02 16:56:12Z az $
+# $FreeBSD: www/p5-WWW-Instapaper-Client/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Instapaper-Client
 PORTVERSION=	0.901
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		WWW::Instapaper::Client.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
