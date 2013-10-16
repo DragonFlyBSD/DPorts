@@ -1,10 +1,10 @@
 # Created by: Cyrille Lefevre <cyrille.lefevre@laposte.net>
-# $FreeBSD: ports/textproc/docproj-nojadetex/Makefile,v 1.4 2013/01/05 01:47:32 svnexp Exp $
-#
+# $FreeBSD: textproc/docproj-nojadetex/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PKGNAMESUFFIX=	-nojadetex
 WITHOUT_JADETEX=yes
 
 MASTERDIR=	${.CURDIR}/../docproj
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
