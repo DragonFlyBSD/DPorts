@@ -16,8 +16,8 @@
 # This code now mainly supports FreeBSD, but patches to update support for
 # OpenBSD and NetBSD will be accepted.
 #
-# $FreeBSD: ports-mgmt/portlint/src/portlint.pl 322990 2013-07-14 16:15:21Z marcus $
-# $MCom: portlint/portlint.pl,v 1.282 2013/07/14 16:08:12 marcus Exp $
+# $FreeBSD: ports-mgmt/portlint/src/portlint.pl 330147 2013-10-12 16:44:46Z marcus $
+# $MCom: portlint/portlint.pl,v 1.285 2013/10/12 16:41:24 marcus Exp $
 #
 
 use strict;
@@ -52,7 +52,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 14;
-my $micro = 4;
+my $micro = 5;
 
 sub l { '[{(]'; }
 sub r { '[)}]'; }
@@ -353,7 +353,8 @@ if ($committer) {
 		} elsif (/^\./) {
 			&perror("WARN", $fullname, -1, "dotfiles are not preferred. ".
 					"If this file is a dotfile to be installed as an example, ".
-					"consider importing it as \"dot$_\".");
+					"consider importing it as \"dot$_\".") unless
+					(-d && $_ eq '.svn');
 		} elsif (/[^-.a-zA-Z0-9_\+]/) {
 			&perror("WARN", $fullname, -1, "only use characters ".
 					"[-_.a-zA-Z0-9+] for patch or script names.");
@@ -1161,7 +1162,7 @@ sub check_depends_syntax {
 			if ($m{'dep'} =~ /^(gmake|\${GMAKE})$/) {
 				&perror("WARN", $file, -1, "dependency to $1 ".
 					"listed in $j. consider using ".
-					"USE_GMAKE.");
+					"USES[+]=gmake.");
 			}
 
 			# check USE_QT
@@ -1358,7 +1359,7 @@ sub checkmakefile {
 		#&perror("FATAL", $file, 3, "do not add extra ".
 		#		"empty comments after header.");
 		}
-	# special case for $rcsidsrt\n$MCom: portlint/portlint.pl,v 1.282 2013/07/14 16:08:12 marcus Exp $
+	# special case for $rcsidsrt\n$MCom: portlint/portlint.pl,v 1.285 2013/10/12 16:41:24 marcus Exp $
 	} elsif ($lines[1] =~ /^# \$$rcsidstr[:\$]/ and $lines[2] =~ /^#\s+\$MCom[:\$]/ and $lines[3] =~ /^$/) {
 		# DO NOTHING
 	} elsif ($lines[1] !~ /^# \$$rcsidstr[:\$]/ or $lines[2] !~ /^$/) {
@@ -1867,6 +1868,7 @@ ruby sed sh sort sysctl touch tr which xargs xmkmf
 				&& $curline !~ /^NO_CDROM(.)?=[^\n]+$i/m
 				&& $curline !~ /^MAINTAINER(.)?=[^\n]+$i/m
 				&& $curline !~ /^CATEGORIES(.)?=[^\n]+$i/m
+				&& $curline !~ /^USES(.)?=[^\n]+$i/m
 				&& $curline !~ /^WX_COMPS(.)?=[^\n]+$i/m
 				&& $curline !~ /^\s*#.+$/m
 				&& $curline !~ /\-\-$i/m
@@ -2839,7 +2841,8 @@ MAINTAINER COMMENT
 	} else { # check for correctness
 		if (($makevar{COMMENT} !~ /^["\[0-9A-Z]/) || ($makevar{COMMENT} =~ m/\.$/)) { #"
 			&perror("WARN", $file, -1, "COMMENT should begin with a capital, and end without a period");
-		} elsif (length($makevar{COMMENT}) > 70) {
+		}
+		if (length($makevar{COMMENT}) > 70) {
 			&perror("WARN", $file, -1, "COMMENT exceeds 70 characters limit.");
 		}
 	}

@@ -1,19 +1,16 @@
 # Created by: Jun-ichiro itojun Hagino <itojun@itojun.org>
-# $FreeBSD: ports-mgmt/portlint/Makefile 326530 2013-09-06 17:55:21Z az $
-#
-# This port is self contained in the src directory.
-#
+# $FreeBSD: ports-mgmt/portlint/Makefile 330147 2013-10-12 16:44:46Z marcus $
 
 PORTNAME=	portlint
-PORTVERSION=	2.14.4
+PORTVERSION=	2.14.5
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
 
 MAINTAINER=	marcus@FreeBSD.org
-COMMENT=	A verifier for FreeBSD port directory
+COMMENT=	Verifier for FreeBSD port directory
 
-USES=		shebangfix
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/src
 USES=		perl5
@@ -21,11 +18,14 @@ USE_PERL5=	run
 
 SRC=		${.CURDIR}/src
 
-MAN1=		portlint.1
-PLIST_FILES=	bin/portlint
+PLIST_FILES=	bin/portlint \
+		man/man1/portlint.1.gz
+USES+=		shebangfix
 SHEBANG_FILES=	*.pl
 
-.if !defined(NOPORTEXAMPLES)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MEXAMPLES}
 PLIST_FILES+=	%%EXAMPLESDIR%%/portlintgrep
 PLIST_DIRS=	%%EXAMPLESDIR%%
 .endif
@@ -41,11 +41,15 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/ports|/usr/dports|g' ${WRKSRC}/portlint*
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/portlint.pl ${PREFIX}/bin/portlint
-	${INSTALL_MAN} ${WRKSRC}/portlint.1 ${MAN1PREFIX}/man/man1
-.if !defined(NOPORTEXAMPLES)
-	${INSTALL} -o ${SHAREOWN} -g ${SHAREGRP} -m ${BINMODE} -d ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/portlintgrep.pl ${EXAMPLESDIR}/portlintgrep
+	${INSTALL_SCRIPT} ${WRKSRC}/portlint.pl \
+	    ${STAGEDIR}${PREFIX}/bin/portlint
+	${INSTALL_MAN} ${WRKSRC}/portlint.1 \
+	    ${STAGEDIR}${MAN1PREFIX}/man/man1
+.if ${PORT_OPTIONS:MEXAMPLES}
+	${INSTALL} -o ${SHAREOWN} -g ${SHAREGRP} -m ${BINMODE} -d \
+	    ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/portlintgrep.pl \
+	    ${STAGEDIR}${EXAMPLESDIR}/portlintgrep
 .endif
 
 .include <bsd.port.mk>
