@@ -1,5 +1,5 @@
 # Created by: Felippe M. Motta <lippe@shire.freebsd.org>
-# $FreeBSD: devel/p5-Async-MergePoint/Makefile 326823 2013-09-09 17:31:07Z az $
+# $FreeBSD: devel/p5-Async-MergePoint/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Async-MergePoint
 PORTVERSION=	0.04
@@ -25,4 +25,5 @@ PLIST_DIRS=	%%SITE_PERL%%/mach/auto/Async/MergePoint \
 		%%SITE_PERL%%/mach/auto/Async \
 		%%SITE_PERL%%/Async
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
