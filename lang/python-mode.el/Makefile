@@ -1,5 +1,5 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: lang/python-mode.el/Makefile 317865 2013-05-11 11:37:54Z rm $
+# $FreeBSD: lang/python-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	python-mode.el
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
 LISPFILES=	doctest-mode.el pycomplete.el pycomplete.py python-mode.el
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${EMACSLISPDIR}
 	${MKDIR} ${XEMACSLISPDIR}
