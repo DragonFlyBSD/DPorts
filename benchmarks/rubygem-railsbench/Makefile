@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: ports/benchmarks/rubygem-railsbench/Makefile,v 1.11 2013/01/11 23:12:51 svnexp Exp $
+# $FreeBSD: benchmarks/rubygem-railsbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	railsbench
 PORTVERSION=	0.9.8
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	GRUFF
 GRUFF_DESC=	Plotting of perf data support using gruff
 OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGRUFF}
