@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: graphics/pear-Image_Barcode2/Makefile 318176 2013-05-14 16:35:08Z miwi $
+# $FreeBSD: graphics/pear-Image_Barcode2/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image_Barcode2
 PORTVERSION=	0.2.3
@@ -16,6 +16,7 @@ PEAR_AUTOINSTALL=	yes
 
 LATEST_LINK=	pear-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
