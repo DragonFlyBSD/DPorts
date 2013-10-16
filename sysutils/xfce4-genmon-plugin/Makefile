@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <ports@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-genmon-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: sysutils/xfce4-genmon-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfce4-genmon-plugin
 PORTVERSION=	3.4.0
@@ -21,4 +21,5 @@ USE_XFCE=	configenv libmenu panel
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
