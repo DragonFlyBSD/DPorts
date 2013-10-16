@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: devel/p5-Data-Validate/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-Data-Validate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Validate
 PORTVERSION=	0.08
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Validate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
