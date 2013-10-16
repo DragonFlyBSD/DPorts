@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/pear-Math_Fraction/Makefile 314220 2013-03-15 01:34:36Z miwi $
+# $FreeBSD: devel/pear-Math_Fraction/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Math_Fraction
 PORTVERSION=	0.4.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
