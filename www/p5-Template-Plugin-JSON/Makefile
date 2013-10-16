@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Template-Plugin-JSON
-# Date created:		Dec 26, 2006
-# Whom:			kuriyama@FreeBSD.org
-#
-# $FreeBSD: www/p5-Template-Plugin-JSON/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# $FreeBSD: www/p5-Template-Plugin-JSON/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Plugin-JSON
 PORTVERSION=	0.06
@@ -25,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Template::Plugin::JSON.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
