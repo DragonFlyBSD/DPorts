@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: textproc/p5-Perl-MinimumVersion/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Perl-MinimumVersion
 PORTVERSION=	1.32
@@ -25,6 +25,7 @@ USE_PERL5=	configure
 MAN1=	perlver.1
 MAN3=	Perl::MinimumVersion.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e '/Test::/d' ${WRKSRC}/Makefile.PL
 
