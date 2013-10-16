@@ -1,5 +1,5 @@
 # Created by: Mosconi <mosconi.rmg@gmail.com>
-# $FreeBSD: security/p5-Crypt-OpenSSL-CA/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-OpenSSL-CA/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-OpenSSL-CA
 PORTVERSION=	0.23
@@ -31,4 +31,5 @@ MAN3=		Crypt::OpenSSL::CA.3 \
 		Crypt::OpenSSL::CA::Inline::C.3 \
 		Crypt::OpenSSL::CA::Resources.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
