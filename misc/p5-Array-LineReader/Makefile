@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/p5-Array-LineReader/Makefile 324918 2013-08-18 14:25:16Z az $
+# $FreeBSD: misc/p5-Array-LineReader/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Array-LineReader
 PORTVERSION=	1.01
@@ -24,4 +24,5 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/LineReader \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array \
 		%%SITE_PERL%%/Array
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
