@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Email-MIME-Attachment-Stripper
-# Date created:				2004-08-30
-# Whom:					Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: mail/p5-Email-MIME-Attachment-Stripper/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: mail/p5-Email-MIME-Attachment-Stripper/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-MIME-Attachment-Stripper
 PORTVERSION=	1.31.6
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::MIME::Attachment::Stripper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
