@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-PassphraseColumn/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-DBIx-Class-PassphraseColumn/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-PassphraseColumn
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Class::PassphraseColumn.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
