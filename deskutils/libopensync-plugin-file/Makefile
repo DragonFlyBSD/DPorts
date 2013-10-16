@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: deskutils/libopensync-plugin-file/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: deskutils/libopensync-plugin-file/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	libopensync-plugin-file
 PORTVERSION=	0.22
@@ -15,4 +15,5 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
