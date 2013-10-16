@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-googlepinyin/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: chinese/fcitx-googlepinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	fcitx-googlepinyin
 PORTVERSION=	0.1.6
@@ -19,4 +19,5 @@ USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
