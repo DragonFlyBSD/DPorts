@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sshguard-ipfilter
-# Date created:				26 Jul 2008
-# Whom:					Mij <mij@bitchx.it>
-#
-# $FreeBSD: ports/security/sshguard-ipfilter/Makefile,v 1.2 2012/11/17 06:01:20 svnexp Exp $
-#
+# Created by: Mij <mij@bitchx.it>
+# $FreeBSD: security/sshguard-ipfilter/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PKGNAMESUFFIX=	-ipfilter
 CONFLICTS=	sshguard-1.* sshguard-ipfw-1.* sshguard-pf-1.*
@@ -13,4 +9,5 @@ COMMENT=        Protect hosts from brute force attacks against ssh and other ser
 SSHGUARDFW=	ipfilter
 MASTERDIR=	${.CURDIR}/../sshguard
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
