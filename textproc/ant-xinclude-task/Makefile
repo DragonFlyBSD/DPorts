@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: ports/textproc/ant-xinclude-task/Makefile,v 1.17 2012/12/10 13:48:08 svnexp Exp $
+# $FreeBSD: textproc/ant-xinclude-task/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xinclude-task
 PORTVERSION=	0.2
@@ -26,6 +26,7 @@ MAKE_ENV+=	CLASSPATH=${JAVAJARDIR}/xincluder.jar
 
 PLIST_FILES+=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${MKDIR} ${JAVAJARDIR}
