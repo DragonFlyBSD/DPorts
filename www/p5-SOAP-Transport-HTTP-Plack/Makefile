@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-SOAP-Transport-HTTP-Plack/Makefile 326161 2013-09-03 15:28:40Z az $
+# $FreeBSD: www/p5-SOAP-Transport-HTTP-Plack/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	SOAP-Transport-HTTP-Plack
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=	SOAP::Transport::HTTP::Plack.3 \
 	XMLRPC::Transport::HTTP::Plack.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
