@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: deskutils/tomboy-plugin-latex/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: deskutils/tomboy-plugin-latex/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tomboy-plugin-latex
 PORTVERSION=	0.6
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_TEX=	latex
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
