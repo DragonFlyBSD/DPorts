@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/compiler.mk 330120 2013-10-12 05:42:26Z bapt $
+# $FreeBSD: Mk/Uses/compiler.mk 330336 2013-10-14 16:46:20Z marino $
 #
 # Allows to feature determine the compiler used
 #

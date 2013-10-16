@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 328508 2013-09-27 19:10:59Z amdmi3 $
+# $FreeBSD: Mk/bsd.pkgng.mk 330466 2013-10-16 00:38:38Z bdrewery $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -189,7 +189,7 @@ check-install-conflicts:
 			${ECHO_MSG} "      $${entry}"; \
 		done; \
 		${ECHO_MSG}; \
-		${ECHO_MSG} "      Please remove them first with pkg_delete(1)."; \
+		${ECHO_MSG} "      Please remove them first with pkg delete."; \
 		exit 1; \
 	fi
 .else
@@ -208,7 +208,7 @@ check-install-conflicts:
 		done; \
 		${ECHO_MSG}; \
 		${ECHO_MSG} "      They install files into the same place."; \
-		${ECHO_MSG} "      Please remove them first with pkg_delete(1)."; \
+		${ECHO_MSG} "      Please remove them first with pkg delete."; \
 		exit 1; \
 	fi
 .endif # defined(DEFER_CONFLICTS_CHECK)

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/gettext.mk 316316 2013-04-23 07:27:18Z jgh $
+# $FreeBSD: Mk/Uses/gettext.mk 330346 2013-10-14 19:42:48Z ohauer $
 #
 # handle dependency on the gettext (libintl) port
 #
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=	${_GETTEXT_DEPENDS}
 .elif ${gettext_ARGS} == "run"
 RUN_DEPENDS+=	${_GETTEXT_DEPENDS}
 .elif ${gettext_ARGS} == "lib"
-LIB_DEPENDS+=	intl:${PORTSDIR}/devel/gettext
+LIB_DEPENDS+=	libintl.so:${PORTSDIR}/devel/gettext
 .else
 IGNORE=	USES=gettext - invalid args: [${gettext_ARGS}] specifed
 .endif

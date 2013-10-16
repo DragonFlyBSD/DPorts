@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 330070 2013-10-11 12:17:59Z culot $
+# $FreeBSD: Mk/bsd.port.mk 330369 2013-10-15 07:48:06Z ak $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -4153,7 +4153,7 @@ install-ldconfig-file:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${LDCONFIG_32DIR}
 .endif
 	@${ECHO_CMD} ${USE_LDCONFIG32} | ${TR} ' ' '\n' \
-		> ${PREFIX}/${LDCONFIG32_DIR}/${UNIQUENAME}
+		> ${STAGEDIR}${PREFIX}/${LDCONFIG32_DIR}/${UNIQUENAME}
 	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
 	@${ECHO_CMD} ${LDCONFIG32_DIR}/${UNIQUENAME} >> ${TMPPLIST}
 .if defined(NO_LDCONFIG_MTREE)
