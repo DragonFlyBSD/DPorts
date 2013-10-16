@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: databases/rubygem-dm-paperclip/Makefile 322614 2013-07-10 05:17:43Z swills $
+# $FreeBSD: databases/rubygem-dm-paperclip/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dm-paperclip
 PORTVERSION=	2.5.0
@@ -18,4 +18,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
