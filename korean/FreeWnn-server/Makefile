@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: korean/FreeWnn-server/Makefile 320881 2013-06-14 03:22:42Z miwi $
+# $FreeBSD: korean/FreeWnn-server/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 CATEGORIES=	korean
 PKGNAMESUFFIX=	-server
@@ -11,4 +11,5 @@ PKGDIR=		${.CURDIR}
 
 WNNTYPE=	KWNN
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
