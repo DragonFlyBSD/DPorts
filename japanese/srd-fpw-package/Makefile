@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/srd-fpw-package/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/srd-fpw-package/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	srd-fpw-package
 PORTVERSION=	1.0.8
@@ -20,6 +20,7 @@ USES=		perl5
 
 PKG_DIR=	${PREFIX}/share/dict/lookup-package
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PKG_DIR}
 	${INSTALL_DATA} ${WRKSRC}/srd-fpw.el ${PKG_DIR}
