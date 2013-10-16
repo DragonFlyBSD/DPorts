@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-DependentModules/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Test-DependentModules/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	Test-DependentModules
 PORTVERSION=	0.17
@@ -27,7 +27,5 @@ TEST_DEPENDS=	p5-File-Copy-Recursive>=0:${PORTSDIR}/devel/p5-File-Copy-Recursive
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Test::DependentModules.3
 
 .include <bsd.port.mk>
