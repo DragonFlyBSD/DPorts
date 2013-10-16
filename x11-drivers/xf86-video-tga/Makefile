@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-tga/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-tga/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-tga
 PORTVERSION=	1.2.2
@@ -11,4 +11,5 @@ COMMENT=	X.Org tga display driver
 XORG_CAT=	driver
 USE_XORG=	xf86dgaproto
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
