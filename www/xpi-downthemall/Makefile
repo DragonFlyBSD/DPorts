@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-downthemall/Makefile 320615 2013-06-11 16:52:00Z miwi $
+# $FreeBSD: www/xpi-downthemall/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	downthemall
 PORTVERSION=	2.0.16
@@ -15,5 +15,6 @@ XPI_DISTNAME=	downthemall
 
 XPI_ID=		{DDC359D1-844A-42a7-9AA1-88A850A938A8}
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
