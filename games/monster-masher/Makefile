@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: games/monster-masher/Makefile 326133 2013-09-03 10:23:55Z bapt $
+# $FreeBSD: games/monster-masher/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	monster
 PORTVERSION=	1.8.1
@@ -25,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lesd
 
 GCONF_SCHEMAS=	monster-masher.schemas
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/src/pixbuf-drawing.hpp
