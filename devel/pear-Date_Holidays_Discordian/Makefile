@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Discordian/Makefile 319312 2013-05-28 14:07:30Z miwi $
+# $FreeBSD: devel/pear-Date_Holidays_Discordian/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date_Holidays_Discordian
 PORTVERSION=	0.1.1
@@ -12,6 +12,7 @@ RUN_DEPENDS=   	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holiday
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
