@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/ddskk/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: japanese/ddskk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ddskk
 PORTVERSION=	15.1
@@ -25,6 +25,7 @@ PORTEXAMPLES=	Emacs.ad dot.emacs dot.skk
 ALL_TARGET=	elc info
 MAKE_ARGS+=	SKK_LISPDIR=${PREFIX}/${SKK_LISPDIR} SKK_INFODIR=${PREFIX}/${INFO_PATH}
 
+NO_STAGE=	yes
 pre-install:
 	# required for non-standard PREFIX
 	${MKDIR} ${PREFIX}/${SKK_LISPDIR}
