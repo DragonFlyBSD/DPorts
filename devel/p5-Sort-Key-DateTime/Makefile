@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Sort-Key-DateTime/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Sort-Key-DateTime/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sort-Key-DateTime
 PORTVERSION=	0.07
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Sort::Key::DateTime.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
