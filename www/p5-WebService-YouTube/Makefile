@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	WebService::YouTube
 # Created by: ijliao
-# $FreeBSD: www/p5-WebService-YouTube/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WebService-YouTube/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-YouTube
 PORTVERSION=	1.0.3
@@ -29,4 +27,5 @@ MAN3=	WebService::YouTube.3 \
 	WebService::YouTube::Video.3 \
 	WebService::YouTube::Videos.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
