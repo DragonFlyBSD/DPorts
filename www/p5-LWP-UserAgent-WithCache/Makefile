@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-LWP-UserAgent-WithCache
-# Date created:		2007-10-12
-# Whom:			TAKAHASHI Kaoru <kaoru@kaisei.org>
-#
-# $FreeBSD: www/p5-LWP-UserAgent-WithCache/Makefile 326053 2013-09-02 18:23:34Z az $
-#
+# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
+# $FreeBSD: www/p5-LWP-UserAgent-WithCache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LWP-UserAgent-WithCache
 PORTVERSION=	0.12
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		LWP::UserAgent::WithCache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
