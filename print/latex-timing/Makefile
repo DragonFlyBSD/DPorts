@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-timing
-# Date created:		24 Jan 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: print/latex-timing/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: print/latex-timing/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-timing
 PORTVERSION=	1.0.19940515
@@ -40,6 +37,7 @@ PK_FILES=	timing1.pk timing1s.pk timing2.pk timing2s.pk
 TFMDIR=		${TEXMFDIR}/fonts/tfm/${PORTNAME:S/^latex-//}
 TFM_FILES=	timing1.tfm timing1s.tfm timing2.tfm timing2s.tfm
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${CLASSDIR}
 	${INSTALL_DATA} ${CLASS_FILES:S@^@${DISTDIR}/${DIST_SUBDIR}/@} ${PREFIX}/${CLASSDIR}
