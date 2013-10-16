@@ -1,5 +1,5 @@
 # Created by: decept
-# $FreeBSD: x11-themes/kde4-windeco-crystal/Makefile 323455 2013-07-22 14:34:22Z vg $
+# $FreeBSD: x11-themes/kde4-windeco-crystal/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	crystal
 PORTVERSION=	2.2.1
@@ -20,4 +20,5 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build \
 USES=		cmake:outsource
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
