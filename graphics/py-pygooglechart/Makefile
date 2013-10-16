@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pygooglechart
-# Date created:		2009-01-09
-# Whom:			Nicola Vitale	<nivit@FreeBSD.org>
-#
-# $FreeBSD: ports/graphics/py-pygooglechart/Makefile,v 1.3 2012/11/17 05:58:20 svnexp Exp $
-#
+# Created by: Nicola Vitale	<nivit@FreeBSD.org>
+# $FreeBSD: graphics/py-pygooglechart/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	pygooglechart
 PORTVERSION=	0.3.0
@@ -25,6 +21,7 @@ PORTEXAMPLES=	*
 
 .if !defined(NOPORTEXAMPLES)
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${EXAMPLESDIR} && cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${EXAMPLESDIR}
 .endif
