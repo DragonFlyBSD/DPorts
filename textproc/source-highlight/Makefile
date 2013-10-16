@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: textproc/source-highlight/Makefile 315628 2013-03-31 07:05:33Z jgh $
+# $FreeBSD: textproc/source-highlight/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	source-highlight
 PORTVERSION=	3.1.6
@@ -25,6 +25,7 @@ INFO=	source-highlight source-highlight-lib
 
 OPTIONS_DEFINE=	BASH DOCS EXAMPLES
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
