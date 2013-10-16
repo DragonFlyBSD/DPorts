@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net-p2p/mldonkey-urlslave/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-p2p/mldonkey-urlslave/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	mldonkey
 PORTVERSION=	0.0.1
@@ -20,6 +20,7 @@ SHEBANG_FILES=	${BINARY_NAME}
 
 BINARY_NAME=	mlurlslave
 
+NO_STAGE=	yes
 post-extract:
 	@${GREP} '^#' ${WRKSRC}/${BINARY_NAME} | ${GREP} -v '/usr/bin/perl' > ${WRKDIR}/README
 
