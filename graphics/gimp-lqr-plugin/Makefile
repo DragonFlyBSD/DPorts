@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 325761 2013-08-31 01:17:11Z bapt $
+# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gimp-lqr-plugin
 PORTVERSION=	0.7.1
@@ -25,6 +25,7 @@ PLIST_SUB=	PLUGIN_DIR=${PLUGIN_DIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^bindir = .*|bindir = ${PREFIX}/${PLUGIN_DIR}|g' ${WRKSRC}/src/Makefile.in
 
