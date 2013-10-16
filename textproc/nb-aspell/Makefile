@@ -1,9 +1,5 @@
-# New ports collection makefile for:    nb-aspell
-# Date created:                         31 March 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/nb-aspell/Makefile,v 1.5 2012/11/17 06:02:03 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/nb-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-nb-0.50.1-0
@@ -16,5 +12,6 @@ COMMENT=	Aspell Norwegian Bokmal dictionary
 
 DICT=	 	nb
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
