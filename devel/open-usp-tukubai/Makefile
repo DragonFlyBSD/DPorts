@@ -1,9 +1,5 @@
-# New ports collection makefile for:	open-usp-tukubai
-# Date created:				1 March 2012
-# Whom:					Daichi GOTO <daichi@freebsd.org>
-#
-# $FreeBSD: devel/open-usp-tukubai/Makefile 315933 2013-04-17 06:42:52Z daichi $
-#
+# Created by: Daichi GOTO <daichi@FreeBSD.org>
+# $FreeBSD: devel/open-usp-tukubai/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	open-usp-tukubai
 PORTVERSION=	20130417
@@ -19,4 +15,5 @@ USE_PYTHON=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
