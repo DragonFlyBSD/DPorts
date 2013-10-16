@@ -1,9 +1,5 @@
-# New ports collection makefile for:	RADIUS::UserFile
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: textproc/p5-RADIUS-UserFile/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-RADIUS-UserFile/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		RADIUS-UserFile
 PORTVERSION=		1.01
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=			RADIUS::UserFile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
