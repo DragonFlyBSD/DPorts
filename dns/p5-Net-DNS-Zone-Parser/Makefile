@@ -1,5 +1,5 @@
 # Created by: Jimmy Bergman jimmy@sigint.se
-# $FreeBSD: dns/p5-Net-DNS-Zone-Parser/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: dns/p5-Net-DNS-Zone-Parser/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNS-Zone-Parser
 PORTVERSION=	0.02
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::DNS::Zone::Parser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
