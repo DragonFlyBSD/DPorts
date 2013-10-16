@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: irc/ircd-ratbox-devel/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/ircd-ratbox-devel/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	ircd-ratbox
 PORTVERSION=	3.0.7
@@ -15,11 +15,12 @@ LICENSE=	GPLv2
 
 CONFLICTS=	ircd-ratbox-[0-9]* charybdis-[0-9]*
 
+USES=		perl5
 USE_BZIP2=	yes
 #MAN8=		ircd.8
 USE_RC_SUBR=	ircd-ratbox
 USE_SQLITE=	3
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_LDCONFIG=	${PREFIX}/lib/ircd-ratbox
 
 USERS=		ircd
@@ -56,6 +57,7 @@ SERVICES_DESC=		ratbox-services compatibility code
 
 #----------------------------------------------------------------------
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
