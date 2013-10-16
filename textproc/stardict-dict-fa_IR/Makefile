@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/stardict-dict-fa_IR/Makefile 313810 2013-03-10 06:40:30Z rm $
+# $FreeBSD: textproc/stardict-dict-fa_IR/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	stardict-dict-fa_IR
 PORTVERSION=	1.0.0
@@ -20,6 +20,7 @@ PLIST_FILES=	share/stardict/dic/Arianpur-OpenDictionary.dict.dz \
 PLIST_DIRSTRY=	share/stardict/dic \
 		share/stardict
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/stardict/dic/
 	${INSTALL_DATA} ${WRKSRC}/Arianpur-OpenDictionary.dict.dz ${PREFIX}/share/stardict/dic/
