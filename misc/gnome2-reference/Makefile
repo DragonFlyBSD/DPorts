@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/gnome2-reference/Makefile 320146 2013-06-07 05:36:30Z bapt $
+# $FreeBSD: misc/gnome2-reference/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/misc/gnome2-reference/Makefile,v 1.9 2008/08/23 18:22:59 mezz Exp $
 
 PORTNAME=	gnome2-reference
@@ -57,6 +57,7 @@ NO_BUILD=	yes
 .MAKE.FreeBSD_UL= yes
 
 REF_LIST_INC=	${.CURDIR}/Makefile.inc
+NO_STAGE=	yes
 .include "${REF_LIST_INC}"
 
 .for ref in ${_PORT_REF_LIST:C/^([^:]+).*/\1/}
