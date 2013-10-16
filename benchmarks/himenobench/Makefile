@@ -1,9 +1,5 @@
-# New ports collection makefile for:   himenobench
-# Date Created:                16 Aug 2004
-# Whom:                        NAKATA Maho <maho@FreeBSD.org>
-#
-# $FreeBSD: benchmarks/himenobench/Makefile 315344 2013-03-27 02:53:44Z maho $
-#
+# Created by: NAKATA Maho <maho@FreeBSD.org>
+# $FreeBSD: benchmarks/himenobench/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	himenobench
 PORTVERSION=	2004.08.16
@@ -31,6 +27,7 @@ USE_FORTRAN=	yes
 USE_FORTRAN=	ifort
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_OPTIMIZED_FLAGS)
