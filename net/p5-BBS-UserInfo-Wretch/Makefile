@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-BBS-UserInfo-Wretch
-# Date created:		2006-08-20
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net/p5-BBS-UserInfo-Wretch/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-BBS-UserInfo-Wretch/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	BBS-UserInfo-Wretch
 PORTVERSION=	0.03
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		BBS::UserInfo::Wretch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
