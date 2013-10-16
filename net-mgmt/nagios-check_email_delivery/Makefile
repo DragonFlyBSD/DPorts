@@ -1,8 +1,5 @@
-# New ports collection makefile for:	nagios-check_email_delivery
-# Date created: 	9 May 2011
-# Whom:			Ryan Steinmetz
-#
-# $FreeBSD: ports/net-mgmt/nagios-check_email_delivery/Makefile,v 1.6 2012/11/17 06:00:33 svnexp Exp $
+# Created by: Ryan Steinmetz
+# $FreeBSD: net-mgmt/nagios-check_email_delivery/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_email_delivery
 PORTVERSION=	0.7.1b
@@ -20,8 +17,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 RUN_DEPENDS=	p5-Net-SMTP-TLS>=0:${PORTSDIR}/mail/p5-Net-SMTP-TLS \
 		p5-Mail-IMAPClient>=0:${PORTSDIR}/mail/p5-Mail-IMAPClient
 
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
 DOC_FILES=	check_email_delivery.html check_email_delivery.pod \
 		check_imap_receive.html check_imap_receive.pod \
 		check_smtp_send.html check_smtp_send.pod \
@@ -30,6 +28,7 @@ DOC_FILES=	check_email_delivery.html check_email_delivery.pod \
 
 PORTSCOUT=	ignore:1
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
