@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Events-Objects/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-Devel-Events-Objects/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-Events-Objects
 PORTVERSION=	0.05
@@ -28,4 +28,5 @@ MAN3=		Devel::Events::Generator::Objects.3 \
 		Devel::Events::Handler::ObjectTracker.3 \
 		Devel::Events::Objects.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
