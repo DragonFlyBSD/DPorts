@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel-Styler/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel-Styler/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Spreadsheet-WriteExcel-Styler
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Spreadsheet::WriteExcel::Styler.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
