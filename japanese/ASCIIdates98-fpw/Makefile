@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ASCIIdates98 Dictionary - JIS X 4081 version
-# Date created:        	2000.11.28
-# Whom:			Satoshi Taoka <taoka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/ASCIIdates98-fpw/Makefile,v 1.7 2012/11/17 05:58:31 svnexp Exp $
-#
+# Created by: Satoshi Taoka <taoka@FreeBSD.org>
+# $FreeBSD: japanese/ASCIIdates98-fpw/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ASCIIdates98-fpw
 PORTVERSION=	1.0
@@ -20,6 +16,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/ascdates
 EXTRACT_BEFORE_ARGS=	-qL
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/share/dict/ASCIIdates98-fpw/ascdates/data
 	${INSTALL_DATA} ${WRKSRC}/ascdates/data/honmon ${PREFIX}/share/dict/ASCIIdates98-fpw/ascdates/data
