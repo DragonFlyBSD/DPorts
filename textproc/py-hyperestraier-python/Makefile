@@ -1,8 +1,5 @@
-# New ports collection makefile for:    py-hyperestraier-python
-# Date created:                         30 March 2007
-# Whom:                                 Junji NAKANISHI <jun-g@daemonfreaks.com>
-#
-# $FreeBSD: ports/textproc/py-hyperestraier-python/Makefile,v 1.12 2012/11/17 06:02:17 svnexp Exp $
+# Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
+# $FreeBSD: textproc/py-hyperestraier-python/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	hyperestraier
 PORTVERSION=	0.10.10
@@ -22,6 +19,7 @@ USE_PYDISTUTILS=yes
 PORTEXAMPLES=	example.py asyn_example.py
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
