@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: devel/p5-Module-Starter-Plugin-SimpleStore/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Module-Starter-Plugin-SimpleStore/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Starter-Plugin-SimpleStore
 PORTVERSION=	0.144
@@ -19,4 +19,5 @@ MAN3=	Module::Starter::Plugin::InlineStore.3 \
 	Module::Starter::Plugin::DirStore.3 \
 	Module::Starter::Plugin::ModuleStore.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
