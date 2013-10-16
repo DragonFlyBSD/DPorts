@@ -1,9 +1,5 @@
-# New ports collection makefile for:	jsmath-fonts-sprite
-# Date created:		2006-07-11
-# Whom:			Nicola Vitale <nivit@email.it>
-#
-# $FreeBSD: ports/math/jsmath-fonts-sprite/Makefile,v 1.5 2012/11/17 05:59:22 svnexp Exp $
-#
+# Created by: Nicola Vitale <nivit@email.it>
+# $FreeBSD: math/jsmath-fonts-sprite/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	jsMath-fonts-sprite
 PORTVERSION=	1.0
@@ -26,6 +22,7 @@ PLIST_SUB+=	D${_i}j=${WWWDIR_REL}/fonts-sprite/cm${_i}10
 .endfor
 PLIST_SUB+=	Dcmj=${WWWDIR_REL}/fonts-sprite/cm-fonts
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL} -d ${WWWDIR}/fonts-sprite
 	@${CP} -Rp ${WRKSRC}/fonts-sprite ${WWWDIR}
