@@ -1,9 +1,5 @@
-# Ports collection makefile for:	p5-Net-Whois-RIPE
-# Date created:			Sep 11, 2002
-# Whom:	      			ijliao
-#
-# $FreeBSD: net/p5-Net-Whois-RIPE/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: ijliao
+# $FreeBSD: net/p5-Net-Whois-RIPE/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Whois-RIPE
 PORTVERSION=	2.001
@@ -53,4 +49,5 @@ MAN3=		Net::Whois::Object.3 \
 		Net::Whois::Object::RtrSet.3 \
 		Net::Whois::RIPE.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
