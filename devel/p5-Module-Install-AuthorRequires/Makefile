@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Install-AuthorRequires/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-Module-Install-AuthorRequires/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Install-AuthorRequires
 PORTVERSION=	0.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Module::Install::AuthorRequires.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
