@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: print/p5-PostScript-PPD/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: print/p5-PostScript-PPD/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	PostScript-PPD
 PORTVERSION=	0.0205
@@ -18,8 +18,6 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		PostScript::PPD.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '/lj4515.ppd/d' ${WRKSRC}/t/30_difficult.t
