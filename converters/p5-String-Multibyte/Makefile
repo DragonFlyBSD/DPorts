@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: converters/p5-String-Multibyte/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: converters/p5-String-Multibyte/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	String-Multibyte
 PORTVERSION=	1.10
@@ -37,4 +37,5 @@ MAN3=		String::Multibyte.3 \
 		String::Multibyte::UTF8.3 \
 		String::Multibyte::Unicode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
