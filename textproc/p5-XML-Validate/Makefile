@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Validate/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-XML-Validate/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Validate
 PORTVERSION=	1.025
@@ -24,4 +24,5 @@ MAN3=		XML::Validate.3 XML::Validate::Base.3 \
 		XML::Validate::LibXML.3 XML::Validate::MSXML.3 \
 		XML::Validate::Xerces.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
