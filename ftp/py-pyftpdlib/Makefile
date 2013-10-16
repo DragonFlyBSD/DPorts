@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-pyftpdlib
-# Date created:		Mar. 06, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/ftp/py-pyftpdlib/Makefile,v 1.16 2012/11/17 05:57:30 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: ftp/py-pyftpdlib/Makefile 327729 2013-09-20 17:23:18Z bapt $
 
 PORTNAME=	pyftpdlib
 PORTVERSION=	0.7.0
@@ -28,6 +24,7 @@ OPENSSL_DESC=		Enable FTP over SSL/TLS (RFC4217)
 # Workaround ports infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSENDFILE}
