@@ -1,5 +1,4 @@
-# Created by: Philp M. Gollucci <pgollucci@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Nagios-Plugins-Memcached
 PORTVERSION=	0.02
@@ -23,6 +22,7 @@ RUN_DEPENDS+=	${BUILD_DEPENDS}
 MAN3=		Nagios::Plugins::Memcached.3
 PORTDOCS=	Changes README
 
+NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${LOCALBASE}/libexec/nagios
 	${INSTALL} ${WRKSRC}/bin/check_memcached ${LOCALBASE}/libexec/nagios/check_memcached
