@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Plugin-Feed/Makefile 326021 2013-09-02 16:07:56Z az $
+# $FreeBSD: www/p5-Dancer-Plugin-Feed/Makefile 329846 2013-10-08 22:45:27Z gblach $
 
 PORTNAME=	Dancer-Plugin-Feed
 PORTVERSION=	1.131470
@@ -19,7 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Dancer::Plugin::Feed.3
 
 .include <bsd.port.mk>
