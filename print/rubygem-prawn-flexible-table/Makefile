@@ -1,8 +1,4 @@
-# Ports collection makefile for:	rubygem-prawn-flexible-table
-# Date created:				December 16, 2010
-# Whom:					Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/print/rubygem-prawn-flexible-table/Makefile,v 1.2 2012/11/17 06:00:54 svnexp Exp $
+# $FreeBSD: print/rubygem-prawn-flexible-table/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	prawn-flexible-table
 PORTVERSION=	0.1.2
@@ -18,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
