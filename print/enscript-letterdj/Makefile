@@ -1,9 +1,5 @@
-# New ports collection makefile for:	enscript (letterdj)
-# Date created:			24 Jul, 1997
-# Whom:				kline
-#
-# $FreeBSD: ports/print/enscript-letterdj/Makefile,v 1.5 2012/11/17 06:00:49 svnexp Exp $
-#
+# Created by: kline
+# $FreeBSD: print/enscript-letterdj/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 CONFLICTS=	enscript-a4-* enscript-letter-*
 
@@ -12,4 +8,5 @@ PS=		Letterdj
 
 MASTERDIR=	${.CURDIR}/../enscript-letter
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
