@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <sutton@aardvark.apana.org.au>
-# $FreeBSD: emulators/prodosemu/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: emulators/prodosemu/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	prodosemu
 PORTVERSION=	0.1
@@ -19,6 +19,7 @@ PORTDOCS=	README
 PLIST_FILES=	bin/prodos share/apple2/prodos-2e.rom
 PLIST_DIRS=	share/apple2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
