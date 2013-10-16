@@ -1,5 +1,5 @@
 # Created by: Russell Cloran <russell@rucus.ru.ac.za>
-# $FreeBSD: textproc/redland-bindings/Makefile 327492 2013-09-17 17:16:52Z bapt $
+# $FreeBSD: textproc/redland-bindings/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	redland-bindings
 PORTVERSION=	1.0.16.1
@@ -18,6 +18,7 @@ OPTIONS_DEFAULT=PYTHON
 
 USES=		pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
