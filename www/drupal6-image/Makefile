@@ -1,5 +1,5 @@
 # Created by: anderson@cnpm.embrapa.br
-# $FreeBSD: www/drupal6-image/Makefile 322743 2013-07-11 05:53:09Z bapt $
+# $FreeBSD: www/drupal6-image/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	image
 DISTVERSION=	6.x-1.0-beta5
@@ -148,4 +148,5 @@ MODULE_FILES=	contrib/image_attach/tests/image_attach.test \
 
 DOC_FILES=	LICENSE.txt CHANGELOG.txt INSTALL.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
