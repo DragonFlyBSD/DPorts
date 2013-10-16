@@ -1,4 +1,4 @@
-# $FreeBSD: ports/mail/popa3d-before-sendmail/Makefile,v 1.8 2012/11/17 05:59:10 svnexp Exp $
+# $FreeBSD: mail/popa3d-before-sendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 CATEGORIES=	mail
 
@@ -10,6 +10,7 @@ MASTERDIR?=	${.CURDIR}/../popa3d
 OPTIONS_DEFAULT=	SMTP_AFTER_POP3
 
 .if exists(${.CURDIR}/Makefile.local)
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.local"
 .endif
 
