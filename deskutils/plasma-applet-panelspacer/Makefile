@@ -1,9 +1,4 @@
-# New ports collection makefile for:	plasma-applet-panelspacer
-# Date Created:				2008-10-03
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: deskutils/plasma-applet-panelspacer/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# $FreeBSD: deskutils/plasma-applet-panelspacer/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	panelspacer
 PORTVERSION=	0.2
@@ -26,4 +21,5 @@ WRKSRC=		${WRKDIR}/Panelspacer_from_svn_pour_kdelook-tmp
 PLIST_FILES=	lib/kde4/plasma_applet_panelspacer.so \
 		share/kde4/services/plasma-applet-panelspacer.desktop
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
