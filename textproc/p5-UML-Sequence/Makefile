@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-UML-Sequence/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-UML-Sequence/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	UML-Sequence
 PORTVERSION=	0.08
@@ -27,4 +27,5 @@ MAN3=	Devel::CallSeq.3 Devel::OOCallSeq.3 \
 	UML::genericseq.3 UML::seq2rast.3 \
 	UML::seq2svg.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
