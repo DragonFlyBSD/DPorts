@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-pyramid_rpc
-# Date created:		2011-08-25
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-pyramid_rpc/Makefile,v 1.3 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: www/py-pyramid_rpc/Makefile 327879 2013-09-22 16:30:10Z lwhsu $
 
 PORTNAME=	pyramid_rpc
-PORTVERSION=	0.3
+PORTVERSION=	0.5.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,5 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
