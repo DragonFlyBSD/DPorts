@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-fm/pbi-thumbnailer/Makefile 327041 2013-09-12 08:41:52Z marino $
+# $FreeBSD: x11-fm/pbi-thumbnailer/Makefile 327780 2013-09-20 23:49:39Z bapt $
 
 PORTNAME=	pbi-thumbnailer
 PORTVERSION=	0.9.2
@@ -17,4 +17,5 @@ MAKE_ENV=	GCONF_CONFIG_SOURCE=${GCONF_CONFIG_SOURCE}
 
 GCONF_SCHEMAS=	pbi-thumbnail.schemas
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
