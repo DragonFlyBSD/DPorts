@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Dropbox-API/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-Dropbox-API/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Dropbox-API
 PORTVERSION=	1.9
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Dropbox::API.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
