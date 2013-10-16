@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier
-# $FreeBSD: www/p5-Maypole-Component/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: www/p5-Maypole-Component/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Maypole-Component
 PORTVERSION=	0.03
@@ -16,6 +16,7 @@ USE_PERL5=	configure patch
 
 MAN3=		Maypole::Component.3
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's/use 5.006/use 5.005/' ${WRKSRC}/Makefile.PL
 	@${PERL} -pi -e 's/^our (\S+)/use vars qw($$1); $$1/' ${WRKSRC}/Component.pm
