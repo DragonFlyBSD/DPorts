@@ -1,5 +1,5 @@
 # Created by: Dorit Rottner (<rottner@punkt.de>)
-# $FreeBSD: finance/pear_Payment_DTA/Makefile 318063 2013-05-13 09:59:51Z miwi $
+# $FreeBSD: finance/pear_Payment_DTA/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Payment_DTA
 PORTVERSION=	1.2.1
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
