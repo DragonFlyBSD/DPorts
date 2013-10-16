@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: textproc/sphinxsearch-devel/Makefile 316683 2013-04-27 18:25:24Z mva $
+# $FreeBSD: textproc/sphinxsearch-devel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sphinxsearch
 PORTVERSION=	2.0.1b
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	MYSQL PGSQL ICONV OPTIMIZED_CFLAGS ID64 UNIXODBC \
 ID64_DESC=	64-bit document and word IDs
 OPTIONS_DEFAULT=	MYSQL ICONV
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # The port will successfully compile with both PGSQL and MYSQL support
