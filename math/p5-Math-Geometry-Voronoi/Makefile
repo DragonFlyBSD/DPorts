@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-Geometry-Voronoi/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-Geometry-Voronoi/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Geometry-Voronoi
 PORTVERSION=	1.3
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::Geometry::Voronoi.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
