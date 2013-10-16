@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-capybara/Makefile 319577 2013-06-01 15:14:12Z swills $
+# $FreeBSD: devel/rubygem-capybara/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	capybara
 PORTVERSION=	2.0.0
@@ -20,4 +20,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
