@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Notify-Filter-EmailFlatFileDB/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-SVN-Notify-Filter-EmailFlatFileDB/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Notify-Filter-EmailFlatFileDB
 PORTVERSION=	1.01
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		SVN::Notify::Filter::EmailFlatFileDB.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
