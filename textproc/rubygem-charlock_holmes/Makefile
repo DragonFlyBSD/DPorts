@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-charlock_holmes/Makefile 324471 2013-08-10 10:26:36Z kuriyama $
+# $FreeBSD: textproc/rubygem-charlock_holmes/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	charlock_holmes
 PORTVERSION=	0.6.9
@@ -16,4 +16,5 @@ RUBYGEM_AUTOPLIST=	yes
 CONFIGURE_ARGS=	--with-icu-include=${LOCALBASE}/include
 PLIST_FILES=	lib/ruby/gems/${RUBY_VER}/gems/charlock_holmes-${PORTVERSION}/ext/charlock_holmes/src/file-5.08/src/.libs/libmagic.la
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
