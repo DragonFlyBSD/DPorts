@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/textproc/heirloom-doctools/pkg-plist,v 1.4 2012/11/17 06:01:57 svnexp Exp $
+@comment $FreeBSD: textproc/heirloom-doctools/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/tmac/vgrind
 %%DATADIR%%/tmac/v
 %%DATADIR%%/tmac/thesis.me
