@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: ports/graphics/jumpgis-postgis/Makefile,v 1.15 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: graphics/jumpgis-postgis/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	jumpgis-postgis
 PORTVERSION=	1.1.0
@@ -20,6 +20,7 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} " >> Installing JAR files"
 	${MKDIR} ${TARGET_DIR}/lib/ext/
