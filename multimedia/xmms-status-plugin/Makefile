@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: multimedia/xmms-status-plugin/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: multimedia/xmms-status-plugin/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	xmms-status-plugin
 PORTVERSION=	1.0
@@ -19,6 +19,7 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,-Werror,,' ${WRKSRC}/configure
 
