@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Server::Coro
-# Date created:		14 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Server-Coro/Makefile 326054 2013-09-02 18:41:05Z az $
-#
+# $FreeBSD: www/p5-Plack-Server-Coro/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Server-Coro
 PORTVERSION=	0.02
@@ -28,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Server::Coro.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
