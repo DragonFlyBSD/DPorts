@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/growl-for-linux/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: deskutils/growl-for-linux/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	growl-for-linux
 PORTVERSION=	0.6.8
@@ -25,6 +25,7 @@ LIBNOTIFY_DESC=	Use notify-osd for libnotify display plugin
 
 USES=		pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBNOTIFY}
