@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Amazon-Thumbnail
-# Date created:		2008-03-20
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Amazon-Thumbnail/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Amazon-Thumbnail/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Amazon-Thumbnail
 PORTVERSION=	0.06
@@ -28,6 +24,7 @@ USE_PERL5=	modbuild
 
 MAN3=		Net::Amazon::Thumbnail.3
 
+NO_STAGE=	yes
 post-install:
 		@${CAT} ${PKGMESSAGE}
 
