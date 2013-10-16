@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-Cache-Memcached-XS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Cache-Memcached-XS/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Cache-Memcached-XS
 PORTVERSION=	0.01
@@ -20,4 +20,5 @@ CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include"
 
 MAN3=		Cache::Memcached::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
