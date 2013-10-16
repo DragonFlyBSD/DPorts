@@ -1,12 +1,8 @@
-# New ports collection makefile for:	POE-Filter-SSL
-# Date created:	   December 22, 2010
-# Whom:		   mat
-#
-# $FreeBSD: security/p5-POE-Filter-SSL/Makefile 324168 2013-08-02 17:16:28Z mat $
-#
+# Created by: mat
+# $FreeBSD: security/p5-POE-Filter-SSL/Makefile 329699 2013-10-07 12:52:34Z mat $
 
 PORTNAME=	POE-Filter-SSL
-PORTVERSION=	0.24
+PORTVERSION=	0.27
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PRIVI
@@ -26,11 +22,7 @@ RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-POE>=0:${PORTSDIR}/devel/p5-POE
 
-WRKSRC=	${WRKDIR}
-
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		POE::Filter::SSL.3
 
 .include <bsd.port.mk>
