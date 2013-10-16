@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Lingua::EN::MatchNames
-# Date created:				30 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: textproc/p5-Lingua-EN-MatchNames/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Lingua-EN-MatchNames/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-MatchNames
 PORTVERSION=	1.12
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	Lingua::EN::MatchNames.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
