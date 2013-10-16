@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: www/p5-MasonX-WebApp/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-MasonX-WebApp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MasonX-WebApp
 PORTVERSION=	0.12
@@ -28,4 +28,5 @@ USE_PERL5=	modbuild
 
 MAN3=		MasonX::WebApp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
