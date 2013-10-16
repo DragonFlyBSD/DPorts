@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-Algorithm-Cluster/Makefile 324272 2013-08-05 12:14:07Z culot $
+# $FreeBSD: devel/p5-Algorithm-Cluster/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Algorithm-Cluster
 PORTVERSION=	1.52
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Algorithm::Cluster.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
