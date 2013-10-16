@@ -1,9 +1,4 @@
-# New ports collection makefile for:	tn-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/tn-hunspell/Makefile,v 1.5 2012/11/17 06:02:23 svnexp Exp $
-#
+# $FreeBSD: textproc/tn-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20110323
@@ -30,10 +25,10 @@ PLIST_FILES=	%%DATADIR%%/tn_BW.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/tn-ZA.aff ${DATADIR}/tn_ZA.aff
-	${INSTALL_DATA} ${WRKSRC}/tn-ZA.dic ${DATADIR}/tn_ZA.dic
-	${LN} -s tn_ZA.aff ${DATADIR}/tn_BW.aff
-	${LN} -s tn_ZA.dic ${DATADIR}/tn_BW.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/tn-ZA.aff ${STAGEDIR}${DATADIR}/tn_ZA.aff
+	${INSTALL_DATA} ${WRKSRC}/tn-ZA.dic ${STAGEDIR}${DATADIR}/tn_ZA.dic
+	${LN} -s tn_ZA.aff ${STAGEDIR}${DATADIR}/tn_BW.aff
+	${LN} -s tn_ZA.dic ${STAGEDIR}${DATADIR}/tn_BW.dic
 
 .include <bsd.port.mk>
