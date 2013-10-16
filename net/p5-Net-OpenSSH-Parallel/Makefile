@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-OpenSSH-Parallel/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: net/p5-Net-OpenSSH-Parallel/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
 
 PORTNAME=	Net-OpenSSH-Parallel
 PORTVERSION=	0.12
@@ -18,8 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Net::OpenSSH::Parallel.3 \
-		Net::OpenSSH::Parallel::Constants.3
 
 .include <bsd.port.mk>
