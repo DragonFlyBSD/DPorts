@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: mail/xfce4-mailwatch-plugin/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: mail/xfce4-mailwatch-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	xfce4-mailwatch-plugin
 PORTVERSION=	1.1.0
@@ -23,6 +23,7 @@ USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libgui libutil panel
 USE_XORG=	x11 xt xaw
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|--libs "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g; \
 		s|--cflags "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g' \
