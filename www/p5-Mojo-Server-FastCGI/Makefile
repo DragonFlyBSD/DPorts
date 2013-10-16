@@ -1,5 +1,5 @@
 # Created by: Dikshie <dikshie@sfc.wide.ad.jp>
-# $FreeBSD: www/p5-Mojo-Server-FastCGI/Makefile 325984 2013-09-02 12:52:42Z az $
+# $FreeBSD: www/p5-Mojo-Server-FastCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Mojo-Server-FastCGI
 PORTVERSION=	0.41
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 MAN3=		Mojolicious::Command::fastcgi.3 \
 		Mojo::Server::FastCGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
