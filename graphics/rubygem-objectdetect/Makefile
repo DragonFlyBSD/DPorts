@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: graphics/rubygem-objectdetect/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: graphics/rubygem-objectdetect/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	objectdetect
 PORTVERSION=	0.0.3
@@ -19,6 +19,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 700000
