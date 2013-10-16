@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cuyo
-# Date created:				1 June 2009
-# Whom:					Matthew Gibson <mdg583@hotmail.com>
-#
-# $FreeBSD: games/cuyo/Makefile 316654 2013-04-27 08:50:46Z mva $
-#
+# Created by: Matthew Gibson <mdg583@hotmail.com>
+# $FreeBSD: games/cuyo/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	cuyo
 PORTVERSION=	2.1.1
@@ -26,6 +22,7 @@ INSTALLS_ICONS=	yes
 
 MAN6=		cuyo.6 cual.6
 
+NO_STAGE=	yes
 post-install:
 	@${ECHO} Installing ${PREFIX}/share/pixmaps/cuyo.png
 	@${INSTALL_DATA} ${WRKSRC}/icons/cuyo-32x32.png ${PREFIX}/share/pixmaps/cuyo.png
