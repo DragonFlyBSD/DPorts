@@ -1,13 +1,10 @@
-# New ports collection makefile for:	twiki-BlogAddOn
-# Date created:		18 April 2008
-#
-# $FreeBSD: ports/www/twiki-BlogAddOn/Makefile,v 1.2 2012/11/17 06:03:09 svnexp Exp $
-#
+# $FreeBSD: www/twiki-BlogAddOn/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	BlogAddOn
 SVNREV=		16623
 
 COMMENT=	Simple blogging application
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
