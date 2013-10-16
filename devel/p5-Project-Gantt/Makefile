@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Project-Gantt/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Project-Gantt/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Project-Gantt
 PORTVERSION=	1.03
@@ -21,4 +21,5 @@ WRKSRC=		${WRKDIR}/Gantt
 
 MAN3=		Project::Gantt.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
