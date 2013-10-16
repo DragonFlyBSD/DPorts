@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Template-Plugin-Markdown/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: www/p5-Template-Plugin-Markdown/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Plugin-Markdown
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Template::Plugin::Markdown.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
