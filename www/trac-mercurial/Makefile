@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-mercurial/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-mercurial/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;:tl}
 PORTVERSION=	0.12.0.1
@@ -16,6 +16,7 @@ RUN_DEPENDS+=	hg:${PORTSDIR}/devel/mercurial \
 		tracd:${PORTSDIR}/www/trac
 
 USE_PYTHON=	-2.7
+NO_STAGE=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracMercurial
 PYDISTUTILS_PKGVERSION=	0.12.0.23dev
