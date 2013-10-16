@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-restclient
-# Date created:		Apr. 15, 2007
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-restclient/Makefile,v 1.8 2012/11/17 06:03:01 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: www/py-restclient/Makefile 327876 2013-09-22 15:48:15Z lwhsu $
 
 PORTNAME=	restclient
-PORTVERSION=	0.10.2
+PORTVERSION=	0.11.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,6 +16,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}httplib2>=0:${PORTSDIR}/www/py-httplib2
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,install_requires.*,,' ${WRKSRC}/setup.py
 
