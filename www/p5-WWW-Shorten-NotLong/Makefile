@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Shorten-NotLong
-# Date created:				November 24 2009
-# Whom:					Sahil Tandon <sahil@tandon.net>
-#
-# $FreeBSD: www/p5-WWW-Shorten-NotLong/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: Sahil Tandon <sahil@tandon.net>
+# $FreeBSD: www/p5-WWW-Shorten-NotLong/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Shorten-NotLong
 PORTVERSION=	2.00
@@ -24,4 +20,5 @@ MAN3=		WWW::Shorten::NotLong.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
