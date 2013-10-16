@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ve-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/ve-hunspell/Makefile,v 1.6 2012/11/17 06:02:24 svnexp Exp $
-#
+# $FreeBSD: textproc/ve-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20110323
@@ -28,8 +23,8 @@ PLIST_FILES=	%%DATADIR%%/ve.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/ve-ZA.aff ${DATADIR}/ve.aff
-	${INSTALL_DATA} ${WRKSRC}/ve-ZA.dic ${DATADIR}/ve.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/ve-ZA.aff ${STAGEDIR}${DATADIR}/ve.aff
+	${INSTALL_DATA} ${WRKSRC}/ve-ZA.dic ${STAGEDIR}${DATADIR}/ve.dic
 
 .include <bsd.port.mk>
