@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils-parallel/Makefile 326114 2013-09-03 00:13:06Z eadler $
+# $FreeBSD: sysutils/moreutils-parallel/Makefile 328639 2013-09-29 00:25:31Z eadler $
 
 PORTNAME=	moreutils-parallel
 PORTVERSION=	0.50
@@ -17,14 +17,14 @@ CONFLICTS=	parallel-[0-9]*
 
 WRKSRC=		${WRKDIR}/moreutils
 
-MAN1=		parallel.1
-MANCOMPRESSED=	no
-PLIST_FILES=	bin/parallel
+PLIST_FILES=	bin/parallel man/man1/parallel.1.gz
 
 post-patch:
 	${CP} ${FILESDIR}/parallel.1 ${WRKSRC}/
 
-post-install:
-	cd ${WRKSRC} && ${INSTALL_MAN} ${MAN1} ${MANPREFIX}/man/man1/
+do-install:
+	${CP} ${WRKSRC}/parallel ${STAGEDIR}${PREFIX}/bin/parallel
+	cd ${WRKSRC} && ${INSTALL_MAN} parallel.1 ${STAGEDIR}${MANPREFIX}/man/man1/
+
 
 .include <bsd.port.mk>
