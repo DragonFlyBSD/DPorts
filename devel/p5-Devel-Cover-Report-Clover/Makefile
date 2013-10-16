@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-Cover-Report-Clover/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-Devel-Cover-Report-Clover/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-Cover-Report-Clover
 PORTVERSION=	0.35
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	Devel::Cover::Report::Clover.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
