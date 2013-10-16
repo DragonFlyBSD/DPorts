@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/pear-VersionControl_Git/Makefile 314257 2013-03-15 06:31:40Z miwi $
+# $FreeBSD: devel/pear-VersionControl_Git/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	VersionControl_Git
 PORTVERSION=	0.4.4
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
