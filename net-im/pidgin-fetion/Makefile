@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net-im/pidgin-fetion/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: net-im/pidgin-fetion/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	fetion
 PORTVERSION=	0.98.5.2
@@ -23,4 +23,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
