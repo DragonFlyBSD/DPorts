@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Plucene-Analysis-CJKAnalyzer/Makefile 326949 2013-09-11 07:40:59Z az $
+# $FreeBSD: textproc/p5-Plucene-Analysis-CJKAnalyzer/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Plucene-Analysis-CJKAnalyzer
 PORTVERSION=	0.02
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 MAN3=		Plucene::Analysis::CJKAnalyzer.3 \
 		Plucene::Analysis::CJKTokenizer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
