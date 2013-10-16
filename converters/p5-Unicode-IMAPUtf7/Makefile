@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: converters/p5-Unicode-IMAPUtf7/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: converters/p5-Unicode-IMAPUtf7/Makefile 327715 2013-09-20 16:05:24Z bapt $
 
 PORTNAME=	Unicode-IMAPUtf7
 PORTVERSION=	2.01
@@ -26,4 +26,5 @@ MAN3=		Unicode::IMAPUtf7.3
 post-extract:	# breaks non-root build otherwise
 	@${FIND} ${WRKSRC} -type d | ${XARGS} ${CHMOD} a+rx
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
