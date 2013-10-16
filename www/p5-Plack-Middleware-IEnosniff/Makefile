@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-IEnosniff/Makefile 325965 2013-09-02 10:00:38Z az $
+# $FreeBSD: www/p5-Plack-Middleware-IEnosniff/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-IEnosniff
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::IEnosniff.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
