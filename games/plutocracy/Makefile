@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/plutocracy/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/plutocracy/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	plutocracy
 PORTVERSION=	0.0.20081229
@@ -28,6 +28,7 @@ SUB_FILES=	plutocracy_
 
 PORTDOCS=	AUTHORS README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
