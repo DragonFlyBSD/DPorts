@@ -1,5 +1,5 @@
 # Created by: Jasper Jongmans <j.jongmans@aprogas.net>
-# $FreeBSD: games/crossfire-server/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/crossfire-server/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	crossfire
 PORTVERSION=	1.70.0
@@ -34,6 +34,7 @@ MAN6=		crossfire-config.6 crossfire-server.6 crossloop.6 \
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-extract:
 	@cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		${DISTDIR}/${DISTNAME}.maps.tar.bz2 ${EXTRACT_AFTER_ARGS}
