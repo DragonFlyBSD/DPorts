@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Algorithm-Evolutionary/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Algorithm-Evolutionary/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Algorithm-Evolutionary
 PORTVERSION=	0.78
@@ -114,4 +114,5 @@ MAN3=		Algorithm::Evolutionary.3 \
 		Algorithm::Evolutionary::Wheel.3 \
 		Algorithm::Evolutionary::XML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
