@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-themes/gnome-icons-dropline-neu/Makefile,v 1.3 2013/01/26 15:07:30 svnexp Exp $
+# $FreeBSD: x11-themes/gnome-icons-dropline-neu/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	dropline-neu
 PORTVERSION=	0.6
@@ -12,5 +12,6 @@ COMMENT=	Dropline Neu Icons for Gnome
 USE_BZIP2=	yes
 WRKSRC=		"${WRKDIR}/Neu"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../gnome-icons/bsd.gnome-icons.mk"
 .include <bsd.port.mk>
