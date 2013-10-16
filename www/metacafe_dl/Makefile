@@ -1,5 +1,5 @@
 # Created by: Fernando Durango <fernando@secret.org>
-# $FreeBSD: www/metacafe_dl/Makefile 327171 2013-09-13 17:50:49Z marino $
+# $FreeBSD: www/metacafe_dl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	metacafe_dl
 PORTVERSION=	2007.09.13
@@ -20,6 +20,7 @@ USE_PYTHON=	2.5+
 
 PLIST_FILES=	bin/metacafe-dl
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
