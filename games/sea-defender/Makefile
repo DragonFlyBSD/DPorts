@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sea-defender/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/sea-defender/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	sea-defender
 PORTVERSION=	r20100723
@@ -25,7 +25,12 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+.if defined(WITH_NEW_XORG)
+EXTRA_PATCHES+=	${FILESDIR}/extra-snoutlib_gldefs.h
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sea ${PREFIX}/libexec/${PORTNAME}
