@@ -1,15 +1,11 @@
-# New ports collection makefile for:	php53-pdo_firebird
-# Date created:			12 Apr 2012
-# Whom:				Florian Smeets <flo@FreeBSD.org>
-#
-# $FreeBSD: databases/php53-pdo_firebird/Makefile 315592 2013-03-30 04:37:26Z acm $
-#
+# $FreeBSD: databases/php53-pdo_firebird/Makefile 328903 2013-09-30 23:43:40Z acm $
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 
 MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-pdo_firebird
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
