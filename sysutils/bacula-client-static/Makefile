@@ -1,4 +1,4 @@
-# $FreeBSD: ports/sysutils/bacula-client-static/Makefile,v 1.1 2012/12/16 16:36:39 svnexp Exp $
+# $FreeBSD: sysutils/bacula-client-static/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bacula
 PKGNAMESUFFIX=	-client-static
@@ -17,4 +17,5 @@ CONFIGURE_ARGS+=	--enable-client-only \
 			--disable-build-dird \
 			--disable-build-stored
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
