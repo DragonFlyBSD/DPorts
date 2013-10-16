@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-RegexpHash/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-Tie-RegexpHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Tie-RegexpHash
 PORTVERSION=	0.15
@@ -15,4 +15,5 @@ MAN3=	Tie::RegexpHash.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
