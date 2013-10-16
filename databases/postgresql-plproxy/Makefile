@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/postgresql-plproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/postgresql-plproxy/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	plproxy
 PORTVERSION=	2.5
@@ -17,6 +17,7 @@ USE_PGSQL=	yes
 
 PORTSCOUT=	site:http://pgfoundry.org/frs/?group_id=1000207
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/bin/postmaster)
