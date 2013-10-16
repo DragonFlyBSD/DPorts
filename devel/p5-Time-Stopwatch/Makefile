@@ -1,5 +1,5 @@
 # Created by: Sulev-Madis Silber <madis555@hot.ee>
-# $FreeBSD: devel/p5-Time-Stopwatch/Makefile 326818 2013-09-09 15:55:47Z az $
+# $FreeBSD: devel/p5-Time-Stopwatch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Time-Stopwatch
 PORTVERSION=	1.00
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Time::Stopwatch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
