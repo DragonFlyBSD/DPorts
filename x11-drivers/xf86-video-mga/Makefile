@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-mga/Makefile 321797 2013-06-26 15:34:37Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-mga/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-mga
 PORTVERSION=	1.6.2
@@ -14,6 +14,7 @@ XORG_CAT=	driver
 USE_XORG=	xf86driproto glproto
 MAN4=		mga.4x
 
+NO_STAGE=	yes
 pre-patch:
 #	${REINPLACE_CMD} \
 #		-e 's|values.h|sys/limits.h|g' \
