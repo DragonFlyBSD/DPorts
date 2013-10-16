@@ -1,6 +1,5 @@
-# Created by:	Kris Moore <kmoore@FreeBSD.org>
-#
-# $FreeBSD: benchmarks/phoronix-test-suite/Makefile 325365 2013-08-25 17:44:27Z mm $
+# Created by: Kris Moore <kmoore@FreeBSD.org>
+# $FreeBSD: benchmarks/phoronix-test-suite/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	phoronix-test-suite
 PORTVERSION=	4.8.1
@@ -30,6 +29,7 @@ OPTIONS_DEFAULT=	X11
 BASH_COMPLETIONS_DESC=	Install bash completions
 X11_DESC=		Install X11 icons and mimetypes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
