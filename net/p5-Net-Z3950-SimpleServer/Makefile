@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Z3950-SimpleServer
-# Date created:				12 March 2002
-# Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 326506 2013-09-06 14:30:23Z az $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Z3950-SimpleServer
 PORTVERSION=	1.16
@@ -22,4 +18,5 @@ CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 
 MAN3=		Net::Z3950::GRS1.3 Net::Z3950::SimpleServer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
