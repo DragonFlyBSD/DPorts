@@ -1,5 +1,5 @@
 # Created by: Janne Snabb <snabb@epipe.com>
-# $FreeBSD: mail/scam-backscatter/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/scam-backscatter/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	scam-backscatter
 PORTVERSION=	1.5.1
@@ -24,6 +24,7 @@ ALLDOMAINS_DESC=	Verify any domain with the backend
 EHLO_DESC=		Use EHLO instead of HELO in SMTP session
 USEMAILERTABLE_DESC=	Use mailertable to map domains to backends
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"
 
