@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: misc/gnome-icon-theme-extras/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: misc/gnome-icon-theme-extras/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/misc/gnome-icon-theme-extras/Makefile,v 1.3 2010/04/20 20:56:39 kwm Exp $
 
 PORTNAME=	gnome-icon-theme-extras
@@ -24,4 +24,5 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
