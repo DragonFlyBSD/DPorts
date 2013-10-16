@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-mgmt/p5-Net-Abuse-Utils/Makefile 327249 2013-09-14 08:51:26Z sunpoet $
+# $FreeBSD: net-mgmt/p5-Net-Abuse-Utils/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-Abuse-Utils
 PORTVERSION=	0.20
@@ -24,6 +24,7 @@ USE_PERL5=	configure
 
 MAN3=		Net::Abuse::Utils.3
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/ip-info.pl ${PREFIX}/sbin/
 
