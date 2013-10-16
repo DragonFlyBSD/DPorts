@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 326600 2013-09-07 10:19:38Z sunpoet $
+# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Rose-HTML-Objects
 PORTVERSION=	0.619
@@ -85,6 +85,7 @@ MAN3=		Rose::HTML::Anchor.3 \
 		Rose::HTML::Text.3 \
 		Rose::HTML::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501600
