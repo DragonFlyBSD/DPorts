@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-simpleticket/Makefile,v 1.11 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-simpleticket/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	simpleticket
 PORTVERSION=	1.1.3
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracSimpleTicket
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
