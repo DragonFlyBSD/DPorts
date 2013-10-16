@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/pear-Structures_DataGrid_DataSource_DBQuery/Makefile 314451 2013-03-17 14:59:02Z miwi $
+# $FreeBSD: databases/pear-Structures_DataGrid_DataSource_DBQuery/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Structures_DataGrid_DataSource_DBQuery
 PORTVERSION=	0.1.11
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structure
 USE_PHP=	mysql
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
