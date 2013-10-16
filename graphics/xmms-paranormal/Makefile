@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-paranormal/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-paranormal/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmms-paranormal
 PORTVERSION=	0.2.0
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gtk12
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/objformat=/s|=.*|=elf|' ${WRKSRC}/ltconfig
 
