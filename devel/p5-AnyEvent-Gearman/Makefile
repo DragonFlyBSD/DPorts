@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-AnyEvent-Gearman/Makefile 326636 2013-09-07 14:07:59Z az $
+# $FreeBSD: devel/p5-AnyEvent-Gearman/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent-Gearman
 PORTVERSION=	0.10
@@ -34,4 +34,5 @@ MAN3=		AnyEvent::Gearman.3 \
 		AnyEvent::Gearman::Worker.3 \
 		AnyEvent::Gearman::Worker::Connection.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
