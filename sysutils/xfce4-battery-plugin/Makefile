@@ -1,6 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: sysutils/xfce4-battery-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: sysutils/xfce4-battery-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfce4-battery-plugin
 PORTVERSION=	1.0.5
@@ -26,6 +25,7 @@ USES=	pathfix pkgconfig
 OPTIONS_DEFINE= NLS
 OPTIONS_DEFAULT=        NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
