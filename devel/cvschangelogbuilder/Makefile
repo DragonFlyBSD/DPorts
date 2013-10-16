@@ -1,5 +1,5 @@
 # Created by: Matthew Will <mwill@spingen.com>
-# $FreeBSD: devel/cvschangelogbuilder/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/cvschangelogbuilder/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	cvschangelogbuilder
 PORTVERSION=	2.5
@@ -19,6 +19,7 @@ USES=		perl5
 PLIST_FILES=	bin/cvschangelogbuilder
 PORTDOCS=	*
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '1s|/usr/bin/perl|${PERL}|' ${WRKSRC}/${PORTNAME}.pl
 
