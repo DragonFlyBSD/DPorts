@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: audio/p5-Audio-Scrobbler/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: audio/p5-Audio-Scrobbler/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Audio-Scrobbler
 PORTVERSION=	0.01
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	p5-Config-IniFiles>=0:${PORTSDIR}/devel/p5-Config-IniFiles \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN1=		scrobbler-helper.1
