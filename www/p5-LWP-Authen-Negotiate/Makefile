@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-Authen-Negotiate/Makefile 326302 2013-09-04 17:28:02Z tj $
+# $FreeBSD: www/p5-LWP-Authen-Negotiate/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LWP-Authen-Negotiate
 PORTVERSION=	0.08
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		LWP::Authen::Negotiate.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
