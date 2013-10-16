@@ -1,5 +1,5 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: ports/mail/roundcube-thunderbird_labels/Makefile,v 1.5 2013/01/02 22:06:46 svnexp Exp $
+# $FreeBSD: mail/roundcube-thunderbird_labels/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	thunderbird_labels
 PORTVERSION=	0.8.1
@@ -29,6 +29,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
