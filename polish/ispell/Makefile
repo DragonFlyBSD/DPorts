@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: polish/ispell/Makefile 326956 2013-09-11 09:36:43Z az $
+# $FreeBSD: polish/ispell/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	ispell
 CATEGORIES=	polish
@@ -9,6 +9,7 @@ MAINTAINER=	wtp@bsdguru.org
 
 ISPELL_PL=	yes
 USES=		perl5
+NO_STAGE=	yes
 
 MASTERDIR=	${.CURDIR}/../../textproc/ispell
 
