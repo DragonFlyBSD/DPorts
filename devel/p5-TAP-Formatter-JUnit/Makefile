@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-TAP-Formatter-JUnit/Makefile 326704 2013-09-08 07:03:32Z az $
+# $FreeBSD: devel/p5-TAP-Formatter-JUnit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	TAP-Formatter-JUnit
 PORTVERSION=	0.09
@@ -27,4 +27,5 @@ MAN3=	TAP::Formatter::JUnit.3 \
 	TAP::Formatter::JUnit::Result.3 \
 	TAP::Formatter::JUnit::Session.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
