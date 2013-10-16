@@ -1,4 +1,4 @@
-# $FreeBSD: www/trytond_google_maps/Makefile 318514 2013-05-19 11:55:09Z wen $
+# $FreeBSD: www/trytond_google_maps/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	trytond_google_maps
 PORTVERSION=	2.4.0
@@ -18,4 +18,5 @@ CONFLICTS=	trytond_google_maps-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
