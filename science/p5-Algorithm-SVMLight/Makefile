@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: science/p5-Algorithm-SVMLight/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: science/p5-Algorithm-SVMLight/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	Algorithm-SVMLight
 PORTVERSION=	0.09
@@ -18,6 +18,7 @@ USE_PERL5=	modbuild
 
 MAN3=		Algorithm::SVMLight.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE},g" \
 		${WRKSRC}/Build.PL
