@@ -1,5 +1,5 @@
 # Created by: Vany <ivan@serezhkin.com>
-# $FreeBSD: textproc/p5-Perl-Critic-Bangs/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-Perl-Critic-Bangs/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Perl-Critic-Bangs
 PORTVERSION=	1.08
@@ -28,4 +28,5 @@ MAN3=	Perl::Critic::Bangs.3 \
 	Perl::Critic::Policy::Bangs::ProhibitCommentedOutCode.3 \
 	Perl::Critic::Policy::Bangs::ProhibitBitwiseOperators.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
