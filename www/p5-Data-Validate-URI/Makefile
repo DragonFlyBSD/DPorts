@@ -1,9 +1,5 @@
-# New ports collection makefile for:	www/p5-Data-Validate-URI
-# Date created:				02 January 2008
-# Whom:					Tuc <freebsd-ports@t-b-o-h.net>
-#
-# $FreeBSD: www/p5-Data-Validate-URI/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Tuc <freebsd-ports@t-b-o-h.net>
+# $FreeBSD: www/p5-Data-Validate-URI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Data-Validate-URI
 PORTVERSION=	0.06
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Validate::URI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
