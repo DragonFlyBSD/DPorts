@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Catalyst-Plugin-Authentication-Store-Htpasswd
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Authentication-Store-Htpasswd/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Plugin-Authentication-Store-Htpasswd/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Authentication-Store-Htpasswd
 PORTVERSION=	0.020
@@ -24,4 +23,5 @@ MAN3=	Catalyst::Plugin::Authentication::Store::Htpasswd::User.3 \
 	Catalyst::Plugin::Authentication::Store::Htpasswd.3 \
 	Catalyst::Plugin::Authentication::Store::Htpasswd::Backend.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
