@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-TAP-Harness-JUnit/Makefile 326592 2013-09-07 10:16:46Z az $
+# $FreeBSD: devel/p5-TAP-Harness-JUnit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	TAP-Harness-JUnit
 PORTVERSION=	0.41
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=	TAP::Harness::JUnit.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
