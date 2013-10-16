@@ -1,5 +1,5 @@
 # Created by: Lawrence Chen <beastie@tardisi.com>
-# $FreeBSD: www/p5-WWW-Shorten-Yourls/Makefile 326150 2013-09-03 13:17:36Z az $
+# $FreeBSD: www/p5-WWW-Shorten-Yourls/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Shorten-Yourls
 PORTVERSION=	0.06
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::Yourls.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
