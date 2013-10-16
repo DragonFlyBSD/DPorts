@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ruby-audiofile
-# Date created:		20 July 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: audio/ruby-audiofile/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: audio/ruby-audiofile/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	audiofile
 PORTVERSION=	0.2.4
@@ -20,6 +16,7 @@ COMMENT=	A Ruby binding to the audiofile library
 LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile
 
 USE_RUBY=	yes
+NO_STAGE=	yes
 USE_RUBY_EXTCONF=	yes
 
 CDDB_DISTNAME=	cddb-0.2
