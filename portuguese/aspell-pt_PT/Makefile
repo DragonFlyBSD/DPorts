@@ -1,9 +1,5 @@
-# New ports collection makefile for:    pt-aspell
-# Date created:                         6 September 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/portuguese/aspell-pt_PT/Makefile,v 1.13 2012/11/17 06:00:47 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: portuguese/aspell-pt_PT/Makefile 327763 2013-09-20 22:38:31Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-pt_PT-20070510-0
@@ -17,5 +13,6 @@ COMMENT=	Aspell Portuguese dictionary
 
 DICT=	 	pt_PT
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
