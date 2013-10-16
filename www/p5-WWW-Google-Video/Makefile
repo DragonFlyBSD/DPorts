@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Google-Video
-# Date created:		2006-07-19
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-WWW-Google-Video/Makefile 326156 2013-09-03 15:07:52Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-WWW-Google-Video/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Google-Video
 PORTVERSION=	0.4
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Google::Video.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
