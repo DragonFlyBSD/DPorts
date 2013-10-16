@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: ports/devel/java-util-concurrent/Makefile,v 1.6 2012/12/10 11:29:54 svnexp Exp $
+# $FreeBSD: devel/java-util-concurrent/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	util-concurrent
 PORTVERSION=	1.3.4
@@ -26,6 +26,7 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 PORTDOCS=	apidocs index.html
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
