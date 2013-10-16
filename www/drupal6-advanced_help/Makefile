@@ -1,9 +1,5 @@
-# New ports collection makefile for:	drupal6-views
-# Date created:				20 Jul 2008
-# Whom:					Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-#
-# $FreeBSD: ports/www/drupal6-advanced_help/Makefile,v 1.9 2012/11/17 06:02:31 svnexp Exp $
-#
+# Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
+# $FreeBSD: www/drupal6-advanced_help/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	advanced_help
 DISTVERSION=	6.x-1.2
@@ -49,4 +45,5 @@ MODULE_FILES=	help/advanced_help.help.ini help/ini-file.html \
 		translations/fr.po
 DOC_FILES=	LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
