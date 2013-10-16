@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net/remmina-applet/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: net/remmina-applet/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	remmina
 PORTVERSION=	0.8.1
@@ -25,6 +25,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
