@@ -1,9 +1,5 @@
-# New ports collection makefile for:	stardict-computer
-# Date created:		2010-03-16
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: russian/stardict-computer/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: russian/stardict-computer/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	stardict-computer
 PORTVERSION=	2.4.2
@@ -14,5 +10,6 @@ DISTNAME=	${PORTNAME}-ru-${PORTVERSION}
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	English-Russian Computer dictionary
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../stardict-mueller7/files/Makefile.common"
 .include <bsd.port.mk>
