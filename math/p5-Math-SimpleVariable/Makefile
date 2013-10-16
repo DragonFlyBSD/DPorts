@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: math/p5-Math-SimpleVariable/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: math/p5-Math-SimpleVariable/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-SimpleVariable
 PORTVERSION=	0.03
@@ -16,6 +16,7 @@ USE_PERL5=	configure patch
 
 MAN3=		Math::SimpleVariable.3
 
+NO_STAGE=	yes
 pre-patch:
 	@${FIND} ${WRKSRC} -name "*.pm" | ${XARGS} ${PERL} -pi -e \
 		'$$package=$$1 if /^package\s+([^\s;]*);/; s!^require 5.005_62;!!; s!^use warnings;!!; s!^our\s+(\$$)(VERSION)\s+=!$$1$${package}::$$2=!;'
