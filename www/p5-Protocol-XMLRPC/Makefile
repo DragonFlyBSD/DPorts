@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Protocol-XMLRPC/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/p5-Protocol-XMLRPC/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	Protocol-XMLRPC
 PORTVERSION=	0.10
@@ -16,21 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Protocol::XMLRPC.3 \
-		Protocol::XMLRPC::Client.3 \
-		Protocol::XMLRPC::Method.3 \
-		Protocol::XMLRPC::MethodCall.3 \
-		Protocol::XMLRPC::MethodResponse.3 \
-		Protocol::XMLRPC::Value.3 \
-		Protocol::XMLRPC::Value::Array.3 \
-		Protocol::XMLRPC::Value::Base64.3 \
-		Protocol::XMLRPC::Value::Boolean.3 \
-		Protocol::XMLRPC::Value::DateTime.3 \
-		Protocol::XMLRPC::Value::Double.3 \
-		Protocol::XMLRPC::Value::Integer.3 \
-		Protocol::XMLRPC::Value::String.3 \
-		Protocol::XMLRPC::Value::Struct.3 \
-		Protocol::XMLRPC::ValueFactory.3
 
 .include <bsd.port.mk>
