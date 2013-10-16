@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-Linode/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WebService-Linode/Makefile 329226 2013-10-03 18:38:39Z sunpoet $
 
 PORTNAME=	WebService-Linode
-PORTVERSION=	0.11
+PORTVERSION=	0.13
 CATEGORIES=	www
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	WebService
@@ -14,12 +14,15 @@ COMMENT=	Perl Interface to the Linode.com API
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-RUN_DEPENDS=	p5-Crypt-SSLeay>0:${PORTSDIR}/security/p5-Crypt-SSLeay \
-		p5-JSON>0:${PORTSDIR}/converters/p5-JSON \
-		p5-libwww>0:${PORTSDIR}/www/p5-libwww
+BUILD_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay \
+		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
+		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
+NO_STAGE=	yes
 USES=		perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuildtiny
 
 MAN3=		WebService::Linode.3 \
 		WebService::Linode::Base.3 \
