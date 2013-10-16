@@ -1,5 +1,5 @@
 # Created by: Andrey <gugu@zoo.rambler.ru>
-# $FreeBSD: math/p5-Math-BigInt-Pari/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-BigInt-Pari/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-BigInt-Pari
 PORTVERSION=	1.17
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Math::BigInt::Pari.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
