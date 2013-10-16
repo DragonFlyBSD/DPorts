@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Lingua-JA-Fold/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Lingua-JA-Fold/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Lingua-JA-Fold
 PORTVERSION=	0.08
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=	Lingua::JA::Fold.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
