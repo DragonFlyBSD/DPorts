@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-LimeLight-Purge
-# Date created:		2010-03-08
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: net/p5-Net-LimeLight-Purge/Makefile 326522 2013-09-06 16:11:30Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: net/p5-Net-LimeLight-Purge/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-LimeLight-Purge
 PORTVERSION=	0.03
@@ -26,4 +22,5 @@ MAN3=		Net::LimeLight::Purge.3 \
 		Net::LimeLight::Purge::Request.3 \
 		Net::LimeLight::Purge::StatusResponse.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
