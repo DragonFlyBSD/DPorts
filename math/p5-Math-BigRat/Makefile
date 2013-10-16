@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: math/p5-Math-BigRat/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Math-BigRat/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-BigRat
 PORTVERSION=	0.26.02
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		Math::BigRat.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/INSTALLDIRS/d' ${WRKSRC}/Makefile.PL
 
