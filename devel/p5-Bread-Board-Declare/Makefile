@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Bread-Board-Declare/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Bread-Board-Declare/Makefile 329322 2013-10-04 15:03:59Z sunpoet $
 
 PORTNAME=	Bread-Board-Declare
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
@@ -23,17 +23,5 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Bread::Board::Declare.3 \
-		Bread::Board::Declare::BlockInjection.3 \
-		Bread::Board::Declare::ConstructorInjection.3 \
-		Bread::Board::Declare::Literal.3 \
-		Bread::Board::Declare::Meta::Role::Attribute.3 \
-		Bread::Board::Declare::Meta::Role::Attribute::Container.3 \
-		Bread::Board::Declare::Meta::Role::Attribute::Service.3 \
-		Bread::Board::Declare::Meta::Role::Class.3 \
-		Bread::Board::Declare::Meta::Role::Instance.3 \
-		Bread::Board::Declare::Role::Object.3 \
-		Bread::Board::Declare::Role::Service.3
 
 .include <bsd.port.mk>
