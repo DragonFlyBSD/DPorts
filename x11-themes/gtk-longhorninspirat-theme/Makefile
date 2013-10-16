@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Longhorn Inspirat (gtk20 theme/master)
-# Date created:				01 Mar 2005
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gtk-longhorninspirat-theme/Makefile,v 1.11 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: x11-themes/gtk-longhorninspirat-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	longhorninspirat
 PORTVERSION=	1.0
@@ -35,6 +31,7 @@ PLIST_SUB+=	GTK20="@comment " METACITY=""
 USE_GNOME=	gnomehier
 .endif
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type f -print0 | ${XARGS} -0 ${CHMOD} 644
 	@${RM} -r ${WRKSRC}/gtk-2.0/.Trash-roberto
