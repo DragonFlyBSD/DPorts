@@ -1,9 +1,5 @@
-# New ports collection makefile for:   bespin
-# Date created:                        Thu Dec  3 04:21:05  EST 2009
-# Whom:                                Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: x11-themes/kde4-style-bespin/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: x11-themes/kde4-style-bespin/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	bespin
 PORTVERSION=	201303202227
@@ -20,4 +16,5 @@ USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 USES=		cmake
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
