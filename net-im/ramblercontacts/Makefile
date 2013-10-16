@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Rambler Contacts
-# Date created:				6 July 2011
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: net-im/ramblercontacts/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: net-im/ramblercontacts/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	ramblercontacts
 PORTVERSION=	0.3.2.1030
@@ -23,6 +19,7 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build designer_build \
 		webkit
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 # Remove bogus Byte Order Mark (BOM) from some source files
 	@${REINPLACE_CMD} -e '1s/^[^#]*//' ${WRKSRC}/src/utils/balloontip.*
