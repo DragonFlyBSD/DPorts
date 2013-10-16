@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mod_reproxy
-# Date created:		2 Jan 2012
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/www/mod_reproxy/Makefile,v 1.3 2012/11/17 06:02:41 svnexp Exp $
-#
+# $FreeBSD: www/mod_reproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_reproxy
 PORTVERSION=	0.02.20110826
@@ -19,4 +14,5 @@ USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
