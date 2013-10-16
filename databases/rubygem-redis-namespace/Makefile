@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/rubygem-redis-namespace/Makefile 323936 2013-07-30 03:10:03Z swills $
+# $FreeBSD: databases/rubygem-redis-namespace/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	redis-namespace
 PORTVERSION=	1.3.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
