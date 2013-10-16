@@ -1,9 +1,9 @@
-# Created by: Daichi GOTO <daichi@freebsd.org>
-# $FreeBSD: japanese/ibus-anthy/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# Created by: Daichi GOTO <daichi@FreeBSD.org>
+# $FreeBSD: japanese/ibus-anthy/Makefile 329962 2013-10-10 03:46:18Z daichi $
 
 PORTNAME=	ibus-anthy
 PORTVERSION=	1.2.7
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	japanese
 PROJECTHOST=	ibus
@@ -15,7 +15,7 @@ COMMENT=	Anthy engine for IBus
 
 BUILD_DEPENDS=	swig:${PORTSDIR}/devel/swig13
 LIB_DEPENDS=	anthy.1:${PORTSDIR}/japanese/anthy \
-		ibus-1.0.401:${PORTSDIR}/textproc/ibus
+		ibus-1.0.402:${PORTSDIR}/textproc/ibus
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/pynotify/_pynotify.so:${PORTSDIR}/devel/py-notify
 
 GNU_CONFIGURE=	yes
@@ -32,6 +32,7 @@ INCLUDEDIR_REPLACE_FILES= \
 		engine/Makefile.am \
 		engine/Makefile.in
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && \
                 ${REINPLACE_CMD} "s,@@LOCALBASE@@,${LOCALBASE},g" \
