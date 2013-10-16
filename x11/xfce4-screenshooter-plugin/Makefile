@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11/xfce4-screenshooter-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: x11/xfce4-screenshooter-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-screenshooter-plugin
 PORTVERSION=	1.8.1
@@ -25,6 +25,7 @@ USES=		pkgconfig
 
 MAN1=		xfce4-screenshooter.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
