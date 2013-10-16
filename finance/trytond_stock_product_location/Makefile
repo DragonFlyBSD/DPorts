@@ -1,4 +1,4 @@
-# $FreeBSD: finance/trytond_stock_product_location/Makefile 318580 2013-05-20 08:00:57Z wen $
+# $FreeBSD: finance/trytond_stock_product_location/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_stock_product_location
 PORTVERSION=	2.4.0
@@ -19,4 +19,5 @@ CONFLICTS=	trytond_stock_product_location-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
