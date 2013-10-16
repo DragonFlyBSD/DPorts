@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Component-IKC/Makefile 326734 2013-09-08 14:47:37Z az $
+# $FreeBSD: devel/p5-POE-Component-IKC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POE-Component-IKC
 PORTVERSION=	0.2304
@@ -28,4 +28,5 @@ MAN3=		POE::Component::IKC.3 POE::Component::IKC::Channel.3 \
 		POE::Component::IKC::Responder.3 POE::Component::IKC::Server.3 \
 		POE::Component::IKC::Specifier.3 POE::Component::IKC::Timing.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
