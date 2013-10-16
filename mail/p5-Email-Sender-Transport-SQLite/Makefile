@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Email-Sender-Transport-SQLite
-# Date created:				11 Oct 2010
-# Whom:					Bill Brinzer <bill.brinzer@gmail.com>
-#
-# $FreeBSD: mail/p5-Email-Sender-Transport-SQLite/Makefile 326265 2013-09-04 09:48:54Z az $
-#
+# Created by: Bill Brinzer <bill.brinzer@gmail.com>
+# $FreeBSD: mail/p5-Email-Sender-Transport-SQLite/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Sender-Transport-SQLite
 PORTVERSION=	0.092000
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::Sender::Transport::SQLite.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
