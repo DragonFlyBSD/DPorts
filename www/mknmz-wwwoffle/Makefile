@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: www/mknmz-wwwoffle/Makefile 324180 2013-08-03 07:52:55Z az $
+# $FreeBSD: www/mknmz-wwwoffle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mknmz-wwwoffle
 PORTVERSION=	0.7.2
@@ -19,6 +19,7 @@ HAS_CONFIGURE=	yes
 MAN1=		mknmz-wwwoffle.1
 PORTDOCS=	AUTHORS COPYING INSTALL INSTALL.ja NEWS README README.ja THANKS
 
+NO_STAGE=	yes
 post-build:
 .if !defined(NOPORTDOCS)
 post-install:
