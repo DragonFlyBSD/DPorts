@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: print/gnomephotoprinter/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: print/gnomephotoprinter/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	gnomephotoprinter
 PORTVERSION=	0.7.0
@@ -18,4 +18,5 @@ USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
