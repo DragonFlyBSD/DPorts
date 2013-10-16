@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Business-TW-Invoice-U420/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Business-TW-Invoice-U420/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-TW-Invoice-U420
 PORTVERSION=	0.01
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Business::TW::Invoice::U420.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
