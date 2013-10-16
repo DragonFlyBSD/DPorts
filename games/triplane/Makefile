@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/triplane/Makefile 323733 2013-07-26 15:16:14Z danfe $
+# $FreeBSD: games/triplane/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	triplane
 PORTVERSION=	1.08.r20130224
@@ -23,6 +23,7 @@ MAKE_ENV=	DATADIR="${DATADIR}"
 MAN6=		triplane.6
 
 # ALL_TARGET="depend all" would not work in -jX case due to races
+NO_STAGE=	yes
 pre-build:
 	${GMAKE} -C ${BUILD_WRKSRC} depend
 
