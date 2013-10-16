@@ -1,5 +1,5 @@
 # Created by: Peter Ankerstal <peter@pean.org>
-# $FreeBSD: ports/sysutils/zfs-periodic/Makefile,v 1.6 2013/02/16 17:29:29 svnexp Exp $
+# $FreeBSD: sysutils/zfs-periodic/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	zfs-periodic
 PORTVERSION=	1.0.20130213
@@ -27,6 +27,7 @@ PERIODIC_FILES=	etc/periodic/hourly/000.zfs-snapshot \
 PLIST_FILES=	${PERIODIC_FILES} bin/zfs-snapshot
 PLIST_DIRSTRY=	${PERIODIC_DIRS}
 
+NO_STAGE=	yes
 post-patch:
 .for _file in ${PERIODIC_FILES}
 	@${REINPLACE_CMD} -e "s|/etc/periodic/zfs-snapshot|${PREFIX}/bin/zfs-snapshot|" \
