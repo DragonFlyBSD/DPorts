@@ -1,9 +1,5 @@
-# New ports collection makefile for:	scim-bridge-qt4
-# Date created:		2008-08-17
-# Whom:			Henry Hu <henry.hu.sh@gmail.com>
-#
-# $FreeBSD: textproc/scim-bridge-qt4/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Henry Hu <henry.hu.sh@gmail.com>
+# $FreeBSD: textproc/scim-bridge-qt4/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	scim-bridge
 PORTVERSION=	0.4.16
@@ -19,8 +15,7 @@ RUN_DEPENDS=	scim-bridge:${PORTSDIR}/textproc/scim-bridge
 
 USE_QT4=	corelib gui moc_build
 QT_NONSTANDARD=	yes
-USE_GMAKE=	yes
-USES=		gettext
+USES=		gettext gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 LICENSE=	GPLv2 LGPL21
@@ -37,6 +32,7 @@ CONFIGURE_ARGS+=--with-libintl-prefix=${LOCALBASE} \
 		--disable-qt3-immodule \
 		--enable-qt4-immodule
 
+NO_STAGE=	yes
 post-patch:
 	@${GREP} -lR "<malloc\.h>" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
 		's|<malloc\.h>|<stdlib.h>|g'
