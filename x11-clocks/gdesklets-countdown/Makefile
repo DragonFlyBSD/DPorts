@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gdesklets-countdown
-# Date created:				06 January 2004
-# Whom:					Vincent Tantardini <vinc@FreeBSD-fr.org>
-#
-# $FreeBSD: ports/x11-clocks/gdesklets-countdown/Makefile,v 1.17 2012/11/17 06:03:24 svnexp Exp $
-#
+# Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
+# $FreeBSD: x11-clocks/gdesklets-countdown/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	countdown
 PORTVERSION=	0.8
@@ -29,6 +25,7 @@ SUB_LIST=	NAME="${NAME}"
 DATADIR=	${PREFIX}/share/gdesklets
 NAME=		Countdown
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${DATADIR}/Displays/${NAME}
 	${INSTALL_DATA} ${WRKSRC}/*.display ${DATADIR}/Displays/${NAME}
