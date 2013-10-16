@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Install-Repository/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-Module-Install-Repository/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Install-Repository
 PORTVERSION=	0.06
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	Module::Install::Repository.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
