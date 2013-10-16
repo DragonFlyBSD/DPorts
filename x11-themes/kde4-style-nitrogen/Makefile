@@ -1,9 +1,5 @@
-# New ports collection makefile for:   nitrogen
-# Date created:                        Thu Dec  3 04:21:05  EST 2009
-# Whom:                                Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: x11-themes/kde4-style-nitrogen/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: x11-themes/kde4-style-nitrogen/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	nitrogen
 PORTVERSION=	1.0.5
@@ -21,4 +17,5 @@ USE_KDE4=	kdelibs kdehier kdeprefix automoc4
 USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 USES=		cmake
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
