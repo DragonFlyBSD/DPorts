@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-rd-mode.el/Makefile 320537 2013-06-11 07:11:27Z knu $
+# $FreeBSD: textproc/ruby-rd-mode.el/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	rd-mode.el
 PORTVERSION=	0.6.38
@@ -23,6 +23,7 @@ ELISP_FILES=	rd-mode.el
 EMACSLISPDIR=	${PREFIX}/share/emacs/site-lisp
 XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${LN} -sf `cd ${.CURDIR}/../ruby-rdtool; ${MAKE} -V WRKSRC`/utils ${WRKSRC}
