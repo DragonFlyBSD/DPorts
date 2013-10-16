@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Server-Twirc
 PORTVERSION=	0.16
@@ -42,6 +42,7 @@ MAN3=		App::Twirc.3 \
 		App::Twirc::Plugin::SecondaryAccount.3 \
 		POE::Component::Server::Twirc.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
