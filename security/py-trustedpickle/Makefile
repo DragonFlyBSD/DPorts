@@ -1,9 +1,5 @@
-# New ports collection makefile for:    py-trustedpickle
-# Date created:				02 May 2006
-# Whom:				  	Alexander Botero-Lowry <alex@foxybanana.com>
-#
-# $FreeBSD: ports/security/py-trustedpickle/Makefile,v 1.5 2012/11/17 06:01:17 svnexp Exp $
-#
+# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
+# $FreeBSD: security/py-trustedpickle/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	trustedpickle
 PORTVERSION=	0.02
@@ -25,6 +21,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/TrustedPickle.py \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${PYTHON_CMD} -OOOO -c 'import TrustedPickle' && \
 	${PYTHON_CMD} -c 'import TrustedPickle'
