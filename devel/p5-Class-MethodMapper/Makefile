@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-MethodMapper/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Class-MethodMapper/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=		Class-MethodMapper
 PORTVERSION=		1.0
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=			Class::MethodMapper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
