@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Test-Mini-Unit/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-Test-Mini-Unit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Mini-Unit
 PORTVERSION=	v1.0.3
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=	Test::Mini::README.3 \
 	Test::Mini::Unit.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
