@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/net/isc-dhcp41-client/pkg-plist,v 1.2 2012/11/17 06:00:03 svnexp Exp $
+@comment $FreeBSD: net/isc-dhcp41-client/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 sbin/dhclient
 sbin/dhclient-script
 @unexec if cmp -s %D/etc/dhclient.conf.sample %D/etc/dhclient.conf; then rm -f %D/etc/dhclient.conf; fi
