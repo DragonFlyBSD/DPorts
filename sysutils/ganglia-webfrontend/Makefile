@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ganglia-webfrontend/Makefile 320630 2013-06-11 19:24:29Z brooks $
+# $FreeBSD: sysutils/ganglia-webfrontend/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	webfrontend
 PORTVERSION=	3.1.7
@@ -35,6 +35,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/web
 # information on these variables.
 WEBFRONTDIR?=	www/ganglia
 
+NO_STAGE=	yes
 # Set custom variables:
 #
 PKGOPTS=	${FILESDIR}/pkg-opts
