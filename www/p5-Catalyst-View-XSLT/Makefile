@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-View-XSLT/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-View-XSLT/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-XSLT
 PORTVERSION=	0.09
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 MAN3=		Catalyst::Helper::View::XSLT.3 Catalyst::View::XSLT.3 \
 		Catalyst::View::XSLT::XML::LibXSLT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
