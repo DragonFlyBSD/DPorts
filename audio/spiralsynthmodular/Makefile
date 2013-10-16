@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: ports/audio/spiralsynthmodular/Makefile,v 1.27 2013/02/26 11:46:56 svnexp Exp $
+# $FreeBSD: audio/spiralsynthmodular/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	spiralsynthmodular
 PORTVERSION=	0.2.2a
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa \
 LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk \
 		sndfile:${PORTSDIR}/audio/libsndfile
 
+NO_STAGE=	yes
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
 
