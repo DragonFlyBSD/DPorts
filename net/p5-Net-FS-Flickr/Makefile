@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-FS-Flickr
-# Date created:		2006-07-30
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: net/p5-Net-FS-Flickr/Makefile 326486 2013-09-06 10:47:10Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: net/p5-Net-FS-Flickr/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-FS-Flickr
 PORTVERSION=	0.1
@@ -27,4 +23,5 @@ MAN1=		flickrfs.1
 MAN3=		Net::FS::Flickr.3 \
 		Net::FS::Flickr::Access.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
