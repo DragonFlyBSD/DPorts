@@ -1,9 +1,5 @@
-# New ports collection makefile for: squirrelmail-tmda-plugin
-# Date created:			2006-06-10
-# Whom:				Raul Pollicino <email-freebsd@def-defying.com>
-#
-# $FreeBSD: mail/squirrelmail-tmda-plugin/Makefile 326249 2013-09-04 06:06:59Z az $
-#
+# Created by: Raul Pollicino <email-freebsd@def-defying.com>
+# $FreeBSD: mail/squirrelmail-tmda-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	squirrelmail-tmda-plugin
 PORTVERSION=	1.0.2
@@ -35,6 +31,7 @@ PLIST_SUB+=	SQUIRRELDIR=squirrelmail
 TMDATOOLDIR?=	${SQUIRRELDIR}/plugins/${SQUIRREL_PLUGIN_NAME}
 PLIST_SUB+=	TMDATOOLDIR=plugins/${SQUIRREL_PLUGIN_NAME}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO} "The plugin expects SquirrelMail install in ${SQUIRRELDIR}"
 	@${ECHO} "To use the old location ${PREFIX}/squirrelmail define WITHOUT_WWWDIR=yes"
