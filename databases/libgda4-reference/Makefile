@@ -1,8 +1,9 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: databases/libgda4-reference/Makefile 314630 2013-03-19 10:26:51Z kwm $
+# $FreeBSD: databases/libgda4-reference/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTREVISION=	0
 
 REFERENCE_SRC=	${WRKSRC}/doc/C
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
