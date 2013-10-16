@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Smart-Comments/Makefile 325119 2013-08-21 12:49:19Z mat $
+# $FreeBSD: devel/p5-Smart-Comments/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Smart-Comments
 PORTVERSION=	1.000005
@@ -16,4 +16,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Smart::Comments.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
