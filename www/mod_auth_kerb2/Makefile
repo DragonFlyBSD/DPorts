@@ -1,5 +1,5 @@
 # Created by: wollman
-# $FreeBSD: www/mod_auth_kerb2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_auth_kerb2/Makefile 329244 2013-10-03 22:24:34Z ohauer $
 
 PORTNAME=	mod_auth_kerb
 PORTVERSION=	5.4
@@ -18,23 +18,25 @@ USE_APACHE=	22
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-BUILD_DEPENDS=  gsed:${PORTSDIR}/textproc/gsed
-
-PORTSCOUT=	limit:^5.3
+PORTSCOUT=	limit:^5.4
 
 .if defined(KRB5_HOME)
 BUILD_DEPENDS+=	${KRB5_HOME}/lib/libgssapi_krb5.so:${PORTSDIR}/security/krb5
 RUN_DEPENDS+=	${KRB5_HOME}/lib/libgssapi_krb5.so:${PORTSDIR}/security/krb5
 CONFIGURE_ARGS+=	--with-krb5=${KRB5_HOME} --without-krb4
+
 .elif defined(HEIMDAL_HOME)
 BUILD_DEPENDS+=	${HEIMDAL_HOME}/lib/libgssapi.so:${PORTSDIR}/security/heimdal
 RUN_DEPENDS+=	${HEIMDAL_HOME}/lib/libgssapi.so:${PORTSDIR}/security/heimdal
 CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --without-krb4
+
 .elif exists(${DESTDIR}/usr/lib/libkrb5.a) && exists(${DESTDIR}/usr/bin/krb5-config)
 CONFIGURE_ARGS+=	--with-krb5=${DESTDIR}/usr --without-krb4
+
 .else
 LIB_DEPENDS+=	gssapi_krb5:${PORTSDIR}/security/krb5
 CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE} --without-krb4
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
