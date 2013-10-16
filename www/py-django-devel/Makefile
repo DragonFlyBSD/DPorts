@@ -1,5 +1,4 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: www/py-django-devel/Makefile 327083 2013-09-12 16:07:01Z lwhsu $
+# $FreeBSD: www/py-django-devel/Makefile 329165 2013-10-03 10:37:49Z demon $
 
 PORTNAME=	django
 PORTVERSION=	${SNAPSHOTDATE}
@@ -17,13 +16,13 @@ COMMENT=	High-level Python Web framework
 
 LICENSE=	BSD
 
-SNAPSHOTDATE=	20130912
+SNAPSHOTDATE=	20130922
 
 USE_XZ=	yes
 USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-
+PYTHON_PY3K_PLIST_HACK=	yes
 PYDISTUTILS_PKGNAME=	Django
 PYDISTUTILS_PKGVERSION=	1.7
 
@@ -35,11 +34,9 @@ DOCSDIR=	${PREFIX}/share/doc/py-django
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}-devel/options
 OPTIONS_DEFINE=	FASTCGI HTMLDOCS
 OPTIONS_DEFAULT=SQLITE
-OPTIONS_MULTI=	DATABASE
-OPTIONS_MULTI_DATABASE=	PGSQL MYSQL SQLITE
+OPTIONS_GROUP=	DATABASE
+OPTIONS_GROUP_DATABASE=	PGSQL MYSQL SQLITE
 HTMLDOCS_DESC=	Install the HTML documentation (requires Sphinx)
-
-MAN1=		daily_cleanup.1 django-admin.1 gather_profile_stats.1
 
 .include <bsd.port.options.mk>
 
@@ -73,13 +70,13 @@ post-build:
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/docs/man/* ${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/docs/man/* ${STAGEDIR}/${MAN1PREFIX}/man/man1
 	@${ECHO_MSG}	""
 	@${ECHO_MSG}	"			* See http://docs.djangoproject.com/ for complete documentation"
 	@${ECHO_MSG}	""
 .if ${PORT_OPTIONS:MHTMLDOCS}
-	${MKDIR} ${DOCSDIR}
-	${CP} -R ${WRKSRC}/docs/_build/html ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}/${DOCSDIR}
+	${CP} -R ${WRKSRC}/docs/_build/html ${STAGEDIR}/${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
