@@ -1,5 +1,5 @@
 # Created by: KANOU Hiroki <kanou@mil.allnet.ne.jp>
-# $FreeBSD: japanese/font-kochi/Makefile 326328 2013-09-04 21:15:21Z hrs $
+# $FreeBSD: japanese/font-kochi/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	kochi
 PORTVERSION=	20030809
@@ -33,6 +33,7 @@ PORTDOCS=	README.ja COPYING docs
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
