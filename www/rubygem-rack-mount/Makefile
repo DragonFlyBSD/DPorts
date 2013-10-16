@@ -1,9 +1,4 @@
-# New ports collection makefile for:	rubygem-rack-mount
-# Date created:		1 September 2010
-# Whom:				Philip M. Gollucci <pgollucci@p6m7g8.com>
-#
-# $FreeBSD: ports/www/rubygem-rack-mount/Makefile,v 1.4 2012/11/17 06:03:04 svnexp Exp $
-#
+# $FreeBSD: www/rubygem-rack-mount/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rack-mount
 PORTVERSION=	0.8.3
@@ -19,4 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
