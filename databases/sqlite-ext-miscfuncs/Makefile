@@ -1,9 +1,5 @@
-# New ports collection makefile for:	sqlite-ext-miscfuncs
-# Date created:		28 Jan 2010
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: ports/databases/sqlite-ext-miscfuncs/Makefile,v 1.5 2012/11/17 05:55:25 svnexp Exp $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: databases/sqlite-ext-miscfuncs/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlite-ext-miscfuncs
 PORTVERSION=	1.1
@@ -39,6 +35,7 @@ PORTDOCS=	README
 
 CFLAGS+=	-I${PREFIX}/include -fPIC -lm -shared
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${CC} ${CFLAGS} ${SRCFILE} -o ${LIBFILE}
 
