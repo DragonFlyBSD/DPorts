@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-Plugin-StatusMessage/Makefile 325984 2013-09-02 12:52:42Z az $
+# $FreeBSD: www/p5-Catalyst-Plugin-StatusMessage/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-StatusMessage
 PORTVERSION=	1.002000
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::Plugin::StatusMessage.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
