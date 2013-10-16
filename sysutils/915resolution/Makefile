@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: sysutils/915resolution/Makefile 319126 2013-05-26 18:11:11Z bsam $
+# $FreeBSD: sysutils/915resolution/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	915resolution
 PORTVERSION=	0.5.3
@@ -20,6 +20,7 @@ PORTDOCS=	README.txt LICENSE.txt chipset_info.txt changes.log
 
 ONLY_FOR_ARCHS=	i386 amd64
 
+NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 		${CC} ${CFLAGS} 915resolution.c -o 915resolution
