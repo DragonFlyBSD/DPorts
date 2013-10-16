@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: ports/www/trac-datefield/Makefile,v 1.6 2012/12/26 11:18:23 svnexp Exp $
+# $FreeBSD: www/trac-datefield/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	datefield
 PORTVERSION=	1.0.1
@@ -22,4 +22,5 @@ WRKSRC=		${WRKDIR}/datefieldplugin/0.11
 REL=		7267
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
