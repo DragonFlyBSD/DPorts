@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-SebastianBergmann_PHPLOC/Makefile,v 1.2 2013/01/03 10:49:58 svnexp Exp $
+# $FreeBSD: devel/pear-SebastianBergmann_PHPLOC/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHPLOC
 PORTVERSION=	1.7.1
@@ -29,6 +29,7 @@ USE_PHP=	tokenizer
 PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
