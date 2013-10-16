@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: irc/irchat-pj-emacs21/Makefile 319342 2013-05-29 05:25:00Z miwi $
+# $FreeBSD: irc/irchat-pj-emacs21/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	irchat-pj
 PORTVERSION=	2.5.6
@@ -44,6 +44,7 @@ PLIST_SUB=	LISPDIR=${LISPDIR} \
 		ETCDIR=${ETCDIR} \
 		XEMACS_ONLY=${XEMACS_ONLY}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
