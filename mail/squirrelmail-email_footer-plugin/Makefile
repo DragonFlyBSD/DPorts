@@ -1,17 +1,18 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: mail/squirrelmail-email_footer-plugin/Makefile 321853 2013-06-27 06:48:43Z bapt $
+# $FreeBSD: mail/squirrelmail-email_footer-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	email_footer
 PORTVERSION=	0.6
 DISTNAME=	${PORTNAME}-${PORTVERSION}-1.4.2
 DIST_SUBDIR=	squirrelmail
 
-MAINTAINER=	tabthorpe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatically appends footer to SquirrelMail-generated emails
 
 RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail-compatibility-plugin
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 .include <bsd.port.mk>
