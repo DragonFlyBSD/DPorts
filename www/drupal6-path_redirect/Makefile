@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-path_redirect/Makefile 313237 2013-03-02 14:39:16Z miwi $
+# $FreeBSD: www/drupal6-path_redirect/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	path_redirect
 DISTVERSION=	6.x-1.0-rc2
@@ -22,4 +22,5 @@ MODULE_DIRS=	generate
 
 DOC_FILES=	LICENSE.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
