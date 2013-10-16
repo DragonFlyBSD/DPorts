@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rubygem-fluent-plugin-config-expander/Makefile 320207 2013-06-07 15:02:44Z kuriyama $
+# $FreeBSD: sysutils/rubygem-fluent-plugin-config-expander/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fluent-plugin-config-expander
 PORTVERSION=	0.1.3
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
