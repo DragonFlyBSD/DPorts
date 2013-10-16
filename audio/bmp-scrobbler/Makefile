@@ -1,8 +1,5 @@
-# New ports collection makefile for:	bmp-scrobbler
-# Date created:				01-14-2005
-# Whom:					Roman Bogorodskiy <bogorodskiy@inbox.ru>
-#
-# $FreeBSD: ports/audio/bmp-scrobbler/Makefile,v 1.19 2012/11/17 05:54:29 svnexp Exp $
+# Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
+# $FreeBSD: audio/bmp-scrobbler/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	bmp-scrobbler
 PORTREVISION=	10
@@ -14,6 +11,7 @@ CONFLICTS=	scrobbler-*
 
 MASTERDIR=	${.CURDIR}/../scrobbler
 
+NO_STAGE=	yes
 WITH_BMP=	yes
 
 .include "${MASTERDIR}/Makefile"
