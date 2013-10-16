@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-FixedLength-Extra/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: textproc/p5-Text-FixedLength-Extra/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-FixedLength-Extra
 PORTVERSION=	1.1
@@ -18,6 +18,7 @@ USE_PERL5=	configure patch
 
 MAN3=		Text::FixedLength::Extra.3
 
+NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
 		-e '$$_="" if /require 5/;' \
