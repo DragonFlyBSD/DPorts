@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: ports/devel/distorm/Makefile,v 1.18 2013/01/31 21:44:56 svnexp Exp $
+# $FreeBSD: devel/distorm/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME?=	distorm
 DISTVERSION=	20121220-r230
@@ -55,6 +55,7 @@ PLIST_FILES=	bin/disasm \
 		lib/libdistorm3.so.1
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
