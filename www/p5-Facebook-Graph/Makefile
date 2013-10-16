@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Facebook-Graph/Makefile 325974 2013-09-02 11:04:10Z az $
+# $FreeBSD: www/p5-Facebook-Graph/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Facebook-Graph
 PORTVERSION=	1.0600
@@ -52,4 +52,5 @@ MAN3=	Facebook::Graph.3 \
 	Facebook::Graph::Role::Uri.3 \
 	Facebook::Graph::Session.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
