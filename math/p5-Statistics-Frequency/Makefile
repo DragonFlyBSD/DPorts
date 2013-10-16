@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: math/p5-Statistics-Frequency/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Statistics-Frequency/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-Frequency
 PORTVERSION=	0.03
@@ -14,4 +14,5 @@ COMMENT=	Simple counting of elements
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
