@@ -1,5 +1,5 @@
 # Created by: Alexandr Bechikov <goo@t72.ru>
-# $FreeBSD: audio/gstreamer-plugins-moodbar/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: audio/gstreamer-plugins-moodbar/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gstreamer-plugins-moodbar
 PORTVERSION=	0.1.2
@@ -17,6 +17,7 @@ LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float \
 
 CFLAGS:=	${CFLAGS} -O2
 USE_GSTREAMER=	yes good
+NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
