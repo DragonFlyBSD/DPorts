@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl-Critic-Deprecated/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Perl-Critic-Deprecated/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Perl-Critic-Deprecated
 PORTVERSION=	1.108
@@ -21,4 +21,5 @@ MAN3=	Perl::Critic::Deprecated.3 \
 	Perl::Critic::Policy::NamingConventions::ProhibitMixedCaseVars.3 \
 	Perl::Critic::Utils::PPIRegexp.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
