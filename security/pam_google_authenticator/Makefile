@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: ports/security/pam_google_authenticator/Makefile,v 1.8 2012/11/17 06:01:14 svnexp Exp $
+# $FreeBSD: security/pam_google_authenticator/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_google_authenticator
 PORTVERSION=	20120831
@@ -16,6 +16,7 @@ USE_GMAKE=	yes
 
 PLIST_FILES=	bin/google-authenticator lib/pam_google_authenticator.so
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/google-authenticator ${PREFIX}/bin/google-authenticator
 	${INSTALL_LIB} ${WRKSRC}/pam_google_authenticator.so ${PREFIX}/lib/pam_google_authenticator.so
