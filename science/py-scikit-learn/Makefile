@@ -1,6 +1,5 @@
-# Created by:	Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: science/py-scikit-learn/Makefile 313903 2013-03-11 14:11:26Z demon $
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: science/py-scikit-learn/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	scikit-learn
 PORTVERSION=	0.13.1
@@ -23,4 +22,5 @@ LATEST_LINK=	py-${PORTNAME}
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
