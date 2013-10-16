@@ -1,7 +1,7 @@
-# $FreeBSD: irc/weechat-devel/Makefile 327442 2013-09-16 21:58:54Z jase $
+# $FreeBSD: irc/weechat-devel/Makefile 327870 2013-09-22 11:55:30Z jase $
 
 PORTNAME=	weechat
-PORTVERSION=	20130916
+PORTVERSION=	20130921
 CATEGORIES=	irc
 MASTER_SITES=	http://perturb.me.uk/distfiles/ \
 		${MASTER_SITE_LOCAL}
@@ -24,7 +24,7 @@ CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
-GITDESC=	v0.4.2-rc1-4-g556d324
+GITDESC=	v0.4.2-rc2-1-g0249666
 GITREV!=	echo "${GITDESC}" | sed -E 's/^.*-g(.{7})$$/\1/'
 WRKSRC=		${WRKDIR}/${PORTNAME}-${GITREV}
 
@@ -47,6 +47,7 @@ TCL_DESC=	Tcl scripting support
 COLOR256_DESC=	Use ncurses port for 256 color support
 ICON_DESC=	Desktop icon
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCHARSET}
