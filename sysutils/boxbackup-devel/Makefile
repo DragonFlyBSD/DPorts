@@ -1,5 +1,5 @@
 # Created by: James O'Gorman <james@netinertia.co.uk>
-# $FreeBSD: sysutils/boxbackup-devel/Makefile 317400 2013-05-05 07:49:18Z bapt $
+# $FreeBSD: sysutils/boxbackup-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	boxbackup
 PORTVERSION=	0.11.r${SVNVERSION:C/^[0-9\.]+_[a-z]+_([0-9]+)/\1/}
@@ -21,9 +21,9 @@ SVNVERSION=	0.11_trunk_2979
 
 NO_LATEST_LINK=	yes
 
+USES=		perl5
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 USE_AUTOTOOLS=	autoconf aclocal autoheader
 ACLOCAL_ARGS+=	-I ${WRKSRC}/infrastructure/m4
 
@@ -41,6 +41,7 @@ CLIENT_DESC=		Install the bbackupd client
 SERVER_DESC=		Install the bbstored server
 GNUREADLINE_DESC=	Enable the use of GNU readline
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUREADLINE}
