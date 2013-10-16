@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-main-menu/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: deskutils/gnome-main-menu/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	gnome-main-menu
 PORTVERSION=	0.9.12
@@ -24,6 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	application-browser.schemas slab.schemas
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|glib/gmacros.h|glib.h|g' \
 		-e 's|glib/gfileutils.h|glib.h|g' \
