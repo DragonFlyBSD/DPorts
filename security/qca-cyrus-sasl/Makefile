@@ -1,9 +1,4 @@
-# New ports collection makefile for:	qca-cyrus-sasl
-# Date created:		2009-03-19
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/security/qca-cyrus-sasl/Makefile,v 1.6 2012/12/10 15:19:18 svnexp Exp $
-#
+# $FreeBSD: security/qca-cyrus-sasl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	qca-cyrus-sasl
 DISTVERSION=	2.0.0-beta3
@@ -33,6 +28,7 @@ CONFIGURE_ARGS+=--debug
 PLIST_SUB+=	DEBUG=""
 .endif
 
+NO_STAGE=	yes
 post-install:
 	${STRIP_CMD} ${PREFIX}/${QT_PLUGINDIR_REL}/crypto/libqca-cyrus-sasl.so
 
