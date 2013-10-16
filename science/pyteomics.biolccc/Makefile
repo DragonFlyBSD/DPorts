@@ -1,4 +1,4 @@
-# $FreeBSD: science/pyteomics.biolccc/Makefile 317855 2013-05-11 07:41:46Z makc $
+# $FreeBSD: science/pyteomics.biolccc/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	pyteomics.biolccc
 PORTVERSION=	1.5.0
@@ -12,4 +12,5 @@ COMMENT=	Python bindings for BioLCCC
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
