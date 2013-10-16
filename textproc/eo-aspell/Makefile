@@ -1,9 +1,5 @@
-# New ports collection makefile for:    eo-aspell
-# Date created:                         1 September 2002
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/eo-aspell/Makefile,v 1.9 2012/11/17 06:01:55 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/eo-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-eo-2.1.20000225a-2
@@ -16,5 +12,6 @@ COMMENT=	Aspell Esperanto dictionary
 
 DICT=	 	eo
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
