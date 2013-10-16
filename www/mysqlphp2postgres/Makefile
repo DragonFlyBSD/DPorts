@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mysqlphp2postgres
-# Date created:		21 Aug 2006
-# Whom:			uwe.pierau@tu-clausthal.de
-#
-# $FreeBSD: ports/www/mysqlphp2postgres/Makefile,v 1.3 2012/11/17 06:02:43 svnexp Exp $
-#
+# Created by: uwe.pierau@tu-clausthal.de
+# $FreeBSD: www/mysqlphp2postgres/Makefile 330106 2013-10-11 22:56:23Z ak $
 
 PORTNAME=	mysqlphp2postgres
 PORTVERSION=	0.95
@@ -11,10 +7,13 @@ CATEGORIES=	www
 MASTER_SITES=	http://downloads.mikekohn.net/mp2p/ \
 		http://www.heim2.tu-clausthal.de/~upp/mysqlphp2postgres/
 
-MAINTAINER=	uwe.pierau@tu-clausthal.de
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert MySQL calls in a PHP page into PostgreSQL calls
 
 ALL_TARGET=	default
 PLIST_FILES=	bin/mysqlphp2postgres
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
