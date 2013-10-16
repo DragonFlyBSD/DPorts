@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Algorithm-Binpack/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-Algorithm-Binpack/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Algorithm-BinPack
 PORTVERSION=	0.5
@@ -16,4 +16,5 @@ MAN3=		Algorithm::BinPack.3
 
 PORTSCOUT=	limit:^\d+\.\d+
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
