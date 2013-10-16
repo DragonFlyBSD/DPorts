@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/par/Makefile 316938 2013-04-30 15:07:15Z danfe $
+# $FreeBSD: archivers/par/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	par
 PORTVERSION=	0.03.01
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 
 CONFLICTS=	par-[0-9]*
 
+NO_STAGE=	yes
 MAKEFILE=	Makefile.Linux
 MAKE_ARGS=	CC="${CC}"
 
