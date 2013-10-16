@@ -1,5 +1,4 @@
-# Created by:Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Multiple/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: misc/p5-Geo-Coder-Multiple/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Geo-Coder-Multiple
 PORTVERSION=	0.60
@@ -19,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Geo::Coder::Multiple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
