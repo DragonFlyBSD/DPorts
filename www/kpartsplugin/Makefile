@@ -1,4 +1,4 @@
-# $FreeBSD: www/kpartsplugin/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/kpartsplugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	kpartsplugin
 DISTVERSION=	0.0-${PORTDATE}
@@ -22,6 +22,7 @@ USE_WEBPLUGINS=	native
 WEBPLUGINS_NAME=	# empty
 WEBPLUGINS_FILES=	lib${PORTNAME}.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/firefox/Makefile.webplugins"
 .include <bsd.port.post.mk>
