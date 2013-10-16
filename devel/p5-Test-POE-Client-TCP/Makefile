@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-POE-Client-TCP/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Test-POE-Client-TCP/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-POE-Client-TCP
 PORTVERSION=	1.12
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Test::POE::Client::TCP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
