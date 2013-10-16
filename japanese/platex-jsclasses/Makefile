@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/platex-jsclasses/Makefile 319148 2013-05-27 01:56:56Z hrs $
+# $FreeBSD: japanese/platex-jsclasses/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	jsclasses
 PORTVERSION=	1.0.20110510
@@ -40,6 +40,7 @@ TFM_FILES=	jis-v.tfm jis.tfm jisg-v.tfm jisg.tfm \
 PLDIR=		${TEXMFDIR}/fonts/source/jis
 PL_FILES=	jis-v.pl jis.pl jisn-v.pl jisn.pl
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${CLASSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${CLASS_FILES} ${PREFIX}/${CLASSDIR}
