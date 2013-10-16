@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: archivers/p5-IO-Compress-Lzma/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: archivers/p5-IO-Compress-Lzma/Makefile 328784 2013-09-30 12:25:53Z sunpoet $
 
 PORTNAME=	IO-Compress-Lzma
 PORTVERSION=	2.062
@@ -23,8 +23,5 @@ TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		IO::Compress::Lzma.3 IO::Compress::Xz.3 \
-		IO::Uncompress::UnLzma.3 IO::Uncompress::UnXz.3
 
 .include <bsd.port.mk>
