@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gimp-manual
-# Date created:		5 June 1998
-# Whom:			Brett Taylor
-#
-# $FreeBSD: ports/graphics/gimp-manual-html/Makefile,v 1.31 2012/11/17 05:58:07 svnexp Exp $
-#
+# Created by: Brett Taylor
+# $FreeBSD: graphics/gimp-manual-html/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	GimpUserManual
 PORTVERSION=	2
@@ -16,6 +12,7 @@ PKGNAMESUFFIX=	-${DOCFORMAT}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The user manual for the GNU Image Manipulation Program (GIMP)
 
+NO_STAGE=	yes
 .if !defined(DOCFORMAT)
 DOCFORMAT=HTML
 .else
