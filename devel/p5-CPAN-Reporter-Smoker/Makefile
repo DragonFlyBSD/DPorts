@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Reporter-Smoker/Makefile 326703 2013-09-08 06:18:53Z az $
+# $FreeBSD: devel/p5-CPAN-Reporter-Smoker/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPAN-Reporter-Smoker
 PORTVERSION=	0.24
@@ -20,4 +20,5 @@ MAN3=		CPAN::Reporter::Smoker.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
