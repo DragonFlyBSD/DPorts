@@ -1,8 +1,5 @@
-# Ports collection makefile for:  pear-Horde_Kolab_Format
-# Date created:			  7 July 2011
-# Whom:				  Martin Matuska <mm@FreeBSD.org>
-#
-# $FreeBSD: ports/net/pear-Horde_Kolab_Session/Makefile,v 1.6 2012/12/12 15:19:51 svnexp Exp $
+# Created by: Martin Matuska <mm@FreeBSD.org>
+# $FreeBSD: net/pear-Horde_Kolab_Session/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Horde_Kolab_Session
 PORTVERSION=	2.0.1
@@ -17,6 +14,7 @@ USE_HORDE_RUN=	Horde_Exception
 USE_HORDE_RUN+=	Horde_Kolab_Server \
 		Horde_Log
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
