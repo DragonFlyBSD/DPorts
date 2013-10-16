@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: misc/p5-Geo-Postcodes-DK/Makefile 324167 2013-08-02 17:11:34Z az $
+# $FreeBSD: misc/p5-Geo-Postcodes-DK/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Geo-Postcodes-DK
 PORTVERSION=	0.32
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Geo::Postcodes::DK.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
