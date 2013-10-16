@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-bioruby
-# Date created:		20 June, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: devel/rubygem-bioruby/Makefile 322068 2013-06-29 22:10:31Z swills $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/rubygem-bioruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	bioruby
 PORTVERSION=	1.4.3.0001
@@ -25,4 +21,5 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 GEM_NAME=	${DISTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
