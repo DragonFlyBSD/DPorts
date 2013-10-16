@@ -1,9 +1,5 @@
-# New ports collection makefile for:	rubygem-dm-postgres-adapter
-# Date created:		02/10/2011
-# Whom:			stas
-#
-# $FreeBSD: ports/databases/rubygem-dm-postgres-adapter/Makefile,v 1.5 2012/11/17 05:55:24 svnexp Exp $
-#
+# Created by: stas
+# $FreeBSD: databases/rubygem-dm-postgres-adapter/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	dm-postgres-adapter
 PORTVERSION=	1.2.0
@@ -20,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
