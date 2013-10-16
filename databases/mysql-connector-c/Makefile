@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: databases/mysql-connector-c/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: databases/mysql-connector-c/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mysql-connector-c
 PORTVERSION=	6.0.2
@@ -18,4 +18,5 @@ USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
