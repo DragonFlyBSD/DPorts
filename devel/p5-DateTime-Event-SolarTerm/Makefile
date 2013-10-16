@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-DateTime-Event-SolarTerm/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-DateTime-Event-SolarTerm/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Event-SolarTerm
 PORTVERSION=	0.05
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Event::SolarTerm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
