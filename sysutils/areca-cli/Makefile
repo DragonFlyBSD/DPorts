@@ -1,5 +1,5 @@
 # Created by: Rink Springer <rink@FreeBSD.org>
-# $FreeBSD: sysutils/areca-cli/Makefile 317611 2013-05-07 14:09:04Z ehaupt $
+# $FreeBSD: sysutils/areca-cli/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	areca-cli
 DISTVERSION=	${CLI_VER}.${CLI_REV}
@@ -27,6 +27,7 @@ SUB_FILES+=	${PERIODICSCRIPT}
 
 WRKSRC=		${WRKDIR}/V${CLI_VER}_${CLI_REV}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
