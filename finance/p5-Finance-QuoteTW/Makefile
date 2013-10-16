@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-Finance-QuoteTW
 # Created by: chinsan
-# $FreeBSD: finance/p5-Finance-QuoteTW/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Finance-QuoteTW/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Finance-QuoteTW
 PORTVERSION=	0.09
@@ -35,4 +34,5 @@ MAN3=		Finance::QuoteTW.3 \
 		Finance::QuoteTW::Schroders.3 \
 		Finance::QuoteTW::Tisc.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
