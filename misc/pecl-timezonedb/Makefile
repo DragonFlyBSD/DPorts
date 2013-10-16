@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: misc/pecl-timezonedb/Makefile 322910 2013-07-13 11:44:48Z sunpoet $
+# $FreeBSD: misc/pecl-timezonedb/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	timezonedb
 DISTVERSION=	2013.4
@@ -18,4 +18,5 @@ CONFIGURE_ARGS=	--enable-timezonedb
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
