@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: misc/explosions/Makefile 324054 2013-07-31 14:36:21Z az $
+# $FreeBSD: misc/explosions/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	explosions
 PORTVERSION=	0.2005.07.31
@@ -16,6 +16,7 @@ USE_GMAKE=	yes
 USES=		perl5
 USE_PERL5=	build
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
