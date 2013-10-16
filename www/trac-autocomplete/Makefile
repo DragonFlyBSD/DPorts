@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: ports/www/trac-autocomplete/Makefile,v 1.9 2012/12/26 11:04:15 svnexp Exp $
+# $FreeBSD: www/trac-autocomplete/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	autocomplete
 PORTVERSION=	0.4.1
@@ -23,6 +23,7 @@ WRKSRC=		${WRKDIR}/autocompleteusersplugin/0.11
 REL=		8451
 
 # Target to generate packaging list
+NO_STAGE=	yes
 plist:
 	@${FIND} ${PYTHON_SITELIBDIR}/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py${PYTHON_VER}.egg -type f | ${SED} -e's|^${PYTHON_SITELIBDIR}/|%%PYTHON_SITELIBDIR%%/|;s|/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py[[:digit:]\.]*.egg/|/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py%%PYTHON_VER%%.egg/|'
 	@${FIND} ${PYTHON_SITELIBDIR}/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py${PYTHON_VER}.egg -type d -mindepth 1 | ${SORT} -r | ${SED} -e's|^${PYTHON_SITELIBDIR}/|@dirrm %%PYTHON_SITELIBDIR%%/|;s|/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py[[:digit:]\.]*.egg/|/${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py%%PYTHON_VER%%.egg/|'
