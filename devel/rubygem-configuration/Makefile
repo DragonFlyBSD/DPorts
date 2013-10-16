@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-configuration/Makefile 321807 2013-06-26 18:43:34Z swills $
+# $FreeBSD: devel/rubygem-configuration/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	configuration
 PORTVERSION=	1.3.2
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
