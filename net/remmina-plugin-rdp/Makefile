@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/remmina-plugin-rdp/Makefile 321344 2013-06-20 01:59:25Z fluffy $
+# $FreeBSD: net/remmina-plugin-rdp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PKGNAMESUFFIX=	-rdp
 
@@ -10,4 +10,5 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 
 MASTERDIR=	${.CURDIR}/../remmina-plugins
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
