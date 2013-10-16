@@ -1,8 +1,5 @@
-# New ports collection makefile for:	drupal6-geshifilter
-# Date created:	                        Mar 20 2009
-# Whom:                                 Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-#
-# $FreeBSD: ports/www/drupal6-geshifilter/Makefile,v 1.6 2012/11/17 06:02:31 svnexp Exp $
+# Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
+# $FreeBSD: www/drupal6-geshifilter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	geshifilter
 DISTVERSION=	6.x-1.2
@@ -34,6 +31,7 @@ MODULE_FILES=	geshi-extra/drupal5.php geshi-extra/drupal6.php \
 DOC_DIRS=	geshi-extra
 DOC_FILES=	LICENSE.txt README.txt geshi-extra/README
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e's|%%LOCALBASE%%|${LOCALBASE}|g' \
 	    ${WRKSRC}/geshifilter.inc
