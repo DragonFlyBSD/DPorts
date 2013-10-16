@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Traceroute-PurePerl
-# Date created:				April 01 2010
-# Whom:					jupengfei <jupengfei@gmail.com>
-#
-# $FreeBSD: net/p5-Net-Traceroute-PurePerl/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: jupengfei <jupengfei@gmail.com>
+# $FreeBSD: net/p5-Net-Traceroute-PurePerl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Traceroute-PurePerl
 PORTVERSION=	0.10
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Traceroute::PurePerl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
