@@ -1,9 +1,5 @@
-# New ports collection makefile for:    trac-OhlohWidgetsMacro
-# Date created:                         28 September 2010
-# Whom:                                 Douglas Thrift
-#
-# $FreeBSD: ports/www/trac-OhlohWidgetsMacro/Makefile,v 1.2 2012/11/17 06:03:07 svnexp Exp $
-#
+# Created by: Douglas Thrift
+# $FreeBSD: www/trac-OhlohWidgetsMacro/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	OhlohWidgetsMacro
 PORTVERSION=	0.2
@@ -22,4 +18,5 @@ LICENSE=	MIT
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
