@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/postgresql90-pgtcl/Makefile,v 1.3 2012/11/17 05:55:20 svnexp Exp $
+# $FreeBSD: databases/postgresql90-pgtcl/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 WANT_PGSQL_VER=	90
 PKGNAMESUFFIX=	-postgresql${WANT_PGSQL_VER}
@@ -7,4 +7,5 @@ CONFLICTS=	pgtcl-[0-9]* pgtcl-postgresql9[12]-[0-9]*
 
 MASTERDIR=	${.CURDIR}/../pgtcl
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
