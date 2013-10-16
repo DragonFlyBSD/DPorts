@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Yahoo-Search/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: www/p5-Yahoo-Search/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Yahoo-Search
 PORTVERSION=	1.11.3
@@ -24,4 +24,5 @@ MAN3=	Yahoo::Search.3 \
 	Yahoo::Search::Result.3 \
 	Yahoo::Search::XML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
