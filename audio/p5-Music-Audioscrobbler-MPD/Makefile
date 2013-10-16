@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/p5-Music-Audioscrobbler-MPD/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/p5-Music-Audioscrobbler-MPD/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Music-Audioscrobbler-MPD
 PORTVERSION=	0.13
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	p5-Proc-Daemon>=0:${PORTSDIR}/devel/p5-Proc-Daemon \
 		p5-Music-Audioscrobbler-Submit>=0.05:${PORTSDIR}/audio/p5-Music-Audioscrobbler-Submit
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN1=	musicmpdscrobble.1
