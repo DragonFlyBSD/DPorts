@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Sys-Hostname-FQDN
-# Date created:		2006-07-23
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: sysutils/p5-Sys-Hostname-FQDN/Makefile 326530 2013-09-06 17:55:21Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: sysutils/p5-Sys-Hostname-FQDN/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Sys-Hostname-FQDN
 PORTVERSION=	0.11
@@ -21,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Sys::Hostname::FQDN.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
