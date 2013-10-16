@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-python-registry/Makefile 324837 2013-08-17 08:49:49Z antoine $
+# $FreeBSD: security/py-python-registry/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	python-registry
 PORTVERSION=	0.2.7
@@ -26,6 +26,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
