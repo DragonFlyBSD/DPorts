@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-deliciousapi
-# Date created:		2010-02-10
-# Whom:			Sofian Brabez <sbrabez@gmail.com>
-#
-# $FreeBSD: ports/devel/py-deliciousapi/Makefile,v 1.10 2012/11/17 05:56:46 svnexp Exp $
-#
+# Created by: Sofian Brabez <sbrabez@gmail.com>
+# $FreeBSD: devel/py-deliciousapi/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	deliciousapi
 PORTVERSION=	1.6.7
@@ -30,4 +26,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/${PORTNAME}.py \
 		%%PYTHON_SITELIBDIR%%/${PORTNAME}.pyc \
 		%%PYTHON_SITELIBDIR%%/${PORTNAME}.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
