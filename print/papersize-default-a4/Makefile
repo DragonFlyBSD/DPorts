@@ -1,9 +1,5 @@
-# New ports collection makefile for:	papersize-default-a4
-# Date created:		March 2, 2012
-# Whom:			hrs
-#
-# $FreeBSD: ports/print/papersize-default-a4/Makefile,v 1.2 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: hrs
+# $FreeBSD: print/papersize-default-a4/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	papersize-default
 PORTVERSION=	0.0.20120302
@@ -28,6 +24,7 @@ CONFLICTS+=	papersize-default-${P}-[0-9]*
 
 PLIST_FILES=	etc/papersize
 
+NO_STAGE=	yes
 do-install:
 	${LN} -s -f papersize.${DEFAULTPAPERSIZE:tl} ${PREFIX}/etc/papersize
 
