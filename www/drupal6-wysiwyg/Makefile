@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-wysiwyg/Makefile 313224 2013-03-02 11:20:15Z miwi $
+# $FreeBSD: www/drupal6-wysiwyg/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wysiwyg
 DISTVERSION=	6.x-2.0
@@ -67,6 +67,7 @@ MODULE_DIRS=	editors/css editors/js editors plugins/break/images \
 
 DOC_FILES=	CHANGELOG.txt README.txt LICENSE.txt
 
+NO_STAGE=	yes
 post-install:
 	${LN} -s ${PREFIX}/${TINYMCEDIR} ${PREFIX}/${DRUPAL_MODDIR}
 
