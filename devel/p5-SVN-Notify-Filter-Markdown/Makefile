@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Notify-Filter-Markdown/Makefile 326784 2013-09-09 08:21:32Z az $
+# $FreeBSD: devel/p5-SVN-Notify-Filter-Markdown/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Notify-Filter-Markdown
 PORTVERSION=	0.05
@@ -22,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=		SVN::Notify::Filter::Markdown.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
