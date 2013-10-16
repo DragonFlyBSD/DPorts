@@ -1,4 +1,4 @@
-# $FreeBSD: games/lolcat/Makefile 317514 2013-05-06 13:40:45Z ehaupt $
+# $FreeBSD: games/lolcat/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lolcat
 PORTREVISION=	1
@@ -18,6 +18,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 post-install:
 	${ECHO_CMD} "bin/lolcat" >> ${TMPPLIST}
 
