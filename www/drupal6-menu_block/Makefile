@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-menu_block/Makefile 313233 2013-03-02 14:37:20Z miwi $
+# $FreeBSD: www/drupal6-menu_block/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	menu_block
 DISTVERSION=	6.x-2.4
@@ -21,4 +21,5 @@ MODULE_FILES=	menu-block-wrapper.tpl.php menu_block.admin.inc menu_block.book.in
 MODULE_DIRS=	plugins/content_types/menu_tree plugins/content_types plugins
 DOC_FILES=	CHANGELOG.txt README.txt LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
