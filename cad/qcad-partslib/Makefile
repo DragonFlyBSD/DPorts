@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qcad-partslib
-# Date created:		28 Mar 2004
-# Whom:			Michael Reifenberger <mr@FreeBSD.org>
-#
-# $FreeBSD: ports/cad/qcad-partslib/Makefile,v 1.14 2012/11/17 05:54:54 svnexp Exp $
-#
+# Created by: Michael Reifenberger <mr@FreeBSD.org>
+# $FreeBSD: cad/qcad-partslib/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	qcad-partslib
 PORTVERSION=	2.1.2.8.1
@@ -21,6 +17,7 @@ DATADIR=	share/qcad/library
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${DATADIR}
 	${TAR} -C ${PREFIX}/${DATADIR} --exclude CVS --unlink --strip-components 1	\
