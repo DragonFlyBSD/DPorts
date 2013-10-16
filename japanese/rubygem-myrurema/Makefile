@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: japanese/rubygem-myrurema/Makefile 322098 2013-06-30 19:23:35Z swills $
+# $FreeBSD: japanese/rubygem-myrurema/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	myrurema
 PORTVERSION=	0.3.4
@@ -17,6 +17,7 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rurema
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}rubygem-
