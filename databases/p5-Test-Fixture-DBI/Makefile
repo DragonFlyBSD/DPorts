@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Test-Fixture-DBI/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-Test-Fixture-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Test-Fixture-DBI
 PORTVERSION=	0.07
@@ -29,4 +29,5 @@ MAN3=	Test::Fixture::DBI.3 \
 	Test::Fixture::DBI::Util::SQLite.3 \
 	Test::Fixture::DBI::Util::mysql.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
