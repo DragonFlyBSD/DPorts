@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-LWP-Protocol-PSGI/Makefile 324543 2013-08-10 15:29:12Z kuriyama $
+# $FreeBSD: www/p5-LWP-Protocol-PSGI/Makefile 328808 2013-09-30 15:16:23Z sunpoet $
 
 PORTNAME=	LWP-Protocol-PSGI
 PORTVERSION=	0.06
@@ -13,13 +13,13 @@ RUN_DEPENDS=	\
 	p5-Guard>0:${PORTSDIR}/devel/p5-Guard \
 	p5-Plack>0:${PORTSDIR}/www/p5-Plack \
 	p5-libwww>=5:${PORTSDIR}/www/p5-libwww
-BUILD_DEPENDS=	${RUN_DEPENDS} \
-	p5-Module-Build-Tiny>0:${PORTSDIR}/devel/p5-Module-Build-Tiny
+BUILD_DEPENDS=	${RUN_DEPENDS}
 TEST_DEPENDS=	\
 	p5-LWP-Protocol-https>0:${PORTSDIR}/www/p5-LWP-Protocol-https
 
+NO_STAGE=	yes
 USES=	perl5
-USE_PERL5=	modbuild
+USE_PERL5=	modbuildtiny
 
 MAN3=	LWP::Protocol::PSGI.3
 
