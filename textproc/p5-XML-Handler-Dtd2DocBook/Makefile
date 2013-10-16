@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-XML-Handler-Dtd2DocBook/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Handler-Dtd2DocBook/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Handler-Dtd2DocBook
 PORTVERSION=	0.41
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN1=		dtd2db.pl.1
 MAN3=		XML::Handler::Dtd2DocBook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
