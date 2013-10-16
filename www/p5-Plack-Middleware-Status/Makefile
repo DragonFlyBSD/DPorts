@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Middleware::Status
-# Date created:		01 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Middleware-Status/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# $FreeBSD: www/p5-Plack-Middleware-Status/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Status
 PORTVERSION=	1.101150
@@ -24,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Middleware::Status.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
