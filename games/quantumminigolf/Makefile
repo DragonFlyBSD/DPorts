@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/quantumminigolf/Makefile 314283 2013-03-15 09:25:50Z amdmi3 $
+# $FreeBSD: games/quantumminigolf/Makefile 328744 2013-09-29 21:54:42Z amdmi3 $
 
 PORTNAME=	quantumminigolf
 PORTVERSION=	1.1.1
@@ -11,13 +11,15 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}.src
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A computer game visualizing quantum mechanics
 
-LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float \
-		fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libfftw3f.so:${PORTSDIR}/math/fftw3-float \
+		libfftw3.so:${PORTSDIR}/math/fftw3
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl ttf
 
+PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README THANKS
+PORTDATA=	*
 
 DESKTOP_ENTRIES="Quantum Minigolf" \
 		"A game of minigolf where the ball obeys the laws of quantum mechanics" \
@@ -45,17 +47,18 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/QuantumSimulator.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/quantumminigolf ${PREFIX}/bin
-	${MKDIR} ${DATADIR}/gfx ${DATADIR}/fonts ${DATADIR}/tracks
-	${INSTALL_DATA} ${WRKSRC}/gfx/*.bmp ${DATADIR}/gfx
-	${INSTALL_DATA} ${WRKSRC}/fonts/*.ttf ${DATADIR}/fonts
+	${INSTALL_PROGRAM} ${WRKSRC}/quantumminigolf ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DATADIR}/gfx ${STAGEDIR}${DATADIR}/fonts \
+		${STAGEDIR}${DATADIR}/tracks
+	${INSTALL_DATA} ${WRKSRC}/gfx/*.bmp ${STAGEDIR}${DATADIR}/gfx
+	${INSTALL_DATA} ${WRKSRC}/fonts/*.ttf ${STAGEDIR}${DATADIR}/fonts
 	${INSTALL_DATA} ${WRKSRC}/tracks/*.bmp ${WRKSRC}/tracks/*.cfg \
-		${DATADIR}/tracks
+		${STAGEDIR}${DATADIR}/tracks
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
