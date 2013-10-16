@@ -1,5 +1,4 @@
-# Created by: Mark Linimon <linimon@FreeBSD.org>
-# $FreeBSD: ports-mgmt/port-authoring-tools/Makefile 314002 2013-03-12 21:56:11Z jgh $
+# $FreeBSD: ports-mgmt/port-authoring-tools/Makefile 328338 2013-09-26 07:10:09Z jgh $
 
 PORTNAME=	port-authoring-tools
 PORTVERSION=	1.0
@@ -19,6 +18,7 @@ RUN_DEPENDS=	\
 		${LOCALBASE}/bin/port:${PORTSDIR}/ports-mgmt/porttools
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 
