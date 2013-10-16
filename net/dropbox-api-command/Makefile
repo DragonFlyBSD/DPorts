@@ -1,5 +1,5 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: net/dropbox-api-command/Makefile 324423 2013-08-09 09:18:13Z culot $
+# $FreeBSD: net/dropbox-api-command/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	dropbox-api-command
 PORTVERSION=	1.13
@@ -35,6 +35,7 @@ USE_PERL5=	configure
 MAN1=	dropbox-api.1
 PLIST_FILES=	bin/dropbox-api bin/upload-to-dropbox
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|g' ${WRKSRC}/upload-to-dropbox
 	${TAIL} +3 ${WRKSRC}/lib/App/dropboxapi.pm >> ${WRKSRC}/dropbox-api
