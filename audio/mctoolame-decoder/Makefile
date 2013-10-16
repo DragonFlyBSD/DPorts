@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/mctoolame-decoder/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/mctoolame-decoder/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mctoolame
 PORTVERSION=	0.1.a
@@ -13,6 +13,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MPEG Layer II audio decoder with multi-channel support
 
+NO_STAGE=	yes
 USES=		gmake
 ALL_TARGET=	#
 MAKE_ARGS=	CC="${CC}" OPTIM="${CFLAGS}"
