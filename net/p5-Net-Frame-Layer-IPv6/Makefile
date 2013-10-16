@@ -1,5 +1,5 @@
 # Created by: Mars G Miro <spry@anarchy.in.the.ph>
-# $FreeBSD: net/p5-Net-Frame-Layer-IPv6/Makefile 326481 2013-09-06 09:21:19Z az $
+# $FreeBSD: net/p5-Net-Frame-Layer-IPv6/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Frame-Layer-IPv6
 PORTVERSION=	1.05
@@ -26,4 +26,5 @@ MAN3=		Net::Frame::Layer::IPv6.3 \
 		Net::Frame::Layer::IPv6::Option.3 \
 		Net::Frame::Layer::IPv6::Destination.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
