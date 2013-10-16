@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: dns/p5-Net-DNS-TestNS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: dns/p5-Net-DNS-TestNS/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Net-DNS-TestNS
 PORTVERSION=	1.10
@@ -18,7 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Net::DNS::TestNS.3 Net::DNS::TestNS::DTD.3
 
 .include <bsd.port.mk>
