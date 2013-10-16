@@ -1,9 +1,5 @@
-# Ports collection makefile for:	ezcrypto
-# Date created:				15 April 2008
-# Whom:					Steven Kreuzer
-#
-# $FreeBSD: security/rubygem-ezcrypto/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Steven Kreuzer
+# $FreeBSD: security/rubygem-ezcrypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	ezcrypto
 PORTVERSION=	0.7.2
@@ -17,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
