@@ -1,5 +1,5 @@
 # Created by: kappa@FreeBSD.org.ua
-# $FreeBSD: lang/p5-JavaScript-SpiderMonkey/Makefile 325466 2013-08-27 16:24:56Z sunpoet $
+# $FreeBSD: lang/p5-JavaScript-SpiderMonkey/Makefile 328843 2013-09-30 18:43:01Z sunpoet $
 
 PORTNAME=	JavaScript-SpiderMonkey
 PORTVERSION=	0.21
@@ -11,14 +11,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to Mozilla JavaScript implementation
 
-LIB_DEPENDS=	js.1:${PORTSDIR}/lang/spidermonkey17
-
+LIB_DEPENDS=	libjs.so:${PORTSDIR}/lang/spidermonkey17
 TEST_DEPENDS=	p5-Log-Log4perl>=0:${PORTSDIR}/devel/p5-Log-Log4perl
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		JavaScript::SpiderMonkey.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|libjs.a|libjs.so|' ${WRKSRC}/Makefile.PL
