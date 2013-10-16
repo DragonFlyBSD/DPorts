@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-EC2/Makefile 326526 2013-09-06 17:02:34Z az $
+# $FreeBSD: net/p5-Net-Amazon-EC2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Amazon-EC2
 PORTVERSION=	0.23
@@ -69,6 +69,7 @@ MAN3=		Net::Amazon::EC2.3 \
 		Net::Amazon::EC2::UserIdGroupPair.3 \
 		Net::Amazon::EC2::Volume.3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
