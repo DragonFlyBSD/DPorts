@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xfwm4-artwork
-# Date created:				3 August 2003
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: ports/misc/xfce4-artwork/Makefile,v 1.16 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: misc/xfce4-artwork/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xfce4-artwork
 PORTVERSION=	0.0.4
@@ -19,4 +15,5 @@ RUN_DEPENDS=	xfdesktop:${PORTSDIR}/x11-wm/xfce4-desktop
 
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
