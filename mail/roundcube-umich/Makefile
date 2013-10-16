@@ -1,9 +1,5 @@
-# New ports collection makefile for:	umich
-# Date created:				Thu 13 Aug 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: ports/mail/roundcube-umich/Makefile,v 1.2 2012/11/17 05:59:13 svnexp Exp $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: mail/roundcube-umich/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	umich
 PORTVERSION=	20090813
@@ -28,6 +24,7 @@ x-generate-plist: build
 	${FIND} . -type d | ${SORT} -r | ${SED} \
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
+NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -delete
 
