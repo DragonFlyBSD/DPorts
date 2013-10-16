@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: mail/roundcube-login_info/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: mail/roundcube-login_info/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	login_info
 DISTVERSION=	1.2
@@ -30,6 +30,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO} "Installing in ${WWWDIR}"
 	${MKDIR} ${WWWDIR}
