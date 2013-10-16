@@ -1,5 +1,5 @@
 # Created by: Jarrod Sayers <jarrod@netleader.com.au>
-# $FreeBSD: net-mgmt/nagios-devel/Makefile 325905 2013-09-01 19:12:18Z az $
+# $FreeBSD: net-mgmt/nagios-devel/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagios
 DISTVERSIONPREFIX=HEAD-
@@ -46,6 +46,7 @@ NAGIOSGID=	${NAGIOSUID}
 NAGIOSHTMURL?=	/nagios
 NAGIOSCGIURL?=	${NAGIOSHTMURL}/cgi-bin
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -fPIC
