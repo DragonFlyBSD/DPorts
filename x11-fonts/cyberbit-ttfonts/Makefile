@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: x11-fonts/cyberbit-ttfonts/Makefile 321898 2013-06-27 18:31:06Z antoine $
+# $FreeBSD: x11-fonts/cyberbit-ttfonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	cyberbit-ttfonts
 PORTVERSION=	2.0.20050220
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
