@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-tags/Makefile 313115 2013-02-28 17:06:36Z brooks $
+# $FreeBSD: www/trac-tags/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tags
 DISTVERSION=	0.7.r${SVN_REV}
@@ -22,6 +22,7 @@ PYDISTUTILS_PKGNAME=	TracTags
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/\.r.*/dev/}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(SVN_REV)
