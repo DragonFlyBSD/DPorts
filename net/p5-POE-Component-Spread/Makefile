@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net/p5-POE-Component-Spread/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-POE-Component-Spread/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Spread
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		POE::Component::Spread.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
