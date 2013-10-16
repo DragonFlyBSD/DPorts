@@ -1,7 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-#
-# $FreeBSD: sysutils/rsyslog6-rfc3195/Makefile 316355 2013-04-23 14:20:25Z bapt $
-#
+# $FreeBSD: sysutils/rsyslog6-rfc3195/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 COMMENT=	RFC3195 input support for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6
@@ -16,6 +14,7 @@ CONFIGURE_ARGS+=--enable-rfc3195
 PLIST_FILES+=	lib/rsyslog/im3195.la \
 		lib/rsyslog/im3195.so
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_PROGRAM} \
 		${WRKSRC}/plugins/im3195/.libs/im3195.so ${PREFIX}/lib/rsyslog
