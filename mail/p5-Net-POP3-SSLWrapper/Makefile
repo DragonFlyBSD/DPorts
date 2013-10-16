@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: mail/p5-Net-POP3-SSLWrapper/Makefile 326271 2013-09-04 12:28:16Z az $
+# $FreeBSD: mail/p5-Net-POP3-SSLWrapper/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-POP3-SSLWrapper
 PORTVERSION=	0.06
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::POP3::SSLWrapper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
