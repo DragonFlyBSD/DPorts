@@ -1,7 +1,5 @@
-# New ports collection makefile for:	resume-extensions
-# Date created:                		August 03 2004
-# Whom:                        		Aaron Straup Cope
-# $FreeBSD: ports/textproc/resume-extensions/Makefile,v 1.6 2012/11/17 06:02:19 svnexp Exp $
+# Created by: Aaron Straup Cope
+# $FreeBSD: textproc/resume-extensions/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	resume-extensions
 PORTVERSION=	0.5
@@ -19,6 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/xsl/resume:${PORTSDIR}/textproc/resume \
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local/share|${LOCALBASE}/share|' \
 		${WRKSRC}/lib/extrefs.xsl
