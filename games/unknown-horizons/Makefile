@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: games/unknown-horizons/Makefile 317704 2013-05-08 18:34:47Z pawel $
+# $FreeBSD: games/unknown-horizons/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=		unknown-horizons
 PORTVERSION=		2013.2
@@ -29,6 +29,7 @@ PYDISTUTILS_PKGNAME=	UnknownHorizons
 
 MAN6=			unknown-horizons.6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == i386
