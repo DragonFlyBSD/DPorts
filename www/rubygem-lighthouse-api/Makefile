@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/rubygem-lighthouse-api/Makefile,v 1.5 2012/11/17 06:03:04 svnexp Exp $
+# $FreeBSD: www/rubygem-lighthouse-api/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	lighthouse-api
 PORTVERSION=	2.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
