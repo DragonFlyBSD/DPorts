@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/net-mgmt/rancid-devel/Makefile,v 1.33 2013/01/09 20:05:04 svnexp Exp $
+# $FreeBSD: net-mgmt/rancid-devel/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	rancid
 PORTVERSION=	2.3.2a10
@@ -15,9 +15,8 @@ BUILD_DEPENDS=	expect:${PORTSDIR}/lang/expect-devel
 RUN_DEPENDS=	expect:${PORTSDIR}/lang/expect-devel \
 		p5-LockFile-Simple>=0:${PORTSDIR}/devel/p5-LockFile-Simple
 
-USE_PERL5=	yes
+USES=		perl5 gmake
 SUB_FILES=	pkg-message
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	\
 		--localstatedir=${PREFIX}/var/${PORTNAME}/ \
@@ -43,6 +42,7 @@ NEWERCONFIG_FILES1=	etc/rancid.conf
 NEWERCONFIG_FILES2=	etc/lg.conf
 NEWCONFIG_FILES=	rancid.conf lg.conf
 
+NO_STAGE=	yes
 pre-everything::
 	@ ${ECHO} "Make sure your rancid repository is quiet before upgrading; disable rancid cron jobs"
 
