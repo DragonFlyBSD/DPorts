@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/xapian-bindings/Makefile 327309 2013-09-14 17:24:48Z sunpoet $
+# $FreeBSD: databases/xapian-bindings/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	xapian-bindings
 PORTVERSION=	1.2.15
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--datarootdir=${DATADIR} --docdir=${DOCSDIR} \
 		--without-csharp --without-java --without-tcl
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLUA}
