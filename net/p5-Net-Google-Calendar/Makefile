@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Google-Calendar
-# Date created:		2006-05-15
-# Whom:			Yi-Hsuan Hsin <mhsin@mhsin.org>
-#
-# $FreeBSD: net/p5-Net-Google-Calendar/Makefile 326522 2013-09-06 16:11:30Z az $
-#
+# Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
+# $FreeBSD: net/p5-Net-Google-Calendar/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Google-Calendar
 PORTVERSION=	1.01
@@ -30,4 +26,5 @@ MAN3=		Net::Google::Calendar.3 Net::Google::Calendar::Base.3 \
 		Net::Google::Calendar::Entry.3 Net::Google::Calendar::FeedLink.3 \
 		Net::Google::Calendar::Person.3 Net::Google::Calendar::WebContent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
