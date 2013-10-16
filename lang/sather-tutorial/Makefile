@@ -1,9 +1,5 @@
-# New ports collection makefile for:		sather-tutorial
-# Date created:			5 August 2006
-# Whom:				Stanislav Sedov <ssedov@mbsd.msk.ru>
-#
-# $FreeBSD: ports/lang/sather-tutorial/Makefile,v 1.6 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
+# $FreeBSD: lang/sather-tutorial/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	tutorial
 PORTVERSION=	000328
@@ -21,6 +17,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 DOCSDIR=	${PREFIX}/share/doc/sather/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DOCSDIR}
 	@${TAR} -xzf ${DISTDIR}/${DISTFILES} -C ${DOCSDIR}
