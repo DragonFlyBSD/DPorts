@@ -1,5 +1,5 @@
 # Created by: David Romano <unobe@cpan.org>
-# $FreeBSD: devel/libparserutils/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: devel/libparserutils/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libparserutils
 PORTVERSION=	0.1.1
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 OPTIONS_DEFINE=	ICONV STATIC TEST DOXYGEN
 OPTIONS_DEFAULT=	ICONV STATIC TEST DOXYGEN
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONV}
