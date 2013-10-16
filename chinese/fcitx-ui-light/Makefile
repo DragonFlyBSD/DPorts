@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-ui-light/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: chinese/fcitx-ui-light/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	fcitx-ui-light
 PORTVERSION=	0.1.3
@@ -21,6 +21,7 @@ USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
