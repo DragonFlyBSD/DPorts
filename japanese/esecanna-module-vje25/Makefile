@@ -1,9 +1,5 @@
-# New ports collection Makefile for: esecanna module for VJE-Delta 2.5
-# Date created:		24 February 2000
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: japanese/esecanna-module-vje25/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: japanese/esecanna-module-vje25/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	esecanna-module-vje25
 PORTVERSION=	0.14.6
@@ -24,6 +20,7 @@ USE_GMAKE=	yes
 
 DIST_SUBDIR=    esecanna
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/esecanna
