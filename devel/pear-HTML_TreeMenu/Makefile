@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-HTML_TreeMenu/Makefile 314223 2013-03-15 02:19:49Z miwi $
+# $FreeBSD: devel/pear-HTML_TreeMenu/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_TreeMenu
 PORTVERSION=	1.2.2
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
