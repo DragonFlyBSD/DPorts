@@ -1,5 +1,5 @@
 # Created by: Piet Delport <pjd@303.za.net>
-# $FreeBSD: databases/mrtg-mysql-load/Makefile 324191 2013-08-03 13:44:00Z mat $
+# $FreeBSD: databases/mrtg-mysql-load/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	mrtg-mysql-load
 PORTVERSION=	1.02
@@ -23,6 +23,7 @@ MAN1=		${PORTNAME}.1
 PLIST_FILES=	bin/mrtg-mysql-load etc/mrtg/mrtg.cfg-mysql-load.example \
 		etc/mrtg/mysql-load-cfg.example
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PERL%%|${PERL}|' ${WRKSRC}/${PORTNAME}
 
