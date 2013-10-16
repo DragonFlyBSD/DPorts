@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/mod_hosts_access/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_hosts_access/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_hosts_access
 PORTVERSION=	1.1.0
@@ -17,4 +17,5 @@ AP_GENPLIST=	yes
 
 AP_LIB+=	${LOCALBASE}/lib -lwrap
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
