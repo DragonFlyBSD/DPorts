@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mail/p5-Net-IMAP-Server
-# Date created:				December 18, 2009
-# Whom:					Wen Heping <wen@FreeBSD.org>
-#
-# $FreeBSD: mail/p5-Net-IMAP-Server/Makefile 326265 2013-09-04 09:48:54Z az $
-#
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: mail/p5-Net-IMAP-Server/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-IMAP-Server
 PORTVERSION=	1.34
@@ -38,4 +34,5 @@ MAN3=	Net::IMAP::Server.3 \
 	Net::IMAP::Server::Mailbox.3 \
 	Net::IMAP::Server::Message.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
