@@ -1,5 +1,5 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: devel/py-mongoengine/Makefile 326740 2013-09-08 15:03:44Z wg $
+# $FreeBSD: devel/py-mongoengine/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mongoengine
 PORTVERSION=	0.8.4
@@ -18,6 +18,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|classifiers=CLASSIFIERS,|classifiers=CLASSIFIERS,zip_safe=False,|' \
 		${WRKSRC}/setup.py
