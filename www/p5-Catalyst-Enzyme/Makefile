@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Enzyme/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Enzyme/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Enzyme
 PORTVERSION=	0.11
@@ -44,4 +44,5 @@ MAN3=	Catalyst::Enzyme.3 \
 	Catalyst::Helper::Model::Enzyme::CDBI.3 \
 	Catalyst::Helper::View::Enzyme::TT.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
