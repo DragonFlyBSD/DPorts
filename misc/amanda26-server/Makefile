@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda26-server/Makefile 327278 2013-09-14 12:04:18Z az $
+# $FreeBSD: misc/amanda26-server/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	amanda
 PORTVERSION=	2.6.1p2
@@ -64,6 +64,7 @@ OPTIONS_DEFINE+=	ZFSCOMP
 ZFSCOMP_DESC=	Accurate estimation of compressed ZFS filesystems
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTAR}
