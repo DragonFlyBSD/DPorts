@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: net-im/py-xmpppy-yahoo/Makefile 318883 2013-05-23 16:10:43Z jgh $
+# $FreeBSD: net-im/py-xmpppy-yahoo/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	yahoo
 PORTVERSION=	0.3.20070314
@@ -34,6 +34,7 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD} BINDIR=${PYTHON_SITELIBDIR}/xmpp/yahoo \
 USE_RC_SUBR=	${UNIQUENAME:S/-/_/}
 DDIR=		${PYTHON_SITELIBDIR}/xmpp/yahoo
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEJABBERD}
