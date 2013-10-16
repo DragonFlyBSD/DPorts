@@ -1,5 +1,5 @@
 # Created by: Anton Yuzhaninov <citrin@citrin.ru>
-# $FreeBSD: net/p5-Queue-Beanstalk/Makefile 325887 2013-09-01 17:21:40Z az $
+# $FreeBSD: net/p5-Queue-Beanstalk/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Queue-Beanstalk
 PORTVERSION=	0.02
@@ -17,4 +17,5 @@ MAN3=	Queue::Beanstalk.3
 PLIST_FILES=	"%%SITE_PERL%%/Queue/Beanstalk.pm"
 PLIST_FILES+=	"@dirrmtry %%SITE_PERL%%/Queue"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
