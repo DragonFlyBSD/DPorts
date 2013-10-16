@@ -1,5 +1,5 @@
 # Created by: Manuel Kasper <mk@neon1.net>
-# $FreeBSD: www/mod_auth_pubtkt/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_auth_pubtkt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_auth_pubtkt
 PORTVERSION=	0.8
@@ -16,4 +16,5 @@ USE_APACHE=	22+
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--apxs=${APXS}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
