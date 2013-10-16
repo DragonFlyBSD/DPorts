@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-photologue/Makefile 318894 2013-05-23 18:00:32Z miwi $
+# $FreeBSD: www/py-django-photologue/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-photologue
 PORTVERSION=	2.6.1
@@ -23,6 +23,7 @@ OPTIONSFILE= ${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=		TAGGING
 OPTIONS_DEFAULT=	TAGGING
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTAGGING}
