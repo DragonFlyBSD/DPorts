@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-XML-ApacheFOP
-# Date created:                        27 Feb 2006
-# Whom:                                Simun Mikecin <numisemis@yahoo.com>
-#
-# $FreeBSD: print/p5-XML-ApacheFOP/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: Simun Mikecin <numisemis@yahoo.com>
+# $FreeBSD: print/p5-XML-ApacheFOP/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	XML-ApacheFOP
 PORTVERSION=	0.03
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::ApacheFOP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
