@@ -1,5 +1,5 @@
 # Created by: whitekid@gmail.com
-# $FreeBSD: www/drupal6-zeropoint/Makefile 313224 2013-03-02 11:20:15Z miwi $
+# $FreeBSD: www/drupal6-zeropoint/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	zeropoint
 DISTVERSION=	6.x-2.3
@@ -142,4 +142,5 @@ MODULE_FILES=	_custom/custom-style.css _custom/headerimg/credits.txt \
 		views-view.tpl.php zeropoint.info
 DOC_FILES=	CHANGELOG.txt LICENSE.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
