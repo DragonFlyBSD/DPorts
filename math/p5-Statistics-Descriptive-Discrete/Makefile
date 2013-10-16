@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Statistics-Descriptive-Discrete
-# Date created:				15 Dec 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: math/p5-Statistics-Descriptive-Discrete/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Statistics-Descriptive-Discrete/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-Descriptive-Discrete
 PORTVERSION=	0.07
@@ -19,4 +15,5 @@ MAN3=	Statistics::Descriptive::Discrete.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
