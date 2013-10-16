@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Date-DayOfWeek/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: devel/p5-Date-DayOfWeek/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date-DayOfWeek
 PORTVERSION=	1.22
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=	Date::DayOfWeek.3 Date::DayOfWeek::Birthday.3 \
 	Date::DayOfWeek::Nails.3 Date::DayOfWeek::Sneeze.3 Date::Doomsday.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
