@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <trociny@FreeBSD.org>
-# $FreeBSD: databases/py-swiftclient/Makefile 324636 2013-08-12 17:40:10Z trociny $
+# $FreeBSD: databases/py-swiftclient/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	swiftclient
 PORTVERSION=	1.5.0
@@ -27,6 +27,7 @@ PLIST_FILES=	bin/swift \
 
 MAN1=		swift.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s/'d2to1', //; s/d2to1=True/pbr=True/" \
 		${WRKSRC}/setup.py
