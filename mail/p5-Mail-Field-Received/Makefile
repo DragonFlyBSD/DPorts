@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Mail-Field-Received
-# Date created:				July 12 2004
-# Whom:	      				Andrea Venturoli <freebsd@netfence.it>
-#
-# $FreeBSD: mail/p5-Mail-Field-Received/Makefile 326272 2013-09-04 13:07:40Z az $
-#
+# Created by: Andrea Venturoli <freebsd@netfence.it>
+# $FreeBSD: mail/p5-Mail-Field-Received/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Field-Received
 PORTVERSION=	0.26
@@ -27,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Field::Received.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
