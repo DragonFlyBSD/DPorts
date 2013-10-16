@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: devel/p5-Algorithm-Numerical-Shuffle/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-Algorithm-Numerical-Shuffle/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Algorithm-Numerical-Shuffle
 PORTVERSION=	2009110301
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Algorithm::Numerical::Shuffle.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
