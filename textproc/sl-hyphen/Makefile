@@ -1,9 +1,4 @@
-# New ports collection makefile for:	sl-hyphen
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/sl-hyphen/Makefile,v 1.7 2012/11/17 06:02:21 svnexp Exp $
-#
+# $FreeBSD: textproc/sl-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.01.27
@@ -27,7 +22,7 @@ PLIST_FILES=	%%DATADIR%%/hyph_sl_SI.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_sl_SI.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_sl_SI.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
