@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/p5-Lingua-ZH-Segment/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: chinese/p5-Lingua-ZH-Segment/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Lingua-ZH-Segment
 PORTVERSION=	0.02
@@ -13,7 +13,5 @@ COMMENT=	Chinese Text Segmentation
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Lingua::ZH::Segment.3
 
 .include <bsd.port.mk>
