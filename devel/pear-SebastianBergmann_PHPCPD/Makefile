@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-SebastianBergmann_PHPCPD/Makefile,v 1.1 2013/01/02 20:44:43 svnexp Exp $
+# $FreeBSD: devel/pear-SebastianBergmann_PHPCPD/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	PHPCPD
 PORTVERSION=	1.4.0
@@ -28,6 +28,7 @@ USE_PHP=	tokenizer
 PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
