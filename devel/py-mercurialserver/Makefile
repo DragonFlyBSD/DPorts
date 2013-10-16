@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: ports/devel/py-mercurialserver/Makefile,v 1.7 2012/12/20 03:05:44 svnexp Exp $
+# $FreeBSD: devel/py-mercurialserver/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	mercurialserver
 PORTVERSION=	1.2.0
@@ -33,6 +33,7 @@ HGSVCONF_FILES=	access.conf \
 		remote-hgrc.d/access.rc \
 		remote-hgrc.d/logging.rc
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 pre-patch:
 	${SED} -I .orig -e "s#/etc/mercurial-server/#${PREFIX}/etc/${PORTNAME}/#" ${WRKSRC}/src/init/dot-mercurial-server
