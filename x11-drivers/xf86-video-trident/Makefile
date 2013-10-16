@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-trident/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-trident/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-trident
 PORTVERSION=	1.3.6
@@ -12,4 +12,5 @@ XORG_CAT=	driver
 USE_XORG=	xf86dgaproto
 MAN4=		trident.4x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
