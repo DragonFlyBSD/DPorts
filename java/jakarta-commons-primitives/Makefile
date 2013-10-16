@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: ports/java/jakarta-commons-primitives/Makefile,v 1.10 2012/12/10 13:24:58 svnexp Exp $
+# $FreeBSD: java/jakarta-commons-primitives/Makefile 327738 2013-09-20 19:48:32Z bapt $
 
 PORTNAME=	commons-primitives
 PORTVERSION=	1.0
@@ -27,6 +27,7 @@ ALL_TARGET+=	javadoc
 PORTDOCS=	LICENSE.txt api
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/target/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${PORTNAME}.jar
