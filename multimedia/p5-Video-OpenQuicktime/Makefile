@@ -1,9 +1,5 @@
-# New ports collection makefile for:    Video-OpenQuicktime
-# Date created:                         Sun Feb 22 23:06:26 EST 2004
-# Whom:                                 Michael Johnson <ahze@ahze.net>
-#
-# $FreeBSD: multimedia/p5-Video-OpenQuicktime/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Michael Johnson <ahze@ahze.net>
+# $FreeBSD: multimedia/p5-Video-OpenQuicktime/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	Video-OpenQuicktime
 PORTVERSION=	1.02
@@ -26,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Video::OpenQuicktime.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
