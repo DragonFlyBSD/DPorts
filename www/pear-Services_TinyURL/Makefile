@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: www/pear-Services_TinyURL/Makefile 314251 2013-03-15 06:21:53Z miwi $
+# $FreeBSD: www/pear-Services_TinyURL/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Services_TinyURL
 PORTVERSION=	0.1.2
@@ -14,6 +14,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	curl
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
