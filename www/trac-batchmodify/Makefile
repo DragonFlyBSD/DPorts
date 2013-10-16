@@ -1,9 +1,5 @@
-# New ports collection makefile for: trac-batchmodify
-# Date created:                      Jan 29 2009
-# Whom:                              Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: www/trac-batchmodify/Makefile 325711 2013-08-30 16:49:43Z mva $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: www/trac-batchmodify/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	batchmodify
 PORTVERSION=	0.8.0.9694
@@ -29,6 +25,7 @@ PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/BatchModify-%%EGGVERSION%%_trac0.12-py%%PYTHONVERSION%%.egg
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
