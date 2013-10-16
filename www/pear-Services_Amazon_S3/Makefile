@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ports/www/pear-Services_Amazon_S3/Makefile,v 1.6 2013/02/04 09:37:12 svnexp Exp $
+# $FreeBSD: www/pear-Services_Amazon_S3/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Services_Amazon_S3
 PORTVERSION=	0.4.0
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 USE_PHP=	spl
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
