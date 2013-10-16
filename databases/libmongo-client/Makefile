@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: databases/libmongo-client/Makefile 326440 2013-09-05 19:44:40Z wg $
+# $FreeBSD: databases/libmongo-client/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	libmongo-client
 PORTVERSION=	0.1.6.3
@@ -22,6 +22,7 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 CONFIGURE_ENV+=	PKG_CONFIG_DIR=${LOCALBASE}/libdata/pkgconfig
 
+NO_STAGE=	yes
 run-autotools:
 	@${REINPLACE_CMD} 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|' \
 		${WRKSRC}/src/Makefile.am
