@@ -1,7 +1,8 @@
-# $FreeBSD: finance/skrooge/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: finance/skrooge/Makefile 329305 2013-10-04 13:26:28Z jhale $
 
 PORTNAME=	skrooge
 PORTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION}/src/
@@ -25,4 +26,5 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
