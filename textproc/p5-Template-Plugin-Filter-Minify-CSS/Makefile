@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Template-Plugin-Filter-Minify-CSS/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: textproc/p5-Template-Plugin-Filter-Minify-CSS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Template-Plugin-Filter-Minify-CSS
 PORTVERSION=	0.94
@@ -21,7 +21,5 @@ RUN_DEPENDS=	p5-CSS-Minifier>=0:${PORTSDIR}/textproc/p5-CSS-Minifier \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Template::Plugin::Filter::Minify::CSS.3
 
 .include <bsd.port.mk>
