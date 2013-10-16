@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-discogs-client/Makefile 323891 2013-07-29 15:03:58Z feld $
+# $FreeBSD: audio/py-discogs-client/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	discogs-client
 PORTVERSION=	1.1.1
@@ -15,6 +15,7 @@ LICENSE=	BSD
 RUN_DEPENDS=    ${PYTHON_PKGNAMEPREFIX}requests>=1.0.0:${PORTSDIR}/www/py-requests
 
 USE_PYTHON=	yes
+NO_STAGE=	yes
 USE_PYDISTUTILS=	easy_install
 
 .include <bsd.port.mk>
