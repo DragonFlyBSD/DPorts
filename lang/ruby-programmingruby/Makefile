@@ -1,9 +1,5 @@
-# New ports collection makefile for:		Programming Ruby--The Book
-# Date created:			8 March 2001
-# Whom:				Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/lang/ruby-programmingruby/Makefile,v 1.16 2012/11/17 05:58:56 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: lang/ruby-programmingruby/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	programmingruby
 PORTVERSION=	0.4
@@ -27,6 +23,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 DOCSDIR=	${RUBY_MODDOCDIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${RUBY_MODDOCDIR}
 	@${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} -C ${RUBY_MODDOCDIR}
