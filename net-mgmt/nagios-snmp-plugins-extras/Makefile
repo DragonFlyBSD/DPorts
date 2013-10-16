@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagios-snmp-plugins-extras
-# Date created:				Sat 13 Jun 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: net-mgmt/nagios-snmp-plugins-extras/Makefile 326248 2013-09-04 05:52:04Z az $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: net-mgmt/nagios-snmp-plugins-extras/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nagios-snmp-plugins-extras
 PORTVERSION=	1.1.2
@@ -41,6 +37,7 @@ PLIST_FILES=	${PLUGINS:S,^,libexec/nagios/,}
 
 WRKSRC=		${WRKDIR}/plugins
 
+NO_STAGE=	yes
 post-extract:
 	${SED} -i "" -e "s#/tmp/#/var/tmp/#" \
 		-e "s#/usr/local/nagios/libexec#${LOCALBASE}/libexec/nagios#" \
