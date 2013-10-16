@@ -1,13 +1,10 @@
-# New ports collection makefile for:	PostgreSQL docs
-# Date created:		August 26, 2002
-# Whom:			Palle Girgensohn <girgen@pingpong.net>
-#
-# $FreeBSD: ports/databases/postgresql91-docs/Makefile,v 1.3 2012/11/17 05:55:21 svnexp Exp $
-#
+# Created by: Palle Girgensohn <girgen@pingpong.net>
+# $FreeBSD: databases/postgresql91-docs/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
-PKGNAMESUFFIX=	-docs
+PKGNAMESUFFIX?=	${DISTV:S/.//}-docs
+DISTV=	${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The PostgreSQL documentation set
@@ -18,6 +15,7 @@ USE_PGSQL=	YES
 WANT_PGSQL_VER?=91
 
 SLAVE_ONLY=	YES
+COMPONENT=	-docs
 
 PGDOCSREL?=	${DOCSDIR_REL}/release-${PGSQL_VER}
 PGDOCSDIR?=	${PREFIX}/${PGDOCSREL}
@@ -31,6 +29,7 @@ BUILD_DEPENDS+=	onsgmls:${PORTSDIR}/textproc/opensp			\
 		${dbdir}/dsssl/modular/catalog:${PORTSDIR}/textproc/dsssl-docbook-modular \
 		${dbdir}/4.2/docbook.dtd:${PORTSDIR}/textproc/docbook-420
 
+NO_STAGE=	yes
 do-build:
 	${GMAKE} -C ${WRKSRC} html
 
