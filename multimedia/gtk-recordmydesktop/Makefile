@@ -1,5 +1,4 @@
-# Created by: Ruslan Mahmatkhanov <cvs-src@yandex.ru>
-# $FreeBSD: multimedia/gtk-recordmydesktop/Makefile 326129 2013-09-03 08:49:46Z bapt $
+# $FreeBSD: multimedia/gtk-recordmydesktop/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gtk-recordmydesktop
 PORTVERSION=	0.3.8
@@ -22,6 +21,7 @@ USE_PYTHON=	-2.7
 USE_GNOME=	gtk20 pygtk2 desktopfileutils
 INSTALL_ICONS=	yes
 
+NO_STAGE=	yes
 post-build:
 	@${REINPLACE_CMD} -e 's|/usr/bin|${PREFIX}/bin|' \
 		${WRKSRC}/src/gtk-recordMyDesktop
