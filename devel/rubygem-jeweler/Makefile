@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: devel/rubygem-jeweler/Makefile 323858 2013-07-28 22:31:59Z swills $
+# $FreeBSD: devel/rubygem-jeweler/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	jeweler
 PORTVERSION=	1.8.6
@@ -26,4 +26,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/jeweler
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
