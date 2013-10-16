@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rubygem-davclient
-# Date created:				2011-01-19
-# Whom:					Mikhail T. <michael@fun-box.ru>
-#
-# $FreeBSD: ports/www/rubygem-davclient/Makefile,v 1.4 2012/11/17 06:03:03 svnexp Exp $
-#
+# Created by: Mikhail T. <michael@fun-box.ru>
+# $FreeBSD: www/rubygem-davclient/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	davclient
 PORTVERSION=	0.0.8
@@ -21,4 +17,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/dav
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
