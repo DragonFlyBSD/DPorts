@@ -1,21 +1,29 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-MAC-Vendor/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-Net-MAC-Vendor/Makefile 329348 2013-10-04 17:34:52Z sunpoet $
 
 PORTNAME=	Net-MAC-Vendor
-PORTVERSION=	1.1901
+PORTVERSION=	1.2000
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Look up the vendor for a MAC
 
-BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
-RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
-MAN3=	Net::MAC::Vendor.3
+BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501400
+TEST_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
+.endif
+
+.include <bsd.port.post.mk>
