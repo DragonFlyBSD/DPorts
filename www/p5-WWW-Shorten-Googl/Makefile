@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Shorten-Googl
-# Date created:				September 9 2011
-# Whom:					Jonathan Pater <cowboyneal@gmail.com>
-#
-# $FreeBSD: www/p5-WWW-Shorten-Googl/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# Created by: Jonathan Pater <cowboyneal@gmail.com>
+# $FreeBSD: www/p5-WWW-Shorten-Googl/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Shorten-Googl
 PORTVERSION=	1.02
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::Googl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
