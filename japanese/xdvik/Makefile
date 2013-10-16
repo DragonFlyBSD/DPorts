@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <inagaki@tg.rim.or.jp>
-# $FreeBSD: japanese/xdvik/Makefile 319148 2013-05-27 01:56:56Z hrs $
+# $FreeBSD: japanese/xdvik/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	xdvik
 PORTVERSION=	${VERSION_XDVIK}.${VERSION_JPATCH}
@@ -80,6 +80,7 @@ VFONTCAPFT_SUB=	CIDFONTDIR=${LOCALBASE}/${CIDFONTDIR} \
 		MINCHO=${LOCALBASE}/${MINCHO} \
 		GOTHIC=${LOCALBASE}/${GOTHIC}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 BDPI?=		600
