@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-device-manager/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: sysutils/gnome-device-manager/Makefile 327772 2013-09-20 23:05:58Z bapt $
 #   $MCom: ports/sysutils/gnome-device-manager/Makefile,v 1.1 2008/01/08 06:47:29 marcus Exp $
 
 PORTNAME=	gnome-device-manager
@@ -23,4 +23,5 @@ INSTALLS_OMF=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
