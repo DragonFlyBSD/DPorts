@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: devel/p5-Test-Class-Most/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-Test-Class-Most/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Class-Most
 PORTVERSION=	0.08
@@ -26,4 +26,5 @@ PLIST_DIRSTRY=	%%SITE_PERL%%/Test/Class %%SITE_PERL%%/Test
 
 MAN3=		Test::Class::Most.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
