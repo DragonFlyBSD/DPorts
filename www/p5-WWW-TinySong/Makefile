@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-TinySong
-# Date created:		2009-01-27
-# Whom:			Dennis Herrmann <adox@mcx2.org>
-#
-# $FreeBSD: ports/www/p5-WWW-TinySong/Makefile,v 1.6 2012/11/17 06:02:55 svnexp Exp $
-#
+# Created by: Dennis Herrmann <adox@mcx2.org>
+# $FreeBSD: www/p5-WWW-TinySong/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-TinySong
 PORTVERSION=	1.01
@@ -19,10 +15,12 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	YES
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	WWW::TinySong.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
