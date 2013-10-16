@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-POE-Component-SMTP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-POE-Component-SMTP/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	POE-Component-SMTP
 PORTVERSION=	1.6
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::Server::SMTP.3 POE::Filter::SMTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
