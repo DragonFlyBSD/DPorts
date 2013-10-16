@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_proctitle
-# Date created:				15 April 2007
-# Whom:					stas
-#
-# $FreeBSD: www/mod_proctitle/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: stas
+# $FreeBSD: www/mod_proctitle/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_proctitle
 PORTVERSION=	0.4.1
@@ -25,6 +21,7 @@ CFLAGS+=	-I${LOCALBASE}/include \
 
 PLIST_FILES=	${APACHEMODDIR}/${PORTNAME}.so
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/.libs/mod_proctitle.so \
 		${PREFIX}/${APACHEMODDIR}/
