@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-mouse/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-input-mouse/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-input-mouse
 PORTVERSION=	1.9.0
@@ -11,4 +11,5 @@ XORG_CAT=	driver
 USES=		pathfix
 MAN4=		mousedrv.4x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
