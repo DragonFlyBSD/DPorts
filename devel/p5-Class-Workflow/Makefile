@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Class-Workflow
-# Date created:	   24 January 2008
-# Whom:		   Sergey Skvortsov <skv@protey.ru>
-#
-# $FreeBSD: devel/p5-Class-Workflow/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Sergey Skvortsov <skv@protey.ru>
+# $FreeBSD: devel/p5-Class-Workflow/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Workflow
 PORTVERSION=	0.11
@@ -40,4 +36,5 @@ MAN3=		Class::Workflow.3 Class::Workflow::Context.3 \
 		Class::Workflow::Transition::Validate::Simple.3 \
 		Class::Workflow::Util::Delta.3 Class::Workflow::YAML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
