@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-FcntlLock/Makefile 326626 2013-09-07 10:57:48Z az $
+# $FreeBSD: devel/p5-File-FcntlLock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-FcntlLock
 PORTVERSION=	0.14
@@ -14,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=		File::FcntlLock.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
