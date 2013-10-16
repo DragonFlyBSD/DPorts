@@ -1,4 +1,4 @@
-# $FreeBSD: audio/p5-Audio-Ecasound/Makefile 326958 2013-09-11 09:54:08Z az $
+# $FreeBSD: audio/p5-Audio-Ecasound/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Audio-Ecasound
 PORTVERSION=	1.01
@@ -12,6 +12,7 @@ COMMENT=	Perl extension for ecasound sampler, recorder, fx-processor
 BUILD_DEPENDS=	libecasoundc-config:${PORTSDIR}/audio/ecasound
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=	Audio::Ecasound.3
