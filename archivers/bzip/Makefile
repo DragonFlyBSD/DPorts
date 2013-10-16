@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: ports/archivers/bzip/Makefile,v 1.37 2012/12/18 08:04:12 svnexp Exp $
+# $FreeBSD: archivers/bzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	bzip
 PORTVERSION=	0.21
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.42.org/pub/OLD/b/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Block-sorting file compressor
 
+NO_STAGE=	yes
 RESTRICTED=	may be covered by patents
 MAN1=		bzip.1 bunzip.1
 USE_CSTD=	gnu89
