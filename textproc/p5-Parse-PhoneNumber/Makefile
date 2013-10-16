@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Parse-PhoneNumber/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-Parse-PhoneNumber/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Parse-PhoneNumber
 PORTVERSION=	1.9
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=	Parse::PhoneNumber.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
