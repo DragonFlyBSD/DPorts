@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-QuickCheck
-# Date created:				October 20th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTML-QuickCheck/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: www/p5-HTML-QuickCheck/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-QuickCheck
 PORTVERSION=	1.0b1
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::QuickCheck.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
