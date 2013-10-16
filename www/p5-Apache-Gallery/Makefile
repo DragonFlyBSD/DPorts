@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Apache-Gallery
-# Date created:				October 24 2002
-# Whom:	      				Erwin Lansing <erwin@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Apache-Gallery/Makefile 326021 2013-09-02 16:07:56Z az $
-#
+# Created by: Erwin Lansing <erwin@FreeBSD.org>
+# $FreeBSD: www/p5-Apache-Gallery/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-Gallery
 PORTVERSION=	1.0.2
@@ -39,6 +35,7 @@ DOC_FILES=	INSTALL LICENSE README TODO UPGRADE
 
 SUB_FILES+=	pkg-message
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} ${WRKSRC}/templates/bright/navdirectory.tpl ${WRKSRC}/templates/default
 	@${CP} ${WRKSRC}/templates/bright/navdirectory.tpl ${WRKSRC}/templates/new
