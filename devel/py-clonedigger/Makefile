@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/py-clonedigger/Makefile 315297 2013-03-26 14:26:03Z skreuzer $
+# $FreeBSD: devel/py-clonedigger/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	clonedigger
 PORTVERSION=	1.0.11
@@ -19,4 +19,5 @@ USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_EGG=	${PORTNAME}-${DISTVERSION:C/-/_/g}-py${PYTHON_VER}.egg
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}-beta
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
