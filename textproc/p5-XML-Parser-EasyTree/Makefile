@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	XML::Parser::EasyTree
-# Date created:			Oct 24, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: textproc/p5-XML-Parser-EasyTree/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: textproc/p5-XML-Parser-EasyTree/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Parser-EasyTree
 PORTVERSION=	0.01
@@ -23,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::Parser::EasyTree.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
