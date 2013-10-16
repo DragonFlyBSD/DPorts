@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: sysutils/gkrellm-trayicons/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: sysutils/gkrellm-trayicons/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	trayicons
 PORTVERSION=	1.03
@@ -20,6 +20,7 @@ PLIST_FILES=	libexec/gkrellm2/plugins/trayicons.so
 
 ALL_TARGET=	trayicons.so
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(CC) $$(FLAGS)|$$(CC) $$(CFLAGS)|g' \
 		${WRKSRC}/Makefile
