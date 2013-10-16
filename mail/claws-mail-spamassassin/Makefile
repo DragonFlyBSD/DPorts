@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: mail/claws-mail-spamassassin/Makefile 317881 2013-05-11 14:47:33Z pawel $
+# $FreeBSD: mail/claws-mail-spamassassin/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	spamassassin
 PORTREVISION=	0
