@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/py-django-tinymce/Makefile 327146 2013-09-13 13:26:31Z wg $
+# $FreeBSD: www/py-django-tinymce/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-tinymce
 PORTVERSION=	1.5.1
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.0:${PORTSDIR}/www/py-django
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
