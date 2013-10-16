@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: mail/rubygem-exception_notification/Makefile 322022 2013-06-29 02:31:50Z swills $
+# $FreeBSD: mail/rubygem-exception_notification/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	exception_notification
 PORTVERSION=	3.0.1
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
