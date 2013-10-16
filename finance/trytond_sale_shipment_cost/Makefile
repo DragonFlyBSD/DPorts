@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_sale_shipment_cost/Makefile 324531 2013-08-10 14:32:54Z wg $
+# $FreeBSD: finance/trytond_sale_shipment_cost/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_sale_shipment_cost
 PORTVERSION=	2.4.1
@@ -22,4 +22,5 @@ CONFLICTS=	trytond_sale_shipment_cost-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
