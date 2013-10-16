@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 324222 2013-08-04 12:30:54Z az $
+# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Append-TempFile
 PORTVERSION=	0.05
@@ -23,6 +23,7 @@ PORTDOCS=	Changes README
 test:		build
 		@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
