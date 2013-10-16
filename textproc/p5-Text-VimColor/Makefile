@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: textproc/p5-Text-VimColor/Makefile 327454 2013-09-17 06:51:04Z bapt $
+# $FreeBSD: textproc/p5-Text-VimColor/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-VimColor
 PORTVERSION=	0.14
@@ -25,6 +25,7 @@ USE_PERL5=	configure
 MAN1=		text-vimcolor.1
 MAN3=		Text::VimColor.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
