@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/french/jdictionary-fre-hun/Makefile,v 1.9 2013/01/09 20:04:43 svnexp Exp $
+# $FreeBSD: french/jdictionary-fre-hun/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	jdictionary-fre-hun
 PORTVERSION=	1.0
@@ -12,4 +12,5 @@ COMMENT=	JDictionary plugin: French-Hungarian dictionary
 
 MASTERDIR=	${.CURDIR}/../../textproc/jdictionary
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.plugin"
