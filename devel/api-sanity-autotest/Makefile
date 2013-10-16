@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: devel/api-sanity-autotest/Makefile 319375 2013-05-29 14:53:52Z bf $
+# $FreeBSD: devel/api-sanity-autotest/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	api-sanity-checker
 PORTVERSION=	1.98.4
@@ -17,11 +17,12 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	${LOCALBASE}/bin/abi-compliance-checker.pl:${PORTSDIR}/devel/abi-compliance-checker
 
+USES=		perl5
+
 .if defined(MAINTAINER_MODE) || defined(PACKAGE_BUILDING)
 BUILD_DEPENDS=	${LOCALBASE}/bin/abi-compliance-checker.pl:${PORTSDIR}/devel/abi-compliance-checker
-USE_PERL5=	yes
 .else
-USE_PERL5_RUN=	yes
+USE_PERL5=	run
 .endif
 USE_GCC=	any
 
@@ -30,6 +31,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}.pl
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CPPFILT?=	/usr/bin/c++filt
