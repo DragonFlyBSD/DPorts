@@ -1,5 +1,5 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/rdiff-backup/Makefile 319279 2013-05-27 19:01:46Z bsam $
+# $FreeBSD: sysutils/rdiff-backup/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	rdiff-backup
 PORTVERSION=	1.2.8
@@ -30,6 +30,7 @@ PORTDOCS=	CHANGELOG README COPYING FAQ.html
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
