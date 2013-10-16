@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-yesod-platform/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: www/hs-yesod-platform/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	yesod-platform
 PORTVERSION=	1.2.0.1
@@ -134,5 +134,6 @@ USE_CABAL=	aeson==0.6.1.0_2 \
 		zlib-bindings==0.1.1.3_1 \
 		zlib-conduit==1.0.0_1
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
