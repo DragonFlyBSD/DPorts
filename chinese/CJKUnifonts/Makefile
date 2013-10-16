@@ -1,9 +1,5 @@
-# New ports collection makefile for:	CJKUnifonts(Arne's TrueType Font)
-# Date created:		10 Dec 2004
-# Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-#
-# $FreeBSD: chinese/CJKUnifonts/Makefile 321284 2013-06-19 16:03:12Z rafan $
-#
+# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
+# $FreeBSD: chinese/CJKUnifonts/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	CJKUnifonts
 PORTVERSION=	0.2.20080216.1
@@ -25,6 +21,7 @@ NO_BUILD=	yes
 
 TTF=		ukai.ttc uming.ttc
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${FONTSDIR}
 	${INSTALL_DATA} ${WRKDIR}/ukai.ttc ${FONTSDIR}
