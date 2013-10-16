@@ -1,4 +1,4 @@
-# $FreeBSD: ports/japanese/postgresql82-man/Makefile,v 1.11 2012/11/17 05:58:38 svnexp Exp $
+# $FreeBSD: japanese/postgresql82-man/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	postgresql82
 PORTVERSION=	8.2.4
@@ -151,6 +151,7 @@ MANL=		abort.l \
 		vacuum.l \
 		values.l
 
+NO_STAGE=	yes
 do-install:
 .for file in ${MAN1}
 	@${INSTALL_MAN} ${WRKSRC}/man1/${file} ${MANPREFIX}/man/${MANLANG}/man1/
