@@ -1,5 +1,5 @@
 # Created by: Aleksandar Pejic <alex@vts.su.ac.rs>
-# $FreeBSD: www/mod_antiloris/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_antiloris/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_antiloris
 PORTVERSION=	0.4
@@ -27,6 +27,7 @@ PLIST_FILES+=	${APACHEETCDIR}/Includes/mod_antiloris.conf
 SUB_FILES+=	pkg-message.rules
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(SKIP_RULES)
 	@${INSTALL_DATA} ${WRKDIR}/mod_antiloris.conf ${PREFIX}/${APACHEETCDIR}/Includes/
