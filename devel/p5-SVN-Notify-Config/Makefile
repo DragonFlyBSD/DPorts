@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Notify-Config/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/p5-SVN-Notify-Config/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Notify-Config
 PORTVERSION=	0.0911
@@ -23,4 +23,5 @@ USE_PERL5=	modbuild
 
 MAN3=		SVN::Notify::Config.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
