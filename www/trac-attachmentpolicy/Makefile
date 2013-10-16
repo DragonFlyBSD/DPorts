@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-attachmentpolicy/Makefile 322776 2013-07-11 15:23:44Z miwi $
+# $FreeBSD: www/trac-attachmentpolicy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	attachmentpolicy
 PORTVERSION=	0.1.0.${SVN_REV}
@@ -28,4 +28,5 @@ PYDISTUTILS_PKGNAME=	Attachment_Policy_Plugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/.${SVN_REV}//g}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
