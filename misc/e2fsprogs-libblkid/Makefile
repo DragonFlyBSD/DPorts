@@ -1,10 +1,5 @@
-# New ports collection makefile for:	e2fsprogs-libblkid
-# Date created:				2007-09-07
-# Whom:					Matthias Andree <matthias.andree@gmx.de>
-#
-# $FreeBSD: misc/e2fsprogs-libblkid/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
-# set PORTREVISION to avoid override by master port
+# Created by: Matthias Andree <matthias.andree@gmx.de>
+# $FreeBSD: misc/e2fsprogs-libblkid/Makefile 329746 2013-10-07 23:19:49Z mandree $
 
 PORTREVISION=	0
 CATEGORIES=	misc devel
@@ -12,19 +7,17 @@ PKGNAMESUFFIX=	-libblkid
 
 COMMENT=	A blkid library from e2fsprogs package
 
-LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 CONFIGURE_ARGS=	--enable-elf-shlibs
 
 MASTERDIR=	${.CURDIR}/../../sysutils/e2fsprogs
 MAKE_ARGS=	LIB_SUBDIRS=lib/blkid
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 ALL_TARGET=	libs
 INSTALL_TARGET=	install install-shlibs
 INSTALL_WRKSRC=	${WRKSRC}/lib/blkid
-
-MAN3=		libblkid.3
 
 PKGDIR=		${.CURDIR}
 
