@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: www/emacs-w3m/Makefile 325211 2013-08-22 16:30:42Z nobutaka $
+# $FreeBSD: www/emacs-w3m/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	emacs-w3m
 PORTVERSION=	1.4.471.b.${SNAPDATE}
@@ -50,6 +50,7 @@ OPTIONS_DEFAULT=	DOCS OCTET_VIEWER SHIMBUN
 OCTET_VIEWER_DESC=	Octet stream viewer support
 SHIMBUN_DESC=	Build and/or install Shimbun
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MSHIMBUN}
