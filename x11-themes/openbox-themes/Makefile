@@ -1,9 +1,5 @@
-# New ports collection makefile for:	openbox-themes
-# Date created:				2005-12-23
-# Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/openbox-themes/Makefile,v 1.7 2012/11/17 06:03:33 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
+# $FreeBSD: x11-themes/openbox-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	openbox-themes
 PORTVERSION=	1.0.1
@@ -21,6 +17,7 @@ RUN_DEPENDS=	openbox:${PORTSDIR}/x11-wm/openbox
 NO_BUILD=	yes
 WRKSRC=		${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-install:
 	@for i in `${LS} ${WRKDIR}/${WRKSRC}`; do \
 		${CP} -r ${WRKDIR}/${WRKSRC}/$$i ${PREFIX}/share/themes/; \
