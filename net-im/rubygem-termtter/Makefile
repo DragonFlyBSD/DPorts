@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: net-im/rubygem-termtter/Makefile 316495 2013-04-25 02:37:11Z swills $
+# $FreeBSD: net-im/rubygem-termtter/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	termtter
 PORTVERSION=	1.11.0
@@ -21,4 +21,5 @@ USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/termtter
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
