@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: mail/p5-Mail-DeliveryStatus-BounceParser/Makefile 326265 2013-09-04 09:48:54Z az $
+# $FreeBSD: mail/p5-Mail-DeliveryStatus-BounceParser/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-DeliveryStatus-BounceParser
 PORTVERSION=	1.5.34
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::DeliveryStatus::BounceParser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
