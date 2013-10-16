@@ -1,9 +1,5 @@
-# New ports collection makefile for:	color-theme.el
-# Date created:				Fri Jul 27 13:26:37 MSD 2007
-# Whom:					Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: misc/color-theme.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: misc/color-theme.el/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	color-theme.el
 PORTVERSION=	6.6.0
@@ -22,6 +18,7 @@ PORTDOCS=	AUTHORS BUGS COPYING ChangeLog README
 ELISPDIR=	${PREFIX}/${EMACS_SITE_LISPDIR}/color-theme
 ELISPFILES=	color-theme.el color-theme.elc themes
 
+NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC}; \
 		${EMACS_CMD} -batch -q -f batch-byte-compile color-theme.el)
