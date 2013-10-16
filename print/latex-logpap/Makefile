@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-logpap
-# Date created:		14 Feb 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: print/latex-logpap/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: print/latex-logpap/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-logpap
 PORTVERSION=	0.6.20040201
@@ -33,6 +30,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME:S/^latex-//}
 CLASS_FILES=	logpap.dtx logpap.ins logpap.sty example.tex
 DOC_FILES=	README example.pdf
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC}
