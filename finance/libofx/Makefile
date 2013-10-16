@@ -1,22 +1,21 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: finance/libofx/Makefile 326185 2013-09-03 17:18:24Z antoine $
+# $FreeBSD: finance/libofx/Makefile 329305 2013-10-04 13:26:28Z jhale $
 
 PORTNAME=	libofx
-PORTVERSION=	0.9.5
-PORTREVISION=	1
+PORTVERSION=	0.9.9
 CATEGORIES=	finance
 MASTER_SITES=	SF
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	OpenSource implementation of the OFX (Open Financial eXchange)
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		xml\\+\\+-2.6.2:${PORTSDIR}/textproc/libxml++26 \
-		osp.5:${PORTSDIR}/textproc/opensp
+LICENSE=	GPLv2
 
-USE_GCC=	any
-USES=		iconv pkgconfig
-USE_GMAKE=	yes
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libxml++-2.6.so:${PORTSDIR}/textproc/libxml++26 \
+		libosp.so:${PORTSDIR}/textproc/opensp
+
+USES=		gmake iconv pkgconfig
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I m4
 AUTOMAKE_ARGS=	--add-missing
@@ -28,11 +27,6 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-LICENSE=	GPLv2
-
-MAN1=		ofxconnect.1 \
-		ofxdump.1
-
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	APIDOC
@@ -42,12 +36,12 @@ APIDOC_DESC=	Install full API documentation
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in AUTHORS ChangeLog INSTALL NEWS README totest.txt
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .if ${PORT_OPTIONS:MAPIDOC}
-	@(cd ${WRKSRC}/doc; ${COPYTREE_SHARE} html ${DOCSDIR})
+	@(cd ${WRKSRC}/doc; ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR})
 .endif
 .endif
 
