@@ -1,8 +1,5 @@
-# New ports collection makefile for:	GNOME Metacity Themes
-# Date created:				06 Mar 2004
-# Whom:					Remington Lang <MrL0L@charter.net>
-#
-# $FreeBSD: ports/x11-themes/metacity-themes/Makefile,v 1.12 2012/11/17 06:03:33 svnexp Exp $
+# Created by: Remington Lang <MrL0L@charter.net>
+# $FreeBSD: x11-themes/metacity-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 # Port logic stolen from x11-themes/kde-icons-noia by
 # lioux@.
@@ -24,4 +21,5 @@ NO_BUILD=	yes
 
 do-install:    # Empty
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
