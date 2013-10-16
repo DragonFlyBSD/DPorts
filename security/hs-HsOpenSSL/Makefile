@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-HsOpenSSL/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: security/hs-HsOpenSSL/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	HsOpenSSL
 PORTVERSION=	0.10.3.3
@@ -10,5 +10,6 @@ COMMENT=	(Incomplete) OpenSSL binding for Haskell
 
 USE_CABAL=	network>=2.1.0.0
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
