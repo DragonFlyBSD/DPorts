@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: audio/festvox-russian/Makefile 314637 2013-03-19 12:17:58Z fluffy $
+# $FreeBSD: audio/festvox-russian/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festvox
 PORTVERSION=	0.5
@@ -21,6 +21,7 @@ USE_BZIP2=	YES
 WRKSRC=		${WRKDIR}/msu_ru_nsh_clunits
 
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 FHOME=		${PREFIX}/share/festival/lib/voices/russian/msu_ru_nsh_clunits
 
