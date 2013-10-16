@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Plack::Server::ReverseHTTP
-# Date created:		13 Oct 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Plack-Server-ReverseHTTP/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# $FreeBSD: www/p5-Plack-Server-ReverseHTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Server-ReverseHTTP
 PORTVERSION=	0.02
@@ -26,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	Plack::Server::ReverseHTTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
