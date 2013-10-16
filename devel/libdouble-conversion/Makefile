@@ -1,5 +1,5 @@
 # Created by: Waitman Gobble <waitman@waitman.net>
-# $FreeBSD: devel/libdouble-conversion/Makefile 323208 2013-07-18 08:24:08Z miwi $
+# $FreeBSD: devel/libdouble-conversion/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libdouble-conversion
 PORTVERSION=	1.1.1
@@ -21,4 +21,5 @@ GH_ACCOUNT=	waitman
 GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	e9b9e5a
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
