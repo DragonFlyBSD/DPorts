@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Loader/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-Loader/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Loader
 PORTVERSION=	0.21
@@ -29,4 +29,5 @@ MAN3=	DBIx::Class::Loader.3 \
 	DBIx::Class::Loader::Writing.3 \
 	DBIx::Class::Loader::mysql.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
