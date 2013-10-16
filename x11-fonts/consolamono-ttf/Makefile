@@ -1,4 +1,4 @@
-# $FreeBSD: ports/x11-fonts/consolamono-ttf/Makefile,v 1.3 2013/01/27 22:46:32 svnexp Exp $
+# $FreeBSD: x11-fonts/consolamono-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	consolamono-ttf
 PORTVERSION=	20130127
@@ -26,6 +26,7 @@ SUB_FILES=	pkg-message
 SUB_LIST=	FONTDIR=${FONTDIR}
 WRKSRC=		${WRKDIR}/Consola\ Mono
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/ && \
 		${LOCALBASE}/bin/mkfontscale && \
