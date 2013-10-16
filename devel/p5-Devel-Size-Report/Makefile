@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-Devel-Size-Report/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-Devel-Size-Report/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Devel-Size-Report
 PORTVERSION=	0.13
@@ -17,6 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		Devel::Size::Report.3
 
