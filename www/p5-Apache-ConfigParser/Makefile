@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-Apache-ConfigParser/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-ConfigParser/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-ConfigParser
 PORTVERSION=	1.01
@@ -18,4 +18,5 @@ MAN3=	Apache::ConfigParser.3 Apache::ConfigParser::Directive.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
