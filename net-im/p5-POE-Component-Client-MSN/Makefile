@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: net-im/p5-POE-Component-Client-MSN/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net-im/p5-POE-Component-Client-MSN/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	POE-Component-Client-MSN
 PORTVERSION=	0.03
@@ -27,4 +27,5 @@ MAN3=		POE::Component::Client::MSN.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
