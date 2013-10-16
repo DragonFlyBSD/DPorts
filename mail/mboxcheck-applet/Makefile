@@ -1,8 +1,5 @@
-# New ports collection makefile for: xmms-status-plugin
-# Date created:			Sep 28, 2003
-# Whom:				Pav Lucistnik <pav@oook.cz>
-#
-# $FreeBSD: mail/mboxcheck-applet/Makefile 322581 2013-07-09 21:26:48Z pav $
+# Created by: Pav Lucistnik <pav@oook.cz>
+# $FreeBSD: mail/mboxcheck-applet/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	mboxcheck-applet
 PORTVERSION=	0.3
@@ -18,6 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py:${PORTSDIR}/x11-tool
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-patch:
 	@${REINPLACE_CMD} 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/*.py
 	@${REINPLACE_CMD} 's|/usr/share/pixmaps/|${LOCALBASE}/share/pixmaps/|' ${WRKSRC}/mboxcheck.py
