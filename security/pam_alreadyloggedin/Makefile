@@ -1,5 +1,5 @@
 # Created by: green@FreeBSD.org
-# $FreeBSD: security/pam_alreadyloggedin/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: security/pam_alreadyloggedin/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	pam_alreadyloggedin
 PORTVERSION=	0.3
@@ -14,6 +14,7 @@ COMMENT=	PAM module based on whether a user is already logged in
 
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 900007
