@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_proxy_html
-# Date created:		2004-07-29
-# Whom:			David Lay <dsl@webize.com.au>
-#
-# $FreeBSD: www/mod_proxy_html/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: David Lay <dsl@webize.com.au>
+# $FreeBSD: www/mod_proxy_html/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_proxy_html
 PORTVERSION=	3.1.2
@@ -35,6 +31,7 @@ PLIST_FILES=	%%DOCSDIR%%/COPYING %%DOCSDIR%%/README \
 		%%DOCSDIR%%/proxy_html.conf
 PLIST_DIRS=	%%DOCSDIR%%
 
+NO_STAGE=	yes
 post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/COPYING ${DOCSDIR}
