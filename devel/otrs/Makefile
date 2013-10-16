@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/otrs/Makefile 323364 2013-07-21 02:41:07Z swills $
+# $FreeBSD: devel/otrs/Makefile 328146 2013-09-24 15:18:08Z swills $
 
 PORTNAME=	otrs
-PORTVERSION=	3.2.9
+PORTVERSION=	3.2.10
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.otrs.org/pub/otrs/ \
 		ftp://ftp.samurai.com/pub/otrs/ \
@@ -79,11 +79,12 @@ CLEAN_FILES=	scripts/suse* scripts/redhat* \
 		var/httpd/htdocs/js/thirdparty/ckeditor-4.0/_source \
 		var/httpd/htdocs/skins/Agent/*/img/source
 
+USES=		perl5
 USE_APACHE_RUN=	22+
-USE_PERL5=	yes
 
 PLIST_SUB+=	VER_CKEDITOR="4.0"
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
@@ -150,7 +151,7 @@ post-patch:
 	@${RM} -rf ${WRKSRC}/Kernel/cpan-lib/ \
 		${CLEAN_FILES:S!^!${WRKSRC}/!}
 	#shebang file only gets the first instance of /usr/bin/perl
-	@${REINPLACE_CMD} -e "s|/usr/bin/perl|${LOCALBASE}/bin/perl|g" \
+	@${REINPLACE_CMD} -i '' -e "s|/usr/bin/perl|${LOCALBASE}/bin/perl|g" \
 		${WRKSRC}/bin/otrs.CreateApacheStartupFile.pl
 
 do-build:
@@ -202,7 +203,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/doc/${D}/*.* ${DOCSDIR}/${D}/
 .endfor
 .endif
-	@PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+#	@PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
