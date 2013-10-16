@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-CheckDeps/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-Test-CheckDeps/Makefile 330060 2013-10-11 07:31:44Z culot $
 
 PORTNAME=	Test-CheckDeps
-PORTVERSION=	0.006
+PORTVERSION=	0.010
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,13 +14,10 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-CPAN-Meta>=2.120920:${PORTSDIR}/devel/p5-CPAN-Meta \
-		p5-CPAN-Meta-Check>=0.004:${PORTSDIR}/devel/p5-CPAN-Meta-Check \
-		p5-Module-Build-Tiny>=0.021:${PORTSDIR}/devel/p5-Module-Build-Tiny
+		p5-CPAN-Meta-Check>=0.007:${PORTSDIR}/devel/p5-CPAN-Meta-Check
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
-USE_PERL5=	modbuild
-
-MAN3=		Test::CheckDeps.3
+USE_PERL5=	configure
 
 .include <bsd.port.mk>
