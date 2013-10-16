@@ -1,5 +1,5 @@
 # Created by: Craig Manley
-# $FreeBSD: devel/p5-Config-Properties/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-Config-Properties/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-Properties
 PORTVERSION=	1.75
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Config::Properties.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
