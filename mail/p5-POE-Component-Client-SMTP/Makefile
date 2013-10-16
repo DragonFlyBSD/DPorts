@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-POE-Component-Client-SMTP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-POE-Component-Client-SMTP/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	POE-Component-Client-SMTP
 PORTVERSION=	0.22
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		POE::Component::Client::SMTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
