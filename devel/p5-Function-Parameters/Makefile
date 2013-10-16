@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Function-Parameters/Makefile 327408 2013-09-16 15:18:12Z sunpoet $
+# $FreeBSD: devel/p5-Function-Parameters/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	Function-Parameters
 PORTVERSION=	1.03.01
@@ -25,8 +25,5 @@ TEST_DEPENDS=	p5-Dir-Self>=0:${PORTSDIR}/devel/p5-Dir-Self \
 
 USE_PERL5=	5.14+ configure
 USES=		perl5
-
-MAN3=		Function::Parameters.3 \
-		Function::Parameters::Info.3
 
 .include <bsd.port.mk>
