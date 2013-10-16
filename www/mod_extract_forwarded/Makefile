@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: www/mod_extract_forwarded/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_extract_forwarded/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_extract_forwarded
 PORTVERSION=	2.0.2
@@ -27,6 +27,7 @@ AP_GENPLIST=	yes
 #   http://lists.freebsd.org/pipermail/freebsd-ports/2012-June/075466.html
 UNIQUENAME=	ap22-${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MYOSHFUJI}
