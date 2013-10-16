@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11/xfce4-clipman-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: x11/xfce4-clipman-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-clipman-plugin
 PORTVERSION=	1.2.3
@@ -28,6 +28,7 @@ USES=		pkgconfig gettext pathfix
 
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUNIQUE}
