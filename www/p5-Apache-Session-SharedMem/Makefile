@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Apache-Session-SharedMem
-# Date created:				April 03 2001
-# Whom:	      				vanilla
-#
-# $FreeBSD: www/p5-Apache-Session-SharedMem/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: vanilla
+# $FreeBSD: www/p5-Apache-Session-SharedMem/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-Session-SharedMem
 PORTVERSION=	0.6
@@ -24,6 +20,7 @@ USE_PERL5=	configure
 MAN3=		Apache::Session::Store::SharedMem.3 \
 		Apache::Session::SharedMem.3
 
+NO_STAGE=	yes
 #post-patch:
 #	@${CP} ${WRKSRC}/Apache/Session/SharedMem.pm \
 #		${WRKSRC}/lib/Apache/Session
