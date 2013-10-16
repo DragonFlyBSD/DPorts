@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: textproc/p5-XML-Atom-Syndication/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-Atom-Syndication/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Atom-Syndication
 PORTVERSION=	0.94.2
@@ -34,4 +34,5 @@ MAN3=	XML::Atom::Syndication.3 \
 	XML::Atom::Syndication::Text.3 \
 	XML::Atom::Syndication::Writer.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
