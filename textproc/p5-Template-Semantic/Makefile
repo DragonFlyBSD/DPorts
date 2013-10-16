@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Template-Semantic/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Template-Semantic/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Template-Semantic
 PORTVERSION=	0.09
@@ -24,4 +24,5 @@ MAN3=	Template::Semantic.3 \
 	Template::Semantic::Document.3 \
 	Template::Semantic::Filter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
