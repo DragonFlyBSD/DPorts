@@ -3,7 +3,7 @@
 @@ -1,20 +1,5 @@
 -#!/bin/bash
 +#! /bin/sh
-+# $FreeBSD: ports/french/tvdownloader/files/patch-tvdownloader.sh,v 1.2 2012/11/17 05:57:28 svnexp Exp $
++# $FreeBSD: french/tvdownloader/files/patch-tvdownloader.sh 300896 2012-07-14 13:54:48Z beat $
  
  cd "__DATADIR__/tvdownloader/"
 -

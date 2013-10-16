@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tvdownloader
-# Date created:		Fri 19 dec 2010
-# Whom:			thierry@pompo.net
-#
-# $FreeBSD: ports/french/tvdownloader/Makefile,v 1.7 2013/02/03 22:43:17 svnexp Exp $
-#
+# Created by: thierry@pompo.net
+# $FreeBSD: french/tvdownloader/Makefile 327728 2013-09-20 17:21:20Z bapt $
 
 PORTNAME=	tvdownloader
 PORTVERSION=	0.7.2
@@ -29,6 +25,7 @@ ALL_TARGET=	build
 
 LICENSE=	GPLv2
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|%%PYTHON_CMD%%|${PYTHON_CMD}|'	\
 		${WRKSRC}/tvdownloader.sh
