@@ -1,9 +1,5 @@
-# New ports collection makefile for:	KDE iconset Crystal Project
-# Date created:		Ter 11 Dez 2007 22:19:55 UTC
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/kde-icons-crystal-project/Makefile,v 1.2 2012/11/17 06:03:32 svnexp Exp $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: x11-themes/kde-icons-crystal-project/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	crystal-project
 PORTVERSION=	0.2007052000
@@ -12,4 +8,5 @@ DISTNAME=	crystal_project
 
 COMMENT=	KDE Crystal Project iconset
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../kde-icons-noia/Makefile.icons"
