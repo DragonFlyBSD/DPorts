@@ -1,9 +1,5 @@
-# New ports collection makefile for:	samba-nmblookup
-# Date created:				Mon Dec  5 17:00:56 JST 2005
-# Whom:					Hirohisa Yamaguchi <umq@ueo.co.jp>
-#
-# $FreeBSD: ports/net/samba-nmblookup/Makefile,v 1.6 2012/11/17 06:00:19 svnexp Exp $
-#
+# Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
+# $FreeBSD: net/samba-nmblookup/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTREVISION=		0
 PORTEPOCH=		0
@@ -27,6 +23,7 @@ WITHOUT_ADS=		yes
 
 ALL_TARGET=		bin/nmblookup
 
+NO_STAGE=	yes
 do-install:
 	-@${MKDIR} ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/nmblookup ${PREFIX}/bin
