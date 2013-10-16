@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: graphics/p5-URI-GoogleChart/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: graphics/p5-URI-GoogleChart/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	URI-GoogleChart
 PORTVERSION=	1.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	URI::GoogleChart.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
