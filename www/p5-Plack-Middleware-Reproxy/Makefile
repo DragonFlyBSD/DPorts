@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Reproxy/Makefile 326053 2013-09-02 18:23:34Z az $
+# $FreeBSD: www/p5-Plack-Middleware-Reproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Reproxy
 PORTVERSION=	0.00004
@@ -22,4 +22,5 @@ MAN3=	Plack::Middleware::Reproxy.3 \
 	Plack::Middleware::Reproxy::Callback.3 \
 	Plack::Middleware::Reproxy::Furl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
