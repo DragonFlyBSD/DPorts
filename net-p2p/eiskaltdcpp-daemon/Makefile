@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-daemon/Makefile 324851 2013-08-17 16:27:24Z gerald $
+# $FreeBSD: net-p2p/eiskaltdcpp-daemon/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	eiskaltdcpp-daemon
 PORTVERSION=	2.2.4
@@ -46,6 +46,7 @@ CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=ON
 BUILD_WRKSRC=	${WRKSRC}/nasdc
 INSTALL_WRKSRC=	${WRKSRC}/nasdc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXMLRPC}
