@@ -1,4 +1,4 @@
-# $FreeBSD: mail/roundcube-automatic_addressbook/Makefile 323144 2013-07-17 04:05:33Z miwi $
+# $FreeBSD: mail/roundcube-automatic_addressbook/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	automatic_addressbook
 PORTVERSION=	0.4
@@ -34,6 +34,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${WRKDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${WWWDIR}
 	@cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
