@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-table2clipboard
-# Date created:				2009-04-26
-# Whom:					Norikatsu Shigemura <nork@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-table2clipboard/Makefile,v 1.6 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Norikatsu Shigemura <nork@FreeBSD.org>
+# $FreeBSD: www/xpi-table2clipboard/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	table2clipboard
 PORTVERSION=	1.5.1
@@ -20,5 +16,6 @@ XPI_FILES=	chrome.manifest chrome/t2c.jar \
 		install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
