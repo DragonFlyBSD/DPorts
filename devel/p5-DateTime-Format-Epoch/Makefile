@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Epoch/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Epoch/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	DateTime-Format-Epoch
 PORTVERSION=	0.13
@@ -19,6 +19,7 @@ PORTSCOUT=	skipv:0.801
 
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 MAN3=		DateTime::Format::Epoch.3 \
 		DateTime::Format::Epoch::ActiveDirectory.3 \
