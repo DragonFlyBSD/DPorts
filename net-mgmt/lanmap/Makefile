@@ -1,9 +1,4 @@
-# New ports collection makefile for:	lanmap
-# Date created:		2008-08-21
-# Whom:				Bapt <baptiste.daroussin@gmail.com>
-#
-# $FreeBSD: net-mgmt/lanmap/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# $FreeBSD: net-mgmt/lanmap/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	lanmap
 DISTVERSION=	2006-03-07-rev81
@@ -20,6 +15,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 GNU_CONFIGURE=	yes
 USE_ZIP=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 post-extract:
 	${CHMOD} 755 ${WRKSRC}/configure
