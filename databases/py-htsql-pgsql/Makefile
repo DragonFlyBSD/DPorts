@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: databases/py-htsql-pgsql/Makefile 316728 2013-04-28 14:34:12Z koobs $
+# $FreeBSD: databases/py-htsql-pgsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	htsql-pgsql
 PORTVERSION=	2.3.3
@@ -18,4 +18,5 @@ USE_PYTHON=		2.6-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	${PORTNAME:tu}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
