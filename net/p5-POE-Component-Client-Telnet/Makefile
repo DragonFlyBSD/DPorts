@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-POE-Component-Client-Telnet
-# Date created:		2006-07-31
-# Whom:			Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-#
-# $FreeBSD: net/p5-POE-Component-Client-Telnet/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
+# $FreeBSD: net/p5-POE-Component-Client-Telnet/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Client-Telnet
 PORTVERSION=	0.06
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	POE::Component::Client::Telnet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
