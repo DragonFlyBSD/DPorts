@@ -1,6 +1,5 @@
-# Ports collection makefile for:	p5-PostScript-Simple
 # Created by: tobez
-# $FreeBSD: print/p5-PostScript-Simple/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: print/p5-PostScript-Simple/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	PostScript-Simple
 PORTVERSION=	0.07
@@ -16,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	PostScript::Simple.3 PostScript::Simple::EPS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
