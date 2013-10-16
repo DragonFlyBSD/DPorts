@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea@FreeBSD.org>
-# $FreeBSD: ports/www/trac-tickettemplate/Makefile,v 1.3 2012/12/26 11:45:08 svnexp Exp $
+# $FreeBSD: www/trac-tickettemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	tickettemplate
 PORTVERSION=	0.7
@@ -23,4 +23,5 @@ WRKSRC=		${WRKDIR}/trac${PORTNAME}plugin/0.11
 REL=		10605
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
