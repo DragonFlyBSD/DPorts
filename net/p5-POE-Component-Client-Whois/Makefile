@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Client-Whois/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-POE-Component-Client-Whois/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Client-Whois
 PORTVERSION=	1.28
@@ -20,4 +20,5 @@ MAN3=		POE::Component::Client::Whois.3 \
 		POE::Component::Client::Whois::IPBlks.3 \
 		POE::Component::Client::Whois::TLDList.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
