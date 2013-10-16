@@ -1,5 +1,5 @@
 # Created by: Oleg Pudeyev <oleg@bsdpower.com>
-# $FreeBSD: www/py-flask-flatpages/Makefile 323477 2013-07-22 16:41:20Z olivierd $
+# $FreeBSD: www/py-flask-flatpages/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Flask-FlatPages
 PORTVERSION=	0.5
@@ -17,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0:${PORTSDIR}/www/py-flask
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
