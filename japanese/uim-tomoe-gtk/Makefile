@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/uim-tomoe-gtk/Makefile 326373 2013-09-05 09:15:49Z bapt $
+# $FreeBSD: japanese/uim-tomoe-gtk/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	uim-tomoe-gtk
 PORTVERSION=	0.6.0
@@ -23,4 +23,5 @@ PLIST_FILES=	bin/uim-tomoe-gtk \
 
 CONFIGURE_ENV+=	GMSGFMT="${LOCALBASE}/bin/msgfmt"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
