@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: russian/p5-Lingua-RU-Charset/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: russian/p5-Lingua-RU-Charset/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	Lingua-RU-Charset
 PORTVERSION=	0.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Lingua::RU::Charset.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
