@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-XS-Object-Magic/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-XS-Object-Magic/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	XS-Object-Magic
 PORTVERSION=	0.04
@@ -12,13 +12,10 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Opaque, extensible XS pointer backed objects using sv_magic
 
 BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.302:${PORTSDIR}/devel/p5-ExtUtils-Depends
-
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		XS::Object::Magic.3
 
 .include <bsd.port.mk>
