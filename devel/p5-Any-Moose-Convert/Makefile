@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Any-Moose-Convert/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Any-Moose-Convert/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	Any-Moose-Convert
 PORTVERSION=	0.004
@@ -18,7 +18,5 @@ TEST_DEPENDS=	p5-Moose>=0.90:${PORTSDIR}/devel/p5-Moose \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Any::Moose::Convert.3
 
 .include <bsd.port.mk>
