@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/edid-decode/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: sysutils/edid-decode/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	edid-decode
 PORTVERSION=	0.1.20121128
@@ -15,6 +15,7 @@ USE_XZ=		yes
 
 PLIST_FILES=	bin/edid-decode
 
+NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
 
