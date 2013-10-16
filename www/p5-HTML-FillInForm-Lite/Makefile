@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-FillInForm-Lite/Makefile 325984 2013-09-02 12:52:42Z az $
+# $FreeBSD: www/p5-HTML-FillInForm-Lite/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-FillInForm-Lite
 PORTVERSION=	1.13
@@ -16,4 +16,5 @@ MAN3=	HTML::FillInForm::Lite.3 \
 	HTML::FillInForm::Lite::Compat.3 \
 	HTML::FillInForm::Lite::JA.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
