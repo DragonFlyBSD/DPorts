@@ -1,5 +1,5 @@
 # Created by: simond@irrelevant.org
-# $FreeBSD: devel/p5-Module-Reload-Sel/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-Module-Reload-Sel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Reload-Sel
 PORTVERSION=	1.02
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Module::Reload::Selective.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
