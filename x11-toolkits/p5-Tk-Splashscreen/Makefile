@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Splashscreen/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: x11-toolkits/p5-Tk-Splashscreen/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Tk-Splashscreen
 PORTVERSION=	1.0
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=	Tk::Splashscreen.3 \
 	Tk::waitVariableX.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
