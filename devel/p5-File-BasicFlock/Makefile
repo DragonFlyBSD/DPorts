@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-File-BasicFlock
-# Date created:				1996/10/24
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-File-BasicFlock/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: James FitzGibbon <jfitz@FreeBSD.org>
+# $FreeBSD: devel/p5-File-BasicFlock/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-BasicFlock
 PORTVERSION=	98.1202
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		File::BasicFlock.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
