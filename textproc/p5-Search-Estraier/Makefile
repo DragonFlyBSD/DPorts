@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Search-Estraier/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Search-Estraier/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Search-Estraier
 PORTVERSION=	0.09
@@ -21,6 +21,7 @@ USE_PERL5=	configure
 
 MAN3=		Search::Estraier.3
 
+NO_STAGE=	yes
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${PREFIX}/bin
 
