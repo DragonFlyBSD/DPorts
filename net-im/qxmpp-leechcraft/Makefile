@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qxmpp-leechcraft
-# Date created:				2012-01-07
-# Whom:				Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: net-im/qxmpp-leechcraft/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: net-im/qxmpp-leechcraft/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	qxmpp
 PORTVERSION=	0.3.61
@@ -24,6 +20,7 @@ USE_QT4=	gui moc_build network qmake_build rcc_build uic_build xml
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|pkgconfig|../libdata/&|' \
 		${WRKSRC}/src/src.pro
