@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-quickproxy
-# Date created:		5 June 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-quickproxy/Makefile,v 1.11 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-quickproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	quickproxy
 PORTVERSION=	2009.07.19
@@ -18,5 +14,6 @@ XPI_NUM=	1557
 XPI_FILES=	chrome/quickproxy.jar chrome.manifest install.rdf
 XPI_DIRS=	chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
