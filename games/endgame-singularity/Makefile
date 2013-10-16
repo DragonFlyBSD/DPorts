@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/games/endgame-singularity/Makefile,v 1.16 2012/11/27 03:08:25 svnexp Exp $
+# $FreeBSD: games/endgame-singularity/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	singularity
 PORTVERSION=	0.30c
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	MUSIC DOCS
 OPTIONS_DEFAULT=	MUSIC
 MUSIC_DESC=	Install original music pack
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMUSIC}
