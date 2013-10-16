@@ -1,9 +1,5 @@
-# New ports collection makefile for:    gdesklets-tasklist
-# Date created:                		04 January 2004
-# Whom:                    		Vincent Tantardini <vinc@FreeBSD-fr.org>
-#
-# $FreeBSD: x11/gdesklets-tasklist/Makefile 322581 2013-07-09 21:26:48Z pav $
-#
+# Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
+# $FreeBSD: x11/gdesklets-tasklist/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	tasklist
 PORTVERSION=	0.10
@@ -23,6 +19,7 @@ DATADIR=	${PREFIX}/share
 PKGMESSAGE=	${WRKDIR}/pkg-message
 WRKSRC=		${WRKDIR}/${PORTNAME}-desklet-${PORTVERSION}
 
+NO_STAGE=	yes
 do-build:
 	@${CAT} pkg-message | ${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; s|%%NAME%%|${NAME}|g' > ${PKGMESSAGE}
 
