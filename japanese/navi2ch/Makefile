@@ -1,5 +1,5 @@
 # Created by: FUJISHIMA Satsuki <sf@FreeBSD.org>
-# $FreeBSD: japanese/navi2ch/Makefile 317153 2013-05-02 21:41:04Z hrs $
+# $FreeBSD: japanese/navi2ch/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	navi2ch
 PORTVERSION=	1.8.4
@@ -30,6 +30,7 @@ LISPDIR=	${EMACS_VERSION_SITE_LISPDIR}
 OPTIONS_DEFINE=	DOCS X11
 OPTIONS_DEFAULT=DOCS X11
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
