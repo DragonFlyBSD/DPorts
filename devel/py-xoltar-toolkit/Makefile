@@ -1,9 +1,5 @@
-# Ports collection Makefile for:	py-functional
-# Date created:				10/03/2000
-# Whom:					nectar@FreeBSD.org
-#
-# $FreeBSD: devel/py-xoltar-toolkit/Makefile 301510 2012-07-25 06:32:06Z cs $
-#
+# Created by: nectar@FreeBSD.org
+# $FreeBSD: devel/py-xoltar-toolkit/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	xoltar-toolkit
 PORTVERSION=	2001.06.01
@@ -18,6 +14,7 @@ COMMENT=	Functional programming, lazy expressions, and thread pools for Python
 USE_PYTHON=	yes
 NO_WRKSUBDIR=	yes
 
+NO_STAGE=	yes
 do-build:
 	@ ${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 	@ ${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
