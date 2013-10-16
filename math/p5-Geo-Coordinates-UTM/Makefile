@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Geo-Coordinates-UTM/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Geo-Coordinates-UTM/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Geo-Coordinates-UTM
 PORTVERSION=	0.11
@@ -16,4 +16,5 @@ USE_PERL5=	configure
 
 MAN3=	Geo::Coordinates::UTM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
