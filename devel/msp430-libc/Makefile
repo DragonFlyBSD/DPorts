@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-libc/Makefile 319339 2013-05-29 04:46:28Z jgh $
+# $FreeBSD: devel/msp430-libc/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	libc
 PORTVERSION=	1.0.${LIBCVERSION}
@@ -44,6 +44,7 @@ MAKE_ENV=	PATH=${PREFIX}/bin:${PATH} PREFIX=${PREFIX}
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}libc-${LIBCVERSION}/src
 PATCH_WRKSRC=	${WRKDIR}/${PKGNAMEPREFIX}libc-${LIBCVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCC4}
