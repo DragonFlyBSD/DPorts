@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: textproc/p5-Excel-Template/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-Excel-Template/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Excel-Template
 PORTVERSION=	0.34
@@ -53,4 +53,5 @@ MAN3=		Excel::Template.3 \
 		Excel::Template::Iterator.3 \
 		Excel::Template::TextObject.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
