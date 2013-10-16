@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-Accessor-Children/Makefile 326865 2013-09-10 05:48:19Z az $
+# $FreeBSD: devel/p5-Class-Accessor-Children/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Accessor-Children
 PORTVERSION=	0.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 MAN3=		Class::Accessor::Children.3 \
 		Class::Accessor::Children::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
