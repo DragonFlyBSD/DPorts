@@ -87,15 +87,6 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
 		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi
-.if ${OSVERSION}>=800000
-RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
-.endif
-.if ${ARCH} == "i386"
-#RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
-.endif
-.if ${PORT_OPTIONS:MMAPI}
-RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi
-.endif
 .endif
 .endif
 
