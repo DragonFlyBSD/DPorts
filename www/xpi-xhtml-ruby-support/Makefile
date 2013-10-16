@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-xhtml-ruby-support
-# Date created:		2008-05-21
-# Whom:			Anatoly Borodin <anatoly.borodin@gmail.com>
-#
-# $FreeBSD: ports/www/xpi-xhtml-ruby-support/Makefile,v 1.3 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
+# $FreeBSD: www/xpi-xhtml-ruby-support/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xhtml-ruby-support
 PORTVERSION=	3.0.2009060901
@@ -20,5 +16,6 @@ XPI_FILES=	chrome/rubysupport.jar chrome.manifest \
 		defaults/preferences/rubysupport.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
