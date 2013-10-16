@@ -1,38 +1,18 @@
-# New ports collection makefile for:	py-parsedatetime
-# Date created:		Feb. 24, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/devel/py-parsedatetime/Makefile,v 1.8 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: devel/py-parsedatetime/Makefile 327942 2013-09-23 06:47:08Z lwhsu $
 
 PORTNAME=	parsedatetime
-PORTVERSION=	0.8.7
+PORTVERSION=	1.1.2
 CATEGORIES=	devel python
-MASTER_SITES=	http://code-bear.com/code/parsedatetime/ \
-		CHEESESHOP \
-		${MASTER_SITE_GOOGLE_CODE} \
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Python module for parsing 'human readable' date/time expressions
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
-EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
-EXAMPLES=	README.txt basic.py with_locale.py
-
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${CP} -R ${WRKSRC}/docs/ ${DOCSDIR}
-.endif
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
-.for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${EXAMPLESDIR}
-.endfor
-.endif
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
