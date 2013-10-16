@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/thewidgetfactory/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: x11-themes/thewidgetfactory/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	thewidgetfactory
 PORTVERSION=	0.2.1
@@ -17,6 +17,7 @@ USES=		pkgconfig
 
 PLIST_FILES=	bin/twf
 
+NO_STAGE=	yes
 post-patch:
 # Fix console warnings of "GtkSpinButton: setting an adjustment with non-zero
 # page size is deprecated"
