@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: cad/kicad/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: cad/kicad/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	kicad
 DISTVERSION=	2010-05-05-BZR2356
@@ -38,6 +38,7 @@ WRKSRC=		${WRKDIR}/${SFNAME}
 
 PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S|^${PREFIX}/||}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
