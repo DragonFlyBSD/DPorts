@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: textproc/cdif/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/cdif/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		cdif
 PORTVERSION=		1.19
@@ -15,6 +15,7 @@ USES=		perl5
 NO_WRKSUBDIR=		yes
 NO_BUILD=		yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}/${DISTNAME}.dist
