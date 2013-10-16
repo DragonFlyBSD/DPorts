@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: ports/net-mgmt/percona-monitoring-plugins/Makefile,v 1.4 2013/02/21 21:48:26 svnexp Exp $
+# $FreeBSD: net-mgmt/percona-monitoring-plugins/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	percona-monitoring-plugins
 PORTVERSION=	1.0.2
@@ -28,6 +28,7 @@ PORTDOCS=	Changelog
 
 CACTIDIR?=	share/cacti
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
