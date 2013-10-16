@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Perlbal::Plugin::PSGI
-# Date created:		23 Nov 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Perlbal-Plugin-PSGI/Makefile 326139 2013-09-03 12:27:09Z az $
-#
+# $FreeBSD: www/p5-Perlbal-Plugin-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Perlbal-Plugin-PSGI
 PORTVERSION=	0.03
@@ -27,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Perlbal::Plugin::PSGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
