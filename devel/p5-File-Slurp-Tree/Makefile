@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Slurp-Tree/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-File-Slurp-Tree/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-Slurp-Tree
 PORTVERSION=	1.24
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		File::Slurp::Tree.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
