@@ -1,9 +1,5 @@
-# New ports collection makefile for:   tcptraceroute-devel
-# Date created:        12 December 2007
-# Whom:                josh.carroll@gmail.com
-#
-# $FreeBSD: ports/net/tcptraceroute-devel/Makefile,v 1.14 2012/11/17 06:00:23 svnexp Exp $
-#
+# Created by: josh.carroll@gmail.com
+# $FreeBSD: net/tcptraceroute-devel/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	tcptraceroute
 DISTVERSION=	1.5beta7
@@ -30,6 +26,7 @@ CONFIGURE_ARGS=		--with-libpcap=/usr --bindir=${PREFIX}/sbin
 
 INSTALL_TARGET=	install-exec-am install-man
 
+NO_STAGE=	yes
 post-install:
 	@${CHMOD} u+s ${PREFIX}/sbin/tcptraceroute
 .if !defined(NOPORTDOCS)
