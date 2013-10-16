@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/p5-String-Similarity/Makefile 326822 2013-09-09 16:55:31Z az $
+# $FreeBSD: devel/p5-String-Similarity/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	String-Similarity
 PORTVERSION=	1.04
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		String::Similarity.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
