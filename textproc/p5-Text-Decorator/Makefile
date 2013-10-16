@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Decorator/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: textproc/p5-Text-Decorator/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Decorator
 PORTVERSION=	1.65
@@ -27,4 +27,5 @@ MAN3=	Text::Decorator.3 \
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
