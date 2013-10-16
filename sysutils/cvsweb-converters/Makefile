@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cvsweb-converters
-# Date created:		4 Mar 2001
-# Whom:			Martin Kammerhofer <mkamm@gmx.net>
-#
-# $FreeBSD: sysutils/cvsweb-converters/Makefile 321187 2013-06-18 13:49:02Z az $
-#
+# Created by: Martin Kammerhofer <mkamm@gmx.net>
+# $FreeBSD: sysutils/cvsweb-converters/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	cvsweb-converters
 PORTVERSION=	0.3.4
@@ -20,15 +16,16 @@ RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-Time-modules>=0:${PORTSDIR}/devel/p5-Time-modules
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
+USES=		perl5
 NO_BUILD=	yes
 USE_BZIP2=	yes
-USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/commitlog2cvsweb bin/cvsrdiff2cvsweb \
 		bin/cvsuplog2cvsweb etc/cvsweb-converters.conf.sample
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
