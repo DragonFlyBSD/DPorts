@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Template-Moustache
-# Date created:		2011-01-13
-# Whom:			Kurt Lidl <kurt.lidl@cello.com>
-#
-# $FreeBSD: www/p5-Template-Mustache/Makefile 326139 2013-09-03 12:27:09Z az $
-#
+# Created by: Kurt Lidl <kurt.lidl@cello.com>
+# $FreeBSD: www/p5-Template-Mustache/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Mustache
 PORTVERSION=	v0.5.1
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	Template::Mustache.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
