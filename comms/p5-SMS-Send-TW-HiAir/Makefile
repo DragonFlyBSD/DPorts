@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: comms/p5-SMS-Send-TW-HiAir/Makefile 327035 2013-09-12 06:27:41Z az $
+# $FreeBSD: comms/p5-SMS-Send-TW-HiAir/Makefile 327714 2013-09-20 16:03:29Z bapt $
 
 PORTNAME=	SMS-Send-TW-HiAir
 PORTVERSION=	0.02
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		SMS::Send::TW::HiAir.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
