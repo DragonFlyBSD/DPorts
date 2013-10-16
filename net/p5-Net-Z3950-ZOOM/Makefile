@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Z3950-ZOOM
-# Date created:				22 December 2006
-# Whom:                			Dmitry Sivachenko <demon@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Net-Z3950-ZOOM/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
+# $FreeBSD: net/p5-Net-Z3950-ZOOM/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Z3950-ZOOM
 PORTVERSION=	1.28
@@ -25,4 +21,5 @@ MAN3=		Net::Z3950::ZOOM.3 ZOOM.3
 
 CONFLICTS=	p5-Net-Z3950-[0-9]*
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
