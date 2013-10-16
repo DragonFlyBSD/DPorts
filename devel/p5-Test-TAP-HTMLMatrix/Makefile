@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Test-TAP-HTMLMatrix/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-TAP-HTMLMatrix/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-TAP-HTMLMatrix
 PORTVERSION=	0.09
@@ -23,6 +23,7 @@ MAN3=		Test::TAP::HTMLMatrix.3 Test::TAP::Model::Colorful.3 \
 		Test::TAP::Model::File::Visual.3 \
 		Test::TAP::Model::Subtest::Visual.3 Test::TAP::Model::Visual.3
 
+NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/example.pl
 
