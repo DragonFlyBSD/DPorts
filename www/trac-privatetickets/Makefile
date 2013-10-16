@@ -1,9 +1,5 @@
-# New ports collection makefile for:	trac-privatetickets
-# Date created:		Feb. 20, 2007
-# Whom:			Li-Wen Hsu <lwhsu@lwhsu.org>
-#
-# $FreeBSD: ports/www/trac-privatetickets/Makefile,v 1.10 2012/11/17 06:03:08 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
+# $FreeBSD: www/trac-privatetickets/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	privatetickets
 PORTVERSION=	2.0.2
@@ -24,4 +20,5 @@ PYDISTUTILS_PKGNAME=	TracPrivateTickets
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
