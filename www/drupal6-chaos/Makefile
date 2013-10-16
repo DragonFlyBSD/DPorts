@@ -1,5 +1,5 @@
 # Created by: anderson@cnpm.embrapa.br
-# $FreeBSD: www/drupal6-chaos/Makefile 322743 2013-07-11 05:53:09Z bapt $
+# $FreeBSD: www/drupal6-chaos/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ctools
 DISTVERSION=	6.x-1.6
@@ -368,4 +368,5 @@ DOC_DIRS=	ctools_plugin_example
 DOC_FILES=	ctools_plugin_example/README.txt LICENSE.txt \
 		CHANGELOG.txt API.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
