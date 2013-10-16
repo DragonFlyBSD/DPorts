@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: science/xfce4-equake-plugin/Makefile 326984 2013-09-11 15:04:45Z olivierd $
-#
+# $FreeBSD: science/xfce4-equake-plugin/Makefile 327767 2013-09-20 22:48:30Z bapt $
 
 PORTNAME=	xfce4-equake-plugin
 PORTVERSION=	1.3.3
@@ -19,4 +18,5 @@ USE_XFCE=	configenv libmenu libutil panel
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
