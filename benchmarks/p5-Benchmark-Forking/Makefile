@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 324222 2013-08-04 12:30:54Z az $
+# $FreeBSD: benchmarks/p5-Benchmark-Forking/Makefile 327708 2013-09-20 15:52:44Z bapt $
 
 PORTNAME=	Benchmark-Forking
 PORTVERSION=	1.01
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Benchmark::Forking.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
