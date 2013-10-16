@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: mail/p5-Mail-SPF-Query/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-SPF-Query/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-SPF-Query
 PORTVERSION=	1.999.1
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN1=		spfd.1 spfquery.1
 MAN3=		Mail::SPF::Query.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
