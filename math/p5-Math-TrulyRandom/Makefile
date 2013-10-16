@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: math/p5-Math-TrulyRandom/Makefile 327032 2013-09-12 05:53:03Z az $
+# $FreeBSD: math/p5-Math-TrulyRandom/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-TrulyRandom
 PORTVERSION=	1.0
@@ -15,6 +15,7 @@ USE_PERL5=	configure
 
 MAN3=		Math::TrulyRandom.3
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${INSTALL} -d -m 0755 ${DOCSDIR}
