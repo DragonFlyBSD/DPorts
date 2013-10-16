@@ -1,14 +1,12 @@
-# New ports collection makefile for:	php52-interbase
-# Date created:			17 Apr 2010
-# Whom:				Alex Keda <admin@lissyara.su>
-#
-# $FreeBSD: ports/databases/php52-interbase/Makefile,v 1.2 2012/11/17 05:55:19 svnexp Exp $
-#
+# Created by: Alex Keda <admin@lissyara.su>
+# $FreeBSD: databases/php52-interbase/Makefile 328900 2013-09-30 23:42:21Z acm $
 
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MASTERDIR=	${.CURDIR}/../../lang/php52
 
 PKGNAMESUFFIX=	-interbase
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
