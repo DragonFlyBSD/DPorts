@@ -1,9 +1,5 @@
-# New ports collection makefile for: libutp
-# Date created: July 26, 2012
-# Whom:		Mikhail Teterin <mi@aldan.algebra.com>
-#
-# $FreeBSD: net/libutp/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Mikhail Teterin <mi@aldan.algebra.com>
+# $FreeBSD: net/libutp/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	bittorrent-libutp
 PORTVERSION=	0.20120526
@@ -21,6 +17,7 @@ MAKEFILE=	${FILESDIR}/BSDmakefile
 USE_LDCONFIG=	yes
 # GitHub will issue a 302 redirect, no way around that, so we
 # have to allow fetch(1) to follow the redirect, which is normally
+NO_STAGE=	yes
 # prevented by the -A flag:
 FETCH_ARGS=	-Fpr
 
