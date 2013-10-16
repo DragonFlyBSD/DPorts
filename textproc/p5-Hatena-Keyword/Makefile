@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: textproc/p5-Hatena-Keyword/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-Hatena-Keyword/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Hatena-Keyword
 PORTVERSION=	0.05
@@ -32,4 +32,5 @@ USE_PERL5=	configure
 
 MAN3=		Hatena::Keyword.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
