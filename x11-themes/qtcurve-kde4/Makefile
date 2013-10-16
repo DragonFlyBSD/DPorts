@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/qtcurve-kde4/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-themes/qtcurve-kde4/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.14
@@ -15,4 +15,5 @@ USES=		cmake
 USE_QT4=	corelib qmake_build uic_build moc_build rcc_build
 USE_KDE4=	kdelibs workspace kdehier kdeprefix automoc4
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
