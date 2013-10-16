@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: ports/www/trac-wysiwyg/Makefile,v 1.20 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-wysiwyg/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wysiwyg
 DISTVERSION=	0.4.${SVN_REV}
@@ -22,6 +22,7 @@ PYDISTUTILS_PKGNAME=	TracWysiwyg
 PYDISTUTILS_PKGVERSION=	0.12.${PORTVERSION:R}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(SVN_REV)
