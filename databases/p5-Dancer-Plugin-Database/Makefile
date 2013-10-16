@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-Dancer-Plugin-Database/Makefile 325859 2013-09-01 14:51:03Z tobez $
+# $FreeBSD: databases/p5-Dancer-Plugin-Database/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Dancer-Plugin-Database
 PORTVERSION=	2.08
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 P5MAN3=		Dancer::Plugin::Database.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
