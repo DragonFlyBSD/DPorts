@@ -1,5 +1,5 @@
 # Created by: Thomas E. Zander <riggs@rrr.de>
-# $FreeBSD: sysutils/freesbie/Makefile 316600 2013-04-26 12:35:50Z bapt $
+# $FreeBSD: sysutils/freesbie/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	freesbie
 PORTVERSION=	2.0.20070710
@@ -19,6 +19,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}2
 
+NO_STAGE=	yes
 do-install:
 	@ ${MKDIR} ${DATADIR}
 	@ ${RM} ${WRKSRC}/scripts/iso.sh.orig
