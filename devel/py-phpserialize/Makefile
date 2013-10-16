@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-phpserialize
-# Date created:		2008-07-23
-# Whom:			Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: ports/devel/py-phpserialize/Makefile,v 1.4 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: devel/py-phpserialize/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	phpserialize
 PORTVERSION=	0.4
@@ -23,6 +19,7 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PHPSerialize
 
+NO_STAGE=	yes
 post-extract:
 	${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|g' ${FILESDIR}/setup.py \
 		> ${WRKSRC}/setup.py
