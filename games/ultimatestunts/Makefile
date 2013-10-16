@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/ultimatestunts/Makefile 316596 2013-04-26 10:44:28Z ak $
+# $FreeBSD: games/ultimatestunts/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	ultimatestunts
 PORTVERSION=	0.7.7.1
@@ -30,6 +30,7 @@ LDFLAGS+=	$$(pkgconf --libs-only-L sdl) -L${LOCALBASE}/lib
 
 PORT_VERBS=	${PORTNAME} ustunts
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
