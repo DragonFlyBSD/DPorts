@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 327314 2013-09-14 19:43:27Z matthew $
+# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 328879 2013-09-30 21:53:55Z matthew $
 
 PORTNAME=	RT-Extension-LDAPImport
 PORTVERSION=	0.35
@@ -36,7 +36,6 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 
 MAN3PREFIX=	${PREFIX}
 
-MAN3=		RT::Extension::LDAPImport.3
 PLIST_SUB+=	RTHOME=share/rt${RT_VER}
 
 # Note: You can install using an arbitrary $PREFIX but only if it
