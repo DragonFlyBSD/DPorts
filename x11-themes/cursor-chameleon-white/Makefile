@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: x11-themes/cursor-chameleon-white/Makefile 326965 2013-09-11 11:59:59Z vg $
+# $FreeBSD: x11-themes/cursor-chameleon-white/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	chameleon
 PORTVERSION=	0.5
@@ -16,5 +16,6 @@ LICENSE=	GPLv2
 
 THEME=		White
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../cursor-chameleon-white/files/Makefile.common"
 .include <bsd.port.mk>
