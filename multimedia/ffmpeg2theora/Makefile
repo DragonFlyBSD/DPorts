@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg2theora/Makefile 326840 2013-09-09 18:54:28Z antoine $
+# $FreeBSD: multimedia/ffmpeg2theora/Makefile 329144 2013-10-03 06:42:21Z bapt $
 
 PORTNAME=	ffmpeg2theora
 PORTVERSION=	0.29
@@ -11,20 +11,17 @@ COMMENT=	Reencode many media file formats to Ogg Theora
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	avcodec:${PORTSDIR}/multimedia/ffmpeg \
-		kate:${PORTSDIR}/multimedia/libkate \
-		theora:${PORTSDIR}/multimedia/libtheora
+LIB_DEPENDS=	libavcodec.so:${PORTSDIR}/multimedia/ffmpeg \
+		libkate.so:${PORTSDIR}/multimedia/libkate \
+		libtheora.so:${PORTSDIR}/multimedia/libtheora
 
 USE_BZIP2=	yes
-USES=		iconv pkgconfig
-USE_SCONS=	yes
-SCONS_BUILDENV=	CC="${CC}" CCFLAGS="${CFLAGS}" \
-		APPEND_CCFLAGS="${CPPFLAGS}" APPEND_LINKFLAGS="${LDFLAGS}"
+USES=		iconv pkgconfig scons
+MAKE_ENV=	APPEND_CCFLAGS="${CPPFLAGS}" APPEND_LINKFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-MAN1=		ffmpeg2theora.1
-PLIST_FILES=	bin/ffmpeg2theora
+PLIST_FILES=	bin/ffmpeg2theora man/man1/ffmpeg2theora.1.gz
 
 .include <bsd.port.mk>
