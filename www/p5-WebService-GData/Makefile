@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-WebService-GData/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WebService-GData/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-GData
 PORTVERSION=	0.0501
@@ -48,4 +48,5 @@ MAN3=	WebService::GData::Error.3 \
 	WebService::GData::YouTube::Feed::PlaylistLink.3 \
 	WebService::GData::YouTube::Feed::VideoMessage.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
