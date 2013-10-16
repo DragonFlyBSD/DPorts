@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/mythplugin-mythweb/Makefile 325445 2013-08-27 13:37:21Z decke $
+# $FreeBSD: www/mythplugin-mythweb/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mythweb
 PORTVERSION=	0.26.1
@@ -25,6 +25,7 @@ REINPLACE_ARGS=	-i ""
 OPTIONS_DEFINE=	APACHE LIGHTTPD
 OPTIONS_DEFAULT=	APACHE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
