@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-pdf_viewer/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: mail/claws-mail-pdf_viewer/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	pdf_viewer
 PORTREVISION=	0
