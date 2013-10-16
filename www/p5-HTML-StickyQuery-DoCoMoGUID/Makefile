@@ -1,9 +1,4 @@
-# New ports collection makefile for:	HTML::StickyQuery::DoCoMoGUID
-# Date created:		22 Feb 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTML-StickyQuery-DoCoMoGUID/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# $FreeBSD: www/p5-HTML-StickyQuery-DoCoMoGUID/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-StickyQuery-DoCoMoGUID
 PORTVERSION=	0.03
@@ -24,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	HTML::StickyQuery::DoCoMoGUID.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
