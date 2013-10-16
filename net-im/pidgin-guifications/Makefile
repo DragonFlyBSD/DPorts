@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: net-im/pidgin-guifications/Makefile 326513 2013-09-06 15:28:27Z bapt $
+# $FreeBSD: net-im/pidgin-guifications/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgin-guifications
 PORTVERSION=	2.16
@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
