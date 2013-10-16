@@ -1,9 +1,5 @@
-# Ports collection makefile for:	nic
-# Date created:			Fri Mar 16, 2007
-# Whom:				Beech Rintoul <beech@FreeBSD.org>
-#
-# $FreeBSD: net-mgmt/horde3-nic/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Beech Rintoul <beech@FreeBSD.org>
+# $FreeBSD: net-mgmt/horde3-nic/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	nic
 DISTVERSIONPREFIX=
@@ -19,5 +15,6 @@ USE_HORDE=	base pkg-message
 USES=		gettext
 PORTDOCS=	CHANGES CREDITS INSTALL TODO README
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/horde3-base/bsd.horde.mk"
 .include <bsd.port.mk>
