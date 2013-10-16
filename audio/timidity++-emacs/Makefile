@@ -1,9 +1,5 @@
-# New ports collection makefile for:	TiMidity++
-# Date created:		27 Feb 1999
-# Whom:			Yoichi Asai <yatt@luna2.org>
-#
-# $FreeBSD: ports/audio/timidity++-emacs/Makefile,v 1.35 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: Yoichi Asai <yatt@luna2.org>
+# $FreeBSD: audio/timidity++-emacs/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PKGNAMESUFFIX=	-emacs
 
@@ -13,5 +9,6 @@ COMMENT=	Emacs interface for TiMidity++
 MASTERDIR=	${.CURDIR}/../../audio/timidity++
 
 PLIST_FILES=	${TIMID_LIBDIR}/interface_e.so ${ELISPDIR}/timidity.el
+NO_STAGE=	yes
 
 .include "${MASTERDIR}/Makefile"
