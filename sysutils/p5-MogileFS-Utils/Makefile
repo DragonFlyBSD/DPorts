@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: sysutils/p5-MogileFS-Utils/Makefile 326575 2013-09-07 07:44:26Z az $
+# $FreeBSD: sysutils/p5-MogileFS-Utils/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	MogileFS-Utils
 PORTVERSION=	2.27
@@ -31,6 +31,7 @@ MAN1=		mogadm.1 \
 		mogupload.1
 MAN3=		MogileFS::Utils.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/NAME/ s|MogileFS-Utils|MogileFS::Utils|' ${WRKSRC}/Makefile.PL
 
