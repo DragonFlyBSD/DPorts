@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: devel/pear-HTML_Template_PHPLIB/Makefile 318025 2013-05-13 09:15:05Z miwi $
+# $FreeBSD: devel/pear-HTML_Template_PHPLIB/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_Template_PHPLIB
 PORTVERSION=	1.5.2
@@ -22,6 +22,7 @@ do-install-tests-msg: .USE
 	@${ECHO_MSG} "     (These tests also require PEAR::PHPUnit - see"
 	@${ECHO_MSG} "     <http://pear.php.net/package/PHPUnit>;;;)."
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
