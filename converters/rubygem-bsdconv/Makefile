@@ -1,8 +1,8 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/rubygem-bsdconv/Makefile 317064 2013-05-01 23:19:46Z bdrewery $
+# $FreeBSD: converters/rubygem-bsdconv/Makefile 327830 2013-09-21 15:42:02Z sunpoet $
 
 PORTNAME=	bsdconv
-PORTVERSION=	10.0.0
+PORTVERSION=	11.1.0
 CATEGORIES=	converters rubygems
 MASTER_SITES=	RG
 DISTNAME=	ruby-${PORTNAME}-${PORTVERSION}
@@ -12,12 +12,13 @@ COMMENT=	Ruby wrapper for bsdconv
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	bsdconv:${PORTSDIR}/converters/bsdconv
+LIB_DEPENDS=	libbsdconv.so:${PORTSDIR}/converters/bsdconv
 
 CONFIGURE_ARGS+=--with-bsdconv-dir=${LOCALBASE}
 
 GEM_NAME=	${DISTNAME}
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
