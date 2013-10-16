@@ -1,9 +1,5 @@
-# New ports collection makefile for:	glpi-plugins-fusioninventory-server
-# Date created:		2011-02-18
-# Whom:			Gvozdikov Veniamin <g.veniamin@googlemail.com>
-#
-# $FreeBSD: net-mgmt/glpi-plugins-fusioninventory-server/Makefile 323455 2013-07-22 14:34:22Z vg $
-#
+# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
+# $FreeBSD: net-mgmt/glpi-plugins-fusioninventory-server/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	server
 PORTVERSION=	${GLPI_VER}.${FUNV_VER}
@@ -34,6 +30,7 @@ SNMP_DESC=	SNMP support
 
 OPTIONS_DEFAULT=INVENTORY
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MINVENTORY}
