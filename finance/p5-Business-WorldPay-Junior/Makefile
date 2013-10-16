@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-WorldPay-Junior/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: finance/p5-Business-WorldPay-Junior/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-WorldPay-Junior
 PORTVERSION=	1.07
@@ -20,6 +20,7 @@ USE_PERL5=	configure patch
 
 MAN3=		Business::WorldPay::Junior.3
 
+NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
 		-e '$$_="" if /use 5/;' \
