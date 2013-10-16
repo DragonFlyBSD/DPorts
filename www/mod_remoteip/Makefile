@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: www/mod_remoteip/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_remoteip/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_remoteip
 PORTVERSION=	2.3.5.a
@@ -17,4 +17,5 @@ AP_GENPLIST=	yes
 
 SRC_FILE=	modules/metadata/${PORTNAME}.c
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
