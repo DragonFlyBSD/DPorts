@@ -1,5 +1,5 @@
 # Created by: brock@cotcomsol.com
-# $FreeBSD: net-mgmt/argus-monitor/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: net-mgmt/argus-monitor/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	argus-monitor
 PORTVERSION=	20100109
@@ -32,6 +32,7 @@ OPTIONS_DEFAULT=GD
 QPAGE_DESC=	qpage support
 FPING_DESC=	fping support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQPAGE}
