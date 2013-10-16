@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kde-thumbnailer-chm/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: misc/kde-thumbnailer-chm/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	kde-thumbnailer-chm
 PORTVERSION=	0.2
@@ -19,4 +19,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_FILES=	lib/kde4/chmthumbnail.so \
 		share/kde4/services/chmthumbnail.desktop
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
