@@ -1,5 +1,5 @@
 # Created by: kmoore
-# $FreeBSD: x11-themes/kde4-windeco-nitrogen/Makefile 314960 2013-03-22 20:06:14Z makc $
+# $FreeBSD: x11-themes/kde4-windeco-nitrogen/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	nitrogen
 PORTVERSION=	3.3.3
@@ -17,4 +17,5 @@ USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
 USES=		cmake
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}-Source
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
