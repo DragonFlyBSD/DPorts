@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11-fonts/sourcesanspro-ttf/Makefile 316547 2013-04-26 02:42:32Z sunpoet $
+# $FreeBSD: x11-fonts/sourcesanspro-ttf/Makefile 329311 2013-10-04 14:17:46Z bapt $
 
 PORTNAME=	sourcesanspro-ttf
 PORTVERSION=	1.050
@@ -13,7 +13,7 @@ COMMENT=	A set of fonts by Adobe designed for user interfaces
 LICENSE=	OFL
 LICENSE_NAME=	SIL OPEN FONT LICENSE Version 1.1
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-LICENSE_PERMS=	auto-accept
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale	\
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir
@@ -39,13 +39,8 @@ do-build:
 	cd ${WRKSRC}/ && ${MKFONTDIR_CMD}
 
 do-install:
-	${MKDIR} ${FONTDIR}
+	${MKDIR} ${STAGEDIR}${FONTDIR}
 	cd ${WRKSRC}/ &&	\
-	${INSTALL_DATA} ${INSTDAT} TTF/*.ttf ${FONTDIR}
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+	${INSTALL_DATA} ${INSTDAT} TTF/*.ttf ${STAGEDIR}${FONTDIR}
 
 .include <bsd.port.mk>
