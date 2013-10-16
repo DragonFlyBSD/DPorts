@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-Class-DBI-Lite/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-Class-DBI-Lite/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-Lite
 PORTVERSION=	1.034
@@ -39,4 +39,5 @@ MAN3=		Class::DBI::Lite.3 \
 		Class::DBI::Lite::TableInfo.3 \
 		Class::DBI::Lite::Tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
