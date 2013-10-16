@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: chinese/ibus-pinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
@@ -33,6 +33,7 @@ ANDROID_DB_DESC=	Build Android DB
 OPENPHRASE_DB_DESC=	Build Open Phrase DB
 OPENCC_DESC=		Use opencc
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANDROID_DB}
