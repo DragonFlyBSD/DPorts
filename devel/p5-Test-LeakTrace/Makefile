@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-LeakTrace/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Test-LeakTrace/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
 
 PORTNAME=	Test-LeakTrace
 PORTVERSION=	0.14
@@ -12,9 +12,5 @@ COMMENT=	Traces memory leaks
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Test::LeakTrace.3 \
-		Test::LeakTrace::JA.3 \
-		Test::LeakTrace::Script.3
 
 .include <bsd.port.mk>
