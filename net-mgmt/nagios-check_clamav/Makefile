@@ -1,9 +1,5 @@
-# New ports collection makefile for:	nagios-check_clamav
-# Date created:				Fri 12 Jun 2009
-# Whom:					Alexey V. Degtyarev
-#
-# $FreeBSD: net-mgmt/nagios-check_clamav/Makefile 326167 2013-09-03 16:18:49Z az $
-#
+# Created by: Alexey V. Degtyarev
+# $FreeBSD: net-mgmt/nagios-check_clamav/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_clamav
 PORTVERSION=	1.2
@@ -25,6 +21,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/nagios/utils.pm:${PORTSDIR}/net-mgmt/nagios-p
 
 PLIST_FILES=	libexec/nagios/check_clamav
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/check_clamav \
 		${PREFIX}/libexec/nagios/check_clamav
