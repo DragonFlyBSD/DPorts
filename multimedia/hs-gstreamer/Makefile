@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/hs-gstreamer/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: multimedia/hs-gstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.12.1.2
@@ -17,5 +17,6 @@ USE_CABAL=	glib>=0.12 mtl
 
 BUILD_DEPENDS+=	gstreamer-plugins>=0.10:${PORTSDIR}/multimedia/gstreamer-plugins
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
