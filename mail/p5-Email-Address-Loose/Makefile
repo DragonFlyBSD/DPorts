@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-Address-Loose/Makefile 326257 2013-09-04 07:19:56Z az $
+# $FreeBSD: mail/p5-Email-Address-Loose/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Address-Loose
 PORTVERSION=	0.10
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Email::Address::Loose.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
