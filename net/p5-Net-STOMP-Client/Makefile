@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-STOMP-Client/Makefile 326506 2013-09-06 14:30:23Z az $
+# $FreeBSD: net/p5-Net-STOMP-Client/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-STOMP-Client
 PORTVERSION=	2.0
@@ -30,4 +30,5 @@ MAN3=	Net::STOMP::Client.3 \
 	Net::STOMP::Client::Tutorial.3 \
 	Net::STOMP::Client::Version.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
