@@ -1,5 +1,5 @@
 # Created by: NIIMI Satoshi <sa2c@sa2c.net>
-# $FreeBSD: japanese/font-vlgothic/Makefile 326328 2013-09-04 21:15:21Z hrs $
+# $FreeBSD: japanese/font-vlgothic/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	vlgothic
 PORTVERSION=	20130607
@@ -31,6 +31,7 @@ X_FONTSDIR=	lib/X11/fonts
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
