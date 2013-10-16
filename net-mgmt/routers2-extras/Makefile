@@ -1,9 +1,5 @@
-# New ports collection makefile for:	routers2
-# Date created:				December 14th 2006
-# Whom:	      				Xavier Beaudouin <kiwi@oav.net>
-#
-# $FreeBSD: net-mgmt/routers2-extras/Makefile 326244 2013-09-04 03:24:02Z az $
-#
+# Created by: Xavier Beaudouin <kiwi@oav.net>
+# $FreeBSD: net-mgmt/routers2-extras/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	routers2-extras
 PORTVERSION=	2.19
@@ -25,6 +21,7 @@ USES=		perl5
 
 NO_BUILD=	YES
 
+NO_STAGE=	yes
 post-patch:
 	for file in buildwan.pl cfgmaker_host.pl 95.pl ; do \
 		${REINPLACE_CMD} -e 's|%%PERL%%|${PERL}|' ${WRKSRC}/$$file; \
