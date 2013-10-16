@@ -1,5 +1,5 @@
 # Created by: Dean Povey <povey@wedgetail.com>
-# $FreeBSD: deskutils/taskjuggler/Makefile 317322 2013-05-04 14:29:12Z crees $
+# $FreeBSD: deskutils/taskjuggler/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	taskjuggler
 PORTVERSION=	3.4.0
@@ -18,6 +18,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${RUBY_VER} == 1.8
