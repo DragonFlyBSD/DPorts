@@ -1,10 +1,11 @@
-# Created by:	Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql90-contrib/Makefile 313635 2013-03-08 11:32:11Z bapt $
+# Created by: Palle Girgensohn <girgen@pingpong.net>
+# $FreeBSD: databases/postgresql90-contrib/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
 CATEGORIES=	databases
-PKGNAMESUFFIX=	-contrib
+PKGNAMESUFFIX?=        ${DISTV:S/.//}-contrib
+DISTV= ${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The contrib utilities from the PostgreSQL distribution
@@ -22,6 +23,7 @@ BUILD_DIRS=	src/port contrib
 INSTALL_DIRS=	contrib
 
 SLAVE_ONLY=	yes
+COMPONENT=	-contrib
 CONFIGURE_ARGS+=--with-libxslt --with-libxml --with-openssl
 LDFLAGS+=	${PTHREAD_LIBS} -L${PREFIX}/lib
 
@@ -29,6 +31,7 @@ OPTIONS_DEFINE=	OSSP_UUID
 OSSP_UUID_DESC=	Enable / disable ossp-uuid support
 OPTIONS_DEFAULT=	OSSP_UUID
 
+NO_STAGE=	yes
 post-install:
 	@- ${INSTALL_DATA} ${WRKSRC}/contrib/README ${DOCSDIR}/contrib/README
 
