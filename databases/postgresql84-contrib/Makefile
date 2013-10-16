@@ -1,10 +1,11 @@
-# Created by:	Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql84-contrib/Makefile 315734 2013-04-05 15:26:49Z girgen $
+# Created by: Palle Girgensohn <girgen@pingpong.net>
+# $FreeBSD: databases/postgresql84-contrib/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
 CATEGORIES=	databases
-PKGNAMESUFFIX=	-contrib
+PKGNAMESUFFIX?=	${DISTV:S/.//}-contrib
+DISTV=	${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The contrib utilities from the PostgreSQL distribution
@@ -21,8 +22,10 @@ BUILD_DIRS=	src/port contrib
 INSTALL_DIRS=	contrib
 
 SLAVE_ONLY=	yes
+COMPONENT=	-contrib
 CONFIGURE_ARGS+=--with-libxslt --with-libxml --with-openssl
 
+NO_STAGE=	yes
 post-install:
 	@- ${INSTALL_DATA} ${WRKSRC}/contrib/README ${DOCSDIR}/contrib/README
 
