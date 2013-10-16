@@ -1,5 +1,5 @@
 # Created by: Emil Smolenski <am@raisa.eu.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	FusionInventory-Agent-Task-NetDiscovery
 PORTVERSION=	1.5
@@ -27,6 +27,7 @@ MAN3=		FusionInventory::Agent::Task::NetDiscovery.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
