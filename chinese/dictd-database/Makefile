@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dict-zh
-# Date created:		25 Oct 1999
-# Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-#
-# $FreeBSD: ports/chinese/dictd-database/Makefile,v 1.29 2012/11/17 05:54:56 svnexp Exp $
-#
+# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
+# $FreeBSD: chinese/dictd-database/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
 
 PORTNAME=	dictd-database
 PORTVERSION=	1.6
@@ -24,15 +20,10 @@ SUB_FILES=	pkg-message
 DICTFILES=	cedict pydict moecomp netterm
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/dict
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/dict
 	for f in ${DICTFILES}; do \
-	  ${INSTALL_DATA} ${WRKSRC}/$${f}.dict.dz ${PREFIX}/lib/dict; \
-	  ${INSTALL_DATA} ${WRKSRC}/$${f}.index ${PREFIX}/lib/dict; \
+	  ${INSTALL_DATA} ${WRKSRC}/$${f}.dict.dz ${STAGEDIR}${PREFIX}/lib/dict; \
+	  ${INSTALL_DATA} ${WRKSRC}/$${f}.index ${STAGEDIR}${PREFIX}/lib/dict; \
 	done
-
-post-install:
-	@${ECHO}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO}
 
 .include <bsd.port.mk>
