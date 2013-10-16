@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: security/p5-Digest-SHA-PurePerl/Makefile 313756 2013-03-09 21:22:52Z ashish $
+# $FreeBSD: security/p5-Digest-SHA-PurePerl/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Digest-SHA-PurePerl
 PORTVERSION=	5.81
@@ -10,11 +10,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for SHA-1/224/256/384/512 in pure Perl
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 PORTEXAMPLES=	dups
 MAN3=	Digest::SHA::PurePerl.3
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
