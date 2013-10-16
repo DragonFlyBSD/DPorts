@@ -1,8 +1,5 @@
-# New ports collection makefile for:	p5-Template-Simple
-# Date created:		02 December 2011
-# Whom:			Ken McGlothlen <ken.mcglothlen@gmail.com>
-#
-# $FreeBSD: www/p5-Template-Simple/Makefile 326161 2013-09-03 15:28:40Z az $
+# Created by: Ken McGlothlen <ken.mcglothlen@gmail.com>
+# $FreeBSD: www/p5-Template-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Simple
 PORTVERSION=	0.06
@@ -23,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Template::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
