@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Compress::LeadingBlankSpaces
-# Date created:				25 May 2004
-# Whom:					Bill Swingle <unfurl@freebsd.org>
-#
-# $FreeBSD: www/p5-Compress-LeadingBlankSpaces/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Bill Swingle <unfurl@FreeBSD.org>
+# $FreeBSD: www/p5-Compress-LeadingBlankSpaces/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Compress-LeadingBlankSpaces
 PORTVERSION=	0.06
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Compress::LeadingBlankSpaces.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
