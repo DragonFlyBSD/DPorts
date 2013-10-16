@@ -1,5 +1,5 @@
 # Created by: Takuya Tsuchida <tsucchi@cpan.org>
-# $FreeBSD: devel/p5-Test-Module-Used/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-Test-Module-Used/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Module-Used
 PORTVERSION=	0.2.3
@@ -23,4 +23,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Test::Module::Used.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
