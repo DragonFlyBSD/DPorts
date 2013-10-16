@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: www/p5-Google-Code-Upload/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/p5-Google-Code-Upload/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	Google-Code-Upload
 PORTVERSION=	0.07
@@ -22,9 +22,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		googlecode_upload.pl.1
-MAN3=		Google::Code::Upload.3
 
 .include <bsd.port.pre.mk>
 
