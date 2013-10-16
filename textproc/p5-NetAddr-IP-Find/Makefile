@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-NetAddr-IP-Find
-# Date created:				May 14th 2002
-# Whom:					Alex Kapranoff <kappa@freebsd.org.ua>
-#
-# $FreeBSD: textproc/p5-NetAddr-IP-Find/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Alex Kapranoff <kappa@FreeBSD.org.ua>
+# $FreeBSD: textproc/p5-NetAddr-IP-Find/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	NetAddr-IP-Find
 PORTVERSION=	0.03
@@ -22,4 +18,5 @@ INSTALL_TARGET=	pure_install
 
 MAN3=		NetAddr::IP::Find.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
