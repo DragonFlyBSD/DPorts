@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/xmms-mailnotify/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/xmms-mailnotify/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	xmms-mailnotify
 PORTVERSION=	0.2.0
@@ -18,6 +18,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
 USES=		gmake
+NO_STAGE=	yes
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
 
