@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: net/p5-ResourcePool-Resource-Net-LDAP/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-ResourcePool-Resource-Net-LDAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ResourcePool-Resource-Net-LDAP
 PORTVERSION=	1.0002
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		ResourcePool::Resource::Net::LDAP.3 ResourcePool::Factory::Net::LDAP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
