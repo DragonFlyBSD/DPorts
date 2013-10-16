@@ -84,11 +84,9 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		swfdec-player:${PORTSDIR}/multimedia/swfdec-gnome \
 		vinagre:${PORTSDIR}/net/vinagre \
 		brasero:${PORTSDIR}/sysutils/brasero \
-		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
 		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi \
-		gpk-application:${PORTSDIR}/ports-mgmt/gnome-packagekit \
 		ekiga:${PORTSDIR}/net/ekiga3
 .if ${OSVERSION}>=800000
 RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
