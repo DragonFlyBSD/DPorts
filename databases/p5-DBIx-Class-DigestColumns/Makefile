@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-DigestColumns/Makefile 324007 2013-07-31 06:54:09Z az $
+# $FreeBSD: databases/p5-DBIx-Class-DigestColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-DigestColumns
 PORTVERSION=	0.06000
@@ -19,6 +19,7 @@ USE_PERL5=	modbuild extract
 
 MAN3=	DBIx::Class::DigestColumns.3
 
+NO_STAGE=	yes
 post-extract:
 	@${PERL} -i.bak -ne 'print unless /^\s*build_requires/ .. /},$$/ or /^\s*recommends/ .. /},$$/ ' ${WRKSRC}/Build.PL
 
