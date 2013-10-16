@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-locked-folder/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: deskutils/nautilus-locked-folder/Makefile 327718 2013-09-20 16:21:37Z bapt $
 #   $MCom: ports/deskutils/nautilus-locked-folder/Makefile,v 1.12 2009/11/28 05:58:59 mezz Exp $
 
 PORTNAME=	nautilus-locked-folder
@@ -26,6 +26,7 @@ PLIST_FILES=	lib/nautilus/extensions-2.0/libnautilus-locked-folder.a \
 		lib/nautilus/extensions-2.0/libnautilus-locked-folder.la \
 		lib/nautilus/extensions-2.0/libnautilus-locked-folder.so
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/icons/hicolor/32x32/stock/data/|${LOCALBASE}/share/icons/hicolor/32x32/stock/data/|' \
 		${WRKSRC}/src/lockedfolder-extension.c
