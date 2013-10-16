@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@netnews.NCTU.edu.tw>
-# $FreeBSD: www/p5-WebService-NoPaste/Makefile 323742 2013-07-26 18:02:28Z az $
+# $FreeBSD: www/p5-WebService-NoPaste/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WebService-NoPaste
 PORTVERSION=	0.03
@@ -15,8 +15,8 @@ BUILD_DEPENDS=	p5-IO-All>=0:${PORTSDIR}/devel/p5-IO-All \
 		p5-Spiffy>=0:${PORTSDIR}/devel/p5-Spiffy
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
-USES=		shebangfix
+USES=		shebangfix perl5
+USE_PERL5=	configure
 SHEBANG_FILES=	nopaste
 
 MAN3=		WebService::NoPaste.3
@@ -24,6 +24,7 @@ MAN3=		WebService::NoPaste.3
 OPTIONS_DEFINE=	X11
 X11_DESC=	X11 Clipboard support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
