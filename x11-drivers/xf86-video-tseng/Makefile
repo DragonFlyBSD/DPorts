@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-tseng/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-tseng/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-tseng
 PORTVERSION=	1.2.5
@@ -11,4 +11,5 @@ COMMENT=	X.Org tseng display driver
 XORG_CAT=	driver
 MAN4=		tseng.4x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
