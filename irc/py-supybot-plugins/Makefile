@@ -1,9 +1,5 @@
-# New ports collection makefile for:	supybot-plugins
-# Date created:		2005-07-12
-# Whom:			Radim Kolar
-#
-# $FreeBSD: ports/irc/py-supybot-plugins/Makefile,v 1.10 2012/11/17 05:58:30 svnexp Exp $
-#
+# Created by: Radim Kolar
+# $FreeBSD: irc/py-supybot-plugins/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	supybot-plugins
 PORTVERSION=	20060723
@@ -21,6 +17,7 @@ RUN_DEPENDS=	supybot:${PORTSDIR}/irc/py-supybot
 USE_PYTHON=	2.5+
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-extract:
 # Delete, because it now included in irc/py-supybot
 .for data in BadWords Dunno Success _darcs
