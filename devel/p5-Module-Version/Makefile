@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: devel/p5-Module-Version/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Module-Version/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	Module-Version
 PORTVERSION=	0.12
@@ -12,8 +12,5 @@ COMMENT=	Get module versions
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		mversion.1
-MAN3=		Module::Version.3 Module::Version::App.3
 
 .include <bsd.port.mk>
