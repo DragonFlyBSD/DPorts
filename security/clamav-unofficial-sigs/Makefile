@@ -1,5 +1,5 @@
 # Created by: Marko Njezic <sf@maxempire.com>
-# $FreeBSD: security/clamav-unofficial-sigs/Makefile 326407 2013-09-05 15:33:39Z wg $
+# $FreeBSD: security/clamav-unofficial-sigs/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	clamav-unofficial-sigs
 PORTVERSION=	3.7.2
@@ -31,6 +31,7 @@ SED_CONF=	-e 's|%%CLAM_DBS%%|/var/db/clamav|g' \
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
