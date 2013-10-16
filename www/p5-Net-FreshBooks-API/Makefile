@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Net-FreshBooks-API/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Net-FreshBooks-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Net-FreshBooks-API
 PORTVERSION=	0.23
@@ -61,6 +61,7 @@ MAN3=		Net::FreshBooks::API.3 \
 		Net::FreshBooks::API::Role::LineItem.3 \
 		Net::FreshBooks::API::Role::SendBy.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
