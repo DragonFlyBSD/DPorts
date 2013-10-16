@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/pecl-zendopcache/Makefile 320474 2013-06-10 13:36:44Z ale $
+# $FreeBSD: www/pecl-zendopcache/Makefile 328594 2013-09-28 16:48:34Z mm $
 
 PORTNAME=	zendopcache
 PORTVERSION=	7.0.2
@@ -23,6 +23,9 @@ PHP_MODNAME=	opcache
 
 PORTDOCS=	*
 
+IGNORE_WITH_PHP=	55
+
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
