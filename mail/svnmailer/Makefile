@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: mail/svnmailer/Makefile 316671 2013-04-27 15:57:16Z rm $
+# $FreeBSD: mail/svnmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	svnmailer
 DISTVERSION=	1.1.0-dev-r1373
@@ -23,6 +23,7 @@ MAN1=		svn-mailer.1
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
