@@ -1,9 +1,5 @@
-# New ports collection makefile for:   pidgin-pidgimpd
-# Date created:		21 September 2008
-# Whom:			hrkfrd@googlemail.com
-#
-# $FreeBSD: net-im/pidgin-pidgimpd/Makefile 316662 2013-04-27 11:59:28Z mva $
-#
+# Created by: hrkfrd@googlemail.com
+# $FreeBSD: net-im/pidgin-pidgimpd/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgimpd
 PORTVERSION=	1.1.1
@@ -28,4 +24,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/pidgin/pidgimpd.so \
 		lib/pidgin/pidgimpd.la
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
