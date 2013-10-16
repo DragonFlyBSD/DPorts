@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: sysutils/xfce4-mount-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: sysutils/xfce4-mount-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfce4-mount-plugin
 PORTVERSION=	0.6.4
@@ -22,4 +21,5 @@ USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_XFCE=	configenv libmenu panel
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
