@@ -1,5 +1,5 @@
 # Created by: Oleg R. Muhutdinov <mor@WhiteLuna.com>
-# $FreeBSD: net-p2p/p5-Net-BitTorrent-File/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-p2p/p5-Net-BitTorrent-File/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	Net-BitTorrent-File
 PORTVERSION=	1.02
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::BitTorrent::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
