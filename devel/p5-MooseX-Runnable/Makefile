@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Runnable/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Runnable/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MooseX-Runnable
 PORTVERSION=	0.03
@@ -18,19 +18,11 @@ BUILD_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Params-Util>=0:${PORTSDIR}/devel/p5-Params-Util \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-TableDriven>=0:${PORTSDIR}/devel/p5-Test-TableDriven \
 		p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		mx-run.1
-MAN3=		MooseX::Runnable.3 \
-		MooseX::Runnable::Invocation::Plugin::Debug.3 \
-		MooseX::Runnable::Invocation::Scheme::MooseX::Getopt.3 \
-		MooseX::Runnable::Run.3 \
-		MooseX::Runnable::Util::ArgParser.3
 
 .include <bsd.port.mk>
