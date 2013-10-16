@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: ports/x11-themes/cursor-neutral-white-theme/Makefile,v 1.3 2012/11/17 06:03:30 svnexp Exp $
+# $FreeBSD: x11-themes/cursor-neutral-white-theme/Makefile 328662 2013-09-29 09:58:16Z gblach $
 
 PORTNAME=	cursor-neutral-white-theme
 DISTVERSION=	1.1
@@ -16,8 +16,8 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/Neutral++_White
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/icons/Neutral++_White/cursors
-	cd ${WRKSRC}/cursors \
-		&& ${INSTALL_DATA} * ${PREFIX}/lib/X11/icons/Neutral++_White/cursors
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/Neutral++_White/cursors
+	cd ${WRKSRC}/cursors && ${INSTALL_DATA} * \
+		${STAGEDIR}${PREFIX}/lib/X11/icons/Neutral++_White/cursors
 
 .include <bsd.port.mk>
