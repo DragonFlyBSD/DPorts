@@ -1,5 +1,5 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: ports/www/rubygem-eventmachine_httpserver/Makefile,v 1.1 2013/01/23 02:56:29 svnexp Exp $
+# $FreeBSD: www/rubygem-eventmachine_httpserver/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	eventmachine_httpserver
 PORTVERSION=	0.2.1
@@ -13,4 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
