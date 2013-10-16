@@ -1,9 +1,5 @@
-# New ports collection makefile for:   semantic
-# Date created:                30 December 2001
-# Whom:                        Kimura Fuyuki <fuyuki@mj.0038.net>
-#
-# $FreeBSD: ports/devel/semantic/Makefile,v 1.25 2012/11/17 05:57:02 svnexp Exp $
-#
+# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
+# $FreeBSD: devel/semantic/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	semantic
 PORTVERSION=	1.4.4
@@ -36,6 +32,7 @@ INFO=		semantic
 
 LISPDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/semantic
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "New version of semantic is now in devel/cedet."
