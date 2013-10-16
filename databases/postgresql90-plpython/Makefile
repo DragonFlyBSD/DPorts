@@ -1,8 +1,9 @@
-# $FreeBSD: ports/databases/postgresql90-plpython/Makefile,v 1.2 2013/01/22 18:44:30 svnexp Exp $
+# $FreeBSD: databases/postgresql90-plpython/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 CATEGORIES=	databases python
-PKGNAMESUFFIX=	-plpython
+PKGNAMESUFFIX?=	${DISTV:S/.//}-plpython
+DISTV= ${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	Module for using Python to write SQL functions
@@ -17,6 +18,7 @@ USE_PYTHON?=	yes
 PYTHON_MAJOR_VER=	${PYTHON_VER:R}
 CONFIGURE_ARGS=	--with-python
 PLIST_SUB=	PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER}
+COMPONENT=	-plpython
 
 .if ${PYTHON_MAJOR_VER} == 3
 PLIST_SUB+=	PYTHON3=""
@@ -28,4 +30,5 @@ BUILD_DIRS=	src/backend src/pl/plpython
 INSTALL_DIRS=	src/pl/plpython
 SLAVE_ONLY=	yes
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
