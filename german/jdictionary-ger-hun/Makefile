@@ -1,5 +1,5 @@
 # Created by: hq@FreeBSD.org
-# $FreeBSD: ports/german/jdictionary-ger-hun/Makefile,v 1.6 2013/01/09 20:04:46 svnexp Exp $
+# $FreeBSD: german/jdictionary-ger-hun/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	jdictionary-ger-hun
 PORTVERSION=	1.4
@@ -12,4 +12,5 @@ COMMENT=	JDictionary plugin: German-Hungarian dictionary
 
 MASTERDIR=	${.CURDIR}/../../textproc/jdictionary
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.plugin"
