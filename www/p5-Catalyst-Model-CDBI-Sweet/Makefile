@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: www/p5-Catalyst-Model-CDBI-Sweet/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Model-CDBI-Sweet/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Model-CDBI-Sweet
 PORTVERSION=	0.06
@@ -20,4 +20,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Catalyst::Model::CDBI::Sweet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
