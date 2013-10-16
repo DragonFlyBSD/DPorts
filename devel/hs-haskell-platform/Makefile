@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-haskell-platform/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-haskell-platform/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	haskell-platform
 PORTVERSION=	2013.2.0.0
@@ -46,5 +46,6 @@ USE_CABAL=	async==2.0.1.4 \
 		alex==3.0.5 \
 		happy==1.18.10_2
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
