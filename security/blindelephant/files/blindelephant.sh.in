@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/security/blindelephant/files/blindelephant.sh.in,v 1.2 2012/11/17 06:01:01 svnexp Exp $
+# $FreeBSD: security/blindelephant/files/blindelephant.sh.in 300897 2012-07-14 14:29:18Z beat $
 
 cd %%PATH%%
 exec %%PYTHON_CMD%% %%PATH%%/BlindElephant.py "$@"
