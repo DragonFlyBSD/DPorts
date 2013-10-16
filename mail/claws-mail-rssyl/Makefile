@@ -1,5 +1,5 @@
 # Created by: v.velox@vvelox.net
-# $FreeBSD: mail/claws-mail-rssyl/Makefile 317877 2013-05-11 14:10:28Z pawel $
+# $FreeBSD: mail/claws-mail-rssyl/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	rssyl
 PORTREVISION=	0
