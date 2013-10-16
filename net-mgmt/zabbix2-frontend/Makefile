@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: net-mgmt/zabbix2-frontend/Makefile 321851 2013-06-27 06:27:25Z bapt $
+# $FreeBSD: net-mgmt/zabbix2-frontend/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	zabbix2
 PKGNAMESUFFIX=	-frontend
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	MYSQL MYSQLI PGSQL SQLITE
 OPTIONS_DEFAULT=	MYSQL MYSQLI
 MYSQLI_DESC=	MySQLI backend
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
