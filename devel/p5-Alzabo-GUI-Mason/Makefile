@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Alzabo-GUI-Mason/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Alzabo-GUI-Mason/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	Alzabo-GUI-Mason
 PORTVERSION=	0.12.01
@@ -20,6 +20,7 @@ USES=		perl5
 USE_PERL5=	modbuild
 CONFIGURE_ENV=	DATADIR=${DATADIR}
 MAKE_ENV=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
+NO_STAGE=	yes
 
 MAN3=		Alzabo::GUI::Mason.3 Alzabo::GUI::Mason::Config.3
 
