@@ -1,9 +1,4 @@
-# New ports collection makefile for:	plasma-applet-teacooker
-# Date Created:				2008-10-03
-# Whom:					Jason E. Hale <bsdkaffee@gmail.com>
-#
-# $FreeBSD: deskutils/plasma-applet-teacooker/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# $FreeBSD: deskutils/plasma-applet-teacooker/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	teacooker
 PORTVERSION=	0.3.0
@@ -23,4 +18,5 @@ USE_QT4=	gui dbus network opengl svg webkit xml \
 
 WRKSRC=		${WRKDIR}/TeaCooker
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
