@@ -1,9 +1,5 @@
-# New ports collection makefile for: koi8rPS
-# Date created:         22 July 1999
-# Whom:                 mi@aldan.algebra.com
-#
-# $FreeBSD: ports/ukrainian/monacofonts/Makefile,v 1.6 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: mi@aldan.algebra.com
+# $FreeBSD: ukrainian/monacofonts/Makefile 327774 2013-09-20 23:19:33Z bapt $
 
 PORTNAME=	monaco
 PORTVERSION=	1.0
@@ -29,6 +25,7 @@ MAKEFILE=	${FILESDIR}/Makefile
 MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}" MKDIR="${MKDIR}"
 MAKE_ARGS+=	-j 2
 
+NO_STAGE=	yes
 post-install:
 	${CAT} ${PKGMESSAGE}
 
