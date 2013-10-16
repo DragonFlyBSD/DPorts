@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: ports/hungarian/jdictionary-eng-hun-expr/Makefile,v 1.9 2013/01/09 20:04:49 svnexp Exp $
+# $FreeBSD: hungarian/jdictionary-eng-hun-expr/Makefile 327735 2013-09-20 18:43:02Z bapt $
 
 PORTNAME=	jdictionary-eng-hun-expr
 PORTVERSION=	1.4
@@ -12,4 +12,5 @@ COMMENT=	JDictionary plugin: English-Hungarian expression dictionary
 
 MASTERDIR=	${.CURDIR}/../../textproc/jdictionary
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.plugin"
