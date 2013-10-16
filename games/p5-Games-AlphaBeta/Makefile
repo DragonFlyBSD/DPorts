@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: games/p5-Games-AlphaBeta/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: games/p5-Games-AlphaBeta/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	Games-AlphaBeta
 PORTVERSION=	0.4.7
@@ -19,4 +19,5 @@ MAN3=		Games::AlphaBeta.3 Games::AlphaBeta::Position.3 \
 		Games::AlphaBeta::Reversi.3 \
 		Games::Sequential.3 Games::Sequential::Position.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
