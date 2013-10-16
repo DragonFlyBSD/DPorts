@@ -1,11 +1,8 @@
-# New ports collection makefile for:	papersize-default-letter
-# Date created:		March 2, 2012
-# Whom:			hrs
-#
-# $FreeBSD: ports/print/papersize-default-letter/Makefile,v 1.3 2012/11/17 06:00:53 svnexp Exp $
-#
+# Created by: hrs
+# $FreeBSD: print/papersize-default-letter/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 MASTERDIR=	${.CURDIR}/../../print/papersize-default-a4
 DEFAULTPAPERSIZE=	letter
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
