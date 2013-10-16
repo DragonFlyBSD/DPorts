@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Finance::TW::EmergingQuote
 # Created by: ijliao
-# $FreeBSD: finance/p5-Finance-TW-EmergingQuote/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Finance-TW-EmergingQuote/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Finance-TW-EmergingQuote
 PORTVERSION=	0.26
@@ -20,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	Finance::TW::EmergingQuote.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
