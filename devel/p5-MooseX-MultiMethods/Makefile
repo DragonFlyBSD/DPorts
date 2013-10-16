@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-MultiMethods/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: devel/p5-MooseX-MultiMethods/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-MultiMethods
 PORTVERSION=	0.10
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 MAN3=		MooseX::MultiMethods.3 \
 		MooseX::MultiMethods::Meta::Method.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
