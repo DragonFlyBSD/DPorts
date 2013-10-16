@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-paperclip/Makefile 322721 2013-07-10 17:32:49Z zi $
+# $FreeBSD: devel/rubygem-paperclip/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	paperclip
 PORTVERSION=	3.4.2
@@ -19,4 +19,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
