@@ -1,4 +1,4 @@
-# $FreeBSD: ports/net-im/jabber-pyicq/Makefile,v 1.41 2012/11/17 06:00:27 svnexp Exp $
+# $FreeBSD: net-im/jabber-pyicq/Makefile 329634 2013-10-06 22:19:27Z marino $
 
 PORTNAME=	pyicq
 PORTVERSION=	0.8.1.5
@@ -41,6 +41,7 @@ INST_DIR=	${PREFIX}/lib/jabber/${PORTNAME}
 
 PORTDOCS=	NEWS README README.jabberd14 README.jabberd2 README.external
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJABBER}
