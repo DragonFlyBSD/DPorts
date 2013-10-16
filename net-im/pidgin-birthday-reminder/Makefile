@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net-im/pidgin-birthday-reminder/Makefile 325748 2013-08-31 00:18:11Z bapt $
+# $FreeBSD: net-im/pidgin-birthday-reminder/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pidgin-birthday-reminder
 PORTVERSION=	1.7
@@ -21,4 +21,5 @@ USE_GNOME=	intltool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
