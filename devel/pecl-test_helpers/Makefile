@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pecl-test_helpers/Makefile,v 1.1 2012/12/29 12:37:19 svnexp Exp $
+# $FreeBSD: devel/pecl-test_helpers/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	test_helpers
 PORTVERSION=	1.1.0
@@ -19,6 +19,7 @@ SUB_FILES=	pkg-message
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
