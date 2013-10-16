@@ -1,5 +1,5 @@
 # Created by: Matthew Fuller <fullermd@over-yonder.net>
-# $FreeBSD: textproc/p5-Text-WikiCreole/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-Text-WikiCreole/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Text-WikiCreole
 PORTVERSION=		0.07
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Text::WikiCreole.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
