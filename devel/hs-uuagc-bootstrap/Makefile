@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-uuagc-bootstrap/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-uuagc-bootstrap/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	uuagc-bootstrap
 PORTVERSION=	0.9.40.2
@@ -14,5 +14,6 @@ USE_CABAL=	haskell-src-exts>=1.11.1 mtl>=1.1.1.1 uulib>=0.9.14
 
 EXECUTABLE=	uuagc-bootstrap
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
