@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Class-DBI-Plugin-Pager/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/p5-Class-DBI-Plugin-Pager/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-Plugin-Pager
 PORTVERSION=	0.566
@@ -21,4 +21,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Class::DBI::Plugin::Pager.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
