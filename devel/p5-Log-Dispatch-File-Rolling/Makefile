@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Dispatch-File-Rolling/Makefile 326815 2013-09-09 15:01:27Z az $
+# $FreeBSD: devel/p5-Log-Dispatch-File-Rolling/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Dispatch-File-Rolling
 PORTVERSION=	1.06
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::File::Rolling.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
