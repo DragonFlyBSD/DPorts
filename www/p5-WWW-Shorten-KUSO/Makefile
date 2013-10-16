@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Shorten-KUSO
-# Date created:				2006-07-16
-# Whom:					Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-WWW-Shorten-KUSO/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-WWW-Shorten-KUSO/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Shorten-KUSO
 PORTVERSION=	0.3
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Shorten::KUSO.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
