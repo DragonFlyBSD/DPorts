@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	Acme-GuessNumber
 PORTVERSION=	0.04
@@ -20,4 +20,5 @@ PLIST_FILES=	%%SITE_PERL%%/Acme/GuessNumber.pm \
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Acme-GuessNumber \
 		%%SITE_PERL%%/Acme
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
