@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-AnyEvent-CouchDB/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: databases/p5-AnyEvent-CouchDB/Makefile 328811 2013-09-30 15:27:05Z sunpoet $
 
 PORTNAME=	AnyEvent-CouchDB
 PORTVERSION=	1.31
@@ -24,11 +24,5 @@ BUILD_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		couchdb-push.1
-MAN3=		AnyEvent::CouchDB.3 \
-		AnyEvent::CouchDB::Database.3 \
-		AnyEvent::CouchDB::Exceptions.3 \
-		AnyEvent::CouchDB::Stream.3
 
 .include <bsd.port.mk>
