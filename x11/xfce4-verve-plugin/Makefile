@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11/xfce4-verve-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: x11/xfce4-verve-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	verve-plugin
 PORTVERSION=	1.0.0
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=	--disable-debug
 
 OPTIONS_DEFINE=	NLS DBUS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
