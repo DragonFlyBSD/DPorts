@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bzapi/Makefile 326644 2013-09-07 15:51:29Z az $
+# $FreeBSD: devel/bzapi/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	bzapi
 DISTVERSION=	165:82e75bdd00be
@@ -32,6 +32,7 @@ USES=		perl5
 USE_PERL5=	configure
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/*.pl	${PREFIX}/bin
 	@(cd ${WRKSRC}/extension/BzAPI; ${COPYTREE_SHARE} . ${PREFIX}/www/bugzilla/extensions/BzAPI)
