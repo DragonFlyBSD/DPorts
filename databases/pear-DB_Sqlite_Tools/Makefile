@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/pear-DB_Sqlite_Tools/Makefile 314402 2013-03-17 08:08:23Z miwi $
+# $FreeBSD: databases/pear-DB_Sqlite_Tools/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DB_Sqlite_Tools
 PORTVERSION=	0.1.7
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
