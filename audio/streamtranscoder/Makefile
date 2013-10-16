@@ -1,9 +1,5 @@
-# New ports collection makefile for:	streamtranscoder
-# Date created:				29 August 2005
-# Whom:					Mark Kane <mark@mkproductions.org>
-#
-# $FreeBSD: audio/streamtranscoder/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
-#
+# Created by: Mark Kane <mark@mkproductions.org>
+# $FreeBSD: audio/streamtranscoder/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	streamtranscoder
 PORTVERSION=	1.2.8
@@ -20,6 +16,7 @@ LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
 		curl:${PORTSDIR}/ftp/curl \
 		mp3lame:${PORTSDIR}/audio/lame
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
