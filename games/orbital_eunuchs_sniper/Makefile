@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Orbital Eunuchs Sniper
-# Date created:			21 Jan 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
-# $FreeBSD: games/orbital_eunuchs_sniper/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
+# $FreeBSD: games/orbital_eunuchs_sniper/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	orbital_eunuchs_sniper
 PORTVERSION=	1.30
@@ -24,6 +20,7 @@ PORTDOCS=	AUTHORS ChangeLog README TODO readme.txt
 CPPFLAGS+=	`${SDL_CONFIG} --cflags`
 LDFLAGS+=	`${SDL_CONFIG} --libs`
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
