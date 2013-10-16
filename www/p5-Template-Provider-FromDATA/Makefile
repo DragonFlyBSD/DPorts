@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: ports/www/p5-Template-Provider-FromDATA/Makefile,v 1.9 2013/02/13 06:44:08 svnexp Exp $
+# $FreeBSD: www/p5-Template-Provider-FromDATA/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Provider-FromDATA
 PORTVERSION=	0.13
@@ -17,10 +17,12 @@ BUILD_DEPENDS=	p5-Template-Toolkit>=2.15:${PORTSDIR}/www/p5-Template-Toolkit \
 		p5-Class-Accessor>0:${PORTSDIR}/devel/p5-Class-Accessor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Template::Provider::FromDATA.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501502
