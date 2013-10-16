@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-extraplaylist/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/gmpc-extraplaylist/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gmpc-extraplaylist
 PORTVERSION=	0.20.0
@@ -17,6 +17,7 @@ RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	glib20 gtk20 libglade2 libxml2
 
 PLIST_FILES=	lib/gmpc/plugins/libextraplaylist.la \
