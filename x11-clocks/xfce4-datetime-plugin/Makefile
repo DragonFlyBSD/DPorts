@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11-clocks/xfce4-datetime-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: x11-clocks/xfce4-datetime-plugin/Makefile 327778 2013-09-20 23:44:55Z bapt $
 
 PORTNAME=	xfce4-datetime-plugin
 PORTVERSION=	0.6.2
@@ -20,4 +20,5 @@ USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
 USES=		pkgconfig gettext
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
