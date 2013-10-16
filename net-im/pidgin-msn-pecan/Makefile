@@ -1,5 +1,5 @@
 # Created by: hrkfrd@gmail.com
-# $FreeBSD: net-im/pidgin-msn-pecan/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: net-im/pidgin-msn-pecan/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	msn-pecan
 PORTVERSION=	0.1.0.r1
@@ -22,6 +22,7 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		gettext gmake pkgconfig
 
+NO_STAGE=	yes
 post-install:
 	${GMAKE} -C ${WRKSRC} install_locales
 
