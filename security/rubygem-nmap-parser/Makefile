@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: security/rubygem-nmap-parser/Makefile 321640 2013-06-23 14:24:07Z swills $
+# $FreeBSD: security/rubygem-nmap-parser/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	nmap-parser
 PORTVERSION=	0.3.5
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
