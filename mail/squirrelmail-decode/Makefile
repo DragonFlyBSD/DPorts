@@ -1,6 +1,5 @@
-# Created by:	Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: ports/mail/squirrelmail-decode/Makefile,v 1.1 2012/11/18 08:10:05 svnexp Exp $
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
+# $FreeBSD: mail/squirrelmail-decode/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=		squirrelmail-decode
 PORTVERSION=	1.2
@@ -23,6 +22,7 @@ PORTDOCS=		*
 SQUIRRELDIR?=	${PREFIX}/www/squirrelmail
 PLIST_SUB=		SQUIRRELDIR="${SQUIRRELDIR:S,^${PREFIX}/,,}"
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${SQUIRRELDIR}/functions/decode
 .for DIR in eastasia x-mac
