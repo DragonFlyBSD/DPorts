@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-mutouch/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-input-mutouch/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-input-mutouch
 PORTVERSION=	1.3.0
@@ -16,4 +16,5 @@ IGNORE=		does not build with xorg-server 1.7.7
 
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
