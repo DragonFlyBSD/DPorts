@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <lon_kamikaze@gmx.de>
-# $FreeBSD: sysutils/bsdadminscripts/Makefile 321873 2013-06-27 08:32:59Z lme $
+# $FreeBSD: sysutils/bsdadminscripts/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	bsdadminscripts
 PORTVERSION=	6.1.1
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 NO_BUILD=	yes
 MANCOMPRESSED=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
