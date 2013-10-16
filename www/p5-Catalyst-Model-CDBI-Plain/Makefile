@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Catalyst-Model-CDBI-Plain
-# Date created:		Oct 22, 2006
-# Whom:			kuriyama@FreeBSD.org
-#
-# $FreeBSD: www/p5-Catalyst-Model-CDBI-Plain/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# $FreeBSD: www/p5-Catalyst-Model-CDBI-Plain/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Model-CDBI-Plain
 PORTVERSION=	0.03
@@ -24,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Catalyst::Model::CDBI::Plain.3 Catalyst::Helper::Model::CDBI::Plain.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
