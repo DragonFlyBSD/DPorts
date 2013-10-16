@@ -1,6 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: deskutils/xfce4-notes-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: deskutils/xfce4-notes-plugin/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xfce4-notes-plugin
 PORTVERSION=	1.7.7
@@ -24,4 +23,5 @@ USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libgui libutil panel xfconf
 INSTALLS_ICONS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
