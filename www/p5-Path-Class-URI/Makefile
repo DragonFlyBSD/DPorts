@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Path::Class::URI
-# Date created:		20 Jan 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Path-Class-URI/Makefile 326053 2013-09-02 18:23:34Z az $
-#
+# $FreeBSD: www/p5-Path-Class-URI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Path-Class-URI
 PORTVERSION=	0.04
@@ -27,4 +22,5 @@ USE_PERL5=	configure
 MAN3=		Path::Class::URI.3 \
 		Path::Class::Unicode.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
