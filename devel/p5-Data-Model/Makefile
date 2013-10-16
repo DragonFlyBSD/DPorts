@@ -1,7 +1,8 @@
-# $FreeBSD: devel/p5-Data-Model/Makefile 324514 2013-08-10 13:53:02Z kuriyama $
+# $FreeBSD: devel/p5-Data-Model/Makefile 328799 2013-09-30 14:45:02Z sunpoet $
 
 PORTNAME=	Data-Model
 PORTVERSION=	0.00008
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,7 +11,6 @@ MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for model interface which had more data sources unified
 
 RUN_DEPENDS=	\
-	p5-Module-Build-Tiny>=0.020:${PORTSDIR}/devel/p5-Module-Build-Tiny \
 	p5-Class-Trigger>0:${PORTSDIR}/devel/p5-Class-Trigger \
 	p5-DBD-SQLite>0:${PORTSDIR}/databases/p5-DBD-SQLite \
 	p5-DBI>0:${PORTSDIR}/databases/p5-DBI \
@@ -22,8 +22,9 @@ TEST_DEPENDS=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 		p5-Test-Class>=0:${PORTSDIR}/devel/p5-Test-Class \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 
+NO_STAGE=	yes
 USES=	perl5
-USE_PERL5=	modbuild
+USE_PERL5=	modbuildtiny
 
 MAN3=	Data::Model.3 \
 	Data::Model::Accessor.3 \
@@ -54,4 +55,5 @@ MAN3=	Data::Model.3 \
 	Data::Model::Schema::SQL.3 \
 	Data::Model::Transaction.3 \
 	Data::Model::Tutorial::JA.3
+
 .include <bsd.port.mk>
