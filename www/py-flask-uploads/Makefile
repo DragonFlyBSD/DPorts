@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-flask-uploads
-# Date created:							2010-09-26
-# Whom:									Olivier Duchateau <duchateau.olivier@gmail.com>
-#
-# $FreeBSD: ports/www/py-flask-uploads/Makefile,v 1.3 2012/11/17 06:03:00 svnexp Exp $
-#
+# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
+# $FreeBSD: www/py-flask-uploads/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Flask-Uploads
 PORTVERSION=	0.1.3
@@ -21,4 +17,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.6:${PORTSDIR}/www/py-flask
 USE_PYTHON=	2.6+
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
