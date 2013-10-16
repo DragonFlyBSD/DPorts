@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-SVN-Statistics/Makefile 326802 2013-09-09 11:01:46Z az $
+# $FreeBSD: devel/p5-SVN-Statistics/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Statistics
 PORTVERSION=	0.041
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	SVN::Statistics.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
