@@ -1,9 +1,5 @@
-# New ports collection makefile for:   p5-Apache-ParseFormData
-# Date created:                13-Jul-2004
-# Whom:                        Jon Nistor <nistor@snickers.org>
-#
-# $FreeBSD: www/p5-Apache-ParseFormData/Makefile 326053 2013-09-02 18:23:34Z az $
-#
+# Created by: Jon Nistor <nistor@snickers.org>
+# $FreeBSD: www/p5-Apache-ParseFormData/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-ParseFormData
 PORTVERSION=	0.09
@@ -24,6 +20,7 @@ USE_APACHE=	22+
 
 MAN3=		Apache::ParseFormData.3
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
