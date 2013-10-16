@@ -1,4 +1,4 @@
-# $FreeBSD: devel/R-cran-randomForest/Makefile 319316 2013-05-28 15:15:05Z bf $
+# $FreeBSD: devel/R-cran-randomForest/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	randomForest
 DISTVERSION=	4.6-7
@@ -14,4 +14,5 @@ RUN_DEPENDS=	R-cran-RColorBrewer>=1.0.5_6:${PORTSDIR}/graphics/R-cran-RColorBrew
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
