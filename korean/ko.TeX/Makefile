@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ko.TeX
-# Date created: 			7 January 2008
-# Whom:					Hyogeol Lee <hyogeollee@gmail.com>
-#
-# $FreeBSD: korean/ko.TeX/Makefile 317899 2013-05-11 17:58:55Z hrs $
-#
+# Created by: Hyogeol Lee <hyogeollee@gmail.com>
+# $FreeBSD: korean/ko.TeX/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	ko.TeX
 PORTVERSION=	0.1.1.20080329
@@ -38,6 +34,7 @@ PLIST_SUB+=	TEXHASH=${TEXHASH}
 DOCS=		ChangLog INSTALL LICENSE VERSION manifest.txt news-0.1.0.txt \
 		news-0.1.1.txt
 
+NO_STAGE=	yes
 do-build:
 	@${MKDIR} ${WRKDIR}/build
 	@${CC} ${CFLAGS} -o ${WRKDIR}/build/hbibtex \
