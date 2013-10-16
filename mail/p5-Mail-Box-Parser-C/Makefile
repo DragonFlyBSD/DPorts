@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-Mail-Box-Parser-C/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-Box-Parser-C/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Box-Parser-C
 PORTVERSION=	3.007
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Box::Parser::C.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
