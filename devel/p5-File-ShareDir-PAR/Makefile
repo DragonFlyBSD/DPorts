@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-File-ShareDir-PAR/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: devel/p5-File-ShareDir-PAR/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	File-ShareDir-PAR
 PORTVERSION=	0.06
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		File::ShareDir::PAR.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
