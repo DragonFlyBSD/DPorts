@@ -1,5 +1,5 @@
 # Created by: Alan Snelson <Alan@Wave2.org>
-# $FreeBSD: databases/p5-DBIx-VersionedDDL/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/p5-DBIx-VersionedDDL/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-VersionedDDL
 PORTVERSION=	0.17
@@ -31,4 +31,5 @@ MAN1=	migrate_schema.1
 MAN3=	DBIx::VersionedDDL.3 \
 	DBIx::VersionedDDL::Plugin::DefaultScriptProcessor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
