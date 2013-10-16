@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Catalyst::View::REST::XML
-# Date created:		05 Feb 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Catalyst-View-REST-XML/Makefile 326053 2013-09-02 18:23:34Z az $
-#
+# $FreeBSD: www/p5-Catalyst-View-REST-XML/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-REST-XML
 PORTVERSION=	0.02
@@ -24,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Catalyst::View::REST::XML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
