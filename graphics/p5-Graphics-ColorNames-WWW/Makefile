@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: graphics/p5-Graphics-ColorNames-WWW/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Graphics-ColorNames-WWW/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Graphics-ColorNames-WWW
 PORTVERSION=	1.13
@@ -22,4 +22,5 @@ MAN3=		Graphics::ColorNames::CSS.3 \
 		Graphics::ColorNames::SVG.3 \
 		Graphics::ColorNames::WWW.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
