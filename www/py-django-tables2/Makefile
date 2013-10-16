@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/py-django-tables2/Makefile 326638 2013-09-07 14:09:38Z wg $
+# $FreeBSD: www/py-django-tables2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-tables2
 PORTVERSION=	0.14.0
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.2:${PORTSDIR}/www/py-django \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|classifiers=\[|zip_safe=False, classifiers=\[|' \
 		${WRKSRC}/setup.py
