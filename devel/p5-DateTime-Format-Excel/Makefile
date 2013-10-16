@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Excel/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Excel/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Format-Excel
 PORTVERSION=	0.31.00
@@ -19,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		DateTime::Format::Excel.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
