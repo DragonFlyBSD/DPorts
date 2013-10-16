@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Lingua-Treebank/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Lingua-Treebank/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-Treebank
 PORTVERSION=	0.16
@@ -19,4 +19,5 @@ MAN3=	Lingua::Treebank.3 \
 	Lingua::Treebank::Const.3 \
 	Lingua::Treebank::HeadFinder.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
