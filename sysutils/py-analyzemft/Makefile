@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: sysutils/py-analyzemft/Makefile 327190 2013-09-13 21:59:06Z antoine $
+# $FreeBSD: sysutils/py-analyzemft/Makefile 328727 2013-09-29 20:04:00Z antoine $
 
 PORTNAME=	analyzemft
 PORTVERSION=	2.0.10
@@ -29,8 +29,8 @@ OPTIONS_DEFINE=	DOCS
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
