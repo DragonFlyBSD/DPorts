@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Text-Highlight/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Text-Highlight/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-Highlight
 PORTVERSION=	0.04
@@ -17,4 +17,5 @@ USE_PERL5=	configure
 
 MAN3=		Text::Highlight.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
