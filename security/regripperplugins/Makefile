@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/regripperplugins/Makefile 317307 2013-05-04 10:44:15Z antoine $
+# $FreeBSD: security/regripperplugins/Makefile 329218 2013-10-03 18:10:03Z antoine $
 
 PORTNAME=	regripperplugins
 PORTVERSION=	20130429
@@ -19,10 +19,11 @@ RUN_DEPENDS=	regripper>=0:${PORTSDIR}/security/regripper
 NO_WRKSUBDIR=	yes
 USE_DOS2UNIX=	yes
 NO_BUILD=	yes
-PORTDATA=	*
+
+PORTDATA=	*.pl all ntuser sam security software system usrclass
 
 do-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/* ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${PORTDATA:S,^,${WRKSRC}/,} ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
