@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Text-ChaSen
-# Date created:		2 March 2001
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: japanese/p5-Text-ChaSen/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: japanese/p5-Text-ChaSen/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	Text-ChaSen
 PORTVERSION=	1.03
@@ -29,6 +25,7 @@ CONFIGURE_ENV=	PREFIX="${PREFIX}"
 MAN3=		Text::ChaSen.3
 DOCSDIR=	${PREFIX}/share/doc/chasen
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
