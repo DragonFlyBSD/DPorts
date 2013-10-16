@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-twitter-tools/Makefile 320681 2013-06-12 13:05:01Z koobs $
+# $FreeBSD: net/py-twitter-tools/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	twitter-tools
 PORTVERSION=	1.9.4
@@ -21,4 +21,5 @@ GH_COMMIT=	479117d
 
 PYDISTUTILS_PKGNAME=	twitter
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
