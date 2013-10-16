@@ -1,4 +1,4 @@
-# $FreeBSD: editors/xxe/Makefile 318412 2013-05-17 23:49:02Z jgh $
+# $FreeBSD: editors/xxe/Makefile 330370 2013-10-15 07:51:18Z marino $
 
 PORTNAME=	xxe
 PORTVERSION=	${XXE_VERSION}
@@ -16,11 +16,17 @@ JAVA_VERSION=	1.6+
 NO_BUILD=	YES
 
 RESTRICTED=	Licensee may not distribute the software, evaluation edition
+#BROKEN=		Distfile unfetchable after version update
+DEPRECATED=	XXE becomes unfetchable every 3-4 months as distfile is\
+		replaced with new version.  This high-maintenance port\
+		requires a maintainer to avoid removal.
+EXPIRATION_DATE=	2013-11-15		
 
 BINS=		convertdoc csscheck deploywebstart translatexxe xmltool xxe
 
 PLIST_SUB=	XXE=${XXE_DIR}
 
+NO_STAGE=	yes
 post-extract:
 		@${SED} -e 's,%%JAVA_HOME%%,${JAVA_HOME},' \
 			-e 's,%%PREFIX%%,${PREFIX},' \
