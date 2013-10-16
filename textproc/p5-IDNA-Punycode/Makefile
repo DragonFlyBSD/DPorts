@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: textproc/p5-IDNA-Punycode/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-IDNA-Punycode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	IDNA-Punycode
 PORTVERSION=	0.03
@@ -17,6 +17,7 @@ USE_PERL5=	configure
 
 MAN3=		IDNA::Punycode.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/lib/IDNA/.Punycode.pm.swp
 
