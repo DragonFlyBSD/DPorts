@@ -1,8 +1,5 @@
-# New ports collection makefile for:	nagios-check_email_delivery
-# Date created: 	1 July 2011
-# Whom:			Ryan Steinmetz
-#
-# $FreeBSD: ports/net-mgmt/nagios-check_hp_bladechassis/Makefile,v 1.4 2012/11/17 06:00:33 svnexp Exp $
+# Created by: Ryan Steinmetz
+# $FreeBSD: net-mgmt/nagios-check_hp_bladechassis/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_hp_bladechassis
 PORTVERSION=	1.0.1
@@ -19,12 +16,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	p5-Net-SNMP>=0:${PORTSDIR}/net-mgmt/p5-Net-SNMP
 
+USES=		perl5
+USE_PERL5=	run
 NO_BUILD=	yes
-USE_PERL5_RUN=	yes
 MAN8=		check_hp_bladechassis.8
 PLIST_FILES=	libexec/nagios/check_hp_bladechassis
 PLIST_DIRSTRY=	libexec/nagios/
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
