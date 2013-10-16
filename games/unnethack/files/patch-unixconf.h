@@ -1,4 +1,4 @@
-$FreeBSD: ports/games/unnethack/files/patch-unixconf.h,v 1.3 2012/11/17 05:57:55 svnexp Exp $
+$FreeBSD: games/unnethack/files/patch-unixconf.h 300896 2012-07-14 13:54:48Z beat $
 
 --- include/unixconf.h.good	Wed Nov 22 23:42:39 2000
 +++ include/unixconf.h	Wed Nov 22 23:43:42 2000

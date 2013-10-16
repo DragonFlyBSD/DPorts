@@ -1,9 +1,5 @@
-# New ports collection makefile for:	unnethack
-# Date created:		19 January 2010
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: ports/games/unnethack/Makefile,v 1.21 2012/11/17 05:57:55 svnexp Exp $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: games/unnethack/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	unnethack
 PORTVERSION=	4.0.0.20120401
@@ -38,6 +34,7 @@ PLIST_SUB=	VARDIR="${VARDIR_REL}"
 # "hack" the game in deep.
 MAN6=		dgn_comp.6 dlb.6 lev_comp.6 recover.6 ${PORTNAME}.6
 
+NO_STAGE=	yes
 post-patch:
 	${MV} ${WRKSRC}/doc/nethack.6 ${WRKSRC}/doc/${PORTNAME}.6
 

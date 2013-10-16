@@ -1,4 +1,4 @@
-$FreeBSD: ports/games/unnethack/files/patch-config.h,v 1.7 2012/11/17 05:57:55 svnexp Exp $
+$FreeBSD: games/unnethack/files/patch-config.h 302674 2012-08-17 10:20:48Z knu $
 
 --- include/config.h.orig	2012-04-01 23:34:10.000000000 +0900
 +++ include/config.h	2012-08-17 16:37:54.135991792 +0900
