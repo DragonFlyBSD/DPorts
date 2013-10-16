@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: dns/p5-Net-DNSBL-Statistics/Makefile 326955 2013-09-11 08:56:53Z az $
+# $FreeBSD: dns/p5-Net-DNSBL-Statistics/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Net-DNSBL-Statistics
 PORTVERSION=	0.12
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::DNSBL::Statistics.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
