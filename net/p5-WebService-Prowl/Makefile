@@ -1,9 +1,5 @@
-# New ports collection makefile for:	WebService-Prowl
-# Date created:				18 Apr 2012
-# Whom:					brix@FreeBSD.org
-#
-# $FreeBSD: net/p5-WebService-Prowl/Makefile 326506 2013-09-06 14:30:23Z az $
-#
+# Created by: brix@FreeBSD.org
+# $FreeBSD: net/p5-WebService-Prowl/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	WebService-Prowl
 PORTVERSION=	0.07
@@ -29,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=	WebService::Prowl.3 WebService::Prowl::AnyEventHTTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
