@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Calendar-Pataphysical/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-DateTime-Calendar-Pataphysical/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	DateTime-Calendar-Pataphysical
 PORTVERSION=	0.04
@@ -15,6 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+NO_STAGE=	yes
 
 MAN3=		DateTime::Calendar::Pataphysical.3
 
