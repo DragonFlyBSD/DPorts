@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: irc/p5-IRC-Bot-Hangman/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: irc/p5-IRC-Bot-Hangman/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	IRC-Bot-Hangman
 PORTVERSION=	0.1
@@ -33,4 +33,5 @@ MAN3=	IRC::Bot::Hangman.3 \
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
