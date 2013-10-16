@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Sort::ArrayOfArrays
-# Date created:				31 Dec 2001
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: devel/p5-Sort-ArrayOfArrays/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: devel/p5-Sort-ArrayOfArrays/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Sort-ArrayOfArrays
 PORTVERSION=	1.00
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=	Sort::ArrayOfArrays.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
