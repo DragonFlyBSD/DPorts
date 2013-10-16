@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: shells/p5-Bash-Completion/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: shells/p5-Bash-Completion/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
 
 PORTNAME=	Bash-Completion
 PORTVERSION=	0.008
@@ -20,16 +20,6 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		bash-complete.1 \
-		setup-bash-complete.1
-MAN3=		App::BashComplete.3 \
-		Bash::Completion.3 \
-		Bash::Completion::Plugin.3 \
-		Bash::Completion::Plugins::BashComplete.3 \
-		Bash::Completion::Plugins::Perldoc.3 \
-		Bash::Completion::Request.3 \
-		Bash::Completion::Utils.3
 
 .include <bsd.port.pre.mk>
 
