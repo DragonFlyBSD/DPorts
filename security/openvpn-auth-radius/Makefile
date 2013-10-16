@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: security/openvpn-auth-radius/Makefile 317220 2013-05-03 16:36:39Z ehaupt $
+# $FreeBSD: security/openvpn-auth-radius/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	openvpn-auth-radius
 PORTVERSION=	2.1
@@ -25,6 +25,7 @@ PORTDOCS=	README
 PORTEXAMPLES=	radiusplugin.cnf
 PLIST_FILES=	lib/radiusplugin.so
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
