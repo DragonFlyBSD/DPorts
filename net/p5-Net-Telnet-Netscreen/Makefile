@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Telnet-Netscreen
-# Date created:		2006-07-30
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: net/p5-Net-Telnet-Netscreen/Makefile 326384 2013-09-05 11:09:23Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: net/p5-Net-Telnet-Netscreen/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Telnet-Netscreen
 PORTVERSION=	1.2
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Net::Telnet::Netscreen.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
