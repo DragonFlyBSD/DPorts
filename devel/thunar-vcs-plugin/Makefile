@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/thunar-vcs-plugin/Makefile 317696 2013-05-08 16:08:36Z olivierd $
+# $FreeBSD: devel/thunar-vcs-plugin/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.1.4
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	NLS GIT SVN
 OPTIONS_DEFAULT=	SVN
 GIT_DESC=	Git support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
