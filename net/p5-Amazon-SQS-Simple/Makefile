@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Amazon-SQS-Simple
-# Date created:		2007-10-31
-# Whom:			Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Amazon-SQS-Simple
 PORTVERSION=	1.06
@@ -32,6 +28,7 @@ MAN3=		Amazon::SQS::Simple::Message.3 \
 
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
