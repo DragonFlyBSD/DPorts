@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: devel/p5-Data-Average/Makefile 326810 2013-09-09 14:13:20Z az $
+# $FreeBSD: devel/p5-Data-Average/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Data-Average
 PORTVERSION=	0.03000
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Data::Average::Bounded.3 Data::Average::BoundedExpires.3 Data::Average::Expires.3 Data::Average.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
