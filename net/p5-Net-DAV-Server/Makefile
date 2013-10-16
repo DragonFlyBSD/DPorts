@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-DAV-Server/Makefile 325183 2013-08-22 11:10:57Z mat $
+# $FreeBSD: net/p5-Net-DAV-Server/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-DAV-Server
 PORTVERSION=	1.30.5
@@ -26,4 +26,5 @@ USE_PERL5=	modbuild
 MAN3=		Net::DAV::LockManager.3 \
 		Net::DAV::Server.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
