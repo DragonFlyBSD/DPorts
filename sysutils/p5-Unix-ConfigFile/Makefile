@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Unix-ConfigFile
-# Date created:				Wed Jan  3 09:43:27 2001
-# Whom:					will
-#
-# $FreeBSD: sysutils/p5-Unix-ConfigFile/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: will
+# $FreeBSD: sysutils/p5-Unix-ConfigFile/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Unix-ConfigFile
 PORTVERSION=	0.06
@@ -21,4 +17,5 @@ MAN3=		Unix::GroupFile.3 Unix::AliasFile.3 \
 		Unix::ConfigFile.3 \
 		Unix::PasswdFile.3 Unix::AutomountFile.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
