@@ -1,9 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	latex-res
-# Date created:			Jul 30, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: print/latex-resume/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: ijliao
+# $FreeBSD: print/latex-resume/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	resume
 PORTVERSION=	20010823
@@ -34,6 +30,7 @@ CLASS_FILES=	${DISTFILES}
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} \
 		CLASSDIR=${CLASSDIR}
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/${CLASSDIR}
 	${INSTALL_DATA} ${CLASS_FILES:S@^@${WRKSRC}/@} ${PREFIX}/${CLASSDIR}
