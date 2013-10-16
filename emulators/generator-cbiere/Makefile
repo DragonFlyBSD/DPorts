@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: emulators/generator-cbiere/Makefile 323057 2013-07-15 15:03:09Z miwi $
+# $FreeBSD: emulators/generator-cbiere/Makefile 327721 2013-09-20 16:43:52Z bapt $
 
 PORTNAME=	generator
 PORTVERSION=	0.35.r4
@@ -38,6 +38,7 @@ PLIST_FILES=	bin/${PORTNAME}${PKGNAMESUFFIX}-gtk
 
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MOPTIMIZED_CFLAGS)
