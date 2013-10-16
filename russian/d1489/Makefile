@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: russian/d1489/Makefile 320915 2013-06-14 13:33:23Z bsam $
+# $FreeBSD: russian/d1489/Makefile 328720 2013-09-29 17:55:04Z bsam $
 
 PORTNAME=	d1489
 PORTVERSION=	1.5.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cp866<->koi8-r and cp1251<->koi8-r decoders, font converter (RFC1489)
 
-MAKE_ARGS=	PREFIX=${PREFIX}
+MAKE_ARGS=	PREFIX=${PREFIX} STAGEDIR=${STAGEDIR}
 PLIST_FILES=	bin/a2kfcnv bin/fromdos bin/todos bin/fromwin bin/towin
 
 .include <bsd.port.mk>
