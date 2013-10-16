@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	POE-Component-IRC-Plugin-Hailo
 PORTVERSION=	0.18
@@ -29,4 +29,5 @@ MAN1=	irchailo-seed.1
 
 MAN3=	POE::Component::IRC::Plugin::Hailo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
