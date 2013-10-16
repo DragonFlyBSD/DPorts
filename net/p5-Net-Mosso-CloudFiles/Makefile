@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Net-Mosso-CloudFiles
-# Date created:		2008-10-23
-# Whom:			glarkin
-#
-# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 326481 2013-09-06 09:21:19Z az $
-#
+# Created by: glarkin
+# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Net-Mosso-CloudFiles
 PORTVERSION=	0.44
@@ -35,6 +31,7 @@ MAN3=		Net::Mosso::CloudFiles.3 \
 		Net::Mosso::CloudFiles::Container.3 \
 		Net::Mosso::CloudFiles::Object.3
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
