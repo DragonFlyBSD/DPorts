@@ -1,4 +1,4 @@
-# $FreeBSD: ports/devel/py-Products.CMFTestCase/Makefile,v 1.4 2012/11/17 05:56:44 svnexp Exp $
+# $FreeBSD: devel/py-Products.CMFTestCase/Makefile 327992 2013-09-23 12:52:16Z rm $
 
 PORTNAME=	Products.CMFTestCase
 PORTVERSION=	0.9.12
@@ -24,7 +24,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 
 DIST_SUBDIR=	zope
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
