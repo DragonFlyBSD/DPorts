@@ -1,5 +1,5 @@
 # Created by: Will Stacey <will@at.org>
-# $FreeBSD: www/mod_authz_unixgroup/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_authz_unixgroup/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_authz_unixgroup
 PORTVERSION=	1.0.1
@@ -16,4 +16,5 @@ AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 SHORTMODNAME=	authz_unixgroup
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
