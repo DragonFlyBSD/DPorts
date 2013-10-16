@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-CPANPLUS-Dist-Build/Makefile 324466 2013-08-10 06:22:46Z culot $
+# $FreeBSD: devel/p5-CPANPLUS-Dist-Build/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	CPANPLUS-Dist-Build
 PORTVERSION=	0.74
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		CPANPLUS::Dist::Build.3 CPANPLUS::Dist::Build::Constants.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
