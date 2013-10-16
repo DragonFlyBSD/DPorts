@@ -1,9 +1,5 @@
-# New ports collection makefile for: trac-customfieldadmin
-# Date created:                      Jan 11 2008
-# Whom:                              Greg Larkin <glarkin@FreeBSD.org>
-#
-# $FreeBSD: www/trac-customfieldadmin/Makefile 325711 2013-08-30 16:49:43Z mva $
-#
+# Created by: Greg Larkin <glarkin@FreeBSD.org>
+# $FreeBSD: www/trac-customfieldadmin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	customfieldadmin
 PORTVERSION=	0.2.2.6485
@@ -30,6 +26,7 @@ PYDISTUTILS_PKGVERSION= ${PORTVERSION:R}
 PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
