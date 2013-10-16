@@ -1,5 +1,5 @@
 # Created by: Torsten Blum <torstenb@FreeBSD.org>
-# $FreeBSD: mail/postfix-current/Makefile 325916 2013-09-01 20:12:59Z sahil $
+# $FreeBSD: mail/postfix-current/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	postfix
 DISTVERSION=	2.11-20130825
@@ -27,8 +27,9 @@ CONFLICTS=	courier-0.* postfix-1.* postfix-2.* postfix-base-2.* \
 
 USERS=		postfix
 GROUPS=		mail maildrop postfix
+USES=		perl5
+USE_PERL5=	build
 USE_SUBMAKE=	yes
-USE_PERL5_BUILD=yes
 SCRIPTS_ENV+=	POSTFIX_DEFAULT_MTA="${POSTFIX_DEFAULT_MTA}"
 
 OPTIONS_DEFINE=	PCRE SASL2 TLS BDB MYSQL PGSQL SQLITE OPENLDAP LDAP_SASL \
@@ -61,6 +62,7 @@ RG2_DESC=	Kerberos network authentication protocol type
 
 OPTIONS_DEFAULT=	PCRE
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 MAN1=	postalias.1 postcat.1 postconf.1 postdrop.1 postfix.1 postkick.1 \
