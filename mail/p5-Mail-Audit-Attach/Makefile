@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Audit-Attach/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-Audit-Attach/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Audit-Attach
 PORTVERSION=	0.96
@@ -19,4 +19,5 @@ MAN3=	Mail::Audit::Attach.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
