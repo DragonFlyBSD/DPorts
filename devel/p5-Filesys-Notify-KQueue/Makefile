@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Filesys-Notify-KQueue/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-Filesys-Notify-KQueue/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Filesys-Notify-KQueue
 PORTVERSION=	0.08
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=	Filesys::Notify::KQueue.3 \
 	Filesys::Notify::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
