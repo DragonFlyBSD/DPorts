@@ -1,8 +1,8 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-ride/Makefile 313477 2013-03-05 20:22:46Z culot $
+# $FreeBSD: devel/py-robotframework-ride/Makefile 330028 2013-10-10 18:32:43Z culot $
 
 PORTNAME=	robotframework-ride
-PORTVERSION=	1.1
+PORTVERSION=	1.2.1
 CATEGORIES=	devel www python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,4 +22,5 @@ PYDISTUTILS_NOEGGINFO=	yes
 USE_WX=		2.8+
 WX_COMPS=	python:run
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
