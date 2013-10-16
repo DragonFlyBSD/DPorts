@@ -1,5 +1,5 @@
 # Created by: Victor Popov <v.a.popov@gmail.com>
-# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 324981 2013-08-19 12:39:27Z mat $
+# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-PBKDF2
 PORTVERSION=	0.131750
@@ -27,4 +27,5 @@ MAN3=		Crypt::PBKDF2.3 \
 		Crypt::PBKDF2::Hash::HMACSHA1.3 \
 		Crypt::PBKDF2::Hash::HMACSHA2.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
