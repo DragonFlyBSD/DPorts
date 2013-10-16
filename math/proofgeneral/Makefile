@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: math/proofgeneral/Makefile 327411 2013-09-16 16:32:07Z bapt $
+# $FreeBSD: math/proofgeneral/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	proofgeneral
 PORTVERSION=	4.1
@@ -23,6 +23,7 @@ USE_EMACS=	yes
 INSTALLS_ICONS=	yes
 USES=		gmake perl5
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_NAME} == xemacs
