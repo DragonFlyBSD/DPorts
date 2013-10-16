@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-WWW-Wordnik-API/Makefile 326942 2013-09-11 06:27:41Z az $
+# $FreeBSD: textproc/p5-WWW-Wordnik-API/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	WWW-Wordnik-API
 PORTVERSION=	0.0.5
@@ -27,4 +27,5 @@ PLIST_DIRS=	%%SITE_PERL%%/WWW/Wordnik %%SITE_PERL%%/WWW \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Wordnik \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
