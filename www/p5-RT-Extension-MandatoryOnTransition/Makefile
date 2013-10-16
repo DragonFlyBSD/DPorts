@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: www/p5-RT-Extension-MandatoryOnTransition/Makefile 324065 2013-07-31 18:31:44Z feld $
+# $FreeBSD: www/p5-RT-Extension-MandatoryOnTransition/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	RT-Extension-MandatoryOnTransition
 DISTVERSION=	0.04
@@ -22,6 +22,7 @@ MAN3=	RT::Extension::MandatoryOnTransition.3
 PLIST_SUB+=	RT_VER=${RT_VER}
 RT_VER=	40
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,$$RT::LocalPath/man/man3,${PREFIX}/lib/perl5/${PERL_VER}/man/man3,g' ${WRKSRC}/inc/Module/Install/RTx.pm
 	${REINPLACE_CMD} -e 's,$$RT::LocalPath/man,${PREFIX}/lib/perl5/${PERL_VER}/man,g' ${WRKSRC}/inc/Module/Install/RTx.pm
