@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: sysutils/sensors-applet/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: sysutils/sensors-applet/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	sensors-applet
 PORTVERSION=	1.6.1
@@ -22,6 +22,7 @@ DEFINES=	-DMBMON_EXECUTABLE=\\\"${LOCALBASE}/bin/mbmon\\\" \
 CPPFLAGS+=	-I${LOCALBASE}/include ${DEFINES}
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 post-patch:
 	@${CP} -f ${FILESDIR}/mbmon-sensors-interface.* \
 		${FILESDIR}/smartctl-sensors-interface.* ${WRKSRC}/src
