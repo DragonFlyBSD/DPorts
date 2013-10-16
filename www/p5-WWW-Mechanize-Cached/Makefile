@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Mechanize-Cached/Makefile 324550 2013-08-10 16:36:30Z kuriyama $
+# $FreeBSD: www/p5-WWW-Mechanize-Cached/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Mechanize-Cached
 PORTVERSION=	1.43
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	WWW::Mechanize::Cached.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
