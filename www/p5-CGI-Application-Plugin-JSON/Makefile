@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Application-Plugin-JSON
-# Date created:		2010-03-03
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: www/p5-CGI-Application-Plugin-JSON/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: www/p5-CGI-Application-Plugin-JSON/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-JSON
 PORTVERSION=	1.02
@@ -26,4 +22,5 @@ USE_PERL5=	modbuild
 
 MAN3=	CGI::Application::Plugin::JSON.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
