@@ -1,5 +1,5 @@
 # Created by: Ilja Dejs <ilja.dejs@gmail.com>
-# $FreeBSD: net-im/imspector/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD: net-im/imspector/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	imspector
 PORTVERSION=	20111108
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	IPFW
 OPTIONS_DEFAULT=	IPFW
 IPFW_DESC=	Add IPFW support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPFW}
