@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-POE-Component-Client-Twitter
-# Date created:		2008-04-13
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: net/p5-POE-Component-Client-Twitter/Makefile 326380 2013-09-05 10:32:23Z az $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: net/p5-POE-Component-Client-Twitter/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	POE-Component-Client-Twitter
 PORTVERSION=	0.01
@@ -30,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::Client::Twitter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
