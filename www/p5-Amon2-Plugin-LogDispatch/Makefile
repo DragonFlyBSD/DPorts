@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2-Plugin-LogDispatch/Makefile 326054 2013-09-02 18:41:05Z az $
+# $FreeBSD: www/p5-Amon2-Plugin-LogDispatch/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Amon2-Plugin-LogDispatch
 PORTVERSION=	0.01
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 MAN3=	Amon2::Plugin::LogDispatch.3 \
 	Amon2::Plugin::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
