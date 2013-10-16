@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <timur@gnome.org>
-# $FreeBSD: textproc/stardict2-dictd_mova/Makefile 321289 2013-06-19 16:32:41Z tijl $
+# $FreeBSD: textproc/stardict2-dictd_mova/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	stardict
 PORTVERSION=	2.4.2
@@ -46,6 +46,7 @@ ${dict:tu:S|-|_|g}_DESC=	${dict} dictionary
 .endfor
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for dict in ${DICTIONARIES}
