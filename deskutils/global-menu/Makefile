@@ -1,5 +1,5 @@
 # Created by: Gustavo Perez
-# $FreeBSD: deskutils/global-menu/Makefile 326507 2013-09-06 14:30:42Z bapt $
+# $FreeBSD: deskutils/global-menu/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=		gnome-globalmenu
 PORTVERSION=		0.7.10
@@ -26,6 +26,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=		XFCE4_PANEL NLS
 XFCE4_PANEL_DESC=	Xfce panel applet
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXFCE4_PANEL}
