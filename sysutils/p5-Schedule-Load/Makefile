@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: sysutils/p5-Schedule-Load/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: sysutils/p5-Schedule-Load/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Schedule-Load
 PORTVERSION=	3.064
@@ -34,6 +34,7 @@ MAN3=		Schedule::Load.3 Schedule::Load::Chooser.3 \
 		Schedule::Load::Reporter::Disk.3 Schedule::Load::Reporter::Filesys.3 \
 		Schedule::Load::Reporter::Network.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
