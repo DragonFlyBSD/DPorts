@@ -1,8 +1,5 @@
-# New ports collection makefile for:	nagios-openldap-plugins
-# Date created: 			26 Feb 2012
-# Whom:					Ryan Steinmetz <zi@FreeBSD.org>
-#
-# $FreeBSD: net-mgmt/nagios-openldap-plugins/Makefile 326167 2013-09-03 16:18:49Z az $
+# Created by: Ryan Steinmetz <zi@FreeBSD.org>
+# $FreeBSD: net-mgmt/nagios-openldap-plugins/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	openldap-plugins
 PORTVERSION=	0.3
@@ -37,6 +34,7 @@ PLIST_DIRSTRY=	libexec/nagios
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/init.d/|${LOCALBASE}/etc/rc.d/|g' \
 		-e 's|/var/run/slapd|/var/run/openldap|g' \
