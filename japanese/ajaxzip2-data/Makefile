@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ajaxzip2-data/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/ajaxzip2-data/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	ajaxzip2
 PORTVERSION=	20130830
@@ -21,6 +21,7 @@ USE_PERL5=	build
 PORTVERSION_K?=	${PORTVERSION}
 PORTVERSION_J?=	${PORTVERSION}
 
+NO_STAGE=	yes
 do-build:
 	${MKDIR} ${WRKSRC}/data ${WRKSRC}/work
 	cd ${WRKSRC}/work && ${DATADIR}/csv2jsonzip.pl ../ken_all.csv ../jigyosyo.csv
