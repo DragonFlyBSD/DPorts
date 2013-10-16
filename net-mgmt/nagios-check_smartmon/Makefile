@@ -1,8 +1,5 @@
-# New ports collection makefile for:	nagios-check_smartmon
-# Date created:				2009-07-10
-# Whom:					steinex
-#
-# $FreeBSD: ports/net-mgmt/nagios-check_smartmon/Makefile,v 1.5 2012/11/17 06:00:33 svnexp Exp $
+# Created by: steinex
+# $FreeBSD: net-mgmt/nagios-check_smartmon/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	check_smartmon
 PORTVERSION=	20100318
@@ -19,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/smartctl:${PORTSDIR}/sysutils/smartmontools
 USE_PYTHON=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/libexec/nagios
 	${INSTALL_SCRIPT} ${WRKSRC}/check_smartmon ${PREFIX}/libexec/nagios
