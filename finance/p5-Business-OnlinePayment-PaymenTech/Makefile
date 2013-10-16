@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Business-OnlinePayment-PaymenTech/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Business-OnlinePayment-PaymenTech/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-OnlinePayment-PaymenTech
 PORTVERSION=	2.05
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment::PaymenTech.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
