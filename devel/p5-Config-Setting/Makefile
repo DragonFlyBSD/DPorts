@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: devel/p5-Config-Setting/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Config-Setting/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Config-Setting
 PORTVERSION=	0.04
@@ -22,4 +22,5 @@ MAN3=	Config::Setting.3 \
 	Config::Setting::IniParser.3 \
 	Config::Setting::XMLParser.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
