@@ -1,9 +1,4 @@
-# New ports collection makefile for:	I18N::AcceptLanguage
-# Date created:		14 Feb 2011
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-I18N-AcceptLanguage/Makefile 326156 2013-09-03 15:07:52Z az $
-#
+# $FreeBSD: www/p5-I18N-AcceptLanguage/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	I18N-AcceptLanguage
 PORTVERSION=	1.04
@@ -19,4 +14,5 @@ USE_PERL5=	configure
 
 MAN3=	I18N::AcceptLanguage.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
