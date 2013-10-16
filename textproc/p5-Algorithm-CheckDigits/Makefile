@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-Algorithm-CheckDigits/Makefile 326939 2013-09-11 05:29:55Z az $
+# $FreeBSD: textproc/p5-Algorithm-CheckDigits/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Algorithm-CheckDigits
 PORTVERSION=	1.2.0
@@ -44,4 +44,5 @@ MAN3=	Algorithm::CheckDigits.3 \
 	Algorithm::CheckDigits::MXX_004.3 Algorithm::CheckDigits::MXX_005.3 \
 	Algorithm::CheckDigits::MXX_006.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
