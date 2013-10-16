@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_encoding
-# Date created:		Thursday 13 November 2003
-# Whom:			edwin@mavetju.org
-#
-# $FreeBSD: www/mod_encoding/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: edwin@mavetju.org
+# $FreeBSD: www/mod_encoding/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_encoding
 PORTVERSION=	20021209
@@ -49,4 +45,5 @@ EXTRA_PATCHES+=	${PATCHDIR}/iconv_hook-20040430.patch
 EXTRA_PATCHES+=	${PATCHDIR}/queryfix-patch22
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
