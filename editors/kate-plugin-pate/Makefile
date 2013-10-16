@@ -1,4 +1,4 @@
-# $FreeBSD: editors/kate-plugin-pate/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: editors/kate-plugin-pate/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	kate-plugin-pate
 PORTVERSION=	${KDE4_VERSION}
@@ -24,6 +24,7 @@ DISTINFO_FILE=	${PORTSDIR}/editors/kate/distinfo
 # cmake.mk doesn't allow to overwrite BUILD_WRKSRC for out-of-source builds
 _pate_WRKSRC=	${BUILD_WRKSRC}/kate/plugins/pate
 
+NO_STAGE=	yes
 do-build:
 	cd ${_pate_WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}
