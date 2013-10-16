@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: deskutils/p5-ZConf-BGSet/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: deskutils/p5-ZConf-BGSet/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	ZConf-BGSet
 PORTVERSION=	1.0.0
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=		ZConf::BGSet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
