@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Beanstalk-Client/Makefile 326486 2013-09-06 10:47:10Z az $
+# $FreeBSD: net/p5-Beanstalk-Client/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Beanstalk-Client
 PORTVERSION=	1.06
@@ -23,4 +23,5 @@ MAN3=	Beanstalk::Client.3 \
 		Beanstalk::Stats.3 \
 		Beanstalk::Job.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
