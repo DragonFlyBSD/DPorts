@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Form-Sensible/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: devel/p5-Form-Sensible/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
 
 PORTNAME=	Form-Sensible
 PORTVERSION=	0.20.023
@@ -22,29 +22,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Form::Sensible.3 \
-		Form::Sensible::DelegateConnection.3 \
-		Form::Sensible::Delegation.3 \
-		Form::Sensible::FAQ.3 \
-		Form::Sensible::Field.3 \
-		Form::Sensible::Field::DateTime.3 \
-		Form::Sensible::Field::FileSelector.3 \
-		Form::Sensible::Field::LongText.3 \
-		Form::Sensible::Field::Number.3 \
-		Form::Sensible::Field::Select.3 \
-		Form::Sensible::Field::SubForm.3 \
-		Form::Sensible::Field::Text.3 \
-		Form::Sensible::Field::Toggle.3 \
-		Form::Sensible::Field::Trigger.3 \
-		Form::Sensible::Form.3 \
-		Form::Sensible::Overview.3 \
-		Form::Sensible::Reflector.3 \
-		Form::Sensible::Renderer.3 \
-		Form::Sensible::Renderer::HTML.3 \
-		Form::Sensible::Renderer::HTML::RenderedForm.3 \
-		Form::Sensible::Validator.3 \
-		Form::Sensible::Validator::Result.3
 
 post-extract:
 	@${RM} ${WRKSRC}/lib/Form/Sensible/Renderer/HTML/RenderedForm.pm.orig
