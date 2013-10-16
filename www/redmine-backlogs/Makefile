@@ -1,4 +1,4 @@
-# $FreeBSD: www/redmine-backlogs/Makefile 324913 2013-08-18 13:31:33Z bdrewery $
+# $FreeBSD: www/redmine-backlogs/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	backlogs
 PORTVERSION=	1.0.2
@@ -21,4 +21,5 @@ RUN_DEPENDS+=	rubygem-icalendar>=0.4.2:${PORTSDIR}/devel/rubygem-icalendar \
 
 REDMINE_PLUGIN_NAME=	redmine_backlogs
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/redmine/bsd.redmine.mk"
