@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-nice_menus/Makefile 313235 2013-03-02 14:38:21Z miwi $
+# $FreeBSD: www/drupal6-nice_menus/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	nice_menus
 DISTVERSION=	6.x-2.1
@@ -21,4 +21,5 @@ MODULE_FILES=	arrow-right.png nice_menus.install nice_menus_default-rtl.css \
 		superfish/js/superfish.js
 DOC_FILES=	CHANGELOG.txt README.txt UPGRADE.txt LICENSE.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
