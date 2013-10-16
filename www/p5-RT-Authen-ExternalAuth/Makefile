@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Authen-ExternalAuth/Makefile 324134 2013-08-01 22:04:01Z matthew $
+# $FreeBSD: www/p5-RT-Authen-ExternalAuth/Makefile 328884 2013-09-30 22:28:23Z matthew $
 
 PORTNAME=	RT-Authen-ExternalAuth
 DISTVERSION=	0.17
@@ -35,20 +35,17 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 RUN_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 
 MAN3PREFIX=	${PREFIX}
-MAN3=		RT::Authen::ExternalAuth.3 \
-		RT::Authen::ExternalAuth::DBI.3 \
-		RT::Authen::ExternalAuth::DBI::Cookie.3 \
-		RT::Authen::ExternalAuth::LDAP.3
 
 PLIST_SUB+=	RTHOME=share/rt${RT_VER}
 
 # Note: You can install using an arbitrary $PREFIX but only if it
 # matches the $PREFIX used to install www/rt{38,40}.  Hence ignore
 # $PREFIX in the environment and inherit settings from RT.pm
+
 do-configure:
 	@cd ${CONFIGURE_WRKSRC} && \
 	    unset PREFIX && \
 	    ${SETENV} ${CONFIGURE_ENV} ${PERL5} -I${SITE_PERL} ./${CONFIGURE_SCRIPT} && \
-	    ${PERL5} -pi -e 's/ doc_(perl|site|\$$\(INSTALLDIRS\))_install$$//' Makefile
+	    ${PERL5} -pi -e 's/ doc_(perl|site|\$$\(INSTALLDIRS\))_install$$//;' Makefile
 
 .include <bsd.port.mk>
