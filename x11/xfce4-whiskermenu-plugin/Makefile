@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11/xfce4-whiskermenu-plugin/Makefile 324832 2013-08-17 08:28:01Z olivierd $
+# $FreeBSD: x11/xfce4-whiskermenu-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-whiskermenu-plugin
 PORTVERSION=	1.1.1
@@ -22,4 +22,5 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=       -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
