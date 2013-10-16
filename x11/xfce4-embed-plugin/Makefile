@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11/xfce4-embed-plugin/Makefile 319698 2013-06-02 17:41:00Z olivierd $
-#
+# $FreeBSD: x11/xfce4-embed-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	xfce4-embed-plugin
 PORTVERSION=	1.4.1
@@ -23,6 +22,7 @@ USE_XFCE=	configenv libmenu libutil panel
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
