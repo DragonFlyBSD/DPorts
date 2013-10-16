@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-biblist
-# Date created:		24 Jan 2004
-# Whom:			hrs@FreeBSD.org
-#
-# $FreeBSD: print/latex-biblist/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs@FreeBSD.org
+# $FreeBSD: print/latex-biblist/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-biblist
 PORTVERSION=	1.4.19920113
@@ -31,6 +28,7 @@ CLASS_FILES=	biblist.sty biblist.gde biblist.bst-dist
 
 DOC_FILES=	README
 
+NO_STAGE=	yes
 pre-install:
 	(for F in ${CLASS_FILES}; do \
 			${ECHO_CMD} "${CLASSDIR}/$${F}"; \
