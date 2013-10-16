@@ -1,5 +1,5 @@
 # Created by: lippe
-# $FreeBSD: ports/devel/p5-Test-Portability-Files/Makefile,v 1.5 2013/02/08 07:10:20 svnexp Exp $
+# $FreeBSD: devel/p5-Test-Portability-Files/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Portability-Files
 PORTVERSION=	0.06
@@ -10,9 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lippe@FreeBSD.org
 COMMENT=	Test::Portability::Files Check file names portability
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	Test::Portability::Files.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include <bsd.port.post.mk>
