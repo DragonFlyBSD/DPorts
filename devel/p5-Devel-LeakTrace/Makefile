@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-LeakTrace/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Devel-LeakTrace/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-LeakTrace
 PORTVERSION=	0.05
@@ -17,4 +17,5 @@ USE_GNOME=	glib12
 
 MAN3=		Devel::LeakTrace.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
