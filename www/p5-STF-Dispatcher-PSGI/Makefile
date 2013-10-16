@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-STF-Dispatcher-PSGI/Makefile 324563 2013-08-11 01:34:27Z kuriyama $
+# $FreeBSD: www/p5-STF-Dispatcher-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	STF-Dispatcher-PSGI
 PORTVERSION=	1.11
@@ -29,6 +29,7 @@ MAN3=	STF::Dispatcher::Impl::File.3 \
 	STF::Dispatcher::PSGI::HTTPException.3 \
 	STF::Dispatcher::Test.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
