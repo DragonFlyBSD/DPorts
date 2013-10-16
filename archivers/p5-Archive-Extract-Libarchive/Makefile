@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Extract-Libarchive/Makefile 325148 2013-08-21 14:55:43Z sunpoet $
+# $FreeBSD: archivers/p5-Archive-Extract-Libarchive/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	Archive-Extract-Libarchive
 PORTVERSION=	0.38
@@ -19,6 +19,7 @@ TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 
 USE_PERL5=	modbuild
 USES=		perl5
+NO_STAGE=	yes
 
 MAN3=		Archive::Extract::Libarchive.3
 
