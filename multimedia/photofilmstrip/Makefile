@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/photofilmstrip/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: multimedia/photofilmstrip/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	photofilmstrip
 PORTVERSION=	1.5.0
@@ -29,6 +29,7 @@ ALL_TARGET=	compile
 
 PFSDIR=		${PYTHONPREFIX_SITELIBDIR}/${PORTNAME}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "To run ${PORTNAME}, you must have sqlite3 installed with extensions enabled."
 
