@@ -1,9 +1,5 @@
-# Ports collection makefile for:	ssltunnel-client
-# Date created:			June 10, 2003
-# Whom:				at@rominet.net
-#
-# $FreeBSD: net/ssltunnel-client/Makefile 326683 2013-09-07 19:49:41Z bsam $
-#
+# Created by: at@rominet.net
+# $FreeBSD: net/ssltunnel-client/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	ssltunnel
 PORTVERSION=	1.18
@@ -25,17 +21,17 @@ MAN1=		pppclient.1
 MAN5=		ssltunnelrc.5
 
 WANT_GNOME=	yes
-WANT_PERL=	yes
 
 .if defined(PACKAGE_BUILDING)
 WITHOUT_GNOME=	yes
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mgtk12}!=""
 USE_GNOME=	gtk12
-USE_PERL5=	yes
+USES+=		perl5
 RUN_DEPENDS=	p5-Gtk>=0:${PORTSDIR}/x11-toolkits/p5-Gtk
 MAN1+=		gpppclient.1
 BUILD_PERLGTK=	yes
