@@ -1,14 +1,14 @@
 # Created by: n-shigemura@ensure.jp
-# $FreeBSD: japanese/p5-Number-Phone-JP/Makefile 326884 2013-09-10 09:39:11Z az $
+# $FreeBSD: japanese/p5-Number-Phone-JP/Makefile 329182 2013-10-03 13:27:06Z danilo $
 
 PORTNAME=	Number-Phone-JP
-PORTVERSION=	0.20130603
+PORTVERSION=	0.20131001
 CATEGORIES=	japanese perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TANIGUCHI
 PKGNAMEPREFIX=	ja-p5-
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Perl5 module to validate Japanese phone numbers
 
 LICENSE=	ART10 GPLv1
@@ -19,8 +19,5 @@ TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Number::Phone::JP.3 \
-		Number::Phone::JP::Table.3 \
 
 .include <bsd.port.mk>
