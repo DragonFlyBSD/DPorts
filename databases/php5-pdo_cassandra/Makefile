@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: databases/php5-pdo_cassandra/Makefile 327044 2013-09-12 09:07:08Z marino $
+# $FreeBSD: databases/php5-pdo_cassandra/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pdo_cassandra
 PORTVERSION=	0.2.1
@@ -29,6 +29,7 @@ DEFAULT_PHP_VER=5
 IGNORE_WITH_PHP=52
 THRIFT_CMD=	${LOCALBASE}/bin/thrift
 
+NO_STAGE=	yes
 post-configure:
 	thrift_version=`${THRIFT_CMD} -version | ${AWK} '{print $$3}'`; \
 	if [ "$$thrift_version" = "0.8.0" ]; then \
