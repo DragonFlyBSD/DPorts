@@ -1,9 +1,9 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-blogofile/Makefile 314750 2013-03-20 17:24:23Z lwhsu $
+# $FreeBSD: www/py-blogofile/Makefile 329129 2013-10-02 23:38:51Z wg $
 
 PORTNAME=	blogofile
 PORTVERSION=	0.7.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=	source/B/Blogofile
@@ -15,7 +15,7 @@ COMMENT=	A static website compiler and blog engine
 LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mako>0:${PORTSDIR}/textproc/py-mako \
-		${PYTHON_PKGNAMEPREFIX}beautifulsoup>0<4:${PORTSDIR}/www/py-beautifulsoup32 \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup32>0:${PORTSDIR}/www/py-beautifulsoup32 \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}textile>0:${PORTSDIR}/www/py-textile \
@@ -28,4 +28,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Blogofile
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
