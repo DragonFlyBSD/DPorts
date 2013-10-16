@@ -1,5 +1,5 @@
 # Created by: Timothy Redaelli <drizzt@gufi.org>
-# $FreeBSD: irc/irssi-dcc_send_limiter/Makefile 316344 2013-04-23 10:51:39Z bapt $
+# $FreeBSD: irc/irssi-dcc_send_limiter/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	dcc_send_limiter
 PORTVERSION=	0.8.10
@@ -29,6 +29,7 @@ PLIST_DIRS=	lib/irssi/modules/lib
 
 CFLAGS+=	-shared -fPIC -I${LOCALBASE}/include/irssi -I${LOCALBASE}/include/irssi/src -I${LOCALBASE}/include/irssi/src/core -I${LOCALBASE}/include/irssi/src/irc/core -I${LOCALBASE}/include/irssi/src/irc/dcc `pkg-config --cflags glib-2.0`
 
+NO_STAGE=	yes
 do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
