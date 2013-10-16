@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-CAD-Drawing-Template/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: graphics/p5-CAD-Drawing-Template/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	CAD-Drawing-Template
 PORTVERSION=	0.01
@@ -20,4 +20,5 @@ MAN3=	CAD::Drawing::Template.3
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
