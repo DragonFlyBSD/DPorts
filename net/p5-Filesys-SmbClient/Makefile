@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: net/p5-Filesys-SmbClient/Makefile 326380 2013-09-05 10:32:23Z az $
+# $FreeBSD: net/p5-Filesys-SmbClient/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Filesys-SmbClient
 PORTVERSION=	3.2
@@ -18,6 +18,7 @@ USE_PERL5=	configure
 
 MAN3=		Filesys::SmbClient.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's!%%LOCALBASE%%!${LOCALBASE}!g' \
 		${WRKSRC}/Makefile.PL
