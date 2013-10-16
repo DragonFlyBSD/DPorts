@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-OpenCA-PKCS7/Makefile 326023 2013-09-02 16:16:25Z sunpoet $
+# $FreeBSD: security/p5-OpenCA-PKCS7/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	OpenCA-PKCS7
 PORTVERSION=	0.9.1.1.1
@@ -22,4 +22,5 @@ PORTSCOUT=	skipv:0.9.13
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
