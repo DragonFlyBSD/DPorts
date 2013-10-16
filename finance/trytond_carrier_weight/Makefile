@@ -1,4 +1,4 @@
-# $FreeBSD: finance/trytond_carrier_weight/Makefile 318514 2013-05-19 11:55:09Z wen $
+# $FreeBSD: finance/trytond_carrier_weight/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_carrier_weight
 PORTVERSION=	2.4.0
@@ -19,4 +19,5 @@ CONFLICTS=	trytond_carrier_weight-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
