@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Prototype/Makefile 324892 2013-08-18 08:26:13Z az $
+# $FreeBSD: www/p5-Catalyst-Plugin-Prototype/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Prototype
 PORTVERSION=	1.33
@@ -23,6 +23,7 @@ USE_PERL5=	configure
 MAN3=	Catalyst::Helper::Prototype.3 \
 	Catalyst::Plugin::Prototype.3
 
+NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name '._Prototype.pm' -delete
 
