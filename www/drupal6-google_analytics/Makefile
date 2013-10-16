@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-google_analytics/Makefile 313234 2013-03-02 14:37:54Z miwi $
+# $FreeBSD: www/drupal6-google_analytics/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	google_analytics
 DISTVERSION=	6.x-3.5
@@ -16,4 +16,5 @@ MODULE_FILES=	googleanalytics.admin.inc googleanalytics.install googleanalytics.
 
 DOC_FILES=	LICENSE.txt README.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
