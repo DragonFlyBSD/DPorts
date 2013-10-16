@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-AnyEvent-MPRPC/Makefile 326486 2013-09-06 10:47:10Z az $
+# $FreeBSD: net/p5-AnyEvent-MPRPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	AnyEvent-MPRPC
 PORTVERSION=	0.20
@@ -26,4 +26,5 @@ MAN3=	AnyEvent::MPRPC.3 \
 	AnyEvent::MPRPC::CondVar.3 \
 	AnyEvent::MPRPC::Server.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
