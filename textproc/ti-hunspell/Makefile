@@ -1,9 +1,4 @@
-# New ports collection makefile for:	ti-hunspell
-# Date created:		2011-07-20
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/textproc/ti-hunspell/Makefile,v 1.6 2012/11/17 06:02:23 svnexp Exp $
-#
+# $FreeBSD: textproc/ti-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	20090911
@@ -28,9 +23,9 @@ PLIST_FILES=	%%DATADIR%%/ti_ER.dic \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/ti_ER.aff ${WRKSRC}/ti_ER.dic ${DATADIR}/
-	${LN} -s ti_ER.aff ${DATADIR}/ti_ET.aff
-	${LN} -s ti_ER.dic ${DATADIR}/ti_ET.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/ti_ER.aff ${WRKSRC}/ti_ER.dic ${STAGEDIR}${DATADIR}/
+	${LN} -s ti_ER.aff ${STAGEDIR}${DATADIR}/ti_ET.aff
+	${LN} -s ti_ER.dic ${STAGEDIR}${DATADIR}/ti_ET.dic
 
 .include <bsd.port.mk>
