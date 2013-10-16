@@ -1,5 +1,5 @@
 # Created by: Maksym Sobolyev <sobomax@pbxpress.it>
-# $FreeBSD: misc/p5-Asterisk-FastAGI/Makefile 325955 2013-09-02 09:22:47Z az $
+# $FreeBSD: misc/p5-Asterisk-FastAGI/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Asterisk-FastAGI
 PORTVERSION=	0.02
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		Asterisk::FastAGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
