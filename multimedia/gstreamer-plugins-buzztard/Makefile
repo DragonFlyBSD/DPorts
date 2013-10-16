@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-buzztard/Makefile 326491 2013-09-06 12:12:00Z bapt $
+# $FreeBSD: multimedia/gstreamer-plugins-buzztard/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	buzztard
 PORTVERSION=	0.6.0
@@ -20,6 +20,7 @@ USE_GNOME=	gnomehack ltverhack
 USE_LDCONFIG=	yes
 PLIST_SUB=	GST_VERSION="${GST_VERSION}"
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|' \
 		${WRKSRC}/configure
