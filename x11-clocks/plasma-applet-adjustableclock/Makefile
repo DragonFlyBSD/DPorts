@@ -1,7 +1,7 @@
-# $FreeBSD: x11-clocks/plasma-applet-adjustableclock/Makefile 327029 2013-09-12 01:40:42Z jhale $
+# $FreeBSD: x11-clocks/plasma-applet-adjustableclock/Makefile 328697 2013-09-29 14:00:32Z jhale $
 
 PORTNAME=	adjustableclock
-PORTVERSION=	4.1.2
+PORTVERSION=	4.1.3
 CATEGORIES=	x11-clocks deskutils kde
 MASTER_SITES=	http://kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	plasma-applet-
