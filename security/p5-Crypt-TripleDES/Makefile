@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-TripleDES/Makefile 326994 2013-09-11 17:07:20Z az $
+# $FreeBSD: security/p5-Crypt-TripleDES/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-TripleDES
 PORTVERSION=	0.24
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::TripleDES.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
