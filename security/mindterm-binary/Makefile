@@ -1,5 +1,5 @@
 # Created by: alex@FreeBSD.org
-# $FreeBSD: security/mindterm-binary/Makefile 315566 2013-03-29 19:33:41Z cs $
+# $FreeBSD: security/mindterm-binary/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	mindterm-binary
 PORTVERSION=	1.2.1
@@ -19,6 +19,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 NO_CDROM=	Do not sell for profit
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${DISTDIR}/mindterm-ssh.html ${WRKSRC}
 	@${MV} ${WRKSRC}/mindtermfull.jar ${WRKSRC}/mindterm.jar
