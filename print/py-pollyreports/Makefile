@@ -1,5 +1,5 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: ports/print/py-pollyreports/Makefile,v 1.4 2013/01/17 15:50:29 svnexp Exp $
+# $FreeBSD: print/py-pollyreports/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	PollyReports
 PORTVERSION=	1.7.2
@@ -23,6 +23,7 @@ OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
 OPTIONS_DEFINE=	REPORTLAB
 REPORTLAB_DESC=	Install Reportlab2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MREPORTLAB}
