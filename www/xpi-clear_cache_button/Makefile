@@ -1,5 +1,5 @@
 # Created by: Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: ports/www/xpi-clear_cache_button/Makefile,v 1.6 2013/01/20 12:56:08 svnexp Exp $
+# $FreeBSD: www/xpi-clear_cache_button/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	clear_cache_button
 PORTVERSION=	0.9f
@@ -34,6 +34,7 @@ XPI_DIRS=	chrome/skin/classic chrome/skin \
 		chrome/content \
 		chrome
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 
 post-patch:
