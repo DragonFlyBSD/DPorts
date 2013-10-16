@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-DBIx-Recordset/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Recordset/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Recordset
 PORTVERSION=	0.26
@@ -20,6 +20,7 @@ MAN3=		DBIx::Compat.3 DBIx::Database.3 DBIx::Intrors.3 \
 		DBIx::Recordset.3 DBIx::Recordset::DBSeq.3 \
 		DBIx::Recordset::FileSeq.3
 
+NO_STAGE=	yes
 post-configure:
 # bad DBIx::Intrors.3
 		@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 -lax/;' \
