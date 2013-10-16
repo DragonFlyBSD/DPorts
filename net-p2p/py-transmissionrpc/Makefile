@@ -1,5 +1,5 @@
 # Created by: Vladimir Korkodinov <newbieman@perm.raid.ru>
-# $FreeBSD: net-p2p/py-transmissionrpc/Makefile 317047 2013-05-01 20:37:20Z rm $
+# $FreeBSD: net-p2p/py-transmissionrpc/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	transmissionrpc
 PORTVERSION=	0.10
@@ -20,6 +20,7 @@ USE_PYDISTUTILS=easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
