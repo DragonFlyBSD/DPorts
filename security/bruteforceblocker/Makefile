@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@rulez.sk>
-# $FreeBSD: security/bruteforceblocker/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/bruteforceblocker/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	bruteforceblocker
 PORTVERSION=	1.2.3
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/sbin/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.conf ${PREFIX}/etc/${PORTNAME}.conf-dist
