@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: archivers/pear-PHP_Archiv/Makefile 314219 2013-03-15 01:33:44Z miwi $
+# $FreeBSD: archivers/pear-PHP_Archiv/Makefile 327699 2013-09-20 13:11:20Z bapt $
 
 PORTNAME=	PHP_Archive
 PORTVERSION=	0.11.4
@@ -11,6 +11,7 @@ COMMENT=	Create and Use PHP Archive files
 BUILD_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
+NO_STAGE=	yes
 PEAR_AUTOINSTALL=	yes
 
 .include <bsd.port.pre.mk>
