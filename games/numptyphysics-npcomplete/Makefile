@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/numptyphysics-npcomplete/Makefile 322840 2013-07-12 15:01:45Z amdmi3 $
+# $FreeBSD: games/numptyphysics-npcomplete/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	npcomplete
 PORTVERSION=	0.0.r20090116
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/npcomplete
 DATADIR=	${PREFIX}/share/numptyphysics
 
+NO_STAGE=	yes
 post-extract:
 # this level will crash the game
 	@${RM} -f "${WRKSRC}/L02_bridge Gaps tut.nph"
