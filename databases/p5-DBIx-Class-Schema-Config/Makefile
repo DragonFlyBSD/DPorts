@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Config/Makefile 326901 2013-09-10 13:50:14Z az $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-Config/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-Schema-Config
 PORTVERSION=	0.001008
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=		DBIx::Class::Schema::Config.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
