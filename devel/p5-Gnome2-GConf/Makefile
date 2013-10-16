@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: devel/p5-Gnome2-GConf/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Gnome2-GConf/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Gnome2-GConf
 PORTVERSION=	1.044
@@ -32,4 +32,5 @@ MAN3=		Gnome2::GConf.3 \
 		Gnome2::GConf::main.3 \
 		Gnome2::GConf::version.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
