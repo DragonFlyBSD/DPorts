@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: sysutils/pear-Translation2/Makefile 314246 2013-03-15 02:57:00Z miwi $
+# $FreeBSD: sysutils/pear-Translation2/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	Translation2
 DISTVERSION=	2.0.4
@@ -27,6 +27,7 @@ PEAR_FILE_GETTEXT_DESC=	PEAR::File_Gettext support
 PEAR_I18NV2_DESC=	PEAR::I18Nv2 support
 PEAR_XML_SERIALIZER_DESC=	PEAR::XML_Serializer support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_CACHE_LITE}
