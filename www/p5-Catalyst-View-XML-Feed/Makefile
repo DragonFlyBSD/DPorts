@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-View-XML-Feed/Makefile 326167 2013-09-03 16:18:49Z az $
+# $FreeBSD: www/p5-Catalyst-View-XML-Feed/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-XML-Feed
 PORTVERSION=	0.07
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Catalyst::View::XML::Feed.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
