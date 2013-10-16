@@ -1,8 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: shells/bash-static-devel/Makefile 317517 2013-05-06 13:58:49Z ehaupt $
+# $FreeBSD: shells/bash-static-devel/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 MASTERDIR=	${.CURDIR}/../../shells/bash-devel
 
 OPTIONS_SLAVE=	STATIC
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
