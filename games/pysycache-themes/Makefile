@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/pysycache-themes/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/pysycache-themes/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	themes
 PORTVERSION=	2.0
@@ -33,6 +33,7 @@ AFRICA_DESC=		Africa activity theme
 
 OPTIONS_DEFAULT=	ANIMALS EARTH FOOD PLANTS SKY SPORTS VEHICLE WORLD AFRICA
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMALS}
