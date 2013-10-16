@@ -1,9 +1,5 @@
-# New ports collection makefile for:	qgmailnotifier
-# Date created:		2008-09-12
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/qgmailnotifier/Makefile,v 1.8 2012/11/17 05:59:12 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: mail/qgmailnotifier/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	qgmailnotifier
 PORTVERSION=	2008.3
@@ -22,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bin|${PREFIX}/bin|g' ${WRKSRC}/qgmailnotifier.pro
 
