@@ -1,9 +1,5 @@
-# New ports collection makefile for:   glpi-plugins-tracker-server
-# Date created:        31 October 2009
-# Whom:                ddurieux <d.durieux@siprossii.com>
-#
-# $FreeBSD: ports/net-mgmt/glpi-plugins-tracker-server/Makefile,v 1.2 2012/11/17 06:00:32 svnexp Exp $
-#
+# Created by: ddurieux <d.durieux@siprossii.com>
+# $FreeBSD: net-mgmt/glpi-plugins-tracker-server/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	server
 DISTVERSION=	2.1.3
@@ -27,6 +23,7 @@ CPIOARGS=	--quiet -pdum -R
 
 GLPIPLUGINDIR?=	www/glpi/plugins/tracker
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-configure:
