@@ -1,5 +1,5 @@
 # Created by: Scot W. Hetzel <swhetzel@gmail.com>
-# $FreeBSD: audio/akode-plugins-pulseaudio/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/akode-plugins-pulseaudio/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	akode-plugins-${PORTNAMESUFX}
 PORTVERSION=	2.0.2
@@ -22,6 +22,7 @@ CONFLICTS=	kdemultimedia-3.[1-3]* akode-plugins-polypaudio-[0-9]*
 PLUGIN=		polyp_sink
 PORTNAMESUFX=	pulseaudio
 
+NO_STAGE=	yes
 USES=		gmake
 USE_AUTOTOOLS=	libltdl
 USE_AUTOTOOLS=	libtool
