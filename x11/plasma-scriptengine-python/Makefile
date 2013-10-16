@@ -1,4 +1,4 @@
-# $FreeBSD: x11/plasma-scriptengine-python/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/plasma-scriptengine-python/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	plasma-scriptengine-python
 PORTVERSION=	${KDE4_VERSION}
@@ -20,6 +20,7 @@ USES=		cmake:outsource
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/plasma/generic/scriptengines/python
 
+NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's,$${PYTHON_SITE_PACKAGES_DIR},${PYTHONPREFIX_SITELIBDIR},g' \
 		${CMAKE_SOURCE_PATH}/CMakeLists.txt
