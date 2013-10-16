@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-POE-Loop-Tk/Makefile 325219 2013-08-22 17:38:50Z sunpoet $
+# $FreeBSD: devel/p5-POE-Loop-Tk/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	POE-Loop-Tk
 PORTVERSION=	1.305
@@ -17,10 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		POE::Loop::Tk.3 \
-		POE::Loop::TkActiveState.3 \
-		POE::Loop::TkCommon.3
 
 post-patch:
 	@${REINPLACE_CMD} -e '/POE::Test::Loops/d' ${WRKSRC}/Makefile.PL
