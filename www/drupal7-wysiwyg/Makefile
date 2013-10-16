@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal7-wysiwyg/Makefile 313224 2013-03-02 11:20:15Z miwi $
+# $FreeBSD: www/drupal7-wysiwyg/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wysiwyg
 DISTVERSION=	7.x-2.0
@@ -18,6 +18,7 @@ TINYMCE3_DESC=	Install TinyMCE3 Editor
 CKEDITOR_DESC=	Install CKEditor
 YUI_DESC=	Install Yahoo UI Editor
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTINYMCE3}
