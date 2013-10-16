@@ -1,9 +1,5 @@
-# New ports collection makefile for:	dircproxy
-# Date created:				11 January 2001
-# Whom:					George Reid <greid@ukug.uk.freebsd.org>
-#
-# $FreeBSD: irc/dircproxy/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: George Reid <greid@ukug.uk.freebsd.org>
+# $FreeBSD: irc/dircproxy/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	dircproxy
 DISTVERSION=	1.2.0-RC1
@@ -25,6 +21,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 MAN1=		dircproxy.1 dircproxy-crypt.1
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NO_INSTALL_MANPAGES)
 		@cd ${WRKSRC}/doc && make install-man
