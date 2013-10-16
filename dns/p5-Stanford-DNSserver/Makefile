@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Stanford-DNSserver
-# Date created:				5 November 2004
-# Whom:	      				Peter Pentchev <roam@FreeBSD.org>
-#
-# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Peter Pentchev <roam@FreeBSD.org>
+# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	Stanford-DNSserver
 PORTVERSION=	1.2.0
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Stanford::DNS.3 Stanford::DNSserver.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
