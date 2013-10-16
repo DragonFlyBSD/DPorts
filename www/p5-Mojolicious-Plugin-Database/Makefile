@@ -1,5 +1,5 @@
-# Created by:			Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: www/p5-Mojolicious-Plugin-Database/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Henk van Oers <hvo.pm@xs4all.nl>
+# $FreeBSD: www/p5-Mojolicious-Plugin-Database/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Mojolicious-Plugin-Database
 PORTVERSION=	1.08
@@ -25,4 +25,5 @@ USE_PERL5=	configure
 MAN3=		Mojolicious::Plugin::Database.3 \
 		Mojolicious::Plugin::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
