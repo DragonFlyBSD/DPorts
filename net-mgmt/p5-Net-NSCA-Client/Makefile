@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-Net-NSCA-Client/Makefile 326248 2013-09-04 05:52:04Z az $
+# $FreeBSD: net-mgmt/p5-Net-NSCA-Client/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-NSCA-Client
 PORTVERSION=	0.009002
@@ -53,6 +53,7 @@ MAN3=		Net::NSCA::Client.3 \
 		Net::NSCA::Client::Troubleshooting.3 \
 		Net::NSCA::Client::Utils.3
 
+NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && ${RM} -f bin/send_nsca
 	@cd ${WRKSRC} && ${RM} -f t/send_nsca.t
