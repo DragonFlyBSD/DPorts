@@ -1,5 +1,5 @@
 # Created by: raven428 <raven428@gmail.com>
-# $FreeBSD: devel/pinba_engine/Makefile 318768 2013-05-22 14:30:51Z miwi $
+# $FreeBSD: devel/pinba_engine/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pinba_engine
 PORTVERSION=	2011.08.18
@@ -48,6 +48,7 @@ SUB_FILES=	pkg-message
 PORTDOCS=	NEWS TODO README
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDATA)
 	@${MKDIR} ${DATADIR}
