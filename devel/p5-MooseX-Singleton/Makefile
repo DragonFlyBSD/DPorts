@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Singleton/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-MooseX-Singleton/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	MooseX-Singleton
 PORTVERSION=	0.29
@@ -28,4 +28,5 @@ MAN3=		MooseX::Singleton.3 \
 		MooseX::Singleton::Role::Meta::Method::Constructor.3 \
 		MooseX::Singleton::Role::Object.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
