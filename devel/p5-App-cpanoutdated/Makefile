@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-App-cpanoutdated/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-App-cpanoutdated/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
 
 PORTNAME=	App-cpanoutdated
 PORTVERSION=	0.24
@@ -20,9 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN1=		cpan-outdated.1
-MAN3=		App::cpanoutdated.3
 
 .include <bsd.port.pre.mk>
 
