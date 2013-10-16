@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Blowfish/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Blowfish/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	POE-Component-IRC-Plugin-Blowfish
 PORTVERSION=	0.01
@@ -25,6 +25,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Plugin::Blowfish.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
