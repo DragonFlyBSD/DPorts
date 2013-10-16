@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Authorization/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Authorization/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-Authorization
 PORTVERSION=	0.07
@@ -30,4 +30,5 @@ MAN3=	CGI::Application::Plugin::Authorization::Driver::Generic.3 \
 	CGI::Application::Plugin::Authorization.3 \
 	CGI::Application::Plugin::Authorization::Driver::HTGroup.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
