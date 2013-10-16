@@ -1,5 +1,5 @@
 # Created by: Maciek Korzen <eaquer@ceti.pl>
-# $FreeBSD: polish/tleenx2/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: polish/tleenx2/Makefile 327761 2013-09-20 22:34:42Z bapt $
 
 PORTNAME=	tleenx2
 PORTVERSION=	20040214
@@ -24,6 +24,7 @@ WRKSRC=		${WRKDIR}/TleenX2-${PORTVERSION}
 MAN1=		tleenx2.1
 PORTDOCS=	README gg.txt sms.txt
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/X11R6,${LOCALBASE},g' ${WRKSRC}/src/Makefile.in
 
