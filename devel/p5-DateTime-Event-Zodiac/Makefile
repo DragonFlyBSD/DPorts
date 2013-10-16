@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: devel/p5-DateTime-Event-Zodiac/Makefile 326946 2013-09-11 07:17:47Z tobez $
+# $FreeBSD: devel/p5-DateTime-Event-Zodiac/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	DateTime-Event-Zodiac
 PORTVERSION=	1.03
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		DateTime::Event::Zodiac.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
