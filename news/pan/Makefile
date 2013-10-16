@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: news/pan/Makefile 327154 2013-09-13 14:45:55Z madpilot $
+# $FreeBSD: news/pan/Makefile 327759 2013-09-20 22:31:15Z bapt $
 #   $MCom: ports/news/pan/Makefile,v 1.7 2008/01/19 22:45:42 mezz Exp $
 
 PORTNAME=	pan
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=GTKSPELL
 GTKSPELL_DESC=	Spell checking support (gtk+2 only)
 GTK3_DESC=	Use gtk+3 based UI instead of gtk+2
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK3}
