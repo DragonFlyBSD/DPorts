@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-activemessaging/Makefile 319947 2013-06-05 03:04:21Z swills $
+# $FreeBSD: devel/rubygem-activemessaging/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	activemessaging
 PORTVERSION=	0.12.1
@@ -16,4 +16,5 @@ RUBY_VER=	1.9
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
