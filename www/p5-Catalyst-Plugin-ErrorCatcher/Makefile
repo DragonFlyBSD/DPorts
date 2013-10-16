@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: www/p5-Catalyst-Plugin-ErrorCatcher/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Plugin-ErrorCatcher/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-ErrorCatcher
 PORTVERSION=	0.0.8.13
@@ -53,4 +53,5 @@ MAN3=		Catalyst::Plugin::ErrorCatcher.3 \
 		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::UniqueConstraintViolation.3 \
 		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::TxnDo.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
