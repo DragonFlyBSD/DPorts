@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	Text::Greeking::zh_TW
-# Date created:			Jul 31, 2007
-# Whom:				ijliao
-#
-# $FreeBSD: chinese/p5-Text-Greeking-zh_TW/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: chinese/p5-Text-Greeking-zh_TW/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Text-Greeking-zh_TW
 PORTVERSION=	1.0
@@ -20,7 +15,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Text::Greeking::zh_TW.3
 
 .include <bsd.port.mk>
