@@ -1,5 +1,5 @@
 # Created by: Anders Troback
-# $FreeBSD: ports/net-mgmt/nagios-check_bacula/Makefile,v 1.11 2012/12/16 16:36:38 svnexp Exp $
+# $FreeBSD: net-mgmt/nagios-check_bacula/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	bacula
 CATEGORIES=	net-mgmt
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--enable-client-only	\
 
 OPTIONS_DEFINE=	#
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
