@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-MobileConverter
-# Date created:		Jun 08 2011
-# Whom:			Dmitry Liakh <dliakh@ukr.net>
-#
-# $FreeBSD: www/p5-HTML-MobileConverter/Makefile 326033 2013-09-02 16:56:12Z az $
-#
+# Created by: Dmitry Liakh <dliakh@ukr.net>
+# $FreeBSD: www/p5-HTML-MobileConverter/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-MobileConverter
 PORTVERSION=	0.011
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		HTML::MobileConverter.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
