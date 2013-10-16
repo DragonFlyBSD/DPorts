@@ -1,9 +1,5 @@
-# New ports collection makefile for:    bsdforen-firefox-searchplugin
-# Date created:                         2006-03-24
-# Whom:                                 Stefan 'Steve' Tell <stefan.tell@crashmail.de>
-#
-# $FreeBSD: ports/german/bsdforen-firefox-searchplugin/Makefile,v 1.16 2012/11/17 05:57:59 svnexp Exp $
-#
+# Created by: Stefan 'Steve' Tell <stefan.tell@crashmail.de>
+# $FreeBSD: german/bsdforen-firefox-searchplugin/Makefile 327732 2013-09-20 18:30:00Z bapt $
 
 PORTNAME=	bsdforen-firefox-searchplugin
 PORTVERSION=	0.3
@@ -21,6 +17,7 @@ USE_FIREFOX=	yes
 
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
