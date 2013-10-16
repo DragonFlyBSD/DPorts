@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-EN-AddressParse/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-Lingua-EN-AddressParse/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Lingua-EN-AddressParse
-PORTVERSION=	1.16
+PORTVERSION=	1.18
 CATEGORIES=	textproc perl5 geography
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,10 +10,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to manipulate geographical addresses
 
-RUN_DEPENDS=	p5-Lingua-EN-NameParse>=0:${PORTSDIR}/textproc/p5-Lingua-EN-NameParse \
-		p5-Locale-SubCountry>=0:${PORTSDIR}/misc/p5-Locale-SubCountry \
-		p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Lingua-EN-NameParse>=1.24:${PORTSDIR}/textproc/p5-Lingua-EN-NameParse \
+		p5-Locale-SubCountry>=1.41:${PORTSDIR}/misc/p5-Locale-SubCountry \
+		p5-Parse-RecDescent>=1:${PORTSDIR}/devel/p5-Parse-RecDescent
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
@@ -21,4 +24,5 @@ USE_PERL5=	configure
 MAN3=		Lingua::EN::AddressParse.3 \
 		Lingua::EN::AddressParse::Grammar.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
