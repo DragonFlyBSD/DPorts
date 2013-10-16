@@ -1,5 +1,5 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: textproc/yaml-mode.el/Makefile 324696 2013-08-14 11:07:20Z wg $
+# $FreeBSD: textproc/yaml-mode.el/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	yaml-mode.el
 PORTVERSION=	0.0.9
@@ -25,6 +25,7 @@ LISPDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
 
 OPTIONS_DEFINE=	DOCS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
