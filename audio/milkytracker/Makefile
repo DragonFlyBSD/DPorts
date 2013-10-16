@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/milkytracker/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: audio/milkytracker/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	milkytracker
 PORTVERSION=	0.90.85
@@ -19,6 +19,7 @@ LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack \
 		zzip:${PORTSDIR}/devel/zziplib
 
 USES=		pkgconfig
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 
