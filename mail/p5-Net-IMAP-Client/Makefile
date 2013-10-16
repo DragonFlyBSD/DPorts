@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-Net-IMAP-Client/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Net-IMAP-Client/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Net-IMAP-Client
 PORTVERSION=	0.9501
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=		Net::IMAP::Client.3 Net::IMAP::Client::MsgAddress.3 \
 		Net::IMAP::Client::MsgSummary.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
