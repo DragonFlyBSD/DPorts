@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: mail/claws-mail-bogofilter/Makefile 317878 2013-05-11 14:34:13Z pawel $
+# $FreeBSD: mail/claws-mail-bogofilter/Makefile 329440 2013-10-05 11:25:29Z pawel $
 
 PORTNAME=	bogofilter
 PORTREVISION=	0
