@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-django-piston/Makefile 321924 2013-06-28 02:21:24Z clsung $
+# $FreeBSD: www/py-django-piston/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-piston
 PORTVERSION=	0.2.3
@@ -15,4 +15,5 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
