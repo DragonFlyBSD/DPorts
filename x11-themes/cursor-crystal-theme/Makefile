@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports/x11-themes/cursor-crystal-theme/Makefile,v 1.9 2013/01/16 20:24:46 svnexp Exp $
+# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 # Note:	1)	If port is interupted while compiling, "make clean" must be run before
 #		attempting to recompile.
@@ -21,6 +21,7 @@ BUILD_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|function ||' \
 		${WRKSRC}/colorize.sh \
