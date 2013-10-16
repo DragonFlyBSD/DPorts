@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: mail/pear-Contact_Vcard_Build/Makefile 314222 2013-03-15 02:16:32Z miwi $
+# $FreeBSD: mail/pear-Contact_Vcard_Build/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Contact_Vcard_Build
 PORTVERSION=	1.1.2
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
