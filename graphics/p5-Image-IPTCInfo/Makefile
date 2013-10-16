@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-IPTCInfo/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: graphics/p5-Image-IPTCInfo/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-IPTCInfo
 PORTVERSION=	1.95
@@ -16,6 +16,7 @@ SHEBANG_FILES=	demo.pl
 
 MAN3=		Image::IPTCInfo.3
 
+NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/._*
 
