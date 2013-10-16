@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 323578 2013-07-24 08:19:07Z ehaupt $
+# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xfce4-generic-slider
 PORTVERSION=	0.0.20100827
@@ -18,6 +18,7 @@ USE_XFCE=	panel libutil libgui
 CFLAGS+=	`pkg-config --cflags libxfce4panel-1.0 libxfcegui4-1.0`
 LDFLAGS+=	`pkg-config --libs libxfce4panel-1.0 libxfcegui4-1.0`
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		"s|@PLUGINDIR@|${PREFIX}/lib/xfce4/xfce4/panel-plugins|" \
