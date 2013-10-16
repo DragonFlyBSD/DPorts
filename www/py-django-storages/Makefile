@@ -1,12 +1,8 @@
-# New ports collection makefile for:	py-django-storages
-# Date created:		2011-02-26
-# Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
-#
-# $FreeBSD: ports/www/py-django-storages/Makefile,v 1.4 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# $FreeBSD: www/py-django-storages/Makefile 327958 2013-09-23 09:19:20Z lwhsu $
 
 PORTNAME=	django-storages
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.8
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,5 +12,7 @@ COMMENT=	Generic storages for Django
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
