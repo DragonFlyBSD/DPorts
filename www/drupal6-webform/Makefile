@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6-webform/Makefile 313224 2013-03-02 11:20:15Z miwi $
+# $FreeBSD: www/drupal6-webform/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	webform
 DISTVERSION=	6.x-3.17
@@ -76,4 +76,5 @@ MODULE_DIRS=	components \
 
 DOC_FILES=	CHANGELOG.txt LICENSE.txt README.txt THEMING.txt
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
