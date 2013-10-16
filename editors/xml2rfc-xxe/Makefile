@@ -1,6 +1,5 @@
 # Created by: Bill Fenner
-#
-# $FreeBSD: editors/xml2rfc-xxe/Makefile 305526 2012-10-08 10:38:47Z dougb $
+# $FreeBSD: editors/xml2rfc-xxe/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	xml2rfc-xxe
 PORTVERSION=	0.8.0
@@ -19,6 +18,7 @@ WRKSRC=		${WRKDIR}/xml2rfc
 
 PLIST_SUB=	XXE_DIR=${XXE_DIR}
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/svn-commit.tmp
 
