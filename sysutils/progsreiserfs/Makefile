@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: sysutils/progsreiserfs/Makefile 317491 2013-05-06 09:07:58Z bapt $
+# $FreeBSD: sysutils/progsreiserfs/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	progsreiserfs
 PORTVERSION=	0.3.1.r8
@@ -18,6 +18,7 @@ CFLAGS+=	-Dgetopt_long_only=getopt_long
 
 EXTRA_PATCHES=	${FILESDIR}/extrapatch-progsreiserfs::libmisc::Makefile.in
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
