@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao & <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-Log-Accounting-SVN/Makefile 326839 2013-09-09 18:34:59Z az $
+# $FreeBSD: devel/p5-Log-Accounting-SVN/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Accounting-SVN
 PORTVERSION=	0.01
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Log::Accounting::SVN.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
