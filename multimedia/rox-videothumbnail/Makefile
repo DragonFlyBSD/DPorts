@@ -1,4 +1,4 @@
-# $FreeBSD: ports/multimedia/rox-videothumbnail/Makefile,v 1.17 2013/01/26 15:07:27 svnexp Exp $
+# $FreeBSD: multimedia/rox-videothumbnail/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	rox-videothumbnail
 PORTVERSION=	0.1.14
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/VideoThumbnail
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} -m compileall ${WRKSRC}
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
