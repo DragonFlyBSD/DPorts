@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-JSON-RPC-Common/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-JSON-RPC-Common/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	JSON-RPC-Common
 PORTVERSION=	0.10
@@ -42,4 +42,5 @@ MAN3=		JSON::RPC::Common::Marshal::Text.3 \
 		JSON::RPC::Common::Procedure::Return::Version_1_0::Error.3 \
 		JSON::RPC::Common::Marshal::HTTP.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
