@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-VirtualNet/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: finance/p5-Business-OnlinePayment-VirtualNet/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-OnlinePayment-VirtualNet
 PORTVERSION=	0.02
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		Business::OnlinePayment::VirtualNet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
