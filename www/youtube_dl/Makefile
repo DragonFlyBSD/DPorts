@@ -1,7 +1,8 @@
-# $FreeBSD: www/youtube_dl/Makefile 325369 2013-08-26 03:49:29Z araujo $
+# $FreeBSD: www/youtube_dl/Makefile 328444 2013-09-27 09:10:59Z araujo $
 
 PORTNAME=	youtube_dl
-PORTVERSION=	2013.08.23
+PORTVERSION=	2013.09.24.2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://youtube-dl.org/downloads/${PORTVERSION}/ \
 		http://ftp.de.netbsd.org/pub/unix/Linux/MIRROR.gentoo/distfiles/
@@ -26,8 +27,8 @@ OPTIONS_DEFAULT=RTMPDUMP
 BASH_DESC=	Install programmable completions for Bash
 RTMPDUMP_DESC=	Use RTMPDUMP to download rtmp video streams
 
-PLIST_FILES=	bin/youtube-dl
-MAN1=		youtube-dl.1
+PLIST_FILES=	bin/youtube-dl \
+		man/man1/youtube-dl.1.gz
 
 WRKSRC=		${WRKDIR}/youtube-dl
 
@@ -55,12 +56,12 @@ post-extract:
 	@${RM} -f ${WRKSRC}/youtube-dl
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/youtube-dl ${PREFIX}/bin/youtube-dl
-	@${INSTALL_DATA} ${WRKSRC}/youtube-dl.1 ${PREFIX}/man/man1
+	@${INSTALL_SCRIPT} ${WRKSRC}/youtube-dl ${STAGEDIR}${PREFIX}/bin/youtube-dl
+	@${INSTALL_DATA} ${WRKSRC}/youtube-dl.1 ${STAGEDIR}${PREFIX}/man/man1
 .if ${PORT_OPTIONS:MBASH}
-	${MKDIR} ${PREFIX}/etc/bash_completion.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 	${INSTALL_DATA} ${WRKSRC}/youtube-dl.bash-completion \
-		${PREFIX}/etc/bash_completion.d/youtube-dl.sh
+		${STAGEDIR}${PREFIX}/etc/bash_completion.d/youtube-dl.sh
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG}
