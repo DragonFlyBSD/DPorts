@@ -1,9 +1,5 @@
-# New ports collection makefile for:    p5-Devel-StealthDebug
-# Date created:				August 18th 2004
-# Whom:	      				Alex Kapranoff <alex@kapranoff.ru>
-#
-# $FreeBSD: devel/p5-Devel-StealthDebug/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Alex Kapranoff <alex@kapranoff.ru>
+# $FreeBSD: devel/p5-Devel-StealthDebug/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Devel-StealthDebug
 PORTVERSION=	1.008
@@ -23,4 +19,5 @@ INSTALL_TARGET=	pure_install
 
 MAN3=		Devel::StealthDebug.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
