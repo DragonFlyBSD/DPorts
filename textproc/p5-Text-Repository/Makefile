@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Text::Repository
-# Date created:				24 Jan 2002
-# Whom:					Seamus Venasse <svenasse@polaris.ca>
-#
-# $FreeBSD: textproc/p5-Text-Repository/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Seamus Venasse <svenasse@polaris.ca>
+# $FreeBSD: textproc/p5-Text-Repository/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=		Text-Repository
 PORTVERSION=		1.04
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=			Text::Repository.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
