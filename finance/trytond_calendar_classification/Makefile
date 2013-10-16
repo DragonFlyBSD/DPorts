@@ -1,4 +1,4 @@
-# $FreeBSD: finance/trytond_calendar_classification/Makefile 318580 2013-05-20 08:00:57Z wen $
+# $FreeBSD: finance/trytond_calendar_classification/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_calendar_classification
 PORTVERSION=	2.4.2
@@ -18,4 +18,5 @@ CONFLICTS=	trytond_calendar_classification-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
