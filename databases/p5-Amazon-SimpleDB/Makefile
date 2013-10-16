@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Amazon-SimpleDB/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-Amazon-SimpleDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Amazon-SimpleDB
 PORTVERSION=	0.03
@@ -29,4 +29,5 @@ MAN3=		Amazon::SimpleDB.3 \
 		Amazon::SimpleDB::QueryResponse.3 \
 		Amazon::SimpleDB::Response.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
