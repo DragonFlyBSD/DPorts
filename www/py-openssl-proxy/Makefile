@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: ports/www/py-openssl-proxy/Makefile,v 1.9 2013/01/21 08:50:29 svnexp Exp $
+# $FreeBSD: www/py-openssl-proxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	openssl-proxy
 PORTVERSION=	0.1
@@ -21,4 +21,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/OpenSSLProxy.py \
 		%%PYTHON_SITELIBDIR%%/OpenSSLProxy.pyc \
 		%%PYTHON_SITELIBDIR%%/OpenSSLProxy.pyo
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
