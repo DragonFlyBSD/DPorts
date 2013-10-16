@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: www/rubygem-scrubyt/Makefile 315382 2013-03-27 13:56:59Z tota $
+# $FreeBSD: www/rubygem-scrubyt/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	scrubyt
 PORTVERSION=	0.4.11
@@ -18,6 +18,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's/0.4.1/${PORTVERSION}/' ${BUILD_WRKSRC}/${GEMFILES}spec
 
