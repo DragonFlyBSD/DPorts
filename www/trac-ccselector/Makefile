@@ -1,9 +1,5 @@
-# New ports collection makefile for: trac-ccselector
-# Date created:                      Dec 10 2008
-# Whom:                              glarkin
-#
-# $FreeBSD: www/trac-ccselector/Makefile 325711 2013-08-30 16:49:43Z mva $
-#
+# Created by: glarkin
+# $FreeBSD: www/trac-ccselector/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ccselector
 PORTVERSION=	0.0.2.4001
@@ -29,6 +25,7 @@ PYDISTUTILS_PKGVERSION= ${PORTVERSION:R}
 PLIST_SUB+=	EGGVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
