@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pecl-uploadprogress/Makefile 317822 2013-05-10 15:54:48Z miwi $
+# $FreeBSD: devel/pecl-uploadprogress/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	uploadprogress
 PORTVERSION=	1.0.2
@@ -18,4 +18,5 @@ IGNORE_WITH_PHP=4
 
 CONFIGURE_ARGS=	--enable-uploadprogress
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
