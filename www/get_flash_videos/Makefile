@@ -1,8 +1,5 @@
-# New ports collection makefile for:	get_flash_videos
-# Date created:		Sun Jul 22 20:49:07 UTC 2012
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: www/get_flash_videos/Makefile 325974 2013-09-02 11:04:10Z az $
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: www/get_flash_videos/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	get_flash_videos
 DISTVERSION=	1.24.${DISTFILE_DATE}
@@ -37,6 +34,7 @@ DISTFILE_DATE=	20120610
 
 PLIST_FILES=	bin/${PORTNAME}
 
+NO_STAGE=	yes
 post-extract:
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
