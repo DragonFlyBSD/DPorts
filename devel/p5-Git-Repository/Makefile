@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-Repository/Makefile 324992 2013-08-19 13:46:45Z culot $
+# $FreeBSD: devel/p5-Git-Repository/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Git-Repository
 PORTVERSION=	1.308
@@ -32,4 +32,5 @@ MAN3=		Git::Repository.3 \
 		Git::Repository::Tutorial.3 \
 		Test::Git.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
