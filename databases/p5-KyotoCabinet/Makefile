@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: databases/p5-KyotoCabinet/Makefile 326894 2013-09-10 11:32:20Z az $
+# $FreeBSD: databases/p5-KyotoCabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	KyotoCabinet
 PORTVERSION=	1.18
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	KyotoCabinet.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
