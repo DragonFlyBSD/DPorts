@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: mail/p5-Email-Sender-Transport-SMTP-TLS/Makefile 326257 2013-09-04 07:19:56Z az $
+# $FreeBSD: mail/p5-Email-Sender-Transport-SMTP-TLS/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Email-Sender-Transport-SMTP-TLS
 PORTVERSION=	0.14
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Email::Sender::Transport::SMTP::TLS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
