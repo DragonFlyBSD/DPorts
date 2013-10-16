@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Constants/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-Constants/Makefile 328609 2013-09-28 17:13:03Z sunpoet $
 
 PORTNAME=	Astro-Constants
 PORTVERSION=	0.09
@@ -12,7 +12,5 @@ COMMENT=	Physical constants for use in astronomy
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Astro::Constants.3
 
 .include <bsd.port.mk>
