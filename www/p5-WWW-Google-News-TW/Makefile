@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-Google-News
-# Date created:		2006-07-17
-# Whom:			Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-#
-# $FreeBSD: www/p5-WWW-Google-News-TW/Makefile 326003 2013-09-02 15:12:10Z az $
-#
+# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
+# $FreeBSD: www/p5-WWW-Google-News-TW/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-Google-News-TW
 PORTVERSION=	0.12
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		WWW::Google::News::TW.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
