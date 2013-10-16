@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-extensions/Makefile 327013 2013-09-11 21:43:49Z wg $
+# $FreeBSD: www/py-django-extensions/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-extensions
 PORTVERSION=	1.2.0
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>0:${PORTSDIR}/www/py-django \
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
