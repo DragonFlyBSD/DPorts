@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AluminumAlloy-Smog (gtk theme)
-# Date Created:				27 August 2004
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gtk-aluminumalloy-smog-theme/Makefile,v 1.8 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: x11-themes/gtk-aluminumalloy-smog-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTREVISION=	5
 
@@ -14,4 +10,5 @@ MASTERDIR=	${.CURDIR}/../gtk-aluminumalloy-volcanic-theme
 DISTINFO_FILE=	${.CURDIR}/../gtk-aluminumalloy-smog-theme/distinfo
 PLIST=		${.CURDIR}/../gtk-aluminumalloy-smog-theme/pkg-plist
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
