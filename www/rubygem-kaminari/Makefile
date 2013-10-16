@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-kaminari/Makefile 322023 2013-06-29 02:37:35Z swills $
+# $FreeBSD: www/rubygem-kaminari/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	kaminari
 PORTVERSION=	0.14.1
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
