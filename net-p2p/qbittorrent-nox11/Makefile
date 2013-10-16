@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent-nox11/Makefile 327432 2013-09-16 18:05:14Z nemysis $
+# $FreeBSD: net-p2p/qbittorrent-nox11/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PKGNAMESUFFIX=	-nox11
 
@@ -15,4 +15,5 @@ MAN1=		qbittorrent-nox.1
 
 QB_NOX_SLAVE=	true
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
