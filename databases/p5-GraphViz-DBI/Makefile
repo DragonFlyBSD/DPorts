@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: databases/p5-GraphViz-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-GraphViz-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	GraphViz-DBI
 PORTVERSION=	1.100860
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		GraphViz::DBI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
