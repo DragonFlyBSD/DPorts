@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Statistics-Benford/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: math/p5-Statistics-Benford/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-Benford
 PORTVERSION=	0.08
@@ -15,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		Statistics::Benford.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
