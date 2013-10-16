@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-Canonical/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: textproc/p5-XML-Canonical/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Canonical
 PORTVERSION=	0.10
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		XML::Canonical.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
