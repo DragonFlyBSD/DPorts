@@ -1,5 +1,5 @@
-# Created by: Wen Heping <wen@freebsd.org>
-# $FreeBSD: audio/p5-Test-Corpus-Audio-MPD/Makefile 324174 2013-08-02 18:52:07Z mat $
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: audio/p5-Test-Corpus-Audio-MPD/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Test-Corpus-Audio-MPD
 PORTVERSION=	1.120990
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	p5-File-ShareDir-PathClass>0:${PORTSDIR}/devel/p5-File-ShareDir-P
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	modbuild
 
 MAN3=		Test::Corpus::Audio::MPD.3
