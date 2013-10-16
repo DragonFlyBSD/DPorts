@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-Schema-Loader/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/p5-DBIx-Skinny-Schema-Loader/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Skinny-Schema-Loader
 PORTVERSION=	0.25
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::Skinny::Schema::Loader.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
