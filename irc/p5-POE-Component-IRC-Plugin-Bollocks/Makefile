@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Bollocks/Makefile 326892 2013-09-10 10:51:10Z az $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Bollocks/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	POE-Component-IRC-Plugin-Bollocks
 PORTVERSION=	1.00
@@ -22,6 +22,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Plugin::Bollocks.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
