@@ -1,4 +1,4 @@
-# $FreeBSD: ports/databases/animenfo-client/Makefile,v 1.6 2012/11/17 05:55:05 svnexp Exp $
+# $FreeBSD: databases/animenfo-client/Makefile 329542 2013-10-06 09:19:17Z dinoex $
 
 PORTNAME=	animenfo
 PORTVERSION=	20020819
@@ -17,6 +17,6 @@ USE_GMAKE=	yes
 PLIST_FILES=	bin/animenfo-client
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/animenfo-client ${PREFIX}/bin/
+	@${INSTALL_PROGRAM} ${WRKSRC}/animenfo-client ${STAGEDIR}/${PREFIX}/bin/
 
 .include <bsd.port.mk>
