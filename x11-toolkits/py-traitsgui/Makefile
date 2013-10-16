@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-traitsgui
-# Date created:		2009-08-21
-# Whom:			Jacob Frelinger <jacob.frelinger@duke.edu>
-#
-# $FreeBSD: ports/x11-toolkits/py-traitsgui/Makefile,v 1.6 2012/11/17 06:03:38 svnexp Exp $
-#
+# Created by: Jacob Frelinger <jacob.frelinger@duke.edu>
+# $FreeBSD: x11-toolkits/py-traitsgui/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	traitsgui
 PORTVERSION=	3.1.0
@@ -23,6 +19,7 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TraitsGUI
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	${MKDIR} ${EXAMPLESDIR}
