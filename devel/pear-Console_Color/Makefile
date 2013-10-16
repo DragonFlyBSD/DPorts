@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/pear-Console_Color/Makefile 314252 2013-03-15 06:22:53Z miwi $
+# $FreeBSD: devel/pear-Console_Color/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Console_Color
 PORTVERSION=	1.0.3
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
