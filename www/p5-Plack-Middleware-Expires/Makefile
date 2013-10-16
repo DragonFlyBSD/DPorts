@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Plack-Middleware-Expires/Makefile 326139 2013-09-03 12:27:09Z az $
+# $FreeBSD: www/p5-Plack-Middleware-Expires/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-Middleware-Expires
 PORTVERSION=	0.03
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Plack::Middleware::Expires.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
