@@ -1,10 +1,7 @@
-# New ports collection makefile for:	PostgreSQL PL/Perl 
-# Date created:		January 14, 2002
-# Whom:			Palle Girgensohn <girgen@partitur.se>
-#
-# $FreeBSD: databases/postgresql93-pltcl/Makefile 317925 2013-05-12 00:00:56Z girgen $
-#
+# Created by: Palle Girgensohn <girgen@partitur.se>
+# $FreeBSD: databases/postgresql93-pltcl/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 WANT_PGSQL_VER=	93
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../postgresql90-pltcl/Makefile"
