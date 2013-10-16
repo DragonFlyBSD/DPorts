@@ -1,9 +1,5 @@
-# Ports collection makefile for:	py-flowtools
-# Date created:				16 Sep 2004
-# Whom:	      				Roman Bogorodskiy <bogorodskiy@inbox.ru>
-#
-# $FreeBSD: ports/net-mgmt/py-flowtools/Makefile,v 1.9 2012/11/17 06:00:36 svnexp Exp $
-#
+# Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
+# $FreeBSD: net-mgmt/py-flowtools/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	flowtools
 PORTVERSION=	0.3.4.1
@@ -29,4 +25,5 @@ PYDISTUTILS_PKGNAME=	pyflowtools
 
 PROJECTHOST=	py${PORTNAME}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
