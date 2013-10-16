@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 327448 2013-09-17 01:10:19Z bdrewery $
+# $FreeBSD: ports-mgmt/portupgrade-devel/Makefile 327976 2013-09-23 11:23:55Z bdrewery $
 
 PORTNAME=	portupgrade
-PORTVERSION=	20130916
+PORTVERSION=	20130921
 PORTEPOCH=	3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
@@ -20,31 +20,14 @@ CONFLICTS_INSTALL=	portupgrade-[0-9]*
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 GH_PROJECT=	portupgrade
-GH_COMMIT=	e4a515a
+GH_COMMIT=	452ad6a
 GH_TAGNAME=	${GH_COMMIT}
 
 DIST_SUBDIR=	${PORTNAME}
 USE_RUBY=	yes
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
-MAKE_ARGS=	PREFIX="${PREFIX}" RUBY="${RUBY}" RUBY_SITELIBDIR="${RUBY_SITELIBDIR}" MKDIR="${MKDIR}"
-MAN1=		pkg_deinstall.1 \
-		pkg_fetch.1 \
-		pkg_glob.1 \
-		pkg_sort.1 \
-		pkgdb.1 \
-		pkgdu.1 \
-		portcvsweb.1 \
-		portsvnweb.1 \
-		portsclean.1 \
-		portsdb.1 \
-		portupgrade.1 \
-		portversion.1
-MAN5=		pkgtools.conf.5
-MLINKS=		pkgdb.1 pkg_which.1 \
-		portupgrade.1 portinstall.1 \
-		portcvsweb.1 portsvnweb.1 \
-		portsdb.1 ports_glob.1
-MANCOMPRESSED=	maybe
+MAKE_ARGS=	PREFIX="${PREFIX}" RUBY="${RUBY}" \
+		RUBY_SITELIBDIR="${RUBY_SITELIBDIR}" MKDIR="${MKDIR}"
 
 EXAMPLESDIR=	${PREFIX}/share/examples/pkgtools
 DOCSDIR=	${PREFIX}/share/doc/pkgtools
@@ -59,11 +42,6 @@ INSTALL_TARGET+=	install-doc
 # Reported that ruby-bdb is BROKEN with 2.0
 .if ${RUBY_VER} != 2.0
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/bdb.so:${PORTSDIR}/databases/ruby-bdb
-.endif
-
-# parsedate is needed for date globbing
-.if ${RUBY_VER} == 1.9
-RUN_DEPENDS+=	${RUBY_SITELIBDIR}/parsedate.rb:${PORTSDIR}/devel/ruby-date2
 .endif
 
 # Need to install working script(1)
@@ -82,9 +60,6 @@ post-patch:	.SILENT
 	    ${WRKSRC}/lib/pkgtools/revision.rb.in > ${WRKSRC}/lib/pkgtools/revision.rb
 
 post-install:
-	if [ ! -f ${PREFIX}/etc/pkgtools.conf ]; then \
-		${CP} -p ${PREFIX}/etc/pkgtools.conf.sample ${PREFIX}/etc/pkgtools.conf; \
-	fi
-	${MKDIR} ${PREFIX}/lib/compat/pkg
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/compat/pkg
 
 .include <bsd.port.post.mk>
