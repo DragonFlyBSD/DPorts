@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Perl-Metrics-Simple/Makefile 326671 2013-09-07 17:58:27Z az $
+# $FreeBSD: devel/p5-Perl-Metrics-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Perl-Metrics-Simple
 PORTVERSION=	0.17
@@ -26,6 +26,7 @@ MAN3=	Perl::Metrics::Simple.3 \
 	Perl::Metrics::Simple::Analysis.3 \
 	Perl::Metrics::Simple::Analysis::File.3
 
+NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -name '*.orig' -delete
 
