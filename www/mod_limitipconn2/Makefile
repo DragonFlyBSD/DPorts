@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: www/mod_limitipconn2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_limitipconn2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_limitipconn
 PORTVERSION=	0.23
@@ -25,6 +25,7 @@ PLIST_FILES+=	${APACHEMODDIR}/${PORTNAME}.so
 
 PORTDOCS=	ChangeLog INSTALL README
 
+NO_STAGE=	yes
 post-install:
 .if !defined (NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}/
