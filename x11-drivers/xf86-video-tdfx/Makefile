@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-tdfx/Makefile 319055 2013-05-25 14:37:02Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-tdfx/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-video-tdfx
 PORTVERSION=	1.4.5
@@ -14,4 +14,5 @@ XORG_CAT=	driver
 USE_XORG=	xf86driproto glproto
 MAN4=		tdfx.4x
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
