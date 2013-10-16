@@ -1,5 +1,5 @@
 # Created by: Alexander Hausner <alex@hugo.bmg.gv.at>
-# $FreeBSD: www/mod_authn_otp/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_authn_otp/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_authn_otp
 PORTVERSION=	1.1.5
@@ -20,6 +20,7 @@ MAN1=		otptool.1
 
 PORTEXAMPLES=	users.sample
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
