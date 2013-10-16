@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: graphics/p5-Color-Palette/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: graphics/p5-Color-Palette/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Color-Palette
 PORTVERSION=	0.100002
@@ -25,4 +25,5 @@ MAN3=	Color::Palette.3 \
 	Color::Palette::Schema.3 \
 	Color::Palette::Types.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
