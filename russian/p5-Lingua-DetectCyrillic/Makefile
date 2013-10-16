@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: russian/p5-Lingua-DetectCyrillic/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: russian/p5-Lingua-DetectCyrillic/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	Lingua-DetectCyrillic
 PORTVERSION=	0.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Lingua::DetectCyrillic.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
