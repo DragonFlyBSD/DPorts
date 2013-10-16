@@ -1,21 +1,24 @@
 # Created by: Alonso Cárdenas Márquez <acm@FreeBSD.org>
-# $FreeBSD: databases/firebird25-server/Makefile 315591 2013-03-30 04:33:48Z acm $
+# $FreeBSD: databases/firebird25-server/Makefile 329158 2013-10-03 07:46:58Z acm $
 
 PORTNAME=	firebird
 PORTVERSION=	2.5.2
-PORTREVISION?=	1
+PORTREVISION?=	3
 CATEGORIES?=	databases
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:S/.0//}-Release/
-PKGNAMESUFFIX?=	-server
+PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}-server
 DISTNAME=	${PORTNAME:S/f/F/}-${PORTVERSION}.26540-0
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT?=	Firebird-2 relational database (server)
 
-LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu
+CONFLICTS?=	${PORTNAME}20-client-* \
+		${PORTNAME}21-client-* \
+		${PORTNAME}20-server-* \
+		${PORTNAME}21-server-*
 
-LATEST_LINK=	${PORTNAME}25${PKGNAMESUFFIX}
+LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu
 
 USES=		bison
 USE_BZIP2=	yes
@@ -30,7 +33,7 @@ CONFIGURE_ARGS=	--with-system-editline \
 		--with-fbconf=${CONFDIR} \
 		--with-fbglock=${LOCALSTATEDIR} \
 		--with-fbhelp=${LOCALSTATEDIR}/help \
-		--with-fbintl=${CONFDIR}/intl \
+		--with-fbintl=${LIBEXECDIR}/intl \
 		--with-fblog=${LOCALSTATEDIR} \
 		--with-fbmsg=${DATADIR} \
 		--with-fbplugins=${LIBEXECDIR}/plugins \
@@ -72,18 +75,20 @@ IGNORE=		your system does not support sysvipc
 # Server part stuff
 LIB_DEPENDS+=	fbembed.2:${PORTSDIR}/databases/firebird25-client
 
-ALL_TARGET=	firebird_embedded
+CONFIGURE_ARGS+=--enable-superserver
+
+ALL_TARGET=	firebird_embedded firebird_server
 
 USE_RC_SUBR=	firebird
 SUB_FILES=	pkg-message
 
-UTIL_SBIN=	fb_inet_server fb_lock_print fb_smp_server
+UTIL_SBIN=	fb_inet_server fb_lock_print fb_smp_server fbserver
 UTIL_BIN=	fbguard fbsplit fbstat fbsvcmgr fbtracemgr gbak gdef gfix gsec \
 		nbackup
 UDF_SO=		ib_udf.so fbudf.so
 UDF_SQL=	src/extlib/ib_udf2.sql src/extlib/fbudf/fbudf.sql
 
-PKGINSTALL?=	${PKGDIR}/pkg-install${PKGNAMESUFFIX}
+PKGINSTALL?=	${PKGDIR}/pkg-install-server
 .else
 # Client part stuff
 ALL_TARGET=	firebird_basic libfbembed libfbclient embed_isql embed_gpre \
@@ -102,6 +107,7 @@ FB_DOCS_DIRS=	sql.extensions license upgrade
 
 MAKE_ENV+=	FIREBIRD_TMP="${WRKDIR}" FIREBIRD_LOCK="${WRKDIR}"
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -rf ${WRKSRC}/extern/icu
 
@@ -156,7 +162,6 @@ do-install:
 .if !exists(${CONFDIR}/aliases.conf)
 	${INSTALL_DATA} ${WRKSRC}/gen/install/misc/aliases.conf ${CONFDIR}/aliases.conf
 .endif
-	${INSTALL_DATA} ${WRKSRC}/gen/install/misc/fbintl.conf ${CONFDIR}/fbintl.conf
 	${INSTALL_DATA} ${WRKSRC}/gen/install/misc/fbtrace.conf ${CONFDIR}/fbtrace.conf
 
 	${MKDIR} ${LIBEXECDIR}/udf ${LOCALSTATEDIR}/help ${LIBEXECDIR}/intl \
@@ -164,6 +169,7 @@ do-install:
 
 	${CHOWN} -R firebird:firebird ${LOCALSTATEDIR}
 
+	${INSTALL_DATA} ${WRKSRC}/gen/install/misc/fbintl.conf ${LIBEXECDIR}/intl/fbintl.conf
 	${INSTALL_FB} -m 0555 ${UDF_SO:S!^!${WRKSRC}/gen/firebird/UDF/!} ${LIBEXECDIR}/udf
 	${INSTALL_FB} -m 0444 ${UDF_SQL:S!^!${WRKSRC}/!} ${LIBEXECDIR}/udf
 	${INSTALL_FB} -m 0555 ${WRKSRC}/gen/firebird/plugins/libfbtrace.so ${LIBEXECDIR}/plugins
@@ -175,7 +181,7 @@ do-install:
 
 	${INSTALL_FB} -m 0440 ${WRKSRC}/gen/firebird/help/help.fdb ${LOCALSTATEDIR}/help
 
-	${INSTALL_FB} -m 0555 ${WRKSRC}/gen/firebird/intl/libfbintl.so ${LIBEXECDIR}/intl/fbintl
+	${INSTALL_FB} -m 0555 ${WRKSRC}/gen/firebird/intl/libfbintl.so ${LIBEXECDIR}/intl/fbintl.so
 .else
 # defined CLIENT_ONLY
 	${INSTALL_PROGRAM} ${CLIENT_BIN:S!^!${WRKSRC}/gen/firebird/bin/!} ${PREFIX}/bin
