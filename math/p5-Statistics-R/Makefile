@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-R/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: math/p5-Statistics-R/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Statistics-R
 PORTVERSION=	0.31
@@ -24,4 +24,5 @@ MAN3=		Statistics::R::Legacy.3 \
 		Statistics::R::Win32.3 \
 		Statistics::R.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
