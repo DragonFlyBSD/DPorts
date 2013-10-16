@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Math-Intersection-StraightLine
-# Date created:				18 Feb 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: math/p5-Math-Intersection-StraightLine/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Intersection-StraightLine/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Intersection-StraightLine
 PORTVERSION=	0.04
@@ -19,4 +15,5 @@ MAN3=	Math::Intersection::StraightLine.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
