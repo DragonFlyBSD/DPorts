@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Search-Odeum/Makefile 326941 2013-09-11 06:03:56Z az $
+# $FreeBSD: textproc/p5-Search-Odeum/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Search-Odeum
 PORTVERSION=	0.02
@@ -23,4 +23,5 @@ MAN3=		Search::Odeum.3 \
 		Search::Odeum::Document.3 \
 		Search::Odeum::Result.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
