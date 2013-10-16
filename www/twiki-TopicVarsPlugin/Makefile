@@ -1,4 +1,4 @@
-# $FreeBSD: www/twiki-TopicVarsPlugin/Makefile 325271 2013-08-23 14:02:37Z wg $
+# $FreeBSD: www/twiki-TopicVarsPlugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	TopicVarsPlugin
 SVNREV=		16417
@@ -7,5 +7,6 @@ PORTEPOCH=	1
 
 COMMENT=	Create externally usable variables in any topic
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../twiki/bsd.twiki.mk"
 .include <bsd.port.mk>
