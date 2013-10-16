@@ -1,10 +1,9 @@
-# $FreeBSD: audio/chromaprint/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: audio/chromaprint/Makefile 328234 2013-09-25 01:52:29Z jhale $
 
 PORTNAME=	chromaprint
-PORTVERSION=	0.7
-PORTREVISION=	1
+PORTVERSION=	1.0
 CATEGORIES=	audio
-MASTER_SITES=	http://cloud.github.com/downloads/lalinsky/${PORTNAME}/
+MASTER_SITES=	http://bitbucket.org/acoustid/${PORTNAME}/downloads/
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	AcoustID audio fingerprinting library
@@ -16,6 +15,7 @@ LIB_DEPENDS=	avcodec${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFI
 USES=		cmake:outsource
 USE_LDCONFIG=	yes
 
+FETCH_ARGS=	-Fpr
 CMAKE_ARGS=	-DBUILD_EXAMPLES:BOOL=ON \
 		-DWITH_AVFFT:BOOL=ON \
 		-DFFMPEG_SUFFIX:STRING=${FFMPEG_SUFFIX}
@@ -25,4 +25,12 @@ post-patch:
 	${REINPLACE_CMD} -e '/pkgconfig/s|$${LIB_INSTALL_DIR}|libdata|' \
 		 ${WRKSRC}/CMakeLists.txt
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD
+.if (${CXX:T} == "clang++" && ${OSVERSION} > 902000) || ${OSVERSION} > 1000054
+CXXFLAGS+=	-stdlib=libc++ -std=c++11
+.endif
+.endif
+
+.include <bsd.port.post.mk>
