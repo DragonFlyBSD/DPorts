@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-rackspace-monitoring/Makefile 322427 2013-07-07 11:38:47Z koobs $
+# $FreeBSD: www/py-rackspace-monitoring/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rackspace-monitoring
 PORTVERSION=	0.5.2
@@ -18,4 +18,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libcloud>=0.12.4:${PORTSDIR}/net/py-libcloud
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
