@@ -1,9 +1,5 @@
-# New ports collection makefile for:    yi-aspell
-# Date created:                         28 August 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/textproc/yi-aspell/Makefile,v 1.7 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: textproc/yi-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-yi-0.01.1-1
@@ -16,5 +12,6 @@ COMMENT=	Aspell Yiddish dictionary
 
 DICT=	 	yi
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
