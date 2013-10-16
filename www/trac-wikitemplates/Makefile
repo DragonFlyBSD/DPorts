@@ -1,9 +1,5 @@
-# New ports collection makefile for: trac-wikitemplates
-# Date created:                      May 18 2007
-# Whom:                              Gerrit Beine <gerrit.beine@gmx.de>
-#
-# $FreeBSD: www/trac-wikitemplates/Makefile 325711 2013-08-30 16:49:43Z mva $
-#
+# Created by: Gerrit Beine <gerrit.beine@gmx.de>
+# $FreeBSD: www/trac-wikitemplates/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	wikitemplates
 PORTVERSION=	0.3.0p3
@@ -26,4 +22,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracWikiTemplates
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/p/rc/}
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
