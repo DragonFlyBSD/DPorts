@@ -1,9 +1,5 @@
-# New ports collection makefile for:	hashcash
-# Date created:				Jan 30, 2003
-# Whom:					bremner@unb.ca
-#
-# $FreeBSD: ports/mail/hashcash/Makefile,v 1.11 2012/11/17 05:59:03 svnexp Exp $
-#
+# Created by: bremner@unb.ca
+# $FreeBSD: mail/hashcash/Makefile 330457 2013-10-15 20:34:06Z marino $
 
 PORTNAME=	hashcash
 PORTVERSION=	1.22
@@ -18,6 +14,7 @@ MAN1=		hashcash.1 sha1-hashcash.1
 PLIST_FILES=	bin/hashcash bin/sha1
 PORTDOCS=	CHANGELOG LICENSE README
 ALL_TARGET=	generic
+NO_STAGE=	yes
 
 .if defined(NOPORTDOCS)
 
