@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/pear-Services_GeoNames/Makefile 314411 2013-03-17 08:27:46Z miwi $
+# $FreeBSD: www/pear-Services_GeoNames/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Services_GeoNames
 PORTVERSION=	1.0.1
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
