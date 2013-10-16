@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: audio/bmp-htmlplaylist/Makefile 325966 2013-09-02 10:06:03Z bapt $
+# $FreeBSD: audio/bmp-htmlplaylist/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	bmp-htmlplaylist
 PORTVERSION=	0.2.1
@@ -15,6 +15,7 @@ COMMENT=	Application which saves your current BMP playlist to html or xml file
 BUILD_DEPENDS=	beep-media-player:${PORTSDIR}/multimedia/beep-media-player
 RUN_DEPENDS=	beep-media-player:${PORTSDIR}/multimedia/beep-media-player
 
+NO_STAGE=	yes
 MAKE_ARGS=	CC="${CC}" LD="${CC}"
 USES=	pkgconfig
 WRKSRC=		${WRKDIR}/${PORTNAME}
