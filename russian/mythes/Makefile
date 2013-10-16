@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mythes
-# Date created:		2011-07-21
-# Whom:			Baptiste Daroussin <bapt@FreeBSD.org>
-#
-# $FreeBSD: ports/russian/mythes/Makefile,v 1.6 2012/11/17 06:00:56 svnexp Exp $
-#
+# $FreeBSD: russian/mythes/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2007.06.13
@@ -28,6 +23,7 @@ PLIST_FILES=	%%DATADIR%%/th_ru_RU_v2.dat \
 		%%DATADIR%%/th_ru_UA_v2.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/th_ru_RU_v2.dat ${WRKSRC}/th_ru_RU_v2.idx ${DATADIR}/
