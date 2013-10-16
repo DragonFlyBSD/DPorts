@@ -1,9 +1,10 @@
 # Created by: Palle Girgensohn <girgen@partitur.se>
-# $FreeBSD: databases/postgresql90-plperl/Makefile 326900 2013-09-10 13:04:01Z az $
+# $FreeBSD: databases/postgresql90-plperl/Makefile 329946 2013-10-10 00:09:35Z jgh $
 
 PORTNAME=	postgresql
 CATEGORIES=	databases perl5
-PKGNAMESUFFIX=	-plperl
+PKGNAMESUFFIX?=	${DISTV:S/.//}-plperl
+DISTV=	${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	Write SQL functions for PostgreSQL using Perl5
@@ -20,5 +21,7 @@ CONFIGURE_ARGS=	--with-perl
 BUILD_DIRS=	src/backend src/pl/plperl
 INSTALL_DIRS=	src/pl/plperl
 SLAVE_ONLY=	yes
+COMPONENT=	-plperl
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
