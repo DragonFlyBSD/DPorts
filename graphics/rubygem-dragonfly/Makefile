@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: graphics/rubygem-dragonfly/Makefile 322818 2013-07-12 07:12:34Z jgh $
+# $FreeBSD: graphics/rubygem-dragonfly/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	dragonfly
 PORTVERSION=	0.9.15
@@ -17,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
