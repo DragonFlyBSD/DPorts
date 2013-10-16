@@ -1,6 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-sunbird/Makefile 326122 2013-09-03 06:36:41Z bapt $
-#
+# $FreeBSD: deskutils/libopensync-plugin-sunbird/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	libopensync-plugin-sunbird
 PORTVERSION=	0.22
@@ -21,6 +20,7 @@ USE_GNOME=	glib20 libxml2
 
 PORTDOCS=	AUTHORS COPYING ChangeLog README
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
