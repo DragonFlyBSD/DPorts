@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: devel/p5-Class-Component/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Component/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Component
 PORTVERSION=	0.17
@@ -25,4 +25,5 @@ MAN3=	Class::Component::Component::Plaggerize.3 \
 	Class::Component::Plugin.3 \
 	Class::Component::Component::Moosenize.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
