@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-Catalog/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: astro/p5-Astro-Catalog/Makefile 327701 2013-09-20 13:14:04Z bapt $
 
 PORTNAME=	Astro-Catalog
 PORTVERSION=	4.2.7
@@ -30,6 +30,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USES=		perl5
 USE_PERL5=	modbuild
+NO_STAGE=	yes
 
 MAN3=		Astro::Catalog.3 \
 		Astro::Catalog::IO::ASCII.3 \
