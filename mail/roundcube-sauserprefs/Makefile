@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: mail/roundcube-sauserprefs/Makefile 325756 2013-08-31 00:45:21Z bdrewery $
+# $FreeBSD: mail/roundcube-sauserprefs/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sauserprefs
 PORTVERSION=	1.10 # PLEASE MIRROR DISTFILE WITH VERSIONED DIR
@@ -29,6 +29,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
