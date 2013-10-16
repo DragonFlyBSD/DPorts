@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 326139 2013-09-03 12:27:09Z az $
+# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Plack-App-Proxy
 PORTVERSION=	0.27
@@ -32,4 +32,5 @@ MAN3=	Plack::App::Proxy.3 \
 	Plack::Middleware::Proxy::LoadBalancer.3 \
 	Plack::Middleware::Proxy::RewriteLocation.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
