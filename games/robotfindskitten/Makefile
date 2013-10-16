@@ -1,5 +1,5 @@
 # Created by: Ceri Davies (ceri@FreeBSD.org)
-# $FreeBSD: ports/games/robotfindskitten/Makefile,v 1.11 2013/02/08 18:58:09 svnexp Exp $
+# $FreeBSD: games/robotfindskitten/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	robotfindskitten
 PORTVERSION=	2.7182818.701
@@ -25,6 +25,7 @@ OPTIONS_DEFAULT=	EXTRANKI
 
 MAN6=		robotfindskitten.6
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXTRANKI}

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/games/robotfindskitten/pkg-plist,v 1.4 2013/02/08 18:58:09 svnexp Exp $
+@comment $FreeBSD: games/robotfindskitten/pkg-plist 311948 2013-02-08 18:49:08Z skreuzer $
 bin/robotfindskitten
 %%DATADIR%%/vanilla.nki
 %%EXTRANKI%%%%DATADIR%%/freebsd.nki
