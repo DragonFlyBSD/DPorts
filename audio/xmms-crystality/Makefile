@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-crystality/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: audio/xmms-crystality/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	crystality
 PORTVERSION=	0.92
@@ -15,6 +15,7 @@ COMMENT=	Realtime XMMS plugin for remastering mp3 sound
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	imlib
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
