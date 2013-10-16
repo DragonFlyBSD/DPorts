@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-InlineX-CPP2XS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-InlineX-CPP2XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	InlineX-CPP2XS
 PORTVERSION=	0.24
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=		InlineX::CPP2XS.3 InlineX::CPP2XS-Cookbook.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
