@@ -1,6 +1,5 @@
 # Created by: gugu
-# $FreeBSD: www/p5-HTML-FormFu-Imager/Makefile 324174 2013-08-02 18:52:07Z mat $
-# Generated with App::Pm2Port . Do not edit directly, please
+# $FreeBSD: www/p5-HTML-FormFu-Imager/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-FormFu-Imager
 PORTVERSION=	0.03006
@@ -24,4 +23,5 @@ MAN3=	HTML::FormFu::Imager.3 \
 		HTML::FormFu::Transformer::Imager.3 \
 		HTML::FormFu::Validator::Imager::Size.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
