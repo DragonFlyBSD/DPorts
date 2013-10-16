@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/pyspatialite/Makefile 326981 2013-09-11 13:58:27Z wg $
+# $FreeBSD: databases/pyspatialite/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	pyspatialite
 PORTVERSION=	3.0.1
@@ -23,6 +23,7 @@ PYDISTUTILS_PKGNAME=	pyspatialite
 
 AMALGAMATION_NAME=	libspatialite-amalgamation-${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if empty(ICONV_LIB)
