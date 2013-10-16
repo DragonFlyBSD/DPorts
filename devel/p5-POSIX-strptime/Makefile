@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: devel/p5-POSIX-strptime/Makefile 326857 2013-09-10 03:32:30Z az $
+# $FreeBSD: devel/p5-POSIX-strptime/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	POSIX-strptime
 PORTVERSION=	0.10
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=	POSIX::strptime.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
