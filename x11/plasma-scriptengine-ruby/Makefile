@@ -1,4 +1,4 @@
-# $FreeBSD: x11/plasma-scriptengine-ruby/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: x11/plasma-scriptengine-ruby/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	plasma-scriptengine-ruby
 PORTVERSION=	${KDE4_VERSION}
@@ -20,4 +20,5 @@ USES=		cmake:outsource
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/plasma/generic/scriptengines/ruby
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
