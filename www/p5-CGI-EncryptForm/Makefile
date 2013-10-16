@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-EncryptForm
-# Date created:		2010-03-11
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: www/p5-CGI-EncryptForm/Makefile 326148 2013-09-03 13:06:13Z az $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: www/p5-CGI-EncryptForm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-EncryptForm
 PORTVERSION=	1.02
@@ -25,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=	CGI::EncryptForm.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
