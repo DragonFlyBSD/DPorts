@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/iourbanterror/Makefile 325812 2013-08-31 14:45:10Z marino $
+# $FreeBSD: games/iourbanterror/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	iourbanterror
 PORTVERSION=	${GAMEVERSION}.g${GITREVISION}
@@ -33,6 +33,7 @@ HOMEPATH=	/.ioUrbanTerror
 MAKE_ARGS+=	BUILD_MISSIONPACK=0 \
 		BUILD_STANDALONE=1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's/ioquake3/${Q3CLIENT}/g' \
