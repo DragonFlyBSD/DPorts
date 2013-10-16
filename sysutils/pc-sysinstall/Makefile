@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: sysutils/pc-sysinstall/Makefile 313653 2013-03-08 15:06:47Z bms $
+# $FreeBSD: sysutils/pc-sysinstall/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	pc-sysinstall
 PORTVERSION=	9.1r${PSVN_REV}
@@ -22,6 +22,7 @@ ONLY_FOR_ARCH=	i386 amd64
 FSVN_REV=	243808
 PSVN_REV=	21630
 
+NO_STAGE=	yes
 post-patch:
 	${RM} -f ${WRKSRC}/Makefile.inc
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|g' \
