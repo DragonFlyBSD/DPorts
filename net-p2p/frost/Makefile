@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: ports/net-p2p/frost/Makefile,v 1.28 2013/01/23 15:05:37 svnexp Exp $
+# $FreeBSD: net-p2p/frost/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	frost
 PORTVERSION=	1.2.0.20090314
@@ -60,6 +60,7 @@ DESKTOP_ENTRIES=	"Frost" "Freenet Client" \
 			"frost" "P2P;Network;Java;" \
 			false
 
+NO_STAGE=	yes
 pre-everything::
 
 post-patch:
