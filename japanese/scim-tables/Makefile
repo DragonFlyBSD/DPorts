@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: japanese/scim-tables/Makefile 316350 2013-04-23 11:46:54Z bapt $
+# $FreeBSD: japanese/scim-tables/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	scim-tables
 PORTVERSION=	0.5.10
@@ -17,6 +17,7 @@ USES=		pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
