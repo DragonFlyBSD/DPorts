@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festival/Makefile 326512 2013-09-06 15:24:58Z mi $
+# $FreeBSD: audio/festival/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	festival
 PORTVERSION=	2.1
@@ -34,6 +34,7 @@ DIST_SUBDIR=	festival
 CXXFLAGS+=	-DFTLIBDIR=${LOCALBASE}/share/festival/lib
 CONFIGURE_WRKSRC=	${WRKDIR}/festival
 USES=		gmake
+NO_STAGE=	yes
 SPEECHTOOLS=	${WRKSRC}/speech_tools
 FESTIVAL=	${WRKSRC}/festival
 MAKE_ENV+=	GCC="${CC}" \
