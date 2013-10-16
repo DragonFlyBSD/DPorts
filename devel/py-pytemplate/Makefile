@@ -1,5 +1,5 @@
 # Created by: Benoit Calvez <benoit@litchis.org>
-# $FreeBSD: ports/devel/py-pytemplate/Makefile,v 1.6 2012/11/17 05:56:49 svnexp Exp $
+# $FreeBSD: devel/py-pytemplate/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pytemplate
 PORTVERSION=	1.5.1
@@ -20,6 +20,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-pytemplate
 
 EXAMPLES=	daemonexample.py example.py threadexample.py
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
