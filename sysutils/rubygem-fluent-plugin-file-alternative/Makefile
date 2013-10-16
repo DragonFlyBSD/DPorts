@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rubygem-fluent-plugin-file-alternative/Makefile 320046 2013-06-06 01:48:46Z kuriyama $
+# $FreeBSD: sysutils/rubygem-fluent-plugin-file-alternative/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	fluent-plugin-file-alternative
 PORTVERSION=	0.1.4
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
