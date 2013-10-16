@@ -1,11 +1,12 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: audio/gkrellmvolume2/Makefile 326709 2013-09-08 08:27:08Z antoine $
+# $FreeBSD: audio/gkrellmvolume2/Makefile 330177 2013-10-12 19:05:09Z ume $
 
 PORTNAME=	gkrellmvolume
 PORTVERSION=	2.1.13
 PORTREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
+PKGNAMESUFFIX=	2
 DISTNAME=	gkrellm-volume-${PORTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
@@ -14,7 +15,6 @@ COMMENT=	GKrellM volume plugin
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
-LATEST_LINK=	gkrellmvolume2
 WRKSRC=		${WRKDIR}/gkrellm-volume
 
 PLIST_FILES=	libexec/gkrellm2/plugins/volume.so \
@@ -27,8 +27,13 @@ PLIST_FILES=	libexec/gkrellm2/plugins/volume.so \
 
 USES=		gmake pkgconfig
 
-MAKE_ENV+=	PLUGIN_DIR=${PREFIX}/libexec/gkrellm2/plugins \
-		LOCALEDIR=${PREFIX}/share/locale \
+PLUGIN_DIR=	${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
+
+MAKE_ENV+=	PLUGIN_DIR=${PLUGIN_DIR} \
+		LOCALEDIR=${STAGEDIR}${PREFIX}/share/locale \
 		enable_nls=1
+
+pre-install:
+	@${MKDIR} ${PLUGIN_DIR}
 
 .include <bsd.port.mk>
