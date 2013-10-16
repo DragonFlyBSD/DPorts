@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: chinese/CNS11643-font/Makefile 321284 2013-06-19 16:03:12Z rafan $
+# $FreeBSD: chinese/CNS11643-font/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 PORTNAME=	CNS11643-font
 PORTVERSION=	98.1
@@ -24,6 +24,7 @@ NO_BUILD=	yes
 
 TTF=		TW-Kai-98_1.ttf TW-Sung-98_1.ttf
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${FONTSDIR}
 .for f in ${TTF}
