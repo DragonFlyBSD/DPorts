@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/twiki-MathModePlugin/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# $FreeBSD: www/twiki-MathModePlugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	MathModePlugin
 SVNREV=		15934
@@ -12,6 +12,7 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 USE_TEX=	base latex
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -i '' -e 's!=/usr/bin!=${LOCALBASE}/bin!g; s!=/bin!=/usr/bin!g;' \
 		${WRKSRC}/pub/TWiki/MathModePlugin/latex2img
