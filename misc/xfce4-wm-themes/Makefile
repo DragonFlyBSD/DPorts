@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xfwm4-themes
-# Date created:		7 June 2003
-# Whom:			James Earl <jdearl@telus.net>
-#
-# $FreeBSD: ports/misc/xfce4-wm-themes/Makefile,v 1.32 2012/11/17 05:59:46 svnexp Exp $
-#
+# Created by: James Earl <jdearl@telus.net>
+# $FreeBSD: misc/xfce4-wm-themes/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	xfce4-wm-themes
 PORTVERSION=	4.10.0
@@ -22,4 +18,5 @@ INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_XFCE=	configenv	# to get MASTER_SITE_SUBDIR something has to be defined
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
