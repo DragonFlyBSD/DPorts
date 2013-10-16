@@ -1,9 +1,5 @@
-# New ports collection makefile for:	devel/p5-Parse-CPAN-Packages
-# Date created:				Mar 27 2004
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Parse-CPAN-Packages
 PORTVERSION=	2.38
@@ -34,4 +30,5 @@ MAN3=	Parse::CPAN::Packages.3 \
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
