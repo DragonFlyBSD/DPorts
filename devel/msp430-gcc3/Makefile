@@ -1,9 +1,5 @@
-# New ports collection makefile for:	msp430-gcc
-# Date created:		15 October 2002
-# Whom:			Lev Serebryakov <lev@serebryakov.spb.ru>
-#
-# $FreeBSD: ports/devel/msp430-gcc3/Makefile,v 1.41 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
+# $FreeBSD: devel/msp430-gcc3/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${PATCHVERSION}
@@ -35,9 +31,9 @@ PATCHVERSION=	20050317
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${GCCVERSION}
 
+USES=		gmake perl5
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=${PKGNAMEPREFIX:S/-$//} \
 		--with-gcc --with-gnu-ld --with-gnu-as \
@@ -54,6 +50,7 @@ INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
 
 BINARIES=	gcc gcc-${GCCVERSION} gcov cpp
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-configure:
