@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kpovmodeler/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: graphics/kpovmodeler/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kpovmodeler
 PORTVERSION=	${APP_VER}.${EXTRA_VER}
@@ -23,6 +23,7 @@ USES=		cmake gettext
 APP_VER=	1.1.3
 EXTRA_VER=	4.3.1
 
+NO_STAGE=	yes
 post-patch:
 #Fix build with kdelibs>=4.5.0
 	${REINPLACE_CMD} -e 's,V4.1.2-Based,V4.2-Based,g' \
