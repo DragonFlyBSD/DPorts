@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: databases/p5-HTML-FormHandler-Model-DBIC/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-HTML-FormHandler-Model-DBIC/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	HTML-FormHandler-Model-DBIC
 PORTVERSION=	0.19
@@ -32,4 +32,5 @@ MAN3=	HTML::FormHandler::Generator::DBIC.3 \
 	HTML::FormHandler::TraitFor::DBICFields.3 \
 	HTML::FormHandler::TraitFor::Model::DBIC.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
