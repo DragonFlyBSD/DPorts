@@ -1,9 +1,5 @@
-# New ports collection makefile for:	routers2
-# Date created:				December 14th 2006
-# Whom:	      				Xavier Beaudouin <kiwi@oav.net>
-#
-# $FreeBSD: net-mgmt/routers2-extensions/Makefile 326167 2013-09-03 16:18:49Z az $
-#
+# Created by: Xavier Beaudouin <kiwi@oav.net>
+# $FreeBSD: net-mgmt/routers2-extensions/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	routers2-extensions
 PORTVERSION=	2.19
@@ -26,6 +22,7 @@ USES=		perl5
 
 NO_BUILD=	YES
 
+NO_STAGE=	yes
 post-patch:
 	for file in *.cgi ; do \
 		${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/$$file; \
