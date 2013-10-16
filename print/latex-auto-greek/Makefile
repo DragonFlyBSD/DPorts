@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-auto-greek
-# Date created:				13 March 2005
-# Whom:					EelVex
-#
-# $FreeBSD: print/latex-auto-greek/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: EelVex
+# $FreeBSD: print/latex-auto-greek/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	latex-auto-greek
 PORTVERSION=	1.0b
@@ -50,6 +47,7 @@ ENC_FILES=	greek.enc
 HYPH_FILES=	grushyph.tex
 MAP_INC=	updmap.inc
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${PREFIX}/${CLASSDIR}
 	${MKDIR} ${PREFIX}/${PFFONTDIR}
