@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-WWW-WebArchive
-# Date created:		2006-08-20
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: www/p5-WWW-WebArchive/Makefile 326042 2013-09-02 17:29:36Z az $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/p5-WWW-WebArchive/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-WebArchive
 PORTVERSION=	0.50
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 MAN3=		WWW::WebArchive.3 WWW::WebArchive::Agent.3 \
 		WWW::WebArchive::WaybackMachine.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
