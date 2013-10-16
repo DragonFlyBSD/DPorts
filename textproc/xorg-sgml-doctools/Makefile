@@ -1,5 +1,5 @@
 # Created by: Andrew Romero <melanhit@gmail.com>
-# $FreeBSD: textproc/xorg-sgml-doctools/Makefile 321890 2013-06-27 13:37:03Z zeising $
+# $FreeBSD: textproc/xorg-sgml-doctools/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	xorg-sgml-doctools
 PORTVERSION=	1.11
@@ -13,4 +13,5 @@ XORG_CAT=       doc
 USE_GMAKE=	yes
 USES=		pathfix
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
