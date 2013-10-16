@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-LWP-Authen-OAuth/Makefile 326021 2013-09-02 16:07:56Z az $
+# $FreeBSD: www/p5-LWP-Authen-OAuth/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	LWP-Authen-OAuth
 PORTVERSION=	1.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	LWP::Authen::OAuth.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
