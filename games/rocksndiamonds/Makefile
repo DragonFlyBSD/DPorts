@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/rocksndiamonds/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/rocksndiamonds/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	rocksndiamonds
 PORTVERSION=	3.3.0.1
@@ -68,6 +68,7 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96
 DESKTOP_ENTRIES="Rocks'n'Diamonds" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" false
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract-script:
