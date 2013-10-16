@@ -1,5 +1,5 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: mail/roundcube-contextmenu/Makefile 325757 2013-08-31 00:46:47Z bdrewery $
+# $FreeBSD: mail/roundcube-contextmenu/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	contextmenu
 PORTVERSION=	1.10 # PLEASE MIRROR DISTFILE WITH VERSIONED DIR
@@ -29,6 +29,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${.CURDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
