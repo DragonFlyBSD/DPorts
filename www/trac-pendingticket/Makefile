@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: ports/www/trac-pendingticket/Makefile,v 1.13 2012/11/17 06:03:08 svnexp Exp $
+# $FreeBSD: www/trac-pendingticket/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pendingticket
 PORTVERSION=	0.0.4
@@ -22,6 +22,7 @@ PLIST_FILES=		bin/close_old_pending.py \
 			bin/migrate_pending_attrib_to_status.py \
 			%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKDIR}/${PORTNAME}plugin && ${PATCH} < ${PATCHDIR}/close_old_pending.py.patch
 	${REINPLACE_CMD} -e "s,%%PYTHON%%,${PYTHON_CMD}," ${WRKDIR}/${PORTNAME}plugin/close_old_pending.py
