@@ -1,4 +1,4 @@
-# $FreeBSD: games/impossible_mission_puzzle/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/impossible_mission_puzzle/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	impossible_mission_puzzle
 PORTVERSION=	1.0.1
@@ -28,6 +28,7 @@ PORTDOCS=	README
 DESKTOP_ENTRIES="Impossible Mission puzzle" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
