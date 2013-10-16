@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_account_stock_anglo_saxon/Makefile 324496 2013-08-10 13:03:31Z wg $
+# $FreeBSD: finance/trytond_account_stock_anglo_saxon/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	trytond_account_stock_anglo_saxon
 PORTVERSION=	2.4.5
@@ -20,4 +20,5 @@ CONFLICTS=	trytond_account_stock_anglo_saxon-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
