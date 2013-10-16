@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: ports/games/patapizza-tetris/Makefile,v 1.4 2012/11/17 05:57:48 svnexp Exp $
+# $FreeBSD: games/patapizza-tetris/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	patapizza-tetris
 PORTVERSION=	1.0
@@ -25,6 +25,7 @@ PORTDOCS=	README.md
 
 SUB_FILES=	${PORTNAME}.sh
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
