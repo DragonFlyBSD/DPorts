@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-soappy
-# Date created:		2 Aug 2004
-# Whom:	      		Alexander Leidinger
-#
-# $FreeBSD: net/py-soappy-devel/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: Alexander Leidinger
+# $FreeBSD: net/py-soappy-devel/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=		soappy
 PORTVERSION=		0.12.0
@@ -30,6 +26,7 @@ CONFLICTS=		py*-soappy-0.11.*
 PORTDOCS=		*
 .endif
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
