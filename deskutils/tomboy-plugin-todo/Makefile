@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: deskutils/tomboy-plugin-todo/Makefile 326545 2013-09-06 20:31:50Z bapt $
+# $FreeBSD: deskutils/tomboy-plugin-todo/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	tomboy-plugin-todo
 PORTVERSION=	1.0.0
@@ -17,4 +17,5 @@ RUN_DEPENDS=	tomboy:${PORTSDIR}/deskutils/tomboy
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
