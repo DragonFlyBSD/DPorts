@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome2-hacker-tools
-# Date created:				07 January 2004
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/gnome2-hacker-tools/Makefile,v 1.36 2012/11/17 05:55:45 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: devel/gnome2-hacker-tools/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #   $MCom: ports/devel/gnome2-hacker-tools/Makefile,v 1.47 2009/03/01 08:15:25 marcus Exp $
-#
 
 PORTREVISION=	1
 CATEGORIES=	devel gnome
@@ -30,4 +26,5 @@ GNOME_SLAVE=	yes
 
 DESCR=		${.CURDIR}/pkg-descr
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
