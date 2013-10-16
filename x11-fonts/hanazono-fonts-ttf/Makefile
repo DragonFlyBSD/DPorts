@@ -1,9 +1,5 @@
-# New ports collection makefile for: hanazono-fonts-ttf
-# Date created:		2011/08/09
-# Whom:		Zhihao Yuan <lichray@gmail.com>
-#
-# $FreeBSD: ports/x11-fonts/hanazono-fonts-ttf/Makefile,v 1.6 2012/11/17 06:03:28 svnexp Exp $
-#
+# Created by: Zhihao Yuan <lichray@gmail.com>
+# $FreeBSD: x11-fonts/hanazono-fonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	hanazono-fonts-ttf
 PORTVERSION=	20120421
@@ -32,6 +28,7 @@ PLIST_SUB=	FONTDIR=${FONTDIR}
 SUB_FILES=	pkg-message
 SUB_LIST=	FONTDIR=${FONTDIR}
 
+NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}/ && \
 		${LOCALBASE}/bin/mkfontscale && \
