@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Simple-PAM/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Authen-Simple-PAM/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Authen-Simple-PAM
 PORTVERSION=	0.2
@@ -19,4 +19,5 @@ MAN3=	Authen::Simple::PAM.3
 USES=		perl5
 USE_PERL5=	modbuild
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
