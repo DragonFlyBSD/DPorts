@@ -86,8 +86,7 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		brasero:${PORTSDIR}/sysutils/brasero \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
-		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi \
-		ekiga:${PORTSDIR}/net/ekiga3
+		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi
 .if ${OSVERSION}>=800000
 RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
 .endif
