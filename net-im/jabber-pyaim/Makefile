@@ -1,5 +1,5 @@
 # Created by: Derek Kulinski <takeda@takeda.tk>
-# $FreeBSD: net-im/jabber-pyaim/Makefile 318883 2013-05-23 16:10:43Z jgh $
+# $FreeBSD: net-im/jabber-pyaim/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	pyaim
 PORTVERSION=	0.8a
@@ -31,6 +31,7 @@ INST_DIR=	${PREFIX}/lib/jabber/${PORTNAME}
 
 PORTDOCS=	COPYING README NEWS AUTHORS INSTALL
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 
