@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_line_edit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_line_edit/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_line_edit
 PORTVERSION=	1.0.0
@@ -21,6 +21,7 @@ USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 pre-extract:
 	@${MKDIR} ${WRKDIR}
 
