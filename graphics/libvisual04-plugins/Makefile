@@ -1,5 +1,5 @@
 # Created by: Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: graphics/libvisual04-plugins/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/libvisual04-plugins/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libvisual
 PORTVERSION=	0.4.0
@@ -34,6 +34,7 @@ DATADIR=	${PREFIX}/share/${PORTNAME}-${PKGNAMESUFFIX:C/.*-//}-${MAJORMINOR}
 PLIST_SUB=	PLUGINS_BASE_DIR=${LOCALBASE}/lib/${PORTNAME}-${MAJORMINOR} \
 		DATADIR_REL=${DATADIR_REL}
 
+NO_STAGE=	yes
 pre-configure:
 # /usr/bin/objformat is obsolete, hardcode the object format
 	@${REINPLACE_CMD} -e 's,objformat=.*,objformat=elf,' \
