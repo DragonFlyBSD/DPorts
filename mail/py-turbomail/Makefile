@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-turbomail
-# Date created:		2007-01-24
-# Whom:			Nicola Vitale <nivit@FreeBSD.org>
-#
-# $FreeBSD: mail/py-turbomail/Makefile 300896 2012-07-14 13:54:48Z beat $
-#
+# Created by: Nicola Vitale <nivit@FreeBSD.org>
+# $FreeBSD: mail/py-turbomail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	turbomail
 PORTVERSION=	3.0.3
@@ -26,4 +22,5 @@ USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TurboMail
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
