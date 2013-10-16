@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: ports/mail/qmail-tls/Makefile,v 1.29 2013/02/23 19:42:18 svnexp Exp $
+# $FreeBSD: mail/qmail-tls/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${TLS_PATCH_DATE}
@@ -15,6 +15,7 @@ SLAVE_TLS=	yes
 
 TLS_PATCH_DATE=	20021228
 
+NO_STAGE=	yes
 USE_OPENSSL=	yes
 
 # Local overrides
