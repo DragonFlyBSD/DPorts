@@ -1,5 +1,5 @@
 # Created by: Lars Eggert
-# $FreeBSD: net-im/p5-Jabber-Connection/Makefile 326954 2013-09-11 08:15:53Z az $
+# $FreeBSD: net-im/p5-Jabber-Connection/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	Jabber-Connection
 PORTVERSION=	0.04
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Jabber::Connection.3 Jabber::NS.3 Jabber::NodeFactory.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
