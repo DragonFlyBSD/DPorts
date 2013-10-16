@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Plugin-ExtDirect/Makefile 326306 2013-09-04 18:04:48Z tj $
+# $FreeBSD: www/p5-Dancer-Plugin-ExtDirect/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Dancer-Plugin-ExtDirect
 PORTVERSION=	1.03
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Dancer::Plugin::ExtDirect.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
