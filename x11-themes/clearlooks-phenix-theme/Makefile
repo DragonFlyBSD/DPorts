@@ -1,6 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/clearlooks-phenix-theme/Makefile 315410 2013-03-27 19:59:24Z olivierd $
-#
+# $FreeBSD: x11-themes/clearlooks-phenix-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	clearlooks-phenix
 PORTVERSION=	3.0.15
@@ -18,6 +17,7 @@ PROJECTHOST=	olivier-freebsd-ports
 USE_XZ=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/share/themes/Clearlooks-Phenix
 .for dir in gtk-2.0 gtk-3.0 xfwm4
