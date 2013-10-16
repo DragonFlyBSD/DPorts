@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-accountmanager/Makefile 317502 2013-05-06 10:20:42Z kuriyama $
+# $FreeBSD: www/trac-accountmanager/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	accountmanager
 PORTVERSION=	0.5.${REV}
@@ -36,4 +36,5 @@ WRKSRC=			${WRKDIR}/accountmanagerplugin/trunk
 # --- httpd.conf
 # SetEnv PYTHON_EGG_CACHE "/tmp/cache"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
