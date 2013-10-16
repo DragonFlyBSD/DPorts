@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-django-mezzanine/Makefile 319635 2013-06-02 02:30:17Z koobs $
+# $FreeBSD: www/py-django-mezzanine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-mezzanine
 PORTVERSION=	1.4.7
@@ -29,4 +29,5 @@ PYDISTUTILS_PKGNAME=	Mezzanine
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
