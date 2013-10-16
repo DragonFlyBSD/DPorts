@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: www/mod_setenvifplus/Makefile 316161 2013-04-20 17:38:32Z ohauer $
+# $FreeBSD: www/mod_setenvifplus/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_setenvifplus
 PORTVERSION=	0.22
@@ -19,4 +19,5 @@ AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 SRC_FILE=	${WRKSRC}/apache2/${MODULENAME}.c
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
