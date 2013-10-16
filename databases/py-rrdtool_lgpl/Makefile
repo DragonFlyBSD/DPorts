@@ -1,8 +1,5 @@
-# Ports collection makefile for:	py-rrdtool_lgpl
-# Date created:			8 January 2003
-# Whom:	      			Hye-Shik Chang
-#
-# $FreeBSD: ports/databases/py-rrdtool_lgpl/Makefile,v 1.18 2012/11/17 05:55:23 svnexp Exp $
+# Created by: Hye-Shik Chang
+# $FreeBSD: databases/py-rrdtool_lgpl/Makefile 328563 2013-09-28 11:13:15Z mva $
 
 PORTNAME=	rrdtool_lgpl
 PORTVERSION=	1.0b1
@@ -15,10 +12,11 @@ DISTNAME=	py-rrdtool-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python interface to RRDTool, the graphing and logging utility
 
-LIB_DEPENDS=	rrd:${PORTSDIR}/databases/rrdtool
+LIB_DEPENDS=	librrd.so:${PORTSDIR}/databases/rrdtool
 
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	py-rrdtool
 
 LIBDIR?=	${LOCALBASE}/lib # directory where librrd.so lives
