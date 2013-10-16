@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: graphics/kuickshow-kde4/Makefile 327530 2013-09-18 08:00:44Z bapt $
+# $FreeBSD: graphics/kuickshow-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	kuickshow
 PORTVERSION=	${APP_VER}.${EXTRA_VER}
@@ -24,4 +24,5 @@ LATEST_LINK=	${PORTNAME}-kde4
 APP_VER=	0.9.1
 EXTRA_VER=	4.4.0
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
