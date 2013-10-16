@@ -1,5 +1,5 @@
 # Created by: Giel van Schijndel <me@mortis.eu>
-# $FreeBSD: mail/postfix-policyd-spf-python/Makefile 325529 2013-08-28 13:47:32Z rm $
+# $FreeBSD: mail/postfix-policyd-spf-python/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	postfix-policyd-spf-python
 PORTVERSION=	1.2
@@ -39,6 +39,7 @@ SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
 OPTIONS_DEFINE=	DOCS
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
