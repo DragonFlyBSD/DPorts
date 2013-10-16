@@ -1,16 +1,19 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-dropbox-sdk/Makefile 323067 2013-07-15 16:38:25Z sunpoet $
+# $FreeBSD: net/rubygem-dropbox-sdk/Makefile 330078 2013-10-11 14:09:19Z sunpoet $
 
 PORTNAME=	dropbox-sdk
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library of the Dropbox API web endpoints
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-json>=0:${PORTSDIR}/devel/rubygem-json
 
+NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
