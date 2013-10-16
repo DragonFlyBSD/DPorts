@@ -1,9 +1,5 @@
-# New ports collection makefile for:	vietunicode-hannom
-# Date created:		2007/01/06
-# Whom:			chinsan
-#
-# $FreeBSD: vietnamese/vietunicode-hannom/Makefile 321284 2013-06-19 16:03:12Z rafan $
-#
+# Created by: chinsan
+# $FreeBSD: vietnamese/vietunicode-hannom/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	vietunicode-hannom
 PORTVERSION=	2005.02.06
@@ -22,6 +18,7 @@ NO_BUILD=	yes
 
 TTF=		HAN_NOM_A.ttf HAN_NOM_B.ttf
 
+NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/HAN\ NOM\ A.ttf ${WRKSRC}/HAN_NOM_A.ttf
 	@${MV} ${WRKSRC}/HAN\ NOM\ B.ttf ${WRKSRC}/HAN_NOM_B.ttf
