@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxpaint-fonts/Makefile 320109 2013-06-06 15:53:05Z bapt $
+# $FreeBSD: games/tuxpaint-fonts/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	tuxpaint
 PORTVERSION=	2004.06.05
@@ -47,6 +47,7 @@ MASTER_SITES+=	SF/${PORTNAME}/${PORTNAME}-fonts/${${l:tu}_DISTNAME}:${l:tu}
 # Do not use the same OPTIONS directory as "games/tuxpaint".
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Set DISTFILES and PLIST_FILES according to OPTIONS.
