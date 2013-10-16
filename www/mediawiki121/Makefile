@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki121/Makefile 326579 2013-09-07 08:02:57Z wen $
+# $FreeBSD: www/mediawiki121/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mediawiki
 PORTVERSION=	1.21.2
@@ -29,6 +29,7 @@ EACCEL_DESC=	use eAccelerator (instead of pecl-APC)
 XCACHE_DESC=	use xCache (instead of pecl-APC)
 IMAGICK_DESC=	use ImageMagick
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
