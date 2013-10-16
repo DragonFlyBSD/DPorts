@@ -1,9 +1,5 @@
-# New ports collection makefile for:	synfigstudio
-# Date created:				25 Jun 2006
-# Whom:					Yinghong.Liu <relaxbsd@gmail.com>
-#
-# $FreeBSD: graphics/synfigstudio/Makefile 316464 2013-04-24 18:10:30Z ak $
-#
+# Created by: Yinghong.Liu <relaxbsd@gmail.com>
+# $FreeBSD: graphics/synfigstudio/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	synfigstudio
 DISTVERSION=	0.63.05
@@ -27,6 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/optimization_flags/s|CXXFLAGS=|#CXXFLAGS=| ; \
 		 /optimization_flags/s|CFLAGS=|#CFLAGS=|' -e \
