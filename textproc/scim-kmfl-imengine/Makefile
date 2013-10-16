@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/scim-kmfl-imengine/Makefile 327338 2013-09-15 12:27:30Z antoine $
+# $FreeBSD: textproc/scim-kmfl-imengine/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	scim-kmfl-imengine
 PORTVERSION=	0.9.9
@@ -28,6 +28,7 @@ USES=		gettext iconv pkgconfig
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+NO_STAGE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/kmfl/${PORTNAME}
 PORTDOCS=	AUTHORS COPYING ChangeLog
