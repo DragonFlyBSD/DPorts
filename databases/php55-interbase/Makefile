@@ -1,10 +1,12 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/php55-interbase/Makefile 321684 2013-06-24 14:32:11Z ale $
+# $FreeBSD: databases/php55-interbase/Makefile 328904 2013-09-30 23:44:01Z acm $
 
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-interbase
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
