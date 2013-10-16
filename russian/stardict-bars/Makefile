@@ -1,9 +1,4 @@
-# New ports collection makefile for:	stardict-bars
-# Date created:		2010-02-28
-# Whom:			Max Brazhnikov <makc@FreeBSD.org>
-#
-# $FreeBSD: ports/russian/stardict-bars/Makefile,v 1.3 2012/11/17 06:00:56 svnexp Exp $
-#
+# $FreeBSD: russian/stardict-bars/Makefile 327766 2013-09-20 22:46:16Z bapt $
 
 PORTNAME=	stardict-bars
 PORTVERSION=	2.4.2
@@ -14,5 +9,6 @@ DISTNAME=	stardict-en-ru-bars-${PORTVERSION}
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	New Comprehensive English-Russian dictionary
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../stardict-mueller7/files/Makefile.common"
 .include <bsd.port.mk>
