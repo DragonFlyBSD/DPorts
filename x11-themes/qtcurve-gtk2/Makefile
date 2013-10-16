@@ -1,5 +1,5 @@
 # Created by: Dmitry Klimov <lazyklimm@gmail.com>
-# $FreeBSD: x11-themes/qtcurve-gtk2/Makefile 326995 2013-09-11 17:17:35Z antoine $
+# $FreeBSD: x11-themes/qtcurve-gtk2/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.16
@@ -16,6 +16,7 @@ USE_BZIP2=	yes
 USES=		cmake pkgconfig
 USE_GNOME=	gtk20
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800067
