@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-Net-IP-Resolver/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: net-mgmt/p5-Net-IP-Resolver/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	Net-IP-Resolver
 PORTVERSION=	0.02
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	Net::IP::Resolver.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
