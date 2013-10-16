@@ -1,5 +1,5 @@
 # Created by: ache@FreeBSD.org
-# $FreeBSD: ports/www/geolizer/Makefile,v 1.13 2013/01/26 16:56:13 svnexp Exp $
+# $FreeBSD: www/geolizer/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 CATEGORIES=
 
