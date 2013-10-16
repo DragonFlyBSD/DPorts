@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: graphics/p5-GD-Graph-ohlc/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-GD-Graph-ohlc/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	GD-Graph-ohlc
 PORTVERSION=	0.9703
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 MAN3=	GD::Graph::candlesticks.3 \
 	GD::Graph::ohlc.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
