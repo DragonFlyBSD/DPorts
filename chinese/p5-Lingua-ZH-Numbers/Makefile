@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-Lingua-ZH-Numbers
-# Date Created:			Jan 22, 2003
-# Whom:				ijliao
-#
-# $FreeBSD: chinese/p5-Lingua-ZH-Numbers/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: chinese/p5-Lingua-ZH-Numbers/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Lingua-ZH-Numbers
 PORTVERSION=	0.04
@@ -17,7 +12,5 @@ COMMENT=	Converts numeric values into their Chinese string equivalents
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Lingua::ZH::Numbers.3 Lingua::ZH::Numbers::Currency.3
 
 .include <bsd.port.mk>
