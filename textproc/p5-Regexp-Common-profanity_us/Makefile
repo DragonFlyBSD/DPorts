@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Regexp-Common-profanity_us/Makefile 326945 2013-09-11 07:12:18Z az $
+# $FreeBSD: textproc/p5-Regexp-Common-profanity_us/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Regexp-Common-profanity_us
 PORTVERSION=	4.112150
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 MAN3=		Regexp::Common::profanity_us.3 \
 		Regexp::Profanity::US.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
