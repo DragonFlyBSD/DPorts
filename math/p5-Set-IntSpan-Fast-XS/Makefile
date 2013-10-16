@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Set-IntSpan-Fast-XS/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-Set-IntSpan-Fast-XS/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Set-IntSpan-Fast-XS
 PORTVERSION=	0.05
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	Set::IntSpan::Fast::XS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
