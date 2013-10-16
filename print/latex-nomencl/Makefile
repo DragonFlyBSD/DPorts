@@ -1,8 +1,5 @@
-# New ports collection makefile for:	latex-nomencl
-# Date created:		31 July 2011
-# Whom:			hrs
-#
-# $FreeBSD: print/latex-nomencl/Makefile 317899 2013-05-11 17:58:55Z hrs $
+# Created by: hrs
+# $FreeBSD: print/latex-nomencl/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	nomencl
 PORTVERSION=	4.2.20050922
@@ -36,6 +33,7 @@ SRC_FILES=	nomencl.dtx nomencl.ins
 CLASS_FILES=	nomencl.sty
 PORTDOCS=	README nomencl.pdf
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR} && ${INSTALL_DATA} ${DISTFILES} ${WRKSRC}
