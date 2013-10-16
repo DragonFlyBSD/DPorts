@@ -1,9 +1,5 @@
-# New ports collection makefile for:	tkabber-plugins
-# Date created:				Wed Oct 17 19:09:46 MSD 2007
-# Whom:					Denis Shaposhnikov <dsh@vlink.ru>
-#
-# $FreeBSD: ports/net-im/tkabber-plugins/Makefile,v 1.10 2012/11/17 06:00:30 svnexp Exp $
-#
+# Created by: Denis Shaposhnikov <dsh@vlink.ru>
+# $FreeBSD: net-im/tkabber-plugins/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	tkabber-plugins
 PORTVERSION=	20100131
@@ -29,6 +25,7 @@ SUBDIRS=	aniemoticons attline bc browser checkers chess ctcomp \
 		renju reversi singularity socials spy stripes tclchat \
 		tkabber-khim traffic unixkeys whiteboard
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "${SUBDIRS}" ${DATADIR})
