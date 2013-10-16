@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/pear-Services_Twitter/Makefile 318093 2013-05-13 14:36:54Z miwi $
+# $FreeBSD: net/pear-Services_Twitter/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	Services_Twitter
 PORTVERSION=	0.6.3
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 USE_PHP=	json simplexml mbstring
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
