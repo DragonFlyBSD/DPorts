@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Application-Plugin-Config-YAML
-# Date created:		2010-03-03
-# Whom:			Steve Wills <steve@mouf.net>
-#
-# $FreeBSD: www/p5-CGI-Application-Plugin-Config-YAML/Makefile 325984 2013-09-02 12:52:42Z az $
-#
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: www/p5-CGI-Application-Plugin-Config-YAML/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-Config-YAML
 PORTVERSION=	0.01
@@ -24,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	CGI::Application::Plugin::Config::YAML.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
