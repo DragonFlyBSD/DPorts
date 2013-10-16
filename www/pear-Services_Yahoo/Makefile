@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/pear-Services_Yahoo/Makefile 314213 2013-03-15 01:27:26Z miwi $
+# $FreeBSD: www/pear-Services_Yahoo/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Services_Yahoo
 PORTVERSION=	0.2.0
@@ -13,6 +13,7 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
