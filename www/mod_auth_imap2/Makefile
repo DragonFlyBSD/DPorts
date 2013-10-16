@@ -1,9 +1,5 @@
-# New ports collection makefile for:	mod_auth_imap
-# Date created:				Jun 5 2004
-# Whom:					Clement Laforet <clement@FreeBSD.org>
-#
-# $FreeBSD: www/mod_auth_imap2/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Clement Laforet <clement@FreeBSD.org>
+# $FreeBSD: www/mod_auth_imap2/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	mod_auth_imap
 PORTVERSION=	2.2.0
@@ -21,6 +17,7 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}2-${PORTVERSION}
 USE_APACHE=	22+
+NO_STAGE=	yes
 LATEST_LINK=	mod_auth_imap2
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
