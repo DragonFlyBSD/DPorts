@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Dispatch-Colorful/Makefile 326787 2013-09-09 09:45:12Z az $
+# $FreeBSD: devel/p5-Log-Dispatch-Colorful/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Log-Dispatch-Colorful
 PORTVERSION=	0.03
@@ -21,4 +21,5 @@ USE_PERL5=	configure
 
 MAN3=		Log::Dispatch::Colorful.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
