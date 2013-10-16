@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: irc/p5-POE-Component-IRC-Object/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: irc/p5-POE-Component-IRC-Object/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	POE-Component-IRC-Object
 PORTVERSION=	0.02
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::IRC::Object.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
