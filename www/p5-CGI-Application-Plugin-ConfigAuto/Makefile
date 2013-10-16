@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-CGI-Application-Plugin-ConfigAuto
-# Date created:				February 15th 2009
-# Whom:	      				Alex Kapranoff <alex@kapranoff.ru>
-#
-# $FreeBSD: www/p5-CGI-Application-Plugin-ConfigAuto/Makefile 326021 2013-09-02 16:07:56Z az $
-#
+# Created by: Alex Kapranoff <alex@kapranoff.ru>
+# $FreeBSD: www/p5-CGI-Application-Plugin-ConfigAuto/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	CGI-Application-Plugin-ConfigAuto
 PORTVERSION=	1.33
@@ -23,4 +19,5 @@ USE_PERL5=	modbuild
 
 MAN3=		CGI::Application::Plugin::ConfigAuto.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
