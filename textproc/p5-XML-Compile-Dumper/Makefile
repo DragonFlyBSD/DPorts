@@ -1,5 +1,5 @@
 # Created by: Patrick Powell <papowell@astart.com>
-# $FreeBSD: textproc/p5-XML-Compile-Dumper/Makefile 326944 2013-09-11 06:49:58Z az $
+# $FreeBSD: textproc/p5-XML-Compile-Dumper/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Compile-Dumper
 PORTVERSION=	0.13
@@ -24,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::Compile::Dumper.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
