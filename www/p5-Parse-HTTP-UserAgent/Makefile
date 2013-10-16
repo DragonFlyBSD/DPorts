@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Parse-HTTP-UserAgent/Makefile 327404 2013-09-16 15:11:56Z sunpoet $
+# $FreeBSD: www/p5-Parse-HTTP-UserAgent/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	Parse-HTTP-UserAgent
 PORTVERSION=	0.38
@@ -19,12 +19,5 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Parse::HTTP::UserAgent.3 \
-		Parse::HTTP::UserAgent::Base::Accessors.3 \
-		Parse::HTTP::UserAgent::Base::Dumper.3 \
-		Parse::HTTP::UserAgent::Base::IS.3 \
-		Parse::HTTP::UserAgent::Base::Parsers.3 \
-		Parse::HTTP::UserAgent::Constants.3
 
 .include <bsd.port.mk>
