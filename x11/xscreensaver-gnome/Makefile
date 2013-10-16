@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: x11/xscreensaver-gnome/Makefile 326422 2013-09-05 17:37:22Z antoine $
+# $FreeBSD: x11/xscreensaver-gnome/Makefile 327777 2013-09-20 23:43:19Z bapt $
 #   $MCom: ports/x11/xscreensaver-gnome/Makefile,v 1.5 2007/08/15 18:29:16 mezz Exp $
 
 PORTNAME?=	xscreensaver-gnome
@@ -82,6 +82,7 @@ MAN6?=	anemone.6 anemotaxis.6 antinspect.6 antmaze.6 antspotlight.6 \
 	lcdscrub.6 skytentacles.6 rubikblocks.6 surfaces.6 \
 	xscreensaver-gl-helper.6
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MALL_FORTUNES}
