@@ -1,5 +1,4 @@
-# Created by: Max Brazhnikov <makc@FreeBSD.org>
-# $FreeBSD: x11-themes/gtk3-oxygen-engine/Makefile 325921 2013-09-01 22:07:00Z rakuco $
+# $FreeBSD: x11-themes/gtk3-oxygen-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	oxygen
 PORTVERSION=	1.2.0
@@ -22,4 +21,5 @@ USE_BZIP2=	yes
 USE_GNOME=	gtk30
 USES=		cmake:outsource pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
