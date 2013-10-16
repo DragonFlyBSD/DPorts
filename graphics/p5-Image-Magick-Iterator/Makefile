@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-Magick-Iterator/Makefile 326975 2013-09-11 12:59:14Z az $
+# $FreeBSD: graphics/p5-Image-Magick-Iterator/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Magick-Iterator
 PORTVERSION=	0.01
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		Image::Magick::Iterator.3 Image::Magick::Iterator::PPM.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
