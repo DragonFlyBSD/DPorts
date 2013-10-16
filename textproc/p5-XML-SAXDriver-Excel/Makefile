@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-XML-SAXDriver-Excel/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-XML-SAXDriver-Excel/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-SAXDriver-Excel
 PORTVERSION=	0.06
@@ -21,4 +21,5 @@ USE_DOS2UNIX=	yes
 
 MAN3=		XML::SAXDriver::Excel.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
