@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ehnt
-# Date created:		2 August 2001
-# Whom:			marck@rinet.ru
-#
-# $FreeBSD: net-mgmt/ehnt/Makefile 300897 2012-07-14 14:29:18Z beat $
-#
+# Created by: marck@rinet.ru
+# $FreeBSD: net-mgmt/ehnt/Makefile 329228 2013-10-03 20:46:28Z marck $
 
 PORTNAME=	ehnt
 PORTVERSION=	0.3
@@ -19,6 +15,7 @@ PLIST_FILES=	bin/ehnt etc/rc.d/ehntserv.sh.sample \
 PLIST_DIRS+=	share/ehnt
 
 PORTDOCS=	README
+NO_STAGE=	yes
 
 MAN1=		ehnt.1
 MAN8=		ehntserv.8
