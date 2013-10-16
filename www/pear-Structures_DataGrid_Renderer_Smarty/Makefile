@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: ports/www/pear-Structures_DataGrid_Renderer_Smarty/Makefile,v 1.5 2013/02/03 21:24:20 svnexp Exp $
+# $FreeBSD: www/pear-Structures_DataGrid_Renderer_Smarty/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Structures_DataGrid_Renderer_Smarty
 PORTVERSION=	0.1.5
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid.php:${PORTSDIR}/devel/pear-Structure
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
