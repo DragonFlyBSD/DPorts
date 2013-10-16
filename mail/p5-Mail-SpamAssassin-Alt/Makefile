@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Mail-SpamAssassin-Alt/Makefile 313009 2013-02-26 21:49:59Z scheidell $
+# $FreeBSD: mail/p5-Mail-SpamAssassin-Alt/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTREVISION=	1
 PKGNAMESUFFIX=	-Alt
@@ -13,6 +13,7 @@ OPTIONS_DEFINE=	AWL FREEMAIL
 AWL_DESC=	Auto WhiteList support
 FREEMAIL_DESC=	Disable FreeMail support
 
+NO_STAGE=	yes
 post-patch-script:
 	if [ -n "${PORT_OPTIONS:MAWL}" ]; then ${REINPLACE_CMD} -e '/AWL/s/^#loadplugin/loadplugin/' ${WRKSRC}/rules/v310.pre ; fi
 	if [ -n "${PORT_OPTIONS:MFREEMAIL}" ]; then ${REINPLACE_CMD} -e '/FreeMail/s/^loadplugin/#loadplugin/' ${WRKSRC}/rules/v330.pre ; fi
