@@ -1,9 +1,5 @@
-# New ports collection makefile for:	courier-authlib-pgsql
-# Date created:				02 Apr 2005
-# Whom:					Yarema <yds@CoolRat.org>
-#
-# $FreeBSD: ports/databases/courier-authlib-pgsql/Makefile,v 1.19 2012/11/17 05:55:06 svnexp Exp $
-#
+# Created by: Yarema <yds@CoolRat.org>
+# $FreeBSD: databases/courier-authlib-pgsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PKGNAMESUFFIX=	-pgsql
 
@@ -12,4 +8,5 @@ CATEGORIES=	databases mail
 
 MASTERDIR=	${.CURDIR}/../../security/courier-authlib
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
