@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/p5-Locale-Geocode/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: misc/p5-Locale-Geocode/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	Locale-Geocode
 PORTVERSION=	1.20
@@ -22,4 +22,5 @@ MAN3=		Locale::Geocode.3 \
 		Locale::Geocode::Division.3 \
 		Locale::Geocode::Territory.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
