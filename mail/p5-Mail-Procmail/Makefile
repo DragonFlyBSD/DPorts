@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: mail/p5-Mail-Procmail/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: mail/p5-Mail-Procmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-Procmail
 PORTVERSION=	1.08
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		Mail::Procmail.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
