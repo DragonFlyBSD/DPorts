@@ -1,9 +1,5 @@
-# New ports collection makefile for:    mod_log_firstbyte
-# Date created:				January 29, 2008
-# Whom:					Yen-Ming Lee <leeym@FreeBSD.org>
-#
-# $FreeBSD: www/mod_log_firstbyte/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
+# $FreeBSD: www/mod_log_firstbyte/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_log_firstbyte
 PORTVERSION=	1.01
@@ -26,6 +22,7 @@ PKGMESSAGE=	${WRKSRC}/readme.txt
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC}
