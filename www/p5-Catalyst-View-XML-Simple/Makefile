@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Catalyst::View::XML::Simple
-# Date created:		05 Feb 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-Catalyst-View-XML-Simple/Makefile 326156 2013-09-03 15:07:52Z az $
-#
+# $FreeBSD: www/p5-Catalyst-View-XML-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-View-XML-Simple
 PORTVERSION=	0.01
@@ -31,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	Catalyst::View::XML::Simple.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
