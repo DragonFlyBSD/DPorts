@@ -1,5 +1,5 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: net-im/telepathy-sofiasip/Makefile 318079 2013-05-13 13:28:24Z kwm $
+# $FreeBSD: net-im/telepathy-sofiasip/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	telepathy-sofiasip
 PORTVERSION=	0.4.5
@@ -19,4 +19,5 @@ USE_OPENSSL=	yes
 USES=		pkgconfig
 USE_GNOME=	glib20
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
