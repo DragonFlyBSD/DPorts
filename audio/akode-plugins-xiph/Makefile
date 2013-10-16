@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: audio/akode-plugins-xiph/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/akode-plugins-xiph/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	akode-plugins-${PORTNAMESUFX}
 PORTVERSION=	2.0.2
@@ -26,6 +26,7 @@ CONFLICTS=	kdemultimedia-3.[1-3]*
 PLUGIN=		xiph_decoder
 PORTNAMESUFX=	${PLUGIN:S/_sink//:S/_decoder//:S/src_//}
 
+NO_STAGE=	yes
 USES=		gmake
 USE_AUTOTOOLS=	libltdl
 USE_AUTOTOOLS=	libtool
