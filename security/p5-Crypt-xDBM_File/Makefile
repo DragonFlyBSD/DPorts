@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: security/p5-Crypt-xDBM_File/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Crypt-xDBM_File/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-xDBM_File
 PORTVERSION=	1.02
@@ -18,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Crypt::xDBM_File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
