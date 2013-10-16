@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: databases/p5-DBIx-Class-QueryLog/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-DBIx-Class-QueryLog/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-Class-QueryLog
 PORTVERSION=	1.3.3
@@ -22,4 +22,5 @@ MAN3=		DBIx::Class::QueryLog.3 \
 		DBIx::Class::QueryLog::Query.3 \
 		DBIx::Class::QueryLog::Transaction.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
