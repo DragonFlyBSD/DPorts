@@ -1,5 +1,5 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/spmfilter-clamav/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/spmfilter-clamav/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spmfilter-clamav
 PORTVERSION=	0.1.1
@@ -22,6 +22,7 @@ USE_LDCONFIG=	${PREFIX}/lib/spmfilter
 
 OPTIONS_DEFINE=	DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
