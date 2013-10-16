@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: security/p5-Crypt-GCrypt/Makefile 326996 2013-09-11 17:17:46Z az $
+# $FreeBSD: security/p5-Crypt-GCrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Crypt-GCrypt
 PORTVERSION=	1.25
@@ -23,4 +23,5 @@ CONFIGURE_ARGS+=	GCRYPTLIBPATH=${LOCALBASE}/lib \
 
 MAN3=		Crypt::GCrypt.3 Crypt::GCrypt::MPI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
