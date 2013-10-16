@@ -1,5 +1,5 @@
 # Created by: Denny Lin <dennylin93@hs.ntnu.edu.tw>
-# $FreeBSD: www/p5-WWW-GitHub-Gist/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-WWW-GitHub-Gist/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	WWW-GitHub-Gist
 PORTVERSION=	0.17
@@ -23,6 +23,7 @@ USE_PERL5=	configure
 MAN3=		WWW::GitHub::Gist.3 \
 		WWW::GitHub::Gist::v3.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
