@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Contract/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Class-Contract/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Class-Contract
 PORTVERSION=	1.14
@@ -17,6 +17,7 @@ PLIST_SUB+=	EXAMPLESDIR="share/examples/${PORTNAME}"
 
 MAN3=		Class::Contract.3 Class::Contract::Production.3
 
+NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/examples
 	${MV} ${WRKSRC}/demo.pl ${WRKSRC}/examples
