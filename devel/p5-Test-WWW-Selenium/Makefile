@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-Test-WWW-Selenium/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: devel/p5-Test-WWW-Selenium/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-WWW-Selenium
 PORTVERSION=	1.36
@@ -29,4 +29,5 @@ MAN3=		Devel::REPL::Plugin::Selenium.3 \
 		WWW::Selenium::Util.3 \
 		WWW::Selenium.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
