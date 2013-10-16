@@ -1,4 +1,4 @@
-# $FreeBSD: lang/sdcc-devel/Makefile 326678 2013-09-07 18:26:26Z tijl $
+# $FreeBSD: lang/sdcc-devel/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	sdcc
 PORTVERSION=	3.3.1.2013.09.07
@@ -56,6 +56,7 @@ Z80_CONFIGURE_OFF=	--disable-z80 --disable-z80-port		\
 			--disable-z180-port --disable-gbz80-port	\
 			--disable-r2k-port --disable-r3ka-port
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
