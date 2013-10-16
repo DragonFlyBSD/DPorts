@@ -1,9 +1,5 @@
-# New ports collection makefile for:    vi-aspell
-# Date created:                         28 August 2004
-# Whom:                                 Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/vietnamese/aspell/Makefile,v 1.7 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: vietnamese/aspell/Makefile 327775 2013-09-20 23:20:31Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-vi-0.01.1-1
@@ -16,5 +12,6 @@ COMMENT=	Aspell Vietnamese dictionaries
 
 DICT=	 	vi
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
