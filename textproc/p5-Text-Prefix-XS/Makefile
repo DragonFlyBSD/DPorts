@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Prefix-XS/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: textproc/p5-Text-Prefix-XS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	Text-Prefix-XS
 PORTVERSION=	0.15
@@ -16,7 +16,5 @@ TEST_DEPENDS=	p5-Test-Deep>=0.108:${PORTSDIR}/devel/p5-Test-Deep
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Text::Prefix::XS.3
 
 .include <bsd.port.mk>
