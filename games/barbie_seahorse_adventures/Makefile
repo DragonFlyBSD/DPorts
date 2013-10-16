@@ -1,5 +1,5 @@
-# Created by:	nemysis@gmx.ch
-# $FreeBSD: games/barbie_seahorse_adventures/Makefile 314003 2013-03-12 22:15:14Z beech $
+# Created by: nemysis@gmx.ch
+# $FreeBSD: games/barbie_seahorse_adventures/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	barbie_seahorse_adventures
 PORTVERSION=	1.0
@@ -33,6 +33,7 @@ SUB_FILES=	${PORTNAME}
 DESKTOP_ENTRIES="Barbie Seahorse Adventures" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
