@@ -1,5 +1,5 @@
 # Created by: Vadim Vatlin
-# $FreeBSD: textproc/p5-Unicode-Escape/Makefile 324175 2013-08-02 21:38:09Z mat $
+# $FreeBSD: textproc/p5-Unicode-Escape/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Unicode-Escape
 PORTVERSION=	0.0.2
@@ -18,4 +18,5 @@ USE_PERL5=	modbuild
 
 MAN3=		Unicode::Escape.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
