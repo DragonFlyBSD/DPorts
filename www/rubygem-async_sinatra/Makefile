@@ -1,5 +1,5 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: www/rubygem-async_sinatra/Makefile 319745 2013-06-03 01:47:37Z swills $
+# $FreeBSD: www/rubygem-async_sinatra/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	async_sinatra
 PORTVERSION=	1.1.0
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
