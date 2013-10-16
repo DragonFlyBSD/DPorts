@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-publicsuffix
-# Date created:		22 June 2012
-# Whom:			Dmitry Pryadko <d.pryadko@rambler-co.ru>
-#
-# $FreeBSD: ports/dns/py-publicsuffix/Makefile,v 1.2 2012/11/17 05:57:10 svnexp Exp $
-#
+# Created by: Dmitry Pryadko <d.pryadko@rambler-co.ru>
+# $FreeBSD: dns/py-publicsuffix/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	publicsuffix
 PORTVERSION=	1.0.2
@@ -24,4 +20,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/publicsuffix.py \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
