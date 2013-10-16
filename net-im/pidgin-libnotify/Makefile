@@ -1,5 +1,5 @@
 # Created by: Meethune Bhowmick <meethune@gmail.com>
-# $FreeBSD: net-im/pidgin-libnotify/Makefile 317503 2013-05-06 10:22:41Z bapt $
+# $FreeBSD: net-im/pidgin-libnotify/Makefile 327756 2013-09-20 22:13:34Z bapt $
 
 PORTNAME=	libnotify
 PORTVERSION=	0.14
@@ -23,6 +23,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gtk20
 USES=		pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
