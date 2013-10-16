@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-memoryprofiler/Makefile 327281 2013-09-14 12:53:08Z koobs $
+# $FreeBSD: devel/py-memoryprofiler/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	memoryprofiler
 PORTVERSION=	0.27
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=	PSUTIL
 PSUTIL_DESC=	Use psutil for better performance
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MPSUTIL}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}-psutil>0:${PORTSDIR}/sysutils/py-psutil
