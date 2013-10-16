@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: www/mod_auth_openid/Makefile 326494 2013-09-06 13:01:53Z bapt $
+# $FreeBSD: www/mod_auth_openid/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_auth_openid
 PORTVERSION=	0.7
@@ -23,4 +23,5 @@ CONFIGURE_ARGS=	--with-pcre=${LOCALBASE}
 
 CFLAGS+=	-I${LOCALBASE}/include -I/usr/include/openssl
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
