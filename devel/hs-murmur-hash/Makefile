@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-murmur-hash/Makefile 319894 2013-06-04 18:53:40Z pgj $
+# $FreeBSD: devel/hs-murmur-hash/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	murmur-hash
 PORTVERSION=	0.1.0.6
@@ -10,5 +10,6 @@ COMMENT=	MurmurHash2 implementation for Haskell
 
 LICENSE=	BSD
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
