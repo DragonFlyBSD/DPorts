@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	XML-Compile-SOAP-Daemon
 PORTVERSION=	3.06
@@ -31,4 +31,5 @@ MAN3=	XML::Compile::SOAP::Daemon.3 \
 	XML::Compile::SOAP::Daemon::NetServer.3 \
 	XML::Compile::SOAP::Daemon::PSGI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
