@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Plugin-Server/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Catalyst-Plugin-Server/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Catalyst-Plugin-Server
 PORTVERSION=	0.28
@@ -26,4 +26,5 @@ MAN3=		Catalyst::Plugin::Server.3 Catalyst::Plugin::Server::XMLRPC.3 \
 		Catalyst::Plugin::Server::XMLRPC::DispatchType::XMLRPCRegex.3 \
 		Catalyst::Plugin::Server::XMLRPC::Tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
