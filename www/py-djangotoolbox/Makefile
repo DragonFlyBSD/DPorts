@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@ixsystems.com>
-# $FreeBSD: www/py-djangotoolbox/Makefile 320554 2013-06-11 12:27:28Z koobs $
+# $FreeBSD: www/py-djangotoolbox/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	djangotoolbox
 PORTVERSION=	0.9.2
@@ -20,4 +20,5 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
