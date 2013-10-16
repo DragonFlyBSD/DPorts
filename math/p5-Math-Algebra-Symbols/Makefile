@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Math-Algebra-Symbols
-# Date created:				25 May 2006
-# Whom:					Aaron Dalton <aaron@FreeBSD.org>
-#
-# $FreeBSD: math/p5-Math-Algebra-Symbols/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Aaron Dalton <aaron@FreeBSD.org>
+# $FreeBSD: math/p5-Math-Algebra-Symbols/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	Math-Algebra-Symbols
 PORTVERSION=	1.21
@@ -25,4 +21,5 @@ MAN3=	Math::Algebra::Symbols.3 \
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
