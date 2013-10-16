@@ -1,5 +1,5 @@
 # Created by: gerard
-# $FreeBSD: graphics/p5-Captcha-reCAPTCHA-Mailhide/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Captcha-reCAPTCHA-Mailhide/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Captcha-reCAPTCHA-Mailhide
 PORTVERSION=	0.94
@@ -21,4 +21,5 @@ MAN3=		Captcha::reCAPTCHA::Mailhide.3
 USES=		perl5
 USE_PERL5=	configure
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
