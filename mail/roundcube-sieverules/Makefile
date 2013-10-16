@@ -1,5 +1,5 @@
 # Created by: Anes Muhametov <anes@anes.su>
-# $FreeBSD: mail/roundcube-sieverules/Makefile 323051 2013-07-15 14:56:04Z miwi $
+# $FreeBSD: mail/roundcube-sieverules/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	sieverules
 PORTVERSION=	0.9.2
@@ -34,6 +34,7 @@ x-generate-plist: build
 		-e "s,^\.$$,@dirrmtry %%WWWDIR%%," \
 		-e "s,^\.,@dirrm %%WWWDIR%%," >>${WRKDIR}/pkg-plist.tmp
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	cd ${WRKSRC} && ${PAX} -r -w . ${WWWDIR}
