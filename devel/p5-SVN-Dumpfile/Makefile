@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Dumpfile/Makefile 326725 2013-09-08 13:29:44Z az $
+# $FreeBSD: devel/p5-SVN-Dumpfile/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	SVN-Dumpfile
 PORTVERSION=	0.13.107
@@ -27,4 +27,5 @@ MAN3=		SVN::Dumpfile.3 \
 		SVN::Dumpfile::Node::Properties.3 \
 		SVN::Dumpfile::Tutorial.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
