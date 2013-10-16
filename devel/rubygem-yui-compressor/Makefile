@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-yui-compressor/Makefile 322964 2013-07-13 18:36:21Z swills $
+# $FreeBSD: devel/rubygem-yui-compressor/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	yui-compressor
 PORTVERSION=	0.10.0
@@ -15,4 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
