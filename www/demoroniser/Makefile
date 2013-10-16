@@ -1,9 +1,5 @@
-# New ports collection makefile for:	demoroniser
-# Date created:				07 August 1999
-# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
-#
-# $FreeBSD: ports/www/demoroniser/Makefile,v 1.14 2012/11/17 06:02:30 svnexp Exp $
-#
+# Created by: Chris D. Faulhaber <jedgar@fxp.org>
+# $FreeBSD: www/demoroniser/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	demoroniser
 PORTVERSION=	1.0.20030916
@@ -23,6 +19,7 @@ NO_WRKSUBDIR=	yes
 MAN1=		demoroniser.1
 PLIST_FILES=	bin/demoroniser
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/demoroniser.pl ${PREFIX}/bin/demoroniser
 	${INSTALL_MAN} ${WRKDIR}/demoroniser.1 ${PREFIX}/man/man1
