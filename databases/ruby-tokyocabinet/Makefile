@@ -1,9 +1,5 @@
-# New ports collection makefile for:   ruby-tokyocabinet
-# Date created:        9 September 2009
-# Whom:                Damian Gerow <dgerow@afflictions.org>
-#
-# $FreeBSD: ports/databases/ruby-tokyocabinet/Makefile,v 1.10 2012/11/17 05:55:24 svnexp Exp $
-#
+# Created by: Damian Gerow <dgerow@afflictions.org>
+# $FreeBSD: databases/ruby-tokyocabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.31
@@ -25,6 +21,7 @@ INSTALL_TARGET=	site-install
 
 DOCS=	doc/*
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${RUBY_MODDOCDIR}
