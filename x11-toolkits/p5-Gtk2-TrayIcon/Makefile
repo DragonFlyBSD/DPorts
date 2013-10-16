@@ -1,5 +1,4 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Gtk2-TrayIcon/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: x11-toolkits/p5-Gtk2-TrayIcon/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	Gtk2-TrayIcon
 PORTVERSION=	0.06
@@ -23,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Gtk2::TrayIcon.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
