@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: databases/p5-DBIx-RetryOverDisconnects/Makefile 326896 2013-09-10 12:14:21Z az $
+# $FreeBSD: databases/p5-DBIx-RetryOverDisconnects/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DBIx-RetryOverDisconnects
 PORTVERSION=	0.08
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=	DBIx::RetryOverDisconnects.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
