@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/p5-Audio-Musepack/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: audio/p5-Audio-Musepack/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	Audio-Musepack
 PORTVERSION=	1.0.1
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	p5-MP3-Info>=1.20:${PORTSDIR}/audio/p5-MP3-Info \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
+NO_STAGE=	yes
 USE_PERL5=	configure
 
 MAN3=		Audio::APE.3 Audio::Musepack.3
