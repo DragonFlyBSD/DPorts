@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: databases/p5-ResourcePool-Resource-DBI/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: databases/p5-ResourcePool-Resource-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	ResourcePool-Resource-DBI
 PORTVERSION=	1.0101
@@ -23,4 +23,5 @@ MAN3=		ResourcePool::Resource::DBI.3 ResourcePool::Factory::DBI.3 \
 		ResourcePool::Command::DBI::Execute.3 ResourcePool::Command::DBI::Select.3 \
 		ResourcePool::Command::DBI::SelectRow.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
