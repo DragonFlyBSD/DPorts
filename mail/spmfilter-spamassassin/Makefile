@@ -1,5 +1,5 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/spmfilter-spamassassin/Makefile 319851 2013-06-04 10:32:49Z bapt $
+# $FreeBSD: mail/spmfilter-spamassassin/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	spmfilter-spamassassin
 PORTVERSION=	0.1
@@ -21,6 +21,7 @@ USE_LDCONFIG=	${PREFIX}/lib/spmfilter
 
 OPTIONS_DEFINE=	DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
