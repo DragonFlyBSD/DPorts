@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Wanderlust (for emacs21)
-# Date created:		29 July 2007
-# Whom: 		MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/mail/wanderlust-emacs21/Makefile,v 1.3 2012/11/17 05:59:17 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: mail/wanderlust-emacs21/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 MASTERDIR=	${.CURDIR}/../../mail/wanderlust
 
@@ -14,4 +10,5 @@ EMACS_PORT_NAME=	emacs21
 MIMEUI_PORT_NAME=	${MIMEUI_PRODUCT}-${EMACS_PORT_NAME}
 EMACS_W3M_PORT_NAME=	emacs-w3m-${EMACS_PORT_NAME}
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
