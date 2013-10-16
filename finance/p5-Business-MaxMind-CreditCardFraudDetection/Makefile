@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Business-MaxMind-CreditCardFraudDetection
-# Date created:				Thu Jan 10 16:13:05 EST 2008
-# Whom:					Vivek Khera <vivek@khera.org>
-#
-# $FreeBSD: finance/p5-Business-MaxMind-CreditCardFraudDetection/Makefile 325960 2013-09-02 09:44:14Z az $
-#
+# Created by: Vivek Khera <vivek@khera.org>
+# $FreeBSD: finance/p5-Business-MaxMind-CreditCardFraudDetection/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-MaxMind-CreditCardFraudDetection
 PORTVERSION=	1.54
@@ -42,4 +38,5 @@ PLIST_DIRS=	\
 	%%SITE_PERL%%/Business/MaxMind \
 	%%SITE_PERL%%/Business
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
