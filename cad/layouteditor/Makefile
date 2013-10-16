@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: cad/layouteditor/Makefile 316593 2013-04-26 09:23:54Z bapt $
+# $FreeBSD: cad/layouteditor/Makefile 327711 2013-09-20 15:58:41Z bapt $
 
 PORTNAME=	layouteditor
 PORTVERSION=	0.0.20110614
@@ -20,6 +20,7 @@ USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/layout
 PLIST_FILES=	bin/layout
 
+NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ${QMAKE} -makefile -spec ${QMAKESPEC}
 
