@@ -1,4 +1,4 @@
-# $FreeBSD: devel/subversion-static/Makefile 322938 2013-07-13 15:36:50Z lev $
+# $FreeBSD: devel/subversion-static/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PKGNAMESUFFIX=	-static
 
@@ -11,4 +11,5 @@ OPTIONS_SLAVE=		FREEBSD_TEMPLATE P4_STYLE_MARKERS SERF STATIC
 MASTERDIR=	${.CURDIR}/../subversion
 PKGMESSAGE=	${.CURDIR}/pkg-message
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
