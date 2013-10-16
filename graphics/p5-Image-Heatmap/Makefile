@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Heatmap/Makefile 326963 2013-09-11 11:44:41Z az $
+# $FreeBSD: graphics/p5-Image-Heatmap/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	Image-Heatmap
 PORTVERSION=	0.565
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=	Image::Heatmap.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
