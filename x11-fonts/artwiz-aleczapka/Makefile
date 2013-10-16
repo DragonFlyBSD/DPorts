@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: ports/x11-fonts/artwiz-aleczapka/Makefile,v 1.10 2012/11/17 06:03:27 svnexp Exp $
+# $FreeBSD: x11-fonts/artwiz-aleczapka/Makefile 327781 2013-09-20 23:51:14Z bapt $
 
 PORTNAME=	artwiz-aleczapka-en
 PORTVERSION=	1.3
@@ -21,6 +21,7 @@ FONTDIR=	${LOCALBASE}/lib/X11/fonts/${PORTNAME}/
 FILES=		${FONTS:S,$,.pcf,} ${WRKSRC}/fonts.alias \
 		${WRKSRC}/fonts.cache-1 ${WRKSRC}/fonts.dir
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
