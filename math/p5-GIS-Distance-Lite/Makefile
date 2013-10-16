@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-GIS-Distance-Lite/Makefile 324306 2013-08-06 08:50:49Z az $
+# $FreeBSD: math/p5-GIS-Distance-Lite/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	GIS-Distance-Lite
 PORTVERSION=	1.0
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		GIS::Distance::Lite.3 \
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
