@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edy>
-# $FreeBSD: databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile 326904 2013-09-10 14:35:48Z az $
+# $FreeBSD: databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	Class-DBI-Plugin-DeepAbstractSearch
 PORTVERSION=	0.08
@@ -25,4 +25,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		Class::DBI::Plugin::DeepAbstractSearch.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
