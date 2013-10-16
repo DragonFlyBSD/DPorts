@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: dns/p5-POE-Component-Server-DNS/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: dns/p5-POE-Component-Server-DNS/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	POE-Component-Server-DNS
 PORTVERSION=	0.30
@@ -23,4 +23,5 @@ USE_PERL5=	configure
 
 MAN3=		POE::Component::Server::DNS.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
