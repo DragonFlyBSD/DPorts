@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@wizard.volgograd.ru>
-# $FreeBSD: mail/dovecot-antispam/Makefile 320145 2013-06-07 05:33:07Z bapt $
+# $FreeBSD: mail/dovecot-antispam/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	dovecot-antispam
 PORTVERSION=	1.3
@@ -28,6 +28,7 @@ MAILTRAIN_DESC=		send mail to special addresses for training
 DEBUG_DESC=		Turn on debug information (syslog)
 DEBUG_VERBOSE_DESC=	Turn on verbose debug
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-configure:
