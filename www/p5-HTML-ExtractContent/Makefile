@@ -1,9 +1,4 @@
-# New ports collection makefile for:	HTML::ExtractContent
-# Date created:		05 Mar 2009
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: www/p5-HTML-ExtractContent/Makefile 326150 2013-09-03 13:17:36Z az $
-#
+# $FreeBSD: www/p5-HTML-ExtractContent/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-ExtractContent
 PORTVERSION=	0.10
@@ -25,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=	HTML::ExtractContent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
