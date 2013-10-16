@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php5-msgpack
-# Date created:				2012-01-02
-# Whom:					Valery Komarov <komarov@valerka.net>
-#
-# $FreeBSD: ports/devel/php5-msgpack/Makefile,v 1.7 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: Valery Komarov <komarov@valerka.net>
+# $FreeBSD: devel/php5-msgpack/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	msgpack
 PORTVERSION=	2012.05.05
@@ -28,4 +24,5 @@ USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	msgpack
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
