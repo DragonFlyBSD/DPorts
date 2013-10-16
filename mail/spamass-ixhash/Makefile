@@ -1,9 +1,5 @@
-# New ports collection makefile for:	spamass-ixhash
-# Date created:		2010-11-12
-# Whom:		Michael Ranner <michael@ranner.eu>
-#
-# $FreeBSD: ports/mail/spamass-ixhash/Makefile,v 1.5 2012/11/17 05:59:14 svnexp Exp $
-#
+# Created by: Michael Ranner <michael@ranner.eu>
+# $FreeBSD: mail/spamass-ixhash/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	iXhash
 PORTVERSION=	1.5.5
@@ -31,6 +27,7 @@ INSTALL_DIR=	${PREFIX}/${SPAMASS_CONF}
 PORTDOCS=	CHANGELOG LICENSE WHERE_ARE_THE_OTHER_FILES INSTALL README
 PLIST_FILES=	${SPAMASS_CONF}/iXhash.cf.sample ${SPAMASS_CONF}/iXhash.pm
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,/etc/mail,${LOCALBASE}/etc/mail," \
 		${WRKSRC}/iXhash/iXhash.cf
