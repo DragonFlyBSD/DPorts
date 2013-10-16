@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-subliminal/Makefile 323225 2013-07-18 12:11:59Z wg $
+# $FreeBSD: multimedia/py-subliminal/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	subliminal
 PORTVERSION=	0.6.3
@@ -26,6 +26,7 @@ USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	bin/subliminal \
 		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} < 270
