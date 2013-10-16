@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-finespectrum/Makefile 313559 2013-03-07 03:25:10Z bdrewery $
+# $FreeBSD: graphics/xmms-finespectrum/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	xmms-finespectrum
 PORTVERSION=	1.0.1.a
@@ -22,6 +22,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/finespectrum-1.0.1alpha
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/objformat=/s|=.*|=elf|' ${WRKSRC}/ltconfig
 
