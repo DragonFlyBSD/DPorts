@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-pdf_download
-# Date created:			2 May 2006
-# Whom:				Alex Dupre <ale@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-pdf_download/Makefile,v 1.28 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Alex Dupre <ale@FreeBSD.org>
+# $FreeBSD: www/xpi-pdf_download/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	pdf_download
 PORTVERSION=	3.0.0.3
@@ -19,5 +15,6 @@ XPI_FILES=	chrome/pdfdownload.jar chrome.manifest install.rdf \
 		defaults/preferences/prefs.js
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
