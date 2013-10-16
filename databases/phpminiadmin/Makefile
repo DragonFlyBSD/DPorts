@@ -1,9 +1,5 @@
-# New ports collection makefile for:   phpminiadmin
-# Date created:			07 March 2007
-# Whom:					spam@rm-rf.kiev.ua
-#
-# $FreeBSD: ports/databases/phpminiadmin/Makefile,v 1.8 2012/11/17 05:55:20 svnexp Exp $
-#
+# Created by: spam@rm-rf.kiev.ua
+# $FreeBSD: databases/phpminiadmin/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	phpminiadmin
 DISTVERSION=	1.5.091221
@@ -24,6 +20,7 @@ PLIST_DIRS=	${WWWDIR_REL}
 USE_PHP=	mysql session pcre
 .endif
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${WWWDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/phpminiadmin.php ${WWWDIR}
