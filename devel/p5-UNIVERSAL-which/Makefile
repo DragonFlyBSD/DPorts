@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-UNIVERSAL-which
-# Date Created:				19 May, 2006
-# Whom:					Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-UNIVERSAL-which/Makefile 326581 2013-09-07 08:23:45Z az $
-#
+# $FreeBSD: devel/p5-UNIVERSAL-which/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	UNIVERSAL-which
 PORTVERSION=	0.06
@@ -18,4 +13,5 @@ USES=		perl5
 USE_PERL5=	configure
 MAN3=		UNIVERSAL::which.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
