@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-prioritized_methods
-# Date created:		23 June, 2009
-# Whom:			Wen Heping <wenheping@gmail.com>
-#
-# $FreeBSD: ports/devel/py-prioritized_methods/Makefile,v 1.3 2012/11/17 05:56:49 svnexp Exp $
-#
+# Created by: Wen Heping <wenheping@gmail.com>
+# $FreeBSD: devel/py-prioritized_methods/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	prioritized_methods
 PORTVERSION=	0.2.1
@@ -22,4 +18,5 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
