@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: finance/grisbi/Makefile 326934 2013-09-10 21:31:33Z antoine $
+# $FreeBSD: finance/grisbi/Makefile 329305 2013-10-04 13:26:28Z jhale $
 
 PORTNAME=	grisbi
 PORTVERSION=	0.8.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable/${PORTVERSION:R}.x/
 
@@ -12,7 +12,7 @@ COMMENT=	Personal accounting application
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	ofx.5:${PORTSDIR}/finance/libofx
+LIB_DEPENDS=	libofx.so:${PORTSDIR}/finance/libofx
 
 USE_BZIP2=	yes
 USES=		gmake iconv pkgconfig
@@ -27,6 +27,7 @@ MAN1=		grisbi.1
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
