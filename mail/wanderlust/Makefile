@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Wanderlust
-# Date created:		7 Apr 1999
-# Whom: 		MANTANI Nobutaka <nobutaka@nobutaka.com>
-#
-# $FreeBSD: mail/wanderlust/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
+# $FreeBSD: mail/wanderlust/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	wanderlust
 PORTVERSION=	2.14.0
@@ -22,6 +18,7 @@ USE_EMACS=	yes
 
 CONFLICTS=	wanderlust-*-2.15.*
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 EMACS_W3M_PORT_NAME?=	emacs-w3m
