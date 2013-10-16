@@ -1,9 +1,5 @@
-# New ports collection makefile for:	closure-compiler
-# Date created:		2009-11-14
-# Whom:			Gea-Suan Lin <gslin@gslin.org>
-#
-# $FreeBSD: ports/www/closure-compiler/Makefile,v 1.11 2012/11/17 06:02:30 svnexp Exp $
-#
+# Created by: Gea-Suan Lin <gslin@gslin.org>
+# $FreeBSD: www/closure-compiler/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	closure-compiler
 PORTVERSION=	20120430
@@ -26,6 +22,7 @@ PLIST_DIRSTRY=	%%DATADIR%%
 PLIST_FILES=	bin/closure-compiler \
 		%%DATADIR%%/compiler.jar
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${DATADIR}/
 	${INSTALL_DATA} ${WRKSRC}/compiler.jar ${DATADIR}/
