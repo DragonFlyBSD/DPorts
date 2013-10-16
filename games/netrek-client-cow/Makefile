@@ -1,5 +1,5 @@
 # Created by: Kevin Zheng <kevinz5000@gmail.com>
-# $FreeBSD: games/netrek-client-cow/Makefile 322408 2013-07-06 19:29:38Z wxs $
+# $FreeBSD: games/netrek-client-cow/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	netrek-client-cow
 PORTVERSION=	3.3.1
@@ -19,6 +19,7 @@ USE_SDL=	sdl mixer
 
 CONFIGURE_ARGS+=	NORSA='\#'
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|ushort  damage|unsigned short damage|' \
 		${WRKSRC}/short.c
