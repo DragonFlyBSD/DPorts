@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/fluidsynth-dssi/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: audio/fluidsynth-dssi/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	fluidsynth-dssi
 PORTVERSION=	1.0.0
@@ -18,6 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/dssi.h:${PORTSDIR}/audio/dssi
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_GNOME=	gtk20
 
 post-patch:
