@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-GIS-Distance-Fast/Makefile 324276 2013-08-05 15:05:29Z az $
+# $FreeBSD: math/p5-GIS-Distance-Fast/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	GIS-Distance-Fast
 PORTVERSION=	0.07
@@ -22,4 +22,5 @@ MAN3=	GIS::Distance::Fast.3 \
 	GIS::Distance::Formula::Haversine::Fast.3 \
 	GIS::Distance::Formula::Vincenty::Fast.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
