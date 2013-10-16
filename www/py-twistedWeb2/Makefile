@@ -1,8 +1,5 @@
-# New ports collection makefile for:	py-twistedWeb2
-# Date created:		5 August 2005
-# Whom:			Landon Fuller <landonf@opendarwin.org>
-#
-# $FreeBSD: ports/www/py-twistedWeb2/Makefile,v 1.8 2012/11/17 06:03:02 svnexp Exp $
+# Created by: Landon Fuller <landonf@opendarwin.org>
+# $FreeBSD: www/py-twistedWeb2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	twistedWeb2
 PORTVERSION=	8.1.0
@@ -24,4 +21,5 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Twisted_Web2
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
