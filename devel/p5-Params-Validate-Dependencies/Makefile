@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Params-Validate-Dependencies/Makefile 325134 2013-08-21 14:08:06Z sunpoet $
+# $FreeBSD: devel/p5-Params-Validate-Dependencies/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	Params-Validate-Dependencies
 PORTVERSION=	1.21
@@ -19,10 +19,6 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Data::Domain::Dependencies.3 \
-		Params::Validate::Dependencies.3 \
-		Params::Validate::Dependencies::Extending.3
 
 .include <bsd.port.pre.mk>
 
