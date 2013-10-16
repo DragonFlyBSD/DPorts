@@ -1,5 +1,5 @@
 # Created by: Naram Qashat
-# $FreeBSD: devel/subcommander2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: devel/subcommander2/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	subcommander
 PORTVERSION=	2.0.0.b5.2
@@ -38,4 +38,5 @@ CONFIGURE_ARGS=	--with-boost=${LOCALBASE}/include \
 CPPFLAGS+=	-I${QT_INCDIR} -I${LOCALBASE}/include
 LDFLAGS+=	-L${QT_LIBDIR} -L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
