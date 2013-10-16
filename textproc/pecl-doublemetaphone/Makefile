@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pecl-doublemetaphone
-# Date created:			6 Nov 2007
-# Whom:				Ditesh Shashikant Gathani <ditesh@gathani.org>
-#
-# $FreeBSD: ports/textproc/pecl-doublemetaphone/Makefile,v 1.5 2012/11/17 06:02:15 svnexp Exp $
-#
+# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
+# $FreeBSD: textproc/pecl-doublemetaphone/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	doublemetaphone
 PORTVERSION=	1.0.0
@@ -22,4 +18,5 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-doublemetaphone
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
