@@ -1,4 +1,4 @@
-# $FreeBSD: databases/nagios-check_postgres_replication/Makefile 313119 2013-02-28 17:28:09Z brooks $
+# $FreeBSD: databases/nagios-check_postgres_replication/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	check_postgres_replication
 PORTVERSION=	2010.12.16
@@ -22,6 +22,7 @@ USE_PGSQL=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKDIR}
