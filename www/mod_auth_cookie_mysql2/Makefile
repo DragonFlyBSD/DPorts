@@ -1,5 +1,5 @@
 # Created by: clement
-# $FreeBSD: www/mod_auth_cookie_mysql2/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: www/mod_auth_cookie_mysql2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	mod_auth_cookie_mysql2
 PORTVERSION=	1.0
@@ -23,4 +23,5 @@ AP_INC=		${LOCALBASE}/include/mysql
 AP_LIB=		${LOCALBASE}/lib/mysql -lmysqlclient
 SRC_FILE=	mod_auth_cookie_sql2.c mod_auth_cookie_sql2_mysql.c
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
