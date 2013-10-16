@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/p5-AnyEvent-Graphite/Makefile 326728 2013-09-08 13:59:48Z az $
+# $FreeBSD: devel/p5-AnyEvent-Graphite/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	AnyEvent-Graphite
 PORTVERSION=	0.08
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 MAN3=		AnyEvent::Graphite.3 \
 		AnyEvent::Graphite::SNMPAgent.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
