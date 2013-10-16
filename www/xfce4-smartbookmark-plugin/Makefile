@@ -1,6 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: www/xfce4-smartbookmark-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
-#
+# $FreeBSD: www/xfce4-smartbookmark-plugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xfce4-smartbookmark-plugin
 PORTVERSION=	0.4.5
@@ -21,4 +20,5 @@ USES=		pkgconfig gettext
 USE_XFCE=	configenv libexo libmenu libutil panel
 USE_XORG=	ice
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
