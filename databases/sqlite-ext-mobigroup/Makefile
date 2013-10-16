@@ -1,5 +1,5 @@
 # Created by: Pavel Volkov <pavelivolkov@googlemail.com>
-# $FreeBSD: databases/sqlite-ext-mobigroup/Makefile 314856 2013-03-21 17:43:46Z bapt $
+# $FreeBSD: databases/sqlite-ext-mobigroup/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	sqlite-ext-mobigroup
 PORTVERSION=	3.7.5.1
@@ -28,6 +28,7 @@ PLIST_DIRS=	libexec/${DIST_SUBDIR}
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOMPRESS}
