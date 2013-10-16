@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xorg-drivers/Makefile 319900 2013-06-04 19:50:50Z zeising $
+# $FreeBSD: x11-drivers/xorg-drivers/Makefile 328711 2013-09-29 17:01:41Z zeising $
 
 PORTNAME=	xorg-drivers
 PORTVERSION=	7.7
@@ -10,7 +10,7 @@ EXTRACT_ONLY=	# none
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org drivers meta-port
 
-.MAKE.FreeBSD_UL=    yes
+.MAKE.FreeBSD_UL=	yes
 
 VIDEODIR=	${PREFIX}/lib/xorg/modules/drivers
 INPUTDIR=	${PREFIX}/lib/xorg/modules/input
@@ -97,6 +97,7 @@ SUNFFB_DESC=		Install sunffb video driver
 # these drivers have a different module name compared to the plugin they install
 QUIRKS=		keyboard:kbd
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Manual add arch specific drivers so they be added to depend lines.
