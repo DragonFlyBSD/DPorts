@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-django-reversion
-# Date created:				19 Jun 2012
-# Whom:					Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-#
-# $FreeBSD: ports/www/py-django-reversion/Makefile,v 1.2 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
+# $FreeBSD: www/py-django-reversion/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	django-reversion
 PORTVERSION=	1.6.1
@@ -21,6 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=0:${PORTSDIR}/www/py-django
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
+NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
