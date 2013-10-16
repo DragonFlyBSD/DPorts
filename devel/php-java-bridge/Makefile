@@ -1,9 +1,5 @@
-# New ports collection makefile for:	php-java-bridge
-# Date created:			2008/06/04
-# Whom:				chinsan
-#
-# $FreeBSD: ports/devel/php-java-bridge/Makefile,v 1.14 2012/11/17 05:56:41 svnexp Exp $
-#
+# Created by: chinsan
+# $FreeBSD: devel/php-java-bridge/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	php-java-bridge
 PORTVERSION=	5.4.3
@@ -30,6 +26,7 @@ IGNORE_WITH_PHP=5
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 do-configure:
 	(cd ${WRKSRC}; ${SETENV} ${SCRIPTS_ENV} ${PHPBASE}/bin/phpize)
 	(cd ${WRKSRC}; ./configure --with-java="${JAVA_HOME}")
