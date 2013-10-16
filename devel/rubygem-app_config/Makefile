@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-app_config/Makefile 323319 2013-07-19 17:17:49Z swills $
+# $FreeBSD: devel/rubygem-app_config/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	app_config
 PORTVERSION=	2.1.3
@@ -17,6 +17,7 @@ MONGO_DESC=	mongo backend support
 SQLITE3_DESC=	sqlite3 backend support
 OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLITE3}
