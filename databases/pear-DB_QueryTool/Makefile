@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: databases/pear-DB_QueryTool/Makefile 314451 2013-03-17 14:59:02Z miwi $
+# $FreeBSD: databases/pear-DB_QueryTool/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	DB_QueryTool
 PORTVERSION=	1.1.2
@@ -15,6 +15,7 @@ RUN_DEPENDS=	${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB \
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
