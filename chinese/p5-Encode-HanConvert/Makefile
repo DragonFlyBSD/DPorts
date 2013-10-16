@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Encode-HanConvert
-# Date created:		15 April 2003
-# Whom:	      		Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-#
-# $FreeBSD: chinese/p5-Encode-HanConvert/Makefile 326361 2013-09-05 07:29:05Z az $
-#
+# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
+# $FreeBSD: chinese/p5-Encode-HanConvert/Makefile 328366 2013-09-26 14:35:04Z vanilla $
 
 PORTNAME=	Encode-HanConvert
 PORTVERSION=	0.35
@@ -16,8 +12,6 @@ COMMENT=	Traditional and Simplified Chinese mappings
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=		b2g.pl.1 g2b.pl.1
 
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
