@@ -1,9 +1,5 @@
-# New ports collection makefile for:	AluminumAlloy-Volcanic (gtk theme and master port)
-# Date Created:				27 August 2004
-# Whom:					Alexey Dokuchaev <danfe@FreeBSD.org>
-#
-# $FreeBSD: ports/x11-themes/gtk-aluminumalloy-volcanic-theme/Makefile,v 1.12 2012/11/17 06:03:31 svnexp Exp $
-#
+# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
+# $FreeBSD: x11-themes/gtk-aluminumalloy-volcanic-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	aluminumalloy
 PORTVERSION?=	2004.01.04
@@ -36,6 +32,7 @@ PLIST_SUB+=	GTK20="@comment " METACITY=""
 USE_GNOME=	gnomehier
 .endif
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${THEME_DIR}
 .if ${TYPE} == "gtk"
