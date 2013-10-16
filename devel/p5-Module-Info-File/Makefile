@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Module-Info-File
-# Date created:		2004-07-24
-# Whom:			Lars Thegler <lth@FreeBSD.org>
-#
-# $FreeBSD: devel/p5-Module-Info-File/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lth@FreeBSD.org>
+# $FreeBSD: devel/p5-Module-Info-File/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Module-Info-File
 PORTVERSION=	0.11
@@ -24,4 +20,5 @@ USE_PERL5=	modbuild
 MAN1=		version.pl.1
 MAN3=		Module::Info::File.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
