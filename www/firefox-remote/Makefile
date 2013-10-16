@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: www/firefox-remote/Makefile 316732 2013-04-28 16:13:10Z stefan $
+# $FreeBSD: www/firefox-remote/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	firefox-remote
 PORTVERSION=	20040803
@@ -21,6 +21,7 @@ UTF8_LOCALE_DESC=	Use UTF8 locale (read Makefile for details)
 MENU_FIREFOX_DESC=	Add menu entry for firefox
 MENU_THUNDERBIRD_DESC=	Add menu entry for thunderbird
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # firefox/thunderbird can't display unicode filenames with special
