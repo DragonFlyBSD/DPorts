@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: dns/mydns-ng/Makefile 316654 2013-04-27 08:50:46Z mva $
+# $FreeBSD: dns/mydns-ng/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	mydns-ng
 PORTVERSION=	1.2.8.31
@@ -30,6 +30,7 @@ OPTIONS_DEFINE=		PGSQL ALIAS SSL NLS
 OPTIONS_DEFAULT=	ALIAS
 ALIAS_DESC=	Server side aliasas
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALIAS}
