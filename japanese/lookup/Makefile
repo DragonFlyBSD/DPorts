@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/lookup/Makefile 315598 2013-03-30 05:13:30Z ashish $
+# $FreeBSD: japanese/lookup/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	lookup
 PORTVERSION=	1.4.1
@@ -17,6 +17,7 @@ USE_EMACS=	yes
 
 INFO?=		lookup lookup-guide
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if (${EMACS_PORT_NAME} == "xemacs21-mule")
