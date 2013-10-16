@@ -1,5 +1,5 @@
 # Created by: Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
-# $FreeBSD: textproc/p5-XML-Filter-GenericChunk/Makefile 324171 2013-08-02 18:21:05Z az $
+# $FreeBSD: textproc/p5-XML-Filter-GenericChunk/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	XML-Filter-GenericChunk
 PORTVERSION=	0.07
@@ -20,6 +20,7 @@ USE_PERL5=	configure
 MAN3=		XML::Filter::CharacterChunk.3 \
 		XML::Filter::GenericChunk.3
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '/use warnings/d' \
 		${WRKSRC}/t/02filter.t \
