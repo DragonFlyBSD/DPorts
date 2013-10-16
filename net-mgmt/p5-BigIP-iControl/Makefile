@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net-mgmt/p5-BigIP-iControl/Makefile 326167 2013-09-03 16:18:49Z az $
+# $FreeBSD: net-mgmt/p5-BigIP-iControl/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	BigIP-iControl
 PORTVERSION=	0.095
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		BigIP::iControl.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
