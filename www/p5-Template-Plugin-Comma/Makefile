@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Template-Plugin-Comma
-# Date created:		19 August 2003
-# Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
-#
-# $FreeBSD: www/p5-Template-Plugin-Comma/Makefile 326161 2013-09-03 15:28:40Z az $
-#
+# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
+# $FreeBSD: www/p5-Template-Plugin-Comma/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Template-Plugin-Comma
 PORTVERSION=	0.04
@@ -22,4 +18,5 @@ USE_PERL5=	configure
 
 MAN3=		Template::Plugin::Comma.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
