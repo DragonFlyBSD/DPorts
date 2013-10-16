@@ -1,9 +1,5 @@
-# New ports collection makefile for:	List-Permutor
-# Date created:				Wed Aug 9 2006
-# Whom:					Anish Mistry <amistry@am-productions.biz>
-#
-# $FreeBSD: devel/p5-List-Permutor/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: Anish Mistry <amistry@am-productions.biz>
+# $FreeBSD: devel/p5-List-Permutor/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	List-Permutor
 PORTVERSION=	0.022
@@ -19,4 +15,5 @@ USE_PERL5=	configure
 
 MAN3=		List::Permutor.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
