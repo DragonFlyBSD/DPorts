@@ -1,9 +1,5 @@
-# New ports collection makefile for:	Migemo (for emacs23)
-# Date created:		27 January 2010
-# Whom:			MANTANI Nobutaka <nobutaka@FreeBSD.org>
-#
-# $FreeBSD: ports/japanese/migemo-emacs23/Makefile,v 1.2 2012/11/17 05:58:37 svnexp Exp $
-#
+# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
+# $FreeBSD: japanese/migemo-emacs23/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 COMMENT=	Japanese incremental search tool for emacs
@@ -27,6 +23,7 @@ ALL_TARGET=	migemo.elc
 PLIST_SUB=	MIGEMO="@comment " ELISP=""
 SLAVE_PORT=	yes
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/migemo.el ${PREFIX}/${EMACS_LIBDIR}/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/migemo.elc ${PREFIX}/${EMACS_LIBDIR}/site-lisp
