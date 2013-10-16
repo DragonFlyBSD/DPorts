@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-excelerator
-# Date created:		13 May 2005
-# Whom:			Choe, Cheng-Dae
-#
-# $FreeBSD: ports/textproc/py-excelerator/Makefile,v 1.11 2012/11/17 06:02:17 svnexp Exp $
-#
+# Created by: Choe, Cheng-Dae
+# $FreeBSD: textproc/py-excelerator/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	excelerator
 PORTVERSION=	0.6.4.1
@@ -24,6 +20,7 @@ PYDISTUTILS_PKGNAME=	pyExcelerator
 DOCSDIR=	${PREFIX}/share/doc/py-excelerator
 EXAMPLESDIR=	${PREFIX}/share/examples/py-excelerator
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
