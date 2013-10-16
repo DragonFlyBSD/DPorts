@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <martin@matuska.org>
-# $FreeBSD: www/p5-Apache-Clean2/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-Apache-Clean2/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	Apache-Clean
 PORTVERSION=	2.00
@@ -25,6 +25,7 @@ USE_APACHE=	22+
 MAN3=		Apache::Clean.3
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
+NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
