@@ -1,9 +1,5 @@
-# New ports collection makefile for:	xpi-sessionmanager
-# Date created:		Sat Jun 24 21:24:19 UTC 2006
-# Whom:			Andrey Slusar <anray@FreeBSD.org>
-#
-# $FreeBSD: ports/www/xpi-sessionmanager/Makefile,v 1.10 2012/11/17 06:03:13 svnexp Exp $
-#
+# Created by: Andrey Slusar <anray@FreeBSD.org>
+# $FreeBSD: www/xpi-sessionmanager/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	sessionmanager
 PORTVERSION=	0.6.3.5
@@ -23,5 +19,6 @@ XPI_FILES=	chrome/sessionmanager.jar \
 		chrome.manifest install.rdf license.txt
 XPI_DIRS=	chrome components defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
