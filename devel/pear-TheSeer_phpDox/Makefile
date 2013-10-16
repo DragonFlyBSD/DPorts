@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: ports/devel/pear-TheSeer_phpDox/Makefile,v 1.1 2012/12/19 20:20:51 svnexp Exp $
+# $FreeBSD: devel/pear-TheSeer_phpDox/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	phpDox
 PORTVERSION=	0.4.0
@@ -31,6 +31,7 @@ PEAR_AUTOINSTALL=	yes
 
 IGNORE_WITH_PHP=52
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
