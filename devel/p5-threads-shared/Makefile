@@ -1,5 +1,5 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: ports/devel/p5-threads-shared/Makefile,v 1.18 2013/02/18 15:22:42 svnexp Exp $
+# $FreeBSD: devel/p5-threads-shared/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	threads-shared
 PORTVERSION=	1.43
@@ -14,10 +14,12 @@ COMMENT=	Perl extension for sharing data structures between threads
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=	threads::shared.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501100
