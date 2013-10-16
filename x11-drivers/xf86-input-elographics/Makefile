@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-elographics/Makefile 324724 2013-08-14 14:38:13Z zeising $
+# $FreeBSD: x11-drivers/xf86-input-elographics/Makefile 327779 2013-09-20 23:48:39Z bapt $
 
 PORTNAME=	xf86-input-elographics
 PORTVERSION=	${ELO_VERSION}
@@ -19,4 +19,5 @@ ELO_VERSION=	1.2.4
 ELO_REVISION=	0
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
