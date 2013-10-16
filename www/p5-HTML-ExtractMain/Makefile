@@ -1,9 +1,5 @@
-# New ports collection makefile for:	HTML::ExtractMain
-# Date created:				2011-12-23
-# Whom:					Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-#
-# $FreeBSD: www/p5-HTML-ExtractMain/Makefile 326033 2013-09-02 16:56:12Z az $
-#
+# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
+# $FreeBSD: www/p5-HTML-ExtractMain/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	HTML-ExtractMain
 PORTVERSION=	0.62
@@ -29,4 +25,5 @@ USE_PERL5=	configure
 
 MAN3=	HTML::ExtractMain.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
