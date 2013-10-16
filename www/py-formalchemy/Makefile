@@ -1,5 +1,5 @@
 # Created by: ghostonthewire <ghostonthewire at gmail dot com>
-# $FreeBSD: www/py-formalchemy/Makefile 318321 2013-05-16 15:08:08Z rm $
+# $FreeBSD: www/py-formalchemy/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	formalchemy
 PORTVERSION=	1.3.3
@@ -22,4 +22,5 @@ USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	FormAlchemy
 PYDISTUTILS_NOEGGINFO=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
