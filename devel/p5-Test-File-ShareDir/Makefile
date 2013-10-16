@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-File-ShareDir/Makefile 324352 2013-08-07 13:20:32Z az $
+# $FreeBSD: devel/p5-Test-File-ShareDir/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-File-ShareDir
 PORTVERSION=	0.3.3
@@ -25,4 +25,5 @@ MAN3=	Test::File::ShareDir.3 \
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PERL5} ${PL_BUILD} test
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
