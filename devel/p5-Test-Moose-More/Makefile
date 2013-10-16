@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Moose-More/Makefile 325721 2013-08-30 20:28:47Z lth $
+# $FreeBSD: devel/p5-Test-Moose-More/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Test-Moose-More
 PORTVERSION=	0.020
@@ -26,4 +26,5 @@ USE_PERL5=	configure
 
 MAN3=	Test::Moose::More.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
