@@ -1,9 +1,5 @@
-# New ports collection makefile for:	netbsd-pkgsrc-mk-files
-# Date created:				16 September 2009
-# Whom:					Mikolaj Golub <to.my.trociny@gmail.com>
-#
-# $FreeBSD: ports/devel/netbsd-pkgsrc-mk-files/Makefile,v 1.4 2012/11/17 05:56:01 svnexp Exp $
-#
+# Created by: Mikolaj Golub <to.my.trociny@gmail.com>
+# $FreeBSD: devel/netbsd-pkgsrc-mk-files/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	netbsd-pkgsrc-mk-files
 PORTVERSION=	20100117
@@ -21,6 +17,7 @@ USE_BZIP2=	YES
 DATADIR=	${PREFIX}/share/netbsd-pkgsrc-mk
 NO_BUILD=	yes
 
+NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && \
 	${MKDIR} ${DATADIR} && \
