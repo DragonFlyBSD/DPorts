@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/esecanna-module-vje30/Makefile 324181 2013-08-03 08:45:51Z az $
+# $FreeBSD: japanese/esecanna-module-vje30/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	esecanna-module-vje30
 PORTVERSION=	1.0.1
@@ -23,6 +23,7 @@ CONFIGURE_ARGS=	--with-vjecfgfile="/usr/local/etc/vje30/vje.cfg"
 
 DIST_SUBDIR=    esecanna
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e " \
 		s,!!PREFIX!!,${PREFIX},g; \
