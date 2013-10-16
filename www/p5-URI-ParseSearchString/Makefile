@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-URI-ParseSearchString/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: www/p5-URI-ParseSearchString/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	URI-ParseSearchString
 PORTVERSION=	3.51.0
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		URI::ParseSearchString.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
