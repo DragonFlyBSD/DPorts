@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/xfce4-xkb-plugin/Makefile 321408 2013-06-20 18:38:42Z olivierd $
+# $FreeBSD: deskutils/xfce4-xkb-plugin/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	xfce4-xkb-plugin
 PORTVERSION=	0.5.6
@@ -19,4 +19,5 @@ USE_GNOME=	gtk20 intltool intlhack librsvg2 libwnck
 USE_XFCE=	configenv libmenu libutil panel
 USE_XORG=	x11
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
