@@ -1,5 +1,5 @@
 # Created by: Vick Khera <vivek@khera.org>
-# $FreeBSD: finance/p5-Business-Stripe/Makefile 325960 2013-09-02 09:44:14Z az $
+# $FreeBSD: finance/p5-Business-Stripe/Makefile 327727 2013-09-20 17:18:38Z bapt $
 
 PORTNAME=	Business-Stripe
 PORTVERSION=	0.04
@@ -22,4 +22,5 @@ USE_PERL5=	configure
 
 MAN3=		Business::Stripe.3 Business::README.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
