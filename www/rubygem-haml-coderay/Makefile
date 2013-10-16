@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-haml-coderay/Makefile 323398 2013-07-21 15:09:42Z swills $
+# $FreeBSD: www/rubygem-haml-coderay/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	haml-coderay
 PORTVERSION=	0.2.0
@@ -16,4 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
