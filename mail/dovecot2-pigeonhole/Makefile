@@ -1,8 +1,8 @@
 # Created by: Nils Vogels <nivo+kw+ports.bfa274@is-root.com>
-# $FreeBSD: mail/dovecot2-pigeonhole/Makefile 324310 2013-08-06 11:59:10Z wg $
+# $FreeBSD: mail/dovecot2-pigeonhole/Makefile 329008 2013-10-01 23:24:09Z wg $
 
 PORTNAME=	dovecot-pigeonhole
-PORTVERSION=	0.4.1
+PORTVERSION=	0.4.2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.rename-it.nl/dovecot/${DOVECOTVERSION}/
 DISTNAME=	${PORTNAME:C/-/-${DOVECOTVERSION}-/}-${PORTVERSION}
@@ -11,7 +11,6 @@ MAINTAINER=	bra@fsn.hu
 COMMENT=	Sieve plugin for the Dovecot 'deliver' LDA and LMTP
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS:=	dovecot>=${DOVECOTVERSION}:${PORTSDIR}/mail/dovecot2
 RUN_DEPENDS:=	dovecot>=${DOVECOTVERSION}:${PORTSDIR}/mail/dovecot2
@@ -27,11 +26,7 @@ CONFIGURE_ARGS=	--exec-prefix=${PREFIX} \
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	${PREFIX}/lib/dovecot
 
-MAN1=		sieve-dump.1 sieve-filter.1 sieve-test.1 sievec.1 sieved.1
-MAN7=		pigeonhole.7
 PORTDOCS=	doc/extensions/* doc/plugins/* doc/rfc/*
-
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -E '\
@@ -39,7 +34,4 @@ post-patch:
 		s!^(uninstall-am:) uninstall-sieve_docDATA!\1!;' \
 		${WRKSRC}/doc/Makefile.in
 
-post-install:
-	@${CAT} ${PKGMESSAGE}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
