@@ -1,5 +1,5 @@
 # Created by: Walter Venable <weaseal@users.sourceforge.net>
-# $FreeBSD: irc/undernet-ircu/Makefile 315287 2013-03-26 12:36:21Z bapt $
+# $FreeBSD: irc/undernet-ircu/Makefile 327736 2013-09-20 18:44:49Z bapt $
 
 PORTNAME=	undernet-ircu
 PORTVERSION=	2.10.12.14
@@ -33,6 +33,7 @@ KQUEUE_DESC=	Disable the kqueue-based engine
 EPOLL_DESC=	Disable the epoll-based engine
 LEAKDETECT_DESC=	Turn on the leak detector (reqs patched boehm)
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
