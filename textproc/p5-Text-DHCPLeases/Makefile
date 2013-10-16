@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-DHCPLeases/Makefile 326920 2013-09-10 17:26:57Z az $
+# $FreeBSD: textproc/p5-Text-DHCPLeases/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	Text-DHCPLeases
 PORTVERSION=	1.0
@@ -16,4 +16,5 @@ MAN3=	Text::DHCPLeases.3 \
 	Text::DHCPLeases::Object.3 \
 	Text::DHCPLeases::Object::Iterator.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
