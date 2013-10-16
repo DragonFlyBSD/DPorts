@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-Protocol-http10/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: www/p5-LWP-Protocol-http10/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
 
 PORTNAME=	LWP-Protocol-http10
 PORTVERSION=	6.03
@@ -16,7 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		LWP::Protocol::http10.3
 
 .include <bsd.port.mk>
