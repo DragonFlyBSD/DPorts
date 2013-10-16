@@ -1,9 +1,5 @@
-# New ports collection makefile for:    xpi-gbutts
-# Date created:         2008-05-22
-# Whom:                 Anatoly Borodin <anatoly.borodin@gmail.com>
-#
-# $FreeBSD: ports/www/xpi-google_shortcuts/Makefile,v 1.9 2012/11/17 06:03:12 svnexp Exp $
-#
+# Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
+# $FreeBSD: www/xpi-google_shortcuts/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	google_shortcuts
 PORTVERSION=	2.1.5
@@ -19,5 +15,6 @@ XPI_FILES=	chrome/googleshortcuts.jar chrome.manifest \
 		defaults/preferences/install.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
