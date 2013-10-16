@@ -1,9 +1,5 @@
-# New ports collection makefile for:	py-clientform
-# Date created:				25 Jun 2004
-# Whom:					"Choe, Cheng-Dae" <whitekid@netian.com>
-#
-# $FreeBSD: ports/www/py-clientform/Makefile,v 1.9 2012/11/17 06:02:59 svnexp Exp $
-#
+# Created by: "Choe, Cheng-Dae" <whitekid@netian.com>
+# $FreeBSD: www/py-clientform/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	clientform
 PORTVERSION=	0.2.10
@@ -22,4 +18,5 @@ PYDISTUTILS_PKGNAME=	ClientForm
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
