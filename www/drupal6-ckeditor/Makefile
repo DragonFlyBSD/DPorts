@@ -1,5 +1,5 @@
 # Created by: Anderson Soares Ferreira <anderson@cnpm.embrapa.br>
-# $FreeBSD: www/drupal6-ckeditor/Makefile 322743 2013-07-11 05:53:09Z bapt $
+# $FreeBSD: www/drupal6-ckeditor/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ckeditor
 DISTVERSION=	6.x-1.1
@@ -314,6 +314,7 @@ DOC_FILES=	ckeditor/LICENSE.html ckeditor/INSTALL.html \
 		TROUBLESHOOTING.txt README.txt \
 		LICENSE.txt CHANGELOG.txt
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
