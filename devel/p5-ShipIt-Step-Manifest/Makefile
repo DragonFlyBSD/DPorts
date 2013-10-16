@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-ShipIt-Step-Manifest/Makefile 326639 2013-09-07 14:36:58Z az $
+# $FreeBSD: devel/p5-ShipIt-Step-Manifest/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	ShipIt-Step-Manifest
 PORTVERSION=	0.01
@@ -19,4 +19,5 @@ USE_PERL5=	configure
 
 MAN3=		ShipIt::Step::Manifest.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
