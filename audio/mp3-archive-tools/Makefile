@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3-archive-tools/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: audio/mp3-archive-tools/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3-archive-tools
 PORTVERSION=	0.9
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl \
 RUN_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl \
 		p5-MP3-Tag>=0:${PORTSDIR}/audio/p5-MP3-Tag
 
+NO_STAGE=	yes
 USE_PERL5=	configure
 USES=		perl5
 
