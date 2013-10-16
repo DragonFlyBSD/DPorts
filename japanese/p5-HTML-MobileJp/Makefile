@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-HTML-MobileJp
-# Date created:		2009-04-19
-# Whom:			Masahiro Teramoto <markun@onohara.to>
-#
-# $FreeBSD: ports/japanese/p5-HTML-MobileJp/Makefile,v 1.7 2012/11/17 05:58:38 svnexp Exp $
-#
+# Created by: Masahiro Teramoto <markun@onohara.to>
+# $FreeBSD: japanese/p5-HTML-MobileJp/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	HTML-MobileJp
 PORTVERSION=	0.08
@@ -23,12 +19,14 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Base>0:${PORTSDIR}/devel/p5-Test-Base \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
-PERL_CONFIGURE=	yes
+USES=		perl5
+USE_PERL5=	configure
 
 MAN3=		HTML::MobileJp.3 \
 		HTML::MobileJp::Plugin::GPS.3 \
 		HTML::MobileJp::Plugin::EZweb::Object.3
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
