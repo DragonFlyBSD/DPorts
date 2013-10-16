@@ -1,9 +1,5 @@
-# New ports collection makefile for:	geoserver-mysql-plugin
-# Date created:				08 March 2009
-# Whom:					Alexander Logvinov <ports@logvinov.com>
-#
-# $FreeBSD: ports/databases/geoserver-mysql-plugin/Makefile,v 1.11 2013/02/20 16:45:20 svnexp Exp $
-#
+# Created by: Alexander Logvinov <ports@logvinov.com>
+# $FreeBSD: databases/geoserver-mysql-plugin/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	geoserver
 PORTVERSION=	2.1.1
@@ -27,6 +23,7 @@ PLIST_FILES=	${GSLIBDIR}/gt-jdbc-mysql-2.7.2.jar \
 
 LICENSE=	LGPL21
 
+NO_STAGE=	yes
 do-install:
 		@${MKDIR} ${PREFIX}/${GSLIBDIR}
 .for f in ${PLIST_FILES:S,^${GSLIBDIR}/,,}
