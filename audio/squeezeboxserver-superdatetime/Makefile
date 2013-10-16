@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tdb@FreeBSD.org>
-# $FreeBSD: ports/audio/squeezeboxserver-superdatetime/Makefile,v 1.21 2012/11/17 05:54:45 svnexp Exp $
+# $FreeBSD: audio/squeezeboxserver-superdatetime/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	superdatetime
 PORTVERSION=	5.9.14
@@ -17,6 +17,7 @@ RUN_DEPENDS=	softsqueeze:${PORTSDIR}/audio/squeezeboxserver
 PROJECTHOST=	grebrown-projects
 
 USE_ZIP=	yes
+NO_STAGE=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
