@@ -1,9 +1,5 @@
-# Ports collection makefile for:  pear-HTML_QuickForm_Livesearch
-# Date created:			  01 Mai 2007
-# Whom:				  Martin Wilke <miwi@FreeBSD.org>
-#
-# $FreeBSD: ports/devel/pear-HTML_QuickForm_Livesearch/Makefile,v 1.6 2012/11/17 05:56:38 svnexp Exp $
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
+# $FreeBSD: devel/pear-HTML_QuickForm_Livesearch/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	HTML_QuickForm_Livesearch
 PORTVERSION=	0.4.1
@@ -19,6 +15,7 @@ RUN_DEPENDS:=	${PEARDIR}/HTML/QuickForm.php:${PORTSDIR}/devel/pear-HTML_QuickFor
 
 PEAR_AUTOINSTALL=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
