@@ -1,5 +1,5 @@
 # Created by: sec@42.org
-# $FreeBSD: games/xtris/Makefile 314605 2013-03-18 21:56:30Z eadler $
+# $FreeBSD: games/xtris/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	xtris
 PORTVERSION=	1.15
@@ -23,4 +23,5 @@ MAN6=		xtris.6 xtserv.6 xtbot.6
 
 MAKE_ENV=	IPV6_CFLAGS="-DINET6"
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
