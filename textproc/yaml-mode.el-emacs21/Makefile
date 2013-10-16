@@ -1,13 +1,10 @@
-# New ports collection makefile for:	yaml-mode.el
-# Date created:				07 Jun 2007
-# Whom:					KIMURA Yasuhiro <yasu@utahime.org>
-#
-# $FreeBSD: ports/textproc/yaml-mode.el-emacs21/Makefile,v 1.2 2012/11/17 06:02:26 svnexp Exp $
-#
+# Created by: KIMURA Yasuhiro <yasu@utahime.org>
+# $FreeBSD: textproc/yaml-mode.el-emacs21/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 MASTERDIR=	${.CURDIR}/../yaml-mode.el
 
 USE_EMACS=	yes
 EMACS_PORT_NAME=	emacs21
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
