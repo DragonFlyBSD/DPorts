@@ -1,9 +1,5 @@
-# Ports collection makefile for:	rfacebook
-# Date created:				16 April 2008
-# Whom:					Steven Kreuzer
-#
-# $FreeBSD: ports/www/rubygem-rfacebook/Makefile,v 1.8 2012/11/17 06:03:05 svnexp Exp $
-#
+# Created by: Steven Kreuzer
+# $FreeBSD: www/rubygem-rfacebook/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	rfacebook
 PORTVERSION=	0.9.8
@@ -21,4 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
