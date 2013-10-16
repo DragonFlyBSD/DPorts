@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: www/p5-ZConf-RSS-GUI-GTK/Makefile 326053 2013-09-02 18:23:34Z az $
+# $FreeBSD: www/p5-ZConf-RSS-GUI-GTK/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	ZConf-RSS-GUI-GTK
 PORTVERSION=	0.0.1
@@ -20,4 +20,5 @@ USE_PERL5=	configure
 
 MAN3=		ZConf::RSS::GUI::GTK.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
