@@ -1,4 +1,4 @@
-# $FreeBSD: ports/www/apache22-event-mpm/Makefile,v 1.7 2012/11/17 06:02:28 svnexp Exp $
+# $FreeBSD: www/apache22-event-mpm/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 MASTERDIR=		${.CURDIR}/../apache22
 
@@ -13,4 +13,5 @@ PORT_OPTIONS+=		CGID
 OPTIONS_EXCLUDE=	CGI
 OPTIONS_UNSET+=		CGI
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
