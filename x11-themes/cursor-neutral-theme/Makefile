@@ -1,9 +1,5 @@
-# New ports collection makefile for:	cursor-neutral-theme
-# Date created:			12 Feb 2006
-# Whom:				Babak Farrokhi <babak@farrokhi.net>
-#
-# $FreeBSD: ports/x11-themes/cursor-neutral-theme/Makefile,v 1.8 2012/11/17 06:03:30 svnexp Exp $
-#
+# Created by: Babak Farrokhi <babak@farrokhi.net>
+# $FreeBSD: x11-themes/cursor-neutral-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
 
 PORTNAME=	cursor-neutral-theme
 DISTVERSION=	1.13a
@@ -19,6 +15,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/neutral
 
+NO_STAGE=	yes
 do-install:
 	@${MKDIR} ${PREFIX}/lib/X11/icons/neutral/cursors
 	cd ${WRKSRC}/cursors \
