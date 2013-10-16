@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-netload-plugin/Makefile 317695 2013-05-08 16:05:21Z olivierd $
+# $FreeBSD: sysutils/xfce4-netload-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	xfce4-netload-plugin
 PORTVERSION=	1.2.0
@@ -22,6 +22,7 @@ INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	NLS
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
