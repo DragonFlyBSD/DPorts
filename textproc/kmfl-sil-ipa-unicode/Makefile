@@ -1,8 +1,5 @@
-# New ports collection makefile for:	scim-kmfl-sil-ipa-unicode5
-# Date created:		10 October 2007
-# Whom:			Nikola Lecic <nikola.lecic@anthesphoria.net>
-#
-# $FreeBSD: ports/textproc/kmfl-sil-ipa-unicode/Makefile,v 1.7 2012/11/17 06:02:00 svnexp Exp $
+# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
+# $FreeBSD: textproc/kmfl-sil-ipa-unicode/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	kmfl-sil-ipa-unicode
 PORTVERSION=	1.2
@@ -40,6 +37,7 @@ PLIST_FILES=	${KMFL_DIR}/IPAUni12.kmn \
 PLIST_DIRSTRY=	${KMFL_ICONS_DIR} \
 		${KMFL_DIR}
 
+NO_STAGE=	yes
 do-install:
 	${MKDIR} ${LOCALBASE}/${KMFL_DIR} ${LOCALBASE}/${KMFL_ICONS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/*.kmn ${LOCALBASE}/${KMFL_DIR}
