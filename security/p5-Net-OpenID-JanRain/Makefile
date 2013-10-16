@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: security/p5-Net-OpenID-JanRain/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: security/p5-Net-OpenID-JanRain/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	Net-OpenID-JanRain
 PORTVERSION=	1.1.1
@@ -30,4 +30,5 @@ MAN3=		Net::OpenID::JanRain::Consumer.3 \
 		Net::OpenID::JanRain::Stores::SQLiteStore.3 \
 		Net::OpenID::JanRain::Util.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
