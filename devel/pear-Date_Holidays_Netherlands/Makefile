@@ -1,5 +1,4 @@
-# Created by: Thomas Abthorpe <tabthorpe@FreeBSD.org>
-# $FreeBSD: ports/devel/pear-Date_Holidays_Netherlands/Makefile,v 1.6 2013/02/04 09:23:23 svnexp Exp $
+# $FreeBSD: devel/pear-Date_Holidays_Netherlands/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	Date_Holidays_Netherlands
 PORTVERSION=	0.1.3
@@ -14,6 +13,7 @@ RUN_DEPENDS:=	${PEARDIR}/Date/Holidays.php:${PORTSDIR}/devel/pear-Date_Holidays
 PEAR_AUTOINSTALL=	yes
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
