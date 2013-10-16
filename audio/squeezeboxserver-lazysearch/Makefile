@@ -1,9 +1,5 @@
-# New ports collection makefile for:	squeezeboxserver-lazysearch
-# Date created:		21 June 2008
-# Whom:			Tim Bishop <tdb@FreeBSD.org>
-#
-# $FreeBSD: ports/audio/squeezeboxserver-lazysearch/Makefile,v 1.12 2012/11/17 05:54:45 svnexp Exp $
-#
+# Created by: Tim Bishop <tdb@FreeBSD.org>
+# $FreeBSD: audio/squeezeboxserver-lazysearch/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	lazysearch
 PORTVERSION=	3.5.6
@@ -20,6 +16,7 @@ COMMENT=	Squeezebox Server plugin for performing lazy searches
 RUN_DEPENDS=	softsqueeze:${PORTSDIR}/audio/squeezeboxserver
 
 USE_ZIP=	yes
+NO_STAGE=	yes
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
