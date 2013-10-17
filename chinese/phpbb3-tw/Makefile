@@ -1,12 +1,12 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: chinese/phpbb3-tw/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/phpbb3-tw/Makefile 330275 2013-10-14 06:52:32Z bapt $
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11
 CATEGORIES=	chinese www
 MASTER_SITES=	http://www.phpbb-tw.net/phpbb/download/ \
 		http://freebsd.ee.ccu.edu.tw/phpBB/
-PKGNAMESUFFIX=	-tw
+PKGNAMESUFFIX=	3-tw
 DISTNAME=	phpBB-${PORTVERSION}
 
 MAINTAINER=	appleboy.tw@gmail.com
