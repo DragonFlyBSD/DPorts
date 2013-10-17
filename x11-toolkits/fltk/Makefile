@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: x11-toolkits/fltk/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/fltk/Makefile 330487 2013-10-16 09:03:27Z gahr $
 
 PORTNAME=	fltk
 PORTVERSION=	1.3.2
@@ -12,8 +12,10 @@ COMMENT=	Cross-platform C++ graphical user interface toolkit
 
 LICENSE=	LGPL20
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		jpeg.11:${PORTSDIR}/graphics/jpeg
+OPTIONS_DEFINE=	DOCS
+
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 USE_LDCONFIG=	yes
 USE_XORG=	xft
@@ -31,19 +33,17 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PORTDOCS=	*
 
-MAN1=	fltk-config.1 fluid.1
-MAN3=	fltk.3
+.include <bsd.port.options.mk>
 
-NO_STAGE=	yes
 post-patch:
 	prefix="${PREFIX}" ; plength=$$(($${#prefix}+10)) ; \
 	${REINPLACE_CMD} -e "\|/etc/fltk|{s||${PREFIX}&|;s|10|$${plength}|;}" \
 	${WRKSRC}/src/Fl_Preferences.cxx
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	cd ${WRKSRC}/documentation && ${MAKE} docinstall
-	cd ${WRKSRC}/test && ${MAKE} install
+	cd ${WRKSRC}/documentation && ${MAKE} ${MAKE_ARGS} docinstall
+	cd ${WRKSRC}/test && ${MAKE} ${MAKE_ARGS} install
 .endif
 
 .include <bsd.port.mk>
