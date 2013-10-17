@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: devel/qt4-assistant-adp/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/qt4-assistant-adp/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	assistant
 PORTVERSION=	4.6.3
@@ -18,13 +18,14 @@ COMMENT=	Qt documentation browser, adp compat version
 USE_QT4=	qmake_build moc_build rcc_build uic_build corelib \
 		gui network xml doc dbus
 
+# stage support
+DESTDIRNAME=	INSTALL_ROOT
 ALL_TARGET=	first
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/src/version/}
 
 PLIST_FILES=	bin/assistant_adp
 
-NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|$$$$\[QT_INSTALL_BINS]|${PREFIX}/bin|g' \
 		${WRKSRC}/compat.pro
