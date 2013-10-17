@@ -1,8 +1,8 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: databases/pymongo/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pymongo/Makefile 330256 2013-10-13 21:35:11Z wg $
 
 PORTNAME=	pymongo
-PORTVERSION=	2.6.2
+PORTVERSION=	2.6.3
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 
@@ -15,16 +15,13 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 PYDISTUTILS_NOEGGINFO=	yes
-
+PYTHON_PY3K_PLIST_HACK=	yes
 NO_STAGE=	yes
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
 BROKEN=		Does not install on ia64, powerpc, or sparc64
-.endif
-
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
 .endif
 
 .include <bsd.port.post.mk>
