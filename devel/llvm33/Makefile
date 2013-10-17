@@ -1,8 +1,8 @@
-# $FreeBSD: devel/llvm33/Makefile 330644 2013-10-17 13:54:53Z brooks $
+# $FreeBSD: devel/llvm33/Makefile 330682 2013-10-17 22:03:59Z brooks $
 
 PORTNAME=	llvm
 PORTVERSION=	3.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
@@ -238,7 +238,7 @@ build-plist:
 	    ${GREP} -v man/man1 | ${SED} -e 's|${STAGEDIR}${PREFIX}/||' \
 	    -e 's|${PORTVERSION}|%%PORTVERSION%%|' | \
 	    ${SORT} >> ${PLIST}
-	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/lit${LLVM_SUFFIX} | \
+	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/lit${LLVM_SUFFIX} -type f | \
 	    ${SED} -e 's|${STAGEDIR}${PYTHON_SITELIBDIR}|%%LIT%%%%PYTHON_SITELIBDIR%%|' | \
 	    ${SORT} >> ${PLIST}
 	${FIND} ${STAGEDIR}${DOCSDIR} -type f | \
