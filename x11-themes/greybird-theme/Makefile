@@ -1,11 +1,10 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/greybird-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/greybird-theme/Makefile 330526 2013-10-16 18:20:29Z olivierd $
 
 PORTNAME=	greybird
-PORTVERSION=	1.2
+PORTVERSION=	1.2.2
 CATEGORIES=	x11-themes xfce
-MASTER_SITES=	GH GHC \
-	LOCAL/olivierd
+MASTER_SITES=	GH GHC
 PKGNAMESUFFIX=	-theme
 
 MAINTAINER=	olivierd@FreeBSD.org
@@ -17,7 +16,7 @@ RUN_DEPENDS=	gtk-murrine-engine>=0.98.1:${PORTSDIR}/x11-themes/gtk-murrine-engin
 GH_ACCOUNT=	shimmerproject
 GH_PROJECT=	Greybird
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	6424d8a
+GH_COMMIT=	6406ef6
 
 USE_GITHUB=	yes
 NO_BUILD=	yes
@@ -26,7 +25,6 @@ OPTIONS_DEFINE=	NOTIFYD
 OPTIONS_DEFAULT=	NOTIFYD
 NOTIFYD_DESC=	Install xfce4-notifyd theme
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-extract:
@@ -40,16 +38,16 @@ post-patch:
 	@${RM} ${WRKSRC}/gtk-3.0/*.orig
 
 do-install:
-	@${MKDIR} ${PREFIX}/share/themes/Greybird
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/Greybird
 .for dir in gtk-2.0 gtk-3.0 xfwm4
 	@cd ${WRKSRC} && \
-		${COPYTREE_SHARE} ${dir} ${PREFIX}/share/themes/Greybird
+		${COPYTREE_SHARE} ${dir} ${STAGEDIR}${PREFIX}/share/themes/Greybird
 .endfor
 
 .if ${PORT_OPTIONS:MNOTIFYD}
 	@cd ${WRKSRC} && \
 		${COPYTREE_SHARE} xfce-notify-4.0/ \
-		${PREFIX}/share/themes/Greybird
+		${STAGEDIR}${PREFIX}/share/themes/Greybird
 PLIST_SUB+=	NOTIFYD=""
 .else
 PLIST_SUB+=	NOTIFYD="@comment "
