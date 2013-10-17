@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/py-qt4-dbus/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-qt4-dbus/Makefile 330463 2013-10-15 21:52:33Z rakuco $
 
 PORTNAME=	dbus
 PORTVERSION=	${PYQT4_VERSION}
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.8:${PORTSDIR}/devel/py-dbus \
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
 USE_PYTHON=	2.5+
-USE_QT4=	dbus qmake_build
+USE_QT4=	dbus moc_build qmake_build
 
 OPTIONS_DEFINE=	API
 OPTIONS_DEFAULT=API
@@ -40,7 +40,6 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
