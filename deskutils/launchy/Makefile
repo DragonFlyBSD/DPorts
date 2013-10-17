@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/launchy/Makefile 328542 2013-09-28 03:11:02Z eadler $
+# $FreeBSD: deskutils/launchy/Makefile 330227 2013-10-13 13:03:03Z makc $
 
 PORTNAME=	launchy
 PORTVERSION=	2.5
@@ -13,12 +13,13 @@ COMMENT=	Open source keystroke launcher
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 RUN_DEPENDS=	${LOCALBASE}/bin/xdg-open:${PORTSDIR}/devel/xdg-utils
 
+USES=		qmake
 USE_DOS2UNIX=	readme.lyx readme.txt
 USE_QT4=	qmake_build moc_build rcc_build uic_build gui network
 PORTDOCS=	*
 
 MAKE_JOBS_UNSAFE=	yes
-NO_STAGE=	yes
+
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -31,14 +32,10 @@ post-patch:
 		${WRKSRC}/plugins/weby/weby.pro \
 		${WRKSRC}/src/src.pro
 
-do-configure:
-	@(cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} -r Launchy.pro)
-
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/?eadme.* ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/?eadme.* ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
