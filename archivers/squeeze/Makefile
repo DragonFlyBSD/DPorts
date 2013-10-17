@@ -1,5 +1,5 @@
 # Created by: markand
-# $FreeBSD: archivers/squeeze/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/squeeze/Makefile 330424 2013-10-15 18:36:02Z olivierd $
 
 PORTNAME=	squeeze
 PORTVERSION=	0.2.3
@@ -14,12 +14,10 @@ COMMENT=	Squeeze is a modern and advanced archive manager
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	thunar-vfs-1:${PORTSDIR}/x11-fm/thunar-vfs
+LIB_DEPENDS=	libthunar-vfs-1.so:${PORTSDIR}/x11-fm/thunar-vfs
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-
-NO_STAGE=	yes
 USES=		pkgconfig gmake gettext pathfix desktop-file-utils
 USE_XFCE=	configenv libutil thunar
 USE_XORG=	x11
