@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/serviio/files/serviio.in 324865 2013-08-17 19:17:42Z netchild $
+# $FreeBSD: net/serviio/files/serviio.in 330348 2013-10-14 19:50:26Z netchild $
 #
 # PROVIDE: serviio
 # REQUIRE: LOGIN
@@ -24,7 +24,7 @@ if [ -n "${serviio_lang}" ]; then
 	export LANG=${serviio_lang}
 fi
 
-_dirs="/var/db/serviio /var/log/serviio"
+_dirs="/var/db/serviio /var/db/serviio/home /var/log/serviio"
 start_precmd="mkdir -p $_dirs; chown $serviio_user $_dirs"
 command_args="$serviio_args &"
 
