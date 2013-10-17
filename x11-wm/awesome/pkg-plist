@@ -1,7 +1,25 @@
-@comment $FreeBSD: x11-wm/awesome/pkg-plist 316602 2013-04-26 13:01:31Z garga $
+@comment $FreeBSD: x11-wm/awesome/pkg-plist 330217 2013-10-13 10:13:32Z garga $
 bin/awesome
 bin/awesome-client
 etc/xdg/awesome/rc.lua
+man/de/man1/awesome-client.1.gz
+man/de/man1/awesome.1.gz
+man/de/man5/awesomerc.5.gz
+man/es/man1/awesome-client.1.gz
+man/es/man1/awesome.1.gz
+man/es/man5/awesomerc.5.gz
+man/fr/man1/awesome-client.1.gz
+man/fr/man1/awesome.1.gz
+man/fr/man5/awesomerc.5.gz
+man/it/man1/awesome-client.1.gz
+man/it/man1/awesome.1.gz
+man/it/man5/awesomerc.5.gz
+man/man1/awesome-client.1.gz
+man/man1/awesome.1.gz
+man/man5/awesomerc.5.gz
+man/ru/man1/awesome-client.1.gz
+man/ru/man1/awesome.1.gz
+man/ru/man5/awesomerc.5.gz
 %%DATADIR%%/icons/awesome16.png
 %%DATADIR%%/icons/awesome32.png
 %%DATADIR%%/icons/awesome48.png

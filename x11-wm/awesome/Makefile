@@ -1,9 +1,8 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11-wm/awesome/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-wm/awesome/Makefile 330217 2013-10-13 10:13:32Z garga $
 
 PORTNAME=	awesome
-PORTVERSION=	3.5.1
-PORTREVISION=	3
+PORTVERSION=	3.5.2
 PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
@@ -28,7 +27,7 @@ LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
 		libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libxdg-basedir.so:${PORTSDIR}/x11/libxdg-basedir \
 		libxcb-util.so:${PORTSDIR}/x11/xcb-util \
-		libxcb-image.so:${PORTSDIR}/x11/xcb-util-image \
+		libxcb-cursor.so:${PORTSDIR}/x11/xcb-util-cursor \
 		libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms \
 		libxcb-icccm.so:${PORTSDIR}/x11/xcb-util-wm \
 		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
@@ -43,17 +42,11 @@ USE_XORG=	pixman x11 xau xcb xdmcp xext xft xinerama xrandr xrender \
 		xproto
 LDFLAGS+=	${ICONV_LIB}
 
-MAN1=	awesome.1 \
-	awesome-client.1
-MAN5=	awesomerc.5
-MANLANG=	"" de es fr it ru
-MANCOMPRESSED=	yes
 PORTDOCS=	AUTHORS BUGS LICENSE README
 
 OPTIONS_DEFINE=	DBUS DOCS
 OPTIONS_DEFAULT=DBUS DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if	(exists(${LOCALBASE}/libdata/pkgconfig/cairo.pc) && \
