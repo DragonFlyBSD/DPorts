@@ -1,10 +1,11 @@
-# $FreeBSD: devel/gitolite2/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gitolite2/Makefile 330275 2013-10-14 06:52:32Z bapt $
 
 PORTNAME=	gitolite
 PORTVERSION=	2.3.1
 CATEGORIES=	devel
 MASTER_SITES=	http://milki.github.io/${PORTNAME}/ \
 		LOCAL/tdb
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	milki@rescomp.berkeley.edu
 COMMENT=	An access control layer on top of git
