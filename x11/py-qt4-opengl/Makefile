@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: x11/py-qt4-opengl/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/py-qt4-opengl/Makefile 330463 2013-10-15 21:52:33Z rakuco $
 
 PORTNAME=	opengl
 PORTVERSION=	${PYQT4_VERSION}
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}gui>=${PYQT4_VERSION}:${PORTSDIR}/x11-toolkits/py-q
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
 USE_PYTHON=	2.5+
-USE_QT4=	opengl qmake_build
+USE_QT4=	moc_build opengl qmake_build
 
 OPTIONS_DEFINE=	API
 OPTIONS_DEFAULT=API
@@ -38,7 +38,6 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
