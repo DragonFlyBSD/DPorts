@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: textproc/py-qt4-xmlpatterns/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-qt4-xmlpatterns/Makefile 330463 2013-10-15 21:52:33Z rakuco $
 
 PORTNAME=	xmlpatterns
 PORTVERSION=	${PYQT4_VERSION}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}xml>=${PYQT4_VERSION}:${PORTSDIR}/textproc/py-qt4-x
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
 USE_PYTHON=	2.5+
-USE_QT4=	xmlpatterns qmake_build
+USE_QT4=	moc_build xmlpatterns qmake_build
 
 OPTIONS_DEFINE=	API
 OPTIONS_DEFAULT=API
@@ -37,7 +37,6 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
