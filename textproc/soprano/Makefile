@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: textproc/soprano/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/soprano/Makefile 330309 2013-10-14 12:09:05Z rakuco $
 
 PORTNAME=	soprano
-PORTVERSION=	2.9.3
+PORTVERSION=	2.9.4
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/Soprano/${PORTVERSION}
 
@@ -21,14 +21,10 @@ CMAKE_ARGS+=	-DSOPRANO_DISABLE_CLUCENE_INDEX=yes \
 		-DSOPRANO_DISABLE_SESAME2_BACKEND=yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,$${LIB_SUFFIX}/pkgconfig,data/pkgconfig,' \
 		${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e 's,soprano/cmake,cmake/Modules,' \
 		${WRKSRC}/cmake/modules/CMakeLists.txt
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
