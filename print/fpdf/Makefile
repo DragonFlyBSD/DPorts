@@ -1,8 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: print/fpdf/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/fpdf/Makefile 330541 2013-10-16 21:11:27Z thierry $
 
 PORTNAME=	fpdf
 PORTVERSION=	1.7
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	print www
 MASTER_SITES=	http://www.fpdf.org/en/
@@ -27,7 +28,6 @@ PLIST_SUB=	FPDF_DIR=${FPDF_DIR}
 EXT2CNV=	afm css htm php txt
 DOCS=		FAQ.htm changelog.htm doc fpdf.css install.txt license.txt tutorial
 
-NO_STAGE=	yes
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTFILES} ]; then \
 	${FETCH_CMD} ${FETCH_BEFORE_ARGS}	\
@@ -35,12 +35,12 @@ do-fetch:
 	fi
 
 do-install:
-	${MKDIR} ${PREFIX}/${FPDF_DIR}
-	${INSTALL_DATA} ${WRKSRC}/fpdf.php ${PREFIX}/${FPDF_DIR}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} "font makefont" ${PREFIX}/${FPDF_DIR}/)
+	${MKDIR} ${STAGEDIR}${PREFIX}/${FPDF_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fpdf.php ${STAGEDIR}${PREFIX}/${FPDF_DIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} "font makefont" ${STAGEDIR}${PREFIX}/${FPDF_DIR}/)
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} "${DOCS}" ${DOCSDIR}/)
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} "${DOCS}" ${STAGEDIR}${DOCSDIR}/)
 .endif
 
 post-install:
