@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: www/august/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/august/Makefile 330372 2013-10-15 08:50:37Z gahr $
 
 PORTNAME=	august
 PORTVERSION=	0.63b
@@ -15,26 +15,28 @@ COMMENT=	HTML editor for the experienced Web author
 
 LICENSE=	GPLv2
 
+OPTIONS_DEFINE=	DOCS
+
+USES+=		tk
 RUN_DEPENDS=	identify:${PORTSDIR}/graphics/ImageMagick \
 		weblint:${PORTSDIR}/www/weblint
 
 NO_BUILD=	yes
 
-USE_TK_WRAPPER=	yes
-
 PORTDOCS=	specchars.txt
 PLIST_FILES=	bin/august
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e \
-		's|/usr/bin|${LOCALBASE}/bin|g' ${WRKSRC}/august
+		's|/usr/bin/wish|${WISH}|g' ${WRKSRC}/august
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/august ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/specchars.txt ${DOCSDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/august ${STAGEDIR}${PREFIX}/bin
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/specchars.txt ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
