@@ -1,8 +1,8 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: security/fakeroot/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/fakeroot/Makefile 330299 2013-10-14 11:25:59Z martymac $
 
 PORTNAME=	fakeroot
-PORTVERSION=	1.19
+PORTVERSION=	1.20
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN}
 MASTER_SITE_SUBDIR=	pool/main/f/fakeroot
@@ -21,16 +21,12 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-MAN1=		faked.1 fakeroot.1
-MANLANG=	"" de es fr nl sv
-
-NO_STAGE=	yes
 pre-configure:
 	 @${REINPLACE_CMD} -e '/LIBS=.*-lpthread/s/-lpthread/${PTHREAD_LIBS}/g' \
 	 	${WRKSRC}/${CONFIGURE_SCRIPT}
 
 post-install:
-	@${MV} ${PREFIX}/lib/libfakeroot-0.so ${PREFIX}/lib/libfakeroot.so.0
-	@${LN} -sf ${PREFIX}/lib/libfakeroot.so.0 ${PREFIX}/lib/libfakeroot-0.so
+	@${MV} ${STAGEDIR}${PREFIX}/lib/libfakeroot-0.so ${STAGEDIR}${PREFIX}/lib/libfakeroot.so.0
+	@${LN} -sf ${PREFIX}/lib/libfakeroot.so.0 ${STAGEDIR}${PREFIX}/lib/libfakeroot-0.so
 
 .include <bsd.port.mk>
