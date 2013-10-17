@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/hal/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hal/Makefile 330321 2013-10-14 13:41:51Z avilla $
 #   $MCom: ports/sysutils/hal/Makefile,v 1.81 2010/04/13 02:49:07 mezz Exp $
 
 PORTNAME=	hal
 DISTVERSION=	0.5.14
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
