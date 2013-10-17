@@ -1,9 +1,8 @@
 # Created by: danny@ricin.com
-# $FreeBSD: www/qt4-webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/qt4-webkit/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	webkit
 DISTVERSION=	${QT4_VERSION}
-PORTREVISION=	1
 CATEGORIES?=	www
 PKGNAMEPREFIX=	qt4-
 
@@ -40,14 +39,13 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 CONFIGURE_ARGS+=	-I../../../../include/Qt -I../../../../include
 
-EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
 OPTIONS_DEFINE=	GSTREAMER
 OPTIONS_DEFAULT=	GSTREAMER
 
 GSTREAMER_DESC=	HTML5 audio and video via GStreamer
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGSTREAMER}
