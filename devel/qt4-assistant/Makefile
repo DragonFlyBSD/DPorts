@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: devel/qt4-assistant/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/qt4-assistant/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	assistant
 DISTVERSION=	${QT4_VERSION}
@@ -40,9 +40,8 @@ EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 BUILD_WRKSRC=	${WRKSRC}/tools/${PORTNAME}/tools/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
-NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} \
 		-e 's|^TARGET.*|TARGET=assistant-qt4|g' \
@@ -55,6 +54,6 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${BUILD_WRKSRC}/images/assistant-128.png \
-		${PREFIX}/share/pixmaps/assistant-qt4.png
+		${STAGEDIR}${PREFIX}/share/pixmaps/assistant-qt4.png
 
 .include <bsd.port.mk>
