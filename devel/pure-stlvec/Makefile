@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-stlvec/Makefile 322734 2013-07-10 21:28:56Z bapt $
+# $FreeBSD: devel/pure-stlvec/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	pure-stlvec
 PORTVERSION=	0.2
@@ -10,6 +10,7 @@ COMMENT=	Pure interface to C++ STL vector
 
 USE_PURE=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^PROD_FLAGS =.*|PROD_FLAGS = $$(CPPFLAGS) $$(CFLAGS) $$(LDFLAGS)|' \
