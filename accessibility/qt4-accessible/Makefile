@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: accessibility/qt4-accessible/Makefile 327768 2013-09-20 22:52:20Z bapt $
+# $FreeBSD: accessibility/qt4-accessible/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	accessible
 DISTVERSION=	${QT4_VERSION}
@@ -9,7 +9,6 @@ PKGNAMEPREFIX=	qt4-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt accessibility widgets
 
-NO_STAGE=	yes
 USE_QT4=	qmake_build moc_build qt3support corelib gui network sql xml
 QT_NONSTANDARD=	yes
 QT_DIST=	yes
@@ -36,7 +35,7 @@ EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 BUILD_WRKSRC=	${WRKSRC}/src/plugins/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
