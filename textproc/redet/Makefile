@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: textproc/redet/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/redet/Makefile 330374 2013-10-15 09:11:14Z gahr $
 
 PORTNAME=	redet
 PORTVERSION=	8.26
@@ -11,24 +11,27 @@ COMMENT=	Visual regexp development and execution
 
 RUN_DEPENDS=	${LOCALBASE}/lib/iwidgets/iwidgets.tcl:${PORTSDIR}/x11-toolkits/iwidgets
 
+OPTIONS_DEFINE=	DOCS
+
 NO_BUILD=	yes
 USE_BZIP2=	yes
-USE_TK_RUN=	84
+USES+=		tk:run
 
 PORTDOCS=	AUTHORS COPYING CREDITS LICENSE NEWS README-General ChangeLog
-MAN1=		redet.1
-PLIST_FILES=	bin/redet
+PLIST_FILES=	bin/redet \
+		man/man1/redet.1.gz
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e "s@exec wish@exec ${WISH}@" ${WRKSRC}/redet.tcl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/redet.tcl ${PREFIX}/bin/redet
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/man1/
-.if !defined(NOPORTDOCS)
-	@${INSTALL} -d ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/redet.tcl ${STAGEDIR}${PREFIX}/bin/redet
+	${INSTALL_MAN} ${WRKSRC}/redet.1 ${STAGEDIR}${PREFIX}/man/man1
+.if ${PORT_OPTIONS:MDOCS}
+	@${INSTALL} -d ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
