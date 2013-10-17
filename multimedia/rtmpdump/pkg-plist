@@ -1,4 +1,4 @@
-@comment $FreeBSD: multimedia/rtmpdump/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: multimedia/rtmpdump/pkg-plist 330547 2013-10-16 21:36:39Z hrs $
 bin/rtmpdump
 sbin/rtmpgw
 sbin/rtmpsrv
@@ -12,3 +12,6 @@ lib/librtmp.a
 lib/librtmp.so
 lib/librtmp.so.0
 libdata/pkgconfig/librtmp.pc
+man/man1/rtmpdump.1.gz
+man/man3/librtmp.3.gz
+man/man8/rtmpgw.8.gz
