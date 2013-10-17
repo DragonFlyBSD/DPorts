@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD: www/libxul/Makefile 326088 2013-09-02 20:51:40Z bapt $
 
