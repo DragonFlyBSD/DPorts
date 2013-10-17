@@ -1,8 +1,8 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: archivers/libmspack/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: archivers/libmspack/Makefile 330365 2013-10-15 05:12:03Z fjoe $
 
 PORTNAME=	libmspack
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.cabextract.org.uk/libmspack/
 DISTNAME=	${PORTNAME}-${PORTVERSION}alpha
