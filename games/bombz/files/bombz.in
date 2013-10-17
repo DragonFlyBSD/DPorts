@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: games/bombz/files/bombz.in 330322 2013-10-14 13:48:33Z nemysis $
+#
+
+cd "%%DATADIR%%"
+exec ./bombz.py "${@}"
