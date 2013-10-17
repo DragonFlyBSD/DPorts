@@ -1,0 +1,29 @@
+# Created by: ijliao
+# $FreeBSD: x11/xautomation/Makefile 330326 2013-10-14 14:03:14Z nemysis $
+
+PORTNAME=	xautomation
+PORTVERSION=	1.08
+CATEGORIES=	x11
+MASTER_SITES=	http://hoopajoo.net/static/projects/
+
+MAINTAINER=	nemysis@FreeBSD.org
+COMMENT=	Control X from the command line for scripts
+
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
+
+USE_XORG=	xtst
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+PORTDOCS=	AUTHORS ChangeLog README
+
+OPTIONS_DEFINE=	DOCS
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.mk>
