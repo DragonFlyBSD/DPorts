@@ -37,9 +37,8 @@ RUN_DEPENDS=	${KDE4_PREFIX}/env/xdg-env.sh:${PORTSDIR}/misc/kde4-xdg-env \
 		${KDE4_PREFIX}/bin/ksysguardd:${PORTSDIR}/sysutils/ksysguardd \
 		${KDE4_PREFIX}/lib/kde4/libexec/polkit-kde-authentication-agent-1:${PORTSDIR}/sysutils/polkit-kde \
 		${KDE4_PREFIX}/lib/kde4/libexec/polkitkde1helper:${PORTSDIR}/sysutils/kcm-polkit-kde \
-		${LOCALBASE}/etc/pam.d/kde:${PORTSDIR}/security/pam_kde
-	
-#		${KDE4_PREFIX}/share/apps/ksplash/Themes/Default/Theme.rc:${PORTSDIR}/x11-themes/kde4-base-artwork
+		${LOCALBASE}/etc/pam.d/kde:${PORTSDIR}/security/pam_kde \
+		${KDE4_PREFIX}/share/apps/ksplash/Themes/Default/Theme.rc:${PORTSDIR}/x11-themes/kde4-base-artwork
 
 CONFLICTS=	kdeaccessibility-4.[0-6].* kdebase-workspace-4.[0-6].*
 
@@ -75,7 +74,7 @@ OPTIONS_DEFINE=	GPS KACTIVITY UPOWER WALLPAPERS
 OPTIONS_GROUP=	PHONON PLASMA
 OPTIONS_GROUP_PHONON=	GSTREAMER VLC
 OPTIONS_GROUP_PLASMA=	PYTHON RUBY
-OPTIONS_DEFAULT=GPS GSTREAMER KACTIVITY UPOWER
+OPTIONS_DEFAULT=GPS GSTREAMER KACTIVITY UPOWER WALLPAPERS
 
 GPS_DESC=	GPS geolocation via gpsd
 GSTREAMER_DESC=	Multimedia via Phonon-GStreamer
