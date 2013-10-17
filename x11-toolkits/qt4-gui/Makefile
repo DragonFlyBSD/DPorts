@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/qt4-gui/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
@@ -46,12 +46,11 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 CONFIGURE_ARGS+=	-I../../include/QtCore -I../../include/QtGui \
 			-I../../include/Qt -I../../include
 
-EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
 FONTSCALE=	${LOCALBASE}/lib/X11/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/qt4/files/Makefile.options"
 
 .if ${QT4_OPTIONS:MCUPS}
@@ -101,7 +100,6 @@ post-configure:
 
 post-install:
 	${INSTALL_DATA} ${BUILD_WRKSRC}/dialogs/images/qtlogo-64.png \
-		${PREFIX}/share/pixmaps/qtlogo.png
-	@${CAT} ${PKGMESSAGE}
+		${STAGEDIR}${PREFIX}/share/pixmaps/qtlogo.png
 
 .include <bsd.port.post.mk>
