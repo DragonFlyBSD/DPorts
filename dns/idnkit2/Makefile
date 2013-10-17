@@ -1,10 +1,11 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: dns/idnkit2/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/idnkit2/Makefile 330275 2013-10-14 06:52:32Z bapt $
 
 PORTNAME=	idnkit
 PORTVERSION=	2.2
 CATEGORIES=	dns
 MASTER_SITES=	http://jprs.co.jp/idn/
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	fbsd@grid.einherjar.de
 COMMENT=	Internationalized Domain Name toolkit 2
@@ -13,7 +14,6 @@ LICENSE_PERMS=	# permissive
 LICENSE_NAME=	OSCL
 LICENSE_FILE=	LICENSE.txt
 
-LATEST_LINK=	${PORTNAME}${PORTVERSION:R}
 CONFLICTS_INSTALL=	idnkit-1.*
 
 USE_AUTOTOOLS=	libtool
