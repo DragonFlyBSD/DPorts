@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2fe/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/aria2fe/Makefile 330227 2013-10-13 13:03:03Z makc $
 
 PORTNAME=	aria2fe
 DISTVERSION=	0.0.5
@@ -15,19 +15,16 @@ LICENSE=	GPLv3 # (or later)
 RUN_DEPENDS=	aria2c:${PORTSDIR}/www/aria2 \
 		xterm:${PORTSDIR}/x11/xterm
 
-BUILD_WRKSRC=	${WRKSRC}/src
-INSTALL_WRKSRC=	${WRKSRC}/bin
-
+USES=		qmake
 USE_BZIP2=	yes
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
-do-configure:
-	@(cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS})
+CONFIGURE_WRKSRC=	${WRKSRC}/src
+BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
