@@ -1,11 +1,12 @@
 # Created by: mm@FreeBSD.org
-# $FreeBSD: databases/adodb5/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/adodb5/Makefile 330275 2013-10-14 06:52:32Z bapt $
 
 PORTNAME=	adodb
 DISTVERSION=	5.18
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-php5-only/${PORTNAME}-${DISTVERSION:S/.//g}-for-php5
 DISTNAME=	${PORTNAME:S/5//}${DISTVERSION:S/.//g}a
+PKGNAMESUFFIX=	5
 
 MAINTAINER=	joehorn@gmail.com
 COMMENT=	Database library for PHP
@@ -13,7 +14,6 @@ COMMENT=	Database library for PHP
 LICENSE=	BSD
 
 CONFLICTS=	adodb-4.*
-LATEST_LINK=	adodb5
 
 USE_ZIP=	yes
 USE_PHP=	pcre
