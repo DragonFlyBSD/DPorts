@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: devel/qt4-qdoc3/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/qt4-qdoc3/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	qdoc3
 DISTVERSION=	${QT4_VERSION}
@@ -27,12 +27,11 @@ DO_NOT_EXTRACT=	demos doc examples mkspecs qmake translations \
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 .endfor
 
-EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
 BUILD_WRKSRC=	${WRKSRC}/tools/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs/modules
 	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
