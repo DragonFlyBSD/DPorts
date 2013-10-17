@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/alabastra/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/alabastra/Makefile 330227 2013-10-13 13:03:03Z makc $
 
 PORTNAME=	alabastra
 PORTVERSION=	0.21b
@@ -10,26 +10,28 @@ DISTNAME=	Alabastra-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	C++ editor written with Qt4
+COMMENT=	C++ editor written with Qt 4
 
 LICENSE=	GPLv2 # (or later)
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+USES=		qmake gmake
 USE_QT4=	gui xml \
 		moc_build qmake_build rcc_build uic_build \
 		iconengines_run
-USE_GMAKE=	yes
 ALL_TARGET=	Alabastra
 
 PLIST_FILES=	bin/alabastra
 
-NO_STAGE=	yes
-do-configure:
-	@(cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS})
+DESKTOP_ENTRIES=	"Alabastra" \
+			"C++/Qt editor" \
+			"" \
+			"alabastra" \
+			"Development;IDE;Qt;" \
+			true
 
 do-install:
-	(cd ${INSTALL_WRKSRC} \
-		&& ${INSTALL_PROGRAM} Alabastra ${PREFIX}/bin/alabastra)
+	${INSTALL_PROGRAM} ${WRKSRC}/Alabastra ${STAGEDIR}${PREFIX}/bin/alabastra
 
 .include <bsd.port.mk>
