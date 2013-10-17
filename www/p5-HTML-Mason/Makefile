@@ -1,7 +1,8 @@
-# $FreeBSD: www/p5-HTML-Mason/Makefile 330134 2013-10-12 15:16:44Z sunpoet $
+# $FreeBSD: www/p5-HTML-Mason/Makefile 330427 2013-10-15 18:44:00Z sunpoet $
 
 PORTNAME=	HTML-Mason
 PORTVERSION=	1.52
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -30,7 +31,7 @@ USE_PERL5=	configure
 
 MODPERL_BUILD_DEPENDS=	p5-libapreq2>=0:${PORTSDIR}/www/p5-libapreq2
 MODPERL_RUN_DEPENDS=	p5-libapreq2>=0:${PORTSDIR}/www/p5-libapreq2
-MODPERL_USE=		APACHE_RUN=yes
+MODPERL_USE=		APACHE_RUN=22+
 
 post-patch:
 	@${REINPLACE_CMD} -e '/bin\/convert/d' ${WRKSRC}/Makefile.PL
