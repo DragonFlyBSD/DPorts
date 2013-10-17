@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/py-qt4-core/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-qt4-core/Makefile 330463 2013-10-15 21:52:33Z rakuco $
 
 PORTNAME=	core
 PORTVERSION=	${PYQT4_VERSION}
@@ -37,7 +37,6 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
@@ -69,8 +68,8 @@ post-configure:
 		${WRKSRC}/qpy/QtCore/Makefile
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/Qt.py ${PYTHONPREFIX_SITELIBDIR}/PyQt4 &&\
-		cd ${PYTHONPREFIX_SITELIBDIR}/PyQt4 &&\
+	${INSTALL_DATA} ${FILESDIR}/Qt.py ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/PyQt4 &&\
+		cd ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/PyQt4 &&\
 		${PYTHON_CMD} ${PYTHON_LIBDIR}/py_compile.py\
 		`ls *.py */*.py */*/*.py` &&\
 		${PYTHON_CMD} -O ${PYTHON_LIBDIR}/py_compile.py\
