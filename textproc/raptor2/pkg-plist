@@ -6,6 +6,8 @@ lib/libraptor2.la
 lib/libraptor2.so
 lib/libraptor2.so.0
 libdata/pkgconfig/raptor2.pc
+man/man1/rapper.1.gz
+man/man3/libraptor2.3.gz
 share/gtk-doc/html/raptor2/home.png
 share/gtk-doc/html/raptor2/index.html
 share/gtk-doc/html/raptor2/index.sgml
@@ -33,6 +35,7 @@ share/gtk-doc/html/raptor2/raptor2-changes-2-0-4-to-2-0-5.html
 share/gtk-doc/html/raptor2/raptor2-changes-2-0-5-to-2-0-6.html
 share/gtk-doc/html/raptor2/raptor2-changes-2-0-6-to-2-0-7.html
 share/gtk-doc/html/raptor2/raptor2-changes-2-0-7-to-2-0-8.html
+share/gtk-doc/html/raptor2/raptor2-changes-2-0-9-to-2-0-10.html
 share/gtk-doc/html/raptor2/raptor2-changes.html
 share/gtk-doc/html/raptor2/raptor2-section-avltree.html
 share/gtk-doc/html/raptor2/raptor2-section-constants.html
