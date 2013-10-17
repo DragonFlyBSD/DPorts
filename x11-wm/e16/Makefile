@@ -1,15 +1,15 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/e16/Makefile 330284 2013-10-14 08:33:22Z gahr $
 
 PORTNAME=	e16
-PORTVERSION=	1.0.13.001
+PORTVERSION=	1.0.13.003
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	SF/enlightenment/${PORTNAME}/Snapshots/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A very artistic X window manager
 
-OPTIONS_DEFINE=	SOUND
+OPTIONS_DEFINE=	DOCS NLS SOUND
 SOUND_DESC=	Sound support via pulseaudio/libsndfile
 
 USE_XORG=	compositeproto damageproto xextproto x11 xbitmaps xcomposite xdamage \
@@ -21,12 +21,11 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-rpath --enable-mans SHELL=/bin/sh
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOUND}
-LIB_DEPENDS+=	pulse:${PORTSDIR}/audio/pulseaudio \
-		sndfile:${PORTSDIR}/audio/libsndfile
+LIB_DEPENDS+=	libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile
 CONFIGURE_ARGS+=--enable-sound \
 		--enable-sound-pulse \
 		--with-sndldr=sndfile
