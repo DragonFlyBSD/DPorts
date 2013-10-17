@@ -1,36 +1,30 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: archivers/zutils/Makefile 320675 2013-06-12 11:53:21Z wg $
+# $FreeBSD: archivers/zutils/Makefile 328351 2013-09-26 12:23:46Z danilo $
 
 PORTNAME=	zutils
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	archivers
 MASTER_SITES=	SAVANNAH/zutils
+EXTRACT_SUFX=	.tar.lz
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Utilities for searching in bzip2, gzip, lzip, and xz archives
 
 LICENSE=	GPLv3
 
-PLIST_FILES=	bin/zcat \
-		bin/zcmp \
-		bin/zdiff \
-		bin/zegrep \
-		bin/zfgrep \
-		bin/zgrep \
-		bin/ztest \
-		bin/zutils
+EXTRACT_DEPENDS=	lzip:${PORTSDIR}/archivers/lzip
 
-MAN1=		zcat.1 \
-		zcmp.1 \
-		zdiff.1 \
-		zgrep.1 \
-		ztest.1
 INFO=		zutils
 
 GNU_CONFIGURE=	yes
 
+do-extract:
+	@${MKDIR} ${WRKDIR}
+	@(cd ${WRKDIR} ; ${LOCALBASE}/bin/lzip -cd \
+		${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | ${TAR} -xf -)
+
 post-patch:
 	# Remove compiler hardcoded flags and use environment
-	${REINPLACE_CMD} '23,26d' ${WRKSRC}/configure
+	${REINPLACE_CMD} '24,27d' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
