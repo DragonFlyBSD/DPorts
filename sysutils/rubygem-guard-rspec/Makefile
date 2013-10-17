@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-guard-rspec/Makefile 330145 2013-10-12 16:40:13Z sunpoet $
+# $FreeBSD: sysutils/rubygem-guard-rspec/Makefile 330305 2013-10-14 11:58:11Z sunpoet $
 
 PORTNAME=	guard-rspec
-PORTVERSION=	4.0.0
+PORTVERSION=	4.0.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
