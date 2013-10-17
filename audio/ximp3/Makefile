@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/ximp3/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ximp3/Makefile 330476 2013-10-16 03:28:12Z amdmi3 $
 
 PORTNAME=	ximp3
 PORTVERSION=	0.1.15
@@ -10,17 +10,15 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A simple console MP3 player
 
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 PORTDOCS=	*
 
 PLIST_FILES=	bin/${PORTNAME}
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
