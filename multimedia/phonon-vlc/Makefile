@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/phonon-vlc/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/phonon-vlc/Makefile 330418 2013-10-15 17:57:49Z rakuco $
 
 PORTNAME=	phonon
 PORTVERSION=	0.6.2
@@ -27,11 +27,9 @@ PHONON_BRANCH=	stable
 
 PLIST_SUB+=	QT_PREFIX=${QT_PREFIX}
 
-NO_STAGE=	yes
-pre-su-install:
-	${MKDIR} ${QT_PLUGINDIR}/phonon_backend
-
 post-install:
-	${LN} -sf ${PREFIX}/lib/kde4/plugins/phonon_backend/phonon_vlc.so ${QT_PLUGINDIR}/phonon_backend/libphonon_vlc.so
+	${MKDIR} ${STAGEDIR}${QT_PLUGINDIR}/phonon_backend
+	${LN} -sf ${PREFIX}/lib/kde4/plugins/phonon_backend/phonon_vlc.so \
+		${STAGEDIR}${QT_PLUGINDIR}/phonon_backend/libphonon_vlc.so
 
 .include <bsd.port.mk>
