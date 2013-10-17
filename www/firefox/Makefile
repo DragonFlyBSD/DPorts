@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Alan Eldridge <alane@FreeBSD.org>
 # $FreeBSD: www/firefox/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
