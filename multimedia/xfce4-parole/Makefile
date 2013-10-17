@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/xfce4-parole/Makefile 323654 2013-07-25 17:21:59Z olivierd $
+# $FreeBSD: multimedia/xfce4-parole/Makefile 330525 2013-10-16 18:15:26Z olivierd $
 
 PORTNAME=	parole
-PORTVERSION=	0.5.2
+PORTVERSION=	0.5.3
+PORTREVISION=	1
 CATEGORIES=	multimedia xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}/
 DIST_SUBDIR=	xfce4
@@ -12,9 +13,9 @@ COMMENT=	Lightweight media player for Xfce4 based on GStreamer
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib \
-		notify:${PORTSDIR}/devel/libnotify \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib \
+		libnotify.so:${PORTSDIR}/devel/libnotify \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

@@ -27,6 +27,7 @@ share/icons/hicolor/scalable/apps/parole.svg
 %%NLS%%share/locale/da/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/de/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/el/LC_MESSAGES/parole.mo
+%%NLS%%share/locale/en_AU/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/en_GB/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/es/LC_MESSAGES/parole.mo
 %%NLS%%share/locale/eu/LC_MESSAGES/parole.mo
@@ -65,8 +66,6 @@ share/pixmaps/parole.png
 @dirrm %%DATADIR%%/parole-plugins-0
 @dirrm %%DATADIR%%/gtk-2.0
 @dirrm %%DATADIR%%
-%%NLS%%@dirrmtry share/locale/zh_HK/LC_MESSAGES
-%%NLS%%@dirrmtry share/locale/zh_HK
 %%NLS%%@dirrmtry share/locale/ug/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/ug
 %%NLS%%@dirrmtry share/locale/te/LC_MESSAGES
