@@ -1,8 +1,8 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net/p5-Net-Patricia/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Patricia/Makefile 330483 2013-10-16 07:07:00Z culot $
 
 PORTNAME=	Net-Patricia
-PORTVERSION=	1.21
+PORTVERSION=	1.22
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Socket6>=0:${PORTSDIR}/net/p5-Socket6
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Patricia.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
