@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: mail/wanderlust-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/wanderlust-devel/Makefile 330275 2013-10-14 06:52:32Z bapt $
 
 PORTNAME=	wanderlust
 PORTVERSION=	2.15.9.b.${SNAPDATE}
@@ -8,7 +8,7 @@ CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.jpl.org/ftp/pub/github-snapshots/ \
 		${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	nobutaka
-PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
+PKGNAMESUFFIX=	-devel-${EMACS_PORT_NAME}
 DISTNAME=	wanderlust-${SNAPDATE}${SNAPTIME}
 
 MAINTAINER=	nobutaka@FreeBSD.org
