@@ -1,12 +1,11 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Many/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-Many/Makefile 330314 2013-10-14 12:28:45Z sunpoet $
 
 PORTNAME=	Geo-Coder-Many
-PORTVERSION=	0.40
+PORTVERSION=	0.42
 CATEGORIES=	misc geography perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:C/0$//}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module to tie together multiple Geo::Coder::* modules
