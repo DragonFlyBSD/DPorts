@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-qt4-dbussupport/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-qt4-dbussupport/Makefile 330463 2013-10-15 21:52:33Z rakuco $
 
 PORTNAME=	dbussupport
 PORTVERSION=	${PYQT4_VERSION}
@@ -39,7 +39,6 @@ ARGS=		-b ${PREFIX}/bin \
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/dbus/mainloop/qt.so
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../py-qt4/bsd.pyqt.mk"
 
 .if defined(WITH_DEBUG)
