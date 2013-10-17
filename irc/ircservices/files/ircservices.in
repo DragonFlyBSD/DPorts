@@ -1,0 +1,23 @@
+#!/bin/sh
+# $FreeBSD: irc/ircservices/files/ircservices.in 300896 2012-07-14 13:54:48Z beat $
+#
+# PROVIDE: ircservices
+# REQUIRE: LOGIN
+# KEYWORDS: nojail shutdown
+
+. /etc/rc.subr
+
+name=ircservices
+rcvar=ircservices_enable
+
+command="%%PREFIX%%/sbin/${name}"
+command_args="-dir=%%PREFIX%%/etc/ircservices"
+pidfile="/var/run/${name}.pid"
+required_files="%%PREFIX%%/etc/ircservices/ircservices.conf \
+		%%PREFIX%%/etc/ircservices/modules.conf"
+
+load_rc_config ${name}
+
+: ${ircservices_enable="NO"}
+
+run_rc_command "$1"
