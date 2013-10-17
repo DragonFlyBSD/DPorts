@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/qlabels/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/qlabels/Makefile 330227 2013-10-13 13:03:03Z makc $
 
 PORTNAME=	qlabels
 PORTVERSION=	0.2
@@ -12,6 +12,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Labels and business cards creating
 
+USES=		qmake
 USE_BZIP2=	yes
 USE_QT4=	xml gui corelib qmake_build uic_build moc_build rcc_build
 WRKSRC=		${WRKDIR}/${DISTNAME:C/_/-/}
@@ -21,24 +22,19 @@ DESKTOP_ENTRIES=	"qLabels" \
 			"" \
 			"qlabels" \
 			"Office;Qt;" \
-			"false"
+			"true"
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr|${PREFIX}|g' \
 		${WRKSRC}/qlabels.pro \
 		${WRKSRC}/lib/templates.cpp \
 		${WRKSRC}/lib/papers.cpp
 
-pre-build:
-	@cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS} qlabels.pro
-
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for doc in Changelog LICENSE
-	@${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
-.endfor
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Changelog ${WRKSRC}/LICENSE \
+		${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
