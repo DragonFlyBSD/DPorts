@@ -1,8 +1,8 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: devel/py-prettytable/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-prettytable/Makefile 330237 2013-10-13 16:14:01Z novel $
 
 PORTNAME=	prettytable
-PORTVERSION=	0.6.1
+PORTVERSION=	0.7.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 MASTER_SITE_SUBDIR=source/P/PrettyTable
