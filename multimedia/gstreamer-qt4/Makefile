@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-qt4/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer-qt4/Makefile 330383 2013-10-15 10:22:54Z rakuco $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.2
@@ -16,9 +16,8 @@ LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
 LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
 
-USES=		bison cmake pkgconfig
+USES=		bison cmake gmake pkgconfig
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	yes
 USE_GNOME=	glib20
@@ -33,7 +32,6 @@ GST_VERSION=${PORTVERSION:C/..$//}
 CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH:STRING="${LOCALBASE}/include"
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-extract:
 	${REINPLACE_CMD} -e 's|$${LIB_INSTALL_DIR}/pkgconfig|libdata/pkgconfig|' \
 		${WRKSRC}/src/CMakeLists.txt
