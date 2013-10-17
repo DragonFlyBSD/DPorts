@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD: mail/thunderbird/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
