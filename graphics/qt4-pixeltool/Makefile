@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: graphics/qt4-pixeltool/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/qt4-pixeltool/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	pixeltool
 DISTVERSION=	${QT4_VERSION}
@@ -40,9 +40,8 @@ EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 BUILD_WRKSRC=	${WRKSRC}/tools/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-EXTRA_PATCHES=	${.CURDIR}/../../devel/qt4/files/patch-configure
+EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
 
-NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|target.path.*|target.path=${PREFIX}/bin|g' \
 		${BUILD_WRKSRC}/${PORTNAME}.pro
