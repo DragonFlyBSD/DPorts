@@ -1,8 +1,8 @@
 # Created by: kipz <somicide@gmail.com>
-# $FreeBSD: devel/gitg/Makefile 328536 2013-09-28 00:30:36Z amdmi3 $
+# $FreeBSD: devel/gitg/Makefile 330469 2013-10-16 02:26:40Z amdmi3 $
 
 PORTNAME=	gitg
-PORTVERSION=	0.2.5
+PORTVERSION=	0.2.7
 CATEGORIES=	devel deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -16,10 +16,11 @@ BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		git>=1.7.0.2:${PORTSDIR}/devel/git
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
-		--disable-maintainer-mode
+		--disable-maintainer-mode \
+		--enable-compile-warnings=no
 USE_GNOME=	glib20 gtk30 gtksourceview3
 USES=		gettext gmake pkgconfig pathfix
 
