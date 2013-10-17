@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: www/py-qt4-webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-qt4-webkit/Makefile 330463 2013-10-15 21:52:33Z rakuco $
 
 PORTNAME=	webkit
 PORTVERSION=	${PYQT4_VERSION}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}gui>=${PYQT4_VERSION}:${PORTSDIR}/x11-toolkits/py-q
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
 USE_PYTHON=	2.5+
-USE_QT4=	qmake_build gui network webkit
+USE_QT4=	qmake_build gui moc_build network webkit
 
 OPTIONS_DEFINE=	API
 OPTIONS_DEFAULT=API
@@ -37,7 +37,6 @@ ARGS=		-b ${PREFIX}/bin \
 		CC="${CC}" CXX="${CXX}" LINK="${CXX}" LINK_SHLIB="${CXX}" \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/py-qt4/bsd.pyqt.mk"
 .include <bsd.port.options.mk>
 
