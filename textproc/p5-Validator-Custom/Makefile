@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: textproc/p5-Validator-Custom/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD: textproc/p5-Validator-Custom/Makefile 330412 2013-10-15 16:59:02Z sunpoet $
 
 PORTNAME=	Validator-Custom
-PORTVERSION=	0.1800
+PORTVERSION=	0.2200
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KIMOTO
