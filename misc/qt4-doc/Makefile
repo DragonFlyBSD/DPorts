@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: misc/qt4-doc/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/qt4-doc/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	doc
 DISTVERSION=	${QT4_VERSION}
@@ -17,10 +17,10 @@ EXTRACT_AFTER_ARGS=	'${DISTNAME}/doc'
 
 DOCSDIR=	${PREFIX}/share/doc/qt4
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DOCSDIR} && \
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${DOCSDIR} && \
-	${COPYTREE_SHARE} qch ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR} && \
+	cd ${WRKSRC}/doc && \
+	${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR} && \
+	${COPYTREE_SHARE} qch ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
