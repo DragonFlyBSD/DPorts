@@ -1,9 +1,5 @@
-# New ports collection makefile for:	org-mode.el
-# Date created:		2007-02-15
-# Whom:			Kai Wang <kaiw27@gmail.com>
-#
-# $FreeBSD: deskutils/org-mode.el/Makefile 315598 2013-03-30 05:13:30Z ashish $
-#
+# Created by: Kai Wang <kaiw27@gmail.com>
+# $FreeBSD: deskutils/org-mode.el/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	org-mode.el
 PORTVERSION=	7.8.11
@@ -90,6 +86,7 @@ CONTRIBS=	\
 	scripts/staticmathjax/README.org \
 	scripts/staticmathjax/README.txt \
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i .pv 's|%%PORTVERSION%%|${PORTVERSION}|' ${WRKSRC}/Makefile
 	${SED} 's|\(Org Mode\):|\1 (${PORTVERSION}):|; \
