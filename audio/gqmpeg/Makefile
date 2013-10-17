@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/gqmpeg/Makefile 329268 2013-10-04 07:18:59Z bapt $
+# $FreeBSD: audio/gqmpeg/Makefile 330378 2013-10-15 09:47:11Z bapt $
 
 PORTNAME=	gqmpeg
 PORTVERSION=	0.20.0
@@ -24,8 +24,8 @@ RUN_DEPENDS+=	mpg123:${PORTSDIR}/audio/mpg123
 USE_GNOME=	gdkpixbuf
 NO_STAGE=	yes
 USES=		gettext
-WANT_GNOME=	yes
 USE_AUTOTOOLS=	autoconf213 libtool
+CONFIGURE_ENV+=	USE_GNOME=""
 
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
@@ -33,13 +33,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 MAN1=		gqmpeg.1
 
 .include <bsd.port.pre.mk>
-
-.if ${HAVE_GNOME:Mgnomelibs}!=""
-USE_GNOME+=	gnomeprefix gnomelibs
-CONFIGURE_ENV+=	USE_GNOME="yes"
-.else
-CONFIGURE_ENV+=	USE_GNOME=""
-.endif
 
 .if !defined(WITH_MPG321)
 pre-everything::
