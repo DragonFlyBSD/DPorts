@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/gthumb/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gthumb/Makefile 330496 2013-10-16 10:50:29Z rm $
 
 PORTNAME=	gthumb
 PORTVERSION=	2.14.1
@@ -8,15 +8,14 @@ CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An image viewer and browser for the GNOME 2 environment
+MAINTAINER=	rm@FreeBSD.org
+COMMENT=	Image viewer and browser for the GNOME 2 environment
 
 LIB_DEPENDS=	unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_XZ=	yes
-USES=		bison pathfix pkgconfig gettext
-USE_GMAKE=	yes
+USE_XZ=		yes
+USES=		bison gmake pathfix pkgconfig gettext
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gconf2
 WANT_GSTREAMER=	yes
 USE_LDCONFIG=	yes
@@ -44,6 +43,7 @@ BRASERO_DESC=	Write galleries to CD/DVD (large dependency)
 YELP_DESC=	Viewer for built-in help system
 
 NO_STAGE=	yes
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXIV2}
