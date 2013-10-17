@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3lint/Makefile 325163 2013-08-21 17:42:57Z sunpoet $
+# $FreeBSD: audio/mp3lint/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	mp3lint
 PORTVERSION=	0.9
@@ -13,6 +13,7 @@ COMMENT=	Configurable tool to check collections of audio files
 BUILD_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
 RUN_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
 
+NO_STAGE=	yes
 USE_PERL5=	configure
 USES=		perl5
 
