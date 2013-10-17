@@ -1,9 +1,9 @@
 # Created by: Sean McGovern <sean@sfarc.net>
-# $FreeBSD: audio/faad/Makefile 328006 2013-09-23 14:04:36Z bapt $
+# $FreeBSD: audio/faad/Makefile 330231 2013-10-13 15:05:04Z bapt $
 
 PORTNAME=	faad2
 PORTVERSION=	2.7
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF/faac/${PORTNAME}-src/${PORTNAME}-${PORTVERSION}
@@ -38,5 +38,11 @@ post-patch:
 
 pre-configure:
 	@cd ${WRKSRC}; ${SETENV} ${AUTOTOOLS_ENV} ${LIBTOOLIZE} --automake
+
+post-configure:
+	@${REINPLACE_CMD} "s/444/644/g" ${WRKSRC}/common/mp4ff/Makefile
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libfaad.so.2
 
 .include <bsd.port.mk>
