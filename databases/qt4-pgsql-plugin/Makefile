@@ -1,5 +1,5 @@
 # Created by: Lauri Watts <lauri@kde.org>
-# $FreeBSD: databases/qt4-pgsql-plugin/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/qt4-pgsql-plugin/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
@@ -28,5 +28,10 @@ MAKE_ENV+=	DB="${DB}" DRIVER="${DRIVER}" MOC="${MOC}" \
 		QT_LIBDIR="${QT_LIBDIR}"
 PLIST_SUB=	DB=${DB}
 
-NO_STAGE=	yes
+SQL_PLUGINDIR=	${PREFIX}/${QT_PLUGINDIR_REL}/sqldrivers
+
+do-install:
+	@${MKDIR} ${STAGEDIR}${SQL_PLUGINDIR}
+	${INSTALL_LIB} ${WRKSRC}/libqsql${DB}.so ${STAGEDIR}${SQL_PLUGINDIR}
+
 .include <bsd.port.mk>
