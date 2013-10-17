@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/libosmpbf/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/libosmpbf/Makefile 330468 2013-10-16 01:10:29Z amdmi3 $
 
 PORTNAME=	libosmpbf
 PORTVERSION=	1.3.0
@@ -10,7 +10,7 @@ COMMENT=	Library for handling binary OpenStreetMap data
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
+LIB_DEPENDS=	libprotobuf.so:${PORTSDIR}/devel/protobuf
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	scrosby
@@ -18,7 +18,6 @@ GH_PROJECT=	OSM-binary
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	d9be2d1
 
-NO_STAGE=	yes
 USES=		gmake
 BUILD_WRKSRC=	${WRKSRC}/src
 INSTALL_WRKSRC=	${WRKSRC}/src
@@ -27,12 +26,11 @@ CXXFLAGS+=	-I${LOCALBASE}/include
 
 PORTDOCS=	*
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
