@@ -1,5 +1,5 @@
 # Created by: HOTARU-YA <hotaru@tail.net>
-# $FreeBSD: games/oneko-sakura/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/oneko-sakura/Makefile 330278 2013-10-14 07:23:08Z bapt $
 
 PORTNAME=	oneko
 PORTVERSION=	1.2
@@ -7,6 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.daidouji.com/oneko/distfiles/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.sakura.5
+PKGNAMESUFFIX=	-sakura
 
 MAINTAINER=	hotaru@tail.net
 COMMENT=	A cat, Sakura or Tomoyo chasing a mouse all over the screen
@@ -18,8 +19,6 @@ USE_XORG=	x11 xext
 MAN6=		oneko.6
 PLIST_FILES=	bin/oneko
 NO_CDROM=	Including derivatives from CARDCAPTOR SAKURA. See http://www.clamp-net.com/ -> INFORMATION
-
-NO_LATEST_LINK=	yes
 
 NO_STAGE=	yes
 pre-configure:
