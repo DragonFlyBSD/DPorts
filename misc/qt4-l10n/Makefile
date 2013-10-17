@@ -1,4 +1,4 @@
-# $FreeBSD: misc/qt4-l10n/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/qt4-l10n/Makefile 330266 2013-10-13 23:15:50Z rakuco $
 
 PORTNAME=	l10n
 DISTVERSION=	${QT4_VERSION}
@@ -14,12 +14,11 @@ QT_NONSTANDARD=	yes
 
 EXTRACT_AFTER_ARGS+=	--include '${DISTNAME}/translations'
 
-NO_STAGE=	yes
 do-build:
 	${LOCALBASE}/bin/lrelease-qt4 ${WRKSRC}/translations/*.ts
 
 do-install:
-	${MKDIR} ${PREFIX}/share/qt4/translations
-	${INSTALL_DATA} ${WRKSRC}/translations/*.qm ${PREFIX}/share/qt4/translations
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/qt4/translations
+	${INSTALL_DATA} ${WRKSRC}/translations/*.qm ${STAGEDIR}${PREFIX}/share/qt4/translations
 
 .include <bsd.port.mk>
