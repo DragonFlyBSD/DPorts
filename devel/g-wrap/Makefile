@@ -1,5 +1,5 @@
 # Created by: Matthew Condell (mcondell@alum.mit.edu)
-# $FreeBSD: devel/g-wrap/Makefile 316333 2013-04-23 10:13:19Z bapt $
+# $FreeBSD: devel/g-wrap/Makefile 327723 2013-09-20 17:04:43Z bapt $
 #    $MCom: ports/devel/g-wrap/Makefile,v 1.6 2006/12/24 18:45:08 ahze Exp $
 
 PORTNAME=	g-wrap
@@ -30,6 +30,7 @@ NOT_FOR_ARCHS=	ia64 powerpc
 CFLAGS+=		-fPIC
 CONFIGURE_ARGS=		--disable-Werror
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|"glib"|"glib-2.0"|g ; \
