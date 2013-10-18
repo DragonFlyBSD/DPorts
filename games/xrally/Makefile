@@ -1,9 +1,9 @@
 # Created by: Edwin Groothuis
-# $FreeBSD: games/xrally/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xrally/Makefile 330602 2013-10-17 06:03:18Z edwin $
 
 PORTNAME=	xrally
 PORTVERSION=	1.1.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.1
 DISTNAME=	${PORTNAME}-1.1
