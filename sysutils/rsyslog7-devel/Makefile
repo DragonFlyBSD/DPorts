@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # $FreeBSD: sysutils/rsyslog7-devel/Makefile 327263 2013-09-14 10:45:36Z bapt $
 
 PORTNAME=	rsyslog
