@@ -1,7 +1,7 @@
-# $FreeBSD: multimedia/libass/Makefile 327927 2013-09-23 06:12:57Z bapt $
+# $FreeBSD: multimedia/libass/Makefile 330616 2013-10-17 07:46:54Z bapt $
 
 PORTNAME=	libass
-PORTVERSION=	0.10.1
+PORTVERSION=	0.10.2
 CATEGORIES=	multimedia devel
 MASTER_SITES=	GOOGLE_CODE
 
@@ -21,5 +21,8 @@ USE_XZ=	yes
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}.so.*
 
 .include <bsd.port.mk>
