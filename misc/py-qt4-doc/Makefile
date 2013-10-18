@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: misc/py-qt4-doc/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/py-qt4-doc/Makefile 330665 2013-10-17 19:22:58Z rakuco $
 
 PORTNAME=	doc
 PORTVERSION=	${PYQT4_VERSION}
@@ -19,16 +19,15 @@ USE_PYTHON=	2.5+
 DOCSDIR=	${PREFIX}/share/doc/py-qt4
 PORTDOCS=	*
 
-NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} &&\
-		${MKDIR} ${DOCSDIR} &&\
+		${MKDIR} ${STAGEDIR}${DOCSDIR} &&\
 		${INSTALL_DATA} GPL_EXCEPTION.TXT\
 				GPL_EXCEPTION_ADDENDUM.TXT NEWS\
 				LICENSE.GPL2 LICENSE.GPL3\
 				OPENSOURCE-NOTICE.TXT README THANKS\
-			${DOCSDIR}
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${DOCSDIR}
+			${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR}
 
 .include "../../devel/py-qt4/bsd.pyqt.mk"
 .include <bsd.port.mk>
