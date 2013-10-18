@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/opendkim/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: mail/opendkim/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=		opendkim
 PORTVERSION=		2.8.3
@@ -50,6 +50,7 @@ STATS_DESC=		Setup statistics tools
 
 MAKE_ARGS+=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.options"
 .include <bsd.port.options.mk>
 
