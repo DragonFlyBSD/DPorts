@@ -1,12 +1,11 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: editors/impress/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/impress/Makefile 330620 2013-10-17 09:36:36Z gahr $
 
 PORTNAME=	impress
 PORTVERSION=	1.1b9
 PORTREVISION=	3
 CATEGORIES=	editors tk
-MASTER_SITES=	TUCOWS \
-		http://www.ntlug.org/~ccox/impress/
+MASTER_SITES=	http://www.ntlug.org/~ccox/impress/
 DISTNAME=	imp${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
@@ -15,20 +14,26 @@ COMMENT=	Publishing and presentation tool
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+OPTIONS_DEFINE=	DOCS
+
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
-USE_TK_WRAPPER=	yes
+USES+=		tk
 
 PORTDOCS=	*
 PLIST_FILES=	bin/impress
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
+post-patch:
+	${REINPLACE_CMD} -e 's|exec wish|exec ${WISH}|g' \
+	    ${WRKSRC}/src/impress.tcl
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/src/impress.tcl ${PREFIX}/bin/impress
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@(cd ${WRKSRC}/src/doc && ${COPYTREE_SHARE} . ${DOCSDIR})
+	${INSTALL_SCRIPT} ${WRKSRC}/src/impress.tcl ${STAGEDIR}${PREFIX}/bin/impress
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/src/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
