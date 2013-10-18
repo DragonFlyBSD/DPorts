@@ -1,9 +1,9 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: games/xpired/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xpired/Makefile 330605 2013-10-17 06:19:32Z edwin $
 
 PORTNAME=	xpired
 PORTVERSION=	1.22
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-linux/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-linux_source
