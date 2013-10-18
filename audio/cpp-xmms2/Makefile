@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: ports/audio/cpp-xmms2/Makefile,v 1.17 2013/01/31 14:01:25 svnexp Exp $
+# $FreeBSD: audio/cpp-xmms2/Makefile 328665 2013-09-29 10:41:24Z madpilot $
 
 PORTREVISION=	7
 CATEGORIES=	audio
@@ -8,8 +8,8 @@ PKGNAMEPREFIX=	cpp-
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	C++ Bindings for XMMS2
 
-LIB_DEPENDS+=	boost_signals:${PORTSDIR}/devel/boost-libs \
-		xmmsclient.6:${PORTSDIR}/audio/xmms2
+LIB_DEPENDS+=	libboost_signals.so:${PORTSDIR}/devel/boost-libs \
+		libxmmsclient.so:${PORTSDIR}/audio/xmms2
 
 MASTERDIR=	${.CURDIR}/../xmms2
 USE_LDCONFIG=	yes
