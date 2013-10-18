@@ -1,3 +1,4 @@
+NO_STAGE=yes
 ############################################################################
 # New ports collection Makefile for:   minc 1.x (Medical Imaging NetCDF)
 # Date created:        21 Dec 2005
