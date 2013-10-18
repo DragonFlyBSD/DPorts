@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/npush/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/npush/Makefile 330698 2013-10-17 23:52:45Z amdmi3 $
 
 PORTNAME=	npush
 PORTVERSION=	0.7
@@ -11,9 +11,10 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A curses-based logic game similar to Sokoban and Boulder Dash
 
 PORTDOCS=	*
+PORTDATA=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|"levels|"${DATADIR}/levels|' \
@@ -23,16 +24,14 @@ do-build:
 	cd ${WRKSRC} && ${CXX} ${CXXFLAGS} -o npush npush.cpp -lncurses
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/npush ${PREFIX}/bin
-	${MKDIR} ${DATADIR}/levels
-	${INSTALL_DATA} ${WRKSRC}/levels/* ${DATADIR}/levels
-	${INSTALL_DATA} ${WRKSRC}/npush.png ${PREFIX}/share/pixmaps/
-	${MKDIR} ${PREFIX}/share/applications/
-	${INSTALL_DATA} ${WRKSRC}/npush.desktop ${PREFIX}/share/applications/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/npush ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DATADIR}/levels
+	${INSTALL_DATA} ${WRKSRC}/levels/* ${STAGEDIR}${DATADIR}/levels
+	${INSTALL_DATA} ${WRKSRC}/npush.png ${STAGEDIR}${PREFIX}/share/pixmaps/
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications/
+	${INSTALL_DATA} ${WRKSRC}/npush.desktop ${STAGEDIR}${PREFIX}/share/applications/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/index.html ${WRKSRC}/readme.txt \
-		${WRKSRC}/screenshot?.png ${DOCSDIR}
-.endif
+		${WRKSRC}/screenshot?.png ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
