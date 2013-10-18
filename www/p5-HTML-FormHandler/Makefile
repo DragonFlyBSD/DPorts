@@ -1,8 +1,9 @@
 # Created by: gugu
-# $FreeBSD: www/p5-HTML-FormHandler/Makefile 329222 2013-10-03 18:38:04Z sunpoet $
+# $FreeBSD: www/p5-HTML-FormHandler/Makefile 330652 2013-10-17 16:15:14Z antoine $
 
 PORTNAME=	HTML-FormHandler
 PORTVERSION=	0.40050
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
@@ -45,7 +46,5 @@ TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	\
 
 .include <bsd.port.mk>
