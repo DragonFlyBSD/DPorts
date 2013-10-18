@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: audio/esperanza/Makefile 326132 2013-09-03 09:59:01Z bapt $
+# $FreeBSD: audio/esperanza/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	esperanza
 PORTVERSION=	0.4.0.20091017
@@ -17,6 +17,7 @@ LIB_DEPENDS=	xmmsclient++.4:${PORTSDIR}/audio/cpp-xmms2
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}+git${PORTVERSION:E}
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 USE_QT4=	gui xml network imageformats_run \
 		qmake_build moc_build rcc_build uic_build
 QT_NONSTANDARD=	yes
