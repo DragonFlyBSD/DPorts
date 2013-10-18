@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/libpeas/Makefile 326070 2013-09-02 19:55:48Z bapt $
+# $FreeBSD: devel/libpeas/Makefile 327724 2013-09-20 17:13:42Z bapt $
 #   $MCom: ports/trunk/devel/libpeas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libpeas
@@ -34,6 +34,7 @@ JS_DESC=JavaScript plugin support
 SEED_DESC=	JavaScript support based on webkit-gtk3
 GJS_DESC=	JavaScript support based on spidermonkey
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSEED}
