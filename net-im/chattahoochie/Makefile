@@ -1,8 +1,8 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: net-im/chattahoochie/Makefile 329809 2013-10-08 16:29:08Z tabthorpe $
+# $FreeBSD: net-im/chattahoochie/Makefile 330717 2013-10-18 02:47:04Z tabthorpe $
 
 PORTNAME=	chattahoochie
-PORTVERSION=	1.7
+PORTVERSION=	1.8
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.mammothcheese.ca/
 
