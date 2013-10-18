@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Frank Fischer
 # $FreeBSD: lang/abcl/Makefile 316110 2013-04-19 15:42:58Z olgeni $
 
