@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/uwsgi/files/uwsgi.in 307795 2012-11-26 20:23:49Z demon $
+# $FreeBSD: www/uwsgi/files/uwsgi.in 330678 2013-10-17 21:40:19Z demon $
 #
 # PROVIDE: uwsgi
 # REQUIRE: DAEMON
@@ -88,7 +88,7 @@ if [ -n "${uwsgi_profiles}" ]; then
 fi
 
 command=%%PREFIX%%/bin/uwsgi
-command_args="--pidfile ${uwsgi_pidfile} -s ${uwsgi_socket} -d ${uwsgi_logfile} --uid ${uwsgi_uid} --gid ${uwsgi_gid} ${uwsgi_flags}"
+command_args="--pidfile ${uwsgi_pidfile} -s ${uwsgi_socket} -d ${uwsgi_logfile} --uid ${uwsgi_uid} --gid ${uwsgi_gid}"
 pidfile=${uwsgi_pidfile}
 stop_postcmd=stop_postcmd
 reload_precmd=reload_precmd
