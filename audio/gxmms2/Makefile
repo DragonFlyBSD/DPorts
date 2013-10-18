@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/gxmms2/Makefile 326324 2013-09-04 21:08:13Z madpilot $
+# $FreeBSD: audio/gxmms2/Makefile 328665 2013-09-29 10:41:24Z madpilot $
 
 PORTNAME=	gxmms2
 PORTVERSION=	0.7.1
@@ -27,8 +27,8 @@ PLIST_FILES=	bin/gxmms2 \
 PLIST_DIRS=	%%DATADIR%%
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/gxmms2src/gxmms2_mini.xpm ${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/gxmms2src/gxmms2_mini.xpm ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
