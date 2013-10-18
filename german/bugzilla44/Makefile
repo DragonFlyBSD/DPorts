@@ -1,4 +1,4 @@
-# $FreeBSD: german/bugzilla44/Makefile 328405 2013-09-26 19:00:40Z ohauer $
+# $FreeBSD: german/bugzilla44/Makefile 330666 2013-10-17 19:35:22Z ohauer $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.4
@@ -11,9 +11,7 @@ DISTNAME=	germzilla-${PORTVERSION}-1.utf-8
 MAINTAINER=	bugzilla@FreeBSD.org
 COMMENT=	German localization for Bugzilla
 
-RUN_DEPENDS=	bugzilla>=${PORTVERSION}:${PORTSDIR}/devel/bugzilla44
-
-LATEST_LINK=	${PKGNAMEPREFIX}bugzilla44
+RUN_DEPENDS=	bugzilla44>=${PORTVERSION}:${PORTSDIR}/devel/bugzilla44
 
 NO_WRKSUBDIR=	yes
 
