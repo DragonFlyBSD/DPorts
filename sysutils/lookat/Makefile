@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
 # $FreeBSD: sysutils/lookat/Makefile 322729 2013-07-10 19:41:30Z pawel $
 
