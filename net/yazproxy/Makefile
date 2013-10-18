@@ -1,15 +1,15 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/yazproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/yazproxy/Makefile 330628 2013-10-17 11:01:51Z demon $
 
 PORTNAME=	yazproxy
-PORTVERSION=	1.3.8
+PORTVERSION=	1.3.9
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yazproxy/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A powerful general purpose Z39.50/SRW/SRU proxy
 
-LIB_DEPENDS=	yazpp:${PORTSDIR}/net/yaz++
+LIB_DEPENDS=	libyazpp.so:${PORTSDIR}/net/yaz++
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-shared --with-yazpp=${LOCALBASE}/bin
