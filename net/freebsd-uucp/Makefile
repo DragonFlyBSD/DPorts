@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: ports/net/freebsd-uucp/Makefile,v 1.46 2013/01/26 16:56:11 svnexp Exp $
+# $FreeBSD: net/freebsd-uucp/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	freebsd-uucp
 PORTVERSION=	1.07.3
@@ -11,6 +11,8 @@ PKGNAMESUFFIX?=	${PAM_SUFFIX}${PKGNAMESUFFIX2}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	FreeBSD-modified Taylor UUCP (unix-to-unix copy program)
+
+NO_STAGE=	yes
 
 USE_BZIP2=	yes
 MANCOMPRESSED=	yes
@@ -29,6 +31,8 @@ BPKGNAME=	base-uucp-1.06.1
 # fix errros for -std=iso9899:1999 in FreeBSD 5.1
 MAKE_ENV+=	CSTD=gnu99
 
+.include <bsd.port.pre.mk>
+
 .if defined(WITH_PAM)
 PAM_SUFFIX=	-pam
 MAKE_ENV+=	WITH_PAM=${WITH_PAM}
@@ -39,6 +43,10 @@ CONFLICTS?=	freebsd-uucp-pam-1.*
 
 .if defined(WITH_UUCP_ENCRYPTED_PASSWORDS)
 MAKE_ENV+=	WITH_ENCRYPTED_PASSWORDS=1
+.endif
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1000000
+BUILD_DEPENDS=	cvs:${PORTSDIR}/devel/cvs
 .endif
 
 post-extract:
@@ -122,4 +130,4 @@ base-package:
 			${PKG_DBDIR}/${BPKGNAME}/+COMMENT; \
 	fi
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
