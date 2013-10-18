@@ -1,8 +1,8 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/libzvbi/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libzvbi/Makefile 330722 2013-10-18 06:24:04Z oliver $
 
 PORTNAME=	libzvbi
-PORTVERSION=	0.2.34
+PORTVERSION=	0.2.35
 CATEGORIES=	devel
 MASTER_SITES=	SF/zapping/zvbi/${PORTVERSION}
 DISTNAME=	${PORTNAME:S/lib//}-${PORTVERSION}
