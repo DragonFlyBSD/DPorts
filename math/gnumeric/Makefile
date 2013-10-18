@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: math/gnumeric/Makefile 327099 2013-09-12 17:55:41Z az $
+# $FreeBSD: math/gnumeric/Makefile 327746 2013-09-20 20:55:04Z bapt $
 #   $MCom: ports/trunk/math/gnumeric/Makefile 18444 2013-05-11 12:51:26Z kwm $
 
 PORTNAME=	gnumeric
@@ -42,6 +42,7 @@ OPTIONS_DEFINE=	PERL
 OPTIONS_DEFAULT=PERL
 PERL_DESC=	Support Perl as extension language
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPERL}
