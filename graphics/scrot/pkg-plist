@@ -1,7 +1,0 @@
-@comment $FreeBSD: graphics/scrot/pkg-plist 300896 2012-07-14 13:54:48Z beat $
-bin/scrot
-%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
-%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
-%%PORTDOCS%%%%DOCSDIR%%/README
-%%PORTDOCS%%%%DOCSDIR%%/TODO
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
