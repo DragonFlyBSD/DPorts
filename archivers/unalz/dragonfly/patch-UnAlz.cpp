@@ -1,11 +1,22 @@
---- UnAlz.cpp.intermediate	2013-06-20 23:42:25.780595000 +0000
+--- UnAlz.cpp.intermediate	2013-10-18 13:48:08.337971000 +0000
 +++ UnAlz.cpp
-@@ -455,7 +455,7 @@ BOOL CUnAlz::ReadLocalFileheader()
+@@ -37,6 +37,10 @@
+ #	include <errno.h>
+ #endif
+ 
++#if defined(__DragonFly__)
++	#include <errno.h>
++#endif
++
+ #if defined(__NetBSD__)
+ #	include <sys/param.h>	// __NetBSD_Version__
+ #	include <errno.h>		// iconv.h 때문에 필요 
+@@ -455,7 +459,7 @@ BOOL CUnAlz::ReadLocalFileheader()
  	size_t size;
  	char inbuf[ICONV_BUF_SIZE];
  	char outbuf[ICONV_BUF_SIZE];
 -#if defined(__FreeBSD__) || defined(__CYGWIN__) ||  defined(__NetBSD__)
-+#if defined(__FreeBSD__) || defined(__FreeBSD__) ||  defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) ||  defined(__NetBSD__)
  	const char *inptr = inbuf;
  #else
  	char *inptr = inbuf;

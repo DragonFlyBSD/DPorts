@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: archivers/unalz/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: archivers/unalz/Makefile 330498 2013-10-16 11:27:24Z ak $
 
 PORTNAME=	unalz
 PORTVERSION=	0.65
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		iconv
 USE_DOS2UNIX=	yes
-MAKE_ARGS=	CPP="${CXX}" CC="${CC}" OBJ="${UNALZ_OBJS}" \
+MAKE_ARGS+=	CPP="${CXX}" CC="${CC}" OBJ="${UNALZ_OBJS}" \
 		LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	posix-utf8
 
@@ -34,6 +34,6 @@ post-patch:
 		'/<sys\/timeb.h>/d' ${WRKSRC}/main.cpp
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
