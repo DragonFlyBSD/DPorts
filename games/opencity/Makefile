@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/opencity/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/opencity/Makefile 330697 2013-10-17 23:52:35Z amdmi3 $
 
 PORTNAME=	opencity
 PORTVERSION=	0.0.6.4
@@ -19,16 +19,9 @@ USE_GL=		gl glu
 USE_GCC=	any
 
 PORTDOCS=	*
+PORTDATA=	*
 
-MAN6=		opencity.6
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ! ${PORT_OPTIONS:MDOCS}
-post-patch:
-	@${REINPLACE_CMD} -e '/install-data-am/ s|install-docsDATA||' \
-		${WRKSRC}/docs/Makefile.in
-.endif
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.mk>
