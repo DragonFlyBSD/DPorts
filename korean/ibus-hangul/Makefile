@@ -1,4 +1,4 @@
-# $FreeBSD: korean/ibus-hangul/Makefile 321508 2013-06-21 23:43:01Z jkim $
+# $FreeBSD: korean/ibus-hangul/Makefile 327739 2013-09-20 19:49:59Z bapt $
 
 PORTNAME=	ibus-hangul
 PORTVERSION=	1.4.2
@@ -23,6 +23,7 @@ USE_GNOME=	intltool pygobject3
 USE_PYTHON=	yes
 USES=		pathfix pkgconfig
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
