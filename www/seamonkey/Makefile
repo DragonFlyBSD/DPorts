@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: eivind/dima/jseger
 # $FreeBSD: www/seamonkey/Makefile 326089 2013-09-02 21:04:00Z bapt $
 
