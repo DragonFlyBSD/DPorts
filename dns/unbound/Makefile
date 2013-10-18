@@ -1,8 +1,8 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: dns/unbound/Makefile 326404 2013-09-05 14:37:34Z sem $
+# $FreeBSD: dns/unbound/Makefile 329167 2013-10-03 11:02:37Z bdrewery $
 
 PORTNAME=	unbound
-PORTVERSION=	1.4.20
+PORTVERSION=	1.4.21
 PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	http://unbound.net/downloads/
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=--with-ssl=${OPENSSLBASE}
 USE_LDCONFIG=	yes
 
 USERS=		${PORTNAME}
+GROUPS=		${PORTNAME}
 
 USE_RC_SUBR=	unbound
 
@@ -34,7 +35,8 @@ MAN3=		libunbound.3 ub_cancel.3 ub_ctx.3 ub_ctx_add_ta.3 \
 		ub_fd.3 ub_poll.3 ub_process.3 ub_resolve.3 ub_resolve_async.3 \
 		ub_resolve_free.3 ub_result.3 ub_strerror.3 ub_wait.3
 MAN5=		unbound.conf.5
-MAN8=		unbound.8 unbound-anchor.8 unbound-control.8 unbound-checkconf.8
+MAN8=		unbound.8 unbound-anchor.8 unbound-control.8 \
+		unbound-checkconf.8 unbound-control-setup.8
 
 PORTDOCS=	CREDITS Changelog FEATURES LICENSE README README.svn \
 		README.tests TODO control_proto_spec.txt ietf67-design-02.odp \
@@ -54,6 +56,7 @@ GOST_DESC=	Enable GOST support (requires OpenSSL >= 1.0)
 ECDSA_DESC=	Enable ECDSA (elliptic curve) support (OpenSSL >= 1.0)
 MUNIN_DESC=	Install Munin plugin
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 LIB_DEPENDS+=	expat:${PORTSDIR}/textproc/expat2 \
