@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: mail/p5-Mail-OpenDKIM/Makefile 326257 2013-09-04 07:19:56Z az $
+# $FreeBSD: mail/p5-Mail-OpenDKIM/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	Mail-OpenDKIM
 PORTVERSION=	4040
@@ -38,4 +38,5 @@ PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail/OpenDKIM \
 PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mail \
 		%%SITE_PERL%%/%%PERL_ARCH%%/Mail
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
