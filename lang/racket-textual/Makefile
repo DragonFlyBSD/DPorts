@@ -1,8 +1,8 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: lang/racket-textual/Makefile 316662 2013-04-27 11:59:28Z mva $
+# $FreeBSD: lang/racket-textual/Makefile 329701 2013-10-07 13:11:03Z olgeni $
 
 PORTNAME=	racket-textual
-PORTVERSION=	5.3.1
+PORTVERSION=	5.3.6
 CATEGORIES=	lang scheme
 MASTER_SITES=	http://download.racket-lang.org/installers/${PORTVERSION}/${PORTNAME}/ \
 		http://www.eecs.northwestern.edu/racket/${PORTVERSION}/${PORTNAME}/ \
@@ -49,11 +49,9 @@ USES+=		iconv
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:env
 
-MAN1=   mzc.1 mzscheme.1 racket.1 raco.1 setup-plt.1
-
 ONLY_FOR_ARCHS=	i386 amd64
 
-PLIST_SUB+=	ARCH=${ARCH}
+RACKET_PLIST=	${WRKDIR}/pkg-plist
 
 .include <bsd.port.pre.mk>
 
