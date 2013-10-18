@@ -1,8 +1,8 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/dropbear/Makefile 330285 2013-10-14 08:56:37Z ak $
+# $FreeBSD: security/dropbear/Makefile 330630 2013-10-17 11:25:35Z ak $
 
 PORTNAME=	dropbear
-PORTVERSION=	2013.59
+PORTVERSION=	2013.60
 CATEGORIES=	security ipv6
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 
