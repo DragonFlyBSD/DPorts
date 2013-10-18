@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: ports/audio/py-xmms2/Makefile,v 1.14 2012/11/17 05:54:42 svnexp Exp $
+# $FreeBSD: audio/py-xmms2/Makefile 328665 2013-09-29 10:41:24Z madpilot $
 
 PORTREVISION=	5
 
@@ -10,7 +10,7 @@ MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Python Bindings for XMMS2
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/Pyrex/__init__.py:${PORTSDIR}/devel/pyrex
-LIB_DEPENDS+=	xmmsclient.6:${PORTSDIR}/audio/xmms2
+LIB_DEPENDS+=	libxmmsclient.so:${PORTSDIR}/audio/xmms2
 
 MASTERDIR=	${.CURDIR}/../xmms2
 
