@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-gobject3/Makefile 317908 2013-05-11 19:36:40Z kwm $
+# $FreeBSD: devel/py-gobject3/Makefile 329519 2013-10-05 23:40:16Z kwm $
 #   $MCom: ports/trunk/devel/py-gobject3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gobject
@@ -8,6 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	3
 DISTNAME=	pygobject-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
@@ -17,18 +18,14 @@ COMMENT=	Python bindings for GObject
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
-LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
-RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
+LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
-LATEST_LINK=	${PYTHON_PKGNAMEPREFIX}${PORTNAME}3
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
-USE_GNOME=	glib20
-USE_PYTHON=	2.6+
+USES=		gmake pathfix pkgconfig
+USE_GNOME=	glib20 introspection
+USE_PYTHON=	-2.7
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
