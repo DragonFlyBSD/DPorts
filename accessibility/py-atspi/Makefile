@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/py-atspi/Makefile 324037 2013-07-31 11:57:45Z kwm $
+# $FreeBSD: accessibility/py-atspi/Makefile 327684 2013-09-20 11:02:49Z bapt $
 #   $MCom: ports/trunk/accessibility/py-atspi/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	atspi
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at
 
 CONFLICTS=	at-spi-1.[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomehier intlhack pygobject3
