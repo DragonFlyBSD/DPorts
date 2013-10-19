@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: databases/kbibtex/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: databases/kbibtex/Makefile 327717 2013-09-20 16:13:47Z bapt $
 
 PORTNAME=	kbibtex
 DISTVERSION=	0.4.1
@@ -21,6 +21,7 @@ USE_QT4=	qmake_build moc_build uic_build rcc_build \
 
 MAN1=		kbibtex.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,share/man,man,' ${WRKSRC}/CMakeLists.txt
 
