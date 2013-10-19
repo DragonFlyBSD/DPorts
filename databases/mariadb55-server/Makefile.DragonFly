@@ -1,2 +1,14 @@
-CMAKE_ARGS+=		-DWITH_LIBEDIT=0
+LIB_DEPENDS+=		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
+
 CMAKE_ARGS+=		-DWITH_READLINE=1
+
+#jemalloc (bundled) doesn't build on DragonFly OOTB
+#CMAKE_ARGS+=		-DWITH_JEMALLOC="bundled"
+CMAKE_ARGS+=		-DWITH_JEMALLOC="no"
+
+pre-configure:
+	cp ${WRKSRC}/cmake/os/FreeBSD.cmake \
+	   ${WRKSRC}/cmake/os/DragonFly.cmake
+	mkdir ${WRKSRC}/not-storage
+	mv ${WRKSRC}/storage/tokudb ${WRKSRC}/not-storage/
+
