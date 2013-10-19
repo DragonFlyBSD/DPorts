@@ -1,7 +1,8 @@
-# $FreeBSD: ports/databases/mariadb55-client/Makefile,v 1.1 2013/01/05 11:51:20 svnexp Exp $
+# $FreeBSD: databases/mariadb55-client/Makefile 330601 2013-10-17 05:16:44Z flo $
 
 PORTNAME=	mariadb
-PKGNAMESUFFIX=	-client
+PORTREVISION=	1
+PKGNAMESUFFIX=	55-client
 
 COMMENT=	Multithreaded SQL database (client)
 
@@ -11,17 +12,11 @@ PKGMESSAGE=	mustnotexist
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
 
-LATEST_LINK=	mariadb55-client
-
-CONFLICTS_INSTALL=	mysql-client-[345].* mariadb-client-5.3.* percona-client-5.*
+CONFLICTS_INSTALL=	mysql[0-9][0-9]-client-* mariadb[0-46-9][0-9]-client-* mariadb5.[0-46-9]-client-* percona[0-9][0-9]-client-*
 
 CMAKE_ARGS+=	-DWITHOUT_SERVER=1
 
 USE_LDCONFIG=	${PREFIX}/lib/mysql
-
-MAN1=		msql2mysql.1 mysql.1 mysql_config.1 mysql_find_rows.1 \
-		mysql_waitpid.1 mysqlaccess.1 mysqladmin.1 mysqlbinlog.1 \
-		mysqlcheck.1 mysqldump.1 mysqlimport.1 mysqlshow.1 mysqlslap.1
 
 CLIENT_ONLY=	yes
 
