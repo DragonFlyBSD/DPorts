@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/kadu/Makefile 325602 2013-08-29 15:01:46Z pawel $
+# $FreeBSD: polish/kadu/Makefile 327761 2013-09-20 22:34:42Z bapt $
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
@@ -54,7 +54,12 @@ GG_EMOTS_DESC=	Install GG-compatible emoticons
 GG_EMOTS_DISTFILES=	${GG6_EMOTS_DISTFILE}:additions \
 			${GG7_EMOTS_DISTFILE}:additions
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1000051
+LDFLAGS+=	-lexecinfo
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
