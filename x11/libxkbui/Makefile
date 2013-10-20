@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libxkbui/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libxkbui/Makefile 330450 2013-10-15 19:49:34Z eadler $
 
 PORTNAME=	libxkbui
 PORTVERSION=	1.0.2
@@ -11,6 +11,4 @@ COMMENT=	The xkbui library
 
 XORG_CAT=	lib
 USE_XORG=	x11 xt xkbfile kbproto:both
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
