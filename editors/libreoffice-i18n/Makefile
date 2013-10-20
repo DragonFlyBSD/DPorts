@@ -1,5 +1,6 @@
-# $FreeBSD: editors/libreoffice-i18n/Makefile 313667 2013-03-08 19:01:45Z jkim $
+# $FreeBSD: editors/libreoffice-i18n/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../libreoffice/Makefile.common"
 UNIQUENAME=   ${PORTNAME}${PKGNAMESUFFIX}
 PKGNAMESUFFIX=	-i18n
