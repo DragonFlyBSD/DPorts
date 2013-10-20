@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/snownews/Makefile 327283 2013-09-14 13:38:20Z az $
+# $FreeBSD: www/snownews/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	snownews
 PORTVERSION=	1.5.12
@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	OPML NLS
 OPTIONS_DEFAULT=	OPML
 OPML_DESC=		Outline Processor Markup Support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
