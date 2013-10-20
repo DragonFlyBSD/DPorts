@@ -1,14 +1,11 @@
---- kmplot/view.cpp.orig	2011-07-27 20:40:47.403563000 +0200
-+++ kmplot/view.cpp	2013-01-14 18:35:28.952689000 +0100
-@@ -90,6 +90,11 @@
- #endif
+--- kmplot/view.cpp.orig	2013-06-28 17:20:41.814867000 +0000
++++ kmplot/view.cpp
+@@ -79,7 +79,7 @@ using namespace std;
  
+ //BEGIN nan & inf
  
-+#ifdef __DragonFly__
-+#define isnan(x) __isnanf(x)
-+#define isinf(x) __isinff(x)
-+#endif
-+
- #ifdef __osf__
- #include <nan.h>
- #define isnan(x) IsNAN(x)
+-#if defined(__APPLE__) || defined(_MSC_VER)
++#if defined(__APPLE__) || defined(_MSC_VER) || defined(__DragonFly__)
+ // work around an OSX <cmath> bug; is there a proper way to fix this?
+ #ifndef isnan
+ extern "C" int isnan(double);
