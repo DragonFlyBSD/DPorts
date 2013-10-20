@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: graphics/agave/Makefile 326137 2013-09-03 12:13:23Z bapt $
+# $FreeBSD: graphics/agave/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	agave
 PORTVERSION=	0.4.2
@@ -26,6 +26,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 #.if defined(WITHOUT_GNOME)
