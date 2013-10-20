@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 329164 2013-10-03 09:25:37Z mva $
+# $FreeBSD: Mk/bsd.python.mk 330849 2013-10-19 07:49:54Z mva $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -528,7 +528,9 @@ add-plist-pymod:
 		${SED} '/^\.$$/d' > ${WRKDIR}/.localmtree
 	@${ECHO_CMD} "${_RELSITELIBDIR}" >> ${WRKDIR}/.localmtree
 	@${ECHO_CMD} "${_RELLIBDIR}" >> ${WRKDIR}/.localmtree
-	@${SED} 's|^${PREFIX}/||' ${_PYTHONPKGLIST} | ${SORT} >> ${TMPPLIST}
+	@${SED} -e 's|^${PREFIX}/||' \
+		-e 's|^\(man/man[0-9]\)/\(.*\.[0-9]\)$$|\1/\2${MANEXT}|' \
+		${_PYTHONPKGLIST} | ${SORT} >> ${TMPPLIST}
 	@${SED} -e 's|^${PREFIX}/\(.*\)/\(.*\)|\1|' ${_PYTHONPKGLIST} | \
 		${AWK} '{ num = split($$0, a, "/"); res=""; \
 					for(i = 1; i <= num; ++i) { \

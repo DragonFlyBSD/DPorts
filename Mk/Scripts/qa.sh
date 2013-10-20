@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: Mk/Scripts/qa.sh 330052 2013-10-11 02:52:35Z bdrewery $
+# $FreeBSD: Mk/Scripts/qa.sh 330810 2013-10-19 00:17:10Z bapt $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -66,7 +66,7 @@ stripped() {
 	for f in `find ${STAGEDIR} -type f`; do
 		output=`/usr/bin/file ${f}`
 		case "${output}" in
-		*:*\ ELF\ *,\ not\ stripped*) warn "${f} is not stripped";;
+		*:*\ ELF\ *,\ not\ stripped*) warn "${f} is not stripped consider using \${STRIP_CMD}";;
 		esac
 	done
 }

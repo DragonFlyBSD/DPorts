@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/perl5.mk 328373 2013-09-26 15:52:38Z sunpoet $
+# $FreeBSD: Mk/Uses/perl5.mk 330987 2013-10-20 08:29:15Z sunpoet $
 #
 # Provide support to use perl5
 #
@@ -150,10 +150,10 @@ _USES_POST+=	perl5
 _INCLUDE_USES_PERL5_POST_MK=	yes
 
 PLIST_SUB+=	PERL_VERSION=${PERL_VERSION} \
-		PERL_VER=${PERL_VER} \
-		PERL_ARCH=${PERL_ARCH} \
-		PERL5_MAN3=lib/perl5/${PERL_VER}/man/man3 \
-		SITE_PERL=${SITE_PERL_REL}
+			PERL_VER=${PERL_VER} \
+			PERL_ARCH=${PERL_ARCH} \
+			PERL5_MAN3=lib/perl5/${PERL_VER}/man/man3 \
+			SITE_PERL=${SITE_PERL_REL}
 
 # handle perl5 specific manpages
 .for sect in 3
@@ -164,30 +164,34 @@ _MANPAGES+=	${P5MAN${sect}:S%^%${PREFIX}/lib/perl5/${PERL_VER}/man/man${sect}/%}
 MANDIRS+=	${PREFIX}/lib/perl5/${PERL_VER}
 
 .if ${_USE_PERL5:Mmodbuild} || ${_USE_PERL5:Mmodbuildtiny}
-_USE_PERL5+=		configure
+_USE_PERL5+=	configure
+ALL_TARGET?=	# empty
+CONFIGURE_ARGS+=--install_path lib="${PREFIX}/${SITE_PERL_REL}" \
+				--install_path arch="${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}" \
+				--install_path script="${PREFIX}/bin" \
+				--install_path bin="${PREFIX}/bin" \
+				--install_path libdoc="${MAN3PREFIX}/man/man3" \
+				--install_path bindoc="${MAN1PREFIX}/man/man1"
 CONFIGURE_SCRIPT?=	Build.PL
+PL_BUILD?=	Build
+.if !defined(NO_STAGE)
+CONFIGURE_ARGS+=--destdir ${STAGEDIR}
+DESTDIRNAME=	--destdir
+.endif
 .if ${_USE_PERL5:Mmodbuild}
 .if ${PORTNAME} != Module-Build
-BUILD_DEPENDS+=		${SITE_PERL}/Module/Build.pm:${PORTSDIR}/devel/p5-Module-Build
+BUILD_DEPENDS+=	${SITE_PERL}/Module/Build.pm:${PORTSDIR}/devel/p5-Module-Build
 .endif
+CONFIGURE_ARGS+=--create_packlist 0
 .endif
 .if ${_USE_PERL5:Mmodbuildtiny}
 .if ${PORTNAME} != Module-Build-Tiny
-BUILD_DEPENDS+=		${SITE_PERL}/Module/Build/Tiny.pm:${PORTSDIR}/devel/p5-Module-Build-Tiny
+BUILD_DEPENDS+=	${SITE_PERL}/Module/Build/Tiny.pm:${PORTSDIR}/devel/p5-Module-Build-Tiny
 .endif
+CONFIGURE_ARGS+=--create_packlist 1
 .endif
-ALL_TARGET?=
-PL_BUILD?=		Build
-CONFIGURE_ARGS+= \
-		create_packlist=0 \
-		install_path=lib="${PREFIX}/${SITE_PERL_REL}" \
-		install_path=arch="${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}" \
-		install_path=script="${PREFIX}/bin" \
-		install_path=bin="${PREFIX}/bin" \
-		install_path=libdoc="${MAN3PREFIX}/man/man3" \
-		install_path=bindoc="${MAN1PREFIX}/man/man1"
 .elif ${_USE_PERL5:Mconfigure}
-CONFIGURE_ARGS+=	INSTALLDIRS="site"
+CONFIGURE_ARGS+=INSTALLDIRS="site"
 .endif # modbuild
 
 .if ${_USE_PERL5:Mconfigure}
@@ -243,14 +247,20 @@ do-configure:
 .if ${_USE_PERL5:Mmodbuild*}
 .if !target(do-build)
 do-build:
-	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} ${PL_BUILD} ${MAKE_ARGS} ${ALL_TARGET})
+	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} ${PL_BUILD} ${ALL_TARGET} ${MAKE_ARGS})
 .endif # !target(do-build)
 
 .if !${USES:Mgmake}
 .if !target(do-install)
 do-install:
-	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} ${PL_BUILD} ${MAKE_ARGS} ${INSTALL_TARGET})
+	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} ${PL_BUILD} ${INSTALL_TARGET} ${MAKE_ARGS})
 .endif # !target(do-install)
 .endif # ! USES=gmake
 .endif # modbuild
+
+post-stage::
+# TODO: change to ${_USE_PERL5:Mconfigure} when M::B creates .packlist
+.if ${USE_PERL5:Mconfigure} || ${USE_PERL5:Mmodbuildtiny}
+	@${FIND} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto -name .packlist -exec ${SED} -i '' 's|^${STAGEDIR}||' '{}' \;
+.endif
 .endif # defined(_POSTMKINCLUDED)
