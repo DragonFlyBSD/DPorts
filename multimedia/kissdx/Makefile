@@ -1,5 +1,5 @@
 # Created by: Simon Riget <freebsd@paragi.dk>
-# $FreeBSD: multimedia/kissdx/Makefile 325291 2013-08-24 09:58:30Z danfe $
+# $FreeBSD: multimedia/kissdx/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	kissdx
 PORTVERSION=	0.13.10a
@@ -29,6 +29,7 @@ PLIST_FILES=	etc/kissdx.conf sbin/kissdx sbin/kissd-pretrigger \
 		sbin/kissd-posttrigger
 PORTDOCS=	README
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
