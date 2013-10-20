@@ -1,4 +1,4 @@
-# $FreeBSD: audio/musicpd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/musicpd/Makefile 330909 2013-10-19 16:43:32Z wg $
 
 PORTNAME=	musicpd
 PORTVERSION=	0.17.3
@@ -148,9 +148,9 @@ LIB_DEPENDS+=	zzip.13:${PORTSDIR}/devel/zziplib \
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG}
-LIB_DEPENDS+=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg \
-		avformat:${PORTSDIR}/multimedia/ffmpeg \
-		avutil.1:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS+=	libavcodec.so:${PORTSDIR}/multimedia/ffmpeg \
+		libavformat.so:${PORTSDIR}/multimedia/ffmpeg \
+		libavutil.so:${PORTSDIR}/multimedia/ffmpeg
 .else
 CONFIGURE_ARGS+=--disable-ffmpeg
 .endif
