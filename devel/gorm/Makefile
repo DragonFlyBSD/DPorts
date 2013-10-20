@@ -1,7 +1,7 @@
-# $FreeBSD: devel/gorm/Makefile 325546 2013-08-28 18:26:01Z theraven $
+# $FreeBSD: devel/gorm/Makefile 329783 2013-10-08 13:28:22Z theraven $
 
 PORTNAME=	gorm
-PORTVERSION=	1.2.18
+PORTVERSION=	1.2.20
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	dev-apps
