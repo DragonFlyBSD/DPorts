@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: graphics/graphviz/Makefile 330377 2013-10-15 09:43:34Z bapt $
 
 PORTNAME=	graphviz
 PORTVERSION=	2.34.0
@@ -234,7 +234,7 @@ CONFIGURE_ARGS+=	--without-gnomeui
 
 .if ${PORT_OPTIONS:MSMYRNA}
 CONFIGURE_ARGS+=	--with-glade=yes
-USE_GNOME+=		gnomelibs libglade2
+USE_GNOME+=		libglade2
 .if empty(PORT_OPTIONS:MGTK2)
 IGNORE=			option GTK2 is required for option SMYRNA
 .endif
