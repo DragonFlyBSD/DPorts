@@ -1,4 +1,4 @@
-# $FreeBSD: x11/liboldX/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/liboldX/Makefile 330449 2013-10-15 19:46:25Z eadler $
 
 PORTNAME=	liboldX
 PORTVERSION=	1.0.1
@@ -10,6 +10,4 @@ COMMENT=	Old X library
 XORG_CAT=	lib
 USE_XORG=	x11
 USE_AUTOTOOLS=	libtool
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
