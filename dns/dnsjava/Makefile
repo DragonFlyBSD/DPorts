@@ -1,50 +1,35 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: dns/dnsjava/Makefile 316192 2013-04-21 18:31:29Z bdrewery $
+# $FreeBSD: dns/dnsjava/Makefile 330436 2013-10-15 19:25:47Z danilo $
 
 PORTNAME=	dnsjava
-PORTVERSION=	2.1.5
+PORTVERSION=	2.1.6
 CATEGORIES=	dns java
 MASTER_SITES=	http://www.dnsjava.org/download/
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Implementation of DNS in Java
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
-
 USE_ANT=	yes
-ALL_TARGET=	jar
+ALL_TARGET=	jar docs
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MEXAMPLES}
 SAMPLE_FILES=	examples.html USAGE dig.java jnamed.java lookup.java update.java
-PLIST_SUB+=	EXAMPLES=""
-.else
-PLIST_SUB+=	EXAMPLES="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MDOCS}
-ALL_TARGET+=	docs
 OTHERDOCS=	README Changelog
-PLIST_SUB+=	DOCS=""
-.else
-PLIST_SUB+=	DOCS="@comment "
-.endif
+
+do-build:
+	@(cd ${BUILD_WRKSRC}; \
+		${SETENV} ${MAKE_ENV} ${ANT} ${ALL_TARGET})
 
 do-install:
-	@${MKDIR} ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${PORTNAME}.jar
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${SAMPLE_FILES:S,^,${WRKSRC}/,} ${EXAMPLESDIR}/
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${TAR} -C ${WRKSRC}/doc -cf - . | ${TAR} -C ${DOCSDIR} -xf -
-	${INSTALL_DATA} ${OTHERDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
-.endif
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}-${PORTVERSION}.jar ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}.jar
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${SAMPLE_FILES:S,^,${WRKSRC}/,} ${STAGEDIR}${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${TAR} -C ${WRKSRC}/doc -cf - . | ${TAR} -C ${STAGEDIR}${DOCSDIR} -xf -
+	${INSTALL_DATA} ${OTHERDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
