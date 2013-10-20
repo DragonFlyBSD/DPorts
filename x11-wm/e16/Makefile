@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 330284 2013-10-14 08:33:22Z gahr $
+# $FreeBSD: x11-wm/e16/Makefile 330636 2013-10-17 12:58:06Z gahr $
 
 PORTNAME=	e16
 PORTVERSION=	1.0.13.003
@@ -43,7 +43,6 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
-MAN1=		e16.1
 CONFIGURE_ARGS+=--enable-docs=yes
 .else
 CONFIGURE_ARGS+=--enable-docs=no
