@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-qt4/Makefile 325674 2013-08-30 12:11:48Z crees $
+# $FreeBSD: net-p2p/transmission-qt4/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4
@@ -17,9 +17,8 @@ SLAVEPORT=	qt4
 QT_NONSTANDARD=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build gui dbus network
 USE_GNOME=	desktopfileutils
+QMAKEFLAGS=	QMAKE_LFLAGS="-lcrypto -L${LOCALBASE}/lib ${ICONV_LIB}"
 
-QMAKEFLAGS+=	QMAKE_LFLAGS="-lcrypto -L${LOCALBASE}/lib ${ICONV_LIB}"
-USES+= iconv
 EXTRA_CONF_ARGS=--disable-cli \
 		--disable-daemon \
 		--without-gtk \
@@ -32,6 +31,7 @@ post-patch: general-patch
 	@${REINPLACE_CMD} -e 's|/share/man|/man|g ; /PKGCONFIG/s| openssl||g' \
 		${WRKSRC}/qt/qtr.pro
 
+NO_STAGE=	yes
 post-build:
 	@(cd ${WRKSRC}/qt ; ${QMAKE} ${QMAKEFLAGS} qtr.pro ; ${GMAKE})
 
