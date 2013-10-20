@@ -1,14 +1,14 @@
-# $FreeBSD: ports/deskutils/gworkspace-gwmetadata/Makefile,v 1.19 2012/11/17 05:55:28 svnexp Exp $
+# $FreeBSD: deskutils/gworkspace-gwmetadata/Makefile 329827 2013-10-08 19:30:12Z theraven $
 
 PORTNAME=	gworkspace
-PORTVERSION=	0.9.1
+PORTVERSION=	0.9.2
 CATEGORIES=	deskutils gnustep
 #MASTER_SITES=	http://www.gnustep.it/enrico/gworkspace/
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	usr-apps
 PKGNAMESUFFIX=	-gwmetadata${PKGNAMESUFFIX2}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	GWMetadata for GNUstep workspace manager
 
 LICENSE=	GPLv2
