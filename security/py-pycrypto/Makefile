@@ -1,9 +1,8 @@
 # Created by: nbm
-# $FreeBSD: security/py-pycrypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-pycrypto/Makefile 330856 2013-10-19 08:41:47Z delphij $
 
 PORTNAME=	pycrypto
-PORTVERSION=	2.6
-PORTREVISION=	1
+PORTVERSION=	2.6.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP \
 		https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
