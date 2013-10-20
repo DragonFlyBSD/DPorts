@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: www/pecl-APC/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pecl-APC/Makefile 330984 2013-10-20 06:55:57Z sunpoet $
 
 PORTNAME=	APC
 PORTVERSION=	3.1.14
@@ -23,6 +23,8 @@ SPINLOCKS_DESC=	Spinlocks (experimental)
 
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--enable-apc
+IGNORE_WITH_PHP=55
+NO_STAGE=	yes
 PHP_MODNAME=	${PORTNAME:tl}
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
@@ -32,24 +34,12 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-3.1.13
 
 PORTDOCS=	CHANGELOG INSTALL NOTICE apc.php
 
-NO_STAGE=	yes
+FILEHITS_CONFIGURE_ARGS=--enable-apc-filehits
+IPC_CONFIGURE_ARGS=	--disable-apc-mmap
+SEMAPHORES_CONFIGURE_ARGS=	--enable-apc-sem
+SPINLOCKS_CONFIGURE_ARGS=	--enable-apc-spinlocks
+
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MFILEHITS}
-CONFIGURE_ARGS+=--enable-apc-filehits
-.endif
-
-.if ${PORT_OPTIONS:MIPC}
-CONFIGURE_ARGS+=--disable-apc-mmap
-.endif
-
-.if ${PORT_OPTIONS:MSEMAPHORES}
-CONFIGURE_ARGS+=--enable-apc-sem
-.endif
-
-.if ${PORT_OPTIONS:MSPINLOCKS}
-CONFIGURE_ARGS+=--enable-apc-spinlocks
-.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
