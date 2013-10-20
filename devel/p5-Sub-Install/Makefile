@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Install/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Install/Makefile 330915 2013-10-19 17:19:16Z sunpoet $
 
 PORTNAME=	Sub-Install
-PORTVERSION=	0.926
+PORTVERSION=	0.927
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,7 +16,10 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Sub::Install.3
+.include <bsd.port.pre.mk>
 
-NO_STAGE=	yes
-.include <bsd.port.mk>
+.if ${PERL_LEVEL} < 501400
+TEST_DEPENDS+=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
+.endif
+
+.include <bsd.port.post.mk>
