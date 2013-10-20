@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
 # $FreeBSD: math/p5-Math-Int128/Makefile 324851 2013-08-17 16:27:24Z gerald $
 #
