@@ -1,4 +1,4 @@
-# $FreeBSD: editors/calligra/Makefile 327459 2013-09-17 09:00:42Z bapt $
+# $FreeBSD: editors/calligra/Makefile 327720 2013-09-20 16:36:23Z bapt $
 
 PORTNAME=	calligra
 PORTVERSION=	${CALLIGRA_VERSION}
@@ -74,6 +74,7 @@ CMAKE_ARGS+=	-DWITH_PACKAGERS_BUILD:BOOL=TRUE
 CMAKE_ARGS+=	-DWITH_PACKAGERS_BUILD:BOOL=FALSE
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTL} || exists(${LOCALBASE}/lib/libQtShiva.so)
