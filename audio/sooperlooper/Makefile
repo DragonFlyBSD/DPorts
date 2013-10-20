@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/sooperlooper/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/sooperlooper/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	sooperlooper
 PORTVERSION=	1.6.18
@@ -26,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
+NO_STAGE=	yes
 USE_WX=		2.6+
 WX_UNICODE=	yes
 CONFIGURE_ARGS=	-with-wxconfig-path=${WX_CONFIG}
