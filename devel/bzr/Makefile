@@ -1,5 +1,5 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: devel/bzr/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/bzr/Makefile 330334 2013-10-14 16:10:52Z antoine $
 
 PORTNAME=	bzr
 PORTVERSION=	2.6.0
@@ -23,9 +23,6 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr
 USES=		gettext
 
-MAN1=		bzr.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSFTP}
@@ -37,7 +34,7 @@ RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_r
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/bzr.1 ${MAN1PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/bzr.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 test:	build
 	cd ${WRKSRC} && ./bzr selftest
