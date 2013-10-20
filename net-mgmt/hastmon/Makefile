@@ -1,8 +1,9 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: ports/net-mgmt/hastmon/Makefile,v 1.3 2013/02/02 07:41:52 svnexp Exp $
+# $FreeBSD: net-mgmt/hastmon/Makefile 329998 2013-10-10 13:41:55Z trociny $
 
 PORTNAME=	hastmon
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	GOOGLE_CODE
 
@@ -18,25 +19,17 @@ INSTALL_TARGET=	installdirs install
 
 PORTDOCS=	ChangeLog COPYRIGHT README
 
-MAN5=		hastmon.conf.5
-MAN8=		hastmon.8 hastmonctl.8
-
-PLIST_FILES=	sbin/hastmon \
-		sbin/hastmonctl \
-		etc/rc.d/hastmon
-
 do-build:
 	${SETENV} ${MKCMAKE_ENV} ${MKCMAKE} -C ${WRKSRC}
 
 do-install:
-	${SETENV} ${MKCMAKE_ENV} ${MKCMAKE} -C ${WRKSRC} ${INSTALL_TARGET}
+	${SETENV} ${MKCMAKE_ENV} DESTDIR=${STAGEDIR} \
+		${MKCMAKE} -C ${WRKSRC} ${INSTALL_TARGET}
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/${doc} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
