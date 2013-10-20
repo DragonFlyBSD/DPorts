@@ -1,17 +1,18 @@
 # Created by: jkh
-# $FreeBSD: audio/nas/Makefile 329372 2013-10-04 20:04:08Z bapt $
+# $FreeBSD: audio/nas/Makefile 330806 2013-10-19 00:01:10Z bapt $
 
 PORTNAME=	nas
-PORTVERSION=	1.9.3
-PORTREVISION=	1
+PORTVERSION=	1.9.4
 CATEGORIES=	audio
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}.${PORTVERSION}%20%28stable%29
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}%20%28stable%29
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Network Audio System
 
-USES=		imake
+USES=		imake perl5 shebangfix
+SHEBANG_FILES=	clients/audio/auscope/auscope
+USE_PERL5=	run
 USE_CSTD=	gnu89
 USE_XORG=	x11 xext xt xau sm ice xp xpm xmu xaw
 USE_LDCONFIG=	yes
@@ -35,5 +36,8 @@ FPIC=	-fPIC
 .else
 FPIC=	-fpic
 .endif
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libaudio.so.2
 
 .include <bsd.port.post.mk>
