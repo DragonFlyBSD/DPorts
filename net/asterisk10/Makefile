@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk10/Makefile 325551 2013-08-28 20:51:32Z flo $
+# $FreeBSD: net/asterisk10/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	asterisk
 PORTVERSION=	10.12.3
@@ -54,7 +54,7 @@ OPTIONS_DEFINE_x86_64=	DAHDI
 OPTIONS_DEFINE_sparc64=	DAHDI
 
 OPTIONS_DEFAULT_i386=	DAHDI
-OPTIONS_DEFAULT_x86_64=	DAHDI
+OPTIONS_DEFAULT_amd64=	DAHDI
 OPTIONS_DEFAULT_sparc64=	DAHDI
 
 EXCHANGE_DESC?=	Exchange calendar support
@@ -69,6 +69,7 @@ ASTERISK_GROUP?=	asterisk
 USERS=	${ASTERISK_USER}
 GROUPS=	${ASTERISK_GROUP} dahdi
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PREFIX} == ${LOCALBASE}
