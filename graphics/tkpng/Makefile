@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/tkpng/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/tkpng/Makefile 330747 2013-10-18 14:03:11Z gahr $
 
 PORTNAME=	tkpng
 PORTVERSION=	0.9
@@ -15,18 +15,21 @@ COMMENT=	PNG support for Tcl/Tk
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/license.terms
 
-USE_TK=		84+
+USES+=		tk
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 CONFIGURE_ARGS=	--with-tcl=${TCL_LIBDIR} \
 		--with-tk=${TK_LIBDIR} \
-		--with-tclinclude=${TCL_INCLUDEDIR}/generic \
-		--with-tkinclude=${TK_INCLUDEDIR}/generic \
-		--exec-prefix=${PREFIX} --enable-shared
-CPPFLAGS+=	-I${TK_INCLUDEDIR}/generic -I${LOCALBASE}/include
+		--with-tclinclude=${TCL_INCLUDEDIR} \
+		--with-tkinclude=${TK_INCLUDEDIR} \
+		--exec-prefix=${PREFIX} \
+		--enable-shared
+
 TKPKG=		${PORTNAME}${PORTVERSION}
 PLIST_SUB=	VER=${PORTVERSION} TKPKG=${TKPKG} TKLIBVER=${TKLIBVER}
 
-.include <bsd.port.post.mk>
+PLIST_FILES=	lib/${TKPKG}/lib${TKPKG}.so \
+		lib/${TKPKG}/pkgIndex.tcl
+PLIST_DIRS=	lib/${TKPKG}
+
+.include <bsd.port.mk>
