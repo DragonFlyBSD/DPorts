@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # New ports collection makefile for:	silo
 # Date created:		17 jul 2008
 # Whom: 		Pedro F. Giffuni <giffunip@tutopia.com>
