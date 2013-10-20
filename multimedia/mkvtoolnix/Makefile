@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD: multimedia/mkvtoolnix/Makefile 327132 2013-09-13 06:18:11Z bapt $
 
