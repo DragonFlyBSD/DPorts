@@ -1,8 +1,9 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/midori/Makefile 324784 2013-08-15 21:03:05Z olivierd $
+# $FreeBSD: www/midori/Makefile 330353 2013-10-14 20:13:57Z olivierd $
 
 PORTNAME=	midori
 PORTVERSION=	0.5.5
+PORTREVISION=	1
 CATEGORIES=	www xfce
 MASTER_SITES=	http://www.midori-browser.org/downloads/
 DISTNAME=	${PORTNAME}_${PORTVERSION}_all_
@@ -12,15 +13,13 @@ MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Lightweight web browser using WebKit browser engine
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2 \
 		valac:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	webkitgtk-1:${PORTSDIR}/www/webkit-gtk2 \
-		sqlite3:${PORTSDIR}/databases/sqlite3 \
-		notify:${PORTSDIR}/devel/libnotify \
-		soup-gnome-2:${PORTSDIR}/devel/libsoup-gnome \
-		execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2 \
+		libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
+		libnotify.so:${PORTSDIR}/devel/libnotify \
+		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -72,14 +71,14 @@ PLIST_SUB+=	APIDOCS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MUNIQUE}
-LIB_DEPENDS+=	unique-1:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS+=	libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 CONFIGURE_ARGS+=--enable-unique
 .else
 CONFIGURE_ARGS+=--disable-unique
 .endif
 
 .if ${PORT_OPTIONS:MZEITGEIST}
-LIB_DEPENDS+=	zeitgeist-1:${PORTSDIR}/sysutils/libzeitgeist
+LIB_DEPENDS+=	libzeitgeist-1.0.so:${PORTSDIR}/sysutils/libzeitgeist
 CONFIGURE_ARGS+=--enable-zeitgeist
 .else
 CONFIGURE_ARGS+=--disable-zeitgeist
@@ -88,9 +87,9 @@ CONFIGURE_ARGS+=--disable-zeitgeist
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
 .for dir in katze midori
-	@${MKDIR} ${DOCSDIR}/api/${dir}/html
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/api/${dir}/html
 	@cd ${WRKSRC}/_build/docs/api/${dir}/html && \
-		${COPYTREE_SHARE} . ${DOCSDIR}/api/${dir}/html
+		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/api/${dir}/html
 .endfor
 .endif
 
