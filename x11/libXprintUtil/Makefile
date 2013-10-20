@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXprintUtil/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libXprintUtil/Makefile 330446 2013-10-15 19:43:42Z eadler $
 
 PORTNAME=	libXprintUtil
 PORTVERSION=	1.0.1
@@ -10,6 +10,4 @@ COMMENT=	The XprintUtil library
 XORG_CAT=	lib
 USE_XORG=	printproto:both x11 xau xp xt
 USE_AUTOTOOLS=	libtool
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
