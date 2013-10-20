@@ -1,4 +1,4 @@
-# $FreeBSD: math/kcalc/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: math/kcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	kcalc
 PORTVERSION=	${KDE4_VERSION}
@@ -20,4 +20,5 @@ USE_KDE4=	kdeprefix kdehier automoc4 kdelibs
 USES=		cmake:outsource
 USE_QT4=	xml qmake_build moc_build rcc_build uic_build
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

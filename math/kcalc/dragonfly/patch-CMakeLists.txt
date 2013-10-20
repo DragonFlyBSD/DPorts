@@ -1,0 +1,13 @@
+--- CMakeLists.txt.intermediate	2013-10-20 09:04:53.363848000 +0000
++++ CMakeLists.txt
+@@ -44,8 +44,8 @@ include(CheckFunctionExists)
+ include(CheckIncludeFiles)
+ 
+ check_include_files(ieeefp.h     HAVE_IEEEFP_H)
+-check_function_exists(isinf      HAVE_FUNC_ISINF)
+-check_function_exists(isnan      HAVE_FUNC_ISNAN)
++#check_function_exists(isinf      HAVE_FUNC_ISINF)
++#check_function_exists(isnan      HAVE_FUNC_ISNAN)
+ check_type_size("signed long"    SIZEOF_SIGNED_LONG)
+ check_type_size("unsigned long"  SIZEOF_UNSIGNED_LONG)
+ 
