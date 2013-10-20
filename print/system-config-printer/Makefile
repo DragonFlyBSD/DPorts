@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/system-config-printer/Makefile 327104 2013-09-12 19:44:38Z kwm $
+# $FreeBSD: print/system-config-printer/Makefile 327765 2013-09-20 22:43:59Z bapt $
 #   $MCom: ports/print/system-config-printer/Makefile,v 1.6 2009/12/29 16:03:58 ahze Exp $
 
 PORTNAME=	system-config-printer
@@ -38,6 +38,7 @@ INSTALLS_EGGINFO=	yes
 PYDISTUTILS_PKGNAME=	cupshelpers
 PYDISTUTILS_PKGVERSION=	1.0
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g; \
 		s|%%PREFIX%%|${PREFIX}|g' \
