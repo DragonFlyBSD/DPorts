@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcursorgen/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xcursorgen/Makefile 330432 2013-10-15 19:24:31Z eadler $
 
 PORTNAME=	xcursorgen
 PORTVERSION=	1.0.5
@@ -9,14 +9,10 @@ COMMENT=	Create an X cursor file from a collection of PNG images
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
 XORG_CAT=	app
 USE_XORG=	x11 xcursor xextproto
 
-PLIST_FILES=	bin/xcursorgen
-
-MAN1=		xcursorgen.1
-
-NO_STAGE=	yes
+PLIST_FILES=	bin/xcursorgen man/man1/xcursorgen.1.gz
 .include <bsd.port.mk>
