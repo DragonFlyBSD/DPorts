@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: misc/kdeutils4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: misc/kdeutils4/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	kdeutils
 PORTVERSION=	${KDE4_VERSION}
@@ -34,6 +34,7 @@ PRINTMANAGER_DESC=	Install print manager
 SUPERKARAMBA_DESC=	Install widget framework SuperKaramba
 SWEEPER_DESC=		Install system cleaner Sweeper
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MARK}
