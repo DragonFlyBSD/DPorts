@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: multimedia/mpeg_encode/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/mpeg_encode/Makefile 330893 2013-10-19 15:57:01Z bapt $
 
 PORTNAME=	mpeg_encode
 PORTVERSION=	1.5b
@@ -10,23 +10,20 @@ DISTNAME=	${PKGNAME}-src
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	UCB's MPEG-I video stream encoder
 
-MAN1=		mpeg_encode.1
+OPTIONS_DEFINE=	DOCS
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 	@(${GREP} -R -l "malloc.h" ${WRKSRC}/* | \
 	    ${XARGS} ${REINPLACE_CMD} -e "s/malloc.h/stdlib.h/")
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mpeg_encode ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${PREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/mpeg_encode ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/docs/mpeg_encode.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in users-guide.ps template.param
-	@${INSTALL_DATA} ${WRKSRC}/docs/${i} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/docs/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
