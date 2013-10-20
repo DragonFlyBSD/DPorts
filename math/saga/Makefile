@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
 # $FreeBSD: ports/math/saga/Makefile,v 1.25 2013/01/23 15:05:36 svnexp Exp $
 
