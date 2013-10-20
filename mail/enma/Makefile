@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/enma/Makefile 319871 2013-06-04 15:47:06Z bapt $
+# $FreeBSD: mail/enma/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	enma
 PORTVERSION=	1.2.0
@@ -19,11 +19,12 @@ LIBBIND_DESC=	Link against dns/libbind instead of dns/ldns
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/man \
 			--with-ssl-incdir=${OPENSSLINC} --with-ssl-libdir=${OPENSSLLIB}
+
+USES=		gmake perl5
 USE_RC_SUBR=	milter-enma
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 MANLANG=	"" ja_JP.UTF-8
 MAN1=		enma.1
 MANCOMPRESSED=	no
@@ -41,6 +42,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/postfix/smtpd:${PORTSDIR}/mail/postfix
 . endif
 .endif
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"
 
