@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # New ports collection makefile for:   pyodbc
 # Date created:        April 15 2009
 # Whom:                rkruus
