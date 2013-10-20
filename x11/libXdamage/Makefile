@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXdamage/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libXdamage/Makefile 330444 2013-10-15 19:41:24Z eadler $
 
 PORTNAME=	libXdamage
 PORTVERSION=	1.1.4
@@ -10,6 +10,4 @@ COMMENT=	X Damage extension library
 
 XORG_CAT=	lib
 USE_XORG=	x11 damageproto:both xfixes fixesproto xextproto xproto:both
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
