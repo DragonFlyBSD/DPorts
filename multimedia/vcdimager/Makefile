@@ -1,9 +1,9 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: multimedia/vcdimager/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/vcdimager/Makefile 330905 2013-10-19 16:27:11Z bapt $
 
 PORTNAME=	vcdimager
 PORTVERSION=	0.7.24
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	vcdimager
@@ -13,25 +13,24 @@ COMMENT=	GNU VCDImager/VCDRip -- The GNU VideoCD Image Maker/Ripping Tool
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
-		xml2:${PORTSDIR}/textproc/libxml2 \
-		cdio.13:${PORTSDIR}/sysutils/libcdio
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt \
+		libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libcdio.so:${PORTSDIR}/sysutils/libcdio
 
-USES=		pkgconfig pathfix
+USES=		gmake pkgconfig pathfix
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 USE_GNOME=	lthack
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		cdxa2mpeg.1 vcdimager.1 vcdxminfo.1 vcdxrip.1 vcdxgen.1 \
-		vcdxbuild.1 vcd-info.1
 INFO=		vcdimager vcdxrip vcd-info
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libvcd||' ${WRKSRC}/libvcdinfo.pc.in
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libvcdinfo.so.2
 
 .include <bsd.port.mk>
