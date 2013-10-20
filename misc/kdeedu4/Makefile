@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: misc/kdeedu4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: misc/kdeedu4/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	kdeedu
 PORTVERSION=	${KDE4_VERSION}
@@ -42,6 +42,7 @@ PARLEY_DESC=		Vocabulary trainer
 ROCS_DESC=		Graph teory IDE
 STEP_DESC=		Interactive physics simulator
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBLINKEN}
