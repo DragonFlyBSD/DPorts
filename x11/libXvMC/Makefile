@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXvMC/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libXvMC/Makefile 330448 2013-10-15 19:45:39Z eadler $
 
 PORTNAME=	libXvMC
 PORTVERSION=	1.0.8
@@ -10,6 +10,4 @@ COMMENT=	X Video Extension Motion Compensation library
 
 XORG_CAT=	lib
 USE_XORG=	x11 xext xv xextproto videoproto:both xproto:both
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
