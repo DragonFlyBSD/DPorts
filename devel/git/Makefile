@@ -1,8 +1,8 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/git/Makefile 330661 2013-10-17 18:06:40Z wxs $
 
 PORTNAME=	git
-PORTVERSION=	1.8.4
+PORTVERSION=	1.8.4.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
