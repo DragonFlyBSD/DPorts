@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/vamp-plugin-sdk/Makefile 325727 2013-08-30 23:01:05Z bapt $
+# $FreeBSD: audio/vamp-plugin-sdk/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	vamp-plugin-sdk
 PORTVERSION=	2.3
@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile
 
 GNU_CONFIGURE=	yes
+NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 
