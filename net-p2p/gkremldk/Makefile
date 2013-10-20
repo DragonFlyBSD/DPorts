@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net-p2p/gkremldk/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: net-p2p/gkremldk/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 PORTNAME=	gkremldk
 PORTVERSION=	0.9.8
@@ -24,6 +24,7 @@ USE_AUTOTOOLS=	autoconf
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|^(LFLAGS).*|\1 = ${LDFLAGS} ${PTHREAD_LIBS} -L${LOCALBASE}/lib|' \
