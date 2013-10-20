@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Exporter/Makefile 330942 2013-10-19 21:37:28Z sunpoet $
 
 PORTNAME=	Sub-Exporter
-PORTVERSION=	0.986
+PORTVERSION=	0.987
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,12 +21,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sub::Exporter.3 \
-		Sub::Exporter::Cookbook.3 \
-		Sub::Exporter::Tutorial.3 \
-		Sub::Exporter::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
