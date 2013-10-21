@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/jvmtop/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/jvmtop/Makefile 330954 2013-10-20 01:05:33Z jgh $
 
 PORTNAME=	jvmtop
 PORTVERSION=	0.8.0
@@ -20,10 +20,9 @@ SUB_LIST=	JAVA_HOME=${JAVA_HOME}
 SUB_FILES=	${PORTNAME}.sh
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.jar ${JAVAJARDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.jar ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
