@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: lang/tolua4/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/tolua4/Makefile 330752 2013-10-18 14:25:23Z bapt $
 
 PORTNAME=	tolua
 PORTVERSION=	4.0a
@@ -7,6 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/users/celes/tolua/ \
 		http://www.tecgraf.puc-rio.br/~celes/tolua/
+PKGNAMESUFFIX=	${LUA_VER_STR}
 
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	Tool for easy access of C/C++ code from Lua
@@ -14,8 +15,6 @@ COMMENT=	Tool for easy access of C/C++ code from Lua
 USES=		gmake
 USE_LUA=	4.0
 WRKSRC=		${WRKDIR}/${PORTNAME}
-
-LATEST_LINK=	${PORTNAME}${LUA_VER_STR}
 
 NO_STAGE=	yes
 post-patch:
