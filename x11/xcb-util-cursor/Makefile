@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-cursor/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xcb-util-cursor/Makefile 330440 2013-10-15 19:32:50Z eadler $
 
 PORTNAME=	xcb-util-cursor
 PORTVERSION=	0.1.0
@@ -25,7 +25,6 @@ USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	GPERF="${LOCALBASE}/bin/gperf"
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${libdir}/pkgconfig|$${prefix}/libdata/pkgconfig|' \
