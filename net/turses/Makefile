@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/turses/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/turses/Makefile 330978 2013-10-20 05:23:18Z koobs $
 
 PORTNAME=	turses
-PORTVERSION=	0.2.15
+PORTVERSION=	0.2.18
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}oauth2>0:${PORTSDIR}/net/py-oauth2 \
 		${PYTHON_PKGNAMEPREFIX}urwid>0:${PORTSDIR}/devel/py-urwid \
-		${PYTHON_PKGNAMEPREFIX}tweepy>=2.0:${PORTSDIR}/net/py-tweepy
+		${PYTHON_PKGNAMEPREFIX}tweepy>=2.1:${PORTSDIR}/net/py-tweepy
 
 TEST_DEPENDS:=	${RUN_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose \
