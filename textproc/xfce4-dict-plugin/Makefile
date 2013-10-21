@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann (oliver@FreeBSD.org)
-# $FreeBSD: textproc/xfce4-dict-plugin/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xfce4-dict-plugin/Makefile 330424 2013-10-15 18:36:02Z olivierd $
 
 PORTNAME=	xfce4-dict
 PORTVERSION=	0.7.0
@@ -15,14 +15,10 @@ COMMENT=	Xfce4 plugin to query different dictionaries
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-USES=		gettext pkgconfig
-USE_GMAKE=	yes
+USES=		gettext pkgconfig gmake
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 
-MAN1=		xfce4-dict.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
