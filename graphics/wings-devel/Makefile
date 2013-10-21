@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: graphics/wings-devel/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/wings-devel/Makefile 330624 2013-10-17 10:15:25Z amdmi3 $
 
 PORTNAME=	wings
 PORTVERSION=	1.3.1
@@ -17,28 +17,35 @@ BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang \
 RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang \
 		${LOCALBASE}/lib/erlang/lib/esdl/include/sdl.hrl:${PORTSDIR}/devel/esdl
 
+CONFLICTS=	${PORTNAME}-[0-9]*
+
 MAKE_ENV=	ESDL_PATH=${LOCALBASE}/lib/erlang/lib/esdl
 PLIST_SUB=	VERSION="${PORTVERSION}"
 MAKE_JOBS_UNSAFE=yes
 
-SUB_FILES=	wings.sh
+SUB_FILES=	${PORTNAME}.sh
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
+
+DESKTOP_ENTRIES="Wings" \
+		"${COMMENT}" \
+		"${PREFIX}/share/pixmaps/${PORTNAME}.ico" \
+		"${PORTNAME}" \
+		"Graphics;3DGraphics;" \
+		""
 
 PORTSCOUT=	limitw:1,odd
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(GCC)|${CC} -I${LOCALBASE}/include -L${LOCALBASE}/lib|g' \
 		${WRKSRC}/plugins_src/accel/Makefile
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/erlang/lib/${DISTNAME}
-.for dir in src ebin fonts plugins textures shaders patches
-	cd ${WRKSRC} && ${COPYTREE_SHARE} ${dir} ${PREFIX}/lib/erlang/lib/${DISTNAME}
-.endfor
-	@${INSTALL_SCRIPT} ${WRKDIR}/wings.sh ${PREFIX}/bin/wings
-	@${LN} -sf ${DISTNAME} ${PREFIX}/lib/erlang/lib/${PORTNAME}
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/${DISTNAME}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "src ebin fonts plugins textures shaders patches" \
+		${STAGEDIR}${PREFIX}/lib/erlang/lib/${DISTNAME}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/src/${PORTNAME}.icon ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.ico
 
 .include <bsd.port.mk>
