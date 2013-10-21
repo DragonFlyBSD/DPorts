@@ -1,9 +1,9 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: devel/avr-gdb/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/avr-gdb/Makefile 330734 2013-10-18 09:59:43Z tijl $
 
 PORTNAME=	gdb
 PORTVERSION=	7.3.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gdb
