@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-igd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/gupnp-igd/Makefile 330888 2013-10-19 15:34:18Z sunpoet $
 
 PORTNAME=	gupnp-igd
 PORTVERSION=	0.2.2
@@ -25,7 +25,6 @@ USE_PYTHON=	yes
 USE_XZ=		yes
 USES=		gmake pathfix pkgconfig
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/ --define-variable=/d' ${WRKSRC}/configure
 
