@@ -1,11 +1,10 @@
-# $FreeBSD: german/bugzilla44/Makefile 330666 2013-10-17 19:35:22Z ohauer $
+# $FreeBSD: german/bugzilla44/Makefile 330857 2013-10-19 10:19:44Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.4
-PORTREVISION=	1
+PORTVERSION=	4.4.1
 CATEGORIES=	german
 MASTER_SITES=	SF
-MASTER_SITE_SUBDIR=bugzilla-de/${PORTVERSION}/${PORTVERSION}
+MASTER_SITE_SUBDIR=bugzilla-de/${PORTVERSION:R}/${PORTVERSION}
 DISTNAME=	germzilla-${PORTVERSION}-1.utf-8
 
 MAINTAINER=	bugzilla@FreeBSD.org
