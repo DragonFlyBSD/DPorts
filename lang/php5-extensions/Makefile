@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php5-extensions/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/php5-extensions/Makefile 330735 2013-10-18 10:04:26Z ale $
 
 PORTNAME=	php5
 PORTVERSION=	1.7
@@ -18,6 +18,7 @@ IGNORE_WITH_PHP=52 53
 USE_PHP_BUILD=	yes
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
