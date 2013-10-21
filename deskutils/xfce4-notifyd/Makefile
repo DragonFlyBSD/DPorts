@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notifyd/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/xfce4-notifyd/Makefile 330340 2013-10-14 18:48:19Z olivierd $
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.2.4
@@ -13,8 +13,8 @@ COMMENT=	Visually-appealing notification daemon for Xfce
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	dbus-glib:${PORTSDIR}/devel/dbus-glib \
-		notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libnotify.so:${PORTSDIR}/devel/libnotify
 
 USES=		pkgconfig gmake
 USE_AUTOTOOLS=	libtool
@@ -27,11 +27,8 @@ USE_XORG=	x11
 
 CONFLICTS=	notification-daemon-[0-9]* xfce4-notification-daemon-[0-9]*
 
-MAN1=	xfce4-notifyd-config.1
-
 OPTIONS_DEFINE=	NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
