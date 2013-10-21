@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/fretsonfire/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/fretsonfire/Makefile 330398 2013-10-15 12:56:39Z bapt $
 
 PORTNAME=	fretsonfire
 PORTVERSION=	1.3.110
@@ -32,14 +32,6 @@ FOF_DIR=	${PREFIX}/lib/${PORTNAME}
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
-
-.if ${ARCH} != "i386"
-WITHOUT_PSYCO=	yes
-.endif
-
-.if !defined(WITHOUT_PSYCO)
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/psyco/_psyco.so:${PORTSDIR}/devel/py-psyco
-.endif
 
 do-install:
 	${MKDIR} ${FOF_DIR}/${PORTNAME:S/f/F/g:S/o/O/}
