@@ -1,5 +1,5 @@
 # Created by: Brett Taylor
-# $FreeBSD: x11-fonts/tkfont/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/tkfont/Makefile 330329 2013-10-14 14:19:49Z gahr $
 
 PORTNAME=	tkfont
 PORTVERSION=	1.1
@@ -11,24 +11,19 @@ MASTER_SITE_SUBDIR=	petef
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Tk based replacement for xfontsel
 
-USE_TK=		yes
-
+USES+=		tk:run
 RUN_DEPENDS+=	xlsfonts:${PORTSDIR}/x11-fonts/xlsfonts
-
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 post-patch:
-	${SED} -e "s,/usr/local,${LOCALBASE}," \
-		-e "s,#!/usr/X11/bin/wish,#!${WISH}," \
-		 < ${WRKSRC}/tkfont > ${WRKSRC}/tkfont.new
-	${MV} ${WRKSRC}/tkfont.new ${WRKSRC}/tkfont
+	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|; s|#!/usr/X11/bin/wish|${WISH}|;' \
+	    ${WRKSRC}/tkfont
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/tkfont ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/lib/tkfont
-	@for file in COPYING Bugs.txt FileMenu.txt FindFont FontDirs.txt FontTypes.txt HelpText.txt README WhatsNew.txt; do \
-		${INSTALL_DATA} ${WRKSRC}/$$file ${PREFIX}/lib/tkfont; \
-	done
+	${INSTALL_SCRIPT} ${WRKSRC}/tkfont ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/tkfont
+.for file in COPYING Bugs.txt FileMenu.txt FindFont FontDirs.txt FontTypes.txt HelpText.txt README WhatsNew.txt
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/lib/tkfont
+.endfor
 
 .include <bsd.port.mk>
