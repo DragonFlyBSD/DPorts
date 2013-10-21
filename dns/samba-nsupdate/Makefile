@@ -1,7 +1,7 @@
-# $FreeBSD: dns/samba-nsupdate/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/samba-nsupdate/Makefile 330773 2013-10-18 21:14:20Z timur $
 
 PORTNAME=		nsupdate
-PORTVERSION=		9.8.4.1
+PORTVERSION=		9.8.6
 CATEGORIES=		dns net ipv6
 MASTER_SITES=		${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -14,10 +14,11 @@ COMMENT=		An nsupdate utility with GSS-TSIG support
 LICENSE=		ISCL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=		9.8.4-P1
+ISCVERSION=		9.8.6
 
 MAKE_JOBS_UNSAFE=	yes
 
+USE_AUTOTOOLS=		autoconf autoheader
 USE_OPENSSL=		yes
 GNU_CONFIGURE=		yes
 
@@ -35,7 +36,8 @@ CONFIGURE_ARGS+=	\
 			--without-idn \
 			--with-randomdev=/dev/random
 
-NO_STAGE=	yes
+NO_STAGE=		yes
+
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
