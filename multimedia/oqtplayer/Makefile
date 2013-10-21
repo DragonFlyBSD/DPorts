@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/oqtplayer/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/oqtplayer/Makefile 330460 2013-10-15 21:17:55Z eadler $
 
 PORTNAME=	OQTPlayer
 PORTVERSION=	0.5
@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME:tl}-${PORTVERSION}-src
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Very very small, not functional, video OpenQuicktime (TM) player
+COMMENT=	Small, not functional, video OpenQuicktime (TM) player
 
 LIB_DEPENDS=	openquicktime.0:${PORTSDIR}/multimedia/openquicktime
 
