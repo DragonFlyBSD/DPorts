@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/uniconvw/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/uniconvw/Makefile 330572 2013-10-16 23:54:59Z amdmi3 $
 
 PORTNAME=	uniconvw
 PORTVERSION=	1.1.5
@@ -20,7 +20,6 @@ PROJECTHOST=	uniconvertor
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' ${WRKSRC}/setup.py
 
