@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: misc/xfce4-wm-themes/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/xfce4-wm-themes/Makefile 330424 2013-10-15 18:36:02Z olivierd $
 
 PORTNAME=	xfce4-wm-themes
 PORTVERSION=	4.10.0
@@ -11,12 +11,12 @@ DISTNAME=	xfwm4-themes-${PORTVERSION}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	Xfce 4 window decoration themes for xfwm4
+COMMENT=	Additional themes for xfwm4
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_XFCE=	configenv	# to get MASTER_SITE_SUBDIR something has to be defined
+USES=	gmake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
