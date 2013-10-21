@@ -1,26 +1,28 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: mail/findmaildirs/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/findmaildirs/Makefile 330828 2013-10-19 02:28:07Z amdmi3 $
 
 PORTNAME=	findmaildirs
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 CATEGORIES=	mail
-MASTER_SITES=	http://cloud.github.com/downloads/AMDmi3/findmaildirs/ \
-		http://mirror.amdmi3.ru/distfiles/
+MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Simple utility to create list of maildirs for mutt
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	AMDmi3
+GH_TAGNAME=	${DISTNAME}
+GH_COMMIT=	dcfcea9
 
 PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	README
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
