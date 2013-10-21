@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/tovid/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/tovid/Makefile 330899 2013-10-19 16:13:03Z bapt $
 
 PORTNAME=	tovid
 PORTVERSION=	0.30
@@ -13,6 +13,9 @@ PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	A collection of video disc authoring tools
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2013-11-19
 
 BUILD_DEPENDS=	txt2tags:${PORTSDIR}/textproc/txt2tags
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
