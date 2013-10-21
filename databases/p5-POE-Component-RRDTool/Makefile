@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-POE-Component-RRDTool/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-POE-Component-RRDTool/Makefile 330515 2013-10-16 14:19:06Z mat $
 
 PORTNAME=	POE-Component-RRDTool
 PORTVERSION=	0.18
@@ -19,9 +19,6 @@ USES=		perl5
 USE_PERL5=	configure patch
 CONFIGURE_ARGS=	</dev/null
 
-MAN3=		POE::Component::RRDTool.3
-
-NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's/(\(\$$maj, \$$min, \$$sub\))/$$1; $$1/' \
 		${WRKSRC}/Makefile.PL
