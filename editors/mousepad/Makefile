@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: editors/mousepad/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/mousepad/Makefile 330424 2013-10-15 18:36:02Z olivierd $
 
 PORTNAME=	mousepad
 PORTVERSION=	0.3.0
@@ -20,11 +20,10 @@ USE_XFCE=	configenv
 OPTIONS_DEFINE=	DBUS
 OPTIONS_DEFAULT=	DBUS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 CONFIGURE_ARGS+=--enable-dbus
 .else
 CONFIGURE_ARGS+=--disable-dbus
