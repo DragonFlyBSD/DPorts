@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/ioquake3/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ioquake3/Makefile 330312 2013-10-14 12:13:00Z wg $
 
 PORTNAME?=	ioquake3
 DISTVERSION?=	1.36
@@ -57,6 +57,7 @@ MAKE_ARGS+=	DEFAULT_BASEDIR="${Q3DIR}" \
 		HOMEPATH="${HOMEPATH}" \
 		VERSION="${Q3ENGINEVER}" \
 		ARCH="${IOQ3ARCH}" \
+		TOOLS_CC="${CC}" \
 		USE_LOCAL_HEADERS=0
 ALL_TARGET=	release
 
