@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sdl-ball/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/sdl-ball/Makefile 330703 2013-10-18 00:15:22Z amdmi3 $
 
 PORTNAME=	sdl-ball
 PORTVERSION=	1.01
@@ -13,21 +13,19 @@ COMMENT=	Arkanoid/Breakout clone with pretty graphics
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+USES=		gmake
 USE_BZIP2=	yes
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
 MAKE_ENV=	DATADIR=${DATADIR}/
-USE_GMAKE=	yes
 USE_DOS2UNIX=	main.cpp
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
-
 PORTDOCS=	*
 PORTDATA=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
@@ -36,14 +34,12 @@ do-build:
 		-DDATADIR="\"${DATADIR}/\"" main.cpp -o ${PORTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC}/themes && ${COPYTREE_SHARE} . ${DATADIR}/
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/themes && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
