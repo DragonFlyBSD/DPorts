@@ -1,5 +1,5 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: x11/kde4/Makefile 315373 2013-03-27 11:55:25Z makc $
+# $FreeBSD: x11/kde4/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	kde
 PORTVERSION=	${KDE4_VERSION}
@@ -39,6 +39,7 @@ KDETOYS_DESC=		Miscellaneous small applications
 KDEUTILS_DESC=		Set of generic utilities
 KDEWEBDEV_DESC=		Web development environment
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKDEACCESSIBILITY}
