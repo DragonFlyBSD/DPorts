@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-panel/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/xfce4-panel/Makefile 330350 2013-10-14 20:03:16Z olivierd $
 
 PORTNAME=	xfce4-panel
 PORTVERSION=	4.10.1
@@ -11,9 +11,9 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce's panel
 
-LIB_DEPENDS=	wnck-1:${PORTSDIR}/x11-toolkits/libwnck \
-		cairo:${PORTSDIR}/graphics/cairo \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	libwnck-1.so:${PORTSDIR}/x11-toolkits/libwnck \
+		libcairo.so:${PORTSDIR}/graphics/cairo \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
 USES=	desktop-file-utils gmake pathfix perl5 pkgconfig
 GNU_CONFIGURE=	yes
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=--enable-gio-unix
 
 OPTIONS_DEFINE=		NLS DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
