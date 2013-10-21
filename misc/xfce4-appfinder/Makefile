@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: misc/xfce4-appfinder/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/xfce4-appfinder/Makefile 330342 2013-10-14 18:57:19Z olivierd $
 
 PORTNAME=	xfce4-appfinder
 PORTVERSION=	4.10.1
@@ -11,18 +11,16 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Application launcher and finder
 
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		pathfix pkgconfig gmake
 USE_GNOME=	gtk20 glib20 intltool intlhack
 USE_XFCE=	configenv garcon libmenu libutil xfconf
 
 OPTIONS_DEFINE=	NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
