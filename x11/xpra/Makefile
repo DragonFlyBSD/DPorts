@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: x11/xpra/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xpra/Makefile 330909 2013-10-19 16:43:32Z wg $
 
 PORTNAME=	xpra
 PORTVERSION=	0.8.8
@@ -19,7 +19,7 @@ RUN_DEPENDS=	cython:${PORTSDIR}/lang/cython \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
 		py*-notify>=0:${PORTSDIR}/devel/py-notify \
 		Xvfb:${PORTSDIR}/x11-servers/xorg-vfbserver
-LIB_DEPENDS+=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS+=	libavcodec.so:${PORTSDIR}/multimedia/ffmpeg
 
 MANCOMPRESSED=	no
 MAN1=		xpra.1 xpra_launcher.1 parti.1
