@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/tkdvd/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/tkdvd/Makefile 330706 2013-10-18 00:31:22Z amdmi3 $
 
 PORTNAME=	tkdvd
 PORTVERSION=	4.0.9
@@ -26,10 +26,9 @@ DESKTOP_ENTRIES="TkDVD" \
 		"Burn CD/DVD" \
 		"tkdvd" \
 		"tkdvd" \
-		"" \
+		"AudioVideo;DiscBurning;" \
 		true
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -43,13 +42,11 @@ do-build:
 	cd ${WRKSRC} && ${TCLSH} install.tcl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tkdvd-install.sh ${PREFIX}/bin/tkdvd
+	${INSTALL_SCRIPT} ${WRKSRC}/tkdvd-install.sh ${STAGEDIR}${PREFIX}/bin/tkdvd
 	${INSTALL_DATA} ${WRKSRC}/icons/tkdvd-2-48.png \
-		${PREFIX}/share/pixmaps/tkdvd.png
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+		${STAGEDIR}${PREFIX}/share/pixmaps/tkdvd.png
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/FAQ ${WRKSRC}/doc/c* \
-		${DOCSDIR}
-.endif
+		${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
