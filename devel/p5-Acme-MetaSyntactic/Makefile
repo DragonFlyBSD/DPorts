@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Acme-MetaSyntactic/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Acme-MetaSyntactic/Makefile 330918 2013-10-19 17:23:31Z sunpoet $
 
 PORTNAME=	Acme-MetaSyntactic
-PORTVERSION=	1.011
+PORTVERSION=	1.012
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,21 +16,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		meta.1 \
-		metafy.1
-MAN3=		Acme::MetaSyntactic.3 \
-		Acme::MetaSyntactic::Alias.3 \
-		Acme::MetaSyntactic::List.3 \
-		Acme::MetaSyntactic::Locale.3 \
-		Acme::MetaSyntactic::MultiList.3 \
-		Acme::MetaSyntactic::RemoteList.3 \
-		Acme::MetaSyntactic::any.3 \
-		Acme::MetaSyntactic::contributors.3 \
-		Acme::MetaSyntactic::foo.3 \
-		Test::MetaSyntactic.3 \
-		eta.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
