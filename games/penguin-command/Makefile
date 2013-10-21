@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/penguin-command/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/penguin-command/Makefile 330502 2013-10-16 12:55:25Z amdmi3 $
 
 PORTNAME=	penguin-command
 PORTVERSION=	1.6.11
@@ -10,18 +10,26 @@ MASTER_SITES=	SF
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A clone of the classic game Missile Command
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 USE_SDL=	mixer image sdl
 GNU_CONFIGURE=	yes
 
-MAN6=		penguin-command.6 penguin-command.ja.6
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man6/penguin-command.6.gz \
+		man/man6/penguin-command.ja.6.gz
+PORTDATA=	*
 
-NO_STAGE=	yes
+DESKTOP_ENTRIES="Penguin Command" \
+		"${COMMENT}" \
+		"${DATADIR}/gfx/icon.xpm" \
+		"${PORTNAME}" \
+		"Game;ArcadeGame;" \
+		""
+
 post-patch:
-	@${REINPLACE_CMD} 's| -lSDL | |g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} 's|LIBS="-lSDL_image|LIBS="-lSDL_image $$SDL_LIBS|g' \
-		${WRKSRC}/configure
+	@${REINPLACE_CMD} 's|LIBS="-lSDL_image|LIBS="-lSDL_image $$SDL_LIBS|g; \
+		s| -lSDL | |g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
