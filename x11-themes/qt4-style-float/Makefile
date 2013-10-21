@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-themes/qt4-style-float/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/qt4-style-float/Makefile 330558 2013-10-16 23:17:57Z amdmi3 $
 
 PORTNAME=	float
 PORTVERSION=	0.1a2
@@ -23,12 +23,11 @@ WRKSRC=		${WRKDIR}/floatstyle-${PORTVERSION}
 PLIST_FILES=	${QT_PLUGINDIR_REL}/styles/libfloatstyle.so
 PLIST_DIRSTRY=	${QT_PLUGINDIR_REL}/styles
 
-NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
 do-install:
-	${MKDIR} ${PREFIX}/${QT_PLUGINDIR_REL}/styles/
-	${INSTALL_PROGRAM} ${WRKSRC}/libfloatstyle.so ${PREFIX}/${QT_PLUGINDIR_REL}/styles/
+	${MKDIR} ${STAGEDIR}${PREFIX}/${QT_PLUGINDIR_REL}/styles/
+	${INSTALL_PROGRAM} ${WRKSRC}/libfloatstyle.so ${STAGEDIR}${PREFIX}/${QT_PLUGINDIR_REL}/styles/
 
 .include <bsd.port.mk>
