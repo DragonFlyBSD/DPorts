@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/libdap/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libdap/Makefile 331006 2013-10-20 11:48:50Z sunpoet $
 
 PORTNAME=	libdap
-PORTVERSION=	3.12.0
+PORTVERSION=	3.12.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opendap.org/pub/source/ \
 		LOCAL/sunpoet
@@ -10,23 +10,17 @@ MASTER_SITES=	http://www.opendap.org/pub/source/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	SDK which contains an implementation of DAP 2.0 and 3.1
 
+LICENSE=	LGPL21
+
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		libxml2.so:${PORTSDIR}/textproc/libxml2
 
-CONFIGURE_ARGS=	--with-zlib=/usr
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_LDCONFIG=	yes
-USES=		gmake pathfix
-
-MAN1=		dap-config.1 \
-		getdap.1
-
-NO_STAGE=	yes
-post-patch:
-	# do not alter ${PREFIX}/lib/charset.alias
-	@${REINPLACE_CMD} -e '/^install-exec-am: / s|install-exec-local||' ${WRKSRC}/gl/Makefile.in
+USES=		charsetfix gmake pathfix
 
 .include <bsd.port.mk>
