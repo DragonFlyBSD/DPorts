@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/shootingstar/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/shootingstar/Makefile 330839 2013-10-19 02:58:40Z amdmi3 $
 
 PORTNAME=	shootingstar
 PORTVERSION=	1.2.0
@@ -12,7 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	SDL/OpenGL top-down shooter
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_GL=		gl
 USE_SDL=	sdl mixer image
 
@@ -20,5 +20,7 @@ CONFIGURE_ENV=	SDL_CONFIG="${SDL_CONFIG}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
+
 .include <bsd.port.mk>
