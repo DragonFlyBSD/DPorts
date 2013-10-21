@@ -1,7 +1,7 @@
-# $FreeBSD: german/bugzilla42/Makefile 330666 2013-10-17 19:35:22Z ohauer $
+# $FreeBSD: german/bugzilla42/Makefile 330857 2013-10-19 10:19:44Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.2.6
+PORTVERSION=	4.2.7
 CATEGORIES=	german
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=bugzilla-de/${PORTVERSION:R}/${PORTVERSION}
