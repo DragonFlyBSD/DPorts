@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: x11/xwinwrap/Makefile 329066 2013-10-02 16:16:21Z vg $
+# $FreeBSD: x11/xwinwrap/Makefile 330488 2013-10-16 09:04:21Z vg $
 
 PORTNAME=	xwinwrap
 PORTVERSION=	0.3
@@ -16,6 +16,7 @@ ONLY_FOR_ARCHS=	amd64 i386
 USE_BZIP2=	yes
 USE_XORG=	x11 xproto xrender xext
 PLIST_FILES=	bin/${PORTNAME}
+MAKE_ARGS+=	PREFIX=${PREFIX}
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
