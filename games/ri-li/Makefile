@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/ri-li/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ri-li/Makefile 330711 2013-10-18 01:20:05Z amdmi3 $
 
 PORTNAME=	Ri-li
 PORTVERSION=	2.0.1
@@ -12,10 +12,13 @@ COMMENT=	Drive a toy wood train in many levels - snake-like arcade game
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer
 
 CPPFLAGS+=	`${SDL_CONFIG} --cflags` -I${LOCALBASE}/include
+
+PLIST_FILES=	bin/Ri_li
+PORTDATA=	*
 
 DESKTOP_ENTRIES="Ri-li" \
 		"Drive a toy wood train in many levels - snake-like arcade game" \
@@ -24,7 +27,6 @@ DESKTOP_ENTRIES="Ri-li" \
 		"Game;ArcadeGame;" \
 		false
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lSDL |`${SDL_CONFIG} --libs`|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's| gentoo||' ${WRKSRC}/Makefile.in
