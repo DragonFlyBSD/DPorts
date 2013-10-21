@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ports/www/fcgiwrap/files/fcgiwrap.in,v 1.10 2012/11/18 16:55:50 svnexp Exp $
+# $FreeBSD: www/fcgiwrap/files/fcgiwrap.in 307542 2012-11-18 16:33:31Z hrs $
 #
 # fcgiwrap startup script
 #
