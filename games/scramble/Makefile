@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/scramble/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/scramble/Makefile 330829 2013-10-19 02:30:07Z amdmi3 $
 
 PORTNAME=	scramble
 PORTVERSION=	0.9.5
@@ -12,15 +12,16 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	From 6 letters you are to create as many words as you can
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer image ttf
 
 CPPFLAGS+=	`${SDL_CONFIG} --cflags`
 LDFLAGS+=	`${SDL_CONFIG} --libs`
 
-MAN6=		scramble.6
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man6/scramble.6.gz
+PORTDATA=	*
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_DICTIONARY)
