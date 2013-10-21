@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: devel/adime/Makefile 330207 2013-10-13 05:42:00Z eadler $
+# $FreeBSD: devel/adime/Makefile 330460 2013-10-15 21:17:55Z eadler $
 
 PORTNAME=	adime
 PORTVERSION=	2.2.1
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Generate Allegro dialogs in a very simple way
+COMMENT=	Generate Allegro dialogs in a simple way
 
 LIB_DEPENDS=	liballeg.so:${PORTSDIR}/devel/allegro
 
