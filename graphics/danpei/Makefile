@@ -1,5 +1,5 @@
 # Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
-# $FreeBSD: graphics/danpei/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/danpei/Makefile 330758 2013-10-18 15:02:20Z bapt $
 
 PORTNAME=	danpei
 PORTVERSION=	2.9.7
@@ -7,7 +7,7 @@ PORTREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
-MAINTAINER=	bu7cher@yandex.ru
+MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Image Viewer for X Window System with thumbnail preview feature
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
