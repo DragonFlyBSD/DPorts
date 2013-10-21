@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/dumpmpeg/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/dumpmpeg/Makefile 330814 2013-10-19 00:34:45Z bapt $
 
 PORTNAME=	dumpmpeg
 PORTVERSION=	0.6
@@ -10,13 +10,12 @@ MASTER_SITES=	SF
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Dump frames from mpeg movies
 
-LIB_DEPENDS=	smpeg:${PORTSDIR}/multimedia/smpeg
+LIB_DEPENDS=	libsmpeg.so:${PORTSDIR}/multimedia/smpeg
 
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 
-MAN1=		dumpmpeg.1
-PLIST_FILES=	bin/dumpmpeg
+PLIST_FILES=	bin/dumpmpeg \
+		man/man1/dumpmpeg.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
