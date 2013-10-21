@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: editors/gnotepad+/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/gnotepad+/Makefile 330378 2013-10-15 09:47:11Z bapt $
 
 PORTNAME=	gnotepad+
 PORTVERSION=	1.3.3
@@ -26,6 +26,8 @@ GNU_CONFIGURE=	yes
 
 MAN1=		gnp.1
 
+CONFIGURE_ARGS=	--disable-gnome
+
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -33,13 +35,6 @@ DOCVERSION=	1.2.0
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
-
-.if ${HAVE_GNOME:Mgnomelibs}!=""
-USE_GNOME+=	gnomelibs
-PKGNAMESUFFIX=	-gnome
-.else
-CONFIGURE_ARGS+=--disable-gnome
-.endif
 
 .if defined(NOPORTDOCS)
 PLIST_SUB+=	NOPORTDOCS=""
