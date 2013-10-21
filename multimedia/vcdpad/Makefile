@@ -1,17 +1,22 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: multimedia/vcdpad/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/vcdpad/Makefile 330906 2013-10-19 16:30:33Z bapt $
 
 PORTNAME=	vcdpad
 PORTVERSION=	0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.nocrew.org/software/vcdpad/
 
 MAINTAINER=	multimedia@FreeBSD.org
-COMMENT=	A program to pad vcd mpegs
+COMMENT=	Program to pad vcd mpegs
 
 PLIST_FILES=	bin/vcdpad
-USE_GMAKE=	yes
+USES=		gmake
 
-NO_STAGE=	yes
+post-patch:
+	@${REINPLACE_CMD} -e 's,$$(PREFIX),$$(DESTDIR)$$(PREFIX),' ${WRKSRC}/Makefile
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
 .include <bsd.port.mk>
