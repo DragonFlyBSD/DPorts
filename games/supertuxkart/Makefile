@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/supertuxkart/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/supertuxkart/Makefile 330578 2013-10-17 00:59:55Z amdmi3 $
 
 PORTNAME=	supertuxkart
 PORTVERSION=	0.8
@@ -12,14 +12,13 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Free 3D kart racing game
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	vorbisfile:${PORTSDIR}/audio/libvorbis \
-		ogg:${PORTSDIR}/audio/libogg \
-		fribidi:${PORTSDIR}/converters/fribidi \
-		curl:${PORTSDIR}/ftp/curl \
-		jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libvorbisfile.so:${PORTSDIR}/audio/libvorbis \
+		libogg.so:${PORTSDIR}/audio/libogg \
+		libfribidi.so:${PORTSDIR}/converters/fribidi \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng.so:${PORTSDIR}/graphics/png
 
 USE_BZIP2=	yes
 USE_GL=		gl glu glut
@@ -30,7 +29,7 @@ USE_DOS2UNIX=	lib/irrlicht/source/Irrlicht/Makefile
 
 WRKSRC=		${WRKDIR}/SuperTuxKart-${PORTVERSION}
 
-PORTDOCS=	*
+PORTDATA=	*
 
 IRR_CPPFLAGS=	-DNO_IRR_USE_NON_SYSTEM_JPEG_LIB_ \
 		-DNO_IRR_USE_NON_SYSTEM_LIB_PNG_ \
@@ -38,7 +37,6 @@ IRR_CPPFLAGS=	-DNO_IRR_USE_NON_SYSTEM_JPEG_LIB_ \
 		-DNO_IRR_COMPILE_WITH_BZIP2_ \
 		-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libIrrlicht.a|& -L${LOCALBASE}/lib -lpng -ljpeg|' ${WRKSRC}/CMakeLists.txt
 
