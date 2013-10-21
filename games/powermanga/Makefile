@@ -1,8 +1,9 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/powermanga/Makefile 328538 2013-09-28 00:43:17Z amdmi3 $
+# $FreeBSD: games/powermanga/Makefile 330815 2013-10-19 00:56:58Z amdmi3 $
 
 PORTNAME=	powermanga
 PORTVERSION=	0.91
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://linux.tlk.fr/games/Powermanga/download/ \
 		http://mirror.amdmi3.ru/distfiles/
