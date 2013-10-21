@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/diameter/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/diameter/Makefile 330800 2013-10-18 23:44:13Z amdmi3 $
 
 PORTNAME=	diameter
 PORTVERSION=	0.4.0.3
@@ -10,8 +10,8 @@ MASTER_SITES=	SF/game${PORTNAME}/game${PORTNAME}/${PORTNAME}-0.4.0
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Arcade-style game with elements of economy and adventure
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		guichan:${PORTSDIR}/devel/guichan
+LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png \
+		libguichan.so:${PORTSDIR}/devel/guichan
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
@@ -27,7 +27,9 @@ LDFLAGS+=	`${SDL_CONFIG} --libs` -L${LOCALBASE}/lib
 
 DATADIR=	${PREFIX}/share/gamediameter
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|sdl-config|${SDL_CONFIG}|; /^CFLAGS=.*march/ d; \
 		/PKG_CONFIG/ s|libpng|libpng15|' ${WRKSRC}/configure
