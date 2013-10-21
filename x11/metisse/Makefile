@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/metisse/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/metisse/Makefile 330378 2013-10-15 09:47:11Z bapt $
 
 PORTNAME=	metisse
 PORTVERSION=	0.4.1
@@ -99,10 +99,6 @@ USE_GNOME+=	gtk12
 
 .if ${HAVE_GNOME:Mimlib} || ${PORT_OPTIONS:MIMLIB}
 USE_GNOME+=	imlib
-.endif
-
-.if ${HAVE_GNOME:Mgnomelibs} || ${PORT_OPTIONS:MGNOME}
-USE_GNOME+=	gnomelibs
 .endif
 
 MAN1=	FvwmAnimate.1 FvwmAuto.1 FvwmBacker.1 FvwmBanner.1 FvwmButtons.1 \
