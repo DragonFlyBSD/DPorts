@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: emulators/qemu-devel/Makefile 330184 2013-10-12 20:10:50Z nox $
+# $FreeBSD: emulators/qemu-devel/Makefile 330945 2013-10-19 22:07:48Z nox $
 
 PORTNAME=	qemu
 PORTVERSION=	1.6.1
@@ -24,7 +24,7 @@ PATCH_STRIP=	-p1
 MAKE_ENV+=	BSD_MAKE="${MAKE}"
 MAN1=		qemu.1 qemu-img.1
 MAN8=		qemu-nbd.8
-ONLY_FOR_ARCHS=	amd64 i386 powerpc # XXX someone wants to debug sparc64 hosts?
+ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 # XXX someone wants to debug sparc64 hosts?
 CONFLICTS_INSTALL=	qemu-[0-9]*
 
 OPTIONS_DEFINE=	SAMBA X11 GTK2 OPENGL GNUTLS SASL JPEG PNG CURL \
