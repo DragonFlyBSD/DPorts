@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/gtkdiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/gtkdiff/Makefile 330280 2013-10-14 07:25:37Z cy $
 
 PORTNAME=	gtkdiff
 PORTVERSION=	1.8.0
@@ -9,6 +9,9 @@ MASTER_SITES=	TUCOWS
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	A frontend for diff(1)
+
+DEPRECATED=	Gnome1 EOLed by upstream for a while.
+EXPIRATION_DATE=	2013-11-05
 
 USE_GNOME=	gnomehack gnomeprefix gnomelibs
 GNU_CONFIGURE=	yes
