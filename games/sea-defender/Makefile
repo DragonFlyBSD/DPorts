@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sea-defender/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: games/sea-defender/Makefile 330708 2013-10-18 00:54:19Z amdmi3 $
 
 PORTNAME=	sea-defender
 PORTVERSION=	r20100723
@@ -13,7 +13,7 @@ COMMENT=	Simple missile command clone
 BUILD_DEPENDS=	${LOCALBASE}/lib/libglfw.a:${PORTSDIR}/graphics/glfw
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
 USE_XORG=	x11 xrandr
@@ -25,7 +25,13 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PORTDOCS=	README
 
-NO_STAGE=	yes
+DESKTOP_ENTRIES="Sea Defender" \
+		"${COMMENT}" \
+		"" \
+		"${PORTNAME}" \
+		"Game;ArcadeGame;" \
+		""
+
 .include <bsd.port.options.mk>
 
 .if defined(WITH_NEW_XORG)
@@ -33,11 +39,9 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-snoutlib_gldefs.h
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sea ${PREFIX}/libexec/${PORTNAME}
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/sea ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
