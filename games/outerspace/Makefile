@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/outerspace/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/outerspace/Makefile 330701 2013-10-17 23:57:30Z amdmi3 $
 
 PORTNAME=	outerspace
 PORTVERSION=	0.2.2
@@ -18,17 +18,14 @@ NO_BUILD=	yes
 SUB_FILES=	outerspace
 SUB_LIST=	PROGRAM_DIR="${PREFIX}/lib/${PORTNAME}"
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/outerspace|${PREFIX}/lib/${PORTNAME}/res|' ${WRKSRC}/outerspace
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/${PORTNAME}
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} oslauncher ${PREFIX}/lib/${PORTNAME})
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} res ${PREFIX}/lib/${PORTNAME})
-	${INSTALL_DATA} ${WRKSRC}/outerspace ${PREFIX}/lib/${PORTNAME}
-	${INSTALL_SCRIPT} ${WRKDIR}/outerspace ${PREFIX}/bin
-
-	@${ECHO_CMD}; ${CAT} ${PKGMESSAGE}; ${ECHO_CMD}
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} oslauncher ${STAGEDIR}${PREFIX}/lib/${PORTNAME})
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} res ${STAGEDIR}${PREFIX}/lib/${PORTNAME})
+	${INSTALL_DATA} ${WRKSRC}/outerspace ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKDIR}/outerspace ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
