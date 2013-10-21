@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/biloba/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/biloba/Makefile 330716 2013-10-18 01:20:59Z amdmi3 $
 
 PORTNAME=	biloba
 PORTVERSION=	0.9.3
@@ -10,9 +10,12 @@ MASTER_SITES=	SF/${PORTNAME}/Biloba/${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A strategy board game for 2 to 4 players
 
-USE_SDL=	image mixer sdl
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+USES=		gmake
+USE_SDL=	image mixer sdl
+
+PLIST_FILES=	bin/${PORTNAME} bin/${PORTNAME}-server
+PORTDATA=	*
 
 DESKTOP_ENTRIES="Biloba" \
 		"A strategy board game for 2 to 4 players" \
@@ -21,8 +24,7 @@ DESKTOP_ENTRIES="Biloba" \
 		"Game;LogicGame;" \
 		false
 
-NO_STAGE=	yes
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/biloba_icon.png ${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/biloba_icon.png ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
