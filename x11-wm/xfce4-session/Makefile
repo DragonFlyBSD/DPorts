@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-wm/xfce4-session/Makefile 328057 2013-09-23 21:25:01Z olivierd $
+# $FreeBSD: x11-wm/xfce4-session/Makefile 330350 2013-10-14 20:03:16Z olivierd $
 
 PORTNAME=	xfce4-session
 PORTVERSION=	4.10.1
@@ -39,11 +39,8 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 OPTIONS_DEFINE=	NLS
 
-MAN1=		xfce4-session.1 xfce4-session-logout.1
-
 PLIST_SUB=	VERSION="4.6"
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -54,10 +51,5 @@ PLIST_SUB+=	NLS=""
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
 
 .include <bsd.port.mk>
