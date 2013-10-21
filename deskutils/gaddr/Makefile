@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: deskutils/gaddr/Makefile 329357 2013-10-04 18:46:15Z lme $
+# $FreeBSD: deskutils/gaddr/Makefile 330379 2013-10-15 09:50:13Z bapt $
 
 PORTNAME=	gaddr
 PORTVERSION=	1.1.4
@@ -14,16 +14,7 @@ COMMENT=	GTK 1.x address book
 PLIST_FILES=	bin/gaddr
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
-WANT_GNOME=	yes
 
 MAKE_ARGS+=	PREFIX="${STAGEDIR}${PREFIX}"
 
-.include <bsd.port.pre.mk>
-
-.if ${HAVE_GNOME:Mgnomelibs}!=""
-USE_GNOME+=	gnomelibs
-PKGNAMESUFFIX=	-gnome
-CONFIGURE_ARGS+=--enable-gnome
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
