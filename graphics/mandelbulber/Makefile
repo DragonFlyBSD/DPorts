@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/mandelbulber/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/mandelbulber/Makefile 330832 2013-10-19 02:38:15Z amdmi3 $
 
 PORTNAME=	mandelbulber
 DISTVERSION=	1.13-1
@@ -11,7 +11,6 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	3D Mandelbrot fractal renderer
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gmake pkgconfig
 USE_GNOME=	glib20 gtk20
@@ -25,26 +24,19 @@ PLIST_DIRSTRY=	share/applications
 PORTDOCS=	README NEWS
 PORTDATA=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/mandelbulber|${DATADIR}|' \
 		${WRKSRC}/${PORTNAME}.desktop
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${PREFIX}/share/applications
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC}/usr/share && ${COPYTREE_SHARE} '*' ${DATADIR}/
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/usr/share && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/
 .endfor
-.endif
 
 .include <bsd.port.mk>
