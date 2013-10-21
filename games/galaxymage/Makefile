@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/galaxymage/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/galaxymage/Makefile 330398 2013-10-15 12:56:39Z bapt $
 
 PORTNAME=	galaxymage
 PORTVERSION=	0.3.0
@@ -19,15 +19,9 @@ USE_TWISTED=	yes
 USES=		gettext
 NO_BUILD=	yes
 
-OPTIONS_DEFINE=	PSYCO
-PSYCO_DESC=	Use just-in-time Python compiler
-
 NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MPSYCO}
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/psyco/_psyco.so:${PORTSDIR}/devel/py-psyco
-.endif
+.include <bsd.port.options.mk>
 
 post-configure:
 	@${REINPLACE_CMD} -e 's@%%DATADIR%%@${DATADIR}@g' ${WRKSRC}/GalaxyMage.py ${WRKSRC}/src/Resources.py
