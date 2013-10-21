@@ -1,5 +1,5 @@
 # Created by: Bill Fenner
-# $FreeBSD: editors/xml2rfc-xxe/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/xml2rfc-xxe/Makefile 330485 2013-10-16 08:17:30Z marino $
 
 PORTNAME=	xml2rfc-xxe
 PORTVERSION=	0.8.0
@@ -11,6 +11,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	xml2rfc configuration for XMLMind XML editor
 
 RUN_DEPENDS=	xxe:${PORTSDIR}/editors/xxe
+
+DEPRECATED=	Depends on editors/xxe, which is due to be removed due to lack of maintainer
+EXPIRATION_DATE=	2013-11-15
 
 USE_ZIP=	YES
 NO_BUILD=	YES
