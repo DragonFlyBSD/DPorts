@@ -1,9 +1,9 @@
 # Created by: Dirk-Willem van Gulik / dirkx@webweaving.org
-# $FreeBSD: net/widentd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/widentd/Makefile 330870 2013-10-19 14:13:27Z tijl $
 
 PORTNAME=	widentd
 PORTVERSION=	1.03
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.webweaving.org/widentd/
 EXTRACT_SUFX=	.tgz
