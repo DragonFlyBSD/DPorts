@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-modules/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/e17-modules/Makefile 330253 2013-10-13 21:11:17Z gblach $
 
 PORTNAME=	e17-modules
 PORTVERSION=	20130510
@@ -33,7 +33,6 @@ OPTIONS_DEFAULT+=	${M:tu:S,-,_,g}
 ${M:tu:S,-,_,g}_DESC=	Install ${M} module
 .endfor
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for M in ${MODULES}
