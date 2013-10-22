@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: x11-wm/e17-module-uptime/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/e17-module-uptime/Makefile 330253 2013-10-13 21:11:17Z gblach $
 
 PORTNAME=	uptime
 PORTVERSION=	20130510
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_EFL=	edje libtool_hack modarch_hack
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
