@@ -1,8 +1,9 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/edje/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/edje/Makefile 331212 2013-10-21 23:59:53Z gblach $
 
 PORTNAME=	edje
 PORTVERSION=	1.7.8
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.fr/releases/ \
@@ -17,7 +18,7 @@ DIST_SUBDIR=	e17
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USES=		pathfix pkgconfig shared-mime-info
-USE_EFL=	eet evas ecore embryo libtool_hack librt_hack
+USE_EFL=	eina eet evas ecore eio embryo libtool_hack librt_hack
 USE_EFL_EVAS_LOADERS=	eet jpeg png
 USE_EFL_ECORE=	evas file imf imf_evas
 USE_LUA=	5.1+
@@ -25,7 +26,6 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=	--without-vim
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e "/^SUBDIRS[[:space:]]+=/s/utils//" \
 	    ${WRKSRC}/Makefile.in
