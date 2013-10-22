@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.qt.mk 330266 2013-10-13 23:15:50Z rakuco $
+# $FreeBSD: Mk/bsd.qt.mk 331179 2013-10-21 19:47:02Z makc $
 #
 # Variables:
 # QT_NONSTANDARD	- Suppress modification of configure and make environment.
@@ -334,6 +334,9 @@ QMAKESPEC?=	${QT_PREFIX}/share/qt4/mkspecs/freebsd-${QMAKE_COMPILER}
 .else
 # If something went wrong, default to the base configuration.
 QMAKESPEC?=	${QT_PREFIX}/share/qt4/mkspecs/freebsd-${QMAKE_BASE_COMPILER}
+QMAKE_ARGS+=	QMAKE_CC="${CC}" QMAKE_CXX="${CXX}" \
+		QMAKE_LINK="${CXX}" QMAKE_LINK_SHLIB="${CXX}" \
+		QMAKE_LINK_C="${CC}" QMAKE_LINK_C_SHLIB="${CC}"
 .endif
 
 .for component in ${_USE_QT4_ALL}

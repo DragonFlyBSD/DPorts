@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.stage.mk 330020 2013-10-10 17:09:33Z antoine $
+# $FreeBSD: Mk/bsd.stage.mk 331136 2013-10-21 13:09:15Z rene $
 #
 
 STAGEDIR?=	${WRKDIR}/stage
@@ -16,9 +16,9 @@ stage-dir:
 	@${MKDIR} ${STAGEDIR}${PREFIX}
 .if !defined(NO_MTREE)
 	@${MTREE_CMD} ${MTREE_ARGS} ${STAGEDIR}${PREFIX} > /dev/null
-.if defined(USE_LINUX) && ${PREFIX} != ${LINUXBASE_REL}
-	@${MKDIR} ${STAGEDIR}${LINUXBASE_REL}
-	@${MTREE_CMD} ${MTREE_LINUX_ARGS} ${STAGEDIR}${LINUXBASE_REL} > /dev/null
+.if defined(USE_LINUX) && ${PREFIX} != ${LINUXBASE}
+	@${MKDIR} ${STAGEDIR}${LINUXBASE}
+	@${MTREE_CMD} ${MTREE_LINUX_ARGS} ${STAGEDIR}${LINUXBASE} > /dev/null
 .endif
 .endif
 .endif

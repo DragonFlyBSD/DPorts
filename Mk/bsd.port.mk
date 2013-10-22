@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 330960 2013-10-20 02:06:40Z bdrewery $
+# $FreeBSD: Mk/bsd.port.mk 331119 2013-10-21 09:56:26Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -4601,7 +4601,7 @@ reinstall:
 
 .if !target(restage)
 restage:
-	@${RM} -rf ${STAGE_DESTDIR} ${STAGE_COOKIE} ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
+	@${RM} -rf ${STAGEDIR} ${STAGE_COOKIE} ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 	@cd ${.CURDIR} && ${MAKE} stage
 .endif
 

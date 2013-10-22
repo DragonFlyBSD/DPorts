@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: Mk/Scripts/qa.sh 330810 2013-10-19 00:17:10Z bapt $
+# $FreeBSD: Mk/Scripts/qa.sh 331046 2013-10-20 18:12:49Z ak $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -93,7 +93,18 @@ sharedmimeinfo() {
 	return 0
 }
 
-checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
+suidfiles() {
+	filelist=`find ${STAGEDIR} -type f \
+		\( -perm -u+x -or -perm -g+x -or -perm -o+x \) \
+		\( -perm -u+s -or -perm -g+s \)`
+	if [ -n "${filelist}" ]; then
+		warn "setuid files in the stage directory (are these necessary?):"
+		ls -liTd ${filelist}
+	fi
+	return 0
+}
+
+checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo suidfiles"
 
 ret=0
 cd ${STAGEDIR}
