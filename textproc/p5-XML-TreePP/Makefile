@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-TreePP/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-TreePP/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	XML-TreePP
 PORTVERSION=	0.41
@@ -17,7 +17,7 @@ MAN3=		XML::TreePP.3
 
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/example/envxml.cgi ${EXAMPLESDIR}
 
 .include <bsd.port.mk>
