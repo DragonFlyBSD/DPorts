@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBI/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	DBI
 PORTVERSION=	1.628
@@ -83,7 +83,7 @@ RUN_DEPENDS+=	p5-PlRPC>=0.2001:${PORTSDIR}/net/p5-PlRPC
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
