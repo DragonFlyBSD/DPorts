@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/schroedinger/Makefile 327750 2013-09-20 21:49:30Z mm $
+# $FreeBSD: multimedia/schroedinger/Makefile 330675 2013-10-17 21:09:19Z madpilot $
 
 PORTNAME=	schroedinger
 PORTVERSION=	1.0.11
@@ -16,14 +16,12 @@ LICENSE_COMB=	dual
 LICENSE_FILE_MIT=	${WRKSRC}/COPYING.MIT
 LICENSE_FILE_MPL=	${WRKSRC}/COPYING.MPL
 
-LIB_DEPENDS=	orc-0.4:${PORTSDIR}/devel/orc
-BUILD_DEPENDS=	orc>=0.4.16:${PORTSDIR}/devel/orc
+LIB_DEPENDS=	liborc-0.4.so:${PORTSDIR}/devel/orc
 
 USES=		pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^pkgconfigdir=.*|pkgconfigdir="\\$${prefix}/libdata/pkgconfig"|' \
 		-e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
