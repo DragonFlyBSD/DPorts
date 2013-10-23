@@ -1,5 +1,7 @@
-@comment $FreeBSD: net/rsync/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: net/rsync/pkg-plist 331355 2013-10-23 07:27:13Z ehaupt $
 bin/rsync
+man/man1/rsync.1.gz
+man/man5/rsyncd.conf.5.gz
 @unexec if cmp -s %D/etc/rsyncd.conf.sample %D/etc/rsyncd.conf; then rm -f %D/etc/rsyncd.conf; fi
 etc/rsyncd.conf.sample
 @exec [ -f %B/rsyncd.conf ] || cp %B/%f %B/rsyncd.conf
