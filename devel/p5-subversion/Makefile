@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-subversion/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-subversion/Makefile 330360 2013-10-14 20:56:34Z ohauer $
 
 PKGNAMEPREFIX=	p5-
 
@@ -17,29 +17,20 @@ PKGDIR=		${.CURDIR}
 
 USES=		perl5
 
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
-MAN3=		SVN::Base.3 \
-		SVN::Client.3 \
-		SVN::Core.3 \
-		SVN::Delta.3 \
-		SVN::Fs.3 \
-		SVN::Ra.3 \
-		SVN::Repos.3 \
-		SVN::Wc.3
-
 SVN_BUILD_BINDINGS=yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 CATEGORIES+=	perl5
 
 do-build:
-	cd ${WRKSRC} ; ${MAKE} swig-pl-lib ; ${MAKE} swig-pl
+	${MAKE} -C ${WRKSRC} swig-pl-lib ${MAKE_ARGS}
+	${MAKE} -C ${WRKSRC} swig-pl ${MAKE_ARGS}
+
+pre-install:
+	${REINPLACE_CMD} '/SWIG_PL_DIR/s, install$$, all pure_install,g' ${WRKSRC}/Makefile
 
 do-install:
-	cd ${WRKSRC} ; \
-	${REINPLACE_CMD} '/SWIG_PL_DIR/s, install$$, all pure_install,g' ${WRKSRC}/Makefile ; \
-	${MAKE} install-swig-pl
+	${MAKE} -C ${WRKSRC} install-swig-pl ${MAKE_ARGS}
 
 .include <bsd.port.post.mk>
