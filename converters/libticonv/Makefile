@@ -1,7 +1,8 @@
-# $FreeBSD: converters/libticonv/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/libticonv/Makefile 331283 2013-10-22 15:59:35Z tijl $
 
 PORTNAME=	libticonv
 PORTVERSION=	1.1.4
+PORTREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	SF/tilp/tilp2-linux/tilp2-1.17
 
@@ -12,10 +13,11 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 
-NO_STAGE=	yes
+post-patch:
+	@${REINPLACE_CMD} -e 's/Requires/&.private/' ${WRKSRC}/ticonv.pc.in
+
 .include <bsd.port.mk>
