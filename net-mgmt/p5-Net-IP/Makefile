@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 331029 2013-10-20 15:29:02Z eadler $
 
 PORTNAME=	Net-IP
 PORTVERSION=	1.26
@@ -13,9 +13,6 @@ COMMENT=	Perl extension for manipulating IPv4/IPv6 addresses
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::IP.3
-
-NO_STAGE=	yes
 post-configure:
 	${PERL} -pi -e 's/-I\S+PERL\S+ //g if m{PERL_DL_NONLAZY}' ${WRKSRC}/Makefile
 
