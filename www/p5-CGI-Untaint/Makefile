@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: www/p5-CGI-Untaint/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/p5-CGI-Untaint/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	CGI-Untaint
 PORTVERSION=	1.26
@@ -26,7 +26,7 @@ PORTDOCS=	Changes
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
