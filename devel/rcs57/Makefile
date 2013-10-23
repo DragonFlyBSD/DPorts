@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rcs57/Makefile 329727 2013-10-07 19:23:25Z cy $
+# $FreeBSD: devel/rcs57/Makefile 331184 2013-10-21 20:09:43Z cy $
 
 PORTNAME=	rcs
 PORTVERSION=	5.7
@@ -9,6 +9,10 @@ PKGNAMESUFFIX=	57
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Version control system (as was in FreeBSD prior to removal)
+
+OPTIONS_DEFINE=	FREEBSD
+OPTIONS_DEFAULT=	FREEBSD
+FREEBSD_DESC=	Apply FreeBSD patches
 
 CONFLICTS=	rcs-5.[89]*
 LICENSE=	GPLv2
@@ -21,4 +25,22 @@ MAN1=	ci.1 co.1 ident.1 merge.1 rcs.1 rcsclean.1 rcsdiff.1 rcsintro.1 \
 MAN5=	rcsfile.5
 
 NO_STAGE=	yes
-.include <bsd.port.mk>
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MFREEBSD}
+EXTRA_PATCHES+=	${FILESDIR}/freebsd-src-ident.c \
+		${FILESDIR}/freebsd-src-maketime.c \
+		${FILESDIR}/freebsd-src-rcsbase.h \
+		${FILESDIR}/freebsd-src-rcsedit.c \
+		${FILESDIR}/freebsd-src-rcsfnms.c \
+		${FILESDIR}/freebsd-src-rcskeep.c \
+		${FILESDIR}/freebsd-src-rcskeys.c \
+		${FILESDIR}/freebsd-src-rcsrev.c \
+		${FILESDIR}/freebsd-src-rcsutil.c \
+		${FILESDIR}/freebsd-src-rcsdiff.c \
+		${FILESDIR}/freebsd-src-rlog.c
+
+.endif
+
+.include <bsd.port.post.mk>
