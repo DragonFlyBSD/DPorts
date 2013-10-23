@@ -1,9 +1,9 @@
 # Created by: Oliver Braun
-# $FreeBSD: devel/libvc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libvc/Makefile 331072 2013-10-20 23:32:25Z jgh $
 
 PORTNAME=	libvc
 PORTVERSION=	003
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	SF/rolo/${PORTNAME}/${PORTVERSION}
 
@@ -16,23 +16,14 @@ USES=		bison
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAN3=		vc.3
-PLIST_FILES=	lib/libvc.a \
-		lib/libvc.so \
-		lib/libvc.so.0 \
-		include/vc.h
-PORTDOCS=	*
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for DOC in AUTHORS ChangeLog NEWS README THANKS doc/rfc2426.txt
-	${INSTALL_DATA} ${WRKSRC}/${DOC} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${DOC} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
-	@${RM} -f ${PREFIX}/lib/libvc.la
 
 .include <bsd.port.mk>
