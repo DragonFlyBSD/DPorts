@@ -1,9 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/xmlrpc-c/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/xmlrpc-c/Makefile 331334 2013-10-22 22:16:49Z garga $
 
 PORTNAME=	xmlrpc-c
-PORTVERSION=	1.25.23
-PORTREVISION=	1
+PORTVERSION=	1.25.26
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Xmlrpc-c%20Super%20Stable/${PORTVERSION}
 EXTRACT_SUFX=	.tgz
@@ -29,7 +28,6 @@ MAKE_ARGS=	LIBTOOL="${LIBTOOL}" \
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if empty(PORT_OPTIONS:MDEBUG)
