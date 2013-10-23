@@ -1,0 +1,20 @@
+--- configure.intermediate	2013-10-23 15:51:17.797659000 +0000
++++ configure
+@@ -26521,7 +26521,7 @@ fi
+             default_enable_gnomevfs=no
+             default_enable_samba=no
+             ;;
+-        freebsd*|kfreebsd*)
++        freebsd*|kfreebsd*|dragonfly*)
+             default_enable_vcdo=yes
+             ;;
+         netbsd* | openbsd*)
+@@ -26554,7 +26554,7 @@ fi
+ 
+     if test x"$enable_dvb" != x"no"; then
+         case "$host_os" in
+-            linux*|freebsd*) have_dvb=yes ;;
++            linux*|freebsd*|dragonfly*) have_dvb=yes ;;
+             *) have_dvb=no ;;
+         esac
+         if test x"$hard_enable_dvb" = x"yes" && test x"$have_dvb" != x"yes"; then

@@ -1,2 +1,2 @@
-CONFIGURE_ARGS:= ${CONFIGURE_ARGS:S/--enable-dvb//}
+CONFIGURE_ARGS+= --enable-vdpau
 LDFLAGS+=	-lintl
