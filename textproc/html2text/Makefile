@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: textproc/html2text/Makefile 328547 2013-09-28 03:41:03Z eadler $
+# $FreeBSD: textproc/html2text/Makefile 331410 2013-10-23 18:58:57Z eadler $
 
 PORTNAME=	html2text
 PORTVERSION=	1.3.2a
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/html2text.1.gz ${STAGEDIR}${MANPREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/html2textrc.5.gz ${STAGEDIR}${MANPREFIX}/man/man5
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for fle in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${fle} ${STAGEDIR}${DOCSDIR}
 .endfor
