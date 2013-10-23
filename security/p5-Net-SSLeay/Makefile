@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: security/p5-Net-SSLeay/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Net-SSLeay/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Net-SSLeay
 PORTVERSION=	1.55
@@ -35,7 +35,7 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${EXAMPLESDIR}/
 	${INSTALL_DATA} ${WRKSRC}/examples/req.conf ${EXAMPLESDIR}/req.conf
 .endif
