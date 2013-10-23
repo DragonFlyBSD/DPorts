@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/liboil/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: devel/liboil/Makefile 330858 2013-10-19 11:07:36Z tijl $
 #    $MCom: ports/devel/liboil/Makefile,v 1.7 2008/03/23 06:57:57 marcus Exp $
 
 PORTNAME=	liboil
@@ -13,7 +13,7 @@ COMMENT=	Library of optimized inner loops
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		pathfix pkgconfig
+USES=		pkgconfig
 USE_GNOME=	ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -21,19 +21,8 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--disable-glib
 CFLAGS:=	${CFLAGS:N-O*} -O2
 
-_COMPILER_VERSION!=	${CC} --version
-.if ${_COMPILER_VERSION:Mclang}
-CFLAGS+=	-fheinous-gnu-extensions
-.endif
-
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|\\$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|<stdint\.h|<inttypes.h|g' \
-		${WRKSRC}/liboil/liboiltypes.h \
-		${WRKSRC}/liboil/liboilprofile.h \
-		${WRKSRC}/liboil/liboil.h
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
