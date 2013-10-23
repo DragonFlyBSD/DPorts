@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: sysutils/garcon/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/garcon/Makefile 330344 2013-10-14 19:18:17Z olivierd $
 
 PORTNAME=	garcon
 PORTVERSION=	0.2.1
@@ -13,14 +13,12 @@ COMMENT=	Xfce 4 essential utilities and scripts
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20 intltool intlhack
 USE_XFCE=	configenv libutil
-USES=		pathfix pkgconfig
+USES=		pathfix pkgconfig gmake
 
 OPTIONS_DEFINE=		DOCS NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
