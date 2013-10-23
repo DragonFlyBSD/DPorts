@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-Spiffy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Spiffy/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Spiffy
 PORTVERSION=	0.31
@@ -27,7 +27,7 @@ NO_STAGE=	yes
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
