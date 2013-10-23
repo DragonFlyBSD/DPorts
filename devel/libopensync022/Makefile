@@ -1,19 +1,19 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/libopensync022/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libopensync022/Makefile 331153 2013-10-21 16:20:56Z danilo $
 
 PORTNAME=	libopensync
 PORTVERSION=	0.22
 PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
+PKGNAMESUFFIX=	022
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Freedesktop synchronization framework
 
-BUILD_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
-LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3
-RUN_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
+LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 
+SWIG_LANGUAGES=	python
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
@@ -23,15 +23,6 @@ USE_GNOME=	glib20 libxml2
 USE_LDCONFIG=	yes
 
 CONFLICTS=	libopensync-0.[3-9]*
-
-LATEST_LINK=	libopensync022
-
-NO_STAGE=	yes
-pre-everything::
-	@${ECHO_MSG} "NOTE: You may want to avoid extra dependencies"
-	@${ECHO_MSG} " from devel/swig13 by building with the following"
-	@${ECHO_MSG} " SWIG_LANGUAGES=\"perl python\""
-	@${ECHO_MSG}
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile*" | ${XARGS} ${REINPLACE_CMD} \
