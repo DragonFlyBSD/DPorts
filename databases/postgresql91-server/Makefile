@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql91-server/Makefile 330109 2013-10-12 00:59:50Z girgen $
+# $FreeBSD: databases/postgresql91-server/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	9.1.10
@@ -7,8 +7,7 @@ PORTREVISION?=	0
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL
 MASTER_SITE_SUBDIR=	source/v${DISTVERSION}
-PKGNAMESUFFIX?=	${DISTV:S/.//}-server
-DISTV=	${DISTVERSION:R}
+PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 COMMENT?=	The most advanced open-source database available anywhere
