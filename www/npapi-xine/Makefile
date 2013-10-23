@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/npapi-xine/Makefile 326991 2013-09-11 16:45:58Z marino $
+# $FreeBSD: www/npapi-xine/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	xine
 PORTVERSION=	1.0.2
@@ -22,5 +22,6 @@ NPAPI_ID=	${PORTNAME}
 NPAPI_WRKSRC=	${WRKSRC}/src/.libs
 NPAPI_FILES=	xineplugin.so
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.npapi.mk"
 .include <bsd.port.mk>
