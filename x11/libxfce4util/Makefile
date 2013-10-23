@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11/libxfce4util/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libxfce4util/Makefile 330345 2013-10-14 19:42:26Z olivierd $
 
 PORTNAME=	libxfce4util
 PORTVERSION=	4.10.1
@@ -20,7 +20,6 @@ USES=		gmake pathfix perl5 pkgconfig
 
 OPTIONS_DEFINE=		NLS DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
