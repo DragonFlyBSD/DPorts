@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/iconv.mk 326683 2013-09-07 19:49:41Z bsam $
+# $FreeBSD: Mk/Uses/iconv.mk 331388 2013-10-23 15:05:04Z uqs $
 #
 # handle dependency on the iconv port
 #

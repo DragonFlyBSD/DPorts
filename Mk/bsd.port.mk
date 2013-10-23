@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 331119 2013-10-21 09:56:26Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 331342 2013-10-23 00:43:04Z bdrewery $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -6668,8 +6668,6 @@ check-desktop-entries:
 .if !target(install-desktop-entries)
 install-desktop-entries:
 .if defined(DESKTOP_ENTRIES)
-	@(${MKDIR} "${STAGEDIR}${DESKTOPDIR}" 2> /dev/null) || \
-		(${ECHO_MSG} "===> Cannot create ${DESKTOPDIR}, check permissions"; exit 1)
 	@set -- ${DESKTOP_ENTRIES} XXX; \
 	if [ -z "${_DESKTOPDIR_REL}" ]; then \
 		${ECHO_CMD} "@cwd ${DESKTOPDIR}" >> ${TMPPLIST}; \
@@ -6702,7 +6700,6 @@ install-desktop-entries:
 		fi; \
 		shift 6; \
 	done; \
-	${ECHO_CMD} "@unexec rmdir ${DESKTOPDIR} 2>/dev/null || true" >> ${TMPPLIST}; \
 	if [ -z "${_DESKTOPDIR_REL}" ]; then \
 		${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}; \
 	fi
