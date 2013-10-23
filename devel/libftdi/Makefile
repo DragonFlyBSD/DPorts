@@ -1,5 +1,5 @@
 # Created by: Olexandr Davydenko <o.davydenko@gmail.com>
-# $FreeBSD: devel/libftdi/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libftdi/Makefile 331224 2013-10-22 07:46:52Z amdmi3 $
 
 PORTNAME=	libftdi
 PORTVERSION=	0.20
@@ -21,14 +21,13 @@ USES=			pathfix pkgconfig
 
 PORTDOCS=		COPYING.LIB ChangeLog README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBOOST}
 PLIST_SUB+=		BOOST=""
 CONFIGURE_ARGS+=	--with-boost
 CXXFLAGS+=		"-I${LOCALBASE}/include"
-LIB_DEPENDS+=		boost_system:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS+=		libboost_system.so:${PORTSDIR}/devel/boost-libs
 .else
 PLIST_SUB+=		BOOST="@comment "
 CONFIGURE_ARGS+=	--without-boost
@@ -49,6 +48,9 @@ USES+= usb
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-configure.in
 .endif
 
+OPTIONS_DEFINE=		DOCS
+OPTIONS_DEFAULT=	DOCS
+
 post-patch:
 	@${REINPLACE_CMD} -E -e \
 		's:\$$\(libdir\)/pkgconfig:${PREFIX}/libdata/pkgconfig:' \
@@ -58,9 +60,7 @@ pre-configure:
 	@cd ${WRKSRC} && ${AUTORECONF} --force --install
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
