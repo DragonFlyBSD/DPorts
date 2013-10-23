@@ -1,0 +1,10 @@
+post-patch:
+	@${REINPLACE_CMD} -e '/@exit 0/d' \
+		${WRKSRC}/Makefile.SH \
+		${WRKSRC}/src/Makefile.SH \
+		${WRKSRC}/src/core/Makefile.SH \
+		${WRKSRC}/src/lib/Makefile.SH \
+		${WRKSRC}/pixmaps/Makefile.SH \
+		${WRKSRC}/extra_files/Makefile.SH \
+		${WRKSRC}/extra_files/tr/Makefile.SH \
+		${WRKSRC}/extra_files/fr/Makefile.SH

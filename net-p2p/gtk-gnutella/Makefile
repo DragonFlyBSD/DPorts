@@ -1,5 +1,5 @@
 # Created by: rbt@zort.on.ca
-# $FreeBSD: net-p2p/gtk-gnutella/Makefile 327124 2013-09-13 01:21:55Z marino $
+# $FreeBSD: net-p2p/gtk-gnutella/Makefile 327758 2013-09-20 22:28:25Z bapt $
 
 #
 # A quick note on configurable make symbols:
@@ -52,6 +52,7 @@ PORTABILITY_DESC=	Use the PATH variable at run-time
 
 ONLY_FOR_ARCHS=	i386 amd64
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	glib20 libxml2
 USES=		bison perl5 pkgconfig
