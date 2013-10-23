@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-channel-horde/bsd.horde.mk 325518 2013-08-28 11:48:25Z mm $
+# $FreeBSD: devel/pear-channel-horde/bsd.horde.mk 331297 2013-10-22 16:36:14Z mm $
 
 MASTER_SITES?=	http://pear.horde.org/get/
 
@@ -66,6 +66,7 @@ horde-Horde_Mail-DEPEND=	${PEARDIR}/Horde/Mail/Transport.php:${PORTSDIR}/mail/pe
 horde-Horde_Memcache-DEPEND=	${PEARDIR}/Horde/Memcache.php:${PORTSDIR}/databases/pear-Horde_Memcache
 horde-Horde_Mime-DEPEND=	${PEARDIR}/Horde/Mime.php:${PORTSDIR}/mail/pear-Horde_Mime
 horde-Horde_Mime_Viewer-DEPEND=	${PEARDIR}/Horde/Mime/Viewer.php:${PORTSDIR}/mail/pear-Horde_Mime_Viewer
+horde-Horde_Mongo-DEPEND=	${PEARDIR}/Horde/Mongo/Client.php:${PORTSDIR}/databases/pear-Horde_Mongo
 horde-Horde_Nls-DEPEND=		${PEARDIR}/Horde/Nls.php:${PORTSDIR}/devel/pear-Horde_Nls
 horde-Horde_Notification-DEPEND=	${PEARDIR}/Horde/Notification.php:${PORTSDIR}/devel/pear-Horde_Notification
 horde-Horde_Oauth-DEPEND=	${PEARDIR}/Horde/Oauth/Consumer.php:${PORTSDIR}/security/pear-Horde_Oauth
@@ -84,6 +85,7 @@ horde-Horde_Scheduler-DEPEND=	${PEARDIR}/Horde/Scheduler.php:${PORTSDIR}/devel/p
 horde-Horde_Scribe-DEPEND=	${PEARDIR}/Horde/Scribe.php:${PORTSDIR}/net/pear-Horde_Scribe
 horde-Horde_Share-DEPEND=	${PEARDIR}/Horde/Share/Base.php:${PORTSDIR}/security/pear-Horde_Share
 horde-Horde_Smtp-DEPEND=	${PEARDIR}/Horde/Smtp.php:${PORTSDIR}/mail/pear-Horde_Smtp
+horde-Horde_Socket_Client-DEPEND=	${PEARDIR}/Horde/Socket/Client.php:${PORTSDIR}/net/pear-Horde_Socket_Client
 horde-Horde_SpellChecker-DEPEND=	${PEARDIR}/Horde/SpellChecker.php:${PORTSDIR}/textproc/pear-Horde_SpellChecker
 horde-Horde_Stream-DEPEND=	${PEARDIR}/Horde/Stream.php:${PORTSDIR}/devel/pear-Horde_Stream
 horde-Horde_Stream_Filter-DEPEND=	${PEARDIR}/Horde/Stream/Filter/Crc32.php:${PORTSDIR}/devel/pear-Horde_Stream_Filter
