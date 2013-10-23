@@ -1,5 +1,5 @@
 # Created by: thinker@branda.to
-# $FreeBSD: devel/py-subversion/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-subversion/Makefile 330360 2013-10-14 20:56:34Z ohauer $
 
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,15 +19,15 @@ USE_PYTHON=	yes
 
 SVN_BUILD_BINDINGS=	yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 CATEGORIES+=	python
 
 do-build:
-	cd ${WRKSRC} ; ${MAKE} swig-py-lib ; ${MAKE} swig-py
+	${MAKE} -C ${WRKSRC} swig-py-lib ${MAKE_ARGS}
+	${MAKE} -C ${WRKSRC} swig-py ${MAKE_ARGS}
 
 do-install:
-	cd ${WRKSRC} ; ${MAKE} install-swig-py
+	${MAKE} -C ${WRKSRC} install-swig-py ${MAKE_ARGS}
 
 .include <bsd.port.post.mk>
