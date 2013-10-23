@@ -1,4 +1,4 @@
-# $FreeBSD: irc/irssi/Makefile 329884 2013-10-09 11:42:06Z vanilla $
+# $FreeBSD: irc/irssi/Makefile 331144 2013-10-21 14:42:24Z vanilla $
 
 PORTNAME=	irssi
 PORTVERSION=	0.8.15
@@ -16,6 +16,7 @@ CONFLICTS=	irssi-devel-[0-9]* zh-irssi-[0-9]*
 USES=		pkgconfig ncurses gmake
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-ncurses=${NCURSESBASE}
 
 OPTIONS_DEFINE=	PERL PROXY SOCKS IPV6 BOT DOCS
 SOCKS_DESC=	Socks proxy support
