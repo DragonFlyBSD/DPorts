@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/cego/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/cego/Makefile 331221 2013-10-22 04:55:32Z danilo $
 
 PORTNAME=	cego
-PORTVERSION=	2.19.6
+PORTVERSION=	2.19.7
 CATEGORIES=	databases
 MASTER_SITES=	http://www.lemke-it.com/
 
@@ -11,8 +11,8 @@ COMMENT=	Relational and transactional database system
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	lfcbase:${PORTSDIR}/devel/lfcbase \
-		lfcxml:${PORTSDIR}/devel/lfcxml
+LIB_DEPENDS=	liblfcbase.so:${PORTSDIR}/devel/lfcbase \
+		liblfcxml.so:${PORTSDIR}/devel/lfcxml
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -28,7 +28,6 @@ GROUPS=	cego
 
 PLIST_SUB+=	USER=${USERS}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,-O3,,g' \
 		${WRKSRC}/src/Makefile.in \
@@ -36,7 +35,7 @@ post-patch:
 		${WRKSRC}/samples/cgwraptest/Makefile.in
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/cego
-	@${CP} ${WRKSRC}/tools/* ${PREFIX}/share/cego/
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	@${CP} ${WRKSRC}/tools/* ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
