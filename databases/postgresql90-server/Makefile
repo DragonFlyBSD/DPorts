@@ -1,10 +1,9 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql90-server/Makefile 330109 2013-10-12 00:59:50Z girgen $
+# $FreeBSD: databases/postgresql90-server/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
 
 DISTVERSION?=	9.0.14
 PORTREVISION=	0
-PKGNAMESUFFIX?=	${DISTV:S/.//}-server
-DISTV=	${DISTVERSION:R}
+PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 
