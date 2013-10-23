@@ -1,5 +1,5 @@
 # Created by: Matthew Dillon <dillon@backplane.com>
-# $FreeBSD: java/jikes/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jikes/Makefile 330460 2013-10-15 21:17:55Z eadler $
 
 PORTNAME=	jikes
 PORTVERSION=	1.22
@@ -8,7 +8,7 @@ CATEGORIES=	java
 MASTER_SITES=	SF/${PORTNAME}/Jikes/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A very fast Java source to byte-code compiler made available by IBM
+COMMENT=	Java source to byte-code compiler made available by IBM
 
 MAN1=		jikes.1
 
