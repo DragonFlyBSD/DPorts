@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libxml/Makefile 330392 2013-10-15 12:12:07Z bapt $
 
 PORTNAME=	libxml
 PORTVERSION=	1.8.17
@@ -11,6 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	XML parser library for GNOME
 
 DEPRECATED=	Last release in 2002, unsupported by developers
+EXPIRATION_DATE=	2013-11-05
 
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
