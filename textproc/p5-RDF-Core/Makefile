@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-RDF-Core/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-RDF-Core/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	RDF-Core
 PORTVERSION=	0.51
@@ -40,7 +40,7 @@ post-install:
 	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
 .for DOCDIR in ${DOCSUBDIR}
 	@${MKDIR} ${DOCSDIR}/${DOCDIR}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${DOCDIR}/*.html	${DOCSDIR}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${DOCDIR}/*.html	${DOCSDIR}/${DOCDIR}
 .endfor
 .endif
 
