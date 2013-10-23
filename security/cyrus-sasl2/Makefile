@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2/Makefile 328083 2013-09-24 02:16:35Z danfe $
+# $FreeBSD: security/cyrus-sasl2/Makefile 330242 2013-10-13 18:35:41Z ume $
 
 PORTNAME=	cyrus-sasl
 PORTVERSION=	2.1.26
@@ -13,15 +13,12 @@ COMMENT=	RFC 2222 SASL (Simple Authentication and Security Layer)
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LATEST_LINK=	${PORTNAME}2
-
 USES=		perl5
 USE_PERL5=	patch
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
-NO_STAGE=	yes
 
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-configdir=${PREFIX}/lib/sasl2:${PREFIX}/etc/sasl2 \
@@ -38,23 +35,6 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}2
 
-MAN3=		sasl.3 sasl_authorize_t.3 sasl_auxprop.3 \
-		sasl_auxprop_getctx.3 sasl_auxprop_request.3 \
-		sasl_callbacks.3 sasl_canon_user_t.3 \
-		sasl_chalprompt_t.3 sasl_checkapop.3 sasl_checkpass.3 \
-		sasl_client_init.3 sasl_client_new.3 sasl_client_start.3 \
-		sasl_client_step.3 sasl_decode.3 sasl_dispose.3 sasl_done.3 \
-		sasl_encode.3 sasl_encodev.3 sasl_errdetail.3 sasl_errors.3 \
-		sasl_errstring.3 sasl_getconfpath_t.3 sasl_getopt_t.3 \
-		sasl_getpath_t.3 sasl_getprop.3 sasl_getrealm_t.3 \
-		sasl_getsecret_t.3 sasl_getsimple_t.3 sasl_global_listmech.3 \
-		sasl_idle.3 sasl_listmech.3 sasl_log_t.3 \
-		sasl_server_init.3 sasl_server_new.3 sasl_server_start.3 \
-		sasl_server_step.3 sasl_server_userdb_checkpass_t.3 \
-		sasl_server_userdb_setpass_t.3 sasl_setpass.3 sasl_setprop.3 \
-		sasl_user_exists.3 sasl_verifyfile_t.3
-MAN8=		pluginviewer.8 sasldblistusers2.8 saslpasswd2.8
-
 NO_OPTIONS_SORT=	yes
 OPTIONS_DEFINE=		ALWAYSTRUE AUTHDAEMOND KEEP_DB_OPEN \
 			OBSOLETE_CRAM_ATTR BDB MYSQL PGSQL
@@ -62,62 +42,59 @@ OPTIONS_RADIO=		SQLITE
 OPTIONS_RADIO_SQLITE=	SQLITE2 SQLITE3
 OPTIONS_GROUP=		MECH
 OPTIONS_GROUP_MECH=	CRAM DIGEST LOGIN NTLM OTP PLAIN SCRAM
-OPTIONS_DEFAULT=	AUTHDAEMOND OBSOLETE_CRAM_ATTR CRAM DIGEST LOGIN NTLM \
-			OTP PLAIN SCRAM
+OPTIONS_DEFAULT=	AUTHDAEMOND OBSOLETE_CRAM_ATTR CRAM DIGEST \
+			LOGIN NTLM OTP PLAIN SCRAM
+OPTIONS_SUB=		yes
 ALWAYSTRUE_DESC=	the alwaystrue password verifier
+ALWAYSTRUE_CONFIGURE_ENABLE=alwaystrue
 AUTHDAEMOND_DESC=	use of authdaemon
+AUTHDAEMOND_CONFIGURE_ON=--with-authdaemond=/var/run/authdaemond/socket
+AUTHDAEMOND_CONFIGURE_OFF=--with-authdaemond=no
 KEEP_DB_OPEN_DESC=	Keep handle to Berkeley DB open
+KEEP_DB_OPEN_CONFIGURE_ENABLE=keep-db-open
 OBSOLETE_CRAM_ATTR_DESC=cmusaslsecretCRAM-MD5 property
+OBSOLETE_CRAM_ATTR_CONFIGURE_OFF=--enable-obsolete_cram_attr=no
+BDB_USE=		BDB=yes
+BDB_CONFIGURE_ON=	--with-dblib=berkeley \
+			--with-bdb-libdir=${BDB_LIB_DIR} \
+			--with-bdb-incdir=${BDB_INCLUDE_DIR} \
+			--with-bdb=${BDB_LIB_NAME}
+BDB_CONFIGURE_OFF=	--with-dblib=ndbm
+MYSQL_USE=		MYSQL=yes
+MYSQL_CONFIGURE_ON=	--with-mysql=${LOCALBASE}
+MYSQL_CONFIGURE_OFF=	--without-mysql
+PGSQL_USE=		PGSQL=yes
+PGSQL_CONFIGURE_ON=	--with-pgsql=${LOCALBASE}
+PGSQL_CONFIGURE_OFF=	--without-pgsql
 SQLITE2_DESC=		SQLite 2 database
+SQLITE2_USE=		SQLITE=2
+SQLITE2_CONFIGURE_ON=	--with-sqlite=${LOCALBASE}
+SQLITE2_CONFIGURE_OFF=	--without-sqlite
+SQLITE3_USE=		SQLITE=3
+SQLITE3_CONFIGURE_ON=	--with-sqlite3=${LOCALBASE}
+SQLITE3_CONFIGURE_OFF=	--without-sqlite3
 CRAM_DESC=		CRAM-MD5 authentication
+CRAM_CONFIGURE_ENABLE=	cram
 DIGEST_DESC=		DIGEST-MD5 authentication
+DIGEST_CONFIGURE_ENABLE=digest
 LOGIN_DESC=		LOGIN authentication
+LOGIN_CONFIGURE_ENABLE=	login
 NTLM_DESC=		NTLM authentication
+NTLM_CONFIGURE_ENABLE=	ntlm
 OTP_DESC=		OTP authentication
+OTP_CONFIGURE_ENABLE=	otp
 PLAIN_DESC=		PLAIN authentication
+PLAIN_CONFIGURE_ENABLE=	plain
 SCRAM_DESC=		SCRAM authentication
+SCRAM_CONFIGURE_ENABLE=	scram
 
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MBDB}
-USE_BDB=	yes
 INVALID_BDB_VER=2
-CONFIGURE_ARGS+=--with-dblib=berkeley \
-		--with-bdb-libdir=${BDB_LIB_DIR} \
-		--with-bdb-incdir=${BDB_INCLUDE_DIR} \
-		--with-bdb=${BDB_LIB_NAME}
 SASLDB_NAME=	sasldb2
 .else
-CONFIGURE_ARGS+=--with-dblib=ndbm
 SASLDB_NAME=	sasldb2.db
-.endif
-
-.if ${PORT_OPTIONS:MMYSQL}
-USE_MYSQL=	yes
-CONFIGURE_ARGS+=--with-mysql=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=--without-mysql
-.endif
-
-.if ${PORT_OPTIONS:MPGSQL}
-USE_PGSQL=	yes
-CONFIGURE_ARGS+=--with-pgsql=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=--without-pgsql
-.endif
-
-.if ${PORT_OPTIONS:MSQLITE2}
-USE_SQLITE=	2
-CONFIGURE_ARGS+=--with-sqlite=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=--without-sqlite
-.endif
-
-.if ${PORT_OPTIONS:MSQLITE3}
-USE_SQLITE=	3
-CONFIGURE_ARGS+=--with-sqlite3=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=--without-sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MMYSQL} || ${PORT_OPTIONS:MPGSQL} || \
@@ -125,62 +102,6 @@ CONFIGURE_ARGS+=--without-sqlite3
 CONFIGURE_ARGS+=--enable-sql
 .else
 SQL=	"@comment "
-.endif
-
-.if ${PORT_OPTIONS:MALWAYSTRUE}
-CONFIGURE_ARGS+=--enable-alwaystrue
-.endif
-
-.if ${PORT_OPTIONS:MKEEP_DB_OPEN}
-CONFIGURE_ARGS+=--enable-keep-db-open
-.endif
-
-.if !${PORT_OPTIONS:MOBSOLETE_CRAM_ATTR}
-CONFIGURE_ARGS+=--enable-obsolete_cram_attr=no
-.endif
-
-.if ${PORT_OPTIONS:MAUTHDAEMOND}
-CONFIGURE_ARGS+=--with-authdaemond=/var/run/authdaemond/socket
-.else
-CONFIGURE_ARGS+=--with-authdaemond=no
-.endif
-
-.if ${PORT_OPTIONS:MLOGIN}
-CONFIGURE_ARGS+=--enable-login
-.else
-LOGIN=	"@comment "
-.endif
-
-.if !${PORT_OPTIONS:MPLAIN}
-CONFIGURE_ARGS+=--disable-plain
-PLAIN=	"@comment "
-.endif
-
-.if !${PORT_OPTIONS:MOTP}
-CONFIGURE_ARGS+=--disable-otp
-OTP=	"@comment "
-.endif
-
-.if !${PORT_OPTIONS:MCRAM}
-CONFIGURE_ARGS+=--disable-cram
-CRAM=	"@comment "
-.endif
-
-.if !${PORT_OPTIONS:MDIGEST}
-CONFIGURE_ARGS+=--disable-digest
-DIGEST=	"@comment "
-.endif
-
-.if ${PORT_OPTIONS:MNTLM}
-CONFIGURE_ARGS+=--enable-ntlm
-.else
-CONFIGURE_ARGS+=--disable-ntlm
-NTLM=	"@comment "
-.endif
-
-.if !${PORT_OPTIONS:MSCRAM}
-CONFIGURE_ARGS+=--disable-scram
-SCRAM=	"@comment "
 .endif
 
 .if ${ARCH} == "x86_64"
@@ -225,16 +146,9 @@ HTDOCS=	advanced appconvert components gssapi index install macosx \
 	mechanisms options plugprog programming readme sysadmin upgrading \
 	windows
 
-PLIST_SUB=	PREFIX=${PREFIX} \
-		LOGIN=${LOGIN} \
-		PLAIN=${PLAIN} \
-		OTP=${OTP} \
-		CRAM=${CRAM} \
-		DIGEST=${DIGEST} \
-		NTLM=${NTLM} \
+PLIST_SUB+=	PREFIX=${PREFIX} \
 		GSSAPI=${GSSAPI} \
 		EBONES=${EBONES} \
-		SCRAM=${SCRAM} \
 		SQL=${SQL} \
 		DOCSDIR=${DOCSDIR:S/^${PREFIX}\///}
 
@@ -262,27 +176,21 @@ post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${PERL} -wpi.bak \
 		-e 's/\$$\*\.Tpo/$$&.$$./g'
 
-# Create Cyrus user and group
-pre-su-install:
-	@${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
-
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}/html
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
 .for f in ${DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .for f in ${DOC2}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .for f in ${HTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${f}.html ${DOCSDIR}/html
+	@${INSTALL_DATA} ${WRKSRC}/doc/${f}.html \
+		${STAGEDIR}${DOCSDIR}/html
 .endfor
-	@${INSTALL_DATA} ${FILESDIR}/Sendmail.README ${DOCSDIR}
+	@${INSTALL_DATA} ${FILESDIR}/Sendmail.README \
+		${STAGEDIR}${DOCSDIR}
 .endif
-	@PKG_PREFIX=${PREFIX} BATCH=${BATCH} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
 
 .include <bsd.port.post.mk>
