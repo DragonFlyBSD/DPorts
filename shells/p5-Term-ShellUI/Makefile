@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: shells/p5-Term-ShellUI/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/p5-Term-ShellUI/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Term-ShellUI
 PORTVERSION=	0.92
@@ -23,8 +23,8 @@ MAN3=		Term::ShellUI.3 \
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}/
-	${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
+	@${MKDIR} ${EXAMPLESDIR}/
+	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
 	cd ${WRKSRC}/examples/ && ${INSTALL_SCRIPT} \
 		fileman-example synopsis synopsis-big tui-sample ${EXAMPLESDIR}/
 .endif
