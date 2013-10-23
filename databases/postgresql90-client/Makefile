@@ -1,10 +1,9 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: databases/postgresql90-client/Makefile 329946 2013-10-10 00:09:35Z jgh $
+# $FreeBSD: databases/postgresql90-client/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
-PKGNAMESUFFIX?=	${DISTV:S/.//}-client
-DISTV=	${DISTVERSION:R}
+PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
 COMMENT=	PostgreSQL database (client)
 
