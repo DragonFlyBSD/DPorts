@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/p5-Digest-MD4/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-MD4/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Digest-MD4
 PORTVERSION=	1.9
@@ -26,7 +26,7 @@ NO_STAGE=	yes
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
