@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Term-ProgressBar
 PORTVERSION=	2.14
@@ -32,7 +32,7 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
 .endif
 
