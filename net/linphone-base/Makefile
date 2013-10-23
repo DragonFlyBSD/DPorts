@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/linphone-base/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/linphone-base/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	linphone
 PORTVERSION=	3.2.1
@@ -79,7 +79,6 @@ post-install:
 .if defined(LINPHONE_GUI)
 	@${LN} -sf linphone-3 ${PREFIX}/bin/linphone
 	${INSTALL_MAN} ${WRKSRC}/share/C/linphone.1 ${MANPREFIX}/man/man1
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/share/linphone.desktop \
 		${PREFIX}/share/applications
 .else
