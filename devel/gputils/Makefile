@@ -1,5 +1,5 @@
 # Created by: Samuel Tardieu <sam@rfc1149.net>
-# $FreeBSD: devel/gputils/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gputils/Makefile 331294 2013-10-22 16:23:16Z tijl $
 
 PORTNAME=	gputils
 PORTVERSION=	1.2.0
@@ -13,12 +13,7 @@ LICENSE=	GPLv2
 
 CONFLICTS=	gplink-[0-9]*
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 CONFIGURE_ARGS= --disable-dependency-tracking --disable-html-doc
 
-MANLANG=	"" fr
-MAN1=		gpasm.1 gpdasm.1 gplib.1 gplink.1 gpstrip.1 gputils.1 \
-		gpvc.1 gpvo.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
