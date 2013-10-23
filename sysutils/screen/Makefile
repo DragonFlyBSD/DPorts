@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: sysutils/screen/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/screen/Makefile 331314 2013-10-22 20:15:16Z cy $
 
 PORTNAME=	screen
 PORTVERSION=	4.0.3
@@ -24,12 +24,12 @@ XTERM_256_DESC=		Enable support for 256 colour xterm
 HOSTINLOCKED_DESC=	Print user@host in locked message
 SHOWENC_DESC=		Show encoding on the status line
 
-NO_STAGE=	yes
+OPTIONS_SUB=
+
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes
 .if ${PORT_OPTIONS:MMAN}
-MAN1=		screen.1
 MAKE_ARGS+=	-DWITH_MAN
 .endif
 .if ${PORT_OPTIONS:MINFO}
@@ -75,10 +75,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/dev/ptmx|/nonexistent|' ${WRKSRC}/configure
 
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	@${CP} ${WRKSRC}/etc/etcscreenrc ${EXAMPLESDIR}/screenrc
-	@if [ ! -f ${PREFIX}/etc/screenrc ]; then \
-		${CP} ${EXAMPLESDIR}/screenrc ${PREFIX}/etc/screenrc ; \
-	fi
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc ${STAGEDIR}${EXAMPLESDIR}/screenrc
+
 
 .include <bsd.port.mk>
