@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libmodplug/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libmodplug/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	libmodplug
 PORTVERSION=	0.8.8.4
@@ -10,7 +10,6 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	ModPlug mod-like music shared libraries
 
 USES=		gmake pathfix pkgconfig
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
