@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/sk1libs/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/sk1libs/Makefile 330571 2013-10-16 23:54:45Z amdmi3 $
 
 PORTNAME=	sk1libs
 PORTVERSION=	0.9.1
@@ -10,9 +10,9 @@ MASTER_SITES=	GOOGLE_CODE \
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A set of python libraries for sK1 Project
 
-LIB_DEPENDS=	lcms:${PORTSDIR}/graphics/lcms \
-		freetype:${PORTSDIR}/print/freetype2 \
-		jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	liblcms.so:${PORTSDIR}/graphics/lcms \
+		libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 PROJECTHOST=	uniconvertor
 
@@ -22,7 +22,6 @@ PYDISTUTILS_BUILD_TARGET=build_ext
 PYDISTUTILS_BUILDARGS=	-L${LOCALBASE}/lib \
 			-I${LOCALBASE}/include:${LOCALBASE}/include/freetype2
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/src/utils/fs.py
 
