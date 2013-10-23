@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/llvm/Makefile 329790 2013-10-08 14:54:40Z tijl $
+# $FreeBSD: devel/llvm/Makefile 331180 2013-10-21 20:00:09Z brooks $
 
 PORTNAME=	llvm
 PORTVERSION=	3.2
@@ -20,6 +20,9 @@ BUILD_DEPENDS+=	f2c:${PORTSDIR}/lang/f2c
 .endif
 
 CONFLICTS=	llvm-devel-[23]* llvm31-3*
+
+DEPRECATED=	Migrate to devel/llvm32 or newer
+EXPIRATION_DATE=	2013-11-04
 
 GNU_CONFIGURE=	yes
 USES=		gmake perl5
