@@ -1,5 +1,5 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: mail/dovecot2/Makefile 329209 2013-10-03 16:39:10Z wg $
+# $FreeBSD: mail/dovecot2/Makefile 330339 2013-10-14 17:49:26Z wg $
 
 PORTNAME=	dovecot
 PORTVERSION=	2.2.6
@@ -73,10 +73,8 @@ REINPLACE=	s!%%PROTOCOLS%%!${PROTOCOLS}!g;\
 .if ${PORT_OPTIONS:MDOCS}
 DOCS=		AUTHORS COPYING COPYING.LGPL COPYING.MIT INSTALL NEWS TODO README
 PORTDOCS=	*
-PLIST_SUB+=	PORT=""
 .else
 CONFIGURE_ARGS+=	--without-docs
-PLIST_SUB+=	PORT="@comment "
 .endif
 
 PORTEXAMPLES=	*
