@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Pod-Coverage/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Pod-Coverage/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Pod-Coverage
 PORTVERSION=	0.23
@@ -29,14 +29,14 @@ PORTEXAMPLES=	check_installed script-covered
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}/
-	${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/examples/|} ${EXAMPLESDIR}/
-	${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
+	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
 .endif
 
 .include <bsd.port.mk>
