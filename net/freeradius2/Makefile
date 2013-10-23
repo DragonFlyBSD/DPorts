@@ -1,14 +1,12 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: net/freeradius2/Makefile 329903 2013-10-09 15:49:57Z zi $
+# $FreeBSD: net/freeradius2/Makefile 330361 2013-10-14 21:00:29Z zi $
 
 PORTNAME=	freeradius
 DISTVERSION=	2.2.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/%SUBDIR%/ \
 		ftp://ftp.ntua.gr/pub/net/radius/freeradius/%SUBDIR%/ \
-		ftp://ftp.uk.freeradius.org/pub/radius/%SUBDIR%/ \
 		http://ftp.cc.uoc.gr/mirrors/ftp.freeradius.org/%SUBDIR%/ \
-		http://freeradius.portal-to-web.de/%SUBDIR%/ \
 		http://mirrors.rit.edu/zi/
 MASTER_SITE_SUBDIR=	. old
 DISTNAME=	freeradius-server-${DISTVERSION}
@@ -24,8 +22,7 @@ LOGDIR?=	/var/log
 KRB5_CONFIG?=	/usr/bin/krb5-config --libs
 
 CONFLICTS=	gnu-radius-[0-9].* openradius-[0-9].* radiusd-cistron-[0-9].* \
-		freeradius-mysql-[0-9].* freeradius-[013-9].* \
-		freeradius3-[0-9].*
+		freeradius-mysql-[0-9].* freeradius-[013-9].*
 
 USE_RC_SUBR=	radiusd
 
@@ -41,7 +38,7 @@ PLIST_SUB=	PORTVERSION=${DISTVERSION} LIBVER=0${PORTVERSION:C/\./0/g}
 
 OPTIONS_DEFINE=	USER KERBEROS HEIMDAL HEIMDAL_PORT LDAP MYSQL \
 		PGSQL UNIXODBC FIREBIRD PERL PYTHON OCI8 RUBY DHCP \
-		EXPERIMENTAL UDPFROMTO DEVELOPER EDIR
+		EXPERIMENTAL UDPFROMTO DEVELOPER EDIR SSL_PORT
 OPTIONS_DEFAULT=USER PERL PYTHON
 
 DHCP_DESC=		With DHCP support (EXPERIMENTAL)
@@ -55,6 +52,7 @@ EXPERIMENTAL_DESC=	Build experimental modules
 UDPFROMTO_DESC=		Compile in UDPFROMTO support
 DEVELOPER_DESC=		Enable developer options
 EDIR_DESC=		Enable eDirectory support (implies LDAP)
+SSL_PORT_DESC=		Use OpenSSL from the ports collection
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
@@ -257,6 +255,10 @@ CFLAGS!=	${ECHO} ${CFLAGS} | ${SED} -Ee 's:-O[0-9]?[[:space:]]*::g'
 # Compile in UDPFROMTO support
 .if ${PORT_OPTIONS:MUDPFROMTO}
 CONFIGURE_ARGS+=--with-udpfromto
+.endif
+
+.if ${PORT_OPTIONS:MSSL_PORT}
+WITH_OPENSSL_PORT=yes
 .endif
 
 .include <bsd.port.pre.mk>
