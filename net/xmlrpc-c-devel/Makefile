@@ -1,9 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/xmlrpc-c-devel/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/xmlrpc-c-devel/Makefile 331335 2013-10-22 22:29:39Z garga $
 
 PORTNAME=	xmlrpc-c
-PORTVERSION=	1.33.2
-PORTREVISION=	1
+PORTVERSION=	1.36.0
 CATEGORIES=	net
 MASTER_SITES=	LOCAL/garga/xmlrpc-c
 PKGNAMESUFFIX=	-devel
@@ -28,7 +27,6 @@ MAKEFILE=	GNUmakefile
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if empty(PORT_OPTIONS:MDEBUG)
