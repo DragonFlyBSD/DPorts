@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-SVG/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-SVG/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	SVG
 PORTVERSION=	2.59
@@ -28,7 +28,7 @@ NO_STAGE=	yes
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
 .endif
 
