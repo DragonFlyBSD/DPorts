@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: multimedia/libdca/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/libdca/Makefile 330673 2013-10-17 21:08:02Z madpilot $
 
 PORTNAME=	libdca
 PORTVERSION=	0.0.5
@@ -14,8 +14,4 @@ USE_BZIP2=	yes
 USES=		pkgconfig pathfix
 USE_LDCONFIG=	yes
 
-MAN1=		dcadec.1 extract_dca.1
-MLINKS=		dcadec.1 dtsdec.1 extract_dca.1 extract_dts.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
