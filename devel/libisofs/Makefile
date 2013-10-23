@@ -1,8 +1,8 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: devel/libisofs/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: devel/libisofs/Makefile 331069 2013-10-20 22:55:19Z delphij $
 
 PORTNAME=	libisofs
-PORTVERSION=	1.2.4
+PORTVERSION=	1.3.2
 CATEGORIES=	devel
 MASTER_SITES=	http://files.libburnia-project.org/releases/
 
