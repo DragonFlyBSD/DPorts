@@ -1,24 +1,32 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/the_silver_searcher/Makefile 316355 2013-04-23 14:20:25Z bapt $
+# $FreeBSD: textproc/the_silver_searcher/Makefile 331247 2013-10-22 10:11:00Z mat $
 
 PORTNAME=	the_silver_searcher
-PORTVERSION=	0.13.1
-PORTREVISION=	1
+PORTVERSION=	0.17
 CATEGORIES=	textproc
-MASTER_SITES=	http://cloud.github.com/downloads/ggreer/${PORTNAME}/
+#MASTER_SITES=	http://geoff.greer.fm/ag/releases/
 
 MAINTAINER=	gslin@gslin.org
 COMMENT=	A code-searching tool similar to ack but faster
 
-LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	ggreer
+GH_TAGNAME=	${PORTVERSION}
+GH_COMMIT=	b0afccd
 
 ACLOCAL_ARGS+=	-I ${ACLOCAL_DIR}
 AUTOMAKE_ARGS+=	--add-missing
 GNU_CONFIGURE=	yes
-PLIST_FILES=	bin/ag
+CONFIGURE_ARGS=	LZMA_LIBS=-llzma
+.if exists(/usr/include/lzma.h)
+CONFIGURE_ARGS+=	LZMA_CFLAGS=-I/usr/include
+.else
+LIB_DEPENDS+=	liblzma.so:${PORTSDIR}/archivers/xz
+CONFIGURE_ARGS+=	LZMA_CFLAGS=-I${LOCALBASE}/include
+.endif
 USE_AUTOTOOLS=	aclocal autoconf autoheader automake
 USES=		pkgconfig
-
-MAN1=		ag.1
 
 .include <bsd.port.mk>
