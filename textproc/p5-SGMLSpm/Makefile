@@ -1,5 +1,5 @@
 # Created by: Brian Candler <B.Candler@pobox.com>
-# $FreeBSD: textproc/p5-SGMLSpm/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-SGMLSpm/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	SGMLSpm
 PORTVERSION=	1.03
@@ -39,10 +39,10 @@ EXTRA_PATCHES=	${PATCHDIR}/noportexamples-patch-Makefile
 
 pre-su-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
