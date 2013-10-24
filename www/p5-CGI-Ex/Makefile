@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-CGI-Ex/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Ex/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	CGI-Ex
 PORTVERSION=	2.38
@@ -26,10 +26,7 @@ PORTEXAMPLES=	*
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}/
-.for i in app benchmark devel
-	${MKDIR} ${EXAMPLESDIR}/${i}
-.endfor
+	@${MKDIR} ${EXAMPLESDIR}/
 	${CP} -R ${WRKSRC}/samples/* ${EXAMPLESDIR}/
 .endif
 
