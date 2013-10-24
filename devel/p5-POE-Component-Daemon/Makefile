@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-Component-Daemon/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-Daemon/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	POE-Component-Daemon
 PORTVERSION=	0.1400
@@ -26,7 +26,7 @@ PORTDOCS=	*
 NO_STAGE=	yes
 post-install:
 	@${MKDIR} ${EXAMPLESDIR}
-	@for i in ${WRKSRC}/eg/*forking; do \
+	for i in ${WRKSRC}/eg/*forking; do \
 		${PERL} -pi -e '$$_ = undef if m{use FindBin}o;' \
 			-e 's{.FindBin::Dir(.+)$$}{/tmp$$1\nwarn "Logging to \$$logfile\\n";}o' $${i}; \
 		${INSTALL_SCRIPT} $${i} ${EXAMPLESDIR}; \
@@ -34,7 +34,7 @@ post-install:
 
 .ifndef(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
-	@for i in ${WRKSRC}/eg/*.png ${WRKSRC}/eg/*.dot; do \
+	for i in ${WRKSRC}/eg/*.png ${WRKSRC}/eg/*.dot; do \
 		${INSTALL_DATA} $${i} ${DOCSDIR}; \
 	done
 .endif
