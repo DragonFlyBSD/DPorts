@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: databases/p5-Bucardo/Makefile 330641 2013-10-17 13:44:04Z mat $
+# $FreeBSD: databases/p5-Bucardo/Makefile 331288 2013-10-22 16:06:10Z mat $
 
 PORTNAME=	Bucardo
 PORTVERSION=	4.5.0
@@ -31,6 +31,6 @@ post-patch:
 		${WRKSRC}/bucardo_ctl ${WRKSRC}/scripts/bucardo_ctl.rc
 
 post-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/scripts/bucardo_ctl.rc ${STAGEDIR}${PREFIX}/etc/rc.d/bucardo
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/bucardo_ctl.rc ${STAGEDIR}${PREFIX}/etc/rc.d/bucardo
 
 .include <bsd.port.mk>
