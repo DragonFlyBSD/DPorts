@@ -1,4 +1,4 @@
-# $FreeBSD: misc/chef/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/chef/Makefile 330749 2013-10-18 14:14:25Z brooks $
 
 PORTNAME=	chef
 PORTVERSION=	19930426
@@ -17,11 +17,10 @@ PLIST_FILES=	bin/chef
 
 WRKSRC=		${WRKDIR}/bork
 
-NO_STAGE=	yes
 do-build:
 	(cd ${WRKSRC} && lex chef.x && ${CC} ${CFLAGS} -o chef lex.yy.c -ll)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/chef ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/chef ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
