@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: benchmarks/interbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/interbench/Makefile 331347 2013-10-23 03:11:26Z danfe $
 
 PORTNAME=	interbench
 DISTVERSION=	0.31
@@ -16,19 +16,15 @@ USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	${PORTNAME}
 
-MAN8=		${PORTNAME}.8
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man8/${PORTNAME}.8.gz
 PORTDOCS=	readme readme.interactivity
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-patch:
 # Do not confuse the reader that this program is Linux-specific
 	@${REINPLACE_CMD} -e '/kernel/!s,Linux,Unix-like systems, ; \
-		/kernel/s,Linux,the,' ${WRKSRC}/${MAN8}
+		/kernel/s,Linux,the,' ${WRKSRC}/${PORTNAME}.8
 
 pre-build:
 # Remove stale Linuxish object files and binaries; setting ALL_TARGET to
@@ -36,11 +32,9 @@ pre-build:
 	${MAKE} -C ${BUILD_WRKSRC} clean
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN8} ${MANPREFIX}/man/man8
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.8 ${STAGEDIR}${MANPREFIX}/man/man8
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
