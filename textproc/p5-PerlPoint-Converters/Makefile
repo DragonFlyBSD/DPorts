@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	PerlPoint-Converters
 PORTVERSION=	1.02.05
@@ -37,7 +37,7 @@ post-build:
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC}/doc; ${FIND} . | ${CPIO} -padm ${DOCSDIR}
+	cd ${WRKSRC}/doc; ${FIND} . | ${CPIO} -padm ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
