@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Alarm/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Horde_Alarm/Makefile 331287 2013-10-22 16:05:29Z mm $
 
 PORTNAME=	Horde_Alarm
-PORTVERSION=	2.0.4
+PORTVERSION=	2.0.5
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
