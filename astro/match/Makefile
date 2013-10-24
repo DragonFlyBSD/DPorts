@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/match/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/match/Makefile 330428 2013-10-15 19:00:50Z cs $
 
 PORTNAME=	match
 PORTVERSION=	0.16
@@ -14,10 +14,5 @@ LICENSE=	GPLv2
 
 CONFLICTS=	avenger-[0-9]*
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
-
-MAN1=		match.1
-
-PLIST_FILES=	bin/apply_match bin/match bin/project_coords
 
 .include <bsd.port.mk>
