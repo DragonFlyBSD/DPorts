@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/htmlise/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/htmlise/Makefile 331328 2013-10-22 21:51:59Z ehaupt $
 
 PORTNAME=	htmlise
 PORTVERSION=	0.2
@@ -15,7 +15,6 @@ TABSIZE?=	8
 SRC=		htmlise tables markup inline
 PLIST_FILES=	bin/htmlise
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\(TABSIZE\ \)[0-9]*|\1${TABSIZE}|' \
 		${WRKSRC}/${PORTNAME}.h
@@ -27,6 +26,6 @@ do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/${PORTNAME} ${SRC:C/(.*)/${WRKSRC}\/\1.o/}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
