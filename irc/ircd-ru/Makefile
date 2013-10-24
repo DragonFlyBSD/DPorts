@@ -1,5 +1,5 @@
 # Created by: Khamushkin Ilya <ilya@ircd.ru>
-# $FreeBSD: irc/ircd-ru/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/ircd-ru/Makefile 330758 2013-10-18 15:02:20Z bapt $
 
 PORTNAME=	ircd-ru
 PORTVERSION=	1.0.7
@@ -8,7 +8,7 @@ CATEGORIES=	irc russian
 MASTER_SITES=	http://link.wenet.su/
 DISTNAME=	ircd-RU-${PORTVERSION}-03-rc-20090810
 
-MAINTAINER=	bu7cher@yandex.ru
+MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	An irc daemon with translation schemes and other useful features
 
 USE_BZIP2=	yes
