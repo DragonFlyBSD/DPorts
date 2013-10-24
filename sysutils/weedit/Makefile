@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/weedit/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/weedit/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
 
 PORTNAME=	weedit
 PORTVERSION=	2.0.3
@@ -20,7 +20,6 @@ SRCF=		crc32 dlink weedit md5
 
 PLIST_FILES=	bin/weedit bin/weeditreaddb
 
-NO_STAGE=	yes
 do-build:
 .for f in ${SRCF}
 	${CC} ${CFLAGS} -c ${WRKSRC}/${f}.c -o ${WRKSRC}/${f}.o
@@ -30,7 +29,7 @@ do-build:
 		${SRCF:C/(.*)/${WRKSRC}\/\1.o/}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/weeditreaddb ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/weeditreaddb ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
