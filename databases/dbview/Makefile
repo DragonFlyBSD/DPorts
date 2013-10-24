@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: databases/dbview/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/dbview/Makefile 331399 2013-10-23 17:51:19Z ak $
 
 PORTNAME=	dbview
 PORTVERSION=	1.0.4
@@ -10,10 +10,9 @@ MASTER_SITE_SUBDIR=	apps/database/proprietary
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	View dBase III files
 
-MAN1=		dbview.1
-DOCS=		README dBASE
+PLIST_FILES=	bin/dbview man/man1/dbview.1.gz
+PORTDOCS=	README dBASE
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<malloc.h>|<stdlib.h>|; \
 	    s|<endian.h>|<sys/endian.h>|; \
@@ -21,11 +20,9 @@ post-patch:
 	    ${WRKSRC}/db_dump.c
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/dbview ${PREFIX}/bin
-	@${INSTALL_MAN} ${WRKSRC}/dbview.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/dbview ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/dbview.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
