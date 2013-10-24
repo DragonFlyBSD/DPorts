@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@mu.org>
-# $FreeBSD: net/tshark/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/tshark/Makefile 330845 2013-10-19 04:18:02Z marcus $
 
 PORTNAME=	tshark
 PORTREVISION=	0
@@ -9,5 +9,4 @@ MASTERDIR=	${.CURDIR}/../wireshark
 
 WITHOUT_X11=	yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
