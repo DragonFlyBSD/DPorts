@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/checkmate/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/checkmate/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	checkmate
 PORTVERSION=	0.19
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	yes
 
 MAN1=		mpck.1
 MLINKS=		mpck.1 checkmate.1
-NO_STAGE=	yes
 PLIST_FILES=	bin/mpck
 
 .include <bsd.port.mk>
