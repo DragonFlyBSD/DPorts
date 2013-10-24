@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: converters/drg2sbg/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/drg2sbg/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	drg2sbg
 PORTVERSION=	2.2
@@ -16,5 +16,4 @@ GNU_CONFIGURE=	yes
 MAN1=		drgbuilder.1 drg2sbg.1
 PLIST_FILES=	bin/drg2sbg bin/drgbuilder
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
