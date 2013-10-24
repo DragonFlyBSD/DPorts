@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/gmixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gmixer/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
 
 PORTNAME=	gmixer
 PORTVERSION=	0.98c
@@ -20,7 +20,6 @@ PLIST_FILES=	bin/gmixer share/pixmaps/gmixer.xpm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gmixer ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/icons/gmixer.xpm ${PREFIX}/share/pixmaps
 
 .include <bsd.port.mk>
