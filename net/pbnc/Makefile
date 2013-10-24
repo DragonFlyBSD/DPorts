@@ -1,4 +1,4 @@
-# $FreeBSD: net/pbnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pbnc/Makefile 330608 2013-10-17 06:30:13Z hrs $
 
 PORTNAME=	pbnc
 PORTVERSION=	1.0
@@ -22,18 +22,19 @@ PORTDOCS= 	pbnc.readme
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-install:
 	${REINPLACE_CMD} 's,^#!/usr/bin/perl,#!${PERL},' ${WRKSRC}/pbnc.pl
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pbnc.cfg ${PREFIX}/etc/pbnc.cfg
-	${INSTALL_SCRIPT} ${WRKSRC}/pbnc.pl ${PREFIX}/bin/pbnc.pl
+	${INSTALL_DATA} ${WRKSRC}/pbnc.cfg ${STAGEDIR}${PREFIX}/etc/pbnc.cfg
+	${INSTALL_SCRIPT} ${WRKSRC}/pbnc.pl ${STAGEDIR}${PREFIX}/bin/pbnc.pl
+
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
