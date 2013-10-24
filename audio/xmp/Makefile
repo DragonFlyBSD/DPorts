@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: audio/xmp/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmp/Makefile 331358 2013-10-23 08:03:24Z ehaupt $
 
 PORTNAME=	xmp
 PORTVERSION=	4.0.6
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	xmp:${PORTSDIR}/audio/libxmp
 
 USES=		pkgconfig gmake
-NO_STAGE=	yes
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 
@@ -23,8 +22,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-MAN1=		xmp.1
 
 CONFIG_FILES=	xmp.conf modules.conf
 
@@ -51,10 +48,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|\ install-conf||' ${WRKSRC}/Makefile.in
 
 post-install:
-	${MKDIR} ${ETCDIR}
+	${MKDIR} ${STAGEDIR}${ETCDIR}
 .for f in ${CONFIG_FILES}
-	@test -f ${ETCDIR}/${f} || ${INSTALL_DATA} ${WRKSRC}/src/${f} ${ETCDIR}/${f}
-	${INSTALL_DATA} ${WRKSRC}/src/${f} ${ETCDIR}/${f}.sample
+	@test -f ${ETCDIR}/${f} || ${INSTALL_DATA} ${WRKSRC}/src/${f} ${STAGEDIR}${ETCDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/src/${f} ${STAGEDIR}${ETCDIR}/${f}.sample
 .endfor
 
 .include <bsd.port.mk>
