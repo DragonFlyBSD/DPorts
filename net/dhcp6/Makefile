@@ -1,5 +1,5 @@
 # Created by: Munechika SUMIKAWA <sumikawa@FreeBSD.org>
-# $FreeBSD: net/dhcp6/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/dhcp6/Makefile 330598 2013-10-17 03:31:56Z hrs $
 
 PORTNAME=	dhcp6
 PORTVERSION=	20080615
@@ -15,25 +15,22 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --with-localdbdir=/var/db
+CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc \
+		--with-localdbdir=/var/db
 USE_RC_SUBR=	dhcp6c dhcp6relay dhcp6s
 PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
-MAN5=		dhcp6c.conf.5 dhcp6s.conf.5
-MAN8=		dhcp6c.8 dhcp6s.8 dhcp6relay.8 dhcp6ctl.8
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} \
-		dhcp6c.conf.sample dhcp6s.conf.sample \
-		${PREFIX}/etc
+	    dhcp6c.conf.sample dhcp6s.conf.sample \
+	    ${STAGEDIR}${PREFIX}/etc
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
