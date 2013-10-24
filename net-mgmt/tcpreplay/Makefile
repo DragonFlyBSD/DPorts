@@ -1,5 +1,5 @@
 # Created by: cnh@ivmg.net
-# $FreeBSD: net-mgmt/tcpreplay/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/tcpreplay/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	tcpreplay
 PORTVERSION=	3.4.4
@@ -21,7 +21,6 @@ MAN1=		tcpreplay.1 tcpprep.1 tcprewrite.1 tcpbridge.1 tcpreplay-edit.1
 PLIST_FILES=	bin/tcpreplay bin/tcpprep bin/tcprewrite bin/tcpbridge \
 		bin/tcpreplay-edit
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wall -O3||' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
