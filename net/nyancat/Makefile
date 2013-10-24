@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net/nyancat/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/nyancat/Makefile 331386 2013-10-23 13:50:35Z ehaupt $
 
 PORTNAME=	nyancat
 PORTVERSION=	1.2
@@ -19,9 +19,8 @@ PLIST_FILES=	bin/nyancat
 
 WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-${PORTNAME}-${GH_COMMIT}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
