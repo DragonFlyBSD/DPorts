@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ctpl/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ctpl/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	ctpl
 PORTVERSION=	0.3.3
@@ -9,11 +9,8 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	C Template (Parser) Library
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	glib20 gnomehack
-USES=		pkgconfig
+USE_GNOME=	glib20
+USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 
-MAN1=	ctpl.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
