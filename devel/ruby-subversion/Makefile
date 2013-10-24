@@ -1,5 +1,5 @@
 # Created by: Hiroyuki Iwatsuki <don@na.rim.or.jp>
-# $FreeBSD: devel/ruby-subversion/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-subversion/Makefile 330360 2013-10-14 20:56:34Z ohauer $
 
 PKGNAMEPREFIX=	ruby-
 
@@ -9,7 +9,8 @@ COMMENT=	Ruby bindings for version control system
 .if defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 16
 MASTERDIR=	${.CURDIR}/../../devel/subversion16
 .elif defined(WITH_SUBVERSION_VER) && ${WITH_SUBVERSION_VER} == 17
-MASTERDIR=	${.CURDIR}/../../devel/subversion16
+BROKEN=	does not build with subversion17
+MASTERDIR=	${.CURDIR}/../../devel/subversion17
 .else
 MASTERDIR=	${.CURDIR}/../../devel/subversion
 .endif
@@ -19,15 +20,15 @@ USE_RUBY=	yes
 
 SVN_BUILD_BINDINGS=yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile.common"
 
 CATEGORIES+=	ruby
 
 do-build:
-	cd ${WRKSRC} ; ${MAKE} swig-rb-lib ; ${MAKE} swig-rb
+	${MAKE} -C ${WRKSRC} swig-rb-lib ${MAKE_ARGS}
+	${MAKE} -C ${WRKSRC} swig-rb ${MAKE_ARGS}
 
 do-install:
-	cd ${WRKSRC} ; ${MAKE} install-swig-rb
+	${MAKE} -C ${WRKSRC} install-swig-rb ${MAKE_ARGS}
 
 .include <bsd.port.post.mk>
