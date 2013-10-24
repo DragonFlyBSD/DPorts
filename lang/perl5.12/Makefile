@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.12/Makefile 329465 2013-10-05 14:56:20Z az $
+# $FreeBSD: lang/perl5.12/Makefile 331368 2013-10-23 10:51:03Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -20,9 +20,7 @@ COMMENT=	Practical Extraction and Report Language
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-CONFLICTS=	perl-5.14.* perl-threaded-5.14.* \
-		perl-5.16.* perl-threaded-5.16.* \
-		perl-5.18.* perl-threaded-5.18.*
+CONFLICTS_INSTALL=	perl5.12-* perl5.14-* perl5.16-* perl5.18-*
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_MALLOC PERL_64BITINT THREADS PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
@@ -71,6 +69,18 @@ CONFIGURE_ENV+=	${LOCALE_CLEANUP} UNAME_v="$$(uname -v | sed 'y/=/ /')"
 MAKE_ENV+=	${LOCALE_CLEANUP}
 
 .include <bsd.port.pre.mk>
+.include "${PORTSDIR}/Mk/bsd.default-versions.mk"
+
+# if this port is default due PERL5_DEFAULT
+# change PKGNAME to reflect this 
+.if ${PERL_VER} == ${PERL5_DEFAULT}
+PKGNAMESUFFIX=	${PERL_VERSION:C/\.[0-9]+\.[0-9]+$//}
+.else
+# make PKGNAME unique among other lang/perl5.x
+PKGNAMESUFFIX=	${PERL_VER}
+# always add default perl5 pkgname to conflicts
+CONFLICTS_INSTALL+=	perl5-*
+.endif
 
 .if defined(PERL_VENDOR_PREFIX)
 CONFIGURE_ARGS+=	\
