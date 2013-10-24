@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xbindkeys/Makefile 328631 2013-09-28 23:45:19Z eadler $
+# $FreeBSD: x11/xbindkeys/Makefile 331409 2013-10-23 18:57:48Z eadler $
 
 PORTNAME=	xbindkeys
 PORTVERSION=	1.8.5
@@ -42,7 +42,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's| wish | ${WISH} |g' ${WRKSRC}/xbindkeys_show
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/xbindkeysrc ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
