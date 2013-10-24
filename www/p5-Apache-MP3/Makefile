@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: www/p5-Apache-MP3/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-MP3/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Apache-MP3
 PORTVERSION=	4.00
@@ -30,8 +30,8 @@ MAN3=		Apache::MP3.3 \
 
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${DATADIR}
+	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/apache_mp3/* ${DATADIR}
-	${CAT} ${PKGMESSAGE}
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
