@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/podcatcher/Makefile 330054 2013-10-11 03:28:30Z tabthorpe $
+# $FreeBSD: multimedia/podcatcher/Makefile 330898 2013-10-19 16:06:34Z bapt $
 
 PORTNAME=	podcatcher
 PORTVERSION=	3.1.6
@@ -11,30 +11,15 @@ MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Podcast client for the command line
 
 USE_RUBY=	yes
+USES=		shebangfix
+SHEBANG_FILES=	bin/${PORTNAME}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
-PLIST_FILES=	bin/podcatcher \
-		${EXAMPLESDIR_REL}/arguments.txt \
-		${EXAMPLESDIR_REL}/options.yaml \
-		${EXAMPLESDIR_REL}/subscriptions.pcast \
-		${EXAMPLESDIR_REL}/subscriptions.opml
-
-PLIST_DIRS=	${EXAMPLESDIR_REL}
-
-NO_STAGE=	yes
-pre-install:
-	@${SED} -i.bak 's,#!/usr/bin/env ruby,#!${RUBY},' ${WRKSRC}/bin/${PORTNAME}
-
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin
-
-post-install:
-	@${MKDIR}	${EXAMPLESDIR} \
-	&& \
-	( cd ${WRKSRC}/demo \
-		&& ${COPYTREE_SHARE} \* ${EXAMPLESDIR} \
-	)
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/demo; ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
