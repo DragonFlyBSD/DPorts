@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3lint/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mp3lint/Makefile 331312 2013-10-22 20:03:01Z sunpoet $
 
 PORTNAME=	mp3lint
 PORTVERSION=	0.9
@@ -10,19 +10,18 @@ MASTER_SITES=	http://erislabs.net/ianb/projects/${PORTNAME}/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Configurable tool to check collections of audio files
 
-BUILD_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
-RUN_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
+LICENSE=	GPLv2
 
-NO_STAGE=	yes
+BUILD_DEPENDS=	libmp3-archive-perl>=0:${PORTSDIR}/audio/libmp3-archive-perl
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
 USE_PERL5=	configure
 USES=		perl5
 
-MAN1=		mp3lintsum.1 mp3lintskip.1 mp3lint.1
-MAN3=		mp3lint-tools.3
-MAN5=		mp3lintrc.5
-
 post-patch:
-	@${REINPLACE_CMD} -e '/^DESTINSTALLSYSCONFDIR/ s|DESTDIR|PREFIX|' \
-		${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -e '/^INSTALLSYSCONFDIR/ s|/etc|${PREFIX}&|' ${WRKSRC}/Makefile.PL
+# It fails to build with error message as follows:
+# Can't write-open blib/man5/mp3lintrc.5: No such file or directory at /usr/local/lib/perl5/5.xx.y/ExtUtils/Command/MM.pm line zzz.
+	@${MKDIR} ${WRKSRC}/blib/man5/
 
 .include <bsd.port.mk>
