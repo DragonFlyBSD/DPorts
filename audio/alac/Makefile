@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: audio/alac/Makefile 328110 2013-09-24 11:20:29Z bapt $
+# $FreeBSD: audio/alac/Makefile 330801 2013-10-18 23:44:48Z bapt $
 
 PORTNAME=	alac
 PORTVERSION=	0.2.0
@@ -21,13 +21,9 @@ OPTIONS_DEFINE=	DOCS
 PLIST_FILES=	bin/alac
 PORTDOCS=	README
 
-.include <bsd.port.options.mk>
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alac ${STAGEDIR}${PREFIX}/bin/
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
