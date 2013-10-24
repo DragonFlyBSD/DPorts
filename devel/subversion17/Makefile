@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion17/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/subversion17/Makefile 330346 2013-10-14 19:42:48Z ohauer $
 
 MAINTAINER=	ohauer@FreeBSD.org
 COMMENT=	Version control system
@@ -127,7 +127,7 @@ USES+=		gettext:build
 .if ${PORT_OPTIONS:MBDB}
 BDB_BUILD_DEPENDS=	yes
 .endif
-OLD_LIB_DEPENDS:=	${LIB_DEPENDS:S!^!${LOCALBASE}/lib/lib!:C!(\.[0-9]+)?:!.a:!}
+OLD_LIB_DEPENDS:=	${LIB_DEPENDS:S!^!${LOCALBASE}/lib/!:C!(\.so|\.[0-9]+)?:!.a:!}
 BUILD_DEPENDS+=		${OLD_LIB_DEPENDS}
 LIB_DEPENDS=
 .endif
