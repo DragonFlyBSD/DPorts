@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/npush/Makefile 330698 2013-10-17 23:52:45Z amdmi3 $
+# $FreeBSD: games/npush/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	npush
 PORTVERSION=	0.7
@@ -28,7 +28,6 @@ do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/levels
 	${INSTALL_DATA} ${WRKSRC}/levels/* ${STAGEDIR}${DATADIR}/levels
 	${INSTALL_DATA} ${WRKSRC}/npush.png ${STAGEDIR}${PREFIX}/share/pixmaps/
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/npush.desktop ${STAGEDIR}${PREFIX}/share/applications/
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/index.html ${WRKSRC}/readme.txt \
