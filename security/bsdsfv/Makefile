@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/bsdsfv/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/bsdsfv/Makefile 331374 2013-10-23 11:39:02Z ehaupt $
 
 PORTNAME=	bsdsfv
 PORTVERSION=	1.18
@@ -15,17 +15,16 @@ PORTDOCS=	MANUAL
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|^\(INSTALL_PREFIX =\).*$$|\1 ${PREFIX}|g' \
+	@${REINPLACE_CMD} -e 's|^\(INSTALL_PREFIX =\).*$$|\1 ${STAGEDIR}${PREFIX}|g' \
 		${WRKSRC}/Makefile
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
