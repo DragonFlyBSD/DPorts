@@ -1,5 +1,5 @@
 # Created by: Dima Dorfman <dd@FreeBSD.org>
-# $FreeBSD: net/http_ping/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/http_ping/Makefile 330599 2013-10-17 03:41:22Z hrs $
 
 PORTNAME=	http_ping
 PORTVERSION=	20050629
@@ -13,13 +13,6 @@ COMMENT=	Measure HTTP Latency
 
 USE_OPENSSL=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAN1=		http_ping.1
-MANCOMPRESSED=	no
-PLIST_FILES=	bin/http_ping
-
-NO_STAGE=	yes
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/http_ping ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/http_ping.1 ${PREFIX}/man/man1
+PLIST_FILES=	bin/http_ping man/man1/http_ping.1.gz
 
 .include <bsd.port.mk>
