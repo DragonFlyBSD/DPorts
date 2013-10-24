@@ -1,5 +1,5 @@
 # Created by: Eric A. Griff <eric@talesfromthereal.com>
-# $FreeBSD: textproc/p5-WDDX/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-WDDX/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	WDDX
 PORTVERSION=	1.02
@@ -23,7 +23,7 @@ MAN3=		WDDX.3
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/Changes ${DOCSDIR}
 .endif
 
