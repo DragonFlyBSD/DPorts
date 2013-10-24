@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: audio/flac123/Makefile 329338 2013-10-04 16:44:16Z bapt $
+# $FreeBSD: audio/flac123/Makefile 330803 2013-10-18 23:46:08Z bapt $
 
 PORTNAME=	flac123
 PORTVERSION=	0.0.11
@@ -27,9 +27,7 @@ post-patch:
 		${WRKSRC}/configure
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-.for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
-.endfor
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
