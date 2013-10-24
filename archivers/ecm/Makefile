@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/ecm/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/ecm/Makefile 331320 2013-10-22 20:48:13Z ehaupt $
 
 PORTNAME=	ecm
 PORTVERSION=	1.0
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 CONFLICTS=	gmp-ecm-[0-9]*
 
-NO_STAGE=	yes
 PLIST_FILES=	bin/ecm bin/unecm
 PORTDOCS=	format.txt
 
@@ -24,12 +23,12 @@ OPTIONS_DEFINE=	DOCS
 
 do-install:
 .for f in ${PORTNAME} un${PORTNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
