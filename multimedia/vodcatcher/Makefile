@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/vodcatcher/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/vodcatcher/Makefile 330907 2013-10-19 16:31:19Z bapt $
 
 PORTNAME=	vodcatcher
 PORTVERSION=	1.3.3
@@ -16,8 +16,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/vodcatcher
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
