@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-HStore/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-HStore/Makefile 330981 2013-10-20 05:49:26Z eadler $
 
 PORTNAME=	File-HStore
 PORTVERSION=	0.10
@@ -9,12 +9,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	Store files on a filesystem using a very simple hash-based storage
+COMMENT=	Store files on a filesystem using a simple hash-based storage
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::HStore.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
