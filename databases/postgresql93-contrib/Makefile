@@ -1,17 +1,16 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql93-contrib/Makefile 329946 2013-10-10 00:09:35Z jgh $
+# $FreeBSD: databases/postgresql93-contrib/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
 
 PORTNAME=	postgresql
 PORTREVISION=	0
 CATEGORIES=	databases
-PKGNAMESUFFIX?=	${DISTV:S/.//}-contrib
-DISTV= ${DISTVERSION:R}
+PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The contrib utilities from the PostgreSQL distribution
 
-LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt \
-		xml2.5:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS=	libxslt.so:${PORTSDIR}/textproc/libxslt \
+		libxml2.so:${PORTSDIR}/textproc/libxml2
 
 USE_PGSQL=	yes
 DEFAULT_PGSQL_VER=93
