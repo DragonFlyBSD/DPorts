@@ -1,7 +1,10 @@
-# $FreeBSD: japanese/font-jisx0213/files/Makefile.in 317640 2013-05-08 01:27:26Z hrs $
+# $FreeBSD: japanese/font-jisx0213/files/Makefile.in 330478 2013-10-16 04:56:32Z hrs $
 .SUFFIXES:
 .SUFFIXES: .bdf .pcf
 
+.if defined(STAGEDIR) && !empty(STAGEDIR)
+PREFIX:=	${STAGEDIR}${PREFIX}
+.endif
 LOCALBASE?=	/usr/local
 GZIP_CMD?=	/usr/bin/gzip
 MKBOLD_CMD?=	${LOCALBASE}/bin/mkbold

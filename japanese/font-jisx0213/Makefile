@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/font-jisx0213/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/font-jisx0213/Makefile 330478 2013-10-16 04:56:32Z hrs $
 
 PORTNAME=	jisx0213
 PORTVERSION=	20040425
@@ -26,7 +26,7 @@ NO_WRKSUBDIR=	yes
 EXTRACT_CMD=		${GZCAT}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${WRKDIR}/$${file%.gz}
-MAKE_ENV=	FONTDIR=${LOCALFONTDIR}
+MAKE_ENV=	STAGEDIR=${STAGEDIR} FONTDIR=${LOCALFONTDIR}
 PLIST_SUB=	FONTDIR=${LOCALFONTDIR} XFONTDIR=lib/X11/fonts/${FONTDIR}
 SUB_FILES=	Makefile
 
@@ -34,16 +34,15 @@ LOCALFONTDIR=	share/font-${PORTNAME}
 
 pre-build: apply-slist
 
-NO_STAGE=	yes
 do-configure:
 	@${DO_NADA}
 
 post-install-fontdir:
-	${MKDIR} ${PREFIX}/lib/X11/fonts/${FONTDIR}
-	cd ${PREFIX}/lib/X11/fonts/${FONTDIR} && \
-		${LN} -s -f ${PREFIX}/${LOCALFONTDIR}/*.pcf.gz .
-	${LOCALBASE}/bin/mkfontscale ${PREFIX}/lib/X11/fonts/${FONTDIR}
-	${LOCALBASE}/bin/mkfontdir ${PREFIX}/lib/X11/fonts/${FONTDIR}
+	${MKDIR} ${STAGEDIR}/${PREFIX}/lib/X11/fonts/${FONTDIR}
+	cd ${STAGEDIR}${PREFIX}/lib/X11/fonts/${FONTDIR} && ${LN} -s -f \
+	    ${FONTDIR:C,[^/]+,..,g}/../../../${LOCALFONTDIR}/*.pcf.gz .
+	${LOCALBASE}/bin/mkfontscale ${STAGEDIR}${PREFIX}/lib/X11/fonts/${FONTDIR}
+	${LOCALBASE}/bin/mkfontdir ${STAGEDIR}${PREFIX}/lib/X11/fonts/${FONTDIR}
 
 post-install: post-install-fontdir
 
