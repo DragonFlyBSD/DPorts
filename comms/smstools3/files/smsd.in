@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: comms/smstools3/files/smsd.in 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: comms/smstools3/files/smsd.in 331281 2013-10-22 14:54:01Z madpilot $
 #
 # PROVIDE: smsd 
 # REQUIRE: LOGIN
@@ -12,17 +12,17 @@
 #
 . /etc/rc.subr
 
-name="smsd"
+name=smsd
 rcvar=smsd_enable
 
 load_rc_config ${name}
-: ${smsd_enable="NO"}
-: ${smsd_pidfile="%%PIDDIR%%/smsd.pid"}
-: ${smsd_infofile="%%PIDDIR%%/smsd.working"}
-: ${smsd_logfile="%%LOGDIR%%/smsd.log"}
-: ${smsd_config="%%PREFIX%%/etc/smsd.conf"}
-: ${smsd_user="uucp"}
-: ${smsd_group="dialer"}
+: ${smsd_enable:=NO}
+: ${smsd_pidfile:="%%PIDDIR%%/smsd.pid"}
+: ${smsd_infofile:="%%PIDDIR%%/smsd.working"}
+: ${smsd_logfile:="%%LOGDIR%%/smsd.log"}
+: ${smsd_config:="%%PREFIX%%/etc/smsd.conf"}
+: ${smsd_user:=uucp}
+: ${smsd_group:=dialer}
 
 pidfile=${smsd_pidfile}
 command="%%PREFIX%%/bin/smsd"
