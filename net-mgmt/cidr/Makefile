@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: net-mgmt/cidr/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/cidr/Makefile 331308 2013-10-22 19:50:00Z ehaupt $
 
 PORTNAME=	cidr
 PORTVERSION=	2.3.2
@@ -12,15 +12,13 @@ COMMENT=	RFC 1878 subnet calculator / helper
 
 LICENSE=	GPLv2
 
-MAN1=		cidr.1
-PLIST_FILES=	bin/cidr
+PLIST_FILES=	bin/cidr man/man1/cidr.1.gz
 
-NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
