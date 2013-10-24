@@ -1,8 +1,8 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-Test-Loops/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Test-Loops/Makefile 331173 2013-10-21 18:43:00Z jase $
 
 PORTNAME=	POE-Test-Loops
-PORTVERSION=	1.353
+PORTVERSION=	1.354
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RCAPUTO
@@ -17,8 +17,12 @@ LICENSE_COMB=	dual
 USES=	perl5
 USE_PERL5=	configure
 
-MAN1=		poe-gen-tests.1
-MAN3=		POE::Test::Loops.3
+.include <bsd.port.pre.mk>
 
-NO_STAGE=	yes
-.include <bsd.port.mk>
+.if ${PERL_LEVEL} < 501400
+BUILD_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
+RUN_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
+TEST_DEPENDS+=	p5-Test-Simple>=0.98:${PORTSDIR}/devel/p5-Test-Simple
+.endif
+
+.include <bsd.port.post.mk>
