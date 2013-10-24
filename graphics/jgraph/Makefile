@@ -1,5 +1,5 @@
 # Created by: wolman@cs.washington.edu
-# $FreeBSD: graphics/jgraph/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/jgraph/Makefile 331168 2013-10-21 18:01:22Z eadler $
 
 PORTNAME=	jgraph
 PORTVERSION=	8.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://web.eecs.utk.edu/~plank/plank/jgraph/
 DISTFILES=	${PORTNAME}.shar.Z
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A program that generates postscript graphs
+COMMENT=	Generates postscript graphs
 
 NO_LATEST_LINK=	yes
 EXTRACT_CMD=	uncompress
