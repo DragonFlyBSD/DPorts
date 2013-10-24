@@ -1,14 +1,14 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: devel/jwasm/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/jwasm/Makefile 331148 2013-10-21 15:05:55Z ak $
 
 PORTNAME=	jwasm
-PORTVERSION=	210
+PORTVERSION=	211
 CATEGORIES=	devel
 MASTER_SITES=	http://www.japheth.de/Download/JWasm/
 DISTNAME=	JWasm${PORTVERSION}s
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Fork of OpenWatcom's x86 assembler with AMD64 support
+MAINTAINER=	ak@FreeBSD.org
+COMMENT=	Fork of OpenWatcom x86 assembler with AMD64 support
 
 OPTIONS_DEFINE=	DOCS
 
@@ -18,14 +18,11 @@ NO_WRKSUBDIR=	yes
 
 USE_ZIP=	yes
 USE_DOS2UNIX=	yes
-USE_GMAKE=	yes
+USES=	gmake
 MAKEFILE=	GccUnix.mak
 
 PORTDOCS=	*
 PLIST_FILES=	bin/jwasm
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -34,14 +31,10 @@ post-patch:
 		 s|-s -o|-o|' ${WRKSRC}/GccUnix.mak
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/GccUnixR/jwasm ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${DOCSDIR}
-	@${GZIP_CMD} ${DOCSDIR}/*.txt
-	@${MKDIR} ${DOCSDIR}/manual
-	${INSTALL_DATA} ${WRKSRC}/Doc/*.txt ${DOCSDIR}/manual
-	@${GZIP_CMD} ${DOCSDIR}/manual/*.txt
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/GccUnixR/jwasm ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/manual
+	${INSTALL_DATA} ${WRKSRC}/Doc/*.txt ${STAGEDIR}${DOCSDIR}/manual
 
 .include <bsd.port.mk>
