@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Nagios-Plugins-Memcached
 PORTVERSION=	0.02
@@ -28,7 +28,7 @@ post-install:
 	${INSTALL} ${WRKSRC}/bin/check_memcached ${LOCALBASE}/libexec/nagios/check_memcached
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}/
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
