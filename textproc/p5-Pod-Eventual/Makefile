@@ -1,8 +1,8 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: textproc/p5-Pod-Eventual/Makefile 330224 2013-10-13 12:14:19Z sunpoet $
+# $FreeBSD: textproc/p5-Pod-Eventual/Makefile 331117 2013-10-21 09:52:45Z sunpoet $
 
 PORTNAME=	Pod-Eventual
-PORTVERSION=	0.093331
+PORTVERSION=	0.094000
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
