@@ -1,5 +1,5 @@
 # Created by: Masanori Kiriake <seiken@nbs.co.jp>
-# $FreeBSD: audio/play/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/play/Makefile 330543 2013-10-16 21:18:48Z madpilot $
 
 PORTNAME=	play
 PORTVERSION=	1.0
@@ -12,13 +12,9 @@ COMMENT=	Simple audio file player
 
 CONFLICTS=	sox-[0-9]*
 
-MAKE_ARGS=	CFLAGS="${CFLAGS}" DESTDIR="${PREFIX}" MANDIR="/man/ja/man"
+MAKE_ARGS=	CFLAGS="${CFLAGS}" MANDIR="${PREFIX}/man/ja/man" BINDIR="${PREFIX}/bin"
 
-MANLANG=	ja
-NO_STAGE=	yes
-MAN1=		play.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/play
+PLIST_FILES=	bin/play man/ja/man1/play.1.gz
 
 post-patch:
 .for file in play_audio.c mixer_ctl.c encode_sun.c encode_riff.c speed.c
