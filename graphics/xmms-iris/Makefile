@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-iris/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xmms-iris/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	iris
 PORTVERSION=	0.12
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://cdelfosse.free.fr/xmms-iris/
 PKGNAMEPREFIX=	xmms-
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Adaptation of the "OpenGL Spectrum Analyzer" from XMMS
 
 BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
