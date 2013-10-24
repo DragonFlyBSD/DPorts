@@ -1,5 +1,5 @@
 # Created by: Joachim Strombergson
-# $FreeBSD: devel/cxmon/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cxmon/Makefile 331223 2013-10-22 07:46:20Z amdmi3 $
 
 PORTNAME=	cxmon
 PORTVERSION=	3.2
@@ -11,8 +11,7 @@ COMMENT=	Interactive file manipulation tool and disassembler
 
 GNU_CONFIGURE=	yes
 
-MAN1=		cxmon.1
-PLIST_FILES=	bin/cxmon
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
