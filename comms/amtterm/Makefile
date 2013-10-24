@@ -1,4 +1,4 @@
-# $FreeBSD: comms/amtterm/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/amtterm/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 
 PORTNAME=	amtterm
 PORTVERSION=	1.3
@@ -22,7 +22,6 @@ MAKE_ARGS+=	HAVE_GTK=no
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/amttool \
 		share/applications/gamt.desktop
-PLIST_DIRSTRY=	share/applications
 MAN1=		gamt.1 ${PORTNAME}.1 amttool.1
 MAN7=		amt-howto.7
 MANCOMPRESSED=	no
