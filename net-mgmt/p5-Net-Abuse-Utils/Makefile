@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-mgmt/p5-Net-Abuse-Utils/Makefile 330411 2013-10-15 16:58:57Z sunpoet $
+# $FreeBSD: net-mgmt/p5-Net-Abuse-Utils/Makefile 331116 2013-10-21 09:52:40Z sunpoet $
 
 PORTNAME=	Net-Abuse-Utils
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
