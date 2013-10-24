@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/screenie/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/screenie/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
 
 PORTNAME=	screenie
 PORTVERSION=	1.30.0
@@ -16,12 +16,10 @@ RUN_DEPENDS=	screen:${PORTSDIR}/sysutils/screen
 
 NO_BUILD=	yes
 
-MAN1=		screenie.1
-PLIST_FILES=	sbin/screenie
+PLIST_FILES=	sbin/screenie man/man1/screenie.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
