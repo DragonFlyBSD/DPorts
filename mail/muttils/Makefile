@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: mail/muttils/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/muttils/Makefile 331349 2013-10-23 05:40:00Z jgh $
 
 PORTNAME=	muttils
 PORTVERSION=	1.3
@@ -18,16 +18,16 @@ WRKSRC=		${WRKDIR}/blacktrash-${PORTNAME}-${CHANGESET}
 USE_PYTHON_BUILD=	yes
 USE_PYTHON_RUN=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}
-	( cd ${WRKSRC}/contrib && ${INSTALL_DATA} \example-* ${EXAMPLESDIR} )
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	( cd ${WRKSRC}/contrib && ${INSTALL_DATA} \example-* ${STAGEDIR}${EXAMPLESDIR} )
 .endif
 
 .include <bsd.port.mk>
