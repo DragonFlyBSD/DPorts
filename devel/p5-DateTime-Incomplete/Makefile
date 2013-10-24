@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	DateTime-Incomplete
 PORTVERSION=	0.07.00
@@ -30,7 +30,7 @@ PORTDOCS=	Changes LICENSE MANIFEST README TODO
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
