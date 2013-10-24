@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <martin@matuska.org>
-# $FreeBSD: www/p5-Apache-Clean2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-Clean2/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Apache-Clean
 PORTVERSION=	2.00
@@ -29,7 +29,7 @@ NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
