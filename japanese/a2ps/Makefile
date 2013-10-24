@@ -1,9 +1,9 @@
 # Created by: SAITO Itsuro <saito@miv.t.u-tokyo.ac.jp>
-# $FreeBSD: japanese/a2ps/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/a2ps/Makefile 331259 2013-10-22 12:28:18Z hrs $
 
 PORTNAME=	a2ps
 PORTVERSION=	1.45
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/ \
 		${MASTER_SITE_LOCAL:S|%SUBDIR%|tota/a2ps|}
@@ -17,6 +17,10 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	paperconf:${PORTSDIR}/print/libpaper
 
+USES=		perl5 shebangfix
+USE_PERL5=	run
+SHEBANG_FILES=	${WRKDIR}/a2ps-j
+perl_OLD_CMD=	/usr/local/bin/perl
 PLIST_FILES=	bin/a2ps-j
 EXTRACT_CMD=	${INSTALL_SCRIPT}
 EXTRACT_BEFORE_ARGS=	# empty
@@ -24,14 +28,10 @@ EXTRACT_AFTER_ARGS=	a2ps-j
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 post-patch:
-	${REINPLACE_CMD} \
-		-e 's,%%PERL%%,${PERL},' \
-		-e 's,%%LOCALBASE%%,${LOCALBASE},' \
-		${WRKDIR}/a2ps-j
+	${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},' ${WRKDIR}/a2ps-j
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/a2ps-j ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/a2ps-j ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
