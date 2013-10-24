@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: x11/gtk-launch/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gtk-launch/Makefile 331418 2013-10-23 19:36:17Z ehaupt $
 
 PORTNAME=	gtk-launch
 DISTVERSION=	1.1b
@@ -20,7 +20,6 @@ PORTSCOUT=	skipv:1.1
 
 OPTIONS_DEFINE=DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -31,11 +30,11 @@ do-build:
 		-o ${WRKSRC}/${PORTNAME} ${WRKSRC}/launch.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 post-install:
