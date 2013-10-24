@@ -1,5 +1,6 @@
-@comment $FreeBSD: devel/newfile/pkg-plist 312736 2013-02-21 20:55:11Z eadler $
+@comment $FreeBSD: devel/newfile/pkg-plist 331037 2013-10-20 17:25:57Z eadler $
 bin/newfile
+man/man1/newfile.1.gz
 %%DATADIR%%/fileproc.rb
 %%DATADIR%%/licenses/Artistic@Artistic
 %%DATADIR%%/licenses/Artistic@README
