@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/p5-Net-FTPServer/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/p5-Net-FTPServer/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Net-FTPServer
 PORTVERSION=	1.125
@@ -63,7 +63,7 @@ post-patch:
 post-install:
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/etc/ftpd.conf ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/ftpd.conf ${EXAMPLESDIR}
 .endif
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
