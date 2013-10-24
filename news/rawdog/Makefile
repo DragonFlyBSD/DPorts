@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: news/rawdog/Makefile 330651 2013-10-17 15:54:33Z tdb $
+# $FreeBSD: news/rawdog/Makefile 330731 2013-10-18 09:23:34Z tdb $
 
 PORTNAME=	rawdog
 PORTVERSION=	2.18
@@ -17,7 +17,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/feedparser.py:${PORTSDIR}/textproc/py-feedpars
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-MAN1=		rawdog.1
 
 PORTDOCS=	README
 
