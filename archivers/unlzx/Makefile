@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/unlzx/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/unlzx/Makefile 331324 2013-10-22 21:13:49Z ehaupt $
 
 PORTNAME=	unlzx
 PORTVERSION=	1.1
@@ -11,7 +11,6 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Extracts .lzx archives from Amiga systems
 
-NO_STAGE=	yes
 PLIST_FILES=	bin/unlzx
 
 do-extract:
@@ -22,6 +21,6 @@ do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/${PORTNAME} ${WRKSRC}/${PORTNAME}.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
