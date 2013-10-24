@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-XML-Smart/Makefile 329420 2013-10-05 06:06:13Z sunpoet $
+# $FreeBSD: textproc/p5-XML-Smart/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	XML-Smart
 PORTVERSION=	1.79
@@ -30,7 +30,7 @@ PORTDOCS=	Changes README
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
