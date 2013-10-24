@@ -1,9 +1,9 @@
 # Created by: Frank Altpeter <frank@altpeter.de>
-# $FreeBSD: net-im/centerim-devel/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/centerim-devel/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	centerim
 PORTVERSION=	4.22.10.11
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.centerim.org/download/mobshots/ \
 		ftp://ftp.centerim.org/mobshots/
@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--disable-jabber
 .if ! ${PORT_OPTIONS:MGPGME}
 CONFIGURE_ARGS+=	--without-gpgme
 .else
-LIB_DEPENDS+=		gpgme.19:${PORTSDIR}/security/gpgme
+LIB_DEPENDS+=		libgpgme.so:${PORTSDIR}/security/gpgme
 #CONFIGURE_ARGS+=	--with-gpgme=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-ssl
 .endif
