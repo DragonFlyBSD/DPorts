@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-subliminal/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/py-subliminal/Makefile 330896 2013-10-19 16:03:07Z wg $
 
 PORTNAME=	subliminal
 PORTVERSION=	0.6.3
@@ -23,14 +23,15 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/bs4/__init__.py:${PORTSDIR}/www/py-beautifulso
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
-PLIST_FILES=	bin/subliminal \
-		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
-
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} < 270
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}argparse>=1.1:${PORTSDIR}/devel/py-argparse
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} 's/required,/required, zip_safe=False,/' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.post.mk>
