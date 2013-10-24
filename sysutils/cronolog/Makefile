@@ -1,5 +1,5 @@
 # Created by: Mark Blackman <tmb_ports@maddog.u-net.com>
-# $FreeBSD: sysutils/cronolog/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: sysutils/cronolog/Makefile 330952 2013-10-20 00:40:34Z bdrewery $
 
 PORTNAME=	cronolog
 PORTVERSION=	1.6.2
@@ -15,9 +15,7 @@ LICENSE=	GPLv2
 CONFLICTS_INSTALL=      cronolog-devel-[0-9]*
 
 INFO=		cronolog
-MAN1=		cronolog.1m cronosplit.1m
 
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	SETUID_PATCH
