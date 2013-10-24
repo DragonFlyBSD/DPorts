@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Cover/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Cover/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Devel-Cover
 PORTVERSION=	1.08
@@ -72,7 +72,7 @@ NO_STAGE=	yes
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
