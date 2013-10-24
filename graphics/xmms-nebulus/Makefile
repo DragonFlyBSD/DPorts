@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-nebulus/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xmms-nebulus/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	xmms-nebulus
 PORTVERSION=	0.8.0
@@ -7,7 +7,7 @@ PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://nebulus.tuxfamily.org/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS visualization plugin that uses SDL and OpenGL
 
 BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
