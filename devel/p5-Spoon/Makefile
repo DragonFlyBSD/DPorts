@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-Spoon/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/p5-Spoon/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Spoon
 PORTVERSION=	0.24
@@ -46,7 +46,7 @@ PORTDOCS=	Changes README
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
