@@ -1,9 +1,8 @@
-# $FreeBSD: databases/postgresql90-plpython/Makefile 329946 2013-10-10 00:09:35Z jgh $
+# $FreeBSD: databases/postgresql90-plpython/Makefile 330639 2013-10-17 13:39:36Z girgen $
 
 PORTNAME=	postgresql
 CATEGORIES=	databases python
-PKGNAMESUFFIX?=	${DISTV:S/.//}-plpython
-DISTV= ${DISTVERSION:R}
+PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	Module for using Python to write SQL functions
