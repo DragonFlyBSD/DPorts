@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Uniq/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Uniq/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	Uniq
 PORTVERSION=	0.01
@@ -18,5 +18,4 @@ MAN3=		Uniq.3
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
