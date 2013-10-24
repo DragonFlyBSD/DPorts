@@ -1,5 +1,5 @@
 # Created by: Sergey Samoyloff <gonza@techline.ru>
-# $FreeBSD: mail/popa3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/popa3d/Makefile 330363 2013-10-14 21:33:13Z gblach $
 
 PORTNAME=	popa3d
 PORTVERSION=	1.0.2
@@ -13,10 +13,10 @@ MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	Secure, performance, tiny POP3 daemon
 
 ALL_TARGET=	popa3d
-MAN8=		popa3d.8
 PLIST=		${WRKDIR}/.PLIST.more
 CFLAGS+=	-DPREFIX=${PREFIX}
 UNIQUENAME=	${.CURDIR:T}
+NEED_ROOT=	yes
 
 OPTIONS_DEFINE=	SMTP_AFTER_POP3 STANDALONE_POP3 SETPROCTITLE
 NO_OPTIONS_SORT=yes
@@ -24,7 +24,6 @@ SMTP_AFTER_POP3_DESC=Enable SMTP-after-POP support
 STANDALONE_POP3_DESC=Enable standalone server mode
 SETPROCTITLE_DESC=Enable setproctitle() support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSTANDALONE_POP3}
@@ -85,25 +84,20 @@ pre-install:
 
 do-install:
 	${INSTALL} ${COPY} -o root -g wheel -m 500 \
-	    ${WRKSRC}/popa3d ${PREFIX}/libexec/popa3d
-	${INSTALL_MAN} ${WRKSRC}/popa3d.8 ${MANPREFIX}/man/man8/
+	    ${WRKSRC}/popa3d ${STAGEDIR}${PREFIX}/libexec/popa3d
+	${INSTALL_MAN} ${WRKSRC}/popa3d.8 ${STAGEDIR}${MANPREFIX}/man/man8/
 .if ${PORT_OPTIONS:MSMTP_AFTER_POP3} && !defined(WITHOUT_POPAUTH_M4)
 	mkdir -p ${CFDIR}/hack
-	${INSTALL_DATA} ${FILESDIR}/popauth.m4 ${CFDIR}/hack/
+	${INSTALL_DATA} ${FILESDIR}/popauth.m4 ${STAGEDIR}${CFDIR}/hack/
 .endif
 
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/DESIGN ${DOCSDIR}/
-	${INSTALL_MAN} ${WRKSRC}/LICENSE ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/DESIGN ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_MAN} ${WRKSRC}/LICENSE ${STAGEDIR}${DOCSDIR}/
 .if ${PORT_OPTIONS:MSMTP_AFTER_POP3}
-	${INSTALL_DATA} ${FILESDIR}/POPAUTH ${DOCSDIR}/
+	${INSTALL_DATA} ${FILESDIR}/POPAUTH ${STAGEDIR}${DOCSDIR}/
 .endif
-.endif
-
-post-install:
-.if ! ${PORT_OPTIONS:MSTANDALONE_POP3}
-	@ ${CAT} ${PKGMESSAGE}
 .endif
 
 CFDIR=		${LOCALBASE}/share/sendmail/cf
