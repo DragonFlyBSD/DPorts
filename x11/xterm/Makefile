@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: x11/xterm/Makefile 329033 2013-10-02 10:20:41Z ehaupt $
+# $FreeBSD: x11/xterm/Makefile 331418 2013-10-23 19:36:17Z ehaupt $
 
 PORTNAME=	xterm
 PORTVERSION=	297
@@ -37,7 +37,6 @@ WCHAR_DESC=	Enable wide-character support
 
 OPTIONS_DEFAULT=WCHAR LUIT 256COLOR
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:M256COLOR}
@@ -77,8 +76,6 @@ PLIST_SUB+=	GNOME=""
 PLIST_SUB+=	GNOME="@comment "
 .endif
 
-MAN1=		resize.1 koi8rxterm.1 uxterm.1 xterm.1
-
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900004
@@ -91,10 +88,9 @@ post-extract:
 
 post-install:
 .for f in koi8rxterm resize uxterm xterm
-	@${CHMOD} ${BINMODE} ${PREFIX}/bin/${f}
+	@${CHMOD} ${BINMODE} ${STAGEDIR}${PREFIX}/bin/${f}
 .endfor
-	@${MKDIR} ${PREFIX}/share/applications/
-	@${INSTALL_DATA} ${WRKSRC}/xterm.desktop ${PREFIX}/share/applications/
+	@${INSTALL_DATA} ${WRKSRC}/xterm.desktop ${STAGEDIR}${PREFIX}/share/applications/
 .if ${PORT_OPTIONS:MGNOME}
 	@-update-desktop-database
 .endif
