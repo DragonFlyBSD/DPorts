@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/osc/Makefile 328170 2013-09-24 17:11:51Z amdmi3 $
+# $FreeBSD: devel/osc/Makefile 330819 2013-10-19 01:46:13Z amdmi3 $
 
 PORTNAME=	osc
 PORTVERSION=	0.140.0
@@ -20,9 +20,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}m2crypto>0:${PORTSDIR}/security/py-m2crypto
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGVERSION=${PORTVERSION:C/^([0-9]+\.[0-9]+)\.[0-9]+/\1/}
-
-MAN1=		osc.1
-MANCOMPRESSED=	yes
 
 PORTDOCS=	*
 
@@ -46,10 +43,8 @@ post-patch:
 
 post-install:
 	${LN} -s osc-wrapper.py ${STAGEDIR}${PREFIX}/bin/osc
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS README NEWS TODO \
 		${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
