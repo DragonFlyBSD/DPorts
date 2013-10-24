@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@mu.org>
-# $FreeBSD: net/wireshark-lite/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/wireshark-lite/Makefile 330845 2013-10-19 04:18:02Z marcus $
 
 LITE=		yes
 PKGNAMESUFFIX=	-lite
@@ -7,5 +7,4 @@ PKGNAMESUFFIX=	-lite
 MASTERDIR=	${.CURDIR}/../wireshark
 COMMENT=        A powerful network analyzer/capture tool (lite package)
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
