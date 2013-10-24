@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: editors/chexedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/chexedit/Makefile 330818 2013-10-19 01:43:44Z amdmi3 $
 
 PORTNAME=	chexedit
 PORTVERSION=	0.9.7
@@ -13,16 +13,13 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Full screen text mode Hex editor using the [n]curses library
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
-PLIST_FILES=	bin/chexedit
+PLIST_FILES=	bin/chexedit \
+		man/man1/chexedit.1.gz
 
-MAN1=		chexedit.1
-
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/hexedit ${PREFIX}/bin/chexedit
-	${INSTALL_MAN} ${WRKSRC}/docs/hexedit.1 ${PREFIX}/man/man1/chexedit.1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/hexedit ${STAGEDIR}${PREFIX}/bin/chexedit
+	${INSTALL_MAN} ${WRKSRC}/docs/hexedit.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/chexedit.1
 
 .include <bsd.port.mk>
