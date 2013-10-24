@@ -1,8 +1,7 @@
-@comment $FreeBSD: net/clamz/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: net/clamz/pkg-plist 331273 2013-10-22 13:59:53Z amdmi3 $
 bin/clamz
 share/applications/clamz.desktop
 share/mime/packages/clamz.xml
 @dirrmtry share/mime/packages
 @dirrmtry share/mime
-@dirrmtry share/applications
 @dirrmtry share
