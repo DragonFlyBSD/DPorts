@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 330241 2013-10-13 17:36:31Z ume $
 
 PORTNAME=	ldapdb
 PORTVERSION=	2.1.26
@@ -14,16 +14,14 @@ COMMENT=	SASL LDAPDB auxprop plugin
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	sasl2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 
 CYRUS_SASL2_DIR=${MASTERDIR}/../cyrus-sasl2
 DISTINFO_FILE=	${CYRUS_SASL2_DIR}/distinfo
 PATCHDIR=	${CYRUS_SASL2_DIR}/files
 INSTALL_WRKSRC=	${WRKSRC}/plugins
 
-
 USE_LDCONFIG=	yes
-
 USE_AUTOTOOLS=	libtool
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
@@ -59,7 +57,6 @@ PLIST_FILES=	lib/sasl2/libldapdb.a \
 		lib/sasl2/libldapdb.so \
 		lib/sasl2/libldapdb.so.3
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OPENSSLBASE} == /usr
