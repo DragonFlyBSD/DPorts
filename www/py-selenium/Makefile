@@ -1,8 +1,8 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: www/py-selenium/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-selenium/Makefile 331241 2013-10-22 09:04:19Z wg $
 
 PORTNAME=	selenium
-PORTVERSION=	2.35.0
+PORTVERSION=	2.37.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,6 +18,7 @@ LATEST_LINK=	py-${PORTNAME}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONS_DEFINE=	FIREFOX
 FIREFOX_DESC=	Install Firefox
