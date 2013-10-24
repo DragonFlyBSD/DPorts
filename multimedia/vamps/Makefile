@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/vamps/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/vamps/Makefile 330904 2013-10-19 16:23:25Z bapt $
 
 PORTNAME=	vamps
 PORTVERSION=	0.99.2
@@ -10,9 +10,9 @@ MASTER_SITES=	SF/${PORTNAME}/Vamps/${PORTVERSION}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	High performance tool to transcode DVD videos to a smaller size
 
-LIB_DEPENDS=	dvdread.4:${PORTSDIR}/multimedia/libdvdread
+LIB_DEPENDS=	libdvdread.so:${PORTSDIR}/multimedia/libdvdread
 
-USE_GMAKE=	yes
+USES=		gmake
 
 CFLAGS+=	-DHAVE_BUILTIN_EXPECT \
 		-I${LOCALBASE}/include \
@@ -26,10 +26,8 @@ PROGRAM_FILES=	\
 
 PLIST_FILES=	${PROGRAM_FILES:H:S,^,bin/,}
 
-NO_STAGE=	yes
 do-install:
-.for program in ${PROGRAM_FILES}
-	@${INSTALL_PROGRAM} ${WRKSRC}/${program} ${PREFIX}/bin/${program:H}
-.endfor
+	cd ${WRKSRC}; \
+		${INSTALL_PROGRAM} ${PROGRAM_FILES} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
