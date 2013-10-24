@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: benchmarks/p5-Benchmark-Stopwatch/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/p5-Benchmark-Stopwatch/Makefile 331290 2013-10-22 16:14:19Z vanilla $
 
 PORTNAME=	Benchmark-Stopwatch
 PORTVERSION=	0.05
@@ -18,7 +18,4 @@ BUILD_DEPENDS+=	p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Benchmark::Stopwatch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
