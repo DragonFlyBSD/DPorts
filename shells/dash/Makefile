@@ -1,4 +1,4 @@
-# $FreeBSD: shells/dash/Makefile 328553 2013-09-28 06:57:32Z eadler $
+# $FreeBSD: shells/dash/Makefile 331410 2013-10-23 18:58:57Z eadler $
 
 PORTNAME=	dash
 PORTVERSION=	0.5.7
@@ -16,7 +16,7 @@ USES=		gmake
 PLIST_FILES=	bin/dash man/man1/dash.1.gz
 
 post-patch:
-	@${REINPLACE_CMD} -e '/COMMON_CFLAGS =/ s|$$| ${CFLAGS}|' \
+	${REINPLACE_CMD} -e '/COMMON_CFLAGS =/ s|$$| ${CFLAGS}|' \
 		${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
