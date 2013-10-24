@@ -1,10 +1,11 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: textproc/cdif/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/cdif/Makefile 331249 2013-10-22 10:29:54Z sanpei $
 
 PORTNAME=		cdif
 PORTVERSION=		1.19
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.srekcah.org/~utashiro/perl/scripts/cdif/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	sanpei
 EXTRACT_SUFX=		# empty
 
 MAINTAINER=		sanpei@FreeBSD.org
