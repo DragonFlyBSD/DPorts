@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/tiarra/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/tiarra/Makefile 330519 2013-10-16 15:58:55Z ume $
 
 PORTNAME=	tiarra
 PORTVERSION=	20100212
@@ -30,18 +30,11 @@ PLIST_SUB=	TIARRA_USER=${TIARRA_USER} \
 TIARRA_USER=	tiarra
 TIARRA_GROUP=	tiarra
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/tiarra
-	@${TAR} cfC - ${WRKSRC} . | ${TAR} xfC - ${PREFIX}/tiarra
-	@if [ ! -f ${PREFIX}/tiarra/tiarra.conf ]; then \
-		${CP} -p ${PREFIX}/tiarra/sample.conf \
-			${PREFIX}/tiarra/tiarra.conf; \
-	fi
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/tiarra
-	@${MKDIR} ${PREFIX}/tiarra/log
-	@${CHOWN} -R ${TIARRA_USER}:${TIARRA_GROUP} ${PREFIX}/tiarra/log
-	@${CHMOD} o-rwx ${PREFIX}/tiarra/log
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/tiarra
+	@${TAR} cfC - ${WRKSRC} . | \
+		${TAR} xfC - ${STAGEDIR}${PREFIX}/tiarra
+	@${MKDIR} ${STAGEDIR}${PREFIX}/tiarra/log
+	@${CHMOD} o-rwx ${STAGEDIR}${PREFIX}/tiarra/log
 
 .include <bsd.port.mk>
