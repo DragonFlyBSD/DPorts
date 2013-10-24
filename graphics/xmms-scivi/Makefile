@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-scivi/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xmms-scivi/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	scivi
 DISTVERSION=	0.2.0-rc3
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	SF/xmms-${PORTNAME}/${PORTNAME}/0.2.0-rc3
 PKGNAMEPREFIX=	xmms-
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scivi is a visualization plugin for XMMS
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
