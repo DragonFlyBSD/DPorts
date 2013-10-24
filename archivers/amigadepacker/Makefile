@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: archivers/amigadepacker/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/amigadepacker/Makefile 331325 2013-10-22 21:15:14Z ehaupt $
 
 PORTNAME=	amigadepacker
 PORTVERSION=	0.04
@@ -12,7 +12,6 @@ COMMENT=	Tool for depacking some compressed Amiga formats
 
 LICENSE=	GPLv2
 
-NO_STAGE=	yes
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_CSTD=	gnu89
@@ -20,14 +19,13 @@ USE_CSTD=	gnu89
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 ALL_TARGET=	${PORTNAME}
 
-MAN1=		amigadepacker.1
-PLIST_FILES=	bin/amigadepacker
+PLIST_FILES=	bin/amigadepacker man/man1/amigadepacker.1.gz
 
 post-patch:
 	@${REINPLACE_CMD} -E '/^(CC|CFLAGS)/d' ${WRKSRC}/Makefile.in
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}/${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
