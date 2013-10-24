@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/httping/Makefile 329048 2013-10-02 14:15:52Z ehaupt $
+# $FreeBSD: net/httping/Makefile 331386 2013-10-23 13:50:35Z ehaupt $
 
 PORTNAME=	httping
 PORTVERSION=	2.3.3
@@ -13,14 +13,11 @@ COMMENT=	Ping-like tool for HTTP requests
 
 USES=		gmake gettext
 
-MAN1=		httping.1
-PLIST_FILES=	bin/httping
+PLIST_FILES=	bin/httping man/man1/httping.1.gz
 
 OPTIONS_DEFINE=	NCURSES FFTW SSL
 
 OPTIONS_DEFAULT=NCURSES SSL
-
-NO_STAGE=	yes
 
 .include <bsd.port.options.mk>
 
@@ -46,7 +43,7 @@ MAKE_ENV+=	SSL=no
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
