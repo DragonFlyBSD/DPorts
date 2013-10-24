@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xclip/Makefile 328541 2013-09-28 02:34:19Z eadler $
+# $FreeBSD: x11/xclip/Makefile 331409 2013-10-23 18:57:48Z eadler $
 
 PORTNAME=	xclip
 PORTVERSION=	0.12
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/xclip bin/xclip-copyfile bin/xclip-cutfile bin/xclip-pastefile man/man1/xclip.1.gz man/man1/xclip-copyfile.1.gz
 
 pre-configure:
-	@cd ${WRKSRC}; ./bootstrap
+	cd ${WRKSRC}; ./bootstrap
 
 post-patch:
 	${REINPLACE_CMD} 's,mktemp,mktemp -t xclip,' \
