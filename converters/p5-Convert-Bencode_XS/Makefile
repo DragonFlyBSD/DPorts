@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: converters/p5-Convert-Bencode_XS/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Convert-Bencode_XS/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Convert-Bencode_XS
 PORTVERSION=	0.06
@@ -19,7 +19,7 @@ MAN3=		Convert::Bencode_XS.3
 
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/extras/* ${EXAMPLESDIR}
 
 .include <bsd.port.mk>
