@@ -1,11 +1,12 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce3/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tinymce3/Makefile 331121 2013-10-21 10:57:59Z sunpoet $
 
 PORTNAME=	tinymce
 PORTVERSION=	3.5.8
 CATEGORIES=	www
 MASTER_SITES=	http://cloud.github.com/downloads/${PORTNAME}/${PORTNAME}/ \
 		LOCAL/sunpoet
+PKGNAMESUFFIX=	3
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -20,15 +21,13 @@ NO_LATEST_LINK=	yes
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 post-extract:
 	@${TOUCH} \
 	  	${WRKSRC}/jscripts/tiny_mce/plugins/spellchecker/classes/utils/.keepme \
 		${WRKSRC}/jscripts/tiny_mce/plugins/spellchecker/includes/.keepme
 
 do-install:
-	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${WWWDIR}/
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}/
+	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}/
 
 # maintainer section:
 
