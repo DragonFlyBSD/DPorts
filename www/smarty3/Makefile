@@ -1,8 +1,8 @@
 # Created by: Michael Fausten <ports@michael-fausten.de>
-# $FreeBSD: www/smarty3/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/smarty3/Makefile 331265 2013-10-22 13:48:22Z danilo $
 
 PORTNAME=	smarty3
-PORTVERSION=	3.1.14
+PORTVERSION=	3.1.15
 CATEGORIES=	www
 MASTER_SITES=	http://www.smarty.net/files/
 DISTNAME=	Smarty-${PORTVERSION}
@@ -19,18 +19,8 @@ WANT_PHP_WEB=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${DATADIR}
-.for f in Smarty.class.php SmartyBC.class.php debug.tpl
-	${INSTALL_DATA} ${WRKSRC}/libs/$f ${DATADIR}
-.endfor
-	@${MKDIR} ${DATADIR}/plugins
-	${INSTALL_DATA} ${WRKSRC}/libs/plugins/* ${DATADIR}/plugins
-	@${MKDIR} ${DATADIR}/sysplugins
-	${INSTALL_DATA} ${WRKSRC}/libs/sysplugins/* ${DATADIR}/sysplugins
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC}/libs && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
 
 .include <bsd.port.mk>
