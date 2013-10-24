@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@FreeBSD.org>
-# $FreeBSD: devel/bpython/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/bpython/Makefile 331397 2013-10-23 17:22:27Z sunpoet $
 
 PORTNAME=	bpython
 PORTVERSION=	0.12
@@ -17,7 +17,9 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0:${PORTSDIR}/textproc/py-sphinx
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>=0:${PORTSDIR}/textproc/py-pygments
 
 OPTIONS_DEFINE=	EXAMPLES NLS
+OPTIONS_SUB=	yes
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_BUILD_TARGET=	build bdist_egg
@@ -26,21 +28,14 @@ MAN1=		bpython.1
 MAN5=		bpython-config.5
 PORTEXAMPLES=	light.theme sample-config sample.theme
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+NLS_USES=		gettext
 
-.if ${PORT_OPTIONS:MNLS}
-PLIST_SUB+=	NLS=""
-USES+=		gettext
-.else
-PLIST_SUB+=	NLS="@comment "
-.endif
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/build\/man\/bpython/d; /data\/bpython.desktop/d' ${WRKSRC}/${PYSETUP}
 
 post-install:
-	${MKDIR} ${DESKTOPDIR}/
 	${INSTALL_MAN} ${WRKSRC}/build/man/bpython.1 ${MANPREFIX}/man/man1/
 	${INSTALL_MAN} ${WRKSRC}/build/man/bpython-config.5 ${MANPREFIX}/man/man5/
 	${INSTALL_DATA} ${WRKSRC}/data/bpython.desktop ${DESKTOPDIR}/
