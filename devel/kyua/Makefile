@@ -1,8 +1,8 @@
 # Created by: Alan Somers <asomers@FreeBSD.org>
-# $FreeBSD: devel/kyua/Makefile 328410 2013-09-26 20:08:38Z eadler $
+# $FreeBSD: devel/kyua/Makefile 331208 2013-10-21 23:12:01Z asomers $
 
 PORTNAME=	kyua
-PORTVERSION=	0.6
+PORTVERSION=	0.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	kyua
@@ -13,7 +13,7 @@ COMMENT=	Kyua (automated testing framework) - Command line interface
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	lutok:${PORTSDIR}/devel/lutok
+LIB_DEPENDS=	liblutok.so.2:${PORTSDIR}/devel/lutok
 LIB_DEPENDS+=	sqlite3:${PORTSDIR}/databases/sqlite3
 BUILD_DEPENDS=	${LOCALBASE}/libexec/kyua-atf-tester:${PORTSDIR}/devel/kyua-testers
 RUN_DEPENDS:=	${BUILD_DEPENDS}
