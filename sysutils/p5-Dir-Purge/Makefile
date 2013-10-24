@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Dir-Purge/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Dir-Purge/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	Dir-Purge
 PORTVERSION=	1.02
@@ -15,5 +15,4 @@ USE_PERL5=	configure
 
 MAN3=		Dir::Purge.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
