@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Package/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: textproc/p5-PerlPoint-Package/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	PerlPoint-Package
 PORTVERSION=	0.45.2
@@ -38,10 +38,10 @@ PORTDOCS=	# suck all DOCSDIR
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC}/doc; ${FIND} . | ${CPIO} -padm ${DOCSDIR}
-	@cd ${WRKSRC}; ${FIND} utilities | ${CPIO} -padm ${DOCSDIR}
+	cd ${WRKSRC}/doc; ${FIND} . | ${CPIO} -padm ${DOCSDIR}
+	cd ${WRKSRC}; ${FIND} utilities | ${CPIO} -padm ${DOCSDIR}
 	@${MKDIR} ${EXAMPLESDIR}
-	@cd ${WRKSRC}/demo; ${FIND} . | ${CPIO} -padm ${EXAMPLESDIR}
+	cd ${WRKSRC}/demo; ${FIND} . | ${CPIO} -padm ${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
