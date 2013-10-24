@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-UPS/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Business-UPS/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Business-UPS
 PORTVERSION=	2.0
@@ -23,7 +23,7 @@ NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
