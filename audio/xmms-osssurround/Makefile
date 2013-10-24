@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: audio/xmms-osssurround/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-osssurround/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	xmms-osssurround
 PORTVERSION=	0.1
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	SF/xmms-a52dec/xmms-a52dec/1.0
 DISTNAME=	xmms-a52dec-1.0
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OSSSuround adds Surround Sound capabilities to XMMS
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
