@@ -1,5 +1,5 @@
 # Created by: Jacques Marneweck <jacques@php.net>
-# $FreeBSD: www/perlbal/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/perlbal/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Perlbal
 PORTVERSION=	1.80
@@ -68,7 +68,7 @@ post-patch:
 
 .ifndef NOPORTDOCS
 post-install:
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
 	${CP} -R ${WRKSRC}/doc/ ${DOCSDIR}
 .endif
 
