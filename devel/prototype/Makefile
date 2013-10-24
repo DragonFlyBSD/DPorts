@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/prototype/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/prototype/Makefile 330460 2013-10-15 21:17:55Z eadler $
 
 PORTNAME=	prototype
 PORTVERSION=	1.10
@@ -8,7 +8,7 @@ MASTER_SITES=	http://carlo17.home.xs4all.nl/prototype/
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Prototype Makefiles allows very fast project start ups
+COMMENT=	Prototype Makefiles allows fast project start ups
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
