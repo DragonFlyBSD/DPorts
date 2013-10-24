@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-crossfade/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-crossfade/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	crossfade
 PORTVERSION=	0.3.14
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.eisenlohr.org/xmms-crossfade/ CENKES
 PKGNAMEPREFIX=	${APP}-
 DISTNAME=	xmms-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Crossfading/Gapless Plugin
 
 LIB_DEPENDS?=	xmms.4:${PORTSDIR}/multimedia/xmms
