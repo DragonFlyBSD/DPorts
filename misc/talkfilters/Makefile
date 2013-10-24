@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: misc/talkfilters/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/talkfilters/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	talkfilters
 PORTVERSION=	2.3.8
@@ -38,7 +38,6 @@ MLINKS=	talkfilters.1 austro.1 \
 	talkfilters.1 warez.1
 INFO=	talkfilters
 
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "Please note that some of the filters contain language that may"
 	@${ECHO_MSG} "be objectionable to some. They are provided uncensored, in their"
