@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: mail/p5-qpsmtpd/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-qpsmtpd/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	qpsmtpd
 PORTVERSION=	0.84
@@ -60,14 +60,14 @@ pre-configure:
 post-install:
 	@${MKDIR} ${DATADIR}/
 	@${MKDIR} ${DATADIR}/plugins
-	@(cd ${WRKSRC}/plugins/ && ${COPYTREE_SHARE} \* ${DATADIR}/plugins/)
+	cd ${WRKSRC}/plugins/ && ${COPYTREE_SHARE} \* ${DATADIR}/plugins/
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/README* ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/README* ${DOCSDIR}/
 .endif
 .if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${EXAMPLESDIR}/
-	@(cd ${WRKSRC}/config.sample/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}/)
+	cd ${WRKSRC}/config.sample/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
