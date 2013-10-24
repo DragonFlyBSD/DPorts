@@ -1,10 +1,10 @@
 # Created by: HONDA Yasuhiro <honda@kashio.info.mie-u.ac.jp>
-# $FreeBSD: japanese/ng-canna/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/ng-canna/Makefile 330460 2013-10-15 21:17:55Z eadler $
 
 PKGNAMESUFFIX=	-canna
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A very lightweight Emacs-clone with Japanese and Canna support
+COMMENT=	Lightweight Emacs-clone with Japanese and Canna support
 
 MASTERDIR=	${.CURDIR}/../ng
 
