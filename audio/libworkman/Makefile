@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: audio/libworkman/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libworkman/Makefile 330633 2013-10-17 12:00:55Z madpilot $
 
 PORTNAME=	libworkman
 PORTVERSION=	1.4
@@ -16,14 +16,13 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 USES=		imake
-NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/libworkman
 USE_LDCONFIG=	yes
 CFLAGS+=	-fPIC
 
 post-patch:
 	@${REINPLACE_CMD} -e \
-		's|^DESTDIR|XCOMM DESTDIR| ; \
+		's|^DESTDIR=.*|DESTDIR=${STAGEDIR}| ; \
 		 s|=include/workman|=$$(INCROOT)/workman| ; \
 		 s|^LIBDIR|XCOMM LIBDIR|' ${WRKSRC}/Config
 
