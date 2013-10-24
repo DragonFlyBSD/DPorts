@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: devel/py-fs/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-fs/Makefile 331242 2013-10-22 09:06:15Z wg $
 
 PORTNAME=	fs
 PORTVERSION=	0.4.0
@@ -15,6 +15,6 @@ LICENSE=	BSD
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
