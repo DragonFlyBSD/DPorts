@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 330031 2013-10-10 20:02:42Z ohauer $
+  $FreeBSD: security/vuxml/vuln.xml 330854 2013-10-19 08:27:56Z delphij $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,248 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="c0f122e2-3897-11e3-a084-3c970e169bc2">
+    <topic>pycrypto -- PRNG reseed race condition</topic>
+    <affects>
+      <package>
+	<name>py26-pycrypto</name>
+	<name>py27-pycrypto</name>
+	<name>py31-pycrypto</name>
+	<name>py32-pycrypto</name>
+	<name>py33-pycrypto</name>
+	<range><lt>2.6.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dwayne Litzenberger reports:</p>
+	<blockquote cite="http://lists.dlitz.net/pipermail/pycrypto/2013q4/000702.html">
+	  <p>In PyCrypto before v2.6.1, the Crypto.Random pseudo-random
+	    number generator (PRNG) exhibits a race condition that may cause
+	    it to generate the same 'random' output in multiple processes that
+	    are forked from each other.  Depending on the application, this
+	    could reveal sensitive information or cryptographic keys to remote
+	    attackers.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1445</cvename>
+      <url>http://lists.dlitz.net/pipermail/pycrypto/2013q4/000702.html</url>
+    </references>
+    <dates>
+      <discovery>2013-10-17</discovery>
+      <entry>2013-10-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="043d3a78-f245-4938-9bc7-3d0d35dd94bf">
+    <topic>wordpress -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>zh-wordpress-zh_CN</name>
+	<name>zh-wordpress-zh_TW</name>
+	<name>de-wordpress</name>
+	<name>ja-wordpress</name>
+	<name>ru-wordpress</name>
+	<name>wordpress</name>
+	<range><lt>3.6.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The wordpress development team reports:</p>
+	<blockquote cite="http://wordpress.org/news/2013/09/wordpress-3-6-1/">
+	  <ul>
+	    <li>Block unsafe PHP unserialization that could occur in limited
+		situations and setups, which can lead to remote code
+		execution.</li>
+	    <li>Prevent a user with an Author role, using a specially crafted
+		request, from being able to create a post "written by" another
+		user.</li>
+	    <li>Fix insufficient input validation that could result in
+		redirecting or leading a user to another website.</li>
+	  </ul>
+	<p>Additionally, we've adjusted security restrictions around file
+	   uploads to mitigate the potential for cross-site scripting.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-4338</cvename>
+      <cvename>CVE-2013-4339</cvename>
+      <cvename>CVE-2013-4340</cvename>
+      <cvename>CVE-2013-5738</cvename>
+      <cvename>CVE-2013-5739</cvename>
+      <url>http://wordpress.org/news/2013/09/wordpress-3-6-1/</url>
+    </references>
+    <dates>
+      <discovery>2013-09-11</discovery>
+      <entry>2013-10-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="206f9826-a06d-4927-9a85-771c37010b32">
+    <topic>node.js -- DoS Vulnerability</topic>
+    <affects>
+      <package>
+	<name>node</name>
+	<range><lt>0.10.21</lt></range>
+      </package>
+      <package>
+	<name>node-devel</name>
+	<range><lt>0.11.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>node.js developers report</p>
+	<blockquote cite="http://blog.nodejs.org/2013/10/18/node-v0-10-21-stable/">
+	  <p>This release contains a security fix for the http server implementation, please upgrade as soon as possible.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://blog.nodejs.org/2013/10/18/node-v0-10-21-stable/</url>
+    </references>
+    <dates>
+      <discovery>2013-10-19</discovery>
+      <entry>2013-10-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e135f0c9-375f-11e3-80b7-20cf30e32f6d">
+    <topic>bugzilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>bugzilla</name>
+	<name>bugzilla40</name>
+	<name>bugzilla42</name>
+	<name>bugzilla44</name>
+	<range><ge>4.0.0</ge><lt>4.0.11</lt></range>
+	<range><ge>4.2.0</ge><lt>4.2.7</lt></range>
+	<range><ge>4.4</ge><lt>4.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>A Bugzilla Security Advisory reports:</h1>
+	<blockquote cite="http://www.bugzilla.org/security/4.0.10/">
+	  <h1>Cross-Site Request Forgery</h1>
+	  <p>When a user submits changes to a bug right after another
+	    user did, a midair collision page is displayed to inform
+	    the user about changes recently made. This page contains
+	    a token which can be used to validate the changes if the
+	    user decides to submit his changes anyway. A regression
+	    in Bugzilla 4.4 caused this token to be recreated if a
+	    crafted URL was given, even when no midair collision page
+	    was going to be displayed, allowing an attacker to bypass
+	    the token check and abuse a user to commit changes on his
+	    behalf.</p>
+	  <h1>Cross-Site Request Forgery</h1>
+	  <p>When an attachment is edited, a token is generated to
+	    validate changes made by the user. Using a crafted URL,
+	    an attacker could force the token to be recreated,
+	    allowing him to bypass the token check and abuse a user
+	  to commit changes on his behalf.</p>
+	  <h1>Cross-Site Scripting</h1>
+	  <p>Some parameters passed to editflagtypes.cgi were not
+	    correctly filtered in the HTML page, which could lead
+	    to XSS.</p>
+	  <h1>Cross-Site Scripting</h1>
+	  <p>Due to an incomplete fix for CVE-2012-4189, some
+	    incorrectly filtered field values in tabular reports
+	    could lead to XSS.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-1733</cvename>
+      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=911593</url>
+      <cvename>CVE-2013-1734</cvename>
+      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=913904</url>
+      <cvename>CVE-2013-1742</cvename>
+      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=924802</url>
+      <cvename>CVE-2013-1743</cvename>
+      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=924932</url>
+    </references>
+    <dates>
+      <discovery>2013-10-16</discovery>
+      <entry>2013-10-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8c9b48d1-3715-11e3-a624-00262d8b701d">
+    <topic>dropbear -- exposure of sensitive information, DoS</topic>
+    <affects>
+      <package>
+	<name>dropbear</name>
+	<range><ge>2012.55</ge><lt>2013.59</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Dropbear project reports:</p>
+	<blockquote cite="http://secunia.com/advisories/55173/">
+	  <p>A weakness and a vulnerability have been reported in Dropbear
+	     SSH Server, which can be exploited by malicious people to disclose
+	     certain sensitive information and cause a DoS.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <bid>62958</bid>
+      <bid>62993</bid>
+      <cvename>CVE-2013-4421</cvename>
+      <cvename>CVE-2013-4434</cvename>
+      <url>http://secunia.com/advisories/55173</url>
+    </references>
+    <dates>
+      <discovery>2013-05-08</discovery>
+      <!-- discovery>2013-10-03</discovery -->
+      <entry>2013-10-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="710cd5d5-35cb-11e3-85f9-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>30.0.1599.101</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>5 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[292422] High CVE-2013-2925: Use after free in XHR. Credit to
+	      Atte Kettunen of OUSPG.</li>
+	    <li>[294456] High CVE-2013-2926: Use after free in editing. Credit
+	      to cloudfuzzer.</li>
+	    <li>[297478] High CVE-2013-2927: Use after free in forms. Credit
+	      to cloudfuzzer.</li>
+	    <li>[305790] High CVE-2013-2928: Various fixes from internal
+	      audits, fuzzing and other initiatives.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-2925</cvename>
+      <cvename>CVE-2013-2926</cvename>
+      <cvename>CVE-2013-2927</cvename>
+      <cvename>CVE-2013-2928</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2013-10-15</discovery>
+      <entry>2013-10-15</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="9003b500-31e3-11e3-b0d0-20cf30e32f6d">
     <topic>mod_fcgid -- possible heap buffer overwrite</topic>
     <affects>
