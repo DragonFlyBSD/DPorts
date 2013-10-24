@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Mechanize/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	WWW-Mechanize
 PORTVERSION=	1.73
@@ -45,9 +45,9 @@ PORTDOCS=	${DOCS:T}
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}/
-	${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
 .include <bsd.port.mk>
