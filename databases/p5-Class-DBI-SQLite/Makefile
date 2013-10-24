@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: databases/p5-Class-DBI-SQLite/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-SQLite/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Class-DBI-SQLite
 PORTVERSION=	0.11
@@ -29,7 +29,7 @@ PORTDOCS=	Changes
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
