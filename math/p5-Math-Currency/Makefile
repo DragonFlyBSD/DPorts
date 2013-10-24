@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-Currency/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: math/p5-Math-Currency/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Math-Currency
 PORTVERSION=	0.47
@@ -24,7 +24,7 @@ PORTDOCS=	Changes
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
