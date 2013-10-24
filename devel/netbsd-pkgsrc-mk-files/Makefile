@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/netbsd-pkgsrc-mk-files/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/netbsd-pkgsrc-mk-files/Makefile 330983 2013-10-20 06:31:51Z trociny $
 
 PORTNAME=	netbsd-pkgsrc-mk-files
 PORTVERSION=	20100117
@@ -10,6 +10,9 @@ MASTER_SITES=	http://www.mova.org/~cheusov/pub/netbsd-tools/pkgsrc-mk-files/ \
 
 MAINTAINER=	to.my.trociny@gmail.com
 COMMENT=	Collection of mk-files from pkgsrc project
+
+DEPRECATED=	Imported for devel/mk-configure but no longer required
+EXPIRATION_DATE=	2013-11-20
 
 RUN_DEPENDS=	bmake:${PORTSDIR}/devel/bmake
 
