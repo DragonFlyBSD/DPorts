@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/dvdbackup/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/dvdbackup/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
 
 PORTNAME=	dvdbackup
 PORTVERSION=	0.4.2
@@ -19,14 +19,12 @@ USES=		gmake
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		dvdbackup.1
 PORTDOCS=	NEWS README
 
 DEFAULT_DVD_DEVICE?=	/dev/cd0
 
 OPTIONS_DEFINE=	DOCS NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
