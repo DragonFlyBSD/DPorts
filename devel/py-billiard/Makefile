@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-billiard/Makefile 330264 2013-10-13 22:49:29Z wg $
+# $FreeBSD: devel/py-billiard/Makefile 331134 2013-10-21 13:00:00Z wg $
 
 PORTNAME=	billiard
-PORTVERSION=	2.7.3.34
+PORTVERSION=	3.3.0.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,8 +12,9 @@ COMMENT=	Python multiprocessing fork with improvements and bugfixes
 
 LICENSE=	BSD
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=yes
 PYEASYINSTALL_ARCHDEP=	yes
 
 NO_STAGE=	yes
