@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-POE-Component-Schedule/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-Schedule/Makefile 331279 2013-10-22 14:40:29Z mat $
 
 PORTNAME=	POE-Component-Schedule
 PORTVERSION=	0.95
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		POE::Component::Schedule.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
