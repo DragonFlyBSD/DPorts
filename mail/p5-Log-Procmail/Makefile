@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: mail/p5-Log-Procmail/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: mail/p5-Log-Procmail/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Log-Procmail
 PORTVERSION=	0.12
@@ -22,7 +22,7 @@ PORTDOCS=	Changes
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
