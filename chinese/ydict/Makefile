@@ -1,10 +1,10 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/ydict/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD: chinese/ydict/Makefile 331091 2013-10-21 06:01:57Z delphij $
 
 PORTNAME=	ydict
-PORTVERSION=	1.2.6
+PORTVERSION=	1.3.1
 CATEGORIES=	chinese
-MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Command line tool of Yahoo! Dict
