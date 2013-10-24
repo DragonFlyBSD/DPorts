@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: sysutils/vils/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/vils/Makefile 330691 2013-10-17 23:51:36Z amdmi3 $
 
 PORTNAME=	vils
 PORTVERSION=	20020228
@@ -13,9 +13,8 @@ COMMENT=	Use your favorite editor to rename files
 BUILD_DEPENDS=	zsh:${PORTSDIR}/shells/zsh
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-PLIST_FILES=	bin/vils
+PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKDIR}
 	${CP} ${DISTDIR}/vils ${WRKDIR}/vils
@@ -24,6 +23,6 @@ do-build:
 	@${REINPLACE_CMD} -e 's/\/bin\/zsh/\/usr\/local\/bin\/zsh/' ${WRKDIR}/vils
 
 do-install:
-	${INSTALL_SCRIPT} -m 755 ${WRKDIR}/vils ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/vils ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
