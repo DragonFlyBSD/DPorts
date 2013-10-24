@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce/Makefile 330081 2013-10-11 14:09:43Z sunpoet $
+# $FreeBSD: www/tinymce/Makefile 331122 2013-10-21 10:59:37Z sunpoet $
 
 PORTNAME=	tinymce
 PORTVERSION=	4.0.8
@@ -13,7 +13,7 @@ COMMENT=	Open source JavaScript HTML WYSIWYG editor for web sites
 
 LICENSE=	LGPL21
 
-CONFLICTS_INSTALL=	tinymce-[0-35-9]*
+CONFLICTS_INSTALL=	tinymce-[0-35-9]* tinymce3-[0-9]*
 
 NO_BUILD=	yes
 USE_ZIP=	yes
@@ -21,7 +21,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 do-install:
 	cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}/
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}/
 
 # maintainer section:
 
