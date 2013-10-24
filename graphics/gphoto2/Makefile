@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/gphoto2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gphoto2/Makefile 330928 2013-10-19 19:32:28Z danfe $
 
 PORTNAME=	gphoto2
 PORTVERSION=	2.4.14
@@ -11,15 +11,13 @@ COMMENT=	Command-line frontend to libgphoto2
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt \
-		gphoto2:${PORTSDIR}/graphics/libgphoto2
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt \
+		libgphoto2.so:${PORTSDIR}/graphics/libgphoto2
 
 USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-cdk
-
-MAN1=		${PORTNAME}.1
 
 OPTIONS_DEFINE=	AALIB DOCS NLS
 OPTIONS_DEFAULT=	AALIB
@@ -27,18 +25,13 @@ OPTIONS_SUB=	yes
 
 AALIB_DESC=	Text mode capture preview support
 
-AALIB_LIB_DEPENDS=	aa:${PORTSDIR}/graphics/aalib
+AALIB_LIB_DEPENDS=	libaa.so:${PORTSDIR}/graphics/aalib
 AALIB_CONFIGURE_OFF=	--without-aalib
 
 NLS_USES=	gettext
 NLS_CONFIGURE_OFF=	--disable-nls
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
