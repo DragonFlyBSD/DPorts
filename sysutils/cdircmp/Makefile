@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/cdircmp/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cdircmp/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
 
 PORTNAME=	cdircmp
 PORTVERSION=	0.3
@@ -15,12 +15,11 @@ LDFLAGS+=	-lncurses -lform
 
 PLIST_FILES=	bin/cdircmp
 
-NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -c ${WRKSRC}/main.c -o ${WRKSRC}/main.o
 	${CC} ${LDFLAGS} -o ${WRKSRC}/${PORTNAME} ${WRKSRC}/main.o
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
