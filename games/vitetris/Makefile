@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: games/vitetris/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: games/vitetris/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	vitetris
 PORTVERSION=	0.57
@@ -20,8 +20,7 @@ PLIST_FILES=	bin/vitetris \
 		share/allegro/README \
 		share/pixmaps/vitetris.xpm \
 		share/applications/vitetris.desktop
-PLIST_DIRS=	share/allegro \
-		share/applications
+PLIST_DIRS=	share/allegro
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,docdir,datadir,g' \
