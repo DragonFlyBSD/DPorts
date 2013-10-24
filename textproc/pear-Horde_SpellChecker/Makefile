@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: textproc/pear-Horde_SpellChecker/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pear-Horde_SpellChecker/Makefile 331093 2013-10-21 06:40:56Z mm $
 
 PORTNAME=	Horde_SpellChecker
-PORTVERSION=	2.1.0
+PORTVERSION=	2.1.1
 CATEGORIES=	textproc www pear
 
 MAINTAINER=	horde@FreeBSD.org
