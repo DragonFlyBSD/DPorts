@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsps-devel/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvsps-devel/Makefile 331231 2013-10-22 07:53:02Z amdmi3 $
 
 PORTNAME=	cvsps
 DISTVERSION=	2.2b1
@@ -10,26 +10,22 @@ PKGNAMESUFFIX?=	-devel
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Create patchset information from CVS
 
-USE_GMAKE=	yes
+CONFLICTS=	cvsps-[0-9]*
+
+USES=		gmake
 ALL_TARGET=	cvsps
 
-CONFLICTS=	cvsps-[12].[01]*
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
+PORTDOCS=	*
 
-MAN1=		cvsps.1
-PLIST_FILES=	bin/cvsps
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
-.if !defined(NOPORTDOCS)
-PORTDOCS=	README
-.endif
-
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cvsps ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cvsps.1 ${MANPREFIX}/man/man1
-
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
