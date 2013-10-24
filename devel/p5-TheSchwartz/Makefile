@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-TheSchwartz/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-TheSchwartz/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	TheSchwartz
 PORTVERSION=	1.10
@@ -26,7 +26,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/extras/check_schwartz ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/extras/thetop ${PREFIX}/bin/
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}/
 .endif
 
