@@ -1,6 +1,7 @@
-@comment $FreeBSD: textproc/docbook-to-man/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: textproc/docbook-to-man/pkg-plist 331227 2013-10-22 07:48:55Z amdmi3 $
 bin/docbook-to-man
 bin/oinstant
+man/man1/oinstant.1.gz
 share/sgml/otranspec/docbook-to-man.ts
 share/sgml/otranspec/roff.cmap
 share/sgml/otranspec/roff.sdata

@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: textproc/docbook-to-man/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook-to-man/Makefile 331227 2013-10-22 07:48:55Z amdmi3 $
 
 PORTNAME=	docbook-to-man
 PORTVERSION=	1.0
@@ -23,9 +23,6 @@ RUN_DEPENDS+=	${LOCALBASE}/share/sgml/docbook:${PORTSDIR}/textproc/docbook
 USES=		imake
 XFREE86_HTML_MAN=	no
 
-MAN1=	oinstant.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Local variables
