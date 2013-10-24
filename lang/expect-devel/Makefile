@@ -1,5 +1,5 @@
 # Created by: mm
-# $FreeBSD: lang/expect-devel/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/expect-devel/Makefile 331099 2013-10-21 07:35:35Z gahr $
 
 PORTNAME=	expect
 PORTVERSION=	5.44.1.15
@@ -7,12 +7,12 @@ PORTREVISION=	1
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	SF/wintcltk/Sources/Package%20Sources
 DISTNAME=	expect-cvs-20091231
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A sophisticated scripter based on tcl/tk
 
 CONFLICTS=	expect-5.43* weather-[0-9]*
-LATEST_LINK=	expect-devel
 
 USE_AUTOTOOLS=	autoconf
 
