@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/deb2targz/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/deb2targz/Makefile 331319 2013-10-22 20:45:54Z ehaupt $
 
 PORTNAME=	deb2targz
 PORTVERSION=	20100710
@@ -10,12 +10,11 @@ DISTFILES=	# none
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line utility for converting a Debian .deb file to a .tar.gz
 
-NO_STAGE=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/deb2targz
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${FILESDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
