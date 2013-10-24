@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libpgf/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libpgf/Makefile 330872 2013-10-19 14:15:46Z jhale $
 
 PORTNAME=	libpgf
 PORTVERSION=	6.12.24
@@ -21,7 +21,6 @@ ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 pre-configure:
 	@cd ${WRKSRC}; ${TOUCH} NEWS AUTHORS
 
