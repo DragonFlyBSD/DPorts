@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Radius/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-Radius/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Authen-Radius
 PORTVERSION=	0.23
@@ -38,8 +38,6 @@ pre-configure:
 
 post-install:
 	@${MKDIR} ${DATADIR}
-.for FILE in ${RADDBFILES}
-	@${INSTALL_DATA} ${WRKSRC}/raddb/${FILE} ${DATADIR}/${FILE}
-.endfor
+	cd ${WRKSRC}/raddb/ && ${INSTALL_DATA} ${RADDBFILES} ${DATADIR}
 
 .include <bsd.port.mk>
