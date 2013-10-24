@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: sysutils/vstrip/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/vstrip/Makefile 331045 2013-10-20 18:08:52Z bapt $
 
 PORTNAME=	vstrip
 DISTVERSION=	0.8f
@@ -11,15 +11,17 @@ DISTNAME=	vStrip_${DISTVERSION:C/\.//g}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	VOB de-multiplexing tool, splitter, and VOB/IFO files processor
 
-LIB_DEPENDS=	dvdread.4:${PORTSDIR}/multimedia/libdvdread
+LIB_DEPENDS=	libdvdread.so:${PORTSDIR}/multimedia/libdvdread
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/license.txt
+
+LDFLAGS+=	-lm
+
+PLIST_FILES=	bin/${PORTNAME}
 
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -type f -print0 | \
 		${XARGS} -0 -x -n 10 \
@@ -33,11 +35,7 @@ post-patch:
 		${WRKSRC}/*.c \
 		${WRKSRC}/*.h
 
-LDFLAGS+=	-lm
-
-PLIST_FILES=	bin/${PORTNAME}
-
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
