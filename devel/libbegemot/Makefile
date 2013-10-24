@@ -1,5 +1,5 @@
 # Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
-# $FreeBSD: devel/libbegemot/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libbegemot/Makefile 330758 2013-10-18 15:02:20Z bapt $
 
 PORTNAME=	libbegemot
 PORTVERSION=	1.11
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://people.freebsd.org/~harti/libbegemot/
 DISTNAME=	libbegemot-${PORTVERSION}
 
-MAINTAINER=	bu7cher@yandex.ru
+MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	A function library for begemot tools
 
 GNU_CONFIGURE=	yes
