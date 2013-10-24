@@ -1,4 +1,4 @@
-# $FreeBSD: security/pssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pssh/Makefile 330755 2013-10-18 14:40:44Z brooks $
 
 PORTNAME=	pssh
 PORTVERSION=	2.3.1
@@ -14,12 +14,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 
-MAN1=		pnuke.1 prsync.1 pscp.1 pslurp.1 pssh.1
-
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 PROJECTHOST=	parallel-ssh
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
