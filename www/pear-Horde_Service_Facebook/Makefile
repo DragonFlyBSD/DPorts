@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/pear-Horde_Service_Facebook/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-Horde_Service_Facebook/Makefile 331298 2013-10-22 16:38:26Z mm $
 
 PORTNAME=	Horde_Service_Facebook
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.6
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
