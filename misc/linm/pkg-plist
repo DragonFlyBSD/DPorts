@@ -1,4 +1,4 @@
-@comment $FreeBSD: misc/linm/pkg-plist 320348 2013-06-09 16:50:22Z miwi $
+@comment $FreeBSD: misc/linm/pkg-plist 331270 2013-10-22 13:56:27Z amdmi3 $
 bin/linm
 bin/linm.csh
 bin/linm.sh
@@ -31,6 +31,5 @@ share/applications/LinM.desktop
 share/locale/ko/LC_MESSAGES/linm.mo
 share/pixmaps/linm.xpm
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrmtry etc/profile.d
 @dirrm %%ETCDIR%%
