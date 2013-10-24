@@ -1,5 +1,5 @@
 # Created by: Brooks Davis
-# $FreeBSD: lang/clang/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/clang/Makefile 331180 2013-10-21 20:00:09Z brooks $
 
 PORTNAME=	clang
 PORTVERSION=	3.2
@@ -15,6 +15,9 @@ MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	C, Objective-C, and C++ compiler
 
 CONFLICTS=	clang-devel-[23]*
+
+DEPRECATED=	Migrate to devel/clang32 or newer 
+EXPIRATION_DATE=	2013-11-04
 
 CLANG_NAME=	clang-${PORTVERSION}.src
 CLANG_SOURCE=	${CLANG_NAME}${EXTRACT_SUFX}
