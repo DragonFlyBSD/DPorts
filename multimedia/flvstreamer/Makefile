@@ -1,5 +1,4 @@
-# Created by: hrs
-# $FreeBSD: multimedia/flvstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/flvstreamer/Makefile 330614 2013-10-17 07:37:29Z hrs $
 
 PORTNAME=	flvstreamer
 PORTVERSION=	2.1.c.1
@@ -12,7 +11,7 @@ DISTNAME=	${PORTNAME}-2.1c1
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	An open source command-line RTMP client
 
-USE_GMAKE=	yes
+USES=		gmake
 ALL_TARGET=	posix
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKE_ARGS=	THREADLIB="${PTHREAD_LIBS}" \
@@ -21,15 +20,16 @@ MAKE_ARGS=	THREADLIB="${PTHREAD_LIBS}" \
 PLIST_FILES=	bin/flvstreamer bin/streams
 PORTDOCS=	ChangeLog ChangeLog.rtmpdump README
 
-NO_STAGE=	yes
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PLIST_FILES:S,^bin/,,} \
-		${PREFIX}/bin
+		${STAGEDIR}${PREFIX}/bin
 
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
