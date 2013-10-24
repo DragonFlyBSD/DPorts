@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11/xwit/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xwit/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	xwit
 PORTVERSION=	3.4
@@ -20,5 +20,4 @@ PLIST_FILES=	bin/xwit
 
 EXTRA_PATCHES=	${WRKDIR}/${PORTNAME}-patchset-${PORTVERSION}/patch-*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
