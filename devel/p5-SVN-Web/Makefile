@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-SVN-Web/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-SVN-Web/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	SVN-Web
 PORTVERSION=	0.63
@@ -61,7 +61,7 @@ MAN3=		SVN::CHANGES.3 \
 NO_STAGE=	yes
 post-install:
 	@${MKDIR} -p ${WWWDIR}
-	@${CP} -r ${WRKSRC}/SVN-Web.psgi ${WRKSRC}/template ${WRKSRC}/css ${WWWDIR}
+	${CP} -R ${WRKSRC}/SVN-Web.psgi ${WRKSRC}/template ${WRKSRC}/css ${WWWDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/svnweb-install ${PREFIX}/bin
 	@${ECHO}
 	@${CAT} ${PKGMESSAGE}
