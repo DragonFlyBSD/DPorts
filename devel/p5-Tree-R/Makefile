@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/p5-Tree-R/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tree-R/Makefile 330816 2013-10-19 01:43:19Z amdmi3 $
 
 PORTNAME=	Tree-R
 PORTVERSION=	0.06
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for the Rtree data structure and algorithms
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tree::R.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
