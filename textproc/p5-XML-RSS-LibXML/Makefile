@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-RSS-LibXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-RSS-LibXML/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	XML-RSS-LibXML
 PORTVERSION=	0.31.02
@@ -33,7 +33,7 @@ MAN3=		XML::RSS::LibXML.3 \
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/benchmark.pl ${EXAMPLESDIR}/
 .endif
 
