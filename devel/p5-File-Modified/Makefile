@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Modified/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/p5-File-Modified/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	File-Modified
 PORTVERSION=	0.07
@@ -26,9 +26,9 @@ EXAMPLES=	example/1.pl example/Export.cfg example/Import.cfg
 
 post-install:
 	@${MKDIR} ${DOCSDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
-	@${INSTALL_DATA} ${EXAMPLES:S|^|${WRKSRC}/|} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${EXAMPLES:S|^|${WRKSRC}/|} ${EXAMPLESDIR}
 	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
 .endif
 
