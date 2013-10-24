@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-PPPort/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/p5-Devel-PPPort/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Devel-PPPort
 DISTVERSION=	3.21
@@ -24,7 +24,7 @@ PORTDOCS=	Changes README HACKERS TODO
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
