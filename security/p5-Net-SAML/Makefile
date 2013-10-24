@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Net-SAML/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.11
@@ -30,7 +30,7 @@ post-patch:
 
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	cd ${WRKSRC}/../ && ${INSTALL_SCRIPT} zxid.pl zxidhlo.pl ${EXAMPLESDIR}/
 .endif
 
