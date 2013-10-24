@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/mar/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/mar/Makefile 331357 2013-10-23 07:40:52Z ehaupt $
 
 PORTNAME=	mar
 DISTVERSION=	0.5
@@ -13,9 +13,6 @@ COMMENT=	Simple binary file format for storing arbitrary meta and user data
 LICENSE=	MIT
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
-NO_STAGE=	yes
-
-MAN1=		mar.1
 
 OPTIONS_DEFINE=	DOCS
 
@@ -26,12 +23,13 @@ post-patch:
 		${WRKSRC}/src/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/man1/mar.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/man1/mar.1 \
+		${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
