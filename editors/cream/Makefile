@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: editors/cream/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/cream/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 
 PORTNAME=	cream
 PORTVERSION=	0.42
@@ -28,10 +28,8 @@ do-install:
 	${MKDIR} ${VIMRUNTIME}/cream/${f}
 	${INSTALL_DATA} ${WRKSRC}/${f}/* ${VIMRUNTIME}/cream/${f}
 .endfor
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/cream.png ${WRKSRC}/cream.svg \
 		${PREFIX}/share/pixmaps
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/cream.desktop ${PREFIX}/share/applications
 .if !defined(NOPORTDOCS)
 .for f in docs docs-html
