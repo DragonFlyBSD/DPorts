@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Spreadsheet-ParseExcel/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Spreadsheet-ParseExcel/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Spreadsheet-ParseExcel
 PORTVERSION=	0.59
@@ -40,9 +40,9 @@ post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
 	@${MKDIR} ${EXAMPLESDIR}/Excel
-	@${INSTALL_DATA} ${WRKSRC}/sample/README ${EXAMPLESDIR}
-	@${INSTALL_SCRIPT} ${WRKSRC}/sample/*.pl ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/sample/Excel/* ${EXAMPLESDIR}/Excel
+	${INSTALL_DATA} ${WRKSRC}/sample/README ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/sample/*.pl ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample/Excel/* ${EXAMPLESDIR}/Excel
 .endif
 
 .include <bsd.port.mk>
