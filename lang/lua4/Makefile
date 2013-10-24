@@ -1,5 +1,5 @@
 # Created by: Richard Kiss <him@richardkiss.com>
-# $FreeBSD: lang/lua4/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/lua4/Makefile 330732 2013-10-18 09:47:00Z bapt $
 
 PORTNAME=	lua
 PORTVERSION=	4.0.1
@@ -13,6 +13,9 @@ MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 
 MAINTAINER=	him@richardkiss.com
 COMMENT=	Small, compilable scripting language providing easy access to C code
+
+DEPRECATED=	Lua4 is EOLed
+EXPIRATION_DATE=	2013-11-18
 
 USE_LDCONFIG=	yes
 USE_LUA=	4.0
