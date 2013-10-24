@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: mail/anubis/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/anubis/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	anubis
 PORTVERSION=	4.1.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
