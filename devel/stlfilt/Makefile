@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/stlfilt/Makefile 328544 2013-09-28 03:30:04Z eadler $
+# $FreeBSD: devel/stlfilt/Makefile 331409 2013-10-23 18:57:48Z eadler $
 
 PORTNAME=	stlfilt
 PORTVERSION=	20080203
@@ -26,7 +26,7 @@ post-patch:
 
 do-install:
 .for file in gSTLFilt.pl gfilt
-	@${INSTALL_SCRIPT} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
 .include <bsd.port.mk>
