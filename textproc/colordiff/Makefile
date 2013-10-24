@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/colordiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/colordiff/Makefile 331328 2013-10-22 21:51:59Z ehaupt $
 
 PORTNAME=	colordiff
 PORTVERSION=	1.0.13
@@ -16,18 +16,15 @@ NO_BUILD=	yes
 
 SHEBANG_FILES=	colordiff.pl
 
-MAN1=		colordiff.1
-
-NO_STAGE=	yes
 post-patch:
-	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' ${WRKSRC}/${MAN1}
+	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' ${WRKSRC}/${PORTNAME}.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/colordiffrc ${PREFIX}/etc/colordiffrc.default
-.if !exists(${PREFIX}/etc/colordiffrc)
-	${INSTALL_DATA} ${WRKSRC}/colordiffrc ${PREFIX}/etc
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/colordiffrc ${STAGEDIR}${PREFIX}/etc/colordiffrc.default
+.if !exists(${STAGEDIR}${PREFIX}/etc/colordiffrc)
+	${INSTALL_DATA} ${WRKSRC}/colordiffrc ${STAGEDIR}${PREFIX}/etc
 .endif
 
 .include <bsd.port.mk>
