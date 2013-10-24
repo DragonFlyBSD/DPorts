@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl-Unsafe-Signals/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Perl-Unsafe-Signals/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	Perl-Unsafe-Signals
 PORTVERSION=	0.02
@@ -15,5 +15,4 @@ USE_PERL5=	configure
 
 MAN3=		Perl::Unsafe::Signals.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
