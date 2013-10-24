@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-fxt/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-fxt/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	xmms-fxt
 PORTVERSION=	0.4
@@ -7,7 +7,7 @@ PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}oolbox/${PORTNAME}-${PORTVERSION}.tar.gz
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Surround/Echo effect plugin for XMMS
 
 LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
