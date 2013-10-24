@@ -1,0 +1,17 @@
+# $FreeBSD: devel/rubygem-settingslogic/Makefile 331088 2013-10-21 03:20:07Z swills $
+
+PORTNAME=	settingslogic
+PORTVERSION=	2.0.9
+CATEGORIES=	devel rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	A gem to use YAML and singleton design paterns
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+NO_STAGE=	yes
+
+.include <bsd.port.mk>
