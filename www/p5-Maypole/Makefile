@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: www/p5-Maypole/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Maypole/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Maypole
 PORTVERSION=	2.13
@@ -103,15 +103,15 @@ DOC_FILES=	../Manual.pod \
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@ ${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 .for FILE in ${DOC_FILES}
-	@ ${INSTALL_DATA} ${WRKSRC}/lib/Maypole/Manual/${FILE} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/lib/Maypole/Manual/${FILE} ${DOCSDIR}/
 .endfor
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@ ${MKDIR} ${EXAMPLESDIR}/
-	@ ${CP} -R ${WRKSRC}/examples/ ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
+	${CP} -R ${WRKSRC}/examples/ ${EXAMPLESDIR}/
 .endif
-	@ ${CAT} ${PKGMESSAGE}
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
