@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: mail/mutt_vc_query/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mutt_vc_query/Makefile 330848 2013-10-19 06:40:36Z jgh $
 
 PORTNAME=	mutt_vc_query
 PORTVERSION=	002
@@ -17,18 +17,16 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-I${PREFIX}/include \
 		-L${PREFIX}/lib
 
-MAN1=		mutt_vc_query.1
 PORTDOCS=	*
-PLIST_FILES=	bin/mutt_vc_query
+PLIST_FILES=	bin/mutt_vc_query man/man1/mutt_vc_query.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for DOC in AUTHORS ChangeLog NEWS README THANKS
-	${INSTALL_DATA} ${WRKSRC}/${DOC} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${DOC} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
