@@ -1,9 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: security/ruby-gpgme/Makefile 330026 2013-10-10 18:15:03Z tabthorpe $
+# $FreeBSD: security/ruby-gpgme/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	gpgme
 PORTVERSION=	1.0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security ruby
 MASTER_SITES=	${MASTER_SITE_RUBYFORGE}
 MASTER_SITE_SUBDIR=	ruby-gpgme
@@ -14,7 +14,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby interface to GnuPG Made Easy (GPGME)
 
-LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
