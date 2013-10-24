@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/corkscrew/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/corkscrew/Makefile 331386 2013-10-23 13:50:35Z ehaupt $
 
 PORTNAME=	corkscrew
 PORTVERSION=	2.0
@@ -17,14 +17,13 @@ GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in NEWS README TODO
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
