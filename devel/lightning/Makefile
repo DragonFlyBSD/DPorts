@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/lightning/Makefile 328276 2013-09-25 12:31:15Z wg $
+# $FreeBSD: devel/lightning/Makefile 331009 2013-10-20 12:07:27Z marino $
 
 PORTNAME=	lightning
 PORTVERSION=	2.0.1
