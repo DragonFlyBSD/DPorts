@@ -1,4 +1,4 @@
-@comment $FreeBSD: sysutils/byobu/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: sysutils/byobu/pkg-plist 331274 2013-10-22 14:01:38Z amdmi3 $
 %%DATADIR%%/ec2/rates.eu_ie
 %%DATADIR%%/ec2/rates.us_ca
 %%DATADIR%%/ec2/rates.us_va
@@ -71,7 +71,6 @@ lib/byobu/users
 lib/byobu/whoami
 lib/byobu/wifi_quality
 share/applications/byobu.desktop
-@dirrmtry share/applications
 @dirrm lib/byobu
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm %%DATADIR%%/windows
