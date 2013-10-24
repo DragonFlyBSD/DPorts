@@ -1,5 +1,5 @@
 # Created by: marck@rinet.ru
-# $FreeBSD: net-mgmt/ehnt/Makefile 329228 2013-10-03 20:46:28Z marck $
+# $FreeBSD: net-mgmt/ehnt/Makefile 330774 2013-10-18 21:25:27Z antoine $
 
 PORTNAME=	ehnt
 PORTVERSION=	0.3
@@ -11,29 +11,27 @@ MAINTAINER=	marck@FreeBSD.org
 COMMENT=	A simple Cisco NetFlow data collector
 
 PLIST_FILES=	bin/ehnt etc/rc.d/ehntserv.sh.sample \
+		man/man1/ehnt.1.gz man/man8/ehntserv.8.gz \
 		sbin/ehntserv share/ehnt/asnc.txt
 PLIST_DIRS+=	share/ehnt
 
 PORTDOCS=	README
-NO_STAGE=	yes
-
-MAN1=		ehnt.1
-MAN8=		ehntserv.8
+STPREFIX=	${STAGEDIR}${PREFIX}
 
 post-extract:
 	${TOUCH} ${WRKSRC}/asnc.txt
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ehnt ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/ehntserv ${PREFIX}/sbin/
-	${INSTALL_SCRIPT} ${FILESDIR}/ehntserv.sh.sample ${PREFIX}/etc/rc.d/
-	${INSTALL_MAN} ${WRKSRC}/ehnt.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/ehntserv.8 ${PREFIX}/man/man8/
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/asnc.txt ${DATADIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/ehnt ${STPREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/ehntserv ${STPREFIX}/sbin/
+	${INSTALL_SCRIPT} ${FILESDIR}/ehntserv.sh.sample ${STPREFIX}/etc/rc.d/
+	${INSTALL_MAN} ${WRKSRC}/ehnt.1 ${STPREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/ehntserv.8 ${STPREFIX}/man/man8/
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/asnc.txt ${STAGEDIR}${DATADIR}/
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
