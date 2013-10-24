@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Coro/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Coro/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Coro
 PORTVERSION=	6.31
@@ -52,11 +52,11 @@ MAN3=		Coro.3 \
 NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/doc/cede-vs-schedule ${DOCSDIR}/
 .endif
 .if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/eg/* ${EXAMPLESDIR}/
 .endif
 
