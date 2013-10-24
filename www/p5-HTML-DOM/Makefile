@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-DOM/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-DOM/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	HTML-DOM
 PORTVERSION=	0.053
@@ -23,7 +23,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${MASTERDIR}/Makefile.man"
 .include <bsd.port.post.mk>
