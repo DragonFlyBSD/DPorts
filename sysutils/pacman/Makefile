@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/pacman/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pacman/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	pacman
 PORTVERSION=	4.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.archlinux.org/other/pacman/ \
 		http://mirror.amdmi3.ru/distfiles/
