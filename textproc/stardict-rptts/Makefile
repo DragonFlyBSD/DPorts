@@ -1,5 +1,5 @@
 # Created by: Shen Chun-Hsing <statue@freebsd.netlab.cse.yzu.edu.tw>
-# $FreeBSD: textproc/stardict-rptts/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/stardict-rptts/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	stardict-rptts
 PORTVERSION=	2.1.0
@@ -16,8 +16,7 @@ PROJECTHOST=	stardict-3
 NO_BUILD=	yes
 USE_BZIP2=	yes
 
-NO_STAGE=	yes
 do-install:
-		${TAR} jxvf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} -C ${PREFIX}/share
+		${TAR} jxvf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} -C ${STAGEDIR}${PREFIX}/share
 
 .include <bsd.port.mk>
