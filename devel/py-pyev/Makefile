@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: devel/py-pyev/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pyev/Makefile 330303 2013-10-14 11:53:37Z wg $
 
 PORTNAME=	pyev
 PORTVERSION=	0.9.0
@@ -17,12 +17,10 @@ LIB_DEPENDS=	libev.so:${PORTSDIR}/devel/libev
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=yes
 PYDISTUTILS_PKGVERSION=${PORTVERSION}${DISTVERSIONSUFFIX}
 
 CFLAGS+=	-I${PREFIX}/include
 LDFLAGS+=	-L${PREFIX}/lib
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pyev.so
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
