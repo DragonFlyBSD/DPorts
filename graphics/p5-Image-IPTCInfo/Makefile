@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-IPTCInfo/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-IPTCInfo/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Image-IPTCInfo
 PORTVERSION=	1.95
@@ -22,7 +22,7 @@ post-patch:
 
 .if !defined(NOPORTDOCS)
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/demo_images/* ${EXAMPLESDIR}
 .endif
 
