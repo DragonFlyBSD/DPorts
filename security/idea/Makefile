@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: security/idea/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/idea/Makefile 331381 2013-10-23 12:35:04Z ehaupt $
 
 PORTNAME=	idea
 PORTVERSION=	1.2
@@ -15,12 +15,8 @@ COMMENT=	Command-line IDEA encryption and decryption utility
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MANL=		idea.l
-MANCOMPRESSED=	no
-
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
@@ -28,14 +24,15 @@ do-build:
 		-o ${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/manl/idea.l ${PREFIX}/man/manl
-	${INSTALL_PROGRAM} -m 0555 ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/Examples ${EXAMPLESDIR}
+	${INSTALL_MAN} ${WRKSRC}/manl/idea.l ${STAGEDIR}${PREFIX}/man/manl
+	${INSTALL_PROGRAM} -m 0555 ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/Examples ${STAGEDIR}${EXAMPLESDIR}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/byte_ord.ps ${WRKSRC}/idea_cmd.txt ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/byte_ord.ps ${WRKSRC}/idea_cmd.txt \
+		${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
