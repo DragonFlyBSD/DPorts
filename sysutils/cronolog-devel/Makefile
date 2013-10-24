@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/cronolog-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cronolog-devel/Makefile 330951 2013-10-20 00:33:52Z bdrewery $
 
 PORTNAME=	cronolog
 PORTVERSION=	1.7.0
@@ -7,19 +7,19 @@ MASTER_SITES=	http://cronolog.org/patches/
 PKGNAMESUFFIX=	-devel
 DISTNAME=	${PORTNAME}-${PORTVERSION}-beta
 
-MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A web log rotation utility that provides datestamp filenames
+MAINTAINER=	bdrewery@FreeBSD.org
+COMMENT=	Web log rotation utility that provides datestamp filenames
 
 PLIST_FILES=	sbin/cronolog \
-		sbin/cronosplit
+		sbin/cronosplit \
+		man/man1/cronolog.1m.gz \
+		man/man1/cronosplit.1m.gz
 
 CONFLICTS=	cronolog-[0-9]*
 
 WRKSRC=		${WRKDIR}/cronolog-${PORTVERSION}
 INFO=		cronolog
-MAN1=		cronolog.1m cronosplit.1m
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
