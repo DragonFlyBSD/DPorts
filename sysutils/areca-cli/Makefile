@@ -1,5 +1,5 @@
 # Created by: Rink Springer <rink@FreeBSD.org>
-# $FreeBSD: sysutils/areca-cli/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/areca-cli/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
 
 PORTNAME=	areca-cli
 DISTVERSION=	${CLI_VER}.${CLI_REV}
@@ -27,16 +27,15 @@ SUB_FILES+=	${PERIODICSCRIPT}
 
 WRKSRC=		${WRKDIR}/V${CLI_VER}_${CLI_REV}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
 .if ${ARCH} == "i386"
-		${INSTALL_PROGRAM} ${WRKSRC}/${ARCH}/cli32 ${PREFIX}/sbin/areca-cli
+		${INSTALL_PROGRAM} ${WRKSRC}/${ARCH}/cli32 ${STAGEDIR}${PREFIX}/sbin/areca-cli
 .elif ${ARCH} == "x86_64"
-		${INSTALL_PROGRAM} ${WRKSRC}/x86_64/cli64 ${PREFIX}/sbin/areca-cli
+		${INSTALL_PROGRAM} ${WRKSRC}/x86_64/cli64 ${STAGEDIR}${PREFIX}/sbin/areca-cli
 .endif
-		@${MKDIR} ${PREFIX}/etc/periodic/daily
-		${INSTALL_SCRIPT} ${WRKDIR}/${PERIODICSCRIPT} ${PREFIX}/etc/periodic/daily
+		@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
+		${INSTALL_SCRIPT} ${WRKDIR}/${PERIODICSCRIPT} ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
 .include <bsd.port.post.mk>
