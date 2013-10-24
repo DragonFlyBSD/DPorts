@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: textproc/libflate/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libflate/Makefile 330657 2013-10-17 17:13:37Z vg $
 
 PORTNAME=	libflate
 PORTVERSION=	2.0
@@ -11,6 +11,8 @@ COMMENT=	Template library used to deal with html code in CGI applications
 
 PLIST_FILES=	lib/${PORTNAME}.a \
 		bin/checktpl
+
+MAKE_ARGS+=	CC=${CC}
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
