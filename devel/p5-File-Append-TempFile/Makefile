@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 331409 2013-10-23 18:57:48Z eadler $
 
 PORTNAME=	File-Append-TempFile
 PORTVERSION=	0.05
@@ -16,20 +16,17 @@ TEST_DEPENDS=	p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Append::TempFile.3
-
 PORTDOCS=	Changes README
 
 test:		build
-		@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
+		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-		${MKDIR} ${DOCSDIR}
-		${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+		${MKDIR} ${STAGEDIR}${DOCSDIR}
+		${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
