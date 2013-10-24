@@ -1,5 +1,5 @@
 # Created by: Aliaksandr Zahatski <zahatski@gmail.com>
-# $FreeBSD: lang/rakudo/Makefile 328523 2013-09-27 20:57:56Z sunpoet $
+# $FreeBSD: lang/rakudo/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	rakudo
 PORTVERSION=	2013.09
@@ -81,7 +81,7 @@ do-install:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/perl6.1 ${MAN1PREFIX}/man/man1/perl6.1
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}/
 	cd ${WRKSRC}/docs/ && ${INSTALL_DATA} ${EXTRA_DOCS} ${DOCSDIR}/
 .endif
 
