@@ -1,9 +1,9 @@
 # Created by: Johan van Selst <johans@stack.nl>
-# $FreeBSD: security/py-pyme/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-pyme/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	pyme
 PORTVERSION=	0.8.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Python interface to GPGME library
 
 BUILD_DEPENDS=	swig1.3:${PORTSDIR}/devel/swig13
-LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme
 
 USE_GMAKE=	yes
 USE_PYTHON=	2.5+
