@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/uniconvertor/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/uniconvertor/Makefile 330573 2013-10-16 23:55:07Z amdmi3 $
 
 PORTNAME=	uniconvertor
 PORTVERSION=	1.1.5
@@ -15,5 +15,4 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/sk1libs/__init__.py:${PORTSDIR}/graphics/sk1li
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
