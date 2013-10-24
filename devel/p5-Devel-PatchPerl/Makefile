@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-PatchPerl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-PatchPerl/Makefile 331395 2013-10-23 17:22:07Z sunpoet $
 
 PORTNAME=	Devel-PatchPerl
-PORTVERSION=	1.12
+PORTVERSION=	1.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
@@ -14,16 +14,10 @@ COMMENT=	Perl module to patch Perl source
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-File-pushd>=1.00:${PORTSDIR}/devel/p5-File-pushd
+BUILD_DEPENDS=	p5-File-pushd>=1:${PORTSDIR}/devel/p5-File-pushd
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		patchperl.1
-MAN3=		Devel::PatchPerl.3 \
-		Devel::PatchPerl::Hints.3 \
-		Devel::PatchPerl::Plugin.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
