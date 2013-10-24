@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-finespectrum/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xmms-finespectrum/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	xmms-finespectrum
 PORTVERSION=	1.0.1.a
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	SF/finespectrum/finespectrum/1.0.1alpha
 DISTNAME=	finespectrum-1.0.1alpha
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fine grain Spectrum analyzers for XMMS
 
 BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
