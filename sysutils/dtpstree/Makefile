@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: sysutils/dtpstree/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/dtpstree/Makefile 330995 2013-10-20 09:33:04Z sunpoet $
 
 PORTNAME=	dtpstree
 PORTVERSION=	1.0.3
@@ -13,11 +13,12 @@ COMMENT=	Display a tree of processes
 LICENSE=	AL2
 
 USE_XZ=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
-MAN1=		dtpstree.1
-PLIST_FILES=	bin/dtpstree
+USES=		gmake
 
-NO_STAGE=	yes
+MAN1=		dtpstree.1
+PLIST_FILES=	bin/dtpstree \
+		man/man1/dtpstree.1.gz
+
 .include <bsd.port.mk>
