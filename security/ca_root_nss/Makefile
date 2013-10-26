@@ -1,4 +1,4 @@
-# $FreeBSD: security/ca_root_nss/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ca_root_nss/Makefile 331531 2013-10-24 20:45:09Z flo $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
@@ -25,14 +25,13 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.15.1
+VERSION_NSS=	3.15.2
 #NSS_SUFFIX=	.with.ckbi.1.93
 CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/nss/lib/ckfw/builtins/certdata.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl
 SUB_FILES=	MAca-bundle.pl
 SUB_LIST=	VERSION_NSS=${VERSION_NSS}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:METCSYMLINK}
@@ -55,10 +54,13 @@ do-build:	apply-slist
 	    ${WRKDIR}/ca-root-nss.crt
 
 do-install:
-	${MKDIR} ${PREFIX}/${CERTDIR}
-	${INSTALL_DATA} ${WRKDIR}/ca-root-nss.crt ${PREFIX}/${CERTDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/${CERTDIR}
+	${INSTALL_DATA} ${WRKDIR}/ca-root-nss.crt ${STAGEDIR}${PREFIX}/${CERTDIR}
+
+post-install:
 .if ${PORT_OPTIONS:METCSYMLINK}
-	${LN} -sf ${PREFIX}/${CERTDIR}/ca-root-nss.crt /etc/ssl/cert.pem
+	${MKDIR} ${STAGEDIR}/etc/ssl
+	${LN} -sf ${PREFIX}/${CERTDIR}/ca-root-nss.crt ${STAGEDIR}/etc/ssl/cert.pem
 .endif
 
 .include <bsd.port.mk>
