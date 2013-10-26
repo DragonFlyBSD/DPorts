@@ -1,9 +1,9 @@
-# $FreeBSD: devel/mdds/Makefile 329286 2013-10-04 10:40:52Z bapt $
+# $FreeBSD: devel/mdds/Makefile 331610 2013-10-25 16:37:57Z jkim $
 
 PORTNAME=	mdds
-PORTVERSION=	0.9.0
+PORTVERSION=	0.9.1
 CATEGORIES=	devel
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	http://kohei.us/files/mdds/src/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	office@FreeBSD.org
