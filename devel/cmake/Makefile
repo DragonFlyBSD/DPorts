@@ -1,5 +1,5 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cmake/Makefile 331379 2013-10-23 12:17:50Z gahr $
 
 PORTNAME=	cmake
 PORTVERSION=	2.8.11.2
@@ -24,20 +24,8 @@ INSTALL_TARGET=	install/strip
 .if !defined(CMAKE_MODULES)
 HAS_CONFIGURE=	yes
 RUN_DEPENDS=	${DATADIR}/Modules/CMake.cmake:${PORTSDIR}/devel/cmake-modules
-
-MAN1=		ccmake.1 \
-		cmake.1 \
-		cmakecommands.1 \
-		cmakecompat.1 \
-		cmakemodules.1 \
-		cmakepolicies.1	\
-		cmakeprops.1 \
-		cmakevars.1 \
-		cpack.1 \
-		ctest.1
 .endif
 
-NO_STAGE=	yes
 post-patch:
 	@(${FIND} ${WRKSRC}/Modules -name "*.cmake" -print0; \
 		${FIND} ${WRKSRC}/Tests -name "CMakeLists.txt" -print0 ) | \
@@ -55,7 +43,7 @@ post-patch:
 
 .if !defined(CMAKE_MODULES)
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/Docs/cmake-mode.el ${PREFIX}/share/emacs/site-lisp
+	${INSTALL_DATA} ${WRKSRC}/Docs/cmake-mode.el ${STAGEDIR}${PREFIX}/share/emacs/site-lisp
 .endif
 
 .include <bsd.port.mk>
