@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 329208 2013-10-03 16:34:28Z flo $
+# $FreeBSD: Mk/bsd.sites.mk 331677 2013-10-26 12:37:32Z sunpoet $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -937,7 +937,6 @@ MASTER_SITE_PERL_CPAN_BY+= \
 	ftp://ftp.auckland.ac.nz/pub/perl/CPAN/%CPANSORT%/%SUBDIR%/ \
 	http://backpan.perl.org/%CPANSORT%/%SUBDIR%/ \
 	ftp://ftp.funet.fi/pub/languages/perl/CPAN/%CPANSORT%/%SUBDIR%/ \
-	http://cpan.nctu.edu.tw/%CPANSORT%/%SUBDIR%/ \
 	http://ftp.twaren.net/Unix/Lang/CPAN/%CPANSORT%/%SUBDIR%/ \
 	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%SUBDIR%/ \
 	http://www.cpan.dk/modules/by-module/%SUBDIR%/

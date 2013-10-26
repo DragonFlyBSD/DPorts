@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.sanity.mk 329316 2013-10-04 14:35:20Z kwm $
+# $FreeBSD: Mk/bsd.sanity.mk 331668 2013-10-26 09:29:18Z mva $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -118,6 +118,10 @@ DEV_WARNING+=	"MAN${a} macros are deprecated when using stage directory"
 
 .if !defined(NO_STAGE) && defined(MLINKS)
 DEV_WARNING+=	"MLINKS macros are deprecated when using stage directory"
+.endif
+
+.if defined(PYDISTUTILS_AUTOPLIST) && defined(PYTHON_PY3K_PLIST_HACK)
+DEV_WARNING+=	"PYDISTUTILS_AUTOPLIST features Python 3.x support, PYTHON_PY3K_PLIST_HACK is not required"
 .endif
 
 .if defined(_PREMKINCLUDED)

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/perl5.mk 331398 2013-10-23 17:47:31Z sunpoet $
+# $FreeBSD: Mk/Uses/perl5.mk 331562 2013-10-25 07:53:24Z sunpoet $
 #
 # Provide support to use perl5
 #
@@ -261,6 +261,6 @@ do-install:
 post-stage::
 # TODO: change to ${_USE_PERL5:Mconfigure} when M::B creates .packlist
 .if ${USE_PERL5:Mconfigure} || ${USE_PERL5:Mmodbuildtiny}
-	@[ -x ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto ] && ${FIND} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto -name .packlist -exec ${SED} -i '' 's|^${STAGEDIR}||' '{}' \;
+	@([ -d ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto ] && ${FIND} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto -name .packlist -exec ${SED} -i '' 's|^${STAGEDIR}||' '{}' \;) || ${TRUE}
 .endif
 .endif # defined(_POSTMKINCLUDED)
