@@ -1,8 +1,8 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: devel/libestr/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: devel/libestr/Makefile 331497 2013-10-24 15:47:05Z brd $
 
 PORTNAME=	libestr
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.8
 CATEGORIES=	devel
 MASTER_SITES=	http://libestr.adiscon.com/files/download/
 
