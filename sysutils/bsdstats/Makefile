@@ -1,9 +1,9 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: sysutils/bsdstats/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/bsdstats/Makefile 331594 2013-10-25 15:06:30Z tijl $
 
 PORTNAME=	bsdstats
 PORTVERSION=	5.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 DISTFILES=
 
@@ -13,16 +13,19 @@ COMMENT=	Monthly script for reporting anonymous statistics about your machine
 NO_BUILD=	yes
 USE_RC_SUBR=	bsdstats
 SUB_FILES=	300.statistics pkg-message
+SUB_LIST=	DIG=${DIG}
 
-NO_STAGE=	yes
-do-install:
-	${MKDIR} ${PREFIX}/etc/periodic/monthly
-	${INSTALL_SCRIPT} ${WRKDIR}/300.statistics ${PREFIX}/etc/periodic/monthly
-post-install:
-.if defined(BATCH) || defined(PACKAGE_BUILDING)
-	@${CAT} ${PKGMESSAGE}
+.include <bsd.port.options.mk>
+
+.if ${OSVERSION} >= 1000500
+DIG=		drill
 .else
-	@PKG_PREFIX="${PREFIX}" ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+DIG=		dig
 .endif
+
+do-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/monthly
+	${INSTALL_SCRIPT} ${WRKDIR}/300.statistics \
+		${STAGEDIR}${PREFIX}/etc/periodic/monthly
 
 .include <bsd.port.mk>
