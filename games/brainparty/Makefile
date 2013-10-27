@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/brainparty/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/brainparty/Makefile 331237 2013-10-22 08:03:22Z amdmi3 $
 
 PORTNAME=	brainparty
 PORTVERSION=	0.5
@@ -12,29 +12,27 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Family-friendly set of 36 puzzle games
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer ttf gfx image
 USE_GL=		gl glu
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-PORTDOCS=	CREDITS README
+PLIST_FILES=	bin/${PORTNAME}
+PORTDOCS=	*
+PORTDATA=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|Content/|${DATADIR}/|' ${WRKSRC}/*.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/Content/* ${DATADIR}/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
-.endfor
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/Content/* ${STAGEDIR}${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CREDITS ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
