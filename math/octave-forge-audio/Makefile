@@ -1,9 +1,9 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-audio/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/octave-forge-audio/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	octave-forge-audio
 PORTVERSION=	1.1.4
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
