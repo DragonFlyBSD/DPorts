@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-parallel/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-parallel/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	parallel
 PORTVERSION=	3.2.0.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
