@@ -1,8 +1,8 @@
-# $FreeBSD: sysutils/hs-cpu/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hs-cpu/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	cpu
 PORTVERSION=	0.1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils haskell
 
 MAINTAINER=	haskell@FreeBSD.org
