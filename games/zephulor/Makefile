@@ -1,9 +1,9 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/zephulor/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/zephulor/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	zephulor
 PORTVERSION=	1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	SF/apz/apz/stable/
 DISTNAME=	${PORTNAME}-source
