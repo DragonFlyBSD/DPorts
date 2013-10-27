@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: print/cm-super/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/cm-super/Makefile 331256 2013-10-22 12:12:56Z hrs $
 
 PORTNAME=	cm-super
 PORTVERSION=	0.3.4
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/type1inst:${PORTSDIR}/x11-fonts/p5-type1inst
 .endif
 
 USE_ZIP=	yes
-USE_TEX=	base texmf
+USE_TEX=	base texmf tetex
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 .if !defined(WITHOUT_X11)
