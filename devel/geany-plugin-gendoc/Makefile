@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-gendoc/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/geany-plugin-gendoc/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	geany-plugin-gendoc
 PORTVERSION=	${GEANY_VER}
@@ -7,9 +7,8 @@ CATEGORIES=	devel
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
 
-LIB_DEPENDS=	ctpl:${PORTSDIR}/textproc/ctpl
+LIB_DEPENDS=	libctpl.so:${PORTSDIR}/textproc/ctpl
 RUN_DEPENDS=	${LOCALBASE}/bin/rst2html:${PORTSDIR}/textproc/py-docutils
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
