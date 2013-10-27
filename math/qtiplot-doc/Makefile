@@ -1,4 +1,4 @@
-# $FreeBSD: math/qtiplot-doc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/qtiplot-doc/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
@@ -19,14 +19,13 @@ USE_BZIP2=	yes
 DATADIR=	${PREFIX}/share/qtiplot/manual
 WRKSRC=		${WRKDIR}/${DISTNAME}/manual
 
-NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && ${REINPLACE_CMD} -e "s:/usr/local:${LOCALBASE}:g" \
 		docbook-en/index.docbook qtiplot.dsl qtiplot_html.xsl Makefile
 
 do-install:
-	${MKDIR} ${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}
 	${RM} -rf ${WRKSRC}/html/pics-it
-	cd ${WRKSRC}/html && ${COPYTREE_SHARE} \* ${DATADIR}
+	cd ${WRKSRC}/html && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
