@@ -1,5 +1,5 @@
 # Created by: jonny
-# $FreeBSD: x11/xtoolwait/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xtoolwait/Makefile 331553 2013-10-25 04:10:31Z eadler $
 
 PORTNAME=	xtoolwait
 PORTVERSION=	1.3
@@ -13,8 +13,6 @@ COMMENT=	Tool startup utility for X11
 
 USES=		imake
 USE_XORG=	x11 xext
-MAN1=		xtoolwait.1
-PLIST_FILES=	bin/xtoolwait
+PLIST_FILES=	bin/xtoolwait man/man1/xtoolwait.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
