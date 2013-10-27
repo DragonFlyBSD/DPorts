@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/libvncserver/Makefile 327929 2013-09-23 06:14:29Z bapt $
+# $FreeBSD: net/libvncserver/Makefile 330792 2013-10-18 23:27:11Z bapt $
 
 PORTNAME=	libvncserver
 PORTVERSION=	0.9.9
@@ -41,11 +41,7 @@ GCRYPT_CONFIGURE_OFF=	--without-gcrypt
 IPV6_CONFIGURE_ON=	--with-ipv6
 IPV6_CONFIGURE_OFF=	--without-ipv6
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MOPENSSL}
-USE_OPENSSL=	yes
-.endif
+OPENSSL_USE=	OPENSSL=yes
 
 post-patch:
 	@${REINPLACE_CMD} -e \
