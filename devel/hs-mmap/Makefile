@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-mmap/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-mmap/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mmap
 PORTVERSION=	0.5.8
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
