@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/efreet/Makefile 329514 2013-10-05 22:03:36Z gblach $
+# $FreeBSD: x11/efreet/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	efreet
 PORTVERSION=	1.7.8
 CATEGORIES=	x11 enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
