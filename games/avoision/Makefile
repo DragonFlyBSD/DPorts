@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/avoision/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/avoision/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	avoision
 PORTVERSION=	1.1
@@ -34,7 +34,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png \
 		%%DATADIR%%/${PORTNAME}.zip
 PLIST_DIRS=	%%DATADIR%%
-PLIST_DIRSTRY=	share/applications
 
 PORTDOCS=	ChangeLog
 
