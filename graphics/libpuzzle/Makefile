@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libpuzzle/Makefile 328108 2013-09-24 11:17:43Z bapt $
+# $FreeBSD: graphics/libpuzzle/Makefile 330785 2013-10-18 23:03:41Z bapt $
 
 PORTNAME=	libpuzzle
 PORTVERSION=	0.11
@@ -19,12 +19,8 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	AUTHORS NEWS README THANKS
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
