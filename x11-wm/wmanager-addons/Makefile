@@ -1,12 +1,12 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: x11-wm/wmanager-addons/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: x11-wm/wmanager-addons/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	wmanager-addons
 PORTVERSION=	0.02
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://devel.ringlet.net/x11/wmanager-addons/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Helper scripts and documentation for the X11 window manager selector
 
 USES=		perl5
