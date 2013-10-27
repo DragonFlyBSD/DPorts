@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/tovid/Makefile 330899 2013-10-19 16:13:03Z bapt $
+# $FreeBSD: multimedia/tovid/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	tovid
 PORTVERSION=	0.30
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	multimedia python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
