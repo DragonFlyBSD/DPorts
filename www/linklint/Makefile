@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: www/linklint/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/linklint/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	linklint
 DISTVERSION=	2.3.6.d
@@ -18,8 +18,8 @@ SHEBANG_FILES=	${DISTNAME}
 
 PLIST_FILES=	bin/linklint
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} \
+		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
