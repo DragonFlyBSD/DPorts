@@ -1,7 +1,8 @@
-# $FreeBSD: devel/hs-hashable/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-hashable/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hashable
 PORTVERSION=	1.1.2.5
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel haskell
 
