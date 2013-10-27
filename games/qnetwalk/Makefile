@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: games/qnetwalk/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/qnetwalk/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	qnetwalk
 PORTVERSION=	1.4
@@ -32,7 +32,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} "pics sounds translations" ${DATADIR})
 	@${LN} -sf ${DATADIR}/pics/computer2.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/menu/qnetwalk.desktop ${PREFIX}/share/applications
 
 	${INSTALL_MAN} ${MAN6:S|^|${WRKSRC}/|} ${MAN6PREFIX}/man/man6
