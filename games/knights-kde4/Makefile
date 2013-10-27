@@ -1,9 +1,9 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: games/knights-kde4/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/knights-kde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	knights
 PORTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games kde
 MASTER_SITES=	http://dl.dropbox.com/u/2888238/Knights/
 
