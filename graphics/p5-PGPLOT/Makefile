@@ -1,9 +1,9 @@
 # Created by: jmz
-# $FreeBSD: graphics/p5-PGPLOT/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-PGPLOT/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	PGPLOT
 PORTVERSION=	2.21
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KGB
@@ -26,7 +26,7 @@ MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
 .if !defined(NOPORTEXAMPLES)
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} LICENSE test* ${EXAMPLESDIR}/
 .endif
 
