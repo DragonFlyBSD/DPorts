@@ -1,8 +1,9 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/bombz/Makefile 330322 2013-10-14 13:48:33Z nemysis $
+# $FreeBSD: games/bombz/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	bombz
 PORTVERSION=	0.2
+PORTREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}/ \
 		SF/nemysisfreebsdp/:icons
@@ -51,7 +52,6 @@ do-install:
 .endfor
 
 	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png ${STAGEDIR}${PREFIX}/share/pixmaps/
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications/
 
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
