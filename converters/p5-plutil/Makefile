@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: converters/p5-plutil/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-plutil/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	plutil
 PORTVERSION=	1.7
@@ -19,8 +19,7 @@ SHEBANG_FILES=	${PORTNAME}.pl
 
 PLIST_FILES=	bin/plutil.pl
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
