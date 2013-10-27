@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: editors/fxite/Makefile 329703 2013-10-07 13:15:43Z gahr $
+# $FreeBSD: editors/fxite/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 
 PORTNAME=	fxite
 PORTVERSION=	0.91
@@ -55,6 +55,5 @@ FOX_LIBS+=	`pkgconf fox17 --libs`
 PLIST_FILES=	bin/fxite \
 		share/pixmaps/fxite.xpm \
 		share/applications/fxite.desktop
-PLIST_DIRSTRY=	share/applications
 
 .include <bsd.port.mk>
