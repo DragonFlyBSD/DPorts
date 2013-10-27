@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net-im/bsflite/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/bsflite/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	bsflite
 DISTVERSION=	0.85
@@ -15,7 +15,6 @@ PORTDOCS=	COPYING ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -24,14 +23,14 @@ post-patch:
 		${WRKSRC}/imcomm/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bsflite ${PREFIX}/bin
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/config-example ${EXAMPLESDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bsflite ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/config-example ${STAGEDIR}${EXAMPLESDIR}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
