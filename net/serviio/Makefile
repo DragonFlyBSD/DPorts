@@ -1,9 +1,9 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: net/serviio/Makefile 330348 2013-10-14 19:50:26Z netchild $
+# $FreeBSD: net/serviio/Makefile 331170 2013-10-21 18:11:39Z wg $
 
 PORTNAME=	serviio
 PORTVERSION=	1.3.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net multimedia java www
 MASTER_SITES=	http://download.serviio.org/releases/
 EXTRACT_SUFX=	-linux.tar.gz
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	-linux.tar.gz
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Transcoding DLNA-server implemented in Java
 
-RUN_DEPENDS=	ffmpeg1:${PORTSDIR}/multimedia/ffmpeg1
+RUN_DEPENDS=	ffmpeg:${PORTSDIR}/multimedia/ffmpeg
 
 NO_BUILD=	yes
 USE_JAVA=	yes
