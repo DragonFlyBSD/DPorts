@@ -1,4 +1,4 @@
-@comment $FreeBSD: audio/gimmix/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+@comment $FreeBSD: audio/gimmix/pkg-plist 331267 2013-10-22 13:50:43Z amdmi3 $
 bin/gimmix
 %%NLS%%share/locale/de/LC_MESSAGES/gimmix.mo
 %%NLS%%share/locale/fr/LC_MESSAGES/gimmix.mo
@@ -13,7 +13,6 @@ share/pixmaps/gimmix.png
 share/pixmaps/gimmix_logo_small.png
 share/pixmaps/gimmix_playlist.png
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/tr/LC_MESSAGES
