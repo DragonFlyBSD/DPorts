@@ -1,7 +1,8 @@
-# $FreeBSD: deskutils/kdeplasma-addons/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/kdeplasma-addons/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdeplasma-addons
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	deskutils kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
