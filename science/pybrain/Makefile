@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/pybrain/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/pybrain/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pybrain
 PORTVERSION=	0.3
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 DISTNAME=	PyBrain-${PORTVERSION}
