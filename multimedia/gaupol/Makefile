@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/gaupol/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gaupol/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gaupol
 PORTVERSION=	0.19.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia python
 MASTER_SITES=	http://download.gna.org/gaupol/0.19/ \
 		http://www.c-s.li/ports/
