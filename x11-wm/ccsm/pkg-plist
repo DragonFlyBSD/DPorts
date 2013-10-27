@@ -1,4 +1,4 @@
-@comment $FreeBSD: x11-wm/ccsm/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: x11-wm/ccsm/pkg-plist 331275 2013-10-22 14:04:01Z amdmi3 $
 bin/ccsm
 %%PYTHON_SITELIBDIR%%/ccm/Conflicts.py
 %%PYTHON_SITELIBDIR%%/ccm/Conflicts.pyc
@@ -195,7 +195,6 @@ share/locale/zh_HK/LC_MESSAGES/ccsm.mo
 @dirrm %%DATADIR%%/images
 @dirrm %%DATADIR%%
 @dirrmtry %%PYTHON_SITELIBDIR%%/ccm
-@dirrmtry share/applications
 @dirrmtry share/locale/md/LC_MESSAGES
 @dirrmtry share/locale/md
 @dirrmtry share/locale/ml_IN/LC_MESSAGES
