@@ -1,4 +1,4 @@
-# $FreeBSD: net/openmpi/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/openmpi/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 NO_STAGE=	yes
 # TODO:
@@ -6,6 +6,7 @@ NO_STAGE=	yes
 
 PORTNAME=	openmpi
 DISTVERSION=	1.6.5
+PORTREVISION=	1
 CATEGORIES=	net parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/
 
