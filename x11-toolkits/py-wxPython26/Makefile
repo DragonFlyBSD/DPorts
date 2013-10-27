@@ -1,9 +1,9 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	wxPython
 PORTVERSION=	2.6.3.3
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	SF/wxpython/wxPython/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
