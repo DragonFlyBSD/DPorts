@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-hexpat/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-hexpat/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hexpat
 PORTVERSION=	0.20.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
