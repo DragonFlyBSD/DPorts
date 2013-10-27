@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/v_sim/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/v_sim/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	v_sim
 PORTVERSION=	3.6.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	http://www-drfmc.cea.fr/sp2m/L_Sim/V_Sim/download/
 
