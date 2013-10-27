@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore-file/Makefile 329499 2013-10-05 20:30:12Z gblach $
+# $FreeBSD: devel/ecore-file/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	file
 PORTVERSION=	1.7.8
 CATEGORIES=	devel enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	ecore-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
