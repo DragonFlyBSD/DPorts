@@ -1,5 +1,5 @@
 # Created by: Eric P. Scott <eps+pbug0703@ana.com>
-# $FreeBSD: graphics/lcdtest/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/lcdtest/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	lcdtest
 PORTVERSION=	1.18
@@ -46,7 +46,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/man/${MAN1} ${MAN1PREFIX}/man/man1/
 	${INSTALL_DATA} ${WRKSRC}/desktop/${PORTNAME}.svg ${PREFIX}/share/pixmaps/
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/desktop/${PORTNAME}.desktop ${PREFIX}/share/applications/
 
 .if ${PORT_OPTIONS:MDOCS}
