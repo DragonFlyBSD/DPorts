@@ -1,8 +1,9 @@
 # Created by: Anton Shterenlikht
-# $FreeBSD: math/slatec/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/slatec/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	slatec
 PORTVERSION=	4.1
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	NL:slatec,blas
 MASTER_SITE_SUBDIR=	slatec/:slatec blas/:blas
