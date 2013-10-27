@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-monadcryptorandom/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/hs-monadcryptorandom/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	monadcryptorandom
 PORTVERSION=	0.5.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
