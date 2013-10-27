@@ -1,8 +1,9 @@
 # Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-# $FreeBSD: math/ruby-fftw3/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ruby-fftw3/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	fftw3
 PORTVERSION=	0.4
+PORTREVISION=	1
 CATEGORIES=	math ruby
 MASTER_SITES=	http://ruby.gfd-dennou.org/products/ruby-fftw3/release/ \
 		http://dennou-h.gfd-dennou.org/library/ruby/products/ruby-fftw3/release/ \
