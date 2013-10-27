@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-vector-algorithms/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-vector-algorithms/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	vector-algorithms
 PORTVERSION=	0.5.4.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
