@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: print/ttfquery/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/ttfquery/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ttfquery
 PORTVERSION=	1.0.5
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	CHEESESHOP
 DISTNAME=	TTFQuery-${PORTVERSION}
