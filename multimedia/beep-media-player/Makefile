@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: multimedia/beep-media-player/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/beep-media-player/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	beep-media-player
 PORTVERSION=	0.9.7.1
@@ -9,7 +9,7 @@ CATEGORIES=	multimedia audio ipv6
 MASTER_SITES=	SF/beepmp/bmp/${PORTVERSION}
 DISTNAME=	bmp-${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK2 multimedia player
 
 LIB_DEPENDS=	id3-3.8:${PORTSDIR}/audio/id3lib
