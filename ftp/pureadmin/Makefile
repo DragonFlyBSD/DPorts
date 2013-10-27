@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/pureadmin/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/pureadmin/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	pureadmin
 PORTVERSION=	0.4
@@ -7,7 +7,7 @@ PORTREVISION=	6
 CATEGORIES=	ftp
 MASTER_SITES=	SF/purify/Default/${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Management utility for the PureFTPd
 
 USES=		pkgconfig gettext
