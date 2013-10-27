@@ -1,8 +1,9 @@
 # Created by: Chao Shin <quakelee@cn.freebsd.org>
-# $FreeBSD: benchmarks/mdtest/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/mdtest/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mdtest
 PORTVERSION=	1.9.1
+PORTREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20latest/${PORTNAME}-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
