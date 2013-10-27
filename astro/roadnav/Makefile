@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: astro/roadnav/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/roadnav/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
 
 PORTNAME=	roadnav
 PORTVERSION=	0.19
@@ -25,9 +25,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PORTDOCS=	*
 
 .include <bsd.port.pre.mk>
-
-pre-su-install:
-	@${MKDIR} ${PREFIX}/share/applications
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
