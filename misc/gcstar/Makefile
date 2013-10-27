@@ -1,5 +1,5 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: misc/gcstar/Makefile 329065 2013-10-02 16:14:59Z acm $
+# $FreeBSD: misc/gcstar/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	gcstar
 PORTVERSION=	1.7.0
@@ -43,8 +43,6 @@ NO_BUILD=	yes
 
 NO_STAGE=	yes
 do-install:
-		@${MKDIR} ${PREFIX}/share/applications
-		@${MKDIR} ${PREFIX}/share/pixmaps
 		@${MKDIR} ${PREFIX}/share/mime/packages
 		@${FIND} ${WRKSRC}/ -name '*.orig' -delete
 		${PERL} ${WRKSRC}/install --prefix ${PREFIX} --noclean
