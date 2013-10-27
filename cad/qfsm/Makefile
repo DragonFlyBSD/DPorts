@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/qfsm/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/qfsm/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 
 PORTNAME=	qfsm
 PORTVERSION=	0.53.0
@@ -38,7 +38,6 @@ post-patch:
 
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} qfsm ${PREFIX}/bin)
-	@${MKDIR} ${PREFIX}/share/applications
 	(cd ${WRKSRC}/desktop && ${INSTALL_DATA} qfsm.desktop \
 		${PREFIX}/share/applications)
 .for i in 32x32 48x48 64x64
