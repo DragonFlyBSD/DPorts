@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: astro/wmsun/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/wmsun/Makefile 331558 2013-10-25 06:28:14Z vanilla $
 
 PORTNAME=	wmsun
 PORTVERSION=	1.03
@@ -20,13 +20,11 @@ ALL_TARGET=	clean all
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" \
 		INCDIR="-I${LOCALBASE}/include" LIBDIR="-L${LOCALBASE}/lib"
 MAKE_JOBS_UNSAFE=	yes
-NO_STAGE=	yes
 
-MAN1=		wmSun.1
-PLIST_FILES=	bin/wmSun
+PLIST_FILES=	bin/wmSun man/man1/wmSun.1.gz
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmSun ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/wmSun.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/wmSun ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/wmSun.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
