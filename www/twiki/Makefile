@@ -1,5 +1,5 @@
 # Created by: Justin Hawkins <justin@hawkins.id.au>
-# $FreeBSD: www/twiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/twiki/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	twiki
 PORTVERSION=	5.1.4
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/TWiki%20for%20all%20Platforms/${DISTNAME} \
 DISTNAME=	TWiki-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flexible, powerful, and easy to use enterprise wiki
 
 RUN_DEPENDS=	\

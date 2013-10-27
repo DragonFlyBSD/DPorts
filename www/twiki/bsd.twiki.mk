@@ -1,7 +1,7 @@
 # ex:ts=4 sw=4
 #
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/twiki/bsd.twiki.mk 316241 2013-04-22 15:37:34Z bdrewery $
+# $FreeBSD: www/twiki/bsd.twiki.mk 331423 2013-10-23 20:45:10Z ak $
 #
 # For more info, please go to http://wiki.FreeBSD.org/TWiki
 #
@@ -25,7 +25,7 @@ WWWDIR?=	${PREFIX}/www/twiki
 PLIST_SUB+=	TWDIR="share/twiki/${PNAME}"
 SUB_LIST+=	TWDIR="${TWDIR}" WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 SUB_FILES+=	pkg-install pkg-deinstall
-MAINTAINER?=	c.petrik.sosa@gmail.com
+MAINTAINER?=	ports@FreeBSD.org
 DIST_SUBDIR?=	twiki
 RUN_DEPENDS+=	${TWDEP:C/([^=<>]*)([=<>]*)(.*)/twiki-\1\20.0.\3:${PORTSDIR}\/www\/twiki-\1/}
 
