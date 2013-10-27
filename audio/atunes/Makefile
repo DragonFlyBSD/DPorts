@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: audio/atunes/Makefile 328345 2013-09-26 09:16:15Z lme $
+# $FreeBSD: audio/atunes/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
 
 PORTNAME=	atunes
 PORTVERSION=	3.1.1
@@ -80,7 +80,6 @@ do-install:
 	@(cd ${WRKSRC} && ${FIND} lib -type f -name "*.jar" -exec ${INSTALL_DATA} {} \
 		${STAGEDIR}${DATADIR}/{} \;)
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} settings ${STAGEDIR}${DATADIR}/)
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 .for file in ${PIXMAPS}
 	@${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/share/pixmaps
 .endfor
