@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-xml-types/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-xml-types/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	xml-types
 PORTVERSION=	0.3.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
