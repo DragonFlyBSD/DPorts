@@ -1,5 +1,5 @@
 # Created by: Tobias Kortkamp <tobias.kortkamp@gmail.com>
-# $FreeBSD: deskutils/easystroke/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/easystroke/Makefile 331268 2013-10-22 13:52:24Z amdmi3 $
 
 PORTNAME=	easystroke
 PORTVERSION=	0.6.0
@@ -44,17 +44,12 @@ pre-build:
 .endif
 
 do-install:
-	@${MKDIR} ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
-	@${MKDIR} ${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${PREFIX}/share/applications/
-	@${MKDIR} ${PREFIX}/share/pixmaps/
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.svg ${PREFIX}/share/pixmaps/
-	@${MKDIR} ${PREFIX}/man/man1/
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
 
 .if ${PORT_OPTIONS:MNLS}
-	@${MKDIR} ${PREFIX}/share/locale/
 	(cd ${WRKSRC}/po/ && \
 		${COPYTREE_SHARE} \* ${PREFIX}/share/locale/ "-name *.mo")
 .endif
