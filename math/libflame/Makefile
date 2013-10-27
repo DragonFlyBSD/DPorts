@@ -1,8 +1,9 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/libflame/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/libflame/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	libflame
 DISTVERSION=	r7421
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.cs.utexas.edu/users/%SUBDIR%/:1,2 LOCAL/bf:3
 MASTER_SITE_SUBDIR=	flame/snapshots/:1 field/docs/:2
