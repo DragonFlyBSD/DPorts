@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-enumerator/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-enumerator/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	enumerator
 PORTVERSION=	0.4.19
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
