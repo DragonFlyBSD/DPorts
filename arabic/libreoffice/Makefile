@@ -1,8 +1,7 @@
-# $FreeBSD: arabic/libreoffice/Makefile 327685 2013-09-20 11:04:48Z bapt $
+# $FreeBSD: arabic/libreoffice/Makefile 331614 2013-10-25 17:05:50Z jkim $
 
 LO_I18N=	ar
 CATEGORIES=	arabic editors
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 .include <bsd.port.mk>
