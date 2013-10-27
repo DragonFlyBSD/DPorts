@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-igd/Makefile 330888 2013-10-19 15:34:18Z sunpoet $
+# $FreeBSD: net/gupnp-igd/Makefile 331581 2013-10-25 13:36:29Z sunpoet $
 
 PORTNAME=	gupnp-igd
 PORTVERSION=	0.2.2
@@ -19,6 +19,7 @@ RUN_DEPENDS=	gupnp>=0.18:${PORTSDIR}/net/gupnp
 
 CONFIGURE_ARGS=	--enable-introspection=yes
 GNU_CONFIGURE=	yes
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
