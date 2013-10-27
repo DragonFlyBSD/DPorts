@@ -1,4 +1,4 @@
-# $FreeBSD: games/colorcode/Makefile 329803 2013-10-08 16:03:13Z makc $
+# $FreeBSD: games/colorcode/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	colorcode
 PORTVERSION=	0.7.2
@@ -22,9 +22,7 @@ PLIST_FILES=	bin/colorcode \
 		share/pixmaps/colorcode.png
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/colorcode ${STAGEDIR}${PREFIX}/bin
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA}	${WRKSRC}/img/cc64.png	${STAGEDIR}${PREFIX}/share/pixmaps/colorcode.png
 
 .include <bsd.port.mk>
