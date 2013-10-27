@@ -1,9 +1,9 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: math/sdpa/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/sdpa/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	sdpa
 PORTVERSION=	7.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://sdpa.indsys.chuo-u.ac.jp/sdpa/files/
 DISTNAME=	${PORTNAME}.${PORTVERSION}.src-${SRCDATE}
