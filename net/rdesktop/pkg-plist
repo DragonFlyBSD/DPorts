@@ -1,5 +1,6 @@
-@comment $FreeBSD: net/rdesktop/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: net/rdesktop/pkg-plist 331499 2013-10-24 16:41:28Z madpilot $
 bin/rdesktop
+man/man1/rdesktop.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/TODO
 %%PORTDOCS%%%%DOCSDIR%%/ipv6.txt
