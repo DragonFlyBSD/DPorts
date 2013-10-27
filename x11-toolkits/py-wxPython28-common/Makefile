@@ -1,7 +1,7 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-wxPython28-common/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-wxPython28-common/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 WITH_COMMON_ONLY=	yes
 
