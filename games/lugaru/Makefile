@@ -1,8 +1,9 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/lugaru/Makefile 329241 2013-10-03 21:58:56Z nemysis $
+# $FreeBSD: games/lugaru/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	lugaru
 PORTVERSION=	269
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-rev${DISTVERSION}-src
