@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/gqview-devel/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: graphics/gqview-devel/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	gqview
 PORTVERSION=	2.1.5
@@ -36,7 +36,6 @@ post-patch:
 post-install:
 	${MKDIR} ${PREFIX}/share/gnome/apps/Graphics
 	${INSTALL_DATA} ${WRKSRC}/gqview.desktop ${PREFIX}/share/gnome/apps/Graphics
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/gqview.png ${PREFIX}/share/pixmaps
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
