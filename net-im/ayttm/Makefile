@@ -1,9 +1,9 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/ayttm/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/ayttm/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	ayttm
 PORTVERSION=	0.5.0.111
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-im
 MASTER_SITES=	SF/ayttm/ayttm/${PORTVERSION:R}-${PORTVERSION:E}/
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}-${PORTVERSION:E}
@@ -13,7 +13,7 @@ COMMENT=	A "chat" program that combines AIM, ICQ, and Yahoo! Chat into one
 
 LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile \
 		jasper.4:${PORTSDIR}/graphics/jasper \
-		gpgme.19:${PORTSDIR}/security/gpgme \
+		libgpgme.so:${PORTSDIR}/security/gpgme \
 		pspell.16:${PORTSDIR}/textproc/aspell
 
 OPTIONS_DEFINE=	ESOUND AIM_TOC ICQ_TOC
