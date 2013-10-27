@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11/xwit/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: x11/xwit/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
 
 PORTNAME=	xwit
 PORTVERSION=	3.4
@@ -15,9 +15,13 @@ COMMENT=	X interface tool
 USES=		imake
 USE_XORG=	x11 xext
 
-MAN1=		xwit.1
-PLIST_FILES=	bin/xwit
+PLIST_FILES=	bin/xwit man/man1/xwit.1.gz
 
 EXTRA_PATCHES=	${WRKDIR}/${PORTNAME}-patchset-${PORTVERSION}/patch-*
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}._man \
+		${STAGEDIR}${MANPREFIX}/man/man1/${PORTNAME}.1
 
 .include <bsd.port.mk>
