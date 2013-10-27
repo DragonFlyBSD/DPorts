@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/jruby/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/jruby/Makefile 331726 2013-10-26 18:03:03Z knu $
 
 PORTNAME=	jruby
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.6
 CATEGORIES=	lang ruby java
 MASTER_SITES=	http://jruby.org.s3.amazonaws.com/downloads/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-bin-${PORTVERSION}
@@ -71,7 +71,7 @@ do-install:
 	@${LN} -sf ${JRUBY_HOME}/bin/jirb ${PREFIX}/bin/jirb
 	@${ECHO_MSG} " [ DONE ]"
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} -n ">> Installing Documents files..."
 	@${MKDIR} ${DOCSDIR}
 	@(cd ${WRKSRC}/ \
@@ -79,7 +79,7 @@ do-install:
 	@(cd ${WRKSRC}/docs \
 	  && ${COPYTREE_SHARE} \* ${DOCSDIR})
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	@(cd ${WRKSRC}/samples \
 	  && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
