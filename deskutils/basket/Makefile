@@ -1,8 +1,9 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: deskutils/basket/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/basket/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	basket
 PORTVERSION=	1.81
+PORTREVISION=	1
 CATEGORIES=	deskutils kde
 MASTER_SITES=	http://basket.kde.org/downloads/
 
@@ -11,7 +12,7 @@ COMMENT=	Desktop organization tool
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme
 
 USE_BZIP2=	yes
 USE_XORG=	xft xpm
