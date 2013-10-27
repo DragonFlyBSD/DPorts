@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: mail/rlytest/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/rlytest/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	rlytest
 PORTVERSION=	1.22
@@ -7,7 +7,7 @@ CATEGORIES=	mail security
 MASTER_SITES=	http://www.unicom.com/files/
 EXTRACT_SUFX=	.gz
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Test remote system for unsecured mail relay
 
 EXTRACT_CMD=	${GZIP_CMD}
