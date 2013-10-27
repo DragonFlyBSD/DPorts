@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/phlipple/Makefile 330837 2013-10-19 02:57:23Z amdmi3 $
+# $FreeBSD: games/phlipple/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	phlipple
 PORTVERSION=	0.8.5
@@ -24,7 +24,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
 		share/pixmaps/${PORTNAME}.png
-PLIST_DIRSTRY=	share/applications
 PORTDOCS=	*
 PORTDATA=	*
 
