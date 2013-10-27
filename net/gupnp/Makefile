@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp/Makefile 330886 2013-10-19 15:32:55Z sunpoet $
+# $FreeBSD: net/gupnp/Makefile 331579 2013-10-25 13:36:17Z sunpoet $
 
 PORTNAME=	gupnp
 PORTVERSION=	0.20.7
@@ -19,6 +19,7 @@ LIB_DEPENDS=	libgssdp-1.0.so:${PORTSDIR}/net/gssdp \
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
 GNU_CONFIGURE=	yes
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
