@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-listen/Makefile 330882 2013-10-19 15:23:16Z sunpoet $
+# $FreeBSD: devel/rubygem-listen/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	listen
 PORTVERSION=	2.1.1
@@ -14,7 +14,6 @@ LICENSE=	MIT
 RUN_DEPENDS=	rubygem-celluloid>=0.15.2:${PORTSDIR}/devel/rubygem-celluloid \
 		rubygem-rb-kqueue>=0.2:${PORTSDIR}/devel/rubygem-rb-kqueue
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
