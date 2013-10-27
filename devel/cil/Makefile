@@ -1,12 +1,12 @@
 # Created by: Alexander Leidinger <netchild@FreeBSD.org>
-# $FreeBSD: devel/cil/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cil/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	cil
 PORTVERSION=	1.7.3
 CATEGORIES=	devel lang
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Infrastructure for C Program Analysis and Transformation
 
 LICENSE=	BSD
