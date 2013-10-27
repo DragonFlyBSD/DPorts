@@ -1,7 +1,8 @@
-# $FreeBSD: devel/smokekde/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/smokekde/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	smokekde
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
