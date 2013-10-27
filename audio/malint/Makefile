@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/malint/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/malint/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	malint
 DISTVERSION=	0.2
@@ -14,7 +14,6 @@ COMMENT=	MPEG Audio stream validator
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 
 PORTDOCS=	README
 PLIST_FILES=	bin/malint
@@ -25,8 +24,8 @@ OPTIONS_DEFINE=	DOCS
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
