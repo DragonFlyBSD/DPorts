@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-Chart-Graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Chart-Graph/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	Chart-Graph
 PORTVERSION=	3.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
