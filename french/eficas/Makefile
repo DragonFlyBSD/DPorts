@@ -1,8 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: french/eficas/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD: french/eficas/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	eficas
 DISTVERSION=	6.6.0-2
+PORTREVISION=	1
 CATEGORIES=	french cad
 
 MAINTAINER=	thierry@FreeBSD.org
