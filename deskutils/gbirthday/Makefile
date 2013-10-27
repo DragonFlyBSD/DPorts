@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/gbirthday/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gbirthday/Makefile 331268 2013-10-22 13:52:24Z amdmi3 $
 
 PORTNAME=	gbirthday
 PORTVERSION=	0.6.7
@@ -78,7 +78,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/${PORTNAME}/*.py ${PYTHONPREFIX_SITELIBDIR}/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/src/${PORTNAME}/databases/*.py ${PYTHONPREFIX_SITELIBDIR}/${PORTNAME}/databases
 	${INSTALL_DATA} ${WRKSRC}/src/${PORTNAME}/pics/*.png ${PYTHONPREFIX_SITELIBDIR}/${PORTNAME}/pics
-	@${MKDIR} ${PREFIX}/share/applications
 .if ${PORT_OPTIONS:MNLS}
 	@(for lang in ${LANGUAGES} ; do \
 		${MKDIR} ${PREFIX}/share/locale/$$lang/LC_MESSAGES ; \
