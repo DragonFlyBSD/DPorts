@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: security/clamtk/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/clamtk/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
 
 PORTNAME=	clamtk
 PORTVERSION=	4.44
@@ -45,7 +45,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1
 	@${MKDIR} ${SITE_PERL}/ClamTk
 	${INSTALL_DATA} ${WRKSRC}/lib/*.pm ${SITE_PERL}/ClamTk
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/images/${PORTNAME}.png ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/images/${PORTNAME}.xpm ${PREFIX}/share/pixmaps
