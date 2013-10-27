@@ -1,10 +1,9 @@
-# $FreeBSD: korean/libreoffice/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/libreoffice/Makefile 331614 2013-10-25 17:05:50Z jkim $
 
 LO_I18N=	ko
 LO_HAS_HELPPACK=	yes
 CATEGORIES=	korean editors
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
 .include <bsd.port.mk>
