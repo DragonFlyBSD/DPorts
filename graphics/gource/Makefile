@@ -1,5 +1,5 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: graphics/gource/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gource/Makefile 331625 2013-10-25 19:06:47Z demon $
 
 PORTNAME=	gource
 PORTVERSION=	0.40
@@ -11,24 +11,19 @@ MAINTAINER=	demon@FreeBSD.org
 COMMENT=	OpenGL-based 3D visualisation tool for source control repositories
 
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:${PORTSDIR}/math/glm
-LIB_DEPENDS=	SDL_image:${PORTSDIR}/graphics/sdl_image \
-		freetype:${PORTSDIR}/print/freetype2 \
-		pcre:${PORTSDIR}/devel/pcre \
-		GLEW:${PORTSDIR}/graphics/glew \
-		boost_filesystem:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libSDL_image.so:${PORTSDIR}/graphics/sdl_image \
+		libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libpcre.so:${PORTSDIR}/devel/pcre \
+		libGLEW.so:${PORTSDIR}/graphics/glew \
+		libboost_filesystem.so:${PORTSDIR}/devel/boost-libs
 RUN_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:${PORTSDIR}/math/glm
 
 GNU_CONFIGURE=	yes
-USE_GCC=	yes
-USES=		gmake pkgconfig
-MANCOMPRESSED=	yes
+USES=		gmake pkgconfig compiler:c++11-lang
 
 CONFIGURE_ARGS+=--with-boost-system=boost_system \
 		--with-boost-filesystem=boost_filesystem
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		gource.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
