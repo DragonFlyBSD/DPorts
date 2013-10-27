@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: textproc/hs-feed/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-feed/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	feed
 PORTVERSION=	0.3.8
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
