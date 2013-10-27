@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-server/Makefile 328762 2013-09-29 23:46:47Z zeising $
+# $FreeBSD: x11-servers/xorg-server/Makefile 331523 2013-10-24 19:50:23Z kwm $
 
 PORTNAME?=	xorg-server
 PORTVERSION=	${XORG_VERSION}
@@ -35,20 +35,22 @@ OPTIONS_EXCLUDE_sparc64=	HAL
 
 .if defined(WITH_NEW_XORG)
 XORG_VERSION=	1.12.4
-XORG_REVISION=	3
+XORG_REVISION=	4
 PLIST_SUB+=	OLD="@comment " NEW=""
 EXTRA_PATCHES+=	${FILESDIR}/extra-clang \
-		${FILESDIR}/extra-configure
+		${FILESDIR}/extra-configure \
+		${FILESDIR}/extra-new-dix_dixfonts.c
 .else
 XORG_VERSION=	1.7.7
-XORG_REVISION=	10
+XORG_REVISION=	11
 PLIST_SUB+=	OLD="" NEW="@comment "
 EXTRA_PATCHES+=	${FILESDIR}/extra-Xext-xace.c \
 		${FILESDIR}/extra-Xserver-os-xprintf.c \
 		${FILESDIR}/extra-include_eventstr.h \
 		${FILESDIR}/extra-os-utils.c \
 		${FILESDIR}/extra-dix_events.c \
-		${FILESDIR}/extra-Xserver-hw-xfree86-common-xf86Config.c
+		${FILESDIR}/extra-Xserver-hw-xfree86-common-xf86Config.c \
+		${FILESDIR}/extra-old-dix_dixfonts.c
 .endif
 
 USE_BZIP2=	yes
