@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/thegrind/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/thegrind/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	thegrind
 PORTVERSION=	0.1.2
@@ -30,7 +30,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png \
 		%%DATADIR%%/${PORTNAME}.zip
 PLIST_DIRS=	%%DATADIR%%
-PLIST_DIRSTRY=	share/applications
 
 PORTDOCS=	ChangeLog
 
