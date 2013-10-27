@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/kdenetwork4/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/kdenetwork4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdenetwork
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
