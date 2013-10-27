@@ -1,8 +1,9 @@
 # Created by: Ju Pengfei <ju.pengfei@gmail.com>
-# $FreeBSD: math/py-numexpr/Makefile 328627 2013-09-28 19:47:45Z sunpoet $
+# $FreeBSD: math/py-numexpr/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	numexpr
 PORTVERSION=	2.2.2
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
