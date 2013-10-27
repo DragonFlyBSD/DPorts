@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: math/gretl/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/gretl/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gretl
 PORTVERSION=	1.9.12
+PORTREVISION=	1
 CATEGORIES=	math finance
 MASTER_SITES=	SF
 
