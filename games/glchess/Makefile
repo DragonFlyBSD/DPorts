@@ -1,9 +1,9 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/glchess/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/glchess/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	glchess
 PORTVERSION=	1.0.6
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	SF
 
