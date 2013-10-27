@@ -1,8 +1,9 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	c++-gtk-utils
 PORTVERSION=	2.2.3
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/cxx-gtk-utils/cxx-gtk-utils/${PORTVERSION}/
 DISTNAME=	c%2B%2B-gtk-utils-${PORTVERSION}
