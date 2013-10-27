@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: ports/dns/sshfp/Makefile,v 1.17 2012/11/22 12:38:23 svnexp Exp $
+# $FreeBSD: dns/sshfp/Makefile 327719 2013-09-20 16:31:57Z bapt $
 
 PORTNAME=	sshfp
 PORTVERSION=	1.2.2
@@ -28,6 +28,7 @@ PY_FILES=	sshfp dane
 
 WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-${PORTNAME}-${GH_COMMIT}
 
+NO_STAGE=	yes
 post-patch:
 .for f in ${PY_FILES} daneldnsx.py
 	@${REINPLACE_CMD} -e '1s|.*|#!${PYTHON_CMD}|' ${WRKSRC}/${f}
