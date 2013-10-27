@@ -1,7 +1,6 @@
-@comment $FreeBSD: multimedia/bino/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: multimedia/bino/pkg-plist 331270 2013-10-22 13:56:27Z amdmi3 $
 bin/bino
 share/applications/bino.desktop
-@dirrmtry share/applications
 %%DOCSDIR%%/bino.html
 %%DOCSDIR%%/multi-display-vrlab.jpg
 %%DOCSDIR%%/multi-display-rotated.jpg
