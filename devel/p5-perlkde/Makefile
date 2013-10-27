@@ -1,7 +1,8 @@
-# $FreeBSD: devel/p5-perlkde/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-perlkde/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	perlkde
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde perl5
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
