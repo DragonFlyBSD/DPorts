@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11-themes/kdeartwork4/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/kdeartwork4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdeartwork
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11-themes kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
