@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-profunctor-extras/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-profunctor-extras/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	profunctor-extras
 PORTVERSION=	3.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
