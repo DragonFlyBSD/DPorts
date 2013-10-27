@@ -1,9 +1,9 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gcc-aux/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gcc-aux/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://downloads.dragonlace.net/src/:boot \
 		${MASTER_SITE_GCC}
