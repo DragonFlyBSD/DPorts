@@ -1,8 +1,9 @@
 # Created by: Frederic Han <han@math.jussieu.fr>
-# $FreeBSD: math/giacxcas/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/giacxcas/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	giacxcas
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www-fourier.ujf-grenoble.fr/~parisse/giac/freebsd/ \
 		http://www.math.jussieu.fr/~han/xcas/sources/
