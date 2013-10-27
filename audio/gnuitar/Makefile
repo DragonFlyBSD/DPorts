@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: audio/gnuitar/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gnuitar/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
 
 PORTNAME=		gnuitar
 PORTVERSION=		0.3.2
@@ -47,7 +47,6 @@ do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/gnuitar ${PREFIX}/bin
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	@${INSTALL_DATA} ${WRKSRC}/src/gnuitar.xpm ${PREFIX}/share/pixmaps
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
