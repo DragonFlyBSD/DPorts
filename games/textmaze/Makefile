@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/textmaze/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/textmaze/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	textmaze
 PORTVERSION=	1.2
@@ -21,8 +21,7 @@ PLIST_FILES=	bin/textmaze
 
 WRKSRC=		${WRKDIR}/TextMaze
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
