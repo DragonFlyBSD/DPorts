@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile 329493 2013-10-05 18:30:05Z bsam $
+# $FreeBSD: devel/eric4/Makefile 331268 2013-10-22 13:52:24Z amdmi3 $
 
 CATEGORIES=	devel python
 DISTNAME=	${PORTNAME}-${PORTVERSION}
@@ -30,7 +30,6 @@ do-configure:
 		< ${FILESDIR}/config > ${WRKSRC}/eric4config.freebsd
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/eric4.desktop ${STAGEDIR}${PREFIX}/share/applications/
 	${LN} -sf ${DATADIR}/icons/default/eric.png ${STAGEDIR}${PREFIX}/share/pixmaps/
 	@${MKDIR} ${STAGEDIR}${DATADIR}/i18n
