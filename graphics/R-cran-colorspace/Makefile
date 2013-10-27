@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-colorspace/Makefile 329233 2013-10-03 21:14:03Z tota $
+# $FreeBSD: graphics/R-cran-colorspace/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	colorspace
 DISTVERSION=	1.2-4
+PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
