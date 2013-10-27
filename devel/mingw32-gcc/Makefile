@@ -1,8 +1,9 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/mingw32-gcc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/mingw32-gcc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GCC
