@@ -1,4 +1,5 @@
 bin/aqemu
+man/man1/aqemu.1.gz
 share/applications/aqemu.desktop
 share/aqemu/German.qm
 share/aqemu/Russian.qm
@@ -67,4 +68,3 @@ share/pixmaps/aqemu_64x64.png
 @dirrm share/aqemu/os_templates
 @dirrm share/aqemu/os_icons
 @dirrm share/aqemu
-@dirrmtry share/applications

@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/aqemu/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/aqemu/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	aqemu
 PORTVERSION=	0.8.1
@@ -7,9 +7,9 @@ CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:S,.0$,,}/
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	Qt4 based Qemu frontend
+COMMENT=	Qt 4 based Qemu frontend
 
-LIB_DEPENDS=	vncclient.0:${PORTSDIR}/net/libvncserver
+LIB_DEPENDS=	libvncclient.so:${PORTSDIR}/net/libvncserver
 
 USE_BZIP2=	yes
 USE_QT4=	gui qtestlib xml qmake_build uic_build moc_build rcc_build \
@@ -17,7 +17,4 @@ USE_QT4=	gui qtestlib xml qmake_build uic_build moc_build rcc_build \
 USES=		cmake
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S,.0$,,}
 
-MAN1=		aqemu.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
