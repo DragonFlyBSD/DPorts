@@ -1,4 +1,4 @@
-@comment $FreeBSD: math/galculator/pkg-plist 329323 2013-10-04 15:21:09Z naddy $
+@comment $FreeBSD: math/galculator/pkg-plist 331270 2013-10-22 13:56:27Z amdmi3 $
 bin/galculator
 man/man1/galculator.1.gz
 share/applications/galculator.desktop
@@ -52,4 +52,3 @@ share/pixmaps/galculator.xpm
 @dirrmtry share/locale/kk_KZ
 @dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
