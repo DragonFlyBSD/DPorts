@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-praw/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-praw/Makefile 331669 2013-10-26 09:36:20Z koobs $
 
 PORTNAME=	praw
-PORTVERSION=	2.1.3
+PORTVERSION=	2.1.11
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -18,10 +18,11 @@ TEST_DEPENDS:=	${RUN_DEPENDS}
 USE_GITHUB=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 GH_ACCOUNT=	praw-dev
 GH_TAGNAME=	v${DISTVERSION}
-GH_COMMIT=	8687d58
+GH_COMMIT=	a36c3f1
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
