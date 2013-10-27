@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-RSQLite/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/R-cran-RSQLite/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	RSQLite
 PORTVERSION=	0.11.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
