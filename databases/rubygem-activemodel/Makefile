@@ -1,7 +1,7 @@
-# $FreeBSD: databases/rubygem-activemodel/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-activemodel/Makefile 331450 2013-10-24 01:45:27Z swills $
 
 PORTNAME=	activemodel
-PORTVERSION=	3.2.13
+PORTVERSION=	3.2.15
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
