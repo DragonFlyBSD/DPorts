@@ -1,9 +1,9 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/syobon/Makefile 328221 2013-09-24 23:59:05Z nemysis $
+# $FreeBSD: games/syobon/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	syobon
 PORTVERSION=	1.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://download.zapek.com/software/${PORTNAME}/ \
 		SF/nemysisfreebsdp/:icons
