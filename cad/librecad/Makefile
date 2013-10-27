@@ -1,4 +1,4 @@
-# $FreeBSD: cad/librecad/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: cad/librecad/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 
 PORTNAME=	librecad
 PORTVERSION=	1.0.3
@@ -52,10 +52,8 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unix/librecad ${STAGEDIR}${PREFIX}/bin
 	cd ${WRKSRC}/unix/resources && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/desktop/librecad.desktop \
 		${STAGEDIR}${PREFIX}/share/applications
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/res/main/librecad.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps
 
