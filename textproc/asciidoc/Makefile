@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: textproc/asciidoc/Makefile 329978 2013-10-10 08:57:13Z sunpoet $
+# $FreeBSD: textproc/asciidoc/Makefile 331685 2013-10-26 13:27:07Z sunpoet $
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.8
@@ -49,7 +49,7 @@ PLIST_SUB+=	VIM_DATADIR=""
 
 post-patch:
 .for conf_file in ${CONF_FILES}
-	@cd ${WRKSRC} && ${MV} ${conf_file} ${conf_file}.sample
+	@cd ${WRKSRC}/ && ${MV} ${conf_file} ${conf_file}.sample
 .endfor
 .if ${PORT_OPTIONS:MVIM}
 	@${REINPLACE_CMD} -e '/^vimdir = /d' ${WRKSRC}/Makefile.in
@@ -62,8 +62,8 @@ pre-install:
 
 post-install:
 .for conf_file in ${CONF_FILES}
-	@if [ ! -f ${STAGEDIR}${ETCDIR}/${conf_file} ]; then \
-		${CP} -p ${STAGEDIR}${ETCDIR}/${conf_file}.sample ${STAGEDIR}${ETCDIR}/${conf_file} ; \
+	@if [ ! -f ${ETCDIR}/${conf_file} ]; then \
+		${CP} -p ${STAGEDIR}${ETCDIR}/${conf_file}.sample ${STAGEDIR}${ETCDIR}/${conf_file}; \
 	fi
 .endfor
 
