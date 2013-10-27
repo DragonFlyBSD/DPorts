@@ -1,10 +1,9 @@
-# $FreeBSD: russian/libreoffice/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/libreoffice/Makefile 331614 2013-10-25 17:05:50Z jkim $
 
 LO_I18N=	ru
 LO_HAS_HELPPACK=	yes
 CATEGORIES=	russian editors
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
 .include <bsd.port.mk>
