@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/R-cran-gsubfn/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/R-cran-gsubfn/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gsubfn
 DISTVERSION=	0.6-5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
