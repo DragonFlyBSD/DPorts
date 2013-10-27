@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/pycogent/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/pycogent/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pycogent
 PORTVERSION=	1.5.3
+PORTREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	SF/${PORTNAME}/PyCogent/${PORTVERSION}
 DISTNAME=	PyCogent-${PORTVERSION}
