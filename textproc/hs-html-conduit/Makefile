@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-html-conduit/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-html-conduit/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	html-conduit
 PORTVERSION=	1.1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
