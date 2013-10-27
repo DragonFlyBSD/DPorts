@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: security/gnutls3/Makefile 331389 2013-10-23 15:20:15Z wg $
+# $FreeBSD: security/gnutls3/Makefile 331600 2013-10-25 15:34:47Z wg $
 
 PORTNAME=	gnutls
-PORTVERSION=	3.1.14
+PORTVERSION=	3.1.15
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/
 PKGNAMESUFFIX=	${GNUTLS_SUFFIX}
