@@ -1,9 +1,9 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-gcc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/msp430-gcc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${LTSVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE} \
@@ -21,7 +21,7 @@ PATCHFILES=		${LTS_PATCHES}
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	lev@FreeBSD.org
-COMMENT=	FSF gcc-4.6 for TI's msp430 MCUs cross-development
+COMMENT=	FSF GCC 4.6 for TI's msp430 MCUs cross-development
 
 LICENSE=	GPLv3
 
@@ -29,9 +29,9 @@ BUILD_DEPENDS=	${PKGNAMEPREFIX}as:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils \
 		${PKGNAMEPREFIX}ld:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils
 RUN_DEPENDS=	${PKGNAMEPREFIX}as:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils \
 		${PKGNAMEPREFIX}ld:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils
-LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp \
-		mpfr.4:${PORTSDIR}/math/mpfr \
-		mpc.2:${PORTSDIR}/math/mpc
+LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp \
+		libmpfr.so:${PORTSDIR}/math/mpfr \
+		libmpc.so:${PORTSDIR}/math/mpc
 
 CONFLICTS=	msp430-gcc-3.*
 
