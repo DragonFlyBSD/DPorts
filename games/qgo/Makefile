@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/qgo/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: games/qgo/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	qgo
 PORTVERSION=	2.s764
@@ -17,7 +17,6 @@ USES=		desktop-file-utils qmake
 USE_QT4=	gui network qtestlib moc_build qmake_build rcc_build uic_build
 
 PLIST_FILES=	bin/qgo share/applications/qgo.desktop share/pixmaps/qgo.png
-PLIST_DIRSTRY=	share/applications
 
 post-patch:
 	@${REINPLACE_CMD} -e \
