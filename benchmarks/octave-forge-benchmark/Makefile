@@ -1,9 +1,9 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: benchmarks/octave-forge-benchmark/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/octave-forge-benchmark/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	octave-forge-benchmark
 PORTVERSION=	1.1.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	benchmarks math
 
 MAINTAINER=	stephen@FreeBSD.org
