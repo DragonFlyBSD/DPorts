@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xdeblock/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xdeblock/Makefile 331682 2013-10-26 12:46:37Z wg $
 
 PORTNAME=	xdeblock
 PORTVERSION=	1.0
@@ -16,15 +16,16 @@ WRKSRC=		${WRKDIR}/xdeblo_v1.0
 USES=		imake
 USE_XORG=	xpm
 NO_INSTALL_MANPAGES=	yes
+CFLAGS+=	-Wno-return-type
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/main.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xdeblo ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/lib/X11/xdeblock/mapf
-	${CHMOD} 777 ${PREFIX}/lib/X11/xdeblock/mapf
-	${INSTALL_DATA} ${WRKSRC}/mapf/*.txt ${PREFIX}/lib/X11/xdeblock/mapf
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xdeblo ${STAGEDIR}${PREFIX}/bin)
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/xdeblock/mapf
+	${CHMOD} 777 ${STAGEDIR}${PREFIX}/lib/X11/xdeblock/mapf
+	(cd ${WRKSRC}/mapf && ${INSTALL_DATA} *.txt \
+		${STAGEDIR}${PREFIX}/lib/X11/xdeblock/mapf)
 
 .include <bsd.port.mk>
