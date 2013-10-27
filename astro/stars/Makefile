@@ -1,5 +1,5 @@
 # Created by: searle
-# $FreeBSD: astro/stars/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/stars/Makefile 331558 2013-10-25 06:28:14Z vanilla $
 
 PORTNAME=	stars
 PORTVERSION=	1.0
@@ -14,7 +14,6 @@ COMMENT=	Star field demo
 PLIST_FILES=	bin/stars
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_XORG=	x11
-NO_STAGE=	yes
 
 do-build:
 	@${CC} -I${PREFIX}/include ${CFLAGS} -c ${WRKSRC}/xwin.c -o ${WRKSRC}/xwin.o
@@ -22,6 +21,6 @@ do-build:
 	@${CC} ${WRKSRC}/main.o ${WRKSRC}/xwin.o -L${PREFIX}/lib -lX11 -lm -o ${WRKSRC}/stars
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/stars ${PREFIX}/bin/stars
+	${INSTALL_PROGRAM} ${WRKSRC}/stars ${STAGEDIR}${PREFIX}/bin/stars
 
 .include <bsd.port.mk>
