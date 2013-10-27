@@ -1,4 +1,4 @@
-@comment $FreeBSD: audio/vagalume/pkg-plist 330737 2013-10-18 11:40:34Z decke $
+@comment $FreeBSD: audio/vagalume/pkg-plist 331267 2013-10-22 13:50:43Z amdmi3 $
 bin/vagalume
 %%DBUS%%bin/vagalumectl
 man/man1/vagalume.1.gz
@@ -36,4 +36,3 @@ share/pixmaps/vagalume.png
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
