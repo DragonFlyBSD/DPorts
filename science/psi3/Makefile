@@ -1,9 +1,9 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: science/psi3/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/psi3/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	psi3
 PORTVERSION=	3.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	SF/psicode/psi/${PORTVERSION} \
 		http://www.psicode.org/doc/:doc \
