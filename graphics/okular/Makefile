@@ -1,7 +1,8 @@
-# $FreeBSD: graphics/okular/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/okular/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	okular
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
