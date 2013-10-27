@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/bmp2html/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/bmp2html/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	bmp2html
 PORTVERSION=	0.1
@@ -20,7 +20,6 @@ DEFINES=	-D_REENTRANT
 
 PLIST_FILES=	bin/bmp2html
 
-NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/${PORTNAME}
 
@@ -31,6 +30,6 @@ do-build:
 		-o ${WRKSRC}/${PORTNAME} ${WRKSRC}/${PORTNAME}.o
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
