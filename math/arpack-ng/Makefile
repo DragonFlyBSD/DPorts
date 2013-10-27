@@ -1,8 +1,9 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: math/arpack-ng/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/arpack-ng/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	arpack-ng
 PORTVERSION=	3.1.3
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://forge.scilab.org/index.php/p/arpack-ng/downloads/get/ \
 		LOCAL/bf
