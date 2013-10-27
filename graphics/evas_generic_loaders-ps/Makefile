@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-ps/Makefile 330169 2013-10-12 18:31:42Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-ps/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	ps
 PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	evas_generic_loaders-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
