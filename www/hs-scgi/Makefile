@@ -1,11 +1,11 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-scgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/hs-scgi/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 # deprecated: use wai
 
 PORTNAME=	scgi
 PORTVERSION=	0.3.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
