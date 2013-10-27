@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-sysinfo/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-sysinfo/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	sysinfo
 PORTVERSION=	0.8.0
@@ -18,5 +18,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/sysinfo
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
