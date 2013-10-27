@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-GPS-Babel/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/p5-GPS-Babel/Makefile 331586 2013-10-25 14:04:57Z vanilla $
 
 PORTNAME=	GPS-Babel
 PORTVERSION=	0.11
@@ -17,8 +17,5 @@ RUN_DEPENDS=	p5-Geo-Gpx>=0.25:${PORTSDIR}/graphics/p5-Geo-Gpx \
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=	GPS::Babel.3
 
 .include <bsd.port.mk>
