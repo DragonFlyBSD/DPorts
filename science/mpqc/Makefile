@@ -1,9 +1,9 @@
 # Created by: batman <batman@udel.edu>
-# $FreeBSD: science/mpqc/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/mpqc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mpqc
 PORTVERSION=	2.3.1
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	science parallel
 MASTER_SITES=	SF
 
