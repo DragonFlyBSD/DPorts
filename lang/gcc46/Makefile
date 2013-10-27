@@ -1,8 +1,9 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc46/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gcc46/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gcc
 PORTVERSION=	4.6.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
