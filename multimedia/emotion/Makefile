@@ -1,11 +1,11 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: multimedia/emotion/Makefile 329522 2013-10-06 00:14:03Z gblach $
+# $FreeBSD: multimedia/emotion/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	emotion
 PORTVERSION=	1.7.8
 PORTEPOCH=	1
 CATEGORIES=	multimedia enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
