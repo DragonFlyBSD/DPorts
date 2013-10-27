@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/hs-blaze-html/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-blaze-html/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	blaze-html
 PORTVERSION=	0.6.1.1
+PORTREVISION=	1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
