@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-resource-pool/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-resource-pool/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	resource-pool
 PORTVERSION=	0.2.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
