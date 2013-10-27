@@ -1,5 +1,5 @@
 # Created by: Richard Neese <r.neese@gmail.com>
-# $FreeBSD: www/fusionpbx/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/fusionpbx/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	fusionpbx
 DISTVERSION=	3.3
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.fusionpbx.com/downloads/ \
 		${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PHP5 Graphical User Interface for FreeSwitch
 
 LICENSE=	MPL
