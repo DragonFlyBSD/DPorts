@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/openxcom/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/openxcom/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	openxcom
 PORTVERSION=	0.9.0
@@ -31,7 +31,6 @@ SUB_FILES=	pkg-message
 
 PLIST_FILES=	bin/openxcom share/applications/${PORTNAME}.desktop \
 		share/pixmaps/${PORTNAME}.svg
-PLIST_DIRSTRY=	share/applications
 
 PORTDOCS=	*
 PORTDATA=	*
@@ -51,7 +50,6 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin/
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/res/linux/openxcom.desktop ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/res/linux/icons/openxcom.svg ${PREFIX}/share/pixmaps
 .if !defined(NOPORTDATA)
