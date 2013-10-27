@@ -1,5 +1,5 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: mail/dovecot2/Makefile 330339 2013-10-14 17:49:26Z wg $
+# $FreeBSD: mail/dovecot2/Makefile 331676 2013-10-26 12:36:17Z wg $
 
 PORTNAME=	dovecot
 PORTVERSION=	2.2.6
@@ -83,6 +83,8 @@ PORTEXAMPLES=	*
 #
 .if ${PORT_OPTIONS:MKQUEUE}
 CONFIGURE_ARGS+=--with-ioloop=kqueue
+.else
+CONFIGURE_ARGS+=--with-ioloop=poll
 .endif
 
 ## SSL support
