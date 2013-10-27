@@ -1,5 +1,5 @@
 # Created by: Jean-Sebastien Roy <js@jeannot.org>
-# $FreeBSD: print/xtexsh/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/xtexsh/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	xtexsh
 PORTVERSION=	1.4.2
@@ -34,7 +34,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xtexsh ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/xtexsh.1.gz ${MANPREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/xtexshrc ${PREFIX}/etc
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/xtexsh.desktop ${PREFIX}/share/applications
 	@${MKDIR} ${PREFIX}/share/icons/locolor/16x16/apps
 	${INSTALL_DATA} ${WRKSRC}/xtexsh-mini.png \
@@ -42,7 +41,6 @@ do-install:
 	@${MKDIR} ${PREFIX}/share/icons/locolor/32x32/apps
 	${INSTALL_DATA} ${WRKSRC}/xtexsh.png \
 		${PREFIX}/share/icons/locolor/32x32/apps/xtexsh.png
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/xtexsh.png ${PREFIX}/share/pixmaps
 
 .if !defined(NOPORTDOCS)
