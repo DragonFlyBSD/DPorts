@@ -2,6 +2,7 @@ bin/warmux
 %%SERVER%%bin/warmux-index-server
 bin/warmux-list-games
 %%SERVER%%bin/warmux-server
+man/man6/warmux.6.gz
 share/applications/warmux.desktop
 %%NLS%%share/locale/bg/LC_MESSAGES/warmux.mo
 %%NLS%%share/locale/bs/LC_MESSAGES/warmux.mo
@@ -1726,4 +1727,3 @@ share/pixmaps/warmux_128x128.png
 %%NLS%%@dirrmtry share/locale/ja_JP
 %%NLS%%@dirrmtry share/locale/cpf/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/cpf
-@dirrmtry share/applications
