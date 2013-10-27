@@ -1,8 +1,8 @@
-# $FreeBSD: archivers/hs-zip-archive/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/hs-zip-archive/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	zip-archive
 PORTVERSION=	0.1.3.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	archivers haskell
 
 MAINTAINER=	haskell@FreeBSD.org
