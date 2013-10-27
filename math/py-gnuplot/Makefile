@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: math/py-gnuplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-gnuplot/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gnuplot
 PORTVERSION=	1.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math python
 MASTER_SITES=	SF/${PORTNAME}-py/Gnuplot-py/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
