@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: graphics/qiviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/qiviewer/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	qiviewer
 PORTVERSION=	0.5.0
@@ -23,8 +23,7 @@ PLIST_FILES=	bin/qiviewer \
 		share/qiviewer/locale/es_AR.qm \
 		share/qiviewer/locale/es_ES.qm
 PLIST_DIRS=	share/qiviewer/locale \
-		share/qiviewer \
-		share/applications
+		share/qiviewer
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
