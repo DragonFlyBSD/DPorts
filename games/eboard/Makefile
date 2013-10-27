@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: games/eboard/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/eboard/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	eboard
 PORTVERSION=	1.1.1
@@ -85,7 +85,6 @@ post-install:
 	@cd ${WRKDIR}/eboard-extras-${extra} && EBOARDCONFIG=${PREFIX}/bin/eboard-config ./${CONFIGURE_SCRIPT} --prefix=${PREFIX}
 	@cd ${WRKDIR}/eboard-extras-${extra} && ${SETENV} ${MAKE_ENV} ${MAKE} install
 .endfor
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/icon-eboard.xpm ${PREFIX}/share/pixmaps/eboard.xpm
 	@${CAT} ${PKGMESSAGE}
 
