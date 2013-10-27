@@ -1,9 +1,9 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/cvs2darcs/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvs2darcs/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	cvs2darcs
 PORTVERSION=	0.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/${PORTNAME}/
 
