@@ -1,7 +1,8 @@
-# $FreeBSD: games/kdegames4/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/kdegames4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdegames
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	games kde
 DISTFILES=	#
 
