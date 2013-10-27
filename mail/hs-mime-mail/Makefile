@@ -1,8 +1,8 @@
-# $FreeBSD: mail/hs-mime-mail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/hs-mime-mail/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mime-mail
 PORTVERSION=	0.4.1.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail haskell
 
 MAINTAINER=	haskell@FreeBSD.org
