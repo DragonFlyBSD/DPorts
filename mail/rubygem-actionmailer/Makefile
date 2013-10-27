@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: mail/rubygem-actionmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/rubygem-actionmailer/Makefile 331450 2013-10-24 01:45:27Z swills $
 
 PORTNAME=	actionmailer
-PORTVERSION=	3.2.13
+PORTVERSION=	3.2.15
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Easy email delivery and testing for Ruby
 
 RUN_DEPENDS=	rubygem-actionpack>=${PORTVERSION}:${PORTSDIR}/www/rubygem-actionpack \
-		rubygem-mail>=2.4.4:${PORTSDIR}/mail/rubygem-mail
+		rubygem-mail>=2.5.4:${PORTSDIR}/mail/rubygem-mail
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
