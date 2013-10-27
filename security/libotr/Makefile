@@ -1,4 +1,4 @@
-# $FreeBSD: security/libotr/Makefile 330425 2013-10-15 18:36:57Z cs $
+# $FreeBSD: security/libotr/Makefile 331737 2013-10-26 21:36:26Z cs $
 
 PORTNAME=	libotr
 PORTVERSION=	4.0.0
@@ -14,11 +14,13 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Portable OTR Messaging Library and toolkit
 
-BUILD_DEPENDS=	pkgconf>0:${PORTSDIR}/devel/pkgconf
-LIB_DEPENDS=	gpg-error.0:${PORTSDIR}/security/libgpg-error \
-		gcrypt:${PORTSDIR}/security/libgcrypt
+LICENSE=	LGPL21
 
-CONFLICTS=	libotr-3.*
+BUILD_DEPENDS=	pkgconf>0:${PORTSDIR}/devel/pkgconf
+LIB_DEPENDS=	libgpg-error.so:${PORTSDIR}/security/libgpg-error \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
+
+CONFLICTS=	libotr3-*
 
 USE_AUTOTOOLS=	autoconf libtool
 USE_LDCONFIG=	yes
