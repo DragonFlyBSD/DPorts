@@ -1,8 +1,8 @@
-# $FreeBSD: math/slgrace/Makefile 330269 2013-10-14 00:13:53Z garga $
+# $FreeBSD: math/slgrace/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	slgrace
 PORTVERSION=	0.2.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v${SLANG_VER}/modules/grace/ \
 		ftp://ftp.fu-berlin.de/pub/unix/misc/slang/v${SLANG_VER}/modules/grace/ \
