@@ -1,5 +1,5 @@
 # Created by: Kjell Tore Ullavik <ktullavik@gmail.com>
-# $FreeBSD: multimedia/pyjama/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/pyjama/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	pyjama
 PORTVERSION=	0.3.0.1
@@ -54,7 +54,6 @@ do-install:
 
 	${LN} -fs ${INSTDIR}/pyjama.py ${PREFIX}/bin/pyjama
 	${CHMOD} a+x ${INSTDIR}/pyjama.py
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/src/pyjama.desktop ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/src/images/pyjama.xpm ${PREFIX}/share/pixmaps
 
