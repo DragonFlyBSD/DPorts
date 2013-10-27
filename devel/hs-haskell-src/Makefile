@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-haskell-src/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-haskell-src/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	haskell-src
 PORTVERSION=	1.0.1.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
