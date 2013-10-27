@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: emulators/uae/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/uae/Makefile 331557 2013-10-25 05:43:41Z dinoex $
 
 PORTNAME=	uae
 PORTVERSION=	0.8.29
@@ -13,6 +13,7 @@ COMMENT=	Commodore Amiga emulator
 LICENSE=	GPLv2
 
 CONFLICTS=	e-uae-[0-9]*
+MAKE_JOBS_UNSAFE=yes
 
 USE_BZIP2=	yes
 USES=		gmake pkgconfig
