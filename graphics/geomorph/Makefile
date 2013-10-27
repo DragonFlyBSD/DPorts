@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/geomorph/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/geomorph/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	geomorph
 PORTVERSION=	0.50
@@ -52,7 +52,6 @@ post-patch:
 	@${RM} ${WRKSRC}/install*~
 
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/geomorph.desktop ${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/GeoMorph.xpm ${PREFIX}/share/pixmaps/geomorph.xpm
 
