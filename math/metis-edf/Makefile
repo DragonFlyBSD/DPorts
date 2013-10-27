@@ -1,9 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/metis-edf/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/metis-edf/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	metis-edf
 DISTVERSION=	4.1-2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math
 
 MAINTAINER=	bf@FreeBSD.org
