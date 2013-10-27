@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-core/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rspec-core/Makefile 331631 2013-10-25 20:14:51Z sunpoet $
 
 PORTNAME=	rspec-core
-PORTVERSION=	2.14.5
+PORTVERSION=	2.14.6
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -16,5 +16,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/autospec bin/rspec
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
