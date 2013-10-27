@@ -1,5 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: net/wpa_gui/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/wpa_gui/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	wpa_gui
 PORTVERSION=	0.7.3
@@ -17,7 +17,6 @@ COMMENT=	Qt-based frontend for wpa_supplicant
 PLIST_FILES=	sbin/wpa_gui \
 		share/applications/wpa_gui.desktop \
 		share/pixmaps/wpa_gui.svg
-PLIST_DIRSTRY=	share/applications
 WRKSRC=		${WRKDIR}/${DISTNAME}/wpa_supplicant/wpa_gui-qt4
 USE_QT4=	gui moc_build qmake_build rcc_build uic_build
 HAS_CONFIGURE=	yes
@@ -34,7 +33,6 @@ do-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/wpa_gui.desktop ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/icons/wpa_gui.svg ${PREFIX}/share/pixmaps
 
