@@ -1,8 +1,9 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: editors/kile-kde4/Makefile 329697 2013-10-07 12:26:54Z makc $
+# $FreeBSD: editors/kile-kde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kile
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	editors kde
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${DISTVERSION}
 
@@ -20,7 +21,5 @@ USE_TEX=	latex
 OPTIONS_DEFINE=	OKULAR
 OKULAR_DESC=	Use Okular for viewing
 OKULAR_USE=	KDE4=okular_run
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
