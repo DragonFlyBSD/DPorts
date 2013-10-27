@@ -1,8 +1,9 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: textproc/hs-HaXml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-HaXml/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	HaXml
 PORTVERSION=	1.24
+PORTREVISION=	1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
