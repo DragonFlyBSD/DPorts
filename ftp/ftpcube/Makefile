@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: ftp/ftpcube/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/ftpcube/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ftpcube
 PORTVERSION=	0.5.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	ftp python
 MASTER_SITES=	SF
 
