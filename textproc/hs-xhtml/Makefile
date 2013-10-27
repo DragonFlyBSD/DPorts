@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-xhtml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-xhtml/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	xhtml
 PORTVERSION=	3000.2.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
