@@ -1,4 +1,4 @@
-# $FreeBSD: games/hexglass/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: games/hexglass/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	hexglass
 PORTVERSION=	1.2.1
@@ -21,7 +21,6 @@ DESKTOP_ENTRIES=	"HexGlass" "${COMMENT}" \
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/resources/logo512x512.xpm \
 		${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.xpm
 
