@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/gliv/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gliv/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	gliv
 PORTVERSION=	1.9.7
@@ -30,7 +30,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gliv.desktop \
 		${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gliv.png \
