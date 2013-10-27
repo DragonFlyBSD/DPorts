@@ -1,8 +1,8 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: converters/py-unidecode/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/py-unidecode/Makefile 331473 2013-10-24 10:26:07Z koobs $
 
 PORTNAME=	unidecode
-PORTVERSION=	0.04.13
+PORTVERSION=	0.04.14
 CATEGORIES=	converters python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,11 +13,11 @@ COMMENT=	ASCII transliterations of Unicode text
 
 LICENSE=	GPLv2
 
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	Unidecode
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
