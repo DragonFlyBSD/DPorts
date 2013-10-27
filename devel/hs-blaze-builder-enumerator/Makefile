@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-blaze-builder-enumerator/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-blaze-builder-enumerator/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	blaze-builder-enumerator
 PORTVERSION=	0.2.0.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
