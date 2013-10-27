@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-shakespeare-i18n/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/hs-shakespeare-i18n/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	shakespeare-i18n
 PORTVERSION=	1.0.0.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
