@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: multimedia/castpodder/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/castpodder/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	castpodder
 PORTVERSION=	5.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://nivi.interfree.it/distfiles/${PORTNAME}/
 DISTNAME=	CastPodder-${PORTVERSION}
