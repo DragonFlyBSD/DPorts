@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Imlib2/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: graphics/p5-Image-Imlib2/Makefile 331301 2013-10-22 16:57:44Z mat $
 
 PORTNAME=	Image-Imlib2
 PORTVERSION=	2.03
@@ -26,10 +26,10 @@ EXAMPLES=	examples/benchmark.pl examples/benchmark.txt examples/maeda.pl
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${EXAMPLES:S|^|${WRKSRC}/|} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${EXAMPLES:S|^|${WRKSRC}/|} ${EXAMPLESDIR}
 	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
 .endif
 
