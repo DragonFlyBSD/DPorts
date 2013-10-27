@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/epdfview/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/epdfview/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	epdfview
 PORTVERSION=	0.1.8
@@ -54,7 +54,6 @@ post-patch:
 
 post-install:
 	${REINPLACE_CMD} -e 's,Icon.*,Icon=${DATADIR}/pixmaps/icon_epdfview-48.png,' ${WRKSRC}/data/${PORTNAME}.desktop
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/data/${PORTNAME}.desktop ${PREFIX}/share/applications/
 	@-update-desktop-database
 
