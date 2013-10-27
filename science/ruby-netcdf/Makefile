@@ -1,8 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: science/ruby-netcdf/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/ruby-netcdf/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	netcdf
 PORTVERSION=	0.6.6
+PORTREVISION=	1
 CATEGORIES=	science ruby
 MASTER_SITES=	http://ruby.gfd-dennou.org/products/ruby-netcdf/release/ \
 		http://dennou-h.gfd-dennou.org/library/ruby/products/ruby-netcdf/release/ \
