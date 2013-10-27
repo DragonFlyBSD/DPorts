@@ -1,7 +1,8 @@
-# $FreeBSD: net/hs-socks/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/hs-socks/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	socks
 PORTVERSION=	0.5.1
+PORTREVISION=	1
 CATEGORIES=	net haskell
 
 MAINTAINER=	haskell@FreeBSD.org
