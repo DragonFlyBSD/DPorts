@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Mo/Makefile 331003 2013-10-20 11:48:34Z sunpoet $
+# $FreeBSD: devel/p5-Mo/Makefile 331691 2013-10-26 14:27:43Z sunpoet $
 
 PORTNAME=	Mo
-PORTVERSION=	0.36
+PORTVERSION=	0.37
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CARLOS
