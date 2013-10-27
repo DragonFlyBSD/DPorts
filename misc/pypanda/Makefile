@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/pypanda/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/pypanda/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pypanda
 PORTVERSION=	0.6
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	# none
 
