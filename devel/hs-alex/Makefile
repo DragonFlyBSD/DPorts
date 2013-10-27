@@ -1,8 +1,9 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: devel/hs-alex/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-alex/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	alex
 PORTVERSION=	3.0.5
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
