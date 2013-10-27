@@ -1,9 +1,10 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/wizznic/Makefile 329240 2013-10-03 21:54:23Z nemysis $
+# $FreeBSD: games/wizznic/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	wizznic
 PORTVERSION=	0.9.9
 DISTVERSIONSUFFIX=-src
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Source%20Releases/
 
