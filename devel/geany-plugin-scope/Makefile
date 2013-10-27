@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-scope/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/geany-plugin-scope/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	geany-plugin-scope
 PORTVERSION=	${GEANY_VER}
@@ -9,6 +9,5 @@ COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
 
 USE_GNOME=	vte
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
