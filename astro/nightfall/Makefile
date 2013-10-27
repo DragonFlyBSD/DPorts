@@ -1,9 +1,9 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: astro/nightfall/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/nightfall/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	nightfall
 PORTVERSION=	1.70
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	astro
 MASTER_SITES=	http://www.la-samhna.de/nightfall/
 
@@ -60,7 +60,6 @@ post-patch:
 		${WRKSRC}/nightfall.desktop
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/nightfall.desktop \
 		${PREFIX}/share/applications
 
