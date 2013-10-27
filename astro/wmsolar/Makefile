@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@FreeBSD.org>
-# $FreeBSD: astro/wmsolar/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/wmsolar/Makefile 331586 2013-10-25 14:04:57Z vanilla $
 
 PORTNAME=	wmsolar
 PORTVERSION=	1.0
@@ -14,13 +14,12 @@ PLIST_FILES=	bin/wmSolar
 WRKSRC=		${WRKDIR}/wmSolar
 USE_XORG=	x11 xext xpm
 USES=		gmake
-NO_STAGE=	yes
 
 pre-patch:
 	@${REINPLACE_CMD} -e 's|values.h|float.h|; s|MAXDOUBLE|DBL_MAX|g' \
 		${WRKSRC}/wmSolar.c
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/wmSolar ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/wmSolar ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
