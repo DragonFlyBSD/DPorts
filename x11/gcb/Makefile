@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: x11/gcb/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gcb/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	gcb
 PORTVERSION=	0.2.8
@@ -27,10 +27,8 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.png ${PREFIX}/share/icons
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop \
 		${PREFIX}/share/applications
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.png ${PREFIX}/share/pixmaps
 
 .include <bsd.port.mk>
