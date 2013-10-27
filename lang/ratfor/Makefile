@@ -1,9 +1,9 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: lang/ratfor/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/ratfor/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ratfor
 PORTVERSION=	1985.06
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://sepftp.stanford.edu/pub/sep-distr/  \
 		${MASTER_SITE_LOCAL}  \
