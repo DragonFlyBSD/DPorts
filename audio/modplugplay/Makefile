@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/modplugplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/modplugplay/Makefile 331591 2013-10-25 14:52:21Z ehaupt $
 
 PORTNAME=	modplugplay
 PORTVERSION=	1.0
@@ -16,9 +16,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	modplug.1:${PORTSDIR}/audio/libmodplug
 
-NO_STAGE=	yes
-MAN1=		modplugplay.1
-PLIST_FILES=	bin/modplugplay
+PLIST_FILES=	bin/modplugplay man/man1/modplugplay.1.gz
 
 CFLAGS+=	-I${LOCALBASE}/include/libmodplug -L${LOCALBASE}/lib
 LDFLAGS+=	-lmodplug
@@ -28,7 +26,7 @@ do-build:
 		-o ${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
