@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mtpaint/Makefile 328835 2013-09-30 18:11:44Z marino $
+# $FreeBSD: graphics/mtpaint/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	mtpaint
 PORTVERSION=	3.40
@@ -65,7 +65,6 @@ do-install:
 		${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 \
 		${MANPREFIX}/man/man1
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/doc/${PORTNAME}.desktop \
 		${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/doc/${PORTNAME}.png \
