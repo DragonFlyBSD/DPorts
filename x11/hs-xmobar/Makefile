@@ -1,8 +1,9 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: x11/hs-xmobar/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/hs-xmobar/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	xmobar
 PORTVERSION=	0.17
+PORTREVISION=	1
 CATEGORIES=	x11 haskell
 
 MAINTAINER=	haskell@FreeBSD.org
