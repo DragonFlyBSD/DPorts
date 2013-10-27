@@ -1,9 +1,9 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: science/2dhf/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/2dhf/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	2dhf
 PORTVERSION=	2005.05
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	science
 MASTER_SITES=	http://www.fizyka.umk.pl/~jkob/2dhf/
 DISTNAME=	${PORTNAME}-05.05
