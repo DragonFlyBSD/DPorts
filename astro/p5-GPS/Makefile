@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: astro/p5-GPS/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: astro/p5-GPS/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
 
 PORTNAME=	GPS
 PORTVERSION=	0.17
@@ -16,11 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		GPS::Serial.3 \
-		GPS::NMEA.3 \
-		GPS::NMEA::Handler.3 \
-		GPS::Garmin.3 \
-		GPS::Garmin::Handler.3
 
 .include <bsd.port.mk>
