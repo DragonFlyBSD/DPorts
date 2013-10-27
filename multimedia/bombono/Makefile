@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: multimedia/bombono/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/bombono/Makefile 331739 2013-10-26 22:08:51Z pawel $
 
 PORTNAME=	bombono
 PORTVERSION=	1.2.2
@@ -23,27 +23,23 @@ RUN_DEPENDS=	GraphicsMagick>=1.1.7:${PORTSDIR}/graphics/GraphicsMagick \
 		growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		toolame:${PORTSDIR}/audio/toolame
 
-USES=		pkgconfig gettext
+USES=		pkgconfig scons
 USE_BZIP2=	yes
-USE_SCONS=	yes
 USE_GCC=	4.2+
 INSTALLS_ICONS=	yes
 
 CXXFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
-SCONS_ARGS=	DVDREAD_LIBPATH=${LOCALBASE}/lib \
-		DVDREAD_INCLUDE=${LOCALBASE}/include LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	DVDREAD_INCLUDE=${LOCALBASE}/include \
+		DVDREAD_LIBPATH=${LOCALBASE}/lib \
+		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
+		CC="${CC}" CXX="${CXX}"
 
-MAN1=		bombono-dvd.1 mpeg2demux.1
-MANDIR=		${MANPREFIX}/man/man1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/SConstruct
 
 post-install:
-	${MKDIR} ${MANDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/man/man1/bombono-dvd.1  ${MANDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/man/man1/mpeg2demux.1 ${MANDIR}
+	cd ${WRKSRC}/docs/man/man1 && ${INSTALL_MAN} bombono-dvd.1 \
+		mpeg2demux.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
