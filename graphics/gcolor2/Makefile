@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak, piotr.smyrak@heron.pl
-# $FreeBSD: graphics/gcolor2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gcolor2/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	gcolor2
 PORTVERSION=	0.4
@@ -20,7 +20,6 @@ SUB_FILES=	gcolor2.desktop
 
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/gcolor2.desktop ${PREFIX}/share/applications
 
 .include <bsd.port.mk>
