@@ -1,8 +1,8 @@
-# $FreeBSD: x11-toolkits/hs-wxc/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/hs-wxc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	wxc
 PORTVERSION=	0.90.0.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits haskell
 
 MAINTAINER=	haskell@FreeBSD.org
