@@ -1,41 +1,36 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: security/nessus-libraries/Makefile 327891 2013-09-22 19:15:28Z antoine $
+# $FreeBSD: security/nessus-libraries/Makefile 331628 2013-10-25 19:42:00Z tijl $
 
 # Define NESSUS_CLIENT_ONLY if you only want to build this for the nessus
 # client.
 
 PORTNAME=	nessus-libraries
 PORTVERSION=	2.2.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.nessus.org/pub/nessus/nessus-${PORTVERSION}/src/ \
 		ftp://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${PORTVERSION}/src/ \
 		http://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${PORTVERSION}/src/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/nessus/nessus-${PORTVERSION}/src/ \
 		ftp://ftp.ayamura.org/pub/nessus/nessus-${PORTVERSION}/src/
-DISTNAME=	nessus-libraries-${PORTVERSION}
+DIST_SUBDIR=	nessus
 
 MAINTAINER=	udo.schweigert@siemens.com
 COMMENT=	Libraries for Nessus, the security scanner
 
-DIST_SUBDIR=	nessus
-WRKSRC=		${WRKDIR}/nessus-libraries
+LICENSE=	LGPL20
 
+WRKSRC=		${WRKDIR}/nessus-libraries
 USES=		bison
 USE_AUTOTOOLS=	libtool
-NO_STAGE=	yes
 CONFIGURE_ARGS=	--enable-cipher
 .if defined(WITH_NESSUS_BPF_SHARE)
 CONFIGURE_ARGS+=	--enable-bpf-sharing
 .endif
-
 USE_LDCONFIG=	YES
 
-MAN1=		nessus-config.1
-
-.if ! defined(NESSUS_CLIENT_ONLY) && ! defined(PACKAGE_BUILDING)
-MANUAL_PACKAGE_BUILD=	needs /dev/bpf which is not available in pointyhat jail
-pre-configure:
+.if ! defined(NESSUS_CLIENT_ONLY)
+pre-everything::
 	@if [ ! -c /dev/bpf ]; then \
 	    ${ECHO} "********************************************************";\
 	    ${ECHO} "*                   W a r n i n g                      *";\
