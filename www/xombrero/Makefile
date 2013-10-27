@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: www/xombrero/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xombrero/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	xombrero
 PORTVERSION=	1.6.0
@@ -65,7 +65,6 @@ do-install:
 .for i in hsts-preload style.css tld-rules
 	${INSTALL_DATA}  ${WRKSRC}/${i} ${DATADIR}
 .endfor
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA}  ${WRKSRC}/xombrero.desktop ${PREFIX}/share/applications
 .if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR}
