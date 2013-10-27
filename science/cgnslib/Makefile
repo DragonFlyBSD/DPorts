@@ -1,8 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/cgnslib/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/cgnslib/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	cgnslib
 DISTVERSION=	3.1.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	science
 MASTER_SITES=	SF/cgns/${PORTNAME}_${PORTVERSION:R}/
