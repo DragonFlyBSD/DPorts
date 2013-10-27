@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-either/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-either/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	either
 PORTVERSION=	3.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
