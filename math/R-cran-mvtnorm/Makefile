@@ -1,9 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-mvtnorm/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/R-cran-mvtnorm/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mvtnorm
 PORTVERSION=	0.9.96
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/\./1}
 
