@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-rails/Makefile 330718 2013-10-18 03:05:47Z tabthorpe $
+# $FreeBSD: www/rubygem-rails/Makefile 331450 2013-10-24 01:45:27Z swills $
 
 PORTNAME=	rails
-PORTVERSION=	3.2.13
+PORTVERSION=	3.2.15
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
