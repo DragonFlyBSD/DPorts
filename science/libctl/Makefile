@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: science/libctl/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/libctl/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	libctl
 PORTVERSION=	3.2.1
+PORTREVISION=	1
 CATEGORIES=	science math
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
