@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/sdl_sound/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/sdl_sound/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	sdl_sound
 PORTVERSION=	1.0.3
@@ -13,7 +13,6 @@ MAINTAINER=	mva@FreeBSD.org
 COMMENT=	A SDL audio library and player for some popular sound file formats
 
 USE_AUTOTOOLS=	libtool
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_SDL=	sdl
 CPPFLAGS+=	-I${LOCALBASE}/include
