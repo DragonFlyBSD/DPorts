@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gssdp/Makefile 330885 2013-10-19 15:32:46Z sunpoet $
+# $FreeBSD: net/gssdp/Makefile 331578 2013-10-25 13:36:09Z sunpoet $
 
 PORTNAME=	gssdp
 PORTVERSION=	0.14.5
@@ -21,6 +21,7 @@ OPTIONS_SUB=	yes
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
 GNU_CONFIGURE=	yes
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_XZ=		yes
