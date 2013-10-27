@@ -1,4 +1,4 @@
-@comment $FreeBSD: audio/sonata/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+@comment $FreeBSD: audio/sonata/pkg-plist 331267 2013-10-22 13:50:43Z amdmi3 $
 bin/sonata
 %%PYTHON_SITELIBDIR%%/mmkeys.so
 %%PYTHON_SITELIBDIR%%/sonata/__init__.py
@@ -129,7 +129,6 @@ share/pixmaps/sonata_play.png
 share/pixmaps/sonatacd.png
 share/pixmaps/sonatacd_large.png
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrmtry share/locale/el_GR/LC_MESSAGES
 @dirrmtry share/locale/el_GR
 @dirrm %%PYTHON_SITELIBDIR%%/sonata/plugins
