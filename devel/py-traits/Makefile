@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-traits/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-traits/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	traits
 PORTVERSION=	3.6.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.enthought.com/repo/ETS/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
