@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/ecore-evas/Makefile 329506 2013-10-05 21:16:36Z gblach $
+# $FreeBSD: graphics/ecore-evas/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	evas
 PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	ecore-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
