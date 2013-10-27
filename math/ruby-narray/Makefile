@@ -1,8 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: math/ruby-narray/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ruby-narray/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	narray
 PORTVERSION=	0.6.0.1
+PORTREVISION=	1
 CATEGORIES=	math ruby
 MASTER_SITES=	RF
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
