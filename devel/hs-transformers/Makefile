@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-transformers/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-transformers/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	transformers
 PORTVERSION=	0.3.0.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
