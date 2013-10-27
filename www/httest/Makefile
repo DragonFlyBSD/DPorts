@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/httest/Makefile 331656 2013-10-26 07:52:07Z ehaupt $
 
 PORTNAME=	httest
 PORTVERSION=	2.4.8
@@ -32,7 +32,6 @@ USE_LDCONFIG=	yes
 MAN1=		htntlm.1 htproxy.1 htremote.1 httest.1
 PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|`$$APR_CONFIG --cflags`||' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|' ${WRKSRC}/generate_modules_c.sh
@@ -41,8 +40,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${WRKSRC}/examples/*.htt ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/*.htt ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
