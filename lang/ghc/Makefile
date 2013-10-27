@@ -1,8 +1,9 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: lang/ghc/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/ghc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ghc
 PORTVERSION=	7.6.3
+PORTREVISION=	1
 CATEGORIES=	lang haskell
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:dflyboot \
