@@ -1,8 +1,7 @@
-# $FreeBSD: www/rubygem-railties/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-railties/Makefile 331450 2013-10-24 01:45:27Z swills $
 
 PORTNAME=	railties
-PORTVERSION=	3.2.13
-PORTREVISION=	1
+PORTVERSION=	3.2.15
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
