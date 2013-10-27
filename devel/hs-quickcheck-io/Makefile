@@ -1,7 +1,8 @@
-# $FreeBSD: devel/hs-quickcheck-io/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-quickcheck-io/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	quickcheck-io
 PORTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
