@@ -1,8 +1,8 @@
 # Created by: Jun-ichiro itojun Hagino <itojun@itojun.org>
-# $FreeBSD: ports-mgmt/portlint/Makefile 331023 2013-10-20 15:01:13Z marcus $
+# $FreeBSD: ports-mgmt/portlint/Makefile 331698 2013-10-26 14:48:59Z marcus $
 
 PORTNAME=	portlint
-PORTVERSION=	2.14.6
+PORTVERSION=	2.14.7
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
