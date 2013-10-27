@@ -1,9 +1,9 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/fvm/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/fvm/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	fvm
 PORTVERSION=	0.15.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science parallel
 MASTER_SITES=	http://research.edf.com/fichiers/fckeditor/Commun/Innovation/logiciels/code_saturne/Releases/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
