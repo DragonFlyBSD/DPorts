@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/playgsf/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/playgsf/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	playgsf
 PORTVERSION=	0.7.1
@@ -14,7 +14,6 @@ COMMENT=	Command-line player for gsf audio files
 LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao
 
 USES=		gmake
-NO_STAGE=	yes
 USE_DOS2UNIX=	yes
 GNU_CONFIGURE=	yes
 
@@ -49,7 +48,7 @@ post-configure:
 	@(cd ${WRKSRC}/libresample-0.1.3; ./configure ${CONFIGURE_ENV})
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 post-install:
 	${CAT} ${PKGMESSAGE}
