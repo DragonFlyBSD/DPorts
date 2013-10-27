@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-RSA/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/hs-RSA/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	RSA
 PORTVERSION=	1.2.2.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
