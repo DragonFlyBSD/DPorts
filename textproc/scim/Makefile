@@ -1,39 +1,31 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: textproc/scim/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/scim/Makefile 331255 2013-10-22 12:10:35Z tijl $
 
 PORTNAME=	scim
 PORTVERSION=	1.4.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
 MAINTAINER=	lx@FreeBSD.org
 COMMENT=	Smart Common Input Method platform
 
-USE_GNOME=	gnomehack gnomehier gtk20 intlhack
+LICENSE=	LGPL21
 
-USE_AUTOTOOLS=	libtool
-USE_GCC=	any
+USE_GNOME=	gnomehier gtk20 intlhack
 USE_XORG=	x11 xpm
 USE_LDCONFIG=	yes
-USES=		gettext gmake iconv pkgconfig
+USES=		gettext gmake iconv pathfix pkgconfig
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl ${ICONV_LIB}
 
 post-patch:
-	${REINPLACE_CMD} -e '/^libscim@SCIM_EPOCH@_la_LDFLAGS/s|=|= ${PTHREAD_LIBS}|' \
-		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} 's/-lstdc++//'				\
+		${WRKSRC}/extras/gtk2_immodule/Makefile.in		\
+		${WRKSRC}/extras/setup/Makefile.in			\
+		${WRKSRC}/src/Makefile.in				\
+		${WRKSRC}/tests/Makefile.in
 
-post-install:
-	@${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${LOCALBASE}/etc/gtk-2.0/gtk.immodules
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO} To display this message again, type ${PKG_INFO} -D ${PKGNAME}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
