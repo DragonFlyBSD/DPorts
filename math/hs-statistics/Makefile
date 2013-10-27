@@ -1,8 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-statistics/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/hs-statistics/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	statistics
 PORTVERSION=	0.10.3.1
+PORTREVISION=	1
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
