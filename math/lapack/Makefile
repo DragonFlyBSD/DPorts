@@ -1,8 +1,9 @@
 # Created by: jmz
-# $FreeBSD: math/lapack/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/lapack/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME?=	lapack
 PORTVERSION=	3.4.2
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	NL/lapack/
 DISTFILES=	lapack-${PORTVERSION}.tgz
