@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/trigger/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/trigger/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	trigger
 PORTVERSION=	0.6.0
@@ -13,7 +13,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Rally car racing game
 
 BUILD_DEPENDS=	jam:${PORTSDIR}/devel/jam
-LIB_DEPENDS=	physfs.1:${PORTSDIR}/devel/physfs
+LIB_DEPENDS=	libphysfs.so:${PORTSDIR}/devel/physfs
 
 USE_OPENAL=	al alut
 USE_SDL=	sdl image
@@ -35,7 +35,6 @@ PORTDOCS=	README-stereo.txt README.txt
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -51,18 +50,18 @@ do-build:
 	@cd ${BUILD_WRKSRC} && ${LOCALBASE}/bin/jam
 
 do-install:
-	${MKDIR} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/trigger ${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/trigger ${STAGEDIR}${PREFIX}/bin
 
-	${MKDIR} ${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}
 .for d in events fonts maps plugins sounds textures vehicles
-	cd ${DATASRC} && ${COPYTREE_SHARE} ${d} ${DATADIR}
+	cd ${DATASRC} && ${COPYTREE_SHARE} ${d} ${STAGEDIR}${DATADIR}
 .endfor
-	${INSTALL_DATA} ${DATASRC}/trigger.config.defs ${DATADIR}
+	${INSTALL_DATA} ${DATASRC}/trigger.config.defs ${STAGEDIR}${DATADIR}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
