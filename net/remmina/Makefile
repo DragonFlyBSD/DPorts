@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net/remmina/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/remmina/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	remmina
 PORTVERSION=	1.0.0
@@ -96,7 +96,6 @@ post-patch:
 
 post-install:
 	@# localized desktop entry file is not included remmina 1.0.0, install manually
-	${MKDIR} ${PREFIX}/share/applications/
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop ${PREFIX}/share/applications/
 	${CP} -a ${DATADIR}/icons/ ${PREFIX}/share/icons
 	@${CAT} ${PKGMESSAGE}
