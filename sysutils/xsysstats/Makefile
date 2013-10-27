@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/xsysstats/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xsysstats/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	xsysstats
 PORTVERSION=	1.51
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	utilities
 DISTNAME=	${PORTNAME}${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	System information display tool
 
 GNU_CONFIGURE=	yes
