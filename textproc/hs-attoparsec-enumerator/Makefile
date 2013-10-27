@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-attoparsec-enumerator/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-attoparsec-enumerator/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	attoparsec-enumerator
 PORTVERSION=	0.3.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
