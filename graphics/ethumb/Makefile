@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/ethumb/Makefile 329523 2013-10-06 00:23:50Z gblach $
+# $FreeBSD: graphics/ethumb/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	ethumb
 PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
