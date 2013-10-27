@@ -1,4 +1,4 @@
-# $FreeBSD: games/golly/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/golly/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	golly
 PORTVERSION=	2.4
@@ -17,5 +17,4 @@ USE_WX=		2.8+
 DESKTOP_ENTRIES=	"Golly" "${COMMENT}" "${PREFIX}/share/pixmaps/golly.xpm" \
 			"${PREFIX}/bin/golly" "Education;" "true"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
