@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/ecore-imf_evas/Makefile 329513 2013-10-05 22:01:13Z gblach $
+# $FreeBSD: x11/ecore-imf_evas/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	imf_evas
 PORTVERSION=	1.7.8
 CATEGORIES=	x11 enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	ecore-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
