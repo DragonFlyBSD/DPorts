@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-ShowTable/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-ShowTable/Makefile 331696 2013-10-26 14:38:52Z sunpoet $
 
 PORTNAME=	Data-ShowTable
-PORTVERSION=	4.1
+PORTVERSION=	4.5
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,8 +15,4 @@ LICENSE=	GPLv2
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		showtable.1
-MAN3=		Data::ShowTable.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
