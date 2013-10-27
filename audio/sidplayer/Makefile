@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/sidplayer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/sidplayer/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	sidplayer
 PORTVERSION=	4.4
@@ -15,7 +15,6 @@ COMMENT=	C64 SID tune player
 LICENSE=	GPLv2
 
 USE_SDL=	yes
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
 SDLINCLUDEDIR=	SDL
@@ -29,10 +28,10 @@ post-patch:
 		${WRKSRC}/src/main_sdl.cpp
 
 do-install:
-	${INSTALL} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${CP} ${WRKSRC}/PSID\ Demo/* ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/PSID\ Demo/* ${STAGEDIR}${DOCSDIR}
 .endif
 
 post-install:
