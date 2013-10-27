@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/pidgin/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/pidgin/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 #   $MCom: ports/net-im/pidgin/Makefile,v 1.17 2007/09/17 19:53:06 marcus Exp $
 
 PORTNAME=	pidgin
@@ -38,7 +38,6 @@ post-build:
 	    	Makefile ${MAKE_ARGS} pidgin.desktop
 
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/pidgin.desktop \
 	    	${PREFIX}/share/applications/pidgin.desktop
 	${INSTALL_MAN} ${WRKSRC}/doc/pidgin.1 ${MAN1PREFIX}/man/man1
