@@ -1,8 +1,9 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: print/py-fonttools/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/py-fonttools/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	fonttools
 PORTVERSION=	2.4
+PORTREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
