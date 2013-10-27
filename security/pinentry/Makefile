@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: security/pinentry/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pinentry/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.3
@@ -11,8 +11,8 @@ MASTER_SITE_SUBDIR=	pinentry
 MAINTAINER=	makc@FreeBSD.org
 COMMENT?=	Collection of simple PIN or passphrase entry dialogs
 
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
-		ksba.19:${PORTSDIR}/security/libksba
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libksba.so:${PORTSDIR}/security/libksba
 
 CONFLICTS_INSTALL?=	pinentry-[a-z]*
 
@@ -38,7 +38,6 @@ QT4_DESC=	Qt 4 frontend
 PKGNAMESUFFIX=	${PINENTRY_SLAVE}
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQT4}
