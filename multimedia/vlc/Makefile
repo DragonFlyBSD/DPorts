@@ -1,9 +1,9 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 329667 2013-10-07 09:21:13Z koobs $
+# $FreeBSD: multimedia/vlc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	vlc
 DISTVERSION=	2.0.8a
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -768,7 +768,6 @@ pre-install:
 	${TOUCH} -f ${PLIST}
 	${ECHO_CMD} "share/pixmaps/vlc.png" >> ${PLIST}
 	${ECHO_CMD} "share/applications/vlc.desktop" >> ${PLIST}
-	${ECHO_CMD} "@dirrmtry share/applications" >> ${PLIST}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET} prefix=${FAKEDIR}
 	${RM} -f ${FAKEDIR}/share/locale/locale.alias
