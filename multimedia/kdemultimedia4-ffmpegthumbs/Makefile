@@ -1,8 +1,9 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 328168 2013-09-24 16:48:21Z makc $
+# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 331162 2013-10-21 17:32:48Z wg $
 
 PORTNAME=	ffmpegthumbs
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -25,7 +26,7 @@ USE_XZ=		yes
 
 # supported versions: ffmpeg1, ffmpeg-devel
 # corresponding FFMPEG_SUFFIX: '1', '-devel'
-FFMPEG_SUFFIX?=	1
+FFMPEG_SUFFIX?=
 CMAKE_ARGS+=	-DFFMPEG_SUFFIX=${FFMPEG_SUFFIX}
 
 NO_STAGE=	yes
