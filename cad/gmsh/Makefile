@@ -1,8 +1,9 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/gmsh/Makefile 328513 2013-09-27 20:28:16Z stephen $
+# $FreeBSD: cad/gmsh/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gmsh
 PORTVERSION=	2.8.3
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://www.geuz.org/gmsh/src/ \
 		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
