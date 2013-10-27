@@ -1,5 +1,5 @@
 # Created by: Gustau Perez Querol <gustau.perez@gmail.com>
-# $FreeBSD: net/tucan/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/tucan/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	tucan
 PORTVERSION=	0.3.10
@@ -31,10 +31,6 @@ pre-install:
 	${RM} ${WRKSRC}/core/*.orig
 
 do-install:
-	${MKDIR} ${PREFIX}/bin/
-	${MKDIR} ${PREFIX}/share/pixmaps/
-	${MKDIR} ${PREFIX}/man/man1/
-	${MKDIR} ${PREFIX}/share/applications/
 	${MKDIR} ${DATADIR}
 	${MKDIR} ${DATADIR}/core
 	${MKDIR} ${DATADIR}/default_plugins
