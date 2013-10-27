@@ -1,8 +1,7 @@
-# $FreeBSD: editors/libreoffice-zu/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/libreoffice-zu/Makefile 331614 2013-10-25 17:05:50Z jkim $
 
 LO_I18N=	zu
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
 .include <bsd.port.mk>
