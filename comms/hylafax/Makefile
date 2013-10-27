@@ -1,5 +1,5 @@
 # Created by: Julian Stacey <jhs@FreeBSD.org>
-# $FreeBSD: comms/hylafax/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: comms/hylafax/Makefile 331555 2013-10-25 05:09:00Z dinoex $
 
 PORTNAME=	hylafax
 PORTVERSION=	6.0.6
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--with-INSTALL="" \
 		--with-DIR_HTML="${DOCSDIR}"
 CFLAGS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED -Wall -L${LOCALBASE}/lib
 CONFIGURE_ENV=	ENVOPTS="${CFLAGS}"
+MAKE_ARGS+=	OPTIMIZER="" -DOPTIMIZER
 
 PORTDOCS=	RELEASENOTES-4.3.txt RELEASENOTES-4.4.txt RELEASENOTES-6.0.txt
 SUB_FILES=	pkg-message
