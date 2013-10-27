@@ -1,9 +1,9 @@
 # Created by: alepulver
-# $FreeBSD: net-p2p/tribler/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/tribler/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	tribler
 PORTVERSION=	6.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-p2p
 #MASTER_SITES=	http://dl.tribler.org/
 MASTER_SITES=	GENTOO/distfiles \
@@ -104,7 +104,6 @@ post-install:
 	@${MKDIR} ${DESKTOPDIR}
 	(cd ${WRKDIR}/usr/share/applications \
 		&& ${INSTALL_DATA} tribler.desktop ${DESKTOPDIR})
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	(cd ${WRKDIR}/usr/share/pixmaps \
 		&& ${INSTALL_DATA} tribler.xpm ${PREFIX}/share/pixmaps)
 .if ${PORT_OPTIONS:MDOCS}
