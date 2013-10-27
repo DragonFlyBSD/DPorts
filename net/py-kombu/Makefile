@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-kombu/Makefile 331129 2013-10-21 12:44:21Z wg $
+# $FreeBSD: net/py-kombu/Makefile 331702 2013-10-26 15:29:07Z wg $
 
 PORTNAME=	kombu
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ COMMENT=	AMQP messaging framework for Python
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amqp>=1.3:${PORTSDIR}/net/py-amqp \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amqp>=1.3.1:${PORTSDIR}/net/py-amqp \
 		${PYTHON_PKGNAMEPREFIX}anyjson>=0.3.3:${PORTSDIR}/devel/py-anyjson
 
 OPTIONS_DEFINE=	BEANSTALK BOTO MONGODB REDIS SQLALCHEMY ZMQ
