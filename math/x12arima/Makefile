@@ -1,8 +1,9 @@
 # Created by: jh@jameshoward.us
-# $FreeBSD: math/x12arima/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: math/x12arima/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	x12arima
 PORTVERSION=	0.3
+PORTREVISION=	1
 CATEGORIES=	math finance
 MASTER_SITES=	http://www.census.gov/ts/x12a/v03/unix/
 DISTFILES=	omegav03src.tar.gz
