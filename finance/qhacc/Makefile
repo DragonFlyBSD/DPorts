@@ -1,8 +1,9 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: finance/qhacc/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: finance/qhacc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	qhacc
 PORTVERSION=	4.1
+PORTREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
