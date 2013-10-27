@@ -1,8 +1,9 @@
 # Created by: UMENO Takashi
-# $FreeBSD: games/ninix-aya/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ninix-aya/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ninix-aya
 PORTVERSION=	4.4
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	ninix-aya/58500
