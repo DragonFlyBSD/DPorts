@@ -1,9 +1,9 @@
 # Created by: Maho Nakata <maho@FreeBSD.org>
-# $FreeBSD: math/suitesparse/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/suitesparse/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	suitesparse
 PORTVERSION=	4.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 DISTNAME=	SuiteSparse-${PORTVERSION}
