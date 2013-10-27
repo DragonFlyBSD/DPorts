@@ -1,8 +1,8 @@
-# $FreeBSD: net/hs-hostname/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/hs-hostname/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hostname
 PORTVERSION=	1.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	net haskell
 
 MAINTAINER=	haskell@FreeBSD.org
