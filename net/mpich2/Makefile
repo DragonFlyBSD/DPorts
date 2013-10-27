@@ -1,9 +1,9 @@
 # Created by: dbader@ece.unm.edu
-# $FreeBSD: net/mpich2/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/mpich2/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mpich2
 DISTVERSION=	1.3.2p1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	5
 CATEGORIES=	net java parallel
 MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/${DISTVERSION}/
