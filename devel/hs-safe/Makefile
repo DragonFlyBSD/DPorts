@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-safe/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-safe/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	safe
 PORTVERSION=	0.3.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
