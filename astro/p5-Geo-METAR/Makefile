@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: astro/p5-Geo-METAR/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/p5-Geo-METAR/Makefile 331586 2013-10-25 14:04:57Z vanilla $
 
 PORTNAME=	Geo-METAR
 PORTVERSION=	1.15
@@ -13,8 +13,5 @@ COMMENT=	Perl module that processes METAR information from NOAA sources
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		Geo::METAR.3
 
 .include <bsd.port.mk>
