@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: math/rpy/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/rpy/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	rpy
 PORTVERSION=	1.0.3
-PORTREVISION=	28
+PORTREVISION=	29
 CATEGORIES=	math
 MASTER_SITES=	SF
 
