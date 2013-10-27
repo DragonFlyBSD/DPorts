@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-gtk2hs-buildtools/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-gtk2hs-buildtools/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gtk2hs-buildtools
 PORTVERSION=	0.12.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
