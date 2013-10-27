@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: misc/tvbrowser/Makefile 329547 2013-10-06 10:04:41Z lme $
+# $FreeBSD: misc/tvbrowser/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	tvbrowser
 PORTVERSION=	3.3.2
@@ -18,7 +18,6 @@ JAVA_VERSION=	1.6+
 SUB_FILES=	tvbrowser
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications/
 	@${REINPLACE_CMD} -e "s/${PORTNAME}\.sh/${PORTNAME}/" \
 		${WRKSRC}/${PORTNAME}.desktop
 	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop \
