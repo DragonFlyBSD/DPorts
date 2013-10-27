@@ -1,8 +1,8 @@
-# $FreeBSD: x11-toolkits/hs-wxdirect/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/hs-wxdirect/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	wxdirect
 PORTVERSION=	0.90.0.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-toolkits haskell
 
 MAINTAINER=	haskell@FreeBSD.org
