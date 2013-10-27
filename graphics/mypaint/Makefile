@@ -1,8 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mypaint/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/mypaint/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mypaint
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.gna.org/mypaint/ \
 		http://mirror.amdmi3.ru/distfiles/
