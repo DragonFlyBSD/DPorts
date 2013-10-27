@@ -1,8 +1,9 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/veusz/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/veusz/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	veusz
 PORTVERSION=	1.17.1
+PORTREVISION=	1
 CATEGORIES=	science kde
 MASTER_SITES=	http://download.gna.org/veusz/
 
