@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/icat/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/icat/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	icat
 PORTVERSION=	0.4
@@ -25,8 +25,7 @@ PLIST_FILES=	bin/icat
 
 CONFLICTS=	sleuthkit-[0-9]*
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
