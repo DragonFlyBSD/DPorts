@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/exrtools/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/exrtools/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
@@ -23,15 +23,6 @@ USES=		pkgconfig gmake
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PLIST_FILES=	bin/exrblur bin/exrchr bin/exricamtm bin/exrnlm \
-		bin/exrnormalize bin/exrpptm bin/exrstats \
-		bin/exrtopng bin/jpegtoexr bin/pngtoexr bin/ppmtoexr
-
-MAN1=		exrblur.1 exrchr.1 exricamtm.1 exrnlm.1 exrnormalize.1 \
-		exrpptm.1 exrstats.1 exrtools.1 exrtopng.1 jpegtoexr.1 \
-		pngtoexr.1 ppmtoexr.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<values\.h>|<float.h>|' \
 		${WRKSRC}/src/exrnormalize.c \
