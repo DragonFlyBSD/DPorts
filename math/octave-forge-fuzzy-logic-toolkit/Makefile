@@ -1,8 +1,9 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-fuzzy-logic-toolkit/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/octave-forge-fuzzy-logic-toolkit/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	octave-forge-fuzzy-logic-toolkit
 PORTVERSION=	0.4.2
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
