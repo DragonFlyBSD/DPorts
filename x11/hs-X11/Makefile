@@ -1,9 +1,9 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: x11/hs-X11/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/hs-X11/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	X11
 PORTVERSION=	1.6.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 haskell
 
 MAINTAINER=	haskell@FreeBSD.org
