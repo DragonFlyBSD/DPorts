@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/djgame2/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/djgame2/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	djgame2
 PORTVERSION=	3.2.0
@@ -46,7 +46,6 @@ do-install:
 	${MKDIR} ${DATADIR}
 	(cd ${WRKSRC}/Hall/build; ${TAR} -cf - *) | \
 		${TAR}  -xf - -C ${DATADIR}
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/djgame2.desktop ${PREFIX}/share/applications
 	${INSTALL_SCRIPT} ${WRKDIR}/startdjg ${PREFIX}/bin
 
