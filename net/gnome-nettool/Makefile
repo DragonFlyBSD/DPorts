@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: net/gnome-nettool/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/gnome-nettool/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 #   $MCom: ports/net/gnome-nettool/Makefile,v 1.58 2010/09/28 09:03:44 kwm Exp $
 
 PORTNAME=	gnome-nettool
@@ -28,7 +28,6 @@ CFLAGS+=	-DHAVE_SOCKADDR_SA_LEN
 
 NO_STAGE=	yes
 post-install:
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${LN} -sf ${PREFIX}/share/gnome-nettool/pixmaps/gnome-nettool.png \
 		${PREFIX}/share/pixmaps/gnome-nettool.png
 
