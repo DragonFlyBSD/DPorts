@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-libxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-libxml/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	libxml
 PORTVERSION=	0.1.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
