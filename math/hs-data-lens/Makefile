@@ -1,8 +1,8 @@
-# $FreeBSD: math/hs-data-lens/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/hs-data-lens/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	data-lens
 PORTVERSION=	2.10.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
