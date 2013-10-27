@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: dns/rubygem-public_suffix_service/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/rubygem-public_suffix_service/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	public_suffix_service
 PORTVERSION=	0.9.1
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
