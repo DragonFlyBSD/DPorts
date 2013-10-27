@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Scripter/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: www/p5-WWW-Scripter/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
 
 PORTNAME=	WWW-Scripter
 PORTVERSION=	0.030
@@ -18,8 +18,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		WWW::Scripter::Location.3 WWW::Scripter.3 \
-		WWW::Scripter::History.3 WWW::Scripter::WindowGroup.3
 
 .include <bsd.port.mk>
