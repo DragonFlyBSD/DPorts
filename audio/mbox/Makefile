@@ -1,9 +1,9 @@
 # Created by: Vladimir Osintsev <oc@nm.ru>
-# $FreeBSD: audio/mbox/Makefile 328528 2013-09-27 22:31:52Z mva $
+# $FreeBSD: audio/mbox/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mbox
 PORTVERSION=	0.7.2
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mbox.wz.cz/src/ CENKES
 
