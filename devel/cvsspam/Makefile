@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: devel/cvsspam/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvsspam/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	cvsspam
 PORTVERSION=	0.2.12
@@ -19,7 +19,6 @@ PORTDOCS=	COPYING CREDITS TODO cvsspam-doc.html cvsspam-doc.pdf
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -31,19 +30,22 @@ post-patch:
 		${WRKSRC}/collect_diffs.rb
 
 do-install:
-	${MKDIR} ${PREFIX}/libexec/${PORTNAME}
+	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
 .for f in collect_diffs.rb cvsspam.rb record_lastdir.rb
-	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${PREFIX}/libexec/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${f} \
+		${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/cvsspam.conf ${PREFIX}/etc/cvsspam.conf.default
-.if !exists(${PREFIX}/etc/cvsspam.conf)
-	${INSTALL_DATA} ${WRKSRC}/cvsspam.conf ${PREFIX}/etc/cvsspam.conf
+	${INSTALL_DATA} ${WRKSRC}/cvsspam.conf \
+		${STAGEDIR}${PREFIX}/etc/cvsspam.conf.default
+.if !exists(${STAGEDIR}${PREFIX}/etc/cvsspam.conf)
+	${INSTALL_DATA} ${WRKSRC}/cvsspam.conf \
+		${STAGEDIR}${PREFIX}/etc/cvsspam.conf
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
