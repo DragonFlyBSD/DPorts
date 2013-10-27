@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: mail/biffer/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/biffer/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	biffer
 PORTVERSION=	1.0
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.generalconcepts.com/resources/software/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Better mail notification server
 
 RUN_DEPENDS=	xmsg:${PORTSDIR}/x11/xmsg
