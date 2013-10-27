@@ -1,5 +1,5 @@
 # Created by: Adrian Wontroba <aw1@stade.co.uk>
-# $FreeBSD: sysutils/xlogmaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xlogmaster/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	xlogmaster
 PORTVERSION=	1.6.2
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quick & easy monitoring of logfiles and devices
 
 USE_GNOME=	gtk12
