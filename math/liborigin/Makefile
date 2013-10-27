@@ -1,4 +1,4 @@
-# $FreeBSD: math/liborigin/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/liborigin/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	liborigin
 PORTVERSION=	2.0.0
@@ -22,7 +22,6 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOXYGEN
 DOXYGEN_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOXYGEN}
