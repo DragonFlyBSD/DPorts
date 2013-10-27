@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: news/brag/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/brag/Makefile 331656 2013-10-26 07:52:07Z ehaupt $
 
 PORTNAME=	brag
 PORTVERSION=	1.4.1
@@ -13,15 +13,13 @@ COMMENT=	Download and assemble multipart binaries from newsgroups
 RUN_DEPENDS=	uudeview:${PORTSDIR}/converters/uudeview \
 		${TCLSH}:${PORTSDIR}/lang/tcl84
 
-MAN1=		brag.1
-PLIST_FILES=	bin/brag
+PLIST_FILES=	bin/brag man/man1/brag.1.gz
 PORTDOCS=	CHANGES README
 
 TCLSH=		tclsh8.4
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -29,13 +27,13 @@ post-patch:
 		${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
