@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: security/scanssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/scanssh/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	scanssh
 PORTVERSION=	2.1
@@ -7,7 +7,7 @@ PORTREVISION=	8
 CATEGORIES=	security net
 MASTER_SITES=	http://www.monkey.org/~provos/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scans networks for open proxies, SSH, web, and SMTP servers
 
 LIB_DEPENDS=	dnet:${PORTSDIR}/net/libdnet \
