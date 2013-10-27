@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/ree/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/ree/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	ree
 PORTVERSION=	1.3
@@ -17,7 +17,6 @@ ONLY_FOR_ARCHS=	i386 amd64
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-build:
@@ -26,12 +25,13 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/rom-${PORTNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/fontdump ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} \
+		${STAGEDIR}${PREFIX}/bin/rom-${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/fontdump ${STAGEDIR}${PREFIX}/bin
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/readme ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
