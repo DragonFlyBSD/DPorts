@@ -1,4 +1,4 @@
-# $FreeBSD: audio/kid3-kde4/Makefile 329697 2013-10-07 12:26:54Z makc $
+# $FreeBSD: audio/kid3-kde4/Makefile 331367 2013-10-23 10:49:47Z makc $
 
 PORTNAME=	kid3
 PORTVERSION=	2.3
@@ -12,7 +12,6 @@ COMMENT=	MP3/Ogg/FLAC tag editor for KDE
 LICENSE=	GPLv2
 
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
-NO_STAGE=	yes
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 USES=		cmake gettext
 
