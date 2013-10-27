@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/hexalate/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/hexalate/Makefile 331236 2013-10-22 08:03:16Z amdmi3 $
 
 PORTNAME=	hexalate
 PORTVERSION=	1.0.2
@@ -13,15 +13,13 @@ COMMENT=	A color matching game
 
 USE_BZIP2=	yes
 USE_QT4=	corelib gui moc_build qmake_build rcc_build
-WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
-QMAKEFLAGS+=	PREFIX=${PREFIX}
+DESTDIRNAME=	INSTALL_ROOT
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} ${PORTNAME}.pro
+		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX} ${PORTNAME}.pro
 
 .include <bsd.port.mk>
