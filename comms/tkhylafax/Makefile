@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: comms/tkhylafax/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/tkhylafax/Makefile 331384 2013-10-23 13:15:46Z gahr $
 
 PORTNAME=	tkhylafax
 PORTVERSION=	3.2b
@@ -15,10 +15,9 @@ RUN_DEPENDS=	sendfax:${PORTSDIR}/comms/hylafax \
 		gv:${PORTSDIR}/print/gv
 
 USE_GHOSTSCRIPT_RUN=	yes
-USE_TK_RUN=	84
+USES+=		tk:run
 
 WRKSRC=		${WRKDIR}/tkhylafax
-MAN1=		tkhylafax.1
+MAKE_ARGS=	STAGEDIR=${STAGEDIR} PREFIX=${STAGEDIR}${PREFIX} TCLSH=${TCLSH} WISH=${WISH}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
