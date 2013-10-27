@@ -1,8 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-toolkits/mygui/Makefile 330592 2013-10-17 01:24:56Z amdmi3 $
+# $FreeBSD: x11-toolkits/mygui/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mygui
 PORTVERSION=	3.2.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits graphics devel
 MASTER_SITES=	SF/my-gui/MyGUI/MyGUI_${PORTVERSION}
 DISTNAME=	MyGUI_${PORTVERSION}
