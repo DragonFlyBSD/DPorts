@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-shakespeare-text/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/hs-shakespeare-text/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	shakespeare-text
 PORTVERSION=	1.0.0.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
