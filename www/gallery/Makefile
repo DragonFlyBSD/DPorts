@@ -1,5 +1,5 @@
 # Created by: Jamie Hermans <jamie@hermans.ca>
-# $FreeBSD: www/gallery/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/gallery/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	gallery
 PORTVERSION=	1.5.10
@@ -9,7 +9,7 @@ MASTER_SITES=	SF
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANGPACKS}
 DIST_SUBDIR=	gallery
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Slick web based photo album written using PHP
 
 RUN_DEPENDS=	giftopnm:${PORTSDIR}/graphics/netpbm \
