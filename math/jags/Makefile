@@ -1,8 +1,9 @@
 # Created by: Eric van Gyzen <vangyzen@stat.duke.edu>
-# $FreeBSD: math/jags/Makefile 328652 2013-09-29 08:54:39Z bf $
+# $FreeBSD: math/jags/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mcmc-jags
 PORTVERSION=	3.4.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF:1,2,3,4
 MASTER_SITE_SUBDIR=	mcmc-jags/JAGS/${S}.x/Source/:1 \
