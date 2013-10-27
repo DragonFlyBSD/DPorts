@@ -1,9 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 329938 2013-10-09 23:12:05Z madpilot $
+# $FreeBSD: games/corsix-th/Makefile 331152 2013-10-21 16:07:53Z wg $
 
 PORTNAME=	corsixth
 PORTVERSION=	0.21
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	corsix-th
@@ -29,7 +29,7 @@ MOVIES_DESC=	Play in-game movies
 
 MOVIES_CMAKE_ON=	-DWITH_MOVIES=ON
 MOVIES_CMAKE_OFF=	-DWITH_MOVIES=OFF
-MOVIES_LIB_DEPENDS=	libswresample1.so:${PORTSDIR}/multimedia/ffmpeg1
+MOVIES_LIB_DEPENDS=	libswresample.so:${PORTSDIR}/multimedia/ffmpeg
 
 .include <bsd.port.options.mk>
 
