@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-utf8-light/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-utf8-light/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	utf8-light
 PORTVERSION=	0.4.0.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
