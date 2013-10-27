@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-spellcheck/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/geany-plugin-spellcheck/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	geany-plugin-spellcheck
 PORTVERSION=	${GEANY_VER}
@@ -7,8 +7,7 @@ CATEGORIES=	devel
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
 
-LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant
+LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
 .include <bsd.port.mk>
