@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-wbmp/Makefile 330162 2013-10-12 18:05:15Z gblach $
+# $FreeBSD: graphics/evas-loader-wbmp/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	loader-wbmp
 PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	evas-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
