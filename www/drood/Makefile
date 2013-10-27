@@ -1,8 +1,8 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: www/drood/Makefile 330671 2013-10-17 20:35:26Z tabthorpe $
+# $FreeBSD: www/drood/Makefile 331541 2013-10-25 01:33:11Z tabthorpe $
 
 PORTNAME=	drood
-PORTVERSION=	3.9
+PORTVERSION=	3.10
 CATEGORIES=	www
 MASTER_SITES=	http://www.mammothcheese.ca/
 
