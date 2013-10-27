@@ -1,24 +1,21 @@
 # Created by: johans
-# $FreeBSD: deskutils/ljclive/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/ljclive/Makefile 331468 2013-10-24 08:45:30Z johans $
 
-PORTNAME=	clive
+PORTNAME=	ljclive
 PORTVERSION=	0.4.10
+PORTREVISION=	1
 CATEGORIES=	deskutils
-MASTER_SITES=	SF/lj${PORTNAME}/lj${PORTNAME}/${PORTNAME}-${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}
+DISTNAME=	clive-${PORTVERSION}
 
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	A command line client for posting LiveJournal entries
 
-USES=	iconv
-
-MAN1=	clive.1
-
+USES=		iconv
 GNU_CONFIGURE=	yes
 
 CONFLICTS=	*clive-[1-9]*
-LATEST_LINK=	ljclive
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
