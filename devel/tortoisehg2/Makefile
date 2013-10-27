@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tortoisehg2/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/tortoisehg2/Makefile 331268 2013-10-22 13:52:24Z amdmi3 $
 
 PORTNAME=	tortoisehg
 PORTVERSION=	2.9.1
@@ -60,7 +60,6 @@ post-patch:
 
 post-install:
 	${MKDIR} ${PREFIX}/share/tortoisehg
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/contrib/mergetools.rc ${PREFIX}/share/tortoisehg/
 	${INSTALL_DATA} ${WRKSRC}/contrib/tortoisehg.desktop ${PREFIX}/share/applications/
 
