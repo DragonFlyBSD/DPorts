@@ -1,8 +1,9 @@
 # Created by: h2
-# $FreeBSD: biology/seqan/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/seqan/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	seqan
 PORTVERSION=	1.3.1
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://ftp.seqan.de/releases/
 
