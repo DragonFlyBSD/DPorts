@@ -1,12 +1,12 @@
-# $FreeBSD: devel/llvm33/Makefile 330682 2013-10-17 22:03:59Z brooks $
+# $FreeBSD: devel/llvm33/Makefile 331178 2013-10-21 19:42:02Z brooks $
 
 PORTNAME=	llvm
 PORTVERSION=	3.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
-PKGNAMESUFFIX=	33
+PKGNAMESUFFIX=	${LLVM_SUFFIX}
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	Low Level Virtual Machine
@@ -17,7 +17,7 @@ LLVM_SUFFIX=	${PORTVERSION:S/.//g}
 LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
-LATEST_LINK=	${PORTNAME}${LLVM_SUFFIX}
+UNIQUENAME=	${PORTNAME}${LLVM_SUFFIX}
 
 USES=		gmake perl5
 GNU_CONFIGURE=	yes
@@ -75,6 +75,12 @@ COMMANDS=	bugpoint \
 		macho-dump \
 		opt
 FIRST_COMMAND=	${COMMANDS:C/^/XXXX/1:MXXXX*:C/^XXXX//}
+
+STRIP_LIBS=	BugpointPasses.so \
+		LLVMHello.so \
+		libLLVM-${PORTVERSION}.so.0 \
+		libLTO.so \
+		libprofile_rt.so
 
 # Enable AMD r600 backend used by the r600/radeonsi graphics/dri gallium drivers
 CONFIGURE_ARGS+=--enable-experimental-targets=R600
@@ -171,12 +177,14 @@ post-build:
 .endif
 
 post-install:
-	${MV} ${STAGEDIR}${PREFIX}/llvm33/lib/${LIBNAME} \
+	${MV} ${STAGEDIR}${LLVM_PREFIX}/lib/${LIBNAME} \
 	    ${STAGEDIR}${LLVM_PREFIX}/lib/${LIBNAME}.0
 	${LN} -sf ${LIBNAME}.0 ${STAGEDIR}${LLVM_PREFIX}/lib/${LIBNAME}
+	${STRIP_CMD} ${STRIP_LIBS:S|^|${STAGEDIR}${LLVM_PREFIX}/lib/|}
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
 	    ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX}
 .for command in ${COMMANDS:C/^/XXXX/1:NXXXX*}
+	test -e ${STAGEDIR}${LLVM_PREFIX}/bin/${command}
 	${LN} -f ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX} \
 	    ${STAGEDIR}${PREFIX}/bin/${command}${LLVM_SUFFIX}
 .endfor
