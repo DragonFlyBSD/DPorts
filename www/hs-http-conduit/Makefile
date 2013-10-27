@@ -1,7 +1,8 @@
-# $FreeBSD: www/hs-http-conduit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/hs-http-conduit/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	http-conduit
 PORTVERSION=	1.9.3
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
