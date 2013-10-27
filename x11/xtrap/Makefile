@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xtrap/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xtrap/Makefile 331441 2013-10-23 22:45:38Z eadler $
 
 PORTNAME=	xtrap
 PORTVERSION=	1.0.2
@@ -10,14 +10,4 @@ COMMENT=	XTrap sample clients for X
 XORG_CAT=	app
 USE_XORG=	xtrap
 
-MAN1=		xtrap.1 \
-		xtrapchar.1 \
-		xtrapin.1 \
-		xtrapinfo.1 \
-		xtrapout.1 \
-		xtrapproto.1 \
-		xtrapreset.1 \
-		xtrapstats.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
