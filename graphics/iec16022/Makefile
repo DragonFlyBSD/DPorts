@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/iec16022/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: graphics/iec16022/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
 
 PORTNAME=	iec16022
 PORTVERSION=	0.2.4
@@ -19,8 +19,6 @@ USE_LDCONFIG=	yes
 USES=		pkgconfig
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
-
-MAN1=		iec16022.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/iec16022.c \
