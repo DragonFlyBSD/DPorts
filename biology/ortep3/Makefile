@@ -1,9 +1,9 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: biology/ortep3/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/ortep3/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ortep3
 PORTVERSION=	1.0.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	biology
 MASTER_SITES=	http://www.ccl.net/cca/software/SOURCES/FORTRAN/ortep/:Z \
 		ftp://ftp.ornl.gov/pub/ortep/src/:f
