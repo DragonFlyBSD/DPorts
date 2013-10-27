@@ -1,9 +1,9 @@
 # Created by: laddassm
-# $FreeBSD: editors/klat4/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/klat4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	klat4
 PORTVERSION=	0.6.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	editors
 MASTER_SITES=	http://klat.algebraic.ru/
 
