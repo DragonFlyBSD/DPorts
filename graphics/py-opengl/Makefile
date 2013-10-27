@@ -1,9 +1,9 @@
 # Created by: Randall Hopper <aa8vb@ipass.net>
-# $FreeBSD: graphics/py-opengl/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-opengl/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	opengl
 PORTVERSION=	3.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	SF/py${PORTNAME}/PyOpenGL/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
