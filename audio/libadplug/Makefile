@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libadplug/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: audio/libadplug/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
 
 PORTNAME=	libadplug
 PORTVERSION=	2.2.1
@@ -23,7 +23,6 @@ USE_CSTD=	gnu89
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 INFO=		libadplug
-MAN1=		adplugdb.1
 
 post-patch:
 	@${REINPLACE_CMD} -E 's#<(binfile.h|binio.h|binstr.h)>#<libbinio/\1>#' \
