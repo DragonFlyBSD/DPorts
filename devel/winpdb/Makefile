@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: devel/winpdb/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/winpdb/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	winpdb
 PORTVERSION=	1.4.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MASTER_SITE_SUBDIR=	winpdb
