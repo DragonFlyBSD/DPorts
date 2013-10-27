@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: deskutils/myitcrm/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/myitcrm/Makefile 331732 2013-10-26 20:54:28Z beech $
 
 PORTNAME=	myitcrm
 PORTVERSION=	0.2.9.3
@@ -7,7 +7,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	SF/myitcrm/
 DISTNAME=	MyITCRM1-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	beech@FreeBSD.org
 COMMENT=	MyIT CRM is a CRM project designed for Computer Servicing and Repairs
 
 LICENSE=	GPLv3
