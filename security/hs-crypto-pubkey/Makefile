@@ -1,7 +1,8 @@
-# $FreeBSD: security/hs-crypto-pubkey/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/hs-crypto-pubkey/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	crypto-pubkey
 PORTVERSION=	0.1.3
+PORTREVISION=	1
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
