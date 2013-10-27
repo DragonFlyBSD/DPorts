@@ -1,8 +1,9 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: science/brian/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/brian/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	brian
 PORTVERSION=	1.4.1
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP \
 		SF/${PORTNAME}/Brian/${PORTVERSION}
