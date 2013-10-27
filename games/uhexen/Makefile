@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/uhexen/Makefile 329750 2013-10-08 00:15:34Z marino $
+# $FreeBSD: games/uhexen/Makefile 331675 2013-10-26 11:45:17Z danfe $
 
 PORTNAME=	uhexen
 PORTVERSION=	0.601
@@ -10,29 +10,25 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/U-hexen%20version%20${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another port of Hexen, popular game from Raven Software
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	mixer sdl
-MAKE_ENV+=	EXTRA_LIBS=-lm
+MAKE_ENV=	EXTRA_LIBS=-lm
+
+PLIST_FILES=	bin/uhexen
 
 OPTIONS_DEFINE=	MUSIC
 OPTIONS_DEFAULT=	MUSIC
 MUSIC_DESC=	In-game MIDI music support
+MUSIC_RUN_DEPENDS=	${LOCALBASE}/lib/timidity/goemon.cfg:${PORTSDIR}/audio/timidity
 
-PLIST_FILES=	bin/uhexen
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
 BROKEN=		Does not compile on ${ARCH}
 .endif
 
-.if ${PORT_OPTIONS:MMUSIC}
-RUN_DEPENDS=	${LOCALBASE}/lib/timidity/goemon.cfg:${PORTSDIR}/audio/timidity
-.endif
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include "${.CURDIR}/../doom-data/Makefile.include"
 .include <bsd.port.post.mk>
