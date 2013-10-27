@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/critterding/Makefile 328914 2013-10-01 05:46:25Z amdmi3 $
+# $FreeBSD: games/critterding/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	critterding
 DISTVERSION=	beta12
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/sources
 
