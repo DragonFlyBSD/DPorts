@@ -1,9 +1,9 @@
 # Created by: Tony Maher
-# $FreeBSD: math/py-numpy/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-numpy/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	numpy
 PORTVERSION=	1.7.0
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://docs.scipy.org/doc/${DISTNAME:C/\..$/.0/}/:doc \
