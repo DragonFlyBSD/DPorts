@@ -1,7 +1,8 @@
-# $FreeBSD: devel/ruby-korundum/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-korundum/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	korundum
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde ruby
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
