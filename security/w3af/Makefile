@@ -1,9 +1,9 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: security/w3af/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/w3af/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	w3af
 DISTVERSION=	1.0-rc4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security python www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTNAME}%20${DISTVERSION}
