@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/bumprace/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bumprace/Makefile 331234 2013-10-22 08:03:00Z amdmi3 $
 
 PORTNAME=	bumprace
 PORTVERSION=	1.5.3
@@ -12,26 +12,24 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Simple arcade racing game
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl mixer image
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PORTDOCS=	FAQ README
+PLIST_FILES=	bin/${PORTNAME}
+PORTDOCS=	*
+PORTDATA=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBS/ s|-lSDL_[a-z]*|& $${SDL_LIBS}|' ${WRKSRC}/configure
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
