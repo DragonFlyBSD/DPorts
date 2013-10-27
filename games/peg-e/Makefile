@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/peg-e/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/peg-e/Makefile 331233 2013-10-22 08:02:54Z amdmi3 $
 
 PORTNAME=	peg-e
 PORTVERSION=	1.1.2
@@ -13,12 +13,11 @@ COMMENT=	Peg elimination game
 
 USE_BZIP2=	yes
 USE_QT4=	corelib gui moc_build qmake_build rcc_build
-WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
+DESTDIRNAME=	INSTALL_ROOT
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-NO_STAGE=	yes
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS} \
 		PREFIX=${PREFIX} ${PORTNAME}.pro
