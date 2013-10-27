@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-RO/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/py-RO/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	RO
 PORTVERSION=	3.2.0
+PORTREVISION=	1
 CATEGORIES=	astro python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
