@@ -1,8 +1,9 @@
 # Created by: Clement Laforet
-# $FreeBSD: net/haproxy/Makefile 331261 2013-10-22 12:55:01Z demon $
+# $FreeBSD: net/haproxy/Makefile 331619 2013-10-25 18:04:26Z demon $
 
 PORTNAME=	haproxy
 PORTVERSION=	1.4.24
+PORTREVISION=	1
 CATEGORIES=	net www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.4/src/
 
