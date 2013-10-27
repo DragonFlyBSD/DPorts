@@ -1,12 +1,12 @@
 # Created by: Jay Sachs <sachs@cs.williams.edu>
-# $FreeBSD: www/plugger/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/plugger/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	plugger
 PORTVERSION=	5.1.5
 CATEGORIES=	www audio graphics multimedia
 MASTER_SITES=	http://fredrik.hubbe.net/plugger/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multimedia front-end plugin for Mozilla or Opera
 
 USE_XORG=	xext xt sm ice xext x11
