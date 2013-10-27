@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/gonvert/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gonvert/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	gonvert
 PORTVERSION=	0.2.33
@@ -34,13 +34,11 @@ post-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gonvert ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gonvert.desktop ${PREFIX}/share/applications
 	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/gonvert.glade ${DATADIR}
 	@${MKDIR} ${DATADIR}/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.png ${DATADIR}/pixmaps
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	${LN} -sf ${DATADIR}/pixmaps/gonvert.png ${PREFIX}/share/pixmaps
 
 .if ${PORT_OPTIONS:MNLS}
