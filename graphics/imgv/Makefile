@@ -1,8 +1,9 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: graphics/imgv/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/imgv/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	imgv
 PORTVERSION=	3.1.6
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 EXTRACT_SUFX=	-src.tar.gz
