@@ -1,8 +1,9 @@
 # Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-# $FreeBSD: math/ruby-numru_misc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ruby-numru_misc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	numru_misc
 PORTVERSION=	0.1.1
+PORTREVISION=	1
 CATEGORIES=	math ruby
 MASTER_SITES=	http://ruby.gfd-dennou.org/products/numru-misc/release/ \
 		http://dennou-h.gfd-dennou.org/library/ruby/products/numru-misc/release/ \
