@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/hachoir-wx/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hachoir-wx/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hachoir-wx
 PORTVERSION=	0.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 
