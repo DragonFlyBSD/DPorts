@@ -1,22 +1,24 @@
 
-$FreeBSD: x11-wm/jwm/files/patch-example.jwmrc 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: x11-wm/jwm/files/patch-example.jwmrc 331679 2013-10-26 12:43:12Z wg $
 
 --- example.jwmrc.orig
 +++ example.jwmrc
 @@ -5,7 +5,8 @@
     <!-- The root menu, if this is undefined you will not get a menu. -->
     <!-- Additional RootMenu attributes: onroot, labeled, label -->
-    <RootMenu height="32" onroot="123">
--      <Program icon="rxvt.png" label="Terminal">rxvt</Program>
+    <RootMenu height="32" onroot="12">
+-      <Program icon="terminal.png" label="Terminal">xterm</Program>
 +      <Program icon="rxvt.png" label="rxvt">rxvt</Program>
 +      <Program icon="xterm.png" label="xterm">xterm</Program>
  
        <Menu icon="folder.png" label="Applications">
-          <Program icon="audacious.png" label="Audacious">audacious</Program>
-@@ -136,6 +137,9 @@
+          <Program icon="editor.png" label="Dia">dia</Program>
+@@ -150,7 +151,10 @@
+    </PopupStyle>
  
     <IconPath>
-       $HOME/.icons
+-      /usr/share/icons/wm-icons/32x32-gant
++      $HOME/.icons
 +      %%PREFIX%%/share/icons
 +      %%PREFIX%%/share/pixmaps
 +      %%PREFIX%%/lib/X11/icons
