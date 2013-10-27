@@ -1,8 +1,9 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/py-greenlet/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-greenlet/Makefile 331661 2013-10-26 08:46:05Z sunpoet $
 
 PORTNAME=	greenlet
 PORTVERSION=	0.4.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,5 +18,10 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USE_ZIP=	yes
 
-NO_STAGE=	yes
+post-build:
+	@${STRIP_CMD} ${WRKSRC}/greenlet.so
+
+regression-test test: build
+	cd ${WRKSRC}/ && ${PYTHON_CMD} run-tests.py
+
 .include <bsd.port.mk>
