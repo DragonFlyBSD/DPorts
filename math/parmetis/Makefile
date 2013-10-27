@@ -1,9 +1,9 @@
 # Created by: Eoin Lawless (eoin@maths.tcd.ie)
-# $FreeBSD: math/parmetis/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/parmetis/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ParMetis
 PORTVERSION=	4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math parallel
 MASTER_SITES=	http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/%SUBDIR%/
 MASTER_SITE_SUBDIR=	. OLD
