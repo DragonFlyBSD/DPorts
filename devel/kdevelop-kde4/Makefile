@@ -1,8 +1,9 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/kdevelop-kde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDEVELOP_BRANCH}/kdevelop/${DISTVERSION}/src
