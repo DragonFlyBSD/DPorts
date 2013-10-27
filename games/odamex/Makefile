@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/odamex/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/odamex/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	odamex
 PORTVERSION=	0.6.2
@@ -62,7 +62,6 @@ do-install:
 .if ${PORT_OPTIONS:MLAUNCHER}
 	${INSTALL_DATA} ${WRKSRC}/media/icon_odalaunch_*.png ${PREFIX}/share/pixmaps
 .endif
-	${MKDIR} ${PREFIX}/share/applications
 .for f in odamex odasrv
 	${INSTALL_DATA} ${WRKSRC}/installer/arch/${f}.desktop ${PREFIX}/share/applications
 .endfor
