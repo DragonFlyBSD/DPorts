@@ -1,8 +1,9 @@
 # Created by: Janni
-# $FreeBSD: devel/mercator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/mercator/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mercator
 PORTVERSION=	0.3.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/worldforge/Mercator%20%28terrain%20lib%29/${PORTVERSION}
 
