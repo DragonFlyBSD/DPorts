@@ -1,9 +1,9 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: games/bubbros/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bubbros/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	bubbros
 PORTVERSION=	1.6
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	SF/bub-n-bros/bub-n-bros/${PORTVERSION}
 
