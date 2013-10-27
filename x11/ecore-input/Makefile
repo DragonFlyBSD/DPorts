@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11/ecore-input/Makefile 329510 2013-10-05 21:41:26Z gblach $
+# $FreeBSD: x11/ecore-input/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	input
 PORTVERSION=	1.7.8
 CATEGORIES=	x11 enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	ecore-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
