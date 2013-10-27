@@ -1,9 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: science/flounder/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/flounder/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	flounder
 PORTVERSION=	0.40
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	science
 MASTER_SITES=	http://www.enel.ucalgary.ca/People/vigmond/flounder/
 EXTRACT_SUFX=	.tgz
