@@ -1,9 +1,9 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/sylpheed/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail ipv6
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v${PORTVERSION:C/\.[^\.]*$//}/  \
 		CRITICAL
@@ -40,7 +40,6 @@ ONIGURUMA_DESC=	Oniguruma support
 
 OPTIONS_DEFAULT=SSL GTKSPELL
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
@@ -124,15 +123,13 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ChangeLog INSTALL README TODO
-	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/${i}.ja ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${i}.ja ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
-	@${MKDIR} ${PREFIX}/share/pixmaps
-	@${MKDIR} ${PREFIX}/share/applications
-	@${INSTALL_DATA} ${WRKSRC}/sylpheed.png ${PREFIX}/share/pixmaps/
-	@${INSTALL_DATA} ${WRKSRC}/sylpheed.desktop ${PREFIX}/share/applications/
+	@${INSTALL_DATA} ${WRKSRC}/sylpheed.png ${STAGEDIR}${PREFIX}/share/pixmaps/
+	@${INSTALL_DATA} ${WRKSRC}/sylpheed.desktop ${STAGEDIR}${PREFIX}/share/applications/
 
 .include <bsd.port.mk>
