@@ -1,8 +1,8 @@
 # Created by: Thawatchai Piyawat <piyawat@usablelabs.com>
-# $FreeBSD: devel/libthai/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libthai/Makefile 331704 2013-10-26 15:34:55Z danilo $
 
 PORTNAME=	libthai
-PORTVERSION=	0.1.19
+PORTVERSION=	0.1.20
 CATEGORIES=	devel
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
 
@@ -11,24 +11,17 @@ COMMENT=	Thai language support library
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	datrie:${PORTSDIR}/devel/libdatrie
+LIB_DEPENDS=	libdatrie.so:${PORTSDIR}/devel/libdatrie
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=	pathfix pkgconfig
+USES=	gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOXYGEN
+OPTIONS_SUB=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOXYGEN}
-BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
-PORTDOCS=	*
-.else
-CONFIGURE_ARGS=	--disable-doxygen-doc
-.endif
+DOXYGEN_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
+DOXYGEN_CONFIGURE_ENABLE=	doxygen-doc
 
 .include <bsd.port.mk>
