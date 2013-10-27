@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: www/tikiwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tikiwiki/Makefile 331431 2013-10-23 21:20:46Z ak $
 
 PORTNAME=	tikiwiki
 PORTVERSION=	11.0
