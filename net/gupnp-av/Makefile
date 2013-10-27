@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-av/Makefile 330887 2013-10-19 15:33:32Z sunpoet $
+# $FreeBSD: net/gupnp-av/Makefile 331580 2013-10-25 13:36:24Z sunpoet $
 
 PORTNAME=	gupnp-av
 PORTVERSION=	0.12.3
@@ -19,6 +19,7 @@ RUN_DEPENDS=	gupnp>=0.19.0:${PORTSDIR}/net/gupnp
 CONFIGURE_ARGS=	--enable-introspection=yes
 CONFIGURE_ENV=	VAPIGEN=""
 GNU_CONFIGURE=	yes
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 USE_XZ=		yes
