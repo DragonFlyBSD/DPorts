@@ -1,9 +1,9 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: math/sedumi/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/sedumi/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	sedumi
 PORTVERSION=    1.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_LOCAL:S|%SUBDIR%|maho/sedumi|}
 # http://sedumi.mcmaster.ca/
