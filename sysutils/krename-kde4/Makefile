@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/krename-kde4/Makefile 329697 2013-10-07 12:26:54Z makc $
+# $FreeBSD: sysutils/krename-kde4/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	krename
 PORTVERSION=	4.0.9
@@ -18,7 +18,6 @@ USES=		cmake:outsource
 USE_KDE4=	kdeprefix kdelibs automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's,FREETYPE_INCLUDE_DIR,FREETYPE_INCLUDE_DIR_freetype2,' \
 		${WRKSRC}/src/CMakeLists.txt
