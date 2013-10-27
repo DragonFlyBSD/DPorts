@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 329700 2013-10-07 13:07:16Z fluffy $
+# $FreeBSD: net/freerdp/Makefile 331566 2013-10-25 10:58:53Z wg $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -61,15 +61,8 @@ CMAKE_ARGS+=	-DWITH_ALSA=OFF
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG}
-# the newer ffmpeg is prefered
-LIB_DEPENDS+=	avcodec-devel:${PORTSDIR}/multimedia/ffmpeg-devel \
-		avutil-devel:${PORTSDIR}/multimedia/ffmpeg-devel
-AVCODEC_INCLUDE_DIR=	${LOCALBASE}/include/ffmpeg-devel
-AVCODEC_LIBRARY=	${LOCALBASE}/lib/ffmpeg-devel
-AVUTIL_INCLUDE_DIR=	${AVCODEC_INCLUDE_DIR}
-AVUTIL_LIBRARY=		${AVCODEC_LIBRARY}
-CFLAGS+=	-I${AVCODEC_INCLUDE_DIR}
-LDFLAGS+=	-I${AVCODEC_LIBRARY}
+LIB_DEPENDS+=	libavcodec.so:${PORTSDIR}/multimedia/ffmpeg \
+		libavutil.so:${PORTSDIR}/multimedia/ffmpeg
 PLIST_SUB+=	FFMPEG=""
 .else
 CMAKE_ARGS+=	-DWITH_FFMPEG=OFF
