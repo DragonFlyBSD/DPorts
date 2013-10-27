@@ -1,9 +1,9 @@
 # Created by: asami
-# $FreeBSD: x11-toolkits/Xaw3d/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/Xaw3d/Makefile 331595 2013-10-25 15:08:37Z dinoex $
 
 PORTNAME=	Xaw3d
 PORTVERSION=	1.5E
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	ftp://ftp.visi.com/users/hawkeyd/X/ \
 		ftp.slackware.com/pub/slackware/slackware_source/x/xaw3d/
