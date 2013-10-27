@@ -1,16 +1,14 @@
-# $FreeBSD: print/cups-client/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/cups-client/Makefile 331445 2013-10-23 22:57:34Z eadler $
 
 CATEGORIES=	print
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 
 MASTERDIR?=	${.CURDIR}/../cups-base
  
 CUPS_CLIENT=	yes
 
-.if exists(${.CURDIR}/Makefile.local)
 NO_STAGE=	yes
-.include "${.CURDIR}/Makefile.local"
-.endif
 
+.sinclude "${.CURDIR}/Makefile.local"
 .include "${MASTERDIR}/Makefile"
