@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/wbarconf/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/wbarconf/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	wbarconf
 PORTVERSION=	0.7.2.2
@@ -27,7 +27,6 @@ do-install:
 	(cd ${WRKSRC}/wbarbacks/ && ${COPYTREE_SHARE} \* ${DATADIR}/wbarbacks/)
 	${INSTALL_DATA} ${WRKSRC}/messages.pot ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/wbarconf.png ${PREFIX}/share/pixmaps
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/wbarconf.desktop ${PREFIX}/share/applications
 	(cd ${WRKSRC}/locale/ && ${COPYTREE_SHARE} \* ${PREFIX}/share/locale/)
 .if !defined(NOPORTDOCS)
