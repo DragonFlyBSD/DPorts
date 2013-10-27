@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gerbv/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/gerbv/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 
 PORTNAME=	gerbv
 PORTVERSION=	2.6.0
@@ -31,7 +31,6 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s|desktop||g' ${WRKSRC}/Makefile.in
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/desktop/gerbv.desktop \
 		${PREFIX}/share/applications
 	@${MKDIR} ${PREFIX}/share/icons/hicolor/scalable/apps
