@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: print/hs-hscolour/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/hs-hscolour/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hscolour
 PORTVERSION=	1.20.3
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	print haskell
 
