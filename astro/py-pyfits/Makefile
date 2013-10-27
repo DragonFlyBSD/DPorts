@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-pyfits/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/py-pyfits/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pyfits
 PORTVERSION=	2.3
+PORTREVISION=	1
 CATEGORIES=	astro python
 MASTER_SITES=	http://www.stsci.edu/resources/software_hardware/${PORTNAME}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
