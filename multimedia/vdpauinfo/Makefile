@@ -1,8 +1,8 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: multimedia/vdpauinfo/Makefile 330313 2013-10-14 12:20:58Z madpilot $
+# $FreeBSD: multimedia/vdpauinfo/Makefile 331501 2013-10-24 16:49:44Z madpilot $
 
 PORTNAME=	vdpauinfo
-PORTVERSION=	0.0.6
+PORTVERSION=	0.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://people.freedesktop.org/~aplattner/vdpau/
 
