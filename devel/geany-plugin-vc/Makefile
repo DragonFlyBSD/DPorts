@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-vc/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/geany-plugin-vc/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	geany-plugin-vc
 PORTVERSION=	${GEANY_VER}
@@ -9,17 +9,10 @@ COMMENT=	Geany plugin: ${${GEANY_PLUGIN}_DESC}
 
 OPTIONS_DEFINE=	GTKSPELL
 OPTIONS_DEFAULT=	GTKSPELL
+
 GTKSPELL_DESC=	Spell checking support via GtkSpell
+GTKSPELL_LIB_DEPENDS=	libgtkspell.so:${PORTSDIR}/textproc/gtkspell
+GTKSPELL_CONFIGURE_ENABLE=	gtkspell
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../geany-plugins/files/Makefile.common"
-# bsd.port.options.mk is already included
-
-.if ${PORT_OPTIONS:MGTKSPELL}
-LIB_DEPENDS+=	gtkspell:${PORTSDIR}/textproc/gtkspell
-CONFIGURE_ARGS+=	--enable-gtkspell
-.else
-CONFIGURE_ARGS+=	--disable-gtkspell
-.endif
-
 .include <bsd.port.mk>
