@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-toolkits/elementary/Makefile 329521 2013-10-06 00:03:50Z gblach $
+# $FreeBSD: x11-toolkits/elementary/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	elementary
 PORTVERSION=	1.7.8
 CATEGORIES=	x11-toolkits enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
