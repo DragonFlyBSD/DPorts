@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mhwaveedit/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mhwaveedit/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
 
 PORTNAME=	mhwaveedit
 PORTVERSION=	1.4.22
@@ -34,8 +34,6 @@ PLIST_FILES=	bin/mhwaveedit \
 		share/locale/zh_CN/LC_MESSAGES/mhwaveedit.mo \
 		share/applications/mhwaveedit.desktop \
 		share/pixmaps/mhwaveedit.xpm
-
-PLIST_DIRS=	share/applications
 
 MAN1=		mhwaveedit.1
 
