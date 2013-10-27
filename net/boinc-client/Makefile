@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: net/boinc-client/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/boinc-client/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	boinc-client
 PORTVERSION=	7.0.65
@@ -168,7 +168,6 @@ post-install:
 	${MKDIR} ${PREFIX}/share/boinc
 .endif
 .if ${PORT_OPTIONS:MMANAGER}
-	${MKDIR} ${PREFIX}/share/pixmaps
 . for name in 16 32 48
 	${INSTALL_DATA} ${WRKSRC}/clientgui/res/boincmgr.${name}x${name}.png \
 	    ${PREFIX}/share/pixmaps
