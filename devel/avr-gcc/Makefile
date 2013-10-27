@@ -1,9 +1,9 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: devel/avr-gcc/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/avr-gcc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gcc
 PORTVERSION=	4.5.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITES+=	http://people.freebsd.org/~joerg/:local
@@ -19,9 +19,9 @@ COMMENT=	FSF GCC 4.x for Atmel AVR 8-bit RISC cross-development
 
 BUILD_DEPENDS=	avr-as:${PORTSDIR}/devel/avr-binutils \
 		avr-ld:${PORTSDIR}/devel/avr-binutils
-LIB_DEPENDS=	mpfr.4:${PORTSDIR}/math/mpfr \
-		gmp.10:${PORTSDIR}/math/gmp \
-		mpc.2:${PORTSDIR}/math/mpc
+LIB_DEPENDS=	libmpfr.so:${PORTSDIR}/math/mpfr \
+		libgmp.so:${PORTSDIR}/math/gmp \
+		libmpc.so:${PORTSDIR}/math/mpc
 RUN_DEPENDS=	avr-as:${PORTSDIR}/devel/avr-binutils \
 		avr-ld:${PORTSDIR}/devel/avr-binutils
 
