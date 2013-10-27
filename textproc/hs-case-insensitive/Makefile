@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/hs-case-insensitive/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/hs-case-insensitive/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	case-insensitive
 PORTVERSION=	1.0.0.2
+PORTREVISION=	1
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
