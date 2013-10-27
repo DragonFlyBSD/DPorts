@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: sysutils/nepomuk-core/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/nepomuk-core/Makefile 331171 2013-10-21 18:24:52Z wg $
 
 PORTNAME=	nepomuk-core
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Core Nepomuk system libraries and services for KDE
 LIB_DEPENDS=	poppler-qt4:${PORTSDIR}/graphics/poppler-qt4 \
 		tag.1:${PORTSDIR}/audio/taglib \
 		exiv2.12:${PORTSDIR}/graphics/exiv2 \
-		swscale${FFMPEG_SUFFIX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFFIX}
+		swscale:${PORTSDIR}/multimedia/ffmpeg
 
 CONFLICTS_INSTALL=	kde-runtime-4.[7-8].*
 
@@ -26,9 +26,6 @@ USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 
 SUB_FILES=	nepomuk-env.sh
-
-# supported versions: ffmpeg1, ffmpeg-devel
-FFMPEG_SUFFIX?=	1
 
 NO_STAGE=	yes
 post-install:
