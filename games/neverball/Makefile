@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/neverball/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -53,7 +53,6 @@ do-install:
 	@${MKDIR} ${DATADIR}/data
 	@(cd ${WRKSRC}/data ; ${COPYTREE_SHARE} . ${DATADIR}/data/)
 	@(cd ${WRKSRC}/dist ; ${INSTALL_MAN} ${MAN6} ${MAN6PREFIX}/man/man6/)
-	@${MKDIR} ${PREFIX}/share/applications
 .for f in neverball neverputt
 	@${INSTALL_DATA} ${WRKSRC}/dist/${f}.desktop \
 		${PREFIX}/share/applications/
