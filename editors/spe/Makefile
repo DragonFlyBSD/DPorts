@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/spe/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/spe/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	SPE
 PORTVERSION=	0.8.4.h
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors devel python
 MASTER_SITES=	${MASTER_SITE_BERLIOS}
 MASTER_SITE_SUBDIR=	python
