@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/bunny/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/bunny/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	bunny
 PORTVERSION=	0.93
@@ -22,7 +22,6 @@ ONLY_FOR_ARCHS_REASON=	Fails to compile: invokes i386 asm
 
 OPTIONS_DEFINE=DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -30,12 +29,12 @@ post-patch:
 
 do-install:
 .for f in ${PLIST_FILES}
-	${INSTALL_PROGRAM} ${WRKSRC}/${f:C/bin\///} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f:C/bin\///} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
