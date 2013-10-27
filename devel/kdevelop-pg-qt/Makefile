@@ -1,9 +1,9 @@
 # Created by: Douglas Carmichael <dcarmich@dcarmichael.net>
-# $FreeBSD: devel/kdevelop-pg-qt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/kdevelop-pg-qt/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdevelop
 PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION}/src
