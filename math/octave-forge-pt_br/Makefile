@@ -1,9 +1,9 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-pt_br/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/octave-forge-pt_br/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	octave-forge-pt_br
 PORTVERSION=	1.0.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
