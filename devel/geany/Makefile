@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: devel/geany/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/geany/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	geany
 PORTVERSION=	1.23.1
@@ -14,9 +14,8 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -24,9 +23,6 @@ OPTIONS_DEFINE=	VTE NLS DOCS
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 VTE_DESC=	Embedded virtual terminal
 
-MAN1=		geany.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}

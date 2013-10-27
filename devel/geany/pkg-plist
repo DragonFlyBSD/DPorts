@@ -45,6 +45,7 @@ lib/geany/saveactions.so
 lib/geany/splitwindow.la
 lib/geany/splitwindow.so
 libdata/pkgconfig/geany.pc
+man/man1/geany.1.gz
 share/applications/geany.desktop
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/COPYING
@@ -277,7 +278,6 @@ share/icons/hicolor/scalable/apps/geany.svg
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/html/images
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/html
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrm lib/geany
 @dirrm include/geany/tagmanager
 @dirrm include/geany/scintilla
