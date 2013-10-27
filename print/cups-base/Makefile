@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups-base/Makefile 328212 2013-09-24 22:53:11Z madpilot $
+# $FreeBSD: print/cups-base/Makefile 331575 2013-10-25 13:31:18Z sunpoet $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
@@ -9,7 +9,7 @@ CATEGORIES=	print
 MASTER_SITES=	EASYSW/${PORTNAME}/${DISTVERSION}
 PKGNAMESUFFIX=	${CUPS_SUFFIX}${PKGNAMESUFFIX2}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Common UNIX Printing System: ${COMMENT2}
 
 LICENSE=	GPLv2
@@ -19,7 +19,7 @@ CONFLICTS=	LPRng-[0-9]*
 UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES+=		gmake
 GNU_CONFIGURE=	yes
 CFLAGS+=	${PTHREAD_CFLAGS}
 CPPFLAGS+=	-I${LOCALBASE}/include
