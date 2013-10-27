@@ -1,12 +1,12 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: news/slnr/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/slnr/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	slnr
 PORTVERSION=	2.3.0
 CATEGORIES=	news
 MASTER_SITES=	# disappeared
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simplistic reader for SOUP (HDPF) mail and news packets
 
 RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip
