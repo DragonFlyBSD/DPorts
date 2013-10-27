@@ -1,9 +1,9 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: science/isaac-cfd/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/isaac-cfd/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	isaac
 PORTVERSION=	4.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	science
 MASTER_SITES=	SF/${PORTNAME}-cfd/${PORTNAME}-cfd/ISAAC%20Version%20${PORTVERSION}
 DISTFILES=	${PORTNAME}src.4_2${EXTRACT_SUFX} ${PORTNAME}mk.4_2${EXTRACT_SUFX}
