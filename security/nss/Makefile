@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: security/nss/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/nss/Makefile 331529 2013-10-24 20:10:51Z flo $
 
 PORTNAME=	nss
-PORTVERSION=	3.15.1
+PORTVERSION=	3.15.2
 #DISTVERSIONSUFFIX=	.with.ckbi.1.93
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
@@ -46,7 +46,6 @@ BINS=		${DIST}/${OPSYS}${OSREL}_OPT.OBJ
 BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 check regression-test test:
@@ -73,20 +72,20 @@ post-patch:
 		${XARGS} ${REINPLACE_CMD} -e 's|#! */bin/bash|#!${SH}|'
 
 do-install:
-	${MKDIR} ${PREFIX}/include/nss/nss ${PREFIX}/lib/nss
+	${MKDIR} ${STAGEDIR}${PREFIX}/include/nss/nss ${STAGEDIR}${PREFIX}/lib/nss
 	${FIND} ${DIST}/public/nss -type l \
-	    	-exec ${INSTALL_DATA} {} ${PREFIX}/include/nss/nss \;
+	    	-exec ${INSTALL_DATA} {} ${STAGEDIR}${PREFIX}/include/nss/nss \;
 	${INSTALL_DATA} ${BINS}/lib/*.so.1 \
-		${PREFIX}/lib/nss
+		${STAGEDIR}${PREFIX}/lib/nss
 	${INSTALL_DATA} ${BINS}/lib/libcrmf.a \
-	    	${PREFIX}/lib/nss
+	    	${STAGEDIR}${PREFIX}/lib/nss
 .for bin in ${INSTALL_BINS}
 	${INSTALL_PROGRAM} ${BINS}/bin/${bin} \
-		${PREFIX}/bin
+		${STAGEDIR}${PREFIX}/bin
 .endfor
 	cd ${BINS}/lib && \
-	    	${TAR} -cf - *.so | ${TAR} --unlink -C ${PREFIX}/lib/nss -xf -
-	${INSTALL_SCRIPT} ${WRKDIR}/nss-config ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/nss.pc ${PREFIX}/libdata/pkgconfig
+	    	${TAR} -cf - *.so | ${TAR} --unlink -C ${STAGEDIR}${PREFIX}/lib/nss -xf -
+	${INSTALL_SCRIPT} ${WRKDIR}/nss-config ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/nss.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.post.mk>
