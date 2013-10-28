@@ -1,8 +1,9 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: devel/py-tables/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-tables/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	tables
 PORTVERSION=	3.0.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	SF/py${PORTNAME:tl}/py${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
