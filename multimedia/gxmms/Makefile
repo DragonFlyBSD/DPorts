@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: multimedia/gxmms/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gxmms/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	gxmms
 PORTVERSION=	0.3.0
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple GNOME panel applet for controlling XMMS
 
 USE_GNOME=	gnomehack gnomepanel gnomeprefix intlhack libgnomeui
