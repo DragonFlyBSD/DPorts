@@ -1,9 +1,9 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: deskutils/plasma-applet-fancytasks/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/plasma-applet-fancytasks/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	fancytasks
 PORTVERSION=	1.1.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils
 MASTER_SITES=	http://kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	plasma-applet-
