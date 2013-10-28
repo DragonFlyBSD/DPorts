@@ -1,9 +1,9 @@
 # Created by: Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: comms/gmfsk/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/gmfsk/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gmfsk
 PORTVERSION=	0.6
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	comms audio hamradio
 MASTER_SITES=	http://gmfsk.connect.fi/ \
 		${MASTER_SITE_LOCAL}
