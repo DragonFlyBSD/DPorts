@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/countrycodes/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/countrycodes/Makefile 331588 2013-10-25 14:33:17Z ehaupt $
 
 PORTNAME=	countrycodes
 PORTVERSION=	1.0.5
@@ -15,21 +15,19 @@ LICENSE=	GPLv2
 BUILD_WRKSRC=	${WRKSRC}/src
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-PLIST_FILES=	bin/iso3166
+PLIST_FILES=	bin/iso3166 man/man1/iso3166.1.gz
 PORTDOCS=	README
-MAN1=		iso3166.1
 
-MAKE_ARGS=	prefix="${PREFIX}" CC="${CC}" CCOPTS="${CFLAGS}" WARNINGS=""
+MAKE_ARGS=	prefix="${STAGEDIR}${PREFIX}" CC="${CC}" CCOPTS="${CFLAGS}" WARNINGS=""
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
