@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Server/Makefile 322556 2013-07-09 12:30:01Z culot $
+# $FreeBSD: www/p5-CGI-Application-Server/Makefile 329187 2013-10-03 13:34:43Z danilo $
 
 PORTNAME=	CGI-Application-Server
 PORTVERSION=	0.063
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	danilogondolfo@gmail.com
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Simple HTTP server for developing with CGI::Application
 
 LICENSE=	ART10 GPLv1
@@ -26,9 +26,8 @@ TEST_DEPENDS=	p5-CGI-Application>0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-Test-HTTP-Server-Simple>0:${PORTSDIR}/www/p5-Test-HTTP-Server-Simple \
 		p5-Test-WWW-Mechanize>0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize
 
-PERL_CONFIGURE=	yes
-
-MAN3=	CGI::Application::Server.3
+USES=		perl5
+USE_PERL5=	configure
 
 .include <bsd.port.pre.mk>
 
