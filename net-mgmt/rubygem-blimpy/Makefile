@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net-mgmt/rubygem-blimpy/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/rubygem-blimpy/Makefile 331717 2013-10-26 16:25:23Z sunpoet $
 
 PORTNAME=	blimpy
 PORTVERSION=	0.6.7
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Tool for managing a fleet of machines in the cloud
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-fog>=0:${PORTSDIR}/devel/rubygem-fog \
 		rubygem-minitar>=0:${PORTSDIR}/archivers/rubygem-minitar \
@@ -19,5 +21,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/blimpy
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
