@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: print/cups-smb-backend/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/cups-smb-backend/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	cups-smb-backend
 PORTVERSION=	1.0
@@ -8,7 +8,7 @@ CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CUPS backend for printing to Windows servers
 
 RUN_DEPENDS=	smbspool:${PORTSDIR}/net/${SAMBA_PORT} \
