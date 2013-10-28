@@ -1,9 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: x11-toolkits/py-pyqwt/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-pyqwt/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pyqwt
 PORTVERSION=	5.2.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}5/PyQwt-${PORTVERSION}
