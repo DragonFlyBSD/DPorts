@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: japanese/kana-no-quiz/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/kana-no-quiz/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kana-no-quiz
 DISTVERSION=	1.9
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_BERLIOS}
 MASTER_SITE_SUBDIR=	${PORTNAME}

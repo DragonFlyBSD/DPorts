@@ -1,4 +1,4 @@
-@comment $FreeBSD: japanese/kana-no-quiz/pkg-plist 300896 2012-07-14 13:54:48Z beat $
+@comment $FreeBSD: japanese/kana-no-quiz/pkg-plist 331272 2013-10-22 13:58:55Z amdmi3 $
 bin/kana-no-quiz
 %%PYTHON_SITELIBDIR%%/kananoquiz/__init__.py
 %%PYTHON_SITELIBDIR%%/kananoquiz/__init__.pyc
@@ -792,4 +792,3 @@ share/applications/kana-no-quiz.desktop
 @dirrm %%DATADIR%%/sound/kana_male
 @dirrm %%DATADIR%%/sound
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
