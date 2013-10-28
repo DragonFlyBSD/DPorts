@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-session/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/rox-session/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	rox-session
 PORTVERSION=	0.40.0
@@ -59,7 +59,6 @@ do-install:
 		ROX-Session.xml RunROX SetupPanel Styles browser images \
 		*.py *.pyc *.pyo ${DATADIR}
 .if ${PORT_OPTIONS:MGDM}
-	@${MKDIR} ${PREFIX}/share/applications
 	@${INSTALL_DATA} ${WRKDIR}/rox.desktop ${PREFIX}/share/applications
 .endif
 .if ${PORT_OPTIONS:MDOCS}
