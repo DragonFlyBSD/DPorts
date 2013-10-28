@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-yard/Makefile 331004 2013-10-20 11:48:40Z sunpoet $
+# $FreeBSD: textproc/rubygem-yard/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	yard
 PORTVERSION=	0.8.7.2
@@ -11,7 +11,6 @@ COMMENT=	Documentation generation tool for Ruby
 
 LICENSE=	MIT
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
