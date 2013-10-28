@@ -1,9 +1,9 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: science/py-h5py/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/py-h5py/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	h5py
 PORTVERSION=	1.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
