@@ -1,9 +1,9 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: graphics/impressive/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/impressive/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	impressive
 PORTVERSION=	0.10.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Impressive/${PORTVERSION}/
 DISTNAME=	Impressive-${PORTVERSION}
