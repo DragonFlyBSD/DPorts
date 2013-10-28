@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-guard-rspec/Makefile 330993 2013-10-20 08:34:45Z sunpoet $
+# $FreeBSD: sysutils/rubygem-guard-rspec/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	guard-rspec
 PORTVERSION=	4.0.3
@@ -14,7 +14,6 @@ LICENSE=	MIT
 RUN_DEPENDS=	rubygem-guard>=2.1.1:${PORTSDIR}/sysutils/rubygem-guard \
 		rubygem-rspec>=2.14:${PORTSDIR}/devel/rubygem-rspec
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
