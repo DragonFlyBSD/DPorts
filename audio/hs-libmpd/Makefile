@@ -1,8 +1,8 @@
-# $FreeBSD: audio/hs-libmpd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/hs-libmpd/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	libmpd
 PORTVERSION=	0.8.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio haskell
 
 MAINTAINER=	haskell@FreeBSD.org
