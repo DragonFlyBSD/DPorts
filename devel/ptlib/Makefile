@@ -1,83 +1,134 @@
 # Created by: Roger Hardiman <roger@freebsd.org>
-# $FreeBSD: devel/ptlib/Makefile 325945 2013-09-02 06:45:47Z bapt $
+# $FreeBSD: devel/ptlib/Makefile 327751 2013-09-20 21:50:39Z kwm $
 
 PORTNAME=	ptlib
-PORTVERSION=	2.4.4
-PORTREVISION=	2
+PORTVERSION=	2.10.10
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/ptlib/2.4
-DISTNAME=	ptlib-${PORTVERSION}
+MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Cross platform C++ library, used by OpenH323
+COMMENT=	Cross platform C++ library, used by OPAL
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+LICENSE=	MPL
 
-CONFLICTS=	pwlib-1.* ptlib-2.6.*
+LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
+CONFLICTS=	pwlib-1.*
+
+USE_XZ=		yes
 USES=		bison gmake pkgconfig
+USE_AUTOTOOLS=	autoconf:env automake:env
 GNU_CONFIGURE=	yes
-WANT_SDL=	yes
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_LATEST_LINK=	yes
-
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} >= 800059
-EXTRA_PATCHES=	${FILESDIR}/extra-src_ptlib_unix_socket.cxx
-.endif
-
-CONFIGURE_ENV=	\
-		OPENSSL_CFLAGS="-I/usr/include" \
-		OPENSSL_LIBS="-lssl"
-CONFIGURE_ARGS+=	\
-		--disable-atomicity \
-		--with-expat-dir="${LOCALBASE}" \
+CONFIGURE_ARGS+=--enable-audio \
+		--enable-ipv6 \
+		--enable-exceptions \
 		--enable-oss \
-		--enable-alsa=no \
-		--disable-odbc
+		--enable-plugins
+
+CONFIGURE_ARGS+=--disable-lua \
+		--disable-sasl
+
+# --with-expat-dir="${LOCALBASE}"
+CONFIGURE_ENV+=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
+		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl"
+
+OPTIONS_DEFINE=	BSDVIDEO DEBUG ODBC ALSA JABBER V4L SDL LDAP PULSEAUDIO
+OPTIONS_DEFAULT=BSDVIDEO SDL V4L JABBER
+
+BSDVIDEO_DESC=	BSD video support
+DEBUG_DESC=	Install debug library
+
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
+PLIST_SUB+=	PORTVERSION=${PORTVERSION} \
+		PVERSION_MAJOR=${PVERSION_MAJOR} \
+		PVERSION_MINOR=${PVERSION_MINOR}
+
+PVERSION_MAJOR=	${PORTVERSION:C/.[0-9]+.[0-9]+.//}
+PVERSION_MINOR=	${PORTVERSION:C/.[0-9]+$//g}
+
+.if ${PORT_OPTIONS:MDEBUG}
+ALL_TARGET=	optshared debugshared
+PLIST_SUB+=	DEBUG=""
+.else
 ALL_TARGET=	optshared
-
-# if explicitely asked for, depend upon it
-.if defined(WITH_SDL)
-USE_SDL+=	sdl
-CONFIGURE_ENV+=	SDL_CFLAGS="`sdl-config --cflags`" \
-		SDL_LIBS="`sdl-config --libs`"
-MAKE_ENV+=	SDL_CFLAGS="`sdl-config --cflags`" \
-		SDL_LIBS="`sdl-config --libs`"
+PLIST_SUB+=	DEBUG="@comment "
 .endif
 
-# if explicitely disabled, do not depend upon it
-.if defined(WITHOUT_SDL)
-CONFIGURE_ARGS+=	--disable-sdl
-.endif
-
-# if nobody cares, use it if it is installed already
-.if !defined(WITHOUT_SDL) && !defined(WITH_SDL)
-.if ${HAVE_SDL:Msdl}
-USE_SDL+=	sdl
-CONFIGURE_ENV+=	SDL_CFLAGS="`sdl-config --cflags`" \
-		SDL_LIBS="`sdl-config --libs`"
-MAKE_ENV+=	SDL_CFLAGS="`sdl-config --cflags`" \
-		SDL_LIBS="`sdl-config --libs`"
+.if ${PORT_OPTIONS:MPULSEAUDIO}
+LIB_DEPENDS+=	libpulse.so:${PORTSDIR}/audio/pulseaudio
+CONFIGURE_ARGS+=--enable-pulse
 .else
-CONFIGURE_ARGS+=	--disable-sdl
-.endif
-.endif
-
-.if !defined(WITHOUT_PLUGINS)
-CONFIGURE_ARGS+=	--enable-plugins
+CONFIGURE_ARGS+=--disable-pulse
 .endif
 
-#disable OpenLDAP support in PWLIB
-.if defined(WITHOUT_LDAP)
-CONFIGURE_ARGS+=	--disable-openldap
+.if ${PORT_OPTIONS:MJABBER}
+CONFIGURE_ARGS+=--enable-jabber
+PLLIB_VIDEO=1
+.endif
+
+.if ${PORT_OPTIONS:MODBC}
+LIB_DEPENDS+=	libodbc.so:${PORTSDIR}/databases/unixODBC
+CONFIGURE_ARGS+=--enable-odbc
 .else
+CONFIGURE_ARGS+=--disable-odbc
+.endif
+
+.if ${PORT_OPTIONS:MALSA}
+LIB_DEPENDS+=	libasound.so:${PORTSDIR}/audio/alsa-lib
+CONFIGURE_ARGS+=--enable-alsa
+PLIST_SUB+=	ALSA=""
+.else
+CONFIGURE_ARGS+=--disable-alsa
+PLIST_SUB+=	ALSA="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MBSDVIDEO}
+CONFIGURE_ARGS+=--enable-bsdvideo
+PLIST_SUB+=	BSDVIDEO=""
+PTLIB_VIDEO=1
+.else
+CONFIGURE_ARGS+=--disable-bsdvideo
+PLIST_SUB+=	BSDVIDEO="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MV4L}
+BUILD_DEPENDS+=	v4l_compat>=0:${PORTSDIR}/multimedia/v4l_compat
+LIB_DEPENDS+=	libv4l2.so:${PORTSDIR}/multimedia/libv4l
+CONFIGURE_ARGS+=--enable-v4l --enable-v4l2
+PLIST_SUB+=	V4L=""
+PTLIB_VIDEO=1
+.else
+CONFIGURE_ARGS+=--disable-v4l --disable-v4l2
+PLIST_SUB+=	V4L="@comment "
+.endif
+
+.if defined(PTLIB_VIDEO)
+CONFIGURE_ARGS+=--enable-video --enable-vidfile
+PLIST_SUB+=	VIDEODIR=""
+.else
+CONFIGURE_ARGS+=--disable-video --disable-vidfile
+PLIST_SUB+=	VIDEODIR="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MSDL}
+USE_SDL+=	sdl
+CONFIGURE_ARGS+=--enable-sdl
+.else
+CONFIGURE_ARGS+=--disable-sdl
+.endif
+
+.if ${PORT_OPTIONS:MLDAP}
 USE_OPENLDAP=	yes
-CONFIGURE_ARGS+=	--enable-openldap --with-ldap-dir="${LOCALBASE}"
+CONFIGURE_ARGS+=--enable-openldap
+.else
+CONFIGURE_ARGS+=--disable-openldap
 .endif
 
 # ONLY FOR THE BRAVE!
@@ -100,40 +151,26 @@ PLIST_SUB+=	AVC1394="@comment "
 #
 ##enable libdc1394
 #.if defined(WITH_DC1394)
-#LIB_DEPENDS+=	dc1394_control.13:${PORTSDIR}/devel/libdc1394
+#LIB_DEPENDS+=	dc1394.2[0-9]:${PORTSDIR}/multimedia/libdc1394
 #CONFIGURE_ARGS+=	--enable-dc
 #PLIST_SUB+=	DC1394=""
 #.else
 CONFIGURE_ARGS+=	--disable-dc
-PLIST_SUB+=	DC1394="@comment "
+#PLIST_SUB+=	DC1394="@comment "
 #.endif
 
-.if (${ARCH} == "x86_64") || (${ARCH} == "ia64") || (${ARCH} == "sparc64")
-CFLAGS+=	-fPIC
-.endif
-
-.if (${ARCH} == "i386") || (${ARCH} == "ia64") || (${ARCH} == "x86_64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
-CONFIGURE_ARGS+=--enable-bsdvideo
-PLIST_SUB+=	BSDVIDEO=""
-.else
-CONFIGURE_ARGS+=--disable-bsdvideo
-PLIST_SUB+=	BSDVIDEO="@comment "
-.endif
-
-.if defined(WITH_V4L) || ( exists(${LOCALBASE}/include/linux/videodev.h) && \
-	!defined(WITHOUT_V4L) )
-CONFIGURE_ARGS+=--enable-v4l
-PLIST_SUB+=	V4L=""
-BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_compat
-.else
-CONFIGURE_ARGS+=--disable-v4l
-PLIST_SUB+=	V4L="@comment "
-.endif
-
 post-patch:
-.if ${ARCH} == sparc64 && ${OSVERSION} <= 700003
-	@${REINPLACE_CMD} -e 's|P_PTHREADS_XPG6|0|' \
-		${WRKSRC}/src/ptlib/unix/tlibthrd.cxx
+	@${REINPLACE_CMD} -e 's/RTF_WASCLONED/0x20000/' ${WRKSRC}/src/ptlib/unix/socket.cxx
+
+pre-configure:
+	cd ${WRKSRC}/plugins/ && autoreconf -fi
+
+post-install:
+	${LN} -sf libpt.so.${PORTVERSION} ${PREFIX}/lib/libpt.so.${PVERSION_MAJOR}
+	${LN} -sf libpt.so.${PORTVERSION} ${PREFIX}/lib/libpt.so.${PVERSION_MINOR}
+.if ${PORT_OPTIONS:MDEBUG}
+	${LN} -sf libpt_d.so.${PORTVERSION} ${PREFIX}/lib/libpt_d.so.${PVERSION_MAJOR}
+	${LN} -sf libpt_d.so.${PORTVERSION} ${PREFIX}/lib/libpt_d.so.${PVERSION_MINOR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
