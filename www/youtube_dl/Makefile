@@ -1,4 +1,4 @@
-# $FreeBSD: www/youtube_dl/Makefile 328444 2013-09-27 09:10:59Z araujo $
+# $FreeBSD: www/youtube_dl/Makefile 331568 2013-10-25 11:21:12Z wg $
 
 PORTNAME=	youtube_dl
 PORTVERSION=	2013.09.24.2
@@ -43,12 +43,7 @@ PLIST_FILES+=	etc/bash_completion.d/youtube-dl.sh
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG}
-# allow either multimedia/ffmpeg or multimedia/ffmpeg-devel
-. if exists(${LOCALBASE}/include/libavcodec/vda.h)
-RUN_DEPENDS+=	ffprobe:${PORTSDIR}/multimedia/ffmpeg-devel
-. else
 RUN_DEPENDS+=	ffprobe:${PORTSDIR}/multimedia/ffmpeg
-. endif
 .endif
 
 post-extract:
