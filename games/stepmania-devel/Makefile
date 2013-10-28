@@ -1,5 +1,5 @@
 # Created by: Brad Allen <braddo@tranceaddict.net>
-# $FreeBSD: games/stepmania-devel/Makefile 329747 2013-10-07 23:40:23Z marino $
+# $FreeBSD: games/stepmania-devel/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	stepmania
 PORTVERSION=	5.0.a3
@@ -70,7 +70,6 @@ post-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/stepmania.sh ${PREFIX}/bin/stepmania
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/stepmania.desktop ${PREFIX}/share/applications
 	@${MKDIR} ${PREFIX}/share/icons/hicolor/scalable/apps
 	cd ${WRKSRC}/icons/hicolor/scalable/apps && ${INSTALL_DATA} \
