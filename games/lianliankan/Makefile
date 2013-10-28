@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/lianliankan/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/lianliankan/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	lianliankan
 DISTVERSION=	2.3beta1
@@ -43,7 +43,6 @@ post-patch:
 .endif
 
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${FILESDIR}/lianliankan.desktop ${PREFIX}/share/applications
 
 .include <bsd.port.mk>
