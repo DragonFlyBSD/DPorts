@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: security/gringotts/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/gringotts/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
 
 PORTNAME=	gringotts
 PORTVERSION=	1.2.10
@@ -30,7 +30,6 @@ post-patch:
 		'/^install-exec-am:/s|install-exec-local||' ${WRKSRC}/src/Makefile.in
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${PREFIX}/share/applications
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
