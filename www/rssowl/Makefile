@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: www/rssowl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rssowl/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	rssowl
 PORTVERSION=	1.2.3
@@ -57,7 +57,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rssowl ${PREFIX}/bin
 	${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/rssowl.jar ${DATADIR}
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/img/32x32.png ${PREFIX}/share/pixmaps/rssowl.png
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
