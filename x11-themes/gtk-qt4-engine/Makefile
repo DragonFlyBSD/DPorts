@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kris@pcbsd.org>
-# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	gtk-qt-engine
 PORTVERSION=	1.1
@@ -20,7 +20,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 OPTIONS_DEFINE=	BONOBO
 BONOBO_DESC=	Better support for Bonobo (GNOME) framework
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBONOBO}
