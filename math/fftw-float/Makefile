@@ -1,7 +1,7 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: math/fftw-float/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/fftw-float/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
-PORTREVISION=	2
+PORTREVISION=	3
 
 COMMENT=	Fast C routines (Single Percision)
 
