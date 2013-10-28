@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: x11-themes/kde4-style-polyester/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/kde4-style-polyester/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	polyester
 PORTVERSION=	2.0.0
@@ -13,8 +13,7 @@ COMMENT=	KDE style and window decoration
 
 USE_BZIP2=	yes
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4
-USE_QT4=	corelib qmake_build moc_build rcc_build uic_build
+USE_QT4=	qmake_build moc_build rcc_build uic_build
 USES=		cmake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
