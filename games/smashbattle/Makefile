@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/smashbattle/Makefile 328210 2013-09-24 22:49:33Z nemysis $
+# $FreeBSD: games/smashbattle/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	smashbattle
 PORTVERSION=	110224
@@ -43,7 +43,6 @@ do-install:
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} "gfx music sfx stage" ${DATADIR})
 	${INSTALL_PROGRAM} ${WRKSRC}/battle ${DATADIR}/${PORTNAME}
 	${LN} -sf ${DATADIR}/gfx/SB.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
-	@${MKDIR} ${PREFIX}/share/applications/
 #	${INSTALL_DATA} ${WRKSRC}/linux/*.desktop ${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/linux/*.desktop ${DESKTOPDIR}
 
