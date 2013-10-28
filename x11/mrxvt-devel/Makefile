@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: x11/mrxvt-devel/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/mrxvt-devel/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	mrxvt-devel
 PORTVERSION=	0.5.4
@@ -123,7 +123,6 @@ CONFIGURE_ARGS+=	--with-tab-radius=${TAB_RADIUS:M[0-9]*}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/mrxvt ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/pixmaps
 	@for pixmap in ${WRKSRC}/share/pixmaps/* ; \
 	do ${INSTALL_DATA} $$pixmap ${PREFIX}/share/pixmaps/ ; \
 	done
