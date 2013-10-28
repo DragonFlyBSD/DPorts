@@ -1,9 +1,9 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/cocaine-core/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cocaine-core/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	cocaine-core
 PORTVERSION=	0.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GH GHC
 
