@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/hs-webkit/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	webkit
 PORTVERSION=	0.12.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
