@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: irc/konversation-kde4/Makefile 329697 2013-10-07 12:26:54Z makc $
+# $FreeBSD: irc/konversation-kde4/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	konversation
 PORTVERSION=	1.4
@@ -18,5 +18,4 @@ USES=		cmake
 USE_KDE4=	kdeprefix pimlibs automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
