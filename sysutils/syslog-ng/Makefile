@@ -1,5 +1,5 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng/Makefile 330086 2013-10-11 15:55:42Z olgeni $
+# $FreeBSD: sysutils/syslog-ng/Makefile 331537 2013-10-25 00:43:12Z cy $
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.4.3
@@ -77,7 +77,7 @@ CONFIGURE_ARGS+=	--disable-tcp-wrapper
 .endif
 
 .if ${PORT_OPTIONS:MSPOOF}
-BUILD_DEPENDS=		${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
+BUILD_DEPENDS+=		${LIBNET_CONFIG}:${PORTSDIR}/net/libnet
 LIBNET_CONFIG?=		${LOCALBASE}/bin/libnet11-config
 CONFIGURE_ARGS+=	--enable-spoof-source --with-libnet=${LOCALBASE}/bin
 CFLAGS+=		`${LIBNET_CONFIG} --cflags` -I${LOCALBASE}/include
