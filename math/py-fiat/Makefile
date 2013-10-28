@@ -1,8 +1,9 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-fiat/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-fiat/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	fiat
 PORTVERSION=	${MMVERSION}.0
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	https://launchpad.net/${PORTNAME}/${MMVERSION}.x/release-${MMVERSION}/+download/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
