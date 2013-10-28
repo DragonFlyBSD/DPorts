@@ -1,8 +1,8 @@
-# $FreeBSD: x11-toolkits/hs-gtksourceview2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/hs-gtksourceview2/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gtksourceview2
 PORTVERSION=	0.12.3.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-toolkits haskell
 
 MAINTAINER=	haskell@FreeBSD.org
