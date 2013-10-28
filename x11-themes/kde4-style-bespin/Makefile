@@ -1,8 +1,9 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: x11-themes/kde4-style-bespin/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/kde4-style-bespin/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	bespin
 PORTVERSION=	201303202227
+PORTREVISION=	1
 CATEGORIES=	x11-themes kde
 MASTER_SITES=	http://bsd.e-shell.net/local/
 DISTFILES=	cloudcity-${PORTVERSION}.tar.gz
