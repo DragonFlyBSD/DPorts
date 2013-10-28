@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/py-netCDF4/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/py-netCDF4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	netCDF4
 PORTVERSION=	1.0.5
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	GOOGLE_CODE
 PROJECTHOST=	netcdf4-python
