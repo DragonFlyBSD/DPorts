@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: biology/gperiodic/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/gperiodic/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
 #    $MCom: ports/biology/gperiodic/Makefile,v 1.1 2006/09/29 23:42:13 ahze Exp $
 
 PORTNAME=	gperiodic
@@ -32,10 +32,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gperiodic ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gperiodic.desktop \
 		${PREFIX}/share/applications
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/gperiodic.png \
 		${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/gperiodic-crystal.png \
