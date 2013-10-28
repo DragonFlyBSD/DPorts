@@ -1,18 +1,22 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/kicad-devel/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: cad/kicad-devel/Makefile 331476 2013-10-24 11:34:55Z mr $
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
 PORTREVISION=	3
 CATEGORIES=		cad
-DIST_SUBDIR=		${PORTNAME}
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=     mr
 PKGNAMESUFFIX=  -devel
+DIST_SUBDIR=		${PORTNAME}
 # Additional patches: http://svn.openmoko.org/trunk/gta02-core/kicad-patches/
 
 MAINTAINER=		mr@FreeBSD.org
 COMMENT=		Schematic and PCB editing software
+
+BUILD_DEPENDS=	wxgtk2-2.8-config:${PORTSDIR}/x11-toolkits/wxgtk28 \
+		bzr:${PORTSDIR}/devel/bzr \
+		${LOCALBASE}/lib/${PYTHON_VERSION}/site-packages/bzrlib/plugins/bzrtools/bzrtools.py:${PORTSDIR}/devel/bzrtools
 
 LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
 
@@ -27,7 +31,7 @@ USE_GL=		yes
 USE_WX=		2.8
 WX_UNICODE=	yes
 USE_GNOME=	atk	# Required by libwx_gtk2_aui-2.8.so
-#TODO	Add support for Python.
+USE_PYTHON=     yes
 
 #OPTIONS=	GTA2CORE "Apply additional Openmoko GTA2_CORE patches" off
 
@@ -39,12 +43,12 @@ EXTRAS2RM=	linux-non_unicode linux wings3d LINUX.README	\
 		contrib_makefiles.txt running_kicad_under_W98.txt
 USES=		cmake gettext
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
+		-DCMAKE_BUILD_TYPE=Release \
 		-DKICAD_TESTING_VERSION=ON \
 		-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DwxWidgets_CONFIG_EXECUTABLE="${WX_CONFIG}"
 
-
-.include <bsd.port.pre.mk>
+NO_STAGE=	yes
 
 #.if !defined(WITHOUT_GTA2CORE)
 #PATCH_STRIP=	-p1
@@ -54,12 +58,14 @@ CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
 #.endif
 
 .if exists(${LOCALBASE}/bin/konqueror)
-RUN_DEPENDS+=	konqueror:${PORTSDIR}/x11/kdebase3
+RUN_DEPENDS+=	konqueror:${PORTSDIR}/x11/kde4-baseapps
 .else
 RUN_DEPENDS+=	xpdf:${PORTSDIR}/graphics/xpdf
 .endif
 
 .if defined(BOOTSTRAP)
+BOOST_RELEASE=	     1.54.0
+BOOST_VERS=         ${BOOST_RELEASE:S|.|_|g}
 BZR_SRC_REV!=        bzr revno lp:kicad
 BZR_LIB_REV!=        bzr revno lp:~kicad-lib-committers/kicad/library
 BZR_DOC_REV!=        bzr revno lp:~kicad-developers/kicad/doc
@@ -81,17 +87,28 @@ BZR_DOC_REV!=        bzr revno lp:~kicad-developers/kicad/doc
 FETCH_DEPENDS+= svn:${PORTSDIR}/devel/subversion
 FETCH_DEPENDS+= bzr:${PORTSDIR}/devel/bzr
 
+showversions:
+	@${ECHO} "BOOST_RELEASE: ${BOOST_RELEASE}"
+	@${ECHO} "BOOST_VERS: ${BOOST_VERS}"
+	@${ECHO} "BZR_SRC_REV: ${BZR_SRC_REV}"
+	@${ECHO} "BZR_LIB_REV: ${BZR_LIB_REV}"
+	@${ECHO} "BZR_DOC_REV: ${BZR_DOC_REV}"
+
 do-fetch:
 	${MKDIR} ${WRKDIR}
-	${ECHO} ${WRKSRC} 
+	${ECHO} ${WRKSRC}
 	bzr export -r ${BZR_SRC_REV} ${WRKSRC} lp:kicad
 	bzr export -r ${BZR_LIB_REV} ${WRKDIR}/kicad-library lp:~kicad-lib-committers/kicad/library
 	bzr export -r ${BZR_DOC_REV} ${WRKDIR}/kicad-doc lp:~kicad-developers/kicad/doc
 	svn export \
 		http://svn.openmoko.org/trunk/gta02-core/kicad-patches ${WRKDIR}/kicad-patches
+	fetch -o ${WRKDIR}/${DISTNAME}/boost_${BOOST_VERS}.tar.bz2 \
+		http://downloads.sourceforge.net/project/boost/boost/${BOOST_RELEASE}/boost_${BOOST_VERS}.tar.bz2
 	cd ${WRKDIR}; tar cvfy ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}.tar.bz2 \
 		${DISTNAME} kicad-library kicad-doc kicad-patches
-	echo "BZR_SRC_REV=  ${BZR_SRC_REV}" > ${MASTERDIR}/Makefile.bzr_rev
+	echo "BOOST_RELEASE=  ${BOOST_RELEASE}" > ${MASTERDIR}/Makefile.bzr_rev
+	echo "BOOST_VERS=  ${BOOST_VERS}"   >> ${MASTERDIR}/Makefile.bzr_rev
+	echo "BZR_SRC_REV=  ${BZR_SRC_REV}" >> ${MASTERDIR}/Makefile.bzr_rev
 	echo "BZR_LIB_REV=  ${BZR_LIB_REV}" >> ${MASTERDIR}/Makefile.bzr_rev
 	echo "BZR_DOC_REV=  ${BZR_DOC_REV}" >> ${MASTERDIR}/Makefile.bzr_rev
 .endif
@@ -136,8 +153,8 @@ PLIST_FILE_LIST=	bin/freeroute.jnlp \
 			bin/eeschema \
 			bin/gerbview \
 			bin/kicad \
-			bin/minizip \
 			bin/pcbnew \
+			bin/pl_editor \
 			bin/bitmap2component \
 			bin/pcb_calculator \
 			share/mimelnk/application/x-kicad-schematic.desktop \
@@ -153,11 +170,10 @@ PLIST_FILE_LIST=	bin/freeroute.jnlp \
 			share/mime/packages/kicad.xml \
 			share/applications/kicad.desktop \
 			share/applications/eeschema.desktop
-			
-PLIST_DIR_LIST=		lib/kicad	
 
-PLIST_SHAREDDIR_LIST=	share/applications \
-			share/mimelnk/application \
+PLIST_DIR_LIST=		lib/kicad
+
+PLIST_SHAREDDIR_LIST=	share/mimelnk/application \
 			share/mimelnk
 
 build-plist:
@@ -179,4 +195,4 @@ build-plist:
 			-e 's|${DOCSDIR}|%%DOCSDIR%%|' \
 			-e 's|^|@dirrm |' >> ${PLIST}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
