@@ -1,9 +1,9 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/elmer-umfpack/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/elmer-umfpack/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	umfpack
 PORTVERSION=	4.4
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	2
 CATEGORIES=	math
 MASTER_SITES=	http://garr.dl.sourceforge.net/sourceforge/elmerfem/
