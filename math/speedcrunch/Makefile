@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: math/speedcrunch/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/speedcrunch/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	speedcrunch
 DISTVERSION=	0.10.1
@@ -8,19 +8,17 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	A desktop calculator for power users
+COMMENT=	Desktop calculator for power users
 
 USE_QT4=	qmake_build moc_build rcc_build uic_build gui xml
 USES=		cmake
 CMAKE_SOURCE_PATH=	src
-
 
 LRELEASE_CMD=	${LOCALBASE}/bin/lrelease-qt4
 LRELEASE_ARGS=	-compress -silent
 
 OPTIONS_DEFINE=	NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
