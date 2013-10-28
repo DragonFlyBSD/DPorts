@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/subtitleeditor/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/subtitleeditor/Makefile 331573 2013-10-25 13:07:04Z ehaupt $
 
 PORTNAME=	subtitleeditor
 PORTVERSION=	0.40.0
@@ -29,11 +29,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	DESKTOPDIR="${DESKTOPDIR:S,^${PREFIX}/,,}"
-MAN1=		subtitleeditor.1
 
 OPTIONS_DEFINE=	NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
