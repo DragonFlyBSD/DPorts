@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	xfce4-generic-slider
 PORTVERSION=	0.0.20100827
@@ -18,7 +18,6 @@ USE_XFCE=	panel libutil libgui
 CFLAGS+=	`pkg-config --cflags libxfce4panel-1.0 libxfcegui4-1.0`
 LDFLAGS+=	`pkg-config --libs libxfce4panel-1.0 libxfcegui4-1.0`
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		"s|@PLUGINDIR@|${PREFIX}/lib/xfce4/xfce4/panel-plugins|" \
@@ -31,11 +30,11 @@ do-build:
 		-o ${WRKSRC}/xfce4-generic-slider-plugin
 
 do-install:
-	${MKDIR} ${PREFIX}/share/xfce4/panel-plugins
-	${MKDIR} ${PREFIX}/lib/xfce4/xfce4/panel-plugins
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/xfce4/panel-plugins
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/xfce4/xfce4/panel-plugins
 	${INSTALL_DATA} ${WRKSRC}/generic-slider.desktop \
-		${PREFIX}/share/xfce4/panel-plugins
+		${STAGEDIR}${PREFIX}/share/xfce4/panel-plugins
 	${INSTALL_PROGRAM} ${WRKSRC}/xfce4-generic-slider-plugin \
-		${PREFIX}/lib/xfce4/xfce4/panel-plugins
+		${STAGEDIR}${PREFIX}/lib/xfce4/xfce4/panel-plugins
 
 .include <bsd.port.mk>
