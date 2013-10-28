@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: x11-themes/audacious-skins/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/audacious-skins/Makefile 331418 2013-10-23 19:36:17Z ehaupt $
 
 PORTNAME=	audacious-skins
 PORTVERSION=	0.4
@@ -16,9 +16,8 @@ NO_BUILD=	yes
 
 DATADIR=	${PREFIX}/share/audacious
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/Skins
-	${INSTALL_DATA} ${WRKSRC}/Skins/*/*.wsz ${DATADIR}/Skins
+	${MKDIR} ${STAGEDIR}${DATADIR}/Skins
+	${INSTALL_DATA} ${WRKSRC}/Skins/*/*.wsz ${STAGEDIR}${DATADIR}/Skins
 
 .include <bsd.port.mk>
