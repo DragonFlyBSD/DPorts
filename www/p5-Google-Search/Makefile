@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-Google-Search/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: www/p5-Google-Search/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
 
 PORTNAME=	Google-Search
 PORTVERSION=	0.028
@@ -21,7 +21,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Google::Search.3 Google::Search::Result.3
 
 .include <bsd.port.mk>
