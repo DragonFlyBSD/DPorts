@@ -1,9 +1,5 @@
-# New ports collection makefile for: psptoolchain-pspsdk-stage2
-# Date created:        7 August 2009
-# Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
-#
-# $FreeBSD: ports/devel/psptoolchain-pspsdk-stage2/Makefile,v 1.3 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Tassilo Philipp <tphilipp@potion-studios.com>
+# $FreeBSD: devel/psptoolchain-pspsdk-stage2/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PKGNAMESUFFIX=		-stage2
 
@@ -22,4 +18,5 @@ CONFIGURE_ARGS=		--prefix=${PREFIX} --with-pspdev="${LOCALBASE}"
 PLIST=			${.CURDIR}/pkg-plist
 MASTERDIR=		${.CURDIR}/../psptoolchain-pspsdk-stage1
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
