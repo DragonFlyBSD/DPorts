@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/diary-hercules/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/diary-hercules/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hercules
 PORTVERSION=	0.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}/development%20branch/${PORTVERSION}
 PKGNAMEPREFIX=	diary-
