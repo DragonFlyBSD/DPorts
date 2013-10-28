@@ -1,9 +1,9 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-libc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/msp430-libc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	libc
 PORTVERSION=	1.0.${LIBCVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	SF/mspgcc/${PKGNAMEPREFIX}${PORTNAME}
 PKGNAMEPREFIX=	${LIBCTARGET}-
