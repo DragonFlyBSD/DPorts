@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: x11-wm/wmanager/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/wmanager/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	wmanager
 PORTVERSION=	0.2.1
@@ -8,7 +8,7 @@ CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL}
 DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 window manager selector
 
 LIB_DEPENDS=	fltk.1:${PORTSDIR}/x11-toolkits/fltk
