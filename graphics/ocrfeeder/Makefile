@@ -1,9 +1,9 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/ocrfeeder/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/ocrfeeder/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ocrfeeder
 PORTVERSION=	0.7.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/ocrfeeder/${PORTVERSION:R}
