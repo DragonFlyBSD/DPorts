@@ -1,8 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/greybird-theme/Makefile 330526 2013-10-16 18:20:29Z olivierd $
+# $FreeBSD: x11-themes/greybird-theme/Makefile 331055 2013-10-20 19:00:14Z olivierd $
 
 PORTNAME=	greybird
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	x11-themes xfce
 MASTER_SITES=	GH GHC
 PKGNAMESUFFIX=	-theme
@@ -35,7 +36,7 @@ post-extract:
 
 post-patch:
 # Remove .orig file
-	@${RM} ${WRKSRC}/gtk-3.0/*.orig
+	@${RM} ${WRKSRC}/gtk-?.0/*.orig
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/Greybird
