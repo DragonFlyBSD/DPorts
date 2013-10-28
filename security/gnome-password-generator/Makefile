@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: security/gnome-password-generator/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/gnome-password-generator/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
 
 PORTNAME=	gnome-password-generator
 PORTVERSION=	1.6
@@ -21,7 +21,6 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/*.png ${PREFIX}/share/pixmaps
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/*.desktop ${PREFIX}/share/applications
 
 .include <bsd.port.mk>
