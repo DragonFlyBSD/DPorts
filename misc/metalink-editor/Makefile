@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: misc/metalink-editor/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/metalink-editor/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	metalink
 PORTVERSION=	1.2.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}s/Metalink%20Editor/${PORTVERSION}
 PKGNAMESUFFIX?=	-editor
