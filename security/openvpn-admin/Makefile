@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: security/openvpn-admin/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/openvpn-admin/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
 
 PORTNAME=	openvpn-admin
 PORTVERSION=	1.9.4
@@ -31,7 +31,6 @@ post-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/openvpn-admin ${PREFIX}/sbin
-	${MKDIR} ${PREFIX}/share/applications || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/openvpn-admin.desktop ${PREFIX}/share/applications/
 	${MKDIR} ${PREFIX}/lib/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/src/openvpn-admin.exe ${PREFIX}/lib/${PORTNAME}
