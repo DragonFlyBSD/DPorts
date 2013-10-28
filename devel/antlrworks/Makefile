@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: devel/antlrworks/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/antlrworks/Makefile 331268 2013-10-22 13:52:24Z amdmi3 $
 
 PORTNAME=	antlrworks
 PORTVERSION=	1.4.2
@@ -42,7 +42,6 @@ do-install:
 	@${ECHO_MSG} -n ">> Installing antlrworks script as ${PREFIX}/bin/antlrworks..."
 	@${INSTALL_SCRIPT} ${WRKDIR}/antlrworks.sh ${PREFIX}/bin/antlrworks
 	@${ECHO_MSG} " [ DONE ]"
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	@${INSTALL_DATA} ${WRKDIR}/icons/app_64x64.png ${PREFIX}/share/pixmaps/antlrworks.png
 
 .include <bsd.port.mk>
