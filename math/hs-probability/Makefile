@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-probability/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/hs-probability/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	probability
 PORTVERSION=	0.2.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
