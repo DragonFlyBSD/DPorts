@@ -1,9 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: math/ruby-gnuplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ruby-gnuplot/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gnuplot
 PORTVERSION=	0.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math ruby
 MASTER_SITES=	SF/r${PORTNAME}/OldFiles
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
