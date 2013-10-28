@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/audacious-dumb/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/audacious-dumb/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	audacious-dumb
 PORTVERSION=	0.82
@@ -16,7 +16,6 @@ RUN_DEPENDS=	audacious:${PORTSDIR}/multimedia/audacious
 BUILD_DEPENDS=	audacious:${PORTSDIR}/multimedia/audacious \
 		${LOCALBASE}/lib/libdumb.a:${PORTSDIR}/audio/dumb
 
-NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_LDCONFIG=	yes
 
