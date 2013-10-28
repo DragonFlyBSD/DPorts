@@ -1,9 +1,9 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: games/py-mnemosyne/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/py-mnemosyne/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	mnemosyne
 PORTVERSION=	2.2a
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games python
 MASTER_SITES=	SF/mnemosyne-proj/${PORTNAME}/${PORTNAME}-2.2
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +23,6 @@ PYDISTUTILS_PKGNAME=	Mnemosyne
 NO_STAGE=	yes
 post-install:
 	@cd ${WRKSRC}/mo && ${COPYTREE_SHARE} . ${PREFIX}/share/locale
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${PREFIX}/share/applications
 	@${MKDIR} ${PREFIX}/share/icons
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/${PORTNAME}.png ${PREFIX}/share/icons
