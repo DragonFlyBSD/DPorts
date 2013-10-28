@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	zathura-pdf-poppler
 PORTVERSION=	0.2.3
@@ -18,8 +18,7 @@ USES=		desktop-file-utils gmake pkgconfig
 
 PLIST_FILES=	lib/zathura/pdf.so \
 		share/applications/zathura-pdf-poppler.desktop
-PLIST_DIRSTRY=	lib/zathura \
-		share/applications
+PLIST_DIRSTRY=	lib/zathura
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
