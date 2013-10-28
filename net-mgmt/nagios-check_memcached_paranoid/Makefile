@@ -1,13 +1,7 @@
-# New ports collection makefile for:	nagios-check_memcached_paranoid
-# Date created:		29 Apr 2010
-# Whom:			Jun Kuriyama <kuriyama@FreeBSD.org>
-#
-# $FreeBSD: ports/net-mgmt/nagios-check_memcached_paranoid/Makefile,v 1.9 2012/11/17 06:00:33 svnexp Exp $
-#
+# $FreeBSD: net-mgmt/nagios-check_memcached_paranoid/Makefile 329752 2013-10-08 02:45:22Z kuriyama $
 
 PORTNAME=	check_memcached_paranoid
-PORTVERSION=	0.20091016
-PORTREVISION=	1
+PORTVERSION=	0.20131004
 CATEGORIES=	net-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -15,7 +9,7 @@ DISTFILES=	# none
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Nagios plugin for checking memcached
 
-LIB_DEPENDS=	memcache:${PORTSDIR}/databases/libmemcache
+LIB_DEPENDS=	memcached:${PORTSDIR}/databases/libmemcached
 BUILD_DEPENDS=	nagios-plugins>0:${PLUGINS} \
 		${EXTRA_DEPENDS} \
 		${NONEXISTENT}:${PLUGINS}:build
@@ -38,15 +32,16 @@ do-extract:
 do-build:
 	cd ${WRKSRC}; \
 	NDIR=$$(${NDIR_CMD}); \
-	${CC} ${CFLAGS} -DLOCALEDIR=\"${LOCALBASE}/share/locale\" \
+	${CC} ${CFLAGS} -DLOCALEDIR=\"${LOCALBASE}/share/locale\" -D__need_getopt \
 		-I$${NDIR} -I$${NDIR}/plugins -I$${NDIR}/gl -I$${NDIR}/lib -I${LOCALBASE}/include \
 		-o ${PORTNAME} \
 		$${NDIR}/plugins/netutils.o $${NDIR}/plugins/utils.o \
 		$${NDIR}/lib/utils_base.o $${NDIR}/gl/getopt.o $${NDIR}/gl/getopt1.o \
 		$${NDIR}/gl/sha1.o \
-		-L${LOCALBASE}/lib -lintl -lmemcache ${FILE}
+		-L${LOCALBASE}/lib -lintl -lmemcached ${FILE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/libexec/nagios
+	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/nagios
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/libexec/nagios
 
 .include <bsd.port.mk>
