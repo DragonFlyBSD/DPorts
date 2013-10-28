@@ -1,9 +1,12 @@
-# $FreeBSD: sysutils/beadm-devel/Makefile 327980 2013-09-23 11:25:00Z bdrewery $
+# $FreeBSD: sysutils/beadm-devel/Makefile 331722 2013-10-26 17:04:06Z bdrewery $
 
 PORTNAME=	beadm
-PORTVERSION=	0.8.99.20130730
+PORTVERSION=	1.0.99.20131026
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
+MASTER_SITES=	GH \
+		LOCAL/bdrewery/${PORTNAME}/ \
+		http://mirror.shatow.net/freebsd/${PORTNAME}/
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Solaris-like utility to manage Boot Environments on ZFS
@@ -12,7 +15,7 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	vermaden
-GH_COMMIT=	d7d7cd3
+GH_COMMIT=	09ffd9c
 GH_TAGNAME=	${GH_COMMIT}
 
 NO_BUILD=	YES
