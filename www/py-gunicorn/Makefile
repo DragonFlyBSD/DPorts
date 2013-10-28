@@ -1,8 +1,8 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: www/py-gunicorn/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-gunicorn/Makefile 331674 2013-10-26 10:34:48Z koobs $
 
 PORTNAME=	gunicorn
-PORTVERSION=	17.5
+PORTVERSION=	18.0
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -16,9 +16,10 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:${PORTSDIR}/devel/py-pytest
 USE_GITHUB=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 GH_ACCOUNT=	benoitc
-GH_COMMIT=	cf0527f
+GH_COMMIT=	24fe380
 
 OPTIONS_DEFINE=	EVENTLET GEVENT TORNADO SETPROC TESTS
 EVENTLET_DESC=	Add Eventlet async worker
@@ -56,10 +57,4 @@ RUN_DEPENDS+=	${TEST_DEPENDS}
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
