@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: math/geogebra-i18n/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/geogebra-i18n/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	geogebra
 PORTVERSION=	4.2.47.0
@@ -42,7 +42,6 @@ do-install:
 	${FIND} . ${FIND_JARS} | ${XARGS} -0 -J % ${INSTALL_DATA} % ${DATADIR} && \
 	${COPYTREE_SHARE} icons ${PREFIX}/share && \
 	${MKDIR} ${PREFIX}/share/mime/packages && \
-	${MKDIR} ${PREFIX}/share/applications && \
 	${INSTALL_DATA} ${WRKSRC}/geogebra.xml ${PREFIX}/share/mime/packages && \
 	${INSTALL_DATA} ${WRKSRC}/geogebra.desktop ${DESKTOPDIR}
 
