@@ -1,9 +1,9 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: math/py-basemap/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-basemap/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	basemap
 PORTVERSION=	0.9.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math python
 MASTER_SITES=	SF/matplotlib/matplotlib-toolkits/${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
