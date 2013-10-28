@@ -1,8 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: misc/libmetalink/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/libmetalink/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	libmetalink
 PORTVERSION=	0.0.3
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://launchpad.net/libmetalink/trunk/${PORTVERSION}/+download/
 
