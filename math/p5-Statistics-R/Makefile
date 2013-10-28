@@ -1,9 +1,9 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-R/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-R/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	Statistics-R
 PORTVERSION=	0.31
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FANGLY
