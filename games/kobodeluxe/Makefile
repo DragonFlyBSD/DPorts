@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: games/kobodeluxe/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/kobodeluxe/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	kobodeluxe
 PORTVERSION=	0.5.1
@@ -60,7 +60,6 @@ post-install:
 	${CHGRP} games ${PREFIX}/bin/kobodl
 	${CHMOD} g+s ${PREFIX}/bin/kobodl
 	${INSTALL} -d -o root -g games -m 775 ${SCOREDIR}
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/icons/Ubuntu/kobodeluxe.desktop \
 		${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/icons/Ubuntu/kobo-icon.xpm \
