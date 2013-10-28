@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/schism/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/schism/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	schism
 PORTVERSION=	20100101
@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 ONLY_FOR_ARCHS=	i386 amd64
 
 USE_SDL=	yes
-NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
@@ -29,7 +28,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 PORTSCOUT=	skipv:20100202,20101127,20101128,20110101,20120105
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/schismtracker ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/schismtracker ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.pre.mk>
 
