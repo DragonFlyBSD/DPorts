@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: polish/gnugadu2/Makefile 327761 2013-09-20 22:34:42Z bapt $
+# $FreeBSD: polish/gnugadu2/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
@@ -152,7 +152,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' ${WRKSRC}/src/plugins/GUI/gtkimhtml.c
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gg2.desktop ${PREFIX}/share/applications/
 
 # vim: set ts=8 sw=8:
