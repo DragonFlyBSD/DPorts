@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 330784 2013-10-18 23:00:00Z bapt $
+# $FreeBSD: audio/gogglesmm/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
@@ -56,9 +56,6 @@ NLS_LDFLAGS=		-lintl
 NLS_CONFIGURE_OFF=	--disable-nls
 
 NEWREMOTE_CONFIGURE_OFF=	--without-new-remote
-
-pre-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
