@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-dropbox-sdk/Makefile 330078 2013-10-11 14:09:19Z sunpoet $
+# $FreeBSD: net/rubygem-dropbox-sdk/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	dropbox-sdk
 PORTVERSION=	1.6.2
@@ -13,7 +13,6 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-json>=0:${PORTSDIR}/devel/rubygem-json
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
