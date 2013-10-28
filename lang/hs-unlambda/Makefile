@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: lang/hs-unlambda/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/hs-unlambda/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	unlambda
 PORTVERSION=	0.1.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang haskell
 
 MAINTAINER=	haskell@FreeBSD.org
