@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: benchmarks/sysbench/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: benchmarks/sysbench/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	sysbench
 PORTVERSION=	0.4.12
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	benchmarks databases
 MASTER_SITES=	SF
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Modular, cross-platform, and multi-threaded benchmark tool
 
 LICENSE=	GPLv2
