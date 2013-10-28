@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: security/pinentry-gtk2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pinentry-gtk2/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	pinentry
 PORTREVISION=	0
@@ -14,5 +14,4 @@ PORT_OPTIONS+=	GTK2
 
 MASTERDIR=	${.CURDIR}/../pinentry
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
