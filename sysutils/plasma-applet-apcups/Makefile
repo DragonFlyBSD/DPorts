@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/plasma-applet-apcups/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/plasma-applet-apcups/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	apcups
 PORTVERSION=	0.2.1
@@ -16,5 +16,4 @@ USES=		cmake
 USE_KDE4=	automoc4 kdeprefix kdelibs
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
