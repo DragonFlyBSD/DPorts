@@ -1,10 +1,10 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-sdl/Makefile 329588 2013-10-06 15:16:25Z gblach $
+# $FreeBSD: graphics/evas-engine-sdl/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	engine-sdl
 PORTVERSION=	1.7.8
 CATEGORIES=	graphics enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 PKGNAMEPREFIX=	evas-
 DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
