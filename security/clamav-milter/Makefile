@@ -1,14 +1,13 @@
 # Created by: bz
-# $FreeBSD: security/clamav-milter/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/clamav-milter/Makefile 331427 2013-10-23 21:03:11Z garga $
 
 PKGNAMESUFFIX=	-milter
 
-WITH_MILTER=	yes
+OPTIONS_SET+=	MILTER
 
 MASTERDIR=	${.CURDIR}/../clamav
-LATEST_LINK=	clamav-milter
+PKGNAMESUFFIX=	-milter
 
 CONFLICTS=	clamav-[0-9]* clamav-devel-[0-9]*
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
