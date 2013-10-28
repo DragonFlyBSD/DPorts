@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kde-thumbnailer-chm/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/kde-thumbnailer-chm/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	kde-thumbnailer-chm
 PORTVERSION=	0.2
@@ -9,7 +9,7 @@ DISTNAME=	153410-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	KDE thumbnail generator for CHM files
 
-LIB_DEPENDS=	chm.0:${PORTSDIR}/misc/chmlib
+LIB_DEPENDS=	libchm.so:${PORTSDIR}/misc/chmlib
 
 USES=		cmake
 USE_KDE4=	kdeprefix kdelibs automoc4
@@ -19,5 +19,4 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_FILES=	lib/kde4/chmthumbnail.so \
 		share/kde4/services/chmthumbnail.desktop
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
