@@ -1,5 +1,5 @@
 # Created by: Ted Stodgell <tstodgell@gmail.com>
-# $FreeBSD: x11-themes/murrine-configurator/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/murrine-configurator/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
 
 PORTNAME=	murrine-configurator
 PORTVERSION=	0.5
@@ -22,10 +22,8 @@ USE_GNOME=	gtk20
 NO_STAGE=	yes
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/files/${PORTNAME} ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/pixmaps || ${TRUE}
 	@${INSTALL_DATA} ${WRKSRC}/files/${PORTNAME}.png \
 		${PREFIX}/share/pixmaps
-	${MKDIR} ${PREFIX}/share/applications || ${TRUE}
 	@${INSTALL_DATA} ${WRKSRC}/files/${PORTNAME}.desktop \
 		${PREFIX}/share/applications
 
