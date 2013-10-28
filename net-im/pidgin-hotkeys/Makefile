@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/pidgin-hotkeys/Makefile 328166 2013-09-24 16:47:23Z garga $
+# $FreeBSD: net-im/pidgin-hotkeys/Makefile 331339 2013-10-22 23:03:23Z garga $
 
 PORTNAME=	pidgin-hotkeys
 PORTVERSION=	0.2.4
@@ -20,7 +20,6 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/pidgin/hotkeys.so \
 		lib/pidgin/hotkeys.la
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,X11/keysym.h,X11/X.h,' ${WRKSRC}/src/hotkeys.c
 
