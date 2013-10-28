@@ -1,5 +1,5 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/gtkam/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gtkam/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	gtkam
 PORTVERSION=	0.1.18
@@ -64,7 +64,6 @@ post-patch:
 		 s|$$(libdir)/gimp/|$$(libexecdir)/gimp/|g'
 
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gtkam.desktop \
 		${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gtkam.png \
