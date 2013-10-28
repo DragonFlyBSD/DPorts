@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/milkytracker/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/milkytracker/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	milkytracker
 PORTVERSION=	0.90.85
@@ -19,7 +19,6 @@ LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack \
 		zzip:${PORTSDIR}/devel/zziplib
 
 USES=		pkgconfig
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 
@@ -38,15 +37,15 @@ OPTIONS_DEFINE=	DOCS
 post-install:
 .for f in ${ICONS}
 	${INSTALL_DATA} ${WRKSRC}/resources/pictures/${f} \
-		${PREFIX}/share/pixmaps/${f:C/carton/milkytracker/}
+		${STAGEDIR}${PREFIX}/share/pixmaps/${f:C/carton/milkytracker/}
 .endfor
-	${MKDIR} ${DESKTOPDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${DESKTOPDIR}
+	${MKDIR} ${STAGEDIR}${DESKTOPDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
