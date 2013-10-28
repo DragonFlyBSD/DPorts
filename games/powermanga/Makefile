@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/powermanga/Makefile 330815 2013-10-19 00:56:58Z amdmi3 $
+# $FreeBSD: games/powermanga/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	powermanga
 PORTVERSION=	0.91
@@ -47,7 +47,6 @@ run-autotools:
 	cd ${WRKSRC} && ${SH} ./bootstrap
 
 post-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/powermanga.desktop ${STAGEDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/powermanga.xpm ${STAGEDIR}${PREFIX}/share/pixmaps/
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
