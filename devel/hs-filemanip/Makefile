@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-filemanip/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-filemanip/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	filemanip
 PORTVERSION=	0.3.6.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
