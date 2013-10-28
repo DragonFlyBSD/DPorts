@@ -1,9 +1,9 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/barbie_seahorse_adventures/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/barbie_seahorse_adventures/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	barbie_seahorse_adventures
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games python
 MASTER_SITES=	http://www.imitationpickles.org/barbie/files/ \
 		SF/nemysisfreebsdp/:icons
