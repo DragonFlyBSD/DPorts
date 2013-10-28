@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/reciteword/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/reciteword/Makefile 331068 2013-10-20 22:45:25Z delphij $
 
 PORTNAME=	reciteword
 PORTVERSION=	0.8.5
@@ -11,7 +11,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.bz2:src \
 		${PORTNAME}-books-${PORTVERSION}.tar.bz2:books \
 		${PORTNAME}-dicts-0.8.2.tar.bz2:dicts
 
-MAINTAINER=	delphij@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Education software to help people to study English
 
 GNU_CONFIGURE=	yes
