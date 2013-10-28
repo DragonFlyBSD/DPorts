@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: french/belote/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD: french/belote/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	belote
 PORTVERSION=	20061109
@@ -37,7 +37,6 @@ do-install:
 .for f in belote.jar data.bin
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DATADIR}
 .endfor
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/rsc/vp.gif ${PREFIX}/share/pixmaps/belote.gif
 
 .include <bsd.port.mk>
