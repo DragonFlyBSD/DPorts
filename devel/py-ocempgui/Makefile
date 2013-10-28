@@ -1,9 +1,9 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-ocempgui/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-ocempgui/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	ocempgui
 PORTVERSION=	0.2.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel python
 MASTER_SITES=	SF/ocemp/${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
