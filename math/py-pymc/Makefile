@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-pymc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-pymc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pymc
 PORTVERSION=	2.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
