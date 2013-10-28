@@ -1,8 +1,9 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-stldict/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pure-stldict/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pure-stldict
 PORTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	lichray@gmail.com
