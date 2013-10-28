@@ -1,8 +1,8 @@
-# $FreeBSD: deskutils/growl-for-linux/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/growl-for-linux/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	growl-for-linux
 PORTVERSION=	0.6.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 
 MAINTAINER=	nivit@FreeBSD.org
