@@ -1,8 +1,9 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/pyspacewar/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pyspacewar/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pyspacewar
 PORTVERSION=	0.9.7
+PORTREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	http://mg.pov.lt/${PORTNAME}/\
 		LOCAL/beech
