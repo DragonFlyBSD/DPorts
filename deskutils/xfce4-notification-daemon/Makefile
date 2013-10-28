@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
@@ -41,7 +41,6 @@ CLOSE_DESC=	Show the close button in the default theme
 
 OPTIONS_DEFAULT=CLOSE NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
