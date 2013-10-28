@@ -1,9 +1,9 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: games/pathological/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pathological/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pathological
 PORTVERSION=	1.1.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	SF
 
