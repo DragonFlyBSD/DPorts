@@ -1,9 +1,9 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/pycadia/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pycadia/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pycadia
 PORTVERSION=	0.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_GENTOO:S/%SUBDIR%/distfiles/} \
 		SF/nemysisfreebsdp/
