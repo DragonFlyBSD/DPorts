@@ -1,12 +1,9 @@
-# New ports collection makefile for: psptoolchain-gcc-stage1
-# Date created:        19 July 2009
-# Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
-#
-# $FreeBSD: devel/psptoolchain-gcc-stage1/Makefile 324744 2013-08-14 22:35:50Z ak $
-#
+# Created by: Tassilo Philipp <tphilipp@potion-studios.com>
+# $FreeBSD: devel/psptoolchain-gcc-stage1/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=		gcc
 PORTVERSION=		4.6.2
+PORTREVISION=	1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	releases/${DISTNAME}/
@@ -20,9 +17,9 @@ ONLY_FOR_ARCHS=		amd64 i386
 
 PSP_GCC_STAGE_PREFIX=	psp/stage1
 
-LIB_DEPENDS=		gmp.10:${PORTSDIR}/math/gmp \
-			mpfr.4:${PORTSDIR}/math/mpfr \
-			mpc.2:${PORTSDIR}/math/mpc
+LIB_DEPENDS=		libgmp.so:${PORTSDIR}/math/gmp \
+			libmpfr.so:${PORTSDIR}/math/mpfr \
+			libmpc.so:${PORTSDIR}/math/mpc
 
 BUILD_DEPENDS+=		psp-addr2line:${PORTSDIR}/devel/psptoolchain-binutils \
 			psp-ar:${PORTSDIR}/devel/psptoolchain-binutils \
@@ -63,6 +60,7 @@ CONFIGURE_ARGS?=	--prefix=${PREFIX}/${PSP_GCC_STAGE_PREFIX} \
 			--with-as=${LOCALBASE}/bin/psp-as \
 			--mandir=${PREFIX}/man
 
+NO_STAGE=	yes
 pre-configure:
 	@${MKDIR} ${CONFIGURE_WRKSRC}
 
