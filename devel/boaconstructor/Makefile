@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/boaconstructor/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/boaconstructor/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	boaconstructor
 PORTVERSION=	0.6.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel python
 #MASTER_SITES=	SF/boa-constructor/Boa-Constructor/${PORTVERSION}-alpha
 MASTER_SITES=	SF/boa-constructor/Boa-Constructor/${PORTVERSION}-beta
