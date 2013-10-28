@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: x11-themes/xmms-vumeter-skins/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/xmms-vumeter-skins/Makefile 331305 2013-10-22 18:50:47Z tijl $
 
 PORTNAME=	xmms-vumeter-skins
 PORTVERSION=	0.9.1
@@ -12,7 +12,7 @@ DISTFILES=	X-skin.tar.bz2 \
 		vuskin.tar.bz2
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Additional skins for the XMMS Analog VUmeter plugin
 
 RUN_DEPENDS=	${SKINSDIR}/default/skin.cfg:${PORTSDIR}/graphics/xmms-vumeter
