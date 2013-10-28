@@ -1,9 +1,9 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: science/elmer-hutiter/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/elmer-hutiter/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	hutiter
 PORTVERSION=	5.4.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	science
 MASTER_SITES=	http://www.nic.funet.fi/index/files/index/elmer/src/old/ \
 		http://www.bezopasnik.org/unix/ports/distfiles/
