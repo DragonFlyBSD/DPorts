@@ -1,5 +1,5 @@
 # Created by: Brooks Davis
-# $FreeBSD: devel/compiler-rt/Makefile 329870 2013-10-09 06:57:03Z bapt $
+# $FreeBSD: devel/compiler-rt/Makefile 330742 2013-10-18 13:33:45Z brooks $
 
 PORTNAME=	compiler-rt
 DISTVERSION=	0.r${SVN_REV}
@@ -37,7 +37,6 @@ PLIST_FILES=	include/Block.h \
 		include/Block_private.h \
 		lib/libBlocksRuntime.so
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"
