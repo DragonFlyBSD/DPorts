@@ -1,25 +1,24 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: games/supertux/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/supertux/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	supertux
 PORTVERSION=	0.1.3
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
 MAINTAINER=	makc@FreeBSD.org
-COMMENT=	Super Tux is a side-scroller similar to Super Mario Brothers
+COMMENT=	Side-scroller game similar to Super Mario Brothers
 
+USES=		gmake
 USE_BZIP2=	yes
 USE_SDL=	image mixer
-USE_GL=		yes
-USE_GMAKE=	yes
+USE_GL=		gl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=		--disable-debug
 
 PORTSCOUT=	limit:^0\.1
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,Menu::,,' ${WRKSRC}/src/menu.h
 
