@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/terraform/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/terraform/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	terraform
 PORTVERSION=	0.9.5
@@ -38,10 +38,8 @@ pre-configure:
 	@${LN} -sf ${AUTOMAKE_DIR}/depcomp ${WRKSRC}
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/desktop-links/Terraform.desktop \
 		${PREFIX}/share/applications
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/desktop-links/terraform.png \
 		${PREFIX}/share/pixmaps
 .if ${PORT_OPTIONS:MDOCS}
