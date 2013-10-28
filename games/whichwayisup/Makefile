@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/whichwayisup/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/whichwayisup/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	whichwayisup
 PORTVERSION=	0.7.9
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games python
 MASTER_SITES=	http://www.oletus.fi/static/whichwayisup/ \
 		SF/nemysisfreebsdp/:icons
