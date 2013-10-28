@@ -1,9 +1,9 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-gtk/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/eiskaltdcpp-gtk/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	eiskaltdcpp-gtk
 PORTVERSION=	2.2.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-p2p
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	eiskaltdcpp-${DISTVERSION}
