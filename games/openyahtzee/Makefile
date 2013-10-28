@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/openyahtzee/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/openyahtzee/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	openyahtzee
 PORTVERSION=	1.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Open%20Yahtzee/Open%20Yahtzee%20${PORTVERSION}
 
@@ -28,7 +28,6 @@ MAN6=		openyahtzee.6
 PLIST_FILES=	bin/openyahtzee \
 		share/applications/openyahtzee.desktop \
 		share/pixmaps/openyahtzee.png
-PLIST_DIRSTRY=	share/applications
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
