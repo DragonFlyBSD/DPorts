@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-convertible/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-convertible/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	convertible
 PORTVERSION=	1.0.11.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
