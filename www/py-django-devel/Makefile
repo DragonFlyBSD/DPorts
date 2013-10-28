@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-django-devel/Makefile 329165 2013-10-03 10:37:49Z demon $
+# $FreeBSD: www/py-django-devel/Makefile 331601 2013-10-25 15:48:30Z lwhsu $
 
 PORTNAME=	django
 PORTVERSION=	${SNAPSHOTDATE}
@@ -16,7 +16,7 @@ COMMENT=	High-level Python Web framework
 
 LICENSE=	BSD
 
-SNAPSHOTDATE=	20130922
+SNAPSHOTDATE=	20131025
 
 USE_XZ=	yes
 USES=		gettext
