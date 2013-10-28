@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/outerspace/Makefile 330701 2013-10-17 23:57:30Z amdmi3 $
+# $FreeBSD: games/outerspace/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	outerspace
 PORTVERSION=	0.2.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/ospace/OSLauncher/${PORTVERSION}
 
