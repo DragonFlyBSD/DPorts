@@ -1,9 +1,9 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: benchmarks/himenobench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/himenobench/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	himenobench
 PORTVERSION=	2004.08.16
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://accc.riken.jp/secure/4502/:C http://accc.riken.jp/secure/4503/:C \
 		http://accc.riken.jp/secure/4504/:F90 http://accc.riken.jp/secure/4505/:F77
