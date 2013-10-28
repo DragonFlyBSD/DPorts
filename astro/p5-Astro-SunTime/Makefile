@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: astro/p5-Astro-SunTime/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/p5-Astro-SunTime/Makefile 331586 2013-10-25 14:04:57Z vanilla $
 
 PORTNAME=	Astro-SunTime
 PORTVERSION=	0.01
@@ -16,6 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
