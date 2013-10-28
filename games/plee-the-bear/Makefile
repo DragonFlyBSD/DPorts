@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/plee-the-bear/Makefile 328248 2013-09-25 03:47:08Z amdmi3 $
+# $FreeBSD: games/plee-the-bear/Makefile 331229 2013-10-22 07:50:28Z amdmi3 $
 
 PORTNAME=	plee-the-bear
 PORTVERSION=	0.6.0
@@ -22,7 +22,6 @@ LIB_DEPENDS=	libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
 
 USE_SDL=	sdl mixer
 USE_GL=		gl glu
-WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 
