@@ -1,8 +1,8 @@
-# $FreeBSD: multimedia/hs-gstreamer/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/hs-gstreamer/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.12.1.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia haskell
 
 MAINTAINER=	haskell@FreeBSD.org
