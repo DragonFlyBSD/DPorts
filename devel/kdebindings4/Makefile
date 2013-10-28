@@ -1,7 +1,8 @@
-# $FreeBSD: devel/kdebindings4/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/kdebindings4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdebindings
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	# empty
 DISTFILES=	# none
