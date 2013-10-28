@@ -1,9 +1,9 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: math/py-symeig/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-symeig/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	symeig
 PORTVERSION=	1.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math python
 MASTER_SITES=	SF/mdp-toolkit/mdp-toolkit/2.3
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
