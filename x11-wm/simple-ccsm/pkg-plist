@@ -1,4 +1,4 @@
-@comment $FreeBSD: x11-wm/simple-ccsm/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: x11-wm/simple-ccsm/pkg-plist 331275 2013-10-22 14:04:01Z amdmi3 $
 bin/simple-ccsm
 share/applications/simple-ccsm.desktop
 share/simple-ccsm/simple-ccsm.glade
@@ -54,7 +54,6 @@ share/locale/zh_TW/LC_MESSAGES/simple-ccsm.mo
 @dirrmtry share/simple-ccsm/profiles
 @dirrmtry share/simple-ccsm/images
 @dirrmtry share/simple-ccsm
-@dirrmtry share/applications
 @dirrmtry share/locale/ml_IN/LC_MESSAGES
 @dirrmtry share/locale/ml_IN
 @dirrmtry share/locale/nb_NO/LC_MESSAGES
