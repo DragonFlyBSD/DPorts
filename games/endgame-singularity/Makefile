@@ -1,8 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/endgame-singularity/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/endgame-singularity/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	singularity
 PORTVERSION=	0.30c
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	endgame-
