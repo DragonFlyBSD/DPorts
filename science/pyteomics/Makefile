@@ -1,7 +1,8 @@
-# $FreeBSD: science/pyteomics/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/pyteomics/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	pyteomics
 PORTVERSION=	2.1.5
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,5 +17,4 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=0:${PORTSDIR}/devel/py-lxml \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
