@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: benchmarks/hs-criterion/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/hs-criterion/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	criterion
 PORTVERSION=	0.6.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	benchmarks haskell
 
 MAINTAINER=	haskell@FreeBSD.org
