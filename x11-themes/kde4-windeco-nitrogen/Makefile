@@ -1,9 +1,9 @@
 # Created by: kmoore
-# $FreeBSD: x11-themes/kde4-windeco-nitrogen/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/kde4-windeco-nitrogen/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	nitrogen
 PORTVERSION=	3.3.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-themes kde
 MASTER_SITES=	http://www.kde-look.org/CONTENT/content-files/
 PKGNAMEPREFIX=	kde4-windeco-
