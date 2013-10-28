@@ -1,9 +1,5 @@
-# New ports collection makefile for: psptoolchain-gdb
-# Date created:        15 February 2009
-# Whom:                Tassilo Philipp <tphilipp@potion-studios.com>
-#
-# $FreeBSD: ports/devel/psptoolchain-gdb/Makefile,v 1.3 2012/11/17 05:56:43 svnexp Exp $
-#
+# Created by: Tassilo Philipp <tphilipp@potion-studios.com>
+# $FreeBSD: devel/psptoolchain-gdb/Makefile 330932 2013-10-19 20:14:14Z tijl $
 
 PORTNAME=		gdb
 PORTVERSION=		7.3.1
@@ -17,8 +13,9 @@ COMMENT=		PlayStation Portable development toolchain ${PORTNAME}
 
 BUILD_DEPENDS=		${LOCALBASE}/psp/sdk/lib/libpspsdk.a:${PORTSDIR}/devel/psptoolchain-pspsdk-stage2
 
+USES=			gmake
 USE_BZIP2=		yes
-USE_GMAKE=		yes
+USE_CSTD=		gnu89
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS=		--prefix=${PREFIX} \
@@ -33,6 +30,7 @@ MAN1=			psp-gdb.1 \
 			psp-run.1
 
 # Disable installation of .info files and libiberty.
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E 's/^(INFO_DEPS.*=)(.*)/\1#\2/' ${WRKSRC}/bfd/doc/Makefile.in
 	@${REINPLACE_CMD} -E 's/^(INFO_DEPS.*=)(.*)/\1#\2/' ${WRKSRC}/gdb/doc/Makefile.in
