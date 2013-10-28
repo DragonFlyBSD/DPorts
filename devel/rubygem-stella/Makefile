@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-stella/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-stella/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	stella
 PORTVERSION=	2.1.2.004
@@ -28,5 +28,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/stella
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
