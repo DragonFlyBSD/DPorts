@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: games/crossfire-client/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/crossfire-client/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
 
 PORTNAME=	crossfire-client
 PORTVERSION=	1.70.0
@@ -35,10 +35,8 @@ post-patch:
 
 post-install:
 	${CP} ${WRKSRC}/pixmaps/48x48.png ${WRKSRC}/pixmaps/crossfire-client.png
-	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gtk-v2/crossfire-client.desktop \
 		${PREFIX}/share/applications
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/crossfire-client.png \
 		${PREFIX}/share/pixmaps
 
