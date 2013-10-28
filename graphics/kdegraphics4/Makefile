@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/kdegraphics4/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/kdegraphics4/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kdegraphics
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
