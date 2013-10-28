@@ -1,7 +1,8 @@
-# $FreeBSD: x11/plasma-scriptengine-ruby/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/plasma-scriptengine-ruby/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	plasma-scriptengine-ruby
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
