@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/p5-Sendmail-AccessDB/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: mail/p5-Sendmail-AccessDB/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
 
 PORTNAME=	Sendmail-AccessDB
 PORTVERSION=	1.03
@@ -15,7 +15,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Sendmail::AccessDB.3
 
 .include <bsd.port.mk>
