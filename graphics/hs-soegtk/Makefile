@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/hs-soegtk/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/hs-soegtk/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	soegtk
 PORTVERSION=	0.12.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics haskell
 
 MAINTAINER=	haskell@FreeBSD.org
