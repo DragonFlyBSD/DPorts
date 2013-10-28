@@ -1,9 +1,9 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/platon/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/platon/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	platon
 PORTVERSION=	2007.01.09
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	biology
 MASTER_SITES=	http://www.cryst.chem.uu.nl/spek/xraysoft/unix/
 DISTNAME=	platon
