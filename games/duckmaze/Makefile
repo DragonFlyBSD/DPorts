@@ -1,8 +1,9 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/duckmaze/Makefile 328709 2013-09-29 16:30:49Z nemysis $
+# $FreeBSD: games/duckmaze/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	duckmaze
 DISTVERSION=	0.3r34
+PORTREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	SF/nemysisfreebsdp/${PORTNAME}/
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
