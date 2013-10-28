@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/yacas/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/yacas/Makefile 331471 2013-10-24 10:18:31Z gahr $
 
 PORTNAME=	yacas
 PORTVERSION=	1.3.3
@@ -13,15 +13,12 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 OPTIONS_DEFINE=	TESTS DOCS
-OPTIONS_DEFAULT=	TESTS
+OPTIONS_DEFAULT=TESTS
 TESTS_DESC=	Run bundled self-tests after build
 
-USES=		gmake perl5
-USE_PERL5=	build
-#USE_AUTOTOOLS=	libtool
+USES=		gmake
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "sparc64"
