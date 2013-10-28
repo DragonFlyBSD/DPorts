@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.14/Makefile 331368 2013-10-23 10:51:03Z mat $
+# $FreeBSD: lang/perl5.14/Makefile 331456 2013-10-24 03:24:46Z az $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -215,7 +215,6 @@ post-install:
 		${BSDPAN_WRKSRC}/${files} ${STAGEDIR}${BSDPAN_DEST}/${files}
 .endfor
 
- AZ:
 test: build
 	@(cd ${WRKSRC}; TEST_JOBS=${MAKE_JOBS_NUMBER} make test_harness)
 
