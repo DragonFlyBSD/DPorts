@@ -1,10 +1,10 @@
 # Created by: Glenn Johnson <gljohns@bellsouth.net>
-# $FreeBSD: mail/balsa/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/balsa/Makefile 331057 2013-10-20 19:20:15Z jhale $
 #   $MCom: ports-stable/mail/balsa/Makefile,v 1.3 2007/12/02 19:18:50 marcus Exp $
 
 PORTNAME=	balsa
 PORTVERSION=	2.4.8
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://pawsa.fedorapeople.org/balsa/
 DISTNAME=	balsa-${PORTVERSION}
