@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/mandelbulber/Makefile 330832 2013-10-19 02:38:15Z amdmi3 $
+# $FreeBSD: graphics/mandelbulber/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	mandelbulber
 DISTVERSION=	1.13-1
@@ -19,7 +19,6 @@ MAKEFILE=	makefile
 CXXFLAGS+=	-DSHARED_DIR=\\\"${DATADIR}\\\"
 
 PLIST_FILES=	bin/${PORTNAME} share/applications/${PORTNAME}.desktop
-PLIST_DIRSTRY=	share/applications
 
 PORTDOCS=	README NEWS
 PORTDATA=	*
@@ -30,7 +29,6 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/usr/share && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DATADIR}/
