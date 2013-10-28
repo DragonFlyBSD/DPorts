@@ -1,9 +1,9 @@
 # Created by: bruno
-# $FreeBSD: french/alphabet_sounds_fr/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD: french/alphabet_sounds_fr/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	alphabet_sounds_fr
 PORTVERSION=	0.3
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	french games
 MASTER_SITES=	SF/childsplay/OldFiles
 DISTNAME=	alphabet_sounds_fr
