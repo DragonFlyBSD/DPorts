@@ -1,15 +1,16 @@
 # Created by: ijliao
-# $FreeBSD: java/jgraph/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jgraph/Makefile 331168 2013-10-21 18:01:22Z eadler $
 
 PORTNAME=	jgraph
 PORTVERSION=	5.13.0.4
 CATEGORIES=	java graphics
 MASTER_SITES=	http://www.jgraph.com/downloads/jgraph/archive/ \
 		http://www.bayofrum.net/dist/jgraph/
+PKGNAMESUFFIX=	-java
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	crees@FreeBSD.org
-COMMENT=	The Java Graph Diagram Component
+COMMENT=	Java Graph Diagram Component
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
