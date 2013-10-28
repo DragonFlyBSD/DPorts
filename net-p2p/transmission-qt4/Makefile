@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-qt4/Makefile 330994 2013-10-20 08:42:42Z marino $
+# $FreeBSD: net-p2p/transmission-qt4/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4
@@ -43,10 +43,8 @@ post-install: general-install
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/qt/README.txt ${DOCSDIR}/README-qt4
 .endif
-	@${MKDIR} ${PREFIX}/share/applications
 	@${INSTALL_DATA} ${WRKSRC}/qt/transmission-qt.desktop \
 		${PREFIX}/share/applications/
-	@${MKDIR} ${PREFIX}/share/pixmaps
 	@${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png \
 		${PREFIX}/share/pixmaps/transmission-qt.png
 	@-update-desktop-database
