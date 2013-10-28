@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/structuresynth/Makefile 330840 2013-10-19 03:00:27Z amdmi3 $
+# $FreeBSD: graphics/structuresynth/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
 
 PORTNAME=	structuresynth
 PORTVERSION=	1.5.0
@@ -35,7 +35,6 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/structure-synth ${STAGEDIR}${PREFIX}/bin/
 	cd ${WRKSRC} && ${COPYTREE_SHARE} "Examples Misc" ${STAGEDIR}${DATADIR}/
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/structure-synth.desktop \
 		${STAGEDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/images/fileicons/StructureSynth-256.png \
