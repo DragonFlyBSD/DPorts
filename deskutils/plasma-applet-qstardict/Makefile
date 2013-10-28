@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-qstardict/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/plasma-applet-qstardict/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	qstardict
 PORTVERSION=	1.0.1
@@ -19,7 +19,6 @@ CMAKE_SOURCE_PATH=	${WRKSRC}/kdeplasma
 
 QSTARDICT_PLUGIN_PATH=	${LOCALBASE}/lib/qstardict/plugins
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/lib/qstardict/plugins|${QSTARDICT_PLUGIN_PATH}|g' \
 		${WRKSRC}/kdeplasma/dataengine/config.h.cmake
