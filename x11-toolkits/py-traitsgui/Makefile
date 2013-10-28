@@ -1,9 +1,9 @@
 # Created by: Jacob Frelinger <jacob.frelinger@duke.edu>
-# $FreeBSD: x11-toolkits/py-traitsgui/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-traitsgui/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	traitsgui
 PORTVERSION=	3.1.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
