@@ -1,10 +1,10 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11/terminology/Makefile 329520 2013-10-05 23:51:18Z gblach $
+# $FreeBSD: x11/terminology/Makefile 331629 2013-10-25 19:58:18Z gblach $
 
 PORTNAME=	terminology
 PORTVERSION=	0.3.0
 CATEGORIES=	x11 enlightenment
-MASTER_SITES=	http://download.enlightenment.fr/releases/ \
+MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
