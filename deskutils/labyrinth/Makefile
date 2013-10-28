@@ -1,7 +1,8 @@
-# $FreeBSD: deskutils/labyrinth/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/labyrinth/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	labyrinth
 PORTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	GOOGLE_CODE
 
