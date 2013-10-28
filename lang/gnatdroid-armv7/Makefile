@@ -1,8 +1,9 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-armv7/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gnatdroid-armv7/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	armv7
 PORTVERSION=	${SNAPSHOT}
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	releases/gcc-${GCC_VERSION}
