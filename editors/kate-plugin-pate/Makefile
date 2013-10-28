@@ -1,7 +1,8 @@
-# $FreeBSD: editors/kate-plugin-pate/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/kate-plugin-pate/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	kate-plugin-pate
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	editors kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
