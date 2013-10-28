@@ -1,9 +1,9 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/galaxymage/Makefile 330398 2013-10-15 12:56:39Z bapt $
+# $FreeBSD: games/galaxymage/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	galaxymage
 PORTVERSION=	0.3.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games python
 MASTER_SITES=	http://download.gna.org/tactics/
 
