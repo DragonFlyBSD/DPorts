@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: math/proofgeneral/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/proofgeneral/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
 
 PORTNAME=	proofgeneral
 PORTVERSION=	4.1
@@ -67,9 +67,6 @@ pre-build:
 #.if defined(BYTE_COMPILE)
 	@${RM} ${WRKSRC}/.byte-compile || ${TRUE}
 #.endif
-
-pre-install:
-	@${MKDIR} ${PREFIX}/share/applications
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
