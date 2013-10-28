@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net-im/rubygem-hipchat/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/rubygem-hipchat/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
 
 PORTNAME=	hipchat
 PORTVERSION=	0.12.0
@@ -17,5 +17,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
