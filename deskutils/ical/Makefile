@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@FreeBSD.org>
-# $FreeBSD: deskutils/ical/Makefile 324632 2013-08-12 14:40:33Z danfe $
+# $FreeBSD: deskutils/ical/Makefile 327718 2013-09-20 16:21:37Z bapt $
 
 PORTNAME=	ical
 PORTVERSION=	2.2
@@ -25,6 +25,7 @@ CONFIGURE_ARGS=	--with-tclconfig=${TCL_LIBDIR} \
 
 MAN1=		ical.1
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,tcl->result,Tcl_GetStringResult(tcl),' \
 		${WRKSRC}/ical.C
