@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev
-# $FreeBSD: games/lincity-ng/Makefile 326122 2013-09-03 06:36:41Z bapt $
+# $FreeBSD: games/lincity-ng/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	lincity-ng
 PORTVERSION=	2.0
@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--with-libphysfs=${PREFIX} \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| -O| -I${LOCALBASE}/include&|g' \
 		${WRKSRC}/Jamrules
