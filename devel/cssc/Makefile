@@ -1,25 +1,23 @@
-# New ports collection makefile for:    CSSC
-# Date created:         31 Mar 1999
-# Whom:                 Oliver Fromme
-#
-# $FreeBSD: ports/devel/cssc/Makefile,v 1.13 2012/11/17 05:55:38 svnexp Exp $
-#
+# Created by: Oliver Fromme
+# $FreeBSD: devel/cssc/Makefile 329964 2013-10-10 05:49:31Z jhale $
 
 PORTNAME=	cssc
-PORTVERSION=	0.15a.0
-PORTREVISION=	1
+PORTVERSION=	1.3.0
 CATEGORIES=	devel
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.15alpha.pl0
-DISTNAME=	CSSC-0.15alpha.pl0
+MASTER_SITES=	GNU
+DISTNAME=	CSSC-${PORTVERSION}
 
-MAINTAINER=	olli@fromme.com
-COMMENT=	A workalike for the source code control system SCCS
+MAINTAINER=	oliver@fromme.com
+COMMENT=	Workalike for the source code control system SCCS
+
+LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--enable-binary
-MAN1=		sccs.1
 INFO=		cssc
 
-WRKSRC=		${WRKDIR}/CSSC-0.15alpha.pl0
+OPTIONS_DEFINE=			BINARY
+OPTIONS_DEFAULT=		BINARY
+BINARY_DESC=			Support binary SCCS files (Solaris interoperability)
+BINARY_CONFIGURE_ENABLE=	binary
 
 .include <bsd.port.mk>
