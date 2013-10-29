@@ -1,10 +1,11 @@
-# $FreeBSD: x11/guake/Makefile 326151 2013-09-03 14:08:55Z bapt $
+# $FreeBSD: x11/guake/Makefile 327777 2013-09-20 23:43:19Z bapt $
 
 PORTNAME=	guake
 PORTVERSION=	0.4.4.0
 #PORTREVISION=	0
 CATEGORIES=	x11
-MASTER_SITES=	http://www.guake.org/downloads/5?dummy=empty/
+DISTNAME=	guake-0.4.4
+MASTER_SITES=	http://distfiles.gentoo.org/distfiles/
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Dropdown terminal made for the GNOME desktop
@@ -29,6 +30,7 @@ OPTIONS_DEFINE=	MANPAGES NLS
 OPTIONS_DEFAULT=	MANPAGES NLS
 
 USES=		pkgconfig
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMANPAGES}
@@ -57,7 +59,6 @@ USE_GMAKE=	yes
 USE_GNOME=	desktopfileutils gtk20 pygnome2
 USE_PYTHON=	-2.7
 
-WRKSRC=	${WRKDIR}/${DISTNAME:R}
 
 post-patch:
 	cd ${WRKSRC}/src && ${REINPLACE_CMD} ${REINPLACE_FILES}
