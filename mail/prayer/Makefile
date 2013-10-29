@@ -1,4 +1,4 @@
-# $FreeBSD: mail/prayer/Makefile 324223 2013-08-04 12:33:50Z az $
+# $FreeBSD: mail/prayer/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	prayer
 PORTVERSION=	1.3.5
@@ -39,6 +39,7 @@ GROUPS=		prayer
 MAN5=		prayer.cf.5
 MAN8=		prayer-session.8 prayer-ssl-prune.8 prayer.8
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSESSIONCACHE}

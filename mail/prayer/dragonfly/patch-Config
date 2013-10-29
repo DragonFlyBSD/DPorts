@@ -1,0 +1,11 @@
+--- Config.intermediate	2013-10-29 11:45:30.218019000 +0000
++++ Config
+@@ -52,7 +52,7 @@ endif
+ # Minimal libraries needed by Linux
+ #BASE_LIBS    = -lcrypt -lutil
+ # FreeBSD needs some extra libraries:
+-BASE_LIBS   = -lcrypt -liconv -lutil
++BASE_LIBS   = -lcrypt -lutil
+ # Solaris needs even more libararies:
+ # BASE_LIBS   = -lcrypt -lxnet -lnsl -lsocket
+ 
