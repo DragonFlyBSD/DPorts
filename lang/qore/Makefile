@@ -1,4 +1,4 @@
-# $FreeBSD: lang/qore/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: lang/qore/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	qore
 PORTVERSION=	0.8.7
@@ -31,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		qore.1
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
