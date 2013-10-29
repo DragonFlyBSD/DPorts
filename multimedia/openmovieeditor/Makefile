@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: multimedia/openmovieeditor/Makefile 326015 2013-09-02 15:40:12Z amdmi3 $
+# $FreeBSD: multimedia/openmovieeditor/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	openmovieeditor
 PORTVERSION=	0.0.20090105
@@ -34,6 +34,7 @@ USE_DOS2UNIX=	yes
 
 PORTDOCS=	*
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
