@@ -1,14 +1,15 @@
-# $FreeBSD: devel/sdl20/Makefile 327856 2013-09-22 09:16:46Z mva $
+# $FreeBSD: devel/sdl20/Makefile 331607 2013-10-25 16:15:36Z mva $
 
 PORTNAME=	sdl2
-PORTVERSION=	2.0.0
-PORTREVISION=	1
+PORTVERSION=	2.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 DISTNAME=	SDL2-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Cross-platform multimedia development API
+
+LICENSE=	ZLIB
 
 USES=		pathfix cmake:outsource iconv
 USE_LDCONFIG=	yes
@@ -27,7 +28,7 @@ OPTIONS_DEFAULT=	ASM DLOPEN OSS PTHREADS SDL_ATOMIC SDL_AUDIO \
 			SDL_JOYSTICK SDL_LOADSO SDL_POWER SDL_RENDER \
 			SDL_THREADS SDL_TIMERS SDL_VIDEO VIDEO_OPENGL VIDEO_X11
 OPTIONS_DEFAULT_i386=	MMX SSE
-OPTIONS_DEFAULT_x86_64=	MMX SSE
+OPTIONS_DEFAULT_amd64=	MMX SSE
 
 ALSA_DESC=		Audio output via the ALSA audio architecture
 DLOPEN_DESC=		Use dlopen for loading 3rd party libraries
@@ -52,7 +53,6 @@ SDL_VIDEO_DESC=		Eanble the SDL Video subsystem
 VIDEO_OPENGL_DESC=	OpenGL rendering support
 VIDEO_X11_DESC=		X11 rendering support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALSA}
@@ -60,7 +60,7 @@ NO_STAGE=	yes
 IGNORE=	option ALSA requires SDL_AUDIO
 .endif
 CMAKE_ARGS+=	-DALSA:BOOL=ON -DALSA_SHARED:BOOL=ON
-LIB_DEPENDS+=	asound:${PORTSDIR}/audio/alsa-lib
+LIB_DEPENDS+=	libasound.so:${PORTSDIR}/audio/alsa-lib
 .else
 CMAKE_ARGS+=	-DALSA:BOOL=OFF
 .endif
@@ -100,7 +100,7 @@ CMAKE_ARGS+=	-DMMX:BOOL=OFF -D3DNOW:BOOL=OFF
 IGNORE=	option NAS requires SDL_AUDIO
 .endif
 CMAKE_ARGS+=	-DNAS:BOOL=ON
-LIB_DEPENDS+=	audio:${PORTSDIR}/audio/nas
+LIB_DEPENDS+=	libaudio.so:${PORTSDIR}/audio/nas
 .else
 CMAKE_ARGS+=	-DNAS:BOOL=OFF
 .endif
