@@ -1,41 +1,33 @@
-NO_STAGE=yes
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: sysutils/lookat/Makefile 322729 2013-07-10 19:41:30Z pawel $
+# $FreeBSD: sysutils/lookat/Makefile 329478 2013-10-05 16:52:12Z pawel $
 
 PORTNAME=	lookat
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.3
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.wagemakers.be/uploads/d9/2a/d92a52ea9fdfb96d1196005e0fa60fca/
+MASTER_SITES=	http://www.wagemakers.be/downloads/lookat/
 DISTNAME=	${PORTNAME}_bekijk-${PORTVERSION}
 
 MAINTAINER=	pawel@FreeBSD.org
 COMMENT=	Program to view Un*x text files and manual pages
 
+FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
 USES=		gmake
 
-MAN1=		lookat.1
+PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} 's|/etc/lookat.conf|${PREFIX}&|g' \
 		${WRKSRC}/${PORTNAME}.1
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/lookat ${PREFIX}/bin
-	@${INSTALL_MAN} ${WRKSRC}/lookat.1 ${PREFIX}/man/man1
-	@${INSTALL_DATA} ${WRKSRC}/lookat.conf.default \
-		${PREFIX}/etc/lookat.conf.sample
-	@if [ ! -f ${PREFIX}/etc/lookat.conf ]; then \
-		${CP} -p ${PREFIX}/etc/lookat.conf.sample ${PREFIX}/etc/lookat.conf ; \
-	fi
-
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/lookat ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/lookat.1 ${STAGEDIR}${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/lookat.conf.default \
+		${STAGEDIR}${PREFIX}/etc/lookat.conf.sample
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
