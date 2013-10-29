@@ -1,5 +1,5 @@
 # Created by: Takashi Kato <townwear@gmail.com>
-# $FreeBSD: japanese/jd/Makefile 327168 2013-09-13 17:14:53Z madpilot $
+# $FreeBSD: japanese/jd/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=		jd
 PORTVERSION=		2.8.5
@@ -32,6 +32,7 @@ OPTIONS_DEFINE=	ONIGURUMA PANGOLAYOUT
 ONIGURUMA_DESC=	Use oniguruma regular expressions library
 PANGOLAYOUT_DESC=	Use PANGOLayout instead of PangoGlyphString
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk>
 

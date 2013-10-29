@@ -1,0 +1,11 @@
+--- configure.in.orig	2012-03-03 05:31:39.000000000 +0000
++++ configure.in
+@@ -29,7 +29,7 @@ dnl
+ dnl OSを判定してOS別の設定
+ dnl 
+ case "${host_os}" in 
+- freebsd*) 
++ freebsd*|dragonfly*) 
+    echo "os = freebsd"
+    AC_DEFINE(ICONV_CONST, const, "iconv_const")
+    AC_DEFINE(USE_MKTIME, , "use mktime")
