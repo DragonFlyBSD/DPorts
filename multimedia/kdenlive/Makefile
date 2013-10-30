@@ -1,8 +1,8 @@
-# $FreeBSD: multimedia/kdenlive/Makefile 327530 2013-09-18 08:00:44Z bapt $
+# $FreeBSD: multimedia/kdenlive/Makefile 331163 2013-10-21 17:37:43Z wg $
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION}/src/
@@ -25,7 +25,7 @@ USE_BZIP2=	yes
 CMAKE_ARGS=	-DFFMPEG_SUFFIX:STRING="${FFMPEG_SUFX}"
 
 # Keep in sync with multimedia/mlt, possibly.
-FFMPEG_SUFX=	1
+FFMPEG_SUFX=
 
 MAN1=		kdenlive.1 kdenlive_render.1
 
@@ -37,6 +37,7 @@ SCREENCAST_DESC=Screen capture support via recordMyDesktop
 #V4L_DESC=	Webcam support via Video 4 Linux
 XINE_DESC=	DVD preview support via xine
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVDWIZARD}
