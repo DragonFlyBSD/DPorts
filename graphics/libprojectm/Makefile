@@ -1,9 +1,5 @@
-# New ports collection Makefile for:	libprojectM
-# Date created:	 	8 December 2010
-# Whom:			utisoft@gmail.com
-#
-# $FreeBSD: graphics/libprojectm/Makefile 314960 2013-03-22 20:06:14Z makc $
-#
+# Created by: utisoft@gmail.com
+# $FreeBSD: graphics/libprojectm/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	libprojectM
 PORTVERSION=	2.0.1
@@ -25,6 +21,7 @@ USES=		cmake
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
+NO_STAGE=	yes
 post-patch:
 # Install config.inp.sample instead of overwriting user's file.
 # Needs to be specific enough not to rename config.inp.in too!
