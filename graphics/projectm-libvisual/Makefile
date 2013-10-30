@@ -1,5 +1,5 @@
 # Created by: utisoft@gmail.com
-# $FreeBSD: graphics/projectm-libvisual/Makefile 325803 2013-08-31 13:04:58Z bapt $
+# $FreeBSD: graphics/projectm-libvisual/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	projectM-libvisual
 PORTVERSION=	2.0.1
@@ -26,6 +26,7 @@ PLIST_FILES=	lib/libvisual-${LIBVISUAL_VER}/actor/libprojectM_libvisual.so
 PLIST_DIRS=	lib/libvisual-${LIBVISUAL_VER}/actor \
 		lib/libvisual-${LIBVISUAL_VER}
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.[hc]*" | ${XARGS} ${REINPLACE_CMD} \
 		-e 's#<libvisual#<libvisual-${LIBVISUAL_VER}/libvisual#g'
