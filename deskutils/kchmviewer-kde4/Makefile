@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: deskutils/kchmviewer-kde4/Makefile 329697 2013-10-07 12:26:54Z makc $
+# $FreeBSD: deskutils/kchmviewer-kde4/Makefile 332142 2013-10-30 16:07:15Z makc $
 
 PORTNAME=	kchmviewer
 PORTVERSION=	6.0
@@ -16,9 +16,8 @@ USES=		cmake
 USE_KDE4=	kdeprefix kdelibs automoc4
 USE_QT4=	webkit qmake_build moc_build rcc_build uic_build
 
-NO_STAGE=	yes
 post-install:
-	${MKDIR} ${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKSRC}/packages/kchmviewer.png ${PREFIX}/share/pixmaps
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/packages/kchmviewer.png ${STAGEDIR}${PREFIX}/share/pixmaps
 
 .include <bsd.port.mk>
