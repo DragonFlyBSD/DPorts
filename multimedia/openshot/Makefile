@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/openshot/Makefile 316464 2013-04-24 18:10:30Z ak $
+# $FreeBSD: multimedia/openshot/Makefile 327747 2013-09-20 20:57:48Z bapt $
 
 PORTNAME=	openshot
 PORTVERSION=	1.4.3
@@ -31,6 +31,7 @@ MAN1=		${PORTNAME}.1 \
 		${PORTNAME}-render.1
 FETCH_ARGS=	-pRr
 
+NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/docs/omf -name '*.omf' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|/usr/share|${PREFIX}/share|g'
