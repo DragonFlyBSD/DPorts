@@ -1,8 +1,8 @@
-# $FreeBSD: multimedia/mlt/Makefile 326637 2013-09-07 14:08:09Z madpilot $
+# $FreeBSD: multimedia/mlt/Makefile 331163 2013-10-21 17:37:43Z wg $
 
 PORTNAME=	mlt
 PORTVERSION=	0.9.0
-PORTREVISION?=	0
+PORTREVISION?=	2
 CATEGORIES?=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
@@ -49,6 +49,7 @@ KDE4_DESC=	QImage extra formats support
 QT4_DESC=	Kdenlive titles and images support via QImage
 SOX_DESC=	SoX audio effects support
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "sparc64"
@@ -65,7 +66,7 @@ PLIST_SUB+=	DV="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG} || ${PORT_OPTIONS:MVDPAU}
-FFMPEG_SUFX=	1
+FFMPEG_SUFX=
 LIB_DEPENDS+=	avformat${FFMPEG_SUFX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFX}
 CONFIGURE_ARGS+=--enable-avformat --avformat-swscale \
 		--avformat-suffix="${FFMPEG_SUFX}"
