@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-omniauth-google-oauth2/Makefile 331082 2013-10-21 02:10:23Z swills $
+# $FreeBSD: net/rubygem-omniauth-google-oauth2/Makefile 332047 2013-10-30 02:53:47Z swills $
 
 PORTNAME=	omniauth-google-oauth2
 PORTVERSION=	0.2.1
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
