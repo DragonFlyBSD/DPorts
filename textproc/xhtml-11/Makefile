@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: textproc/xhtml-11/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xhtml-11/Makefile 332222 2013-10-31 11:06:16Z bapt $
 
 PORTNAME=	xhtml
 PORTVERSION=	1.1.${RECDATE}
@@ -7,6 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.w3.org/TR/2007/WD-xhtml11-${RECDATE}/
 DISTNAME=	xhtml11
+PKGNAMESUFFIX=	-11
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gabor@FreeBSD.org
@@ -16,7 +17,6 @@ RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
 
 RECDATE=	20070216
 
-LATEST_LINK=	xhtml-11
 WRKSRC=		${WRKDIR}/xhtml11-${RECDATE}
 NO_BUILD=	yes
 PLIST_SUB+=	XMLCAT_ADD="${XMLCAT_ADD}" \
