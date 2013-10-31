@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/violet/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/violet/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	violet
 PORTVERSION=	0.21.1
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.jar
 EXTRACT_ONLY=
 
 MAINTAINER=	graudeejs@gmail.com
-COMMENT=	Violet is a very easy to learn and use UML editor
+COMMENT=	Violet is a easy to learn and use UML editor
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
