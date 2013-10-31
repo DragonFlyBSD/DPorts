@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-grape-entity/Makefile 331030 2013-10-20 15:29:17Z swills $
+# $FreeBSD: devel/rubygem-grape-entity/Makefile 332037 2013-10-30 02:34:55Z swills $
 
 PORTNAME=	grape-entity
 PORTVERSION=	0.3.0
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
