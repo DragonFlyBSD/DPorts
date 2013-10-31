@@ -1,7 +1,7 @@
-# $FreeBSD: deskutils/horde-mnemo/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/horde-mnemo/Makefile 332016 2013-10-29 21:46:58Z mm $
 
 PORTNAME=	mnemo
-PORTVERSION=	4.1.1
+PORTVERSION=	4.1.2
 CATEGORIES=	deskutils www pear
 PKGNAMEPREFIX=	horde-
 
