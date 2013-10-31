@@ -1,8 +1,8 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: www/bozohttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/bozohttpd/Makefile 332216 2013-10-31 08:50:51Z bapt $
 
 PORTNAME=	bozohttpd
-PORTVERSION=	20100920
+PORTVERSION=	20130711
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.eterna.com.au/bozohttpd/ \
 		${MASTER_SITE_NETBSD}
@@ -19,11 +19,12 @@ USE_RC_SUBR=	bozohttpd
 OPTIONS_DEFINE=		HTPASSWD SSL CGI
 OPTIONS_DEFAULT=	SSL CGI
 
+USES=		uidfix
+
 HTPASSWD_DESC=		Enable htpassword support
 SSL_DESC=		Enable SSL support
 CGI_DESC=		Enable CGI support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTPASSWD}
@@ -48,10 +49,8 @@ MAKE_ARGS+=	'COPTS+=	-UNO_CGIBIN_SUPPORT'
 MAKE_ARGS+=	'COPTS+=	-DNO_CGIBIN_SUPPORT'
 .endif
 
-MAN8=		bozohttpd.8
-MANCOMPRESSED=	maybe
-PLIST_FILES=	libexec/bozohttpd
-
+PLIST_FILES=	libexec/bozohttpd \
+		man/man8/bozohttpd.8.gz
 post-patch:
 	@${REINPLACE_CMD} -e 's|@@PREFIX@@|${PREFIX}|g' ${WRKSRC}/bozohttpd.8
 
