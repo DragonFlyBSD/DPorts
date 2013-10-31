@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-jquery-ui-rails/Makefile 331084 2013-10-21 02:37:22Z swills $
+# $FreeBSD: www/rubygem-jquery-ui-rails/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	jquery-ui-rails
 PORTVERSION=	4.0.5
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
