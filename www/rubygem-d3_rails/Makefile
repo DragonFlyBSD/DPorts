@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-d3_rails/Makefile 331012 2013-10-20 12:49:22Z swills $
+# $FreeBSD: www/rubygem-d3_rails/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	d3_rails
 PORTVERSION=	3.3.6
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
