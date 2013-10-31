@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-gnome2/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.60 2010/04/02 20:22:15 kwm Exp $
 
 PORTNAME=	gnome
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/ORBit.so:${PORTSDIR}/devel/py-orbit
 
 LATEST_LINK=	py-gnome2
 USE_BZIP2=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_LDCONFIG=	yes
 USES=		gettext gmake pkgconfig
 USE_GNOME=	gnomehack libgnomeui pygtk2
