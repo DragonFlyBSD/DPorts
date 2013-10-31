@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-Format-HTTP/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Format-HTTP/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Format-HTTP
 PORTVERSION=	0.40
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		DateTime::Format::HTTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
