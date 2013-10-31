@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/php55-mbstring/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/php55-mbstring/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	converters
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-mbstring
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
