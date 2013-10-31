@@ -1,8 +1,9 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/yaz++/Makefile 330621 2013-10-17 09:47:40Z demon $
+# $FreeBSD: net/yaz++/Makefile 331781 2013-10-27 15:17:05Z pawel $
 
 PORTNAME=	yaz++
 PORTVERSION=	1.5.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yazpp/
 DISTNAME=	yazpp-${PORTVERSION}
