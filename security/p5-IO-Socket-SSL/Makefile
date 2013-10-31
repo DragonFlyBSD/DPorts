@@ -1,8 +1,8 @@
 # Created by: scrappy
-# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 332227 2013-10-31 11:33:39Z jadawin $
 
 PORTNAME=	IO-Socket-SSL
-PORTVERSION=	1.953
+PORTVERSION=	1.955
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SULLR
@@ -21,11 +21,8 @@ OPTIONS_DEFINE=	EXAMPLES IDN IPV6
 
 INSTALL_TARGET=	pure_install
 
-MAN3=		IO::Socket::SSL.3 IO::Socket::SSL::Intercept.3 \
-		IO::Socket::SSL::Utils.3
 PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIDN}
@@ -39,8 +36,8 @@ RUN_DEPENDS+=	p5-IO-Socket-IP>=0.11:${PORTSDIR}/net/p5-IO-Socket-IP \
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/example/* ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/example/* ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 regression-test: build
