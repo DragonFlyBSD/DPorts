@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/ansible/Makefile 330116 2013-10-12 03:33:40Z danilo $
+# $FreeBSD: sysutils/ansible/Makefile 332136 2013-10-30 15:53:43Z danilo $
 
 PORTNAME=	ansible
-PORTVERSION=	1.3.3
+PORTVERSION=	1.3.4
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://ansibleworks.com/releases/
 
