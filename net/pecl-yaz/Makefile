@@ -1,9 +1,9 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: net/pecl-yaz/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pecl-yaz/Makefile 331781 2013-10-27 15:17:05Z pawel $
 
 PORTNAME=	yaz
 PORTVERSION=	1.0.14
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -13,7 +13,7 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A PECL extension that implements a Z39.50 client
 
-LIB_DEPENDS=	yaz.4:${PORTSDIR}/net/yaz
+LIB_DEPENDS=	yaz:${PORTSDIR}/net/yaz
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
