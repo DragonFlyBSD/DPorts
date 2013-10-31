@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome-desktop/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-gnome-desktop/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.103 2010/09/30 06:27:40 kwm Exp $
 
 PORTNAME=	gnome-desktop
@@ -27,7 +27,7 @@ RUN_DEPENDS=	bug-buddy:${PORTSDIR}/devel/bug-buddy
 
 USE_BZIP2=	yes
 USES=		gmake pkgconfig
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_GNOME=	gnomehack libgnomeprintui gnomepanel gnomedesktop \
 		gtksourceview libwnck nautilus2 pygnome2 metacity \
 		evolutiondataserver
