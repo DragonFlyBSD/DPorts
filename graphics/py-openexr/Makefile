@@ -1,9 +1,9 @@
 # Created by: James Bowman <jamesb-bsd@excamera.com>
-# $FreeBSD: graphics/py-openexr/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-openexr/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	openexr
 PORTVERSION=	1.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://excamera.com/files/ \
 		CHEESESHOP
