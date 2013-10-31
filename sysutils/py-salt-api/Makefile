@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/py-salt-api/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-salt-api/Makefile 332160 2013-10-30 18:04:56Z wg $
 
 PORTNAME=	salt-api
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.3
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,17 +14,11 @@ LICENSE=	AL2
 FETCH_ARGS=	-pRr
 USE_PYTHON=	2.6-2.7
 USE_PYDISTUTILS=	yes
-
-SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
-
-MAN1=	salt-api.1
-MAN7=	salt-api.7
+PYDISTUTILS_AUTOPLIST=	yes
 
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}salt>0:${PORTSDIR}/sysutils/py-salt
-
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/setup.py
 
