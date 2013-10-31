@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-DateTime-Incomplete/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Incomplete
 PORTVERSION=	0.07.00
@@ -21,17 +21,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		DateTime::Incomplete.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes LICENSE MANIFEST README TODO
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
