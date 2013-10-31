@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-jquery-turbolinks/Makefile 331512 2013-10-24 18:49:46Z swills $
+# $FreeBSD: www/rubygem-jquery-turbolinks/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	jquery-turbolinks
 PORTVERSION=	2.0.1
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
