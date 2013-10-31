@@ -1,7 +1,7 @@
-# $FreeBSD: www/mochiweb-basho/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mochiweb-basho/Makefile 332012 2013-10-29 21:37:59Z olgeni $
 
 PORTNAME=	mochiweb
-PORTVERSION=	1.5.1p5
+PORTVERSION=	1.5.1p6
 CATEGORIES=	www devel
 MASTER_SITES=	GH
 PKGNAMESUFFIX=	-basho
@@ -21,31 +21,24 @@ PLIST_SUB=	VERSION="${PORTVERSION}"
 USE_GITHUB=	yes
 GH_ACCOUNT=	basho
 GH_PROJECT=	mochiweb
-GH_COMMIT=	b7c3f8f
+GH_COMMIT=	0d9e051
 GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@for FILE in README; do \
-		${INSTALL_DATA} ${WRKSRC}/$${FILE} ${DOCSDIR}; \
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	for FILE in README; do \
+		${INSTALL_DATA} ${WRKSRC}/$${FILE} ${STAGEDIR}${DOCSDIR}; \
 	done
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	@cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}
-.endif
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/ebin
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/include
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/src
-	@${INSTALL_DATA} ${WRKSRC}/ebin/* ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/ebin
-	@${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/include
-	@${INSTALL_DATA} ${WRKSRC}/src/* ${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/src
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/ebin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/include
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/src
+	${INSTALL_DATA} ${WRKSRC}/ebin/* ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/ebin
+	${INSTALL_DATA} ${WRKSRC}/include/* ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/include
+	${INSTALL_DATA} ${WRKSRC}/src/* ${STAGEDIR}${PREFIX}/lib/erlang/lib/mochiweb-${PORTVERSION}/src
 
 .include <bsd.port.mk>
