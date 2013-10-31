@@ -1,9 +1,9 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 329273 2013-10-04 09:32:54Z bapt $
+# $FreeBSD: graphics/ImageMagick/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	ImageMagick
 PORTREVISION=	1
 DISTVERSION=	6.8.0-7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
 		http://servingzone.com/mirrors/ImageMagick/ \
