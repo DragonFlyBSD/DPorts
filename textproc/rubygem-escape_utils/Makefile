@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: textproc/rubygem-escape_utils/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-escape_utils/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	escape_utils
 PORTVERSION=	0.3.2
@@ -21,5 +21,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
