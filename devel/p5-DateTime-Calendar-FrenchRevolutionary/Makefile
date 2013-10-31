@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Calendar-FrenchRevolutionary/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Calendar-FrenchRevolutionary/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Calendar-FrenchRevolutionary
 PORTVERSION=	0.11
@@ -20,8 +20,4 @@ RUN_DEPENDS=	p5-DateTime>=0.14:${PORTSDIR}/devel/p5-DateTime \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		DateTime::Calendar::FrenchRevolutionary.3 \
-		DateTime::Calendar::FrenchRevolutionary::Locale::en.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
