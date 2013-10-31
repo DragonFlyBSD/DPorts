@@ -1,8 +1,8 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 332210 2013-10-31 07:52:41Z jadawin $
 
 PORTNAME=	DateTime-TimeZone
-PORTVERSION=	1.60
+PORTVERSION=	1.63
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
