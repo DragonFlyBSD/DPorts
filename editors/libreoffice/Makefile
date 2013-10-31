@@ -1,8 +1,8 @@
-# $FreeBSD: editors/libreoffice/Makefile 331614 2013-10-25 17:05:50Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile 332185 2013-10-30 22:33:22Z jkim $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	0
+PORTREVISION=	1
 
 COMMENT=	Full integrated office productivity suite
 
@@ -63,14 +63,15 @@ _MAKE_JOBS=	#
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf aclocal
-USE_GCC=	4.7
+USE_GCC=	yes
 USE_PERL5=	build
 USE_PYTHON=	yes
 USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
 USE_XZ=		yes
-USES= 		bison gmake perl5 pkgconfig
-USE_GNOME+=	gtk20 desktopfileutils
+USES=		bison compiler:c++11-lang gmake perl5 pkgconfig
+USES+=		desktop-file-utils
+USE_GNOME+=	gtk20
 INSTALLS_ICONS= yes
 
 DISTFILES+=	${PORTNAME}-${LOVERSION}${EXTRACT_SUFX}
@@ -146,9 +147,9 @@ CONFIGURE_ARGS+=	--without-afms \
 
 ACLOCAL_ARGS=	-I "${WRKSRC}/m4"
 CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAKE_ENV+=	ENVCFLAGS="${CFLAGS}" ENVCXXFLAGS="${CXXFLAGS}"
+MAKE_ENV+=	ENVCFLAGS="${CFLAGS}" ENVCFLAGSCXX="${CXXFLAGS}"
 MAKE_ENV+=	ENVLINKFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LANG=C LC_ALL=C
 MAKE_ENV+=	SED="${LOCALBASE}/bin/gsed" USE_GMAKE=1
@@ -171,7 +172,7 @@ do-install:
 	@cd ${LODESTDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
 	    -empty -exec ${ECHO_CMD} "@exec ${MKDIR} %D/{}" \; >> ${PLISTD}
 
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -H -s bin lib \
+	@cd ${LODESTDIR}${PREFIX} && ${FIND} -H -s bin lib man \
 	    \( -type f -o -type l \) -print >> ${PLISTF}
 	@cd ${LODESTDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
 	    -exec ${ECHO_CMD} "@dirrm {}" \; >> ${PLISTD}
