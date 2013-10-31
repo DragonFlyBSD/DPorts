@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: multimedia/avbin/Makefile 329834 2013-10-08 20:33:43Z wg $
+# $FreeBSD: multimedia/avbin/Makefile 332115 2013-10-30 14:19:46Z amdmi3 $
 
 PORTNAME=	avbin
 PORTVERSION=	7
@@ -20,8 +20,10 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
+
+.include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
@@ -36,12 +38,8 @@ do-build:
 		-lavcodec0 -lavformat0
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${LIBNAME} ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/include/avbin.h ${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/${LIBNAME} ${STAGEDIR}${PREFIX}/lib/
+	${INSTALL_DATA} ${WRKSRC}/include/avbin.h ${STAGEDIR}${PREFIX}/include/
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DOCSDIR}/
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} '*' ${DOCSDIR}/
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
