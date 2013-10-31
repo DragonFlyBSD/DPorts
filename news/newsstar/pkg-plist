@@ -1,4 +1,8 @@
+@exec d=/var/spool/newsstar/incoming ; test -d "$d" || install -d -onews -gnews -m0750 "$d"
+@exec d=/var/spool/newsstar/lib ; test -d "$d" || install -d -onews -gnews -m0750 "$d"
+@exec d="%D/%%ETCDIR%%" ; test -d "$d" || install -d -o0 -g0 -m0755 "$d"
 bin/newsstar
+man/man1/newsstar.1.gz
 libexec/newsstar/newsstar.bin
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/INSTALL
@@ -29,6 +33,9 @@ libexec/newsstar/newsstar.bin
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/newsrc.sample
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
-@dirrm lib/newsstar
-@dirrm etc/newsstar
 @dirrm libexec/newsstar
+@dirrmtry %%ETCDIR%%
+@unexec if [ -d /var/spool/newsstar ] ; then echo "==================================================" ; echo "If you are deinstalling newsstar for good" ; echo "remove the spool: type: rm -rf /var/spool/newsstar"; echo "==================================================" ; fi
+@unexec rmdir /var/spool/newsstar/lib >/dev/null 2>&1 || :
+@unexec rmdir /var/spool/newsstar/incoming >/dev/null 2>&1 || :
+@unexec rmdir /var/spool/newsstar >/dev/null 2>&1 || :
