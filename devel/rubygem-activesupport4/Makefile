@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-activesupport4/Makefile 331452 2013-10-24 02:21:32Z swills $
+# $FreeBSD: devel/rubygem-activesupport4/Makefile 332033 2013-10-30 02:26:17Z swills $
 
 PORTNAME=	activesupport
 PORTVERSION=	4.0.0
@@ -25,5 +25,4 @@ PKGNAMESUFFIX=	4
 
 NOPORTDOCS=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
