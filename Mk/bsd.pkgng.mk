@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 330466 2013-10-16 00:38:38Z bdrewery $
+# $FreeBSD: Mk/bsd.pkgng.mk 332184 2013-10-30 22:13:56Z bdrewery $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -82,10 +82,23 @@ create-manifest:
 .undef opt
 	@${ECHO_CMD} "}" >> ${MANIFESTF}
 	@[ -f ${PKGINSTALL} ] && ${CP} ${PKGINSTALL} ${METADIR}/+INSTALL; \
-	[ -f ${PKGPREINSTALL} ] && ${CP} ${PKGPREINSTALL} ${METADIR}/+PRE_INSTALL; \
-	[ -f ${PKGPOSTINSTALL} ] && ${CP} ${PKGPOSTINSTALL} ${METADIR}/+POST_INSTALL; \
+	${RM} -f ${METADIR}/+PRE_INSTALL ; \
+	for a in ${PKGPREINSTALL}; do \
+		[ -f $$a ] && ${CAT} $$a >> ${METADIR}/+PRE_INSTALL ; \
+	done ; \
+	${RM} -f ${METADIR}/+POST_INSTALL ; \
+	for a in ${PKGPOSTINSTALL}; do \
+		[ -f $$a ] && ${CAT} $$a >> ${METADIR}/+POST_INSTALL ; \
+	done ; \
 	[ -f ${PKGDEINSTALL} ] && ${CP} ${PKGDEINSTALL} ${METADIR}/+DEINSTALL; \
-	[ -f ${PKGPREDEINSTALL} ] && ${CP} ${PKGPREDEINSTALL} ${METADIR}/+PRE_DEINSTALL; \
+	${RM} -f ${METADIR}/+PRE_DEINSTALL ; \
+	for a in ${PKGPREDEINSTALL}; do \
+		[ -f $$a ] && ${CAT} $$a >> ${METADIR}/+PRE_DEINSTALL ; \
+	done ; \
+	${RM} -f ${METADIR}/+POST_DEINSTALL ; \
+	for a in ${PKGPOSRDEINSTALL}; do \
+		[ -f $$a ] && ${CAT} $$a >> ${METADIR}/+POST_DEINSTALL ; \
+	done ; \
 	[ -f ${PKGPOSTDEINSTALL} ] && ${CP} ${PKGPOSTDEINSTALL} ${METADIR}/+POST_DEINSTALL; \
 	[ -f ${PKGUPGRADE} ] && ${CP} ${PKGUPGRADE} ${METADIR}/+UPGRADE; \
 	[ -f ${PKGPREUPGRADE} ] && ${CP} ${PKGPREUPGRADE} ${METADIR}/+PRE_UPGRADE; \

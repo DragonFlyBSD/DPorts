@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.lua.mk 330395 2013-10-15 12:38:25Z bapt $
+# $FreeBSD: Mk/bsd.lua.mk 332223 2013-10-31 11:12:23Z bapt $
 #
 # bsd.lua.mk - Support for Lua based ports.
 #
@@ -153,7 +153,7 @@ _LUA_COMPS_ALL=			lua tolua toluaxx ruby \
 						alien app compat51 dfui filename gettext posix \
 						pty socket
 _LUA_DEP_TYPES_ALL=		build lib run
-_LUA_VERS_ALL=			4.0 5.0 5.1
+_LUA_VERS_ALL=			5.0 5.1
 _LUA_PLIST_ALL=			LUA_VER LUA_VER_SH LUA_VER_STR LUA_PREFIX LUA_SUBDIR
 _LUA_PLIST_DIR_ALL=		LUA_BINDIR LUA_INCDIR LUA_LIBDIR \
 						LUA_MODLIBDIR LUA_MODSHAREDIR
@@ -167,10 +167,6 @@ _LUA_VERS_LISTS=		_LUA_VER_INSTALLED WANT_LUA_VER WITH_LUA_VER
 # _LUA_FILE_comp_ver	- File installed by that component.
 # _LUA_DEPTYPE_comp_ver	- Default dependency type.
 #
-
-_LUA_PORT_lua_4.0=		lang/lua4
-_LUA_DEPTYPE_lua_4.0=	lib
-_LUA_PORT_tolua_4.0=	lang/tolua4
 
 _LUA_PORT_lua_5.0=		lang/lua50
 _LUA_DEPTYPE_lua_5.0=	lib

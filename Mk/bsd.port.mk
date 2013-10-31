@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 331342 2013-10-23 00:43:04Z bdrewery $
+# $FreeBSD: Mk/bsd.port.mk 332196 2013-10-31 02:27:14Z bdrewery $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -2345,12 +2345,12 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .if ${UID} == 0
 COPYTREE_BIN=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
 					2>&1) && \
-					${CHOWN} -R ${BINOWN}:${BINGRP} $$1 && \
+					${CHOWN} -Rh ${BINOWN}:${BINGRP} $$1 && \
 					${FIND} -d $$0 $$2 -type d -exec chmod 755 $$1/{} \; && \
 					${FIND} -d $$0 $$2 -type f -exec chmod ${BINMODE} $$1/{} \;' --
 COPYTREE_SHARE=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
 					2>&1) && \
-					${CHOWN} -R ${SHAREOWN}:${SHAREGRP} $$1 && \
+					${CHOWN} -Rh ${SHAREOWN}:${SHAREGRP} $$1 && \
 					${FIND} -d $$0 $$2 -type d -exec chmod 755 $$1/{} \; && \
 					${FIND} -d $$0 $$2 -type f -exec chmod ${SHAREMODE} $$1/{} \;' --
 .else
@@ -4183,6 +4183,14 @@ install-ldconfig-file:
 .endif
 
 .if !target(create-users-groups)
+.if defined(GROUPS) || defined(USERS)
+.if defined(WITH_PKGNG)
+_UG_OUTPUT=	${WRKDIR}/users-groups.sh
+PKGPREINSTALL+=	${_UG_OUTPUT}
+.else
+_UG_OUTPUT=	/dev/null
+.endif
+.endif
 create-users-groups:
 .if defined(GROUPS) || defined(USERS)
 .if defined(GROUPS)
@@ -4191,8 +4199,15 @@ create-users-groups:
 	@${ECHO_CMD} "** ${_file} doesn't exist. Exiting."; exit 1
 .endif
 .endfor
+.if defined(WITH_PKGNG)
+		@${RM} -f ${_UG_OUTPUT} || ${TRUE}
+.endif
 	@${ECHO_MSG} "===> Creating users and/or groups."
+.if defined(WITH_PKGNG)
+	@${ECHO_CMD} "echo \"===> Creating users and/or groups.\"" >> ${_UG_OUTPUT}
+.else
 	@${ECHO_CMD} "@exec echo \"===> Creating users and/or groups.\"" >> ${TMPPLIST}
+.endif
 .for _group in ${GROUPS}
 # _bgpd:*:130:
 	@if ! ${GREP} -h ^${_group}: ${GID_FILES} >/dev/null 2>&1; then \
@@ -4209,9 +4224,15 @@ create-users-groups:
 			${ECHO_MSG} "Using existing group \`$$group'."; \
 		fi; \
 		fi ; \
-		${ECHO_CMD} "@exec if ! ${PW} groupshow $$group >/dev/null 2>&1; then \
-			echo \"Creating group '$$group' with gid '$$gid'.\"; \
-			${PW} groupadd $$group -g $$gid; else echo \"Using existing group '$$group'.\"; fi" >> ${TMPPLIST}; \
+		if [ -z "${WITH_PKGNG}" ]; then \
+				${ECHO_CMD} "@exec if ! ${PW} groupshow $$group >/dev/null 2>&1; then \
+					echo \"Creating group '$$group' with gid '$$gid'.\"; \
+					${PW} groupadd $$group -g $$gid; else echo \"Using existing group '$$group'.\"; fi" >> ${TMPPLIST}; \
+		else \
+				${ECHO_CMD} -e "if ! ${PW} groupshow $$group >/dev/null 2>&1; then \n \
+					echo \"Creating group '$$group' with gid '$$gid'.\" \n \
+					${PW} groupadd $$group -g $$gid; else echo \"Using existing group '$$group'.\"\nfi" >> ${_UG_OUTPUT}; \
+		fi ; \
 	done
 .endfor
 .endif
@@ -4241,10 +4262,17 @@ create-users-groups:
 			${ECHO_MSG} "Using existing user \`$$login'."; \
 		fi; \
 		fi; \
-		${ECHO_CMD} "@exec if ! ${PW} usershow $$login >/dev/null 2>&1; then \
-			echo \"Creating user '$$login' with uid '$$uid'.\"; \
-			${PW} useradd $$login -u $$uid -g $$gid $$class -c \"$$gecos\" -d $$homedir -s $$shell; \
-			else echo \"Using existing user '$$login'.\"; fi" >> ${TMPPLIST}; \
+		if [ -z "${WITH_PKGNG}" ]; then \
+			${ECHO_CMD} "@exec if ! ${PW} usershow $$login >/dev/null 2>&1; then \
+				echo \"Creating user '$$login' with uid '$$uid'.\"; \
+				${PW} useradd $$login -u $$uid -g $$gid $$class -c \"$$gecos\" -d $$homedir -s $$shell; \
+				else echo \"Using existing user '$$login'.\"; fi" >> ${TMPPLIST}; \
+		else \
+			${ECHO_CMD} -e "if ! ${PW} usershow $$login >/dev/null 2>&1; then \n \
+				echo \"Creating user '$$login' with uid '$$uid'.\" \n \
+				${PW} useradd $$login -u $$uid -g $$gid $$class -c \"$$gecos\" -d $$homedir -s $$shell \n \
+				else \necho \"Using existing user '$$login'.\" \nfi" >> ${_UG_OUTPUT}; \
+		fi ; \
 		case $$homedir in /nonexistent|/var/empty) ;; *) ${ECHO_CMD} "@exec ${INSTALL} -d -g $$gid -o $$uid $$homedir" >> ${TMPPLIST};; esac; \
 	done
 .endfor
@@ -4260,9 +4288,15 @@ create-users-groups:
 						${ECHO_MSG} "Adding user \`$${_login}' to group \`${_group}'."; \
 						${PW} groupmod ${_group} -m $${_login}; \
 					fi; \
-					${ECHO_CMD} "@exec if ! ${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \
-						echo \"Adding user '$${_login}' to group '${_group}'.\"; \
-						${PW} groupmod ${_group} -m $${_login}; fi" >> ${TMPPLIST}; \
+					if [ -z "${WITH_PKGNG}" ]; then \
+							${ECHO_CMD} "@exec if ! ${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \
+								echo \"Adding user '$${_login}' to group '${_group}'.\"; \
+								${PW} groupmod ${_group} -m $${_login}; fi" >> ${TMPPLIST}; \
+					else \
+							${ECHO_CMD} "if ! ${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \n \
+								echo \"Adding user '$${_login}' to group '${_group}'.\" \n \
+								${PW} groupmod ${_group} -m $${_login} \nfi" >> ${_UG_OUTPUT}; \
+					fi ; \
 				fi; \
 			done; \
 		done; \
@@ -4288,7 +4322,7 @@ create-users-groups:
 # and user(s) are the first in pkg-plist
 .if !target(fix-plist-sequence)
 fix-plist-sequence: ${TMPPLIST}
-.if defined(GROUPS) || defined(USERS)
+.if !defined(WITH_PKGNG) && (defined(GROUPS) || defined(USERS))
 	@${ECHO_CMD} "===> Correct pkg-plist sequence to create group(s) and user(s)"
 	@${EGREP} -e '^@exec echo.*Creating users and' -e '^@exec.*${PW}' -e '^@exec ${INSTALL} -d -g' ${TMPPLIST} > ${TMPGUCMD}
 	@${EGREP} -v -e '^@exec echo.*Creating users and' -e '^@exec.*${PW}' -e '^@exec ${INSTALL} -d -g' ${TMPPLIST} >> ${TMPGUCMD}
