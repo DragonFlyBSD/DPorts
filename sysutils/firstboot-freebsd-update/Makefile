@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/firstboot-freebsd-update/Makefile 331293 2013-10-22 16:19:33Z cperciva $
+# $FreeBSD: sysutils/firstboot-freebsd-update/Makefile 331815 2013-10-28 00:06:49Z cperciva $
 
 PORTNAME=	firstboot-freebsd-update
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
