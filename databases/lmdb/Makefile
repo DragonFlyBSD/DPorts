@@ -1,8 +1,8 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: databases/lmdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/lmdb/Makefile 331826 2013-10-28 03:22:17Z delphij $
 
 PORTNAME=	lmdb
-PORTVERSION=	0.9.8
+PORTVERSION=	0.9.9
 CATEGORIES=	databases
 MASTER_SITES=	https://gitorious.org/${GO_ACCOUNT}/${GO_PROJECT}/archive/${GO_TAGNAME}.tar.gz?dummy= \
 		LOCAL/delphij
