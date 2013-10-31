@@ -1,7 +1,7 @@
-# $FreeBSD: www/pear-Horde_Css_Parser/Makefile 331093 2013-10-21 06:40:56Z mm $
+# $FreeBSD: www/pear-Horde_Css_Parser/Makefile 332016 2013-10-29 21:46:58Z mm $
 
 PORTNAME=	Horde_Css_Parser
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
