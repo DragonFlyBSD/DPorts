@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-simple_form/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-simple_form/Makefile 332042 2013-10-30 02:46:01Z swills $
 
 PORTNAME=		simple_form
 PORTVERSION=		2.1.0
@@ -16,5 +16,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
