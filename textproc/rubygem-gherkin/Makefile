@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-gherkin/Makefile 331056 2013-10-20 19:14:52Z swills $
+# $FreeBSD: textproc/rubygem-gherkin/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	gherkin
 PORTVERSION=	2.12.1
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
