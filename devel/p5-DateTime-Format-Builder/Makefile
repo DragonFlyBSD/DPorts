@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Builder/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Builder/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Format-Builder
 PORTVERSION=	0.81
@@ -24,30 +24,19 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Format::Builder.3 DateTime::Format::Builder::Parser.3 \
-		DateTime::Format::Builder::Parser::Dispatch.3 \
-		DateTime::Format::Builder::Parser::Regex.3 \
-		DateTime::Format::Builder::Parser::Quick.3 \
-		DateTime::Format::Builder::Parser::Strptime.3 \
-		DateTime::Format::Builder::Parser::generic.3 \
-		DateTime::Format::Builder::Tutorial.3
-
 PORTDOCS=	Changes README
 PORTEXAMPLES=	Apache.pm Fall.pm ICal.pm MySQL.pm Simple.pm Tivoli.pm W3CDTF.pm
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}/
-	cd ${WRKSRC}/examples/ && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}/
-	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples/ && ${INSTALL_DATA} ${PORTEXAMPLES} ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
