@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci
-# $FreeBSD: databases/rubygem-bigrecord/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-bigrecord/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	bigrecord
 PORTVERSION=	0.1.1
@@ -18,5 +18,4 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
