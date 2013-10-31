@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-actionpack/Makefile 331450 2013-10-24 01:45:27Z swills $
+# $FreeBSD: www/rubygem-actionpack/Makefile 332053 2013-10-30 03:00:33Z swills $
 
 PORTNAME=	actionpack
 PORTVERSION=	3.2.15
@@ -23,5 +23,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
