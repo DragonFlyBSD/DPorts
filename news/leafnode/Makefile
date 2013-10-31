@@ -1,8 +1,9 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: news/leafnode/Makefile 328878 2013-09-30 21:37:18Z mandree $
+# $FreeBSD: news/leafnode/Makefile 332195 2013-10-31 02:22:14Z mandree $
 
 PORTNAME=	leafnode
 DISTVERSION=	1.11.10
+PORTREVISION=	1
 CATEGORIES=	news ipv6
 MASTER_SITES=	SF \
 		http://www.dt.e-technik.uni-dortmund.de/~ma/${PORTNAME}/
