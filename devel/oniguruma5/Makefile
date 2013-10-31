@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/oniguruma5/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/oniguruma5/Makefile 331970 2013-10-29 16:47:46Z swills $
 
 PORTNAME=	oniguruma
 PORTVERSION=	5.9.4
@@ -17,6 +17,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 CONFLICTS=	oniguruma-2.*
+
+PKGNAMESUFFIX=	5
 
 USES=		pathfix
 GNU_CONFIGURE=	yes
