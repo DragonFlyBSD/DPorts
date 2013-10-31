@@ -1,8 +1,8 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: archivers/p5-Archive-Tar/Makefile 327702 2013-09-20 13:27:44Z sunpoet $
+# $FreeBSD: archivers/p5-Archive-Tar/Makefile 332232 2013-10-31 11:53:29Z jadawin $
 
 PORTNAME=	Archive-Tar
-PORTVERSION=	1.92
+PORTVERSION=	1.96
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
@@ -15,9 +15,6 @@ RUN_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		Archive::Tar.3 Archive::Tar::File.3
 
 OPTIONS_DEFINE=	TEXTDIFF
 TEXTDIFF_DESC=	"Text::Diff support for ptardiff"
