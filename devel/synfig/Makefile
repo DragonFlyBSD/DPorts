@@ -1,9 +1,9 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/synfig/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/synfig/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	synfig
 DISTVERSION=	0.63.05
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel graphics multimedia
 MASTER_SITES=	SF
 
