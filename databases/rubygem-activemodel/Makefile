@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-activemodel/Makefile 331450 2013-10-24 01:45:27Z swills $
+# $FreeBSD: databases/rubygem-activemodel/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	activemodel
 PORTVERSION=	3.2.15
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
