@@ -1,4 +1,4 @@
-# $FreeBSD: lang/sdcc-devel/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/sdcc-devel/Makefile 331303 2013-10-22 18:22:52Z tijl $
 
 PORTNAME=	sdcc
 PORTVERSION=	3.3.1.2013.09.07
@@ -56,8 +56,7 @@ Z80_CONFIGURE_OFF=	--disable-z80 --disable-z80-port		\
 			--disable-z180-port --disable-gbz80-port	\
 			--disable-r2k-port --disable-r3ka-port
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64"
 CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
@@ -67,13 +66,13 @@ post-patch:
 	@${REINPLACE_CMD} '/install:/s/:.*/:/' \
 		${WRKSRC}/Makefile.in \
 		${WRKSRC}/support/sdbinutils/libiberty/Makefile.in
-.if empty(PORT_OPTIONS:MDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} 's, [a-z-]*doc,,' \
 		${WRKSRC}/Makefile.in \
 		${WRKSRC}/sim/ucsim/packages_in.mk
 .endif
 
 post-install:
-	${FIND} -d ${DATADIR} -type d -empty -delete
+	${FIND} -d ${STAGEDIR}${DATADIR} -type d -empty -delete
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
