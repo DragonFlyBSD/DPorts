@@ -1,7 +1,7 @@
-# $FreeBSD: mail/horde-ingo/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/horde-ingo/Makefile 332016 2013-10-29 21:46:58Z mm $
 
 PORTNAME=	ingo
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.3
 CATEGORIES=	mail www pear
 PKGNAMEPREFIX=	horde-
 
