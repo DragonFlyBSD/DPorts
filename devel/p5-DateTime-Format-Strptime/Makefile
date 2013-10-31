@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold
-# $FreeBSD: devel/p5-DateTime-Format-Strptime/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Format-Strptime/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Format-Strptime
 PORTVERSION=	1.54
@@ -21,7 +21,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Format::Strptime.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
