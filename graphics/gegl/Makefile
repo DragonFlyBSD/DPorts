@@ -1,9 +1,9 @@
 # Created by: gahr
-# $FreeBSD: graphics/gegl/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gegl/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	gegl
 PORTVERSION=	0.2.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.2/
 
