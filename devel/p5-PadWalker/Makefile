@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-PadWalker/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-PadWalker/Makefile 331889 2013-10-28 18:53:54Z sunpoet $
 
 PORTNAME=	PadWalker
-PORTVERSION=	1.96
+PORTVERSION=	1.98
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ROBIN
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		PadWalker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
