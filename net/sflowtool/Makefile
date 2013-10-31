@@ -1,8 +1,8 @@
 # Created by: Gregory Edigarov <greg@bestnet.kharkov.ua>
-# $FreeBSD: net/sflowtool/Makefile 329239 2013-10-03 21:36:02Z ohauer $
+# $FreeBSD: net/sflowtool/Makefile 332004 2013-10-29 21:04:37Z ohauer $
 
 PORTNAME=	sflowtool
-PORTVERSION=	3.29
+PORTVERSION=	3.30
 CATEGORIES=	net
 MASTER_SITES=	http://www.inmon.com/bin/
 
