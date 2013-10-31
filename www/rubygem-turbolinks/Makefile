@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-turbolinks/Makefile 331495 2013-10-24 15:16:10Z swills $
+# $FreeBSD: www/rubygem-turbolinks/Makefile 332057 2013-10-30 03:04:19Z swills $
 
 PORTNAME=	turbolinks
 PORTVERSION=	1.3.0
@@ -14,6 +14,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 RUN_DEPENDS=	rubygem-coffee-rails>=0:${PORTSDIR}/devel/rubygem-coffee-rails
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
