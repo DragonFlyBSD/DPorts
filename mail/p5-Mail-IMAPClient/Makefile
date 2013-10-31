@@ -1,8 +1,8 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 332217 2013-10-31 09:04:30Z jadawin $
 
 PORTNAME=	Mail-IMAPClient
-PORTVERSION=	3.33
+PORTVERSION=	3.34
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PLOBBES
@@ -20,11 +20,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 
-MAN3=	Mail::IMAPClient.3 \
-	Mail::IMAPClient::BodyStructure.3 \
-	Mail::IMAPClient::BodyStructure::Parse.3 \
-	Mail::IMAPClient::MessageSet.3 \
-	Mail::IMAPClient::Thread.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
