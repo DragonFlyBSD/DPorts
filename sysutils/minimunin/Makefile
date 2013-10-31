@@ -1,8 +1,9 @@
 # Created by: Dirk Engling <erdgeist@erdgeist.org>
-# $FreeBSD: sysutils/minimunin/Makefile 331673 2013-10-26 10:33:34Z flo $
+# $FreeBSD: sysutils/minimunin/Makefile 331876 2013-10-28 18:08:56Z flo $
 
 PORTNAME=	minimunin
 PORTVERSION=	0.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://erdgeist.org/arts/software/minimunin/
 
