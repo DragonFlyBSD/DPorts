@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung
-# $FreeBSD: devel/p5-POE-Component-RSSAggregator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-RSSAggregator/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Component-RSSAggregator
 PORTVERSION=	1.11
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::RSSAggregator.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
