@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: mail/rubygem-actionmailer/Makefile 331450 2013-10-24 01:45:27Z swills $
+# $FreeBSD: mail/rubygem-actionmailer/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	actionmailer
 PORTVERSION=	3.2.15
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
