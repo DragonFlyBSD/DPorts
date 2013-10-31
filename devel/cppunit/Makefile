@@ -1,8 +1,9 @@
 # Created by: Graeme Cross <gcross@netspace.net.au>
-# $FreeBSD: devel/cppunit/Makefile 329899 2013-10-09 13:47:48Z bdrewery $
+# $FreeBSD: devel/cppunit/Makefile 331940 2013-10-29 11:35:48Z bdrewery $
 
 PORTNAME=	cppunit
 PORTVERSION=	1.12.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
