@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/libmatheval/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libmatheval/Makefile 331778 2013-10-27 15:01:17Z demon $
 
 PORTNAME=	libmatheval
-PORTVERSION=	1.1.10
+PORTVERSION=	1.1.11
 CATEGORIES=	devel math
 MASTER_SITES=	GNU
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -11,7 +11,7 @@ MAINTAINER=	demon@FreeBSD.org
 COMMENT=	A library of procedures for evaluating mathematical functions
 
 BUILD_DEPENDS=	flex>0:${PORTSDIR}/textproc/flex
-LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile
+LIB_DEPENDS=	libguile.so:${PORTSDIR}/lang/guile
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
@@ -19,9 +19,6 @@ USE_LDCONFIG=	yes
 USES=	pathfix
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
-INFO=		libmatheval
-
-NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/doc/libmatheval.info
 
