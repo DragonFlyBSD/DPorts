@@ -1,9 +1,9 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/vips/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/vips/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/${PORTVERSION:R}/
 
