@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/rubygem-tinder/Makefile 331048 2013-10-20 18:19:28Z swills $
+# $FreeBSD: net-im/rubygem-tinder/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	tinder
 PORTVERSION=	1.9.3
@@ -21,6 +21,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
