@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Chen
-# $FreeBSD: devel/p5-Devel-Caller/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Caller/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-Caller
 PORTVERSION=	2.06
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::Caller.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
