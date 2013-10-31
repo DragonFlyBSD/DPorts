@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/gnump3d/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gnump3d/Makefile 332242 2013-10-31 13:54:15Z jadawin $
 
 PORTNAME=	gnump3d
 PORTVERSION=	3.0
@@ -14,6 +14,9 @@ COMMENT=	Streaming server for MP3, Ogg Vorbis, and other streamable audio files
 RUN_DEPENDS=	liblame.so:${PORTSDIR}/audio/lame \
 		libsox.so:${PORTSDIR}/audio/sox \
 		liboggenc.so:${PORTSDIR}/audio/vorbis-tools
+
+DEPRECATED=	Development has been abandoned upstream
+EXPIRATION_DATE=	2013-11-30
 
 USE_BZIP2=	yes
 NO_STAGE=	yes
