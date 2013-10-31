@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-POE-Component-Cron/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-Cron/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Component-Cron
 PORTVERSION=	0.021
@@ -23,7 +23,4 @@ RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Cron.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
