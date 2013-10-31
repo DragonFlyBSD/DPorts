@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Horde_Prefs/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Horde_Prefs/Makefile 332016 2013-10-29 21:46:58Z mm $
 
 PORTNAME=	Horde_Prefs
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
