@@ -1,8 +1,9 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/redmine/Makefile 331455 2013-10-24 03:22:12Z swills $
+# $FreeBSD: www/redmine/Makefile 331903 2013-10-28 21:59:29Z swills $
 
 PORTNAME=	redmine
 PORTVERSION=	2.3.3
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_RUBYFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
