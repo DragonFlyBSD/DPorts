@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-AI-Prolog/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AI-Prolog/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	AI-Prolog
 PORTVERSION=	0.741
@@ -24,26 +24,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS+=</dev/null
 
-MAN1=	aiprolog.1
-MAN3=	AI::Prolog.3 \
-	AI::Prolog::Article.3 \
-	AI::Prolog::Builtins.3 \
-	AI::Prolog::ChoicePoint.3 \
-	AI::Prolog::Cookbook.3 \
-	AI::Prolog::Engine.3 \
-	AI::Prolog::Engine::Primitives.3 \
-	AI::Prolog::Introduction.3 \
-	AI::Prolog::KnowledgeBase.3 \
-	AI::Prolog::Parser.3 \
-	AI::Prolog::Parser::PreProcessor.3 \
-	AI::Prolog::Parser::PreProcessor::Math.3 \
-	AI::Prolog::Term.3 \
-	AI::Prolog::Term::Cut.3 \
-	AI::Prolog::Term::Number.3 \
-	AI::Prolog::TermList.3 \
-	AI::Prolog::TermList::Clause.3 \
-	AI::Prolog::TermList::Primitive.3 \
-	AI::Prolog::TermList::Step.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
