@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-dbi/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ruby-dbi/Makefile 331927 2013-10-29 02:53:00Z swills $
 
 PORTNAME=	dbi
 PORTVERSION=	0.4.3
@@ -14,7 +14,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DBI-for-Ruby - a common interface for SQL-based databases
 
 RUN_DEPENDS=	${RUBY_SITELIBDIR}/aspectr.rb:${PORTSDIR}/devel/ruby-aspectr \
-    		rubygem-deprecated>=2.0.0:${PORTSDIR}/devel/rubygem-deprecated2
+    		rubygem-deprecated2>=2.0.0:${PORTSDIR}/devel/rubygem-deprecated2
 
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
