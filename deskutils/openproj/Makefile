@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/openproj/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: deskutils/openproj/Makefile 331828 2013-10-28 05:18:54Z dinoex $
 
 PORTNAME=	openproj
 PORTVERSION=	1.4
@@ -9,8 +9,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A free, open source Project Manager
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
-
-NO_STAGE=	yes
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -23,8 +21,8 @@ SUB_FILES=	openproj.sh
 
 do-install:
 	cd ${WRKSRC} \
-	  && ${FIND} ${DATAFILES} -type d -exec ${MKDIR} ${DATADIR}/{} \; \
-	  && ${FIND} ${DATAFILES} -type f -exec ${INSTALL_DATA} {} ${DATADIR}/{} \;
-	${INSTALL_SCRIPT} ${WRKDIR}/openproj.sh ${PREFIX}/bin/openproj
+	  && ${FIND} ${DATAFILES} -type d -exec ${MKDIR} ${STAGEDIR}${DATADIR}/{} \; \
+	  && ${FIND} ${DATAFILES} -type f -exec ${INSTALL_DATA} {} ${STAGEDIR}${DATADIR}/{} \;
+	${INSTALL_SCRIPT} ${WRKDIR}/openproj.sh ${STAGEDIR}${PREFIX}/bin/openproj
 
 .include <bsd.port.mk>
