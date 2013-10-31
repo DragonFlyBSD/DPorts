@@ -1,5 +1,5 @@
 # Created by: Martin Kropfinger
-# $FreeBSD: games/minecraft-server/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/minecraft-server/Makefile 331942 2013-10-29 12:47:01Z jhale $
 
 PORTNAME=	minecraft-server
 PORTVERSION=	1.4.7
@@ -12,7 +12,7 @@ DISTFILES=	minecraft_server.jar \
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_ONLY=	#empty
 
-MAINTAINER=	freebsd@rakor-net.de
+MAINTAINER=	janik@hikarihq.com
 COMMENT=	Server for the block building game
 
 RUN_DEPENDS=	tmux:${PORTSDIR}/sysutils/tmux
