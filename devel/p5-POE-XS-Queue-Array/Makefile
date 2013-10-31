@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-XS-Queue-Array/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-XS-Queue-Array/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-XS-Queue-Array
 PORTVERSION=	0.006
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	POE::XS::Queue::Array.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
