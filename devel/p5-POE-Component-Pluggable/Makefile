@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-POE-Component-Pluggable/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-Pluggable/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Component-Pluggable
 PORTVERSION=	1.26
@@ -17,8 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Pluggable.3 POE::Component::Pluggable::Pipeline.3 \
-		POE::Component::Pluggable::Constants.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
