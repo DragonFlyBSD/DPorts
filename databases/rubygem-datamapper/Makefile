@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/rubygem-datamapper/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-datamapper/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	datamapper
 PORTVERSION=	1.2.0
@@ -22,5 +22,4 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
