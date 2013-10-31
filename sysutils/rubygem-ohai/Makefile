@@ -1,8 +1,9 @@
 # Created by: Renaud Chaput <renchap@cocoa-x.com>
-# $FreeBSD: sysutils/rubygem-ohai/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-ohai/Makefile 331910 2013-10-28 23:50:44Z swills $
 
 PORTNAME=	ohai
 PORTVERSION=	6.16.0
+PORTREVISION=	1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
