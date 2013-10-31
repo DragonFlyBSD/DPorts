@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-json146/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-json146/Makefile 332038 2013-10-30 02:36:45Z swills $
 
 ## XXX: Legacy for rubygem DM ports
 
@@ -13,10 +13,11 @@ COMMENT=	Parse JSON texts and generate them from ruby data structures
 PORTSCOUT=	limit:^1.4
 NO_LATEST_LINK=	yes
 
+PKGNAMESUFFIX=	146
+
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/edit_json.rb bin/prettify_json.rb
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
