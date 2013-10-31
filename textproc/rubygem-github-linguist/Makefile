@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-github-linguist/Makefile 331538 2013-10-25 00:56:14Z swills $
+# $FreeBSD: textproc/rubygem-github-linguist/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	github-linguist
 PORTVERSION=	2.9.4
@@ -19,6 +19,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/linguist
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
