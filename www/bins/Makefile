@@ -1,9 +1,5 @@
-# New ports collection makefile for:	bins
-# Date created:		Sat Nov 23 01:17:35 UTC 2002
-# Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-#
-# $FreeBSD: www/bins/Makefile 327283 2013-09-14 13:38:20Z az $
-#
+# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
+# $FreeBSD: www/bins/Makefile 332218 2013-10-31 10:03:20Z marino $
 
 PORTNAME=	bins
 PORTVERSION=	1.1.29
@@ -18,7 +14,7 @@ RUN_DEPENDS=	\
 	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 	convert:${PORTSDIR}/graphics/ImageMagick \
 	p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv \
-	p5-Text-Iconv>=0:${PORTSDIR}/textproc/p5-Text-Unaccent \
+	p5-Text-Unaccent>=0:${PORTSDIR}/textproc/p5-Text-Unaccent \
 	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
 	p5-HTML-Clean>0:${PORTSDIR}/www/p5-HTML-Clean \
 	p5-HTML-Template>=0:${PORTSDIR}/www/p5-HTML-Template \
@@ -34,6 +30,7 @@ USES=		perl5
 USE_PERL5=	run
 USE_BZIP2=	yes
 NO_BUILD=	yes
+NO_STAGE=	yes
 
 # additional scripts
 BINS_SCRIPTS=	tools/bins_txt2xml
@@ -89,7 +86,7 @@ pre-everything::
 .if !defined(WITH_I18N)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_I18N to enable localization support.'
-	@${ECHO_MSG} '===>   Support for languages other than english.'
+	@${ECHO_MSG} '===> Support for languages other than english.'
 .endif
 	@${ECHO_MSG} '===>'
 
