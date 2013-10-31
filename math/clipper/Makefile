@@ -1,8 +1,8 @@
 # Created by: Martin Dieringer <martin.dieringer@gmx.de>
-# $FreeBSD: math/clipper/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/clipper/Makefile 332134 2013-10-30 15:52:49Z danilo $
 
 PORTNAME=	clipperlib
-PORTVERSION=	5.1.5
+PORTVERSION=	6.0.0
 CATEGORIES=	math
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	polyclipping
@@ -11,11 +11,12 @@ DISTNAME=	clipper_ver${PORTVERSION}
 MAINTAINER=	martin.dieringer@gmx.de
 COMMENT=	Polygon clipping library
 
+LICENSE=	BSL
+
 WRKSRC=		${WRKDIR}/cpp
 
 USE_LDCONFIG=	yes
 USE_ZIP=	yes
 USES=		cmake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
