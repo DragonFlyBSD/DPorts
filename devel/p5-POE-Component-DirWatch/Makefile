@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Component-DirWatch/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-DirWatch/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Component-DirWatch
 PORTVERSION=	0.300001
@@ -23,14 +23,6 @@ USES=		perl5
 USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
-MAN3=	POE::Component::DirWatch.3 \
-	POE::Component::DirWatch::Modified.3 \
-	POE::Component::DirWatch::New.3 \
-	POE::Component::DirWatch::Role::AIO.3 \
-	POE::Component::DirWatch::Role::Signatures.3 \
-	POE::Component::DirWatch::Unmodified.3
-
-NO_STAGE=	yes
 regression-test:
 	@(cd ${WRKSRC} && ${PERL} ${CONFIGURE_SCRIPT} && ${MAKE} test)
 
