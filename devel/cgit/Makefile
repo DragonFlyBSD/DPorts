@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cgit/Makefile 328059 2013-09-23 21:36:09Z madpilot $
+# $FreeBSD: devel/cgit/Makefile 331804 2013-10-27 20:39:56Z wg $
 
 PORTNAME=	cgit
 PORTVERSION=	0.9.2
@@ -29,8 +29,8 @@ SUB_FILES=	pkg-message
 SUB_LIST+=	PORTNAME=${PORTNAME}
 PLIST_SUB+=	PORTNAME=${PORTNAME} WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.pre.mk>
 
 post-extract:
@@ -50,12 +50,7 @@ post-patch:
 .endif
 
 post-install:
-	@${MKDIR} /var/cache/${PORTNAME}
-	@${CHOWN} ${WWWOWN}:${WWWGRP} /var/cache/${PORTNAME}
-	@${CAT} ${PKGMESSAGE}
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}rc.5.txt ${DOCSDIR}/
-.endif
+	@${MKDIR} ${STAGEDIR}/${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}rc.5.txt ${STAGEDIR}/${DOCSDIR}/
 
 .include <bsd.port.post.mk>
