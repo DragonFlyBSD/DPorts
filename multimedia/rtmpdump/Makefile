@@ -1,21 +1,23 @@
-# $FreeBSD: multimedia/rtmpdump/Makefile 331102 2013-10-21 08:39:36Z hrs $
+# $FreeBSD: multimedia/rtmpdump/Makefile 332194 2013-10-31 02:03:01Z hrs $
 
 PORTNAME=	rtmpdump
 PORTVERSION=	2.4.20130923
+PORTREVISION=	2
 CATEGORIES=	multimedia net
 MASTER_SITES=	LOCAL/hrs
 
 MAINTAINER=	hrs@FreeBSD.org
-COMMENT=	A tool to download RTMP streams
+COMMENT=	RTMP streams download utility
 
 LICENSE=	GPLv2
 
+LIB_DEPENDS=	librtmp.so:${PORTSDIR}/multimedia/librtmp
+
 USES=		pkgconfig
-USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 MAKE_ENV=	THREADLIB="${PTHREAD_LIBS}"
 CFLAGS+=	${PTHREAD_CFLAGS} -I${OPENSSLINC}
-LDFLAGS+=	-L${OPENSSLLIB}
+LDFLAGS+=	-L${LOCALBASE}/lib -L${OPENSSLLIB}
 PORTDOCS=	ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
