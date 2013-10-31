@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-rmagick/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-rmagick/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=		rmagick
 PORTVERSION=		2.13.2
@@ -15,7 +15,6 @@ RUBYGEM_AUTOPLIST=	yes
 OPTIONS_DEFINE=		X11
 OPTIONS_DEFAULT=	X11
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
