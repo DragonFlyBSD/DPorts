@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gitlab_git/Makefile 331551 2013-10-25 03:20:53Z swills $
+# $FreeBSD: devel/rubygem-gitlab_git/Makefile 332037 2013-10-30 02:34:55Z swills $
 
 PORTNAME=	gitlab_git
 PORTVERSION=	2.3.1
@@ -16,6 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
