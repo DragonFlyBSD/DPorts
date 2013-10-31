@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: games/bsp/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bsp/Makefile 332075 2013-10-30 06:13:05Z danilo $
 
 PORTNAME=	bsp
 PORTVERSION=	5.2
@@ -9,22 +9,21 @@ MASTER_SITES=	http://games.moria.org.uk/doom/bsp/download/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Node builder for Doom
 
+LICENSE=	GPLv2
+
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
-MAN6=		bsp.6
+OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2 -fomit-frame-pointer|${CFLAGS} &|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bsp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bsp.6 ${MANPREFIX}/man/man6
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/bsp ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/bsp.6 ${STAGEDIR}${MANPREFIX}/man/man6
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
