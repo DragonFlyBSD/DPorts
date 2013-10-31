@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: devel/p5-Data-Dumper-Concise/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Dumper-Concise/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-Dumper-Concise
 PORTVERSION=	2.020
@@ -20,7 +20,6 @@ OPTIONS_DEFINE=	ARGNAMES
 OPTIONS_DEFAULT=	ARGNAMES
 ARGNAMES_DESC=	Enable DwarnN subroutine
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MARGNAMES}
@@ -30,9 +29,5 @@ RUN_DEPENDS+=	p5-Devel-ArgNames>=0.03:${PORTSDIR}/devel/p5-Devel-ArgNames
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Data::Dumper::Concise.3 \
-		Data::Dumper::Concise::Sugar.3 \
-		Devel::Dwarn.3
 
 .include <bsd.port.mk>
