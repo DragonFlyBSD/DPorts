@@ -1,5 +1,5 @@
 # Created by: pusto@web.de
-# $FreeBSD: math/qhull5/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/qhull5/Makefile 332222 2013-10-31 11:06:16Z bapt $
 
 PORTNAME=	qhull
 PORTVERSION=	1.0
@@ -7,6 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.qhull.org/download/
 DISTNAME=	${PORTNAME}-2003.1
+PKGNAMESUFFIX=	5
 
 PATCH_SITES=		http://www.qhull.org/download/
 PATCHFILES=		poly.c-qh_gethash.patch
@@ -15,7 +16,6 @@ PATCH_DIST_STRIP=	-p2
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Qhull computes convex hulls, Delaunay triangulations, and halfspaces
 
-LATEST_LINK=	qhull5
 CONFLICTS=	qhull-2011* afni-[0-9]*
 
 USE_AUTOTOOLS=	libtool
