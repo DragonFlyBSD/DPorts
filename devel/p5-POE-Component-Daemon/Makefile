@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-Component-Daemon/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-POE-Component-Daemon/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Component-Daemon
 PORTVERSION=	0.1400
@@ -19,23 +19,20 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Daemon.3
-
 PORTDOCS=	*
 
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	for i in ${WRKSRC}/eg/*forking; do \
 		${PERL} -pi -e '$$_ = undef if m{use FindBin}o;' \
 			-e 's{.FindBin::Dir(.+)$$}{/tmp$$1\nwarn "Logging to \$$logfile\\n";}o' $${i}; \
-		${INSTALL_SCRIPT} $${i} ${EXAMPLESDIR}; \
+		${INSTALL_SCRIPT} $${i} ${STAGEDIR}${EXAMPLESDIR}; \
 	done
 
 .ifndef(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	for i in ${WRKSRC}/eg/*.png ${WRKSRC}/eg/*.dot; do \
-		${INSTALL_DATA} $${i} ${DOCSDIR}; \
+		${INSTALL_DATA} $${i} ${STAGEDIR}${DOCSDIR}; \
 	done
 .endif
 
