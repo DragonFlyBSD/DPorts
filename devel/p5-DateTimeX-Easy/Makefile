@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-DateTimeX-Easy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTimeX-Easy/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTimeX-Easy
 PORTVERSION=	0.089
@@ -22,8 +22,4 @@ TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DateTimeX::Easy.3 \
-	DateTimeX::Easy::DateParse.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
