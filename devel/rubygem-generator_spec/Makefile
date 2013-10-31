@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-generator_spec/Makefile 331542 2013-10-25 01:38:47Z swills $
+# $FreeBSD: devel/rubygem-generator_spec/Makefile 332037 2013-10-30 02:34:55Z swills $
 
 PORTNAME=	generator_spec
 PORTVERSION=	0.9.0
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
