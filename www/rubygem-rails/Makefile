@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-rails/Makefile 331450 2013-10-24 01:45:27Z swills $
+# $FreeBSD: www/rubygem-rails/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	rails
 PORTVERSION=	3.2.15
@@ -48,7 +48,6 @@ PASSENGER_DESC=	Passenger backend
 MEMCACHE_CLIENT_DESC=	MemCache-Client support
 OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFCGI}
