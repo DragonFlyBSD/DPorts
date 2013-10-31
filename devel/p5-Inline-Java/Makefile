@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/p5-Inline-Java/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Inline-Java/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Inline-Java
 PORTVERSION=	0.53
@@ -24,8 +24,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	J2SDK=${JAVA_HOME} </dev/null
 
-MAN3=		Inline::Java.3 \
-		Inline::Java::Callback.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
