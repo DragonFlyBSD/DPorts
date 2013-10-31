@@ -1,7 +1,8 @@
-# $FreeBSD: sysutils/beadm-devel/Makefile 331722 2013-10-26 17:04:06Z bdrewery $
+# $FreeBSD: sysutils/beadm-devel/Makefile 331773 2013-10-27 14:05:42Z bdrewery $
 
 PORTNAME=	beadm
 PORTVERSION=	1.0.99.20131026
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 MASTER_SITES=	GH \
