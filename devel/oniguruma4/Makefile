@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/oniguruma4/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/oniguruma4/Makefile 331970 2013-10-29 16:47:46Z swills $
 
 PORTNAME=	oniguruma
 PORTVERSION=	4.7.1
@@ -9,13 +9,15 @@ DISTNAME=	onig-${PORTVERSION}
 DIST_SUBDIR=	ruby
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A BSDL Regular Expressions library compatible with POSIX/GNU/Perl
+COMMENT=	BSDL Regular Expressions library compatible with POSIX/GNU/Perl
 
 NO_LATEST_LINK=	yes
 CONFLICTS=	oniguruma-2.*
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 DOCS=		HISTORY README doc/*
+
+PKGNAMESUFFIX=	4
 
 NO_STAGE=	yes
 post-patch:
