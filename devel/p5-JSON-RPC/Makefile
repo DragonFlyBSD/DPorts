@@ -1,5 +1,5 @@
 # Created by: Vadim Vatlin
-# $FreeBSD: devel/p5-JSON-RPC/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-JSON-RPC/Makefile 332029 2013-10-30 01:50:57Z vanilla $
 
 PORTNAME=	JSON-RPC
 PORTVERSION=	1.03
@@ -23,21 +23,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		JSON::RPC.3 \
-		JSON::RPC::Constants.3 \
-		JSON::RPC::Dispatch.3 \
-		JSON::RPC::Legacy.3 \
-		JSON::RPC::Legacy::Client.3 \
-		JSON::RPC::Legacy::Procedure.3 \
-		JSON::RPC::Legacy::Server.3 \
-		JSON::RPC::Legacy::Server::Apache2.3 \
-		JSON::RPC::Legacy::Server::CGI.3 \
-		JSON::RPC::Legacy::Server::Daemon.3 \
-		JSON::RPC::Parser.3 \
-		JSON::RPC::Procedure.3 \
-		JSON::RPC::Test.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
