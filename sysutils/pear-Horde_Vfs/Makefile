@@ -1,7 +1,7 @@
-# $FreeBSD: sysutils/pear-Horde_Vfs/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pear-Horde_Vfs/Makefile 332016 2013-10-29 21:46:58Z mm $
 
 PORTNAME=	Horde_Vfs
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.2
 CATEGORIES=	sysutils www pear
 PKGNAMEPREFIX=	pear-
 
