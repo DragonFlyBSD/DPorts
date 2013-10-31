@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg0/Makefile 331131 2013-10-21 12:53:44Z wg $
+# $FreeBSD: multimedia/ffmpeg0/Makefile 332194 2013-10-31 02:03:01Z hrs $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.7.16
@@ -274,7 +274,7 @@ CONFIGURE_ARGS+=	--disable-libopenjpeg
 
 # rtmp
 .if ${PORT_OPTIONS:MRTMP}
-LIB_DEPENDS+=	librtmp.so:${PORTSDIR}/multimedia/rtmpdump
+LIB_DEPENDS+=	librtmp.so:${PORTSDIR}/multimedia/librtmp
 CONFIGURE_ARGS+=	--enable-librtmp
 . if ${OPENSSLBASE} != "/usr"
 FFMPEG_CFLAGS+=		-I${OPENSSLINC}
