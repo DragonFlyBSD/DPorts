@@ -1,5 +1,5 @@
 # Created by: Mike Carlson (carlson39@llnl.gov)
-# $FreeBSD: databases/rubygem-couchrest/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-couchrest/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	couchrest
 PORTVERSION=	1.2.0
@@ -17,5 +17,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
