@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-railties/Makefile 331450 2013-10-24 01:45:27Z swills $
+# $FreeBSD: www/rubygem-railties/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	railties
 PORTVERSION=	3.2.15
@@ -20,5 +20,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/rails
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
