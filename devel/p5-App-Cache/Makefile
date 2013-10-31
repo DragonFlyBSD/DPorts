@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-App-Cache/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-Cache/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	App-Cache
 PORTVERSION=	0.37
@@ -20,7 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::Cache.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
