@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Carp-REPL/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Carp-REPL/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Carp-REPL
 PORTVERSION=	0.16
@@ -28,7 +28,4 @@ TEST_DEPENDS=	p5-Test-Expect>=0:${PORTSDIR}/devel/p5-Test-Expect
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Carp::REPL.3 Devel::REPL::Plugin::Carp::REPL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
