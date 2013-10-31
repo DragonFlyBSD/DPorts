@@ -1,9 +1,8 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: security/scanlogd/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/scanlogd/Makefile 332124 2013-10-30 15:06:24Z novel $
 
 PORTNAME=	scanlogd
-PORTVERSION=	2.2.6
-PORTREVISION=	1
+PORTVERSION=	2.2.7
 CATEGORIES=	security
 MASTER_SITES=	http://openwall.com/scanlogd/ \
 		ftp://ftp.openwall.com/pub/projects/scanlogd/ \
