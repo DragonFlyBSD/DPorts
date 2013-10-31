@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-dm-serializer/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-dm-serializer/Makefile 332032 2013-10-30 02:22:05Z swills $
 
 PORTNAME=	dm-serializer
 PORTVERSION=	1.2.2
@@ -18,5 +18,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
