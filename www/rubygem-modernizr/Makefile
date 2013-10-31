@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-modernizr/Makefile 331086 2013-10-21 02:50:09Z swills $
+# $FreeBSD: www/rubygem-modernizr/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	modernizr
 PORTVERSION=	2.6.2
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
