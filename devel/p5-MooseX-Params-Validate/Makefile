@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Params-Validate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Params-Validate/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Params-Validate
 PORTVERSION=	0.18
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Params::Validate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
