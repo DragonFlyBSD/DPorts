@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-simplecov-html/Makefile 331524 2013-10-24 19:52:42Z swills $
+# $FreeBSD: textproc/rubygem-simplecov-html/Makefile 332052 2013-10-30 02:59:10Z swills $
 
 PORTNAME=	simplecov-html
 PORTVERSION=	0.7.1
@@ -16,6 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
