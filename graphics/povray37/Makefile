@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/povray37/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/povray37/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	povray
 DISTVERSION=	3.7.0.RC6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.povray.org/beta/source/
 DIST_SUBDIR=	${UNIQUENAME}
