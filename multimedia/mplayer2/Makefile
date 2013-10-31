@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/mplayer2/Makefile 331332 2013-10-22 22:13:29Z gblach $
+# $FreeBSD: multimedia/mplayer2/Makefile 332095 2013-10-30 11:29:19Z marino $
 
 PORTNAME=	mplayer2
 PORTVERSION=	${MPLAYER2_PORT_VERSION}
@@ -27,7 +27,8 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		TMPDIR="${WRKSRC}"
 CONFIGURE_ARGS=	--cc=${CC} \
 		--extra-cflags='-I${LOCALBASE}/include/portaudio2' \
-		--extra-ldflags='-lavresample -L${LOCALBASE}/lib/portaudio2' \
+		--extra-libs='-lavresample' \
+		--extra-ldflags='-L${LOCALBASE}/lib/portaudio2' \
 		--mandir=${PREFIX}/man \
 		--enable-libavresample \
 		--disable-alsa \
