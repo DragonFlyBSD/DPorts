@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-CommitBit/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-CommitBit/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	CommitBit
 PORTVERSION=	0.02
@@ -19,14 +19,4 @@ RUN_DEPENDS=	p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CommitBit.3 \
-		CommitBit::Action::ConfirmEmail.3 \
-		CommitBit::Action::Login.3 \
-		CommitBit::Action::Logout.3 \
-		CommitBit::Model::User.3 \
-		CommitBit::Notification::ConfirmAddress.3 \
-		CommitBit::Notification::InviteToProject.3 \
-		CommitBit::Test.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
