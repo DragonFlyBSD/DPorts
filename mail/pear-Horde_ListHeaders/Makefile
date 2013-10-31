@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: mail/pear-Horde_ListHeaders/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pear-Horde_ListHeaders/Makefile 332016 2013-10-29 21:46:58Z mm $
 
 PORTNAME=	Horde_ListHeaders
-PORTVERSION=	1.0.1
+PORTVERSION=	1.1.0
 CATEGORIES=	mail www pear
 
 MAINTAINER=	horde@FreeBSD.org
