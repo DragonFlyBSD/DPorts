@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-amqp067/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-amqp067/Makefile 332047 2013-10-30 02:53:47Z swills $
 
 PORTNAME=	amqp
 PORTVERSION=	0.6.7
@@ -17,5 +17,6 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
+PKGNAMESUFFIX=	067
+
 .include <bsd.port.mk>
