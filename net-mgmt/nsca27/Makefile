@@ -1,5 +1,5 @@
 # Created by: Paul Dlug <paul@nerdlabs.com>
-# $FreeBSD: net-mgmt/nsca27/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/nsca27/Makefile 332226 2013-10-31 11:30:42Z bapt $
 
 PORTNAME=	nsca
 PORTVERSION=	2.7.2
@@ -18,10 +18,10 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	mcrypt:${PORTSDIR}/security/libmcrypt
 
 .if !defined(_BUILDING_NSCA_CLIENT)
-LATEST_LINK=	nsca27
+PKGNAMESUFFIX=	27
 CONFLICTS=	nsca-2.9.*
 .else
-LATEST_LINK=	nsca27-client
+PKGNAMESUFFIX=	27-client
 CONFLICTS=	nsca-client-2.9.*
 .endif
 
