@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-gon/Makefile 331033 2013-10-20 16:07:22Z swills $
+# $FreeBSD: www/rubygem-gon/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	gon
 PORTVERSION=	4.1.1
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
