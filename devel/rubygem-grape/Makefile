@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-grape/Makefile 331025 2013-10-20 15:11:56Z swills $
+# $FreeBSD: devel/rubygem-grape/Makefile 332037 2013-10-30 02:34:55Z swills $
 
 PORTNAME=	grape
 PORTVERSION=	0.6.0
@@ -22,6 +22,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
