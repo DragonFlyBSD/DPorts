@@ -1,0 +1,13 @@
+@comment $FreeBSD: net/dhcpcd/pkg-plist 331931 2013-10-29 06:13:15Z delphij $
+etc/dhcpcd.conf
+sbin/dhcpcd
+libexec/dhcpcd-hooks/50-ypbind
+libexec/dhcpcd-hooks/10-mtu
+libexec/dhcpcd-hooks/20-resolv.conf
+libexec/dhcpcd-hooks/50-ntp.conf
+libexec/dhcpcd-hooks/02-dump
+libexec/dhcpcd-hooks/30-hostname
+libexec/dhcpcd-hooks/01-test
+libexec/dhcpcd-hooks/29-lookup-hostname
+libexec/dhcpcd-run-hooks
+@dirrmtry libexec/dhcpcd-hooks
