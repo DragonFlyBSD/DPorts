@@ -1,9 +1,9 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: graphics/pfstools/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pfstools/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	pfstools
 PORTVERSION=	1.6.4
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
