@@ -1,8 +1,8 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: graphics/luminance/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/luminance/Makefile 332189 2013-10-31 00:32:31Z nemysis $
 
 PORTNAME=	luminance-hdr
-PORTREVISION=	2
+PORTREVISION=	3
 DISTVERSION=	2.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	SF/qtpfsgui/luminance/${DISTVERSION}
