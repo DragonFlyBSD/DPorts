@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg/Makefile 331133 2013-10-21 12:57:34Z wg $
+# $FreeBSD: multimedia/ffmpeg/Makefile 332194 2013-10-31 02:03:01Z hrs $
 
 PORTNAME=	ffmpeg
-PORTVERSION=	2.0.2
+PORTVERSION=	2.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -143,7 +143,7 @@ PULSEAUDIO_LIB_DEPENDS=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 PULSEAUDIO_CONFIGURE_ENABLE=	libpulse
 
 # rtmp
-RTMP_LIB_DEPENDS=	librtmp.so:${PORTSDIR}/multimedia/rtmpdump
+RTMP_LIB_DEPENDS=	librtmp.so:${PORTSDIR}/multimedia/librtmp
 RTMP_CONFIGURE_ENABLE=	librtmp
 
 # schroedinger
