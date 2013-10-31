@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/funnyboat/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/funnyboat/Makefile 331919 2013-10-29 01:26:51Z amdmi3 $
 
 PORTNAME=	funnyboat
 PORTVERSION=	1.5
@@ -22,24 +22,15 @@ NO_BUILD=	yes
 SUB_FILES=	funnyboat_
 SUB_LIST=	PROGRAM_DIR="${PREFIX}/lib/${PORTNAME}"
 
-PORTDOCS=	README.txt
+PORTDOCS=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFAULT=DOCS
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/${PORTNAME}
-	${MKDIR} ${PREFIX}/lib/${PORTNAME}/data
-	${INSTALL_DATA} ${WRKSRC}/*.py ${PREFIX}/lib/${PORTNAME}
-	${INSTALL_DATA} ${WRKSRC}/data/* ${PREFIX}/lib/${PORTNAME}/data
-	${INSTALL_SCRIPT} ${WRKDIR}/funnyboat_ ${PREFIX}/bin/funnyboat
-
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "*.py data" ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKDIR}/funnyboat_ ${STAGEDIR}${PREFIX}/bin/funnyboat
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
