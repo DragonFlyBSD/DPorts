@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-cucumber/Makefile 331061 2013-10-20 20:11:48Z swills $
+# $FreeBSD: devel/rubygem-cucumber/Makefile 332035 2013-10-30 02:31:04Z swills $
 
 PORTNAME=	cucumber
 PORTVERSION=	1.3.8
@@ -20,6 +20,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/cucumber
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
