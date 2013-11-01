@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-ParseXS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ExtUtils-ParseXS/Makefile 331844 2013-10-28 12:01:59Z mat $
 
 PORTNAME=	ExtUtils-ParseXS
-PORTVERSION=	3.18
+PORTVERSION=	3.22
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SMUELLER
@@ -11,22 +11,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Converts Perl XS code into C code
 
-USES=		perl5
+USES=		perl5 shebangfix
 USE_PERL5=	configure
-
-MAN3=		ExtUtils::ParseXS.3 \
-		ExtUtils::ParseXS::Constants.3 \
-		ExtUtils::ParseXS::Utilities.3 \
-		ExtUtils::Typemaps.3 \
-		ExtUtils::Typemaps::Cmd.3 \
-		ExtUtils::Typemaps::InputMap.3 \
-		ExtUtils::Typemaps::OutputMap.3 \
-		ExtUtils::Typemaps::Type.3
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+# Overwrite this here
+perl_OLD_CMD=	perl
+SHEBANG_FILES=	lib/ExtUtils/xsubpp
 
 post-patch:
-	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
