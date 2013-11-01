@@ -1,8 +1,9 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 331781 2013-10-27 15:17:05Z pawel $
 
 PORTNAME=	Net-Z3950-SimpleServer
 PORTVERSION=	1.16
+PORTREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
