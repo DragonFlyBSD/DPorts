@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-JSON-RPC-Common/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-JSON-RPC-Common/Makefile 332029 2013-10-30 01:50:57Z vanilla $
 
 PORTNAME=	JSON-RPC-Common
 PORTVERSION=	0.10
@@ -24,23 +24,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		JSON::RPC::Common::Marshal::Text.3 \
-		JSON::RPC::Common::Message.3 \
-		JSON::RPC::Common::Procedure::Call.3 \
-		JSON::RPC::Common::Procedure::Return::Version_1_1.3 \
-		JSON::RPC::Common::Procedure::Return::Error.3 \
-		JSON::RPC::Common::Procedure::Call::Version_1_0.3 \
-		JSON::RPC::Common::Procedure::Return.3 \
-		JSON::RPC::Common.3 \
-		JSON::RPC::Common::Procedure::Return::Version_2_0.3 \
-		JSON::RPC::Common::Procedure::Return::Version_1_0.3 \
-		JSON::RPC::Common::Procedure::Call::Version_1_1.3 \
-		JSON::RPC::Common::Procedure::Return::Version_2_0::Error.3 \
-		JSON::RPC::Common::TypeConstraints.3 \
-		JSON::RPC::Common::Procedure::Return::Version_1_1::Error.3 \
-		JSON::RPC::Common::Procedure::Call::Version_2_0.3 \
-		JSON::RPC::Common::Procedure::Return::Version_1_0::Error.3 \
-		JSON::RPC::Common::Marshal::HTTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
