@@ -1,13 +1,9 @@
-# New ports collection makefile for:	iso2mkv
-# Date created:			31 Dec 2006
-# Whom:				Alexander Botero-Lowry <alexbl@FreeBSD.org>
-#
-# $FreeBSD: multimedia/iso2mkv/Makefile 317561 2013-05-06 23:01:58Z ehaupt $
-#
+# Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
+# $FreeBSD: multimedia/iso2mkv/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	iso2mkv
 DISTVERSION=	2007-04-25
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://5ko.free.fr/dl/
 
@@ -30,6 +26,7 @@ PLIST_FILES=	bin/iso2mkv
 PORTDOCS=	README.utf8.txt
 PORTEXAMPLES=	iso2mkv.conf
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^#!/bin/bash|#!${LOCALBASE}/bin/bash| ; \
