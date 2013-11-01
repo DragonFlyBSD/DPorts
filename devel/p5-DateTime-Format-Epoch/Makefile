@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Epoch/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-DateTime-Format-Epoch/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Format-Epoch
 PORTVERSION=	0.13
@@ -19,28 +19,13 @@ PORTSCOUT=	skipv:0.801
 
 USES=		perl5
 USE_PERL5=	modbuild
-NO_STAGE=	yes
-
-MAN3=		DateTime::Format::Epoch.3 \
-		DateTime::Format::Epoch::ActiveDirectory.3 \
-		DateTime::Format::Epoch::DotNet.3 \
-		DateTime::Format::Epoch::JD.3 \
-		DateTime::Format::Epoch::Lilian.3 \
-		DateTime::Format::Epoch::MJD.3 \
-		DateTime::Format::Epoch::MacOS.3 \
-		DateTime::Format::Epoch::RJD.3 \
-		DateTime::Format::Epoch::RataDie.3 \
-		DateTime::Format::Epoch::TAI64.3 \
-		DateTime::Format::Epoch::TJD.3 \
-		DateTime::Format::Epoch::Unix.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README TODO
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
