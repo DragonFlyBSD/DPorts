@@ -1,5 +1,5 @@
 # Created by: roland.jesse@gmx.net
-# $FreeBSD: x11-toolkits/SoXt/Makefile 322622 2013-07-10 07:00:44Z bapt $
+# $FreeBSD: x11-toolkits/SoXt/Makefile 327785 2013-09-20 23:57:47Z bapt $
 
 PORTNAME=	SoXt
 PORTVERSION=	1.3.0
@@ -12,9 +12,9 @@ COMMENT=	GUI binding for using Open Inventor with Xt/Motif
 
 LIB_DEPENDS=	Coin.61:${PORTSDIR}/graphics/Coin
 
-USES=		motif pathfix
+USES=		motif pathfix perl5
 USE_GL=		yes
-USE_PERL5_BUILD=	yes
+USE_PERL5=	build
 USE_XORG=	xi
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBS="${PTHREAD_LIBS}"
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--with-pthread=yes --with-coin=${LOCALBASE}
 USE_LDCONFIG=	yes
 MAN1=		soxt-config.1
 
+NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,echo aout, echo elf," ${WRKSRC}/configure
 
