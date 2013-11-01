@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-carrierwave/Makefile 330958 2013-10-20 01:56:51Z swills $
+# $FreeBSD: www/rubygem-carrierwave/Makefile 332053 2013-10-30 03:00:33Z swills $
 
 PORTNAME=	carrierwave
 PORTVERSION=	0.9.0
@@ -16,6 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
