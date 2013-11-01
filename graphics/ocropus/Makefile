@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/ocropus/Makefile 325401 2013-08-26 16:06:37Z bf $
+# $FreeBSD: graphics/ocropus/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	ocropus
 PORTVERSION=	0.4
@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--without-fst --without-tesseract --with-iulib=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSDL}
