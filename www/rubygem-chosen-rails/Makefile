@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-chosen-rails/Makefile 330976 2013-10-20 05:15:19Z swills $
+# $FreeBSD: www/rubygem-chosen-rails/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	chosen-rails
 PORTVERSION=	1.0.0
@@ -17,6 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
