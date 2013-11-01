@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # New ports collection makefile for:	llvm
 # Date created:		20 Nov 2005
 # Whom:			Hye-Shik Chang
