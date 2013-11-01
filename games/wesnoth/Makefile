@@ -1,7 +1,7 @@
-# $FreeBSD: games/wesnoth/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/wesnoth/Makefile 331814 2013-10-28 00:00:00Z glewis $
 
 PORTNAME=	wesnoth
-PORTVERSION=	1.10.6
+PORTVERSION=	1.10.7
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}/${PORTNAME}-${PORTVERSION} \
 		http://files.wesnoth.org/
