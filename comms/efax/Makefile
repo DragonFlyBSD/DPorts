@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: comms/efax/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/efax/Makefile 332066 2013-10-30 05:09:22Z eadler $
 
 PORTNAME=	efax-0.9a
 PORTVERSION=	001114a7
@@ -12,7 +12,7 @@ COMMENT=	Fax send/receive program
 
 RUN_DEPENDS=	xloadimage:${PORTSDIR}/x11/xloadimage
 
-USE_GMAKE=	YES
+USES=		gmake
 MAN1=		fax.1 \
 		efax.1 \
 		efix.1
@@ -23,8 +23,6 @@ MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 
 CONFLICTS=	efax-gtk-*
-
-OPTIONS_DEFINE=	DOCS
 
 NO_STAGE=	yes
 post-build:
