@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-SD/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-SD/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	App-SD
 PORTVERSION=	0.75
@@ -30,31 +30,6 @@ RT_DESC=		Enable rt sync
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	App::SD::ForeignReplica::PullEncoder.3 \
-	App::SD::Server.3 \
-	App::SD::Replica::debbugs.3 \
-	App::SD::Replica::rt.3 \
-	App::SD::Replica::lighthouse::PullEncoder.3 \
-	App::SD::Replica::hm.3 \
-	App::SD::Model::Ticket.3 \
-	App::SD::Replica::gcode::PullEncoder.3 \
-	App::SD::Replica::rt::PullEncoder.3 \
-	App::SD::Test.3 \
-	App::SD::Replica::trac.3 \
-	App::SD::Replica::github.3 \
-	App::SD::Replica::github::PullEncoder.3 \
-	App::SD::Replica::debbugs::PushEncoder.3 \
-	App::SD::Replica::trac::PullEncoder.3 \
-	App::SD::CLI::Command.3 \
-	App::SD::CLI::Model::Ticket.3 \
-	App::SD::Replica::debbugs::PullEncoder.3 \
-	App::SD::ForeignReplica.3 \
-	App::SD::Util.3 \
-	App::SD.3
-
-MAN1=	sd.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGITHUB}
