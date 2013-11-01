@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Calendar-Pataphysical/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-DateTime-Calendar-Pataphysical/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Calendar-Pataphysical
 PORTVERSION=	0.04
@@ -15,17 +15,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		DateTime::Calendar::Pataphysical.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
