@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-font-awesome-rails/Makefile 331544 2013-10-25 02:01:19Z swills $
+# $FreeBSD: devel/rubygem-font-awesome-rails/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	font-awesome-rails
 PORTVERSION=	3.2.1.3
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
