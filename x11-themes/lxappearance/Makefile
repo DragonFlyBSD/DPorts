@@ -1,9 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: x11-themes/lxappearance/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD: x11-themes/lxappearance/Makefile 331959 2013-10-29 15:08:43Z pawel $
 
 PORTNAME=	lxappearance
-PORTVERSION=	0.5.2
-PORTREVISION=	1
+PORTVERSION=	0.5.3
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	SF/lxde/LXAppearance
 
