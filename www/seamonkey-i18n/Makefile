@@ -18,6 +18,7 @@ PLIST?=		${WRKDIR}/plist
 PLISTD?=	${WRKDIR}/plist_dirs
 PLISTF?=	${WRKDIR}/plist_files
 
+NO_STAGE=	yes
 USE_SEAMONKEY=	yes
 USE_XPI=	seamonkey linux-seamonkey
 
