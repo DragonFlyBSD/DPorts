@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # New ports collection makefile for:	clang
 # Date created:		24 Oct 2009
 # Whom:			Brooks Davis
@@ -36,11 +37,10 @@ RUN_DEPENDS+=	llvm-devel>=${PORTVERSION}:${PORTSDIR}/devel/llvm-devel
 BUILD_DEPENDS+=	runtest:${PORTSDIR}/misc/dejagnu
 .endif
 
+USES=		gmake perl5
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_PERL5=	yes
 USE_PYTHON=	yes
 
 MAKE_ARGS=	CLANG_TBLGEN=${WRKSRC}/${RELTYPE}/bin/clang-tblgen \
