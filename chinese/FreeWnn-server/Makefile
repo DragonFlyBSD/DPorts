@@ -1,9 +1,5 @@
-# New ports collection makefile for:	server of FreeWnn
-# Date created:		00/08/25
-# Whom:			Satoshi TAOKA <taoka@FreeBSD.org>
-#
-# $FreeBSD: chinese/FreeWnn-server/Makefile 300895 2012-07-14 12:56:14Z beat $
-#
+# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
+# $FreeBSD: chinese/FreeWnn-server/Makefile 327713 2013-09-20 16:01:22Z bapt $
 
 CATEGORIES=	chinese
 PKGNAMESUFFIX=	-server
@@ -15,4 +11,5 @@ PKGDIR=		${.CURDIR}
 
 WNNTYPE=	CWNN
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
