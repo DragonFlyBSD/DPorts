@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Component-RSS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-RSS/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Component-RSS
 PORTVERSION=	0.09
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::RSS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
