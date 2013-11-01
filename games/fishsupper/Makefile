@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
 # $FreeBSD: games/fishsupper/Makefile 324744 2013-08-14 22:35:50Z ak $
 
