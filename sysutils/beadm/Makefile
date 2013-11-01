@@ -1,7 +1,8 @@
-# $FreeBSD: sysutils/beadm/Makefile 331723 2013-10-26 17:08:47Z bdrewery $
+# $FreeBSD: sysutils/beadm/Makefile 331772 2013-10-27 14:04:17Z bdrewery $
 
 PORTNAME=	beadm
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GH \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
