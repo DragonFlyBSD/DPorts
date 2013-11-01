@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/print/splix/pkg-plist,v 1.6 2012/11/17 06:00:54 svnexp Exp $
+@comment $FreeBSD: print/splix/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 libexec/cups/filter/rastertoqpdl
 libexec/cups/filter/pstoqpdl
 share/cups/model/dell/1100.ppd
