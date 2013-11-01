@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Module-Build-Convert/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Build-Convert/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Build-Convert
 PORTVERSION=	0.49
@@ -22,8 +22,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Module::Build::Convert.3
-MAN1=		make2build.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
