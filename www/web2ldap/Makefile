@@ -1,8 +1,8 @@
 # Created by: Oddbjorn Steffensen <oddbjorn@tricknology.org>
-# $FreeBSD: www/web2ldap/Makefile 328968 2013-10-01 17:06:12Z bsam $
+# $FreeBSD: www/web2ldap/Makefile 331865 2013-10-28 15:46:59Z bsam $
 
 PORTNAME=	web2ldap
-PORTVERSION=	1.1.46
+PORTVERSION=	1.1.47
 CATEGORIES=	www
 MASTER_SITES=	http://www.web2ldap.de/download/ \
 		http://www.sfr-fresh.com/unix/www/
