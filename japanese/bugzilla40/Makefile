@@ -1,7 +1,7 @@
-# $FreeBSD: japanese/bugzilla40/Makefile 330667 2013-10-17 19:45:34Z ohauer $
+# $FreeBSD: japanese/bugzilla40/Makefile 332096 2013-10-30 12:37:25Z tota $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.0.10
+PORTVERSION=	4.0.11
 CATEGORIES=	japanese
 MASTER_SITES=	http://bug-ja.org/releases/4.0/ \
 		LOCAL
