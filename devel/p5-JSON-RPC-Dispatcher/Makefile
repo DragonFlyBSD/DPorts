@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-JSON-RPC-Dispatcher/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-JSON-RPC-Dispatcher/Makefile 332029 2013-10-30 01:50:57Z vanilla $
 
 PORTNAME=	JSON-RPC-Dispatcher
 PORTVERSION=	0.0506
@@ -19,11 +19,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		JSON::RPC::Dispatcher.3 \
-		JSON::RPC::Dispatcher::App.3 \
-		JSON::RPC::Dispatcher::Procedure.3
-
-NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/lib/JSON/RPC/Dispatcher.pm.orig
 
