@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: math/mingw32-libgmp/Makefile 319010 2013-05-24 19:20:17Z pawel $
+# $FreeBSD: math/mingw32-libgmp/Makefile 327746 2013-09-20 20:55:04Z bapt $
 
 PORTNAME=	libgmp
 PORTVERSION=	5.1.2
@@ -31,6 +31,7 @@ CONFIGURE_TARGET=
 INFO=		gmp
 INFO_PATH=	${GMP_TARG}/info
 
+NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/doc/gmp.info*
 
