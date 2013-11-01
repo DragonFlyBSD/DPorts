@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: games/apoolGL/Makefile 329744 2013-10-07 23:13:03Z marino $
+# $FreeBSD: games/apoolGL/Makefile 332030 2013-10-30 02:19:57Z danilo $
 
 PORTNAME=	apoolGL
 PORTVERSION=	0.99.22
@@ -11,12 +11,15 @@ DISTNAME=	${PORTNAME}-099-pre22
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Another billiards simulator
 
+LICENSE=	GPLv2
+
 USE_SDL=	sdl
 USE_GL=		gl
 
+OPTIONS_DEFINE=	DOCS
+
 PORTDOCS=	ApoolGL.txt CHANGELOG OpenGL-Features
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|`${PRINTF} '\r'`$$||" ${WRKSRC}/ApoolGL.txt
 	@${REINPLACE_CMD} -e 's|SDL/||' ${WRKSRC}/*.c
@@ -28,16 +31,13 @@ do-build:
 		-o ${WRKSRC}/apool ${WRKSRC}/*.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/apool ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/apool ${STAGEDIR}${PREFIX}/bin
 .for i in hi lo med
-	${MKDIR} ${DATADIR}/textures-${i}
-	${INSTALL_DATA} ${WRKSRC}/textures-${i}/*.bmp ${DATADIR}/textures-${i}
+	@${MKDIR} ${STAGEDIR}${DATADIR}/textures-${i}
+	${INSTALL_DATA} ${WRKSRC}/textures-${i}/*.bmp ${STAGEDIR}${DATADIR}/textures-${i}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/*.dat ${DATADIR}
-
-.ifndef (NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/*.dat ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
