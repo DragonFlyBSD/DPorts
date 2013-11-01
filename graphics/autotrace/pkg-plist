@@ -1,0 +1,14 @@
+bin/autotrace
+bin/autotrace-config
+include/autotrace/autotrace.h
+include/autotrace/exception.h
+include/autotrace/input.h
+include/autotrace/output.h
+include/autotrace/types.h
+lib/libautotrace.a
+lib/libautotrace.la
+lib/libautotrace.so
+lib/libautotrace.so.3
+libdata/pkgconfig/autotrace.pc
+share/aclocal/autotrace.m4
+@dirrm include/autotrace
