@@ -1,8 +1,9 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/beets/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/beets/Makefile 331764 2013-10-27 12:10:31Z wg $
 
 PORTNAME=	beets
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 
@@ -46,7 +47,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}discogs-client>=0:${PORTSDIR}/audio/py-disc
 .endif
 
 .if ${PORT_OPTIONS:MFFMPEG}
-RUN_DEPENDS+=	ffmpeg>=0:${PORTSDIR}/multimedia/ffmpeg1
+RUN_DEPENDS+=	ffmpeg>=2:${PORTSDIR}/multimedia/ffmpeg
 .endif
 
 .if ${PORT_OPTIONS:MREPLAYGAIN}
