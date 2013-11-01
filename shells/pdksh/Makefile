@@ -1,9 +1,5 @@
-# New ports collection makefile for:	pdksh
-# Date created:		23 May 1995
-# Whom:			Thomas Gellekum <tg@FreeBSD.org>
-#
-# $FreeBSD: ports/shells/pdksh/Makefile,v 1.38 2012/11/17 06:01:23 svnexp Exp $
-#
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD: shells/pdksh/Makefile 327770 2013-09-20 22:57:23Z bapt $
 
 PORTNAME=	pdksh
 PORTVERSION=	5.2.14p2
@@ -18,14 +14,20 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	${DISTNAME}-patches.1 ${DISTNAME}-patches.2
 PATCH_DIST_STRIP=	-p2
 
-MAINTAINER=	skreuzer@FreeBSD.org
+MAINTAINER=	rodrigo@bebik.net
 COMMENT=	The Public Domain Korn Shell
+
 LICENSE=	BSD
 
 GNU_CONFIGURE=	yes
 MAN1=		ksh.1
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000039
+BROKEN=	hangs on 10.0: http://www.freebsd.org/cgi/query-pr.cgi?pr=181438
+.endif
 
 .if defined(WITH_STATIC)
 CONFIGURE_ENV+=	LDSTATIC=-static
