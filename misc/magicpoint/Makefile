@@ -1,9 +1,9 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: misc/magicpoint/Makefile 322684 2013-07-10 12:29:44Z bapt $
+# $FreeBSD: misc/magicpoint/Makefile 327804 2013-09-21 11:06:03Z dinoex $
 
 PORTNAME=	magicpoint
 PORTVERSION=	1.13a
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES?=	misc
 MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/
 
@@ -14,13 +14,15 @@ LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png \
 		mng:${PORTSDIR}/graphics/libmng
 RUN_DEPENDS+=	pnmscale:${PORTSDIR}/graphics/netpbm
 
+MAKE_JOBS_UNSAFE=	yes
+NO_STAGE=	yes
+
 USES=		imake:env
 USE_XORG=	x11 xext xmu xt sm ice xi xtst
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-vflib --enable-locale
 LATE_INSTALL_ARGS=	install.man
-MAKE_JOBS_UNSAFE=	yes
 
 MAN1=	mgp.1 mgp2ps.1 mgpembed.1 mgpnet.1 xwintoppm.1 xmindpath.1
 
@@ -83,7 +85,7 @@ post-patch:
 		${WRKSRC}/configure
 
 post-configure:
-	(cd ${CONFIGURE_WRKSRC} && ${SETENV} ${MAKE_ENV} ${XMKMF})
+	(cd ${CONFIGURE_WRKSRC} && ${SETENV} ${MAKE_ENV} ${XMKMF} ${XMKMF_ARGS})
 	cd ${WRKSRC}/contrib/xmindpath && \
 		${SH} ${CONFIGURE_SCRIPT} --prefix=${PREFIX}
 
