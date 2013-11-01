@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/gscan2pdf/Makefile 316850 2013-04-29 22:27:05Z bapt $
+# $FreeBSD: graphics/gscan2pdf/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	gscan2pdf
 PORTVERSION=	1.0.4
@@ -62,12 +62,13 @@ RUN_DEPENDS=	p5-Archive-Tar>=0:${PORTSDIR}/archivers/p5-Archive-Tar \
 		p5-Gtk2-ImageView>=0:${PORTSDIR}/x11-toolkits/p5-Gtk2-ImageView \
 		bash:${PORTSDIR}/shells/bash
 
-USE_GMAKE=	yes
+USES=		gmake perl5
 USE_GNOME=	gtk20 librsvg2
-PERL_CONFIGURE=	yes
+USE_PERL5=	configure
 MAN1=		${PORTNAME}.1 scanadf-perl.1 scanimage-perl.1
 PORT_VERBS=	${PORTNAME} Gscan2pdf
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
