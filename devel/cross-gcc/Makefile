@@ -1,8 +1,8 @@
-# $FreeBSD: devel/cross-gcc/Makefile 323839 2013-07-28 16:58:31Z kientzle $
+# $FreeBSD: devel/cross-gcc/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME?=	gcc
 PORTVERSION=	4.5.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GCC:S,$,:gcc,} \
 		${MASTER_SITE_SOURCEWARE:S,$,:newlib,}
@@ -16,11 +16,11 @@ PATCH_SITES=	ftp://ftp.rtems.com/pub/rtems/SOURCES/4.11/
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	kientzle@FreeBSD.org
-COMMENT=	GNU gcc for cross-target development
+COMMENT=	GCC for cross-target development
 
-LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp \
-		mpfr.4:${PORTSDIR}/math/mpfr \
-		mpc.2:${PORTSDIR}/math/mpc
+LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp \
+		libmpfr.so:${PORTSDIR}/math/mpfr \
+		libmpc.so:${PORTSDIR}/math/mpc
 
 # If using this as a master port, override BUILD_DEPENDS and
 # RUN_DEPENDS with the appropriate specific binutils port.
@@ -29,7 +29,7 @@ RUN_DEPENDS?=	${OURTARGET}-as:${PORTSDIR}/devel/cross-binutils
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison
+USES=		bison iconv
 STRIP=		#empty
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all info
@@ -61,7 +61,7 @@ CONFIGURE_ARGS=	--target=${OURTARGET} \
 		--datadir="${TGT_DATADIR}" \
 		--with-system-zlib \
 		--disable-nls \
-		--with-libiconv-prefix=${LOCALBASE} \
+		${ICONV_CONFIGURE_ARG} \
 		--without-included_gettext \
 		--with-newlib \
 		--with-dwarf2 \
@@ -137,6 +137,7 @@ OPTIONS_DEFAULT=	CXX OBJC
 
 RTEMS_PATCHES_DESC=	Apply RTEMS patches
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if defined(TGTARCH)
