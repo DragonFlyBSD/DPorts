@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: textproc/p5-CSS-Croco/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: textproc/p5-CSS-Croco/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	CSS-Croco
 PORTVERSION=	0.09
@@ -29,4 +29,5 @@ MAN3=	CSS::Croco.3\
 	CSS::Croco::Term::String.3\
 	CSS::Croco::Term::URI.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
