@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Fiscal-Year/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Fiscal-Year/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Fiscal-Year
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		DateTime::Fiscal::Year.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
