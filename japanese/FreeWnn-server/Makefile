@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/FreeWnn-server/Makefile 317168 2013-05-02 22:27:58Z hrs $
+# $FreeBSD: japanese/FreeWnn-server/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	FreeWnn
 PORTVERSION=	1.1.1.a021
@@ -74,6 +74,7 @@ ${M}+=		${${M}.${WNNTYPE}}
 . endif
 .endfor
 
+NO_STAGE=	yes
 post-install:
 	${SETENV} PKG_PREFIX=${PREFIX} \
 	${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
