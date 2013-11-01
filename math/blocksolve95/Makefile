@@ -1,13 +1,9 @@
-# New ports collection makefile for:  blocksolve95
-# Date created:               03 October 2004
-# Whom:                       Thierry Thomas <thierry@pompo.net>
-#
-# $FreeBSD: ports/math/blocksolve95/Makefile,v 1.19 2012/11/17 05:59:19 svnexp Exp $
-#
+# Created by: Thierry Thomas <thierry@pompo.net>
+# $FreeBSD: math/blocksolve95/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	blocksolve95
 PORTVERSION=	3.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	math parallel
 MASTER_SITES=	ftp://ftp.mcs.anl.gov/pub/BlockSolve95/ \
 		http://ftp.mcs.anl.gov/pub/BlockSolve95/
@@ -37,6 +33,7 @@ FFLAGS+=	-O2
 INCLUDES=	BMmsg.h BSdepend.h BSlog.h BSmy_blas.h BSprivate.h BSsparse.h
 PORTDOCS=	manual.ps
 
+NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libatlas.so) && !defined(WITH_BLAS)
