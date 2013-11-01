@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-Baby/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Format-Baby/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateTime-Format-Baby
 PORTVERSION=	1.0100
@@ -19,7 +19,4 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/00//}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Format::Baby.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
