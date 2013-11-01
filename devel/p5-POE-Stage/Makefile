@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Stage/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Stage/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-Stage
 PORTVERSION=	0.0600
@@ -22,13 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Callback.3 POE::Request.3 POE::Request::Emit.3 \
-		POE::Request::Recall.3 POE::Request::Return.3 \
-		POE::Request::Upward.3 POE::Stage.3 POE::Stage::App.3 \
-		POE::Stage::Echoer.3 POE::Stage::Receiver.3 \
-		POE::Stage::Resolver.3 POE::Stage::Ticker.3 \
-		POE::Watcher.3 POE::Watcher::Delay.3 POE::Watcher::Input.3 \
-		POE::Watcher::Wheel.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
