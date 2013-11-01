@@ -1,10 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	axpoint
-# Date created:			May 13, 2002
-# Whom:				ijliao
-#
-# $FreeBSD: print/axpoint/Makefile 324171 2013-08-02 18:21:05Z az $
-#
+# Created by: ijliao
+# $FreeBSD: print/axpoint/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	axpoint
 PORTVERSION=	1.50
@@ -29,4 +24,5 @@ USE_PERL5=	configure
 
 MAN3=	XML::Handler::AxPoint.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
