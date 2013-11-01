@@ -1,5 +1,5 @@
 # Created by: Oliver Heesakkers <dev2@heesakkers.info>
-# $FreeBSD: graphics/zbar/Makefile 327155 2013-09-13 14:50:53Z bapt $
+# $FreeBSD: graphics/zbar/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	zbar
 PORTVERSION=	0.10
@@ -20,6 +20,7 @@ OPTIONS_DEFINE=	X11 IMAGEMAGICK V4L PYTHON GTK2 QT4
 OPTIONS_DEFAULT=	X11 IMAGEMAGICK
 V4L_DESC=	Build zbarcam video scanner
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libjpeg.so)
