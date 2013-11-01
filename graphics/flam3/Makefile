@@ -1,5 +1,5 @@
 # Created by: John Prather
-# $FreeBSD: graphics/flam3/Makefile 325928 2013-09-01 22:50:06Z bapt $
+# $FreeBSD: graphics/flam3/Makefile 327733 2013-09-20 18:35:44Z bapt $
 
 PORTNAME=	flam3
 PORTVERSION=	2.7.18
@@ -24,4 +24,5 @@ USES=		gmake pathfix pkgconfig
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 CFLAGS+=	-I${LOCALBASE}/include/libpng15
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
