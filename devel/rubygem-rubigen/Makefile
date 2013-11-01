@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rubigen/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rubigen/Makefile 332041 2013-10-30 02:42:34Z swills $
 
 PORTNAME=	rubigen
 PORTVERSION=	1.5.7
@@ -19,5 +19,4 @@ PLIST_FILES=	bin/install_rubigen_scripts	\
 		bin/rubigen			\
 		bin/ruby_app
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
