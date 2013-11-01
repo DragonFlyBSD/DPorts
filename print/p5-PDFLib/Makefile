@@ -1,7 +1,5 @@
-# ex:ts=8
-# Ports collection makefile for:	p5-PDFLib
 # Created by: ijliao
-# $FreeBSD: print/p5-PDFLib/Makefile 324174 2013-08-02 18:52:07Z mat $
+# $FreeBSD: print/p5-PDFLib/Makefile 327765 2013-09-20 22:43:59Z bapt $
 
 PORTNAME=	PDFLib
 PORTVERSION=	0.14
@@ -21,4 +19,5 @@ NO_BUILD=	yes
 
 MAN3=	PDFLib.3
 
+NO_STAGE=	yes
 .include <bsd.port.mk>
