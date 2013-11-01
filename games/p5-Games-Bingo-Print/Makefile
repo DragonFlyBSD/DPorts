@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Games-Bingo
-# Date created:				14. August 2003
-# Whom:					Lars Thegler <lars@thegler.dk>
-#
-# $FreeBSD: games/p5-Games-Bingo-Print/Makefile 324352 2013-08-07 13:20:32Z az $
-#
+# Created by: Lars Thegler <lars@thegler.dk>
+# $FreeBSD: games/p5-Games-Bingo-Print/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	Games-Bingo-Print
 PORTVERSION=	0.04
@@ -29,6 +25,7 @@ USE_PERL5=	configure
 MAN1=		bingo_print.pl.1
 MAN3=		Games::Bingo::Print.3
 
+NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing example for ${PKGNAME}"
