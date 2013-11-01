@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-jquery-atwho-rails/Makefile 331543 2013-10-25 01:47:42Z swills $
+# $FreeBSD: www/rubygem-jquery-atwho-rails/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	jquery-atwho-rails
 PORTVERSION=	0.4.1
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
