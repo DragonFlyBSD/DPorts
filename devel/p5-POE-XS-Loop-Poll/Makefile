@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-XS-Loop-Poll/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-XS-Loop-Poll/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	POE-XS-Loop-Poll
 PORTVERSION=	1.000
@@ -18,7 +18,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_SCRIPT+=	Makefile.PL --default
 
-MAN3=	POE::XS::Loop::Poll.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
