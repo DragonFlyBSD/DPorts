@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Devel-ebug/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-ebug/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-ebug
 PORTVERSION=	0.55
@@ -27,8 +27,4 @@ TEST_DEPENDS=	p5-YAML>0:${PORTSDIR}/textproc/p5-YAML \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		ebug.1 ebug_client.1 ebug_server.1
-MAN3=		Devel::ebug.3 Devel::ebug::Console.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
