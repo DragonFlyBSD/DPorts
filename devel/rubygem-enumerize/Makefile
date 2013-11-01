@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-enumerize/Makefile 331016 2013-10-20 13:45:29Z swills $
+# $FreeBSD: devel/rubygem-enumerize/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	enumerize
 PORTVERSION=	0.7.0
@@ -18,6 +18,5 @@ USE_RUBY_FEATURES=	iconv
 
 NOPORTDOCS=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
