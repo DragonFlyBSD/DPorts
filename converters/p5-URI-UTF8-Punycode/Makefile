@@ -1,8 +1,8 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-URI-UTF8-Punycode/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-URI-UTF8-Punycode/Makefile 331786 2013-10-27 17:19:37Z sunpoet $
 
 PORTNAME=	URI-UTF8-Punycode
-PORTVERSION=	0.97
+PORTVERSION=	1.00
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,7 +15,4 @@ LICENSE=	GPLv3
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		URI::UTF8::Punycode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
