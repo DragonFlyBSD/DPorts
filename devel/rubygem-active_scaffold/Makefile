@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-active_scaffold/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-active_scaffold/Makefile 332033 2013-10-30 02:26:17Z swills $
 
 PORTNAME=	active_scaffold
 PORTVERSION=	3.3.2
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
