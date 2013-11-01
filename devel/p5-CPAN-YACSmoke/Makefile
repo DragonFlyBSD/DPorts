@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-YACSmoke/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-CPAN-YACSmoke/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	CPAN-YACSmoke
 PORTVERSION=	0.03
@@ -23,9 +23,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CPAN::YACSmoke.3 \
-		CPAN::YACSmoke::Plugin::SmokeDB.3 \
-		CPAN::YACSmoke::Plugin::Recent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
