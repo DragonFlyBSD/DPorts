@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: irc/ircservices/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/ircservices/Makefile 330758 2013-10-18 15:02:20Z bapt $
 
 PORTNAME=	ircservices
 PORTVERSION=	5.1.18
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ircservices.za.net/download/ \
 		http://banana.irc.gr/ircservices/ \
 		ftp://ftp.freenet.de/pub/ftp.ircservices.za.net/pub/ircservices/
 
-MAINTAINER=	bu7cher@yandex.ru
+MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	A system of IRC services for IRC networks
 
 USES=		gmake perl5
