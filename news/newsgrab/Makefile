@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: news/newsgrab/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/newsgrab/Makefile 331975 2013-10-29 17:59:47Z nemysis $
 
 PORTNAME=	newsgrab
 PORTVERSION=	0.4.0
@@ -8,7 +8,7 @@ CATEGORIES=	news
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Download and uudecode binary files from USENET using regexps
 
 RUN_DEPENDS=	p5-NNTPClient>=0:${PORTSDIR}/news/p5-NNTPClient \
