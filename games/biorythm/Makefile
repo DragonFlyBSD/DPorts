@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/biorythm/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/biorythm/Makefile 332069 2013-10-30 05:37:56Z danilo $
 
 PORTNAME=	biorythm
 PORTVERSION=	1.1.4
@@ -9,14 +9,14 @@ MASTER_SITES=	http://shh.thathost.com/pub-unix/files/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple biorhythm calculation program
 
-LIB_DEPENDS=	shhmsg.1:${PORTSDIR}/devel/libshhmsg \
-		shhopt.1:${PORTSDIR}/devel/libshhopt
+LIB_DEPENDS=	libshhmsg.so:${PORTSDIR}/devel/libshhmsg \
+		libshhopt.so:${PORTSDIR}/devel/libshhopt
 
-MAN6=		${PORTNAME}.6
 PORTDOCS=	ChangeLog README
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man6/${PORTNAME}.6.gz
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 post-patch:
 	@${REINPLACE_CMD} -e '/VERSION/s|[[:space:]]"$$|\\n"| ; \
 		/COMPILED_DATE/d' ${WRKSRC}/biorythm.c
@@ -27,13 +27,11 @@ do-build:
 		-o ${PORTNAME} -L${LOCALBASE}/lib -lshhmsg -lshhopt -lm
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${MAN6PREFIX}/man/man6
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${MAN6PREFIX}/man/man6
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ChangeLog README
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
