@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/rubygem-redmine_acts_as_taggable_on/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-redmine_acts_as_taggable_on/Makefile 332057 2013-10-30 03:04:19Z swills $
 
 PORTNAME=	redmine_acts_as_taggable_on
 PORTVERSION=	1.0.0
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
