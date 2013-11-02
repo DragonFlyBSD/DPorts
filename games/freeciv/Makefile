@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: ada@bsd.org
 # $FreeBSD: games/freeciv/Makefile 327148 2013-09-13 13:59:02Z bapt $
 
