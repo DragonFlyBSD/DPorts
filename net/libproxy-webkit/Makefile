@@ -1,8 +1,5 @@
-# New ports collection makefile for:	libproxy-webkit
-# Date created:		26 February 2009
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
-# $FreeBSD: ports/net/libproxy-webkit/Makefile,v 1.9 2012/11/17 06:00:05 svnexp Exp $
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
+# $FreeBSD: net/libproxy-webkit/Makefile 327755 2013-09-20 22:10:23Z bapt $
 #    $MCom: ports/net/libproxy-webkit/Makefile,v 1.13 2011/03/06 23:12:41 kwm Exp $
 
 PORTREVISION=	2
@@ -18,9 +15,11 @@ LIB_DEPENDS=	proxy.1:${PORTSDIR}/net/libproxy \
 MASTERDIR=	${.CURDIR}/../libproxy
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
+USES=		pkgconfig
 
 LIBPROXY_SLAVE=	webkit
 
+NO_STAGE=	yes
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/libproxy/pacrunner_webkit.so \
 		${PREFIX}/lib/libproxy/${PORTVERSION}/modules/
