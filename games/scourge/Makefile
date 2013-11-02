@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/scourge/Makefile 319495 2013-05-31 14:40:56Z jgh $
+# $FreeBSD: games/scourge/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME=	scourge
 PORTVERSION=	0.21.1
@@ -31,6 +31,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DEBUG
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
