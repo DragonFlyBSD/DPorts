@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD: games/scummvm-tools/Makefile 324744 2013-08-14 22:35:50Z ak $
 
