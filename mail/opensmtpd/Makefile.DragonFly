@@ -1,0 +1,4 @@
+CFLAGS+= -DHAVE_LIMITS_H=1
+
+post-patch:
+	${RM} -rf ${WRKSRC}/openbsd-compat/vis.h ${WRKSRC}/openbsd-compat/sys

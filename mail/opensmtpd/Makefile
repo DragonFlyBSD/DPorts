@@ -1,12 +1,8 @@
-# New ports collection makefile for:	opensmtpd
-# Date created:		2012-05-13
-# Whom:			Ashish SHUKLA <ashish@FreeBSD.org>
-#
-# $FreeBSD: mail/opensmtpd/Makefile 316677 2013-04-27 17:35:34Z ashish $
-#
+# Created by: Ashish SHUKLA <ashish@FreeBSD.org>
+# $FreeBSD: mail/opensmtpd/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	opensmtpd
-PORTVERSION=	5.3.1
+PORTVERSION=	5.3.3
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.opensmtpd.org/archives/ \
@@ -16,10 +12,10 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}p1
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	OpenSMTPD is a free MTA
 
-LIB_DEPENDS=	event-1:${PORTSDIR}/devel/libevent \
-		sqlite3:${PORTSDIR}/databases/sqlite3
+LICENSE=	ISCL
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LICENSE_NAME=	ISCL
+LIB_DEPENDS=	event-1:${PORTSDIR}/devel/libevent
 
 OPTIONS_DEFINE=	PAM
 
@@ -27,12 +23,12 @@ OPTIONS_DEFAULT=	PAM
 
 USE_AUTOTOOLS=	autoconf:env automake:env libtool:env
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-libevent-dir=${LOCALBASE}
+CONFIGURE_ARGS=	--with-libevent-dir=${LOCALBASE} --sysconfdir=${PREFIX}/etc/mail/
 
 USE_RC_SUBR=	smtpd
 SUB_FILES=	pkg-install pkg-deinstall pkg-message
 
-CONFLICTS_INSTALL=	postfix-[0-9]* sendmail-[0-9]*
+CONFLICTS_INSTALL=	postfix-[0-9]* sendmail-[0-9]* opensmtpd-devel-[0-9]*
 
 MAN8=		makemap.8 newaliases.8 smtpctl.8 smtpd.8
 MAN5=		smtpd.conf.5 aliases.5 forward.5
@@ -40,6 +36,7 @@ MAN5=		smtpd.conf.5 aliases.5 forward.5
 USERS=		_smtpd _smtpq _smtpf
 GROUPS=		_smtpd
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_OPENSSL=	yes
