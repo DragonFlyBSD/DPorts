@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: textproc/dixit/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: textproc/dixit/Makefile 330227 2013-10-13 13:03:03Z makc $
 
 PORTNAME=	dixit
 PORTVERSION=	11.11
@@ -20,8 +20,9 @@ LICENSE=	GPLv3 # (or later)
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.${QT_VER}
 
+USES=		qmake
 USE_QT4=	corelib gui network moc_build qmake_build rcc_build
-HAS_CONFIGURE=	yes
+QMAKE_ARGS=	QMAKE_LFLAGS="-lz"
 
 PLIST_SUB=	_DB=${_DB} DB_DIR=${DB_DIR} _DB_F=${_DB_F}
 
@@ -39,6 +40,7 @@ _DB_D=	${PORTNAME}.qdb.tar.bz2
 _DB_F=	${PORTNAME}.qdb
 _DB=	${DB_DIR}/${_DB_F}
 
+NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Your dictionary database directory is:"
@@ -58,19 +60,16 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		's|dixit.qdb|${_DB}|' ${WRKSRC}/src/dixit.h
 
-do-configure:
-	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS})
-
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
-	@${TOUCH} -t ${DB_DATE} ${WRKSRC}/${_DB_F}
+	${TOUCH} -t ${DB_DATE} ${WRKSRC}/${_DB_F}
 	@${ECHO_MSG} "	===> Installing database ... .. ."
-	@if [ ! -e "${_DB}" -o "${_DB}" -ot "${WRKSRC}/${_DB_F}" ]; \
-		then	${TAR} -C ${DB_DIR:S/${PORTNAME}//} -xf ${DISTDIR}/${_DB_D} && \
+	if [ ! -e "${_DB}" -o "${_DB}" -ot "${WRKSRC}/${_DB_F}" ]; \
+		then	${TAR} -C ${DB_DIR:S/${PORTNAME}//} -xvf ${DISTDIR}/${_DB_D} && \
 			${ECHO_MSG} "	===> ... Done."; \
 		else	${ECHO_MSG} "	===> Exisitng database is newer, skiping";\
 	fi
-	@${CHOWN} ${DB_OWNER}:${DB_GROUP} ${_DB}
-	@${CHMOD} ${DB_MODE} ${_DB}
+	${CHOWN} ${DB_OWNER}:${DB_GROUP} ${_DB}
+	${CHMOD} ${DB_MODE} ${_DB}
 
 .include <bsd.port.mk>
