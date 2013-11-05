@@ -1,6 +1,6 @@
---- ldap/sdks/c-sdk/build.mk.orig	2012-11-30 04:12:50.000000000 +0100
-+++ ldap/sdks/c-sdk/build.mk	2013-01-14 21:00:42.503203000 +0100
-@@ -492,7 +492,7 @@
+--- ldap/sdks/c-sdk/build.mk.orig	2013-10-23 22:09:34.000000000 +0000
++++ ldap/sdks/c-sdk/build.mk
+@@ -492,7 +492,7 @@ LINK_DLL        = $(LD) $(DSO_LDOPTS) $(
                          $(DLL_LDFLAGS) $(DLL_EXPORT_FLAGS) \
                          -o $@ $(SONAMEFLAG_PREFIX)$(notdir $@) $(OBJS)
  else # SONAMEFLAG_PREFIX
