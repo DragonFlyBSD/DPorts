@@ -1,13 +1,9 @@
-# New ports collection makefile for:	conkeror
-# Date created:		27 April 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: www/xpi-conkeror/Makefile 320984 2013-06-15 11:10:34Z flo $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: www/xpi-conkeror/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	conkeror
 PORTVERSION=	20090821
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://mirror.4bit.ws/ \
 		${MASTER_SITE_LOCAL} \
@@ -22,6 +18,7 @@ USE_GECKO=	libxul
 
 BUILD_ID=echo -n `whoami`@`hostname`_`date +%s`
 
+NO_STAGE=	yes
 post-patch:
 	cd ${WRKSRC} && \
 		${REINPLACE_CMD} -e "s/%%PREFIX%%/${PREFIX:S/\//\\\//g}/g" \
