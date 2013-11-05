@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.gecko.mk 332168 2013-10-30 20:37:55Z flo $
+# $FreeBSD: Mk/bsd.gecko.mk 332421 2013-11-01 23:12:00Z flo $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -217,13 +217,13 @@ USE_FIREFOX:=				${USE_FIREFOX_BUILD}
 _FIREFOX_BUILD_DEPENDS=		yes
 .endif
 
-_FIREFOX_DEFAULT_VERSION=	17
-_FIREFOX_VERSIONS=			17 25
-_FIREFOX_RANGE_VERSIONS=	17+ 25+
+_FIREFOX_DEFAULT_VERSION=	24
+_FIREFOX_VERSIONS=			24 25
+_FIREFOX_RANGE_VERSIONS=	24+ 25+
 
 # For specifying [24, ..]+
-_FIREFOX_25P=	25 ${_FIREFOX_17P}
-_FIREFOX_17P=	17
+_FIREFOX_25P=	25 ${_FIREFOX_24P}
+_FIREFOX_24P=	24
 
 # Set the default Firefox version and check if USE_FIREFOX=yes was given
 .if ${USE_FIREFOX} == "yes"
@@ -291,12 +291,12 @@ USE_SEAMONKEY:=				${USE_SEAMONKEY_BUILD}
 _SEAMONKEY_BUILD_DEPENDS=	yes
 .endif
 
-_SEAMONKEY_DEFAULT_VERSION=	20
-_SEAMONKEY_VERSIONS=		20
-_SEAMONKEY_RANGE_VERSIONS=	20+
+_SEAMONKEY_DEFAULT_VERSION=	22
+_SEAMONKEY_VERSIONS=		22
+_SEAMONKEY_RANGE_VERSIONS=	22+
 
-# For specifying [20, ..]+
-_SEAMONKEY_20P=	20
+# For specifying [22, ..]+
+_SEAMONKEY_22P=	22
 
 # Set the default SeaMonkey version and check if USE_SEAMONKEY=yes was given
 .if ${USE_SEAMONKEY} == "yes"
@@ -338,7 +338,7 @@ IGNORE=			cannot install: unknown SeaMonkey version: seamonkey-2.${USE_SEAMONKEY
 .endif
 
 # Dependence lines for different SeaMonkey versions
-20_DEPENDS=		${LOCALBASE}/lib/seamonkey/seamonkey:${PORTSDIR}/www/seamonkey
+22_DEPENDS=		${LOCALBASE}/lib/seamonkey/seamonkey:${PORTSDIR}/www/seamonkey
 
 # Add dependencies
 .if defined(USE_SEAMONKEY)
@@ -758,6 +758,9 @@ ALL_TARGET=	profiledbuild
 LIB_DEPENDS+=	asound.2:${PORTSDIR}/audio/alsa-lib
 RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:${PORTSDIR}/audio/alsa-plugins
 MOZ_OPTIONS+=	--enable-alsa
+. if exists(${FILESDIR}/extra-bug780531)
+EXTRA_PATCHES+=	${FILESDIR}/extra-bug780531
+. endif
 .endif
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
@@ -885,7 +888,7 @@ gecko-post-patch:
 .for arg in ${MOZ_OPTIONS}
 	@${ECHO_CMD} ac_add_options ${arg:Q} >> ${MOZCONFIG}
 .endfor
-.for arg in ${MOZ_MK_OPTIONS}
+.for arg in ${MOZ_MK_OPTIONS} MOZ_MAKE_FLAGS=${_MAKE_JOBS}
 	@${ECHO_CMD} mk_add_options ${arg:Q} >> ${MOZCONFIG}
 .endfor
 .for var in ${MOZ_EXPORT}
