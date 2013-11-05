@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Matthew Luckie <mjl@luckie.org.nz>
 # $FreeBSD: mail/thunderbird-dictionaries/Makefile 322993 2013-07-14 16:22:29Z marino $
 
@@ -15,7 +16,6 @@ COMMENT=	Dictionaries for Mozilla Thunderbird
 
 RUN_DEPENDS=	thunderbird>=6.0:${PORTSDIR}/mail/thunderbird
 
-NO_STAGE=	yes
 USE_ZIP=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/dictionaries
