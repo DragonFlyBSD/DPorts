@@ -1,13 +1,12 @@
-NO_STAGE=yes
-NO_STAGE=yes
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 326089 2013-09-02 21:04:00Z bapt $
+# $FreeBSD: www/seamonkey/Makefile 332421 2013-11-01 23:12:00Z flo $
 
 PORTNAME=	seamonkey
-DISTVERSION=	2.20
+DISTVERSION=	2.22
 PORTREVISION=	1
 CATEGORIES?=	www ipv6
-MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
+MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
+		https://ftp.mozilla.org/pub/mozilla.org/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source/
 DISTFILES=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
 EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
 
@@ -16,18 +15,20 @@ COMMENT=	The open source, standards compliant web browser
 
 BUILD_DEPENDS=	nspr>=4.10:${PORTSDIR}/devel/nspr \
 		nss>=3.15:${PORTSDIR}/security/nss \
-		sqlite3>=3.7.16.1:${PORTSDIR}/databases/sqlite3 \
+		sqlite3>=3.7.17:${PORTSDIR}/databases/sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
+		v4l_compat>0:${PORTSDIR}/multimedia/v4l_compat \
 		unzip:${PORTSDIR}/archivers/unzip
+LIB_DEPENDS=	libv4l2.so:${PORTSDIR}/multimedia/libv4l
 
-EM_VERSION=	1.5.2
-L_VERSION=	2.5b1
+EM_VERSION=	1.6
+L_VERSION=	2.7b1
 
+SSP_UNSAFE=	yes
 USE_AUTOTOOLS=	autoconf213:env
 USE_PYTHON_BUILD=-2.7
 OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_BZIP2=	yes
-USES=		gmake pkgconfig
 USE_GECKO=	gecko
 WANT_GNOME=	yes
 USE_QT4=	# empty
@@ -47,8 +48,8 @@ MOZ_PKGCONFIG_FILES=
 
 NOT_FOR_ARCHS=	ia64
 
-OPTIONS_DEFINE=	CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS WEBRTC
-OPTIONS_DEFAULT=CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS WEBRTC
+OPTIONS_DEFINE=	CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS
+OPTIONS_DEFAULT=CHATZILLA COMPOSER ENIGMAIL LDAP LIGHTNING MAILNEWS
 
 CHATZILLA_DESC?=Chatzilla IRC module
 COMPOSER_DESC?=	HTML Composer module
@@ -60,11 +61,8 @@ MAILNEWS_DESC?=	Mail and News modules
 ALL_TARGET=	build
 MAKEFILE=	${WRKSRC}/client.mk
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
-
-# OSS is gone after bug 852401
-OPTIONS_SINGLE_AUDIO:=${OPTIONS_SINGLE_AUDIO:S/OSS//}
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCHATZILLA}
@@ -85,13 +83,14 @@ MOZ_OPTIONS+=	--disable-ldap --disable-mailnews
 .if ! ${PORT_OPTIONS:MLDAP}
 MOZ_OPTIONS+=	--disable-ldap --enable-mailnews
 .else
+# libprldap60.so: Undefined symbol "PR_GetCurrentThread"
 . if ${ARCH} == i386
 USE_GCC?=	yes
 . endif
 MOZ_OPTIONS+=	--enable-ldap --enable-mailnews
 .endif
 .if ${PORT_OPTIONS:MENIGMAIL}
-MASTER_SITES+=	http://www.enigmail.net/download/source/:enigmail
+MASTER_SITES+=	https://www.enigmail.net/download/source/:enigmail
 DISTFILES+=	${EM_DISTFILE}:enigmail
 RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
 EM_DISTNAME=	enigmail-${EM_VERSION}
@@ -102,8 +101,6 @@ EM_ID=		${PORTNAME}@mozilla-enigmail.org
 EM_ID_RFILES=	${XPI_LIBDIR}/${EM_ID}/install.rdf \
 		${XPI_LIBDIR}/${EM_ID}/components/enigmail.js \
 		${XPI_LIBDIR}/${EM_ID}/modules/enigmailCommon.jsm
-EXTRA_PATCHES+=	${FILESDIR}/extrapatch-enigmail-ipc-src-Makefile
-EXTRA_PATCHES+=	${FILESDIR}/extra-bug886095
 .endif
 .endif
 
@@ -122,12 +119,6 @@ XPI_ID=		lightning@seamonkey.mozilla.org
 MOZ_OPTIONS+=	--disable-calendar
 .endif
 
-.if ${PORT_OPTIONS:MMAILNEWS} && ${PORT_OPTIONS:MENIGMAIL}
-post-extract:
-	@${TAR} -xf ${_DISTDIR}/${EM_DISTFILE} \
-		-C ${WRKSRC}/mailnews/extensions
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e '/MOZPNG/s/=[0-9]*/=10511/' \
 		${MOZSRC}/configure.in ${WRKSRC}/configure.in
@@ -139,6 +130,8 @@ post-patch:
 		< ${FILESDIR}/seamonkey.desktop.in > \
 		${WRKDIR}/${MOZILLA}.desktop
 .if ${PORT_OPTIONS:MMAILNEWS} && ${PORT_OPTIONS:MENIGMAIL}
+	@${TAR} -xf ${_DISTDIR}/${EM_DISTFILE} \
+		-C ${WRKSRC}/mailnews/extensions
 	@${REINPLACE_CMD} -e 's,/usr/bin/perl,${PERL},' \
 		${WRKSRC}/mailnews/extensions/enigmail/makemake
 	@${REINPLACE_CMD} -e '/^xpi/s/$$/ all/' \
@@ -158,17 +151,15 @@ pre-configure:
 post-build:
 	cd ${WRKSRC}/mailnews/extensions/enigmail && \
 		./makemake -r -o ${MOZ_OBJDIR}
-	${SETENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} all xpi \
+	${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS_NUMBER} all xpi \
 		-C ${MOZ_OBJDIR}/mailnews/extensions/enigmail
 .endif
 
 port-pre-install:
 	${ECHO_CMD} share/applications/${MOZILLA}.desktop >> ${PLIST}
-	${ECHO_CMD} "@dirrmtry share/applications" >> ${PLISTD}
 	${ECHO_CMD} 'share/pixmaps/${MOZILLA}.png' >> ${PLIST}
 
 post-install:
-	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop ${PREFIX}/share/applications/
 	${LN} -sf ${PREFIX}/lib/${MOZILLA}/chrome/icons/default/default48.png \
 		${PREFIX}/share/pixmaps/${MOZILLA}.png

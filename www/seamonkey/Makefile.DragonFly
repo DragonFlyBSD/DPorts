@@ -1,9 +1,23 @@
-BUILD_DEPENDS+=		yasm:${PORTSDIR}/devel/yasm
-BUILD_DEPENDS+=		gm4:${PORTSDIR}/devel/m4
-
-OPTIONS_EXCLUDE+=	WEBRTC ENIGMAIL LDAP
-CONFIGURE_ARGS+=	--disable-webrtc
-CONFIGURE_ARGS+=	--disable-enigmail
-CONFIGURE_ARGS+=	--disable-ldap
-
+OPTIONS_EXCLUDE+=	ENIGMAIL
 OPTIONS_DEFAULT+=	PULSEAUDIO
+LDFLAGS+=		-R${PREFIX}/lib/thunderbird
+.if ${ARCH} == i386
+WITHOUT_DEBUG=yes
+.endif
+
+post-extract:
+	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_asconf.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_bsd_addr.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_indata.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_input.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_output.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_pcb.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_timer.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctputil.c \
+		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_component.c \
+		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_ctx.c \
+		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_peer_ctx.c \
+		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_media_stream.c \
+		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_socket.c \
+		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/stun/stun_server_ctx.c \
