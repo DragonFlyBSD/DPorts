@@ -1,7 +1,7 @@
-# $FreeBSD: java/icedtea-web/Makefile 327334 2013-09-15 08:15:41Z az $
+# $FreeBSD: java/icedtea-web/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	icedtea-web
-PORTVERSION=	1.4
+PORTVERSION=	1.4.1
 PORTREVISION=	1
 CATEGORIES=	java www
 MASTER_SITES=	http://icedtea.wildebeest.org/download/source/ \
@@ -50,6 +50,7 @@ PLUGIN_DESC=	Enable the browser plug-in
 RHINO_DESC=	Add support for Proxy Auto Config files
 TEST_DESC=	Add support for running regression test
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MDOCS)
@@ -118,7 +119,6 @@ post-build:
 post-install:
 	${MKDIR} ${DESKTOPDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.desktop ${DESKTOPDIR}
-	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/javaws.png \
 	    ${PREFIX}/share/pixmaps/itweb-javaws.png
 
