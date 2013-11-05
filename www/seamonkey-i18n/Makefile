@@ -1,3 +1,4 @@
+NO_STAGE=yes
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
 # $FreeBSD: www/seamonkey-i18n/Makefile 324409 2013-08-08 18:42:03Z flo $
 
@@ -18,7 +19,6 @@ PLIST?=		${WRKDIR}/plist
 PLISTD?=	${WRKDIR}/plist_dirs
 PLISTF?=	${WRKDIR}/plist_files
 
-NO_STAGE=	yes
 USE_SEAMONKEY=	yes
 USE_XPI=	seamonkey linux-seamonkey
 
