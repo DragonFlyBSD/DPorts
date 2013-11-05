@@ -1,10 +1,10 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/thunderbird-i18n/Makefile 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: mail/thunderbird-i18n/Makefile 332168 2013-10-30 20:37:55Z flo $
 
 PORTNAME=	thunderbird-i18n
-PORTVERSION=	17.0.8
+PORTVERSION=	24.1.0
 CATEGORIES=	mail
-MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}esr/linux-i686/xpi
+MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/linux-i686/xpi
 PKGNAMEPREFIX=
 DISTFILES=	${THUNDERBIRD_I18N_:S/$/.xpi/}
 DIST_SUBDIR=	xpi/${DISTNAME}
@@ -23,6 +23,7 @@ USE_THUNDERBIRD=	yes
 USE_XPI=	thunderbird linux-thunderbird
 USE_SUBMAKE=	yes
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.option"
 .include <bsd.port.pre.mk>
 
