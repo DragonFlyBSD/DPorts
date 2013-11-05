@@ -1,10 +1,9 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: www/gecko-sharp20/Makefile 326129 2013-09-03 08:49:46Z bapt $
-#   $Id: Makefile,v 1.19 2007/02/07 15:49:20 killfill Exp $
+# $FreeBSD: www/gecko-sharp20/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gecko-sharp
 PORTVERSION=	0.13
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.novell.com/pub/mono/sources/${PORTNAME}2/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
@@ -19,6 +18,7 @@ LATEST_LINK=	gecko-sharp20
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 
+NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g' ${WRKSRC}/Makefile.in
 
