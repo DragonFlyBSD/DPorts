@@ -1,9 +1,9 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/gecko-mediaplayer/Makefile 322783 2013-07-11 16:26:26Z sunpoet $
+# $FreeBSD: www/gecko-mediaplayer/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	gecko-mediaplayer
-PORTVERSION=	1.0.8
-PORTREVISION=	2
+DISTVERSION=	1.0.9a
+PORTREVISION=	1
 CATEGORIES=	www multimedia gnome
 MASTER_SITES=	GOOGLE_CODE
 
@@ -12,10 +12,10 @@ COMMENT=	Multimedia browser plugin for Gecko based browsers
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		nspr4:${PORTSDIR}/devel/nspr \
-		curl:${PORTSDIR}/ftp/curl \
-		gmlib:${PORTSDIR}/multimedia/gmtk
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libnspr4.so:${PORTSDIR}/devel/nspr \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libgmlib.so:${PORTSDIR}/multimedia/gmtk
 RUN_DEPENDS=	gnome-mplayer:${PORTSDIR}/multimedia/gnome-mplayer
 
 OPTIONS_DEFINE=	CACHE DOCS NLS
@@ -27,6 +27,7 @@ USES=		pkgconfig
 USE_GNOME=	glib20
 USE_GECKO=	libxul
 USE_WEBPLUGINS=	native
+USE_GCC=	yes
 
 WEBPLUGINS_FILES=	${PORTNAME}.so
 .for p in dvx rm qt wmp
@@ -39,6 +40,7 @@ CONFIGURE_ARGS+=--with-plugin_dir="${WEBPLUGINS_DIR}"
 
 PORTDOCS=	README COPYING AUTHORS ChangeLog INSTALL NEWS javascript.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCACHE}
