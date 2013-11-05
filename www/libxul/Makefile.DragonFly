@@ -1,1 +1,21 @@
-OPTIONS_DEFAULT+= OSS
+OPTIONS_DEFAULT+= PULSEAUDIO
+.if ${ARCH} == i386
+WITHOUT_DEBUG=yes
+.endif
+
+post-extract:
+	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_asconf.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_bsd_addr.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_indata.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_input.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_output.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_pcb.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctp_timer.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctputil.c \
+		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_component.c \
+		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_ctx.c \
+		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_peer_ctx.c \
+		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_media_stream.c \
+		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_socket.c \
+		${WRKSRC}/media/mtransport/third_party/nICEr/src/stun/stun_server_ctx.c \
