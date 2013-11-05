@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/firefox-esr-i18n/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/firefox-esr-i18n/Makefile 332168 2013-10-30 20:37:55Z flo $
 
 PORTNAME=	firefox
-PORTVERSION=	17.0.9
+PORTVERSION=	24.1.0
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}esr/linux-i686/xpi
 PKGNAMEPREFIX=
@@ -15,7 +15,7 @@ COMMENT=	Localized interface for Firefox
 
 EXTRACT_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
-USE_FIREFOX=	17
+USE_FIREFOX=	24
 USE_XPI=	firefox linux-firefox
 
 USE_SUBMAKE=	yes
