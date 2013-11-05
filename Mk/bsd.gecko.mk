@@ -888,7 +888,7 @@ gecko-post-patch:
 .for arg in ${MOZ_OPTIONS}
 	@${ECHO_CMD} ac_add_options ${arg:Q} >> ${MOZCONFIG}
 .endfor
-.for arg in ${MOZ_MK_OPTIONS} MOZ_MAKE_FLAGS=${_MAKE_JOBS}
+.for arg in ${MOZ_MK_OPTIONS} MOZ_MAKE_FLAGS=-j${MAKE_JOBS_NUMBER}
 	@${ECHO_CMD} mk_add_options ${arg:Q} >> ${MOZCONFIG}
 .endfor
 .for var in ${MOZ_EXPORT}
