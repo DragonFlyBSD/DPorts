@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gnash/Makefile 329955 2013-10-10 01:38:20Z wg $
+# $FreeBSD: graphics/gnash/Makefile 331932 2013-10-29 06:54:13Z dinoex $
 
 PORTNAME=	gnash
 PORTVERSION=	0.8.10
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	GNU/${PORTNAME}/${PORTVERSION}/
 
@@ -54,20 +54,21 @@ MAN1=		cygnal.1 findmicrophones.1 findwebcams.1 \
 		flvdumper.1 gnash.1 gprocessor.1 \
 		rtmpget.1 soldumper.1
 
-OPTIONS_DEFINE=	PLUGIN CYGNAL VAAPI FFMPEG GSTREAMER
-OPTIONS_SINGLE=	GUI RENDERER
+OPTIONS_DEFINE=	PLUGIN CYGNAL VAAPI
+OPTIONS_SINGLE=	MEDIA GUI RENDERER
+OPTIONS_SINGLE_MEDIA=	FFMPEG FFMPEG2 GSTREAMER
 OPTIONS_SINGLE_GUI=	GTK2 KDE4
 OPTIONS_SINGLE_RENDERER=AGG OPENGL CAIRO
-#OPTIONS_SINGLE_MEDIA=	FFMPEG GSTREAMER
 OPTIONS_DEFAULT=GTK2 PLUGIN AGG FFMPEG VAAPI
 
 NO_OPTIONS_SORT=yes
 PLUGIN_DESC=	browser plugin
 CYGNAL_DESC=	Cygnal media server
 AGG_DESC=	AGG renderer
-OPENGL_DESC=	OpenGL renderer (broken)
+OPENGL_DESC=	OpenGL renderer
 CAIRO_DESC=	Cairo renderer (experimental)
-FFMPEG_DESC=	ffmpeg media handler
+FFMPEG_DESC=	ffmpeg0 media handler
+FFMPEG2_DESC=	ffmpeg2 media handler (broken)
 GSTREAMER_DESC=	GStreamer media handler
 VAAPI_DESC=	VAAPI support (requires FFMPEG)
 
@@ -185,7 +186,7 @@ CONFIGURE_ARGS+=	--enable-renderer=`${ECHO} ${GNASH_RENDERERS} | ${TR} ' ' ,`
 # Hardware acceleration options processing
 #
 .if ${PORT_OPTIONS:MVAAPI}
-.if empty(PORT_OPTIONS:MFFMPEG)
+.if empty(PORT_OPTIONS:MFFMPEG) && empty(PORT_OPTIONS:MFFMPEG2)
 IGNORE=			VAAPI currently works only with FFMPEG. Please rerun 'make config' and enable FFMPEG
 .endif
 LIB_DEPENDS+=		va:${PORTSDIR}/multimedia/libva
@@ -198,18 +199,26 @@ PLIST_SUB+=		VAAPI="@comment "
 #
 # Media handler options processing
 #
-.if ${PORT_OPTIONS:MFFMPEG} && empty(PORT_OPTIONS:MGSTREAMER)
+.if ${PORT_OPTIONS:MFFMPEG2} && empty(PORT_OPTIONS:MFFMPEG) && empty(PORT_OPTIONS:MGSTREAMER)
+LIB_DEPENDS+=		libavcodec.so:${PORTSDIR}/multimedia/ffmpeg
+CONFIGURE_ARGS+=	--enable-media=ffmpeg \
+			--with-ffmpeg-incl=${LOCALBASE}/include/libavcodec \
+			--with-ffmpeg-lib=${LOCALBASE}/lib
+USE_SDL+=		sdl
+MAKE_ARGS+=		INCLUDES="-I${LOCALBASE}/include/ffmpeg"
+.elif ${PORT_OPTIONS:MFFMPEG} && empty(PORT_OPTIONS:MFFMPEG2) && empty(PORT_OPTIONS:MGSTREAMER)
+EXTRA_PATCHES+=		${FILESDIR}/ffmpeg0.patch
 LIB_DEPENDS+=		libavcodec0.so:${PORTSDIR}/multimedia/ffmpeg0
 CONFIGURE_ARGS+=	--enable-media=ffmpeg \
 			--with-ffmpeg-incl=${LOCALBASE}/include/ffmpeg0/libavcodec \
 			--with-ffmpeg-lib=${LOCALBASE}/lib/ffmpeg0
 USE_SDL+=		sdl
 MAKE_ARGS+=		INCLUDES="-I${LOCALBASE}/include/ffmpeg0"
-.elif empty(PORT_OPTIONS:MFFMPEG) && ${PORT_OPTIONS:MGSTREAMER}
+.elif ${PORT_OPTIONS:MGSTREAMER} && empty(PORT_OPTIONS:MFFMPEG) && empty(PORT_OPTIONS:MFFMPEG2)
 USE_GSTREAMER=		yes
 CONFIGURE_ARGS+=	--enable-media=gst
 USE_SDL+=		sdl
-.elif empty(PORT_OPTIONS:MFFMPEG) && empty(PORT_OPTIONS:MGSTREAMER)
+.else
 CONFIGURE_ARGS+=	--enable-media=none
 IGNORE=			can't be built with multiple media handlers enabled. Please rerun 'make config' and leave one or none of them (ffmpeg|gstreamer)
 .endif
