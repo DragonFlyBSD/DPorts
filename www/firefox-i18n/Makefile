@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/firefox-i18n/Makefile 324842 2013-08-17 13:17:58Z flo $
+# $FreeBSD: www/firefox-i18n/Makefile 332168 2013-10-30 20:37:55Z flo $
 
 PORTNAME=	firefox-i18n
-PORTVERSION=	23.0.1
+PORTVERSION=	25.0
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/linux-i686/xpi
 PKGNAMEPREFIX=
@@ -14,7 +14,7 @@ COMMENT=	Localized interface for Firefox
 
 EXTRACT_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
-USE_FIREFOX=	23
+USE_FIREFOX=	25
 USE_XPI=	firefox linux-firefox
 
 USE_SUBMAKE=	yes
@@ -27,6 +27,7 @@ PLIST?=		${WRKDIR}/plist
 PLISTD?=	${WRKDIR}/plist_dirs
 PLISTF?=	${WRKDIR}/plist_files
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.option"
 .include <bsd.port.pre.mk>
 
