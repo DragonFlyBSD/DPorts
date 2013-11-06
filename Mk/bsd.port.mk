@@ -1317,6 +1317,25 @@ STRIP=	#none
 
 .include "${PORTSDIR}/Mk/bsd.options.mk"
 
+# Multiple make jobs support
+.if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
+_MAKE_JOBS=		#
+MAKE_JOBS_NUMBER=	1
+.else
+.if defined(MAKE_JOBS_NUMBER)
+_MAKE_JOBS_NUMBER:=	${MAKE_JOBS_NUMBER}
+.else
+_MAKE_JOBS_NUMBER!=	${SYSCTL} -n hw.ncpu
+.endif
+.if defined(MAKE_JOBS_NUMBER_LIMIT) && ( ${MAKE_JOBS_NUMBER_LIMIT} < ${_MAKE_JOBS_NUMBER} )
+MAKE_JOBS_NUMBER=	${MAKE_JOBS_NUMBER_LIMIT}
+.else
+MAKE_JOBS_NUMBER=	${_MAKE_JOBS_NUMBER}
+.endif
+_MAKE_JOBS?=		-j${MAKE_JOBS_NUMBER}
+BUILD_FAIL_MESSAGE+=	Try to set MAKE_JOBS_UNSAFE=yes and rebuild before reporting the failure to the maintainer.
+.endif
+
 # Start of pre-makefile section.
 .if !defined(AFTERPORTMK) && !defined(INOPTIONSMK)
 
@@ -2169,25 +2188,6 @@ CFLAGS:=	${CFLAGS:N-std=*} -std=${USE_CSTD}
 
 .if defined(USE_CXXSTD)
 CXXFLAGS:=	${CXXFLAGS:N-std=*} -std=${USE_CXXSTD}
-.endif
-
-# Multiple make jobs support
-.if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
-_MAKE_JOBS=		#
-MAKE_JOBS_NUMBER=	1
-.else
-.if defined(MAKE_JOBS_NUMBER)
-_MAKE_JOBS_NUMBER:=	${MAKE_JOBS_NUMBER}
-.else
-_MAKE_JOBS_NUMBER!=	${SYSCTL} -n hw.ncpu
-.endif
-.if defined(MAKE_JOBS_NUMBER_LIMIT) && ( ${MAKE_JOBS_NUMBER_LIMIT} < ${_MAKE_JOBS_NUMBER} )
-MAKE_JOBS_NUMBER=	${MAKE_JOBS_NUMBER_LIMIT}
-.else
-MAKE_JOBS_NUMBER=	${_MAKE_JOBS_NUMBER}
-.endif
-_MAKE_JOBS?=		-j${MAKE_JOBS_NUMBER}
-BUILD_FAIL_MESSAGE+=	Try to set MAKE_JOBS_UNSAFE=yes and rebuild before reporting the failure to the maintainer.
 .endif
 
 # ccache support
