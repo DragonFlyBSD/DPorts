@@ -69,8 +69,12 @@ SHEBANG_FILES=	src/gallium/*/*/*.py src/gallium/tools/trace/*.py \
 		src/gallium/drivers/svga/svgadump/svga_dump.py \
 		src/glsl/tests/compare_ir src/mapi/glapi/gen/*.py \
 		src/mapi/mapi/mapi_abi.py
+EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-newxorg-src_gallium_include_pipe_p__config.h
 .else
 CONFIGURE_ARGS+=--disable-glut --disable-glw --disable-glu
+EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-oldxorg-bin_mklib \
+		${DFLY_PATCHDIR}/extra-oldxorg-src_gallium_include_pipe_p__config.h
+
 
 ALL_TARGET=		default
 .endif
