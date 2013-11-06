@@ -3,8 +3,11 @@ LIB_DEPENDS+=		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 CMAKE_ARGS+=		-DWITH_READLINE=1
 
 #jemalloc (bundled) doesn't build on DragonFly OOTB
-#CMAKE_ARGS+=		-DWITH_JEMALLOC="bundled"
 CMAKE_ARGS+=		-DWITH_JEMALLOC="no"
+
+# CMake injects bad -Wl,-rpath,XX values in the link instructions to
+# suppress those.  Built-in rpath in gcc is enough.
+CMAKE_ARGS+=		-DCMAKE_SKIP_BUILD_RPATH:BOOL=YES
 
 pre-configure:
 	cp ${WRKSRC}/cmake/os/FreeBSD.cmake \
