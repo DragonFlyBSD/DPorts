@@ -1,0 +1,1 @@
+BUILD_DEPENDS+= p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
