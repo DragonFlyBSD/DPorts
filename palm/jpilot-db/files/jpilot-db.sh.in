@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: palm/jpilot-db/files/jpilot-db.sh.in 300897 2012-07-14 14:29:18Z beat $
-
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/%%PKGNAME%%.jar"
