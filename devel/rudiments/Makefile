@@ -1,42 +1,44 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rudiments/Makefile 332473 2013-11-02 12:38:47Z wg $
+# $FreeBSD: devel/rudiments/Makefile 327726 2013-09-20 17:17:44Z bapt $
 
 PORTNAME=	rudiments
-PORTVERSION=	0.44
+PORTVERSION=	0.41
 CATEGORIES=	devel
-MASTER_SITES=	SF
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.50
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ class library for daemons, clients, servers, and more
 
 LICENSE=	LGPL20
 
-OPTIONS_DEFINE=	DOCS PCRE SSL
-OPTIONS_DEFAULT=SSL
+OPTIONS_DEFINE=	DOCS
 
-PCRE_LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
-PCRE_CONFIGURE_ENABLE=	pcre
-
-SSL_USE=	OPENSSL=yes
-SSL_CONFIGURE_ENABLE=	ssl
-SSL_CONFIGURE_ON=	--with-ssl-includes=-I${OPENSSLINC} \
-			--with-ssl-libs=-L${OPENSSLLIB}
-
-USES=		pkgconfig shebangfix
-SHEBANG_FILES=	doc/programming/insert.pl
+USES=		pkgconfig
+USE_OPENSSL=	yes
 USE_AUTOTOOLS=	libtool
+CONFIGURE_ARGS=	--with-ssl-includes=-I${OPENSSLINC} \
+		--with-ssl-libs=-L${OPENSSLLIB} \
+		--disable-pcre
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	VERSION="${PORTVERSION}"
+MAN1=		rudiments-config.1
+
+NO_STAGE=	yes
+.include <bsd.port.options.mk>
 
 post-patch:
-	@${FIND} ${WRKSRC} -name "Makefile*" | ${XARGS} ${REINPLACE_CMD} -e \
-		'/pkgconfig/s| $$(libdir)/| $${DESTDIR}$$(prefix)/libdata/| ; \
-		 /INSTALL/s| $$(bindir)| $${DESTDIR}$$(bindir)| ; \
-		 /INSTALL/s| $$(docdir)| $${DESTDIR}$$(docdir)| ; \
-		 /INSTALL/s| $$(includedir)| $${DESTDIR}$$(includedir)| ; \
-		 /INSTALL/s| $$(mandir)| $${DESTDIR}$$(mandir)| ; \
-		 /INSTALL/s| $$(libdir)| $${DESTDIR}$$(libdir)| ; \
-		 /finish/s| $$(libdir)| $${DESTDIR}$$(libdir)|'
+	@${REINPLACE_CMD} -e \
+		'/cd doc;/s|^|#| ; \
+		 /pkgconfig/s|$$(libdir)/|$$(prefix)/libdata/|' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e \
+		's|^#!/usr/bin/perl|#!${PERL}|' ${WRKSRC}/doc/programming/insert.pl
+	@${REINPLACE_CMD} -e \
+		's| -release $$(RUDIMENTS_VERSION)||' ${WRKSRC}/src/Makefile.in
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	@(cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
+		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+.endif
 
 .include <bsd.port.mk>
