@@ -1,10 +1,10 @@
 # Created by: joerg@FreeBSD.org
-# $FreeBSD: devel/libdwarf/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libdwarf/Makefile 333082 2013-11-07 11:46:03Z marino $
 
 PORTNAME=	libdwarf
 PORTVERSION=	20130207
 CATEGORIES=	devel
-MASTER_SITES=	http://reality.sgiweb.org/davea/
+MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/libdwarf/libdwarf-20130207.tar.gz/64b42692e947d5180e162e46c689dfbf/
 
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	A library to analyze DWARF debugging information in ELF files
