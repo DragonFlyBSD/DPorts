@@ -19,11 +19,11 @@ CONFLICTS=	LPRng-[0-9]*
 UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
 USE_BZIP2=	yes
-USES+=		gmake
+USES+=		gmake iconv
 GNU_CONFIGURE=	yes
 CFLAGS+=	${PTHREAD_CFLAGS}
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 DSOFLAGS=	-Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib ${LDFLAGS}
 CONFIGURE_ENV=	DSOFLAGS="${DSOFLAGS}"
 CONFIGURE_ARGS+=	--localstatedir=/var			\
@@ -83,18 +83,17 @@ XDG_OPEN_DESC=		Build with XDG_OPEN as browser
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
+.if !empty(ICONV_LIB)
+CONFIGURE_ENV+=	ac_cv_search_iconv_open=-liconv
+.endif
+
 .if defined(CUPS_CLIENT)
 COMMENT2=	Library cups
 INSTALL_WRKSRC=	${WRKSRC}/cups
 PLIST=		${MASTERDIR}/pkg-plist.client
-USES+=		iconv
-LDFLAGS+=	${ICONV_LIB}
 USE_LDCONFIG=	yes
 PKGMESSAGE=	${NONEXISTENT}
 DESCR=		${MASTERDIR}/pkg-descr.client
-.if !empty(ICONV_LIB)
-CONFIGURE_ENV+=	ac_cv_search_iconv_open=-liconv
-.endif
 .elif defined(CUPS_IMAGE)
 LIB_DEPENDS+=	cups:${PORTSDIR}/${PKGCATEGORY}/cups-client \
 		jpeg:${PORTSDIR}/graphics/jpeg \
