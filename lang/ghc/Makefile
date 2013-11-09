@@ -65,7 +65,7 @@ OPTIONS_DEFINE+=	BOOTH
 .endif
 
 NO_STAGE=	yes
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MDYNAMIC}
 LIB_DEPENDS+=	ffi.6:${PORTSDIR}/devel/libffi
