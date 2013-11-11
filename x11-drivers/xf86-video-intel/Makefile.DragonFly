@@ -1,3 +1,0 @@
-.if defined(WITH_NEW_XORG)
-CONFIGURE_ARGS+=	--with-default-accel=sna
-.endif
