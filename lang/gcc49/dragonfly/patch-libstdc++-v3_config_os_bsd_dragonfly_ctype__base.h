@@ -59,7 +59,7 @@
 +    static const mask alnum 	= _CTYPE_A | _CTYPE_D;
 +#else
 +    // DragonFly 3.4 and older
-+    typedef uint16_t		mask;
++    typedef unsigned short	mask;
 +    static const mask upper	= _CTYPEMASK_U;
 +    static const mask lower	= _CTYPEMASK_L;
 +    static const mask alpha	= _CTYPEMASK_A;
