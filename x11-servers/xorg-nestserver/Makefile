@@ -24,7 +24,6 @@ PLIST_FILES=	bin/Xnest
 MAN1=		Xnest.1
 
 NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/xnest/Xnest ${PREFIX}/bin/
