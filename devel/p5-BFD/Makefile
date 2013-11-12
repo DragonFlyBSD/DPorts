@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-BFD/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-BFD/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	BFD
 PORTVERSION=	0.31
@@ -14,7 +14,4 @@ COMMENT=	Impromptu dumping of data structures for debugging purposes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BFD.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
