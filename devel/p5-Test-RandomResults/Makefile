@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-RandomResults/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-RandomResults/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-RandomResults
 PORTVERSION=	0.03
@@ -11,10 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Test non-deterministic functions
 
-MAN3=	Test::RandomResults.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
