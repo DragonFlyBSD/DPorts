@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Object/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Set-Object/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Set-Object
 PORTVERSION=	1.31
@@ -17,17 +17,14 @@ OPTIONS_DEFINE=	DOCS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Set::Changes.3 Set::Object.3 Set::Object::Weak.3
 PORTDOCS=	Changes.pod README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
