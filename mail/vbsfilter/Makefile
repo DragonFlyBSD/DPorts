@@ -1,4 +1,4 @@
-# $FreeBSD: mail/vbsfilter/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: mail/vbsfilter/Makefile 331810 2013-10-27 22:29:46Z dinoex $
 
 PORTNAME=	vbsfilter
 PORTVERSION=	1.15
@@ -46,6 +46,6 @@ do-build:	${CTARGETS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vbsfilter-${PORTVERSION} \
-		${PREFIX}/libexec/vbsfilter
+		${STAGEDIR}${PREFIX}/libexec/vbsfilter
 
 .include <bsd.port.post.mk>
