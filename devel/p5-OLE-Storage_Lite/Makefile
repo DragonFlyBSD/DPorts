@@ -1,5 +1,5 @@
 # Created by: Jason Portwood <jason@iac.net>
-# $FreeBSD: devel/p5-OLE-Storage_Lite/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-OLE-Storage_Lite/Makefile 332127 2013-10-30 15:19:23Z vanilla $
 
 PORTNAME=	OLE-Storage_Lite
 PORTVERSION=	0.19
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		OLE::Storage_Lite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
