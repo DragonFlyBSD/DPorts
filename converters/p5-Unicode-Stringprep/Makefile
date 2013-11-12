@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-Unicode-Stringprep/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Unicode-Stringprep/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Unicode-Stringprep
 PORTVERSION=	1.104
@@ -20,12 +20,4 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Unicode::Stringprep.3 \
-		Unicode::Stringprep::BiDi.3 \
-		Unicode::Stringprep::Mapping.3 \
-		Unicode::Stringprep::Prohibited.3 \
-		Unicode::Stringprep::Unassigned.3 \
-		Unicode::Stringprep::_Common.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
