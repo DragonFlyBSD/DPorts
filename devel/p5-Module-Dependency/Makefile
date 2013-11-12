@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung
-# $FreeBSD: devel/p5-Module-Dependency/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Dependency/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Dependency
 PORTVERSION=	1.86
@@ -13,12 +13,4 @@ COMMENT=	Collection of modules for examining dependencies
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pmd_indexer.plx.1 pmd_grapher.plx.1 pmd_dump.pl.1
-MAN3=		Module::Dependency.3 \
-		Module::Dependency::Indexer.3 \
-		Module::Dependency::Info.3 \
-		Module::Dependency::Grapher.3 \
-    		Module::pmd_dump.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
