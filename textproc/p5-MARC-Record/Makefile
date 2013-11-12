@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/p5-MARC-Record/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-MARC-Record/Makefile 332838 2013-11-05 12:08:16Z demon $
 
 PORTNAME=	MARC-Record
-PORTVERSION=	2.0.5
+PORTVERSION=	2.0.6
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,10 +13,4 @@ COMMENT=	The core class for representing a single MARC record
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		marcdump.1
-MAN3=		MARC::Batch.3 MARC::Doc::Tutorial.3 MARC::Field.3 \
-		MARC::File::Encode.3 MARC::File.3 MARC::File::MicroLIF.3 \
-		MARC::File::USMARC.3 MARC::Record.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
