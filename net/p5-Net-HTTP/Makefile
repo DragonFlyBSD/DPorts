@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: net/p5-Net-HTTP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-HTTP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-HTTP
 PORTVERSION=	6.06
@@ -14,16 +14,11 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=1.38:${PORTSDIR}/security/p5-IO-Socket-SSL
-RUN_DEPENDS=	p5-IO-Socket-SSL>=1.38:${PORTSDIR}/security/p5-IO-Socket-SSL
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	p5-libwww-5*
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::HTTP.3 \
-		Net::HTTPS.3 \
-		Net::HTTP::NB.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
