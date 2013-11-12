@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-S3/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-S3/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	S3
 PORTVERSION=	20071102
@@ -22,11 +22,10 @@ USE_PERL5=	run
 USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/s3-example-libraries/perl
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${PREFIX}/${SITE_PERL_REL}/S3
-	${INSTALL_DATA} ${WRKSRC}/S3/* ${PREFIX}/${SITE_PERL_REL}/S3
-	${INSTALL_DATA} ${WRKSRC}/S3.pm ${PREFIX}/${SITE_PERL_REL}
-	${INSTALL_SCRIPT} ${WRKSRC}/s3-*.pl ${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/S3
+	${INSTALL_DATA} ${WRKSRC}/S3/* ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/S3
+	${INSTALL_DATA} ${WRKSRC}/S3.pm ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}
+	${INSTALL_SCRIPT} ${WRKSRC}/s3-*.pl ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
