@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: security/p5-Crypt-CBCeasy/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-CBCeasy/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-CBCeasy
 PORTVERSION=	0.24
@@ -17,8 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::CBCeasy.3
-
 OPTIONS_DEFINE=	DES IDEA BLOWFISH BLOWFISH_PP TWOFISH2 RIJNDAEL
 OPTIONS_DEFAULT=	DES IDEA BLOWFISH BLOWFISH_PP TWOFISH2 RIJNDAEL
 DES_DESC=		Build with Crypt::DES support
@@ -28,7 +26,6 @@ BLOWFISH_PP_DESC=	Build with Crypt::Blowfish_PP support
 TWOFISH2_DESC=		Build with Crypt::Twofish2 support
 RIJNDAEL_DESC=		Build with Crypt::Rijndael support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDES}
