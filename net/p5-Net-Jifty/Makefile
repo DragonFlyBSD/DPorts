@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Jifty/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Jifty/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Jifty
 PORTVERSION=	0.14
@@ -25,9 +25,6 @@ TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Jifty.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
