@@ -1,8 +1,8 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Class/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Class/Makefile 332897 2013-11-05 19:04:54Z sunpoet $
 
 PORTNAME=	Test-Class
-PORTVERSION=	0.39
+PORTVERSION=	0.40
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,16 +10,15 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Test::Class - Easily create test classes in an xUnit style
 
-RUN_DEPENDS=	p5-MRO-Compat>=0.11:${PORTSDIR}/devel/p5-MRO-Compat
-BUILD_DEPENDS:=	${RUN_DEPENDS}
-BUILD_DEPENDS+=	p5-Test-Exception>=0.25:${PORTSDIR}/devel/p5-Test-Exception
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-MRO-Compat>=0.11:${PORTSDIR}/devel/p5-MRO-Compat
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Contextual-Return>=0:${PORTSDIR}/devel/p5-Contextual-Return \
+		p5-Test-Exception>=0.25:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Test::Class.3 \
-		Test::Class::Load.3 \
-		Test::Class::MethodInfo.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
