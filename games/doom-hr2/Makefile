@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-hr2/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/doom-hr2/Makefile 331975 2013-10-29 17:59:47Z nemysis $
 
 PORTNAME=	hr2
 PORTVERSION=	1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.doomworld.com/hr2/
 PKGNAMEPREFIX=	${DMPKGNAMEPREFIX}
 DISTNAME=	hr2final
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hell Revealed II is a megawad, a 32-level replacement for DooM II
 
 USE_ZIP=	yes
