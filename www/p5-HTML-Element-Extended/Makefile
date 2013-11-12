@@ -1,5 +1,5 @@
 # Created by: Garrett A. Wollman
-# $FreeBSD: www/p5-HTML-Element-Extended/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Element-Extended/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Element-Extended
 PORTVERSION=	1.18
@@ -11,13 +11,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extended interface to HTML::Tree's HTML::Element class
 
 BUILD_DEPENDS=	p5-HTML-Tree>=3.01:${PORTSDIR}/www/p5-HTML-Tree
-RUN_DEPENDS=	p5-HTML-Tree>=3.01:${PORTSDIR}/www/p5-HTML-Tree
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::ElementRaw.3 HTML::ElementGlob.3 \
-		HTML::ElementSuper.3 HTML::ElementTable.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
