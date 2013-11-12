@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: databases/p5-Search-InvertedIndex/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Search-InvertedIndex/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Search-InvertedIndex
 PORTVERSION=	1.14
@@ -19,14 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Search::InvertedIndex.3 \
-		Search::InvertedIndex::AutoLoader.3 \
-		Search::InvertedIndex::DB::DB_File_SplitHash.3 \
-		Search::InvertedIndex::DB::Mysql.3 \
-		Search::InvertedIndex::Query.3 \
-		Search::InvertedIndex::Update.3 \
-		Search::InvertedIndex::Query::Leaf.3 \
-		Search::InvertedIndex::Result.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
