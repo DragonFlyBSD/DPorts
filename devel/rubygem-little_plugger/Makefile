@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-little_plugger/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-little_plugger/Makefile 332038 2013-10-30 02:36:45Z swills $
 
 PORTNAME=	little_plugger
 PORTVERSION=	1.1.3
@@ -17,5 +17,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 RUN_DEPENDS=	rubygem-rspec>=0:${PORTSDIR}/devel/rubygem-rspec
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
