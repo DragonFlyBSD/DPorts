@@ -1,13 +1,13 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/rubygem-nanoc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-nanoc/Makefile 332433 2013-11-02 00:02:27Z zi $
 
 PORTNAME=	nanoc
-PORTVERSION=	3.6.4
+PORTVERSION=	3.6.5
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	zi@FreeBSD.org
-COMMENT=	A simple but very flexible static site generator
+COMMENT=	Simple but flexible static site generator
 
 RUN_DEPENDS=	rubygem-cri>=2.2:${PORTSDIR}/devel/rubygem-cri
 
