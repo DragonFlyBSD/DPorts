@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/php55-opcache/Makefile 329227 2013-10-03 19:34:30Z ale $
+# $FreeBSD: www/php55-opcache/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	www
 
@@ -9,5 +9,4 @@ PKGNAMESUFFIX=	-opcache
 
 USE_ZENDEXT=	yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
