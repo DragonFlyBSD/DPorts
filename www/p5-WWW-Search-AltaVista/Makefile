@@ -1,5 +1,5 @@
 # Created by: Fanying Jen <fanying@fynet.com>
-# $FreeBSD: www/p5-WWW-Search-AltaVista/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Search-AltaVista/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WWW-Search-AltaVista
 PORTVERSION=	2.154
@@ -18,16 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Search::AltaVista.3 \
-		WWW::Search::AltaVista::Web.3 \
-		WWW::Search::AltaVista::DE.3 \
-		WWW::Search::AltaVista::NL.3 \
-		WWW::Search::AltaVista::AdvancedNews.3 \
-		WWW::Search::AltaVista::AdvancedWeb.3 \
-		WWW::Search::AltaVista::Careers.3 \
-		WWW::Search::AltaVista::News.3 \
-		WWW::Search::AltaVista::Intranet.3 \
-		WWW::Search::AltaVista::Intranet3.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
