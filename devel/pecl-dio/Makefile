@@ -1,9 +1,7 @@
-# Created by: Florian Smeets <flo@smeets.im>
-# $FreeBSD: devel/pecl-dio/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-dio/Makefile 332434 2013-11-02 00:05:49Z flo $
 
 PORTNAME=	dio
-DISTVERSION=	0.0.6
-PORTREVISION=	1
+DISTVERSION=	0.0.7
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -11,12 +9,11 @@ EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
 MAINTAINER=	flo@FreeBSD.org
-COMMENT=	A PECL extension that provides direct access to low level IO
+COMMENT=	PECL extension that provides direct access to low level IO
 
 LICENSE=	PHP30
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
