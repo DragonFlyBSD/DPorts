@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Coro/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Coro/Makefile 332901 2013-11-05 19:33:28Z sunpoet $
 
 PORTNAME=	Coro
-PORTVERSION=	6.31
+PORTVERSION=	6.32
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
@@ -22,42 +22,20 @@ BUILD_DEPENDS=	p5-AnyEvent>=7:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+USES=		perl5 shebangfix
 USE_PERL5=	configure
 
-MAN3=		Coro.3 \
-		Coro::AIO.3 \
-		Coro::AnyEvent.3 \
-		Coro::BDB.3 \
-		Coro::Channel.3 \
-		Coro::Debug.3 \
-		Coro::EV.3 \
-		Coro::Event.3 \
-		Coro::Handle.3 \
-		Coro::Intro.3 \
-		Coro::LWP.3 \
-		Coro::MakeMaker.3 \
-		Coro::RWLock.3 \
-		Coro::Select.3 \
-		Coro::Semaphore.3 \
-		Coro::SemaphoreSet.3 \
-		Coro::Signal.3 \
-		Coro::Socket.3 \
-		Coro::Specific.3 \
-		Coro::State.3 \
-		Coro::Storable.3 \
-		Coro::Timer.3 \
-		Coro::Util.3
+SHEBANG_FILES=	Coro/*.pl eg/*
+SHEBANG_LANG=	perl2
+perl2_OLD_CMD=	/opt/bin/perl
+perl2_CMD=	${perl_CMD}
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/cede-vs-schedule ${DOCSDIR}/
-.endif
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/eg/* ${EXAMPLESDIR}/
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/cede-vs-schedule ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/eg/* ${STAGEDIR}${EXAMPLESDIR}/
 
 .include <bsd.port.mk>
