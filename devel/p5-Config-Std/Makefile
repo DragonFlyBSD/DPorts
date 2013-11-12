@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Std/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-Std/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Config-Std
 PORTVERSION=	0.901
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Class-Std>=0:${PORTSDIR}/devel/p5-Class-Std
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Config::Std.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
