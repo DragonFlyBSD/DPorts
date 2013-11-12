@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: www/p5-Apache-Admin-Config/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-Admin-Config/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-Admin-Config
 PORTVERSION=	0.95
@@ -12,13 +12,5 @@ COMMENT=	Perl module to manipulate Apache configuration files
 
 USES=		perl5
 USE_PERL5=	configure patch
-
-MAN3=		Apache::Admin::Config.3
-
-NO_STAGE=	yes
-post-patch:
-	${PERL} -pi -e 's/(!\$$)/0 && $1/;' \
-		-e 's|(VERSION_FROM\s+=>\s+)(.*)(,.*)$$|$$1$$2$$3\nMAN3PODS=>{$$2=>q!\\\$$(INST_MAN3DIR)/${MAN3}!},|;' \
-		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
