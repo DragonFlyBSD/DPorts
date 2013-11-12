@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-EtText/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-EtText/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-EtText
 PORTVERSION=	2.2
@@ -17,10 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::EtText.3 Text::EtText::DefaultGlossary.3 \
-		Text::EtText::LinkGlossary.3 Text::EtText::EtText2HTML.3 \
-		Text::EtText::HTML2EtText.3
-MAN1=		ethtml2text.1 ettext2html.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
