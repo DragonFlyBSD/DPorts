@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/cyrus2courier/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/cyrus2courier/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	cyrus2courier
 DISTVERSION=	1.4
@@ -15,12 +15,11 @@ ALL_TARGET=	build
 
 PLIST_FILES=	bin/cyrus2courier
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/^CFLAGS*/d; /^LDFLAGS*/d; /^CC*/d' \
 		${WRKSRC}/src/Makefile.FreeBSD
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
