@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: databases/p5-Iterator-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Iterator-DBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Iterator-DBI
 PORTVERSION=	0.02
@@ -13,10 +13,7 @@ COMMENT=	An iterator for returning DBI query results
 BUILD_DEPENDS=	p5-Iterator>=0:${PORTSDIR}/devel/p5-Iterator
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Iterator::DBI.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
