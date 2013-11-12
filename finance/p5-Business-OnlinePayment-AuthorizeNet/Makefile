@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-AuthorizeNet/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-OnlinePayment-AuthorizeNet/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Business-OnlinePayment-AuthorizeNet
 PORTVERSION=	3.22
@@ -20,10 +20,4 @@ RUN_DEPENDS=	p5-Business-OnlinePayment>=3:${PORTSDIR}/finance/p5-Business-Online
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::OnlinePayment::AuthorizeNet.3 \
-		Business::OnlinePayment::AuthorizeNet::AIM.3 \
-		Business::OnlinePayment::AuthorizeNet::AIM::ErrorCodes.3 \
-		Business::OnlinePayment::AuthorizeNet::ARB.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
