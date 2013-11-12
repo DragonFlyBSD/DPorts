@@ -1,5 +1,5 @@
 # Created by: Scott McWhirter <scott@surreytech.co.uk>
-# $FreeBSD: databases/p5-T2/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-T2/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	T2
 PORTVERSION=	0.10
@@ -24,10 +24,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		T2.3 T2::Association.3 T2::Attribute.3 T2::Class.3 \
-		T2::DBSetup.3 T2::Method.3 T2::Schema.3 T2::Storage.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/eval/s|^|# | ; \
