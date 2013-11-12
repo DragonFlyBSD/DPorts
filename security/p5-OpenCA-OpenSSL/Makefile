@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: security/p5-OpenCA-OpenSSL/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-OpenCA-OpenSSL/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	OpenCA-OpenSSL
 PORTVERSION=	2.0.29
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		OpenCA::OpenSSL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
