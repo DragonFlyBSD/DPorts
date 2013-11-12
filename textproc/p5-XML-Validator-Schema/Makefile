@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-XML-Validator-Schema/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: textproc/p5-XML-Validator-Schema/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Validator-Schema
 PORTVERSION=	1.10
@@ -18,32 +18,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		XML::Validator::Schema.3 \
-		XML::Validator::Schema::Attribute.3 \
-		XML::Validator::Schema::AttributeLibrary.3 \
-		XML::Validator::Schema::AttributeNode.3 \
-		XML::Validator::Schema::ComplexTypeNode.3 \
-		XML::Validator::Schema::ElementLibrary.3 \
-		XML::Validator::Schema::ElementNode.3 \
-		XML::Validator::Schema::ElementRefNode.3 \
-		XML::Validator::Schema::Library.3 \
-		XML::Validator::Schema::ModelNode.3 \
-		XML::Validator::Schema::Node.3 \
-		XML::Validator::Schema::Parser.3 \
-		XML::Validator::Schema::RootNode.3 \
-		XML::Validator::Schema::SimpleType.3 \
-		XML::Validator::Schema::SimpleTypeNode.3 \
-		XML::Validator::Schema::TypeLibrary.3 \
-		XML::Validator::Schema::Util.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	ANNOUNCE Changes README TODO
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
