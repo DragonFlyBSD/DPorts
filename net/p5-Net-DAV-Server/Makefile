@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-DAV-Server/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-DAV-Server/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-DAV-Server
 PORTVERSION=	1.30.5
@@ -23,8 +23,4 @@ RUN_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Net::DAV::LockManager.3 \
-		Net::DAV::Server.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
