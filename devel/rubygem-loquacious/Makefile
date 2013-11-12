@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-loquacious/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-loquacious/Makefile 332039 2013-10-30 02:39:14Z swills $
 
 PORTNAME=	loquacious
 PORTVERSION=	1.9.1
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 RUN_DEPENDS=	rubygem-rspec>=2.7.0:${PORTSDIR}/devel/rubygem-rspec
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
