@@ -1,12 +1,10 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: sysutils/pciutils/Makefile 330009 2013-10-10 14:36:32Z sunpoet $
+# $FreeBSD: sysutils/pciutils/Makefile 333525 2013-11-11 17:17:51Z sunpoet $
 
 PORTNAME=	pciutils
-PORTVERSION=	3.2.0
-PORTREVISION=	1
+PORTVERSION=	3.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/ \
-		KERNEL/software/utils/pciutils \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
