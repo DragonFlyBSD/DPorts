@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: misc/colortail/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/colortail/Makefile 333003 2013-11-06 15:23:38Z tabthorpe $
 
 PORTNAME=	colortail
 PORTVERSION=	0.3.3
@@ -7,16 +7,18 @@ CATEGORIES=	misc
 MASTER_SITES=	http://joakimandersson.se/files/
 
 MAINTAINER=	tabthorpe@FreeBSD.org
-COMMENT=	A colour-able replacement for tail(1)
+COMMENT=	tail(1) replacement with color support
 
+LICENCE=	GPLv2
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/colortail ${STAGEDIR}${PREFIX}/bin
+
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/example-conf/conf* ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/example-conf/conf* ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
