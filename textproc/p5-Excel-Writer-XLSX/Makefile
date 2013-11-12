@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Excel-Writer-XLSX/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD: textproc/p5-Excel-Writer-XLSX/Makefile 333320 2013-11-09 18:48:49Z sunpoet $
 
 PORTNAME=	Excel-Writer-XLSX
-PORTVERSION=	0.72
+PORTVERSION=	0.73
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JMCNAMARA
