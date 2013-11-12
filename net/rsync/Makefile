@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: net/rsync/Makefile 331417 2013-10-23 19:21:58Z ehaupt $
+# $FreeBSD: net/rsync/Makefile 332822 2013-11-05 08:56:50Z ehaupt $
 
 PORTNAME=	rsync
 PORTVERSION=	3.1.0
@@ -29,7 +29,7 @@ CONFIGURE_ARGS=	--disable-debug --enable-ipv6 \
 PORTDOCS=	NEWS README csprotocol.txt tech_report.tex
 
 # define options
-OPTIONS_DEFINE=		POPT_PORT ZLIB_BASE SSH ICONV
+OPTIONS_DEFINE=		DOCS POPT_PORT ZLIB_BASE SSH ICONV
 OPTIONS_RADIO=		PTS
 OPTIONS_RADIO_PTS=	TIMELIMIT RENAMED FLAGS RENFL ATIMES ACL
 
