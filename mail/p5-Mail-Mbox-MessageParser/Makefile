@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: mail/p5-Mail-Mbox-MessageParser/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Mbox-MessageParser/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Mail-Mbox-MessageParser
 PORTVERSION=	1.5002
@@ -19,11 +19,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS+=	</dev/null
 
-MAN3=		Mail::Mbox::MessageParser.3 \
-		Mail::Mbox::MessageParser::Cache.3 \
-		Mail::Mbox::MessageParser::Grep.3 \
-		Mail::Mbox::MessageParser::Perl.3 \
-		Mail::Mbox::MessageParser::MetaInfo.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
