@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-amqp/Makefile 331697 2013-10-26 14:45:35Z koobs $
+# $FreeBSD: net/py-amqp/Makefile 332907 2013-11-05 20:58:22Z wg $
 
 PORTNAME=	amqp
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.2
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -23,7 +23,7 @@ PYDISTUTILS_AUTOPLIST=	yes
 
 GH_ACCOUNT=	celery
 GH_PROJECT=	py-${PORTNAME}
-GH_COMMIT=	c92b683
+GH_COMMIT=	a6cdb3b
 GH_TAGNAME=	v${PORTVERSION}
 
 regression-test: build
