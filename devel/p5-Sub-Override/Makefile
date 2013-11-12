@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars.eggert@gmx.net>
-# $FreeBSD: devel/p5-Sub-Override/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Override/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Sub-Override
 PORTVERSION=	0.09
@@ -15,7 +15,4 @@ TEST_DEPENDS=	p5-Test-Fatal>=0.0:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sub::Override.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
