@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: net-mgmt/php55-snmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/php55-snmp/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	net-mgmt
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-snmp
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
