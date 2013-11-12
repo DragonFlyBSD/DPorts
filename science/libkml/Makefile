@@ -1,23 +1,25 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: science/libkml/Makefile 328975 2013-10-01 17:41:26Z marino $
+# $FreeBSD: science/libkml/Makefile 333367 2013-11-10 07:10:14Z sunpoet $
 
 PORTNAME=	libkml
 PORTVERSION=	1.2.0
 CATEGORIES=	science
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for parse, generate, and operate on KML
+
+LICENSE=	BSD
 
 BUILD_DEPENDS=	${LOCALBASE}/include/expat.h:${PORTSDIR}/textproc/expat2 \
 		${LOCALBASE}/bin/curl-config:${PORTSDIR}/ftp/curl
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_GCC=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include -Wno-long-long
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
