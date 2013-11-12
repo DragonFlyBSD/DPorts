@@ -1,5 +1,5 @@
 # Created by: Vitaly Magerya <vmagerya@gmail.com>
-# $FreeBSD: editors/wordgrinder/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/wordgrinder/Makefile 332568 2013-11-03 00:46:39Z feld $
 
 PORTNAME=	wordgrinder
 PORTVERSION=	0.3.3
@@ -9,13 +9,13 @@ MASTER_SITES=	SF
 MAINTAINER=	vmagerya@gmail.com
 COMMENT=	A simple Unicode-aware console-based word processor
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	${LUA_MODLIBDIR}/lfs.so:${PORTSDIR}/devel/luafilesystem
 
 USE_LUA=	5.1+
 
 USE_BZIP2=	yes
-
-LICENSE=	MIT
 
 MAN1=		wordgrinder.1
 
@@ -34,6 +34,8 @@ post-patch:
 		${WRKSRC}/pmfile
 	${REINPLACE_CMD} 's,^LUACOMPILER =.*$$,LUACOMPILER = "${LUAC_CMD}",' \
 		${WRKSRC}/tools/lua.pm
+	${REINPLACE_CMD} "/CCOMPILER = /s,gcc,cc ," ${WRKSRC}/tools/c.pm
+	${REINPLACE_CMD} "/CC=/s,gcc,cc ," ${WRKSRC}/pm
 
 do-build:
 	(cd ${WRKSRC}; ./pm)
