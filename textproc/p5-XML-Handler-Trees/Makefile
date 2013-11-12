@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-Handler-Trees/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Handler-Trees/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Handler-Trees
 PORTVERSION=	0.02
@@ -14,9 +14,6 @@ USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	Trees.pm
 
-MAN3=		XML::Handler::Trees.3
-
-NO_STAGE=	yes
 post-extract:
 	@${CHMOD} +w ${WRKSRC}/Trees.pm
 
