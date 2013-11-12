@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda3/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/libgda3/Makefile 333427 2013-11-10 19:18:42Z wg $
 #   $MCom: ports/databases/libgda3/Makefile,v 1.11 2008/03/01 02:35:38 mezz Exp $
 
 PORTNAME=	libgda3
@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=	--without-tds
 .endif
 
 .if ${LIBGDA3_SLAVE}=="mdb"
-LIB_DEPENDS+=		mdbsql.0:${PORTSDIR}/databases/mdbtools
+LIB_DEPENDS+=		libmdbsql.so:${PORTSDIR}/databases/mdbtools
 CONFIGURE_ARGS+=	--with-mdb=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-mdb
