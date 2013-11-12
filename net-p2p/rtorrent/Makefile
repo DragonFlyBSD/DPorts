@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/rtorrent/Makefile 332456 2013-11-02 08:32:28Z az $
+# $FreeBSD: net-p2p/rtorrent/Makefile 332632 2013-11-03 17:39:09Z az $
 
 PORTNAME?=	rtorrent
 PORTVERSION=	0.9.2
@@ -36,7 +36,7 @@ BROKEN=		Does not configure on arm
 .endif
 
 # Workaround to build and segfault on > 10.x
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
+.if ${OPSYS} == "FreeBSD" && ${OSVERSION} >= 1000000
 USE_GCC=        yes
 LDFLAGS+=	-lc++
 .endif
