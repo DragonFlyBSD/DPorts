@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: devel/p5-Curses-Widgets/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Curses-Widgets/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Curses-Widgets
 PORTVERSION=	1.997
@@ -17,19 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Curses::Widgets::Label.3 \
-	Curses::Widgets.3 \
-	Curses::Widgets::TextMemo.3 \
-	Curses::Widgets::ListBox.3 \
-	Curses::Widgets::Menu.3 \
-	Curses::Widgets::ButtonSet.3 \
-	Curses::Widgets::ComboBox.3 \
-	Curses::Widgets::TextField.3 \
-	Curses::Widgets::Tutorial.3 \
-	Curses::Widgets::Calendar.3 \
-	Curses::Widgets::ProgressBar.3 \
-	Curses::Widgets::ListBox::MultiColumn.3 \
-	Curses::Widgets::Tutorial::Creation.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
