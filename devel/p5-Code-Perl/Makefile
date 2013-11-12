@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Code-Perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Code-Perl/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Code-Perl
 PORTVERSION=	0.03
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-Class-MethodMaker>=0:${PORTSDIR}/devel/p5-Class-MethodMaker \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Code::Perl.3 Code::Perl::Expr.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
