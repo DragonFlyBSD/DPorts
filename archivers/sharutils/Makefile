@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/sharutils/Makefile 328222 2013-09-25 00:05:17Z garga $
+# $FreeBSD: archivers/sharutils/Makefile 332346 2013-11-01 09:57:50Z garga $
 
 PORTNAME=	sharutils
 PORTVERSION=	4.13.5
@@ -20,17 +20,11 @@ CONFIGURE_ARGS=	--program-prefix=g --disable-uucode
 INSTALL_TARGET=	install install-man
 INFO=		sharutils
 USES=		charsetfix perl5
+OPTIONS_SUB=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-PLIST_SUB+=	NLS=""
-USES+=		gettext
-CONFIGURE_ARGS+=--with-libintl-prefix="${LOCALBASE}"
-.else
-PLIST_SUB+=	NLS="@comment "
-CONFIGURE_ARGS+=--disable-nls
-.endif
+NLS_USES=	gettext
+NLS_CONFIGURE_ON=	--with-libintl-prefix="${LOCALBASE}"
+NLS_CONFIGURE_OFF=	--disable-nls
 
 post-patch:
 .for man in shar.1 unshar.1
@@ -52,4 +46,4 @@ post-patch:
 		${WRKSRC}/doc/${man}
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
