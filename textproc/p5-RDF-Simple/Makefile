@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: textproc/p5-RDF-Simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-RDF-Simple/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	RDF-Simple
 PORTVERSION=	0.41.5
@@ -24,12 +24,4 @@ TEST_DEPENDS=	p5-IO-CaptureOutput>0:${PORTSDIR}/devel/p5-IO-CaptureOutput \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	RDF::Simple.3 \
-	RDF::Simple::NS.3 \
-	RDF::Simple::Parser.3 \
-	RDF::Simple::Parser::Handler.3 \
-	RDF::Simple::Serialiser.3 \
-	RDF::Simple::Serializer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
