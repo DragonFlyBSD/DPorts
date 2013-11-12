@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Algorithm-Dependency-Objects/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-Dependency-Objects/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-Dependency-Objects
 PORTVERSION=	0.04
@@ -15,11 +15,7 @@ BUILD_DEPENDS=	p5-Set-Object>0:${PORTSDIR}/devel/p5-Set-Object \
 		p5-Test-Deep>0:${PORTSDIR}/devel/p5-Test-Deep
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Algorithm::Dependency::Objects.3 \
-	Algorithm::Dependency::Objects::Ordered.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
