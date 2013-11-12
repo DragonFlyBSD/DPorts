@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: databases/p5-Tie-DBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Tie-DBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Tie-DBI
 PORTVERSION=	1.06
@@ -17,7 +17,4 @@ BUILD_DEPENDS+=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tie::RDBM.3 Tie::DBI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
