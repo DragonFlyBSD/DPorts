@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: graphics/rubygem-railroad/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-railroad/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	railroad
 PORTVERSION=	0.5.0
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	YES
 
 PLIST_FILES=	bin/railroad
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
