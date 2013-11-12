@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/exhaust/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/exhaust/Makefile 332368 2013-11-01 13:20:18Z danilo $
 
 PORTNAME=	exhaust
 PORTVERSION=	1.9.2
@@ -11,11 +11,7 @@ COMMENT=	Redcode simulator easy to embed into applications
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
-	@${ECHO_CMD}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_CMD}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
