@@ -1,4 +1,4 @@
-# $FreeBSD: russian/hyphen/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2004.04.15
@@ -13,7 +13,7 @@ COMMENT=	Russian hyphenation rules
 
 LICENSE=	LGPL21
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -21,10 +21,9 @@ PLIST_FILES=	%%DATADIR%%/hyph_ru_RU.dic \
 		%%DATADIR%%/hyph_ru_UA.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_ru_RU.dic ${DATADIR}/
-	${LN} -s hyph_ru_RU.dic ${DATADIR}/hyph_ru_UA.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_ru_RU.dic ${STAGEDIR}${DATADIR}/
+	${LN} -s hyph_ru_RU.dic ${STAGEDIR}${DATADIR}/hyph_ru_UA.dic
 
 .include <bsd.port.mk>
