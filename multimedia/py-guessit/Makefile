@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-guessit/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/py-guessit/Makefile 333198 2013-11-08 10:53:05Z wg $
 
 PORTNAME=	guessit
-PORTVERSION=	0.6.1
+PORTVERSION=	0.6.2
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,6 +14,7 @@ LICENSE=	LGPL3
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
