@@ -1,5 +1,5 @@
 # Created by: Kawaguti Ginga <ginga-freebsd@ginganet.org>
-# $FreeBSD: japanese/ng-devel/Makefile 329696 2013-10-07 12:23:05Z bapt $
+# $FreeBSD: japanese/ng-devel/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	ng
 PORTVERSION=	1.5.b1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://tomato.sakura.ne.jp/~amura/archives/ng/
 DISTNAME=	${PORTNAME}-1.5beta1
 
 MAINTAINER?=	ginga-freebsd@ginganet.org
-COMMENT=	A very light Emacs-clone with Japanese support
+COMMENT=	Light Emacs-clone with Japanese support
 
 ALL_TARGET=	ng
 GNU_CONFIGURE=	yes
