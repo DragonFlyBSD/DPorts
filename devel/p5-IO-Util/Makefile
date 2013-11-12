@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-IO-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-Util/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-Util
 PORTVERSION=	1.5
@@ -17,7 +17,4 @@ PORTSCOUT=	skipv:1.48
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
