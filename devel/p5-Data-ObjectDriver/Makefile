@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Data-ObjectDriver/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-ObjectDriver/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-ObjectDriver
 PORTVERSION=	0.09
@@ -21,21 +21,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::ObjectDriver.3 Data::ObjectDriver::BaseObject.3 \
-		Data::ObjectDriver::Driver::BaseCache.3 \
-		Data::ObjectDriver::Driver::Cache::Apache.3 \
-		Data::ObjectDriver::Driver::Cache::Memcached.3 \
-		Data::ObjectDriver::Driver::DBD.3 \
-		Data::ObjectDriver::Driver::DBD::SQLite.3 \
-		Data::ObjectDriver::Driver::DBD::Oracle.3 \
-		Data::ObjectDriver::Driver::MultiPartition.3 \
-		Data::ObjectDriver::Driver::Multiplexer.3 \
-		Data::ObjectDriver::Driver::Partition.3 \
-		Data::ObjectDriver::Driver::SimplePartition.3 \
-		Data::ObjectDriver::Errors.3 Data::ObjectDriver::Profiler.3 \
-		Data::ObjectDriver::ResultSet.3 \
-		Data::ObjectDriver::SQL.3 \
-		Data::ObjectDriver::SQL::Oracle.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
