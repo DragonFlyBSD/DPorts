@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-Iterator-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Iterator-Simple/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Iterator-Simple
 PORTVERSION=	0.06
@@ -13,7 +13,4 @@ COMMENT=	Simple iterator and utilities
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Iterator::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
