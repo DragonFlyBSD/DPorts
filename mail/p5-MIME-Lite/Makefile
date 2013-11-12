@@ -1,8 +1,8 @@
 # Created by: Alex Perel <veers@disturbed.net>
-# $FreeBSD: mail/p5-MIME-Lite/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Lite/Makefile 332743 2013-11-04 16:58:59Z sunpoet $
 
 PORTNAME=	MIME-Lite
-PORTVERSION=	3.02.9
+PORTVERSION=	3.03.0
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -22,7 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::Lite.3 MIME::changes.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
