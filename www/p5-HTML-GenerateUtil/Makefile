@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl (kurt.lidl@cello.com)
-# $FreeBSD: www/p5-HTML-GenerateUtil/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-GenerateUtil/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-GenerateUtil
 PORTVERSION=	1.11
@@ -13,7 +13,4 @@ COMMENT=	Perl5 module for generating HTML on the fly
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::GenerateUtil.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
