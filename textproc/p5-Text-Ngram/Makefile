@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: textproc/p5-Text-Ngram/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Ngram/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Ngram
 PORTVERSION=	0.14
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Ngram.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
