@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-settingslogic/Makefile 331088 2013-10-21 03:20:07Z swills $
+# $FreeBSD: devel/rubygem-settingslogic/Makefile 332041 2013-10-30 02:42:34Z swills $
 
 PORTNAME=	settingslogic
 PORTVERSION=	2.0.9
@@ -12,6 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
