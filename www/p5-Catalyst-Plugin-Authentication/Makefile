@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Authentication/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Authentication/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-Authentication
 PORTVERSION=	0.10023
@@ -33,23 +33,4 @@ PORTSCOUT=	skipv:0.100091,0.100092
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Authentication::Credential::NoPassword.3 \
-	Catalyst::Authentication::Credential::Password.3 \
-	Catalyst::Authentication::Credential::Remote.3 \
-	Catalyst::Authentication::Realm.3 \
-	Catalyst::Authentication::Realm::Compatibility.3 \
-	Catalyst::Authentication::Realm::Progressive.3 \
-	Catalyst::Authentication::Store.3 \
-	Catalyst::Authentication::Store::Minimal.3 \
-	Catalyst::Authentication::Store::Null.3 \
-	Catalyst::Authentication::User.3 \
-	Catalyst::Authentication::User::Hash.3 \
-	Catalyst::Plugin::Authentication.3 \
-	Catalyst::Plugin::Authentication::Credential::Password.3 \
-	Catalyst::Plugin::Authentication::Internals.3 \
-	Catalyst::Plugin::Authentication::Store::Minimal.3 \
-	Catalyst::Plugin::Authentication::User.3 \
-	Catalyst::Plugin::Authentication::User::Hash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
