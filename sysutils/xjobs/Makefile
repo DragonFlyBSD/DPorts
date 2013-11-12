@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/xjobs/Makefile 328339 2013-09-26 07:13:05Z jgh $
+# $FreeBSD: sysutils/xjobs/Makefile 333274 2013-11-09 05:30:09Z jgh $
 
 PORTNAME=	xjobs
 PORTVERSION=	20120412
@@ -17,17 +17,12 @@ PLIST_FILES=	bin/xjobs man/man1/xjobs.1.gz
 
 PORTDOCS=	ChangeLog README
 
-.include <bsd.port.options.mk>
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
-
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 . for doc in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
 . endfor
-.endif
 
 .include <bsd.port.mk>
