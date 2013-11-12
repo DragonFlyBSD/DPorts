@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Attribute-Handlers/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Attribute-Handlers/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	Attribute-Handlers
 PORTVERSION=	0.93
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Attribute::Handlers.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
