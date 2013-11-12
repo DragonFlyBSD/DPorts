@@ -1,4 +1,4 @@
-# $FreeBSD: hungarian/hyphen/Makefile 327735 2013-09-20 18:43:02Z bapt $
+# $FreeBSD: hungarian/hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.05.17
@@ -13,16 +13,15 @@ COMMENT=	Hungarian hyphenation rules
 
 LICENSE=	LGPL21
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	%%DATADIR%%/hyph_hu_HU.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_hu_HU.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_hu_HU.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
