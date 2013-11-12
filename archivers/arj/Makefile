@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: archivers/arj/Makefile 328487 2013-09-27 14:49:44Z garga $
+# $FreeBSD: archivers/arj/Makefile 332292 2013-10-31 23:27:20Z garga $
 
 PORTNAME=	arj
 PORTVERSION=	3.10.22
@@ -9,6 +9,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/2.78_3.10%20build%2022
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Open-source ARJ
+
+LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	DOCS
 
@@ -54,11 +56,9 @@ pre-build:
 	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} prepare)
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} COPYING debug.txt ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/resource/en && \
 		${INSTALL_DATA} arjl.txt arjs.txt history.txt readme.txt unix.txt ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.post.mk>
