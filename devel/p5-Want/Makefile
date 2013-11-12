@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Want/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Want/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Want
 PORTVERSION=	0.21
@@ -14,7 +14,4 @@ COMMENT=	Generalisation of wantarray
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Want.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
