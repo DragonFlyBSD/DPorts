@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/so-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/so-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.0.2
@@ -16,7 +16,6 @@ COMMENT=	Somali hunspell dictionaries
 
 LICENSE=	GPLv2
 
-USE_ZIP=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/dictionaries
 
