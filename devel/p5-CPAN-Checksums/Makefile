@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-CPAN-Checksums/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-CPAN-Checksums/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	CPAN-Checksums
 PORTVERSION=	2.08
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Compress-Bzip2>=0:${PORTSDIR}/archivers/p5-Compress-Bzip2
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CPAN::Checksums.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
