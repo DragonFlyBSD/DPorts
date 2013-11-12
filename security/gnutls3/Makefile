@@ -1,8 +1,9 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: security/gnutls3/Makefile 331600 2013-10-25 15:34:47Z wg $
+# $FreeBSD: security/gnutls3/Makefile 332596 2013-11-03 09:21:59Z novel $
 
 PORTNAME=	gnutls
-PORTVERSION=	3.1.15
+PORTVERSION=	3.1.16
+PORTREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/
 PKGNAMESUFFIX=	${GNUTLS_SUFFIX}
@@ -48,7 +49,7 @@ CXX_CONFIGURE_ENABLE=	cxx
 
 .include <bsd.port.options.mk>
 
-.if defined(PORT_OPTIONS:MLIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.5)
+.if defined(PORT_OPTIONS:MLIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.7)
 LIB_DEPENDS+=	libtasn1.so:${PORTSDIR}/security/libtasn1
 .else
 CONFIGURE_ARGS+=	--with-included-libtasn1
