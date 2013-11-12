@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 333110 2013-11-07 15:07:04Z sunpoet $
 
 PORTNAME=	Spreadsheet-WriteExcel
-PORTVERSION=	2.39
+PORTVERSION=	2.40
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,54 +10,36 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Write to a cross-platform Excel binary file
 
-BUILD_DEPENDS=	p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent \
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
+		p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip \
 		p5-OLE-Storage_Lite>=0:${PORTSDIR}/devel/p5-OLE-Storage_Lite \
-		p5-Date-Calc>=0:${PORTSDIR}/devel/p5-Date-Calc \
-		p5-Date-Manip>=0:${PORTSDIR}/devel/p5-Date-Manip
+		p5-Parse-RecDescent>=0:${PORTSDIR}/devel/p5-Parse-RecDescent
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
-USE_PERL5=	configure
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+USES=		perl5 shebangfix
 USE_DOS2UNIX=	yes
+USE_PERL5=	configure
 DOS2UNIX_REGEX=	"*.p[lm]"
 
-MAN1=		chartex.1
-MAN3=		Spreadsheet::WriteExcel.3 \
-		Spreadsheet::WriteExcel::BIFFwriter.3 \
-		Spreadsheet::WriteExcel::Big.3 \
-		Spreadsheet::WriteExcel::Chart.3 \
-		Spreadsheet::WriteExcel::Chart::Area.3 \
-		Spreadsheet::WriteExcel::Chart::Bar.3 \
-		Spreadsheet::WriteExcel::Chart::Column.3 \
-		Spreadsheet::WriteExcel::Chart::External.3 \
-		Spreadsheet::WriteExcel::Chart::Line.3 \
-		Spreadsheet::WriteExcel::Chart::Pie.3 \
-		Spreadsheet::WriteExcel::Chart::Scatter.3 \
-		Spreadsheet::WriteExcel::Chart::Stock.3 \
-		Spreadsheet::WriteExcel::Examples.3 \
-		Spreadsheet::WriteExcel::Format.3 \
-		Spreadsheet::WriteExcel::Formula.3 \
-		Spreadsheet::WriteExcel::OLEwriter.3 \
-		Spreadsheet::WriteExcel::Properties.3 \
-		Spreadsheet::WriteExcel::Utility.3 \
-		Spreadsheet::WriteExcel::Workbook.3 \
-		Spreadsheet::WriteExcel::Worksheet.3
+SHEBANG_FILES=	examples/*.pl
 
-NO_STAGE=	yes
 post-install:
-.ifndef(NOPORTDOCS)
 	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
-	@${MKDIR} ${DOCSDIR}/images
-	@${MKDIR} ${DOCSDIR}/tpj_images
-	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/images/* ${DOCSDIR}/images
-	${INSTALL_DATA} ${WRKSRC}/docs/tpj_images/* ${DOCSDIR}/tpj_images
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/images
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/tpj_images
+	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/images/* ${STAGEDIR}${DOCSDIR}/images
+	${INSTALL_DATA} ${WRKSRC}/docs/tpj_images/* ${STAGEDIR}${DOCSDIR}/tpj_images
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/README \
-		${WRKSRC}/examples/republic.png ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/*.txt ${EXAMPLESDIR}
-.endif
+		${WRKSRC}/examples/republic.png ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/*.txt ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
