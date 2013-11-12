@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <philip@p6m7g8.com>
-# $FreeBSD: databases/p5-DBIx-Tree/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Tree/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBIx-Tree
 PORTVERSION=	1.96
@@ -13,13 +13,10 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for generating a tree from a self-referential table
 
 BUILD_DEPENDS=	p5-DBI>=1.622:${PORTSDIR}/databases/p5-DBI
-RUN_DEPENDS=	p5-DBI>=1.622:${PORTSDIR}/databases/p5-DBI
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-DBD-SQLite>=1.37:${PORTSDIR}/databases/p5-DBD-SQLite
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBIx::Tree.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
