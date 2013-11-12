@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-stringy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-stringy/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-stringy
 PORTVERSION=	2.110
@@ -13,8 +13,4 @@ COMMENT=	Perl5 module for using IO handles with non-file objects
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::AtomicFile.3 IO::InnerFile.3 IO::Lines.3 IO::Scalar.3 \
-		IO::ScalarArray.3 IO::Stringy.3 IO::Wrap.3 IO::WrapTie.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
