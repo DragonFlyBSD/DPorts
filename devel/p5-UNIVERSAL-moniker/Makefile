@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-UNIVERSAL-moniker/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-UNIVERSAL-moniker/Makefile 332248 2013-10-31 15:02:49Z vanilla $
 
 PORTNAME=	UNIVERSAL-moniker
 PORTVERSION=	0.08
@@ -13,7 +13,4 @@ COMMENT=	Moniker for classes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		UNIVERSAL::moniker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
