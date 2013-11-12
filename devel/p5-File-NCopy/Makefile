@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-File-NCopy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-NCopy/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-NCopy
 PORTVERSION=	0.36
@@ -15,7 +15,4 @@ COMMENT=	Copy file(s) to directories/file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::NCopy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
