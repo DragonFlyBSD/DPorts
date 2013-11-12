@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-Text-Reflow/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Reflow/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Reflow
 PORTVERSION=	1.09
@@ -13,9 +13,6 @@ COMMENT=	Perl module for reflowing text files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Reflow.3
-
 EXTRA_PATCHES=	${PATCHDIR}/5.8-Reflow.pm
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
