@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Parser/Makefile 333128 2013-11-07 15:56:48Z jadawin $
 
 PORTNAME=	HTML-Parser
 PORTVERSION=	3.71
@@ -16,13 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Entities.3 \
-		HTML::Filter.3 \
-		HTML::HeadParser.3 \
-		HTML::LinkExtor.3 \
-		HTML::Parser.3 \
-		HTML::PullParser.3 \
-		HTML::TokeParser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
