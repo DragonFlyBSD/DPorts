@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/rubygem-macaddr/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-macaddr/Makefile 332047 2013-10-30 02:53:47Z swills $
 
 PORTNAME=	macaddr
 PORTVERSION=	1.6.1
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
