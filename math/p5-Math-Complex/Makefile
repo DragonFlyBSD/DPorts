@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: math/p5-Math-Complex/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Complex/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-Complex
 PORTVERSION=	1.59
@@ -16,8 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::Complex.3 \
-		Math::Trig.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
