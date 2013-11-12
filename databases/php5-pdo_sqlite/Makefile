@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/php5-pdo_sqlite/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/php5-pdo_sqlite/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	databases
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-pdo_sqlite
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
