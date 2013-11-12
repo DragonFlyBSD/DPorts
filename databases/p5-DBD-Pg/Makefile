@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-Pg/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBD-Pg/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBD-Pg
 PORTVERSION=	2.19.3
@@ -20,7 +20,4 @@ USES=		perl5
 USE_PERL5=	configure
 USE_PGSQL=	yes
 
-MAN3=		DBD::Pg.3 Bundle::DBD::Pg.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
