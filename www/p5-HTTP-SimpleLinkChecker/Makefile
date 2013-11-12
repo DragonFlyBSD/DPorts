@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-SimpleLinkChecker/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-SimpleLinkChecker/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-SimpleLinkChecker
 PORTVERSION=	1.16
@@ -11,13 +11,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check the HTTP response code for a link
 
 BUILD_DEPENDS=	p5-libwww>0:${PORTSDIR}/www/p5-libwww
-RUN_DEPENDS=	p5-libwww>0:${PORTSDIR}/www/p5-libwww
-
-MAN1=	http_status.1
-MAN3=	HTTP::SimpleLinkChecker.3
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
