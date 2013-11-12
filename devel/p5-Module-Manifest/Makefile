@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Module-Manifest/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Manifest/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Manifest
 PORTVERSION=	1.08
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Manifest.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
