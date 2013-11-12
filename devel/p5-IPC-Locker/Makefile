@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-Locker/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IPC-Locker/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IPC-Locker
 PORTVERSION=	1.492
@@ -16,10 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	lockerd.1 lockersh.1 pidstat.1 pidstatd.1 pidwatch.1 \
-	uriexec.1
-MAN3=	IPC::Locker.3 IPC::Locker::Server.3 \
-	IPC::PidStat.3 IPC::PidStat::PidServer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
