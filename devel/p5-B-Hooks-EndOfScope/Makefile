@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	B-Hooks-EndOfScope
 PORTVERSION=	0.12
@@ -21,11 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		B::Hooks::EndOfScope.3 \
-		B::Hooks::EndOfScope::PP.3 \
-		B::Hooks::EndOfScope::PP::FieldHash.3 \
-		B::Hooks::EndOfScope::PP::HintHash.3 \
-		B::Hooks::EndOfScope::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
