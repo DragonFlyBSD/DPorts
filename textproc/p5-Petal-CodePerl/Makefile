@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Petal-CodePerl/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Petal-CodePerl/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Petal-CodePerl
 PORTVERSION=	0.06
@@ -16,11 +16,7 @@ BUILD_DEPENDS=	p5-Petal>=0:${PORTSDIR}/textproc/p5-Petal \
 		p5-Code-Perl>=0:${PORTSDIR}/devel/p5-Code-Perl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Petal::CodePerl.3 Petal::CodePerl::Expr.3 \
-	Petal::CodePerl::Modifiers.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
