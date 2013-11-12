@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Search-Estraier/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Search-Estraier/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Search-Estraier
 PORTVERSION=	0.09
@@ -19,10 +19,7 @@ TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Search::Estraier.3
-
-NO_STAGE=	yes
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
