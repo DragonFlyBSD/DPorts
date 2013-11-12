@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: databases/p5-Class-DBI-ToSax/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-ToSax/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-ToSax
 PORTVERSION=	0.10
@@ -10,8 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extension to Class::DBI for sqlite
 
-RUN_DEPENDS=	p5-Ima-DBI>=0:${PORTSDIR}/databases/p5-Ima-DBI \
-		p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
+RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 		p5-XML-SAX-Writer>=0:${PORTSDIR}/textproc/p5-XML-SAX-Writer \
 		p5-NEXT>=0:${PORTSDIR}/devel/p5-NEXT
 BUILD_DEPENDS:=	${RUN_DEPENDS}
@@ -19,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::DBI::ToSax.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
