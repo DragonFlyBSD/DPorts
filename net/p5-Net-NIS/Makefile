@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-NIS/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-NIS/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-NIS
 PORTVERSION=	0.43
@@ -13,7 +13,4 @@ COMMENT=	Interface to Sun's Network Information Service
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::NIS.3 Net::NISTable.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
