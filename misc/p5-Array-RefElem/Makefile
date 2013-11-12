@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Array-RefElem/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Array-RefElem/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Array-RefElem
 PORTVERSION=	1.00
@@ -13,7 +13,4 @@ COMMENT=	Set up array elements as aliases
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Array::RefElem.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
