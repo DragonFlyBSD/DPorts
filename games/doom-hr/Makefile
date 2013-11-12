@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-hr/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/doom-hr/Makefile 331975 2013-10-29 17:59:47Z nemysis $
 
 PORTNAME=	hr
 PORTVERSION=	1.0
@@ -14,7 +14,7 @@ PKGNAMEPREFIX=	${DMPKGNAMEPREFIX}
 DISTFILES=	${PORTNAME}${EXTRACT_SUFX}
 DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hell Revealed is a megawad, a 32-level replacement for DooM II
 
 USE_ZIP=	yes
