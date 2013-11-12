@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-Any-Template/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Any-Template/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Any-Template
 PORTVERSION=	1.015
@@ -17,11 +17,4 @@ TEST_DEPENDS=	p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Any::Template.3 Any::Template::Backend.3 \
-	Any::Template::Backend::HTML::Template.3 \
-	Any::Template::Backend::TemplateToolkit.3 \
-	Any::Template::Backend::Text::MicroMason.3 \
-	Any::Template::Backend::Text::Template.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
