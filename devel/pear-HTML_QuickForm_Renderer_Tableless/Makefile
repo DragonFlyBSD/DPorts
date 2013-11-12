@@ -1,5 +1,5 @@
 # Created by: Chris St Denis <chris@smartt.com>
-# $FreeBSD: devel/pear-HTML_QuickForm_Renderer_Tableless/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-HTML_QuickForm_Renderer_Tableless/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	HTML_QuickForm_Renderer_Tableless
 PORTVERSION=	0.6.1
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/HTML/QuickForm.php:${PORTSDIR}/devel/pear-HTML_QuickForm
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
