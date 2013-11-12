@@ -1,5 +1,5 @@
 # Created by: tobez@FreeBSD.org
-# $FreeBSD: security/p5-Authen-Captcha/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-Captcha/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Authen-Captcha
 PORTVERSION=	1.023
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Authen::Captcha.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
