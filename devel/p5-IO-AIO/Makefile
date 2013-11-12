@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-AIO/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-AIO/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-AIO
 PORTVERSION=	4.18
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::AIO.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
