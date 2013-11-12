@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Moo/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Moo/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Moo
 PORTVERSION=	1.003001
@@ -26,12 +26,6 @@ TEST_DEPENDS=	p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Moo.3 \
-		Moo::Role.3 \
-		Sub::Defer.3 \
-		Sub::Quote.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
