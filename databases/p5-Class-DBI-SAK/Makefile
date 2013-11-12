@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: databases/p5-Class-DBI-SAK/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-SAK/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-SAK
 PORTVERSION=	1.4
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Class::DBI::SAK.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
