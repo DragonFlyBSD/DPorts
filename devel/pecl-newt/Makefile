@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pecl-newt/Makefile 330385 2013-10-15 11:34:35Z garga $
+# $FreeBSD: devel/pecl-newt/Makefile 332297 2013-10-31 23:32:31Z garga $
 
 PORTNAME=	newt
 PORTVERSION=	1.2.8
@@ -19,7 +19,6 @@ USE_PHPIZE=	yes
 USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	newt
-NO_STAGE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e '/SEARCH_PATH/ s,=",="${LOCALBASE} ${PREFIX} ,' \
