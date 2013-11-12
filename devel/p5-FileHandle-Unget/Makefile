@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-FileHandle-Unget/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-FileHandle-Unget/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	FileHandle-Unget
 PORTVERSION=	0.1623
@@ -13,7 +13,4 @@ COMMENT=	FileHandle which supports ungetting of multiple bytes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		FileHandle::Unget.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
