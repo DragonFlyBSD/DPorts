@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-redis-rack/Makefile 331493 2013-10-24 15:04:53Z swills $
+# $FreeBSD: www/rubygem-redis-rack/Makefile 332057 2013-10-30 03:04:19Z swills $
 
 PORTNAME=	redis-rack
 PORTVERSION=	1.5.0
@@ -15,6 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 RUN_DEPENDS=	rubygem-rack15>=1.5:${PORTSDIR}/www/rubygem-rack15 \
 		rubygem-redis-store>=1.1.0:${PORTSDIR}/devel/rubygem-redis-store
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
