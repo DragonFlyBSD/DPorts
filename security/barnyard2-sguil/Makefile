@@ -1,4 +1,4 @@
-# $FreeBSD: security/barnyard2-sguil/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/barnyard2-sguil/Makefile 332400 2013-11-01 18:42:58Z wg $
 
 PKGNAMESUFFIX=	-sguil
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../barnyard2
 # enable tcl binding for sguil
 SLAVE=		yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
