@@ -1,5 +1,5 @@
 # Created by: Mike Carlson <carlson39@llnl.gov>
-# $FreeBSD: net/rubygem-stompserver/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-stompserver/Makefile 332048 2013-10-30 02:54:59Z swills $
 
 PORTNAME=	stompserver
 PORTVERSION=	0.9.9
@@ -19,5 +19,4 @@ RUN_DEPENDS:=	rubygem-eventmachine>=0.7.2:${PORTSDIR}/devel/rubygem-eventmachine
 		rubygem-hoe>=1.3.0:${PORTSDIR}/devel/rubygem-hoe \
 		rubygem-daemons>=1.0.2:${PORTSDIR}/devel/rubygem-daemons
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
