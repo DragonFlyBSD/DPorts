@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: converters/p5-Encode-IMAPUTF7/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Encode-IMAPUTF7/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Encode-IMAPUTF7
 PORTVERSION=	1.05
@@ -10,13 +10,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Modification of UTF-7 encoding for IMAP
 
-BUILD_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Encode::IMAPUTF7.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
