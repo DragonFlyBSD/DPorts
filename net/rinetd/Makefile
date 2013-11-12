@@ -1,5 +1,5 @@
 # Created by: alexp
-# $FreeBSD: net/rinetd/Makefile 330390 2013-10-15 11:53:17Z garga $
+# $FreeBSD: net/rinetd/Makefile 332306 2013-10-31 23:39:21Z garga $
 
 PORTNAME=	rinetd
 PORTVERSION=	0.62
@@ -13,6 +13,8 @@ DISTNAME=	rinetd
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A simple TCP port redirector
 
+LICENSE=	GPLv2
+
 OPTIONS_DEFINE=	DOCS
 
 WRKSRC=		${WRKDIR}/rinetd-${PORTVERSION}
@@ -25,8 +27,6 @@ PLIST_FILES=	sbin/rinetd \
 
 USE_RC_SUBR=	rinetd
 
-.include <bsd.port.pre.mk>
-
 post-extract:
 	@${MV} ${WRKDIR}/rinetd ${WRKSRC}
 
@@ -38,11 +38,9 @@ post-patch:
 	@${REINPLACE_CMD} -e "s/cc /${CC} /g" ${WRKSRC}/Makefile
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
