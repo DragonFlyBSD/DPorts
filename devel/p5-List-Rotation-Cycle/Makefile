@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-List-Rotation-Cycle/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-List-Rotation-Cycle/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	List-Rotation-Cycle
 PORTVERSION=	1.009
@@ -12,10 +12,7 @@ COMMENT=	Cycle through a list of values
 
 PORTSCOUT=	limitw:1,even
 
-MAN3=		List::Rotation::Cycle.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
