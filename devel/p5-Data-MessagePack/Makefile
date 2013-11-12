@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Data-MessagePack/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-MessagePack/Makefile 332382 2013-11-01 14:30:13Z kuriyama $
 
 PORTNAME=	Data-MessagePack
-PORTVERSION=	0.47
+PORTVERSION=	0.48
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:GFUJI
@@ -19,9 +19,4 @@ CONFIGURE_ARGS=	--xs
 
 MAKE_JOBS_UNSAFE=	yes
 
-MAN3=	Data::MessagePack.3 \
-	Data::MessagePack::PP.3 \
-	Data::MessagePack::Unpacker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
