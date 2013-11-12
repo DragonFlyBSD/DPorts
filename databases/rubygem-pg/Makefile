@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/rubygem-pg/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-pg/Makefile 332033 2013-10-30 02:26:17Z swills $
 
 PORTNAME=		pg
 PORTVERSION=		0.15.1
@@ -20,5 +20,4 @@ PG_CONFIG=		${LOCALBASE}/bin/pg_config
 CONFIGURE_ARGS=		--with-pgsql-include-dir=`${PG_CONFIG} --includedir` \
 			--with-pgsql-lib-dir=`${PG_CONFIG} --libdir`
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
