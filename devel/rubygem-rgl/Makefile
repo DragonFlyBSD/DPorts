@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: devel/rubygem-rgl/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rgl/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	rgl
 PORTVERSION=	0.4.0
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
