@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/p5-File-Format-RIFF/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/p5-File-Format-RIFF/Makefile 332815 2013-11-05 07:28:38Z vanilla $
 
 PORTNAME=	File-Format-RIFF
 DISTVERSION=	1.0.1
@@ -13,10 +13,4 @@ COMMENT=	Read, manipulate, and write RIFF files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Format::RIFF.3 \
-		File::Format::RIFF::Chunk.3 \
-		File::Format::RIFF::Container.3 \
-		File::Format::RIFF::List.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
