@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Slurp/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Slurp/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Slurp
 PORTVERSION=	0.4
@@ -16,11 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Slurp.3
-
-PLIST_FILES=	%%SITE_PERL%%/Slurp.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Slurp/.packlist
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Slurp
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
