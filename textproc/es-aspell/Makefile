@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/es-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/es-aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	6-es-1.11-2
@@ -11,6 +11,5 @@ COMMENT=	Aspell Spanish dictionary
 
 DICT=	 	es
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
