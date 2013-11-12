@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Layout-Manager/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Layout-Manager/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Layout-Manager
 PORTVERSION=	0.34
@@ -23,13 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Layout::Manager.3 \
-		Layout::Manager::Absolute.3 \
-		Layout::Manager::Axis.3 \
-		Layout::Manager::Compass.3 \
-		Layout::Manager::Flow.3 \
-		Layout::Manager::Grid.3 \
-		Layout::Manager::Single.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
