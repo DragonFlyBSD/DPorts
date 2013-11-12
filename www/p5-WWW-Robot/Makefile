@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-WWW-Robot/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Robot/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WWW-Robot
 PORTVERSION=	0.026
@@ -13,11 +13,9 @@ COMMENT=	WWW::Robot - configurable web traversal engine
 BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-HTML-Tagset>=0:${PORTSDIR}/www/p5-HTML-Tagset
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Robot.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
