@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: irc/unreal/Makefile 329044 2013-10-02 12:51:52Z feld $
+# $FreeBSD: irc/unreal/Makefile 332656 2013-11-04 00:08:07Z bdrewery $
 
 PORTNAME=	Unreal
 PORTVERSION=	3.2.10.1
@@ -28,6 +28,8 @@ USE_RC_SUBR=	unrealircd
 USERS=		ircd
 GROUPS=		ircd
 
+USES=		pkgconfig
+
 SUB_LIST+=	RUNDIR=${RUNDIR}
 SUB_LIST+=	USERS=${USERS}
 SUB_LIST+=	GROUPS=${GROUPS}
@@ -43,6 +45,7 @@ CONFIGURE_ARGS=	--with-listen=5 \
 		--with-bufferpool=18 \
 		--with-permissions=0600 \
 		--with-fd-setsize=1024 \
+		--with-system-cares \
 		--enable-dynamic-linking
 
 OPTIONS_DEFINE=	HUB NOSPOOF ZIPLINKS SSL IPV6 PREFIXAQ REMOTE DOCS
