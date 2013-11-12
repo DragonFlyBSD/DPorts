@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-File-Flat/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Flat/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Flat
 PORTVERSION=	1.04
@@ -27,7 +27,4 @@ BUILD_DEPENDS=	p5-Test-ClassAPI>=0:${PORTSDIR}/devel/p5-Test-ClassAPI \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Flat.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
