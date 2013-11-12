@@ -1,5 +1,5 @@
 # Created by: Phil Phillips
-# $FreeBSD: www/p5-CGI-Thin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Thin/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	CGI-Thin
 PORTVERSION=	0.52
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	pphillips@experts-exchange.com
-COMMENT=	A very lightweight Parser for CGI Forms
+COMMENT=	Lightweight Parser for CGI Forms
 
 USES=		perl5
 USE_PERL5=	configure
