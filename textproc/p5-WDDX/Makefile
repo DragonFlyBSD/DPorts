@@ -1,5 +1,5 @@
 # Created by: Eric A. Griff <eric@talesfromthereal.com>
-# $FreeBSD: textproc/p5-WDDX/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: textproc/p5-WDDX/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	WDDX
 PORTVERSION=	1.02
@@ -13,18 +13,15 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to parse WDDX Packets
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
-RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WDDX.3
-
-NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/Changes ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Changes ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
