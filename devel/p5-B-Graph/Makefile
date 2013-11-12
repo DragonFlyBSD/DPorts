@@ -1,5 +1,5 @@
 # Created by: Leo Kim <leo@florida.sarang.net>
-# $FreeBSD: devel/p5-B-Graph/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Graph/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	B-Graph
 PORTVERSION=	0.51
@@ -12,7 +12,5 @@ COMMENT=	Perl Compiler backend to diagram OP trees
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		B::Graph.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
