@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: devel/p5-Log-Message/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Message/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Message
 PORTVERSION=	0.08
@@ -16,13 +16,7 @@ BUILD_DEPENDS=	p5-Params-Check>=0:${PORTSDIR}/devel/p5-Params-Check \
 		p5-Locale-Maketext-Simple>=0:${PORTSDIR}/devel/p5-Locale-Maketext-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Log::Message.3 \
-	Log::Message::Config.3 \
-	Log::Message::Handlers.3 \
-	Log::Message::Item.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
