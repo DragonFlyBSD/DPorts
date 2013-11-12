@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/ctris/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ctris/Makefile 331666 2013-10-26 09:07:38Z ehaupt $
 
 PORTNAME=	ctris
 PORTVERSION=	0.42
@@ -13,18 +13,16 @@ COMMENT=	Colorized, small, and flexible Tetris(TM)-clone for the console
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-MANCOMPRESSED=	yes
 
-MAN6=		ctris.6
-PLIST_FILES=	bin/ctris
+PLIST_FILES=	bin/ctris man/man6/ctris.6.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|gcc|${CC}|" -e "s|CFLAGS=.*|CFLAGS+=-Wall|" \
 		 ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/ctris.6.gz ${PREFIX}/man/man6/ctris.6.gz
-	${INSTALL_PROGRAM} ${WRKSRC}/ctris ${PREFIX}/bin/ctris
+	${INSTALL_MAN} ${WRKSRC}/ctris.6.gz \
+		${STAGEDIR}${PREFIX}/man/man6/ctris.6.gz
+	${INSTALL_PROGRAM} ${WRKSRC}/ctris ${STAGEDIR}${PREFIX}/bin/ctris
 
 .include <bsd.port.mk>
