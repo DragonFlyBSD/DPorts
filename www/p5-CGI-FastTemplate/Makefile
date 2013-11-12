@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-FastTemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-FastTemplate/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-FastTemplate
 PORTVERSION=	1.09
@@ -13,7 +13,4 @@ COMMENT=	Perl module for manage templates and parses templates
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::FastTemplate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
