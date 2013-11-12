@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Plugin-Params-Nested/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Params-Nested/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-Params-Nested
 PORTVERSION=	0.05
@@ -10,16 +10,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nested params (ala Ruby on Rails or PHP-style param arrays)
 
-BUILD_DEPENDS=	p5-CGI-Expand>=1.06:${PORTSDIR}/www/p5-CGI-Expand 
-RUN_DEPENDS=	p5-CGI-Expand>=1.06:${PORTSDIR}/www/p5-CGI-Expand \
+BUILD_DEPENDS=	p5-CGI-Expand>=1.06:${PORTSDIR}/www/p5-CGI-Expand \
 		p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Plugin::Params::Nested.3 \
-	Catalyst::Plugin::Params::Nested::Expander.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
