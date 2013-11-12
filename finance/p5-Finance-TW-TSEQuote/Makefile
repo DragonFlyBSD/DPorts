@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: finance/p5-Finance-TW-TSEQuote/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Finance-TW-TSEQuote/Makefile 332619 2013-11-03 15:38:39Z vanilla $
 
 PORTNAME=	Finance-TW-TSEQuote
 PORTVERSION=	0.2.8
@@ -23,8 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pfq.1
-MAN3=		Finance::TW::TSEQuote.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
