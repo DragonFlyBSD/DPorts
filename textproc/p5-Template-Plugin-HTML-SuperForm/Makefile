@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Template-Plugin-HTML-SuperForm/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Template-Plugin-HTML-SuperForm/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Template-Plugin-HTML-SuperForm
 PORTVERSION=	1.0
@@ -9,15 +9,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface Template Toolkit to Lingua::EN::Inflect module
 
-RUN_DEPENDS=	p5-Template-Toolkit>0:${PORTSDIR}/www/p5-Template-Toolkit \
-  				p5-HTML-SuperForm>0:${PORTSDIR}/textproc/p5-HTML-SuperForm
+BUILD_DEPENDS=	p5-Template-Toolkit>0:${PORTSDIR}/www/p5-Template-Toolkit \
+ 		p5-HTML-SuperForm>0:${PORTSDIR}/textproc/p5-HTML-SuperForm
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
-MAN3=	Template::Plugin::HTML::SuperForm.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
