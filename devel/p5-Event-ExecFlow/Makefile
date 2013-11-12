@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	Event-ExecFlow
 PORTVERSION=	0.64
@@ -17,12 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Event::ExecFlow::Job::Code.3 Event::ExecFlow::Frontend.3 \
-		Event::ExecFlow::Job::Group.3 \
-		Event::ExecFlow::Scheduler::SimpleMax.3 \
-		Event::ExecFlow::Scheduler.3 Event::ExecFlow::Job.3 \
-		Event::ExecFlow::Callbacks.3 Event::ExecFlow::Job::Command.3 \
-		Event::ExecFlow.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
