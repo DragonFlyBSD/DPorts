@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: www/p5-Apache-Session-PHP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-Session-PHP/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-Session-PHP
 PORTVERSION=	0.05
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Apache::Session::PHP.3 Apache::Session::Serialize::PHP.3 Apache::Session::Store::PHP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
