@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/af-aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/af-aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-af-0.50-0
@@ -12,6 +12,5 @@ COMMENT=	Aspell Afrikaans dictionary
 
 DICT=	 	af
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
