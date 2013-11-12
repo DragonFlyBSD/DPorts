@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-HTTP-Recorder/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Recorder/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-Recorder
 PORTVERSION=	0.07
@@ -21,10 +21,6 @@ USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
-MAN1=		httprecorder.1
-MAN3=		HTTP::Recorder.3
-
-NO_STAGE=	yes
 post-patch:
 	@${RM} -f ${WRKSRC}/lib/HTTP/Recorder.pm.orig
 
