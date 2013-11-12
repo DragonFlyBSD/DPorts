@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Data-TemporaryBag/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-TemporaryBag/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-TemporaryBag
 PORTVERSION=	0.09
@@ -13,7 +13,4 @@ COMMENT=	Handle long size data using temporary file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::TemporaryBag.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
