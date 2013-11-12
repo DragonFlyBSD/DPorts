@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org
-# $FreeBSD: databases/p5-Class-DBI-Sweet/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-Sweet/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-Sweet
 PORTVERSION=	0.11
@@ -22,9 +22,6 @@ RUN_DEPENDS=	p5-Class-DBI>=3.0.12:${PORTSDIR}/databases/p5-Class-DBI \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Class::DBI::Sweet.3 Class::DBI::Sweet::Topping.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/DBD::SQLite/d' ${WRKSRC}/Build.PL
 
