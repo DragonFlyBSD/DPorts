@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: hungarian/hunspell/Makefile 327735 2013-09-20 18:43:02Z bapt $
+# $FreeBSD: hungarian/hunspell/Makefile 332687 2013-11-04 10:49:03Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.6.1
@@ -20,9 +20,8 @@ PLIST_FILES=	%%DATADIR%%/hu_HU.aff \
 		%%DATADIR%%/hu_HU.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hu_HU.aff ${WRKSRC}/hu_HU.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hu_HU.aff ${WRKSRC}/hu_HU.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
