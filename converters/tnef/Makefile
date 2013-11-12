@@ -1,5 +1,5 @@
 # Created by: Cyrus Rahman <cr@jcmax.com>
-# $FreeBSD: converters/tnef/Makefile 328488 2013-09-27 14:49:58Z garga $
+# $FreeBSD: converters/tnef/Makefile 332295 2013-10-31 23:30:59Z garga $
 
 PORTNAME=	tnef
 PORTVERSION=	1.4.9
@@ -8,6 +8,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Unpack data in MS Outlook TNEF format
+
+LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	DOCS
 
