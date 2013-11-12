@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rubyforge/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rubyforge/Makefile 332041 2013-10-30 02:42:34Z swills $
 
 PORTNAME=	rubyforge
 PORTVERSION=	2.0.4
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rubyforge
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
