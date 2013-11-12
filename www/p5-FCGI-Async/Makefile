@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-FCGI-Async/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-FCGI-Async/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	FCGI-Async
 PORTVERSION=	0.22
@@ -25,9 +25,4 @@ TEST_DEPENDS=	p5-Test-Identity>=0:${PORTSDIR}/devel/p5-Test-Identity \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Plack::Handler::FCGI::Async.3 \
-		FCGI::Async::PSGI.3 \
-		FCGI::Async.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
