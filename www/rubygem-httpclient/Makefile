@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-httpclient/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-httpclient/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	httpclient
 PORTVERSION=	2.3.3
@@ -14,5 +14,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/httpclient
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
