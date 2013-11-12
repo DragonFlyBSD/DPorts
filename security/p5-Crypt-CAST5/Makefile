@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-CAST5/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-CAST5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-CAST5
 PORTVERSION=	0.05
@@ -14,7 +14,4 @@ COMMENT=	CAST5 block cipher
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Crypt::CAST5.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
