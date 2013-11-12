@@ -1,12 +1,12 @@
 # Created by: Tomokazu ISHII <t-ishii@tryplanet.com>
-# $FreeBSD: ftp/ftpfind/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/ftpfind/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	ftpfind
 PORTVERSION=	0.996
 CATEGORIES=	ftp
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA013366/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Find directory&file on a ftp server
 
 PLIST_FILES=	bin/ftpfind
