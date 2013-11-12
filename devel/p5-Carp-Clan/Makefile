@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Carp-Clan/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Carp-Clan/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Carp-Clan
 PORTVERSION=	6.04
@@ -15,7 +15,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Carp::Clan.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
