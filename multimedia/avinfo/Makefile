@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/avinfo/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/avinfo/Makefile 332121 2013-10-30 14:48:37Z amdmi3 $
 
 PORTNAME=	avinfo
 PORTVERSION=	1.0.a15
@@ -11,18 +11,16 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}unix
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A utility for displaying AVI header information
 
-USE_GMAKE=	yes
-USES=		bison
+USES=		bison gmake
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-PLIST_FILES=	bin/avinfo
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 PORTDOCS=	*
 
-MAN1=		avinfo.1
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -32,12 +30,10 @@ post-patch:
 		${WRKSRC}/src/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/avinfo ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/src/avinfo.1 ${MANPREFIX}/man/man1/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/src/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${WRKSRC}/README \
-		${WRKSRC}/copying ${WRKSRC}/doc/* ${DOCSDIR}/
-.endif
+		${WRKSRC}/copying ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
