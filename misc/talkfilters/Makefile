@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: misc/talkfilters/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: misc/talkfilters/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
 
 PORTNAME=	talkfilters
 PORTVERSION=	2.3.8
@@ -17,25 +17,6 @@ CONFLICTS=	jive* chef* filters-*
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAN1=	talkfilters.1 wrap.1
-MLINKS=	talkfilters.1 austro.1 \
-	talkfilters.1 b1ff.1 \
-	talkfilters.1 brooklyn.1 \
-	talkfilters.1 chef.1 \
-	talkfilters.1 cockney.1 \
-	talkfilters.1 drawl.1 \
-	talkfilters.1 dubya.1 \
-	talkfilters.1 fudd.1 \
-	talkfilters.1 funetak.1 \
-	talkfilters.1 jethro.1 \
-	talkfilters.1 jive.1 \
-	talkfilters.1 kraut.1 \
-	talkfilters.1 pansy.1 \
-	talkfilters.1 pirate.1 \
-	talkfilters.1 postmodern.1 \
-	talkfilters.1 redneck.1 \
-	talkfilters.1 valspeak.1 \
-	talkfilters.1 warez.1
 INFO=	talkfilters
 
 pre-everything::
