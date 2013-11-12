@@ -1,10 +1,10 @@
-@version:3.4
+@version:3.5
 
 #
 # This sample configuration file is essentially equilivent to the stock
 # FreeBSD /etc/syslog.conf file.
 #
-# $FreeBSD: sysutils/syslog-ng-devel/files/syslog-ng.conf.sample 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/syslog-ng-devel/files/syslog-ng.conf.sample 332945 2013-11-06 05:51:28Z cy $
 #
 
 #
