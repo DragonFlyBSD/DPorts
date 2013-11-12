@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Apache-Profiler/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-Profiler/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-Profiler
 PORTVERSION=	0.10
@@ -11,12 +11,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Profiles time seconds needed for every request
 
 BUILD_DEPENDS=	mp2bug:${PORTSDIR}/www/mod_perl2
-RUN_DEPENDS=	mp2bug:${PORTSDIR}/www/mod_perl2
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Apache::Profiler.3 Apache2::Profiler.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
