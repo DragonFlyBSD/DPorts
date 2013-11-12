@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-ParseWords/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-ParseWords
 PORTVERSION=	3.29
@@ -12,14 +12,4 @@ COMMENT=	Parse text into an array of tokens or array of arrays
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Text::ParseWords.3
-
-PLIST_FILES=	%%SITE_PERL%%/Text/ParseWords.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/ParseWords/.packlist
-
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/ParseWords
-PLIST_DIRSTRY=	%%SITE_PERL%%/Text \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Text
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
