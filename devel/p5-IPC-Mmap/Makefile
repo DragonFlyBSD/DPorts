@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IPC-Mmap/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IPC-Mmap/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IPC-Mmap
 PORTVERSION=	0.21
@@ -13,7 +13,4 @@ COMMENT=	Provides a minimal mmap() interface for both POSIX and Win32
 USES=		perl5
 USE_PERL5=	configure
 
-#MAN3=		IPC::Mmap.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
