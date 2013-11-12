@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-SymbolicX-ParserExtensionFactory/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-SymbolicX-ParserExtensionFactory/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-SymbolicX-ParserExtensionFactory
 PORTVERSION=	3.02
@@ -11,12 +11,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate parser extensions
 
 BUILD_DEPENDS=	p5-Math-Symbolic>=0:${PORTSDIR}/math/p5-Math-Symbolic
-RUN_DEPENDS=	p5-Math-Symbolic>=0:${PORTSDIR}/math/p5-Math-Symbolic
-
-MAN3=	Math::SymbolicX::ParserExtensionFactory.3
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
