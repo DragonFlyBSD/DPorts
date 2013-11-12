@@ -1,9 +1,9 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/librasterlite/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/librasterlite/Makefile 332843 2013-11-05 12:42:02Z wen $
 
 PORTNAME=	librasterlite
 PORTVERSION=	1.1e
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/librasterlite-sources/
 
