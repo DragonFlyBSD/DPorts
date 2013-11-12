@@ -1,9 +1,8 @@
 # Created by: Alfred Perlstein <alfred@FreeBSD.org>
-# $FreeBSD: net/mDNSResponder/Makefile 331724 2013-10-26 17:47:25Z sunpoet $
+# $FreeBSD: net/mDNSResponder/Makefile 333507 2013-11-11 14:16:47Z sunpoet $
 
 PORTNAME=	mDNSResponder
-PORTVERSION=	379.38.1
-PORTREVISION=	1
+PORTVERSION=	541
 CATEGORIES=	net dns
 MASTER_SITES=	http://opensource.apple.com/tarballs/${PORTNAME}/
 
@@ -20,12 +19,18 @@ INSTALL_WRKSRC=	${WRKSRC}/mDNSPosix
 MAKE_ARGS=	LOCALBASE=${PREFIX} MANPATH=${MANPREFIX}/man os=freebsd
 USES=		bison gmake
 USE_LDCONFIG=	yes
-USE_RC_SUBR=	mdnsd
+USE_RC_SUBR=	mdnsd mdnsresponder
 
 EXTRA_BIN=	mDNSClientPosix mDNSIdentify mDNSNetMonitor mDNSProxyResponderPosix mDNSResponderPosix
 EXTRA_MAN1=	dns-sd.1
 EXTRA_MAN8=	dnsextd.8 mDNSResponderPosix.8
 EXTRA_SBIN=	dnsextd
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "arm"
+MAKE_ARGS+=	LD="${CC} -shared"
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/	cc / s|cc|$${CC}|' ${WRKSRC}/Clients/Makefile
@@ -42,4 +47,4 @@ post-install:
 	cd ${WRKSRC}/mDNSShared/ && ${INSTALL_MAN} ${EXTRA_MAN8} ${STAGEDIR}${PREFIX}/man/man8/
 	cd ${WRKSRC}/mDNSPosix/build/prod/ && ${INSTALL_PROGRAM} ${EXTRA_SBIN} ${STAGEDIR}${PREFIX}/sbin/
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
