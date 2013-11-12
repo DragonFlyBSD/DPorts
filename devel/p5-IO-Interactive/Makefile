@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-IO-Interactive/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-Interactive/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-Interactive
 PORTVERSION=	0.0.6
@@ -18,9 +18,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::Interactive.3
-
 PORTSCOUT=	skipv:0.01
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
