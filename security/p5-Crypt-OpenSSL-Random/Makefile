@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: security/p5-Crypt-OpenSSL-Random/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-OpenSSL-Random/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-OpenSSL-Random
 PORTVERSION=	0.06
@@ -16,7 +16,4 @@ USE_PERL5=	configure
 USE_OPENSSL=	yes
 MAKE_ARGS+=	PASTHRU_INC=-I${OPENSSLINC}
 
-MAN3=		Crypt::OpenSSL::Random.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
