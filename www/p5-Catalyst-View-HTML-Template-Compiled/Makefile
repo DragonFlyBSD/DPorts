@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: www/p5-Catalyst-View-HTML-Template-Compiled/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-View-HTML-Template-Compiled/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-View-HTML-Template-Compiled
 PORTVERSION=	0.16
@@ -19,8 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Catalyst::Helper::View::HTML::Template::Compiled.3 \
-		Catalyst::View::HTML::Template::Compiled.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
