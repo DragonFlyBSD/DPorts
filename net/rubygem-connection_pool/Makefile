@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-connection_pool/Makefile 331010 2013-10-20 12:29:45Z swills $
+# $FreeBSD: net/rubygem-connection_pool/Makefile 332047 2013-10-30 02:53:47Z swills $
 
 PORTNAME=	connection_pool
 PORTVERSION=	1.1.0
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
