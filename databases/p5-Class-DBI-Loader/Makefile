@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: databases/p5-Class-DBI-Loader/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: databases/p5-Class-DBI-Loader/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-Loader
 PORTVERSION=	0.34
@@ -20,24 +20,16 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::DBI::Loader.3 \
-		Class::DBI::Loader::Generic.3 \
-		Class::DBI::Loader::Pg.3 \
-		Class::DBI::Loader::SQLite.3 \
-		Class::DBI::Loader::mysql.3
-
 OPTIONS_DEFINE=	PGSQL MYSQL SQLITE DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	Changes README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .if ${PORT_OPTIONS:MPGSQL}
