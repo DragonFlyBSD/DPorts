@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat-aux/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: lang/gnat-aux/Makefile 333361 2013-11-09 23:25:23Z marino $
 
 PORTNAME=	gnat-aux
 PORTVERSION=	${SNAPSHOT}
@@ -13,7 +13,8 @@ DISTFILES=	gcc-core-${GCC_VERSION}.tar.bz2
 MAINTAINER=	marino@FreeBSD.org
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 
-NO_STAGE=	yes
+LICENSE=	GPLv3
+
 .include "${.CURDIR}/Makefile.common"
 
 LANGS=			c
@@ -24,6 +25,8 @@ BOOTSTRAP_TRIPLET=	NOT_SET
 FULL_GNATGCC=		NOT_SET
 GARCH=			${ARCH:S/amd64/x86_64/}
 OS_LABEL4VERS=		[${OPSYS}${GARCH:C,^.*(64),\1,}]
+NO_LICENSES_INSTALL=	yes
+NO_MTREE=		yes
 
 OPTIONS_DEFINE=		ADA CXX FORT OBJC TESTSUITE
 OPTIONS_DEFAULT=	ADA CXX FORT OBJC
@@ -55,13 +58,8 @@ BUILDDIR=		${WRKDIR}/build
 CFG_SCRIPT=		${WRKSRC}/configure
 REVFILE=		${WRKSRC}/gcc/REVISION
 BOOTSTRAP_PREFIX=	${WRKDIR}/bootstrap
-DESTINY=		${WRKDIR}/destdir
 PKG_PREFIX=		${PREFIX}
-USE_LDCONFIG=		${PREFIX}/lib/gcc
-MAN1=			gnatcpp.1 gnatgcc.1 gnatgcov.1
-MAN1PREFIX=		${PREFIX}/share
-MAN7PREFIX=		${PREFIX}/share
-NO_MANCOMPRESS=		yes
+AWKMANPAGE=		'{if ($$0 ~ /^man\/man[1-9]\/.+[1-9]$$/) print $$0 ".gz"; else print $$0}'
 
 # If we find gnatgcc and friends in standard location, then we'll use this
 # compiler instead of downloading the bootstrap.
@@ -105,7 +103,6 @@ DISTFILES+=	gcc-ada-${GCC_VERSION}.tar.bz2
 LANGS+=		c++
 APPLY_DIFFS+=	cxx
 DISTFILES+=	gcc-g++-${GCC_VERSION}.tar.bz2
-MAN1+=		gnatg++.1
 .endif
 
 ###############
@@ -116,7 +113,6 @@ MAN1+=		gnatg++.1
 LANGS+=		fortran
 APPLY_DIFFS+=	fortran
 DISTFILES+=	gcc-fortran-${GCC_VERSION}.tar.bz2
-MAN1+=		gnatgfortran.1
 QUADOPT=	--enable-libquadmath
 .else
 QUADOPT=	--disable-libquadmath
@@ -219,7 +215,7 @@ do-configure:
 	${CFG_SCRIPT} ${CONFIGURE_ARGS}
 
 do-build:
-	cd ${BUILDDIR} && ${SETENV} ${ADA_MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} all
+	cd ${BUILDDIR} && ${SETENV} ${ADA_MAKE_ENV} ${GMAKE} -j${MAKE_JOBS_NUMBER} all
 
 test: build test-ada test-fortran test-objc test-cxx test-c
 
@@ -250,35 +246,17 @@ test-c:
 .endif
 
 do-install:
-	cd ${BUILDDIR} && ${SETENV} ${ADA_MAKE_ENV} ${GMAKE} install-strip DESTDIR=${DESTINY}
-	${RM} ${DESTINY}${PREFIX}/lib/libiberty.a
-	${CP} -pR ${DESTINY}${PREFIX}/ ${PREFIX}/
+	cd ${BUILDDIR} && ${SETENV} ${ADA_MAKE_ENV} ${GMAKE} install-strip DESTDIR=${STAGEDIR}
+	${RM} ${STAGEDIR}${PREFIX}/lib/libiberty.a
 
 post-install:
-	${RM} -f ${WRKDIR}/PLIST.all
-	${RM} -rf ${DESTINY}/man
-	${MV} ${DESTINY}${PREFIX}/share/man ${DESTINY}/
-	cd ${DESTINY}; ${FIND} man -type d \
-	   -exec ${MKDIR} ${DESTINY}${PREFIX}/share/{} \;
-	cd ${DESTINY}${PREFIX}; ${FIND} * \( -type f -or -type l \) | \
-	   ${SORT} >> ${WRKDIR}/PLIST.all
-	cd ${DESTINY}${PREFIX}; ${FIND} * -type d | ${SORT} -r | \
-	   ${SED} -E '/^(bin|sbin|lib|libexec|share)$$/d' | \
-	   ${SED} -e 's/^/@dirrm /g' >> ${WRKDIR}/PLIST.all
-
-	cd ${WRKDIR}; ${SED} -i -e "/PLIST.all/ r PLIST.all" ${TMPPLIST}
-.if ${OPSYS} == FreeBSD
-.  if ${OSVERSION} > 900000 && ${OSVERSION} < 900507
-	@${ECHO_MSG} "===================================================================="
-	@${ECHO_MSG} " NOTICE REGARDING ADA TASKING ON FREEBSD 9.0:"
-	@${ECHO_MSG} " Due to a bug in the FreeBSD 9.0 threading library, an exiting task"
-	@${ECHO_MSG} " panics with the message: 'thread exits with resources held!'."
-	@${ECHO_MSG} " This behavior breaks Ada tasking.  These are two solutions:"
-	@${ECHO_MSG} " 1) Upgrade to FreeBSD 9.1 or higher"
-	@${ECHO_MSG} " 2) Patch and rebuild thread library as described in"
-	@${ECHO_MSG} "    http://www.dragonlace.net/posts/F9_Fix/"
-	@${ECHO_MSG} "===================================================================="
-.  endif
-.endif
+	${MV} ${STAGEDIR}${PREFIX}/share/man ${STAGEDIR}/${PREFIX}
+	cd ${STAGEDIR}${PREFIX}; ${FIND} * -type d -empty | \
+		${SORT} -dr | ${XARGS} ${RMDIR}
+	cd ${STAGEDIR}${PREFIX}; ${FIND} * \( -type f -or -type l \) | \
+	   ${AWK} ${AWKMANPAGE} | ${SORT} >> ${TMPPLIST}
+	cd ${STAGEDIR}${PREFIX}; ${FIND} * -type d | ${SORT} -r | \
+	   ${SED} -E -e '/^(bin|sbin|lib|libexec|share|man|include)$$/d' \
+	   -e '/^man\/man[1-9]$$/d' -e 's/^/@dirrm /g' >> ${TMPPLIST}
 
 .include <bsd.port.mk>
