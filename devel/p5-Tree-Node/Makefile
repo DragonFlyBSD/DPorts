@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Node/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tree-Node/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Tree-Node
 PORTVERSION=	0.08
@@ -14,7 +14,4 @@ COMMENT=	Memory-efficient tree nodes in Perl
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Tree::Node.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
