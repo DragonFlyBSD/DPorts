@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Size/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Size/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-Size
 PORTVERSION=	1.13
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-libwww>0:${PORTSDIR}/www/p5-libwww \
 		p5-HTML-SimpleLinkExtor>0:${PORTSDIR}/www/p5-HTML-SimpleLinkExtor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	HTTP::Size.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
