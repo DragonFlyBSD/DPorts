@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Accessor-Grouped/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Accessor-Grouped/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-Accessor-Grouped
 PORTVERSION=	0.10010
@@ -25,7 +25,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Accessor::Grouped.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
