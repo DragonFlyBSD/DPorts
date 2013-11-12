@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Date/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Date/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-Date
 PORTVERSION=	6.02
@@ -18,7 +18,4 @@ CONFLICTS=	p5-libwww-5*
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Date.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
