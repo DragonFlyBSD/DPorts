@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Term-ReadLine-Zoid/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-ReadLine-Zoid/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-ReadLine-Zoid
 PORTVERSION=	0.07
@@ -17,12 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Term::ReadLine::Zoid.3 \
-	Term::ReadLine::Zoid::Base.3 \
-	Term::ReadLine::Zoid::Emacs.3 \
-	Term::ReadLine::Zoid::FileBrowse.3 \
-	Term::ReadLine::Zoid::ISearch.3 \
-	Term::ReadLine::Zoid::ViCommand.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
