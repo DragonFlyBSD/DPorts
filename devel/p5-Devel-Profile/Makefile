@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Devel-Profile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Profile/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-Profile
 PORTVERSION=	1.05
@@ -14,7 +14,4 @@ COMMENT=	Tell me why my perl program runs so slowly
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::Profile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
