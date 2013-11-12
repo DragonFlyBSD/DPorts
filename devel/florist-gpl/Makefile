@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/florist-gpl/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/florist-gpl/Makefile 333375 2013-11-10 11:01:09Z marino $
 
 PORTNAME=	florist-gpl
 PORTVERSION=	2012
@@ -15,14 +15,8 @@ LICENSE=	GPLv3
 
 USES=		ada
 GNU_CONFIGURE=	yes
-DESTINY=	${WRKDIR}/destino
-MAKE_ENV+=	DESTDIR=${DESTINY}
 
-NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/pconfig.* ${WRKSRC}/configs
-
-post-install:
-	${CP} -pR ${DESTINY}${PREFIX}/ ${PREFIX}/
 
 .include <bsd.port.mk>
