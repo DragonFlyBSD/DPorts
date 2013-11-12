@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-SurePay/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-OnlinePayment-SurePay/Makefile 332619 2013-11-03 15:38:39Z vanilla $
 
 PORTNAME=	Business-OnlinePayment-SurePay
 PORTVERSION=	0.01
@@ -17,9 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure patch
 
-MAN3=		Business::OnlinePayment::SurePay.3
-
-NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
 		-e '$$_="" if /use 5/;' \
