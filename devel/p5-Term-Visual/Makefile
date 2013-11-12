@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Term-Visual/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Visual/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-Visual
 PORTVERSION=	0.08
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Visual.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
