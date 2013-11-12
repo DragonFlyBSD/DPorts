@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: mail/p5-MIME-Explode/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Explode/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	MIME-Explode
 PORTVERSION=	0.39
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for explode MIME messages
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	MIME::Explode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
