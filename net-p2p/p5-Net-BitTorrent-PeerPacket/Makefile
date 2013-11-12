@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-p2p/p5-Net-BitTorrent-PeerPacket/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/p5-Net-BitTorrent-PeerPacket/Makefile 332839 2013-11-05 12:13:03Z vanilla $
 
 PORTNAME=	Net-BitTorrent-PeerPacket
 PORTVERSION=	1.2
@@ -13,7 +13,4 @@ COMMENT=	Parse/Build Peer Packets from BitTorrent
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Net::BitTorrent::PeerPacket.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
