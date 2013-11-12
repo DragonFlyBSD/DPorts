@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Object-Accessor/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Object-Accessor/Makefile 332127 2013-10-30 15:19:23Z vanilla $
 
 PORTNAME=	Object-Accessor
 PORTVERSION=	0.48
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Params-Check>=0.34:${PORTSDIR}/devel/p5-Params-Check
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Object::Accessor.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
