@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: devel/p5-Date-ICal/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-ICal/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-ICal
 PORTVERSION=	2.678
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Date-Leapyear>=1.03:${PORTSDIR}/devel/p5-Date-Leapyear
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::ICal.3 Date::ICal::Duration.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
