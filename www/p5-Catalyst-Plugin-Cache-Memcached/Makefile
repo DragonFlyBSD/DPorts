@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Cache-Memcached/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Cache-Memcached/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-Cache-Memcached
 PORTVERSION=	0.8
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Plugin::Cache::Memcached.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
