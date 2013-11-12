@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/p5-v6/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-v6/Makefile 332724 2013-11-04 14:20:04Z vanilla $
 
 PORTNAME=	v6
 PORTVERSION=	0.017
@@ -24,9 +24,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	v6.3 \
-	Pugs::Compiler::Perl6.3 \
-	Pugs::Runtime::Perl6.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
