@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-FTP-File/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-FTP-File/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-FTP-File
 PORTVERSION=	0.06
@@ -11,10 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for simplifying FTP file operations
 
-MAN3=	Net::FTP::File.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
