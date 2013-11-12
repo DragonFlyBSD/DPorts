@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: www/p5-PHP-Session/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: www/p5-PHP-Session/Makefile 333117 2013-11-07 15:22:45Z vanilla $
 
 PORTNAME=	PHP-Session
 PORTVERSION=	0.27
@@ -15,16 +15,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		PHP::Session.3 PHP::Session::Serializer::PHP.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
