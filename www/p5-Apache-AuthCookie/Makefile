@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-AuthCookie
 PORTVERSION=	3.19
@@ -19,7 +19,6 @@ USE_APACHE=	22+
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CURUSER?=	`whoami`
@@ -29,14 +28,5 @@ CONFIGURE_ENV+=	APACHE="${HTTPD}" \
 		TESTUSER="${CURUSER}" \
 		TESTGRP="${CURGRP}" \
 		TESTPORT="${TESTPORT}"
-
-MAN3=		Apache2::AuthCookie.3 \
-		Apache2::AuthCookie::Params.3 \
-		Apache::AuthCookie.3 \
-		Apache::AuthCookie::Autobox.3 \
-		Apache::AuthCookie::FAQ.3 \
-		Apache::AuthCookie::Params.3 \
-		Apache::AuthCookie::Params::Base.3 \
-		Apache::AuthCookie::Util.3
 
 .include <bsd.port.post.mk>
