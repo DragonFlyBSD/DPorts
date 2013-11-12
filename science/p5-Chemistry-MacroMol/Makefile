@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Chemistry-MacroMol/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-MacroMol/Makefile 332938 2013-11-06 01:32:11Z vanilla $
 
 PORTNAME=	Chemistry-MacroMol
 PORTVERSION=	0.06
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Chemistry::MacroMol.3 Chemistry::Domain.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
