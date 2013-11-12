@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-Test-WWW-Declare/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-WWW-Declare/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-WWW-Declare
 PORTVERSION=	0.02
@@ -17,7 +17,4 @@ TEST_DEPENDS=	p5-Test-Tester>=0:${PORTSDIR}/devel/p5-Test-Tester
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::WWW::Declare.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
