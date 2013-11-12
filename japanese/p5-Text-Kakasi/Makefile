@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/p5-Text-Kakasi/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-Text-Kakasi/Makefile 332802 2013-11-05 01:40:32Z vanilla $
 
 PORTNAME=	Text-Kakasi
 PORTVERSION=	2.04
@@ -13,9 +13,7 @@ LIB_DEPENDS=	kakasi.3:${PORTSDIR}/japanese/kakasi
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Text::Kakasi.3 Text::Kakasi::JP.3
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
