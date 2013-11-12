@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Capture/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Capture/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-Capture
 PORTVERSION=	0.27
@@ -14,7 +14,4 @@ COMMENT=	Perl6 Capture objects
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Capture.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
