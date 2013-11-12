@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: www/p5-Catalyst-Plugin-ErrorCatcher/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-ErrorCatcher/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-ErrorCatcher
 PORTVERSION=	0.0.8.13
@@ -43,15 +43,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Plugin::ErrorCatcher.3 \
-		Catalyst::Plugin::ErrorCatcher::Email.3 \
-		Catalyst::Plugin::ErrorCatcher::File.3 \
-		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::CaughtException.3 \
-		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::ForeignKeyConstraint.3 \
-		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::MissingColumn.3 \
-		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::TransactionAborted.3 \
-		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::Pg::UniqueConstraintViolation.3 \
-		Catalyst::Plugin::ErrorCatcher::Plugin::CleanUp::TxnDo.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
