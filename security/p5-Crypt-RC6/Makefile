@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-RC6/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-RC6/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-RC6
 PORTVERSION=	1.0
@@ -13,9 +13,6 @@ COMMENT=	Perl implementation of the RC6 encryption algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::RC6.3
-
-NO_STAGE=	yes
 do-patch:
 	${REINPLACE_CMD} -e 's///' ${WRKSRC}/RC6.pm
 
