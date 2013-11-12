@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-HTML-FromANSI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-FromANSI/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-FromANSI
 PORTVERSION=	2.03
@@ -19,8 +19,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		ansi2html.1
-MAN3=		HTML::FromANSI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
