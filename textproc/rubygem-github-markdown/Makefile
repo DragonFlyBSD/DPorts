@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-github-markdown/Makefile 331518 2013-10-24 19:26:13Z swills $
+# $FreeBSD: textproc/rubygem-github-markdown/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	github-markdown
 PORTVERSION=	0.5.5
@@ -12,5 +12,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
