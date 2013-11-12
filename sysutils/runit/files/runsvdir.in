@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/runit/files/runsvdir.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: sysutils/runit/files/runsvdir.in 332148 2013-10-30 16:25:29Z crees $
 #
 # PROVIDE: /service
 # BEFORE:  SERVERS
@@ -14,13 +14,17 @@
 
 . /etc/rc.subr
 
-name="runsvdir"
+name=runsvdir
 rcvar=runsvdir_enable
 
-command="%%PREFIX%%/sbin/runsvdir"
+load_rc_config runsvdir
 
+: ${runsvdir_enable:=NO}
+: ${runsvdir_path=%%SERVICE_DIR%%}
+
+command="%%PREFIX%%/sbin/runsvdir"
 start_cmd=runsvdir_start
-stop_postcmd=runsvdir_post_stop
+stop_postcmd="%%PREFIX%%/sbin/sv exit ${runsvdir_path}/*"
 
 runsvdir_start()
 {
@@ -31,14 +35,4 @@ runsvdir_start()
 	${command} ${runsvdir_path}
 }
 
-runsvdir_post_stop()
-{
-	%%PREFIX%%/sbin/sv exit ${runsvdir_path}/* 
-}
-
-# read configuration and set defaults
-load_rc_config "$name"
-: ${runsvdir_enable="NO"}
-: ${runsvdir_path="%%SERVICE_DIR%%"}
-
-run_rc_command "$1"
+run_rc_command $1
