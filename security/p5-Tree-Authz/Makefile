@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: security/p5-Tree-Authz/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Tree-Authz/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Tree-Authz
 PORTVERSION=	0.03
@@ -16,10 +16,7 @@ BUILD_DEPENDS=	p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inhe
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-MAN3=	Tree::Authz.3 Tree::Authz::Role.3
-
 USES=		perl5
 USE_PERL5=	modbuild
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
