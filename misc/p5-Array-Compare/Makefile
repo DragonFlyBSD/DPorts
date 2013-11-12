@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Array-Compare/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Array-Compare/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Array-Compare
 PORTVERSION=	2.02
@@ -13,7 +13,6 @@ COMMENT=	Perl extension for comparing arrays
 
 BUILD_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
-
 TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=1:${PORTSDIR}/devel/p5-Test-Pod-Coverage
@@ -21,7 +20,4 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Array::Compare.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
