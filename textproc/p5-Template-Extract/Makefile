@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: textproc/p5-Template-Extract/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Template-Extract/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Template-Extract
 PORTVERSION=	0.41
@@ -16,10 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Extract.3 \
-	Template::Extract::Compile.3 \
-	Template::Extract::Parser.3 \
-	Template::Extract::Run.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
