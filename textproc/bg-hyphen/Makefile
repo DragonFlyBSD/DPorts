@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/bg-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
+# $FreeBSD: textproc/bg-hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	4.3
@@ -15,7 +15,7 @@ COMMENT=	Bulgarian hyphenation rules
 LICENSE=	GPLv2 LGPL21 MPL
 LICENSE_COMB=	dual
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 
 PLIST_FILES=	%%DATADIR%%/hyph_bg_BG.dic
