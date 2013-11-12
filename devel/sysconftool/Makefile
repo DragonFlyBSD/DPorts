@@ -1,5 +1,5 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: devel/sysconftool/Makefile 328491 2013-09-27 14:55:35Z garga $
+# $FreeBSD: devel/sysconftool/Makefile 332298 2013-10-31 23:33:06Z garga $
 
 PORTNAME=	sysconftool
 PORTVERSION=	0.17
@@ -8,6 +8,8 @@ MASTER_SITES=	SF/courier/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Helps to install application configuration files
+
+LICENSE=	GPLv3
 
 USES=		perl5
 USE_BZIP2=	yes
