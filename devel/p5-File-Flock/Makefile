@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Flock/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Flock/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Flock
 PORTVERSION=	2013.11
@@ -23,9 +23,4 @@ TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Flock.3 \
-		File::Flock::Forking.3 \
-		File::Flock::Subprocess.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
