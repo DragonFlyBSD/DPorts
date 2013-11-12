@@ -1,5 +1,5 @@
 # Created by: dcf@aracnet.com
-# $FreeBSD: databases/p5-DBI-Shell/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBI-Shell/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBI-Shell
 PORTVERSION=	11.95
@@ -19,8 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		dbish.1
-MAN3=		DBI::Format.3 DBI::Format::CSV.3 DBI::Format::SQLMinus.3 DBI::Shell.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
