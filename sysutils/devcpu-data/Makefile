@@ -1,9 +1,9 @@
 # Created by: stas
-# $FreeBSD: sysutils/devcpu-data/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/devcpu-data/Makefile 333535 2013-11-11 20:34:38Z sunpoet $
 
 PORTNAME=	data
 PORTVERSION=	0.6
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.SpringDaemons.com/soft/
 PKGNAMEPREFIX=	devcpu-
@@ -17,21 +17,13 @@ NO_BUILD=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 DATADIR=	${PREFIX}/share/cpucontrol
 
 USE_RC_SUBR=	microcode_update
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/mcodes/* ${DATADIR}/
-	@${TOUCH} ${DATADIR}/.do_not_delete
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/mcodes/* ${STAGEDIR}${DATADIR}/
+	@${TOUCH} ${STAGEDIR}${DATADIR}/.do_not_delete
 
-post-install:
-	@${FIND} -ds ${DATADIR}/ ! -type d | \
-		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${ECHO_CMD} "@unexec rmdir %D/${DATADIR:S,^${PREFIX},,}" >> ${TMPPLIST}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
