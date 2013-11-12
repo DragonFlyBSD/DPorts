@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-MIME-Types/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Types/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	MIME-Types
 PORTVERSION=	2.04
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::Type.3 MIME::Types.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
