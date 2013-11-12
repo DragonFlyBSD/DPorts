@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-descendants_tracker/Makefile 331018 2013-10-20 14:02:15Z swills $
+# $FreeBSD: devel/rubygem-descendants_tracker/Makefile 332035 2013-10-30 02:31:04Z swills $
 
 PORTNAME=	descendants_tracker
 PORTVERSION=	0.0.1
@@ -12,6 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
