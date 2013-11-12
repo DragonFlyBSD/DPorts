@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-PPIx-Utilities/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-PPIx-Utilities/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	PPIx-Utilities
 PORTVERSION=	1.001000
@@ -21,8 +21,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		PPIx::Utilities.3 PPIx::Utilities::Exception::Bug.3 \
-		PPIx::Utilities::Node.3 PPIx::Utilities::Statement.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
