@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Readonly/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Readonly/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Readonly
 PORTVERSION=	1.03
@@ -18,9 +18,6 @@ USE_PERL5=	configure
 CONFIGURE_ARGS=	DIR="${PORTNAME}-XS-${PORTVERSION_XS}"
 PORTVERSION_XS=	1.05
 
-MAN3=		Readonly.3 Readonly::XS.3
-
-NO_STAGE=	yes
 post-patch:
 	${MV} ${WRKDIR}/${PORTNAME}-XS-${PORTVERSION_XS} ${WRKSRC}
 	${RM} ${WRKSRC}/*.pl
