@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@FreeBSD.org.ua>
-# $FreeBSD: net/p5-Net-Whois-Raw/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Whois-Raw/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Whois-Raw
 PORTVERSION=	2.48
@@ -24,8 +24,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pwhois.1
-MAN3=		Net::Whois::Raw.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
