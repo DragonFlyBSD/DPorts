@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: games/p5-Games-GuessWord/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/p5-Games-GuessWord/Makefile 332736 2013-11-04 14:49:24Z vanilla $
 
 PORTNAME=	Games-GuessWord
 PORTVERSION=	0.16
@@ -10,10 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Guess the letters in a word (ie Hangman)
 
-MAN3=	Games::GuessWord.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
