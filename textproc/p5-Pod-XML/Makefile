@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-Pod-XML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Pod-XML/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Pod-XML
 PORTVERSION=	0.99
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pod2xml.1
-MAN3=		Pod::XML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
