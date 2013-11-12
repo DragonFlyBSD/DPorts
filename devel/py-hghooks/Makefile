@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-hghooks/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-hghooks/Makefile 333289 2013-11-09 13:24:05Z wg $
 
 PORTNAME=	hghooks
 PORTVERSION=	0.6.0
@@ -14,6 +14,6 @@ LICENSE=	LGPL3
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
