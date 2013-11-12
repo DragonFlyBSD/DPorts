@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/p5-Params-Validate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Params-Validate/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Params-Validate
 PORTVERSION=	1.08
@@ -21,8 +21,4 @@ TEST_DEPENDS=	p5-Readonly>=0:${PORTSDIR}/devel/p5-Readonly \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Attribute::Params::Validate.3 \
-		Params::Validate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
