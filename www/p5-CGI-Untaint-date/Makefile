@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Untaint-date/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Untaint-date/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Untaint-date
 PORTVERSION=	1.00
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-CGI-Untaint>=0:${PORTSDIR}/www/p5-CGI-Untaint \
 		p5-Date-Simple>=0:${PORTSDIR}/devel/p5-Date-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	CGI::Untaint::date.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
