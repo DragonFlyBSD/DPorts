@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-sequel/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-sequel/Makefile 332041 2013-10-30 02:42:34Z swills $
 
 PORTNAME=	sequel
 PORTVERSION=	4.0.0
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=yes
 
 PLIST_FILES=	bin/sequel
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
