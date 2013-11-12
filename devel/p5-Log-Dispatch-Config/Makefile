@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-Log-Dispatch-Config/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-Config/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Dispatch-Config
 PORTVERSION=	1.04
@@ -18,9 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Log::Dispatch::Config.3 \
-		Log::Dispatch::Configurator.3 \
-		Log::Dispatch::Configurator::AppConfig.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
