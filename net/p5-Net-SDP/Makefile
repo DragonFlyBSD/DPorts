@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net/p5-Net-SDP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SDP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-SDP
 PORTVERSION=	0.07
@@ -16,8 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		sdp2rat.1
-MAN3=		Net::SDP.3 Net::SDP::Media.3 Net::SDP::Time.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
