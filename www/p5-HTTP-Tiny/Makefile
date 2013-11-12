@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Tiny/Makefile 328382 2013-09-26 16:47:05Z sunpoet $
+# $FreeBSD: www/p5-HTTP-Tiny/Makefile 332255 2013-10-31 15:25:09Z sunpoet $
 
 PORTNAME=	HTTP-Tiny
-PORTVERSION=	0.036
+PORTVERSION=	0.037
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
@@ -20,21 +20,14 @@ OPTIONS_DEFAULT=COOKIE HTTPS
 USE_PERL5=	configure
 USES=		perl5
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MCOOKIE}
-BUILD_DEPENDS+=	p5-HTTP-CookieJar>=0.001:${PORTSDIR}/www/p5-HTTP-CookieJar
-RUN_DEPENDS+=	p5-HTTP-CookieJar>=0.001:${PORTSDIR}/www/p5-HTTP-CookieJar
-.endif
-
-.if ${PORT_OPTIONS:MHTTPS}
-BUILD_DEPENDS+=	p5-IO-Socket-SSL>=1.42:${PORTSDIR}/security/p5-IO-Socket-SSL \
-		p5-Net-SSLeay>=1.49:${PORTSDIR}/security/p5-Net-SSLeay \
-		p5-Mozilla-CA>=20120823:${PORTSDIR}/www/p5-Mozilla-CA
-RUN_DEPENDS+=	p5-IO-Socket-SSL>=1.42:${PORTSDIR}/security/p5-IO-Socket-SSL \
-		p5-Net-SSLeay>=1.49:${PORTSDIR}/security/p5-Net-SSLeay \
-		p5-Mozilla-CA>=20120823:${PORTSDIR}/www/p5-Mozilla-CA
-.endif
+COOKIE_BUILD_DEPENDS=	p5-HTTP-CookieJar>=0.001:${PORTSDIR}/www/p5-HTTP-CookieJar
+COOKIE_RUN_DEPENDS=	p5-HTTP-CookieJar>=0.001:${PORTSDIR}/www/p5-HTTP-CookieJar
+HTTPS_BUILD_DEPENDS=	p5-IO-Socket-SSL>=1.42:${PORTSDIR}/security/p5-IO-Socket-SSL \
+			p5-Net-SSLeay>=1.49:${PORTSDIR}/security/p5-Net-SSLeay \
+			p5-Mozilla-CA>=20120823:${PORTSDIR}/www/p5-Mozilla-CA
+HTTPS_RUN_DEPENDS=	p5-IO-Socket-SSL>=1.42:${PORTSDIR}/security/p5-IO-Socket-SSL \
+			p5-Net-SSLeay>=1.49:${PORTSDIR}/security/p5-Net-SSLeay \
+			p5-Mozilla-CA>=20120823:${PORTSDIR}/www/p5-Mozilla-CA
 
 .include <bsd.port.pre.mk>
 
