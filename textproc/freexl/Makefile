@@ -1,8 +1,8 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: textproc/freexl/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/freexl/Makefile 332847 2013-11-05 13:24:00Z wen $
 
 PORTNAME=	freexl
-DISTVERSION=	1.0.0e
+DISTVERSION=	1.0.0f
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/freexl-sources/
 
