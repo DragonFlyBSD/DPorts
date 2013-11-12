@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Algorithm-MinMax/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-MinMax/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-MinMax
 PORTVERSION=	0.01
@@ -13,7 +13,4 @@ COMMENT=	Perl modules to find the minimum and maximum of an array
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::MinMax.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
