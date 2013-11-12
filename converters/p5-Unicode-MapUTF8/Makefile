@@ -1,5 +1,5 @@
 # Created by: Ryan T. Dean <rtdean@cytherianage.net>
-# $FreeBSD: converters/p5-Unicode-MapUTF8/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Unicode-MapUTF8/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Unicode-MapUTF8
 PORTVERSION=	1.11
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Unicode::MapUTF8.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
