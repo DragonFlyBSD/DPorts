@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Basic/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Basic/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	Statistics-Basic
 PORTVERSION=	1.6607
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	Statistics
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tobez@FreeBSD.org
-COMMENT=	A collection of very basic statistics modules
+COMMENT=	Collection of basic statistics modules
 
 BUILD_DEPENDS=	p5-Number-Format>=1.61:${PORTSDIR}/textproc/p5-Number-Format
 RUN_DEPENDS:=	${BUILD_DEPENDS}
