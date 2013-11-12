@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Test-TAP-Model/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-TAP-Model/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-TAP-Model
 PORTVERSION=	0.10
@@ -19,12 +19,6 @@ TEST_DEPENDS=	p5-Test-Simple>=0.53:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::TAP::Model.3 Test::TAP::Model::Consolidated.3 \
-		Test::TAP::Model::File.3 \
-		Test::TAP::Model::File::Consolidated.3 \
-		Test::TAP::Model::Subtest.3
-
-NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/example.pl
 
