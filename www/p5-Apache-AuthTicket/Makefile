@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-Apache-AuthTicket/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-AuthTicket/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Apache-AuthTicket
 PORTVERSION=	0.93
@@ -24,9 +24,4 @@ USE_APACHE=	22+
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Apache::AuthTicket.3 \
-		Apache::AuthTicket::Base.3 \
-		Apache2::AuthTicket.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
