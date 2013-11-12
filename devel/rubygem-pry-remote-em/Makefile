@@ -1,5 +1,5 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: devel/rubygem-pry-remote-em/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-pry-remote-em/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	pry-remote-em
 PORTVERSION=	0.7.4
@@ -19,5 +19,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
