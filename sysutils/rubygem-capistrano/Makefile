@@ -1,5 +1,5 @@
 # Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-# $FreeBSD: sysutils/rubygem-capistrano/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-capistrano/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	capistrano
 PORTVERSION=	2.14.2
@@ -21,7 +21,6 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/cap bin/capify
 
-NO_STAGE=	yes
 post-install:
 	@${ECHO_MSG} "======================================================================"
 	@${ECHO_MSG}
