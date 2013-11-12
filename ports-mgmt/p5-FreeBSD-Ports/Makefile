@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@FreeBSD.org>
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports/Makefile 332936 2013-11-06 01:18:34Z vanilla $
 
 PORTNAME=	FreeBSD-Ports
 PORTVERSION=	0.04
@@ -15,7 +15,5 @@ USE_BZIP2=	yes
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		FreeBSD::Ports::Port.3 \
-		FreeBSD::Ports.3
-NO_STAGE=	yes
+
 .include <bsd.port.mk>
