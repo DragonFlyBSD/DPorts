@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Hash-Util-FieldHash-Compat/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Hash-Util-FieldHash-Compat/Makefile 331958 2013-10-29 15:08:11Z vanilla $
 
 PORTNAME=	Hash-Util-FieldHash-Compat
 PORTVERSION=	0.03
@@ -22,8 +22,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Hash::Util::FieldHash::Compat.3 \
-		Hash::Util::FieldHash::Compat::Heavy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
