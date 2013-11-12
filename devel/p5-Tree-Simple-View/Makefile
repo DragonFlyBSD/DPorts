@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Simple-View/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tree-Simple-View/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Tree-Simple-View
 PORTVERSION=	0.17
@@ -17,14 +17,7 @@ BUILD_DEPENDS=	p5-Tree-Simple>=0:${PORTSDIR}/devel/p5-Tree-Simple \
 		p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		Tree::Simple::View.3 \
-		Tree::Simple::View::ASCII.3 \
-		Tree::Simple::View::DHTML.3 \
-		Tree::Simple::View::Exceptions.3 \
-		Tree::Simple::View::HTML.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
