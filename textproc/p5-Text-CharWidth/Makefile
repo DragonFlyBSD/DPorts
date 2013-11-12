@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-Text-CharWidth/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-CharWidth/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-CharWidth
 DISTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Get number of occupied columns of a string on terminal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::CharWidth.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
