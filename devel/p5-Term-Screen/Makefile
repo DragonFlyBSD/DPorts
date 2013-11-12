@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: devel/p5-Term-Screen/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Screen/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-Screen
 PORTVERSION=	1.03
@@ -13,7 +13,4 @@ COMMENT=	Basic screen + input class
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Screen.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
