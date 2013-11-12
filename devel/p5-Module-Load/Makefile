@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Load/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Load/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Load
 PORTVERSION=	0.24
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Load.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
