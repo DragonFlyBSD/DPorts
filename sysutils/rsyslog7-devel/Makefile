@@ -1,7 +1,8 @@
-# $FreeBSD: sysutils/rsyslog7-devel/Makefile 331071 2013-10-20 23:26:54Z brd $
+# $FreeBSD: sysutils/rsyslog7-devel/Makefile 333306 2013-11-09 15:57:18Z wg $
 
 PORTNAME=	rsyslog
 PORTVERSION=	7.5.5
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 
@@ -13,7 +14,7 @@ USE_LDCONFIG=	yes
 
 LIB_DEPENDS=	ee:${PORTSDIR}/devel/libee \
 		estr:${PORTSDIR}/devel/libestr \
-		json.0:${PORTSDIR}/devel/json-c \
+		libjson.so:${PORTSDIR}/devel/json-c \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 BUILD_DEPENDS=	libgcrypt-config:${PORTSDIR}/security/libgcrypt
