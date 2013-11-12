@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-journey/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-journey/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	journey
 PORTVERSION=	1.0.4
@@ -12,5 +12,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
