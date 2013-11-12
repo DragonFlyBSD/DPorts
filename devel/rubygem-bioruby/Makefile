@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-bioruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-bioruby/Makefile 332034 2013-10-30 02:29:22Z swills $
 
 PORTNAME=	bioruby
 PORTVERSION=	1.4.3.0001
@@ -21,5 +21,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 GEM_NAME=	${DISTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
