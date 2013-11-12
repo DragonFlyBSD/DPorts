@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-InstallPaths/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-InstallPaths/Makefile 332260 2013-10-31 15:52:13Z sunpoet $
 
 PORTNAME=	ExtUtils-InstallPaths
-PORTVERSION=	0.009
+PORTVERSION=	0.010
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
