@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Expect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Expect/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Expect
 PORTVERSION=	0.31
@@ -14,10 +14,7 @@ BUILD_DEPENDS=	p5-Class-Accessor-Chained>=0:${PORTSDIR}/devel/p5-Class-Accessor-
 		p5-Expect-Simple>=0:${PORTSDIR}/devel/p5-Expect-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Test::Expect.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
