@@ -1,8 +1,8 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Rose-DB/Makefile 329267 2013-10-04 07:07:10Z sunpoet $
+# $FreeBSD: databases/p5-Rose-DB/Makefile 332748 2013-11-04 17:04:46Z sunpoet $
 
 PORTNAME=	Rose-DB
-PORTVERSION=	0.771
+PORTVERSION=	0.774
 PORTEPOCH=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
@@ -34,19 +34,4 @@ PORTSCOUT=	skipv:0.7591
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Rose::DB.3 \
-		Rose::DB::Cache.3 \
-		Rose::DB::Cache::Entry.3 \
-		Rose::DB::Constants.3 \
-		Rose::DB::Generic.3 \
-		Rose::DB::Informix.3 \
-		Rose::DB::MySQL.3 \
-		Rose::DB::Oracle.3 \
-		Rose::DB::Pg.3 \
-		Rose::DB::Registry.3 \
-		Rose::DB::Registry::Entry.3 \
-		Rose::DB::SQLite.3 \
-		Rose::DB::Tutorial.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
