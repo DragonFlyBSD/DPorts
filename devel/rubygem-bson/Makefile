@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: devel/rubygem-bson/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-bson/Makefile 332034 2013-10-30 02:29:22Z swills $
 
 PORTNAME=       bson
 PORTVERSION=	1.9.1
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES+= bin/b2json \
 	      bin/j2bson
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
