@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Unicode/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Unicode/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-Unicode
 PORTVERSION=	0.93
@@ -20,9 +20,6 @@ TEST_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Plugin::Unicode.3
-
-NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e '/build_requires/d' ${WRKSRC}/Makefile.PL
 
