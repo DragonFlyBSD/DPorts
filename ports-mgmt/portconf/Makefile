@@ -1,8 +1,9 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports-mgmt/portconf/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/portconf/Makefile 333038 2013-11-06 20:03:31Z sunpoet $
 
 PORTNAME=	portconf
 PORTVERSION=	1.6
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none

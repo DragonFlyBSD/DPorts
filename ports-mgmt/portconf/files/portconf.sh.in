@@ -25,10 +25,11 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: ports-mgmt/portconf/files/portconf.sh.in 324628 2013-08-12 13:05:07Z ale $
+# $FreeBSD: ports-mgmt/portconf/files/portconf.sh.in 333038 2013-11-06 20:03:31Z sunpoet $
 #
 
 _conf=%%PREFIX%%/etc/ports.conf
+echo -n "|"
 if [ ! -r "${_conf}" ]; then
     exit
 fi
