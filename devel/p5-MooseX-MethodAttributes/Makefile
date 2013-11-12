@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-MethodAttributes/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-MethodAttributes/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-MethodAttributes
 PORTVERSION=	0.28
@@ -25,19 +25,4 @@ TEST_DEPENDS=	p5-MooseX-Role-Parameterized>=0:${PORTSDIR}/devel/p5-MooseX-Role-P
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::MethodAttributes.3 \
-		MooseX::MethodAttributes::Inheritable.3 \
-		MooseX::MethodAttributes::Role.3 \
-		MooseX::MethodAttributes::Role::AttrContainer.3 \
-		MooseX::MethodAttributes::Role::AttrContainer::Inheritable.3 \
-		MooseX::MethodAttributes::Role::Meta::Class.3 \
-		MooseX::MethodAttributes::Role::Meta::Map.3 \
-		MooseX::MethodAttributes::Role::Meta::Method.3 \
-		MooseX::MethodAttributes::Role::Meta::Method::MaybeWrapped.3 \
-		MooseX::MethodAttributes::Role::Meta::Method::Wrapped.3 \
-		MooseX::MethodAttributes::Role::Meta::Role.3 \
-		MooseX::MethodAttributes::Role::Meta::Role::Application.3 \
-		MooseX::MethodAttributes::Role::Meta::Role::Application::Summation.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
