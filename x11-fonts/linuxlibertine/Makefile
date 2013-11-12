@@ -1,5 +1,5 @@
 # Created by: Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: x11-fonts/linuxlibertine/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/linuxlibertine/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	linuxlibertine
 PORTVERSION=	4.7.5
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	bkoenig@alpha-tierchen.de
 COMMENT=	Linux Libertine Open Fonts
 
-LICENSE=	GPLv2 LINUXLIBERTINE OFL
+LICENSE=	GPLv2 LINUXLIBERTINE OFL10
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
