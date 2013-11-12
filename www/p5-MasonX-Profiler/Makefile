@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-MasonX-Profiler/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-MasonX-Profiler/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	MasonX-Profiler
 PORTVERSION=	0.06
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MasonX::Profiler.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
