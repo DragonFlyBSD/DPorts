@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ro-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ro-mythes/Makefile 332692 2013-11-04 11:20:38Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	3.3
@@ -14,7 +14,7 @@ COMMENT=	Romanian thesaurus
 
 LICENSE=	GPLv2
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -22,9 +22,8 @@ PLIST_FILES=	%%DATADIR%%/th_ro_RO.dat \
 		%%DATADIR%%/th_ro_RO.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_ro_RO.dat ${WRKSRC}/th_ro_RO.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_ro_RO.dat ${WRKSRC}/th_ro_RO.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
