@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: security/pdfcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pdfcrack/Makefile 333228 2013-11-08 14:17:26Z jadawin $
 
 PORTNAME=	pdfcrack
 PORTVERSION=	0.11
@@ -8,6 +8,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	A command line, password recovery tool for PDF-files
+
+DEPRECATED=	Not active since several years
+EXPIRATION_DATE=	2013-12-08
 
 USE_GMAKE=	yes
 
