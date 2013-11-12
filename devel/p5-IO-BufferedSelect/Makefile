@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/p5-IO-BufferedSelect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-BufferedSelect/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-BufferedSelect
 PORTVERSION=	1.0
@@ -12,10 +12,6 @@ COMMENT=	Line-buffered select interface
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		IO::BufferedSelect.3
-
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
