@@ -1,5 +1,5 @@
 # Created by: Steven Enderle <enderle@mdn.de>
-# $FreeBSD: misc/bestfit/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: misc/bestfit/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
 
 PORTNAME=	bestfit
 PORTVERSION=	0.2.0
@@ -12,9 +12,7 @@ COMMENT=	Optimally choose files to be put on a CD (or other media)
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-MANCOMPRESSED=	no
 
-MAN1=		bestfit.1
-PLIST_FILES=	bin/bestfit
+PLIST_FILES=	bin/bestfit man/man1/bestfit.1.gz
 
 .include <bsd.port.mk>
