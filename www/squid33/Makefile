@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid33/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/squid33/Makefile 333532 2013-11-11 20:29:45Z flo $
 
 PORTNAME=	squid
 PORTVERSION=	3.3.${SQUID_STABLE_VER}
@@ -41,7 +41,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	squid33
 
-SQUID_STABLE_VER=	9
+SQUID_STABLE_VER=	10
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!3].* cacheboy-[0-9]* lusca-head-[0-9]*
 USES=		perl5
