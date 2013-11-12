@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: security/p5-Net-OpenID-Server/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Net-OpenID-Server/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Net-OpenID-Server
 PORTVERSION=	1.09
@@ -19,7 +19,4 @@ USES=		perl5
 USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
-MAN3=		Net::OpenID::Server.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
