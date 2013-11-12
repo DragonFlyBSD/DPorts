@@ -1,5 +1,5 @@
 # Created by: Brad Hendrickse <bradh@uunet.co.za>
-# $FreeBSD: net-mgmt/p5-Net-IPv4Addr/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Net-IPv4Addr/Makefile 332836 2013-11-05 12:02:05Z vanilla $
 
 PORTNAME=	Net-IPv4Addr
 PORTVERSION=	0.10
@@ -16,8 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		ipv4calc.1
-MAN3=		Net::IPv4Addr.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
