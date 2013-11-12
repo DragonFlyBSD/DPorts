@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-virtus/Makefile 331019 2013-10-20 14:44:50Z swills $
+# $FreeBSD: devel/rubygem-virtus/Makefile 332043 2013-10-30 02:47:06Z swills $
 
 PORTNAME=	virtus
 PORTVERSION=	0.5.5
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
