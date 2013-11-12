@@ -1,21 +1,18 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-No/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-No/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
-PORTNAME=		Lingua-Stem-Snowball-No
-PORTVERSION=		1.2
-CATEGORIES=		textproc perl5
-MASTER_SITES=		CPAN
+PORTNAME=	Lingua-Stem-Snowball-No
+PORTVERSION=	1.2
+CATEGORIES=	textproc perl5
+MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ASKSH
-PKGNAMEPREFIX=		p5-
-DISTNAME=		Snowball-Norwegian-${PORTVERSION}
+PKGNAMEPREFIX=	p5-
+DISTNAME=	Snowball-Norwegian-${PORTVERSION}
 
-MAINTAINER=		perl@FreeBSD.org
-COMMENT=		Stemmer for Norwegian
+MAINTAINER=	perl@FreeBSD.org
+COMMENT=	Stemmer for Norwegian
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=			Lingua::Stem::Snowball::No.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
