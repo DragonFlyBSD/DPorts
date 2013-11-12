@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Framework/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: www/p5-CGI-Framework/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Framework
 PORTVERSION=	0.23
@@ -17,16 +17,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		CGI::Framework.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
