@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: x11/p5-X11-Protocol/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/p5-X11-Protocol/Makefile 333060 2013-11-07 04:57:21Z vanilla $
 
 PORTNAME=	X11-Protocol
 PORTVERSION=	0.56
@@ -13,22 +13,4 @@ COMMENT=	Perl module that provides an interface roughly equivalent to Xlib
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		X11::Auth.3 \
-		X11::Keysyms.3 \
-		X11::Protocol.3 \
-		X11::Protocol::Connection.3 \
-		X11::Protocol::Connection::Socket.3 \
-		X11::Protocol::Connection::FileHandle.3 \
-		X11::Protocol::Connection::INETFH.3 \
-		X11::Protocol::Connection::INETSocket.3 \
-		X11::Protocol::Connection::UNIXFH.3 \
-		X11::Protocol::Connection::UNIXSocket.3 \
-		X11::Protocol::Ext::BIG_REQUESTS.3 \
-		X11::Protocol::Ext::DPMS.3 \
-		X11::Protocol::Ext::RENDER.3 \
-		X11::Protocol::Ext::SHAPE.3 \
-		X11::Protocol::Ext::XC_MISC.3 \
-		X11::Protocol::Ext::XFree86_Misc.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
