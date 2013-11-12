@@ -1,5 +1,5 @@
 # Created by: Oyvind Moll <oyvindmo@initio.no>
-# $FreeBSD: audio/p5-CDDB_get/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-CDDB_get/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	CDDB_get
 PORTVERSION=	2.28
@@ -17,9 +17,6 @@ LICENSE=	GPLv2
 PORTSCOUT=	skipv:2.28.1
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		CDDB_get.3
 
 .include <bsd.port.mk>
