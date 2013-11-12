@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: devel/libvc/Makefile 331072 2013-10-20 23:32:25Z jgh $
+# $FreeBSD: devel/libvc/Makefile 333180 2013-11-08 03:47:39Z jgh $
 
 PORTNAME=	libvc
 PORTVERSION=	003
@@ -16,14 +16,10 @@ USES=		bison
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for DOC in AUTHORS ChangeLog NEWS README THANKS doc/rfc2426.txt
 	${INSTALL_DATA} ${WRKSRC}/${DOC} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
