@@ -1,11 +1,11 @@
-# Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: databases/libmongo-client/Makefile 331678 2013-10-26 12:39:19Z wg $
+# Created by: Denis Generalov <gd.workbox@gmail.com>
+# $FreeBSD: databases/libmongo-client/Makefile 331941 2013-10-29 12:25:59Z jhale $
 
 PORTNAME=	libmongo-client
 PORTVERSION=	0.1.6.3
 CATEGORIES=	databases
 
-MAINTAINER=	gd@rambler-co.ru
+MAINTAINER=	gd.workbox@gmail.com
 COMMENT=	Alternative C driver for MongoDB
 
 LICENSE=	AL2
