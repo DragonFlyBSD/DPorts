@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/turses/Makefile 330978 2013-10-20 05:23:18Z koobs $
+# $FreeBSD: net/turses/Makefile 333281 2013-11-09 12:03:14Z koobs $
 
 PORTNAME=	turses
-PORTVERSION=	0.2.18
+PORTVERSION=	0.2.19
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 
@@ -28,6 +28,7 @@ NO_STAGE=	yes
 
 USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 .if ${PORT_OPTIONS:MTESTS}
 BUILD_DEPENDS:=	${TEST_DEPENDS}
