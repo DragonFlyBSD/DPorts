@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/mosh/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/mosh/Makefile 332979 2013-11-06 12:27:13Z mat $
 
 PORTNAME=	mosh
 PORTVERSION=	1.2.4
@@ -12,7 +12,7 @@ COMMENT=	Mobile terminal that supports intermittent connectivity
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
+LIB_DEPENDS=	libprotobuf.so:${PORTSDIR}/devel/protobuf
 
 USE_PERL5=	run
 GNU_CONFIGURE=	yes
@@ -26,13 +26,12 @@ LATEST_LINK=	mosh-term
 
 CONFLICTS_INSTALL=	mosh-0.[2-9].*
 
-PLIST_FILES=	bin/mosh bin/mosh-server bin/mosh-client
-MAN1=		mosh-client.1 mosh-server.1 mosh.1
+PLIST_FILES=	bin/mosh bin/mosh-server bin/mosh-client \
+		man/man1/mosh-client.1.gz man/man1/mosh-server.1.gz man/man1/mosh.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
-LIB_DEPENDS+=	utempter:${PORTSDIR}/sysutils/libutempter
+LIB_DEPENDS+=	libutempter.so:${PORTSDIR}/sysutils/libutempter
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
