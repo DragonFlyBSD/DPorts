@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-Path-Class/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Path-Class/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Path-Class
 PORTVERSION=	0.32
@@ -19,20 +19,14 @@ OPTIONS_DEFINE=	DOCS
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Path::Class.3 \
-		Path::Class::Dir.3 \
-		Path::Class::Entity.3 \
-		Path::Class::File.3
 PORTDOCS=	Changes README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
