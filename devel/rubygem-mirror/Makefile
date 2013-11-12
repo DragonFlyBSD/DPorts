@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-mirror/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-mirror/Makefile 332039 2013-10-30 02:39:14Z swills $
 
 PORTNAME=	mirror
 PORTVERSION=	1.0.1
@@ -18,5 +18,4 @@ USE_RUBYGEMS=		yes
 GEM_NAME=		rubygems-${PORTNAME}-${PORTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
