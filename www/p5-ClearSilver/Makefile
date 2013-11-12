@@ -1,5 +1,5 @@
 # Created by: Rink Springer <rink@FreeBSD.org>
-# $FreeBSD: www/p5-ClearSilver/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-ClearSilver/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	ClearSilver
 PORTVERSION=	0.10.5
@@ -18,8 +18,6 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include/ClearSilver"
 
-MAN3=		ClearSilver.3
 WRKSRC=		${WRKDIR}/${DISTNAME}/perl
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
