@@ -1,5 +1,5 @@
 # Created by: Yar Tikhiy <yar@comp.chem.msu.su>
-# $FreeBSD: audio/p5-CDDB/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-CDDB/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	CDDB
 PORTVERSION=	1.222
@@ -11,9 +11,6 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	High-level interface to the Compact Disc Database
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		CDDB.3
 
 .include <bsd.port.mk>
