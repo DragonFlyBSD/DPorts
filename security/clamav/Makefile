@@ -1,5 +1,5 @@
 # Created by: markun@onohara.to
-# $FreeBSD: security/clamav/Makefile 330384 2013-10-15 11:33:56Z garga $
+# $FreeBSD: security/clamav/Makefile 332313 2013-10-31 23:42:29Z garga $
 
 PORTNAME=	clamav
 PORTVERSION=	0.98
@@ -183,10 +183,8 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/clamav-config.h ${STAGEDIR}${PREFIX}/include
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${WRKSRC}/ChangeLog ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/html/* ${STAGEDIR}${DOCSDIR}/html
-.endif
 
 .include <bsd.port.post.mk>
