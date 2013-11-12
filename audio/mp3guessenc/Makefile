@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/mp3guessenc/Makefile 329040 2013-10-02 11:56:39Z ehaupt $
+# $FreeBSD: audio/mp3guessenc/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
 
 PORTNAME=	mp3guessenc
 PORTVERSION=	0.25.0
@@ -8,8 +8,6 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:C/\.0$//}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Utility for guessing which encoder was used to encode an mp3 file
-
-NO_STAGE=	yes
 
 PLIST_FILES=	bin/mp3guessenc
 SRC=		decode.c mp3guessenc.c bit_utils.c tags.c
@@ -22,6 +20,6 @@ do-build:
 		-o ${WRKSRC}/${PORTNAME} ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
