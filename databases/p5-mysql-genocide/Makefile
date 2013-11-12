@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: databases/p5-mysql-genocide/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-mysql-genocide/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	mysql-genocide
 PORTVERSION=	0.03
@@ -16,11 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN1=		mysql-genocide.1
 
-PLIST_FILES=	bin/mysql-genocide \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/mysql-genocide/.packlist
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/mysql-genocide
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
