@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat_util/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gnat_util/Makefile 333404 2013-11-10 15:20:10Z marino $
 
 PORTNAME=	gnat_util
 PORTVERSION=	${SNAPSHOT}
@@ -13,13 +13,11 @@ COMMENT=	Library used to build GNAT tools such as ASIS
 
 USES=		ada
 USE_BZIP2=	yes
+NO_MTREE=	yes
 DISTINFO_FILE=	${.CURDIR}/../gcc-aux/distinfo
 WRKSRC=		${WRKDIR}/${PORTNAME}
-DESTINY=	${WRKDIR}/destino
-MAKE_ENV=	DESTDIR=${DESTINY} \
-		MAKEOBJDIR=${WRKSRC}/obj
+MAKE_ENV=	MAKEOBJDIR=${WRKSRC}/obj
 
-NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.sources"
 .include "${.CURDIR}/../gcc-aux/Makefile.version"
 .include <bsd.port.pre.mk>
@@ -34,14 +32,12 @@ post-extract:
 .endfor
 
 post-install:
-	${CP} -pR ${DESTINY}${PREFIX}/ ${PREFIX}/
-	@cd ${DESTINY}${PREFIX}; ${FIND} * \( -type f -or -type l \) | \
-	   ${SORT} > ${WRKDIR}/PLIST.all
-	@cd ${DESTINY}${PREFIX}; ${FIND} * -type d | ${AWK} '/\//' | \
+	@cd ${STAGEDIR}${PREFIX}; ${FIND} * \( -type f -or -type l \) | \
+	   ${SORT} > ${TMPPLIST}
+	@cd ${STAGEDIR}${PREFIX}; ${FIND} * -type d | ${AWK} '/\//' | \
 	   ${SORT} -r | ${SED} -e '/lib\/gnat$$/d' -e 's/^/@dirrm /g' \
-	   >> ${WRKDIR}/PLIST.all
-	@echo "@unexec rmdir %D/lib/gnat 2>/dev/null || true" >> ${WRKDIR}/PLIST.all
-	@${CAT} ${WRKDIR}/PLIST.all >> ${TMPPLIST}
+	   >> ${TMPPLIST}
+	@echo "@unexec rmdir %D/lib/gnat 2>/dev/null || true" >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>
 
