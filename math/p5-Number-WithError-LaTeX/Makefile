@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Number-WithError-LaTeX/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Number-WithError-LaTeX/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Number-WithError-LaTeX
 PORTVERSION=	0.06
@@ -18,10 +18,7 @@ BUILD_DEPENDS=	p5-Params-Util>=0:${PORTSDIR}/devel/p5-Params-Util \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-LectroTest>=0:${PORTSDIR}/devel/p5-Test-LectroTest
 
-MAN3=	Number::WithError::LaTeX.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
