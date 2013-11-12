@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/yacas/Makefile 331471 2013-10-24 10:18:31Z gahr $
+# $FreeBSD: math/yacas/Makefile 331934 2013-10-29 08:15:05Z gahr $
 
 PORTNAME=	yacas
 PORTVERSION=	1.3.3
@@ -26,10 +26,12 @@ BROKEN=		Does not compile with GCC 4.2
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
-CONFIGURE_ARGS+=	--enable-html-doc --with-html-dir=${DOCSDIR}
+CONFIGURE_ARGS+=--enable-html-doc --with-html-dir=${DOCSDIR}
 PORTDOCS=	*
+USES+=		perl5                                                                                                                                                                   
+USE_PERL5=	build 
 .else
-CONFIGURE_ARGS+=	--disable-html-doc
+CONFIGURE_ARGS+=--disable-html-doc
 .endif
 
 .if ${PORT_OPTIONS:MTESTS}
