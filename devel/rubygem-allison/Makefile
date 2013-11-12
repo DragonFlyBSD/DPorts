@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-allison/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-allison/Makefile 332033 2013-10-30 02:26:17Z swills $
 
 PORTNAME=	allison
 PORTVERSION=	2.0.3
@@ -16,5 +16,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/allison
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
