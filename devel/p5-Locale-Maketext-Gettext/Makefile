@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Gettext/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Locale-Maketext-Gettext/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Locale-Maketext-Gettext
 PORTVERSION=	1.28
@@ -13,19 +13,13 @@ COMMENT=	Joins gettext and Maketext frameworks
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN1=		maketext.1
-MAN3=		Locale::Maketext::Gettext.3 \
-		Locale::Maketext::Gettext::Functions.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	BUGS Changes README THANKS
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
