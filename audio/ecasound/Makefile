@@ -1,5 +1,5 @@
 # Created by: The Anarcat <anarcat@anarcat.dyndns.org>
-# $FreeBSD: audio/ecasound/Makefile 330331 2013-10-14 14:54:54Z sunpoet $
+# $FreeBSD: audio/ecasound/Makefile 331938 2013-10-29 09:55:03Z kwm $
 
 PORTNAME=	ecasound
 PORTVERSION=	2.9.0
@@ -34,7 +34,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 ALSA_CONFIGURE_ENABLE=	alsa
 ALSA_LIB_DEPENDS=	libasound.so:${PORTSDIR}/audio/alsa-lib
 AUDIOFILE_CONFIGURE_ENABLE=	audiofile
-AUDIOFILE_LIB_DEPENDS=	libaudiofilei.so:${PORTSDIR}/audio/libaudiofile
+AUDIOFILE_LIB_DEPENDS=	libaudiofile.so:${PORTSDIR}/audio/libaudiofile
 JACK_CONFIGURE_ENABLE=	jack
 JACK_LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack
 LO_CONFIGURE_ENABLE=	liblo
