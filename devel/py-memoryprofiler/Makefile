@@ -1,8 +1,8 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-memoryprofiler/Makefile 332129 2013-10-30 15:26:19Z wg $
+# $FreeBSD: devel/py-memoryprofiler/Makefile 332831 2013-11-05 11:20:30Z wg $
 
 PORTNAME=	memoryprofiler
-PORTVERSION=	0.29
+PORTVERSION=	0.30
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE=	BSD
 
 OPTIONS_DEFINE=	PSUTIL
 PSUTIL_DESC=	Use psutil for better performance
-PSUTIL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}-psutil>0:${PORTSDIR}/sysutils/py-psutil
+PSUTIL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>1.0.0:${PORTSDIR}/sysutils/py-psutil
 
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
