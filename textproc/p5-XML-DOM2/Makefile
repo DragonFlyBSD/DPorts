@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-DOM2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-DOM2/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-DOM2
 PORTVERSION=	0.06
@@ -18,14 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::DOM2::Attribute.3 XML::DOM2::Element.3 \
-		XML::DOM2::Element::Document.3 \
-		XML::DOM2::Element::DocumentType.3 XML::DOM2.3 \
-		XML::DOM2::DOM::Document.3 XML::DOM2::Parser.3 \
-		XML::DOM2::Attribute::Namespace.3 XML::DOM2::XPath.3 \
-		XML::DOM2::DOM::NameSpace.3 XML::DOM2::Element::CDATA.3 \
-		XML::DOM2::DOM::Element.3 XML::DOM2::Element::Comment.3 \
-		XML::DOM2::DOM::Attribute.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
