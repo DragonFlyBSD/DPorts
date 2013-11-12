@@ -1,5 +1,5 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: devel/rubygem-facets/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-facets/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	facets
 PORTVERSION=	2.9.3
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
