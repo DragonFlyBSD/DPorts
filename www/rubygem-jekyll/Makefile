@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: www/rubygem-jekyll/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-jekyll/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	jekyll
 PORTVERSION=	1.0.3
@@ -25,5 +25,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/jekyll
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
