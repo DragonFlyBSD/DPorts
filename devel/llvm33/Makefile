@@ -1,4 +1,4 @@
-# $FreeBSD: devel/llvm33/Makefile 331178 2013-10-21 19:42:02Z brooks $
+# $FreeBSD: devel/llvm33/Makefile 332110 2013-10-30 14:03:46Z brooks $
 
 PORTNAME=	llvm
 PORTVERSION=	3.3
@@ -89,8 +89,10 @@ CONFIGURE_ARGS+=--enable-experimental-targets=R600
 
 .if ${PORT_OPTIONS:MASSERTS}
 CONFIGURE_ARGS+=	--enable-assertions
+RELEASE_TYPE=		Release+Asserts
 .else
 CONFIGURE_ARGS+=	--disable-assertions
+RELEASE_TYPE=		Release
 .endif
 
 .if ${PORT_OPTIONS:MCMAKE}
@@ -211,7 +213,7 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/lit${LLVM_SUFFIX}
 	${INSTALL_DATA} ${WRKSRC}/utils/lit/lit/*.py \
 	    ${STAGEDIR}${PYTHON_SITELIBDIR}/lit${LLVM_SUFFIX}
-	${INSTALL_PROGRAM} ${WRKSRC}/Release/bin/FileCheck \
+	${INSTALL_PROGRAM} ${WRKSRC}/${RELEASE_TYPE}/bin/FileCheck \
 	    ${STAGEDIR}${LLVM_PREFIX}/bin/
 	${LN} -f ${STAGEDIR}${LLVM_PREFIX}/bin/FileCheck \
 	    ${STAGEDIR}${PREFIX}/bin/FileCheck${LLVM_SUFFIX}
