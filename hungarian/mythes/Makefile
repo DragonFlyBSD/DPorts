@@ -1,4 +1,4 @@
-# $FreeBSD: hungarian/mythes/Makefile 327735 2013-09-20 18:43:02Z bapt $
+# $FreeBSD: hungarian/mythes/Makefile 332691 2013-11-04 11:11:44Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2003.09.29
@@ -13,7 +13,7 @@ COMMENT=	Hungarian thesaurus
 
 LICENSE=	GPLv2
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -21,9 +21,8 @@ PLIST_FILES=	%%DATADIR%%/th_hu_HU.dat \
 		%%DATADIR%%/th_hu_HU.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_hu_HU.dat ${WRKSRC}/th_hu_HU.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_hu_HU.dat ${WRKSRC}/th_hu_HU.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
