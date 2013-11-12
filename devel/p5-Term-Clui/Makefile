@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Term-Clui/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Clui/Makefile 332388 2013-11-01 14:57:51Z tj $
 
 PORTNAME=	Term-Clui
-PORTVERSION=	1.67
+PORTVERSION=	1.68
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,9 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Clui.3 \
-		Term::Clui::FileSelect.3
-
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
