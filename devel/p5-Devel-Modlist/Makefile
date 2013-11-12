@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Devel-Modlist/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Modlist/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-Modlist
 PORTVERSION=	0.801
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to collect module use information
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::Modlist.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
