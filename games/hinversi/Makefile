@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/hinversi/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/hinversi/Makefile 332451 2013-11-02 03:47:37Z danilo $
 
 PORTNAME=	hinversi
 PORTVERSION=	0.8.2
@@ -10,6 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Reversi/Othello clone
 
 OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
@@ -18,19 +19,9 @@ USES=	pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
-MAN1=		hinversi-cli.1
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-CONFIGURE_ARGS+=--with-libintl-prefix=${LOCALBASE}
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_CONFIGURE_ON=	--with-libintl-prefix=${LOCALBASE}
+NLS_CONFIGURE_OFF=	--disable-nls
+NLS_USES=	gettext
 
 post-patch:
 .for file in cgi/Makefile.in human-cli/Makefile.in lib/Makefile.in
