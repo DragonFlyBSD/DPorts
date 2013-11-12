@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@hub.org>
-# $FreeBSD: www/p5-CGI-Untaint-email/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Untaint-email/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	CGI-Untaint-email
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::Untaint::email.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
