@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-HTML-TreeBuilder-XPath/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-TreeBuilder-XPath/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-TreeBuilder-XPath
 PORTVERSION=	0.14
@@ -15,13 +15,9 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 		p5-XML-XPathEngine>=0.12:${PORTSDIR}/textproc/p5-XML-XPathEngine
-RUN_DEPENDS=	p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
-		p5-XML-XPathEngine>=0.12:${PORTSDIR}/textproc/p5-XML-XPathEngine
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::TreeBuilder::XPath.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
