@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: games/p5-Games-Alak/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/p5-Games-Alak/Makefile 332736 2013-11-04 14:49:24Z vanilla $
 
 PORTNAME=	Games-Alak
 PORTVERSION=	0.19
@@ -16,9 +16,6 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Games::Alak.3
-
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,^build_.*,,g" ${WRKSRC}/Makefile.PL
 
