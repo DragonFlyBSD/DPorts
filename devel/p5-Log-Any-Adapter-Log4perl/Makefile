@@ -1,5 +1,5 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: devel/p5-Log-Any-Adapter-Log4perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Any-Adapter-Log4perl/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Any-Adapter-Log4perl
 PORTVERSION=	0.06
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Log::Any::Adapter::Log4perl.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
