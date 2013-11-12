@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Env-PS1/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Env-PS1/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	Env-PS1
 PORTVERSION=	0.06
@@ -13,7 +13,4 @@ COMMENT=	Prompt string formatter
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Env::PS1.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
