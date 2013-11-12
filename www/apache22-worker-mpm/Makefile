@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22-worker-mpm/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/apache22-worker-mpm/Makefile 333336 2013-11-09 20:53:16Z ohauer $
 
 MASTERDIR=		${.CURDIR}/../apache22
 
@@ -13,5 +13,4 @@ PORT_OPTIONS+=		CGID
 OPTIONS_EXCLUDE=	CGI
 OPTIONS_UNSET+=		CGI
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
