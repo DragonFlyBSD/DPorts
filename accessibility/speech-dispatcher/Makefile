@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/speech-dispatcher/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/speech-dispatcher/Makefile 331973 2013-10-29 17:05:50Z kwm $
 
 PORTNAME=	speech-dispatcher
 PORTVERSION=	0.7.1
@@ -104,7 +104,7 @@ CONFIGURE_ARGS+=--without-pulse
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	2.5+
+USE_PYTHON=	-2.7
 CONFIGURE_ARGS+=--enable-python
 PLIST_SUB+=	PYTHON=""
 .else
