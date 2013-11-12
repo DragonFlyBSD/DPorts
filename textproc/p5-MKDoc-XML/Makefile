@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-MKDoc-XML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-MKDoc-XML/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	MKDoc-XML
 PORTVERSION=	0.75
@@ -14,19 +14,7 @@ COMMENT=	The MKDoc XML Toolkit
 BUILD_DEPENDS=	p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	MKDoc::XML.3 \
-	MKDoc::XML::Decode.3 \
-	MKDoc::XML::Dumper.3 \
-	MKDoc::XML::Encode.3 \
-	MKDoc::XML::Stripper.3 \
-	MKDoc::XML::Tagger.3 \
-	MKDoc::XML::Token.3 \
-	MKDoc::XML::Tokenizer.3 \
-	MKDoc::XML::TreeBuilder.3 \
-	MKDoc::XML::TreePrinter.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
