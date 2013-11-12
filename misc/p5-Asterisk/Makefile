@@ -1,5 +1,5 @@
 # Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-# $FreeBSD: misc/p5-Asterisk/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Asterisk/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Asterisk
 PORTVERSION=	1.03
@@ -16,10 +16,4 @@ USES=		perl5
 USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/asterisk-perl-${PORTVERSION}
 
-MAN3=		Asterisk::AGI.3 \
-		Asterisk::Manager.3 \
-		Asterisk::Outgoing.3 \
-		Asterisk::Voicemail.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
