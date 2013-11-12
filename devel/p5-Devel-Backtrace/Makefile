@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Devel-Backtrace/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Backtrace/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-Backtrace
 PORTVERSION=	0.12
@@ -18,9 +18,5 @@ RUN_DEPENDS=	p5-String-Escape>=0:${PORTSDIR}/textproc/p5-String-Escape \
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Devel::Backtrace.3 \
-		Devel::Backtrace::Point.3 \
-		Devel::DollarAt.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
