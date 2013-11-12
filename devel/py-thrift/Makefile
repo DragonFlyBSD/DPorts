@@ -1,5 +1,5 @@
 # Created by: Jon M. Dugan <jdugan@x1024.net>
-# $FreeBSD: devel/py-thrift/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-thrift/Makefile 333294 2013-11-09 14:14:50Z wg $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with thrift
@@ -11,13 +11,14 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	komarov@valerka.net
 COMMENT=	Python interface to Thrift
 
-DISTINFO_FILE=	${.CURDIR}/../thrift/distinfo
+DISTINFO_FILE=	${PORTSDIR}/devel/thrift/distinfo
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib/py
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|setuptools|do_not_use_&|' ${WRKSRC}/${PYSETUP}
 
