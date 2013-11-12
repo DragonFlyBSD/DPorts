@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-ShipIt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ShipIt/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	ShipIt
 PORTVERSION=	0.60
@@ -14,11 +14,4 @@ COMMENT=	Software release tool
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		shipit.1
-MAN3=		ShipIt.3 ShipIt::Conf.3 ShipIt::ProjectType.3 \
-		ShipIt::State.3 ShipIt::Step.3 ShipIt::Step::AddToSVNDir.3 \
-		ShipIt::VC.3 ShipIt::VC::Git.3 ShipIt::VC::Mercurial.3 \
-		ShipIt::VC::SVK.3 ShipIt::VC::SVN.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
