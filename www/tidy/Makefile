@@ -1,5 +1,5 @@
 # Created by: Abel Chow <achow@transoft.net>
-# $FreeBSD: www/tidy/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: www/tidy/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	tidy4
 PORTVERSION=	20000804
@@ -15,23 +15,21 @@ COMMENT=	Fixes and tidies up HTML files
 LICENSE=	BSD
 LICENSE_FILE=	${FILESDIR}/COPYRIGHT
 
-NO_STAGE=	yes
-
-MAN1=		tidy4.1
 ALL_TARGET=	tidy
 DOCFILES=	Overview.html tidy.gif release-notes.html grid.gif
+
+.include <bsd.port.options.mk>
 
 do-configure:
 	${REINPLACE_CMD} -e 's|tidy|tidy4|' ${WRKSRC}/man_page.txt
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/tidy ${PREFIX}/bin/tidy4
-	@${INSTALL_MAN}	${WRKSRC}/man_page.txt	${PREFIX}/man/man1/tidy4.1
-.if !defined(NOPORTDOCS)
-	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/tidy ${STAGEDIR}${PREFIX}/bin/tidy4
+	${INSTALL_MAN}	${WRKSRC}/man_page.txt	${STAGEDIR}${MANPREFIX}/man/man1/tidy4.1
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docfile in ${DOCFILES}
-	@${INSTALL_MAN} ${WRKSRC}/${docfile} ${DOCSDIR}/
+	${INSTALL_MAN} ${WRKSRC}/${docfile} ${STAGEDIR}${DOCSDIR}/
 .endfor
 .endif
 
