@@ -1,4 +1,4 @@
-# $FreeBSD: news/pgpmoose/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: news/pgpmoose/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	pgpmoose
 PORTVERSION=	1.19
@@ -14,14 +14,12 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	PGP Moose - signatures for moderated newsgroups
 
-NO_STAGE=	yes
-
-MAN1=		pmapp.1 pmcanon.1 pmcheck.1 pmnewsgroups.1 \
-		pmdaemon.1 pmcancel.1
+NO_WRKSUBDIR=	yes
 BIN1=		pmapp pmcanon pmcheck pmnewsgroups \
 		pmdaemon pmcancel
+MAN1=		pmapp.1 pmcanon.1 pmcheck.1 pmnewsgroups.1 \
+		pmdaemon.1 pmcancel.1
 
-NO_WRKSUBDIR=	yes
 NEWSCTL?=	${PREFIX}/news/lib
 
 post-patch:
@@ -30,10 +28,10 @@ post-patch:
 
 do-install:
 .for i in ${BIN1}
-	@${INSTALL_SCRIPT} ${WRKSRC}/${i} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${i} ${STAGEDIR}${PREFIX}/bin/
 .endfor
 .for i in ${MAN1}
-	@${INSTALL_MAN} ${WRKSRC}/${i} ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/${i} ${STAGEDIR}${MANPREFIX}/man/man1/
 .endfor
 
 .include <bsd.port.mk>
