@@ -1,12 +1,11 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/py-flexget/Makefile 331863 2013-10-28 14:58:33Z wg $
+# $FreeBSD: www/py-flexget/Makefile 332988 2013-11-06 13:02:48Z wg $
 
 PORTNAME=	flexget
-PORTVERSION=	1.1.148
+PORTVERSION=	1.1.156
 PORTEPOCH=	1
 CATEGORIES=	www python
-MASTER_SITES=	http://download.flexget.com/ \
-		http://download.flexget.com/archive/
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	FlexGet-${PORTVERSION}
 
