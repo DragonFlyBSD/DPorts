@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: databases/py-hiredis/Makefile 329451 2013-10-05 12:56:19Z wg $
+# $FreeBSD: databases/py-hiredis/Makefile 331899 2013-10-28 21:37:00Z wg $
 
 PORTNAME=	hiredis
 PORTVERSION=	0.1.1
@@ -8,7 +8,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	gd@rambler-co.ru
+MAINTAINER=	gd.workbox@gmail.com
 COMMENT=	Python extension that wraps hiredis
 
 LICENSE=	BSD
