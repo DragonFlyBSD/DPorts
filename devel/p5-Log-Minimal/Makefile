@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Log-Minimal/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Minimal/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Minimal
 PORTVERSION=	0.16
@@ -16,12 +16,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	modbuild
 
-PLIST_FILES=	%%SITE_PERL%%/Log/Minimal.pm
-PLIST_DIRSTRY=	%%SITE_PERL%%/Log
-
-MAN3=		Log::Minimal.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
