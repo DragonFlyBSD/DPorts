@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: devel/rubygem-pry/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-pry/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	pry
 PORTVERSION=	0.9.12.2
@@ -20,7 +20,6 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/pry
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "19,26 s|~>|'>='|" ${WRKSRC}/${GEM_NAME}.gemspec
 	@${REINPLACE_CMD} -e '/coderay/ s|~>|>=|' ${WRKSRC}/${PORTNAME}.gemspec
