@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: sysutils/p5-User/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-User/Makefile 332957 2013-11-06 08:54:17Z vanilla $
 
 PORTNAME=	User
 PORTVERSION=	1.9
@@ -13,7 +13,4 @@ COMMENT=	User - API for locating user information regardless of OS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		User.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
