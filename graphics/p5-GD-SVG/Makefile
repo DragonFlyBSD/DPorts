@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: graphics/p5-GD-SVG/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-GD-SVG/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	GD-SVG
 PORTVERSION=	0.33
@@ -17,7 +17,4 @@ BUILD_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GD::SVG.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
