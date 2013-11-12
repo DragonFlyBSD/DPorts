@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/p5-Socket-Class/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Socket-Class/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Socket-Class
 PORTVERSION=	2.258
@@ -13,10 +13,4 @@ COMMENT=	Perl class to communicate with sockets
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Socket::Class::Const.3 \
-		Socket::Class::CTX.3 \
-		Socket::Class::SSL.3 \
-		Socket::Class.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
