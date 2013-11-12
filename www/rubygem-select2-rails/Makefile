@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-select2-rails/Makefile 331517 2013-10-24 19:11:41Z swills $
+# $FreeBSD: www/rubygem-select2-rails/Makefile 332057 2013-10-30 03:04:19Z swills $
 
 PORTNAME=	select2-rails
 PORTVERSION=	3.5.0
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
