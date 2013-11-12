@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: www/rubygem-sinatra-r18n/Makefile 328090 2013-09-24 03:55:41Z amdmi3 $
+# $FreeBSD: www/rubygem-sinatra-r18n/Makefile 332057 2013-10-30 03:04:19Z swills $
 
 PORTNAME=	sinatra-r18n
 PORTVERSION=	1.1.6
@@ -16,6 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
