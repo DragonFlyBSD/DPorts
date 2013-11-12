@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: security/rubygem-hmac/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-hmac/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	hmac
 PORTVERSION=	0.4.0
@@ -15,5 +15,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 GEM_NAME=	${DISTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
