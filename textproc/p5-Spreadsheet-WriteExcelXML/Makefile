@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/p5-Spreadsheet-WriteExcelXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcelXML/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Spreadsheet-WriteExcelXML
 PORTVERSION=	0.14
@@ -17,12 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Spreadsheet::WriteExcelXML.3 \
-		Spreadsheet::WriteExcelXML::Format.3 \
-		Spreadsheet::WriteExcelXML::Utility.3 \
-		Spreadsheet::WriteExcelXML::Workbook.3 \
-		Spreadsheet::WriteExcelXML::Worksheet.3 \
-		Spreadsheet::WriteExcelXML::XMLwriter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
