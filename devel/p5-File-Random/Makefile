@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-File-Random/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Random/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Random
 PORTVERSION=	0.17
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Test-Class>=0.03:${PORTSDIR}/devel/p5-Test-Class \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Random.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
