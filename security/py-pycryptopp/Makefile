@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/py-pycryptopp/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-pycryptopp/Makefile 333366 2013-11-10 06:07:12Z wen $
 
 PORTNAME=	pycryptopp
 PORTVERSION=	0.5.29
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}darcsver>0:${PORTSDIR}/devel/py-darcsver \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
+USE_GCC=	yes
 USE_PYDISTUTILS=easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
