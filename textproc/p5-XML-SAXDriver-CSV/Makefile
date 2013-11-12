@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-XML-SAXDriver-CSV/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-SAXDriver-CSV/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-SAXDriver-CSV
 PORTVERSION=	0.07
@@ -20,7 +20,4 @@ USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
-MAN3=		XML::SAXDriver::CSV.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
