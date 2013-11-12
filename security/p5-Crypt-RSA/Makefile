@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-RSA/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-RSA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-RSA
 PORTVERSION=	1.99
@@ -27,20 +27,4 @@ RUN_DEPENDS=	p5-Class-Loader>=2.00:${PORTSDIR}/devel/p5-Class-Loader \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Crypt::RSA.3 \
-	Crypt::RSA::DataFormat.3 \
-	Crypt::RSA::Debug.3 \
-	Crypt::RSA::ES::OAEP.3 \
-	Crypt::RSA::ES::PKCS1v15.3 \
-	Crypt::RSA::Errorhandler.3 \
-	Crypt::RSA::Key.3 \
-	Crypt::RSA::Key::Private.3 \
-	Crypt::RSA::Key::Private::SSH.3 \
-	Crypt::RSA::Key::Public.3 \
-	Crypt::RSA::Key::Public::SSH.3 \
-	Crypt::RSA::Primitives.3 \
-	Crypt::RSA::SS::PKCS1v15.3 \
-	Crypt::RSA::SS::PSS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
