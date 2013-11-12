@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-UNIVERSAL-require/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-UNIVERSAL-require/Makefile 332702 2013-11-04 12:35:50Z kuriyama $
 
 PORTNAME=	UNIVERSAL-require
-PORTVERSION=	0.13
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,7 +12,4 @@ COMMENT=	Perl module to require() from a variable
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		UNIVERSAL::require.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
