@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/rubygem-yadis/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-yadis/Makefile 332048 2013-10-30 02:54:59Z swills $
 
 PORTNAME=	yadis
 PORTVERSION=	0.3.4
@@ -15,5 +15,4 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
