@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/sq-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/sq-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.6.2
@@ -12,7 +12,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Albanian hunspell dictionaries
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 
 PLIST_FILES=	%%DATADIR%%/sq_AL.aff \
