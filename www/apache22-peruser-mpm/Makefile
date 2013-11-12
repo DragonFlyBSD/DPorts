@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22-peruser-mpm/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/apache22-peruser-mpm/Makefile 333336 2013-11-09 20:53:16Z ohauer $
 
 # Apache 2.2.X with peruser mpm 0.3.0-dc3
 # Peruser main url:		http://telana.com/peruser.php
@@ -10,7 +10,6 @@ MASTERDIR=		${.CURDIR}/../apache22
 MAINTAINER=		ports@FreeBSD.org
 
 WITH_MPM=		peruser
-NO_STAGE=		yes
 
 LATEST_LINK=		apache22-${WITH_MPM}-mpm
 DESCR=			${.CURDIR}/pkg-descr
