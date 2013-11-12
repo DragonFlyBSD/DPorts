@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Clone/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Clone/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Clone
 PORTVERSION=	0.05
@@ -24,11 +24,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Clone.3 \
-		MooseX::Clone::Meta::Attribute::Trait::NoClone.3 \
-		MooseX::Clone::Meta::Attribute::Trait::Copy.3 \
-		MooseX::Clone::Meta::Attribute::Trait::Clone.3 \
-		MooseX::Clone::Meta::Attribute::Trait::StorableClone.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
