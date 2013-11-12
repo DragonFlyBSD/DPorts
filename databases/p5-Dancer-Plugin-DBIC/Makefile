@@ -1,8 +1,8 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: databases/p5-Dancer-Plugin-DBIC/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Dancer-Plugin-DBIC/Makefile 332824 2013-11-05 08:59:59Z jadawin $
 
 PORTNAME=	Dancer-Plugin-DBIC
-PORTVERSION=	0.1802
+PORTVERSION=	0.1803
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -22,8 +22,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Dancer::Plugin::DBIC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
