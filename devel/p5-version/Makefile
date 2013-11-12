@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-version/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-version/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	version
 PORTVERSION=	0.99.04
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		version.3 version::Internals.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
