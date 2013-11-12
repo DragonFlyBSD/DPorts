@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-SWF-Chart/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-SWF-Chart/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	SWF-Chart
 PORTVERSION=	1.4
@@ -11,10 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the SWF Chart generation tool
 
-MAN3=		SWF::Chart.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
