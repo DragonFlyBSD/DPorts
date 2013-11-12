@@ -1,5 +1,5 @@
 # Created by: gurney_j@efn.org
-# $FreeBSD: sysutils/su2/Makefile 329934 2013-10-09 22:35:53Z danilo $
+# $FreeBSD: sysutils/su2/Makefile 331941 2013-10-29 12:25:59Z jhale $
 
 PORTNAME=	su2
 PORTVERSION=	1.3
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils security
 MASTER_SITES=	ftp://ftp.ccs.neu.edu/pub/sysadmin/
 
-MAINTAINER=	gd@rambler-co.ru
+MAINTAINER=	gd.workbox@gmail.com
 COMMENT=	Enhanced su, allows users to su with own password + more
 
 PATCH_DEPENDS=	rcsdiff:${PORTSDIR}/devel/rcs
