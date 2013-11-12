@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Proc-Fork/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Proc-Fork/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Proc-Fork
 PORTVERSION=	0.802
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Exporter-Tidy>=0:${PORTSDIR}/devel/p5-Exporter-Tidy \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Proc::Fork.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
