@@ -1,4 +1,4 @@
-# $FreeBSD: mail/noattach/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: mail/noattach/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	noattach
 PORTVERSION=	1.2
@@ -10,17 +10,10 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	An attachment filter for Sendmail Milter
 
 GNU_CONFIGURE=	yes
-USE_RC_SUBR=    noattach
-
-NO_STAGE=	yes
-
+USE_RC_SUBR=	noattach
 CFLAGS+=	${PTHREAD_CFLAGS:S=""==}
-MAN8=		noattach.8
 DOCSFILES=	AUTHORS THANKS INSTALL NEWS README TODO ChangeLog
 SAMPLEFILES=	README noattach.patterns noattach.patterns.johncon
-.if defined(SENDMAIL_WITH_LDAP)
-CONFIGURE_ARGS+=	--enable-ldap
-.endif
 
 .include <bsd.port.pre.mk>
 
@@ -36,20 +29,20 @@ pre-configure:
 		${WRKSRC}/configure
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/noattach ${PREFIX}/libexec/noattach
+	${INSTALL_PROGRAM} ${WRKSRC}/noattach ${STAGEDIR}${PREFIX}/libexec/noattach
+	${INSTALL_MAN} ${WRKSRC}/noattach.8 ${STAGEDIR}${MANPREFIX}/man/man8/
 	${INSTALL_DATA} ${WRKSRC}/examples/noattach.patterns \
-		 ${PREFIX}/etc/noattach.patterns-dist
-	${INSTALL_MAN} ${WRKSRC}/noattach.8 ${PREFIX}/man/man8/
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+		 ${STAGEDIR}${PREFIX}/etc/noattach.patterns-dist
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${DOCSFILES}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}/
 .endfor
 .endif
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
+.if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for i in ${SAMPLEFILES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${i} ${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/examples/${i} ${STAGEDIR}${EXAMPLESDIR}/
 .endfor
 .endif
 
