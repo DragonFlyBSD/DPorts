@@ -1,9 +1,8 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net/arping/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/arping/Makefile 333075 2013-11-07 10:08:40Z zeising $
 
 PORTNAME=	arping
-PORTVERSION=	2.09
-PORTREVISION=	2
+PORTVERSION=	2.13
 CATEGORIES=	net
 MASTER_SITES=	http://www.habets.pp.se/synscan/files/
 
@@ -20,8 +19,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet11-config
 
-MAN8=		arping.8
-PLIST_FILES=	sbin/arping
+PLIST_FILES=	sbin/arping man/man8/arping.8.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
