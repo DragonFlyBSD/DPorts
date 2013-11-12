@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Log-Log4perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Log-Log4perl/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Log-Log4perl
 PORTVERSION=	0.46
@@ -19,10 +19,6 @@ TEST_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Log::Log4perl.3 \
-		MooseX::Log::Log4perl::Easy.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e '/auto_install;/d' \
 		${WRKSRC}/Makefile.PL
