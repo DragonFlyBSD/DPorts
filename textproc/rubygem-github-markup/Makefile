@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-github-markup/Makefile 331539 2013-10-25 00:58:17Z swills $
+# $FreeBSD: textproc/rubygem-github-markup/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	github-markup
 PORTVERSION=	0.7.5
@@ -14,6 +14,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/github-markup
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
