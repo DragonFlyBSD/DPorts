@@ -1,5 +1,5 @@
 # Created by: k@123.org
-# $FreeBSD: www/lighttpd/Makefile 328561 2013-09-28 08:20:40Z mm $
+# $FreeBSD: www/lighttpd/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME?=	lighttpd
 PORTVERSION=	1.4.33
@@ -7,7 +7,7 @@ CATEGORIES?=	www
 MASTER_SITES?=	http://download.lighttpd.net/lighttpd/releases-1.4.x/
 
 MAINTAINER?=	mm@FreeBSD.org
-COMMENT?=	A secure, fast, compliant, and very flexible Web Server
+COMMENT?=	Secure, fast, compliant, and flexible Web Server
 
 .if !defined(_BUILDING_LIGHTTPD_MODULE)
 LICENSE=	BSD
