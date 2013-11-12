@@ -1,7 +1,0 @@
-%%SITE_PERL%%/XML/Handler/HTMLWriter.pm
-%%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Handler/HTMLWriter/.packlist
-@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Handler/HTMLWriter
-@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML/Handler
-@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/XML
-@dirrmtry %%SITE_PERL%%/XML/Handler
-@dirrmtry %%SITE_PERL%%/XML
