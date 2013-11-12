@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: sysutils/php5-posix/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/php5-posix/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	sysutils
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php5
 
 PKGNAMESUFFIX=	-posix
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
