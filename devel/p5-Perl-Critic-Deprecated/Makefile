@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl-Critic-Deprecated/Makefile 331886 2013-10-28 18:46:29Z sunpoet $
+# $FreeBSD: devel/p5-Perl-Critic-Deprecated/Makefile 332535 2013-11-02 19:55:49Z sunpoet $
 
 PORTNAME=	Perl-Critic-Deprecated
-PORTVERSION=	1.118
+PORTVERSION=	1.119
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
