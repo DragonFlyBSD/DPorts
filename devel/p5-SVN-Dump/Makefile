@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Dump/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-SVN-Dump/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	SVN-Dump
 PORTVERSION=	0.06
@@ -13,12 +13,4 @@ COMMENT=	Perl interface to Subversion dumps
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		SVN::Dump.3 \
-		SVN::Dump::Headers.3 \
-		SVN::Dump::Property.3 \
-		SVN::Dump::Reader.3 \
-		SVN::Dump::Record.3 \
-		SVN::Dump::Text.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
