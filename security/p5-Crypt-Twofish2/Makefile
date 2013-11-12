@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-Twofish2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Twofish2/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-Twofish2
 PORTVERSION=	1.02
@@ -13,7 +13,4 @@ COMMENT=	Perl implementation of the Twofish encryption algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::Twofish2.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
