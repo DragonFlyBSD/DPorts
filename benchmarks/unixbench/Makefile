@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: benchmarks/unixbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/unixbench/Makefile 331446 2013-10-23 23:05:52Z eadler $
 
 PORTNAME=	unixbench
 PORTVERSION=	4.1.0
@@ -8,45 +8,44 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.tux.org/pub/tux/benchmarks/System/unixbench/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	c.petrik.sosa@gmail.com
-COMMENT=	The BYTE magazine's Public Domain benchmark for UNIX
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	BYTE magazine's Public Domain benchmark for UNIX
 
 SUB_FILES=	unixbench
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/pgms/select
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/unixbench ${PREFIX}/bin/
-	-${MKDIR} ${PREFIX}/lib/unixbench
+	${INSTALL_SCRIPT} ${WRKDIR}/unixbench ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/unixbench
 	for f in Run ; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${PREFIX}/lib/unixbench/ ; \
+		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${STAGEDIR}${PREFIX}/lib/unixbench/ ; \
 	done
 	for f in Makefile README ; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/lib/unixbench/ ; \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${STAGEDIR}${PREFIX}/lib/unixbench/ ; \
 	done
-	-${MKDIR} ${PREFIX}/lib/unixbench/pgms
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/unixbench/pgms
 	for f in ${WRKSRC}/pgms/* ; do \
 		case $$f in \
 	*.awk|*.sh|*perlbench) \
-		${INSTALL_SCRIPT} $${f} ${PREFIX}/lib/unixbench/pgms/ ;; \
+		${INSTALL_SCRIPT} $${f} ${STAGEDIR}${PREFIX}/lib/unixbench/pgms/ ;; \
 	*.logo|*.base) \
-		${INSTALL_SCRIPT} $${f} ${PREFIX}/lib/unixbench/pgms/ ;; \
+		${INSTALL_SCRIPT} $${f} ${STAGEDIR}${PREFIX}/lib/unixbench/pgms/ ;; \
 	*.orig|*.rej|*~) \
 		;;\
 	*) \
-		${INSTALL_PROGRAM} $${f} ${PREFIX}/lib/unixbench/pgms/ ;; \
+		${INSTALL_PROGRAM} $${f} ${STAGEDIR}${PREFIX}/lib/unixbench/pgms/ ;; \
 		esac ; \
 	done
-	-${MKDIR} ${PREFIX}/lib/unixbench/results
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/unixbench/results
 #	for f in ${WRKSRC}/results/* ; do \
-#		${INSTALL_DATA} $${f} ${PREFIX}/lib/unixbench/results/ ; \
+#		${INSTALL_DATA} $${f} ${STAGEDIR}${PREFIX}/lib/unixbench/results/ ; \
 #	done
-	-${MKDIR} ${PREFIX}/lib/unixbench/testdir
+	-${MKDIR} ${STAGEDIR}${PREFIX}/lib/unixbench/testdir
 	for f in ${WRKSRC}/testdir/* ; do \
-		${INSTALL_DATA} $${f} ${PREFIX}/lib/unixbench/testdir/ ; \
+		${INSTALL_DATA} $${f} ${STAGEDIR}${PREFIX}/lib/unixbench/testdir/ ; \
 	done
 
 .include <bsd.port.mk>
