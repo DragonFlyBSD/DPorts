@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-PGP/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-PGP/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	PGP
 PORTVERSION=	0.3a
@@ -15,9 +15,6 @@ BUILD_DEPENDS=	pgp:${PORTSDIR}/security/pgp
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		PGP::Pipe.3
-
-NO_STAGE=	yes
 pre-configure:
 		@${CP} ${WRKSRC}/PGP/Pipe.pm ${WRKSRC}
 
