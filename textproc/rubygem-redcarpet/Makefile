@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-redcarpet/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-redcarpet/Makefile 332052 2013-10-30 02:59:10Z swills $
 
 PORTNAME=	redcarpet
 PORTVERSION=	3.0.0
@@ -16,5 +16,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/redcarpet
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
