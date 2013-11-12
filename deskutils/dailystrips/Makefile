@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/dailystrips/Makefile 328336 2013-09-26 06:35:39Z jgh $
+# $FreeBSD: deskutils/dailystrips/Makefile 333184 2013-11-08 07:32:59Z jgh $
 
 PORTNAME=	dailystrips
 PORTVERSION=	1.0.28
@@ -27,20 +27,16 @@ post-patch:
 		${WRKSRC}/dailystrips ${WRKSRC}/dailystrips-clean \
 		${WRKSRC}/dailystrips-update
 
-.include <bsd.port.options.mk>
-
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-clean ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/dailystrips-update ${STAGEDIR}${PREFIX}/bin
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/strips.def ${STAGEDIR}${DATADIR}
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in README README.DEFS README.LOCAL README.dailystrips-clean \
 	README.dailystrips-update
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
