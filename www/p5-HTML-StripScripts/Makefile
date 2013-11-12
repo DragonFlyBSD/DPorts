@@ -1,5 +1,5 @@
 # Created by: kftseng@iyard.org
-# $FreeBSD: www/p5-HTML-StripScripts/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-StripScripts/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-StripScripts
 PORTVERSION=	1.05
@@ -13,7 +13,4 @@ COMMENT=	Strip scripting constructs out of HTML
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::StripScripts.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
