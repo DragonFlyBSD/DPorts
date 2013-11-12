@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rake-compiler/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rake-compiler/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	rake-compiler
 PORTVERSION=	0.8.3
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/rake-compiler
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
