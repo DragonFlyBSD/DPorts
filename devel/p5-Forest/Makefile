@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Forest/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Forest/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	Forest
 PORTVERSION=	0.09
@@ -21,27 +21,4 @@ BUILD_DEPENDS+=	p5-Path-Class>=0:${PORTSDIR}/devel/p5-Path-Class \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Forest.3 \
-		Forest::Tree.3 \
-		Forest::Tree::Builder.3 \
-		Forest::Tree::Builder::Callback.3 \
-		Forest::Tree::Builder::SimpleTextFile.3 \
-		Forest::Tree::Constructor.3 \
-		Forest::Tree::Pure.3 \
-		Forest::Tree::Writer::SimpleHTML.3 \
-		Forest::Tree::Roles::JSONable.3 \
-		Forest::Tree::Writer::ASCIIWithBranches.3 \
-		Forest::Tree::Indexer.3 \
-		Forest::Tree::Roles::LoadWithMetaData.3 \
-		Forest::Tree::Writer.3 \
-		Forest::Tree::Roles::MetaData.3 \
-		Forest::Tree::Loader.3 \
-		Forest::Tree::Writer::SimpleASCII.3 \
-		Forest::Tree::Reader.3 \
-		Forest::Tree::Reader::SimpleTextFile.3 \
-		Forest::Tree::Loader::SimpleUIDLoader.3 \
-		Forest::Tree::Indexer::SimpleUIDIndexer.3 \
-		Forest::Tree::Roles::HasNodeFormatter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
