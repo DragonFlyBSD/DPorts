@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-underscore-rails/Makefile 331065 2013-10-20 21:57:18Z swills $
+# $FreeBSD: www/rubygem-underscore-rails/Makefile 332057 2013-10-30 03:04:19Z swills $
 
 PORTNAME=	underscore-rails
 PORTVERSION=	1.5.2
@@ -12,6 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
