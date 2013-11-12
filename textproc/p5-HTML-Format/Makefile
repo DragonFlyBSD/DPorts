@@ -1,8 +1,8 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: textproc/p5-HTML-Format/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-HTML-Format/Makefile 332675 2013-11-04 09:40:04Z sunpoet $
 
 PORTNAME=	HTML-Format
-PORTVERSION=	2.10
+PORTVERSION=	2.11
 PORTREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
@@ -16,20 +16,13 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Font-AFM>=0:${PORTSDIR}/x11-fonts/p5-Font-AFM \
 		p5-HTML-Tree>=3.15:${PORTSDIR}/www/p5-HTML-Tree
-RUN_DEPENDS=	p5-Font-AFM>=0:${PORTSDIR}/x11-fonts/p5-Font-AFM \
-		p5-HTML-Tree>=3.15:${PORTSDIR}/www/p5-HTML-Tree
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 
 USES=		perl5
 USE_PERL5=	modbuild
 INSTALL_TARGET=	pure_install
 
-MAN3=		HTML::FormatPS.3 \
-		HTML::FormatRTF.3 \
-		HTML::FormatText.3 \
-		HTML::Formatter.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
