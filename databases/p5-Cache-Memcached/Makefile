@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: databases/p5-Cache-Memcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Cache-Memcached/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Cache-Memcached
 PORTVERSION=	1.30
@@ -20,7 +20,4 @@ RUN_DEPENDS=	p5-String-CRC32>0:${PORTSDIR}/devel/p5-String-CRC32
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Cache::Memcached.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
