@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-REST-Google-Apps-Provisioning/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-REST-Google-Apps-Provisioning/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	REST-Google-Apps-Provisioning
 PORTVERSION=	1.1.10
@@ -21,7 +21,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		REST::Google::Apps::Provisioning.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
