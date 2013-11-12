@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: converters/p5-Text-Iconv/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Text-Iconv/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Text-Iconv
 PORTVERSION=	1.7
@@ -15,7 +15,4 @@ USE_PERL5=	configure
 CONFIGURE_ARGS+=	INC="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib ${ICONV_LIB}"
 
-MAN3=		Text::Iconv.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
