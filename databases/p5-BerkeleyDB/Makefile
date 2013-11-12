@@ -1,8 +1,8 @@
 # Created by: T. William Wells <bill@twwells.com>
-# $FreeBSD: databases/p5-BerkeleyDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-BerkeleyDB/Makefile 333396 2013-11-10 14:10:50Z sunpoet $
 
 PORTNAME=	BerkeleyDB
-PORTVERSION=	0.53
+PORTVERSION=	0.54
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
@@ -17,13 +17,12 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-MLDBM>=0:${PORTSDIR}/databases/p5-MLDBM \
 		p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
-USES=		perl5
+USES=		perl5 shebangfix
 USE_PERL5=	configure
 USE_BDB=	47+
 
-MAN3=		BerkeleyDB.3
+SHEBANG_FILES=	mkconsts.pl
 
-NO_STAGE=	yes
 post-patch:
 	@${ECHO} "INCLUDE = ${BDB_INCLUDE_DIR}" > ${WRKSRC}/config.in
 	@${ECHO} "LIB = ${LOCALBASE}/lib" >> ${WRKSRC}/config.in
