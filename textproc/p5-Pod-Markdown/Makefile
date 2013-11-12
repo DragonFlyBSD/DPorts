@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 333027 2013-11-06 18:58:16Z sunpoet $
 
 PORTNAME=	Pod-Markdown
-PORTVERSION=	1.322000
+PORTVERSION=	1.401000
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,16 +14,11 @@ COMMENT=	Module to convert POD to Markdown
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Pod-Parser>=0:${PORTSDIR}/textproc/p5-Pod-Parser
-RUN_DEPENDS=	p5-Pod-Parser>=0:${PORTSDIR}/textproc/p5-Pod-Parser
-
+BUILD_DEPENDS=	p5-Pod-Parser>=1.51:${PORTSDIR}/textproc/p5-Pod-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Difference>=0:${PORTSDIR}/devel/p5-Test-Differences
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pod2markdown.1
-MAN3=		Pod::Markdown.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
