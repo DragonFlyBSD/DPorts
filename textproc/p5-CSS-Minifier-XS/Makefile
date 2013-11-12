@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-CSS-Minifier-XS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD: textproc/p5-CSS-Minifier-XS/Makefile 332514 2013-11-02 17:20:32Z sunpoet $
 
 PORTNAME=	CSS-Minifier-XS
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	textproc www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
