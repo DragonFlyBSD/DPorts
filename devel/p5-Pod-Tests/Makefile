@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Pod-Tests/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Pod-Tests/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Pod-Tests
 PORTVERSION=	1.19
@@ -14,8 +14,4 @@ COMMENT=	Extracts embedded tests and code examples from POD
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pod2test.1
-MAN3=		Pod::Tests.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
