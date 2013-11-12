@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-SimpleObject-LibXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-SimpleObject-LibXML/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-SimpleObject-LibXML
 PORTVERSION=	0.60
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::SimpleObject::LibXML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
