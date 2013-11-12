@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-forks/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-forks/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	forks
 PORTVERSION=	0.34
@@ -20,14 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+CONFIGURE_ARGS=	</dev/null
 
-MAN3=		forks.3 forks::signals.3 \
-		forks::shared.3 \
-		forks::Devel::Symdump.3 \
-		threads::shared::array.3 \
-		threads::shared::handle.3 \
-		threads::shared::hash.3 \
-		threads::shared::scalar.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
