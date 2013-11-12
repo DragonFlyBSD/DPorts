@@ -1,10 +1,10 @@
-# $FreeBSD: net-mgmt/nagios-check_memcached_paranoid/Makefile 329752 2013-10-08 02:45:22Z kuriyama $
+# $FreeBSD: net-mgmt/nagios-check_memcached_paranoid/Makefile 332808 2013-11-05 04:42:12Z kuriyama $
 
 PORTNAME=	check_memcached_paranoid
 PORTVERSION=	0.20131004
 CATEGORIES=	net-mgmt
-MASTER_SITES=	# none
-DISTFILES=	# none
+MASTER_SITES=	SF/nagiosplug/nagiosplug/1.4.16
+DISTFILES=	nagios-plugins-1.4.16.tar.gz
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Nagios plugin for checking memcached
@@ -13,8 +13,6 @@ LIB_DEPENDS=	memcached:${PORTSDIR}/databases/libmemcached
 BUILD_DEPENDS=	nagios-plugins>0:${PLUGINS} \
 		${EXTRA_DEPENDS} \
 		${NONEXISTENT}:${PLUGINS}:build
-
-PLIST_FILES=	libexec/nagios/${PORTNAME}
 
 FILE=		${PORTNAME}.c
 PLUGINS=	${PORTSDIR}/net-mgmt/nagios-plugins
