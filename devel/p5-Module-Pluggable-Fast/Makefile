@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Module-Pluggable-Fast/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Pluggable-Fast/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Pluggable-Fast
 PORTVERSION=	0.19
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Pluggable::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
