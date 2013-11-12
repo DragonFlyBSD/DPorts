@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-UML-State/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-UML-State/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	UML-State
 PORTVERSION=	0.02
@@ -16,10 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		drawstatexml.pl.1 drawstate.pl.1
-MAN3=		UML::drawstate.3 \
-		UML::drawstatexml.3 \
-		UML::State.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
