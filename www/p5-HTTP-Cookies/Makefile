@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Cookies/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Cookies/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-Cookies
 PORTVERSION=	6.01
@@ -13,18 +13,13 @@ COMMENT=	HTTP Cookie jars
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-RUN_DEPENDS=	p5-HTTP-Date>=6:${PORTSDIR}/www/p5-HTTP-Date \
+BUILD__DEPENDS=	p5-HTTP-Date>=6:${PORTSDIR}/www/p5-HTTP-Date \
 		p5-HTTP-Message>=6:${PORTSDIR}/www/p5-HTTP-Message
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS=	p5-libwww-5*
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Cookies.3 \
-		HTTP::Cookies::Microsoft.3 \
-		HTTP::Cookies::Netscape.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
