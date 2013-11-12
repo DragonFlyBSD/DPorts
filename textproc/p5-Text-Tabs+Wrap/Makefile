@@ -1,5 +1,5 @@
 # Created by: Toby Allsopp <toby@mi6.gen.nz>
-# $FreeBSD: textproc/p5-Text-Tabs+Wrap/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Tabs+Wrap/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Tabs+Wrap
 PORTVERSION=	2013.0523
@@ -13,7 +13,4 @@ COMMENT=	Line wrapping to form simple paragraphs
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		modern::Text::Wrap.3 modern::Text::Tabs.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
