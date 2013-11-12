@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-base/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-base/Makefile 332439 2013-11-02 01:51:13Z vanilla $
 
 PORTNAME=	base
 PORTVERSION=	2.18
@@ -14,7 +14,4 @@ COMMENT=	Set of modules to operate with inheritance and class fields at runtime
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		base.3 fields.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
