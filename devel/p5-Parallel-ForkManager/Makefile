@@ -1,5 +1,5 @@
 # Created by: Nicolas Jombart <Nicolas.Jombart@hsc-labs.com>
-# $FreeBSD: devel/p5-Parallel-ForkManager/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Parallel-ForkManager/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Parallel-ForkManager
 PORTVERSION=	1.05
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parallel::ForkManager.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
