@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/p5-Pugs-Compiler-Rule/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Pugs-Compiler-Rule/Makefile 332724 2013-11-04 14:20:04Z vanilla $
 
 PORTNAME=	Pugs-Compiler-Rule
 PORTVERSION=	0.37
@@ -22,18 +22,4 @@ TEST_DEPENDS=	p5-File-Slurp>0:${PORTSDIR}/devel/p5-File-Slurp
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	compile_p6grammar.pl.1
-MAN3=	Pugs::Compiler::Regex.3 \
-	Pugs::Compiler::Grammar.3 \
-	Pugs::Compiler::RegexPerl5.3 \
-	Pugs::Compiler::Rule.3 \
-	Pugs::Compiler::Token.3 \
-	Pugs::Emitter::Grammar::Perl5.3 \
-	Pugs::Grammar::Precedence.3 \
-	Pugs::Runtime::Match.3 \
-	Pugs::Runtime::Regex.3 \
-	Pugs::Runtime::StrPos.3 \
-    	Pugs::Runtime::Tracer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
