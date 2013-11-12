@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/p5-Iterator-File/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Iterator-File/Makefile 332957 2013-11-06 08:54:17Z vanilla $
 
 PORTNAME=	Iterator-File
 PORTVERSION=	1.01
@@ -12,14 +12,5 @@ COMMENT=	File iterator, optionally stateful and verbose
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Iterator::File::Status.3 \
-		Iterator::File::Source::FlatFile.3 \
-		Iterator::File::Utility.3 \
-		Iterator::File::State::Interface.3 \
-		Iterator::File::Source::Interface.3 \
-		Iterator::File::State::TempFile.3 \
-		Iterator::File.3 \
-		Iterator::File::State::IPCShareable.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
