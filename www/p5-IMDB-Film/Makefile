@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-IMDB-Film/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-IMDB-Film/Makefile 333112 2013-11-07 15:07:21Z vanilla $
 
 PORTNAME=	IMDB-Film
 PORTVERSION=	0.53
@@ -11,18 +11,16 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	OO Perl interface to the movies database IMDB
 
-RUN_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
+BUILD_DEPENDS=	p5-Cache-Cache>=0:${PORTSDIR}/devel/p5-Cache-Cache \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-HTML-Parser>=2.28:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-Text-Unidecode>=0:${PORTSDIR}/converters/p5-Text-Unidecode \
 		p5-libwww>=1.41:${PORTSDIR}/www/p5-libwww
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+CONFIGURE_ARGS=	</dev/null
 
-MAN3=		IMDB::BaseClass.3 IMDB::Film.3 IMDB::Persons.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
