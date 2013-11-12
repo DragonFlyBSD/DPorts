@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: german/schwobifyer/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/schwobifyer/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
 
 PORTNAME=	schwobifyer
 PORTVERSION=	20050730
@@ -13,8 +13,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/schwobifyer
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
