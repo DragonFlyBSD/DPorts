@@ -1,5 +1,5 @@
 # Created by: wlloyd@slap.net
-# $FreeBSD: comms/spandsp/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/spandsp/Makefile 332064 2013-10-30 05:06:48Z eadler $
 
 PORTNAME=	spandsp
 PORTVERSION=	0.0.5
@@ -15,10 +15,7 @@ LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool autoconf
-USE_GMAKE=	yes
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+USES=		gmake
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -27,5 +24,4 @@ USE_LDCONFIG=	yes
 
 CONFLICTS=	spandsp-devel-[0-9]*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
