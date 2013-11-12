@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/rubygem-r18n-core/Makefile 328088 2013-09-24 03:54:10Z amdmi3 $
+# $FreeBSD: devel/rubygem-r18n-core/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	r18n-core
 PORTVERSION=	1.1.6
@@ -13,6 +13,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
