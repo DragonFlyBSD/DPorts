@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-Class-DBI-Lite/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-Lite/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-Lite
 PORTVERSION=	1.034
@@ -28,16 +28,4 @@ DEPRECATED=	deprecated by upstream
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::DBI::Lite.3 \
-		Class::DBI::Lite::CacheManager.3 \
-		Class::DBI::Lite::CacheManager::InMemory.3 \
-		Class::DBI::Lite::CacheManager::Memcached.3 \
-		Class::DBI::Lite::ColumnInfo.3 \
-		Class::DBI::Lite::Fixture.3 \
-		Class::DBI::Lite::Iterator.3 \
-		Class::DBI::Lite::Pager.3 \
-		Class::DBI::Lite::TableInfo.3 \
-		Class::DBI::Lite::Tutorial.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
