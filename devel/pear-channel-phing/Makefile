@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-channel-phing/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-channel-phing/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	phing
 PORTVERSION=	20120813
@@ -9,7 +9,6 @@ COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
 
 PEAR_CHANNEL_HOST=	pear.phing.info
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.channel.mk"
 .include <bsd.port.post.mk>
