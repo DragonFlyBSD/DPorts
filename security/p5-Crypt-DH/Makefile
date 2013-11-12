@@ -1,5 +1,5 @@
 # Created by: jesper
-# $FreeBSD: security/p5-Crypt-DH/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-DH/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-DH
 PORTVERSION=	0.07
@@ -16,12 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::DH.3
-PLIST_FILES=	%%SITE_PERL%%/Crypt/DH.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/DH/.packlist
-PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt/DH \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Crypt \
-		%%SITE_PERL%%/Crypt
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
