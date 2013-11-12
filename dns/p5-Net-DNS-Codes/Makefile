@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-Codes/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-DNS-Codes/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	Net-DNS-Codes
 PORTVERSION=	0.11
@@ -13,7 +13,4 @@ COMMENT=	Collection of C library DNS codes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::DNS::Codes.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
