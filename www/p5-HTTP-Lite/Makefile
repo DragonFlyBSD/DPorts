@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-HTTP-Lite/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Lite/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	HTTP-Lite
 PORTVERSION=	2.42
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Lite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
