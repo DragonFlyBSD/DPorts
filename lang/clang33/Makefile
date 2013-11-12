@@ -1,8 +1,8 @@
-# $FreeBSD: lang/clang33/Makefile 331178 2013-10-21 19:42:02Z brooks $
+# $FreeBSD: lang/clang33/Makefile 333046 2013-11-06 23:38:36Z brooks $
 
 PORTNAME=	clang
 DISTVERSION=	3.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PORTVERSION}/
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -77,6 +77,17 @@ RELTYPE=		Release
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Does not compile on sparc64
+.endif
+
+.if ${PORT_OPTIONS:MASSERTS}
+pre-fetch:
+	@if [ "`llvm-config${LLVM_SUFFIX} --build-mode`" != ${RELTYPE} ]; then \
+		${ECHO_MSG}	;\
+		${ECHO_MSG} ASSERTS option enabled, but devel/llvm${LLVM_SUFFIX} was compiled without ASSERTS. ;\
+		${ECHO_MSG} Correct options mismatch to proceed. ;\
+		${ECHO_MSG}	;\
+		false	;\
+	fi
 .endif
 
 post-extract:
