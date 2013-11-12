@@ -1,9 +1,9 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/gnutls/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/gnutls/Makefile 332596 2013-11-03 09:21:59Z novel $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.12.23
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security net
 MASTER_SITES=	\
 	ftp://ftp.gnutls.org/gcrypt/gnutls/v${PORTVERSION:C/.[0-9]+$//}/
