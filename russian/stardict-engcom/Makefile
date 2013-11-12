@@ -1,15 +1,16 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: russian/stardict-engcom/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/stardict-engcom/Makefile 333307 2013-11-09 16:00:36Z makc $
 
 PORTNAME=	stardict-engcom
 PORTVERSION=	2.4.2
 CATEGORIES=	russian
-MASTER_SITES=	http://yeelou.com/huzheng/stardict-dic/ru/
+MASTER_SITES=	http://abloz.com/huzheng/stardict-dic/ru/
 DISTNAME=	${PORTNAME}-ru-${PORTVERSION}
 
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	English-Russian Dictionary of Computer Terms
 
-NO_STAGE=	yes
+USE_BZIP2=	yes
+
 .include "${.CURDIR}/../stardict-mueller7/files/Makefile.common"
 .include <bsd.port.mk>
