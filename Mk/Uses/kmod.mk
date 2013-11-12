@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/kmod.mk 333188 2013-11-08 09:44:24Z rene $
+# $FreeBSD: Mk/Uses/kmod.mk 333566 2013-11-12 11:40:54Z rene $
 #
 # Handles common items for kernel module ports.
 #
@@ -23,10 +23,10 @@ CATEGORIES+=	kld
 
 SSP_UNSAFE=	kernel module does not support SSP
 
+KMODDIR?=	/boot/modules
 .if ${KMODDIR} == "/boot/kernel"
 KMODDIR=	/boot/modules
 .endif
-KMODDIR?=	/boot/modules
 PLIST_SUB+=	KMODDIR="${KMODDIR:C,^/,,}"
 MAKE_ENV+=	KMODDIR="${KMODDIR}" SYSDIR="${SRC_BASE}/sys"
 .if !defined(NO_STAGE)

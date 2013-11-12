@@ -9,7 +9,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to svn yourself.
 #
-# $FreeBSD: Mk/bsd.java.mk 318556 2013-05-20 00:45:26Z miwi $
+# $FreeBSD: Mk/bsd.java.mk 333560 2013-11-12 10:36:16Z bapt $
 #
 
 .if !defined(Java_Include)
@@ -392,6 +392,7 @@ RUN_DEPENDS+=		${DEPEND_JAVA}
 
 # Ant support: default do-build target
 .		if defined(USE_ANT)
+DESTDIRNAME?=		-Dfreebsd.ports.destdir
 ANT?=				${LOCALBASE}/bin/ant
 MAKE_ENV+=			JAVA_HOME=${JAVA_HOME}
 BUILD_DEPENDS+=		${ANT}:${PORTSDIR}/devel/apache-ant
