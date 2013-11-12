@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Pod-DocBook/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Pod-DocBook/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Pod-DocBook
 PORTVERSION=	1.2
@@ -19,8 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pod2docbook.1
-MAN3=		Pod::DocBook.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
