@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-B-OPCheck/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-OPCheck/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	B-OPCheck
 PORTVERSION=	0.29
@@ -20,7 +20,4 @@ BUILD_DEPENDS:=	p5-ExtUtils-Depends>=0:${PORTSDIR}/devel/p5-ExtUtils-Depends \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		B::OPCheck.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
