@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Web-Scraper/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Web-Scraper/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	Web-Scraper
 PORTVERSION=	0.37
@@ -26,14 +26,10 @@ BUILD_DEPENDS=	p5-HTML-Parser>0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-YAML>0:${PORTSDIR}/textproc/p5-YAML \
 		p5-libwww>=5.827:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Web::Scraper.3 Web::Scraper::Filter.3 Web::Scraper::LibXML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
