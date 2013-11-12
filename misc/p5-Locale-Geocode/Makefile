@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/p5-Locale-Geocode/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Locale-Geocode/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Locale-Geocode
 PORTVERSION=	1.20
@@ -18,9 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Locale::Geocode.3 \
-		Locale::Geocode::Division.3 \
-		Locale::Geocode::Territory.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
