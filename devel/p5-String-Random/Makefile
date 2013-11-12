@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-String-Random/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Random/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	String-Random
 PORTVERSION=	0.22
@@ -14,9 +14,6 @@ COMMENT=	Perl interface to generate "random" strings
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		String::Random.3
-
 PORTSCOUT=	limit:^0\.(\d\.){,2}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
