@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-Handler-YAWriter/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Handler-YAWriter/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Handler-YAWriter
 PORTVERSION=	0.23
@@ -16,8 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		xmlpretty.1
-MAN3=		XML::Handler::YAWriter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
