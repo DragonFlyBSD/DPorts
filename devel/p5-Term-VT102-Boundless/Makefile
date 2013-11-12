@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-VT102-Boundless/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-VT102-Boundless/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-VT102-Boundless
 PORTVERSION=	0.04
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::VT102::Boundless.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
