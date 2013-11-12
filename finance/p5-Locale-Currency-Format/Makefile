@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: finance/p5-Locale-Currency-Format/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Locale-Currency-Format/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Locale-Currency-Format
 PORTVERSION=	1.30
@@ -10,13 +10,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl functions for formatting monetary values
 
+LICENSE=	ART20 GPLv1
+LICENSE_COMB=	dual
+
 USES=		perl5
 USE_PERL5=	configure
 
-LICENSE_COMB=	dual
-LICENSE=	ART20 GPLv1
-
-MAN3=		Locale::Currency::Format.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
