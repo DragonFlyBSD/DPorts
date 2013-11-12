@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-mspec/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-mspec/Makefile 332039 2013-10-30 02:39:14Z swills $
 
 PORTNAME=	mspec
 PORTVERSION=	1.5.20
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/mspec bin/mkspec bin/mspec-ci bin/mspec-run bin/mspec-tag
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
