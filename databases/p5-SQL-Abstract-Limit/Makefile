@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-SQL-Abstract-Limit/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-SQL-Abstract-Limit/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	SQL-Abstract-Limit
 PORTVERSION=	0.141
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		SQL::Abstract::Limit.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
