@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-RefHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-RefHash/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Tie-RefHash
 PORTVERSION=	1.39
@@ -16,7 +16,4 @@ LICENSE=	ART20 GPLv1
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Tie::RefHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
