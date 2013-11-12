@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Date-Range/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Range/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-Range
 PORTVERSION=	1.41
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Date-Simple>=0.03:${PORTSDIR}/devel/p5-Date-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::Range.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
