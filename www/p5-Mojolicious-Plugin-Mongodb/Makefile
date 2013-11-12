@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: www/p5-Mojolicious-Plugin-Mongodb/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Mojolicious-Plugin-Mongodb/Makefile 333112 2013-11-07 15:07:21Z vanilla $
 
 PORTNAME=	Mojolicious-Plugin-Mongodb
 PORTVERSION=	1.15
@@ -21,7 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mojolicious::Plugin::Mongodb.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
