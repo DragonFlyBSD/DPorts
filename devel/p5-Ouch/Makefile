@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Ouch/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Ouch/Makefile 332667 2013-11-04 05:40:27Z kuriyama $
 
 PORTNAME=	Ouch
-PORTVERSION=	0.0403
+PORTVERSION=	0.0408
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RIZEN
@@ -15,7 +15,4 @@ TEST_DEPENDS=	p5-Test-Trap>=0:${PORTSDIR}/devel/p5-Test-Trap
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	Ouch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
