@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-StrongSingleton/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-StrongSingleton/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-StrongSingleton
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Stronger and more secure Singleton base class
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::StrongSingleton.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
