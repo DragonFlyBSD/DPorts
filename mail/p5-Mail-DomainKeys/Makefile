@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-Mail-DomainKeys/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-DomainKeys/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Mail-DomainKeys
 PORTVERSION=	1.0
@@ -19,9 +19,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::DomainKeys.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '6,38d' ${WRKSRC}/Makefile.PL
 
