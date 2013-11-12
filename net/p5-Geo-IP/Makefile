@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: net/p5-Geo-IP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Geo-IP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Geo-IP
 PORTVERSION=	1.42
@@ -11,13 +11,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Gets country name by IP or hostname
 
-LIB_DEPENDS=	GeoIP.5:${PORTSDIR}/net/GeoIP
+LIB_DEPENDS=	libGeoIP.so:${PORTSDIR}/net/GeoIP
 
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	LIBS='-L${LOCALBASE}/lib' INC='-I${LOCALBASE}/include'
 
-MAN3=		Geo::Mirror.3 Geo::IP.3 Geo::IP::Record.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
