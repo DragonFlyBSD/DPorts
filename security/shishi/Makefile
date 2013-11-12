@@ -1,8 +1,8 @@
-# $FreeBSD: security/shishi/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/shishi/Makefile 332596 2013-11-03 09:21:59Z novel $
 
 PORTNAME=	shishi
 PORTVERSION=	1.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	GNU
 
