@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: security/p5-PGP-Sign/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-PGP-Sign/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	PGP-Sign
 PORTVERSION=	0.20
@@ -15,13 +15,10 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	PGPS=${PGPS} PGPV=${PGPV} PGPSTYLE=${PGPSTYLE}
 
-MAN3=		PGP::Sign.3
-
 # If DEFAULTPGP isn't defined, it gets set to PGP2.  If you don't like
 # the values that this process assigns to PGP (or PGPV and PGPS) and
 # PGPSTYLE, they can be predefined.
 #
-NO_STAGE=	yes
 # Currently useful values for DEFAULTPGP are:
 # PGP2 - PGP 2.6.* or a reasonable facsimile thereof
 # PGP5 - PGP 5 or a work-alike
