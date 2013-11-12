@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: graphics/p5-Image-Info/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Info/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Image-Info
 PORTVERSION=	1.36
@@ -21,20 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Bundle::Image::Info::Everything.3 \
-		Bundle::Image::Info::PNG.3 \
-		Bundle::Image::Info::SVG.3 \
-		Bundle::Image::Info::XBM.3 \
-		Bundle::Image::Info::XPM.3 \
-		Image::Info.3 \
-		Image::Info::BMP.3 \
-		Image::Info::ICO.3 \
-		Image::Info::PPM.3 \
-		Image::Info::SVG.3 \
-		Image::Info::TIFF.3 \
-		Image::Info::WBMP.3 \
-		Image::Info::XBM.3 \
-		Image::Info::XPM.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
