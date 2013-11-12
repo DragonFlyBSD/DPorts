@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Reader/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Reader/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Reader
 PORTVERSION=	0.49
@@ -21,12 +21,6 @@ PP_DESC=	Use XML::Parsepp (Perl 5.14+ required)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Reader.3 \
-		XML::Reader_de.3 \
-		XML::Reader_fr.3 \
-		XML::Reader::Testcases.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPP}
