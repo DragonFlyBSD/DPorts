@@ -1,5 +1,5 @@
 # Created by: Leo Kim <leo@florida.sarang.net>
-# $FreeBSD: audio/p5-MP3-ID3v1Tag/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-MP3-ID3v1Tag/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	MP3-ID3v1Tag
 PORTVERSION=	1.11
@@ -11,9 +11,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Edit ID3v1 Tags from an Audio MPEG Layer 3
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		MP3::ID3v1Tag.3
 
 .include <bsd.port.mk>
