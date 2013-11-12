@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-gitlab_omniauth-ldap/Makefile 331546 2013-10-25 02:28:44Z swills $
+# $FreeBSD: net/rubygem-gitlab_omniauth-ldap/Makefile 332047 2013-10-30 02:53:47Z swills $
 
 PORTNAME=	gitlab_omniauth-ldap
 PORTVERSION=	1.0.3
@@ -17,6 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
