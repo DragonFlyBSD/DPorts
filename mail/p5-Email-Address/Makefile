@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Address/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Address/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Email-Address
 PORTVERSION=	1.90.0
@@ -16,7 +16,4 @@ TEST_DEPENDS=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Email::Address.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
