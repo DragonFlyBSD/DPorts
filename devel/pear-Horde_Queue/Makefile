@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Horde_Queue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Horde_Queue/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	Horde_Queue
 PORTVERSION=	1.1.1
@@ -8,7 +8,6 @@ PKGNAMEPREFIX=	pear-
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Queue
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
