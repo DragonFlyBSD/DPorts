@@ -1,8 +1,9 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Template-Xslate/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Dancer-Template-Xslate/Makefile 333248 2013-11-08 17:03:02Z gblach $
 
 PORTNAME=	Dancer-Template-Xslate
 PORTVERSION=	0.03
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RSIMOES
@@ -21,7 +22,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Dancer::Template::Xslate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
