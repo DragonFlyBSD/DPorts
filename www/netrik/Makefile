@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/netrik/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/netrik/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	netrik
 PORTVERSION=	1.16.1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTVERSION}%20%28beta%29
 
 MAINTAINER=	ale@FreeBSD.org
-COMMENT=	A text web browser, very ambitious, in active development
+COMMENT=	Text web browser, ambitious, in active development
 
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 
