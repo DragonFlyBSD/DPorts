@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: mail/p5-LMAP-CID2SPF/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-LMAP-CID2SPF/Makefile 333174 2013-11-08 01:28:37Z vanilla $
 
 PORTNAME=	LMAP-CID2SPF
 DISTVERSION=	0.9
@@ -16,13 +16,9 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_SCRIPT=Makefile.PL
 
-PLIST_FILES+=	bin/cid2spf %%SITE_PERL%%/LMAP/CID2SPF.pm
-PLIST_FILES+=	"@unexec rmdir %D/%%SITE_PERL%%/LMAP 2>/dev/null || true"
-
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${SITE_PERL}/LMAP
-	cd ${WRKSRC} && ${INSTALL_SCRIPT} cid2spf ${PREFIX}/bin
-	cd ${WRKSRC} && ${INSTALL_DATA} CID2SPF.pm ${SITE_PERL}/LMAP
+	@${MKDIR} ${STAGEDIR}${SITE_PERL}/LMAP
+	cd ${WRKSRC} && ${INSTALL_SCRIPT} cid2spf ${STAGEDIR}${PREFIX}/bin
+	cd ${WRKSRC} && ${INSTALL_DATA} CID2SPF.pm ${STAGEDIR}${SITE_PERL}/LMAP
 
 .include <bsd.port.mk>
