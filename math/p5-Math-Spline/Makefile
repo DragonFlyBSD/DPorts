@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: math/p5-Math-Spline/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Spline/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-Spline
 PORTVERSION=	0.02
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Math-Derivative>=0:${PORTSDIR}/math/p5-Math-Derivative
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::Spline.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
