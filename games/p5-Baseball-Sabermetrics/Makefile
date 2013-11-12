@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: games/p5-Baseball-Sabermetrics/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/p5-Baseball-Sabermetrics/Makefile 332736 2013-11-04 14:49:24Z vanilla $
 
 PORTNAME=	Baseball-Sabermetrics
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Baseball::Sabermetrics.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
