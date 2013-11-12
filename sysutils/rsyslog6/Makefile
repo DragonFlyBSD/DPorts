@@ -1,8 +1,8 @@
-# $FreeBSD: sysutils/rsyslog6/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rsyslog6/Makefile 333306 2013-11-09 15:57:18Z wg $
 
 PORTNAME=	rsyslog
 PORTVERSION=	6.6.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 PKGNAMESUFFIX=	6${EXTRASUFFIX}
@@ -18,7 +18,7 @@ USE_LDCONFIG=	yes
 LIB_DEPENDS+=	ee:${PORTSDIR}/devel/libee \
 		estr:${PORTSDIR}/devel/libestr \
 		sysinfo:${PORTSDIR}/devel/libsysinfo \
-		json.0:${PORTSDIR}/devel/json-c \
+		libjson.so:${PORTSDIR}/devel/json-c \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USES=		pkgconfig
