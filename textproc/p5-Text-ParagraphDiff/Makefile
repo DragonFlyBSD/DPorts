@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-Text-ParagraphDiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-ParagraphDiff/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-ParagraphDiff
 PORTVERSION=	2.70
@@ -22,16 +22,14 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 SCRIPTS=	tdiff
 EXAMPLES=	diff.html new.txt old.txt
 EXAMPLESDIR=	${PREFIX}/share/examples/p5-Text-ParagraphDiff
-MAN3=		Text::ParagraphDiff.3
 
-NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/bin && \
-	${INSTALL_SCRIPT} ${SCRIPTS} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${SCRIPTS} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/examples && \
-	${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${EXAMPLES} ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
