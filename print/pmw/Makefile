@@ -1,31 +1,28 @@
 # Created by: Brian Candler <B.Candler@pobox.com>
-# $FreeBSD: print/pmw/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/pmw/Makefile 332493 2013-11-02 14:48:58Z pawel $
 
 PORTNAME=	pmw
-PORTVERSION=	4.12
+PORTVERSION=	4.26
 CATEGORIES=	print audio
-MASTER_SITES=	ftp://ftp.univie.ac.at/applications/www.quercite.com/ \
-		http://www.quercite.com/
+MASTER_SITES=	http://www.quercite.com/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High quality music typesetting program
 
+LICENSE=	GPLv2
+
+OPTIONS_DEFINE=	DOCS
+
 GNU_CONFIGURE=	yes
+MAKE_ARGS=	FULLECHO=""
 ALL_TARGET=	build
 
-MAN1=		pmw.1
-
-PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for file in ChangeLog spec.pdf
-	${INSTALL_MAN} ${WRKSRC}/doc/${file} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+.for i in ChangeLog spec.pdf
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} ${i} ${STAGEDIR}${DOCSDIR})
 .endfor
-.endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
