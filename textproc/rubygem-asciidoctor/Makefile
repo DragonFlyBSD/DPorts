@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-asciidoctor/Makefile 330959 2013-10-20 02:03:29Z swills $
+# $FreeBSD: textproc/rubygem-asciidoctor/Makefile 332050 2013-10-30 02:57:17Z swills $
 
 PORTNAME=	asciidoctor
 PORTVERSION=	0.1.4
@@ -14,6 +14,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/asciidoctor bin/asciidoctor-safe
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
