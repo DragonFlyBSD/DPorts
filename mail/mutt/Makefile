@@ -1,5 +1,5 @@
 # Created by: Udo Schweigert
-# $FreeBSD: mail/mutt/Makefile 331252 2013-10-22 10:53:52Z ak $
+# $FreeBSD: mail/mutt/Makefile 333087 2013-11-07 13:01:41Z bsam $
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.22
@@ -99,7 +99,7 @@ XML_DESC=	Use XML tools for building documentation
 
 OPTIONS_DEFAULT=	COMPRESSED_FOLDERS HTML ICONV MAILBOX_MANPAGES \
 		NCURSES QUOTE_PATCH SGMLFORMAT SMIME_OUTLOOK_COMPAT \
-		NLS XML
+		NLS XML SMTP
 .endif
 
 PLIST=		${WRKDIR}/PLIST
@@ -265,18 +265,18 @@ CONFIGURE_ARGS+=	--with-gss=${LOCALBASE}
 .elif exists(${KRB5_HOME}/bin/krb5-config)
 LIB_DEPENDS+=		libgssapi_krb5.so:${PORTSDIR}/security/krb5
 CONFIGURE_ARGS+=	--with-gss=${KRB5_HOME}
-LDFLAGS+=		-L${KRB5_HOME}/lib -rpath=${KRB5_HOME}/lib
+LDFLAGS+=		-L${KRB5_HOME}/lib -rpath=${KRB5_HOME}/lib -ltinfow
 .elif exists(${HEIMDAL_HOME}/bin/krb5-config)
 LIB_DEPENDS+=		libgssapi_krb5.so:${PORTSDIR}/security/krb5
 CONFIGURE_ARGS+=	--with-gss=${HEIMDAL_HOME}
-LDFLAGS+=		-L${HEIMDAL_HOME}/lib -rpath=${HEIMDAL_HOME}/lib
+LDFLAGS+=		-L${HEIMDAL_HOME}/lib -rpath=${HEIMDAL_HOME}/lib -ltinfow
 .elif (defined(MAKE_KERBEROS5)) || exists(/usr/lib/libkrb5.a)
 CONFIGURE_ARGS+=	--with-gss
 WITH_KRB5_SYS=YES
 .endif
 .endif
 
-LDFLAGS+=		-L${LOCALBASE}/lib -rpath=${LOCALBASE}/lib:/usr/lib
+LDFLAGS+=		-L${LOCALBASE}/lib -rpath=${LOCALBASE}/lib:/usr/lib -ltinfow
 CFLAGS+=		${CFLAGS_ADD}
 LDFLAGS+=		${LDFLAGS_ADD}
 
