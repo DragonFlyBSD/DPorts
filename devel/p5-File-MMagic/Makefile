@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-File-MMagic/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-MMagic/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-MMagic
 PORTVERSION=	1.30
@@ -13,7 +13,4 @@ COMMENT=	Perl5 module to guess file type like file(1)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::MMagic.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
