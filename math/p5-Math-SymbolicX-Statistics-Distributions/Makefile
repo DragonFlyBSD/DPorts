@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-SymbolicX-Statistics-Distributions/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-SymbolicX-Statistics-Distributions/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-SymbolicX-Statistics-Distributions
 PORTVERSION=	1.02
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-Math-Symbolic>=0:${PORTSDIR}/math/p5-Math-Symbolic \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-LectroTest>=0:${PORTSDIR}/devel/p5-Test-LectroTest
 
-MAN3=	Math::SymbolicX::Statistics::Distributions.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
