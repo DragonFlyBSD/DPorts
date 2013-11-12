@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WWW-Spinn3r
 PORTVERSION=	3.00700001
@@ -22,8 +22,4 @@ TEST_DEPENDS=	p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Spinn3r.3 \
-		WWW::Spinn3r::Synced.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
