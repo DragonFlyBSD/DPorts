@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-FAQ-OMatic/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-FAQ-OMatic/Makefile 333347 2013-11-09 21:46:56Z sunpoet $
 
 PORTNAME=	FAQ-OMatic
 PORTVERSION=	2.719
@@ -7,15 +7,14 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Perl API to manipulate FAQ-O-Matics
+
+LICENSE=	GPLv2
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		FAQ::OMatic::API.3
-
-NO_STAGE=	yes
 post-install:
 	@${CAT} ${WRKSRC}/install.notes
 
