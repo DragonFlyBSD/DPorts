@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: news/p5-POE-Component-Client-NNTP/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/p5-POE-Component-Client-NNTP/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	POE-Component-Client-NNTP
 PORTVERSION=	2.22
@@ -19,8 +19,4 @@ RUN_DEPENDS=	p5-POE>=0.999.9:${PORTSDIR}/devel/p5-POE \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Client::NNTP.3 \
-		POE::Component::Client::NNTP::Constants.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
