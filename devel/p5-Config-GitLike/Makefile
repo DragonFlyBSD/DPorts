@@ -1,5 +1,5 @@
 # Created by: Baptiste Daroussin
-# $FreeBSD: devel/p5-Config-GitLike/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-GitLike/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Config-GitLike
 PORTVERSION=	1.12
@@ -16,18 +16,10 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	devel/p5-Moo>=0:${PORTSDIR}/devel/p5-Moo \
 		devel/p5-MooX-Types-MooseLike>=0:${PORTSDIR}/devel/p5-MooX-Types-MooseLike
-
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
-# for tests
-BUILD_DEPENDS+=	devel/p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
-
-MAN3+=		Config::GitLike::Git.3 \
-		Config::GitLike::Cascaded.3 \
-		Config::GitLike.3
+TEST_DEPENDS+=	devel/p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
