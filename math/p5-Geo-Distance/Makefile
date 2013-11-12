@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: math/p5-Geo-Distance/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Geo-Distance/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Geo-Distance
 PORTVERSION=	0.20
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-Test-Fatal>=0.007:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Geo::Distance.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
