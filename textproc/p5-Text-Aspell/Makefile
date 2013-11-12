@@ -1,5 +1,5 @@
 # Created by: lars.eggert@gmx.net
-# $FreeBSD: textproc/p5-Text-Aspell/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Aspell/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Aspell
 PORTVERSION=	0.09
@@ -11,15 +11,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the GNU Aspell library
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/aspell:${PORTSDIR}/textproc/aspell
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+LIB_DEPENDS=	libaspell.so:${PORTSDIR}/textproc/aspell
 
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS+=INC=-I${LOCALBASE}/include \
 		"LIBS=-L${LOCALBASE}/lib -laspell"
 
-MAN3=		Text::Aspell.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
