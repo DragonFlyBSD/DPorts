@@ -1,8 +1,8 @@
 # Created by: Peter Avalos <pavalos@theshell.com>
-# $FreeBSD: databases/p5-DBIx-DBSchema/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: databases/p5-DBIx-DBSchema/Makefile 332895 2013-11-05 19:04:44Z sunpoet $
 
 PORTNAME=	DBIx-DBSchema
-PORTVERSION=	0.40
+PORTVERSION=	0.43
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,29 +10,21 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	OO-interface to database schemas
 
-BUILD_DEPENDS=	p5-FreezeThaw>=0:${PORTSDIR}/devel/p5-FreezeThaw \
-		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+OPTIONS_DEFINE=	DOCS
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
 
-MAN3=	DBIx::DBSchema.3 DBIx::DBSchema::ColGroup.3 \
-	DBIx::DBSchema::ColGroup::Index.3 DBIx::DBSchema::ColGroup::Unique.3 \
-	DBIx::DBSchema::Column.3 DBIx::DBSchema::DBD.3 \
-	DBIx::DBSchema::DBD::mysql.3 DBIx::DBSchema::DBD::Pg.3 \
-	DBIx::DBSchema::DBD::Sybase.3 DBIx::DBSchema::Table.3 \
-	DBIx::DBSchema::DBD::Oracle.3 DBIx::DBSchema::DBD::SQLite.3 \
-	DBIx::DBSchema::Index.3
-
-.if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
