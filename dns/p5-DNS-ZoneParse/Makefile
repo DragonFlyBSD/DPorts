@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: dns/p5-DNS-ZoneParse/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-DNS-ZoneParse/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	DNS-ZoneParse
 PORTVERSION=	1.10
@@ -13,7 +13,4 @@ COMMENT=	Parse and manipulate DNS Zone Files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DNS::ZoneParse.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
