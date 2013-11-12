@@ -1,10 +1,10 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: sysutils/brebis/Makefile 330482 2013-10-16 07:01:00Z martymac $
+# $FreeBSD: sysutils/brebis/Makefile 333191 2013-11-08 10:34:49Z martymac $
 
 PORTNAME=	brebis
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	sysutils archivers
-MASTER_SITES=	http://brebisproject.org/attachments/download/8/ \
+MASTER_SITES=	http://brebisproject.org/attachments/download/9/ \
 		LOCAL/martymac
 
 MAINTAINER=	martymac@FreeBSD.org
@@ -19,17 +19,11 @@ PLIST_SUB+=	PYTHON_SUFFIX=${PYTHON_SUFFIX}
 
 PORTDOCS=	README
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} "s|'share','man'|'${MANPREFIX}/man'|" ${WRKSRC}/setup.py
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
