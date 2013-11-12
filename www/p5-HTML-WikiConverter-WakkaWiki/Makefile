@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/p5-HTML-WikiConverter-WakkaWiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-WikiConverter-WakkaWiki/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-WikiConverter-WakkaWiki
 PORTVERSION=	0.50
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::WikiConverter::WakkaWiki.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
