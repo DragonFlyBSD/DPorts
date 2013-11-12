@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Meta-TypeConstraint-ForceCoercion/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Meta-TypeConstraint-ForceCoercion/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Meta-TypeConstraint-ForceCoercion
 PORTVERSION=	0.01
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Meta::TypeConstraint::ForceCoercion.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
