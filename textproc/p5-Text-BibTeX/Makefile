@@ -1,5 +1,5 @@
 # Created by: David Bremner <bremner@unb.ca>
-# $FreeBSD: textproc/p5-Text-BibTeX/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-BibTeX/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-BibTeX
 PORTVERSION=	0.66
@@ -22,23 +22,6 @@ USES=		perl5
 USE_PERL5=	modbuild
 USE_LDCONFIG=	yes
 
-MAN1=		bt_format_names.1 bt_input.1 bt_language.1 \
-		bt_macros.1 bt_misc.1 bt_post_processing.1 \
-		bt_postprocess.1 bt_split_names.1 bt_traversal.1 \
-		btool_faq.1 btparse.1
-
-MAN3=		Text::BibTeX.3 \
-		Text::BibTeX::Bib.3 \
-		Text::BibTeX::BibFormat.3 \
-		Text::BibTeX::BibSort.3 \
-		Text::BibTeX::Entry.3 \
-		Text::BibTeX::File.3 \
-		Text::BibTeX::Name.3 \
-		Text::BibTeX::NameFormat.3 \
-		Text::BibTeX::Structure.3 \
-		Text::BibTeX::Value.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
