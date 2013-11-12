@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: textproc/p5-Chess-PGN-Parse/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Chess-PGN-Parse/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Chess-PGN-Parse
 PORTVERSION=	0.19
@@ -14,7 +14,4 @@ COMMENT=	Reads and parses PGN (Portable Game Notation) Chess files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Chess::PGN::Parse.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
