@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/p5-ExtUtils-XSBuilder/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ExtUtils-XSBuilder/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	ExtUtils-XSBuilder
 PORTVERSION=	0.28
@@ -17,10 +17,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		ExtUtils::XSBuilder.3 ExtUtils::XSBuilder::C::grammar.3 \
-		ExtUtils::XSBuilder::PODTemplate.3 \
-		ExtUtils::XSBuilder::ParseSource.3 \
-		ExtUtils::XSBuilder::WrapXS.3 ExtUtils::xsbuilder.osc2002.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
