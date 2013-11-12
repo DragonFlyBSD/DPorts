@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Authen-TacacsPlus/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-TacacsPlus/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Authen-TacacsPlus
 PORTVERSION=	0.24
@@ -18,9 +18,6 @@ USES=		perl5
 USE_PERL5=	configure
 MAKE_ENV+=	CCFLAGS="${CFLAGS}"
 
-MAN3=		Authen::TacacsPlus.3
-
-NO_STAGE=	yes
 pre-build:
 	${PERL} -pi -e "s:CCFLAGS =:CCFLAGS ?=:g" ${WRKSRC}/tacpluslib/Makefile
 
