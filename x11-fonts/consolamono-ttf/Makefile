@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/consolamono-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/consolamono-ttf/Makefile 332640 2013-11-03 19:23:18Z rakuco $
 
 PORTNAME=	consolamono-ttf
 PORTVERSION=	20130127
@@ -9,10 +9,7 @@ DISTNAME=	consolamono
 MAINTAINER=	rakuco@FreeBSD.org
 COMMENT=	Monospace font created for programming, text editors and terminal-use
 
-LICENSE=	OFL
-LICENSE_NAME=	SIL OPEN FONT LICENSE Version 1.1
-LICENSE_FILE=	${WRKSRC}/SIL\ -\ Open\ Font\ License.txt
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE=	OFL11
 
 BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
