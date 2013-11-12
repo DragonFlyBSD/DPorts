@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter-Progressive/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
+# $FreeBSD: devel/p5-Sub-Exporter-Progressive/Makefile 332513 2013-11-02 17:20:26Z sunpoet $
 
 PORTNAME=	Sub-Exporter-Progressive
-PORTVERSION=	0.001.010
+PORTVERSION=	0.001.011
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
