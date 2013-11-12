@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib20/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/glib20/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/trunk/devel/glib20/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	glib
@@ -26,7 +26,7 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USES=		gettext gmake iconv pathfix pkgconfig shebangfix perl5
 USE_GNOME=	ltverhack
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
