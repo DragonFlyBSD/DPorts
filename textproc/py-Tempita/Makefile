@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/py-Tempita/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-Tempita/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	Tempita
 PORTVERSION=	0.5.1
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wenheping@gmail.com
-COMMENT=	A very small text templating language
+COMMENT=	Small text templating language
 
 USE_PYTHON=		2.5+
 USE_PYDISTUTILS=	easy_install
