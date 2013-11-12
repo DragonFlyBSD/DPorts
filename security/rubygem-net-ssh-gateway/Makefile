@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-net-ssh-gateway/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-net-ssh-gateway/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	net-ssh-gateway
 PORTVERSION=	1.1.0
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
