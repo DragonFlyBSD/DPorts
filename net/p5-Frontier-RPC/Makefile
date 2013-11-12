@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/p5-Frontier-RPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Frontier-RPC/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Frontier-RPC
 PORTVERSION=	0.07.b4
@@ -18,11 +18,4 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Apache::XMLRPC.3 \
-	Frontier::Client.3 \
-	Frontier::Daemon.3 \
-	Frontier::RPC2.3 \
-	Frontier::Responder.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
