@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-DAV/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-DAV/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-DAV
 PORTVERSION=	0.47
@@ -21,9 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		dave.1
-MAN3=		HTTP::DAV.3 HTTP::DAV::Lock.3 HTTP::DAV::Resource.3 \
-		HTTP::DAV::Response.3 HTTP::DAV::Changes.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
