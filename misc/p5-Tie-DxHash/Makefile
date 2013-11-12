@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Tie-DxHash/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Tie-DxHash/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Tie-DxHash
 PORTVERSION=	1.05
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tie::DxHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
