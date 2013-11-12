@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-binutils/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gnatdroid-binutils/Makefile 333285 2013-11-09 13:02:19Z marino $
 
 PORTNAME=		binutils
 PORTVERSION=		2.21.1
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	gnatdroid-sysroot>=9:${PORTSDIR}/lang/gnatdroid-sysroot \
 		${LOCALBASE}/lib/libmpfr.so:${PORTSDIR}/math/mpfr
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
+USES=		gmake
 USE_BZIP2=	YES
-USE_GCC=	any
-USE_GMAKE=	YES
 HAS_CONFIGURE=	YES
 NO_MTREE=	YES
 
@@ -38,11 +37,12 @@ CONFIGURE_ARGS+=	--prefix=${BR1_PREFIX}
 CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}
 CONFIGURE_ARGS+=	--with-gmp=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-mpfr=${LOCALBASE}
+CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--disable-nls
 
-NO_STAGE=	yes
 post-install:
-	${MKDIR} ${BR2_PREFIX}
-	(cd ${BR1_PREFIX} && ${COPYTREE_BIN} \* ${BR2_PREFIX})
+	${MKDIR} ${STAGEDIR}${BR2_PREFIX}
+	(cd ${STAGEDIR}${BR1_PREFIX} && ${COPYTREE_BIN} \* \
+		${STAGEDIR}${BR2_PREFIX})
 
 .include <bsd.port.mk>
