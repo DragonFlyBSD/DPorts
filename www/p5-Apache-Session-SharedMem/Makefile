@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: www/p5-Apache-Session-SharedMem/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-Session-SharedMem/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-Session-SharedMem
 PORTVERSION=	0.6
@@ -16,13 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Apache::Session::Store::SharedMem.3 \
-		Apache::Session::SharedMem.3
-
-NO_STAGE=	yes
-#post-patch:
-#	@${CP} ${WRKSRC}/Apache/Session/SharedMem.pm \
-#		${WRKSRC}/lib/Apache/Session
 
 .include <bsd.port.mk>
