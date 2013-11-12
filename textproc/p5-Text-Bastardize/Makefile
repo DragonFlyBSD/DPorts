@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Bastardize/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Bastardize/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Bastardize
 DISTVERSION=	0.08
@@ -13,7 +13,4 @@ COMMENT=	Corruptor of innocent text
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Bastardize.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
