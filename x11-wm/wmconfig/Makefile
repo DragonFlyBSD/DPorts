@@ -1,8 +1,8 @@
 # Created by: Tommy Scheunemann <net@arrishq.org>
-# $FreeBSD: x11-wm/wmconfig/Makefile 329824 2013-10-08 19:09:06Z antoine $
+# $FreeBSD: x11-wm/wmconfig/Makefile 332499 2013-11-02 15:22:51Z wg $
 
 PORTNAME=	wmconfig
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://www.arrishq.net/files/
 
@@ -24,12 +24,8 @@ NLS_CPPFLAGS=	-I${LOCALBASE}/include
 NLS_LDFLAGS=	-L${LOCALBASE}/lib
 NLS_USES=	gettext
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
