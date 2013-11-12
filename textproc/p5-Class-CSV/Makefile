@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Class-CSV/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Class-CSV/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Class-CSV
 PORTVERSION=	1.03
@@ -10,14 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Class based CSV parser/writer
 
-RUN_DEPENDS=	p5-Text-CSV_XS>=0.23:${PORTSDIR}/textproc/p5-Text-CSV_XS \
+BUILD_DEPENDS=	p5-Text-CSV_XS>=0.23:${PORTSDIR}/textproc/p5-Text-CSV_XS \
 		p5-Class-Accessor>=0.18:${PORTSDIR}/devel/p5-Class-Accessor
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::CSV.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
