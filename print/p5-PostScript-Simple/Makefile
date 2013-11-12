@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: print/p5-PostScript-Simple/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/p5-PostScript-Simple/Makefile 332969 2013-11-06 12:12:45Z vanilla $
 
 PORTNAME=	PostScript-Simple
 PORTVERSION=	0.07
@@ -8,12 +8,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	PostScript::Simple - Produce PostScript files from Perl
+COMMENT=	Produce PostScript files from Perl
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	PostScript::Simple.3 PostScript::Simple::EPS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
