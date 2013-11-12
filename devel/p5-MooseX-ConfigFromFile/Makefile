@@ -1,7 +1,8 @@
-# $FreeBSD: devel/p5-MooseX-ConfigFromFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-ConfigFromFile/Makefile 332739 2013-11-04 16:06:15Z kuriyama $
 
 PORTNAME=	MooseX-ConfigFromFile
-PORTVERSION=	0.11
+PORTVERSION=	0.12
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,17 +17,14 @@ RUN_DEPENDS=	\
 	p5-namespace-autoclean>0:${PORTSDIR}/devel/p5-namespace-autoclean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	\
-	p5-Test-CheckDeps>=0.002:${PORTSDIR}/devel/p5-Test-CheckDeps \
+	p5-Test-CheckDeps>=0.006:${PORTSDIR}/devel/p5-Test-CheckDeps \
 	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires \
 	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
-	p5-Test-NoWarnings>0:${PORTSDIR}/devel/p5-Test-NoWarnings \
+	p5-Test-NoWarnings>=1.04:${PORTSDIR}/devel/p5-Test-NoWarnings \
 	p5-Test-Without-Module>0:${PORTSDIR}/devel/p5-Test-Without-Module \
 	p5-Test-Deep>0:${PORTSDIR}/devel/p5-Test-Deep
 
 USES=	perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuildtiny
 
-MAN3=		MooseX::ConfigFromFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
