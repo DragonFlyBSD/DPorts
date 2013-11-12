@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-Memoize-ExpireLRU/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Memoize-ExpireLRU/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Memoize-ExpireLRU
 PORTVERSION=	0.55
@@ -14,7 +14,4 @@ COMMENT=	Expiry plug-in for Memoize that adds LRU cache expiration
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Memoize::ExpireLRU.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
