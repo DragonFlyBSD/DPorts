@@ -1,7 +1,7 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: sysutils/rsyslog6-gnutls/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rsyslog6-gnutls/Makefile 333306 2013-11-09 15:57:18Z wg $
 
-PORTREVISION=	2
+PORTREVISION=	3
 
 COMMENT=	GNUTLS module for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6
