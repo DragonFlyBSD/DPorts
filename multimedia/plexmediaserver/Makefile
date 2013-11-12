@@ -1,8 +1,8 @@
 # Created by: KalleDK <plexmaintainer@k-moeller.dk>
-# $FreeBSD: multimedia/plexmediaserver/Makefile 331478 2013-10-24 11:35:39Z feld $
+# $FreeBSD: multimedia/plexmediaserver/Makefile 332394 2013-11-01 16:00:44Z feld $
 
 PORTNAME=	plexmediaserver
-PORTVERSION=	0.9.8.9.211
+PORTVERSION=	0.9.8.10.215
 CATEGORIES=	multimedia
 MASTER_SITES=	http://plex.r.worldssl.net/plex-media-server/${PORTVERSION}-${PLEX_BUILD}/
 DISTNAME=	PlexMediaServer-${PORTVERSION}-${PLEX_BUILD}-freebsd-amd64
@@ -11,7 +11,7 @@ MAINTAINER=	feld@FreeBSD.org
 COMMENT=	The Plex Media Server component
 
 USE_BZIP2=	yes
-PLEX_BUILD=	3903381
+PLEX_BUILD=	020456b
 NO_BUILD=	yes
 WRKSRC=	${WRKDIR}/PlexMediaServer-${PORTVERSION}-${PLEX_BUILD}
 
