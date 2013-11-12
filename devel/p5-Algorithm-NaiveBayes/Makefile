@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Algorithm-NaiveBayes/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-NaiveBayes/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-NaiveBayes
 PORTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Perl class performing Bayesian prediction of categories
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Algorithm::NaiveBayes.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
