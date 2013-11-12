@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: sysutils/fpart/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/fpart/Makefile 333132 2013-11-07 16:06:22Z martymac $
 
 PORTNAME=	fpart
 PORTVERSION=	0.9
@@ -15,20 +15,11 @@ LICENSE=	BSD
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-embfts
 
-MANCOMPRESSED=	no
-MAN1=		fpart.1
-PLIST_FILES=	bin/fpart
+PLIST_FILES=	bin/fpart man/man1/fpart.1.gz
 PORTDOCS=	Changelog README TODO
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
-.endfor
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
