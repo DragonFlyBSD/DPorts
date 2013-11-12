@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: dns/p5-Net-DNS-SEC/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-DNS-SEC/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	Net-DNS-SEC
 PORTVERSION=	0.16
@@ -23,12 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::DNS::Keyset.3 Net::DNS::RR::DS.3 Net::DNS::RR::KEY.3 \
-		Net::DNS::RR::NXT.3 Net::DNS::RR::SIG.3 \
-		Net::DNS::SEC.3 Net::DNS::RR::DLV.3 \
-		Net::DNS::SEC::Private.3 Net::DNS::RR::RRSIG.3 \
-		Net::DNS::RR::NSEC.3 Net::DNS::RR::DNSKEY.3 \
-		Net::DNS::RR::NSEC3.3 Net::DNS::RR::NSEC3PARAM.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
