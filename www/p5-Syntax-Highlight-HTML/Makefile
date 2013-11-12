@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Syntax-Highlight-HTML/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Syntax-Highlight-HTML/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Syntax-Highlight-HTML
 PORTVERSION=	0.04
@@ -10,13 +10,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Syntax::Highlight::HTML - Highlight HTML syntax
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Syntax::Highlight::HTML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
