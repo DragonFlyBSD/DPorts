@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-RSS-Feed/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-RSS-Feed/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-RSS-Feed
 PORTVERSION=	2.40
@@ -23,11 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::RSS::Feed.3 \
-		XML::RSS::Headline.3 \
-		XML::RSS::Headline::Fark.3 \
-		XML::RSS::Headline::PerlJobs.3 \
-		XML::RSS::Headline::UsePerlJournals.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
