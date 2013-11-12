@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: astro/p5-Astro-SpaceTrack/Makefile 331393 2013-10-23 17:21:56Z sunpoet $
+# $FreeBSD: astro/p5-Astro-SpaceTrack/Makefile 333321 2013-11-09 18:48:53Z sunpoet $
 
 PORTNAME=	Astro-SpaceTrack
-PORTVERSION=	0.081
+PORTVERSION=	0.082
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:WYANT
@@ -25,4 +25,11 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	-y
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501800
+BUILD_DEPENDS+=	p5-Getopt-Long>=2.39:${PORTSDIR}/devel/p5-Getopt-Long
+RUN_DEPENDS+=	p5-Getopt-Long>=2.39:${PORTSDIR}/devel/p5-Getopt-Long
+.endif
+
+.include <bsd.port.post.mk>
