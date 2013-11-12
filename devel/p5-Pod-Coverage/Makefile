@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Pod-Coverage/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Pod-Coverage/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Pod-Coverage
 PORTVERSION=	0.23
@@ -18,25 +18,17 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Pod::Coverage.3 \
-		Pod::Coverage::CountParents.3 \
-		Pod::Coverage::ExportOnly.3 \
-		Pod::Coverage::Overloader.3
-
 PORTDOCS=	Changes
 PORTEXAMPLES=	check_installed script-covered
 
-NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}/
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}/
 .endif
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/examples/|} ${EXAMPLESDIR}/
-	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/examples/|} ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
