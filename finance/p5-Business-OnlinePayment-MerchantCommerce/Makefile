@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-MerchantCommerce/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-OnlinePayment-MerchantCommerce/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Business-OnlinePayment-MerchantCommerce
 PORTVERSION=	0.01
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::OnlinePayment::MerchantCommerce.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
