@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: databases/p5-Class-DBI-FromCGI/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-FromCGI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-FromCGI
 PORTVERSION=	1.00
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-Class-DBI>=0:${PORTSDIR}/databases/p5-Class-DBI \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::DBI::FromCGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
