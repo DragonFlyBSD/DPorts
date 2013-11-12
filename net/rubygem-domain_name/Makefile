@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-# $FreeBSD: net/rubygem-domain_name/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-domain_name/Makefile 332047 2013-10-30 02:53:47Z swills $
 
 PORTNAME=	domain_name
 PORTVERSION=	0.5.12
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
