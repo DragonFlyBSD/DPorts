@@ -1,5 +1,5 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: devel/p5-Thread-Cancel/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Thread-Cancel/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Thread-Cancel
 PORTVERSION=	1.13
@@ -16,13 +16,10 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Thread::Cancel.3
-
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "--------------------------------------------------------"
 	@${ECHO_MSG} "This module requires a threaded perl.  If your install"
-	@${ECHO_MSG} "is not threaded please install lang/perl5.8 with threads"
+	@${ECHO_MSG} "is not threaded please install lang/${PERL_PORT} with threads"
 	@${ECHO_MSG} "--------------------------------------------------------"
 
 .include <bsd.port.mk>
