@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/gflags/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gflags/Makefile 333034 2013-11-06 19:28:08Z sunpoet $
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
@@ -14,21 +14,20 @@ LICENSE=	BSD
 OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
+MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		pathfix
+USES=		pathfix shebangfix
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README README_windows.txt \
 		designstyle.css gflags.html
 
-NO_STAGE=	yes
+SHEBANG_FILES=	src/gflags_completions.sh
+
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} \
-		-e 's|^\(docdir = \).*|\1${DOCSDIR}|' \
-		-e 's|^\(pkgconfigdir = \).*|\1$$(DESTDIR)$$(prefix)/libdata/pkgconfig|' \
-			${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's|^\(docdir = \).*|\1${DOCSDIR}|' ${WRKSRC}/Makefile.in
 .if !${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/^install-data-am: / s| install-dist_docDATA||' ${WRKSRC}/Makefile.in
 .endif
