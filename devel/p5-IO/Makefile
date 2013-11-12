@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-IO/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO
 PORTVERSION=	1.25
@@ -15,9 +15,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	INSTALLDIRS=site POLLUTE=1
 
-MAN3=		IO.3 IO::Dir.3 IO::File.3 IO::Handle.3 IO::Pipe.3 IO::Poll.3 \
-		IO::Seekable.3 IO::Select.3 IO::Socket.3 IO::Socket::INET.3 \
-		IO::Socket::UNIX.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
