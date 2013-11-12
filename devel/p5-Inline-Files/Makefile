@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Inline-Files/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Inline-Files/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Inline-Files
 PORTVERSION=	0.68
@@ -13,8 +13,4 @@ COMMENT=	Multiple virtual files at the end of your code
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Inline::Files.3 \
-		Inline::Files::Virtual.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
