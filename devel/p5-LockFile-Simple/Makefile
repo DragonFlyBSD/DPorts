@@ -1,5 +1,5 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: devel/p5-LockFile-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-LockFile-Simple/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	LockFile-Simple
 PORTVERSION=	0.2.8
@@ -14,7 +14,4 @@ COMMENT=	Perl module implementing simple file locking
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		LockFile::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
