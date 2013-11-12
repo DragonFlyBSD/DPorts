@@ -1,5 +1,5 @@
 # Created by: lbr@FreeBSD.org
-# $FreeBSD: www/p5-Catalyst-Plugin-Cache/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Cache/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-Cache
 PORTVERSION=	0.12
@@ -14,7 +14,6 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.8000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 		p5-Test-WWW-Mechanize-Catalyst>=0:${PORTSDIR}/devel/p5-Test-WWW-Mechanize-Catalyst
@@ -22,15 +21,6 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 USES=		perl5
 USE_PERL5=	configure patch
 
-MAN3=	Catalyst::Plugin::Cache.3 \
-	Catalyst::Plugin::Cache::Backend.3 \
-	Catalyst::Plugin::Cache::Backend::Memory.3 \
-	Catalyst::Plugin::Cache::Choose::KeyRegexes.3 \
-	Catalyst::Plugin::Cache::Curried.3 \
-	Catalyst::Plugin::Cache::Store.3 \
-	Catalyst::Plugin::Cache::Store::Memory.3
-
-NO_STAGE=	yes
 post-patch:
 	@${PERL} -i.bak -ne 'print unless m,ok|Test::,' ${WRKSRC}/Makefile.PL
 
