@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: devel/svn2git/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/svn2git/Makefile 332616 2013-11-03 15:14:00Z dbn $
 
 PORTNAME=	svn2git
 DISTVERSION=	1.0.10
@@ -24,7 +24,6 @@ FREEBSD_REPO_DESC=	FreeBSD-repo only mode
 
 PLIST_FILES=	bin/svn2git
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREEBSD_REPO}
@@ -38,6 +37,6 @@ do-configure:
 	(cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS} fast-export2.pro)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/svn2git ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/svn2git ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
