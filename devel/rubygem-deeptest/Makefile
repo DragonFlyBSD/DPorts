@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-deeptest/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-deeptest/Makefile 332035 2013-10-30 02:31:04Z swills $
 
 PORTNAME=	deep_test
 PORTVERSION=	1.2.2
@@ -13,5 +13,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/deep_test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
