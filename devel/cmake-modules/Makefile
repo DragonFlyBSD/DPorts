@@ -1,7 +1,7 @@
 # Created by: gahr
-# $FreeBSD: devel/cmake-modules/Makefile 331379 2013-10-23 12:17:50Z gahr $
+# $FreeBSD: devel/cmake-modules/Makefile 332891 2013-11-05 18:34:22Z rakuco $
 
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMESUFFIX=	-modules
 
 COMMENT=	Modules and Templates for CMake
