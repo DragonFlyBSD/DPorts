@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/freetds-devel/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/freetds-devel/Makefile 333092 2013-11-07 13:35:43Z wg $
 
 PORTNAME=	freetds
 PORTVERSION=	0.92.79
@@ -28,7 +28,7 @@ MAN1=		datacopy.1 freebcp.1 tsql.1 bsqldb.1 bsqlodbc.1 \
 MAN5=		freetds.conf.5
 
 # OPTIONS_DEFINE=	OPENSSL GNUTLS IODBC UNIXODBC MSDBLIB
-OPTIONS_DEFINE=	MSDBLIB
+OPTIONS_DEFINE=	MSDBLIB ODBCWIDE
 
 OPTIONS_SINGLE=	ODBC SSL
 OPTIONS_SINGLE_ODBC=	IODBC UNIXODBC
@@ -41,6 +41,7 @@ GNUTLS_DESC=	Use GnuTLS
 IODBC_DESC=	Depend on iodbc
 UNIXODBC_DESC=	Depend on unixodbc
 MSDBLIB_DESC=	MS SQL Server compatibility (breaks databases/sybtcl)
+ODBCWIDE_DESC=	Enable Wide ODBC Support
 
 CONFLICTS=	freetds-0.64.[0-9]
 
@@ -50,6 +51,10 @@ NO_STAGE=	yes
 .if ${PORT_OPTIONS:MOPENSSL}
 USE_OPENSSL=	yes
 CONFIGURE_ARGS+=--with-openssl=${OPENSSLBASE}
+.endif
+
+.if ${PORT_OPTIONS:MODBCWIDE}
+CONFIGURE_ARGS+=	--enable-odbc-wide
 .endif
 
 .if ${PORT_OPTIONS:MGNUTLS}
