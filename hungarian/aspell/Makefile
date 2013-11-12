@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: hungarian/aspell/Makefile 327735 2013-09-20 18:43:02Z bapt $
+# $FreeBSD: hungarian/aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-hu-0.99.4.2-0
@@ -12,6 +12,5 @@ COMMENT=	Aspell Hungarian dictionaries
 
 DICT=	 	hu
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
