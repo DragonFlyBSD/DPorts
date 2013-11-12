@@ -1,8 +1,9 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mailman/Makefile 330764 2013-10-18 18:34:09Z mandree $
 
 PORTNAME=	mailman
-DISTVERSION=	2.1.15
+DISTVERSION=	2.1.16
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNU} \
 		SF/${PORTNAME}/Mailman%202.1%20%28stable%29/${PORTVERSION} \
@@ -20,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/gnu-COPYING-GPL
 CONFLICTS=	ja-mailman-2.1.*
 
 USE_AUTOTOOLS=	autoconf
-USE_PYTHON=	yes
+USE_PYTHON=	2.7
 USE_RC_SUBR=	mailman
 
 GNU_CONFIGURE_PREFIX=	${MAILMANDIR}
@@ -47,7 +48,7 @@ USERS=		${MM_USERNAME}
 GROUPS=		${MM_GROUPNAME}
 
 MAILMANDIR=	${PREFIX}/${MM_DIR}
-PLIST_SUB=	MMDIR=${MM_DIR} IMGDIR=${IMGDIR}
+PLIST_SUB=	MMDIR=${MM_DIR} IMGDIR=${IMGDIR} MM_USERNAME=${MM_USERNAME} MM_GROUPNAME=${MM_GROUPNAME}
 SUB_FILES=	pkg-message pkg-install pkg-deinstall
 SUB_LIST=	MAILMANDIR=${MAILMANDIR} USER=${MM_USERNAME} GROUP=${MM_GROUPNAME}
 
@@ -73,7 +74,6 @@ HTDIG_DESC=	- EXPERIMENTAL - htdig integration patches
 NAMAZU2_DESC=	Make private archives searchable with namazu2
 MTA_DESC=	Integrate with which MTA?
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -153,29 +153,40 @@ pre-configure:
 .endif
 
 post-install:
-	@${RM} -f ${MAILMANDIR}/pythonlib/*.egg-info
-.for dir in cron scripts
-	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${MAILMANDIR}/${dir}
+.for i in admindb admin confirm create edithtml listinfo options private \
+	rmlist roster subscribe
+	${STRIP_CMD} ${STAGEDIR}${MAILMANDIR}/cgi-bin/${i}
 .endfor
-	@${CHGRP} -R ${MM_GROUPNAME} ${MAILMANDIR}
-	@${MKDIR} ${PREFIX}/${IMGDIR}
-.for imgfile in ${IMGFILES}
-	@${CP} ${MAILMANDIR}/icons/${imgfile} ${PREFIX}/${IMGDIR}
-.endfor
-	@uudecode -p ${FILESDIR}/powerlogo.gif.uue > \
-	  ${PREFIX}/${IMGDIR}/powerlogo.gif
-.if ${PORT_OPTIONS:MDOCS}
-	@${CP} -R ${WRKSRC}/doc/* ${WRKSRC}/
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${FILESDIR}/FreeBSD-post-install-notes ${DOCSDIR}
-.for docfile in ${PORTDOCS:NFreeBSD-post-install-notes}
-	@${INSTALL_DATA} ${WRKSRC}/${docfile} ${DOCSDIR}
+.if ${PORT_OPTIONS:MHTDIG}
+.for i in htdig mmsearch
+	${STRIP_CMD} ${STAGEDIR}${MAILMANDIR}/cgi-bin/${i}
 .endfor
 .endif
-	@${MKDIR} ${PYTHON_SITELIBDIR}
-	@${ECHO} "This marker file ensures that Python's upgrade-site-packages works." >${PYTHON_SITELIBDIR}/mailman-info.txt
-	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-	@${CAT} ${PKGMESSAGE}
+	${STRIP_CMD} ${STAGEDIR}${MAILMANDIR}/mail/mailman
+# Compile additional Python scripts:
+.for dir in bin
+	(cd ${STAGEDIR}${MAILMANDIR} \
+	    && ${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+	    -d ${MAILMANDIR}/${dir} ${dir})
+.endfor
+	@${RM} -f ${STAGEDIR}${MAILMANDIR}/pythonlib/*.egg-info
+	@${RM} -f ${STAGEDIR}${MAILMANDIR}/Mailman/mm_cfg.pyc
+	${MKDIR} ${STAGEDIR}${PREFIX}/${IMGDIR}
+.for imgfile in ${IMGFILES}
+	${CP} ${STAGEDIR}${MAILMANDIR}/icons/${imgfile} ${STAGEDIR}${PREFIX}/${IMGDIR}
+.endfor
+	uudecode -p ${FILESDIR}/powerlogo.gif.uue > \
+	  ${STAGEDIR}${PREFIX}/${IMGDIR}/powerlogo.gif
+.if ${PORT_OPTIONS:MDOCS}
+	${CP} -R ${WRKSRC}/doc/* ${WRKSRC}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${FILESDIR}/FreeBSD-post-install-notes ${STAGEDIR}${DOCSDIR}
+.for docfile in ${PORTDOCS:NFreeBSD-post-install-notes}
+	${INSTALL_DATA} ${WRKSRC}/${docfile} ${STAGEDIR}${DOCSDIR}
+.endfor
+.endif
+	${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+	${ECHO} "This marker file ensures that Python's upgrade-site-packages handles ${PKGNAME}." >${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/mailman-info.txt
 .if ${PORT_OPTIONS:MPOSTFIX}
 	@if [ "x`${LOCALBASE}/sbin/postconf -h myhostname`" != "xlocalhost" ]; then \
 		${ECHO_CMD} ""; \
