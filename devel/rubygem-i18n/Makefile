@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-i18n/Makefile 331450 2013-10-24 01:45:27Z swills $
+# $FreeBSD: devel/rubygem-i18n/Makefile 332038 2013-10-30 02:36:45Z swills $
 
 PORTNAME=	i18n
 PORTVERSION=	0.6.5
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
