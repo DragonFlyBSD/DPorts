@@ -1,5 +1,5 @@
 # Created by: Jim Geovedi <jim@corebsd.or.id>
-# $FreeBSD: security/p5-SHA/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-SHA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	SHA
 PORTVERSION=	2.01
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SHA.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
