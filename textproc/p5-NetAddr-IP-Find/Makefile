@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@FreeBSD.org.ua>
-# $FreeBSD: textproc/p5-NetAddr-IP-Find/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-NetAddr-IP-Find/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	NetAddr-IP-Find
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ USES=		perl5
 USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
-MAN3=		NetAddr::IP::Find.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
