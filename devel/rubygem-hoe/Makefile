@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-hoe/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-hoe/Makefile 332038 2013-10-30 02:36:45Z swills $
 
 PORTNAME=	hoe
 PORTVERSION=	3.6.3
@@ -15,5 +15,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/sow
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
