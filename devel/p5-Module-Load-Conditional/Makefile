@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Load-Conditional/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Load-Conditional/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Load-Conditional
 PORTVERSION=	0.58
@@ -19,9 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Load::Conditional.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501600
