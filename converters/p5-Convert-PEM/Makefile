@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: converters/p5-Convert-PEM/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Convert-PEM/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Convert-PEM
 PORTVERSION=	0.08
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Convert::PEM.3 Convert::PEM::CBC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
