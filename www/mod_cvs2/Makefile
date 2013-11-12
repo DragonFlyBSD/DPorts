@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_cvs2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_cvs2/Makefile 333454 2013-11-10 23:11:59Z ohauer $
 
 PORTNAME=	mod_cvs
 PORTVERSION=	0.5.91
@@ -9,10 +9,7 @@ MASTER_SITES=	http://resare.com/noa/mod_cvs/dist/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 
 MAINTAINER=	apache@FreeBSD.org
-COMMENT=	A module that makes Apache 2 CVS aware
-
-
-LATEST_LINK=	mod_cvs2
+COMMENT=	Module that makes Apache 2 CVS aware
 
 USE_APACHE=	22+
 AP_FAST_BUILD=	yes
@@ -20,14 +17,11 @@ AP_GENPLIST=	yes
 
 PORTDOCS=	reference.html guide.html README
 
-NO_STAGE=	yes
 post-install:
-.if !defined (NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-.   for f in ${PORTDOCS:NREADME}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}/
-.   endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+.for f in ${PORTDOCS:NREADME}
+	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${STAGEDIR}${DOCSDIR}
+.endfor
 
 .include <bsd.port.mk>
