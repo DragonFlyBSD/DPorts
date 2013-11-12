@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: databases/p5-DBIx-Class-QueryProfiler/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-QueryProfiler/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 PORTNAME=	DBIx-Class-QueryProfiler
 PORTVERSION=	0.05
 CATEGORIES=	databases perl5
@@ -15,13 +15,9 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install \
 		p5-DBIx-Class>=0:${PORTSDIR}/databases/p5-DBIx-Class
 RUN_DEPENDS=	p5-DBIx-Class>=0:${PORTSDIR}/databases/p5-DBIx-Class
-
 TEST_DEPENDS=	p5-Test-Perl-Critic>=0:${PORTSDIR}/textproc/p5-Test-Perl-Critic
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBIx::Class::QueryProfiler.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
