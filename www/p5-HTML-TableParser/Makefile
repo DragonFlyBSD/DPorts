@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/p5-HTML-TableParser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-TableParser/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	HTML-TableParser
 PORTVERSION=	0.38
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::TableParser.3 HTML::TableParser::Table.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
