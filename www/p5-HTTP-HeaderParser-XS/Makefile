@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-HeaderParser-XS/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-HeaderParser-XS/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-HeaderParser-XS
 PORTVERSION=	0.20
@@ -15,7 +15,4 @@ USE_PERL5=	configure
 
 MAKE_ARGS+=	CC=${CXX} LD=${CXX}
 
-MAN3=		HTTP::HeaderParser::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
