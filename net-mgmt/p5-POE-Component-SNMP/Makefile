@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-mgmt/p5-POE-Component-SNMP/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-POE-Component-SNMP/Makefile 332836 2013-11-05 12:02:05Z vanilla $
 
 PORTNAME=	POE-Component-SNMP
 PORTVERSION=	1.1006
@@ -17,9 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::SNMP.3
-
-NO_STAGE=	yes
 post-patch:
 	@${TOUCH} ${WRKSRC}/config.cache
 
