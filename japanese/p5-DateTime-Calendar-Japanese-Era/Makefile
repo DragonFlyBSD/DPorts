@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-DateTime-Calendar-Japanese-Era/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-DateTime-Calendar-Japanese-Era/Makefile 332754 2013-11-04 18:14:53Z antoine $
 
 PORTNAME=	DateTime-Calendar-Japanese-Era
 PORTVERSION=	0.08001
@@ -9,6 +9,9 @@ MASTER_SITES=	CPAN
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	DateTime Extension for Japanese Eras
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable \
@@ -23,9 +26,6 @@ TEST_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Calendar::Japanese::Era.3
-
-NO_STAGE=	yes
 post-patch:
 	@${RM} -rf ${WRKSRC}/inc
 
