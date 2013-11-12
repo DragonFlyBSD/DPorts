@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: science/p5-Chemistry-Elements/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-Elements/Makefile 332938 2013-11-06 01:32:11Z vanilla $
 
 PORTNAME=	Chemistry-Elements
 PORTVERSION=	1.07
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for working with Chemical Elements
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Chemistry::Elements.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
