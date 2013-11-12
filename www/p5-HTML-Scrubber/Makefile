@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Scrubber/Makefile 330142 2013-10-12 16:40:00Z sunpoet $
+# $FreeBSD: www/p5-HTML-Scrubber/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Scrubber
 PORTVERSION=	0.11
@@ -13,10 +13,7 @@ COMMENT=	Perl extension for scrubbing/sanitizing html
 BUILD_DEPENDS=	p5-HTML-Parser>=3.47:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	modbuild
-
-MAN3=		HTML::Scrubber.3
 
 .include <bsd.port.mk>
