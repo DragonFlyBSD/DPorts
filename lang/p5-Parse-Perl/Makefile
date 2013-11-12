@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: lang/p5-Parse-Perl/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Parse-Perl/Makefile 332724 2013-11-04 14:20:04Z vanilla $
 
 PORTNAME=	Parse-Perl
 PORTVERSION=	0.007
@@ -11,8 +11,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interpret string as Perl source
 
 BUILD_DEPENDS=	p5-Devel-CallChecker>=0.003:${PORTSDIR}/devel/p5-Devel-CallChecker
-RUN_DEPENDS=	p5-Devel-CallChecker>=0.003:${PORTSDIR}/devel/p5-Devel-CallChecker
-
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Devel-Declare>=0:${PORTSDIR}/devel/p5-Devel-Declare \
 		p5-Lexical-Import>=0:${PORTSDIR}/devel/p5-Lexical-Import \
 		p5-Sub-Identify>=0:${PORTSDIR}/devel/p5-Sub-Identify
@@ -20,9 +19,4 @@ TEST_DEPENDS=	p5-Devel-Declare>=0:${PORTSDIR}/devel/p5-Devel-Declare \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parse::Perl.3 \
-		Parse::Perl::CopHintsHash.3 \
-		Parse::Perl::Environment.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
