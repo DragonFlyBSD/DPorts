@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-Primes/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Primes/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-Primes
 PORTVERSION=	0.50
@@ -16,8 +16,4 @@ BUILD_DEPENDS=	p5-Crypt-Random>=0:${PORTSDIR}/security/p5-Crypt-Random \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		largeprimes.1
-MAN3=		Crypt::Primes.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
