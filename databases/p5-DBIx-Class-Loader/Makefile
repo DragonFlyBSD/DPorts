@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Loader/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-Loader/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBIx-Class-Loader
 PORTVERSION=	0.21
@@ -21,13 +21,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::Loader.3 \
-	DBIx::Class::Loader::DB2.3 \
-	DBIx::Class::Loader::Generic.3 \
-	DBIx::Class::Loader::Pg.3 \
-	DBIx::Class::Loader::SQLite.3 \
-	DBIx::Class::Loader::Writing.3 \
-	DBIx::Class::Loader::mysql.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
