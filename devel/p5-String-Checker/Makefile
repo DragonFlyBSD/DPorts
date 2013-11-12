@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-String-Checker/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Checker/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	String-Checker
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Checker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
