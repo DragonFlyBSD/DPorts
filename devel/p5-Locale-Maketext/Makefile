@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: devel/p5-Locale-Maketext/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Locale-Maketext/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Locale-Maketext
 PORTVERSION=	1.23
@@ -19,11 +19,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Locale::Maketext.3 \
-		Locale::Maketext::Cookbook.3 \
-		Locale::Maketext::Guts.3 \
-		Locale::Maketext::GutsLoader.3 \
-		Locale::Maketext::TPJ13.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
