@@ -1,8 +1,8 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-Truncate/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-String-Truncate/Makefile 333254 2013-11-08 18:22:35Z lth $
 
 PORTNAME=	String-Truncate
-PORTVERSION=	1.100600
+PORTVERSION=	1.100601
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Truncate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
