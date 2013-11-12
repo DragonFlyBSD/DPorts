@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBIx-Class-Schema-PopulateMore
 PORTVERSION=	0.17
@@ -30,26 +30,6 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::Schema::PopulateMore.3 \
-	DBIx::Class::Schema::PopulateMore::Command.3 \
-	DBIx::Class::Schema::PopulateMore::Inflator.3 \
-	DBIx::Class::Schema::PopulateMore::Inflator::Date.3 \
-	DBIx::Class::Schema::PopulateMore::Inflator::Env.3 \
-	DBIx::Class::Schema::PopulateMore::Inflator::Find.3 \
-	DBIx::Class::Schema::PopulateMore::Inflator::Index.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result::Company.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result::CompanyPerson.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result::EmploymentHistory.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result::FriendList.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result::Gender.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::Result::Person.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::ResultSet.3 \
-	DBIx::Class::Schema::PopulateMore::Test::Schema::ResultSet::Person.3 \
-	DBIx::Class::Schema::PopulateMore::Visitor.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
