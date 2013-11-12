@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: mail/p5-Log-Procmail/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: mail/p5-Log-Procmail/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Log-Procmail
 PORTVERSION=	0.12
@@ -12,17 +12,13 @@ COMMENT=	Perl extension for reading procmail logfiles
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN1=		mailstat.pl.1
-MAN3=		Log::Procmail.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
