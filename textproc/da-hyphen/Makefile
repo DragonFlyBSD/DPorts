@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/da-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
+# $FreeBSD: textproc/da-hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.09.30
@@ -14,7 +14,7 @@ COMMENT=	Danish hyphenation rules
 
 LICENSE=	LGPL21
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
