@@ -1,5 +1,5 @@
 # Created by: Bill Swingle <unfurl@FreeBSD.org>
-# $FreeBSD: www/p5-Compress-LeadingBlankSpaces/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Compress-LeadingBlankSpaces/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Compress-LeadingBlankSpaces
 PORTVERSION=	0.06
@@ -13,7 +13,4 @@ COMMENT=	Perl class to compress leading blank spaces in web content
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Compress::LeadingBlankSpaces.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
