@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-BIND-Config-Parser/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-BIND-Config-Parser/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	BIND-Config-Parser
 PORTVERSION=	0.01
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	BIND::Config::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
