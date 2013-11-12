@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/pycount/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pycount/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	pycount
 PORTVERSION=	0.0.6
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	#
 DIST_SUBDIR=	python
 
 MAINTAINER=	lwhsu@FreeBSD.org
-COMMENT=	A very initial effort to Python code metrics
+COMMENT=	Initial effort to Python code metrics
 
 USE_DOS2UNIX=	yes
 USE_PYTHON=	yes
