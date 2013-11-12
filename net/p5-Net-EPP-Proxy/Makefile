@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-EPP-Proxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-EPP-Proxy/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-EPP-Proxy
 PORTVERSION=	0.04
@@ -15,16 +15,9 @@ BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 		p5-Net-EPP>=0.03:${PORTSDIR}/net/p5-Net-EPP \
 		p5-Net-Server>=0:${PORTSDIR}/net/p5-Net-Server \
 		p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
-RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
-		p5-IO-Multiplex>=0:${PORTSDIR}/devel/p5-IO-Multiplex \
-		p5-Net-EPP>=0.03:${PORTSDIR}/net/p5-Net-EPP \
-		p5-Net-Server>=0:${PORTSDIR}/net/p5-Net-Server \
-		p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
-
-MAN3=	Net::EPP::Proxy.3
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
