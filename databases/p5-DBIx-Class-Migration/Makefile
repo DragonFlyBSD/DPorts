@@ -1,7 +1,7 @@
-# $FreeBSD: databases/p5-DBIx-Class-Migration/Makefile 331811 2013-10-27 22:32:46Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-Class-Migration/Makefile 332347 2013-11-01 10:17:58Z kuriyama $
 
 PORTNAME=	DBIx-Class-Migration
-PORTVERSION=	0.043
+PORTVERSION=	0.044
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
