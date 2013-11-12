@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Frame/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Frame/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Frame
 PORTVERSION=	1.09
@@ -19,16 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Frame.3 Net::Frame::Layer.3 \
-		Net::Frame::Layer::ARP.3 \
-		Net::Frame::Layer::ETH.3 \
-		Net::Frame::Layer::IPv4.3 \
-		Net::Frame::Layer::NULL.3 \
-		Net::Frame::Layer::PPP.3 \
-		Net::Frame::Layer::RAW.3 \
-		Net::Frame::Layer::SLL.3 \
-		Net::Frame::Layer::TCP.3 \
-		Net::Frame::Layer::UDP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
