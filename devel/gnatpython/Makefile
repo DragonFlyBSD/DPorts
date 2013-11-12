@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gnatpython/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gnatpython/Makefile 333376 2013-11-10 11:09:05Z marino $
 
 PORTNAME=	gnatpython
 PORTVERSION=	${SNAPSHOT}
@@ -16,5 +16,4 @@ USE_PYTHON=		2.6+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	1.2
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
