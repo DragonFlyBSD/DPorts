@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: lang/p5-JSAN/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-JSAN/Makefile 332724 2013-11-04 14:20:04Z vanilla $
 
 PORTNAME=	JSAN
 PORTVERSION=	0.07
@@ -27,9 +27,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	JSAN::Shell.3 JSAN.3 JSAN::Indexer::Creator.3 JSAN::Indexer.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "40 s,new,new(\'jsan\')," ${WRKSRC}/lib/JSAN.pm
 	${FIND} ${WRKSRC}/lib -name "*.bak" -delete
