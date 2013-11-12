@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: www/p5-Template-Toolkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Toolkit/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	Template-Toolkit
 PORTVERSION=	2.25
@@ -12,7 +12,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extensive Toolkit for template processing
 
 BUILD_DEPENDS=	p5-AppConfig>=1.56:${PORTSDIR}/devel/p5-AppConfig
-RUN_DEPENDS=	p5-AppConfig>=1.56:${PORTSDIR}/devel/p5-AppConfig
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Image-Size>=0:${PORTSDIR}/graphics/p5-Image-Size \
 		p5-Pod-POM>=0:${PORTSDIR}/textproc/p5-Pod-POM
 
@@ -25,9 +25,6 @@ POD_POM_DESC=		With Pod::POM Plugin
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	TT_ACCEPT=y
-
-NO_STAGE=	yes
-.include "Makefile.man"
 
 .include <bsd.port.options.mk>
 
