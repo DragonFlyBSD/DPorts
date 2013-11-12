@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: lang/p5-Quantum-Superpositions/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Quantum-Superpositions/Makefile 332724 2013-11-04 14:20:04Z vanilla $
 
 PORTNAME=	Quantum-Superpositions
 PORTVERSION=	2.02
@@ -13,10 +13,7 @@ COMMENT=	QM-like superpositions in Perl
 BUILD_DEPENDS=	p5-Class-Multimethods>=0:${PORTSDIR}/devel/p5-Class-Multimethods
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Quantum::Superpositions.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
