@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/rubygem-builder31/Makefile 331508 2013-10-24 18:21:31Z swills $
+# $FreeBSD: devel/rubygem-builder31/Makefile 332034 2013-10-30 02:29:22Z swills $
 
 PORTNAME=	builder
 PORTVERSION=	3.1.0
@@ -15,6 +15,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PKGNAMESUFFIX=	31
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
