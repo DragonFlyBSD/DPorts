@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-mixin/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-mixin/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	mixin
 PORTVERSION=	0.07
@@ -16,7 +16,4 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		mixin.3 mixin::with.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
