@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-popen4/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-popen4/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	popen4
 PORTVERSION=	0.1.4
@@ -18,5 +18,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 GEM_NAME=	POpen4-${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
