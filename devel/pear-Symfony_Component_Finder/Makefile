@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-Symfony_Component_Finder/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Symfony_Component_Finder/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	Finder
 PORTVERSION=	2.1.2
@@ -13,7 +13,6 @@ LICENSE=	MIT
 
 IGNORE_WITH_PHP=52
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-symfony2/bsd.symfony2.mk"
 .include <bsd.port.post.mk>
