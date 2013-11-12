@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Prototype/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Prototype/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Sub-Prototype
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Set a subs prototype
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Sub::Prototype.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
