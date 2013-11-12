@@ -1,7 +1,7 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: sysutils/rsyslog6-relp/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rsyslog6-relp/Makefile 333306 2013-11-09 15:57:18Z wg $
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	RELP input/output module for rsyslog
 MASTERDIR=	${.CURDIR}/../rsyslog6
