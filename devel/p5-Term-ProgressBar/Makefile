@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-ProgressBar
 PORTVERSION=	2.14
@@ -22,9 +22,6 @@ TEST_DEPENDS=	p5-Capture-Tiny>=0.13:${PORTSDIR}/devel/p5-Capture-Tiny \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::ProgressBar.3
-
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|Term-ProgressBar|Term/ProgressBar|' ${WRKSRC}/Makefile.PL
 
@@ -32,8 +29,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
