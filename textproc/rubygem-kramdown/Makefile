@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@rubick>
-# $FreeBSD: textproc/rubygem-kramdown/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-kramdown/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	kramdown
 PORTVERSION=	1.0.2
@@ -14,5 +14,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/kramdown
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
