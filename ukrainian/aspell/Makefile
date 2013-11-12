@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: ukrainian/aspell/Makefile 327774 2013-09-20 23:19:33Z bapt $
+# $FreeBSD: ukrainian/aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-uk-1.4.0-0
@@ -12,6 +12,5 @@ COMMENT=	Aspell Ukrainian dictionaries
 
 DICT=	 	uk
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
