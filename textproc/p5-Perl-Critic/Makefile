@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Perl-Critic/Makefile 331885 2013-10-28 18:40:16Z sunpoet $
+# $FreeBSD: textproc/p5-Perl-Critic/Makefile 332877 2013-11-05 17:55:45Z sunpoet $
 
 PORTNAME=	Perl-Critic
-PORTVERSION=	1.12.0
+PORTVERSION=	1.12.1
 CATEGORIES=	textproc devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
