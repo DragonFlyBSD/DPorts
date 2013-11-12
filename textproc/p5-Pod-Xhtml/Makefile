@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Pod-Xhtml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Pod-Xhtml/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Pod-Xhtml
 PORTVERSION=	1.61
@@ -17,8 +17,4 @@ TEST_DEPENDS=	p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pod2xhtml.1
-MAN3=		Pod::Hyperlink::BounceURL.3 Pod::Xhtml.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
