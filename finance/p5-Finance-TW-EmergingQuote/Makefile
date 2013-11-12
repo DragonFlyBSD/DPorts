@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: finance/p5-Finance-TW-EmergingQuote/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Finance-TW-EmergingQuote/Makefile 332622 2013-11-03 16:08:07Z az $
 
 PORTNAME=	Finance-TW-EmergingQuote
 PORTVERSION=	0.26
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Finance::TW::EmergingQuote.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
