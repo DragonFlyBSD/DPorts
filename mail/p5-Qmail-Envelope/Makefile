@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: mail/p5-Qmail-Envelope/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Qmail-Envelope/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Qmail-Envelope
 PORTVERSION=	0.53
@@ -14,7 +14,4 @@ COMMENT=	Examine and modify qmail envelope strings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Qmail::Envelope.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
