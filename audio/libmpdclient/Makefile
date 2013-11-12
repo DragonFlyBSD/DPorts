@@ -1,15 +1,15 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/libmpdclient/Makefile 328503 2013-09-27 17:34:27Z gblach $
+# $FreeBSD: audio/libmpdclient/Makefile 333490 2013-11-11 12:43:41Z gblach $
 
 PORTNAME=	libmpdclient
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	audio
 MASTER_SITES=	http://www.musicpd.org/download/libmpdclient/2/
 
 MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	API library for interfacing MPD
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix
 USE_LDCONFIG=	yes
