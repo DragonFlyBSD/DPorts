@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/p5-CDDB-File/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-CDDB-File/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	CDDB-File
 PORTVERSION=	1.05
@@ -12,9 +12,6 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse a CDDB/freedb data file
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		CDDB::File.3
 
 .include <bsd.port.mk>
