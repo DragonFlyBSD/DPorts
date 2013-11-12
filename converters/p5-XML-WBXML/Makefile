@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: converters/p5-XML-WBXML/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-XML-WBXML/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	XML-WBXML
 PORTVERSION=	0.03
@@ -12,12 +12,9 @@ COMMENT=	Convert between XML and WBXML using libwbxml2
 
 LIB_DEPENDS=	wbxml2:${PORTSDIR}/textproc/wbxml2
 
-MAN3=	XML::WBXML.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,-I.,-I. -I${LOCALBASE}/include,' ${WRKSRC}/Makefile.PL
 
