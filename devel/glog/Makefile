@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/glog/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/glog/Makefile 333122 2013-11-07 15:37:32Z clsung $
 
 PORTNAME=	glog
 PORTVERSION=	0.3.3
@@ -13,14 +13,13 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		gflags:${PORTSDIR}/devel/gflags
 
 GNU_CONFIGURE=	yes
-USES=	pathfix
+USES=		pathfix
 USE_LDCONFIG=	yes
 PROJECTHOST=	google-glog
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -30,7 +29,7 @@ post-patch:
 	    ${WRKSRC}/Makefile.in
 .endif
 
-#regression-test:
-#	cd ${WRKSRC}; ${MAKE} check
+regression-test:
+	cd ${WRKSRC}; ${MAKE} check
 
 .include <bsd.port.post.mk>
