@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: www/p5-Catalyst-Authentication-Credential-OpenID/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Authentication-Credential-OpenID/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	Catalyst-Authentication-Credential-OpenID
 PORTVERSION=	0.19
@@ -22,9 +22,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Authentication::Credential::OpenID.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/Module::Install::AuthorTests/d' ${WRKSRC}/Makefile.PL
 
