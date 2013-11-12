@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-gitlab-grit/Makefile 331550 2013-10-25 03:01:52Z swills $
+# $FreeBSD: textproc/rubygem-gitlab-grit/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	gitlab-grit
 PORTVERSION=	2.6.0
@@ -17,6 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
