@@ -1,11 +1,10 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-Linode/Makefile 331694 2013-10-26 14:31:08Z sunpoet $
+# $FreeBSD: www/p5-WebService-Linode/Makefile 333227 2013-11-08 14:14:12Z sunpoet $
 
 PORTNAME=	WebService-Linode
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	www
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	WebService
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
