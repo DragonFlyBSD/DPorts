@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: textproc/p5-Lingua-PT-Stemmer/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Lingua-PT-Stemmer/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Lingua-PT-Stemmer
 PORTVERSION=	0.01
@@ -13,7 +13,4 @@ COMMENT=	Stemmers for Portuguese and Galician
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Lingua::GL::Stemmer.3 Lingua::PT::Stemmer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
