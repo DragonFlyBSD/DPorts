@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: net/p5-Net-NBName/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-NBName/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-NBName
 PORTVERSION=	0.26
@@ -12,8 +12,5 @@ COMMENT=	Performs simple NetBIOS Name Service Requests
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=	Net::NBName.3 Net::NBName::NameQuery.3 Net::NBName::NameQuery::RR.3 \
-	Net::NBName::NodeStatus.3 Net::NBName::NodeStatus::RR.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
