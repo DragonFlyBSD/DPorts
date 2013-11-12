@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-phing/Makefile 327839 2013-09-21 19:50:03Z mm $
+# $FreeBSD: devel/pear-phing/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	phing
 PORTVERSION=	2.6.1
@@ -18,7 +18,6 @@ IGNORE_WITH_PHP=52
 BUILD_DEPENDS+= ${PEARDIR}/.channels/pear.phing.info.reg:${PORTSDIR}/devel/pear-channel-phing
 RUN_DEPENDS+= ${PEARDIR}/.channels/pear.phing.info.reg:${PORTSDIR}/devel/pear-channel-phing
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
