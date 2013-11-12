@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Eval-Closure/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Eval-Closure/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	Eval-Closure
 PORTVERSION=	0.11
@@ -24,7 +24,4 @@ TEST_DEPENDS=	p5-Devel-LexAlias>=0.05:${PORTSDIR}/devel/p5-Devel-LexAlias \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Eval::Closure.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
