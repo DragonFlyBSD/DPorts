@@ -1,4 +1,4 @@
-# $FreeBSD: misc/rubygem-dotenv/Makefile 331014 2013-10-20 13:11:22Z swills $
+# $FreeBSD: misc/rubygem-dotenv/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	dotenv
 PORTVERSION=	0.9.0
@@ -14,6 +14,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/dotenv
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
