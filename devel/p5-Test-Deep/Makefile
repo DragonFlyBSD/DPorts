@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: devel/p5-Test-Deep/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Deep/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Deep
 PORTVERSION=	0.110
@@ -18,9 +18,6 @@ USES=		perl5
 USE_PERL5=	configure
 REINPLACE_ARGS=	-i ''
 
-MAN3=		Test::Deep.3 Test::Deep::NoTest.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/return (/s/;/);/' ${WRKSRC}/lib/Test/Deep/RegexpOnly.pm
 
