@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-MHTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-MHTTP/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-MHTTP
 PORTVERSION=	0.15
@@ -16,9 +16,6 @@ USE_OPENSSL=	yes
 CONFIGURE_ENV=	GOTSSL=yes
 CONFIGURE_ARGS=	--default
 
-MAN3=		HTTP::MHTTP.3
-
-NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's!(?<=POSSIBLE_SSL_DIRS = qw\().*(?=\);)!${OPENSSLBASE}!;' \
 		${WRKSRC}/Makefile.PL
