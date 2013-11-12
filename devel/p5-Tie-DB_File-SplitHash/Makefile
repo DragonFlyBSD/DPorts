@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Tie-DB_File-SplitHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-DB_File-SplitHash/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Tie-DB_File-SplitHash
 PORTVERSION=	1.05
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Tie::DB_File::SplitHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
