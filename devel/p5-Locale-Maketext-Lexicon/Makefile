@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Locale-Maketext-Lexicon
 PORTVERSION=	0.96
@@ -18,35 +18,14 @@ RUN_DEPENDS=	p5-Locale-Maketext>=1.17:${PORTSDIR}/devel/p5-Locale-Maketext
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		xgettext.pl.1
-MAN3=		Locale::Maketext::Extract.3 \
-		Locale::Maketext::Extract::Plugin::Base.3 \
-		Locale::Maketext::Extract::Plugin::FormFu.3 \
-		Locale::Maketext::Extract::Plugin::Generic.3 \
-		Locale::Maketext::Extract::Plugin::Haml.3 \
-		Locale::Maketext::Extract::Plugin::Mason.3 \
-		Locale::Maketext::Extract::Plugin::PPI.3 \
-		Locale::Maketext::Extract::Plugin::Perl.3 \
-		Locale::Maketext::Extract::Plugin::TT2.3 \
-		Locale::Maketext::Extract::Plugin::TextTemplate.3 \
-		Locale::Maketext::Extract::Plugin::YAML.3 \
-		Locale::Maketext::Extract::Run.3 \
-		Locale::Maketext::Lexicon.3 \
-		Locale::Maketext::Lexicon::Auto.3 \
-		Locale::Maketext::Lexicon::Gettext.3 \
-		Locale::Maketext::Lexicon::Msgcat.3 \
-		Locale::Maketext::Lexicon::Tie.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	AUTHORS Changes README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
