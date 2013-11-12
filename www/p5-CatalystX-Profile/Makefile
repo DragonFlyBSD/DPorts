@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-CatalystX-Profile/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CatalystX-Profile/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	CatalystX-Profile
 PORTVERSION=	0.01
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Profile your Catalyst application with Devel::NYTProf
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.80020:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-CatalystX-InjectComponent>=0.024:${PORTSDIR}/www/p5-CatalystX-InjectComponent \
@@ -25,7 +28,4 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=5.80020:${PORTSDIR}/www/p5-Catalyst-Runtime \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CatalystX::Profile.3 CatalystX::Profile::Controller::ControlProfiling.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
