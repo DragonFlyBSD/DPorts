@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/p5-Class-DBI-AutoLoader/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-AutoLoader/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Class-DBI-AutoLoader
 PORTVERSION=	0.12
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Class::DBI::AutoLoader.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
