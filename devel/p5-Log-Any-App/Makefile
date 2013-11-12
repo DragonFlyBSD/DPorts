@@ -1,5 +1,5 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: devel/p5-Log-Any-App/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Any-App/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Any-App
 PORTVERSION=	0.43
@@ -25,7 +25,4 @@ TEST_DEPENDS=	p5-File-Slurp>=0:${PORTSDIR}/devel/p5-File-Slurp
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Log::Any::App.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
