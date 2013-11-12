@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Tree-Simple/Makefile 330132 2013-10-12 15:11:47Z sunpoet $
+# $FreeBSD: devel/p5-Tree-Simple/Makefile 333369 2013-11-10 10:10:14Z demon $
 
 PORTNAME=	Tree-Simple
-PORTVERSION=	1.22
+PORTVERSION=	1.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
