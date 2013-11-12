@@ -1,8 +1,9 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: deskutils/myitcrm/Makefile 331732 2013-10-26 20:54:28Z beech $
+# $FreeBSD: deskutils/myitcrm/Makefile 333457 2013-11-10 23:31:45Z beech $
 
 PORTNAME=	myitcrm
 PORTVERSION=	0.2.9.3
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/myitcrm/
 DISTNAME=	MyITCRM1-${PORTVERSION}
