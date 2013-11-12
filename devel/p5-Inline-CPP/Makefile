@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-CPP/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Inline-CPP/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Inline-CPP
 PORTVERSION=	0.45
@@ -19,11 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Inline::CPP.3 \
-		Inline::CPP::Config.3 \
-		Inline::CPP::grammar.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|g++|${CXX}|' ${WRKSRC}/Makefile.PL
 
