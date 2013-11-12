@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda-server/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/amanda-server/Makefile 333014 2013-11-06 17:28:33Z bapt $
 
 PORTNAME=	amanda
 PORTVERSION=	3.3.2
@@ -18,7 +18,6 @@ BUILD_DEPENDS=	perl-amanda:${PORTSDIR}/misc/amanda-perl-wrapper
 WRKSRC=		${WRKDIR}/amanda-${PORTVERSION}
 SLAVEDIRS=	misc/amanda-client
 
-LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig perl5
 USE_GNOME=	glib20
@@ -98,7 +97,7 @@ pre-fetch:
 	@${ECHO} "    AMANDA_DATES=path to client amandates file"
 	@${ECHO} ""
 
-CONFLICTS=	amanda-server-2.5.* amanda-server-2.6.* amanda-server-3.2.*
+CONFLICTS=	amanda-server-2.* amanda-server-3.2.* amanda2[56]-server-*
 
 BUILD_DEPENDS+=	${LOCALBASE}/lib/amanda/libamandad-${PORTVERSION}.so:${PORTSDIR}/misc/amanda-client
 RUN_DEPENDS+=	${LOCALBASE}/lib/amanda/libamandad-${PORTVERSION}.so:${PORTSDIR}/misc/amanda-client
@@ -176,7 +175,7 @@ pre-fetch:
 	@${ECHO} "    AMANDA_DATES=path to client amandates file"
 	@${ECHO} ""
 
-CONFLICTS=	amanda-client-2.5.* amanda-client-2.6.* amanda-client-3.2.*
+CONFLICTS=	amanda-client-2.* amanda-client-3.2.* amanda2[56]-client-*
 CONFIGURE_ARGS+=--without-server --with-amandates=${AMANDA_DATES}
 .if defined(AMANDA_NO_SNAPSHOT_DUMP)
 CFLAGS=		-DFreeBSD_NO_SNAPSHOT_DUMP=t
