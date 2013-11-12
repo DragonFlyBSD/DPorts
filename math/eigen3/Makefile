@@ -1,4 +1,4 @@
-# $FreeBSD: math/eigen3/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/eigen3/Makefile 333416 2013-11-10 17:46:39Z rakuco $
 
 PORTNAME=	eigen
 PORTVERSION=	3.2.0
@@ -20,5 +20,4 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-ffa86ffb5570
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
