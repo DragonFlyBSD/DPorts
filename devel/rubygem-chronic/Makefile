@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-chronic/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-chronic/Makefile 332034 2013-10-30 02:29:22Z swills $
 
 PORTNAME=	chronic
 PORTVERSION=	0.9.1
@@ -14,5 +14,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
