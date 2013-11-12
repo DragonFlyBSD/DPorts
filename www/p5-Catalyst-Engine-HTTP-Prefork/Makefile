@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Engine-HTTP-Prefork/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Engine-HTTP-Prefork/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Engine-HTTP-Prefork
 PORTVERSION=	0.51
@@ -20,9 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Engine::HTTP::Prefork.3
-
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -i '' -e 's/Cookie::XS/CGI::Cookie::XS/g' \
 		${WRKSRC}/lib/Catalyst/Engine/HTTP/Prefork/Handler.pm
