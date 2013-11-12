@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-File-HomeDir/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-HomeDir/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-HomeDir
 PORTVERSION=	1.00
@@ -19,16 +19,4 @@ RUN_DEPENDS=	p5-File-Which>=0.05:${PORTSDIR}/sysutils/p5-File-Which
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::HomeDir.3 \
-		File::HomeDir::Darwin.3 \
-		File::HomeDir::Darwin::Carbon.3 \
-		File::HomeDir::Darwin::Cocoa.3 \
-		File::HomeDir::Driver.3 \
-		File::HomeDir::FreeDesktop.3 \
-		File::HomeDir::MacOS9.3 \
-		File::HomeDir::Test.3 \
-		File::HomeDir::Unix.3 \
-		File::HomeDir::Windows.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
