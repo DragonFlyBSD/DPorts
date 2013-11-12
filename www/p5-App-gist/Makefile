@@ -1,5 +1,5 @@
 # Created by: Denny Lin <dennylin93@hs.ntnu.edu.tw>
-# $FreeBSD: www/p5-App-gist/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-App-gist/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	App-gist
 PORTVERSION=	0.15
@@ -26,8 +26,4 @@ CONFLICTS=	gist-[0-9]*
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		gist.1
-MAN3=		App::gist.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
