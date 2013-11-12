@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: sysutils/p5-Tie-Syslog/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Tie-Syslog/Makefile 332957 2013-11-06 08:54:17Z vanilla $
 
 PORTNAME=	Tie-Syslog
 PORTVERSION=	2.04.02
@@ -13,7 +13,4 @@ COMMENT=	Tie a filehandle to Syslog
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tie::Syslog.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
