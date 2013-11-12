@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/ladspa/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ladspa/Makefile 332236 2013-10-31 12:56:19Z arved $
 
 PORTNAME=	ladspa
 PORTVERSION=	1.13
@@ -16,11 +16,10 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING
 
 WRKSRC=		${WRKDIR}/ladspa_sdk
 USES=		gmake
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
 PROGRAM_FILES=	analyseplugin applyplugin listplugins
 PLUGIN_FILES=	amp.so delay.so filter.so noise.so sine.so
-PLUGIN_DIR?=	${PREFIX}/lib/ladspa/
+PLUGIN_DIR?=	${STAGEDIR}${PREFIX}/lib/ladspa/
 MAKEFILE=	makefile
 ALL_TARGET=	targets
 BUILD_WRKSRC=	${WRKSRC}/src
@@ -31,9 +30,9 @@ post-patch:
 		${WRKSRC}/src/makefile
 
 do-install:
-	@${INSTALL_DATA} ${WRKSRC}/src/ladspa.h ${PREFIX}/include
+	@${INSTALL_DATA} ${WRKSRC}/src/ladspa.h ${STAGEDIR}${PREFIX}/include
 .for file in ${PROGRAM_FILES}
-	@${INSTALL_PROGRAM} ${WRKSRC}/bin/${file} ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/bin/${file} ${STAGEDIR}${PREFIX}/bin
 .endfor
 	@${MKDIR} ${PLUGIN_DIR}
 .for file in ${PLUGIN_FILES}
