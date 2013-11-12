@@ -1,8 +1,9 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: ftp/curl/Makefile 331390 2013-10-23 15:31:27Z sunpoet $
+# $FreeBSD: ftp/curl/Makefile 332519 2013-11-02 17:23:44Z sunpoet $
 
 PORTNAME=	curl
 PORTVERSION=	7.33.0
+PORTREVISION=	1
 CATEGORIES=	ftp www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -30,8 +31,9 @@ TLS_SRP_DESC=	TLS-SRP (Secure Remote Password) support
 CONFIGURE_ARGS+=--disable-werror \
 		--enable-imap --enable-pop3 --enable-rtsp --enable-smtp \
 		--without-axtls
-CONFIGURE_ENV=	LOCALBASE="${LOCALBASE}"
+CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 GNU_CONFIGURE=	yes
+MAKE_ENV+=	INSTALL_STRIP_FLAG=${STRIP}
 USE_PERL5=	build
 USE_XZ=		yes
 USES=		pathfix perl5
@@ -67,9 +69,8 @@ GNUTLS_CONFIGURE_OFF=	--without-gnutls
 GNUTLS_CONFIGURE_ON=	--with-gnutls=${LOCALBASE}
 GNUTLS_LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
 GSSAPI_CONFIGURE_OFF=	--without-gssapi
-GSSAPI_CONFIGURE_ON=	--with-gssapi \
-			--with-gssapi-includes=${INCLUDEDIR} \
-			--with-gssapi-libs=${LIBDIR}
+GSSAPI_CONFIGURE_ON=	--with-gssapi=/usr
+GSSAPI_CPPFLAGS=	-I${INCLUDEDIR}/gssapi
 IDN_CONFIGURE_OFF=	--without-libidn
 IDN_CONFIGURE_ON=	--with-libidn=${LOCALBASE}
 IDN_LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn
@@ -103,7 +104,7 @@ PROXY_CONFIGURE_OFF=	--disable-proxy
 PROXY_CONFIGURE_ON=	--enable-proxy
 RTMP_CONFIGURE_OFF=	--without-librtmp
 RTMP_CONFIGURE_ON=	--with-librtmp=${LOCALBASE}
-RTMP_LIB_DEPENDS=	librtmp.so:${PORTSDIR}/multimedia/rtmpdump
+RTMP_LIB_DEPENDS=	librtmp.so:${PORTSDIR}/multimedia/librtmp
 SPNEGO_CONFIGURE_OFF=	--without-spnego
 SPNEGO_CONFIGURE_ON=	--with-spnego=${LOCALBASE}/lib
 SPNEGO_CPPFLAGS=	-I${LOCALBASE}/include/fbopenssl
