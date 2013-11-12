@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: devel/p5-Object-Realize-Later/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Object-Realize-Later/Makefile 332127 2013-10-30 15:19:23Z vanilla $
 
 PORTNAME=	Object-Realize-Later
 PORTVERSION=	0.18
@@ -14,7 +14,4 @@ COMMENT=	Delayed creation of objects
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Object::Realize::Later.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
