@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-tins/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-tins/Makefile 332043 2013-10-30 02:47:06Z swills $
 
 PORTNAME=	tins
 PORTVERSION=	0.8.3
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
