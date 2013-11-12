@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPFR/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-MPFR/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-MPFR
 PORTVERSION=	3.18
@@ -11,8 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to MPFR Library
 
-LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
-		mpfr:${PORTSDIR}/math/mpfr
+LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp \
+		libmpfr.so:${PORTSDIR}/math/mpfr
 TEST_DEPENDS=	p5-Math-GMP>=0:${PORTSDIR}/math/p5-Math-GMP \
 		p5-Math-GMPf>=0:${PORTSDIR}/math/p5-Math-GMPf \
 		p5-Math-GMPq>=0:${PORTSDIR}/math/p5-Math-GMPq \
@@ -22,7 +22,4 @@ USES=		perl5
 USE_PERL5=	configure
 MAKE_ENV=	INC="-I${LOCALBASE}/include"
 
-MAN3=		Math::MPFR.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
