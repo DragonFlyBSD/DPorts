@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: devel/lightning/Makefile 331009 2013-10-20 12:07:27Z marino $
+# $FreeBSD: devel/lightning/Makefile 332989 2013-11-06 13:07:20Z wg $
 
 PORTNAME=	lightning
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 MASTER_SITE_SUBDIR=	${PORTNAME}
