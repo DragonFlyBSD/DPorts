@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/p5-Text-MultiMarkdown-ApacheHandler/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Text-MultiMarkdown-ApacheHandler/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	Text-MultiMarkdown-ApacheHandler
 PORTVERSION=	0.01
@@ -20,13 +20,7 @@ USES=		perl5
 USE_PERL5=	configure
 SUB_FILES=	pkg-message
 
-MAN3=		Text::MultiMarkdown::ApacheHandler.3
-
-NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/Text/MultiMarkdown/ApacheHandler.pm.orig
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
