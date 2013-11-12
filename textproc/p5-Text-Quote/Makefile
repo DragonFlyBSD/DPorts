@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Text-Quote/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Quote/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Quote
 PORTVERSION=	0.3
@@ -11,13 +11,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Quotes strings as required for perl to eval them back correctly
 
-RUN_DEPENDS=	p5-Carp-Assert>=0.13:${PORTSDIR}/devel/p5-Carp-Assert
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+BUILD_DEPENDS=	p5-Carp-Assert>=0.13:${PORTSDIR}/devel/p5-Carp-Assert
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Quote.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
