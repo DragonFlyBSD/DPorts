@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Role-Parameterized/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Role-Parameterized/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Role-Parameterized
 PORTVERSION=	1.02
@@ -22,15 +22,6 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Role::Parameterized.3 \
-		MooseX::Role::Parameterized::Extending.3 \
-		MooseX::Role::Parameterized::Meta::Role::Parameterizable.3 \
-		MooseX::Role::Parameterized::Meta::Role::Parameterized.3 \
-		MooseX::Role::Parameterized::Meta::Trait::Parameterized.3 \
-		MooseX::Role::Parameterized::Parameters.3 \
-		MooseX::Role::Parameterized::Tutorial.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
