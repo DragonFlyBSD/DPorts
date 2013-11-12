@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Package-Variant/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Package-Variant/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Package-Variant
 PORTVERSION=	1.001004
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Package::Variant.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
