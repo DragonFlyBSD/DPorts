@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/rubygem-layout-yullio/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-layout-yullio/Makefile 332055 2013-10-30 03:02:27Z swills $
 
 PORTNAME=	layout-yullio
 PORTVERSION=	0.9.0
@@ -18,5 +18,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
