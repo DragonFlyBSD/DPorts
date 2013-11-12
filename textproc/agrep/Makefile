@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: textproc/agrep/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: textproc/agrep/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	agrep
 PORTVERSION=	2.04
@@ -14,23 +14,23 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Approximate grep (fast approximate pattern-matching tool)
 
 NO_CDROM=	no redistribution for profit
-NO_STAGE=	yes
 
 ALL_TARGET=
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
-MAN1=		agrep.1
-PLIST_FILES=	bin/agrep
+PLIST_FILES=	bin/agrep man/man1/agrep.1.gz
 PORTDOCS=	COPYRIGHT agrep.algorithms agrep.ps.1.Z agrep.ps.2.Z
+
+.include <bsd.port.options.mk>
 
 post-extract:
 	${CP} ${DISTDIR}/agrep.ps.1.Z ${DISTDIR}/agrep.ps.2.Z ${WRKSRC}/
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/agrep ${PREFIX}/bin/
-	@${INSTALL_MAN} ${WRKSRC}/agrep.1 ${PREFIX}/man/man1/
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/agrep ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/agrep.1 ${STAGEDIR}${MANPREFIX}/man/man1/
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
