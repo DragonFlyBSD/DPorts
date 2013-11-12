@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-self-init/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-self-init/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	self-init
 PORTVERSION=	0.01
@@ -14,10 +14,7 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings \
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Invoke package init methods at compile time
 
-MAN3=	self::init.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
