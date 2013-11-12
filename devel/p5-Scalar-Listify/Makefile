@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Scalar-Listify/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Scalar-Listify/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Scalar-Listify
 PORTVERSION=	0.02
@@ -10,10 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Poduces an array(ref)? from a scalar value or array ref
 
-MAN3=		Scalar::Listify.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
