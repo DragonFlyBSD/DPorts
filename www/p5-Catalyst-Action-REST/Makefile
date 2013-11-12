@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 333352 2013-11-09 22:35:34Z sunpoet $
 
 PORTNAME=	Catalyst-Action-REST
-PORTVERSION=	1.12
+PORTVERSION=	1.13
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -24,23 +24,11 @@ BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.80030:${PORTSDIR}/www/p5-Catalyst-Runtime 
 		p5-libwww>=2.033:${PORTSDIR}/www/p5-libwww \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON
+TEST_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
+		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	--default
 
-MAN3=		Catalyst::Action::Deserialize.3 \
-		Catalyst::Action::DeserializeMultiPart.3 \
-		Catalyst::Action::REST.3 \
-		Catalyst::Action::REST::ForBrowsers.3 \
-		Catalyst::Action::Serialize.3 \
-		Catalyst::Action::SerializeBase.3 \
-		Catalyst::Controller::REST.3 \
-		Catalyst::Request::REST.3 \
-		Catalyst::Request::REST::ForBrowsers.3 \
-		Catalyst::TraitFor::Request::REST.3 \
-		Catalyst::TraitFor::Request::REST::ForBrowsers.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
