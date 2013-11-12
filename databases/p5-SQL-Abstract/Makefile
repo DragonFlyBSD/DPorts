@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell
-# $FreeBSD: databases/p5-SQL-Abstract/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-SQL-Abstract/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	SQL-Abstract
 PORTVERSION=	1.74
@@ -23,10 +23,4 @@ TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBIx::Class::Storage::Debug::PrettyPrint.3 \
-		SQL::Abstract.3 \
-		SQL::Abstract::Test.3 \
-		SQL::Abstract::Tree.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
