@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/p5-Array-FileReader/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Array-FileReader/Makefile 332733 2013-11-04 14:41:18Z vanilla $
 
 PORTNAME=	Array-FileReader
 PORTVERSION=	0.03
@@ -16,13 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Array::FileReader.3
-
-PLIST_FILES=	%%SITE_PERL%%/Array/FileReader.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/FileReader/.packlist
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array/FileReader \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Array \
-		%%SITE_PERL%%/Array
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
