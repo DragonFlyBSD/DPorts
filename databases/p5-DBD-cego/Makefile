@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/p5-DBD-cego/Makefile 331793 2013-10-27 18:05:42Z sunpoet $
+# $FreeBSD: databases/p5-DBD-cego/Makefile 332528 2013-11-02 18:07:46Z wg $
 
 PORTNAME=	DBD-cego
-PORTVERSION=	1.2.7
+PORTVERSION=	1.2.8
 CATEGORIES=	databases perl5
 MASTER_SITES=	http://www.lemke-it.com/
 PKGNAMEPREFIX=	p5-
