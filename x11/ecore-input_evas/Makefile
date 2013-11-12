@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11/ecore-input_evas/Makefile 331629 2013-10-25 19:58:18Z gblach $
+# $FreeBSD: x11/ecore-input_evas/Makefile 333129 2013-11-07 16:00:45Z gblach $
 
 PORTNAME=	input_evas
-PORTVERSION=	1.7.8
+PORTVERSION=	1.7.9
 CATEGORIES=	x11 enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
