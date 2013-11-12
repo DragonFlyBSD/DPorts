@@ -1,4 +1,4 @@
-# $FreeBSD: irc/rubygem-cinch/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/rubygem-cinch/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	cinch
 PORTVERSION=	2.0.5
@@ -12,7 +12,6 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${RUBY_VER} == 1.8
 IGNORE=	only works with Ruby 1.9
