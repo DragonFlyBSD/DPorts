@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Mock-Quick/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Mock-Quick/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Mock-Quick
 PORTVERSION=	1.107
@@ -22,12 +22,4 @@ TEST_DEPENDS=	p5-Fennec-Lite>=0.004:${PORTSDIR}/devel/p5-Fennec-Lite \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Mock::Quick.3 Object::Quick.3 \
-		Mock::Quick::Class.3 \
-		Mock::Quick::Method.3 \
-		Mock::Quick::Object.3 \
-		Mock::Quick::Object::Control.3 \
-		Mock::Quick::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
