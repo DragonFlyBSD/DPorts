@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: math/p5-Statistics-Contingency/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Contingency/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Statistics-Contingency
 PORTVERSION=	0.09
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Statistics::Contingency.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
