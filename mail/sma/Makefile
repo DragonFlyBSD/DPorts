@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sma/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: mail/sma/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	sma
 PORTVERSION=	1.4
@@ -10,32 +10,30 @@ MASTER_SITE_SUBDIR=	dinoex
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Program that analyses Sendmail log entries
 
-NO_STAGE=	yes
-
-MAN8=		sma.8
-DOCSFILES=	BUGS COPYRIGHT HISTORY README TODO
-SAMPLEFILES=	sma.conf
 ALL_TARGET=	sma
+SAMPLEFILES=	sma.conf
+DOCSFILES=	BUGS COPYRIGHT HISTORY README TODO
+
+.include <bsd.port.options.mk>
 
 do-configure:
-	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.sed
-	${SED} -e "s,CC	=,CC?=	," \
+	${REINPLACE_CMD} -e "s,CC	=,CC?=	," \
 		-e "s,CFLAGS	= -Wall -O,CFLAGS+=	," \
-		${WRKSRC}/Makefile.sed > ${WRKSRC}/Makefile
+		${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sma ${PREFIX}/bin/sma
-	${INSTALL_MAN} ${WRKSRC}/sma.8 ${PREFIX}/man/man8/
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/sma ${STAGEDIR}${PREFIX}/bin/sma
+	${INSTALL_MAN} ${WRKSRC}/sma.8 ${STAGEDIR}${MANPREFIX}/man/man8/
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${DOCSFILES}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}/
 .endfor
 .endif
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
+.if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for i in ${SAMPLEFILES}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${EXAMPLESDIR}/
 .endfor
 .endif
 
