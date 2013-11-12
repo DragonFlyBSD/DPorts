@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: sysutils/dolly/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/dolly/Makefile 333273 2013-11-09 03:12:42Z vanilla $
 
 PORTNAME=	dolly
 DISTVERSION=	0.58C
@@ -15,10 +15,8 @@ OPTIONS_DEFAULT=	BZIP2 HIGHEST_COMPRESSION
 BZIP2_DESC=	bzip2 instead of gzip for compressing
 HIGHEST_COMPRESSION_DESC=	Highest rather than fastest compression
 
-PLIST_FILES=	bin/${PORTNAME}
-PORTDOCS=	README
+DOCS=		README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 do-configure:
 # C{C,FLAGS} safeness
@@ -29,12 +27,12 @@ do-configure:
 
 do-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-. for _file in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${_file} ${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+. for _file in ${DOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${_file} ${STAGEDIR}${DOCSDIR}/
 . endfor
 .endif
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 # Correctly depend upon bzip2 if necessary
 .if ${PORT_OPTIONS:MBZIP2}
