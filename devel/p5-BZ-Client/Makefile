@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-BZ-Client/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-BZ-Client/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	BZ-Client
 PORTVERSION=	1.04
@@ -21,9 +21,4 @@ TEST_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BZ::Client.3 BZ::Client::API.3 BZ::Client::Bug.3 \
-		BZ::Client::Bugzilla.3 BZ::Client::Exception.3 \
-		BZ::Client::Product.3 BZ::Client::Test.3 BZ::Client::XMLRPC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
