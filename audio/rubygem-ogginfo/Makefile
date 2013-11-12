@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: audio/rubygem-ogginfo/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/rubygem-ogginfo/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	ogginfo
 PORTVERSION=	0.6.11
@@ -11,7 +11,6 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby library to access to information on ogg files
 
 USE_RUBY=	yes
-NO_STAGE=	yes
 USE_RUBYGEMS=	yes
 GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
