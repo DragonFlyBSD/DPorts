@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: devel/p5-MooseX-InsideOut/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-InsideOut/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-InsideOut
 PORTVERSION=	0.106
@@ -19,8 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::InsideOut.3 \
-		MooseX::InsideOut::Role::Meta::Instance.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
