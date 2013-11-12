@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-File-Type/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Type/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Type
 PORTVERSION=	0.22
@@ -13,8 +13,4 @@ COMMENT=	Determine file type using magic
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	File::Type.3 \
-	File::Type::Builder.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
