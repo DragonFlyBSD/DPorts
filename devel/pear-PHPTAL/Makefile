@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: devel/pear-PHPTAL/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-PHPTAL/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	PHPTAL
 PORTVERSION=	1.2.2
@@ -17,7 +17,6 @@ GETTEXT_DESC=	"Enable GetText Support"
 SIMPLEXML_DESC=	"Enable SimpleXML Support"
 JSON_DESC=	"Enable JSON Support"
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 USE_PHP=	ctype hash
