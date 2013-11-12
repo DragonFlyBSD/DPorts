@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Differences/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Differences/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Differences
 PORTVERSION=	0.610
@@ -20,9 +20,6 @@ PORTSCOUT=	skipv:0.4801
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Differences.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
