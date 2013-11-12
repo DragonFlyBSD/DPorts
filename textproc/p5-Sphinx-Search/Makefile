@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: textproc/p5-Sphinx-Search/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Sphinx-Search/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Sphinx-Search
 PORTVERSION=	0.28
@@ -21,9 +21,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sphinx::Search.3
-
 PORTSCOUT=	skipv:0.240.1
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
