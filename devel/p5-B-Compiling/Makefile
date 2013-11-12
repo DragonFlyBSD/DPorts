@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-B-Compiling/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Compiling/Makefile 332381 2013-11-01 14:23:18Z kuriyama $
 
 PORTNAME=	B-Compiling
-PORTVERSION=	0.02
+PORTVERSION=	0.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	B::Compiling.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
