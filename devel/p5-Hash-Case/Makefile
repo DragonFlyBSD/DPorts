@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-Hash-Case/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Hash-Case/Makefile 331958 2013-10-29 15:08:11Z vanilla $
 
 PORTNAME=	Hash-Case
 PORTVERSION=	1.020
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Hash::Case.3 Hash::Case::Lower.3 Hash::Case::Preserve.3 \
-		Hash::Case::Upper.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
