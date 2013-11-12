@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-JSON-Path/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-JSON-Path/Makefile 332871 2013-11-05 16:55:31Z sunpoet $
 
 PORTNAME=	JSON-Path
-PORTVERSION=	0.204
+PORTVERSION=	0.205
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,18 +10,16 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Search nested hashref/arrayref structures using JSONPath
 
+LICENSE=	MIT
+
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
     		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
-		p5-Lvalue>=0:${PORTSDIR}/devel/p5-Lvalue
+		p5-LV>=0:${PORTSDIR}/devel/p5-LV
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Exporter-Tiny>=0:${PORTSDIR}/devel/p5-Exporter-Tiny
 
+REINPLACE_ARGS=	-i ''
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		JSON::Path.3
-
-NO_STAGE=	yes
-post-patch::
-	@${RM} ${WRKSRC}/lib/JSON/Path.pm.orig
 
 .include <bsd.port.mk>
