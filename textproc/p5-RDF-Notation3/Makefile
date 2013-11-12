@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-RDF-Notation3/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-RDF-Notation3/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	RDF-Notation3
 PORTVERSION=	0.91
@@ -19,15 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		RDF::Notation3.3 RDF::Notation3::PrefTriples.3 \
-		RDF::Notation3::RDFCore.3 RDF::Notation3::RDFStore.3 \
-		RDF::Notation3::ReaderFile.3 RDF::Notation3::ReaderString.3 \
-		RDF::Notation3::SAX.3 RDF::Notation3::Template::TReader.3 \
-		RDF::Notation3::Template::TTriples.3 \
-		RDF::Notation3::Template::TXML.3 RDF::Notation3::Triples.3 \
-		RDF::Notation3::XML.3
-
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.pm" | \
 	${XARGS} ${REINPLACE_CMD} -i '' -e 's!^require 5.005_62;!!'
