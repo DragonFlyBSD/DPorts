@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Agent/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Agent/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Agent
 PORTVERSION=	3.20
@@ -16,8 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Agent.3 Agent::Transport::TCP.3 \
-		Agent::Transport.3 Agent::Message.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
