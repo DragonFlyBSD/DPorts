@@ -1,5 +1,5 @@
 # Created by: Andrew Dolgov <fox@furry.spb.ru>
-# $FreeBSD: comms/bforce-kst/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/bforce-kst/Makefile 332066 2013-10-30 05:09:22Z eadler $
 
 PORTNAME=	bforce
 PORTVERSION=	0.22.8.7
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-0.22.8.kst7
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple ifcico like Fidonet technology mailer
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 
 CONTRIBS=	bfha/README bfha/bfha.pl bflan callout.sh outman timesync.tcl \
