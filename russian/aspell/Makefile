@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: russian/aspell/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-ru-0.99f7-1
@@ -12,6 +12,5 @@ COMMENT=	Aspell Russian dictionary
 
 DICT=	 	ru
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
