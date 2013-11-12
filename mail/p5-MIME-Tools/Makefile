@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: mail/p5-MIME-Tools/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: mail/p5-MIME-Tools/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	MIME-Tools
 PORTVERSION=	5.504
@@ -24,37 +24,13 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=	MIME::Body.3 \
-	MIME::Decoder.3	\
-	MIME::Decoder::Base64.3 \
-	MIME::Decoder::BinHex.3 \
-	MIME::Decoder::Binary.3 \
-	MIME::Decoder::Gzip64.3	\
-	MIME::Decoder::NBit.3 \
-	MIME::Decoder::QuotedPrint.3 \
-	MIME::Decoder::UU.3 \
-	MIME::Entity.3 \
-	MIME::Field::ConTraEnc.3 \
-	MIME::Field::ContDisp.3 \
-	MIME::Field::ContType.3 \
-	MIME::Field::ParamVal.3 \
-	MIME::Head.3 \
-	MIME::Parser.3 \
-	MIME::Parser::Filer.3 \
-	MIME::Parser::Reader.3 \
-	MIME::Parser::Results.3 \
-	MIME::Tools.3 \
-	MIME::WordDecoder.3 \
-	MIME::Words.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	ChangeLog README
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
