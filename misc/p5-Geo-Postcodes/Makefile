@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: misc/p5-Geo-Postcodes/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Geo-Postcodes/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Geo-Postcodes
 PORTVERSION=	0.320
@@ -14,12 +14,4 @@ COMMENT=	Base class for the Geo::Postcodes::XX modules
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Geo::Postcodes.3 \
-		Geo::Postcodes::Ajax.3 \
-		Geo::Postcodes::Selection.3 \
-		Geo::Postcodes::Subclass.3 \
-		Geo::Postcodes::Tutorial.3 \
-		Geo::Postcodes::Update.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
