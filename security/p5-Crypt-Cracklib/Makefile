@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-Cracklib/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Cracklib/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-Cracklib
 PORTVERSION=	1.7
@@ -16,15 +16,11 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Pod-Coverage>=0.19:${PORTSDIR}/devel/p5-Pod-Coverage \
 		p5-Test-Pod-Coverage>=1.08:${PORTSDIR}/devel/p5-Test-Pod-Coverage
-LIB_DEPENDS=	crack:${PORTSDIR}/security/cracklib
-
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+LIB_DEPENDS=	libcrack.so:${PORTSDIR}/security/cracklib
 
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include" DEFINE="-DCRACKLIB_DICTPATH=\\\"${PREFIX}/libdata/cracklib/pw_dict\\\""
 
-MAN3=		Crypt::Cracklib.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
