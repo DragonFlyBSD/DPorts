@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-im/p5-Net-Stomp/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/p5-Net-Stomp/Makefile 332816 2013-11-05 07:49:09Z vanilla $
 
 PORTNAME=	Net-Stomp
 PORTVERSION=	0.45
@@ -14,12 +14,9 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
-RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Stomp.3 Net::Stomp::Frame.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
