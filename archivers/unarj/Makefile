@@ -1,32 +1,26 @@
 # Created by: ache
-# $FreeBSD: archivers/unarj/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/unarj/Makefile 331426 2013-10-23 21:02:25Z ak $
 
 PORTNAME=	unarj
 PORTVERSION=	2.65
 PORTREVISION=	2
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	ache
+MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
+PROJECTHOST=	ak-various-projects
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ak@FreeBSD.org
 COMMENT=	Allows files to be extracted from ARJ archives
 
-NO_STAGE=	yes
 PLIST_FILES=	bin/unarj
 PORTDOCS=	unarj.txt technote.txt
 
-.include <bsd.port.options.mk>
 post-patch:
 	${CP} ${FILESDIR}/sanitize.c ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/unarj ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	${INSTALL} -d -m 755 -o ${SHAREOWN} -g ${SHAREGRP} ${DOCSDIR}
-.for i in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/unarj ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
