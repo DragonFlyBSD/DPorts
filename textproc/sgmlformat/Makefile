@@ -1,9 +1,9 @@
 # Created by: jfieber
-# $FreeBSD: textproc/sgmlformat/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/sgmlformat/Makefile 332981 2013-11-06 12:30:49Z mat $
 
 PORTNAME=	sgmlformat
 PORTVERSION=	1.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kuriyama
