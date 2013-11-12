@@ -1,5 +1,5 @@
 # Created by: Laurent LEVIER <llevier@argosnet.com>
-# $FreeBSD: security/squidclamav/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/squidclamav/Makefile 332460 2013-11-02 09:11:39Z antoine $
 
 PORTNAME=	squidclamav
 PORTVERSION=	5.7
@@ -9,6 +9,9 @@ MASTER_SITES=	SF
 
 MAINTAINER=	llevier@argosnet.com
 COMMENT=	Squid interface to ClamAV
+
+DEPRECATED=	Obsolete and broken with clang, use www/squidclamav instead
+EXPIRATION_DATE=2013-12-02
 
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
