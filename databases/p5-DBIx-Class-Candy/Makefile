@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Candy/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-Candy/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBIx-Class-Candy
 PORTVERSION=	0.002104
@@ -20,8 +20,4 @@ TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::Candy.3 \
-	DBIx::Class::Candy::Exports.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
