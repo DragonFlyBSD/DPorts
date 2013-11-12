@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-CGI-Application/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Application
 PORTVERSION=	4.50
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Test-Simple>0:${PORTSDIR}/devel/p5-Test-Simple \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::Application.3 CGI::Application::Mailform.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
