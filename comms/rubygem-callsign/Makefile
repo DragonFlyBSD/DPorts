@@ -1,5 +1,5 @@
 # Created by: Rick Elrod <codeblock@eighthbit.net>
-# $FreeBSD: comms/rubygem-callsign/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/rubygem-callsign/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	callsign
 PORTVERSION=	2.2.0
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
