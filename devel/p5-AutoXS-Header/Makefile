@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-AutoXS-Header/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AutoXS-Header/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	AutoXS-Header
 PORTVERSION=	1.02
@@ -14,7 +14,4 @@ COMMENT=	Container for the AutoXS header files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AutoXS::Header.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
