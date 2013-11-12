@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IPC-Run-SafeHandles/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IPC-Run-SafeHandles/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IPC-Run-SafeHandles
 PORTVERSION=	0.04
@@ -15,16 +15,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	IPC::Run::SafeHandles.3
-
-PLIST_DIRS=	%%SITE_PERL%%/IPC/Run \
-			%%SITE_PERL%%/IPC \
-			%%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC/Run/SafeHandles \
-			%%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC/Run \
-			%%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC
-
-PLIST_FILES=	%%SITE_PERL%%/IPC/Run/SafeHandles.pm \
-				%%SITE_PERL%%/%%PERL_ARCH%%/auto/IPC/Run/SafeHandles/.packlist
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
