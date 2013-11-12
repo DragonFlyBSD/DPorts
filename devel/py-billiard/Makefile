@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-billiard/Makefile 331134 2013-10-21 13:00:00Z wg $
+# $FreeBSD: devel/py-billiard/Makefile 333562 2013-11-12 10:51:38Z wg $
 
 PORTNAME=	billiard
-PORTVERSION=	3.3.0.0
+PORTVERSION=	3.3.0.5
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,8 +14,7 @@ LICENSE=	BSD
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_AUTOPLIST=yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYEASYINSTALL_ARCHDEP=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
