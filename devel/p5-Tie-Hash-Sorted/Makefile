@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-Hash-Sorted/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-Hash-Sorted/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Tie-Hash-Sorted
 PORTVERSION=	0.10
@@ -13,7 +13,4 @@ COMMENT=	Tie::Hash::Sorted - presents hashes in sorted order
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Tie::Hash::Sorted.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
