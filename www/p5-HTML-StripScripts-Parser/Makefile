@@ -1,5 +1,5 @@
 # Created by: kftseng@iyard.org
-# $FreeBSD: www/p5-HTML-StripScripts-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-StripScripts-Parser/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-StripScripts-Parser
 PORTVERSION=	1.03
@@ -10,14 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XSS filter using HTML::Parser
 
-RUN_DEPENDS=	p5-HTML-Parser>=3.56:${PORTSDIR}/www/p5-HTML-Parser \
+BUILD_DEPENDS=	p5-HTML-Parser>=3.56:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-HTML-StripScripts>=1.05:${PORTSDIR}/www/p5-HTML-StripScripts
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::StripScripts::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
