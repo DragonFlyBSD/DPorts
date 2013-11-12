@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-AnyData/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AnyData/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	AnyData
 PORTVERSION=	0.11
@@ -14,19 +14,4 @@ COMMENT=	Easy access to data in many formats
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	AnyData.3 \
-	AnyData::Format::CSV.3 \
-	AnyData::Format::Fixed.3 \
-	AnyData::Format::HTMLtable.3 \
-	AnyData::Format::Ini.3 \
-	AnyData::Format::Mp3.3 \
-	AnyData::Format::Paragraph.3 \
-	AnyData::Format::Passwd.3 \
-	AnyData::Format::Pipe.3 \
-	AnyData::Format::Tab.3 \
-	AnyData::Format::Weblog.3 \
-	AnyData::Format::XML.3 \
-	AnyData::Storage::File.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
