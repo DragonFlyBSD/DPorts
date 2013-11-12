@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-rubyntlm/Makefile 331540 2013-10-25 01:16:42Z swills $
+# $FreeBSD: net/rubygem-rubyntlm/Makefile 332048 2013-10-30 02:54:59Z swills $
 
 PORTNAME=	rubyntlm
 PORTVERSION=	0.4.0
@@ -12,6 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
