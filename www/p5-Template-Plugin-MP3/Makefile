@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/p5-Template-Plugin-MP3/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Plugin-MP3/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	Template-Plugin-MP3
 PORTVERSION=	1.02
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Template::Plugin::MP3.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
