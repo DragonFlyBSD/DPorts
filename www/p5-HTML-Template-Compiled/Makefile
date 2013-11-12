@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: www/p5-HTML-Template-Compiled/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Template-Compiled/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	HTML-Template-Compiled
 PORTVERSION=	1.001
@@ -22,21 +22,4 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Template::Compiled.3 \
-		HTML::Template::Compiled::Classic.3 \
-		HTML::Template::Compiled::Compiler.3 \
-		HTML::Template::Compiled::Compiler::Classic.3 \
-		HTML::Template::Compiled::Exception.3 \
-		HTML::Template::Compiled::Expr.3 \
-		HTML::Template::Compiled::Expression.3 \
-		HTML::Template::Compiled::Filter.3 \
-		HTML::Template::Compiled::Formatter.3 \
-		HTML::Template::Compiled::Lazy.3 \
-		HTML::Template::Compiled::Parser.3 \
-		HTML::Template::Compiled::Plugin::XMLEscape.3 \
-		HTML::Template::Compiled::Reference.3 \
-		HTML::Template::Compiled::Token.3 \
-		HTML::Template::Compiled::Utils.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
