@@ -1,5 +1,5 @@
 # Created by: ws	Christoph Kick
-# $FreeBSD: devel/rubygem-nice-ffi/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-nice-ffi/Makefile 332039 2013-10-30 02:39:14Z swills $
 
 PORTNAME=	nice-ffi
 PORTVERSION=	0.4
@@ -16,5 +16,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
