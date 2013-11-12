@@ -1,8 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: dns/py-dnspython/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/py-dnspython/Makefile 332546 2013-11-02 22:22:52Z wg $
 
 PORTNAME=	dnspython
-PORTVERSION=	1.11.0
+PORTVERSION=	1.11.1
 CATEGORIES=	dns python
 MASTER_SITES=	http://www.dnspython.org/kits${PORTVERSIONSUFFIX}/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
