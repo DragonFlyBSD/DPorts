@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: www/p5-W3C-LinkChecker/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-W3C-LinkChecker/Makefile 333128 2013-11-07 15:56:48Z jadawin $
 
 PORTNAME=	W3C-LinkChecker
 PORTVERSION=	4.81
@@ -21,11 +21,7 @@ BUILD_DEPENDS=	p5-CSS-DOM>=0.09:${PORTSDIR}/www/p5-CSS-DOM \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN1=		checklink.1
-MANCOMPRESSED=	no
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
