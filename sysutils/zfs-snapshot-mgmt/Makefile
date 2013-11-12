@@ -1,5 +1,5 @@
 # Created by: Marcin Simonides <marcin@studio4plus.com>
-# $FreeBSD: sysutils/zfs-snapshot-mgmt/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/zfs-snapshot-mgmt/Makefile 333308 2013-11-09 16:21:35Z lme $
 
 PORTNAME=	zfs-snapshot-mgmt
 PORTVERSION=	20090201
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://marcin.studio4plus.com/files/
 
-MAINTAINER=	marius@nuenneri.ch
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatic ZFS snapshot management tool
 
 USE_RUBY=	yes
