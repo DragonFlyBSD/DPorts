@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-CBuilder/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-ExtUtils-CBuilder/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	ExtUtils-CBuilder
 PORTVERSION=	0.2802.12
@@ -15,17 +15,13 @@ COMMENT=	Compile and link C code for Perl modules
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		ExtUtils::CBuilder.3 ExtUtils::CBuilder::Platform::Windows.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.pre.mk>
