@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: deskutils/p5-Data-ICal/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/p5-Data-ICal/Makefile 332385 2013-11-01 14:46:30Z vanilla $
 
 PORTNAME=	Data-ICal
 PORTVERSION=	0.21
@@ -26,22 +26,6 @@ TEST_DEPENDS=	p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::ICal.3 \
-	Data::ICal::Entry.3 \
-	Data::ICal::Entry::Alarm::Audio.3 \
-	Data::ICal::Entry::Alarm::Display.3 \
-	Data::ICal::Entry::Alarm::Email.3 \
-	Data::ICal::Entry::Alarm::Procedure.3 \
-	Data::ICal::Entry::Event.3 \
-	Data::ICal::Entry::FreeBusy.3 \
-	Data::ICal::Entry::Journal.3 \
-	Data::ICal::Entry::TimeZone.3 \
-	Data::ICal::Entry::TimeZone::Daylight.3 \
-	Data::ICal::Entry::TimeZone::Standard.3 \
-	Data::ICal::Entry::Todo.3 \
-	Data::ICal::Property.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^auto_install/d' ${WRKSRC}/Makefile.PL
 
