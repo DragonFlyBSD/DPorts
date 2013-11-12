@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-Currency/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: math/p5-Math-Currency/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-Currency
 PORTVERSION=	0.47
@@ -15,16 +15,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
-NO_STAGE=	yes
-
-MAN3=		Math::Currency.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
