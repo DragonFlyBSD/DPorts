@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-CIA/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WebService-CIA/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WebService-CIA
 PORTVERSION=	1.4
@@ -13,15 +13,10 @@ COMMENT=	Information from the CIA World Factbook
 RUN_DEPENDS=	p5-Crypt-SSLeay>=0:${PORTSDIR}/security/p5-Crypt-SSLeay \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-MLDBM>=0:${PORTSDIR}/databases/p5-MLDBM
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+BUILD_DEPENDS:=	${BUILD_DEPENDS}
 
-CONFIGURE_ARGS=	</dev/null
 USES=		perl5
 USE_PERL5=	modbuild
+CONFIGURE_ARGS=	</dev/null
 
-MAN3=		WebService::CIA.3 WebService::CIA::Parser.3 \
-		WebService::CIA::Source.3 WebService::CIA::Source::DBM.3 \
-		WebService::CIA::Source::Web.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
