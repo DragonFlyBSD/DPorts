@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Algorithm-Dependency/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-Dependency/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-Dependency
 PORTVERSION=	1.110
@@ -14,17 +14,7 @@ RUN_DEPENDS=	p5-Params-Util>=0.31:${PORTSDIR}/devel/p5-Params-Util
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 BUILD_DEPENDS+=	p5-Test-ClassAPI>=0.6:${PORTSDIR}/devel/p5-Test-ClassAPI
 
-MAN3=	Algorithm::Dependency.3 \
-	Algorithm::Dependency::Item.3 \
-	Algorithm::Dependency::Ordered.3 \
-	Algorithm::Dependency::Source.3 \
-	Algorithm::Dependency::Source::File.3 \
-	Algorithm::Dependency::Source::HoA.3 \
-	Algorithm::Dependency::Source::Invert.3 \
-	Algorithm::Dependency::Weight.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
