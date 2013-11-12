@@ -1,11 +1,10 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-sysroot/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gnatdroid-sysroot/Makefile 333285 2013-11-09 13:02:19Z marino $
 
 PORTNAME=	sysroot
 PORTVERSION=	9
 CATEGORIES=	lang
-MASTER_SITES=	http://downloads.dragonlace.net/src/ \
-		http://dragonlace.mirrors.ada.cx/src/
+MASTER_SITES=	http://downloads.dragonlace.net/src/
 PKGNAMEPREFIX=	gnatdroid-
 DISTNAME=	android-9-arm
 
@@ -19,10 +18,9 @@ NO_MTREE=	YES
 WRKSRC=		${WRKDIR}/android-${PORTVERSION}-arm
 PREFIX=		${LOCALBASE}/android9
 
-NO_STAGE=	yes
 do-install:
-	(cd ${WRKSRC} && ${FIND} usr/ -type d -exec ${MKDIR} ${PREFIX}/{} \;)
+	(cd ${WRKSRC} && ${FIND} usr/ -type d -exec ${MKDIR} ${STAGEDIR}${PREFIX}/{} \;)
 	(cd ${WRKSRC} && ${FIND} usr/ -type f -exec \
-	   ${INSTALL} -p -o root -g wheel ${WRKSRC}/{} ${PREFIX}/{} \;)
+	   ${INSTALL} -p -o root -g wheel ${WRKSRC}/{} ${STAGEDIR}${PREFIX}/{} \;)
 
 .include <bsd.port.mk>
