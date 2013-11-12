@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Accessor-Fast-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Accessor-Fast-XS/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-Accessor-Fast-XS
 PORTVERSION=	0.04
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Class-Accessor>0:${PORTSDIR}/devel/p5-Class-Accessor
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Accessor::Fast::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
