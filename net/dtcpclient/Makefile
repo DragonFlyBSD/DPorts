@@ -1,4 +1,4 @@
-# $FreeBSD: net/dtcpclient/Makefile 329331 2013-10-04 15:48:06Z ume $
+# $FreeBSD: net/dtcpclient/Makefile 332214 2013-10-31 08:02:52Z bapt $
 
 PORTNAME=	dtcpclient
 PORTVERSION=	20090812
@@ -12,7 +12,7 @@ COMMENT=	Dynamic Tunnel Configuration Protocol client
 
 LICENSE=	BSD
 
+USES=		uidfix
 USE_RC_SUBR=	dtcpclient
-NEED_ROOT=	yes
 
 .include <bsd.port.mk>
