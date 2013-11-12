@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Stream/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Stream/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Stream
 PORTVERSION=	1.60
@@ -13,7 +13,4 @@ COMMENT=	Perl5 HTML output stream class, and some markup utilities
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Stream.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
