@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-# $FreeBSD: www/p5-POE-Component-Server-HTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-POE-Component-Server-HTTP/Makefile 333117 2013-11-07 15:22:45Z vanilla $
 
 PORTNAME=	POE-Component-Server-HTTP
 PORTVERSION=	0.09
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Server::HTTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
