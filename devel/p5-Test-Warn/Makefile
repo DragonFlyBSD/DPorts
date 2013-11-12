@@ -1,5 +1,5 @@
 # Created by: Brian Minard <bminard@flatfoot.ca>
-# $FreeBSD: devel/p5-Test-Warn/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Warn/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Warn
 PORTVERSION=	0.24
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Warn.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
