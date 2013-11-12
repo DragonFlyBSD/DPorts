@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Tie-Hash-Indexed/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-Hash-Indexed/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Tie-Hash-Indexed
 PORTVERSION=	0.05
@@ -13,7 +13,4 @@ COMMENT=	Ordered hashes for Perl in XS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Tie::Hash::Indexed.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
