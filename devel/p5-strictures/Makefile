@@ -1,11 +1,11 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-strictures/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-strictures/Makefile 333312 2013-11-09 18:47:49Z sunpoet $
 
 PORTNAME=	strictures
-PORTVERSION=	1.004004
+PORTVERSION=	1.005001
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:ETHER
+MASTER_SITE_SUBDIR=	CPAN:HAARG
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		strictures.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
