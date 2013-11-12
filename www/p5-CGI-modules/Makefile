@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-modules/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-modules/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-modules
 PORTVERSION=	2.76
@@ -16,10 +16,6 @@ BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::Base.3 CGI::BasePlus.3 CGI::Carp.3 CGI::Form.3 \
-		CGI::MiniSvr.3 CGI::Request.3
-
-NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/CGI/*.orig
 
