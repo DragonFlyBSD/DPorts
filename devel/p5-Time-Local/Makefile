@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Time-Local/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-Time-Local/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Time-Local
 PORTVERSION=	1.23.00
@@ -19,17 +19,14 @@ OPTIONS_DEFINE=	DOCS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Time::Local.3
 PORTDOCS=	Changes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.post.mk>
