@@ -1,8 +1,9 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: misc/libsupertone/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/libsupertone/Makefile 333231 2013-11-08 14:31:40Z kwm $
 
 PORTNAME=	libsupertone
 PORTVERSION=	0.0.2
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.soft-switch.org/downloads/unicall/
 EXTRACT_SUFX=	.tgz
