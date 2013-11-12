@@ -1,5 +1,5 @@
 # Created by: Andrey <gugu@zoo.rambler.ru>
-# $FreeBSD: devel/p5-Algorithm-FloodControl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-FloodControl/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-FloodControl
 PORTVERSION=	2.001000
@@ -20,10 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::FloodControl.3 Algorithm::FloodControl::Backend::Cache::Memcached.3 \
-		Algorithm::FloodControl::Backend::Cache::Memcached::Fast.3 \
-		Algorithm::FloodControl::Backend::Cache::FastMmap.3 \
-		Algorithm::FloodControl::Backend.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
