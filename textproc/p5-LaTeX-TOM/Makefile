@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-TOM/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-LaTeX-TOM/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	LaTeX-TOM
 PORTVERSION=	1.03
@@ -13,7 +13,4 @@ COMMENT=	Perl module for parsing, analyzing, and manipulating LaTeX documents
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	LaTeX::TOM.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
