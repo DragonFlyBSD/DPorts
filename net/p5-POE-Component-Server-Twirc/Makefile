@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POE-Component-Server-Twirc/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	POE-Component-Server-Twirc
 PORTVERSION=	0.16
@@ -35,14 +35,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::Twirc.3 \
-		App::Twirc::Manual.3 \
-		App::Twirc::Plugin::SquashWhiteSpace.3 \
-		App::Twirc::Plugin::BangCommands.3 \
-		App::Twirc::Plugin::SecondaryAccount.3 \
-		POE::Component::Server::Twirc.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e '/auto_install/d' ${WRKSRC}/Makefile.PL
 
