@@ -1,30 +1,31 @@
 # Created by: Ivan Dreckman <ivannashdreckman@fastmail.fm>
-# $FreeBSD: sysutils/zxfer/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/zxfer/Makefile 333555 2013-11-12 09:30:57Z tijl $
 
 PORTNAME=	zxfer
-PORTVERSION=	0.9.8
-PORTREVISION=	1
+PORTVERSION=	1.1.0
 CATEGORIES=	sysutils
-MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	ports@FreeBSD.org
+USE_GITHUB=	yes
+GH_ACCOUNT=	allanjude
+GH_COMMIT=	94567c8
+GH_TAGNAME=	1.1.0
+
+MAINTAINER=	ports@scaleengine.com
 COMMENT=	Easily and reliably transfer ZFS filesystems
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
-
-USE_BZIP2=	yes
 NO_BUILD=	yes
 
-PLIST_FILES=	sbin/zxfer
+OPTIONS_DEFINE=	RSYNC
 
-MAN8=		zxfer.8
-MANCOMPRESSED=	yes
+RSYNC_DESC=		Enable RSYNC Support
+RSYNC_RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/zxfer ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/zxfer.8.gz ${MAN8PREFIX}/man/man8
+	${INSTALL_SCRIPT} ${WRKSRC}/zxfer ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/zxfer.8.gz ${STAGEDIR}${MAN8PREFIX}/man/man8
 
 .include <bsd.port.mk>
