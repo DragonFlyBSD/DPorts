@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Generic/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POE-Component-Generic/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	POE-Component-Generic
 PORTVERSION=	0.14.03
@@ -18,10 +18,4 @@ RUN_DEPENDS=	p5-POE>=0.31:${PORTSDIR}/devel/p5-POE \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Generic.3 \
-		POE::Component::Generic::Child.3 \
-		POE::Component::Generic::Net::SSH2.3 \
-		POE::Component::Generic::Object.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
