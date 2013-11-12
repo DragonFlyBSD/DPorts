@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-hacx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/doom-hacx/Makefile 331975 2013-10-29 17:59:47Z nemysis $
 
 PORTNAME=	hacx
 PORTVERSION=	1.0
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	${DMPKGNAMEPREFIX}
 DISTNAME=	${PORTNAME}.wad
 EXTRACT_SUFX=	.bz2
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Full TC using the Doom II engine
 
 USE_BZIP2=	yes
