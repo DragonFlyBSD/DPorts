@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-TeX-Encode/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-TeX-Encode/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	TeX-Encode
 PORTVERSION=	1.3
@@ -12,13 +12,10 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Encode/decode Perl utf-8 strings into TeX
 
 BUILD_DEPENDS=	p5-HTML-Parser>=3.35:${PORTSDIR}/www/p5-HTML-Parser
-RUN_DEPENDS=	p5-HTML-Parser>=3.35:${PORTSDIR}/www/p5-HTML-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		TeX::Encode.3 TeX::Encode::BibTeX.3 TeX::Encode::charmap.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
