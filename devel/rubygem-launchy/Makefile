@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-launchy/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-launchy/Makefile 332038 2013-10-30 02:36:45Z swills $
 
 PORTNAME=	launchy
 PORTVERSION=	2.3.0
@@ -17,5 +17,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/launchy
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
