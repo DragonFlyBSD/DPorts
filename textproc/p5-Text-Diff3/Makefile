@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Diff3/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Diff3/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Diff3
 PORTVERSION=	0.10
@@ -12,19 +12,7 @@ COMMENT=	Compute three-way differences between texts
 
 TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base
 
-MAN3=	Text::Diff3.3 \
-	Text::Diff3::Base.3 \
-	Text::Diff3::Diff3.3 \
-	Text::Diff3::DiffHeckel.3 \
-	Text::Diff3::Factory.3 \
-	Text::Diff3::List.3 \
-	Text::Diff3::ListMixin.3 \
-	Text::Diff3::Range2.3 \
-	Text::Diff3::Range3.3 \
-	Text::Diff3::Text.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
