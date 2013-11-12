@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Tatsumaki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Tatsumaki/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	Tatsumaki
 PORTVERSION=	0.1013
@@ -29,8 +29,4 @@ TEST_DEPENDS=	p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tatsumaki.3 \
-		Tatsumaki::MessageQueue.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
