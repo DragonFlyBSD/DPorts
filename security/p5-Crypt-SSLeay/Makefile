@@ -1,5 +1,5 @@
 # Created by: Alfred Perlstein <alfred@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-SSLeay/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-SSLeay/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-SSLeay
 PORTVERSION=	0.64
@@ -22,9 +22,6 @@ USES=		perl5
 USE_PERL5=	configure
 USE_OPENSSL=	yes
 
-MAN3=		Crypt::SSLeay.3 Net::SSL.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBS/ s|-lssl32 -lssleay32 -leay32|-L${OPENSSLLIB}|' \
 		-e '/is_live_test_wanted()/d' ${WRKSRC}/Makefile.PL
