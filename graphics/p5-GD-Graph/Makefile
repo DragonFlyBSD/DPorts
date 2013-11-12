@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: graphics/p5-GD-Graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-GD-Graph/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	GD-Graph
 PORTVERSION=	1.48
@@ -18,14 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GD::Graph.3 \
-		GD::Graph::Data.3 \
-		GD::Graph::Error.3 \
-		GD::Graph::FAQ.3 \
-		GD::Graph::colour.3 \
-		GD::Graph::hbars.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
