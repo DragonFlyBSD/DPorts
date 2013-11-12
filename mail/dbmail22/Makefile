@@ -1,10 +1,11 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: mail/dbmail22/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/dbmail22/Makefile 333018 2013-11-06 17:52:42Z bapt $
 
 PORTNAME=	dbmail
 PORTVERSION=	2.2.18
 CATEGORIES=	mail
 MASTER_SITES=	http://www.dbmail.org/download/2.2/
+PKGNAMESUFFIX=	22
 
 MAINTAINER=	ahicks@p-o.co.uk
 COMMENT=	SQL database-based mail system (POP3 and IMAP)
