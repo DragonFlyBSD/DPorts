@@ -1,36 +1,32 @@
 # Created by: Vaida Bogdan
-# $FreeBSD: shells/ibsh/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/ibsh/Makefile 333218 2013-11-08 13:00:49Z bapt $
 
 PORTNAME=	ibsh
 PORTVERSION=	0.3e
 CATEGORIES=	shells
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	vaida.bogdan@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Restricted unix shell
 
-USE_GMAKE=	yes
+OPTIONS_DEFINE=	DOCS
+
+USES=		gmake
 ALL_TARGET=	ibsh
 INSTALL_TARGET=	ibsh_install
+MAKE_ARGS=	CC="${CC}" PREFIX="${STAGEDIR}${PREFIX}"
 
 SUB_FILES=	pkg-message
 PORTDOCS=	AUTHORS BUGS CONTRIBUTORS COPYING COPYRIGHT ChangeLog \
 		INSTALL README TODO VERSION
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|PATH_MAX|PATH_MAXb|g' ${WRKSRC}/delbadfiles.c ${WRKSRC}/ibsh.h
 	@${REINPLACE_CMD} -e 's|/etc/ibsh|${PREFIX}/etc/ibsh|g' ${WRKSRC}/ibsh.h
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
-	@${ECHO}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ibsh
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
