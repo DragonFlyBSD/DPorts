@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/es-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
+# $FreeBSD: textproc/es-hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2005.11.18
@@ -12,7 +12,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Spanish hyphenation rules
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
