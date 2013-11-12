@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Path-Dispatcher/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Path-Dispatcher/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Path-Dispatcher
 PORTVERSION=	1.05
@@ -21,26 +21,4 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Path::Dispatcher.3 \
-		Path::Dispatcher::Cookbook.3 \
-		Path::Dispatcher::Dispatch.3 \
-		Path::Dispatcher::Match.3 \
-		Path::Dispatcher::Path.3 \
-		Path::Dispatcher::Role::Rules.3 \
-		Path::Dispatcher::Rule.3 \
-		Path::Dispatcher::Rule::Alternation.3 \
-		Path::Dispatcher::Rule::Always.3 \
-		Path::Dispatcher::Rule::CodeRef.3 \
-		Path::Dispatcher::Rule::Dispatch.3 \
-		Path::Dispatcher::Rule::Empty.3 \
-		Path::Dispatcher::Rule::Enum.3 \
-		Path::Dispatcher::Rule::Eq.3 \
-		Path::Dispatcher::Rule::Intersection.3 \
-		Path::Dispatcher::Rule::Metadata.3 \
-		Path::Dispatcher::Rule::Regex.3 \
-		Path::Dispatcher::Rule::Sequence.3 \
-		Path::Dispatcher::Rule::Tokens.3 \
-		Path::Dispatcher::Rule::Under.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
