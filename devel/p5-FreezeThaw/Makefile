@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-FreezeThaw/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-FreezeThaw/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	FreezeThaw
 PORTVERSION=	0.50.01
@@ -14,7 +14,4 @@ COMMENT=	Module for converting Perl structures to strings and back
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		FreezeThaw.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
