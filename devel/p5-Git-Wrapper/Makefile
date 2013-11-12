@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Git-Wrapper/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Git-Wrapper/Makefile 331953 2013-10-29 14:32:08Z vanilla $
 
 PORTNAME=	Git-Wrapper
 PORTVERSION=	0.030
@@ -26,12 +26,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Git::Wrapper.3 \
-		Git::Wrapper::Exception.3 \
-		Git::Wrapper::File::RawModification.3 \
-		Git::Wrapper::Log.3 \
-		Git::Wrapper::Status.3 \
-		Git::Wrapper::Statuses.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
