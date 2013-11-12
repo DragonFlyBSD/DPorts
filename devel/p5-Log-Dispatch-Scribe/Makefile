@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Log-Dispatch-Scribe/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-Scribe/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Dispatch-Scribe
 PORTVERSION=	0.05
@@ -20,8 +20,4 @@ TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		scribe_cat.pl.1
-MAN3=		Log::Dispatch::Scribe.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
