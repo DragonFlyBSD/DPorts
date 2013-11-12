@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-six/Makefile 331063 2013-10-20 21:29:32Z swills $
+# $FreeBSD: security/rubygem-six/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	six
 PORTVERSION=	0.2.0
@@ -12,6 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
