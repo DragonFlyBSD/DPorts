@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/ahven/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/ahven/Makefile 333372 2013-11-10 10:54:38Z marino $
 
 PORTNAME=	ahven
 PORTVERSION=	2.3
@@ -14,12 +14,9 @@ BUILD_DEPENDS=	adactl:${PORTSDIR}/lang/adacontrol
 
 USES=		ada
 ALL_TARGET=	build_all
-DESTINY=	${WRKDIR}/destino
-MAKE_ENV+=	DESTDIR=${DESTINY}
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
@@ -30,8 +27,7 @@ ALL_TARGET+=	docs
 .endif
 
 post-install:
-	@${RM} -rf ${DESTINY}${PREFIX}/share/doc/ahven/html/_sources
-	@${RM} ${DESTINY}${PREFIX}/share/doc/ahven/html/.buildinfo
-	@${CP} -pR ${DESTINY}${PREFIX}/ ${PREFIX}/
+	@${RM} -rf ${STAGEDIR}${PREFIX}/share/doc/ahven/html/_sources
+	@${RM} ${STAGEDIR}${PREFIX}/share/doc/ahven/html/.buildinfo
 
 .include <bsd.port.mk>
