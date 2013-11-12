@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-AutoInstall/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ExtUtils-AutoInstall/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	ExtUtils-AutoInstall
 PORTVERSION=	0.63
@@ -17,9 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	extract configure
 
-MAN3=		ExtUtils::AutoInstall.3
-
-NO_STAGE=	yes
 post-extract:
 	@${PERL} -i.bak -ne 'print unless m,^features, .. m,^\);,' ${WRKSRC}/Makefile.PL
 
