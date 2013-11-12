@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-extlib/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-extlib/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	extlib
 PORTVERSION=	0.9.16
@@ -14,5 +14,4 @@ USE_RAKE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
