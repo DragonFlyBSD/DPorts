@@ -1,5 +1,5 @@
 # Created by: Brad Hendrickse <bradh@uunet.co.za>
-# $FreeBSD: devel/p5-Date-Calc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Calc/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-Calc
 PORTVERSION=	6.3
@@ -17,8 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::Calc.3 Date::Calc::PP.3 Date::Calc::Object.3 Date::Calendar.3 \
-		Date::Calendar::Profiles.3 Date::Calendar::Year.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
