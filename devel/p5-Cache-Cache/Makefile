@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Cache-Cache/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Cache-Cache/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Cache-Cache
 PORTVERSION=	1.06
@@ -19,26 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Cache::BaseCache.3 \
-	Cache::BaseCacheTester.3 \
-	Cache::Cache.3 \
-	Cache::CacheMetaData.3 \
-	Cache::CacheSizer.3 \
-	Cache::CacheTester.3 \
-	Cache::CacheUtils.3 \
-	Cache::FileBackend.3 \
-	Cache::FileCache.3 \
-	Cache::MemoryBackend.3 \
-	Cache::MemoryCache.3 \
-	Cache::NullCache.3 \
-	Cache::Object.3 \
-	Cache::SharedMemoryBackend.3 \
-	Cache::SharedMemoryCache.3 \
-	Cache::SizeAwareCache.3 \
-	Cache::SizeAwareCacheTester.3 \
-	Cache::SizeAwareFileCache.3 \
-	Cache::SizeAwareMemoryCache.3 \
-	Cache::SizeAwareSharedMemoryCache.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
