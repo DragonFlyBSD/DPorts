@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/googletest/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/googletest/Makefile 333054 2013-11-07 02:52:10Z clsung $
 
 PORTNAME=	googletest
 PORTVERSION=	1.5.0
@@ -14,7 +14,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON_BUILD=	yes
 
-NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC}; ${MAKE} check
 
