@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/when/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/when/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	when
 PORTVERSION=	1.1.22
@@ -7,7 +7,7 @@ CATEGORIES=	deskutils
 MASTER_SITES=	LOCAL/culot
 
 MAINTAINER=	culot@FreeBSD.org
-COMMENT=	A very simple personal calendar
+COMMENT=	Simple personal calendar
 
 USES=		perl5
 USE_PERL5=	run
