@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: net/p5-Net-ext/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-ext/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-ext
 PORTVERSION=	1.011
@@ -14,8 +14,4 @@ COMMENT=	Perl modules for using sockets
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Gen.3 Net::Inet.3 Net::TCP.3 Net::TCP::Server.3 \
-		Net::UDP.3 Net::UNIX.3 Net::UNIX::Server.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
