@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-SAX-Expat/Makefile 333232 2013-11-08 14:36:54Z vanilla $
 
 PORTNAME=	XML-SAX-Expat
 PORTVERSION=	0.50
@@ -16,12 +16,9 @@ RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
-USE_PERL5=	configure patch
+USE_PERL5=	configure
 
-MAN3=		XML::SAX::Expat.3
-
-NO_STAGE=	yes
 post-patch:
-		@${PERL} -pi -e "s/(?<=XML::SAX::Base          => ')1\.00(?=')/0.25/;" ${WRKSRC}/Makefile.PL
+	@${REINPLACE_CMD} -e 's|-I\\$$(INSTALLSITELIB)|-I\\$$(DESTDIR)\\$$(INSTALLSITELIB)|' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
