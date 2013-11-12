@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: archivers/qpress/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/qpress/Makefile 332438 2013-11-02 01:14:39Z marino $
 
 PORTNAME=	qpress
 PORTVERSION=	1.1
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 
 EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
 USE_ZIP=	yes
+USE_DOS2UNIX=	yes
 
 NO_STAGE=	yes
 PLIST_FILES=	bin/qpress
