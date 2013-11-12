@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-temple/Makefile 330963 2013-10-20 02:48:58Z swills $
+# $FreeBSD: devel/rubygem-temple/Makefile 332043 2013-10-30 02:47:06Z swills $
 
 PORTNAME=	temple
 PORTVERSION=	0.6.7
@@ -16,6 +16,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
