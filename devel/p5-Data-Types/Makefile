@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Data-Types/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Types/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-Types
 PORTVERSION=	0.09
@@ -16,7 +16,4 @@ LICENSE=	ART10 GPLv1
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Data::Types.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
