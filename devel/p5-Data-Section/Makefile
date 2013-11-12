@@ -1,8 +1,8 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Data-Section/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Section/Makefile 333323 2013-11-09 18:49:02Z sunpoet $
 
 PORTNAME=	Data-Section
-PORTVERSION=	0.101622
+PORTVERSION=	0.200003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,17 +13,14 @@ COMMENT=	Read multiple hunks of data out of your DATA section
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-Sub-Exporter>=0.979:${PORTSDIR}/devel/p5-Sub-Exporter \
-		p5-MRO-Compat>=0.09:${PORTSDIR}/devel/p5-MRO-Compat
-RUN_DEPENDS=	p5-Sub-Exporter>=0.979:${PORTSDIR}/devel/p5-Sub-Exporter \
-		p5-MRO-Compat>=0.09:${PORTSDIR}/devel/p5-MRO-Compat
+BUILD_DEPENDS=	p5-MRO-Compat>=0.09:${PORTSDIR}/devel/p5-MRO-Compat \
+		p5-Sub-Exporter>=0.979:${PORTSDIR}/devel/p5-Sub-Exporter
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-FailWarnings>=0:${PORTSDIR}/devel/p5-Test-FailWarnings
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Section.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
