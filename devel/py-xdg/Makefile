@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: devel/py-xdg/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-xdg/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/devel/py-xdg/Makefile,v 1.4 2007/09/10 05:35:05 mezz Exp $
 
 PORTNAME=	xdg
@@ -12,7 +12,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A python library to access freedesktop.org standards
 
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	pyxdg
 
