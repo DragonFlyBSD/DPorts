@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 332882 2013-11-05 17:57:45Z sunpoet $
 
 PORTNAME=	Mixin-Linewise
-PORTVERSION=	0.004
+PORTVERSION=	0.102
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
@@ -13,25 +13,11 @@ COMMENT=	Write your linewise code for handles; this does the rest
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS+=	p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter \
-	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
-RUN_DEPENDS+=	p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter \
-	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
+BUILD_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
+		p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mixin::Linewise::Readers.3 \
-		Mixin::Linewise::Writers.3 \
-		Mixin::Linewise.3
-PLIST_FILES+=	%%SITE_PERL%%/Mixin/Linewise/Readers.pm \
-		%%SITE_PERL%%/Mixin/Linewise/Writers.pm \
-		%%SITE_PERL%%/Mixin/Linewise.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mixin/Linewise/.packlist
-PLIST_DIRS+=	%%SITE_PERL%%/Mixin/Linewise \
-		%%SITE_PERL%%/Mixin \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mixin/Linewise \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Mixin
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
