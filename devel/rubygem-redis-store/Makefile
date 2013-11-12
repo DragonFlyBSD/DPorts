@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-redis-store/Makefile 331089 2013-10-21 03:30:57Z swills $
+# $FreeBSD: devel/rubygem-redis-store/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	redis-store
 PORTVERSION=	1.1.4
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
