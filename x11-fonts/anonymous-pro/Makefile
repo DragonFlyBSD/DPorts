@@ -1,5 +1,5 @@
 # Created by: Norberto Lopes <nlopes.ml@gmail.com>
-# $FreeBSD: x11-fonts/anonymous-pro/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/anonymous-pro/Makefile 333089 2013-11-07 13:09:34Z tabthorpe $
 
 PORTNAME=	anonymous-pro
 PORTVERSION=	1.002
@@ -10,10 +10,7 @@ DISTNAME=	AnonymousPro-${PORTVERSION}
 MAINTAINER=	nlopes.ml@gmail.com
 COMMENT=	A fixed width sans designed especially for coders
 
-LICENSE=	OFL
-LICENSE_NAME=	Open Font License (OFL)
-LICENSE_FILE=	${WRKSRC}/OFL.txt
-LICENSE_PERMS=	auto-accept
+LICENSE=	OFL11
 
 RUN_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
 
