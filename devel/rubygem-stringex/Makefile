@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-stringex/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-stringex/Makefile 332042 2013-10-30 02:46:01Z swills $
 
 PORTNAME=	stringex
 PORTVERSION=	1.5.1
@@ -14,5 +14,4 @@ USE_RAKE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
