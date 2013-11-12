@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-LocalDelivery/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-LocalDelivery/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Email-LocalDelivery
 PORTVERSION=	1.200
@@ -18,9 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Email::LocalDelivery.3 \
-		Email::LocalDelivery::Maildir.3 \
-		Email::LocalDelivery::Mbox.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
