@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Helper-Controller-Scaffold/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Helper-Controller-Scaffold/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Catalyst-Helper-Controller-Scaffold
 PORTVERSION=	0.04
@@ -24,7 +24,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Helper::Controller::Scaffold.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
