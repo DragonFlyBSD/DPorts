@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-LWPx-ParanoidAgent/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-LWPx-ParanoidAgent/Makefile 333112 2013-11-07 15:07:21Z vanilla $
 
 PORTNAME=	LWPx-ParanoidAgent
 PORTVERSION=	1.09
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		LWPx::ParanoidAgent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
