@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: devel/p5-Cache-Simple-TimedExpiry/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Cache-Simple-TimedExpiry/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Cache-Simple-TimedExpiry
 PORTVERSION=	0.27
@@ -13,7 +13,4 @@ COMMENT=	A lightweight cache with timed expiration
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Cache::Simple::TimedExpiry.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
