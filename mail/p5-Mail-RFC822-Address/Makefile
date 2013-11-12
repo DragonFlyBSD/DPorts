@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@in.tum.de>
-# $FreeBSD: mail/p5-Mail-RFC822-Address/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-RFC822-Address/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Mail-RFC822-Address
 PORTVERSION=	0.3
@@ -15,7 +15,4 @@ USE_PERL5=	configure
 
 INSTALL_TARGET=	pure_site_install
 
-MAN3=		Mail::RFC822::Address.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
