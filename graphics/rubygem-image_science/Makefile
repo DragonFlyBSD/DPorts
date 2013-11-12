@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: graphics/rubygem-image_science/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-image_science/Makefile 332044 2013-10-30 02:48:42Z swills $
 
 PORTNAME=	image_science
 PORTVERSION=	1.2.5
@@ -18,5 +18,4 @@ USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/image_science_thumb
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
