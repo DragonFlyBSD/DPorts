@@ -1,8 +1,9 @@
 # Created by: Andras Horvath <han@log69.com>
-# $FreeBSD: graphics/aaphoto/Makefile 330922 2013-10-19 18:21:40Z tijl $
+# $FreeBSD: graphics/aaphoto/Makefile 332613 2013-11-03 13:28:32Z feld $
 
 PORTNAME=	aaphoto
 PORTVERSION=	0.43.1
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	mail@log69.com
@@ -20,7 +21,7 @@ GH_COMMIT=	e566f9b
 GH_TAGNAME=	v${PORTVERSION}
 
 GNU_CONFIGURE=	yes
-USES=		compiler
+USES=		compiler:openmp
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
