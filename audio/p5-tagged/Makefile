@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/p5-tagged/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-tagged/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	tagged
 PORTVERSION=	0.40
@@ -12,11 +12,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read, change, and write different tags of MP3 audio files
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=	MP3::Tag::ID3v2.3 MP3::Tag.3 MP3::Tag::File.3 \
-	MP3::Tag::ID3v2-Data.3 MP3::Tag::ID3v1.3
 
 CONFLICTS=	p5-MP3-Tag-0.*
 
