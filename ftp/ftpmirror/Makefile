@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: ftp/ftpmirror/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/ftpmirror/Makefile 332301 2013-10-31 23:35:00Z garga $
 
 PORTNAME=	ftpmirror
 PORTVERSION=	1.96
@@ -23,18 +23,14 @@ CONFIGURE_ENV+=	PERL="${PERL}" INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 
 PORTDOCS=	README.jis RELEASE.jis
 
-NO_STAGE=	yes
 post-configure:
-	@${REINPLACE_CMD} -i '' -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/Fan/Fan.pm
-
-.include <bsd.port.pre.mk>
+	@${REINPLACE_CMD} -i '' -e 's|%%PREFIX%%|${PREFIX}|' \
+		${WRKSRC}/Fan/Fan.pm
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
