@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Model-DBIC-Schema
 PORTVERSION=	0.61
@@ -34,18 +34,6 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
 USES=		perl5
-#USE_PERL5=	configure extract
 USE_PERL5=	configure
-
-MAN3=		Catalyst::Helper::Model::DBIC::Schema.3 \
-		Catalyst::Model::DBIC::Schema.3 \
-		Catalyst::TraitFor::Model::DBIC::Schema::Caching.3 \
-		Catalyst::TraitFor::Model::DBIC::Schema::PerRequestSchema.3 \
-		Catalyst::TraitFor::Model::DBIC::Schema::Replicated.3 \
-		Catalyst::TraitFor::Model::DBIC::Schema::SchemaProxy.3
-
-NO_STAGE=	yes
-#post-patch:
-#	@${PERL} -i.bak -ne 'print unless m,^feature, .. m,;$$,' ${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>
