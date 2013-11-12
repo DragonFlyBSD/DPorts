@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-Plugin-AutoCRUD
 PORTVERSION=	2.131.210
@@ -34,10 +34,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Plugin::AutoCRUD.3 \
-		Catalyst::Plugin::AutoCRUD::Manual::DBICTips.3 \
-		Catalyst::Plugin::AutoCRUD::Manual::Limitations.3 \
-		Catalyst::Plugin::AutoCRUD::Manual::Troubleshooting.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
