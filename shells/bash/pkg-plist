@@ -1,7 +1,9 @@
-@comment $FreeBSD: shells/bash/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: shells/bash/pkg-plist 332973 2013-11-06 12:18:54Z mat $
 bin/bash
 bin/rbash
 bin/bashbug
+man/man1/bash.1.gz
+man/man1/bashbug.1.gz
 %%HELP%%%%DATADIR%%/alias
 %%HELP%%%%DATADIR%%/arith
 %%HELP%%%%DATADIR%%/arith_for
