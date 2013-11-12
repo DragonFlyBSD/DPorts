@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Sane/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Sane/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Sane
 PORTVERSION=	0.05
@@ -17,9 +17,6 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0:${PORTSDIR}/devel/p5-ExtUtils-Depends \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sane.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^my $$inc = / s|-I\.|& -I${LOCALBASE}/include|' ${WRKSRC}/Makefile.PL
 
