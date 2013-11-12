@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Lexical-Var/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Lexical-Var/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Lexical-Var
 PORTVERSION=	0.009
@@ -16,9 +16,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Lexical::Sub.3 Lexical::Var.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/Lexical::SealRequireHints/d' ${WRKSRC}/Build.PL ${WRKSRC}/lib/Lexical/Var.pm
 
