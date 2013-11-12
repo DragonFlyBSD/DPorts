@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Plugin-Server/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Server/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Catalyst-Plugin-Server
 PORTVERSION=	0.28
@@ -11,6 +11,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Catalyst Server Plugin: Base & XMLRPC
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheritable \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat \
@@ -21,10 +24,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Plugin::Server.3 Catalyst::Plugin::Server::XMLRPC.3 \
-		Catalyst::Plugin::Server::XMLRPC::DispatchType::XMLRPCPath.3 \
-		Catalyst::Plugin::Server::XMLRPC::DispatchType::XMLRPCRegex.3 \
-		Catalyst::Plugin::Server::XMLRPC::Tutorial.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
