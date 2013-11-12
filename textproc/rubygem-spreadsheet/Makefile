@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/rubygem-spreadsheet/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-spreadsheet/Makefile 332052 2013-10-30 02:59:10Z swills $
 
 PORTNAME=	spreadsheet
 PORTVERSION=	0.8.9
@@ -20,5 +20,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/xlsopcodes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
