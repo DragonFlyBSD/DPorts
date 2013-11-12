@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-foreman/Makefile 331026 2013-10-20 15:18:54Z swills $
+# $FreeBSD: devel/rubygem-foreman/Makefile 332037 2013-10-30 02:34:55Z swills $
 
 PORTNAME=	foreman
 PORTVERSION=	0.63.0
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
