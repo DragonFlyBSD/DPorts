@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: audio/p5-Audio-Wav/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Audio-Wav/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	Audio-Wav
 PORTVERSION=	0.13
@@ -14,9 +14,6 @@ BUILD_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		Audio::Wav.3 Audio::Wav::Read.3 Audio::Wav::Write.3
 
 .include <bsd.port.mk>
