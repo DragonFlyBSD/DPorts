@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: security/p5-Authen-Bitcard/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-Bitcard/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Authen-Bitcard
 PORTVERSION=	0.90
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-Class-ErrorHandler>=0:${PORTSDIR}/devel/p5-Class-ErrorHandler \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Authen::Bitcard.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
