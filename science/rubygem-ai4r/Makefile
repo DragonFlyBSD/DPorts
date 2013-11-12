@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: science/rubygem-ai4r/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/rubygem-ai4r/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	ai4r
 PORTVERSION=	1.12
@@ -13,5 +13,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
