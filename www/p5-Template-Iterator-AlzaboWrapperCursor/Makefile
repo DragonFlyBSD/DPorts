@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Iterator-AlzaboWrapperCursor/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Iterator-AlzaboWrapperCursor/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	Template-Iterator-AlzaboWrapperCursor
 DISTVERSION=	0.01
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		${PORTNAME:S/-/::/g}.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
