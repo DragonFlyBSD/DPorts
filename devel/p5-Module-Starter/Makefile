@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Module-Starter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Starter/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Starter
 PORTVERSION=	1.60
@@ -18,13 +18,4 @@ PORTSCOUT=	skipv:1.470
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		module-starter.1
-MAN3=		Module::Starter.3 \
-		Module::Starter::App.3 \
-		Module::Starter::BuilderSet.3 \
-		Module::Starter::Plugin.3 \
-		Module::Starter::Plugin::Template.3 \
-		Module::Starter::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
