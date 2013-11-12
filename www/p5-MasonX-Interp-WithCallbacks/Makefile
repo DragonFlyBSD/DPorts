@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: www/p5-MasonX-Interp-WithCallbacks/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-MasonX-Interp-WithCallbacks/Makefile 333112 2013-11-07 15:07:21Z vanilla $
 
 PORTNAME=	MasonX-Interp-WithCallbacks
 PORTVERSION=	1.19
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		MasonX::Interp::WithCallbacks.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
