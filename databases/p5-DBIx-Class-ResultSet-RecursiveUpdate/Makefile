@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 333318 2013-11-09 18:48:40Z sunpoet $
 
 PORTNAME=	DBIx-Class-ResultSet-RecursiveUpdate
-PORTVERSION=	0.30
+PORTVERSION=	0.31
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -22,7 +22,6 @@ BUILD_DEPENDS=	p5-Carp-Clan>=6.04:${PORTSDIR}/devel/p5-Carp-Clan \
 		p5-Readonly>=1.03:${PORTSDIR}/devel/p5-Readonly \
 		p5-SQL-Translator>=0.11016:${PORTSDIR}/databases/p5-SQL-Translator
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-NonMoose>=0:${PORTSDIR}/devel/p5-MooseX-NonMoose \
 		p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
@@ -33,7 +32,4 @@ TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBIx::Class::ResultSet::RecursiveUpdate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
