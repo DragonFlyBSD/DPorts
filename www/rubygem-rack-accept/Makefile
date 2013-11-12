@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-rack-accept/Makefile 331022 2013-10-20 14:56:31Z swills $
+# $FreeBSD: www/rubygem-rack-accept/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	rack-accept
 PORTVERSION=	0.4.5
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
