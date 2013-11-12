@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: devel/rubygem-fastthread/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-fastthread/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	fastthread
 PORTVERSION=	1.0.7
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
