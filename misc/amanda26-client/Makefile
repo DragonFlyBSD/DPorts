@@ -1,7 +1,7 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda26-client/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/amanda26-client/Makefile 333014 2013-11-06 17:28:33Z bapt $
 
-PKGNAMESUFFIX=	-client
+PKGNAMESUFFIX=	26-client
 PORTREVISION=	2
 
 COMMENT=	The Advanced Maryland Automatic Network Disk Archiver (client)
