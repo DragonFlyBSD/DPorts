@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-aliased/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-aliased/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	aliased
 PORTVERSION=	0.31
@@ -16,9 +16,4 @@ PORTSCOUT=	skipv:0.30_01
 USES=		perl5
 USE_PERL5=	modbuild
 
-PLIST_FILES=	${SITE_PERL_REL}/aliased.pm
-
-MAN3=	aliased.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
