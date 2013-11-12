@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: devel/p5-Async-Interrupt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Async-Interrupt/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	Async-Interrupt
 PORTVERSION=	1.10
@@ -20,7 +20,4 @@ RUN_DEPENDS=	p5-common-sense>=0:${PORTSDIR}/devel/p5-common-sense
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Async::Interrupt.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
