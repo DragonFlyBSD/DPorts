@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Symbolic-Custom-ErrorPropagation/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Symbolic-Custom-ErrorPropagation/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-Symbolic-Custom-ErrorPropagation
 PORTVERSION=	0.11
@@ -13,10 +13,7 @@ COMMENT=	Calculate Gaussian Error Propagation
 BUILD_DEPENDS=	p5-Math-Symbolic>=0:${PORTSDIR}/math/p5-Math-Symbolic
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Math::Symbolic::Custom::ErrorPropagation.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
