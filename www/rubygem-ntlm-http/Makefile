@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-# $FreeBSD: www/rubygem-ntlm-http/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-ntlm-http/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	ntlm-http
 PORTVERSION=	0.1.1
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
