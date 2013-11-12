@@ -1,5 +1,5 @@
 # Created by: Mina Naguib <webmaster@topfx.com>
-# $FreeBSD: irc/psybnc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/psybnc/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	psybnc
 DISTVERSION=	2.3.2-9
@@ -7,7 +7,7 @@ CATEGORIES=	irc ipv6
 MASTER_SITES=	http://www.psybnc.at/download/beta/ CENKES
 DISTNAME=	psyBNC-${DISTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extremely powerful IRC bouncer
 
 WRKSRC=		${WRKDIR}/psybnc
