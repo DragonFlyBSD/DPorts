@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-B-Keywords/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Keywords/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	B-Keywords
 PORTVERSION=	1.13
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		B::Keywords.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
