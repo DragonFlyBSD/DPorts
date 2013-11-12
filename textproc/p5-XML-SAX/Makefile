@@ -1,8 +1,9 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-SAX/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-SAX/Makefile 333249 2013-11-08 17:11:58Z vanilla $
 
 PORTNAME=	XML-SAX
 PORTVERSION=	0.99
+PORTREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,33 +13,10 @@ COMMENT=	Simple API for XML
 
 BUILD_DEPENDS=	p5-XML-NamespaceSupport>=0.03:${PORTSDIR}/textproc/p5-XML-NamespaceSupport \
 		p5-XML-SAX-Base>=1.05:${PORTSDIR}/textproc/p5-XML-SAX-Base
-RUN_DEPENDS=	p5-XML-NamespaceSupport>=0.03:${PORTSDIR}/textproc/p5-XML-NamespaceSupport \
-		p5-XML-SAX-Base>=1.05:${PORTSDIR}/textproc/p5-XML-SAX-Base
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		XML::SAX.3 XML::SAX::DocumentLocator.3 XML::SAX::Intro.3 \
-		XML::SAX::ParserFactory.3 XML::SAX::PurePerl.3 \
-		XML::SAX::PurePerl::Reader.3
-
-OPTIONS_DEFINE=	WRITE_INI_OK
-
-WRITE_INI_OK_DESC=	Alter ParserDetails.ini information
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MWRITE_INI_OK}
-WRITE_INI_OK=	1
-.else
-WRITE_INI_OK=	0
-.endif
-
-post-patch:
-# dirty hack to stop asking for confirmation to alter ParserDetails.ini
-	@${REINPLACE_CMD} -e 's/%%WRITE_INI_OK%%/${WRITE_INI_OK}/' \
-		${WRKSRC}/Makefile.PL
 
 post-configure:
 # dirty hack to deceive irritable pod2man
