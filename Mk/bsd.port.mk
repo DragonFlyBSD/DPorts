@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 332196 2013-10-31 02:27:14Z bdrewery $
+# $FreeBSD: Mk/bsd.port.mk 333064 2013-11-07 05:58:42Z ohauer $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -4293,7 +4293,7 @@ create-users-groups:
 								echo \"Adding user '$${_login}' to group '${_group}'.\"; \
 								${PW} groupmod ${_group} -m $${_login}; fi" >> ${TMPPLIST}; \
 					else \
-							${ECHO_CMD} "if ! ${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \n \
+							${ECHO_CMD} -e "if ! ${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \n \
 								echo \"Adding user '$${_login}' to group '${_group}'.\" \n \
 								${PW} groupmod ${_group} -m $${_login} \nfi" >> ${_UG_OUTPUT}; \
 					fi ; \
@@ -5705,7 +5705,7 @@ actual-package-depends:
 
 package-recursive: package
 	@for dir in $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} package-noinstall); \
+		(cd $$dir; ${MAKE} package clean); \
 	done
 
 # Show missing dependencies

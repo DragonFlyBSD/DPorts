@@ -1,6 +1,6 @@
-# $FreeBSD: Mk/Uses/kmod.mk 332228 2013-10-31 11:34:46Z rene $
+# $FreeBSD: Mk/Uses/kmod.mk 333188 2013-11-08 09:44:24Z rene $
 #
-# Handles dependency on kernel sources
+# Handles common items for kernel module ports.
 #
 # MAINTAINER: rene@FreeBSD.org
 #
@@ -23,9 +23,15 @@ CATEGORIES+=	kld
 
 SSP_UNSAFE=	kernel module does not support SSP
 
+.if ${KMODDIR} == "/boot/kernel"
+KMODDIR=	/boot/modules
+.endif
 KMODDIR?=	/boot/modules
 PLIST_SUB+=	KMODDIR="${KMODDIR:C,^/,,}"
 MAKE_ENV+=	KMODDIR="${KMODDIR}" SYSDIR="${SRC_BASE}/sys"
+.if !defined(NO_STAGE)
+MAKE_ENV+=	NO_XREF=yes
+.endif
 
 pre-install: kmod-pre-install
 kmod-pre-install:
@@ -39,9 +45,9 @@ post-install: kmod-post-install
 kmod-post-install:
 	${ECHO_CMD} "@exec /usr/sbin/kldxref ${KMODDIR}"  >> ${TMPPLIST}
 	${ECHO_CMD} "@unexec /usr/sbin/kldxref ${KMODDIR}" >> ${TMPPLIST}
-	${ECHO_CMD} "@dirrmtry ${KMODDIR}" >> ${TMPPLIST}
 .if defined(NO_STAGE)
 	/usr/sbin/kldxref ${KMODDIR}
 .endif
+	${ECHO_CMD} "@unexec rmdir ${KMODDIR} 2>/dev/null || true" >> ${TMPPLIST}
 
 .endif

@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 331677 2013-10-26 12:37:32Z sunpoet $
+# $FreeBSD: Mk/bsd.sites.mk 333421 2013-11-10 18:11:38Z rakuco $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -454,7 +454,6 @@ MASTER_SITE_GCC+= \
 	ftp://ftp.iij.ad.jp/pub/gnu/gnu/gcc/%SUBDIR%/ \
 	ftp://ftp.dti.ad.jp/pub/lang/gcc/%SUBDIR%/ \
 	ftp://ftp.nluug.nl/mirror/languages/gcc/%SUBDIR%/ \
-	ftp://ftp.nctu.edu.tw/computer-languages/C/gcc/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/%SUBDIR%/ \
 	ftp://ftp.ntua.gr/pub/gnu/gcc/%SUBDIR%/ \
 	ftp://mirror.aarnet.edu.au/pub/gnu/gcc/%SUBDIR%/
@@ -666,7 +665,6 @@ MASTER_SITE_KENAI+= \
 # Updated:	2012-10-26
 .if !defined(IGNORE_MASTER_SITE_KDE)
 MASTER_SITE_KDE+= \
-	http://mirrors.isc.org/pub/kde/%SUBDIR%/ \
 	ftp://ftp.gtlib.gatech.edu/pub/kde/%SUBDIR%/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/Mirrors/ftp.kde.org/%SUBDIR%/ \
 	http://ftp.gtlib.gatech.edu/pub/kde/%SUBDIR%/ \

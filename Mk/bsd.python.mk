@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 331756 2013-10-27 09:30:09Z koobs $
+# $FreeBSD: Mk/bsd.python.mk 333288 2013-11-09 13:20:05Z wg $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -131,15 +131,16 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #					  default: setup.py
 #
 # PYDISTUTILS_AUTOPLIST
-#					- Automatically generates the packaging list for ports that use
-#                                         distutils or setuptools (easy_install) when defined. Overrides
-#                                         PYTHON_PY3K_PLIST_HACK.
+#					- Automatically generates the packaging list for a port that uses
+#                                         distutils or setuptools (easy_install) when defined.
+#                                         requires: USE_PYDISTUTILS
 #
 # PYTHON_PY3K_PLIST_HACK
 #					- Automatically generates Python 3.x compatible __pycache__ entries
-#                                         from a Python 2.x pkg-plist when defined. Use this for ports that
+#                                         from a Python 2.x packaging list when defined. Use this for ports that
 #                                         do *not* use standard Python packaging mechanisms such as distutils
-#                                         or setuptools, and support *both* Python 2.x and 3.x.
+#                                         or setuptools, and support *both* Python 2.x and 3.x. Not needed when
+#                                         PYDISTUTILS_AUTOPLIST is defined.
 #
 # PYDISTUTILS_PKGNAME
 #					- Internal name in the distutils for egg-info.
@@ -191,14 +192,6 @@ Python_Include_MAINTAINER=	python@FreeBSD.org
 #
 # PYEASYINSTALL_CMD - Full file path to easy_install command.
 #					  default: ${LOCALBASE}/bin/easy_install-${PYTHON_VER}
-#
-# PYEASYINSTALL_INSTALLARGS
-#					- Arguments to easy_install command for egg installation.
-#					  default: -q -N -S ${PYTHON_SITELIBDIR} ${PYDISTUTILS_PKGNAME}==${PYDISTUTILS_PKGVERSION}
-#
-# PYEASYINSTALL_UNINSTALLARGS
-#					- Arguments to easy_install command for egg uninstallation.
-#					  default: -q -m -S ${PYTHON_SITELIBDIR} ${PYDISTUTILS_PKGNAME}==${PYDISTUTILS_PKGVERSION}
 #
 # USE_TWISTED		- If this option is just yes then build and run
 #					  the dependence to twistedCore is added. Alternatively
@@ -393,9 +386,9 @@ PYTHON_VER=		2.7
 
 # Python-2.6
 .elif ${PYTHON_VERSION} == "python2.6"
-PYTHON_PORTVERSION?=	2.6.8
+PYTHON_PORTVERSION?=	2.6.9
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python26
-PYTHON_REL=		268
+PYTHON_REL=		269
 PYTHON_SUFFIX=		26
 PYTHON_VER=		2.6
 
@@ -451,7 +444,12 @@ PYDISTUTILS_INSTALLARGS?=		-O 1 -N -S ${PYTHON_SITELIBDIR} \
 								-d ${PYEASYINSTALL_SITELIBDIR} \
 								-s ${PYEASYINSTALL_BINDIR} \
 								${WRKSRC}/dist/${PYEASYINSTALL_EGG}
-.if ${PREFIX} != ${LOCALBASE}
+.if !defined(NO_STAGE)
+MAKE_ENV+=			PYTHONUSERBASE=${STAGEDIR}${PYTHONBASE}
+PYDISTUTILS_INSTALLARGS:=	-m -q --user ${PYDISTUTILS_INSTALLARGS}
+.endif
+
+.if ${PREFIX} != ${LOCALBASE} || !defined(NO_STAGE)
 MAKE_ENV+=						PYTHONPATH=${PYEASYINSTALL_SITELIBDIR}
 .endif
 
@@ -463,20 +461,16 @@ PYEASYINSTALL_EGG?=				${PYDISTUTILS_PKGNAME:C/[^A-Za-z0-9.]+/_/g}-${PYDISTUTILS
 PYEASYINSTALL_CMD?=				${LOCALBASE}/bin/easy_install-${PYTHON_VER}
 PYEASYINSTALL_BINDIR?=			${PREFIX}/bin
 PYEASYINSTALL_SITELIBDIR?=		${PYTHONPREFIX_SITELIBDIR}
-PYEASYINSTALL_INSTALLARGS?=		-q -N -S ${PYTHON_SITELIBDIR} \
-								-d ${PYEASYINSTALL_SITELIBDIR} \
-								-s ${PYEASYINSTALL_BINDIR} \
-								${PYDISTUTILS_PKGNAME}==${PYDISTUTILS_PKGVERSION}
-PYEASYINSTALL_UNINSTALLARGS?=	-q -N -m -S ${PYTHON_SITELIBDIR} \
-								-d ${PYEASYINSTALL_SITELIBDIR} \
-								-s ${PYEASYINSTALL_BINDIR} \
-								${PYDISTUTILS_PKGNAME}==${PYDISTUTILS_PKGVERSION}
 
 PLIST_SUB+=		PYEASYINSTALL_EGG=${PYEASYINSTALL_EGG}
 
 pre-install: pre-install-easyinstall
 pre-install-easyinstall:
+.if defined(NO_STAGE)
 	@${MKDIR} ${PYEASYINSTALL_SITELIBDIR}
+.else
+	@${MKDIR} ${STAGEDIR}${PYEASYINSTALL_SITELIBDIR}
+.endif
 
 add-plist-post: add-plist-easyinstall
 add-plist-easyinstall:
@@ -488,6 +482,20 @@ add-plist-easyinstall:
 	@${ECHO_CMD} "@exec ${PRINTF} '1a\n./${PYEASYINSTALL_EGG}\n.\nw\nq\n' | \
 			/bin/ed ${PYEASYINSTALL_SITELIBDIR}/easy-install.pth" \
 		>> ${TMPPLIST}
+
+.if !defined(NO_STAGE)
+.if !target(stage-python-compileall)
+stage-python-compileall:
+	(cd ${STAGEDIR}${PREFIX} && \
+	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+		-d ${PYTHONPREFIX_SITELIBDIR} -f ${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;} && \
+	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
+		-d ${PYTHONPREFIX_SITELIBDIR} -f ${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;})
+.endif
+
+post-install: stage-python-compileall
+.endif
+
 .endif		# defined(USE_PYDISTUTILS) && ${USE_PYDISTUTILS} == "easy_install"
 
 # distutils support
@@ -495,7 +503,7 @@ PYSETUP?=				setup.py
 PYDISTUTILS_CONFIGUREARGS?=
 PYDISTUTILS_BUILDARGS?=
 PYDISTUTILS_INSTALLARGS?=	-c -O1 --prefix=${PREFIX}
-.if !defined(NO_STAGE)
+.if !defined(NO_STAGE) && defined(USE_PYDISTUTILS) && ${USE_PYDISTUTILS} != "easy_install"
 PYDISTUTILS_INSTALLARGS+=	--root=${STAGEDIR}
 .endif
 PYDISTUTILS_PKGNAME?=	${PORTNAME}
@@ -528,10 +536,12 @@ add-plist-pymod:
 		${SED} '/^\.$$/d' > ${WRKDIR}/.localmtree
 	@${ECHO_CMD} "${_RELSITELIBDIR}" >> ${WRKDIR}/.localmtree
 	@${ECHO_CMD} "${_RELLIBDIR}" >> ${WRKDIR}/.localmtree
-	@${SED} -e 's|^${PREFIX}/||' \
+	@${SED} -e 's|^${STAGEDIR}${PREFIX}/||' \
+		-e 's|^${PREFIX}/||' \
 		-e 's|^\(man/man[0-9]\)/\(.*\.[0-9]\)$$|\1/\2${MANEXT}|' \
 		${_PYTHONPKGLIST} | ${SORT} >> ${TMPPLIST}
-	@${SED} -e 's|^${PREFIX}/\(.*\)/\(.*\)|\1|' ${_PYTHONPKGLIST} | \
+	@${SED} -e 's|^${STAGEDIR}${PREFIX}/\(.*\)/\(.*\)|\1|' \
+		-e 's|^${PREFIX}/\(.*\)/\(.*\)|\1|' ${_PYTHONPKGLIST} | \
 		${AWK} '{ num = split($$0, a, "/"); res=""; \
 					for(i = 1; i <= num; ++i) { \
 						if (i == 1) res = a[i]; \
@@ -545,6 +555,8 @@ add-plist-pymod:
 				${ECHO_CMD} "@unexec rmdir \"%D/$${line}\" 2>/dev/null || true"; \
 			}; \
 		done | ${SORT} | uniq | ${SORT} -r >> ${TMPPLIST}
+	@${ECHO_CMD} "@unexec rmdir \"%D/${PYTHON_SITELIBDIR:S;${PYTHONBASE}/;;}\" 2>/dev/null || true" >> ${TMPPLIST}
+	@${ECHO_CMD} "@unexec rmdir \"%D/${PYTHON_LIBDIR:S;${PYTHONBASE}/;;}\" 2>/dev/null || true" >> ${TMPPLIST}
 
 .else
 .if ${PYTHON_REL} >= 320 && defined(PYTHON_PY3K_PLIST_HACK)

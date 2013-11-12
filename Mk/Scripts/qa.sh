@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: Mk/Scripts/qa.sh 331046 2013-10-20 18:12:49Z ak $
+# $FreeBSD: Mk/Scripts/qa.sh 332275 2013-10-31 19:07:38Z mandree $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -18,7 +18,7 @@ err() {
 shebang() {
 	rc=0
 	for f in `find ${STAGEDIR} -type f`; do
-		interp=$(sed -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p' $f)
+		interp=$(sed -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p;2q' $f)
 		case "$interp" in
 		"") ;;
 		/usr/bin/env) ;;
@@ -62,7 +62,8 @@ paths() {
 
 # For now do not raise an error, just warnings
 stripped() {
-	[ -x /usr/bin/file ] || return
+	[ -x /usr/bin/file ] || return # this is fatal
+	[ -n "${STRIP}" ] || return 0
 	for f in `find ${STAGEDIR} -type f`; do
 		output=`/usr/bin/file ${f}`
 		case "${output}" in

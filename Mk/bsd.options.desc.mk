@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 330247 2013-10-13 19:06:40Z zi $
+# $FreeBSD: Mk/bsd.options.desc.mk 333334 2013-11-09 19:58:07Z sunpoet $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -399,6 +399,7 @@ SOCKS_DESC?=		SOCKS proxy support
 SOUND_DESC?=		Sound (audio) support
 SOUNDTOUCH_DESC?=	Sound processing support via SoundTouch
 SPANDSP_DESC?=		Spandsp faxing support
+SPDY_DESC?=		SPDY support
 SPEEX_DESC?=		Speex audio format support
 SQL_DESC?=		SQL database support
 SQLITE_DESC?=		SQLite database support

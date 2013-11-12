@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: Mk/Uses/pure.mk 330779 2013-10-18 22:12:37Z nemysis $
+# $FreeBSD: Mk/Uses/pure.mk 333047 2013-11-07 00:20:49Z nemysis $
 #
 # Provide support for Pure Programming Language based projects
 #
@@ -19,8 +19,12 @@ _valid_ARGS=		ffi
 _pure_ARGS=		${pure_ARGS:C/\:/ /g}
 
 # Sanity check
-.if defined(pure_ARGS) && ${_pure_ARGS} != ffi
-IGNORE=Incorrect 'USES+= pure:${pure_ARGS}' usage: argument [${pure_ARGS}] is not recognized
+.if defined(pure_ARGS)
+.  for arg in ${_pure_ARGS}
+.    if empty(_valid_ARGS:M${arg})
+IGNORE= Incorrect 'USES+= pure:${pure_ARGS}' usage: argument [${arg}] is not recognized
+.    endif
+.  endfor
 .endif
 
 LIB_DEPENDS+=	libpure.so:${PORTSDIR}/lang/pure
@@ -31,8 +35,8 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/pure/ffi.pure:${PORTSDIR}/devel/pure-ffi
 .endif
 
 MAKE_ARGS+=	prefix=${PREFIX} mandir=${PREFIX}/man \
-		CC="${CC}" CFLAGS="${CFLAGS}" \
-		CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
+		CC=${CC} CFLAGS="${CFLAGS}" \
+		CXX=${CXX} CXXFLAGS="${CXXFLAGS}" \
 		CPPFLAGS+=-I${LOCALBASE}/include \
 		LDFLAGS+=-L${LOCALBASE}/lib
 

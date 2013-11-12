@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.kde4.mk 329768 2013-10-08 09:28:52Z makc $
+# $FreeBSD: Mk/bsd.kde4.mk 332996 2013-11-06 14:47:14Z rakuco $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Kde_Pre_Include)
 
@@ -80,7 +80,7 @@ KTP_VERSION?=		0.6.1
 KTP_BRANCH?=		stable
 CALLIGRA_VERSION?=	2.6.2
 CALLIGRA_BRANCH?=	stable
-KDEVELOP_VERSION?=	4.5.1
+KDEVELOP_VERSION?=	4.5.2
 KDEVELOP_BRANCH?=	stable
 
 #
