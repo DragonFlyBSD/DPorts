@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-EncodedColumn/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBIx-Class-EncodedColumn
 PORTVERSION=	0.00012
@@ -24,13 +24,6 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure extract
 
-MAN3=	DBIx::Class::EncodedColumn.3 \
-	DBIx::Class::EncodedColumn::Crypt.3 \
-	DBIx::Class::EncodedColumn::Crypt::Eksblowfish::Bcrypt.3 \
-	DBIx::Class::EncodedColumn::Crypt::OpenPGP.3 \
-	DBIx::Class::EncodedColumn::Digest.3
-
-NO_STAGE=	yes
 post-extract:
 	@${PERL} -i -ne 'print unless m,^build_requires, || m,^feature, .. m,;,' ${WRKSRC}/Makefile.PL
 
