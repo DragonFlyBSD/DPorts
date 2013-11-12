@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/googlemock/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/googlemock/Makefile 333053 2013-11-07 02:51:51Z clsung $
 
 PORTNAME=	googlemock
 PORTVERSION=	1.5.0
@@ -14,7 +14,5 @@ BUILD_DEPENDS=	googletest>=1.5.0:${PORTSDIR}/devel/googletest
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GCC=	4.2+
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
