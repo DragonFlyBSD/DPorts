@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-MARC-Charset/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-MARC-Charset/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	MARC-Charset
 PORTVERSION=	1.35
@@ -20,11 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MARC::Charset.3 \
-		MARC::Charset::Code.3 \
-		MARC::Charset::Compiler.3 \
-		MARC::Charset::Constants.3 \
-		MARC::Charset::Table.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
