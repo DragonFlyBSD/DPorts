@@ -1,9 +1,8 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 331660 2013-10-26 08:39:31Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 332904 2013-11-05 19:45:13Z sunpoet $
 
 PORTNAME=	ExtUtils-MakeMaker
-PORTVERSION=	6.80
-PORTREVISION=	1
+PORTVERSION=	6.82
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,6 +12,9 @@ COMMENT=	Designed to write a Makefile for an extension module
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-JSON-PP>=2.27203:${PORTSDIR}/converters/p5-JSON-PP
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
