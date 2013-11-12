@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-ClassAttribute/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-ClassAttribute/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-ClassAttribute
 PORTVERSION=	0.27
@@ -26,16 +26,4 @@ TEST_DEPENDS=	p5-MooseX-AttributeHelpers>=0:${PORTSDIR}/devel/p5-MooseX-Attribut
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::ClassAttribute.3 \
-		MooseX::ClassAttribute::Meta::Role::Attribute.3 \
-		MooseX::ClassAttribute::Trait::Application.3 \
-		MooseX::ClassAttribute::Trait::Application::ToClass.3 \
-		MooseX::ClassAttribute::Trait::Application::ToRole.3 \
-		MooseX::ClassAttribute::Trait::Attribute.3 \
-		MooseX::ClassAttribute::Trait::Class.3 \
-		MooseX::ClassAttribute::Trait::Mixin::HasClassAttributes.3 \
-		MooseX::ClassAttribute::Trait::Role.3 \
-		MooseX::ClassAttribute::Trait::Role::Composite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
