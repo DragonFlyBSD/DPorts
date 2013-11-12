@@ -1,5 +1,5 @@
 # Created by: Christopher Nehren <apeiron@comcast.net>
-# $FreeBSD: devel/p5-Shell-Base/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Shell-Base/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Shell-Base
 PORTVERSION=	0.05
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Shell::Base.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
