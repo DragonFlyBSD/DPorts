@@ -1,8 +1,8 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: devel/p5-Log-Handler/Makefile 329418 2013-10-05 06:06:03Z sunpoet $
+# $FreeBSD: devel/p5-Log-Handler/Makefile 332744 2013-11-04 16:59:04Z sunpoet $
 
 PORTNAME=	Log-Handler
-PORTVERSION=	0.80
+PORTVERSION=	0.82
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
