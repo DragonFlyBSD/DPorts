@@ -1,9 +1,9 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: security/openvas-libnasl/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD: security/openvas-libnasl/Makefile 332596 2013-11-03 09:21:59Z novel $
 
 PORTNAME=	openvas-libnasl
 PORTVERSION=	2.0.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/561/
 
