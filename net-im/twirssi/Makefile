@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/twirssi/Makefile 331338 2013-10-22 22:51:40Z garga $
+# $FreeBSD: net-im/twirssi/Makefile 332311 2013-10-31 23:41:47Z garga $
 
 PORTNAME=	twirssi
 PORTVERSION=	2.6.0
@@ -9,6 +9,8 @@ EXTRACT_ONLY=
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Twitter script to irssi
+
+LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-Net-Twitter>=0:${PORTSDIR}/net/p5-Net-Twitter \
 		p5-WWW-Shorten>=0:${PORTSDIR}/www/p5-WWW-Shorten \
