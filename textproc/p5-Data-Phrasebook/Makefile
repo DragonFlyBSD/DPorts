@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Data-Phrasebook/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Data-Phrasebook/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Data-Phrasebook
 PORTVERSION=	0.34
@@ -15,15 +15,4 @@ LICENSE=	ART20
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Phrasebook.3 \
-	Data::Phrasebook::Debug.3 \
-	Data::Phrasebook::Generic.3 \
-	Data::Phrasebook::Loader.3 \
-	Data::Phrasebook::Loader::Base.3 \
-	Data::Phrasebook::Loader::Text.3 \
-	Data::Phrasebook::Plain.3 \
-	Data::Phrasebook::SQL.3 \
-	Data::Phrasebook::SQL::Query.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
