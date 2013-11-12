@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 332210 2013-10-31 07:52:41Z jadawin $
+# $FreeBSD: devel/p5-DateTime-TimeZone/Makefile 332679 2013-11-04 10:23:49Z jadawin $
 
 PORTNAME=	DateTime-TimeZone
 PORTVERSION=	1.63
@@ -22,23 +22,16 @@ TEST_DEPENDS=	p5-Test-Output>0:${PORTSDIR}/devel/p5-Test-Output
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::TimeZone.3 DateTime::TimeZone::Floating.3 \
-		DateTime::TimeZone::Local.3 DateTime::TimeZone::Local::Unix.3 \
-   		DateTime::TimeZone::Local::VMS.3 DateTime::TimeZone::Local::Win32.3 \
-	  	DateTime::TimeZone::OffsetOnly.3 DateTime::TimeZone::OlsonDB.3 \
-		DateTime::TimeZone::UTC.3 DateTime::TimeZone::Catalog.3
-
 PORTDOCS=	Changes README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	@${ECHO_MSG} "===> Documentation installed in ${STAGEDIR}${DOCSDIR}."
 .endif
 
 .include <bsd.port.mk>
