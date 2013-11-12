@@ -1,5 +1,5 @@
 # Created by: lbr@FreeBSD.org
-# $FreeBSD: www/p5-Catalyst-Plugin-ConfigLoader-Environment/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-ConfigLoader-Environment/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	Catalyst-Plugin-ConfigLoader-Environment
 PORTVERSION=	0.07
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Configure your application with environment variables
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 RUN_DEPENDS=	p5-Catalyst-Runtime>=5.7000:${PORTSDIR}/www/p5-Catalyst-Runtime \
 		p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any \
 		p5-MRO-Compat>=0:${PORTSDIR}/devel/p5-MRO-Compat
@@ -18,7 +21,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Plugin::ConfigLoader::Environment.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
