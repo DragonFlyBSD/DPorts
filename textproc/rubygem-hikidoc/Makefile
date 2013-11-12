@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-hikidoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-hikidoc/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	hikidoc
 PORTVERSION=	0.0.6
@@ -16,5 +16,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/hikidoc
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
