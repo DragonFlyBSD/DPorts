@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: net/ecore-con/Makefile 331629 2013-10-25 19:58:18Z gblach $
+# $FreeBSD: net/ecore-con/Makefile 333129 2013-11-07 16:00:45Z gblach $
 
 PORTNAME=	con
-PORTVERSION=	1.7.8
+PORTVERSION=	1.7.9
 CATEGORIES=	net enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
