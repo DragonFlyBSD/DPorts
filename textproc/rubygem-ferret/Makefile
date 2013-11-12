@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-ferret/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-ferret/Makefile 332051 2013-10-30 02:58:22Z swills $
 
 PORTNAME=	ferret
 PORTVERSION=	0.11.8.5
@@ -15,5 +15,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=  yes
 PLIST_FILES=	bin/ferret-browser
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
