@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: www/p5-HTML-Highlight/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Highlight/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Highlight
 PORTVERSION=	0.20
@@ -12,7 +12,5 @@ COMMENT=	Module to highlight words or patterns in HTML documents
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=	HTML::Highlight.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
