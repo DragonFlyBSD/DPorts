@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Path-Iterator-Rule/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Path-Iterator-Rule/Makefile 332700 2013-11-04 12:33:08Z kuriyama $
 
 PORTNAME=	Path-Iterator-Rule
-PORTVERSION=	1.005
+PORTVERSION=	1.006
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
@@ -26,8 +26,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	PIR.3 \
-	Path::Iterator::Rule.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
