@@ -1,7 +1,7 @@
-# $FreeBSD: polish/hunspell/Makefile 331879 2013-10-28 18:17:19Z sunpoet $
+# $FreeBSD: polish/hunspell/Makefile 333496 2013-11-11 13:30:50Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20131027
+PORTVERSION=	20131110
 CATEGORIES=	polish textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	sjp-myspell-pl-${PORTVERSION}
@@ -13,19 +13,19 @@ COMMENT=	Polish hunspell dictionaries
 LICENSE=	LGPL21 GPLv2 MPL
 LICENSE_COMB=	dual
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 
 PLIST_FILES=	%%DATADIR%%/pl_PL.aff \
 		%%DATADIR%%/pl_PL.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 post-extract:
-	@${EXTRACT_CMD} ${WRKDIR}/pl_PL.zip -d ${WRKSRC}/
+	@${MKDIR} ${WRKSRC}
+	@${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${WRKDIR}/pl_PL.zip -C ${WRKSRC}/
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/pl_PL.aff ${WRKSRC}/pl_PL.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/pl_PL.aff ${WRKSRC}/pl_PL.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
