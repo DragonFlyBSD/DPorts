@@ -1,7 +1,7 @@
-# $FreeBSD: www/py-w3lib/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-w3lib/Makefile 333423 2013-11-10 18:40:48Z rm $
 
 PORTNAME=	w3lib
-PORTVERSION=	1.3
+PORTVERSION=	1.5
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,8 +11,10 @@ COMMENT=	Library of web-related functions
 
 LICENSE=	BSD
 
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=yes
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six
 
-NO_STAGE=	yes
+USE_PYTHON=	yes
+USE_PYDISTUTILS=easy_install
+PYDISTUTILS_AUTOPLIST=	yes
+
 .include <bsd.port.mk>
