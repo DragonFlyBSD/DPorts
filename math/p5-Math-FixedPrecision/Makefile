@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-FixedPrecision/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-FixedPrecision/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-FixedPrecision
 PORTVERSION=	0.21
@@ -14,7 +14,4 @@ COMMENT=	Perl module that provides decimal math without floating point errors
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::FixedPrecision.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
