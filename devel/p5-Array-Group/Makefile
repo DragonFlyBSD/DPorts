@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Array-Group/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Array-Group/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	Array-Group
 PORTVERSION=	3.0
@@ -12,11 +12,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert an array into array of arrayrefs of uniform size N
 
 USE_ZIP=	yes
-
-MAN3=		Array::Group.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
