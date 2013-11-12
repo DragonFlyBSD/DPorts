@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: net/p5-Net-MovableType/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-MovableType/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-MovableType
 PORTVERSION=	1.74
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::MovableType.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
