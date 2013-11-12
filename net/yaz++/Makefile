@@ -1,9 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/yaz++/Makefile 331781 2013-10-27 15:17:05Z pawel $
+# $FreeBSD: net/yaz++/Makefile 332829 2013-11-05 10:52:25Z demon $
 
 PORTNAME=	yaz++
-PORTVERSION=	1.5.0
-PORTREVISION=	1
+PORTVERSION=	1.5.1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yazpp/
 DISTNAME=	yazpp-${PORTVERSION}
@@ -17,7 +16,4 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-shared --with-yaz=${LOCALBASE}/bin
 USE_LDCONFIG=	yes
 
-MAN1=		yazpp-config.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
