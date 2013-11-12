@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Radius/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Radius/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Radius
 PORTVERSION=	2.103
@@ -14,7 +14,5 @@ TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Net::Radius::Dictionary.3 Net::Radius::Packet.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
