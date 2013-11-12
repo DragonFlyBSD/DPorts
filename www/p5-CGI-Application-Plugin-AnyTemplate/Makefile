@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-AnyTemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-AnyTemplate/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Application-Plugin-AnyTemplate
 PORTVERSION=	0.18
@@ -19,14 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	CGI::Application::Plugin::AnyTemplate.3 \
-	CGI::Application::Plugin::AnyTemplate::Driver::HTMLTemplate.3 \
-	CGI::Application::Plugin::AnyTemplate::Base.3 \
-	CGI::Application::Plugin::AnyTemplate::Driver::TemplateToolkit.3 \
-	CGI::Application::Plugin::AnyTemplate::ComponentHandler.3 \
-	CGI::Application::Plugin::AnyTemplate::Driver::HTMLTemplatePluggable.3 \
-	CGI::Application::Plugin::AnyTemplate::Driver::HTMLTemplateExpr.3 \
-	CGI::Application::Plugin::AnyTemplate::Driver::Petal.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
