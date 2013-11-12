@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-EzDate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-EzDate/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-EzDate
 PORTVERSION=	1.12
@@ -13,7 +13,4 @@ COMMENT=	Date and time manipulation made easy
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Date::EzDate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
