@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: games/p5-Algorithm-Pair-Best/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/p5-Algorithm-Pair-Best/Makefile 332736 2013-11-04 14:49:24Z vanilla $
 
 PORTNAME=	Algorithm-Pair-Best
 PORTVERSION=	1.036
@@ -15,7 +15,4 @@ DEPRECATED=	Use games/p5-Algorithm-Pair-Best2 instead
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::Pair::Best.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
