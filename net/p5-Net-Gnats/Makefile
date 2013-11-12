@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/p5-Net-Gnats/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Gnats/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Gnats
 PORTVERSION=	0.06
@@ -14,7 +14,4 @@ COMMENT=	Perl interface to GNU Gnats daemon
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::Gnats.3 Net::Gnats::PR.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
