@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Async/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Async/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Async
 PORTVERSION=	0.07
@@ -17,11 +17,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	MooseX::Async.3 \
-	MooseX::Async::Meta::Class.3 \
-	MooseX::Async::Meta::Method::State.3
-
-NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/lib/MooseX/._Async.pm
 
