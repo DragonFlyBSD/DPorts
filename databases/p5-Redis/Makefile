@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Redis/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Redis
 PORTVERSION=	1.9610
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Redis.3 Redis::Hash.3 Redis::List.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
