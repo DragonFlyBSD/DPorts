@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: textproc/p5-Text-FindIndent/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-FindIndent/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-FindIndent
 PORTVERSION=	0.10
@@ -14,7 +14,4 @@ COMMENT=	Perl5 module to heuristically determine the indent style of a file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::FindIndent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
