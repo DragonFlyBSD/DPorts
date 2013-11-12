@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: databases/p5-DBD-SQLite2/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBD-SQLite2/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBD-SQLite2
 PORTVERSION=	0.36
@@ -16,9 +16,6 @@ RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBD::SQLite2.3
-
-NO_STAGE=	yes
 post-extract:
 	${RM} -f ${WRKSRC}/getsqlite.pl
 
