@@ -1,5 +1,5 @@
 # Created by: dcf@aracnet.com
-# $FreeBSD: devel/p5-IO-Tee/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-Tee/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-Tee
 PORTVERSION=	0.64
@@ -14,7 +14,4 @@ COMMENT=	Multiplex output to multiple output handles
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::Tee.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
