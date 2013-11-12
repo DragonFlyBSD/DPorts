@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: misc/pinfo/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/pinfo/Makefile 332536 2013-11-02 19:57:11Z marino $
 
 PORTNAME=	pinfo
 PORTVERSION=	0.6.10
