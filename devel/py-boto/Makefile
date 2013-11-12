@@ -1,8 +1,8 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/py-boto/Makefile 330546 2013-10-16 21:27:24Z rm $
+# $FreeBSD: devel/py-boto/Makefile 333426 2013-11-10 19:16:24Z rm $
 
 PORTNAME=	boto
-PORTVERSION=	2.14.0
+PORTVERSION=	2.16.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,8 +14,8 @@ LICENSE=	MIT
 
 USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
+PYDISTUTILS_AUTOPLIST=yes
 
 CONFLICTS=	p5-Net-Amazon-Route53-[0-9]*
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
