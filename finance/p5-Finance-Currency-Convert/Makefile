@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: finance/p5-Finance-Currency-Convert/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Finance-Currency-Convert/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Finance-Currency-Convert
 PORTVERSION=	1.08
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Finance::Currency::Convert.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
