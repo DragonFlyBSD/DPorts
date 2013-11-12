@@ -1,5 +1,5 @@
 # Created by: Stephen Roznowski (sjr@home.com)
-# $FreeBSD: textproc/p5-Parse-Syslog/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Parse-Syslog/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Parse-Syslog
 PORTVERSION=	1.10
@@ -15,7 +15,4 @@ BUILD_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parse::Syslog.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
