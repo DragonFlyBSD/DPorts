@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rdoc/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rdoc/Makefile 332040 2013-10-30 02:40:36Z swills $
 
 PORTNAME=	rdoc
 PORTVERSION=	3.12.2
@@ -18,7 +18,6 @@ RUBYGEM_AUTOPLIST=	yes
 
 GEM_ENV+=	RUBYLIB=${PREFIX}/${GEM_LIB_DIR}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-install:
