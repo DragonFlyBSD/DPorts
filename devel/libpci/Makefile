@@ -1,8 +1,8 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: devel/libpci/Makefile 330008 2013-10-10 14:36:21Z sunpoet $
+# $FreeBSD: devel/libpci/Makefile 333524 2013-11-11 17:17:46Z sunpoet $
 
 PORTNAME=	libpci
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/ \
 		LOCAL/sunpoet
