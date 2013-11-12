@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php5-extensions/Makefile 330735 2013-10-18 10:04:26Z ale $
+# $FreeBSD: lang/php5-extensions/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 PORTNAME=	php5
 PORTVERSION=	1.7
@@ -19,8 +19,6 @@ USE_PHP_BUILD=	yes
 
 NO_BUILD=	yes
 NO_MTREE=	yes
-
-LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
 OPTIONS_DEFINE=	BCMATH BZ2 CALENDAR CTYPE CURL DBA \
 		DOM EXIF FILEINFO FILTER FTP GD GETTEXT \
@@ -115,7 +113,6 @@ OPTIONS_DEFAULT=	CTYPE \
 			XMLREADER \
 			XMLWRITER
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for opt in ${OPTIONS_DEFINE}
