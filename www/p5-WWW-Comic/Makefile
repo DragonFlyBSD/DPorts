@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/p5-WWW-Comic/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Comic/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WWW-Comic
 PORTVERSION=	1.06
@@ -11,18 +11,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Retrieve comic strip images
 
-RUN_DEPENDS=	p5-WWW-Dilbert>=1.19:${PORTSDIR}/www/p5-WWW-Dilbert \
+BUILD_DEPENDS=	p5-WWW-Dilbert>=1.19:${PORTSDIR}/www/p5-WWW-Dilbert \
 		p5-WWW-VenusEnvy>=1.10:${PORTSDIR}/www/p5-WWW-VenusEnvy
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
+CONFIGURE_ARGS=	</dev/null
 
-MAN3=		WWW::Comic.3 WWW::Comic::Plugin::uComics.3 \
-		WWW::Comic::Plugin::MrWiggles.3 WWW::Comic::Plugin::UserFriendly.3 \
-		WWW::Comic::Plugin::VenusEnvy.3 WWW::Comic::Plugin::UFS.3 \
-		WWW::Comic::Plugin.3 WWW::Comic::Plugin::Dilbert.3 \
-		WWW::Comic::Plugin::Goats.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
