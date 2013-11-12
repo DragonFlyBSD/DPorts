@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-C3/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-C3/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-C3
 PORTVERSION=	0.25
@@ -16,10 +16,6 @@ XS_DESC=	XS speed optimizations
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::C3.3 \
-		Class::C3::next.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXS}
