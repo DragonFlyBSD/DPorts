@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-merb-param-protection/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-merb-param-protection/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	merb-param-protection
 PORTVERSION=	1.1.3
@@ -15,5 +15,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
