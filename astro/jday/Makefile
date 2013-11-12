@@ -1,4 +1,4 @@
-# $FreeBSD: astro/jday/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/jday/Makefile 331586 2013-10-25 14:04:57Z vanilla $
 
 PORTNAME=	jday
 PORTVERSION=	2.4
@@ -8,17 +8,15 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Astronomical Julian date calculator
 
-NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
+USES=		pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=	jday.1
-
-PLIST_FILES=	bin/jday bin/j2d bin/dbd \
+PLIST_FILES=	bin/dbd bin/j2d bin/jday \
 		include/jday.h lib/libjday.a \
-		lib/libjday.so lib/libjday.so.2 \
-		lib/libjday.la libdata/pkgconfig/jday.pc
+		lib/libjday.la lib/libjday.so \
+		lib/libjday.so.2 libdata/pkgconfig/jday.pc \
+		man/man1/jday.1.gz
 
 .include <bsd.port.mk>
