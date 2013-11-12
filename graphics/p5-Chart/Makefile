@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Chart/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Chart/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Chart
 PORTVERSION=	2.4.6
@@ -11,12 +11,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to build chart graphics
 
 BUILD_DEPENDS=	p5-GD>=2:${PORTSDIR}/graphics/p5-GD
-RUN_DEPENDS=	p5-GD>=2:${PORTSDIR}/graphics/p5-GD
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Chart.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
