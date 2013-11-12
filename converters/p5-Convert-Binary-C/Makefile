@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: converters/p5-Convert-Binary-C/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Convert-Binary-C/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Convert-Binary-C
 PORTVERSION=	0.76
@@ -18,8 +18,4 @@ MAKE_JOBS_UNSAFE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		ccconfig.1
-MAN3=		Convert::Binary::C.3 Convert::Binary::C::Cached.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
