@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-AnyEvent/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AnyEvent/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	AnyEvent
 PORTVERSION=	7.05
@@ -18,34 +18,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AE.3 \
-		AnyEvent.3 \
-		AnyEvent::DNS.3 \
-		AnyEvent::Debug.3 \
-		AnyEvent::FAQ.3 \
-		AnyEvent::Handle.3 \
-		AnyEvent::IO.3 \
-		AnyEvent::IO::IOAIO.3 \
-		AnyEvent::IO::Perl.3 \
-		AnyEvent::Impl::Cocoa.3 \
-		AnyEvent::Impl::EV.3 \
-		AnyEvent::Impl::Event.3 \
-		AnyEvent::Impl::EventLib.3 \
-		AnyEvent::Impl::FLTK.3 \
-		AnyEvent::Impl::Glib.3 \
-		AnyEvent::Impl::IOAsync.3 \
-		AnyEvent::Impl::Irssi.3 \
-		AnyEvent::Impl::POE.3 \
-		AnyEvent::Impl::Perl.3 \
-		AnyEvent::Impl::Qt.3 \
-		AnyEvent::Impl::Tk.3 \
-		AnyEvent::Intro.3 \
-		AnyEvent::Log.3 \
-		AnyEvent::Loop.3 \
-		AnyEvent::Socket.3 \
-		AnyEvent::Strict.3 \
-		AnyEvent::TLS.3 \
-		AnyEvent::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
