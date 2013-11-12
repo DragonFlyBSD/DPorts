@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Unaccent/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Unaccent/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Unaccent
 PORTVERSION=	1.08
@@ -11,11 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Remove accents from a string
 
-MAN3=	Text::Unaccent.3
-
 USES=		iconv perl5
 USE_PERL5=	configure
 CFLAGS+=	-DICONV_CONST=const
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
