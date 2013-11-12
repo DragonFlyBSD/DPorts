@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Message/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Message/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTTP-Message
 PORTVERSION=	6.06
@@ -24,16 +24,6 @@ CONFLICTS=	p5-libwww-5*
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Config.3 \
-		HTTP::Headers.3 \
-		HTTP::Headers::Util.3 \
-		HTTP::Message.3 \
-		HTTP::Request.3 \
-		HTTP::Request::Common.3 \
-		HTTP::Response.3 \
-		HTTP::Status.3
-
-NO_STAGE=	yes
 post-patch:
 		@${RM} ${WRKSRC}/lib/HTTP/Headers.pm.orig
 
