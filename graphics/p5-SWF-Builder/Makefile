@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/p5-SWF-Builder/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-SWF-Builder/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	SWF-Builder
 PORTVERSION=	0.16
@@ -19,17 +19,6 @@ USES=		perl5
 USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 
-MAN3=		SWF::Builder.3 SWF::Builder::ActionScript.3 \
-		SWF::Builder::Character::Bitmap.3 \
-		SWF::Builder::Character::EditText.3 \
-		SWF::Builder::Character::Font.3 \
-		SWF::Builder::Character::MovieClip.3 \
-		SWF::Builder::Character::Shape.3 \
-		SWF::Builder::Character::Sound.3 \
-		SWF::Builder::Character::Text.3 SWF::Builder::Gradient.3
-MAN1=		asc.plx.1
-
-NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
