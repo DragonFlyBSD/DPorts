@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-MetaCPAN-API/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MetaCPAN-API/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MetaCPAN-API
 PORTVERSION=	0.43
@@ -24,18 +24,11 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		MetaCPAN::API.3 MetaCPAN::API::Author.3 \
-		MetaCPAN::API::Module.3 \
-		MetaCPAN::API::POD.3 \
-		MetaCPAN::API::Release.3 \
-		MetaCPAN::API::Source.3
-
 .if defined(MAINTAINER_MODE)
 regression-test: build
 	cd ${WRKSRC} && ${PERL5} ${PL_BUILD} test
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
