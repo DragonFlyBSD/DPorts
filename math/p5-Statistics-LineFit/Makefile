@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Statistics-LineFit/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-LineFit/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Statistics-LineFit
 PORTVERSION=	0.07
@@ -15,9 +15,6 @@ USES=		perl5
 USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAN3=		Statistics::LineFit.3
-
-NO_STAGE=	yes
 post-extract:
 	${CHMOD} 755 ${WRKSRC}
 
