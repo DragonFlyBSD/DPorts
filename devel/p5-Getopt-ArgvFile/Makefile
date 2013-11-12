@@ -1,5 +1,5 @@
 # Created by: Eric Schnoebelen <eric@cirr.com>
-# $FreeBSD: devel/p5-Getopt-ArgvFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Getopt-ArgvFile/Makefile 331953 2013-10-29 14:32:08Z vanilla $
 
 PORTNAME=	Getopt-ArgvFile
 PORTVERSION=	1.11
@@ -13,7 +13,4 @@ COMMENT=	Perl module for processing argument vectors
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Getopt::ArgvFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
