@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: databases/p5-DBIx-Custom/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Custom/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBIx-Custom
 PORTVERSION=	0.2800
@@ -22,17 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBIx::Custom.3 \
-		DBIx::Custom::Mapper.3 \
-		DBIx::Custom::Model.3 \
-		DBIx::Custom::NotExists.3 \
-		DBIx::Custom::Order.3 \
-		DBIx::Custom::Query.3 \
-		DBIx::Custom::QueryBuilder.3 \
-		DBIx::Custom::Result.3 \
-		DBIx::Custom::Tag.3 \
-		DBIx::Custom::Util.3 \
-		DBIx::Custom::Where.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
