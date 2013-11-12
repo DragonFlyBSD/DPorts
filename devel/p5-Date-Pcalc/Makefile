@@ -1,5 +1,5 @@
 # Created by: Gregory Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Pcalc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Pcalc/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-Pcalc
 PORTVERSION=	6.1
@@ -18,11 +18,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 
-MAN3=		Date::Pcalc.3 \
-		Date::Pcalc::Object.3 \
-		Date::Pcalendar.3 \
-		Date::Pcalendar::Profiles.3 \
-		Date::Pcalendar::Year.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
