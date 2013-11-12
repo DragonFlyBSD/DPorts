@@ -1,8 +1,8 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 331379 2013-10-23 12:17:50Z gahr $
+# $FreeBSD: devel/cmake/Makefile 332891 2013-11-05 18:34:22Z rakuco $
 
 PORTNAME=	cmake
-PORTVERSION=	2.8.11.2
+PORTVERSION=	2.8.12
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
