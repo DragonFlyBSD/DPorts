@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Find-Object/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Find-Object/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Find-Object
 PORTVERSION=	0.2.8
@@ -20,10 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Find::Object.3 \
-		File::Find::Object::Base.3 \
-		File::Find::Object::PathComp.3 \
-		File::Find::Object::Result.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
