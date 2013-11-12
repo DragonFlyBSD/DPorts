@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-rack/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-rack/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 # XXX: If updating this port, please check compatibality with at least the following ports,
 # XXX: preferably, the full rubygem-* tree.  rack version requirements are specified with ~>
@@ -21,5 +21,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rackup
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
