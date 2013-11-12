@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: sysutils/p5-Unix-ConfigFile/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Unix-ConfigFile/Makefile 332957 2013-11-06 08:54:17Z vanilla $
 
 PORTNAME=	Unix-ConfigFile
 PORTVERSION=	0.06
@@ -13,9 +13,4 @@ COMMENT=	Perl modules that provides a simple interface to reading /etc files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Unix::GroupFile.3 Unix::AliasFile.3 \
-		Unix::ConfigFile.3 \
-		Unix::PasswdFile.3 Unix::AutomountFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
