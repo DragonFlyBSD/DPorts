@@ -1,8 +1,9 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: devel/p5-Tie-Cache/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-Cache/Makefile 333325 2013-11-09 19:06:52Z sunpoet $
 
 PORTNAME=	Tie-Cache
 PORTVERSION=	0.19
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:CHAMAS
@@ -12,10 +13,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	LRU Cache in Memory through a tie interface
 
 INSTALL_TARGET=	pure_install
-USES=		perl5
+USES=		perl5 shebangfix
 USE_PERL5=	configure
 
-MAN3=		Tie::Cache.3
+SHEBANG_FILES=	tie-cache-bench.pl
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
