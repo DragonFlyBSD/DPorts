@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Lingua-JA-Fold/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Lingua-JA-Fold/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Lingua-JA-Fold
 PORTVERSION=	0.08
@@ -15,7 +15,4 @@ COMMENT=	Lingua::JA::Fold - fold a Japanese text
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Lingua::JA::Fold.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
