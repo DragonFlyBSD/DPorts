@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Harness-Straps/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Harness-Straps/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Harness-Straps
 PORTVERSION=	0.30
@@ -13,9 +13,4 @@ COMMENT=	Detailed analysis of test results for Perl
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Test::Harness::Assert.3 Test::Harness::Iterator.3 \
-	Test::Harness::Point.3 Test::Harness::Results.3 \
-	Test::Harness::Straps.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
