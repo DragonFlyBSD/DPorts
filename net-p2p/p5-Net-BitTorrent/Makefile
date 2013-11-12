@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-p2p/p5-Net-BitTorrent/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/p5-Net-BitTorrent/Makefile 332839 2013-11-05 12:13:03Z vanilla $
 
 PORTNAME=	Net-BitTorrent
 PORTVERSION=	0.052
@@ -20,21 +20,5 @@ PORTSCOUT=	skipv:0.074000_012
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		net-bittorrent.pl.1
-MAN3=		Net::BitTorrent.3 \
-		Net::BitTorrent::Notes.3 \
-		Net::BitTorrent::ConfigData.3 \
-		Net::BitTorrent::DHT.3 \
-		Net::BitTorrent::Peer.3 \
-		Net::BitTorrent::Protocol.3 \
-		Net::BitTorrent::Torrent.3 \
-		Net::BitTorrent::Torrent::File.3 \
-		Net::BitTorrent::Torrent::Tracker.3 \
-		Net::BitTorrent::Torrent::Tracker::HTTP.3 \
-		Net::BitTorrent::Torrent::Tracker::UDP.3 \
-		Net::BitTorrent::Util.3 \
-		Net::BitTorrent::Version.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
 
