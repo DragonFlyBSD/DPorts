@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/p5-Digest-MD5/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-MD5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Digest-MD5
 PORTVERSION=	2.53
@@ -13,7 +13,4 @@ COMMENT=	Perl5 interface to the MD5 algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Digest::MD5.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
