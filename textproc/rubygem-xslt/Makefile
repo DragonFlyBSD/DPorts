@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-xslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-xslt/Makefile 332053 2013-10-30 03:00:33Z swills $
 
 PORTNAME=	xslt
 PORTVERSION=	0.9.9
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 GEM_NAME=	ruby-${PORTNAME}-${PORTVERSION}
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
