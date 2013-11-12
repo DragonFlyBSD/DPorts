@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-TinyMocker/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-TinyMocker/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-TinyMocker
 PORTVERSION=	0.04
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::TinyMocker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
