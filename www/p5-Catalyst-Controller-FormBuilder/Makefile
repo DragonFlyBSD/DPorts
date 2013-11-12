@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Controller-FormBuilder/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Controller-FormBuilder/Makefile 332678 2013-11-04 09:57:54Z az $
 
 PORTNAME=	Catalyst-Controller-FormBuilder
 PORTVERSION=	0.06
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Catalyst FormBuilder Base Controller
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-CGI-FormBuilder>=3.02:${PORTSDIR}/www/p5-CGI-FormBuilder \
 		p5-Catalyst-Runtime>=5.7:${PORTSDIR}/www/p5-Catalyst-Runtime \
@@ -23,7 +26,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Controller::FormBuilder.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
