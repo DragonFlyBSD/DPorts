@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: security/p5-Authen-Simple-SSH/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-Simple-SSH/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Authen-Simple-SSH
 PORTVERSION=	0.1
@@ -14,10 +14,7 @@ BUILD_DEPENDS=	p5-Authen-Simple>=0:${PORTSDIR}/security/p5-Authen-Simple \
 		p5-Net-SSH-Perl>=0:${PORTSDIR}/net/p5-Net-SSH-Perl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Authen::Simple::SSH.3
-
 USES=		perl5
 USE_PERL5=	modbuild
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
