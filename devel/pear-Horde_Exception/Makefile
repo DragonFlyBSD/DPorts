@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Exception/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Horde_Exception/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	Horde_Exception
 PORTVERSION=	2.0.4
@@ -10,7 +10,6 @@ COMMENT=	Horde Exception Handler
 
 USE_HORDE_RUN=	Horde_Translation
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
