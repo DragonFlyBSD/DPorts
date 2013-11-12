@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-celluloid/Makefile 329905 2013-10-09 16:06:36Z sunpoet $
+# $FreeBSD: devel/rubygem-celluloid/Makefile 332034 2013-10-30 02:29:22Z swills $
 
 PORTNAME=	celluloid
 PORTVERSION=	0.15.2
@@ -13,7 +13,6 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-timers>=1.1.0:${PORTSDIR}/devel/rubygem-timers
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
