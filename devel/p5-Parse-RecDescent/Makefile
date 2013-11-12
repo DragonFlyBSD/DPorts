@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks <wghicks@bellsouth.net>
-# $FreeBSD: devel/p5-Parse-RecDescent/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Parse-RecDescent/Makefile 333358 2013-11-09 23:13:29Z sunpoet $
 
 PORTNAME=	Parse-RecDescent
 PORTVERSION=	1.967.009
@@ -10,22 +10,30 @@ PKGNAMEPREFIX=	p5-
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	tobez@FreeBSD.org
-COMMENT=	A recursive descent parsing framework for Perl
+COMMENT=	Recursive descent parsing framework for Perl
 
-BUILD_DEPENDS=	p5-ExtUtils-MakeMaker>=6.62:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
+
+OPTIONS_DEFINE=	DOCS
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parse::RecDescent.3
+.include <bsd.port.options.mk>
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/tutorial
-	${INSTALL_DATA} ${WRKSRC}/tutorial/* ${DOCSDIR}/tutorial
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/tutorial
+	${INSTALL_DATA} ${WRKSRC}/tutorial/* ${STAGEDIR}${DOCSDIR}/tutorial
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501600
+BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.62:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
+.endif
+
+.include <bsd.port.post.mk>
