@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Stream/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Stream/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Stream
 PORTVERSION=	1.00
@@ -13,5 +13,4 @@ COMMENT=	Generic stream classes for Perl
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
