@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: security/keychain/Makefile 331337 2013-10-22 22:45:22Z garga $
+# $FreeBSD: security/keychain/Makefile 332316 2013-10-31 23:43:44Z garga $
 
 PORTNAME=	keychain
 PORTVERSION=	2.7.1
@@ -23,8 +23,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 PORTDOCS=	ChangeLog README.rst
 
-.include <bsd.port.pre.mk>
-
 .if !exists(${LOCALBASE}/bin/ssh-agent) && !exists(/usr/bin/ssh-agent)
 RUN_DEPENDS+=	ssh-agent:${PORTSDIR}/security/openssh-portable
 .endif
@@ -32,10 +30,7 @@ RUN_DEPENDS+=	ssh-agent:${PORTSDIR}/security/openssh-portable
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/keychain.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
-
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
