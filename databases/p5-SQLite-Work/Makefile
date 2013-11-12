@@ -1,5 +1,5 @@
 # Created by: Chris Larsen <darth@vader.dk>
-# $FreeBSD: databases/p5-SQLite-Work/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-SQLite-Work/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	SQLite-Work
 PORTVERSION=	0.13
@@ -20,12 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		sqlreport.1 \
-		sqlw_import.1 \
-		sqlw_mail.1
-MAN3=		SQLite::Work.3 \
-		SQLite::Work::CGI.3 \
-		SQLite::Work::Mail.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
