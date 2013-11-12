@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-gitlab-gollum-lib/Makefile 331552 2013-10-25 03:34:58Z swills $
+# $FreeBSD: www/rubygem-gitlab-gollum-lib/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	gitlab-gollum-lib
 PORTVERSION=	1.0.1
@@ -20,6 +20,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
