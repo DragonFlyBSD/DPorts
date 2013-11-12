@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-AI-Genetic/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-AI-Genetic/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	AI-Genetic
 PORTVERSION=	0.05
@@ -8,16 +8,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A pure Perl genetic algorithm implementation
-
-MAN3=	AI::Genetic.3 \
-	AI::Genetic::Individual.3 \
-	AI::Genetic::OpCrossover.3 \
-	AI::Genetic::OpMutation.3 \
-	AI::Genetic::OpSelection.3
+COMMENT=	Pure Perl genetic algorithm implementation
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
