@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-# $FreeBSD: databases/p5-POE-Component-EasyDBI/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-POE-Component-EasyDBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	POE-Component-EasyDBI
 PORTVERSION=	1.23
@@ -20,8 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::EasyDBI.3 \
-		POE::Component::EasyDBI::SubProcess.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
