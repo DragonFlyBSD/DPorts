@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-MooseX-SemiAffordanceAccessor/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-SemiAffordanceAccessor/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-SemiAffordanceAccessor
 PORTVERSION=	0.09
@@ -14,11 +14,7 @@ COMMENT=	Name your accessors foo() and set_foo()
 BUILD_DEPENDS=	p5-Moose>=0.94:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		MooseX::SemiAffordanceAccessor.3 \
-		MooseX::SemiAffordanceAccessor::Role::Attribute.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
