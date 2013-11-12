@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTML-Seamstress/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Seamstress/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Seamstress
 PORTVERSION=	5.0h
@@ -19,18 +19,7 @@ BUILD_DEPENDS=	p5-Class-Prototyped>=0:${PORTSDIR}/devel/p5-Class-Prototyped \
 		p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN1=		sbase.pl.1 \
-		spkg.pl.1
-MAN3=		HTML::Seamstress.3 \
-		HTML::Seamstress::Doc::FAQ.3 \
-		HTML::Seamstress::EDIT_Quickstart.tt_DO_NOT_EDIT_Quickstart.3 \
-		HTML::Seamstress::Quickstart.3 \
-		HTML::sbase.3 \
-		HTML::spkg.3 \
-		XML::Seamstress.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
