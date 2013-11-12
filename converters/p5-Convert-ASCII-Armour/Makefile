@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: converters/p5-Convert-ASCII-Armour/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Convert-ASCII-Armour/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Convert-ASCII-Armour
 PORTVERSION=	1.4
@@ -14,7 +14,4 @@ COMMENT=	Convert binary octets into ASCII armoured messages
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Convert::ASCII::Armour.3 Convert::ASCII::Armor.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
