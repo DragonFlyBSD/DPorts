@@ -1,4 +1,4 @@
-# $FreeBSD: ukrainian/hunspell/Makefile 327774 2013-09-20 23:19:33Z bapt $
+# $FreeBSD: ukrainian/hunspell/Makefile 332687 2013-11-04 10:49:03Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.6.5
@@ -21,9 +21,8 @@ PLIST_FILES=	%%DATADIR%%/uk_UA.aff \
 		%%DATADIR%%/uk_UA.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	cd ${WRKSRC}/dist/my${DISTNAME}/ && ${INSTALL_DATA} uk_UA.aff uk_UA.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	cd ${WRKSRC}/dist/my${DISTNAME}/ && ${INSTALL_DATA} uk_UA.aff uk_UA.dic ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
