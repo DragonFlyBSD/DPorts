@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-B-Utils/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Utils/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	B-Utils
 PORTVERSION=	0.21
@@ -19,7 +19,4 @@ BUILD_DEPENDS=	p5-ExtUtils-Depends>=0.301:${PORTSDIR}/devel/p5-ExtUtils-Depends
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		B::Utils.3 B::Utils::OP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
