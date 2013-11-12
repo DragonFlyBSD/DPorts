@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-AI-Perceptron/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-AI-Perceptron/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	AI-Perceptron
 PORTVERSION=	1.0
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		AI::Perceptron.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
