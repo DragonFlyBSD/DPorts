@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/cavezofphear/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/cavezofphear/Makefile 332079 2013-10-30 06:42:56Z danilo $
 
 PORTNAME=	cavezofphear
 PORTVERSION=	0.5.1
@@ -18,28 +18,23 @@ OPTIONS_DEFINE=	DOCS
 BUILD_WRKSRC=	${WRKDIR}/${DISTNAME}/src
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	phear
 
 PORTDOCS=	ChangeLog README README-EDITOR TODO
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|\./data|${DATADIR}/data|' ${WRKSRC}/src/chk.c
 	@${REINPLACE_CMD} -e 's|\./phear|phear|' ${WRKSRC}/README-EDITOR
 
 do-install:
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/phear ${PREFIX}/bin
-	${MKDIR} ${DATADIR}
-	@(cd ${WRKSRC}; ${COPYTREE_SHARE} data ${DATADIR})
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/phear ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC}; ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR})
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
