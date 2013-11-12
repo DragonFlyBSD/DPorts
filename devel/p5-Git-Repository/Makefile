@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-Repository/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Git-Repository/Makefile 333029 2013-11-06 18:58:30Z sunpoet $
 
 PORTNAME=	Git-Repository
-PORTVERSION=	1.308
+PORTVERSION=	1.309
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BOOK
@@ -23,14 +23,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.41:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Git::Repository.3 \
-		Git::Repository::Command.3 \
-		Git::Repository::Log.3 \
-		Git::Repository::Log::Iterator.3 \
-		Git::Repository::Plugin.3 \
-		Git::Repository::Plugin::Log.3 \
-		Git::Repository::Tutorial.3 \
-		Test::Git.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
