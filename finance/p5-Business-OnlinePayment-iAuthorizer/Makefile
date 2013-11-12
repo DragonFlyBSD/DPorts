@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-iAuthorizer/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-OnlinePayment-iAuthorizer/Makefile 332619 2013-11-03 15:38:39Z vanilla $
 
 PORTNAME=	Business-OnlinePayment-iAuthorizer
 PORTVERSION=	0.2.1
@@ -19,7 +19,4 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::OnlinePayment::iAuthorizer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
