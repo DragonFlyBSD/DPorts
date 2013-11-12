@@ -1,5 +1,5 @@
 # Created by: Rui Lopes (<rgl ruilopes com>)
-# $FreeBSD: devel/rubygem-gem_plugin/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-gem_plugin/Makefile 332037 2013-10-30 02:34:55Z swills $
 
 PORTNAME=	gem_plugin
 PORTVERSION=	0.2.3
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/gpgen
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
