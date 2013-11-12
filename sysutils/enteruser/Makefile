@@ -1,5 +1,5 @@
 # Created by: Danny Howard <dannyman@toldme.com>
-# $FreeBSD: sysutils/enteruser/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/enteruser/Makefile 333275 2013-11-09 05:55:32Z vanilla $
 
 PORTNAME=	enteruser
 PORTVERSION=	1.0
@@ -18,13 +18,12 @@ NO_BUILD=	yes
 
 SHEBANG_FILES=	enteruser
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/enteruser ${PREFIX}/sbin
-	${LN} -f ${PREFIX}/sbin/enteruser ${PREFIX}/sbin/queueuser
+	${INSTALL_SCRIPT} ${WRKSRC}/enteruser ${STAGEDIR}${PREFIX}/sbin
+	@cd ${STAGEDIR}${PREFIX}/sbin; ${LN} -sf enteruser queueuser
 
 .include <bsd.port.mk>
