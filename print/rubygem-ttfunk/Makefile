@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: print/rubygem-ttfunk/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/rubygem-ttfunk/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	ttfunk
 PORTVERSION=	1.0.3
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
