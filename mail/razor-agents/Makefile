@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: mail/razor-agents/Makefile 330245 2013-10-13 19:01:19Z garga $
+# $FreeBSD: mail/razor-agents/Makefile 332302 2013-10-31 23:35:34Z garga $
 
 PORTNAME=	razor-agents
 PORTVERSION=	2.84
@@ -8,6 +8,8 @@ MASTER_SITES=	SF/razor/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A distributed, collaborative, spam detection and filtering network
+
+LICENSE=	ART10
 
 BUILD_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
