@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-WWW-Dilbert/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Dilbert/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WWW-Dilbert
 PORTVERSION=	1.19
@@ -11,14 +11,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Dilbert of the day comic strip archive and retrieval module
 
-RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
-BUILD_DEPENDS:=	${RUN_DEPENDS}
-BUILD_DEPENDS+=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
+BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 
 USES=		perl5
 USE_PERL5=	modbuild
+CONFIGURE_ARGS=	</dev/null
 
-MAN3=		WWW::Dilbert.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
