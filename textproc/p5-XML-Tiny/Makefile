@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Tiny/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Tiny/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Tiny
 PORTVERSION=	2.06
@@ -13,7 +13,4 @@ COMMENT=	Simple lightweight parser for a subset of XML
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Tiny.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
