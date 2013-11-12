@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Business-TW-TSIB-VirtualAccount/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-TW-TSIB-VirtualAccount/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Business-TW-TSIB-VirtualAccount
 PORTVERSION=	0.04b
@@ -18,9 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::TW::TSIB::VirtualAccount.3
-
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/b//}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
