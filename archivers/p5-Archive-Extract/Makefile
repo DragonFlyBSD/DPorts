@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Extract/Makefile 328598 2013-09-28 17:12:17Z sunpoet $
+# $FreeBSD: archivers/p5-Archive-Extract/Makefile 333360 2013-11-09 23:13:56Z sunpoet $
 
 PORTNAME=	Archive-Extract
-PORTVERSION=	0.68
+PORTVERSION=	0.70
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
