@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/rubygem-archive-tar-minitar/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/rubygem-archive-tar-minitar/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	archive-tar-minitar
 PORTVERSION=	0.5.2
@@ -9,7 +9,6 @@ DISTNAME=	archive-tar-minitar-${PORTVERSION}
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	library and command-line utility for tar archives
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
