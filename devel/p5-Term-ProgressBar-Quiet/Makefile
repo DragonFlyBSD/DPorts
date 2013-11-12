@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-ProgressBar-Quiet/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-ProgressBar-Quiet/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-ProgressBar-Quiet
 PORTVERSION=	0.31
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::ProgressBar::Quiet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
