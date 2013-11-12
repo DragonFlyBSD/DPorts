@@ -1,22 +1,23 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/duplicity/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/duplicity/Makefile 332631 2013-11-03 17:26:45Z jase $
 
 PORTNAME=	duplicity
 PORTVERSION=	0.6.22
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/duplicity/0.6-series/${PORTVERSION}/+download/
 
 MAINTAINER=	jase@FreeBSD.org
 COMMENT=	Backup tool that uses librsync and GnuPG
 
-LIB_DEPENDS=	rsync:${PORTSDIR}/net/librsync
+LIB_DEPENDS=	librsync.so:${PORTSDIR}/net/librsync
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 FETCH_ARGS=	-pRr
 
 CONFLICTS=	duplicity-0.5.* duplicity-devel-[0-9]*
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 USE_LDCONFIG=	yes
 
@@ -31,8 +32,7 @@ S3_DESC=	Install Amazon S3 backend
 SSH_DESC=	Install SSH/SCP/SFTP backend
 U1_DESC=	Install Ubuntu One backend
 
-NO_STAGE=	yes
-.include "bsd.port.options.mk"
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
@@ -141,9 +141,9 @@ DOCFILES=	COPYING \
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
