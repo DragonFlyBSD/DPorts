@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: net/p5-RPC-XML/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-RPC-XML/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	RPC-XML
 PORTVERSION=	0.77
@@ -18,17 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		gmake perl5
 USE_PERL5=	configure
 
-MAN1=		make_method.1
-MAN3=		Apache::RPC::Server.3 \
-		Apache::RPC::Status.3 \
-		RPC::XML.3 \
-		RPC::XML::Client.3 \
-		RPC::XML::Parser.3 \
-		RPC::XML::Parser::XMLLibXML.3 \
-		RPC::XML::Parser::XMLParser.3 \
-		RPC::XML::ParserFactory.3 \
-		RPC::XML::Procedure.3 \
-		RPC::XML::Server.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
