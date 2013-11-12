@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-chklinks/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-chklinks/Makefile 333169 2013-11-08 01:06:34Z vanilla $
 
 PORTNAME=	chklinks
 PORTVERSION=	3.09
@@ -18,11 +18,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN1=		chklinks.1
 
-PLIST_FILES=	bin/chklinks \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/chklinks/.packlist
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/chklinks
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
