@@ -1,4 +1,4 @@
-# $FreeBSD: portuguese/hyphen/Makefile 327763 2013-09-20 22:38:31Z bapt $
+# $FreeBSD: portuguese/hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2004.04.15
@@ -13,7 +13,7 @@ COMMENT=	Portuguese hyphenation rules
 
 LICENSE=	LGPL21
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -21,10 +21,9 @@ PLIST_FILES=	%%DATADIR%%/hyph_pt_BR.dic \
 		%%DATADIR%%/hyph_pt_PT.dic
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_pt_PT.dic ${DATADIR}/
-	${LN} -s hyph_pt_PT.dic ${DATADIR}/hyph_pt_BR.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_pt_PT.dic ${STAGEDIR}${DATADIR}/
+	${LN} -s hyph_pt_PT.dic ${STAGEDIR}${DATADIR}/hyph_pt_BR.dic
 
 .include <bsd.port.mk>
