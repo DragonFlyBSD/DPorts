@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: devel/p5-Module-Starter-Plugin-TT2/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Starter-Plugin-TT2/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Starter-Plugin-TT2
 PORTVERSION=	0.125
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-Module-Starter>=1.47.0:${PORTSDIR}/devel/p5-Module-Starter \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Module::Starter::Plugin::TT2.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
