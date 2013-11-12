@@ -1,10 +1,11 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: devel/ChipmunkPhysics/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ChipmunkPhysics/Makefile 333390 2013-11-10 13:29:26Z wg $
 
 PORTNAME=	ChipmunkPhysics
-PORTVERSION=	6.1.5
+PORTVERSION=	6.2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://chipmunk-physics.net/release/Chipmunk-6.x/ \
+		http://files.slembcke.net/chipmunk/release/Chipmunk-6.x/ \
 		http://files.libsiege.org/chipmunk/
 DISTNAME=	Chipmunk-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
@@ -13,12 +14,10 @@ MAINTAINER=	ports@stdrand.com
 COMMENT=	2D physics engine written in C
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USES=		cmake
 CMAKE_ARGS=	-DBUILD_DEMOS=OFF
 
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
