@@ -1,7 +1,8 @@
-# $FreeBSD: databases/postgis21/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/postgis21/Makefile 333306 2013-11-09 15:57:18Z wg $
 
 PORTNAME=	postgis
 PORTVERSION=	2.1.0
+PORTREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	http://download.osgeo.org/postgis/source/
 
