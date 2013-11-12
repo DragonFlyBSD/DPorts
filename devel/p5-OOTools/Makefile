@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: devel/p5-OOTools/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-OOTools/Makefile 332127 2013-10-30 15:19:23Z vanilla $
 
 PORTNAME=	OOTools
 PORTVERSION=	2.30
@@ -15,15 +15,4 @@ COMMENT=	Perl module collection to easily create constructors methods
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::constr.3 \
-		Class::groups.3 \
-		Class::props.3	\
-		Class::Util.3	\
-		Class::Error.3	\
-		Object::groups.3 \
-		Object::props.3 \
-		Package::groups.3 \
-		Package::props.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
