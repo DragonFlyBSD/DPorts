@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: games/p5-Algorithm-Pair-Swiss/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/p5-Algorithm-Pair-Swiss/Makefile 332736 2013-11-04 14:49:24Z vanilla $
 
 PORTNAME=	Algorithm-Pair-Swiss
 PORTVERSION=	0.14
@@ -12,10 +12,7 @@ COMMENT=	Generate unique pairings for tournaments
 
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-MAN3=	Algorithm::Pair::Swiss.3
-
 USES=		perl5
 USE_PERL5=	modbuild
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
