@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-pyu-ruby-sasl/Makefile 331520 2013-10-24 19:37:49Z swills $
+# $FreeBSD: security/rubygem-pyu-ruby-sasl/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	pyu-ruby-sasl
 PORTVERSION=	0.0.3.3
@@ -12,6 +12,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
