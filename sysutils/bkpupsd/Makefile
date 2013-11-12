@@ -1,5 +1,5 @@
 # Created by: Yoshifumi Watanabe <mwatts@edu1.tokyo-med.ac.jp>
-# $FreeBSD: sysutils/bkpupsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/bkpupsd/Makefile 333238 2013-11-08 15:06:28Z vanilla $
 
 PORTNAME=	bkpupsd
 PORTVERSION=	1.0a
@@ -9,7 +9,4 @@ MASTER_SITES=	http://ftp.knit.kagoshima-u.ac.jp/pub/Unix/bkpupsd/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simple UPS daemon for APC BK Pro(TM)
 
-MAN8=		bkpupsd.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
