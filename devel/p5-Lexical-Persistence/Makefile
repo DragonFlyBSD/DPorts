@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Lexical-Persistence/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Lexical-Persistence/Makefile 332679 2013-11-04 10:23:49Z jadawin $
 
 PORTNAME=	Lexical-Persistence
 PORTVERSION=	1.023
@@ -14,10 +14,7 @@ BUILD_DEPENDS=	p5-Devel-LexAlias>=0.04:${PORTSDIR}/devel/p5-Devel-LexAlias \
 		p5-PadWalker>=1.1:${PORTSDIR}/devel/p5-PadWalker
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Lexical::Persistence.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
