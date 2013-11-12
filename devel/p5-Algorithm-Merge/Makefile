@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Algorithm-Merge/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-Merge/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-Merge
 PORTVERSION=	0.08
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Algorithm::Merge.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
