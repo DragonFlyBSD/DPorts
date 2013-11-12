@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Mac-FileSpec-Unixish/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Mac-FileSpec-Unixish/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Mac-FileSpec-Unixish
 PORTVERSION=	1.12
@@ -13,7 +13,4 @@ COMMENT=	Perl module with functions to manipulate pathspecs in Unixish style
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mac::FileSpec::Unixish.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
