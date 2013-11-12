@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Sub-Identify/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Identify/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Sub-Identify
 PORTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Retrieve names of code references
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sub::Identify.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
