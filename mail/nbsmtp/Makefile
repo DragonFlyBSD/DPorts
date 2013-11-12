@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: mail/nbsmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/nbsmtp/Makefile 331656 2013-10-26 07:52:07Z ehaupt $
 
 PORTNAME=	nbsmtp
 PORTVERSION=	1.00
@@ -16,10 +16,11 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-ssl --enable-ipv6
 
-MAN5=		nbsmtprc.5
-MAN8=		nbsmtp.8
+PLIST_FILES=	bin/nbsmtp man/man5/nbsmtprc.5.gz man/man8/nbsmtp.8.gz
 
-PLIST_FILES=	bin/nbsmtp
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/nbsmtprc.5 ${STAGEDIR}${MANPREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/nbsmtp.8 ${STAGEDIR}${MANPREFIX}/man/man8
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
