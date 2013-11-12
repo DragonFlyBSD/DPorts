@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 332836 2013-11-05 12:02:05Z vanilla $
 
 PORTNAME=	Nagios-Plugins-Memcached
 PORTVERSION=	0.02
@@ -19,16 +19,14 @@ BUILD_DEPENDS+=	p5-Nagios-Plugin>=0:${PORTSDIR}/net-mgmt/p5-Nagios-Plugin \
 		p5-Carp-Clan>=0:${PORTSDIR}/devel/p5-Carp-Clan
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 
-MAN3=		Nagios::Plugins::Memcached.3
 PORTDOCS=	Changes README
 
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${LOCALBASE}/libexec/nagios
-	${INSTALL} ${WRKSRC}/bin/check_memcached ${LOCALBASE}/libexec/nagios/check_memcached
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/nagios
+	${INSTALL} ${WRKSRC}/bin/check_memcached ${STAGEDIR}${PREFIX}/libexec/nagios/check_memcached
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}/
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
