@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-thin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-thin/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	thin
 PORTVERSION=	1.2.11
@@ -7,7 +7,7 @@ CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A fast and very simple Ruby web server
+COMMENT=	Fast and simple Ruby web server
 
 RUN_DEPENDS=	rubygem-rack>=1.0.0:${PORTSDIR}/www/rubygem-rack \
 		rubygem-eventmachine>=0.12.6:${PORTSDIR}/devel/rubygem-eventmachine \
@@ -18,5 +18,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/thin
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
