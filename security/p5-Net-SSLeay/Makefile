@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: security/p5-Net-SSLeay/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: security/p5-Net-SSLeay/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Net-SSLeay
 PORTVERSION=	1.55
@@ -22,10 +22,8 @@ CONFIGURE_ENV=	OPENSSL_PREFIX=${OPENSSLBASE}
 REINPLACE_ARGS=	-i ''
 USE_OPENSSL=	yes
 
-MAN3=		Net::SSLeay.3 Net::SSLeay::Handle.3
 PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -35,9 +33,9 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${WRKSRC}/examples/req.conf ${EXAMPLESDIR}/req.conf
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/*.pl ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/examples/req.conf ${STAGEDIR}${EXAMPLESDIR}/req.conf
 .endif
 
 .include <bsd.port.mk>
