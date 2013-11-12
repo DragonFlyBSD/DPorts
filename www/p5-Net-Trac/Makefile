@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Net-Trac/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Net-Trac/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Net-Trac
 PORTVERSION=	0.16
@@ -27,15 +27,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Trac.3 \
-		Net::Trac::Connection.3 \
-		Net::Trac::Mechanize.3 \
-		Net::Trac::Ticket.3 \
-		Net::Trac::TicketAttachment.3 \
-		Net::Trac::TicketHistory.3 \
-		Net::Trac::TicketHistoryEntry.3 \
-		Net::Trac::TicketPropChange.3 \
-		Net::Trac::TicketSearch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
