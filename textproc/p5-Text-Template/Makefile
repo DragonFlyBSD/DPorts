@@ -1,5 +1,5 @@
 # Created by: Bill "I hate Perl" Fumerola
-# $FreeBSD: textproc/p5-Text-Template/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Template/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-Template
 PORTVERSION=	1.46
@@ -17,9 +17,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Template.3 Text::Template::Preprocess.3
-
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
