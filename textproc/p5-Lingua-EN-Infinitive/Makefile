@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-EN-Infinitive/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Lingua-EN-Infinitive/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Lingua-EN-Infinitive
 PORTVERSION=	1.11
@@ -14,7 +14,4 @@ COMMENT=	Determine the infinitive form of a conjugated word
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Lingua::EN::Infinitive.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
