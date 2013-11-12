@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/p5-HTTP-MobileAgent/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-MobileAgent/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	HTTP-MobileAgent
 PORTVERSION=	0.36
@@ -25,14 +25,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::MobileAgent.3 \
-		HTTP::MobileAgent::AirHPhone.3 \
-		HTTP::MobileAgent::Display.3 \
-		HTTP::MobileAgent::DoCoMo.3 \
-		HTTP::MobileAgent::EZweb.3 \
-		HTTP::MobileAgent::JPhone.3 \
-		HTTP::MobileAgent::NonMobile.3 \
-		HTTP::MobileAgent::Vodafone.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
