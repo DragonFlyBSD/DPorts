@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-OpenCA-CRR/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-OpenCA-CRR/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	OpenCA-CRR
 PORTVERSION=	0.0.2
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to handle CRR objects
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		OpenCA::CRR.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
