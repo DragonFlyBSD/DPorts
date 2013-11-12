@@ -1,24 +1,23 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: archivers/lzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/lzip/Makefile 333291 2013-11-09 13:45:42Z wg $
 
 PORTNAME=	lzip
-PORTVERSION=	1.14
+PORTVERSION=	1.15
 CATEGORIES=	archivers
-MASTER_SITES=	SAVANNAH/lzip
+MASTER_SITES=	SAVANNAH/lzip LOCAL/marino
 
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Lossless data compressor based on the LZMA algorithm
 
 LICENSE=	GPLv3
 
-PLIST_FILES=	bin/lzip
+PLIST_FILES=	bin/lzip \
+		man/man1/lzip.1.gz
 
-NO_STAGE=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	CXX="${CXX}" \
 		CXXFLAGS="${CXXFLAGS}" \
 		LDFLAGS="${LDFLAGS}"
-MAN1=		lzip.1
 INFO=		lzip
 
 .include <bsd.port.mk>
