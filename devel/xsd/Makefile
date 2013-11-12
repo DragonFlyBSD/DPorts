@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: devel/xsd/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/xsd/Makefile 332884 2013-11-05 17:59:05Z rakuco $
 
 PORTNAME=	xsd
 PORTVERSION=	3.3.0
@@ -24,30 +24,27 @@ ALL_TARGET=	# no default target should be passed to gmake.
 CXXFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKEFILE=	makefile
-MAKE_ARGS=	install_prefix=${PREFIX} \
+MAKE_ARGS=	install_prefix=${STAGEDIR}${PREFIX} \
 		verbose=1
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 
-MAN1=		xsdcxx.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/xsd/documentation/xsd.1 ${MANPREFIX}/man/man1/xsdcxx.1
+	${INSTALL_MAN} ${WRKSRC}/xsd/documentation/xsd.1 ${STAGEDIR}${MANPREFIX}/man/man1/xsdcxx.1
 
 .if ${PORT_OPTIONS:MDOCS}
 	(cd ${WRKSRC}/xsd/documentation && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
-	${INSTALL_DATA} ${WRKSRC}/xsd/FLOSSE ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/xsd/NEWS ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/xsd/README ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/xsd/dist/README-UNIX ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/xsd/FLOSSE ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/xsd/NEWS ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/xsd/README ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/xsd/dist/README-UNIX ${STAGEDIR}${DOCSDIR}
 .endif
 
 .if ${PORT_OPTIONS:MEXAMPLES}
 	${FIND} ${WRKSRC}/xsd/examples -type f -name makefile -delete
-	(cd ${WRKSRC}/xsd/examples && ${COPYTREE_SHARE} cxx ${EXAMPLESDIR})
+	(cd ${WRKSRC}/xsd/examples && ${COPYTREE_SHARE} cxx ${STAGEDIR}${EXAMPLESDIR})
 .endif
 
 .include <bsd.port.mk>
