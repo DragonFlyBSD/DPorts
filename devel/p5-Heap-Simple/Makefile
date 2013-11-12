@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Heap-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Heap-Simple/Makefile 331958 2013-10-29 15:08:11Z vanilla $
 
 PORTNAME=	Heap-Simple
 PORTVERSION=	0.13
@@ -12,11 +12,5 @@ COMMENT=	Fast and easy to use classic heaps
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Heap::Simple.3
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
