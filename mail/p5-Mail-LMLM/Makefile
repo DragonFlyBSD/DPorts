@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Mail-LMLM/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: mail/p5-Mail-LMLM/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Mail-LMLM
 PORTVERSION=	0.6802
@@ -14,18 +14,10 @@ COMMENT=	List of Mailing Lists Manager
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::LMLM.3 Mail::LMLM::Object.3 Mail::LMLM::Render.3 \
-		Mail::LMLM::Render::HTML.3 Mail::LMLM::Types::Base.3 \
-		Mail::LMLM::Types::Egroups.3 Mail::LMLM::Types::Ezmlm.3 \
-		Mail::LMLM::Types::GoogleGroups.3 \
-		Mail::LMLM::Types::Listar.3 Mail::LMLM::Types::Listserv.3 \
-		Mail::LMLM::Types::Mailman.3 Mail::LMLM::Types::Majordomo.3
-
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DATADIR}
-	@${MKDIR} ${EXAMPLESDIR}
-	${CP} -R ${WRKSRC}/examples/ ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${CP} -R ${WRKSRC}/examples/ ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
