@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: security/opieprint/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/opieprint/Makefile 333234 2013-11-08 14:43:21Z jadawin $
 
 PORTNAME=	opieprint
 PORTVERSION=	1.0
@@ -8,6 +8,9 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.inner.net/pub/opie/contrib/
 DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.gz
+
+DEPRECATED=	No more active upstream
+EXPIRATION_DATE=	2013-12-08
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Output postscript with 100 OPIE passwords credit card sized
