@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Strip/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Pod-Strip/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Pod-Strip
 PORTVERSION=	1.02
@@ -15,7 +15,4 @@ COMMENT=	Remove POD from Perl code
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Pod::Strip.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
