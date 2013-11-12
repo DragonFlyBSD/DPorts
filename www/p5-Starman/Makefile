@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Starman/Makefile 328809 2013-09-30 15:16:53Z sunpoet $
+# $FreeBSD: www/p5-Starman/Makefile 332717 2013-11-04 13:37:27Z kuriyama $
 
 PORTNAME=	Starman
-PORTVERSION=	0.4003
+PORTVERSION=	0.4008
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIYAGAWA
@@ -22,15 +22,8 @@ TEST_DEPENDS=	\
 	p5-Test-TCP>=2.00:${PORTSDIR}/devel/p5-Test-TCP
 # TODO: maybe need p5-libwww
 
-NO_STAGE=	yes
 USES=	perl5
 USE_PERL5=	modbuildtiny
 USE_RC_SUBR=	starman
-
-MAN1=	starman.1
-MAN3=	HTTP::Server::PSGI::Net::Server::PreFork.3 \
-	Plack::Handler::Starman.3 \
-	Starman.3 \
-	Starman::Server.3
 
 .include <bsd.port.mk>
