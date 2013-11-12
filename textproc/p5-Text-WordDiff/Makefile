@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: textproc/p5-Text-WordDiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-WordDiff/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Text-WordDiff
 PORTVERSION=	0.08
@@ -15,16 +15,9 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
 		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
-RUN_DEPENDS=	p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
-		p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Text::WordDiff.3 \
-		Text::WordDiff::ANSIColor.3 \
-		Text::WordDiff::HTML.3 \
-		Text::WordDiff::HTMLTwoLines.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
