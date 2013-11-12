@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-File-Path/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Path/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Path
 PORTVERSION=	2.09
@@ -13,7 +13,4 @@ COMMENT=	Create or remove directory trees
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Path.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
