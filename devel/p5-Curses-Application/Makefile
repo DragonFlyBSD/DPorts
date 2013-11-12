@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Curses-Application/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Curses-Application/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Curses-Application
 PORTVERSION=	0.2
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Curses::Application.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
