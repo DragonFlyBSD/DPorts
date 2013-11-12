@@ -1,5 +1,5 @@
 # Created by: Anton Berezin
-# $FreeBSD: devel/p5-File-CountLines/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-CountLines/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-CountLines
 PORTVERSION=	0.0.3
@@ -14,7 +14,4 @@ COMMENT=	Efficiently count the number of line breaks in a file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	File::CountLines.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
