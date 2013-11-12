@@ -1,4 +1,4 @@
-# $FreeBSD: editors/p5-Proc-InvokeEditor/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/p5-Proc-InvokeEditor/Makefile 332599 2013-11-03 09:39:04Z vanilla $
 
 PORTNAME=	Proc-InvokeEditor
 PORTVERSION=	1.06
@@ -15,12 +15,9 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Carp-Assert>=0:${PORTSDIR}/devel/p5-Carp-Assert
-RUN_DEPENDS=	p5-Carp-Assert>=0:${PORTSDIR}/devel/p5-Carp-Assert
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Proc::InvokeEditor.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
