@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Petal-Mail/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Petal-Mail/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Petal-Mail
 PORTVERSION=	0.31
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-Petal>=0:${PORTSDIR}/textproc/p5-Petal \
 		p5-Encode>=0:${PORTSDIR}/converters/p5-Encode
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Petal::Mail.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
