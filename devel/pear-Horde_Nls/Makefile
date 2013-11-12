@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Nls/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Horde_Nls/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	Horde_Nls
 PORTVERSION=	2.0.3
@@ -16,7 +16,6 @@ USE_HORDE_RUN=	Horde_Translation \
 OPTIONS_DEFINE=	GEOIP
 GEOIP_DESC=	Depend on geoip PHP extension
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
