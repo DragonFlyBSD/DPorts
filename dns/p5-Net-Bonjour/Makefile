@@ -1,4 +1,4 @@
-# $FreeBSD: dns/p5-Net-Bonjour/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-Bonjour/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	Net-Bonjour
 PORTVERSION=	0.96
@@ -13,19 +13,12 @@ COMMENT=	Module for DNS service discovery
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
+BUILD_DEPENDS=	p5-Net-DNS>=0.5:${PORTSDIR}/dns/p5-Net-DNS
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
 USES=		perl5
 USE_PERL5=	configure
 
-BUILD_DEPENDS=	p5-Net-DNS>=0.5:${PORTSDIR}/dns/p5-Net-DNS
-
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-
-MAN3=	Net::Rendezvous.3        \
-	Net::Bonjour::Entry.3    \
-	Net::Rendezvous::Entry.3 \
-	Net::Bonjour.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/my $$ans = .*/my $$ans = "n";/g' ${WRKSRC}/Makefile.PL
 
