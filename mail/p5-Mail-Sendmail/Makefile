@@ -1,5 +1,5 @@
 # Created by: Wei-chun Chao
-# $FreeBSD: mail/p5-Mail-Sendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Sendmail/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Mail-Sendmail
 PORTVERSION=	0.79
@@ -13,7 +13,4 @@ COMMENT=	Perl module implementing a simple, platform-independent mailer
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Sendmail.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
