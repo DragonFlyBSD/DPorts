@@ -1,14 +1,16 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: devel/p5-App-Cmd/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-Cmd/Makefile 332865 2013-11-05 16:21:04Z jadawin $
 
 PORTNAME=	App-Cmd
-PORTVERSION=	0.320
+PORTVERSION=	0.322
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	5u623l20@gmail.com
 COMMENT=	App::Cmd - Write command line apps with less suffering
+
+LICENSE=	ARTPERL10
 
 BUILD_DEPENDS=	p5-Capture-Tiny>=0.13:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Class-Load>=0.06:${PORTSDIR}/devel/p5-Class-Load \
@@ -23,19 +25,4 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::Cmd.3 \
-		App::Cmd::ArgProcessor.3 \
-		App::Cmd::Command.3 \
-		App::Cmd::Command::commands.3 \
-		App::Cmd::Command::help.3 \
-		App::Cmd::Plugin.3 \
-		App::Cmd::Setup.3 \
-		App::Cmd::Simple.3 \
-		App::Cmd::Subdispatch.3 \
-		App::Cmd::Subdispatch::DashedStyle.3 \
-		App::Cmd::Tester.3 \
-		App::Cmd::Tester::CaptureExternal.3 \
-		App::Cmd::Tutorial.3 \
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
