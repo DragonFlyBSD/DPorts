@@ -1,5 +1,5 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: devel/pear-Date_Holidays/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Date_Holidays/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	Date_Holidays
 PORTVERSION=	0.21.8
@@ -19,7 +19,6 @@ LATEST_LINK=	pear-Date_Holidays
 OPTIONS_DEFINE=	PEAR_CONSOLE_GETARGS
 PEAR_CONSOLE_GETARGS_DESC=	Console::Getargs support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_CONSOLE_GETARGS}
