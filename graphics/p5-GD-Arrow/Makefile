@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-GD-Arrow/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-GD-Arrow/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	GD-Arrow
 PORTVERSION=	0.01
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GD::Arrow.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
