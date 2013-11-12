@@ -1,5 +1,5 @@
 # Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-# $FreeBSD: security/rubygem-net-ssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-net-ssh/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	net-ssh
 PORTVERSION=	2.6.5
@@ -21,7 +21,6 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPROMPT_PASSPHRASES}
