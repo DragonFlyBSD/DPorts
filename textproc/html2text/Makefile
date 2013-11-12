@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: textproc/html2text/Makefile 331410 2013-10-23 18:58:57Z eadler $
+# $FreeBSD: textproc/html2text/Makefile 332654 2013-11-03 22:56:49Z eadler $
 
 PORTNAME=	html2text
 PORTVERSION=	1.3.2a
@@ -22,8 +22,6 @@ CONFLICTS=	py27-html2text-[0-9]*
 
 PORTSCOUT=	skipb:0 skipv:1.3.2
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e '/echo=/s/ -e//' ${WRKSRC}/configure
 .for fle in Makefile.in libstd/Makefile.in
@@ -38,11 +36,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/html2text ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/html2text.1.gz ${STAGEDIR}${MANPREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/html2textrc.5.gz ${STAGEDIR}${MANPREFIX}/man/man5
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for fle in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${fle} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
