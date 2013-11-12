@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Params-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Params-Util/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Params-Util
 PORTVERSION=	1.07
@@ -13,7 +13,4 @@ COMMENT=	Utility functions to aid in parameter checking
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Params::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
