@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Pastebin-PastebinCom-Create/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Pastebin-PastebinCom-Create/Makefile 333137 2013-11-07 16:38:13Z vanilla $
 
 PORTNAME=	WWW-Pastebin-PastebinCom-Create
 PORTVERSION=	0.004
@@ -9,21 +9,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Paste to http://pastebin.com from Perl
 
-RUN_DEPENDS+=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Pastebin::PastebinCom::Create.3
-PLIST_FILES+=	%%SITE_PERL%%/WWW/Pastebin/PastebinCom/Create.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Pastebin/PastebinCom/Create/.packlist
-PLIST_DIRS+=	%%SITE_PERL%%/WWW/Pastebin/PastebinCom \
-		%%SITE_PERL%%/WWW/Pastebin \
-		%%SITE_PERL%%/WWW \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Pastebin/PastebinCom/Create \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Pastebin/PastebinCom \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Pastebin \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
