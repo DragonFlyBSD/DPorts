@@ -1,8 +1,8 @@
 # Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-# $FreeBSD: devel/py-celery/Makefile 330257 2013-10-13 21:47:41Z wg $
+# $FreeBSD: devel/py-celery/Makefile 333565 2013-11-12 11:37:25Z wg $
 
 PORTNAME=	celery
-PORTVERSION=	3.0.24
+PORTVERSION=	3.1.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,14 +12,14 @@ COMMENT=	Asynchronous task queue/job queue
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amqplib>=0:${PORTSDIR}/net/py-amqplib \
-		${PYTHON_PKGNAMEPREFIX}billiard>=2.7.3.34:${PORTSDIR}/devel/py-billiard \
-		${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:${PORTSDIR}/devel/py-dateutil \
-		${PYTHON_PKGNAMEPREFIX}kombu>=2.5.15:${PORTSDIR}/net/py-kombu \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}amqp>=0:${PORTSDIR}/net/py-amqp \
+		${PYTHON_PKGNAMEPREFIX}billiard>=3.3.0.4:${PORTSDIR}/devel/py-billiard \
+		${PYTHON_PKGNAMEPREFIX}pytz>=1.5:${PORTSDIR}/devel/py-pytz \
+		${PYTHON_PKGNAMEPREFIX}kombu>=3.0.4:${PORTSDIR}/net/py-kombu \
 		${PYTHON_PKGNAMEPREFIX}memcached>=0:${PORTSDIR}/databases/py-memcached
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
