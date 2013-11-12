@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-String-Ediff/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Ediff/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	String-Ediff
 PORTVERSION=	0.09
@@ -14,7 +14,4 @@ COMMENT=	Perl module to produce common sub-string indices for two strings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Ediff.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
