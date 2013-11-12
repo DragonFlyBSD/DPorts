@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: sysutils/rubygem-sys-admin/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-sys-admin/Makefile 332050 2013-10-30 02:57:17Z swills $
 
 PORTNAME=	sys-admin
 PORTVERSION=	1.6.0
@@ -15,5 +15,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
