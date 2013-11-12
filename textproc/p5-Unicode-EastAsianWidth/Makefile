@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-Unicode-EastAsianWidth/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Unicode-EastAsianWidth/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Unicode-EastAsianWidth
 PORTVERSION=	1.33
@@ -13,7 +13,4 @@ COMMENT=	East Asian Width properties
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Unicode::EastAsianWidth.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
