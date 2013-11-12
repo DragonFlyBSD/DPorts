@@ -1,5 +1,5 @@
 # Created by: Andrew <andrew@ugh.net.au>
-# $FreeBSD: textproc/p5-XML-Simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Simple/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Simple
 PORTVERSION=	2.20
@@ -22,7 +22,4 @@ MAKE_JOBS_UNSAFE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Simple.3 XML::Simple::FAQ.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
