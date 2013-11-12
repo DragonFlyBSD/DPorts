@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-Sybase/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBD-Sybase/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBD-Sybase
 PORTVERSION=	1.15
@@ -22,7 +22,4 @@ USE_PERL5=	configure
 CONFIGURE_ARGS=	< /dev/null
 .endif
 
-MAN3=		DBD::Sybase.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
