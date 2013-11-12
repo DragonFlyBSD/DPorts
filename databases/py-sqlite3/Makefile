@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: databases/py-sqlite3/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sqlite3/Makefile 332358 2013-11-01 11:24:14Z koobs $
 
 PORTNAME=	sqlite3
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -32,10 +32,6 @@ PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/_sqlite3.so
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
-
-.if ${ARCH} == "arm"
-BROKEN=		Does not install on arm
-.endif
 
 post-extract:
 .if ${PYTHON_REL} < 300
