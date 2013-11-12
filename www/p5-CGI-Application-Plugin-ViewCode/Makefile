@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-ViewCode/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-ViewCode/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Application-Plugin-ViewCode
 PORTVERSION=	1.02
@@ -10,17 +10,14 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	View the source of the running application
 
-RUN_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
+BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-CGI-Application-Plugin-Forward>=0:${PORTSDIR}/www/p5-CGI-Application-Plugin-Forward \
 		p5-Syntax-Highlight-Perl-Improved>=0:${PORTSDIR}/textproc/p5-Syntax-Highlight-Perl-Improved \
 		p5-Pod-Xhtml>=0:${PORTSDIR}/textproc/p5-Pod-Xhtml \
 		p5-Test-LongString>=0:${PORTSDIR}/devel/p5-Test-LongString
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	CGI::Application::Plugin::ViewCode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
