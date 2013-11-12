@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-sass/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-sass/Makefile 332052 2013-10-30 02:59:10Z swills $
 
 PORTNAME=	sass
 PORTVERSION=	3.2.9
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/sass bin/sass-convert bin/scss
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
