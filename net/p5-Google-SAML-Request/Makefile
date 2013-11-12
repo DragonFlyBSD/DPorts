@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Google-SAML-Request/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Google-SAML-Request/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Google-SAML-Request
 PORTVERSION=	0.04
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Google::SAML::Request.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
