@@ -1,5 +1,5 @@
 # Created by: proff
-# $FreeBSD: games/an/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/an/Makefile 331990 2013-10-29 20:06:32Z danilo $
 
 PORTNAME=	an
 PORTVERSION=	0.95
@@ -13,9 +13,9 @@ COMMENT=	Fast anagram generator
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-MAN6=		an.6
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man6/${PORTNAME}.6.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<stdint.h>/d' ${WRKSRC}/an.c
 
@@ -24,7 +24,7 @@ do-build:
 		-o ${PORTNAME} ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/an ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/an.6 ${MANPREFIX}/man/man6
+	${INSTALL_PROGRAM} ${WRKSRC}/an ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/an.6 ${STAGEDIR}${MANPREFIX}/man/man6
 
 .include <bsd.port.mk>
