@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: russian/rubygem-rutils/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/rubygem-rutils/Makefile 332049 2013-10-30 02:56:33Z swills $
 
 PORTNAME=	rutils
 PORTVERSION=	1.0.3
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/gilensize bin/rutilize
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
