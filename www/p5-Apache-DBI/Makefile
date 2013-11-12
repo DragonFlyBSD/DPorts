@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-DBI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-DBI/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-DBI
 PORTVERSION=	1.12
@@ -23,13 +23,4 @@ USES=		perl5
 USE_PERL5=	configure
 USE_APACHE?=	22+
 
-MAN3=		Apache::DBI.3 Apache::AuthDBI.3
-PLIST_FILES=	%%SITE_PERL%%/Apache/DBI.pm \
-		%%SITE_PERL%%/Apache/AuthDBI.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/DBI/.packlist
-PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache/DBI
-PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache \
-		%%SITE_PERL%%/Apache
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
