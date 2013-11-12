@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-Simple/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Simple/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Email-Simple
 PORTVERSION=	2.202
@@ -20,9 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Email::Simple.3 \
-		Email::Simple::Creator.3 \
-		Email::Simple::Header.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
