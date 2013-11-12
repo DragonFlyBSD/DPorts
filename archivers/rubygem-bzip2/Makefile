@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: archivers/rubygem-bzip2/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/rubygem-bzip2/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	bzip2
 PORTVERSION=	0.2.7
@@ -10,7 +10,6 @@ DISTNAME=	${PORTNAME}-ruby-${PORTVERSION}
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby C bindings to libbzip2
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 GEM_NAME=	${PORTNAME}-ruby-${PORTVERSION}
