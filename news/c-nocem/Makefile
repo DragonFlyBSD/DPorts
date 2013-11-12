@@ -1,4 +1,4 @@
-# $FreeBSD: news/c-nocem/Makefile 328030 2013-09-23 18:54:29Z dinoex $
+# $FreeBSD: news/c-nocem/Makefile 331832 2013-10-28 06:31:18Z dinoex $
 
 PORTNAME=	c-nocem
 PORTVERSION=	3.7
@@ -17,16 +17,18 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/libcnews.a:${PORTSDIR}/${CNEWS_PORT} \
 
 NO_STAGE=	yes
 
+USES=		perl5
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-cnews=${CNEWSWRK}
 WRKSRC=		${WRKDIR}/c-nocem
+PLIST_SUB+=	NEWSBIN=${NEWSBIN:S=${PREFIX}/==}
+PLIST_FILES=	%%NEWSBIN%%/fastcancel %%NEWSBIN%%/c-nocem
+
 CNEWS_PORT?=	news/cnews
 #CNEWSWRK?=	${WRKDIRPREFIX}${PORTSDIR}/${CNEWS_PORT}/work
 # ${.CURDIR}/../.. can be diffrent from ${PORTSDIR}
 CNEWSWRK?=	${WRKDIRPREFIX}${.CURDIR}/../../${CNEWS_PORT}/work
 NEWSBIN?=	${PREFIX}/libexec/cnews
-USE_GMAKE=	yes
-USES=		perl5
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-cnews=${CNEWSWRK}
-PLIST_SUB+=	NEWSBIN=${NEWSBIN:S=${PREFIX}/==}
 
 .include <bsd.port.mk>
