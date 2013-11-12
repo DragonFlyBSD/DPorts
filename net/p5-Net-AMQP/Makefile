@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-Net-AMQP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-AMQP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-AMQP
 PORTVERSION=	0.06
@@ -23,21 +23,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Net::AMQP.3 \
-		Net::AMQP::Common.3 \
-		Net::AMQP::Frame.3 \
-		Net::AMQP::Frame::Body.3 \
-		Net::AMQP::Frame::Header.3 \
-		Net::AMQP::Frame::Heartbeat.3 \
-		Net::AMQP::Frame::Method.3 \
-		Net::AMQP::Frame::OOBBody.3 \
-		Net::AMQP::Frame::OOBHeader.3 \
-		Net::AMQP::Frame::OOBMethod.3 \
-		Net::AMQP::Frame::Trace.3 \
-		Net::AMQP::Protocol.3 \
-		Net::AMQP::Protocol::Base.3 \
-		Net::AMQP::Protocol::v0_8.3 \
-		Net::AMQP::Value.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
