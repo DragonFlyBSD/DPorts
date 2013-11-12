@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-AutoConf/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-AutoConf/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Config-AutoConf
 PORTVERSION=	0.22
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Config::AutoConf.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
