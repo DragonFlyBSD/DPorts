@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Devel-StackTrace/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-StackTrace/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-StackTrace
 PORTVERSION=	1.30
@@ -15,7 +15,4 @@ LICENSE=	ART20
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::StackTrace.3 Devel::StackTrace::Frame.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
