@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: devel/rubygem-ruby-statsd/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-ruby-statsd/Makefile 332041 2013-10-30 02:42:34Z swills $
 
 PORTNAME=	statsd
 PORTVERSION=	0.5.4
@@ -18,5 +18,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/statsd
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
