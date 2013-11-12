@@ -1,0 +1,11 @@
+
+; $FreeBSD: dns/bind99/files/empty.db 333563 2013-11-12 10:59:20Z erwin $
+
+$TTL 3h
+@ SOA @ nobody.localhost. 42 1d 12h 1w 3h
+	; Serial, Refresh, Retry, Expire, Neg. cache TTL
+
+@	NS	@
+
+; Silence a BIND warning
+@	A	127.0.0.1

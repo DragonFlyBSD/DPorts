@@ -1,0 +1,13 @@
+
+; $FreeBSD: dns/bind99/files/localhost-reverse.db 333563 2013-11-12 10:59:20Z erwin $
+
+$TTL 3h
+@ SOA localhost. nobody.localhost. 42 1d 12h 1w 3h
+	; Serial, Refresh, Retry, Expire, Neg. cache TTL
+
+	NS	localhost.
+
+1.0.0	PTR	localhost.
+
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0 PTR localhost.
+
