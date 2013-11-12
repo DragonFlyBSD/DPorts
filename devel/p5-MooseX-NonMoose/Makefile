@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-NonMoose/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-NonMoose/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-NonMoose
 PORTVERSION=	0.24
@@ -21,10 +21,4 @@ TEST_DEPENDS=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::NonMoose.3 \
-		MooseX::NonMoose::InsideOut.3 \
-		MooseX::NonMoose::Meta::Role::Class.3 \
-		MooseX::NonMoose::Meta::Role::Constructor.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
