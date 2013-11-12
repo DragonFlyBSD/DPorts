@@ -1,5 +1,5 @@
 # Created by: Ilia Chipitsine <ilia@cgu.chel.su>
-# $FreeBSD: devel/p5-String-Approx/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Approx/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	String-Approx
 PORTVERSION=	3.27
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for approximate matching (fuzzy matching)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Approx.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
