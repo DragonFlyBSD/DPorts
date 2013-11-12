@@ -1,9 +1,9 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports-mgmt/porttools/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/porttools/Makefile 332978 2013-11-06 12:25:51Z mat $
 
 PORTNAME=	porttools
 PORTVERSION=	0.99
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	SF
 
@@ -28,23 +28,12 @@ MAKE_ENV+=	PORTREVISION="${PORTREVISION}"
 MAKE_ENV+=	PORTEPOCH="${PORTEPOCH}"
 .endif
 
-MAN1=		port.1
-MAN5=		porttools.5
-
-OPTIONS_DEFINE=	NEWFILE
+OPTIONS_DEFINE=	DOCS NEWFILE
 OPTIONS_DEFAULT=	NEWFILE
 
 NEWFILE_DESC=	Enable newfile support
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNEWFILE}
-RUN_DEPENDS+=	newfile:${PORTSDIR}/devel/newfile
-.endif
-
-.if ${PORT_OPTIONS:MDOCS}
-INSTALL_TARGET=	install install-docs
-.endif
+NEWFILE_RUN_DEPENDS=	newfile:${PORTSDIR}/devel/newfile
+DOCS_INSTALL_TARGET=	install install-docs
 
 .include <bsd.port.mk>

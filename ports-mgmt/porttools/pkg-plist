@@ -1,5 +1,7 @@
-@comment $FreeBSD: ports-mgmt/porttools/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: ports-mgmt/porttools/pkg-plist 332978 2013-11-06 12:25:51Z mat $
 bin/port
+man/man1/port.1.gz
+man/man5/porttools.5.gz
 %%DATADIR%%/cmd_commit
 %%DATADIR%%/cmd_create
 %%DATADIR%%/cmd_diff
