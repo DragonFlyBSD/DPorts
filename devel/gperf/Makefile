@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gperf/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: devel/gperf/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	gperf
 PORTVERSION=	3.0.3
@@ -12,17 +12,13 @@ COMMENT=	Generates perfect hash functions for sets of keywords
 LICENSE=	GPLv2
 
 CONFLICTS=	ace+tao-[0-9]*
-NO_STAGE=	yes
-
-GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
-CONFIGURE_ARGS+=	--docdir=${DOCSDIR}
-
-MAN1=		gperf.1
-INFO=		gperf
-
 # avoid GPL3
 PORTSCOUT=	skipv:3.0.4
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--docdir=${DOCSDIR}
+INFO=		gperf
 
 regression-test: test
 
