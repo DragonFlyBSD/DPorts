@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: math/p5-AI-DecisionTree/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-AI-DecisionTree/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	AI-DecisionTree
 PORTVERSION=	0.11
@@ -13,8 +13,4 @@ COMMENT=	Perl module for Automatically Learning Decision Trees
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AI::DecisionTree.3 \
-		AI::DecisionTree::Instance.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
