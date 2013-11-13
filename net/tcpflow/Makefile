@@ -1,5 +1,5 @@
 # Created by: Jose M. Alcaide <jose@we.lc.ehu.es>
-# $FreeBSD: net/tcpflow/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/tcpflow/Makefile 331986 2013-10-29 19:51:35Z antoine $
 
 PORTNAME=	tcpflow
 PORTVERSION=	1.4.0
@@ -18,14 +18,11 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		tcpflow.1
-PLIST_FILES=	bin/tcpflow
+PLIST_FILES=	bin/tcpflow man/man1/tcpflow.1.gz
+PORTDOCS=	AUTHORS ChangeLog NEWS README
 
 OPTIONS_DEFINE=	DOCS
 
-PORTDOCS=	AUTHORS ChangeLog NEWS README
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == i386 && ! ${CFLAGS:M-march=*}
@@ -35,8 +32,8 @@ CFLAGS+=	-march=i586
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
