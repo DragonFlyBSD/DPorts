@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-File-BasicFlock/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-BasicFlock/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-BasicFlock
 PORTVERSION=	98.1202
@@ -13,7 +13,4 @@ COMMENT=	Perl5 module for file locking with flock
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::BasicFlock.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
