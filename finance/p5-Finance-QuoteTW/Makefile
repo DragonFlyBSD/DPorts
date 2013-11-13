@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Finance-QuoteTW/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Finance-QuoteTW/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Finance-QuoteTW
 PORTVERSION=	0.09
@@ -23,16 +23,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Finance::QuoteTW.3 \
-		Finance::QuoteTW::Allianz.3 \
-		Finance::QuoteTW::Blackrock.3 \
-		Finance::QuoteTW::Capital.3 \
-		Finance::QuoteTW::Franklin.3 \
-		Finance::QuoteTW::Iit.3 \
-		Finance::QuoteTW::Jpmrich.3 \
-		Finance::QuoteTW::Paradigm.3 \
-		Finance::QuoteTW::Schroders.3 \
-		Finance::QuoteTW::Tisc.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
