@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/pmars-sdl/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pmars-sdl/Makefile 332797 2013-11-05 00:53:19Z danilo $
 
 PORTNAME=	pmars
 PORTVERSION=	0.9.2
@@ -31,24 +31,10 @@ MAKE_ARGS=	CFLAGS+="${CFLAGS}" \
 
 PLIST_FILES=	bin/${PORTNAME}${PKGNAMESUFFIX}
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MICWS94}
-MAKE_ARGS+=	CFLAGS+="-DEXT94"
-.endif
-
-.if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
-MAKE_ARGS+=	CFLAGS+="-O3 -fomit-frame-pointer"
-.endif
-
-.if ${PORT_OPTIONS:MPERMUTATE}
-MAKE_ARGS+=	CFLAGS+="-DPERMUTATE"
-.endif
-
-.if ${PORT_OPTIONS:MSMALLMEM}
-MAKE_ARGS+=	CFLAGS+="-DSMALLMEM"
-.endif
+ICWS94_MAKE_ARGS=	CFLAGS+="-DEXT94"
+OPTIMIZED_CFLAGS_MAKE_ARGS=	CFLAGS+="-O3 -fomit-frame-pointer"
+PERMUTATE_MAKE_ARGS=	CFLAGS+="-DPERMUTATE"
+SMALLMEM_MAKE_ARGS=	CFLAGS+="-DSMALLMEM"
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -60,6 +46,6 @@ post-patch:
 
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} \
-		${PREFIX}/bin/${PORTNAME}${PKGNAMESUFFIX})
+		${STAGEDIR}${PREFIX}/bin/${PORTNAME}${PKGNAMESUFFIX})
 
 .include <bsd.port.mk>
