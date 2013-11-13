@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-gitlab-grack/Makefile 331548 2013-10-25 02:44:56Z swills $
+# $FreeBSD: www/rubygem-gitlab-grack/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	gitlab-grack
 PORTVERSION=	1.0.1
@@ -14,6 +14,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
