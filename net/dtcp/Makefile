@@ -1,4 +1,4 @@
-# $FreeBSD: net/dtcp/Makefile 329334 2013-10-04 16:14:27Z ume $
+# $FreeBSD: net/dtcp/Makefile 332213 2013-10-31 08:01:57Z bapt $
 
 PORTNAME=	dtcp
 PORTVERSION=	20130602
@@ -16,9 +16,9 @@ LICENSE=	BSD
 RUN_DEPENDS=	qpopauth:${PORTSDIR}/mail/qpopper
 .endif
 
+USES=		uidfix
 USE_RC_SUBR=	dtcpc dtcps
 USE_RUBY=	yes
-NEED_ROOT=	yes
 MAKE_ENV+=	RUBY=${RUBY}
 
 SUB_LIST+=	RUBY=${RUBY}
