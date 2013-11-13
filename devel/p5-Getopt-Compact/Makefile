@@ -1,5 +1,5 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: devel/p5-Getopt-Compact/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Getopt-Compact/Makefile 331953 2013-10-29 14:32:08Z vanilla $
 
 PORTNAME=	Getopt-Compact
 PORTVERSION=	0.04
@@ -18,8 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Getopt::Compact.3 \
-		Getopt::Compact::PodMunger.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
