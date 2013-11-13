@@ -1,7 +1,9 @@
-# $FreeBSD: www/hs-yesod-platform/Makefile 332166 2013-10-30 19:32:47Z pgj $
+# $FreeBSD: www/hs-yesod-platform/Makefile 332188 2013-10-30 22:57:52Z pgj $
 
 PORTNAME=	yesod-platform
 PORTVERSION=	1.2.0.1
+# Please note that the port *strictly depends* on certain versions of other
+# ports, so revisit the USE_CABAL line on bumping the portrevision.  Thanks!
 PORTREVISION=	1
 CATEGORIES=	www haskell
 
