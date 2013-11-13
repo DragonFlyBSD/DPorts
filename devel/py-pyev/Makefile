@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: devel/py-pyev/Makefile 330303 2013-10-14 11:53:37Z wg $
+# $FreeBSD: devel/py-pyev/Makefile 331899 2013-10-28 21:37:00Z wg $
 
 PORTNAME=	pyev
 PORTVERSION=	0.9.0
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 MASTER_SITE_SUBDIR=	source/p/pyev
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	gd@rambler-co.ru
+MAINTAINER=	gd.workbox@gmail.com
 COMMENT=	Python libev interface
 
 LICENSE=	GPLv3
