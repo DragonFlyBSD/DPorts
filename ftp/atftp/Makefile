@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/atftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/atftp/Makefile 332071 2013-10-30 05:45:42Z kevlo $
 
 PORTNAME=	atftp
 PORTVERSION=	0.7
@@ -16,11 +16,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.dfsg
 USE_RC_SUBR=	atftpd
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/atftp \
-		sbin/atftpd
+PLIST_FILES=	bin/atftp sbin/atftpd man/man1/atftp.1.gz man/man8/atftpd.8.gz
 
-MAN1=		atftp.1
-MAN8=		atftpd.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
