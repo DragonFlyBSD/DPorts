@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/slump/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/slump/Makefile 333462 2013-11-11 00:50:27Z danilo $
 
 PORTNAME=	slump
 PORTVERSION=	0.003.02
@@ -19,14 +19,9 @@ MAKE_ARGS=	FLAGS="${CFLAGS}"
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC} && ${INSTALL_DATA} README ${DOCSDIR})
-.endif
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${STAGEDIR}${PREFIX}/bin)
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} README ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
