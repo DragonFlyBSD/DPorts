@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xwd/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xwd/Makefile 331812 2013-10-27 22:50:18Z eadler $
 
 PORTNAME=	xwd
 PORTVERSION=	1.0.6
@@ -12,9 +12,6 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	x11 xkbfile
 
-PLIST_FILES=	bin/xwd
+PLIST_FILES=	bin/xwd man/man1/xwd.1.gz
 
-MAN1=		xwd.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
