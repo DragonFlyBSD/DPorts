@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/pecl-zendopcache/Makefile 328594 2013-09-28 16:48:34Z mm $
+# $FreeBSD: www/pecl-zendopcache/Makefile 333190 2013-11-08 10:00:40Z ale $
 
 PORTNAME=	zendopcache
 PORTVERSION=	7.0.2
@@ -25,13 +25,8 @@ PORTDOCS=	*
 
 IGNORE_WITH_PHP=	55
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
