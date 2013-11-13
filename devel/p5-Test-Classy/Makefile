@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Classy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Classy/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Classy
 PORTVERSION=	0.09
@@ -23,7 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Classy.3 Test::Classy::Base.3 Test::Classy::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
