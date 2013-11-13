@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-github_creator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-github_creator/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	github_creator
 PORTVERSION=	0.15
@@ -22,7 +22,4 @@ TEST_DEPENDS=	p5-Test-Output>=0:${PORTSDIR}/devel/p5-Test-Output
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		github_creator.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
