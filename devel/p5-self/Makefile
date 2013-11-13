@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-self/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-self/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	self
 PORTVERSION=	0.34
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-PadWalker>=0:${PORTSDIR}/devel/p5-PadWalker
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		self.3 self::implicit.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
