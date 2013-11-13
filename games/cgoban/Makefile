@@ -1,5 +1,5 @@
 # Created by: simonm@dcs.gla.ac.uk
-# $FreeBSD: games/cgoban/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/cgoban/Makefile 331923 2013-10-29 02:08:54Z amdmi3 $
 
 PORTNAME=	cgoban
 PORTVERSION=	1.9.14
@@ -10,20 +10,19 @@ MASTER_SITES=	SF/${PORTNAME}1/${PORTNAME}1/${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Internet Go Server client and game editor
 
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 ice sm
 
-MAN6=		cgoban.6
-PLIST_FILES=	bin/cgoban
+PLIST_FILES=	bin/cgoban \
+		man/man6/cgoban.6.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/gnugo|${LOCALBASE}/bin/gnugo|' ${WRKSRC}/src/cgoban.c
-	@${REINPLACE_CMD} -e 's|linux/soundcard.h|sys/soundcard.h|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|linux/soundcard.h|sys/soundcard.h|; \
+		/CFLAGS='\''-O2/ d' ${WRKSRC}/configure
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cgoban ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man6/cgoban.6 ${MANPREFIX}/man/man6
+	${INSTALL_PROGRAM} ${WRKSRC}/src/cgoban ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/man6/cgoban.6 ${STAGEDIR}${MAN6PREFIX}/man/man6/
 
 .include <bsd.port.mk>
