@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: misc/mc/Makefile 331192 2013-10-21 21:07:18Z nemysis $
+# $FreeBSD: misc/mc/Makefile 332544 2013-11-02 22:13:00Z nemysis $
 
 PORTNAME=	mc
 PORTVERSION=	4.8.10
@@ -7,7 +7,7 @@ PORTREVISION=	0
 CATEGORIES=	misc shells
 MASTER_SITES=	http://ftp.osuosl.org/pub/midnightcommander/
 
-MAINTAINER=	fjoe@FreeBSD.org
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Midnight Commander, a free Norton Commander Clone
 
 LICENSE=	GPLv3
@@ -45,8 +45,9 @@ NLS_USES=		gettext
 
 SLANG_LIB_DEPENDS=	libslang.so:${PORTSDIR}/devel/libslang2
 
-SMB_CONFIGURE_ENABLE=	vfs-smb configdir=${LOCALBASE}/etc \
-			codepagedir=${LOCALBASE}/etc/codepages
+SMB_CONFIGURE_ENABLE=	vfs-smb
+SMB_CONFIGURE_ON=	--with-smb-configdir=${LOCALBASE}/etc \
+			--with-smb-codepagedir=${LOCALBASE}/etc/codepages
 
 SUBSHELL_CONFIGURE_WITH=	subshell
 
@@ -77,7 +78,7 @@ CONFIGURE_ARGS+=--with-screen=slang --with-slang-includes=${LOCALBASE}/include
 .endif
 
 .if ${PORT_OPTIONS:MNCURSES}
-CONFIGURE_ARGS+=--with-screen=ncurses --with-ncurses-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=--with-screen=ncurses
 .endif
 
 post-patch:
