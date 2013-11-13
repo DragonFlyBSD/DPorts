@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Object-Enum/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Object-Enum/Makefile 332127 2013-10-30 15:19:23Z vanilla $
 
 PORTNAME=	Object-Enum
 PORTVERSION=	0.07.2
@@ -17,10 +17,7 @@ RUN_DEPENDS=	p5-Sub-Install>=0:${PORTSDIR}/devel/p5-Sub-Install \
 		p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-MAN3=	Object::Enum.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
