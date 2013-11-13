@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 330636 2013-10-17 12:58:06Z gahr $
+# $FreeBSD: x11-wm/e16/Makefile 331836 2013-10-28 08:45:13Z gahr $
 
 PORTNAME=	e16
 PORTVERSION=	1.0.13.003
@@ -7,7 +7,7 @@ CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	SF/enlightenment/${PORTNAME}/Snapshots/
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A very artistic X window manager
+COMMENT=	Enlightenment DR16 window manager
 
 OPTIONS_DEFINE=	DOCS NLS SOUND
 SOUND_DESC=	Sound support via pulseaudio/libsndfile
