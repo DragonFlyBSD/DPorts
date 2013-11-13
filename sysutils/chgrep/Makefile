@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: sysutils/chgrep/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/chgrep/Makefile 333238 2013-11-08 15:06:28Z vanilla $
 
 PORTNAME=	chgrep
 PORTVERSION=	1.2.4
@@ -13,14 +13,12 @@ COMMENT=	Fast string substitution across multiple files
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
-MAN1=		chgrep.1
-PLIST_FILES=	bin/chgrep
+PLIST_FILES=	bin/chgrep man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/chgrep \
-		${PREFIX}/bin
+		${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/chgrep.1 \
-		${MANPREFIX}/man/man1
+		${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
