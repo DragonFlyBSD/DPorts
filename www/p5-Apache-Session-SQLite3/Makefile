@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-Session-SQLite3/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	Apache-Session-SQLite3
 PORTVERSION=	0.03
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Apache::Session::SQLite3.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
