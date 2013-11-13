@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: converters/p5-String-Multibyte/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-String-Multibyte/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	String-Multibyte
 PORTVERSION=	1.10
@@ -17,25 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Multibyte.3 \
-		String::Multibyte::Big5.3 \
-		String::Multibyte::Big5Plus.3 \
-		String::Multibyte::Bytes.3 \
-		String::Multibyte::EUC.3 \
-		String::Multibyte::EUC_JP.3 \
-		String::Multibyte::EUC_TW.3 \
-		String::Multibyte::GB18030.3 \
-		String::Multibyte::GBK.3 \
-		String::Multibyte::Grapheme.3 \
-		String::Multibyte::Johab.3 \
-		String::Multibyte::ShiftJIS.3 \
-		String::Multibyte::UHC.3 \
-		String::Multibyte::UTF16BE.3 \
-		String::Multibyte::UTF16LE.3 \
-		String::Multibyte::UTF32BE.3 \
-		String::Multibyte::UTF32LE.3 \
-		String::Multibyte::UTF8.3 \
-		String::Multibyte::Unicode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
