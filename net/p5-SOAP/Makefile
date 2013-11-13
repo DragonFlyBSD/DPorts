@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: net/p5-SOAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-SOAP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	SOAP
 PORTVERSION=	0.28
@@ -19,15 +19,4 @@ CONFLICTS=	p5-SOAP-Lite-[0-9]*
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SOAP.3 SOAP::SimpleTypeWrapper.3 SOAP::Parser.3 \
-		SOAP::EnvelopeMaker.3 SOAP::GenericScalarSerializer.3 \
-		SOAP::Transport::HTTP::Apache.3 SOAP::TypedPrimitiveSerializer.3 \
-		SOAP::GenericInputStream.3 SOAP::Serializer.3 \
-		SOAP::GenericHashSerializer.3 SOAP::OutputStream.3 \
-		SOAP::Transport::HTTP::CGI.3 SOAP::Packager.3 SOAP::Envelope.3 \
-		SOAP::TypedPrimitive.3 SOAP::StructSerializer.3 \
-		SOAP::Transport::HTTP::Server.3 SOAP::Defs.3 SOAP::Struct.3 \
-		SOAP::TypeMapper.3 SOAP::Transport::HTTP::Client.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
