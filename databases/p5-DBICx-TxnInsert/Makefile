@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: databases/p5-DBICx-TxnInsert/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBICx-TxnInsert/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBICx-TxnInsert
 PORTVERSION=	0.02
@@ -15,14 +15,10 @@ COMMENT=	Wrap all inserts into transaction
 BUILD_DEPENDS=	p5-DBIx-Class>=0:${PORTSDIR}/databases/p5-DBIx-Class \
 		p5-DBD-Mock>=0:${PORTSDIR}/databases/p5-DBD-Mock
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Compile>=0.08:${PORTSDIR}/devel/p5-Test-Compile \
 		p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBICx::TxnInsert.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
