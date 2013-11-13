@@ -1,4 +1,5 @@
-# $FreeBSD: devel/p5-Date-Business/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Business/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+
 PORTNAME=	Date-Business
 PORTVERSION=	1.2
 CATEGORIES=	devel perl5
@@ -11,7 +12,4 @@ COMMENT=	Fast calendar and business date calculations
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Date::Business.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
