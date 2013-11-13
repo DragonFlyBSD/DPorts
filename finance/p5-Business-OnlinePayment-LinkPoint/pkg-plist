@@ -1,6 +1,7 @@
 %%SITE_PERL%%/Business/OnlinePayment/LinkPoint.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/OnlinePayment/LinkPoint/.packlist
-@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/OnlinePayment/LinkPoint
+%%PERL5_MAN3%%/Business::OnlinePayment::LinkPoint.3.gz
+@dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/OnlinePayment/LinkPoint
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business/OnlinePayment
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Business
 @dirrmtry %%SITE_PERL%%/Business/OnlinePayment
