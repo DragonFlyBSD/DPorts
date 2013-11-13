@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/alienwave/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/alienwave/Makefile 331988 2013-10-29 20:02:18Z danilo $
 
 PORTNAME=	alienwave
 PORTVERSION=	0.4.0
@@ -27,20 +27,9 @@ ALL_TARGET=	${PORTNAME}
 PORTDOCS=	README STORY TO_DO
 PLIST_FILES=	bin/alienwave
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MLEVEL_EASY}
-CFLAGS+=	-DLEV_EASY
-.endif
-
-.if ${PORT_OPTIONS:MLEVEL_HARD}
-CFLAGS+=	-DLEV_HARD
-.endif
-
-.if ${PORT_OPTIONS:MRANDOM_LEVELS}
-CFLAGS+=	-DRANDOM_LEVELS
-.endif
+LEVEL_EASY_CFLAGS=	-DLEV_EASY
+LEVEL_HARD_CFLAGS=	-DLEV_HARD
+RANDOM_LEVELS_CFLAGS=	-DRANDOM_LEVELS
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -50,12 +39,10 @@ post-patch:
 		 /strip /s|^|#|' ${WRKSRC}/Makefile
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} alienwave ${PREFIX}/bin)
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} alienwave ${STAGEDIR}${PREFIX}/bin)
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${DOCSDIR})
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${STAGEDIR}${DOCSDIR})
 .endfor
-.endif
 
 .include <bsd.port.mk>
