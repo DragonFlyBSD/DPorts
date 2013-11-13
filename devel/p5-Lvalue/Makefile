@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-Lvalue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Lvalue/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Lvalue
 PORTVERSION=	0.21
@@ -19,9 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Lvalue.3
-
-NO_STAGE=	yes
 post-patch::
 	@${REINPLACE_CMD} -e 's|qw(can isa DOES VERSION)|(qw(can isa DOES VERSION))|g' \
 		${WRKSRC}/lib/Lvalue.pm
