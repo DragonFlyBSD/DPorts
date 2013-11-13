@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: net/py-gspreadsheet/Makefile 331977 2013-10-29 18:10:58Z nemysis $
+# $FreeBSD: net/py-gspreadsheet/Makefile 333518 2013-11-11 16:16:03Z wg $
 
 PORTNAME=	gspreadsheet
 PORTVERSION=	0.3.0
@@ -13,8 +13,9 @@ COMMENT=	Wrapper around Google Spreadsheets to look like csv.DictReader
 LICENSE=	AL2
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gdata>0:${PORTSDIR}/devel/py-gdata
+
 USE_PYTHON=		2.7
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 
 PORTDOCS=	README.rst
