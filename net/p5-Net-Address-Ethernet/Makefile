@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Address-Ethernet/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Address-Ethernet/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Address-Ethernet
 PORTVERSION=	1.122
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Address::Ethernet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
