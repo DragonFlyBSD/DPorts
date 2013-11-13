@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: www/rubygem-rack-contrib/Makefile 328089 2013-09-24 03:54:24Z amdmi3 $
+# $FreeBSD: www/rubygem-rack-contrib/Makefile 332056 2013-10-30 03:03:35Z swills $
 
 PORTNAME=	rack-contrib
 PORTVERSION=	1.1.0
@@ -15,6 +15,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
