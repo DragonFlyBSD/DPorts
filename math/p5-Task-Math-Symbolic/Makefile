@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/p5-Task-Math-Symbolic/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Task-Math-Symbolic/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Task-Math-Symbolic
 PORTVERSION=	1.01
@@ -29,7 +29,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Task::Math::Symbolic.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
