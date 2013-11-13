@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: devel/libglade2/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libglade2/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/devel/libglade2/Makefile,v 1.26 2007/08/01 16:13:48 mezz Exp $
 
 PORTNAME=	libglade2
@@ -41,7 +41,7 @@ NO_STAGE=	yes
 
 .if ${PORT_OPTIONS:MPYTHON}
 
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 PLIST_SUB+=	PYTHON=""
 .else
 PLIST_SUB+=	PYTHON="@comment "
