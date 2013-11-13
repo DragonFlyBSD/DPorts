@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gstreamer1-plugins-soup/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gstreamer1-plugins-soup/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	devel
@@ -10,5 +10,4 @@ DIST=		good
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
