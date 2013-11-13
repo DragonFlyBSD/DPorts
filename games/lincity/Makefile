@@ -1,5 +1,5 @@
 # Created by: Julian Assange
-# $FreeBSD: games/lincity/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/lincity/Makefile 332574 2013-11-03 01:50:12Z danilo $
 
 PORTNAME=	lincity
 PORTVERSION=	1.13.1
@@ -10,36 +10,30 @@ MASTER_SITES=	SF/${PORTNAME}/Lincity%20Development%20Source/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rich city simulation game for X
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
 USES=		gmake
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN6=		lincity.6
+OPTIONS_DEFINE=	NLS SVGALIB 
+OPTIONS_SUB=	yes
 
-OPTIONS_DEFINE=	SVGALIB NLS
+NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=	gettext
 
-NO_STAGE=	yes
+SVGALIB_LIB_DEPENDS=	libvga.so:${PORTSDIR}/graphics/svgalib
+SVGALIB_CONFIGURE_ON=	--without-x
+SVGALIB_CONFIGURE_OFF=	--without-svga
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVGALIB}
-LIB_DEPENDS+=	vga:${PORTSDIR}/graphics/svgalib
-CONFIGURE_ARGS+=	--without-x
-PLIST_SUB=	PROG="bin/lincity"
+PLIST_SUB+=	PROG="bin/lincity"
 .else
 USE_XORG=	sm xext
-CONFIGURE_ARGS+=	--without-svga
-PLIST_SUB=	PROG="bin/xlincity"
-.endif
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
+PLIST_SUB+=	PROG="bin/xlincity"
 .endif
 
 pre-configure:
