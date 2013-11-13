@@ -1,5 +1,5 @@
 # Created by: dawe <daweonline@gmail.com>
-# $FreeBSD: math/p5-Statistics-TTest/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-TTest/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Statistics-TTest
 PORTVERSION=	1.1.0
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Statistics::TTest.3 Statistics::PointEstimation.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
