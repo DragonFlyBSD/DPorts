@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-NIS-Listgroup/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-NIS-Listgroup/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-NIS-Listgroup
 PORTVERSION=	1.0.0
@@ -16,8 +16,4 @@ RUN_DEPENDS=	p5-Net-NIS>0:${PORTSDIR}/net/p5-Net-NIS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		listgroup.1
-MAN3=		Net::NIS::Listgroup.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
