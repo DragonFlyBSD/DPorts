@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-cgi_multipart_eof_fix/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-cgi_multipart_eof_fix/Makefile 332053 2013-10-30 03:00:33Z swills $
 
 PORTNAME=	cgi_multipart_eof_fix
 PORTVERSION=	2.5.0
@@ -12,5 +12,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
