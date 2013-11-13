@@ -1,8 +1,7 @@
-# $FreeBSD: devel/kdevelop-php-docs/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/kdevelop-php-docs/Makefile 332996 2013-11-06 14:47:14Z rakuco $
 
 PORTNAME=	kdevelop-php-docs
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
-PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDEVELOP_BRANCH}/kdevelop/${KDEVELOP_VERSION}/src
@@ -15,10 +14,9 @@ LIB_DEPENDS=	kdevplatforminterfaces:${PORTSDIR}/devel/kdevplatform
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USE_BZIP2=	yes
+USE_XZ=		yes
 USES=		cmake
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
