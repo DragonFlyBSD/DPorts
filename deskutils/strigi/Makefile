@@ -1,5 +1,5 @@
 # Created by: Tilman Keskinoz <arved@FreeBSD.org>
-# $FreeBSD: deskutils/strigi/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/strigi/Makefile 333412 2013-11-10 17:28:44Z rakuco $
 
 PORTNAME=	strigi
 PORTVERSION=	${STRIGI_VERSION}
@@ -12,11 +12,11 @@ COMMENT=	Strigi desktop search (meta port)
 
 USE_KDE4=	strigi_run
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 OPTIONS_DEFINE=	CLIENT DAEMON UTILITIES
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
-NO_STAGE=	yes
 .include <${.CURDIR}/Makefile.common>
 .include <bsd.port.options.mk>
 
