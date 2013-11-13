@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: ftp/p5-Net-FTPSSL/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/p5-Net-FTPSSL/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Net-FTPSSL
 PORTVERSION=	0.23
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	A FTP over SSL/TLS class
+COMMENT=	FTP over SSL/TLS class
 
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=1.08:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::FTPSSL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
