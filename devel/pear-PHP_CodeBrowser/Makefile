@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-PHP_CodeBrowser/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-PHP_CodeBrowser/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	PHP_CodeBrowser
 PORTVERSION=	1.0.2
@@ -23,7 +23,6 @@ USE_PHP=	dom
 PEAR_CHANNEL=	phpunit
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
