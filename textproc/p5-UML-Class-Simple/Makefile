@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-UML-Class-Simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-UML-Class-Simple/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	UML-Class-Simple
 PORTVERSION=	0.19
@@ -23,10 +23,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	umlclass.pl.1
-MAN3=	UML::Class::Simple.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '/auto_install/d' ${WRKSRC}/Makefile.PL
 
