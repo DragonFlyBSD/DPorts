@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Heap-Simple-Perl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Heap-Simple-Perl/Makefile 331958 2013-10-29 15:08:11Z vanilla $
 
 PORTNAME=	Heap-Simple-Perl
 PORTVERSION=	0.14
@@ -17,7 +17,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS+=	-n
 
-MAN3=		Heap::Simple::Perl.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
