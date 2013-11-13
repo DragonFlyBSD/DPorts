@@ -1,8 +1,7 @@
-# $FreeBSD: devel/kdevelop-php/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/kdevelop-php/Makefile 332996 2013-11-06 14:47:14Z rakuco $
 
 PORTNAME=	kdevelop-php
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
-PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDEVELOP_BRANCH}/kdevelop/${KDEVELOP_VERSION}/src
@@ -16,9 +15,8 @@ BUILD_DEPENDS=	${KDE4_PREFIX}/bin/kdev-pg-qt:${PORTSDIR}/devel/kdevelop-pg-qt
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USE_BZIP2=	yes
-USES=		cmake
-USE_GMAKE=	yes
+USE_XZ=		yes
+USES=		cmake gmake
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=	PHPDOCS NLS
@@ -26,7 +24,6 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 PHPDOCS_DESC=	Integrate with PHP.net documentation
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHPDOCS}
