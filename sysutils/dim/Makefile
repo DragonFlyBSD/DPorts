@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/dim/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/dim/Makefile 333273 2013-11-09 03:12:42Z vanilla $
 
 PORTNAME=	dim
 PORTVERSION=	1.1
@@ -22,8 +22,7 @@ USE_PERL5=	run
 
 PLIST_FILES=	bin/dim
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/dim.pl ${PREFIX}/bin/dim
+	${INSTALL_SCRIPT} ${WRKSRC}/dim.pl ${STAGEDIR}${PREFIX}/bin/dim
 
 .include <bsd.port.mk>
