@@ -1,5 +1,5 @@
 # Created by: Frank DENIS
-# $FreeBSD: ftp/pure-ftpd/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/pure-ftpd/Makefile 331833 2013-10-28 06:42:24Z sunpoet $
 
 PORTNAME=	pure-ftpd
 PORTVERSION=	1.0.36
@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.pureftpd.org/pub/pure-ftpd/releases/ \
 		SF/pureftpd/Pure-FTPd/${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Small, easy to set up, fast, and very secure FTP server
+COMMENT=	Small, easy to set up, fast, and secure FTP server
 
 SUB_FILES=	pkg-message
 SUB_LIST=	PAM_DIR=${PAM_DIR} PAM_TARGET=${PAM_TARGET}
