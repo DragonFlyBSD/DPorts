@@ -1,5 +1,5 @@
 # Created by: KIMURA Shigekazu <rikimura@a011.broada.jp>
-# $FreeBSD: archivers/untar/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/untar/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	untar
 PORTVERSION=	1.4
@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.c
 EXTRACT_ONLY=
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lists/Extracts files from a "*.tgz" or "*.gz" archive
 
 NO_STAGE=	yes
