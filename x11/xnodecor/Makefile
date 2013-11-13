@@ -1,5 +1,5 @@
 # Created by: Katsura Matsumoto <katsura@cc.okayama-u.ac.jp>
-# $FreeBSD: x11/xnodecor/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xnodecor/Makefile 333051 2013-11-07 02:04:11Z danilo $
 
 PORTNAME=	xnodecor
 PORTVERSION=	0.1
@@ -15,7 +15,6 @@ NO_WRKSUBDIR=	yes
 USE_XORG=	x11
 PLIST_FILES=	bin/xnodecor
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${FILESDIR}/Makefile ${WRKDIR}

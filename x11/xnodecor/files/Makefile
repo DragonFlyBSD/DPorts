@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xnodecor/files/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: x11/xnodecor/files/Makefile 333051 2013-11-07 02:04:11Z danilo $
 CFLAGS=		-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 LIBS=		-lX11
@@ -9,7 +9,7 @@ xnodecor:
 	$(CC) -o xnodecor xnodecor.c $(CFLAGS) $(LDFLAGS) $(LIBS)
 
 install:
-	${BSD_INSTALL_PROGRAM} xnodecor ${LOCALBASE}/bin
+	${BSD_INSTALL_PROGRAM} xnodecor ${DESTDIR}${PREFIX}/bin
 
 clean:
 	rm -f *.rej a.out core xnodecor
