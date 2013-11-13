@@ -1,4 +1,4 @@
-# $FreeBSD: german/hyphen/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.02.17
@@ -13,7 +13,7 @@ COMMENT=	German hyphenation rules
 
 LICENSE=	LGPL21
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -25,12 +25,11 @@ DEALIASES=	de_AT de_BE de_CH de_LI de_LU
 PLIST_FILES+=	%%DATADIR%%/hyph_${ALIAS}.dic
 .endfor
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/hyph_de_DE.dic ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/hyph_de_DE.dic ${STAGEDIR}${DATADIR}/
 .for ALIAS in ${DEALIASES}
-	${LN} -s hyph_de_DE.dic ${DATADIR}/hyph_${ALIAS}.dic
+	${LN} -s hyph_de_DE.dic ${STAGEDIR}${DATADIR}/hyph_${ALIAS}.dic
 .endfor
 
 .include <bsd.port.mk>
