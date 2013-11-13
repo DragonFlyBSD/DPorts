@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-RC5/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-RC5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-RC5
 PORTVERSION=	2.00
@@ -13,7 +13,4 @@ COMMENT=	Perl implementation of the RC5 encryption algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::RC5.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
