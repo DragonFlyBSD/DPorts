@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: security/pinentry/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD: security/pinentry/Makefile 333418 2013-11-10 17:49:59Z makc $
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.3
@@ -41,6 +41,7 @@ PKGNAMESUFFIX=	${PINENTRY_SLAVE}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQT4}
+USE_GCC=	any
 USE_QT4=	gui moc_build
 PLIST_SUB+=	WITH_QT4=""
 MOC4=		${LOCALBASE}/bin/moc-qt4
