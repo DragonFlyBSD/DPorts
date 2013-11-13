@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: editors/dhex/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/dhex/Makefile 331656 2013-10-26 07:52:07Z ehaupt $
 
 PORTNAME=	dhex
 PORTVERSION=	0.68
@@ -15,14 +15,12 @@ LICENSE=	GPLv2
 
 MAN1=		dhex.1
 MAN5=		dhexrc.5 dhex_markers.5 dhex_searchlog.5
-PLIST_FILES=	bin/dhex
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${STAGEDIR}${MANPREFIX}/man/man1
 .for f in ${MAN5}
-	${INSTALL_MAN} ${WRKSRC}/${f} ${MANPREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/${f} ${STAGEDIR}${MANPREFIX}/man/man5
 .endfor
 
 .include <bsd.port.mk>
