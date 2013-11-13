@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: games/bloboats/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bloboats/Makefile 331848 2013-10-28 12:31:53Z ehaupt $
 
 PORTNAME=	bloboats
 PORTVERSION=	1.0.2
@@ -15,7 +15,6 @@ USES=		gmake
 USE_SDL=	mixer image net sdl
 USE_GL=		yes
 
-MAKE_ENV+=	DATADIR="${DATADIR}"
+MAKE_ENV+=	DATADIR="${DATADIR}" STAGEDIR=${STAGEDIR}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
