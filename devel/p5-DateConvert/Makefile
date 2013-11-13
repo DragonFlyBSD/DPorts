@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/p5-DateConvert/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateConvert/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	DateConvert
 PORTVERSION=	0.16
@@ -14,7 +14,4 @@ COMMENT=	Perl5 module to convert dates between any two calendar formats
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::Convert.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
