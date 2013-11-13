@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-renderutil/Makefile 328166 2013-09-24 16:47:23Z garga $
+# $FreeBSD: x11/xcb-util-renderutil/Makefile 332329 2013-10-31 23:53:19Z garga $
 
 PORTNAME=	xcb-util-renderutil
 PORTVERSION=	0.3.8
@@ -17,7 +17,6 @@ USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${libdir}/pkgconfig|$${prefix}/libdata/pkgconfig|' \
