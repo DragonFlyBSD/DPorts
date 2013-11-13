@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 331800 2013-10-27 19:35:12Z pawel $
 
 PORTNAME=	c++-gtk-utils
 PORTVERSION=	2.2.3
@@ -14,7 +14,7 @@ COMMENT=	Lightweight library for programming GTK+ programs
 LICENSE=	LGPL21
 
 GNU_CONFIGURE=	yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 USES=		pathfix pkgconfig
 USE_GNOME=	gtk20
 USE_LDCONFIG=	yes
