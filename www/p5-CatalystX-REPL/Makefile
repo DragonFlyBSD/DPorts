@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-CatalystX-REPL/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CatalystX-REPL/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	CatalystX-REPL
 PORTVERSION=	0.04
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read-Eval-Print-Loop for debugging your Catalyst application
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Carp-REPL>=0:${PORTSDIR}/devel/p5-Carp-REPL \
 		p5-Catalyst-Runtime>0:${PORTSDIR}/www/p5-Catalyst-Runtime \
@@ -22,7 +25,4 @@ TEST_DEPENDS=	p5-Test-Expect>=0:${PORTSDIR}/devel/p5-Test-Expect
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CatalystX::REPL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
