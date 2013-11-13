@@ -1,5 +1,5 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: www/mod_auth_cas/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_auth_cas/Makefile 333454 2013-11-10 23:11:59Z ohauer $
 
 PORTNAME=	mod_auth_cas
 PORTVERSION=	1.0.9.1
@@ -16,7 +16,7 @@ COMMENT=	Apache 2.x module that supports the CASv1 and CASv2 protocols
 
 LICENSE=	AL2
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
 NO_WRKSUBDIR=	yes
 
@@ -26,12 +26,8 @@ AP_GENPLIST=	yes
 AP_LIB=		${LOCALBASE}/lib
 AP_EXTRAS=	-l ssl -l curl
 
-NO_STAGE=	yes
 post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/mod_auth_cas.c ${WRKSRC}/mod_auth_cas.c
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/mod_auth_cas.h ${WRKSRC}/mod_auth_cas.h
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
