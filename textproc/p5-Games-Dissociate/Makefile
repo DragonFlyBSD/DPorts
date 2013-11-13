@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Games-Dissociate/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Games-Dissociate/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Games-Dissociate
 PORTVERSION=	0.19
@@ -14,10 +14,7 @@ COMMENT=	Dissociated Press algorithm and filter
 TEST_DEPENDS=	p5-Test-Pod>=1.00:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-MAN3=	Games::Dissociate.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
