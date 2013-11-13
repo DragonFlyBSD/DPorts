@@ -1,4 +1,4 @@
-# $FreeBSD: korean/hunspell/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/hunspell/Makefile 332687 2013-11-04 10:49:03Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	0.5.6
@@ -14,7 +14,7 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS+=	py*-lxml>=0:${PORTSDIR}/devel/py-lxml
 
-USE_GMAKE=		yes
+USES=		gmake
 USE_PYTHON_BUILD=	yes
 USE_XZ=			yes
 
@@ -26,10 +26,9 @@ PROJECTHOST=	spellcheck-ko
 
 MAKE_ENV+=	PYTHON=${PYTHON_CMD}
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/ko.aff ${DATADIR}/ko_KR.aff
-	${INSTALL_DATA} ${WRKSRC}/ko.dic ${DATADIR}/ko_KR.dic
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/ko.aff ${STAGEDIR}${DATADIR}/ko_KR.aff
+	${INSTALL_DATA} ${WRKSRC}/ko.dic ${STAGEDIR}${DATADIR}/ko_KR.dic
 
 .include <bsd.port.mk>
