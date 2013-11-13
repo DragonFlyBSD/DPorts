@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Algorithm-RabinKarp/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Algorithm-RabinKarp/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Algorithm-RabinKarp
 PORTVERSION=	0.41
@@ -15,10 +15,7 @@ COMMENT=	Rabin-Karp streaming hash
 BUILD_DEPENDS=	p5-File-Temp>=0:${PORTSDIR}/devel/p5-File-Temp
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Algorithm::RabinKarp.3 Algorithm::RabinKarp::Util.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
