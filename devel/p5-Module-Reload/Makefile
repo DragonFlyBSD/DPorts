@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: devel/p5-Module-Reload/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Reload/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Reload
 PORTVERSION=	1.07
@@ -13,7 +13,4 @@ COMMENT=	Reload perl library files when updated on disk
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Reload.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
