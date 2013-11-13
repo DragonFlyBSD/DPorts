@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Workflow/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Workflow/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-Workflow
 PORTVERSION=	0.11
@@ -20,21 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Workflow.3 Class::Workflow::Context.3 \
-		Class::Workflow::Cookbook.3 Class::Workflow::Instance.3 \
-		Class::Workflow::Instance::Simple.3 Class::Workflow::State.3 \
-		Class::Workflow::State::AcceptHooks.3 \
-		Class::Workflow::State::AutoApply.3 \
-		Class::Workflow::State::Simple.3 \
-		Class::Workflow::State::TransitionHash.3 \
-		Class::Workflow::State::TransitionSet.3 \
-		Class::Workflow::Transition.3 \
-		Class::Workflow::Transition::Deterministic.3 \
-		Class::Workflow::Transition::Simple.3 \
-		Class::Workflow::Transition::Strict.3 \
-		Class::Workflow::Transition::Validate.3 \
-		Class::Workflow::Transition::Validate::Simple.3 \
-		Class::Workflow::Util::Delta.3 Class::Workflow::YAML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
