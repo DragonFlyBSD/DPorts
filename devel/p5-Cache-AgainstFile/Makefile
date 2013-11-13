@@ -1,15 +1,15 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-Cache-AgainstFile/Makefile 328410 2013-09-26 20:08:38Z eadler $
+# $FreeBSD: devel/p5-Cache-AgainstFile/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
-PORTNAME=		Cache-AgainstFile
-PORTVERSION=		1.016
-CATEGORIES=		devel perl5
-MASTER_SITES=		CPAN
+PORTNAME=	Cache-AgainstFile
+PORTVERSION=	1.016
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Cache
-PKGNAMEPREFIX=		p5-
+PKGNAMEPREFIX=	p5-
 
-MAINTAINER=		ports@FreeBSD.org
-COMMENT=		Cache data structures parsed from files, watching for updates
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Cache data structures parsed from files, watching for updates
 
 RUN_DEPENDS=	p5-Log-Trace>0:${PORTSDIR}/devel/p5-Log-Trace \
 		p5-Test-Assertions>0:${PORTSDIR}/devel/p5-Test-Assertions
@@ -18,14 +18,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Cache::AgainstFile::Memory.3 \
-	Cache::AgainstFile.3 \
-	Cache::AgainstFile::Storable.3 \
-	Cache::AgainstFile::Null.3 \
-	Cache::AgainstFile::Base.3 \
-	Cache::AgainstFile::CacheModule.3
-
-NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
 
