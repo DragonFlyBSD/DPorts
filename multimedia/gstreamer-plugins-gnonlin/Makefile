@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-gnonlin/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer-plugins-gnonlin/Makefile 332416 2013-11-01 22:14:07Z kwm $
 #    $MCom: ports/multimedia/gstreamer-plugins-gnonlin/Makefile,v 1.7 2006/07/21 16:39:31 ahze Exp $
 
 PORTNAME=	gstreamer-plugins-gnonlin
@@ -20,7 +20,6 @@ USE_GSTREAMER=	yes
 PLIST_FILES=	lib/gstreamer-0.10/libgnl.la \
 		lib/gstreamer-0.10/libgnl.so
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
 
