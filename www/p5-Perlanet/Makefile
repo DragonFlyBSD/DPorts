@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Perlanet/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Perlanet/Makefile 333117 2013-11-07 15:22:45Z vanilla $
 
 PORTNAME=	Perlanet
 PORTVERSION=	0.56
@@ -31,18 +31,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		perlanet.1
-MAN3=		Perlanet.3 \
-		Perlanet::Entry.3 \
-		Perlanet::Feed.3 \
-		Perlanet::Simple.3 \
-		Perlanet::Trait::Cache.3 \
-		Perlanet::Trait::FeedFile.3 \
-		Perlanet::Trait::OPML.3 \
-		Perlanet::Trait::Scrubber.3 \
-		Perlanet::Trait::TemplateToolkit.3 \
-		Perlanet::Trait::Tidy.3 \
-		Perlanet::Trait::YAMLConfig.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
