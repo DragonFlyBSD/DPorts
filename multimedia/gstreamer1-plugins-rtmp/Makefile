@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins-rtmp/Makefile 332215 2013-10-31 08:11:30Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins-rtmp/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTREVISION=	1
 CATEGORIES=	multimedia
@@ -10,5 +10,4 @@ DIST=		bad
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
