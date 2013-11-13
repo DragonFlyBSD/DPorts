@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: security/p5-GSSAPI/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-GSSAPI/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	GSSAPI
 PORTVERSION=	0.28
@@ -14,12 +14,6 @@ COMMENT=	Perl extension providing access to the GSSAPIv2 library
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GSSAPI.3 \
-		GSSAPI::OID.3 \
-		GSSAPI::OID::Set.3 \
-		GSSAPI::Status.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800000
