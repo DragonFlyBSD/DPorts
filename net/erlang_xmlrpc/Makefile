@@ -1,4 +1,4 @@
-# $FreeBSD: net/erlang_xmlrpc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/erlang_xmlrpc/Makefile 333116 2013-11-07 15:15:48Z olgeni $
 
 PORTNAME=	erlang_xmlrpc
 PORTVERSION=	1.13
@@ -17,14 +17,11 @@ RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 
 PLIST_SUB=      VERSION="${PORTVERSION}"
 
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/xmlrpc-${PORTVERSION}
-
-MAN3=		erlang_xmlrpc.3
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -35,21 +32,17 @@ do-build:
 	@cd ${WRKSRC}/src && ${GMAKE}
 
 do-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@for FILE in xmlrpc.pdf xmlrpc.ps xmlrpc.txt; do \
-		${INSTALL_DATA} ${WRKSRC}/doc/$${FILE} ${DOCSDIR}; \
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	for FILE in xmlrpc.pdf xmlrpc.ps xmlrpc.txt; do \
+		${INSTALL_DATA} ${WRKSRC}/doc/$${FILE} ${STAGEDIR}${DOCSDIR}; \
 	done
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
-.endif
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/ebin
-	@${MKDIR} ${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/src
-	@${INSTALL_DATA} ${WRKSRC}/ebin/* ${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/ebin
-	@${INSTALL_DATA} ${WRKSRC}/src/* ${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/src
-	@${INSTALL_MAN} ${WRKSRC}/doc/xmlrpc.3 ${MANPREFIX}/man/man3/erlang_xmlrpc.3
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/ebin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/src
+	${INSTALL_DATA} ${WRKSRC}/ebin/* ${STAGEDIR}${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/ebin
+	${INSTALL_DATA} ${WRKSRC}/src/* ${STAGEDIR}${PREFIX}/lib/erlang/lib/xmlrpc-${PORTVERSION}/src
+	${INSTALL_MAN} ${WRKSRC}/doc/xmlrpc.3 ${STAGEDIR}${MANPREFIX}/man/man3/erlang_xmlrpc.3
 
 .include <bsd.port.mk>
