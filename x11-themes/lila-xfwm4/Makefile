@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: x11-themes/lila-xfwm4/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/lila-xfwm4/Makefile 332735 2013-11-04 14:47:25Z olivierd $
 
 PORTNAME=	Lila-xfwm4
 PORTVERSION=	0.3.2
@@ -12,6 +12,9 @@ MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce 4 Lila window decoration theme for Xfwm4
 
 RUN_DEPENDS=	xfwm4:${PORTSDIR}/x11-wm/xfce4-wm
+
+DEPRECATED=	Upstream development dead
+EXPIRATION_DATE=	2013-12-04
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
