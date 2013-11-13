@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-SOAP-Transport-TCP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-SOAP-Transport-TCP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	SOAP-Transport-TCP
 PORTVERSION=	0.717
@@ -15,7 +15,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	SOAP::Transport::TCP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
