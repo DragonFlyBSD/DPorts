@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-rsvg2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-rsvg2/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	rsvg2
 PORTVERSION=	2.0.2
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
