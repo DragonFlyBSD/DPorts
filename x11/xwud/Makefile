@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xwud/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xwud/Makefile 331818 2013-10-28 01:10:07Z eadler $
 
 PORTNAME=	xwud
 PORTVERSION=	1.0.4
@@ -10,9 +10,5 @@ COMMENT=	Image displayer for X
 XORG_CAT=	app
 USE_XORG=	x11
 
-PLIST_FILES=	bin/xwud
-
-MAN1=		xwud.1
-
-NO_STAGE=	yes
+PLIST_FILES=	bin/xwud man/man1/xwud.1.gz
 .include <bsd.port.mk>
