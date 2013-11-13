@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: net/cagibi/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/cagibi/Makefile 333449 2013-11-10 21:15:09Z rakuco $
 
 PORTNAME=	cagibi
 PORTVERSION=	0.2.0
@@ -16,5 +16,4 @@ USE_KDE4=	automoc4
 USE_QT4=	corelib network xml dbus \
 		qmake_build moc_build rcc_build uic_build
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
