@@ -1,4 +1,4 @@
-# $FreeBSD: audio/gstreamer1-plugins-gme/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gstreamer1-plugins-gme/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	audio
@@ -9,6 +9,5 @@ GST_PLUGIN=	gme
 DIST=		bad
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
-NO_STAGE=	yes
 
 .include "${MASTERDIR}/Makefile"
