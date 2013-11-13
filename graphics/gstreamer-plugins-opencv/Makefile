@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/gstreamer-plugins-opencv/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gstreamer-plugins-opencv/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	graphics
@@ -10,5 +10,4 @@ GST_PLUGIN=	opencv
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
