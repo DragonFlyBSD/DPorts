@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: net/hexinject/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/hexinject/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	hexinject
 PORTVERSION=	1.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	sbz@FreeBSD.org
-COMMENT=	HexInject is a very versatile packet injector and sniffer
+COMMENT=	HexInject is a versatile packet injector and sniffer
 
 LICENSE=	BSD
 
