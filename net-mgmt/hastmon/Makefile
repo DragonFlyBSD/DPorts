@@ -1,9 +1,8 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: net-mgmt/hastmon/Makefile 329998 2013-10-10 13:41:55Z trociny $
+# $FreeBSD: net-mgmt/hastmon/Makefile 332283 2013-10-31 19:51:44Z trociny $
 
 PORTNAME=	hastmon
-PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTVERSION=	0.3.2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	GOOGLE_CODE
 
