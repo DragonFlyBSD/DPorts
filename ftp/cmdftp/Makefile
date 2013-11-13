@@ -1,12 +1,12 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: ftp/cmdftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/cmdftp/Makefile 331423 2013-10-23 20:45:10Z ak $
 
 PORTNAME=	cmdftp
 PORTVERSION=	0.9.8
 CATEGORIES=	ftp
 MASTER_SITES=	SAVANNAH
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line shell-like ftp client
 
 LICENSE=	GPLv3
