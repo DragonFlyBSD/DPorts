@@ -1,5 +1,5 @@
 # Created by: Rui Paulo <rpaulo@FreeBSD.org>
-# $FreeBSD: devel/p5-App-SVN-Bisect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-SVN-Bisect/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	App-SVN-Bisect
 PORTVERSION=	1.1
@@ -20,8 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	svn-bisect.1
-MAN3=	App::SVN::Bisect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
