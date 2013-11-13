@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/evolution-data-server/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/evolution-data-server/Makefile 332596 2013-11-03 09:21:59Z novel $
 #   $MCom: ports/databases/evolution-data-server/Makefile,v 1.218 2013/03/09 09:12:37 kwm Exp $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
