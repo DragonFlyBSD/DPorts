@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann
-# $FreeBSD: sysutils/cdbkup/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cdbkup/Makefile 333238 2013-11-08 15:06:28Z vanilla $
 
 PORTNAME=	cdbkup
 PORTVERSION=	1.0
@@ -13,8 +13,7 @@ COMMENT=	Simple but full-featured backup/restore perl scripts (uses gnu tar)
 
 BUILD_DEPENDS=	${LOCALBASE}/sbin/eject:${PORTSDIR}/sysutils/eject \
 		cdrecord:${PORTSDIR}/sysutils/cdrtools
-RUN_DEPENDS=	${LOCALBASE}/sbin/eject:${PORTSDIR}/sysutils/eject \
-		cdrecord:${PORTSDIR}/sysutils/cdrtools
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
@@ -22,8 +21,6 @@ GNU_CONFIGURE=	yes
 USES=		perl5
 CONFIGURE_ENV+=	PATH=${PATH}:${LOCALBASE}/sbin
 
-MAN1=		cdbkup.1 cdappend.1 cdcat.1 cdrstr.1 cdsplit.1
 PORTDOCS=	README TODO COMPLIANCE
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
