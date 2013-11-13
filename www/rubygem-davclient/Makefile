@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: www/rubygem-davclient/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-davclient/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	davclient
 PORTVERSION=	0.0.8
@@ -17,5 +17,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/dav
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
