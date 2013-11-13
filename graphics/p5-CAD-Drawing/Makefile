@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-CAD-Drawing/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-CAD-Drawing/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	CAD-Drawing
 PORTVERSION=	0.26
@@ -19,21 +19,7 @@ RUN_DEPENDS=	p5-Math-Vec>=0:${PORTSDIR}/math/p5-Math-Vec \
 		p5-Math-Geometry-Planar>=0:${PORTSDIR}/math/p5-Math-Geometry-Planar
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-MAN3=	CAD::Drawing.3 \
-	CAD::Drawing::Calculate.3 \
-	CAD::Drawing::Calculate::Finite.3 \
-	CAD::Drawing::Defined.3 \
-	CAD::Drawing::IO.3 \
-	CAD::Drawing::IO::Circ.3 \
-	CAD::Drawing::IO::Compressed.3 \
-	CAD::Drawing::IO::FlatYAML.3 \
-	CAD::Drawing::IO::Split.3 \
-	CAD::Drawing::Manipulate.3 \
-	CAD::Drawing::Manipulate::Graphics.3 \
-	CAD::Drawing::Manipulate::Transform.3
-
 USES=		perl5
 USE_PERL5=	modbuild
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
