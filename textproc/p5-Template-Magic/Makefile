@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-Template-Magic/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Template-Magic/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Template-Magic
 PORTVERSION=	1.39
@@ -18,11 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Template::Magic.3 \
-		Bundle::Template::Magic.3 \
-		Template::Magic::HTML.3 \
-		Template::Magic::QuickStart.3 \
-		Template::Magic::Zone.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
