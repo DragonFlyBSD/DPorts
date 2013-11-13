@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: devel/p5-Gnome2-GConf/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Gnome2-GConf/Makefile 331953 2013-10-29 14:32:08Z vanilla $
 
 PORTNAME=	Gnome2-GConf
 PORTVERSION=	1.044
@@ -21,16 +21,4 @@ USE_PERL5=	configure
 USE_GNOME=	gconf2
 MAKE_JOBS_UNSAFE=	yes
 
-MAN3=		Gnome2::GConf.3 \
-		Gnome2::GConf::ChangeSet.3 \
-		Gnome2::GConf::Client.3 \
-		Gnome2::GConf::Engine.3 \
-		Gnome2::GConf::Entry.3 \
-		Gnome2::GConf::Schema.3 \
-		Gnome2::GConf::Value.3 \
-		Gnome2::GConf::index.3 \
-		Gnome2::GConf::main.3 \
-		Gnome2::GConf::version.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
