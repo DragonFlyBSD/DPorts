@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Dir-Project/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Dir-Project/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Dir-Project
 PORTVERSION=	3.024
@@ -17,8 +17,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ENV+=	DIRPROJECT_PREFIX=${PREFIX}
 
-MAN1=		project_bin.1 project_dir.1
-MAN3=		Dir::Project.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
