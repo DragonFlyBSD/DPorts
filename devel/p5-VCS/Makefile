@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: devel/p5-VCS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-VCS/Makefile 332248 2013-10-31 15:02:49Z vanilla $
 
 PORTNAME=	VCS
 PORTVERSION=	0.16
@@ -16,9 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		diff-hist.1
-MAN3=		VCS.3 VCS::Cvs.3 VCS::Dir.3 VCS::File.3 \
-		VCS::Rcs.3 VCS::Version.3 VCS_dev.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
