@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ro-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/ro-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	3.3.8
@@ -14,7 +14,7 @@ COMMENT=	Romanian hunspell dictionaries
 LICENSE=	LGPL21 GPLv2 MPL
 LICENSE_COMB=	dual
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
