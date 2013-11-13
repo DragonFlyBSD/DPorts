@@ -1,5 +1,5 @@
 # Created by: fluffy@
-# $FreeBSD: graphics/prison/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/prison/Makefile 333415 2013-11-10 17:39:43Z rakuco $
 
 PORTNAME=	prison
 PORTVERSION=	1.0
@@ -19,5 +19,4 @@ USE_QT4=	corelib gui qmake_build moc_build rcc_build uic_build
 USES=		cmake
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
