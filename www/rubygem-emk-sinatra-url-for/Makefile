@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-emk-sinatra-url-for/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-emk-sinatra-url-for/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	emk-sinatra-url-for
 PORTVERSION=	0.2.1
@@ -15,5 +15,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
