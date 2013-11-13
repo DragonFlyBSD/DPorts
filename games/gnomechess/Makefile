@@ -1,8 +1,8 @@
 # Created by: Jeremy Lea <reg@shale.csir.co.za>
-# $FreeBSD: games/gnomechess/Makefile 331488 2013-10-24 14:05:51Z johans $
+# $FreeBSD: games/gnomechess/Makefile 333561 2013-11-12 10:45:44Z johans $
 
 PORTNAME=	gnomechess
-PORTVERSION=	3.10.1.1
+PORTVERSION=	3.10.2
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gnome-chess/3.10
