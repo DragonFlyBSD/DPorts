@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Iterator-IO/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Iterator-IO/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Iterator-IO
 PORTVERSION=	0.02
@@ -13,10 +13,7 @@ COMMENT=	Filesystem and stream iterators
 BUILD_DEPENDS=	p5-Iterator>=0:${PORTSDIR}/devel/p5-Iterator
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Iterator::IO.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
