@@ -1,9 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-quaternion/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/octave-forge-quaternion/Makefile 332277 2013-10-31 19:28:47Z stephen $
 
 PORTNAME=	octave-forge-quaternion
-PORTVERSION=	2.0.2
-PORTREVISION=	1
+PORTVERSION=	2.0.3
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
