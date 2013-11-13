@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-resindvd/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer-plugins-resindvd/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
@@ -10,5 +10,4 @@ GST_PLUGIN=	resindvd
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
