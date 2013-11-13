@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: arabic/aspell/Makefile 327685 2013-09-20 11:04:48Z bapt $
+# $FreeBSD: arabic/aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-ar-1.2-0
@@ -12,6 +12,5 @@ COMMENT=	Aspell Arabic dictionaries
 
 DICT=		ar
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
