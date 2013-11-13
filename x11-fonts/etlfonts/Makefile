@@ -1,5 +1,5 @@
 # Created by: Mita Yoshio <mita@jp.FreeBSD.org>
-# $FreeBSD: x11-fonts/etlfonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/etlfonts/Makefile 331901 2013-10-28 21:56:29Z eadler $
 
 PORTNAME=	etlfonts-noncjk
 PORTVERSION=	1.0
@@ -18,11 +18,11 @@ RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 
 USE_XORG=	x11
 
+DEPRECATED=	master site gone
+EXPIRATION_DATE=	2013-12-31
+
 NO_STAGE=	yes
 post-extract:
 	@${GUNZIP_CMD} ${WRKSRC}/*.gz
-
-post-install:
-	@${SH} ${PKGREQ} ${PKGNAME} INSTALL
 
 .include <bsd.port.mk>
