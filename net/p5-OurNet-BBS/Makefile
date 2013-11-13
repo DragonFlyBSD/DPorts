@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-OurNet-BBS/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-OurNet-BBS/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	OurNet-BBS
 PORTVERSION=	1.66
@@ -43,8 +43,4 @@ PORTSCOUT=	skipv:1.67
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		bbsboard.1 bbscomd.1 bbsmail.1
-MAN3=		OurNet::BBS.3 OurNet::BBS::Roadmap.3 OurNet::BBS::Tutorial.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
