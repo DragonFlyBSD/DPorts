@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: net/ipsvd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/ipsvd/Makefile 332284 2013-10-31 20:13:54Z lx $
 
 PORTNAME=	ipsvd
 PORTVERSION=	1.0.0
@@ -20,6 +20,7 @@ DOCS=		package/CHANGES package/COPYING package/README doc/*.html
 NO_STAGE=	yes
 do-configure:
 	@${ECHO_CMD} "${CC} ${CFLAGS}" > ${WRKSRC}/src/conf-cc
+	@${ECHO_CMD} "${CC} ${LDFLAGS}" > ${WRKSRC}/src/conf-ld
 	@${ECHO_CMD} "${LOCALBASE}/include/libdjbdns" \
 		> ${WRKSRC}/src/conf-djbdnsinc
 	@${ECHO_CMD} "${LOCALBASE}/lib" > ${WRKSRC}/src/conf-djbdnslib
