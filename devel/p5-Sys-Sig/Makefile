@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Sys-Sig/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sys-Sig/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Sys-Sig
 PORTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Return signal constants for this host
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sys::Sig.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
