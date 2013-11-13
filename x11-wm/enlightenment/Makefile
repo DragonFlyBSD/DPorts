@@ -1,16 +1,15 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/enlightenment/Makefile 331629 2013-10-25 19:58:18Z gblach $
+# $FreeBSD: x11-wm/enlightenment/Makefile 333129 2013-11-07 16:00:45Z gblach $
 
 PORTNAME=	enlightenment
-PORTVERSION=	0.17.4
-PORTREVISION=	1
+PORTVERSION=	0.17.5
 PORTEPOCH=	2
 CATEGORIES=	x11-wm enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
 
 MAINTAINER=	gblach@FreeBSD.org
-COMMENT=	A very artistic X window manager
+COMMENT=	Artistic X window manager
 
 LICENSE=	BSD
 
