@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-KML/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Geo-KML/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Geo-KML
 PORTVERSION=	0.94
@@ -17,10 +17,7 @@ BUILD_DEPENDS=	p5-Archive-Zip>=1.30:${PORTSDIR}/archivers/p5-Archive-Zip \
 		p5-XML-Compile-Cache>=0.97:${PORTSDIR}/textproc/p5-XML-Compile-Cache
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		Geo::KML.3 Geo::KML::Util.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
