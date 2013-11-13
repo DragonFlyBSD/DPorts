@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: emulators/qemu-devel/Makefile 330945 2013-10-19 22:07:48Z nox $
+# $FreeBSD: emulators/qemu-devel/Makefile 333440 2013-11-10 20:25:25Z nox $
 
 PORTNAME=	qemu
 PORTVERSION=	1.6.1
@@ -46,9 +46,11 @@ STATIC_LINK_DESC=	Statically link the executables
 OPTIONS_DEFAULT=X11 GTK2 OPENGL GNUTLS SASL JPEG PNG CDROM_DMA CURL PCAP
 
 NO_STAGE=	yes
+
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--extra-ldflags=-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--disable-smartcard-nss
 PORTDOCS=	docs qemu-doc.html qemu-tech.html qmp-commands.txt
 
 .if ${PORT_OPTIONS:MX86_TARGETS}
@@ -231,6 +233,9 @@ post-patch:
 .if empty(PORT_OPTIONS:MCDROM_DMA)
 	@cd ${WRKSRC} && ${PATCH} --quiet < ${FILESDIR}/cdrom-dma-patch
 .endif
+	@${REINPLACE_CMD} -E \
+		-e "/^by Tibor .TS. S/s|Sch.*z.$$|Schuetz.|" \
+		${WRKSRC}/qemu-doc.texi
 	@${REINPLACE_CMD} -E \
 		-e "s|^(CFLAGS=).*|\1${CFLAGS} -fno-strict-aliasing|" \
 		-e "s|^(LDFLAGS=).*|\1${LDFLAGS}|" \
