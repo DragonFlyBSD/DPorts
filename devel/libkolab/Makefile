@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libkolab/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libkolab/Makefile 332885 2013-11-05 18:06:57Z rakuco $
 
 PORTNAME=	libkolab
 PORTVERSION=	0.4.2
@@ -25,5 +25,4 @@ USE_LDCONFIG=	yes
 USE_QT4=	corelib gui xml \
 		moc_build qmake_build rcc_build uic_build
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
