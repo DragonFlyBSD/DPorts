@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xbacklight/Makefile 328647 2013-09-29 04:36:59Z eadler $
+# $FreeBSD: x11/xbacklight/Makefile 333102 2013-11-07 14:13:14Z zeising $
 
 PORTNAME=	xbacklight
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
