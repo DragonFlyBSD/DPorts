@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Test-TAP-HTMLMatrix/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-TAP-HTMLMatrix/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-TAP-HTMLMatrix
 PORTVERSION=	0.09
@@ -19,11 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::TAP::HTMLMatrix.3 Test::TAP::Model::Colorful.3 \
-		Test::TAP::Model::File::Visual.3 \
-		Test::TAP::Model::Subtest::Visual.3 Test::TAP::Model::Visual.3
-
-NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/example.pl
 
