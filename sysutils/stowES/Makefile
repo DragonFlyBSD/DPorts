@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: sysutils/stowES/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/stowES/Makefile 332475 2013-11-02 12:50:28Z wg $
 
 PORTNAME=	stowES
-PORTVERSION=	0.5.6
+PORTVERSION=	0.5.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://os.inf.tu-dresden.de/~adam/stowES/download/
 
@@ -13,29 +13,24 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	stow:${PORTSDIR}/sysutils/stow
 
-USES=		perl5
-USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
-
-MAN1=		${PORTNAME}.1
-PORTDOCS=	AUTHORS ChangeLog NEWS README TODO \
-		${PORTNAME}.html ${PORTNAME}.pod ${PORTNAME}.txt
-PLIST_FILES=	bin/${PORTNAME}
-
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e "s|'md5sum',|'md5',|" ${WRKSRC}/${PORTNAME}.in
+USES=		gmake perl5
+GNU_CONFIGURE=	yes
+
+PORTDOCS=	AUTHORS ChangeLog NEWS README TODO \
+		${PORTNAME}.html ${PORTNAME}.pod ${PORTNAME}.txt
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 
 .include <bsd.port.options.mk>
 
+post-patch:
+	@${REINPLACE_CMD} -e "s|'md5sum',|'md5',|" ${WRKSRC}/${PORTNAME}.in
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_SCRIPT} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_SCRIPT} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
