@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-geminabox/Makefile 328334 2013-09-26 04:30:14Z pgollucci $
+# $FreeBSD: www/rubygem-geminabox/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	geminabox
 PORTVERSION=	0.11.0
@@ -17,6 +17,5 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
