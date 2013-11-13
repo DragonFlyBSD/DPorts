@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-AI-Pathfinding-AStar/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AI-Pathfinding-AStar/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	AI-Pathfinding-AStar
 PORTVERSION=	0.10
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AI::Pathfinding::AStar.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
