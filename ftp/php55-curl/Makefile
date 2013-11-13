@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ftp/php55-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/php55-curl/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	ftp
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-curl
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
