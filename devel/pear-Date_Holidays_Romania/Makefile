@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Romania/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-Date_Holidays_Romania/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	Date_Holidays_Romania
 PORTVERSION=	0.1.2
@@ -14,7 +14,6 @@ CATEGORY=	Date
 FILES=		Holidays/Driver/Romania.php
 TESTS=		Date_Holidays_Driver_Romania_TestSuite.php
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
