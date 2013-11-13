@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/tt/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/tt/Makefile 333543 2013-11-12 02:50:23Z danilo $
 
 PORTNAME=	tt
 PORTVERSION=	15.1
@@ -11,14 +11,13 @@ COMMENT=	Tetris for Terminals
 
 ALL_TARGET=	tt
 
+OPTIONS_DEFINE=	DOCS
+
 PORTDOCS=	*
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} -g games -m 2555 ${WRKSRC}/tt ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/tt ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
