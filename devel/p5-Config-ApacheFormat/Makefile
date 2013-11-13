@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@gmail.com>
-# $FreeBSD: devel/p5-Config-ApacheFormat/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-ApacheFormat/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Config-ApacheFormat
 PORTVERSION=	1.2
@@ -15,7 +15,5 @@ BUILD_DEPENDS=	p5-Class-MethodMaker>=0:${PORTSDIR}/devel/p5-Class-MethodMaker \
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Config::ApacheFormat.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
