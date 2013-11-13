@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-gdk_pixbuf2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-gdk_pixbuf2/Makefile 332044 2013-10-30 02:48:42Z swills $
 
 PORTNAME=	gdk_pixbuf2
 PORTVERSION=	2.0.2
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
