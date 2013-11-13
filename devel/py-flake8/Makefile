@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-flake8/Makefile 331785 2013-10-27 16:48:29Z wg $
+# $FreeBSD: devel/py-flake8/Makefile 333333 2013-11-09 19:24:58Z wg $
 
 PORTNAME=	flake8
 PORTVERSION=	2.1.0
@@ -19,6 +19,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mccabe>=0.2:${PORTSDIR}/devel/py-mccabe \
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_AUTOPLIST=	yes
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
