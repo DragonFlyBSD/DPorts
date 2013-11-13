@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/lha-ac/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: archivers/lha-ac/Makefile 331895 2013-10-28 20:17:49Z dinoex $
 
 PORTNAME=	lha
 PORTVERSION=	1.14i
@@ -13,16 +13,13 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-ac20050924p1
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Archive files using LZSS and Huffman compression (.lzh files)
 
-CONFLICTS=	lha-1*
-NO_STAGE=	yes
-
-MAN1=		lha.1
-MANLANG=	ja
-PLIST_FILES=	bin/lha
-#PLIST_DIRS=	man/ja/man1
-GNU_CONFIGURE=	yes
-
 RESTRICTED=	no permission to redistribute
+
+GNU_CONFIGURE=	yes
+PLIST_FILES=	bin/lha-ac
+MANLANG=	ja
+MAN1_JA=	lha-ac.1
+PLIST_FILES+=	${__MANPAGES}
 
 .include <bsd.port.options.mk>
 
@@ -33,8 +30,8 @@ CONFIGURE_ARGS+=	--enable-multibyte-filename=auto
 .endif
 
 do-install:
-	-${MKDIR} ${MANPREFIX}/man/ja/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/lha
-	${INSTALL_MAN} ${WRKSRC}/man/lha.n ${MANPREFIX}/man/ja/man1/lha.1
+	-${MKDIR} ${STAGEDIR}${PREFIX}/man/ja/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${STAGEDIR}${PREFIX}/bin/lha-ac
+	${INSTALL_MAN} ${WRKSRC}/man/lha.n ${STAGEDIR}${PREFIX}/man/ja/man1/lha-ac.1
 
 .include <bsd.port.mk>
