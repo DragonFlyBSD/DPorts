@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Decision-ACL/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Decision-ACL/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Decision-ACL
 PORTVERSION=	0.02
@@ -10,12 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Manage and Build Access Control Lists
 
-MAN3=		Decision::ACL.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
