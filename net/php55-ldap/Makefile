@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: net/php55-ldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/php55-ldap/Makefile 332107 2013-10-30 13:32:02Z ale $
 
 CATEGORIES=	net
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-ldap
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
