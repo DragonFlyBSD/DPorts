@@ -1,9 +1,8 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/edje/Makefile 331629 2013-10-25 19:58:18Z gblach $
+# $FreeBSD: graphics/edje/Makefile 333129 2013-11-07 16:00:45Z gblach $
 
 PORTNAME=	edje
-PORTVERSION=	1.7.8
-PORTREVISION=	1
+PORTVERSION=	1.7.9
 PORTEPOCH=	2
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
