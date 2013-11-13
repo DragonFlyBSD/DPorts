@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xpr/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xpr/Makefile 333478 2013-11-11 04:21:03Z eadler $
 
 PORTNAME=	xpr
 PORTVERSION=	1.0.4
@@ -10,9 +10,5 @@ COMMENT=	Utility for printing an X window dump
 XORG_CAT=	app
 USE_XORG=	xmuu x11
 
-PLIST_FILES=	bin/xdpr bin/xpr
-
-MAN1=		xdpr.1 xpr.1
-
-NO_STAGE=	yes
+PLIST_FILES=	bin/xdpr bin/xpr man/man1/xdpr.1.gz man/man1/xpr.1.gz
 .include <bsd.port.mk>
