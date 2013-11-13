@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: security/rarcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rarcrack/Makefile 333228 2013-11-08 14:17:26Z jadawin $
 
 PORTNAME=	rarcrack
 PORTVERSION=	0.2
@@ -9,6 +9,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}/%5BUnnamed%20release%5D
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Rarcrack guesses the passwords of encrypted RAR, ZIP, and 7Z archives
+
+DEPRECATED=	Not active since several years
+EXPIRATION_DATE=	2013-12-08
 
 RUN_DEPENDS=	p7zip:${PORTSDIR}/archivers/p7zip \
 		unrar:${PORTSDIR}/archivers/unrar \
