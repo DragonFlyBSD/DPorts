@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: devel/grantlee/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/grantlee/Makefile 332889 2013-11-05 18:22:09Z rakuco $
 
 PORTNAME=	grantlee
 DISTVERSION=	0.3.0
@@ -21,7 +21,6 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOXYGEN
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOXYGEN}
@@ -30,9 +29,9 @@ BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen \
 PORTDOCS=	*
 
 post-install:
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${BUILD_WRKSRC} && ${MAKE} docs
-	cd ${BUILD_WRKSRC}/apidox && ${COPYTREE_SHARE} \* ${DOCSDIR}
+	cd ${BUILD_WRKSRC}/apidox && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
