@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/connectfive/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/connectfive/Makefile 332137 2013-10-30 15:59:07Z amdmi3 $
 
 PORTNAME=	connectfive
 PORTVERSION=	1.0.2
@@ -11,16 +11,16 @@ DISTNAME=	connectFive
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Place five pieces in a row on a 3D board
 
-MAKEFILE=	Makefile.linux
-LDFLAGS+=	-L${LOCALBASE}/lib
-ALL_TARGET=	default
-CPPFLAGS+=	-I${LOCALBASE}/include
-
+USES=		gmake
 USE_SDL=	sdl
 USE_GL=		gl
 USE_XORG=	xmu xext x11
-USE_GMAKE=	yes
 USE_DOS2UNIX=	glfont2.h
+
+MAKEFILE=	Makefile.linux
+ALL_TARGET=	default
+LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 WRKSRC=		${WRKDIR}/connectFive
 
@@ -28,7 +28,6 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
 PORTDATA=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -37,14 +36,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|Board::||' ${WRKSRC}/Board.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/connectfive ${PREFIX}/bin/
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/data/* ${DATADIR}/
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CHANGELOG.txt ${WRKSRC}/LICENSE.txt ${WRKSRC}/README.txt ${DOCSDIR}/
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/data/* ${STAGEDIR}${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG.txt ${WRKSRC}/LICENSE.txt ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
