@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/p5-XPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-XPC/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	XPC
 PORTVERSION=	0.2
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	XPC.3 XPC::Agent.3 XPC::Daemon.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
