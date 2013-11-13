@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-RTP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-RTP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-RTP
 PORTVERSION=	0.09
@@ -18,14 +18,4 @@ RUN_DEPENDS=	p5-IO-Socket-Multicast6>=0.02:${PORTSDIR}/net/p5-IO-Socket-Multicas
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		rtpdump.pl.1 \
-		rtplosslog.pl.1 \
-		rtpsend-pcmu.pl.1 \
-		rtpstats.pl.1 \
-		rtptimer.pl.1
-
-MAN3=		Net::RTP.3 \
-		Net::RTP::Packet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
