@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	Stanford-DNSserver
 PORTVERSION=	1.2.0
@@ -13,7 +13,4 @@ COMMENT=	A DNS name server framework with a Perl backend
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Stanford::DNS.3 Stanford::DNSserver.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
