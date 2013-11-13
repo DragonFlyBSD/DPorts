@@ -1,4 +1,4 @@
-# $FreeBSD: finance/aqbanking/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/aqbanking/Makefile 332573 2013-11-03 01:25:36Z jhale $
 
 PORTNAME=	aqbanking
 PORTVERSION=	5.0.25
@@ -12,18 +12,12 @@ COMMENT=	Online banking interface and financial data framework
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	gwenhywfar:${PORTSDIR}/devel/gwenhywfar \
-		gmp:${PORTSDIR}/math/gmp
-
-OPTIONS_DEFINE=		DOXYGEN KTOBLZCHECK PAYPAL
-OPTIONS_DEFAULT=	KTOBLZCHECK
-
-KTOBLZCHECK_DESC=	Enable KtoBlzCheck support
-PAYPAL_DESC=		Build PayPal backend (separate license)
+LIB_DEPENDS=	libgwenhywfar.so:${PORTSDIR}/devel/gwenhywfar \
+		libgmp.so:${PORTSDIR}/math/gmp
 
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USES=	pathfix pkgconfig gettext
+USES=		pathfix pkgconfig gettext
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release="yes"
@@ -38,29 +32,24 @@ USE_LDCONFIG=	yes
 AQB_SHLIB_VER=	34
 GWEN_SHLIB_VER=	60
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=		DOXYGEN KTOBLZCHECK PAYPAL
+OPTIONS_DEFAULT=	KTOBLZCHECK
+OPTIONS_SUB=		yes
+
+DOXYGEN_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen \
+			dot:${PORTSDIR}/graphics/graphviz
+DOXYGEN_CONFIGURE_ENABLE=	full-doc
+
+KTOBLZCHECK_DESC=	Enable KtoBlzCheck support
+
+PAYPAL_DESC=		Build PayPal backend (separate license)
+PAYPAL_CONFIGURE_ON=	--with-backends="aqhbci aqnone aqofxconnect aqpaypal"
+
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MDOXYGEN}
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen \
-		dot:${PORTSDIR}/graphics/graphviz
-CONFIGURE_ARGS+=--enable-full-doc
-.endif
-
 .if ${PORT_OPTIONS:MKTOBLZCHECK} || exists(${LOCALBASE}/lib/libktoblzcheck.so)
-LIB_DEPENDS+=	ktoblzcheck:${PORTSDIR}/finance/ktoblzcheck
+LIB_DEPENDS+=	libktoblzcheck.so:${PORTSDIR}/finance/ktoblzcheck
 .endif
-
-.if ${PORT_OPTIONS:MPAYPAL}
-CONFIGURE_ARGS+=--with-backends="aqhbci aqnone aqofxconnect aqpaypal"
-PLIST_SUB+=	WITH_PAYPAL=""
-.else
-PLIST_SUB+=	WITH_PAYPAL="@comment "
-.endif
-
-post-patch:
-	${REINPLACE_CMD} -e 's|install-idataDATA install-iheaderHEADERS|install-iheaderHEADERS|' \
-		${WRKSRC}/Makefile.in
 
 post-build:
 .if ${PORT_OPTIONS:MDOXYGEN}
@@ -69,13 +58,13 @@ post-build:
 
 post-install:
 .if ${PORT_OPTIONS:MDOXYGEN}
-	${MKDIR} ${DOCSDIR}/apidoc
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/apidoc
 	cd ${WRKSRC}/apidoc && \
-		${COPYTREE_SHARE} \* ${DOCSDIR}/apidoc
-	@${FIND} -P ${DOCSDIR} -type f 2>/dev/null | \
-		${SED} -ne 's,^${PREFIX}/,,p' >> ${TMPPLIST}
-	@${FIND} -P -d ${DOCSDIR} -type d 2>/dev/null | \
-		${SED} -ne 's,^${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
+		${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR}/apidoc
+	@${FIND} -P ${STAGEDIR}${DOCSDIR} -type f 2>/dev/null | \
+		${SED} -ne 's|^${STAGEDIR}${PREFIX}/||p' >> ${TMPPLIST}
+	@${FIND} -P -d ${STAGEDIR}${DOCSDIR} -type d 2>/dev/null | \
+		${SED} -ne 's|^${STAGEDIR}${PREFIX}/|@dirrm |p' >> ${TMPPLIST}
 .endif
 
 .include <bsd.port.mk>
