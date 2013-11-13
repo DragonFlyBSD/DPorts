@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Math-Random-MT-Auto/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Random-MT-Auto/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-Random-MT-Auto
 PORTVERSION=	6.22
@@ -18,9 +18,6 @@ TEST_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::Random::MT::Auto.3 Math::Random::MT::Auto::Range.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
