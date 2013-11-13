@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-PEAR_PackageFileManager/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-PEAR_PackageFileManager/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	PEAR_PackageFileManager
 PORTVERSION=	1.7.0
@@ -18,7 +18,6 @@ PEAR_XML_TREE_DESC=	PEAR::XML_Tree support
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_PHP_COMPATINFO}
