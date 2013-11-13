@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-image/Makefile 328166 2013-09-24 16:47:23Z garga $
+# $FreeBSD: x11/xcb-util-image/Makefile 332327 2013-10-31 23:52:39Z garga $
 
 PORTNAME=	xcb-util-image
 PORTVERSION=	0.3.9
@@ -17,7 +17,6 @@ USE_XORG=	xcb xorg-macros
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$${libdir}/pkgconfig|$${prefix}/libdata/pkgconfig|' \
