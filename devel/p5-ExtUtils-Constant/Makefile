@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-Constant/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ExtUtils-Constant/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	ExtUtils-Constant
 PORTVERSION=	0.23
@@ -13,10 +13,6 @@ COMMENT=	Generate XS code to import C header constants
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		ExtUtils::Constant.3 ExtUtils::Constant::Base.3 \
-		ExtUtils::Constant::Utils.3 ExtUtils::Constant::XS.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/INSTALLDIRS/d' ${WRKSRC}/Makefile.PL
 
