@@ -62,14 +62,14 @@ post-patch:
 
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
-	${TOUCH} -t ${DB_DATE} ${WRKSRC}/${_DB_F}
+	@${TOUCH} -t ${DB_DATE} ${WRKSRC}/${_DB_F}
 	@${ECHO_MSG} "	===> Installing database ... .. ."
-	if [ ! -e "${_DB}" -o "${_DB}" -ot "${WRKSRC}/${_DB_F}" ]; \
-		then	${TAR} -C ${DB_DIR:S/${PORTNAME}//} -xvf ${DISTDIR}/${_DB_D} && \
+	@if [ ! -e "${_DB}" -o "${_DB}" -ot "${WRKSRC}/${_DB_F}" ]; \
+		then	${TAR} -C ${DB_DIR:S/${PORTNAME}//} -xf ${DISTDIR}/${_DB_D} && \
 			${ECHO_MSG} "	===> ... Done."; \
 		else	${ECHO_MSG} "	===> Exisitng database is newer, skiping";\
 	fi
-	${CHOWN} ${DB_OWNER}:${DB_GROUP} ${_DB}
-	${CHMOD} ${DB_MODE} ${_DB}
+	@${CHOWN} ${DB_OWNER}:${DB_GROUP} ${_DB}
+	@${CHMOD} ${DB_MODE} ${_DB}
 
 .include <bsd.port.mk>
