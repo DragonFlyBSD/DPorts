@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: databases/p5-RRD-Simple/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-RRD-Simple/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	RRD-Simple
 PORTVERSION=	1.44
@@ -17,7 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
-MAN3=		RRD::Simple.3 RRD::Simple::Examples.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
