@@ -1,4 +1,4 @@
-# $FreeBSD: ukrainian/mythes/Makefile 327774 2013-09-20 23:19:33Z bapt $
+# $FreeBSD: ukrainian/mythes/Makefile 332691 2013-11-04 11:11:44Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	1.6.5
@@ -22,12 +22,11 @@ PLIST_FILES=	%%DATADIR%%/th_uk_UA.dat \
 		%%DATADIR%%/th_uk_UA.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-build:
 	@${PERL} ${WRKSRC}/bin/th_gen_idx.pl < ${WRKSRC}/src/thesaurus/th_uk_UA.dat > ${WRKSRC}/src/thesaurus/th_uk_UA.idx
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/src/thesaurus/th_uk_UA.dat ${WRKSRC}/src/thesaurus/th_uk_UA.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/src/thesaurus/th_uk_UA.dat ${WRKSRC}/src/thesaurus/th_uk_UA.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
