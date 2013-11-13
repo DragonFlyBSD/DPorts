@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/replex/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: multimedia/replex/Makefile 331810 2013-10-27 22:29:46Z dinoex $
 
 PORTNAME=	replex
 PORTVERSION=	0.1.6.8
@@ -10,15 +10,14 @@ MASTER_SITE_SUBDIR=dinoex
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Remultiplex an MPEG2 TS into a PS for DVD
 
-NO_STAGE=	yes
-
 USE_GMAKE=	yes
-MAKE_ARGS=	CFLAGS="${CFLAGS}" DEFINES="${CPPFLAGS} -DO_LARGEFILE=0 -DVERSION=\\\"$(PORTVERSION)\\\"" \
-		LIBS="${LDFLAGS}"
-
+MAKE_ARGS=	CFLAGS="${CFLAGS}" DEFINES="${CPPFLAGS} -DO_LARGEFILE=0 \
+		-DVERSION=\\\"$(PORTVERSION)\\\"" LIBS="${LDFLAGS}"
 PLIST_FILES=	bin/replex
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	CHANGES README TODO
 .endif
 
@@ -29,12 +28,12 @@ post-patch:
 		's|-L. -lreplex|libreplex.a $${LIBS}|g' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/replex ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/TODO ${DOCSDIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/replex ${STAGEDIR}${PREFIX}/bin/
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGES ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/TODO ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
