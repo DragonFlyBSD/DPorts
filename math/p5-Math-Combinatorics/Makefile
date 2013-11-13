@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: math/p5-Math-Combinatorics/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Combinatorics/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-Combinatorics
 PORTVERSION=	0.09
@@ -10,10 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perform combinations and permutations on lists
 
-MAN3=		Math::Combinatorics.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
