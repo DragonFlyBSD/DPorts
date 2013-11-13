@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-webkit-gtk2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-webkit-gtk2/Makefile 332058 2013-10-30 03:05:18Z swills $
 
 PORTNAME=	webkit-gtk2
 PORTVERSION=	2.0.2
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
