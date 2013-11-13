@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/wav2cdr/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/wav2cdr/Makefile 331757 2013-10-27 09:35:12Z ehaupt $
 
 PORTNAME=	wav2cdr
 PORTVERSION=	2.3.3
@@ -14,9 +14,7 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SRC=		wav2cdr cmdarg data fileio process
 
-PLIST_FILES=	bin/wav2cdr
-NO_STAGE=	yes
-MAN1=		wav2cdr.1
+PLIST_FILES=	bin/wav2cdr man/man1/wav2cdr.1.gz
 
 do-build:
 .for f in ${SRC}
@@ -26,7 +24,7 @@ do-build:
 		${SRC:C/(.*)/${WRKSRC}\/\1.o/}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
