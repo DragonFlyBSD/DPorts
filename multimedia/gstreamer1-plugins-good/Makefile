@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins-good/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer1-plugins-good/Makefile 332416 2013-11-01 22:14:07Z kwm $
 #    $MCom: ports/multimedia/gstreamer1-plugins-good/Makefile,v 1.4 2013/01/15 21:43:45 kwm Exp $
 
 PORTREVISION=	0
@@ -25,7 +25,6 @@ FILESDIR=	${.CURDIR}/files
 PATCHDIR=	${.CURDIR}/files
 NO_GSTREAMER_COMMON=	yes
 
-NO_STAGE=	yes
 do-build:
 .for dir in ${GOOD_GST_DIRS}
 	@(cd ${BUILD_WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
