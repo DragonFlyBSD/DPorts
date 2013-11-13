@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-country/Makefile 332128 2013-10-30 15:25:01Z demon $
+# $FreeBSD: devel/py-country/Makefile 333074 2013-11-07 10:03:46Z demon $
 
 PORTNAME=	country
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 MASTER_SITE_SUBDIR=source/p/pycountry
@@ -14,17 +14,10 @@ COMMENT=	Python API for ISO country, subdivision, language and currency
 
 USE_ZIP=	yes
 USE_PYTHON=	yes
-USES=		gettext:build
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	pycountry
-PYTHON_PY3K_PLIST_HACK=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 NO_STAGE=	yes
-
-post-patch:
-	${RM} ${WRKSRC}/src/pycountry/locales/tr/LC_MESSAGES/iso639.po.orig
-
-pre-build:
-	${LOCALBASE}/bin/msgfmt ${WRKSRC}/src/pycountry/locales/tr/LC_MESSAGES/iso639.po -o ${WRKSRC}/src/pycountry/locales/tr/LC_MESSAGES/iso639.mo
 
 .include <bsd.port.mk>
