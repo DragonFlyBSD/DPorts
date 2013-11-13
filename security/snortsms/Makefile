@@ -1,5 +1,5 @@
 # Created by: J Randolph <snortsms@servangle.net>
-# $FreeBSD: security/snortsms/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/snortsms/Makefile 333230 2013-11-08 14:23:20Z jadawin $
 
 PORTNAME=	snortsms
 PORTVERSION=	1.7.8
@@ -8,6 +8,9 @@ MASTER_SITES=	SF/${PORTNAME}/SnortSMS%20Suite%20%28Console_Agent%29/${PORTVERSIO
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	A remote management and monitoring interface for Snort based IDS
+
+DEPRECATED=	Not active since several years.
+EXPIRATION_DATE=	2013-12-08
 
 RUN_DEPENDS=	${LOCALBASE}/share/pear/DB.php:${PORTSDIR}/databases/pear-DB \
 		${LOCALBASE}/bin/curl:${PORTSDIR}/ftp/curl
