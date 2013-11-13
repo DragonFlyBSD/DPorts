@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/sjeng/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/sjeng/Makefile 333461 2013-11-11 00:47:41Z danilo $
 
 PORTNAME=	sjeng
 PORTVERSION=	11.2
@@ -11,7 +11,7 @@ DISTNAME=	Sjeng-Free-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Chess engine supporting chess variations
 
-LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
+LIB_DEPENDS=	libgdbm.so:${PORTSDIR}/databases/gdbm
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -19,5 +19,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lgdbm
 
 PLIST_FILES=	bin/sjeng
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
