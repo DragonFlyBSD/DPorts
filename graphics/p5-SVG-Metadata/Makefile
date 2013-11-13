@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/p5-SVG-Metadata/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-SVG-Metadata/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	SVG-Metadata
 PORTVERSION=	0.28
@@ -16,10 +16,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	svg_validate.1 svg_annotate.1
-MAN3=	SVG::Metadata.3
-
-NO_STAGE=	yes
 post-patch:
 	${RM} -f ${WRKSRC}/lib/SVG/Metadata.pm.orig
 
