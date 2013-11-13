@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Log-Dispatch-Email-EmailSend/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-Email-EmailSend/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Dispatch-Email-EmailSend
 DISTVERSION=	0.03
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		${PORTNAME:S/-/::/g}.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
