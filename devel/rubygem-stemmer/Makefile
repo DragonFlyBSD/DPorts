@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/rubygem-stemmer/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-stemmer/Makefile 332042 2013-10-30 02:46:01Z swills $
 
 PORTNAME=	stemmer
 PORTVERSION=	1.0.1
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
