@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-VNC/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-VNC/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-VNC
 PORTVERSION=	0.40
@@ -22,8 +22,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		vnccapture.1
-MAN3=		Net::VNC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
