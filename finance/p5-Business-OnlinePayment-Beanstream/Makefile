@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-Beanstream/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-OnlinePayment-Beanstream/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Business-OnlinePayment-Beanstream
 PORTVERSION=	0.02
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::OnlinePayment::Beanstream.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
