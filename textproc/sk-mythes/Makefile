@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/sk-mythes/Makefile 331880 2013-10-28 18:17:24Z sunpoet $
+# $FreeBSD: textproc/sk-mythes/Makefile 333497 2013-11-11 13:30:56Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	2013.10.27
+PORTVERSION=	2013.11.10
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 PKGNAMEPREFIX=	sk-
@@ -13,7 +13,7 @@ COMMENT=	Slovak thesaurus
 
 LICENSE=	BSD
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -21,9 +21,8 @@ PLIST_FILES=	%%DATADIR%%/th_sk_SK_v2.dat \
 		%%DATADIR%%/th_sk_SK_v2.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_sk_SK_v2.dat ${WRKSRC}/th_sk_SK_v2.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_sk_SK_v2.dat ${WRKSRC}/th_sk_SK_v2.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
