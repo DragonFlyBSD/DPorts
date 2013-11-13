@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/tkmoo/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/tkmoo/Makefile 333476 2013-11-11 03:10:27Z danilo $
 
 PORTNAME=	tkmoo
 PORTVERSION=	0.3.32
@@ -11,14 +11,13 @@ DISTNAME=	tkMOO-light-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tk-based M** client with scripting support
 
-USE_TK_RUN=	yes
+USES=		tk:run
 MAKE_ENV+=	TKMOO_LIB_DIR="${DATADIR}" \
 		TKMOO_BIN_DIR="${PREFIX}/bin" WISH8.3="${WISH}"
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${DATADIR}/plugins
-	@${INSTALL_DATA} ${WRKSRC}/plugins/* ${DATADIR}/plugins
-	@${INSTALL_SCRIPT} ${WRKSRC}/tkMOO-lite ${PREFIX}/bin/tkmoo
+	@${MKDIR} ${STAGEDIR}${DATADIR}/plugins
+	${INSTALL_DATA} ${WRKSRC}/plugins/* ${STAGEDIR}${DATADIR}/plugins
+	${INSTALL_SCRIPT} ${WRKSRC}/tkMOO-lite ${STAGEDIR}${PREFIX}/bin/tkmoo
 
 .include <bsd.port.mk>
