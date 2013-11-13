@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: devel/p5-Devel-StealthDebug/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-StealthDebug/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-StealthDebug
 PORTVERSION=	1.008
@@ -17,7 +17,4 @@ USES=		perl5
 USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
-MAN3=		Devel::StealthDebug.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
