@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: mail/muttils/Makefile 331349 2013-10-23 05:40:00Z jgh $
+# $FreeBSD: mail/muttils/Makefile 333048 2013-11-07 01:20:48Z jgh $
 
 PORTNAME=	muttils
 PORTVERSION=	1.3
@@ -25,9 +25,7 @@ PORTEXAMPLES=	*
 .include <bsd.port.options.mk>
 
 post-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	( cd ${WRKSRC}/contrib && ${INSTALL_DATA} \example-* ${STAGEDIR}${EXAMPLESDIR} )
-.endif
 
 .include <bsd.port.mk>
