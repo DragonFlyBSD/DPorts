@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/rubygem-sqlite3-ruby/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-sqlite3-ruby/Makefile 332033 2013-10-30 02:26:17Z swills $
 
 PORTNAME=	sqlite3-ruby
 PORTVERSION=	1.3.3
@@ -23,5 +23,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/sqlite3_ruby
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
