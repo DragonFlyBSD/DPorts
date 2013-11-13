@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: math/p5-Math-BigRat/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-BigRat/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-BigRat
 PORTVERSION=	0.26.02
@@ -13,14 +13,11 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Arbitrary big rational numbers
 
 BUILD_DEPENDS=	p5-Math-BigInt>=1.991:${PORTSDIR}/math/p5-Math-BigInt
-RUN_DEPENDS=	p5-Math-BigInt>=1.991:${PORTSDIR}/math/p5-Math-BigInt
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::BigRat.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/INSTALLDIRS/d' ${WRKSRC}/Makefile.PL
 
