@@ -1,4 +1,4 @@
-# $FreeBSD: comms/gstreamer1-plugins-spandsp/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/gstreamer1-plugins-spandsp/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	comms
@@ -10,5 +10,4 @@ DIST=		bad
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
