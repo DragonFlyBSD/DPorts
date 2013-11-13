@@ -1,8 +1,9 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: mail/imapsync/Makefile 331718 2013-10-26 16:26:40Z wg $
+# $FreeBSD: mail/imapsync/Makefile 333008 2013-11-06 16:06:07Z wg $
 
 PORTNAME=	imapsync
-PORTVERSION=	1.567
+PORTVERSION=	1.569
+PORTREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +13,8 @@ COMMENT=	IMAP synchronization, copy or migration tool
 
 RUN_DEPENDS=	p5-Mail-IMAPClient>0:${PORTSDIR}/mail/p5-Mail-IMAPClient \
 		p5-Term-ReadKey>0:${PORTSDIR}/devel/p5-Term-ReadKey \
-		p5-IO-Socket-SSL>0:${PORTSDIR}/security/p5-IO-Socket-SSL
+		p5-IO-Socket-SSL>0:${PORTSDIR}/security/p5-IO-Socket-SSL \
+		p5-File-Copy-Recursive>0:${PORTSDIR}/devel/p5-File-Copy-Recursive
 
 USES=		perl5
 NO_BUILD=	yes
