@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/ntraceroute/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/ntraceroute/Makefile 332974 2013-11-06 12:20:00Z mat $
 
 PORTNAME=	ntraceroute
 PORTVERSION=	6.4.2
@@ -21,16 +21,13 @@ EXTRACT_CMD=		${CP}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	.
 
-NOMAN=		defined
 PLIST_FILES=	sbin/${PORTNAME}
 
-NO_STAGE=	yes
 do-build:
 	${CC} -o ${WRKSRC}/${PORTNAME} -lm \
 	    ${WRKSRC}/${DISTFILES}
 
 do-install:
-	${INSTALL} ${COPY} ${STRIP} -o root -g wheel -m 04555 \
-	    ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin
 
 .include <bsd.port.mk>
