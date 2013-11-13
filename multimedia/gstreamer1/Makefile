@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer1/Makefile 332416 2013-11-01 22:14:07Z kwm $
 #    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.5 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1
@@ -17,8 +17,6 @@ PORTSCOUT=	limitw:1,even
 
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
 USES=		bison gettext gmake pathfix pkgconfig
-# workaround a crash in clang 3.3, llvm bug # 15840
-USE_GCC=	any
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomehier introspection:build ltverhack:0 ltasneededhack
 USE_AUTOTOOLS=	libtool
@@ -35,14 +33,16 @@ PLIST_SUB=	VERSION=${GST10_VERSION}
 USE_LDCONFIG=	yes
 GST10_VERSION=	${PORTVERSION:R}
 
-MAN1=	gst-inspect-${GST10_VERSION}.1 gst-launch-${GST10_VERSION}.1 \
-	gst-typefind-${GST10_VERSION}.1
-
 OPTIONS_DEFINE=	LIBCHECK
 LIBCHECK_DESC=	Unit tests support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+# workaround a crash in clang 3.3 crash llvm bug # 15840
+.if ((${OSVERSION} >= 901504 && ${OSVERSION} < 902502) || \
+     (${OSVERSION} >= 1000037 && ${OSVERSION} < 1000056))
+USE_GCC=	any
+.endif
 
 .if ${OSVERSION} < 1000033
 BUILD_DEPENDS+=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
@@ -62,4 +62,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
 
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgst*-1.0.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gstreamer-1.0/libgst*.so
+
 .include <bsd.port.mk>
+
