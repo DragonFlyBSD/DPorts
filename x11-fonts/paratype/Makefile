@@ -1,5 +1,5 @@
 # Created by: Alexey Illarionov <littlesavage@rambler.ru>
-# $FreeBSD: x11-fonts/paratype/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/paratype/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	paratype
 PORTVERSION=	2.004
@@ -12,10 +12,7 @@ DISTFILES=	PTSansOFL-2.004.zip PTSerifOFL-1.000.zip PTMonoOFL-1.002_1.zip
 MAINTAINER=	littlesavage@rambler.ru
 COMMENT=	ParaType font collection for the languages of Russia
 
-LICENSE=	OFL
-LICENSE_NAME=	SIL Open Font License (OFL)
-LICENSE_FILE=	${WRKSRC}/PTSSM_OFL.txt
-LICENSE_PERMS=	auto-accept
+LICENSE=	OFL11
 
 INSTALLS_TTF=	yes
 NO_BUILD=	yes
