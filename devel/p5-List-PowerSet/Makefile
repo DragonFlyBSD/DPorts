@@ -1,5 +1,5 @@
 # Created by: Anish Mistry <amistry@am-productions.biz>
-# $FreeBSD: devel/p5-List-PowerSet/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-List-PowerSet/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	List-PowerSet
 PORTVERSION=	0.01
@@ -13,7 +13,4 @@ COMMENT=	Perl module that allows you to generate the power set of a list
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		List::PowerSet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
