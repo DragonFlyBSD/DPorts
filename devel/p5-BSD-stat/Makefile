@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-BSD-stat/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-BSD-stat/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	BSD-stat
 PORTVERSION=	1.34
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BSD::stat.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
