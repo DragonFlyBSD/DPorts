@@ -1,5 +1,5 @@
 # Created by: tiger@whitetigersd.com
-# $FreeBSD: devel/p5-Algorithm-LCS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-LCS/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-LCS
 PORTVERSION=	1.04
@@ -14,7 +14,4 @@ COMMENT=	Fast (XS) implementation of the Longest Common Subsequence Algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::LCS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
