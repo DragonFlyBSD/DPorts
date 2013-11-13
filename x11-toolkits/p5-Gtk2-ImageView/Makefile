@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/p5-Gtk2-ImageView/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/p5-Gtk2-ImageView/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Gtk2-ImageView
 PORTVERSION=	0.05
@@ -22,17 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Gtk2::ImageView.3 \
-  		Gtk2::Gdk::Pixbuf::Draw::Cache.3 \
-  		Gtk2::ImageView::Anim.3 \
-		Gtk2::ImageView::Nav.3 \
-		Gtk2::ImageView::ScrollWin.3 \
-		Gtk2::ImageView::Tool.3 \
-		Gtk2::ImageView::Tool::Dragger.3 \
-		Gtk2::ImageView::Tool::Painter.3 \
-		Gtk2::ImageView::Tool::Selector.3 \
-		Gtk2::ImageView::Zoom.3 \
-		Gtk2::ImageView::index.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
