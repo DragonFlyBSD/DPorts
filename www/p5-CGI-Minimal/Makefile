@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Minimal/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: www/p5-CGI-Minimal/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Minimal
 PORTVERSION=	1.29
@@ -12,16 +12,13 @@ COMMENT=	Extremely lightweight CGI processing package
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		CGI::Minimal.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	Changes README TODO
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
