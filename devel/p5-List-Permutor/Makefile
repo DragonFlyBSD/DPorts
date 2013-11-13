@@ -1,5 +1,5 @@
 # Created by: Anish Mistry <amistry@am-productions.biz>
-# $FreeBSD: devel/p5-List-Permutor/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-List-Permutor/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	List-Permutor
 PORTVERSION=	0.022
@@ -13,7 +13,4 @@ COMMENT=	Allow you to process all possible permutations of a list
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		List::Permutor.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
