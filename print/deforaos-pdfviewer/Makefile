@@ -1,27 +1,27 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: print/deforaos-pdfviewer/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/deforaos-pdfviewer/Makefile 332771 2013-11-04 20:11:01Z wg $
 
 PORTNAME=	pdfviewer
 PORTVERSION=	0.0.1
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.defora.org/os/download/download/3686/
-DISTNAME=	PDFViewer-${PORTVERSION}
 PKGNAMEPREFIX=	deforaos-
+DISTNAME=	PDFViewer-${PORTVERSION}
 
 MAINTAINER=	olivier@cochard.me
 COMMENT=	DeforaOS desktop PDF viewer
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
-		Desktop:${PORTSDIR}/x11/deforaos-libdesktop \
-		poppler-glib:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS=	libSystem.so:${PORTSDIR}/devel/deforaos-libsystem \
+		libDesktop.so:${PORTSDIR}/x11/deforaos-libdesktop \
+		libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 
 MAKE_ARGS+=	PREFIX=${PREFIX}
-USES=		pkgconfig
-USE_GNOME=	gtk20 desktopfileutils
+USES=		desktop-file-utils pkgconfig
+USE_GNOME=	gtk20
 PLIST_FILES=	bin/pdfviewer \
 		share/applications/pdfviewer.desktop
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
