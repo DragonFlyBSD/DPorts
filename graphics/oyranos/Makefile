@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/oyranos/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/oyranos/Makefile 332219 2013-10-31 10:26:03Z nemysis $
 
 PORTNAME=	oyranos
 PORTVERSION=	0.9.4
@@ -36,7 +36,15 @@ CMAKE_ARGS+=	-DXDG_CONFIG_DIR=${PREFIX}/etc/xdg
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 MAKE_JOBS_UNSAFE=yes
 
+PORTDOCS=	*
+
 .include <bsd.port.pre.mk>
+
+PLIST_SUB+=	VER=${PORTVERSION}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|lib|libdata|' \
+		${WRKSRC}/extras/CMakeLists.txt
 
 .if exists(/usr/bin/clang) && ${OSVERSION} > 901502
 CC=		/usr/bin/clang
