@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/p5-Net-Snort-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Net-Snort-Parser/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Net-Snort-Parser
 PORTVERSION=	1.41
@@ -14,8 +14,4 @@ COMMENT=	Perl modules for parsing Snort configuration files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		snortconfig.1
-MAN3=		Net::Snort::Parser::File.3 Net::Snort::Parser::Rule.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
