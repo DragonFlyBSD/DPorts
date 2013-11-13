@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-App-Nopaste/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-App-Nopaste/Makefile 333065 2013-11-07 06:19:38Z vanilla $
 
 PORTNAME=	App-Nopaste
 PORTVERSION=	0.92
@@ -31,21 +31,6 @@ USE_PERL5=	configure
 
 CONFLICTS=	p5-WebService-NoPaste-[0-9]*
 
-MAN1=		nopaste.1
-MAN3=		App::Nopaste.3 \
-		App::Nopaste::Command.3 \
-		App::Nopaste::Service.3 \
-		App::Nopaste::Service::Codepeek.3 \
-		App::Nopaste::Service::Debian.3 \
-		App::Nopaste::Service::Gist.3 \
-		App::Nopaste::Service::PastebinCom.3 \
-		App::Nopaste::Service::Pastie.3 \
-		App::Nopaste::Service::Shadowcat.3 \
-		App::Nopaste::Service::Snitch.3 \
-		App::Nopaste::Service::Ubuntu.3 \
-		App::Nopaste::Service::ssh.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLIPBOARD}
