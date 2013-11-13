@@ -1,12 +1,13 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: irc/ninja/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/ninja/Makefile 333018 2013-11-06 17:52:42Z bapt $
 
 PORTNAME=	ninja
 PORTVERSION=	1.5.8.1
 CATEGORIES=	irc
+PKGNAMEPREFIX=	irc-
 MASTER_SITES=	http://www.bayofrum.net/dist/${PORTNAME}/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Another ircII based irc client
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -14,8 +15,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	IRCLIB="${DATADIR}"
 MAKE_JOBS_UNSAFE=	yes
-
-LATEST_LINK=	irc-ninja
 
 NO_STAGE=	yes
 post-patch:
