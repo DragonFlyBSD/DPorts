@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Algorithm-Networksort/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-Networksort/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Algorithm-Networksort
 PORTVERSION=	1.30
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::Networksort.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
