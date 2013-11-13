@@ -1,8 +1,8 @@
-# $FreeBSD: math/gnuplot/Makefile 328492 2013-09-27 15:17:26Z madpilot $
+# $FreeBSD: math/gnuplot/Makefile 332875 2013-11-05 17:08:05Z tijl $
 
 PORTNAME=	gnuplot
 PORTVERSION=	4.6.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math graphics
 MASTER_SITES=	SF
 
@@ -26,7 +26,7 @@ TEX_DESC=		Search kpsexpand at run-time
 THINSPLINES_DESC=	Enable thin plate splines for grids in dgrid3d
 WX_DESC=		wxWidgets (formerly wxWindows) support
 
-OPTIONS_DEFAULT=CAIRO GD PDF PLOT TEX WX X11
+OPTIONS_DEFAULT=CAIRO GD PLOT TEX WX X11
 
 MAN1=		gnuplot.1 lasergnu.1
 
