@@ -1,5 +1,5 @@
 # Created by: pusto@web.de
-# $FreeBSD: math/qhull/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/qhull/Makefile 332222 2013-10-31 11:06:16Z bapt $
 
 PORTNAME=	qhull
 PORTVERSION=	2012.1
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAN1=	qhull.1 rbox.1
 
-CONFLICTS=	qhull-1.0* afni-[0-9]*
+CONFLICTS=	qhull-1.0* afni-[0-9]* qhull5-*
 
 NO_STAGE=	yes
 post-patch:
