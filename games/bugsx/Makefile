@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: games/bugsx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bugsx/Makefile 332076 2013-10-30 06:17:46Z danilo $
 
 PORTNAME=	bugsx
 PORTVERSION=	1.08
@@ -13,14 +13,14 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Breed bugs using genetic algorithms
 
+LICENSE=	GPLv1
+
 USES=		imake
 USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/bugsx
-MAN1=		bugsx.1
-PLIST_FILES=	bin/bugsx
+PLIST_FILES=	bin/bugsx man/man1/bugsx.1.gz
 
-NO_STAGE=	yes
 post-install:
-	${STRIP_CMD} ${PREFIX}/bin/bugsx
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bugsx
 
 .include <bsd.port.mk>
