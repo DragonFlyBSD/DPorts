@@ -1,8 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: audio/ruby-audiofile/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ruby-audiofile/Makefile 333231 2013-11-08 14:31:40Z kwm $
 
 PORTNAME=	audiofile
 PORTVERSION=	0.2.4
+PORTREVISION=	1
 CATEGORIES=	audio ruby
 MASTER_SITES=	SF/ruby-${PORTNAME}/ruby-${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby binding to the audiofile library
 
-LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile
+LIB_DEPENDS=	libaudiofile.so:${PORTSDIR}/audio/libaudiofile
 
 USE_RUBY=	yes
 NO_STAGE=	yes
