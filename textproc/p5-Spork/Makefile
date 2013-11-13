@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: textproc/p5-Spork/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Spork/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	Spork
 PORTVERSION=	0.21
@@ -11,19 +11,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Creating standalone HTML slideshows from Kwiki markup
 
-RUN_DEPENDS=	p5-Kwiki>=0.38:${PORTSDIR}/www/p5-Kwiki \
+BUILD_DEPENDS=	p5-Kwiki>=0.38:${PORTSDIR}/www/p5-Kwiki \
 		p5-Spoon>=0.22:${PORTSDIR}/devel/p5-Spoon
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN1=		spork.1
-MAN3=		Spork.3 Spork::Config.3 \
-		Spork::Formatter.3 Spork::Slides.3 \
-		Spork::Command.3 Spork::Plugin.3
-
-NO_STAGE=	yes
-post-install:
-		@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
