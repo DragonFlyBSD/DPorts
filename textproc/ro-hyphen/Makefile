@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ro-hyphen/Makefile 328066 2013-09-23 21:50:51Z bapt $
+# $FreeBSD: textproc/ro-hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	3.3.6
@@ -15,7 +15,7 @@ COMMENT=	Romanian hyphenation rules
 LICENSE=	LGPL21 GPLv2 MPL
 LICENSE_COMB=	dual
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
