@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/lohit/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/lohit/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	Lohit
 PORTVERSION=	20130612
@@ -9,10 +9,7 @@ DISTNAME=	lohit-ttf-${PORTVERSION}
 MAINTAINER=	gabor@FreeBSD.org
 COMMENT=	Lohit fonts
 
-LICENSE=	OFL
-LICENSE_NAME=	SIL Open Font License (OFL)
-LICENSE_FILE=	${WRKSRC}/OFL.txt
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE=	OFL11
 
 EXTRACT_SUFX=	.tar.gz
 XORG_CAT=	font
