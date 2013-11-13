@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ftp/weex/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/weex/Makefile 333516 2013-11-11 15:51:55Z ehaupt $
 
 PORTNAME=	weex
 PORTVERSION=	2.6.1.5
@@ -11,14 +11,11 @@ MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Non-interactive FTP client
 
 GNU_CONFIGURE=	yes
-MANCOMPRESSED=	no
 
 PORTDOCS=	ChangeLog README
-MAN1=		weex.1
 
 OPTIONS_DEFINE=	DOCS NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -34,13 +31,13 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/sample.weexrc ${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/sample.weexrc ${STAGEDIR}${EXAMPLESDIR}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
