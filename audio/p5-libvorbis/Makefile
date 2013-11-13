@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: audio/p5-libvorbis/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-libvorbis/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	libvorbis
 PORTVERSION=	0.05
@@ -17,10 +17,7 @@ LIB_DEPENDS=	vorbis.4:${PORTSDIR}/audio/libvorbis
 
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		Ogg::Vorbis.3
 
 post-extract:
 	@${RM} -rf ${WRKSRC}/blib ${WRKSRC}/pm_to_blib
