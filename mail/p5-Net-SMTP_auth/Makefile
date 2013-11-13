@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: mail/p5-Net-SMTP_auth/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Net-SMTP_auth/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Net-SMTP_auth
 PORTVERSION=	0.08
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-Authen-SASL>=0:${PORTSDIR}/security/p5-Authen-SASL \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SMTP_auth.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
