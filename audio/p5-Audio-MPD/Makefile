@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: audio/p5-Audio-MPD/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Audio-MPD/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	Audio-MPD
 PORTVERSION=	1.120610
@@ -22,18 +22,9 @@ BUILD_DEPENDS=	p5-Audio-MPD-Common>=0:${PORTSDIR}/audio/p5-Audio-MPD-Common \
 		p5-Proc-Daemon>=0:${PORTSDIR}/devel/p5-Proc-Daemon \
 		p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
 TEST_DEPENDS=	p5-Test-Corpus-Audio-MPD>=1.113282:${PORTSDIR}/audio/p5-Test-Corpus-Audio-MPD
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	modbuild
-
-MAN1=		mpd-dynamic.1 \
-		mpd-rate.1
-MAN3=		Audio::MPD.3 \
-		Audio::MPD::Collection.3 \
-		Audio::MPD::Playlist.3 \
-		Audio::MPD::Types.3
 
 .include <bsd.port.mk>
