@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Logfile-Rotate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Logfile-Rotate/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Logfile-Rotate
 PORTVERSION=	1.04
@@ -12,7 +12,4 @@ COMMENT=	Perl module to rotate logfiles
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Logfile::Rotate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
