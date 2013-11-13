@@ -1,5 +1,5 @@
 # Created by: kbyanc
-# $FreeBSD: lang/nqc/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/nqc/Makefile 332606 2013-11-03 11:37:03Z marino $
 
 PORTNAME=	nqc
 PORTVERSION=	3.1.r6
@@ -9,9 +9,9 @@ MASTER_SITES=	http://bricxcc.sourceforge.net/nqc/release/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jhay@FreeBSD.org
-COMMENT=	A compiler for writing programs for the Lego RCX
+COMMENT=	Compiler for writing programs for the Lego RCX
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_DOS2UNIX=	yes
 NO_WRKSUBDIR=	yes
 
