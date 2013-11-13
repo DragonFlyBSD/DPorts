@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: comms/yaps/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/yaps/Makefile 332066 2013-10-30 05:09:22Z eadler $
 
 PORTNAME=	yaps
 PORTVERSION=	0.96
@@ -13,7 +13,7 @@ COMMENT=	Yet Another Pager Software: send messages to pager (SMS, TAP, ...)
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	true
+USES=		gmake
 
 MAN1=		yaps.1
 PLIST_FILES=	bin/yaps etc/yaps.rc.sample
