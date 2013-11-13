@@ -1,8 +1,8 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/e_dbus/Makefile 331629 2013-10-25 19:58:18Z gblach $
+# $FreeBSD: devel/e_dbus/Makefile 333129 2013-11-07 16:00:45Z gblach $
 
 PORTNAME=	e_dbus
-PORTVERSION=	1.7.8
+PORTVERSION=	1.7.9
 PORTEPOCH=	1
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
