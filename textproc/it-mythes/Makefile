@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/it-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/it-mythes/Makefile 332692 2013-11-04 11:20:38Z bapt $
 
 PORTNAME=	mythes
 DISTVERSION=	02_09_l
@@ -12,7 +12,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Italian thesaurus
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -20,9 +20,8 @@ PLIST_FILES=	%%DATADIR%%/th_it_IT.dat \
 		%%DATADIR%%/th_it_IT.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_it_IT.dat ${WRKSRC}/th_it_IT.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_it_IT.dat ${WRKSRC}/th_it_IT.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
