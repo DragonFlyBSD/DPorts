@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: japanese/p5-Date-Japanese-Era/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-Date-Japanese-Era/Makefile 332802 2013-11-05 01:40:32Z vanilla $
 
 PORTNAME=	Date-Japanese-Era
 PORTVERSION=	0.06
@@ -16,11 +16,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::Japanese::Era.3 \
-		Date::Japanese::Era::Table.3 \
-		Date::Japanese::Era::Table::JIS_X0301.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
