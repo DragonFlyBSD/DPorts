@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: devel/p5-Config-Setting/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-Setting/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Config-Setting
 PORTVERSION=	0.04
@@ -16,11 +16,4 @@ RUN_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Config::Setting.3 \
-	Config::Setting::Chunk.3 \
-	Config::Setting::FileProvider.3 \
-	Config::Setting::IniParser.3 \
-	Config::Setting::XMLParser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
