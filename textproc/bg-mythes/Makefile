@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/bg-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/bg-mythes/Makefile 332692 2013-11-04 11:20:38Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	4.3
@@ -15,16 +15,15 @@ COMMENT=	Bulgarian thesaurus
 LICENSE=	GPLv2 LGPL21 MPL
 LICENSE_COMB=	dual
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 
 PLIST_FILES=	%%DATADIR%%/th_bg_BG.dat \
 		%%DATADIR%%/th_bg_BG.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_bg_BG.dat ${WRKSRC}/th_bg_BG.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_bg_BG.dat ${WRKSRC}/th_bg_BG.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
