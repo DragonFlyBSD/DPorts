@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-fastri/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-fastri/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	fastri
 PORTVERSION=	0.3.1.1
@@ -15,5 +15,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/fastri-server bin/fri bin/qri bin/ri-emacs
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
