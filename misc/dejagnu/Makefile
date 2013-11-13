@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: misc/dejagnu/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/dejagnu/Makefile 331838 2013-10-28 09:26:46Z gahr $
 
 PORTNAME=	dejagnu
 PORTVERSION=	1.5.1
@@ -14,12 +14,9 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	expect:${PORTSDIR}/lang/expect
 RUN_DEPENDS=	expect:${PORTSDIR}/lang/expect
 
-USE_TCL=	yes
-USE_GMAKE=	yes
+USES+=		gmake tcl
 GNU_CONFIGURE=	yes
 
-MAN1=		runtest.1
 INFO=		${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
