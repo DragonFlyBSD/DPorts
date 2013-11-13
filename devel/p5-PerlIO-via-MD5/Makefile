@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-PerlIO-via-MD5/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-PerlIO-via-MD5/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	PerlIO-via-MD5
 PORTVERSION=	0.07
@@ -13,7 +13,4 @@ COMMENT=	PerlIO layer for creating an MD5 digest of a file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		PerlIO::via::MD5.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
