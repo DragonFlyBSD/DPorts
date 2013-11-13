@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon-gstreamer/Makefile 330417 2013-10-15 17:57:36Z rakuco $
+# $FreeBSD: multimedia/phonon-gstreamer/Makefile 333438 2013-11-10 20:17:19Z rakuco $
 
 PORTNAME=	phonon
-PORTVERSION=	4.6.3
+PORTVERSION=	4.7.0
 CATEGORIES=	multimedia kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${PHONON_BRANCH}/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}/src
