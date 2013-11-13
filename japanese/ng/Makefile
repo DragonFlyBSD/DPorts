@@ -1,5 +1,5 @@
 # Created by: Kawaguti Ginga <ginga@athena.club.ne.jp>
-# $FreeBSD: japanese/ng/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/ng/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	ng
 PORTVERSION=	1.4.4
@@ -11,7 +11,7 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	ng-1.4.4-replace_bug.patch
 
 MAINTAINER?=	ginga-freebsd@ginganet.org
-COMMENT?=	A very light Emacs-clone with Japanese support
+COMMENT?=	Light Emacs-clone with Japanese support
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LIBS}"
 LIBS=		-ltermcap
