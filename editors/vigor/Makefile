@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: editors/vigor/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/vigor/Makefile 332863 2013-11-05 16:14:47Z gahr $
 
 PORTNAME=	vigor
 PORTVERSION=	0.016
@@ -15,20 +15,17 @@ LICENSE_FILE=	${WRKSRC}/../LICENSE
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 
-USE_TCL=	yes
-USE_TCL_BUILD=	yes
-USE_TK=		yes
-USE_TK_BUILD=	yes
+USES+=		tk
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--exec-prefix=${STAGEDIR}${PREFIX}
 
 CPPFLAGS+=	-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
-	${REINPLACE_CMD} -e 's|tcl80|tcl${TCL_VER:S/.//}|; \
-		s|tk80|tk${TK_VER:S/.//}|; \
+	${REINPLACE_CMD} -e 's|tcl80|tcl${TCL_SHLIB_VER}|; \
+		s|tk80|tk${TK_SHLIB_VER}|; \
 		s|^grantpt|XXXgrantpt|;' \
 			${WRKSRC}/configure
 
