@@ -1,5 +1,5 @@
 # Created by: pgs
-# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 332211 2013-10-31 07:54:27Z bapt $
 
 PORTNAME=	hobbes-icons-xpm3
 PORTVERSION=	1.0
@@ -11,26 +11,23 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Collection of over 3000 icons in XPM3 format
 
-NO_STAGE=	yes
 NO_BUILD=	yes
 
-# Where it will be installed (change pkg/PLIST if you change this)
-LIBDIR=		${PREFIX}/include/X11/pixmaps
+LIBDIR=		${STAGEDIR}${PREFIX}/include/X11/pixmaps
 
 .include <bsd.port.options.mk>
 
 do-install:
 	${MKDIR} ${LIBDIR}
-	${CP} -R ${WRKSRC}/* ${LIBDIR}
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${LIBDIR}
+	${CP} -R ${WRKSRC}/* ${LIBDIR}/
 	-${RM} ${LIBDIR}/README
 	-${RM} ${LIBDIR}/readem.shar
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/*.shar ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/*.shar ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
