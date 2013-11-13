@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pachi/Makefile 330712 2013-10-18 01:20:16Z amdmi3 $
+# $FreeBSD: games/pachi/Makefile 332147 2013-10-30 16:22:48Z amdmi3 $
 
 PORTNAME=	pachi
 PORTVERSION=	1.0
@@ -24,7 +24,6 @@ WRKSRC=		${WRKDIR}/Pachi
 SCOREDIR=	/var/games/pachi
 SCOREFILE=	${SCOREDIR}/scores.dat
 
-PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*
 
 DESKTOP_ENTRIES="Pachi el marciano" \
@@ -43,9 +42,5 @@ post-patch:
 		${WRKSRC}/docs/Makefile.in
 	@${REINPLACE_CMD} -e 's|install-scoreDATA\ install-data-local||' \
 		${WRKSRC}/data/Makefile.in
-
-post-install:
-	${CHGRP} games ${STAGEDIR}${PREFIX}/bin/pachi
-	${CHMOD} g+s ${STAGEDIR}${PREFIX}/bin/pachi
 
 .include <bsd.port.mk>
