@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Data-DumpXML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-DumpXML/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-DumpXML
 PORTVERSION=	1.06
@@ -18,8 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::DumpXML.3 \
-		Data::DumpXML::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
