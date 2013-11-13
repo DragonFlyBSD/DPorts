@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/es-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/es-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	0.6
@@ -15,7 +15,6 @@ COMMENT=	Spanish hunspell dictionaries
 LICENSE=	GPLv3 LGPL3 MPL
 LICENSE_COMB=	dual
 
-USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
