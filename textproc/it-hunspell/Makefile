@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/it-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/it-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	2.4.2007.09.01
@@ -14,7 +14,7 @@ COMMENT=	Italian hunspell dictionaries
 
 LICENSE=	GPLv3
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
