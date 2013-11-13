@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: devel/pear-HTML_Template_Sigma/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-HTML_Template_Sigma/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	HTML_Template_Sigma
 PORTVERSION=	1.2.0
@@ -19,7 +19,6 @@ do-install-tests-msg: .USE
 	@${ECHO_MSG} "     (These tests require PHPUnit - see"
 	@${ECHO_MSG} "     <http://pear.php.net/package-info.php?package=PHPUnit>;;)."
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
