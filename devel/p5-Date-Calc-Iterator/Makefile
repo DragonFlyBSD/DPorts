@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Date-Calc-Iterator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Calc-Iterator/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-Calc-Iterator
 PORTVERSION=	1.00
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Date::Calc::Iterator.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
