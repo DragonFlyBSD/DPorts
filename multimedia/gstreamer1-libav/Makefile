@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/gstreamer1-libav/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer1-libav/Makefile 332416 2013-11-01 22:14:07Z kwm $
 #    $MCom: ports/multimedia/gstreamer1-libav/Makefile,v 1.4 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1-libav
@@ -51,7 +51,6 @@ CFLAGS+=		-msse
 
 CONFIGURE_ARGS+=	--with-libav-extra-configure="${LIBAV_CONFIG}"
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900033
