@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-core/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer-plugins-core/Makefile 332647 2013-11-03 20:06:59Z kwm $
 #    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.17 2006/07/17 01:39:57 ahze Exp $
 
 PORTNAME=	gstreamer-plugins-core
@@ -14,12 +14,12 @@ MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Core set of typical audio and video gstreamer-plugins
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 GST_DIR=	lib/gstreamer-${PORTVERSION}
 PLIST_FILES=	${GST_DIR}/.gstreamer-plugins-core.keep
 
 WANT_GSTREAMER=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # Audio plugins
@@ -45,9 +45,7 @@ pre-everything::
 	@${ECHO_MSG} ""
 
 do-install:
-	if [ ! -d ${PREFIX}/${GST_DIR} ]; then \
-		${MKDIR} ${PREFIX}/${GST_DIR} ; \
-	fi
-	${TOUCH} -f ${PREFIX}/${GST_DIR}/.gstreamer-plugins-core.keep
+	${MKDIR} ${STAGEDIR}${PREFIX}/${GST_DIR}
+	${TOUCH} -f ${STAGEDIR}${PREFIX}/${GST_DIR}/.gstreamer-plugins-core.keep
 
 .include <bsd.port.post.mk>
