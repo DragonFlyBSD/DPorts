@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-String-Diff/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Diff/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	String-Diff
 PORTVERSION=	0.06
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Diff.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
