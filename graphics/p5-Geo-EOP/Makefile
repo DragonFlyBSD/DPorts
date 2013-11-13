@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-EOP/Makefile 328765 2013-09-30 03:17:59Z wen $
+# $FreeBSD: graphics/p5-Geo-EOP/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Geo-EOP
 PORTVERSION=	0.13
@@ -12,14 +12,11 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Module to Process Earth Observation Products Meta-data
 
 RUN_DEPENDS=	p5-Geo-GML>=0.12:${PORTSDIR}/graphics/p5-Geo-GML \
-		p5-Test-Pod>=1.26:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-XML-Compile>=0.96:${PORTSDIR}/textproc/p5-XML-Compile \
 		p5-XML-Compile-Cache>=0.14:${PORTSDIR}/textproc/p5-XML-Compile-Cache
-
-MAN3=		Geo::EOP::Util.3 Geo::EOP.3
+TEST_DEPENDS=	p5-Test-Pod>=1.26:${PORTSDIR}/devel/p5-Test-Pod
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
