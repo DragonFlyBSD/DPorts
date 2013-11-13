@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-TraceFuncs/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-TraceFuncs/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	TraceFuncs
 PORTVERSION=	0.1
@@ -15,7 +15,4 @@ COMMENT=	A perl5 module to trace function calls as they happen
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::TraceFuncs.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
