@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Business-TW-TSIB-CStorePayment/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-TW-TSIB-CStorePayment/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Business-TW-TSIB-CStorePayment
 PORTVERSION=	0.04
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::TW::TSIB::CStorePayment.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
