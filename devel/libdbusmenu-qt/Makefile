@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: devel/libdbusmenu-qt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libdbusmenu-qt/Makefile 332888 2013-11-05 18:18:03Z rakuco $
 
 PORTNAME=	libdbusmenu-qt
 PORTVERSION=	0.9.2
@@ -25,7 +25,6 @@ GENDOCS_DESC=	Build documentation (requires doxygen)
 OPTIONS_DEFAULT+=	GENDOCS
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGENDOCS}
