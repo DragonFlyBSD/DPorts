@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/svn_load_dirs/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/svn_load_dirs/Makefile 333080 2013-11-07 11:28:36Z knu $
 
 PORTNAME=	svn_load_dirs
-PORTVERSION=	${SVN_PORTVERSION}
+PORTVERSION=	1.8.4
 CATEGORIES=	devel
 MASTER_SITES=	http://svn.apache.org/repos/asf/subversion/tags/${PORTVERSION}/contrib/client-side/svn_load_dirs/
 DISTFILES=	LICENSE_AFL3.txt \
@@ -15,7 +15,7 @@ MAINTAINER=	knu@FreeBSD.org
 COMMENT=	A Perl script to load directories into a Subversion repository
 
 RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
-		${LOCALBASE}/bin/svn:${SVN_PORTDIR}
+		${LOCALBASE}/bin/svn:${PORTSDIR}/devel/subversion
 
 USES=		perl5
 
@@ -30,9 +30,6 @@ PORTEXAMPLES=	*
 .if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	*
 .endif
-
-SVN_PORTDIR=		${PORTSDIR}/devel/subversion
-SVN_PORTVERSION!=	cd ${SVN_PORTDIR} && ${MAKE} -V PORTVERSION
 
 do-extract:
 	${MKDIR} ${WRKSRC}
