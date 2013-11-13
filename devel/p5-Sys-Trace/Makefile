@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-Sys-Trace/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sys-Trace/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Sys-Trace
 PORTVERSION=	0.03
@@ -13,11 +13,4 @@ COMMENT=	Interface to system call tracing interfaces
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sys::Trace.3 \
-		Sys::Trace::Impl::Ktrace.3 \
-		Sys::Trace::Impl::Strace.3 \
-		Sys::Trace::Impl::Truss.3 \
-		Sys::Trace::Results.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
