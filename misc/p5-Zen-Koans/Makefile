@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: misc/p5-Zen-Koans/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Zen-Koans/Makefile 332733 2013-11-04 14:41:18Z vanilla $
 
 PORTNAME=	Zen-Koans
 PORTVERSION=	0.05
@@ -11,10 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library containing over 100 Zen Koans
 
-MAN3=	Zen::Koan.3 Zen::Koans.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
