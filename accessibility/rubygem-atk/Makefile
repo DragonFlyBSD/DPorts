@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/rubygem-atk/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/rubygem-atk/Makefile 332031 2013-10-30 02:20:20Z swills $
 
 PORTNAME=	atk
 PORTVERSION=	2.0.2
@@ -10,7 +10,6 @@ COMMENT=	Ruby binding for ATK
 
 RUN_DEPENDS=	rubygem-glib2>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-glib2
 
-NO_STAGE=	yes
 USE_GNOME=	atk
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
