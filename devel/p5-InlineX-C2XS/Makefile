@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-InlineX-C2XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-InlineX-C2XS/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	InlineX-C2XS
 PORTVERSION=	0.22
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-Test-Warn>=0.23:${PORTSDIR}/devel/p5-Test-Warn
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		InlineX::C2XS.3 InlineX::C2XS-Cookbook.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
