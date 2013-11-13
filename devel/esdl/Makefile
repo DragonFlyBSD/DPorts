@@ -1,4 +1,4 @@
-# $FreeBSD: devel/esdl/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/esdl/Makefile 333510 2013-11-11 15:08:48Z olgeni $
 
 PORTNAME=	esdl
 PORTVERSION=	1.0.1
@@ -9,26 +9,26 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}.src
 DIST_SUBDIR=	erlang
 
 MAINTAINER=	olgeni@FreeBSD.org
-COMMENT=	A library for accessing SDL and OpenGL through Erlang
+COMMENT=	Library for accessing SDL and OpenGL through Erlang
 
 BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang
 RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+USES=		gmake
 USE_DOS2UNIX=	Makefile
 USE_GL=		gl glu
-USE_GMAKE=	yes
 USE_SDL=	sdl
 ALL_TARGET=	target
 PLIST_SUB=	VERSION="${PORTVERSION}"
+MAKE_ENV+=	STAGEDIR="${STAGEDIR}"
 
 OPTIONS_DEFINE=	SDL_TTF SDL_IMAGE
 OPTIONS_DEFAULT=SDL_TTF SDL_IMAGE
 SDL_TTF_DESC=	SDL_ttf support
 SDL_IMAGE_DESC=	SDL_image support
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MSDL_TTF}
@@ -58,6 +58,6 @@ post-patch:
 .endif
 
 post-install:
-	@${LN} -sf ${PORTNAME}-${PORTVERSION} ${PREFIX}/lib/erlang/lib/${PORTNAME}
+	@${LN} -sf ${PORTNAME}-${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/erlang/lib/${PORTNAME}
 
 .include <bsd.port.post.mk>
