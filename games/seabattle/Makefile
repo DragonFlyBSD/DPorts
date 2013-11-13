@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/seabattle/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/seabattle/Makefile 333458 2013-11-11 00:30:27Z danilo $
 
 PORTNAME=	seabattle
 PORTVERSION=	1.0
@@ -12,18 +12,13 @@ MASTER_SITE_SUBDIR=	games/strategy
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses based battleship type game
 
-PORTDOCS=	readme.txt
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/seabattle ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/seabattle
-	${INSTALL_DATA} ${WRKSRC}/*.au ${DATADIR}
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/seabattle ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/seabattle
+	${INSTALL_DATA} ${WRKSRC}/*.au ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
