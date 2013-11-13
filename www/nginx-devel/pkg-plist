@@ -1,4 +1,4 @@
-@comment $FreeBSD: www/nginx-devel/pkg-plist 317235 2013-05-03 19:50:55Z osa $
+@comment $FreeBSD: www/nginx-devel/pkg-plist 332711 2013-11-04 13:20:45Z osa $
 @unexec if cmp -s %D/%%ETCDIR%%/fastcgi_params-dist %D/%%ETCDIR%%/fastcgi_params; then rm -f %D/%%ETCDIR%%/fastcgi_params; fi
 %%ETCDIR%%/fastcgi_params-dist
 @exec if [ ! -f %D/%%ETCDIR%%/fastcgi_params ] ; then cp -p %D/%F %B/fastcgi_params; fi
@@ -28,3 +28,4 @@
 %%WWWDATA%%@dirrmtry www/nginx-dist
 sbin/nginx
 @unexec if [ -z ${UPGRADE_PORT} ] ; then rm -fr %%NGINX_TMPDIR%%; fi
+man/man8/nginx.8.gz

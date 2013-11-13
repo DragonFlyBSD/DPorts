@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx-devel/Makefile 331688 2013-10-26 13:39:37Z osa $
+# $FreeBSD: www/nginx-devel/Makefile 332711 2013-11-04 13:20:45Z osa $
 
 PORTNAME=	nginx
 PORTVERSION=	1.5.6
@@ -193,7 +193,6 @@ VIDEO_DESC=			Video module support
 
 WANT_GNOME=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPASSENGER}
@@ -217,9 +216,6 @@ SUB_LIST+=	WWWOWN=${WWWOWN} \
 		WWWGRP=${WWWGRP} \
 		NGINX_RUNDIR=${NGINX_RUNDIR} \
 		NGINX_TMPDIR=${NGINX_TMPDIR}
-.if !defined(NO_INSTALL_MANPAGES)
-MAN8=		nginx.8
-.endif
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${ETCDIR} \
@@ -255,7 +251,7 @@ CATEGORIES+=	ipv6
 .endif
 
 .if ${PORT_OPTIONS:MGOOGLE_PERFTOOLS}
-LIB_DEPENDS+=	profiler:${PORTSDIR}/devel/google-perftools
+LIB_DEPENDS+=	libprofiler.so:${PORTSDIR}/devel/google-perftools
 CONFIGURE_ARGS+=--with-google_perftools_module
 .endif
 
@@ -327,7 +323,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_cache_purge-${NGINX_CACHE_PURGE_VERSI
 .endif
 
 .if ${PORT_OPTIONS:MCTPP2}
-LIB_DEPENDS+=	ctpp2:${PORTSDIR}/textproc/ctpp2
+LIB_DEPENDS+=	libctpp2.so:${PORTSDIR}/textproc/ctpp2
 NGINX_CTPP2_VERSION=	0.5
 MASTER_SITES+=	http://dl.vbart.ru/ngx-ctpp/:ctpp2
 DISTFILES+=	ngx_ctpp2-${NGINX_CTPP2_VERSION}.tar.gz:ctpp2
@@ -358,7 +354,7 @@ CONFIGURE_ARGS+=--with-http_dav_module
 
 .if ${PORT_OPTIONS:MHTTP_DAV_EXT}
 USE_HTTP_DAV=	yes
-LIB_DEPENDS+=	expat:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS+=	libexpat.so:${PORTSDIR}/textproc/expat2
 NGINX_DAV_EXT_VERSION=	0.0.2
 GIT_DAV_EXT_VERSION=	0-g0e07a3e
 FETCH_ARGS=	-pRr
@@ -390,7 +386,7 @@ CONFIGURE_ARGS+=--with-http_flv_module
 
 .if ${PORT_OPTIONS:MHTTP_GEOIP}
 CONFIGURE_ARGS+=--with-http_geoip_module
-LIB_DEPENDS+=	GeoIP:${PORTSDIR}/net/GeoIP
+LIB_DEPENDS+=	libGeoIP.so:${PORTSDIR}/net/GeoIP
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_GZIP_STATIC}
@@ -402,7 +398,7 @@ CONFIGURE_ARGS+=--with-http_gunzip_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_IMAGE_FILTER}
-LIB_DEPENDS+=	gd:${PORTSDIR}/graphics/gd
+LIB_DEPENDS+=	libgd.so:${PORTSDIR}/graphics/gd
 CONFIGURE_ARGS+=--with-http_image_filter_module
 .endif
 
@@ -556,7 +552,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
 
 .if ${PORT_OPTIONS:MDRIZZLE}
 IGNORE=	DRIZZLE: update require
-LIB_DEPENDS+=	drizzle:${PORTSDIR}/databases/libdrizzle
+LIB_DEPENDS+=	libdrizzle.so:${PORTSDIR}/databases/libdrizzle
 NGINX_DRIZZLE_VERSION=	0.1.5
 GIT_DRIZZLE_VERSION=	0-g943c915
 FETCH_ARGS=	-pRr
@@ -607,7 +603,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/arut-nginx-let-module-${GIT_LET_VERSION:S
 .endif
 
 .if ${PORT_OPTIONS:MLUA}
-LIB_DEPENDS+=	luajit-5.1:${PORTSDIR}/lang/luajit
+LIB_DEPENDS+=	libluajit-5.1.so:${PORTSDIR}/lang/luajit
 CONFIGURE_ENV+=	"LUAJIT_INC=${LOCALBASE}/include/luajit-2.0"
 CONFIGURE_ENV+=	"LUAJIT_LIB=${LOCALBASE}/lib"
 NGINX_LUA_VERSION=	0.8.6
@@ -629,8 +625,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/agentzh-memc-nginx-module-${GIT_MEMC_VERS
 
 .if ${PORT_OPTIONS:MMODSECURITY}
 NGINX_MODSECURITY_VERSION=	2.7.5
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
-		apr-1:${PORTSDIR}/devel/apr1
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre \
+		libapr-1.so:${PORTSDIR}/devel/apr1
 USE_APACHE=	22+
 USE_GNOME=	libxml2
 MASTER_SITES+=	http://www.modsecurity.org/tarball/${NGINX_MODSECURITY_VERSION}/:modsecurity
@@ -647,7 +643,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/naxsi-core-${NGINX_NAXSI_VERSION}/naxsi_s
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_REWRITE} || defined(USE_HTTP_REWRITE)
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 CONFIGURE_ARGS+=--with-pcre
 .else
 PKGNAMESUFFIX:=	${PKGNAMESUFFIX}-nopcre
@@ -656,7 +652,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.21
+PASSENGER_VERSION=	4.0.23
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -989,40 +985,36 @@ do-build:
 	@cd ${WRKSRC} && ${MAKE}
 
 do-install:
-	${MKDIR} ${ETCDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${PREFIX}/sbin
+	${MKDIR} ${STAGEDIR}${ETCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${STAGEDIR}${PREFIX}/sbin
 .for i in koi-utf koi-win win-utf
-	${INSTALL_DATA} ${WRKSRC}/conf/${i} ${ETCDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/${i} ${STAGEDIR}${ETCDIR}
 .endfor
 .for i in fastcgi_params mime.types nginx.conf scgi_params uwsgi_params
-	[ -f ${ETCDIR}/${i} ] || \
-		${INSTALL_DATA} ${WRKSRC}/conf/${i} ${ETCDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/${i} ${ETCDIR}/${i}-dist
+	${INSTALL_DATA} ${WRKSRC}/conf/${i} ${STAGEDIR}${ETCDIR}/${i}-dist
 .endfor
 .if !empty(PORT_OPTIONS:MHTTP) && !empty(PORT_OPTIONS:MWWW)
-	${MKDIR} ${PREFIX}/www/nginx-dist
+	${MKDIR} ${STAGEDIR}${PREFIX}/www/nginx-dist
 .for i in index.html 50x.html
-	${INSTALL_DATA} ${WRKSRC}/html/${i} ${PREFIX}/www/nginx-dist
+	${INSTALL_DATA} ${WRKSRC}/html/${i} ${STAGEDIR}${PREFIX}/www/nginx-dist
 .endfor
-	${ECHO_CMD} "" >>${PREFIX}/www/nginx-dist/EXAMPLE_DIRECTORY-DONT_ADD_OR_TOUCH_ANYTHING
-	[ -e ${PREFIX}/www/nginx ] || \
-		${LN} -sf ${PREFIX}/www/nginx-dist ${PREFIX}/www/nginx
+	${ECHO_CMD} "" >>${STAGEDIR}${PREFIX}/www/nginx-dist/EXAMPLE_DIRECTORY-DONT_ADD_OR_TOUCH_ANYTHING
 .endif
 
 .if !empty(PORT_OPTIONS:MHTTP) && !empty(PORT_OPTIONS:MHTTP_PERL)
-	${MKDIR} ${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx
+	${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/src/http/modules/perl/blib/arch/auto/nginx/nginx.so \
-		${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/arch/auto/nginx/nginx.bs \
-		${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/lib/nginx.pm \
-		${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/${PERL_ARCH}/
 .endif
 
 .if ${PORT_OPTIONS:MNAXSI}
 	${INSTALL_DATA} \
 	${WRKDIR}/naxsi-core-${NGINX_NAXSI_VERSION}/naxsi_config/naxsi_core.rules \
-	${ETCDIR}
+	${STAGEDIR}${ETCDIR}
 .endif
 
 post-install:
@@ -1032,9 +1024,7 @@ post-install:
 	${ECHO_CMD} ${SITE_PERL_REL}/${PERL_ARCH}/nginx.pm >> ${TMPPLIST}
 	${ECHO_CMD} @dirrm ${SITE_PERL_REL}/${PERL_ARCH}/auto/nginx >> ${TMPPLIST}
 .endif
-.if !defined(NO_INSTALL_MANPAGES)
-	@${INSTALL_MAN} ${WRKSRC}/objs/nginx.8 ${MAN8PREFIX}/man/man8
-.endif
+	@${INSTALL_MAN} ${WRKSRC}/objs/nginx.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
 
 .if ${PORT_OPTIONS:MNAXSI}
 	${ECHO_CMD} etc/nginx/naxsi_core.rules >> ${TMPPLIST}
