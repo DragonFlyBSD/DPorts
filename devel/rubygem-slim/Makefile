@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-slim/Makefile 330970 2013-10-20 04:08:49Z swills $
+# $FreeBSD: devel/rubygem-slim/Makefile 332042 2013-10-30 02:46:01Z swills $
 
 PORTNAME=	slim
 PORTVERSION=	2.0.1
@@ -17,6 +17,5 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES+=	bin/slimrb
 
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
