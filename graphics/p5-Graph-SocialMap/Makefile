@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-Graph-SocialMap/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Graph-SocialMap/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Graph-SocialMap
 PORTVERSION=	0.12
@@ -18,10 +18,7 @@ BUILD_DEPENDS=	p5-Spiffy>=0:${PORTSDIR}/devel/p5-Spiffy \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Graph::SocialMap.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
