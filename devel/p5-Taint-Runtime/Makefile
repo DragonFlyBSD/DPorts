@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Taint-Runtime/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Taint-Runtime/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Taint-Runtime
 PORTVERSION=	0.03
@@ -12,7 +12,4 @@ COMMENT=	Runtime enable/disable taint checking
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Taint::Runtime.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
