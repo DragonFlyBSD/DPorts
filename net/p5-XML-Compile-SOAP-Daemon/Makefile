@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	XML-Compile-SOAP-Daemon
 PORTVERSION=	3.06
@@ -24,12 +24,4 @@ TEST_DEPENDS=	p5-XML-Compile-Tester>=0.90:${PORTSDIR}/devel/p5-XML-Compile-Teste
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	XML::Compile::SOAP::Daemon.3 \
-	XML::Compile::SOAP::Daemon::AnyDaemon.3 \
-	XML::Compile::SOAP::Daemon::CGI.3 \
-	XML::Compile::SOAP::Daemon::LWPutil.3 \
-	XML::Compile::SOAP::Daemon::NetServer.3 \
-	XML::Compile::SOAP::Daemon::PSGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
