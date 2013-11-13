@@ -1,8 +1,8 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD: devel/libcheck/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libcheck/Makefile 332876 2013-11-05 17:55:18Z sunpoet $
 
 PORTNAME=	libcheck
-PORTVERSION=	0.9.10
+PORTVERSION=	0.9.11
 CATEGORIES=	devel
 MASTER_SITES=	SF/check/check/${PORTVERSION}
 DISTNAME=	check-${PORTVERSION}
@@ -20,9 +20,7 @@ USE_LDCONFIG=	yes
 USES=		gmake pathfix
 
 INFO=		check
-MAN1=		checkmk.1
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -43,5 +41,8 @@ post-patch:
 		-e 's|install-exampletestsDATA ||' \
 			${WRKSRC}/doc/Makefile.in
 .endif
+
+post-build:
+	@${STRIP_CMD} ${WRKSRC}/src/.libs/libcheck.so.0
 
 .include <bsd.port.mk>
