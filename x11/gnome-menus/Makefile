@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-menus/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gnome-menus/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/x11/gnome-menus/Makefile,v 1.110 2010/11/17 11:29:19 kwm Exp $
 
 PORTNAME=	gnome-menus
@@ -19,7 +19,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
 USES=		pkgconfig gettext
 USE_AUTOTOOLS=	libtool
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
