@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Alias/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Alias/Makefile 331766 2013-10-27 12:17:59Z vanilla $
 
 PORTNAME=	Alias
 PORTVERSION=	2.32
@@ -14,7 +14,4 @@ COMMENT=	A perl module that performs aliasing services
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Alias.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
