@@ -1,4 +1,4 @@
-# $FreeBSD: www/php53-tidy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/php53-tidy/Makefile 332429 2013-11-01 23:49:56Z flo $
 
 CATEGORIES=	www
 
@@ -6,5 +6,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php53
 
 PKGNAMESUFFIX=	-tidy
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
