@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/gstreamer-plugins-cdio/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/gstreamer-plugins-cdio/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 CATEGORIES=	sysutils
 PORTREVISION=	0
@@ -10,5 +10,4 @@ GST_PLUGIN=	cdio
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
