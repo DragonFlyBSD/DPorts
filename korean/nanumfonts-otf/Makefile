@@ -1,4 +1,4 @@
-# $FreeBSD: korean/nanumfonts-otf/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/nanumfonts-otf/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	nanumfonts
 PORTVERSION=	3.1
@@ -15,10 +15,7 @@ DISTFILES=	NanumFont_${FONTTYPE:tu}_ALL${EXTRACT_SUFX} \
 MAINTAINER=	jkim@FreeBSD.org
 COMMENT=	Nanum family Hangul fonts (${FONTFORMAT})
 
-LICENSE=	OFL
-LICENSE_NAME=	Open Font License version 1.1
-LICENSE_FILE=	${FILESDIR}/LICENSE
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE=	OFL11
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		${LOCALBASE}/bin/mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
