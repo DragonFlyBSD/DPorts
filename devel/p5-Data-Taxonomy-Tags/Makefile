@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Data-Taxonomy-Tags/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Taxonomy-Tags/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Data-Taxonomy-Tags
 PORTVERSION=	0.05
@@ -10,10 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Represents a set of tags for any item
 
-MAN3=		Data::Taxonomy::Tags.3 Data::Taxonomy::Tags::Tag.3
-
 USES=		perl5
 USE_PERL5=	modbuild
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
