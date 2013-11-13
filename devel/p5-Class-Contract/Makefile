@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Contract/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Contract/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-Contract
 PORTVERSION=	1.14
@@ -15,18 +15,14 @@ USE_PERL5=	configure
 USE_DOS2UNIX=	yes
 PLIST_SUB+=	EXAMPLESDIR="share/examples/${PORTNAME}"
 
-MAN3=		Class::Contract.3 Class::Contract::Production.3
-
-NO_STAGE=	yes
 pre-configure:
 	${MKDIR} ${WRKSRC}/examples
 	${MV} ${WRKSRC}/demo.pl ${WRKSRC}/examples
 
 post-install:
 .ifndef(NOPORTDOCS)
-	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
