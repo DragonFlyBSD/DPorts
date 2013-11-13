@@ -1,8 +1,8 @@
-@comment $FreeBSD: net/p5-Net-Amazon-AWSSign/pkg-plist 300897 2012-07-14 14:29:18Z beat $
-%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon/AWSSign/.packlist
+%%PERL5_MAN3%%/Net::Amazon::AWSSign.3.gz
 %%SITE_PERL%%/Net/Amazon/AWSSign.pm
-@dirrmtry %%SITE_PERL%%/Net/Amazon
-@dirrmtry %%SITE_PERL%%/Net
+%%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon/AWSSign/.packlist
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon/AWSSign
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/Amazon
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net
+@dirrmtry %%SITE_PERL%%/Net/Amazon
+@dirrmtry %%SITE_PERL%%/Net
