@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-dbus/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-dbus/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/trunk/devel/py-dbus/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	dbus
@@ -15,7 +15,7 @@ COMMENT=	Python bindings for the D-BUS messaging system
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 USES=		gettext pathfix pkgconfig
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${PYTHON_INCLUDEDIR}
