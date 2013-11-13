@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	WWW-Google-SiteMap
 PORTVERSION=	1.10
@@ -21,11 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Google::SiteMap.3		\
-		WWW::Google::SiteMap::Index.3	\
-		WWW::Google::SiteMap::Ping.3	\
-		WWW::Google::SiteMap::Robot.3	\
-		WWW::Google::SiteMap::URL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
