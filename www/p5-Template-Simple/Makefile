@@ -1,5 +1,5 @@
 # Created by: Ken McGlothlen <ken.mcglothlen@gmail.com>
-# $FreeBSD: www/p5-Template-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Simple/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	Template-Simple
 PORTVERSION=	0.06
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ken.mcglothlen@gmail.com
-COMMENT=	Template::Simple (a very fast templating module)
+COMMENT=	Fast templating module
 
 LICENSE=	ART20
 
