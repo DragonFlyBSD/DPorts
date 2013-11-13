@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/hanazono-fonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/hanazono-fonts-ttf/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	hanazono-fonts-ttf
 PORTVERSION=	20120421
@@ -11,10 +11,7 @@ DISTNAME=	${PORTNAME:C/-.*//}-${PORTVERSION}
 MAINTAINER=	lichray@gmail.com
 COMMENT=	CJK Mincho-typeface developed by Hanazono University
 
-LICENSE=	OFL
-LICENSE_NAME=	Open Font License
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-LICENSE_PERMS=	auto-accept
+LICENSE=	OFL11
 
 BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
