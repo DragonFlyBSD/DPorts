@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: audio/gstreamer-plugins-fluendo-mp3/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gstreamer-plugins-fluendo-mp3/Makefile 332416 2013-11-01 22:14:07Z kwm $
 
 PORTNAME=	gstreamer-plugins-fluendo-mp3
 PORTVERSION=	0.10.20
@@ -14,7 +14,6 @@ LICENSE=	MIT
 
 CFLAGS:=	${CFLAGS} -O2
 USES=		pkgconfig
-NO_STAGE=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/gstreamer-0.10/libgstflump3dec.la \
