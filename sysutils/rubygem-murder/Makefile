@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-murder/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-murder/Makefile 332050 2013-10-30 02:57:17Z swills $
 
 PORTNAME=	murder
 PORTVERSION=	0.1.2
@@ -14,5 +14,4 @@ USE_PYTHON=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
