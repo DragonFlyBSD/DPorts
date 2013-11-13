@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/gstreamer-ffmpeg/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer-ffmpeg/Makefile 332416 2013-11-01 22:14:07Z kwm $
 #    $MCom: ports/multimedia/gstreamer-ffmpeg/Makefile,v 1.14 2006/07/20 13:40:27 ahze Exp $
 
 PORTNAME=	gstreamer
@@ -58,7 +58,6 @@ CFLAGS+=		-msse
 
 CONFIGURE_ARGS+=	--with-ffmpeg-extra-configure="${FFMPEG_CONFIG}"
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 900033
