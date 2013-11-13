@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: x11-toolkits/p5-Tk-Enscript/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/p5-Tk-Enscript/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Tk-Enscript
 PORTVERSION=	1.10
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tk::Enscript.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
