@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: graphics/p5-GraphViz/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-GraphViz/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	GraphViz
 PORTVERSION=	2.14
@@ -21,21 +21,9 @@ RUN_DEPENDS=	p5-IPC-Run>=0:${PORTSDIR}/devel/p5-IPC-Run \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::GraphVizProf.3 \
-		GraphViz.3 \
-		GraphViz::Data::Grapher.3 \
-		GraphViz::No.3 \
-		GraphViz::Parse::RecDescent.3 \
-		GraphViz::Parse::Yacc.3 \
-		GraphViz::Parse::Yapp.3 \
-		GraphViz::Regex.3 \
-		GraphViz::Small.3 \
-		GraphViz::XML.3
-
 .if defined(MAINTAINER_MODE)
 regression-test: build
 	cd ${WRKSRC} && ${MAKE} test
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
