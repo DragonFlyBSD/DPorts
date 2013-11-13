@@ -1,5 +1,5 @@
 # Created by: Garrett Wollman <wollman@lcs.mit.edu>
-# $FreeBSD: devel/p5-Term-Query/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Query/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-Query
 PORTVERSION=	2.0
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Array-PrintCols>=0:${PORTSDIR}/misc/p5-Array-PrintCols
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Query.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
