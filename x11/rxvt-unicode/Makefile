@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: x11/rxvt-unicode/Makefile 332187 2013-10-30 22:57:11Z thierry $
+# $FreeBSD: x11/rxvt-unicode/Makefile 332906 2013-11-05 20:50:08Z thierry $
 
 PORTNAME=	rxvt-unicode
 PORTVERSION=	9.19
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/fc-cache:${PORTSDIR}/x11-fonts/fontconfig	\
 		${LOCALBASE}/share/misc/terminfo.db:${PORTSDIR}/devel/ncurses
 
 USES=			pkgconfig shebangfix
+USE_GCC=		yes # segfaults when trying to scroll with the mouse wheel if clang
 USE_XORG=		xpm xft xrender
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
