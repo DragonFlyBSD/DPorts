@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: java/java-getopt/Makefile 331935 2013-10-29 08:57:50Z ale $
+# $FreeBSD: java/java-getopt/Makefile 333560 2013-11-12 10:36:16Z bapt $
 
 PORTNAME=	java-getopt
 PORTVERSION=	1.0.14
@@ -20,9 +20,6 @@ ALL_TARGET=	jar
 NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
-
-# hack to be removed when included in bsd.java.mk
-DESTDIRNAME=	-Ddestdir
 
 .include <bsd.port.options.mk>
 
