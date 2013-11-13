@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-App-CLI-Extension/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-CLI-Extension/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	App-CLI-Extension
 PORTVERSION=	1.42.1
@@ -22,15 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::CLI::Extension.3 \
-		App::CLI::Extension::Component::Config.3 \
-		App::CLI::Extension::Component::ErrorHandler.3 \
-		App::CLI::Extension::Component::InstallCallback.3 \
-		App::CLI::Extension::Component::OriginalArgv.3 \
-		App::CLI::Extension::Component::RunCommand.3 \
-		App::CLI::Extension::Component::Stash.3 \
-		App::CLI::Extension::Exception.3 \
-		App::CLI::README.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
