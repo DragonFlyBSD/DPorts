@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-Lite/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-DNS-Lite/Makefile 332593 2013-11-03 07:46:27Z vanilla $
 
 PORTNAME=	Net-DNS-Lite
 PORTVERSION=	0.10
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Cache-LRU>=0:${PORTSDIR}/devel/p5-Cache-LRU \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::DNS::Lite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
