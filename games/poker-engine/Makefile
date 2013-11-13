@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/poker-engine/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/poker-engine/Makefile 332798 2013-11-05 01:06:39Z danilo $
 
 PORTNAME=	poker-engine
 PORTVERSION=	1.3.6
@@ -22,14 +22,10 @@ RUN_DEPENDS=	${LOCALBASE}/bin/rsync:${PORTSDIR}/net/rsync \
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		pkgconfig gettext
+USES=		gmake pkgconfig gettext
 USE_PYTHON=	2.5-2.7
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-MAN8=	pokerconfigupgrade.8
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|{datadir}/pkgconfig|(prefix)/libdata/pkgconfig|g' \
