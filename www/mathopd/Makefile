@@ -1,5 +1,5 @@
 # Created by: tobez@plab.ku.dk
-# $FreeBSD: www/mathopd/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mathopd/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	mathopd
 PORTVERSION=	1.5p8
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.mathopd.org/dist/
 
 MAINTAINER=	michiel@boland.org
-COMMENT=	A very small, yet very fast HTTP server
+COMMENT=	Small, yet fast HTTP server
 
 CFLAGS+=	-DFREEBSD_SENDFILE
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
