@@ -1,5 +1,5 @@
-# Created by: alepulver
-# $FreeBSD: deskutils/menumaker/Makefile 331352 2013-10-23 06:31:21Z jgh $
+# Created by: alepulver@FreeBSD.org
+# $FreeBSD: deskutils/menumaker/Makefile 333187 2013-11-08 07:40:50Z jgh $
 
 PORTNAME=	menumaker
 PORTVERSION=	0.99.7
