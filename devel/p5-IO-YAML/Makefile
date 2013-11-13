@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-YAML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-YAML/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-YAML
 PORTVERSION=	0.08
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		IO::YAML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
