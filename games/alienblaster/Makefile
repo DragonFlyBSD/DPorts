@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/alienblaster/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/alienblaster/Makefile 331987 2013-10-29 19:52:24Z danilo $
 
 PORTNAME=	alienblaster
 PORTVERSION=	1.1.0
@@ -13,13 +13,12 @@ COMMENT=	Alien Blaster
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=	gmake
 USE_SDL=	mixer sdl
 REINPLACE_ARGS=	-i ''
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 # Fix make command
 	@${REINPLACE_CMD} -e 's|make|${GMAKE}|g' ${WRKSRC}/${MAKEFILE}
@@ -42,12 +41,12 @@ post-patch:
 
 do-install:
 # Executable
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 # Data
-	${MKDIR} ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
 .for d in cfg images sound
-	${CP} -R ${WRKSRC}/${d} ${DATADIR}
+	${CP} -R ${WRKSRC}/${d} ${STAGEDIR}${DATADIR}
 .endfor
 
 .include <bsd.port.mk>
