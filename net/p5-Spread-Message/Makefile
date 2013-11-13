@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Spread-Message/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Spread-Message/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Spread-Message
 PORTVERSION=	0.21
@@ -14,10 +14,7 @@ COMMENT=	Provide messaging using the Spread toolkit
 BUILD_DEPENDS=	spread>=0:${PORTSDIR}/net/spread
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	Spread::Message.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
