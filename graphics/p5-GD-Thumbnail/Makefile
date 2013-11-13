@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/p5-GD-Thumbnail/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-GD-Thumbnail/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	GD-Thumbnail
 PORTVERSION=	1.41
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GD::Thumbnail.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
