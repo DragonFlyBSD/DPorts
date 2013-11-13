@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: graphics/p5-GD-Barcode/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-GD-Barcode/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	GD-Barcode
 PORTVERSION=	1.15
@@ -17,19 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GD::Barcode.3 \
-		GD::Barcode::COOP2of5.3 \
-		GD::Barcode::Code39.3 \
-		GD::Barcode::EAN13.3 \
-		GD::Barcode::EAN8.3 \
-		GD::Barcode::IATA2of5.3 \
-		GD::Barcode::ITF.3 \
-		GD::Barcode::Industrial2of5.3 \
-		GD::Barcode::Matrix2of5.3 \
-		GD::Barcode::NW7.3 \
-		GD::Barcode::QRcode.3 \
-		GD::Barcode::UPCA.3 \
-		GD::Barcode::UPCE.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
