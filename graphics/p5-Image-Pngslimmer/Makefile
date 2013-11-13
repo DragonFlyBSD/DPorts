@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Image-Pngslimmer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Pngslimmer/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Image-Pngslimmer
 PORTVERSION=	0.30
@@ -14,7 +14,4 @@ COMMENT=	Slims (dynamically created) PNGs
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Image::Pngslimmer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
