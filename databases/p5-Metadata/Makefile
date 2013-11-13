@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: databases/p5-Metadata/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Metadata/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Metadata
 PORTVERSION=	0.24
@@ -16,10 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Metadata::Base.3 \
-	Metadata::HTTP.3 \
-	Metadata::IAFA.3 \
-	Metadata::SOIF.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
