@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: math/p5-Statistics-Forecast/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Forecast/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Statistics-Forecast
 PORTVERSION=	0.3
@@ -14,7 +14,4 @@ COMMENT=	Calculates a future value
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Statistics::Forecast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
