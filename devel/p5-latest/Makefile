@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-latest/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-latest/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	latest
 PORTVERSION=	0.03
@@ -14,7 +14,4 @@ COMMENT=	Use the latest Perl features
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	latest.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
