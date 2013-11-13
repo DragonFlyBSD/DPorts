@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/xmlstarlet/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: textproc/xmlstarlet/Makefile 332529 2013-11-02 18:08:12Z hrs $
 
 PORTNAME=	xmlstarlet
 PORTVERSION=	1.4.2
@@ -15,24 +15,24 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GNOME=	libxslt
 USES=		iconv
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 CONFIGURE_ARGS=	--with-libxml-prefix=${LOCALBASE} \
 		--with-libxslt-prefix=${LOCALBASE} \
 		${ICONV_CONFIGURE_ARG} \
 		--disable-static-libs
-
-MAN1=		xmlstarlet.1
-PLIST_FILES=	bin/xml
+PLIST_FILES=	bin/xml man/man1/xmlstarlet.1.gz
 PORTDOCS=	xmlstarlet.txt \
 		xmlstarlet-man.xml \
 		xmlstarlet-ug.html xmlstarlet-ug.pdf \
 		xmlstarlet-ug.ps xmlstarlet-ug.xml \
 		html.css
+OPTIONS_DEFINE=	DOCS
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
