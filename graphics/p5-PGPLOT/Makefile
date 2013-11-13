@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/p5-PGPLOT/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/p5-PGPLOT/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	PGPLOT
 PORTVERSION=	2.21
@@ -20,14 +20,10 @@ SCRIPTS_ENV=	PERL=${PERL}
 USE_FORTRAN=	yes
 USES=		perl5
 
-MAN3=		PGPLOT.3
-MAN3PREFIX=	${PREFIX}/lib/perl5/${PERL_VER}
-
 .if !defined(NOPORTEXAMPLES)
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} LICENSE test* ${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} LICENSE test* ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .if defined(MAINTAINER_MODE) && !defined(BATCH)
