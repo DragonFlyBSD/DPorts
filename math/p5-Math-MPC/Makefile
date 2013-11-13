@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPC/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/p5-Math-MPC/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Math-MPC
 PORTVERSION=	1.00
@@ -13,9 +13,9 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to MPC Library
 
 BUILD_DEPENDS=	p5-Math-MPFR>=2.01:${PORTSDIR}/math/p5-Math-MPFR
-LIB_DEPENDS=	gmp:${PORTSDIR}/math/gmp \
-		mpc:${PORTSDIR}/math/mpc \
-		mpfr:${PORTSDIR}/math/mpfr
+LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp \
+		libmpc.so:${PORTSDIR}/math/mpc \
+		libmpfr.so:${PORTSDIR}/math/mpfr
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 
@@ -23,7 +23,4 @@ MAKE_ENV=	INC="-I${LOCALBASE}/include"
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::MPC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
