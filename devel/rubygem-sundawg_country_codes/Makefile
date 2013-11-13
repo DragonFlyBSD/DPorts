@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-sundawg_country_codes/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-sundawg_country_codes/Makefile 332042 2013-10-30 02:46:01Z swills $
 
 PORTNAME=	sundawg_country_codes
 PORTVERSION=	0.0.7
@@ -13,5 +13,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
