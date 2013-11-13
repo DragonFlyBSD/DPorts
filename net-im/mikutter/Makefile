@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net-im/mikutter/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
+# $FreeBSD: net-im/mikutter/Makefile 333363 2013-11-10 01:27:27Z tota $
 
 PORTNAME=	mikutter
-PORTVERSION=	0.2.2.1373
+PORTVERSION=	0.2.2.1410
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/ \
 		LOCAL
@@ -45,11 +45,7 @@ NOTIFY_DESC=		notify-send support
 
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
-.include <bsd.port.pre.mk>
-
-.if !defined(RUBY_PROVIDED)
-IGNORE=	requires Ruby 1.9.3 or later
-.endif
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTTPCLIENT}
 RUN_DEPENDS+=	rubygem-httpclient>=0:${PORTSDIR}/www/rubygem-httpclient
@@ -81,4 +77,4 @@ x-generate-plist:
 	${ECHO} share/applications/mikutter.desktop >> pkg-plist.new
 	${FIND} ${RUBY_SITELIBDIR}/mikutter -type d -depth | ${SORT} -r | ${SED} -e 's,${RUBY_SITELIBDIR},@dirrm %%RUBY_SITELIBDIR%%,' >> pkg-plist.new
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
