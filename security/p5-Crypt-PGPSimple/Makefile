@@ -1,5 +1,5 @@
 # Created by: Matjaz Prelog <rachek@si.freebsd.org>
-# $FreeBSD: security/p5-Crypt-PGPSimple/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-PGPSimple/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-PGPSimple
 PORTVERSION=	0.13
@@ -15,7 +15,4 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pgp:${PORTSDIR}/security/pgp
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::PGPSimple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
