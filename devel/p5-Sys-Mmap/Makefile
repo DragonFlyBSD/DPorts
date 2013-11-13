@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Sys-Mmap/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sys-Mmap/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Sys-Mmap
 PORTVERSION=	0.16
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sys::Mmap.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
