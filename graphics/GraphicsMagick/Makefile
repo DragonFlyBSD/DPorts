@@ -1,5 +1,5 @@
 # Created by: Ron van Daal
-# $FreeBSD: graphics/GraphicsMagick/Makefile 329271 2013-10-04 08:52:32Z bapt $
+# $FreeBSD: graphics/GraphicsMagick/Makefile 332222 2013-10-31 11:06:16Z bapt $
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.1.15
@@ -13,7 +13,7 @@ PORTSCOUT=	limit:^1\.1\.
 MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	Fast image processing tools based on ImageMagick
 
-CONFLICTS=	GraphicsMagick-1.[23].*
+CONFLICTS=	GraphicsMagick-1.[23].* GraphicsMagick1[23]-*
 
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2	\
 		fpx.[2-9]:${PORTSDIR}/graphics/libfpx	\
