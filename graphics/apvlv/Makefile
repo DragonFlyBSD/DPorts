@@ -1,8 +1,9 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: graphics/apvlv/Makefile 328362 2013-09-26 14:07:08Z wg $
+# $FreeBSD: graphics/apvlv/Makefile 332738 2013-11-04 14:57:27Z feld $
 
 PORTNAME=	apvlv
 PORTVERSION=	0.1.4
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cloud.github.com/downloads/naihe2010/apvlv/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-Source
@@ -21,6 +22,8 @@ CMAKE_ARGS+=	-DSYSCONFDIR=${PREFIX}/etc \
 		-DDOCDIR=${DOCSDIR} \
 		-DAPVLV_WITH_UMD=OFF \
 		-DAPVLV_WITH_TXT=ON
+CFLAGS+=	-pthread
+LDFLAGS+=	-pthread
 
 OPTIONS_DEFINE=	DJVU WEBKIT
 
