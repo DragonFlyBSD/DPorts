@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: audio/mp3gain/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: audio/mp3gain/Makefile 332206 2013-10-31 07:42:03Z bapt $
 
 PORTNAME=	mp3gain
 PORTVERSION=	1.5.2
@@ -8,11 +8,11 @@ MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION:C/\./_/g}-src
 
 MAINTAINER=	dinoex@FreeBSD.org
-COMMENT=	A tool to normalize the gain of MP3 files
+COMMENT=	Tool to normalize the gain of MP3 files
 
 LICENSE=	LGPL21
 
-NO_STAGE=	yes
+USES=		uidfix
 
 USE_ZIP=	yes
 USE_DOS2UNIX=	yes
