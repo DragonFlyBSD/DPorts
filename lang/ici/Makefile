@@ -1,11 +1,11 @@
 # Created by: andy
-# $FreeBSD: lang/ici/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/ici/Makefile 332492 2013-11-02 14:48:57Z tijl $
 
 PORTNAME=	ici
 PORTVERSION=	4.1.2
 PORTREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.zeta.org.au/~atrn/ici/distfiles/
+MASTER_SITES=	http://atrn.org/ici/distfiles
 
 MAINTAINER=	atrn@zeta.org.au
 COMMENT=	An interpretive language with C's feel and high level data types
