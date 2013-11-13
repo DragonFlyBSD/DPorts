@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 331566 2013-10-25 10:58:53Z wg $
+# $FreeBSD: net/freerdp/Makefile 332934 2013-11-05 23:58:44Z fluffy $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -71,7 +71,7 @@ PLIST_SUB+=	FFMPEG="@comment "
 
 .if ${PORT_OPTIONS:MCUPS}
 CMAKE_ARGS+=	-DWITH_CUPS=ON
-LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-base
+LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
 .else
 CMAKE_ARGS+=	-DWITH_CUPS=OFF
 .endif
