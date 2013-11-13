@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: devel/rubygem-analogger/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-analogger/Makefile 332033 2013-10-30 02:26:17Z swills $
 
 PORTNAME=	analogger
 PORTVERSION=	0.5.0
@@ -17,5 +17,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/analogger
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
