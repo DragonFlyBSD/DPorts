@@ -1,5 +1,5 @@
 # Created by: Charlie & <root@meatwad.mouf.net>
-# $FreeBSD: devel/rubygem-bacon/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-bacon/Makefile 332034 2013-10-30 02:29:22Z swills $
 
 PORTNAME=	bacon
 PORTVERSION=	1.2.0
@@ -15,5 +15,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/bacon
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
