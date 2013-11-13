@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Singleton/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Singleton/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	MooseX-Singleton
 PORTVERSION=	0.29
@@ -22,11 +22,4 @@ TEST_DEPENDS=	p5-MooseX-StrictConstructor>=0:${PORTSDIR}/devel/p5-MooseX-StrictC
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Singleton.3 \
-		MooseX::Singleton::Role::Meta::Class.3 \
-		MooseX::Singleton::Role::Meta::Instance.3 \
-		MooseX::Singleton::Role::Meta::Method::Constructor.3 \
-		MooseX::Singleton::Role::Object.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
