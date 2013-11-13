@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: security/p5-Net-SAML/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.11
@@ -22,16 +22,13 @@ USES=		perl5
 USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${DISTNAME}/Net
 
-MAN3=		Net::SAML.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/apps/openssl/std|${LOCALBASE}|' ${WRKSRC}/Makefile.PL
 
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}/
-	cd ${WRKSRC}/../ && ${INSTALL_SCRIPT} zxid.pl zxidhlo.pl ${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	cd ${WRKSRC}/../ && ${INSTALL_SCRIPT} zxid.pl zxidhlo.pl ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
