@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Signature/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Signature/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-Signature
 PORTVERSION=	1.10
@@ -14,7 +14,4 @@ COMMENT=	Perl Automated SIGNATURE testing
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Signature.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
