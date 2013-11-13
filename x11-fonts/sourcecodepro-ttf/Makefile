@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: x11-fonts/sourcecodepro-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/sourcecodepro-ttf/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	sourcecodepro-ttf
 PORTVERSION=	1.017
@@ -10,10 +10,7 @@ DISTNAME=	SourceCodePro_FontsOnly-${PORTVERSION}
 MAINTAINER=	masaki@club.kyutech.ac.jp
 COMMENT=	A set of fonts by Adobe designed for coders
 
-LICENSE=	OFL
-LICENSE_NAME=	SIL OPEN FONT LICENSE Version 1.1
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-LICENSE_PERMS=	auto-accept
+LICENSE=	OFL11
 
 BUILD_DEPENDS=	mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale	\
 		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir
