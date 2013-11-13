@@ -1,4 +1,4 @@
-# $FreeBSD: french/hyphen/Makefile 328067 2013-09-23 21:53:56Z bapt $
+# $FreeBSD: french/hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
 
 PORTNAME=	hyphen
 PORTVERSION=	3.0
@@ -10,7 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	French hyphenation rules
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
