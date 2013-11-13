@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: math/p5-Date-Handler/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Date-Handler/Makefile 332813 2013-11-05 06:56:18Z vanilla $
 
 PORTNAME=	Date-Handler
 PORTVERSION=	1.2
@@ -13,10 +13,6 @@ COMMENT=	Perl module for calculating time differences
 USES=		perl5
 USE_PERL5=	configure patch
 
-MAN3=		Date::Handler.3 Date::Handler::Delta.3 \
-		Date::Handler::Range.3 Date::Handler::Test.3
-
-NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's/[a-z][a-z]_[A-Z][A-Z]/$$&.ISO8859-15/g' \
 		${WRKSRC}/Handler.* ${WRKSRC}/README*
