@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 325107 2013-08-21 11:24:07Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 332197 2013-10-31 02:33:44Z hrs $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile.common 11415 2013-04-26 22:58:21Z kwm $
 
 BASE_GST_ALL_PLUGINS= \
@@ -334,7 +334,7 @@ gst_resindvd_BUILD_DEPENDS=	libdvdnav>=4.1.2:${PORTSDIR}/multimedia/libdvdnav
 gst_resindvd_RUN_DEPENDS=	libdvdnav>=4.1.2:${PORTSDIR}/multimedia/libdvdnav
 
 # rtmp xxx
-gst_rtmp_LIB_DEPENDS=	librtmp.so.0:${PORTSDIR}/multimedia/rtmpdump
+gst_rtmp_LIB_DEPENDS=	librtmp.so.0:${PORTSDIR}/multimedia/librtmp
 
 # shout2
 # keep the version to tell de difference between libshout and libshout2

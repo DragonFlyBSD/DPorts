@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile 332416 2013-11-01 22:14:07Z kwm $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile 11404 2013-04-26 19:05:50Z kwm $
 
 PORTNAME=	gstreamer
@@ -57,9 +57,6 @@ CFLAGS:=	${CFLAGS} -O2 -Wno-format
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS} ${PTHREAD_LIBS}
 
-# workaround a clang crash with clang 3.3, llvm bug # 15840
-USE_GCC=	any
-
 DEFAULT_AUDIOSINK?=	osssink
 DEFAULT_AUDIOSRC?=	osssrc
 
@@ -67,7 +64,6 @@ DEFAULT_AUDIOSRC?=	osssrc
 IGNORE=		DIST not specified
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH}=="i386"
@@ -79,7 +75,6 @@ PLIST_SUB+=	I386="@comment "
 .if ${GST_PLUGIN} == "base"
 DIST=	base
 NO_GSTREAMER_COMMON=	yes
-MAN1=		gst-discoverer-1.0.1
 .else
 BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 RUN_DEPEDNS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
@@ -170,5 +165,17 @@ post-patch:
 	-@${REINPLACE_CMD} -e 's|-Wl,--as-needed||g' \
 		${WRKSRC}/../gnome-libtool
 .endif
+
+# workaround a crash in clang 3.3 crash llvm bug # 15840
+.if ((${OSVERSION} >= 901504 && ${OSVERSION} < 902502) || \
+     (${OSVERSION} >= 1000037 && ${OSVERSION} < 1000056))
+USE_GCC=	any
+.endif
+
+post-install:
+.if ${GST_PLUGIN}==base
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgst*.so.0
+.endif
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gstreamer-1.0/libgst*.so
 
 .include <bsd.port.post.mk>
