@@ -1,11 +1,11 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: mail/claws-mail/Makefile 329440 2013-10-05 11:25:29Z pawel $
+# $FreeBSD: mail/claws-mail/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	claws-mail
 PORTREVISION=	1
 CATEGORIES=	mail news ipv6
 
-COMMENT=	Lightweight and very featureful GTK+ based e-mail and news client
+COMMENT=	Lightweight and featureful GTK+ based e-mail and news client
 
 LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libetpan.so:${PORTSDIR}/mail/libetpan \
