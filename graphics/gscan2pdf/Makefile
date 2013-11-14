@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/gscan2pdf/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gscan2pdf/Makefile 332387 2013-11-01 14:52:57Z marino $
 
 PORTNAME=	gscan2pdf
 PORTVERSION=	1.0.4
