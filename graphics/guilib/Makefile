@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/guilib/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/guilib/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	guilib
 PORTVERSION=	1.2.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.libsdl.org/projects/GUIlib/src/
 DISTNAME=	GUIlib-${PORTVERSION}
 
 MAINTAINER=	acm@FreeBSD.org
-COMMENT=	A very simple GUI framework for use with SDL
+COMMENT=	Simple GUI framework for use with SDL
 
 USE_SDL=	sdl
 USE_GMAKE=	yes
