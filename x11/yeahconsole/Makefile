@@ -1,5 +1,5 @@
-# Created by: asami
-# $FreeBSD: x11/yeahconsole/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# Created by: Satoshi Asami <asami@FreeBSD.org>
+# $FreeBSD: x11/yeahconsole/Makefile 333301 2013-11-09 15:27:25Z danfe $
 
 PORTNAME=	yeahconsole
 PORTVERSION=	0.3.4
@@ -7,11 +7,21 @@ CATEGORIES=	x11
 MASTER_SITES=	http://phrat.de/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	quake console-like extension for X terminals
+COMMENT=	Terminal wrapper for creating drop-down consoles
+
+LICENSE=	GPLv2
 
 USE_XORG=	x11
+ALL_TARGET=	${PORTNAME}
 
 PLIST_FILES=	bin/yeahconsole
+PORTDOCS=	README
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+
 .include <bsd.port.mk>
