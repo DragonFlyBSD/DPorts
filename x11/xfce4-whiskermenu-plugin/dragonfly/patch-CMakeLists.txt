@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2013-11-14 14:22:02.920140000 +0000
++++ CMakeLists.txt
+@@ -11,7 +11,7 @@ option(ENABLE_AS_NEEDED "Enable -Wl,--as
+ 
+ include(GNUInstallDirs)
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "(FreeBSD|DragonFly)")
+     unset(CMAKE_INSTALL_MANDIR)
+     set(CMAKE_INSTALL_MANDIR ${CMAKE_INSTALL_PREFIX}/man)
+ endif()
