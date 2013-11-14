@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xsm/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xsm/Makefile 331817 2013-10-28 01:07:28Z eadler $
 
 PORTNAME=	xsm
 PORTVERSION=	1.0.3
@@ -9,8 +9,4 @@ COMMENT=	X Session Manager
 
 XORG_CAT=	app
 USE_XORG=	xt xaw
-
-MAN1=		xsm.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
