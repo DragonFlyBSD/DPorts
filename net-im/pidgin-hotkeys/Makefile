@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/pidgin-hotkeys/Makefile 331339 2013-10-22 23:03:23Z garga $
+# $FreeBSD: net-im/pidgin-hotkeys/Makefile 332310 2013-10-31 23:41:22Z garga $
 
 PORTNAME=	pidgin-hotkeys
 PORTVERSION=	0.2.4
@@ -8,6 +8,8 @@ MASTER_SITES=	SF
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A pidgin plugin that allows user to assign global hotkeys
+
+LICENSE=	GPLv2
 
 LIB_DEPENDS=	libpurple.so:${PORTSDIR}/net-im/libpurple
 BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
