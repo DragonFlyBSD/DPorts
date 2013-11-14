@@ -1,5 +1,5 @@
 # Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
-# $FreeBSD: graphics/danpei/Makefile 330758 2013-10-18 15:02:20Z bapt $
+# $FreeBSD: graphics/danpei/Makefile 333221 2013-11-08 13:35:07Z wg $
 
 PORTNAME=	danpei
 PORTVERSION=	2.9.7
@@ -10,11 +10,14 @@ MASTER_SITES=	SF
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Image Viewer for X Window System with thumbnail preview feature
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LICENSE=	GPLv2
 
-.if !defined(WITHOUT_IMAGEMAGICK)
-RUN_DEPENDS+=	convert:${PORTSDIR}/graphics/ImageMagick
-.endif
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
+
+OPTIONS_DEFINE=	IMAGEMAGICK
+OPTIONS_DEFAULT=IMAGEMAGICK
+
+IMAGEMAGICK_RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 USES=		gettext
 USE_GNOME=	gtk12 gdkpixbuf
@@ -23,5 +26,8 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--without-included-gettext
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/danpei \
+		share/locale/de/LC_MESSAGES/danpei.mo \
+		share/locale/ja/LC_MESSAGES/danpei.mo
+
 .include <bsd.port.mk>
