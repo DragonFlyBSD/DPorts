@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: editors/madedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/madedit/Makefile 331827 2013-10-28 03:39:14Z delphij $
 
 PORTNAME=	madedit
 PORTVERSION=	0.2.9
@@ -7,8 +7,10 @@ PORTREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/MadEdit/MadEdit-${PORTVERSION}
 
-MAINTAINER=	delphij@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An open-source and cross-platform text/hex editor
+
+LICENSE=	GPLv2
 
 USES=		gettext pkgconfig
 USE_WX=		2.6+
