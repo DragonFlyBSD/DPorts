@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/py-atspi/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/py-atspi/Makefile 331973 2013-10-29 17:05:50Z kwm $
 #   $MCom: ports/trunk/accessibility/py-atspi/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	atspi
@@ -23,7 +23,7 @@ USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomehier intlhack pygobject3
 GNU_CONFIGURE=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
