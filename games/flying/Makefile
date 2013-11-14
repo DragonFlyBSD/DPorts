@@ -1,5 +1,5 @@
 # Created by: searle
-# $FreeBSD: games/flying/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/flying/Makefile 332375 2013-11-01 13:51:11Z danilo $
 
 PORTNAME=	flying
 PORTVERSION=	6.20
@@ -14,8 +14,6 @@ COMMENT=	Pool/snooker/billiards/carrom/etc game
 
 USES=		imake
 USE_XORG=	x11
-MAN1=		flying.1
-PLIST_FILES=	bin/flying
+PLIST_FILES=	bin/flying man/man1/flying.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
