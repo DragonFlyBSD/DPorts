@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/libproxy-gnome/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/libproxy-gnome/Makefile 332453 2013-11-02 04:12:38Z marino $
 #    $MCom: ports/net/libproxy-gnome/Makefile,v 1.1 2011/01/12 13:10:53 kwm Exp $
 
 PORTREVISION=	1
@@ -15,7 +15,7 @@ MASTERDIR=	${.CURDIR}/../libproxy
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
 USE_GNOME=	gconf2
-USES+=		pkgconfig
+USES=		pkgconfig
 
 LIBPROXY_SLAVE=	gnome
 
