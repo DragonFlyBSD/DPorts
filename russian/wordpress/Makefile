@@ -1,5 +1,5 @@
 # Created by: Mihail Timofeev <9267096@gmail.com>
-# $FreeBSD: russian/wordpress/Makefile 331659 2013-10-26 08:33:13Z sunpoet $
+# $FreeBSD: russian/wordpress/Makefile 333548 2013-11-12 08:09:10Z vg $
 
 PORTNAME=	wordpress
 PORTVERSION=	3.7.1
