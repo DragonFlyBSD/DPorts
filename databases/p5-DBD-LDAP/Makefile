@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: databases/p5-DBD-LDAP/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBD-LDAP/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBD-LDAP
 PORTVERSION=	0.20
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBD::LDAP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
