@@ -1,9 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/py-sqlrelay/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sqlrelay/Makefile 331904 2013-10-28 22:01:40Z pawel $
 
 PORTNAME=	${SQLRELAY_PORTNAME}
 PORTVERSION=	${SQLRELAY_PORTVERSION}
-PORTREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	# none
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,7 +28,6 @@ CONFIGURE_ENV=	PTHREADINCLUDES="${PTHREAD_CFLAGS}" \
 CONFIGURE_ARGS=	${SQLRELAY_CONFIGURE_ARGS} \
 		--with-python-prefix="${LOCALBASE}"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../sqlrelay/Makefile.common"
 
 .include <bsd.port.pre.mk>
