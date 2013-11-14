@@ -1,5 +1,5 @@
 # Created by: chris_pressey@yahoo.ca
-# $FreeBSD: games/fargoal/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/fargoal/Makefile 332374 2013-11-01 13:49:16Z danilo $
 
 PORTNAME=	fargoal
 PORTVERSION=	20040629
@@ -11,35 +11,27 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Remake of classic roguelike game "Sword of Fargoal"
 
-LIB_DEPENDS=	alleg:${PORTSDIR}/devel/allegro
+LIB_DEPENDS=	liballeg.so:${PORTSDIR}/devel/allegro
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
 USE_ZIP=	yes
-USE_GMAKE=	yes
+USES=		gmake
 
 SUB_FILES=	${PORTNAME}-sh
 
-NO_STAGE=	yes
 do-install:
-# Script
-	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}-sh ${PREFIX}/bin/${PORTNAME}
-
-# Program
-	@${INSTALL_PROGRAM} ${WRKSRC}/../sword ${PREFIX}/libexec/${PORTNAME}
-
-# Data
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}-sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/../sword ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
 .for f in agreement.txt data gfx sfx
-	@${MKDIR} ${DATADIR}
-	@${CP} -R ${WRKSRC}/../${f} ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${CP} -R ${WRKSRC}/../${f} ${STAGEDIR}${DATADIR}
 .endfor
 
 post-install:
-# Fix permissions
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DATADIR}
-	@${FIND} ${DATADIR} -type f -print0 | \
+	@${FIND} ${STAGEDIR}${DATADIR} -type f -print0 | \
 		${XARGS} -0 ${CHMOD} ${SHAREMODE}
-	@${FIND} ${DATADIR} -type d -print0 | \
+	@${FIND} ${STAGEDIR}${DATADIR} -type d -print0 | \
 		${XARGS} -0 ${CHMOD} ${BINMODE}
 
 .include <bsd.port.mk>
