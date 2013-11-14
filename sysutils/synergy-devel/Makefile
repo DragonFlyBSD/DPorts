@@ -1,5 +1,5 @@
 # Created by: George Neville-Neil <gnn@FreeBSD.org>
-# $FreeBSD: sysutils/synergy-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/synergy-devel/Makefile 332442 2013-11-02 03:08:40Z marino $
 
 PORTNAME=	synergy
 PORTVERSION=	1.4.12
