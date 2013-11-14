@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/newvox/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD: games/newvox/Makefile 332778 2013-11-04 20:40:43Z danilo $
 
 PORTNAME=	newvox
 PORTVERSION=	1.0
@@ -14,12 +14,11 @@ USE_SDL=	sdl
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-lm
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/newvox ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/newvox
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/newvox
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/newvox ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/newvox
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${PREFIX}/share/doc/newvox
 
 .include <bsd.port.mk>
