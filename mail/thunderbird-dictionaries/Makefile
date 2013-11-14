@@ -1,10 +1,9 @@
-NO_STAGE=yes
 # Created by: Matthew Luckie <mjl@luckie.org.nz>
-# $FreeBSD: mail/thunderbird-dictionaries/Makefile 322993 2013-07-14 16:22:29Z marino $
+# $FreeBSD: mail/thunderbird-dictionaries/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	thunderbird-dictionaries
 PORTVERSION=	20060220
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZDEV}
 MASTER_SITE_SUBDIR=	dictionaries
@@ -20,6 +19,7 @@ USE_ZIP=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/dictionaries
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.options"
 
 .include <bsd.port.options.mk>
