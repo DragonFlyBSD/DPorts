@@ -1,4 +1,4 @@
-# $FreeBSD: databases/c3p0/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/c3p0/Makefile 333236 2013-11-08 14:52:32Z olgeni $
 
 PORTNAME=	c3p0
 PORTVERSION=	0.9.2
@@ -8,21 +8,18 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}.bin
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	olgeni@FreeBSD.org
-COMMENT=	A library for augmenting JDBC drivers with JNDI-bindable DataSources
+COMMENT=	Library for augmenting JDBC drivers with JNDI-bindable DataSources
 
 USE_JAVA=	yes
 NO_BUILD=	yes
 JAVA_VERSION=	1.6+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_DATA} ${WRKSRC}/lib/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${PORTNAME}.jar
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC}/doc && ${COPYTREE_SHARE} apidocs ${DOCSDIR}
-	@cd ${WRKSRC}/doc && ${COPYTREE_SHARE} apidocs-oracle-thin ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/doc/arrow_sm.png ${WRKSRC}/doc/index.html ${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/lib/${PORTNAME}-${PORTVERSION}.jar ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}.jar
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} apidocs ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} apidocs-oracle-thin ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/arrow_sm.png ${WRKSRC}/doc/index.html ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
