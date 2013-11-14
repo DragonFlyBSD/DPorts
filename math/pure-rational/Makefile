@@ -1,22 +1,33 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: math/pure-rational/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/pure-rational/Makefile 333045 2013-11-06 22:50:21Z delphij $
 
 PORTNAME=	pure-rational
 PORTVERSION=	0.1
 PORTREVISION=	1
 CATEGORIES=	math
+MASTER_SITES=	https://cdn.bitbucket.org/purelang/pure-lang/downloads/
+DIST_SUBDIR=	pure
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Rational number library for the Pure language
 
 LICENSE=	GPLv3
 
-USE_PURE=	yes
-NO_PURE_EXAMPLES=	yes
+USES=		pure
 
 PLIST_FILES=	lib/pure/rational.pure \
 		lib/pure/rat_interval.pure
 
 NO_STAGE=	yes
-.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+
+PORTDOCS=	README
+
+.include <bsd.port.options.mk>
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.endif
+
 .include <bsd.port.mk>
