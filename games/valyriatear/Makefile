@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/valyriatear/Makefile 330512 2013-10-16 13:38:24Z amdmi3 $
+# $FreeBSD: games/valyriatear/Makefile 332093 2013-10-30 10:30:07Z marino $
 
 PORTNAME=	valyriatear
 PORTVERSION=	0.6.0
@@ -29,6 +29,7 @@ USE_GL=		gl
 USE_OPENAL=	yes
 USE_LUA=	5.1
 INSTALLS_ICONS=	yes
+LDFLAGS=	-L${LOCALBASE}/lib ${ICONV_LIB} -lintl
 
 PORTDOCS=	*
 PORTDATA=	*
