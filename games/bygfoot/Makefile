@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: games/bygfoot/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD: games/bygfoot/Makefile 332078 2013-10-30 06:35:35Z danilo $
 
 PORTNAME=	bygfoot
 PORTVERSION=	2.2.1
@@ -22,5 +22,4 @@ USE_GNOME=	gtk20
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} -lm
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
