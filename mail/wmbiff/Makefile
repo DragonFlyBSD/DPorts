@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: mail/wmbiff/Makefile 330246 2013-10-13 19:05:00Z garga $
+# $FreeBSD: mail/wmbiff/Makefile 332303 2013-10-31 23:36:06Z garga $
 
 PORTNAME=	wmbiff
 PORTVERSION=	0.4.27
@@ -9,6 +9,8 @@ MASTER_SITES=	SF
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	An xbiff-like Window Maker dock app
+
+LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	GNUTLS
 
@@ -40,6 +42,6 @@ CONFIGURE_ARGS+=	--disable-crypto
 post-install:
 	@${ECHO_MSG} "===>   Installing sample.wmbiffrc to ${DATADIR}"
 	@${ECHO_MSG} "===>   Modify it to suit your needs and copy to ~/.wmbiffrc"
-	@${INSTALL_DATA} -m 644 ${WRKSRC}/wmbiff/sample.wmbiffrc ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} -m 644 ${WRKSRC}/wmbiff/sample.wmbiffrc ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.post.mk>
