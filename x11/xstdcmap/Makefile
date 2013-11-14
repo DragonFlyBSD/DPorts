@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xstdcmap/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xstdcmap/Makefile 332201 2013-10-31 04:20:50Z eadler $
 
 PORTNAME=	xstdcmap
 PORTVERSION=	1.0.3
@@ -12,9 +12,5 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	xmu x11
 
-PLIST_FILES=	bin/xstdcmap
-
-MAN1=		xstdcmap.1
-
-NO_STAGE=	yes
+PLIST_FILES=	bin/xstdcmap man/man1/xstdcmap.1.gz
 .include <bsd.port.mk>
