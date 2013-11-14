@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/xml-security/Makefile 330400 2013-10-15 13:37:48Z ale $
+# $FreeBSD: security/xml-security/Makefile 333560 2013-11-12 10:36:16Z bapt $
 
 PORTNAME=	xml-security
 PORTVERSION=	1.5.5
@@ -36,10 +36,6 @@ PLIST_FILES=	%%JAVAJARDIR%%/xmlsec.jar
 .if ${PORT_OPTIONS:MDOCS}
 ALL_TARGET+=	javadoc
 .endif
-
-do-build:
-	@(cd ${BUILD_WRKSRC}; \
-		${SETENV} ${MAKE_ENV} ${ANT} ${ALL_TARGET})
 
 do-install:
 	@${ECHO} -n ">> Installing JAR as ${JAVAJARDIR}/xmlsec.jar..."
