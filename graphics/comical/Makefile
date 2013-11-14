@@ -1,5 +1,5 @@
 # Created by: John McAree <john@mcaree.org>
-# $FreeBSD: graphics/comical/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: graphics/comical/Makefile 331891 2013-10-28 19:10:04Z dinoex $
 
 PORTNAME=	comical
 PORTVERSION=	0.8
@@ -15,7 +15,6 @@ LIB_DEPENDS=	unrar:${PORTSDIR}/archivers/libunrar
 LICENSE=	GPLv2
 
 MAKE_JOBS_UNSAFE=	yes
-NO_STAGE=	yes
 
 USE_GMAKE=	yes
 USE_WX=		2.6+
