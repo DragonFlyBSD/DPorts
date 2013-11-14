@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Tk-Pod/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD: textproc/p5-Tk-Pod/Makefile 333316 2013-11-09 18:48:32Z sunpoet $
 
 PORTNAME=	Tk-Pod
-PORTVERSION=	0.9941
+PORTVERSION=	0.9942
 CATEGORIES=	textproc tk perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
