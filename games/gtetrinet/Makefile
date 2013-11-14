@@ -1,5 +1,5 @@
 # Created by: Dan Papasian <bugg@bugg.strangled.net>
-# $FreeBSD: games/gtetrinet/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gtetrinet/Makefile 332444 2013-11-02 03:23:02Z danilo $
 
 PORTNAME=	gtetrinet
 PORTVERSION=	0.7.11
@@ -19,10 +19,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--bindir=${PREFIX}/bin --enable-ipv6
 
-MAN6=		gtetrinet.6
 GCONF_SCHEMAS=	gtetrinet.schemas
 
-NO_STAGE=	yes
 pre-configure:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]prefix[)]/games|{bindir}|g; /_DISABLE_DEPRECATED/d'
