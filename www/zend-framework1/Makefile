@@ -1,11 +1,10 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/zend-framework1/Makefile 328951 2013-10-01 14:13:20Z wg $
+# $FreeBSD: www/zend-framework1/Makefile 332964 2013-11-06 11:33:13Z wg $
 
 PORTNAME=	ZendFramework
-PORTVERSION=	1.12.0
-PORTREVISION=	1
+PORTVERSION=	1.12.3
 CATEGORIES=	www
-MASTER_SITES=	http://packages.zendframework.com/releases/${DISTNAME}/
+MASTER_SITES=	https://packages.zendframework.com/releases/${DISTNAME}/
 PKGNAMESUFFIX=	1
 
 MAINTAINER=	wg@FreeBSD.org
