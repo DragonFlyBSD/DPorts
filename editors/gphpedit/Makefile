@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: editors/gphpedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/gphpedit/Makefile 332598 2013-11-03 09:37:49Z novel $
 
 PORTNAME=	gphpedit
 PORTVERSION=	0.9.80
@@ -11,6 +11,9 @@ MASTER_SITES=	http://www.gphpedit.org/download/store/ \
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	PHP, HTML, and CSS development environment for GNOME 2.x
+
+DEPRECATED=	No longer maintaned upstream
+EXPIRATION_DATE=	2013-12-01
 
 USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgtkhtml
