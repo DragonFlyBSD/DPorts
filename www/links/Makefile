@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/links/Makefile 328260 2013-09-25 10:03:33Z bf $
+# $FreeBSD: www/links/Makefile 332222 2013-10-31 11:06:16Z bapt $
 
 PORTNAME=	links
 DISTVERSION=	2.8
@@ -12,7 +12,7 @@ COMMENT=	Lynx-like text WWW browser
 
 LICENSE=	GPLv2
 
-CONFLICTS=	links-0* links-hacked-[0-9]*
+CONFLICTS=	links-0* links-hacked-[0-9]* links1-*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-ssl --without-pmshell --without-atheos \
