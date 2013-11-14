@@ -1,8 +1,8 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/midipp/Makefile 331528 2013-10-24 20:10:09Z kwm $
+# $FreeBSD: audio/midipp/Makefile 332354 2013-11-01 11:02:59Z kwm $
 
 PORTNAME=	midipp
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.3
 CATEGORIES=	audio
 MASTER_SITES=	http://www.selasky.org/hans_petter/distfiles/ \
 		http://home.selasky.org:8192/distfiles/
