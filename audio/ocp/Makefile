@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/ocp/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ocp/Makefile 332364 2013-11-01 12:58:56Z ehaupt $
 
 PORTNAME=	ocp
 PORTVERSION=	0.1.20
@@ -23,7 +23,6 @@ ONLY_FOR_ARCHS=	i386 amd64
 
 GNU_CONFIGURE=	yes
 USES=		ncurses gmake pkgconfig
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 MAKE_JOBS_UNSAFE=	yes
