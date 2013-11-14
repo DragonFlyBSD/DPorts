@@ -1,5 +1,5 @@
 # Created by: johnh@isi.edu
-# $FreeBSD: games/dontspace/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/dontspace/Makefile 332961 2013-11-06 09:51:38Z gahr $
 
 PORTNAME=	dontspace
 PORTVERSION=	1.2
@@ -12,8 +12,8 @@ COMMENT=	A solitaire game for X11 modeled after Free Space
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--bindir=${PREFIX}/bin --datadir=${PREFIX}/share/games
-CONFIGURE_ENV=	WISHX=${PREFIX}/bin/wish8.4
-USE_TK=		yes
+CONFIGURE_ENV=	WISHX=${WISH}
+USES+=		tk
 MAN6=		dontspace.6
 
 NO_STAGE=	yes
