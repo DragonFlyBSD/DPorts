@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins-core/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gstreamer1-plugins-core/Makefile 332647 2013-11-03 20:06:59Z kwm $
 #    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.17 2006/07/17 01:39:57 ahze Exp $
 
 PORTNAME=	gstreamer1-plugins-core
@@ -23,7 +23,6 @@ OPTIONS_DEFINE=	DVD
 OPTIONS_DEFAULT=DVD
 DVD_DESC=	Include DVD related plugins
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Audio plugins
@@ -44,9 +43,7 @@ USE_GSTREAMER1+=	a52dec dvdread resindvd dts
 .endif
 
 do-install:
-	if [ ! -d ${PREFIX}/${GST_DIR} ]; then \
-		${MKDIR} ${PREFIX}/${GST_DIR} ; \
-	fi
-	${TOUCH} -f ${PREFIX}/${GST_DIR}/.gstreamer-plugins-core.keep
+	${MKDIR} ${STAGEDIR}${PREFIX}/${GST_DIR}
+	${TOUCH} -f ${STAGEDIR}${PREFIX}/${GST_DIR}/.gstreamer-plugins-core.keep
 
 .include <bsd.port.mk>
