@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-View-RRDGraph/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-View-RRDGraph/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	Catalyst-View-RRDGraph
 PORTVERSION=	0.08
@@ -19,8 +19,4 @@ TEST_DEPENDS=	p5-Test-MockObject>=1.07:${PORTSDIR}/devel/p5-Test-MockObject
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Helper::View::RRDGraph.3 \
-	Catalyst::View::RRDGraph.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
