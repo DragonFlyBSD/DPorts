@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/chryzodus/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/chryzodus/Makefile 333455 2013-11-10 23:13:21Z nivit $
 
 PORTNAME=	chryzodus
 PORTVERSION=	0.32
@@ -9,20 +9,21 @@ CATEGORIES=	math
 MASTER_SITES=	SF
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A chryzode (http//www.chryzode.org) explorer
+COMMENT=	Chryzode (http//www.chryzode.org) explorer
 
-LIB_DEPENDS=	alleg:${PORTSDIR}/devel/allegro
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	liballeg.so:${PORTSDIR}/devel/allegro
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAKEFILE=	makefile.unx
 
-NO_STAGE=	yes
-do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+OPTIONS_DEFINE=	DOCS
 
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}
-.endif
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/doc && \
+	${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
