@@ -1,19 +1,33 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: textproc/pure-csv/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pure-csv/Makefile 333045 2013-11-06 22:50:21Z delphij $
 
 PORTNAME=	pure-csv
 PORTVERSION=	1.5
+PORTREVISION=	1
 CATEGORIES=	textproc
+MASTER_SITES=	https://cdn.bitbucket.org/purelang/pure-lang/downloads/
+DIST_SUBDIR=	pure
 
 MAINTAINER=	lichray@gmail.com
-COMMENT=	A CSV reading and writing module for the Pure language
+COMMENT=	CSV reading and writing module for the Pure language
 
-USE_PURE=	yes
-NO_PURE_EXAMPLES=	yes
+LICENSE=	BSD
+
+USES=		pure
 
 PLIST_FILES=	lib/pure/csv.pure \
 		lib/pure/csv.so
 
 NO_STAGE=	yes
-.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+
+PORTDOCS=	README
+
+.include <bsd.port.options.mk>
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.endif
+
 .include <bsd.port.mk>
