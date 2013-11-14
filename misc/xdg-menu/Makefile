@@ -1,18 +1,18 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: misc/xdg-menu/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/xdg-menu/Makefile 333133 2013-11-07 16:13:47Z nemysis $
 
 PORTNAME=	xdg-menu
 PORTVERSION=	1.5
 PORTREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
-		SF/nemysisfreebsdp/:icons
+		SF/nemysisfreebsdp/${CATEGORIES}/:icons
 DISTFILES=	XDG-Menu-${DISTVERSION}.tgz \
 		${PORTNAME}.png:icons
 DIST_SUBDIR=	python
 EXTRACT_ONLY=	XDG-Menu-${DISTVERSION}.tgz
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	ROX panel applet that displays an applications menu button
 
 LICENSE=	GPLv2
@@ -37,7 +37,6 @@ ROX_DESC=	Enable ROX panel applet support
 
 SUB_FILES=	${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -56,20 +55,15 @@ do-build:
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
-	${MKDIR} ${DATADIR}
-	@(cd ${WRKSRC} && ${CP} -r Messages .DirIcon AppInfo.xml AppRun AppletRun \
-		Options.xml Messages python *.py *.pyc *.pyo ${DATADIR})
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC} && ${CP} -r Messages .DirIcon AppInfo.xml AppRun AppletRun \
+		Options.xml Messages python *.py *.pyc *.pyo ${STAGEDIR}${DATADIR})
 
-	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png ${PREFIX}/share/pixmaps/
+	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png ${STAGEDIR}${PREFIX}/share/pixmaps/
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/Help/|} ${DOCSDIR}
-.endif
-
-post-install:
-	@-update-desktop-database
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/Help/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
