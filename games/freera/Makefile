@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/freera/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/freera/Makefile 332119 2013-10-30 14:43:20Z amdmi3 $
 
 PORTNAME=	freera
 PORTVERSION=	080203
@@ -20,7 +20,9 @@ WRKSRC=		${WRKDIR}/freera++
 
 SUB_FILES=	pkg-message
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/${PORTNMAE}
+PORTDATA=	*
+
 post-patch:
 	@${MV} ${WRKSRC}/SConstruct ${WRKSRC}/SConstruct.orig
 	@${CP} ${FILESDIR}/SConstruct ${WRKSRC}/
@@ -31,12 +33,7 @@ post-patch:
 	@${RM} -rf ${WRKSRC}/data/settings/ra/.svn ${WRKSRC}/data/settings/td/.svn
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/freera ${PREFIX}/bin/
-	cd ${WRKSRC}/data && \
-		${FIND} . -type d -exec ${MKDIR} "${DATADIR}/{}" \; ;\
-		${FIND} . -type f -exec ${INSTALL_DATA} "{}" "${DATADIR}/{}" \;
-
-post-install:
-	${CAT} ${PKGMESSAGE}
+	${INSTALL_PROGRAM} ${WRKSRC}/freera ${STAGEDIR}${PREFIX}/bin/
+	cd ${WRKSRC}/data && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
