@@ -1,8 +1,9 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/cosmosmash/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/cosmosmash/Makefile 333231 2013-11-08 14:31:40Z kwm $
 
 PORTNAME=	cosmosmash
 DISTVERSION=	1.4.7
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/sarrazip/dev/ \
 		LOCAL/martymac
@@ -15,7 +16,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	flatzebra:${PORTSDIR}/devel/flatzebra \
 		aa:${PORTSDIR}/graphics/aalib \
 		mikmod:${PORTSDIR}/audio/libmikmod \
-		audiofile:${PORTSDIR}/audio/libaudiofile
+		libaudiofile.so:${PORTSDIR}/audio/libaudiofile
 
 USE_SDL=	sdl image mixer
 USE_XORG=	x11 xau xdmcp
