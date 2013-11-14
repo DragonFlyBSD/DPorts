@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xstroke/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xstroke/Makefile 331819 2013-10-28 01:18:16Z eadler $
 
 PORTNAME=	xstroke
 PORTVERSION=	0.5.12
@@ -16,15 +16,13 @@ LICENSE_COMB=	dual
 USES=		bison imake
 USE_XORG=	xft x11 xext xi xtst
 
-MAN1=		xstroke.1
-PLIST_FILES=	bin/xstroke %%ETCDIR%%/alphabet
+PLIST_FILES=	bin/xstroke %%ETCDIR%%/alphabet man/man1/xstroke.1.gz
 PLIST_DIRS=	%%ETCDIR%%
 
 CFLAGS+=	-I.
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX},g" ${WRKSRC}/etc/Imakefile
 	@${REINPLACE_CMD} -e "s,etc/,${PREFIX}/etc/,g" ${WRKSRC}/args.h
