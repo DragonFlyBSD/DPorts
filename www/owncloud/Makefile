@@ -1,7 +1,7 @@
-# $FreeBSD: www/owncloud/Makefile 329466 2013-10-05 15:03:22Z kevlo $
+# $FreeBSD: www/owncloud/Makefile 333309 2013-11-09 16:22:23Z kevlo $
 
 PORTNAME=	owncloud
-PORTVERSION=	5.0.12
+PORTVERSION=	5.0.13
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
@@ -14,9 +14,9 @@ BUILD_DEPENDS=	mp3info:${PORTSDIR}/audio/mp3info
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
-USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json mbstring \
-		mysql openssl pdo pdo_mysql pdo_sqlite session simplexml \
-		sqlite3 xml xmlreader xsl wddx zip zlib
+USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json ldap \
+		mbstring mysql openssl pdo pdo_mysql pdo_pgsql pdo_sqlite \
+		session simplexml sqlite3 xml xmlreader xsl wddx zip zlib
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
 
@@ -27,16 +27,7 @@ NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
 do-install:
-	${MKDIR} ${STAGEDIR}${WWWDIR}
+	@${MKDIR} -m 0755 ${STAGEDIR}${WWWDIR}
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}
-
-post-install:
-	@cd ${WRKSRC} && \
-	    ${FIND} -s -d . -type f -print | \
-		${SED} -e "s#^\.#${WWWDIR_REL}#" >> ${TMPPLIST}
-	@cd ${WRKSRC} && \
-	    ${FIND} -s -d . -type d  -print | \
-		${SED} -e "s#^\.#@dirrm ${WWWDIR_REL}#" >> ${TMPPLIST}
 
 .include <bsd.port.mk>
