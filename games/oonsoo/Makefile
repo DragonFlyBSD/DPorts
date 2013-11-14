@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <jsutton@bbcon.com.au>
-# $FreeBSD: games/oonsoo/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/oonsoo/Makefile 332785 2013-11-04 21:15:12Z danilo $
 
 PORTNAME=	oonsoo
 PORTVERSION=	1.2
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	games/solitaires
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A solitaire card game for X
+COMMENT=	Solitaire card game for X
 
 USE_XORG=	x11
 PLIST_FILES=	bin/oonsoo
@@ -21,8 +21,7 @@ MAKE_ARGS=	CC="${CXX}" CPPFLAGS="${CXXFLAGS} -ansi"	\
 		SYS_LIBS="-L${LOCALBASE}/lib -lX11"
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/oonsoo ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/oonsoo ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
