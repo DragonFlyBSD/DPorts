@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: irc/quassel/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD: irc/quassel/Makefile 333006 2013-11-06 15:58:35Z makc $
 
 PORTNAME=	quassel
-PORTVERSION=	0.9.0
+PORTVERSION=	0.9.1
 CATEGORIES=	irc
 MASTER_SITES=	http://www.quassel-irc.org/pub/
 
