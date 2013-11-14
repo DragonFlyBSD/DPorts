@@ -1,10 +1,10 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: multimedia/deforaos-player/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/deforaos-player/Makefile 332768 2013-11-04 20:03:46Z wg $
 
 PORTNAME=	player
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.6
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.defora.org/os/download/download/3708/
+MASTER_SITES=	http://www.defora.org/os/download/download/4297/
 PKGNAMEPREFIX=	deforaos-
 DISTNAME=	Player-${PORTVERSION}
 
@@ -13,13 +13,18 @@ COMMENT=	DeforaOS desktop media player
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	System:${PORTSDIR}/devel/deforaos-libsystem \
-		Desktop:${PORTSDIR}/x11/deforaos-libdesktop
+BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
+		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
+LIB_DEPENDS=	libSystem.so:${PORTSDIR}/devel/deforaos-libsystem \
+		libDesktop.so:${PORTSDIR}/x11/deforaos-libdesktop
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
 
 MAKE_ARGS+=	PREFIX=${PREFIX}
-USE_GNOME=	gtk20 desktopfileutils
-USES=		pkgconfig gettext
+USE_GNOME=	gtk20
+USES=		desktop-file-utils gettext pkgconfig
 
-NO_STAGE=	yes
+MAKE_ENV+=	MANDIR=${STAGEDIR}${MANPREFIX}/man
+
+post-install: compress-man
+
 .include <bsd.port.mk>
