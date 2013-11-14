@@ -1,4 +1,4 @@
-# $FreeBSD: mail/gnome-gmail-notifier/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gnome-gmail-notifier/Makefile 332086 2013-10-30 08:19:57Z marino $
 
 PORTNAME=	gnome-gmail-notifier
 PORTVERSION=	0.10.1
