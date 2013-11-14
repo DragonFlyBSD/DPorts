@@ -1,9 +1,8 @@
-NO_STAGE=yes
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/seamonkey-i18n/Makefile 324409 2013-08-08 18:42:03Z flo $
+# $FreeBSD: www/seamonkey-i18n/Makefile 332168 2013-10-30 20:37:55Z flo $
 
 PORTNAME=	seamonkey-i18n
-PORTVERSION=	2.20
+PORTVERSION=	2.22
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/langpack
 PKGNAMEPREFIX=
@@ -32,6 +31,7 @@ XPI_DISTNAMES=	${SEAMONKEY_I18N_}
 RUN_DEPENDS+=	xpi-quick-locale-switcher>=0:${PORTSDIR}/www/xpi-quick-locale-switcher
 .endif
 
+NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.option"
 .include <bsd.port.options.mk>
 .include "${.CURDIR}/Makefile.lang"
