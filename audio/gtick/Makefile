@@ -1,5 +1,5 @@
 # Created by: Liam J. Foy <liamfoy@sepulcrum.org>
-# $FreeBSD: audio/gtick/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gtick/Makefile 333127 2013-11-07 15:55:18Z martymac $
 
 PORTNAME=	gtick
 PORTVERSION=	0.5.2
@@ -11,27 +11,18 @@ COMMENT=	A metronome application
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	sndfile:${PORTSDIR}/audio/libsndfile \
-		pulse-simple:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libpulse-simple.so:${PORTSDIR}/audio/pulseaudio
 
 USES=		pkgconfig
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=	gtick.1
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-CONFIGURE_ARGS+=	--enable-nls
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=	--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+NLS_USES=	gettext
+NLS_CONFIGURE_ENABLE=	nls
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/configure
