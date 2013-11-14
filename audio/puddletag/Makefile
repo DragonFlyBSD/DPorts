@@ -1,8 +1,7 @@
-# $FreeBSD: audio/puddletag/Makefile 328368 2013-09-26 14:47:00Z pawel $
+# $FreeBSD: audio/puddletag/Makefile 333265 2013-11-08 22:12:35Z pawel $
 
 PORTNAME=	puddletag
-PORTVERSION=	1.0.1
-PORTREVISION=	3
+PORTVERSION=	1.0.2
 CATEGORIES=	audio python
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=${PORTNAME}
