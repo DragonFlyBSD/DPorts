@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/cosmo/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/cosmo/Makefile 332157 2013-10-30 17:46:53Z danilo $
 
 PORTNAME=	cosmo
 PORTVERSION=	2.0.4
@@ -26,12 +26,12 @@ USES=		imake:notall
 USE_XORG=	x11 xext
 NO_INSTALL_MANPAGES=	yes
 
-NO_STAGE=	yes
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/cosmorc ${PREFIX}/lib/X11/cosmo
+do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/cosmo
+	${INSTALL_PROGRAM} ${WRKSRC}/cosmo ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/cosmorc ${STAGEDIR}${PREFIX}/lib/X11/cosmo
+	${ECHO} > ${STAGEDIR}${PREFIX}/lib/X11/cosmo/best.dat
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/moon.tif.gz \
-		${PREFIX}/lib/X11/cosmo
-	${CHOWN} root:games ${PREFIX}/bin/cosmo
-	${CHMOD} g+s ${PREFIX}/bin/cosmo
+		${STAGEDIR}${PREFIX}/lib/X11/cosmo
 
 .include <bsd.port.mk>
