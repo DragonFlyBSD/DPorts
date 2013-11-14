@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-Test-WWW-Selenium/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-WWW-Selenium/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-WWW-Selenium
 PORTVERSION=	1.36
@@ -24,10 +24,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::REPL::Plugin::Selenium.3 \
-		Test::WWW::Selenium.3 \
-		WWW::Selenium::Util.3 \
-		WWW::Selenium.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
