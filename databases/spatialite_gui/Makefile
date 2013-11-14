@@ -1,9 +1,9 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/spatialite_gui/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/spatialite_gui/Makefile 332843 2013-11-05 12:42:02Z wen $
 
 PORTNAME=	spatialite_gui
 PORTVERSION=	1.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-stable
