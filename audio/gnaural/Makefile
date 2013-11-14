@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: audio/gnaural/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gnaural/Makefile 332821 2013-11-05 08:16:11Z martymac $
 
 PORTNAME=	gnaural
 PORTVERSION=	1.0.20110606
@@ -13,16 +13,12 @@ COMMENT=	Binaural beat generator
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
-LIB_DEPENDS=	portaudio.2:${PORTSDIR}/audio/portaudio2 \
-		sndfile:${PORTSDIR}/audio/libsndfile
+LIB_DEPENDS=	libportaudio.so.2:${PORTSDIR}/audio/portaudio2 \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile
 
 GNU_CONFIGURE=	yes
-USES=		pkgconfig
-NO_STAGE=	yes
+USES=		pkgconfig desktop-file-utils
 USE_CSTD=	gnu89
-USE_GNOME=	libglade2 desktopfileutils
-
-post-install:
-	-@update-desktop-database
+USE_GNOME=	libglade2
 
 .include <bsd.port.mk>
