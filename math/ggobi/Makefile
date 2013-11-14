@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: math/ggobi/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ggobi/Makefile 332750 2013-11-04 17:43:48Z wg $
 
 PORTNAME=	ggobi
 PORTVERSION=	2.1.9
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=	--with-all-plugins
 
 ALL_TARGET=	all ggobirc
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|ND_coord_i|ND_coord|' \
 		${WRKSRC}/plugins/GraphLayout/graphviz.c
@@ -41,10 +40,7 @@ post-configure:
 		${WRKSRC}/plugins/GraphLayout/Makefile
 
 post-install:
-	${MKDIR} ${PREFIX}/etc/xdg/ggobi
-	${INSTALL_DATA} ${WRKSRC}/ggobirc ${PREFIX}/etc/xdg/ggobi/ggobirc.sample
-	@if [ ! -f ${PREFIX}/etc/xdg/ggobi/ggobirc ]; then \
-		${CP} -p ${PREFIX}/etc/xdg/ggobi/ggobirc.sample ${PREFIX}/etc/xdg/ggobi/ggobirc ; \
-	fi
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/xdg/ggobi
+	${INSTALL_DATA} ${WRKSRC}/ggobirc ${STAGEDIR}${PREFIX}/etc/xdg/ggobi/ggobirc.sample
 
 .include <bsd.port.mk>
