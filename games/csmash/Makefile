@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/csmash/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/csmash/Makefile 332335 2013-11-01 02:24:14Z danilo $
 
 PORTNAME=	csmash
 PORTVERSION=	0.6.6
@@ -8,18 +8,16 @@ CATEGORIES=	games
 MASTER_SITES=	SF/cannonsmash/CannonSmash/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A 3D tabletennis game
+COMMENT=	3D tabletennis game
 
-USES=		gettext pkgconfig
+USES=		gettext gmake pkgconfig
 USE_SDL=	image mixer sdl
 USE_GL=		yes
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/SDL
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|/games/|/|g'
