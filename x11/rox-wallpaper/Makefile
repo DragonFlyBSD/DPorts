@@ -1,4 +1,4 @@
-# $FreeBSD: x11/rox-wallpaper/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/rox-wallpaper/Makefile 333246 2013-11-08 16:28:37Z olgeni $
 
 PORTNAME=	rox-wallpaper
 PORTVERSION=	2.3
@@ -17,14 +17,12 @@ USE_PYTHON=	yes
 
 WRKSRC=		${WRKDIR}/Wallpaper
 
-NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} -m compileall ${WRKSRC}
 	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
 
 do-install:
-	@${MKDIR} ${PREFIX}/apps
-	@${CP} -r ${WRKSRC} ${PREFIX}/apps/Wallpaper
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/apps/Wallpaper
+	@${MKDIR} ${STAGEDIR}${PREFIX}/apps
+	${CP} -r ${WRKSRC} ${STAGEDIR}${PREFIX}/apps/Wallpaper
 
 .include <bsd.port.mk>
