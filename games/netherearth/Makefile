@@ -1,5 +1,5 @@
 # Created by: Ginzburg Oleg
-# $FreeBSD: games/netherearth/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/netherearth/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	netherearth
 PORTVERSION=	0.51
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://move.kirishi.ru/soft/netherearth/
 
 MAINTAINER=	olevole@olevole.ru
-COMMENT=	Remake of the very first real time strategy game on the SPECTRUM
+COMMENT=	Remake of the first real time strategy game on the SPECTRUM
 
 GNU_CONFIGURE=	yes
 
