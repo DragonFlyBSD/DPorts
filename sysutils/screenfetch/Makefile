@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/screenfetch/Makefile 331351 2013-10-23 06:10:47Z jgh $
+# $FreeBSD: sysutils/screenfetch/Makefile 333186 2013-11-08 07:37:04Z jgh $
 
 PORTNAME=	screenFetch
 PORTVERSION=	3.2.0
@@ -26,17 +26,12 @@ GH_COMMIT=	${GH_TAGNAME}
 PLIST_FILES=	bin/screenFetch bin/screenfetch
 PORTDOCS=	CHANGELOG README.mkdn TODO
 
-.include <bsd.port.options.mk>
-
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME:tl}-dev ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${LN} -fs ${PORTNAME} ${STAGEDIR}${PREFIX}/bin/screenfetch
-
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
