@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/jtans/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/jtans/Makefile 332487 2013-11-02 14:23:50Z danilo $
 
 PORTNAME=	jtans
 PORTVERSION=	1.0
@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME}_appli-${PORTVERSION}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A (not so) ancient puzzle
+COMMENT=	Ancient puzzle
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
@@ -24,10 +24,9 @@ NO_BUILD=	yes
 SUB_FILES=	jtans.sh
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/jtans.sh ${PREFIX}/bin/jtans
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/jtans_appli-1.0.jar ${DATADIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/jtans.sh ${STAGEDIR}${PREFIX}/bin/jtans
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/jtans_appli-1.0.jar ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
