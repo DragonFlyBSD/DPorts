@@ -1,5 +1,5 @@
 # Created by: nkazushi@highway.or.jp
-# $FreeBSD: x11/xskyroot/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xskyroot/Makefile 331822 2013-10-28 01:23:24Z eadler $
 
 PORTNAME=	xskyroot
 PORTVERSION=	920428
@@ -19,8 +19,5 @@ DIST_SUBDIR=	${PORTNAME}
 NO_WRKSUBDIR=	yes
 USES=		imake
 USE_XORG=	x11
-NO_INSTALL_MANPAGES=	yes
 PLIST_FILES=	bin/xskyroot
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
