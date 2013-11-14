@@ -14,7 +14,7 @@ COMMENT=	Embed Xine player into browser
 
 LIB_DEPENDS=	xine.2:${PORTSDIR}/multimedia/libxine
 
-USES=		pkgconfig
+USES=		pkgconfig npapi
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_NPAPI=	native
@@ -23,5 +23,4 @@ NPAPI_WRKSRC=	${WRKSRC}/src/.libs
 NPAPI_FILES=	xineplugin.so
 
 NO_STAGE=	yes
-.include "${.CURDIR}/../../Mk/bsd.npapi.mk"
 .include <bsd.port.mk>
