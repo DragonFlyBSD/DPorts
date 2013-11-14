@@ -1,5 +1,5 @@
 # Created by: swills@
-# $FreeBSD: net/p5-Net-LDAP-Server-Test/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-LDAP-Server-Test/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-LDAP-Server-Test
 PORTVERSION=	0.19
@@ -20,7 +20,4 @@ BUILD_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::LDAP::Server::Test.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
