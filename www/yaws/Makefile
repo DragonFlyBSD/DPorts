@@ -1,21 +1,25 @@
-# $FreeBSD: www/yaws/Makefile 330532 2013-10-16 19:27:35Z olgeni $
+# $FreeBSD: www/yaws/Makefile 333004 2013-11-06 15:35:55Z olgeni $
 
 PORTNAME=	yaws
-PORTVERSION=	1.97
+PORTVERSION=	1.98
 CATEGORIES=	www devel
-MASTER_SITES=	http://yaws.hyber.org/download/
 
 MAINTAINER=	olgeni@FreeBSD.org
-COMMENT=	A webserver for dynamic content written in Erlang
+COMMENT=	Web server for dynamic content written in Erlang
 
 BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang
 RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
-HAS_CONFIGURE=	yes
-USE_GMAKE=	yes
-WRKSRC=		${WRKDIR}/yaws-${PORTVERSION}
+USES=		gmake
+USE_AUTOTOOLS=	autoconf
+USE_GITHUB=	yes
+
+GH_ACCOUNT=	klacke
+GH_PROJECT=	yaws
+GH_COMMIT=	83bdc80
+GH_TAGNAME=	yaws-${PORTVERSION}
 
 MAN1=		yaws.1
 MAN5=		yaws.conf.5 yaws_api.5 yaws_soap_lib.5
