@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/soundkonverter/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/soundkonverter/Makefile 332755 2013-11-04 18:41:08Z dbn $
 
 PORTNAME=	soundkonverter
 DISTVERSION=	2.0.4
@@ -12,11 +12,10 @@ COMMENT=	Frontend to various audio converters (transcoder)
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib \
-		cdda_paranoia:${PORTSDIR}/audio/cdparanoia
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib \
+		libcdda_paranoia.so:${PORTSDIR}/audio/cdparanoia
 
 USES=		cmake
-NO_STAGE=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_KDE4=	automoc4 kdehier kdeprefix kdelibs libkcddb
 INSTALLS_ICONS=	yes
