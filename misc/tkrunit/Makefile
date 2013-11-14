@@ -1,5 +1,5 @@
 # Created by: Stephen Farrell <steve@farrell.org>
-# $FreeBSD: misc/tkrunit/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/tkrunit/Makefile 333002 2013-11-06 15:13:25Z gahr $
 
 PORTNAME=	tkRunIt
 PORTVERSION=	0.94.1
@@ -11,26 +11,27 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GUI app launcher with completion and history
 
+OPTIONS_DEFINE=	EXAMPLES
+
 LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
+USES+=		tk
 NO_BUILD=	yes
-
-USE_TK_WRAPPER=	yes
 
 PORTEXAMPLES=	${PORTNAME:tl}
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 post-patch:
-	@${REINPLACE_CMD} -e \
-		's|/usr/local/bin|${PREFIX}/bin|' ${WRKSRC}/runit.tcl
+	@${REINPLACE_CMD} -e 's|wish|${WISH}|g' ${WRKSRC}/runit.tcl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/runit.tcl ${PREFIX}/bin/${PORTNAME}
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/runitrc.sample ${EXAMPLESDIR}/${PORTNAME:tl}
+	${INSTALL_SCRIPT} ${WRKSRC}/runit.tcl ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+.if ${PORT_OPTIONS:MEXAMPLES}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/runitrc.sample ${STAGEDIR}${EXAMPLESDIR}/${PORTNAME:tl}
 	@${ECHO_MSG} "		"
 	@${ECHO_MSG} "-------------------------------------------------------------------"
 	@${ECHO_MSG} "===> Installing runitrc.sample in ${EXAMPLESDIR}/${PORTNAME:tl}"
