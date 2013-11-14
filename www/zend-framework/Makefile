@@ -1,8 +1,8 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/zend-framework/Makefile 328268 2013-09-25 11:28:43Z wg $
+# $FreeBSD: www/zend-framework/Makefile 332910 2013-11-05 21:16:32Z wg $
 
 PORTNAME=	ZendFramework
-PORTVERSION=	2.2.4
+PORTVERSION=	2.2.5
 CATEGORIES=	www
 MASTER_SITES=	https://packages.zendframework.com/releases/${DISTNAME}/
 EXTRACT_SUFX=	.tgz
