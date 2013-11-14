@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gprbuild/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gprbuild/Makefile 333414 2013-11-10 17:32:10Z marino $
 
 PORTNAME=	gprbuild
 PORTVERSION=	${SNAPSHOT}
@@ -20,10 +20,8 @@ DOCSDIR=	share/doc/gprbuild
 WRKSRC=		${WRKDIR}/gprbuild-2012-src
 SNAPSHOT=	20120510
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES+=		ada
+USES=		ada gmake
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == "FreeBSD"
@@ -33,5 +31,9 @@ CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-portbld-${OPSYS:tl}${OSREL}
 post-patch:
 	@${REINPLACE_CMD} -e "s,@AUXPREFIX@,${PREFIX}/gcc-aux," \
 	  ${WRKSRC}/share/gprconfig/compilers.xml
+
+post-install:
+	cd ${STAGEDIR}${PREFIX}; ${FIND} share -type d -empty | \
+	  ${SORT} -dr | ${XARGS} ${RMDIR}
 
 .include <bsd.port.post.mk>
