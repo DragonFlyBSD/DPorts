@@ -1,24 +1,33 @@
 # Created by: Pascal Vizeli <pvizeli@yahoo.de>
-# $FreeBSD: multimedia/gpac-mp4box/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gpac-mp4box/Makefile 332289 2013-10-31 21:33:48Z wg $
 
 PORTNAME=	mp4box
-DISTVERSION=	0.4.5
-PORTREVISION=	1
+DISTVERSION=	0.5.0
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/gpac/GPAC/GPAC%20${PORTVERSION}
 PKGNAMEPREFIX=	gpac-
 DISTNAME=	gpac-${DISTVERSION}
 
 MAINTAINER=	pvizeli@yahoo.de
-COMMENT=	A tool for merge mpg4 from Gpac
+COMMENT=	Tool for merge mpg4 from Gpac
 
-LIB_DEPENDS=	gpac.1:${PORTSDIR}/multimedia/gpac-libgpac
+LICENSE=	LGPL21
+
+LIB_DEPENDS=	libgpac.so:${PORTSDIR}/multimedia/gpac-libgpac
+
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -lgpac
 
 WRKSRC=		${WRKDIR}/gpac/applications/mp4box
-PLIST_FILES=	bin/mp4box
+PLIST_FILES=	bin/mp4box man/man1/mp4box.1.gz
 
-NO_STAGE=	yes
-pre-patch:
-	${RM} -f ${WRKSRC}/Makefile
+do-build:
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} -o mp4box \
+		filedump.c fileimport.c live.c main.c
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/mp4box ${STAGEDIR}${PREFIX}/bin/mp4box
+	${INSTALL_MAN} ${WRKSRC}/../../doc/man/mp4box.1 \
+		${STAGEDIR}${PREFIX}/man/man1/mp4box.1
 
 .include <bsd.port.mk>
