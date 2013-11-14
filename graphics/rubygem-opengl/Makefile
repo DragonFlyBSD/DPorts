@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@meatwad.mouf.net>
-# $FreeBSD: graphics/rubygem-opengl/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-opengl/Makefile 332045 2013-10-30 02:50:05Z swills $
 
 PORTNAME=	opengl
 PORTVERSION=	0.8.0
@@ -17,7 +17,6 @@ USE_RUBYGEMS=	yes
 USE_GL=		glut
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .if ${RUBY_VER} == 1.8
 IGNORE=	Does not work with Ruby 1.8
