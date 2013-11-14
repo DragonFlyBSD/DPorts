@@ -1,14 +1,14 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: sysutils/msktutil/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/msktutil/Makefile 332430 2013-11-01 23:51:27Z zi $
 
 PORTNAME=	msktutil
-PORTVERSION=	0.5
+PORTVERSION=	0.5.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
     		http://mirrors.rit.edu/zi/
 
 MAINTAINER=	zi@FreeBSD.org
-COMMENT=	A utility to manage Active Directory interoperability
+COMMENT=	Utility to manage Active Directory interoperability
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
