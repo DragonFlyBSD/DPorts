@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/rubygem-graphviz/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-graphviz/Makefile 332044 2013-10-30 02:48:42Z swills $
 
 PORTNAME=	graphviz
 PORTVERSION=	1.0.9
@@ -20,5 +20,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/ruby2gv bin/gem2gv bin/dot2ruby bin/git2gv bin/xml2gv
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
