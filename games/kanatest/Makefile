@@ -1,5 +1,5 @@
 # Created by: S H A N <shanali@yahoo.com>
-# $FreeBSD: games/kanatest/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/kanatest/Makefile 332490 2013-11-02 14:31:27Z danilo $
 
 PORTNAME=	kanatest
 PORTVERSION=	0.4.8
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://clayo.org/kanatest/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Japanese kana (Hiragana and Katakana) simple flashcard tool
+COMMENT=	Japanese kana (Hiragana and Katakana) simple flashcard tool
 
 USES=		gettext gmake pkgconfig
 USE_GNOME=	gtk20 libxml2
@@ -35,8 +35,5 @@ post-patch:	.SILENT
 		${WRKSRC}/src/gui.c \
 		${WRKSRC}/src/options.c \
 		${WRKSRC}/src/stats.c
-NO_STAGE=	yes
-post-install:
-	-update-desktop-database ${PREFIX}/share/applications
 
 .include <bsd.port.mk>
