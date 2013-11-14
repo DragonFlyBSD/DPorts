@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xsel/Makefile 329750 2013-10-08 00:15:34Z marino $
+# $FreeBSD: x11/xsel/Makefile 331823 2013-10-28 01:33:51Z eadler $
 
 PORTNAME=	xsel
 PORTVERSION=	0.04.1
@@ -16,22 +16,16 @@ USE_BZIP2=	yes
 USE_XORG=	xmu xaw xt xproto xkbfile
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lXt -lXaw -lX11 -lXmu
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/xsel.1.gz
 PORTDOCS=	${PORTNAME}.html
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-build:
-	@cd ${WRKSRC} && ${CC} ${CFLAGS} xsel.c -o xsel ${LDFLAGS}
+	cd ${WRKSRC} && ${CC} ${CFLAGS} xsel.c -o xsel ${LDFLAGS}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.man ${MAN1PREFIX}/man/man1/${PORTNAME}.1
-.if ${PORT_OPTIONS:MDOCS}
-	@${INSTALL} -d ${DOCSDIR}/
-	@cd ${WRKSRC}/&&${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.man ${STAGEDIR}${MAN1PREFIX}/man/man1/${PORTNAME}.1
+	${INSTALL} -d ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/&&${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
