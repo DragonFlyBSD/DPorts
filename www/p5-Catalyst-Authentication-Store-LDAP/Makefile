@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-LDAP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Authentication-Store-LDAP/Makefile 332617 2013-11-03 15:16:25Z az $
 
 PORTNAME=	Catalyst-Authentication-Store-LDAP
 PORTVERSION=	1.014
@@ -20,9 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Authentication::Store::LDAP.3 \
-		Catalyst::Authentication::Store::LDAP::Backend.3 \
-		Catalyst::Authentication::Store::LDAP::User.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
