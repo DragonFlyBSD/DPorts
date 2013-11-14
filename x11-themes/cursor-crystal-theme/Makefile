@@ -1,8 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
-
-# Note:	1)	If port is interupted while compiling, "make clean" must be run before
-#		attempting to recompile.
+# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 333149 2013-11-07 19:57:29Z dbn $
 
 PORTNAME=	cursor-crystal-theme
 DISTVERSION=	1.1.1
@@ -15,13 +12,14 @@ DISTNAME=	Crystalcursors
 MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	KDE Crystal style X cursor theme
 
+LICENSE=	LGPL21
+
 BUILD_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 		xcursorgen:${PORTSDIR}/x11/xcursorgen
 
+USES=		gmake
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|function ||' \
 		${WRKSRC}/colorize.sh \
@@ -34,11 +32,14 @@ post-patch:
 		${WRKSRC}/left-handed_templates/Makefile \
 		${WRKSRC}/white_src/Makefile
 
+pre-build:
+	@(cd ${WRKSRC}; ${ENV} ${MAKE_ENV} ${GMAKE} clean ${MAKE_ARGS})
+
 pre-install:
 	@${REINPLACE_CMD} \
-		-e 's|$$(HOME)/.icons/|${DESTDIR}${PREFIX}/lib/X11/icons|' \
-		-e 's|$$(MAKE) .*install|$$(MAKE) PREFIX=${DESTDIR}${PREFIX}/lib/X11/icons install|g' \
-		-e 's|theme.default .*/default/index.theme|theme.default ${DESTDIR}${PREFIX}/lib/X11/icons/default/index.theme|' \
+		-e 's|$$(HOME)/.icons/|${STAGEDIR}${PREFIX}/lib/X11/icons|' \
+		-e 's|$$(MAKE) .*install|$$(MAKE) PREFIX=${STAGEDIR}${PREFIX}/lib/X11/icons install|g' \
+		-e 's|theme.default .*/default/index.theme|theme.default ${STAGEDIR}${PREFIX}/lib/X11/icons/default/index.theme|' \
 		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
