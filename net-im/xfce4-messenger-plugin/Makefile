@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (freebsd@unixfreunde.de)
-# $FreeBSD: net-im/xfce4-messenger-plugin/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/xfce4-messenger-plugin/Makefile 332721 2013-11-04 14:05:53Z olivierd $
 
 PORTNAME=	xfce4-messenger-plugin
 PORTVERSION=	0.1.0
@@ -12,6 +12,9 @@ MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Messenger plugin for Xfce
 
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+
+DEPRECATED=	Deprecated and no update for 7 years
+EXPIRATION_DATE=	2014-01-04
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
