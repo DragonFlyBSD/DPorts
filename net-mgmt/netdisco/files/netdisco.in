@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-mgmt/netdisco/files/netdisco.in 321675 2013-06-24 11:19:03Z wg $
+# $FreeBSD: net-mgmt/netdisco/files/netdisco.in 332583 2013-11-03 04:53:54Z sunpoet $
 # 
 # PROVIDE: netdisco
 # REQUIRE: DAEMON LOGIN
@@ -10,6 +10,7 @@
 . /etc/rc.subr
 
 name="netdisco"
+rcvar="netdisco_enable"
 
 load_rc_config $name
 
