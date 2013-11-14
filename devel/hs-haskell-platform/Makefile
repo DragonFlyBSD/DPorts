@@ -1,7 +1,9 @@
-# $FreeBSD: devel/hs-haskell-platform/Makefile 332165 2013-10-30 19:29:55Z pgj $
+# $FreeBSD: devel/hs-haskell-platform/Makefile 332188 2013-10-30 22:57:52Z pgj $
 
 PORTNAME=	haskell-platform
 PORTVERSION=	2013.2.0.0
+# Please note that the port *strictly depends* on certain versions of other
+# ports, so revisit the USE_CABAL line on bumping the portrevision.  Thanks!
 PORTREVISION=	1
 CATEGORIES=	devel haskell
 
