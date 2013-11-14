@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-im/p5-Jabber-SimpleSend/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/p5-Jabber-SimpleSend/Makefile 332816 2013-11-05 07:49:09Z vanilla $
 
 PORTNAME=	Jabber-SimpleSend
 PORTVERSION=	0.03
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Jabber::SimpleSend.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
