@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.options.mk 332153 2013-10-30 16:54:09Z ak $
+# $FreeBSD: Mk/bsd.options.mk 333568 2013-11-12 13:23:14Z mat $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -95,6 +95,8 @@
 #
 # ${opt}_USE=	FOO=bar		When option is enabled, it will  enable
 #							USE_FOO+= bar
+#							If you need more than one option, you can do
+#							FOO=bar,baz and you'll get USE_FOO=bar baz
 #
 # For each of CFLAGS CPPFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ARGS MAKE_ENV
 # ALL_TARGET INSTALL_TARGET USES DISTFILES PLIST_FILES PLIST_DIRS PLIST_DIRSTRY
@@ -111,8 +113,6 @@
 
 .if !defined(OPTIONSMKINCLUDED)
 OPTIONSMKINCLUDED=	bsd.options.mk
-
-OPTIONS_EXCLUDE+=	ALSA
 
 OPTIONS_NAME?=	${PKGORIGIN:S/\//_/}
 OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
@@ -385,7 +385,7 @@ PLIST_SUB:=	${PLIST_SUB} ${opt}="@comment "
 .    if defined(${opt}_USE)
 .      for option in ${${opt}_USE}
 _u=		${option:C/=.*//g}
-USE_${_u:tu}+=	${option:C/.*=//g}
+USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
 .      endfor
 .    endif
 .    if defined(${opt}_CONFIGURE_ENABLE)
