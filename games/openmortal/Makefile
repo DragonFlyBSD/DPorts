@@ -1,5 +1,5 @@
 # Created by: krion@FreeBSD.org
-# $FreeBSD: games/openmortal/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/openmortal/Makefile 333201 2013-11-08 11:29:56Z amdmi3 $
 
 PORTNAME=	openmortal
 PORTVERSION=	0.7
@@ -10,16 +10,15 @@ MASTER_SITES=	SF
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A parody of the once popular coin-up fighting game, Mortal Kombat
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
 USES=		perl5
 USE_SDL=	mixer image sdl net
 USE_DOS2UNIX=	src/gfx.cpp
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
-CPPFLAGS+=	-I${LOCALBASE}/include
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
