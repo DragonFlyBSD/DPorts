@@ -1,4 +1,0 @@
-# We have to do this because ALSA is excluded across the board
-# and it broke the configuration here
-
-CMAKE_ARGS+= -DSOUNDSYSTEM_USE_ALSA:BOOL=false
