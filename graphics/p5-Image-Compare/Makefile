@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: graphics/p5-Image-Compare/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Compare/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Image-Compare
 PORTVERSION=	0.9
@@ -22,13 +22,4 @@ TEST_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Image::Compare.3 \
-		Image::Compare::AVG_THRESHOLD.3 \
-		Image::Compare::Comparator.3 \
-		Image::Compare::EXACT.3 \
-		Image::Compare::IMAGE.3 \
-		Image::Compare::THRESHOLD.3 \
-		Image::Compare::THRESHOLD_COUNT.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
