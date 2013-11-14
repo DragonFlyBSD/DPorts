@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: math/R-cran-sspir/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/R-cran-sspir/Makefile 332670 2013-11-04 07:31:27Z bapt $
 
 PORTNAME=	sspir
 PORTVERSION=	0.2.10
@@ -15,5 +15,7 @@ RUN_DEPENDS=	R-cran-mvtnorm>=0.9.96_11:${PORTSDIR}/math/R-cran-mvtnorm \
 
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
+
+NO_STAGE=	yes
 
 .include <bsd.port.mk>
