@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/p5-Imlib2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Imlib2/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Imlib2
 PORTVERSION=	1.0.0
@@ -13,13 +13,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl bindings for Imlib2
 
 USE_EFL=	imlib2
-
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Imlib2.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/X11R6,${LOCALBASE},g' ${WRKSRC}/Makefile.PL
 
