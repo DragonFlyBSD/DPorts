@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-Authen-SASL-Cyrus/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-SASL-Cyrus/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Authen-SASL-Cyrus
 PORTVERSION=	0.13
@@ -18,7 +18,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	INC="-I${LOCALBASE}/include"
 
-MAN3=		Authen::SASL::Cyrus.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
