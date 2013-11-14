@@ -1,5 +1,5 @@
 # Created by: Jeff Putsch <jdputsch@comcast.net>
-# $FreeBSD: net/p5-POE-Component-Jabber/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: net/p5-POE-Component-Jabber/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	POE-Component-Jabber
 PORTVERSION=	3.00
@@ -26,21 +26,12 @@ USE_PERL5=	modbuild
 CONFIGURE_ARGS=	</dev/null
 
 PORTEXAMPLES=	*
-MAN3=		POE::Component::Jabber.3 \
-		POE::Component::Jabber::Events.3 \
-		POE::Component::Jabber::J14.3 \
-		POE::Component::Jabber::J2.3 \
-		POE::Component::Jabber::Legacy.3 \
-		POE::Component::Jabber::Protocol.3 \
-		POE::Component::Jabber::ProtocolFactory.3 \
-		POE::Component::Jabber::XMPP.3
 
-NO_STAGE=	yes
 post-install:
 .ifndef(NOPORTEXAMPLES)
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	@${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
