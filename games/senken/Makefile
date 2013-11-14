@@ -1,5 +1,5 @@
 # Created by: tmartin@andrew.cmu.edu
-# $FreeBSD: games/senken/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD: games/senken/Makefile 333459 2013-11-11 00:36:55Z danilo $
 
 PORTNAME=	senken
 PORTVERSION=	0.3.0
@@ -17,7 +17,6 @@ USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-lm
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-I/usr/X11R6/include||g  ; \
 		 s|-L/usr/X11R6/lib||g' ${WRKSRC}/configure
