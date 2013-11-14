@@ -1,12 +1,12 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/milkytracker/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
+# $FreeBSD: audio/milkytracker/Makefile 333670 2013-11-13 11:04:31Z ehaupt $
 
 PORTNAME=	milkytracker
-PORTVERSION=	0.90.85
-PORTREVISION=	3
+PORTVERSION=	0.90.86
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.milkytracker.org/files/ \
-		CRITICAL/${PORTNAME}/${PORTVERSION}/${PORTREVISION}
+		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Music creation tool inspired by Fast Tracker 2
@@ -40,7 +40,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/pixmaps/${f:C/carton/milkytracker/}
 .endfor
 	${MKDIR} ${STAGEDIR}${DESKTOPDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
+	${INSTALL_DATA} ${WRKSRC}/resources/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
 
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
