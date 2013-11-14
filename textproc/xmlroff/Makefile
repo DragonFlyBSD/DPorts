@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: textproc/xmlroff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xmlroff/Makefile 332531 2013-11-02 18:11:29Z hrs $
 
 PORTNAME=	xmlroff
 PORTVERSION=	0.6.2
@@ -26,7 +26,6 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/libfo/fo-libfo-basic.h
