@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: finance/eqonomize-kde4/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/eqonomize-kde4/Makefile 333443 2013-11-10 20:30:47Z rakuco $
 
 PORTNAME=	eqonomize
 PORTVERSION=	0.6
@@ -10,6 +10,9 @@ PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A personal accounting software
+
+DEPRECATED=	No upstream releases since 2008, does not build on FreeBSD 10 and 11
+EXPIRATION_DATE=	2013-12-01
 
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	corelib dbus gui network svg xml qmake_build moc_build uic_build rcc_build
