@@ -1,9 +1,8 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/neubot/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/neubot/Makefile 332395 2013-11-01 16:08:21Z thierry $
 
 PORTNAME=	neubot
-PORTVERSION=	0.4.15.6
-PORTREVISION=	1
+PORTVERSION=	0.4.16.9
 CATEGORIES=	net
 MASTER_SITES=	http://releases.neubot.org/_packages/
 
@@ -27,21 +26,20 @@ MAKE_ENV=	LOCALSTATEDIR=${LSTATEDIR} MANDIR=${MANPREFIX}/man
 USE_RC_SUBR=	neubotd
 INSTALLS_ICONS=	yes
 
-MAN1=		neubot.1
-MANCOMPRESSED=	yes
-PORTDOCS=	AUTHORS BUGS ChangeLog PRIVACY README.rst TODO
+DOCS=		AUTHORS BUGS ChangeLog PRIVACY README.rst TODO
 
 SUB_FILES=	pkg_message
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
-PLIST_SUB+=	STATEDIR=${STATEDIR}
 PKGMESSAGE=	${WRKDIR}/pkg_message
 
-NO_STAGE=	yes
 post-install:
+	${RM} -rf ${STAGEDIR}${LSTATEDIR}
+	(cd ${STAGEDIR}${PREFIX} \
+	&& ${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+	-d ${PREFIX} -f ${DATADIR:S;${PREFIX}/;;})
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
