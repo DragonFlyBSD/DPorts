@@ -1,9 +1,9 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: x11/xbelld/Makefile 329963 2013-10-10 04:09:43Z ak $
+# $FreeBSD: x11/xbelld/Makefile 333231 2013-11-08 14:31:40Z kwm $
 
 PORTNAME=	xbelld
 PORTVERSION=	0.2b2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://www.meowfishies.com/code/
 DISTNAME=	${PORTNAME}-0.2beta2
