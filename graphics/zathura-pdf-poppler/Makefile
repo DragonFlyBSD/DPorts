@@ -1,15 +1,15 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 333402 2013-11-10 15:06:17Z danilo $
 
 PORTNAME=	zathura-pdf-poppler
-PORTVERSION=	0.2.3
+PORTVERSION=	0.2.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://pwmt.org/projects/zathura/plugins/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Poppler render PDF plugin for Zathura PDF viewer
 
-LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 BUILD_DEPENDS=	zathura:${PORTSDIR}/graphics/zathura
 RUN_DEPENDS=	zathura:${PORTSDIR}/graphics/zathura
 
@@ -20,5 +20,4 @@ PLIST_FILES=	lib/zathura/pdf.so \
 		share/applications/zathura-pdf-poppler.desktop
 PLIST_DIRSTRY=	lib/zathura
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
