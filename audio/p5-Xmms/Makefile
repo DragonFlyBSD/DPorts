@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: audio/p5-Xmms/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Xmms/Makefile 332336 2013-11-01 02:28:24Z vanilla $
 
 PORTNAME=	Xmms
 PORTVERSION=	0.12
@@ -17,15 +17,8 @@ BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms \
 		p5-ReadLine-Perl>=0:${PORTSDIR}/devel/p5-ReadLine-Perl
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
 REINPLACE_ARGS=	-i ''
-
-MAN3=		Bundle::Xmms.3 \
-		Xmms.3 \
-		Xmms::Config.3 \
-		Xmms::Remote.3 \
-		Xmms::SongChange.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|MPEG::MP3Info|MP3::Info|g' \
