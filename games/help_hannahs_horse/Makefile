@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/help_hannahs_horse/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/help_hannahs_horse/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
 
 PORTNAME=	help_hannahs_horse
 PORTVERSION=	1.0
@@ -13,11 +13,8 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	nemysis@gmx.ch
 COMMENT=	Pacman with a fast food twist
 
-LICENSE=	GPLv2 OFL
+LICENSE=	GPLv2 OFL11
 LICENSE_COMB=	dual
-LICENSE_NAME_OFL=SIL OPEN FONT LICENSE Version 1.1
-LICENSE_FILE_OFL=${WRKSRC}/StansHandOFL.txt
-LICENSE_PERMS_OFL=dist-mirror pkg-mirror auto-accept
 
 WRKSRC=		${WRKDIR}/hhh-2008-03-29
 
