@@ -1,4 +1,4 @@
-# $FreeBSD: audio/wmauda/Makefile 328472 2013-09-27 14:16:23Z garga $
+# $FreeBSD: audio/wmauda/Makefile 332294 2013-10-31 23:29:56Z garga $
 
 PORTNAME=	wmauda
 PORTVERSION=	0.9
@@ -10,6 +10,8 @@ MASTER_SITE_SUBDIR=	distfiles
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A port of wmxmms to GTK 2.x and Audacious
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	audacious:${PORTSDIR}/multimedia/audacious
 RUN_DEPENDS=	audacious:${PORTSDIR}/multimedia/audacious
