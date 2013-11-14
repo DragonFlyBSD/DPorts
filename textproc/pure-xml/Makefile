@@ -1,20 +1,42 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: textproc/pure-xml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pure-xml/Makefile 333045 2013-11-06 22:50:21Z delphij $
 
 PORTNAME=	pure-xml
 PORTVERSION=	0.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc
+MASTER_SITES=	https://cdn.bitbucket.org/purelang/pure-lang/downloads/
+DIST_SUBDIR=	pure
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Pure language interface for libxml2 and libxslt
 
-USE_PURE=	yes
+LICENSE=	GPLv3 LGPL3
+LICENSE_COMB=	dual
+
+USES=		pure
 USE_GNOME=	libxml2 libxslt
 
 PLIST_FILES=	lib/pure/xml.pure \
 		lib/pure/xml.so
 
 NO_STAGE=	yes
-.include "${.CURDIR}/../../lang/pure/bsd.pure.mk"
+
+PORTDOCS=	README
+
+PORTEXAMPLES=	*
+
+.include <bsd.port.options.mk>
+
+post-install:
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+.endif
+
+.if ${PORT_OPTIONS:MEXAMPLES}
+	@${MKDIR} ${EXAMPLESDIR}
+	@(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} . ${EXAMPLESDIR})
+.endif
+
 .include <bsd.port.mk>
