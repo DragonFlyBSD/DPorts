@@ -1,7 +1,7 @@
-# $FreeBSD: x11-drivers/xf86-video-neomagic/Makefile 327779 2013-09-20 23:48:39Z bapt $
+# $FreeBSD: x11-drivers/xf86-video-neomagic/Makefile 333159 2013-11-07 21:53:34Z zeising $
 
 PORTNAME=	xf86-video-neomagic
-PORTVERSION=	1.2.7
+PORTVERSION=	1.2.8
 PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
@@ -10,7 +10,5 @@ COMMENT=	X.Org neomagic display driver
 
 XORG_CAT=	driver
 USE_XORG=	xf86dgaproto
-MAN4=		neomagic.4x
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
