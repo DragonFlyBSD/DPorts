@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/no-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/no-hunspell/Makefile 333754 2013-11-14 13:30:07Z bapt $
 
 PORTNAME=	hunspell
 PORTVERSION=	2.0.10
@@ -12,7 +12,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Norwegian (Nynorsk and Bokmaal) hunspell dictionaries
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 
 PLIST_FILES=	%%DATADIR%%/nb_NO.aff \
@@ -22,8 +22,9 @@ PLIST_FILES=	%%DATADIR%%/nb_NO.aff \
 PLIST_DIRSTRY=	%%DATADIR%%
 
 post-extract:
-	@${EXTRACT_CMD} ${WRKDIR}/nb_NO.zip -d ${WRKSRC}/
-	@${EXTRACT_CMD} ${WRKDIR}/nn_NO.zip -d ${WRKSRC}/
+	@${MKDIR} ${WRKSRC}
+	@${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${WRKDIR}/nb_NO.zip -C ${WRKSRC}/
+	@${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${WRKDIR}/nn_NO.zip -C ${WRKSRC}/
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/
