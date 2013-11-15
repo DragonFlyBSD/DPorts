@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/cs-mythes/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/cs-mythes/Makefile 333866 2013-11-15 14:11:12Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2007.09.26
@@ -8,13 +8,13 @@ MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 PKGNAMEPREFIX=	cs-
 DISTNAME=	thes_cs_CZ_v2-${PORTVERSION:C/\.//g}
 DIST_SUBDIR=	${PORTNAME}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Czech thesaurus
 
 LICENSE=	BSD
 
-USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -22,9 +22,8 @@ PLIST_FILES=	%%DATADIR%%/th_cs_CZ_v2.dat \
 		%%DATADIR%%/th_cs_CZ_v2.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_cs_CZ_v2.dat ${WRKSRC}/th_cs_CZ_v2.idx ${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_cs_CZ_v2.dat ${WRKSRC}/th_cs_CZ_v2.idx ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
