@@ -1,9 +1,9 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 331964 2013-10-29 15:55:29Z wg $
+# $FreeBSD: multimedia/vlc/Makefile 333434 2013-11-10 19:49:27Z wg $
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.0
-PORTREVISION=	3
+PORTREVISION=	6
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -17,8 +17,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
 		libproxy.so:${PORTSDIR}/net/libproxy \
-		libdvbpsi.so:${PORTSDIR}/multimedia/libdvbpsi \
-		libpulse.so:${PORTSDIR}/audio/pulseaudio
+		libdvbpsi.so:${PORTSDIR}/multimedia/libdvbpsi
 BUILD_DEPENDS=	ffmpeg>=2.0:${PORTSDIR}/multimedia/ffmpeg
 RUN_DEPENDS=	ffmpeg>=2.0:${PORTSDIR}/multimedia/ffmpeg
 
@@ -26,7 +25,7 @@ OPTIONS_DEFINE=	A52 AALIB ASS AVAHI CACA DBUS DIRAC DOCS DTS DVDREAD \
 		DVDNAV FAAD FLAC FLUID FRIBIDI GNOMEVFS GNUTLS GOOM \
 		HTTPD JACK LIBSSH2 LIRC LIVEMEDIA LUA MAD MATROSKA MODPLUG \
 		MPEG2 MTP MUSEPACK NCURSES NLS NOTIFY OPTIMIZED_CFLAGS OGG \
-		OPUS PNG QT4 REALAUDIO RUNROOT \
+		OPUS PNG PULSEAUDIO QT4 REALAUDIO RUNROOT \
 		SAMBA SCHROED SDL SHOUTCAST SKINS STREAM SPEEX SVG \
 		TAGLIB THEORA TWOLAME UPNP V4L VAAPI VCD VORBIS \
 		X11 X264 ZVBI SERVER_ONLY DEBUG \
@@ -146,7 +145,7 @@ LIVEMEDIA_LDFLAGS=	-L${LOCALBASE}/live/groupsock \
 
 MAD_LIB_DEPENDS=	libid3tag.so:${PORTSDIR}/audio/libid3tag \
 			libmad.so:${PORTSDIR}/audio/libmad
-NAD_CONFIGURE_ENABLE=	mad
+MAD_CONFIGURE_ENABLE=	mad
 MAD_CONFIGURE_ON=	--with-mad=${LOCALBASE}
 
 MATROSKA_LIB_DEPENDS=	libmatroska.so:${PORTSDIR}/multimedia/libmatroska
@@ -182,8 +181,8 @@ OPUS_CONFIGURE_ENABLE=	opus
 PNG_LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 PNG_CONFIGURE_ENABLE=	png
 
-#PULSEAUDIO_LIB_DEPENDS=	libpulse.so:${PORTSDIR}/audio/pulseaudio
-#PULSEAUDIO_CONFIGURE_ENABLE=	pulse
+PULSEAUDIO_LIB_DEPENDS=	libpulse.so:${PORTSDIR}/audio/pulseaudio
+PULSEAUDIO_CONFIGURE_ENABLE=	pulse
 
 REALAUDIO_CONFIGURE_ENABLE=	realrtsp
 
@@ -259,7 +258,6 @@ CONFIGURE_ARGS+=	--enable-vlc \
 			--enable-avcodec \
 			--enable-avformat \
 			--enable-postproc \
-			--enable-pulse \
 			--enable-sftp \
 			--enable-libgcrypt \
 			--disable-alsa \
@@ -381,6 +379,7 @@ CONFIGURE_ARGS+=--enable-altivec # VLC's config script doesn't know to do this
 CC=	clang
 CXX=	clang++
 CPP=	clang-cpp
+CFLAGS+=	-fomit-frame-pointer
 .else
 .if ${ARCH} == "i386"
 USE_GCC?=	yes # sse/3dnow detection on i386 needs newer GCC
@@ -413,6 +412,9 @@ post-patch:
 		-e '\|LIBS|s|-lrt||' \
 		-e 's|gnutls |gnutls3 |g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|^pkgconfigdir.*|pkgconfigdir = \$$\(prefix\)/libdata/pkgconfig|' \
+		${WRKSRC}/src/Makefile.in \
+		${WRKSRC}/lib/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf|${WITH_VLC_DEFAULT_FONT}|' \
 		${WRKSRC}/modules/text_renderer/freetype.c
 	@${REINPLACE_CMD} -e 's|/dev/cdrom|${WITH_CDROM_DEVICE}|g' \
