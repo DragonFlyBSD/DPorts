@@ -1,7 +1,8 @@
-# $FreeBSD: net-mgmt/xymon-client/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/xymon-client/Makefile 332848 2013-11-05 14:00:05Z feld $
 
 PORTNAME=	xymon
 PORTVERSION=	4.3.12
+PORTREVISION=	1
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/xymon/Xymon/${PORTVERSION}
 PKGNAMESUFFIX=	-client${PKGNAMESUFFIX2}
@@ -20,23 +21,25 @@ XYMONUSER?=	xymon
 XYMONHOSTIP?=	127.0.0.1
 
 MAKE_JOBS_UNSAFE=	yes
-USE_GMAKE=	yes
-CONFIGURE_ENV=	MAKE=gmake
+USES=		gmake
+CONFIGURE_ENV=	MAKE=${GMAKE}
 MAKE_ENV+=	XYMONUSER="${XYMONUSER}"
 MAKE_ENV+=	XYMONHOSTIP="${XYMONHOSTIP}"
+MAKE_ENV+=	INSTALLROOT="${STAGEDIR}"
+MAKE_ENV+=	PKGBUILD=1
+MANPREFIX=	${STAGEDIR}${PREFIX}
 USE_RC_SUBR=	xymon-client
 PLIST_SUB+=	XYMONUSER="${XYMONUSER}"
 CONFIG_FILES=	clientlaunch.cfg xymonclient.cfg localclient.cfg
 
 # Configure script is interactive
-NO_STAGE=	yes
 do-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}/
 
 post-install:
 .for i in ${CONFIG_FILES}
-	${CP} -np ${WWWDIR}/client/etc/${i}.DIST \
-		${WWWDIR}/client/etc/${i} || ${TRUE}
+	${CP} -np ${STAGEDIR}${WWWDIR}/client/etc/${i}.DIST \
+		${STAGEDIR}${WWWDIR}/client/etc/${i} || ${TRUE}
 .endfor
 
 .include <bsd.port.mk>

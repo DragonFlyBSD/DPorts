@@ -1,0 +1,12 @@
+--- client/Makefile.intermediate	2013-11-15 21:21:20.736858000 +0000
++++ client/Makefile
+@@ -9,6 +9,9 @@ OSTYPE := $(shell uname -s | tr '[A-Z]'
+ ifeq ($(OSTYPE),freebsd)
+ 	EXTRATOOLS=freebsd-meminfo
+ endif
++ifeq ($(OSTYPE),dragonfly)
++	EXTRATOOLS=freebsd-meminfo
++endif
+ ifeq ($(OSTYPE),netbsd)
+ 	EXTRATOOLS=netbsd-meminfo
+ endif
