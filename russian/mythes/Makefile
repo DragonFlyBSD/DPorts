@@ -1,4 +1,4 @@
-# $FreeBSD: russian/mythes/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/mythes/Makefile 333868 2013-11-15 14:16:38Z bapt $
 
 PORTNAME=	mythes
 PORTVERSION=	2007.06.13
@@ -13,7 +13,7 @@ COMMENT=	Russian thesaurus
 
 LICENSE=	LGPL21
 
-USE_ZIP=	yes
+EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -23,11 +23,10 @@ PLIST_FILES=	%%DATADIR%%/th_ru_RU_v2.dat \
 		%%DATADIR%%/th_ru_UA_v2.idx
 PLIST_DIRSTRY=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/th_ru_RU_v2.dat ${WRKSRC}/th_ru_RU_v2.idx ${DATADIR}/
-	${LN} -s th_ru_RU_v2.dat ${DATADIR}/th_ru_UA_v2.dat
-	${LN} -s th_ru_RU_v2.idx ${DATADIR}/th_ru_UA_v2.idx
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	${INSTALL_DATA} ${WRKSRC}/th_ru_RU_v2.dat ${WRKSRC}/th_ru_RU_v2.idx ${STAGEDIR}${DATADIR}/
+	${LN} -s th_ru_RU_v2.dat ${STAGEDIR}${DATADIR}/th_ru_UA_v2.dat
+	${LN} -s th_ru_RU_v2.idx ${STAGEDIR}${DATADIR}/th_ru_UA_v2.idx
 
 .include <bsd.port.mk>
