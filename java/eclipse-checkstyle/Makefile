@@ -1,0 +1,30 @@
+# Created by: gldisater@gldis.ca
+# $FreeBSD: java/eclipse-checkstyle/Makefile 327738 2013-09-20 19:48:32Z bapt $
+
+PORTNAME=	checkstyle
+PORTVERSION=	3.4.1.0
+PORTREVISION=	6
+CATEGORIES=	java devel
+MASTER_SITES=	SF/eclipse-cs/Eclipse%20Checkstyle%20Plug-in/v3.4.1
+PKGNAMEPREFIX=	eclipse-
+DISTNAME=	com.atlassw.tools.eclipse.checkstyle_${PORTVERSION}
+DIST_SUBDIR=	eclipse
+
+MAINTAINER=	freebsd-eclipse@FreeBSD.org
+COMMENT=	Integrates the Checkstyle Java code auditor into Eclipse
+
+RUN_DEPENDS=	eclipse:${PORTSDIR}/java/eclipse
+
+NO_WRKSUBDIR=	yes
+NO_BUILD=	yes
+USE_JAVA=	yes
+JAVA_VERSION=	1.6+
+USE_ZIP=	yes
+
+NO_STAGE=	yes
+do-install:
+	@${MKDIR} ${PREFIX}/lib/eclipse
+	@${MKDIR} ${PREFIX}/lib/eclipse/plugins
+	@${CP} -r ${WRKSRC}/com.atlassw.tools.eclipse.checkstyle_${PORTVERSION} ${PREFIX}/lib/eclipse/plugins
+
+.include <bsd.port.mk>
