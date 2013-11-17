@@ -294,6 +294,8 @@ do-install:
 	@cd ${WRKSRC}/build/${OPENJDK_OSARCH}/btjars && \
 	    ${INSTALL_DATA} compilefontconfig.jar javazic.jar \
 	    ${STAGEDIR}${PREFIX}/openjdk6/jre/lib
+	@cd ${STAGEDIR}${PREFIX}/openjdk6/include && \
+	    ln -s dragonfly freebsd
 .if ${PORT_OPTIONS:MFASTDEBUG}
 	@cd ${WRKSRC}/build/${OPENJDK_OSARCH}-fastdebug/j2sdk-image && \
 	    ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/openjdk6-fastdebug \
