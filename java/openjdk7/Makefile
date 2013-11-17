@@ -186,6 +186,7 @@ do-install:
 		${CHOWN} -h -R ${BINOWN}:${BINGRP} $$dir; \
 		${FIND} $$dir -type f -exec ${CHMOD} ${BINMODE} "{}" \; ; \
 	done
+	@cd ${INSTALLDIR}/include && ln -s dragonfly freebsd
 	@${CHOWN} ${BINOWN}:${BINGRP} ${INSTALLDIR}/jre/lib/${JDK_ARCH}/jexec
 	@${CHMOD} ${BINMODE} ${INSTALLDIR}/jre/lib/${JDK_ARCH}/jexec
 	@${INSTALL_DATA} ${FILESDIR}/cacerts ${INSTALLDIR}/jre/lib/security/cacerts
