@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: security/switzerland/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/switzerland/Makefile 333839 2013-11-15 10:21:58Z ehaupt $
 
 PORTNAME=	switzerland
 PORTVERSION=	0.1.0
@@ -10,11 +10,15 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Test the integrity of communications over networks and firewalls
 
+LICENSE=	GPLv3
+
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+
 PORTDOCS=	*
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -24,9 +28,9 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/BUGS.txt ${WRKSRC}/README.txt \
-		${WRKSRC}/doc/* ${DOCSDIR}
+		${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
