@@ -1,8 +1,9 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: java/springframework31/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/springframework31/Makefile 334021 2013-11-16 18:49:11Z olgeni $
 
 PORTNAME=	springframework
 PORTVERSION=	3.1.4
+PORTREVISION=	1
 CATEGORIES=	java devel
 MASTER_SITES=	http://s3.amazonaws.com/dist.springframework.org/release/SPR/
 DISTNAME=	spring-framework-${PORTVERSION}.RELEASE-with-docs
@@ -12,7 +13,7 @@ COMMENT=	The Spring Framework for Java
 
 WRKSRC=		${WRKDIR}/spring-framework-${PORTVERSION}.RELEASE
 
-LATEST_LINK=	springframework31
+PKGNAMESUFFIX=	31
 
 CONFLICTS=	springframework-3.2.*
 
