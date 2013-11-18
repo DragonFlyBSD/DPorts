@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: www/py-twistedWeb/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-twistedWeb/Makefile 333933 2013-11-15 20:53:58Z sunpoet $
 
 PORTNAME=	twistedWeb
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	www devel python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Web/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
