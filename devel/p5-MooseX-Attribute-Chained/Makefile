@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Attribute-Chained/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Attribute-Chained/Makefile 333760 2013-11-14 14:21:46Z sunpoet $
 
 PORTNAME=	MooseX-Attribute-Chained
 PORTVERSION=	1.0.1
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Attribute that returns the instance to allow for chaining
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-Try-Tiny>=0:${PORTSDIR}/lang/p5-Try-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
@@ -19,12 +22,4 @@ CONFLICTS_INSTALL=	p5-MooseX-ChainedAccessors-[0-9]*
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Moose::Meta::Attribute::Custom::Trait::Chained.3 \
-		MooseX::Attribute::Chained.3 \
-		MooseX::Attribute::ChainedClone.3 \
-		MooseX::ChainedAccessors.3 \
-		MooseX::ChainedAccessors::Accessor.3 \
-		MooseX::Traits::Attribute::Chained.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
