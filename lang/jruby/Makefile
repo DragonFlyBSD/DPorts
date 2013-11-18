@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/jruby/Makefile 331726 2013-10-26 18:03:03Z knu $
+# $FreeBSD: lang/jruby/Makefile 333815 2013-11-15 04:01:03Z knu $
 
 PORTNAME=	jruby
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.8
 CATEGORIES=	lang ruby java
 MASTER_SITES=	http://jruby.org.s3.amazonaws.com/downloads/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-bin-${PORTVERSION}
