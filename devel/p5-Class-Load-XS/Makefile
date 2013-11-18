@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Load-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Load-XS/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
 
 PORTNAME=	Class-Load-XS
 PORTVERSION=	0.06
@@ -22,7 +22,4 @@ TEST_DEPENDS=	p5-Module-Implementation>=0.04:${PORTSDIR}/devel/p5-Module-Impleme
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Class::Load::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
