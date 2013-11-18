@@ -1,16 +1,18 @@
 # Created by: jaharkes
-# $FreeBSD: devel/rvm/Makefile 329178 2013-10-03 13:08:43Z bsam $
+# $FreeBSD: devel/rvm/Makefile 334074 2013-11-17 11:09:36Z sunpoet $
 
 PORTNAME=	rvm
 PORTVERSION=	1.17
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/ \
-		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/ \
-		ftp://ftp.planetmirror.com/pub/coda/src/ \
-		ftp://ftp.nctu.edu.tw/mirror/Coda/src/
+MASTER_SITES=	http://ftp.coda.cs.cmu.edu/pub/rvm/src/ \
+		http://ftp.wu-wien.ac.at/pub/systems/coda/src/ \
+		ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/ \
+		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Persistent VM library
+
+LICENSE=	LGPL20
 
 LIB_DEPENDS=	liblwp.so:${PORTSDIR}/devel/lwp
 
