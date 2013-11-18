@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-im/telepathy-qt/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/telepathy-qt/Makefile 334127 2013-11-17 21:54:51Z rakuco $
 
 PORTNAME=	telepathy-qt
 PORTVERSION=	0.14.1
@@ -12,6 +12,9 @@ COMMENT=	Framework for VoIP and IP applications
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/../COPYING
+
+DEPRECATED=	Unmaintained upstream since 2007, use net-im/telepathy-qt4
+EXPIRATION_DATE=	2013-12-01
 
 USES=		cmake pkgconfig
 CMAKE_SOURCE_PATH=	..
