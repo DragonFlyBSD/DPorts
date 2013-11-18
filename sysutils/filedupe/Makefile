@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/filedupe/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/filedupe/Makefile 333680 2013-11-13 12:50:18Z vanilla $
 
 PORTNAME=	filedupe
 PORTVERSION=	1.1
@@ -14,12 +14,11 @@ LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm
 
 PLIST_FILES=	bin/filedupe
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|filename\[80\]|filename[1024]|g; \
 		s|your_database|/var/db/filedupe.db|' ${WRKSRC}/filedupe.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/filedupe ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/filedupe ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
