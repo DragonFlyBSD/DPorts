@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: dns/py-twistedNames/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/py-twistedNames/Makefile 333929 2013-11-15 20:53:37Z sunpoet $
 
 PORTNAME=	twistedNames
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	dns devel python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Names/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
