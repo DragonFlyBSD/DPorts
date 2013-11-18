@@ -1,8 +1,7 @@
-# Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 333772 2013-11-14 16:49:41Z swills $
 
 PORTNAME=	Dist-CheckConflicts
-PORTVERSION=	0.02
+PORTVERSION=	0.09
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
@@ -14,15 +13,10 @@ COMMENT=	Declare version conflicts for your dist
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-RUN_DEPENDS=	p5-List-MoreUtils>=0.12:${PORTSDIR}/lang/p5-List-MoreUtils \
-		p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
-
+RUN_DEPENDS=	p5-List-MoreUtils>=0.12:${PORTSDIR}/lang/p5-List-MoreUtils
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Dist::CheckConflicts.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
