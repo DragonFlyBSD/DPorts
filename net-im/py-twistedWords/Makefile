@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: net-im/py-twistedWords/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/py-twistedWords/Makefile 333934 2013-11-15 20:54:04Z sunpoet $
 
 PORTNAME=	twistedWords
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	net-im devel python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Words/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
