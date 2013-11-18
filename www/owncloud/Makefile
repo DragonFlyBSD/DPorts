@@ -1,7 +1,8 @@
-# $FreeBSD: www/owncloud/Makefile 333309 2013-11-09 16:22:23Z kevlo $
+# $FreeBSD: www/owncloud/Makefile 333895 2013-11-15 17:28:01Z sunpoet $
 
 PORTNAME=	owncloud
 PORTVERSION=	5.0.13
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
@@ -15,16 +16,21 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv json ldap \
-		mbstring mysql openssl pdo pdo_mysql pdo_pgsql pdo_sqlite \
-		session simplexml sqlite3 xml xmlreader xsl wddx zip zlib
+		mbstring openssl pdo session simplexml xml xmlreader \
+		xsl wddx zip zlib
 WANT_PHP_WEB=	yes
 DEFAULT_PHP_VER=5
-
-WWWDOCROOT?=	www
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
+
+OPTIONS_MULTI=	DB
+OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE
+OPTIONS_DEFAULT=	SQLITE
+MYSQL_USE=	MYSQL=client PHP=mysql,pdo_mysql
+PGSQL_USE=	PGSQL=yes PHP=pdo_pgsql,pgsql
+SQLITE_USE=	PHP=pdo_sqlite,sqlite3
 
 do-install:
 	@${MKDIR} -m 0755 ${STAGEDIR}${WWWDIR}
