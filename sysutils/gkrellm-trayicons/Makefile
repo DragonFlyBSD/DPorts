@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: sysutils/gkrellm-trayicons/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/gkrellm-trayicons/Makefile 333734 2013-11-14 01:21:37Z vanilla $
 
 PORTNAME=	trayicons
 PORTVERSION=	1.03
@@ -16,16 +16,15 @@ BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkre
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 USES=		pkgconfig
-PLIST_FILES=	libexec/gkrellm2/plugins/trayicons.so
 
 ALL_TARGET=	trayicons.so
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(CC) $$(FLAGS)|$$(CC) $$(CFLAGS)|g' \
 		${WRKSRC}/Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}.so ${PREFIX}/libexec/gkrellm2/plugins/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}.so ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins/
 
 .include <bsd.port.mk>
