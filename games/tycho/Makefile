@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/tycho/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/tycho/Makefile 333609 2013-11-12 19:47:07Z danilo $
 
 PORTNAME=	tycho
 PORTVERSION=	0.1
@@ -12,15 +12,14 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to gather data (statistics) on Core War warriors
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/tycho \
 		bin/tycho-exstat
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/exstat ${PREFIX}/bin/${PORTNAME}-exstat
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/exstat ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-exstat
 
 .include <bsd.port.mk>
