@@ -1,12 +1,12 @@
-# $FreeBSD: textproc/ro-hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
+# $FreeBSD: textproc/ro-hyphen/Makefile 334094 2013-11-17 15:56:23Z sunpoet $
 
 PORTNAME=	hyphen
-PORTVERSION=	3.3.6
-PORTREVISION=	1
+PORTVERSION=	3.3.10
 CATEGORIES=	textproc
 MASTER_SITES=	SF/rospell/Romanian%20dictionaries/dict-${PORTVERSION}/
 PKGNAMEPREFIX=	ro-
 DISTNAME=	hyph_ro_RO.${PORTVERSION}
+EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
@@ -15,7 +15,6 @@ COMMENT=	Romanian hyphenation rules
 LICENSE=	LGPL21 GPLv2 MPL
 LICENSE_COMB=	dual
 
-EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
