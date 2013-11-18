@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-GDD/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/R-cran-GDD/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	GDD
 DISTVERSION=	0.1-13.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
