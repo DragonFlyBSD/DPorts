@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 333837 2013-11-15 10:13:08Z sunpoet $
 
 PORTNAME=	DateTime-Format-Flexible
 PORTVERSION=	0.25
@@ -7,8 +7,11 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Flexibly parse strings and turn them into DateTime objects
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-DateTime>=0:${PORTSDIR}/devel/p5-DateTime \
 		p5-DateTime-Format-Builder>=0.74:${PORTSDIR}/devel/p5-DateTime-Format-Builder \
