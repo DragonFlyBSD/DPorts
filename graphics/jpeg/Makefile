@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: graphics/jpeg/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: graphics/jpeg/Makefile 333655 2013-11-13 06:41:00Z dinoex $
 
 PORTNAME=	jpeg
 PORTVERSION=	8
@@ -17,7 +17,6 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	IJG's jpeg compression utilities
 
 CONFLICTS=	libjpeg-turbo-[0-9]*
-NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION2}
 DISTVERSION2=	8d
@@ -31,8 +30,6 @@ ADDITIONAL_HEADER=	jinclude.h jpegint.h
 .if defined(J_MAXMEM)
 CONFIGURE_ARGS+=	--enable-maxmem=${J_MAXMEM}
 .endif
-
-MAN1=		cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1
 
 .include <bsd.port.options.mk>
 
@@ -50,14 +47,14 @@ regression-test:	test
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${PREFIX}/share/doc/jpeg
-	@${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/jpeg/
-	@${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/jpeg/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/jpeg
+	@${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${PREFIX}/share/doc/jpeg/
+	@${INSTALL_DATA} ${WRKSRC}/*.txt ${STAGEDIR}${PREFIX}/share/doc/jpeg/
 .endif
 .for header in ${ADDITIONAL_HEADER}
-	@${INSTALL_DATA} ${WRKSRC}/${header} ${PREFIX}/include/
+	@${INSTALL_DATA} ${WRKSRC}/${header} ${STAGEDIR}${PREFIX}/include/
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/jpegexiforient ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/exifautotran ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/jpegexiforient ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/exifautotran ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
