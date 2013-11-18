@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/py-ming/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-ming/Makefile 334072 2013-11-17 10:33:00Z sunpoet $
 
 PORTNAME=	ming
 PORTREVISION=	0
@@ -8,6 +8,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python module for Ming which allows you to create Flash 4/5 movies
+
+LICENSE=	GPLv2 LGPL21
+LICENSE_COMB=	multi
 
 BUILD_WRKSRC=	${WRKSRC}/py_ext
 CONFIGURE_ARGS=	--enable-python
@@ -23,5 +26,4 @@ SLAVEPORT=	py
 PYDISTUTILS_PKGNAME=	mingc
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
