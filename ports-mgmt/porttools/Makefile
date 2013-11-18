@@ -1,9 +1,9 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports-mgmt/porttools/Makefile 332978 2013-11-06 12:25:51Z mat $
+# $FreeBSD: ports-mgmt/porttools/Makefile 333865 2013-11-15 14:06:13Z mat $
 
 PORTNAME=	porttools
 PORTVERSION=	0.99
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	SF
 
