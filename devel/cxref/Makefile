@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/cxref/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cxref/Makefile 333941 2013-11-15 22:14:44Z bapt $
 
 PORTNAME=	cxref
 PORTVERSION=	1.6d
@@ -13,18 +13,16 @@ COMMENT=	C program cross-referencing & documentation tool
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=		gmake shebangfix
+SHEBANG_FILES=	contrib/xrgr.pl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-cxref-cpp
 ALL_TARGET=	programs
 
-MAN1=		cxref.1 cxref-query.1
-
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${DATADIR}
-	@${INSTALL_SCRIPT} ${WRKSRC}/contrib/*.pl ${DATADIR}
-	@${INSTALL_DATA} ${WRKSRC}/contrib/*.el ${DATADIR}
-	@${INSTALL_DATA} ${WRKSRC}/contrib/README* ${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/*.pl ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/*.el ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/README* ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
