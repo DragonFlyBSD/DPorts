@@ -1,12 +1,14 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: www/py-django14/Makefile 331596 2013-10-25 15:20:24Z lwhsu $
+# $FreeBSD: www/py-django14/Makefile 334107 2013-11-17 17:35:13Z lwhsu $
 
 PORTNAME=	django
 PORTVERSION=	1.4.9
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PORTVERSION:R}/ \
 		CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	14
 DISTNAME=	Django-${PORTVERSION}
 DIST_SUBDIR=	python
 
@@ -15,9 +17,6 @@ COMMENT=	High-level Python Web framework
 
 LICENSE=	BSD
 
-LATEST_LINK=	${PYTHON_PKGNAMEPREFIX}django14
-
-USES=		gettext
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Django
