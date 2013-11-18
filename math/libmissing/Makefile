@@ -1,8 +1,8 @@
-# $FreeBSD: math/libmissing/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/libmissing/Makefile 333636 2013-11-13 01:38:47Z bf $
 
 PORTNAME=	libmissing
 DISTVERSION=	20130815
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	LOCAL/bf
 
@@ -34,6 +34,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+.if ${OSVERSION} > 1000054
+LDFLAGS+=	-Wl,-z,interpose
+.endif
 
 .if ${PORT_OPTIONS:MPROFILE} || defined(WITH_PROFILE)
 .if defined(NOPROFILE) || defined(NO_PROFILE) || defined(WITHOUT_PROFILE)
