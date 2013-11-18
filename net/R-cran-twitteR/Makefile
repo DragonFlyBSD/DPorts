@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/R-cran-twitteR/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: net/R-cran-twitteR/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	twitteR
 PORTVERSION=	1.1.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
