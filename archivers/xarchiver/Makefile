@@ -1,5 +1,5 @@
 # Created by: Andreev Maxim
-# $FreeBSD: archivers/xarchiver/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/xarchiver/Makefile 333831 2013-11-15 10:03:34Z ehaupt $
 
 PORTNAME=	xarchiver
 PORTVERSION=	0.5.2
@@ -10,14 +10,17 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Desktop-agnostic GTK+2 frontend to various archiving tools
 
+LICENSE=	GPLv2
+
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
-NO_STAGE=	yes
 USES=		gmake pkgconfig desktop-file-utils
 USE_BZIP2=	yes
 USE_GNOME=	glib20 gtk20 intltool
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+
+OPTIONS_DEFINE=	DOCS NLS
 
 .include <bsd.port.options.mk>
 
@@ -33,7 +36,8 @@ PLIST_SUB+=	NLS="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|;multipart/x-zip||' \
 		${WRKSRC}/xarchiver.desktop.in
-.if defined(NOPORTDOCS)
+
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's|doc||g' ${WRKSRC}/Makefile.in
 .endif
 .if empty(PORT_OPTIONS:MNLS)
