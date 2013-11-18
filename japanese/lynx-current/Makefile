@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx-current/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/lynx-current/Makefile 334022 2013-11-16 18:57:51Z bsam $
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -7,9 +7,10 @@ CATEGORIES=	japanese www ipv6
 MASTER_SITES=	http://lynx.isc.org/current/ \
 		http://ftp2.uk.freebsd.org/sites/lynx.isc.org/current/
 DISTNAME=	${PORTNAME}${VERSION}${MINOR_VERSION}
+PKGNAMESUFFIX=	-current
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A terminal-based World-Wide Web Client with multi-byte modification (development version)
+COMMENT=	Terminal WWW client with multi-byte modification (development version)
 
 VERSION=	2.8.8
 MINOR_VERSION=	dev.3
@@ -18,7 +19,6 @@ CONFLICTS=	lynx-2.* ja-lynx-2.8.7.*
 
 WRKSRC=		${WRKDIR}/${PORTNAME}${VERSION:S/./-/g}
 USE_BZIP2=	yes
-NO_LATEST_LINK=	yes
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-screen=ncurses --with-zlib --libdir="${L_LIB}" \
