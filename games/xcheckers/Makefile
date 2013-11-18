@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: games/xcheckers/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xcheckers/Makefile 333641 2013-11-13 02:09:18Z danilo $
 
 PORTNAME=	xcheckers
 PORTVERSION=	2.2.3
@@ -13,10 +13,6 @@ COMMENT=	Checkers game for X11
 USES=		imake
 USE_XORG=	x11 xext xpm
 
-MAN6=		xcheckers.6 simplech.6
-
-# included by both imake and sh
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/^#/d' ${WRKSRC}/Local.config
 
