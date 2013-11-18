@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/recordmydesktop/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/recordmydesktop/Makefile 333817 2013-11-15 05:52:28Z kevlo $
 
 PORTNAME=	recordmydesktop
 DISTVERSION=	0.3.8.1
@@ -16,12 +16,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-oss=yes \
 			--enable-jack=yes
 
-MAN1=		recordmydesktop.1
-
 USE_XORG=	ice sm x11 xext xextproto xfixes xdamage
-PLIST_FILES=	bin/recordmydesktop
+PLIST_FILES=	bin/recordmydesktop man/man1/recordmydesktop.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' \
 		${WRKSRC}/configure
