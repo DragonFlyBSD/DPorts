@@ -1,8 +1,8 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: mail/p5-MIME-Tools/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD: mail/p5-MIME-Tools/Makefile 333904 2013-11-15 17:55:53Z sunpoet $
 
 PORTNAME=	MIME-Tools
-PORTVERSION=	5.504
+PORTVERSION=	5.505
 PORTEPOCH=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
@@ -22,16 +22,15 @@ BUILD_DEPENDS=	p5-Convert-BinHex>=0:${PORTSDIR}/converters/p5-Convert-BinHex \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 
+OPTIONS_DEFINE=	DOCS
+
 USES=		perl5
 USE_PERL5=	configure
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	ChangeLog README
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
-.endif
 
 .include <bsd.port.mk>
