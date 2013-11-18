@@ -1,8 +1,9 @@
 # Created by: eivind
-# $FreeBSD: textproc/cdiff/Makefile 330766 2013-10-18 18:47:57Z mat $
+# $FreeBSD: textproc/cdiff/Makefile 333775 2013-11-14 17:08:44Z mat $
 
 PORTNAME=	cdiff
 PORTVERSION=	0.9.3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	textproc
 
@@ -11,8 +12,8 @@ COMMENT=	Diff readability enhancer for color terminals
 
 USE_GITHUB=
 GH_ACCOUNT=	ymattw
-GH_TAGNAME=	0.9.3
-GH_COMMIT=	423551f
+GH_TAGNAME=	${GH_COMMIT}
+GH_COMMIT=	f85a5e2
 
 USE_PYTHON=
 USE_PYDISTUTILS=	yes
