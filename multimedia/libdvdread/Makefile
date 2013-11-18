@@ -1,5 +1,5 @@
 # Created by: Marc van Woerkom <3d@FreeBSD.org>
-# $FreeBSD: multimedia/libdvdread/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/libdvdread/Makefile 333861 2013-11-15 12:51:10Z martymac $
 
 PORTNAME=	libdvdread
 PORTVERSION=	4.2.0
@@ -25,29 +25,19 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 		--incdir="${PREFIX}/include/dvdread" \
 		--disable-opts \
 		--cc="${CC}"
-USE_GMAKE=	yes
+USES=	gmake
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DVDCSS DEBUG
 .if !defined(PACKAGE_BUILDING)
 OPTIONS_DEFAULT=	DVDCSS
 .endif
+DEBUG_CONFIGURE_ON=	--enable-debug --disable-strip
+DEBUG_CONFIGURE_OFF=	--disable-debug --enable-strip
+DVDCSS_LIB_DEPENDS=	libdvdcss.so:${PORTSDIR}/multimedia/libdvdcss
 
 # DVDCSS version hardcoded in src/dvd_input.c (dlopen'ed)
 DVDCSS_LIBVERSION=	3
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MDVDCSS}
-LIB_DEPENDS+=	dvdcss:${PORTSDIR}/multimedia/libdvdcss
-.endif
-
-.if ${PORT_OPTIONS:MDEBUG}
-CONFIGURE_ARGS+=	--enable-debug --disable-strip
-.else
-CONFIGURE_ARGS+=	--disable-debug
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl ||g' \
@@ -55,4 +45,4 @@ post-patch:
 	@${REINPLACE_CMD} -E -e 's|(libdvdcss.so)\.2|\1.${DVDCSS_LIBVERSION}|' \
 		${WRKSRC}/src/dvd_input.c
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
