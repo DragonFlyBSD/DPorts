@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-OSM/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
+# $FreeBSD: misc/p5-Geo-Coder-OSM/Makefile 333762 2013-11-14 15:18:58Z sunpoet $
 
 PORTNAME=	Geo-Coder-OSM
-PORTVERSION=	0.02
+PORTVERSION=	0.03
 CATEGORIES=	misc geography perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
