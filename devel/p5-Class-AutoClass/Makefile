@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: devel/p5-Class-AutoClass/Makefile 330181 2013-10-12 19:43:43Z sunpoet $
+# $FreeBSD: devel/p5-Class-AutoClass/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
 
 PORTNAME=	Class-AutoClass
 PORTVERSION=	1.56
@@ -20,10 +20,7 @@ TEST_DEPENDS=	p5-IO-stringy>=2.1:${PORTSDIR}/devel/p5-IO-stringy \
 		p5-Test-Deep>=0.110:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Pod>=1.48:${PORTSDIR}/devel/p5-Test-Pod
 
-NO_STAGE=	yes
 USE_PERL5=	modbuild
 USES=		perl5
-
-MAN3=		Class::AutoClass.3
 
 .include <bsd.port.mk>
