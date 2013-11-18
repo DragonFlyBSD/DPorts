@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xskewb/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xskewb/Makefile 333952 2013-11-16 01:01:03Z danilo $
 
 PORTNAME=	xskewb
 PORTVERSION=	5.5.2
@@ -14,14 +14,14 @@ COMMENT=	Skewb puzzle (similar to Rubik's Cube) for X Window
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		imake
 USE_XORG=	x11 xext xt sm ice
-MAN1=		xskewb.1
-MANCOMPRESSED=	no
-XFREE86_HTML_MAN=	no
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/xskewb \
+		lib/X11/app-defaults/Skewb \
+		man/man1/xskewb.1.gz
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xskewb ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/Skewb.ad ${PREFIX}/lib/X11/app-defaults/Skewb
-	${INSTALL_MAN} ${WRKSRC}/xskewb.man ${MANPREFIX}/man/man1/xskewb.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xskewb ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/Skewb.ad ${STAGEDIR}${PREFIX}/lib/X11/app-defaults/Skewb
+	${INSTALL_MAN} ${WRKSRC}/xskewb.man  ${STAGEDIR}${MANPREFIX}/man/man1/xskewb.1
 
 .include <bsd.port.mk>
