@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: devel/py-twistedRunner/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-twistedRunner/Makefile 333932 2013-11-15 20:53:52Z sunpoet $
 
 PORTNAME=	twistedRunner
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	devel net python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Runner/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
