@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xdemineur/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xdemineur/Makefile 333645 2013-11-13 02:28:56Z danilo $
 
 PORTNAME=	xdemineur
 PORTVERSION=	2.1.1
@@ -14,8 +14,7 @@ COMMENT=	Another minesweeper game for the X Window System
 
 USES=		imake
 USE_XORG=	xpm
-MAN1=		xdemineur.1
-PLIST_FILES=	bin/xdemineur
+PLIST_FILES=	bin/xdemineur \
+		man/man1/xdemineur.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
