@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libhtp/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libhtp/Makefile 334049 2013-11-17 02:51:46Z koobs $
 
 PORTNAME=	libhtp
 PORTVERSION=	0.3.0
@@ -6,7 +6,7 @@ PORTREVISION=	2
 CATEGORIES=	devel
 #MASTER_SITES=	# This port uses github
 
-MAINTAINER=	wxs@FreeBSD.org
+MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Security-aware parser for the HTTP protocol
 
 USE_GITHUB=	yes
@@ -21,6 +21,8 @@ USES=		pkgconfig pathfix iconv
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG}
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib \
 		${ICONV_LIB}
+
+CONFLICTS_INSTALL=	libhtp-suricata-*
 
 NO_STAGE=	yes
 pre-configure:
