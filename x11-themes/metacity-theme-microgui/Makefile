@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: x11-themes/metacity-theme-microgui/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/metacity-theme-microgui/Makefile 333897 2013-11-15 17:55:17Z sunpoet $
 
 PORTNAME=	microgui
 PORTVERSION=	1.0
@@ -20,6 +20,5 @@ RESTRICTED=	${REASON}
 
 WRKSRC=		${WRKDIR}/microGUI
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../metacity-themes/Makefile.metacity"
 .include <bsd.port.mk>
