@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/mono/Makefile 332975 2013-11-06 12:22:11Z romain $
+# $FreeBSD: lang/mono/Makefile 333989 2013-11-16 12:47:59Z romain $
 
 PORTNAME=	mono
 PORTVERSION=	3.2.3
@@ -43,7 +43,7 @@ ONLY_FOR_ARCHS=	i386 amd64 powerpc
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
-.if ${OSVERSION} >= 900014 && exists(/usr/bin/clang)
+.if ${OSVERSION} >= 902001 && exists(/usr/bin/clang)
 CC=	/usr/bin/clang
 CXX=	/usr/bin/clang++
 CPP=	/usr/bin/clang-cpp
