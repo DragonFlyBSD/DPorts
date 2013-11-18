@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 333827 2013-11-15 09:49:08Z sunpoet $
 
 PORTNAME=	Net-OpenID-Common
 PORTVERSION=	1.18
@@ -20,10 +20,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-.if defined(MAINTAINER_MODE)
-regression-test: build
-	cd ${WRKSRC} && ${MAKE} test
-.endif
 
 .include <bsd.port.mk>
