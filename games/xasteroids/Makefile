@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xasteroids/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xasteroids/Makefile 333620 2013-11-12 20:53:46Z danilo $
 
 PORTNAME=	xasteroids
 PORTVERSION=	5.0
@@ -23,10 +23,9 @@ USE_XORG=	x11 xext
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lXext -lX11 -lm
 
-MAN6=		xasteroids.6
-PLIST_FILES=	bin/xasteroids
+PLIST_FILES=	bin/xasteroids \
+		man/man6/xasteroids.6.gz
 
-NO_STAGE=	yes
 post-extract:
 	@${LN} -sf xast.man ${WRKSRC}/xasteroids.6
 
@@ -35,7 +34,7 @@ do-build:
 		${LDFLAGS})
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xasteroids ${PREFIX}/bin)
-	(cd ${WRKSRC} && ${INSTALL_MAN} xasteroids.6 ${MAN6PREFIX}/man/man6)
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xasteroids ${STAGEDIR}${PREFIX}/bin)
+	(cd ${WRKSRC} && ${INSTALL_MAN} xasteroids.6 ${STAGEDIR}${MAN6PREFIX}/man/man6)
 
 .include <bsd.port.mk>
