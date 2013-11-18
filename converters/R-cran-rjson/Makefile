@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: converters/R-cran-rjson/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: converters/R-cran-rjson/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	rjson
 PORTVERSION=	0.2.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	converters
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
