@@ -1,9 +1,9 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: emulators/joytran/Makefile 331608 2013-10-25 16:16:48Z mva $
+# $FreeBSD: emulators/joytran/Makefile 334079 2013-11-17 12:33:49Z mva $
 
 PORTNAME=	joytran
 PORTVERSION=	0.9.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	BERLIOS GOOGLE_CODE
 MASTER_SITE_SUBDIR=	joytran
