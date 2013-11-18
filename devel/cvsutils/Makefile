@@ -1,5 +1,5 @@
 # Created by: knu@FreeBSD.org
-# $FreeBSD: devel/cvsutils/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvsutils/Makefile 334080 2013-11-17 12:40:16Z mva $
 
 PORTNAME=	cvsutils
 PORTVERSION=	0.2.6
@@ -12,22 +12,16 @@ COMMENT=	CVS utilities which facilitate working with local working directories
 
 LICENSE=	GPLv2
 
-USES=		perl5
+USES=		perl5 shebangfix
 GNU_CONFIGURE=	yes
-
-MAN1=		cvsutils.1
+SHEBANG_FILES=	cvs*.pl
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in AUTHORS ChangeLog NEWS README
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/
 .endfor
-.endif
 
 .include <bsd.port.mk>
