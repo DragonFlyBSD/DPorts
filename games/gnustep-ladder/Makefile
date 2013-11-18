@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: games/gnustep-ladder/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gnustep-ladder/Makefile 333976 2013-11-16 03:20:14Z danilo $
 
 PORTNAME=	ladder
 PORTVERSION=	1.0
@@ -25,5 +25,4 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
