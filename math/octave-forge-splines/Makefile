@@ -1,8 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-splines/Makefile 332276 2013-10-31 19:23:16Z stephen $
+# $FreeBSD: math/octave-forge-splines/Makefile 333907 2013-11-15 18:04:03Z stephen $
 
 PORTNAME=	octave-forge-splines
-PORTVERSION=	1.2.5
+PORTVERSION=	1.2.6
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
