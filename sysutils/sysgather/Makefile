@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/sysgather/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sysgather/Makefile 333988 2013-11-16 12:33:15Z vanilla $
 
 PORTNAME=	sysgather
 DISTVERSION=	1.0pre10
@@ -18,9 +18,6 @@ OPTIONS_DEFINE=	EXAMPLES
 
 USES=		perl5
 
-MAN1=		sysgather.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if empty(PORT_OPTIONS:MEXAMPLES)
