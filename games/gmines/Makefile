@@ -1,4 +1,4 @@
-# $FreeBSD: games/gmines/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gmines/Makefile 333968 2013-11-16 02:28:00Z danilo $
 
 PORTNAME=	gmines
 PORTVERSION=	0.2
@@ -17,5 +17,4 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
