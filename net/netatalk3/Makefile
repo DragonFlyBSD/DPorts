@@ -1,5 +1,5 @@
 # Created by: stb
-# $FreeBSD: net/netatalk3/Makefile 333519 2013-11-11 16:16:59Z marcus $
+# $FreeBSD: net/netatalk3/Makefile 334020 2013-11-16 18:29:47Z marcus $
 
 PORTNAME=	netatalk
 PORTVERSION=	3.1.0
@@ -7,6 +7,7 @@ PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=${PORTNAME}/${PORTNAME}/3.1
+PKGNAMESUFFIX=	3
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	File server for Mac OS X
@@ -16,7 +17,6 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
     		event-2:${PORTSDIR}/devel/libevent2
 
-LATEST_LINK=	netatalk3
 USE_AUTOTOOLS=	libtool
 USE_BDB=	46+
 USE_BZIP2=	yes
@@ -80,7 +80,7 @@ PLIST_SUB+=		NETATALKPAM="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MNOZEROCONF}
-CONFIGURE_ARGS+=	--disable-zerconf
+CONFIGURE_ARGS+=	--disable-zeroconf
 SUB_LIST+=		ZEROCONF=""
 .endif
 
