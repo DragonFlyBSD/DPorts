@@ -1,8 +1,8 @@
-# Created by: Danilo Egea Gondolfo <danilogondolfo@gmail.com>
-# $FreeBSD: x11/yad/Makefile 328211 2013-09-24 22:51:58Z danilo $
+# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
+# $FreeBSD: x11/yad/Makefile 334053 2013-11-17 03:17:03Z danilo $
 
 PORTNAME=	yad
-PORTVERSION=	0.23.1
+PORTVERSION=	0.24.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GOOGLE_CODE
 
