@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/gretools/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gretools/Makefile 333969 2013-11-16 02:32:56Z danilo $
 
 PORTNAME=	gretools
 PORTVERSION=	1.2.4
@@ -13,14 +13,13 @@ COMMENT=	GNOME vocabulary builder
 
 LICENSE=	GPLv2
 
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig shebangfix
+SHEBANG_FILES=	${WRKSRC}/gretools.py
 USE_GNOME=	gnomeprefix pygnome2
 USE_PYTHON=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python -t|/usr/bin/env python|g ; \
 		 s|@prefix@|${LOCALBASE}|g ; s|@share@|share|g' \
