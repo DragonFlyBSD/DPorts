@@ -1,8 +1,8 @@
 # Created by: Stanislav Svirid <count@211.ru>
-# $FreeBSD: databases/py-south/Makefile 328421 2013-09-26 22:05:44Z wg $
+# $FreeBSD: databases/py-south/Makefile 333751 2013-11-14 11:27:29Z wg $
 
 PORTNAME=	south
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.3
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,11 +14,8 @@ COMMENT=	Intelligent schema migrations for Django apps
 LICENSE=	AL2
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=yes
+USE_PYDISTUTILS=easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	South
-PYTHON_PY3K_PLIST_HACK= yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|' ${WRKSRC}/${PYSETUP}
 
 .include <bsd.port.mk>
