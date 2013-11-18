@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sendmail/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: mail/sendmail/Makefile 333983 2013-11-16 06:38:19Z dinoex $
 
 PORTNAME=	sendmail
 PORTVERSION=	8.14.7
@@ -132,8 +132,9 @@ PLIST_SUB+=	MILTER_SHARED="@comment "
 .endif
 .endif
 
-SED_SCRIPT=	-e "s;\`-pthread\';\`${PTHREAD_LIBS}\';" \
-		-e "s;\`-O\';\`${CFLAGS}\';"
+SED_SCRIPT=	-e "s|\`-pthread\'|\`${PTHREAD_LIBS}\'|" \
+		-e "s|\`-O\'|\`${CFLAGS}\'|" \
+		-e 's|%%CC%%|${CC}|' -e 's|%%LD%%|${LD}|'
 
 .if ! ${PORT_OPTIONS:MNIS}
 SED_SCRIPT+=	-e "s;-DNIS ;;"
@@ -148,17 +149,12 @@ post-patch:
 	@${CP} -pR ${WRKSRC}/libmilter ${WRKSRC}/libsharedmilter
 	${CP} ${FILESDIR}/sharedlibrary.m4 \
 		${WRKSRC}/devtools/M4/UNIX/sharedlibrary.m4
-	@${MV} ${WRKSRC}/libsharedmilter/Makefile.m4 \
-		${WRKSRC}/libsharedmilter/Makefile.m4.sed
-	@${SED} -e 's=`library=`sharedlibrary=' \
-		${WRKSRC}/libsharedmilter/Makefile.m4.sed \
-		> ${WRKSRC}/libsharedmilter/Makefile.m4
+	${REINPLACE_CMD} -e 's=`library=`sharedlibrary=' \
+		${WRKSRC}/libsharedmilter/Makefile.m4
 .endif
 
 do-configure:
-	@${MV} ${WRKSRC}/devtools/OS/FreeBSD ${WRKSRC}/devtools/OS/FreeBSD.sed
-	${SED} ${SED_SCRIPT} ${WRKSRC}/devtools/OS/FreeBSD.sed \
-		> ${WRKSRC}/devtools/OS/FreeBSD
+	${REINPLACE_CMD} ${SED_SCRIPT} ${WRKSRC}/devtools/OS/FreeBSD
 	${SED} -e "s=%%PREFIX%%=${PREFIX}=g" \
 		-e "s=%%LOCALBASE%%=${LOCALBASE}=g" \
 		${SITE} > ${WCONF}/site.config.m4
