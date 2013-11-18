@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-Formula/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/R-cran-Formula/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	Formula
 DISTVERSION=	1.1-1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
