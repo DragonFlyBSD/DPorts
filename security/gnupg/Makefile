@@ -1,4 +1,4 @@
-# $FreeBSD: security/gnupg/Makefile 329582 2013-10-06 15:04:10Z antoine $
+# $FreeBSD: security/gnupg/Makefile 333739 2013-11-14 05:37:22Z eadler $
 
 PORTNAME=	gnupg
 PORTVERSION=	2.0.22
@@ -68,7 +68,8 @@ CONFIGURE_ARGS+=--disable-ldap
 .endif
 
 .if ${PORT_OPTIONS:MKDNS}
-LIB_DEPENDS+=	adns:${PORTSDIR}/dns/adns
+LIB_DEPENDS+=	libadns.so:${PORTSDIR}/dns/adns
+CONFIGURE_ARGS+=	--with-adns=${LOCALBASE}
 .else
 CONFIGURE_SUB=	-e '/GPGKEYS_KDNS=/s/".*"/""/'
 .endif
