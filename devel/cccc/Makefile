@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cccc/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cccc/Makefile 333938 2013-11-15 22:03:05Z bapt $
 
 PORTNAME=	cccc
 PORTVERSION=	3.1.4
@@ -12,24 +12,19 @@ COMMENT=	C and C++ Code Counter
 BUILD_DEPENDS=	antlr:${PORTSDIR}/devel/pccts \
 		dlg:${PORTSDIR}/devel/pccts
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	makefile
 MAKE_JOBS_UNSAFE=	yes
+MAKE_ARGS=	CCC="${CXX}"
 
 PORTDOCS=	readme.txt changes.txt
 PLIST_FILES=	bin/cccc
 
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e 's|=g++|=${CXX}|' ${WRKSRC}/*/posix*.mak
-
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/cccc/cccc ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${INSTALL_PROGRAM} ${WRKSRC}/cccc/cccc ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
