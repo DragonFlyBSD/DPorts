@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Package-Stash-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Package-Stash-XS/Makefile 333771 2013-11-14 16:43:56Z swills $
 
 PORTNAME=	Package-Stash-XS
-PORTVERSION=	0.26
+PORTVERSION=	0.28
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Package::Stash::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
