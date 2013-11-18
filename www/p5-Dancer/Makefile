@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Dancer/Makefile 333170 2013-11-08 01:10:01Z kuriyama $
+# $FreeBSD: www/p5-Dancer/Makefile 334064 2013-11-17 09:18:09Z az $
 
 PORTNAME=	Dancer
 PORTVERSION=	1.3119
@@ -47,5 +47,4 @@ RUN_DEPENDS+=	p5-YAML>=0.71:${PORTSDIR}/textproc/p5-YAML
 USES=	perl5
 USE_PERL5=	configure
 
-MAN1=	dancer.1
 .include <bsd.port.mk>
