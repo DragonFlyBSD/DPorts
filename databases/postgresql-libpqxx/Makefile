@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/postgresql-libpqxx/Makefile 334085 2013-11-17 14:45:22Z crees $
 
 PORTNAME=	libpqxx
 PORTVERSION=	4.0
@@ -11,7 +11,7 @@ DIST_SUBDIR=	postgresql
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	New C++ interface for PostgreSQL
 
-CONFLICTS=	postgresql-libpqxx-3.*
+CONFLICTS=	postgresql-libpqxx-3.* postgresql-libpqxx3-3.*
 PORTSCOUT=	limit:^2\.
 
 USE_PGSQL=	yes
