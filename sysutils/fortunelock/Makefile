@@ -1,5 +1,5 @@
 # Created by: Daniel Harris <dannyboy@subdimension.com>
-# $FreeBSD: sysutils/fortunelock/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/fortunelock/Makefile 333680 2013-11-13 12:50:18Z vanilla $
 
 PORTNAME=	fortunelock
 PORTVERSION=	0.1.2
@@ -12,9 +12,6 @@ COMMENT=	Locks a terminal while showing fortunes
 
 USE_BZIP2=	yes
 
-MAN1=		fortunelock.1
-MANCOMPRESSED=	no
-PLIST_FILES=	bin/fortunelock
+PLIST_FILES=	bin/fortunelock man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
