@@ -11,7 +11,7 @@ PKG_MESSAGE_FILE_PYTHON=	${PORTSDIR}/devel/boost-all/pkg-message.python
 BJAM_ARGS=	--layout=system \
 		--prefix=${PREFIX}
 
-.if ${ARCH} == x86_64
+.if ${ARCH} == amd64
 BJAM_ARGS+=	cxxflags=-fPIC
 .endif
 
@@ -20,7 +20,6 @@ BJAM_ARGS+=	cxxflags=-fPIC
 # of gcc/g++):
 BJAM_ARGS+=    cxxflags="${CXXFLAGS:N-O*}" cflags="${CFLAGS:N-O*}"
 
-NO_CCACHE=	yes
 BOOST_TOOLSET:=	gcc
 
 BJAM_ARGS+=	--toolset=${BOOST_TOOLSET} \
