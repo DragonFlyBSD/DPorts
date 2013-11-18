@@ -1,8 +1,8 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: math/coinmp/Makefile 330557 2013-10-16 23:10:15Z danilo $
+# $FreeBSD: math/coinmp/Makefile 334000 2013-11-16 14:30:42Z danilo $
 
 PORTNAME=	CoinMP
-PORTVERSION=	1.7.1
+PORTVERSION=	1.7.2
 CATEGORIES=	math
 MASTER_SITES=	http://www.coin-or.org/download/source/CoinMP/
 EXTRACT_SUFX=	.tgz
