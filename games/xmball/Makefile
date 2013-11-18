@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xmball/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xmball/Makefile 333722 2013-11-13 20:03:03Z danilo $
 
 PORTNAME=	xmball
 PORTVERSION=	5.5.2
@@ -14,14 +14,14 @@ COMMENT=	Masterball puzzle for X Window System
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		imake
 USE_XORG=	x11 xext xt sm ice
-MAN1=		xmball.1
-MANCOMPRESSED=	no
-XFREE86_HTML_MAN=	no
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/xmball \
+		man/man1/xmball.1.gz \
+		lib/X11/app-defaults/Mball
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xmball ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/Mball.ad ${PREFIX}/lib/X11/app-defaults/Mball
-	${INSTALL_MAN} ${WRKSRC}/xmball.man ${MANPREFIX}/man/man1/xmball.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xmball ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/Mball.ad ${STAGEDIR}${PREFIX}/lib/X11/app-defaults/Mball
+	${INSTALL_MAN} ${WRKSRC}/xmball.man ${STAGEDIR}${MANPREFIX}/man/man1/xmball.1
 
 .include <bsd.port.mk>
