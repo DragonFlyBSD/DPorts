@@ -1,9 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-bim/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/octave-forge-bim/Makefile 333906 2013-11-15 18:03:38Z stephen $
 
 PORTNAME=	octave-forge-bim
-PORTVERSION=	1.1.2
-PORTREVISION=	1
+PORTVERSION=	1.1.3
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
