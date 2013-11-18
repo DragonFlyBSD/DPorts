@@ -1,5 +1,4 @@
-# Created by: Takefu
-# $FreeBSD: devel/libunistring/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libunistring/Makefile 333700 2013-11-13 15:20:19Z wg $
 
 PORTNAME=	libunistring
 PORTVERSION=	0.9.3
@@ -11,20 +10,12 @@ COMMENT=	Unicode string library
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual
-LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING
-LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LIB
 
-USES=		charsetfix iconv
-USE_GMAKE=	yes
+USES=		charsetfix iconv gmake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INFO=		${PORTNAME}
 
-NO_STAGE=	yes
-pre-patch:
-.if defined(NOPORTDOCS)
-	cd ${WRKSRC}/doc && ${REINPLACE_CMD}\
-	-e 's!install-data-local:!#install-data-local:!' Makefile.in
-.endif
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
