@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 333064 2013-11-07 05:58:42Z ohauer $
+# $FreeBSD: Mk/bsd.port.mk 333576 2013-11-12 14:56:50Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1386,19 +1386,6 @@ ETCDIR?=		${PREFIX}/etc/${PORTNAME}
 .include "${PORTSDIR}/Mk/bsd.xorg.mk"
 .endif
 
-.if defined(USE_BZIP2)
-EXTRACT_SUFX?=			.tar.bz2
-.elif defined(USE_LHA)
-EXTRACT_SUFX?=			.lzh
-.elif defined(USE_ZIP)
-EXTRACT_SUFX?=			.zip
-.elif defined(USE_XZ)
-EXTRACT_SUFX?=			.tar.xz
-.elif defined(USE_MAKESELF)
-EXTRACT_SUFX?=			.run
-.else
-EXTRACT_SUFX?=			.tar.gz
-.endif
 PACKAGES?=		/usr/packages
 TEMPLATES?=		${PORTSDIR}/Templates
 
@@ -1538,6 +1525,20 @@ ${_f}_ARGS:=	${f:C/^[^\:]*\://g}
 .endif
 .include "${USESDIR}/${_f}.mk"
 .endfor
+
+.if defined(USE_BZIP2)
+EXTRACT_SUFX?=			.tar.bz2
+.elif defined(USE_LHA)
+EXTRACT_SUFX?=			.lzh
+.elif defined(USE_ZIP)
+EXTRACT_SUFX?=			.zip
+.elif defined(USE_XZ)
+EXTRACT_SUFX?=			.tar.xz
+.elif defined(USE_MAKESELF)
+EXTRACT_SUFX?=			.run
+.else
+EXTRACT_SUFX?=			.tar.gz
+.endif
 
 # You can force skipping these test by defining IGNORE_PATH_CHECKS
 .if !defined(IGNORE_PATH_CHECKS)

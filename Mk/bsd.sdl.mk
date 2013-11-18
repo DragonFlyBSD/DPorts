@@ -29,7 +29,7 @@
 #
 
 #
-# $FreeBSD: Mk/bsd.sdl.mk 321500 2013-06-21 19:56:27Z mva $
+# $FreeBSD: Mk/bsd.sdl.mk 333713 2013-11-13 18:15:08Z mva $
 #
 
 SDL_Include_MAINTAINER=		mva@FreeBSD.org
@@ -41,7 +41,7 @@ _USE_SDL_ALL=	console gfx image mixer mm net pango sdl sound ttf
 #
 # These are the current supported SDL2 modules
 #
-_USE_SDL_ALL+=	image2 mixer2 net2 sdl2 ttf2
+_USE_SDL_ALL+=	gfx2 image2 mixer2 net2 sdl2 ttf2
 
 #
 # Variables used to determine what is needed:
@@ -100,6 +100,11 @@ _SUBDIR_ttf=	graphics
 _PORTDIR_ttf=	sdl_ttf
 _LIB_ttf=	SDL_ttf-2.0
 _REQUIRES_ttf=	sdl
+
+_SUBDIR_gfx2=	graphics
+_PORTDIR_gfx2=	sdl2_gfx
+_LIB_gfx2=	SDL2_gfx
+_REQUIRES_gfx2=	sdl2
 
 _SUBDIR_image2=		graphics
 _PORTDIR_image2=	sdl2_image

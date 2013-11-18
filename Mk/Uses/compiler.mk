@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/compiler.mk 333554 2013-11-12 09:25:43Z bapt $
+# $FreeBSD: Mk/Uses/compiler.mk 333945 2013-11-15 22:25:40Z bapt $
 #
 # Allows to feature determine the compiler used
 #
@@ -128,6 +128,7 @@ CC=	${LOCALBASE}/bin/clang33
 CXX=	${LOCALBASE}/bin/clang++33
 .if ${OSVERSION} < 900033
 USE_BINUTILS=	yes
+LDFLAGS+=	-B${LOCALBASE}/bin
 .endif
 .endif
 .endif
@@ -145,6 +146,7 @@ CC=	${LOCALBASE}/bin/clang33
 CXX=	${LOCALBASE}/bin/clang++33
 .if ${OSVERSION} < 900033
 USE_BINUTILS=	yes
+LDFLAGS+=	-B${LOCALBASE}/bin
 .endif
 .endif
 .endif

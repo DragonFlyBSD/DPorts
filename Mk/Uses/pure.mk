@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: Mk/Uses/pure.mk 333047 2013-11-07 00:20:49Z nemysis $
+# $FreeBSD: Mk/Uses/pure.mk 333577 2013-11-12 15:13:04Z bapt $
 #
 # Provide support for Pure Programming Language based projects
 #
@@ -28,7 +28,7 @@ IGNORE= Incorrect 'USES+= pure:${pure_ARGS}' usage: argument [${arg}] is not rec
 .endif
 
 LIB_DEPENDS+=	libpure.so:${PORTSDIR}/lang/pure
-.include "${PORTSDIR}/Mk/Uses/gmake.mk"
+.include "${USESDIR}/gmake.mk"
 
 .if ${_pure_ARGS:Mffi}
 RUN_DEPENDS+=	${LOCALBASE}/lib/pure/ffi.pure:${PORTSDIR}/devel/pure-ffi

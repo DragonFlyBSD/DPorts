@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.gnome.mk 333225 2013-11-08 14:10:00Z kwm $
+# $FreeBSD: Mk/bsd.gnome.mk 333717 2013-11-13 19:28:51Z kwm $
 #	$NetBSD: $
 #     $MCom: ports/trunk/Mk/bsd.gnome.mk 18867 2013-11-08 11:53:32Z kwm $
 #
@@ -395,7 +395,7 @@ librsvg2_LIB_DEPENDS=	librsvg-2.so:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc
 librsvg2_USE_GNOME_IMPL=libgsf gtk20
 
-eel2_LIB_DEPENDS=	libeel-2.2.so:${PORTSDIR}/x11-toolkits/eel
+eel2_LIB_DEPENDS=	libeel-2.so:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomedesktop
 
@@ -419,7 +419,7 @@ gal2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gal-2.4.pc
 gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 
 gnomecontrolcenter2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
-gnomecontrolcenter2_LIB_DEPENDS=libgnome-window-settings:${PORTSDIR}/sysutils/gnome-control-center
+gnomecontrolcenter2_LIB_DEPENDS=libgnome-window-settings.so:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus libgnomekbd gnomedesktop librsvg2
 gnomecontrolcenter2_GNOME_DESKTOP_VERSION=2
 

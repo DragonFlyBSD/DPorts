@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.qt.mk 331179 2013-10-21 19:47:02Z makc $
+# $FreeBSD: Mk/bsd.qt.mk 334045 2013-11-17 02:12:25Z avilla $
 #
 # Variables:
 # QT_NONSTANDARD	- Suppress modification of configure and make environment.
@@ -95,9 +95,9 @@ QT_INCDIR_REL=	include/qt4
 QT_LIBDIR_REL=	lib/qt4
 QT_PLUGINDIR_REL=	lib/qt4/plugins
 
-PLIST_SUB+=	QT_INCDIR_REL=${QT_INCDIR_REL} \
-		QT_LIBDIR_REL=${QT_LIBDIR_REL} \
-		QT_PLUGINDIR_REL=${QT_PLUGINDIR_REL}
+PLIST_SUB+=	QT_INCDIR=${QT_INCDIR_REL} \
+		QT_LIBDIR=${QT_LIBDIR_REL} \
+		QT_PLUGINDIR=${QT_PLUGINDIR_REL}
 
 QT_PREFIX?=	${LOCALBASE}
 QT_INCDIR?=	${QT_PREFIX}/${QT_INCDIR_REL}
