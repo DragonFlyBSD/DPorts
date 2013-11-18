@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/hal/Makefile 330321 2013-10-14 13:41:51Z avilla $
+# $FreeBSD: sysutils/hal/Makefile 333593 2013-11-12 17:35:53Z avilla $
 #   $MCom: ports/sysutils/hal/Makefile,v 1.81 2010/04/13 02:49:07 mezz Exp $
 
 PORTNAME=	hal
 DISTVERSION=	0.5.14
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -13,9 +13,9 @@ COMMENT=	Hardware Abstraction Layer for simplifying device access
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
 # keep shlib version, to prevent confusion with polkit-* from sysutils/polkit
-LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
-		volume_id:${PORTSDIR}/devel/libvolume_id \
-		ck-connector:${PORTSDIR}/sysutils/consolekit
+LIB_DEPENDS=	libpolkit.so.2:${PORTSDIR}/sysutils/policykit \
+		libvolume_id.so:${PORTSDIR}/devel/libvolume_id \
+		libck-connector.so:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
 USES=		pathfix gettext gmake pkgconfig
