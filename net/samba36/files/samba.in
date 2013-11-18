@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/samba36/files/samba.in 311317 2013-01-31 15:59:44Z timur $
+# $FreeBSD: net/samba36/files/samba.in 334130 2013-11-17 22:16:16Z timur $
 #
 
 # PROVIDE: nmbd smbd
@@ -162,13 +162,13 @@ samba_config_init() {
     if [ -n "${samba_config}" -a "${samba_config}" != "${samba_config_default}" ]; then
 	pid_extra="-$(basename "${samba_config}")"
     fi
+    # Defaults
+    samba_enable=${samba_enable:=NO}
     # Setup dependent variables
     if [ -n "${rcvar}" ] && checkyesno "${rcvar}"; then
 	nmbd_enable=${nmbd_enable=YES}
 	smbd_enable=${smbd_enable=YES}
     fi
-    # Defaults
-    samba_enable=${samba_enable:=NO}
     nmbd_enable=${nmbd_enable:=NO}
     smbd_enable=${smbd_enable:=NO}
 %%WINBIND%%    # Winbindd
