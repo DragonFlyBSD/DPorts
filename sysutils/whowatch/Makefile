@@ -1,5 +1,5 @@
 # Created by: Daniel Harris <dannyboy@subdimension.com>
-# $FreeBSD: sysutils/whowatch/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/whowatch/Makefile 333997 2013-11-16 13:50:53Z vanilla $
 
 PORTNAME=	whowatch
 PORTVERSION=	1.4
@@ -14,10 +14,8 @@ COMMENT=	Displays information in real time about users currently logged on
 
 GNU_CONFIGURE=	yes
 
-MAN1=		whowatch.1
-PLIST_FILES=	bin/whowatch
+PLIST_FILES=	bin/whowatch man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 900006
