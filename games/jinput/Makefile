@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: games/jinput/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/jinput/Makefile 334040 2013-11-17 00:28:16Z danilo $
 
 PORTNAME=	jinput
 DISTVERSION=	20110801.r247
@@ -23,15 +23,16 @@ ALL_TARGET=	simple_linux
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}/${PORTNAME}.jar
 PLIST_DIRS=	%%JAVAJARDIR%%/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 	@${LN} -sf ${JAVALIBDIR}/jutils/jutils.jar ${WRKSRC}/lib/
 
+do-build:
+	@(cd ${BUILD_WRKSRC}; \
+		${SETENV} ${MAKE_ENV} ${ANT} ${ALL_TARGET})
+
 do-install:
-	@${ECHO_MSG} -n ">> Install JAR files in ${JAVAJARDIR}/${PORTNAME}/ ..."
-	@${MKDIR} ${JAVAJARDIR}/${PORTNAME}
-	@${INSTALL_DATA} ${WRKSRC}/dist/${PORTNAME}.jar \
-		${JAVAJARDIR}/${PORTNAME}/
-	@${ECHO_MSG} " [ DONE ]"
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/dist/${PORTNAME}.jar \
+		${STAGEDIR}${JAVAJARDIR}/${PORTNAME}/
 
 .include <bsd.port.mk>
