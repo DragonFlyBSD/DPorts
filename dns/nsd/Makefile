@@ -1,16 +1,16 @@
 # Created by: alexis
-# $FreeBSD: dns/nsd/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/nsd/Makefile 333569 2013-11-12 13:24:45Z erwin $
 
 PORTNAME=	nsd
-PORTVERSION=	3.2.16
+PORTVERSION=	4.0.0
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/	\
 		ftp://ftp.rhnet.is/pub/nsd/
 
 MAINTAINER=	jaap@NLnetLabs.nl
-COMMENT=	Authoritative only non-recursive name server
+COMMENT=	An authoritative only non-recursive name server
 
-CONFLICTS=	nsd-[0-2]*
+CONFLICTS=	nsd-[0-]* nsd3-*
 
 USE_RC_SUBR=	nsd
 
@@ -22,7 +22,8 @@ NSDRUNDIR=	/var/run/nsd
 NSDMAX_IPS?=	512
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-user=${NSDUSER} \
+CONFIGURE_ARGS=	--with-libevent=${LOCALBASE} \
+		--with-user=${NSDUSER} \
 		--with-configdir=${PREFIX}/etc/nsd \
 		--localstatedir=${NSDLSDIR} \
 		--with-dbfile=${NSDDBDIR}/nsd.db \
@@ -36,23 +37,22 @@ SUB_LIST+=	NSDUSER=${NSDUSER} \
 
 USE_OPENSSL=	yes
 
-MAN5=	nsd.conf.5
-MAN8=	nsd.8 nsdc.8 zonec.8 nsd-checkconf.8 nsd-notify.8 nsd-patch.8 \
-	nsd-xfer.8
+MAN5=		nsd.conf.5
+MAN8=		nsd.8 nsd-checkconf.8 nsd-control.8
 
 PORTDOCS=	CREDITS ChangeLog LICENSE NSD-DATABASE NSD-DIFFFILE \
-		NSD-FOR-BIND-USERS README README.icc RELNOTES \
+		NSD-4-features NSD-FOR-BIND-USERS README README.icc RELNOTES \
 		REQUIREMENTS TESTPLAN TODO UPGRADING coding-style \
 		differences.tex
 
-OPTIONS_DEFINE=	ROOT_SERVER LARGEFILE IPV6 BIND8_STATS ZONE_STATS CHECKING \
-		MINRESPSIZE NSEC3 NSEC3PREHASH MMAP MAXIPS DOCS RRL EUI_RRTYPES
-OPTIONS_DEFAULT=	LARGEFILE IPV6 NSEC3 NSEC3PREHASH MINRESPSIZE
+OPTIONS_DEFINE=		ROOT_SERVER LARGEFILE IPV6 BIND8_STATS CHECKING \
+		MINRESPSIZE NSEC3 NSEC3PREHASH MMAP MAXIPS DOCS EUI_RRTYPES
+OPTIONS_DEFAULT=	LARGEFILE IPV6 NSEC3 NSEC3PREHASH MINRESPSIZE RRL \
+		 EUI_RRTYPES
 
 ROOT_SERVER_DESC=	Configure as a root server
 LARGEFILE_DESC=		Largefile support
 BIND8_STATS_DESC=	BIND8-like NSTATS & XSTATS
-ZONE_STATS_DESC=	Per-zone BIND8 stats
 CHECKING_DESC=		Internal run-time checks
 NSEC3_DESC=		NSEC3 support
 NSEC3PREHASH_DESC=	Full NSEC3 pre-hashing
@@ -62,8 +62,10 @@ MAXIPS_DESC=		Raise max-ips from 8 to ${NSDMAX_IPS}
 RRL_DESC=		Response Rate Limiting
 EUI_RRTYPES_DESC=	EUI48 and EUI64 RRtypes support
 
-NO_STAGE=	yes
+NO_STAGE=		yes
 .include <bsd.port.options.mk>
+
+LIB_DEPENDS+=	event-1:${PORTSDIR}/devel/libevent
 
 .if ${PORT_OPTIONS:MROOT_SERVER}
 CONFIGURE_ARGS+=	--enable-root-server
@@ -79,13 +81,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if ${PORT_OPTIONS:MBIND8_STATS}
 CONFIGURE_ARGS+=	--enable-bind8-stats
-.endif
-
-.if ${PORT_OPTIONS:MZONE_STATS}
-.	if empty(PORT_OPTIONS:MBIND8_STATS)
-CONFIGURE_ARGS+=	--enable-bind8-stats
-.	endif
-CONFIGURE_ARGS+=	--enable-zone-stats
 .endif
 
 .if ${PORT_OPTIONS:MCHECKING}
