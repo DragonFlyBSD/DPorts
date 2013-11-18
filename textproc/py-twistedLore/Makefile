@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: textproc/py-twistedLore/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-twistedLore/Makefile 333927 2013-11-15 20:53:26Z sunpoet $
 
 PORTNAME=	twistedLore
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	textproc python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Lore/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
