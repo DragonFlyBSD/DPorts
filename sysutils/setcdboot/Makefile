@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: sysutils/setcdboot/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/setcdboot/Makefile 333988 2013-11-16 12:33:15Z vanilla $
 
 PORTNAME=	setcdboot
 PORTVERSION=	1.0
@@ -12,7 +12,6 @@ DISTFILES=
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/setcdboot
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
@@ -23,6 +22,6 @@ do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -o setcdboot setcdboot.c)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/setcdboot ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/setcdboot ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.post.mk>
