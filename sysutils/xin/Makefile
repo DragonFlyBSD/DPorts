@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/xin/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xin/Makefile 334050 2013-11-17 02:58:44Z vanilla $
 
 PORTNAME=	xin
 PORTVERSION=	1.0.0
@@ -12,8 +12,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Splits standard input and pipes into a command
 
 GNU_CONFIGURE=	yes
-MAN1=		xin.1
-PLIST_FILES=	bin/xin
+PLIST_FILES=	bin/xin man/man1/xin.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
