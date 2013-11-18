@@ -1,8 +1,9 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-LibXML/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-XML-LibXML/Makefile 333610 2013-11-12 19:47:56Z antoine $
 
 PORTNAME=	XML-LibXML
 PORTVERSION=	2.0106
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
