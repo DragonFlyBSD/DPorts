@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: games/xinvaders3d/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xinvaders3d/Makefile 333698 2013-11-13 15:09:42Z danilo $
 
 PORTNAME=	xinvaders3d
 PORTVERSION=	1.3.6
@@ -15,8 +15,7 @@ USE_XORG=	x11
 PLIST_FILES=	bin/xinv3d
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xinv3d ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/xinv3d ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
