@@ -1,16 +1,18 @@
 # Created by: jaharkes
-# $FreeBSD: devel/rpc2/Makefile 329190 2013-10-03 13:46:05Z bsam $
+# $FreeBSD: devel/rpc2/Makefile 334076 2013-11-17 11:10:05Z sunpoet $
 
 PORTNAME=	rpc2
 PORTVERSION=	2.10
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
-		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/ \
-		ftp://ftp.planetmirror.com/pub/coda/src/ \
-		ftp://ftp.nctu.edu.tw/mirror/Coda/src/
+MASTER_SITES=	http://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
+		http://ftp.wu-wien.ac.at/pub/systems/coda/src/ \
+		ftp://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
+		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interprocess communication library
+
+LICENSE=	LGPL20
 
 LIB_DEPENDS=	liblwp.so:${PORTSDIR}/devel/lwp
 
