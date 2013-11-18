@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-itertools/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/R-cran-itertools/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	itertools
 DISTVERSION=	0.1-1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
