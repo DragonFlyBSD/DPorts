@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Domain/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Domain/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
 
 PORTNAME=	Data-Domain
 PORTVERSION=	1.05
@@ -25,7 +25,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod \
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Data::Domain.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
