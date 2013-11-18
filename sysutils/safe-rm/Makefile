@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/safe-rm/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/safe-rm/Makefile 333988 2013-11-16 12:33:15Z vanilla $
 
 PORTNAME=	safe-rm
 PORTVERSION=	0.10
@@ -17,19 +17,13 @@ NO_BUILD=	yes
 
 FETCH_ARGS=	-pRr
 
-PORTDOCS=	COPYING Changes README
-PLIST_FILES=	bin/safe-rm
+DOCS=		COPYING Changes README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/safe-rm ${PREFIX}/bin
-
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/safe-rm ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${DOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
