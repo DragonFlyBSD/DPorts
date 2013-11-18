@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: devel/p5-Data-Dumper-Perltidy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Dumper-Perltidy/Makefile 333896 2013-11-15 17:40:36Z mat $
 
 PORTNAME=	Data-Dumper-Perltidy
 PORTVERSION=	0.01
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	mopsfelder@gmail.com
 COMMENT=	Stringify and pretty print Perl data structures
 
-RUN_DEPENDS=	perltidy>=0:${PORTSDIR}/devel/perltidy
+RUN_DEPENDS=	perltidy:${PORTSDIR}/devel/p5-Perl-Tidy
 
 USES=		perl5
 USE_PERL5=	configure
