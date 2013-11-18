@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arhipov <admin@gorodkirov.ru>
-# $FreeBSD: games/openmsx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/openmsx/Makefile 333625 2013-11-12 21:44:04Z madpilot $
 
 PORTNAME=	openmsx
 PORTVERSION=	0.3.1
@@ -13,14 +13,15 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-all
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative music for OpenTTD game engine
 
+LICENSE=	GPLv2
+
 USE_ZIP=	yes
 NO_BUILD=	yes
 LATEST_LINK=	openttd-${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/share/openttd/baseset/openmsx
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/openttd/baseset/openmsx
 	${INSTALL_DATA} ${WRKDIR}/openmsx-${PORTVERSION}/* \
-		${PREFIX}/share/openttd/baseset/openmsx
+		${STAGEDIR}${PREFIX}/share/openttd/baseset/openmsx
 
 .include <bsd.port.mk>
