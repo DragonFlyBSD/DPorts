@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: sysutils/thefish/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/thefish/Makefile 333992 2013-11-16 13:25:19Z vanilla $
 
 PORTNAME=	thefish
 PORTVERSION=	0.6.6
@@ -18,7 +18,6 @@ WANT_GNOME=	yes
 #OPTIONS_SINGLE_X11=	GTK2
 #OPTIONS_DEFAULT=	GTK2
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 #.if ${PORT_OPTIONS:MGTK2}
@@ -26,11 +25,10 @@ USE_GNOME=	gtk20
 MAKE_ENV+=	WITH_GTK=yes
 #.endif
 
-MAN1=		thefish.1
-PLIST_FILES=	bin/thefish
+PLIST_FILES=	bin/thefish man/man1/thefish.1.gz
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/thefish ${PREFIX}/bin
-	@${INSTALL_MAN} ${WRKSRC}/thefish.1 ${PREFIX}/man/man1
+	@${INSTALL_PROGRAM} ${WRKSRC}/thefish ${STAGEDIR}${PREFIX}/bin
+	@${INSTALL_MAN} ${WRKSRC}/thefish.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
