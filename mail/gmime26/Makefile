@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: mail/gmime26/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gmime26/Makefile 333847 2013-11-15 10:44:15Z sunpoet $
 
 PORTNAME=	gmime
 PORTVERSION=	2.6.18
@@ -35,7 +35,6 @@ LATEST_LINK?=	${PORTNAME}26
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -46,9 +45,9 @@ post-patch:
 PORTDOCS=	*
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in docs/reference/html/*
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
