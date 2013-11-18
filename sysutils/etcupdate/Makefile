@@ -1,8 +1,8 @@
 # Created by: jhb
-# $FreeBSD: sysutils/etcupdate/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/etcupdate/Makefile 333612 2013-11-12 20:03:21Z antoine $
 
 PORTNAME=	etcupdate
-PORTVERSION=	0.4
+PORTVERSION=	1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -10,17 +10,17 @@ DISTFILES=	# none
 MAINTAINER=	jhb@FreeBSD.org
 COMMENT=	Manage updates to /etc automatically
 
+LICENSE=	BSD
+
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
 SRC=		${.CURDIR}/src
 
-MAN8=		${PORTNAME}.8
-PLIST_FILES=	sbin/etcupdate
+PLIST_FILES=	sbin/etcupdate man/man8/etcupdate.8.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${SRC}/${PORTNAME}.sh ${PREFIX}/sbin/${PORTNAME}
-	${INSTALL_MAN} ${SRC}/${PORTNAME}.8 ${PREFIX}/man/man8
+	${INSTALL_SCRIPT} ${SRC}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
+	${INSTALL_MAN} ${SRC}/${PORTNAME}.8 ${STAGEDIR}${PREFIX}/man/man8
 
 .include <bsd.port.mk>
