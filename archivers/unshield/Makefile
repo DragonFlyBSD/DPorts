@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: archivers/unshield/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/unshield/Makefile 334031 2013-11-16 20:12:09Z sunpoet $
 
 PORTNAME=	unshield
 PORTVERSION=	0.6
@@ -12,12 +12,9 @@ COMMENT=	Extract data from InstallShield CAB files
 
 LICENSE=	MIT
 
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USES=		pathfix
-
-MAN1=		${PORTNAME}.1
 
 .include <bsd.port.mk>
