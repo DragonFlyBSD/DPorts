@@ -1,8 +1,8 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: devel/p5-Test-Harness/Makefile 330058 2013-10-11 07:26:11Z culot $
+# $FreeBSD: devel/p5-Test-Harness/Makefile 333764 2013-11-14 15:19:08Z sunpoet $
 
 PORTNAME=	Test-Harness
-PORTVERSION=	3.29
+PORTVERSION=	3.30
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
