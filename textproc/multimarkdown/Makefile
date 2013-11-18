@@ -27,9 +27,6 @@ WRKSRC=	${WRKDIR}/fletcher-MultiMarkdown-4-${MM4_COMMIT}
 
 ALL_TARGET=	${PORTNAME}
 
-USES=		shebangfix
-SHEBANG_FILES=	enumsToPerl.pl
-
 OPTIONS_DEFINE=	CHEAT_SHEET EXTRAS HELPERS
 CHEAT_SHEET_DESC=	HTML-based cheat sheat
 EXTRAS_DESC=	Extra scripts and XSLT support
