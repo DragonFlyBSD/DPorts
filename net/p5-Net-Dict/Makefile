@@ -1,8 +1,8 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net/p5-Net-Dict/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
+# $FreeBSD: net/p5-Net-Dict/Makefile 333901 2013-11-15 17:55:40Z sunpoet $
 
 PORTNAME=	Net-Dict
-PORTVERSION=	2.10
+PORTVERSION=	2.11
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:NEILB
