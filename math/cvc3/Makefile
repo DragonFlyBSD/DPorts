@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: math/cvc3/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/cvc3/Makefile 333703 2013-11-13 15:55:09Z lwhsu $
 
 PORTNAME=	cvc3
 PORTVERSION=	2.4.1
@@ -19,6 +19,7 @@ CONFIGURE_ARGS=	--enable-dynamic \
 CXXFLAGS+=	-fPIC
 GNU_CONFIGURE=	yes
 USES=		bison gmake perl5
+USE_GCC=	any
 USE_LDCONFIG=	yes
 
 NO_STAGE=	yes
