@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-POM-View-HTML-Filter/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Pod-POM-View-HTML-Filter/Makefile 333896 2013-11-15 17:40:36Z mat $
 
 PORTNAME=	Pod-POM-View-HTML-Filter
 PORTVERSION=	0.09
@@ -12,7 +12,7 @@ COMMENT=	Use filters on sections of your pod documents
 
 BUILD_DEPENDS=	p5-Pod-POM>=0:${PORTSDIR}/textproc/p5-Pod-POM \
 		p5-Syntax-Highlight-Shell>=0:${PORTSDIR}/www/p5-Syntax-Highlight-Shell \
-		perltidy>=0:${PORTSDIR}/devel/perltidy \
+		perltidy:${PORTSDIR}/devel/p5-Perl-Tidy \
 		p5-Syntax-Highlight-HTML>=0:${PORTSDIR}/www/p5-Syntax-Highlight-HTML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
