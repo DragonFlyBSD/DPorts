@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/vuxml/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/vuxml/Makefile 334047 2013-11-17 02:25:24Z eadler $
 
 PORTNAME=	vuxml
 PORTVERSION=	1.1
@@ -11,7 +11,7 @@ DISTFILES=	vuxml-10.dtd  vuxml-model-10.mod \
 		xml1.dcl catalog catalog.xml
 DIST_SUBDIR=	vuxml
 
-MAINTAINER=	secteam@FreeBSD.org
+MAINTAINER=	ports-secteam@FreeBSD.org
 COMMENT=	Vulnerability and eXposure Markup Language DTD
 
 RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr \
