@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Perl-Critic/Makefile 332877 2013-11-05 17:55:45Z sunpoet $
+# $FreeBSD: textproc/p5-Perl-Critic/Makefile 333896 2013-11-15 17:40:36Z mat $
 
 PORTNAME=	Perl-Critic
 PORTVERSION=	1.12.1
@@ -30,7 +30,7 @@ BUILD_DEPENDS=	p5-B-Keywords>=1.05:${PORTSDIR}/devel/p5-B-Keywords \
 		p5-String-Format>=1.13:${PORTSDIR}/textproc/p5-String-Format \
 		p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken \
 		p5-Term-ANSIColor>=2.02:${PORTSDIR}/devel/p5-Term-ANSIColor \
-		perltidy:${PORTSDIR}/devel/perltidy
+		perltidy:${PORTSDIR}/devel/p5-Perl-Tidy
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Memory-Cycle>=0:${PORTSDIR}/devel/p5-Test-Memory-Cycle
