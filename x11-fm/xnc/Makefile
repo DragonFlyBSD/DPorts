@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@chg.ru>
-# $FreeBSD: x11-fm/xnc/Makefile 331755 2013-10-27 09:25:40Z demon $
+# $FreeBSD: x11-fm/xnc/Makefile 334129 2013-11-17 22:09:53Z rakuco $
 
 PORTNAME=	xnc
 PORTVERSION=	5.0.4
@@ -12,6 +12,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	File manager for X11 similar to Norton Commander
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Latest release from 2005, upstream disappeared, does not build
+EXPIRATION_DATE=	2013-12-01
 
 NO_STAGE=	yes
 # xnc will use the following programs if you have them installed:
