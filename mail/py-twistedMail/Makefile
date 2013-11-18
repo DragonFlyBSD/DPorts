@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: mail/py-twistedMail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/py-twistedMail/Makefile 333928 2013-11-15 20:53:32Z sunpoet $
 
 PORTNAME=	twistedMail
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	mail devel python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Mail/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
