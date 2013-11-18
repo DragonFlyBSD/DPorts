@@ -1,8 +1,8 @@
 # Created by: Jeff Burchell <toxic@doobie.com>
-# $FreeBSD: archivers/libpar2/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/libpar2/Makefile 334132 2013-11-17 23:12:03Z feld $
 
 PORTNAME=	libpar2
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	archivers
 MASTER_SITES=	http://launchpad.net/${PORTNAME}/trunk/${PORTVERSION}/+download/
 
@@ -11,11 +11,10 @@ LICENSE=	GPLv2
 MAINTAINER=	toxic@doobie.com
 COMMENT=	Library for manipulating PAR2 files, extracted from par2cmdline
 
-LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20
+LIB_DEPENDS=	libsigc-2.0.so:${PORTSDIR}/devel/libsigc++20
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 FETCH_ARGS=	-pRr
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -32,8 +31,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
