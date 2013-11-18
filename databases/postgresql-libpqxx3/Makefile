@@ -1,18 +1,18 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx3/Makefile 331683 2013-10-26 13:05:42Z swills $
+# $FreeBSD: databases/postgresql-libpqxx3/Makefile 334084 2013-11-17 14:44:00Z crees $
 
 PORTNAME=	libpqxx
 PORTVERSION=	3.1.1
 CATEGORIES=	databases
 MASTER_SITES=	http://pqxx.org/download/software/${PORTNAME}/
 PKGNAMEPREFIX=	postgresql-
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	postgresql
 
 MAINTAINER=	20080111.freebsd.org@ab.ote.we.lv
 COMMENT=	New C++ interface for PostgreSQL
 
 CONFLICTS=	postgresql-libpqxx-[2-4].*
-LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}3
 PORTSCOUT=	limit:^2\.
 
 USE_PGSQL=	yes
