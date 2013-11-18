@@ -1,8 +1,8 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 332891 2013-11-05 18:34:22Z rakuco $
+# $FreeBSD: devel/cmake/Makefile 334134 2013-11-17 23:20:42Z rakuco $
 
 PORTNAME=	cmake
-PORTVERSION=	2.8.12
+PORTVERSION=	2.8.12.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.8/
 
@@ -23,7 +23,7 @@ INSTALL_TARGET=	install/strip
 
 .if !defined(CMAKE_MODULES)
 HAS_CONFIGURE=	yes
-RUN_DEPENDS=	${DATADIR}/Modules/CMake.cmake:${PORTSDIR}/devel/cmake-modules
+RUN_DEPENDS=	${LOCALBASE}/share/cmake/Modules/CMake.cmake:${PORTSDIR}/devel/cmake-modules
 .endif
 
 post-patch:
