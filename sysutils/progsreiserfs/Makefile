@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: sysutils/progsreiserfs/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/progsreiserfs/Makefile 333977 2013-11-16 03:33:37Z vanilla $
 
 PORTNAME=	progsreiserfs
 PORTVERSION=	0.3.1.r8
@@ -18,7 +18,6 @@ CFLAGS+=	-Dgetopt_long_only=getopt_long
 
 EXTRA_PATCHES=	${FILESDIR}/extrapatch-progsreiserfs::libmisc::Makefile.in
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -28,9 +27,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 .else
 CONFIGURE_ARGS+=--disable-nls
 .endif
-
-MAN8=		cpfs.reiserfs.8 mkfs.reiserfs.8 reiserfs.8 \
-		resizefs.reiserfs.8 tunefs.reiserfs.8
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^LIBTOOL=.*|LIBTOOL=${LIBTOOL}|g' \
