@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-kombu/Makefile 333327 2013-11-09 19:12:01Z wg $
+# $FreeBSD: net/py-kombu/Makefile 334098 2013-11-17 16:08:06Z wg $
 
 PORTNAME=	kombu
-PORTVERSION=	3.0.4
+PORTVERSION=	3.0.5
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
