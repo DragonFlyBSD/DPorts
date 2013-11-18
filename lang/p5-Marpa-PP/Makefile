@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: lang/p5-Marpa-PP/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Marpa-PP/Makefile 334005 2013-11-16 15:19:56Z sunpoet $
 
 PORTNAME=	Marpa-PP
 PORTVERSION=	0.014
@@ -24,20 +24,4 @@ TEST_DEPENDS=	p5-Test-Weaken>=3.004000:${PORTSDIR}/devel/p5-Test-Weaken
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Marpa::PP.3 \
-		Marpa::PP::Advanced::Bibliography.3 \
-		Marpa::PP::Advanced::Models.3 \
-		Marpa::PP::Debug.3 \
-		Marpa::PP::Grammar.3 \
-		Marpa::PP::Recognizer.3 \
-		Marpa::PP::Rewrite.3 \
-		Marpa::PP::Semantics.3 \
-		Marpa::PP::Semantics::Infinite.3 \
-		Marpa::PP::Semantics::Null.3 \
-		Marpa::PP::Semantics::Order.3 \
-		Marpa::PP::Support.3 \
-		Marpa::PP::Tracing.3 \
-		Marpa::PP::Vocabulary.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
