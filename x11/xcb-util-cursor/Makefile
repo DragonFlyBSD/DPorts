@@ -1,7 +1,7 @@
-# $FreeBSD: x11/xcb-util-cursor/Makefile 330440 2013-10-15 19:32:50Z eadler $
+# $FreeBSD: x11/xcb-util-cursor/Makefile 333671 2013-11-13 11:24:03Z zeising $
 
 PORTNAME=	xcb-util-cursor
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
