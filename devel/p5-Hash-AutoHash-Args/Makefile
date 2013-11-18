@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-AutoHash-Args/Makefile 330182 2013-10-12 19:44:42Z sunpoet $
+# $FreeBSD: devel/p5-Hash-AutoHash-Args/Makefile 334118 2013-11-17 19:39:42Z sunpoet $
 
 PORTNAME=	Hash-AutoHash-Args
 PORTVERSION=	1.18
@@ -18,11 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Deep>=0.110:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Pod>=1.48:${PORTSDIR}/devel/p5-Test-Pod
 
-NO_STAGE=	yes
 USE_PERL5=	modbuild
 USES=		perl5
-
-MAN3=		Hash::AutoHash::Args.3 \
-		Hash::AutoHash::Args::V0.3
 
 .include <bsd.port.mk>
