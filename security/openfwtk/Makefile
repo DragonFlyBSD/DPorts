@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: security/openfwtk/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/openfwtk/Makefile 333667 2013-11-13 10:41:33Z gahr $
 
 PORTNAME=	openfwtk
 PORTVERSION=	2.0
@@ -29,7 +29,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}
-USE_TK_WRAPPER=	yes
+USES+=		tk:wrapper
 PLIST_SUB+=	WATCH=""
 .else
 PLIST_SUB+=	WATCH="@comment "
