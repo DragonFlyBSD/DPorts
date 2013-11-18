@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: security/gnutls3/Makefile 332596 2013-11-03 09:21:59Z novel $
+# $FreeBSD: security/gnutls3/Makefile 334095 2013-11-17 15:58:38Z wg $
 
 PORTNAME=	gnutls
 PORTVERSION=	3.1.16
@@ -43,13 +43,13 @@ OPTIONS_DEFINE=		CXX DOCS EXAMPLES LIBTASN1
 OPTIONS_DEFAULT=	CXX
 OPTIONS_SUB=		yes
 
-LIBTASN1_DESC=	Use system libtasn1
+LIBTASN1_DESC=	Use libtasn1 from ports
 
 CXX_CONFIGURE_ENABLE=	cxx
 
 .include <bsd.port.options.mk>
 
-.if defined(PORT_OPTIONS:MLIBTASN1) || exists(${LOCALBASE}/lib/libtasn1.so.7)
+.if ${PORT_OPTIONS:MLIBTASN1} || exists(${LOCALBASE}/lib/libtasn1.so.7)
 LIB_DEPENDS+=	libtasn1.so:${PORTSDIR}/security/libtasn1
 .else
 CONFIGURE_ARGS+=	--with-included-libtasn1
