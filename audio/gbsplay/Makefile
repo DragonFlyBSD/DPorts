@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/gbsplay/Makefile 329975 2013-10-10 08:27:17Z ehaupt $
+# $FreeBSD: audio/gbsplay/Makefile 333672 2013-11-13 11:27:19Z ehaupt $
 
 PORTNAME=	gbsplay
 PORTVERSION=	0.0.8
@@ -13,7 +13,6 @@ COMMENT?=	Emulates the sound hardware of the Nintendo Game Boy(TM)
 
 HAS_CONFIGURE=	yes
 USES=		gettext gmake
-NO_STAGE=	yes
 USE_CSTD=	gnu89
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
@@ -67,27 +66,33 @@ gbsplay-post-patch:
 
 do-install:
 .for f in ${PORTNAME} gbsinfo
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${STAGEDIR}${PREFIX}/bin
 .endfor
-.for f in ${MAN1} ${MAN5}
-	${INSTALL_MAN} ${WRKSRC}/${f} ${MAN${f:E}PREFIX}/man/man${f:E}
-.endfor
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/nightmode.gbs ${EXAMPLESDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/examples/gbsplayrc_sample ${PREFIX}/etc/gbsplayrc.default
-.if !exists(${PREFIX}/etc/gbsplayrc)
-	${INSTALL_DATA} ${WRKSRC}/examples/gbsplayrc_sample ${PREFIX}/etc/gbsplayrc
+.for f in ${MAN1} ${MAN5}
+	${INSTALL_MAN} ${WRKSRC}/${f} ${STAGEDIR}${MAN${f:E}PREFIX}/man/man${f:E}
+.endfor
+
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/nightmode.gbs \
+		${STAGEDIR}${EXAMPLESDIR}
+
+	${INSTALL_DATA} ${WRKSRC}/examples/gbsplayrc_sample \
+		${STAGEDIR}${PREFIX}/etc/gbsplayrc.default
+.if !exists(${STAGEDIR}${PREFIX}/etc/gbsplayrc)
+	${INSTALL_DATA} ${WRKSRC}/examples/gbsplayrc_sample \
+		${STAGEDIR}${PREFIX}/etc/gbsplayrc
 .endif
 
 .for l in de en
-	${INSTALL_DATA} ${WRKSRC}/po/${l}.mo ${PREFIX}/share/locale/${l}/LC_MESSAGES/gbsplay.mo
+	${INSTALL_DATA} ${WRKSRC}/po/${l}.mo \
+		${STAGEDIR}${PREFIX}/share/locale/${l}/LC_MESSAGES/gbsplay.mo
 .endfor
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
