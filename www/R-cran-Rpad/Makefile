@@ -1,9 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-Rpad/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/R-cran-Rpad/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	Rpad
 PORTVERSION=	1.3.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
