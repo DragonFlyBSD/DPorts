@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: archivers/liborange/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/liborange/Makefile 333828 2013-11-15 09:49:11Z ehaupt $
 
 PORTNAME=	liborange
 PORTVERSION=	0.4
@@ -21,8 +21,6 @@ INNO_DESC=		Build with expermential Inno Setup support
 VISE_DESC=		Build with expermential VISE support
 MSI_DESC=		Build with expermential MSI support
 
-
-NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USES=	iconv pathfix pkgconfig
@@ -30,15 +28,13 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
-MAN1=		orange.1
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBSYNCE}
 CONFIGURE_ARGS+=	--without-libsynce
 REQUIRES+=	libsynce
 .else
-LIB_DEPENDS+=		synce.0:${PORTSDIR}/palm/synce-libsynce
+LIB_DEPENDS+=		synce:${PORTSDIR}/palm/synce-libsynce
 CONFIGURE_ARGS+=	--with-libsynce
 .endif
 
