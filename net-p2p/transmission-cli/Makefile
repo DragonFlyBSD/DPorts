@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-cli/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/transmission-cli/Makefile 333720 2013-11-13 19:45:57Z crees $
 
 PORTNAME=	transmission
 PORTVERSION=	2.82
@@ -32,8 +32,8 @@ NO_STAGE=	yes
 LIB_DEPENDS?=	${GEN_LIB_DEPENDS}
 
 # General dependencies
-GEN_LIB_DEPENDS=curl:${PORTSDIR}/ftp/curl \
-		event-2.0.6:${PORTSDIR}/devel/libevent2
+GEN_LIB_DEPENDS=libcurl.so:${PORTSDIR}/ftp/curl \
+		libevent-2.0.so.6:${PORTSDIR}/devel/libevent2
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:${PORTSDIR}/www/transmission-web
 
 # This is master port of transmission-*, so don't override USES definition 
