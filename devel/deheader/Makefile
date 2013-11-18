@@ -1,7 +1,7 @@
-# $FreeBSD: devel/deheader/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/deheader/Makefile 333652 2013-11-13 06:09:26Z kevlo $
 
 PORTNAME=	deheader
-PORTVERSION=	0.7
+PORTVERSION=	0.8
 CATEGORIES=	devel
 MASTER_SITES=	http://www.catb.org/esr/deheader/
 
@@ -14,13 +14,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 NO_BUILD=	yes
 USE_PYTHON=	yes
 
-MAN1=		deheader.1
+PLIST_FILES=	bin/deheader man/man1/deheader.1.gz
 
-PLIST_FILES=	bin/deheader
-
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/deheader ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/deheader.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/deheader ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/deheader.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
