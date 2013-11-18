@@ -1,8 +1,8 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: news/py-twistedNews/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/py-twistedNews/Makefile 333930 2013-11-15 20:53:42Z sunpoet $
 
 PORTNAME=	twistedNews
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	news devel python
 MASTER_SITES=	http://twistedmatrix.com/Releases/News/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
