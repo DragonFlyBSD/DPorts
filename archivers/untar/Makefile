@@ -1,5 +1,5 @@
 # Created by: KIMURA Shigekazu <rikimura@a011.broada.jp>
-# $FreeBSD: archivers/untar/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD: archivers/untar/Makefile 333822 2013-11-15 09:29:35Z ehaupt $
 
 PORTNAME=	untar
 PORTVERSION=	1.4
@@ -13,7 +13,6 @@ EXTRACT_ONLY=
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lists/Extracts files from a "*.tgz" or "*.gz" archive
 
-NO_STAGE=	yes
 MAKEFILE=	/usr/share/mk/bsd.prog.mk
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/untar
@@ -26,6 +25,6 @@ pre-patch:
 	@${CP} ${DISTDIR}/untar.c ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
