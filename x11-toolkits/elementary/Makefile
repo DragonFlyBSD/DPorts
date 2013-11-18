@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-toolkits/elementary/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD: x11-toolkits/elementary/Makefile 333733 2013-11-14 00:33:32Z gblach $
 
 PORTNAME=	elementary
 PORTVERSION=	1.7.9
@@ -48,11 +48,6 @@ post-patch:
 	@${LN} -s base.src ${WRKSRC}/config/default/base.cfg
 	@${LN} -s base.src ${WRKSRC}/config/mobile/base.cfg
 	@${LN} -s base.src ${WRKSRC}/config/standard/base.cfg
-
-post-install:
-.if empty(PORT_OPTIONS:MEXAMPLES)
-	@${RMDIR} ${EXAMPLESDIR}
-.endif
 
 .if ${ARCH} == "sparc64"
 BROKEN=		Does not install on sparc64: signal 10
