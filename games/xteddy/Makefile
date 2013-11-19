@@ -1,5 +1,5 @@
 # Created by: Eckart "Isegrim" Hofmann
-# $FreeBSD: games/xteddy/Makefile 329748 2013-10-07 23:43:04Z marino $
+# $FreeBSD: games/xteddy/Makefile 333956 2013-11-16 01:13:37Z danilo $
 
 PORTNAME=	xteddy
 PORTVERSION=	2.2
@@ -18,8 +18,8 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lXext
 
-MAN6=		xteddy.6
 PLIST_FILES=	bin/xteddy bin/xteddy_test bin/xtoys \
+		man/man6/xteddy.6.gz \
 		%%DATADIR%%/teddy.png %%DATADIR%%/xalex.png \
 		%%DATADIR%%/xbobo.png %%DATADIR%%/xbrummi.png \
 		%%DATADIR%%/xcherubino.png %%DATADIR%%/xduck.png \
@@ -30,7 +30,6 @@ PLIST_FILES=	bin/xteddy bin/xteddy_test bin/xtoys \
 		%%DATADIR%%/xtrouble.png %%DATADIR%%/xtuxxy.png
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 post-patch:
 .for f in configure xteddy.c
 	@${REINPLACE_CMD} -e \
