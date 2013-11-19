@@ -1,11 +1,12 @@
-# $FreeBSD: textproc/ro-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
+# $FreeBSD: textproc/ro-hunspell/Makefile 334093 2013-11-17 15:56:07Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	3.3.8
+PORTVERSION=	3.3.10
 CATEGORIES=	textproc
 MASTER_SITES=	SF/rospell/Romanian%20dictionaries/dict-${PORTVERSION}/
 PKGNAMEPREFIX=	ro-
 DISTNAME=	ro_RO.${PORTVERSION}
+EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
@@ -14,7 +15,6 @@ COMMENT=	Romanian hunspell dictionaries
 LICENSE=	LGPL21 GPLv2 MPL
 LICENSE_COMB=	dual
 
-EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
