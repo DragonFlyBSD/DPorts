@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-im/tapioca-qt/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/tapioca-qt/Makefile 334127 2013-11-17 21:54:51Z rakuco $
 
 PORTNAME=	tapioca-qt
 PORTVERSION=	0.14.1
@@ -14,6 +14,9 @@ LIB_DEPENDS=	QtTelepathyCore.0:${PORTSDIR}/net-im/telepathy-qt
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/../COPYING
+
+DEPRECATED=	Unmaintained upstream since 2007, not used by anything
+EXPIRATION_DATE=	2013-12-01
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/build
 
