@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/xsysstats/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD: sysutils/xsysstats/Makefile 334050 2013-11-17 02:58:44Z vanilla $
 
 PORTNAME=	xsysstats
 PORTVERSION=	1.51
@@ -12,15 +12,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	System information display tool
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	x11
-MAN1=		xsysstats.1
 
 ALL_TARGET=	xsysstats
 
-PLIST_FILES=	bin/xsysstats
+PLIST_FILES=	bin/xsysstats man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 pre-patch:
 	${RM} ${WRKSRC}/headers.h && ${TOUCH} ${WRKSRC}/headers.h
 
