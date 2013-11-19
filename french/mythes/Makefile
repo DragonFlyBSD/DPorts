@@ -1,10 +1,12 @@
-# $FreeBSD: french/mythes/Makefile 333867 2013-11-15 14:15:27Z bapt $
+# $FreeBSD: french/mythes/Makefile 334121 2013-11-17 21:01:59Z sunpoet $
 
 PORTNAME=	mythes
 PORTVERSION=	2.3
 CATEGORIES=	french textproc
-MASTER_SITES=	http://www.dicollecte.org/download/fr/
+MASTER_SITES=	http://www.dicollecte.org/download/fr/ \
+		LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	thesaurus-v${PORTVERSION}
+EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
@@ -12,7 +14,6 @@ COMMENT=	French thesaurus
 
 LICENSE=	LGPL21
 
-EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
