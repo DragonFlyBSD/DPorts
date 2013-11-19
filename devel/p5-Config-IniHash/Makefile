@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Config-IniHash/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: devel/p5-Config-IniHash/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	Config-IniHash
 PORTVERSION=	3.01.01
@@ -16,8 +16,7 @@ RUN_DEPENDS=	p5-Hash-Case>=0:${PORTSDIR}/devel/p5-Hash-Case \
 		p5-Hash-WithDefaults>=0.04:${PORTSDIR}/devel/p5-Hash-WithDefaults
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 
 .include <bsd.port.mk>
