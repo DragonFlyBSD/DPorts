@@ -2,7 +2,6 @@ USES+=		readline
 
 C86=		/gdb/config/i386
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--disable-werror
 
 post-extract:
 	${CP} ${DFLY_FILESDIR}/dfly* ${WRKSRC}/${C86}/
