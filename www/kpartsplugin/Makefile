@@ -1,4 +1,4 @@
-# $FreeBSD: www/kpartsplugin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/kpartsplugin/Makefile 333596 2013-11-12 18:18:38Z avilla $
 
 PORTNAME=	kpartsplugin
 DISTVERSION=	0.0-${PORTDATE}
@@ -11,18 +11,14 @@ MAINTAINER=	avilla@FreeBSD.org
 COMMENT=	Browser file viewer using KDE technology
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
-USE_QT4=	gui moc_build qmake_build rcc_build uic_build
+USE_QT4=	corelib gui moc_build qmake_build rcc_build uic_build
 USE_BZIP2=	yes
-USES=		cmake
-CMAKE_ARGS=	-DNSPLUGIN_INSTALL_DIR:PATH="${WEBPLUGINS_DIR}"
+USES=		cmake webplugin:native
+CMAKE_ARGS=	-DNSPLUGIN_INSTALL_DIR:PATH="${WEBPLUGIN_DIR}"
 
 PORTDATE=	20120723
 
-USE_WEBPLUGINS=	native
-WEBPLUGINS_NAME=	# empty
-WEBPLUGINS_FILES=	lib${PORTNAME}.so
+WEBPLUGIN_NAME=	# empty
+WEBPLUGIN_FILES=lib${PORTNAME}.so
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../www/firefox/Makefile.webplugins"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
