@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xoids/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xoids/Makefile 333793 2013-11-14 21:16:47Z danilo $
 
 PORTNAME=	xoids
 PORTVERSION=	1.5
@@ -13,18 +13,18 @@ COMMENT=	X Window Asteroids style game with full color pixmaps
 
 USES=		imake
 USE_XORG=	xpm
-MAN6=		xoids.6
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+PLIST_FILES=	bin/xoids \
+		man/man6/xoids.6.gz
+PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS
 
 post-extract:
 	@${CP} ${WRKSRC}/xoids.1x ${WRKSRC}/xoids.man
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
