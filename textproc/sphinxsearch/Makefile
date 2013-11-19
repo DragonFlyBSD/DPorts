@@ -1,12 +1,12 @@
 # Created by: Matthew Seaman
-# $FreeBSD: textproc/sphinxsearch/Makefile 330534 2013-10-16 20:15:24Z matthew $
+# $FreeBSD: textproc/sphinxsearch/Makefile 333732 2013-11-13 23:39:23Z matthew $
 
 # Note: the Sphinx Storage Engine MySQL plugin is not supported by
 # this port.  You need a patched version of mysql server for that.
 # See http://www.infracaninophile.co.uk/articles/sphinxse.html
 
 PORTNAME=	sphinxsearch
-PORTVERSION=	2.1.2
+PORTVERSION=	2.1.3
 CATEGORIES=	textproc databases
 MASTER_SITES=	http://sphinxsearch.com/files/
 DISTNAME=	sphinx-${PORTVERSION}-release
