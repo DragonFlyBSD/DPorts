@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: sysutils/xfsm/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xfsm/Makefile 334050 2013-11-17 02:58:44Z vanilla $
 
 PORTNAME=	xfsm
 PORTVERSION=	1.99
@@ -15,8 +15,6 @@ COMMENT=	X File System Monitor
 USES=		imake
 USE_XORG=	xbitmaps x11 xext
 MAKE_ARGS=	CC="${CC}" CCOPTIONS="-DFreeBSD"
-MAN1=		xfsm.1
-PLIST_FILES=	bin/xfsm
+PLIST_FILES=	bin/xfsm man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
