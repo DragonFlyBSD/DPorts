@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xmlink/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xmlink/Makefile 333791 2013-11-14 21:07:17Z danilo $
 
 PORTNAME=	xmlink
 PORTVERSION=	5.5.2
@@ -14,14 +14,14 @@ COMMENT=	Missing Link puzzle for X Window System
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		imake
 USE_XORG=	x11 xext xt sm ice
-MAN1=		xmlink.1
-MANCOMPRESSED=	no
-XFREE86_HTML_MAN=	no
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/xmlink \
+		man/man1/xmlink.1.gz \
+		lib/X11/app-defaults/Mlink
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xmlink ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/Mlink.ad ${PREFIX}/lib/X11/app-defaults/Mlink
-	${INSTALL_MAN} ${WRKSRC}/xmlink.man ${MANPREFIX}/man/man1/xmlink.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xmlink ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/Mlink.ad ${STAGEDIR}${PREFIX}/lib/X11/app-defaults/Mlink
+	${INSTALL_MAN} ${WRKSRC}/xmlink.man ${STAGEDIR}${MANPREFIX}/man/man1/xmlink.1
 
 .include <bsd.port.mk>
