@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: audio/liteamp/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/liteamp/Makefile 334128 2013-11-17 21:59:01Z rakuco $
 
 PORTNAME=	liteamp
 PORTVERSION=	0.2.4.2
@@ -12,6 +12,9 @@ COMMENT=	Light-weight Music Player for GNOME2
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Dead upstream since 2004, does not build with clang
+EXPIRATION_DATE=	2013-12-01
 
 LIB_DEPENDS=	id3tag.0:${PORTSDIR}/audio/libid3tag \
 		ao.4:${PORTSDIR}/audio/libao \
