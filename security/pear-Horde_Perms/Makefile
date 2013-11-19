@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Horde_Perms/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Horde_Perms/Makefile 334186 2013-11-18 13:12:01Z mm $
 
 PORTNAME=	Horde_Perms
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.2
 CATEGORIES=	security www pear
 
 MAINTAINER=	horde@FreeBSD.org
