@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/wmminichess/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/wmminichess/Makefile 333616 2013-11-12 20:32:10Z danilo $
 
 PORTNAME=	wmminichess
 PORTVERSION=	0.8
@@ -23,20 +23,17 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lXpm -lXext -lX11
 PORTDOCS=	README TODO
 PLIST_FILES=	bin/minichess
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 do-build:
 	(cd ${WRKSRC} \
 		&& ${CC} ${CFLAGS} ${CPPFLAGS} -o minichess *.c ${LDFLAGS})
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} minichess ${PREFIX}/bin)
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} minichess ${STAGEDIR}${PREFIX}/bin)
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${DOCSDIR})
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${STAGEDIR}${DOCSDIR})
 .endfor
-.endif
 
 .include <bsd.port.mk>
