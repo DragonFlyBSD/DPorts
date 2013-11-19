@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xtic/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xtic/Makefile 333957 2013-11-16 01:15:11Z danilo $
 
 PORTNAME=	xtic
 PORTVERSION=	1.12
@@ -14,10 +14,8 @@ COMMENT=	X version of a simple but tricky board game
 
 USES=		imake
 USE_XORG=	xaw
-MAN1=		xtic.1
-PLIST_FILES=	bin/xtic
+PLIST_FILES=	bin/xtic man/man1/xtic.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|g" ${WRKSRC}/configure.h
 
