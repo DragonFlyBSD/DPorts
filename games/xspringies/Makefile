@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: games/xspringies/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xspringies/Makefile 333955 2013-11-16 01:10:08Z danilo $
 
 PORTNAME=	xspringies
 PORTVERSION=	1.12
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/dmd/xspringies/ \
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A mass and spring simulation system
+COMMENT=	Mass and spring simulation system
 
 LICENSE=	GPLv1 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,9 +17,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_XORG=	x11 xext
 ALL_TARGET=	${PORTNAME}
 
-MAN1=		xspringies.1
-
-NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && ${SED} -e \
 		's|/usr/games/|${PREFIX}/| ; \
@@ -29,9 +26,9 @@ post-patch:
 			< Makefile.std > Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xspringies ${PREFIX}/bin/xspringies
-	${INSTALL_MAN} ${WRKSRC}/xspringies.man ${MANPREFIX}/man/man1/xspringies.1
-	@${MKDIR} ${PREFIX}/lib/X11/xspringies
-	${INSTALL_DATA} ${WRKSRC}/lib/*.xsp ${PREFIX}/lib/X11/xspringies
+	${INSTALL_PROGRAM} ${WRKSRC}/xspringies ${STAGEDIR}${PREFIX}/bin/xspringies
+	${INSTALL_MAN} ${WRKSRC}/xspringies.man ${STAGEDIR}${MANPREFIX}/man/man1/xspringies.1
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/xspringies
+	${INSTALL_DATA} ${WRKSRC}/lib/*.xsp ${STAGEDIR}${PREFIX}/lib/X11/xspringies
 
 .include <bsd.port.mk>
