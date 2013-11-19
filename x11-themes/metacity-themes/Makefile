@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0L@charter.net>
-# $FreeBSD: x11-themes/metacity-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/metacity-themes/Makefile 333898 2013-11-15 17:55:22Z sunpoet $
 
 # Port logic stolen from x11-themes/kde-icons-noia by
 # lioux@.
@@ -18,8 +18,8 @@ COMMENT=	Meta-port for Gnome Metacity themes
 RUN_DEPENDS=	${LOCALBASE}/share/themes/microgui/metacity-1/metacity-theme-1.xml:${PORTSDIR}/x11-themes/metacity-theme-microgui
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 do-install:    # Empty
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
