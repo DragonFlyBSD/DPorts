@@ -1,5 +1,5 @@
 # Created by: dwcjr@inethouston.net
-# $FreeBSD: security/openssh-portable/Makefile 333215 2013-11-08 12:41:44Z bdrewery $
+# $FreeBSD: security/openssh-portable/Makefile 333580 2013-11-12 15:35:02Z bdrewery $
 
 PORTNAME=	openssh
 DISTVERSION=	6.4p1
@@ -101,12 +101,11 @@ LIBEDIT_CONFIGURE_WITH=	libedit
 BSM_CONFIGURE_ON=	--with-audit=bsm
 
 
-PORTDOCS=	*
-
 .include <bsd.port.pre.mk>
 
 # http://www.psc.edu/index.php/hpn-ssh
 .if ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MAES_THREADED} || ${PORT_OPTIONS:MNONECIPHER}
+PORTDOCS+=		HPN-README
 HPN_VERSION=		14v2
 HPN_DISTVERSION=	6.3p1
 PATCH_SITES+=		${MASTER_SITE_SOURCEFORGE:S/$/:hpn/}
