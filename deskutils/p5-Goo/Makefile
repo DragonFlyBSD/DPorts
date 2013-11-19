@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: deskutils/p5-Goo/Makefile 332385 2013-11-01 14:46:30Z vanilla $
+# $FreeBSD: deskutils/p5-Goo/Makefile 333896 2013-11-15 17:40:36Z mat $
 
 PORTNAME=	Goo
 PORTVERSION=	0.09
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	p5-Config-Auto>=0:${PORTSDIR}/devel/p5-Config-Auto \
 		p5-File-Grep>=0:${PORTSDIR}/devel/p5-File-Grep \
 		p5-File-NCopy>=0:${PORTSDIR}/devel/p5-File-NCopy \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
-		perltidy>=0:${PORTSDIR}/devel/perltidy \
+		perltidy:${PORTSDIR}/devel/p5-Perl-Tidy \
 		p5-Term-ProgressBar>=0:${PORTSDIR}/devel/p5-Term-ProgressBar \
 		p5-Term-ReadKey>=0:${PORTSDIR}/devel/p5-Term-ReadKey \
 		p5-Text-FormatTable>=0:${PORTSDIR}/textproc/p5-Text-FormatTable
