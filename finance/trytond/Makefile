@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: finance/trytond/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/trytond/Makefile 334164 2013-11-18 09:43:15Z bsam $
 
 PORTNAME=	trytond
 PORTVERSION=	2.4.8
@@ -44,7 +44,6 @@ LOGDIR?=	/var/log
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PIDDIR%%|${PIDDIR}|g' -e 's|%%LOGDIR%%|${LOGDIR}|g' \
 		${WRKSRC}/etc/${PORTNAME}.conf
@@ -68,11 +67,6 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz
 .endif
 
 post-install:
-	${CP} -p ${WRKSRC}/etc/${PORTNAME}.conf ${PREFIX}/etc/${PORTNAME}.conf.sample
-	@if [ ! -f ${PREFIX}/etc/${PORTNAME}.conf ]; then \
-		${CP} -p ${PREFIX}/etc/${PORTNAME}.conf.sample ${PREFIX}/etc/${PORTNAME}.conf ; \
-	fi
-
-	@${CAT} ${PKGMESSAGE}
+	${CP} -p ${WRKSRC}/etc/${PORTNAME}.conf ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf.sample
 
 .include <bsd.port.mk>
