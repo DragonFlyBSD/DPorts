@@ -1,8 +1,8 @@
 # Created by: Benedikt Niessen <ports@niessen.ch>
-# $FreeBSD: databases/php5-redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/php5-redis/Makefile 333737 2013-11-14 04:03:35Z swills $
 
 PORTNAME=	redis
-PORTVERSION=	2.2.3
+PORTVERSION=	2.2.4
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/nicolasff/phpredis/tarball/${PORTVERSION}/
 PKGNAMEPREFIX=	php5-
@@ -13,7 +13,7 @@ COMMENT=	PHP5-Extension for Redis
 
 LICENSE=	PHP301
 
-GITVERSION=	af48a77
+GITVERSION=	0f0661e
 FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/nicolasff-phpredis-${GITVERSION}
 
