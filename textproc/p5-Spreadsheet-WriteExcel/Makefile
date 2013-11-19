@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 333110 2013-11-07 15:07:04Z sunpoet $
+# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	Spreadsheet-WriteExcel
 PORTVERSION=	2.40
@@ -21,8 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-USES=		perl5 shebangfix
-USE_DOS2UNIX=	yes
+USES=		perl5 shebangfix dos2unix
 USE_PERL5=	configure
 DOS2UNIX_REGEX=	"*.p[lm]"
 
