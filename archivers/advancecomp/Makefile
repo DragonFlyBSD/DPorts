@@ -1,8 +1,8 @@
 # Created by: Radim Kolar
-# $FreeBSD: archivers/advancecomp/Makefile 328322 2013-09-25 21:54:48Z danilo $
+# $FreeBSD: archivers/advancecomp/Makefile 334086 2013-11-17 14:55:53Z danilo $
 
 PORTNAME=	advancecomp
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 CATEGORIES=	archivers
 MASTER_SITES=	SF/advancemame/${PORTNAME}/${PORTVERSION}
 
