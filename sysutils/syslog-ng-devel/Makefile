@@ -1,5 +1,5 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng-devel/Makefile 332945 2013-11-06 05:51:28Z cy $
+# $FreeBSD: sysutils/syslog-ng-devel/Makefile 333918 2013-11-15 20:39:53Z cy $
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.5.1
@@ -133,7 +133,7 @@ CONFIGURE_ARGS+=	--disable-sql
 .endif
 
 .if ${PORT_OPTIONS:MJSON}
-LIB_DEPENDS+=		json.0:${PORTSDIR}/devel/json-c
+LIB_DEPENDS+=		json:${PORTSDIR}/devel/json-c
 CONFIGURE_ARGS+=	--enable-json
 PLIST_FILES+= 		lib/syslog-ng/libjson-plugin.la lib/syslog-ng/libjson-plugin.so
 .else
