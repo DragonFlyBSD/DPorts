@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-SVG/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-SVG/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	SVG
 PORTVERSION=	2.59
@@ -15,9 +15,8 @@ LICENSE_COMB=	dual
 
 OPTIONS_DEFINE=	EXAMPLES
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 
 .include <bsd.port.options.mk>
 
