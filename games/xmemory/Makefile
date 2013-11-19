@@ -1,5 +1,5 @@
 # Created by: Dave Chapeskie <dchapes@ddm.on.ca>
-# $FreeBSD: games/xmemory/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xmemory/Makefile 333723 2013-11-13 20:06:15Z danilo $
 
 PORTNAME=	xmemory
 PORTVERSION=	3.7
@@ -14,13 +14,11 @@ COMMENT=	Multi-player memory game
 
 USES=		imake
 USE_XORG=	x11 xext
-MAN1=		xmemory.1
 
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${LOCALBASE}/lib/X11/xmemory
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/xmemory
 	${INSTALL_DATA} ${WRKSRC}/home.mem ${WRKSRC}/sports.mem \
-			${LOCALBASE}/lib/X11/xmemory
-	${LN} -sf home.mem ${LOCALBASE}/lib/X11/xmemory/default.mem
+			${STAGEDIR}${PREFIX}/lib/X11/xmemory
+	${LN} -sf home.mem ${STAGEDIR}${PREFIX}/lib/X11/xmemory/default.mem
 
 .include <bsd.port.mk>
