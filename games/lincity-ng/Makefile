@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev
-# $FreeBSD: games/lincity-ng/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/lincity-ng/Makefile 334087 2013-11-17 14:57:03Z danilo $
 
 PORTNAME=	lincity-ng
 PORTVERSION=	2.0
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Improved rich city simulation game for X
 
 BUILD_DEPENDS=	jam:${PORTSDIR}/devel/jam
-LIB_DEPENDS=	physfs.1:${PORTSDIR}/devel/physfs
+LIB_DEPENDS=	libphysfs.so:${PORTSDIR}/devel/physfs
 
 USES=		pkgconfig
 USE_BZIP2=	yes
@@ -26,14 +26,13 @@ CONFIGURE_ARGS=	--with-libphysfs=${PREFIX} \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| -O| -I${LOCALBASE}/include&|g' \
 		${WRKSRC}/Jamrules
 do-build:
-	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} jam)
+	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} jam -j${MAKE_JOBS_NUMBER})
 
 do-install:
-	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} jam ${INSTALL_TARGET})
+	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} jam -sprefix=${STAGEDIR}${PREFIX} ${INSTALL_TARGET})
 
 .include <bsd.port.mk>
