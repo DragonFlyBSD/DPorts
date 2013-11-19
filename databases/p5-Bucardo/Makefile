@@ -1,8 +1,9 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: databases/p5-Bucardo/Makefile 331288 2013-10-22 16:06:10Z mat $
+# $FreeBSD: databases/p5-Bucardo/Makefile 333746 2013-11-14 10:33:13Z mat $
 
 PORTNAME=	Bucardo
 PORTVERSION=	4.5.0
+PORTREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	http://bucardo.org/downloads/ ${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	mat/
