@@ -1,8 +1,8 @@
-# $FreeBSD: net/sdl2_net/Makefile 331607 2013-10-25 16:15:36Z mva $
+# $FreeBSD: net/sdl2_net/Makefile 334079 2013-11-17 12:33:49Z mva $
 
 PORTNAME=	sdl2_net
 PORTVERSION=	2.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 DISTNAME=	SDL2_net-${PORTVERSION}
