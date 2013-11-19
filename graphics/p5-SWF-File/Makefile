@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/p5-SWF-File/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD: graphics/p5-SWF-File/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	SWF-File
 PORTVERSION=	0.42
@@ -15,9 +15,8 @@ COMMENT=	Manipulating Flash movie (SWF) files
 BUILD_DEPENDS=	p5-Data-TemporaryBag>=0:${PORTSDIR}/devel/p5-Data-TemporaryBag
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
