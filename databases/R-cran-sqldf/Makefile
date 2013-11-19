@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-sqldf/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: databases/R-cran-sqldf/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	sqldf
 DISTVERSION=	0.4-6.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
