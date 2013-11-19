@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki120/Makefile 332549 2013-11-02 22:55:52Z wg $
+# $FreeBSD: www/mediawiki120/Makefile 333854 2013-11-15 11:59:14Z wen $
 
 PORTNAME=	mediawiki
-PORTVERSION=	1.20.7
+PORTVERSION=	1.20.8
 CATEGORIES=	www
 MASTER_SITES=	http://dumps.wikimedia.org/mediawiki/${PORTVERSION:R}/
 
