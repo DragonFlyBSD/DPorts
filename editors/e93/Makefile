@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami (asami)
-# $FreeBSD: editors/e93/Makefile 332861 2013-11-05 15:58:12Z gahr $
+# $FreeBSD: editors/e93/Makefile 333835 2013-11-15 10:12:26Z sunpoet $
 
 PORTNAME=	e93
 PORTVERSION=	1.4.2
@@ -9,13 +9,13 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}r${PORTVERSION:E}X
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A nifty editor based on Tcl
+COMMENT=	Nifty editor based on Tcl
 
 LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES+=		gmake tcl
+USES=		gmake tcl
 USE_XORG=	x11 xinerama
 MAKE_ARGS=	PREFIX="${PREFIX}" \
 		TCL_INCLUDE="-I${TCL_INCLUDEDIR}" \
