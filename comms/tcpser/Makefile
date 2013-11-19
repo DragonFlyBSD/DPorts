@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: comms/tcpser/Makefile 332065 2013-10-30 05:08:18Z eadler $
+# $FreeBSD: comms/tcpser/Makefile 333801 2013-11-14 22:39:49Z sunpoet $
 
 PORTNAME=	tcpser
 DISTVERSION=	1.0rc12
@@ -9,14 +9,18 @@ MASTER_SITES=	http://www.jbrain.com/pub/linux/serial/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TCPSER turns serial port into an emulated Hayes compatible modem
 
-WRKSRC=		${WRKDIR}/tcpser
-USES=		gmake
-CFLAGS+=	-pthread
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
+
+OPTIONS_DEFINE=	DOCS
+
 LDFLAGS+=	-pthread
+USE_DOS2UNIX=	yes
+USES=		gmake
+WRKSRC=		${WRKDIR}/tcpser
+
 PORTDOCS=	README CHANGES
 PLIST_FILES=	bin/tcpser
-
-.include <bsd.port.options.mk>
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpser ${STAGEDIR}${PREFIX}/bin
