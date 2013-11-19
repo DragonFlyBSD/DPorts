@@ -1,5 +1,5 @@
 # Created by: David K. Gerry
-# $FreeBSD: accessibility/yasr/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/yasr/Makefile 333627 2013-11-12 21:55:54Z eadler $
 
 PORTNAME=	yasr
 PORTVERSION=	0.6.9
@@ -40,7 +40,7 @@ PLIST_DIRS=	%%DATADIR%%
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} > 900007
-#BROKEN=		fails to build with new utmpx
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-yasr__main.c
 .endif
 
 post-patch:
