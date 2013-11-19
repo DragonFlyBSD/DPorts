@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/wmfortune/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/wmfortune/Makefile 333615 2013-11-12 20:29:12Z danilo $
 
 PORTNAME=	wmfortune
 PORTVERSION=	0.241
@@ -8,14 +8,13 @@ CATEGORIES=	games windowmaker afterstep
 MASTER_SITES=	http://www.dockapps.org/files/90/128/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A dockapp that outputs fortune messages
+COMMENT=	Dockapp that outputs fortune messages
 
 PLIST_FILES=	bin/wmfortune
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xpm
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmfortune ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/wmfortune ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
