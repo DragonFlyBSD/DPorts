@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: sysutils/sloth/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sloth/Makefile 333988 2013-11-16 12:33:15Z vanilla $
 
 PORTNAME=	sloth
 PORTVERSION=	1.1.0
@@ -12,10 +12,8 @@ COMMENT=	Slow down a process
 
 GNU_CONFIGURE=	yes
 
-MAN1=		sloth.1
-PLIST_FILES=	bin/sloth
+PLIST_FILES=	bin/sloth man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,wait.h,sys/wait.h,g" ${WRKSRC}/configure
 
