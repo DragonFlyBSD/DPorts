@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/violetland/Makefile 328079 2013-09-24 01:13:06Z amdmi3 $
+# $FreeBSD: games/violetland/Makefile 334120 2013-11-17 20:21:03Z amdmi3 $
 
 PORTNAME=	violetland
 PORTVERSION=	0.4.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE \
 		http://mirror.amdmi3.ru/distfiles/
@@ -18,7 +18,7 @@ USE_ZIP=	yes
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
 USES=		cmake gettext
-USE_DOS2UNIX=	yes
+USE_DOS2UNIX=	CMakeLists.txt src/system/utility/FileUtility.cpp
 CMAKE_ARGS=	-DDATA_INSTALL_DIR="${DATADIR}"
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-v${PORTVERSION}
