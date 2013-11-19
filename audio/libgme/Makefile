@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libgme/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libgme/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	libgme
 PORTVERSION=	0.5.5
@@ -14,13 +14,8 @@ LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 
 PROJECTHOST=	game-music-emu
-USE_DOS2UNIX=	yes
-NO_STAGE=	yes
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake dos2unix
 USE_LDCONFIG=	yes
-
-# XXX: dialog(1) doesn't like ^M in LICENSE_FILE
-post-extract:	patch-dos2unix
 
 .include <bsd.port.mk>
