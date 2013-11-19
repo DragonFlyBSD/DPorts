@@ -1,5 +1,5 @@
 # Created by: Jamie Heckford <jamie@jamiesdomain.co.uk>
-# $FreeBSD: sysutils/userlist/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/userlist/Makefile 333994 2013-11-16 13:33:45Z vanilla $
 
 PORTNAME=	userlist
 PORTVERSION=	0.1
@@ -13,8 +13,7 @@ COMMENT=	Prints a list of all usernames in /etc/passwd
 NO_BUILD=	yes
 PLIST_FILES=	bin/userlist
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/userlist ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${FILESDIR}/userlist ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
