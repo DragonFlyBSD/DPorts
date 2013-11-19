@@ -1,5 +1,5 @@
 # Created by: dieringe
-# $FreeBSD: sysutils/nrg2iso/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/nrg2iso/Makefile 333882 2013-11-15 16:05:56Z vanilla $
 
 PORTNAME=	nrg2iso
 PORTVERSION=	0.4
@@ -9,17 +9,16 @@ MASTER_SITES=	http://gregory.kokanosky.free.fr/v4/linux/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert Nero .nrg CD-Image format to ISO
 
-USE_GMAKE=	yes
+USES=		gmake
 
 PLIST_FILES=	bin/nrg2iso
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|gcc|${CC} ${CFLAGS}|' \
 		${BUILD_WRKSRC}/${MAKEFILE}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/nrg2iso ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/nrg2iso ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
