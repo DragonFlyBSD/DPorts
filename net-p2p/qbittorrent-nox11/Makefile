@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent-nox11/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/qbittorrent-nox11/Makefile 332987 2013-11-06 12:55:31Z nemysis $
 
 PKGNAMESUFFIX=	-nox11
 
@@ -7,13 +7,13 @@ COMMENT=	Bittorrent client using libtorrent-rasterbar, web UI version
 
 MASTERDIR=	${.CURDIR}/../qbittorrent
 
-DESCR=		${.CURDIR}/pkg-descr
-PLIST=		${.CURDIR}/pkg-plist
-PLIST_FILES+=	bin/qbittorrent-nox
+DESCR=		${.CURDIR}/../qbittorrent/pkg-descr
+PLIST_FILES+=	bin/qbittorrent-nox \
+		man/man1/qbittorrent-nox.1.gz
+PLIST=		${NONEXISTENT}
 
-MAN1=		qbittorrent-nox.1
+SLAVE_PORT=	yes
 
-QB_NOX_SLAVE=	true
+OPTIONS_EXCLUDE=	DOCS
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
