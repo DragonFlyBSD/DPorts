@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-sdl2/Makefile 331874 2013-10-28 17:42:48Z mva $
+# $FreeBSD: devel/py-sdl2/Makefile 333998 2013-11-16 13:51:34Z mva $
 
 PORTNAME=	sdl2
 PORTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://cdn.bitbucket.org/marcusva/py-sdl2/downloads/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +13,7 @@ COMMENT=	Python bindings to the SDL2 libraries
 
 LICENSE=	ZLIB
 
-USE_SDL=		sdl2 image2 ttf2 mixer2
+USE_SDL=		sdl2 gfx2 image2 ttf2 mixer2
 USE_PYTHON=		2.7+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
