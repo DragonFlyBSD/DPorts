@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Padding/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Padding/Makefile 334005 2013-11-16 15:19:56Z sunpoet $
 
 PORTNAME=	Text-Padding
 PORTVERSION=	1.110.170
@@ -22,7 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Text::Padding.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
