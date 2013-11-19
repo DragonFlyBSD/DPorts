@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: sysutils/slst/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/slst/Makefile 333988 2013-11-16 12:33:15Z vanilla $
 
 PORTNAME=	slst
 PORTVERSION=	0.2
@@ -14,5 +14,4 @@ ALL_TARGET=	all
 
 PLIST_FILES=	bin/slst
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
