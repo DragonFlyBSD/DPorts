@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xworm/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xworm/Makefile 333964 2013-11-16 01:35:38Z danilo $
 
 PORTNAME=	xworm
 PORTVERSION=	1.02
@@ -22,12 +22,11 @@ DATA=		font grid raw
 PLIST_FILES=	bin/xworm ${DATA:S/^/%%DATADIR%%\/xworm./}
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xworm ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/xworm
+	${INSTALL_PROGRAM} ${WRKSRC}/xworm ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/xworm
 .for file in ${DATA}
-	${INSTALL_DATA} ${WRKSRC}/xworm.${file} ${PREFIX}/share/xworm
+	${INSTALL_DATA} ${WRKSRC}/xworm.${file} ${STAGEDIR}${PREFIX}/share/xworm
 .endfor
 
 .include <bsd.port.mk>
