@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: math/R-cran-sspir/Makefile 332670 2013-11-04 07:31:27Z bapt $
+# $FreeBSD: math/R-cran-sspir/Makefile 333659 2013-11-13 08:19:34Z bf $
 
 PORTNAME=	sspir
 PORTVERSION=	0.2.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
