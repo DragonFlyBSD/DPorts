@@ -1,8 +1,8 @@
 # Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
-# $FreeBSD: www/moodle24/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/moodle24/Makefile 333821 2013-11-15 07:19:24Z wen $
 
 PORTNAME=	moodle
-PORTVERSION=	2.4.6
+PORTVERSION=	2.4.7
 CATEGORIES=	www
 MASTER_SITES=	SF/moodle/Moodle/stable24/
 EXTRACT_SUFX=	.tgz
@@ -13,7 +13,7 @@ COMMENT=	Course management system based on social constructionism
 BUILD_DEPENDS=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/intl.so:${PORTSDIR}/devel/pecl-intl
 RUN_DEPENDS=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/intl.so:${PORTSDIR}/devel/pecl-intl
 
-CONFLICTS=	moodle-1.*.* moodle-2.2.* moodle-2.3.* moodle-2.5.*
+CONFLICTS=	moodle-1.*.* moodle-2.5.*
 LATEST_LINK=	moodle24
 
 USE_PHP=	session gd pcre mbstring iconv tokenizer curl xml xmlrpc ctype \
