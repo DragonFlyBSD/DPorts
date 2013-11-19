@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: games/xosmulti/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xosmulti/Makefile 333797 2013-11-14 21:23:14Z danilo $
 
 PORTNAME=	xosmulti
 PORTVERSION=	1.00
@@ -11,17 +11,21 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_tar
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A little girl cartoon on the top of the active window
+COMMENT=	Little girl cartoon on the top of the active window
 
 WRKSRC=		${WRKDIR}/xosmulti
 USE_XORG=	xbitmaps x11 xt xi
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
+DOCSDIR=	share/doc/ja/xosmulti
+PORTDOCS=	README.jp
+
+PLIST_FILES=	bin/xosmulti
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xosmulti ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/ja/xosmulti
-	${INSTALL_MAN} ${WRKSRC}/README.jp ${PREFIX}/share/doc/ja/xosmulti
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/xosmulti ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/ja/xosmulti
+	${INSTALL_MAN} ${WRKSRC}/README.jp ${STAGEDIR}${PREFIX}/share/doc/ja/xosmulti
 
 .include <bsd.port.mk>
