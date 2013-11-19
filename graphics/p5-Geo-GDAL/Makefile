@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-Geo-GDAL/Makefile 330178 2013-10-12 19:08:29Z sunpoet $
+# $FreeBSD: graphics/p5-Geo-GDAL/Makefile 334029 2013-11-16 20:11:15Z sunpoet $
 
 PORTNAME=	Geo-GDAL
 PORTVERSION=	1.10.1
@@ -20,7 +20,6 @@ LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal
 USES=		perl5
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/perl
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| install| pure_install|' ${WRKSRC}/${MAKEFILE}
 	@${REINPLACE_CMD} -e 's|(const char \*)""|(char \*)""|' ${WRKSRC}/gdal_wrap.cpp ${WRKSRC}/ogr_wrap.cpp
