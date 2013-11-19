@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: audio/faac/Makefile 328001 2013-09-23 13:33:59Z bapt $
+# $FreeBSD: audio/faac/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	faac
 PORTVERSION=	1.28
@@ -14,9 +14,8 @@ LIB_DEPENDS=	libmp4v2.so:${PORTSDIR}/multimedia/mp4v2
 
 RESTRICTED=	Distribution in binary form is prohibited
 
-USES=		gmake
+USES=		dos2unix gmake
 USE_BZIP2=	yes
-USE_DOS2UNIX=	yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I . -I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
