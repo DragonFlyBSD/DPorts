@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/throttle/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/throttle/Makefile 333992 2013-11-16 13:25:19Z vanilla $
 
 PORTNAME=	throttle
 PORTVERSION=	1.2
@@ -11,8 +11,6 @@ COMMENT=	A pipe bandwidth throttling utility
 
 GNU_CONFIGURE=	yes
 
-MAN1=		throttle.1
-PLIST_FILES=	bin/throttle
+PLIST_FILES=	bin/throttle man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
