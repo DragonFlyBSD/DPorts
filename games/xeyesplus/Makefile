@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xeyesplus/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xeyesplus/Makefile 333688 2013-11-13 14:18:04Z danilo $
 
 PORTNAME=	xeyes+
 PORTVERSION=	2.02
@@ -15,12 +15,11 @@ USE_XORG=	xpm
 
 PLIST_FILES=	bin/xeyes+
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -I${LOCALBASE}/include -DXPM -DUSLEEP \
 		-o xeyes+ xeyes+.c -L${LOCALBASE}/lib -lX11 -lXpm -lm
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xeyes+ ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/xeyes+ ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
