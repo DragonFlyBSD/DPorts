@@ -1,5 +1,5 @@
 # Created by: Adrian Chadd <adrian@FreeBSD.org>
-# $FreeBSD: sysutils/mkfwimage/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/mkfwimage/Makefile 333624 2013-11-12 21:35:45Z bapt $
 
 PORTNAME=	mkfwimage
 DISTVERSION=	r1
@@ -11,7 +11,10 @@ DISTNAME=	ubnt-${PORTNAME}-${DISTVERSION}
 MAINTAINER=	adrian@FreeBSD.org
 COMMENT=	Ubiquiti Embedded Board Image Generator
 
+MAKE_ARGS+=	PREFIX=${STAGEDIR}${PREFIX}
 PLIST_FILES=	bin/mkfwimage
 
-NO_STAGE=	yes
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/mkfwimage
+
 .include <bsd.port.mk>
