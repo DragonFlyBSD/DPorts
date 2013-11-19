@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: textproc/py-mako/Makefile 332849 2013-11-05 14:20:29Z wen $
+# $FreeBSD: textproc/py-mako/Makefile 334283 2013-11-19 06:38:54Z lwhsu $
 
 PORTNAME=	mako
 PORTVERSION=	0.9.0
@@ -12,14 +12,16 @@ DISTNAME=	Mako-${PORTVERSION}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Super-fast templating language in Python
 
+LICENSE=	MIT
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beaker>=1.1:${PORTSDIR}/www/py-beaker \
 		${PYTHON_PKGNAMEPREFIX}MarkupSafe>=0.9.2:${PORTSDIR}/textproc/py-MarkupSafe \
 		${PYTHON_PKGNAMEPREFIX}Babel>0:${PORTSDIR}/devel/py-babel
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2.7+
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	Mako
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
