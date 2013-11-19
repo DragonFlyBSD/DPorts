@@ -1,12 +1,11 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: mail/annoyance-filter/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/annoyance-filter/Makefile 333802 2013-11-14 22:55:49Z sunpoet $
 
 PORTNAME=	annoyance-filter
 PORTVERSION=	1.0d
 CATEGORIES=	mail
 MASTER_SITES=	SF/annoyancefilter/annoyancefilter/${PORTVERSION} \
 		http://www.fourmilab.ch/annoyance-filter/
-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Adaptive Bayesian Junk Mail Filter
