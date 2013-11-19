@@ -1,5 +1,5 @@
 # Created by: Alexey Zaytsev
-# $FreeBSD: sysutils/gkrellmwho2/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/gkrellmwho2/Makefile 333734 2013-11-14 01:21:37Z vanilla $
 
 PORTNAME=	gkrellmwho2
 PORTVERSION=	0.2.8
@@ -20,14 +20,13 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.orig
 USES=		pkgconfig
 
 ALL_TARGET=
-PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmwho2.so
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|g' ${WRKSRC}/configure ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gkrellmwho2.so ${PREFIX}/libexec/gkrellm2/plugins/
+	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
+	${INSTALL_PROGRAM} ${WRKSRC}/gkrellmwho2.so ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins/
 
 .include <bsd.port.mk>
