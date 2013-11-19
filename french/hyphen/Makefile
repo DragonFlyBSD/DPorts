@@ -1,16 +1,17 @@
-# $FreeBSD: french/hyphen/Makefile 332695 2013-11-04 11:36:02Z bapt $
+# $FreeBSD: french/hyphen/Makefile 334117 2013-11-17 19:20:15Z sunpoet $
 
 PORTNAME=	hyphen
 PORTVERSION=	3.0
 CATEGORIES=	french textproc
-MASTER_SITES=	http://www.dicollecte.org/download/fr/
+MASTER_SITES=	http://www.dicollecte.org/download/fr/ \
+		LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	hyph-fr-v${PORTVERSION}
+EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	French hyphenation rules
 
-EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
