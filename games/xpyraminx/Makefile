@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xpyraminx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xpyraminx/Makefile 333806 2013-11-14 23:25:31Z danilo $
 
 PORTNAME=	xpyraminx
 PORTVERSION=	5.5.2
@@ -14,14 +14,14 @@ COMMENT=	Pyraminx puzzle for X Window System
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		imake
 USE_XORG=	x11 xext xt sm ice
-MAN1=		xpyraminx.1
-MANCOMPRESSED=	no
-XFREE86_HTML_MAN=	no
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/xpyraminx \
+		lib/X11/app-defaults/Pyraminx \
+		man/man1/xpyraminx.1.gz
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xpyraminx ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/Pyraminx.ad ${PREFIX}/lib/X11/app-defaults/Pyraminx
-	${INSTALL_MAN} ${WRKSRC}/xpyraminx.man ${MANPREFIX}/man/man1/xpyraminx.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xpyraminx ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/Pyraminx.ad ${STAGEDIR}${PREFIX}/lib/X11/app-defaults/Pyraminx
+	${INSTALL_MAN} ${WRKSRC}/xpyraminx.man ${STAGEDIR}${MANPREFIX}/man/man1/xpyraminx.1
 
 .include <bsd.port.mk>
