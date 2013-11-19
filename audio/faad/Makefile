@@ -1,5 +1,5 @@
 # Created by: Sean McGovern <sean@sfarc.net>
-# $FreeBSD: audio/faad/Makefile 330231 2013-10-13 15:05:04Z bapt $
+# $FreeBSD: audio/faad/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	faad2
 PORTVERSION=	2.7
@@ -11,9 +11,8 @@ MASTER_SITES=	SF/faac/${PORTNAME}-src/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	MPEG-2 and MPEG-4 AAC audio decoder
 
-USES=		gmake
+USES=		dos2unix gmake
 USE_BZIP2=	yes
-USE_DOS2UNIX=	yes
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 ACLOCAL_ARGS=	-I . -I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
