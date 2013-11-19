@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: sysutils/rtty/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rtty/Makefile 333979 2013-11-16 04:15:28Z vanilla $
 
 PORTNAME=	rtty
 PORTVERSION=	4.0
@@ -16,5 +16,4 @@ EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	|sh
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
