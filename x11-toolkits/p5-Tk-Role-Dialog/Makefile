@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Role-Dialog/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/p5-Tk-Role-Dialog/Makefile 333894 2013-11-15 17:24:50Z sunpoet $
 
 PORTNAME=	Tk-Role-Dialog
 PORTVERSION=	1.112.380
@@ -26,7 +26,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Tk::Role::Dialog.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
