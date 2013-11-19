@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-docopt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-docopt/Makefile 334002 2013-11-16 14:52:00Z antoine $
 
 PORTNAME=	docopt
 PORTVERSION=	0.6.1
@@ -25,17 +25,16 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
