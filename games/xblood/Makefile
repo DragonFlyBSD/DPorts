@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: games/xblood/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xblood/Makefile 333637 2013-11-13 01:54:10Z danilo $
 
 PORTNAME=	xblood
 PORTVERSION=	2.0
@@ -12,9 +12,6 @@ COMMENT=	Makes the root window bloody
 
 MAKE_ENV=	X11BASE=${LOCALBASE}
 USE_XORG=	x11
-MAN1=		xblood.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/xblood
+PLIST_FILES=	bin/xblood man/man1/xblood.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
