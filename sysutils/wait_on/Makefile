@@ -1,5 +1,5 @@
 # Created by: Andrew Stevenson <andrew@ugh.net.au>
-# $FreeBSD: sysutils/wait_on/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/wait_on/Makefile 333997 2013-11-16 13:50:53Z vanilla $
 
 PORTNAME=	wait_on
 PORTVERSION=	1.1
@@ -11,9 +11,6 @@ COMMENT=	Enable shell scripts to monitor directories for new files
 
 WRKSRC=		${WRKDIR}/wait_on
 
-MAN1=		wait_on.1
-MANCOMPRESSED=	maybe
-PLIST_FILES=	bin/wait_on
+PLIST_FILES=	bin/wait_on man/man1/wait_on.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
