@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.sanity.mk 331668 2013-10-26 09:29:18Z mva $
+# $FreeBSD: Mk/bsd.sanity.mk 334214 2013-11-18 15:45:08Z bapt $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -126,4 +126,8 @@ DEV_WARNING+=	"PYDISTUTILS_AUTOPLIST features Python 3.x support, PYTHON_PY3K_PL
 
 .if defined(_PREMKINCLUDED)
 DEV_ERROR+=	"you cannot include bsd.port[.pre].mk twice"
+.endif
+
+.if defined(USE_DOS2UNIX)
+DEV_WARNING+=	"USE_DOS2UNIX is deprecated, please use USES=dos2unix"
 .endif
