@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: www/dummyflash/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/dummyflash/Makefile 333573 2013-11-12 14:12:31Z bapt $
 
 PORTNAME=	dummyflash
 PORTVERSION=	1.0
@@ -17,15 +17,11 @@ BUILD_WRKSRC=	${WRKSRC}/PluginSDK30b5/examples/UnixTemplate/Unix
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile.freebsd
 
-USE_WEBPLUGINS=	native
-WEBPLUGINS_FILES=dummyflash.so
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/firefox/Makefile.webplugins"
+USES=		webplugin:native
+WEBPLUGIN_FILES=dummyflash.so
 
 do-install:
-	@${MKDIR} ${WEBPLUGINS_DIR}
-	${INSTALL_DATA} ${BUILD_WRKSRC}/dummyflash.so ${WEBPLUGINS_DIR}
+	@${MKDIR} ${STAGEDIR}${WEBPLUGIN_DIR}
+	${INSTALL_LIB} ${BUILD_WRKSRC}/dummyflash.so ${STAGEDIR}${WEBPLUGIN_DIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
