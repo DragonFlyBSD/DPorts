@@ -1,5 +1,5 @@
 # Created by: kiesel@schlund.de
-# $FreeBSD: sysutils/lxsplit/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/lxsplit/Makefile 333873 2013-11-15 14:58:59Z vanilla $
 
 PORTNAME=	lxsplit
 PORTVERSION=	0.2.4
@@ -12,19 +12,15 @@ COMMENT=	Simple program to split or join files
 
 LICENSE=	GPLv2
 
-PLIST_FILES=	bin/lxsplit
-PORTDOCS=	ChangeLog README
+DOCS=		ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/lxsplit ${PREFIX}/bin/
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/lxsplit ${STAGEDIR}${PREFIX}/bin/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${DOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
