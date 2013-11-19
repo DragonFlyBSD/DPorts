@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: textproc/xslint/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xslint/Makefile 333832 2013-11-15 10:08:00Z ehaupt $
 
 PORTNAME=	xslint
 PORTVERSION=	005
@@ -24,15 +24,15 @@ SHEBANG_FILES=	xslint.pl
 PLIST_FILES=	bin/xslint
 PORTDOCS=	README xslint.html xslint.xml
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl \
+		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
