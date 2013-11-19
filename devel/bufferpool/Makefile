@@ -1,5 +1,5 @@
 # Created by: Emmanuel Richiardone (err@tollari.org)
-# $FreeBSD: devel/bufferpool/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/bufferpool/Makefile 333937 2013-11-15 21:51:43Z bapt $
 
 PORTNAME=	bufferpool
 PORTVERSION=	0.0.4
@@ -10,10 +10,11 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Bufferpool - the memory management library Feng and Felix depend upon
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USES=	pathfix pkgconfig
+USES=	gmake pathfix pkgconfig
 
-NO_STAGE=	yes
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libbufferpool.so.4
+
 .include <bsd.port.mk>
