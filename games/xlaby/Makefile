@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xlaby/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xlaby/Makefile 333719 2013-11-13 19:40:51Z danilo $
 
 PORTNAME=	xlaby
 PORTVERSION=	2.0.1
@@ -16,8 +16,13 @@ COMMENT=	Daemonic X Labyrinth played directly with the mouse pointer
 NO_WRKSUBDIR=	yes
 USES=		imake
 USE_XORG=	x11
-MAN6=		xlaby.6
-PLIST_FILES=	bin/xlaby
+PLIST_FILES=	man/man6/xlaby.6.gz
 
-NO_STAGE=	yes
+post-install:
+	@${ECHO_CMD} "@group games" >> ${TMPPLIST}
+	@${ECHO_CMD} "@owner games" >> ${TMPPLIST}
+	@${ECHO_CMD} "bin/xlaby" >> ${TMPPLIST}
+	@${ECHO_CMD} "@owner" >> ${TMPPLIST}
+	@${ECHO_CMD} "@group" >> ${TMPPLIST}
+
 .include <bsd.port.mk>
