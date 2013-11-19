@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: mail/p5-Mail-SPF-Query/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD: mail/p5-Mail-SPF-Query/Makefile 333834 2013-11-15 10:11:55Z sunpoet $
 
 PORTNAME=	Mail-SPF-Query
 PORTVERSION=	1.999.1
@@ -17,7 +17,10 @@ BUILD_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-CONFLICTS=	libspf2-[0-9]* p5-Mail-SPF-[0-9]*
+DEPRECATED=	Use mail/p5-Mail-SPF instead
+EXPIRATION_DATE=2013-12-31
+
+CONFLICTS_INSTALL=	libspf2-[0-9]* p5-Mail-SPF-[0-9]*
 
 USES=		perl5
 USE_PERL5=	configure
