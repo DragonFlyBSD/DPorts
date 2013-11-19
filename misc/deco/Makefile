@@ -1,11 +1,12 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/deco/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/deco/Makefile 334054 2013-11-17 03:28:04Z eadler $
 
 PORTNAME=	deco
 PORTVERSION=	3.9
 PORTREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}/Deco%20Sources/${PORTVERSION}
+PKGNAMESUFFIX=	-misc
 DISTNAME=	deco39
 EXTRACT_SUFX=	.tgz
 
