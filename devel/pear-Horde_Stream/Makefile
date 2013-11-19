@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Stream/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-Horde_Stream/Makefile 334186 2013-11-18 13:12:01Z mm $
 
 PORTNAME=	Horde_Stream
-PORTVERSION=	1.4.0
+PORTVERSION=	1.5.0
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
