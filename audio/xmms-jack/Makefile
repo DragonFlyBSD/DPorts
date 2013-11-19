@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-jack/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-jack/Makefile 333743 2013-11-14 09:36:08Z ehaupt $
 
 PORTNAME=	xmms-jack
 PORTVERSION=	0.19
@@ -10,14 +10,13 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS plugin for jack
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
-		jack.0:${PORTSDIR}/audio/jack \
-		samplerate.1:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms \
+		jack:${PORTSDIR}/audio/jack \
+		samplerate:${PORTSDIR}/audio/libsamplerate
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_GNOME=	gtk12
-NO_STAGE=	yes
 USES=		gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 
@@ -35,7 +34,8 @@ post-patch:
 		${WRKSRC}/jack.c
 
 do-install:
-	cd ${WRKSRC}/.libs \
-		&& ${INSTALL_DATA} libjackout.so ${PREFIX}/lib/xmms/Output
+	${MKDIR} ${STAGEDIR}/${PREFIX}/lib/xmms/Output
+	${INSTALL_PROGRAM} ${WRKSRC}/.libs/libjackout.so \
+		${STAGEDIR}/${PREFIX}/lib/xmms/Output
 
 .include <bsd.port.post.mk>
