@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: sysutils/tentakel/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/tentakel/Makefile 333992 2013-11-16 13:25:19Z vanilla $
 
 PORTNAME=	tentakel
 PORTVERSION=	2.2
@@ -15,7 +15,4 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/py
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
-MAN1=		tentakel.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
