@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/shlock/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/shlock/Makefile 333988 2013-11-16 12:33:15Z vanilla $
 
 PORTNAME=	shlock
 PORTVERSION=	2.5.3
@@ -17,21 +17,19 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_PERL="${TRUE}"
 ALL_TARGET=	all-lib
 
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 
 verify:	checksum
 	gpg --verify ${DISTDIR}/inn-${PORTVERSION}${EXTRACT_SUFX}.asc
 
-NO_STAGE=	yes
 post-build:
 	@(cd ${WRKSRC}/backends && ${SETENV} ${MAKE_ENV} ${MAKE} \
 		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${PORTNAME})
 
 do-install:
 	(cd ${WRKSRC}/backends \
-		&& ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
+		&& ${INSTALL_PROGRAM} ${PORTNAME} ${STAGEDIR}${PREFIX}/bin)
 	(cd ${WRKSRC}/doc/man \
-		&& ${INSTALL_MAN} ${PORTNAME}.1 ${MANPREFIX}/man/man1)
+		&& ${INSTALL_MAN} ${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1)
 
 .include <bsd.port.mk>
