@@ -1,5 +1,5 @@
 # Created by: walt
-# $FreeBSD: sysutils/monitord/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/monitord/Makefile 333877 2013-11-15 15:25:56Z vanilla $
 
 PORTNAME=	monitord
 PORTVERSION=	0.4.1
@@ -11,16 +11,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Service that restarts other standalone services
 
 USE_RC_SUBR=	monitord
-MAN8=		monitord.8
 
-NO_STAGE=	yes
 post-patch:
-	@${REINPLACE_CMD} -e 's|syslodg|syslogd|' ${WRKSRC}/${MAN8}
+	@${REINPLACE_CMD} -e 's|syslodg|syslogd|' ${WRKSRC}/${PORTNAME}.8
 	@${REINPLACE_CMD} -e 's|-pipe||' ${WRKSRC}/Makefile
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/monitord.conf.sample \
-		${PREFIX}/etc/monitord.conf.sample
-	@${CAT} ${PKGMESSAGE}
+		${STAGEDIR}${PREFIX}/etc/monitord.conf.sample
 
 .include <bsd.port.mk>
