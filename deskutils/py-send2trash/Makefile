@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: deskutils/py-send2trash/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/py-send2trash/Makefile 334263 2013-11-18 20:50:05Z nemysis $
 
 PORTNAME=	send2trash
 PORTVERSION=	1.3.0
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	Send2Trash-${PORTVERSION}
 DIST_SUBDIR=	python
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Small package that sends files to the Trash
 
 LICENSE=	BSD
@@ -24,13 +24,8 @@ PORTDOCS=	CHANGES.rst README.rst
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
