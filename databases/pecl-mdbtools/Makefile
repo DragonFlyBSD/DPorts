@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: databases/pecl-mdbtools/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pecl-mdbtools/Makefile 333581 2013-11-12 15:43:31Z wg $
 
 PORTNAME=	mdbtools
 PORTVERSION=	1.0.0
@@ -27,4 +27,9 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libmdb.a:${PORTSDIR}/databases/mdbtools
 CONFIGURE_ARGS=	--with-mdbtools=${LOCALBASE}
 
 NO_STAGE=	yes
+
+post-extract:
+	@${REINPLACE_CMD} -e 's|MDB_SDATETIME|MDB_DATETIME|g' \
+		${WRKSRC}/mdbtools.c
+
 .include <bsd.port.mk>
