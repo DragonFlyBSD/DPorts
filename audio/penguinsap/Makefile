@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/penguinsap/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
+# $FreeBSD: audio/penguinsap/Makefile 333583 2013-11-12 15:59:47Z ehaupt $
 
 PORTNAME=	penguinsap
 PORTVERSION=	0.1
@@ -9,6 +9,7 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line Atari(TM) .sap player
 
+USES=		compiler
 USE_DOS2UNIX=	yes
 
 SOURCES=	sapPokey pokey1 sapCpu sapEngine main pokey0
@@ -22,11 +23,8 @@ PLIST_FILES=	bin/sap
 
 .include <bsd.port.pre.mk>
 
-_CLANG!=	${CXX} --version | ${HEAD} -1 | ${SED} -e 's/.*clang version \([0-9]\)\.\([0-9]\).*/\1\2/'
-ISCLANG=	${_CLANG:M[34][0-9]}
-
 # clang can build this without -fno-exceptions
-.if empty(ISCLANG)
+.if ${COMPILER_TYPE} == "gcc"
 CXXFLAGS+=	-fno-exceptions
 .endif
 
@@ -45,8 +43,5 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sap ${STAGEDIR}${PREFIX}/bin
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
