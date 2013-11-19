@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Any/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-Any/Makefile 334118 2013-11-17 19:39:42Z sunpoet $
 
 PORTNAME=	IO-Any
 PORTVERSION=	0.06
@@ -28,7 +28,4 @@ TEST_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		IO::Any.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
