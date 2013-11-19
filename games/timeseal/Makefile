@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: games/timeseal/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/timeseal/Makefile 334039 2013-11-17 00:23:51Z danilo $
 
 PORTNAME=	timeseal
 PORTVERSION=	1.0
@@ -18,13 +18,7 @@ STRIP=		# strip(1) does not support a.out binaries
 PLIST_FILES=	bin/timeseal
 PKGMESSAGE=	pkg-message.aout
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${_DISTDIR}/${_DISTFILES} ${PREFIX}/bin/timeseal
-
-.if defined(PKGMESSAGE)
-post-install:
-	@${CAT} ${PKGMESSAGE}
-.endif
+	${INSTALL_PROGRAM} ${_DISTDIR}/${_DISTFILES} ${STAGEDIR}${PREFIX}/bin/timeseal
 
 .include <bsd.port.mk>
