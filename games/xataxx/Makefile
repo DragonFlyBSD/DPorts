@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xataxx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xataxx/Makefile 333970 2013-11-16 02:43:26Z danilo $
 
 PORTNAME=	xataxx
 PORTVERSION=	1.0
@@ -17,17 +17,10 @@ OPTIONS_DEFINE=	DOCS
 USES=		imake
 USE_XORG=	x11 xext
 
-MAN6=		xataxx.6
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in README TODO
-	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${DOCSDIR})
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${STAGEDIR}${DOCSDIR})
 .endfor
-.endif
 
 .include <bsd.port.mk>
