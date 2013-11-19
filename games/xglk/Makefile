@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: games/xglk/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xglk/Makefile 333693 2013-11-13 14:36:22Z danilo $
 
 PORTNAME=	xglk
 PORTVERSION=	411
@@ -14,18 +14,18 @@ COMMENT=	X Windows Implementation of the Glk API
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 USE_XORG=	x11
 
 MAKE_ENV+=	AR=${AR} RANLIB=${RANLIB} ECHO=${ECHO} RM=${RM}
 
-NO_STAGE=	yes
 do-install:
-		${MKDIR} ${PREFIX}/include/xglk
-		${INSTALL_DATA} ${WRKSRC}/*.h ${PREFIX}/include/xglk/
-		${INSTALL_DATA} ${WRKSRC}/libxglk.a ${PREFIX}/lib/
-		${MKDIR} ${DATADIR}
-		${INSTALL_DATA} ${WRKSRC}/Make.xglk ${DATADIR}
+		@${MKDIR} ${STAGEDIR}${PREFIX}/include/xglk
+		${INSTALL_DATA} ${WRKSRC}/*.h ${STAGEDIR}${PREFIX}/include/xglk/
+		${INSTALL_DATA} ${WRKSRC}/libxglk.a ${STAGEDIR}${PREFIX}/lib/
+		@${MKDIR} ${STAGEDIR}${DATADIR}
+		${INSTALL_DATA} ${WRKSRC}/Make.xglk ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
