@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Model-Tester/Makefile 329789 2013-10-08 14:37:22Z sunpoet $
+# $FreeBSD: devel/p5-Config-Model-Tester/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
 
 PORTNAME=	Config-Model-Tester
 PORTVERSION=	2.047
@@ -25,10 +25,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 CONFLICTS_INSTALL=	p5-Config-Model-2.0[0-3][0-9] p5-Config-Model-2.040
 
-NO_STAGE=	yes
 USE_PERL5=	modbuild
 USES=		perl5
-
-MAN3=		Config::Model::Tester.3
 
 .include <bsd.port.mk>
