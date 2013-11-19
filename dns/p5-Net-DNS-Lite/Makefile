@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-Lite/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD: dns/p5-Net-DNS-Lite/Makefile 333763 2013-11-14 15:19:03Z sunpoet $
 
 PORTNAME=	Net-DNS-Lite
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
