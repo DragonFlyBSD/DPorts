@@ -1,5 +1,5 @@
 # Created by: Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
-# $FreeBSD: games/xpuyopuyo/Makefile 330378 2013-10-15 09:47:11Z bapt $
+# $FreeBSD: games/xpuyopuyo/Makefile 333804 2013-11-14 23:11:48Z danilo $
 
 PORTNAME=	xpuyopuyo
 PORTVERSION=	0.9.8
@@ -8,15 +8,13 @@ CATEGORIES=	games
 MASTER_SITES=	http://chaos2.org/xpuyopuyo/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A puzzle game, somewhat like Tetris
+COMMENT=	Puzzle game, somewhat like Tetris
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xpm
 USE_AUTOTOOLS=	autoconf213
 USE_GNOME=	gtk12
 WANT_GNOME=	yes
-
-MAN6=		xpuyopuyo.6
 
 OPTIONS_DEFINE=	MIKMOD ROTATE_FIXED AIBREED
 ROTATE_FIXED_DESC=	Fix position of one blob during rotation
@@ -24,19 +22,11 @@ AIBREED_DESC=	Allow AI breeding
 
 CONFIGURE_ARGS+=	--without-gnome
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+MIKMOD_LIB_DEPENDS=	libmikmod.so:${PORTSDIR}/audio/libmikmod
+MIKMOD_CONFIGURE_ON=	--with-libmikmod-prefix=${LOCALBASE}
 
-.if ${PORT_OPTIONS:MMIKMOD} || exists(${LOCALBASE}/lib/libmikmod.a)
-LIB_DEPENDS+=	mikmod.2:${PORTSDIR}/audio/libmikmod
-CONFIGURE_ARGS+=--with-libmikmod-prefix=${LOCALBASE}
-.endif
+ROTATE_FIXED_CONFIGURE_ENABLE=	rotate-fixed
 
-.if ${PORT_OPTIONS:MROTATE_FIXED}
-CONFIGURE_ARGS+=--enable-rotate-fixed
-.endif
-.if ${PORT_OPTIONS:MAIBREED}
-CONFIGURE_ARGS+=--enable-aibreed
-.endif
+AIBREED_CONFIGURE_ENABLE=	aibreed
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
