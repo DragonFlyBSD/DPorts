@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: sysutils/rfstool/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rfstool/Makefile 333979 2013-11-16 04:15:28Z vanilla $
 
 PORTNAME=	rfstool
 PORTVERSION=	0.14
@@ -15,11 +15,10 @@ USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/rfstool-0.14/RFSTOOL
 MAKEFILE=	makefile.gcc3x
 
-NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e "s,g++,\$${CXX},g" ${WRKSRC}/${MAKEFILE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rfstool ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/rfstool ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
