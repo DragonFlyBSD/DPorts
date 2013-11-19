@@ -1,8 +1,8 @@
 # Created by: Mike McGaughey <mmcg@cs.monash.edu.au>
-# $FreeBSD: devel/boehm-gc/Makefile 330672 2013-10-17 20:53:58Z bsam $
+# $FreeBSD: devel/boehm-gc/Makefile 334298 2013-11-19 10:49:44Z bsam $
 
 PORTNAME=	gc
-PORTVERSION=	7.2d
+PORTVERSION=	7.2e
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
