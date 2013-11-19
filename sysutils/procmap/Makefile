@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: sysutils/procmap/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/procmap/Makefile 333977 2013-11-16 03:33:37Z vanilla $
 
 PORTNAME=	procmap
 PORTVERSION=	1.0
@@ -14,13 +14,10 @@ MAKEFILE=	/usr/share/mk/bsd.prog.mk
 MAKE_ENV+=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/man/man \
 		PROG=procmap MAN8=procmap.8
 
-PLIST_FILES=	bin/procmap
-MAN8=		procmap.8
-MANCOMPRESSED=	yes
+PLIST_FILES=	bin/procmap man/man8/${PORTNAME}.8.gz
 
 procmap_files := procmap.c procmap.8
 
-NO_STAGE=	yes
 post-extract:
 	cd ${FILESDIR} ; \
 		${CP} -p ${procmap_files} ${WRKSRC}
