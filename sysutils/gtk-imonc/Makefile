@@ -1,5 +1,5 @@
 # Created by: Steffen Vogelreuter
-# $FreeBSD: sysutils/gtk-imonc/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: sysutils/gtk-imonc/Makefile 333734 2013-11-14 01:21:37Z vanilla $
 
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
@@ -12,13 +12,13 @@ COMMENT=	GTK2-based imond-client to control an on(e) disc fli4l router
 
 LICENSE=	GPLv2 # (or later)
 
-LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		pcre:${PORTSDIR}/devel/pcre \
-		cairo:${PORTSDIR}/graphics/cairo \
-		png15:${PORTSDIR}/graphics/png \
-		freetype:${PORTSDIR}/print/freetype2 \
-		expat:${PORTSDIR}/textproc/expat2 \
-		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS=	libpthread-stubs.so:${PORTSDIR}/devel/libpthread-stubs \
+		libpcre.so:${PORTSDIR}/devel/pcre \
+		libcairo.so:${PORTSDIR}/graphics/cairo \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig gettext iconv
@@ -29,7 +29,6 @@ USE_XORG=	pixman x11 xau xcb xcomposite xcursor xdamage xdmcp xext \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/gnome/apps/Internet|/applications|' ${WRKSRC}/Makefile.in
