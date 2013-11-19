@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: sysutils/no-login/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/no-login/Makefile 333882 2013-11-15 16:05:56Z vanilla $
 
 PORTNAME=	nologin
 PORTVERSION=	1.0
@@ -11,8 +11,6 @@ MASTER_SITE_SUBDIR=wes
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Refuse a login to a user, and make a note of it in syslog
 
-PLIST_FILES=	bin/nologin
-MAN8=		nologin.8
+PLIST_FILES=	bin/nologin man/man8/${PORTNAME}.8.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
