@@ -1,9 +1,9 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/gdb/Makefile 331139 2013-10-21 13:33:44Z danilo $
+# $FreeBSD: devel/gdb/Makefile 334142 2013-11-18 03:39:09Z danilo $
 
 PORTNAME=	gdb
 PORTVERSION=	7.6.1
-#PORTREVISION=	1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -18,7 +18,7 @@ USES=		iconv gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CONFIGURED_M4=m4 CONFIGURED_BISON=byacc
 CONFIGURE_ARGS=	--program-suffix=${PORTVERSION:S/.//g} \
-		--with-gdb-datadir=${STAGEDIR}${PREFIX}/share/gdb${PORTVERSION:S/.//g} \
+		--with-gdb-datadir=${PREFIX}/share/gdb${PORTVERSION:S/.//g} \
 		${ICONV_CONFIGURE_ARG} \
 		--without-libunwind-ia64 \
 		--enable-targets=all
@@ -87,8 +87,8 @@ do-install:
 	${LN} -sf gdb${VER} ${STAGEDIR}${PREFIX}/bin/gdb
 .endif
 .if ${PORT_OPTIONS:MPYTHON}
-	(cd ${WRKSRC}/gdb; ${GMAKE} install-python )
-	(cd ${WRKSRC}/gdb/data-directory; ${GMAKE} install-python )
+	(cd ${WRKSRC}/gdb; ${GMAKE} DESTDIR=${STAGEDIR} install-python )
+	(cd ${WRKSRC}/gdb/data-directory; ${GMAKE} DESTDIR=${STAGEDIR} install-python )
 .endif
 
 post-install:
