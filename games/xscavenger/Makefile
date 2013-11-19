@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: games/xscavenger/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xscavenger/Makefile 333950 2013-11-16 00:47:27Z danilo $
 
 PORTNAME=	xscavenger
 PORTVERSION=	1.4.4
@@ -15,11 +15,9 @@ WRKSRC_SUBDIR=	src
 
 USES=		imake
 USE_XORG=	x11 xext
-MAN6=		scavenger.6
 
 CFLAGS+=	-Wno-return-type -Wno-pointer-sign
 
-NO_STAGE=	yes
 pre-configure:
 	@${LN} -sf scavenger.6 ${WRKSRC}/scavenger.man
 	@${ECHO_CMD} "MANSUFFIX=6" >> ${WRKSRC}/Imakefile
