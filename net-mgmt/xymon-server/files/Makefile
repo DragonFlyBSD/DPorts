@@ -1,5 +1,5 @@
 # Toplevel Makefile for Xymon
-# $FreeBSD: net-mgmt/xymon-server/files/Makefile 302382 2012-08-10 10:34:59Z dinoex $
+# $FreeBSD: net-mgmt/xymon-server/files/Makefile 334123 2013-11-17 21:08:54Z feld $
 BUILDTOPDIR=`pwd`
 
 # configure settings for Xymon
@@ -60,9 +60,9 @@ DOSSL = yes
 #
 ifdef WITH_LDAP
 # OpenLDAP settings
-LDAPFLAGS = -DXYMON_LDAP -DXYMON_LDAP_USESTARTTLS
+LDAPFLAGS = -DXYMON_LDAP -DXYMON_LDAP_USESTARTTLS -DHAVE_LDAP
 LDAPINCDIR = -I${PREFIX}/include
-LDAPLIBS = -L${PREFIX}/lib -lldap
+LDAPLIBS = -L${PREFIX}/lib -lldap -llber
 RPATHVAL += ${PREFIX}/lib
 RPATHVAL += /usr/local/lib
 DOLDAP = yes
