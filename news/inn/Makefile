@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: news/inn/Makefile 334135 2013-11-17 23:25:24Z fluffy $
+# $FreeBSD: news/inn/Makefile 334138 2013-11-18 02:14:56Z fluffy $
 
 PORTNAME?=	inn
 PORTVERSION?=	2.5.3
@@ -175,7 +175,8 @@ CONFIG_FILES=	actsync.cfg actsync.ign buffindexed.conf control.ctl \
 		control.ctl.local cycbuff.conf \
 		distrib.pats distributions \
 		expire.ctl localgroups incoming.conf inn.conf innfeed.conf \
-		innreport.conf innwatch.ctl moderators motd.news news2mail.cf \
+		innreport.conf innshellvars.local innshellvars.pl.local innshellvars.tcl.local \
+		innwatch.ctl moderators motd.innd motd.nnrpd news2mail.cf \
 		newsfeeds nocem.ctl \
 		nnrpd.track nntpsend.ctl ovdb.conf \
 		passwd.nntp radius.conf readers.conf send-uucp.cf \
