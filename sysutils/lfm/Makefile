@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: sysutils/lfm/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/lfm/Makefile 333873 2013-11-15 14:58:59Z vanilla $
 
 PORTNAME=	lfm
 PORTVERSION=	2.3
@@ -18,10 +18,8 @@ OPTIONS_DEFINE=	DOCS
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
-MAN1=		lfm.1 pyview.1
-PORTDOCS=	ChangeLog NEWS README README.pyview TODO
+DOCS=	ChangeLog NEWS README README.pyview TODO
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/DOC_FILES/d ; \
@@ -31,11 +29,9 @@ post-patch:
 
 post-install:
 .for f in lfm pyview
-	(cd ${WRKSRC} && ${INSTALL_MAN} ${f}.1 ${MAN1PREFIX}/man/man1)
+	(cd ${WRKSRC} && ${INSTALL_MAN} ${f}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1)
 .endfor
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
