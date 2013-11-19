@@ -1,5 +1,5 @@
 # Created by: knu@FreeBSD.org
-# $FreeBSD: devel/cvs2cl/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvs2cl/Makefile 334065 2013-11-17 09:33:51Z mva $
 
 PORTNAME=	cvs2cl
 PORTVERSION=	2.73
@@ -14,14 +14,14 @@ EXTRACT_ONLY=	# none
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	CVS-log-message-to-ChangeLog conversion script
 
+LICENSE=	GPLv2
+
 USES=		perl5
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKSRC}/${PORTNAME}
@@ -31,10 +31,10 @@ post-patch:
 		-e "s|#!perl -w|#!${PERL} -w|" ${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 .if !defined(NO_INSTALL_MANPAGES)
 	@pod2man ${WRKSRC}/${PORTNAME} > ${WRKSRC}/${PORTNAME}.1
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
 .endif
 
 .include <bsd.port.mk>
