@@ -1,9 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: science/py-scipy/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/py-scipy/Makefile 334091 2013-11-17 15:54:51Z wen $
 
 PORTNAME=	scipy
-PORTVERSION=	0.12.1
-PORTREVISION=	1
+PORTVERSION=	0.13.1
 CATEGORIES=	science python
 MASTER_SITES=	http://docs.scipy.org/doc/${DISTNAME}/:doc \
 		SF:source
