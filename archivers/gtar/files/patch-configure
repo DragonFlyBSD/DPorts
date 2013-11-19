@@ -1,11 +1,11 @@
-$FreeBSD: archivers/gtar/files/patch-configure 328143 2013-09-24 15:11:03Z naddy $
+$FreeBSD: archivers/gtar/files/patch-configure 334222 2013-11-18 16:40:04Z naddy $
 
 Hack to disable shared library detection, so configure won't try
 to link with "/usr/local/lib/libiconv.so -static".
 
---- configure.orig
-+++ configure
-@@ -53560,7 +53560,7 @@
+--- configure.orig	2013-10-05 21:52:03.000000000 +0200
++++ configure	2013-11-18 17:33:05.000000000 +0100
+@@ -34123,7 +34123,7 @@ fi
  $as_echo "$acl_cv_rpath" >&6; }
    wl="$acl_cv_wl"
    acl_libext="$acl_cv_libext"

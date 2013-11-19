@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/gtar/Makefile 329714 2013-10-07 16:53:54Z naddy $
+# $FreeBSD: archivers/gtar/Makefile 334222 2013-11-18 16:40:04Z naddy $
 
 PORTNAME=	tar
 PORTVERSION=	1.27
@@ -10,6 +10,8 @@ PKGNAMEPREFIX=	g
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	GNU version of the traditional tape archiver
+
+LICENSE=	GPLv3
 
 INFO=		tar
 
