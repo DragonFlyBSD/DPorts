@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: databases/py-pymysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-pymysql/Makefile 334228 2013-11-18 17:02:06Z lwhsu $
 
 PORTNAME=	pymysql
 PORTVERSION=	0.5
@@ -14,7 +14,7 @@ LICENSE=	MIT
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	PyMySQL
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
