@@ -1,9 +1,8 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: math/R-cran-gss/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-gss/Makefile 334230 2013-11-18 18:01:25Z dbn $
 
 PORTNAME=	gss
-DISTVERSION=	2.0-15
-PORTREVISION=	1
+DISTVERSION=	2.0-16
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
