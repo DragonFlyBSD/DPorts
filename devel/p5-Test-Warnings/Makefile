@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Warnings/Makefile 330879 2013-10-19 14:59:51Z sunpoet $
+# $FreeBSD: devel/p5-Test-Warnings/Makefile 334210 2013-11-18 15:33:23Z sunpoet $
 
 PORTNAME=	Test-Warnings
 PORTVERSION=	0.012
@@ -17,10 +17,7 @@ TEST_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 		p5-Test-Tester>=0.108:${PORTSDIR}/devel/p5-Test-Tester
 
-NO_STAGE=	yes
 USE_PERL5=	modbuildtiny
 USES=		perl5
-
-MAN3=		Test::Warnings.3
 
 .include <bsd.port.mk>
