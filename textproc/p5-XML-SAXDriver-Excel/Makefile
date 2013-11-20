@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-XML-SAXDriver-Excel/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-XML-SAXDriver-Excel/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	XML-SAXDriver-Excel
 PORTVERSION=	0.06
@@ -14,8 +14,7 @@ BUILD_DEPENDS=	p5-Spreadsheet-ParseExcel>=0.2603:${PORTSDIR}/textproc/p5-Spreads
 		p5-XML-SAX>=0.14:${PORTSDIR}/textproc/p5-XML-SAX
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 
 .include <bsd.port.mk>
