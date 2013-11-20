@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-HTTP-Recorder/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD: www/p5-HTTP-Recorder/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	HTTP-Recorder
 PORTVERSION=	0.07
@@ -17,9 +17,8 @@ BUILD_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 
 post-patch:
 	@${RM} -f ${WRKSRC}/lib/HTTP/Recorder.pm.orig
