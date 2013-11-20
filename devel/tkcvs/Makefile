@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@augusta.de>
-# $FreeBSD: devel/tkcvs/Makefile 329771 2013-10-08 10:56:11Z bsam $
+# $FreeBSD: devel/tkcvs/Makefile 334313 2013-11-19 13:09:11Z gahr $
 
 PORTNAME=	tkcvs
 PORTVERSION=	8.2.3
@@ -15,10 +15,13 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	tkdiff:${PORTSDIR}/textproc/tkdiff
 
 NO_BUILD=	yes
-USE_TCL_WRAPPER=yes
-USE_TK_WRAPPER=	yes
+USES=		tk
 
 OPTIONS_DEFINE=	DOCS
+
+post-patch:
+	${FIND} ${WRKSRC} -type f | ${XARGS} \
+	    ${REINPLACE_CMD} -e '/^exec wish/s|wish|${WISH}|g' -e '/^exec tclsh/s|tclsh|${TCLSH}|g'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tkcvs/tkcvs ${STAGEDIR}${PREFIX}/bin
