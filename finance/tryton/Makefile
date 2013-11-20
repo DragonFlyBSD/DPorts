@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/tryton/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/tryton/Makefile 334164 2013-11-18 09:43:15Z bsam $
 
 PORTNAME=	tryton
 PORTVERSION=	2.4.7
@@ -19,11 +19,10 @@ CONFLICTS=	tryton-2.[68].*
 USES=		desktop-file-utils gettext
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
-USE_GNOME=	gtk20 desktopfileutils pygtk2
+USE_GNOME=	gtk20 pygtk2
 
-NO_STAGE=	yes
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/tryton.desktop ${PREFIX}/share/applications/tryton.desktop
-	${INSTALL_DATA} ${WRKSRC}/share/pixmaps/tryton/tryton-icon.png ${PREFIX}/share/pixmaps/tryton-icon.png
+	${INSTALL_DATA} ${WRKSRC}/tryton.desktop ${STAGEDIR}${PREFIX}/share/applications/tryton.desktop
+	${INSTALL_DATA} ${WRKSRC}/share/pixmaps/tryton/tryton-icon.png ${STAGEDIR}${PREFIX}/share/pixmaps/tryton-icon.png
 
 .include <bsd.port.mk>
