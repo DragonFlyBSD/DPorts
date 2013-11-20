@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/dzip/Makefile 328237 2013-09-25 02:17:18Z vanilla $
+# $FreeBSD: archivers/dzip/Makefile 334182 2013-11-18 12:59:19Z bapt $
 
 PORTNAME=	dzip
 PORTVERSION=	2.9
@@ -12,8 +12,8 @@ COMMENT=	File compression utility specializing in Quake demo compression
 
 LICENSE=	ZLIB
 
-USE_ZIP=	yes
-USE_DOS2UNIX=	yes
+USES=		dos2unix
+EXTRACT_SUFX=	.zip
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	${WRKSRC}/Makefile.linux
