@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: games/xscorch/Makefile 333951 2013-11-16 00:57:15Z danilo $
+# $FreeBSD: games/xscorch/Makefile 334305 2013-11-19 12:11:25Z marino $
 
 PORTNAME=	xscorch
 PORTVERSION=	0.2.1
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 OPTIONS_DEFINE=	MIKMOD
 OPTIONS_DEFAULT=	MIKMOD
 
-USES=		gmake perl5
+USES=		gmake perl5 pkgconfig
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 
