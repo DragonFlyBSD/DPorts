@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Time-Mock/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Time-Mock/Makefile 334210 2013-11-18 15:33:23Z sunpoet $
 
 PORTNAME=	Time-Mock
 PORTVERSION=	0.0.2
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USE_PERL5=	modbuild
 USES=		perl5
 
-MAN3=		Time::Mock.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
