@@ -86,7 +86,7 @@ NOPRECIOUSMAKEVARS=	yes
 ONLY_FOR_ARCHS=	amd64 i386
 
 JDK_ARCH=		${ARCH:S/x86_64/amd64/}
-MASTER_SITES+=		http://leaf.dragonflybsd.org:~/marino/dports-src/:bootstrap
+MASTER_SITES+=		http://leaf.dragonflybsd.org/~marino/dports-src/:bootstrap
 BOOTSTRAP_DISTFILE=	bootstrap-openjdk-b28_5.dfly-3.7-${JDK_ARCH}.tar.xz
 DISTFILES+=		${BOOTSTRAP_DISTFILE}:bootstrap
 EXTRACT_ONLY+=		${BOOTSTRAP_DISTFILE}
