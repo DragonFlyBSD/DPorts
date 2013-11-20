@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: databases/libgdamm/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/libgdamm/Makefile 334172 2013-11-18 11:05:32Z bapt $
 #   $MCom: ports/databases/libgdamm/Makefile,v 1.21 2010/10/23 16:04:08 kwm Exp $
 
 PORTNAME=	libgdamm
@@ -8,6 +8,7 @@ PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
+PKGNAMESUFFIX=	-legacy
 
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	C++ wrapper for libgda4 library
