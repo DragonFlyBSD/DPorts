@@ -1,5 +1,5 @@
 # Created by: ABURAYER Rewsirow <rewsirow@ff.iij4u.or.jp>
-# $FreeBSD: astro/luna/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD: astro/luna/Makefile 334184 2013-11-18 13:04:09Z bapt $
 
 PORTNAME=	luna
 PORTVERSION=	1.9
@@ -10,7 +10,7 @@ DISTNAME=	luna19s
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Display the moon's phase
 
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 USE_LHA=	yes
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/luna
