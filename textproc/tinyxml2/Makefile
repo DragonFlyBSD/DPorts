@@ -1,8 +1,8 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: textproc/tinyxml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/tinyxml2/Makefile 334262 2013-11-18 20:38:42Z bf $
 
 PORTNAME=	tinyxml2
-PORTVERSION=	20130805
+PORTVERSION=	20131105
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/bf GH
 
@@ -17,14 +17,14 @@ USE_LDCONFIG=	yes
 USES=		cmake
 
 GH_ACCOUNT=	leethomason
-GH_COMMIT=	0323851
+GH_COMMIT=	370761b
 GH_TAGNAME=	${GH_COMMIT}
 
 PLIST_FILES=	include/tinyxml2.h \
 		lib/libtinyxml2.a \
 		lib/libtinyxml2.so \
 		lib/libtinyxml2.so.1 \
-		lib/libtinyxml2.so.1.0.11 \
+		lib/libtinyxml2.so.1.0.12 \
 		libdata/pkgconfig/tinyxml2.pc
 
 NO_STAGE=	yes
