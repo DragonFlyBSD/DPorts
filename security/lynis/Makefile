@@ -1,18 +1,19 @@
 # Created by: Cory McIntire (loon@noncensored.com)
-# $FreeBSD: security/lynis/Makefile 328315 2013-09-25 20:51:04Z wg $
+# $FreeBSD: security/lynis/Makefile 334306 2013-11-19 12:19:01Z koobs $
 
 PORTNAME=	lynis
-PORTVERSION=	1.3.0
+PORTVERSION=	1.3.5
 CATEGORIES=	security
-MASTER_SITES=	http://www.rootkit.nl/files/ \
-		http://downloads.rootkit.nl/
+MASTER_SITES=	http://cisofy.com/files/
 
 MAINTAINER=	loon@noncensored.com
 COMMENT=	Security and system auditing tool
 
+LICENSE=	GPLv3
+
 NO_BUILD=	yes
 
-PORTDOCS=	CHANGELOG INSTALL FAQ LICENSE README
+PORTDOCS=	INSTALL FAQ LICENSE README
 
 post-patch:
 	@${REINPLACE_CMD} -e '/tINCLUDE_TARGETS/ s|".*"|"${DATADIR}/include"|; \
