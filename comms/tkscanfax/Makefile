@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: comms/tkscanfax/Makefile 328163 2013-09-24 16:43:55Z gahr $
+# $FreeBSD: comms/tkscanfax/Makefile 334137 2013-11-18 00:37:15Z vanilla $
 
 PORTNAME=	tkscanfax
 PORTVERSION=	1.1.8
@@ -20,18 +20,17 @@ PLIST_SUB=	TKSCANFAXDIR="${TKSCANFAXDIR:S,^${PREFIX}/,,}"
 
 TKSCANFAXDIR=	${PREFIX}/lib/tkscanfax1
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -i '' -e \
 		's|/usr/local/lib|${PREFIX}/lib|g'
 
 do-install:
-	@${MKDIR} ${TKSCANFAXDIR}
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${TKSCANFAXDIR})
+	@${MKDIR} ${STAGEDIR}${TKSCANFAXDIR}
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${TKSCANFAXDIR})
 .for file in tkfax tkscan
-	${CHMOD} ${BINMODE} ${TKSCANFAXDIR}/${file}
-	${CHOWN} ${BINOWN}:${BINGRP} ${TKSCANFAXDIR}/${file}
-	${LN} -sf ${TKSCANFAXDIR}/${file} ${PREFIX}/bin
+	${CHMOD} ${BINMODE} ${STAGEDIR}${TKSCANFAXDIR}/${file}
+	${CHOWN} ${BINOWN}:${BINGRP} ${STAGEDIR}${TKSCANFAXDIR}/${file}
+	${LN} -sf ${TKSCANFAXDIR}/${file} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
 .include <bsd.port.mk>
