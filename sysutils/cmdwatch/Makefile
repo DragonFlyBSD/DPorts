@@ -1,5 +1,5 @@
 # Created by: bjohnson@wedgie.org
-# $FreeBSD: sysutils/cmdwatch/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cmdwatch/Makefile 334191 2013-11-18 13:29:35Z beat $
 
 PORTNAME=	cmdwatch
 PORTVERSION=	0.2.0
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.chruetertee.ch/files/download/
 MAINTAINER=	beat@FreeBSD.org
 COMMENT=	Watches the output from a command at specified intervals
 
-MAN1=		cmdwatch.1
-PLIST_FILES=	bin/cmdwatch
+PLIST_FILES=	bin/cmdwatch man/man1/cmdwatch.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
