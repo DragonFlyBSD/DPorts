@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: security/py-trustedpickle/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-trustedpickle/Makefile 334286 2013-11-19 07:42:41Z bapt $
 
 PORTNAME=	trustedpickle
 PORTVERSION=	0.02
@@ -12,8 +12,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TrustedPickle is a Python (de)Pickler with a way to verify the data
 
+USES=		dos2unix
 USE_PYTHON=	yes
-USE_DOS2UNIX=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/TrustedPickle.py \
 		%%PYTHON_SITELIBDIR%%/TrustedPickle.pyc \
@@ -21,14 +21,14 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/TrustedPickle.py \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && ${PYTHON_CMD} -OOOO -c 'import TrustedPickle' && \
 	${PYTHON_CMD} -c 'import TrustedPickle'
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/TrustedPickle.py ${PYTHON_SITELIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/TrustedPickle.pyc ${PYTHON_SITELIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/TrustedPickle.pyo ${PYTHON_SITELIBDIR}
+	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/TrustedPickle.py ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/TrustedPickle.pyc ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/TrustedPickle.pyo ${STAGEDIR}${PYTHON_SITELIBDIR}
 
 .include <bsd.port.mk>
