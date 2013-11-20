@@ -1,7 +1,7 @@
-# $FreeBSD: www/pear-Horde_Dav/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-Horde_Dav/Makefile 334186 2013-11-18 13:12:01Z mm $
 
 PORTNAME=	Horde_Dav
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
