@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-SIMBAD-Client/Makefile 333322 2013-11-09 18:48:57Z sunpoet $
+# $FreeBSD: astro/p5-Astro-SIMBAD-Client/Makefile 334289 2013-11-19 09:32:19Z jadawin $
 
 PORTNAME=	Astro-SIMBAD-Client
-PORTVERSION=	0.028
+PORTVERSION=	0.029
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:WYANT
