@@ -1,5 +1,5 @@
 # Created by: Masafumi NAKANE <max@FreeBSD.org>
-# $FreeBSD: comms/bpl+/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/bpl+/Makefile 334137 2013-11-18 00:37:15Z vanilla $
 
 PORTNAME=	bpl+
 PORTVERSION=	1.0
@@ -12,9 +12,10 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	B Plus file transfer protocol
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/bp bin/bpl
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bpl ${PREFIX}/bin
-	@${LN} -fs ${PREFIX}/bin/bpl ${PREFIX}/bin/bp
+	${INSTALL_PROGRAM} ${WRKSRC}/bpl ${STAGEDIR}${PREFIX}/bin
+	(cd ${STAGEDIR}${PREFIX}/bin; ${LN} -sf bpl bp)
 
 .include <bsd.port.mk>
