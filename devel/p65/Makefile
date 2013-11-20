@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p65/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p65/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	p65
 PORTVERSION=	1.1
@@ -13,14 +13,13 @@ COMMENT=	An assembler for the 6502 microprocessor
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	${WRKSRC}
-USES=		perl5
-USE_DOS2UNIX=	yes
+USES=		dos2unix perl5 shebangfix
+SHEBANG_FILES=	${DISTNAME}
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/p65
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
