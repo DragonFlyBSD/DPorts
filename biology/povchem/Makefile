@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/povchem/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/povchem/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	povchem
 PORTVERSION=	1.0
@@ -19,7 +19,7 @@ RUN_DEPENDS=	povray:${PORTSDIR}/graphics/povray-meta
 
 NO_WRKSUBDIR=	yes
 
-USE_DOS2UNIX=	povchem.c
+USES=		dos2unix
 
 CPPFLAGS+=	-DDATADIR=\"${DATADIR}\" \
 		-DSYSCONFDIR=\"${PREFIX}/etc\"
@@ -27,7 +27,6 @@ CPPFLAGS+=	-DDATADIR=\"${DATADIR}\" \
 PLIST_FILES=	bin/povchem etc/povchem.cfg %%DATADIR%%/periodic.tab
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 post-extract:
 	@(cd ${DISTDIR}/${DIST_SUBDIR} && ${TAR} -cf - ${DISTFILES}) | \
 		(cd ${WRKSRC} && ${TAR} -xf -)
@@ -40,9 +39,9 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${CPPFLAGS} -o povchem povchem.c -lm
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/povchem ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/povchem.cfg ${PREFIX}/etc
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/periodic.tab ${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/povchem ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/povchem.cfg ${STAGEDIR}${PREFIX}/etc
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/periodic.tab ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
