@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Search/Makefile 329785 2013-10-08 13:44:59Z culot $
+# $FreeBSD: www/p5-WWW-Search/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	WWW-Search
 PORTVERSION=	2.513
@@ -35,8 +35,7 @@ TEST_DEPENDS=	p5-IO-Capture>=0:${PORTSDIR}/devel/p5-IO-Capture \
 		p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod \
 		p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 
 .include <bsd.port.mk>
