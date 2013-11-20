@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov <andy@FreeBSD.org>
-# $FreeBSD: textproc/chpp/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/chpp/Makefile 334157 2013-11-18 08:09:05Z bsam $
 
 PORTNAME=	chpp
 PORTVERSION=	0.3.5
@@ -13,9 +13,9 @@ COMMENT=	Non-intrusive full-featured text preprocessor
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gc.1:${PORTSDIR}/devel/boehm-gc
+LIB_DEPENDS=	libgc.so:${PORTSDIR}/devel/boehm-gc
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	autoheader aclocal automake autoconf
 AUTOMAKE_ARGS=	--add-missing --copy --force-missing
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
@@ -25,7 +25,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 INFO=		chpp
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386" && ${ARCH} != "x86_64"
@@ -38,15 +39,11 @@ post-patch:
 		 s|^YFLAGS|AM_YFLAGS|' ${WRKSRC}/Makefile.am
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in AUTHORS NEWS README
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
-	@(cd ${WRKSRC}/test && ${COPYTREE_SHARE} . ${EXAMPLESDIR})
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/test && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
 .include <bsd.port.post.mk>
