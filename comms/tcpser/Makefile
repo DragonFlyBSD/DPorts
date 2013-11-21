@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: comms/tcpser/Makefile 333801 2013-11-14 22:39:49Z sunpoet $
+# $FreeBSD: comms/tcpser/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	tcpser
 DISTVERSION=	1.0rc12
@@ -15,8 +15,7 @@ LICENSE_COMB=	dual
 OPTIONS_DEFINE=	DOCS
 
 LDFLAGS+=	-pthread
-USE_DOS2UNIX=	yes
-USES=		gmake
+USES=		dos2unix gmake
 WRKSRC=		${WRKDIR}/tcpser
 
 PORTDOCS=	README CHANGES
