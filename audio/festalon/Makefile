@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/festalon/Makefile 329863 2013-10-09 06:17:42Z bapt $
+# $FreeBSD: audio/festalon/Makefile 333587 2013-11-12 16:16:34Z ehaupt $
 
 PORTNAME=	festalon
 PORTVERSION=	0.5.5
@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 LIB_DEPENDS+=	samplerate:${PORTSDIR}/audio/libsamplerate
 
 USES=		pkgconfig
-NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
 
@@ -29,6 +28,10 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
+BROKEN=		does not build on FreeBSD 10.x and later
+.endif
+
 .if ${PKGNAMEPREFIX} == ""
 
 USE_SDL=	yes
@@ -37,16 +40,14 @@ PLIST_FILES=	bin/festalon
 PORTDOCS=	README
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} \
+		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .endif
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
