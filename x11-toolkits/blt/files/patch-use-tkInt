@@ -1,5 +1,5 @@
---- src/bltTkInt.h	2001-12-06 00:30:15.000000000 -0500
-+++ src/bltTkInt.h	2010-01-25 18:57:52.000000000 -0500
+--- generic/bltTkInt.h	2001-12-06 00:30:15.000000000 -0500
++++ generic/bltTkInt.h	2010-01-25 18:57:52.000000000 -0500
 @@ -28,213 +28,7 @@
  #define _BLT_TKINT_H
  
@@ -217,8 +217,8 @@
 +#include <tkFont.h>
  
  #endif /* BLT_TKINT_H */
---- src/bltWindow.c	2002-09-18 23:02:09.000000000 -0400
-+++ src/bltWindow.c	2010-01-25 18:47:25.000000000 -0500
+--- generic/bltWindow.c	2010-06-04 02:21:46.000000000 -0400
++++ generic/bltWindow.c	2013-11-19 21:51:34.000000000 -0500
 @@ -34,23 +34,5 @@
  #endif
  
@@ -244,7 +244,7 @@
 +#include <tkInt.h>
  
  #ifdef XNQueryInputStyle
-@@ -71,750 +53,4 @@
+@@ -71,764 +53,4 @@
  #endif
  
 -#if (TK_VERSION_NUMBER >= _VERSION(8,1,0))
@@ -643,6 +643,7 @@
 -
 -#ifdef TK_USE_INPUT_METHODS
 -    XIM inputMethod;		/* Input method for this display */
+-    XIMStyle inputStyle;        /* Input style selected for this display. */
 -#if (TK_VERSION_NUMBER >= _VERSION(8,4,0))
 -#if TK_XIM_SPOT
 -    XFontSet inputXfs;		/* XFontSet cached for over-the-spot XIM. */
@@ -660,6 +661,8 @@
 -     */
 -    int mouseButtonState;       /* current mouse button state for this
 -                                 * display */
+-    Window mouseButtonWindow;   /* Window the button state was set in, added
+-				 * in Tk 8.4. */
 -#if (TK_VERSION_NUMBER < _VERSION(8,4,0))
 -    int warpInProgress;
 -#endif
@@ -672,11 +675,15 @@
 -    /*
 -     * The following field(s) were all added for Tk8.4
 -     */
--    long deletionEpoch;		/* Incremented by window deletions */
+-/*    long deletionEpoch;		* Incremented by window deletions */
 -    unsigned int flags;		/* Various flag values:  these are all
 -				 * defined in below. */
 -    TkCaret caret;		/* information about the caret for this
 -				 * display.  This is not a pointer. */
+-
+-    int iconDataSize;           /* Size of default iconphoto image data. */
+-    unsigned char *iconDataPtr; /* Default iconphoto image data, if set. */
+-
 -#endif
 -} TkDisplay;
 -
@@ -991,12 +998,19 @@
 -    ClientData instanceData;
 -#endif
 -    TkWindowPrivate *privatePtr;
+-    int internalBorderRight;
+-    int internalBorderTop;
+-    int internalBorderBottom;
+-
+-    int minReqWidth;
+-    int minReqHeight;
+-
 -};
 -
  #ifdef WIN32
  /*
---- src/bltPs.c	2002-09-18 18:30:51.000000000 -0400
-+++ src/bltPs.c	2010-01-25 19:04:13.000000000 -0500
+--- generic/bltPs.c	2002-09-18 18:30:51.000000000 -0400
++++ generic/bltPs.c	2010-01-25 19:04:13.000000000 -0500
 @@ -894,5 +894,5 @@
      }
      if ((relief == TK_RELIEF_SOLID) ||
@@ -1034,8 +1048,8 @@
 +    Blt_BackgroundToPostScript(tokenPtr, borderPtr->bgColorPtr);
      Blt_RectangleToPostScript(tokenPtr, x, y, width, height);
      Blt_Draw3DRectangleToPostScript(tokenPtr, border, x, y, width, height,
---- src/bltText.c	2002-08-13 15:45:20.000000000 -0400
-+++ src/bltText.c	2010-01-25 20:08:01.000000000 -0500
+--- generic/bltText.c	2002-08-13 15:45:20.000000000 -0400
++++ generic/bltText.c	2010-01-25 20:08:01.000000000 -0500
 @@ -691,5 +691,5 @@
  	    XColor *color1, *color2;
  
@@ -1050,8 +1064,8 @@
 +	color1 = borderPtr->lightColorPtr, color2 = borderPtr->darkColorPtr;
  	if (tsPtr->state & STATE_EMPHASIS) {
  	    XColor *hold;
---- src/tkFrame.c	2002-10-16 01:33:53.000000000 -0400
-+++ src/tkFrame.c	2010-01-25 21:36:58.000000000 -0500
+--- generic/tkFrame.c	2002-10-16 01:33:53.000000000 -0400
++++ generic/tkFrame.c	2010-01-25 21:36:58.000000000 -0500
 @@ -117,5 +117,5 @@
  				 * definitions. */
      Blt_Tile tile;
@@ -1178,9 +1192,11 @@
 -	char * screenName, char * baseName));
  #if (TK_MAJOR_VERSION == 8) && (TK_MINOR_VERSION > 3)
  #define TkSetClassProcs	Tk_SetClassProcs
-@@ -250,6 +239,4 @@
+@@ -250,6 +239,6 @@
++#if (TCL_VERSION_NUMBER < _VERSION(8,6,0))
  EXTERN void TkpSetMainMenubar _ANSI_ARGS_((Tcl_Interp * interp, Tk_Window tkwin,
  	char * menuName));
++#endif
 -EXTERN int TkpUseWindow _ANSI_ARGS_((Tcl_Interp * interp, Tk_Window tkwin, 
 -	char * string));
  EXTERN void TkpMakeContainer _ANSI_ARGS_((Tk_Window tkwin));

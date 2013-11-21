@@ -1,15 +1,15 @@
---- configure.intermediate	2013-03-21 08:39:27.058285000 +0000
+--- configure.intermediate	2013-11-20 19:06:10.894936000 +0000
 +++ configure
-@@ -3381,7 +3381,7 @@ else
+@@ -3383,7 +3383,7 @@ else
  fi
  
  case $target in
--  *-sunos4*|*-*-netbsd|NetBSD-*|*-*-freebsd*|OpenBSD-*|*-*-cygwin*|*-*-mingw*)
-+  *-sunos4*|*-*-netbsd|NetBSD-*|*-*-dragonfly*|*-*-freebsd*|OpenBSD-*|*-*-cygwin*|*-*-mingw*)
+-  *-sunos4*|*-*-netbsd|NetBSD-*|*-freebsd*|OpenBSD-*|*-*-cygwin*|*-*-mingw*)
++  *-sunos4*|*-*-netbsd|NetBSD-*|*-dragonfly*|*-freebsd*|OpenBSD-*|*-*-cygwin*|*-*-mingw*)
      TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
      ;;
-@@ -4074,7 +4074,7 @@ fi
+@@ -4076,7 +4076,7 @@ fi
      EXTRA_LIB_SPECS="-ldl"
      ;;
  
