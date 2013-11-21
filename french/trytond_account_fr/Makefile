@@ -1,4 +1,5 @@
-# $FreeBSD: french/trytond_account_fr/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# Created by: Matthias Petermann <matthias@petermann-it.de>
+# $FreeBSD: french/trytond_account_fr/Makefile 334207 2013-11-18 15:11:55Z bsam $
 
 PORTNAME=	trytond_account_fr
 PORTVERSION=	2.4.0
@@ -18,5 +19,4 @@ CONFLICTS=	trytond_account_fr-2.[68].*
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
