@@ -1,14 +1,14 @@
---- UnAlz.cpp.intermediate	2013-10-18 13:48:08.337971000 +0000
+--- UnAlz.cpp.intermediate	2013-11-20 15:34:49.332875000 +0000
 +++ UnAlz.cpp
 @@ -37,6 +37,10 @@
  #	include <errno.h>
  #endif
  
 +#if defined(__DragonFly__)
-+	#include <errno.h>
++#	include <errno.h>
 +#endif
 +
- #if defined(__NetBSD__)
+ #if defined(__NetBSD__) || defined(__FreeBSD__)
  #	include <sys/param.h>	// __NetBSD_Version__
  #	include <errno.h>		// iconv.h 때문에 필요 
 @@ -455,7 +459,7 @@ BOOL CUnAlz::ReadLocalFileheader()

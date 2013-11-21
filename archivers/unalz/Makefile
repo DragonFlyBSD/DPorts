@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: archivers/unalz/Makefile 330498 2013-10-16 11:27:24Z ak $
+# $FreeBSD: archivers/unalz/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	unalz
 PORTVERSION=	0.65
@@ -15,8 +15,7 @@ LICENSE_FILE=	${WRKSRC}/readme.txt
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		iconv
-USE_DOS2UNIX=	yes
+USES=		dos2unix iconv
 MAKE_ARGS+=	CPP="${CXX}" CC="${CC}" OBJ="${UNALZ_OBJS}" \
 		LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	posix-utf8
@@ -30,7 +29,9 @@ UNALZ_OBJS=	main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o \
 		UnAlzBzip2.o UnAlzbzlib.o
 
 post-patch:
-	@${REINPLACE_CMD} -e \
+	${REINPLACE_CMD} -e \
+		's/-liconv/${ICONV_LIB}/g' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e \
 		'/<sys\/timeb.h>/d' ${WRKSRC}/main.cpp
 
 do-install:
