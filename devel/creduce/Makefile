@@ -1,8 +1,9 @@
-# $FreeBSD: devel/creduce/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/creduce/Makefile 331644 2013-10-26 00:52:33Z gerald $
 
 PORTNAME=	creduce
 #PORTVERSION=	2.0.1
 DISTVERSION=	2.0.1
+PORTREVISION=	1
 CATEGORIES=	devel
 #MASTER_SITES=	http://embed.cs.utah.edu/creduce/
 
@@ -11,9 +12,9 @@ COMMENT=	Produces small test cases
 
 LICENSE=	BSD
 
-BUILD_DEPENDS=	clang>=3.2:${PORTSDIR}/lang/clang
-RUN_DEPENDS=	clang>=3.2:${PORTSDIR}/lang/clang \
-		topformflat:${PORTSDIR}/devel/delta \
+BUILD_DEPENDS=	clang32=3.2:${PORTSDIR}/lang/clang32
+RUN_DEPENDS=	clang32=3.2:${PORTSDIR}/lang/clang32
+RUN_DEPENDS=	topformflat:${PORTSDIR}/devel/delta \
 		astyle:${PORTSDIR}/devel/astyle \
 		p5-Benchmark-Timer>=0:${PORTSDIR}/devel/p5-Benchmark-Timer \
 		p5-Exporter-Lite>=0:${PORTSDIR}/devel/p5-Exporter-Lite \
@@ -26,8 +27,11 @@ GH_TAGNAME=	a2422d5
 GH_COMMIT=	a2422d5
 
 GNU_CONFIGURE=	yes
+CONFIGURE_FLAGS=	--with-llvm=${LOCALBASE}
 
 USES=	gmake perl5
 
-NO_STAGE=	yes
+post-patch:
+	${REINPLACE_CMD} 's,llvm-config,llvm-config32,g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>
