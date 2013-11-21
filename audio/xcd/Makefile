@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: audio/xcd/Makefile 327994 2013-09-23 12:58:03Z gahr $
+# $FreeBSD: audio/xcd/Makefile 333041 2013-11-06 22:01:19Z bapt $
 
 PORTNAME=	xcd
 PORTVERSION=	1.7
@@ -11,6 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tcl/Tk CD player
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
+
+BROKEN=		Does not build
 
 USES+=		tk
 NO_STAGE=	yes
