@@ -1,9 +1,9 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-Pmw/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-Pmw/Makefile 334301 2013-11-19 11:15:07Z gahr $
 
 PORTNAME=	Pmw
 PORTVERSION=	1.3.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTNAME}.${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +13,7 @@ MAINTAINER=	fmysh@iijmio-mail.jp
 COMMENT=	High-level compound graphics widgets for Python
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
-LIB_DEPENDS=	BLT24.3:${PORTSDIR}/x11-toolkits/blt
+LIB_DEPENDS=	libBLT25.so:${PORTSDIR}/x11-toolkits/blt
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
