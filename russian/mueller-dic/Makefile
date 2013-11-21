@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: russian/mueller-dic/Makefile 328710 2013-09-29 17:01:28Z bsam $
+# $FreeBSD: russian/mueller-dic/Makefile 334183 2013-11-18 13:04:03Z bsam $
 
 PORTNAME=	mueller-dic
 PORTVERSION=	1.2
@@ -13,8 +13,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mueller English-Russian dictionary
 
-USE_GMAKE=	yes
-USES=		iconv:build
+USES=		gmake iconv:build
 SUB_FILES=	mueller pkg-message
 
 WRKSRC=		${WRKDIR}/mf
@@ -38,7 +37,7 @@ post-build:
 do-install:
 	# install program with different name (it conflicts with teTeX)
 	${INSTALL_PROGRAM} ${WRKSRC}/mf ${STAGEDIR}${PREFIX}/bin/muellerfind
-	${INSTALL_SCRIPT} ${WRKDIR}/mueller ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKDIR}/mueller ${STAGEDIR}${PREFIX}/bin
 	@${MKDIR} ${STAGEDIR}${DATADIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC_DIC}/Mueller7accentGPL.ru_RU.* ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC_DOC}/Mueller7.txt ${STAGEDIR}${DOCSDIR}/Mueller7.txt
