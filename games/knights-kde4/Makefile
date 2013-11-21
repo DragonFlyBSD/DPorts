@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: games/knights-kde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/knights-kde4/Makefile 334234 2013-11-18 18:17:13Z dbn $
 
 PORTNAME=	knights
 PORTVERSION=	2.5.0
@@ -19,7 +19,6 @@ USES=		cmake:outsource
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace libkdegames
 USE_QT4=	qmake_build moc_build rcc_build uic_build
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
