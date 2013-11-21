@@ -1,25 +1,25 @@
 # Created by: ijliao
-# $FreeBSD: devel/initutil/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/initutil/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	initutil
 PORTVERSION=	2.1.b
 CATEGORIES=	devel
 MASTER_SITES=	http://www.bdsoft.com/dist/
 DISTNAME=	${PORTNAME}2
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An STL Container Initialization Library
+COMMENT=	STL Container Initialization Library
 
-USE_ZIP=	yes
+USES=		dos2unix
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
-USE_DOS2UNIX=	InitUtil.h
+DOS2UNIX_FILES=	InitUtil.h
 
 PLIST_FILES=	include/InitUtil.h
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_DATA} ${WRKSRC}/InitUtil.h ${PREFIX}/include
+	@${INSTALL_DATA} ${WRKSRC}/InitUtil.h ${STAGEDIR}${PREFIX}/include
 
 .include <bsd.port.mk>
