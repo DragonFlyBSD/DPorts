@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: math/mingw32-libgmp/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/mingw32-libgmp/Makefile 334163 2013-11-18 09:40:02Z marino $
 
 PORTNAME=	libgmp
 PORTVERSION=	5.1.2
@@ -19,6 +19,7 @@ GMP_TARG=	${PKGNAMEPREFIX:S/-$//}
 GNU_CONFIGURE=	yes
 CC=		${PKGNAMEPREFIX}gcc
 CXX=		${PKGNAMEPREFIX}c++
+CFLAGS+=	-I/usr/include
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split" \
 		PREFIX="${PREFIX}/${GMP_TARG}"
 CONFIGURE_ARGS=	--enable-cxx --host=${GMP_TARG} \
