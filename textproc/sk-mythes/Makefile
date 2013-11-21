@@ -1,11 +1,12 @@
-# $FreeBSD: textproc/sk-mythes/Makefile 333497 2013-11-11 13:30:56Z sunpoet $
+# $FreeBSD: textproc/sk-mythes/Makefile 334151 2013-11-18 07:09:14Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	2013.11.10
+PORTVERSION=	2013.11.17
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}/
 PKGNAMEPREFIX=	sk-
 DISTNAME=	OOo-Thesaurus2-sk_SK-${PORTVERSION:C/\.//g}
+EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
@@ -13,7 +14,6 @@ COMMENT=	Slovak thesaurus
 
 LICENSE=	BSD
 
-EXTRACT_SUFX=	.zip
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
