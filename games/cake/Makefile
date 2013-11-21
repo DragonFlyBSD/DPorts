@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/cake/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/cake/Makefile 334146 2013-11-18 06:00:29Z danfe $
 
 PORTNAME=	cake
 PORTVERSION=	2005.12.26
@@ -13,19 +13,18 @@ COMMENT=	Quake3 map viewer (and powerful 3D game engine)
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
-USE_XORG=	x11 xext xmu xt xi sm ice
+USES=		gmake
 USE_GL=		glut
+USE_XORG=	x11 xext xmu xt xi sm ice
+USE_ZIP=	yes
 
 # Need to pass `-l', but PATCH_ARGS+= won't work because of PATCH_ARGS?=
 # in bsd.port.mk
 PATCH_ARGS=	-d ${PATCH_WRKSRC} -N -s -E ${PATCH_STRIP} -l
-USE_GMAKE=	yes
-USE_ZIP=	yes
 
 ALL_TARGET=	main
-MAKE_ARGS+=	CXX=${CXX} PTHREAD_LIBS=${PTHREAD_LIBS}
 WRKSRC=		${WRKDIR}/cake_src
 
 PLIST_FILES=	bin/cake
@@ -46,13 +45,7 @@ post-patch: .SILENT
 # Fix for GCC 4.x
 	${REINPLACE_CMD} -e 's/Mat3x2:://' ${WRKSRC}/cake/math.h
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/main ${PREFIX}/bin/cake
-
-post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+	${INSTALL_PROGRAM} ${WRKSRC}/main ${STAGEDIR}${PREFIX}/bin/cake
 
 .include <bsd.port.mk>
