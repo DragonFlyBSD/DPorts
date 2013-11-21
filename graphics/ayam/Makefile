@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/ayam/Makefile 332258 2013-10-31 15:44:05Z gahr $
+# $FreeBSD: graphics/ayam/Makefile 334308 2013-11-19 12:52:28Z marino $
 
 PORTNAME=	ayam
 PORTVERSION=	1.20
@@ -22,7 +22,7 @@ OPTIONS_DEFINE=	DOCS
 USE_XORG=	xmu xext x11
 USE_GL=		yes
 USE_LDCONFIG=	${PREFIX}/lib/ayam
-USES+=		tk:84
+USES=		gmake tk:84
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 MAKEFILE=	Makefile.shared
 MAKE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
