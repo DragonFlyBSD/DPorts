@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: benchmarks/slowloris/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/slowloris/Makefile 334225 2013-11-18 16:49:08Z mat $
 
 PORTNAME=	slowloris
 PORTVERSION=	0.7
@@ -20,13 +20,15 @@ PLIST_FILES=	bin/slowloris
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
-PERL_THREADS=	no
+PERL_THREADS=	yes
 
 .if exists(${PERL})
 PERL_THREADS!=	${PERL} -V::usethreads
 .if ${PERL_THREADS} == "'define';"
 RUN_DEPENDS+=	p5-threads-shared>=0:${PORTSDIR}/devel/p5-threads-shared
 PERL_THREADS=	yes
+.else
+PERL_THREADS=	no
 .endif
 .endif
 
