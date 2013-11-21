@@ -1,7 +1,8 @@
-# $FreeBSD: accessibility/kaccessible/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/kaccessible/Makefile 334458 2013-11-20 21:42:20Z avilla $
 
 PORTNAME=	kaccessible
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	accessibility kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -10,7 +11,7 @@ DIST_SUBDIR=	KDE/${PORTVERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accessibility services for KDE
 
-LIB_DEPENDS=	speechd.5:${PORTSDIR}/accessibility/speech-dispatcher
+LIB_DEPENDS=	libspeechd.so:${PORTSDIR}/accessibility/speech-dispatcher
 
 CONFLICTS_INSTALL=	kdeaccessibility-4.[0-7].*
 
