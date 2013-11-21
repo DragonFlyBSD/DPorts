@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/openxcom/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/openxcom/Makefile 334273 2013-11-18 23:06:27Z amdmi3 $
 
 PORTNAME=	openxcom
 PORTVERSION=	0.9.0
@@ -12,7 +12,7 @@ COMMENT=	Open-source reimplementation of the original X-Com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	yaml-cpp:${PORTSDIR}/devel/yaml-cpp
+LIB_DEPENDS=	libyaml-cpp.so:${PORTSDIR}/devel/yaml-cpp
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	SupSuper
@@ -35,7 +35,8 @@ PLIST_FILES=	bin/openxcom share/applications/${PORTNAME}.desktop \
 PORTDOCS=	*
 PORTDATA=	*
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 1000000
@@ -49,17 +50,11 @@ post-patch:
 		${WRKSRC}/src/Engine/CrossPlatform.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/res/linux/openxcom.desktop ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/res/linux/icons/openxcom.svg ${PREFIX}/share/pixmaps
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC}/bin && ${COPYTREE_SHARE} data ${DATADIR}/
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DOCSDIR}/
-.endif
-	@${ECHO_CMD}; ${CAT} ${PKGMESSAGE}; ${ECHO_CMD}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/res/linux/openxcom.desktop ${STAGEDIR}${PREFIX}/share/applications/
+	${INSTALL_DATA} ${WRKSRC}/res/linux/icons/openxcom.svg ${STAGEDIR}${PREFIX}/share/pixmaps/
+	cd ${WRKSRC}/bin && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
