@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/ivan/pkg-install 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: games/ivan/pkg-install 334269 2013-11-18 22:49:32Z amdmi3 $
 
 STATEDIR="/var/games/ivan"
 
@@ -8,8 +8,8 @@ STATEDIR="/var/games/ivan"
 
 echo "Creating state directory..."
 
-mkdir "$STATEDIR"
+mkdir -p "$STATEDIR"
 touch "$STATEDIR/ivan-highscore.scores"
-mkdir "$STATEDIR/Bones"
+mkdir -p "$STATEDIR/Bones"
 chgrp -R games "$STATEDIR"
 chmod -R g+w "$STATEDIR"
