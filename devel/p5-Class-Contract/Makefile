@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Contract/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: devel/p5-Class-Contract/Makefile 334223 2013-11-18 16:45:09Z mat $
 
 PORTNAME=	Class-Contract
 PORTVERSION=	1.14
@@ -10,9 +10,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Design-by-Contract OO in Perl
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-USE_DOS2UNIX=	yes
 PLIST_SUB+=	EXAMPLESDIR="share/examples/${PORTNAME}"
 
 pre-configure:
