@@ -1,5 +1,5 @@
 # Created by: Frederic Cambus
-# $FreeBSD: security/gsfv/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/gsfv/Makefile 334311 2013-11-19 12:59:56Z ehaupt $
 
 PORTNAME=	gsfv
 PORTVERSION=	0.2.1
@@ -15,5 +15,4 @@ PLIST_FILES=	bin/gsfv
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
