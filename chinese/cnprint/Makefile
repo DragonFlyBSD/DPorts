@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/cnprint/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/cnprint/Makefile 334192 2013-11-18 13:42:01Z lwhsu $
 
 PORTNAME=	cnprint
 PORTVERSION=	3.30b
@@ -24,7 +24,6 @@ OPTIONS_DEFAULT=	A4SIZE
 
 A4SIZE_DESC=	Set A4 (not Letter) as a default paper size
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
@@ -53,9 +52,9 @@ do-build:
 	${CC} cnprint330b.c ttfb330b.c -o cnprint -DPREFIX=\"${PREFIX}\"
 
 do-install:
-	${MKDIR} ${DATADIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/cnprint ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}33.cmd  ${DATADIR}/${PORTNAME}.cmd
-	${INSTALL_DATA} ${FILES} ${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/cnprint ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}33.cmd  ${STAGEDIR}${DATADIR}/${PORTNAME}.cmd
+	${INSTALL_DATA} ${FILES} ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.post.mk>
