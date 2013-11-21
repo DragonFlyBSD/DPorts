@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/xorg-edit/Makefile 330213 2013-10-13 06:15:19Z eadler $
+# $FreeBSD: x11/xorg-edit/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	xorg-edit
 PORTVERSION=	08.08.06
@@ -15,10 +15,10 @@ LICENSE=	GPLv3
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_BZIP2=	yes
-USE_DOS2UNIX=	*.cpp *.h
+DOS2UNIX_GLOB=	*.cpp *.h
 USE_WX=		2.6+
 WX_UNICODE=	yes
-USES=		gmake
+USES=		dos2unix gmake
 
 PLIST_FILES=	bin/xorg-edit \
 		lib/xorg-edit/de_DE/LC_MESSAGES/xorg-edit.mo \
