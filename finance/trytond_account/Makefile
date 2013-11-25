@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_account/Makefile 334164 2013-11-18 09:43:15Z bsam $
+# $FreeBSD: finance/trytond_account/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond_account
 PORTVERSION=	2.4.6
@@ -15,7 +15,7 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		trytond_company>=2.4.0:${PORTSDIR}/finance/trytond_company \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:${PORTSDIR}/devel/py-dateutil
 
-CONFLICTS=	trytond_account-2.[68].*
+CONFLICTS=	trytond28_account-2.8.*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
