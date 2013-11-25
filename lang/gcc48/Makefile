@@ -1,11 +1,12 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc48/Makefile 334140 2013-11-18 03:04:05Z gerald $
+# $FreeBSD: lang/gcc48/Makefile 334791 2013-11-24 20:55:35Z gerald $
 
-PORTNAME=	gcc
-PORTVERSION=	4.8.3.s20131114
+PORTNAME=	gcc48
+PORTVERSION=	4.8.3.s20131121
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	snapshots/${DISTVERSION}
+DISTNAME=	gcc-${DISTVERSION}
 
 MAINTAINER=	gerald@FreeBSD.org
 COMMENT=	GNU Compiler Collection 4.8
@@ -27,7 +28,6 @@ BUILD_DEPENDS+=	runtest:${PORTSDIR}/misc/dejagnu
 DISTVERSION=	${PORTVERSION:C/([0-9]+\.[0-9]+).*\.s([0-9]+)/\1-\2/}
 GCC_VERSION=	${PORTVERSION:C/(.+)\.s[0-9]{8}/\1/}
 SUFFIX=		${PORTVERSION:C/([0-9]+).([0-9]+).*/\1\2/}
-LATEST_LINK=	gcc${SUFFIX}${PKGNAMESUFFIX}
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
 USES=		gmake iconv perl5
 USE_BINUTILS=	yes
