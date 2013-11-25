@@ -1,8 +1,8 @@
 # Created by: Yuri Pankov <yuri.pankov@gmail.com>
-# $FreeBSD: textproc/libunibreak/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libunibreak/Makefile 334842 2013-11-25 11:46:36Z fluffy $
 
 PORTNAME=	libunibreak
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 PORTEPOCH=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/vimgadgets/${PORTNAME}/${PORTVERSION}
