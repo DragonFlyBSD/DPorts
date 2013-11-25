@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: databases/py-memcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-memcached/Makefile 334388 2013-11-20 03:24:08Z sunpoet $
 
 PORTNAME=	memcached
 PORTVERSION=	1.53
@@ -19,5 +19,6 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_PKGNAME=	python-memcached
 
-NO_STAGE=	yes
+PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
 .include <bsd.port.mk>
