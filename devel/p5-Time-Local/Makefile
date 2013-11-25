@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Time-Local/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD: devel/p5-Time-Local/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Time-Local
 PORTVERSION=	1.23.00
@@ -25,8 +25,8 @@ PORTDOCS=	Changes
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 .endif
 
 .include <bsd.port.post.mk>
