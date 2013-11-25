@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: net/p5-Net-Ping-External/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Ping-External/Makefile 334813 2013-11-25 06:08:39Z az $
 
 PORTNAME=	Net-Ping-External
 PORTVERSION=	0.13
@@ -17,7 +17,4 @@ USE_ZIP=	yes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Ping::External.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
