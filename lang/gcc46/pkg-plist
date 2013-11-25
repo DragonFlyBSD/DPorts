@@ -1,4 +1,4 @@
-@comment $FreeBSD: lang/gcc46/pkg-plist 331816 2013-10-28 00:26:28Z gerald $
+@comment $FreeBSD: lang/gcc46/pkg-plist 334619 2013-11-22 22:03:06Z gerald $
 bin/%%GNU_HOST%%-c++%%SUFFIX%%
 bin/%%GNU_HOST%%-g++%%SUFFIX%%
 bin/%%GNU_HOST%%-gcc%%SUFFIX%%
@@ -78,4 +78,5 @@ share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6/printers.py
 %%JAVA%%share/java/libgcj-tools-%%GCC_VERSION%%.jar
 @exec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi
 @unexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi
+@dirrmtry info/gcc%%SUFFIX%%
 @comment Insert PLIST.lib here
