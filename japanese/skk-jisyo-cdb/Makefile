@@ -1,7 +1,7 @@
 # Created by: KOMATSU Shinichiro <koma2@jiro.c.u-tokyo.ac.jp>
-# $FreeBSD: japanese/skk-jisyo-cdb/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/skk-jisyo-cdb/Makefile 334821 2013-11-25 08:25:58Z linimon $
 
-MAINTAINER=	meta+ports@vmeta.jp
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CDB jisyo (dictionary) files for the SKK Japanese-input software
 
 WITH_SKKJISYO_CDB=	yes
