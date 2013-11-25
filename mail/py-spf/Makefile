@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/py-spf/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/py-spf/Makefile 334389 2013-11-20 03:24:31Z sunpoet $
 
 PORTNAME=	spf
 PORTVERSION=	2.0.8
@@ -21,21 +21,20 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	py${PORTNAME}
+USES=		shebangfix
 
 PORTDOCS=	CHANGELOG README
 
-NO_STAGE=	yes
+SHEBANG_FILES=	spf.py
+
 .include <bsd.port.options.mk>
 
-post-patch:
-	@${REINPLACE_CMD} -e '1 s|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/spf.py
-
 post-install:
-	${CHMOD} ${BINMODE} ${PYTHONPREFIX_SITELIBDIR}/spf.py
-	${LN} -s ${PYTHONPREFIX_SITELIBDIR}/spf.py ${PREFIX}/bin/
+	${CHMOD} ${BINMODE} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/spf.py
+	${LN} -s ${PYTHONPREFIX_SITELIBDIR}/spf.py ${STAGEDIR}${PREFIX}/bin/
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
