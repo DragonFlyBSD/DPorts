@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/metis-edf/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/metis-edf/Makefile 334607 2013-11-22 19:24:37Z bf $
 
 PORTNAME=	metis-edf
 DISTVERSION=	4.1-2
@@ -9,7 +9,7 @@ CATEGORIES=	math
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Meshes partitioning tool used by Code_Aster
 
-CONFLICTS=	metis-[0-9]*
+CONFLICTS=	metis-[0-9]* metis4-4*
 
 ALL_TARGET=	default
 MAKE_ENV+=	AR="${AR}" PICFLAG="${PICFLAG}"
