@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Coro/Makefile 332901 2013-11-05 19:33:28Z sunpoet $
+# $FreeBSD: devel/p5-Coro/Makefile 334346 2013-11-19 20:00:28Z sunpoet $
 
 PORTNAME=	Coro
-PORTVERSION=	6.32
+PORTVERSION=	6.33
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
@@ -28,9 +28,10 @@ USES=		perl5 shebangfix
 USE_PERL5=	configure
 
 SHEBANG_FILES=	Coro/*.pl eg/*
-SHEBANG_LANG=	perl2
-perl2_OLD_CMD=	/opt/bin/perl
-perl2_CMD=	${perl_CMD}
+#SHEBANG_LANG=	perl2
+#perl2_OLD_CMD=	/opt/bin/perl
+#perl2_CMD=	${perl_CMD}
+perl_OLD_CMD=	/.*/bin/perl
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
