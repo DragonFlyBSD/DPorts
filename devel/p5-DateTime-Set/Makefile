@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Set/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: devel/p5-DateTime-Set/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	DateTime-Set
 PORTVERSION=	0.33
@@ -27,8 +27,8 @@ PORTDOCS=	Changes README TODO
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
