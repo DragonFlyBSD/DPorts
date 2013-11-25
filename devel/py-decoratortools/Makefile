@@ -1,5 +1,5 @@
 # Created by: alexander smishlajev
-# $FreeBSD: devel/py-decoratortools/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-decoratortools/Makefile 334378 2013-11-20 03:21:18Z sunpoet $
 
 PORTNAME=	DecoratorTools
 PORTVERSION=	1.8
@@ -17,5 +17,4 @@ USE_ZIP=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
