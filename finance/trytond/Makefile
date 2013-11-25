@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: finance/trytond/Makefile 334164 2013-11-18 09:43:15Z bsam $
+# $FreeBSD: finance/trytond/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond
 PORTVERSION=	2.4.8
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/mx/__init__.py:${PORTSDIR}/lang/py-mx-base \
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-CONFLICTS=	trytond-2.[68].*
+CONFLICTS=	trytond28-2.8.*
 
 USERS=		trytond
 GROUPS=		trytond
