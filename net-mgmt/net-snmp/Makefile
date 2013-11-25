@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: net-mgmt/net-snmp/Makefile 333176 2013-11-08 01:36:37Z zi $
+# $FreeBSD: net-mgmt/net-snmp/Makefile 334626 2013-11-23 00:15:03Z zi $
 
 PORTNAME=	snmp
 PORTVERSION=	5.7.2
@@ -150,12 +150,16 @@ NET_SNMP_LOGFILE?=	/var/log/snmpd.log
 NET_SNMP_PERSISTENTDIR?=/var/net-snmp
 NET_SNMP_WITH_MIB_MODULE_LIST+=	host disman/event-mib mibII/mta_sendmail mibII/tcpTable ucd-snmp/diskio
 
-.if ${OSVERSION} >= 700028 && ${OSVERSION} < 1100000
+.if ${OSVERSION} >= 700028
 NET_SNMP_WITH_MIB_MODULE_LIST+=	sctp-mib
 .endif
 
 .if ${OSVERSION} >= 800000
 CONFIGURE_ARGS+=	--with-libs="-lssp_nonshared"
+.endif
+
+.if ${OSVERSION} >= 1000000
+CFLAGS+=	-D_WANT_IFADDR
 .endif
 
 .if ${PORT_OPTIONS:MMFD_REWRITES}
