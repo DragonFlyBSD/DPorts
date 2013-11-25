@@ -1,9 +1,9 @@
 # Created by: Konstantin Saurbier <saurbier@math.uni-bielefeld.de>
-# $FreeBSD: dns/ldns/Makefile 330249 2013-10-13 19:14:00Z erwin $
+# $FreeBSD: dns/ldns/Makefile 334749 2013-11-24 17:59:04Z koobs $
 
 PORTNAME=	ldns
 PORTVERSION=	1.6.16
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	dns
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/ \
 		CRITICAL
