@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-CPP/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD: devel/p5-Inline-CPP/Makefile 334677 2013-11-23 15:18:15Z sunpoet $
 
 PORTNAME=	Inline-CPP
-PORTVERSION=	0.45
+PORTVERSION=	0.46
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
