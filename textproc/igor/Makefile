@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/igor/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/igor/Makefile 334794 2013-11-24 21:59:09Z ak $
 
 PORTNAME=	igor
-PORTVERSION=	1.376
+PORTVERSION=	1.397
 CATEGORIES=	textproc
 MASTER_SITES=	https://docscripts.glenbarber.us/tags/${PORTNAME}/${PORTVERSION}/
 
@@ -15,15 +15,14 @@ USE_PERL5=	run
 
 NO_BUILD=	yes
 
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/local|${PREFIX}|' ${WRKSRC}/${PORTNAME} ${WRKSRC}/${PORTNAME}.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MAN1PREFIX}/man/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
 
 .include <bsd.port.mk>
