@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/cmt/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/cmt/Makefile 334770 2013-11-24 19:15:33Z bapt $
 
 PORTNAME=	cmt
 PORTVERSION=	1.16
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 BUILD_WRKSRC=	${WRKDIR}/${PORTNAME}/src
 
 USES=		gmake
-NO_STAGE=	yes
 MAKEFILE=	makefile
 MAKE_ARGS=	CXX="${CXX}" \
 		CXXFLAGS="${CXXFLAGS} -fPIC -I${LOCALBASE}/include"
@@ -31,7 +30,7 @@ post-patch:
 		${REINPLACE_CMD} -e "s|<malloc.h>|<stdlib.h>|g"
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/ladspa
-	${INSTALL_DATA} ${WRKSRC}/plugins/cmt.so ${PREFIX}/lib/ladspa/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/ladspa
+	${INSTALL_LIB} ${WRKSRC}/plugins/cmt.so ${STAGEDIR}${PREFIX}/lib/ladspa/
 
 .include <bsd.port.mk>
