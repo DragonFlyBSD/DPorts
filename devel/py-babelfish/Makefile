@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-babelfish/Makefile 333382 2013-11-10 11:40:24Z wg $
+# $FreeBSD: devel/py-babelfish/Makefile 334666 2013-11-23 13:52:38Z wg $
 
 PORTNAME=	babelfish
-PORTVERSION=	0.3.0
+PORTVERSION=	0.4.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
