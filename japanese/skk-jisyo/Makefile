@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skk-jisyo/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/skk-jisyo/Makefile 334821 2013-11-25 08:25:58Z linimon $
 
 PORTNAME=	skk-jisyo
 PORTVERSION=	201302
@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	-cdb
 .endif
 DIST_SUBDIR=	skk-jisyo
 
-MAINTAINER?=	meta+ports@vmeta.jp
+MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Jisyo (dictionary) files for the SKK Japanese-input software
 
 .if defined(WITH_SKKJISYO_CDB)
