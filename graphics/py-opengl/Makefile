@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@ipass.net>
-# $FreeBSD: graphics/py-opengl/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/py-opengl/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	opengl
 PORTVERSION=	3.0.1
@@ -22,13 +22,12 @@ OPTIONS_DEFAULT=	TKINTER
 TKINTER_DESC=	Build with tkinter for X support
 OPTIONSFILE?=	${PORT_DBDIR}/${PORTNAME}/options
 
+USES=		dos2unix
 USE_GL=		glut
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyOpenGL
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.b/b/}
-
-USE_DOS2UNIX=	yes
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
