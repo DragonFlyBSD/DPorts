@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_party/Makefile 334207 2013-11-18 15:11:55Z bsam $
+# $FreeBSD: finance/trytond_party/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond_party
 PORTVERSION=	2.4.1
@@ -15,7 +15,7 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		trytond_country>=2.4.0:${PORTSDIR}/finance/trytond_country \
 		${PYTHON_PKGNAMEPREFIX}vatnumber>=1.0.0:${PORTSDIR}/finance/py-vatnumber
 
-CONFLICTS=	trytond_party-2.[68].*
+CONFLICTS=	trytond28_party-2.8.*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
