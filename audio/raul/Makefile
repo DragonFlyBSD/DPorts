@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/raul/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/raul/Makefile 334717 2013-11-24 11:47:24Z mva $
 
 PORTNAME=	raul
 PORTVERSION=	0.8.0
@@ -39,12 +39,12 @@ post-patch:
 			${WRKSRC}/autowaf/autowaf.py
 
 do-configure:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
 
 do-build:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} ${WAF_JOBS} build)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} ${WAF_JOBS} build)
 
 do-install:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} install)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} install)
 
 .include <bsd.port.post.mk>
