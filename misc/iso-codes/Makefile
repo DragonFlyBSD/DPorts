@@ -1,10 +1,11 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: misc/iso-codes/Makefile 328948 2013-10-01 13:38:11Z kwm $
+# $FreeBSD: misc/iso-codes/Makefile 334747 2013-11-24 17:14:42Z kwm $
 
 PORTNAME=	iso-codes
 PORTVERSION=	3.46
 CATEGORIES=	misc
-MASTER_SITES=	http://pkg-isocodes.alioth.debian.org/downloads/
+MASTER_SITES=	http://pkg-isocodes.alioth.debian.org/downloads/ \
+		LOCAL/kwm
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Lists of the country, language, and currency iso names
