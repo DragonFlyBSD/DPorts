@@ -1,8 +1,8 @@
-# $FreeBSD: dns/bind99/Makefile 333563 2013-11-12 10:59:20Z erwin $
+# $FreeBSD: dns/bind99/Makefile 334593 2013-11-22 13:41:34Z erwin $
 
 PORTNAME?=	bind99
 PORTVERSION=	9.9.4
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -169,14 +169,14 @@ CONFIGURE_ARGS+=        --without-gssapi
 .endif
 
 .if ${PORT_OPTIONS:MREPLACE_BASE}
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OSVERSION} >= 1000500
 IGNORE=		REPLACE_BASE option is not supported on this release
 .endif
 PKGNAMESUFFIX=	-base
 PREFIX=		/usr
 BIND_DESTETC=	/etc/namedb
 .else
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OSVERSION} >= 1000500
 BIND_DESTETC=	${PREFIX}/etc/namedb
 .else
 BIND_DESTETC=	${PREFIX}/etc
@@ -187,7 +187,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			--sysconfdir=${BIND_DESTETC}
 PLIST_SUB+=	BIND_DESTETC="${BIND_DESTETC}"
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OSVERSION} >= 1000500
 PLIST_SUB+=	NOBASE=""
 .else
 PLIST_SUB+=	NOBASE="@comment "
@@ -268,7 +268,7 @@ post-install:
 	${CP} ${WRKSRC}/CHANGES ${WRKSRC}/COPYRIGHT ${WRKSRC}/FAQ \
 		${WRKSRC}/HISTORY ${WRKSRC}/README ${DOCSDIR}/
 .endif
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OSVERSION} >= 1000500
 .for FILE in named named.conf
 	${SED} -e 's#%%PREFIX%%#${PREFIX}#g' \
 		-e 's#%%BIND_DESTETC%%#${BIND_DESTETC}#g' \
