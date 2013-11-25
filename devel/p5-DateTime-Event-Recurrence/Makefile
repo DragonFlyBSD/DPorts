@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Event-Recurrence/Makefile 332844 2013-11-05 12:56:03Z vanilla $
+# $FreeBSD: devel/p5-DateTime-Event-Recurrence/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	DateTime-Event-Recurrence
 DISTVERSION=	0.16
@@ -25,8 +25,8 @@ PORTDOCS=	CREDITS Changes README TODO
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
