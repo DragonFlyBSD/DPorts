@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/p5-Digest-MD4/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Digest-MD4/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Digest-MD4
 PORTVERSION=	1.9
@@ -24,8 +24,8 @@ PORTDOCS=	Changes rfc1320.txt
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
