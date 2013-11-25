@@ -1,8 +1,8 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 332217 2013-10-31 09:04:30Z jadawin $
+# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 334827 2013-11-25 09:43:32Z jadawin $
 
 PORTNAME=	Mail-IMAPClient
-PORTVERSION=	3.34
+PORTVERSION=	3.35
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PLOBBES
