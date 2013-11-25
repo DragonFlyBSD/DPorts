@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: shells/p5-Term-ShellUI/Makefile 332952 2013-11-06 07:44:16Z vanilla $
+# $FreeBSD: shells/p5-Term-ShellUI/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Term-ShellUI
 PORTVERSION=	0.92
@@ -19,10 +19,10 @@ USE_PERL5=	configure
 
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	cd ${WRKSRC}/examples/ && ${INSTALL_SCRIPT} \
-		fileman-example synopsis synopsis-big tui-sample ${STAGEDIR}${EXAMPLESDIR}/
+	(cd ${WRKSRC}/examples/ && ${INSTALL_SCRIPT} \
+		fileman-example synopsis synopsis-big tui-sample ${STAGEDIR}${EXAMPLESDIR})
 .endif
 
 .include <bsd.port.mk>
