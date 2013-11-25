@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD: devel/p5-Proc-ProcessTable/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Proc-ProcessTable
 PORTVERSION=	0.48
@@ -19,7 +19,7 @@ PORTDOCS=	README README.freebsd-kvm README.freebsd-procfs
 .if !defined(NOPORTDOCS)
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
