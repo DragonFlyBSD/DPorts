@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-HTML-Tidy/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: textproc/p5-HTML-Tidy/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	HTML-Tidy
 PORTVERSION=	1.56
@@ -28,8 +28,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
