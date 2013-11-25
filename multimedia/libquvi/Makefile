@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/libquvi/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/libquvi/Makefile 334535 2013-11-21 23:12:23Z sunpoet $
 
 PORTNAME=	libquvi
 PORTVERSION=	0.4.1
@@ -15,31 +15,24 @@ LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	libquvi-scripts>=0.4.0:${PORTSDIR}/multimedia/libquvi-scripts
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 OPTIONS_DEFINE=	DOCS
+
+PORTSCOUT=	limit:0.4.[0-9]*
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_LUA=	yes
 USE_XZ=		yes
-USES=		pathfix pkgconfig iconv
-
-MAN3=		libquvi.3
+USES=		iconv pathfix pkgconfig
 
 PROJECTHOST=	quvi
 
-PORTSCOUT=	limit:0.4.[0-9]*
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	cd ${WRKSRC}/doc/nd/ && ${COPYTREE_SHARE} . ${DOCSDIR}/
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/doc/nd/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
