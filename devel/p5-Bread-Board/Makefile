@@ -1,9 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Bread-Board/Makefile 329732 2013-10-07 20:11:57Z sunpoet $
+# $FreeBSD: devel/p5-Bread-Board/Makefile 334541 2013-11-21 23:16:40Z sunpoet $
 
 PORTNAME=	Bread-Board
-PORTVERSION=	0.28
-PORTREVISION=	1
+PORTVERSION=	0.29
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
