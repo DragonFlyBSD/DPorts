@@ -1,8 +1,8 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: devel/upnp/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: devel/upnp/Makefile 334506 2013-11-21 18:20:59Z pawel $
 
 PORTNAME=	upnp
-PORTVERSION=	1.6.18
+PORTVERSION=	1.6.19
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/p${PORTNAME}/p${PORTNAME}/libUPnP%20${PORTVERSION}
