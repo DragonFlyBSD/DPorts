@@ -1,9 +1,9 @@
 # Created by: cartola (Carlos E. G. Carvalho)
-# $FreeBSD: graphics/vigra/Makefile 332189 2013-10-31 00:32:31Z nemysis $
+# $FreeBSD: graphics/vigra/Makefile 334422 2013-11-20 14:25:28Z nemysis $
 
 PORTNAME=	vigra
 PORTVERSION=	1.9.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
