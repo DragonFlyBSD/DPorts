@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-stsci.distutils/Makefile 334317 2013-11-19 13:34:06Z wg $
+# $FreeBSD: devel/py-stsci.distutils/Makefile 334576 2013-11-22 11:55:27Z wg $
 
 PORTNAME=	stsci.distutils
-PORTVERSION=	0.3.5
+PORTVERSION=	0.3.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
