@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/dri/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: graphics/dri/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	dri
 PORTVERSION=	${MESAVERSION}
@@ -103,13 +103,13 @@ pre-everything::
 
 do-install:
 .if !defined(WITH_NEW_XORG)
-	cd ${WRKSRC}/src/mesa; ${GMAKE} install-dri
+	(cd ${WRKSRC}/src/mesa && ${GMAKE} install-dri)
 .else
-	cd ${WRKSRC}/src/mesa/libdricore; ${GMAKE} install
-	cd ${WRKSRC}/src/mesa/drivers/dri; ${GMAKE} install
+	(cd ${WRKSRC}/src/mesa/libdricore && ${GMAKE} install)
+	(cd ${WRKSRC}/src/mesa/drivers/dri && ${GMAKE} install)
 . if defined(WITH_GALLIUM) && (${ARCH} == i386 || ${ARCH} == x86_64)
-	cd ${WRKSRC}/src/gallium/drivers/radeon; ${GMAKE} install
-	cd ${WRKSRC}/src/gallium/targets; ${GMAKE} install
+	(cd ${WRKSRC}/src/gallium/drivers/radeon && ${GMAKE} install)
+	(cd ${WRKSRC}/src/gallium/targets && ${GMAKE} install)
 . endif
 .endif
 
