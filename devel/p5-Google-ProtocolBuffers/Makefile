@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Google-ProtocolBuffers/Makefile 333226 2013-11-08 14:10:58Z sunpoet $
+# $FreeBSD: devel/p5-Google-ProtocolBuffers/Makefile 334456 2013-11-20 21:15:37Z sunpoet $
 
 PORTNAME=	Google-ProtocolBuffers
-PORTVERSION=	0.09
+PORTVERSION=	0.10
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
