@@ -1,8 +1,9 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: sysutils/prips/Makefile 333977 2013-11-16 03:33:37Z vanilla $
+# $FreeBSD: sysutils/prips/Makefile 334356 2013-11-19 22:15:31Z antoine $
 
 PORTNAME=	prips
 PORTVERSION=	0.9.9
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://devel.ringlet.net/sysutils/prips/
 
