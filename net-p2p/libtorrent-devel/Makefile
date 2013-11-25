@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/libtorrent-devel/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/libtorrent-devel/Makefile 334739 2013-11-24 15:48:16Z az $
 
 PORTNAME=	libtorrent-devel
 PORTVERSION=	0.13.3
@@ -38,8 +38,13 @@ CONFIGURE_ENV=	OPENSSL_LIBS="-L/usr/lib -ssl -crypto" OPENSSL_CFLAGS="-I/usr/inc
 
 CONFIGURE_ARGS+=	--disable-debug
 
+# Workaround to build on > 10.x
+.if ${OSVERSION} >= 1000000
+USE_GCC=	yes
+.endif
+
 post-patch:
-	@${REINPLACE_CMD} -e 's/-O3/${CFLAGS}/' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-O3|${CFLAGS}|' ${WRKSRC}/configure
 
 .if ${PORT_OPTIONS:MKQUEUE}
 CONFIGURE_ARGS+=	--with-kqueue
