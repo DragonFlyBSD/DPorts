@@ -1,7 +1,7 @@
-# $FreeBSD: net/ranch/Makefile 333097 2013-11-07 13:47:59Z olgeni $
+# $FreeBSD: net/ranch/Makefile 334516 2013-11-21 20:00:04Z olgeni $
 
 PORTNAME=	ranch
-PORTVERSION=	0.8.5
+PORTVERSION=	0.9.0
 CATEGORIES=	net
 
 MAINTAINER=	olgeni@FreeBSD.org
@@ -16,12 +16,10 @@ USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	extend
 GH_PROJECT=	ranch
-GH_COMMIT=	4170575
+GH_COMMIT=	5df1f22
 GH_TAGNAME=	${PORTVERSION}
 
 PORTDOCS=	*
-
-.include <bsd.port.options.mk>
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
