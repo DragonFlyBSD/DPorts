@@ -1,8 +1,8 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-bcdoc/Makefile 327993 2013-09-23 12:52:41Z culot $
+# $FreeBSD: devel/py-bcdoc/Makefile 334731 2013-11-24 14:53:40Z alexey $
 
 PORTNAME=	bcdoc
-PORTVERSION=	0.10.0
+PORTVERSION=	0.11.0
 CATEGORIES=	devel
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,6 +17,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}docutils>=0.10:${PORTSDIR}/textproc/py-docut
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
