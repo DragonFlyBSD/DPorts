@@ -1,5 +1,5 @@
 # Created by: David MacKenzie <djm@pix.net>
-# $FreeBSD: audio/id3v2/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/id3v2/Makefile 334831 2013-11-25 11:33:26Z sunpoet $
 
 PORTNAME=	id3v2
 PORTVERSION=	0.1.12
@@ -9,12 +9,13 @@ MASTER_SITES=	SF
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command line id3v2 tag editor
 
-LIB_DEPENDS=	id3-3.8.3:${PORTSDIR}/audio/id3lib
+LICENSE=	LGPL21
+
+LIB_DEPENDS=	libid3.so:${PORTSDIR}/audio/id3lib
 
 MAKE_JOBS_UNSAFE=	yes
-NO_STAGE=	yes
 
-MAN1=		id3v2.1
-PLIST_FILES=	bin/id3v2
+PLIST_FILES=	bin/id3v2 \
+		man/man1/id3v2.1.gz
 
 .include <bsd.port.mk>
