@@ -1,8 +1,8 @@
 # Created by: Jacob Atzen <jatzen@gmail.com>
-# $FreeBSD: devel/rubygem-daemon_controller/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-daemon_controller/Makefile 334706 2013-11-24 07:48:00Z osa $
 
 PORTNAME=	daemon_controller
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMEPREFIX=	rubygem-
