@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@saargate.de>
-# $FreeBSD: dns/p5-Net-LibIDN/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD: dns/p5-Net-LibIDN/Makefile 334523 2013-11-21 20:48:03Z sunpoet $
 
 PORTNAME=	Net-LibIDN
 PORTVERSION=	0.12
@@ -11,10 +11,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	This module provides access to the libidn library
 
-LIB_DEPENDS=	idn.17:${PORTSDIR}/dns/libidn
+LICENSE=	ART10
+
+LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn
 
 USES=		perl5
 USE_PERL5=	configure
-CONFIGURE_ARGS+=	--with-libidn=${PREFIX}/lib --with-libidn-inc=${PREFIX}/include
+CONFIGURE_ARGS=	--with-libidn=${LOCALBASE}/lib \
+		--with-libidn-inc=${LOCALBASE}/include
 
 .include <bsd.port.mk>
