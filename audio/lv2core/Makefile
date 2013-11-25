@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: audio/lv2core/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/lv2core/Makefile 334714 2013-11-24 09:32:53Z mva $
 
 PORTNAME=	lv2core
 PORTVERSION=	6.0
@@ -35,13 +35,13 @@ post-patch:
 		 s|@LV2CORE_VERSION@|${PORTVERSION}|' < lv2core.pc.in > lv2core.pc)
 
 do-configure:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
 
 do-build:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} ${WAF_JOBS} build)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} ${WAF_JOBS} build)
 
 do-install:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} install)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} install)
 	${INSTALL_DATA} ${WRKSRC}/lv2core.pc ${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.post.mk>
