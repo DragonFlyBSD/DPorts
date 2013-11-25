@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_account_invoice/Makefile 334164 2013-11-18 09:43:15Z bsam $
+# $FreeBSD: finance/trytond_account_invoice/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond_account_invoice
 PORTVERSION=	2.4.3
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		trytond_account_product>=2.4.1:${PORTSDIR}/finance/trytond_account_product
 
-CONFLICTS=	trytond_account_invoice-2.[68].*
+CONFLICTS=	trytond28_account_invoice-2.8.*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
