@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-Spiffy/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD: devel/p5-Spiffy/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Spiffy
 PORTVERSION=	0.31
@@ -25,8 +25,8 @@ PORTDOCS=	Changes README
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
