@@ -1,12 +1,11 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: security/libssh/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libssh/Makefile 334710 2013-11-24 08:28:43Z fluffy $
 
 PORTNAME=	libssh
-PORTVERSION=	0.5.2
-PORTREVISION=	1
+DISTVERSION=	0.5.5
 CATEGORIES=	security devel
-MASTER_SITES=	http://www.libssh.org/files/0.5/ \
-		LOCAL/avl
+MASTER_SITES=	https://red.libssh.org/attachments/download/51/ \
+		LOCAL/fluffy
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Library implementing the SSH1 and SSH2 protocol
