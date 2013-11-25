@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/pkgconfig.mk 316283 2013-04-22 22:25:20Z bapt $
+# $FreeBSD: Mk/Uses/pkgconfig.mk 334409 2013-11-20 12:30:29Z rene $
 #
 # handle dependency on the pkgconf port
 #
@@ -28,7 +28,7 @@ CONFIGURE_ENV+=	PKG_CONFIG=pkgconf
 BUILD_DEPENDS+=	${_PKGCONFIG_DEPENDS}
 RUN_DEPENDS+=	${_PKGCONFIG_DEPENDS}
 .else
-IGNORE=	USES=pkgconfig - invalid args: [${pkgconfig_ARGS}] specifed
+IGNORE=	USES=pkgconfig - invalid args: [${pkgconfig_ARGS}] specified
 .endif
 
 .endif

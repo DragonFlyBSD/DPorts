@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: Mk/bsd.sites.mk 333421 2013-11-10 18:11:38Z rakuco $
+# $FreeBSD: Mk/bsd.sites.mk 334725 2013-11-24 13:36:02Z tijl $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -65,7 +65,7 @@ MASTER_SITE_APACHE+= \
 	http://ftp.twaren.net/Unix/Web/apache/%SUBDIR%/ \
 	http://apache.mirror.uber.com.au/%SUBDIR%/ \
 	http://apache.spd.co.il/%SUBDIR%/ \
-	http://ftp.mirrorservice.org/sites/ftp.apache.org/%SUBDIR/ \
+	http://ftp.mirrorservice.org/sites/ftp.apache.org/%SUBDIR%/ \
 	http://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.apache.org/dist/%SUBDIR%/ \
 	ftp://mir1.ovh.net/ftp.apache.org/dist/%SUBDIR%/ \
 	ftp://ftp.forthnet.gr/pub/www/apache/%SUBDIR%/ \
@@ -727,6 +727,11 @@ MASTER_SITE_LOGILAB+= \
 	http://ftp.logilab.org/pub/%SUBDIR%/ \
 	ftp://ftp.logilab.org/pub/%SUBDIR%/ \
 	ftp://ftp.logilab.fr/pub/%SUBDIR%/
+.endif
+
+.if !defined(IGNORE_MASTER_SITE_MATE)
+MASTER_SITE_MATE+= \
+	http://pub.mate-desktop.org/releases/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_MOZDEV)
@@ -1473,6 +1478,7 @@ MASTER_SITES_SUBDIRS=	\
 			GNU:${PORTNAME} \
 			HORDE:${PORTNAME} \
 			LOGILAB:${PORTNAME} \
+			MATE:${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/} \
 			MOZDEV:${PORTNAME:tl} \
 			NETLIB:${PORTNAME} \
 			PERL_CPAN:${PORTNAME:C/-.*//} \

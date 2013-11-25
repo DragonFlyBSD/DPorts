@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/pathfix.mk 315827 2013-04-16 15:45:03Z kwm $
+# $FreeBSD: Mk/Uses/pathfix.mk 334392 2013-11-20 07:29:08Z bapt $
 #
 # Lookup in Makefile.in and configure for common incorrect paths and set them
 # to respect FreeBSD hier
@@ -19,6 +19,7 @@ IGNORE=	USES=pathfix does not require args
 
 PATHFIX_MAKEFILEIN?=	Makefile.in
 
+.PHONY: pathfix-pre-patch
 pre-patch: pathfix-pre-patch
 
 pathfix-pre-patch:

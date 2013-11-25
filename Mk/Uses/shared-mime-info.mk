@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shared-mime-info.mk 328714 2013-09-29 17:17:57Z kwm $
+# $FreeBSD: Mk/Uses/shared-mime-info.mk 334392 2013-11-20 07:29:08Z bapt $
 #
 # handle dependency depends on shared-mime-info and package regen
 #
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 RUN_DEPENDS+=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
 # bolt our post-install target to post-install
+.PHONY: shared-mime-post-install
 post-install: shared-mime-post-install
 
 shared-mime-post-install:

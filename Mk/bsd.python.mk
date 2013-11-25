@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 333288 2013-11-09 13:20:05Z wg $
+# $FreeBSD: Mk/bsd.python.mk 334723 2013-11-24 13:22:40Z koobs $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)
@@ -348,9 +348,9 @@ PYTHON_PORTVERSION=	${PYTHON_DEFAULT_PORTVERSION}
 
 # Python-3.3
 .if ${PYTHON_VERSION} == "python3.3"
-PYTHON_PORTVERSION?=	3.3.2
+PYTHON_PORTVERSION?=	3.3.3
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python33
-PYTHON_REL=		332
+PYTHON_REL=		333
 PYTHON_SUFFIX=		33
 PYTHON_VER=		3.3
 .if exists(${PYTHON_CMD}-config)
@@ -378,9 +378,9 @@ PYTHON_VER=		3.1
 
 # Python-2.7
 .elif ${PYTHON_VERSION} == "python2.7"
-PYTHON_PORTVERSION?=	2.7.5
+PYTHON_PORTVERSION?=	2.7.6
 PYTHON_PORTSDIR=	${PORTSDIR}/lang/python27
-PYTHON_REL=		275
+PYTHON_REL=		276
 PYTHON_SUFFIX=		27
 PYTHON_VER=		2.7
 

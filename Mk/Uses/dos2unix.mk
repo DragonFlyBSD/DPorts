@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/dos2unix.mk 334181 2013-11-18 12:58:11Z bapt $
+# $FreeBSD: Mk/Uses/dos2unix.mk 334392 2013-11-20 07:29:08Z bapt $
 #
 # Provide support to convert files from dos2unix
 #
@@ -15,6 +15,7 @@ _INCLUDE_USES_DOS2UNIX_MK=	yes
 _DOS2UNIX_ALL=	yes
 .endif
 
+.PHONY: dos2unix
 pre-patch: dos2unix
 
 dos2unix:
@@ -31,7 +32,7 @@ dos2unix:
 		${XARGS} -0 ${SED} -i '' -e 's/$$//'
 .else
 .for f in ${DOS2UNIX_GLOB}
-	@${FIND} ${SRCSRC} -type f -name '${f}' -print0 | \
+	@${FIND} ${WRKSRC} -type f -name '${f}' -print0 | \
 		${XARGS} -0 ${SED} -i '' -e 's/$$//'
 .endfor
 .endif

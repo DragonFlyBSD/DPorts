@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.stage.mk 333192 2013-11-08 10:36:20Z rene $
+# $FreeBSD: Mk/bsd.stage.mk 334652 2013-11-23 09:48:42Z bapt $
 #
 
 STAGEDIR?=	${WRKDIR}/stage
@@ -66,24 +66,6 @@ compress-man:
 				(cd $${link%/*} ; ${LN} -sf $${dest##*/}.gz $${link##*/}.gz) ;\
 		done; \
 	done
-.endif
-
-.if !target(add-plist-info)
-add-plist-info:
-.for i in ${INFO}
-.if !defined(WITH_PKGNG)
-	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
-	@${ECHO_CMD} "@unexec install-info --quiet --delete %D/${INFO_PATH}/$i.info %D/${INFO_PATH}/dir" \
-		>> ${TMPPLIST}
-	@${ECHO_CMD} "@unexec [ \`info -d %D/${INFO_PATH}  --output - 2>/dev/null | grep -c '^*'\` -eq 1 ] && rm -f %D/${INFO_PATH}/dir || :"\
-		>> ${TMPPLIST}
-	@${LS} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$i.info* | ${SED} -e s:${STAGEDIR}${PREFIX}/::g >> ${TMPPLIST}
-	@${ECHO_CMD} "@exec install-info --quiet %D/${INFO_PATH}/$i.info %D/${INFO_PATH}/dir" \
-		>> ${TMPPLIST}
-.else
-	@${LS} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$i.info* | ${SED} -e s:${STAGEDIR}${PREFIX}/:@info\ :g >> ${TMPPLIST}
-.endif
-.endfor
 .endif
 
 .if !target(makeplist)

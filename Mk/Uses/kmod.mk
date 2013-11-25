@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/kmod.mk 333605 2013-11-12 19:44:50Z rene $
+# $FreeBSD: Mk/Uses/kmod.mk 334411 2013-11-20 12:43:29Z bapt $
 #
 # Handles common items for kernel module ports.
 #
@@ -10,6 +10,8 @@
 #
 .if !defined(_INCLUDE_USES_KMOD_MK)
 _INCLUDE_USES_KMOD_MK=	yes
+
+_USES_POST=	kmod
 
 .if defined(kmod_ARGS)
 IGNORE=	USES=kmod takes no arguments
@@ -33,13 +35,15 @@ MAKE_ENV+=	KMODDIR="${KMODDIR}" SYSDIR="${SRC_BASE}/sys"
 MAKE_ENV+=	NO_XREF=yes
 .endif
 
-pre-install: kmod-pre-install
-kmod-pre-install:
-.if defined(NO_STAGE)
-	${MKDIR} ${KMODDIR}
-.else
-	${MKDIR} ${STAGEDIR}${KMODDIR}
 .endif
+
+.if defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_KMOD_POST_MK)
+_INCLUDE_USES_KMOD_POST_MK=	yes
+
+.PHONY: kmod-post-install
+pre-install: ${STAGEDIR}${KMODDIR}
+${STAGEDIR}${KMODDIR}:
+	${MKDIR} ${.TARGET}
 
 post-install: kmod-post-install
 kmod-post-install:

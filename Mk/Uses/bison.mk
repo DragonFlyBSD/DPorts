@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/bison.mk 313855 2013-03-11 06:43:13Z az $
+# $FreeBSD: Mk/Uses/bison.mk 334363 2013-11-19 23:24:20Z rene $
 #
 # handle dependency on the bison port
 #
@@ -26,7 +26,7 @@ RUN_DEPENDS+=	${_BISON_DEPENDS}
 BUILD_DEPENDS+=	${_BISON_DEPENDS}
 RUN_DEPENDS+=	${_BISON_DEPENDS}
 .else
-IGNORE=	USES=bison - invalid args: [${bison_ARGS}] specifed
+IGNORE=	USES=bison - invalid args: [${bison_ARGS}] specified
 .endif
 
 .endif

@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 329167 2013-10-03 11:02:37Z bdrewery $
+# $FreeBSD: GIDs 334785 2013-11-24 20:08:15Z bsam $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -160,6 +160,7 @@ callweaver:*:444:
 courier:*:465:
 condor:*:466:
 netmon:*:467:
+slurm:*:468:
 _bbstored:*:505:
 radmind:*:506:
 skkserv:*:507:

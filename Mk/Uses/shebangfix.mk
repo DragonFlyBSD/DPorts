@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shebangfix.mk 325357 2013-08-25 16:14:28Z mva $
+# $FreeBSD: Mk/Uses/shebangfix.mk 334392 2013-11-20 07:29:08Z bapt $
 #
 # common templates for replacing #! interpreters in scripts file
 #
@@ -48,6 +48,7 @@ IGNORE+=	missing definition for ${lang}_OLD_CMD
 _SHEBANG_REINPLACE_ARGS+=	-e "1s|^\#![[:space:]]*${${lang}_OLD_CMD}|\#!${${lang}_CMD}|"
 .endfor
 
+.PHONY: fix-shebang
 pre-patch: fix-shebang
 
 fix-shebang:
