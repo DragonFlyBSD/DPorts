@@ -1,8 +1,9 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: graphics/OpenEXR/Makefile 333553 2013-11-12 09:25:42Z marino $
+# $FreeBSD: graphics/OpenEXR/Makefile 334466 2013-11-21 00:40:10Z nemysis $
 
 PORTNAME=	OpenEXR
-PORTVERSION=	2.0.1
+PORTVERSION=	2.1.0
+PORTREVISION=	1
 CATEGORIES=	graphics devel
 MASTER_SITES=	SAVANNAH/openexr/
 DISTNAME=	openexr-${DISTVERSION}
@@ -44,7 +45,8 @@ LARGE_STACK_CONFIGURE_ENABLE=	large-stack
 
 .include <bsd.port.options.mk>
 
-PLIST_SUB=	MAJORVER=2_0
+PLIST_SUB=	MAJORVER=2_1
+PLIST_SUB+=	VER=21
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|== x|= x|g' ${WRKSRC}/configure
@@ -62,6 +64,9 @@ regression-test regression test check:	build
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check)
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/IlmImf/ImfDeepImageStateAttribute.h \
+		${STAGEDIR}${PREFIX}/include/${PORTNAME}/
+
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${DOC_FILES1:S|^|${DOCSRCDIR1}/|} ${STAGEDIR}${DOCSDIR}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR2}
