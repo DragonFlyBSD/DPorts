@@ -1,12 +1,12 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: devel/rubygem-debugger/Makefile 330966 2013-10-20 03:47:09Z swills $
+# $FreeBSD: devel/rubygem-debugger/Makefile 334671 2013-11-23 14:14:16Z ak $
 
 PORTNAME=	debugger
 PORTVERSION=	1.6.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	wulf@mail.mipt.ru
+MAINTAINER=	wulf@cicgroup.ru
 COMMENT=	Fast implementation of the standard Ruby debugger
 
 RUN_DEPENDS=	rubygem-columnize>=0.3.1:${PORTSDIR}/devel/rubygem-columnize \
