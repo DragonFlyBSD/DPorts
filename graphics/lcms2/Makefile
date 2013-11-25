@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/lcms2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/lcms2/Makefile 334539 2013-11-21 23:12:39Z sunpoet $
 
 PORTNAME=	lcms2
 PORTVERSION=	2.5
@@ -13,6 +13,7 @@ COMMENT=	Accurate, fast, and small-footprint color management engine
 LICENSE=	MIT
 
 OPTIONS_DEFINE=	DOCS JPEGICC TIFFICC
+OPTIONS_SUB=	yes
 JPEGICC_DESC=	Build color profile applier for JPEG
 TIFFICC_DESC=	Build color profile applier for TIFF
 
@@ -22,34 +23,25 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GNOME=	gnomehack lthack
 USE_LDCONFIG=	yes
 
-MAN1=		linkicc.1 psicc.1 transicc.1
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 UTILS=		linkicc psicc transicc
 
-NO_STAGE=	yes
+JPEGICC_CONFIGURE_OFF=	--without-jpeg
+JPEGICC_CONFIGURE_ON=	--with-jpeg=${LOCALBASE}
+JPEGICC_LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
+TIFFICC_CONFIGURE_OFF=	--without-tiff
+TIFFICC_CONFIGURE_ON=	--with-tiff=${LOCALBASE}
+TIFFICC_LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJPEGICC}
-LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
-CONFIGURE_ARGS+=--with-jpeg=${LOCALBASE}
-MAN1+=		jpgicc.1
-PLIST_SUB+=	JPEGICC=""
 UTILS+=		jpgicc
-.else
-CONFIGURE_ARGS+=--without-jpeg
-PLIST_SUB+=	JPEGICC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTIFFICC}
-LIB_DEPENDS+=	tiff:${PORTSDIR}/graphics/tiff
-CONFIGURE_ARGS=	--with-tiff=${LOCALBASE}
-MAN1+=		tificc.1
-PLIST_SUB+=	TIFFICC=""
 UTILS+=		tificc
-.else
-CONFIGURE_ARGS+=--without-tiff
-PLIST_SUB+=	TIFFICC="@comment "
 .endif
 
 post-patch:
@@ -65,10 +57,10 @@ post-configure:
 	@${REINPLACE_CMD} -E -e '/Install the pseudo-library/,/staticlibs=/s,^,#,' ${WRKSRC}/libtool
 
 post-install:
-	cd ${WRKSRC}/utils/ && ${INSTALL_MAN} linkicc/linkicc.1 psicc/psicc.1 transicc/transicc.1 ${MANPREFIX}/man/man1/
+	cd ${WRKSRC}/utils/ && ${INSTALL_MAN} linkicc/linkicc.1 psicc/psicc.1 transicc/transicc.1 ${STAGEDIR}${PREFIX}/man/man1/
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${STAGEDIR}${DOCSDIR}/
 .endif
 
 regression-test test: build
