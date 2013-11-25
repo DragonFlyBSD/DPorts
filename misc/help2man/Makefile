@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: misc/help2man/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/help2man/Makefile 334623 2013-11-22 23:14:42Z sunpoet $
 
 PORTNAME=	help2man
 PORTVERSION=	1.43.3
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	GNU/${PORTNAME}
 
@@ -18,33 +19,27 @@ GNU_CONFIGURE=	yes
 USES=		gmake perl5
 
 INFO=		${PORTNAME}
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-BUILD_DEPENDS+=	p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
-RUN_DEPENDS+=	p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
-
-CFLAGS+=	-lintl
-MANLANG=	"" ${LANGS} ${LANGS_MTREE}
-USES+=		gettext
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/help2man.1.gz
 
 LANGS=		de el eo fi fr hr it pl pt_BR ru sr sv uk vi
 LANGS_MTREE=	ja	# languages that already exist in BSD.local.dist
 
-PLIST_FILES+=	lib/bindtextdomain.so
+NLS_BUILD_DEPENDS=	p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
+NLS_CFLAGS=		-lintl
+NLS_CONFIGURE_ENABLE=	nls
+NLS_PLIST_FILES=	lib/bindtextdomain.so
+NLS_RUN_DEPENDS=	p5-Locale-gettext>=0:${PORTSDIR}/devel/p5-Locale-gettext
+NLS_USES=		gettext
+
 .for lang in ${LANGS} ${LANGS_MTREE}
-PLIST_FILES+=	share/locale/${lang}/LC_MESSAGES/${PORTNAME}.mo
+NLS_PLIST_FILES+=	man/${lang}/man1/help2man.1.gz \
+			share/locale/${lang}/LC_MESSAGES/${PORTNAME}.mo
 .endfor
 .for lang in ${LANGS}
-PLIST_DIRSTRY+=	man/${lang}/man1 man/${lang}
+NLS_PLIST_DIRSTRY+=	man/${lang}/man1 \
+			man/${lang}
 .endfor
-.else
-CONFIGURE_ARGS=	--disable-nls
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^pkglibdir/ s|/${PORTNAME}$$||' ${WRKSRC}/Makefile.in
