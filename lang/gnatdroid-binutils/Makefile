@@ -1,8 +1,9 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-binutils/Makefile 333285 2013-11-09 13:02:19Z marino $
+# $FreeBSD: lang/gnatdroid-binutils/Makefile 334617 2013-11-22 20:46:56Z marino $
 
 PORTNAME=		binutils
 PORTVERSION=		2.21.1
+PORTREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	binutils/releases
