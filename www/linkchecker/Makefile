@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: www/linkchecker/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/linkchecker/Makefile 334798 2013-11-24 23:40:05Z ohauer $
 
 PORTNAME=	linkchecker
 PORTVERSION=	8.4
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	GHC
 DISTNAME=	LinkChecker-${PORTVERSION}
@@ -86,7 +87,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}cssutils>=0.9.5:${PORTSDIR}/www/py-cssutils
 
 # To run the WSGI Web interface
 .if ${PORT_OPTIONS:MWSGI}
-RUN_DEPENDS+=	${APACHE_PKGNAMEPREFIX}mod_wsg>0:${PORTSDIR}/www/mod_wsgi
+RUN_DEPENDS+=	${APACHE_PKGNAMEPREFIX}mod_wsg2>0:${PORTSDIR}/www/mod_wsgi2
 USE_APACHE_RUN=	22
 .endif
 
