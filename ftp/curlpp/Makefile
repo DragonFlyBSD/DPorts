@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/curlpp/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/curlpp/Makefile 334837 2013-11-25 11:33:49Z sunpoet $
 
 PORTNAME=	curlpp
 PORTVERSION=	0.7.3
@@ -9,6 +9,8 @@ MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C++ wrapper for libcurl
+
+LICENSE=	MIT
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
@@ -26,7 +28,6 @@ BOOST_RUN_DEPENDS=	${BOOST_BUILD_DEPENDS}
 BOOST_CONFIGURE_ON=	--with-boost=${LOCALBASE}
 BOOST_CONFIGURE_OFF=	--without-boost
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -34,12 +35,12 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/guide.pdf ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide.pdf ${STAGEDIR}${DOCSDIR}/
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${WRKSRC}/examples/README ${WRKSRC}/examples/example*.cpp ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/examples/README ${WRKSRC}/examples/example*.cpp ${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
