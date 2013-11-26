@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: german/tipp10/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: german/tipp10/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	tipp10
 PORTVERSION=	2.1.0
@@ -14,11 +14,11 @@ COMMENT=	10-finger touch typing learning program
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license_en.txt
 
-USES=		qmake
-USE_DOS2UNIX=	*.pro *.cpp
+USES=		qmake dos2unix
+DOS2UNIX_GLOB=	*.pro *.cpp
 USE_ZIP=	yes
 USE_QT4=	gui sql corelib network script qtestlib \
-		qmake_build rcc_build uic_build moc_build \
+		rcc_build uic_build moc_build \
 		sql-sqlite2_run sql-sqlite3_run
 QMAKE_ARGS+=	DATADIR="${DATADIR}"
 WRKSRC=		${WRKDIR}/tipp10_source_v2-1-0
