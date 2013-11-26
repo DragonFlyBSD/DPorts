@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/midipp/Makefile 332354 2013-11-01 11:02:59Z kwm $
+# $FreeBSD: audio/midipp/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	midipp
 PORTVERSION=	1.2.3
@@ -15,15 +15,8 @@ LICENSE=	BSD
 BUILD_DEPENDS=	libumidi>=2.0.9:${PORTSDIR}/audio/libumidi
 LIB_DEPENDS=	libumidi20.so:${PORTSDIR}/audio/libumidi
 
+USES=		qmake
 USE_BZIP2=	yes
-NO_STAGE=	yes
-
-USE_QT4=	gui qmake_build moc_build rcc_build network
-
-QMAKE_MIDIPP=	${QMAKE} -unix PREFIX=${PREFIX} -o
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${QMAKE_MIDIPP} Makefile ${PORTNAME}.pro
+USE_QT4=	gui moc_build rcc_build network
 
 .include <bsd.port.mk>
