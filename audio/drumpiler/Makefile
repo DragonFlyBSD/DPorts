@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/drumpiler/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/drumpiler/Makefile 334776 2013-11-24 19:41:44Z bapt $
 
 PORTNAME=	drumpiler
 PORTVERSION=	0.9.0
@@ -10,7 +10,6 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drum machine compiler
 
-NO_STAGE=	yes
 USE_SDL=	sdl
 CFLAGS+=	`${SDL_CONFIG} --cflags` -Wno-return-type
 LIBS+=		`${SDL_CONFIG} --libs`
@@ -20,6 +19,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -DUSESDL -o drumpiler drumpiler.c ${LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/drumpiler ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/drumpiler ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
