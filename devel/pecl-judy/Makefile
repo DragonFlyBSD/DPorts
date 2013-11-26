@@ -1,8 +1,8 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pecl-judy/Makefile 332708 2013-11-04 13:15:55Z wg $
+# $FreeBSD: devel/pecl-judy/Makefile 334707 2013-11-24 07:49:54Z antoine $
 
 PORTNAME=	judy
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.2
 CATEGORIES=	devel
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -22,5 +22,4 @@ CONFIGURE_ARGS=	--with-judy=${LOCALBASE}
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
