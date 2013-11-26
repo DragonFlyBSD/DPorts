@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	PerlPoint-Converters
 PORTVERSION=	1.02.05
@@ -29,15 +29,15 @@ MAN3=		Bundle::PerlPoint.3 \
 PORTDOCS=	# suck all DOCSDIR
 
 post-patch:
-	@cd ${WRKSRC}; ${CP} -R pp2html_styles images doc
+	@(cd ${WRKSRC} && ${CP} -R pp2html_styles images doc)
 	@${PERL} -pi -e 's!../(images|pp2html_styles)!$$1!g' ${WRKSRC}/doc/*.cfg
 
 post-build:
-	@cd ${WRKSRC}/doc; make
+	@(cd ${WRKSRC}/doc && make)
 
 post-install:
 	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/doc; ${FIND} . | ${CPIO} -padm ${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
