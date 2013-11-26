@@ -1,5 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: net/wpa_gui/Makefile 333083 2013-11-07 11:47:06Z amdmi3 $
+# $FreeBSD: net/wpa_gui/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	wpa_gui
 PORTVERSION=	0.7.3
@@ -18,17 +18,13 @@ PLIST_FILES=	sbin/wpa_gui \
 		share/applications/wpa_gui.desktop \
 		share/pixmaps/wpa_gui.svg
 WRKSRC=		${WRKDIR}/${DISTNAME}/wpa_supplicant/wpa_gui-qt4
-USE_QT4=	gui moc_build qmake_build rcc_build uic_build
-HAS_CONFIGURE=	yes
+USE_QT4=	gui moc_build rcc_build uic_build
+USES=		qmake
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|Exec=wpa_gui|Exec=${PREFIX}/sbin/wpa_gui|" \
 	    ${WRKSRC}/wpa_gui.desktop
 	${MV} ${WRKDIR}/icons/hicolor ${WRKSRC}/icons
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin
