@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gdesklets/Makefile 334811 2013-11-25 05:20:18Z cy $
 
 PORTNAME=	gdesklets
 PORTVERSION=	0.36.2
@@ -38,6 +38,10 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}gdbm>0:${PORTSDIR}/databases/py-gdbm
 .else
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}bsddb>0:${PORTSDIR}/databases/py-bsddb
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|`python -c|`$$PYTHON -c|' \
+		${WRKSRC}/configure
 
 post-install:
 	@${MKDIR} ${DATADIR}/Displays
