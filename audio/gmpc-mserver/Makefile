@@ -1,9 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-mserver/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gmpc-mserver/Makefile 334693 2013-11-23 18:41:39Z sunpoet $
 
 PORTNAME=	gmpc-mserver
 PORTVERSION=	0.20.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/${PORTVERSION}/ \
 		http://freebsd.unixfreunde.de/sources/
