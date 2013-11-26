@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/jag/Makefile 330820 2013-10-19 01:46:56Z amdmi3 $
+# $FreeBSD: games/jag/Makefile 334602 2013-11-22 18:48:31Z makc $
 
 PORTNAME=	jag
 PORTVERSION=	0.3.2
@@ -19,9 +19,8 @@ USE_SDL=	sdl mixer
 USE_DOS2UNIX=	Game.pro
 USE_XORG=	x11
 
-MAKE_ARGS+=	INSTALL_ROOT="${STAGEDIR}"
-
-USE_QT4=	qmake_build uic_build moc_build rcc_build \
+USES=		qmake
+USE_QT4=	uic_build moc_build rcc_build \
 		corelib svg xml opengl network
 
 PLIST_FILES=	bin/${PORTNAME}
@@ -31,10 +30,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/games/jag|${DATADIR}|' \
 		${WRKSRC}/main.cpp ${WRKSRC}/Game.pro
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' ${WRKSRC}/Game.pro
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} Game.pro
 
 post-install:
 	cd ${WRKDIR}/${DISTNAME:C/src/data/} && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR}/
