@@ -1,5 +1,5 @@
 # Created by: Jochem Kossen <j.kossen@home.nl>
-# $FreeBSD: audio/cplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/cplay/Makefile 334771 2013-11-24 19:18:07Z bapt $
 
 PORTNAME=	cplay
 PORTVERSION=	1.49
@@ -13,23 +13,14 @@ COMMENT=	Curses-based front-end for various audio players
 LICENSE=	GPLv2
 
 USES=		gettext gmake
-NO_STAGE=	yes
 USE_PYTHON=	yes
 
-MAKE_ARGS=	PREFIX="${PREFIX}"
+MAKE_ARGS=	PREFIX="${STAGEDIR}${PREFIX}"
 
-MAN1=		cplay.1
 PORTDOCS=	README
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
-.endif
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
