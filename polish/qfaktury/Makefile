@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki (meritus@innervision.pl)
-# $FreeBSD: polish/qfaktury/Makefile 327761 2013-09-20 22:34:42Z bapt $
+# $FreeBSD: polish/qfaktury/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	qfaktury
 PORTVERSION=	0.6.2
@@ -10,24 +10,17 @@ MASTER_SITES=	SF
 MAINTAINER=	meritus@innervision.pl
 COMMENT=	Polish invoicing desktop program
 
-USE_QT4=	qmake_build uic_build moc_build rcc_build corelib gui xml qt3support
+USES=		qmake
+USE_QT4=	uic_build moc_build rcc_build corelib gui xml qt3support
 
 PORTDOCS=	ChangeLog.txt ReadMe.txt ReleaseNotes.txt TODO.txt
 
-NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} && ${REINPLACE_CMD} -e 's|@PREFIX@|${PREFIX}|g' qfaktury.pro \
 	QFaktury.desktop
 
-pre-build:
-	@cd ${WRKSRC} && ${QMAKE} -spec ${QMAKESPEC}
-
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for file in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
-.endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
