@@ -1,28 +1,24 @@
 # Created by: Sokolov Alexey <sokolov@TrueBSD.org>
-# $FreeBSD: net-im/qwit-devel/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/qwit-devel/Makefile 334590 2013-11-22 12:55:26Z makc $
 
 PORTNAME=	qwit
 DISTVERSION=	r215
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-im
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	qwit-ng-${PORTVERSION}-src
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	sokolov@TrueBSD.org
-COMMENT=	A Qt4-based lightweight Twitter client
+COMMENT=	Qt4-based lightweight Twitter client
 
+USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	gui network xml qmake_build moc_build rcc_build \
-		uic
+USE_QT4=	gui network xml moc_build rcc_build \
+		uic_build
 
-PLIST_FILES=	bin/qwit-devel
-
-NO_STAGE=	yes
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} -o Makefile qwit2.pro
-
-do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/qwit2 ${PREFIX}/bin/qwit-devel
+post-patch:
+	${REINPLACE_CMD} '/icon.path/s,share/icons,share/pixmaps,' \
+		${WRKSRC}/qwit2.pro
 
 .include <bsd.port.mk>
