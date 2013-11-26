@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: devel/vtcl/Makefile 330401 2013-10-15 14:23:28Z gahr $
+# $FreeBSD: devel/vtcl/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	vtcl
 PORTVERSION=	1.6.1a1
@@ -16,8 +16,8 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 NO_BUILD=	yes
 
-USES+=		tk:84
-USE_DOS2UNIX=	configure
+USES+=		tk:84 dos2unix
+DOS2UNIX_FILES=	configure
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	${PREFIX}
 
