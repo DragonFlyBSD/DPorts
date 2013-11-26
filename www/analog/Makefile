@@ -1,5 +1,5 @@
 # Created by: jfitz
-# $FreeBSD: www/analog/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/analog/Makefile 334801 2013-11-25 00:03:38Z linimon $
 
 PORTNAME=	analog
 PORTVERSION=	6.0
@@ -12,7 +12,7 @@ MASTER_SITES=	http://www.analog.cx/ \
 		ftp://ftp.polytechnic.edu.na/pub/analog/ \
 		http://analog.tzone.it/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extremely fast program for analysing WWW logfiles
 
 LICENSE=	GPLv2
