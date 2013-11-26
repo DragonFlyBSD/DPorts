@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: multimedia/mediadownloader/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/mediadownloader/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	mediadownloader
 PORTVERSION=	1.5.2
@@ -13,11 +13,12 @@ COMMENT=	Search, watch, and download from Google Image and YouTube
 
 LICENSE=	GPLv3
 
+USES=		qmake
 USE_GL=		gl glu
 USE_XORG=	xtst
 USE_GSTREAMER=	ffmpeg
 USE_QT4=	dbus gui network moc_build opengl phonon phonon-gst \
-		qmake_build rcc_build uic_build webkit xml xmlpatterns
+		rcc_build uic_build webkit xml xmlpatterns
 QMAKEPRO=	${PORTNAME}.pro
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -25,12 +26,10 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 DESKTOP_ENTRIES="MediaDownloader" "${COMMENT}" \
 		"${DATADIR}/${PORTNAME}.png" "${PORTNAME}" \
-		"" false
+		"" true
 
-NO_STAGE=	yes
-do-configure:
+pre-configure:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|g' \
 		${WRKSRC}/${QMAKEPRO}
-	@cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS} ${QMAKEPRO}
 
 .include <bsd.port.mk>
