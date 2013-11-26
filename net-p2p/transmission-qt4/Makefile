@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-qt4/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
+# $FreeBSD: net-p2p/transmission-qt4/Makefile 334587 2013-11-22 12:55:11Z makc $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4
@@ -17,7 +17,7 @@ SLAVEPORT=	qt4
 QT_NONSTANDARD=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build gui dbus network
 USE_GNOME=	desktopfileutils
-QMAKEFLAGS=	QMAKE_LFLAGS="-lcrypto -L${LOCALBASE}/lib ${ICONV_LIB}"
+LDFLAGS+=	-lcrypto
 
 EXTRA_CONF_ARGS=--disable-cli \
 		--disable-daemon \
@@ -33,7 +33,7 @@ post-patch: general-patch
 
 NO_STAGE=	yes
 post-build:
-	@(cd ${WRKSRC}/qt ; ${QMAKE} ${QMAKEFLAGS} qtr.pro ; ${GMAKE})
+	@(cd ${WRKSRC}/qt ; ${QMAKE} ${QMAKE_ARGS} qtr.pro ; ${GMAKE})
 
 do-install:
 	@(cd ${WRKSRC}/qt ; ${SETENV} INSTALL_ROOT=${PREFIX} ${MAKE} install)
