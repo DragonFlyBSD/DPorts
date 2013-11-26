@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@wenheping.com>
-# $FreeBSD: converters/py-svglib/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/py-svglib/Makefile 334555 2013-11-22 08:24:11Z bapt $
 
 PORTNAME=	svglib
 PORTVERSION=	0.6.3
@@ -11,6 +11,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	An Library For Reading And Converting SVG
+
+DEPRECATED=	Broken for more than 6 month
+EXPIRATION_DATE=	2013-12-22
 
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}reportlab2>0:${PORTSDIR}/print/py-reportlab2
