@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: multimedia/smpeg2/Makefile 334079 2013-11-17 12:33:49Z mva $
+# $FreeBSD: multimedia/smpeg2/Makefile 334671 2013-11-23 14:14:16Z ak $
 
 PORTNAME=	smpeg2
 PORTVERSION=	2.0.0
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.libsdl.org/projects/smpeg/release/ \
 		http://rsync.macports.org/smpeg2/
 
-MAINTAINER=	wulf@mail.mipt.ru
+MAINTAINER=	wulf@cicgroup.ru
 COMMENT=	Free MPEG1 video player library with sound support
 
 LICENSE=	GPLv2
