@@ -1,4 +1,4 @@
-# $FreeBSD: games/colorcode/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/colorcode/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	colorcode
 PORTVERSION=	0.7.2
@@ -10,13 +10,13 @@ DISTNAME=	ColorCode-${PORTVERSION}
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Advanced MasterMind game and solver
 
-USE_QT4=	gui moc_build qmake_build rcc_build uic_build
+USE_QT4=	gui moc_build rcc_build uic_build
 USES=		qmake
 WRKSRC=		${WRKDIR}/ColorCode-${PORTVERSION}
 
 DESKTOP_ENTRIES=	"ColorCode" "${COMMENT}" \
 			"${PREFIX}/share/pixmaps/colorcode.png" "colorcode" \
-			"LogicGame;Game;Qt;" false
+			"LogicGame;Game;Qt;" true
 
 PLIST_FILES=	bin/colorcode \
 		share/pixmaps/colorcode.png
