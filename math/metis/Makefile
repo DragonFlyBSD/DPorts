@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/metis/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/metis/Makefile 334607 2013-11-22 19:24:37Z bf $
 
 PORTNAME=	metis
 PORTVERSION=	5.1.0
@@ -11,7 +11,7 @@ COMMENT=	A package for unstructured graph partitioning
 
 LICENSE=	AL2
 
-CONFLICTS=	metis-4* metis-edf-[0-9]*
+CONFLICTS=	metis4-4* metis-edf-[0-9]*
 
 USES=		cmake
 
