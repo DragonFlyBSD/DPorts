@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: net-im/qxmpp-leechcraft/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/qxmpp-leechcraft/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	qxmpp
 PORTVERSION=	0.3.61
@@ -13,21 +13,18 @@ COMMENT=	XMPP client library based on C++ and Qt
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	speex:${PORTSDIR}/audio/speex
+LIB_DEPENDS=	libspeex.so:${PORTSDIR}/audio/speex
 
+USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	gui moc_build network qmake_build rcc_build uic_build xml
+USE_QT4=	gui moc_build network rcc_build uic_build xml
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|pkgconfig|../libdata/&|' \
 		${WRKSRC}/src/src.pro
 	@${REINPLACE_CMD} -E 's|(docs\.commands\|INSTALLS)|#&|' \
 		${WRKSRC}/${PORTNAME}.pro
-
-do-configure:
-	@cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
 .include <bsd.port.mk>
