@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: emulators/fuse-roms/Makefile 333630 2013-11-12 22:15:39Z rene $
+# $FreeBSD: emulators/fuse-roms/Makefile 334671 2013-11-23 14:14:16Z ak $
 
 PORTNAME=	fuse-roms
 PORTVERSION=	0.9.0
@@ -13,7 +13,7 @@ DISTNAME=	fuse-emulator-roms-0.9.0-5.fc19.noarch.rpm:1 Opus-22.rom:2
 EXTRACT_SUFX=
 EXTRACT_ONLY=	fuse-emulator-roms-0.9.0-5.fc19.noarch.rpm
 
-MAINTAINER=	wulf@mail.mipt.ru
+MAINTAINER=	wulf@cicgroup.ru
 COMMENT=	Spectrum ROM files, for use with the Fuse emulator
 
 PORTSCOUT=	ignore:1
