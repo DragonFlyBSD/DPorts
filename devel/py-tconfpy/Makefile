@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: devel/py-tconfpy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-tconfpy/Makefile 334784 2013-11-24 20:03:26Z mva $
 
 PORTNAME=	tconfpy
 PORTVERSION=	2.112
@@ -22,6 +22,11 @@ MAN3=		tconfpy.3
 PORTDOCS=	READ-1ST.txt WHATSNEW.txt tconfpy-license.txt tconfpy.html tconfpy.pdf tconfpy.ps tconfpy.txt test-tc.html test-tc.pdf test-tc.ps test-tc.txt
 
 NO_STAGE=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|python setup.py|${PYTHON_CMD} setup.py|' \
+		${WRKSRC}/Makefile
+
 post-install:
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
