@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/qlabels/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: deskutils/qlabels/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	qlabels
 PORTVERSION=	0.2
@@ -14,7 +14,7 @@ COMMENT=	Labels and business cards creating
 
 USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	xml gui corelib qmake_build uic_build moc_build rcc_build
+USE_QT4=	xml gui corelib uic_build moc_build rcc_build
 WRKSRC=		${WRKDIR}/${DISTNAME:C/_/-/}
 
 DESKTOP_ENTRIES=	"qLabels" \
