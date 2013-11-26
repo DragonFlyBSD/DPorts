@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: textproc/qstardict/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: textproc/qstardict/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	qstardict
 PORTVERSION=	1.0.1
@@ -9,10 +9,10 @@ MASTER_SITES=	http://qstardict.ylsoftware.com/files/
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Qt 4 based dictionary program (stardict clone)
 
-USES=		pkgconfig qmake
+USES=		dos2unix pkgconfig qmake
 USE_BZIP2=	yes
-USE_QT4=	gui network xml qmake_build uic_build moc_build rcc_build
-USE_DOS2UNIX=	qstardict.pri
+USE_QT4=	gui network xml uic_build moc_build rcc_build
+DOS2UNIX_FILES=	qstardict.pri
 
 DICPATH=	${LOCALBASE}/share/stardict/dic
 
