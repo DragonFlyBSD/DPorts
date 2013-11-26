@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: finance/qhacc/Makefile 332427 2013-11-01 23:47:58Z pawel $
+# $FreeBSD: finance/qhacc/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	qhacc
 PORTVERSION=	4.2
@@ -17,8 +17,7 @@ LIB_DEPENDS=	libqwt6.so:${PORTSDIR}/x11-toolkits/qwt6
 OPTIONS_DEFINE=	DOCS
 
 USES=		qmake:norecursive
-USE_QT4=	corelib gui sql moc_build qmake_build rcc_build uic_build
-QMAKE_ARGS=	${QMAKEFLAGS}
+USE_QT4=	corelib gui sql moc_build rcc_build uic_build
 USE_GCC=	yes
 USE_LDCONFIG=	yes
 
