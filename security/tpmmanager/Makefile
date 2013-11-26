@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: security/tpmmanager/Makefile 328893 2013-09-30 22:54:31Z danilo $
+# $FreeBSD: security/tpmmanager/Makefile 334602 2013-11-22 18:48:31Z makc $
 
 PORTNAME=	tpmmanager
 PORTVERSION=	0.8.1
@@ -13,19 +13,13 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libtspi.so:${PORTSDIR}/security/trousers
 
-QT_NONSTANDARD=	YES
-USE_QT4=	gui moc_build qmake_build rcc_build uic_build
-
-HAS_CONFIGURE=	YES
+USES=		qmake
+USE_QT4=	gui moc_build rcc_build uic_build
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} PREFIX=${PREFIX} tpmmanager.pro
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
