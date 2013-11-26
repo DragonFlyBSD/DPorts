@@ -1,5 +1,5 @@
 # Created by: Eugene Mychlo <myc@barev.net>
-# $FreeBSD: net-mgmt/nagiosagent/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/nagiosagent/Makefile 334603 2013-11-22 18:48:41Z makc $
 
 PORTNAME=	NagiosAgent
 PORTVERSION=	1.2.0.1
@@ -15,19 +15,16 @@ COMMENT=	Qt-based frontend to Nagios
 PLIST_FILES=	bin/NagiosAgent \
 		share/pixmaps/NagiosAgent.png
 
+USES=		qmake
 USE_ZIP=	yes
-USE_QT4=	gui network corelib qmake_build uic_build rcc_build moc_build
+USE_QT4=	gui network corelib uic_build rcc_build moc_build
 
 DESKTOP_ENTRIES=	"NagiosAgent" "GUI client for Nagios" \
 			"${PREFIX}/share/pixmaps/NagiosAgent.png" \
-			"NagiosAgent" "Network;Qt;" false
-
-NO_STAGE=	yes
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${QMAKE} -unix NagiosAgent.pro
+			"NagiosAgent" "Network;Qt;" true
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/NagiosAgent    ${PREFIX}/bin/NagiosAgent
-	${INSTALL_DATA} ${WRKSRC}/resources/icon16x16.png ${PREFIX}/share/pixmaps/NagiosAgent.png
+	${INSTALL_PROGRAM} ${WRKSRC}/NagiosAgent ${STAGEDIR}${PREFIX}/bin/NagiosAgent
+	${INSTALL_DATA} ${WRKSRC}/resources/icon16x16.png ${STAGEDIR}${PREFIX}/share/pixmaps/NagiosAgent.png
 
 .include <bsd.port.mk>
