@@ -1,5 +1,5 @@
 # Created by: jraynard
-# $FreeBSD: emulators/simh/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/simh/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	simh
 PORTVERSION=	3.9.0
@@ -12,9 +12,9 @@ COMMENT=	Emulates classic DEC, HP, GRI, IBM, Altair, SDS, Honeywell, and others
 
 NO_WRKSUBDIR=	yes
 
+USES=		gmake dos2unix
 USE_ZIP=	yes
-USE_DOS2UNIX=	VAX/vax_sysdev.c
-USE_GMAKE=	yes
+DOS2UNIX_FILES=	VAX/vax_sysdev.c
 MAKE_ENV=	GCC="${CC}" CFLAGS_O="${CFLAGS}" USE_NETWORK=1
 MAKEFILE=	makefile
 
