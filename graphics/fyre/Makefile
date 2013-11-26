@@ -1,9 +1,9 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/fyre/Makefile 332189 2013-10-31 00:32:31Z nemysis $
+# $FreeBSD: graphics/fyre/Makefile 334422 2013-11-20 14:25:28Z nemysis $
 
 PORTNAME=	fyre
 PORTVERSION=	1.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://releases.navi.cx/fyre/
 
