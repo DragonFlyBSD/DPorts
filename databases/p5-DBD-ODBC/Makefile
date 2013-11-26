@@ -1,5 +1,5 @@
 # Created by: clive@FreeBSD.org
-# $FreeBSD: databases/p5-DBD-ODBC/Makefile 332880 2013-11-05 17:56:00Z sunpoet $
+# $FreeBSD: databases/p5-DBD-ODBC/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	DBD-ODBC
 PORTVERSION=	1.45
@@ -50,17 +50,17 @@ MYODBC=		unixodbc
 post-patch:
 	@${REINPLACE_CMD} -e '/my $$myodbc/ s|q{}|"${MYODBC}"|' ${WRKSRC}/Makefile.PL
 
-post-configure:
 .if ${PORT_OPTIONS:MUNIXODBC}
+post-configure:
 	@${PERL} -pi -e 's/-lodbc/-lodbc ${PTHREAD_LIBS}/g;' \
 		-e 's/$$/ ${PTHREAD_CFLAGS}/ if (/^CCFLAGS/);' \
 		${WRKSRC}/Makefile
 .endif
 
-post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
