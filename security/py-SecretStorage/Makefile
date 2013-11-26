@@ -1,8 +1,8 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-SecretStorage/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-SecretStorage/Makefile 334655 2013-11-23 10:26:14Z sunpoet $
 
 PORTNAME=	SecretStorage
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,6 +16,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.84.0:${PORTSDIR}/devel/py-dbus
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
