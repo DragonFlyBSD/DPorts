@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: devel/qgit/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/qgit/Makefile 334603 2013-11-22 18:48:41Z makc $
 
 PORTNAME=	qgit
 PORTVERSION=	2.3
@@ -9,21 +9,18 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}4/${PORTVERSION}
 PKGNAMESUFFIX=	-qt4
 
 MAINTAINER=	itetcu@FreeBSD.org
-COMMENT=	A graphical interface to git repositories
+COMMENT=	Graphical interface to git repositories
 
+USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	corelib gui moc_build qmake_build rcc_build uic_build
+USE_QT4=	corelib gui moc_build rcc_build uic_build
 MAKE_JOBS_UNSAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
-do-configure:
-	@cd ${WRKSRC} && ${QMAKE} ${PORTNAME}.pro
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
