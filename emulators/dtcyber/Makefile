@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/dtcyber/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/dtcyber/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	dtcyber
 PORTVERSION=	2.0b1
@@ -13,9 +13,9 @@ DISTNAME=	dtcyber20b1
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Desktop CYBER Emulator
 
+USES=		dos2unix
 USE_ZIP=	yes
 USE_XORG=	x11
-USE_DOS2UNIX=	yes
 NO_WRKSUBDIR=	yes
 INSTALL_TARGET=
 MAKEFILE=	Makefile.x11
