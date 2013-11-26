@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@gahr.ch>
-# $FreeBSD: audio/musica/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/musica/Makefile 334326 2013-11-19 15:49:35Z gahr $
 
 PORTNAME=	musica
 PORTVERSION=	1.1.4
@@ -10,8 +10,9 @@ MASTER_SITES=	http://ict.ewi.tudelft.nl/~erik/open-source/musica/
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	GTK based midi player
 
+LICENSE=	GPLv2
+
 USE_GNOME=	gtk12
-NO_STAGE=	yes
 
 GNU_CONFIGURE=	yes
 USES=		gmake
