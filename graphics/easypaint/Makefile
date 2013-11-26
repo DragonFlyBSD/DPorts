@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: graphics/easypaint/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/easypaint/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	easypaint
 PORTVERSION=	0.6.0
@@ -13,7 +13,8 @@ COMMENT=	Easy graphic editing program
 
 LICENSE=	GPLv3
 
-USE_QT4=	gui xml qmake_build uic_build moc_build rcc_build
+USES=		qmake
+USE_QT4=	gui xml uic_build moc_build rcc_build
 QPROFILE=	easyPaint
 WRKSRC=		${WRKDIR}/${QPROFILE}
 
@@ -22,11 +23,7 @@ DESKTOP_ENTRIES="easyPaint" "${COMMENT}" "" "easypaint" \
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
-do-configure:
-	cd ${WRKSRC} && ${QMAKE}
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${QPROFILE} ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/${QPROFILE} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
