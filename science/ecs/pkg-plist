@@ -1,0 +1,5 @@
+bin/cs_preprocess-config
+bin/cs_preprocess
+bin/cs_partition
+bin/cs_io_dump
+%%NLS%%share/locale/fr/LC_MESSAGES/cs_preprocess.mo
