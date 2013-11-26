@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/qorganizer/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/qorganizer/Makefile 334603 2013-11-22 18:48:41Z makc $
 
 PORTNAME=	qorganizer
 PORTVERSION=	3.1
@@ -9,9 +9,10 @@ MASTER_SITES=	SF/${PORTNAME}/OldFiles
 DISTNAME=	qOrganizer-${PORTVERSION}
 
 MAINTAINER=	miwi@FreeBSD.org
-COMMENT=	A general organizer that includes calendar with jurnal and schedule
+COMMENT=	General organizer that includes calendar with jurnal and schedule
 
-USE_QT4=	gui network qmake_build moc_build rcc_build sql
+USES=		qmake
+USE_QT4=	gui network moc_build rcc_build sql
 WRKSRC=		${WRKDIR}/qOrganizer/src
 
 PLIST_FILES=	bin/qOrganizer share/pixmaps/qOrganizer.png
@@ -22,20 +23,12 @@ DESKTOP_ENTRIES=	"qOrganizer" \
 			"qOrganizer" \
 			"qOrganizer" \
 			"Qt;KDE;Office;" \
-			"false"
+			"true"
 
-NO_STAGE=	yes
-pre-build:
-	@cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${QMAKE}
-
-post-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/qOrganizer ${PREFIX}/bin
-	@${INSTALL_DATA} ${WRKSRC}/../qOrganizer.png ${PREFIX}/share/pixmaps
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for doc in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/../${doc} ${DOCSDIR}
-.endfor
-.endif
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/qOrganizer ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/../qOrganizer.png ${STAGEDIR}${PREFIX}/share/pixmaps
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/../,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
