@@ -1,7 +1,7 @@
-# $FreeBSD: portuguese/hunspell/Makefile 334092 2013-11-17 15:55:46Z sunpoet $
+# $FreeBSD: portuguese/hunspell/Makefile 334454 2013-11-20 21:07:05Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20131115
+PORTVERSION=	20131118
 CATEGORIES=	portuguese textproc
 MASTER_SITES=	http://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/ \
 		http://www.broffice.org/files/:BR \
