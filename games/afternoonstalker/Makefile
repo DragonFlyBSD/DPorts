@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/afternoonstalker/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/afternoonstalker/Makefile 334489 2013-11-21 13:34:33Z martymac $
 
 PORTNAME=	afternoonstalker
 PORTVERSION=	1.1.5
@@ -12,7 +12,7 @@ COMMENT=	A clone of the 1981 Night Stalker video game
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	flatzebra:${PORTSDIR}/devel/flatzebra
+LIB_DEPENDS=	libflatzebra-0.1.so:${PORTSDIR}/devel/flatzebra
 
 USES=		pkgconfig
 USE_SDL=	mixer sdl
@@ -20,20 +20,12 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN6=		afternoonstalker.6
 PORTDOCS=	AUTHORS COPYING INSTALL NEWS README THANKS TODO
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^pkgsounddir =.*|pkgsounddir = ${DATADIR}/sounds|' \
 		${WRKSRC}/src/Makefile.in
 	@${REINPLACE_CMD} -e 's|docdir = .*|docdir = ${DOCSDIR}|' \
 		${WRKSRC}/Makefile.in
-.if empty(PORT_OPTIONS:MDOCS)
-	@${REINPLACE_CMD} -e '/^install-data-am/s|install-docDATA||' \
-		${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.mk>
