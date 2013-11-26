@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: mail/gml/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gml/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	gml
 PORTVERSION=	0.4
@@ -15,7 +15,7 @@ COMMENT=	Mbox & Maildir to Gmail loader
 USE_PYTHON_RUN=	-2.7
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	README
