@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/djgame2/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/djgame2/Makefile 334600 2013-11-22 16:52:48Z makc $
 
 PORTNAME=	djgame2
 PORTVERSION=	3.2.0
@@ -16,9 +16,6 @@ NO_BUILD=	yes
 USE_ZIP=	yes
 USE_QT4=	gui qt3support qmake_build uic_build rcc_build moc_build svg
 
-QMAKE?=		qmake-qt4
-QMAKESPEC?=	${LOCALBASE}/share/qt4/mkspecs/freebsd-g++
-
 WRKSRC=		${WRKDIR}/${DISTNAME}
 DATADIR=	${PREFIX}/share/djgame2
 
@@ -31,7 +28,7 @@ post-patch:
 		${WRKSRC}/Base/src/PlayWave.cpp
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|g' \
 		${WRKSRC}/make_linux_output
-	@${REINPLACE_CMD} -e 's|qmake|${QMAKE}|' \
+	@${REINPLACE_CMD} -e 's|qmake|${QMAKE} ${QMAKE_ARGS}|' \
 		${WRKSRC}/make_linux_output
 	@${ECHO_CMD} "INCLUDEPATH += ${LOCALBASE}/include" \
 		>> ${WRKSRC}/Base/Base.pro
