@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: graphics/fracplanet/Makefile 329400 2013-10-04 22:34:12Z nemysis $
+# $FreeBSD: graphics/fracplanet/Makefile 334587 2013-11-22 12:55:11Z makc $
 
 PORTNAME=	fracplanet
 PORTVERSION=	0.4.0
@@ -59,6 +59,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|g' \
 		${WRKSRC}/${f}
 .endfor
+	@${REINPLACE_CMD} -e 's|qmake-qt4|${QMAKE} ${QMAKE_ARGS}|' \
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|-lboost_program_options|-lboost_program_options -lGLU|' \
 		${WRKSRC}/fracplanet.pro
 
