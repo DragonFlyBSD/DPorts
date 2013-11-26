@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: databases/rubygem-dm-devise/Makefile 332032 2013-10-30 02:22:05Z swills $
+# $FreeBSD: databases/rubygem-dm-devise/Makefile 334439 2013-11-20 18:32:25Z sunpoet $
 
 PORTNAME=	dm-devise
 PORTVERSION=	2.2.1
@@ -9,10 +9,12 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Adds DataMapper support to devise
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-devise>=1.3:${PORTSDIR}/devel/rubygem-devise \
 		rubygem-dm-core>=1.0.2:${PORTSDIR}/databases/rubygem-dm-core \
 		rubygem-dm-migrations>=1.0.2:${PORTSDIR}/databases/rubygem-dm-migrations \
-		rubygem-dm-rails>=1.0.3:${PORTSDIR}/databases/rubygem-dm-rails \
+		rubygem-dm-rails>=1.0.2:${PORTSDIR}/databases/rubygem-dm-rails \
 		rubygem-dm-serializer>=1.0.2:${PORTSDIR}/databases/rubygem-dm-serializer \
 		rubygem-dm-timestamps>=1.0.2:${PORTSDIR}/databases/rubygem-dm-timestamps
 
