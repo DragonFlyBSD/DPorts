@@ -1,17 +1,17 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/ump/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ump/Makefile 334676 2013-11-23 15:18:03Z nivit $
 
 PORTNAME=	ump
 PORTVERSION=	0.8.6
 PORTREVISION=	7
 CATEGORIES=	math
 MASTER_SITES=	SF/u-m-p/u-m-p/${PORTVERSION}
+PKGNAMESUFFIX=	-math
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A graphical, easy to use math program
 
 CONFLICTS=	ump-1.[0-9]*
-LATEST_LINK=	math-ump
 
 USES=		gmake pkgconfig
 USE_BZIP2=	yes
