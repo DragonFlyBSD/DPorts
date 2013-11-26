@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: net-p2p/bitcoin/Makefile 328082 2013-09-24 01:48:57Z swills $
+# $FreeBSD: net-p2p/bitcoin/Makefile 334587 2013-11-22 12:55:11Z makc $
 
 PORTNAME=	bitcoin
 PORTVERSION=	0.8.5
@@ -78,8 +78,8 @@ post-patch:
 do-configure:
 .if ${PORT_OPTIONS:MGUI} && !defined(WITHOUT_X11)
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} USE_UPNP=${QMAKE_USE_UPNP} USE_QRCODE=${QMAKE_USE_QRCODE} \
-		QMAKE_LRELEASE=lrelease-qt4 PREFIX=${PREFIX} INCLUDEPATH=${BDB_INCLUDE_DIR} \
+		${QMAKE} ${QMAKE_ARGS} USE_UPNP=${QMAKE_USE_UPNP} USE_QRCODE=${QMAKE_USE_QRCODE} \
+		QMAKE_LRELEASE=${LRELEASE} INCLUDEPATH=${BDB_INCLUDE_DIR} \
 		QMAKE_LIBDIR+=${BDB_LIB_DIR} bitcoin-qt.pro
 .endif
 
