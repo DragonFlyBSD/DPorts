@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: games/jutils/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/jutils/Makefile 334444 2013-11-20 19:22:25Z danilo $
 
 PORTNAME=	jutils
 PORTVERSION=	20070610.r26
@@ -19,12 +19,9 @@ USE_ANT=	YES
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}/${PORTNAME}.jar
 PLIST_DIRS=	%%JAVAJARDIR%%/${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	@${ECHO_MSG} -n ">> Install JAR files in ${JAVAJARDIR}/${PORTNAME}/ ..."
-	@${MKDIR} ${JAVAJARDIR}/${PORTNAME}
-	@${INSTALL_DATA} ${WRKSRC}/bin/${PORTNAME}.jar \
-		${JAVAJARDIR}/${PORTNAME}/
-	@${ECHO_MSG} " [ DONE ]"
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/bin/${PORTNAME}.jar \
+		${STAGEDIR}${JAVAJARDIR}/${PORTNAME}/
 
 .include <bsd.port.mk>
