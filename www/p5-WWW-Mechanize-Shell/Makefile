@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize-Shell/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD: www/p5-WWW-Mechanize-Shell/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	WWW-Mechanize-Shell
 PORTVERSION=	0.53
@@ -34,13 +34,13 @@ EXAMPLES=	banking.postbank.de.mech hotmail.signup.mech wwwshell.pl
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
-	cd ${WRKSRC}/bin/ && ${INSTALL_DATA} ${EXAMPLES} ${STAGEDIR}${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/bin && ${INSTALL_DATA} ${EXAMPLES} ${STAGEDIR}${EXAMPLESDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${EXAMPLESDIR}."
 .endif
 
