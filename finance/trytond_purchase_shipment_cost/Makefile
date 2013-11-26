@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_purchase_shipment_cost/Makefile 334164 2013-11-18 09:43:15Z bsam $
+# $FreeBSD: finance/trytond_purchase_shipment_cost/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond_purchase_shipment_cost
 PORTVERSION=	2.4.2
@@ -16,7 +16,7 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		trytond_currency>=2.4.0:${PORTSDIR}/finance/trytond_currency \
 		trytond_stock>=2.4.0:${PORTSDIR}/finance/trytond_stock
 
-CONFLICTS=	trytond_purchase_shipment_cost-2.[68].*
+CONFLICTS=	trytond28_purchase_shipment_cost-2.8.*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
