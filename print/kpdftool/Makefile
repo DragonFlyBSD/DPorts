@@ -1,5 +1,5 @@
 # Created by: Yuan, Jue <yuanjue@yuanjue.net>
-# $FreeBSD: print/kpdftool/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: print/kpdftool/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	kpdftool
 PORTVERSION=	0.23.1
@@ -14,7 +14,7 @@ COMMENT=	Simple utility to manipulate PS and PDF files
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 USE_ZIP=	yes
-USE_QT4=	qt3support moc_build porting_build qmake_build uic3_build
+USE_QT4=	qt3support moc_build porting_build uic3_build
 USE_GHOSTSCRIPT_RUN=	yes
 USES=		qmake
 
