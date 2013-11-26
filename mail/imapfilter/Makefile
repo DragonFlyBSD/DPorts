@@ -1,9 +1,9 @@
 # Created by: Lefteris Chatzibarbas <lefcha@hellug.gr>
-# $FreeBSD: mail/imapfilter/Makefile 332612 2013-11-03 13:28:00Z stefan $
+# $FreeBSD: mail/imapfilter/Makefile 334611 2013-11-22 19:40:33Z stefan $
 
 PORTNAME=	imapfilter
 PORTVERSION=	2.5.6
-#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.gegenunendlich.de/distfiles/ \
 		GH
@@ -17,7 +17,6 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
 
 USE_LUA=	5.1
 USE_OPENSSL=	yes
-WITH_OPENSSL_PORT=yes
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LUA_INCDIR}
 LDFLAGS+=	-L${LOCALBASE}/lib -L${LUA_LIBDIR}
 
