@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: lang/squirrel/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/squirrel/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	squirrel
 PORTVERSION=	2.2.5
@@ -11,7 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High level imperative/OO programming language
 
 CONFLICTS=	squsq-[0-9]*
-USE_DOS2UNIX=	yes
+
+USES=		dos2unix
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/SQUIRREL2
 
