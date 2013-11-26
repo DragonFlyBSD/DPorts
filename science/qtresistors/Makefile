@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: science/qtresistors/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/qtresistors/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	qtresistors
 PORTVERSION=	0.1
@@ -11,17 +11,14 @@ DISTNAME=	118297-qtResistors-201001102229
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Calculate resistance of resistor by the colors on the resistor
 
-USE_QT4=	gui qmake_build uic_build moc_build
+USES=		qmake
+USE_QT4=	gui uic_build moc_build
 
 WRKSRC=		${WRKDIR}/qtResistors
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
-do-configure:
-	cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS}
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qtResistors ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/qtResistors ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
