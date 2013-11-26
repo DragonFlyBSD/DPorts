@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: mail/cyrus2dovecot/Makefile 331802 2013-10-27 20:24:23Z wg $
+# $FreeBSD: mail/cyrus2dovecot/Makefile 334671 2013-11-23 14:14:16Z ak $
 
 PORTNAME=	cyrus2dovecot
 PORTVERSION=	1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.cyrus2dovecot.sw.fu-berlin.de/download/
 EXTRACT_SUFX=
 EXTRACT_ONLY=
 
-MAINTAINER=	wulf@mail.mipt.ru
+MAINTAINER=	wulf@cicgroup.ru
 COMMENT=	Convert Cyrus folders to Dovecot
 
 LICENSE=	ART10 GPLv1
