@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang <loren@north-winds.org>
-# $FreeBSD: www/mozplugger/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mozplugger/Makefile 334512 2013-11-21 19:16:11Z pawel $
 
 PORTNAME=	mozplugger
 PORTVERSION=	2.1.3
@@ -27,6 +27,7 @@ post-patch:
 
 	@${REINPLACE_CMD} -e 's|"/etc|"${PREFIX}/etc|g' \
 		${WRKSRC}/mozplugger.c
+	@${REINPLACE_CMD} -e 's|gcc|${CC}|' ${WRKSRC}/configure
 
 post-install:
 	@${ECHO_MSG}
