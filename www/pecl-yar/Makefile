@@ -1,8 +1,8 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: www/pecl-yar/Makefile 333921 2013-11-15 20:52:16Z sunpoet $
+# $FreeBSD: www/pecl-yar/Makefile 334441 2013-11-20 18:32:58Z sunpoet $
 
 PORTNAME=	yar
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
