@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: misc/qmetro/Makefile 329815 2013-10-08 17:37:36Z marino $
+# $FreeBSD: misc/qmetro/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	qmetro
 PORTVERSION=	0.6.5
@@ -11,15 +11,12 @@ COMMENT=	Map of the transport system for many city subways
 
 LICENSE=	GPLv2
 
+USES=		dos2unix qmake
 USE_ZIP=	yes
 INSTALLS_ICONS=	yes
-USE_QT4=	gui xml qmake_build uic_build moc_build multimedia \
+USE_QT4=	gui xml uic_build moc_build multimedia \
 		rcc_build
-QMAKEFLAGS=	QMAKE_LFLAGS="-lz"
-USE_DOS2UNIX=	rc/alarm.pri
-
-NO_STAGE=	yes
-do-configure:
-	cd ${WRKSRC} && ${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
+LDFLAGS=	-lz
+DOS2UNIX_FILES=	rc/alarm.pri
 
 .include <bsd.port.mk>
