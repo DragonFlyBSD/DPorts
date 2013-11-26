@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: math/qtiplot/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: math/qtiplot/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
@@ -17,13 +17,13 @@ LIB_DEPENDS=	libgsl.so:${PORTSDIR}/math/gsl \
 # 		qwt.5:${PORTSDIR}/x11-toolkits/qwt5 \
 # 		qwtplot3d-qt4:${PORTSDIR}/math/qwtplot3d-qt4
 
-USES=		gmake qmake
+USES=		dos2unix gmake qmake
 USE_BZIP2=	yes
 USE_QT4=	gui opengl svg qt3support network assistantclient \
-		moc_build qmake_build rcc_build
+		moc_build rcc_build
 USE_GL=		glu
 QMAKE_ARGS+=	LOCALBASE=${LOCALBASE} PYTHON_CMD=${PYTHON_CMD}
-USE_DOS2UNIX=	*.pro
+DOS2UNIX_GLOB=	*.pro
 
 DESKTOP_ENTRIES="QtiPlot" "Data analysis and plotting" \
 		"${DATADIR}/qtiplot.png" \
@@ -96,7 +96,7 @@ post-patch:
 
 pre-configure:
 .if ${PORT_OPTIONS:MNLS}
-	cd ${WRKSRC}/qtiplot && ${LOCALBASE}/bin/lrelease-qt4 -compress qtiplot.pro
+	cd ${WRKSRC}/qtiplot && ${LRELEASE} -compress qtiplot.pro
 .endif
 
 post-install:
