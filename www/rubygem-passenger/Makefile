@@ -1,8 +1,8 @@
 # Created by: Jacob Atzen <jatzen@gmail.com>
-# $FreeBSD: www/rubygem-passenger/Makefile 332469 2013-11-02 11:56:16Z osa $
+# $FreeBSD: www/rubygem-passenger/Makefile 334435 2013-11-20 18:13:07Z osa $
 
 PORTNAME=	passenger
-PORTVERSION=	4.0.23
+PORTVERSION=	4.0.25
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMEPREFIX=	rubygem-
@@ -102,12 +102,12 @@ post-install:
 		's!-lpthread!${PTHREAD_LIBS}!g' \
 		${PREFIX}/${GEM_LIB_DIR}/lib/phusion_passenger/platform_info/cxx_portability.rb
 .if ${PORT_OPTIONS:MAPACHE22}
-	(${PREFIX}/bin/passenger-install-apache2-module --auto)
+	(CC=${CC} CXX=${CXX} ${PREFIX}/bin/passenger-install-apache2-module --auto)
 	@${CAT} ${PKGMESSAGE}
 .endif
 
 .if ${PORT_OPTIONS:MNGINX}
-	(cd ${PREFIX}/${GEM_LIB_DIR} && ${RAKE_BIN} nginx)
+	(cd ${PREFIX}/${GEM_LIB_DIR} && CC=${CC} CXX=${CXX} ${RAKE_BIN} nginx)
 .endif
 
 	${FIND} ${PREFIX}/${GEM_LIB_DIR} -name '*.o' -delete
