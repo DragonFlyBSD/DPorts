@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/tif22pnm/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/tif22pnm/Makefile 334486 2013-11-21 13:24:27Z martymac $
 
 PORTNAME=	tif22pnm
 PORTVERSION=	0.14
@@ -12,8 +12,8 @@ COMMENT=	Converts TIFF-sampled images to PNM image
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		tiff:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
+		libtiff.so:${PORTSDIR}/graphics/tiff
 
 PROJECTHOST=	sam2p
 USES=		pkgconfig
@@ -27,7 +27,6 @@ PLIST_FILES=	bin/png22pnm bin/tif22pnm
 TIF22PNM_SRCS=	ptspnm.c minigimp.c miniglib.c ptstiff3.c tif22pnm.c
 PNG2PNM_SRCS=	png22pnm.c
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} \
 		&& ${CC} ${CFLAGS} -DNDEBUG -I${LOCALBASE}/include \
@@ -36,7 +35,7 @@ do-build:
 		${PNG2PNM_SRCS} -o png22pnm -lm `pkg-config libpng15 --libs`
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/png22pnm ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tif22pnm ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/png22pnm ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/tif22pnm ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
