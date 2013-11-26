@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/capicity/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/capicity/Makefile 334602 2013-11-22 18:48:31Z makc $
 
 PORTNAME=	capicity
 PORTVERSION=	1.0
@@ -21,9 +21,9 @@ LIB_DEPENDS=	libpthread-stubs.so:${PORTSDIR}/devel/libpthread-stubs \
 
 WRKSRC=		${WRKDIR}/CapiCity_${PORTVERSION}
 
-USES=		iconv
+USES=		iconv qmake
 USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
-USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats \
+USE_QT4=	moc_build rcc_build uic_build iconengines_run imageformats_run \
 		corelib gui network script xml
 
 PORTDOCS=	README changelog
@@ -42,13 +42,6 @@ NLS_USES=		gettext
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-	${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
-
-post-configure:
-	@${REINPLACE_CMD} -e 's|-O2 -pthread||g' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/CapiCity ${PREFIX}/bin/${PORTNAME}
