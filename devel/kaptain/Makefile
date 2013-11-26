@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: devel/kaptain/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: devel/kaptain/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	kaptain
 PORTVERSION=	0.73
@@ -15,7 +15,7 @@ LICENSE=	GPLv2 # (or later)
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USES=		qmake
-USE_QT4=	qt3support moc_build qmake_build
+USE_QT4=	qt3support moc_build
 
 INFO=		kaptain
 PORTDOCS=	*
