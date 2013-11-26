@@ -1,19 +1,18 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy-devel/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sqlalchemy-devel/Makefile 334676 2013-11-23 15:18:03Z nivit $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	08
 DISTNAME=	SQLAlchemy-${DISTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python SQL toolkit and Object Relational Mapper
 
 LICENSE=	MIT
-
-LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}-devel
 
 TEST_DEPENDS:=	${RUN_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose
