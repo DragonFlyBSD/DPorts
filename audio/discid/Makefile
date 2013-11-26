@@ -1,5 +1,5 @@
 # Created by: Oliver Breuninger <ob@breuninger.org>
-# $FreeBSD: audio/discid/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/discid/Makefile 334774 2013-11-24 19:27:20Z bapt $
 
 PORTNAME=	discid
 PORTVERSION=	1.3
@@ -13,7 +13,6 @@ COMMENT=	Identify audio cd in your drive
 
 WRKSRC=		${WRKDIR}/freebsd
 
-NO_STAGE=	yes
 PLIST_FILES=	bin/discid
 
 post-patch:
@@ -23,6 +22,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o ${PORTNAME} ${PORTNAME}.c
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
