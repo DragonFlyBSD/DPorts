@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/texmaker/Makefile 334201 2013-11-18 14:55:09Z makc $
+# $FreeBSD: editors/texmaker/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	texmaker
 PORTVERSION=	4.1
@@ -17,7 +17,7 @@ USES=		desktop-file-utils pkgconfig qmake
 USE_BZIP2=	yes
 USE_GHOSTSCRIPT_RUN=	yes
 USE_QT4=	gui network xml webkit \
-		moc_build qmake_build rcc_build uic_build
+		moc_build rcc_build uic_build
 USE_TEX=	latex dvipsk
 QMAKE_ARGS=	ICONDIR=${PREFIX}/share/pixmaps \
 		DESKTOPDIR=${DESKTOPDIR}
