@@ -1,15 +1,17 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-devise-async/Makefile 332624 2013-11-03 16:34:00Z swills $
+# $FreeBSD: devel/rubygem-devise-async/Makefile 334440 2013-11-20 18:32:30Z sunpoet $
 
 PORTNAME=	devise-async
-PORTVERSION=	0.8.0
+PORTVERSION=	0.9.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	Send Devise's emails in background
+COMMENT=	Send Devise emails in background
 
-RUN_DEPENDS=	rubygem-devise>=2.2:${PORTSDIR}/devel/rubygem-devise
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-devise>=3.2:${PORTSDIR}/devel/rubygem-devise
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
