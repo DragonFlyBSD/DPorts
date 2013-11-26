@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/tiled/Makefile 330581 2013-10-17 01:02:23Z amdmi3 $
+# $FreeBSD: graphics/tiled/Makefile 334584 2013-11-22 12:54:48Z makc $
 
 PORTNAME=	tiled
 PORTVERSION=	0.9.1
@@ -10,10 +10,10 @@ DISTNAME=	tiled-qt-${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	General purpose tile map editor
 
+USES=		qmake
 USE_QT4=	corelib gui opengl \
-		linguist_build qmake_build moc_build uic_build rcc_build
+		linguist_build moc_build uic_build rcc_build
 USE_LDCONFIG=	yes
-DESTDIRNAME=	INSTALL_ROOT
 
 PORTDOCS=	*
 
@@ -29,10 +29,6 @@ post-patch:
 		${WRKSRC}/src/tiled/tiled.pro
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|' ${WRKSRC}/docs/tiled.desktop
 	@${FIND} ${WRKSRC} -name "*.pro" -exec ${REINPLACE_CMD} -e 's|share/man|man|' {} \;
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} PREFIX="${PREFIX}" tiled.pro
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
