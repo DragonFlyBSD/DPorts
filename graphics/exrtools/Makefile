@@ -1,9 +1,9 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/exrtools/Makefile 332189 2013-10-31 00:32:31Z nemysis $
+# $FreeBSD: graphics/exrtools/Makefile 334422 2013-11-20 14:25:28Z nemysis $
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	http://scanline.ca/exrtools/ \
 		CRITICAL
