@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: net-mgmt/phpip/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/phpip/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	phpip
 PORTVERSION=	${SNAPSHOT}
@@ -14,7 +14,7 @@ COMMENT=	A complete IPv4 IPAM (IP address management) suite
 SNAPSHOT=	200611081420
 NO_BUILD=	yes
 USE_PHP=	mysql
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 WANT_PHP_WEB=	yes
 
 PHPIP?=		www/phpip
