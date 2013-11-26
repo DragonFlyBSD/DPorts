@@ -1,5 +1,5 @@
 # Created by: Andrew Wingorodov (Wingborn) <programmer@coolsoft.ru>
-# $FreeBSD: audio/amrcoder/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/amrcoder/Makefile 334754 2013-11-24 18:32:02Z bapt $
 
 PORTNAME=	amrcoder
 PORTVERSION=	1.0
@@ -11,10 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	AMR encoder/decoder for Mbuni MMS Gateway (www.mbuni.org)
 
-MAN1=		amrdecoder.1 amrencoder.1
-
-NO_STAGE=	yes
-MANCOMPRESSED=	yes
+USES=		uidfix
 
 post-extract:
 	@${RM} ${WRKSRC}/*.o
