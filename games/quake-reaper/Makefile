@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/quake-reaper/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/quake-reaper/Makefile 334699 2013-11-23 23:45:59Z danilo $
 
 PORTNAME=	reaper
 PORTVERSION=	0.81
@@ -11,8 +11,9 @@ DISTNAME=	reaprb81
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quake 1 bots
 
+USES=		dos2unix
 USE_ZIP=	yes
-USE_DOS2UNIX=	${PORTDOCS}
+DOS2UNIX_GLOB=	${PORTDOCS}
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
@@ -21,20 +22,16 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../quake-data/Makefile.include"
-.include <bsd.port.options.mk>
 
 do-install:
-	@${MKDIR} ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
 .for f in Autoexec.cfg PROGS.DAT
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DATADIR}/${f:tl}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DATADIR}/${f:tl}
 .endfor
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.  for f in B08chg.txt Dedserv.txt Reaprb80.txt Skinspec.txt
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/${f:tl}
-.  endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+.for f in B08chg.txt Dedserv.txt Reaprb80.txt Skinspec.txt
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/${f:tl}
+.endfor
 
 .include <bsd.port.mk>
