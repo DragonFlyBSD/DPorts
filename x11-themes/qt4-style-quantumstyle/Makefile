@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-themes/qt4-style-quantumstyle/Makefile 330560 2013-10-16 23:18:08Z amdmi3 $
+# $FreeBSD: x11-themes/qt4-style-quantumstyle/Makefile 334584 2013-11-22 12:54:48Z makc $
 
 PORTNAME=	quantumstyle
 DISTVERSION=	rc6
@@ -16,15 +16,13 @@ COMMENT=	SVG themeable style for Qt 4 and KDE
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_QT4=	corelib gui svg qmake_build rcc_build uic_build moc_build
+USES=		qmake
+USE_QT4=	corelib gui svg rcc_build uic_build moc_build
 
 WRKSRC=		${WRKDIR}/QuantumStyle
 
 PLIST_FILES=	${QT_PLUGINDIR_REL}/styles/libquantumstyle.so
 PLIST_DIRSTRY=	${QT_PLUGINDIR_REL}/styles
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/${QT_PLUGINDIR_REL}/styles/
