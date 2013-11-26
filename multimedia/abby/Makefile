@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/abby/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: multimedia/abby/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	abby
 PORTVERSION=	0.4.8
@@ -16,7 +16,7 @@ CCLIVE_DESC=	Use cclive backend (instead of clive)
 
 USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	gui network xml moc_build qmake_build rcc_build uic_build
+USE_QT4=	gui network xml moc_build rcc_build uic_build
 
 PLIST_FILES=	bin/abby
 
