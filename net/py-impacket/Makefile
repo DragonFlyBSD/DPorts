@@ -1,5 +1,5 @@
 # Created by: Marcin Jessa <yazzy@yazzy.org>
-# $FreeBSD: net/py-impacket/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-impacket/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	impacket
 PORTVERSION=	0.9.10
@@ -18,7 +18,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pcapy>=0:${PORTSDIR}/net/py-pcapy \
 		${PYTHON_PKGNAMEPREFIX}pycrypto>=0:${PORTSDIR}/security/py-pycrypto
 
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PORTDOCS=	README
