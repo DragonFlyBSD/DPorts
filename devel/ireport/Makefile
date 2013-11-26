@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: devel/ireport/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/ireport/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	ireport
 PORTVERSION=	3.7.6
@@ -12,9 +12,10 @@ COMMENT=	A visual report builder/designer for JasperReports
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
+USES=		dos2unix
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
-USE_DOS2UNIX=	*.txt
+DOS2UNIX_GLOB=	*.txt
 NO_BUILD=	yes
 
 #LICENSE=	GNU AFFERO GPL
