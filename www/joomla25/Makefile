@@ -1,9 +1,10 @@
 # Created by: Francisco Cabrita <include@npf.pt.freebsd.org>
-# $FreeBSD: www/joomla25/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/joomla25/Makefile 334676 2013-11-23 15:18:03Z nivit $
 
 PORTNAME=	joomla
 PORTVERSION=	2.5.11
 CATEGORIES=	www
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Dynamic web content management system (CMS)
@@ -11,7 +12,6 @@ COMMENT=	Dynamic web content management system (CMS)
 LICENSE=	GPLv2
 
 CONFLICTS=	joomla-1.*.*
-LATEST_LINK=	joomla25
 
 GH_ACCOUNT=	${PORTNAME}
 GH_PROJECT=	${PORTNAME}-cms
