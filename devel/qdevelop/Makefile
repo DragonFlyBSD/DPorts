@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-# $FreeBSD: devel/qdevelop/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: devel/qdevelop/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	qdevelop
 PORTVERSION=	0.28
@@ -14,13 +14,11 @@ COMMENT=	Development environment entirely dedicated to Qt4
 RUN_DEPENDS=	exctags:${PORTSDIR}/devel/ctags
 
 USE_QT4=	gui sql network xml designer sql-sqlite3_run \
-		qmake_build moc_build uic_build rcc_build
+		moc_build uic_build rcc_build
 USES=		qmake
 
 QMAKE_PRO=	QDevelop.pro
 STRIP_FILES=	bin/${PORTNAME}
-
-QT_LRELEASE=	${LOCALBASE}/bin/lrelease-qt4
 
 DESKTOP_ENTRIES=	"QDevelop" \
 			"Qt4 development environment" \
@@ -66,7 +64,7 @@ post-patch:
 
 post-configure:
 .if ${PORT_OPTIONS:MNLS}
-	cd ${WRKSRC} && ${QT_LRELEASE} ${QMAKE_PRO}
+	cd ${WRKSRC} && ${LRELEASE} ${QMAKE_PRO}
 .endif
 
 post-install:
