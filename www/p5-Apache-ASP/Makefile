@@ -1,9 +1,8 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-ASP/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD: www/p5-Apache-ASP/Makefile 334678 2013-11-23 15:25:45Z sunpoet $
 
 PORTNAME=	Apache-ASP
-PORTVERSION=	2.61
-PORTREVISION=	4
+PORTVERSION=	2.62
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -11,6 +10,8 @@ PKGNAMESUFFIX=	${MODPERL_SUFFIX}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Active Server Pages for Apache
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	p5-Devel-Symdump>=0:${PORTSDIR}/devel/p5-Devel-Symdump \
 		p5-HTML-Clean>=0:${PORTSDIR}/www/p5-HTML-Clean \
