@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: audio/slv2/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/slv2/Makefile 334718 2013-11-24 11:49:07Z mva $
 
 PORTNAME=	slv2
 PORTVERSION=	0.6.6
@@ -13,8 +13,8 @@ LICENSE=	GPLv2 # (or later)
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/include/lv2.h:${PORTSDIR}/audio/lv2core
-LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
-		rdf.0:${PORTSDIR}/textproc/redland
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack \
+		librdf.so:${PORTSDIR}/textproc/redland
 
 USES=		pkgconfig
 NO_STAGE=	yes
@@ -41,13 +41,13 @@ post-patch:
 		's|^#define _XOPEN_SOURCE .*||' ${WRKSRC}/src/plugin.c
 
 do-configure:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
 
 do-build:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} ${WAF_JOBS} build)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} ${WAF_JOBS} build)
 
 do-install:
-	@(cd ${WRKSRC} && ./waf ${WAF_VERBOSE} install)
+	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} install)
 .for file in lv2_inspect lv2_jack_host lv2_list lv2_simple_jack_host
 	@${STRIP_CMD} ${PREFIX}/bin/${file}
 .endfor
