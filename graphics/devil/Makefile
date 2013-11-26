@@ -1,10 +1,10 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: graphics/devil/Makefile 332189 2013-10-31 00:32:31Z nemysis $
+# $FreeBSD: graphics/devil/Makefile 334422 2013-11-20 14:25:28Z nemysis $
 
 PORTNAME=	devil
 PORTVERSION=	1.7.8
 PORTEPOCH=	1
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	SF/openil/DevIL/${PORTVERSION}
 DISTNAME=	DevIL-${PORTVERSION}
