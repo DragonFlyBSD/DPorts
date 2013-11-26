@@ -1,9 +1,9 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: multimedia/freetuxtv/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: multimedia/freetuxtv/Makefile 334622 2013-11-22 22:41:10Z nemysis $
 
 PORTNAME=	freetuxtv
 PORTVERSION=	0.6.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	multimedia
 MASTER_SITES=	GOOGLE_CODE
 
@@ -46,6 +46,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|$${pkgdatadir}/doc|$${PREFIX}/share/doc/${PORTNAME}|' \
 		-e 's|install-data-am: install-freetuxtvdocDATA|install-data-am: |' \
 		${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's/libvlc_media_new_path/libvlc_media_new_location/' \
+		${WRKSRC}/lib/libvlc-gtk/gtk-libvlc-media-player.c
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
