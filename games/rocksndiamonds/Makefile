@@ -1,8 +1,8 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/rocksndiamonds/Makefile 332931 2013-11-05 23:38:00Z nemysis $
+# $FreeBSD: games/rocksndiamonds/Makefile 334841 2013-11-25 11:37:34Z nemysis $
 
 PORTNAME=	rocksndiamonds
-PORTVERSION=	3.3.1.0
+PORTVERSION=	3.3.1.2
 CATEGORIES=	games
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/:game \
 		http://www.artsoft.org/RELEASES/rocksndiamonds/levels/:levels_artsoft \
