@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: finance/p5-Finance-Currency-Convert-XE/Makefile 332619 2013-11-03 15:38:39Z vanilla $
+# $FreeBSD: finance/p5-Finance-Currency-Convert-XE/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Finance-Currency-Convert-XE
 PORTVERSION=	0.25
@@ -27,8 +27,8 @@ PORTDOCS=	Changes README
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
