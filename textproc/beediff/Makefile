@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/beediff/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: textproc/beediff/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	beediff
 PORTVERSION=	1.9
@@ -11,7 +11,7 @@ MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Qt 4 based diff frontend
 
 USES=		qmake
-USE_QT4=	gui moc_build rcc_build qmake_build
+USE_QT4=	gui moc_build rcc_build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
