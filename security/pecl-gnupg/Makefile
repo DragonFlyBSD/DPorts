@@ -1,5 +1,5 @@
 # Created by: mnag@FreeBSD.org
-# $FreeBSD: security/pecl-gnupg/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD: security/pecl-gnupg/Makefile 334533 2013-11-21 23:12:13Z sunpoet $
 
 PORTNAME=	gnupg
 PORTVERSION=	1.3.3
@@ -13,6 +13,8 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PECL wrapper around the gpgme library
 
+LICENSE=	BSD
+
 LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme
 
 CFLAGS+=	-I${LOCALBASE}/include
@@ -21,7 +23,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$GNUPG_DIR/lib|${LOCALBASE}/lib|; s| -ldl||g' ${WRKSRC}/config.m4
 
