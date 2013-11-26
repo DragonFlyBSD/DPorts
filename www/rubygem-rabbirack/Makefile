@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-rabbirack/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-rabbirack/Makefile 334505 2013-11-21 18:20:24Z bapt $
 
 PORTNAME=	rabbirack
 PORTVERSION=	2.0.0
@@ -17,7 +17,7 @@ RUN_DEPENDS=	rubygem-haml>0:${PORTSDIR}/www/rubygem-haml \
 		rubygem-rabbit>=2.0.0:${PORTSDIR}/misc/rubygem-rabbit \
 		rubygem-sinatra>0:${PORTSDIR}/www/rubygem-sinatra
 
-USE_GETTEXT=	yes
+USES=		gettext
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
