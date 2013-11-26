@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/p5-Net-FTPServer/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: ftp/p5-Net-FTPServer/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Net-FTPServer
 PORTVERSION=	1.125
@@ -67,7 +67,7 @@ post-install:
 .endif
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR})
 .endif
 	@${CAT} ${PKGMESSAGE}
 
