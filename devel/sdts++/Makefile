@@ -1,5 +1,5 @@
 # Created by: erik@habatech.no
-# $FreeBSD: devel/sdts++/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sdts++/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	sdts++
 PORTVERSION=	1.5.1
@@ -13,9 +13,8 @@ COMMENT=	C++ library for SDTS related development
 
 LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
 
-USE_DOS2UNIX=	sdts++/io/sio_Utils.cpp
-USES=		bison
-USE_GMAKE=	yes
+DOS2UNIX_FILES=	sdts++/io/sio_Utils.cpp
+USES=		bison dos2unix gmake
 USE_AUTOTOOLS=	libtoolize aclocal automake autoconf
 LIBTOOLIZE_ARGS=--copy --force
 ACLOCAL_ARGS=	-I ${LOCALBASE}/share/aclocal
