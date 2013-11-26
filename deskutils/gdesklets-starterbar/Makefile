@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets-starterbar/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gdesklets-starterbar/Makefile 334744 2013-11-24 16:21:08Z mva $
 
 PORTNAME=	starterbar
 PORTVERSION=	0.31.3
@@ -26,7 +26,7 @@ LANG=		ca cs de en_CA en_GB es fr hr nl pt pt_BR sq sr sr@Latn sv
 
 NO_STAGE=	yes
 do-build:
-	@${WRKSRC}/Install_${NAME}_Sensor.bin --nomsg ${WRKSRC}
+	@${PYTHON_CMD} ${WRKSRC}/Install_${NAME}_Sensor.bin --nomsg ${WRKSRC}
 
 do-install:
 	@${MKDIR} ${DATADIR}/Displays/${NAME}
