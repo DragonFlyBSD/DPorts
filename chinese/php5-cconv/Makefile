@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: chinese/php5-cconv/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/php5-cconv/Makefile 334672 2013-11-23 14:45:45Z sunpoet $
 
 PORTNAME=	cconv
 PORTVERSION=	0.6.4
@@ -11,13 +11,14 @@ DISTNAME=	${PORTNAME}-php-${PORTVERSION}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP wrapper for chinese/cconv
 
-LIB_DEPENDS=	cconv:${PORTSDIR}/chinese/cconv
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	libcconv.so:${PORTSDIR}/chinese/cconv
 
 CONFIGURE_ARGS=	--with-cconv-dir=${LOCALBASE}
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| function_entry| zend_function_entry|' ${WRKSRC}/php_cconv.c
 
