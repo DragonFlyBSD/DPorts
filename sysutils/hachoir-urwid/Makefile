@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/hachoir-urwid/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hachoir-urwid/Makefile 334329 2013-11-19 17:07:02Z lwhsu $
 
 PORTNAME=	hachoir-urwid
 PORTVERSION=	1.1
@@ -15,5 +15,4 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/hachoir_parser/__init__.py:${PORTSDIR}/devel/h
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
