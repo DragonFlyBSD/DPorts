@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/aewm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/aewm/Makefile 334780 2013-11-24 19:44:16Z sunpoet $
 
 PORTNAME=	aewm
 PORTVERSION=	1.2.7
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.red-bean.com/decklin/aewm/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ICCCM-compliant window manager based on 9wm
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" XROOT="${LOCALBASE}"
 USE_XORG=	x11 xext xt xaw
 WANT_GNOME=	yes
