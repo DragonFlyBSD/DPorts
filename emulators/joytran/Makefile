@@ -1,9 +1,8 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: emulators/joytran/Makefile 334079 2013-11-17 12:33:49Z mva $
+# $FreeBSD: emulators/joytran/Makefile 334658 2013-11-23 10:53:02Z pawel $
 
 PORTNAME=	joytran
-PORTVERSION=	0.9.5
-PORTREVISION=	2
+PORTVERSION=	0.9.5.1
 CATEGORIES=	emulators
 MASTER_SITES=	BERLIOS GOOGLE_CODE
 MASTER_SITE_SUBDIR=	joytran
@@ -22,13 +21,6 @@ USES=		cmake pkgconfig
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" -DPREFIX="${PREFIX}"
 USE_XORG=	x11 xtst
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-CMAKE_ARGS+=	-DINSTALL_DOCUMENTATION:BOOL=ON
-.else
-CMAKE_ARGS+=	-DINSTALL_DOCUMENTATION:BOOL=OFF
-.endif
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
