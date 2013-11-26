@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: textproc/goldendict/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/goldendict/Makefile 334592 2013-11-22 13:34:33Z bsam $
 
 PORTNAME=	goldendict
 PORTVERSION=	1.0.1
@@ -20,23 +20,19 @@ LIB_DEPENDS=	libhunspell-1.3.so:${PORTSDIR}/textproc/hunspell \
 USE_BZIP2=	yes
 NO_WRKSUBDIR=	yes
 HAS_CONFIGURE=	yes
-USES=		desktop-file-utils pkgconfig
-USE_DOS2UNIX=	processwrapper.cc  # is needed only to apply a patch to this file
+USES=		dos2unix pkgconfig qmake
+DOS2UNIX_FILES=	processwrapper.cc
 USE_XORG=	xtst
 USE_QT4=	corelib gui webkit phonon \
-		qmake_build linguist_build moc_build rcc_build script_build uic_build
+		linguist_build moc_build rcc_build script_build uic_build
+INSTALLS_ICONS=	yes
 
-NO_STAGE=	yes
 post-patch:
-	@${SED} -I.bak -e "s:/usr:${PREFIX}:" ${WRKSRC}/redist/goldendict.desktop
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} -unix PREFIX=${PREFIX} INCLUDEPATH+=${LOCALBASE}/include \
-		LIBS+=-L${LOCALBASE}/lib ${PORTNAME}.pro
+	@${REINPLACE_CMD} 's:/usr:${PREFIX}:' ${WRKSRC}/redist/goldendict.desktop
 
 post-install:
-	@${MKDIR} ${DATADIR}/locale
-	${INSTALL_DATA} ${WRKSRC}/locale/*.qm ${DATADIR}/locale/
+	@${MKDIR} ${STAGEDIR}${DATADIR}/locale
+	${INSTALL_DATA} ${WRKSRC}/locale/*.qm ${STAGEDIR}${DATADIR}/locale
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
