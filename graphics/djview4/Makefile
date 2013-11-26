@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/djview4/Makefile 329673 2013-10-07 10:02:45Z marino $
+# $FreeBSD: graphics/djview4/Makefile 334503 2013-11-21 16:55:54Z makc $
 
 PORTNAME=	djview
 PORTVERSION=	4.9
@@ -21,7 +21,7 @@ USE_XORG=	sm ice xt
 QT_NONSTANDARD=	yes
 CONFIGURE_ARGS=	--x-includes="${LOCALBASE}/include" \
 		--x-libraries="${LOCALBASE}/lib"
-CONFIGURE_ENV=	QMAKE="${LOCALBASE}/bin/qmake-qt4" \
+CONFIGURE_ENV=	QMAKE="${QMAKE}" \
 		QMAKESPEC="${QMAKESPEC}"
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
