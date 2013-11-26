@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/soundkonverter/Makefile 332755 2013-11-04 18:41:08Z dbn $
+# $FreeBSD: audio/soundkonverter/Makefile 334711 2013-11-24 08:56:44Z dbn $
 
 PORTNAME=	soundkonverter
 DISTVERSION=	2.0.4
@@ -107,5 +107,8 @@ WAVPACK_RUN_DEPENDS=	wavpack:${PORTSDIR}/audio/wavpack
 
 NLS_USES=	gettext
 NLS_CMAKE_OFF=	-DBUILD_po=FALSE
+
+post-patch:
+	${REINPLACE_CMD} "/-pedantic/d" ${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>
