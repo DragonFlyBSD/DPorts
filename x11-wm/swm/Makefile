@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/swm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/swm/Makefile 334780 2013-11-24 19:44:16Z sunpoet $
 
 PORTNAME=	swm
 PORTVERSION=	1.3.4c
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/../doc/COPYING
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S,c,,}/src
 
 USE_XORG=	xpm
-USE_GMAKE=	yes
+USES=		gmake
 MAKEFILE=	Makefile-xpm
 MAKE_ARGS=	CFLAGS="${CFLAGS}" LDFLAGS="" CC="${CC}" XROOT="${LOCALBASE}"
 
