@@ -1,4 +1,4 @@
-# $FreeBSD: math/qwtplot3d-qt4/Makefile 331375 2013-10-23 11:55:53Z makc $
+# $FreeBSD: math/qwtplot3d-qt4/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	qwtplot3d
 PORTVERSION=	0.2.7
@@ -11,11 +11,10 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	3D plotting widgets for scientific data and math expressions
 
-USES=		qmake
-USE_QT4=	gui moc_build qmake_build opengl
+USES=		dos2unix qmake
+USE_QT4=	gui moc_build opengl
 USE_GL=		glu
 USE_LDCONFIG=	yes
-USE_DOS2UNIX=	yes
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
