@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/2mandvd/Makefile 332425 2013-11-01 23:29:57Z pawel $
+# $FreeBSD: multimedia/2mandvd/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	2ManDVD
 PORTVERSION=	1.8.5
@@ -32,14 +32,12 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		desktop-file-utils gmake perl5 qmake:norecursive shebangfix
 SHEBANG_FILES=	fake.pl
 USE_QT4=	corelib gui opengl \
-		linguist_build moc_build qmake_build rcc_build uic_build
+		linguist_build moc_build rcc_build uic_build
 USE_GL=		glu
 USE_SDL=	sdl
 USE_PERL5=	run
 
 DATADIR=	${PREFIX}/share/2ManDVD
-
-LRELEASE=	${LOCALBASE}/bin/lrelease-qt4
 
 post-extract:
 	@${FIND} ${WRKSRC} -name "*~" -delete
