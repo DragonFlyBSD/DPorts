@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-subliminal/Makefile 333384 2013-11-10 11:48:29Z wg $
+# $FreeBSD: multimedia/py-subliminal/Makefile 334670 2013-11-23 14:14:03Z wg $
 
 PORTNAME=	subliminal
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,8 +19,8 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/bs4/__init__.py:${PORTSDIR}/www/py-beautifulso
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:${PORTSDIR}/www/py-html5lib \
 		${PYTHON_PKGNAMEPREFIX}charade>0:${PORTSDIR}/textproc/py-charade \
 		${PYTHON_PKGNAMEPREFIX}pysrt>0:${PORTSDIR}/textproc/py-pysrt \
-		${PYTHON_PKGNAMEPREFIX}babelfish>=0.3.0:${PORTSDIR}/devel/py-babelfish \
-		${PYTHON_PKGNAMEPREFIX}dogpile.cache>0:${PORTSDIR}/devel/py-dogpile.cache
+		${PYTHON_PKGNAMEPREFIX}babelfish>=0.4.0:${PORTSDIR}/devel/py-babelfish \
+		${PYTHON_PKGNAMEPREFIX}dogpile.cache>=0.5.2:${PORTSDIR}/devel/py-dogpile.cache
 
 USE_PYTHON=	2.7
 USE_PYDISTUTILS=	easy_install
