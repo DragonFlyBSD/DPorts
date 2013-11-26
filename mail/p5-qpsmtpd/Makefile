@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: mail/p5-qpsmtpd/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD: mail/p5-qpsmtpd/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	qpsmtpd
 PORTVERSION=	0.84
@@ -58,16 +58,16 @@ pre-configure:
 	@${RM} ${WRKSRC}/plugins/milter
 
 post-install:
-	@${MKDIR} ${DATADIR}/
+	@${MKDIR} ${DATADIR}
 	@${MKDIR} ${DATADIR}/plugins
-	cd ${WRKSRC}/plugins/ && ${COPYTREE_SHARE} \* ${DATADIR}/plugins/
+	(cd ${WRKSRC}/plugins && ${COPYTREE_SHARE} . ${DATADIR}/plugins)
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/README* ${DOCSDIR}/
+	@${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README* ${DOCSDIR}
 .endif
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}/
-	cd ${WRKSRC}/config.sample/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}/
+	@${MKDIR} ${EXAMPLESDIR}
+	(cd ${WRKSRC}/config.sample/ && ${COPYTREE_SHARE} . ${EXAMPLESDIR})
 .endif
 
 .include <bsd.port.mk>
