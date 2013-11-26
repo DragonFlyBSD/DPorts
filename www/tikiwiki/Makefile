@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: www/tikiwiki/Makefile 331431 2013-10-23 21:20:46Z ak $
+# $FreeBSD: www/tikiwiki/Makefile 334801 2013-11-25 00:03:38Z linimon $
 
 PORTNAME=	tikiwiki
 PORTVERSION=	11.0
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/Tiki_11.x_Vega/${PORTVERSION}/
 DISTNAME=	tiki-${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Powerful PHP based Wiki/CMS/Groupware
 
 LICENSE=	LGPL20
