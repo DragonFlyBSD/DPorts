@@ -1,8 +1,8 @@
 # Created by: wen
-# $FreeBSD: databases/pecl-mongo/Makefile 332290 2013-10-31 22:15:21Z antoine $
+# $FreeBSD: databases/pecl-mongo/Makefile 334708 2013-11-24 07:53:05Z antoine $
 
 PORTNAME=	mongo
-PORTVERSION=	1.4.4
+PORTVERSION=	1.4.5
 CATEGORIES=	databases pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -16,7 +16,6 @@ LICENSE=	AL2
 
 USE_PHP=	spl
 USE_PHP_BUILD=	yes
-USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 CONFIGURE_ARGS=	--enable-mongo
 SUB_FILES=	pkg-message
