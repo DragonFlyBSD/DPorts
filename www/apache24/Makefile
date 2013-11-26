@@ -1,7 +1,8 @@
-# $FreeBSD: www/apache24/Makefile 331790 2013-10-27 17:54:39Z ohauer $
+# $FreeBSD: www/apache24/Makefile 334790 2013-11-24 20:51:20Z ohauer $
 
 PORTNAME=	apache24
 PORTVERSION=	2.4.6
+PORTREVISION=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_APACHE_HTTPD}
 DISTNAME=	httpd-${PORTVERSION}
@@ -64,7 +65,7 @@ SSL_USE=			OPENSSL=yes
 
 .include <bsd.port.options.mk>
 
-ETC_SUBDIRS=		Includes envvars.d extra
+ETC_SUBDIRS=		Includes envvars.d extra modules.d
 
 .if ! ${PORT_OPTIONS:MDOCS}
 MAKE_ENV+=	NOPORTDOCS=yes
@@ -148,7 +149,8 @@ post-configure:
 
 post-install:
 	@${MKDIR} ${ETC_SUBDIRS:S|^|${STAGEDIR}${ETCDIR}/|}
-	@${INSTALL_DATA} ${FILESDIR}/no-accf.conf ${STAGEDIR}${ETCDIR}/Includes/
+	${INSTALL_DATA} ${FILESDIR}/no-accf.conf ${STAGEDIR}${ETCDIR}/Includes/
+	${INSTALL_DATA} ${FILESDIR}/README_modules.d ${STAGEDIR}/${ETCDIR}/modules.d/
 
 .if ${PORT_OPTIONS:MLOG_FORENSIC}
 	@${INSTALL_SCRIPT} ${WRKSRC}/support/check_forensic ${STAGEDIR}${PREFIX}/sbin
