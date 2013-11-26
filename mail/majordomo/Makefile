@@ -1,9 +1,9 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: mail/majordomo/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/majordomo/Makefile 334732 2013-11-24 15:03:51Z az $
 
 PORTNAME=	majordomo
 PORTVERSION=	1.94.5
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.nuug.no/pub/anders/distfiles/ \
 		ftp://ftp.sgi.com/other/majordomo/1.94.5/ \
