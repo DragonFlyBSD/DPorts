@@ -1,8 +1,8 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-salt-cloud/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-salt-cloud/Makefile 334396 2013-11-20 08:06:47Z vg $
 
 PORTNAME=	salt-cloud
-PORTVERSION=	0.8.9
+PORTVERSION=	0.8.10
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
