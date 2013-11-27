@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: net/pear-Net_SMTP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pear-Net_SMTP/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Net_SMTP
 PORTVERSION=	1.6.1
@@ -17,7 +17,6 @@ PEAR_AUTH_SASL_DESC=	PEAR::Auth_SASL support
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_AUTH_SASL}
