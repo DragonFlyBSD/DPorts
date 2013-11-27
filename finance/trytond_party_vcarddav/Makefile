@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_party_vcarddav/Makefile 334164 2013-11-18 09:43:15Z bsam $
+# $FreeBSD: finance/trytond_party_vcarddav/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond_party_vcarddav
 PORTVERSION=	2.4.2
@@ -16,7 +16,7 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		${PYTHON_PKGNAMEPREFIX}vobject>=0.8.1:${PORTSDIR}/deskutils/py-vobject \
 		${PYTHON_PKGNAMEPREFIX}PyWebDAV>=0:${PORTSDIR}/www/py-pywebdav
 
-CONFLICTS=	trytond_party_vcarddav-2.[68].*
+CONFLICTS=	trytond28_party_vcarddav-2.8.*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
