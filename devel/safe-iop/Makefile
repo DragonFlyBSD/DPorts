@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: devel/safe-iop/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/safe-iop/Makefile 334471 2013-11-21 08:25:54Z bsam $
 
 PORTNAME=	safe-iop
 PORTVERSION=	0.3.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A safe integer operation library for C
+COMMENT=	Safe integer operation library for C
 
 USE_LDCONFIG=	yes
 ALL_TARGET=	so
@@ -16,7 +16,6 @@ CFLAGS+=	-fPIC
 PLIST_FILES=	include/safe_iop.h \
 		lib/libsafe_iop.so.0
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e 's,(^CC[[:space:]]*=.*),#\1,' \
 	    -e 's,(^CFLAGS[[:space:]]*)=.*,\1+= -Iinclude,' \
@@ -24,7 +23,7 @@ post-patch:
 	    ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/libsafe_iop.so.0 ${PREFIX}/lib/
-	${INSTALL_DATA} ${WRKSRC}/include/safe_iop.h ${PREFIX}/include/
+	${INSTALL_PROGRAM} ${WRKSRC}/libsafe_iop.so.0 ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/include/safe_iop.h ${STAGEDIR}${PREFIX}/include
 
 .include <bsd.port.mk>
