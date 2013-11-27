@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: textproc/urlview/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/urlview/Makefile 334855 2013-11-25 15:06:59Z danilo $
 
 PORTNAME=	urlview
 PORTVERSION=	0.9
@@ -15,19 +15,23 @@ MASTER_SITES=	ftp://ftp.mutt.org/mutt/contrib/ \
 MAINTAINER=	mexas@bris.ac.uk
 COMMENT=	URL extractor/launcher
 
-GNU_CONFIGURE=	yes
-MAN1=		urlview.1
-PLIST_FILES=	bin/urlview \
-		etc/urlview.conf.sample
+LICENSE=	GPLv2
 
-NO_STAGE=	yes
+GNU_CONFIGURE=	yes
+PLIST_FILES=	bin/urlview \
+		etc/urlview.conf.sample \
+		man/man1/urlview.1.gz
+MAKE_ENV=	DESTDIR=${STAGEDIR}
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
 		-e 's/url_handler.sh/firefox/' \
 		${WRKSRC}/*
 
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/urlview ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/urlview.man ${STAGEDIR}${MAN1PREFIX}/man/man1/urlview.1
 	${INSTALL_DATA} ${WRKSRC}/sample.urlview \
-		${PREFIX}/etc/urlview.conf.sample
+		${STAGEDIR}${PREFIX}/etc/urlview.conf.sample
 
 .include <bsd.port.mk>
