@@ -1,4 +1,4 @@
-@comment $FreeBSD: devel/subversion16/pkg-plist 332917 2013-11-05 22:07:08Z ohauer $
+@comment $FreeBSD: devel/subversion16/pkg-plist 334888 2013-11-25 19:52:24Z ohauer $
 %%ASVN%%bin/asvn
 bin/svn
 %%TOOLS%%bin/svn-populate-node-origins-index
@@ -140,13 +140,6 @@ man/man1/svnsync.1.gz
 man/man1/svnversion.1.gz
 man/man5/svnserve.conf.5.gz
 man/man8/svnserve.8.gz
-%%PORTDOCS%%%%DOCSDIR%%/BUGS
-%%PORTDOCS%%%%DOCSDIR%%/CHANGES
-%%PORTDOCS%%%%DOCSDIR%%/COMMITTERS
-%%PORTDOCS%%%%DOCSDIR%%/COPYING
-%%PORTDOCS%%%%DOCSDIR%%/HACKING
-%%PORTDOCS%%%%DOCSDIR%%/INSTALL
-%%PORTDOCS%%%%DOCSDIR%%/README
 %%NLS%%share/locale/de/LC_MESSAGES/subversion.mo
 %%NLS%%share/locale/es/LC_MESSAGES/subversion.mo
 %%NLS%%share/locale/fr/LC_MESSAGES/subversion.mo
@@ -318,5 +311,4 @@ man/man8/svnserve.8.gz
 @dirrm %%DATADIR%%/bdb
 @dirrm %%DATADIR%%/backup
 @dirrm %%DATADIR%%
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm include/subversion-1

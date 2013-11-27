@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion16/Makefile.common 332946 2013-11-06 06:54:19Z ohauer $
+# $FreeBSD: devel/subversion16/Makefile.common 334888 2013-11-25 19:52:24Z ohauer $
 
 PORTNAME=	subversion
 PORTVERSION=	#please edit Makefile.inc for PORTVERSION, so ../svnmerge can stay in sync.
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--without-swig \
 CONFLICTS_BUILD+=	${PORTNAME}-1.[^6].[0-9]*
 LIB_DEPENDS+=		libsvn_client-1.so:${PORTSDIR}/devel/subversion16
 OPTIONSFILE=		${PORT_DBDIR}/${PORTNAME}16/options
-OPTIONS=		# Dirty hack: if OPTIONS is not defined, OPTIONSFILE will not be included
+OPTIONS_NAME=		devel_subversion16
 .endif
 
 # ===============================================================
