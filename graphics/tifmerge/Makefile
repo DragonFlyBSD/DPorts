@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: graphics/tifmerge/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/tifmerge/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	tifmerge
 PORTVERSION=	1.0
@@ -11,7 +11,8 @@ DISTNAME=	tiff
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library to merge TIFF files into multi-page TIFF files
 
-USE_DOS2UNIX=	*.[ch]
+USES=		dos2unix
+DOS2UNIX_GLOB=	*.[ch]
 USE_LDCONFIG=	yes
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
