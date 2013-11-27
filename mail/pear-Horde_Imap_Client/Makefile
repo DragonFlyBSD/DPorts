@@ -1,4 +1,4 @@
-# $FreeBSD: mail/pear-Horde_Imap_Client/Makefile 334186 2013-11-18 13:12:01Z mm $
+# $FreeBSD: mail/pear-Horde_Imap_Client/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Imap_Client
 PORTVERSION=	2.16.0
@@ -21,7 +21,6 @@ IMAP_DESC=	Require PHP imap extension
 MBSTRING_DESC=	Require PHP mbstring extension
 SASL_DESC=	Support SASL Authentication
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MIMAP}
