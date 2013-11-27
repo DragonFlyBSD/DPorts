@@ -1,12 +1,12 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: devel/rubygem-debugger-xml/Makefile 330968 2013-10-20 03:58:35Z swills $
+# $FreeBSD: devel/rubygem-debugger-xml/Makefile 334671 2013-11-23 14:14:16Z ak $
 
 PORTNAME=	debugger-xml
 PORTVERSION=	0.1.6
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	wulf@mail.mipt.ru
+MAINTAINER=	wulf@cicgroup.ru
 COMMENT=	XML interface for rubygem-debugger
 
 RUN_DEPENDS=	rubygem-debugger>=1.6.2:${PORTSDIR}/devel/rubygem-debugger \
