@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/tryton/Makefile 334164 2013-11-18 09:43:15Z bsam $
+# $FreeBSD: finance/tryton/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	tryton
 PORTVERSION=	2.4.7
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:${PORTSDIR}/devel/py-dateutil \
 		${PYTHON_PKGNAMEPREFIX}pytz>=2012:${PORTSDIR}/devel/py-pytz
 
-CONFLICTS=	tryton-2.[68].*
+CONFLICTS=	tryton28-2.8.*
 
 USES=		desktop-file-utils gettext
 USE_PYTHON=	-2.7
