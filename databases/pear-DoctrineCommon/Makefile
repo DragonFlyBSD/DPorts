@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: databases/pear-DoctrineCommon/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pear-DoctrineCommon/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	DoctrineCommon
 PORTVERSION=	2.3.0
@@ -17,7 +17,6 @@ RUN_DEPENDS=	${PEARDIR}/.channels/pear.doctrine-project.org.reg:${PORTSDIR}/deve
 PEAR_CHANNEL=	doctrine
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
