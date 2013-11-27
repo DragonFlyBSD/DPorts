@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net-p2p/litecoin/Makefile 328086 2013-09-24 02:38:22Z swills $
+# $FreeBSD: net-p2p/litecoin/Makefile 334587 2013-11-22 12:55:11Z makc $
 
 PORTNAME=	litecoin
 PORTVERSION=	0.8.5.1
@@ -75,9 +75,9 @@ QMAKE_USE_DBUS=	0
 do-configure:
 .if ${PORT_OPTIONS:MGUI} && !defined(WITHOUT_X11)
 	cd ${BUILD_WRKSRC} && \
-		${QMAKE} PREFIX=${PREFIX} -spec ${QMAKESPEC} ${QMAKEFLAGS} \
+		${QMAKE} ${QMAKE_ARGS} \
 		QMAKE_LIBDIR+=${BDB_LIB_DIR} \
-		QMAKE_LRELEASE=${LOCALBASE}/bin/lrelease-qt4 \
+		QMAKE_LRELEASE=${LRELEASE} \
 		USE_UPNP=${QMAKE_USE_UPNP} \
 		USE_QRCODE=${QMAKE_USE_QRCODE} \
 		USE_DBUS=${QMAKE_USE_DBUS} \
