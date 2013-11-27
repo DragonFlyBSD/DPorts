@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: net/hupnp/Makefile 333450 2013-11-10 21:26:41Z rakuco $
+# $FreeBSD: net/hupnp/Makefile 334927 2013-11-26 12:59:35Z makc $
 
 PORTNAME=	hupnp
 PORTVERSION=	1.0.0
@@ -9,14 +9,13 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 DISTNAME=	herqq-${PORTVERSION}
 
 MAINTAINER=	fluffy@FreeBSD.org
-COMMENT=	A library for building UPnP devices and control points
+COMMENT=	Library for building UPnP devices and control points
 
 USES=		gmake qmake
 USE_ZIP=	yes
 USE_QT4=	corelib network xml dbus gui \
-		qmake_build moc_build rcc_build uic_build
+		moc_build rcc_build uic_build
 
 QMAKE_ARGS=	"CONFIG+=DISABLE_AVTESTAPP DISABLE_TESTAPP"
-QMAKE_PRO=	herqq.pro
 
 .include <bsd.port.mk>
