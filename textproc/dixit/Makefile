@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: textproc/dixit/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: textproc/dixit/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	dixit
 PORTVERSION=	11.11
@@ -21,7 +21,7 @@ LICENSE=	GPLv3 # (or later)
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.${QT_VER}
 
 USES=		qmake
-USE_QT4=	corelib gui network moc_build qmake_build rcc_build
+USE_QT4=	corelib gui network moc_build rcc_build
 QMAKE_ARGS=	QMAKE_LFLAGS="-lz"
 
 PLIST_SUB=	_DB=${_DB} DB_DIR=${DB_DIR} _DB_F=${_DB_F}
