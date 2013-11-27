@@ -1,4 +1,4 @@
-# $FreeBSD: games/hexglass/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/hexglass/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	hexglass
 PORTVERSION=	1.2.1
@@ -9,7 +9,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Tetris-like puzzle game based on a hexagonal grid
 
-USE_QT4=	gui qmake_build moc_build rcc_build
+USE_QT4=	gui moc_build rcc_build
 USES=		qmake
 
 PLIST_FILES=	bin/${PORTNAME} \
