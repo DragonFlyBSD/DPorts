@@ -1,9 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/darktable/Makefile 332189 2013-10-31 00:32:31Z nemysis $
+# $FreeBSD: graphics/darktable/Makefile 334422 2013-11-20 14:25:28Z nemysis $
 
 PORTNAME=	darktable
 PORTVERSION=	1.2.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
 
