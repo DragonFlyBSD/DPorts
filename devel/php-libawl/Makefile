@@ -1,14 +1,13 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: devel/php-libawl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/php-libawl/Makefile 334907 2013-11-26 00:06:57Z madpilot $
 
 PORTNAME=	php-libawl
-PORTVERSION=	0.53
+PORTVERSION=	0.54
 CATEGORIES=	devel
-MASTER_SITES=	http://debian.mcmillan.net.nz/packages/awl/ \
-		SF/rscds/awl/${PORTVERSION}
+MASTER_SITES=	http://debian.mcmillan.net.nz/debian/pool/awm/a/awl/
 DISTNAME=	awl-${PORTVERSION}
 
-MAINTAINER=	cristianorolim@hotmail.com
+MAINTAINER=	cristianorolim@outlook.com
 COMMENT=	Andrew.s Web Libraries - PHP Utility Libraries
 
 WRKSRC=		${WRKDIR}/awl-${PORTVERSION}
@@ -16,7 +15,6 @@ WRKSRC=		${WRKDIR}/awl-${PORTVERSION}
 OPTIONS_DEFINE=	PHP
 OPTIONS_DEFAULT=	PHP
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHP}
@@ -34,7 +32,7 @@ post-patch:
 	${RM} -f ${WRKSRC}/inc/*.orig
 
 do-install:
-	${MKDIR} ${PREFIX}/${LIBAWLDIR}/
-	cd ${WRKSRC} && ${CP} -pR dba inc ${PREFIX}/${LIBAWLDIR}/
+	${MKDIR} ${STAGEDIR}${PREFIX}/${LIBAWLDIR}
+	cd ${WRKSRC} && ${CP} -pR dba inc ${STAGEDIR}${PREFIX}/${LIBAWLDIR}/
 
 .include <bsd.port.mk>
