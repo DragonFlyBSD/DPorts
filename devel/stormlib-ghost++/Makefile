@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: devel/stormlib-ghost++/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/stormlib-ghost++/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	stormlib
 PORTVERSION=	6.25
@@ -15,11 +15,10 @@ PROJECTHOST=	ghostplusplus
 PROJECTVERSION=	17.1
 
 USE_ZIP=	yes
-USE_DOS2UNIX=	yes
+USES=		dos2unix gmake
 
 WRKSRC=		${WRKDIR}/ghost/StormLib/stormlib
 
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
 NO_STAGE=	yes
