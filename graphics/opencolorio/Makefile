@@ -1,5 +1,5 @@
 # Created by: Shane Ambler <FreeBSD@Shaneware.biz>
-# $FreeBSD: graphics/opencolorio/Makefile 331465 2013-10-24 08:14:00Z tijl $
+# $FreeBSD: graphics/opencolorio/Makefile 334956 2013-11-26 17:39:34Z mva $
 
 PORTNAME=	opencolorio
 PORTVERSION=	1.0.8
@@ -43,7 +43,8 @@ USE_PYTHON=	2.6+
 USE_LDCONFIG=	yes
 CMAKE_ARGS+=	-DOCIO_BUILD_APPS:BOOL=OFF \
 		-DOCIO_BUILD_SHARED:BOOL=ON \
-		-DOCIO_BUILD_PYGLUE:BOOL=ON
+		-DOCIO_BUILD_PYGLUE:BOOL=ON \
+		-DPYTHON:FILEPATH=${PYTHON_CMD}
 .else
 LIB_DEPENDS=	libOpenImageIO.so:${PORTSDIR}/graphics/openimageio \
 		libOpenColorIO.so:${PORTSDIR}/graphics/opencolorio
