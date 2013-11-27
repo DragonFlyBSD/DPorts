@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: math/fbm/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/fbm/Makefile 334550 2013-11-22 07:43:56Z bapt $
 
 PORTNAME=	fbm
 PORTVERSION=	20041110
@@ -11,7 +11,9 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flexible Bayesian Modeling and Markov Chain Sampling
 
-NO_LATEST_LINK=	yes
+PKGNAMESUFFIX=	-math
+DEPRECATED=	No new release since 2004, new supported upstream
+EXPIRATION_DATE=	2013-12-22
 
 SCRIPTS =	bvg-circ bvg-wrap dist-circ dist-wrap gp-circ	\
 		gp-wrap dft-circ dft-wrap mix-circ mix-wrap 	\
