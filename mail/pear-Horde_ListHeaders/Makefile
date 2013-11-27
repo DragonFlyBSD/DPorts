@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: mail/pear-Horde_ListHeaders/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: mail/pear-Horde_ListHeaders/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_ListHeaders
 PORTVERSION=	1.1.0
@@ -10,7 +10,6 @@ COMMENT=	Horde List Headers Parsing Library
 
 USE_HORDE_RUN=	Horde_Mail
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
