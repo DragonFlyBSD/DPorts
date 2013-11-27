@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/pear-Horde_Compress/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/pear-Horde_Compress/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Compress
 PORTVERSION=	2.0.4
@@ -12,7 +12,6 @@ OPTIONS_DEFAULT=	ZLIB
 OPTIONS_DEFINE=		ZLIB
 ZLIB_DESC=	Depend on PHP zlib extension
 
-NO_STAGE=	yes
 USE_HORDE_RUN=	Horde_Exception \
 		Horde_Translation \
 		Horde_Util \
