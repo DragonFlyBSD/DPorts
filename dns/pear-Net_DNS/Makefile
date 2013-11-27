@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: dns/pear-Net_DNS/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/pear-Net_DNS/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Net_DNS
 PORTVERSION=	1.0.7
@@ -16,7 +16,6 @@ PORTSCOUT=	skipv:1.00b2,1.00b1
 USE_PHP=	mhash
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
