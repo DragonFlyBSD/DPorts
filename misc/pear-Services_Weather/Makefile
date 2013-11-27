@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@FreeBSD.org>)
-# $FreeBSD: misc/pear-Services_Weather/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/pear-Services_Weather/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Services_Weather
 PORTVERSION=	1.4.6
@@ -25,7 +25,6 @@ PEAR_XML_SERIALIZER_DESC=	PEAR::XML::Serializer support
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_NET_FTP}
