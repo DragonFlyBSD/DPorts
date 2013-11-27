@@ -1,0 +1,11 @@
+--- pkg/pkg.conf.sample.orig	2013-11-26 14:19:33.000000000 +0000
++++ pkg/pkg.conf.sample
+@@ -5,7 +5,7 @@
+ # Configuration options
+ #PKG_DBDIR	    : /var/db/pkg
+ #PKG_CACHEDIR	    : /var/cache/pkg
+-#PORTSDIR	    : /usr/ports
++#PORTSDIR	    : /usr/dports
+ #PUBKEY		    : /etc/ssl/pkg.conf
+ #HANDLE_RC_SCRIPTS  : NO
+ #ASSUME_ALWAYS_YES  : NO
