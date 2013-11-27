@@ -1,5 +1,5 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: games/ftjava/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ftjava/Makefile 334423 2013-11-20 14:54:31Z danilo $
 
 PORTNAME=	ftjava
 PORTVERSION=	1.3
@@ -29,9 +29,7 @@ DATAFILES=	Images IncomingGames OutgoingGames Ships FTJava.jar \
 		mailapi.jar png.jar pop3.jar skeetutil.jar smtp.jar xerces.jar \
 		xercesImpl.jar xmlParserAPIs.jar
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	FTJava_Linux.html faq.html FTJava_Documentation.html
-.endif
 
 SUB_FILES=	ftjava.sh
 
@@ -40,17 +38,16 @@ DESKTOP_ENTRIES=	"FTJava" "A PBEM client for Full Thrust" \
 			"ftjava" "Game;BoardGame;StrategyGame;" \
 			false
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 do-install:
-	${MKDIR} ${DATADIR}
-	cd ${WRKSRC} && ${FIND} ${DATAFILES} -type d -exec ${MKDIR} ${DATADIR}/{} ";"
-	cd ${WRKSRC} && ${FIND} ${DATAFILES} -type f -exec ${INSTALL_DATA} {} ${DATADIR}/{} ";"
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${PREFIX}/bin/${PORTNAME:tl}
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${FIND} ${DATAFILES} -type d -exec ${MKDIR} ${STAGEDIR}${DATADIR}/{} ";"
+	cd ${WRKSRC} && ${FIND} ${DATAFILES} -type f -exec ${INSTALL_DATA} {} ${STAGEDIR}${DATADIR}/{} ";"
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME:tl}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${doc} ${DOCSDIR}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
