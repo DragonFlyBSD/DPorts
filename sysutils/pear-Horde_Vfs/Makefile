@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/pear-Horde_Vfs/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: sysutils/pear-Horde_Vfs/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Vfs
 PORTVERSION=	2.1.2
@@ -15,7 +15,6 @@ USE_HORDE_RUN=	Horde_Exception \
 OPTIONS_DEFINE=	FTP
 FTP_DESC=	Depend on FTP PHP extension
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MFTP}
