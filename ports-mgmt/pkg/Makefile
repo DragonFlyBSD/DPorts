@@ -1,8 +1,8 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 334645 2013-11-23 06:43:14Z eadler $
+# $FreeBSD: ports-mgmt/pkg/Makefile 334957 2013-11-26 17:39:40Z bapt $
 
 PORTNAME=	pkg
-DISTVERSION=	1.1.4
-PORTREVISION=	10
+DISTVERSION=	1.2
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://files.etoilebsd.net/pkg/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
@@ -77,7 +77,7 @@ pre-everything::
 PKG_DEPENDS=
 .undef INSTALLS_DEPENDS
 .if !exists(${LOCALBASE}/sbin/pkg)
-PKG_BIN=	${WRKSRC}/pkg-static/pkg-static
+PKG_BIN=	${WRKSRC}/pkg/pkg-static
 .endif
 .endif
 

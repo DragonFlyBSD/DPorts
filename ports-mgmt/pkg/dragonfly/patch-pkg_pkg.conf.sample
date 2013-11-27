@@ -1,30 +1,11 @@
---- pkg/pkg.conf.sample.orig	2013-04-30 21:56:12.000000000 +0000
+--- pkg/pkg.conf.sample.orig	2013-11-26 14:19:33.000000000 +0000
 +++ pkg/pkg.conf.sample
-@@ -2,11 +2,25 @@
- # For more information on the file format and
- # options please refer to the pkg.conf(5) man page
- 
-+# DragonFly (odd) development versions have a default ABI value set to the
-+# next future stable (even) version.
-+# The ABI directive allows to force the use of packages built for a different
-+# DragonFly version such as DragonFly 3.4 packages on DragonFly 3.5.
-+#ABI: dragonfly:3.4:x86:64
-+#ABI: dragonfly:3.4:x86:32
-+
-+# Default Dports package server (California)
-+PACKAGESITE: http://mirror-master.dragonflybsd.org/dports/${ABI}/LATEST
-+
-+# European mirrors
-+#PACKAGESITE: http://mirrors.ircam.fr/pub/DragonFlyBSD-dports/${ABI}/LATEST
-+#PACKAGESITE: http://pkg.wolfpond.org/${ABI}/LATEST
-+#PACKAGESITE: http://dfly.schlundtech.de/dports/${ABI}/LATEST
-+
+@@ -5,7 +5,7 @@
  # Configuration options
--PACKAGESITE	    : http://pkg.freebsd.org/${ABI}/latest
  #PKG_DBDIR	    : /var/db/pkg
  #PKG_CACHEDIR	    : /var/cache/pkg
 -#PORTSDIR	    : /usr/ports
 +#PORTSDIR	    : /usr/dports
  #PUBKEY		    : /etc/ssl/pkg.conf
- #HANDLE_RC_SCRIPTS   : NO
- #PKG_MULTIREPOS	    : NO
+ #HANDLE_RC_SCRIPTS  : NO
+ #ASSUME_ALWAYS_YES  : NO
