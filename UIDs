@@ -1,4 +1,4 @@
-# $FreeBSD: UIDs 334785 2013-11-24 20:08:15Z bsam $
+# $FreeBSD: UIDs 334915 2013-11-26 03:35:32Z amdmi3 $
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
@@ -271,4 +271,6 @@ plex:*:972:972::0:0:Plex Media Server:/nonexistent:/usr/sbin/nologin
 boinc:*:973:973::0:0:BOINC user:/var/db/boinc:/usr/sbin/nologin
 radicale:*:974:974::0:0:Radicale daemon:/nonexistent:/usr/sbin/nologin
 avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
+unifi:*:975:975::0:0:Unifi Wireless Controller:/nonexistent:/usr/sbin/nologin
+minetest:*:976:976::0:0:& server:/nonexistent:/usr/sbin/nologin
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin

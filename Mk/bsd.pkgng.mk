@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 332184 2013-10-30 22:13:56Z bdrewery $
+# $FreeBSD: Mk/bsd.pkgng.mk 334905 2013-11-25 22:49:29Z rakuco $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -96,7 +96,7 @@ create-manifest:
 		[ -f $$a ] && ${CAT} $$a >> ${METADIR}/+PRE_DEINSTALL ; \
 	done ; \
 	${RM} -f ${METADIR}/+POST_DEINSTALL ; \
-	for a in ${PKGPOSRDEINSTALL}; do \
+	for a in ${PKGPOSTDEINSTALL}; do \
 		[ -f $$a ] && ${CAT} $$a >> ${METADIR}/+POST_DEINSTALL ; \
 	done ; \
 	[ -f ${PKGPOSTDEINSTALL} ] && ${CP} ${PKGPOSTDEINSTALL} ${METADIR}/+POST_DEINSTALL; \
