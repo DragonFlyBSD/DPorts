@@ -1,8 +1,8 @@
 # Created by: markm
-# $FreeBSD: games/gnuchess/Makefile 333499 2013-11-11 13:32:44Z johans $
+# $FreeBSD: games/gnuchess/Makefile 334969 2013-11-26 20:37:47Z johans $
 
 PORTNAME=	gnuchess
-PORTVERSION=	6.1.0
+PORTVERSION=	6.1.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	chess
