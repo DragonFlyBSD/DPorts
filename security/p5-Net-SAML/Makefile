@@ -1,8 +1,7 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Net-SAML/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Net-SAML
-PORTVERSION=	1.11
-PORTREVISION=	1
+PORTVERSION=	1.16
 CATEGORIES=	security perl5
 MASTER_SITES=	http://zxid.org/ \
 		CPAN
@@ -18,17 +17,20 @@ LICENSE=	AL2
 LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
 		zxid:${PORTSDIR}/security/zxid
 
-USES=		perl5
+USES=		perl5 shebangfix
 USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${DISTNAME}/Net
 
+SHEBANG_FILES=	../zxid.pl ../zxidhlo.pl
+
 post-patch:
+	@${REINPLACE_CMD} -e 's|hexdump|my&|' ${WRKSRC}/../errmac.h
 	@${REINPLACE_CMD} -e 's|/apps/openssl/std|${LOCALBASE}|' ${WRKSRC}/Makefile.PL
 
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
-	cd ${WRKSRC}/../ && ${INSTALL_SCRIPT} zxid.pl zxidhlo.pl ${STAGEDIR}${EXAMPLESDIR}/
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/.. && ${INSTALL_SCRIPT} zxid.pl zxidhlo.pl ${STAGEDIR}${EXAMPLESDIR})
 .endif
 
 .include <bsd.port.mk>
