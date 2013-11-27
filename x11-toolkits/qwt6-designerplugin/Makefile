@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/qwt6-designerplugin/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: x11-toolkits/qwt6-designerplugin/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	qwt
 PORTVERSION=	6.1.0
@@ -12,7 +12,7 @@ COMMENT=	Qt Designer plugin for Qwt
 LIB_DEPENDS=	libqwt6.so:${PORTSDIR}/x11-toolkits/qwt6
 
 USES=		gmake qmake
-USE_QT4=	designer moc_build qmake_build rcc_build
+USE_QT4=	designer moc_build rcc_build
 USE_BZIP2=	yes
 QMAKE_ARGS+=	CONFIG+=QwtDesigner \
 		PLUGINDIR=${PREFIX}/${QT_PLUGINDIR_REL}
