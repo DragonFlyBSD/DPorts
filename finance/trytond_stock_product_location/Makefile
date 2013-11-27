@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_stock_product_location/Makefile 334207 2013-11-18 15:11:55Z bsam $
+# $FreeBSD: finance/trytond_stock_product_location/Makefile 334432 2013-11-20 17:20:57Z bsam $
 
 PORTNAME=	trytond_stock_product_location
 PORTVERSION=	2.4.0
@@ -15,7 +15,7 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 		trytond_product>=2.4.0:${PORTSDIR}/finance/trytond_product \
 		trytond_stock>=2.4.0:${PORTSDIR}/finance/trytond_stock
 
-CONFLICTS=	trytond_stock_product_location-2.[68].*
+CONFLICTS=	trytond28_stock_product_location-2.8.*
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
