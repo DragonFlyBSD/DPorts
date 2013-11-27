@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: mail/pear-Mail_mimeDecode/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pear-Mail_mimeDecode/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Mail_mimeDecode
 PORTVERSION=	1.5.5
@@ -18,7 +18,6 @@ LICENSE=	BSD
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
