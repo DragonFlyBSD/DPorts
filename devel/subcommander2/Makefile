@@ -1,5 +1,5 @@
 # Created by: Naram Qashat
-# $FreeBSD: devel/subcommander2/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/subcommander2/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	subcommander
 PORTVERSION=	2.0.0.b5.2
@@ -21,11 +21,11 @@ CONFLICTS=	subcommander-1.*
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R:S,.b,b,}p${PORTVERSION:E}
 
-USE_DOS2UNIX=	*.cpp *.h
+USES=		gmake dos2unix
+DOS2UNIX_GLOB=	*.cpp *.h
 USE_QT4=	corelib gui network qt3support moc_build rcc_build uic_build
 QT_NONSTANDARD=	yes
 USE_OPENSSL=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal automake autoheader autoconf
 ACLOCAL_ARGS=	-I ac-macros
 AUTOMAKE_ARGS=	--copy --force-missing --foreign
