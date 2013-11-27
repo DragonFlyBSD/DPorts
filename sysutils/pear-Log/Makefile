@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: sysutils/pear-Log/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pear-Log/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Log
 PORTVERSION=	1.12.7
@@ -21,7 +21,6 @@ PEAR_MDB2_DESC=	PEAR::MDB2 support
 PEAR_MAIL_DESC=	PEAR::Mail support
 PHP_SQLITE_DESC=	PHP sqlite support (php5 only)
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_DB}
