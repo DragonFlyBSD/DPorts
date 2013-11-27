@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: dns/p5-Tie-DNS/Makefile 333317 2013-11-09 18:48:36Z sunpoet $
+# $FreeBSD: dns/p5-Tie-DNS/Makefile 334568 2013-11-22 10:25:10Z sunpoet $
 
 PORTNAME=	Tie-DNS
-PORTVERSION=	1.132.260
+PORTVERSION=	1.133.260
 PORTEPOCH=	1
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
