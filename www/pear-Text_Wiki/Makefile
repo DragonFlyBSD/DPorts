@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: www/pear-Text_Wiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-Text_Wiki/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Text_Wiki
 PORTVERSION=	1.2.1
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
