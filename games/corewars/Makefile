@@ -1,4 +1,4 @@
-# $FreeBSD: games/corewars/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/corewars/Makefile 334390 2013-11-20 03:32:49Z danilo $
 
 PORTNAME=	corewars
 PORTVERSION=	0.9.13
@@ -18,19 +18,11 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 .if defined(.PARSEDIR)
-USE_GMAKE=	yes
+USES=		gmake
 .endif
-
-MAN6=		corewars.6
-MLINKS=		corewars.6 corewars-cmd.6
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
