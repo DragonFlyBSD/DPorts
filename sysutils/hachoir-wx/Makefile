@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/hachoir-wx/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: sysutils/hachoir-wx/Makefile 334329 2013-11-19 17:07:02Z lwhsu $
 
 PORTNAME=	hachoir-wx
 PORTVERSION=	0.3
@@ -18,5 +18,4 @@ WX_COMPS=	python
 WX_UNICODE=	yes
 USE_PYDISTUTILS=yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
