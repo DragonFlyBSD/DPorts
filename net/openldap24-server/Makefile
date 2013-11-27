@@ -1,8 +1,8 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 332436 2013-11-02 00:51:49Z delphij $
+# $FreeBSD: net/openldap24-server/Makefile 334449 2013-11-20 20:11:35Z delphij $
 
 PORTNAME=		openldap
-DISTVERSION=		2.4.37
+DISTVERSION=		2.4.38
 PORTREVISION=		${OPENLDAP_PORTREVISION}
 CATEGORIES=		net databases
 MASTER_SITES=		ftp://ftp.OpenLDAP.org/pub/OpenLDAP/%SUBDIR%/ \
