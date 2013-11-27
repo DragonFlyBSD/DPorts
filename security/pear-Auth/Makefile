@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: security/pear-Auth/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Auth/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Auth
 PORTVERSION=	1.6.4
@@ -28,7 +28,6 @@ PEAR_FILE_SMBPASSWD_DESC=	PEAR::File_SMBPasswd support
 PEAR_SOAP_DESC=	PEAR::SOAP support
 PEAR_NET_VPOPMAILD_DESC=	PEAR::Net_Vpopmaild support
 
-NO_STAGE=	yes
 post-extract:
 	@${REINPLACE_CMD} -e "s|@version@|${PORTVERSION}|" ${WRKSRC}/Auth.php
 
