@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-keyczar/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-keyczar/Makefile 334883 2013-11-25 19:11:29Z sunpoet $
 
 PORTNAME=	keyczar
 PORTVERSION=	0.71c
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>=2.0:${PORTSDIR}/security/py-pycryp
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	python-${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
