@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/smile/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: multimedia/smile/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	smile
 PORTVERSION=	1.0
@@ -16,7 +16,7 @@ RUN_DEPENDS=	sox>=14.0:${PORTSDIR}/audio/sox \
 		ImageMagick>=6.4:${PORTSDIR}/graphics/ImageMagick
 
 USES=		qmake
-USE_QT4=	qmake_build gui corelib rcc_build moc_build uic_build \
+USE_QT4=	gui corelib rcc_build moc_build uic_build \
 		opengl webkit
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
