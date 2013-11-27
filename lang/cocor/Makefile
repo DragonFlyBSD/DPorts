@@ -1,5 +1,5 @@
 # Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-# $FreeBSD: lang/cocor/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/cocor/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	cocor
 PORTVERSION=	1.7
@@ -16,7 +16,7 @@ COMMENT=	Compiler generator that combines the functionality of lex and yacc
 
 NO_WRKSUBDIR=	yes
 
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 MAKE_ENV=	CRFRAMES="${WRKSRC}/frames"
 MAKEFILE=	unix.mk
 ALL_TARGET=	all1
