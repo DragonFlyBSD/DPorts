@@ -1,4 +1,4 @@
-# $FreeBSD: security/pear-Horde_Share/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Horde_Share/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Share
 PORTVERSION=	2.0.4
@@ -16,7 +16,6 @@ USE_HORDE_RUN=	Horde_Db \
 		Horde_Url \
 		Horde_Util
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
