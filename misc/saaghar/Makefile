@@ -1,4 +1,4 @@
-# $FreeBSD: misc/saaghar/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/saaghar/Makefile 334586 2013-11-22 12:55:00Z makc $
 
 PORTNAME=	saaghar
 PORTVERSION=	1.0.94
@@ -17,17 +17,15 @@ LICENSE=	GPLv3
 
 EXTRACT_DEPENDS=	${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 
+USES=		qmake
 USE_QT4=	gui network sql xml sql-sqlite3_run \
-		moc_build qmake_build rcc_build uic_build
-HAS_CONFIGURE=	yes
-QMAKEFLAGS+=	PREFIX=${PREFIX}
+		moc_build rcc_build uic_build
 WRKSRC=		${WRKDIR}/Saaghar
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MDEBUG}
-QMAKEFLAGS+=	-config release
+QMAKE_ARGS+=	-config release
 .endif
 
 post-extract:
@@ -43,11 +41,7 @@ post-patch:
 		${WRKSRC}/QGanjoorDbStuff.h \
 		${WRKSRC}/mainwindow.cpp
 
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-	${QMAKE} ${QMAKEFLAGS} saaghar.pro
-
 post-install:
-	cd ${WRKDIR}/ganjoor && ${COPYTREE_SHARE} .  ${DATADIR}
+	cd ${WRKDIR}/ganjoor && ${COPYTREE_SHARE} .  ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
