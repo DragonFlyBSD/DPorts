@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Horde_Crypt/Makefile 334527 2013-11-21 21:55:54Z mm $
+# $FreeBSD: security/pear-Horde_Crypt/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Crypt
 PORTVERSION=	2.4.0
@@ -19,7 +19,6 @@ USE_HORDE_RUN=	Horde_Exception \
 		Horde_Util
 USE_PHP=	hash openssl
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MBCMATH}
