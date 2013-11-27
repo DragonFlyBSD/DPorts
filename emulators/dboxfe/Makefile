@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/dboxfe/Makefile 329880 2013-10-09 10:08:04Z makc $
+# $FreeBSD: emulators/dboxfe/Makefile 334497 2013-11-21 15:41:06Z makc $
 
 PORTNAME=	dboxfe
 PORTVERSION=	0.1.3
@@ -29,7 +29,7 @@ DESKTOP_ENTRIES=	"DBoxFE" "DOSBox configuration manager" \
 
 post-build:
 	@(cd ${WRKSRC}/dboxfetray && \
-		${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS} && \
+		${SETENV} ${QMAKE_ENV} ${QMAKE} ${QMAKE_ARGS} && \
 		${SETENV} ${MAKE_ENV} ${MAKE})
 
 do-install:
