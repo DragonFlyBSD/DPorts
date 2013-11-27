@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGLw/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: graphics/libGLw/Makefile 334975 2013-11-26 21:15:14Z kwm $
 
 PORTNAME=	libGLw
 PORTVERSION=	8.0.0
@@ -21,5 +21,7 @@ CONFIGURE_ARGS=	--disable-static --enable-motif
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libGLw.so.1
+
 .include <bsd.port.mk>
