@@ -1,9 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: print/texinfo/Makefile 329543 2013-10-06 09:22:36Z johans $
+# $FreeBSD: print/texinfo/Makefile 334961 2013-11-26 18:26:41Z johans $
 
 PORTNAME=	texinfo
-PORTVERSION=	5.2.20130926
-PORTREVISION=	1
+PORTVERSION=	5.2.20131109
 CATEGORIES=	print
 MASTER_SITES=	GNU \
 		ftp://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/
@@ -23,7 +22,7 @@ INSTALL_TARGET=	install install-tex
 PKGDEINSTALL=	${PKGINSTALL}
 USES+=		charsetfix gmake perl5
 
-MAKE_ARGS=	TEXMF=${PREFIX}/${TEXMF}
+MAKE_ARGS=	TEXMF=${PREFIX}/${TEXMF} PERL=${LOCALBASE}/bin/perl
 INFO=		${PORTNAME} info-stnd info
 
 TEXMF=		share/texmf
