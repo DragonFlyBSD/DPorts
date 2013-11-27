@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/qgo/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/qgo/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	qgo
 PORTVERSION=	2.s764
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_BZIP2=	yes
 USES=		desktop-file-utils qmake
-USE_QT4=	gui network qtestlib moc_build qmake_build rcc_build uic_build
+USE_QT4=	gui network qtestlib moc_build rcc_build uic_build
 
 PLIST_FILES=	bin/qgo share/applications/qgo.desktop share/pixmaps/qgo.png
 
