@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: textproc/pear-Horde_SpellChecker/Makefile 331093 2013-10-21 06:40:56Z mm $
+# $FreeBSD: textproc/pear-Horde_SpellChecker/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_SpellChecker
 PORTVERSION=	2.1.1
@@ -11,7 +11,6 @@ COMMENT=	Horde Spellcheck API
 USE_HORDE_RUN=	Horde_Exception \
 		Horde_Util
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
