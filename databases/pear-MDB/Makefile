@@ -1,5 +1,5 @@
 # Created by: Oleg Sharoiko <os@rsu.ru>
-# $FreeBSD: databases/pear-MDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pear-MDB/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	MDB
 PORTVERSION=	1.3.0
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
