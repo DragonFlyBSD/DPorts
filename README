@@ -31,6 +31,6 @@ the DPort, place it here, and commit the change.  Theoretically, every
 single DPort should build on DragonFly.
 
 Please report issues of and submit patches for DPorts here:
-https://github.com/jrmarino/DPorts/issues/
+https://github.com/DragonFlyBSD/DPorts/issues/
 
 This project was conceived and implemented by John Marino.
