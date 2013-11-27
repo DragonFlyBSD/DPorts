@@ -1,5 +1,5 @@
 # Created by: msmith@gsoft.com.au
-# $FreeBSD: lang/bwbasic/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/bwbasic/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	bwbasic
 PORTVERSION=	2.60
@@ -11,8 +11,8 @@ COMMENT=	The Bywater Basic interpreter
 
 NO_WRKSUBDIR=	yes
 
+USES=		dos2unix
 USE_ZIP=	yes
-USE_DOS2UNIX=	yes
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	CFLAGS="${CFLAGS} -ansi"
 ALL_TARGET=	${PORTNAME}
