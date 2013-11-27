@@ -1,4 +1,4 @@
-# $FreeBSD: databases/pear-Horde_Db/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pear-Horde_Db/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Db
 PORTVERSION=	2.0.4
@@ -18,7 +18,6 @@ USE_HORDE_RUN=	Horde_Date \
 		Horde_Exception \
 		Horde_Support
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
