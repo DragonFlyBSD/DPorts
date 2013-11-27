@@ -1,4 +1,4 @@
-# $FreeBSD: security/pear-Horde_Auth/Makefile 331093 2013-10-21 06:40:56Z mm $
+# $FreeBSD: security/pear-Horde_Auth/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Auth
 PORTVERSION=	2.1.1
@@ -10,7 +10,6 @@ COMMENT=	Horde Authentication API
 USE_HORDE_RUN=	Horde_Exception Horde_Util
 USE_PHP=	hash
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
