@@ -1,5 +1,5 @@
 # Created by: admin@mjbrune.org
-# $FreeBSD: editors/textroom/Makefile 330227 2013-10-13 13:03:03Z makc $
+# $FreeBSD: editors/textroom/Makefile 334499 2013-11-21 16:09:47Z makc $
 
 PORTNAME=	textroom
 PORTVERSION=	0.8.2
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libhunspell-1.3.so:${PORTSDIR}/textproc/hunspell \
 
 USES=		qmake shared-mime-info
 USE_SDL=	mixer
-USE_QT4=	moc_build qmake_build rcc_build uic_build corelib gui xml \
+USE_QT4=	moc_build rcc_build uic_build corelib gui xml \
 		svg opengl qt3support
 QMAKE_ARGS=	LOCALBASE=${LOCALBASE}
 
