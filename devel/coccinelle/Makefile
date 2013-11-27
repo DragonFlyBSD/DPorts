@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon
-# $FreeBSD: devel/coccinelle/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/coccinelle/Makefile 334959 2013-11-26 17:43:01Z mva $
 
 PORTNAME=	coccinelle
 DISTVERSION=	0.2.4rc5
@@ -23,5 +23,7 @@ NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|CAMLreturn0|return 0|' \
 		${WRKSRC}/pycaml/pycaml_ml.c
+	@${REINPLACE_CMD} 's|shell python|shell ${PYTHON_CMD}|' \
+		${WRKSRC}/pycaml/Makefile
 
 .include <bsd.port.mk>
