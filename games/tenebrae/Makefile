@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: games/tenebrae/Makefile 333475 2013-11-11 03:06:55Z danilo $
+# $FreeBSD: games/tenebrae/Makefile 334361 2013-11-19 23:08:44Z mat $
 
 PORTNAME=	tenebrae
 PORTVERSION=	1.04
@@ -14,9 +14,8 @@ COMMENT=	Quake engine with lighting similar to that in Doom III
 
 LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
-USES=		gmake
+USES=		gmake dos2unix
 USE_ZIP=	yes
-USE_DOS2UNIX=	yes
 USE_GL=		glu
 USE_SDL=	yes
 USE_XORG=	xxf86dga
