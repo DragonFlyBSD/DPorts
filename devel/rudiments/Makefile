@@ -1,8 +1,8 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rudiments/Makefile 332473 2013-11-02 12:38:47Z wg $
+# $FreeBSD: devel/rudiments/Makefile 334971 2013-11-26 20:42:34Z wg $
 
 PORTNAME=	rudiments
-PORTVERSION=	0.44
+PORTVERSION=	0.44.1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
