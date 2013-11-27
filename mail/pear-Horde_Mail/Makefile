@@ -1,4 +1,4 @@
-# $FreeBSD: mail/pear-Horde_Mail/Makefile 331093 2013-10-21 06:40:56Z mm $
+# $FreeBSD: mail/pear-Horde_Mail/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Mail
 PORTVERSION=	2.1.2
@@ -16,7 +16,6 @@ USE_HORDE_RUN=	Horde_Exception \
 # Optional but we want it
 RUN_DEPENDS+=	${PEARDIR}/Net/SMTP.php:${PORTSDIR}/net/pear-Net_SMTP
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
