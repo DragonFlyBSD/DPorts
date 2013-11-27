@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/awele/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/awele/Makefile 334320 2013-11-19 14:20:27Z gahr $
 
 PORTNAME=	awele
 PORTVERSION=	1.0
@@ -14,12 +14,8 @@ COMMENT=	African board game
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		imake
+USES=		imake tk
 USE_XORG=	x11
-USE_TCL_BUILD=	yes
-USE_TK_BUILD=	yes
-USE_TCL=	yes
-USE_TK=		yes
 
 MAN6=		xawele.6
 PLIST_FILES=	bin/awelewish bin/xawele
