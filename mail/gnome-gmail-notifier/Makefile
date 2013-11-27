@@ -1,17 +1,17 @@
-# $FreeBSD: mail/gnome-gmail-notifier/Makefile 332086 2013-10-30 08:19:57Z marino $
+# $FreeBSD: mail/gnome-gmail-notifier/Makefile 334698 2013-11-23 23:04:57Z kwm $
 
 PORTNAME=	gnome-gmail-notifier
 PORTVERSION=	0.10.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail deskutils
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gmail Inbox Monitor for the GNOME2 desktop
 
-LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
-		soup-2.4:${PORTSDIR}/devel/libsoup \
-		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
+LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
@@ -20,10 +20,8 @@ USE_GNOME=	glib20 gtk20 gconf2 libxml2 librsvg2
 USE_GSTREAMER=	good
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@DATADIRNAME@|share|' ${WRKSRC}/po/Makefile.in.in
 	@${REINPLACE_CMD} -e 's|<glib/gthread.h>|<glib.h>|g' ${WRKSRC}/src/main.h
-
 
 .include <bsd.port.mk>
