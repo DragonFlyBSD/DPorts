@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Horde_Secret/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Horde_Secret/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Secret
 PORTVERSION=	2.0.2
@@ -14,7 +14,6 @@ USE_HORDE_RUN=	Horde_Crypt_Blowfish \
 		
 USE_PHP=	hash
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
