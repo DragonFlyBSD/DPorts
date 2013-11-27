@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/pear-HTTP_Request2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-HTTP_Request2/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	HTTP_Request2
 PORTVERSION=	2.1.1
@@ -19,7 +19,6 @@ ZLI_DESC=	PECL ZLIB support
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
