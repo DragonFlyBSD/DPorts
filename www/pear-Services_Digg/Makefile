@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: www/pear-Services_Digg/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-Services_Digg/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Services_Digg
 PORTVERSION=	0.4.7
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	curl
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
