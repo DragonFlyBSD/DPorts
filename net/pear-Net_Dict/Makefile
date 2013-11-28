@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: net/pear-Net_Dict/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pear-Net_Dict/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Net_Dict
 PORTVERSION=	1.0.7
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket \
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
