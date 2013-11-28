@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: dns/dns_mre/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dns_mre/Makefile 334878 2013-11-25 18:17:16Z mat $
 
 PORTNAME=	dns_mre
 PORTVERSION=	1.0
@@ -15,11 +15,10 @@ NO_WRKSUBDIR=	Yes
 
 PLIST_FILES=	bin/dns_mre
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -Wall main.c dns_mre.c -o dns_mre
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dns_mre ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/dns_mre ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
