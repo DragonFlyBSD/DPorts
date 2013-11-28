@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid33/Makefile 333532 2013-11-11 20:29:45Z flo $
+# $FreeBSD: www/squid33/Makefile 334940 2013-11-26 14:57:45Z mat $
 
 PORTNAME=	squid
 PORTVERSION=	3.3.${SQUID_STABLE_VER}
@@ -106,6 +106,8 @@ WCCP_DESC=	Enable Web Cache Coordination Protocol
 
 OPTIONS_DEFAULT=	AUTH_KERB AUTH_NIS FS_AUFS HTCP IDENT KQUEUE \
 			SNMP WCCP WCCPV2
+
+ECAP_USES=		pkgconfig:build
 
 etc_files=	squid/cachemgr.conf.default \
 		squid/errorpage.css.default \
@@ -433,7 +435,6 @@ CONFIGURE_ARGS+=	--enable-ecap
 LIB_DEPENDS+=	ecap:${PORTSDIR}/www/libecap
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USES+=		pkgconfig:build
 .else
 CONFIGURE_ARGS+=	--disable-ecap
 .endif
