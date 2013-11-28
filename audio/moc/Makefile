@@ -1,9 +1,9 @@
 # Created by: Revis Zinkov <rzinkov@gmail.com>
-# $FreeBSD: audio/moc/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/moc/Makefile 334860 2013-11-25 16:11:53Z jadawin $
 
 PORTNAME=	moc
 PORTVERSION=	2.4.4
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.daper.net/pub/soft/moc/stable/
 
@@ -22,7 +22,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	JACK MP3 FFMPEG MUSEPACK VORBIS FLAC SNDFILE SPEEX SAMPLERATE CURL RCC
-OPTIONS_DEFAULT=	MP3 VORBIS CURL
+OPTIONS_DEFAULT=	MP3 VORBIS FLAC CURL
 CURL_DESC=	curl support (Internet streams)
 RCC_DESC=	RCC support
 
