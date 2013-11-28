@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xrubik/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: games/xrubik/Makefile 334918 2013-11-26 06:05:19Z dinoex $
 
 PORTNAME=	xrubik
 PORTVERSION=	5.5.2
@@ -11,18 +11,14 @@ MASTER_SITE_SUBDIR=	games/xpuzzles
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	X-based rubik's cube(tm)
 
-NO_STAGE=	yes
-
 WRKSRC=		${WRKDIR}/xrubik
 USES=		imake
 USE_XORG=	xt sm ice xext x11
 XFREE86_HTML_MAN=	no
-NO_INSTALL_MANPAGES=	yes
-MAN1=		xrubik.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xrubik ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/Rubik.ad ${PREFIX}/lib/X11/app-defaults/Rubik
-	${INSTALL_MAN} ${WRKSRC}/xrubik.man ${PREFIX}/man/man1/xrubik.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xrubik ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/Rubik.ad ${STAGEDIR}${PREFIX}/lib/X11/app-defaults/Rubik
+	${INSTALL_MAN} ${WRKSRC}/xrubik.man ${STAGEDIR}${PREFIX}/man/man1/xrubik.1
 
 .include <bsd.port.mk>
