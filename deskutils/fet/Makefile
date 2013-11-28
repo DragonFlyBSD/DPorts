@@ -1,5 +1,5 @@
 # Created by: Leinier Cruz Salfran <salfrancl@yahoo.es>
-# $FreeBSD: deskutils/fet/Makefile 331690 2013-10-26 13:51:21Z wg $
+# $FreeBSD: deskutils/fet/Makefile 334872 2013-11-25 18:00:55Z makc $
 
 PORTNAME=	fet
 PORTVERSION=	5.20.1
@@ -15,10 +15,10 @@ COMMENT=	Free timetabling software
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
+USES=		qmake
 USE_BZIP2=	yes
 USE_QT4=	gui network xml \
-		moc_build qmake_build rcc_build uic_build
-HAS_CONFIGURE=	yes
+		moc_build rcc_build uic_build
 
 PORTEXAMPLES=	*
 
@@ -37,10 +37,6 @@ OPTIONS_SUB=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/share/fet|${DATADIR}|g' \
 		${WRKSRC}/src/interface/fet.cpp
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} ${QMAKE_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fet ${STAGEDIR}${PREFIX}/bin
