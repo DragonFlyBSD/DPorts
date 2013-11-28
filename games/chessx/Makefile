@@ -1,4 +1,4 @@
-# $FreeBSD: games/chessx/Makefile 334686 2013-11-23 17:08:57Z makc $
+# $FreeBSD: games/chessx/Makefile 334863 2013-11-25 16:33:39Z makc $
 
 PORTNAME=	chessx
 DISTVERSION=	1-0-0
@@ -17,7 +17,6 @@ USE_QT4=	corelib gui svg xml network linguist_build \
 QMAKE_ARGS+=	QMAKE_LRELEASE=${LRELEASE}
 
 OPTIONS_DEFINE=	STOCKFISH CRAFTY
-OPTIONS_DEFAULT=	STOCKFISH CRAFTY
 
 STOCKFISH_DESC=	Install Stockfish Chess Engine
 STOCKFISH_RUN_DEPENDS=	stockfish:${PORTSDIR}/games/stockfish
