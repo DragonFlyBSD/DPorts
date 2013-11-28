@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: devel/py-gitosis/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-gitosis/Makefile 334938 2013-11-26 14:52:19Z sunpoet $
 
 PORTNAME=	gitosis
 PORTVERSION=	0.2.20090917
@@ -18,15 +18,14 @@ RUN_DEPENDS=	git:${PORTSDIR}/devel/git
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 USERS=		git
 GROUPS=		${USERS}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}
 
-NO_STAGE=	yes
 post-install:
-	${CHMOD} +x ${PYTHON_SITELIBDIR}/${PYEASYINSTALL_EGG}/gitosis/templates/admin/hooks/post-update
-	@${CAT} ${PKGMESSAGE}
+	${CHMOD} +x ${STAGEDIR}${PYTHON_SITELIBDIR}/${PYEASYINSTALL_EGG}/gitosis/templates/admin/hooks/post-update
 
 .include <bsd.port.mk>
