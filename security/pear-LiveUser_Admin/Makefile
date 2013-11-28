@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: security/pear-LiveUser_Admin/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-LiveUser_Admin/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	LiveUser_Admin
 PORTVERSION=	0.4.0
@@ -24,7 +24,6 @@ PEAR_CRYPT_RC4_DESC=	PEAR::Crypt_RC4 support
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_DB}
