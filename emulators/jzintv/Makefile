@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: emulators/jzintv/Makefile 332083 2013-10-30 07:18:50Z martymac $
+# $FreeBSD: emulators/jzintv/Makefile 335001 2013-11-27 07:19:41Z martymac $
 
 PORTNAME=	jzintv
 PORTVERSION=	1.0b4
@@ -59,12 +59,11 @@ do-install:
 .endif
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/doc
-	(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR}/doc)
+	(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/doc)
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR})
+	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 .endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
