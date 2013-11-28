@@ -1,5 +1,5 @@
 # Created by: kwm@FreeBSD.org
-# $FreeBSD: graphics/libglesv2/Makefile 328763 2013-09-30 00:29:03Z zeising $
+# $FreeBSD: graphics/libglesv2/Makefile 334972 2013-11-26 20:58:53Z kwm $
 
 PORTNAME=	libglesv2
 PORTVERSION=	${MESAVERSION}
@@ -20,7 +20,6 @@ USE_XORG+=	glproto dri2proto xext xdamage xfixes
 
 BUILD_WKRSRC=	${WRKSRC}/src/mapi/es2api
 INSTALL_WRKSRC=	${WRKSRC}/src/mapi/es2api
-NO_STAGE=	yes
 
 # this library doesn't exist in Mesa 7.6 so use newer
 WITH_NEW_XORG=yes
