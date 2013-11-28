@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: databases/phppgadmin/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: databases/phppgadmin/Makefile 334998 2013-11-27 06:09:40Z dinoex $
 
 PORTNAME=	phppgadmin
 PORTVERSION=	5.1
@@ -11,8 +11,6 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Web Based Postgres Administration
 
 LICENSE=	GPLv2
-
-NO_STAGE=	yes
 
 USE_BZIP2=	YES
 .if !defined(WITHOUT_PHP_DEPENDS)
@@ -34,17 +32,8 @@ do-configure:
 	${RM} -f ${WRKSRC}/conf/config.inc.php \
 		${WRKSRC}/conf/config.inc.php-dist.bak
 
-.include <bsd.port.pre.mk>
-
 do-install:
-	${MKDIR} ${PREFIX}/${PGADMDIR}
-	${RM} -f ${WRKSRC}/classes/database/Postgres81.php.orig
-	${CP} -Rp ${WRKSRC}/ ${PREFIX}/${PGADMDIR}/
-.if exists(${PREFIX}/${PGADMOLDDIR}/conf/config.inc.php)
-	${CP} -np ${PREFIX}/${PGADMOLDDIR}/conf/config.inc.php \
-		${PREFIX}/${PGADMDIR}/conf/config.inc.php || ${TRUE}
-.endif
-	${CP} -np ${PREFIX}/${PGADMDIR}/conf/config.inc.php-dist \
-		${PREFIX}/${PGADMDIR}/conf/config.inc.php || ${TRUE}
+	${MKDIR} ${STAGEDIR}${PREFIX}/${PGADMDIR}
+	${CP} -Rp ${WRKSRC}/ ${STAGEDIR}${PREFIX}/${PGADMDIR}/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
