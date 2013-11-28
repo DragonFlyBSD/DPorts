@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/pear-Net_Traceroute/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pear-Net_Traceroute/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Net_Traceroute
 PORTVERSION=	0.21.3
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
