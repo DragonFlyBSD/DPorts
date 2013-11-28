@@ -1,5 +1,5 @@
 # Created by: kwm@FreeBSD.org
-# $FreeBSD: graphics/libEGL/Makefile 328763 2013-09-30 00:29:03Z zeising $
+# $FreeBSD: graphics/libEGL/Makefile 334972 2013-11-26 20:58:53Z kwm $
 
 PORTNAME=	libEGL
 PORTVERSION=	${MESAVERSION}
@@ -20,8 +20,7 @@ USE_XORG+=	glproto dri2proto xext xdamage xfixes
 LIB_DEPENDS+=	libexpat.so:${PORTSDIR}/textproc/expat2 \
 		libdrm.so:${PORTSDIR}/graphics/libdrm
 
-NO_STAGE=	yes
-BUILD_WKRSRC=	${WRKSRC}/src/egl
+BUILD_WRKSRC=	${WRKSRC}/src/egl
 INSTALL_WRKSRC=	${WRKSRC}/src/egl
 
 WITH_NEW_XORG=	yes
