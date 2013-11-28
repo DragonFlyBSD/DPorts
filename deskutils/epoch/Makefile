@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: deskutils/epoch/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/epoch/Makefile 334873 2013-11-25 18:01:01Z makc $
 
 PORTNAME=	epoch
 PORTVERSION=	1.6
@@ -9,13 +9,14 @@ MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}${PORTVERSION}src
 
 MAINTAINER=	vg@FreeBSD.org
-COMMENT=	Epoch is small and handy timeline application
+COMMENT=	Small and handy timeline application
 
 LINCENSE=	GPLv3
 PROJECTHOST=	gepoch
 
+USES=		qmake
 USE_ZIP=	yes
-USE_QT4=	gui qmake_build moc_build rcc_build
+USE_QT4=	gui moc_build rcc_build
 
 PLIST_FILES=	bin/${PORTNAME} share/pixmaps/${PORTNAME}.png
 
@@ -23,14 +24,10 @@ WRKSRC=		${WRKDIR}
 
 DESKTOP_ENTRIES="Epoch" "Timeline application" \
 		"${PREFIX}/share/pixmaps/${PORTNAME}.png" "${PORTNAME}" \
-		"" false
-
-NO_STAGE=	yes
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QMAKE} ${QMAKEFLAGS}
+		"" true
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/epoch ${PREFIX}/bin
-	${INSTALL_DATA}	${WRKSRC}/images/epoha.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
+	${INSTALL_PROGRAM} ${WRKSRC}/epoch ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA}	${WRKSRC}/images/epoha.png ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
 
 .include <bsd.port.mk>
