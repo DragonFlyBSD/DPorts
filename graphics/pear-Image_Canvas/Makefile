@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: graphics/pear-Image_Canvas/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pear-Image_Canvas/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Image_Canvas
 PORTVERSION=	0.3.2
@@ -19,7 +19,6 @@ PEAR_AUTOINSTALL=	yes
 
 LATEST_LINK=	pear-Image_Canvas
 
-NO_STAGE=	yes
 post-patch:
 .for file in ${FILES}
 	@${REINPLACE_CMD} -e "s|@package_version@|${DISTVERSION}|" ${WRKSRC}/${file}
