@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: sysutils/pear-Horde_Log/Makefile 331093 2013-10-21 06:40:56Z mm $
+# $FreeBSD: sysutils/pear-Horde_Log/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Log
 PORTVERSION=	2.1.0
@@ -15,7 +15,6 @@ SCRIBE_DESC=	Enable scribe support
 USE_HORDE_RUN=	Horde_Constraint \
 		Horde_Exception
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MSCRIBE}
