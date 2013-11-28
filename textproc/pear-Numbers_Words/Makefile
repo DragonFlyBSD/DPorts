@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki (<meritus@innervision.pl>)
-# $FreeBSD: textproc/pear-Numbers_Words/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pear-Numbers_Words/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Numbers_Words
 PORTVERSION=	0.16.2
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
