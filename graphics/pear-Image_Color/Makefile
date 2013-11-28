@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: graphics/pear-Image_Color/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pear-Image_Color/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Image_Color
 PORTVERSION=	1.0.4
@@ -14,7 +14,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PHP=	gd
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
