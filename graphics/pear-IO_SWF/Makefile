@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/pear-IO_SWF/Makefile 329538 2013-10-06 08:40:20Z tota $
+# $FreeBSD: graphics/pear-IO_SWF/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	IO_SWF
 PORTVERSION=	2.2.4
@@ -21,7 +21,6 @@ USE_PHP=	yes
 PEAR_CHANNEL=	openpear
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
