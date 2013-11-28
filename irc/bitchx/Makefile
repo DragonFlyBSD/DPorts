@@ -1,5 +1,5 @@
 # Created by: Jimbo Bahooli <griffin@blackhole.iceworld.org>
-# $FreeBSD: irc/bitchx/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/bitchx/Makefile 334941 2013-11-26 14:59:40Z mat $
 
 PORTNAME=	BitchX
 DISTVERSION=	1.2-final
@@ -35,6 +35,7 @@ PLUGINS_DESC=	Build a handful of BitchX plugins
 OPTIONS_DEFAULT=PLUGINS SSL
 
 NO_STAGE=	yes
+MAKE_JOBS_UNSAFE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIPV6}
