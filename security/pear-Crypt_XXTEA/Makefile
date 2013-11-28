@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/pear-Crypt_XXTEA/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Crypt_XXTEA/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Crypt_XXTEA
 PORTVERSION=	0.9.0
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
