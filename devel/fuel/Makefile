@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <nukama@gmail.com>
-# $FreeBSD: devel/fuel/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/fuel/Makefile 334873 2013-11-25 18:01:01Z makc $
 
 PORTNAME=	fuel
 DISTVERSION=	0.9.6
@@ -13,18 +13,13 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	${LOCALBASE}/bin/fossil:${PORTSDIR}/devel/fossil
 
+USES=		qmake
 USE_QT4=	corelib gui \
-		qmake_build moc_build rcc_build uic_build
+		moc_build rcc_build uic_build
 
-HAS_CONFIGURE=	yes
-
-PLIST_FILES+=	bin/Fuel
-
-NO_STAGE=	yes
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS}
+PLIST_FILES=	bin/Fuel
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Fuel ${PREFIX}/bin/Fuel
+	${INSTALL_PROGRAM} ${WRKSRC}/Fuel ${STAGEDIR}${PREFIX}/bin/Fuel
 
 .include <bsd.port.mk>
