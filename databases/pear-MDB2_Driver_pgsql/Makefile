@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: databases/pear-MDB2_Driver_pgsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pear-MDB2_Driver_pgsql/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	MDB2_Driver_pgsql
 DISTVERSION=	1.5.0b4
@@ -16,7 +16,6 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 USE_PHP=	pgsql
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
