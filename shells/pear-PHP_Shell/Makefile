@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: shells/pear-PHP_Shell/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/pear-PHP_Shell/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	PHP_Shell
 PORTVERSION=	0.3.2
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
