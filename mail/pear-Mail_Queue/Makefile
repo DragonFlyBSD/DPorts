@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: mail/pear-Mail_Queue/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pear-Mail_Queue/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Mail_Queue
 PORTVERSION=	1.2.7
@@ -20,7 +20,6 @@ PEAR_DB_DESC=	PEAR::DB support
 PEAR_MDB_DESC=	PEAR::MDB support
 PEAR_MDB2_DESC=	PEAR::MDB2 support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_DB}
