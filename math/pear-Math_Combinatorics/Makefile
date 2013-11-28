@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: math/pear-Math_Combinatorics/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/pear-Math_Combinatorics/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Math_Combinatorics
 PORTVERSION=	1.0.0
@@ -14,7 +14,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
