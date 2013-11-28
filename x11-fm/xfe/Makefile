@@ -1,31 +1,40 @@
 # Created by: ptiJo
-# $FreeBSD: x11-fm/xfe/Makefile 329703 2013-10-07 13:15:43Z gahr $
+# $FreeBSD: x11-fm/xfe/Makefile 334946 2013-11-26 15:40:34Z gahr $
 
 PORTNAME=	xfe
-PORTVERSION=	1.35
-PORTREVISION=	1
+PORTVERSION=	1.37
 CATEGORIES=	x11-fm
 MASTER_SITES=	SF
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	Fast MS-Explorer like filemanager for X
+COMMENT=	Fast MS-Explorer like file manager for X
 
-LIB_DEPENDS=	FOX-1.6:${PORTSDIR}/x11-toolkits/fox16
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	libFOX-1.6.so:${PORTSDIR}/x11-toolkits/fox16
+
+OPTIONS_DEFINE=	NLS
 
 USE_XORG=	xft
-USE_GNOME=	gnomehack intltool
-USES=		gettext gmake
+USE_GNOME=	intltool
+USES=		gettext gmake pathfix
 GNU_CONFIGURE=	yes
-CFLAGS+=	-I${LOCALBASE}/include -g -O0
+CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
-MAN1=		xfe.1 xfi.1 xfp.1 xfv.1 xfw.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/local/share/xfe|${DATADIR}|g' \
 		${WRKSRC}/src/XFileExplorer.cpp \
 		${WRKSRC}/src/help.h \
 		${WRKSRC}/src/xfedefs.h
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MNLS}
+PLIST_SUB+=	NLS=""
+.else
+PLIST_SUB+=	NLS="@comment "
+CONFIGURE_ARGS+=--disable-nls
+.endif
 
 .include <bsd.port.mk>
