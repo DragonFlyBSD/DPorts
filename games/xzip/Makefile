@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/xzip/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: games/xzip/Makefile 334917 2013-11-26 05:46:38Z dinoex $
 
 PORTNAME=	xzip
 PORTVERSION=	1.8.2
@@ -14,13 +14,10 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	An Infocom game interpreter that runs under X11
 
-NO_STAGE=	yes
-
 USE_XORG=	x11
 WRKSRC=		${WRKDIR}/xzip
 ALL_TARGET=
 
-MAN1=		xzip.1
-PLIST_FILES=	bin/xzip
+PLIST_FILES=	bin/xzip man/man1/xzip.1.gz
 
 .include <bsd.port.mk>
