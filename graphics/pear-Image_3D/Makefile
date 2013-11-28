@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/pear-Image_3D/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pear-Image_3D/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Image_3D
 PORTVERSION=	0.4.2
@@ -17,7 +17,6 @@ LATEST_LINK=	pear-${PORTNAME}
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
