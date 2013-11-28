@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: sysutils/pear-File_Fstab/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pear-File_Fstab/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	File_Fstab
 PORTVERSION=	2.0.3
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 post-extract:
 .for file in ${FILES}
 	@${REINPLACE_CMD} -e "s|@package_version@|${PORTVERSION}|" ${WRKSRC}/File/${file}
