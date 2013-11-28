@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: textproc/pear-YAML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pear-YAML/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	YAML
 PORTVERSION=	1.0.6
@@ -19,7 +19,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 PEAR_CHANNEL=	symfony
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
