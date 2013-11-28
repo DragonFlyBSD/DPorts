@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/qt4pas/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/qt4pas/Makefile 334873 2013-11-25 18:01:01Z makc $
 
 PORTNAME=	qt4pas
 PORTVERSION=	2.5
@@ -12,12 +12,12 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Qt4 binding for FreePascal
 
 USE_LDCONFIG=	yes
-USE_QT4=	corelib gui network script webkit qmake_build \
+USE_QT4=	corelib gui network script webkit \
 		moc_build
+USES=		qmake
 
 QT4_VER_MIN=	4.5.3
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if  ${QT4_VERSION:S/.//g} < ${QT4_VER_MIN:S/.//g}
@@ -26,8 +26,5 @@ IGNORE=	Please update your current qt4 version to ${QT4_VER_MIN}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-mincoming-stack-boundary=2||g' ${WRKSRC}/Qt4Pas.pro
-
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS}
 
 .include <bsd.port.post.mk>
