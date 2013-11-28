@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: security/pear-Text_Password/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Text_Password/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Text_password
 PORTVERSION=	1.1.1
@@ -12,7 +12,6 @@ USE_PHP=	yes
 PEAR_AUTOINSTALL=	yes
 WRKSRC=		${WRKDIR}/Text_Password-${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
