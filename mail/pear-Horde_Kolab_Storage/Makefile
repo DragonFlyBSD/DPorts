@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: mail/pear-Horde_Kolab_Storage/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pear-Horde_Kolab_Storage/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Kolab_Storage
 PORTVERSION=	2.0.2
@@ -20,7 +20,6 @@ USE_HORDE_RUN=	Horde_Cache \
 USE_PHP+=	imap
 USE_HORDE_RUN+=	Horde_Imap_Client
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
