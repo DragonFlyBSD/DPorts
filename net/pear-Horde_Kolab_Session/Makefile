@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: net/pear-Horde_Kolab_Session/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pear-Horde_Kolab_Session/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Kolab_Session
 PORTVERSION=	2.0.1
@@ -14,7 +14,6 @@ USE_HORDE_RUN=	Horde_Exception
 USE_HORDE_RUN+=	Horde_Kolab_Server \
 		Horde_Log
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
