@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@FreeBSD.org>)
-# $FreeBSD: net/pear-SOAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pear-SOAP/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	SOAP
 PORTVERSION=	0.13.0
@@ -21,7 +21,6 @@ PEAR_NET_DIME_DESC=	PEAR::Net::DIME support
 
 PEAR_AUTOINSTALL=yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPEAR_MAIL}
