@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: www/pear-Services_W3C_CSSValidator/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-Services_W3C_CSSValidator/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Services_W3C_CSSValidator
 PORTVERSION=	0.2.3
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/HTTP/Request2.php:${PORTSDIR}/www/pear-HTTP_Request2
 
 PEAR_AUTOINSTALL=	YES
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
