@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/pear-XML_RPC2/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pear-XML_RPC2/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	XML_RPC2
 PORTVERSION=	1.1.1
@@ -19,7 +19,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear \
 PEAR_AUTOINSTALL=	yes
 USE_PHP=	curl
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
