@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/pear-PHP_UML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pear-PHP_UML/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	PHP_UML
 PORTVERSION=	1.6.1
@@ -16,7 +16,6 @@ PEAR_AUTOINSTALL=	yes
 DEFAULT_PHP_VER=	5
 USE_PHP=		spl xsl
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
