@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/rubygem-scruffy/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-scruffy/Makefile 334997 2013-11-27 05:58:14Z dinoex $
 
 PORTNAME=	scruffy
 PORTVERSION=	0.2.6
@@ -16,10 +16,9 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST= yes
 
-NO_STAGE=	yes
 post-install:
 	${REINPLACE_CMD} -e 's|#{options|0 0 #{options|' \
-		${PREFIX}/${GEM_LIB_DIR}/lib/scruffy/renderers/base.rb
-	grep options ${PREFIX}/${GEM_LIB_DIR}/lib/scruffy/renderers/base.rb
+		${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/lib/scruffy/renderers/base.rb
+	grep options ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/lib/scruffy/renderers/base.rb
 
 .include <bsd.port.mk>
