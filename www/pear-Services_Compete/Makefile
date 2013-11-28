@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: www/pear-Services_Compete/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-Services_Compete/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Services_Compete
 PORTVERSION=	0.1.0
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/HTTP/Request.php:${PORTSDIR}/www/pear-HTTP_Request
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
