@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: graphics/pear-Image_Barcode/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pear-Image_Barcode/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Image_Barcode
 PORTVERSION=	1.1.3
@@ -20,7 +20,6 @@ PEAR_PHP_COMPAT_DESC=	"PEAR::PHP_Compat support"
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPEAR_PHP_COMPAT}
