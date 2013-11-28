@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Auth_OpenID/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Auth_OpenID/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Auth_OpenID
 PORTVERSION=	2.1.3
@@ -31,7 +31,6 @@ USE_PHP=	curl dom
 USE_PYTHON_BUILD=	yes
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 EXTRACT_SUFX=	.tar.bz2
