@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: benchmarks/pear-Benchmark/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/pear-Benchmark/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Benchmark
 PORTVERSION=	1.2.9
@@ -14,7 +14,6 @@ RUN_DEPENDS:=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 USE_PHP=	bcmath
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
