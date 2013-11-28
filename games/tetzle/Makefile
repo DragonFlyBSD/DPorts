@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/tetzle/Makefile 330467 2013-10-16 00:59:26Z amdmi3 $
+# $FreeBSD: games/tetzle/Makefile 334911 2013-11-26 01:45:40Z makc $
 
 PORTNAME=	tetzle
 PORTVERSION=	2.0.2
@@ -11,16 +11,12 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Jigsaw puzzle with tetrominoes
 
+USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	corelib gui moc_build opengl qmake_build rcc_build xml
+USE_QT4=	corelib gui moc_build opengl rcc_build xml
 INSTALLS_ICONS=	yes
-DESTDIRNAME=	INSTALL_ROOT
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QMAKE} ${QMAKEFLAGS} \
-		PREFIX=${PREFIX} tetzle.pro
 
 post-install:
 	${CHMOD} ${BINMODE} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
