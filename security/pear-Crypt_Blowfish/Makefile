@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: security/pear-Crypt_Blowfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pear-Crypt_Blowfish/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Crypt_Blowfish
 PORTVERSION=	1.1.0.r2
@@ -18,7 +18,6 @@ PEAR_AUTOINSTALL=	yes
 USE_PHP=mcrypt
 .endif
 
-NO_STAGE=	yes
 pre-fetch:
 	@${ECHO_CMD} ""
 	@${ECHO_CMD} "You may set envirtonment variable WITH_PHP_MCRYPT to include"
