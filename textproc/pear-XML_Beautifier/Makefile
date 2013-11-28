@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: textproc/pear-XML_Beautifier/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pear-XML_Beautifier/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	XML_Beautifier
 PORTVERSION=	1.2.2
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PEARDIR}/XML/Parser.php:${PORTSDIR}/devel/pear-XML_Parser \
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
