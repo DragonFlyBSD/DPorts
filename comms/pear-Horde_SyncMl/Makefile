@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/pear-Horde_SyncMl/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/pear-Horde_SyncMl/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_SyncMl
 PORTVERSION=	2.0.3
@@ -20,7 +20,6 @@ USE_HORDE_RUN=	Horde_Date \
 USE_HORDE_RUN+= Horde_Auth \
 		Horde_Core
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
