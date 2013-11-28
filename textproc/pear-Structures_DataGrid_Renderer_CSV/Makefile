@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/pear-Structures_DataGrid_Renderer_CSV/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pear-Structures_DataGrid_Renderer_CSV/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Structures_DataGrid_Renderer_CSV
 PORTVERSION=	0.1.4
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/Structures/DataGrid/DataSource/Array.php:${PORTSDIR}/dat
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
