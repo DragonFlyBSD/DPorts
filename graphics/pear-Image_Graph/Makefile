@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: graphics/pear-Image_Graph/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pear-Image_Graph/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Image_Graph
 PORTVERSION=	0.8.0
@@ -20,7 +20,6 @@ DEFAULT_PHP_VER=	5
 
 LATEST_LINK=	pear-Image_Graph
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 post-patch:
 # don't modify images
