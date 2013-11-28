@@ -1,5 +1,5 @@
 # Created by: dwhite@FreeBSD.org
-# $FreeBSD: devel/py-kqueue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-kqueue/Makefile 334881 2013-11-25 18:44:35Z mva $
 
 PORTNAME=		kqueue
 PORTVERSION=		1.4
@@ -23,7 +23,9 @@ NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's,@DEFS@,,' ${WRKSRC}/Makefile.pre.in
+	@${REINPLACE_CMD} -e 's,@DEFS@,,' \
+		-e 's,^PYTHON=\(.*\)python,PYTHON=\1${PYTHON_CMD},' \
+		${WRKSRC}/Makefile.pre.in
 
 do-configure:
 	@(cd ${WRKSRC} && \
