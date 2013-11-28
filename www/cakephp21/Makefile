@@ -1,18 +1,17 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp21/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cakephp21/Makefile 334880 2013-11-25 18:31:39Z sunpoet $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.1.3
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/tarball/${PORTVERSION}/
+PKGNAMESUFFIX=	21
 DISTNAME=	${PORTNAME}-${PORTNAME}-${PORTVERSION}-${GITVERSION}
 
 MAINTAINER=	theis@gmx.at
-COMMENT=	A framework for developing PHP web applications
+COMMENT=	Framework for developing PHP web applications
 
 LICENSE=	MIT
-
-LATEST_LINK=	cakephp21
 
 GITVERSION=	0-gc26df70
 FETCH_ARGS=	-pRr
