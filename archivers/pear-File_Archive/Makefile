@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: archivers/pear-File_Archive/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/pear-File_Archive/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	File_Archive
 PORTVERSION=	1.5.5
@@ -13,7 +13,6 @@ BUILD_DEPENDS=	${PEARDIR}/MIME/Type.php:${PORTSDIR}/mail/pear-MIME_Type \
 RUN_DEPENDS=	${PEARDIR}/MIME/Type.php:${PORTSDIR}/mail/pear-MIME_Type \
 		${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
-NO_STAGE=	yes
 USE_PHP=	bz2 pcre zlib
 LATEST_LINK=	pear-${PORTNAME}
 
