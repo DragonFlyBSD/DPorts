@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: www/pear-HTTP_FloodControl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pear-HTTP_FloodControl/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	HTTP_FloodControl
 PORTVERSION=	0.1.1
@@ -20,7 +20,6 @@ PEAR_MDB2_DESC=	PEAR::MDB2 support
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 post-extract:
 	${MKDIR} ${WRKSRC}/docs
 	${MV} ${WRKSRC}/README ${WRKSRC}/LICENSE ${WRKSRC}/docs
