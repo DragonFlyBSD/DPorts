@@ -1,4 +1,4 @@
-# $FreeBSD: games/cutemaze/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/cutemaze/Makefile 334951 2013-11-26 16:15:05Z makc $
 
 PORTNAME=	cutemaze
 PORTVERSION=	1.1.0
@@ -14,18 +14,16 @@ LICENSE=	GPLv3
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+USES=		qmake
 USE_BZIP2=	yes
-USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats
+USE_QT4=	moc_build rcc_build uic_build iconengines_run imageformats_run \
+		corelib gui svg
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	ChangeLog README
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX} ${WRKSRC}/${PORTNAME}.pro
 
 post-install:
 # Icons
