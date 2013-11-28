@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: www/dtse/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/dtse/Makefile 334949 2013-11-26 15:45:50Z sunpoet $
 
 PORTNAME=	dtse
 PORTVERSION=	1.3
@@ -20,9 +20,8 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-openssl=${OPENSSLBASE}
 .endif
 
-USES=		perl5
+USES=		gmake perl5
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal:env automake:env autoconf:env
 
 HAS_CONFIGURE=	yes
@@ -32,7 +31,6 @@ MAKEFILE=	GNUmakefile
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-NO_STAGE=	yes
 pre-configure:
 	cd ${WRKSRC}; ${SH} autogen.sh
 
