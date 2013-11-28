@@ -1,5 +1,5 @@
 # Created by: Mark Huizer <xaa+ports@timewasters.nl>
-# $FreeBSD: games/pear-Games_Chess/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pear-Games_Chess/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Games_Chess
 PORTVERSION=	1.0.1
@@ -13,7 +13,6 @@ RUN_DEPENDS=	${PEARDIR}/PEAR.php:${PORTSDIR}/devel/pear
 
 PEAR_AUTOINSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear/bsd.pear.mk"
 .include <bsd.port.post.mk>
