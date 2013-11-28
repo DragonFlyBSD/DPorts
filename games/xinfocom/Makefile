@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/xinfocom/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: games/xinfocom/Makefile 334918 2013-11-26 06:05:19Z dinoex $
 
 PORTNAME=	xinfocom
 PORTVERSION=	1.8m
@@ -13,8 +13,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	An Infocom game interpreter for X11
-
-NO_STAGE=	yes
 
 USES=		imake
 USE_XORG=	xt sm ice xext x11
