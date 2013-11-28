@@ -1,5 +1,5 @@
 # Created by: Aren Tyr <aren.tyr@gawab.com>
-# $FreeBSD: deskutils/cdcat/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD: deskutils/cdcat/Makefile 334952 2013-11-26 16:17:43Z makc $
 
 PORTNAME=	cdcat
 PORTVERSION=	2.1
@@ -44,7 +44,7 @@ QMAKE_ARGS+=	INCLUDEPATH+="${L7Z_WRKSRC}/Lib7Zip" \
 		DEFINES+="MEDIAINFO_STATIC" \
 		DEFINES+="MEDIAINFO_UNICODE" \
 		DEFINES+="USE_LIBEXIF"
-QMAKE_PRO=	${PORTNAME}.pro
+QMAKE_SOURCE_PATH=	${BUILD_WRKSRC}/cdcat.pro
 
 # spoof tinderbox: build deps for multimedia/mediainfo
 USE_AUTOTOOLS=	autoconf:env automake:env libtool:env
@@ -76,7 +76,7 @@ post-extract:
 
 post-patch:
 	@${REINPLACE_CMD} -e \
-		'/LIBS/s|^|#|' ${BUILD_WRKSRC}/${QMAKE_PRO}
+		'/LIBS/s|^|#|' ${BUILD_WRKSRC}/cdcat.pro
 	@${REINPLACE_CMD} -e \
 		's|/dev/sr0|/dev/cd0|' ${BUILD_WRKSRC}/config.cpp
 	@${REINPLACE_CMD} -e \
@@ -87,7 +87,7 @@ pre-configure:
 		CC="${CC}" CFLAGS="${CFLAGS}" \
 		CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
 		P7ZIP_SOURCE_DIR="${P7Z_WRKSRC}"
-	@${LRELEASE} ${BUILD_WRKSRC}/${QMAKE_PRO}
+	@${LRELEASE} ${BUILD_WRKSRC}/cdcat.pro
 
 pre-build:
 	@cd ${L7Z_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} \
