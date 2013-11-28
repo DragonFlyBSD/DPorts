@@ -1,5 +1,5 @@
 # Created by: David Johnson <david@usermode.org>
-# $FreeBSD: misc/qbrew/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/qbrew/Makefile 334931 2013-11-26 13:27:45Z makc $
 
 PORTNAME=	qbrew
 PORTVERSION=	0.4.1
@@ -8,28 +8,18 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.usermode.org/code/
 
 MAINTAINER=	david@usermode.org
-COMMENT=	A homebrewer's recipe calculator
+COMMENT=	Homebrewer's recipe calculator
 
-USE_QT4=	qmake_build moc_build uic_build rcc_build xml gui
+USES=		qmake
+USE_QT4=	moc_build uic_build rcc_build xml gui
 PORTDOCS=	*
-HAS_CONFIGURE=	yes
 
-CONFIGURE_ENV+=	BINDIR="${PREFIX}/bin" \
+QMAKE_ARGS=	CONFIG+="configure"
+QMAKE_ENV+=	BINDIR="${PREFIX}/bin" \
 		DATADIR="${DATADIR}" \
 		DOCDIR="${DOCSDIR}"
 
-NO_STAGE=	yes
-pre-configure:
-.if defined(NOPORTDOCS)
-	@${REINPLACE_CMD} -e '/INSTALLS/s|doc||' \
-		${WRKSRC}/qbrew.pro
-.endif
-
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} -unix CONFIG+="configure" qbrew.pro
-
 post-install:
-	${STRIP_CMD} ${PREFIX}/bin/qbrew
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/qbrew
 
 .include <bsd.port.mk>
