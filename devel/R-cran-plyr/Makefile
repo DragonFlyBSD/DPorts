@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-plyr/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: devel/R-cran-plyr/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	plyr
 PORTVERSION=	1.8
@@ -16,5 +16,4 @@ RUN_DEPENDS=	R-cran-itertools>0:${PORTSDIR}/devel/R-cran-itertools \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
