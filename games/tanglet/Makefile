@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/tanglet/Makefile 334602 2013-11-22 18:48:31Z makc $
+# $FreeBSD: games/tanglet/Makefile 335022 2013-11-27 15:08:16Z nemysis $
 
 PORTNAME=	tanglet
 PORTVERSION=	1.2.2
@@ -21,7 +21,8 @@ INSTALLS_ICONS=	yes
 
 PORTDOCS=	CREDITS ChangeLog NEWS
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -29,11 +30,10 @@ post-patch:
 		${WRKSRC}/tanglet.pro
 
 post-install:
-	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png ${PREFIX}/share/pixmaps/
+	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png \
+		    ${STAGEDIR}${PREFIX}/share/pixmaps/
 
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
