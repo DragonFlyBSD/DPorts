@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: devel/piklab/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/piklab/Makefile 335107 2013-11-28 16:49:31Z mat $
 
 PORTNAME=	piklab
 PORTVERSION=	0.16.2
@@ -15,10 +15,10 @@ OPTIONS_DEFINE=	KDE4
 OPTIONS_DEFAULT=KDE4
 
 USE_BZIP2=	yes
-USE_DOS2UNIX=	Piklab.cmake
+DOS2UNIX_FILES=	cmake/Piklab.cmake
 USE_QT4=	corelib gui qt3support qtestlib xml \
 		moc_build qmake_build rcc_build uic_build
-USES=		cmake gettext readline
+USES=		cmake gettext readline dos2unix
 
 MAN1=		piklab-hex.1 piklab-prog.1
 
