@@ -1,8 +1,8 @@
 # Created by: scrappy
-# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 333843 2013-11-15 10:42:20Z jadawin $
+# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 335009 2013-11-27 12:35:47Z jadawin $
 
 PORTNAME=	IO-Socket-SSL
-PORTVERSION=	1.960
+PORTVERSION=	1.961
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SULLR
