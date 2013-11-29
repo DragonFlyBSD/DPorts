@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: security/py-twistedConch/Makefile 333926 2013-11-15 20:53:19Z sunpoet $
+# $FreeBSD: security/py-twistedConch/Makefile 335106 2013-11-28 16:08:33Z lwhsu $
 
 PORTNAME=	twistedConch
 PORTVERSION=	13.2.0
@@ -18,7 +18,6 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twistedCore>=${PORTVERSION}:${PORTSDIR}/de
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0.0.9a:${PORTSDIR}/devel/py-asn1 \
 		${PYTHON_PKGNAMEPREFIX}twistedCore>=${PORTVERSION}:${PORTSDIR}/devel/py-twistedCore
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
