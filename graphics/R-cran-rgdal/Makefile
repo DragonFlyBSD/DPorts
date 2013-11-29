@@ -1,9 +1,9 @@
+NO_STAGE=	yes
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-rgdal/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: graphics/R-cran-rgdal/Makefile 335055 2013-11-27 20:42:14Z tota $
 
 PORTNAME=	rgdal
-DISTVERSION=	0.8-11
-PORTREVISION=	2
+DISTVERSION=	0.8-13
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -22,5 +22,4 @@ R_MOD_AUTOPLIST=	yes
 
 R_POSTCMD_INSTALL_OPTIONS+=	--configure-args="--with-proj-lib=${LOCALBASE}/lib"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
