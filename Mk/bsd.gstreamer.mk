@@ -5,7 +5,7 @@
 #
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.gstreamer.mk 334511 2013-11-21 19:06:50Z kwm $
+# $FreeBSD: Mk/bsd.gstreamer.mk 335124 2013-11-28 21:57:01Z kwm $
 #    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.56 2013/01/15 21:43:45 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
@@ -90,7 +90,7 @@ _GSTREAMER_PLUGINS+= \
 .if defined(USE_GSTREAMER1)
 _GSTREAMER_PLUGINS+= \
 		assrender curl dvdread kate libav modplug openjpeg png rtmp \
-		spandsp vpx webp x ximagesrc zbar
+		spandsp vaapi vpx webp x ximagesrc zbar
 .endif
 
 # other plugins
@@ -299,6 +299,8 @@ qt4_GST_PREFIX=	gstreamer-
 rtmp_DEPENDS=	multimedia/gstreamer1-plugins-rtmp
 
 v4l2_DEPENDS=	multimedia/gstreamer-plugins-v4l2
+
+vaapi_DEPENDS=	multimedia/gstreamer-plugins-vaapi
 
 vp8_DEPENDS=	multimedia/gstreamer-plugins-vp8
 

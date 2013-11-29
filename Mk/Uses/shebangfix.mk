@@ -1,25 +1,30 @@
-# $FreeBSD: Mk/Uses/shebangfix.mk 334392 2013-11-20 07:29:08Z bapt $
+# $FreeBSD: Mk/Uses/shebangfix.mk 335130 2013-11-28 23:57:53Z gerald $
 #
-# common templates for replacing #! interpreters in scripts file
+# Replace #! interpreters in scripts by what we actually have.
+#
+# Standard templates for bash, perl, python,... are included out of
+# the box, others can easily be added per port.
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
 # Feature:	shebangfix
 # Usage:	USES=shebangfix
 #
-# To define that the file to modify are: ${WRKSRC}/path1/file and all the .pl files in ${WRKSRC}/path2:
+# To specify that ${WRKSRC}/path1/file and all .pl files in ${WRKSRC}/path2
+# should be processed:
 #
-# SHEBANG_FILES=	path1/file path2/*.pl
+#   SHEBANG_FILES=	path1/file path2/*.pl
 #
-# To define new shebang scheme, in the port Makefile add:
+# To define a new shebang scheme add the following to the port Makefile:
 #
-# SHEBANG_LANG=	lua
-# lua_OLD_CMD=	/usr/bin/lua
-# lua_CMD=	${LOCALBASE}/bin/lua
+#   SHEBANG_LANG=	lua
+#   lua_OLD_CMD=	/usr/bin/lua
+#   lua_CMD=	${LOCALBASE}/bin/lua
 #
-# To override a definition for example replacing /usr/bin/perl by /usr/bin/env perl
-# add to the port Makefile:
-# perl_CMD=	${SETENV} perl
+# To override a definition, for example replacing /usr/bin/perl by
+# /usr/bin/env perl, add the following:
+#
+#   perl_CMD=	${SETENV} perl
 #
 
 .if !defined(_INCLUDE_USES_SHEBANGFIX_Mk)
