@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-gtools/Makefile 334642 2013-11-23 06:04:02Z tota $
+# $FreeBSD: devel/R-cran-gtools/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	gtools
 PORTVERSION=	3.1.1
@@ -14,5 +14,4 @@ LICENSE=	LGPL21
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
