@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/R-cran-XML/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: textproc/R-cran-XML/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	XML
 DISTVERSION=	3.98-1.1
@@ -16,5 +16,4 @@ USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 USE_GNOME=	libxml2
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
