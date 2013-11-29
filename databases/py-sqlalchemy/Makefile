@@ -1,12 +1,12 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy/Makefile 334676 2013-11-23 15:18:03Z nivit $
+# $FreeBSD: databases/py-sqlalchemy/Makefile 335129 2013-11-28 23:27:04Z nivit $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.7.10
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-PKGNAMESUFFIX=	07
 DISTNAME=	SQLAlchemy-${DISTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
