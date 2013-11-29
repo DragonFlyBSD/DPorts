@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-quantmod/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: finance/R-cran-quantmod/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	quantmod
 DISTVERSION=	0.4-0
@@ -20,5 +20,4 @@ RUN_DEPENDS=	R-cran-Defaults>0:${PORTSDIR}/devel/R-cran-Defaults \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
