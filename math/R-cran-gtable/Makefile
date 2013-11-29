@@ -1,4 +1,4 @@
-# $FreeBSD: math/R-cran-gtable/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-gtable/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	gtable
 PORTVERSION=	0.1.2
@@ -14,5 +14,4 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
