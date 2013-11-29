@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-caTools/Makefile 334635 2013-11-23 06:00:41Z tota $
+# $FreeBSD: devel/R-cran-caTools/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	caTools
 PORTVERSION=	1.16
@@ -16,5 +16,4 @@ RUN_DEPENDS=	R-cran-bitops>0:${PORTSDIR}/devel/R-cran-bitops
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
