@@ -1,8 +1,9 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: net/boinc-client/Makefile 334277 2013-11-19 00:16:49Z rene $
+# $FreeBSD: net/boinc-client/Makefile 335024 2013-11-27 15:23:49Z rene $
 
 PORTNAME=	boinc-client
 PORTVERSION=	7.2.28
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://rene-ladan.nl/pub/distfiles/
 
@@ -14,7 +15,7 @@ USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf:env automake:env libtoolize:env
 USE_LDCONFIG=	yes
-DOS2UNIX_REGEX=	.*\.xpm
+DOS2UNIX_GLOB=	*.xpm
 
 USERS=		boinc
 GROUPS=		boinc
@@ -154,8 +155,8 @@ post-install:
 	${COPYTREE_SHARE} Default ${STAGEDIR}${PREFIX}/share/boinc/skins/ )
 . endif
 .endif
-. for name in config.h project_specific_defines.h api/reduce.h lib/shmem.h \
-	lib/std_fixes.h
+. for name in config.h project_specific_defines.h api/reduce.h \
+	lib/opencl_boinc.h lib/shmem.h lib/std_fixes.h
 	${INSTALL_DATA} ${WRKSRC}/${name} ${STAGEDIR}${PREFIX}/include/boinc
 . endfor
 .if ${PORT_OPTIONS:MX11}
