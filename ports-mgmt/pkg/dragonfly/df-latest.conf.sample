@@ -12,15 +12,15 @@ Avalon: {
 
 IRCAM: {
 	url		: http://mirrors.ircam.fr/pub/DragonFlyBSD-dports/${ABI}/LATEST,
-	enabled		: yes
+	enabled		: no
 }
 
 SchlundTech: {
 	url		: http://dfly.schlundtech.de/dports/${ABI}/LATEST,
-	enabled		: yes
+	enabled		: no
 }
 
 Wolfpond: {
 	url		: http://pkg.wolfpond.org/${ABI}/LATEST,
-	enabled		: yes
+	enabled		: no
 }
