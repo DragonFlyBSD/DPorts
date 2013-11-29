@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-paver/Makefile 328313 2013-09-25 20:19:42Z wg $
+# $FreeBSD: devel/py-paver/Makefile 335069 2013-11-27 22:11:46Z wg $
 
 PORTNAME=	paver
 PORTVERSION=	1.2.1
@@ -11,13 +11,11 @@ DISTNAME=	Paver-${PORTVERSION}
 MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Easy build, distribution and deployment scripting
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distribute>=0:${PORTSDIR}/devel/py-distribute
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:${PORTSDIR}/devel/py-setuptools
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Paver
-PYDISTUTILS_NOEGGINFO=	yes
-
-PLIST_SUB=	PYDISTUTILS_EGGINFO=${PYDISTUTILS_EGGINFO}
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
