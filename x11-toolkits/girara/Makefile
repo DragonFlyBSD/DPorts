@@ -1,15 +1,15 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: x11-toolkits/girara/Makefile 329939 2013-10-09 23:14:35Z madpilot $
+# $FreeBSD: x11-toolkits/girara/Makefile 335121 2013-11-28 21:08:38Z madpilot $
 
 PORTNAME=	girara
-PORTVERSION=	0.1.7
+PORTVERSION=	0.1.9
 CATEGORIES=	x11-toolkits graphics
 MASTER_SITES=	http://pwmt.org/projects/girara/download/
 
 MAINTAINER=	madpilot@FreeBSD.org
-COMMENT=	GTK2 Interface Library for Zathura PDF Viewer
+COMMENT=	GTK3 Interface Library for Zathura PDF Viewer
 
-USE_GNOME=	glib20 gtk20
+USE_GNOME=	glib20 gtk30
 USES=		compiler:c11 gmake pkgconfig
 USE_LDCONFIG=	yes
 LIBDIR=		${PREFIX}/lib
