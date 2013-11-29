@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ftp/R-cran-RCurl/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: ftp/R-cran-RCurl/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	RCurl
 DISTVERSION=	1.95-4.1
@@ -19,5 +19,4 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
