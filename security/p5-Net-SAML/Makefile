@@ -1,7 +1,7 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD: security/p5-Net-SAML/Makefile 335032 2013-11-27 16:39:43Z sunpoet $
 
 PORTNAME=	Net-SAML
-PORTVERSION=	1.16
+PORTVERSION=	1.18
 CATEGORIES=	security perl5
 MASTER_SITES=	http://zxid.org/ \
 		CPAN
@@ -14,8 +14,10 @@ COMMENT=	Perl extension for using SAML SSO
 
 LICENSE=	AL2
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		zxid:${PORTSDIR}/security/zxid
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libzxid.so:${PORTSDIR}/security/zxid
+
+OPTIONS_DEFINE=	EXAMPLES
 
 USES=		perl5 shebangfix
 USE_PERL5=	configure
@@ -28,9 +30,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/apps/openssl/std|${LOCALBASE}|' ${WRKSRC}/Makefile.PL
 
 post-install:
-.if !defined(NOPORTEXAMPLES)
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	(cd ${WRKSRC}/.. && ${INSTALL_SCRIPT} zxid.pl zxidhlo.pl ${STAGEDIR}${EXAMPLESDIR})
-.endif
+	(cd ${WRKSRC}/ && ${INSTALL_SCRIPT} ../zxid.pl ../zxidhlo.pl ${STAGEDIR}${EXAMPLESDIR})
 
 .include <bsd.port.mk>
