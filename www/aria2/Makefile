@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 333852 2013-11-15 11:03:50Z sunpoet $
+# $FreeBSD: www/aria2/Makefile 335062 2013-11-27 21:25:32Z sunpoet $
 
 PORTNAME=	aria2
 PORTVERSION=	1.18.1
@@ -30,7 +30,7 @@ USE_CXXSTD=	c++11
 USE_GNOME=	libxml2
 USE_OPENSSL=	yes
 USE_XZ=		yes
-USES=		compiler:c++11-lang pathfix pkgconfig
+USES=		compiler:c++11-lib pathfix pkgconfig
 
 CA_BUNDLE_CONFIGURE_OFF=--without-ca-bundle
 CA_BUNDLE_CONFIGURE_ON=	--with-ca-bundle=${LOCALBASE}/share/certs/ca-root-nss.crt
@@ -45,6 +45,10 @@ SQLITE_USE=		SQLITE=yes
 ARIA2_DISK_CACHE?=	16M
 
 .include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1000500 && !exists(/usr/lib/libc++.so)
+BROKEN=		Build with clang and libc++ only
+.endif
 
 .if ${ARCH} == "powerpc" && ${OSVERSION} > 900000
 BROKEN=		Does not install on powerpc-9
