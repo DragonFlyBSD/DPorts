@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: security/R-cran-digest/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: security/R-cran-digest/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	digest
 PORTVERSION=	0.6.3
@@ -15,5 +15,4 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
