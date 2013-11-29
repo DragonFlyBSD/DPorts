@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: security/R-cran-ROAuth/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: security/R-cran-ROAuth/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	ROAuth
 PORTVERSION=	0.9.3
@@ -18,5 +18,4 @@ RUN_DEPENDS=	R-cran-RCurl>=1.6.4:${PORTSDIR}/ftp/R-cran-RCurl \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
