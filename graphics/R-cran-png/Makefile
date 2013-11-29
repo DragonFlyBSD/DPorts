@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-png/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: graphics/R-cran-png/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	png
 DISTVERSION=	0.1-6
@@ -18,5 +18,4 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
