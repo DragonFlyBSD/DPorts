@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Validator/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
+# $FreeBSD: devel/p5-Data-Validator/Makefile 335031 2013-11-27 16:37:18Z sunpoet $
 
 PORTNAME=	Data-Validator
-PORTVERSION=	1.03
+PORTVERSION=	1.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
