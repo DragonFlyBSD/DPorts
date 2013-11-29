@@ -1,13 +1,13 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-robotframework/Makefile 335114 2013-11-28 17:50:36Z wg $
 
 PORTNAME=	robotframework
-PORTVERSION=	2.8.1
+PORTVERSION=	2.8.2
 CATEGORIES=	devel www python
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	Vladimir.Chukharev@gmail.com
 COMMENT=	Generic test automation framework
 
 LICENSE=	AL2
@@ -15,5 +15,4 @@ LICENSE=	AL2
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
