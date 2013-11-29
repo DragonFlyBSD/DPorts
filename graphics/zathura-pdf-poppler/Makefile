@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 333402 2013-11-10 15:06:17Z danilo $
+# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 335121 2013-11-28 21:08:38Z madpilot $
 
 PORTNAME=	zathura-pdf-poppler
 PORTVERSION=	0.2.4
@@ -13,7 +13,7 @@ LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 BUILD_DEPENDS=	zathura:${PORTSDIR}/graphics/zathura
 RUN_DEPENDS=	zathura:${PORTSDIR}/graphics/zathura
 
-USE_GNOME=	glib20 gtk20
+USE_GNOME=	glib20 gtk30
 USES=		desktop-file-utils gmake pkgconfig
 
 PLIST_FILES=	lib/zathura/pdf.so \
