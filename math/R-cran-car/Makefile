@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-car/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-car/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	car
 DISTVERSION=	2.0-19
@@ -15,5 +15,4 @@ LICENSE=	GPLv2
 USE_R_MOD=		yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
