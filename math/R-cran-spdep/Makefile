@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-spdep/Makefile 334641 2013-11-23 06:03:46Z tota $
+# $FreeBSD: math/R-cran-spdep/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	spdep
 DISTVERSION=	0.5-68
@@ -20,5 +20,4 @@ RUN_DEPENDS=	R-cran-sp>=0.9:${PORTSDIR}/math/R-cran-sp \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
