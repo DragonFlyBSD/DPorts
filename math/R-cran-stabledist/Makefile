@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-stabledist/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-stabledist/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	stabledist
 DISTVERSION=	0.6-6
@@ -16,5 +16,4 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
