@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 334173 2013-11-18 11:34:38Z wg $
+# $FreeBSD: multimedia/vlc/Makefile 335073 2013-11-27 23:20:17Z nox $
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.1
@@ -127,6 +127,7 @@ LIBBLURAY_CONFIGURE_ENABLE=	bluray
 
 LIBSSH2_LIB_DEPENDS=	libssh2.so:${PORTSDIR}/security/libssh2
 LIBSSH2_CONFIGURE_ENABLE=	sftp
+LIBSSH2_CONFIGURE_ENV=	SFTP_CFLAGS=-I${LOCALBASE} SFTP_LIBS=-lssh2\ -L${LOCALBASE}/lib
 
 LIRC_LIB_DEPENDS=	liblirc_client.so:${PORTSDIR}/comms/lirc
 LIRC_CONFIGURE_ENABLE=	lirc
