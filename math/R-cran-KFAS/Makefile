@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-KFAS/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-KFAS/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	KFAS
 PORTVERSION=	0.9.11
@@ -16,5 +16,4 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
