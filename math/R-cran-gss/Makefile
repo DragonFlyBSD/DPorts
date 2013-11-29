@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: math/R-cran-gss/Makefile 334230 2013-11-18 18:01:25Z dbn $
+# $FreeBSD: math/R-cran-gss/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	gss
 DISTVERSION=	2.0-16
@@ -15,5 +15,4 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
