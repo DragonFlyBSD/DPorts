@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/R-cran-ggplot2/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: graphics/R-cran-ggplot2/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	ggplot2
 PORTVERSION=	0.9.3.1
@@ -21,5 +21,4 @@ RUN_DEPENDS=	R-cran-plyr>=1.7.1:${PORTSDIR}/devel/R-cran-plyr \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
