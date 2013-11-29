@@ -1,8 +1,8 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: lang/basic256/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/basic256/Makefile 335118 2013-11-28 18:16:33Z makc $
 
 PORTNAME=	basic256
-PORTVERSION=	0.9.9.64
+PORTVERSION=	1.0.0.0
 CATEGORIES=	lang
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	kidbasic/${PORTNAME}
@@ -16,19 +16,16 @@ BUILD_DEPENDS=	espeak:${PORTSDIR}/audio/espeak \
 		sqlite3:${PORTSDIR}/databases/sqlite3 \
 		flex:${PORTSDIR}/textproc/flex
 
-WRKSRC=		${WRKDIR}
-
-USES=		bison
+USES=		bison dos2unix qmake
 USE_SDL=	sdl mixer
-USE_QT4=	corelib gui network xml webkit moc_build qmake_build rcc_build uic_build
-USE_DOS2UNIX=	yes
-HAS_CONFIGURE=	yes
+USE_QT4=	corelib gui network xml webkit moc_build rcc_build uic_build
+QMAKE_SOURCE_PATH=	BASIC256.pro
 
-MAKE_JOBS_UNSAFE=yes
+NO_WRKSUBDIR=	yes
+MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-	${QMAKE} "PREFIX=${PREFIX}" BASIC256.pro
+post-patch:
+	@${REINPLACE_CMD} -e 's/mutex/mymutex/' ${WRKSRC}/*.cpp
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/BASIC256.pro
 
 .include <bsd.port.mk>
