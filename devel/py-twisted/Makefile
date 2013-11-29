@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: devel/py-twisted/Makefile 333935 2013-11-15 20:54:08Z sunpoet $
+# $FreeBSD: devel/py-twisted/Makefile 335106 2013-11-28 16:08:33Z lwhsu $
 
 PORTNAME=	twisted
 PORTVERSION=	13.2.0
@@ -16,7 +16,6 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twistedCore>=${PORTVERSION}:${PORTSDIR}/devel/py-twistedCore
 
 NO_BUILD=	yes
-NO_STAGE=	yes
 USE_PYTHON=	-2.7
 PYDISTUTILS_NOEGGINFO=	yes
 
