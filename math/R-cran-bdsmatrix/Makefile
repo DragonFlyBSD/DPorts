@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-bdsmatrix/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-bdsmatrix/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	bdsmatrix
 DISTVERSION=	1.3-1
@@ -15,5 +15,4 @@ LICENSE=	LGPL20
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
