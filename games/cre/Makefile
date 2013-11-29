@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/cre/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: games/cre/Makefile 335107 2013-11-28 16:49:31Z mat $
 
 PORTNAME=	cre
 DISTVERSION=	1.2beta_r2
@@ -14,7 +14,7 @@ COMMENT=	Corewars Redcode Evolver
 LICENSE=	GPLv2
 
 USES=		dos2unix
-DOS2UNIX_FILES=	*.txt
+DOS2UNIX_GLOB=	*.txt
 NO_WRKSUBDIR=	yes
 BUILD_WRKSRC=	${WRKSRC}/src
 
