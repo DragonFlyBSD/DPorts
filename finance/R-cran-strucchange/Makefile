@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-strucchange/Makefile 334637 2013-11-23 06:01:42Z tota $
+# $FreeBSD: finance/R-cran-strucchange/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	strucchange
 DISTVERSION=	1.5-0
@@ -17,5 +17,4 @@ RUN_DEPENDS=	R-cran-zoo>0:${PORTSDIR}/math/R-cran-zoo \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
