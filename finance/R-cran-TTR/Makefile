@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-TTR/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: finance/R-cran-TTR/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	TTR
 DISTVERSION=	0.22-0
@@ -17,5 +17,4 @@ RUN_DEPENDS=	R-cran-xts>=0.9.3:${PORTSDIR}/math/R-cran-xts
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
