@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-MCMCpack/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-MCMCpack/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	MCMCpack
 DISTVERSION=	1.3-3
@@ -19,5 +19,4 @@ USE_GCC=	4.2+
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
