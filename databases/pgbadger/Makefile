@@ -1,12 +1,11 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: databases/pgbadger/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pgbadger/Makefile 335091 2013-11-28 13:23:47Z girgen $
 
 PORTNAME=	pgbadger
-PORTVERSION=	3.4
+PORTVERSION=	4.1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=${PORTNAME}/${PORTVERSION}
-PKGNAMEPREFIX=  p5-
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Very competent log analyzer for PostgreSQL
