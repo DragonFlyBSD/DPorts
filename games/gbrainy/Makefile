@@ -1,7 +1,7 @@
-# $FreeBSD: games/gbrainy/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gbrainy/Makefile 335084 2013-11-28 09:12:01Z kevlo $
 
 PORTNAME=	gbrainy
-PORTVERSION=	2.1.5
+PORTVERSION=	2.2.2
 PORTEPOCH=	1
 CATEGORIES=	games
 MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
@@ -22,10 +22,8 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN6=		gbrainy.6
 INSTALLS_ICONS=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
