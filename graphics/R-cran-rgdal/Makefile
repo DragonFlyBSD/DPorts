@@ -1,4 +1,3 @@
-NO_STAGE=	yes
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
 # $FreeBSD: graphics/R-cran-rgdal/Makefile 335055 2013-11-27 20:42:14Z tota $
 
