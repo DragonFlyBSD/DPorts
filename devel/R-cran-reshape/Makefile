@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-reshape/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: devel/R-cran-reshape/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	reshape
 PORTVERSION=	0.8.4
@@ -17,5 +17,4 @@ RUN_DEPENDS=	R-cran-plyr>0:${PORTSDIR}/devel/R-cran-plyr
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
