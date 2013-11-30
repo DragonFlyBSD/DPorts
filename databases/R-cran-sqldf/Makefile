@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-sqldf/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: databases/R-cran-sqldf/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	sqldf
 DISTVERSION=	0.4-6.4
@@ -23,5 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
