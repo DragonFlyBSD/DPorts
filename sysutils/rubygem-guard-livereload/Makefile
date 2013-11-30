@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-guard-livereload/Makefile 331794 2013-10-27 18:15:25Z sunpoet $
+# $FreeBSD: sysutils/rubygem-guard-livereload/Makefile 335036 2013-11-27 17:10:28Z sunpoet $
 
 PORTNAME=	guard-livereload
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
