@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: science/R-cran-e1071/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: science/R-cran-e1071/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	e1071
 DISTVERSION=	1.6-1
@@ -15,5 +15,4 @@ LICENSE=	GPLv2
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
