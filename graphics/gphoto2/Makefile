@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/gphoto2/Makefile 330928 2013-10-19 19:32:28Z danfe $
+# $FreeBSD: graphics/gphoto2/Makefile 335042 2013-11-27 18:33:24Z amdmi3 $
 
 PORTNAME=	gphoto2
 PORTVERSION=	2.4.14
@@ -18,6 +18,8 @@ USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-cdk
+CONFIGURE_ENV=	POPT_CFLAGS="-I${LOCALBASE}/include" \
+		POPT_LIBS="-L${LOCALBASE}/lib -lpopt"
 
 OPTIONS_DEFINE=	AALIB DOCS NLS
 OPTIONS_DEFAULT=	AALIB
