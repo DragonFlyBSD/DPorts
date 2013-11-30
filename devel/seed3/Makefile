@@ -1,11 +1,12 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/seed3/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/seed3/Makefile 335039 2013-11-27 17:14:27Z kwm $
 #   $MCom: ports/trunk/devel/seed3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	seed
 PORTVERSION=	3.2.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
