@@ -1,23 +1,20 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp13/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cakephp13/Makefile 335065 2013-11-27 21:33:24Z sunpoet $
 
 PORTNAME=	cakephp
-PORTVERSION=	1.3.15
+PORTVERSION=	1.3.17
 CATEGORIES=	www
-MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/tarball/${PORTVERSION}/ \
-		LOCAL/glarkin
-DISTNAME=	${PORTNAME}-${PORTNAME}-${PORTVERSION}-${GITVERSION}
+PKGNAMESUFFIX=	13
 
 MAINTAINER=	theis@gmx.at
-COMMENT=	A framework for developing PHP web applications
-
-LATEST_LINK=	cakephp13
+COMMENT=	Framework for developing PHP web applications
 
 LICENSE=	MIT
 
-GITVERSION=	0-g3ff1ff1
-FETCH_ARGS=	-pRr
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-5e063d7
+USE_GITHUB=	yes
+GH_ACCOUNT=	${PORTNAME}
+GH_PROJECT=	${PORTNAME}
+GH_COMMIT=	3a101d9
 
 PORTDOCS=	README
 
