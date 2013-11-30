@@ -1,8 +1,9 @@
 # Created by: Xiaoding Liu <xiaoding+freebsd@xiaoding.org>
-# $FreeBSD: net/shadowsocks-libev/Makefile 331506 2013-10-24 17:44:00Z delphij $
+# $FreeBSD: net/shadowsocks-libev/Makefile 335066 2013-11-27 22:04:32Z delphij $
 
 PORTNAME=	shadowsocks-libev
 PORTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/archive/${GH_TAGNAME}.tar.gz?dummy=/
 
@@ -21,5 +22,9 @@ GNU_CONFIGURE=	yes
 USES=		gmake
 
 USE_RC_SUBR=	shadowsocks_libev
+
+post-install:
+	${MKDIR} ${STAGEDIR}${ETCDIR}
+	${CP} ${WRKSRC}/debian/config.json  ${STAGEDIR}${ETCDIR}/config.json.sample
 
 .include <bsd.port.mk>
