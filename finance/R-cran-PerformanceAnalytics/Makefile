@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-PerformanceAnalytics/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: finance/R-cran-PerformanceAnalytics/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	PerformanceAnalytics
 PORTVERSION=	1.1.0
@@ -18,5 +18,4 @@ RUN_DEPENDS=	R-cran-zoo>0:${PORTSDIR}/math/R-cran-zoo \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
