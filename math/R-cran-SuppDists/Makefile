@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/R-cran-SuppDists/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-SuppDists/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	SuppDists
 DISTVERSION=	1.1-9.1
@@ -20,7 +20,6 @@ BENCHMARK_SCRIPT=	R-benchmark-25.R
 R_MOD_AUTOPLIST=	yes
 USE_R_MOD=		yes
 WRKSRC =		${WRKDIR}/${PORTNAME}
-NO_STAGE=	yes
 
 .if defined(MAINTAINER_MODE)
 USE_DOS2UNIX=	../${BENCHMARK_SCRIPT}
