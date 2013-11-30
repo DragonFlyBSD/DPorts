@@ -1,10 +1,10 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/libpurple/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/libpurple/Makefile 335255 2013-11-30 01:24:19Z marcus $
 #   $MCom: ports/net-im/libpurple/Makefile,v 1.32 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME?=	libpurple
 PORTVERSION=	2.10.7
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	net-im
 MASTER_SITES=	SF/pidgin/Pidgin/${PORTVERSION}
 DISTNAME=	pidgin-${PORTVERSION}
@@ -119,6 +119,7 @@ CONFIGURE_ARGS+=--disable-gstreamer
 
 .if ${PORT_OPTIONS:MVV} && ${PORT_OPTIONS:MGSTREAMER}
 LIB_DEPENDS+=	gstfarsight-0.10.0:${PORTSDIR}/net-im/farsight2
+USE_GSTREAMER+=	v4l2
 PLIST_SUB+=	VV=""
 .else
 CONFIGURE_ARGS+=--disable-vv
