@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: sysutils/gai-leds/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/gai-leds/Makefile 335030 2013-11-27 16:18:00Z sunpoet $
 
 PORTNAME=	gai-leds
 PORTVERSION=	0.6
@@ -8,18 +8,17 @@ CATEGORIES=	sysutils
 MASTER_SITES=	SF/gai/GAI%20-%20Applets/${PORTNAME}
 
 MAINTAINER=	douglas@douglasthrift.net
-COMMENT=	A GAI applet that displays the keyboard status leds
-
-LIB_DEPENDS=	gai:${PORTSDIR}/x11-toolkits/gai
+COMMENT=	GAI applet that displays the keyboard status leds
 
 LICENSE=	GPLv2
 
-GNU_CONFIGURE=	yes
-USES=		pkgconfig
-USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix
+LIB_DEPENDS=	libgai.so:${PORTSDIR}/x11-toolkits/gai
 
-NO_STAGE=	yes
+GNU_CONFIGURE=	yes
+USES=		pathfix pkgconfig
+USE_BZIP2=	yes
+USE_GNOME=	gnomeprefix
+
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|\(GNOMEDIR=\).*|\1"${PREFIX}"|; \
