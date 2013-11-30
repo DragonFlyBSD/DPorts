@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-RgoogleMaps/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: www/R-cran-RgoogleMaps/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	RgoogleMaps
 PORTVERSION=	1.2.0.5
@@ -19,5 +19,4 @@ RUN_DEPENDS=	R-cran-png>0:${PORTSDIR}/graphics/R-cran-png \
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
