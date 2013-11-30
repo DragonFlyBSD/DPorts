@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-Zelig/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-Zelig/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	Zelig
 DISTVERSION=	4.1-3
@@ -16,5 +16,4 @@ RUN_DEPENDS=	R-cran-sandwich>=0:${PORTSDIR}/math/R-cran-sandwich
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
