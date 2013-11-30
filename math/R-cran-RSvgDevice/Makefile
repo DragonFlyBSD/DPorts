@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-RSvgDevice/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/R-cran-RSvgDevice/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	RSvgDevice
 PORTVERSION=	0.6.4.3
@@ -13,5 +13,4 @@ COMMENT=	A R SVG graphics device
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
