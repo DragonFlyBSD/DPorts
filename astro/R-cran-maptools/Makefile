@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: astro/R-cran-maptools/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: astro/R-cran-maptools/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	maptools
 DISTVERSION=	0.8-27
@@ -15,7 +15,6 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	R-cran-sp>=1.0.11:${PORTSDIR}/math/R-cran-sp
 
-NO_STAGE=	yes
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
