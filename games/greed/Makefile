@@ -1,28 +1,27 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/greed/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/greed/Makefile 335019 2013-11-27 14:58:29Z culot $
 
 PORTNAME=	greed
-PORTVERSION=	3.8
+PORTVERSION=	3.9
 CATEGORIES=	games
 MASTER_SITES=	http://catb.org/~esr/greed/ CENKES
 PKGNAMESUFFIX=	-game
 
 MAINTAINER=	culot@FreeBSD.org
-COMMENT=	A text puzzle game with the aim of clearing the game field
+COMMENT=	Text puzzle game with the aim of clearing the game field
 
-MAN6=		greed.6
-PLIST_FILES=	bin/greed
+LICENSE=	BSD
+
 SCOREFILE?=	/var/games/greed.hs
 CFLAGS+=	-DSCOREFILE=\"${SCOREFILE}\" -DNOTBSD -DRELEASE=\"${PORTVERSION}\"
 LDFLAGS+=	-lcurses
 
-NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC}&&${CC} ${CFLAGS} -o greed greed.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} -m 2555 -o root -g games ${WRKSRC}/greed ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/greed.6 ${MAN6PREFIX}/man/man6/
+	${INSTALL_PROGRAM} -m 2555 -o root -g games ${WRKSRC}/greed ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/greed.6 ${STAGEDIR}${MAN6PREFIX}/man/man6/
 	@a=${SCOREFILE};[ -f $$a ]||:>$$a&&${CHOWN} root:games $$a&&${CHMOD} 664 $$a
 	@${ECHO_CMD} '@exec a=${SCOREFILE};[ -f $$a ]||:>$$a&&\
 		${CHOWN} root:games $$a&&${CHMOD} 664 $$a' >> ${TMPPLIST}
