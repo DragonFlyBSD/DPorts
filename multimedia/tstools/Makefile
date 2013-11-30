@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: multimedia/tstools/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/tstools/Makefile 335020 2013-11-27 15:05:34Z jadawin $
 
 PORTNAME=	tstools
 DISTVERSION=	1_11
@@ -13,6 +13,8 @@ COMMENT=	MPEG transport, program, and elementary stream tools
 
 LICENSE=	MPL
 
+MAKE_JOBS_UNSAFE=	yes
+
 USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
@@ -22,15 +24,14 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 do-install:
-	${CP} ${WRKSRC}/bin/* ${PREFIX}/bin
-	${CP} ${WRKSRC}/lib/* ${PREFIX}/lib
+	${CP} ${WRKSRC}/bin/* ${STAGEDIR}${PREFIX}/bin
+	${CP} ${WRKSRC}/lib/* ${STAGEDIR}${PREFIX}/lib
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${CP} ${WRKSRC}/docs/* ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${CP} ${WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
