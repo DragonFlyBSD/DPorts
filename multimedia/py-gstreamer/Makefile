@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/py-gstreamer/Makefile 331973 2013-10-29 17:05:50Z kwm $
+# $FreeBSD: multimedia/py-gstreamer/Makefile 335337 2013-11-30 19:09:40Z kwm $
 #    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.20 2008/07/26 17:21:38 marcus Exp $
 
 PORTNAME=	gstreamer
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	gst-python-${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
-COMMENT=	A set of Python bindings for gstreamer
+COMMENT=	Python bindings for gstreamer
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,18 +19,16 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2
 
-USES=		pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_PYTHON=	-2.7
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USE_GNOME=	pygobject gnomehack
+USE_GNOME=	pygobject
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
 PLIST_SUB=	VERSION="${GST_VERSION}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE} ${PTHREAD_LIBS}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|DLFCN|dl|g' ${WRKSRC}/gst/__init__.py
 	@${REINPLACE_CMD} -e 's|alsasink|osssink|g' -e 's|alsasrc|osssrc|g' \
@@ -42,7 +40,12 @@ post-patch:
 .endfor
 
 post-install:
-	@cd ${PYTHONPREFIX_SITELIBDIR} && ${PYTHON_CMD} -OOOO -c 'import pygst' && \
-		${PYTHON_CMD} -c 'import pygst'
+	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py -d \
+		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} -f ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -d \
+		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} -f ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/gst-0.10/gst/*.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gstreamer-0.10/libgstpython.so
 
 .include <bsd.port.mk>
