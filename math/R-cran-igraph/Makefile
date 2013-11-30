@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-igraph/Makefile 334638 2013-11-23 06:02:14Z tota $
+# $FreeBSD: math/R-cran-igraph/Makefile 335044 2013-11-27 18:56:43Z dbn $
 
 PORTNAME=	igraph
 DISTVERSION=	0.6.6
@@ -15,7 +15,6 @@ LICENSE_COMB=	dual
 USE_R_MOD=	yes
 R_MOD_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "sparc64"
