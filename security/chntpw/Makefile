@@ -1,8 +1,9 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: security/chntpw/Makefile 329967 2013-10-10 06:53:56Z sunpoet $
+# $FreeBSD: security/chntpw/Makefile 335103 2013-11-28 15:48:46Z jadawin $
 
 PORTNAME=	chntpw
 PORTVERSION=	110511
+PORTREVISION=	1
 CATEGORIES=	security sysutils
 MASTER_SITES=	http://pogostick.net/~pnh/ntpasswd/
 DISTNAME=	${PORTNAME}-source-${PORTVERSION}
@@ -20,7 +21,8 @@ USES=		gmake
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-PLIST_FILES=	bin/chntpw
+BIN_FILES=	chntpw cpnt reged
+PLIST_FILES=	${BIN_FILES:C|^|bin/|}
 PORTDOCS=	README.txt WinReg.txt regedit.txt
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -34,7 +36,7 @@ post-patch:
 .endif
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/chntpw ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${BIN_FILES:C|^|${WRKSRC}/|} ${STAGEDIR}${PREFIX}/bin
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
