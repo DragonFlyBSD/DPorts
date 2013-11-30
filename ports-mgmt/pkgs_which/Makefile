@@ -1,8 +1,8 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: ports-mgmt/pkgs_which/Makefile 328953 2013-10-01 14:26:50Z mandree $
+# $FreeBSD: ports-mgmt/pkgs_which/Makefile 335075 2013-11-28 01:09:09Z mandree $
 
 PORTNAME=	pkgs_which
-PORTVERSION=	0.3.0
+PORTVERSION=	0.4.0
 CATEGORIES=	ports-mgmt perl5
 MASTER_SITES=	# none
 DISTFILES=	# none
