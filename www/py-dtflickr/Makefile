@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: www/py-dtflickr/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-dtflickr/Makefile 335037 2013-11-27 17:12:03Z sunpoet $
 
 PORTNAME=	dtflickr
 PORTVERSION=	1.5
@@ -15,10 +15,10 @@ COMMENT=	Spiffy Flickr API library using JSON
 LICENSE=	AL2
 
 USE_BZIP2=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VERSION} == "python2.5"
