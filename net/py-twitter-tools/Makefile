@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-twitter-tools/Makefile 330980 2013-10-20 05:47:59Z koobs $
+# $FreeBSD: net/py-twitter-tools/Makefile 335312 2013-11-30 18:05:33Z koobs $
 
 PORTNAME=	twitter-tools
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.2
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	twitter-${PORTVERSION}
@@ -15,12 +15,13 @@ LICENSE=	MIT
 USE_GITHUB=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	twitter
 
 GH_ACCOUNT=	sixohsix
 GH_PROJECT=	twitter
 GH_TAGNAME=	${DISTNAME}
-GH_COMMIT=	f56d4b3
+GH_COMMIT=	cb68a5f
 
-NO_STAGE=	yes
+PYDISTUTILS_PKGNAME=	twitter
+PYDISTUTILS_AUTOPLIST=	yes
+
 .include <bsd.port.mk>
