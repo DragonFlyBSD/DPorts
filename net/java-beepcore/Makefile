@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: net/java-beepcore/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/java-beepcore/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	beepcore
 PORTVERSION=	0.9.08
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}-java/${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	java-
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An implementation of BEEP core and BEEP mapping for TCP in Java
 
 RUN_DEPENDS=	${JAVALIBDIR}/xercesImpl.jar:${PORTSDIR}/textproc/xerces-j
