@@ -1,12 +1,12 @@
 # Created by: Marcelo Araujo <araujobsd@gmail.com>
-# $FreeBSD: mail/ask/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/ask/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	ask
 PORTVERSION=	2.5.3
 CATEGORIES=	mail
 MASTER_SITES=	SF/a-s-k/${PORTNAME}-beta/${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Anti Spam Killer content filtering
 
 USE_PYTHON=	yes
