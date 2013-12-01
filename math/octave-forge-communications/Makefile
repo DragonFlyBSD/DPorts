@@ -1,9 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-communications/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/octave-forge-communications/Makefile 335142 2013-11-29 03:47:00Z stephen $
 
 PORTNAME=	octave-forge-communications
-PORTVERSION=	1.1.1
-PORTREVISION=	2
+PORTVERSION=	1.2.0
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -12,8 +11,6 @@ COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 OCTSRC=		${OCTAVE_PKGNAME}
-
-GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 MAKE_ENV+=	MKOCTFILE=mkoctfile
