@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/py-cups/Makefile 334382 2013-11-20 03:21:41Z sunpoet $
+# $FreeBSD: print/py-cups/Makefile 335196 2013-11-29 16:58:18Z sunpoet $
 
 PORTNAME=	cups
-PORTVERSION=	1.9.63
+PORTVERSION=	1.9.66
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
