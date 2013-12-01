@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/py-isodate/Makefile 334380 2013-11-20 03:21:27Z sunpoet $
+# $FreeBSD: devel/py-isodate/Makefile 335268 2013-11-30 09:12:02Z sunpoet $
 
 PORTNAME=	isodate
 PORTVERSION=	0.4.9
@@ -14,6 +14,7 @@ LICENSE=	BSD
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|setuptools|do_not_use_&|' ${WRKSRC}/${PYSETUP}
