@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 332904 2013-11-05 19:45:13Z sunpoet $
+# $FreeBSD: devel/p5-ExtUtils-MakeMaker/Makefile 335347 2013-11-30 20:54:30Z sunpoet $
 
 PORTNAME=	ExtUtils-MakeMaker
-PORTVERSION=	6.82
+PORTVERSION=	6.84
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
