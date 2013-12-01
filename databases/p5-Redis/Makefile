@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Redis/Makefile 333903 2013-11-15 17:55:48Z sunpoet $
+# $FreeBSD: databases/p5-Redis/Makefile 335200 2013-11-29 17:22:36Z sunpoet $
 
 PORTNAME=	Redis
-PORTVERSION=	1.9640
+PORTVERSION=	1.9650
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAMS
@@ -25,4 +25,10 @@ TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 USES=		perl5
 USE_PERL5=	configure
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 501800
+BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.63.02:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
+.endif
+
+.include <bsd.port.post.mk>
