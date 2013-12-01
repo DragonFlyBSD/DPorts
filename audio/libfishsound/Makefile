@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libfishsound/Makefile 335252 2013-11-30 00:17:44Z sunpoet $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
@@ -21,20 +21,21 @@ OPTIONS_DEFINE=	DOCS DOXYGEN
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-NO_STAGE=	yes
 USES=		pathfix pkgconfig
-
-PORTDOCS=	*
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} && ${PORT_OPTIONS:MDOXYGEN}
 BUILD_DEPENDS+=	${LOCALBASE}/bin/doxygen:${PORTSDIR}/devel/doxygen
+PORTDOCS=	*
 .endif
 
 post-patch:
 .if !${PORT_OPTIONS:MDOCS} || !${PORT_OPTIONS:MDOXYGEN}
 	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| doc||' ${WRKSRC}/Makefile.in
 .endif
+
+post-build:
+	@${STRIP_CMD} ${WRKSRC}/src/libfishsound/.libs/libfishsound.so.4
 
 .include <bsd.port.mk>
