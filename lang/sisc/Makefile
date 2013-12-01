@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: lang/sisc/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/sisc/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	sisc
 PORTVERSION=	1.16.6
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	lang scheme java
 MASTER_SITES=	SF/${PORTNAME}/SISC/${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An extensible Java-based Scheme interpreter
 
 USE_JAVA=	yes
