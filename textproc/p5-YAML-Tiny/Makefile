@@ -1,8 +1,8 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: textproc/p5-YAML-Tiny/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-YAML-Tiny/Makefile 335292 2013-11-30 14:50:22Z sunpoet $
 
 PORTNAME=	YAML-Tiny
-PORTVERSION=	1.55
+PORTVERSION=	1.56
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,9 +16,6 @@ LICENSE_COMB=	dual
 TEST_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
 USES=		perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuildtiny
 
-MAN3=		YAML::Tiny.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
