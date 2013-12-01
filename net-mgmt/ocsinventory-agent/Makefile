@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ocsinventory-agent/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/ocsinventory-agent/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	Ocsinventory
 PORTVERSION=	2.0.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://launchpad.net/ocsinventory-unix-agent/stable-2.0/${PORTVERS
 PKGNAMESUFFIX=	-Unix-Agent
 DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Keep track of the computers configuration and software
 
 LICENSE=	GPLv2
