@@ -1,12 +1,13 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: multimedia/py-librtmp/Makefile 335134 2013-11-29 00:40:36Z wg $
+# $FreeBSD: multimedia/py-librtmp/Makefile 335220 2013-11-29 20:20:45Z nox $
 
 PORTNAME=	librtmp
 PORTVERSION=	0.1.2
+PORTREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
-DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Python bindings for librtmp, built with cffi
@@ -15,6 +16,7 @@ LICENSE=	BSD
 
 LIB_DEPENDS=	librtmp.so:${PORTSDIR}/multimedia/librtmp
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=0:${PORTSDIR}/devel/py-cffi
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}singledispatch>=0:${PORTSDIR}/devel/py-singledispatch
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
