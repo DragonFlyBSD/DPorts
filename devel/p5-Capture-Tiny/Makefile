@@ -1,8 +1,8 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-Capture-Tiny/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Capture-Tiny/Makefile 335206 2013-11-29 17:32:47Z sunpoet $
 
 PORTNAME=	Capture-Tiny
-PORTVERSION=	0.22
+PORTVERSION=	0.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DAGOLDEN
@@ -13,10 +13,9 @@ COMMENT=	Capture STDOUT and STDERR from Perl, XS, or external programs
 
 LICENSE=	AL2
 
+TEST_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
+
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Capture::Tiny.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
