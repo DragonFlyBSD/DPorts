@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/rubygem-redis/Makefile 333108 2013-11-07 15:06:50Z sunpoet $
+# $FreeBSD: databases/rubygem-redis/Makefile 335223 2013-11-29 21:11:26Z sunpoet $
 
 PORTNAME=	redis
 PORTVERSION=	3.0.6
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby client library for Redis, the key value storage server
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
