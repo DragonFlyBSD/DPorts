@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rubyforge/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD: devel/rubygem-rubyforge/Makefile 335323 2013-11-30 18:29:20Z sunpoet $
 
 PORTNAME=	rubyforge
 PORTVERSION=	2.0.4
@@ -9,11 +9,14 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Simplistic script which automates rubyforge operations
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-json_pure>=1.1.7:${PORTSDIR}/devel/rubygem-json_pure
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+
 PLIST_FILES=	bin/rubyforge
 
 .include <bsd.port.mk>
