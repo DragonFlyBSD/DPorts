@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-drydock/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD: devel/rubygem-drydock/Makefile 335227 2013-11-29 21:31:06Z sunpoet $
 
 PORTNAME=	drydock
 PORTVERSION=	0.6.9
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Build seaworthy command-line apps with a powerful Ruby DSL
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
