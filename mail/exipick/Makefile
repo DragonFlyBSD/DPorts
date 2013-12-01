@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: mail/exipick/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/exipick/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	exipick
 PORTVERSION=	20100323.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://jetmore.org/john/code/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 EXTRACT_SUFX=
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Display messages from Exim queue based on a variety of criteria
 
 PLIST_FILES=	bin/${PORTNAME}
