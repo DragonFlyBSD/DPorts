@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: benchmarks/iperf/Makefile 334835 2013-11-25 11:33:41Z sunpoet $
+# $FreeBSD: benchmarks/iperf/Makefile 335275 2013-11-30 09:58:36Z sunpoet $
 
 PORTNAME=	iperf
 PORTVERSION=	2.0.5
@@ -25,12 +25,8 @@ IPV6_CONFIGURE_ENABLE=	ipv6
 THREADS_CONFIGURE_ENABLE=	threads
 THREADS_LDFLAGS=	-pthread
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} README doc/*.gif doc/*.html ${STAGEDIR}${DOCSDIR}/
-.endif
 
 .include <bsd.port.mk>
