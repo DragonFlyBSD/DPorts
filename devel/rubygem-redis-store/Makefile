@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-redis-store/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD: devel/rubygem-redis-store/Makefile 335331 2013-11-30 18:29:57Z sunpoet $
 
 PORTNAME=	redis-store
 PORTVERSION=	1.1.4
@@ -8,11 +8,12 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Namespaced Redis stores for Ruby web frameworks
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-redis>=2.2:${PORTSDIR}/databases/rubygem-redis
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
