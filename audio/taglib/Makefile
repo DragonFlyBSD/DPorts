@@ -1,8 +1,9 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: audio/taglib/Makefile 334854 2013-11-25 14:45:37Z jhale $
+# $FreeBSD: audio/taglib/Makefile 335257 2013-11-30 01:58:17Z sbruno $
 
 PORTNAME=	taglib
 PORTVERSION=	1.9.1
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
@@ -17,6 +18,10 @@ USES=		cmake
 CMAKE_ARGS=	-DWITH_ASF:BOOL=ON \
 		-DWITH_MP4:BOOL=ON
 USE_LDCONFIG=	yes
+
+# clang will generate code that just doesn't work with clementine-player
+# if this isn't compiled as though it were C99.
+CFLAGS+=	-std=c99
 
 OPTIONS_DEFINE=	RCC
 OPTIONS_SUB=	yes
