@@ -1,20 +1,23 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-sass-rails/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD: textproc/rubygem-sass-rails/Makefile 335247 2013-11-29 23:00:15Z sunpoet $
 
 PORTNAME=	sass-rails
 PORTVERSION=	3.2.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Sass adapter for the Rails asset pipeline
 
-RUN_DEPENDS=	rubygem-sass>=3.2.6:${PORTSDIR}/textproc/rubygem-sass \
-		rubygem-railties>=3.2.10:${PORTSDIR}/www/rubygem-railties
+LICENSE=	MIT
 
-USE_RUBY=		yes
-USE_RUBYGEMS=		yes
+RUN_DEPENDS=	rubygem-railties>=3.2.0:${PORTSDIR}/www/rubygem-railties \
+		rubygem-sass>=3.1.10:${PORTSDIR}/textproc/rubygem-sass \
+		rubygem-tilt>=1.3:${PORTSDIR}/devel/rubygem-tilt
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
