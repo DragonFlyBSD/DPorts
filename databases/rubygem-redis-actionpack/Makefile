@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-redis-actionpack/Makefile 332033 2013-10-30 02:26:17Z swills $
+# $FreeBSD: databases/rubygem-redis-actionpack/Makefile 335329 2013-11-30 18:29:49Z sunpoet $
 
 PORTNAME=	redis-actionpack
 PORTVERSION=	4.0.0
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Redis session store for ActionPack
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-actionpack4>=4:${PORTSDIR}/www/rubygem-actionpack4 \
 		rubygem-redis-store>=1.1.0:${PORTSDIR}/devel/rubygem-redis-store \
 		rubygem-redis-rack>=1.5.0:${PORTSDIR}/www/rubygem-redis-rack
@@ -15,6 +17,5 @@ RUN_DEPENDS=	rubygem-actionpack4>=4:${PORTSDIR}/www/rubygem-actionpack4 \
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
