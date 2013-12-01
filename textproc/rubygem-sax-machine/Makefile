@@ -1,18 +1,20 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-sax-machine/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD: textproc/rubygem-sax-machine/Makefile 335341 2013-11-30 19:59:20Z sunpoet $
 
 PORTNAME=	sax-machine
-PORTVERSION=	0.1.0
+PORTVERSION=	0.2.1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Declarative sax parsing library backed by Nokogiri
 
-RUN_DEPENDS=	rubygem-nokogiri>=0.0.0:${PORTSDIR}/textproc/rubygem-nokogiri
+LICENSE=	MIT
 
-USE_RUBY=		yes
-USE_RUBYGEMS=		yes
+RUN_DEPENDS=	rubygem-nokogiri>=1.6.0:${PORTSDIR}/textproc/rubygem-nokogiri
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
