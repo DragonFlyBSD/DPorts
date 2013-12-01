@@ -1,5 +1,5 @@
 # Created by: niels <niels@FreeBSD.org>
-# $FreeBSD: www/rubygem-robots/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD: www/rubygem-robots/Makefile 335235 2013-11-29 21:31:47Z sunpoet $
 
 PORTNAME=	robots
 PORTVERSION=	0.10.1
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple library to parse robots.txt files
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
