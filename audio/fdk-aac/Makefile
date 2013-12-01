@@ -1,28 +1,28 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/fdk-aac/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: audio/fdk-aac/Makefile 335203 2013-11-29 17:29:51Z sunpoet $
 
 PORTNAME=	fdk-aac
-PORTVERSION=	0.1.2
+PORTVERSION=	0.1.3
 CATEGORIES=	audio
 MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Port of the Fraunhofer FDK AAC Codec Library
-
-NOT_FOR_ARCHS=		sparc64
-NOT_FOR_ARCHS_REASON=	not yet ported to this architecture
 
 LICENSE=	FRAUNHOFER_FDK_AAC
 LICENSE_NAME=	Software License for The Fraunhofer FDK AAC Codec Library for Android
 LICENSE_FILE=	${WRKSRC}/NOTICE
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	LIBS="-lm"
+NOT_FOR_ARCHS=		sparc64
+NOT_FOR_ARCHS_REASON=	not yet ported to this architecture
 
-post-patch:
-	@${REINPLACE_CMD} -E -e \
-	's|^pkgconfigdir = .*|pkgconfigdir = $$(prefix)/libdata/pkgconfig|g' \
-	${WRKSRC}/Makefile.in
+CONFIGURE_ENV=	LIBS="-lm"
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+USES=		pathfix
+
+post-build:
+	@${STRIP_CMD} ${WRKSRC}/.libs/libfdk-aac.so.0
 
 .include <bsd.port.mk>
