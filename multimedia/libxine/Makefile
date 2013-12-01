@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: multimedia/libxine/Makefile 334694 2013-11-23 19:20:55Z nox $
+# $FreeBSD: multimedia/libxine/Makefile 335209 2013-11-29 18:00:12Z makc $
 
 PORTNAME=	xine
 PORTVERSION=	1.2.4
@@ -69,6 +69,8 @@ OPTIONS_DEFINE=	CACA ESOUND JACK GNOMEVFS2 PULSEAUDIO XVMC SMB AALIB \
 		IMAGEMAGICK GTK2 WAVPACK VAAPI LIBBLURAY
 
 DOCSDIR=	${PREFIX}/share/doc/xine-lib
+# Please sync with XINE_PLUGINSDIR in multimedia/xine
+# and multimedia/vdr-plugin-xineliboutput
 PLIST_SUB=	PLUGINSDIR="lib/xine/plugins/2.3"
 
 # DVDCSS version hardcoded in src/input/input_dvd.c misc/cdda_server.c
