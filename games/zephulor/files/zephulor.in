@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/zephulor/files/zephulor.in 306844 2012-11-02 12:00:20Z pawel $
+# $FreeBSD: games/zephulor/files/zephulor.in 335338 2013-11-30 19:30:02Z nemysis $
 #
 
 cd "%%DATADIR%%"
-exec /usr/bin/env python ./zephulor.py
+exec %%PYTHON_CMD%% ./zephulor.py
