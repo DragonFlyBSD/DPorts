@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-pbr/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pbr/Makefile 335146 2013-11-29 06:56:00Z koobs $
 
 PORTNAME=	pbr
-PORTVERSION=	0.5.19
+PORTVERSION=	0.5.23
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +12,8 @@ COMMENT=	Python Build Reasonableness
 
 LICENSE=	AL2
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-git>=0.4:${PORTSDIR}/devel/py-setuptools-git
-
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
