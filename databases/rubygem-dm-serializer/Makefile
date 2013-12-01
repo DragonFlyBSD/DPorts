@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-dm-serializer/Makefile 332032 2013-10-30 02:22:05Z swills $
+# $FreeBSD: databases/rubygem-dm-serializer/Makefile 335321 2013-11-30 18:29:12Z sunpoet $
 
 PORTNAME=	dm-serializer
 PORTVERSION=	1.2.2
@@ -8,11 +8,13 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DataMapper plugin for serializing Resources and Collections
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-dm-core>=1.2.0:${PORTSDIR}/databases/rubygem-dm-core \
+		rubygem-fastercsv>=1.5:${PORTSDIR}/devel/rubygem-fastercsv \
   		rubygem-json>=1.6:${PORTSDIR}/devel/rubygem-json \
-		rubygem-multi_json>=1.0.3:${PORTSDIR}/devel/rubygem-multi_json \
 		rubygem-json_pure>=1.6:${PORTSDIR}/devel/rubygem-json_pure \
-		rubygem-fastercsv>=1.5.4:${PORTSDIR}/devel/rubygem-fastercsv
+		rubygem-multi_json>=1.0:${PORTSDIR}/devel/rubygem-multi_json
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
