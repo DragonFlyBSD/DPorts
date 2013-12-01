@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: security/libwhisker/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libwhisker/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	libwhisker
 PORTVERSION=	2.5
@@ -7,7 +7,7 @@ CATEGORIES=	security perl5
 MASTER_SITES=	http://www.wiretrip.net/rfp/${PORTNAME}/
 DISTNAME=	${PORTNAME}2-${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module to create HTTP test scripts
 
 WRKSRC=		${WRKDIR}/${PORTNAME}2-${PORTVERSION}
