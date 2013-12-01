@@ -1,5 +1,5 @@
 # Created by: Christopher Elkins <chrise@scardini.com>
-# $FreeBSD: mail/gotmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gotmail/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	gotmail
 PORTVERSION=	0.9.0
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	SF
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A script to fetch mail from a Hotmail or MSN mailbox
 
 RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
