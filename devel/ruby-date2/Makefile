@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-date2/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-date2/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	date2
 PORTVERSION=	4.0.19
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.funaba.org/archive/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 DIST_SUBDIR=	ruby
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An alternative date class for Ruby
 
 USE_RUBY=	yes
