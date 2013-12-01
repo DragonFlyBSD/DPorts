@@ -1,5 +1,5 @@
 # Created by: gnn@FreeBSD.org
-# $FreeBSD: devel/zookeeper/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/zookeeper/Makefile 335208 2013-11-29 17:50:36Z mva $
 
 PORTNAME=	zookeeper
 PORTVERSION=	3.3.6
@@ -49,7 +49,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	yes
+USE_PYTHON=	-2.7
 BUILD_DEPENDS+=	ant:${PORTSDIR}/devel/apache-ant
 PLIST_SUB+=	WITH_PYTHON=""
 .else
@@ -74,6 +74,10 @@ run-autotools:
 	@cd ${CONFIGURE_WRKSRC} && \
 	${SETENV} ${AUTOTOOLS_ENV} ${AUTORECONF} -if
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|executable="python"|executable="${PYTHON_CMD}"|' \
+		${PYTHON_BINDING_WRKSRC}/build.xml
 
 do-build:
 .if ${PORT_OPTIONS:MC}
