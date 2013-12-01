@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/rubygem-familia/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD: databases/rubygem-familia/Makefile 335222 2013-11-29 21:10:12Z sunpoet $
 
 PORTNAME=	familia
 PORTVERSION=	0.7.1
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Organize and store ruby objects in Redis
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-gibbler>=0.8.6:${PORTSDIR}/devel/rubygem-gibbler \
 		rubygem-multi_json>=0.0.5:${PORTSDIR}/devel/rubygem-multi_json \
