@@ -1,5 +1,5 @@
-@comment $FreeBSD: math/tvmet/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/tvmet-config
+man/man1/tvmet-config.1.gz
 include/tvmet/AliasProxy.h
 include/tvmet/BinaryFunctionals.h
 include/tvmet/CommaInitializer.h
