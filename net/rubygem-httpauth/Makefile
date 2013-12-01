@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-httpauth/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD: net/rubygem-httpauth/Makefile 335232 2013-11-29 21:31:29Z sunpoet $
 
 PORTNAME=	httpauth
 PORTVERSION=	0.2.0
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for HTTP authentication protocol in RFC 2617
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
