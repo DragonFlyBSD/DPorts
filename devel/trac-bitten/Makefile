@@ -1,5 +1,5 @@
 # Created by: Tim Niemueller <tim@niemueller.de>
-# $FreeBSD: devel/trac-bitten/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/trac-bitten/Makefile 335165 2013-11-29 11:45:57Z wg $
 
 PORTNAME=	bitten
 PORTVERSION=	0.6
@@ -30,7 +30,7 @@ OPTIONS_DEFAULT=	BITTEN_MASTER
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-BUILD_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-distribute
+BUILD_DEPENDS+=	easy_install:${PORTSDIR}/devel/py-setuptools
 .if ${PORT_OPTIONS:MBITTEN_MASTER}
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 .endif
