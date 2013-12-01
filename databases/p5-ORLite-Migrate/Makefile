@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: databases/p5-ORLite-Migrate/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: databases/p5-ORLite-Migrate/Makefile 335137 2013-11-29 02:36:38Z eadler $
 
 PORTNAME=	ORLite-Migrate
 PORTVERSION=	1.10
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	CPAN:ADAMK
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Perl5 extremely light weight SQLite-specific schema migration
+COMMENT=	Light weight SQLite-specific schema migration
 
 BUILD_DEPENDS=	p5-File-pushd>=1.00:${PORTSDIR}/devel/p5-File-pushd \
 		p5-IPC-Run3>=0.042:${PORTSDIR}/devel/p5-IPC-Run3 \
