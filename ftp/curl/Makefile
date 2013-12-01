@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: ftp/curl/Makefile 332519 2013-11-02 17:23:44Z sunpoet $
+# $FreeBSD: ftp/curl/Makefile 335277 2013-11-30 10:07:07Z sunpoet $
 
 PORTNAME=	curl
 PORTVERSION=	7.33.0
@@ -37,6 +37,9 @@ MAKE_ENV+=	INSTALL_STRIP_FLAG=${STRIP}
 USE_PERL5=	build
 USE_XZ=		yes
 USES=		pathfix perl5
+
+PORTDOCS=	*
+PORTEXAMPLES=	*
 
 .if !defined(BUILDING_HIPHOP)
 USE_LDCONFIG=	yes
@@ -147,15 +150,11 @@ post-patch:
 post-install:
 .if !defined(BUILDING_HIPHOP)
 	${INSTALL_DATA} ${WRKSRC}/docs/libcurl/libcurl.m4 ${STAGEDIR}${PREFIX}/share/aclocal/
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/ ${STAGEDIR}${DOCSDIR}/libcurl/
 	cd ${WRKSRC}/docs/ && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/docs/libcurl/ && ${INSTALL_DATA} ABI *.html *.pdf *.m4 ${STAGEDIR}${DOCSDIR}/libcurl/
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
 	cd ${WRKSRC}/docs/examples/ && ${INSTALL_DATA} README Makefile.example makefile* *.c *.cpp ${STAGEDIR}${EXAMPLESDIR}/
-.endif
 .endif
 
 # Setting LC_ALL=C is a kludge; maybe curl/libcurl shouldn't actually use
