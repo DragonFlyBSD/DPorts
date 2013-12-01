@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 335073 2013-11-27 23:20:17Z nox $
+# $FreeBSD: multimedia/vlc/Makefile 335336 2013-11-30 18:53:41Z wg $
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.1
@@ -243,7 +243,6 @@ ZVBI_CONFIGURE_ENABLE=	zvbi
 USE_XZ=		yes
 USES=		desktop-file-utils iconv perl5 gmake pkgconfig
 USE_PERL5=	build
-USE_GL=		yes
 USE_CSTD=	gnu99
 WANT_GNOME=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
@@ -355,7 +354,8 @@ CONFIGURE_ARGS+=--disable-v4l2
 .endif
 
 .if ${PORT_OPTIONS:MX11}
-USE_XORG=xcb xpm
+USE_GL=		yes
+USE_XORG=	xcb xpm
 LIB_DEPENDS+=	libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms
 CONFIGURE_ARGS+=--with-x --enable-glx --enable-xcb --enable-xvideo
 .else
