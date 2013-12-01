@@ -1,16 +1,18 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-sass/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD: textproc/rubygem-sass/Makefile 335245 2013-11-29 23:00:07Z sunpoet $
 
 PORTNAME=	sass
-PORTVERSION=	3.2.9
+PORTVERSION=	3.2.12
 CATEGORIES=	textproc ruby
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Sass is an extension of CSS3
 
-USE_RUBY=		yes
-USE_RUBYGEMS=		yes
+LICENSE=	MIT
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/sass bin/sass-convert bin/scss
