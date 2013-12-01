@@ -1,5 +1,5 @@
 # Created by: jesse@cs.uni-magdeburg.de
-# $FreeBSD: devel/tmake/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/tmake/Makefile 335348 2013-11-30 21:07:47Z sunpoet $
 
 PORTNAME=	tmake
 PORTVERSION=	1.13
@@ -12,9 +12,10 @@ COMMENT=	Extremely portable perl-based make utility
 
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ''
-USES=		perl5
+USES=		perl5 shebangfix
 
-NO_STAGE=	yes
+SHEBANG_FILES=	bin/progen bin/tmake
+
 post-patch:
 	@${RM} -f ${WRKSRC}/bin/tmake.orig ${WRKSRC}/lib/unix/generic.t.orig
 	@${REINPLACE_CMD} \
@@ -24,11 +25,9 @@ post-patch:
 			${WRKSRC}/lib/freebsd-g++/tmake.conf
 
 do-install:
-	${MKDIR} ${DATADIR}/
-	cd ${WRKSRC}/lib/ && ${COPYTREE_SHARE} . ${DATADIR}/
-	cd ${WRKSRC}/bin/ && ${INSTALL_SCRIPT} progen tmake ${PREFIX}/bin/
-
-post-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}/
+	cd ${WRKSRC}/bin/ && ${INSTALL_SCRIPT} progen tmake ${STAGEDIR}${PREFIX}/bin/
+	cd ${WRKSRC}/lib/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Make sure to set your TMAKEPATH environment variable"
 	@${ECHO_MSG} "to ${DATADIR}/freebsd-g++."
