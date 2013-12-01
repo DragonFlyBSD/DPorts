@@ -1,5 +1,5 @@
 # Created by: Landon Fuller <landonf@opendarwin.org>
-# $FreeBSD: www/py-twistedWeb2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-twistedWeb2/Makefile 335332 2013-11-30 18:35:40Z lwhsu $
 
 PORTNAME=	twistedWeb2
 PORTVERSION=	8.1.0
@@ -21,5 +21,4 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Twisted_Web2
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
