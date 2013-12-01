@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/py-qpy/Makefile 334387 2013-11-20 03:22:08Z sunpoet $
+# $FreeBSD: www/py-qpy/Makefile 335273 2013-11-30 09:57:23Z sunpoet $
 
 PORTNAME=	qpy
 PORTVERSION=	1.8
@@ -15,15 +15,14 @@ OPTIONS_DEFINE=	DOCS
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 MAKE_ENV=	USE_DISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_PYDISTUTILS=yes
 USE_PYTHON=	-2.7
 
-.include <bsd.port.options.mk>
+PORTDOCS=	CHANGES.txt LICENSE.txt README.txt
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} CHANGES.txt LICENSE.txt README.txt ${STAGEDIR}${DOCSDIR}/
-.endif
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
