@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: math/ruby-algebra/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ruby-algebra/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	algebra
 PORTVERSION=	0.72
@@ -8,7 +8,7 @@ MASTER_SITES=	http://blade.nagaokaut.ac.jp/~sinara/ruby/math/algebra/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 DIST_SUBDIR=	ruby
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Ruby library for mathematical (algebraic) computations
 
 USE_RUBY=	yes
