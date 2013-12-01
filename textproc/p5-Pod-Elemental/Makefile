@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Elemental/Makefile 330004 2013-10-10 14:34:40Z sunpoet $
+# $FreeBSD: textproc/p5-Pod-Elemental/Makefile 335199 2013-11-29 17:06:03Z sunpoet $
 
 PORTNAME=	Pod-Elemental
-PORTVERSION=	0.102363
+PORTVERSION=	0.102364
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
