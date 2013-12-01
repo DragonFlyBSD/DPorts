@@ -1,8 +1,8 @@
 # Created by: gugu
-# $FreeBSD: www/p5-HTML-FormHandler/Makefile 333355 2013-11-09 22:35:51Z sunpoet $
+# $FreeBSD: www/p5-HTML-FormHandler/Makefile 335166 2013-11-29 11:47:08Z sunpoet $
 
 PORTNAME=	HTML-FormHandler
-PORTVERSION=	0.40053
+PORTVERSION=	0.40054
 PORTEPOCH=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
