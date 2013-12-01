@@ -1,16 +1,13 @@
-# $FreeBSD: textproc/rubygem-simplecov-html/Makefile 333607 2013-11-12 19:45:03Z sunpoet $
+# $FreeBSD: textproc/rubygem-simplecov-html/Makefile 335248 2013-11-29 23:00:20Z sunpoet $
 
 PORTNAME=	simplecov-html
 PORTVERSION=	0.8.0
+PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	https://rubygems.org/gems/simplecov-html
-
-RUN_DEPENDS=	rubygem-sass>=0:${PORTSDIR}/textproc/rubygem-sass \
-		rubygem-rake>=0:${PORTSDIR}/devel/rubygem-rake \
-		rubygem-sprockets>=0:${PORTSDIR}/devel/rubygem-sprockets
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
