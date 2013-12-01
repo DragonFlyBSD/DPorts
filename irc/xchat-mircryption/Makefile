@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: irc/xchat-mircryption/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: irc/xchat-mircryption/Makefile 335216 2013-11-29 19:55:29Z dinoex $
 #    $MCom: ports/irc/xchat-mircryption/Makefile,v 1.2 2006/10/10 20:22:11 mezz Exp $
 
 PORTNAME=	mircryption
@@ -16,15 +16,13 @@ COMMENT=	A free encryption add-on for the popular XChat irc client
 
 RUN_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
-NO_STAGE=	yes
-
 USE_ZIP=	yes
+USE_DOS2UNIX=	yes
 ALL_TARGET=	freebsd
 CFLAGS+=	-fPIC
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/src/xchat/
-#
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
@@ -33,44 +31,32 @@ PLIST_FILES=	lib/xchat/plugins/mircryption.so
 PORTDOCS=	README.txt
 PORTEXAMPLES=	mcps_masterkey_on_start.pl
 
+.include <bsd.port.options.mk>
+
 post-patch:
-# \r\n -> \n
-	@${FIND} ${WRKSRC} -type f -exec \
-		${REINPLACE_CMD} -E \
-		-e 's|||' \
-		{} \;
-# CFLAGS safeness
-# LDFLAGS safeness
-# linker safeness
-	@${REINPLACE_CMD} -E \
+	${REINPLACE_CMD} -E \
 		-e 's|^(CFLAGS.+)"$$|\1 ${CFLAGS}"|' \
 		-e 's|^(LDFLAGS.+)"$$|\1 ${LDFLAGS}"|' \
 		-e 's|^(LOAD).*$$|LOAD=${CXX}|' \
 		${WRKSRC}/${MAKEFILE}
-# set perl path if it exists
-.ifdef(PERL5)
-	@${REINPLACE_CMD} -E \
+	${REINPLACE_CMD} -E \
 		-e 's|/usr/bin/perl|${PERL5}|' \
 		${WRKSRC}/extras/mcps_masterkey_on_start.pl
-.endif
 
 do-install:
-# docs
-.ifndef(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README.txt \
-		${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/xchat/plugins
+	${INSTALL_PROGRAM} ${WRKSRC}/mircryption.so \
+		${STAGEDIR}${PREFIX}/lib/xchat/plugins
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.txt \
+		${STAGEDIR}${DOCSDIR}/
 .endif
-# plugin
-	@${MKDIR} ${PREFIX}/lib/xchat/plugins
-	@${INSTALL_PROGRAM} ${WRKSRC}/mircryption.so \
-		${PREFIX}/lib/xchat/plugins
-# script
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_SCRIPT} \
+.if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} \
 		${WRKSRC}/extras/mcps_masterkey_on_start.pl \
-		${EXAMPLESDIR}
+		${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
