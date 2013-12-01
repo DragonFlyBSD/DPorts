@@ -1,8 +1,8 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-bcdoc/Makefile 334731 2013-11-24 14:53:40Z alexey $
+# $FreeBSD: devel/py-bcdoc/Makefile 335334 2013-11-30 18:39:03Z alexey $
 
 PORTNAME=	bcdoc
-PORTVERSION=	0.11.0
+PORTVERSION=	0.12.0
 CATEGORIES=	devel
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
