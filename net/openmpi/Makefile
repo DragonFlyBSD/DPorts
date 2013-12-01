@@ -1,4 +1,4 @@
-# $FreeBSD: net/openmpi/Makefile 335104 2013-11-28 15:58:45Z danilo $
+# $FreeBSD: net/openmpi/Makefile 335250 2013-11-29 23:55:54Z danilo $
 
 # TODO:
 #  - etc/*.sample support
@@ -15,6 +15,8 @@ COMMENT=	High Performance Message Passing Library
 LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libhwloc.so:${PORTSDIR}/devel/hwloc \
 		libltdl.so:${PORTSDIR}/devel/libltdl
+
+CONFLICTS=	openmpi-devel-1.7.*
 
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
