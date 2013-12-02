@@ -1,0 +1,25 @@
+# Created by: Juergen Lock <nox@FreeBSD.org>
+# $FreeBSD: multimedia/livestreamer/Makefile 335313 2013-11-30 18:14:55Z nox $
+
+PORTNAME=	livestreamer
+PORTVERSION=	1.7.0
+PORTREVISION=	1
+CATEGORIES=	multimedia python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	multimedia@FreeBSD.org
+COMMENT=	Extract web streams and pipe them into video player of choice
+
+LICENSE=	BSD MIT AL2
+LICENSE_COMB=	multi
+
+RUN_DEPENDS=	rtmpdump:${PORTSDIR}/multimedia/rtmpdump \
+		${PYTHON_PKGNAMEPREFIX}requests>=0:${PORTSDIR}/www/py-requests \
+		${PYTHON_PKGNAMEPREFIX}librtmp>=0:${PORTSDIR}/multimedia/py-librtmp
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
