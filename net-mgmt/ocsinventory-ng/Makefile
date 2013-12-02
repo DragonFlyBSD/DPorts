@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	ocsinventory-ng
 PORTVERSION=	2.0.5
@@ -6,7 +6,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	https://launchpadlibrarian.net/99500930/
 DISTNAME=	OCSNG_UNIX_SERVER-${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open Computer and Software Inventory Next Generation
 
 LICENSE=	GPLv2
