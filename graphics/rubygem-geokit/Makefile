@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/rubygem-geokit/Makefile 334884 2013-11-25 19:13:22Z sunpoet $
+# $FreeBSD: graphics/rubygem-geokit/Makefile 335317 2013-11-30 18:28:54Z sunpoet $
 
 PORTNAME=	geokit
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.1
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 
