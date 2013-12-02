@@ -1,5 +1,5 @@
 # Created by: Dan Caescu <daniel@freebsd.ro>
-# $FreeBSD: mail/vqregister/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: mail/vqregister/Makefile 335143 2013-11-29 03:54:28Z eadler $
 
 PORTNAME=	vqregister
 PORTVERSION=	2.6
@@ -8,24 +8,27 @@ CATEGORIES=	mail www
 MASTER_SITES=	http://www.inter7.com/vqregister/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An extremely admin-configurable email user signup CGI
+COMMENT=	Admin-configurable email user signup CGI
 
 BUILD_DEPENDS=	${VPOPMAIL_DIR}:${PORTSDIR}/mail/vpopmail
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${VPOPMAIL_DIR}:${PORTSDIR}/mail/vpopmail
 
 USE_APACHE_RUN=	22+
 VPOPMAIL_DIR?=	${LOCALBASE}/vpopmail
 
 USE_MYSQL=	yes
-NO_STAGE=	yes
-MAKE_ENV=	VDIR=${VPOPMAIL_DIR} WWWDIR=${WWWDIR}
+MAKE_ENV=	VDIR=${VPOPMAIL_DIR} WWWDIR=${STAGEDIR}${WWWDIR}
+
+NEED_ROOT=	yes
 
 DOCS=		CONFIG CONTRIBUTORS FORM HISTORY TEMPLATE
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
