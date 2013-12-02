@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: devel/py-twistedFlow/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-twistedFlow/Makefile 335339 2013-11-30 19:57:34Z lwhsu $
 
 PORTNAME=	twistedFlow
 PORTVERSION=	8.2.0
@@ -21,5 +21,4 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Twisted_Flow
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
