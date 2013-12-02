@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/py-redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-redis/Makefile 335293 2013-11-30 14:54:53Z koobs $
 
 PORTNAME=	redis
-PORTVERSION=	2.7.6
+PORTVERSION=	2.8.0
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,16 +14,16 @@ LICENSE=	MIT
 USE_GITHUB=		yes
 GH_ACCOUNT=		andymccurdy
 GH_PROJECT=		${PORTNAME}-py
-GH_COMMIT=		a6302d9
+GH_COMMIT=		678f353
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONS_DEFINE=		HIREDIS
-HIREDIS_DESC=		Add py-hiredis C extension support
+HIREDIS_DESC=		High performance response parser (via hiredis)
 OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHIREDIS}
