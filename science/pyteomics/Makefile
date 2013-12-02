@@ -1,7 +1,7 @@
-# $FreeBSD: science/pyteomics/Makefile 334204 2013-11-18 14:57:05Z makc $
+# $FreeBSD: science/pyteomics/Makefile 335169 2013-11-29 11:57:18Z makc $
 
 PORTNAME=	pyteomics
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.1
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
