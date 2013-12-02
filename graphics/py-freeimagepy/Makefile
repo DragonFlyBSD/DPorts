@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: graphics/py-freeimagepy/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-freeimagepy/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	freeimagepy
 PORTVERSION=	2.0.1
@@ -8,7 +8,7 @@ MASTER_SITES=	SF/${PORTNAME}/FreeImagePy/V${PORTVERSION}
 PKGNAMEPREFIX=  ${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	FreeImagePy_w_dll-${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A FreeImage library python wrapper
 
 LIB_DEPENDS=	freeimage.3:${PORTSDIR}/graphics/freeimage
