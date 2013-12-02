@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/fuse/Makefile 333633 2013-11-12 22:31:00Z rene $
+# $FreeBSD: emulators/fuse/Makefile 335163 2013-11-29 11:38:05Z rene $
 
 PORTNAME=	fuse
 PORTVERSION=	1.1.1
@@ -49,17 +49,20 @@ SVGALIB_CONFIGURE_WITH=	svgalib
 SVGALIB_CONFIGURE_ON=	--without-gtk
 ROMS_RUN_DEPENDS=	fuse-roms>0:${PORTSDIR}/emulators/fuse-roms
 
+PORTDOCS=	AUTHORS ChangeLog README THANKS README.copyright
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICONS}
 INSTALLS_ICONS=	yes
 .endif
 
+post-extract:
+	${CP} ${WRKSRC}/roms/README.copyright ${WRKSRC}
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS ChangeLog README THANKS \
-		roms/README.copyright ${STAGEDIR}${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
+.endfor
 
 .include <bsd.port.mk>

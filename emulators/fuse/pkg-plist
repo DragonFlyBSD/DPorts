@@ -1,4 +1,4 @@
-@comment $FreeBSD: emulators/fuse/pkg-plist 333633 2013-11-12 22:31:00Z rene $
+@comment $FreeBSD: emulators/fuse/pkg-plist 335163 2013-11-29 11:38:05Z rene $
 bin/fuse
 man/man1/fuse.1.gz
 %%ICONS%%share/applications/fuse.desktop
@@ -82,9 +82,3 @@ man/man1/fuse.1.gz
 %%ICONS%%@dirrmtry share/icons/hicolor
 %%ICONS%%@dirrmtry share/icons
 @dirrmtry %%DATADIR%%
-%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
-%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
-%%PORTDOCS%%%%DOCSDIR%%/README
-%%PORTDOCS%%%%DOCSDIR%%/README.copyright
-%%PORTDOCS%%%%DOCSDIR%%/THANKS
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
