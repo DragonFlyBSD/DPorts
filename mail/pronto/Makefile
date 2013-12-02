@@ -1,5 +1,5 @@
 # Created by: killer	<killer@prosalg.no>
-# $FreeBSD: mail/pronto/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pronto/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	pronto
 PORTVERSION=	2.4.0
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	http://muhri.net/pronto/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Mail Client for Gnome/Gtk written in Perl
 
 BUILD_DEPENDS=\
