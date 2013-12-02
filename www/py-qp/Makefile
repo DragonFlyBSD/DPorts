@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/py-qp/Makefile 334386 2013-11-20 03:22:01Z sunpoet $
+# $FreeBSD: www/py-qp/Makefile 335276 2013-11-30 10:05:54Z sunpoet $
 
 PORTNAME=	qp
 PORTVERSION=	2.2
@@ -24,15 +24,12 @@ USE_PYTHON=	-2.7
 
 SUB_FILES=	pkg-message
 
-.include <bsd.port.options.mk>
+PORTDOCS=	CHANGES.txt LICENSE.txt README.txt
+PORTEXAMPLES=	*
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/ && ${INSTALL_DATA} CHANGES.txt LICENSE.txt README.txt ${STAGEDIR}${DOCSDIR}/
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/ ${STAGEDIR}${EXAMPLESDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/ && ${PYTHON_CMD} ${PYSETUP} install_demo_sites ${STAGEDIR}${EXAMPLESDIR}/
-.endif
 
 .include <bsd.port.mk>
