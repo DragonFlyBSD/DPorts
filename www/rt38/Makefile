@@ -1,4 +1,4 @@
-# $FreeBSD: www/rt38/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rt38/Makefile 335145 2013-11-29 06:50:30Z matthew $
 
 NO_STAGE=	yes
 # TODO:
@@ -17,7 +17,7 @@ MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	RT is an industrial-grade ticketing system written in Perl
 
-CONFLICTS=	rt-4.0* brlcad-[0-9]*
+CONFLICTS=	rt40-4.0* rt42-4.2* brlcad-[0-9]*
 LATEST_LINK=	rt38
 
 OPTIONS_DEFINE=	APACHE DEV DOCS FASTCGI GRAPHVIZ MODPERL STANDALONE
