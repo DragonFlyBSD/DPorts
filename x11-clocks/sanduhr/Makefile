@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-clocks/sanduhr/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/sanduhr/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	sanduhr
 PORTVERSION=	1.93
@@ -7,7 +7,7 @@ PORTREVISION=	8
 CATEGORIES=	x11-clocks gnome
 MASTER_SITES=	http://seehuhn.de/media/programs/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An alarm clock for GNOME desktop designed as a sand-glass
 
 USES=		gmake pkgconfig
