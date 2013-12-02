@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python32/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/python32/Makefile 335280 2013-11-30 10:48:41Z mva $
 
 PORTNAME=	python32
 PORTVERSION=	3.2.5
@@ -150,6 +150,10 @@ post-patch:
 	    's/disabled_module_list =[^]]*/&, "nis"/' \
 		${PATCH_WRKSRC}/setup.py
 .endif
+# Fix for http://bugs.python.org/issue12852 (especially on 10.x+);
+# not needed for python33+
+	${REINPLACE_CMD} -e 's|_XOPEN_SOURCE 600|_XOPEN_SOURCE 700|' \
+		${PATCH_WRKSRC}/configure
 
 post-configure:
 	${TAR} -C ${WRKSRC} -cf - . | ${TAR} -C ${SHARED_WRKSRC} -xf -
