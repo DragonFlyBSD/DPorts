@@ -1,9 +1,9 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.14/Makefile 334224 2013-11-18 16:46:54Z mat $
+# $FreeBSD: lang/perl5.14/Makefile 335309 2013-11-30 17:28:44Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	CPAN \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
