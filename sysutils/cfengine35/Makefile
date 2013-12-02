@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine35/Makefile 328875 2013-09-30 21:02:13Z cy $
+# $FreeBSD: sysutils/cfengine35/Makefile 335306 2013-11-30 16:11:52Z cy $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.5.2
@@ -37,47 +37,43 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--with-pcre=${LOCALBASE} \
 		--enable-fhs
 
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 
 OPTIONS_DEFINE=	PGSQL MYSQL LIBVIRT
 OPTIONS_SINGLE=	DB
 OPTIONS_SINGLE_DB=	TOKYOCABINET QDBM
 TOKYOCABINET_DESC=	Enable TokyoCabinet database backend
 QDBM_DESC=	Enable QDBM database backend
-PGSQL_DESC=	Enable PostgreSQL integration
-MYSQL_DESC=	Enable MySQL integration
-LIBVIRT_DESC=	Enable libvirt integration
 OPTIONS_DEFAULT=TOKYOCABINET
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTOKYOCABINET}
 CONFIGURE_ARGS+=	--with-tokyocabinet=${LOCALBASE}
-LIB_DEPENDS+=	tokyocabinet.9:${PORTSDIR}/databases/tokyocabinet
+LIB_DEPENDS+=	libtokyocabinet.so.9:${PORTSDIR}/databases/tokyocabinet
 .endif
 
 .if ${PORT_OPTIONS:MQDBM}
 CONFIGURE_ARGS+=	--with-qdbm=${LOCALBASE}
-LIB_DEPENDS+=	qdbm.14:${PORTSDIR}/databases/qdbm
+LIB_DEPENDS+=	libqdbm.so.14:${PORTSDIR}/databases/qdbm
 .endif
 
 .if ${PORT_OPTIONS:MPGSQL}
 USE_PGSQL=		yes
 CONFIGURE_ARGS+=	--with-postgresql=${LOCALBASE}
-LIB_DEPENDS+=		pq:${PORTSDIR}/databases/postgresql${PGSQL_VER}-client
+LIB_DEPENDS+=		libpq.so:${PORTSDIR}/databases/postgresql${PGSQL_VER}-client
 .endif
 
 .if ${PORT_OPTIONS:MMYSQL}
 USE_MYSQL=		yes
 CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
-LIB_DEPENDS+=		mysqlclient:${PORTSDIR}/${_MYSQL_CLIENT}
+LIB_DEPENDS+=		libmysqlclient.so:${PORTSDIR}/${_MYSQL_CLIENT}
 LDFLAGS+=		-L${LOCALBASE}/lib/mysql
 .endif
 
 .if ${PORT_OPTIONS:MLIBVIRT}
 CONFIGURE_ARGS+=	--with-libvirt=${LOCALBASE}
-LIB_DEPENDS+=		virt.1001:${PORTSDIR}/devel/libvirt
+LIB_DEPENDS+=		libvirt.so.1001:${PORTSDIR}/devel/libvirt
 .endif
 
 .include <bsd.port.post.mk>
