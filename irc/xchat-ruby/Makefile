@@ -1,4 +1,4 @@
-# $FreeBSD: irc/xchat-ruby/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: irc/xchat-ruby/Makefile 335216 2013-11-29 19:55:29Z dinoex $
 
 PORTNAME=	ruby
 PORTVERSION=	1.2
@@ -15,8 +15,6 @@ RUN_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
 LICENSE=	GPLv2
 
-NO_STAGE=	yes
-
 USE_RUBY=	yes
 USE_LIBRUBY=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -27,6 +25,8 @@ PLIST_FILES=	lib/xchat/plugins/xchat-ruby.so
 PORTDOCS=	README ChangeLog
 PORTEXAMPLES=	embedify.rb TimerSample.rb JFilter.rb JBanner.rb
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's|^RUBY=.*|RUBY=${RUBY}|' \
@@ -35,21 +35,17 @@ post-patch:
 		${WRKSRC}/Makefile
 
 do-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/xchat/plugins
 	${INSTALL_PROGRAM} ${WRKSRC}/xchat-ruby.so \
-		${PREFIX}/lib/xchat/plugins/
-.ifndef(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${DOCSRC}/${doc} \
-		${DOCSDIR}/
-.endfor
+		${STAGEDIR}${PREFIX}/lib/xchat/plugins/
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${DOCSRC}/,} ${STAGEDIR}${DOCSDIR}/
 .endif
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-.for doc in ${PORTEXAMPLES}
-	${INSTALL_DATA} ${DOCSRC}/*/${doc} \
-		${EXAMPLESDIR}/
-.endfor
+.if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${PORTEXAMPLES:S,^,${DOCSRC}/*/,} \
+		${STAGEDIR}${EXAMPLESDIR}/
 .endif
 
 .include <bsd.port.mk>
