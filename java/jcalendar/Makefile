@@ -1,12 +1,12 @@
 # Created by: ijliao
-# $FreeBSD: java/jcalendar/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jcalendar/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	jcalendar
 PORTVERSION=	1.3.3
 CATEGORIES=	java misc
 MASTER_SITES=	http://www.toedter.com/download/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java Date Chooser
 
 USE_ZIP=	yes
