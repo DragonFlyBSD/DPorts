@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/tinc/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: security/tinc/Makefile 335217 2013-11-29 19:56:51Z dinoex $
 
 PORTNAME=	tinc
 PORTVERSION=	1.0.22
@@ -15,8 +15,6 @@ LIB_DEPENDS=	lzo2:${PORTSDIR}/archivers/lzo2
 
 LICENSE=	GPLv3
 
-NO_STAGE=	yes
-
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -24,9 +22,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--localstatedir=/var
 USE_RC_SUBR=	tincd
 
-PLIST_FILES=	sbin/tincd
-MAN5=	tinc.conf.5
-MAN8=	tincd.8
+PLIST_FILES=	sbin/tincd \
+		man/man5/tinc.conf.5.gz man/man8/tincd.8.gz
+
 INFO=	tinc
 
 .include <bsd.port.mk>
