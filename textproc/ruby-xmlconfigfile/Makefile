@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-xmlconfigfile/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ruby-xmlconfigfile/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	xmlconfigfile
 PORTVERSION=	0.9.7
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 DISTNAME=	xml-configfile-${PORTVERSION}
 DIST_SUBDIR=	ruby
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Ruby module for easy handling of XML configuration files
 
 USE_RUBY=	yes
