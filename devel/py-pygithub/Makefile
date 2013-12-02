@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-pygithub/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pygithub/Makefile 335298 2013-11-30 15:22:06Z koobs $
 
 PORTNAME=	pygithub
-PORTVERSION=	1.8.0
+PORTVERSION=	1.21.0
 CATEGORIES=	devel www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,14 +13,12 @@ COMMENT=	Use the full Github API v3 with Python
 
 LICENSE=	LGPL3
 
-USE_ZIP=		yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-
+USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	PyGithub
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
