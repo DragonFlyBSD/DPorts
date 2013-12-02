@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/bins/Makefile 332218 2013-10-31 10:03:20Z marino $
+# $FreeBSD: www/bins/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	bins
 PORTVERSION=	1.1.29
@@ -7,7 +7,7 @@ PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://download.gna.org/bins/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to generate HTML photo albums with XML support
 
 RUN_DEPENDS=	\
