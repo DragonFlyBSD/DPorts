@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/pygopherd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pygopherd/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	pygopherd
 PORTVERSION=	2.0.16
@@ -8,7 +8,7 @@ MASTER_SITES=	http://gopher.quux.org:70/devel/gopher/Downloads/pygopherd/ \
 		http://gopher.quux.org:70/devel/gopher/Downloads/pygopherd/old/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multiprotocol Information Server
 
 USE_PYTHON=	yes
