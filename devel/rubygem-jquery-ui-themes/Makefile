@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-jquery-ui-themes/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD: devel/rubygem-jquery-ui-themes/Makefile 335319 2013-11-30 18:29:04Z sunpoet $
 
 PORTNAME=	jquery-ui-themes
 PORTVERSION=	0.0.11
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Allows inclusion of pre-built jquery themes without editing
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-httparty>=0:${PORTSDIR}/www/rubygem-httparty
 
