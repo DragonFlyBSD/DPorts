@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net/p5-POE-Component-Client-Ping/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: net/p5-POE-Component-Client-Ping/Makefile 335162 2013-11-29 11:34:24Z sunpoet $
 
 PORTNAME=	POE-Component-Client-Ping
-PORTVERSION=	1.173
+PORTVERSION=	1.174
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
