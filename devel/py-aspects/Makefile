@@ -1,17 +1,20 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-aspects/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-aspects/Makefile 335159 2013-11-29 10:16:51Z sbz $
 
 PORTNAME=	aspects
 PORTVERSION=	1.3
 CATEGORIES=	devel python
-MASTER_SITES=	http://www.cs.tut.fi/~ask/aspects/
+MASTER_SITES=	http://www.cs.tut.fi/~ask/aspects/ \
+		LOCAL/sbz
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Lightweight aspect oriented programming library for Python
 
-USE_GMAKE=	yes
+LICENSE=	LGPL21
+
+USES=	gmake
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-${PORTNAME}
@@ -26,7 +29,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 NO_STAGE=	yes
 do-build:
-	@${GMAKE} -C ${WRKSRC} check
+	@PYTHON="${PYTHON_CMD}" ${GMAKE} -C ${WRKSRC} check
 
 .if !defined(NOPORTEXAMPLES)
 post-install:
