@@ -1,5 +1,5 @@
 # Created by: Jan Srocker <Jan.Stocker@t-online.de>
-# $FreeBSD: math/gdcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/gdcalc/Makefile 335151 2013-11-29 07:37:52Z araujo $
 #    $MCom: ports/math/gdcalc/Makefile,v 1.1 2006/10/04 15:51:37 ahze Exp $
 
 PORTNAME=	gdcalc
@@ -8,7 +8,7 @@ PORTREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	http://bhepple.freeshell.org/dcalc/unix/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gnome-based scientific calculator
 
 RUN_DEPENDS=	${LOCALBASE}/bin/gunits:${PORTSDIR}/math/units
