@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/viewklass/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/viewklass/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	viewklass
 PORTVERSION=	0.7.2
@@ -8,7 +8,7 @@ CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/ViewKlass-${PORTVERSION}
 DISTNAME=	ViewKlass-${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ Framework for Motif
 
 BUILD_DEPENDS=	imake:${PORTSDIR}/devel/imake
