@@ -1,8 +1,8 @@
 # Created by: Jacob Atzen <jatzen@gmail.com>
-# $FreeBSD: www/rubygem-passenger/Makefile 334435 2013-11-20 18:13:07Z osa $
+# $FreeBSD: www/rubygem-passenger/Makefile 335279 2013-11-30 10:29:01Z osa $
 
 PORTNAME=	passenger
-PORTVERSION=	4.0.25
+PORTVERSION=	4.0.26
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMEPREFIX=	rubygem-
