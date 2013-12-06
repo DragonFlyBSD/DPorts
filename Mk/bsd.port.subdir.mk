@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
-# $FreeBSD: Mk/bsd.port.subdir.mk 321739 2013-06-25 12:34:12Z bapt $
+# $FreeBSD: Mk/bsd.port.subdir.mk 335587 2013-12-03 19:08:47Z bdrewery $
 #
 # The include file <bsd.port.subdir.mk> contains the default targets
 # for building ports subdirectories.
@@ -82,7 +82,7 @@ DFLYVERSION!=	${SYSCTL} -n kern.osreldate
 .endif
 
 .if !defined(_OSRELEASE)
-_OSRELEASE!=			uname -r
+_OSRELEASE!=			${UNAME} -r
 .endif
 .if !defined(OSREL)
 OSREL=	${_OSRELEASE:C/[-(].*//}

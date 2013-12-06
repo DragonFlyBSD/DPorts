@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 334905 2013-11-25 22:49:29Z rakuco $
+# $FreeBSD: Mk/bsd.pkgng.mk 335727 2013-12-06 09:14:13Z ak $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -39,12 +39,15 @@ ACTUAL-PACKAGE-DEPENDS?= \
 create-manifest:
 	@${MKDIR} ${METADIR}
 	@${ECHO_CMD} "name: ${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}" > ${MANIFESTF} 
-	@${ECHO_CMD} "version: ${PKGVERSION}" >> ${MANIFESTF} 
-	@${ECHO_CMD} "origin: ${PKGORIGIN}" >> ${MANIFESTF} 
+	@${ECHO_CMD} "version: ${PKGVERSION}" >> ${MANIFESTF}
+	@${ECHO_CMD} "origin: ${PKGORIGIN}" >> ${MANIFESTF}
 	@${ECHO_CMD} "comment: |" >> ${MANIFESTF}
 	@${ECHO_CMD} "  "${COMMENT:Q} >> ${MANIFESTF}
 	@${ECHO_CMD} "maintainer: ${MAINTAINER}" >> ${MANIFESTF}
 	@${ECHO_CMD} "prefix: ${PREFIX}" >> ${MANIFESTF}
+.if defined(NO_ARCH)
+	@${ECHO_CMD} "arch: `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" >> ${MANIFESTF}
+.endif
 .if defined(WWW)
 	@${ECHO_CMD} "www: ${WWW}" >> ${MANIFESTF}
 .endif

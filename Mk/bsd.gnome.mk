@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.gnome.mk 334343 2013-11-19 19:54:16Z kwm $
+# $FreeBSD: Mk/bsd.gnome.mk 335670 2013-12-05 13:50:22Z kwm $
 #	$NetBSD: $
 #     $MCom: ports/trunk/Mk/bsd.gnome.mk 18899 2013-11-18 18:34:00Z kwm $
 #
@@ -73,7 +73,7 @@ _USE_GNOME_ALL= esound intlhack intltool introspection ltasneededhack lthack \
 		gnomeprefix
 
 # GNOME 1 components
-_USE_GNOME_ALL+= gdkpixbuf glib12 gtk12 libxml imlib
+_USE_GNOME_ALL+= gdkpixbuf glib12 gtk12 imlib
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 evolutiondataserver gal2 \
@@ -217,13 +217,6 @@ gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
 gtk12_DETECT=		${GTK_CONFIG}
 gtk12_USE_GNOME_IMPL=	glib12
-
-XML_CONFIG?=		${LOCALBASE}/bin/xml-config
-libxml_LIB_DEPENDS=	libxml.so:${PORTSDIR}/textproc/libxml
-libxml_CONFIGURE_ENV=	XML_CONFIG="${XML_CONFIG}"
-libxml_MAKE_ENV=	XML_CONFIG="${XML_CONFIG}"
-libxml_DETECT=		${XML_CONFIG}
-libxml_USE_GNOME_IMPL=	glib12
 
 GDK_PIXBUF_CONFIG?=	${LOCALBASE}/bin/gdk-pixbuf-config
 gdkpixbuf_LIB_DEPENDS=	libgdk_pixbuf.so:${PORTSDIR}/graphics/gdk-pixbuf

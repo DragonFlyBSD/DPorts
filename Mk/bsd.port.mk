@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 335153 2013-11-29 08:39:03Z antoine $
+# $FreeBSD: Mk/bsd.port.mk 335739 2013-12-06 12:19:21Z antoine $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -70,7 +70,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # PKGNAMEPREFIX	- Prefix to specify that port is language-specific, etc.
 #				  Optional.
 # PKGNAMESUFFIX	- Suffix to specify compilation options or a version
-#				  designator (in case there are different versions of 
+#				  designator (in case there are different versions of
 #				  one port as is the case for Tcl).
 #				  Optional.
 # PKGVERSION	- Always defined as ${PORTVERSION}.
@@ -216,8 +216,10 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  generated on the fly.
 #				  Default: not set.
 #
+# NO_ARCH			- Set this if port is architecture neutral.
+#
 # Set these if your port only makes sense to certain architectures.
-# They are lists containing names for them (e.g., "alpha i386").
+# They are lists containing names for them (e.g., "amd64 i386").
 # (Defaults: not set.)
 #
 # ONLY_FOR_ARCHS
@@ -822,7 +824,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Default: none
 # FETCH_REGET	- Times to retry fetching of files on checksum errors.
 #				  Default: 1
-# CLEAN_FETCH_ENV		
+# CLEAN_FETCH_ENV
 #				- Disable package dependency in fetch target for mass
 #				  fetching.  User settable.
 #
@@ -1601,7 +1603,7 @@ CONFIGURE_WRKSRC?=	${WRKSRC}
 BUILD_WRKSRC?=	${WRKSRC}
 INSTALL_WRKSRC?=${WRKSRC}
 
-PLIST_SUB+=	OSREL=${OSREL} PREFIX=%D LOCALBASE=${LOCALBASE} 
+PLIST_SUB+=	OSREL=${OSREL} PREFIX=%D LOCALBASE=${LOCALBASE}
 SUB_LIST+=	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} \
 		DATADIR=${DATADIR} DOCSDIR=${DOCSDIR} EXAMPLESDIR=${EXAMPLESDIR} \
 		WWWDIR=${WWWDIR} ETCDIR=${ETCDIR}
@@ -2334,7 +2336,7 @@ INSTALL_PROGRAM= \
 INSTALL_KLD= \
 	${INSTALL} ${COPY} ${_BINOWNGRP} -m ${BINMODE}
 INSTALL_LIB= \
-	${INSTALL} ${COPY} ${STRIP} ${_SHROWNGRP} -m ${SHAREMODE} 
+	${INSTALL} ${COPY} ${STRIP} ${_SHROWNGRP} -m ${SHAREMODE}
 INSTALL_SCRIPT= \
 	${INSTALL} ${COPY} ${_BINOWNGRP} -m ${BINMODE}
 INSTALL_DATA= \
@@ -3021,7 +3023,7 @@ _MANPAGES+=	${MAN${sect}_${manlang:S%^man/%%:tu}:S%^%${MAN${sect}PREFIX}/${manla
 .endfor
 
 # Special case for English, since it is defined with "" in MANLANG rather than
-# a language name and does not have man pages installed in a lang subdirectory 
+# a language name and does not have man pages installed in a lang subdirectory
 # of MAN${sect}PREFIX.
 .for sect in 1 2 3 4 5 6 7 8 9 L N
 .if defined(MAN${sect}_EN)
@@ -4328,7 +4330,7 @@ create-users-groups:
 .endif
 
 # PR ports/152498
-# XXX Make sure the commands to create group(s) 
+# XXX Make sure the commands to create group(s)
 # and user(s) are the first in pkg-plist
 .if !target(fix-plist-sequence)
 fix-plist-sequence: ${TMPPLIST}
@@ -5905,7 +5907,7 @@ generate-plist:
 	@if [ -f ${PLIST} ]; then \
 		${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} ${PLIST} >> ${TMPPLIST}; \
 	fi
- 
+
 .for dir in ${PLIST_DIRS}
 	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} -e 's,^,@dirrm ,' >> ${TMPPLIST}
 .endfor
@@ -6050,8 +6052,7 @@ add-plist-info:
 	@${ECHO_CMD} "@exec install-info --quiet %D/${INFO_PATH}/$i.info %D/${INFO_PATH}/dir" \
 		>> ${TMPPLIST}
 .else
-	@${ECHO_CMD} "@info ${INFO_PATH}/$i.info" >> ${TMPPLIST}
-	@${LS} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$i.info-* 2>/dev/null | ${SED} -e s:${STAGEDIR}${PREFIX}/:@info\ :g >> ${TMPPLIST}
+	@${LS} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$i.info* 2>/dev/null | ${SED} -e s:${STAGEDIR}${PREFIX}/:@info\ :g >> ${TMPPLIST}
 .endif
 .endfor
 .if defined(INFO_SUBDIR)

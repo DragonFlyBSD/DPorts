@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 334915 2013-11-26 03:35:32Z amdmi3 $
+# $FreeBSD: GIDs 335651 2013-12-05 01:10:41Z hrs $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -184,8 +184,8 @@ pulse-access:*:564:
 assp:*:587:
 avahi-autoipd:*:588:
 _xsi:*:600:
-_tss:*:601:_tss
-_pkcs11:*:602:_pkcs11
+_tss:*:601:
+_pkcs11:*:602:
 freeswitch:*:610:
 monkeysphere:*:641:
 aox:*:666:
