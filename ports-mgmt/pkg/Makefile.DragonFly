@@ -1,8 +1,4 @@
 post-stage:
-	${INSTALL_DATA} ${WRKSRC}/libpkg/pkg_printf.3 \
-		${STAGEDIR}${PREFIX}/man/man3/
-	${INSTALL_DATA} ${WRKSRC}/libpkg/pkg-repository.5 \
-		${STAGEDIR}${PREFIX}/man/man5/
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/411.pkg-backup \
 		${WRKSRC}/scripts/periodic/490.status-pkg-changes \
 		${STAGEDIR}${PREFIX}/etc/periodic/daily/

@@ -1,4 +1,4 @@
---- pkg/pkg.8.orig	2013-06-25 09:55:11.000000000 +0000
+--- pkg/pkg.8.orig	2013-11-27 18:14:50.000000000 +0000
 +++ pkg/pkg.8
 @@ -30,7 +30,7 @@
  .Op Fl d
@@ -7,9 +7,9 @@
 -.Op Fl j Ao jail name or id Ac | Fl c Ao chroot path Ac
 +.Op Fl c Ao chroot path Ac
  .Op Fl C Ao configuration file Ac
+ .Op Fl R Ao repository configuration directory Ac
  .Ao command Ac Ao Ar flags Ac
- .\" ---------------------------------------------------------------------------
-@@ -128,22 +128,6 @@ is installed and activated:
+@@ -129,22 +129,6 @@ is installed and activated:
      # pkg_install-specifics
    fi
  .Ed

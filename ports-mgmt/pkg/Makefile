@@ -1,7 +1,7 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 335041 2013-11-27 18:26:48Z bapt $
+# $FreeBSD: ports-mgmt/pkg/Makefile 335764 2013-12-06 15:35:13Z bapt $
 
 PORTNAME=	pkg
-DISTVERSION=	1.2.1
+DISTVERSION=	1.2.2
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://files.etoilebsd.net/pkg/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
@@ -18,8 +18,8 @@ USE_XZ=		yes
 # With no dependency at all
 NO_CCACHE=	yes
 USE_LDCONFIG=	yes
-USES=		uidfix shebangfix
-SHEBANG_FILES=	scripts/completion/_pkg.bash.in
+USES=		uidfix
+MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
 
 MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null \
 		PORTREVISION=${PORTREVISION}
@@ -27,6 +27,10 @@ MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null \
 # Use a submake as 'deinstall install' needs to reevaluate PKG_CMD
 # so that pkg-static is used from the wrkdir
 USE_SUBMAKE=	yes
+
+.if !exists(/usr/include/jail.h)
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-pkg_pkg.8
+.endif
 
 .include <bsd.port.pre.mk>
 
