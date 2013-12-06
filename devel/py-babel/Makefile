@@ -1,5 +1,5 @@
 # Created by: Dryice Liu<dryice@dryice.name>
-# $FreeBSD: devel/py-babel/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-babel/Makefile 335457 2013-12-02 08:03:05Z lwhsu $
 
 PORTNAME=	Babel
 PORTVERSION=	1.3
@@ -15,17 +15,17 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
 USE_PYTHON=		2.7+
 USE_PYDISTUTILS=	easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 
 PORTDOCS=	docs/*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docfile in ${PORTDOCS}
-	${CP} -r ${WRKSRC}/${docfile} ${DOCSDIR}
+	${CP} -r ${WRKSRC}/${docfile} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
