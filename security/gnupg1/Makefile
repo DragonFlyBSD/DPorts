@@ -1,4 +1,4 @@
-# $FreeBSD: security/gnupg1/Makefile 329469 2013-10-05 15:41:25Z kuriyama $
+# $FreeBSD: security/gnupg1/Makefile 335659 2013-12-05 11:19:00Z mat $
 
 PORTNAME=	gnupg
 PORTVERSION=	1.4.15
@@ -6,6 +6,7 @@ PORTVERSION=	1.4.15
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	gnupg
+PKGNAMESUFFIX=	1
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.sig
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -24,7 +25,6 @@ MAN1=		gpg.1 gpgv.1 gpg.ru.1 gpg-zip.1
 MAN7=		gnupg.7
 INFO=		gnupg1
 DOCSDIR=	${PREFIX}/share/doc/gnupg1
-LATEST_LINK=	gnupg1
 
 PORTDOCS=	*
 
