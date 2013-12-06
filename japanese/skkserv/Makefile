@@ -1,9 +1,9 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skkserv/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/skkserv/Makefile 335572 2013-12-03 15:05:17Z tijl $
 
 PORTNAME=	skkserv
 PORTVERSION=	9.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_PORTS_JP}
 DISTNAME=	skk${PORTVERSION}

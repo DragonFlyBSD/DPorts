@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: japanese/skkserv/files/skkserv.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: japanese/skkserv/files/skkserv.in 335572 2013-12-03 15:05:17Z tijl $
 #
 # PROVIDE: skkserv
 # REQUIRE: LOGIN
@@ -12,6 +12,7 @@ name=skkserv
 rcvar=skkserv_enable
 command=%%PREFIX%%/sbin/skkserv
 
+: ${skkserv_enable:="NO"}
 : ${skkserv_flags:="-a 127.0.0.1 -u skkserv"}
 
 load_rc_config ${name}
