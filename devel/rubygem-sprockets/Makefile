@@ -1,8 +1,8 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/rubygem-sprockets/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD: devel/rubygem-sprockets/Makefile 335503 2013-12-02 15:07:27Z sunpoet $
 
 PORTNAME=	sprockets
-PORTVERSION=	2.2.2
+PORTVERSION=	2.10.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -11,10 +11,10 @@ COMMENT=	Ruby library that preprocesses and concatenates JavaScript files
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	rubygem-tilt>=1.1:${PORTSDIR}/devel/rubygem-tilt \
-		rubygem-hike>=1.2:${PORTSDIR}/devel/rubygem-hike \
-		rubygem-multi_json>=1.5.0:${PORTSDIR}/devel/rubygem-multi_json \
-		rubygem-rack>=1.0:${PORTSDIR}/www/rubygem-rack
+RUN_DEPENDS=	rubygem-hike>=1.2:${PORTSDIR}/devel/rubygem-hike \
+		rubygem-multi_json>=1.0:${PORTSDIR}/devel/rubygem-multi_json \
+		rubygem-rack>=1.0:${PORTSDIR}/www/rubygem-rack \
+		rubygem-tilt>=1.1:${PORTSDIR}/devel/rubygem-tilt
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
