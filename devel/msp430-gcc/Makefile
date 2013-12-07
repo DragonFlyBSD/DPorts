@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-gcc/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/msp430-gcc/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}.${LTSVERSION}
@@ -33,7 +33,7 @@ LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp \
 		libmpfr.so:${PORTSDIR}/math/mpfr \
 		libmpc.so:${PORTSDIR}/math/mpc
 
-CONFLICTS=	msp430-gcc-3.*
+CONFLICTS=	msp430-gcc3-3.*
 
 GCCVERSION=	4.6.3
 LTSVERSION=	20120406
