@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/redir/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/redir/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	redir
 PORTVERSION=	2.2.1
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://sammy.net/~sammy/hacks/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A TCP connection redirection utility
 
 USE_RC_SUBR=	redir
