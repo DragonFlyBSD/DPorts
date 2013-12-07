@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: japanese/jacode.pl/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/jacode.pl/Makefile 335435 2013-12-01 19:50:25Z antoine $
 
 PORTNAME=	jacode.pl
 PORTVERSION=	2.13.4.10
@@ -19,12 +19,11 @@ USE_PERL5=	run
 PLIST_FILES=	${SITE_PERL_REL}/${PORTNAME}
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 pre-install:
 	@cd ${WRKSRC}; ${PERL} ${WRKSRC}/test.pl
 
 do-install:
-	@${MKDIR} ${PREFIX}/${SITE_PERL_REL}
-	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME} ${PREFIX}/${SITE_PERL_REL}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/${PORTNAME}
 
 .include <bsd.port.mk>
