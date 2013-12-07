@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-CheckCompiler/Makefile 335050 2013-11-27 19:49:54Z sunpoet $
+# $FreeBSD: devel/p5-Devel-CheckCompiler/Makefile 335638 2013-12-04 21:53:13Z sunpoet $
 
 PORTNAME=	Devel-CheckCompiler
-PORTVERSION=	0.04
+PORTVERSION=	0.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
