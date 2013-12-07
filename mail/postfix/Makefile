@@ -1,5 +1,5 @@
 # Created by: Torsten Blum <torstenb@FreeBSD.org>
-# $FreeBSD: mail/postfix/Makefile 331746 2013-10-27 03:29:59Z sahil $
+# $FreeBSD: mail/postfix/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	postfix
 PORTVERSION=	2.10.2
@@ -22,7 +22,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 VDAVERSION=	2.10.0
-CONFLICTS=	courier-0.* postfix-1.* postfix-2.[0-9].* postfix-base-2.[0-9].* \
+CONFLICTS=	courier-0.* postfix-1.* postfix2?-* \
 		postfix-current-2.* postfix-current-base-2.* sendmail-8.* \
 		sendmail+*-8.* smail-3.* zmailer-2.* opensmtpd-[0-9]*
 
