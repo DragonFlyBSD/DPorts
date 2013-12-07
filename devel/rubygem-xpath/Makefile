@@ -1,13 +1,15 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-xpath/Makefile 332043 2013-10-30 02:47:06Z swills $
+# $FreeBSD: devel/rubygem-xpath/Makefile 335759 2013-12-06 15:23:52Z sunpoet $
 
 PORTNAME=	xpath
-PORTVERSION=	1.0.0
+PORTVERSION=	2.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DSL for generating XPath Expressions
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-nokogiri>=1.3:${PORTSDIR}/textproc/rubygem-nokogiri
 
