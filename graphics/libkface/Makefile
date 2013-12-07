@@ -1,7 +1,8 @@
-# $FreeBSD: graphics/libkface/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libkface/Makefile 335601 2013-12-04 02:51:00Z jhale $
 
 PORTNAME=	libkface
 PORTVERSION=	${DIGIKAM_VER}
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 
 MAINTAINER=	kde@FreeBSD.org
@@ -11,7 +12,7 @@ NO_STAGE=	yes
 .include "${.CURDIR}/../digikam-kde4/Makefile.common"
 
 USES+=		pkgconfig
-LIB_DEPENDS=	opencv_legacy:${PORTSDIR}/graphics/opencv
+LIB_DEPENDS=	libopencv_legacy.so:${PORTSDIR}/graphics/opencv
 USE_LDCONFIG=	yes
 
 post-patch:
