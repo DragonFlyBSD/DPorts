@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid32/Makefile 334940 2013-11-26 14:57:45Z mat $
+# $FreeBSD: www/squid32/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	squid
 PORTVERSION=	3.2.${SQUID_STABLE_VER}
@@ -21,6 +21,7 @@ MASTER_SITES=	ftp://ftp.squid-cache.org/pub/%SUBDIR%/ \
 		http://www1.za.squid-cache.org/Versions/v3/3.2/
 MASTER_SITE_SUBDIR=	squid
 DIST_SUBDIR=	squid3.2
+PKGNAMESUFFIX=	32
 
 PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 		http://www2.us.squid-cache.org/%SUBDIR%/ \
@@ -39,11 +40,9 @@ COMMENT=	HTTP Caching Proxy
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LATEST_LINK=	squid32
-
 SQUID_STABLE_VER=	13
 
-CONFLICTS_INSTALL=	squid-2.[0-9].* squid-3.[!2].* cacheboy-[0-9]* lusca-head-[0-9]*
+CONFLICTS_INSTALL=	squid-2.[0-9].* squid33-* cacheboy-[0-9]* lusca-head-[0-9]*
 USES=		perl5
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
