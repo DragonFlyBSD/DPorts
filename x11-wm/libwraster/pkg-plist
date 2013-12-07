@@ -1,4 +1,4 @@
-@comment $FreeBSD$
+@comment $FreeBSD: x11-wm/libwraster/pkg-plist 335453 2013-12-02 07:16:31Z hrs $
 bin/get-wraster-flags
 include/wraster.h
 lib/libwraster.a
@@ -6,3 +6,4 @@ lib/libwraster.la
 lib/libwraster.so
 lib/libwraster.so.4
 libdata/pkgconfig/wrlib.pc
+man/man1/get-wraster-flags.1.gz
