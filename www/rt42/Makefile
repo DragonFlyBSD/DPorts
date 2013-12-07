@@ -1,7 +1,8 @@
-# $FreeBSD: www/rt42/Makefile 335149 2013-11-29 07:20:28Z matthew $
+# $FreeBSD: www/rt42/Makefile 335413 2013-12-01 17:49:02Z matthew $
 
 PORTNAME=	rt
 DISTVERSION=	4.2.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 PKGNAMESUFFIX=	42
@@ -10,7 +11,6 @@ MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	RT is an industrial-grade ticketing system written in Perl
 
 CONFLICTS=	rt-3.8* rt40-4.0* brlcad-[0-9]*
-NEED_ROOT=	yes
 
 # See doc/web_deployment.pod for info on the choices of webserver /
 # webapp combinations.  Note: if using apache, apache-2.2+ is
@@ -172,7 +172,11 @@ RT_ETC_PATH?=	${PREFIX}/etc/${PORTNAME}${PKGNAMESUFFIX}
 RT_LAYOUT=	FreeBSD
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
+.if ${PORT_OPTIONS:MPGSQL}
+DB_DBA_USER?=	pgsql
+.else
 DB_DBA_USER?=	root
+.endif
 DB_DBA_PASSWORD?=
 DB_USER?=	rt_user
 DB_PASSWORD?=	rt_pass
