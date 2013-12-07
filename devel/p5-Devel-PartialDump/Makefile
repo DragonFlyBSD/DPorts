@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-PartialDump/Makefile 334847 2013-11-25 13:05:21Z sunpoet $
+# $FreeBSD: devel/p5-Devel-PartialDump/Makefile 335429 2013-12-01 18:43:03Z sunpoet $
 
 PORTNAME=	Devel-PartialDump
-PORTVERSION=	0.16
+PORTVERSION=	0.17
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
