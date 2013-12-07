@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/frei0r/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: graphics/frei0r/Makefile 335601 2013-12-04 02:51:00Z jhale $
 
 PORTNAME=	frei0r
 PORTVERSION=	1.3
@@ -27,7 +27,7 @@ IGNORE=		cannot build OpenCV and gavl plugins simultaneously
 .endif
 
 .if defined(BUILDING_FREI0R_OPENCV)
-PORTREVISION=	2
+PORTREVISION=	3
 COMMENT=	Frei0r OpenCV plugins
 PKGNAMESUFFIX=  -plugins-opencv
 LIB_DEPENDS+=	opencv_legacy.2:${PORTSDIR}/graphics/opencv
@@ -57,6 +57,7 @@ BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
 
 .if defined(FREI0R_PLUGINS)
 CPPFLAGS+=	"-I${LOCALBASE}/include"
+LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST=		${WRKSRC}/PLIST
 ALL_TARGET=
 BUILD_WRKSRC=	${WRKSRC}/src
