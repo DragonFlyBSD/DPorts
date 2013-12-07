@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/goocanvas/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/goocanvas/Makefile 335595 2013-12-03 22:04:38Z kwm $
 #    $MCom: ports/trunk/graphics/goocanvas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goocanvas
@@ -10,9 +10,11 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Canvas widget for GTK+
 
+PORTSCOUT=	ignore:1
+
 USES=		pathfix pkgconfig
 USE_GNOME=	gtk20 ltverhack
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 
@@ -21,7 +23,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -40,5 +41,8 @@ post-patch:
 .if ! ${PORT_OPTIONS:MNLS}
 	@${REINPLACE_CMD} -e '/^SUBDIRS/s|po||g' ${WRKSRC}/Makefile.in
 .endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgoocanvas.so.3 
 
 .include <bsd.port.mk>
