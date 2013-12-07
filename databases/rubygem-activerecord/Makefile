@@ -1,18 +1,20 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: databases/rubygem-activerecord/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD: databases/rubygem-activerecord/Makefile 335702 2013-12-05 20:27:38Z sunpoet $
 
 PORTNAME=	activerecord
-PORTVERSION=	3.2.15
+PORTVERSION=	3.2.16
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Object-relational mapping layer for Rails MVC Framework
 
-RUN_DEPENDS=	rubygem-activesupport>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-activesupport \
-		rubygem-activemodel>=${PORTVERSION}:${PORTSDIR}/databases/rubygem-activemodel \
-		rubygem-tzinfo>=0.3.29:${PORTSDIR}/devel/rubygem-tzinfo \
-		rubygem-arel>=3.0.2:${PORTSDIR}/databases/rubygem-arel
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-activemodel>=${PORTVERSION}:${PORTSDIR}/databases/rubygem-activemodel \
+		rubygem-activesupport>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-activesupport \
+		rubygem-arel>=3.0.2:${PORTSDIR}/databases/rubygem-arel \
+		rubygem-tzinfo>=0.3.29:${PORTSDIR}/devel/rubygem-tzinfo
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
@@ -26,18 +28,8 @@ OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
 GEM_ENV+=	LANG=en_US.UTF-8
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MMYSQL}
-RUN_DEPENDS+=	${RUBY_PKGNAMEPREFIX}mysql>0:${PORTSDIR}/databases/ruby-mysql
-.endif
-
-.if ${PORT_OPTIONS:MPGSQL}
-RUN_DEPENDS+=	rubygem-pg>=0:${PORTSDIR}/databases/rubygem-pg
-.endif
-
-.if ${PORT_OPTIONS:MSQLITE3}
-RUN_DEPENDS+=	rubygem-sqlite3>=1.2.1:${PORTSDIR}/databases/rubygem-sqlite3
-.endif
+MYSQL_RUN_DEPENDS=	${RUBY_PKGNAMEPREFIX}mysql>=0:${PORTSDIR}/databases/ruby-mysql
+PGSQL_RUN_DEPENDS=	rubygem-pg>=0:${PORTSDIR}/databases/rubygem-pg
+SQLITE3_RUN_DEPENDS=	rubygem-sqlite3>=1.2.1:${PORTSDIR}/databases/rubygem-sqlite3
 
 .include <bsd.port.mk>
