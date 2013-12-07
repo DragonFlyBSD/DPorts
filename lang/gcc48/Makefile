@@ -1,8 +1,8 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc48/Makefile 334791 2013-11-24 20:55:35Z gerald $
+# $FreeBSD: lang/gcc48/Makefile 335442 2013-12-01 21:22:44Z gerald $
 
 PORTNAME=	gcc48
-PORTVERSION=	4.8.3.s20131121
+PORTVERSION=	4.8.3.s20131128
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	snapshots/${DISTVERSION}
@@ -64,7 +64,6 @@ WRKSRC=		${WRKDIR}/build
 TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
 GNU_CONFIGURE=	yes
-CFLAGS+=	-I${LOCALBASE}/include
 .if empty(PORT_OPTIONS:MBOOTSTRAP)
 CONFIGURE_ARGS+=--disable-bootstrap
 .else
