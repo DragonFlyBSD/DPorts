@@ -1,8 +1,8 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: x11/mate-dialogs/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD: x11/mate-dialogs/Makefile 335557 2013-12-03 10:51:17Z kwm $
 
 PORTNAME=	mate-dialogs
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	x11 mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -22,8 +22,8 @@ USE_GNOME=	gnomehier glib20 gtk20 intlhack
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk=2.0
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NOTIFY
 OPTIONS_DEFAULT=NOTIFY
