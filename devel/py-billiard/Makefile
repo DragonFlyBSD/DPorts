@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-billiard/Makefile 334578 2013-11-22 11:59:02Z wg $
+# $FreeBSD: devel/py-billiard/Makefile 335609 2013-12-04 10:14:58Z wg $
 
 PORTNAME=	billiard
-PORTVERSION=	3.3.0.8
+PORTVERSION=	3.3.0.11
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
