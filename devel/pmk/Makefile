@@ -1,12 +1,12 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: devel/pmk/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pmk/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	pmk
 PORTVERSION=	0.10.4
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pre Make Kit, a sane replacement for autoconf
 
 PKGINSTALL=	${WRKDIR}/pkg-install
