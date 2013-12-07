@@ -1,17 +1,16 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/cakephp12/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cakephp12/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	cakephp
 PORTVERSION=	1.2.10
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/tarball/${PORTVERSION}/ \
 		LOCAL/glarkin
+PKGNAMESUFFIX=	12
 DISTNAME=	${PORTNAME}-${PORTNAME}-${PORTVERSION}-${GITVERSION}
 
 MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	A framework for developing PHP web applications
-
-LATEST_LINK=	cakephp12
 
 GITVERSION=	0-ge6e50e8
 FETCH_ARGS=	-pRr
@@ -21,7 +20,7 @@ PORTDOCS=	README
 
 SLAVE_PORT_MODULES=	REWRITE
 
-CONFLICTS=	cakephp-1.[13].* cakephp-2.*
+CONFLICTS=	cakephp-1[13]-* cakephp-2?-.* cakephp-2.3.*
 
 NO_BUILD=	yes
 USES=		gettext
