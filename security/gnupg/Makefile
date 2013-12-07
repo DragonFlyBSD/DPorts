@@ -1,4 +1,4 @@
-# $FreeBSD: security/gnupg/Makefile 335188 2013-11-29 15:16:28Z mat $
+# $FreeBSD: security/gnupg/Makefile 335479 2013-12-02 12:05:45Z mat $
 
 PORTNAME=	gnupg
 PORTVERSION=	2.0.22
@@ -45,8 +45,8 @@ DOCS_CONFIGURE_ENABLE=	doc
 PINENTRY_RUN_DEPENDS=	pinentry>0:${PORTSDIR}/security/pinentry
 GPGSM_RUN_DEPENDS=	dirmngr:${PORTSDIR}/security/dirmngr
 GPGSM_CONFIGURE_ENABLE=	gpgsm
-MKDNS_LIB_DEPENDS=	libadns.so:${PORTSDIR}/dns/adns
-MKDNS_CONFIGURE_ON=	--with-adns=${LOCALBASE}
+KDNS_LIB_DEPENDS=	libadns.so:${PORTSDIR}/dns/adns
+KDNS_CONFIGURE_ON=	--with-adns=${LOCALBASE}
 STD_SOCKET_CONFIGURE_ENABLE=	socket
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
