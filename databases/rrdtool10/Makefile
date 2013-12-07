@@ -1,19 +1,19 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool10/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rrdtool10/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.0.50
 PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.0.x/
+PKGNAMESUFFIX=	10
 
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Round Robin Database Tools
 
 MAKE_ENV=	PERL=${PERL}
 
-CONFLICTS=	rrdtool-1.2*
-LATEST_LINK=	rrdtool10
+CONFLICTS=	rrdtool12-* rrdtool-1.*
 
 USES=		pkgconfig perl5
 USE_AUTOTOOLS=	libtool
