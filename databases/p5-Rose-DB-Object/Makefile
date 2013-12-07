@@ -1,8 +1,8 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 332745 2013-11-04 16:59:12Z sunpoet $
+# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 335641 2013-12-04 22:12:08Z sunpoet $
 
 PORTNAME=	Rose-DB-Object
-PORTVERSION=	0.8080
+PORTVERSION=	0.8090
 PORTEPOCH=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
