@@ -1,5 +1,5 @@
 # Created by: smace@FreeBSD.org
-# $FreeBSD: devel/libredblack/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libredblack/Makefile 335567 2013-12-03 12:37:14Z sunpoet $
 
 PORTNAME=	libredblack
 PORTVERSION=	1.3
@@ -10,13 +10,11 @@ MASTER_SITES=	SF
 MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library that provides the red-black balanced tree algorithm
 
+LICENSE=	GPLv2
+
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-MAN1=		rbgen.1
-MAN3=		rbcloselist.3 rbdelete.3 rbdestroy.3 rbfind.3 rbinit.3 \
-		rblookup.3 rbopenlist.3 rbreadlist.3 rbsearch.3 rbwalk.3
 
 .if defined(WITHOUT_PYTHON)
 CONFIGURE_ARGS+=	--without-rbgen
@@ -26,11 +24,13 @@ USE_PYTHON=	yes
 PLIST_SUB+=	PYTHON=""
 .endif
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CFLAGS =.*$$|CFLAGS = @CFLAGS@|g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e \
 		's|implemented.*Various||g' ${WRKSRC}/rbgen.in
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libredblack.so
 
 .include <bsd.port.mk>
