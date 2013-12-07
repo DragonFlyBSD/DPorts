@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/libsbml/Makefile 330025 2013-10-10 18:08:34Z tabthorpe $
+# $FreeBSD: biology/libsbml/Makefile 335360 2013-12-01 01:58:31Z wen $
 
 PORTNAME=	libsbml
 PORTVERSION=	4.2.0
@@ -17,6 +17,7 @@ OPTIONS_DEFINE=	PYTHON RUBY
 
 USE_GMAKE=	yes
 USE_ZIP=	yes
+USE_GCC=	any
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
