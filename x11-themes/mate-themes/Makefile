@@ -1,8 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-themes/mate-themes/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD: x11-themes/mate-themes/Makefile 335556 2013-12-03 10:48:02Z kwm $
 
 PORTNAME=	mate-themes
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	x11-themes mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
