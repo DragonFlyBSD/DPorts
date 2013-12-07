@@ -1,10 +1,11 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: sysutils/py-pytsk/Makefile 334900 2013-11-25 22:09:51Z antoine $
+# $FreeBSD: sysutils/py-pytsk/Makefile 335726 2013-12-06 09:11:25Z antoine $
 
 PORTNAME=	pytsk
 DISTVERSION=	2013-11-24
 CATEGORIES=	sysutils security devel python
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiScUxsUm54cG02RDA/ \
+		LOCAL/antoine
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 EXTRACT_SUFX=	.tgz
 
