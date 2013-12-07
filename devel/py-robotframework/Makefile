@@ -1,8 +1,8 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework/Makefile 335114 2013-11-28 17:50:36Z wg $
+# $FreeBSD: devel/py-robotframework/Makefile 335741 2013-12-06 12:32:18Z wg $
 
 PORTNAME=	robotframework
-PORTVERSION=	2.8.2
+PORTVERSION=	2.8.3
 CATEGORIES=	devel www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,5 +14,6 @@ LICENSE=	AL2
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
