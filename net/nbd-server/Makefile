@@ -1,14 +1,14 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: net/nbd-server/Makefile 331870 2013-10-28 17:11:58Z pawel $
+# $FreeBSD: net/nbd-server/Makefile 335399 2013-12-01 15:49:09Z sunpoet $
 
 PORTNAME=	nbd
-PORTVERSION=	3.4
+PORTVERSION=	3.5
 PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
 PKGNAMESUFFIX=	-server
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	5u623l20@gmail.com
 COMMENT=	Server for the Linux network block device (nbd)
 
 LICENSE=	GPLv2
