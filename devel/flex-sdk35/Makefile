@@ -1,4 +1,4 @@
-# $FreeBSD: devel/flex-sdk35/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/flex-sdk35/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	flex-sdk
 PORTVERSION=	3.5.0.12683
@@ -6,14 +6,14 @@ PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	http://fpdownload.adobe.com/pub/flex/sdk/builds/flex3/
 DISTFILES=	flex_sdk_${PORTVERSION}_mpl.zip
+PKGNAMESUFFIX=	3
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Adobe Flex SDK
 
 RUN_DEPENDS=	javavm:${PORTSDIR}/java/javavmwrapper
 
-CONFLICTS=	ja-flex-sdk-2.* flex-sdk-2.* flex-sdk-4.*
-NO_LATEST_LINK=	YES
+CONFLICTS=	ja-flex-sdk-2.* flex-sdk2-2.* flex-sdk-4.*
 USE_ZIP=	YES
 USE_JAVA=	YES
 JAVA_VERSION=	1.6+
