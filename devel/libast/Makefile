@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: devel/libast/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libast/Makefile 335771 2013-12-06 16:16:09Z sunpoet $
 
 PORTNAME=	libast
 PORTVERSION=	0.7
@@ -9,23 +9,27 @@ MASTER_SITES=	http://www.eterm.org/download/ \
 		CRITICAL
 
 MAINTAINER=	rodrigo@bebik.net
-COMMENT=	A library of assorted spiffy things
+COMMENT=	Library of assorted spiffy things
 
-LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
+LICENSE=	BSD
+
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 USE_AUTOTOOLS=	libtool
-USES=	pathfix
 USE_EFL=	imlib2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
+USES=		pathfix
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_MMX) && (${ARCH} == "i386")
 CONFIGURE_ARGS=	--enable-mmx
 .endif
+
+post-build:
+	@${STRIP_CMD} ${WRKSRC}/src/.libs/libast.so.2
 
 .include <bsd.port.post.mk>
