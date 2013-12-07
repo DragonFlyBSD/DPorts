@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-redis-rails/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD: www/rubygem-redis-rails/Makefile 335416 2013-12-01 17:56:14Z sunpoet $
 
 PORTNAME=	redis-rails
 PORTVERSION=	4.0.0
@@ -6,15 +6,16 @@ CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	https://rubygems.org/gems/redis-rails
+COMMENT=	Redis for Ruby on Rails
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-redis-actionpack>=4:${PORTSDIR}/databases/rubygem-redis-actionpack \
 		rubygem-redis-activesupport>=4:${PORTSDIR}/devel/rubygem-redis-activesupport \
-		rubygem-redis-store>=1.1.4:${PORTSDIR}/devel/rubygem-redis-store
+		rubygem-redis-store>=1.1.0:${PORTSDIR}/devel/rubygem-redis-store
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
