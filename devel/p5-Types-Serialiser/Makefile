@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Types-Serialiser/Makefile 332539 2013-11-02 20:03:10Z sunpoet $
+# $FreeBSD: devel/p5-Types-Serialiser/Makefile 335390 2013-12-01 15:02:51Z sunpoet $
 
 PORTNAME=	Types-Serialiser
-PORTVERSION=	0.03
+PORTVERSION=	1.0
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MLEHMANN
