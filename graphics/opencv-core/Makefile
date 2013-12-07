@@ -1,8 +1,14 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/opencv-core/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/opencv-core/Makefile 335601 2013-12-04 02:51:00Z jhale $
 
-_BUILDING_OPENCV_CORE=	yes
-MASTERDIR=	${.CURDIR}/../opencv
+PORTREVISION=	0
+PKGNAMESUFFIX=	-${OCV_SLAVE}
 
-NO_STAGE=	yes
+COMMENT=	OpenCV core libraries
+
+OCV_SLAVE=	core
+OCV_CORE=	yes
+MASTERDIR=	${.CURDIR:H}/opencv
+PLIST=		${.CURDIR}/pkg-plist
+
 .include "${MASTERDIR}/Makefile"
