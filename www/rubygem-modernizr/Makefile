@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-modernizr/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD: www/rubygem-modernizr/Makefile 335499 2013-12-02 14:28:45Z sunpoet $
 
 PORTNAME=	modernizr
 PORTVERSION=	2.6.2
@@ -8,11 +8,12 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Neatly packaged Modernizr JS assets
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-sprockets>=2.0:${PORTSDIR}/devel/rubygem-sprockets
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
