@@ -1,7 +1,7 @@
-# $FreeBSD: audio/mpdcon/Makefile 329985 2013-10-10 12:44:47Z theraven $
+# $FreeBSD: audio/mpdcon/Makefile 335569 2013-12-03 14:15:34Z theraven $
 
 PORTNAME=	mpdcon
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	audio gnustep
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	gap
