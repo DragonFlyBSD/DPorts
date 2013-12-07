@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: databases/pgpool-II/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pgpool-II/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	pgpool-II
 PORTVERSION=	3.1.6
@@ -19,7 +19,7 @@ USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 CONFIGURE_ARGS=	--with-openssl
 
-CONFLICTS=	pgpool-3.* pgpool-II-2.* pgpool-II-3.0.*
+CONFLICTS=	pgpool-3.* pgpool-II-22-* pgpool-II-23-* pgpool-II-23-* 
 USE_RC_SUBR=	pgpool
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README README.euc_jp
