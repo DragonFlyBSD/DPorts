@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-URI-Template/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: net/p5-URI-Template/Makefile 335755 2013-12-06 15:23:27Z sunpoet $
 
 PORTNAME=	URI-Template
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,6 +15,7 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-URI>0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+TEST_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON
 
 USES=		perl5
 USE_PERL5=	configure
