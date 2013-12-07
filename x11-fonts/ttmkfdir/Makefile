@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-fonts/ttmkfdir/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/ttmkfdir/Makefile 335401 2013-12-01 16:10:24Z bsam $
 
 PORTNAME=	ttmkfdir
 PORTVERSION=	3.0.9
@@ -12,15 +12,14 @@ MASTER_SITE_SUBDIR=distfiles
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Create fonts.scale file for use with TrueType font server
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 PLIST_FILES=	bin/ttmkfdir
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_XORG=	x11
+USES=		gmake
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
