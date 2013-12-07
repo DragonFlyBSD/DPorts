@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/blobby/Makefile 332082 2013-10-30 07:16:48Z martymac $
+# $FreeBSD: games/blobby/Makefile 335549 2013-12-03 08:34:29Z martymac $
 
 PORTNAME=	blobby
 PORTVERSION=	1.0r3
@@ -21,12 +21,11 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 USE_XORG=	ice x11 xext xxf86vm xdamage xfixes xau xdmcp xrandr xrender
 USE_SDL=	sdl
 USE_GL=		glu
-USES=		cmake
+
+USES=		dos2unix cmake
+DOS2UNIX_REGEX=	.*\.(c|h|cpp)
 CMAKE_ARGS+=	-DDATADIR:PATH="${DATADIR}"
 WRKSRC=		${WRKDIR}/blobby-1.0rc3
-
-USE_DOS2UNIX=	yes
-DOS2UNIX_REGEX=	.*\.(c|h|cpp)
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README TODO
 
