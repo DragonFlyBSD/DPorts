@@ -1,9 +1,9 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/trousers/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/trousers/Makefile 335654 2013-12-05 07:59:03Z hrs $
 
 PORTNAME=	trousers
 PORTVERSION=	0.3.10
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
@@ -20,11 +20,12 @@ USE_OPENSSL=	YES
 USE_LDCONFIG=	YES
 USE_AUTOTOOLS=	autoconf automake libtool
 USE_RC_SUBR=	tcsd
-WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--with-gui=none --enable-static \
 		--localstatedir=${PREFIX}/var \
 		--with-tssuser=${USERS} --with-tssgroup=${GROUPS}
+MAKE_ENV=	PTHREAD_LIBS=${PTHREAD_LIBS} ICONV_LIB=${ICONV_LIB} \
+		ICONV_PREFIX=${ICONV_PREFIX}
 SUB_FILES=	pkg-message
 SUB_LIST=	USERS=${USERS} GROUPS=${GROUPS}
 USERS=		_tss
@@ -32,14 +33,13 @@ GROUPS=		_tss
 
 OPTIONS_DEFINE=	EMULATOR DEBUG
 EMULATOR_DESC=	Build for use with the tpm-emulator
+DEBUG_CONFIGURE_ENABLE=	debug
 
-NO_STAGE=	yes
-.include "Makefile.man"
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEMULATOR}
 PKGNAMESUFFIX+=	-no_tddl
-LIB_DEPENDS+=	tddl.1:${PORTSDIR}/emulators/tpm-emulator
+LIB_DEPENDS+=	libtddl.so:${PORTSDIR}/emulators/tpm-emulator
 
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-src-tcs-Makefile.am \
 		${FILESDIR}/extra-patch-src-tcsd-Makefile.am \
@@ -52,25 +52,14 @@ CONFLICTS+=	tpm-emulator-[0-9]*
 PLIST_SUB+=	TDDL=""
 .endif
 
-.if ${PORT_OPTIONS:MDEBUG}
-CONFIGURE_ARGS+=--enable-debug
-.endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's/-liconv$$/${ICONV_LIB}/' \
-		${WRKSRC}/src/tspi/Makefile.am
-
 run-autotools:	run-autotools-autoreconf
 
 run-autotools-autoreconf:
 	@cd ${CONFIGURE_WRKSRC} && ${SETENV} ${AUTOTOOLS_ENV} ${AUTORECONF} -i
 
 post-install:
-	${INSTALL_DATA} -o ${USERS} -g ${GROUPS} -m 0600 \
-		${WRKSRC}/dist/tcsd.conf ${PREFIX}/etc/tcsd.conf.dist
-	@[ -f ${PREFIX}/etc/tcsd.conf ] || \
-		${INSTALL_DATA} -o ${USERS} -g ${GROUPS} -m 0600 \
-		${WRKSRC}/dist/tcsd.conf ${PREFIX}/etc/tcsd.conf
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_DATA} \
+	    ${WRKSRC}/dist/tcsd.conf ${STAGEDIR}${PREFIX}/etc/tcsd.conf.dist
+	${MKDIR} ${STAGEDIR}${PREFIX}/var/lib/tpm
 
 .include <bsd.port.mk>
