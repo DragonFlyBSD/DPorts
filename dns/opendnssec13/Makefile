@@ -1,14 +1,16 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec13/Makefile 330275 2013-10-14 06:52:32Z bapt $
+# $FreeBSD: dns/opendnssec13/Makefile 335686 2013-12-05 20:25:48Z sunpoet $
 
 PORTNAME=	opendnssec
-PORTVERSION=	1.3.15
+PORTVERSION=	1.3.16
 CATEGORIES=	dns
 MASTER_SITES=	http://dist.opendnssec.org/source/
 PKGNAMESUFFIX=	13
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	Tool suite for maintaining DNSSEC
+
+LICENSE=	BSD
 
 BUILD_DEPENDS=	ldns>=1.6.16:${PORTSDIR}/dns/ldns
 LIB_DEPENDS=	libldns.so:${PORTSDIR}/dns/ldns
