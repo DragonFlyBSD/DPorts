@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: devel/p5-Role-Basic/Makefile 335005 2013-11-27 10:08:39Z matthew $
+# $FreeBSD: devel/p5-Role-Basic/Makefile 335634 2013-12-04 20:58:09Z matthew $
 
 PORTNAME=	Role-Basic
 PORTVERSION=	0.13
@@ -10,6 +10,8 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Just roles. Nothing else
+
+PORTSCOUT=	limit:^0\.[1-9]
 
 USES=		perl5
 USE_PERL5=	configure
