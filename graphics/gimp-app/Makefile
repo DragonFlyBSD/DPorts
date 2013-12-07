@@ -1,9 +1,9 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/gimp-app/Makefile 332795 2013-11-05 00:42:22Z kwm $
+# $FreeBSD: graphics/gimp-app/Makefile 335541 2013-12-02 21:19:11Z kwm $
 #   $MCom: ports/graphics/gimp-app/Makefile,v 1.65 2012/12/30 18:09:11 mezz Exp $
 
 PORTNAME?=	gimp-app
-PORTVERSION=	2.8.8
+PORTVERSION=	2.8.10
 PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
@@ -34,7 +34,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 USE_BZIP2=	yes
 USE_XORG=	xpm xmu xext
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 USE_GNOME+=	intltool intlhack gtk20 libartlgpl2 ltverhack gnomehier
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
