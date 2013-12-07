@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-tinyatom/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD: www/rubygem-tinyatom/Makefile 335753 2013-12-06 15:23:13Z sunpoet $
 
 PORTNAME=	tinyatom
 PORTVERSION=	0.3.6
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Small and easy to use ruby Atom feed generator
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-builder>=0:${PORTSDIR}/devel/rubygem-builder \
 		rubygem-public_suffix>=0:${PORTSDIR}/dns/rubygem-public_suffix
