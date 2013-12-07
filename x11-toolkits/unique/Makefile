@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/unique/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/unique/Makefile 335550 2013-12-03 09:32:32Z kwm $
 #   $MCom: ports/x11-toolkits/unique/Makefile,v 1.12 2012/09/03 16:28:30 mezz Exp $
 
 PORTNAME=	unique
@@ -12,7 +12,9 @@ DISTNAME=	lib${PORTNAME}-${PORTVERSION}
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library for single instance applications
 
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+PORTSCOUT=	ignore:1
+
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
 USE_XORG=	ice
 USE_BZIP2=	yes
@@ -25,7 +27,6 @@ CONFIGURE_ARGS=	--disable-maintainer-flags
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libdir)/pkgconfig|prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/configure ${WRKSRC}/Makefile.in
@@ -34,5 +35,8 @@ post-patch:
 		${WRKSRC}/unique/uniquebackend.[ch] \
 		${WRKSRC}/unique/uniqueinternals.h \
 		${WRKSRC}/unique/uniquemessage.[ch]
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libunique-1.0.so.2
 
 .include <bsd.port.mk>
