@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-Jifty-DBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: databases/p5-Jifty-DBI/Makefile 335562 2013-12-03 12:15:51Z sunpoet $
 
 PORTNAME=	Jifty-DBI
-PORTVERSION=	0.76
+PORTVERSION=	0.77
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
