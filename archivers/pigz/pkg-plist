@@ -1,5 +1,0 @@
-@comment $FreeBSD: archivers/pigz/pkg-plist 300895 2012-07-14 12:56:14Z beat $
-bin/pigz
-bin/pigzn
-bin/pigzt
-bin/unpigz
