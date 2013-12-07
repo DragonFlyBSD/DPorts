@@ -1,9 +1,9 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/gimp/Makefile 332760 2013-11-04 19:26:51Z kwm $
+# $FreeBSD: graphics/gimp/Makefile 335541 2013-12-02 21:19:11Z kwm $
 #   $MCom: ports/graphics/gimp/Makefile,v 1.22 2012/11/26 13:31:16 kwm Exp $
 
 PORTNAME=	gimp
-DISTVERSION?=	2.8.8
+DISTVERSION?=	2.8.10
 PORTREVISION?=	0
 PORTEPOCH?=	2
 CATEGORIES=	graphics gnome
