@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: textproc/cdiff/Makefile 333775 2013-11-14 17:08:44Z mat $
+# $FreeBSD: textproc/cdiff/Makefile 335484 2013-12-02 13:27:19Z mat $
 
 PORTNAME=	cdiff
 PORTVERSION=	0.9.3
@@ -16,6 +16,7 @@ GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	f85a5e2
 
 USE_PYTHON=
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=
+PYDISTUTILS_AUTOPLIST=
 
 .include <bsd.port.mk>
