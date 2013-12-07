@@ -1,4 +1,4 @@
-# $FreeBSD: x11/tilda/Makefile 328962 2013-10-01 16:13:56Z eadler $
+# $FreeBSD: x11/tilda/Makefile 335458 2013-12-02 08:05:23Z sunpoet $
 
 PORTNAME=	tilda
 PORTVERSION=	0.9.6
@@ -9,15 +9,16 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Drop down x11 terminal with transparency support
 
-LIB_DEPENDS=	confuse.0:${PORTSDIR}/devel/libconfuse
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	libconfuse.so:${PORTSDIR}/devel/libconfuse
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 libglade2 vte
-USES=		gmake pkgconfig
+USES=		gmake gettext pkgconfig
 
 DOCS=		AUTHORS ChangeLog README TODO
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|ps -C tilda -o pid=|pgrep tilda|' \
 		${WRKSRC}/src/tilda.c
@@ -25,13 +26,10 @@ post-patch:
 		${WRKSRC}/src/tomboykeybinder.h
 
 post-install:
-.if !defined (NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "		ATTENTION:"
