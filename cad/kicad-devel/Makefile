@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/kicad-devel/Makefile 334598 2013-11-22 15:07:38Z mr $
+# $FreeBSD: cad/kicad-devel/Makefile 335626 2013-12-04 18:48:48Z makc $
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
@@ -44,9 +44,6 @@ EXTRAS2RM=	linux-non_unicode linux wings3d LINUX.README	\
 USE_GCC=	yes
 USES=		cmake gettext
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
-		-DCMAKE_C_COMPILER=gcc \
-		-DCMAKE_CXX_COMPILER=g++ \
-		-DCMAKE_BUILD_TYPE=Release \
 		-DKICAD_TESTING_VERSION=ON \
 		-DCMAKE_INCLUDE_PATH="${LOCALBASE}/include" \
 		-DwxWidgets_CONFIG_EXECUTABLE="${WX_CONFIG}"
