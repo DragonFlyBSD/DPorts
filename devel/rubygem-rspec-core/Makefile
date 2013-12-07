@@ -1,16 +1,18 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-core/Makefile 331631 2013-10-25 20:14:51Z sunpoet $
+# $FreeBSD: devel/rubygem-rspec-core/Makefile 335525 2013-12-02 18:36:01Z sunpoet $
 
 PORTNAME=	rspec-core
-PORTVERSION=	2.14.6
+PORTVERSION=	2.14.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	RSpec Core provides the structure for writing executable examples
 
+LICENSE=	MIT
+
 USE_RUBY=	yes
-USE_RAKE=	yes
+#USE_RAKE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
