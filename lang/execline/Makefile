@@ -1,12 +1,12 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: lang/execline/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/execline/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	execline
 PORTVERSION=	1.08
 CATEGORIES=	lang shells
 MASTER_SITES=	http://www.skarnet.org/software/${PORTNAME}/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight non-interactive sh(1)-like scripting language
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/skalibs/libstddjb.a:${PORTSDIR}/devel/skalibs
