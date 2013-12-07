@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool/Makefile 334851 2013-11-25 14:15:32Z wg $
+# $FreeBSD: databases/rrdtool/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.4.8
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libxml2.so:${PORTSDIR}/textproc/libxml2 \
 		libpangocairo-1.0.so:${PORTSDIR}/x11-toolkits/pango
 
-CONFLICTS=	rrdtool-1.0* rrdtool-1.2*
+CONFLICTS=	rrdtool10-* rrdtool12-*
 
 USE_RC_SUBR=	rrdcached
 USE_AUTOTOOLS=	libtool
