@@ -1,45 +1,93 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: security/bro/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/bro/Makefile 335521 2013-12-02 18:07:41Z antoine $
 
 PORTNAME=	bro
-PORTVERSION=	2.1
-PORTREVISION=	1
+PORTVERSION=	2.2
 CATEGORIES=	security
-MASTER_SITES=	http://www.bro-ids.org/downloads/release/
+MASTER_SITES=	http://www.bro.org/downloads/release/
 
 MAINTAINER=	leres@ee.lbl.gov
 COMMENT=	System for detecting network intruders in real-time
 
+LICENSE=	BSD
+
 BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison \
 		swig:${PORTSDIR}/devel/swig13
-LIB_DEPENDS=	GeoIP:${PORTSDIR}/net/GeoIP
+LIB_DEPENDS=	libGeoIP.so:${PORTSDIR}/net/GeoIP
 
-USES=		cmake perl5
-CONFIGURE_WRKSRC=	${WRKSRC}/build
-BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
-INSTALL_WRKSRC=	${CONFIGURE_WRKSRC}
+USES=		cmake:outsource perl5
+USE_PYTHON=	yes
 
-OPTIONS_DEFINE=	IPV6 LBL_HF LBL_CF ASSERT BROCCOLI
-OPTIONS_DEFAULT=IPV6 LBL_HF LBL_CF
-LBL_HF_DESC=	Address to hostname filter support
-LBL_CF_DESC=	Unix time to formated time/date filter support
+SUB_FILES=	pkg-message
+NO_MTREE=	yes
+
+.if defined(BRO_PREFIX)
+PREFIX=${BRO_PREFIX}
+PLIST_SUB+=	CLEANUP_PREFIX=""
+NEED_ROOT=	yes
+.else
+PLIST_SUB+=	CLEANUP_PREFIX="@comment "
+.endif
+CMAKE_ARGS+=	-D CMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+		-D BRO_ROOT_DIR:PATH=${PREFIX} \
+		-D PY_MOD_INSTALL_DIR:PATH=${PREFIX}/lib/broctl \
+		-D BRO_SCRIPT_INSTALL_PATH:PATH=${PREFIX}/share/bro \
+		-D BRO_ETC_INSTALL_DIR:PATH=${PREFIX}/etc \
+		-D ENABLE_PERFTOOLS:BOOL=false \
+		-D ENABLE_PERFTOOLS_DEBUG:BOOL=false \
+		-D BinPAC_SKIP_INSTALL:BOOL=true \
+		-D INSTALL_AUX_TOOLS:BOOL=true \
+		-D BUILD_SHARED_LIBS:BOOL=true
+
+OPTIONS_DEFINE=	BROCCOLI BROCTL DEBUG IPSUMDUMP LBL_CF LBL_HF PERFTOOLS
+OPTIONS_DEFAULT=BROCCOLI BROCTL IPSUMDUMP LBL_CF LBL_HF
+
 BROCCOLI_DESC=	Build support for libbroccoli communications
+BROCTL_DESC=	Build BroControl support (requires BROCCOLI)
+DEBUG_DESC=	Compile in debugging mode
+IPSUMDUMP_DESC=	Enables traffic summaries
+LBL_CF_DESC=	Unix time to formated time/date filter support
+LBL_HF_DESC=	Address to hostname filter support
+PERFTOOLS_DESC=	Use Perftools to improve memory & CPU usage
+
 OPTIONS_EXCLUDE=NLS DOCS
 
-NO_STAGE=	yes
+.include <bsd.port.pre.mk>
+
+# Bro 2.2 requires libmagic >= 5.04
+# Cannot use LIB_DEPENDS since misc/compat5x also installs a libmagic.so.1
+.if ${OSVERSION} < 901000
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libmagic.so:${PORTSDIR}/sysutils/file
+RUN_DEPENDS+=	${LOCALBASE}/lib/libmagic.so:${PORTSDIR}/sysutils/file
+.endif
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBROCCOLI}
-CMAKE_ARGS+=	-DINSTALL_BROCCOLI:BOOL=ON \
-		-DDISABLE_PYTHON_BINDINGS:BOOL=ON \
-		-DDISABLE_RUBY_BINDINGS:BOOL=ON
-PLIST_SUB+=	BROCCOLI=""
-.else
-PLIST_SUB+=	BROCCOLI="@comment "
+LIB_DEPENDS+=	libbroccoli.so:${PORTSDIR}/security/broccoli
 .endif
 
-.if ${PORT_OPTIONS:MIPV6}
-CMAKE_ARGS+=	-DBROv6:BOOL=ON
+.if ${PORT_OPTIONS:MBROCTL}
+.if empty(PORT_OPTIONS:MBROCCOLI)
+IGNORE=		the BROCTL option requires BROCCOLI
+.endif
+.if empty(PORT_OPTIONS:MIPSUMDUMP)
+IGNORE=		the BROCTL option requires IPSUMDUMP
+.endif
+BUILD_DEPENDS+=		bash:${PORTSDIR}/shells/bash
+RUN_DEPENDS+=		bash:${PORTSDIR}/shells/bash
+PLIST_SUB+=		BROCTL=""
+USE_LDCONFIG=		yes
+CMAKE_ARGS+=		-D INSTALL_BROCTL:BOOL=true
+.else
+CMAKE_ARGS+=		-D INSTALL_BROCTL:BOOL=false
+PLIST_SUB+=		BROCTL="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MDEBUG}
+CMAKE_ARGS+=		-D ENABLE_DEBUG:BOOL=true
+.else
+CMAKE_ARGS+=		-D ENABLE_DEBUG:BOOL=false
 .endif
 
 .if ${PORT_OPTIONS:MLBL_HF}
@@ -50,12 +98,31 @@ RUN_DEPENDS+=	hf:${PORTSDIR}/sysutils/lbl-hf
 RUN_DEPENDS+=	cf:${PORTSDIR}/sysutils/lbl-cf
 .endif
 
-.if ${PORT_OPTIONS:MASSERT}
-CMAKE_ARGS+=	-DENABLE_DEBUG:BOOL=ON
+.if ${PORT_OPTIONS:MPERFTOOLS}
+CMAKE_ARGS+=		-D ENABLE_PERFTOOLS:BOOL=true
+RUN_DEPENDS+=	pprof:${PORTSDIR}/devel/google-perftools
+.else
+CMAKE_ARGS+=		-D ENABLE_PERFTOOLS:BOOL=false
 .endif
 
-post-patch:
-#	avoid installing .in header file
-	${REINPLACE_CMD} -e '13d' ${WRKSRC}/aux/binpac/lib/CMakeLists.txt
+.if ${PORT_OPTIONS:MIPSUMDUMP}
+BUILD_DEPENDS+=	ipsumdump:${PORTSDIR}/net/ipsumdump
+RUN_DEPENDS+=	ipsumdump:${PORTSDIR}/net/ipsumdump
+.endif
 
-.include <bsd.port.mk>
+.if ${PORT_OPTIONS:MBROCTL}
+post-stage::
+.if defined(BRO_PREFIX)
+	@${MKDIR} ${PREFIX}
+.endif
+	@${MKDIR} ${STAGEDIR}${PREFIX}/spool/installed-scripts-do-not-touch/auto
+	@${MKDIR} ${STAGEDIR}${PREFIX}/spool/installed-scripts-do-not-touch/site
+.for F in broctl.cfg
+	@${INSTALL_SCRIPT} ${INSTALL_WRKSRC}/aux/broctl/etc/${F} ${STAGEDIR}${PREFIX}/etc/${F}.example
+.endfor
+.for F in networks.cfg node.cfg
+	@${INSTALL_SCRIPT} ${WRKSRC}/aux/broctl/etc/${F} ${STAGEDIR}${PREFIX}/etc/${F}.example
+.endfor
+.endif
+
+.include <bsd.port.post.mk>
