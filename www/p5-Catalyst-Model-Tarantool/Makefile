@@ -1,0 +1,25 @@
+# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
+# $FreeBSD: www/p5-Catalyst-Model-Tarantool/Makefile 327776 2013-09-20 23:36:50Z bapt $
+
+PORTNAME=	Catalyst-Model-Tarantool
+PORTVERSION=	0.0.1
+CATEGORIES=	www perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION}-1
+
+MAINTAINER=	vg@FreeBSD.org
+COMMENT=	Tarantool interface for Catalyst based application
+
+BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.90001:${PORTSDIR}/www/p5-Catalyst-Runtime \
+		p5-MR-Tarantool>=0.0.24:${PORTSDIR}/databases/p5-MR-Tarantool
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+USES=		perl5
+USE_PERL5=	configure
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+MAN3=		Catalyst::Model::Tarantool.3
+
+NO_STAGE=	yes
+.include <bsd.port.mk>
