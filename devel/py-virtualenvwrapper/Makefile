@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-virtualenvwrapper/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-virtualenvwrapper/Makefile 335350 2013-11-30 22:58:44Z nivit $
 
 PORTNAME=	virtualenvwrapper
 PORTVERSION=	3.6
@@ -32,6 +32,10 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 PYDISTUTILS_BUILD_TARGET+=	build_sphinx -a -E
 BUILD_DEPENDS+=	sphinx-build:${PORTSDIR}/textproc/py-sphinx \
 		${PKGNAMEPREFIX}sphinxcontrib-bitbucket>=1.0:${PORTSDIR}/textproc/py-sphinxcontrib-bitbucket
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|python setup.py|${PYTHON_CMD} setup.py|' \
+		${WRKSRC}/docs/source/conf.py
 
 post-install:
 	${MKDIR} ${DOCSDIR}
