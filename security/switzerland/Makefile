@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: security/switzerland/Makefile 333839 2013-11-15 10:21:58Z ehaupt $
+# $FreeBSD: security/switzerland/Makefile 335351 2013-11-30 23:02:31Z cs $
 
 PORTNAME=	switzerland
 PORTVERSION=	0.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/zero%20point%20one
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Test the integrity of communications over networks and firewalls
 
 LICENSE=	GPLv3
