@@ -1,8 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: emulators/wine-gecko/Makefile 334232 2013-11-18 18:09:12Z dbn $
+# $FreeBSD: emulators/wine-gecko/Makefile 335425 2013-12-01 18:36:01Z dbn $
 
 PORTNAME=	wine-gecko
-DISTVERSION=	1.4
+DISTVERSION=	2.21
 CATEGORIES=	emulators
 MASTER_SITES=	SF/wine/Wine%20Gecko/${DISTVERSION}
 DISTNAME=	wine_gecko-${DISTVERSION}-x86
