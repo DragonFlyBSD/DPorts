@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 328879 2013-09-30 21:53:55Z matthew $
+# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 335414 2013-12-01 17:51:42Z matthew $
 
 PORTNAME=	RT-Extension-LDAPImport
 PORTVERSION=	0.35
+PORTREVISON=	1
 CATEGORIES=	www net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,16 +21,23 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES+=		perl5
 USE_PERL5=	configure
 
-OPTIONS_DEFINE=	RT38
-RT38_DESC=	Install for rt-3.8.x (default rt-4.0.x)
+OPTIONS_SINGLE=                 RTVERSION
+OPTIONS_SINGLE_RTVERSION=       RT38 RT40 RT42
+RT38_DESC=                      Install for rt-3.8.x (www/rt38)
+RT40_DESC=                      Install for rt-4.0.x (www/rt40)
+RT42_DESC=                      Install for rt-4.2.x (www/rt42)
+OPTIONS_DEFAULT=                RT42
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MRT38}
-RT_VER=		38
-.else
-RT_VER=		40
+.for opt in 38 40 42
+.if ${PORT_OPTIONS:MRT${opt}}
+RT_VER=         ${opt}
 .endif
+.endfor
+
+### Temporary for debugging
+#WRKDIR=         ${WRKDIRPREFIX}${.CURDIR}/work${RT_VER}
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
 RUN_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
