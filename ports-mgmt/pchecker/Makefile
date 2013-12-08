@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/pchecker/Makefile 328207 2013-09-24 22:26:34Z ak $
+# $FreeBSD: ports-mgmt/pchecker/Makefile 335729 2013-12-06 09:57:12Z ak $
 
 PORTNAME=	pchecker
 PORTVERSION=	1.15
@@ -12,6 +12,7 @@ COMMENT=	Tool that checks the ports tree for various errors
 LICENSE=	BSD
 
 USE_XZ=	yes
+NO_ARCH=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
