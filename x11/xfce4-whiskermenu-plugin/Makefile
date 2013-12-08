@@ -1,8 +1,8 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11/xfce4-whiskermenu-plugin/Makefile 334352 2013-11-19 20:42:26Z olivierd $
+# $FreeBSD: x11/xfce4-whiskermenu-plugin/Makefile 335586 2013-12-03 18:26:33Z olivierd $
 
 PORTNAME=	xfce4-whiskermenu-plugin
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	http://gottcode.org/${PORTNAME}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
