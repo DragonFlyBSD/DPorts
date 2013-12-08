@@ -1,12 +1,12 @@
 # Created by: dburr@FreeBSD.org
-# $FreeBSD: audio/napster/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/napster/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	nap
 PORTVERSION=	1.5.4
 CATEGORIES+=	audio net
 MASTER_SITES=	SF/nap/nap/${PORTVERSION}
 
-MAINTAINER?=	araujo@FreeBSD.org
+MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	An MP3 sharing, search, and chat client for the OpenNAP network
 
 CONFLICTS?=	ru-nap-*
