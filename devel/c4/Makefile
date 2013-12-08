@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/c4/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/c4/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	c4
 PORTVERSION=	1.10
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES+=	devel
 MASTER_SITES=	http://public.perforce.com/public/perforce/utils/c4/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A CVS-like Frontend to Perforce
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
