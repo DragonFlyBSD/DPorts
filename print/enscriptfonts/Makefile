@@ -1,5 +1,5 @@
 # Created by: kline
-# $FreeBSD: print/enscriptfonts/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/enscriptfonts/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	enscriptfonts
 PORTVERSION=	0.81
@@ -8,7 +8,7 @@ MASTER_SITES=	http://muuz.deadbbs.com/FreeBSD/xenscript/
 DISTNAME=	enscript_fonts-0.81
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	More than 120 free- and share-ware fonts to extend enscript-1.5
 
 NO_WRKSUBDIR=	YES
