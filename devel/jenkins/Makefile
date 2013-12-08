@@ -1,7 +1,7 @@
-# $FreeBSD: devel/jenkins/Makefile 334866 2013-11-25 17:03:32Z lwhsu $
+# $FreeBSD: devel/jenkins/Makefile 335544 2013-12-03 02:12:30Z lwhsu $
 
 PORTNAME=	jenkins
-PORTVERSION=	1.541
+PORTVERSION=	1.542
 CATEGORIES=	devel java
 MASTER_SITES=	http://mirrors.jenkins-ci.org/war/${PORTVERSION}/
 DISTNAME=	jenkins
@@ -13,6 +13,8 @@ MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Open-source continuous integration server
 
 LICENSE=	MIT
+
+CONFLICTS=	jenkins-lts-[0-9]*
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
