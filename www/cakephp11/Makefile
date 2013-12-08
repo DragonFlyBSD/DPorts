@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/cakephp11/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cakephp11/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	cakephp
 PORTVERSION=	1.1.19.6305
@@ -7,19 +7,18 @@ PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 		LOCAL/glarkin
+PKGNAMESUFFIX=	11
 DISTNAME=	cake_${PORTVERSION}
 
 MAINTAINER=	glarkin@FreeBSD.org
 COMMENT=	A framework for developing PHP web applications
-
-LATEST_LINK=	cakephp11
 
 USE_BZIP2=	yes
 
 USE_APACHE_RUN=	22+
 SLAVE_PORT_MODULES=	REWRITE
 
-CONFLICTS=	cakephp-1.[23].* cakephp-2.*
+CONFLICTS=	cakephp-1[23]-* cakephp-2?-.* cakephp-2.3.*
 NO_BUILD=	yes
 
 USE_PHP=	pcre session
