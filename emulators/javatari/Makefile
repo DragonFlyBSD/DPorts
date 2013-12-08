@@ -1,16 +1,18 @@
 # Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-# $FreeBSD: emulators/javatari/Makefile 328691 2013-09-29 13:45:23Z danilo $
+# $FreeBSD: emulators/javatari/Makefile 335680 2013-12-05 19:13:14Z danilo $
 
 PORTNAME=	javatari
-PORTVERSION=	3.30
+PORTVERSION=	3.40
 CATEGORIES=	emulators java
 MASTER_SITES=	http://javatari.org/files/
-DISTNAME=	${PORTNAME}330
+DISTNAME=	${PORTNAME}340
 EXTRACT_SUFX=	.jar
 EXTRACT_ONLY=
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Multiplayer Atari 2600 emulator written in pure Java
+
+LICENSE=	AGPLv3
 
 EXTRACT_DEPENDS=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
@@ -23,7 +25,8 @@ SUB_FILES=	javatari
 SUB_LIST+=	JARFILE="${JARFILE}"
 JARFILE=	${DISTNAME}${EXTRACT_SUFX}
 
-DESKTOP_ENTRIES=	"Javatari" "${COMMENT}" "${PORTNAME}" "${PORTNAME}" "Application;Game;" ${FALSE}
+DESKTOP_ENTRIES=	"Javatari" "${COMMENT}" "${PORTNAME}" "${PORTNAME}"  \
+			"Application;Game;" false
 PLIST_FILES+=	share/pixmaps/${PORTNAME}.png
 
 post-extract:
