@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pybugz/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pybugz/Makefile 335630 2013-12-04 20:15:00Z crees $
 
 PORTNAME=	pybugz
 PORTVERSION=	0.9.3
@@ -12,10 +12,8 @@ COMMENT=	Command line tools for interacting with Bugzilla
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argparse>0:${PORTSDIR}/devel/py-argparse
-
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_PYTHON=	2.5+
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
 PLIST_FILES=	bin/bugz
