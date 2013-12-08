@@ -1,8 +1,8 @@
 # Created by: J.F. Dockes
-# $FreeBSD: databases/xapian-core/Makefile 331406 2013-10-23 18:56:49Z sunpoet $
+# $FreeBSD: databases/xapian-core/Makefile 335690 2013-12-05 20:26:12Z sunpoet $
 
 PORTNAME=	xapian-core
-PORTVERSION=	1.2.15
+PORTVERSION=	1.2.16
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://oligarchy.co.uk/xapian/${PORTVERSION}/ \
@@ -21,17 +21,11 @@ PORTSCOUT=	limitw:1,even
 GNU_CONFIGURE=	yes
 MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_LDCONFIG=	yes
+USE_XZ=		yes
 
-.include <bsd.port.options.mk>
+PORTDOCS=	*
 
-.if !${PORT_OPTIONS:MSSE2}
-CONFIGURE_ARGS+=--disable-sse
-.endif
-
-post-patch:
-.if !${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e '/^SUBDIRS = / s| docs||' ${WRKSRC}/Makefile.in
-.endif
+SSE2_CONFIGURE_ENABLE=	sse
 
 post-install:
 .for file in copydatabase delve quest
