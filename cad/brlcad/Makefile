@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/brlcad/Makefile 334109 2013-11-17 17:40:39Z rakuco $
+# $FreeBSD: cad/brlcad/Makefile 335626 2013-12-04 18:48:48Z makc $
 
 PORTNAME=	brlcad
 PORTVERSION=	7.24.0
@@ -39,21 +39,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 CMAKE_ARGS=	-DBRLCAD_ENABLE_STRICT:BOOL=OFF
 MANPREFIX=	${PREFIX}/share
 
-OPTIONS_DEFINE=		OPTIMIZATION
-OPTIMIZATION_DESC=	Build with optimizations
-OPTIONS_DEFAULT=	OPTIMIZATION
-
-.include <bsd.port.pre.mk>
-
-EXTRA_LIBS=	-pthread
-
-.if ${PORT_OPTIONS:MOPTIMIZATION}
-CMAKE_BUILD_TYPE=Release
-.endif
-
-.if ${ARCH} == "sparc64"
-BROKEN=		Does not compile on sparc64: invokes i386 assembler
-.endif
+BROKEN_sparc64=	does not compile: invokes i386 assembler
 
 post-patch:
 	@${REINPLACE_CMD} "s+-exact Tcl 8\.5\.1+Tcl 8.5+" ${WRKSRC}/src/other/tcl/library/init.tcl
@@ -73,4 +59,4 @@ post-install:
 regression-test: build
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} test)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
