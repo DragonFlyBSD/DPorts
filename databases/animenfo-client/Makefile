@@ -1,4 +1,4 @@
-# $FreeBSD: databases/animenfo-client/Makefile 329542 2013-10-06 09:19:17Z dinoex $
+# $FreeBSD: databases/animenfo-client/Makefile 335420 2013-12-01 18:06:57Z dinoex $
 
 PORTNAME=	animenfo
 PORTVERSION=	20020819
@@ -13,7 +13,7 @@ COMMENT=	AnimeNfo client
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=		gmake
 PLIST_FILES=	bin/animenfo-client
 
 do-install:
