@@ -1,4 +1,4 @@
-# $FreeBSD: databases/animenfo-client-gtk/Makefile 329583 2013-10-06 15:09:37Z dinoex $
+# $FreeBSD: databases/animenfo-client-gtk/Makefile 335421 2013-12-01 18:14:00Z dinoex $
 
 PORTNAME=	animenfo
 PORTVERSION=	20020819
@@ -14,8 +14,7 @@ COMMENT=	AnimeNfo client with GTK support
 
 LICENSE=	GPLv2
 
-USES=		pkgconfig gettext
-USE_GMAKE=	yes
+USES=		pkgconfig gettext gmake
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
