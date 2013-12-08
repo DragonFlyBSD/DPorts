@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/py-tagpy/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: audio/py-tagpy/Makefile 335350 2013-11-30 22:58:44Z nivit $
 
 PORTNAME=	tagpy
 PORTVERSION=	2013.1
@@ -16,6 +16,7 @@ LICENSE=	MIT
 LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs \
 		tag:${PORTSDIR}/audio/taglib
 
+USES=		shebangfix
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	configure.py
 CONFIGURE_ARGS=	--taglib-inc-dir="${LOCALBASE}/include/taglib" \
@@ -23,6 +24,9 @@ CONFIGURE_ARGS=	--taglib-inc-dir="${LOCALBASE}/include/taglib" \
 		--boost-inc-dir="${PYTHON_INCLUDEDIR},${LOCALBASE}/include" \
 		--boost-lib-dir="${PYTHON_LIBDIR},${LOCALBASE}/lib" \
 		--boost-python-libname="boost_python"
+python_OLD_CMD=	/usr/bin/env python
+python_CMD=	${PYTHON_CMD}
+SHEBANG_FILES=	configure.py
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
