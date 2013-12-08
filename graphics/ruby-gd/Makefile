@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-gd/Makefile 334997 2013-11-27 05:58:14Z dinoex $
+# $FreeBSD: graphics/ruby-gd/Makefile 335388 2013-12-01 15:02:43Z dinoex $
 
 PORTNAME=	gd
 PORTVERSION=	0.8.0
@@ -64,6 +64,11 @@ DOCS_JA=	readme.ja	\
 post-patch:
 	${RUBY} -i -pe 'sub %r:/win98/windows/FONTS:, "${LOCALBASE}/lib/X11/fonts/TrueType"' ${WRKSRC}/sample/gdtestttf.rb
 	${RUBY} -i -pe 'sub %r:%%GD%%:, "gd"' ${WRKSRC}/extconf.rb
+
+post-configure:
+	${REINPLACE_CMD} -e 's|^V = 0|V = 1|' \
+		-e 's|^libdir = .*|libdir = ${PREFIX}/lib|' \
+		${WRKSRC}/Makefile
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
