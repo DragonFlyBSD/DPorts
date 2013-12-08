@@ -1,5 +1,5 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp21/Makefile 334880 2013-11-25 18:31:39Z sunpoet $
+# $FreeBSD: www/cakephp21/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.1.3
@@ -21,7 +21,7 @@ PORTDOCS=	README
 
 SLAVE_PORT_MODULES=	REWRITE
 
-CONFLICTS=	cakephp-1.* cakephp-2.[23].*
+CONFLICTS=	cakephp-1?-* cakephp-2[2]-.* cakephp-2.3.*
 
 NO_BUILD=	yes
 USES=		gettext
