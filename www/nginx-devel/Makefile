@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx-devel/Makefile 335279 2013-11-30 10:29:01Z osa $
+# $FreeBSD: www/nginx-devel/Makefile 335722 2013-12-06 02:28:12Z osa $
 
 PORTNAME=	nginx
 PORTVERSION=	1.5.7
@@ -264,7 +264,7 @@ CONFIGURE_ARGS+=--http-client-body-temp-path=${NGINX_TMPDIR}/client_body_temp \
 		--http-log-path=${NGINX_ACCESSLOG}
 
 .if ${PORT_OPTIONS:MHTTP_ACCEPT_LANGUAGE}
-GIT_ACCEPT_LANGUAGE_VERSION=	02262ce
+GIT_ACCEPT_LANGUAGE_VERSION=	2f69842
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/giom/nginx_accept_language_module/tarball/master/:accept_language
 DISTFILES+=	giom-nginx_accept_language_module-${GIT_ACCEPT_LANGUAGE_VERSION}.tar.gz:accept_language
@@ -331,8 +331,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_ctpp2-${NGINX_CTPP2_VERSION}
 .endif
 
 .if ${PORT_OPTIONS:MECHO}
-NGINX_ECHO_VERSION=	0.46
-GIT_ECHO_VERSION=	0-g4de92b1
+NGINX_ECHO_VERSION=	0.49
+GIT_ECHO_VERSION=	0-gd4f1cf9
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/agentzh/echo-nginx-module/tarball/v${NGINX_ECHO_VERSION}/:echo
 DISTFILES+=	agentzh-echo-nginx-module-v${NGINX_ECHO_VERSION}-${GIT_ECHO_VERSION}.tar.gz:echo
@@ -461,7 +461,7 @@ CONFIGURE_ARGS+=--with-http_realip_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_REDIS}
-NGINX_REDIS_VERSION=	0.3.6
+NGINX_REDIS_VERSION=	0.3.7
 MASTER_SITES+=	${MASTER_SITE_LOCAL:S/$/:redis/}
 MASTER_SITE_SUBDIR+=	osa/:redis
 DISTFILES+=	ngx_http_redis-${NGINX_REDIS_VERSION}.tar.gz:redis
@@ -606,8 +606,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/arut-nginx-let-module-${GIT_LET_VERSION:S
 LIB_DEPENDS+=	libluajit-5.1.so:${PORTSDIR}/lang/luajit
 CONFIGURE_ENV+=	"LUAJIT_INC=${LOCALBASE}/include/luajit-2.0"
 CONFIGURE_ENV+=	"LUAJIT_LIB=${LOCALBASE}/lib"
-NGINX_LUA_VERSION=	0.8.6
-GIT_LUA_VERSION=	0-g940429a
+NGINX_LUA_VERSION=	0.9.2
+GIT_LUA_VERSION=	0-gd516e4e
 FETCH_ARGS=	-pRr
 MASTER_SITES+=	https://github.com/chaoslawful/lua-nginx-module/tarball/v${NGINX_LUA_VERSION}/:lua
 DISTFILES+=	chaoslawful-lua-nginx-module-v${NGINX_LUA_VERSION}-${GIT_LUA_VERSION}.tar.gz:lua
@@ -652,7 +652,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.26
+PASSENGER_VERSION=	4.0.27
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -945,7 +945,7 @@ post-patch:
 		${WRKDIR}/chaoslawful-drizzle-nginx-module-${GIT_DRIZZLE_VERSION:S/^0-g//}/src/ngx_http_drizzle_util.c
 .endif
 .if ${PORT_OPTIONS:MLUA}
-	@${REINPLACE_CMD} '437d' \
+	@${REINPLACE_CMD} '464d' \
 		${WRKDIR}/chaoslawful-lua-nginx-module-${GIT_LUA_VERSION:S/^0-g//}/src/ngx_http_lua_socket_tcp.c
 .endif
 .endif
