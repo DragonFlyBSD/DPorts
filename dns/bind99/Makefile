@@ -165,8 +165,6 @@ CONFIGURE_ARGS+=	--disable-threads
 .if ${PORT_OPTIONS:MGSSAPI}
 CONFIGURE_ARGS+=	--with-gssapi
 LIB_DEPENDS+=		libgssapi_krb5.so:${PORTSDIR}/security/krb5
-LDFLAGS+=		-L${LOCALBASE}/lib -lgssapi_krb5 -lkrb5 -lk5crypto \
-			-lkrb5support -lcom_err
 .else
 CONFIGURE_ARGS+=        --without-gssapi
 .endif
