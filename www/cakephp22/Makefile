@@ -1,14 +1,13 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp22/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cakephp22/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.2.7
 CATEGORIES=	www
+PKGNAMESUFFIX=	22
 
 MAINTAINER=	pphillips@experts-exchange.com
 COMMENT=	A framework for developing PHP web applications
-
-LATEST_LINK=	cakephp22
 
 LICENSE=	MIT
 
@@ -20,7 +19,7 @@ PORTDOCS=	README.md
 
 SLAVE_PORT_MODULES=	REWRITE
 
-CONFLICTS=	cakephp-1.* cakephp-2.[13].*
+CONFLICTS=	cakephp-1?-* cakephp-2[1]-.* cakephp-2.3.*
 
 NO_BUILD=	yes
 USES=		gettext
