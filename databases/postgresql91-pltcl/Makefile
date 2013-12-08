@@ -1,8 +1,8 @@
 # Created by: Palle Girgensohn <girgen@partitur.se>
-# $FreeBSD: databases/postgresql91-pltcl/Makefile 330639 2013-10-17 13:39:36Z girgen $
+# $FreeBSD: databases/postgresql91-pltcl/Makefile 335673 2013-12-05 15:59:53Z girgen $
 
 PORTNAME=	postgresql
-PORTREVISION=	4
+PORTREVISION=	0
 CATEGORIES=	databases tcl
 PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
