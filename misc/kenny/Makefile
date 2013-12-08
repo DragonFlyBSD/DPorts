@@ -1,5 +1,5 @@
 # Created by: Alan E <alane@FreeBSD.org>
-# $FreeBSD: misc/kenny/Makefile 328316 2013-09-25 21:06:04Z ak $
+# $FreeBSD: misc/kenny/Makefile 335729 2013-12-06 09:57:12Z ak $
 
 PORTNAME=	kenny
 PORTVERSION=	1.7
@@ -21,6 +21,7 @@ USE_PERL5=	extract build run
 EXTRACT_CMD=	${GZCAT}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	> ${WRKDIR}/${PORTNAME}
+NO_ARCH=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
