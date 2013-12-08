@@ -1,22 +1,24 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rubigen/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD: devel/rubygem-rubigen/Makefile 335708 2013-12-05 20:28:30Z sunpoet $
 
 PORTNAME=	rubigen
-PORTVERSION=	1.5.7
+PORTVERSION=	1.5.8
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A Ruby generic generator framework
+COMMENT=	Ruby generic generator framework
 
-RUN_DEPENDS=	rubygem-activesupport>=2.3.5:${PORTSDIR}/devel/rubygem-activesupport \
-		rubygem-i18n>=0:${PORTSDIR}/devel/rubygem-i18n
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-activesupport>=2.3.5:${PORTSDIR}/devel/rubygem-activesupport
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-PLIST_FILES=	bin/install_rubigen_scripts	\
-		bin/rubigen			\
-		bin/ruby_app
+
+PLIST_FILES=	bin/install_rubigen_scripts \
+		bin/ruby_app \
+		bin/rubigen
 
 .include <bsd.port.mk>
