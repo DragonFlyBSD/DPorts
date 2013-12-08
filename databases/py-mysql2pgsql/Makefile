@@ -1,7 +1,8 @@
-# $FreeBSD: databases/py-mysql2pgsql/Makefile 331483 2013-10-24 13:02:54Z koobs $
+# $FreeBSD: databases/py-mysql2pgsql/Makefile 335660 2013-12-05 11:39:38Z koobs $
 
 PORTNAME=	mysql2pgsql
 PORTVERSION=	0.1.6
+PORTREVISION=	1
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py-${PORTNAME}-${PORTVERSION}
@@ -28,5 +29,4 @@ GH_COMMIT=	250cb1c
 GH_PROJECT=	py-${PORTNAME}
 GH_TAGNAME=	v${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
