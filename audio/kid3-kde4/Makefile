@@ -1,7 +1,7 @@
-# $FreeBSD: audio/kid3-kde4/Makefile 333689 2013-11-13 14:26:49Z makc $
+# $FreeBSD: audio/kid3-kde4/Makefile 335507 2013-12-02 16:10:20Z makc $
 
 PORTNAME=	kid3
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	audio kde
 MASTER_SITES=	SF
 
@@ -10,8 +10,6 @@ COMMENT?=	MP3/Ogg/FLAC tag editor for KDE
 
 LICENSE=	GPLv2
 
-USE_QT4=	qmake_build moc_build rcc_build uic_build \
-		linguist_build
 USE_PERL5=	build
 USES=		cmake:outsource perl5
 CMAKE_ARGS=	-DWITH_DOCBOOKDIR=${LOCALBASE}/share/xsl/docbook \
@@ -24,8 +22,32 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 OPTIONS_SUB=	yes
 NO_OPTIONS_SORT=	yes
 
+.if defined(PKGNAMESUFFIX) && ${PKGNAMESUFFIX} == "-qt5"
+CONFLICTS_INSTALL+=	kid3-qt4-3.*
+
+USE_QT5=	core dbus gui multimedia network testlib xml widgets \
+		buildtools_build linguisttools_build qmake_build
+CMAKE_ARGS+=	-DWITH_QT5=true
+.else
+# Qt 4 and KDE 4
+USE_QT4=	qmake_build moc_build rcc_build uic_build \
+		linguist_build
+.endif
+
+.if defined(PKGNAMESUFFIX) && ${PKGNAMESUFFIX} == "-qt4"
+CONFLICTS_INSTALL+=	kid3-qt5-3.*
+
+USE_QT4+=	corelib dbus gui network xml
+
+OPTIONS_DEFINE+=	PHONON
+PHONON_DESC=	Build with Phonon support
+PHONON_CMAKE_OFF=	-DWITH_PHONON=OFF
+PHONON_USE=	QT4=phonon
+.endif
+
 .if defined(PKGNAMESUFFIX)
-CONFLICTS_INSTALL=	kid3-3.*
+# Qt 4 and Qt 5
+CONFLICTS_INSTALL+=	kid3-3.*
 
 BUILD_DEPENDS+=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 
@@ -33,13 +55,8 @@ USES+=		desktop-file-utils
 USE_GNOME=	libxslt:build
 CMAKE_ARGS+=	-DWITH_APPS="${KID3_CLI}QT"
 PLIST_SUB+=	QT="" KDE="@comment "
-
-OPTIONS_DEFINE+=	PHONON
-PHONON_DESC=	Build with Phonon support
-PHONON_CMAKE_OFF=	-DWITH_PHONON=OFF
-PHONON_USE=	QT4=phonon
 .else
-CONFLICTS_INSTALL=	kid3-qt4-3.*
+CONFLICTS_INSTALL+=	kid3-qt4-3.* kid3-qt5-3.*
 
 USE_KDE4=	kdelibs automoc4 kdeprefix
 CMAKE_ARGS+=	-DWITH_APPS="${KID3_CLI}KDE"
