@@ -1,10 +1,11 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: databases/pgpool-II-23/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pgpool-II-23/Makefile 335658 2013-12-05 11:10:49Z mat $
 
 PORTNAME=	pgpool-II
 PORTVERSION=	2.3.3
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/2664/
+PKGNAMESUFFIX=	23
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	A connection pool server for PostgreSQL
@@ -13,9 +14,8 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_PGSQL=	yes
 USE_LDCONFIG=	yes
-NO_LATEST_LINK=	yes
 
-CONFLICTS=	pgpool-3.* pgpool-II-*
+CONFLICTS=	pgpool-3.* pgpool-II-3.* pgpool-II-22-* pgpool-II-30-* 
 USE_RC_SUBR=	pgpool
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README README.euc_jp
