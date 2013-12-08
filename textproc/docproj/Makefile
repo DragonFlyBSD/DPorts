@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: textproc/docproj/Makefile 333528 2013-11-11 17:54:33Z hrs $
+# $FreeBSD: textproc/docproj/Makefile 335720 2013-12-05 23:06:10Z gjb $
 
 PORTNAME=	docproj
 PORTVERSION=	2.0
