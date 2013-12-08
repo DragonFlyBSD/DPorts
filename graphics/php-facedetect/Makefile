@@ -1,9 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/php-facedetect/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/php-facedetect/Makefile 335601 2013-12-04 02:51:00Z jhale $
 
 PORTNAME=	facedetect
 PORTVERSION=	1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/infusion/PHP-Facedetect/tarball/${GITVERSION}/
 PKGNAMEPREFIX=	php-
@@ -14,8 +14,7 @@ COMMENT=	Face detection extension for PHP using OpenCV library
 
 LICENSE=	PHP30
 
-LIB_DEPENDS=	opencv_core.2:${PORTSDIR}/graphics/opencv-core \
-		opencv_objdetect.2:${PORTSDIR}/graphics/opencv \
+LIB_DEPENDS=	libopencv_objdetect.so:${PORTSDIR}/graphics/opencv
 
 GITVERSION=	4b1dfe1
 FETCH_ARGS=	-pRr
