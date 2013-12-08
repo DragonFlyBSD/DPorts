@@ -1,16 +1,18 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/opendnssec/Makefile 335687 2013-12-05 20:25:54Z sunpoet $
 
 PORTNAME=	opendnssec
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.3
 CATEGORIES=	dns
 MASTER_SITES=	http://dist.opendnssec.org/source/
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	Tool suite for maintaining DNSSEC
 
+LICENSE=	BSD
+
 BUILD_DEPENDS=	ldns>=1.6.16:${PORTSDIR}/dns/ldns
-LIB_DEPENDS=	ldns:${PORTSDIR}/dns/ldns
+LIB_DEPENDS=	libldns.so:${PORTSDIR}/dns/ldns
 
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	opendnssec
