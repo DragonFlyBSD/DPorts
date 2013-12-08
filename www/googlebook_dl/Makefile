@@ -1,4 +1,4 @@
-# $FreeBSD: www/googlebook_dl/Makefile 331124 2013-10-21 11:23:56Z ak $
+# $FreeBSD: www/googlebook_dl/Makefile 335729 2013-12-06 09:57:12Z ak $
 
 PORTNAME=	googlebook_dl
 PORTVERSION=	20120817
@@ -13,6 +13,7 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 
+NO_ARCH=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
