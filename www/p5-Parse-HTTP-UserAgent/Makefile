@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Parse-HTTP-UserAgent/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD: www/p5-Parse-HTTP-UserAgent/Makefile 335471 2013-12-02 09:16:41Z sunpoet $
 
 PORTNAME=	Parse-HTTP-UserAgent
-PORTVERSION=	0.38
+PORTVERSION=	0.39
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BURAK
