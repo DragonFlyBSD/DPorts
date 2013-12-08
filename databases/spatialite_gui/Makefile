@@ -1,28 +1,28 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/spatialite_gui/Makefile 332843 2013-11-05 12:42:02Z wen $
+# $FreeBSD: databases/spatialite_gui/Makefile 335383 2013-12-01 13:58:50Z wg $
 
 PORTNAME=	spatialite_gui
-PORTVERSION=	1.5.0
-PORTREVISION=	2
-CATEGORIES=	databases
+PORTVERSION=	1.7.1
+CATEGORIES=	databases geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
-DISTNAME=	${PORTNAME}-${PORTVERSION}-stable
 
 MAINTAINER=	coder@tuxfamily.org
 COMMENT=	Graphical User Interface (GUI) tool supporting SpatiaLite
 
-LIB_DEPENDS=	gaiagraphics:${PORTSDIR}/graphics/libgaiagraphics \
-		freexl:${PORTSDIR}/textproc/freexl \
-		spatialite:${PORTSDIR}/databases/spatialite
+LIB_DEPENDS=	libgaiagraphics.so:${PORTSDIR}/graphics/libgaiagraphics \
+		libfreexl.so:${PORTSDIR}/textproc/freexl \
+		libspatialite.so:${PORTSDIR}/databases/spatialite
 
 USE_WX=		2.8
 WANT_UNICODE=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pkgconfig iconv
+USE_GNOME=	libxml2
+USES=		gmake pkgconfig iconv
+
+CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include `${WX_CONFIG} --cppflags`
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB} `${WX_CONFIG} --libs`
-CONFIGURE_ARGS+=CFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
+CONFIGURE_ARGS=	CFLAGS="${CFLAGS} ${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
 PLIST_FILES=	bin/spatialite_gui
