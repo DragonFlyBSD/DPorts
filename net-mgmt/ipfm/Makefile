@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net-mgmt/ipfm/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/ipfm/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	ipfm
 PORTVERSION=	0.11.5
@@ -7,7 +7,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	http://robert.cheramy.net/ipfm/archive/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A bandwidth analysis tool
 
 GNU_CONFIGURE=	yes
