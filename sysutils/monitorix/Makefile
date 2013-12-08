@@ -1,8 +1,7 @@
-# Created by: Olli Hauer <ohauer@FreeBSD.org>
-# $FreeBSD: sysutils/monitorix/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/monitorix/Makefile 335393 2013-12-01 15:10:18Z ohauer $
 
 PORTNAME=	monitorix
-PORTVERSION=	3.3.0
+PORTVERSION=	3.3.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.monitorix.org/ \
 		http://www.monitorix.org/old_versions/ \
