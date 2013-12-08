@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-selenium-webdriver/Makefile 335326 2013-11-30 18:29:34Z sunpoet $
+# $FreeBSD: www/rubygem-selenium-webdriver/Makefile 335762 2013-12-06 15:28:53Z sunpoet $
 
 PORTNAME=	selenium-webdriver
-PORTVERSION=	2.37.0
+PORTVERSION=	2.38.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
