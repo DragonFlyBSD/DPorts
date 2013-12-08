@@ -1,0 +1,51 @@
+--- DragonFly.cf.orig	2013-07-23 05:23:14.000000000 +0000
++++ DragonFly.cf
+@@ -56,6 +56,7 @@ XCOMM operating system:  OSName (OSMajor
+ #define BuildXaw6                NO /*depreciated*/
+ #define BuildXaw7                NO /*depreciated*/
+ #define BuildXaw                 YES /*needed*/
++#define BuildHtmlManPages        NO
+ #ifndef BuildPDFdocs
+ #define BuildPDFdocs NO
+ #endif
+@@ -101,7 +102,9 @@ XCOMM operating system:  OSName (OSMajor
+ #ifndef CplusplusCmd
+ # define CplusplusCmd            c++
+ #endif
++#ifndef CppCmd
+ #define CppCmd                   /usr/bin/cpp
++#endif
+ #define PreProcessCmd            CppCmd
+ #define StandardCppOptions       -traditional
+ #define StandardCppDefines       /**/
+@@ -116,10 +119,6 @@ XCOMM operating system:  OSName (OSMajor
+ # endif
+ # define DefaultCCOptions -ansi NoSystemWarn -Dasm=__asm GccWarningOptions
+ #endif
+-#ifndef ExtraLibraries
+-/* support for multi-byte locales is in libxpg4 rather than libc */
+-#define ExtraLibraries          -lxpg4
+-#endif
+ #define HasSetUserContext       YES
+ #define HasGetpeereid           YES
+ #define HasMTRRSupport          YES
+@@ -176,7 +175,7 @@ XCOMM operating system:  OSName (OSMajor
+ 
+ #ifndef LibraryRpathLoadFlags
+ # if UseRpath
+-#  define LibraryRpathLoadFlags  -rpath $(USRLIBDIRPATH)
++#  define LibraryRpathLoadFlags  -Wl,-rpath $(USRLIBDIRPATH)
+ # else
+ #  define LibraryRpathLoadFlags  /**/
+ # endif
+@@ -291,6 +290,10 @@ XCOMM operating system:  OSName (OSMajor
+ # define SystemManDirectory    /usr/share/man
+ #endif
+ 
++#ifndef UseConfDirForAppDefaults
++#define UseConfDirForAppDefaults	NO
++#endif
++
+ #define InstKmemFlags    -g kmem -m 2755
+ 
+ /*
