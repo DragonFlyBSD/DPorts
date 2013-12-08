@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rspec-spies/Makefile 331634 2013-10-25 20:15:20Z sunpoet $
+# $FreeBSD: devel/rubygem-rspec-spies/Makefile 335528 2013-12-02 18:36:14Z sunpoet $
 
 PORTNAME=	rspec-spies
 PORTVERSION=	2.1.4
@@ -7,6 +7,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Test spies, for rspec
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-rspec>=2.0:${PORTSDIR}/devel/rubygem-rspec
 
