@@ -1,9 +1,9 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: games/holotz-castle/Makefile 331204 2013-10-21 22:46:49Z nemysis $
+# $FreeBSD: games/holotz-castle/Makefile 335615 2013-12-04 10:26:55Z nemysis $
 
 PORTNAME=	holotz-castle
 PORTVERSION=	1.3.14
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/nemysisfreebsdp/${CATEGORIES}/${PORTNAME}/
 DISTFILES=	${PORTNAME}-${DISTVERSION}-src${EXTRACT_SUFX} \
@@ -30,20 +30,13 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96 128x128
 
 SUB_FILES=	pkg-message ${PORTNAME}-solutions
 
-DESKTOP_ENTRIES="Holotz's Castle" "${COMMENT}" ${PORTNAME} \
-		"${PORTNAME}" "Game;LogicGame;" false
-
-DESKTOP_ENTRIES+="Holotz's Castle Solutions" "${COMMENT}" ${PORTNAME} \
-		"xterm -e ${PORTNAME}-solutions" "Game;LogicGame;" false
-
 OPTIONS_DEFINE=	SOLUTIONS
 OPTIONS_DEFAULT=SOLUTIONS
 SOLUTIONS_DESC=	Solutions for Holotz's Castle
 
 OPTIONS_SUB=	yes
 
-SOLUTIONS_RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
-			xterm:${PORTSDIR}/x11/xterm
+SOLUTIONS_RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
 
 .include <bsd.port.options.mk>
 
@@ -60,10 +53,12 @@ post-install:
 .endfor
 	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
 	(cd ${WRKSRC}/man && ${INSTALL_MAN} *.6 ${STAGEDIR}${MAN6PREFIX}/man/man6/)
 
 .if ${PORT_OPTIONS:MSOLUTIONS}
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}-solutions ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}-solutions.desktop ${STAGEDIR}${DESKTOPDIR}
 	@${MKDIR} ${STAGEDIR}${DATADIR}/solutions
 	@(cd ${WRKDIR} ; ${INSTALL_DATA} *.avi ${STAGEDIR}${DATADIR}/solutions)
 .endif
