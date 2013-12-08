@@ -1,8 +1,8 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-pony/Makefile 335302 2013-11-30 15:45:39Z sunpoet $
+# $FreeBSD: mail/rubygem-pony/Makefile 335756 2013-12-06 15:23:32Z sunpoet $
 
 PORTNAME=	pony
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 
