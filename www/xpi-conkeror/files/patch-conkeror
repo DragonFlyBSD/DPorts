@@ -1,5 +1,5 @@
 
-$FreeBSD: www/xpi-conkeror/files/patch-conkeror 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: www/xpi-conkeror/files/patch-conkeror 335489 2013-12-02 14:02:20Z ashish $
 
 --- conkeror.orig
 +++ conkeror
@@ -13,6 +13,6 @@ $FreeBSD: www/xpi-conkeror/files/patch-conkeror 300897 2012-07-14 14:29:18Z beat
 +elif [ ! -x "${XULRUNNER}" ]; then
 +	echo ${XULRUNNER} is not executable.
 +else
-+	exec ${XULRUNNER} /usr/local/share/conkeror/application.ini
++	exec ${XULRUNNER} /usr/local/share/conkeror/application.ini "$@"
 +fi
 +
