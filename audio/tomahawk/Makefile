@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/tomahawk/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/tomahawk/Makefile 335626 2013-12-04 18:48:48Z makc $
 
 PORTNAME=	tomahawk
 PORTVERSION=	0.7.0
@@ -23,9 +23,7 @@ LIB_DEPENDS=	attica:${PORTSDIR}/x11-toolkits/attica \
 		tag:${PORTSDIR}/audio/taglib
 RUN_DEPENDS=	qca-ossl>=2.0.0.b3_4:${PORTSDIR}/security/qca-ossl
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING="Release" \
-		-DWITH_BREAKPAD:BOOL="OFF" \
-		-DWITH_BUILD:STRING="Release" \
+CMAKE_ARGS+=	-DWITH_BREAKPAD:BOOL="OFF" \
 		-DCLUCENE_CONFIG_PATH:PATH="${LOCALBASE}/share/clucene"
 
 GH_ACCOUNT=	tomahawk-player
