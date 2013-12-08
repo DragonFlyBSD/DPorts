@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
-# $FreeBSD: mail/prom-wl/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/prom-wl/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	prom-wl
 PORTVERSION=	2.7.0
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.h6.dion.ne.jp/~nytheta/software/pub/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Procmail reader for Wanderlust on GNU Emacs
 
 # This port requires Wanderlust. But we can't decide which Wanderlust to
