@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks
-# $FreeBSD: archivers/9e/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/9e/Makefile 335468 2013-12-02 08:25:11Z sunpoet $
 
 PORTNAME=	9e
 PORTVERSION=	1.0
@@ -10,11 +10,16 @@ DISTNAME=	9e
 MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Explode Plan9 archives
 
-NO_STAGE=	yes
+LICENSE=	LPL
+LICENSE_GROUPS=	OSI
+LICENSE_NAME=	Lucent Public License
+LICENSE_TEXT=	http://opensource.org/licenses/LPL-1.02
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
 PLIST_FILES=	bin/9e
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="" HDRS=""
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/9e ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/9e ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
