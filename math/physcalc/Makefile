@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: math/physcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/physcalc/Makefile 335140 2013-11-29 02:59:16Z eadler $
 
 PORTNAME=	physcalc
 PORTVERSION=	2.4
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.lightlink.com/pub/vulcan/
 DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Extremely flexible calculator that behaves much like units(1)
+COMMENT=	Flexible calculator that behaves much like units(1)
 
 EXTRACT_BEFORE_ARGS=	-aq
 EXTRACT_AFTER_ARGS=	-x physcalc -d ${WRKDIR}
@@ -22,7 +22,6 @@ SRCS=		physconv.c physmain.c physmlib.c physnode.c physoper.c \
 		physsolv.c
 CFLAGS+=	-Wno-return-type
 
-NO_STAGE=	yes
 pre-build:
 	${REINPLACE_CMD} -e "s@void main@int main@g" ${WRKSRC}/physmain.c
 
@@ -30,8 +29,8 @@ do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} ${DEFS} ${SRCS} -lm -o physcalc)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/physcalc ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/physcalc
-	${INSTALL_DATA} ${WRKSRC}/*.phy ${PREFIX}/share/physcalc
+	${INSTALL_PROGRAM} ${WRKSRC}/physcalc ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/physcalc
+	${INSTALL_DATA} ${WRKSRC}/*.phy ${STAGEDIR}${PREFIX}/share/physcalc
 
 .include <bsd.port.mk>
