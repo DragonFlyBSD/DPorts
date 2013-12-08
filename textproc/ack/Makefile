@@ -1,15 +1,16 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/ack/Makefile 328562 2013-09-28 09:34:52Z az $
+# $FreeBSD: textproc/ack/Makefile 335695 2013-12-05 20:26:41Z sunpoet $
 
 PORTNAME=	ack
-PORTVERSION=	2.10
-PORTREVISION=	1
-CATEGORIES=	textproc perl5 sysutils
+PORTVERSION=	2.12
+CATEGORIES=	textproc sysutils perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	App
+MASTER_SITE_SUBDIR=	CPAN:PETDANCE
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Grep-like text finder for large trees of text
+
+LICENSE=	ART20
 
 BUILD_DEPENDS=	p5-File-Next>=0.40:${PORTSDIR}/sysutils/p5-File-Next
 RUN_DEPENDS:=	${BUILD_DEPENDS}
