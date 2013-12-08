@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/txtbdf2ps/Makefile 328321 2013-09-25 21:47:31Z ak $
+# $FreeBSD: print/txtbdf2ps/Makefile 335729 2013-12-06 09:57:12Z ak $
 
 PORTNAME=	txtbdf2ps
 PORTVERSION=	0.7.1
@@ -14,15 +14,14 @@ COMMENT=	Translator TXT + BDF to PS
 PROJECTHOST=	ak-various-projects
 
 PLIST_FILES=	bin/txtbdf2ps
-USES=		perl5
+USES=		perl5 shebangfix
 EXTRACT_CMD=	${CP}
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	${WRKDIR}
+SHEBANG_FILES=	${DISTNAME}.txt
 NO_WRKSUBDIR=	yes
+NO_ARCH=	yes
 NO_BUILD=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|g' ${WRKSRC}/${DISTNAME}.txt
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}.txt ${STAGEDIR}${PREFIX}/bin/txtbdf2ps
