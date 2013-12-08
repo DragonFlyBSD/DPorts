@@ -1,5 +1,5 @@
 # Created by: Max N. Boyarov <m.boyarov@gmail.com>
-# $FreeBSD: textproc/dictem/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/dictem/Makefile 335504 2013-12-02 15:12:22Z wg $
 
 PORTNAME=	dictem
 PORTVERSION=	1.0.4
@@ -9,6 +9,8 @@ PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 
 MAINTAINER=	max.n.boyarov@gmail.com
 COMMENT=	DictEm is a dict client for [X]Emacs
+
+LICENSE=	GPLv2
 
 RUN_DEPENDS=	${LOCALBASE}/bin/dict:${PORTSDIR}/textproc/dict
 
@@ -25,7 +27,6 @@ PLIST_DIRS+=	${LISPDIR}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PORTDOCS+=	README AUTHORS NEWS COPYING TODO
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${EMACS_NAME} == "xemacs"
@@ -35,22 +36,19 @@ LISPDIR=	${EMACS_VERSION_SITE_LISPDIR}/dictem
 .endif
 
 do-build:
-.for f in ${SRC_EL}
-	${EMACS_CMD} --no-site-file --no-init-file \
-		-batch -L ${WRKSRC} \
-		-f batch-byte-compile ${WRKSRC}/${f}
-.endfor
+	cd ${WRKSRC} && ${EMACS_CMD} --no-site-file --no-init-file -batch \
+		-l compile.el -f compile-dictem ${SRC_EL}
 
 do-install:
-	${MKDIR} ${PREFIX}/${LISPDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/${LISPDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRC_EL} ${SRC_EL:S/.el$/.elc/} \
-		 ${PREFIX}/${LISPDIR}/
+		 ${STAGEDIR}${PREFIX}/${LISPDIR}/
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
