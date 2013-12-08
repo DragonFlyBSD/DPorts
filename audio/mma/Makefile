@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/mma/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mma/Makefile 335350 2013-11-30 22:58:44Z nivit $
 
 PORTNAME=	mma
 PORTVERSION=	12.02
@@ -11,8 +11,13 @@ DISTFILES=	${PORTNAME}-bin-${PORTVERSION}.tar.gz
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Musical MIDI Accompaniment generator
 
+USES=		shebangfix
 USE_PYTHON=	-2.7
 NO_STAGE=	yes
+
+python_CMD=	${PYTHON_CMD}
+python_OLD_CMD=	/usr/bin/env python
+SHEBANG_FILES=	mma.py
 
 OPTIONS_DEFINE=	TIMIDITY PLAYMIDI DOCS EXAMPLES
 
