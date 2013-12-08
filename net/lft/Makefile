@@ -1,5 +1,5 @@
 # Created by: Marco P. Rodrigues <drkangel@drkangel.org>
-# $FreeBSD: net/lft/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/lft/Makefile 335151 2013-11-29 07:37:52Z araujo $
 
 PORTNAME=	lft
 PORTVERSION=	3.33
@@ -7,7 +7,7 @@ PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	http://pwhois.org/get/
 
-MAINTAINER=	araujo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Layer 4 Traceroute program
 
 GNU_CONFIGURE=	yes
