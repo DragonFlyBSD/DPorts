@@ -1,9 +1,9 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/cocaine-core/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/cocaine-core/Makefile 335619 2013-12-04 14:08:03Z koobs $
 
 PORTNAME=	cocaine-core
 PORTVERSION=	0.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	GH GHC
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	boost_iostreams:${PORTSDIR}/devel/boost-libs \
 		ltdl:${PORTSDIR}/devel/libltdl \
 		msgpack:${PORTSDIR}/devel/msgpack \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
-		zmq:${PORTSDIR}/devel/zmq
+		zmq:${PORTSDIR}/net/libzmq2
 
 USES=		cmake
 USE_GCC=	yes
