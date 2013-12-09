@@ -1,9 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/xfce4-parole/Makefile 330525 2013-10-16 18:15:26Z olivierd $
+# $FreeBSD: multimedia/xfce4-parole/Makefile 335675 2013-12-05 17:18:40Z olivierd $
 
 PORTNAME=	parole
-PORTVERSION=	0.5.3
-PORTREVISION=	1
+PORTVERSION=	0.5.4
 CATEGORIES=	multimedia xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}/
 DIST_SUBDIR=	xfce4
@@ -30,7 +29,7 @@ USE_GNOME=	gtk20 glib20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil
 USE_XORG=	x11 sm
 USE_LDCONFIG=	yes
-USES=		desktop-file-utils pathfix pkgconfig gmake
+USES=		desktop-file-utils pkgconfig gmake
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SINGLE=	GSTREAMER
