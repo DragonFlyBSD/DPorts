@@ -1,8 +1,8 @@
-# $FreeBSD: net/p5-ZeroMQ/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-ZeroMQ/Makefile 335619 2013-12-04 14:08:03Z koobs $
 
 PORTNAME=	ZeroMQ
 PORTVERSION=	0.21
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DMAKI
@@ -16,7 +16,7 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
 BUILD_DEPENDS=	p5-Task-Weaken>=0:${PORTSDIR}/devel/p5-Task-Weaken
-LIB_DEPENDS=	zmq.1:${PORTSDIR}/devel/zmq \
+LIB_DEPENDS=	zmq.1:${PORTSDIR}/net/libzmq2 \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 TEST_DEPENDS=	p5-Test-Fatal>=0:${PORTSDIR}/devel/p5-Test-Fatal \
