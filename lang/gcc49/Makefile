@@ -1,12 +1,12 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc49/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: lang/gcc49/Makefile 335475 2013-12-02 10:01:56Z gerald $
 
-PORTNAME=	gcc
-PORTVERSION=	4.9.0.20131020
-PORTREVISION=	1
+PORTNAME=	gcc49
+PORTVERSION=	4.9.0.20131201
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	snapshots/${DISTVERSION}
+DISTNAME=	gcc-${DISTVERSION}
 
 MAINTAINER=	gerald@FreeBSD.org
 COMMENT=	GNU Compiler Collection 4.9
@@ -28,7 +28,6 @@ BUILD_DEPENDS+=	runtest:${PORTSDIR}/misc/dejagnu
 DISTVERSION=	${PORTVERSION:C/([0-9]+\.[0-9]+).*\.([0-9]+)/\1-\2/}
 GCC_VERSION=	${PORTVERSION:C/(.+)\.[0-9]{8}/\1/}
 SUFFIX=		${PORTVERSION:C/([0-9]+).([0-9]+).*/\1\2/}
-LATEST_LINK=	gcc${SUFFIX}${PKGNAMESUFFIX}
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 sparc64
 USES=		gmake iconv perl5
 USE_BINUTILS=	yes
@@ -44,7 +43,7 @@ OPTIONS_DEFINE_i386=	JAVA
 OPTIONS_DEFINE_x86_64=	JAVA
 OPTIONS_DEFAULT=	BOOTSTRAP
 OPTIONS_DEFAULT_i386=	JAVA
-OPTIONS_DEFAULT_x86_64=	JAVA
+OPTIONS_DEFAULT_amd64=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 
 .include <bsd.port.pre.mk>
@@ -65,7 +64,6 @@ WRKSRC=		${WRKDIR}/build
 TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
 GNU_CONFIGURE=	yes
-CFLAGS+=	-I${LOCALBASE}/include
 .if empty(PORT_OPTIONS:MBOOTSTRAP)
 CONFIGURE_ARGS+=--disable-bootstrap
 .else
