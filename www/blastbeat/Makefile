@@ -1,9 +1,9 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: www/blastbeat/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/blastbeat/Makefile 335619 2013-12-04 14:08:03Z koobs $
 
 PORTNAME=	blastbeat
 PORTVERSION=	20121205
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	GH GHC
 
@@ -17,7 +17,7 @@ LICENSE_PERMS=	auto-accept
 
 LIB_DEPENDS=	ev:${PORTSDIR}/devel/libev \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
-		zmq:${PORTSDIR}/devel/zmq
+		zmq:${PORTSDIR}/net/libzmq2
 
 USE_GMAKE=	yes
 USE_GITHUB=	yes
