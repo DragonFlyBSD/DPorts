@@ -1,0 +1,16 @@
+--- src/platform.hpp.in.orig	2012-04-04 10:54:14.000000000 +0000
++++ src/platform.hpp.in
+@@ -181,9 +181,12 @@
+ /* Have Cygwin */
+ #undef ZMQ_HAVE_CYGWIN
+ 
+-/* Have FreeBSD OS */
++/* Have FreeBSD or DragonFly OS */
+ #undef ZMQ_HAVE_FREEBSD
+ 
++/* Have DragonFly OS */
++#undef ZMQ_HAVE_DRAGONFLY
++
+ /* Have HPUX OS */
+ #undef ZMQ_HAVE_HPUX
+ 
