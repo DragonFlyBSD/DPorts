@@ -42,7 +42,7 @@ CFLAGS+=	-O3 -ffast-math
 .endif
 
 do-build:
-	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} -o caph -I../include *.c \
+	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} -o caph -I../include *.c -lm \
 		`${SDL_CONFIG} --libs --cflags` -D_OPENGL -lGL -lpng ${ICONV_LIB}
 
 post-patch:
