@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: cad/leocad/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/leocad/Makefile 336011 2013-12-09 17:59:17Z nemysis $
 
 PORTNAME=	leocad
 PORTVERSION=	0.80.1
@@ -23,24 +23,19 @@ RUN_DEPENDS=	${LOCALBASE}/share/ldraw/models/car.dat:${PORTSDIR}/cad/ldraw
 WRKSRC=		${WRKDIR}/${PORTNAME}
 LEOCAD_PIECES=	pieces-7439.zip
 
-USES=		desktop-file-utils gmake pkgconfig shared-mime-info
-USE_QT4=	moc_build qmake_build rcc_build uic_build iconengines imageformats \
+USES=		desktop-file-utils gmake pkgconfig qmake shared-mime-info
+USE_QT4=	moc_build rcc_build uic_build iconengines_run imageformats_run \
 		corelib gui network opengl
 
 USE_GL=		glut
 USE_GNOME=	gtk20
 
-MAN1=		leocad.1
-
 PORTDOCS=	CREDITS.txt README.txt TODO.txt
-
-INSTALLS_ICONS=	yes
-ICON_SIZES=	16x16 24x24 32x32 48x48 128x128 256x256
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+INSTALLS_ICONS=	yes
+ICON_SIZES=	16x16 24x24 32x32 48x48 128x128 256x256
 
 post-extract:
 	@${UNZIP_CMD} -q -o ${_DISTDIR}/${LEOCAD_PIECES} -d ${WRKDIR}/pieces
@@ -59,28 +54,23 @@ post-patch:
 	@cd ${WRKSRC}/tools/icon && ${CP} -a ${PORTNAME}_128x128.png icon128.png
 	@cd ${WRKSRC}/tools/icon && ${MV} icon.svg ${PORTNAME}.svg
 
-do-configure:
-	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QMAKE} ${QMAKEFLAGS} PREFIX=${PREFIX}
-
 post-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKDIR}/pieces/* ${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKDIR}/pieces/* ${STAGEDIR}${DATADIR}
 
 .for s in ${ICON_SIZES}
-	@${MKDIR} ${PREFIX}/share/icons/hicolor/${s}/apps
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}/apps
 	${INSTALL_DATA} ${WRKSRC}/tools/icon/${PORTNAME}_${s}.png \
-		${PREFIX}/share/icons/hicolor/${s}/apps/${PORTNAME}.png
+		${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}/apps/${PORTNAME}.png
 .endfor
-	@${MKDIR} ${PREFIX}/share/icons/hicolor/scalable/apps
-	${INSTALL_DATA} ${WRKSRC}/tools/icon/${PORTNAME}.svg  \
-		${PREFIX}/share/icons/hicolor/scalable/apps/
-	@${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png ${PREFIX}/share/pixmaps/
-	${INSTALL_MAN} ${WRKSRC}/docs/${MAN1} ${MAN1PREFIX}/man/man1/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
+	${INSTALL_DATA} ${WRKSRC}/tools/icon/${PORTNAME}.svg \
+		${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps/
+	@${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/
+	${INSTALL_MAN} ${WRKSRC}/docs/leocad.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
 
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/docs/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/docs/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
