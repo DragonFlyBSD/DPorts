@@ -1,0 +1,16 @@
+--- src/platform.hpp.in.orig	2013-11-24 18:02:50.000000000 +0000
++++ src/platform.hpp.in
+@@ -184,9 +184,12 @@
+ /* Have eventfd extension. */
+ #undef ZMQ_HAVE_EVENTFD
+ 
+-/* Have FreeBSD OS */
++/* Have FreeBSD OS or DragonFly OS */
+ #undef ZMQ_HAVE_FREEBSD
+ 
++/* Have DragonFly OS */
++#undef ZMQ_HAVE_DRAGONFLY
++
+ /* Have HPUX OS */
+ #undef ZMQ_HAVE_HPUX
+ 
