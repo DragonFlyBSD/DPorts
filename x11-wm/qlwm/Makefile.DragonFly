@@ -1,0 +1,2 @@
+post-extract:
+	echo "QMAKE_LFLAGS= -lXext -lX11" >> /${WRKSRC}/src/qlwm.pro
