@@ -19,11 +19,11 @@ NO_STAGE=	yes
 USE_XORG=	x11 xext xaw xmu xp xpm xt sm ice
 MAN1=		cda.1 xmcd.1
 MANCOMPRESSED=	no
-PLIST_SUB+=	RELEASE=${OSREL:R:R} ARCH=${ARCH}
+PLIST_SUB+=	RELEASE=${OSREL:R} ARCH=${ARCH}
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
-LIBBINDIR=	${PREFIX}/lib/X11/xmcd/bin-${OPSYS}_${OSREL:R:R}-${ARCH}
+LIBBINDIR=	${PREFIX}/lib/X11/xmcd/bin-${OPSYS}_${OSREL:R}-${ARCH}
 
 post-extract:
 	@${CHMOD} -R u+w ${WRKSRC}
