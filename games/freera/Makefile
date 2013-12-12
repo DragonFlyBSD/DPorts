@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/freera++
 
 SUB_FILES=	pkg-message
 
-PLIST_FILES=	bin/${PORTNMAE}
+PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*
 
 post-patch:
