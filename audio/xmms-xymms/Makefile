@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-xymms/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-xymms/Makefile 333584 2013-11-12 16:04:51Z ehaupt $
 
 PORTNAME=	xymms
 DISTVERSION=	0.9.1
@@ -16,7 +16,6 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	${PTHREAD_CFLAGS}
@@ -33,8 +32,8 @@ post-patch:
 	@${REINPLACE_CMD} -e '/objformat=/s|=.*|=elf|' ${WRKSRC}/ltconfig
 
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/sample.gym ${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/sample.gym ${STAGEDIR}${EXAMPLESDIR}
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
