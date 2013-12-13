@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: www/php-templates/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/php-templates/Makefile 336295 2013-12-12 22:03:07Z antoine $
 
 PORTNAME=	php-templates
 PORTVERSION=	1.7.2
@@ -8,15 +8,13 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.7:ext \
 		SF/${PORTNAME}/${PORTNAME}-doc/html:doc
 DISTNAME=	php_templates-${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:ext
-.if !defined(NOPORTDOCS)
 DISTFILES+=	php_templates-doc-eng-1.1${EXTRACT_SUFX}:doc
-.endif
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A template framework for PHP
+COMMENT=	Template framework for PHP
 
 WRKSRC=		${WRKDIR}/templates
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 
 USE_PHP=	yes
 USE_PHPIZE=	yes
@@ -27,17 +25,11 @@ SUB_FILES=	pkg-message
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/lib/php/${PHP_EXT_DIR}
-	@${INSTALL_DATA} ${WRKSRC}/modules/templates.so \
-		${PREFIX}/lib/php/${PHP_EXT_DIR}
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}-doc/* ${DOCSDIR}
-.endif
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/php/${PHP_EXT_DIR}
+	${INSTALL_DATA} ${WRKSRC}/modules/templates.so \
+		${STAGEDIR}${PREFIX}/lib/php/${PHP_EXT_DIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}-doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
