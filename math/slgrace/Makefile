@@ -1,4 +1,4 @@
-# $FreeBSD: math/slgrace/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/slgrace/Makefile 332304 2013-10-31 23:37:49Z garga $
 
 PORTNAME=	slgrace
 PORTVERSION=	0.2.2
@@ -12,6 +12,8 @@ MASTER_SITE_SUBDIR=	garga/slgrace/
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	A SLang module to plot graphs with grace
 
+LICENSE=	GPLv2
+
 LIB_DEPENDS=	libslang.so:${PORTSDIR}/devel/libslang2
 RUN_DEPENDS=	grace:${PORTSDIR}/math/grace
 
@@ -24,16 +26,9 @@ MAKE_JOBS_UNSAFE=	yes
 PORTDOCS=	*
 PLIST_SUB=	VERSION=${PORTVERSION}
 
-.include <bsd.port.options.mk>
-
 post-patch:
-.if empty(PORT_OPTIONS:MDOCS)
 	@${REINPLACE_CMD} -e 's, install_docfiles,,' \
 			  -e '/MKINSDIR.*DEST_DOC_FILES_INSTALL_DIR/d' \
 		${WRKSRC}/src/Makefile.in
-.else
-	@${REINPLACE_CMD} -E 's,^(DOC_FILES_INSTALL_DIR) *= *.*$$,\1 = ${DOCSDIR},' \
-		${WRKSRC}/src/Makefile.in
-.endif
 
 .include <bsd.port.mk>
