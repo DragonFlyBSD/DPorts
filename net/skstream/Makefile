@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: net/skstream/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/skstream/Makefile 335831 2013-12-07 14:51:39Z oliver $
 
 PORTNAME=	skstream
 PORTVERSION=	0.3.9
@@ -13,6 +13,7 @@ USE_GMAKE=	yes
 USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+USE_GCC=	4.7+
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
