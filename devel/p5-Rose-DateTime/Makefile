@@ -1,8 +1,8 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Rose-DateTime/Makefile 329480 2013-10-05 16:59:51Z sunpoet $
+# $FreeBSD: devel/p5-Rose-DateTime/Makefile 336019 2013-12-09 19:30:35Z sunpoet $
 
 PORTNAME=	Rose-DateTime
-PORTVERSION=	0.539
+PORTVERSION=	0.540
 PORTEPOCH=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
