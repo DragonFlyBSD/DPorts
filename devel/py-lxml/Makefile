@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: devel/py-lxml/Makefile 333200 2013-11-08 11:13:13Z wg $
+# $FreeBSD: devel/py-lxml/Makefile 336556 2013-12-15 16:54:02Z wg $
 
 PORTNAME=	lxml
 PORTVERSION=	3.2.4
@@ -16,10 +16,8 @@ LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
 		libxslt.so:${PORTSDIR}/textproc/libxslt
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
-PYEASYINSTALL_ARCHDEP=	yes
-NO_STAGE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 DOCS_FILES=	CHANGES.txt CREDITS.txt TODO.txt README.rst
