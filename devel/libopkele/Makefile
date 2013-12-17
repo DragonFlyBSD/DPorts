@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: devel/libopkele/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libopkele/Makefile 336360 2013-12-13 16:01:23Z bapt $
 
 PORTNAME=	libopkele
 PORTVERSION=	2.0.4
@@ -11,14 +11,14 @@ MAINTAINER=	zhoushuqun@gmail.com
 COMMENT=	A c++ implementation of an OpenID decentralized identity system
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		pcre.3:${PORTSDIR}/devel/pcre \
-		expat.6:${PORTSDIR}/textproc/expat2 \
-		tidy:${PORTSDIR}/www/tidy-lib \
-		xslt:${PORTSDIR}/textproc/libxslt
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libpcre.so:${PORTSDIR}/devel/pcre \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libtidy.so:${PORTSDIR}/www/tidy-lib \
+		libxslt.so:${PORTSDIR}/textproc/libxslt
 
 USE_LDCONFIG=	yes
-USES=		gmake pkgconfig
+USES=		gmake pkgconfig compiler:c++11-lang
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	"OPENSSL_CFLAGS=${CFLAGS} -l${OPENSSLINC}" \
 		OPENSSL_LIBS=-L${OPENSSLLIB}
@@ -29,7 +29,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 # This port needs OpenSSL 0.9.8b which is present in 7.0 and up
 USE_OPENSSL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .include "${PORTSDIR}/Mk/bsd.openssl.mk"
