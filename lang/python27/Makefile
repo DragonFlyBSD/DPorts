@@ -1,21 +1,25 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: lang/python27/Makefile 334723 2013-11-24 13:22:40Z koobs $
+# $FreeBSD: lang/python27/Makefile 335872 2013-12-08 09:03:01Z koobs $
 
 PORTNAME=	python27
 PORTVERSION=	2.7.6
+PORTREVISION=	1
 CATEGORIES=	lang python ipv6
 MASTER_SITES=	PYTHON
 MASTER_SITE_SUBDIR=	${PYTHON_MASTER_SITE_SUBDIR}
 DISTFILES=	${PYTHON_DISTFILE}
+DIST_SUBDIR=	python
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Interpreted object-oriented programming language
 
-DIST_SUBDIR=	python
-GNU_CONFIGURE=	yes
+LICENSE=	PSFL
+
+GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure # must be relative
-CONFIGURE_ENV=	SVNVERSION="echo freebsd" ac_cv_opt_olimit_ok=no
-MAKE_ENV=	VPATH="${PYTHON_WRKSRC}"
+CONFIGURE_ENV=		SVNVERSION="echo freebsd" ac_cv_opt_olimit_ok=no
+MAKE_ENV=		VPATH="${PYTHON_WRKSRC}"
+
 INSTALL_TARGET=	altinstall
 MAN1=		${PYTHON_VERSION}.1
 
