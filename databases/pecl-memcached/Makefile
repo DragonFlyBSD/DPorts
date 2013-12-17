@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/pecl-memcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pecl-memcached/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	memcached
 PORTVERSION=	2.1.0
@@ -15,7 +15,7 @@ COMMENT=	PHP extension for interfacing with memcached via libmemcached library
 LICENSE=	PHP30
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/pear:${PORTSDIR}/devel/pear
-LIB_DEPENDS=	memcached:${PORTSDIR}/databases/libmemcached
+LIB_DEPENDS=	libmemcached.so:${PORTSDIR}/databases/libmemcached
 RUN_DEPENDS=	${LOCALBASE}/bin/pear:${PORTSDIR}/devel/pear
 
 PHP_MODNAME=	memcached
