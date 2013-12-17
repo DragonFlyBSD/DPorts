@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/unoconv/files/unoconv.in 304580 2012-09-20 14:22:09Z pawel $
+# $FreeBSD: textproc/unoconv/files/unoconv.in 336717 2013-12-17 11:46:29Z nemysis $
 #
 
 cd "%%DATADIR%%"
-./unoconv "$@"
+exec ./unoconv "$@"
