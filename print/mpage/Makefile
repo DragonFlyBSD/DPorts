@@ -1,5 +1,5 @@
 # Created by: Kapil Chowksey
-# $FreeBSD: print/mpage/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/mpage/Makefile 336211 2013-12-11 19:36:37Z bsam $
 
 # To override mpage's default paper size of A4, set PAGESIZE to another
 # page type.  Some common values include "Letter" (8.5" x 11") and
@@ -16,21 +16,16 @@ COMMENT=	Print multiple pages per sheet of paper
 
 ALL_TARGET=	default
 
-MAN1=		mpage.1
 PORTDOCS=	CHANGES Characters Copyright Encoding.format FAQ NEWS \
 		README README.OS2 README.amiga SCOPTIONS TODO
 PLIST_FILES=	bin/mpage %%DATADIR%%/CP850.PC %%DATADIR%%/ISO+STD+OTH \
 		%%DATADIR%%/ISO-8859.1 %%DATADIR%%/ISO-8859.15 \
-		%%DATADIR%%/ISO-Latin.1 %%DATADIR%%/ISO-Latin.2
+		%%DATADIR%%/ISO-Latin.1 %%DATADIR%%/ISO-Latin.2 \
+		man/man1/mpage.1.gz
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for FILE in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${FILE} ${DOCSDIR}
-.endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
