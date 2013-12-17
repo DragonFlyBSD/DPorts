@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: science/netcdf4/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/netcdf4/Makefile 336087 2013-12-10 19:17:08Z sunpoet $
 
 PORTNAME=	netcdf
 PORTVERSION=	4.1.3
@@ -12,8 +12,7 @@ MASTER_SITES=	http://www.unidata.ucar.edu/downloads/netcdf/ftp/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT?=	Library for machine-independent, array-oriented data access
 
-CONFLICTS=	hdf-4.* netcdf-3.*
-LATEST_LINK?=	netcdf4
+CONFLICTS_INSTALL=	hdf-4.[0-9]* netcdf-3.[0-9]* netcdf3-3.[0-9]*
 PORTSCOUT=	limit:^4\.
 
 OPTIONS_DEFINE=	DAP FORTRAN SZIP
