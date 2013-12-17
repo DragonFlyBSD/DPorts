@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: math/gmp/Makefile 329504 2013-10-05 21:04:40Z ale $
+# $FreeBSD: math/gmp/Makefile 336420 2013-12-14 04:47:22Z koobs $
 
 PORTNAME=	gmp
 PORTVERSION=	5.1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	gmp
 
 MAINTAINER=	ale@FreeBSD.org
-COMMENT=	A free library for arbitrary precision arithmetic
+COMMENT=	Free library for arbitrary precision arithmetic
 
 LICENSE=	LGPL3
 
@@ -34,7 +34,11 @@ INFO=		gmp
 .if ! ${PORT_OPTIONS:MCPU_OPTS}
 CONFIGURE_ARGS+=--build=${ARCH}-portbld-freebsd${OSREL}
 .elif ${ARCH:S/64//} != ${ARCH}
+.if ${ARCH} == powerpc64
+CONFIGURE_ENV+=	ABI="mode64"
+.else
 CONFIGURE_ENV+=	ABI="64"
+.endif
 .else
 CONFIGURE_ENV+=	ABI="32"
 .endif
