@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce3/Makefile 331121 2013-10-21 10:57:59Z sunpoet $
+# $FreeBSD: www/tinymce3/Makefile 336305 2013-12-13 01:16:58Z sunpoet $
 
 PORTNAME=	tinymce
 PORTVERSION=	3.5.8
@@ -8,6 +8,7 @@ MASTER_SITES=	http://cloud.github.com/downloads/${PORTNAME}/${PORTNAME}/ \
 		LOCAL/sunpoet
 PKGNAMESUFFIX=	3
 DISTNAME=	${PORTNAME}_${PORTVERSION}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Open source JavaScript HTML WYSIWYG editor for web sites
@@ -17,8 +18,6 @@ LICENSE=	LGPL21
 CONFLICTS_INSTALL=	tinymce-[0-24-9]*
 
 NO_BUILD=	yes
-NO_LATEST_LINK=	yes
-USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 post-extract:
