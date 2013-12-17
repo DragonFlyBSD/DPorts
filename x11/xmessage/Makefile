@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xmessage/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xmessage/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xmessage
 PORTVERSION=	1.0.4
@@ -10,7 +10,4 @@ COMMENT=	Display message or query in a X window
 XORG_CAT=	app
 USE_XORG=	xt xaw
 
-MAN1=		xmessage.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
