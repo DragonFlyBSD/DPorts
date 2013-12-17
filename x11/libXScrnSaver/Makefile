@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXScrnSaver/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libXScrnSaver/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libXScrnSaver
 PORTVERSION=	1.2.2
@@ -10,18 +10,4 @@ COMMENT=	The XScrnSaver library
 XORG_CAT=	lib
 USE_XORG=	x11 xext xextproto scrnsaverproto:both
 
-MAN3=		Xss.3 \
-		XScreenSaverAllocInfo.3 \
-		XScreenSaverGetRegistered.3 \
-		XScreenSaverQueryExtension.3 \
-		XScreenSaverQueryInfo.3 \
-		XScreenSaverQueryVersion.3 \
-		XScreenSaverRegister.3 \
-		XScreenSaverSelectInput.3 \
-		XScreenSaverSetAttributes.3 \
-		XScreenSaverSuspend.3 \
-		XScreenSaverUnregister.3 \
-		XScreenSaverUnsetAttributes.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
