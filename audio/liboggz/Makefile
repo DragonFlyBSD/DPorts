@@ -1,4 +1,4 @@
-# $FreeBSD: audio/liboggz/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/liboggz/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	liboggz
 DISTVERSION=	1.1.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://downloads.xiph.org/releases/liboggz/ \
 MAINTAINER=	jsa@FreeBSD.org
 COMMENT=	Simple Ogg API
 
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 
 USE_AUTOTOOLS=	libtool
 NO_STAGE=	yes
