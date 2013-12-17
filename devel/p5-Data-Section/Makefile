@@ -1,8 +1,8 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Data-Section/Makefile 335563 2013-12-03 12:15:56Z sunpoet $
+# $FreeBSD: devel/p5-Data-Section/Makefile 336271 2013-12-12 15:46:47Z culot $
 
 PORTNAME=	Data-Section
-PORTVERSION=	0.200004
+PORTVERSION=	0.200005
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
