@@ -1,5 +1,5 @@
 # Created by: David Barksdale <amatus@gnu.org>
-# $FreeBSD: www/libmicrohttpd/Makefile 334693 2013-11-23 18:41:39Z sunpoet $
+# $FreeBSD: www/libmicrohttpd/Makefile 336318 2013-12-13 07:27:20Z sunpoet $
 
 PORTNAME=	libmicrohttpd
 PORTVERSION=	0.9.31
@@ -30,6 +30,9 @@ PLIST_FILES=	include/microhttpd.h \
 		lib/libmicrohttpd.so.30 \
 		libdata/pkgconfig/libmicrohttpd.pc \
 		man/man3/libmicrohttpd.3.gz
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-ldl|-lc|' ${WRKSRC}/src/examples/Makefile.in
 
 post-build:
 	@${STRIP_CMD} ${WRKSRC}/src/microhttpd/.libs/libmicrohttpd.so.30
