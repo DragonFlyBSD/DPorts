@@ -1,7 +1,11 @@
-@comment $FreeBSD: emulators/bochs/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/bochs
 bin/bxcommit
 bin/bximage
+man/man1/bochs-dlx.1.gz
+man/man1/bochs.1.gz
+man/man1/bxcommit.1.gz
+man/man1/bximage.1.gz
+man/man5/bochsrc.5.gz
 %%DATADIR%%/BIOS-bochs-latest
 %%DATADIR%%/BIOS-bochs-legacy
 %%DATADIR%%/VGABIOS-elpin-2.40
