@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libxkbfile/Makefile 330450 2013-10-15 19:49:34Z eadler $
+# $FreeBSD: x11/libxkbfile/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libxkbfile
 PORTVERSION=	1.0.8
@@ -12,4 +12,5 @@ LICENSE=	MIT
 
 XORG_CAT=	lib
 USE_XORG=	x11 kbproto:both
+
 .include <bsd.port.mk>
