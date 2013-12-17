@@ -1,5 +1,5 @@
 # Created by: takefu <takefu@airport.fm>
-# $FreeBSD: audio/libaacplus/Makefile 332366 2013-11-01 13:11:59Z wg $
+# $FreeBSD: audio/libaacplus/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	libaacplus
 PORTVERSION=	2.0.2
@@ -37,8 +37,8 @@ FFTW3_DESC=	Use FFTW3 library for performance
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFFTW3}
-LIB_DEPENDS+=	fftw3:${PORTSDIR}/math/fftw3 \
-		fftw3f:${PORTSDIR}/math/fftw3-float
+LIB_DEPENDS+=	libfftw3.so:${PORTSDIR}/math/fftw3 \
+		libfftw3f.so:${PORTSDIR}/math/fftw3-float
 CONFIGURE_ARGS+=--with-fftw3=yes --with-fftw3-prefix=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=--with-fftw3=no
