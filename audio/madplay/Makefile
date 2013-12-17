@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: audio/madplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/madplay/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	madplay
 PORTVERSION=	0.15.2b
@@ -13,8 +13,8 @@ COMMENT=	Madplay MP3 player (part of MAD project)
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	mad:${PORTSDIR}/audio/libmad \
-		id3tag:${PORTSDIR}/audio/libid3tag
+LIB_DEPENDS=	libmad.so:${PORTSDIR}/audio/libmad \
+		libid3tag.so:${PORTSDIR}/audio/libid3tag
 
 WANT_GNOME=	yes
 
