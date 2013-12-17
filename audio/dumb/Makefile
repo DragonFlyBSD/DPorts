@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: audio/dumb/Makefile 329271 2013-10-04 08:52:32Z bapt $
+# $FreeBSD: audio/dumb/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	dumb
 PORTVERSION=	0.9.3
@@ -19,7 +19,7 @@ ALLEGRO_DESC=	Enable allegro support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALLEGRO}
-LIB_DEPENDS+=	alleg:${PORTSDIR}/devel/allegro
+LIB_DEPENDS+=	liballeg.so:${PORTSDIR}/devel/allegro
 PLIST_SUB+=	ALLEGRO=""
 MAKE_ARGS=	_PORT_ALLEGRO_CFLAGS="`allegro-config --cflags`"
 MAKE_ARGS+=	LINK_ALLEGRO="-lm -L${LOCALBASE}/lib -lalleg"
