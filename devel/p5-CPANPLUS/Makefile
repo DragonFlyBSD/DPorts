@@ -1,8 +1,8 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: devel/p5-CPANPLUS/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: devel/p5-CPANPLUS/Makefile 336093 2013-12-10 19:32:33Z sunpoet $
 
 PORTNAME=	CPANPLUS
-PORTVERSION=	0.9142
+PORTVERSION=	0.9144
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
@@ -26,17 +26,10 @@ MAKE_JOBS_UNSAFE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MTEST_REPORTER}
-BUILD_DEPENDS+=	p5-Test-Reporter>=0:${PORTSDIR}/devel/p5-Test-Reporter
-RUN_DEPENDS+=	p5-Test-Reporter>=0:${PORTSDIR}/devel/p5-Test-Reporter
-.endif
-
-.if ${PORT_OPTIONS:MYAML}
-BUILD_DEPENDS+=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
-RUN_DEPENDS+=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
-.endif
+TEST_REPORTER_BUILD_DEPENDS=	p5-Test-Reporter>=0:${PORTSDIR}/devel/p5-Test-Reporter
+TEST_REPORTER_RUN_DEPENDS=	p5-Test-Reporter>=0:${PORTSDIR}/devel/p5-Test-Reporter
+YAML_BUILD_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
+YAML_RUN_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 
 post-patch:
 	@${REINPLACE_CMD} -e '/install_script/d' ${WRKSRC}/Makefile.PL
