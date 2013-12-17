@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: audio/simplemod/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/simplemod/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	simplemod
 PORTVERSION=	1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://borderworlds.dk/projects/sm/
 MAINTAINER=	xi@borderworlds.dk
 COMMENT=	A minimalistic module player
 
-LIB_DEPENDS=	mikmod.2:${PORTSDIR}/audio/libmikmod
+LIB_DEPENDS=	libmikmod.so:${PORTSDIR}/audio/libmikmod
 
 WRKSRC=		${WRKDIR}/simplemod
 
