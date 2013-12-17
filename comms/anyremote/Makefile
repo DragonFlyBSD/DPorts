@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: comms/anyremote/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/anyremote/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	anyremote
 PORTVERSION=	6.3.1
@@ -26,7 +26,7 @@ NO_STAGE=	yes
 .if ! ${PORT_OPTIONS:MDBUS}
 CONFIGURE_ARGS+=--disable-dbus
 .else
-LIB_DEPENDS+=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS+=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 .endif
 
 .if ! ${PORT_OPTIONS:MX11}
