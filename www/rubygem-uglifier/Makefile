@@ -1,16 +1,18 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-uglifier/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD: www/rubygem-uglifier/Makefile 335797 2013-12-07 01:02:01Z sunpoet $
 
 PORTNAME=	uglifier
-PORTVERSION=	2.1.1
+PORTVERSION=	2.3.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby wrapper for UglifyJS JavaScript compressor
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-execjs>=0.3.0:${PORTSDIR}/devel/rubygem-execjs \
-		rubygem-multi_json>=1.3:${PORTSDIR}/devel/rubygem-multi_json
+		rubygem-json>=1.8.0:${PORTSDIR}/devel/rubygem-json
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
