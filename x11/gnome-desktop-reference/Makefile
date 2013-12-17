@@ -1,9 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11/gnome-desktop-reference/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gnome-desktop-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	1
 
 REFERENCE_SRC=	${WRKSRC}/docs/reference/gnome-desktop
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
