@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: misc/e2fsprogs-libuuid/Makefile 329745 2013-10-07 23:13:52Z mandree $
+# $FreeBSD: misc/e2fsprogs-libuuid/Makefile 336338 2013-12-13 11:39:19Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	misc devel
@@ -11,7 +11,7 @@ CONFLICTS=	ossp-uuid-[0-9]*
 
 CONFIGURE_ARGS=	--enable-elf-shlibs
 
-WITHOUT_NLS=	yes
+OPTIONS_EXCLUDE=	NLS
 OPTIONSFILE=	# works around optionsNG trouble
 MASTERDIR=	${.CURDIR}/../../sysutils/e2fsprogs
 MAKE_ARGS=	LIB_SUBDIRS=lib/uuid
