@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libdv/Makefile 330793 2013-10-18 23:28:36Z bapt $
+# $FreeBSD: multimedia/libdv/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	libdv
 PORTVERSION=	1.0.0
@@ -7,7 +7,7 @@ PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quasar DV codec (libdv): software codec for DV video encoding format
 
 LICENSE=	LGPL21
