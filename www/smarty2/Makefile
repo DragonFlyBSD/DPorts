@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: www/smarty2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/smarty2/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	smarty
 PORTVERSION=	2.6.27
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.smarty.net/files/ \
 		http://www.smarty.net/files/docs/:manual
 DISTFILES=	Smarty-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The PHP compiling template engine
 
 USE_ZIP=	yes
