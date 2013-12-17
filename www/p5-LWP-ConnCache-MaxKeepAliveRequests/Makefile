@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-ConnCache-MaxKeepAliveRequests/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-LWP-ConnCache-MaxKeepAliveRequests/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	LWP-ConnCache-MaxKeepAliveRequests
 PORTVERSION=	0.33
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A connection cache that enforces a max keep alive limit
 
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
