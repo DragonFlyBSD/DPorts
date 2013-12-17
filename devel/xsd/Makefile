@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: devel/xsd/Makefile 332884 2013-11-05 17:59:05Z rakuco $
+# $FreeBSD: devel/xsd/Makefile 336253 2013-12-12 10:53:38Z bapt $
 
 PORTNAME=	xsd
 PORTVERSION=	3.3.0
@@ -17,8 +17,8 @@ LICENSE_FILE=	${WRKSRC}/xsd/LICENSE
 #        check if things still work to get rid of the shells/bash dependency.
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		gm4:${PORTSDIR}/devel/m4
-LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs \
-		xerces-c.3:${PORTSDIR}/textproc/xerces-c3
+LIB_DEPENDS=	libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
+		libxerces-c.so.3:${PORTSDIR}/textproc/xerces-c3
 
 ALL_TARGET=	# no default target should be passed to gmake.
 CXXFLAGS+=	-I${LOCALBASE}/include
