@@ -1,4 +1,4 @@
-# $FreeBSD: x11/iceauth/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/iceauth/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	iceauth
 PORTVERSION=	1.0.6
@@ -12,9 +12,6 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	xproto ice
 
-PLIST_FILES=	bin/iceauth
+PLIST_FILES=	bin/iceauth man/man1/iceauth.1.gz
 
-MAN1=		iceauth.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
