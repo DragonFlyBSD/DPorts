@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: databases/py-carbon/Makefile 328847 2013-09-30 19:24:34Z swills $
+# $FreeBSD: databases/py-carbon/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	carbon
 PORTVERSION=	0.9.12
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}txamqp>=0.3:${PORTSDIR}/net/py-txamqp \
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
-USE_TWISTED_RUN=	yes
+USES=		twisted:run
 FETCH_ARGS=	-o ${DISTNAME}${EXTRACT_SUFX}
 USE_RC_SUBR=	carbon
 
