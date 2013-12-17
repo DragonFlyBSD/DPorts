@@ -1,5 +1,5 @@
 # Created by: Alfred Perlstein <alfred@FreeBSD.org>
-# $FreeBSD: net/mDNSResponder/Makefile 333507 2013-11-11 14:16:47Z sunpoet $
+# $FreeBSD: net/mDNSResponder/Makefile 336312 2013-12-13 02:17:59Z sunpoet $
 
 PORTNAME=	mDNSResponder
 PORTVERSION=	541
@@ -9,7 +9,7 @@ MASTER_SITES=	http://opensource.apple.com/tarballs/${PORTNAME}/
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bonjour (zero-configuration networking) by Apple
 
-LICENSE=	AL2 BSD
+LICENSE=	AL2 BSD3CLAUSE
 LICENSE_COMB=	dual
 
 CONFLICTS=	avahi-libdns-[0-9]*
