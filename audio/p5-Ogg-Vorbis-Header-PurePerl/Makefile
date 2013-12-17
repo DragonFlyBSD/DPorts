@@ -1,5 +1,5 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: audio/p5-Ogg-Vorbis-Header-PurePerl/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Ogg-Vorbis-Header-PurePerl/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	Ogg-Vorbis-Header-PurePerl
 PORTVERSION=	1.0
@@ -12,8 +12,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	dominique.goncalves@gmail.com
 COMMENT=	Manipulate / fetch info from Ogg-Vorbis audio files
 
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg \
-		vorbis:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 USES=		perl5
 NO_STAGE=	yes
