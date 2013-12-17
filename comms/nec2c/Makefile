@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/nec2c/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/nec2c/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	nec2c
 PORTVERSION=	.9
@@ -12,7 +12,7 @@ DISTNAME=	nec2c
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Used to calculate antenna patterns useful to ham radio
 
-LIB_DEPENDS=	ccm:${PORTSDIR}/math/ccmath
+LIB_DEPENDS=	libccm.so:${PORTSDIR}/math/ccmath
 
 NO_STAGE=	yes
 post-patch:
