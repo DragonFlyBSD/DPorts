@@ -1,8 +1,9 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: audio/alsa-lib/Makefile 329208 2013-10-03 16:34:28Z flo $
+# $FreeBSD: audio/alsa-lib/Makefile 336451 2013-12-14 14:41:17Z flo $
 
 PORTNAME=	alsa-lib
 PORTVERSION=	1.0.27.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ALSA/lib \
 		GENTOO/distfiles
