@@ -1,12 +1,12 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/rubygem-childprocess/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-childprocess/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	childprocess
 PORTVERSION=	0.3.9
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	External background process controller
 
 RUN_DEPENDS=	rubygem-ffi>=1.0.11:${PORTSDIR}/devel/rubygem-ffi
