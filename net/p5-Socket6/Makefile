@@ -1,10 +1,12 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: net/p5-Socket6/Makefile 329332 2013-10-04 15:56:11Z ume $
+# $FreeBSD: net/p5-Socket6/Makefile 335955 2013-12-09 08:43:59Z ume $
 
 PORTNAME=	Socket6
-PORTVERSION=	0.23
+PORTVERSION=	0.25
+PORTREVISION=	1
 CATEGORIES=	net perl5 ipv6
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=CPAN:UMEMOTO
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ume@FreeBSD.org
@@ -16,7 +18,8 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ENV+=	CC="${CC}"
 
-PLIST_FILES=	%%SITE_PERL%%/%%PERL_ARCH%%/Socket6.pm \
+PLIST_FILES=	%%PERL5_MAN3%%/Socket6.3.gz \
+		%%SITE_PERL%%/%%PERL_ARCH%%/Socket6.pm \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Socket6/.packlist \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Socket6/Socket6.bs \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/Socket6/Socket6.so
