@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xlsatoms/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xlsatoms/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xlsatoms
 PORTVERSION=	1.1.1
@@ -12,9 +12,6 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	x11 xmuu
 
-PLIST_FILES=	bin/xlsatoms
+PLIST_FILES=	bin/xlsatoms man/man1/xlsatoms.1.gz
 
-MAN1=		xlsatoms.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
