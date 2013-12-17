@@ -1,8 +1,21 @@
-# $FreeBSD: mail/squirrelmail/bsd.squirrelmail.mk 331080 2013-10-21 01:52:16Z adamw $
+# $FreeBSD: mail/squirrelmail/bsd.squirrelmail.mk 336240 2013-12-12 01:32:34Z adamw $
 #
 # $LastChangedDate: 2010-02-01 22:21:34 -0500 (Mon, 01 Feb 2010) $
 #
-# Common code for squirrelmail plugins.
+# To create a plugin, put the following at the bottom of your makefile:
+#
+# .include <bsd.port.pre.mk>
+# .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+# .include <bsd.port.post.mk>
+#
+# Variables you can set:
+# USE_SM_COMPAT = creates a dependency on mail/squirrelmail-compatibility-plugin
+# USE_GENERIC_PKGMESSAGE = to use a default message about editing config.php
+# 	*****NOTE this clobbers FILESDIR, so you cannot use this if you have any files/patch-*
+# SQUIRREL_PLUGIN_NAME = defaults to PORTNAME
+# SQUIRREL_PLUGIN_CONFIG = the config file name (for the PKGMESSAGE)
+# _SMSRCDIR = WRKSRC=${WRKDIR}/${_SMSRCDIR}
+#
 #
 # Created & tested by 
 # Thomas Abthorpe <tabthorpe@FreeBSD.org>
@@ -15,15 +28,20 @@
 # tweaking. Feedback is always welcome.
 #
 
-CATEGORIES?=	mail www
 MASTER_SITES?=	http://www.squirrelmail.org/plugins/
 PKGNAMEPREFIX?=	squirrelmail-
 PKGNAMESUFFIX?=	-plugin
+DIST_SUBDIR?=	squirrelmail
 
 RUN_DEPENDS+=	${SQUIRRELDIR}/index.php:${PORTSDIR}/mail/squirrelmail
 
 .ifdef USE_SM_COMPAT
 RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail-compatibility-plugin
+.endif
+
+.ifndef WITHOUT_ACTIVATE
+USES+=		perl5
+USE_PERL5+=	install
 .endif
 
 NO_BUILD=		yes
@@ -41,8 +59,17 @@ SQUIRRELDIR?=	${PREFIX}/www/squirrelmail
 PLIST_SUB+=		SQUIRRELDIR=${SQUIRRELDIR:S,${PREFIX}/,,}
 SUB_LIST+=		SQUIRRELDIR=${SQUIRRELDIR}
 
-.if exists(${FILESDIR}/pkg-message.in)
-SUB_FILES=	pkg-message
+SQUIRREL_PLUGIN_CONFIG?=	config.php
+PLIST_SUB+=		SQUIRREL_PLUGIN_CONFIG=${SQUIRREL_PLUGIN_CONFIG}
+SUB_LIST+=		SQUIRREL_PLUGIN_CONFIG=${SQUIRREL_PLUGIN_CONFIG}
+
+.if defined(USE_GENERIC_PKGMESSAGE)
+# NOTE: we have to change FILESDIR to make this work...
+FILESDIR=	${.CURDIR}/../squirrelmail/files
+SUB_FILES+=	plugin-pkg-message
+PKGMESSAGE=	${WRKDIR}/plugin-pkg-message
+.elif exists(${FILESDIR}/pkg-message.in)
+SUB_FILES+=	pkg-message
 .endif
 
 .if !target(pre-everything)
@@ -85,7 +112,7 @@ post-install:
 .endif
 	@${ECHO_CMD} ""
 
-.if exists(${FILESDIR}/pkg-message.in)
+.if exists(${FILESDIR}/pkg-message.in) || exists(${FILESDIR}/plugin-pkg-message.in)
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_CMD} ""
 .endif
