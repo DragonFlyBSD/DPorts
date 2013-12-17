@@ -1,5 +1,5 @@
 # Created by: Kenjiro Cho <kjc@csl.sony.co.jp>
-# $FreeBSD: x11-toolkits/blt/Makefile 334474 2013-11-21 11:01:31Z gahr $
+# $FreeBSD: x11-toolkits/blt/Makefile 336373 2013-12-13 22:20:35Z antoine $
 
 PORTNAME=	blt
 PORTVERSION=	2.5.3
@@ -7,6 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	x11-toolkits tk
 MASTER_SITES=	SF/wize
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extension to the Tk toolkit
@@ -17,8 +18,7 @@ LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:R}
 
-USES+=		gmake tk
-USE_ZIP=	yes
+USES=		gmake tk
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${TCL_INCLUDEDIR}/generic \
