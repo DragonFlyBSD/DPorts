@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: devel/xorg-macros/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: devel/xorg-macros/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-macros
-PORTVERSION=	1.17.1
+PORTVERSION=	1.18.0
 CATEGORIES=	devel x11
 DISTNAME=	util-macros-$(PORTVERSION)
 
