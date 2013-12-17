@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: devel/py-twisted/Makefile 335106 2013-11-28 16:08:33Z lwhsu $
+# $FreeBSD: devel/py-twisted/Makefile 335960 2013-12-09 10:15:14Z wg $
 
 PORTNAME=	twisted
 PORTVERSION=	13.2.0
@@ -17,7 +17,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twistedCore>=${PORTVERSION}:${PORTSDIR}/deve
 
 NO_BUILD=	yes
 USE_PYTHON=	-2.7
-PYDISTUTILS_NOEGGINFO=	yes
 
 # Bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
