@@ -9,7 +9,7 @@
 #    - grahpics/libglesv2
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 334977 2013-11-26 21:42:18Z kwm $
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 336713 2013-12-17 10:55:26Z kwm $
 
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
@@ -28,7 +28,7 @@ PLIST_SUB+=	OLD="" NEW="@comment "
 
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/
 DISTFILES=	MesaLib-${MESADISTVERSION}${EXTRACT_SUFX}
-MAINTAINER?=	x11@FreeBSD.org
+MAINTAINER=	x11@FreeBSD.org
 
 BUILD_DEPENDS+=	makedepend:${PORTSDIR}/devel/makedepend \
 		python2:${PORTSDIR}/lang/python2 \
