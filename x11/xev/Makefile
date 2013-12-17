@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xev/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xev/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xev
 PORTVERSION=	1.2.1
@@ -10,9 +10,6 @@ COMMENT=	Print contents of X events
 XORG_CAT=	app
 USE_XORG=	x11 xrandr
 
-PLIST_FILES=	bin/xev
+PLIST_FILES=	bin/xev man/man1/xev.1.gz
 
-MAN1=		xev.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
