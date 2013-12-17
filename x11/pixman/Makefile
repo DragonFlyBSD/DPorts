@@ -1,7 +1,7 @@
-# $FreeBSD: x11/pixman/Makefile 328725 2013-09-29 18:50:22Z eadler $
+# $FreeBSD: x11/pixman/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	pixman
-PORTVERSION=	0.30.2
+PORTVERSION=	0.32.4
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -12,6 +12,7 @@ USE_PERL5=	build
 XORG_CAT=	lib
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-gtk
+USE_GNOME=	ltverhack:30
 
 OPTIONS_DEFINE=	SIMD
 
