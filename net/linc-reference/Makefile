@@ -1,9 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: net/linc-reference/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/linc-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	0
 
 REFERENCE_SRC=	${WRKSRC}/docs
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
