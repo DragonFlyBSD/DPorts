@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: databases/db42/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/db42/Makefile 336664 2013-12-16 20:46:12Z mandree $
 
 PORTNAME=	db42
 PORTVERSION=	4.2.52
@@ -13,6 +13,10 @@ PATCHFILES=	patch.${PORTVERSION}.1  patch.${PORTVERSION}.2 \
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	The Berkeley DB package, revision 4.2
+
+DEPRECATED=	Please use databases/db5 or db6 for new installs.
+
+CONFLICTS?=	db42-nocrypto-4*
 
 MASTERDIR?=	${.CURDIR}
 
