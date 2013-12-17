@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/liblqr-1/Makefile 332149 2013-10-30 16:31:33Z amdmi3 $
+# $FreeBSD: graphics/liblqr-1/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	liblqr-1
 DISTVERSION=	0.4.1
@@ -23,7 +23,6 @@ USE_CSTD=	gnu89
 PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES HTMLDOCS
-OPTIONS_DEFAULT=EXAMPLES
 HTMLDOCS_DESC=	Build and install HTML documentation
 
 .include <bsd.port.options.mk>
