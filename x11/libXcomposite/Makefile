@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXcomposite/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libXcomposite/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libXcomposite
 PORTVERSION=	0.4.4
@@ -11,18 +11,5 @@ COMMENT=	X Composite extension library
 
 XORG_CAT=	lib
 USE_XORG=	compositeproto:both x11 xfixes xext fixesproto xproto:both
-MAN3=		Xcomposite.3 \
-		XCompositeQueryExtension.3 \
-		XCompositeQueryVersion.3 \
-		XCompositeVersion.3 \
-		XCompositeRedirectWindow.3 \
-		XCompositeRedirectSubwindows.3 \
-		XCompositeUnredirectWindow.3 \
-		XCompositeUnredirectSubwindows.3 \
-		XCompositeCreateRegionFromBorderClip.3 \
-		XCompositeNameWindowPixmap.3 \
-		XCompositeGetOverlayWindow.3 \
-		XCompositeReleaseOverlayWindow.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
