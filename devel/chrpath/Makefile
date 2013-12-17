@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: devel/chrpath/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/chrpath/Makefile 336651 2013-12-16 17:46:49Z antoine $
 
 PORTNAME=	chrpath
 PORTVERSION=	0.13
@@ -15,25 +15,18 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 
-MAN1=		chrpath.1
-
 USES=		fmake
 
-PLIST_FILES=	bin/chrpath
+PLIST_FILES=	bin/chrpath man/man1/chrpath.1.gz
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .	for i in ${PORTDOCS}
-		${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+		${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .	endfor
-.endif
 
 .include <bsd.port.mk>
