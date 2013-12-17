@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/trapproto/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/trapproto/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	trapproto
 PORTVERSION=	3.4.3
@@ -12,5 +12,4 @@ XORG_CAT=	proto
 
 USE_XORG=	xt:both
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
