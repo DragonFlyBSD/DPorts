@@ -1,7 +1,7 @@
-# $FreeBSD: devel/autoconf-wrapper/Makefile 328068 2013-09-23 21:58:38Z bapt $
+# $FreeBSD: devel/autoconf-wrapper/Makefile 336016 2013-12-09 19:14:22Z kwm $
 
 PORTNAME?=	autoconf-wrapper
-PORTVERSION=	20130530
+PORTVERSION=	20131203
 CATEGORIES=	devel
 MASTER_SITES=	# none
 DISTFILES=	# none

@@ -25,11 +25,13 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: devel/autoconf-wrapper/files/autotools-wrapper.sh 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: devel/autoconf-wrapper/files/autotools-wrapper.sh 336016 2013-12-09 19:14:22Z kwm $
 #
 
 bindir=%%PREFIX%%/bin
 tool=$(basename $0)
+
+exec 4<&0
 
 error() {
 	echo "$@" 1>&2
@@ -85,5 +87,6 @@ if [ -n "${AUTOTOOLS_DEBUG}" ] ; then
 	    "(${bindir}/${tool}-${selected_version})" 1>&2
 fi
 
+exec 0<&4 4<&-
 exec ${bindir}/${tool}-${selected_version} "$@"
 }
