@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: databases/db44/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/db44/Makefile 336664 2013-12-16 20:46:12Z mandree $
 
 PORTNAME=	db44
 PORTVERSION=	4.4.20.4
@@ -13,6 +13,8 @@ MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	The Berkeley DB package, revision 4.4
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
+
+DEPRECATED=	Please use databases/db5 or db6 for new installs.
 
 USE_LDCONFIG=		yes
 GNU_CONFIGURE=		yes
