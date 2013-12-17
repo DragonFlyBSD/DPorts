@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Package-Variant/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD: devel/p5-Package-Variant/Makefile 336195 2013-12-11 18:49:21Z sunpoet $
 
 PORTNAME=	Package-Variant
-PORTVERSION=	1.001004
+PORTVERSION=	1.002000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -16,7 +16,9 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Import-Into>=1:${PORTSDIR}/devel/p5-Import-Into \
 		p5-Module-Runtime>=0.013:${PORTSDIR}/devel/p5-Module-Runtime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal
+TEST_DEPENDS=	p5-Moo>=0:${PORTSDIR}/devel/p5-Moo \
+		p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
+		p5-strictures>=0:${PORTSDIR}/devel/p5-strictures
 
 USES=		perl5
 USE_PERL5=	configure
