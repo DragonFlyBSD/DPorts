@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: math/djbfft/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/djbfft/Makefile 336244 2013-12-12 05:05:56Z eadler $
 
 PORTNAME=	djbfft
 PORTVERSION=	0.76
@@ -9,6 +9,8 @@ MASTER_SITES=	http://cr.yp.to/djbfft/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	An extremely fast library for floating-point convolution
+
+LEGAL_TEXT=	No license -- see http://cr.yp.to/softwarelaw.html
 
 DISABLE_SIZE=	yes
 ALL_TARGET=
