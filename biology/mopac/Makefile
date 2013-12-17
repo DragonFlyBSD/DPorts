@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/mopac/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/mopac/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	mopac
 PORTVERSION=	7.${MOPAC_SUBVERSION}
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}7-${MOPAC_SUBVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Semi-empirical (MNDO, etc.) molecular orbital calculation
 
-LIB_DEPENDS=	f2c:${PORTSDIR}/lang/f2c
+LIB_DEPENDS=	libf2c.so:${PORTSDIR}/lang/f2c
 
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	aclocal automake autoconf libtool
