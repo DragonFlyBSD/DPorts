@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-epsilon/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-epsilon/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	epsilon
 PORTVERSION=	0.6.0
@@ -16,10 +16,10 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/OpenSSL/__init__.py:${PORTSDIR}/security/py-openssl
 
 CONFLICTS=	brlcad-[0-9]*
+USES=		twisted
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Epsilon
-USE_TWISTED=	yes
 NO_BUILD=	yes
 
 NO_STAGE=	yes
