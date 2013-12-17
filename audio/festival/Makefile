@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festival/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/festival/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	festival
 PORTVERSION=	2.1
@@ -84,7 +84,7 @@ post-patch::
 
 .for m in nas esd
 .	if ${PORT_OPTIONS:M${m:tu}}
-LIB_DEPENDS+=	${m:nas=audio}:${PORTSDIR}/audio/${m:esd=esound}
+LIB_DEPENDS+=	lib${m:nas=audio}.so:${PORTSDIR}/audio/${m:esd=esound}
 post-patch::
 	${REINPLACE_CMD} -e 's,# INCLUDE_MODULES += ${m:tu}_AUDIO,INCLUDE_MODULES += ${m:tu}_AUDIO,' \
 		${WRKDIR}/*/config/config.in
