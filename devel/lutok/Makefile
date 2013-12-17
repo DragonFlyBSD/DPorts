@@ -1,8 +1,8 @@
 # Created by: Alan Somers <asomers@FreeBSD.org>
-# $FreeBSD: devel/lutok/Makefile 331207 2013-10-21 23:10:50Z asomers $
+# $FreeBSD: devel/lutok/Makefile 336124 2013-12-10 23:02:30Z jmmv $
 
 PORTNAME=	lutok
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
