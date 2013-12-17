@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-File-MMagic-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-MMagic-XS/Makefile 335989 2013-12-09 14:09:28Z sunpoet $
 
 PORTNAME=	File-MMagic-XS
-PORTVERSION=	0.09006
+PORTVERSION=	0.09007
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,11 +10,11 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Guess File Type With XS (a la mod_mime_magic)
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 MAKE_JOBS_UNSAFE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::MMagic::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
