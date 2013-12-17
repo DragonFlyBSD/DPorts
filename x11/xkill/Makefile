@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkill/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xkill/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xkill
 PORTVERSION=	1.0.4
@@ -10,9 +10,6 @@ COMMENT=	Utility for killing a client by its X resource
 XORG_CAT=	app
 USE_XORG=	x11 xmuu
 
-PLIST_FILES=	bin/xkill
+PLIST_FILES=	bin/xkill man/man1/xkill.1.gz
 
-MAN1=		xkill.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
