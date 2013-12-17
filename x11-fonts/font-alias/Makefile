@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-alias/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/font-alias/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	font-alias
 PORTVERSION=	1.0.3
@@ -11,5 +11,4 @@ COMMENT=	X.Org Font aliases
 XORG_CAT=	font
 FONTDIR=	100dpi 75dpi misc cyrillic
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
