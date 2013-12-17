@@ -1,8 +1,8 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: graphics/p5-Image-ExifTool-devel/Makefile 333738 2013-11-14 04:26:45Z swills $
+# $FreeBSD: graphics/p5-Image-ExifTool-devel/Makefile 336646 2013-12-16 16:52:06Z swills $
 
 PORTNAME=	Image-ExifTool
-PORTVERSION=	9.40
+PORTVERSION=	9.44
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.sno.phy.queensu.ca/~phil/exiftool/
 PKGNAMEPREFIX=	p5-
