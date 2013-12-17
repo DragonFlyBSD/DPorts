@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: net/py-tofu/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-tofu/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	tofu
 PORTVERSION=	0.5
@@ -14,7 +14,7 @@ COMMENT=	Practical high-level network game engine
 DIST_SUBDIR=	python
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USE_TWISTED=	yes
+USES=		twisted
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Tofu
 WRKSRC=		${WRKDIR}/Tofu-${PORTVERSION}
