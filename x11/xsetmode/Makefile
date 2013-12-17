@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xsetmode/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xsetmode/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xsetmode
 PORTVERSION=	1.0.0
@@ -10,9 +10,6 @@ COMMENT=	Set the mode for an X Input Device
 XORG_CAT=	app
 USE_XORG=	xi x11
 
-PLIST_FILES=	bin/xsetmode
+PLIST_FILES=	bin/xsetmode man/man1/xsetmode.1.gz
 
-MAN1=		xsetmode.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
