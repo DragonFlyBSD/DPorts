@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-wm/xcompmgr/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/xcompmgr/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xcompmgr
 PORTVERSION=	1.1.6
@@ -11,9 +11,6 @@ COMMENT=	A sample X compositing manager
 XORG_CAT=	app
 USE_XORG=	x11 xcomposite xfixes xdamage xrender
 
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 
-MAN1=		xcompmgr.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
