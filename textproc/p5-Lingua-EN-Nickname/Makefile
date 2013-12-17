@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-EN-Nickname/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Lingua-EN-Nickname/Makefile 336021 2013-12-09 19:30:50Z sunpoet $
 
 PORTNAME=	Lingua-EN-Nickname
-PORTVERSION=	1.16
+PORTVERSION=	1.17
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BRIANL
