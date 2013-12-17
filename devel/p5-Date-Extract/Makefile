@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Extract/Makefile 334980 2013-11-26 23:49:20Z matthew $
+# $FreeBSD: devel/p5-Date-Extract/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	Date-Extract
 PORTVERSION=	0.04
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,6 +15,8 @@ BUILD_DEPENDS=	p5-DateTime-Format-Natural>0:${PORTSDIR}/devel/p5-DateTime-Format
 		p5-Class-Data-Inheritable>0:${PORTSDIR}/devel/p5-Class-Data-Inheritable
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-MockTime>=0:${PORTSDIR}/devel/p5-Test-MockTime
+
+NO_ARCH=	yes
 
 USES=		perl5
 USE_PERL5=	configure
