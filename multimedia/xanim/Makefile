@@ -1,5 +1,5 @@
 # Created by: piero
-# $FreeBSD: multimedia/xanim/Makefile 335236 2013-11-29 21:33:15Z dinoex $
+# $FreeBSD: multimedia/xanim/Makefile 336225 2013-12-11 21:52:30Z dinoex $
 
 PORTNAME=	xanim
 PORTVERSION=	2.92.0
@@ -15,7 +15,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:main ${EXTRA_FILES}
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Play most popular animation formats and show pictures
 
-NO_CDROM=	redistributed without fee
+NO_CDROM=	Must be redistributed without fee
 #NO_STAGE=	yes
 
 # clang's cpp destroys whitespace, particularly hard tabs in makefiles,
