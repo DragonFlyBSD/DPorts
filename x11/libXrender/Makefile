@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: x11/libXrender/Makefile 330447 2013-10-15 19:44:38Z eadler $
+# $FreeBSD: x11/libXrender/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libXrender
 PORTVERSION=	0.9.8
@@ -12,4 +12,5 @@ LICENSE=	MIT
 
 XORG_CAT=	lib
 USE_XORG=	x11 renderproto:both xproto:both
+
 .include <bsd.port.mk>
