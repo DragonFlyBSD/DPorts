@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/swhplugins/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/swhplugins/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	swhplugins
 PORTVERSION=	0.4.15
@@ -14,7 +14,7 @@ COMMENT=	Steve Harris' huge Collection of LADSPA Plugins
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa \
 		${LOCALBASE}/include/fftw3.h:${PORTSDIR}/math/fftw3
-LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float
+LIB_DEPENDS=	libfftw3f.so:${PORTSDIR}/math/fftw3-float
 
 # includes assembler code
 ONLY_FOR_ARCHS=	i386 amd64
