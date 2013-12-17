@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/hdf5-18/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: science/hdf5-18/Makefile 336191 2013-12-11 18:38:53Z sunpoet $
 
 PORTNAME=	hdf5
 PORTVERSION=	1.8.10
@@ -9,14 +9,14 @@ MASTER_SITES=	http://www.hdfgroup.org/ftp/HDF5/current/src/ \
 		http://www.hdfgroup.org/ftp/HDF5/releases/${DISTNAME}/src/ \
 		ftp://ftp.hdfgroup.org/HDF5/releases/${DISTNAME}/src/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-patch1
+PKGNAMESUFFIX=	-18
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Hierarchical Data Format library (from NCSA)
 
 OPTIONS_DEFINE=	DEBUG EXAMPLES FORTRAN SZIP
 
-CONFLICTS=	hdf-4.* hdf5-1.6.*
-NO_LATEST_LINK=	yes
+CONFLICTS_INSTALL=	hdf-4.[0-9]* hdf5-1.6.[0-9]*
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
