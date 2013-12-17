@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-adobe-utopia-75dpi/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/font-adobe-utopia-75dpi/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	font-adobe-utopia-75dpi
 PORTVERSION=	1.0.4
@@ -11,5 +11,4 @@ COMMENT=	X.Org Adobe Utopia 75dpi font
 XORG_CAT=	font
 USE_XORG=	fontutil
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
