@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-strictures/Makefile 333312 2013-11-09 18:47:49Z sunpoet $
+# $FreeBSD: devel/p5-strictures/Makefile 336217 2013-12-11 19:57:08Z sunpoet $
 
 PORTNAME=	strictures
-PORTVERSION=	1.005001
+PORTVERSION=	1.005002
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HAARG
@@ -13,6 +13,11 @@ COMMENT=	Turn on strict and make all warnings fatal
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-bareword-filehandles>=0:${PORTSDIR}/devel/p5-bareword-filehandles \
+		p5-indirect>=0:${PORTSDIR}/devel/p5-indirect \
+		p5-multidimensional>=0:${PORTSDIR}/devel/p5-multidimensional
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
