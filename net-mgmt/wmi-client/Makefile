@@ -1,5 +1,5 @@
 # Created by: KIKUCHI Koichiro <koichiro@rworks.jp>
-# $FreeBSD: net-mgmt/wmi-client/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/wmi-client/Makefile 336434 2013-12-14 10:31:16Z mva $
 
 PORTNAME=		wmi
 PORTVERSION=		1.3.16
@@ -22,7 +22,7 @@ USES=			iconv
 USE_LDCONFIG=		yes
 
 MAKEFILE=		GNUmakefile
-MAKE_ENV=		ZENHOME="${PREFIX}" PY_LIBDIR="${PYTHONPREFIX_SITELIBDIR}"
+MAKE_ENV=		ZENHOME="${PREFIX}" PY_LIBDIR="${PYTHONPREFIX_SITELIBDIR}" PYTHON="${PYTHON_CMD}"
 ALL_TARGET=		build
 
 NO_STAGE=	yes
