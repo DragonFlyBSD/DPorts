@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/gbsplay/Makefile 333672 2013-11-13 11:27:19Z ehaupt $
+# $FreeBSD: audio/gbsplay/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gbsplay
 PORTVERSION=	0.0.8
@@ -34,7 +34,7 @@ OPTIONS_DEFINE=	NAS DOCS
 .if ${PKGNAMEPREFIX} == ""
 
 .if ${PORT_OPTIONS:MNAS}
-LIB_DEPENDS+=	audio:${PORTSDIR}/audio/nas
+LIB_DEPENDS+=	libaudio.so:${PORTSDIR}/audio/nas
 .else
 CONFIGURE_ARGS+=	--disable-nas
 .endif
