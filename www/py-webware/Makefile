@@ -1,5 +1,5 @@
 # Created by: Stefan Schwarzer <sschwarzer@sschwarzer.net>
-# $FreeBSD: www/py-webware/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-webware/Makefile 336429 2013-12-14 09:27:14Z mva $
 
 PORTNAME=	webware
 DISTVERSION=	1.1.1
@@ -21,6 +21,7 @@ WEBWARE_GROUP?=	${WEBWARE_USER}
 WEBWARE_MASTER_DIR?=${PREFIX}/share/webware
 WEBKIT_HOME_DIR?=${PREFIX}/www/webkit
 INSTALL_ENV=	PKG_PREFIX=${PREFIX} \
+		PYTHON=${PYTHON_CMD} \
 		LOCALBASE=${LOCALBASE} \
 		WEBWARE_USER=${WEBWARE_USER} \
 		WEBWARE_GROUP=${WEBWARE_GROUP} \
