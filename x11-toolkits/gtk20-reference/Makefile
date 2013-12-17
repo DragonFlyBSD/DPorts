@@ -1,24 +1,20 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtk20-reference/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/gtk20-reference/Makefile 336476 2013-12-14 19:25:33Z kwm $
 
-PORTREVISION=	1
+PORTREVISION=	0
 
 BOOKS=		gdk gtk
 
-PLIST=		${.CURDIR}/pkg-plist
-
-NO_STAGE=	yes
 do-install:
 .for d in ${BOOKS}
 	if [ -d ${REFERENCE_SRC}/${d}/html ]; then \
-		${MKDIR} ${PREFIX}/share/doc/${d}2; \
+		${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/${d}2; \
 		cd ${REFERENCE_SRC}/${d}/html && \
-		${FIND} * -type d ! -empty -exec ${MKDIR} "${PREFIX}/share/doc/${d}2/{}" \; && \
-		${FIND} * -type f -exec ${INSTALL_DATA} "{}" "${PREFIX}/share/doc/${d}2/{}" \; ; \
+		${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/doc/${d}2; \
 	fi
 .endfor
 
-# overwrite this from bsd.port.mk, because we not don't honow DOCSDIR
+# overwrite this from bsd.port.mk, because we not don't honor DOCSDIR
 add-plist-docs:
 	@${DO_NADA}
 
