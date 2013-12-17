@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: databases/qt4-sqlite3-plugin/Makefile 330266 2013-10-13 23:15:50Z rakuco $
+# $FreeBSD: databases/qt4-sqlite3-plugin/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
@@ -11,7 +11,7 @@ COMMENT=	Qt SQLite 3.x database plugin
 DB=		sqlite
 DISTINFO_FILE=	${PORTSDIR}/devel/qt4/distinfo
 
-LIB_DEPENDS+=	sqlite3:${PORTSDIR}/databases/sqlite3
+LIB_DEPENDS+=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 
 USE_QT4=	moc_build sql
 QT_NONSTANDARD=	yes
