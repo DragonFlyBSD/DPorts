@@ -1,9 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD: devel/p5-POE/Makefile 336018 2013-12-09 19:30:31Z sunpoet $
 
 PORTNAME=	POE
-PORTVERSION=	1.356
-PORTREVISION=	1
+PORTVERSION=	1.358
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -25,19 +24,15 @@ BUILD_DEPENDS=	p5-Curses>=1.08:${PORTSDIR}/devel/p5-Curses \
 		p5-libwww>=5.79:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
-USE_PERL5=	configure
-CONFIGURE_ARGS=	--default
+OPTIONS_DEFINE=	EXAMPLES
 
-.include <bsd.port.options.mk>
+USES=		perl5 shebangfix
+USE_PERL5=	configure
+
+SHEBANG_FILES=	examples/*.perl lib/POE/Wheel/Curses.pm
 
 post-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
-.endif
-
-test: build
-	@(cd ${WRKSRC}; make test)
 
 .include <bsd.port.mk>
