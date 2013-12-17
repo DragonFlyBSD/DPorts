@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: databases/libdrizzle/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/libdrizzle/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	libdrizzle
 PORTVERSION=	0.8
@@ -8,14 +8,13 @@ CATEGORIES=	databases
 MASTER_SITES=	http://launchpadlibrarian.net/41155299/ \
 		LOCAL/glarkin
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Client and protocol library for the Drizzle database
 
-LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3
+LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 
 OPTIONS_DEFINE=	DOXYGEN EXAMPLES
 
-USE_GCC=	4.2+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-libsqlite3
 USE_GMAKE=	yes
