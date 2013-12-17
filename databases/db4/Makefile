@@ -1,5 +1,5 @@
 # Created by: Sergey Osokin aka oZZ <ozz@FreeBSD.org.ru>
-# $FreeBSD: databases/db4/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/db4/Makefile 336664 2013-12-16 20:46:12Z mandree $
 
 PORTNAME=	db4
 PORTVERSION=	4.0.14
@@ -9,6 +9,8 @@ CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ 
 DISTNAME=	db-${PORTVERSION}
 DIST_SUBDIR=	bdb
+
+DEPRECATED=	Please use databases/db5 or db6 for new installs.
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	The Berkeley DB package, revision 4
