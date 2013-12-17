@@ -1,5 +1,5 @@
 # Created by: Alexandr Kovalenko <never@nevermind.kiev.ua>
-# $FreeBSD: converters/enca/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/enca/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	enca
 PORTVERSION=	1.13
@@ -10,7 +10,7 @@ MAINTAINER=	never@nevermind.kiev.ua
 COMMENT=	A package for detecting encoding of text files
 
 BUILD_DEPENDS=	umap:${PORTSDIR}/converters/p5-Unicode-Map8
-LIB_DEPENDS=	recode:${PORTSDIR}/converters/recode
+LIB_DEPENDS=	librecode.so:${PORTSDIR}/converters/recode
 RUN_DEPENDS=	umap:${PORTSDIR}/converters/p5-Unicode-Map8
 
 LICENSE=	GPLv2
