@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: dns/py-dnspython/Makefile 332546 2013-11-02 22:22:52Z wg $
+# $FreeBSD: dns/py-dnspython/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	dnspython
 PORTVERSION=	1.11.1
@@ -13,8 +13,8 @@ COMMENT=	DNS toolkit for Python
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME}${PORTVERSIONSUFFIX}
-PYDISTUTILS_NOEGGINFO=	yes
 
 OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
 OPTIONS_DEFINE=	PYCRYPTO
@@ -32,10 +32,8 @@ NO_STAGE=	yes
 
 .if ${PYTHON_MAJOR_VER} < 3
 PORTVERSIONSUFFIX=
-PLIST=		${PKGDIR}/pkg-plist-py2
 .else
 PORTVERSIONSUFFIX=3
-PLIST=		${PKGDIR}/pkg-plist-py3
 EXAMPLESDIR:=	${EXAMPLESDIR}3
 .endif
 
