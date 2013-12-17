@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/libgig/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libgig/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	libgig
 PORTVERSION=	3.3.0
@@ -13,9 +13,9 @@ COMMENT=	Gigasampler file loader library
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
-		sndfile.1:${PORTSDIR}/audio/libsndfile \
-		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_BZIP2=	yes
 NO_STAGE=	yes
