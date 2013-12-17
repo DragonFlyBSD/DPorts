@@ -1,5 +1,5 @@
 # Created by: Bruce Simpson
-# $FreeBSD: net/py-txamqp/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-txamqp/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	txamqp
 PORTVERSION=	0.3
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}thrift>0:${PORTSDIR}/devel/py-thrift
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
-USE_TWISTED=	yes
+USES=		twisted
 
 WRKSRC=		${WRKDIR}/python-${PORTNAME}-${PORTVERSION}
 
