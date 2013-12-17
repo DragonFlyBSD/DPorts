@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: misc/getopt/Makefile 331410 2013-10-23 18:58:57Z eadler $
+# $FreeBSD: misc/getopt/Makefile 335813 2013-12-07 05:35:04Z eadler $
 
 PORTNAME=	getopt
 PORTVERSION=	1.1.5
@@ -17,15 +17,11 @@ MAKE_ENV+=	LIBCGETOPT=0
 
 DOCS=		Changelog README
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	${REINPLACE_CMD} -e 's|CC=gcc|CC=${CC}|' ${WRKSRC}/Makefile
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
