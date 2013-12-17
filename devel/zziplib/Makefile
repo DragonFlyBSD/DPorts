@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: devel/zziplib/Makefile 330688 2013-10-17 23:51:02Z amdmi3 $
+# $FreeBSD: devel/zziplib/Makefile 336135 2013-12-11 01:11:31Z amdmi3 $
 
 PORTNAME=	zziplib
 PORTVERSION=	0.13.62
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 OPTIONS_DEFINE=	SDL
 
 USE_BZIP2=	yes
-USES=		pathfix pkgconfig
+USES=		pathfix pkgconfig gmake
 USE_PYTHON_BUILD=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	ac_cv_path_XMLTO=":"
