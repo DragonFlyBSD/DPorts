@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: textproc/libxslt-reference/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libxslt-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	0
 
@@ -7,12 +7,9 @@ BUILD_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/textproc/libxslt:configure
 
 PARENT_WRKSRC!=	cd ${.CURDIR}/../libxslt && ${MAKE} -V WRKSRC
 EXTRACT_ONLY=
-USE_GMAKE=	yes
+USES=		gmake
 
-NO_STAGE=	yes
 do-install:
-.if !defined(NOPORTDOCS)
-	@cd ${PARENT_WRKSRC}/doc && ${GMAKE} install-data-local
-.endif
+	@cd ${PARENT_WRKSRC}/doc && ${GMAKE} ${MAKE_ARGS} install-data-local
 
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
