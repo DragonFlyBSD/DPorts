@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: math/py-numpy/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/py-numpy/Makefile 336541 2013-12-15 15:02:30Z koobs $
 
 PORTNAME=	numpy
 PORTVERSION=	1.7.0
@@ -56,9 +56,6 @@ DISTFILES+=	${FP_ARCH}/fenv.c?p=203441:fp ${FP_ARCH}/fenv.h?p=203441:fp
 
 .if ${PORT_OPTIONS:MATLAS}
 LIB_DEPENDS+=	atlas.2:${PORTSDIR}/math/atlas
-.if !exists(${LOCALBASE}/lib/libalapack.a)
-IGNORE=	atlas needs to be built with WITH_STATIC for numpy to function properly
-.endif
 .else
 LIB_DEPENDS+=	lapack.4:${PORTSDIR}/math/lapack \
 		blas.2:${PORTSDIR}/math/blas
