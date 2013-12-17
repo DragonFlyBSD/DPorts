@@ -1,4 +1,4 @@
-# $FreeBSD: comms/ebook2cw/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/ebook2cw/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	ebook2cw
 PORTVERSION=	0.8.2
@@ -10,8 +10,8 @@ MASTER_SITE_SUBDIR=	db
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Convert text files into cw as an mp3 or ogg file
 
-LIB_DEPENDS=	mp3lame:${PORTSDIR}/audio/lame \
-		vorbis:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libmp3lame.so:${PORTSDIR}/audio/lame \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 MAN1=		ebook2cw.1
 
