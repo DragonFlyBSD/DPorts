@@ -1,5 +1,5 @@
 # Created by: Dave Grochowski
-# $FreeBSD: devel/gccmakedep/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gccmakedep/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	gccmakedep
 PORTVERSION=	1.0.2
@@ -13,10 +13,7 @@ XORG_CAT=	util
 
 BUILD_DEPENDS=	tradcpp:${PORTSDIR}/devel/tradcpp
 
-MAN1=		gccmakedep.1
-
-PLIST_FILES=	bin/gccmakedep
+PLIST_FILES=	bin/gccmakedep man/man1/gccmakedep.1.gz
 CONFIGURE_ENV+=	ac_cv_path_RAWCPP=tradcpp
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
