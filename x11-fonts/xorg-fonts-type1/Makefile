@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-fonts/xorg-fonts-type1/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/xorg-fonts-type1/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-fonts-type1
 PORTVERSION=	7.7
@@ -23,7 +23,7 @@ CONFLICTS=	XFree86-fontScalable-*
 do-install:	# empty
 
 NO_BUILD=	# none
+NO_MTREE=	yes
 FONTDIR=	${LOCALBASE}/lib/X11/fonts
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
