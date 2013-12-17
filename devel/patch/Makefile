@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: devel/patch/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/patch/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	patch
 PORTVERSION=	2.7
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	patch
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU patch utility
 
 LICENSE=	GPLv3
