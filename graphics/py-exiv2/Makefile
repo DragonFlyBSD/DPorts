@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: graphics/py-exiv2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-exiv2/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	exiv2
 PORTVERSION=	0.3.2
@@ -12,11 +12,11 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Python bindings for exiv2
 
-LIB_DEPENDS=	exiv2:${PORTSDIR}/graphics/exiv2\
-		boost_python:${PORTSDIR}/devel/boost-python-libs
+LIB_DEPENDS=	libexiv2.so:${PORTSDIR}/graphics/exiv2\
+		libboost_python.so:${PORTSDIR}/devel/boost-python-libs
 
+USES=		gmake
 USE_PYTHON=	-2.7
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_SCONS=	yes
 USE_LDCONFIG=	yes
