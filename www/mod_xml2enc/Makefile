@@ -1,5 +1,5 @@
 # Created by: Marin Atanasov Nikolov <dnaeon@gmail.com>
-# $FreeBSD: www/mod_xml2enc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_xml2enc/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_xml2enc
 PORTVERSION=	1.0.3
@@ -11,6 +11,7 @@ DIST_SUBDIR=	mod_proxy_html
 MAINTAINER=	dnaeon@gmail.com
 COMMENT=	Apache module for converting encoding before and/or after a filter run
 
+LICENSE=	GPLv2
 
 # included in apache24
 # http://httpd.apache.org/docs/2.4/mod/mod_xml2enc.html
@@ -25,12 +26,10 @@ AP_INC+=	${LOCALBASE}/include/libxml2 -I${WRKSRC}
 AP_LIB+=	${LOCALBASE}/lib
 AP_EXTRAS+=	-lxml2
 
-PLIST_FILES=	%%DOCSDIR%%/COPYING
-PLIST_DIRS=	%%DOCSDIR%%
+PORTDOCS=	COPYING
 
-NO_STAGE=	yes
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/COPYING ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/COPYING ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
