@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: databases/py-sqlite3/Makefile 332358 2013-11-01 11:24:14Z koobs $
+# $FreeBSD: databases/py-sqlite3/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	sqlite3
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -13,7 +13,7 @@ DISTFILES=	${PYTHON_DISTFILE}
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Standard Python binding to the SQLite3 library
 
-LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3
+LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 
 PORTSCOUT=	ignore:1
 
@@ -26,11 +26,8 @@ DISTINFO_FILE=	${PORTSDIR}/lang/python${PYTHON_SUFFIX}/distinfo
 WRKSRC=		${PYTHON_WRKSRC}/Modules
 
 PYDISTUTILS_INSTALLARGS+=	--install-lib ${PYTHON_LIBDIR}/lib-dynload
-PYDISTUTILS_NOEGGINFO=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/_sqlite3.so
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-extract:
