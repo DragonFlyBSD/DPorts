@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: databases/couchdb/Makefile 332584 2013-11-03 04:58:44Z tabthorpe $
+# $FreeBSD: databases/couchdb/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	couchdb
 PORTVERSION=	1.4.0
@@ -12,9 +12,9 @@ DISTNAME=	apache-couchdb-${PORTVERSION}
 MAINTAINER=	adams-ports@ateamsystems.com
 COMMENT=	A document database server, accessible via a RESTful JSON API
 
-LIB_DEPENDS=	icudata:${PORTSDIR}/devel/icu \
-		mozjs185:${PORTSDIR}/lang/spidermonkey185 \
-		curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libicudata.so:${PORTSDIR}/devel/icu \
+		libmozjs185.so:${PORTSDIR}/lang/spidermonkey185 \
+		libcurl.so:${PORTSDIR}/ftp/curl
 BUILD_DEPENDS=	${LOCALBASE}/bin/help2man:${PORTSDIR}/misc/help2man \
 		erlc:${PORTSDIR}/lang/erlang
 RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang
