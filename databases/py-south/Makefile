@@ -1,5 +1,5 @@
 # Created by: Stanislav Svirid <count@211.ru>
-# $FreeBSD: databases/py-south/Makefile 334668 2013-11-23 13:57:10Z wg $
+# $FreeBSD: databases/py-south/Makefile 336626 2013-12-16 11:26:24Z wg $
 
 PORTNAME=	south
 PORTVERSION=	0.8.4
@@ -14,8 +14,7 @@ COMMENT=	Intelligent schema migrations for Django apps
 LICENSE=	AL2
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
-PYDISTUTILS_PKGNAME=	South
 
 .include <bsd.port.mk>
