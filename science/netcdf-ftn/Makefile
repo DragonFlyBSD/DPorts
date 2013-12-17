@@ -1,12 +1,11 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/netcdf-ftn/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/netcdf-ftn/Makefile 336088 2013-12-10 19:18:39Z sunpoet $
 
 PORTNAME=	netcdf
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	NetCDF (network Common Data Form), with Fortran support
 
-LATEST_LINK=	netcdf-ftn
 MASTERDIR=	${.CURDIR}/../netcdf4
 
 WITH_FORTRAN=	yes
