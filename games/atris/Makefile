@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/atris/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/atris/Makefile 335927 2013-12-08 19:21:23Z marino $
 
 PORTNAME=	atris
 PORTVERSION=	1.0.7
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.sourcefiles.org/Games/Arcade/Block_Based/Tetris/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Atris: Alizarin Tetris
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl ttf
 
 GNU_CONFIGURE=	yes
