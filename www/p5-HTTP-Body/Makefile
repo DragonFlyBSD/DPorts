@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Body/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD: www/p5-HTTP-Body/Makefile 336022 2013-12-09 19:30:57Z sunpoet $
 
 PORTNAME=	HTTP-Body
-PORTVERSION=	1.17
+PORTVERSION=	1.19
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:GETTY
