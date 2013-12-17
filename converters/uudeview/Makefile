@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: converters/uudeview/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/uudeview/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	uudeview
 PORTVERSION=	0.5.20
@@ -11,7 +11,7 @@ COMMENT=	A program for uu/xx/Base64/BinHex/yEnc de-/encoding
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	uu.3:${PORTSDIR}/converters/uulib
+LIB_DEPENDS=	libuu.so:${PORTSDIR}/converters/uulib
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tcl
