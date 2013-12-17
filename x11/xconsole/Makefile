@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xconsole/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xconsole/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xconsole
 PORTVERSION=	1.0.6
@@ -10,7 +10,4 @@ COMMENT=	Monitor system console messages with X
 XORG_CAT=	app
 USE_XORG=	xt xaw
 
-MAN1=		xconsole.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
