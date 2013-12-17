@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/iolib/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/iolib/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	io_lib
 PORTVERSION=	1.13.0
@@ -13,7 +13,7 @@ COMMENT=	General purpose trace file (and Experiment File) reading interface
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
 USE_AUTOTOOLS=	libtool:env
 GNU_CONFIGURE=	yes
