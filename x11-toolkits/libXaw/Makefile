@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libXaw/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-toolkits/libXaw/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libXaw
 PORTVERSION=	1.0.12
@@ -14,7 +14,4 @@ USE_XORG=	printproto:both x11 xau xext xextproto xmu xp xpm xproto:both xt
 USES=		gmake
 CONFIGURE_ARGS+=--without-xmlto
 
-MAN3=		Xaw.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
