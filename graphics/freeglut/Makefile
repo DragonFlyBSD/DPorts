@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/freeglut/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/freeglut/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	freeglut
 PORTVERSION=	2.8.1
@@ -28,7 +28,6 @@ DOCS=	download.html freeglut.html freeglut_logo.png		\
 	progress.html structure.html
 BINS=	CallbackMaker Fractals Fractals_random Lorenz One shapes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-configure:
@@ -43,17 +42,17 @@ post-build:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for FILE in ${DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${FILE} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/doc/${FILE} ${STAGEDIR}${DOCSDIR}
 .endfor
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/progs/demos/Fractals/fractals.dat ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/progs/demos/Fractals/fractals.dat ${STAGEDIR}${EXAMPLESDIR}
 .for prog in ${BINS}
-	@${INSTALL_PROGRAM} ${WRKSRC}/progs/demos/${prog}/.libs/${prog:tl} ${EXAMPLESDIR}
+	@${INSTALL_PROGRAM} ${WRKSRC}/progs/demos/${prog}/.libs/${prog:tl} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
 	@${ECHO_MSG} "===> Examples installed in ${EXAMPLESDIR}."
 .endif
