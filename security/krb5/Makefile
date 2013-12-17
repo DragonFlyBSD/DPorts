@@ -1,9 +1,8 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/krb5/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/krb5/Makefile 336247 2013-12-12 05:19:57Z cy $
 
 PORTNAME=		krb5
-PORTVERSION=		1.11.3
-PORTREVISION=		1
+PORTVERSION=		1.12
 CATEGORIES=		security
 MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-9]*\.[0-9]*/&X/:C/X\.[0-9]*$//:C/X//}/
 DISTNAME=		${PORTNAME}-${PORTVERSION}-signed
@@ -19,7 +18,7 @@ LICENSE=		MIT
 
 BUILD_DEPENDS=		gm4:${PORTSDIR}/devel/m4
 
-CONFLICTS=		heimdal-[0-9]* srp-[0-9]*
+CONFLICTS=		heimdal-[0-9]* srp-[0-9]* krb5-maint-[0-9]*
 
 LATEST_LINK=		${PORTNAME}-19
 KERBEROSV_URL=		http://web.mit.edu/kerberos/
@@ -32,11 +31,12 @@ CONFIGURE_ARGS?=	--enable-shared --without-system-verto
 CONFIGURE_ENV=		INSTALL="${INSTALL}" YACC="${YACC}"
 MAKE_ARGS=		INSTALL="${INSTALL}"
 
-OPTIONS_DEFINE=		KRB5_PDF KRB5_HTML DNS_FOR_REALM
+OPTIONS_DEFINE=		KRB5_PDF KRB5_HTML DNS_FOR_REALM LDAP
 OPTIONS_DEFAULT=	KRB5_PDF KRB5_HTML
 KRB5_PDF_DESC=		Install krb5 PDF documentation
 KRB5_HTML_DESC=		Install krb5 HTML documentation
 DNS_FOR_REALM_DESC=	Enable DNS lookups for Kerberos realm names
+LDAP=			Enable LDAP support
 
 .if defined(KRB5_HOME)
 PREFIX=			${KRB5_HOME}
@@ -44,6 +44,7 @@ CFLAGS+=		-rpath=${KRB5_HOME}/lib
 LDFLAGS+=		-rpath=${KRB5_HOME}/lib
 .endif
 LDFLAGS+=		-L${LOCALBASE}/lib
+CFLAGS+=		-I${LOCALBASE}/include
 
 USE_OPENSSL=		yes
 
@@ -52,6 +53,14 @@ NO_STAGE=	yes
 
 .if ${PORT_OPTIONS:MDNS_FOR_REALM}
 CONFIGURE_ARGS+=	--enable-dns-for-realm
+.endif
+
+.if ${PORT_OPTIONS:MLDAP}
+USE_OPENLDAP=		yes
+CONFIGURE_ARGS+=	--with-ldap
+PLIST_SUB+=		LDAP=""
+.else
+PLIST_SUB+=		LDAP="@comment "
 .endif
 
 .include "${PORTSDIR}/Mk/bsd.openssl.mk"
@@ -74,7 +83,7 @@ WRKSRC=			${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 HTML_DOC_DIR=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/doc/html
 PDF_DOC_DIR=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/doc/pdf
 
-CONFIGURE_ARGS+=	CPPFLAGS="-I${OPENSSLINC} -L${OPENSSLLIB}"
+CONFIGURE_ARGS+=	CPPFLAGS="-I${OPENSSLINC} -L${OPENSSLLIB} -L${LOCALBASE}/include"
 
 post-extract:
 	@${TAR} -C ${WRKDIR} -xzf ${WRKDIR}/${PORTNAME}-${PORTVERSION}.tar.gz
