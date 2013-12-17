@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite3/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/sqlite3/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sqlite3
 PORTVERSION=	3.8.0.2
@@ -121,7 +121,7 @@ RTREE_INT=		"float"
 
 .if ${PORT_OPTIONS:MICU}
 BUILD_DEPENDS+=		${LOCALBASE}/bin/icu-config:${PORTSDIR}/devel/icu
-LIB_DEPENDS+=		icudata:${PORTSDIR}/devel/icu
+LIB_DEPENDS+=		libicudata.so:${PORTSDIR}/devel/icu
 CPPFLAGS+=		-DSQLITE_ENABLE_ICU=1
 CPPFLAGS+=		`${LOCALBASE}/bin/icu-config --cppflags`
 LDFLAGS+=		`${LOCALBASE}/bin/icu-config --ldflags`
