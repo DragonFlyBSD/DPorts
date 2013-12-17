@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: databases/py-bsddb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-bsddb/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	bsddb
 PORTVERSION=	${PYTHON_PORTVERSION}
@@ -25,15 +25,11 @@ DISTINFO_FILE=	${PORTSDIR}/lang/python${PYTHON_SUFFIX}/distinfo
 WRKSRC=		${PYTHON_WRKSRC}/Modules
 
 PYDISTUTILS_INSTALLARGS+=	--install-lib ${PYTHON_LIBDIR}/lib-dynload
-PYDISTUTILS_NOEGGINFO=	yes
-PYDISTUTILS_PKGNAME=	_bsddb
+PYDISTUTILS_AUTOPLIST=	yes
 
 MAKE_ENV=	BSDDB_VERSION=${BDB_LIB_NAME}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-py${PYTHON_SUFFIX}-_bsddb.c
 
-PLIST_FILES=	%%PYTHON_LIBDIR%%/lib-dynload/_bsddb.so
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 300
