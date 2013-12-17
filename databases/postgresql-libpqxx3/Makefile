@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx3/Makefile 334084 2013-11-17 14:44:00Z crees $
+# $FreeBSD: databases/postgresql-libpqxx3/Makefile 336426 2013-12-14 09:14:47Z mva $
 
 PORTNAME=	libpqxx
 PORTVERSION=	3.1.1
@@ -16,13 +16,14 @@ CONFLICTS=	postgresql-libpqxx-[2-4].*
 PORTSCOUT=	limit:^2\.
 
 USE_PGSQL=	yes
-USES=		gmake pkgconfig
+USES=		gmake pkgconfig shebangfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 USE_PYTHON_BUILD=	yes
-USES=shebangfix
+
 SHEBANG_FILES=	tools/splitconfig
+python_CMD=	${PYTHON_CMD}
 
 CONFIGURE_ARGS=	--enable-shared
 
