@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc-ecj45/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gcc-ecj45/Makefile 335827 2013-12-07 12:26:48Z gerald $
 
 PORTNAME=	gcc-ecj
 PORTVERSION=	4.5
@@ -16,8 +16,7 @@ COMMENT=	Eclipse Java Compiler used to build GCC Java
 NO_BUILD=	yes
 PLIST_FILES=	share/java/${DISTNAME}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${PREFIX}/share/java/
+	${INSTALL_DATA} ${DISTDIR}/${DISTNAME} ${STAGEDIR}${PREFIX}/share/java
 
 .include <bsd.port.mk>
