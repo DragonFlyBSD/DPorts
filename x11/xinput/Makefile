@@ -1,5 +1,5 @@
 # Created by: Martin Ranne <gasp@ridcully.dnsalias.org>
-# $FreeBSD: x11/xinput/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11/xinput/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xinput
 PORTVERSION=	1.6.1
@@ -11,9 +11,6 @@ COMMENT=	Very useful utility for configuring and testing XInput devices
 XORG_CAT=	app
 USE_XORG=	inputproto x11 xi xext xrandr xinerama
 
-PLIST_FILES=	bin/xinput
+PLIST_FILES=	bin/xinput man/man1/xinput.1.gz
 
-MAN1=		xinput.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
