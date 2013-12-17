@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: databases/pymongo/Makefile 330256 2013-10-13 21:35:11Z wg $
+# $FreeBSD: databases/pymongo/Makefile 336627 2013-12-16 11:49:54Z wg $
 
 PORTNAME=	pymongo
 PORTVERSION=	2.6.3
@@ -12,11 +12,8 @@ COMMENT=	Python driver for MongoDB
 LICENSE=	AL2
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
-PYEASYINSTALL_ARCHDEP=	yes
-PYDISTUTILS_NOEGGINFO=	yes
-PYTHON_PY3K_PLIST_HACK=	yes
-NO_STAGE=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.pre.mk>
 
