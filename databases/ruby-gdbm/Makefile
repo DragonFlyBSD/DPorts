@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-gdbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ruby-gdbm/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	gdbm
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -14,7 +14,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby extension to GDBM library
 
 FETCH_DEPENDS=	${NONEXISTENT}:${PORTSDIR}/${RUBY_PORT}:patch
-LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm
+LIB_DEPENDS=	libgdbm.so:${PORTSDIR}/databases/gdbm
 
 PLIST_FILES=	%%RUBY_ARCHLIBDIR%%/gdbm.so
 USE_RUBY=	yes
