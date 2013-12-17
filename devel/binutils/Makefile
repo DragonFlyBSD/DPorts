@@ -1,8 +1,8 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/binutils/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/binutils/Makefile 336642 2013-12-16 14:52:26Z zeising $
 
 PORTNAME=	binutils
-PORTVERSION=	2.23.2
+PORTVERSION=	2.24
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	binutils/releases
@@ -36,26 +36,6 @@ CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-gmp=${LOCALBASE} \
 			--with-mpfr=${LOCALBASE}
 
-MAN1=		addr2line.1 \
-		ar.1 \
-		as.1 \
-		c++filt.1 \
-		gprof.1 \
-		dlltool.1 \
-		elfedit.1 \
-		ld.1 \
-		nlmconv.1 \
-		nm.1 \
-		objcopy.1 \
-		objdump.1 \
-		ranlib.1 \
-		readelf.1 \
-		size.1 \
-		strings.1 \
-		strip.1 \
-		windmc.1 \
-		windres.1
-
 INFO=		as \
 		binutils \
 		standards \
@@ -64,7 +44,6 @@ INFO=		as \
 		configure \
 		ld
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Actual earliest version may differ slightly
@@ -85,11 +64,11 @@ PLIST_SUB+=	NLS="@comment "
 
 post-install:
 .if ${OSVERSION} >= 900044
-	${INSTALL_DATA} ${WRKSRC}/include/plugin-api.h ${PREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/include/plugin-api.h ${STAGEDIR}${PREFIX}/include/
 .endif
-	@${FIND} -ds ${PREFIX}/${CONFIGURE_TARGET} ! -type d | \
-		${SED} -e 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${FIND} -ds ${PREFIX}/${CONFIGURE_TARGET} -type d | \
-		${SED} -e 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
+	@${FIND} -ds ${STAGEDIR}${PREFIX}/${CONFIGURE_TARGET} ! -type d | \
+		${SED} -e 's,^${STAGEDIR}${PREFIX}/,,' >> ${TMPPLIST}
+	@${FIND} -ds ${STAGEDIR}${PREFIX}/${CONFIGURE_TARGET} -type d | \
+		${SED} -e 's,^${STAGEDIR}${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
 
 .include <bsd.port.mk>
