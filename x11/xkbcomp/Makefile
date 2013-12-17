@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkbcomp/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xkbcomp/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xkbcomp
 PORTVERSION=	1.2.4
@@ -14,9 +14,7 @@ USE_XORG=	x11 xkbfile
 USES=		pathfix
 
 PLIST_FILES=	bin/xkbcomp \
-		libdata/pkgconfig/xkbcomp.pc
+		libdata/pkgconfig/xkbcomp.pc \
+		man/man1/xkbcomp.1.gz
 
-MAN1=		xkbcomp.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
