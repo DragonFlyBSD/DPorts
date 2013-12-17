@@ -1,8 +1,8 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-TreeBuilder/Makefile 334421 2013-11-20 14:05:14Z culot $
+# $FreeBSD: textproc/p5-XML-TreeBuilder/Makefile 336269 2013-12-12 15:36:36Z culot $
 
 PORTNAME=	XML-TreeBuilder
-PORTVERSION=	5.1
+PORTVERSION=	5.2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
