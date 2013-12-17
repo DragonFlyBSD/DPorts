@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/rubberband/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/rubberband/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	rubberband
 PORTVERSION=	1.7.0
@@ -13,10 +13,10 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
-LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile \
-		samplerate:${PORTSDIR}/audio/libsamplerate \
-		vamp-sdk.2:${PORTSDIR}/audio/vamp-plugin-sdk \
-		fftw3.6:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
+		libvamp-sdk.so:${PORTSDIR}/audio/vamp-plugin-sdk \
+		libfftw3.so:${PORTSDIR}/math/fftw3
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 USES=		gmake pkgconfig
