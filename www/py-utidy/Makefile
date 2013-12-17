@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: www/py-utidy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-utidy/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	utidy
 PORTVERSION=	0.2
@@ -19,7 +19,11 @@ LIB_DEPENDS=	tidy-0.99.0:${PORTSDIR}/www/tidy-lib
 USE_ZIP=	yes
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	uTidylib
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
+
 .include <bsd.port.mk>
