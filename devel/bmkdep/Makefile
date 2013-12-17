@@ -1,8 +1,8 @@
 # Created by: trociny
-# $FreeBSD: devel/bmkdep/Makefile 329992 2013-10-10 13:19:39Z trociny $
+# $FreeBSD: devel/bmkdep/Makefile 336667 2013-12-16 21:11:29Z trociny $
 
 PORTNAME=	bmkdep
-PORTVERSION=	20131009
+PORTVERSION=	20131215
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
