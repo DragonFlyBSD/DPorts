@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman
-# $FreeBSD: x11-fonts/gentium-basic/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD: x11-fonts/gentium-basic/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	GentiumBasic
 PORTVERSION=	110
+PORTREVISION=	1
 CATEGORIES=	x11-fonts
 MASTER_SITES=	http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=${MEDIA_ID}&filename=/
 DISTNAME=	ttf-sil-gentium-basic_1.1.orig
@@ -12,26 +13,28 @@ COMMENT=	Gentium Basic and Gentium Book Basic TrueType fonts
 
 LICENSE=	OFL11
 
+NO_ARCH=	yes
+
 USE_TGZ=	yes
 XORG_CAT=	font
 
 FONTLIBPATH=	lib/X11/fonts
-FONTROOTDIR=	${STAGEDIR}${PREFIX}/${FONTLIBPATH}
+FONTPATH=	${PREFIX}/${FONTLIBPATH}/${FONTDIR}
 INSTALLS_TTF=	yes
 MEDIA_ID=	${PORTNAME}_${PORTVERSION}_tar
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:S,.orig,,:S,_,-,}
 
-PLIST_FILES=	${FONTLIBPATH}/${FONTDIR}/GenBasB.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBasBI.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBasI.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBasR.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBkBasB.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBkBasBI.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBkBasI.ttf \
-		${FONTLIBPATH}/${FONTDIR}/GenBkBasR.ttf
+PLIST_FILES=	${FONTPATH:S,^${PREFIX}/,,}/GenBasB.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBasBI.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBasI.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBasR.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBkBasB.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBkBasBI.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBkBasI.ttf \
+		${FONTPATH:S,^${PREFIX}/,,}/GenBkBasR.ttf
 
-SUB_LIST=	"FONTPATH=${PREFIX}/${FONTLIBPATH}/${FONTDIR}"
+SUB_LIST=	"FONTPATH=${FONTPATH}"
 SUB_FILES=	pkg-message
 
 DOCSLIST=	FONTLOG.txt GENTIUM-FAQ.txt OFL-FAQ.txt
@@ -47,8 +50,8 @@ do-configure:
 do-install: install-fonts install-docs
 
 install-fonts:
-	${MKDIR} ${FONTROOTDIR}/${FONTDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTROOTDIR}/${FONTDIR}
+	${MKDIR} ${STAGEDIR}${FONTPATH}
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${STAGEDIR}${FONTPATH}
 
 install-docs:
 .if ${PORT_OPTIONS:MDOCS}
