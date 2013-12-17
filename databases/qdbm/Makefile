@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@nigredo.org>
-# $FreeBSD: databases/qdbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/qdbm/Makefile 336187 2013-12-11 18:08:52Z bapt $
 #    $MCom: ports-stable/databases/qdbm/Makefile,v 1.6 2008/03/29 20:07:25 ahze Exp $
 
 PORTNAME=	qdbm
@@ -50,7 +50,7 @@ post-install:
 
 .else
 
-LIB_DEPENDS+=	qdbm:${PORTSDIR}/databases/qdbm
+LIB_DEPENDS+=	libqdbm.so:${PORTSDIR}/databases/qdbm
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/java|${JAVA_HOME}|' ${WRKSRC}/configure
