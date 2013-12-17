@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXpm/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11/libXpm/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libXpm
 PORTVERSION=	3.5.11
@@ -13,7 +13,4 @@ LICENSE=	MIT
 XORG_CAT=	lib
 USE_XORG=	xproto x11 xext xextproto xt
 
-MAN1=		cxpm.1 sxpm.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
