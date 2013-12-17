@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: x11/xmsg/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/xmsg/Makefile 336387 2013-12-13 23:31:48Z bapt $
 
 PORTNAME=	xmsg
 PORTVERSION=	1.1
@@ -10,11 +10,8 @@ MASTER_SITES=	http://www.generalconcepts.com/resources/software/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shows a message on the screen
 
-MAN1=		xmsg.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/xmsg
+PLIST_FILES=	bin/xmsg man/man1/xmsg.1.gz
 USES=		imake
 USE_XORG=	x11 xext xaw xmu xt sm ice
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
