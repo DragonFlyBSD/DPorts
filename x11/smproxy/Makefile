@@ -1,4 +1,4 @@
-# $FreeBSD: x11/smproxy/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/smproxy/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	smproxy
 PORTVERSION=	1.0.5
@@ -10,9 +10,6 @@ COMMENT=	Session Manager Proxy
 XORG_CAT=	app
 USE_XORG=	xt xmu
 
-PLIST_FILES=	bin/smproxy
+PLIST_FILES=	bin/smproxy man/man1/smproxy.1.gz
 
-MAN1=		smproxy.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
