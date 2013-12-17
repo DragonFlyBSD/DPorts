@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: archivers/p5-Compress-Raw-Lzma/Makefile 332577 2013-11-03 04:53:28Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Raw-Lzma/Makefile 336153 2013-12-11 10:04:56Z bapt $
 
 PORTNAME=	Compress-Raw-Lzma
 PORTVERSION=	2.063
@@ -32,7 +32,7 @@ LZMA_DEPEND?=	xz
 .endif
 
 .if (${LZMA_DEPEND} == "xz") || (${LZMA_DEPEND} == "lzmalib")
-LIB_DEPENDS+=	lzma:${PORTSDIR}/archivers/${LZMA_DEPEND}
+LIB_DEPENDS+=	liblzma.so:${PORTSDIR}/archivers/${LZMA_DEPEND}
 .endif
 
 pre-build:
