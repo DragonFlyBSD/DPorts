@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/xorg-libraries/Makefile 335592 2013-12-03 21:00:32Z tijl $
+# $FreeBSD: x11/xorg-libraries/Makefile 336639 2013-12-16 14:17:10Z zeising $
 
 PORTNAME=	xorg-libraries
 PORTVERSION=	7.7
@@ -56,9 +56,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dmx.pc:${PORTSDIR}/x11/libdmx \
 		${LOCALBASE}/libdata/pkgconfig/xxf86misc.pc:${PORTSDIR}/x11/libXxf86misc \
 		${LOCALBASE}/libdata/pkgconfig/xxf86vm.pc:${PORTSDIR}/x11/libXxf86vm
 
-NO_STAGE=	yes
 do-install:
-		${MKDIR} ${PREFIX}/libdata/xorg
-		${TOUCH} ${PREFIX}/libdata/xorg/libraries
+		${MKDIR} ${STAGEDIR}${PREFIX}/libdata/xorg
+		${TOUCH} ${STAGEDIR}${PREFIX}/libdata/xorg/libraries
 
 .include <bsd.port.mk>
