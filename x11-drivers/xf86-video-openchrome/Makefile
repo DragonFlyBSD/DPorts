@@ -1,7 +1,8 @@
-# $FreeBSD: x11-drivers/xf86-video-openchrome/Makefile 327779 2013-09-20 23:48:39Z bapt $
+# $FreeBSD: x11-drivers/xf86-video-openchrome/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-video-openchrome
 PORTVERSION=	0.3.3
+PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
@@ -11,11 +12,9 @@ USE_GL=		gl
 
 XORG_CAT=	driver
 USE_XORG=	xf86driproto xvmc glproto
-MAN4=		openchrome.4x
 
 MAKE_ARGS+=	drivermandir=${LOCALBASE}/man/man4
 
 ONLY_FOR_ARCHS=	amd64 i386 ia64
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
