@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: security/libksba/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libksba/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	libksba
 PORTVERSION=	1.3.0
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}.sig
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KSBA is an X.509 Library
 
 BUILD_DEPENDS+=	libgpg-error>=1.10:${PORTSDIR}/security/libgpg-error
