@@ -1,8 +1,9 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 336082 2013-12-10 19:03:36Z sunpoet $
 
 PORTNAME=	Unicode-LineBreak
-PORTVERSION=	2012.10
+PORTVERSION=	2013.11
+PORTREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,7 +15,7 @@ COMMENT=	Unicode-LineBreak package
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-MIME-Charset>=0:${PORTSDIR}/mail/p5-MIME-Charset
+BUILD_DEPENDS=	p5-MIME-Charset>=1.006.2:${PORTSDIR}/mail/p5-MIME-Charset
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_UNSAFE=	yes
@@ -22,15 +23,7 @@ MAKE_JOBS_UNSAFE=	yes
 USES=		perl5
 USE_PERL5=	configure
 
-CONFIGURE_ARGS+=	--with-bundled-sombok \
-			--disable-libthai
+CONFIGURE_ARGS=	--with-bundled-sombok \
+		--disable-libthai
 
-MAN3=		Unicode::LineBreak.3 \
-		Unicode::GCString::JA_JP.3 \
-		Text::LineFold.3 \
-		Unicode::LineBreak::JA_JP.3 \
-		Unicode::GCString.3 \
-		Text::LineFold::JA_JP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
