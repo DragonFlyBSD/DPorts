@@ -1,8 +1,9 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: textproc/tkdiff/Makefile 334312 2013-11-19 13:05:33Z gahr $
+# $FreeBSD: textproc/tkdiff/Makefile 336142 2013-12-11 04:39:47Z sbruno $
 
 PORTNAME=	tkdiff
 PORTVERSION=	4.2
+PORTREVISION=	1
 CATEGORIES=	textproc tk
 MASTER_SITES=	SF
 
@@ -18,6 +19,10 @@ USES=		tk:wrapper
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/tkdiff
+
+post-patch:
+	${FIND} ${WRKSRC} -type f | ${XARGS} \
+		${REINPLACE_CMD} -e '/^exec wish/s|wish|${WISH}|g' -e '/^exec tclsh/s|tclsh|${TCLSH}|g'
 
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/tkdiff ${STAGEDIR}${PREFIX}/bin
