@@ -1,5 +1,5 @@
 # Created by: alexander smishlajev
-# $FreeBSD: devel/py-decoratortools/Makefile 334378 2013-11-20 03:21:18Z sunpoet $
+# $FreeBSD: devel/py-decoratortools/Makefile 336322 2013-12-13 07:45:18Z sunpoet $
 
 PORTNAME=	DecoratorTools
 PORTVERSION=	1.8
@@ -7,13 +7,16 @@ PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class, function, and metaclass decorators
 
-USE_PYTHON=	2.5-2.7
+LICENSE=	PSFL ZPL21
+LICENSE_COMB=	dual
+
+USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
