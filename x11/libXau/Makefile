@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libXau/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libXau/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libXau
 PORTVERSION=	1.0.8
@@ -11,12 +11,7 @@ COMMENT=	Authentication Protocol library for X11
 XORG_CAT=	lib
 USE_XORG=	xproto:both
 
-MAN3=		Xau.3 XauDisposeAuth.3 XauFileName.3 XauGetAuthByAddr.3 \
-		XauGetBestAuthByAddr.3 XauLockAuth.3 XauReadAuth.3 \
-		XauUnlockAuth.3 XauWriteAuth.3
-
-NO_STAGE=	yes
 post-install:
-	${LN} -sf ${PREFIX}/lib/libXau.so.6 ${PREFIX}/lib/libXau.so.0
+	${LN} -sf ${PREFIX}/lib/libXau.so.6 ${STAGEDIR}${PREFIX}/lib/libXau.so.0
 
 .include <bsd.port.mk>
