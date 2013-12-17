@@ -1,8 +1,8 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/xcb-proto/Makefile 330451 2013-10-15 19:51:40Z eadler $
+# $FreeBSD: x11/xcb-proto/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xcb-proto
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 CATEGORIES=	x11 python
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
@@ -17,4 +17,5 @@ USE_PYTHON=	2.5+
 GNU_CONFIGURE=	yes
 
 DATADIR=	${PREFIX}/share/xcb
+
 .include <bsd.port.mk>
