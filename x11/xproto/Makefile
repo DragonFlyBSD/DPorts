@@ -1,8 +1,8 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/xproto/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: x11/xproto/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xproto
-PORTVERSION=	7.0.24
+PORTVERSION=	7.0.25
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
