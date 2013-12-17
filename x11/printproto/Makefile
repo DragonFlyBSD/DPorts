@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11/printproto/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/printproto/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	printproto
 PORTVERSION=	1.0.5
@@ -10,7 +10,4 @@ COMMENT=	Print extension headers
 
 XORG_CAT=	proto
 
-MAN7=	Xprint.7
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
