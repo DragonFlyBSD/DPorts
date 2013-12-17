@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: audio/espeak/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/espeak/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	espeak
 PORTVERSION=	1.47.11
@@ -22,8 +22,8 @@ OPTIONS_RADIO=	AUDIO_SYSTEM
 OPTIONS_RADIO_AUDIO_SYSTEM=	PORTAUDIO PULSEAUDIO RUNTIME
 RUNTIME_DESC=	Sound interface selected at runtime
 
-PORTAUDIOLIB=	portaudio:${PORTSDIR}/audio/portaudio
-PULSEAUDIOLIB=	pulse:${PORTSDIR}/audio/pulseaudio
+PORTAUDIOLIB=	libportaudio.so:${PORTSDIR}/audio/portaudio
+PULSEAUDIOLIB=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 
 CONFLICTS=	speak-1.[0-9]
 
