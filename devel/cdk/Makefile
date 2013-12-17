@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cdk/Makefile 328216 2013-09-24 23:37:31Z bapt $
+# $FreeBSD: devel/cdk/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	cdk
 PORTVERSION=	5.0.20120323
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://invisible-island.net/cdk/ \
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}-${PORTVERSION:E}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses Development Kit for speedy development of full screen programs
 
 LICENSE=	BSD
