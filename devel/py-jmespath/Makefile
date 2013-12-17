@@ -1,8 +1,8 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-jmespath/Makefile 334721 2013-11-24 12:39:10Z alexey $
+# $FreeBSD: devel/py-jmespath/Makefile 336572 2013-12-15 19:30:39Z alexey $
 
 PORTNAME=	jmespath
-PORTVERSION=	0.1.0
+PORTVERSION=	0.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=3.4:${PORTSDIR}/devel/py-ply
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
