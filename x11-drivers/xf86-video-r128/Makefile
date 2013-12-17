@@ -1,7 +1,8 @@
-# $FreeBSD: x11-drivers/xf86-video-r128/Makefile 333157 2013-11-07 21:46:34Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-r128/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-video-r128
 PORTVERSION=	6.9.2
+PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
