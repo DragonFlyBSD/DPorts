@@ -1,7 +1,6 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtksourceview-reference/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/gtksourceview-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
