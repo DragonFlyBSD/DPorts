@@ -1,5 +1,5 @@
 # Created by: wlloyd@slap.net
-# $FreeBSD: comms/spandsp/Makefile 332064 2013-10-30 05:06:48Z eadler $
+# $FreeBSD: comms/spandsp/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	spandsp
 PORTVERSION=	0.0.5
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DSP library and software FAX machine
 
-LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool autoconf
