@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xgamma/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xgamma/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xgamma
 PORTVERSION=	1.0.5
@@ -10,9 +10,6 @@ COMMENT=	Gamma correction through the X server.
 XORG_CAT=	app
 USE_XORG=	x11 xxf86vm
 
-PLIST_FILES=	bin/xgamma
+PLIST_FILES=	bin/xgamma man/man1/xgamma.1.gz
 
-MAN1=		xgamma.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
