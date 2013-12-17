@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonymaher@optusnet.com.au>
-# $FreeBSD: astro/wcslib/Makefile 333411 2013-11-10 17:27:16Z rakuco $
+# $FreeBSD: astro/wcslib/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	wcslib
 PORTVERSION=	4.13.4
@@ -31,13 +31,13 @@ PGPLOT_DESC=	Add pgplot support (for tests only)
 
 .if ${PORT_OPTIONS:MCFITSIO} || exists(${LOCALBASE}/lib/libcfitsio.so)
 PLIST_SUB+=		HPXCVT=""
-LIB_DEPENDS+=	cfitsio:${PORTSDIR}/astro/cfitsio
+LIB_DEPENDS+=	libcfitsio.so:${PORTSDIR}/astro/cfitsio
 .else
 PLIST_SUB+=		HPXCVT="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPGPLOT}
-LIB_DEPENDS+=	pgplot.5:${PORTSDIR}/graphics/pgplot
+LIB_DEPENDS+=	libpgplot.so:${PORTSDIR}/graphics/pgplot
 .endif
 
 post-patch:
