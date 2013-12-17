@@ -1,11 +1,11 @@
-# $FreeBSD: multimedia/libass/Makefile 330616 2013-10-17 07:46:54Z bapt $
+# $FreeBSD: multimedia/libass/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	libass
 PORTVERSION=	0.10.2
 CATEGORIES=	multimedia devel
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable ASS/SSA subtitle renderer
 
 LICENSE=	ISCL
