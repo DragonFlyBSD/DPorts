@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: devel/p5-Role-Basic/Makefile 335634 2013-12-04 20:58:09Z matthew $
+# $FreeBSD: devel/p5-Role-Basic/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	Role-Basic
 PORTVERSION=	0.13
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:OVID
@@ -11,6 +12,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Just roles. Nothing else
 
+NO_ARCH=	yes
 PORTSCOUT=	limit:^0\.[1-9]
 
 USES=		perl5
