@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/tokyocabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/tokyocabinet/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.4.48
@@ -59,13 +59,13 @@ CONFIGURE_ARGS+=	--enable-fastest
 # liblzma on 9-current does not have liblzma.h file.
 .if ${PORT_OPTIONS:MLZMA}
 CONFIGURE_ARGS+=	--enable-exlzma
-LIB_DEPENDS+=		lzma:${PORTSDIR}/archivers/lzmalib
+LIB_DEPENDS+=		liblzma.so:${PORTSDIR}/archivers/lzmalib
 .else
 CONFIGURE_ARGS+=	--disable-exlzma
 .endif
 .if ${PORT_OPTIONS:MLZO}
 CONFIGURE_ARGS+=	--enable-exlzo
-LIB_DEPENDS+=		lzo2:${PORTSDIR}/archivers/lzo2
+LIB_DEPENDS+=		liblzo2.so:${PORTSDIR}/archivers/lzo2
 .else
 CONFIGURE_ARGS+=	--disable-exlzo
 .endif
