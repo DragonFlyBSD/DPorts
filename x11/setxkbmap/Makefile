@@ -1,4 +1,4 @@
-# $FreeBSD: x11/setxkbmap/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/setxkbmap/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	setxkbmap
 PORTVERSION=	1.3.0
@@ -12,9 +12,6 @@ USE_XORG=	xkbfile x11
 
 CONFIGURE_ARGS=	--with-xkb-config-root=${LOCALBASE}/share/X11/xkb
 
-PLIST_FILES=	bin/setxkbmap
+PLIST_FILES=	bin/setxkbmap man/man1/setxkbmap.1.gz
 
-MAN1=		setxkbmap.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
