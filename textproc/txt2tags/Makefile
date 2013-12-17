@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: textproc/txt2tags/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/txt2tags/Makefile 335892 2013-12-08 13:33:54Z mva $
 
 PORTNAME=	txt2tags
 PORTVERSION=	2.6
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Convert simply formatted text into markup (e.g., HTML)
 
-USE_PYTHON=	yes
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 PORTDOCS=	ChangeLog README userguide.pdf
@@ -18,6 +18,8 @@ SAMPLE_DIRS=	css img module
 
 NO_STAGE=	yes
 post-patch:
+	@${REINPLACE_CMD} -e 's|/env python|/env python2|' \
+		${WRKSRC}/txt2tags
 	@${MV} ${WRKSRC}/doc/userguide.pdf ${WRKSRC}/
 
 do-install:
