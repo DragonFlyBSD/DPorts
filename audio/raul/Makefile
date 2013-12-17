@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/raul/Makefile 334717 2013-11-24 11:47:24Z mva $
+# $FreeBSD: audio/raul/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	raul
 PORTVERSION=	0.8.0
@@ -13,7 +13,7 @@ COMMENT=	C++ utility library primarily aimed at audio/musical applications
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_date_time.so:${PORTSDIR}/devel/boost-libs
 
 USES=		pkgconfig
 NO_STAGE=	yes
