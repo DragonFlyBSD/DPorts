@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Hash-Flatten/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Hash-Flatten/Makefile 336507 2013-12-15 08:55:51Z az $
 
 PORTNAME=	Hash-Flatten
 PORTVERSION=	1.19
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Hash::Flatten.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
