@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/xmlwrapp/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xmlwrapp/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	xmlwrapp
 PORTVERSION=	0.7.0
@@ -12,7 +12,7 @@ COMMENT=	A modern style C++ library for working with XML data
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	boost_iostreams:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_iostreams.so:${PORTSDIR}/devel/boost-libs
 
 OPTIONS_DEFINE=	XSLT
 XSLT_DESC=	Build libxsltwrap library (requires libxslt)
