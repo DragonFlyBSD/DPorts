@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql91-server/Makefile 335673 2013-12-05 15:59:53Z girgen $
+# $FreeBSD: databases/postgresql91-server/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME?=	postgresql
 DISTVERSION?=	9.1.11
@@ -126,7 +126,7 @@ PATCHFILES+=	${ICU_PATCHFILE}:icu
 .    if defined(ICU_EXTRAPATCH)
 EXTRA_PATCHES+=	${ICU_EXTRAPATCH}
 .    endif
-LIB_DEPENDS+=	icudata.50:${PORTSDIR}/devel/icu
+LIB_DEPENDS+=	libicudata.so:${PORTSDIR}/devel/icu
 .  endif
 .endif # !SLAVE_ONLY
 
@@ -163,7 +163,7 @@ USE_OPENLDAP=	yes
 
 .  if ${PORT_OPTIONS:MXML}
 CONFIGURE_ARGS+=--with-libxml
-LIB_DEPENDS+=	xml2.5:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS+=	libxml2.so:${PORTSDIR}/textproc/libxml2
 .  endif
 
 .  if ${PORT_OPTIONS:MTZDATA}
