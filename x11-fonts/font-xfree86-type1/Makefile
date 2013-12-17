@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-xfree86-type1/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/font-xfree86-type1/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	font-xfree86-type1
 PORTVERSION=	1.0.4
@@ -10,5 +10,4 @@ COMMENT=	X.Org XFree86 Type1 font
 
 XORG_CAT=	font
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
