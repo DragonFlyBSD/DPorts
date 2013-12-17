@@ -1,4 +1,4 @@
-# $FreeBSD: x11/luit/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/luit/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	luit
 PORTVERSION=	1.1.1
@@ -12,9 +12,6 @@ USE_XORG=	x11 fontenc
 
 CONFIGURE_ARGS=	--datadir=${LOCALBASE}/lib
 
-PLIST_FILES=	bin/luit
+PLIST_FILES=	bin/luit man/man1/luit.1.gz
 
-MAN1=		luit.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
