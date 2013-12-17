@@ -1,9 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: graphics/cairo-reference/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/cairo-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	0
 
 REFERENCE_SRC=	${WRKSRC}/doc/public
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
