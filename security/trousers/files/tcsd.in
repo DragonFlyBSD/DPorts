@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/trousers/files/tcsd.in 324052 2013-07-31 13:59:04Z hrs $
+# $FreeBSD: security/trousers/files/tcsd.in 335952 2013-12-09 06:35:44Z hrs $
 #
 # PROVIDE: tcsd
 # REQUIRE: SERVER tpmd
@@ -33,6 +33,6 @@ tcsd_precmd()
 
 load_rc_config $name
 
-: tcsd_enable=${tcsd_enable-"NO"}
+: ${tcsd_enable:="NO"}
 
 run_rc_command "$1"

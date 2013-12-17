@@ -1,9 +1,9 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/trousers/Makefile 335654 2013-12-05 07:59:03Z hrs $
+# $FreeBSD: security/trousers/Makefile 335952 2013-12-09 06:35:44Z hrs $
 
 PORTNAME=	trousers
 PORTVERSION=	0.3.10
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
