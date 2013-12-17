@@ -1,15 +1,16 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: devel/astyle/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/astyle/Makefile 335828 2013-12-07 14:06:04Z lme $
 
 PORTNAME=	astyle
-PORTVERSION=	2.03
-PORTREVISION=	1
+PORTVERSION=	2.04
 CATEGORIES=	devel textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 DISTNAME=	${PORTNAME}_${PORTVERSION}_linux
 
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	Source code indenter and formatter for C, C++, C\#, and Java
+
+LICENSE=	LGPL3
 
 ALL_TARGET=	astyle
 CFLAGS+=	-W -Wall -fno-rtti -fno-exceptions
