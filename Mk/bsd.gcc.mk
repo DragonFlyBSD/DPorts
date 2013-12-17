@@ -41,7 +41,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 334653 2013-11-23 10:19:25Z gerald $
+# $FreeBSD: Mk/bsd.gcc.mk 335855 2013-12-07 22:36:21Z gerald $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
@@ -221,7 +221,7 @@ CPP:=			cpp${V}
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
-LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
+LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME} -L${_GCC_RUNTIME}
 .    if defined (USE_FORTRAN)
 .    if ${USE_FORTRAN} == yes
 FFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}

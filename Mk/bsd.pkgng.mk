@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 335727 2013-12-06 09:14:13Z ak $
+# $FreeBSD: Mk/bsd.pkgng.mk 336083 2013-12-10 19:05:41Z bapt $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -45,9 +45,9 @@ create-manifest:
 	@${ECHO_CMD} "  "${COMMENT:Q} >> ${MANIFESTF}
 	@${ECHO_CMD} "maintainer: ${MAINTAINER}" >> ${MANIFESTF}
 	@${ECHO_CMD} "prefix: ${PREFIX}" >> ${MANIFESTF}
-.if defined(NO_ARCH)
-	@${ECHO_CMD} "arch: `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" >> ${MANIFESTF}
-.endif
+#.if defined(NO_ARCH)
+#	@${ECHO_CMD} "arch: `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" >> ${MANIFESTF}
+#.endif
 .if defined(WWW)
 	@${ECHO_CMD} "www: ${WWW}" >> ${MANIFESTF}
 .endif

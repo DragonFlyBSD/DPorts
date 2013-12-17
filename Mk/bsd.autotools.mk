@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.autotools.mk 325841 2013-09-01 01:18:05Z koobs $
+# $FreeBSD: Mk/bsd.autotools.mk 336331 2013-12-13 10:44:22Z bapt $
 #
 # Please view me with 4 column tabs!
 #
@@ -267,7 +267,7 @@ BUILD_DEPENDS+=		${AUTOCONF_DEPENDS}
 #---------------------------------------------------------------------------
 
 .if defined(_AUTOTOOL_libltdl)
-LIB_DEPENDS+=		ltdl.7:${PORTSDIR}/devel/libltdl
+LIB_DEPENDS+=		libltdl.so:${PORTSDIR}/devel/libltdl
 .endif
 
 #---------------------------------------------------------------------------

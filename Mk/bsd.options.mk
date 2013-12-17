@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.options.mk 334572 2013-11-22 10:59:03Z makc $
+# $FreeBSD: Mk/bsd.options.mk 336596 2013-12-15 23:44:13Z bapt $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -351,27 +351,9 @@ NOPORTDOCS=	yes
 NOPORTEXAMPLES=	yes
 .endif
 
-.if empty(PORT_OPTIONS:MNLS)
-WITHOUT_NLS=	yes
-.endif
-
 .if defined(NO_OPTIONS_SORT)
 ALL_OPTIONS=	${OPTIONS_DEFINE}
 .endif
-
-### to be removed once old OPTIONS disappear
-.for opt in ${ALL_OPTIONS}
-.if empty(PORT_OPTIONS:M${opt})
-.   if !defined(WITH_${opt}) && !defined(WITHOUT_${opt})
-WITHOUT_${opt}:=	true
-.   endif
-.else
-.   if !defined(WITH_${opt}) && !defined(WITHOUT_${opt})
-WITH_${opt}:=  true
-.   endif
-.endif
-.endfor
-###
 
 .for opt in ${COMPLETE_OPTIONS_LIST} ${OPTIONS_SLAVE}
 # PLIST_SUB

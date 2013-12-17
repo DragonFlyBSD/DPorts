@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: Mk/Scripts/qa.sh 334663 2013-11-23 12:23:19Z mandree $
+# $FreeBSD: Mk/Scripts/qa.sh 335787 2013-12-06 23:12:52Z bapt $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -29,6 +29,8 @@ shebang() {
 		${PREFIX}/*) ;;
 		/usr/bin/awk) ;;
 		/usr/bin/sed) ;;
+		/usr/bin/nawk) ;;
+		/bin/csh) ;;
 		/bin/sh) ;;
 		*)
 			err "${interp} is an invalid shebang you need USES=shebangfix for ${f#${STAGEDIR}${PREFIX}/}"

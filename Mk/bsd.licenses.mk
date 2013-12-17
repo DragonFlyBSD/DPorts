@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.licenses.mk 328289 2013-09-25 13:29:12Z bdrewery $
+# $FreeBSD: Mk/bsd.licenses.mk 336084 2013-12-10 19:10:13Z bapt $
 
 Licenses_Include_MAINTAINER=         portmgr@FreeBSD.org
 
@@ -767,7 +767,6 @@ install-license:
 .else
 install-license:
 	@${DO_NADA}
-
 .endif
 
 .else	# !LICENSE

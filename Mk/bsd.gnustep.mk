@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.gnustep.mk 329677 2013-10-07 10:32:02Z theraven $
+# $FreeBSD: Mk/bsd.gnustep.mk 336677 2013-12-16 23:12:24Z bapt $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.
@@ -192,7 +192,7 @@ MAKE_ENV+=	"CC=${CC} CXX=${CXX}"
 #
 .if defined(USE_GNUSTEP_BASE)
 BUILD_DEPENDS+=	${GNUSTEP_SYSTEM_LIBRARIES}/libgnustep-base.so:${PORTSDIR}/${GNUSTEP_BASE_PORT}
-LIB_DEPENDS+=	objc.4:${PORTSDIR}/lang/libobjc2
+LIB_DEPENDS+=	libobjc.so.4:${PORTSDIR}/lang/libobjc2
 RUN_DEPENDS+=	${GNUSTEP_SYSTEM_LIBRARIES}/libgnustep-base.so:${PORTSDIR}/${GNUSTEP_BASE_PORT}
 .endif
 
