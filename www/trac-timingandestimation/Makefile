@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-timingandestimation/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-timingandestimation/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	timingandestimation
 PORTVERSION=	1.0.8b
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 USE_ZIP=	yes
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Add estimation and time tracking functionality to Trac
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
