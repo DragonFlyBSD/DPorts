@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-cffi/Makefile 335132 2013-11-29 00:20:41Z wg $
+# $FreeBSD: devel/py-cffi/Makefile 336669 2013-12-16 21:39:52Z wg $
 
 PORTNAME=	cffi
 PORTVERSION=	0.8.1
@@ -19,8 +19,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
-PYEASYINSTALL_ARCHDEP=	yes
 
 .include <bsd.port.mk>
