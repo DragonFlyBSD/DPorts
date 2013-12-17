@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/googletest/Makefile 333054 2013-11-07 02:52:10Z clsung $
+# $FreeBSD: devel/googletest/Makefile 335888 2013-12-08 13:24:03Z mva $
 
 PORTNAME=	googletest
 PORTVERSION=	1.5.0
@@ -10,11 +10,18 @@ DISTNAME=	gtest-${PORTVERSION}
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	A framework for writing C++ tests on a variety of platforms
 
+USES=		shebangfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PYTHON_BUILD=	yes
+USE_PYTHON_BUILD=	2
+
+python_OLD_CMD=	/usr/bin/env python
+python_CMD=	/usr/bin/env python2
+SHEBANG_FILES=	scripts/fuse_gtest_files.py scripts/gen_gtest_pred_impl.py \
+		scripts/pump.py
 
 regression-test:
 	cd ${WRKSRC}; ${MAKE} check
+
 
 .include <bsd.port.mk>
