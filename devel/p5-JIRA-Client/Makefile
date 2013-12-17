@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-JIRA-Client/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-JIRA-Client/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	JIRA-Client
 PORTVERSION=	0.25
@@ -8,7 +8,7 @@ MASTER_SITES=	GOOGLE_CODE \
 		LOCAL/glarkin
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An extended interface to JIRA's SOAP API
 
 RUN_DEPENDS=	p5-SOAP-Lite>=0:${PORTSDIR}/net/p5-SOAP-Lite
