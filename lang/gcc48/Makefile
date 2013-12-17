@@ -1,8 +1,8 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc48/Makefile 335442 2013-12-01 21:22:44Z gerald $
+# $FreeBSD: lang/gcc48/Makefile 336605 2013-12-16 03:31:10Z gerald $
 
 PORTNAME=	gcc48
-PORTVERSION=	4.8.3.s20131128
+PORTVERSION=	4.8.3.s20131212
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	snapshots/${DISTVERSION}
