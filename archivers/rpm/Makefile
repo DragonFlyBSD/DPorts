@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: archivers/rpm/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/rpm/Makefile 336153 2013-12-11 10:04:56Z bapt $
 
 PORTNAME=	rpm
 PORTVERSION=	3.0.6
@@ -12,7 +12,7 @@ MASTER_SITES=	http://rpm5.org/files/rpm/rpm-3.0/ \
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	The Red Hat Package Manager
 
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt
 
 CONFLICTS=	rpm-[45].*
 
