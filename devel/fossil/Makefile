@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fossil/Makefile 327915 2013-09-23 06:05:10Z bapt $
+# $FreeBSD: devel/fossil/Makefile 336222 2013-12-11 21:20:37Z bapt $
 
 PORTNAME=	fossil
 PORTVERSION=	20130911114349
@@ -15,6 +15,7 @@ LICENSE=	BSD
 PLIST_FILES=	bin/fossil
 
 HAS_CONFIGURE=	yes
+CONFIGURE_ARGS=	--prefix=${PREFIX}
 
 OPTIONS_DEFINE=	JSON STATIC
 JSON_DESC=	JSON API support
