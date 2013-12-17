@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/snack/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/snack/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	snack
 PORTVERSION=	2.2.10
@@ -36,7 +36,7 @@ CFLAGS+=	-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR} \
 		-I${LOCALBASE}/include
 
 .if ${PORT_OPTIONS:MVORBIS}
-LIB_DEPENDS+=	vorbis.4:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=	libvorbis.so:${PORTSDIR}/audio/libvorbis
 CONFIGURE_ARGS+=	--with-ogg-include=${LOCALBASE}/include \
 			--with-ogg-lib=${LOCALBASE}/lib
 ALL_TARGET=	all libsnackogg.so
