@@ -1,4 +1,4 @@
-# $FreeBSD: devel/delta/Makefile 332274 2013-10-31 19:07:29Z eadler $
+# $FreeBSD: devel/delta/Makefile 336365 2013-12-13 18:45:15Z eadler $
 
 PORTNAME=	delta
 PORTVERSION=	2006.08.03
@@ -8,7 +8,7 @@ MASTER_SITES=	LOCAL/eadler/delta
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Heuristically minimizes interesting files
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 PLIST_FILES=	bin/delta bin/multidelta bin/topformflat
 
