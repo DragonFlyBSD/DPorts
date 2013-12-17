@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-virtus/Makefile 332043 2013-10-30 02:47:06Z swills $
+# $FreeBSD: devel/rubygem-virtus/Makefile 336199 2013-12-11 18:49:44Z sunpoet $
 
 PORTNAME=	virtus
 PORTVERSION=	0.5.5
@@ -8,12 +8,13 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Attributes on Steroids for Plain Old Ruby Objects
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-backports>=3.3:${PORTSDIR}/devel/rubygem-backports \
 		rubygem-descendants_tracker>=0.0.1:${PORTSDIR}/devel/rubygem-descendants_tracker
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
