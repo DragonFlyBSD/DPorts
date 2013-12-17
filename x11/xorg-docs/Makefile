@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xorg-docs/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xorg-docs/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-docs
 PORTVERSION=	1.7
@@ -8,11 +8,8 @@ CATEGORIES=	x11
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org documentation files
 
-MAN7=	X.7 Standards.7 XProjectTeam.7 Consortium.7 Xsecurity.7 XOrgFoundation.7
-
 CONFIGURE_ARGS+=	--without-xmlto --without-fop --disable-specs
 
 XORG_CAT=	doc
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
