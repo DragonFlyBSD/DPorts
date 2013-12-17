@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: security/p5-Apache-Htpasswd/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Apache-Htpasswd/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	Apache-Htpasswd
 PORTVERSION=	1.8
@@ -7,7 +7,7 @@ CATEGORIES=	security perl5 www
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Manage Unix crypt-style password file
 
 BUILD_DEPENDS=	p5-Crypt-PasswdMD5>=0:${PORTSDIR}/security/p5-Crypt-PasswdMD5 \
