@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/libadplug/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
+# $FreeBSD: audio/libadplug/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	libadplug
 PORTVERSION=	2.2.1
@@ -12,7 +12,7 @@ COMMENT=	AdLib emulator library supporting many formats
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	binio:${PORTSDIR}/devel/libbinio
+LIB_DEPENDS=	libbinio.so:${PORTSDIR}/devel/libbinio
 
 USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
