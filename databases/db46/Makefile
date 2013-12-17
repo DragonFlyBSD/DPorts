@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/db46/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/db46/Makefile 336664 2013-12-16 20:46:12Z mandree $
 
 PORTNAME=	db46
 PORTVERSION=	4.6.21.4
@@ -31,6 +31,8 @@ PATCH_DIST_STRIP=	-d .. -l
 
 MAINTAINER=	gslin@gslin.org
 COMMENT=	The Berkeley DB package, revision 4.6
+
+DEPRECATED=	Please use databases/db5 or db6 for new installs.
 
 BDBVER=		${PORTVERSION:R:R}
 CONFIGURE_ARGS=	--enable-compat185 --enable-dump185 --enable-cxx \
