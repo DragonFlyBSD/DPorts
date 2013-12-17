@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-FITS-CFITSIO/Makefile 328611 2013-09-28 17:13:11Z sunpoet $
+# $FreeBSD: astro/p5-Astro-FITS-CFITSIO/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	Astro-FITS-CFITSIO
 PORTVERSION=	1.10
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for using the cfitsio library
 
-LIB_DEPENDS=	cfitsio:${PORTSDIR}/astro/cfitsio
+LIB_DEPENDS=	libcfitsio.so:${PORTSDIR}/astro/cfitsio
 
 CONFIGURE_ENV=	CFITSIO=${LOCALBASE}
 USES=		perl5
