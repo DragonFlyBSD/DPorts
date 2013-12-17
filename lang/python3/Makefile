@@ -1,7 +1,8 @@
-# $FreeBSD: lang/python3/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/python3/Makefile 336250 2013-12-12 08:12:13Z kwm $
 
 PORTNAME=	python3
 PORTVERSION=	${PYTHON_MAJOR_VER}
+PORTREVISION=	1
 CATEGORIES=	lang python ipv6
 MASTER_SITES=
 DISTFILES=
@@ -21,7 +22,8 @@ PLIST_FILES=	bin/2to3-${PYTHON_MAJOR_VER} \
 		bin/python${PYTHON_MAJOR_VER} \
 		bin/python${PYTHON_MAJOR_VER}-config \
 		bin/python-shared${PYTHON_MAJOR_VER} \
-		bin/python-shared${PYTHON_MAJOR_VER}-config
+		bin/python-shared${PYTHON_MAJOR_VER}-config \
+		libdata/pkgconfig/python${PYTHON_MAJOR_VER}.pc
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
@@ -38,6 +40,7 @@ do-install:
 .endfor
 	${LN} -sf ${PREFIX}/bin/python${PYTHON_VER}-config ${PREFIX}/bin/python${PYTHON_MAJOR_VER}-config
 	${LN} -sf ${PREFIX}/bin/python-shared${PYTHON_VER}-config ${PREFIX}/bin/python-shared${PYTHON_MAJOR_VER}-config
+	${LN} -sf ${PREFIX}/libdata/pkgconfig/python-${PYTHON_VER}.pc ${PREFIX}/libdata/pkgconfig/python${PYTHON_MAJOR_VER}.pc
 
 # Major upgrade support
 PORTUPGRADE_CMD=	${LOCALBASE}/sbin/portupgrade
