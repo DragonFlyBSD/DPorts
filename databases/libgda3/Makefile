@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda3/Makefile 333427 2013-11-10 19:18:42Z wg $
+# $FreeBSD: databases/libgda3/Makefile 336187 2013-12-11 18:08:52Z bapt $
 #   $MCom: ports/databases/libgda3/Makefile,v 1.11 2008/03/01 02:35:38 mezz Exp $
 
 PORTNAME=	libgda3
@@ -19,7 +19,7 @@ LIBGDA3_SLAVE?=	no
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt
 
 USE_AUTOTOOLS=	libtool
 USE_GCC=	any
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 .if ${LIBGDA3_SLAVE}=="firebird"
-LIB_DEPENDS+=		gds.2:${PORTSDIR}/databases/firebird20-client
+LIB_DEPENDS+=		libgds.so:${PORTSDIR}/databases/firebird20-client
 CONFIGURE_ARGS+=	--with-firebird=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-firebird
@@ -77,7 +77,7 @@ CONFIGURE_ARGS+=	--without-firebird
 BROKEN=		Does not compile on sparc64
 .endif
 
-LIB_DEPENDS+=		tds.5:${PORTSDIR}/databases/freetds
+LIB_DEPENDS+=		libtds.so:${PORTSDIR}/databases/freetds
 CONFIGURE_ARGS+=	--with-tds=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-tds
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=	--without-mdb
 .endif
 
 .if ${LIBGDA3_SLAVE}=="odbc"
-LIB_DEPENDS+=		odbc.2:${PORTSDIR}/databases/unixODBC
+LIB_DEPENDS+=		libodbc.so:${PORTSDIR}/databases/unixODBC
 CONFIGURE_ARGS+=	--with-odbc=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-odbc
