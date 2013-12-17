@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-arabic-misc/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/font-arabic-misc/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	font-arabic-misc
 PORTVERSION=	1.0.3
@@ -10,5 +10,4 @@ COMMENT=	X.Org miscellaneous Arabic fonts
 
 XORG_CAT=	font
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
