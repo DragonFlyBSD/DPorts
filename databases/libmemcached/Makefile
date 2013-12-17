@@ -1,4 +1,4 @@
-# $FreeBSD: databases/libmemcached/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/libmemcached/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	libmemcached
 PORTVERSION=	1.0.7
@@ -9,8 +9,8 @@ MASTER_SITES=	http://launchpad.net/${PORTNAME}/1.0/${PORTVERSION}/+download/
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	C and C++ client library to the memcached server
 
-LIB_DEPENDS?=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
-		event-1.4.4:${PORTSDIR}/devel/libevent
+LIB_DEPENDS?=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
+		libevent-1.4.so:${PORTSDIR}/devel/libevent
 
 FETCH_ARGS?=	-pRr
 USES=		gmake pathfix pkgconfig
@@ -24,7 +24,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libsasl.so.3)
-LIB_DEPENDS+=	sasl2.3:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 .endif
 
 .if !defined(NO_INSTALL_MANPAGES)
