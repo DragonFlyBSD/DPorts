@@ -1,7 +1,8 @@
-# $FreeBSD: ports-mgmt/pkg-devel/Makefile 336063 2013-12-10 15:44:42Z bapt $
+# $FreeBSD: ports-mgmt/pkg-devel/Makefile 336622 2013-12-16 11:16:41Z bapt $
 
 PORTNAME=	pkg
-DISTVERSION=	1.2.3
+DISTVERSION=	1.2.4
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://files.etoilebsd.net/pkg/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
@@ -11,7 +12,7 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	portmgr@FreeBSD.org
 COMMENT=	New generation package manager
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 USE_XZ=		yes
 
