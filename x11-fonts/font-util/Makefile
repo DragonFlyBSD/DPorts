@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-util/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/font-util/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	font-util
 PORTVERSION=	1.3.0
@@ -10,7 +10,4 @@ COMMENT=	Create an index of X font files in a directory
 
 XORG_CAT=	font
 
-MAN1=		bdftruncate.1 ucs2any.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
