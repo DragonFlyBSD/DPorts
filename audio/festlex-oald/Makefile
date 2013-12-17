@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festlex-oald/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/festlex-oald/Makefile 336296 2013-12-12 22:09:42Z eadler $
 
 PORTNAME=	festlex-oald
 PORTVERSION=	1.4.1
@@ -15,7 +15,7 @@ COMMENT=	Oxford Advanced Learner's pronunciation dictionary for Festival
 
 RUN_DEPENDS=	festival:${PORTSDIR}/audio/festival
 
-RESTRICTED=	no-commercial-use
+RESTRICTED=	No commercial use
 
 WRKSRC=		${WRKDIR}/festival
 
