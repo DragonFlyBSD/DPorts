@@ -1,5 +1,5 @@
 # Created by: erik@habatech.no
-# $FreeBSD: devel/sdts++/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: devel/sdts++/Makefile 336253 2013-12-12 10:53:38Z bapt $
 
 PORTNAME=	sdts++
 PORTVERSION=	1.5.1
@@ -11,7 +11,7 @@ MASTER_SITES=	http://thor-f5.er.usgs.gov/sdts/sdtsxx/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ library for SDTS related development
 
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 DOS2UNIX_FILES=	sdts++/io/sio_Utils.cpp
 USES=		bison dos2unix gmake
