@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/musicbox-tag-editor/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/musicbox-tag-editor/Makefile 336166 2013-12-11 14:35:36Z bapt $
 #   $MCom: ports/audio/musicbox-tag-editor/Makefile,v 1.5 2007/09/10 05:13:24 mezz Exp $
 
 PORTNAME=	musicbox-tag-editor
@@ -12,7 +12,7 @@ DISTNAME=	musicbox-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple GTK+ audio tag editor
 
-LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
 USES=		pathfix pkgconfig
 NO_STAGE=	yes
