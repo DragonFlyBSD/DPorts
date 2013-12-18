@@ -1,9 +1,9 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: databases/mytop/Makefile 328437 2013-09-27 08:07:40Z matthew $
+# $FreeBSD: databases/mytop/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	mytop
 PORTVERSION=	1.6
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	databases
 MASTER_SITES=	http://jeremy.zawodny.com/mysql/mytop/
 
@@ -14,6 +14,7 @@ RUN_DEPENDS=	p5-DBD-mysql>1.0:${PORTSDIR}/databases/p5-DBD-mysql \
 		p5-DBI>=1.13:${PORTSDIR}/databases/p5-DBI \
 		p5-Term-ReadKey>=2.10:${PORTSDIR}/devel/p5-Term-ReadKey
 
+NO_ARCH=	yes
 CONFLICTS=	mariadb-scripts-[0-9]*
 
 USES+=		perl5
