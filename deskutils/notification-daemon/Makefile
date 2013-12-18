@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: deskutils/notification-daemon/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/notification-daemon/Makefile 336190 2013-12-11 18:28:10Z bapt $
 #   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 
 PORTNAME=	notification-daemon
@@ -11,8 +11,8 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Send small notifications to your desktop
 
-LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
