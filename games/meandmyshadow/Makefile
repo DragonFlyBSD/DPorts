@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/meandmyshadow/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/meandmyshadow/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	meandmyshadow
 PORTVERSION=	0.4
@@ -31,7 +31,6 @@ DESKTOP_ENTRIES="Me and My Shadow" \
 		false
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
