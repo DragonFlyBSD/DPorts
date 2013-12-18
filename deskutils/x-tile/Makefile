@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: deskutils/x-tile/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/x-tile/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	x-tile
 PORTVERSION=	2.2.1
@@ -8,7 +8,7 @@ CATEGORIES=	deskutils devel python
 MASTER_SITES=	http://www.giuspen.com/software/
 
 MAINTAINER=	sawp@sawp.com.br
-COMMENT=	A GNOME applet to tile the opened windows
+COMMENT=	GNOME applet to tile the opened windows
 
 LICENSE=	GPLv2
 
@@ -33,5 +33,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
 		${WRKSRC}/x-tile ${WRKSRC}/linux/x-tile.desktop \
 		${WRKSRC}/modules/cons.py
+	@${REINPLACE_CMD} \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
