@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-xmlrpc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-xmlrpc/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	xmlrpc
 PORTVERSION=	1.1.2.r${SVN_REV}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-r${SVN_REV}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Provides an XML-RPC interface to Trac
 
 LICENSE=	BSD
