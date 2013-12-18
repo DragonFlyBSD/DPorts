@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: textproc/libwps/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libwps/Makefile 336413 2013-12-14 01:06:35Z bapt $
 
 PORTNAME=	libwps
 PORTVERSION=	0.2.9
@@ -13,25 +13,18 @@ LICENSE=	LGPL21 MPL
 LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
-LIB_DEPENDS=	wpd-0.9:${PORTSDIR}/textproc/libwpd
+LIB_DEPENDS=	libwpd-0.9.so:${PORTSDIR}/textproc/libwpd
 
 OPTIONS_DEFINE=	DOCS
 
 CONFIGURE_ARGS=	--disable-werror
 CPPFLAGS+=	-I${LOCALBASE}/include
 USE_AUTOTOOLS=	libtool
-USES=		pkgconfig
-USE_GNOME=	gnomehack gnomeprefix ltverhack
+USES=		pkgconfig pathfix
+USE_GNOME=	gnomeprefix ltverhack
 USE_LDCONFIG=	yes
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
 PORTDOCS=	*
-.else
-CONFIGURE_ARGS+=--without-docs
-.endif
+DOCS_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
+DOCS_CONFIGURE_OFF=	--without-docs
 
 .include <bsd.port.mk>
