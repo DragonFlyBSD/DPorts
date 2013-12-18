@@ -1,8 +1,8 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-notification/Makefile 329440 2013-10-05 11:25:29Z pawel $
+# $FreeBSD: mail/claws-mail-notification/Makefile 336489 2013-12-14 22:02:10Z pawel $
 
 PORTNAME=	notification
-PORTREVISION=	1
+PORTREVISION=	0
 
 COMMENT=	New mail notification plugin for Claws Mail
 
