@@ -1,5 +1,5 @@
 # Created by: Willem van Engen <wvengen@stack.nl>
-# $FreeBSD: misc/sword/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/sword/Makefile 336183 2013-12-11 16:55:56Z tabthorpe $
 
 PORTNAME=	sword
 PORTVERSION=	1.6.2
@@ -13,6 +13,8 @@ MAINTAINER=	tabthorpe@FreeBSD.org
 COMMENT=	Framework for manipulating Bible texts
 
 LICENSE=	GPLv2
+
+CONFLICTS=	sword-1.7.*
 
 BUILD_DEPENDS=	cppunit-config:${PORTSDIR}/devel/cppunit
 
