@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xrx/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xrx/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xrx
 PORTVERSION=	1.0.4
@@ -12,9 +12,6 @@ USE_XORG=	x11 xt xext xtrans xproxymngproto xau xaw ice
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 
-MAN1=		xrx.1 libxrx.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|mozilla-plugin|disabled-libxul-plugin|g' \
 		${WRKSRC}/configure
