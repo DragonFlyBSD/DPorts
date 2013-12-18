@@ -1,5 +1,5 @@
 # Created by: lx@redundancy.redundancy.org
-# $FreeBSD: audio/wmalbum/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/wmalbum/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	wmalbum
 PORTVERSION=	0.1.5
@@ -10,8 +10,8 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	lx@redundancy.redundancy.org
 COMMENT=	A dockapp to display album covers for xmms
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
-		gdk_pixbuf_xlib.2:${PORTSDIR}/graphics/gdk-pixbuf
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms \
+		libgdk_pixbuf_xlib.so:${PORTSDIR}/graphics/gdk-pixbuf
 
 GNU_CONFIGURE=	yes
 NO_STAGE=	yes
