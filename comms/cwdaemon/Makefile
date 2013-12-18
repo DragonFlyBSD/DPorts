@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/cwdaemon/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/cwdaemon/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	cwdaemon
 PORTVERSION=	0.9.4
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	db
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Amateur Radio cw (Morse code) keyer daemon
 
-LIB_DEPENDS=	cw:${PORTSDIR}/comms/unixcw
+LIB_DEPENDS=	libcw.so:${PORTSDIR}/comms/unixcw
 
 INSTALL_TARGET=	install-exec
 GNU_CONFIGURE=	yes
