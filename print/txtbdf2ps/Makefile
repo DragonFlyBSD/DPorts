@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: print/txtbdf2ps/Makefile 335729 2013-12-06 09:57:12Z ak $
+# $FreeBSD: print/txtbdf2ps/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	txtbdf2ps
 PORTVERSION=	0.7.1
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		http://oldrus-ispell.sourceforge.net/
