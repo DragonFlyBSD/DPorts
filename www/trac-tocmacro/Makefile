@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-tocmacro/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-tocmacro/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	tocmacro
 PORTVERSION=	11.0.0.3
@@ -8,7 +8,7 @@ CATEGORIES=	www devel python
 MASTER_SITES=	http://people.freebsd.org/~mm/trac/
 PKGNAMEPREFIX=	trac-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Table of contents macro
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
