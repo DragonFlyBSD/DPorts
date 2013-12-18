@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: databases/mysql2odbc/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/mysql2odbc/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	mysql2odbc
 PORTVERSION=	0.99.2
@@ -18,12 +18,12 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUNIXODBC}
-LIB_DEPENDS=	odbc:${PORTSDIR}/databases/unixODBC
+LIB_DEPENDS=	libodbc.so:${PORTSDIR}/databases/unixODBC
 CONFIGURE_ARGS=	--with-unixodbc=${LOCALBASE}
 .endif
 
 .if ${PORT_OPTIONS:MIODBC}
-LIB_DEPENDS=	iodbc:${PORTSDIR}/databases/libiodbc
+LIB_DEPENDS=	libiodbc.so:${PORTSDIR}/databases/libiodbc
 CONFIGURE_ARGS=	--with-iodbc
 .endif
 
