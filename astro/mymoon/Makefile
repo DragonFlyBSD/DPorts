@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: astro/mymoon/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD: astro/mymoon/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	mymoon
 DISTVERSION=	1.2a
@@ -12,7 +12,7 @@ MASTER_SITE_SUBDIR=	krion
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Show latitude and longitude of the moon
 
-LIB_DEPENDS=	nova:${PORTSDIR}/astro/libnova
+LIB_DEPENDS=	libnova.so:${PORTSDIR}/astro/libnova
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
