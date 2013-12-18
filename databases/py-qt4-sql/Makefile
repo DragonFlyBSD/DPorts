@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: databases/py-qt4-sql/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD: databases/py-qt4-sql/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sql
 PORTVERSION=	${PYQT4_VERSION}
@@ -45,7 +45,7 @@ ARGS=		-b ${PREFIX}/bin \
 ARGS+=		--no-qsci-api
 PLIST_SUB+=	API="@comment "
 .else
-LIB_DEPENDS+=	qscintilla2:${PORTSDIR}/devel/qscintilla2
+LIB_DEPENDS+=	libqscintilla2.so:${PORTSDIR}/devel/qscintilla2
 ARGS+=		--qsci-api --qsci-api-destdir=${QSCIDIR}
 PLIST_SUB+=	API=""
 .endif
