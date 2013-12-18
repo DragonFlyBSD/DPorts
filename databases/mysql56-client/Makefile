@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql56-client/Makefile 329247 2013-10-03 23:18:52Z flo $
+# $FreeBSD: databases/mysql56-client/Makefile 336716 2013-12-17 11:25:11Z ale $
 
 PORTNAME=	mysql
 PKGNAMESUFFIX=	56-client
@@ -24,5 +24,4 @@ MAN1=		comp_err.1 msql2mysql.1 mysql.1 mysql_config.1 mysql_config_editor.1 mysq
 
 CLIENT_ONLY=	yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
