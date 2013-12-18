@@ -1,4 +1,4 @@
-# $FreeBSD: math/slgrace/Makefile 332304 2013-10-31 23:37:49Z garga $
+# $FreeBSD: math/slgrace/Makefile 336342 2013-12-13 12:58:42Z garga $
 
 PORTNAME=	slgrace
 PORTVERSION=	0.2.2
@@ -23,7 +23,6 @@ SLANG_VER=	2.1
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
-PORTDOCS=	*
 PLIST_SUB=	VERSION=${PORTVERSION}
 
 post-patch:
