@@ -1,12 +1,13 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: mail/squirrelmail-login_auth-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-login_auth-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=		login_auth
 PORTVERSION=		3.0
+PORTREVISION=	1
+CATEGORIES=		mail www
 MASTER_SITES=		http://www.squirrelmail.org/plugins/ \
 			http://www.transit.hanse.de/mirror/www.squirrelmail.org/plugins/
 DISTNAME=		${PORTNAME}-${PORTVERSION}-1.4.0
-DIST_SUBDIR=		squirrelmail
 
 MAINTAINER=		stb@lassitu.de
 COMMENT=		Automatically log in user based on HTTP authentication
@@ -14,5 +15,7 @@ COMMENT=		Automatically log in user based on HTTP authentication
 SQUIRREL_PLUGIN_NAME=	${PORTNAME}
 
 NO_STAGE=	yes
+
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
