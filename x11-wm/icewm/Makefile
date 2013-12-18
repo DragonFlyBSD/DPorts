@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/icewm/Makefile 328638 2013-09-29 00:19:25Z eadler $
+# $FreeBSD: x11-wm/icewm/Makefile 335812 2013-12-07 05:34:49Z eadler $
 
 PORTNAME=	icewm
 PORTVERSION=	1.3.7
@@ -110,12 +110,10 @@ post-install:
 .for dir in taskbar themes/Infadel2/taskbar
 	@${LN} -s ${STARTUP_PIXMAP} ${STAGEDIR}${DATADIR}/${dir}/start.xpm
 .endfor
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 . for f in CHANGES INSTALL README TODO
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 . endfor
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.post.mk>
