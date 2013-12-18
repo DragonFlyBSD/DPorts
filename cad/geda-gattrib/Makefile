@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/geda-gattrib/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/geda-gattrib/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	gattrib
 PORTVERSION=	1.4.3
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The gEDA's attribute editor
 
 RUN_DEPENDS=	${LOCALBASE}/share/geda/sym:${PORTSDIR}/cad/geda-symbols
-LIB_DEPENDS=	geda.33:${PORTSDIR}/cad/libgeda
+LIB_DEPENDS=	libgeda.so:${PORTSDIR}/cad/libgeda
 
 DATADIR=	${PREFIX}/share/geda
 DOCSDIR=	${PREFIX}/share/doc/geda
