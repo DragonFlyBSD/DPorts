@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD: print/cups/Makefile 335993 2013-12-09 14:49:08Z bsam $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bsam@FreeBSD.org
 COMMENT=	Common UNIX Printing System: Metaport to install complete system
 
 BUILD_DEPENDS=	espgs:${PORTSDIR}/${PKGCATEGORY}/cups-pstoraster \
