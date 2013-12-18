@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: games/py-fife/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/py-fife/Makefile 336255 2013-12-12 11:14:49Z bapt $
 
 PORTNAME=		fife
 PORTVERSION=		0.3.4
@@ -17,10 +17,10 @@ COMMENT=		Flexible Isometric Free Engine
 
 BUILD_DEPENDS=		${LOCALBASE}/bin/swig:${PORTSDIR}/devel/swig13
 
-LIB_DEPENDS=		vorbisfile:${PORTSDIR}/audio/libvorbis \
-			guichan:${PORTSDIR}/devel/guichan \
-			boost_filesystem:${PORTSDIR}/devel/boost-libs \
-			png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=		libvorbisfile.so:${PORTSDIR}/audio/libvorbis \
+			libguichan.so:${PORTSDIR}/devel/guichan \
+			libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
+			libpng15.so:${PORTSDIR}/graphics/png
 
 FETCH_ARGS=		-Fpr
 
