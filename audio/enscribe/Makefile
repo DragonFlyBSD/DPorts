@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/enscribe/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/enscribe/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	enscribe
 PORTVERSION=	0.1.0
@@ -11,11 +11,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Create digital audio watermark images from photographic images
 
-LIB_DEPENDS=	sndfile:${PORTSDIR}/audio/libsndfile \
-		gd:${PORTSDIR}/graphics/gd \
-		jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png \
-		freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libgd.so:${PORTSDIR}/graphics/gd \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libfreetype.so:${PORTSDIR}/print/freetype2
 
 USES=		pkgconfig
 NO_STAGE=	yes
