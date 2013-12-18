@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: textproc/p5-File-Inplace/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-File-Inplace/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	File-Inplace
 PORTVERSION=	0.20
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module for in-place editing of files
 
 USES=		perl5
