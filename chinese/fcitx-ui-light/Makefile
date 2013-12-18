@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-ui-light/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/fcitx-ui-light/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	fcitx-ui-light
 PORTVERSION=	0.1.3
@@ -11,8 +11,8 @@ DIST_SUBDIR=	fcitx
 MAINTAINER=	lichray@gmail.com
 COMMENT=	An alternative light weight UI for Fcitx
 
-LIB_DEPENDS=	fcitx-config.4:${PORTSDIR}/chinese/fcitx \
-		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS=	libfcitx-config.so:${PORTSDIR}/chinese/fcitx \
+		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xft xpm
