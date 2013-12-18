@@ -1,18 +1,24 @@
-# $FreeBSD: mail/squirrelmail-timeout_user-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-timeout_user-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=	timeout_user
 PORTVERSION=	1.1.1
-PORTREVISION=	2
+PORTREVISION=	4
+CATEGORIES=		mail www
 DISTNAME=	${PORTNAME}-${PORTVERSION}-0.5
-DIST_SUBDIR=	squirrelmail
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatically logs a user out if they're idle for a set amount of time
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail-compatibility-plugin
+USE_SM_COMPAT=	yes
+USE_GENERIC_PKGMESSAGE=	yes
 
 NO_STAGE=	yes
+
+post-patch:
+	@${MV} ${WRKSRC}/${SQUIRREL_PLUGIN_NAME}/config.php ${WRKSRC}/${SQUIRREL_PLUGIN_NAME}/config.php.sample
+
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
