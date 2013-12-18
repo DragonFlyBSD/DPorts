@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <daniel+boodler@pelleg.org>
-# $FreeBSD: audio/boodler/Makefile 329268 2013-10-04 07:18:59Z bapt $
+# $FreeBSD: audio/boodler/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	boodler
 PORTVERSION=	1.5.3
@@ -16,7 +16,7 @@ RESTRICTED_FILES=	boodler-snd-021902.tar.gz
 
 NO_STAGE=	yes
 USES=		gmake
-USE_PYTHON=	yes
+USE_PYTHON=	2
 DRIVER?=	oss
 WRKSRC=		${WRKDIR}/${PORTNAME}
 BHOME=		${PREFIX}/share/boodler
@@ -34,7 +34,7 @@ pre-everything::
 	@${ECHO} ""
 
 .if ${DRIVER:tl} == "esd"
-LIB_DEPENDS+=	esd.2:${PORTSDIR}/audio/esound
+LIB_DEPENDS+=	libesd.so:${PORTSDIR}/audio/esound
 .endif
 
 .include <bsd.port.pre.mk>
@@ -44,6 +44,7 @@ PIC=	--PIC
 .endif
 
 post-patch:
+	${REINPLACE_CMD} -e "s|python|${PYTHON_CMD}|" ${WRKSRC}/Makefile
 	${REINPLACE_CMD} -e "s|^booroot=.*|booroot=${PREFIX}/share/boodler|" ${WRKSRC}/wrapper/boodler
 	@${RMDIR} ${WRKDIR}/boodler-snd/string
 
