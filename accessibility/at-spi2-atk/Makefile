@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/at-spi2-atk/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/at-spi2-atk/Makefile 336152 2013-12-11 09:51:36Z bapt $
 #   $MCom: ports/trunk/accessibility/at-spi2-atk/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	at-spi2-atk
@@ -14,7 +14,7 @@ COMMENT=	Assisted Technology Provider module for GTK+
 LICENSE=	LGPL21
 
 BUILD_DEPENDS=	at-spi2-core>=2.8.0:${PORTSDIR}/accessibility/at-spi2-core
-LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 RUN_DEPENDS=	at-spi2-core>=2.8.0:${PORTSDIR}/accessibility/at-spi2-core
 
 PORTSCOUT=	limitw:1,even
