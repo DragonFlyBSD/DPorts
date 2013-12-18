@@ -1,9 +1,9 @@
 # Created by: Shane Ambler <FreeBSD@Shaneware.biz>
-# $FreeBSD: graphics/opencolorio/Makefile 334956 2013-11-26 17:39:34Z mva $
+# $FreeBSD: graphics/opencolorio/Makefile 336544 2013-12-15 15:22:14Z mva $
 
 PORTNAME=	opencolorio
 PORTVERSION=	1.0.8
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	graphics multimedia
 
 MAINTAINER?=	FreeBSD@Shaneware.biz
@@ -37,6 +37,7 @@ CMAKE_ARGS+=	-DOCIO_USE_SSE:BOOL=OFF
 .include <bsd.port.options.mk>
 
 .if ${SLAVE_PORT} == no
+BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
 LIB_DEPENDS=	libtinyxml.so:${PORTSDIR}/textproc/tinyxml \
 		libyaml-cpp.so:${PORTSDIR}/devel/yaml-cpp
 USE_PYTHON=	2.6+
