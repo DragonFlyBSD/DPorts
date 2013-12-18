@@ -1,4 +1,4 @@
-# $FreeBSD: audio/kio-audiocd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/kio-audiocd/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	kio-audiocd
 PORTVERSION=	${KDE4_VERSION}
@@ -13,10 +13,10 @@ COMMENT=	KDE IOSlave for accessing audio CDs
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	FLAC:${PORTSDIR}/audio/flac \
-		cdda_paranoia.0:${PORTSDIR}/audio/cdparanoia \
-		ogg.8:${PORTSDIR}/audio/libogg \
-		vorbis.4:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac \
+		libcdda_paranoia.so:${PORTSDIR}/audio/cdparanoia \
+		libogg.so:${PORTSDIR}/audio/libogg \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
