@@ -1,4 +1,4 @@
-# $FreeBSD: databases/libodbc++/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/libodbc++/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	libodbc++
 PORTVERSION=	0.2.5
@@ -30,12 +30,12 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIODBC}
-LIB_DEPENDS=	iodbc.3:${PORTSDIR}/databases/libiodbc
+LIB_DEPENDS=	libiodbc.so:${PORTSDIR}/databases/libiodbc
 CONFIGURE_ARGS+=	--with-iodbc=${LOCALBASE}
 .endif
 
 .if ${PORT_OPTIONS:MUNIXODBC}
-LIB_DEPENDS=	odbc.2:${PORTSDIR}/databases/unixODBC
+LIB_DEPENDS=	libodbc.so:${PORTSDIR}/databases/unixODBC
 CONFIGURE_ARGS+=	--with-odbc=${LOCALBASE}
 .endif
 
