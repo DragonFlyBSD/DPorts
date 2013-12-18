@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 335215 2013-11-29 19:50:54Z sunpoet $
+# $FreeBSD: www/aria2/Makefile 335824 2013-12-07 10:50:23Z gjb $
 
 PORTNAME=	aria2
 PORTVERSION=	1.18.1
@@ -48,7 +48,7 @@ ARIA2_DISK_CACHE?=	16M
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} < 1000500 && !exists(/usr/lib/libc++.so)
+.if ${OSVERSION} < 1000100 && !exists(/usr/lib/libc++.so)
 BROKEN=		Build with clang and libc++ only
 .endif
 
