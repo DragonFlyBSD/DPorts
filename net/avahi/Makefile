@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/avahi/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/avahi/Makefile 336457 2013-12-14 16:25:21Z kwm $
 #   $MCom: ports/net/avahi/Makefile,v 1.30 2011/03/13 17:23:19 kwm Exp $
 
 PORTNAME=	avahi
@@ -11,7 +11,7 @@ DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	The "meta-port" for the Avahi service discovery suite
+COMMENT=	"meta-port" for the Avahi service discovery suite
 
 RUN_DEPENDS=	avahi-resolve:${PORTSDIR}/net/avahi-app \
 		avahi-app>=0.6.31:${PORTSDIR}/net/avahi-app
@@ -23,8 +23,9 @@ GTK_DESC=	Gtk+ tools and bindings
 LIBDNS_DESC=	Apple's mDNSResponder compatibility library
 
 NO_BUILD=	yes
+NO_INSTALL=	yes
+NO_MTREE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAUTOIPD}
@@ -50,7 +51,5 @@ RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/avahi-qt4.pc:${PORTSDIR}/net/avahi-
 .if ${PORT_OPTIONS:MPYTHON}
 RUN_DEPENDS+=	avahi-bookmarks:${PORTSDIR}/net/py-avahi
 .endif
-
-do-install:
 
 .include <bsd.port.mk>
