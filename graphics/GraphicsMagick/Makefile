@@ -1,5 +1,5 @@
 # Created by: Ron van Daal
-# $FreeBSD: graphics/GraphicsMagick/Makefile 332222 2013-10-31 11:06:16Z bapt $
+# $FreeBSD: graphics/GraphicsMagick/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.1.15
@@ -10,7 +10,7 @@ MASTER_SITES=	SF \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.1/
 PORTSCOUT=	limit:^1\.1\.
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast image processing tools based on ImageMagick
 
 CONFLICTS=	GraphicsMagick-1.[23].* GraphicsMagick1[23]-*
