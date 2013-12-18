@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: x11-servers/xorg-dmx/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-servers/xorg-dmx/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-dmx
 
@@ -20,12 +20,9 @@ CONFIGURE_ARGS=	--disable-xvfb --disable-xnest \
 		--without-xmlto	--disable-docs --disable-devel-docs \
 		--enable-dmx --localstatedir=/var --without-dtrace
 
-MAN1=		Xdmx.1 dmxtodmx.1 vdltodmx.1 xdmxconfig.1
-
 SLAVE_PORT=	yes
 
-NO_STAGE=	yes
 do-install:
-	cd ${WRKSRC}/hw/dmx; ${MAKE} install
+	cd ${WRKSRC}/hw/dmx; DESTDIR=${STAGEDIR} ${MAKE} install
 
 .include "${MASTERDIR}/Makefile"
