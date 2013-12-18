@@ -1,5 +1,5 @@
 # Created by: Gennady Sorokopud <gena@NetVision.net.il>
-# $FreeBSD: audio/xmcd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmcd/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmcd
 PORTVERSION=	3.3.2
@@ -10,8 +10,8 @@ MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/3.3.2/src/
 MAINTAINER=	eischen@vigrid.com
 COMMENT=	Motif CD player
 
-LIB_DEPENDS+=	vorbis.4:${PORTSDIR}/audio/libvorbis \
-		FLAC:${PORTSDIR}/audio/flac
+LIB_DEPENDS+=	libvorbis.so:${PORTSDIR}/audio/libvorbis \
+		libFLAC.so:${PORTSDIR}/audio/flac
 RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame
 
 USES=		imake motif
