@@ -1,5 +1,5 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
-# $FreeBSD: lang/gjs/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gjs/Makefile 335890 2013-12-08 13:29:41Z mva $
 #   $MCom: ports/trunk/lang/gjs/Makefile 18581 2013-06-23 10:50:00Z kwm $
 
 PORTNAME=	gjs
@@ -18,7 +18,7 @@ CONFLICTS_BUILD=spidermonkey17-1.7.*
 
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig shebangfix
-USE_PYTHON_BUILD=yes
+USE_PYTHON_BUILD=2
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
 		intlhack ltverhack
@@ -26,6 +26,8 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+python_OLD_CMD=	/usr/bin/env python
+python_CMD=	/usr/bin/env python2
 SHEBANG_FILES=	scripts/make-tests
 
 NO_STAGE=	yes
