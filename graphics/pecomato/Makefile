@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/pecomato/Makefile 331587 2013-10-25 14:17:10Z ehaupt $
+# $FreeBSD: graphics/pecomato/Makefile 336546 2013-12-15 15:46:16Z mva $
 
 PORTNAME=	pecomato
 PORTVERSION=	0.0.15
@@ -18,7 +18,7 @@ MAKEFILE=	Makefile.unix
 PLIST_FILES=	bin/pecomato man/man1/pecomato.1.gz
 
 post-build:
-	${PYTHON} ${WRKSRC}/devtools/txt2tags.py --no-rc -t man \
+	${PYTHON_CMD} ${WRKSRC}/devtools/txt2tags.py --no-rc -t man \
 		-i ${WRKSRC}/doc/manpage.t2t -o ${WRKSRC}/doc/${PORTNAME}.1
 
 post-patch:
