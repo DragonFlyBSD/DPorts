@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11/xcolors/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xcolors/Makefile 336394 2013-12-13 23:47:20Z bapt $
 
 PORTNAME=	xcolors
 PORTVERSION=	1.3
@@ -17,7 +17,5 @@ RUN_DEPENDS=	showrgb:${PORTSDIR}/x11/rgb
 WRKSRC=		${WRKDIR}/xcolors
 USE_XORG=	xaw xmu xt sm ice xpm xp xext x11
 USES=		imake
-MAN1=		xcolors.1
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
