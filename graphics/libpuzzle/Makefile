@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libpuzzle/Makefile 330785 2013-10-18 23:03:41Z bapt $
+# $FreeBSD: graphics/libpuzzle/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	libpuzzle
 PORTVERSION=	0.11
@@ -6,7 +6,7 @@ PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/misc/libpuzzle/releases/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library to find similar pictures
 
 LICENSE=	BSD
