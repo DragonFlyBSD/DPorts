@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: textproc/foiltex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/foiltex/Makefile 336296 2013-12-12 22:09:42Z eadler $
 
 PORTNAME=	foiltex
 PORTVERSION=	2.1.4b
@@ -12,7 +12,7 @@ DISTFILES=	foiltex.dtx foiltex.ins
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A collection of LaTeX files for making foils
 
-NO_CDROM=	redistribution on a not-for-profit basis only
+NO_CDROM=	Redistribution on a not-for-profit basis only
 
 USE_TEX=	latex
 NO_WRKSUBDIR=	yes
