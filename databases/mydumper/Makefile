@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/mydumper/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/mydumper/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	mydumper
 PORTVERSION=	0.5.2
@@ -11,7 +11,7 @@ COMMENT=	MySQL Data Dumper
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/a//}
 
