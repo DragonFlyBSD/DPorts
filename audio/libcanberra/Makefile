@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/libcanberra/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libcanberra/Makefile 336166 2013-12-11 14:35:36Z bapt $
 #   $MCom: ports/audio/libcanberra/Makefile,v 1.28 2011/06/11 18:55:56 mezz Exp $
 
 PORTNAME=	libcanberra
@@ -14,7 +14,7 @@ COMMENT=	Implementation of the Freedesktop sound theme spec
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LGPL
 
-LIB_DEPENDS=	vorbisfile:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libvorbisfile.so:${PORTSDIR}/audio/libvorbis
 
 USES=		gmake pkgconfig
 NO_STAGE=	yes
@@ -37,13 +37,13 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 
 .if defined(SLAVEPORT)
 USE_GNOME+=	gtk30
-LIB_DEPENDS+=	canberra:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS+=	libcanberra.so:${PORTSDIR}/audio/libcanberra
 CONFIGURE_ARGS+=--enable-gtk3
 .else
 CONFIGURE_ARGS+=--disable-gtk3
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
-LIB_DEPENDS+=	pulse:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS+=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 PLIST_SUB+=	PULSE=""
 .else
 CONFIGURE_ARGS+=--disable-pulse
