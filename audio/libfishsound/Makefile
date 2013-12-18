@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 335252 2013-11-30 00:17:44Z sunpoet $
+# $FreeBSD: audio/libfishsound/Makefile 336301 2013-12-13 00:54:49Z sunpoet $
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
@@ -11,7 +11,7 @@ MASTER_SITES=	http://downloads.xiph.org/releases/libfishsound/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Programing interface to decode/encode audio data
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac \
 		libspeex.so:${PORTSDIR}/audio/speex \
