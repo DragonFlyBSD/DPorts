@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_xmlns/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_xmlns/Makefile 336555 2013-12-15 16:45:38Z ohauer $
 
 PORTNAME=	mod_xmlns
 PORTVERSION=	0.97
@@ -12,24 +12,21 @@ DISTFILES=	xmlns.h mod_xmlns.c
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for XML namespaces
 
+LICENSE=	GPLv2
 
 USE_GNOME=	libxml2
 USE_APACHE=	22+
 
-XML2_INC=	${LOCALBASE}/include/libxml2
-XML2_LIB=	${LOCALBASE}/lib
+AP_FAST_BUILD=	yes
+AP_GENPLIST=	yes
+AP_INC+=	${LOCALBASE}/include/libxml2
+AP_LIB+=	${LOCALBASE}/lib -lxml2
+SRC_FILE=	mod_xmlns.c
 
-NO_STAGE=	yes
 pre-extract:
-	@${MKDIR} ${WRKDIR}
+	@${MKDIR} ${WRKSRC}
 
 do-extract:
-	@${CP} ${DISTDIR}/xmlns.h ${DISTDIR}/mod_xmlns.c ${WRKDIR}
-
-do-build:
-	@(cd ${WRKDIR} && ${APXS} -c -I ${XML2_INC} -L ${XML2_LIB} -lxml2 mod_xmlns.c)
-
-do-install:
-	@(cd ${WRKDIR} && ${APXS} -A -i mod_xmlns.la)
+	@${CP} ${DISTDIR}/xmlns.h ${DISTDIR}/mod_xmlns.c ${WRKSRC}
 
 .include <bsd.port.mk>
