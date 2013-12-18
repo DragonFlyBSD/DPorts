@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/ncmpc/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ncmpc/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	ncmpc
 PORTVERSION=	0.20
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/musicpd/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	henrik@affekt.org
 COMMENT=	Ncurses client for the musicpd
 
-LIB_DEPENDS=	mpdclient:${PORTSDIR}/audio/libmpdclient
+LIB_DEPENDS=	libmpdclient.so:${PORTSDIR}/audio/libmpdclient
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
