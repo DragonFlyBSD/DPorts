@@ -1,8 +1,8 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: devel/py-mongoengine/Makefile 335672 2013-12-05 15:35:21Z wg $
+# $FreeBSD: devel/py-mongoengine/Makefile 335842 2013-12-07 19:01:36Z wg $
 
 PORTNAME=	mongoengine
-PORTVERSION=	0.8.5
+PORTVERSION=	0.8.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
