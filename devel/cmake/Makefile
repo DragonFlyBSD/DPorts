@@ -1,10 +1,10 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 334134 2013-11-17 23:20:42Z rakuco $
+# $FreeBSD: devel/cmake/Makefile 336159 2013-12-11 12:55:08Z rakuco $
 
 PORTNAME=	cmake
 PORTVERSION=	2.8.12.1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cmake.org/files/v2.8/
+MASTER_SITES=	http://downloads.cmake.org/files/v2.8/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT?=	Cross-platform Makefile generator
