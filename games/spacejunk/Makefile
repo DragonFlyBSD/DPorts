@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/spacejunk/Makefile 332138 2013-10-30 15:59:36Z amdmi3 $
+# $FreeBSD: games/spacejunk/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	spacejunk
 PORTVERSION=	1.0.5
@@ -33,7 +33,6 @@ DESKTOP_ENTRIES="Spacejunk" \
 		false
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.options.mk>
 
@@ -50,6 +49,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/spacejunk ${STAGEDIR}${PREFIX}/libexec/
 	cd ${WRKSRC} && ${COPYTREE_SHARE} 'data config.txt' ${STAGEDIR}${DATADIR}/
 	${INSTALL_SCRIPT} ${WRKDIR}/spacejunk ${STAGEDIR}${PREFIX}/bin/
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
