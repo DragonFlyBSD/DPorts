@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/py-cups/Makefile 335196 2013-11-29 16:58:18Z sunpoet $
+# $FreeBSD: print/py-cups/Makefile 336203 2013-12-11 19:02:47Z sunpoet $
 
 PORTNAME=	cups
 PORTVERSION=	1.9.66
@@ -37,5 +37,8 @@ post-patch:
 pre-configure:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' ${WRKSRC}/cupsconnection.c
 	@${REINPLACE_CMD} -e 's|#ifdef __SVR4|#ifdef __FreeBSD__|' ${WRKSRC}/cupsppd.c
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/cups.so
 
 .include <bsd.port.post.mk>
