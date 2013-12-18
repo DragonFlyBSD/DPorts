@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: audio/vitunes/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/vitunes/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	vitunes
 PORTVERSION=	2.3
@@ -14,7 +14,7 @@ MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	A curses-based media player with vim-like keybinds
 
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
-LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
 NO_STAGE=	yes
 ALL_TARGET=	vitunes
