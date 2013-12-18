@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/freetar/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/freetar/Makefile 336108 2013-12-10 20:44:05Z bapt $
 
 PORTNAME=	freetar
 PORTVERSION=	0.9
@@ -12,12 +12,14 @@ COMMENT=	TAR archiver for GNUstep
 
 LICENSE=	GPLv2
 
-NO_STAGE=	yes
 USE_GNUSTEP=	yes
 USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/FreeTar_1_1_1_Source
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${GNUSTEP_PREFIX}/Local/Applications/FreeTar.app/FreeTar
 
 .include <bsd.port.mk>
