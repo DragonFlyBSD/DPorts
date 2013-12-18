@@ -1,4 +1,4 @@
-# $FreeBSD: astro/gmapcatcher/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/gmapcatcher/Makefile 336055 2013-12-10 10:13:13Z wg $
 
 PORTNAME=	gmapcatcher
 PORTVERSION=	0.8.0.4
@@ -17,8 +17,8 @@ NO_STAGE=	yes
 USE_GNOME=	pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYDISTUTILS_NOEGGINFO=	yes
-PLIST_SUB=	PORTVERSION="${PORTVERSION}" PYTHON_VER="${PYTHON_VER}"
+PYDISTUTILS_AUTOPLIST=	yes
+PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/share/pixmaps,${PREFIX}/share/pixmaps,g' \
