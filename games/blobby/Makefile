@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/blobby/Makefile 335549 2013-12-03 08:34:29Z martymac $
+# $FreeBSD: games/blobby/Makefile 336059 2013-12-10 11:58:56Z martymac $
 
 PORTNAME=	blobby
 PORTVERSION=	1.0r3
@@ -29,14 +29,8 @@ WRKSRC=		${WRKDIR}/blobby-1.0rc3
 
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README TODO
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR}  ${STAGEDIR}${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc}  ${STAGEDIR}${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
