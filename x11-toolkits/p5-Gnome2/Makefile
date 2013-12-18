@@ -1,10 +1,11 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/p5-Gnome2/Makefile 330997 2013-10-20 10:07:24Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Gnome2/Makefile 336212 2013-12-11 19:42:51Z sunpoet $
 
 PORTNAME=	Gnome2
-PORTVERSION=	1.044
+PORTVERSION=	1.045
 CATEGORIES=	x11-toolkits gnome perl5
-MASTER_SITES=	SF/gtk2-perl/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	CPAN \
+		SF/gtk2-perl/${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
