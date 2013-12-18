@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: net-mgmt/cricket/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/cricket/Makefile 336210 2013-12-11 19:35:22Z eadler $
 
 PORTNAME=	cricket
 PORTVERSION=	1.0.5
@@ -8,7 +8,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A high performance, extremely flexible monitoring system
+COMMENT=	High performance, flexible monitoring system
 
 RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
