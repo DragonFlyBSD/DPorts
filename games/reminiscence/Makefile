@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/reminiscence/Makefile 330695 2013-10-17 23:52:24Z amdmi3 $
+# $FreeBSD: games/reminiscence/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	REminiscence
 PORTVERSION=	0.2.1
@@ -25,7 +25,6 @@ PLIST_FILES=	bin/remin
 PLIST_DIRSTRY=	%%DATADIR%%/data %%DATADIR%%
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|DATA|${DATADIR}/data|' ${WRKSRC}/main.cpp
