@@ -1,6 +1,3 @@
-
-$FreeBSD: x11/hotwire-shell/files/patch-hotwire__ui_renderers_file.py 300897 2012-07-14 14:29:18Z beat $
-
 --- hotwire_ui/renderers/file.py.orig
 +++ hotwire_ui/renderers/file.py
 @@ -245,7 +245,10 @@
