@@ -1,32 +1,28 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: www/mod_auth_external2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_auth_external2/Makefile 336524 2013-12-15 12:58:07Z ohauer $
 
 PORTNAME=	mod_auth_external
 PORTVERSION=	2.2.11
 PORTREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://www.unixpapa.com/software/
+MASTER_SITES=	GOGLE_CODE
+PKGNAMESUFFIX=	2
 DIST_SUBDIR=	apache2
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows users authentication based on external mechanisms
 
+LICENSE=	AL2
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
-LATEST_LINK=	mod_auth_external2
 SHORTMODNAME=	auth_external
 
 PORTDOCS=	AUTHENTICATORS INSTALL README
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/
-.   for f in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/
-.   endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
