@@ -1,4 +1,4 @@
-# $FreeBSD: x11/listres/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/listres/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	listres
 PORTVERSION=	1.0.3
@@ -10,9 +10,6 @@ COMMENT=	List resources in widgets
 XORG_CAT=	app
 USE_XORG=	xproto xt xmu xaw
 
-PLIST_FILES=	bin/listres
+PLIST_FILES=	bin/listres man/man1/listres.1.gz
 
-MAN1=		listres.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
