@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA
-# $FreeBSD: x11/xcoloredit/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xcoloredit/Makefile 336395 2013-12-13 23:49:07Z bapt $
 
 PORTNAME=	xcoloredit
 PORTVERSION=	1.2
@@ -15,9 +15,7 @@ COMMENT=	Find colour values by graphical colour mixing
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
-MANCOMPRESSED=	yes
-MAN1=		xcoloredit.1
-PLIST_FILES=	bin/xcoloredit
+PLIST_FILES=	bin/xcoloredit \
+		man/man1/xcoloredit.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
