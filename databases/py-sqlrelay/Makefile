@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/py-sqlrelay/Makefile 331904 2013-10-28 22:01:40Z pawel $
+# $FreeBSD: databases/py-sqlrelay/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	${SQLRELAY_PORTNAME}
 PORTVERSION=	${SQLRELAY_PORTVERSION}
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python modules to access to SQL Relay
 
 EXTRACT_DEPENDS=	${NONEXISTENT}:${SQLRELAY_PORTDIR}:patch
-LIB_DEPENDS=	sqlrclient.0:${SQLRELAY_PORTDIR}
+LIB_DEPENDS=	libsqlrclient.so:${SQLRELAY_PORTDIR}
 
 USE_PYTHON=	yes
 USES=		perl5
