@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: multimedia/avbin/Makefile 332115 2013-10-30 14:19:46Z amdmi3 $
+# $FreeBSD: multimedia/avbin/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	avbin
 PORTVERSION=	7
@@ -21,7 +21,6 @@ USE_LDCONFIG=	yes
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.options.mk>
 
@@ -40,6 +39,6 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${LIBNAME} ${STAGEDIR}${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/include/avbin.h ${STAGEDIR}${PREFIX}/include/
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
