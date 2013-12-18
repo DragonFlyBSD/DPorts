@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/libechonest/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libechonest/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	libechonest
 PORTVERSION=	2.0.3
@@ -11,7 +11,7 @@ COMMENT=	Collection of C++/Qt classes designed to use the APIs of The Echo Nest
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	qjson:${PORTSDIR}/devel/qjson
+LIB_DEPENDS=	libqjson.so:${PORTSDIR}/devel/qjson
 
 GH_ACCOUNT=	lfranchi
 GH_PROJECT=	${PORTNAME}
