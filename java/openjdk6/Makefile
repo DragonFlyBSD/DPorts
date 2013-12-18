@@ -1,9 +1,9 @@
 # Created by: Brian Gardner <brian@experts-exchange.com>
-# $FreeBSD: java/openjdk6/Makefile 335646 2013-12-04 23:20:35Z jkim $
+# $FreeBSD: java/openjdk6/Makefile 336136 2013-12-11 01:18:33Z jkim $
 
 PORTNAME=	openjdk6
 PORTVERSION=	b28
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	java devel
 MASTER_SITES=	${MASTER_SITE_APACHE:S,%SUBDIR%/,ant/binaries/:ant,} \
 		http://download.java.net/openjdk/jtreg/promoted/4.1/b05/:jtreg \
