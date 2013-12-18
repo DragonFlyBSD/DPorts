@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/adplay/Makefile 331591 2013-10-25 14:52:21Z ehaupt $
+# $FreeBSD: audio/adplay/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	adplay
 PORTVERSION=	1.7
@@ -15,7 +15,7 @@ COMMENT=	AdLib player using adplug library
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	adplug:${PORTSDIR}/audio/libadplug
+LIB_DEPENDS=	libadplug.so:${PORTSDIR}/audio/libadplug
 
 GNU_CONFIGURE=	yes
 WANT_SDL=	yes
