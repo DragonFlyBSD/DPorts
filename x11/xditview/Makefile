@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xditview/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xditview/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xditview
 PORTVERSION=	1.0.3
@@ -12,7 +12,4 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	xt xaw
 
-MAN1=		xditview.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
