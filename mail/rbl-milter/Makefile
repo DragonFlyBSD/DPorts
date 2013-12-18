@@ -1,5 +1,5 @@
 # Created by: wolpert
-# $FreeBSD: mail/rbl-milter/Makefile 335217 2013-11-29 19:56:51Z dinoex $
+# $FreeBSD: mail/rbl-milter/Makefile 335807 2013-12-07 05:06:24Z dinoex $
 
 PORTNAME=	rbl-milter
 PORTVERSION=	0.30
@@ -10,12 +10,11 @@ MASTER_SITES=	http://opensource.confusticate.com/rbl-milter/
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	A milter that adds mail header warnings on mail from open-relays
 
-USE_RC_SUBR=	rblmilter
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-
 CONFIGURE_ENV+=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" PTHREAD_LIBS="${PTHREAD_LIBS}"
 
+USE_RC_SUBR=	rblmilter
 PLIST_FILES=	sbin/rbl-milter
 
 .if defined(NO_WERROR)
