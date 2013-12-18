@@ -1,5 +1,5 @@
 # Created by: Damian Gerow <dgerow@afflictions.org>
-# $FreeBSD: databases/ruby-tokyocabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ruby-tokyocabinet/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.31
@@ -12,7 +12,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	dgerow@afflictions.org
 COMMENT=	Ruby interface to the Tokyo Cabinet DB engine
 
-LIB_DEPENDS=	tokyocabinet.9:${PORTSDIR}/databases/tokyocabinet
+LIB_DEPENDS=	libtokyocabinet.so:${PORTSDIR}/databases/tokyocabinet
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
