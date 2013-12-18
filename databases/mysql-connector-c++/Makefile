@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: databases/mysql-connector-c++/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/mysql-connector-c++/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	mysql-connector-c++
 PORTVERSION=	1.1.3
@@ -12,7 +12,7 @@ COMMENT=	A MySQL database connector for C++
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 
 USE_MYSQL=	51+
 USE_LDCONFIG=	yes
