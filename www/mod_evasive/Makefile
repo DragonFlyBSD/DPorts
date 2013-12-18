@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: www/mod_evasive/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_evasive/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_evasive
 PORTVERSION=	1.10.1
@@ -10,21 +10,18 @@ DISTNAME=	mod_evasive_${PORTVERSION}
 DIST_SUBDIR=	apache2
 
 MAINTAINER=	kiwi@oav.net
-COMMENT=	An Apache module to try to protect the HTTP Server from DoS/DDoS attacks
+COMMENT=	Apache module to try to protect the HTTP Server from DoS/DDoS attacks
 
+LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
-
-PORTDOCS=	LICENSE README test.pl
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 MODULENAME=	${PORTNAME}20
+
+PORTDOCS=	README test.pl
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|/bin/mail|/usr/bin/mail|g" \
@@ -32,11 +29,7 @@ post-patch:
 		${WRKSRC}/mod_evasiveNSAPI.c
 
 post-install:
-.if !defined (NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.   for f in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.   endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
