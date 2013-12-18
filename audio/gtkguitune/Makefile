@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: audio/gtkguitune/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gtkguitune/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gtkguitune
 PORTVERSION=	0.8
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-gtk2-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Guitar (and other instruments) tuner for GTK+2
 
-LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
+LIB_DEPENDS=	libgtkmm-2.4.so:${PORTSDIR}/x11-toolkits/gtkmm24
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
