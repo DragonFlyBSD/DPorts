@@ -1,12 +1,12 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-hiera-json/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-hiera-json/Makefile 336657 2013-12-16 18:57:31Z mat $
 
 PORTNAME=	hiera-json
 PORTVERSION=	0.4.0
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	mat@FreeBSD.org
 COMMENT=	A backend for Hiera that queries JSON data
 
 RUN_DEPENDS=	puppet>=0:${PORTSDIR}/sysutils/puppet \
