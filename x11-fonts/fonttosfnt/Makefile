@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/fonttosfnt/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/fonttosfnt/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	fonttosfnt
 PORTVERSION=	1.0.4
@@ -12,9 +12,6 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
 XORG_CAT=	app
 USE_XORG=	xproto fontenc
 
-PLIST_FILES=	bin/fonttosfnt
+PLIST_FILES=	bin/fonttosfnt man/man1/fonttosfnt.1.gz
 
-MAN1=		fonttosfnt.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
