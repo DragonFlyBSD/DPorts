@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/picard/Makefile 328698 2013-09-29 14:22:27Z jhale $
+# $FreeBSD: audio/picard/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	picard
 PORTVERSION=	1.2
@@ -45,6 +45,7 @@ RUN_DEPENDS+=	metaflac:${PORTSDIR}/audio/flac \
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|'picard.plugins',|'picard.plugins', 'picard.plugins.lastfm', 'picard.plugins.lastfmplus', 'picard.plugins.replaygain',|" \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
 		${WRKSRC}/setup.py
 	@${CP} -R ${WRKSRC}/contrib/plugins/ ${WRKSRC}/picard/plugins
 
