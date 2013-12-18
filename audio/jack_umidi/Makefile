@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/jack_umidi/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/jack_umidi/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	jack_umidi
 PORTVERSION=	1.0.4
@@ -12,7 +12,7 @@ COMMENT=	Daemon that converts a raw MIDI device into a JACK MIDI device
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack
 
 USE_BZIP2=	yes
 NO_STAGE=	yes
