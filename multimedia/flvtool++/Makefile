@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/flvtool++/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/flvtool++/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	flvtool++
 PORTVERSION=	1.2.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://mirror.facebook.net/facebook/flvtool++/
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Tool for hinting and manipulating the metadata of FLV files
 
-LIB_DEPENDS=	boost_iostreams:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_iostreams.so:${PORTSDIR}/devel/boost-libs
 
 CFLAGS+=	-I${LOCALBASE}/include/boost
 NO_WRKSUBDIR=	yes
