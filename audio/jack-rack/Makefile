@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: audio/jack-rack/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/jack-rack/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	jack-rack
 PORTVERSION=	1.4.7
@@ -11,8 +11,8 @@ MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	LADSPA effects rack for the JACK audio server
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
-LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
-		lrdf:${PORTSDIR}/textproc/liblrdf
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack \
+		liblrdf.so:${PORTSDIR}/textproc/liblrdf
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 USE_BZIP2=	yes
