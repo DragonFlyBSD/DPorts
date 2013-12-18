@@ -1,7 +1,8 @@
-@comment $FreeBSD: chinese/hc/pkg-plist 328366 2013-09-26 14:35:04Z vanilla $
+@comment $FreeBSD: chinese/hc/pkg-plist 336487 2013-12-14 21:12:23Z antoine $
 bin/b2g
 bin/g2b
 bin/hc
+man/man1/hc.1.gz
 share/chinese/hc-supp.tab
 share/chinese/hc.tab
 @dirrmtry share/chinese

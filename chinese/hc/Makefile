@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: chinese/hc/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD: chinese/hc/Makefile 336487 2013-12-14 21:12:23Z antoine $
 
 PORTNAME=	hc
 PORTVERSION=	3.0
@@ -24,6 +24,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/g2b ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/hc.tab ${STAGEDIR}${PREFIX}/share/chinese
 	${INSTALL_DATA} ${DISTDIR}/hc-supp.tab ${STAGEDIR}${PREFIX}/share/chinese
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
