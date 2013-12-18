@@ -1,21 +1,21 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-user_special_mailboxes-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-user_special_mailboxes-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=	user_special_mailboxes
 PORTVERSION=	0.1
-PORTREVISION=	1
+PORTREVISION=	2
+CATEGORIES=		mail www
 DISTNAME=	${PORTNAME:S/-/_/}.${PORTVERSION}-1.4
-DIST_SUBDIR=	squirrelmail
 
 MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Lets define folders to be displayed at the top of the folders list
 
 USE_SM_COMPAT=	yes
-USES=		perl5
-USE_PERL5=	run
 
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
 NO_STAGE=	yes
+
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
