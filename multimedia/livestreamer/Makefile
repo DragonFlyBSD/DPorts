@@ -1,9 +1,8 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: multimedia/livestreamer/Makefile 335313 2013-11-30 18:14:55Z nox $
+# $FreeBSD: multimedia/livestreamer/Makefile 335866 2013-12-08 06:10:24Z eadler $
 
 PORTNAME=	livestreamer
-PORTVERSION=	1.7.0
-PORTREVISION=	1
+PORTVERSION=	1.7.1
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
