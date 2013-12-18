@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/biggles/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/biggles/Makefile 336583 2013-12-15 21:33:13Z mva $
 
 PORTNAME=	biggles
 PORTVERSION=	1.6.6
@@ -17,15 +17,17 @@ BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	libplot.so:${PORTSDIR}/graphics/plotutils
 
 USES=		gmake
-USE_PYTHON=	yes
+USE_PYTHON=	2
 MAKE_ARGS=	CC="${CC}" \
 		CFLAGS="${CFLAGS} -fPIC" \
 		LIBPLOT_CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBPLOT_LDFLAGS="-L${LOCALBASE}/lib -lplot"
+		LIBPLOT_LDFLAGS="-L${LOCALBASE}/lib -lplot" \
+		PYTHON="${PYTHON_CMD}"
 
 NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/CC/s,gcc,$$\{CC\},' ${WRKSRC}/make.inc
+	@${REINPLACE_CMD} -e 's|= python|= ${PYTHON_CMD}|' ${WRKSRC}/make.inc
 
 pre-build:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
