@@ -1,5 +1,5 @@
 # Created by: Andrew Shevtsov <nyxo@dnuc.polyn.kiae.su>
-# $FreeBSD: benchmarks/dbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/dbench/Makefile 336168 2013-12-11 14:38:29Z bapt $
 
 PORTNAME=	dbench
 PORTVERSION=	4.0
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	../../ftp/tridge/dbench
 MAINTAINER=	jlaffaye@FreeBSD.org
 COMMENT=	A simulation of the Ziff-Davis netbench benchmark
 
-LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt
 
 LICENSE=	GPLv3
 
