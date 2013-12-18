@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/kicad-devel/Makefile 335626 2013-12-04 18:48:48Z makc $
+# $FreeBSD: cad/kicad-devel/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	wxgtk2-2.8-config:${PORTSDIR}/x11-toolkits/wxgtk28 \
 		bzr:${PORTSDIR}/devel/bzr \
 		${LOCALBASE}/lib/${PYTHON_VERSION}/site-packages/bzrlib/plugins/bzrtools/bzrtools.py:${PORTSDIR}/devel/bzrtools
 
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 CONFLICTS=      kicad-2008*
 
