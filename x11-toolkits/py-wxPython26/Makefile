@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	wxPython
 PORTVERSION=	2.6.3.3
@@ -151,6 +151,7 @@ post-install:
 # fix installation permissions
 	${CHMOD} -R a+rX \
 		${PYTHON_SITELIBDIR:C@^${LOCALBASE}@${PREFIX}@}/${WX_PYTHON_DIR}
+	@${RM} -rf ${PYTHON_SITELIBDIR:C@^${LOCALBASE}@${PREFIX}@}/${WX_PYTHON_DIR}/*egg-info
 .endif
 ##
 # wxversion wxPython available list
