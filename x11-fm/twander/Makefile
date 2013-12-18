@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: x11-fm/twander/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/twander/Makefile 336474 2013-12-14 19:19:06Z wg $
 
 PORTNAME=	twander
 PORTVERSION=	3.231
@@ -26,5 +26,13 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
 .endfor
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's|/usr/bin/env python|${PYTHON_CMD}|' \
+		${WRKSRC}/twander.py
+	@${REINPLACE_CMD} \
+		-e 's|python |${PYTHON_CMD} |' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
