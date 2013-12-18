@@ -1,5 +1,5 @@
 # Created by: Lukas Maly
-# $FreeBSD: astro/gpscorrelate/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/gpscorrelate/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	gpscorrelate
 PORTVERSION=	1.6.1
@@ -13,8 +13,8 @@ COMMENT=	Correlate digital camera photos with GPS data in GPX format
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	exiv2:${PORTSDIR}/graphics/exiv2 \
-		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
+LIB_DEPENDS=	libexiv2.so:${PORTSDIR}/graphics/exiv2 \
+		libgtkmm-2.4.so:${PORTSDIR}/x11-toolkits/gtkmm24
 
 OPTIONS_DEFINE=	DOCS
 
