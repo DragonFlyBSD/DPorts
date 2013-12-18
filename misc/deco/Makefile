@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/deco/Makefile 334054 2013-11-17 03:28:04Z eadler $
+# $FreeBSD: misc/deco/Makefile 335980 2013-12-09 13:17:59Z danilo $
 
 PORTNAME=	deco
 PORTVERSION=	3.9
@@ -16,8 +16,5 @@ COMMENT=	Demos Commander, a free Norton Commander clone
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
 CONFIGURE_ENV=	ac_cv_lib_ncurses_tgetent=no
-MAN1=		deco.1
-MANLANG=	"" ru.KOI8-R
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
