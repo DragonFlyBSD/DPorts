@@ -1,12 +1,12 @@
-# $FreeBSD: sysutils/tmpwatch/Makefile 327932 2013-09-23 06:16:25Z bapt $
+# $FreeBSD: sysutils/tmpwatch/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	tmpwatch
 PORTVERSION=	2.11
 CATEGORIES=	sysutils
 MASTER_SITES=	https://fedorahosted.org/releases/t/m/tmpwatch/
 
-MAINTAINER=	bapt@FreeBSD.org
-COMMENT=	A utility for removing files based on when they were last accessed
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Utility for removing files based on when they were last accessed
 
 LICENSE=	GPLv2
 
