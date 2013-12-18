@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gucharmap/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gucharmap/Makefile 336190 2013-12-11 18:28:10Z bapt $
 #   $MCom: ports/deskutils/gucharmap/Makefile,v 1.75 2010/11/13 13:05:08 kwm Exp $
 
 PORTNAME=	gucharmap
@@ -12,7 +12,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Unicode/ISO10646 character map and font viewer
 
-LIB_DEPENDS=	rarian.0:${PORTSDIR}/textproc/rarian
+LIB_DEPENDS=	librarian.so:${PORTSDIR}/textproc/rarian
 
 USE_BZIP2=	yes
 USES=		gettext pkgconfig
