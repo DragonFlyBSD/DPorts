@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: audio/arss/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/arss/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	arss
 PORTVERSION=	0.2.3
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Additive Image Synthesizer (convert audio to images, images to audio)
 
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/src
 
