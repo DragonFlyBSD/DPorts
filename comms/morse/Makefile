@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: comms/morse/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/morse/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	morse
 PORTVERSION=	2.5
@@ -37,7 +37,7 @@ LDFLAGS+=	-L${PREFIX}/lib
 
 .elif ${PORT_OPTIONS:MPULSEAUDIO}
 MAKE_FLAGS+=	DEVICE=PA
-LIB_DEPENDS+=	pulse-simple:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS+=	libpulse-simple.so:${PORTSDIR}/audio/pulseaudio
 USES+=		pkgconfig
 .endif
 
