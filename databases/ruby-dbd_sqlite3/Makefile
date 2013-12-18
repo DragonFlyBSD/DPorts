@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/ruby-dbd_sqlite3/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ruby-dbd_sqlite3/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	dbd_sqlite3
 PORTVERSION=	1.2.5
@@ -13,7 +13,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	SQLite3 driver for DBI-for-Ruby
 
-LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3
+LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 RUN_DEPENDS=	${RUBY_SITELIBDIR}/dbi.rb:${PORTSDIR}/databases/ruby-dbi
 
 USE_RUBY=	yes
