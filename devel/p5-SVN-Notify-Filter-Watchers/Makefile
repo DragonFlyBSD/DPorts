@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Notify-Filter-Watchers/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-SVN-Notify-Filter-Watchers/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	SVN-Notify-Filter-Watchers
 PORTVERSION=	0.10
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Subscribe to SVN::Notify commits with a Subversion property
 
 RUN_DEPENDS=	p5-SVN-Notify>=2.72:${PORTSDIR}/devel/p5-SVN-Notify
