@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
-# $FreeBSD: biology/pymol/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/pymol/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	pymol
 PORTVERSION=	${VERSION}.${SVNREVISION}
@@ -13,8 +13,8 @@ COMMENT=	Free and Open-Source molecular modeling system
 BUILD_DEPENDS=	${PYNUMERIC}
 RUN_DEPENDS=	${PYNUMERIC} \
 		${PYTHON_SITELIBDIR}/Pmw:${PORTSDIR}/x11-toolkits/py-Pmw
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		freetype.9:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
+		libfreetype.so:${PORTSDIR}/print/freetype2
 
 VERSION=	1.5.0.1
 SVNREVISION=	3978
