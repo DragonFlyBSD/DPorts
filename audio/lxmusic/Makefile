@@ -1,5 +1,5 @@
 # Created by: Eric Turgeon <ericturgeon.bsd at gmail.com>
-# $FreeBSD: audio/lxmusic/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/lxmusic/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	lxmusic
 PORTVERSION=	0.4.5
@@ -12,8 +12,8 @@ COMMENT=	LXDE music player based on xmms2
 LICENSE=	MIT GPLv2
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	xmmsclient:${PORTSDIR}/audio/xmms2 \
-		notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libxmmsclient.so:${PORTSDIR}/audio/xmms2 \
+		libnotify.so:${PORTSDIR}/devel/libnotify
 
 USES=		gmake desktop-file-utils pkgconfig
 NO_STAGE=	yes
