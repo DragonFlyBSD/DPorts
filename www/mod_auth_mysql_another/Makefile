@@ -1,5 +1,5 @@
 # Created by: mbr@FreeBSD.org
-# $FreeBSD: www/mod_auth_mysql_another/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_auth_mysql_another/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_auth_mysql
 PORTVERSION=	3.0.0
@@ -11,6 +11,7 @@ PKGNAMESUFFIX=	_another
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows users to use MySQL databases for user authentication
 
+#LICENSE=	AL10
 
 USE_MYSQL=	yes
 USE_APACHE=	22
@@ -23,23 +24,14 @@ AP_LIB=	${LOCALBASE}/lib/mysql
 AP_EXTRAS=	-lmysqlclient -lz -lm
 AP_EXTRAS+=	-DAPACHE2
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+PORTDOCS=	CONFIGURE CHANGES
 
 post-patch:
 	${REINPLACE_CMD} -e "s|APR_XtOffsetOf|APR_OFFSETOF|g" \
 		-e "s|APR_XtOffset|APR_OFFSET|g" ${WRKSRC}/mod_auth_mysql.c
 
-.if !defined(NOPORTDOCS)
-post-build:
-	@${ECHO} "%%PORTDOCS%%%%DOCSDIR%%/CONFIGURE" >> ${PLIST}
-	@${ECHO} "%%PORTDOCS%%%%DOCSDIR%%/CHANGES" >> ${PLIST}
-	@${ECHO} "%%PORTDOCS%%@dirrm %%DOCSDIR%%" >> ${PLIST}
-
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/CONFIGURE ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/CHANGES ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
