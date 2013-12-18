@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/valyriatear/Makefile 332093 2013-10-30 10:30:07Z marino $
+# $FreeBSD: games/valyriatear/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	valyriatear
 PORTVERSION=	0.6.0
@@ -35,7 +35,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS NLS
-OPTIONS_DEFAULT=DOCS NLS
 OPTIONS_SUB=	yes
 
 NLS_CMAKE_OFF=	-DDISABLE_TRANSLATIONS=ON
