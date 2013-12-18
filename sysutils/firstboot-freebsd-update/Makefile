@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/firstboot-freebsd-update/Makefile 331815 2013-10-28 00:06:49Z cperciva $
+# $FreeBSD: sysutils/firstboot-freebsd-update/Makefile 335824 2013-12-07 10:50:23Z gjb $
 
 PORTNAME=	firstboot-freebsd-update
 PORTVERSION=	1.1
@@ -16,7 +16,7 @@ USE_RC_SUBR=	firstboot_freebsd_update
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} < 902504 || ( ${OSVERSION} >= 1000000 && ${OSVERSION} < 1000501 ) || ( ${OSVERSION} >= 1100000 && ${OSVERSION} < 1100001 )
+.if ${OSVERSION} < 902504 || ( ${OSVERSION} >= 1000000 && ${OSVERSION} < 1000100 ) || ( ${OSVERSION} >= 1000500 && ${OSVERSION} < 1000501 ) || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1100001 )
 IGNORE=	first boot rc.d scripts not supported on this version of FreeBSD
 .endif
 
