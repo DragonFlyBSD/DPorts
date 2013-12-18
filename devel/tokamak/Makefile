@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/tokamak/Makefile 330584 2013-10-17 01:14:44Z amdmi3 $
+# $FreeBSD: devel/tokamak/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	tokamak
 PORTVERSION=	1.0.5a
@@ -23,7 +23,6 @@ BUILD_WRKSRC=	${WRKSRC}/build/gnu
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.options.mk>
 
