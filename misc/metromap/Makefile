@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: misc/metromap/Makefile 330562 2013-10-16 23:45:18Z amdmi3 $
+# $FreeBSD: misc/metromap/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	metromap
 PORTVERSION=	0.1.4
@@ -22,7 +22,6 @@ USES=		gettext gmake
 PORTDOCS=	AUTHORS NEWS README README.data TODO
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/bin/python,${SETENV} python,' ${WRKSRC}/metromap.py
