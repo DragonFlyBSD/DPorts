@@ -1,7 +1,8 @@
-# $FreeBSD: x11-drivers/xf86-input-fpit/Makefile 330282 2013-10-14 07:29:35Z ak $
+# $FreeBSD: x11-drivers/xf86-input-fpit/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-input-fpit
 PORTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
@@ -9,6 +10,8 @@ COMMENT=	X.Org fpit input driver
 
 XORG_CAT=	driver
 USE_XORG=	xrandr
+
+.include <bsd.port.options.mk>
 
 .if !defined(WITH_NEW_XORG)
 IGNORE=		does not build with X server 1.7.7
