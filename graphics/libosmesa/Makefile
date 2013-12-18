@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: graphics/libosmesa/Makefile 333749 2013-11-14 10:49:12Z gahr $
+# $FreeBSD: graphics/libosmesa/Makefile 336537 2013-12-15 14:04:57Z mva $
 
 PORTNAME=	libosmesa
 PORTVERSION=	9.2.3
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml
 USES+=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	2
 USE_XORG=	x11 xext
 USE_AUTOTOOLS=	autoconf automake libtool
 GNU_CONFIGURE=	yes
