@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: misc/cwish/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/cwish/Makefile 335981 2013-12-09 13:24:51Z danilo $
 
 PORTNAME=	cwish
 PORTVERSION=	3.52
@@ -12,18 +12,14 @@ COMMENT=	Curses based user friendly windowing shell
 
 NO_WRKSUBDIR=	yes
 ALL_TARGET=	cwish
-MAN1=		cwish.1
-PLIST_FILES=	bin/cwish
+PLIST_FILES=	bin/cwish man/man1/cwish.1.gz
+MAKEFILE=	Makefile.FreeBSD
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 65d ${WRKSRC}/cwish.h
 
-pre-configure:
-	${CP} ${WRKSRC}/Makefile.FreeBSD ${WRKSRC}/Makefile
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cwish ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cwish.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/cwish ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/cwish.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
