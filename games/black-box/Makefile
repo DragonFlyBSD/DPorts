@@ -1,39 +1,37 @@
-# Created by: nemysis@gmx.ch
-# $FreeBSD: games/black-box/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: games/black-box/Makefile 336179 2013-12-11 15:57:28Z nemysis $
 
 PORTNAME=	black-box
 PORTVERSION=	1.4.8
 PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.linux-games.com/black-box/ \
-		SF/nemysisfreebsdp/:icons
+		SF/nemysisfreebsdp/${CATEGORIES}/:icons
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 		${PORTNAME}.png:icons
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Shoot in and watch where the shot leaves the box
 
 LICENSE=	GPLv2
 
-GNU_CONFIGURE=	yes
 USE_SDL=	sdl image mixer
+GNU_CONFIGURE=	yes
 
-PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README
+PORTDOCS=	AUTHORS ChangeLog NEWS README
 
-DESKTOP_ENTRIES="Black-Box" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
+OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+DESKTOP_ENTRIES="Black-Box" "" "${PORTNAME}" \
+		"${PORTNAME}" "Game;ArcadeGame;" ""
 
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}.png ${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
