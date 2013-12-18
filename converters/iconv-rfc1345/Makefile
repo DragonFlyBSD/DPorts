@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv-rfc1345/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/iconv-rfc1345/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	iconv-rfc1345
 PORTVERSION=	2.0
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	bland
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	Additional charset modules for the iconv library (from RFC1345)
 
-LIB_DEPENDS=	biconv.2:${PORTSDIR}/converters/iconv
+LIB_DEPENDS=	libbbiconv.so:${PORTSDIR}/converters/iconv
 
 USES=		perl5
 
