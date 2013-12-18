@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-wm/transset/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/transset/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	transset
 PORTVERSION=	1.0.1
@@ -13,8 +13,6 @@ COMMENT=	Make your windows transparent
 XORG_CAT=	app
 USE_XORG=	x11 xproto
 
-MAN1=		transset.1
-PLIST_FILES=	bin/transset
+PLIST_FILES=	bin/transset man/man1/transset.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
