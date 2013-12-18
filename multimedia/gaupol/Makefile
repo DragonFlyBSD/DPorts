@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/gaupol/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: multimedia/gaupol/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	gaupol
 PORTVERSION=	0.19.2
@@ -17,9 +17,10 @@ RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		py*-chardet>=0:${PORTSDIR}/textproc/py-chardet \
 		py*-enchant>=1.5.1:${PORTSDIR}/textproc/py-enchant
 
-USE_GNOME=	pygtk2 desktopfileutils
-USE_PYTHON=	2.6+
+USE_GNOME=	pygtk2
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+USES=		desktop-file-utils
 INSTALLS_ICONS=	yes
 
 MAN1=		${PORTNAME}.1
@@ -35,6 +36,10 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|share/man|man|g' ${WRKSRC}/setup.py
+	@${REINPLACE_CMD} \
+		-e 's|share/man|man|g' \
+		-e 's,distutils\.command\.install$$,setuptools\.command\.install,g' \
+		-e 's,distutils\.command\.install\.,setuptools\.command\.install\.,g' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
