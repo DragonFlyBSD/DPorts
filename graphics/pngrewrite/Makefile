@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: graphics/pngrewrite/Makefile 327922 2013-09-23 06:10:26Z bapt $
+# $FreeBSD: graphics/pngrewrite/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	pngrewrite
 PORTVERSION=	1.4.0
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://entropymine.com/jason/pngrewrite/ \
 		http://mirror.roe.ch/dist/pngrewrite/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PNG palette optimizer
 
 LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
