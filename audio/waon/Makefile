@@ -1,5 +1,5 @@
 # Created by: Kengo Ichiki <kichiki@users.sourceforge.net>
-# $FreeBSD: audio/waon/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/waon/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	waon
 PORTVERSION=	0.9
@@ -10,10 +10,10 @@ MASTER_SITES=	SF
 MAINTAINER=	kichiki@users.sourceforge.net
 COMMENT=	Wave-to-Notes transcriber and some utility tools
 
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
-		ao.4:${PORTSDIR}/audio/libao \
-		sndfile.1:${PORTSDIR}/audio/libsndfile \
-		samplerate.1:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3 \
+		libao.so:${PORTSDIR}/audio/libao \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 
 USES=		pkgconfig
 NO_STAGE=	yes
