@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/btpd/Makefile 329211 2013-10-03 16:49:12Z bapt $
+# $FreeBSD: net-p2p/btpd/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	btpd
 PORTVERSION=	0.16
@@ -6,7 +6,7 @@ PORTREVISION=	2
 CATEGORIES=	net-p2p
 MASTER_SITES=	http://cloud.github.com/downloads/btpd/btpd/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Bittorrent client consisting of a daemon and client commands
 
 LICENSE=	BSD
