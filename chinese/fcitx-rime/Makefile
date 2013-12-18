@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-rime/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/fcitx-rime/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	fcitx-rime
 PORTVERSION=	0.1.2
@@ -11,8 +11,8 @@ DIST_SUBDIR=	fcitx
 MAINTAINER=	lichray@gmail.com
 COMMENT=	RIME support for Fcitx
 
-LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
-		rime:${PORTSDIR}/chinese/librime
+LIB_DEPENDS=	libfcitx-config.so:${PORTSDIR}/chinese/fcitx \
+		librime.so:${PORTSDIR}/chinese/librime
 
 USE_LDCONFIG=	${PREFIX}/lib/fcitx/
 USE_XZ=		yes
