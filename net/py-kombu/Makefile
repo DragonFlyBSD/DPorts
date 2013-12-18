@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-kombu/Makefile 335553 2013-12-03 10:28:54Z wg $
+# $FreeBSD: net/py-kombu/Makefile 336711 2013-12-17 10:44:07Z wg $
 
 PORTNAME=	kombu
-PORTVERSION=	3.0.7
+PORTVERSION=	3.0.8
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -35,7 +35,7 @@ ZMQ_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyzmq>=2.2.0:${PORTSDIR}/devel/py-pyzmq
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.pre.mk>
