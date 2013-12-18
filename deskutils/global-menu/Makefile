@@ -1,5 +1,5 @@
 # Created by: Gustavo Perez
-# $FreeBSD: deskutils/global-menu/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/global-menu/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=		gnome-globalmenu
 PORTVERSION=		0.7.10
@@ -10,7 +10,7 @@ MASTER_SITES=		http://gnome2-globalmenu.googlecode.com/files/
 MAINTAINER=		gustau.perez@gmail.com
 COMMENT=		Global menu for gnome
 
-LIB_DEPENDS=		notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=		libnotify.so:${PORTSDIR}/devel/libnotify
 
 USE_GNOME=		gnomepanel gnomedesktop
 
