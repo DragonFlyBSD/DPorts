@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/calligra-l10n/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/calligra-l10n/Makefile 336675 2013-12-16 22:59:42Z avilla $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	2.5.5
@@ -9,6 +9,7 @@ COMMENT=	Japanese messages and documentation for Calligra
 
 CALLIGRA_L10N=	ja
 
-NO_STAGE=	yes
+USE_BZIP2=	yes
+
 .include "${.CURDIR}/../../editors/calligra-l10n/files/bsd.l10n.mk"
 .include <bsd.port.mk>
