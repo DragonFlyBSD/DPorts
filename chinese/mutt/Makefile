@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: chinese/mutt/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/mutt/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTREVISION=	3
 CATEGORIES=	chinese
@@ -16,7 +16,7 @@ COMMENT=	The Mongrel of Mail User Agents with Chinese support
 
 CONFLICTS=	ja-mutt-[0-9]* ja-mutt-devel-[0-9]* mutt-[0-9]* mutt-lite-[0-9]*
 
-LIB_DEPENDS+=	hz.0:${PORTSDIR}/chinese/autoconvert
+LIB_DEPENDS+=	libhz.so:${PORTSDIR}/chinese/autoconvert
 
 LDFLAGS_ADD+=	-lhz
 
