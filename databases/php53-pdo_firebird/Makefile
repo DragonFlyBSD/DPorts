@@ -1,6 +1,5 @@
-# $FreeBSD: databases/php53-pdo_firebird/Makefile 332429 2013-11-01 23:49:56Z flo $
+# $FreeBSD: databases/php53-pdo_firebird/Makefile 336500 2013-12-14 23:30:36Z flo $
 
-PORTREVISION=	2
 CATEGORIES=	databases
 
 MASTERDIR=	${.CURDIR}/../../lang/php53
