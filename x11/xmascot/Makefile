@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xmascot/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xmascot/Makefile 336390 2013-12-13 23:38:04Z bapt $
 
 PORTNAME=	xmascot
 PORTVERSION=	2.6a
@@ -15,17 +15,14 @@ USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 MAKE_ARGS=	MAKE="${MAKE_CMD}"
 
-MAN1=		xmascot.1
-
 # Unbreak parallel (-jX) builds: do not use unsafe MakeSubdirs() macro
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/MakeSubdirs(/Named&$$(IMAGELIB),/' \
 		${WRKSRC}/Imakefile
 
 post-install:
-	@${MKDIR} ${PREFIX}/lib/X11/ja_JP.EUC/app-defaults
-	${INSTALL_DATA} ${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/XMascot \
-		${PREFIX}/lib/X11/ja_JP.EUC/app-defaults
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/ja_JP.EUC/app-defaults
+	${INSTALL_DATA} ${STAGEDIR}${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/XMascot \
+		${STAGEDIR}${PREFIX}/lib/X11/ja_JP.EUC/app-defaults
 
 .include <bsd.port.mk>
