@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: misc/xsw/Makefile 330788 2013-10-18 23:18:19Z bapt $
+# $FreeBSD: misc/xsw/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	xsw
 PORTVERSION=	0.3.5
@@ -7,7 +7,7 @@ PORTREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for creating presentations
 
 OPTIONS_DEFINE=	DOCS
