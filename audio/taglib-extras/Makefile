@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/taglib-extras/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/taglib-extras/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	taglib-extras
 PORTVERSION=	1.0.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.kollide.net/~jefferai/
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Extra taglib features for Amarok 2.2
 
-LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
 USES=		cmake
 NO_STAGE=	yes
