@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xtron/Makefile 330696 2013-10-17 23:52:30Z amdmi3 $
+# $FreeBSD: games/xtron/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	xtron
 PORTVERSION=	1.1a
@@ -25,7 +25,6 @@ DESKTOP_ENTRIES="xtron" \
 		false
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/xtronrc
