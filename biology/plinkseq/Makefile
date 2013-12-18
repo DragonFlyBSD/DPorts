@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: biology/plinkseq/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/plinkseq/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	plinkseq
 PORTVERSION=	0.08
@@ -12,7 +12,7 @@ COMMENT=	Toolset for working with human genetic variation data
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
+LIB_DEPENDS=	libprotobuf.so:${PORTSDIR}/devel/protobuf
 
 USE_DOS2UNIX=	yes
 USE_LDCONFIG=	yes
