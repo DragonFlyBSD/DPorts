@@ -1,9 +1,9 @@
-# $FreeBSD: x11-fonts/cosmic-sans-neue-mono/Makefile 334902 2013-11-25 22:38:16Z rakuco $
+# $FreeBSD: x11-fonts/cosmic-sans-neue-mono/Makefile 336031 2013-12-09 20:34:13Z rakuco $
 
 PORTNAME=	cosmic-sans-neue-mono
-PORTVERSION=	1.3
+PORTVERSION=	1.3.1
 CATEGORIES=	x11-fonts
-MASTER_SITES=	http://openfontlibrary.org/assets/downloads/${PORTNAME}/bf42dd6dc411076a2dfc12aa6cf60e7d/
+MASTER_SITES=	http://openfontlibrary.org/assets/downloads/${PORTNAME}/feb9d273fd3f3068493fd183c589ecff/
 DISTNAME=	${PORTNAME}
 
 MAINTAINER=	rakuco@FreeBSD.org
