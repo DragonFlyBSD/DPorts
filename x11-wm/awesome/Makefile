@@ -1,9 +1,9 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: x11-wm/awesome/Makefile 332333 2013-10-31 23:57:27Z garga $
+# $FreeBSD: x11-wm/awesome/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	awesome
 PORTVERSION=	3.5.2
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
