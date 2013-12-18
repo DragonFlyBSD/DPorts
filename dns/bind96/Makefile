@@ -1,4 +1,4 @@
-# $FreeBSD: dns/bind96/Makefile 335667 2013-12-05 12:54:56Z erwin $
+# $FreeBSD: dns/bind96/Makefile 335933 2013-12-08 19:49:52Z marino $
 
 PORTNAME=	bind96
 PORTVERSION=	9.6.3.2.ESV.R10
@@ -135,14 +135,14 @@ CONFIGURE_ARGS+=	--disable-threads
 .endif
 
 .if ${PORT_OPTIONS:MREPLACE_BASE}
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000100
 IGNORE=		REPLACE_BASE option not supported on this release
 .endif
 PKGNAMESUFFIX=	-base
 PREFIX=		/usr
 BIND_DESTETC=	/etc/namedb
 .else
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000100
 BIND_DESTETC=	${PREFIX}/etc/namedb
 .else
 BIND_DESTETC=	${PREFIX}/etc
@@ -153,7 +153,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			--sysconfdir=${BIND_DESTETC}
 PLIST_SUB+=	BIND_DESTETC="${BIND_DESTETC}"
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000100
 PLIST_SUB+=	NOBASE=""
 .else
 PLIST_SUB+=	NOBASE="@comment "
@@ -221,7 +221,7 @@ post-install:
 	${CP} ${WRKSRC}/CHANGES ${WRKSRC}/COPYRIGHT ${WRKSRC}/FAQ \
 	    ${WRKSRC}/NSEC3-NOTES ${WRKSRC}/README* ${DOCSDIR}/
 .endif
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000500
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000100
 .for FILE in named named.conf
 	${SED} -e 's#%%PREFIX%%#${PREFIX}#g' \
 		-e 's#%%BIND_DESTETC%%#${BIND_DESTETC}#g' \
