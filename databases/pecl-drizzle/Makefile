@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: databases/pecl-drizzle/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: databases/pecl-drizzle/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	drizzle
 PORTVERSION=	0.4.2
@@ -9,10 +9,10 @@ PKGNAMEPREFIX=	pecl-
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A PHP wrapper for the libdrizzle library
 
-LIB_DEPENDS=	drizzle.0:${PORTSDIR}/databases/libdrizzle
+LIB_DEPENDS=	libdrizzle.so:${PORTSDIR}/databases/libdrizzle
 
 LICENSE=	PHP301
 
