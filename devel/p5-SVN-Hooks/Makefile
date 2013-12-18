@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Hooks/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-SVN-Hooks/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	SVN-Hooks
 PORTVERSION=	1.21
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A framework for implementing Subversion hooks
 
 BUILD_DEPENDS=	p5-Data-Util>=0:${PORTSDIR}/devel/p5-Data-Util \
