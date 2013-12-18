@@ -1,4 +1,4 @@
-# $FreeBSD: math/armadillo/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/armadillo/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	armadillo
 PORTVERSION=	3.800.1
@@ -11,8 +11,8 @@ COMMENT=	C++ linear algebra library
 
 LICENSE=	MPL
 
-LIB_DEPENDS=	lapack:${PORTSDIR}/math/lapack	\
-		boost_date_time:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	liblapack.so:${PORTSDIR}/math/lapack	\
+		libboost_date_time.so:${PORTSDIR}/devel/boost-libs
 
 USES=		cmake
 USE_LDCONFIG=	yes
