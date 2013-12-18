@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/petsc/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/petsc/Makefile 336557 2013-12-15 16:58:20Z wg $
 
 PORTNAME=	petsc
 DISTVERSION=	2.3.3-p0
@@ -11,7 +11,9 @@ MASTER_SITES=	ftp://ftp.mcs.anl.gov/pub/petsc/release-snapshots/
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Portable, Extensible Toolkit for Scientific computation
 
-RUN_DEPENDS=	ksh:${PORTSDIR}/shells/pdksh	\
+BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
+RUN_DEPENDS=	python:${PORTSDIR}/lang/python \
+		ksh:${PORTSDIR}/shells/pdksh	\
 		qsub:${PORTSDIR}/sysutils/torque
 
 HAS_CONFIGURE=		yes
