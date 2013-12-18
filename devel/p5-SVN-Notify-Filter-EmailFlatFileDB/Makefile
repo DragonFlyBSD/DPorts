@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Notify-Filter-EmailFlatFileDB/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-SVN-Notify-Filter-EmailFlatFileDB/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	SVN-Notify-Filter-EmailFlatFileDB
 PORTVERSION=	1.01
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts account names to email address based on a flat-file database
 
 RUN_DEPENDS=	p5-SVN-Notify>=2.72:${PORTSDIR}/devel/p5-SVN-Notify
