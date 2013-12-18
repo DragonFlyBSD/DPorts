@@ -1,9 +1,8 @@
 # Created by: Gergely Nagy <8@free.bsd.hu>
-# $FreeBSD: x11-wm/ratpoison/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/ratpoison/Makefile 336726 2013-12-17 14:00:31Z dhn $
 
 PORTNAME=	ratpoison
-PORTVERSION=	1.4.5
-PORTREVISION=	1
+PORTVERSION=	1.4.6
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_SAVANNAH} \
 		http://mirror.4bit.ws/
