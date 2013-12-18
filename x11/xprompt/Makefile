@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: x11/xprompt/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xprompt/Makefile 336386 2013-12-13 23:30:59Z bapt $
 
 PORTNAME=	xprompt
 PORTVERSION=	1.4
@@ -14,9 +14,7 @@ COMMENT=	Displays a dialog box and prompts user for text
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
 
-MAN1=		xprompt.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/xprompt
+PLIST_FILES=	bin/xprompt \
+		man/man1/xprompt.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
