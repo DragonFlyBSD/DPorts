@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: security/arirang/Makefile 330794 2013-10-18 23:29:42Z bapt $
+# $FreeBSD: security/arirang/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	arirang
 PORTVERSION=	2.03
@@ -8,7 +8,7 @@ CATEGORIES=	security www
 MASTER_SITES=	http://monkey.org/~pilot/arirang/
 MASTER_SITE_SUBDIR=	UNIX/cgi-scanners
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Powerful webserver security scanner for network
 
 LICENSE=	BSD
