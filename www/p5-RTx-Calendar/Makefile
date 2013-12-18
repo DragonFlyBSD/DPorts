@@ -1,9 +1,9 @@
 # Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
-# $FreeBSD: www/p5-RTx-Calendar/Makefile 335414 2013-12-01 17:51:42Z matthew $
+# $FreeBSD: www/p5-RTx-Calendar/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	RTx-Calendar
 PORTVERSION=	0.17
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -18,6 +18,8 @@ BUILD_DEPENDS=	p5-Date-ICal>0:${PORTSDIR}/devel/p5-Date-ICal      \
 		p5-Data-ICal>0:${PORTSDIR}/deskutils/p5-Data-ICal  \
 		p5-DateTime-Set>0:${PORTSDIR}/devel/p5-DateTime-Set
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+NO_ARCH=	yes
 
 USES+=		perl5
 USE_PERL5=	configure
