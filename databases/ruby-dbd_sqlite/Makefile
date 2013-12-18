@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-dbd_sqlite/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ruby-dbd_sqlite/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	dbd_sqlite
 PORTVERSION=	0.1.2
@@ -13,7 +13,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	SQLite driver for DBI-for-Ruby
 
-LIB_DEPENDS=	sqlite.2:${PORTSDIR}/databases/sqlite2
+LIB_DEPENDS=	libsqlite.so:${PORTSDIR}/databases/sqlite2
 RUN_DEPENDS=	${RUBY_SITELIBDIR}/dbi.rb:${PORTSDIR}/databases/ruby-dbi
 
 USE_RUBY=	yes
