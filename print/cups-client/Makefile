@@ -1,8 +1,8 @@
-# $FreeBSD: print/cups-client/Makefile 331445 2013-10-23 22:57:34Z eadler $
+# $FreeBSD: print/cups-client/Makefile 335993 2013-12-09 14:49:08Z bsam $
 
 CATEGORIES=	print
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bsam@FreeBSD.org
 
 MASTERDIR?=	${.CURDIR}/../cups-base
  
