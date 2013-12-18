@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: x11/wmxss/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/wmxss/Makefile 336403 2013-12-14 00:01:06Z bapt $
 
 PORTNAME=	wmxss
 PORTVERSION=	0.1
@@ -10,11 +10,11 @@ MASTER_SITES=	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Run xscreensaver modules inside a WindowMaker dock
 
+USES=		uidfix
 USE_XORG=	x11 xpm
 PLIST_FILES=	bin/wmxss
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/Src
 
-NO_STAGE=	yes
 post-extract:
 	@( cd ${WRKSRC} ; ${MAKE} clean ; ${RM} -f .nfs* )
 
