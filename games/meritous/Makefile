@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/meritous/Makefile 330507 2013-10-16 12:59:40Z amdmi3 $
+# $FreeBSD: games/meritous/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	meritous
 PORTVERSION=	1.2
@@ -33,16 +33,15 @@ DESKTOP_ENTRIES="Meritous" \
 		false
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|dat/|${DATADIR}/|' ${WRKSRC}/src/*.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/meritous ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/meritous ${STAGEDIR}${PREFIX}/bin/
 	${MKDIR} ${STAGEDIR}${DATADIR}
-	cd ${WRKSRC}/dat && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/dat && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
