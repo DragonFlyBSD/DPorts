@@ -1,5 +1,5 @@
 # Created by: Bill Ross <bross@nas.nasa.gov>
-# $FreeBSD: devel/avltree/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/avltree/Makefile 336114 2013-12-10 21:06:44Z bapt $
 
 PORTNAME=	avltree
 PORTVERSION=	1.1
@@ -8,10 +8,8 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.gtlib.gatech.edu/pub/FreeBSD/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An in-memory index w/ binary and string keys and key counts
+COMMENT=	In-memory index w/ binary and string keys and key counts
 
-MAN3=		avltree.3
-MANCOMPRESSED=	yes
+MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
