@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: deskutils/superswitcher/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/superswitcher/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	superswitcher
 PORTVERSION=	0.6
@@ -12,7 +12,7 @@ COMMENT=	Alt-Tab replacement
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
 USES=		gmake pkgconfig
 USE_GNOME=	gconf2 libwnck
