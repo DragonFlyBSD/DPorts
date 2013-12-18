@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-estimator/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-estimator/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	estimator
 PORTVERSION=	0.1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Produce detailed range-based estimations for Trac tickets
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
