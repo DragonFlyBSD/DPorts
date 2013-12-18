@@ -1,5 +1,5 @@
 # Created by: Jukka A. Ukkonen <jau@iki.fi>
-# $FreeBSD: www/mod_geoip2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_geoip2/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_geoip2
 PORTVERSION=	1.2.8
@@ -8,15 +8,12 @@ MASTER_SITES=	http://geolite.maxmind.com/download/geoip/api/mod_geoip2/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	jau@iki.fi
-COMMENT=	An Apache module that provides the country code of the client's IP
+COMMENT=	Apache module that provides the country code of the client IP
 
 LICENSE=	AL2
 
 BUILD_DEPENDS=	GeoIP>=1.4.4:${PORTSDIR}/net/GeoIP
 RUN_DEPENDS=	GeoIP>=1.4.4:${PORTSDIR}/net/GeoIP
-
-
-CONFLICTS=	mod_geoip-[0-9]*
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
@@ -30,12 +27,8 @@ AP_LIB+=	${LOCALBASE}/lib -lGeoIP
 SUB_FILES+=	pkg-message
 PORTDOCS=	Changes INSTALL README README.php
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
-	@${CAT} ${PKGMESSAGE}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
