@@ -1,4 +1,4 @@
-# $FreeBSD: x11/fstobdf/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/fstobdf/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	fstobdf
 PORTVERSION=	1.0.5
@@ -10,9 +10,6 @@ COMMENT=	Generate BDF font from X font server
 XORG_CAT=	app
 USE_XORG=	x11 libfs
 
-PLIST_FILES=	bin/fstobdf
+PLIST_FILES=	bin/fstobdf man/man1/fstobdf.1.gz
 
-MAN1=		fstobdf.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
