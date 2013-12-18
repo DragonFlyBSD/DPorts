@@ -1,4 +1,4 @@
-# $FreeBSD: math/cantor/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/cantor/Makefile 336424 2013-12-14 09:01:59Z antoine $
 
 PORTNAME=	cantor
 PORTVERSION=	${KDE4_VERSION}
@@ -17,7 +17,7 @@ LIB_DEPENDS=	spectre.1:${PORTSDIR}/print/libspectre \
 CONFLICTS=	kdeedu-4.[0-6].*
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
-USES=		cmake:outsource
+USES=		cmake:outsource pkgconfig
 USE_QT4=	corelib qtestlib_build xml xmlpatterns \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
