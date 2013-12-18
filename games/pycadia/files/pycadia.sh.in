@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/pycadia/files/pycadia.sh.in 305338 2012-10-06 05:37:29Z jgh $
+# $FreeBSD: games/pycadia/files/pycadia.sh.in 335900 2013-12-08 14:58:36Z nemysis $
+#
 
 cd "%%DATADIR%%"
-./pycadia.py
+exec %%PYTHON_CMD%% ./pycadia.py "${@}"
