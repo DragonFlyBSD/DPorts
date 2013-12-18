@@ -1,5 +1,5 @@
 # Created by: dbader@ece.unm.edu
-# $FreeBSD: biology/grappa/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/grappa/Makefile 336071 2013-12-10 17:25:38Z bapt $
 
 PORTNAME=	grappa
 PORTVERSION=	2.0
@@ -10,17 +10,14 @@ DISTNAME=	GRAPPA20
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Genome Rearrangements Analysis and Phylogeny Software
 
-USE_GMAKE=	yes
+USES=	gmake
+MAKE_ARGS=	CC="${CC}"
 
 PLIST_FILES=	bin/grappa bin/invdist bin/distmat
 
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e 's/-lpthread/${PTHREAD_LIBS}/g' ${WRKSRC}/${MAKEFILE}
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/grappa ${PREFIX}/bin
-	${LN} -sf ${PREFIX}/bin/grappa ${PREFIX}/bin/invdist
-	${LN} -sf ${PREFIX}/bin/grappa ${PREFIX}/bin/distmat
+	${INSTALL_PROGRAM} ${WRKSRC}/grappa ${STAGEDIR}${PREFIX}/bin
+	${LN} -sf ${PREFIX}/bin/grappa ${STAGEDIR}${PREFIX}/bin/invdist
+	${LN} -sf ${PREFIX}/bin/grappa ${STAGEDIR}${PREFIX}/bin/distmat
 
 .include <bsd.port.mk>
