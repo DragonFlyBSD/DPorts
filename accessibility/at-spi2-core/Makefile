@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/at-spi2-core/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/at-spi2-core/Makefile 336152 2013-12-11 09:51:36Z bapt $
 #   $MCom: ports/trunk/accessibility/at-spi2-core/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	at-spi2-core
@@ -13,7 +13,7 @@ COMMENT=	Assistive Technology Service Provider Interface
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 
 PORTSCOUT=	limitw:1,even
 
