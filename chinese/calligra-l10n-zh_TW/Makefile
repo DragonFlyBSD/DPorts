@@ -1,4 +1,4 @@
-# $FreeBSD: chinese/calligra-l10n-zh_TW/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/calligra-l10n-zh_TW/Makefile 336675 2013-12-16 22:59:42Z avilla $
 
 PORTNAME=	calligra-l10n
 PORTVERSION=	${CALLIGRA_VERSION}
@@ -9,6 +9,5 @@ COMMENT=	Traditional Chinese messages and documentation for Calligra
 
 CALLIGRA_L10N=	zh_TW
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../editors/calligra-l10n/files/bsd.l10n.mk"
 .include <bsd.port.mk>
