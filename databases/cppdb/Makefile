@@ -1,5 +1,5 @@
 # Created by: Mohammad S. Babaei <info@babaei.net>
-# $FreeBSD: databases/cppdb/Makefile 329100 2013-10-02 19:08:41Z skreuzer $
+# $FreeBSD: databases/cppdb/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=       cppdb
 PORTVERSION=    0.3.1
@@ -64,7 +64,7 @@ PLIST_SUB+=     MYSQL=""
 CMAKE_ARGS+=    -DDISABLE_ODBC:BOOL=ON
 PLIST_SUB+=     ODBC="@comment "
 .else
-LIB_DEPENDS+=   odbc:${PORTSDIR}/databases/unixODBC
+LIB_DEPENDS+=   libodbc.do:${PORTSDIR}/databases/unixODBC
 CMAKE_ARGS+=    -DDISABLE_ODBC:BOOL=OFF
 .if ${PORT_OPTIONS:MODBC_INTERNAL}
 CMAKE_ARGS+=    -DODBC_BACKEND_INTERNAL:BOOL=ON
