@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: biology/crux/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: biology/crux/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	crux
 PORTVERSION=	1.2.0
@@ -31,7 +31,7 @@ USE_FORTRAN=	yes
 
 .if ${PORT_OPTIONS:MSYS_LINALG}
 CONFIGURE_ARGS+=	--enable-sys-linalg
-LIB_DEPENDS+=	atlas.2:${PORTSDIR}/math/atlas
+LIB_DEPENDS+=	libatlas.so:${PORTSDIR}/math/atlas
 .else
 CONFIGURE_ARGS+=	--disable-sys-linalg
 .endif
