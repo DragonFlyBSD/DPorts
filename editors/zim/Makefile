@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: editors/zim/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/zim/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	zim
 PORTVERSION=	0.60
@@ -64,7 +64,10 @@ RUN_DEPENDS+=	ditaa:${PORTSDIR}/graphics/ditaa
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|share/man|man|' ${WRKSRC}/setup.py
+	@${REINPLACE_CMD} \
+		-e 's|share/man|man|' \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
 	@${REINPLACE_CMD} -e "s|decode('utf-8')|decode('utf-8','replace')|g" ${WRKSRC}/zim/utils.py
 
 post-install:
