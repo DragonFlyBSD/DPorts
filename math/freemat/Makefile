@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/freemat/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/freemat/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=		FreeMat
 PORTVERSION=		4.0
@@ -12,7 +12,7 @@ MASTER_SITE_SUBDIR=	freemat/FreeMat4
 PKGNAMESUFFIX=		-mpi
 .endif
 
-MAINTAINER=		glarkin@FreeBSD.org
+MAINTAINER=		ports@FreeBSD.org
 COMMENT=		An environment for rapid engineering and scientific processing
 
 LIB_DEPENDS=		lapack.4:${PORTSDIR}/math/lapack	\
