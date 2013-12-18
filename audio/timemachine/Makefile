@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/timemachine/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/timemachine/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	timemachine
 PORTVERSION=	0.3.3
@@ -12,9 +12,9 @@ COMMENT=	JACK audio capture tool
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
-		lo:${PORTSDIR}/audio/liblo \
-		sndfile:${PORTSDIR}/audio/libsndfile
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack \
+		liblo.so:${PORTSDIR}/audio/liblo \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile
 
 OPTIONS_DEFINE=	LASH
 
@@ -27,7 +27,7 @@ LDFLAGS+=	-lm
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLASH}
-LIB_DEPENDS+=	lash:${PORTSDIR}/audio/lash
+LIB_DEPENDS+=	liblash.so:${PORTSDIR}/audio/lash
 .else
 CONFIGURE_ARGS+=--disable-lash
 .endif
