@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: textproc/libxml++26-reference/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libxml++26-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 #   $MCom: ports/textproc/libxml++26-reference/Makefile,v 1.1 2010/04/03 16:21:50 avl Exp $
 
 PORTREVISION=	0
@@ -12,10 +12,7 @@ GNU_CONFIGURE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/libxml++-2.6
 
-NO_STAGE=	yes
 do-install:
-.if !defined(NOPORTDOCS)
-	@cd ${WRKSRC} && ${GMAKE} install-data-local install-dist_referenceDATA
-.endif
+	@cd ${WRKSRC} && ${GMAKE} ${MAKE_ARGS} install-data-local install-dist_referenceDATA
 
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
