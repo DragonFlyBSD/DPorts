@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/ditrack/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/ditrack/Makefile 336126 2013-12-10 23:03:32Z bapt $
 
 PORTNAME=	ditrack
 PORTVERSION=	0.8
@@ -20,15 +20,10 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	DITrack
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-0.7-db.py ${DATADIR}
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/html/index.html ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-0.7-db.py ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/html/index.html ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
