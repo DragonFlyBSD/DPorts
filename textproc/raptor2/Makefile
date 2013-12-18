@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: textproc/raptor2/Makefile 334939 2013-11-26 14:57:00Z rakuco $
+# $FreeBSD: textproc/raptor2/Makefile 336564 2013-12-15 18:35:11Z rakuco $
 
 PORTNAME=	raptor2
-PORTVERSION=	2.0.11
+PORTVERSION=	2.0.12
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/ \
 		SF/librdf/${PORTNAME}/${PORTVERSION}
@@ -10,9 +10,14 @@ MASTER_SITES=	http://download.librdf.org/source/ \
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	RDF Parser Toolkit for Redland
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		icuuc:${PORTSDIR}/devel/icu \
-		yajl:${PORTSDIR}/devel/yajl
+# Even though GPLv3 is not explicitly mentioned in the port's LICENSE.html, one
+# of its licenses is "GPLv2 or newer", which includes GPLv3.
+LICENSE=	AL2 GPLv2 GPLv3 LGPL21
+LICENSE_COMB=	dual
+
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libicuuc.so:${PORTSDIR}/devel/icu \
+		libyajl.so:${PORTSDIR}/devel/yajl
 
 CONFLICTS=	raptor-1.4.1[0-9]* raptor-1.4.21
 
