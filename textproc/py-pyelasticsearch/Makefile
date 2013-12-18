@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: textproc/py-pyelasticsearch/Makefile 334695 2013-11-23 21:25:56Z antoine $
+# $FreeBSD: textproc/py-pyelasticsearch/Makefile 336592 2013-12-15 22:34:56Z antoine $
 
 PORTNAME=	pyelasticsearch
 PORTVERSION=	0.6.1
@@ -10,14 +10,14 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Flexible, high-scale API to elasticsearch
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>0:${PORTSDIR}/devel/py-simplejson \
 		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six \
 		${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-PYTHON_PY3K_PLIST_HACK=yes
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=yes
 
 .include <bsd.port.mk>
