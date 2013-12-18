@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/sqsh/Makefile 329271 2013-10-04 08:52:32Z bapt $
+# $FreeBSD: databases/sqsh/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sqsh
 PORTVERSION=	2.1.8
@@ -11,7 +11,7 @@ COMMENT=	Interactive tool for querying Sybase database servers
 
 LICENSE=	GPLv2 # (or later)
 
-LIB_DEPENDS=	ct:${PORTSDIR}/databases/freetds
+LIB_DEPENDS=	libct.so:${PORTSDIR}/databases/freetds
 
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
