@@ -1,9 +1,9 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/tigervnc/Makefile 332596 2013-11-03 09:21:59Z novel $
+# $FreeBSD: net/tigervnc/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	tigervnc
 PORTVERSION=	1.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net x11-servers
 MASTER_SITES=	SF:tigervnc
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}/:tigervnc
