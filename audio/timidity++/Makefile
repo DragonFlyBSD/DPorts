@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@luna2.org>
-# $FreeBSD: audio/timidity++/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/timidity++/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	timidity++
 PORTVERSION=	2.13.2
@@ -12,8 +12,8 @@ MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Software MIDI player
 
 .if !defined(PKGNAMESUFFIX)
-LIB_DEPENDS=	vorbis:${PORTSDIR}/audio/libvorbis	\
-		arc:${PORTSDIR}/archivers/libarc
+LIB_DEPENDS=	libvorbis.so:${PORTSDIR}/audio/libvorbis	\
+		libarc.so:${PORTSDIR}/archivers/libarc
 RUN_DEPENDS=	${LOCALBASE}/share/timidity/timidity.cfg:${PORTSDIR}/audio/eawpats
 
 CONFLICTS=	timidity-0.*
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=--without-x --disable-spectrogram --disable-wrd --disable-dynami
 .else
 CONFIGURE_ARGS+=--with-x    --enable-spectrogram  --enable-wrd  --enable-dynamic
 USE_XORG=	x11 xext
-LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png
 CPPFLAGS+=	-I${LOCALBASE}/include/libpng15
 .endif
 
