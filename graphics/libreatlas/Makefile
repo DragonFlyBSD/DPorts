@@ -1,9 +1,9 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/libreatlas/Makefile 332843 2013-11-05 12:42:02Z wen $
+# $FreeBSD: graphics/libreatlas/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	libreatlas
 PORTVERSION=	1.0.0a
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
 
