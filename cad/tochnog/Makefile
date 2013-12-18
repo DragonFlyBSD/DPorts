@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/tochnog/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: cad/tochnog/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	tochnog
 PORTVERSION=	20010211
@@ -12,9 +12,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A free explicit/implicit Finite Element Program
 
 .ifdef WITH_ATLAS
-LIB_DEPENDS=	atlas:${PORTSDIR}/math/atlas
+LIB_DEPENDS=	libatlas.so:${PORTSDIR}/math/atlas
 .else
-LIB_DEPENDS=	blas:${PORTSDIR}/math/blas
+LIB_DEPENDS=	libblas.so:${PORTSDIR}/math/blas
 .endif
 BUILD_DEPENDS=	${LOCALBASE}/lib/libf2c.a:${PORTSDIR}/lang/f2c
 .ifdef WITH_THREADS
