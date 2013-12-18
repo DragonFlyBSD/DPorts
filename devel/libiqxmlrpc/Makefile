@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: devel/libiqxmlrpc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libiqxmlrpc/Makefile 336253 2013-12-12 10:53:38Z bapt $
 
 PORTNAME=	libiqxmlrpc
 PORTVERSION=	0.12.4
@@ -13,7 +13,7 @@ COMMENT=	Free, object-oriented XML-RPC implementation written in C++
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
 .endif
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 LICENSE=	BSD
 
