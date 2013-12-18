@@ -1,5 +1,5 @@
 # Created by: vshankar
-# $FreeBSD: www/mod_flickr/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_flickr/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_flickr
 PORTVERSION=	1.0
@@ -10,8 +10,7 @@ MASTER_SITES=	http://www.vshank.com/modcode/
 MAINTAINER=	venkyshankar@yahoo.com
 COMMENT=	Apache module for Flickr API access
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
-
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
 XTRA_FLAGS=	-lcurl
 
@@ -29,7 +28,6 @@ USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<curl\/types.h>/d' ${WRKSRC}/mod_flickr.c
 
