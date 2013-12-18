@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: deskutils/libopensync-plugin-file/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/libopensync-plugin-file/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	libopensync-plugin-file
 PORTVERSION=	0.22
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 MAINTAINER=	samm@os2.kiev.ua
 COMMENT=	File-Sync plugin for the opensync framework
 
-LIB_DEPENDS=	opensync.0:${PORTSDIR}/devel/libopensync022
+LIB_DEPENDS=	libopensync.so:${PORTSDIR}/devel/libopensync022
 
 USES=		pkgconfig
 USE_BZIP2=	yes
