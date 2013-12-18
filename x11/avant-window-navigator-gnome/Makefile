@@ -1,9 +1,8 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator-gnome/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/avant-window-navigator-gnome/Makefile 336694 2013-12-17 05:35:47Z amdmi3 $
 
 PORTREVISION=	7
-AWN_DESKTOP=    gnome
-MASTERDIR=      ${.CURDIR}/../avant-window-navigator
+AWN_DESKTOP=	gnome
+MASTERDIR=	${.CURDIR}/../avant-window-navigator
 
-NO_STAGE=	yes
 .include <${MASTERDIR}/Makefile>
