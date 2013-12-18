@@ -1,8 +1,9 @@
 # Created by: Vasil Dimov <vd@datamax.bg>
-# $FreeBSD: devel/google-sparsehash/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: devel/google-sparsehash/Makefile 336465 2013-12-14 18:03:20Z sbruno $
 
 PORTNAME=	google-sparsehash
 PORTVERSION=	2.0.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		${MASTER_SITE_LOCAL}
@@ -14,6 +15,7 @@ MAINTAINER=	vd@FreeBSD.org
 COMMENT=	An extremely memory-efficient hash_map implementation
 
 GNU_CONFIGURE=	yes
+USE_GCC=	4.8+
 
 .include <bsd.port.pre.mk>
 
