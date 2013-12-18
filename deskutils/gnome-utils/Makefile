@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-utils/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gnome-utils/Makefile 336190 2013-12-11 18:28:10Z bapt $
 #   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.159 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	gnome-utils
@@ -13,8 +13,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 support utilities
 
-LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
+		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
 
 CONFLICTS=	baobob-3.[0-9]* gnome-dictionary-3.[0-9]* \
 		gnome-font-viewer-3.[0-9]* gnome-screenshot-3.[0-9]* \
