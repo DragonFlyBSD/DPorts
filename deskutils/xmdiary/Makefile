@@ -1,5 +1,5 @@
 # Created by: mi@aldan.ziplink.net
-# $FreeBSD: deskutils/xmdiary/Makefile 335588 2013-12-03 19:12:34Z tijl $
+# $FreeBSD: deskutils/xmdiary/Makefile 336245 2013-12-12 05:13:52Z eadler $
 
 PORTNAME=	xmdiary
 PORTVERSION=	3.0.3
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}.tar.gz
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Personal and group calendar utility
 
-NO_CDROM=	Don't sell for profit
+NO_CDROM=	Do not sell for profit
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 USES=		imake motif
 USE_XORG=	x11 xext xp xpm xt
