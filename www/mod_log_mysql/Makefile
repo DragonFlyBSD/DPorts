@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_log_mysql/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_log_mysql/Makefile 336555 2013-12-15 16:45:38Z ohauer $
 
 PORTNAME=	mod_log_mysql
 PORTVERSION=	1.0
@@ -17,8 +17,10 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows Apache 2 to log to a MySQL database
 
-RUN_DEPENDS+=	${LOCALBASE}/${APACHEMODDIR}/mod_log_config-st.so:${PORTSDIR}/www/mod_log_config-st
+EXPIRATION_DATE=	2014-02-08
+DEPRECATED=	Upstream site gone since 2011-03
 
+RUN_DEPENDS+=	${LOCALBASE}/${APACHEMODDIR}/mod_log_config-st.so:${PORTSDIR}/www/mod_log_config-st
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
@@ -28,5 +30,4 @@ USE_MYSQL=	yes
 AP_INC+=	${LOCALBASE}/include/mysql
 AP_LIB+=	${LOCALBASE}/lib/mysql -lmysqlclient
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
