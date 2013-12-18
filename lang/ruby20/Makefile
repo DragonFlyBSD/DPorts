@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby20/Makefile 334990 2013-11-27 01:10:08Z swills $
+# $FreeBSD: lang/ruby20/Makefile 336311 2013-12-13 02:17:30Z sunpoet $
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -13,6 +13,9 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT?=	Object-oriented interpreted scripting language
+
+LICENSE=	BSD2CLAUSE RUBY
+LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libffi.so:${PORTSDIR}/devel/libffi \
