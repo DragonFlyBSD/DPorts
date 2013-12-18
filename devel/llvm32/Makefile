@@ -1,4 +1,4 @@
-# $FreeBSD: devel/llvm32/Makefile 332110 2013-10-30 14:03:46Z brooks $
+# $FreeBSD: devel/llvm32/Makefile 336462 2013-12-14 17:37:08Z mva $
 
 PORTNAME=	llvm
 PORTVERSION=	3.2
@@ -19,10 +19,22 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 UNIQUENAME=	${PORTNAME}${LLVM_SUFFIX}
 
-USES=		gmake perl5
+USES=		gmake perl5 shebangfix
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_PREFIX=	${LLVM_PREFIX}
 USE_LDCONFIG=	${LLVM_PREFIX}/lib
+
+python_OLD_CMD=	/usr/bin/env python
+python_CMD=	/usr/bin/env python2
+SHEBANG_FILES=	test/Scripts/coff-dump.py test/Scripts/elf-dump \
+		test/Scripts/macho-dumpx lib/Target/NVPTX/gen-register-defs.py \
+		utils/clang-parse-diagnostics-file \
+		utils/release/findRegressions-nightly.py \
+		utils/release/findRegressions-simple.py \
+		utils/Misc/zkill utils/llvm-lit/llvm-lit.in \
+		utils/Target/ARM/analyze-match-table.py \
+		utils/llvm-build/llvm-build utils/lit/lit.py \
+		utils/lit/lit/ProgressBar.py utils/lit/lit/main.py
 
 SUB_FILES=	llvm-wrapper.sh
 SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
@@ -108,10 +120,10 @@ CONFIGURE_ARGS+=	--disable-docs
 
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=		lit.1
-USE_PYTHON=		yes
+USE_PYTHON=		2
 LIT_COMMANDS=		lit llvm-lit FileCheck
 .else
-USE_PYTHON_BUILD=	yes
+USE_PYTHON_BUILD=	2
 .endif
 
 .if ${PORT_OPTIONS:MLTOPLUGIN}
