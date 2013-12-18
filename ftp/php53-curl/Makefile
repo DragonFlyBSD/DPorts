@@ -1,7 +1,6 @@
-# $FreeBSD: ftp/php53-curl/Makefile 332429 2013-11-01 23:49:56Z flo $
+# $FreeBSD: ftp/php53-curl/Makefile 336500 2013-12-14 23:30:36Z flo $
 
 CATEGORIES=	ftp
-PORTREVISION=	1
 
 MASTERDIR=	${.CURDIR}/../../lang/php53
 
