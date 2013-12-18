@@ -1,5 +1,5 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: graphics/apngasm/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/apngasm/Makefile 336096 2013-12-10 19:39:46Z nemysis $
 
 PORTNAME=	apngasm
 PORTVERSION=	2.7
@@ -7,7 +7,7 @@ DISTVERSIONSUFFIX=-src
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Creates an APNG animation from a PNG/TGA image sequence
 
 LICENSE=	ZLIB
