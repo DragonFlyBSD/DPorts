@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/moettf/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/moettf/Makefile 336214 2013-12-11 19:51:29Z eadler $
 
 PORTNAME=	moettf
 PORTVERSION=	2.0
@@ -17,7 +17,7 @@ EXTRACT_DEPENDS=unrar:${PORTSDIR}/archivers/unrar
 
 DIST_SUBDIR=	zh-moettf
 
-NO_CDROM=	Contact Taiwan's Ministry of Education for commercial use.
+NO_CDROM=	Contact Taiwan's Ministry of Education for commercial use
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
