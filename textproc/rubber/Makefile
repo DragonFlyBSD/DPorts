@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rubber/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubber/Makefile 336488 2013-12-14 21:27:28Z wg $
 
 PORTNAME=	rubber
 PORTVERSION=	1.1
@@ -8,17 +8,16 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://launchpadlibrarian.net/53558954/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A wrapper for LaTeX and friends
+COMMENT=	Wrapper for LaTeX and friends
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_PYTHON=	2.5+
-USE_GMAKE=	yes
+USE_PYTHON=	2
 USE_TEX=	latex
+USES=		gmake
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --infodir=${PREFIX}/${INFO_PATH} \
-		--datadir=${PYTHON_SITELIBDIR}
+		--datadir=${PYTHON_SITELIBDIR} --python=${PYTHON_CMD}
 
 MANLANG=	"" fr
 MAN1=		rubber.1 rubber-info.1 rubber-pipe.1
