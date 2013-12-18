@@ -1,5 +1,5 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: www/mod_fastcgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_fastcgi/Makefile 336555 2013-12-15 16:45:38Z ohauer $
 
 PORTNAME=	mod_fastcgi
 PORTVERSION=	2.4.7
@@ -10,25 +10,16 @@ DISTNAME=	mod_fastcgi-SNAP-0910052141
 DIST_SUBDIR=	apache2
 
 MAINTAINER=	apache@FreeBSD.org
-COMMENT=	A fast-cgi module for Apache
-
+COMMENT=	Apache 2.2 fast-cgi module
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 SRC_FILE=	*.c
-PORTDOCS=	LICENSE.TERMS mod_fastcgi.html
-
-NO_STAGE=	yes
-do-install:
-	@${APXS} -i -a -n ${SHORTMODNAME} ${WRKSRC}/${MODULENAME}.${AP_BUILDEXT}
+PORTDOCS=	mod_fastcgi.html
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DOCSDIR}
-.endfor
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/docs/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
