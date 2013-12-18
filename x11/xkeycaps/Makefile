@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xkeycaps/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xkeycaps/Makefile 336392 2013-12-13 23:43:01Z bapt $
 
 PORTNAME=	xkeycaps
 PORTVERSION=	2.46
@@ -13,8 +13,7 @@ COMMENT=	Graphically display and edit the keyboard mapping
 
 USES=		imake
 USE_XORG=	xbitmaps xaw
-MAN1=		xkeycaps.1
-PLIST_FILES=	bin/xkeycaps
+PLIST_FILES=	bin/xkeycaps \
+		man/man1/xkeycaps.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
