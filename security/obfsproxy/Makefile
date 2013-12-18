@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: security/obfsproxy/Makefile 328994 2013-10-01 20:54:44Z cs $
+# $FreeBSD: security/obfsproxy/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	obfsproxy
 PORTVERSION=	0.2.4
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyptlib>=0.0.5:${PORTSDIR}/security/py-pyptl
 		${PYTHON_PKGNAMEPREFIX}pycrypto>=2.1:${PORTSDIR}/security/py-pycrypto
 
 USE_PYTHON=	yes
-USE_TWISTED=	yes
+USES=		twisted
 USE_PYDISTUTILS=easy_install
 SUB_FILES=	pkg-message
 PYDISTUTILS_PKGNAME=obfsproxy
