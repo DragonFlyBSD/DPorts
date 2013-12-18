@@ -1,8 +1,9 @@
 # Created by: Maxime Henrion <mux@FreeBSD.org>
-# $FreeBSD: games/wtf/Makefile 328752 2013-09-29 22:37:14Z wg $
+# $FreeBSD: games/wtf/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	wtf
 PORTVERSION=	20130928
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/bsdwtf
 
@@ -10,6 +11,7 @@ MAINTAINER=	lifanov@mail.lifanov.com
 COMMENT=	Translates common Internet acronyms
 
 NO_BUILD=	yes
+NO_ARCH=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/misc|${DATADIR}|g' ${WRKSRC}/wtf*
