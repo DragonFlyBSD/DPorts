@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/rezerwar/Makefile 330830 2013-10-19 02:33:32Z amdmi3 $
+# $FreeBSD: games/rezerwar/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	rezerwar
 PORTVERSION=	0.4.2
@@ -24,7 +24,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|' ${WRKSRC}/configure
