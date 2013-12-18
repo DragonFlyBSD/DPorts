@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951#comcast.net>
-# $FreeBSD: deskutils/osmo/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/osmo/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	osmo
 PORTVERSION=	0.2.10
@@ -10,12 +10,12 @@ MASTER_SITES=	SF/${PORTNAME}-pim/${PORTNAME}-pim/${PORTNAME}-${PORTVERSION}/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A personal organizer
 
-LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
-		notify:${PORTSDIR}/devel/libnotify \
-		ical:${PORTSDIR}/devel/libical \
-		tar:${PORTSDIR}/devel/libtar \
-		gringotts:${PORTSDIR}/security/libgringotts \
-		gtkhtml:${PORTSDIR}/www/libgtkhtml
+LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libnotify.so:${PORTSDIR}/devel/libnotify \
+		libical.so:${PORTSDIR}/devel/libical \
+		libtar.so:${PORTSDIR}/devel/libtar \
+		libgringotts.so:${PORTSDIR}/security/libgringotts \
+		libgtkhtml.so:${PORTSDIR}/www/libgtkhtml
 
 USE_GNOME=	gtk20
 USES=		gettext gmake pkgconfig
