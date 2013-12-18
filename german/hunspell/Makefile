@@ -1,7 +1,7 @@
-# $FreeBSD: german/hunspell/Makefile 334295 2013-11-19 10:12:00Z sunpoet $
+# $FreeBSD: german/hunspell/Makefile 335972 2013-12-09 11:37:43Z sunpoet $
 
 PORTNAME=	hunspell
-PORTVERSION=	20120607
+PORTVERSION=	20131206
 CATEGORIES=	german textproc
 MASTER_SITES=	http://www.j3e.de/ispell/igerman98/dict/ \
 		LOCAL/sunpoet/${PORTNAME}
