@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/osmium/Makefile 330586 2013-10-17 01:15:50Z amdmi3 $
+# $FreeBSD: astro/osmium/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	osmium
 PORTVERSION=	git20130522
@@ -32,7 +32,7 @@ CXXFLAGS+=	-I${LOCALBASE}/include \
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	JAVASCRIPT DOXYGEN DOCS
-OPTIONS_DEFAULT=JAVASCRIPT DOCS
+OPTIONS_DEFAULT=JAVASCRIPT
 JAVASCRIPT_DESC=Enable javascript support
 
 .include <bsd.port.options.mk>
