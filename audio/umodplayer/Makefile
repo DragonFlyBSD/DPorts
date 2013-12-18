@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/umodplayer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/umodplayer/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	umodplayer
 PORTVERSION=	0.${DISTVERSION:tl}
@@ -12,8 +12,8 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Console module player
 
-LIB_DEPENDS=	modplug.1:${PORTSDIR}/audio/libmodplug \
-		ao.4:${PORTSDIR}/audio/libao
+LIB_DEPENDS=	libmodplug.so:${PORTSDIR}/audio/libmodplug \
+		libao.so:${PORTSDIR}/audio/libao
 BUILD_DEPENDS=	${LOCALBASE}/lib/libaiff.a:${PORTSDIR}/audio/libaiff
 
 NO_STAGE=	yes
