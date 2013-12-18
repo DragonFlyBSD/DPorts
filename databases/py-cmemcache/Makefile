@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: databases/py-cmemcache/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-cmemcache/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	cmemcache
 PORTVERSION=	0.95
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	qingfeng@douban.com
 COMMENT=	Python API for memcached, a distributed memory cache daemon
 
-LIB_DEPENDS=	memcache:${PORTSDIR}/databases/libmemcache
+LIB_DEPENDS=	libmemcache.so:${PORTSDIR}/databases/libmemcache
 
 USE_BZIP2=	yes
 USE_PYTHON=		yes
