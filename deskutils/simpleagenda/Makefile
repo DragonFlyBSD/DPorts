@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/simpleagenda/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/simpleagenda/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	simpleagenda
 PORTVERSION=	0.43
@@ -10,7 +10,7 @@ DISTNAME=	SimpleAgenda-${PORTVERSION}
 MAINTAINER=	theraven@FreeBSD.org
 COMMENT=	simple calendar and agenda application
 
-LIB_DEPENDS+=	ical:${PORTSDIR}/devel/libical
+LIB_DEPENDS+=	libical.so:${PORTSDIR}/devel/libical
 
 LICENSE=	GPLv2
 
