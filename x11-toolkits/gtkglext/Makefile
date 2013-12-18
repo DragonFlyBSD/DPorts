@@ -1,9 +1,9 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/gtkglext/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-toolkits/gtkglext/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.2.0
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF
 DIST_SUBDIR=	gnome2
