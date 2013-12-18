@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/arpack++/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/arpack++/Makefile 336357 2013-12-13 15:33:42Z bapt $
 
 PORTNAME=	arpack++
 PORTVERSION=	1.2
@@ -34,8 +34,6 @@ LIB_DEPENDS+=	blas.2:${PORTSDIR}/math/blas
 BLAS=		-lblas
 LAPACK=		-llapack
 .endif
-
-USE_GCC=4.2+
 
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ""
