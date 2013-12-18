@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/libkcompactdisc/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libkcompactdisc/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	libkcompactdisc
 PORTVERSION=	${KDE4_VERSION}
@@ -25,7 +25,7 @@ OPTIONS_DEFINE=	ALSA
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALSA}
-LIB_DEPENDS+=	asound.2:${PORTSDIR}/audio/alsa-lib
+LIB_DEPENDS+=	libasound.so:${PORTSDIR}/audio/alsa-lib
 .else
 EXTRA_PATCHES+=	${FILESDIR}/extrapatch-no_alsa
 .endif
