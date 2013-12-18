@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/sqliteman/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/sqliteman/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sqliteman
 PORTVERSION=	1.2.2
@@ -10,7 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Admin's GUI tool for Sqlite3
 
-LIB_DEPENDS=	qscintilla2:${PORTSDIR}/devel/qscintilla2
+LIB_DEPENDS=	libqscintilla2.so:${PORTSDIR}/devel/qscintilla2
 
 USES=		cmake
 USE_SQLITE=	yes
