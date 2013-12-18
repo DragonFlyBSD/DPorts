@@ -1,12 +1,12 @@
 # Created by: glarkin
-# $FreeBSD: devel/rsvndump/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rsvndump/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	rsvndump
 PORTVERSION=	0.5.8
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Remote Subversion repository dumpfile generator
 
 GNU_CONFIGURE=	yes
