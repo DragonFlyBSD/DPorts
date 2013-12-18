@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-anonfunc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-anonfunc/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	anonfunc
 PORTVERSION=	1.0
@@ -14,6 +14,11 @@ COMMENT=	Python module that provides easy anonymous function
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
+
 .include <bsd.port.mk>
