@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-LoadableClass/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Types-LoadableClass/Makefile 336507 2013-12-15 08:55:51Z az $
 
 PORTNAME=	MooseX-Types-LoadableClass
 PORTVERSION=	0.008
@@ -25,7 +25,4 @@ TEST_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	MooseX::Types::LoadableClass.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
