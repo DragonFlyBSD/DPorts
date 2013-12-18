@@ -1,5 +1,5 @@
 # Created by: michael@fuckner.net
-# $FreeBSD: sysutils/arcconf/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/arcconf/Makefile 336206 2013-12-11 19:33:20Z eadler $
 
 PORTNAME=	arcconf
 DISTVERSION=	v7_30_18837
@@ -18,7 +18,7 @@ PERIODICSCRIPT=	410.status-aac-raid
 SUB_FILES+=	${PERIODICSCRIPT}
 
 RESTRICTED=	May not be redistributed in binary form
-NO_CDROM=	yes
+NO_CDROM=	May not be redistributed in binary form
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
