@@ -1,8 +1,8 @@
 # Created by: petef@databits.net
-# $FreeBSD: textproc/p5-PDF-Create/Makefile 333222 2013-11-08 13:35:39Z jadawin $
+# $FreeBSD: textproc/p5-PDF-Create/Makefile 336163 2013-12-11 13:35:12Z jadawin $
 
 PORTNAME=	PDF-Create
-PORTVERSION=	1.06
+PORTVERSION=	1.08
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
