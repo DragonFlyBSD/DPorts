@@ -1,5 +1,5 @@
 # Created by: lewiz <purple@lewiz.net>
-# $FreeBSD: accessibility/dasher/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD: accessibility/dasher/Makefile 336152 2013-12-11 09:51:36Z bapt $
 #   $MCom: ports/accessibility/dasher/Makefile,v 1.66 2009/03/18 04:59:21 marcus Exp $
 
 PORTNAME=	dasher
@@ -14,15 +14,13 @@ MAINTAINER=	lewiz@compsoc.man.ac.uk
 COMMENT=	Information efficient text-entry interface
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
-LIB_DEPENDS=	ogg:${PORTSDIR}/audio/libogg
+LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
-USES=		gettext gmake pkgconfig
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
+USES=		gettext gmake pathfix pkgconfig
+USE_GNOME=	gnomeprefix intlhack gnomehier libgnomeui atspi \
 		libwnck gnomedocutils
-WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
@@ -30,14 +28,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	dasher.schemas
-MAN1=		dasher.1
 
-.include <bsd.port.pre.mk>
-
-#.if ${HAVE_GNOME:Mgnomespeech}!=""
-#USE_GNOME+=	gnomespeech
-#CONFIGURE_ARGS+=--enable-speech
-#.endif
 CONFIGURE_ARGS+=	--disable-speech
 
 post-patch:
@@ -47,4 +38,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|__gnu_cxx::lldiv|lldiv|' \
 	    	${WRKSRC}/Src/DasherCore/DasherViewSquare.cpp
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
