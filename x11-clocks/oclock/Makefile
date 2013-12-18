@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/oclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/oclock/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	oclock
 PORTVERSION=	1.0.3
@@ -10,7 +10,4 @@ COMMENT=	Round clock application for X
 XORG_CAT=	app
 USE_XORG=	x11 xmu xext xt xkbfile
 
-MAN1=		oclock.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
