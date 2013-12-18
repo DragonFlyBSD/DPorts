@@ -1,5 +1,5 @@
 # Created by: Klaus T. Aehlig <aehlig@linta.de>
-# $FreeBSD: math/ocamlgsl/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ocamlgsl/Makefile 336358 2013-12-13 15:35:19Z bapt $
 
 PORTNAME=	ocamlgsl
 PORTVERSION=	0.6.0
@@ -20,8 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 INSTALL_TARGET=	install-findlib
 
-USE_GMAKE=	YES
-USE_GCC=	4.2+
+USES=		gmake
 USE_OCAML=	YES
 MAKE_ENV+=	OCAMLDIR=${OCAML_LIBDIR}
 MAKE_JOBS_UNSAFE=	yes
