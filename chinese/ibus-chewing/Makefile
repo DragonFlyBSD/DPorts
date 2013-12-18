@@ -1,5 +1,5 @@
 # Created by: Eric L. Camachat <eric@camachat.org>
-# $FreeBSD: chinese/ibus-chewing/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/ibus-chewing/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	ibus-chewing
 PORTVERSION=	1.4.3
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2 \
 		${LOCALBASE}/share/cmake/Modules/ManageEnvironment.cmake:${PORTSDIR}/devel/cmake-fedora \
 		ibus-daemon:${PORTSDIR}/textproc/ibus
 RUN_DEPENDS=	ibus-daemon:${PORTSDIR}/textproc/ibus
-LIB_DEPENDS=	chewing:${PORTSDIR}/chinese/libchewing
+LIB_DEPENDS=	libchewing.so:${PORTSDIR}/chinese/libchewing
 
 CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PREFIX}/etc \
 		-DLIB_DIR=${PREFIX}/lib
