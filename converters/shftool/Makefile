@@ -1,5 +1,5 @@
 # Created by: Joachim Strombergson <watchman@ludd.ltu.se>
-# $FreeBSD: converters/shftool/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: converters/shftool/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	shftool
 PORTVERSION=	1.2.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.df.lth.se/~triad/krad/shftool/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converter for the Standard Hex Format (SHF)
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 GNU_CONFIGURE=	yes
 
