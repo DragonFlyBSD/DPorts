@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-MooseColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-MooseColumns/Makefile 336507 2013-12-15 08:55:51Z az $
 
 PORTNAME=	DBIx-Class-MooseColumns
 PORTVERSION=	0.22
@@ -33,11 +33,4 @@ TEST_DEPENDS=	p5-Test-Aggregate>=0.363:${PORTSDIR}/devel/p5-Test-Aggregate \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	\
-	DBIx::Class::MooseColumns.3 \
-	DBIx::Class::MooseColumns::Meta::Role::Attribute.3 \
-	DBIx::Class::MooseColumns::Meta::Role::Attribute::DBICColumn.3 \
-	DBIx::Class::MooseColumns::Meta::Role::Attribute::DBICColumn::Inflated.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
