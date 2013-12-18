@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/flwrap/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/flwrap/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	flwrap
 PORTVERSION=	1.3.4
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	db
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Flwrap is a companion utility for fldigi
 
-LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
