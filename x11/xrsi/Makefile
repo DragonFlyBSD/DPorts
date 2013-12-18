@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: x11/xrsi/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xrsi/Makefile 336384 2013-12-13 23:28:52Z bapt $
 
 PORTNAME=	xrsi
 PORTVERSION=	0.9
@@ -14,18 +14,13 @@ USE_XORG=	x11
 PLIST_FILES=	bin/xrsi
 PORTDOCS=	Readme Licence
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-build:
 	${CC} ${CFLAGS} -I${LOCALBASE}/include -L${LOCALBASE}/lib -lX11 -o ${WRKSRC}/xrsi ${WRKSRC}/xrsi.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xrsi ${PREFIX}/bin/
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/Readme  ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/Licence ${DOCSDIR}/
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/xrsi ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Readme  ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/Licence ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
