@@ -1,5 +1,5 @@
 # Created by: Florian Unglaub <f.unglaub@googlemail.com>
-# $FreeBSD: deskutils/devd-notifier/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/devd-notifier/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	devd-notifier
 PORTVERSION=	0.1
@@ -14,7 +14,7 @@ COMMENT=	A daemon notifying the user about devd(8) events \
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
 
 USES=		pkgconfig
 MAN1=		devd-notifier.1
