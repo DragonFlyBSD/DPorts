@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/gnome-media/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gnome-media/Makefile 336166 2013-12-11 14:35:36Z bapt $
 #   $MCom: ports/audio/gnome-media/Makefile,v 1.164 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	gnome-media
@@ -13,8 +13,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multimedia applications for the GNOME 2 desktop
 
 BUILD_DEPENDS=	xml2po:${PORTSDIR}/textproc/gnome-doc-utils
-LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
 CONFLICTS=	gnome-control-center-3.[0-9]* libgnome-media-profiles-3.[0-9]*
 
@@ -40,7 +40,7 @@ OPTIONS_DEFAULT=PULSEAUDIO
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
-LIB_DEPENDS+=	pulse:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS+=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 CONFIGURE_ARGS+=--enable-pulseaudio
 PLIST_SUB+=	PULSE=""
 .else
