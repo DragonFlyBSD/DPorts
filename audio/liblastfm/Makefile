@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/liblastfm/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/liblastfm/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	liblastfm
 PORTVERSION=	1.0.6
@@ -11,9 +11,9 @@ COMMENT=	Qt C++ library for the Last.fm webservices
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
-		fftw3f:${PORTSDIR}/math/fftw3-float \
-		samplerate:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3 \
+		libfftw3f.so:${PORTSDIR}/math/fftw3-float \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 
 GH_ACCOUNT=	lastfm
 GH_COMMIT=	5826fe6
