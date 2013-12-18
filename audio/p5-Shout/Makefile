@@ -1,5 +1,5 @@
 # Created by: leo
-# $FreeBSD: audio/p5-Shout/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Shout/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	Shout
 PORTVERSION=	2.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl glue for libshout MP3 streaming source library
 
-LIB_DEPENDS=	shout.5:${PORTSDIR}/audio/libshout2
+LIB_DEPENDS=	libshout.so:${PORTSDIR}/audio/libshout2
 
 USES=		perl5 pkgconfig
 NO_STAGE=	yes
