@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xfwp/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xfwp/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xfwp
 PORTVERSION=	1.0.3
@@ -12,9 +12,6 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	x11 ice xproxymngproto
 
-PLIST_FILES=	bin/xfwp
+PLIST_FILES=	bin/xfwp man/man1/xfwp.1.gz
 
-MAN1=		xfwp.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
