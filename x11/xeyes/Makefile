@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xeyes/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xeyes/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xeyes
 PORTVERSION=	1.1.1
@@ -10,9 +10,6 @@ COMMENT=	A follow the mouse X demo
 XORG_CAT=	app
 USE_XORG=	x11 xt xext xmu xrender
 
-PLIST_FILES=	bin/xeyes
+PLIST_FILES=	bin/xeyes man/man1/xeyes.1.gz
 
-MAN1=		xeyes.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
