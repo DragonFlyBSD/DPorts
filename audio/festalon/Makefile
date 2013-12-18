@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/festalon/Makefile 333587 2013-11-12 16:16:34Z ehaupt $
+# $FreeBSD: audio/festalon/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	festalon
 PORTVERSION=	0.5.5
@@ -14,7 +14,7 @@ COMMENT?=	Command line player for .nsf and .hes audio files
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS+=	samplerate:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS+=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 
 USES=		pkgconfig
 USE_AUTOTOOLS=	libtool
