@@ -1,5 +1,5 @@
 # Created by: Alexandr Bechikov <goo@t72.ru>
-# $FreeBSD: audio/gstreamer-plugins-moodbar/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gstreamer-plugins-moodbar/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gstreamer-plugins-moodbar
 PORTVERSION=	0.1.2
@@ -12,8 +12,8 @@ DISTNAME=	moodbar-0.1.2
 MAINTAINER=	lx@FreeBSD.org
 COMMENT=	Shows the "moods" of audio tracks in Amarok
 
-LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float \
-		fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libfftw3f.so:${PORTSDIR}/math/fftw3-float \
+		libfftw3.so:${PORTSDIR}/math/fftw3
 
 CFLAGS:=	${CFLAGS} -O2
 USE_GSTREAMER=	yes good
