@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: deskutils/dosage/Makefile 334724 2013-11-24 13:34:50Z antoine $
+# $FreeBSD: deskutils/dosage/Makefile 336017 2013-12-09 19:29:40Z antoine $
 
 PORTNAME=	dosage
-PORTVERSION=	2.7
+PORTVERSION=	2.8
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://wummel.github.io/dosage/dist/
 
@@ -15,10 +15,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=Dosage
-PYTHON_PY3K_PLIST_HACK=yes
+PYDISTUTILS_AUTOPLIST=yes
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|share/man/man1|man/man1|' ${WRKSRC}/setup.py
+	@${REINPLACE_CMD} 's|share/man/man1|man/man1|' ${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
