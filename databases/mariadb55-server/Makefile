@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mariadb55-server/Makefile 330601 2013-10-17 05:16:44Z flo $
+# $FreeBSD: databases/mariadb55-server/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME?=	mariadb
 PORTVERSION=	5.5.33a
@@ -126,7 +126,7 @@ PLIST_SUB+=	OQGRAPH="@comment "
 USE_GCC?=	yes
 CMAKE_ARGS+=	-DWITH_OQGRAPH_STORAGE_ENGINE=1
 PLIST_SUB+=	OQGRAPH=""
-LIB_DEPENDS+=	boost_system:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS+=	libboost_system.so:${PORTSDIR}/devel/boost-libs
 .endif
 .if ${PORT_OPTIONS:MMAXKEY}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-include_my_compare.h
