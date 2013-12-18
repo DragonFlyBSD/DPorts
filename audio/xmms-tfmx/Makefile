@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: audio/xmms-tfmx/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: audio/xmms-tfmx/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-tfmx
 PORTVERSION=	0.5
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}.tar.gz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS Input plugin for playing TFMX tunes
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	gtk12 lthack
 NO_STAGE=	yes
