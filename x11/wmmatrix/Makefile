@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11/wmmatrix/Makefile 329631 2013-10-06 21:51:02Z marino $
+# $FreeBSD: x11/wmmatrix/Makefile 336404 2013-12-14 00:02:17Z bapt $
 
 PORTNAME=	wmmatrix
 PORTVERSION=	0.2
@@ -19,8 +19,7 @@ USES=		gmake
 USE_XORG=	xpm
 ALL_TARGET=	clean all
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmMatrix ${PREFIX}/bin/wmmatrix
+	${INSTALL_PROGRAM} ${WRKSRC}/wmMatrix ${STAGEDIR}${PREFIX}/bin/wmmatrix
 
 .include <bsd.port.mk>
