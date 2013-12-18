@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pipepanic/Makefile 330835 2013-10-19 02:49:21Z amdmi3 $
+# $FreeBSD: games/pipepanic/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	pipepanic
 PORTVERSION=	0.1.3
@@ -20,7 +20,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} \
