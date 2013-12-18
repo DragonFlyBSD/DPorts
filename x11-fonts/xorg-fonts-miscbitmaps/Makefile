@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-fonts/xorg-fonts-miscbitmaps/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/xorg-fonts-miscbitmaps/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-fonts-miscbitmaps
 PORTVERSION=	7.7
@@ -27,9 +27,9 @@ RUN_DEPENDS=	${FONTDIR}/misc/arabic24.pcf.gz:${PORTSDIR}/x11-fonts/font-arabic-m
 CONFLICTS=	XFree86-fontDefaultBitmaps-*
 
 NO_BUILD=	# none
+NO_MTREE=	yes
 FONTDIR=	${LOCALBASE}/lib/X11/fonts
 
 do-install:	# empty
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
