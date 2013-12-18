@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: security/phpdeadlock/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/phpdeadlock/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	phpdeadlock
 PORTVERSION=	1.01
@@ -8,7 +8,7 @@ CATEGORIES=	security www
 MASTER_SITES=	SF/${PORTNAME}/Deadlock/${PORTVERSION}%20Stable
 DISTNAME=	Deadlock-${PORTVERSION}-Stable
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web-based user authentication/password protection system
 
 WRKSRC=	${WRKDIR}/Deadlock-1.01
