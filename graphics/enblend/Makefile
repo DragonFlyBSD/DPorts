@@ -1,5 +1,5 @@
 # Created by: cartola@openit.com.br
-# $FreeBSD: graphics/enblend/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD: graphics/enblend/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	enblend
 PORTVERSION=	4.1.1
@@ -13,13 +13,13 @@ COMMENT=	Tool for image blending with multiresolution splines
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/makeinfo:${PORTSDIR}/print/texinfo \
 		OpenEXR>=1.0:${PORTSDIR}/graphics/OpenEXR
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		lcms2:${PORTSDIR}/graphics/lcms2 \
-		xmi:${PORTSDIR}/graphics/plotutils \
-		tiff:${PORTSDIR}/graphics/tiff \
-		boost_filesystem:${PORTSDIR}/devel/boost-libs \
-		vigraimpex:${PORTSDIR}/graphics/vigra \
-		gsl:${PORTSDIR}/math/gsl
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
+		libxmi.so:${PORTSDIR}/graphics/plotutils \
+		libtiff.so:${PORTSDIR}/graphics/tiff \
+		libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
+		libvigraimpex.so:${PORTSDIR}/graphics/vigra \
+		libgsl.so:${PORTSDIR}/math/gsl
 RUN_DEPENDS=	OpenEXR>=1.0:${PORTSDIR}/graphics/OpenEXR
 
 USE_AUTOTOOLS=	automake:env autoconf:env
