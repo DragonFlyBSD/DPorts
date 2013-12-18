@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/firstboot-pkgs/files/firstboot_pkgs.in 335251 2013-11-30 00:17:00Z cperciva $
+# $FreeBSD: sysutils/firstboot-pkgs/files/firstboot_pkgs.in 336602 2013-12-16 02:36:23Z cperciva $
 # KEYWORD: firstboot
 # PROVIDE: firstboot_pkgs
 # REQUIRE: NETWORKING
@@ -27,6 +27,9 @@ stop_cmd=":"
 firstboot_pkgs_run()
 {
 
+	# Count rc.d scripts
+	nscriptso=`ls /usr/local/etc/rc.d | wc -l`
+
 	# Bootstrap if necessary
 	if ! pkg -N 2>/dev/null; then
 		env ASSUME_ALWAYS_YES=YES pkg bootstrap
@@ -34,7 +37,16 @@ firstboot_pkgs_run()
 
 	# Install requested packages, if any
 	if ! [ -z "$firstboot_pkgs_list" ]; then
-		env ASSUME_ALWAYS_YES=YES pkg install $firstboot_pkgs_list
+		env ASSUME_ALWAYS_YES=YES pkg install $firstboot_pkgs_list </dev/null
+	fi
+
+	# Count rc.d scripts again
+	nscriptsn=`ls /usr/local/etc/rc.d | wc -l`
+
+	# If we have more scripts, request a reboot
+	if [ $nscriptsn -ne $nscriptso ]; then
+		echo "Requesting reboot after installing packages with rc.d scripts."
+		touch ${firstboot_sentinel}-reboot
 	fi
 }
 
