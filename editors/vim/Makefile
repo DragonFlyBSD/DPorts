@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: editors/vim/Makefile 335537 2013-12-02 19:48:37Z sunpoet $
+# $FreeBSD: editors/vim/Makefile 335790 2013-12-06 23:24:14Z bapt $
 
 PORTNAME=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -12,7 +12,7 @@ PORTNAME=	vim
 #		! PATCHLEVEL to that level.
 PATCHLEVEL=	110
 PORTVERSION=	7.4.${PATCHLEVEL}
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	editors
 MASTER_SITES=	VIM
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}
@@ -49,6 +49,7 @@ CONFLICTS+=	vim*
 CONFLICTS+=	vim*-lite
 .endif
 
+USES=		pkgconfig
 MAKE_JOBS_UNSAFE=	yes
 USE_BZIP2=	yes
 WRKSRC=		${WRKDIR}/vim${PORTVERSION:R:S/.//g}/src
@@ -101,7 +102,7 @@ MAKE_ARGS+=	CONF_OPT_LUA_PREFIX="--with-lua-prefix=${LOCALBASE}"
 .endif
 
 .if ${PORT_OPTIONS:MPERL}
-USES=	perl5
+USES+=	perl5
 MAKE_ARGS+=	CONF_OPT_PERL="--enable-perlinterp"
 .endif
 
