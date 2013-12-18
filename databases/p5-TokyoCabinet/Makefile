@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-TokyoCabinet/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-TokyoCabinet/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	TokyoCabinet
 PORTVERSION=	1.34
@@ -12,7 +12,7 @@ DISTNAME=	tokyocabinet-perl-${PORTVERSION}
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension for TokyoCabinet
 
-LIB_DEPENDS=	tokyocabinet:${PORTSDIR}/databases/tokyocabinet
+LIB_DEPENDS=	libtokyocabinet.so:${PORTSDIR}/databases/tokyocabinet
 
 USES=		perl5
 USE_PERL5=	configure
