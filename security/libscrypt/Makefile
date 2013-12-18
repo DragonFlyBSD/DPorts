@@ -1,42 +1,49 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: security/libscrypt/Makefile 333338 2013-11-09 21:30:28Z jpaetzel $
+# $FreeBSD: security/libscrypt/Makefile 336645 2013-12-16 16:49:59Z nemysis $
 
 PORTNAME=	libscrypt
 PORTVERSION=	1.14
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	horia@racoviceanu.com
 COMMENT=	C library for the scrypt key derivation function
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
-NO_STAGE=	yes
+USES=		compiler
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	technion
-GH_COMMIT=	8e6966e
 GH_TAGNAME=	${GH_COMMIT}
+GH_COMMIT=	8e6966e
 
 PLIST_FILES=	include/libscrypt.h \
 		lib/libscrypt.a \
 		lib/libscrypt.so \
 		lib/libscrypt.so.0
 
-.include <bsd.port.pre.mk>
+PORTDOCS=	README.md
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
-	@${REINPLACE_CMD} -e '/^CC=gcc/d' -e '/CFLAGS=/s,$$, ${CFLAGS},' \
-		-e 's,/usr/local,${PREFIX},' -e 's,install: library,& install-static,' \
-		-e 's,$$(LDFLAGS),,' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e '/^CC=gcc/d' -e '/CFLAGS=/s|$$| ${CFLAGS}|' \
+		-e 's|/usr/local|${PREFIX}| ; \
+		s|install: library|& install-static| ; \
+		s|$$(LDFLAGS)||' ${WRKSRC}/Makefile
 
 regression-test: build
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check)
 
-.if ${ARCH} == i386
-CCVERSION!= ${CC} --version
-.if !empty(CCVERSION:tl:M*gcc*)
-CFLAGS+=    -fno-stack-protector
-.endif
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == i386 && ${COMPILER_TYPE} == gcc
+CFLAGS+=	-fno-stack-protector
 .endif
 
 .include <bsd.port.post.mk>
