@@ -1,11 +1,11 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-check_quota-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-check_quota-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=	check-quota
 PORTVERSION=	2.2
-PORTREVISION=	1
+PORTREVISION=	2
+CATEGORIES=		mail www
 DISTNAME=	${PORTNAME:S/-/_/}-${PORTVERSION}-1.4.0
-DIST_SUBDIR=	squirrelmail
 
 MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Check/display users' mail quota (filesystem, IMAP-based, and cPanel)
@@ -15,6 +15,7 @@ USE_SM_COMPAT=	YES
 SQUIRREL_PLUGIN_NAME=	${PORTNAME:S/-/_/}
 
 NO_STAGE=	yes
-.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+.include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
+.include <bsd.port.post.mk>
