@@ -1,4 +1,4 @@
-# $FreeBSD: audio/gnustep-cdplayer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gnustep-cdplayer/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	cdplayer
 PORTVERSION=	0.5.1
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	gnustep-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep CD player with CDDB support
 
-LIB_DEPENDS+=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
+LIB_DEPENDS+=	libcdaudio.so:${PORTSDIR}/audio/libcdaudio
 
 LICENSE=	GPLv2
 
