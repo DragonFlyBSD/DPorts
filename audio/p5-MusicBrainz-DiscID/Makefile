@@ -1,5 +1,5 @@
 # Created by: Tobias Rehbein <tobias.rehbein@web.de>
-# $FreeBSD: audio/p5-MusicBrainz-DiscID/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-MusicBrainz-DiscID/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	MusicBrainz-DiscID
 PORTVERSION=	0.03
@@ -12,7 +12,7 @@ MAINTAINER=	tobias.rehbein@web.de
 COMMENT=	Perl interface for the MusicBrainz libdiscid library
 
 BUILD_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
-LIB_DEPENDS=	discid.0:${PORTSDIR}/audio/libdiscid
+LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		pkgconfig perl5
