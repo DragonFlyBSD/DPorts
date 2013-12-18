@@ -1,9 +1,9 @@
 # Created by: Matthew Seaman
-# $FreeBSD: mail/sa-utils/Makefile 328436 2013-09-27 08:06:39Z matthew $
+# $FreeBSD: mail/sa-utils/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	sa-utils
 PORTVERSION=	0.02
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -16,6 +16,7 @@ RUN_DEPENDS=	sa-update:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 OPTIONS_DEFINE=	SACOMPILE
 SACOMPILE_DESC=	Enable sa-compile support
 
+NO_ARCH=	yes
 NO_BUILD=	yes
 SUB_FILES=	sa-utils
 
