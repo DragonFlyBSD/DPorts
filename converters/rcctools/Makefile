@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: converters/rcctools/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/rcctools/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	rcctools
 PORTVERSION=	0.1.1
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/rusxmms/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	admin@lissyara.su
 COMMENT=	Charset conversion utility with language and encoding autodetection
 
-LIB_DEPENDS=	rcc.2:${PORTSDIR}/devel/librcc
+LIB_DEPENDS=	librcc.so:${PORTSDIR}/devel/librcc
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
