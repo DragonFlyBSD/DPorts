@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/pavumeter/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/pavumeter/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	pavumeter
 PORTVERSION=	0.9.3
@@ -12,8 +12,8 @@ COMMENT=	GTK volume meter for PulseAudio
 
 BUILD_DEPENDS=	pulseaudio>=0.9.7:${PORTSDIR}/audio/pulseaudio
 RUN_DEPENDS=	pulseaudio>=0.9.7:${PORTSDIR}/audio/pulseaudio
-LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
-		pulse.0:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS=	libglademm-2.4.so:${PORTSDIR}/devel/libglademm24 \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
