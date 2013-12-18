@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-table-extra/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/fcitx-table-extra/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	fcitx-table-extra
 PORTVERSION=	0.3.3
@@ -10,7 +10,7 @@ DIST_SUBDIR=	fcitx
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Table-based input methods for Fcitx
 
-LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx
+LIB_DEPENDS=	libfcitx-config.so:${PORTSDIR}/chinese/fcitx
 
 USE_XZ=		yes
 USES=		cmake gettext
