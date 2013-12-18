@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: deskutils/tomboy/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/tomboy/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	tomboy
 PORTVERSION=	1.12.2
@@ -10,7 +10,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Personal note taking system for the GNOME desktop
 
-LIB_DEPENDS=	gtkspell:${PORTSDIR}/textproc/gtkspell
+LIB_DEPENDS=	libgtkspell.so:${PORTSDIR}/textproc/gtkspell
 BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp-2.4/gmime-sharp.dll:${PORTSDIR}/mail/gmime24-sharp \
 		${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
 		mautil:${PORTSDIR}/devel/mono-addins
