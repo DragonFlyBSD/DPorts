@@ -1,11 +1,10 @@
 # Created by: Chin-San Huang <chinsan@mail2000.com.tw>
-# $FreeBSD: www/dokuwiki/Makefile 331917 2013-10-29 01:01:31Z delphij $
+# $FreeBSD: www/dokuwiki/Makefile 336232 2013-12-11 22:11:32Z delphij $
 
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
 CATEGORIES=	www
-MASTER_SITES=	http://www.splitbrain.org/_media/projects/dokuwiki/ \
-		LOCAL/chinsan/${PORTNAME}
+MASTER_SITES=	http://download.dokuwiki.org/src/dokuwiki/
 DISTNAME=	${DIST_VER}
 EXTRACT_SUFX=	.tgz
 
@@ -15,7 +14,7 @@ COMMENT=	A simple and easy to use wiki, no database required
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-DIST_VER=	${PORTNAME}-2013-05-10
+DIST_VER=	${PORTNAME}-2013-12-08
 USE_PHP=	gd mbstring openssl pcre session xml zlib
 NO_BUILD=	YES
 WANT_PHP_WEB=	YES
