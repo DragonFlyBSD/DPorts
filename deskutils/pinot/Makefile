@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: deskutils/pinot/Makefile 335397 2013-12-01 15:36:26Z thierry $
+# $FreeBSD: deskutils/pinot/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	pinot
 PORTVERSION=	1.06
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 #MASTER_SITES=	http://colinf.chez.com/pinot/
