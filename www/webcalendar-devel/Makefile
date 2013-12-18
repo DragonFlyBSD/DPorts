@@ -1,4 +1,4 @@
-# $FreeBSD: www/webcalendar-devel/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/webcalendar-devel/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	WebCalendar
 PORTVERSION=	1.2.5
@@ -8,7 +8,7 @@ PKGNAMESUFFIX=	-devel
 DISTNAME=	${PORTNAME:S/-devel//g}-${PORTVERSION}
 PORTSCOUT=	limit:^1\.2\. skipb:1
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A web-based calendar application
 
 USE_PHP=	pcre session
