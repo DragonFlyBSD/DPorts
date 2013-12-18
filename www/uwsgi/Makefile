@@ -1,8 +1,8 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: www/uwsgi/Makefile 334062 2013-11-17 08:51:46Z demon $
+# $FreeBSD: www/uwsgi/Makefile 336254 2013-12-12 10:57:02Z demon $
 
 PORTNAME=	uwsgi
-PORTVERSION=	1.9.20
+PORTVERSION=	1.9.21.1
 CATEGORIES=	www python
 MASTER_SITES=	http://projects.unbit.it/downloads/
 
