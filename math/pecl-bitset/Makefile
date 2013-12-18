@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: math/pecl-bitset/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/pecl-bitset/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	bitset
 PORTVERSION=	1.0.1
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	pecl-
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A PECL extension for manipulating bitsets
 
 USE_PHP=	yes
