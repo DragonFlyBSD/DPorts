@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anrays@gmail.com>
-# $FreeBSD: misc/boxquote.el/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/boxquote.el/Makefile 336007 2013-12-09 16:51:00Z danilo $
 
 PORTNAME=	boxquote.el
 PORTVERSION=	1.18
@@ -21,14 +21,10 @@ XEMACSLISPDIR=	${PREFIX}/lib/xemacs/site-lisp
 PLIST_FILES=	share/emacs/site-lisp/${PORTNAME} lib/xemacs/site-lisp/${PORTNAME}
 PLIST_DIRS=	lib/xemacs/site-lisp lib/xemacs
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${EMACSLISPDIR}
-	${MKDIR} ${XEMACSLISPDIR}
-	${INSTALL_DATA} ${_DISTDIR}/${DISTNAME} ${EMACSLISPDIR}/${PORTNAME}
-	${LN} -sf ${EMACSLISPDIR}/${PORTNAME} ${XEMACSLISPDIR}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${EMACSLISPDIR}
+	@${MKDIR} ${STAGEDIR}${XEMACSLISPDIR}
+	${INSTALL_DATA} ${_DISTDIR}/${DISTNAME} ${STAGEDIR}${EMACSLISPDIR}/${PORTNAME}
+	${LN} -sf ${EMACSLISPDIR}/${PORTNAME} ${STAGEDIR}${XEMACSLISPDIR}
 
 .include <bsd.port.mk>
