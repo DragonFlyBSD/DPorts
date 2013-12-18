@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@spc.org>
-# $FreeBSD: x11/xmon/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xmon/Makefile 336389 2013-12-13 23:34:17Z bapt $
 
 PORTNAME=	xmon
 PORTVERSION=	1.5.6
@@ -16,8 +16,4 @@ WRKSRC=		${WRKDIR}/xmon.${PORTVERSION}
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xt
 
-MAN1=		xmon.1 xmond.1 xmonui.1
-MANCOMPRESSED=	yes
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
