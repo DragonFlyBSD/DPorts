@@ -1,11 +1,11 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/pear-VersionControl_SVN/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-VersionControl_SVN/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	VersionControl_SVN
 PORTVERSION=	0.5.0
 CATEGORIES=	devel pear
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Wrapper interface for the Subversion command-line client
 
 BUILD_DEPENDS=	pear>=1.9.4:${PORTSDIR}/devel/pear \
