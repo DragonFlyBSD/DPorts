@@ -1,4 +1,4 @@
-# $FreeBSD: x11/scripts/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/scripts/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	scripts
 PORTVERSION=	1.0.1
@@ -10,7 +10,4 @@ COMMENT=	Various X related scripts
 XORG_CAT=	app
 USE_XORG=	x11
 
-MAN1=		xon.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
