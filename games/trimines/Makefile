@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/trimines/Makefile 330471 2013-10-16 02:38:44Z amdmi3 $
+# $FreeBSD: games/trimines/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	trimines
 PORTVERSION=	1.3.0
@@ -33,8 +33,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
-	cd ${WRKSRC}/data && ${COPYTREE_SHARE} "*" ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
