@@ -1,9 +1,8 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: print/libgnomeprint-reference/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/libgnomeprint-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	1
 
 REFERENCE_SRC=	${WRKSRC}/doc/reference
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
