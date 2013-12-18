@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-lib/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: net-p2p/eiskaltdcpp-lib/Makefile 336266 2013-12-12 15:24:47Z bapt $
 
 PORTNAME=	eiskaltdcpp-lib
 PORTVERSION=	2.2.4
@@ -13,7 +13,7 @@ COMMENT=	A Direct Connect client shared library
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	boost_system:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_system.so:${PORTSDIR}/devel/boost-libs
 BUILD_DEPENDS+=	chrpath:${PORTSDIR}/devel/chrpath
 
 PROJECTHOST=	eiskaltdc
@@ -47,14 +47,14 @@ CMAKE_ARGS+=	-DLUA_SCRIPT:BOOL=OFF
 .endif
 
 .if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 CMAKE_ARGS+=	-DPERL_REGEX:BOOL=ON
 .else
 CMAKE_ARGS+=	-DPERL_REGEX:BOOL=OFF
 .endif
 
 .if ${PORT_OPTIONS:MIDN}
-LIB_DEPENDS+=	idn:${PORTSDIR}/dns/libidn
+LIB_DEPENDS+=	libidn.so:${PORTSDIR}/dns/libidn
 CMAKE_ARGS+=	-DUSE_IDNA:BOOL=ON
 .else
 CMAKE_ARGS+=	-DUSE_IDNA:BOOL=OFF
