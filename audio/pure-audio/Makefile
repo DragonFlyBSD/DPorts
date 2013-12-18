@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: audio/pure-audio/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: audio/pure-audio/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	pure-audio
 PORTVERSION=	0.5
@@ -13,10 +13,10 @@ COMMENT=	Digital audio interface for the Pure language
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	portaudio.2:${PORTSDIR}/audio/portaudio2 \
-		samplerate:${PORTSDIR}/audio/libsamplerate \
-		sndfile:${PORTSDIR}/audio/libsndfile \
-		fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libportaudio.so:${PORTSDIR}/audio/portaudio2 \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libfftw3.so:${PORTSDIR}/math/fftw3
 
 USES=		pure
 NO_STAGE=	yes
