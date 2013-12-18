@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/eventxx/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/eventxx/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	eventxx
 PORTVERSION=	1.0.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://proj.llucax.com.ar/home/eventxx/releases/ \
 		LOCAL/glarkin
 MASTER_SITE_SUBDIR=	gahr
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A C++ wrapper for libevent
 
 LIB_DEPENDS=	event-1.4:${PORTSDIR}/devel/libevent
