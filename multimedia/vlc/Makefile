@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 335446 2013-12-01 21:58:15Z thierry $
+# $FreeBSD: multimedia/vlc/Makefile 336233 2013-12-11 22:24:01Z wg $
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.1
@@ -247,6 +247,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${WRKSRC}/include
 CONFIGURE_ENV=	LIBS="-lc"
 LDFLAGS+=	${PTHREAD_LIBS} -lc
