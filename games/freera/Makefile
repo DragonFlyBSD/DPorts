@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/freera/Makefile 332119 2013-10-30 14:43:20Z amdmi3 $
+# $FreeBSD: games/freera/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	freera
 PORTVERSION=	080203
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}%20${PORTNAME}%2B%2B/0.47%20beta
 DISTNAME=	${PORTVERSION}_freera++_src
@@ -34,6 +34,6 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/freera ${STAGEDIR}${PREFIX}/bin/
-	cd ${WRKSRC}/data && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DATADIR}/
+	cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
