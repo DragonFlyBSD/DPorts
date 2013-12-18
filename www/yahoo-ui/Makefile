@@ -1,4 +1,4 @@
-# $FreeBSD: www/yahoo-ui/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/yahoo-ui/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	yahoo
 DISTVERSION=	2.8.2
@@ -12,7 +12,7 @@ DISTFILES=	yui_${DISTVERSION}r1.zip:main \
 		swfstore-${DISTVERSION:S/.//g}.zip:patch \
 		uploader-${DISTVERSION:S/.//g}.zip:patch
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Yahoo! User Interface (YUI) Library
 
 LICENSE=	BSD
