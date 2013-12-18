@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/strigiutils/Makefile 333412 2013-11-10 17:28:44Z rakuco $
+# $FreeBSD: deskutils/strigiutils/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	strigiutils
 PORTVERSION=	${STRIGI_VERSION}
@@ -8,8 +8,8 @@ MASTER_SITES=	${STRIGI_MASTER_SITES}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Strigi desktop search: utilities
 
-LIB_DEPENDS=	streams:${PORTSDIR}/deskutils/libstreams \
-		streamanalyzer:${PORTSDIR}/deskutils/libstreamanalyzer
+LIB_DEPENDS=	libstreams.so:${PORTSDIR}/deskutils/libstreams \
+		libstreamanalyzer.so:${PORTSDIR}/deskutils/libstreamanalyzer
 
 .include <${.CURDIR}/../strigi/Makefile.common>
 .include <bsd.port.mk>
