@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: www/cherokee/Makefile 333067 2013-11-07 08:06:06Z bapt $
+# $FreeBSD: www/cherokee/Makefile 336210 2013-12-11 19:35:22Z eadler $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SAMBA}
 MASTER_SITE_SUBDIR=cherokee/1.2/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Extremely fast and flexible web server
+COMMENT=	Fast and flexible web server
 
 BROKEN=		Does not configure
 
