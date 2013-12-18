@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: textproc/docbook2X/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook2X/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	docbook2X
 PORTVERSION=	0.8.8
@@ -7,7 +7,7 @@ PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert DocBook documents into UNIX man page and GNU Texinfo formats
 
 BUILD_DEPENDS=	p5-XML-NamespaceSupport>=0:${PORTSDIR}/textproc/p5-XML-NamespaceSupport \
