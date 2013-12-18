@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: audio/rubygem-shout/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD: audio/rubygem-shout/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	shout
 PORTVERSION=	2.2.1
@@ -10,7 +10,7 @@ DISTNAME=	ruby-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	A Ruby binding to the libshout library
 
-LIB_DEPENDS=	shout.5:${PORTSDIR}/audio/libshout2
+LIB_DEPENDS=	libshout.so:${PORTSDIR}/audio/libshout2
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
