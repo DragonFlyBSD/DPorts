@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: deskutils/aspostit/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/aspostit/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	aspostit
 PORTVERSION=	1.3
@@ -12,7 +12,7 @@ COMMENT=	AfterStep dockable version of XPostIt
 
 LICENSE=	GPLv2 # (or later)
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 USE_XORG=	xpm xaw xext x11
 USE_GMAKE=	yes
