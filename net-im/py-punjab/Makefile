@@ -1,5 +1,5 @@
 # Created by: jodocus <jodocus@jodocus.org>
-# $FreeBSD: net-im/py-punjab/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/py-punjab/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	punjab
 PORTVERSION=	0.14
@@ -13,7 +13,7 @@ COMMENT=	HTTP XMPP client interface
 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
-USE_TWISTED=	words web conch names
+USES=		twisted:words,web,conch,names
 
 PORTDOCS=	README.txt INSTALL.txt PKG-INFO
 
