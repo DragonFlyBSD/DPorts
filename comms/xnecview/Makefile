@@ -1,5 +1,5 @@
 # Created by: Søren Straarup <xride@x12.dk>
-# $FreeBSD: comms/xnecview/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/xnecview/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	xnecview
 PORTVERSION=	1.36
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	A X viewer of nec2c data
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 RUN_DEPENDS=	nec2c:${PORTSDIR}/comms/nec2c
 
 USES=		gmake pkgconfig
