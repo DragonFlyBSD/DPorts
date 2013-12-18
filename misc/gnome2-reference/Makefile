@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/gnome2-reference/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gnome2-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 #   $MCom: ports/misc/gnome2-reference/Makefile,v 1.9 2008/08/23 18:22:59 mezz Exp $
 
 PORTNAME=	gnome2-reference
@@ -53,11 +53,12 @@ REF_LIST=	accessibility/at-spi-reference \
 		x11-toolkits/vte-reference
 
 NO_BUILD=	yes
+NO_INSTALL=	yes
+NO_MTREE=	yes
 
 .MAKE.FreeBSD_UL= yes
 
 REF_LIST_INC=	${.CURDIR}/Makefile.inc
-NO_STAGE=	yes
 .include "${REF_LIST_INC}"
 
 .for ref in ${_PORT_REF_LIST:C/^([^:]+).*/\1/}
@@ -74,13 +75,11 @@ RUN_DEPENDS+=	${ref:C|^[^:]+:([^:]+).*|\1|:C|^[^/]+/([^/]+).*|\1|}>0:${PORTSDIR}
 .endif
 .endfor
 
-do-install:	# empty
-
 create-ref-list:
 	${CP} ${REF_LIST_INC} ${REF_LIST_INC}.bak
 	${ECHO_CMD} "_PORT_REF_LIST= \\" > ${REF_LIST_INC}
 .for port in ${REF_LIST}
-	(cd ${PORTSDIR}/${port} && ${ECHO_CMD} "${port}:`${MAKE} -V PORTNAME` \\" >> ${REF_LIST_INC})
+	(cd ${PORTSDIR}/${port} && ${ECHO_CMD} "${port}:`${MAKE} -V PKGBASE` \\" >> ${REF_LIST_INC})
 .endfor
 
 .include <bsd.port.mk>
