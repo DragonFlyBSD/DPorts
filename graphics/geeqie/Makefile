@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@rwxrwxrwx.net>
-# $FreeBSD: graphics/geeqie/Makefile 328233 2013-09-25 01:36:57Z amdmi3 $
+# $FreeBSD: graphics/geeqie/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	geeqie
 PORTVERSION=	1.1
@@ -27,7 +27,7 @@ MAKE_ARGS+=	top_builddir="${WRKSRC}"
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	EXIV2 LCMS LIRC GPS DOCS
-OPTIONS_DEFAULT=EXIV2 LCMS DOCS
+OPTIONS_DEFAULT=EXIV2 LCMS
 EXIV2_DESC=	Metadata editing
 LCMS_DESC=	Color adjusting
 LIRC_DESC=	Remote control
