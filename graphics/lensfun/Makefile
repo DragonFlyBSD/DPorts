@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: graphics/lensfun/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/lensfun/Makefile 336435 2013-12-14 10:51:26Z mva $
 
 PORTNAME=	lensfun
 PORTVERSION=	0.2.7
@@ -31,7 +31,7 @@ MAKE_ARGS=	V=1	# we want to know what's going on during the build
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 post-patch: .SILENT
-	${REINPLACE_CMD} -e '1s|#!/usr/bin/python|#!/usr/bin/env python|' \
+	${REINPLACE_CMD} -e '1s|#!/usr/bin/python|#!${PYTHON_CMD}|' \
 		-e 's|make --version|g&|' -e '/DOXYGEN/d' ${WRKSRC}/configure
 	${REINPLACE_CMD} -e \
 		's|CONF_LIBDIR)pkgconfig|CONF_LIBDIR)../libdata/pkgconfig|' \
