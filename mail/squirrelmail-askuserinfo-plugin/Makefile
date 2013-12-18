@@ -1,13 +1,16 @@
-# $FreeBSD: mail/squirrelmail-askuserinfo-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-askuserinfo-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=	askuserinfo
 PORTVERSION=	1.1
+PORTREVISION=	1
+CATEGORIES=		mail www
 DISTNAME=	${PORTNAME}.${PORTVERSION}-1.4.0
-DIST_SUBDIR=	squirrelmail
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ask user to enter Full name and Email address at initial logon
 
 NO_STAGE=	yes
+
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
