@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xorg-apps/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xorg-apps/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-apps
 PORTVERSION=	7.7
@@ -27,10 +27,9 @@ COMPONENTS+=	x11-wm/twm:twm x11-clocks/xclock:xclock xinit xterm
 
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 do-install:
-		${MKDIR} ${PREFIX}/libdata/xorg
-		${TOUCH} ${PREFIX}/libdata/xorg/apps
+		${MKDIR} ${STAGEDIR}${PREFIX}/libdata/xorg
+		${TOUCH} ${STAGEDIR}${PREFIX}/libdata/xorg/apps
 
 .for comp in ${COMPONENTS}
 OPTIONS_DEFINE+=	${comp:C/:.*//:C/.*\///:tu}
