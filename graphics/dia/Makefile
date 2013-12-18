@@ -1,5 +1,5 @@
 # Created by: saper@system.pl
-# $FreeBSD: graphics/dia/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/dia/Makefile 335818 2013-12-07 09:11:54Z bsam $
 #   $MCom: ports/graphics/dia/Makefile,v 1.16 2007/10/11 02:49:12 mezz Exp $
 
 PORTNAME=	dia
@@ -66,7 +66,7 @@ post-patch:
 		's,\(^GTK_LIBS.*\),\1 ${PTHREAD_LIBS}, ; \
 		 s,\(^GTK_CFLAGS = \),\1 ${PTHREAD_CFLAGS} ,'
 	@${REINPLACE_CMD} -e 's|http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl|${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl| ; \
-		s|echo aout|echo elf|g ; s|/usr/include/libEMF|${LOCALBASE}/include/libEMF|g' \
-		${WRKSRC}/configure
+		s|echo aout|echo elf|g ; s|/usr/include/libEMF|${LOCALBASE}/include/libEMF|g ; \
+		s|-lstdc++||g'  ${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
