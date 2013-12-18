@@ -1,5 +1,5 @@
 # Created by: Sunry Chen <sunrychen@gmail.com>
-# $FreeBSD: comms/xmorse/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/xmorse/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	xmorse
 PORTVERSION=	20041125
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sunrychen@gmail.com
 COMMENT=	Fully automatic Morse code teaching machine
 
-LIB_DEPENDS=	fltk.1:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 
 USE_SDL=	sdl
 
