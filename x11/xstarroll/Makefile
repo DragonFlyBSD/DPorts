@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: x11/xstarroll/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xstarroll/Makefile 336381 2013-12-13 23:25:27Z bapt $
 
 PORTNAME=	xstarroll
 PORTVERSION=	1.1b
@@ -16,17 +16,16 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-1.1
 USE_XORG=	xpm xt xaw
 ALL_TARGET=	xstarroll
 
-MAN1=		xstarroll.1
-PLIST_FILES=	bin/xstarroll
+PLIST_FILES=	bin/xstarroll \
+		man/man1/xstarroll.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|$${LOCALBASE}|g ; \
 		 s|gcc |$${CC} |g ; \
 		 s|-O |$${CFLAGS} |g' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xstarroll ${PREFIX}/bin/xstarroll
-	${INSTALL_MAN} ${WRKSRC}/xstarroll.man ${MANPREFIX}/man/man1/xstarroll.1
+	${INSTALL_PROGRAM} ${WRKSRC}/xstarroll ${STAGEDIR}${PREFIX}/bin/xstarroll
+	${INSTALL_MAN} ${WRKSRC}/xstarroll.man ${STAGEDIR}${MANPREFIX}/man/man1/xstarroll.1
 
 .include <bsd.port.mk>
