@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/toycars/Makefile 330574 2013-10-16 23:56:44Z amdmi3 $
+# $FreeBSD: games/toycars/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	toycars
 PORTVERSION=	0.3.10
@@ -27,7 +27,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-extract:
 	@${RM} ${WRKSRC}/data/.*Store
