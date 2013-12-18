@@ -1,4 +1,4 @@
-# $FreeBSD: x11/viewres/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/viewres/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	viewres
 PORTVERSION=	1.0.4
@@ -10,13 +10,11 @@ COMMENT=	Graphical class browser for Xt
 XORG_CAT=	app
 USE_XORG=	xt xaw
 
-MAN1=		viewres.1
-
 PLIST_FILES+=	bin/viewres \
+		man/man1/viewres.1.gz \
 		share/X11/app-defaults/Viewres \
 		share/X11/app-defaults/Viewres-color
 PLIST_DIRS+=	share/X11/app-defaults \
 		share/X11
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
