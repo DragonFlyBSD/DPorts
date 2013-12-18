@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/galaxymage/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/galaxymage/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	galaxymage
 PORTVERSION=	0.3.0
@@ -15,8 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Numeric/_numpy.so:${PORTSDIR}/math/py-numeric 
 		${PYTHON_SITELIBDIR}/OpenGL/__init__.py:${PORTSDIR}/graphics/py-opengl
 
 USE_PYTHON=	yes
-USE_TWISTED=	yes
-USES=		gettext
+USES=		gettext twisted
 NO_BUILD=	yes
 
 NO_STAGE=	yes
