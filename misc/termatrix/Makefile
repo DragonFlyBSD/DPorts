@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/termatrix/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/termatrix/Makefile 336002 2013-12-09 16:18:08Z danilo $
 
 PORTNAME=	termatrix
 PORTVERSION=	0.2
@@ -10,21 +10,18 @@ MASTER_SITES=	LOCAL/chinsan \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emulates Matrix terminal's "green tears" effect
 
+LICENSE=	GPLv2
+
 PLIST_FILES=	bin/termatrix
 PORTDOCS=	README
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} -o ${WRKSRC}/termatrix \
 		${WRKSRC}/termatrix.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/termatrix ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/termatrix ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
