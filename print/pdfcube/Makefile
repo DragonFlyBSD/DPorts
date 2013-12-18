@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: print/pdfcube/Makefile 334339 2013-11-19 18:12:13Z lwhsu $
+# $FreeBSD: print/pdfcube/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	pdfcube
 PORTVERSION=	0.0.5
@@ -9,9 +9,9 @@ MASTER_SITES=	http://code.100allora.it/releases/pdfcube/
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	An OpenGL presentation viewer on a spinning cube
 
-LIB_DEPENDS=	gtkglext:${PORTSDIR}/x11-toolkits/gtkglext \
-		poppler-glib:${PORTSDIR}/graphics/poppler-glib \
-		boost_program_options:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libgtkglext.so:${PORTSDIR}/x11-toolkits/gtkglext \
+		libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
+		libboost_program_options.so:${PORTSDIR}/devel/boost-libs
 
 USES=		pkgconfig
 USE_GL=		glut
