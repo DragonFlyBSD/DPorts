@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libkolabxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libkolabxml/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	libkolabxml
 PORTVERSION=	0.8.4
@@ -15,9 +15,9 @@ COMMENT=	Kolab XML Format Schema Definitions Library
 LICENSE=	LGPL3
 
 BUILD_DEPENDS=	xsdcxx:${PORTSDIR}/devel/xsd
-LIB_DEPENDS=	boost_system:${PORTSDIR}/devel/boost-libs \
-		curl:${PORTSDIR}/ftp/curl \
-		xerces-c.3:${PORTSDIR}/textproc/xerces-c3
+LIB_DEPENDS=	libboost_system.so:${PORTSDIR}/devel/boost-libs \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libxerces-c.so.3:${PORTSDIR}/textproc/xerces-c3
 
 # TODO: Conditionally enable the bindings based on OPTIONs.
 CMAKE_ARGS=	-DBUILD_TESTS:BOOL=OFF \
