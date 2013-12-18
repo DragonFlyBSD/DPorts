@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-sid/Makefile 333741 2013-11-14 08:49:49Z ehaupt $
+# $FreeBSD: audio/xmms-sid/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-sid
 PORTVERSION=	0.9.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.tnsp.org/xs-files/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS input plugin to play SID files
 
-LIB_DEPENDS=	sidplay.1:${PORTSDIR}/audio/libsidplay
+LIB_DEPENDS=	libsidplay.so:${PORTSDIR}/audio/libsidplay
 BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
