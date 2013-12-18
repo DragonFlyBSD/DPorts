@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: audio/juk/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/juk/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	juk
 PORTVERSION=	${KDE4_VERSION}
@@ -13,7 +13,7 @@ COMMENT=	Jukebox, tagger and music collection manager
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	tag.1:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
 CONFLICTS_INSTALL=	kdemultimedia-4.[1-8].*
 
