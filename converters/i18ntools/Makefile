@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav
-# $FreeBSD: converters/i18ntools/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/i18ntools/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	i18ntools
 PORTVERSION=	1.0
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.whizkidtech.redprince.net/unix/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for the conversion to and from UTF-8 Unicode encoding
 
-LIB_DEPENDS=	utf-8:${PORTSDIR}/converters/libutf-8
+LIB_DEPENDS=	libutf-8.so:${PORTSDIR}/converters/libutf-8
 RUN_DEPENDS=	tuc:${PORTSDIR}/converters/tuc
 
 BINARIES=	hutrans mbm ptrans uhtrans utrans
