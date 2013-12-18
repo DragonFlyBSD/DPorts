@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: mail/findmaildirs/Makefile 330828 2013-10-19 02:28:07Z amdmi3 $
+# $FreeBSD: mail/findmaildirs/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	findmaildirs
 PORTVERSION=	0.2
@@ -19,7 +19,6 @@ PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
