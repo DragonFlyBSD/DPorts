@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: audio/bmp-wma/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/bmp-wma/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	bmp-wma
 PORTVERSION=	0.1.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.berlios.de/bmp-plugins/
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	WMA input plugin for beep-media-player
 
-LIB_DEPENDS=	beep.2:${PORTSDIR}/multimedia/beep-media-player
+LIB_DEPENDS=	libbeep.so:${PORTSDIR}/multimedia/beep-media-player
 
 PLIST_FILES=	lib/bmp/Input/libwma.so \
 		lib/bmp/Input/libwma.la \
