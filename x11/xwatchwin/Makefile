@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: x11/xwatchwin/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xwatchwin/Makefile 336377 2013-12-13 23:10:29Z bapt $
 
 PORTNAME=	xwatchwin
 PORTVERSION=	1.1.1
@@ -13,11 +13,10 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Watch a window on another X server
 
-MAN1=		xwatchwin.1
-PLIST_FILES=	bin/xwatchwin
+PLIST_FILES=	bin/xwatchwin \
+		man/man1/xwatchwin.1.gz
 
 USES=		imake
 USE_XORG=	x11 xext
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
