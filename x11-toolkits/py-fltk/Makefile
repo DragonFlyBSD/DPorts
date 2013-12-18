@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: x11-toolkits/py-fltk/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-fltk/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	fltk
 PORTVERSION=	1.3.0
@@ -13,9 +13,9 @@ DISTNAME=	pyFltk-${PORTVERSION:S/.b/b/}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python interface to FLTK window toolkit
 
-LIB_DEPENDS=	fltk.1:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_XORG=	x11
 
@@ -34,8 +34,7 @@ post-patch:
 post-build:
 	${REINPLACE_CMD} -e "s|\.\./docs|${DOCSDIR}/html|g" ${WRKSRC}/fltk/test/help.py
 
-do-install:
-	@(cd ${INSTALL_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} ${PYSETUP} install ${PYDISTUTILS_INSTALLARGS})
+post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}/html
 	${INSTALL_DATA} ${WRKSRC}/fltk/docs/*.html ${DOCSDIR}/html
