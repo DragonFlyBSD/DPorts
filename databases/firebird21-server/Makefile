@@ -1,5 +1,5 @@
 # Created by: Max Kochubey <root@hangover.org.ru>
-# $FreeBSD: databases/firebird21-server/Makefile 329157 2013-10-03 07:46:32Z acm $
+# $FreeBSD: databases/firebird21-server/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	firebird
 PORTVERSION=	2.1.5
@@ -18,7 +18,7 @@ CONFLICTS?=	${PORTNAME}20-client-* \
 		${PORTNAME}20-server-* \
 		${PORTNAME}25-server-*
 
-LIB_DEPENDS=	icuuc:${PORTSDIR}/devel/icu
+LIB_DEPENDS=	libicuuc.so:${PORTSDIR}/devel/icu
 
 USES=		bison
 USE_BZIP2=	yes
@@ -57,7 +57,7 @@ IGNORE=		your system does not support sysvipc
 
 .if !defined(CLIENT_ONLY)
 # Server part stuff
-LIB_DEPENDS+=	fbembed.2:${PORTSDIR}/databases/firebird21-client
+LIB_DEPENDS+=	libfbembed.so:${PORTSDIR}/databases/firebird21-client
 
 AUTOGENARGS=	--without-editline --with-lock-manager
 
