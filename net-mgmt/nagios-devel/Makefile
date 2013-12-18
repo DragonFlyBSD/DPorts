@@ -1,5 +1,5 @@
 # Created by: Jarrod Sayers <jarrod@netleader.com.au>
-# $FreeBSD: net-mgmt/nagios-devel/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/nagios-devel/Makefile 336210 2013-12-11 19:35:22Z eadler $
 
 PORTNAME=	nagios
 DISTVERSIONPREFIX=HEAD-
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.downtools.com.au/~jarrod/nagios/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Extremely powerful network monitoring system
+COMMENT=	Powerful network monitoring system
 
 LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
 RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:${PORTSDIR}/net-mgmt/nagios-plugins
