@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/notify-osd/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: deskutils/notify-osd/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	notify-osd
 PORTVERSION=	0.9.29
@@ -15,8 +15,8 @@ LICENSE=	GPLv3
 
 CONFLICTS=	xfce4-notification-daemon-[0-9]*
 
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
