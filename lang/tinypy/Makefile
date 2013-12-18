@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@SYSTEM.PL>
-# $FreeBSD: lang/tinypy/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/tinypy/Makefile 336560 2013-12-15 17:21:06Z wg $
 
 PORTNAME=	tinypy
 PORTVERSION=	1.1
@@ -16,7 +16,6 @@ PYDISTUTILS_BUILD_TARGET=	linux
 PYDISTUTILS_NOEGGINFO=		yes
 
 PLIST_FILES=	bin/tinypy
-PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	PYGAME
 PYGAME_DESC=	PyGame support (requires SDL)
@@ -27,12 +26,14 @@ NO_STAGE=	yes
 .if ${PORT_OPTIONS:MPYGAME}
 PYDISTUTILS_BUILD_TARGET+=	pygame
 USE_SDL=	sdl
+PORTEXAMPLES=	*
 .endif
 
 .include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O.||; s|gcc $$WFLAGS|${CC} ${CFLAGS} -std=c89 -Wall|' \
+		-e 's|python |${PYTHON_CMD} |g' \
 		${WRKSRC}/setup.py
 
 do-configure:
