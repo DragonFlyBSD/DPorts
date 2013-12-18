@@ -1,4 +1,4 @@
-# $FreeBSD: math/rocs/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/rocs/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	rocs
 PORTVERSION=	${KDE4_VERSION}
@@ -10,7 +10,7 @@ DIST_SUBDIR=	KDE/${PORTVERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Graph theory IDE
 
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 CONFLICTS=	kdeedu-4.[0-6].*
 
