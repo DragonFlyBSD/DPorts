@@ -1,8 +1,8 @@
 # Created by: Allan Jude <ports@scaleengine.com>
-# $FreeBSD: dns/gdnsd/Makefile 333171 2013-11-08 01:19:12Z zi $
+# $FreeBSD: dns/gdnsd/Makefile 336012 2013-12-09 18:36:54Z pawel $
 
 PORTNAME=	gdnsd
-PORTVERSION=	1.10.1
+PORTVERSION=	1.11.0
 CATEGORIES=	dns
 MASTER_SITES=	http://downloads.gdnsd.net/ \
 		http://gdnsd.scaleengine.net/gdnsd/
@@ -34,10 +34,5 @@ GEOIP_RUN_DEPENDS=	${LOCALBASE}/share/GeoIP/GeoIP.dat:${PORTSDIR}/net/GeoIP
 URCU_DESC=		Read-Copy-Update Support (Faster Zone Parsing)
 URCU_CONFIGURE_WITH=	urcu
 URCU_LIB_DEPENDS=	liburcu.so:${PORTSDIR}/sysutils/liburcu
-
-.include <bsd.port.options.mk>
-
-post-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/gdnsd/zones
 
 .include <bsd.port.mk>
