@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: www/webcalendar/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/webcalendar/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	WebCalendar
 PORTVERSION=	1.0.5
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}%201.0/${PORTVERSION}
 PORTSCOUT=	limit:^1\.0\.
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A web-based calendar application
 
 USE_PHP=	pcre session
