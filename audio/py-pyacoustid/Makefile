@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-pyacoustid/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/py-pyacoustid/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	pyacoustid
 PORTVERSION=	1.0.0
@@ -13,7 +13,7 @@ COMMENT=	Bindings for Chromaprint acoustic fingerprinting and the Acoustid API
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	chromaprint:${PORTSDIR}/audio/chromaprint
+LIB_DEPENDS=	libchromaprint.so:${PORTSDIR}/audio/chromaprint
 
 USE_PYTHON=	yes
 NO_STAGE=	yes
