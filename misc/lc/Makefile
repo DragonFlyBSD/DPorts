@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: misc/lc/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/lc/Makefile 335899 2013-12-08 14:58:34Z danilo $
 
 PORTNAME=	lc
 PORTVERSION=	1.0
@@ -9,12 +9,10 @@ MASTER_SITES=	http://www.generalconcepts.com/resources/software/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Alternative to ls(1)
 
-MAN1=		lc.1
-PLIST_FILES=	bin/lc
+PLIST_FILES=	bin/lc man/man1/lc.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/lc ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/lc.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKDIR}/${DISTNAME}/lc ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/lc.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
