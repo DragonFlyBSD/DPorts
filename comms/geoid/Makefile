@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/geoid/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/geoid/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	geoid
 PORTVERSION=	1.0
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.src.tar.gz
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Geodetic computer for amateur radio use
 
-LIB_DEPENDS=	fltk.1:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 
 USE_GMAKE=	yes
 MAKEFILE=	makefile
