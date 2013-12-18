@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Address-List/Makefile 334981 2013-11-26 23:56:58Z matthew $
+# $FreeBSD: mail/p5-Email-Address-List/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	Email-Address-List
 PORTVERSION=	0.01
+PORTREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,6 +13,8 @@ COMMENT=	RFC-close address list parsing
 
 BUILD_DEPENDS=	p5-Email-Address>0:${PORTSDIR}/mail/p5-Email-Address
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+NO_ARCH=	yes
 
 USES=		perl5
 USE_PERL5=	configure
