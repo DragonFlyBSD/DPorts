@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdm/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xdm/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xdm
 PORTVERSION=	1.1.11
@@ -14,20 +14,16 @@ USE_XORG=	xmu x11 xau xinerama xpm xdmcp xt xext xaw
 CONFIGURE_ARGS+=	--with-xdmconfigdir=${EXAMPLESDIR} \
 			--with-xdmscriptdir=${EXAMPLESDIR}
 
-MAN1=		xdm.1
-
 CFFILES=	GiveConsole TakeConsole Xaccess Xreset Xresources \
 		Xservers Xsession Xsetup_0 Xstartup Xwilling xdm-config
 
 OPTIONS_DEFINE=	XDMSHELL
 XDMSHELL_DESC=	Install xdmshell
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXDMSHELL}
 CONFIGURE_ARGS+=--enable-xdmshell
-MAN1+=		xdmshell.1
 PLIST_SUB+=	XDMSHELL=""
 .else
 CONFIGURE_ARGS+=--disable-xdmshell
@@ -50,9 +46,9 @@ post-configure:
 
 post-install:
 .for f in ${CFFILES}
-	${CP} -n ${EXAMPLESDIR}/$f ${PREFIX}/lib/X11/xdm/$f || ${TRUE}
+	${CP} -n ${EXAMPLESDIR}/$f ${STAGEDIR}${PREFIX}/lib/X11/xdm/$f || ${TRUE}
 .endfor
 	${MKDIR} /var/lib/xdm/authdir
-	${LN} -sf /var/lib/xdm/authdir ${PREFIX}/lib/X11/xdm/authdir
+	${LN} -sf /var/lib/xdm/authdir ${STAGEDIR}${PREFIX}/lib/X11/xdm/authdir
 
 .include <bsd.port.mk>
