@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-mutouch/Makefile 327779 2013-09-20 23:48:39Z bapt $
+# $FreeBSD: x11-drivers/xf86-input-mutouch/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-input-mutouch
 PORTVERSION=	1.3.0
@@ -8,13 +8,11 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org mutouch input driver
 
 XORG_CAT=	driver
-MAN4=		mutouch.4x
+
+.include <bsd.port.options.mk>
 
 .if !defined(WITH_NEW_XORG)
 IGNORE=		does not build with xorg-server 1.7.7
-.else
-
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
