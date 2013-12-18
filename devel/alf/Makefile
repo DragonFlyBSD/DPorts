@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/alf/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/alf/Makefile 336110 2013-12-10 20:57:37Z bapt $
 
 PORTNAME=	alf
 PORTVERSION=	0.1
@@ -15,5 +15,4 @@ USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
