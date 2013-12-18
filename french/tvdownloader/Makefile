@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: french/tvdownloader/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD: french/tvdownloader/Makefile 336477 2013-12-14 19:40:52Z mva $
 
 PORTNAME=	tvdownloader
 PORTVERSION=	0.7.2
@@ -26,6 +26,11 @@ ALL_TARGET=	build
 LICENSE=	GPLv2
 
 NO_STAGE=	yes
+post-patch:
+	${REINPLACE_CMD} -e 's|@python|@${PYTHON_CMD}|' \
+		${WRKSRC}/Makefile \
+		${WRKSRC}/src/Makefile
+
 pre-configure:
 	${REINPLACE_CMD} -e 's|%%PYTHON_CMD%%|${PYTHON_CMD}|'	\
 		${WRKSRC}/tvdownloader.sh
