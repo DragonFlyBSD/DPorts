@@ -1,5 +1,5 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: multimedia/assimp/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: multimedia/assimp/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	assimp
 PORTVERSION=	3.0
@@ -14,7 +14,7 @@ COMMENT=	Library to import various 3D model formats in a uniform manner
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	boost_filesystem:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_filesystem.so:${PORTSDIR}/devel/boost-libs
 
 USE_ZIP=	yes
 USES=		cmake pkgconfig
