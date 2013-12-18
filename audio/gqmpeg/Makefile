@@ -1,5 +1,5 @@
 # Created by: Vanilla Pooh Shu <vanilla@FreeBSD.org>
-# $FreeBSD: audio/gqmpeg/Makefile 330378 2013-10-15 09:47:11Z bapt $
+# $FreeBSD: audio/gqmpeg/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gqmpeg
 PORTVERSION=	0.20.0
@@ -11,7 +11,7 @@ MASTER_SITES=	SF
 MAINTAINER?=	lyngbol@wheel.dk
 COMMENT?=	Another gtk-based MP3 frontend
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 RUN_DEPENDS=	ogg123:${PORTSDIR}/audio/vorbis-tools \
 		xmp:${PORTSDIR}/audio/xmp
 
