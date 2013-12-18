@@ -1,5 +1,5 @@
 # Created by: runge@rostock.zgdv.de
-# $FreeBSD: x11/xlupe/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xlupe/Makefile 336391 2013-12-13 23:41:41Z bapt $
 
 PORTNAME=	xlupe
 PORTVERSION=	1.1
@@ -15,5 +15,4 @@ USE_XORG=	xaw
 
 PLIST_FILES=	bin/xlupe
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
