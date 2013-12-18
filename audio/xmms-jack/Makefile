@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-jack/Makefile 333743 2013-11-14 09:36:08Z ehaupt $
+# $FreeBSD: audio/xmms-jack/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-jack
 PORTVERSION=	0.19
@@ -10,9 +10,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS plugin for jack
 
-LIB_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms \
-		jack:${PORTSDIR}/audio/jack \
-		samplerate:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms \
+		libjack.so:${PORTSDIR}/audio/jack \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
