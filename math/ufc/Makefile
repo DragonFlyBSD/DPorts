@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/ufc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ufc/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	ufc
 PORTVERSION=	${MMVERSION}.0
@@ -10,7 +10,7 @@ MAINTAINER=	jwbacon@tds.net
 COMMENT=	Unified framework for finite element assembly
 
 BUILD_DEPENDS=	swig2.0:${PORTSDIR}/devel/swig20
-LIB_DEPENDS=	boost_math_c99:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_math_c99.so:${PORTSDIR}/devel/boost-libs
 
 # LICENSE=	public domain
 
