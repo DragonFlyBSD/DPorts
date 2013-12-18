@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/funnyboat/Makefile 331919 2013-10-29 01:26:51Z amdmi3 $
+# $FreeBSD: games/funnyboat/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	funnyboat
 PORTVERSION=	1.5
@@ -25,7 +25,6 @@ SUB_LIST=	PROGRAM_DIR="${PREFIX}/lib/${PORTNAME}"
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} "*.py data" ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
