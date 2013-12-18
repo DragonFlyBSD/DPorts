@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/feather/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/feather/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	feather
 PORTVERSION=	1.0
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 		LOCAL/glarkin
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Python script for managing tarsnap backups
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml \
