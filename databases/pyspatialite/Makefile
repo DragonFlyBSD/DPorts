@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/pyspatialite/Makefile 332843 2013-11-05 12:42:02Z wen $
+# $FreeBSD: databases/pyspatialite/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	pyspatialite
 PORTVERSION=	3.0.1
@@ -14,7 +14,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:pyspatialite \
 MAINTAINER=	coder@tuxfamily.org
 COMMENT=	DB-API 2.0 interface for SQLite 3.x with Spatialite 3.x
 
-LIB_DEPENDS=	spatialite:${PORTSDIR}/databases/spatialite
+LIB_DEPENDS=	libspatialite.so:${PORTSDIR}/databases/spatialite
 
 USES=		iconv
 USE_PYTHON=	yes
