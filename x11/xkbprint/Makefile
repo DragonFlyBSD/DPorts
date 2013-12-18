@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkbprint/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xkbprint/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xkbprint
 PORTVERSION=	1.0.3
@@ -12,9 +12,6 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	xkbfile x11
 
-PLIST_FILES=	bin/xkbprint
+PLIST_FILES=	bin/xkbprint man/man1/xkbprint.1.gz
 
-MAN1=		xkbprint.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
