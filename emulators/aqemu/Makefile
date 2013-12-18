@@ -1,8 +1,7 @@
-# $FreeBSD: emulators/aqemu/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD: emulators/aqemu/Makefile 335998 2013-12-09 15:32:46Z makc $
 
 PORTNAME=	aqemu
-PORTVERSION=	0.8.1
-PORTREVISION=	1
+PORTVERSION=	0.8.2
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:S,.0$,,}/
 
