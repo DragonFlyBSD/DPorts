@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/pcmanx/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/pcmanx/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	pcmanx
 PORTVERSION=	1.2
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=--disable-notifier
 
 .if ${PORT_OPTIONS:MLIBNOTIFY}
 CONFIGURE_ARGS+=--enable-libnotify
-LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	libnotifa.soy:${PORTSDIR}/devel/libnotify
 .endif
 
 .if empty(PORT_OPTIONS:MNANCY)
