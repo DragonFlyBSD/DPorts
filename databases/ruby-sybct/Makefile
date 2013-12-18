@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: databases/ruby-sybct/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ruby-sybct/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sybct
 PORTVERSION=	0.2.12
@@ -12,7 +12,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby module for accessing Sybase databases
 
-LIB_DEPENDS=	tds.5:${PORTSDIR}/databases/freetds
+LIB_DEPENDS=	libtds.so:${PORTSDIR}/databases/freetds
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
