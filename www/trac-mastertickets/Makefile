@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-mastertickets/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-mastertickets/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	mastertickets
 PORTVERSION=	3.0.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://mirrors.redv.com/pub/trac/ \
 PKGNAMEPREFIX=	trac-
 DISTNAME=	coderanger-trac-${PORTNAME}-43a7537
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Support for ticket dependencies
 
 RUN_DEPENDS+=	trac>=0.12:${PORTSDIR}/www/trac
