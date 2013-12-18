@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/buildbot/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/buildbot/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	buildbot
 PORTVERSION=	0.8.8
@@ -26,7 +26,7 @@ TEST_DEPENDS:=	${RUN_DEPENDS} \
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
-USE_TWISTED_RUN=	conch mail web words
+USES=			twisted:run,conch,mail,web,words
 
 MAKE_ENV+=		NO_INSTALL_REQS=1
 
