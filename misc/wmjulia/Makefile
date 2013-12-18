@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: misc/wmjulia/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/wmjulia/Makefile 336014 2013-12-09 18:55:46Z danilo $
 
 PORTNAME=	wmjulia
 PORTVERSION=	0.40
@@ -10,13 +10,14 @@ MASTER_SITES=	http://web.novalis.org/programs/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockapp that creates an animated Julia set
 
+LICENSE=	GPLv2
+
 PLIST_FILES=	bin/wmjulia
 WRKSRC=	${WRKDIR}/${PORTNAME}.app/${PORTNAME}
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xpm xext
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
