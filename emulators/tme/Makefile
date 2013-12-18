@@ -1,9 +1,9 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/tme/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: emulators/tme/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	tme
 PORTVERSION=	0.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://people.csail.mit.edu/fredette/tme/
 
