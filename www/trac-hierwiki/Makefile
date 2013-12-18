@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-hierwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-hierwiki/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	hierwiki
 PORTVERSION=	1.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.gerritbeine.de/download/trac/
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dealing with the trac wiki as a hierarchy
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
