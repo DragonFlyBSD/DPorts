@@ -1,9 +1,9 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	murrine
 PORTVERSION=	0.98.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-themes
 MASTER_SITES=	GNOME
 PKGNAMEPREFIX=	gtk-
