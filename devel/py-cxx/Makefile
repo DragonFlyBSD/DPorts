@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-cxx/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/py-cxx/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	cxx
 PORTVERSION=	6.0.0
@@ -26,5 +26,10 @@ post-install:
 		@${MKDIR} ${DOCSDIR}
 		${INSTALL_DATA} ${WRKSRC}/Doc/PyCXX.html ${DOCSDIR}
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
