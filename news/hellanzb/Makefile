@@ -1,5 +1,5 @@
 # Created by: Philip Jenvey <pjenvey@groovie.org>
-# $FreeBSD: news/hellanzb/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/hellanzb/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	hellanzb
 PORTVERSION=	0.13
@@ -20,7 +20,7 @@ RUN_DEPENDS=	par2:${PORTSDIR}/archivers/par2cmdline \
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
-USE_TWISTED_RUN=	web
+USES=		twisted:run,web
 PORTDOCS=	CHANGELOG CREDITS README
 
 NO_STAGE=	yes
