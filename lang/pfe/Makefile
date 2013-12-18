@@ -1,5 +1,5 @@
 # Created by: patrick
-# $FreeBSD: lang/pfe/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/pfe/Makefile 336356 2013-12-13 15:26:52Z bapt $
 
 PORTNAME=	pfe
 PORTVERSION=	0.33.71
@@ -12,7 +12,6 @@ COMMENT=	Implementation of ANSI Forth
 USE_BZIP2=	yes
 USES=		gmake perl5
 USE_PERL5=	build
-USE_GCC=	4.2+
 USE_AUTOTOOLS=	libtool
 LIBTOOLFILES=	pfe/configure
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
