@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-wikinotification/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-wikinotification/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	wikinotificationplugin
 PORTVERSION=	0.2.1
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	brooks
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/p/rc/}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Allow email notifications on wiki page changes
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
