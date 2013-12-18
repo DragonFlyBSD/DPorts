@@ -1,5 +1,5 @@
 # Created by: Mike Buchanon <buchanon@msu.edu>
-# $FreeBSD: devel/bcpp/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/bcpp/Makefile 336115 2013-12-10 21:08:32Z bapt $
 
 PORTNAME=	bcpp
 PORTVERSION=	20120318
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://invisible-island.net/bcpp/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A utility similar to indent for C++ code
+COMMENT=	Utility similar to indent for C++ code
 
 OPTIONS_DEFINE=	DOCS
 
@@ -17,24 +17,16 @@ MAKEFILE=	makefile
 
 CFLAGS+=	-DBCPP_CONFIG_DIR=\\\"${PREFIX}/etc/${PORTNAME}\\\"
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/code/bcpp.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/code/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/code/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/code/${PORTNAME}.cfg \
-		${PREFIX}/etc/${PORTNAME}.cfg.sample
-.if !exists(${PREFIX}/etc/${PORTNAME}.cfg)
-	cd ${PREFIX}/etc && ${CP} -p ${PORTNAME}.cfg.sample ${PORTNAME}.cfg
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	@@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/txtdocs/hirachy.txt ${DOCSDIR}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/txtdocs/manual.txt ${DOCSDIR}
-.endif
+		${STAGEDIR}${PREFIX}/etc/${PORTNAME}.cfg.sample
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/txtdocs/hirachy.txt ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/txtdocs/manual.txt ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
