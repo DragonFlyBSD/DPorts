@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-wysiwyg/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-wysiwyg/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	wysiwyg
 DISTVERSION=	0.4.${SVN_REV}
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 PKGNAMEPREFIX=	trac-
 DIST_SUBDIR=	trac
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WYSIWYG editor for Trac wiki
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracWysiwyg
-PYDISTUTILS_PKGVERSION=	0.12.${PORTVERSION:R}
+PYDISTUTILS_PKGVERSION=	0.12.0.4
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 NO_STAGE=	yes
