@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	Net-Mosso-CloudFiles
 PORTVERSION=	0.44
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl interface to the Mosso CloudFiles service
 
 RUN_DEPENDS=	p5-Digest-MD5-File>=0:${PORTSDIR}/security/p5-Digest-MD5-File \
