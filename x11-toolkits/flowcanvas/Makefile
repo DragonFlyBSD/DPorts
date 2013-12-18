@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: x11-toolkits/flowcanvas/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/flowcanvas/Makefile 336266 2013-12-12 15:24:47Z bapt $
 
 PORTNAME=	flowcanvas
 PORTVERSION=	0.7.1
@@ -13,10 +13,10 @@ COMMENT=	Interactive Gtkmm/Gnomecanvasmm widget
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	boost_date_time:${PORTSDIR}/devel/boost-libs \
-		gvc:${PORTSDIR}/graphics/graphviz \
-		gnomecanvasmm-2.6:${PORTSDIR}/graphics/libgnomecanvasmm26 \
-		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
+LIB_DEPENDS=	libboost_date_time.so:${PORTSDIR}/devel/boost-libs \
+		libgvc.so:${PORTSDIR}/graphics/graphviz \
+		libgnomecanvasmm-2.6.so:${PORTSDIR}/graphics/libgnomecanvasmm26 \
+		libgtkmm-2.4.so:${PORTSDIR}/x11-toolkits/gtkmm24
 
 USES=		pkgconfig
 USE_BZIP2=	yes
