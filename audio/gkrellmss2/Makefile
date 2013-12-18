@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: audio/gkrellmss2/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gkrellmss2/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gkrellmss
 PORTVERSION=	2.7
@@ -13,7 +13,7 @@ COMMENT=	GKrellM plugin with a VU meter showing left/right channel audio
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
 
 USES=		gmake
