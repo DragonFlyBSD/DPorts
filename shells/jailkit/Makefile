@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: shells/jailkit/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/jailkit/Makefile 336517 2013-12-15 12:19:33Z wg $
 
 PORTNAME=	jailkit
 PORTVERSION=	2.15
@@ -11,7 +11,8 @@ MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Utilities to limit user account
 
 GNU_CONFIGURE=	yes
-USE_PYTHON=	2.5+
+CONFIGURE_ENV=	PYTHONINTERPRETER=${PYTHON_CMD}
+USE_PYTHON=	2
 
 SHELLS=		/etc/shells
 
