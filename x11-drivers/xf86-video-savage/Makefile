@@ -1,7 +1,8 @@
-# $FreeBSD: x11-drivers/xf86-video-savage/Makefile 333156 2013-11-07 21:45:08Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-savage/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-video-savage
 PORTVERSION=	2.3.7
+PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
