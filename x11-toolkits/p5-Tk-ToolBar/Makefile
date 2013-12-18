@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-ToolBar/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
+# $FreeBSD: x11-toolkits/p5-Tk-ToolBar/Makefile 336308 2013-12-13 01:41:13Z sunpoet $
 
 PORTNAME=	Tk-ToolBar
 PORTVERSION=	0.10
@@ -7,6 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	x11-toolkits tk perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Toolbar widget for Perl/Tk
@@ -14,7 +15,6 @@ COMMENT=	Toolbar widget for Perl/Tk
 BUILD_DEPENDS=	p5-Tk-CursorControl>=0:${PORTSDIR}/x11-toolkits/p5-Tk-CursorControl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_ZIP=	yes
 USE_PERL5=	configure
 USES=		perl5
 
