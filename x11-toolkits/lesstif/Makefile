@@ -1,5 +1,5 @@
 # Created by: 1wardd@airmail.net
-# $FreeBSD: x11-toolkits/lesstif/Makefile 334613 2013-11-22 19:57:44Z dinoex $
+# $FreeBSD: x11-toolkits/lesstif/Makefile 336227 2013-12-11 21:54:33Z dinoex $
 
 PORTNAME=	lesstif
 PORTVERSION=	0.95.2
@@ -11,8 +11,8 @@ MASTER_SITES=	SF
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	API compatible clone of the Motif toolkit
 
-LIB_DEPENDS=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
-		freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
+		libfreetype.so:${PORTSDIR}/print/freetype2
 
 CONFLICTS?=	open-motif-*
 
