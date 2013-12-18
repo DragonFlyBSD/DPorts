@@ -1,5 +1,5 @@
 # Created by: Elisey Savateev <b3k@mail.ru>
-# $FreeBSD: security/umit/Makefile 330398 2013-10-15 12:56:39Z bapt $
+# $FreeBSD: security/umit/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	umit
 PORTVERSION=	1.0
@@ -23,6 +23,9 @@ USE_PYDISTUTILS=	yes
 NO_STAGE=	yes
 
 post-patch:
-	${REINPLACE_CMD} 's/self.build_html_doc()//' ${WRKSRC}/setup.py
+	${REINPLACE_CMD} \
+		-e 's/self.build_html_doc()//' \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
