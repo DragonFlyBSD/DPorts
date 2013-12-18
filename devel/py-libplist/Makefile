@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-libplist/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-libplist/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTREVISION=	0
 CATEGORIES=	devel python
@@ -8,7 +8,8 @@ MAINTAINER=	avilla@FreeBSD.org
 COMMENT=	Python bindings for libplist
 
 LIB_DEPENDS=	plist:${PORTSDIR}/${MASTER_PORT}
-BUILD_DEPENDS=	cython:${PORTSDIR}/lang/cython \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:${PORTSDIR}/devel/py-setuptools \
+		cython:${PORTSDIR}/lang/cython \
 		swig2.0:${PORTSDIR}/devel/swig20
 
 USE_PYTHON=	yes
