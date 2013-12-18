@@ -1,5 +1,5 @@
 # Created by: Elias Mandouvalos <ocean@mail.gr>
-# $FreeBSD: audio/py-karaoke/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: audio/py-karaoke/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	karaoke
 PORTVERSION=	0.7.5
@@ -15,8 +15,8 @@ COMMENT=	Python karaoke application (Plays CD+G, MP3+G, OGG+G files)
 LICENSE=	LGPL21 # (or later)
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game
-LIB_DEPENDS=	pthread-stubs:${PORTSDIR}/devel/libpthread-stubs \
-		aa:${PORTSDIR}/graphics/aalib
+LIB_DEPENDS=	libpthread-stubs.so:${PORTSDIR}/devel/libpthread-stubs \
+		libaa.so:${PORTSDIR}/graphics/aalib
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game \
 		dejavu>0:${PORTSDIR}/x11-fonts/dejavu \
 		${PYNUMPY}
