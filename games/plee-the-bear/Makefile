@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/plee-the-bear/Makefile 331229 2013-10-22 07:50:28Z amdmi3 $
+# $FreeBSD: games/plee-the-bear/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	plee-the-bear
 PORTVERSION=	0.6.0
@@ -31,7 +31,6 @@ CMAKE_ARGS=	-Dlibclaw_DIR="${LOCALBASE}/share/libclaw/cmake" \
 		-DBEAR_NO_EDITOR=YES
 
 OPTIONS_DEFINE=	NLS
-OPTIONS_DEFAULT=NLS
 OPTIONS_SUB=	yes
 
 .include <bsd.port.options.mk>
