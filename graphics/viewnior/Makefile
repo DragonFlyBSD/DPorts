@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/viewnior/Makefile 335194 2013-11-29 16:47:03Z nemysis $
+# $FreeBSD: graphics/viewnior/Makefile 336202 2013-12-11 19:00:07Z nemysis $
 
 PORTNAME=	viewnior
 PORTVERSION=	1.3
@@ -23,12 +23,17 @@ PORTDOCS=	AUTHORS ChangeLog NEWS README TODO
 OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
 
-NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=	gettext
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(prefix)/$$(DATADIRNAME)/locale|$$(datarootdir)/locale|' \
 		${WRKSRC}/po/Makefile.in.in
+
+.if ! ${PORT_OPTIONS:MNLS}
+	@${REINPLACE_CMD} -e 's|install: install-data|install:|' ${WRKSRC}/po/Makefile.in.in
+.endif
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
