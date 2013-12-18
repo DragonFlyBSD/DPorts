@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkmm20-reference/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/gtkmm20-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
 
 PORTREVISION=	7
 
@@ -10,16 +10,13 @@ GNU_CONFIGURE=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/gtkmm-2.0
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC}/examples -name Makefile.in \
 		| ${XARGS} ${REINPLACE_CMD} -e '/^install-am:/ s| all-am||'
 
 do-install:
-.if !defined(NOPORTDOCS)
 .for d in docs examples
-	@cd ${WRKSRC}/${d} && ${GMAKE} install
+	@cd ${WRKSRC}/${d} && ${GMAKE} ${MAKE_ARGS} install
 .endfor
-.endif
 
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
