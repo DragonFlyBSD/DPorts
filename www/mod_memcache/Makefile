@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/mod_memcache/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_memcache/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_memcache
 PORTVERSION=	0.1.0
@@ -11,7 +11,6 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Apache 2.2.x module to manage apr_memcache connections
 
-
 GNU_CONFIGURE=	yes
 PROJECTHOST=	modmemcache
 USE_APACHE=	22+
@@ -20,5 +19,4 @@ AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 SRC_FILE=	src/${PORTNAME}.c
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
