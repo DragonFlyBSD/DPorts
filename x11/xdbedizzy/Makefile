@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdbedizzy/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xdbedizzy/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xdbedizzy
 PORTVERSION=	1.1.0
@@ -12,9 +12,6 @@ LICENSE=	MIT
 XORG_CAT=	app
 USE_XORG=	xp xext xprintutil xp xau xext
 
-PLIST_FILES=	bin/xdbedizzy
+PLIST_FILES=	bin/xdbedizzy man/man1/xdbedizzy.1.gz
 
-MAN1=		xdbedizzy.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
