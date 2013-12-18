@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/phlipple/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/phlipple/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	phlipple
 PORTVERSION=	0.8.5
@@ -28,7 +28,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/src/*.c
