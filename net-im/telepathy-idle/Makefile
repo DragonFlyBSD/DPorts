@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-idle/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/telepathy-idle/Makefile 336549 2013-12-15 15:54:56Z wg $
 #    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.6 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	telepathy-idle
@@ -19,6 +19,7 @@ USES=		pkgconfig
 USE_OPENSSL=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
+USE_PYTHON_BUILD=yes
 
 MAN8=		telepathy-idle.8
 
