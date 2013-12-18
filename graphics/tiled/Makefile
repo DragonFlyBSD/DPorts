@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/tiled/Makefile 334584 2013-11-22 12:54:48Z makc $
+# $FreeBSD: graphics/tiled/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	tiled
 PORTVERSION=	0.9.1
@@ -18,9 +18,6 @@ USE_LDCONFIG=	yes
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|lrelease|&-qt4|' \
