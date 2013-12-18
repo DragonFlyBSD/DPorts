@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: print/harfbuzz/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/harfbuzz/Makefile 336228 2013-12-11 21:54:42Z bapt $
 
 PORTNAME=	harfbuzz
 PORTVERSION=	0.9.19
@@ -9,9 +9,9 @@ MASTER_SITES=	http://www.freedesktop.org/software/harfbuzz/release/
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	OpenType text shaping engine
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
-		icudata:${PORTSDIR}/devel/icu \
-		graphite2:${PORTSDIR}/graphics/graphite2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libicudata.so:${PORTSDIR}/devel/icu \
+		libgraphite2.so:${PORTSDIR}/graphics/graphite2
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
