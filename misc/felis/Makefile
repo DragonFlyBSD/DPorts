@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: misc/felis/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/felis/Makefile 336006 2013-12-09 16:48:30Z danilo $
 
 PORTNAME=	felis
 PORTVERSION=	1.0
@@ -9,12 +9,10 @@ MASTER_SITES=	http://www.whizkidtech.redprince.net/fports/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays one or more files as a single line of text
 
-MAN1=		felis.1
-PLIST_FILES=	bin/felis
+PLIST_FILES=	bin/felis man/man1/felis.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/felis ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/felis.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/felis ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/felis.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
