@@ -1,21 +1,26 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-websearch-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-websearch-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
-PORTNAME=	websearch
+PORTNAME=	web_search
 PORTVERSION=	0.1.6
-PORTREVISION=	1
-DISTNAME=	${SQUIRREL_PLUGIN_NAME}-${PORTVERSION}
-DIST_SUBDIR=	squirrelmail
+PORTREVISION=	3
+CATEGORIES=		mail www
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin for Websearch
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS+=	${SQUIRRELDIR}/plugins/compatibility:${PORTSDIR}/mail/squirrelmail-compatibility-plugin
+USE_SM_COMPAT=	yes
+USE_GENERIC_PKGMESSAGE=	yes
 
-SQUIRREL_PLUGIN_NAME=	web_search
+SQUIRREL_PLUGIN_CONFIG=	${SQUIRREL_PLUGIN_NAME}.conf.php
 
 NO_STAGE=	yes
+
+post-patch:
+	@${MV} ${WRKSRC}/${_SMSRCDIR}/${SQUIRREL_PLUGIN_CONFIG}.dist ${WRKSRC}/${_SMSRCDIR}/${SQUIRREL_PLUGIN_CONFIG}.sample
+
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
