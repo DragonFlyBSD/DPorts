@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/ljit/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/ljit/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	ljit
 PORTVERSION=	0.2.5
@@ -13,7 +13,7 @@ COMMENT=	GUI tool to help LiveJournal users post images
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
 GNU_CONFIGURE=	yes
