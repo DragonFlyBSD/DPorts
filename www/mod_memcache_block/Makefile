@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/mod_memcache_block/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_memcache_block/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_memcache_block
 PORTVERSION=	20120821
@@ -9,9 +9,9 @@ DISTNAME=	mod_memcache_block-${GITVERSION}
 DIST_SUBDIR=	apache2
 
 MAINTAINER=	gaod@hychen.org
-COMMENT=	An Apache 2 module to block ip from lists stored in memcache
+COMMENT=	Apache 2.2 module to block IPs from lists stored in memcache
 
-LIB_DEPENDS+=	memcached:${PORTSDIR}/databases/libmemcached
+LIB_DEPENDS+=	libmemcached.so:${PORTSDIR}/databases/libmemcached
 
 FETCH_ARGS=	-Fpr
 GITVERSION=	7b1fcec
@@ -24,5 +24,4 @@ AP_GENPLIST=	yes
 AP_INC=		${LOCALBASE}/include/libmemcached
 AP_LIB=		${LOCALBASE}/lib -lmemcached
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
