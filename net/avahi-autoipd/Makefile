@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-autoipd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/avahi-autoipd/Makefile 336457 2013-12-14 16:25:21Z kwm $
 #   $MCom: ports/net/avahi-autoipd/Makefile,v 1.1 2007/07/31 18:24:12 ahze Exp $
 
 PORTREVISION=	0
@@ -9,7 +9,7 @@ PKGNAMESUFFIX=	-autoipd
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	IPv4LL network address configuration daemon
 
-LIB_DEPENDS=	avahi-common.3:${PORTSDIR}/net/avahi-app
+LIB_DEPENDS=	libavahi-common.so:${PORTSDIR}/net/avahi-app
 
 USERS=		avahi-autoipd
 GROUPS=		${USERS}
@@ -22,7 +22,6 @@ PLIST=		${.CURDIR}/pkg-plist
 
 AVAHI_SLAVE=	autoipd
 
-MAN8=		avahi-autoipd.8
+MANPAGES=	avahi-autoipd.8
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
