@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/jamin/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/jamin/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	jamin
 PORTVERSION=	0.95.0
@@ -10,9 +10,9 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JACK Audio Mastering interface
 
-LIB_DEPENDS=	fftw3f:${PORTSDIR}/math/fftw3-float \
-		jack.0:${PORTSDIR}/audio/jack \
-		lo:${PORTSDIR}/audio/liblo
+LIB_DEPENDS=	libfftw3f.so:${PORTSDIR}/math/fftw3-float \
+		libjack.so:${PORTSDIR}/audio/jack \
+		liblo.so:${PORTSDIR}/audio/liblo
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa \
 		${LOCALBASE}/lib/ladspa/fast_lookahead_limiter_1913.so:${PORTSDIR}/audio/swhplugins
 BUILD_DEPENDS=	${LOCALBASE}/include/fftw3.h:${PORTSDIR}/math/fftw3
