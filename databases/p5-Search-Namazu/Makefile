@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: databases/p5-Search-Namazu/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Search-Namazu/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	Search-Namazu
 PORTVERSION=	0.96
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Namazu library module for perl
 
-LIB_DEPENDS=	nmz.8:${PORTSDIR}/databases/namazu2
+LIB_DEPENDS=	libnmz.so:${PORTSDIR}/databases/namazu2
 
 USES=		perl5
 USE_PERL5=	configure
