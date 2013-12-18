@@ -1,7 +1,0 @@
-@comment $FreeBSD: devel/py-pefile/pkg-plist 321147 2013-06-17 19:32:44Z antoine $
-%%PYTHON_SITELIBDIR%%/pefile.py
-%%PYTHON_SITELIBDIR%%/pefile.pyc
-%%PYTHON_SITELIBDIR%%/pefile.pyo
-%%PYTHON_SITELIBDIR%%/peutils.py
-%%PYTHON_SITELIBDIR%%/peutils.pyc
-%%PYTHON_SITELIBDIR%%/peutils.pyo
