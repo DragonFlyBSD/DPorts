@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/lash/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/lash/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	lash
 PORTVERSION=	0.5.4
@@ -13,9 +13,9 @@ COMMENT=	Session management system for JACK audio applications
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
-		dssialsacompat:${PORTSDIR}/audio/libdssialsacompat \
-		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack \
+		libdssialsacompat.so:${PORTSDIR}/audio/libdssialsacompat \
+		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 OPTIONS_DEFINE=	READLINE DOCS
 OPTIONS_DEFAULT=READLINE
