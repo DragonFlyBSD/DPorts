@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: deskutils/genius/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/genius/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	genius
 PORTVERSION=	1.0.12
@@ -14,7 +14,7 @@ COMMENT=	Arbitrary precision calculator for Gnome Desktop Environment
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
-LIB_DEPENDS=	mpfr.4:${PORTSDIR}/math/mpfr
+LIB_DEPENDS=	libmpfr.so:${PORTSDIR}/math/mpfr
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_CSTD=	gnu89
