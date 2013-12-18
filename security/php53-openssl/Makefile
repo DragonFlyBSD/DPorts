@@ -1,6 +1,4 @@
-# $FreeBSD: security/php53-openssl/Makefile 332429 2013-11-01 23:49:56Z flo $
-
-PORTREVISION=	1
+# $FreeBSD: security/php53-openssl/Makefile 336500 2013-12-14 23:30:36Z flo $
 
 CATEGORIES=	security
 
