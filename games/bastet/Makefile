@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: games/bastet/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bastet/Makefile 336255 2013-12-12 11:14:49Z bapt $
 
 PORTNAME=	bastet
 PORTVERSION=	0.43
@@ -13,7 +13,7 @@ COMMENT=	An ncurses Tetris clone which is harder than every other Tetris
 
 LICENSE=	GPLv3 # (or later)
 
-LIB_DEPENDS=	boost_program_options:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_program_options.so:${PORTSDIR}/devel/boost-libs
 
 USES=		ncurses
 USE_GMAKE=	yes
