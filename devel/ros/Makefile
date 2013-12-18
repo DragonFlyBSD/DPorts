@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <rene@FreeBSD.org>
-# $FreeBSD: devel/ros/Makefile 334746 2013-11-24 16:57:06Z mva $
+# $FreeBSD: devel/ros/Makefile 336253 2013-12-12 10:53:38Z bapt $
 
 PORTNAME=	ros
 PORTVERSION=	1.4.10
@@ -16,8 +16,8 @@ LICENSE=	BSD
 STACKNAME=	${PORTNAME:S/ros-//}
 
 CFLAGS+=	-I${LOCALBASE}/include
-LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs \
-		gtest:${PORTSDIR}/devel/googletest
+LIB_DEPENDS=	libboost_python.so:${PORTSDIR}/devel/boost-python-libs \
+		libgtest.so:${PORTSDIR}/devel/googletest
 # we need cmake and gmake for the build, but the build is triggered by make
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml \
 		bash:${PORTSDIR}/shells/bash \
