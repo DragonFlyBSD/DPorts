@@ -1,5 +1,5 @@
 # Created by: Gregory Bond <gnb@itga.com.au>
-# $FreeBSD: databases/py-sybase/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sybase/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sybase
 PORTVERSION=	0.37
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PORTNAME}-html${EXTRACT_SUFX}
 MAINTAINER=	gnb@itga.com.au
 COMMENT=	A Python Database API interface to the Sybase RDBMS
 
-LIB_DEPENDS=	tds.5:${PORTSDIR}/databases/freetds
+LIB_DEPENDS=	libtds.so:${PORTSDIR}/databases/freetds
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
