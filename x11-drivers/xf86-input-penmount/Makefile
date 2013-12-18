@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-penmount/Makefile 327779 2013-09-20 23:48:39Z bapt $
+# $FreeBSD: x11-drivers/xf86-input-penmount/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-input-penmount
 PORTVERSION=	${PEN_VERSION}
@@ -9,7 +9,8 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org penmount input driver
 
 XORG_CAT=	driver
-MAN4=		penmount.4x
+
+.include <bsd.port.options.mk>
 
 .if defined(WITH_NEW_XORG)
 PEN_VERSION=	1.5.0
@@ -19,5 +20,4 @@ PEN_VERSION=	1.4.1
 PEN_REVISION=	1
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
