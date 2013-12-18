@@ -1,5 +1,5 @@
-# Created by: nemysis@gmx.ch
-# $FreeBSD: graphics/apngdis/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# Created by: nemysis <nemysis@gmx.ch>
+# $FreeBSD: graphics/apngdis/Makefile 336095 2013-12-10 19:38:47Z nemysis $
 
 PORTNAME=	apngdis
 PORTVERSION=	2.5
@@ -7,7 +7,7 @@ DISTVERSIONSUFFIX=-src
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Deconstructs APNG files into individual frames
 
 LICENSE=	ZLIB
