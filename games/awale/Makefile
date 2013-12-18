@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/awale/Makefile 334465 2013-11-21 00:34:47Z nemysis $
+# $FreeBSD: games/awale/Makefile 336033 2013-12-09 23:27:44Z nemysis $
 
 PORTNAME=	awale
 PORTVERSION=	1.5
@@ -18,7 +18,7 @@ SUB_FILES=	pkg-message
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README THANKS
 
-OPTIONS_DEFINE=	DOC
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${ECHO_CMD} "#!/bin/sh" > ${WRKSRC}/src/x${PORTNAME}
