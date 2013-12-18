@@ -1,8 +1,7 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: mail/claws-mail/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: mail/claws-mail/Makefile 336489 2013-12-14 22:02:10Z pawel $
 
 PORTNAME=	claws-mail
-PORTREVISION=	1
 CATEGORIES=	mail news ipv6
 
 COMMENT=	Lightweight and featureful GTK+ based e-mail and news client
@@ -45,6 +44,7 @@ JPILOT_LIB_DEPENDS=	libpisock.so:${PORTSDIR}/palm/pilot-link
 JPILOT_RUN_DEPENDS=	jpilot:${PORTSDIR}/palm/jpilot
 
 LDAP_CONFIGURE_ENABLE=	ldap
+LDAP_USE=		openldap=yes
 
 MANUAL_CONFIGURE_ON=	--enable-manual --with-manualdir=${DOCSDIR}/manual
 MANUAL_CONFIGURE_OFF=	--disable-manual
@@ -59,11 +59,6 @@ STARTUP_LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notifi
 THEMES_RUN_DEPENDS=	${LOCALBASE}/share/claws-mail/themes/ZX-0_1.1/down_arrow.xpm:${PORTSDIR}/x11-themes/claws-mail-themes
 
 .include "Makefile.claws"
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MLDAP}
-USE_OPENLDAP=		yes
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lresolv||g; s|-lpisock\"|${ICONV_LIB} &|g' \

@@ -1,6 +1,6 @@
-# $FreeBSD: mail/claws-mail/Makefile.claws 329440 2013-10-05 11:25:29Z pawel $
+# $FreeBSD: mail/claws-mail/Makefile.claws 336489 2013-12-14 22:02:10Z pawel $
 
-PORTVERSION=	3.9.2
+PORTVERSION=	3.9.3
 CATEGORIES?=	mail
 MASTER_SITES=	SF/sylpheed-claws/Claws%20Mail/${PORTVERSION}
 
