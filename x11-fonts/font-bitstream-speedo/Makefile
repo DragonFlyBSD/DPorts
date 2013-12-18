@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/font-bitstream-speedo/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/font-bitstream-speedo/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	font-bitstream-speedo
 PORTVERSION=	1.0.2
@@ -9,5 +9,4 @@ COMMENT=	X.Org Bitstream Vera Speedo font
 
 XORG_CAT=	font
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
