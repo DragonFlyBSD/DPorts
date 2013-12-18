@@ -1,17 +1,21 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: mail/squirrelmail-pupdate-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-pupdate-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=	pupdate
 PORTVERSION=	0.7
-PORTREVISION=	2
+PORTREVISION=	3
+CATEGORIES=		mail www
 DISTNAME=	${PORTNAME}.${PORTVERSION}-1.4.2
-DIST_SUBDIR=	squirrelmail
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Checks for plugin updates by parsing the SM site
 
 LICENSE=	GPLv2
 
+USE_GENERIC_PKGMESSAGE=	yes
+
 NO_STAGE=	yes
+
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
