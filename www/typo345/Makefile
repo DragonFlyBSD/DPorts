@@ -1,17 +1,19 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo345/Makefile 335082 2013-11-28 07:52:59Z culot $
+# $FreeBSD: www/typo345/Makefile 336292 2013-12-12 21:57:40Z sunpoet $
 
 PORTNAME=	typo3
-PORTVERSION=	4.5.31
+PORTVERSION=	4.5.32
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/TYPO3%20Source%20and%20Dummy/TYPO3%20${PORTVERSION}
+PKGNAMESUFFIX=	${TYPO3RELEASE}
 
 MAINTAINER=	freebsd-ports@charlieroot.de
 COMMENT=	The typo3 content management system
 
 LICENSE=	GPLv2
 
-LATEST_LINK=	${PKGBASE}${TYPO3RELEASE}
+PORTSCOUT=	limit:^4\.5\.
+
 NO_BUILD=	yes
 USE_PHP=	ctype filter json mysql pcre session xml
 WANT_PHP_WEB=	yes
