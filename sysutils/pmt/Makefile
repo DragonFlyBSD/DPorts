@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/pmt/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pmt/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	pmt
 PORTVERSION=	0.2
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://hansmi.ch/download/pmt/ \
 		LOCAL/glarkin
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A small collection of filters which can be added to UNIX pipes
 
 USE_BZIP2=	yes
