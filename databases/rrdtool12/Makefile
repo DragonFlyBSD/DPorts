@@ -1,5 +1,5 @@
 # Created by: Jeremy Chadwick <koitsu@FreeBSD.org>
-# $FreeBSD: databases/rrdtool12/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD: databases/rrdtool12/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.2.30
@@ -11,9 +11,9 @@ PKGNAMESUFFIX=	12
 MAINTAINER=	beat@FreeBSD.org
 COMMENT=	Round Robin Database Tools v1.2
 
-LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
-		art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libart_lgpl_2.so:${PORTSDIR}/graphics/libart_lgpl \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 CONFLICTS=	rrdtool10-* rrdtool-1.*
 
