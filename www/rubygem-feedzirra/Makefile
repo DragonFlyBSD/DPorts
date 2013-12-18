@@ -1,8 +1,8 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-feedzirra/Makefile 335342 2013-11-30 19:59:27Z sunpoet $
+# $FreeBSD: www/rubygem-feedzirra/Makefile 335802 2013-12-07 01:03:55Z sunpoet $
 
 PORTNAME=	feedzirra
-PORTVERSION=	0.4.0
+PORTVERSION=	0.5.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -13,7 +13,6 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-curb>=0.8.1:${PORTSDIR}/ftp/rubygem-curb \
 		rubygem-loofah>=1.2.1:${PORTSDIR}/textproc/rubygem-loofah \
-		rubygem-nokogiri>=1.6.0:${PORTSDIR}/textproc/rubygem-nokogiri \
 		rubygem-sax-machine>=0.2.1:${PORTSDIR}/textproc/rubygem-sax-machine
 
 USE_RUBY=	yes
