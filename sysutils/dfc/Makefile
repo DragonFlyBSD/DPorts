@@ -1,11 +1,11 @@
-# $FreeBSD: sysutils/dfc/Makefile 329999 2013-10-10 13:45:37Z bapt $
+# $FreeBSD: sysutils/dfc/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	dfc
 PORTVERSION=	3.0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://projects.gw-computing.net/attachments/download/79/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Display file system space usage using graph and colors
 
 LICENSE=	BSD
