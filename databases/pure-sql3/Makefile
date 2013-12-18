@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: databases/pure-sql3/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: databases/pure-sql3/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	pure-sql3
 PORTVERSION=	0.4
@@ -13,7 +13,7 @@ COMMENT=	Pure language binding to the SQLite3 library
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3
+LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 
 USES=		pure
 
