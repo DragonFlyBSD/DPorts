@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-qt4/Makefile 334814 2013-11-25 06:22:23Z fluffy $
+# $FreeBSD: multimedia/gstreamer-qt4/Makefile 336260 2013-12-12 13:01:40Z bapt $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.3
@@ -14,7 +14,7 @@ COMMENT=	Qt4 bindings for GStreamer multimedia library
 
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 USES=		bison cmake gmake pkgconfig
 USE_BZIP2=	yes
