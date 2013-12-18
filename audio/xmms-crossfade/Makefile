@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-crossfade/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: audio/xmms-crossfade/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	crossfade
 PORTVERSION=	0.3.14
@@ -12,7 +12,7 @@ DISTNAME=	xmms-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Crossfading/Gapless Plugin
 
-LIB_DEPENDS?=	xmms.4:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS?=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
 HAS_CONFIGURE=	yes
 USE_CSTD=	gnu89
@@ -30,7 +30,7 @@ DOCSDIR?=	${PREFIX}/share/doc/${UNIQUENAME}
 CONFIGURE_ARGS+=	--enable-player=${APP}
 
 .ifndef WITHOUT_SAMPLERATE
-LIB_DEPENDS+=	samplerate.1:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS+=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--enable-samplerate
