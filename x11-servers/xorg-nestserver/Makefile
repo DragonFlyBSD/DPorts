@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-nestserver/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-servers/xorg-nestserver/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-nestserver
 
@@ -20,17 +20,15 @@ CONFIGURE_ARGS=	--disable-dmx --disable-xvfb \
 		--localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
-PLIST_FILES=	bin/Xnest
-MAN1=		Xnest.1
+PLIST_FILES=	bin/Xnest man/man1/Xnest.1.gz
 
-NO_STAGE=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hw/xnest/Xnest ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/hw/xnest/Xnest ${STAGEDIR}${PREFIX}/bin/
 .if defined(WITH_NEW_XORG)
-	${INSTALL_MAN} ${WRKSRC}/hw/xnest/man/Xnest.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/hw/xnest/man/Xnest.1 ${STAGEDIR}${PREFIX}/man/man1/
 .else
-	${INSTALL_MAN} ${WRKSRC}/hw/xnest/Xnest.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/hw/xnest/Xnest.1 ${STAGEDIR}${PREFIX}/man/man1/
 .endif
 
 .include "${MASTERDIR}/Makefile"
