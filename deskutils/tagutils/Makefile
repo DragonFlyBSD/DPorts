@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: deskutils/tagutils/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/tagutils/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	tagutils
 PORTVERSION=	0.3.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://releases.chipx86.com/leaftag/tagutils/
 MAINTAINER=	kaeru@inigo-tech.com
 COMMENT=	A command line tool for tagging files
 
-LIB_DEPENDS=	leaftag.0:${PORTSDIR}/devel/libleaftag
+LIB_DEPENDS=	libleaftag.so:${PORTSDIR}/devel/libleaftag
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
