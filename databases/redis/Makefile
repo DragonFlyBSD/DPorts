@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/redis/Makefile 335580 2013-12-03 17:04:00Z osa $
+# $FreeBSD: databases/redis/Makefile 336182 2013-12-11 16:55:27Z osa $
 
 PORTNAME=	redis
-DISTVERSION=	2.8.2
+DISTVERSION=	2.8.3
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -11,7 +11,7 @@ COMMENT=	A persistent key-value database with built-in net interface
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
 OPTIONS_DEFINE=	TESTS
 OPTIONS_RADIO=	EXTLUA
@@ -32,7 +32,7 @@ LDFLAGS+=	-Wl,-E
 .endif
 
 .if ${PORT_OPTIONS:MLUAJIT}
-LIB_DEPENDS+=	luajit-5.1:${PORTSDIR}/lang/luajit
+LIB_DEPENDS+=	libluajit-5.1.so:${PORTSDIR}/lang/luajit
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-Makefile.luajit
 CFLAGS+=	-fPIC
 LDFLAGS+=	-Wl,-E
