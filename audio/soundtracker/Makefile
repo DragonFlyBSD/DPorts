@@ -1,5 +1,5 @@
 # Created by: Kristopher Zentner <kzentner@u.washington.edu>
-# $FreeBSD: audio/soundtracker/Makefile 330378 2013-10-15 09:47:11Z bapt $
+# $FreeBSD: audio/soundtracker/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	soundtracker
 PORTVERSION=	0.6.8
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--enable-asm
 .endif
 
 .if ${PORT_OPTIONS:MJACK}
-LIB_DEPENDS+=		jack:${PORTSDIR}/audio/jack
+LIB_DEPENDS+=		libjack.so:${PORTSDIR}/audio/jack
 .else
 CONFIGURE_ARGS+=	--disable-jack
 .endif
