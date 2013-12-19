@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <q@uni.de>
-# $FreeBSD: audio/mp3splt/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mp3splt/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	mp3splt
 PORTVERSION=	2.5.2
@@ -11,7 +11,7 @@ COMMENT=	Utility to split MP3 and Ogg files (via CUE sheets)
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	mp3splt:${PORTSDIR}/audio/libmp3splt
+LIB_DEPENDS=	libmp3splt.so:${PORTSDIR}/audio/libmp3splt
 
 USES=	pkgconfig:build
 NO_STAGE=	yes
