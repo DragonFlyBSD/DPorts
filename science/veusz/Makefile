@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/veusz/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/veusz/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	veusz
 PORTVERSION=	1.17.1
@@ -22,4 +22,10 @@ USE_PYDISTUTILS=	yes
 INSTALLS_EGGINFO=	yes
 
 NO_STAGE=	yes
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/setup.py
+
 .include <bsd.port.mk>
