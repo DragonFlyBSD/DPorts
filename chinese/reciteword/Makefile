@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/reciteword/Makefile 331068 2013-10-20 22:45:25Z delphij $
+# $FreeBSD: chinese/reciteword/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	reciteword
 PORTVERSION=	0.8.5
@@ -28,7 +28,7 @@ XTRACT_AFTER_ARGS+=	--exclude CVS
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-LIB_DEPENDS+=	espeak:${PORTSDIR}/audio/espeak
+LIB_DEPENDS+=	libespeak.so:${PORTSDIR}/audio/espeak
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|' ${WRKSRC}/src/readword.cpp
