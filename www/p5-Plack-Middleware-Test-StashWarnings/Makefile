@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: www/p5-Plack-Middleware-Test-StashWarnings/Makefile 334984 2013-11-27 00:04:00Z matthew $
+# $FreeBSD: www/p5-Plack-Middleware-Test-StashWarnings/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	Plack-Middleware-Test-StashWarnings
 PORTVERSION=	0.07
+PORTREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,6 +13,8 @@ COMMENT=	Test your application's warnings
 
 BUILD_DEPENDS=	p5-Plack>0:${PORTSDIR}/www/p5-Plack
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+NO_ARCH=	yes
 
 USES=		perl5
 USE_PERL5=	configure
