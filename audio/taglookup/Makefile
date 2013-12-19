@@ -1,5 +1,5 @@
 # Created by: Alex Allan <alex@kamaz.org.uk>
-# $FreeBSD: audio/taglookup/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/taglookup/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	taglookup
 PORTVERSION=	0.2
@@ -11,8 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	alex@kamaz.org.uk
 COMMENT=	Utility for tagging groups of audio files using CDDB
 
-LIB_DEPENDS=	cddb.4:${PORTSDIR}/audio/libcddb \
-		tag.1:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libcddb.so:${PORTSDIR}/audio/libcddb \
+		libtag.so:${PORTSDIR}/audio/taglib
 
 USES=		pkgconfig
 NO_STAGE=	yes
