@@ -1,8 +1,9 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/empire/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/empire/Makefile 335788 2013-12-06 23:16:46Z nemysis $
 
 PORTNAME=	empire
 PORTVERSION=	1.10
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 DISTNAME=	vms-${PORTNAME}-${PORTVERSION}
@@ -12,17 +13,14 @@ COMMENT=	Simulation of a full-scale war between two emperors
 
 LICENSE=	GPLv2
 
-MAN6=		empire.6
-
 PORTDOCS=	AUTHORS BUGS NEWS README
-
-PLIST_FILES=	bin/empire \
-		share/pixmaps/empire.png
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man6/${PORTNAME}.6.gz \
+		share/applications/${PORTNAME}.desktop \
+		share/pixmaps/${PORTNAME}.png
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/^CFLAGS/#CFLAGS/ ; \
@@ -30,13 +28,12 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/static void/void/g' ${WRKSRC}/game.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vms-empire ${PREFIX}/bin/${PORTNAME}
-	${INSTALL_MAN} ${MAN6:S|^|${WRKSRC}/|} ${MAN6PREFIX}/man/man6
-	${INSTALL_DATA} ${WRKSRC}/empire-logo.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
+	${INSTALL_PROGRAM} ${WRKSRC}/vms-empire ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
+	${INSTALL_DATA} ${WRKSRC}/empire-logo.png ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${MAN6PREFIX}/man/man6/
 
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
