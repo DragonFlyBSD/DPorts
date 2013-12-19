@@ -1,7 +1,8 @@
-# $FreeBSD: www/googlebook_dl/Makefile 335729 2013-12-06 09:57:12Z ak $
+# $FreeBSD: www/googlebook_dl/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	googlebook_dl
 PORTVERSION=	20120817
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# none
 DISTFILES=	# none
