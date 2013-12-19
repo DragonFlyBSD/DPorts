@@ -1,8 +1,9 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: emulators/qemu-devel/Makefile 333440 2013-11-10 20:25:25Z nox $
+# $FreeBSD: emulators/qemu-devel/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	qemu
 PORTVERSION=	1.6.1
+PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/:release \
 		LOCAL/nox:snapshot
