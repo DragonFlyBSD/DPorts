@@ -1,5 +1,5 @@
 # Created by: Niek Bergboer <niek@bergboer.net>
-# $FreeBSD: misc/birthday/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/birthday/Makefile 335978 2013-12-09 13:05:45Z danilo $
 
 PORTNAME=	birthday
 PORTVERSION=	1.5
@@ -9,21 +9,21 @@ MASTER_SITES=	http://users.zetnet.co.uk/mortia/source/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Outputs reminders for upcoming events (e.g. birthdays)
 
-MAN1=		birthday.1
-MANCOMPRESSED=	no
-PLIST_FILES=	bin/birthday
+LICENSE=	ART10 GPLv2
+LICENSE_COMB=	dual
 
-USE_GMAKE=	yes
+PLIST_FILES=	bin/birthday man/man1/birthday.1.gz
+
+USES=		gmake
 MAKEFILE=	${WRKSRC}/Makefile.gnu
 ALL_TARGET=	birthday
 MAKE_ARGS=	CFLAGS="${CFLAGS} -DUNIX"
 
-NO_STAGE=	yes
 do-configure:
 		cd ${WRKSRC} && ${MAKE} Makefile.gnu
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/birthday ${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/birthday.man ${MAN1PREFIX}/man/man1/birthday.1
+		${INSTALL_PROGRAM} ${WRKSRC}/birthday ${STAGEDIR}${PREFIX}/bin
+		${INSTALL_MAN} ${WRKSRC}/birthday.man ${STAGEDIR}${MAN1PREFIX}/man/man1/birthday.1
 
 .include <bsd.port.mk>
