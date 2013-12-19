@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/brainparty/Makefile 331237 2013-10-22 08:03:22Z amdmi3 $
+# $FreeBSD: games/brainparty/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	brainparty
 PORTVERSION=	0.5
@@ -23,7 +23,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|Content/|${DATADIR}/|' ${WRKSRC}/*.cpp
