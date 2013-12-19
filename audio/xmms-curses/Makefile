@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: audio/xmms-curses/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-curses/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-curses
 PORTVERSION=	0.2.2
@@ -12,7 +12,7 @@ COMMENT=	A ncurses program for (remote) controlling multimedia/xmms
 
 BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
-LIB_DEPENDS=	pthread-stubs.0:${PORTSDIR}/devel/libpthread-stubs
+LIB_DEPENDS=	libpthread-stubs.so:${PORTSDIR}/devel/libpthread-stubs
 
 USES=		gettext iconv
 NO_STAGE=	yes
