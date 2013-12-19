@@ -1,4 +1,4 @@
-# $FreeBSD: audio/harp/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/harp/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	harp
 PORTVERSION=	0.5.2
@@ -28,7 +28,7 @@ PORTDOCS=	README
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAAC}
-LIB_DEPENDS+=	faad:${PORTSDIR}/audio/faad
+LIB_DEPENDS+=	libfaad.so:${PORTSDIR}/audio/faad
 PLIST_SUB+=	AAC=""
 .else
 CONFIGURE_ARGS+=	--without-aac
@@ -36,7 +36,7 @@ PLIST_SUB+=	AAC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MFLAC}
-LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
+LIB_DEPENDS+=	libFLAC.so:${PORTSDIR}/audio/flac
 PLIST_SUB+=	FLAC=""
 .else
 CONFIGURE_ARGS+=	--without-flac
@@ -44,7 +44,7 @@ PLIST_SUB+=	FLAC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MMP3}
-LIB_DEPENDS+=	mpg123:${PORTSDIR}/audio/mpg123
+LIB_DEPENDS+=	libmpg123.so:${PORTSDIR}/audio/mpg123
 PLIST_SUB+=	MP3=""
 .else
 CONFIGURE_ARGS+=	--without-mp3
@@ -59,7 +59,7 @@ PLIST_SUB+=	STREAM="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MVORBIS}
-LIB_DEPENDS+=	vorbisfile:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=	libvorbisfile.so:${PORTSDIR}/audio/libvorbis
 PLIST_SUB+=	VORBIS=""
 .else
 CONFIGURE_ARGS+=	--without-vorbis
@@ -68,7 +68,7 @@ PLIST_SUB+=	VORBIS="@comment "
 
 .if ${PORT_OPTIONS:MJACK}
 CONFIGURE_ARGS+=	--with-jack
-LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
+LIB_DEPENDS+=	libjack.so:${PORTSDIR}/audio/jack
 .else
 CONFIGURE_ARGS+=	--without-jack
 .endif
