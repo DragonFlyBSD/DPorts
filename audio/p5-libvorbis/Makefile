@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: audio/p5-libvorbis/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD: audio/p5-libvorbis/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	libvorbis
 PORTVERSION=	0.05
@@ -13,7 +13,7 @@ DISTNAME=	${PORTNAME}-perl-${PORTVERSION}
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for Ogg Vorbis streams
 
-LIB_DEPENDS=	vorbis.4:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS=	libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 
 USES=		perl5
