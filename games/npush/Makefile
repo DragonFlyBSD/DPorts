@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/npush/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/npush/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	npush
 PORTVERSION=	0.7
@@ -14,7 +14,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|"levels|"${DATADIR}/levels|' \
