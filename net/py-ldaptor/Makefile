@@ -1,5 +1,5 @@
 # Created by: bra@fsn.hu
-# $FreeBSD: net/py-ldaptor/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-ldaptor/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	ldaptor
 PORTVERSION=	0.0.43
@@ -16,12 +16,13 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pyparsing.py:${PORTSDIR}/devel/py-parsing \
 
 GITVERSION=	aad8ded658b36337a08aeb7402b6b67eb8771bea
 
-USES=		gettext
+USES=		gettext twisted
 USE_PYTHON=	yes
-USE_TWISTED=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	0.0.0
 PYDISTUTILS_PKGNAME=	ldaptor
+PYDISTUTILS_INSTALL_TARGET=	install_locale install
+PYDISTUTILS_BUILD_TARGET=	build_locale build
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
