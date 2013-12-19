@@ -1,9 +1,8 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: java/openjdk7/Makefile 332063 2013-10-30 04:29:14Z glewis $
+# $FreeBSD: java/openjdk7/Makefile 335863 2013-12-08 04:11:54Z glewis $
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${PORT_MINOR_VERSION}.${PORT_BUILD_NUMBER}
-PORTREVISION=	2
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}/promoted/b${JDK_BUILD_NUMBER}/ \
 		http://download.java.net/jaxp/1.4.5/:jaxp \
@@ -40,12 +39,12 @@ DEBUG_DESC=		Enable extra debugging info
 POLICY_DESC=		Install the Unlimited Strength Policy Files
 TZUPDATE_DESC=		Update the time zone data
 
-PORT_MINOR_VERSION=	25
-PORT_BUILD_NUMBER=	15
+PORT_MINOR_VERSION=	45
+PORT_BUILD_NUMBER=	18
 JDK_MAJOR_VERSION=	7
-JDK_MINOR_VERSION=	6
-JDK_BUILD_NUMBER=	24
-JDK_BUILD_DATE=		09_aug_2012
+JDK_MINOR_VERSION=	40
+JDK_BUILD_NUMBER=	43
+JDK_BUILD_DATE=		26_aug_2013
 JDK_SRC_DISTFILE=	${PORTNAME}-${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}-fcs-src-b${JDK_BUILD_NUMBER}-${JDK_BUILD_DATE}
 
 # Use our own version of ant to avoid circular dependencies
@@ -107,19 +106,6 @@ MAKE_ENV+=	LANG="C" \
 MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS_NUMBER}
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 
-SECURITY_ICONS= security-icon-bw16.png \
-		security-icon-bw24.png \
-		security-icon-bw32.png \
-		security-icon-bw48.png \
-		security-icon-interim16.png \
-		security-icon-interim24.png \
-		security-icon-interim32.png \
-		security-icon-interim48.png \
-		security-icon-yellow16.png \
-		security-icon-yellow24.png \
-		security-icon-yellow32.png \
-		security-icon-yellow48.png
-
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
@@ -140,14 +126,6 @@ RUN_DEPENDS+=  ${LOCALBASE}/share/java/zi:${PORTSDIR}/java/java-zoneinfo
 .endif
 
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
-
-post-extract:
-	# Move icons to their new home.
-	@${MKDIR} ${WRKSRC}/jdk/src/share/classes/sun/awt/resources
-.for icon in ${SECURITY_ICONS}
-	@${MV} ${WRKSRC}/jdk/src/solaris/classes/sun/awt/X11/${icon} \
-		${WRKSRC}/jdk/src/share/classes/sun/awt/resources/
-.endfor
 
 post-patch:
 	@${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|" \
