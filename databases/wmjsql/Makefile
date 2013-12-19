@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: databases/wmjsql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/wmjsql/Makefile 335946 2013-12-08 23:06:15Z marino $
 
 PORTNAME=	wmjsql
 PORTVERSION=	0.5
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MySQL server status displaying dockapp
 
 USE_MYSQL=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xpm
 
 ALL_TARGET=	clean all
