@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-main-menu/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gnome-main-menu/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	gnome-main-menu
 PORTVERSION=	0.9.12
@@ -11,7 +11,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides easy access to sets of GNOME applications
 
-LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomepanel intlhack eel2 gnomedesktop \
