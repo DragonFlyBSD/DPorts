@@ -1,11 +1,11 @@
-# $FreeBSD: textproc/jshon/Makefile 328349 2013-09-26 11:37:25Z vanilla $
+# $FreeBSD: textproc/jshon/Makefile 336661 2013-12-16 20:29:02Z bdrewery $
 
 PORTNAME=	jshon
 PORTVERSION=	20121210
 PORTREVISION=	1
 CATEGORIES=	textproc
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	json parser for the shell.
 
 LICENSE=	MIT
