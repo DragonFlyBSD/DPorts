@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/py-ppolicy/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/py-ppolicy/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	ppolicy
 PORTVERSION=	2.6.6
@@ -13,9 +13,9 @@ COMMENT=	PPolicy is tool for extending Postfix checking capabilities
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/dns/__init__.py:${PORTSDIR}/dns/py-dnspython
 
+USES=		twisted
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
-USE_TWISTED=	yes
 NO_BUILD=	yes
 USE_RC_SUBR=	ppolicyd
 DOCSDIR?=	${PREFIX}/share/doc/py-${PORTNAME}
