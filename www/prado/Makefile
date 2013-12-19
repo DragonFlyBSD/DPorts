@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/prado/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/prado/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	prado
 PORTVERSION=	3.1.6.r2699
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PROJECTHOST=	prado3
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A framework for developing PHP web applications
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
