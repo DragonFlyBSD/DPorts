@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/mod_webkit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_webkit/Makefile 336555 2013-12-15 16:45:38Z ohauer $
 
 PORTNAME=	mod_webkit
 PORTVERSION=	1.1.1
@@ -10,6 +10,7 @@ DISTNAME=	Webware-${PORTVERSION}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for WebWare WebKit AppServer
 
+LICENSE=	PSFL
 
 USE_APACHE=	22+
 AP_FAST_BUILD=	yes
@@ -18,7 +19,6 @@ AP_EXTRAS=	marshal.c
 
 WRKSRC=		${WRKDIR}/Webware-${PORTVERSION}/WebKit/Adapters/${PORTNAME}2
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/sbin/apxs|${APXS}|' ${WRKSRC}/Makefile
 
