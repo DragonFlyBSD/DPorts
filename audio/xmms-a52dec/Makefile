@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: audio/xmms-a52dec/Makefile 333704 2013-11-13 15:58:38Z ehaupt $
+# $FreeBSD: audio/xmms-a52dec/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-a52dec
 PORTVERSION=	1.0
@@ -10,8 +10,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A52 (aka AC3) decoder plugin for XMMS
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
-		a52.0:${PORTSDIR}/audio/liba52
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms \
+		liba52.so:${PORTSDIR}/audio/liba52
 RUN_DEPENDS=	${LOCALBASE}/lib/xmms/Output/libOSSSurround.so:${PORTSDIR}/audio/xmms-osssurround
 
 USE_BZIP2=	yes
