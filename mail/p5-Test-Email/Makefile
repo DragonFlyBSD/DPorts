@@ -1,8 +1,9 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: mail/p5-Test-Email/Makefile 334986 2013-11-27 00:09:28Z matthew $
+# $FreeBSD: mail/p5-Test-Email/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	Test-Email
 PORTVERSION=	0.07
+PORTREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JAMES
@@ -16,6 +17,8 @@ BUILD_DEPENDS=	p5-Mail-POP3Client>=2:${PORTSDIR}/mail/p5-Mail-POP3Client \
 		p5-MIME-Tools>=5.4:${PORTSDIR}/mail/p5-MIME-Tools \
 		p5-Test-Simple>=0.7:${PORTSDIR}/devel/p5-Test-Simple
 RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+NO_ARCH=	yes
 
 USES=		perl5
 USE_PERL5=	configure
