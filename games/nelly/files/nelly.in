@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/nelly/files/nelly.in 314118 2013-03-13 22:26:44Z beech $
+# $FreeBSD: games/nelly/files/nelly.in 335903 2013-12-08 15:14:04Z nemysis $
 #
 
 cd "%%DATADIR%%"
-exec /usr/bin/env python ./nelly.py "${@}"
+exec %%PYTHON_CMD%% ./nelly.py "${@}"
