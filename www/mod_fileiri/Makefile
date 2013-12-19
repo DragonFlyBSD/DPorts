@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/mod_fileiri/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_fileiri/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_fileiri
 PORTVERSION=	1.15
@@ -10,13 +10,12 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 DIST_SUBDIR=	apache2
 
 MAINTAINER=	apache@FreeBSD.org
-COMMENT=	A http IRIs module for Apache 2
+COMMENT=	Apache 2.x http IRIs module
 
+#LICENSE=	AL11
 
 USE_APACHE=	22+
-
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
