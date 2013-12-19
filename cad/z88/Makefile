@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/z88/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/z88/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	z88
 PORTVERSION=	13.0
@@ -13,7 +13,7 @@ EXTRACT_ONLY=	${PORTNAME}130${EXTRACT_SUFX}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A compact Finite Element Analysis System
 
-LIB_DEPENDS=	gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext
+LIB_DEPENDS=	libgtkglext-x11-1.0.so:${PORTSDIR}/x11-toolkits/gtkglext
 
 NO_WRKSUBDIR=	yes
 USES=		pkgconfig
