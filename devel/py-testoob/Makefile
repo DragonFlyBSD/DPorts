@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: devel/py-testoob/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-testoob/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	testoob
 PORTVERSION=	1.15
@@ -29,7 +29,7 @@ NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTWISTED}
-USE_TWISTED=	yes
+USES+=		twisted
 .endif
 
 .if ${PORT_OPTIONS:MHTML}
