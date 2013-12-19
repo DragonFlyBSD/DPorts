@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/nip2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/nip2/Makefile 336038 2013-12-10 01:26:12Z amdmi3 $
 
 PORTNAME=	nip2
 PORTVERSION=	7.26.3
@@ -32,8 +32,13 @@ MAKE_ENV+=	UPDATE_MIME_DATABASE=update-mime-database	\
 
 MAN1=		nip2.1
 
+.include <bsd.port.options.mk>
+
+.if ${OSVERSION} >= 1000013
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src-parser.h
+.endif
+
 post-patch:
-	${REINPLACE_CMD} -e 's, malkovich,,' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|n_bytes|x_n_bytes|g' -e 's|text_size|x_text_size|g' \
 		${WRKSRC}/src/gtkitementry.c
 

@@ -1,6 +1,6 @@
---- src/parser.h.orig	2011-01-25 16:44:07.000000000 +0000
-+++ src/parser.h
-@@ -54,7 +54,7 @@ extern InputState input_state;
+--- src/parser.h.orig	2011-01-25 19:44:07.000000000 +0300
++++ src/parser.h	2013-11-28 04:22:09.853554221 +0400
+@@ -54,7 +54,7 @@
   */
  void yyerror( const char *sub, ... )
  	__attribute__((format(printf, 1, 2)));
