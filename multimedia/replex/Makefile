@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/replex/Makefile 331810 2013-10-27 22:29:46Z dinoex $
+# $FreeBSD: multimedia/replex/Makefile 335808 2013-12-07 05:07:42Z dinoex $
 
 PORTNAME=	replex
 PORTVERSION=	0.1.6.8
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=dinoex
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Remultiplex an MPEG2 TS into a PS for DVD
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CFLAGS="${CFLAGS}" DEFINES="${CPPFLAGS} -DO_LARGEFILE=0 \
 		-DVERSION=\\\"$(PORTVERSION)\\\"" LIBS="${LDFLAGS}"
 PLIST_FILES=	bin/replex
