@@ -1,5 +1,5 @@
 # Created by: Frank W. Josellis <frank@dynamical-systems.org>
-# $FreeBSD: astro/xmoontool/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/xmoontool/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	xmoontool
 PORTVERSION=	3.0.3
@@ -20,7 +20,7 @@ PLIST_FILES=	bin/xmoontool
 .if defined(WITHOUT_LIBNOVA)
 MAKE_ENV+=	WITHOUT_LIBNOVA=yes
 .else
-LIB_DEPENDS+=	nova:${PORTSDIR}/astro/libnova
+LIB_DEPENDS+=	libnova.so:${PORTSDIR}/astro/libnova
 .endif
 
 pre-everything::
