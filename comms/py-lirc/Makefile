@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson (purple@lewiz.net)
-# $FreeBSD: comms/py-lirc/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/py-lirc/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	lirc
 PORTVERSION=	0.0.5
@@ -12,7 +12,7 @@ DISTNAME=	pylirc-${PORTVERSION}
 MAINTAINER=	lewiz@compsoc.man.ac.uk
 COMMENT=	Lirc support library for Python
 
-LIB_DEPENDS=	lirc_client.2:${PORTSDIR}/comms/lirc
+LIB_DEPENDS=	liblirc_client.so:${PORTSDIR}/comms/lirc
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
