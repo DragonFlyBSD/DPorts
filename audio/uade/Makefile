@@ -1,5 +1,5 @@
 # Created by: Martin Blapp <mbr@FreeBSD.org>
-# $FreeBSD: audio/uade/Makefile 333702 2013-11-13 15:50:48Z ehaupt $
+# $FreeBSD: audio/uade/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	uade
 PORTVERSION=	2.13
@@ -13,7 +13,7 @@ COMMENT=	Unix Amiga Delitracker Emulator
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	ao:${PORTSDIR}/audio/libao
+LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao
 
 USES=		gmake pkgconfig
 HAS_CONFIGURE=	yes
@@ -55,7 +55,7 @@ PLIST_SUB+=	FUSE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MXMMS}
-LIB_DEPENDS+=	xmms:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS+=	libxmms.so:${PORTSDIR}/multimedia/xmms
 PLIST_SUB+=	XMMS=""
 .else
 CONFIGURE_ARGS+=--without-xmms
