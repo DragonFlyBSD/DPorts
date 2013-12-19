@@ -1,9 +1,9 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Extension-SLA/Makefile 335414 2013-12-01 17:51:42Z matthew $
+# $FreeBSD: www/p5-RT-Extension-SLA/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	RT-Extension-SLA
 PORTVERSION=	0.07
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,6 +17,8 @@ BUILD_DEPENDS=	p5-Business-Hours>0:${PORTSDIR}/misc/p5-Business-Hours
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 LICENSE=	GPLv2
+
+NO_ARCH=	yes
 
 USES+=		perl5
 USE_PERL5=	configure
@@ -50,7 +52,7 @@ SUB_LIST+=	INITIALDATA=plugins/RT-Extension-SLA/etc/initialdata \
 SUB_FILES+=	pkg-message
 
 # Note: You can install using an arbitrary $PREFIX but only if it
-# matches the $PREFIX used to install www/rt{38,40}.  Hence ignore
+# matches the $PREFIX used to install www/rt{38,40,42}.  Hence ignore
 # $PREFIX in the environment and inherit settings from RT.pm
 do-configure:
 	@cd ${CONFIGURE_WRKSRC} && \
