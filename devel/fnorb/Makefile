@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: devel/fnorb/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/fnorb/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	Fnorb
 PORTVERSION=	1.3
@@ -13,7 +13,12 @@ COMMENT=	A CORBA 2.0 ORB written in Python
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USE_PYDISTUTILS=yes
+PYDISTUTILS_INSTALLNOSINGLE=	yes
+PYDISTUTILS_NOEGGINFO=	yes
+PYDISTUTILS_SETUP=	${PYSETUP}
+
+PLIST_SUB=	PYDISTUTILS_EGGINFO=${PYDISTUTILS_EGGINFO}
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
