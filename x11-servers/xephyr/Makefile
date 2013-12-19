@@ -1,4 +1,4 @@
-# $FreeBSD: x11-servers/xephyr/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11-servers/xephyr/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xephyr
 
@@ -19,10 +19,15 @@ CONFIGURE_ARGS=	--enable-kdrive --enable-xephyr	--disable-dmx --disable-xvfb \
 		--disable-xnest --localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
-PLIST_FILES=	bin/Xephyr
+PLIST_FILES=	bin/Xephyr man/man1/Xephyr.1.gz
 
-NO_STAGE=	yes
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hw/kdrive/ephyr/Xephyr ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/hw/kdrive/ephyr/Xephyr ${STAGEDIR}${PREFIX}/bin/
+.if defined(WITH_NEW_XORG)
+	${INSTALL_MAN} ${WRKSRC}/hw/kdrive/ephyr/man/Xephyr.1 ${STAGEDIR}${PREFIX}/man/man1/
+.else
+	${INSTALL_MAN} ${WRKSRC}/hw/kdrive/ephyr/Xephyr.1 ${STAGEDIR}${PREFIX}/man/man1/
+.endif
 
 .include "${MASTERDIR}/Makefile"
