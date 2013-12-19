@@ -1,7 +1,7 @@
-# $FreeBSD: french/hunspell/Makefile 334116 2013-11-17 19:08:23Z sunpoet $
+# $FreeBSD: french/hunspell/Makefile 336104 2013-12-10 20:02:49Z bapt $
 
 PORTNAME=	hunspell
-PORTVERSION=	4.12
+PORTVERSION=	5.0.1
 CATEGORIES=	french textproc
 MASTER_SITES=	http://www.dicollecte.org/download/fr/ \
 		LOCAL/sunpoet/${PORTNAME}
