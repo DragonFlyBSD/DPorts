@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: astro/openuniverse/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD: astro/openuniverse/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	openuniverse
 DISTVERSION=	1.0beta3
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.0beta3
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL Solar System simulator for X Window System
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 USE_GL=		glut
 
