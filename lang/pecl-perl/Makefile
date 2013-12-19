@@ -1,5 +1,5 @@
 # Created by: Luke Jee
-# $FreeBSD: lang/pecl-perl/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/pecl-perl/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	perl
 DISTVERSION=	1.0.0
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	pecl-
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Embedded Perl
 
 USE_PHP=	yes
