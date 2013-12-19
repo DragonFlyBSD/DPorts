@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-biplist/Makefile 328800 2013-09-30 14:48:38Z wg $
+# $FreeBSD: devel/py-biplist/Makefile 336730 2013-12-17 14:34:30Z wg $
 
 PORTNAME=	biplist
 PORTVERSION=	0.6
@@ -18,15 +18,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>=0:${PORTSDIR}/devel/py-six
 TEST_DEPENDS:=	${RUN_DEPENDS}
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
-
-post-install:
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
