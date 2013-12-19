@@ -1,5 +1,5 @@
 # Created by: anders@hack.org
-# $FreeBSD: x11-wm/pekwm/Makefile 327940 2013-09-23 06:22:54Z bapt $
+# $FreeBSD: x11-wm/pekwm/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	pekwm
 PORTVERSION=	0.1.17
@@ -8,7 +8,7 @@ PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	https://pekwm.org/projects/3/files/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Light, Unobtrusive, and configurable windowmanager
 
 LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
