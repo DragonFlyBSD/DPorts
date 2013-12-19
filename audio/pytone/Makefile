@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@FreeBSD.org>
-# $FreeBSD: audio/pytone/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/pytone/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	pytone
 PORTVERSION=	3.0.2
@@ -12,7 +12,7 @@ DISTNAME=	PyTone-${PORTVERSION}
 MAINTAINER=	lx@FreeBSD.org
 COMMENT=	A music jukebox written in Python with a curses GUI
 
-LIB_DEPENDS=	ao.4:${PORTSDIR}/audio/libao
+LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_SITELIBDIR}/mutagen/__init__.py:${PORTSDIR}/audio/py-mutagen
 
