@@ -1,5 +1,5 @@
 # Created by: keiichi@iijlab.net
-# $FreeBSD: converters/ical2html/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/ical2html/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	ical2html
 PORTVERSION=	2.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.w3.org/Tools/Ical2html/
 MAINTAINER=	keiichi@iijlab.net
 COMMENT=	Manipulation commands for iCalendar files
 
-LIB_DEPENDS=	ical:${PORTSDIR}/devel/libical
+LIB_DEPENDS=	libical.so:${PORTSDIR}/devel/libical
 
 GNU_CONFIGURE=	yes
 
