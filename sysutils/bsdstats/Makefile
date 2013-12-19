@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: sysutils/bsdstats/Makefile 331594 2013-10-25 15:06:30Z tijl $
+# $FreeBSD: sysutils/bsdstats/Makefile 335824 2013-12-07 10:50:23Z gjb $
 
 PORTNAME=	bsdstats
 PORTVERSION=	5.5
@@ -17,7 +17,7 @@ SUB_LIST=	DIG=${DIG}
 
 .include <bsd.port.options.mk>
 
-.if ${OSVERSION} >= 1000500
+.if ${OSVERSION} >= 1000100
 DIG=		drill
 .else
 DIG=		dig
