@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-lyrics/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gmpc-lyrics/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gmpc-lyrics
 PORTVERSION=	11.8.16
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/${PORTVERSION}/
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	A Lyrics Provider plugin for gmpc
 
-LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd
+LIB_DEPENDS=	libmpd.so:${PORTSDIR}/audio/libmpd
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gmpc.pc:${PORTSDIR}/audio/gmpc
 RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
