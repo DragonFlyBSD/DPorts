@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-country/Makefile 333074 2013-11-07 10:03:46Z demon $
+# $FreeBSD: devel/py-country/Makefile 336155 2013-12-11 10:34:02Z demon $
 
 PORTNAME=	country
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 MASTER_SITE_SUBDIR=source/p/pycountry
