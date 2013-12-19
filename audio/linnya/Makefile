@@ -1,4 +1,4 @@
-# $FreeBSD: audio/linnya/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/linnya/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	linnya
 PORTVERSION=	2.3.0
@@ -10,7 +10,7 @@ COMMENT=	A Linnya Audio Player
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
 USE_GITHUB=	yes
 NO_STAGE=	yes
