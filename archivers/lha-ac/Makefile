@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/lha-ac/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: archivers/lha-ac/Makefile 336225 2013-12-11 21:52:30Z dinoex $
 
 PORTNAME=	lha
 PORTVERSION=	1.14i
@@ -13,7 +13,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-ac20050924p1
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Archive files using LZSS and Huffman compression (.lzh files)
 
-RESTRICTED=	no permission to redistribute
+RESTRICTED=	No redistribution allowed
 
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/lha-ac
