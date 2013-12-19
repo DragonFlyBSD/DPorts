@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: misc/wmScoreBoard/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/wmScoreBoard/Makefile 336004 2013-12-09 16:41:34Z danilo $
 
 PORTNAME=	wmScoreBoard
 PORTVERSION=	0.30
@@ -11,21 +11,21 @@ MASTER_SITE_SUBDIR=	pat
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window Maker dockapp that display game scores from excite
 
+LICENSE=	GPLv2
+
 RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
-USE_GMAKE=	yes
 USE_XORG=	xpm
+USES=		gmake shebangfix
+SHEBANG_FILES=	GrabScores.excite
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/wmScoreBoard ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/GrabScores.excite ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docs in BUGS CHANGES HINTS README
-	@${INSTALL_DATA} ${WRKSRC}/../${docs} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/../${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
