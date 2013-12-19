@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: audio/py-pyliblo/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/py-pyliblo/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	pyliblo
 PORTVERSION=	0.9.1
@@ -12,7 +12,7 @@ MAINTAINER=	wen@FreeBSD.org
 COMMENT=	A Python wrapper for the Liblo OSC Library
 
 BUILD_DEPENDS=	pyrex>=0.9.4:${PORTSDIR}/devel/pyrex
-LIB_DEPENDS=	lo:${PORTSDIR}/audio/liblo
+LIB_DEPENDS=	liblo.so:${PORTSDIR}/audio/liblo
 
 USE_PYTHON=		yes
 NO_STAGE=	yes
