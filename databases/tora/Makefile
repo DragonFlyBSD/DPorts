@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: databases/tora/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/tora/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	tora
 PORTVERSION=	2.1.3
@@ -12,8 +12,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Toolkit for Oracle
 
 BUILD_DEPENDS=	cppunit-config:${PORTSDIR}/devel/cppunit
-LIB_DEPENDS=	qscintilla2:${PORTSDIR}/devel/qscintilla2 \
-		pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libqscintilla2.so:${PORTSDIR}/devel/qscintilla2 \
+		libpcre.so:${PORTSDIR}/devel/pcre
 
 OPTIONS_DEFINE=	PGSQL MYSQL DOCS
 OPTIONS_DEFINE_i386=	ORACLE
