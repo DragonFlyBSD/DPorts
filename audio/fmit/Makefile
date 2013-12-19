@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/fmit/Makefile 331657 2013-10-26 07:55:22Z nemysis $
+# $FreeBSD: audio/fmit/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	fmit
 PORTVERSION=	0.99.2
@@ -13,7 +13,7 @@ COMMENT=	Free Music Instrument Tuner
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3
 
 USE_BZIP2=	yes
 USE_XORG=	xmu
