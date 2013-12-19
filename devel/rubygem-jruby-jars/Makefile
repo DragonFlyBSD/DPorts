@@ -1,8 +1,8 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/rubygem-jruby-jars/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD: devel/rubygem-jruby-jars/Makefile 335848 2013-12-07 20:27:31Z sunpoet $
 
 PORTNAME=	jruby-jars
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.9
 CATEGORIES=	devel rubygems java
 MASTER_SITES=	RG
 
