@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/pipewalker/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/pipewalker/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	pipewalker
 PORTVERSION=	0.9.1
@@ -24,7 +24,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${CHMOD} a+x ${WRKSRC}/install-sh
