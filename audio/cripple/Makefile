@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/cripple/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/cripple/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	cripple
 PORTVERSION=	0.06b
@@ -14,7 +14,7 @@ NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
-LIB_DEPENDS+=	cdio.13:${PORTSDIR}/sysutils/libcdio
+LIB_DEPENDS+=	libcdio.so:${PORTSDIR}/sysutils/libcdio
 RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame\
 		cdparanoia:${PORTSDIR}/audio/cdparanoia \
 		cdda2wav:${PORTSDIR}/sysutils/cdrtools
