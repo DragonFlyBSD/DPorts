@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-bdb1/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD: databases/rubygem-bdb1/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	bdb1
 PORTVERSION=	0.2.5
@@ -8,7 +8,7 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby interface to Berkeley DB revision 1.8x with full feature support
 
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
