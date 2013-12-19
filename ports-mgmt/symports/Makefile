@@ -1,7 +1,8 @@
-# $FreeBSD: ports-mgmt/symports/Makefile 328551 2013-09-28 06:48:53Z eadler $
+# $FreeBSD: ports-mgmt/symports/Makefile 336237 2013-12-11 23:44:27Z eadler $
 
 PORTNAME=	symports
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://isis.poly.edu/~eitan/files/
 DISTNAME=	auto-symlink-virtual-${PORTVERSION}
@@ -9,10 +10,11 @@ DISTNAME=	auto-symlink-virtual-${PORTVERSION}
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Automatically generate symlinks for virtual categories
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
+NO_ARCH=	yes
 
 PLIST_FILES=	bin/${PORTNAME} man/man1/symports.1.gz
 
