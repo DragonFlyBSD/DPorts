@@ -1,5 +1,5 @@
 # Created by: Frederic Praca <frederic.praca@freebsd-fr.org>
-# $FreeBSD: devel/buildbot-slave/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/buildbot-slave/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	buildbot-slave
 PORTVERSION=	0.8.8
@@ -18,7 +18,7 @@ TEST_DEPENDS:=	${RUN_DEPENDS} \
 PROJECTHOST=		buildbot
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
-USE_TWISTED_RUN=	runner
+USES=			twisted:run,runner
 
 MAKE_ENV+=		NO_INSTALL_REQS=1
 
