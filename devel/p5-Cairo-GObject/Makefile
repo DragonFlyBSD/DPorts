@@ -1,16 +1,17 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Cairo-GObject/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
+# $FreeBSD: devel/p5-Cairo-GObject/Makefile 336092 2013-12-10 19:32:28Z sunpoet $
 
 PORTNAME=	Cairo-GObject
-PORTVERSION=	1.001
-PORTREVISION=	1
+PORTVERSION=	1.002
 CATEGORIES=	devel graphics perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:TSCH
+MASTER_SITE_SUBDIR=	CPAN:XAOC
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Integrate Cairo into the Glib type system
+
+LICENSE=	LGPL21
 
 BUILD_DEPENDS=	cairo>=1.10.0:${PORTSDIR}/graphics/cairo \
 		p5-Cairo>=1.080:${PORTSDIR}/graphics/p5-Cairo \
