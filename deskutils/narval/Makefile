@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: deskutils/narval/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/narval/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	narval
 PORTVERSION=	2.0.2
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/xmlrpclib.py:${PORTSDIR}/net/py-xmlrpclib \
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-USE_TWISTED=	yes
+USES=		twisted
 USE_GNOME=	pygtk2
 
 NO_STAGE=	yes
