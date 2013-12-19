@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/cvs2svn/Makefile 328719 2013-09-29 17:46:42Z ohauer $
+# $FreeBSD: devel/cvs2svn/Makefile 335888 2013-12-08 13:24:03Z mva $
 
 PORTNAME=	cvs2svn
 PORTVERSION=	2.4.0
@@ -21,9 +21,14 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 # 2.4.0 -> svn r5392
 PATCHREV=	5433
 
-USE_PYTHON=		-2.7
+USES=			shebangfix
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
+
+python_OLD_CMD=		/usr/bin/env python
+python_CMD=		/usr/bin/env python2
+SHEBANG_FILES=		cvs2svn cvs2git cvs2bzr
 
 OPTIONS_MULTI=		SCM
 OPTIONS_MULTI_SCM=	SUBVERSION GIT BAZAAR
