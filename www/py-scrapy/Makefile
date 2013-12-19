@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: www/py-scrapy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-scrapy/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	Scrapy
 PORTVERSION=	0.16.5
@@ -17,8 +17,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.0:${PORTSDIR}/devel/py-lxml \
 		${PYTHON_PKGNAMEPREFIX}w3lib>=1.2:${PORTSDIR}/www/py-w3lib
 
 USE_PYTHON=	-2.7
+USES=		twisted:run
 USE_PYDISTUTILS=easy_install
-USE_TWISTED_RUN=yes
 
 OPTIONS_DEFINE=	SSL
 OPTIONS_DEFAULT=SSL
