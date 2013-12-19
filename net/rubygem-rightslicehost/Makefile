@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/rubygem-rightslicehost/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-rightslicehost/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	rightslicehost
 PORTVERSION=	0.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 DISTNAME=	right_slicehost-${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Provides Ruby access to the Slicehost API
 
 RUN_DEPENDS=	rubygem-righthttpconnection>=1.2.4:${PORTSDIR}/net/rubygem-righthttpconnection
