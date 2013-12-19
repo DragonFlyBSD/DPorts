@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/neubot/Makefile 332395 2013-11-01 16:08:21Z thierry $
+# $FreeBSD: net/neubot/Makefile 336463 2013-12-14 17:48:22Z wg $
 
 PORTNAME=	neubot
 PORTVERSION=	0.4.16.9
@@ -21,6 +21,7 @@ USERS=		_neubot
 GROUPS=		_neubot
 LSTATEDIR=	/var
 STATEDIR=	${LSTATEDIR}/${PORTNAME}
+MAKE_ARGS=	PYTHON=${PYTHON_CMD}
 MAKE_ENV=	LOCALSTATEDIR=${LSTATEDIR} MANDIR=${MANPREFIX}/man
 
 USE_RC_SUBR=	neubotd
