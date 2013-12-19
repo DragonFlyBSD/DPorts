@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: cad/electric/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/electric/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	electric
 PORTVERSION=	7.0.0
@@ -26,7 +26,7 @@ NO_STAGE=	yes
 FEATURES+=	MOTIF
 
 .if ${PORT_OPTIONS:MT1LIB}
-LIB_DEPENDS+=	t1.5:${PORTSDIR}/devel/t1lib
+LIB_DEPENDS+=	libt1.so:${PORTSDIR}/devel/t1lib
 FEATURES+=	T1LIB
 .endif
 
