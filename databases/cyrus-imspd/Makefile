@@ -1,5 +1,5 @@
 # Created by: damien@tougas.net
-# $FreeBSD: databases/cyrus-imspd/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/cyrus-imspd/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	cyrus-imspd
 PORTVERSION=	1.8
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The cyrus IMSP (Internet Message Support Protocol) server
 
-LIB_DEPENDS=	sasl2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${LOCALBASE}/include
