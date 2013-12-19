@@ -1,5 +1,5 @@
 # Created by: john@zoner.org
-# $FreeBSD: textproc/py-pyx12/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-pyx12/Makefile 336495 2013-12-14 22:56:16Z wg $
 
 PORTNAME=	pyx12
 PORTVERSION=	1.5.0
@@ -13,8 +13,7 @@ COMMENT=	Validate and convert HIPAA X12 documents
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2 \
 		${PYTHON_SITELIBDIR}/libxslt.py:${PORTSDIR}/textproc/py-libxslt
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2 \
-		${PYTHON_SITELIBDIR}/libxslt.py:${PORTSDIR}/textproc/py-libxslt
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
 USE_BZIP2=	yes
@@ -27,7 +26,7 @@ SUB_FILES=	pkg-deinstall
 
 NO_STAGE=	yes
 post-install:
-	${WRKSRC}/bin/x12_build_pkl.py ${PREFIX}/share/pyx12/map/
+	${PYTHON_CMD} ${WRKSRC}/bin/x12_build_pkl.py ${PREFIX}/share/pyx12/map/
 	cd ${WRKSRC}/bin && ${INSTALL_MAN} ${MAN1} ${MAN1PREFIX}/man/man1
 	cd ${WRKSRC}/bin && ${INSTALL_MAN} ${MAN5} ${MAN5PREFIX}/man/man5
 
