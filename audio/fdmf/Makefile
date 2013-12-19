@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/fdmf/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/fdmf/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	fdmf
 DISTVERSION=	0.0.9s
@@ -10,9 +10,9 @@ MASTER_SITES=	http://w140.com/audio/ CENKES
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Find similar music by perceptual hashing
 
-LIB_DEPENDS=	gdbm.4:${PORTSDIR}/databases/gdbm \
-		plot.4:${PORTSDIR}/graphics/plotutils \
-		fftw3:${PORTSDIR}/math/fftw3
+LIB_DEPENDS=	libgdbm.so:${PORTSDIR}/databases/gdbm \
+		libplot.so:${PORTSDIR}/graphics/plotutils \
+		libfftw3.so:${PORTSDIR}/math/fftw3
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
 		mpg123:${PORTSDIR}/audio/mpg123 \
 		ogg123:${PORTSDIR}/audio/vorbis-tools \
