@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/xorg/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xorg/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg
 PORTVERSION=	7.7
@@ -12,6 +12,7 @@ MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org complete distribution metaport
 
 NO_BUILD=	yes
+NO_MTREE=	yes
 
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:${PORTSDIR}/graphics/dri
 
@@ -19,7 +20,6 @@ RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:${PORTSDIR}/graphics/dri
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xbitmaps.pc:${PORTSDIR}/x11/xbitmaps \
 		${LOCALBASE}/lib/X11/icons/handhelds/cursors/X_cursor:${PORTSDIR}/x11-themes/xcursor-themes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # doc
