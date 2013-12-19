@@ -1,5 +1,5 @@
 # Created by: TOMIDA, Hiroaki <t.hiroaki.209 at gmail.com>
-# $FreeBSD: audio/ruby-taglib/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ruby-taglib/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	taglib
 PORTVERSION=	1.1
@@ -13,7 +13,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	t.hiroaki.209@gmail.com
 COMMENT=	A Ruby library wrapping the Taglib library
 
-LIB_DEPENDS=    tag:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=    libtag.so:${PORTSDIR}/audio/taglib
 
 USE_RUBY=	yes
 NO_STAGE=	yes
