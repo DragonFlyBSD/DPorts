@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/libsbml/Makefile 335360 2013-12-01 01:58:31Z wen $
+# $FreeBSD: biology/libsbml/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	libsbml
 PORTVERSION=	4.2.0
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	API Library for Working with SBML File
 
-LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2
 
 OPTIONS_DEFINE=	PYTHON RUBY
 
