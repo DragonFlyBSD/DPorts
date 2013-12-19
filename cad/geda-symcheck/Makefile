@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-symcheck/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/geda-symcheck/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	symcheck
 PORTVERSION=	1.4.3
@@ -15,7 +15,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The gEDA's symbol checking utility
 
 RUN_DEPENDS=	${LOCALBASE}/share/geda/sym:${PORTSDIR}/cad/geda-symbols
-LIB_DEPENDS=	geda.33:${PORTSDIR}/cad/libgeda
+LIB_DEPENDS=	libgeda.so:${PORTSDIR}/cad/libgeda
 
 DOCSDIR=	${PREFIX}/share/doc/geda
 DATADIR=	${PREFIX}/share/geda
