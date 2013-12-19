@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: textproc/uncrustify/Makefile 332113 2013-10-30 14:12:29Z amdmi3 $
+# $FreeBSD: textproc/uncrustify/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	uncrustify
 PORTVERSION=	0.60
@@ -18,9 +18,8 @@ PORTDATA=	*
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-install:
-	cd ${WRKSRC}/documentation && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/documentation && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
