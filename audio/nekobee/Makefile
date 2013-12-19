@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/nekobee/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/nekobee/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	nekobee
 PORTVERSION=	0.1.8
@@ -13,9 +13,9 @@ COMMENT=	DSSI plugin that emulates the sound of the TB-303 Bassline
 LICENSE=	GPLv2 # (or later)
 
 BUILD_DEPENDS=	${LOCALBASE}/include/dssi.h:${PORTSDIR}/audio/dssi
-LIB_DEPENDS=	dssialsacompat:${PORTSDIR}/audio/libdssialsacompat \
-		lo:${PORTSDIR}/audio/liblo \
-		jack:${PORTSDIR}/audio/jack
+LIB_DEPENDS=	libdssialsacompat.so:${PORTSDIR}/audio/libdssialsacompat \
+		liblo.so:${PORTSDIR}/audio/liblo \
+		libjack.so:${PORTSDIR}/audio/jack
 
 USE_GITHUB=	yes
 NO_STAGE=	yes
