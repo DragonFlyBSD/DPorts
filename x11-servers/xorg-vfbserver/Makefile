@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 327782 2013-09-20 23:52:24Z bapt $
+# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xorg-vfbserver
 
@@ -20,11 +20,15 @@ CONFIGURE_ARGS=	--disable-dmx --disable-xnest \
 		--localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
-PLIST_FILES=	bin/Xvfb
-MAN1=		Xvfb.1
+PLIST_FILES=	bin/Xvfb man/man1/Xvfb.1.gz
 
-NO_STAGE=	yes
+
 do-install:
-	cd ${WRKSRC}/hw/vfb; ${MAKE} install
+	${INSTALL_PROGRAM} ${WRKSRC}/hw/vfb/Xvfb ${STAGEDIR}${PREFIX}/bin/
+.if defined(WITH_NEW_XORG)
+	${INSTALL_MAN} ${WRKSRC}/hw/vfb/man/Xvfb.1 ${STAGEDIR}${PREFIX}/man/man1/
+.else
+	${INSTALL_MAN} ${WRKSRC}/hw/vfb/Xvfb.1 ${STAGEDIR}${PREFIX}/man/man1/
+.endif
 
 .include "${MASTERDIR}/Makefile"
