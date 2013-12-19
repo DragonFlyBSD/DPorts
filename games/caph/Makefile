@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/caph/Makefile 332114 2013-10-30 14:15:06Z amdmi3 $
+# $FreeBSD: games/caph/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	caph
 PORTVERSION=	1.1
@@ -33,7 +33,7 @@ DESKTOP_ENTRIES="Caph" \
 		false
 
 OPTIONS_DEFINE=	DOCS OPTIMIZED_CFLAGS
-OPTIONS_DEFAULT=DOCS OPTIMIZED_CFLAGS
+OPTIONS_DEFAULT=OPTIMIZED_CFLAGS
 
 .include <bsd.port.options.mk>
 
@@ -50,7 +50,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
-	cd ${WRKSRC}/share/caph && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DATADIR}/
+	cd ${WRKSRC}/share/caph && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc/caph && ${INSTALL_DATA} README CHANGELOG ${STAGEDIR}${DOCSDIR}/
 
