@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
+# $FreeBSD: audio/gogglesmm/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
@@ -7,7 +7,7 @@ PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	GOOGLE_CODE
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Music collection manager and player
 
 LICENSE=	GPLv3
