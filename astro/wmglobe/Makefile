@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: astro/wmglobe/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/wmglobe/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	wmglobe
 PORTVERSION=	1.3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://hamete.org/static/wmg/
 MAINTAINER=	will@FreeBSD.org
 COMMENT=	A neat xearth-like WindowMaker dockapp
 
-LIB_DEPENDS=	wraster.4:${PORTSDIR}/x11-wm/windowmaker
+LIB_DEPENDS=	libwraster.so:${PORTSDIR}/x11-wm/windowmaker
 
 NO_STAGE=	yes
 MAN1=		wmglobe.1
