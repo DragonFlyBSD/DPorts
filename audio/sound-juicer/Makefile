@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/sound-juicer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/sound-juicer/Makefile 336166 2013-12-11 14:35:36Z bapt $
 #   $MCom: ports/audio/sound-juicer/Makefile,v 1.102 2010/09/29 13:19:43 kwm Exp $
 
 PORTNAME=	sound-juicer
@@ -12,13 +12,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clean, mean, and lean CD ripper for GNOME2
 
-LIB_DEPENDS=	musicbrainz3.6:${PORTSDIR}/audio/libmusicbrainz3 \
-		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media \
-		cdio.13:${PORTSDIR}/sysutils/libcdio \
-    		tag.1:${PORTSDIR}/audio/taglib \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		brasero-media.3:${PORTSDIR}/sysutils/brasero
+LIB_DEPENDS=	libmusicbrainz3.so:${PORTSDIR}/audio/libmusicbrainz3 \
+		libgnome-media-profiles.so:${PORTSDIR}/audio/gnome-media \
+		libcdio.so:${PORTSDIR}/sysutils/libcdio \
+		libtag.so:${PORTSDIR}/audio/taglib \
+		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libbrasero-media.so:${PORTSDIR}/sysutils/brasero
 
 USE_BZIP2=	yes
 NO_STAGE=	yes
