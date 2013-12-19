@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: cad/varkon/Makefile 329636 2013-10-06 22:58:15Z marino $
+# $FreeBSD: cad/varkon/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	varkon
 PORTVERSION=	1.19E
@@ -11,7 +11,7 @@ DIST_SUBDIR=	varkon
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free CAD system and applications development tool
 
-LIB_DEPENDS=	tiff:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 WRKSRC=		${WRKDIR}/Varkon_${PORTVERSION}
