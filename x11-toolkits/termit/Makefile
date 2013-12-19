@@ -1,9 +1,9 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD: x11-toolkits/termit/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	http://cloud.github.com/downloads/nonstop/termit/
 
