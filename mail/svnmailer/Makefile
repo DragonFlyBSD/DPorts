@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: mail/svnmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/svnmailer/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	svnmailer
 DISTVERSION=	1.1.0-dev-r1373
@@ -31,7 +31,10 @@ PYDISTUTILS_INSTALLARGS+=	--no-install-docs
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e "1s|^.*|#!${PYTHON_CMD}|" ${WRKSRC}/setup.py
+	@${REINPLACE_CMD} \
+		-e "1s|^.*|#!${PYTHON_CMD}|" \
+		-e 's,distutils\.command import install ,setuptools\.command import install ,' \
+		${WRKSRC}/setup.py
 	@${REINPLACE_CMD} -e "1s|^.*|#!${PYTHON_CMD}|" ${WRKSRC}/src/svn-mailer
 
 .include <bsd.port.mk>
