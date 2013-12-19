@@ -1,5 +1,5 @@
 # Created by: Matthieu Guegan <matt.guegan@free.fr>
-# $FreeBSD: audio/gimmix/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gimmix/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gimmix
 PORTVERSION=	0.5.7.1
@@ -11,9 +11,9 @@ MASTER_SITE_SUBDIR=	gimmix
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gimmix is a graphical MPD client written in C using GTK+2
 
-LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
-		tag.1:${PORTSDIR}/audio/taglib \
-		nxml:${PORTSDIR}/textproc/libnxml
+LIB_DEPENDS=	libmpd.so:${PORTSDIR}/audio/libmpd \
+		libtag.so:${PORTSDIR}/audio/taglib \
+		libnxml.so:${PORTSDIR}/textproc/libnxml
 
 LICENSE=	GPLv2
 
