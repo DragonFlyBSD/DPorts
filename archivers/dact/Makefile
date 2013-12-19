@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: archivers/dact/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/dact/Makefile 336153 2013-12-11 10:04:56Z bapt $
 
 PORTNAME=	dact
 PORTVERSION=	0.8.42
@@ -9,8 +9,8 @@ MASTER_SITES=	http://www.rkeene.org/files/oss/dact/release/
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Dynamic Adaptive Compression Tool
 
-LIB_DEPENDS=	mcrypt.8:${PORTSDIR}/security/libmcrypt \
-		lzo2.2:${PORTSDIR}/archivers/lzo2
+LIB_DEPENDS=	libmcrypt.so:${PORTSDIR}/security/libmcrypt \
+		liblzo2.so:${PORTSDIR}/archivers/lzo2
 
 NO_STAGE=	yes
 USES=		gmake
