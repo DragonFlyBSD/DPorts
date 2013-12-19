@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: astro/nightfall/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: astro/nightfall/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	nightfall
 PORTVERSION=	1.70
@@ -37,7 +37,7 @@ PLIST_SUB+=	GNOMEUI="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPGPLOT}
-LIB_DEPENDS+=	pgplot.5:${PORTSDIR}/graphics/pgplot
+LIB_DEPENDS+=	libpgplot.so:${PORTSDIR}/graphics/pgplot
 USE_FORTRAN=	yes
 CONFIGURE_ARGS+=	--with-pgplot-include=${LOCALBASE}/include \
 			--with-pgplot-lib=${LOCALBASE}/lib
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--with-gnuplot
 .endif
 
 .if ${PORT_OPTIONS:MOPENGL}
-LIB_DEPENDS+=	gtkgl-2.0.1:${PORTSDIR}/x11-toolkits/gtkglarea2
+LIB_DEPENDS+=	libgtkgl-2.0.so:${PORTSDIR}/x11-toolkits/gtkglarea2
 USE_GL=		glut
 CONFIGURE_ARGS+=	--with-lib-GL
 .else
