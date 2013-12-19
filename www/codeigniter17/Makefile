@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/codeigniter17/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/codeigniter17/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	codeigniter
 PORTVERSION=	1.7.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://codeigniter.com/download_files/ \
 		LOCAL/glarkin
 DISTNAME=	CodeIgniter_${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A framework for developing PHP web applications
 
 USE_ZIP=	yes
