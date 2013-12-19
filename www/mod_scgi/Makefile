@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
-# $FreeBSD: www/mod_scgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_scgi/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_scgi
 PORTVERSION=	1.12
@@ -9,21 +9,13 @@ MASTER_SITES=	http://dryice.name/computer/FreeBSD/distfiles/
 DISTNAME=	scgi-${PORTVERSION:S/.a/a/}
 
 MAINTAINER=	dryice@dryice.name
-COMMENT=	Apache module that implements the client side of the SCGI protocol
-
+COMMENT=	Apache 2.2 module that implements the client side of the SCGI protocol
 
 SCGI_DIR=	apache2
 WRKSRC=		${WRKDIR}/${DISTNAME}/${SCGI_DIR}
 
 USE_APACHE=	22
-
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
