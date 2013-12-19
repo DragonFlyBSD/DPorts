@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/kdenetwork4/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: net/kdenetwork4/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	kdenetwork
 PORTVERSION=	${KDE4_VERSION}
@@ -12,11 +12,11 @@ DIST_SUBDIR=	KDE/${PORTVERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Network applications
 
-LIB_DEPENDS=	qca.2:${PORTSDIR}/devel/qca \
-		ktorrent:${PORTSDIR}/net-p2p/libktorrent \
-		boost_thread:${PORTSDIR}/devel/boost-libs \
-		mms.0:${PORTSDIR}/net/libmms \
-		jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libqca.so:${PORTSDIR}/devel/qca \
+		libktorrent.so:${PORTSDIR}/net-p2p/libktorrent \
+		libboost_thread.so:${PORTSDIR}/devel/boost-libs \
+		libmms.so:${PORTSDIR}/net/libmms \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 RUN_DEPENDS=	qca-ossl>=2.0.0.b3:${PORTSDIR}/security/qca-ossl
 
 LATEST_LINK=	${PORTNAME}4
