@@ -1,8 +1,8 @@
-# $FreeBSD: print/photoprint/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: print/photoprint/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	photoprint
 DISTVERSION=	0.4.2-pre2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print graphics
 MASTER_SITES=	http://www.blackfiveimaging.co.uk/photoprint/
 
