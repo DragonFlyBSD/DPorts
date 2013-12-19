@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-wikitemplates/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-wikitemplates/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	wikitemplates
 PORTVERSION=	0.3.0p3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION:S/p/rc/}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Templates for the Trac wiki
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
