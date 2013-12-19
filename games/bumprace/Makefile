@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/bumprace/Makefile 331234 2013-10-22 08:03:00Z amdmi3 $
+# $FreeBSD: games/bumprace/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	bumprace
 PORTVERSION=	1.5.3
@@ -23,7 +23,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBS/ s|-lSDL_[a-z]*|& $${SDL_LIBS}|' ${WRKSRC}/configure
