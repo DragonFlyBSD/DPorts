@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/ximp3/Makefile 330476 2013-10-16 03:28:12Z amdmi3 $
+# $FreeBSD: audio/ximp3/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	ximp3
 PORTVERSION=	0.1.15
@@ -15,7 +15,6 @@ PORTDOCS=	*
 PLIST_FILES=	bin/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
