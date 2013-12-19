@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/brikx/Makefile 330823 2013-10-19 02:00:10Z amdmi3 $
+# $FreeBSD: games/brikx/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	brikx
 PORTVERSION=	0.4.5
@@ -33,6 +33,6 @@ post-patch:
 		${WRKSRC}/src/brikx.h
 
 post-install:
-	cd ${WRKSRC}/src/data && ${COPYTREE_SHARE} "*" ${STAGEDIR}${DATADIR}/
+	cd ${WRKSRC}/src/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
