@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-Sybase/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: databases/p5-DBD-Sybase/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	DBD-Sybase
 PORTVERSION=	1.15
@@ -11,7 +11,7 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Sybase DBI driver for Perl 5
 
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
-LIB_DEPENDS=	ct.4:${PORTSDIR}/databases/freetds
+LIB_DEPENDS=	libct.so:${PORTSDIR}/databases/freetds
 RUN_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 
 CONFIGURE_ENV=	SYBASE=${LOCALBASE}
