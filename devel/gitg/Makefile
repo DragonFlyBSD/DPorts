@@ -1,5 +1,5 @@
 # Created by: kipz <somicide@gmail.com>
-# $FreeBSD: devel/gitg/Makefile 330469 2013-10-16 02:26:40Z amdmi3 $
+# $FreeBSD: devel/gitg/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	gitg
 PORTVERSION=	0.2.7
@@ -30,7 +30,6 @@ GLIB_SCHEMAS=	org.gnome.gitg.gschema.xml
 LDFLAGS=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NLS
-OPTIONS_DEFAULT=NLS
 OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=nls
