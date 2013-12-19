@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
@@ -16,8 +16,8 @@ COMMENT=	Port of Gnome's notification-daemon for the Xfce desktop
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
-LIB_DEPENDS=	sexy:${PORTSDIR}/x11-toolkits/libsexy \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	libsexy.so:${PORTSDIR}/x11-toolkits/libsexy \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
