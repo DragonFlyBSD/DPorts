@@ -1,5 +1,5 @@
 # Created by: rene
-# $FreeBSD: lang/bf2c/Makefile 328153 2013-09-24 16:08:39Z rene $
+# $FreeBSD: lang/bf2c/Makefile 336561 2013-12-15 17:41:39Z rene $
 
 PORTNAME=	bf2c
 PORTVERSION=	1.3.1
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Optimizing BrainF*ck to C compiler
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rene0
