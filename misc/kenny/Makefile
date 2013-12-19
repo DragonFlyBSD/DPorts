@@ -1,8 +1,9 @@
 # Created by: Alan E <alane@FreeBSD.org>
-# $FreeBSD: misc/kenny/Makefile 335729 2013-12-06 09:57:12Z ak $
+# $FreeBSD: misc/kenny/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	kenny
 PORTVERSION=	1.7
+PORTREVISION=	1
 CATEGORIES=	misc perl5
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}\
 				http://www.cgarbs.de/stuff/
