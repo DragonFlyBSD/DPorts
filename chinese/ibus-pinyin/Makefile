@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: chinese/ibus-pinyin/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
@@ -58,7 +58,7 @@ PLIST_SUB+=	OPENPHRASE_DB="@comment "
 
 .if ${PORT_OPTIONS:MOPENCC}
 CONFIGURE_ARGS+=	--enable-opencc
-LIB_DEPENDS+=		opencc.1:${PORTSDIR}/chinese/opencc
+LIB_DEPENDS+=		libopencc.so:${PORTSDIR}/chinese/opencc
 .else
 CONFIGURE_ARGS+=	--disable-opencc
 .endif
