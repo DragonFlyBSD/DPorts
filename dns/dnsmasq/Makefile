@@ -1,8 +1,8 @@
 # Created by: Steven Honson
-# $FreeBSD: dns/dnsmasq/Makefile 331782 2013-10-27 15:30:32Z mandree $
+# $FreeBSD: dns/dnsmasq/Makefile 335916 2013-12-08 18:05:35Z mandree $
 
 PORTNAME=	dnsmasq
-DISTVERSION=	2.67
+DISTVERSION=	2.68
 PORTEPOCH=	1
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/ \
