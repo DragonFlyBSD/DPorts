@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: astro/sunclock/Makefile 331558 2013-10-25 06:28:14Z vanilla $
+# $FreeBSD: astro/sunclock/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	sunclock
 PORTVERSION=	3.57
@@ -11,8 +11,8 @@ COMMENT=	Shows which portion of the Earth's surface is illuminated by the Sun
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 USE_BZIP2=	yes
 USE_XORG=	xpm
