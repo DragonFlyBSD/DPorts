@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/bmp-festalon/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: audio/bmp-festalon/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PKGNAMEPREFIX=	bmp-
 
@@ -9,7 +9,7 @@ LICENSE=	GPLv2
 
 MASTERDIR=	${.CURDIR}/../festalon
 
-LIB_DEPENDS=	beep.2:${PORTSDIR}/multimedia/beep-media-player
+LIB_DEPENDS=	libbeep.so:${PORTSDIR}/multimedia/beep-media-player
 
 CONFIGURE_ARGS+=	--enable-interface=bmp
 
