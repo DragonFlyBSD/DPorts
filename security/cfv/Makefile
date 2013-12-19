@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/cfv/Makefile 330398 2013-10-15 12:56:39Z bapt $
+# $FreeBSD: security/cfv/Makefile 336520 2013-12-15 12:28:10Z wg $
 
 PORTNAME=	cfv
 PORTVERSION=	1.18.3
@@ -9,9 +9,10 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility to both test and create .sfv, .csv, and md5sum files
 
-USE_PYTHON=	yes
+USE_PYTHON=	2
 ALL_TARGET=	cfv.wrapper
 INSTALL_TARGET=	install-wrapper
+MAKE_ARGS=	PYTHON=${PYTHON_CMD}
 
 MAN1=	cfv.1
 
