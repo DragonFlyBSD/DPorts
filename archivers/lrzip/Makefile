@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/lrzip/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/lrzip/Makefile 336153 2013-12-11 10:04:56Z bapt $
 
 PORTNAME=	lrzip
 PORTVERSION=	0.614
@@ -13,7 +13,7 @@ COMMENT=	Long Range ZIP or Lzma RZIP
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	nasm>=0:${PORTSDIR}/devel/nasm
-LIB_DEPENDS=	lzo2:${PORTSDIR}/archivers/lzo2
+LIB_DEPENDS=	liblzo2.so:${PORTSDIR}/archivers/lzo2
 
 NO_STAGE=		yes
 CFLAGS+=	-I${LOCALBASE}/include
