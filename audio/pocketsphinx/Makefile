@@ -1,5 +1,5 @@
 # Created by: Richard Neese
-# $FreeBSD: audio/pocketsphinx/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/pocketsphinx/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	pocketsphinx
 PORTVERSION=	0.8
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/cmusphinx/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Speech recognition system
 
-LIB_DEPENDS=	sphinxad:${PORTSDIR}/audio/sphinxbase
+LIB_DEPENDS=	libsphinxad.so:${PORTSDIR}/audio/sphinxbase
 
 USES=		gmake pkgconfig
 NO_STAGE=	yes
