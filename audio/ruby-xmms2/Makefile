@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/ruby-xmms2/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ruby-xmms2/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTREVISION=	4
 CATEGORIES=	audio ruby
@@ -8,7 +8,7 @@ PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby Bindings for XMMS2
 
-LIB_DEPENDS+=	xmmsclient.6:${PORTSDIR}/audio/xmms2
+LIB_DEPENDS+=	libxmmsclient.so:${PORTSDIR}/audio/xmms2
 
 MASTERDIR=	${.CURDIR}/../xmms2
 
