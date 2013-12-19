@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-hiera-puppet/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-hiera-puppet/Makefile 336657 2013-12-16 18:57:31Z mat $
 
 PORTNAME=	hiera-puppet
 PORTVERSION=	1.0.0
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	mat@FreeBSD.org
 COMMENT=	A data backend for Hiera that queries the Puppet scope for data
 
 RUN_DEPENDS=	puppet>=0:${PORTSDIR}/sysutils/puppet27 \
