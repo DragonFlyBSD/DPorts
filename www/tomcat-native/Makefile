@@ -1,9 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/tomcat-native/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tomcat-native/Makefile 336727 2013-12-17 14:19:30Z ale $
 
 PORTNAME=	tomcat-native
-PORTVERSION=	1.1.27
-PORTREVISION=	1
+PORTVERSION=	1.1.29
 CATEGORIES=	www java
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	tomcat/tomcat-connectors/native/${PORTVERSION}/source
@@ -14,7 +13,7 @@ COMMENT=	Tomcat native library
 
 LICENSE=	AL2
 
-LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr1
+LIB_DEPENDS=	libapr-1.so.4:${PORTSDIR}/devel/apr1
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/jni/native
 
@@ -35,7 +34,6 @@ PLIST_FILES=	lib/libtcnative-1.a \
 		lib/libtcnative-1.so \
 		lib/libtcnative-1.so.1
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOCSP}
