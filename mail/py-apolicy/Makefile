@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/py-apolicy/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/py-apolicy/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	apolicy
 PORTVERSION=	0.73
@@ -16,9 +16,9 @@ COMMENT=	An ACL system for Postfix, as a policy daemon
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/spf.py:${PORTSDIR}/mail/py-spf \
 		${PYTHON_SITELIBDIR}/IPy.py:${PORTSDIR}/net-mgmt/py-ipy
 
+USES=		twisted
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=yes
-USE_TWISTED=	yes
 NO_BUILD=	yes
 USE_RC_SUBR=	apolicyd
 
