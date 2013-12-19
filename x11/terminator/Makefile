@@ -1,5 +1,5 @@
 # Created by: Thomas Hurst <tom@hur.st>
-# $FreeBSD: x11/terminator/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/terminator/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	terminator
 PORTVERSION=	0.96
@@ -21,7 +21,7 @@ OPTIONS_DEFINE=	NLS GCONF
 GCONF_DESC=	Use GNOME Terminal settings
 OPTIONS_DEFAULT=	NLS GCONF
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Terminator
 
@@ -42,7 +42,7 @@ PYSETUP+=	--without-gettext
 
 .include <bsd.port.pre.mk>
 
-PYSETUP+=	--without-icon-cache
+PYDISTUTILS_SETUP+=	--without-icon-cache
 
 .if ${PORT_OPTIONS:MGCONF}
 USE_GNOME+=	pygnome2
