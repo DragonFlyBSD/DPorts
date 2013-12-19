@@ -1,15 +1,17 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: games/nonsense/Makefile 328407 2013-09-26 19:13:51Z eadler $
+# $FreeBSD: games/nonsense/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	nonsense
 PORTVERSION=	0.6
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF
 
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Nonsense text generator
 
-NO_BUILD=	defined
+NO_BUILD=	yes
+NO_ARCH=	yes
 
 .include <bsd.port.options.mk>
 
