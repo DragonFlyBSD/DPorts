@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/gtklife/Makefile 331440 2013-10-23 22:40:22Z eadler $
+# $FreeBSD: games/gtklife/Makefile 335812 2013-12-07 05:34:49Z eadler $
 
 PORTNAME=	gtklife
 PORTVERSION=	5.1
@@ -57,9 +57,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/icon_${s}.png \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}/apps/gtklife.png
 .endfor
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
