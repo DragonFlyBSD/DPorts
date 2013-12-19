@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/py-nevow/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-nevow/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	nevow
 PORTVERSION=	0.10.0
@@ -15,8 +15,7 @@ COMMENT=	A web application templating system, based on the Twisted Woven
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
-USE_TWISTED=	web
-USES=		gettext
+USES=		gettext twisted:web
 PYDISTUTILS_PKGNAME=	Nevow
 
 SUB_FILES=	pkg-message
