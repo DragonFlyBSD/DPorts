@@ -1,4 +1,4 @@
-# $FreeBSD: devel/csmith/Makefile 328642 2013-09-29 03:05:51Z eadler $
+# $FreeBSD: devel/csmith/Makefile 336237 2013-12-11 23:44:27Z eadler $
 
 PORTNAME=	csmith
 PORTVERSION=	2.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://embed.cs.utah.edu/csmith/
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Generates random C programs that conform to the C99 standard
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
