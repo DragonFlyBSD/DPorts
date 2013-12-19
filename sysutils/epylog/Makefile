@@ -1,5 +1,5 @@
 # Created by: Alan Snelson <alan@wave2.co.uk>
-# $FreeBSD: sysutils/epylog/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/epylog/Makefile 336499 2013-12-14 23:23:45Z wg $
 
 PORTNAME=	epylog
 PORTVERSION=	1.0.3
@@ -19,7 +19,8 @@ MAN5=		epylog-modules.5 epylog.conf.5
 MAN8=		epylog.8
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-lynx=${LOCALBASE}/bin/lynx
+CONFIGURE_ARGS=	--with-lynx=${LOCALBASE}/bin/lynx \
+		--with-python=${PYTHON_CMD}
 USES=		perl5
 USE_PYTHON=	yes
 
