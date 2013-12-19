@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/libosmpbf/Makefile 330468 2013-10-16 01:10:29Z amdmi3 $
+# $FreeBSD: astro/libosmpbf/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	libosmpbf
 PORTVERSION=	1.3.0
@@ -27,7 +27,6 @@ CXXFLAGS+=	-I${LOCALBASE}/include
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
