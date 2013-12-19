@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-batchmodify/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-batchmodify/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	batchmodify
 PORTVERSION=	0.8.0.9694
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enables users to modify several tickets together at once
 
 RUN_DEPENDS+=	trac>=0.12:${PORTSDIR}/www/trac
