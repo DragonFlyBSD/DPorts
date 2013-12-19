@@ -1,9 +1,8 @@
 # Created by: markm@FreeBSD.org
-# $FreeBSD: mail/exim/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/exim/Makefile 335913 2013-12-08 16:58:55Z rea $
 
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
-PORTREVISION=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_EXIM:S/$/:exim/}
 MASTER_SITE_SUBDIR=	exim4/:exim
@@ -75,7 +74,7 @@ PLIST_SUB+=	SO_1024=""
 PLIST_SUB+=	SO_1024="@comment "
 .endif
 
-EXIM_VERSION=	4.80.1
+EXIM_VERSION=	4.82
 SA_EXIM_VERSION=4.2
 SO_1024_VERSION=3.2
 
@@ -91,9 +90,9 @@ CONFLICTS+=	${PKGNAMEPREFIX}${PORTNAME}${suffix}-4.*
 .if ${PORT_OPTIONS:MEXIMON}
 CONFLICTS+=	${PKGNAMEPREFIX}${PORTNAME}-monitor-4.*
 .endif
-.else
-WITH_EXIMON=	yes
-.endif
+.else # !EXIMON_ONLY
+PORT_OPTIONS+=	EXIMON
+.endif # !EXIMON_ONLY
 
 .if ${PORT_OPTIONS:MEXIMON}
 USE_XORG=	x11 xaw xt
@@ -237,6 +236,9 @@ SEDLIST+=	-e 's,XX_TCP_WRAPPERS_LIBS_XX,,'
 USES+=		iconv
 SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib ${ICONV_LIB},' \
 		-e 's,^\# (HAVE_ICONV=),\1,'
+.if exists(/usr/include/iconv.h) && exists(${LOCALBASE}/include/iconv.h)
+IGNORE=		You have iconv support in base system, but ${LOCALBASE}/include/iconv.h is present too.  It will hiccup the build.
+.endif
 .else
 SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,,'
 .endif
