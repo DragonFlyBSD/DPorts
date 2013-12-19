@@ -1,5 +1,5 @@
 # Created by: faulkner@mpd.tandem.com
-# $FreeBSD: audio/rsynth/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: audio/rsynth/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	rsynth
 PORTVERSION=	2.0
@@ -10,8 +10,8 @@ MASTER_SITES=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/synthesis/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Speech synthesizer
 
-LIB_DEPENDS=	gdbm:${PORTSDIR}/databases/gdbm	\
-		audio:${PORTSDIR}/audio/nas
+LIB_DEPENDS=	libgdbm.so:${PORTSDIR}/databases/gdbm	\
+		libaudio.so:${PORTSDIR}/audio/nas
 
 NO_STAGE=	yes
 
