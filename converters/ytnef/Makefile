@@ -1,5 +1,5 @@
 # Created by: Rodrigo Graeff <delphus@gmail.com>
-# $FreeBSD: converters/ytnef/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/ytnef/Makefile 336177 2013-12-11 15:15:48Z bapt $
 
 PORTNAME=	ytnef
 PORTVERSION=	2.6
@@ -10,7 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	delphus@gmail.com
 COMMENT=	Unpack data in MS Outlook TNEF format
 
-LIB_DEPENDS=	ytnef.0:${PORTSDIR}/devel/libytnef
+LIB_DEPENDS=	libytnef.so:${PORTSDIR}/devel/libytnef
 RUN_DEPENDS=	p5-MIME-Tools>=0:${PORTSDIR}/mail/p5-MIME-Tools
 
 USES=		perl5
