@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/glame/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/glame/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	glame
 PORTVERSION=	2.0.1
@@ -11,10 +11,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Powerful, fast, stable, and easily extensible sound editor for GNOME
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
-LIB_DEPENDS=	mp3lame:${PORTSDIR}/audio/lame \
-		mad:${PORTSDIR}/audio/libmad \
-		vorbis:${PORTSDIR}/audio/libvorbis \
-		guile:${PORTSDIR}/lang/guile
+LIB_DEPENDS=	libmp3lame.so:${PORTSDIR}/audio/lame \
+		libmad.so:${PORTSDIR}/audio/libmad \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis \
+		libguile.so:${PORTSDIR}/lang/guile
 
 USE_AUTOTOOLS=	libltdl libtool
 NO_STAGE=	yes
