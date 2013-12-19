@@ -1,8 +1,8 @@
 # Created by: trevor
-# $FreeBSD: mail/milter-regex/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: mail/milter-regex/Makefile 334995 2013-11-27 04:39:09Z dinoex $
 
 PORTNAME=	milter-regex
-PORTVERSION=	1.9
+PORTVERSION=	2.0
 CATEGORIES=	mail
 MASTER_SITES=	http://www.benzedrine.cx/
 
@@ -12,39 +12,33 @@ COMMENT=	Milter plugin to sendmail for regular expression filtering
 LICENSE=	BSD
 LICENSE_FILE=	${FILESDIR}/COPYRIGHT
 
-NO_STAGE=	yes
+USE_RC_SUBR=	milterregex
+SUB_LIST=	SPOOLDIR=${SPOOLDIR}
+PLIST_SUB=	SPOOLDIR=${SPOOLDIR}
 
 MAILUSER?=	mailnull
-MAN8=		milter-regex.8
-PLIST_FILES=	libexec/milter-regex
-USE_RC_SUBR=	milterregex
 SPOOLDIR?=	/var/run/milter-regex
-SUB_LIST=	SPOOLDIR=${SPOOLDIR}
 
 .include <bsd.port.pre.mk>
 
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"
 
 post-patch:
-	@${REINPLACE_CMD} -e \
+	${REINPLACE_CMD} -e \
 	    "s:/etc/milter-regex.conf:${PREFIX}/etc/milter-regex.conf:g; \
 	    s:/var/spool/milter-regex:${SPOOLDIR}:g; \
 	    s:_milter-regex:${MAILUSER}:g;" ${WRKSRC}/milter-regex.c
-	@${REINPLACE_CMD} -e \
+	${REINPLACE_CMD} -e \
 	    "s:/etc/milter-regex.conf:${PREFIX}/etc/milter-regex.conf:g; \
 	    s:/var/spool/milter-regex:${SPOOLDIR}:g; \
 	    s:mailstats 1:mailstats 8:;" ${WRKSRC}/milter-regex.8
-	@${REINPLACE_CMD} -e "s:-lpthread:${PTHREAD_LIBS}:g; \
+	${REINPLACE_CMD} -e "s:-lpthread:${PTHREAD_LIBS}:g; \
 	    s:-I/usr/src/gnu/usr.sbin/sendmail/include:${PTHREAD_CFLAGS}:g; \
 	    s:-L/usr/local/lib:-L${LOCALBASE}/lib:g; \
 	    s/-Werror//g"  ${WRKSRC}/Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${PREFIX}/libexec
-	@${INSTALL_MAN} ${WRKSRC}/milter-regex.8 ${PREFIX}/man/man8
-	@${INSTALL} -d -o ${MAILUSER} -g daemon -m 0700 ${SPOOLDIR}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${STAGEDIR}${PREFIX}/libexec/
+	${INSTALL_MAN} ${WRKSRC}/milter-regex.8 ${STAGEDIR}${MANPREFIX}/man/man8/
 
 .include <bsd.port.post.mk>

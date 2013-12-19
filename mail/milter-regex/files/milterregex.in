@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: mail/milter-regex/files/milterregex.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: mail/milter-regex/files/milterregex.in 333653 2013-11-13 06:31:00Z dinoex $
 
 # Start or stop milterregex
 
@@ -29,7 +29,16 @@ rcvar="milterregex_enable"
 command="%%PREFIX%%/libexec/milter-regex"
 pidfile="${spooldir}/milter-regex.pid"
 required_files="%%PREFIX%%/etc/milter-regex.conf"
+start_precmd="milterregex_prestart"
 stop_postcmd="milterregex_poststop"
+
+milterregex_prestart() {
+	if test ! -d "${spooldir}"
+	then
+		mkdir -m 700 -p "${spooldir}"
+		chown mailnull:daemon "${spooldir}"
+	fi
+}
 
 milterregex_poststop() {
 	/bin/rm -f ${pidfile}
