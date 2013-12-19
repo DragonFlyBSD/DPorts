@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: biology/ortep3/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: biology/ortep3/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	ortep3
 PORTVERSION=	1.0.3
@@ -13,7 +13,7 @@ EXTRACT_ONLY=	ortep.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Oak Ridge Thermal Ellipsoid Plot Program for Crystal Structure
 
-PGPLOT_LIB_DEPENDS=	pgplot:${PORTSDIR}/graphics/pgplot
+PGPLOT_LIB_DEPENDS=	libpgplot.so:${PORTSDIR}/graphics/pgplot
 
 USE_FORTRAN=	yes
 WRKSRC=		${WRKDIR}/ortep/src
