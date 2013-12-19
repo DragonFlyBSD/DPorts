@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xvidtune/Makefile 331813 2013-10-27 22:53:54Z eadler $
+# $FreeBSD: x11/xvidtune/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xvidtune
 PORTVERSION=	1.0.3
@@ -9,4 +9,5 @@ COMMENT=	Video mode tuner for X
 
 XORG_CAT=	app
 USE_XORG=	xxf86vm xt xaw
+
 .include <bsd.port.mk>
