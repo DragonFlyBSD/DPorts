@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/jack_mixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/jack_mixer/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	jack_mixer
 PORTVERSION=	9
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.gna.org/${PORTNAME:S/_//}/
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A mixer for the jack audio connection kit
 
-LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/fpconst.py:${PORTSDIR}/math/py-fpconst \
    		${LOCALBASE}/include/pygtk-2.0/pygtk/pygtk.h:${PORTSDIR}/x11-toolkits/py-gtk2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
