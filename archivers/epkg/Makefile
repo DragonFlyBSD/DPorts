@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: archivers/epkg/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/epkg/Makefile 336153 2013-12-11 10:04:56Z bapt $
 
 PORTNAME=	epkg
 PORTVERSION=	2.3.9
@@ -11,8 +11,8 @@ MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Encap Package Manager
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libfget.a:${PORTSDIR}/ftp/fget
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		expat.6:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libexpat.so:${PORTSDIR}/textproc/expat2
 
 NO_STAGE=	yes
 HAS_CONFIGURE=	YES
