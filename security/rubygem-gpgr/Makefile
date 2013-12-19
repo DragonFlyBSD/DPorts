@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: security/rubygem-gpgr/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-gpgr/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	gpgr
 PORTVERSION=	0.0.4
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Very light interface to the command-line GPG tool
 
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
