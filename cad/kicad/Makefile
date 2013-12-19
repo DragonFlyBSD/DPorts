@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: cad/kicad/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/kicad/Makefile 336172 2013-12-11 14:53:20Z bapt $
 
 PORTNAME=	kicad
 DISTVERSION=	2010-05-05-BZR2356
@@ -15,7 +15,7 @@ EXTRACT_ONLY=	${SFNAME}-stable${EXTRACT_SUFX}
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Schematic and PCB editing software
 
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 RUN_DEPENDS=	${LOCALBASE}/share/kicad/library/74xx.dcm:${PORTSDIR}/cad/kicad-library
 
 CONFLICTS=	kicad-devel*
