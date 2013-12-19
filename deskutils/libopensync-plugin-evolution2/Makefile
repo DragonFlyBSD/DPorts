@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-evolution2/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/libopensync-plugin-evolution2/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	libopensync-plugin-evolution2
 PORTVERSION=	0.22
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 MAINTAINER=	webmaster@kibab.com
 COMMENT=	Evolution 2 plugin for the OpenSync framework
 
-LIB_DEPENDS=	opensync.0:${PORTSDIR}/devel/libopensync022
+LIB_DEPENDS=	libopensync.so:${PORTSDIR}/devel/libopensync022
 
 CONFLICTS=	libopensync-plugin-evolution2-devel-[0-9]*
 
