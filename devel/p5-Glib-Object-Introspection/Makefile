@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Glib-Object-Introspection/Makefile 328807 2013-09-30 15:14:12Z sunpoet $
+# $FreeBSD: devel/p5-Glib-Object-Introspection/Makefile 336197 2013-12-11 18:49:33Z sunpoet $
 
 PORTNAME=	Glib-Object-Introspection
-PORTVERSION=	0.016
+PORTVERSION=	0.017
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -30,8 +30,5 @@ USES=		perl5
 # test libraries during build phase, therefore we add them to BUILD_DEPENDS.
 TEST_BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/cairo.pc:${PORTSDIR}/graphics/cairo \
 			${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc:${PORTSDIR}/devel/glib20
-
-regression-test test: build
-	cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 .include <bsd.port.mk>
