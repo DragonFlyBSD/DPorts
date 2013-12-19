@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2-scrobbler/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: audio/xmms2-scrobbler/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms2-scrobbler
 PORTVERSION=	0.4.0
@@ -12,8 +12,8 @@ COMMENT=	Last.fm submission client for XMMS2
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	xmmsclient.6:${PORTSDIR}/audio/xmms2 \
-		curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libxmmsclient.so:${PORTSDIR}/audio/xmms2 \
+		libcurl.so:${PORTSDIR}/ftp/curl
 
 USES=		gmake pkgconfig
 NO_STAGE=	yes
