@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/quantumminigolf/Makefile 328744 2013-09-29 21:54:42Z amdmi3 $
+# $FreeBSD: games/quantumminigolf/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	quantumminigolf
 PORTVERSION=	1.1.1
@@ -29,7 +29,7 @@ DESKTOP_ENTRIES="Quantum Minigolf" \
 		false
 
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS DOCS
-OPTIONS_DEFAULT=OPTIMIZED_CFLAGS DOCS
+OPTIONS_DEFAULT=OPTIMIZED_CFLAGS
 
 .include <bsd.port.options.mk>
 
