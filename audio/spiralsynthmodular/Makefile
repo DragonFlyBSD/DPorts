@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/spiralsynthmodular/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/spiralsynthmodular/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	spiralsynthmodular
 PORTVERSION=	0.2.2a
@@ -13,8 +13,8 @@ COMMENT=	Object-oriented modular softsynth/sequencer/sampler
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa \
 		jackd:${PORTSDIR}/audio/jack
-LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk \
-		sndfile:${PORTSDIR}/audio/libsndfile
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile
 
 NO_STAGE=	yes
 USE_XORG=	x11
