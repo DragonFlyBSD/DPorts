@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@freebsddiary.org>
-# $FreeBSD: security/logcheck/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/logcheck/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	logcheck
 PORTVERSION=	1.3.15
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL}
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Auditing tool for system logs on Unix boxes
 
 RUN_DEPENDS=	mime-construct:${PORTSDIR}/mail/mime-construct \
