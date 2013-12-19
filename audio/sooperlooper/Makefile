@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/sooperlooper/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/sooperlooper/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	sooperlooper
 PORTVERSION=	1.6.18
@@ -14,14 +14,14 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
-LIB_DEPENDS=	fftw3.6:${PORTSDIR}/math/fftw3 \
-		jack.0:${PORTSDIR}/audio/jack \
-		lo:${PORTSDIR}/audio/liblo \
-		rubberband.2:${PORTSDIR}/audio/rubberband \
-		samplerate.1:${PORTSDIR}/audio/libsamplerate \
-		sigc-1.2.5:${PORTSDIR}/devel/libsigc++12 \
-		sndfile.1:${PORTSDIR}/audio/libsndfile \
-		vamp-sdk.2:${PORTSDIR}/audio/vamp-plugin-sdk
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3 \
+		libjack.so:${PORTSDIR}/audio/jack \
+		liblo.so:${PORTSDIR}/audio/liblo \
+		librubberband.so:${PORTSDIR}/audio/rubberband \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
+		libsigc-1.2.so:${PORTSDIR}/devel/libsigc++12 \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libvamp-sdk.so:${PORTSDIR}/audio/vamp-plugin-sdk
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 GNU_CONFIGURE=	yes
