@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: editors/madedit/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: editors/madedit/Makefile 336253 2013-12-12 10:53:38Z bapt $
 
 PORTNAME=	madedit
 PORTVERSION=	0.2.9
@@ -16,7 +16,7 @@ USES=		gettext pkgconfig dos2unix
 USE_WX=		2.6+
 WANT_UNICODE=	yes
 
-LIB_DEPENDS+=	boost_regex:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS+=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-wx-config=${WX_CONFIG}
