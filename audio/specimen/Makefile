@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/specimen/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/specimen/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	specimen
 DISTVERSION=	0.5.2-rc3
@@ -15,11 +15,11 @@ COMMENT=	MIDI controllable audio sampler
 # is supposed to work around that.
 
 BUILD_DEPENDS=	jackit>=0.109.2:${PORTSDIR}/audio/jack
-LIB_DEPENDS=	jack:${PORTSDIR}/audio/jack \
-		lash:${PORTSDIR}/audio/lash \
-		samplerate:${PORTSDIR}/audio/libsamplerate \
-		sndfile:${PORTSDIR}/audio/libsndfile \
-		phat:${PORTSDIR}/x11-toolkits/phat
+LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack \
+		liblash.so:${PORTSDIR}/audio/lash \
+		libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
+		libsndfile.so:${PORTSDIR}/audio/libsndfile \
+		libphat.so:${PORTSDIR}/x11-toolkits/phat
 
 USES=		pkgconfig gmake
 NO_STAGE=	yes
