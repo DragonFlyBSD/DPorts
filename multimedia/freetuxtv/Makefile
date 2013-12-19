@@ -1,9 +1,9 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: multimedia/freetuxtv/Makefile 334622 2013-11-22 22:41:10Z nemysis $
+# $FreeBSD: multimedia/freetuxtv/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	freetuxtv
 PORTVERSION=	0.6.5
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	GOOGLE_CODE
 
