@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/qrfcview/Makefile 334872 2013-11-25 18:00:55Z makc $
+# $FreeBSD: deskutils/qrfcview/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	qrfcview
 PORTVERSION=	0.62
@@ -17,7 +17,6 @@ PLIST_FILES=	bin/qRFCView
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/qRFCView ${STAGEDIR}${PREFIX}/bin/
