@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/scrot/Makefile 330591 2013-10-17 01:23:56Z amdmi3 $
+# $FreeBSD: graphics/scrot/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	scrot
 PORTVERSION=	0.8
@@ -19,6 +19,5 @@ PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.mk>
