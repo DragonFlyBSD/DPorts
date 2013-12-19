@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/xapian-bindings/Makefile 335692 2013-12-05 20:26:23Z sunpoet $
+# $FreeBSD: databases/xapian-bindings/Makefile 336103 2013-12-10 19:54:25Z sunpoet $
 
 PORTNAME=	xapian-bindings
 PORTVERSION=	1.2.16
@@ -37,7 +37,7 @@ PHP_CONFIGURE_WITH=	php
 PHP_USE=		PHP=yes PHP_BUILD=yes
 PYTHON_CONFIGURE_ENV=	PYTHON_LIB=${PYTHON_SITELIBDIR}
 PYTHON_CONFIGURE_WITH=	python
-PYTHON_USE=		PYTHON=yes
+PYTHON_USE=		PYTHON=-2.7
 RUBY_CONFIGURE_WITH=	ruby
 RUBY_USE=		RUBY=yes RUBY_RDOC=no
 
