@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/ksmp3play/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ksmp3play/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	ksmp3play
 PORTVERSION=	0.5.2.1
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}/${PORTVERSION:R}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses-based MP3 player
 
-LIB_DEPENDS=	smpeg:${PORTSDIR}/multimedia/smpeg
+LIB_DEPENDS=	libsmpeg.so:${PORTSDIR}/multimedia/smpeg
 
 GNU_CONFIGURE=	yes
 USES=	pathfix
