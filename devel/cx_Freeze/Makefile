@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cx_Freeze/Makefile 335152 2013-11-29 08:18:14Z araujo $
+# $FreeBSD: devel/cx_Freeze/Makefile 335997 2013-12-09 15:12:08Z wg $
 
 PORTNAME=	cx_Freeze
 PORTVERSION=	4.3.2
@@ -10,7 +10,6 @@ COMMENT=	The cx_Freeze is a set of utilities for freezing Python scripts
 
 USE_GCC=	yes
 USE_PYTHON=	yes
-PYDISTUTILS_NOEGGINFO=	yes
 USE_PYDISTUTILS=	yes
 
 .include <bsd.port.mk>
