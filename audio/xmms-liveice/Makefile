@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-liveice/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-liveice/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-liveice
 PORTVERSION=	1.0.0
@@ -11,7 +11,7 @@ DISTNAME=	liveice-xmms
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Use XMMS for streaming audio to Icecast servers
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	lame:${PORTSDIR}/audio/lame
 
 WRKSRC=		${WRKDIR}/LiveIce-${PORTVERSION}
