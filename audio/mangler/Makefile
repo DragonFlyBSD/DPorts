@@ -1,5 +1,5 @@
 # Created by: Janik Galasso <janik@hikarihq.com>
-# $FreeBSD: audio/mangler/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mangler/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	mangler
 PORTVERSION=	1.2.3
@@ -11,11 +11,11 @@ MASTER_SITES=	http://www.mangler.org/downloads/ \
 MAINTAINER=	janik@hikarihq.com
 COMMENT=	A Ventrilo VOIP compatible client
 
-LIB_DEPENDS=	celt0.2:${PORTSDIR}/audio/celt \
-		speex.1:${PORTSDIR}/audio/speex \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24 \
-		gsm.1:${PORTSDIR}/audio/gsm
+LIB_DEPENDS=	libcelt0.so:${PORTSDIR}/audio/celt \
+		libspeex..so:${PORTSDIR}/audio/speex \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libgtkmm-2.4..so:${PORTSDIR}/x11-toolkits/gtkmm24 \
+		libgsm.so:${PORTSDIR}/audio/gsm
 
 USES=		gmake pkgconfig
 NO_STAGE=	yes
@@ -34,7 +34,7 @@ MAN1=   mangler.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPULSEAUDIO}
-LIB_DEPENDS+=	pulse.0:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS+=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 CONFIGURE_ARGS+=--with-pulseaudio
 .else
 CONFIGURE_ARGS+=--without-pulseaudio
