@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-sunpinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/fcitx-sunpinyin/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	fcitx-sunpinyin
 PORTVERSION=	0.3.9
@@ -10,7 +10,7 @@ DIST_SUBDIR=	fcitx
 MAINTAINER=	lichray@gmail.com
 COMMENT=	SunPinyin support for Fcitx
 
-LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx
+LIB_DEPENDS=	libfcitx-config.so:${PORTSDIR}/chinese/fcitx
 BUILD_DEPENDS=	zh-sunpinyin>=2.0.4.r2:${PORTSDIR}/chinese/sunpinyin
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
