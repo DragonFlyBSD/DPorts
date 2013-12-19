@@ -1,5 +1,5 @@
 # Created by: crwhipp@gmail.com
-# $FreeBSD: astro/foxtrotgps/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/foxtrotgps/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	foxtrotgps
 PORTVERSION=	1.1.1
@@ -10,10 +10,10 @@ MASTER_SITES=	http://www.foxtrotgps.org/releases/
 MAINTAINER=	crwhipp@gmail.com
 COMMENT=	Lightweight opensource gps moving map application
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		exif:${PORTSDIR}/graphics/libexif \
-		soup-2.4:${PORTSDIR}/devel/libsoup \
-		gps:${PORTSDIR}/astro/gpsd
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libexif.so:${PORTSDIR}/graphics/libexif \
+		libsoup-2.so:${PORTSDIR}/devel/libsoup \
+		libgps.so:${PORTSDIR}/astro/gpsd
 
 GNU_CONFIGURE=	yes
 NO_STAGE=	yes
