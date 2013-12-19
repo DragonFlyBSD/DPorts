@@ -1,7 +1,8 @@
-# $FreeBSD: www/rt40/Makefile 334988 2013-11-27 00:14:57Z matthew $
+# $FreeBSD: www/rt40/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	rt
 PORTVERSION=	4.0.18
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/ \
 		SF/requesttracker/
@@ -13,13 +14,15 @@ CONFLICTS=	rt-3.8* rt42-4.2* brlcad-[0-9]*
 PKGNAMESUFFIX=	40
 NEED_ROOT=	yes
 
+NO_ARCH=	yes
+
 # See doc/web_deployment.pod for info on the choices of webserver /
 # webapp combinations.  Note: if using apache, apache-2.2+ is
 # recommended.  For deployment with nginx, use the SPAWN_FCGI method
 # or the builtin webserver with a FCGI handler.
 #
 # The builtin standalone PSGI based webserver is always available, no
-# mater what choice of web deployment platform, or none, that you
+# matter what choice of web deployment platform, or none, that you
 # make.  Best Practical state that this is really only suitable for
 # development usage, although I have heard reports of people using it
 # successfully for medium sized deployments.  If you only want the
