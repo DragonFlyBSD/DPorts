@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx-devel/Makefile 335722 2013-12-06 02:28:12Z osa $
+# $FreeBSD: www/nginx-devel/Makefile 336456 2013-12-14 15:59:54Z osa $
 
 PORTNAME=	nginx
 PORTVERSION=	1.5.7
@@ -652,7 +652,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.27
+PASSENGER_VERSION=	4.0.29
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
