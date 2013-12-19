@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/webkit-gtk3/Makefile 329166 2013-10-03 10:57:26Z kwm $
+# $FreeBSD: www/webkit-gtk3/Makefile 336486 2013-12-14 20:57:41Z wg $
 #   $MCom: ports/www/webkit-gtk3/Makefile,v 1.32 2013/03/09 09:12:39 kwm Exp $
 
 PORTNAME=	webkit
@@ -28,11 +28,13 @@ USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk30 introspection:build libxslt ltverhack
 USE_SQLITE=	yes
 USE_LDCONFIG=	yes
+USE_PYTHON_BUILD=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ZLIB_CFLAGS="-I/usr/include" \
 		ZLIB_LIBS="-L/usr/lib -lz" \
-		ac_cv_path_DOLT_BASH=""
+		ac_cv_path_DOLT_BASH="" \
+		PYTHON="${PYTHON_CMD}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gtk=3.0 \
