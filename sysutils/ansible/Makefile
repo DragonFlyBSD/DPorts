@@ -1,7 +1,8 @@
-# $FreeBSD: sysutils/ansible/Makefile 335193 2013-11-29 16:17:10Z koobs $
+# $FreeBSD: sysutils/ansible/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
 
 PORTNAME=	ansible
 PORTVERSION=	1.4.1
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://ansibleworks.com/releases/
 
@@ -13,6 +14,8 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}paramiko>0:${PORTSDIR}/security/py-paramiko \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:${PORTSDIR}/devel/py-Jinja2
+
+NO_ARCH=	yes
 
 OPTIONS_DEFINE=		ACCELERATE EXAMPLES
 OPTIONS_DEFAULT=	ACCELERATE
