@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/pixz/Makefile 335460 2013-12-02 08:09:20Z hrs $
+# $FreeBSD: archivers/pixz/Makefile 336153 2013-12-11 10:04:56Z bapt $
 
 PORTNAME=	pixz
 PORTVERSION=	1.0.2
@@ -19,7 +19,7 @@ MAKE_ENV+=	PTHREAD_LIBS=${PTHREAD_LIBS}
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	lzma:${PORTSDIR}/archivers/xz
+LIB_DEPENDS+=	liblzma.so:${PORTSDIR}/archivers/xz
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
