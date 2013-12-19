@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: databases/sqlite-ext-miscfuncs/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/sqlite-ext-miscfuncs/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	sqlite-ext-miscfuncs
 PORTVERSION=	1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 DISTNAME=	${SRCFILE}
 EXTRACT_SUFX=
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Math, string, and aggregate function library for SQLite
 
 USE_SQLITE=	yes
