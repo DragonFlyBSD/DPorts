@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsamn.edu.ar>
-# $FreeBSD: biology/embassy/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/embassy/Makefile 336171 2013-12-11 14:43:51Z bapt $
 
 PORTNAME=	embassy
 PORTVERSION=	6.2.0
@@ -11,7 +11,7 @@ DIST_SUBDIR=	emboss
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Collection of contributed EMBOSS applications
 
-LIB_DEPENDS=	nucleus.6:${PORTSDIR}/biology/emboss
+LIB_DEPENDS=	libnucleus.so:${PORTSDIR}/biology/emboss
 
 PREFIX?=	${LOCALBASE}/emboss
 NO_MTREE=	yes
