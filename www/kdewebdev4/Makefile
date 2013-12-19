@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/kdewebdev4/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/kdewebdev4/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	kdewebdev
 PORTVERSION=	${KDE4_VERSION}
@@ -11,8 +11,8 @@ DIST_SUBDIR=	KDE/${PORTVERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Comprehensive html/website development environment
 
-LIB_DEPENDS=	tidy-0.99.0:${PORTSDIR}/www/tidy-lib \
-		boost_thread:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libtidy-0.99.so:${PORTSDIR}/www/tidy-lib \
+		libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 LATEST_LINK=	${PORTNAME}4
 
