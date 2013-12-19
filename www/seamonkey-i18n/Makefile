@@ -1,9 +1,9 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/seamonkey-i18n/Makefile 332168 2013-10-30 20:37:55Z flo $
+# $FreeBSD: www/seamonkey-i18n/Makefile 336446 2013-12-14 13:42:06Z flo $
 
 PORTNAME=	seamonkey-i18n
-PORTVERSION=	2.22
-CATEGORIES=	www
+PORTVERSION=	2.23
+CATEGORIES=	www mail news editors irc
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/langpack
 PKGNAMEPREFIX=
 DISTFILES=	${SEAMONKEY_I18N_:S/$/.langpack.xpi/:S/^/seamonkey-${PORTVERSION}./}
@@ -21,6 +21,7 @@ PLISTF?=	${WRKDIR}/plist_files
 USE_SEAMONKEY=	yes
 USE_XPI=	seamonkey linux-seamonkey
 
+NO_ARCH=	yes
 USE_SUBMAKE=	yes
 
 WDIR=	langpack-*@seamonkey.mozilla.org
