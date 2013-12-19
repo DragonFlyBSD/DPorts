@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pecl-spl_types/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-spl_types/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	spl_types
 PORTVERSION=	0.3.0
@@ -11,7 +11,7 @@ DISTNAME=	SPL_Types-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A PECL extension of a collection of special typehandling classes
 
 LICENSE=	PHP301
