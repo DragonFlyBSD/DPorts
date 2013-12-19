@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: www/mod_log_firstbyte/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_log_firstbyte/Makefile 336589 2013-12-15 22:11:20Z ohauer $
 
 PORTNAME=	mod_log_firstbyte
 PORTVERSION=	1.01
@@ -13,7 +13,6 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Log the time between request and the first byte of the response served
 
-
 USE_APACHE=	22+
 
 PROJECTHOST=	mod-log-firstbyte
@@ -22,12 +21,8 @@ PKGMESSAGE=	${WRKSRC}/readme.txt
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
 
-NO_STAGE=	yes
 do-extract:
 	${MKDIR} ${WRKSRC}
-	cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	${CP} ${DISTFILES:S|^|${DISTDIR}/${DIST_SUBDIR}/|} ${WRKSRC}
 
 .include <bsd.port.mk>
