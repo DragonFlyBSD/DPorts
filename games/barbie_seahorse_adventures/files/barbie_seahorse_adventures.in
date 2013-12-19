@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/barbie_seahorse_adventures/files/barbie_seahorse_adventures.in 314003 2013-03-12 22:15:14Z beech $
+# $FreeBSD: games/barbie_seahorse_adventures/files/barbie_seahorse_adventures.in 335793 2013-12-06 23:38:48Z nemysis $
+#
 
 cd "%%DATADIR%%"
-exec /usr/bin/env python ./run_game.py "${@}"
+exec %%PYTHON_CMD%% ./run_game.py "${@}"
