@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/zynaddsubfx/Makefile 331825 2013-10-28 03:03:46Z nemysis $
+# $FreeBSD: audio/zynaddsubfx/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	zynaddsubfx
 PORTVERSION=	2.4.3
@@ -13,8 +13,8 @@ COMMENT=	Realtime software synthesizer
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
-		mxml:${PORTSDIR}/textproc/mxml
+LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3 \
+		libmxml.so:${PORTSDIR}/textproc/mxml
 
 USE_BZIP2=	yes
 USES=		cmake pkgconfig
