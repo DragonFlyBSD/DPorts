@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: audio/paman/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/paman/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	paman
 PORTVERSION=	0.9.4
@@ -10,8 +10,8 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/${PORTNAME}/
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	Gtk frontend for PulseAudio
 
-LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
-		pulse.0:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS=	libglademm-2.4.so:${PORTSDIR}/devel/libglademm24 \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
