@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/tlf/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/tlf/Makefile 336176 2013-12-11 15:10:44Z bapt $
 
 PORTNAME=	tlf
 PORTVERSION=	0.9.31
@@ -31,7 +31,7 @@ NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MHAMLIB}
-LIB_DEPENDS+=	hamlib:${PORTSDIR}/comms/hamlib
+LIB_DEPENDS+=	libhamlib.so:${PORTSDIR}/comms/hamlib
 CONFIGURE_ARGS+=	--enable-hamlib
 .else
 CONFIGURE_ARGS+=	--disable-hamlib
