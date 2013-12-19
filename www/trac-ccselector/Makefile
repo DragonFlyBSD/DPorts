@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: www/trac-ccselector/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-ccselector/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	ccselector
 PORTVERSION=	0.0.2.4001
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 PKGNAMEPREFIX=	trac-
 DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Visually edit the Trac ticket CC field
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
