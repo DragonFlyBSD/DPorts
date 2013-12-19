@@ -1,5 +1,5 @@
 # Created by: Naram Qashat
-# $FreeBSD: devel/subcommander2/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: devel/subcommander2/Makefile 336253 2013-12-12 10:53:38Z bapt $
 
 PORTNAME=	subcommander
 PORTVERSION=	2.0.0.b5.2
@@ -13,8 +13,8 @@ COMMENT=	Qt4 based multiplatform subversion client, diff & merge tool
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	boost_thread:${PORTSDIR}/devel/boost-libs \
-		svn_client-1:${PORTSDIR}/devel/subversion
+LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs \
+		libsvn_client-1.so:${PORTSDIR}/devel/subversion
 
 LATEST_LINK=	subcommander2
 CONFLICTS=	subcommander-1.*
