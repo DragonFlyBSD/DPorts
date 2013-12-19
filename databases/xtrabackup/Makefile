@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: databases/xtrabackup/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/xtrabackup/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	xtrabackup
 PORTVERSION=	2.1.4
@@ -18,8 +18,8 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		quilt:${PORTSDIR}/devel/quilt \
 		bison:${PORTSDIR}/devel/bison
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
-		gpg-error:${PORTSDIR}/security/libgpg-error
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libgpg-error.so:${PORTSDIR}/security/libgpg-error
 RUN_DEPENDS=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql \
 		qpress:${PORTSDIR}/archivers/qpress
 
