@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-libpinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/fcitx-libpinyin/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	fcitx-libpinyin
 PORTVERSION=	0.2.1
@@ -13,8 +13,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	lichray@gmail.com
 COMMENT=	The libpinyin support for Fcitx
 
-LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
-		pinyin:${PORTSDIR}/chinese/libpinyin
+LIB_DEPENDS=	libfcitx-config.so:${PORTSDIR}/chinese/fcitx \
+		libpinyin.so:${PORTSDIR}/chinese/libpinyin
 
 USE_LDCONFIG=	${PREFIX}/lib/fcitx/
 USE_XZ=		yes
