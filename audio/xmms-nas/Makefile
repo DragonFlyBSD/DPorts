@@ -1,5 +1,5 @@
 # Created by: James McNaughton
-# $FreeBSD: audio/xmms-nas/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-nas/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-nas
 PORTVERSION=	0.2
@@ -10,8 +10,8 @@ MASTER_SITES=	ftp://ftp.stack.nl/pub/users/willem/
 MAINTAINER=	bitbucket63-it@yahoo.com
 COMMENT=	A Network Audio System (NAS) output plugin for XMMS
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms \
-		audio.2:${PORTSDIR}/audio/nas
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms \
+		libaudio.so:${PORTSDIR}/audio/nas
 
 USE_GNOME=	gtk12
 NO_STAGE=	yes
