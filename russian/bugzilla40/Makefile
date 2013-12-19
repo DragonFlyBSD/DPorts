@@ -1,11 +1,11 @@
-# $FreeBSD: russian/bugzilla40/Makefile 330667 2013-10-17 19:45:34Z ohauer $
+# $FreeBSD: russian/bugzilla40/Makefile 336450 2013-12-14 14:35:11Z ohauer $
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.0.10
+PORTVERSION=	4.0.11
 CATEGORIES=	russian
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=bugzilla-ru/bugzilla-${PORTVERSION:R}-ru/${PORTVERSION}
-DISTNAME=	bugzilla-${PORTVERSION}-ru-20130222
+DISTNAME=	bugzilla-${PORTVERSION}-ru-20131125
 
 MAINTAINER=	bugzilla@FreeBSD.org
 COMMENT=	Russian localization for Bugzilla
