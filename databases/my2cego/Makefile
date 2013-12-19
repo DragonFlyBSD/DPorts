@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/my2cego/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/my2cego/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	my2cego
 PORTVERSION=	1.1.3
@@ -10,9 +10,9 @@ MASTER_SITES=	http://www.lemke-it.com/
 MAINTAINER=	fbsd-ports@opsec.eu
 COMMENT=	Imports mysqldump files into cego
 
-LIB_DEPENDS=	lfcbase:${PORTSDIR}/devel/lfcbase \
-		lfcxml:${PORTSDIR}/devel/lfcxml \
-		cego:${PORTSDIR}/databases/cego
+LIB_DEPENDS=	liblfcbase.so:${PORTSDIR}/devel/lfcbase \
+		liblfcxml.so:${PORTSDIR}/devel/lfcxml \
+		libcego.so:${PORTSDIR}/databases/cego
 
 LICENSE=	GPLv3
 GNU_CONFIGURE=	yes
