@@ -1,12 +1,12 @@
 # Created by: Matthew Will <mwill@spingen.com>
-# $FreeBSD: devel/cvschangelogbuilder/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvschangelogbuilder/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	cvschangelogbuilder
 PORTVERSION=	2.5
 CATEGORIES=	devel
 MASTER_SITES=	SF/cvschangelogb/CVSChangelogBuilder/${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility to generate changelogs and reports from a CVS repository
 
 LICENSE=	GPLv2
