@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/glosm/Makefile 330809 2013-10-19 00:14:22Z amdmi3 $
+# $FreeBSD: graphics/glosm/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	glosm
 PORTVERSION=	0.0.2
@@ -22,7 +22,6 @@ USE_SDL=	sdl
 PORTDOCS=	README ChangeLog
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 regression-test:
 	cd ${BUILD_WRKSRC} && ctest
