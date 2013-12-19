@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/xmms-ladspa/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/xmms-ladspa/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	xmms-ladspa
 PORTVERSION=	1.1
@@ -17,7 +17,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
 PLIST_FILES=	lib/xmms/Effect/ladspa.so
 
