@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce/Makefile 334529 2013-11-21 22:19:45Z sunpoet $
+# $FreeBSD: www/tinymce/Makefile 336306 2013-12-13 01:17:49Z sunpoet $
 
 PORTNAME=	tinymce
 PORTVERSION=	4.0.11
@@ -7,6 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://download.moxiecode.com/${PORTNAME}/ \
 		LOCAL/sunpoet
 DISTNAME=	${PORTNAME}_${PORTVERSION}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Open source JavaScript HTML WYSIWYG editor for web sites
@@ -16,7 +17,6 @@ LICENSE=	LGPL21
 CONFLICTS_INSTALL=	tinymce-[0-35-9]* tinymce3-[0-9]*
 
 NO_BUILD=	yes
-USE_ZIP=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 do-install:
