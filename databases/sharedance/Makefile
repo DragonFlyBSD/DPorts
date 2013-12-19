@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/sharedance/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/sharedance/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sharedance
 PORTVERSION=	0.6
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.pureftpd.org/pub/sharedance/
 MAINTAINER=	gslin@gslin.org
 COMMENT=	A daemon to centralize keys and associated data
 
-LIB_DEPENDS=	event-1.4:${PORTSDIR}/devel/libevent
+LIB_DEPENDS=	libevent-1.so:${PORTSDIR}/devel/libevent
 
 CONFIGURE_ARGS=	--with-largefile
 GNU_CONFIGURE=	yes
