@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
-# $FreeBSD: ports-mgmt/wanted-ports/Makefile 328434 2013-09-27 06:56:36Z matthew $
+# $FreeBSD: ports-mgmt/wanted-ports/Makefile 335945 2013-12-08 22:38:52Z matthew $
 
 PORTNAME=	wanted-ports
 PORTVERSION=	0.2
@@ -13,6 +13,7 @@ COMMENT=	Just depend on a configurable, arbitrary set of other ports
 
 LICENSE=	BSD
 
+NO_ARCH=	yes
 NO_BUILD=	yes
 SUB_FILES=	${PORTNAME}   \
 		${PORTNAME}.1
