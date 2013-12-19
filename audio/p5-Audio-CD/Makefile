@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: audio/p5-Audio-CD/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD: audio/p5-Audio-CD/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	Audio-CD
 PORTVERSION=	0.04
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl interface to libcdaudio (cd + cddb)
 
-LIB_DEPENDS=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
+LIB_DEPENDS=	libcdaudio.so:${PORTSDIR}/audio/libcdaudio
 
 USES=		perl5
 USE_PERL5=	configure
