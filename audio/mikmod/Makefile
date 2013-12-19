@@ -1,11 +1,10 @@
 # Created by: Yoshiaki Uchikawa
-# $FreeBSD: audio/mikmod/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
+# $FreeBSD: audio/mikmod/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	mikmod
-PORTVERSION=	3.2.1
-PORTREVISION=	1
+PORTVERSION=	3.2.4
 CATEGORIES=	audio
-MASTER_SITES=	http://mikmod.raphnet.net/files/ \
+MASTER_SITES=	SF \
 		CRITICAL
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -13,25 +12,25 @@ COMMENT=	Mod player which plays MTM, STM, XM, MOD, S3M, ULT, UNI, and IT mods
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	mikmod:${PORTSDIR}/audio/libmikmod
+LIB_DEPENDS=	libmikmod.so:${PORTSDIR}/audio/libmikmod
 
 USES=		gmake
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/mikmod man/man1/mikmod.1.gz
+PLIST_FILES=	bin/mikmod \
+		man/man1/mikmod.1.gz \
+		%%DATADIR%%/mikmodrc
+PLIST_DIRS=	%%DATADIR%%
+PORTDOCS=	AUTHORS NEWS README
 
-PORTSCOUT=	skipv:3.3.0
-
-OPTIONS_DEFINE=	COLOR
-
-COLOR_DESC=	Build with color support
-
-OPTIONS_DEFAULT=COLOR
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MCOLOR}
-CONFIGURE_ARGS+=	--enable-color-interface
+.if ${PORT_OPTIONS:MDOCS}
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
