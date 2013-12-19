@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator/Makefile 330213 2013-10-13 06:15:19Z eadler $
+# $FreeBSD: x11/avant-window-navigator/Makefile 336694 2013-12-17 05:35:47Z amdmi3 $
 
 PORTNAME=	avant-window-navigator
 PORTVERSION=	0.3.2.1
@@ -47,7 +47,6 @@ CONFIGURE_ARGS+=	--with-desktop=agnostic
 CONFLICTS=	${PORTNAME}-gnome-[0-9]* ${PORTNAME}-xfce4-[0-9]*
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCONF}
