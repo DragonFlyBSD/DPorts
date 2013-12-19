@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/toilet/Makefile 327924 2013-09-23 06:11:19Z bapt $
+# $FreeBSD: misc/toilet/Makefile 336648 2013-12-16 17:26:49Z bapt $
 
 PORTNAME=	toilet
 PORTVERSION=	0.3
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://caca.zoy.org/raw-attachment/wiki/toilet/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced figlet(6)
 
 LIB_DEPENDS=	libcaca.so:${PORTSDIR}/graphics/libcaca
