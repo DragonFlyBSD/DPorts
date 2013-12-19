@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	Amazon-SQS-Simple
 PORTVERSION=	1.06
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SWHITAKER
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OO API for accessing the Amazon Simple Queue Service
 
 BUILD_DEPENDS=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
