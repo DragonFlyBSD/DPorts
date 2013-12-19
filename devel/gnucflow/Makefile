@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/gnucflow/Makefile 330585 2013-10-17 01:15:05Z amdmi3 $
+# $FreeBSD: devel/gnucflow/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	gnucflow
 PORTVERSION=	1.4
@@ -22,7 +22,6 @@ INFO=		cflow
 PLIST_FILES=	bin/cflow
 
 OPTIONS_DEFINE=	NLS
-OPTIONS_DEFAULT=NLS
 
 .include <bsd.port.options.mk>
 
