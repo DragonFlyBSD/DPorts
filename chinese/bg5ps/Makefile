@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/bg5ps/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/bg5ps/Makefile 336173 2013-12-11 14:58:29Z bapt $
 
 PORTNAME=	bg5ps
 PORTVERSION=	1.3.0p3
@@ -11,7 +11,7 @@ DISTNAME=	bg5ps-1.3.0
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert Chinese-Big5/GB encoded files to Postscript, using TTF fonts
 
-LIB_DEPENDS=	ttf:${PORTSDIR}/print/freetype
+LIB_DEPENDS=	libttf.so:${PORTSDIR}/print/freetype
 
 USE_PYTHON=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
