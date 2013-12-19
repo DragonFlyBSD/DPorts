@@ -1,12 +1,10 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-vcalendar/Makefile 329818 2013-10-08 18:32:05Z pawel $
+# $FreeBSD: mail/claws-mail-vcalendar/Makefile 336489 2013-12-14 22:02:10Z pawel $
 
 PORTNAME=	vcalendar
-PORTREVISION=	2
+PORTREVISION=	0
 
 COMMENT=	vCalendar plugin for Claws Mail
-
-EXTRA_PATCHES=	${FILESDIR}/patch-src__plugins__vcalendar__vcal_meeting_gtk.c
 
 CLAWS_PLUGINS_BUILD=	vcalendar
 
