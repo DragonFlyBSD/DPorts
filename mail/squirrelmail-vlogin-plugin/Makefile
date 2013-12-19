@@ -1,25 +1,21 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/squirrelmail-vlogin-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
 
 PORTNAME=	vlogin
 PORTVERSION=	3.10.2
-CATEGORIES=	mail www
-MASTER_SITES=	http://www.squirrelmail.org/plugins/
-PKGNAMEPREFIX=	squirrelmail-
-PKGNAMESUFFIX=	-plugin
+PORTREVISION=	1
+CATEGORIES=		mail www
 DISTNAME=	${PORTNAME}-${PORTVERSION}-1.2.7
-DIST_SUBDIR=	squirrelmail
 
 MAINTAINER=	neil@darlow.co.uk
 COMMENT=	Adds multi-site-hosting capabilities to SquirrelMail
 
-USES=		perl5
-USE_PERL5=	run
 USE_SM_COMPAT=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
 NO_STAGE=	yes
+.include <bsd.port.pre.mk>
 .include "${.CURDIR}/../squirrelmail/bsd.squirrelmail.mk"
 
 # We need to rearrange, install and cleanup documentation pre-install
