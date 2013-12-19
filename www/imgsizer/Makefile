@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: www/imgsizer/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/imgsizer/Makefile 335850 2013-12-07 21:17:39Z cs $
 
 PORTNAME=	imgsizer
 PORTVERSION=	2.8
@@ -8,27 +8,25 @@ MASTER_SITES=	http://www.catb.org/~esr/imgsizer/ \
 		http://www.c-s.li/ports/
 
 MAINTAINER=	cs@FreeBSD.org
-COMMENT=	A tool to autogenerate WIDTH and HEIGHT for IMG HTML tags
+COMMENT=	Tool to autogenerate WIDTH and HEIGHT for IMG HTML tags
+
+LICENSE=	BSD
 
 RUN_DEPENDS=	rdjpgcom:${PORTSDIR}/graphics/jpeg \
 		identify:${PORTSDIR}/graphics/ImageMagick
 
-LICENSE=	BSD
-
 USE_PYTHON=	yes
 NO_BUILD=	yes
-MAN1=		imgsizer.1
 
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/imgsizer.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|' ${WRKSRC}/imgsizer
 
 do-install:
 	${MKDIR} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${MKDIR} ${MAN1PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/imgsizer.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/imgsizer.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
