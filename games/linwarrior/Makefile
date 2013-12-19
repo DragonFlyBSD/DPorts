@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/linwarrior/Makefile 332122 2013-10-30 14:57:19Z amdmi3 $
+# $FreeBSD: games/linwarrior/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
 
 PORTNAME=	linwarrior
 PORTVERSION=	20100320
@@ -39,7 +39,7 @@ post-patch:
 		${REINPLACE_CMD} -e 's|data/|${DATADIR}/|'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dist/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	cd ${WRKSRC}/data && ${COPYTREE_SHARE} '*' ${STAGEDIR}${DATADIR}/
+	${INSTALL_PROGRAM} ${WRKSRC}/dist/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
