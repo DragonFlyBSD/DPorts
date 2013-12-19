@@ -1,4 +1,4 @@
-# $FreeBSD: games/kajongg/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/kajongg/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	kajongg
 PORTVERSION=	${KDE4_VERSION}
@@ -13,12 +13,11 @@ COMMENT=	${${PORTNAME}_DESC}
 
 CONFLICTS_INSTALL=	kdegames-4.[0-6].*
 
-USES=		cmake:outsource
+USES=		cmake:outsource twisted:run
 USE_KDE4=	kdehier kdelibs kdeprefix pykde4 automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_PYTHON=	yes
 USE_SQLITE=	3
-USE_TWISTED_RUN=	yes
 USE_XZ=		yes
 CMAKE_ARGS=	-DINSTALL_KAJONGG:BOOL=TRUE
 
