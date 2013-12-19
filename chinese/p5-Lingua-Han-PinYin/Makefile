@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/p5-Lingua-Han-PinYin/Makefile 333602 2013-11-12 19:41:54Z sunpoet $
+# $FreeBSD: chinese/p5-Lingua-Han-PinYin/Makefile 335986 2013-12-09 14:09:13Z sunpoet $
 
 PORTNAME=	Lingua-Han-PinYin
-PORTVERSION=	0.19
+PORTVERSION=	0.20
 CATEGORIES=	chinese perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
