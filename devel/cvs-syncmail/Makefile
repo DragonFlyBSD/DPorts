@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/cvs-syncmail/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cvs-syncmail/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	cvs-syncmail
 PORTVERSION=	2.1
@@ -8,7 +8,7 @@ MASTER_SITES=	SF
 DISTNAME=	syncmail
 EXTRACT_SUFX=
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CVS notification tool
 
 .if defined(WITH_CVSNT)
