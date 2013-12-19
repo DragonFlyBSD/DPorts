@@ -1,12 +1,13 @@
 # Created by: Eckart "Isegrim" Hofmann
-# $FreeBSD: games/xteddy/Makefile 333956 2013-11-16 01:13:37Z danilo $
+# $FreeBSD: games/xteddy/Makefile 335959 2013-12-09 10:12:39Z jadawin $
 
 PORTNAME=	xteddy
 PORTVERSION=	2.2
 CATEGORIES=	games
-MASTER_SITES=	http://webstaff.itn.liu.se/~stegu/xteddy/
+MASTER_SITES=	http://webstaff.itn.liu.se/~stegu/xteddy/ \
+		http://www.skysmurf.nl/comp/FreeBSD/distfiles/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	freebsd@skysmurf.nl
 COMMENT=	Cuddlesome teddy for the X desktop
 
 LICENSE=	GPLv2
