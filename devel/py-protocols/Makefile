@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale
-# $FreeBSD: devel/py-protocols/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-protocols/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	protocols
 PORTVERSION=	0.9.3
@@ -17,4 +17,8 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyProtocols
 
 NO_STAGE=	yes
+
+post-patch:
+	@${RM} -rf ${WRKSRC}/setuptools
+
 .include <bsd.port.mk>
