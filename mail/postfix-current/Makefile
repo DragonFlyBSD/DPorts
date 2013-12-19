@@ -1,5 +1,5 @@
 # Created by: Torsten Blum <torstenb@FreeBSD.org>
-# $FreeBSD: mail/postfix-current/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD: mail/postfix-current/Makefile 336075 2013-12-10 18:29:23Z pawel $
 
 PORTNAME=	postfix
 DISTVERSION=	2.11-20131001
@@ -216,7 +216,7 @@ POSTFIX_CCARGS+=	-I${LOCALBASE}/include/sasl -DUSE_LDAP_SASL
 .endif
 
 .if ${PORT_OPTIONS:MCDB}
-BUILD_DEPENDS+=		${LOCALBASE}/lib/libcdb.a:${PORTSDIR}/databases/tinycdb
+LIB_DEPENDS+=		libcdb.so:${PORTSDIR}/databases/tinycdb
 POSTFIX_CCARGS+=	-DHAS_CDB -I${LOCALBASE}/include
 POSTFIX_AUXLIBS+=	-L${LOCALBASE}/lib -lcdb
 .endif
