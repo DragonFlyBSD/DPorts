@@ -1,5 +1,5 @@
 # Created by: Valerio Daelli <valerio.daelli@gmail.com>
-# $FreeBSD: security/ossec-hids-server/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ossec-hids-server/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	ossec-hids
 PORTVERSION=	2.7
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.ossec.net/files/ \
 		http://www.ossec.net/files/old/
 PKGNAMESUFFIX=	-server
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	A security tool to monitor and check logs and intrusions
 
 USE_RC_SUBR=	ossec-hids
