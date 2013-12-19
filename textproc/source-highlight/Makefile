@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: textproc/source-highlight/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/source-highlight/Makefile 336262 2013-12-12 14:15:03Z bapt $
 
 PORTNAME=	source-highlight
 PORTVERSION=	3.1.6
@@ -11,7 +11,7 @@ MAINTAINER=	kevlo@FreeBSD.org
 COMMENT=	C/C++ and Java sources to HTML converter
 
 BUILD_DEPENDS=	exctags:${PORTSDIR}/devel/ctags
-LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
