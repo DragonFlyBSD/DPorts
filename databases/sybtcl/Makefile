@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: databases/sybtcl/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/sybtcl/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	sybtcl
 PORTVERSION=	3.0rc2
@@ -10,7 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	TCL extension to connect to Sybase servers
 
-LIB_DEPENDS=	sybdb:${PORTSDIR}/databases/freetds
+LIB_DEPENDS=	libsybdb.so:${PORTSDIR}/databases/freetds
 
 USE_TCL=	84+
 TCL_DVER=	${TCL_VER:S/.//}
