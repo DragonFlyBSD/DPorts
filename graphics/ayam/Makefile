@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/ayam/Makefile 334308 2013-11-19 12:52:28Z marino $
+# $FreeBSD: graphics/ayam/Makefile 335963 2013-12-09 10:32:33Z marino $
 
 PORTNAME=	ayam
 PORTVERSION=	1.20
