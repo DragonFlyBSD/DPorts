@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-shout/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gmpc-shout/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gmpc-shout
 PORTVERSION=	0.20.0
@@ -11,8 +11,8 @@ MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/${PORTVERSION}/ \
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Shoutcast stream for gmpc
 
-LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
-		cairo.2:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS=	libmpd.so:${PORTSDIR}/audio/libmpd \
+		libcairo.so:${PORTSDIR}/graphics/cairo
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gmpc.pc:${PORTSDIR}/audio/gmpc
 RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc \
 		ogg123:${PORTSDIR}/audio/vorbis-tools
