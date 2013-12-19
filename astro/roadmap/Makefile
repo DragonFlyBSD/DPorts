@@ -1,5 +1,5 @@
 # Created by: Nick Esborn <nick@netdot.net>
-# $FreeBSD: astro/roadmap/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/roadmap/Makefile 336154 2013-12-11 10:31:41Z bapt $
 
 PORTNAME=	roadmap
 PORTVERSION=	1.2.1
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Vector-based GPS moving map
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 BUILD_WRKSRC=	${WRKSRC}/src
