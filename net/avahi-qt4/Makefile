@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org
-# $FreeBSD: net/avahi-qt4/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/avahi-qt4/Makefile 336457 2013-12-14 16:25:21Z kwm $
 
 PORTREVISION=	0
 CATEGORIES=	net
@@ -8,7 +8,7 @@ PKGNAMESUFFIX=	-qt4
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Qt 4 bindings to the Avahi mDNS system
 
-LIB_DEPENDS=	avahi-common:${PORTSDIR}/net/avahi-app
+LIB_DEPENDS=	libavahi-common.so:${PORTSDIR}/net/avahi-app
 
 MASTERDIR=	${.CURDIR}/../avahi-app
 BUILD_WRKSRC=	${WRKSRC}/avahi-qt
@@ -20,5 +20,4 @@ AVAHI_SLAVE=	qt4
 USE_QT4=	corelib moc_build
 AVAHI_PKGCONFIG=	avahi-qt4.pc
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
