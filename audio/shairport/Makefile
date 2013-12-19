@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <graudeejs@gmail.com>
-# $FreeBSD: audio/shairport/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/shairport/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	shairport
 PORTVERSION=	0.05
@@ -11,7 +11,7 @@ DISTNAME=	miks-${PORTNAME}-${REV}
 MAINTAINER=	miks.mikelsons@gmail.com
 COMMENT=	Airtunes emulator
 
-LIB_DEPENDS=	ao.4:${PORTSDIR}/audio/libao
+LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao
 RUN_DEPENDS=	p5-MIME-Base64>=0:${PORTSDIR}/converters/p5-MIME-Base64 \
 		p5-Getopt-Long>=0:${PORTSDIR}/devel/p5-Getopt-Long \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
