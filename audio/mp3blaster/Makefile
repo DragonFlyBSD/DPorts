@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: audio/mp3blaster/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mp3blaster/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	mp3blaster
 PORTVERSION=	3.2.5
@@ -32,18 +32,18 @@ PORTDOCS=	AUTHORS CREDITS ChangeLog FAQ README TODO
 .endif
 
 .if ${PORT_OPTIONS:MLIRC}
-LIB_DEPENDS+=		lirc_client.2:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=		liblirc_client.so:${PORTSDIR}/comms/lirc
 CONFIGURE_ARGS+=	--with-lirc
 .endif
 
 .if ${PORT_OPTIONS:MSIDPLAY}
-LIB_DEPENDS+=		sidplay.1:${PORTSDIR}/audio/libsidplay
+LIB_DEPENDS+=		libsidplay.so:${PORTSDIR}/audio/libsidplay
 .else
 CONFIGURE_ARGS+=	--without-sidplay
 .endif
 
 .if ${PORT_OPTIONS:MVORBIS}
-LIB_DEPENDS+=		vorbisfile.6:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=		libvorbisfile.so:${PORTSDIR}/audio/libvorbis
 .else
 CONFIGURE_ARGS+=	--without-oggvorbis
 .endif
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--without-sdl
 
 .if ${PORT_OPTIONS:MNAS}
 CONFIGURE_ARGS+=	--with-nas
-LIB_DEPENDS+=		audio.2:${PORTSDIR}/audio/nas
+LIB_DEPENDS+=		libaudio.so:${PORTSDIR}/audio/nas
 LDFLAGS+=		-laudio
 .else
 CONFIGURE_ARGS+=	--without-nas
