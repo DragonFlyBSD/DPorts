@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: audio/openal/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/openal/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	openal
 PORTVERSION=	20060211
@@ -52,14 +52,14 @@ CONFIGURE_ARGS+=--disable-sdl
 .endif
 
 .if ${PORT_OPTIONS:MVORBIS}
-LIB_DEPENDS+=	vorbisfile.6:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=	libvorbisfile.so:${PORTSDIR}/audio/libvorbis
 CONFIGURE_ARGS+=--enable-vorbis
 .else
 CONFIGURE_ARGS+=--disable-vorbis
 .endif
 
 .if ${PORT_OPTIONS:MSMPEG}
-LIB_DEPENDS+=	smpeg.1:${PORTSDIR}/multimedia/smpeg
+LIB_DEPENDS+=	libsmpeg.so:${PORTSDIR}/multimedia/smpeg
 CONFIGURE_ARGS+=--enable-smpeg
 .else
 CONFIGURE_ARGS+=--disable-smpeg
