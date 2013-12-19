@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/ocp/Makefile 332364 2013-11-01 12:58:56Z ehaupt $
+# $FreeBSD: audio/ocp/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	ocp
 PORTVERSION=	0.1.20
@@ -14,10 +14,10 @@ COMMENT=	The legendary Open Cubic Player
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	id3tag:${PORTSDIR}/audio/libid3tag \
-		mad:${PORTSDIR}/audio/libmad \
-		vorbis:${PORTSDIR}/audio/libvorbis \
-		sidplay:${PORTSDIR}/audio/libsidplay
+LIB_DEPENDS=	libid3tag.so:${PORTSDIR}/audio/libid3tag \
+		libmad.so:${PORTSDIR}/audio/libmad \
+		libvorbis.so:${PORTSDIR}/audio/libvorbis \
+		libsidplay.so:${PORTSDIR}/audio/libsidplay
 
 ONLY_FOR_ARCHS=	i386 amd64
 
@@ -76,7 +76,7 @@ PLIST_SUB+=		XORG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MADPLUG}
-LIB_DEPENDS+=		adplug:${PORTSDIR}/audio/libadplug
+LIB_DEPENDS+=		libadplug.so:${PORTSDIR}/audio/libadplug
 CONFIGURE_ARGS+=	--with-adplug
 PLIST_SUB+=		ADPLUG=""
 .else
@@ -101,7 +101,7 @@ PLIST_SUB+=		DESKTOP="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MFLAC}
-LIB_DEPENDS+=		FLAC:${PORTSDIR}/audio/flac
+LIB_DEPENDS+=		libFLAC.so:${PORTSDIR}/audio/flac
 CONFIGURE_ARGS+=	--with-flac
 PLIST_SUB+=		FLAC=""
 .else
