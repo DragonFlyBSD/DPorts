@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: audio/py-shout/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/py-shout/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	shout
 PORTVERSION=	0.2.1
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-python-${PORTVERSION}
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python bindings for libshout2
 
-LIB_DEPENDS=	shout.5:${PORTSDIR}/audio/libshout2
+LIB_DEPENDS=	libshout.so:${PORTSDIR}/audio/libshout2
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
