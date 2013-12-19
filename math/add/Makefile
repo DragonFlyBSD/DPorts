@@ -1,8 +1,8 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: math/add/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/add/Makefile 336046 2013-12-10 04:56:34Z culot $
 
 PORTNAME=	add
-PORTVERSION=	20130226
+PORTVERSION=	20131208
 CATEGORIES=	math
 MASTER_SITES=	ftp://dickey.his.com/add/
 EXTRACT_SUFX=	.tgz
@@ -13,15 +13,10 @@ COMMENT=	Full-screen editing calculator
 GNU_CONFIGURE=	yes
 MAKEFILE=	makefile
 
-MAN1=		add.1
-PLIST_FILES=	bin/add %%DATADIR%%/add.hlp
-PLIST_DIRS=	%%DATADIR%%
-
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/add ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/add.1 ${MANPREFIX}/man/man1
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/add.hlp ${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/add ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/add.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/add.hlp ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
