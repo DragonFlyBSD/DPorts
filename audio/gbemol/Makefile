@@ -1,5 +1,5 @@
 # Created by: Thomas M. Hermann <tmh.public@gmail.com>
-# $FreeBSD: audio/gbemol/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gbemol/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gbemol
 PORTVERSION=	0.3.2
@@ -10,9 +10,9 @@ MASTER_SITES=	SF
 MAINTAINER=	tmh.public@gmail.com
 COMMENT=	Graphical frontend for the Music Player Daemon
 
-LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
-		curl:${PORTSDIR}/ftp/curl \
-		xml2.5:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS=	libmpd.so:${PORTSDIR}/audio/libmpd \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libxml2.so:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
