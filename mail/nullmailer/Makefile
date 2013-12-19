@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: mail/nullmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/nullmailer/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	nullmailer
 PORTVERSION=	1.13
@@ -9,7 +9,7 @@ MASTER_SITES=	http://untroubled.org/nullmailer/ \
 		http://untroubled.org/nullmailer/archive/
 MASTER_SITE_SUBDIR=	${PORTVERSION}
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MTA for hosts which relay to a fixed set of smart relays
 
 LICENSE=	GPLv2
