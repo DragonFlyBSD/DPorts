@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/licq-msn/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: net-im/licq-msn/Makefile 336722 2013-12-17 13:20:40Z dinoex $
 
 PORTNAME=	msn
 PORTVERSION=	1.8.0
@@ -9,9 +9,7 @@ COMMENT=	MSN plugin for Licq
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	boost_regex:${PORTSDIR}/devel/boost-libs
-
-NO_STAGE=	yes
+LIB_DEPENDS=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 
 USES=		cmake
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
@@ -23,14 +21,14 @@ PLIST_DIRS=	%%PORTDOCS%%%%DOCSDIR%%
 
 LICQ_PORT?=	net-im/licq
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .include "${PORTSDIR}/${LICQ_PORT}/Makefile.inc"
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
