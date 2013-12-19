@@ -1,8 +1,8 @@
-# $FreeBSD: x11-drivers/xf86-video-neomagic/Makefile 333159 2013-11-07 21:53:34Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-neomagic/Makefile 336621 2013-12-16 11:11:09Z zeising $
 
 PORTNAME=	xf86-video-neomagic
 PORTVERSION=	1.2.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
