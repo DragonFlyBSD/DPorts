@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: net-p2p/py-vertex/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/py-vertex/Makefile 335877 2013-12-08 12:04:07Z mva $
 
 PORTNAME=	vertex
 PORTVERSION=	0.3.0
@@ -21,7 +21,7 @@ LICENSE=	BSD
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Vertex
-USE_TWISTED=	yes
+USES=		twisted
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
