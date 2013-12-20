@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/padevchooser/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/padevchooser/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	padevchooser
 PORTVERSION=	0.9.3
@@ -10,10 +10,10 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/${PORTNAME}/
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	GTK icon tray for PulseAudio
 
-LIB_DEPENDS=	glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
-		pulse.0:${PORTSDIR}/audio/pulseaudio \
-		notify.4:${PORTSDIR}/devel/libnotify \
-		avahi-core:${PORTSDIR}/net/avahi
+LIB_DEPENDS=	libglademm-2.4.so:${PORTSDIR}/devel/libglademm24 \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libnotify.so:${PORTSDIR}/devel/libnotify \
+		libavahi-core.so:${PORTSDIR}/net/avahi
 RUN_DEPENDES=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 GNU_CONFIGURE=	yes
