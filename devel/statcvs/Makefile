@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/statcvs/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/statcvs/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	statcvs
 PORTVERSION=	0.7.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	SF/${PORTNAME}/Download%20StatCVS/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CVS repository activity report generator
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
