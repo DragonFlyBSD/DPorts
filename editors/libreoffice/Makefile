@@ -143,6 +143,7 @@ CONFIGURE_ARGS+=	--without-afms \
 			--without-system-npapi-headers \
 			--without-system-mozilla
 
+.undef WITH_DEBUG
 .include <bsd.port.pre.mk>
 
 ACLOCAL_ARGS=	-I "${WRKSRC}/m4"
