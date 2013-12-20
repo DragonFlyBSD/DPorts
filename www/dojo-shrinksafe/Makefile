@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/dojo-shrinksafe/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/dojo-shrinksafe/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=		shrinksafe
 PORTVERSION=		1.9.0
@@ -9,7 +9,7 @@ MASTER_SITES=		http://download.dojotoolkit.org/release-${PORTVERSION}/ \
 PKGNAMEPREFIX=		dojo-
 DISTNAME=		${PKGNAMEPREFIX}release-${PORTVERSION}-${PORTNAME}
 
-MAINTAINER=		glarkin@FreeBSD.org
+MAINTAINER=		ports@FreeBSD.org
 COMMENT=		JavaScript code compressor
 
 USE_JAVA=	yes
