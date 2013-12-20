@@ -1,5 +1,5 @@
 # Created by: Anton Yudin (<contact@toha.org.ua>)
-# $FreeBSD: java/dbvis/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/dbvis/Makefile 336144 2013-12-11 05:25:28Z eadler $
 
 PORTNAME=	dbvis
 PORTVERSION=	7.1
@@ -7,7 +7,7 @@ CATEGORIES=	java devel
 MASTER_SITES=	http://www.dbvis.com/product_download/${PORTNAME}-${PORTVERSION}/media/
 DISTNAME=	dbvis_unix_${PORTVERSION:S/./_/g}
 
-MAINTAINER=	contact@toha.org.ua
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DbVisualizer database tool
 
 USE_JAVA=	yes
