@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: mail/gnubiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gnubiff/Makefile 336333 2013-12-13 11:23:11Z bapt $
 
 PORTNAME=	gnubiff
 PORTVERSION=	2.2.13
@@ -9,6 +9,8 @@ MASTER_SITES=	SF
 
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	A mail notification program for Gnome
+
+OPTIONS_DEFINE=	NLS
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
@@ -26,11 +28,13 @@ CXXFLAGS+=	"-Wno-long-long"
 MAN1=		gnubiff.1
 INFO=		gnubiff
 
+.include <bsd.port.options.mk>
+
 .ifdef(WITH_GNUBIFF_PASSWORD)
 CONFIGURE_ARGS+=	--with-password
 .endif
 
-.ifndef(WITHOUT_NLS)
+.if ${PORT_OPTIONS:MNLS}
 CONFIGURE_ARGS+=	--enable-nls
 PLIST_SUB+=		NLS=""
 USES+=		gettext
