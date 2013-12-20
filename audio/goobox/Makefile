@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/goobox/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/goobox/Makefile 336166 2013-12-11 14:35:36Z bapt $
 #   $MCom: ports/audio/goobox/Makefile,v 1.25 2007/08/15 03:03:09 mezz Exp $
 
 PORTNAME=	goobox
@@ -13,10 +13,10 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD player and ripper for GNOME Desktop environment
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	discid:${PORTSDIR}/audio/libdiscid \
-		musicbrainz3:${PORTSDIR}/audio/libmusicbrainz3 \
-		brasero-media:${PORTSDIR}/sysutils/brasero \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid \
+		libmusicbrainz3.so:${PORTSDIR}/audio/libmusicbrainz3 \
+		libbrasero-media.so:${PORTSDIR}/sysutils/brasero \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_XORG=	x11
@@ -39,7 +39,7 @@ OPTIONS_DEFAULT=NOTIFY
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	libnotify.so:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--enable-notification
 .else
 CONFIGURE_ARGS+=--disable-notification
