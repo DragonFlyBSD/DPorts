@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: devel/jep/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/jep/Makefile 336453 2013-12-14 15:44:46Z mva $
 
 PORTNAME=	jep
 PORTVERSION=	2.4
@@ -18,6 +18,9 @@ JAVA_VERSION=	1.6+
 USE_PYTHON=	2.2+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+# Necessary, since the configure script does the LIBS and
+# LDFLAGS detection wrong
+LDFLAGS=	-L${LOCALBASE}/lib
 
 MAN1=	jep.1
 
