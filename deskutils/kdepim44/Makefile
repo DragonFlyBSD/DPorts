@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44/Makefile 332918 2013-11-05 22:10:00Z rakuco $
+# $FreeBSD: deskutils/kdepim44/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	kdepim
 PORTVERSION=	4.4.11.1
@@ -13,10 +13,10 @@ PKGNAMESUFFIX=	44
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Libraries for KDE-PIM applications
 
-LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
-		sasl2:${PORTSDIR}/security/cyrus-sasl2 \
-		boost_thread:${PORTSDIR}/devel/boost-libs \
-		qca:${PORTSDIR}/devel/qca
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
+		libsasl2.so:${PORTSDIR}/security/cyrus-sasl2 \
+		libboost_thread.so:${PORTSDIR}/devel/boost-libs \
+		libqca.so:${PORTSDIR}/devel/qca
 RUN_DEPENDS=	${KDE4_PREFIX}/bin/akonadi_mbox_resource:${PORTSDIR}/deskutils/kdepim44-runtime
 
 CONFLICTS_INSTALL=	kdepim-4.*
