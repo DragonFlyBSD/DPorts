@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: devel/statsvn/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/statsvn/Makefile 336656 2013-12-16 18:24:49Z glarkin $
 
 PORTNAME=	statsvn
 PORTVERSION=	0.7.0
@@ -8,7 +8,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
-MAINTAINER=	glarkin@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Subversion repository activity report generator
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper \
