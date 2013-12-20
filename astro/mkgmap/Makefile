@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/mkgmap/Makefile 328581 2013-09-28 15:31:40Z amdmi3 $
+# $FreeBSD: astro/mkgmap/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
 
 PORTNAME=	mkgmap
 PORTVERSION=	r2724
@@ -22,7 +22,6 @@ PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
-OPTIONS_DEFAULT=DOCS
 
 .include <bsd.port.options.mk>
 
