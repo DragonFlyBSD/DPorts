@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/gnomesudoku/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gnomesudoku/Makefile 336553 2013-12-15 16:22:17Z wg $
 
 PORTNAME=	gnomesudoku
 PORTVERSION=	0.6.0
@@ -14,7 +14,7 @@ COMMENT=	GNOME Sudoku game
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Numeric/Numeric.py:${PORTSDIR}/math/py-numeric \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USES=		pathfix display
 USE_GNOME=	gnomeprefix pygnome2 pygnomedesktop
@@ -22,4 +22,10 @@ USE_GNOME=	gnomeprefix pygnome2 pygnomedesktop
 PYDISTUTILS_PKGNAME=	gnome-sudoku
 
 NO_STAGE=	yes
+
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e 's,distutils\.command\.install ,setuptools\.command\.install ,' \
+		${WRKSRC}/tools/gsudoku_distutils.py
 .include <bsd.port.mk>
