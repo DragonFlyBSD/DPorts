@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-wikipedia/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gmpc-wikipedia/Makefile 336166 2013-12-11 14:35:36Z bapt $
 
 PORTNAME=	gmpc-wikipedia
 PORTVERSION=	11.8.16
@@ -10,9 +10,9 @@ MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/${PORTVERSION}/
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Wikipedia info for gmpc
 
-LIB_DEPENDS=	mpd.4:${PORTSDIR}/audio/libmpd \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS=	libmpd.so:${PORTSDIR}/audio/libmpd \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gmpc.pc:${PORTSDIR}/audio/gmpc
 RUN_DEPENDS=	gmpc:${PORTSDIR}/audio/gmpc
 
