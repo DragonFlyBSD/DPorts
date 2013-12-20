@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: science/abinit/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/abinit/Makefile 336523 2013-12-15 12:49:28Z wg $
 
 PORTNAME=	abinit
 PORTVERSION=	5.7.3
@@ -10,7 +10,8 @@ MASTER_SITES=	ftp://ftp.abinit.org/pub/abinitio/ABINIT_v${PORTVERSION}/
 MAINTAINER=	maho@FreeBSD.org
 COMMENT=	Abinit calculates electronic structure of systems
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/numarray/__init__.py:${PORTSDIR}/math/py-numarray
+BUILD_DEPENDS=	python:${PORTSDIR}/lang/python \
+		${PYTHON_SITELIBDIR}/numarray/__init__.py:${PORTSDIR}/math/py-numarray
 LIB_DEPENDS=	netcdff.4:${PORTSDIR}/science/netcdf3-ftn	\
 		gsl:${PORTSDIR}/math/gsl
 
