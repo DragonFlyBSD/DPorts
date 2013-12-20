@@ -1,5 +1,5 @@
 # Created by: Masanori OZAWA (ozawa@ongs.co.jp)
-# $FreeBSD: deskutils/fusenshi/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/fusenshi/Makefile 336190 2013-12-11 18:28:10Z bapt $
 
 PORTNAME=	fusenshi
 PORTVERSION=	0.9.0
@@ -11,8 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ozawa@ongs.co.jp
 COMMENT=	A Post-it(R) like application with network support
 
-LIB_DEPENDS=	gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24 \
-		gtksourceview-1.0:${PORTSDIR}/x11-toolkits/gtksourceview
+LIB_DEPENDS=	libgtkmm-2.4.so:${PORTSDIR}/x11-toolkits/gtkmm24 \
+		libgtksourceview-1.0.so:${PORTSDIR}/x11-toolkits/gtksourceview
 
 USES=		pkgconfig
 USE_GNOME=	libxml2
@@ -21,7 +21,7 @@ MAKE_JOBS_UNSAFE=	yes
 .ifdef WITHOUT_SSL
 MAKE_ARGS+=	WITHOUT_SSL=yes
 .else
-LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	libgnutls.so:${PORTSDIR}/security/gnutls
 .endif
 
 NO_STAGE=	yes
