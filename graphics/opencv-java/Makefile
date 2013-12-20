@@ -1,6 +1,6 @@
-# $FreeBSD: graphics/opencv-java/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD: graphics/opencv-java/Makefile 336150 2013-12-11 07:53:16Z martymac $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics java
 PKGNAMESUFFIX=	-${OCV_SLAVE}
 
