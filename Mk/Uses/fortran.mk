@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/fortran.mk 336343 2013-12-13 13:22:32Z tijl $
+# $FreeBSD: Mk/Uses/fortran.mk 337035 2013-12-20 16:33:59Z tijl $
 #
 # Fortran support
 #
@@ -23,7 +23,8 @@ USE_BINUTILS=	yes
 F77=		gfortran${_GCC_VER}
 FC=		gfortran${_GCC_VER}
 FFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
-LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER} \
+		-L${LOCALBASE}/lib/gcc${_GCC_VER}
 .elif ${fortran_ARGS} == ifort
 BUILD_DEPENDS+=	${LOCALBASE}/intel_fc_80/bin/ifort:${PORTSDIR}/lang/ifc
 RUN_DEPENDS+=	${LOCALBASE}/intel_fc_80/bin/ifort:${PORTSDIR}/lang/ifc

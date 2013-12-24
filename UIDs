@@ -1,4 +1,4 @@
-# $FreeBSD: UIDs 334915 2013-11-26 03:35:32Z amdmi3 $
+# $FreeBSD: UIDs 337233 2013-12-23 10:00:02Z rene $
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
@@ -205,6 +205,7 @@ jenkins:*:818:818::0:0:Jenkins CI:/usr/local/jenkins:/bin/sh
 openacs:*:820:820::0:0:OpenACS Daemon User:/nonexistent:/usr/sbin/nologin
 dotlrn:*:821:821::0:0:.LRN Daemon User:/nonexistent:/usr/sbin/nologin
 polw:*:825:825::0:0:Policyd-weight Cache Owner:/nonexistent:/sbin/nologin
+statsd:*:826:826::0:0:Statsd Daemon:/nonexistent:/sbin/nologin
 netdisco:*:840:840::0:0:netdisco daemon:/nonexistent:/usr/sbin/nologin
 munin:*:842:842::0:0:Munin:/var/munin:/usr/sbin/nologin
 fossy:*:901:901::0:0:FOSSology user:/usr/local/share/fossology:/usr/local/bin/bash
@@ -268,7 +269,7 @@ kippo:*:969:969::0:0:kippo user:/nonexistent:/usr/sbin/nologin
 colord:*:970:970::0:0:colord color management daemon:/nonexistent:/usr/sbin/nologin
 shibd:*:971:971::0:0:Shibboleth SAML daemon:/nonexistent:/usr/sbin/nologin
 plex:*:972:972::0:0:Plex Media Server:/nonexistent:/usr/sbin/nologin
-boinc:*:973:973::0:0:BOINC user:/var/db/boinc:/usr/sbin/nologin
+boinc:*:973:973::0:0:BOINC user:/var/db/boinc:/bin/sh
 radicale:*:974:974::0:0:Radicale daemon:/nonexistent:/usr/sbin/nologin
 unifi:*:975:975::0:0:Unifi Wireless Controller:/nonexistent:/usr/sbin/nologin
 minetest:*:976:976::0:0:& server:/nonexistent:/usr/sbin/nologin
