@@ -1,10 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk20/Makefile 336476 2013-12-14 19:25:33Z kwm $
+# $FreeBSD: x11-toolkits/gtk20/Makefile 337091 2013-12-20 21:17:13Z kwm $
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
 
 PORTNAME=	gtk
 PORTVERSION=	2.24.22
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -35,7 +35,7 @@ USES=		gettext gmake pathfix pkgconfig perl5
 USE_PERL5=	build
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
-CONFIGURE_ARGS=	--with-xinput=yes
+CONFIGURE_ARGS=	--with-xinput=yes --enable-explicit-deps
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -61,7 +61,6 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${GREP} -l lgmodule | \
 		${XARGS} ${REINPLACE_CMD} -e 's|-lgmodule|@GMODULE_LIBS@|g'
 	@${REINPLACE_CMD} -e 's|[{]libdir[}]/locale|{datadir}/locale|g' \
-		-e 's|GTK_PACKAGES pangoft2|GTK_PACKAGES x11 pangoft2|' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|@LN_S@|${LN} -sf|' ${WRKSRC}/gtk/Makefile.in
 	@${REINPLACE_CMD} -e 's|file,cups|file,cups,lpr|' \
