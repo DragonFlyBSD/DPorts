@@ -1,0 +1,21 @@
+--- configure.orig	2013-05-26 21:14:49.000000000 +0000
++++ configure
+@@ -1077,7 +1077,7 @@ case $_host_os in
+ 			CXXFLAGS="-I${macport_prefix}/include $CXXFLAGS"
+ 		fi
+ 		;;
+-	freebsd*)
++	dragonfly*|freebsd*)
+ 		LDFLAGS="$LDFLAGS -L/usr/local/lib"
+ 		CXXFLAGS="$CXXFLAGS -I/usr/local/include"
+ 		;;
+@@ -1180,6 +1180,9 @@ case $_host_os in
+ 	android | beos* | bsd* | darwin* | freebsd* | gph-linux | haiku* | hpux* | iphone | irix* | linux* | mint* | netbsd* | openbsd* | solaris* | sunos* | uclinux* | webos)
+ 		_posix=yes
+ 		;;
++	dragonfly*)
++		_posix=yes
++		;;
+ 	os2-emx*)
+ 		_posix=yes	# FIXME: Really???
+ 		;;
