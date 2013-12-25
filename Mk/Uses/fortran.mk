@@ -16,15 +16,13 @@ fortran_ARGS=	gcc
 .endif
 
 .if ${fortran_ARGS} == gcc
-_GCC_VER=	46
-BUILD_DEPENDS+=	gfortran${_GCC_VER}:${PORTSDIR}/lang/gcc
-RUN_DEPENDS+=	gfortran${_GCC_VER}:${PORTSDIR}/lang/gcc
-USE_BINUTILS=	yes
-F77=		gfortran${_GCC_VER}
-FC=		gfortran${_GCC_VER}
-FFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
-LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER} \
-		-L${LOCALBASE}/lib/gcc${_GCC_VER}
+BUILD_DEPENDS+= ${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
+RUN_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
+F77=		${LOCALBASE}/gcc-aux/bin/gfortran
+FC=		${LOCALBASE}/gcc-aux/bin/gfortran
+FFLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib \
+		-L${LOCALBASE}/gcc-aux/lib
 .elif ${fortran_ARGS} == ifort
 BUILD_DEPENDS+=	${LOCALBASE}/intel_fc_80/bin/ifort:${PORTSDIR}/lang/ifc
 RUN_DEPENDS+=	${LOCALBASE}/intel_fc_80/bin/ifort:${PORTSDIR}/lang/ifc
