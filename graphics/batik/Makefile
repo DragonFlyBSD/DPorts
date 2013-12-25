@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/batik/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/batik/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	batik
 PORTVERSION=	1.7
@@ -8,7 +8,7 @@ CATEGORIES=	graphics java
 MASTER_SITES=	APACHE/xmlgraphics/${PORTNAME}
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Java based SVG toolkit
 
 LICENSE=	AL2
