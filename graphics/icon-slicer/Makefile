@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: graphics/icon-slicer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/icon-slicer/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	icon-slicer
 PORTVERSION=	0.3
@@ -7,7 +7,7 @@ PORTREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/icon-slicer/releases/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Utility for generating icon and cursor themes
 
 LICENSE=	GPLv2
