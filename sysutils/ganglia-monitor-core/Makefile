@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 337307 2013-12-23 23:04:26Z antoine $
 
 PORTNAME=	monitor-core
 PORTVERSION=	3.4.0
@@ -31,7 +31,8 @@ USE_AUTOTOOLS=	libtool
 LIBTOOLFILES=	configure libmetrics/configure
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-setuid=ganglia --enable-setgid=ganglia
+CONFIGURE_ARGS=	--enable-setuid=ganglia --enable-setgid=ganglia \
+		--with-python=${PYTHON_CMD}
 CONFIGURE_ENV=	GANGLIA_ACK_SYSCONFDIR=1 "LDFLAGS=${LDFLAGS}"
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
