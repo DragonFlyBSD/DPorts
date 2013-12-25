@@ -2,9 +2,9 @@
 # mplayer and mencoder....the variables that we need to set
 # before we include bsd.port.pre.mk
 #
-# $FreeBSD: multimedia/mplayer/Makefile.shared 336566 2013-12-15 18:50:51Z thierry $
+# $FreeBSD: multimedia/mplayer/Makefile.shared 337376 2013-12-24 17:26:22Z thierry $
 
-MPLAYER_SNAPSHOT_DATE=	2013-11-09
+MPLAYER_SNAPSHOT_DATE=	2013-12-23
 MPLAYER_PORT_VERSION=	1.1.r${MPLAYER_SNAPSHOT_DATE:S/-//g}
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
