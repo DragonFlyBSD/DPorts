@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD: multimedia/ffmpeg/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	2.1.1
@@ -349,6 +349,7 @@ post-patch:
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 	@${REINPLACE_CMD} -e 's|-ldl||' \
 		-e 's|opencv opencv/cxcore.h|opencv-core opencv2/core/core_c.h|g' \
+		-e 's|freetype/freetype.h|freetype.h|g' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL5}|g' \
 		${WRKSRC}/doc/texi2pod.pl
