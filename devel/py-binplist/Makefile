@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-binplist/Makefile 334002 2013-11-16 14:52:00Z antoine $
+# $FreeBSD: devel/py-binplist/Makefile 337164 2013-12-21 21:34:18Z antoine $
 
 PORTNAME=	binplist
 PORTVERSION=	0.1.4
@@ -15,9 +15,7 @@ LICENSE=	AL2
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-
-PLIST_FILES=	bin/plist.py \
-		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=yes
 
 .include <bsd.port.mk>
