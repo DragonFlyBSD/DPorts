@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/libvorbis/Makefile 328156 2013-09-24 16:15:33Z naddy $
+# $FreeBSD: audio/libvorbis/Makefile 336736 2013-12-17 16:01:38Z naddy $
 
 PORTNAME=	libvorbis
 PORTVERSION=	1.3.3
@@ -25,6 +25,6 @@ CONFIGURE_ARGS=	--with-ogg=${LOCALBASE} \
 OPTIONS_DEFINE=	DOCS
 
 regression-test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
 
 .include <bsd.port.mk>
