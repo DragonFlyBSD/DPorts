@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php55/Makefile 336441 2013-12-14 12:46:13Z ale $
+# $FreeBSD: lang/php55/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	php55
 PORTVERSION=	5.5.7
@@ -169,6 +169,7 @@ CONFIGURE_ARGS+=--disable-ipv6
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/ext/php_config.h
+	@${REINPLACE_CMD} -e 's|freetype/||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
 .if ${PORT_OPTIONS:MFPM}
 	@${REINPLACE_CMD} -e "s|^;\(pid\)|\1|;s|^;\(pm\.[a-z_]*_servers\)|\1|" \
