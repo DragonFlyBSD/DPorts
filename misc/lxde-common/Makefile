@@ -1,5 +1,5 @@
 # Created by: sahne
-# $FreeBSD: misc/lxde-common/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/lxde-common/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lxde-common
 PORTVERSION=	0.5.5
@@ -7,7 +7,7 @@ PORTREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	SF/lxde/${PORTNAME}%20%28default%20config%29/LXDE%20Common%20${PORTVERSION}/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	LXDE Common files
 
 LICENSE=	GPLv2
