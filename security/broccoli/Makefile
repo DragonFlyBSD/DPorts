@@ -1,5 +1,5 @@
 # Created by: Craig Leres <leres@ee.lbl.gov>
-# $FreeBSD: security/broccoli/Makefile 336382 2013-12-13 23:25:36Z mat $
+# $FreeBSD: security/broccoli/Makefile 337324 2013-12-24 09:32:47Z jadawin $
 
 PORTNAME=	broccoli
 PORTVERSION=	2.2
@@ -59,9 +59,9 @@ post-install::
 .endif
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc
 	@${MV} ${STAGEDIR}${PREFIX}/etc/broccoli.conf ${STAGEDIR}${PREFIX}/etc/broccoli.conf.example
-.if defined(BRO_PREFIX)
+.if !empty(${PORT_OPTIONS:MPYTHON}) && defined(BRO_PREFIX)
 	# bsd.python.mk isn't PREFIX-safe yet.
-	@${MV} ${STAGEDIR}${PYTHON_LIBDIR} ${STAGEDIR}${PYTHON_LIBDIR:S/${LOCALBASE}/${PREFIX}/}
+	@${MV} ${STAGEDIR}${PYTHON_LIBDIR} ${STAGEDIR}${PYTHONPREFIX_LIBDIR}
 .endif
 
 .include <bsd.port.mk>
