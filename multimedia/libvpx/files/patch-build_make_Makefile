@@ -1,5 +1,5 @@
 
-$FreeBSD: multimedia/libvpx/files/patch-build_make_Makefile 331559 2013-10-25 07:11:22Z ashish $
+$FreeBSD: multimedia/libvpx/files/patch-build_make_Makefile 336806 2013-12-18 09:05:36Z ashish $
 
 --- build/make/Makefile.orig
 +++ build/make/Makefile
@@ -9,8 +9,8 @@ $FreeBSD: multimedia/libvpx/files/patch-build_make_Makefile 331559 2013-10-25 07
  	$(if $(quiet),@echo "    [INSTALL] $$@")
 -	$(qexec)mkdir -p $$(dir $$@)
 -	$(qexec)cp -p $$< $$@
-+	$(qexec)install -d %%DESTDIR%%$$(dir $$@)
-+	$(qexec)install -p $$< %%DESTDIR%%$$(dir $$@)
++	$(qexec)install -d $$(dir $$@)
++	$(qexec)install -p $$< $$(dir $$@)
  endef
  
  define archive_template

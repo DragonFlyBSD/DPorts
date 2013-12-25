@@ -1,17 +1,8 @@
 
-$FreeBSD: multimedia/libvpx/files/patch-libs.mk 331559 2013-10-25 07:11:22Z ashish $
+$FreeBSD: multimedia/libvpx/files/patch-libs.mk 336806 2013-12-18 09:05:36Z ashish $
 
 --- libs.mk.orig
 +++ libs.mk
-@@ -209,7 +209,7 @@
-     $(addprefix $(BUILD_PFX),$(notdir $(LIBVPX_SO_SYMLINKS))),\
-     $(BUILD_PFX)$(LIBVPX_SO)))
- $(eval $(call libvpx_symlink_template,\
--    $(addprefix $(DIST_DIR)/,$(LIBVPX_SO_SYMLINKS)),\
-+    $(addprefix $(DESTDIR)/$(DIST_DIR)/,$(LIBVPX_SO_SYMLINKS)),\
-     $(DIST_DIR)/$(LIBSUBDIR)/$(LIBVPX_SO)))
- 
- INSTALL-LIBS-$(CONFIG_SHARED) += $(LIBVPX_SO_SYMLINKS)
 @@ -232,8 +232,8 @@
  	$(qexec)echo 'Libs: -L$${libdir} -lvpx' >> $@
  	$(qexec)echo 'Libs.private: -lm -pthread' >> $@
