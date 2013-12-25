@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-File-ShareDir-ProjectDistDir/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-ShareDir-ProjectDistDir/Makefile 337120 2013-12-21 10:09:12Z kuriyama $
 
 PORTNAME=	File-ShareDir-ProjectDistDir
-PORTVERSION=	0.4.4
+PORTVERSION=	0.5.2
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
 USES=	perl5
 USE_PERL5=	modbuild
 
-MAN3=	File::ShareDir::ProjectDistDir.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
