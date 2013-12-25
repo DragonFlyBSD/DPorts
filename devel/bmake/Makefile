@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/bmake/Makefile 329990 2013-10-10 13:14:02Z trociny $
+# $FreeBSD: devel/bmake/Makefile 337203 2013-12-22 17:40:01Z trociny $
 
 PORTNAME=	bmake
 PORTVERSION=	20131001
@@ -14,6 +14,8 @@ MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Portable version of NetBSD 'make' utility
 
 LICENSE=	BSD
+
+PORTSCOUT=	skipv:200910007
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
