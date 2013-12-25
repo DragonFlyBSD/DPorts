@@ -1,8 +1,9 @@
 # Created by: Hyogeol, Lee <hyogeollee@gmail.com>
-# $FreeBSD: korean/libhangul/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: korean/libhangul/Makefile 337395 2013-12-24 23:02:33Z jkim $
 
 PORTNAME=	libhangul
 PORTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	korean
 MASTER_SITES=	GOOGLE_CODE
 
@@ -12,6 +13,9 @@ COMMENT=	Library for Hangul processing
 LICENSE=	LGPL21
 
 GNU_CONFIGURE=	yes
+OPTIONS_DEFINE=	NLS
+OPTIONS_DEFAULT=NLS
+OPTIONS_SUB=	NLS
 USE_LDCONFIG=	yes
 USES=		iconv pkgconfig
 
@@ -20,10 +24,8 @@ USES=		iconv pkgconfig
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
 CONFIGURE_ARGS=	--enable-nls
-PLIST_SUB=	NLS=""
 .else
 CONFIGURE_ARGS=	--disable-nls
-PLIST_SUB=	NLS="@comment "
 .endif
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/check.pc)
