@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@portaone.com>
-# $FreeBSD: net/asterisk/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/asterisk/Makefile 336791 2013-12-17 23:48:02Z flo $
 
 PORTNAME=	asterisk
-PORTVERSION=	1.8.23.1
+PORTVERSION=	1.8.25.0
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -26,9 +26,8 @@ CONFIGURE_ARGS=	--with-gsm=${LOCALBASE}
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/openh323
 USE_CSTD=	gnu89
-USE_GMAKE=	yes
 USE_GNOME=	libxml2
-USES=		bison
+USES=		bison gmake
 USE_RC_SUBR=	asterisk
 MAKE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
