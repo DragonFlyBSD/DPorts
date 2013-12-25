@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-packetfu/Makefile 331730 2013-10-26 20:01:39Z antoine $
+# $FreeBSD: net/rubygem-packetfu/Makefile 337217 2013-12-22 20:35:21Z antoine $
 
 PORTNAME=	packetfu
 PORTVERSION=	1.1.9
@@ -8,7 +8,7 @@ MASTER_SITES=	RG
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Mid-level packet manipulation library for Ruby
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
