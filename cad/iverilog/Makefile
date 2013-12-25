@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: cad/iverilog/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/iverilog/Makefile 336066 2013-12-10 16:08:47Z zeising $
 
 PORTNAME=	iverilog
-PORTVERSION=	0.9.6
+PORTVERSION=	0.9.7
 CATEGORIES=	cad
 MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v${PORTVERSION:C,\.[0-9]$,,}/ \
 		ftp://ftp.geda.seul.org/pub/geda/dist/
@@ -19,7 +19,4 @@ USE_GMAKE=	yes
 
 CONFIGURE_ARGS=	--disable-suffix
 
-MAN1=		iverilog-vpi.1 iverilog.1 vvp.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
