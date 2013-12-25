@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/gflags/Makefile 333034 2013-11-06 19:28:08Z sunpoet $
+# $FreeBSD: devel/gflags/Makefile 337265 2013-12-23 17:18:12Z sunpoet $
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
@@ -9,7 +9,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Commandline flags module for C++
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 OPTIONS_DEFINE=	DOCS
 
