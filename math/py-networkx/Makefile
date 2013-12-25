@@ -1,5 +1,5 @@
 # Created by: dikshie
-# $FreeBSD: math/py-networkx/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-networkx/Makefile 337257 2013-12-23 15:09:56Z demon $
 
 PORTNAME=	networkx
 PORTVERSION=	1.8.1
@@ -13,7 +13,9 @@ COMMENT=	Tools for complex network
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+PYTHON_PY3K_PLIST_HACK=yes
 PYSETUP=	setup_egg.py
+PLIST_SUB+=	PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER}
 
 NO_STAGE=	yes
 post-install:
