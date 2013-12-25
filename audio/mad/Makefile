@@ -1,5 +1,5 @@
 # Created by: Jason R. Mastaler <jason@mastaler.com>
-# $FreeBSD: audio/mad/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mad/Makefile 337250 2013-12-23 14:02:38Z amdmi3 $
 
 PORTNAME=	mad
 PORTVERSION=	0.15.0b
@@ -15,7 +15,6 @@ COMMENT=	The "meta-port" for the MAD sound playback system
 RUN_DEPENDS=	madplay:${PORTSDIR}/audio/madplay
 
 NO_BUILD=	yes
-NO_STAGE=	yes
 
 do-install:	# empty
 
