@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: editors/vim/Makefile 335790 2013-12-06 23:24:14Z bapt $
+# $FreeBSD: editors/vim/Makefile 336753 2013-12-17 18:37:45Z bapt $
 
 PORTNAME=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -12,7 +12,7 @@ PORTNAME=	vim
 #		! PATCHLEVEL to that level.
 PATCHLEVEL=	110
 PORTVERSION=	7.4.${PATCHLEVEL}
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	editors
 MASTER_SITES=	VIM
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}
@@ -141,7 +141,7 @@ USE_XORG+=	xaw
 . if ${PORT_OPTIONS:MGTK2}
 USE_GNOME=	gtk20
 CONF_OPT_GUI="--enable-gui=gtk2 --with-gtk-prefix=${LOCALBASE}"
-MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lXt -lX11"
+MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lX11 -lXt"
 USE_XORG+=	xt
 . endif
 
@@ -149,7 +149,7 @@ USE_XORG+=	xt
 USE_GNOME=	libgnomeui
 PKGNAMESUFFIX=	-gnome2
 CONF_OPT_GUI=	"--enable-gui=gnome2"
-MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lXt -lX11"
+MAKE_ARGS+=	X_LIBS="$(X_LIBS) -lX11 -lXt"
 USE_XORG+=	xt glproto
 . endif
 
