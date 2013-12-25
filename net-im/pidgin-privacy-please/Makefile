@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-privacy-please/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: net-im/pidgin-privacy-please/Makefile 336838 2013-12-18 15:06:19Z ehaupt $
 
 PORTNAME=	pidgin-privacy-please
 PORTVERSION=	0.7.1
@@ -12,7 +12,7 @@ COMMENT=	Privacy plugin for the pidgin instant messenger
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple
+LIB_DEPENDS=	libpurple.so:${PORTSDIR}/net-im/libpurple
 BUILD_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
