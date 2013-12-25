@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: deskutils/dosage/Makefile 336017 2013-12-09 19:29:40Z antoine $
+# $FreeBSD: deskutils/dosage/Makefile 337216 2013-12-22 20:30:12Z antoine $
 
 PORTNAME=	dosage
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://wummel.github.io/dosage/dist/
 
