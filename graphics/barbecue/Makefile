@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: graphics/barbecue/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/barbecue/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	barbecue
 DISTVERSION=	1.5-beta1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics print java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}/
 DIST_SUBDIR=	java
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Java barcode generator
 
 LICENSE=	BSD
