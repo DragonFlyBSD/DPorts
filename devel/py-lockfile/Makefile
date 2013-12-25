@@ -1,19 +1,20 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-lockfile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-lockfile/Makefile 337064 2013-12-20 18:30:53Z wg $
 
 PORTNAME=	lockfile
 PORTVERSION=	0.9.1
+PORTREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Platform-independent file locking module
 
-PROJECTHOST=	py${PORTNAME}
+LICENSE=	MIT
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
