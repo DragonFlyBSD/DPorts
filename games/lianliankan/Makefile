@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/lianliankan/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/lianliankan/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lianliankan
 DISTVERSION=	2.3beta1
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/llk-linux/llk-linux-source/${DISTVERSION}
 DISTNAME=	llk_linux-${DISTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Tile matching game
 
 LICENSE=	GPLv2
