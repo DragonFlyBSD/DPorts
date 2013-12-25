@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: chinese/scim-array/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/scim-array/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	scim-array
 PORTVERSION=	1.0.1
@@ -7,7 +7,7 @@ PORTREVISION=	4
 CATEGORIES=	chinese
 MASTER_SITES=	http://of.openfoundry.org/download/scimarray/${PORTVERSION}/
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Array 30 SCIM IMEngine module
 
 BUILD_DEPENDS=	scim:${PORTSDIR}/textproc/scim
