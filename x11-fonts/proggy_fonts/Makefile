@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: x11-fonts/proggy_fonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/proggy_fonts/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	proggy_fonts
 PORTVERSION=	1.0
@@ -22,7 +22,7 @@ EXTRACT_ONLY=	ProggyClean.pcf.zip ProggySquare.pcf.zip \
 		SpeedyPCF.zip WebbySmall.pcf.zip \
 		WebbyCaps.pcf.zip
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The perfect monospaced bitmap programming fonts
 
 RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
