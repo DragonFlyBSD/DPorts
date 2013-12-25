@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/gtar/Makefile 334222 2013-11-18 16:40:04Z naddy $
+# $FreeBSD: archivers/gtar/Makefile 336736 2013-12-17 16:01:38Z naddy $
 
 PORTNAME=	tar
 PORTVERSION=	1.27
@@ -45,6 +45,6 @@ STATIC_ARGS=	lib
 .endif
 
 regression-test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
 
 .include <bsd.port.mk>
