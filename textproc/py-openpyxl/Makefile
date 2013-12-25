@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: textproc/py-openpyxl/Makefile 333787 2013-11-14 20:22:05Z antoine $
+# $FreeBSD: textproc/py-openpyxl/Makefile 337164 2013-12-21 21:34:18Z antoine $
 
 PORTNAME=	openpyxl
 PORTVERSION=	1.7.0
@@ -13,12 +13,11 @@ COMMENT=	Python library to read/write Excel 2007 xlsx/xlsm files
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 PORTDOCS=	AUTHORS README
-
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 OPTIONS_DEFINE=	DOCS
 
