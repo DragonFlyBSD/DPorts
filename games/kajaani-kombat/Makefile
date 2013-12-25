@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/kajaani-kombat/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/kajaani-kombat/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	kajaani-kombat
 PORTVERSION=	0.7
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://kombat.kajaani.net/dl/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Funny multiplayer game... and much more
 
 LICENSE=	GPLv2
