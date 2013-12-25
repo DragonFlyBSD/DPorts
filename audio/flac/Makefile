@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/flac/Makefile 328198 2013-09-24 21:39:26Z naddy $
+# $FreeBSD: audio/flac/Makefile 336736 2013-12-17 16:01:38Z naddy $
 
 PORTNAME=	flac
 PORTVERSION=	1.3.0
@@ -45,6 +45,6 @@ post-build:
 	${REINPLACE_CMD} 's:%%PREFIX%%:${PREFIX}:' ${WRKSRC}/man/flac.1
 
 regression-test: build
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} check
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
 
 .include <bsd.port.mk>
