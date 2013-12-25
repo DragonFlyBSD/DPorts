@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: games/nuclearchess/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/nuclearchess/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	nuclearchess
 PORTVERSION=	1.0.0
@@ -12,7 +12,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Chess variant designed to be short and fun for all players
 
 LICENSE=	GPLv2
