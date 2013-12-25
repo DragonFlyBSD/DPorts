@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/evolution-data-server/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/evolution-data-server/Makefile 336771 2013-12-17 21:30:56Z bapt $
 #   $MCom: ports/databases/evolution-data-server/Makefile,v 1.218 2013/03/09 09:12:37 kwm Exp $
 
 PORTNAME=	evolution-data-server
@@ -12,7 +12,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	libsoup-2.so:${PORTSDIR}/devel/libsoup \
+LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libgdata.so:${PORTSDIR}/devel/libgdata \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libical.so:${PORTSDIR}/devel/libical \
