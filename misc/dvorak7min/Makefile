@@ -1,12 +1,12 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: misc/dvorak7min/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/dvorak7min/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	dvorak7min
 PORTVERSION=	1.6.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.linalco.com/ragnar/
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An ncurses-based Dvorak typing tutor
 
 NO_STAGE=	yes
