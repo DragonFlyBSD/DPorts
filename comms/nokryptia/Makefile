@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@fafula.com>
-# $FreeBSD: comms/nokryptia/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD: comms/nokryptia/Makefile 336997 2013-12-20 11:53:44Z antoine $
 
 PORTNAME=	nokryptia
 PORTVERSION=	1.3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://tuxmobil.org/software/nokryptia/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for fast loading mp3s into Nokia 5510
 
-LIB_DEPENDS=	libid3-3.so:${PORTSDIR}/audio/id3lib
+LIB_DEPENDS=	libid3.so:${PORTSDIR}/audio/id3lib
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
