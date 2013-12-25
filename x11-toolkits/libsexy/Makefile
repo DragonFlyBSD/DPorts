@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexy/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/libsexy/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	libsexy
 PORTVERSION=	0.1.11
@@ -7,7 +7,7 @@ PORTREVISION=	6
 CATEGORIES=	x11-toolkits devel
 MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexy/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Extension widgets for GTK+
 
 LICENSE=	LGPL21
