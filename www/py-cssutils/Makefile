@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: www/py-cssutils/Makefile 336367 2013-12-13 19:34:46Z sunpoet $
+# $FreeBSD: www/py-cssutils/Makefile 337277 2013-12-23 18:29:51Z sunpoet $
 
 PORTNAME=	cssutils
-PORTVERSION=	0.9.10
+PORTVERSION=	1.0
 PORTEPOCH=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
