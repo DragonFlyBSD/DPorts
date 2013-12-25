@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Libdnet/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Libdnet/Makefile 336809 2013-12-18 09:37:40Z dhn $
 
 PORTNAME=	Net-Libdnet
-PORTVERSION=	0.96
+PORTVERSION=	0.98
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
