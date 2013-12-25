@@ -1,8 +1,8 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: net/rubygem-rubytter/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-rubytter/Makefile 336756 2013-12-17 19:12:27Z dhn $
 
 PORTNAME=	rubytter
-PORTVERSION=	1.4.2
+PORTVERSION=	1.5.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
