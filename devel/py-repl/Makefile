@@ -1,8 +1,9 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-repl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-repl/Makefile 337066 2013-12-20 18:41:37Z wg $
 
 PORTNAME=	repl
 PORTVERSION=	0.8.4
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,12 +16,7 @@ COMMENT=	Replacement for readline and interactive environment for Python
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	pyrepl
-
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e \
-		's|platforms =.*|zip_safe = False,|' ${WRKSRC}/setup.py
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
