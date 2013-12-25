@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-django-evolution/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-django-evolution/Makefile 337180 2013-12-22 10:03:15Z antoine $
 
 PORTNAME=	django-evolution
 PORTVERSION=	0.6.8
@@ -14,10 +14,9 @@ COMMENT=	A database schema evolution tool for the Django web framework
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.1.1<1.5:${PORTSDIR}/www/py-django14
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django14>=1.1.1<1.5:${PORTSDIR}/www/py-django14
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
