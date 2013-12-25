@@ -1,7 +1,7 @@
-# $FreeBSD: security/rubygem-metasploit_data_models/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-metasploit_data_models/Makefile 336936 2013-12-19 16:53:08Z swills $
 
 PORTNAME=	metasploit_data_models
-PORTVERSION=	0.16.1
+PORTVERSION=	0.16.4
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
