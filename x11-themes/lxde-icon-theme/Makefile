@@ -1,12 +1,12 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lxde-icon-theme
 PORTVERSION=	0.5.0
 CATEGORIES=	x11-themes
 MASTER_SITES=	SF/lxde/LXDE%20Icon%20Theme/lxde-icon-theme-${PORTVERSION}/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	LXDE Icon Theme
 
 LICENSE=	GPLv3
