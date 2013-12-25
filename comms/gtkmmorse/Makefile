@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: comms/gtkmmorse/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD: comms/gtkmmorse/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	gtkmmorse
 PORTVERSION=	0.9.27
@@ -20,6 +20,10 @@ USES=		pkgconfig
 
 PLIST_FILES=	bin/gtkmmorse
 MAN1=		gtkmmorse.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-ansi||g' -e 's|-pedantic||g' \
+		${WRKSRC}/src/Makefile.in
 
 NO_STAGE=	yes
 .include <bsd.port.mk>
