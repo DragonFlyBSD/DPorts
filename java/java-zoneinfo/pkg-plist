@@ -1,4 +1,4 @@
-@comment $FreeBSD: java/java-zoneinfo/pkg-plist 328550 2013-09-28 06:35:23Z glewis $
+@comment $FreeBSD: java/java-zoneinfo/pkg-plist 337162 2013-12-21 21:08:42Z glewis $
 share/java/zi/Africa/Abidjan
 share/java/zi/Africa/Accra
 share/java/zi/Africa/Addis_Ababa
@@ -251,9 +251,6 @@ share/java/zi/Asia/Qatar
 share/java/zi/Asia/Qyzylorda
 share/java/zi/Asia/Rangoon
 share/java/zi/Asia/Riyadh
-share/java/zi/Asia/Riyadh87
-share/java/zi/Asia/Riyadh88
-share/java/zi/Asia/Riyadh89
 share/java/zi/Asia/Sakhalin
 share/java/zi/Asia/Samarkand
 share/java/zi/Asia/Seoul
