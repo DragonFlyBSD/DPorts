@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/lxtask/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/lxtask/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	SF/lxde/LXTask%20%28task%20manager%29/LXTask%20${PORTVERSION}/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Lightweight desktop-independent task manager
 
 LICENSE=	GPLv2
