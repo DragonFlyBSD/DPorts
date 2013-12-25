@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: lang/p5-ExtUtils-F77/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD: lang/p5-ExtUtils-F77/Makefile 337188 2013-12-22 13:20:52Z tijl $
 
 PORTNAME=	ExtUtils-F77
 PORTVERSION=	1.17
@@ -11,9 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Helps link C programs with Fortran subroutines
 
-USES=		perl5
+USES=		fortran perl5
 USE_PERL5=	configure
-USE_FORTRAN=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|'gfortran44'|'${FC}'|" \
