@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: sysutils/lxterminal/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/lxterminal/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lxterminal
 PORTVERSION=	0.1.11
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/lxde/LXTerminal%20%28terminal%20emulator%29/LXTerminal%20${PORTVERSION}/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Lightweight terminal emulator from the LXDE project
 
 LICENSE=	GPLv2
