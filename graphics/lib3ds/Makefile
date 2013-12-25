@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/lib3ds/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/lib3ds/Makefile 337224 2013-12-22 23:11:53Z amdmi3 $
 
 PORTNAME=	lib3ds
 PORTVERSION=	1.3.0
@@ -17,10 +17,7 @@ USE_GL=		glut
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAN1=		3dsdump.1 lib3ds-config.1
-
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
