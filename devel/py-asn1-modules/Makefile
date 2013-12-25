@@ -1,44 +1,35 @@
-# $FreeBSD: devel/py-asn1-modules/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-asn1-modules/Makefile 337305 2013-12-23 22:42:48Z rm $
 
 PORTNAME=	asn1-modules
 PORTVERSION=	0.0.5
+PORTREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	SF/pyasn1/py${PORTNAME}/${PORTVERSION} \
-		CHEESESHOP
+MASTER_SITES=	SF/pyasn1/py${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Collection of ASN.1 data structures for py-asn1
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0.1.4:${PORTSDIR}/devel/py-asn1
 
+USES=			shebangfix
+SHEBANG_FILES=		tools/*.py
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	pyasn1-modules
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
-
-BASEDOCS=	CHANGES README
-
+DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
+PORTDOCS=	CHANGES README
 TOOLS=		cmpdump.py crldump.py crmfdump.py ocspclient.py ocspreqdump.py \
 		ocsprspdump.py ocspserver.py pkcs10dump.py pkcs1dump.py \
 		pkcs7dump.py pkcs8dump.py snmpget.py x509dump.py
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.for t in ${TOOLS}
-	@${INSTALL_SCRIPT} ${WRKSRC}/tools/${t} ${PREFIX}/bin
-.endfor
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for f in ${BASEDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_SCRIPT} ${TOOLS:S|^|${WRKSRC}/tools/|} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
