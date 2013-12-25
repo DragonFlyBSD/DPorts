@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: science/buddy/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/buddy/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	buddy
 PORTVERSION=	2.4
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/BuDDy%20${PORTVERSION}
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Binary Decision Diagram library
 
 USE_AUTOTOOLS=	libtool
