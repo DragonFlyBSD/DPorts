@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-stsci.distutils/Makefile 334576 2013-11-22 11:55:27Z wg $
+# $FreeBSD: devel/py-stsci.distutils/Makefile 337374 2013-12-24 17:16:59Z wg $
 
 PORTNAME=	stsci.distutils
-PORTVERSION=	0.3.6
+PORTVERSION=	0.3.7
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,12 +10,12 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Packaging utilities used by some of STScI\'s packages
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}d2to1>0:${PORTSDIR}/devel/py-d2to1
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
