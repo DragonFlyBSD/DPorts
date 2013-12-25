@@ -1,5 +1,5 @@
 # Created by: KANOU Hiroki <kanou@khdd.net>
-# $FreeBSD: textproc/libuninameslist/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libuninameslist/Makefile 337317 2013-12-24 03:20:14Z amdmi3 $
 
 PORTNAME=	libuninameslist
 PORTVERSION=	20091231
@@ -12,10 +12,9 @@ COMMENT=	A library of Unicode annotation data
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	libtool
 ALL_TARGET=	both
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
