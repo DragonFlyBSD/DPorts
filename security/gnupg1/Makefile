@@ -1,7 +1,7 @@
-# $FreeBSD: security/gnupg1/Makefile 335659 2013-12-05 11:19:00Z mat $
+# $FreeBSD: security/gnupg1/Makefile 336839 2013-12-18 15:14:55Z kuriyama $
 
 PORTNAME=	gnupg
-PORTVERSION=	1.4.15
+PORTVERSION=	1.4.16
 #PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
