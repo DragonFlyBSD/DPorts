@@ -1,8 +1,9 @@
 # Created by: Jens Rehsack <rehsack@liwing.de>
-# $FreeBSD: devel/php-xdebug/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/php-xdebug/Makefile 337037 2013-12-20 16:38:53Z swills $
 
 PORTNAME=	xdebug
 PORTVERSION=	2.2.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.xdebug.org/files/
 PKGNAMEPREFIX=	php-
@@ -15,8 +16,8 @@ LICENSE=	BSD
 
 CONFIGURE_ARGS=	--enable-xdebug
 USE_PHP=	yes
-USE_PHPEXT=	yes
 USE_PHPIZE=	yes
+USE_ZENDEXT=	yes
 SUB_FILES=	pkg-message
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
