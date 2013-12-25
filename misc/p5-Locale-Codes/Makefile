@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: misc/p5-Locale-Codes/Makefile 332828 2013-11-05 10:14:33Z demon $
+# $FreeBSD: misc/p5-Locale-Codes/Makefile 337158 2013-12-21 18:53:36Z demon $
 
 PORTNAME=	Locale-Codes
-PORTVERSION=	3.27
+PORTVERSION=	3.28
 CATEGORIES=	misc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
