@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rb-inotify/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD: devel/rubygem-rb-inotify/Makefile 336882 2013-12-19 08:00:56Z sunpoet $
 
 PORTNAME=	rb-inotify
-PORTVERSION=	0.9.2
+PORTVERSION=	0.9.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
