@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: games/noegnud-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/noegnud-data/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	noegnud
 PORTVERSION=	0.8.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.darkarts.co.za/projects/noegnud/downloads/${PORTVERSION
 PKGNAMESUFFIX=	-data
 DISTFILES=	${DISTNAME}_linux_src-minimal${EXTRACT_SUFX}
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The noeGNUd Data Files
 
 NOEGNUDVERSION=	${PORTNAME}-0.8.0
