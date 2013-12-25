@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/gmpc/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/gmpc/Makefile 337178 2013-12-22 09:39:09Z antoine $
 
 PORTNAME=	gmpc
 PORTVERSION=	11.8.16
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libmpd.so:${PORTSDIR}/audio/libmpd \
 		libsexy.so:${PORTSDIR}/x11-toolkits/libsexy \
 		libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
-		libunique-1.so:${PORTSDIR}/x11-toolkits/unique
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 gtk20 libglade2
