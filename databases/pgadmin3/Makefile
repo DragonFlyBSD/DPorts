@@ -1,8 +1,8 @@
 # Created by: Max Khon
-# $FreeBSD: databases/pgadmin3/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pgadmin3/Makefile 337266 2013-12-23 17:36:48Z fjoe $
 
 PORTNAME=	pgadmin3
-PORTVERSION=	1.16.1
+PORTVERSION=	1.18.1
 PORTREVISION=	0
 CATEGORIES=	databases
 MASTER_SITES=	PGSQL
@@ -28,10 +28,9 @@ USE_WX=		2.8
 WX_COMPS=	wx contrib
 WX_UNICODE=	yes
 
-PLIST_FILES=	bin/pgadmin3 bin/png2c
+PLIST_FILES=	bin/pgadmin3
 PORTDATA=	*
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/wx-config,/${WX_CONFIG:T},' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's,/usr/bin/xterm,${LOCALBASE}/bin/xterm,' ${WRKSRC}/plugins.d/plugins.ini
