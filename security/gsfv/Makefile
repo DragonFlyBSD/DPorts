@@ -1,18 +1,24 @@
 # Created by: Frederic Cambus
-# $FreeBSD: security/gsfv/Makefile 334311 2013-11-19 12:59:56Z ehaupt $
+# $FreeBSD: security/gsfv/Makefile 337089 2013-12-20 20:50:14Z pawel $
 
 PORTNAME=	gsfv
 PORTVERSION=	0.2.1
 PORTREVISION=	4
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	ijliao
+MASTER_SITES=	LOCAL/ijliao
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Create or verify Simple File Verification (SFV) checksum files
 
-PLIST_FILES=	bin/gsfv
+LICENSE=	BSD2CLAUSE
+
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
+
+PLIST_FILES=	bin/gsfv
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|\([[:blank:]]\)log|\1bb_log|' ${WRKSRC}/src/backbone.c
 
 .include <bsd.port.mk>
