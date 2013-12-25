@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/podofo/Makefile 328532 2013-09-27 22:56:06Z pawel $
+# $FreeBSD: graphics/podofo/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	podofo
 PORTVERSION=	0.9.2
@@ -17,13 +17,14 @@ LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
-USES=		cmake
+USES=		cmake dos2unix
 CMAKE_ARGS=	-DPODOFO_BUILD_SHARED:BOOL=TRUE \
 		-DPODOFO_BUILD_STATIC:BOOL=FALSE \
 		-DOPENSSL_INCLUDE_DIR:PATH="${OPENSSLINC}" \
 		-DOPENSSL_LIBRARIES:PATH="${OPENSSLDIR}"
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
+DOS2UNIX_FILES=	cmake/modules/FindFREETYPE.cmake
 
 OPTIONS_DEFINE=		IMPOSE JPEG PNG TIFF
 OPTIONS_DEFAULT=	JPEG PNG TIFF
