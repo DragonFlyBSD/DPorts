@@ -1,9 +1,9 @@
 # Created by: johans
-# $FreeBSD: graphics/webp/Makefile 329602 2013-10-06 16:43:13Z johans $
+# $FreeBSD: graphics/webp/Makefile 337191 2013-12-22 14:29:39Z makc $
 
 PORTNAME=	webp
 PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
