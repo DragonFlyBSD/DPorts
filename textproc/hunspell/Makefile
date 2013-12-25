@@ -1,9 +1,9 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: textproc/hunspell/Makefile 332249 2013-10-31 15:11:11Z bapt $
+# $FreeBSD: textproc/hunspell/Makefile 336854 2013-12-18 18:27:04Z tijl $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.3.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/Hunspell/${PORTVERSION}
 DIST_SUBDIR=	${PORTNAME}
@@ -14,6 +14,7 @@ COMMENT=	Improved spell-checker for Hungarian and other languages
 LICENSE=	GPLv2 LGPL21 MPL
 LICENSE_COMB=	dual
 
+CONFLICTS_INSTALL=	tinker-[0-9]*
 CONFIGURE_ARGS=	--disable-nls ${ICONV_CONFIGURE_ARG} --with-readline --with-ui
 GNU_CONFIGURE=	yes
 USES=		pathfix iconv ncurses readline shebangfix perl5
