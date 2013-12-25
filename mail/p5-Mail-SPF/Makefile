@@ -1,5 +1,5 @@
 # Created by: gmc@sonologic.nl
-# $FreeBSD: mail/p5-Mail-SPF/Makefile 331310 2013-10-22 20:02:50Z sunpoet $
+# $FreeBSD: mail/p5-Mail-SPF/Makefile 337264 2013-12-23 17:17:19Z sunpoet $
 
 PORTNAME=	Mail-SPF
 PORTVERSION=	2.9.0
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Object-oriented implementation of Sender Policy Framework
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 BUILD_DEPENDS=	p5-Error>=0:${PORTSDIR}/lang/p5-Error \
 		p5-Net-DNS>=0.62:${PORTSDIR}/dns/p5-Net-DNS \
