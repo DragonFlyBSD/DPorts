@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types-URI/Makefile 334010 2013-11-16 16:04:11Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Types-URI/Makefile 337271 2013-12-23 17:54:24Z sunpoet $
 
 PORTNAME=	MooseX-Types-URI
-PORTVERSION=	0.04
+PORTVERSION=	0.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,8 +17,7 @@ BUILD_DEPENDS=	p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Types>=0:${PORTSDIR}/devel/p5-MooseX-Types \
 		p5-MooseX-Types-Path-Class>=0:${PORTSDIR}/devel/p5-MooseX-Types-Path-Class \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
-		p5-URI-FromHash>=0:${PORTSDIR}/net/p5-URI-FromHash \
-		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
+		p5-URI-FromHash>=0:${PORTSDIR}/net/p5-URI-FromHash
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 
