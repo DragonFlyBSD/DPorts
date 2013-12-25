@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-django-pipeline/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-django-pipeline/Makefile 337182 2013-12-22 10:15:19Z antoine $
 
 PORTNAME=	django-pipeline
 PORTVERSION=	1.3.12
@@ -10,10 +10,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	Asset (css/js) packaging library for Django
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>0<1.5:${PORTSDIR}/www/py-django14
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django14>0<1.5:${PORTSDIR}/www/py-django14
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=easy_install
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
