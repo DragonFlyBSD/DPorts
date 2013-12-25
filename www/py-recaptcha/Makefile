@@ -1,8 +1,8 @@
 # Created by: Philip Paeps <philip@FreeBSD.org>
-# $FreeBSD: www/py-recaptcha/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-recaptcha/Makefile 336932 2013-12-19 16:01:34Z philip $
 
 PORTNAME=	recaptcha
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=	source/r/recaptcha-client
