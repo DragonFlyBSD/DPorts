@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/kludge3d/Makefile 329747 2013-10-07 23:40:23Z marino $
+# $FreeBSD: graphics/kludge3d/Makefile 337252 2013-12-23 14:03:20Z amdmi3 $
 
 PORTNAME=	kludge3d
 PORTVERSION=	20040822
@@ -10,8 +10,8 @@ MASTER_SITES=	SF/${PORTNAME}/source/2004-08-22
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple 3D editor
 
-LIB_DEPENDS=	3ds-1.3:${PORTSDIR}/graphics/lib3ds \
-		gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext
+LIB_DEPENDS=	lib3ds-1.so:${PORTSDIR}/graphics/lib3ds \
+		libgtkglext-x11-1.0.so:${PORTSDIR}/x11-toolkits/gtkglext
 
 USE_PYTHON=	yes
 USES=		gmake pkgconfig
@@ -27,7 +27,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include \
 LDFLAGS+=	-L${LOCALBASE}/lib \
 		-L${PYTHON_LIBDIR}/config -lm ${PTHREAD_LIBS}
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@EXTRA_CFLAGS@|@CFLAGS@|g ; \
