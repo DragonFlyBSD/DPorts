@@ -1,5 +1,5 @@
 # Created by: hosokawa
-# $FreeBSD: converters/ish/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/ish/Makefile 337009 2013-12-20 13:16:21Z pawel $
 
 PORTNAME=	ish
 PORTVERSION=	2.01a5
@@ -13,11 +13,11 @@ COMMENT=	Binary-to-text file-encoder
 
 MAKEFILE=	makefile
 MAKE_ARGS=	CFLAGS="${CFLAGS}" DEST=${PREFIX}/bin
-PLIST_FILES=	bin/ish
 ALL_TARGET=	ish
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/ish
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ish ${STAGEDIR}${PREFIX}/bin)
 
 .include <bsd.port.mk>
