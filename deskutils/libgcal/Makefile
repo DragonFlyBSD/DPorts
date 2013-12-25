@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: deskutils/libgcal/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/libgcal/Makefile 336352 2013-12-13 15:03:31Z bapt $
 
 PORTNAME=	libgcal
 PORTVERSION=	0.9.6
@@ -21,7 +21,5 @@ USES=		cmake iconv
 CMAKE_ARGS=	-DLIB_INSTALL_DIR="${LOCALBASE}/lib" \
 		-DENABLE_TESTS=OFF
 USE_LDCONFIG=	yes
-USE_GCC=	4.2+
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
