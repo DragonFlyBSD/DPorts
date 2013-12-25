@@ -1,22 +1,18 @@
 # Created by: Hardy Schumacher <hardy.schumacher@gmx.de>
-# $FreeBSD: devel/z80ex/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/z80ex/Makefile 337199 2013-12-22 16:32:32Z danilo $
 
 PORTNAME=	z80ex
-PORTVERSION=	1.1.20.1
+PORTVERSION=	1.1.21
 CATEGORIES=	devel
-MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/1.1.20rev1
-DISTNAME=	${PORTNAME}-1.1.20rev1
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	hardy.schumacher@gmx.de
 COMMENT=	ZiLOG Z80 CPU emulator library
 
-USE_GMAKE=	yes
-USE_LDCONFIG=	yes
+LICENSE=	GPLv2
 
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e 's/$$(TOOLS_PREFIX)gcc/$${CC}/' \
-		-e 's/$$(TOOLS_PREFIX)ar/$${AR}/' \
-		-e 's/-O2//' ${WRKSRC}/Makefile
+USES=		dos2unix gmake
+DOS2UNIX_FILES=	Makefile
+USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
