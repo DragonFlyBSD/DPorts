@@ -1,9 +1,8 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 336233 2013-12-11 22:24:01Z wg $
+# $FreeBSD: multimedia/vlc/Makefile 337086 2013-12-20 19:55:29Z nox $
 
 PORTNAME=	vlc
-DISTVERSION=	2.1.1
-PORTREVISION=	1
+DISTVERSION=	2.1.2
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -168,6 +167,7 @@ NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 
 NOTIFY_LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
+NOTIFY_USE=		GNOME=gtk20
 NOTIFY_CONFIGURE_ENABLE=	notify
 
 OPTIMIZED_CFLAGS_CFLAGS=	-O3 -ffast-math -fomit-frame-pointer
