@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 332882 2013-11-05 17:57:45Z sunpoet $
+# $FreeBSD: devel/p5-Mixin-Linewise/Makefile 337284 2013-12-23 18:30:23Z sunpoet $
 
 PORTNAME=	Mixin-Linewise
-PORTVERSION=	0.102
+PORTVERSION=	0.104
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
@@ -13,8 +13,7 @@ COMMENT=	Write your linewise code for handles; this does the rest
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
-		p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter
+BUILD_DEPENDS=	p5-Sub-Exporter>=0.900:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
