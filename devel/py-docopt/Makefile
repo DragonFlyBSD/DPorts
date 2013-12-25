@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-docopt/Makefile 334002 2013-11-16 14:52:00Z antoine $
+# $FreeBSD: devel/py-docopt/Makefile 337164 2013-12-21 21:34:18Z antoine $
 
 PORTNAME=	docopt
 PORTVERSION=	0.6.1
@@ -13,9 +13,8 @@ COMMENT=	Pythonic argument parser, that will make you smile
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=yes
 
 PORTDOCS=	README.rst
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
