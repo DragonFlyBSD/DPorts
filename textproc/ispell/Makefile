@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: textproc/ispell/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ispell/Makefile 337386 2013-12-24 21:22:25Z marino $
 
 PORTNAME?=	ispell
 PORTVERSION?=	3.3.02
