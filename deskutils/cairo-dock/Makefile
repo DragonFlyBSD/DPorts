@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/cairo-dock/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/cairo-dock/Makefile 337267 2013-12-23 17:46:58Z antoine $
 
 PORTNAME=	cairo-dock
 DISTVERSION=	3.2.1
@@ -13,7 +13,7 @@ COMMENT=	Cairo-Dock is a light and eye-candy dock
 LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
 		libcurl.so:${PORTSDIR}/ftp/curl \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
-		libgtkglext-x11-1.so:${PORTSDIR}/x11-toolkits/gtkglext
+		libgtkglext-x11-1.0.so:${PORTSDIR}/x11-toolkits/gtkglext
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		sox:${PORTSDIR}/audio/sox
 
