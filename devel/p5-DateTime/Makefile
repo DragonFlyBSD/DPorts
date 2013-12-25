@@ -1,8 +1,8 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime/Makefile 335988 2013-12-09 14:09:23Z sunpoet $
+# $FreeBSD: devel/p5-DateTime/Makefile 337353 2013-12-24 13:32:47Z jadawin $
 
 PORTNAME=	DateTime
-PORTVERSION=	1.04
+PORTVERSION=	1.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DROLSKY
