@@ -1,18 +1,16 @@
 # Created by: Radim Kolar
-# $FreeBSD: benchmarks/forkbomb/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/forkbomb/Makefile 337242 2013-12-23 13:58:59Z amdmi3 $
 
 PORTNAME=	forkbomb
 PORTVERSION=	1.4
 CATEGORIES=	benchmarks
-MASTER_SITES=	${MASTER_SITE_SUNSITE} \
+MASTER_SITES=	SUNSITE/system/benchmark \
 		http://home.tiscali.cz:8080/~cz210552/distfiles/
-MASTER_SITE_SUBDIR=	system/benchmark
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	System stress testing tool
 
-MAN8=		forkbomb.8
-PLIST_FILES=	sbin/forkbomb
+PLIST_FILES=	sbin/forkbomb \
+		man/man8/forkbomb.8.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
