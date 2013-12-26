@@ -1,5 +1,5 @@
 # Created by: Devaux Fabien <fab@gcu.info>
-# $FreeBSD: graphics/jpegoptim/Makefile 331846 2013-10-28 12:18:37Z ehaupt $
+# $FreeBSD: graphics/jpegoptim/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	jpegoptim
 PORTVERSION=	1.3.0
@@ -13,7 +13,7 @@ COMMENT=	Utility to optimize jpeg files
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libjpeg=${LOCALBASE}
