@@ -1,24 +1,24 @@
 # Created by: jpaetzel
-# $FreeBSD: www/py-dojango/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-dojango/Makefile 336935 2013-12-19 16:45:57Z wg $
 
 PORTNAME=	dojango
 PORTVERSION=	0.5.6
+PORTREVISION=	1
 CATEGORIES=	www python java
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jpaetzel@FreeBSD.org
-COMMENT=	A django application for building dojo
+COMMENT=	Django application for building dojo
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	${PORTNAME}
+PYDISTUTILS_AUTOPLIST=	yes
 
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-django
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.6:${PORTSDIR}/www/py-django
 
 OPTIONS_DEFINE=		JAVA
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJAVA}
