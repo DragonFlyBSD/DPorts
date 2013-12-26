@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/help_hannahs_horse/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD: games/help_hannahs_horse/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	help_hannahs_horse
 PORTVERSION=	1.0
@@ -10,7 +10,7 @@ DISTFILES=	hhh-${DISTVERSION}${EXTRACT_SUFX} \
 		${PORTNAME}_icons.tar.gz:icons
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Pacman with a fast food twist
 
 LICENSE=	GPLv2 OFL11
