@@ -1,12 +1,12 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: multimedia/dvdid/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/dvdid/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	dvdid
 PORTVERSION=	0.2.0a
 CATEGORIES=	multimedia
 MASTER_SITES=	http://dvdid.cjkey.org.uk/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Tool for calculating dvdids
 
 GNU_CONFIGURE=	yes
