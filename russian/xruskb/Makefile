@@ -1,11 +1,12 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: russian/xruskb/Makefile 333081 2013-11-07 11:40:03Z bsam $
+# $FreeBSD: russian/xruskb/Makefile 337004 2013-12-20 12:29:56Z ache $
 
 PORTNAME=	xruskb
 PORTVERSION=	1.15.4
 PORTREVISION=	2
 CATEGORIES=	russian x11
-MASTER_SITES=	ftp://ftp.yars.free.net/pub/source/xruskb/
+MASTER_SITES=	ftp://ftp.yars.free.net/pub/source/xruskb/ \
+		http://lav.yar.ru/download/xruskb/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Keyboard layout switcher and indicator
