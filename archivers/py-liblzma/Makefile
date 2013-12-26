@@ -1,23 +1,25 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: archivers/py-liblzma/Makefile 334231 2013-11-18 18:08:26Z dbn $
+# $FreeBSD: archivers/py-liblzma/Makefile 336923 2013-12-19 15:16:59Z dbn $
 
 PORTNAME=	liblzma
 PORTVERSION=	0.5.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=	source/p/py${PORTNAME}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	${PYDISTUTILS_PKGNAME}-${PORTVERSION}
+DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Python binding for the LZMA compression library
 
-USES=		pkgconfig
-USE_BZIP2=	yes
-USE_PYTHON=	2.6+
-USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	py${PORTNAME}
+LICENSE=	LGPL3
+
+USES=			pkgconfig
+USE_BZIP2=		yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.pre.mk>
 
@@ -30,6 +32,6 @@ post-patch:
 .endif
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/lzma.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/lzma.so
 
 .include <bsd.port.post.mk>
