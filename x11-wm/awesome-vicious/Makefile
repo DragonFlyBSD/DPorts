@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: x11-wm/awesome-vicious/Makefile 333151 2013-11-07 20:08:14Z wg $
+# $FreeBSD: x11-wm/awesome-vicious/Makefile 337256 2013-12-23 14:49:25Z wg $
 
 PORTNAME=	awesome-vicious
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://git.sysphere.org/vicious/snapshot/ \
 		LOCAL/wg
