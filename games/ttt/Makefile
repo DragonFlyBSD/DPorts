@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/ttt/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ttt/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	ttt
 PORTVERSION=	2011.04
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/ttt/ \
 		ftp://ftp.billsgames.com/unix/x/ttt/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Simple one or two player Tic Tac Toe game
 
 LICENSE=	GPLv2
