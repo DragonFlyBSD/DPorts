@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/exrtools/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD: graphics/exrtools/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
@@ -13,9 +13,9 @@ COMMENT=	Utilities for manipulating with HDR images in OpenEXR format
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	IlmImf:${PORTSDIR}/graphics/OpenEXR \
-		png15:${PORTSDIR}/graphics/png \
-		jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libIlmImf.so:${PORTSDIR}/graphics/OpenEXR \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig gmake
