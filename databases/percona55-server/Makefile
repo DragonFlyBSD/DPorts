@@ -1,11 +1,11 @@
-# $FreeBSD: databases/percona55-server/Makefile 331890 2013-10-28 19:00:51Z flo $
+# $FreeBSD: databases/percona55-server/Makefile 337107 2013-12-21 00:25:08Z flo $
 
 PORTNAME?=	percona
 DISTVERSION=	5.5.34-32.0
 DISTNAME=	Percona-Server-5.5.34-rel32.0
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
-MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.5/LATEST/release-${DISTVERSION:S/rel//}/591/source/
+MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.5/${DISTNAME}/source/
 MASTER_SITE_SUBDIR=	MySQL-5.5
 PKGNAMESUFFIX?=	55-server
 
