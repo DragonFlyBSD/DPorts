@@ -1,5 +1,5 @@
 # Created by: Eric P. Scott <eps+pbug0703@ana.com>
-# $FreeBSD: graphics/lcdtest/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD: graphics/lcdtest/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lcdtest
 PORTVERSION=	1.18
@@ -7,7 +7,7 @@ PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.brouhaha.com/~eric/software/lcdtest/download/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	LCD monitor test pattern generator
 
 LICENSE=	GPLv3
