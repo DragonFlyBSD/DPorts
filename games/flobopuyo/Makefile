@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/flobopuyo/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/flobopuyo/Makefile 337141 2013-12-21 12:53:21Z amdmi3 $
 
 PORTNAME=	flobopuyo
 PORTVERSION=	0.20
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	http://www.ios-software.com/flobopuyo/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -12,10 +12,12 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Clone of the famous PuyoPuyo
 
-USES=		bison
-USE_GMAKE=	yes
+USES=		bison gmake dos2unix
+DOS2UNIX_FILES=	IosVector.cpp PuyoGame.cpp
 USE_SDL=	sdl mixer image
-USE_DOS2UNIX=	yes
+
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
 
 DESKTOP_ENTRIES="FloboPuyo" \
 		"Clone of the famous PuyoPuyo" \
@@ -24,16 +26,7 @@ DESKTOP_ENTRIES="FloboPuyo" \
 		"Game;BlocksGame;" \
 		false
 
-NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name '._*' -delete
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|sdl-config|${SDL_CONFIG}|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|g++|${CXX}|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|^DATADIR=.*$$|DATADIR=${DATADIR}|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|^INSTALL_DATADIR=.*$$|INSTALL_DATADIR=${DATADIR}|' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|^INSTALL_BINDIR=.*$$|INSTALL_BINDIR=${PREFIX}/bin|' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
