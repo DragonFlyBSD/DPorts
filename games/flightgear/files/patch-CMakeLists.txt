@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2012-08-27 18:14:13.000000000 +0200
++++ CMakeLists.txt	2012-08-27 18:14:52.000000000 +0200
+@@ -225,7 +225,7 @@
+     endif(LIBSVN_FOUND)
+ endif(ENABLE_LIBSVN)
+ 
+-find_package(PLIB REQUIRED puaux pu js fnt)
++find_package(PLIB REQUIRED puaux pu js fnt net)
+ 
+ # FlightGear and SimGear versions need to match
+ find_package(SimGear ${FLIGHTGEAR_VERSION} REQUIRED)
