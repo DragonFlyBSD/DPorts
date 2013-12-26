@@ -1,5 +1,5 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: security/rifiuti2/Makefile 329627 2013-10-06 19:51:55Z antoine $
+# $FreeBSD: security/rifiuti2/Makefile 337217 2013-12-22 20:35:21Z antoine $
 
 PORTNAME=	rifiuti2
 DISTVERSION=	0.5.1
@@ -9,7 +9,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Tool for analyzing Windows recycle bin
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 GNU_CONFIGURE=	yes
 USES=		gettext pkgconfig
