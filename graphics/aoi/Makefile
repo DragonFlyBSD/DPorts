@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/aoi/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/aoi/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	aoi
 PORTVERSION=	2.9.2
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/ArtOfIllusion/${PORTVERSION}
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 DIST_SUBDIR=	java
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Open source Java written 3D modelling and rendering studio
 
 LICENSE=	GPLv2
