@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: emulators/sim6811/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/sim6811/Makefile 337012 2013-12-20 13:36:41Z pawel $
 
 PORTNAME=	sim6811
 PORTVERSION=	1.6
@@ -10,9 +10,23 @@ DISTNAME=	sim
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Motorola 6811 simulator
+COMMENT=	Motorola 6811 simulator
 
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
+ALL_TARGET=	sim
+
+PLIST_FILES=	bin/sim6811 man/man1/sim6811.1.gz
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|^CC =|CC ?=| ; \
+		 s|^CFLAGS =|#CFLAGS =| ; \
+		 s|-O2|| ; \
+		 s|-o sim |-o sim6811 |' ${WRKSRC}/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/sim6811 ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/sim6811.1 ${STAGEDIR}${MANPREFIX}/man/man1
+
 .include <bsd.port.mk>
