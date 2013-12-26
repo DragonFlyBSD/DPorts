@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/osgg/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/osgg/Makefile 337103 2013-12-20 23:32:26Z amdmi3 $
 
 PORTNAME=	osgg
 PORTVERSION=	0.99
@@ -16,7 +16,12 @@ USE_GL=		yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
+
+post-extract:
+	@${FIND} -d ${WRKSRC} -name .svn -exec ${RM} -rf {} \;
+
 post-patch:
 	@${RM} -f ${WRKSRC}/osgg
 	@${REINPLACE_CMD} -e 's|"[a-z]*.txt"|DATADIR&|; s|endian.h|sys/&|' \
@@ -24,16 +29,12 @@ post-patch:
 
 do-build:
 	cd ${WRKSRC} && ${CXX} ${CXXFLAGS} `${SDL_CONFIG} --libs --cflags` \
-		-lGL -lSDL_image -lSDL_ttf -lSDL_mixer -o osgg \
+		-lGL -lSDL_image -lSDL_ttf -lSDL_mixer -o ${PORTNAME} \
 		-DDATADIR="\"${DATADIR}/\"" \
 	       	main.cpp text.cpp sound.cpp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/osgg ${PREFIX}/bin/
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${WRKSRC}/*.ogg ${WRKSRC}/Bandal.ttf \
-		${WRKSRC}/icon.png ${DATADIR}
-	${MKDIR} ${DATADIR}/levels
-	${INSTALL_DATA} ${WRKSRC}/levels/* ${DATADIR}/levels
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "*.txt *.ogg Bandal.ttf icon.png levels" ${STAGEDIR}${DATADIR}/
 
 .include <bsd.port.mk>
