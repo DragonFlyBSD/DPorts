@@ -1,4 +1,4 @@
-@comment $FreeBSD: net/exabgp/pkg-plist 326286 2013-09-04 15:26:37Z zi $
+@comment $FreeBSD: net/exabgp/pkg-plist 336900 2013-12-19 13:27:24Z zi $
 etc/exabgp/exabgp.env
 sbin/exabgp
 %%PYTHON_SITELIBDIR%%/exabgp/__init__.py
@@ -57,6 +57,8 @@ sbin/exabgp
 %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/__init__.pyc
 %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/__init__.py
 %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/__init__.pyc
+%%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/aigp.py
+%%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/aigp.pyc
 %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/aggregator.py
 %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/aggregator.pyc
 %%PYTHON_SITELIBDIR%%/exabgp/bgp/message/update/attribute/aspath.py

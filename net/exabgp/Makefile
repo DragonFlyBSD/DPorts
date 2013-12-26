@@ -1,8 +1,8 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/exabgp/Makefile 327877 2013-09-22 15:51:33Z zi $
+# $FreeBSD: net/exabgp/Makefile 336900 2013-12-19 13:27:24Z zi $
 
 PORTNAME=	exabgp
-PORTVERSION=	3.2.13
+PORTVERSION=	3.2.18
 CATEGORIES=	net
 MASTER_SITES=	GH GHC \
 		http://mirrors.rit.edu/zi/
@@ -14,9 +14,9 @@ COMMENT=	A BGP engine and route injector
 LICENSE=	BSD
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	thomas-mangin
+GH_ACCOUNT=	Exa-Networks
 GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	3ccdb34
+GH_COMMIT=	51d6b56
 USE_PYTHON=	yes
 SUB_FILES=	pkg-message exabgp.sh
 SUB_LIST=	PYTHON_LIBDIR=${PYTHON_LIBDIR} PYTHON_CMD=${PYTHON_CMD} \
