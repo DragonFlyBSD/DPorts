@@ -1,5 +1,5 @@
 # Created by: mig
-# $FreeBSD: security/ssh_askpass_gtk2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ssh_askpass_gtk2/Makefile 336735 2013-12-17 15:57:48Z madpilot $
 
 PORTNAME=	ssh_askpass_gtk2
 PORTVERSION=	0.4
@@ -19,12 +19,12 @@ USES=		pkgconfig
 
 PLIST_FILES=	bin/ssh-askpass-fullscreen
 
-NO_STAGE=	yes
 post-patch:
-	${REINPLACE_CMD} -e "s,gcc,${CC}," ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e "s,gcc,${CC}," \
+		-e "/${CC}/s,$$, -lX11," ${WRKSRC}/Makefile
 
 do-install:
 	cd ${WRKSRC};\
-	${INSTALL_PROGRAM} ssh-askpass-fullscreen ${PREFIX}/bin/ssh-askpass-fullscreen;\
+	${INSTALL_PROGRAM} ssh-askpass-fullscreen ${STAGEDIR}${PREFIX}/bin/ssh-askpass-fullscreen
 
 .include <bsd.port.mk>
