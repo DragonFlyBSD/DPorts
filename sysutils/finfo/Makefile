@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: sysutils/finfo/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/finfo/Makefile 337258 2013-12-23 16:24:11Z mich $
 
 PORTNAME=	finfo
 PORTVERSION=	0.1
@@ -9,15 +9,14 @@ MASTER_SITES=	http://freebsdcluster.org/~mich/software/
 MAINTAINER=	mich@FreeBSD.org
 COMMENT=	Finfo displays potentially useful information about a file
 
-PLIST_FILES=	bin/finfo
-MAN1=		finfo.1
+PLIST_FILES=	bin/finfo man/man1/finfo.1.gz
 
-NO_STAGE=	yes
+
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -o ${PORTNAME} ${PORTNAME}.c)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1.gz ${PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1.gz ${STAGEDIR}${PREFIX}/man/man1/
 
 .include <bsd.port.mk>
