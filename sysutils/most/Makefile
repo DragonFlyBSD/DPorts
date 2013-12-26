@@ -1,5 +1,5 @@
 # Created by: rhwang@bigpanda.com
-# $FreeBSD: sysutils/most/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/most/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	most
 PORTVERSION=	5.0.0
@@ -13,7 +13,7 @@ COMMENT=	Pager (like less) which has support for windows and binary files
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	slang.2:${PORTSDIR}/devel/libslang2
+LIB_DEPENDS=	libslang.so:${PORTSDIR}/devel/libslang2
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
