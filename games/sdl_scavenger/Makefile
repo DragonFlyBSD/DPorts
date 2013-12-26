@@ -1,4 +1,4 @@
-# $FreeBSD: games/sdl_scavenger/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/sdl_scavenger/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	sdl_scavenger
 PORTVERSION=	145.1.2010.11.5
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF/sdlscavenger/
 DISTNAME=	sdlscav-145.1_2010_11_5
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Lode Runner like game
 
 LICENSE=	GPLv2
