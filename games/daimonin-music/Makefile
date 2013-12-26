@@ -1,17 +1,16 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: games/daimonin-music/Makefile 330726 2013-10-18 07:19:25Z bapt $
+# $FreeBSD: games/daimonin-music/Makefile 337624 2013-12-26 22:15:01Z marino $
 
 PORTNAME=	daimonin-music
-PORTVERSION=	20100827
+PORTVERSION=	20120402
 CATEGORIES=	games
 MASTER_SITES=	SF/daimonin/Addon%20packs/Music/
-DISTFILES=	AllMusic.zip
-DIST_SUBDIR=	${PORTNAME:S/-music//}
+DISTNAME=	AllMusic
+DIST_SUBDIR=	daimonin
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Music for daimonin client
 
-NO_CHECKSUM=	true
 NO_BUILD=	true
 USE_ZIP=	true
 
