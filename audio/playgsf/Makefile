@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/playgsf/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/playgsf/Makefile 336820 2013-12-18 11:55:28Z ehaupt $
 
 PORTNAME=	playgsf
 PORTVERSION=	0.7.1
@@ -13,8 +13,7 @@ COMMENT=	Command-line player for gsf audio files
 
 LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao
 
-USES=		gmake
-USE_DOS2UNIX=	yes
+USES=		gmake dos2unix
 GNU_CONFIGURE=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
