@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/telak/Makefile 331587 2013-10-25 14:17:10Z ehaupt $
+# $FreeBSD: graphics/telak/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	telak
 PORTVERSION=	0.6
@@ -13,8 +13,8 @@ COMMENT=	Tool to draw pictures on your root window
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl \
-		gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
 USES=		gmake
 USE_EFL=	imlib2
