@@ -1,5 +1,5 @@
 # Created by: kirk@strauser.com
-# $FreeBSD: shells/bash-completion/Makefile 328796 2013-09-30 14:23:54Z adamw $
+# $FreeBSD: shells/bash-completion/Makefile 337087 2013-12-20 20:00:54Z adamw $
 
 PORTNAME=	bash-completion
 PORTVERSION=	2.1
@@ -10,14 +10,12 @@ MASTER_SITES=	http://bash-completion.alioth.debian.org/files/
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	Programmable completion library for Bash
 
-.if defined(WITH_BASH_DEVEL)
-RUN_DEPENDS=bash:${PORTSDIR}/shells/bash-devel
-.else
-RUN_DEPENDS=bash:${PORTSDIR}/shells/bash
-.endif
+OPTIONS_DEFINE=		BASH_DEVEL
+BASH_DEVEL_DESC=	Use shells/bash-devel instead of shells/bash
 
 CONFLICTS=	bash-completion-classic-[0-9]*
 
+USE_AUTOTOOLS=	aclocal automake
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
@@ -26,7 +24,15 @@ USE_BZIP2=	yes
 SUB_FILES=	pkg-message
 SUB_LIST+=	RUNFILE=${DATADIR}/bash_completion.sh
 
-post-patch:
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MBASH_DEVEL}
+RUN_DEPENDS=bash:${PORTSDIR}/shells/bash-devel
+.else
+RUN_DEPENDS=bash:${PORTSDIR}/shells/bash
+.endif
+
+post-configure:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g; \
 		s|/etc/bash_completion|${PREFIX}&|g; \
 		s|/usr\(/sbin/postconf\)|${PREFIX}\1|g; \
