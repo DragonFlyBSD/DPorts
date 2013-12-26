@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/codeworker/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD: devel/codeworker/Makefile 337003 2013-12-20 12:26:23Z pawel $
 
 PORTNAME=	codeworker
 PORTVERSION=	4.5.3
@@ -27,7 +27,7 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.cpp" -or -name "*.h" | ${XARGS} \
 		${REINPLACE_CMD} -e \
 		's|<features.h>|<cstdio>| ; \
-		 s|__GNUC_PREREQ |__GNUC_PREREQ__|'
+		 s|(__cplusplus) \&\&|(__cplusplus) // \&\&|'
 
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} codeworker ${STAGEDIR}${PREFIX}/bin)
