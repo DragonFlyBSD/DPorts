@@ -1,0 +1,3 @@
+bin/dataplot
+%%PORTDOCS%%%%DOCSDIR%%/dpsnapsh.pdf
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
