@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: databases/memcached/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/memcached/Makefile 336999 2013-12-20 11:57:16Z antoine $
 
 PORTNAME=	memcached
 PORTVERSION=	1.4.15
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	distfiles
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	High-performance distributed memory object cache system
 
-LIB_DEPENDS=	libevent-1.so:${PORTSDIR}/devel/libevent
+LIB_DEPENDS=	libevent-1.4.so:${PORTSDIR}/devel/libevent
 
 TEST_DEPENDS=	prove:${PORTSDIR}/lang/${PERL_PORT} \
 		git:${PORTSDIR}/devel/git
