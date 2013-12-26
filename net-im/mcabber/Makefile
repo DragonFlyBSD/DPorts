@@ -1,9 +1,8 @@
 # Created by: vsevolod
-# $FreeBSD: net-im/mcabber/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD: net-im/mcabber/Makefile 336778 2013-12-17 21:58:08Z dhn $
 
 PORTNAME=	mcabber
-PORTVERSION=	0.10.1
-PORTREVISION=	5
+PORTVERSION=	0.10.2
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.lilotux.net/~mikael/mcabber/files/ CENKES
 
