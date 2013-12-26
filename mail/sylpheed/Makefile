@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD: mail/sylpheed/Makefile 336838 2013-12-18 15:06:19Z ehaupt $
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=--disable-ssl
 .endif
 
 .if ${PORT_OPTIONS:MGPGME}
-LIB_DEPENDS+=	gpgme:${PORTSDIR}/security/gpgme
+LIB_DEPENDS+=	libgpgme.so:${PORTSDIR}/security/gpgme
 RUN_DEPENDS+=	gpg:${PORTSDIR}/security/gnupg
 CONFIGURE_ARGS+=--enable-gpgme
 .else
@@ -58,14 +58,14 @@ CONFIGURE_ARGS+=--disable-gpgme
 .endif
 
 .if ${PORT_OPTIONS:MCOMPFACE}
-LIB_DEPENDS+=	compface:${PORTSDIR}/mail/faces
+LIB_DEPENDS+=	libcompface.so:${PORTSDIR}/mail/faces
 CONFIGURE_ARGS+=--enable-compface
 .else
 CONFIGURE_ARGS+=--disable-compface
 .endif
 
 .if ${PORT_OPTIONS:MJPILOT}
-LIB_DEPENDS+=	pisock:${PORTSDIR}/palm/pilot-link
+LIB_DEPENDS+=	libpisock.so:${PORTSDIR}/palm/pilot-link
 RUN_DEPENDS+=	jpilot:${PORTSDIR}/palm/jpilot
 CONFIGURE_ARGS+=--enable-jpilot
 .else
@@ -80,7 +80,7 @@ CONFIGURE_ARGS+=--disable-ldap
 .endif
 
 .if ${PORT_OPTIONS:MGTKSPELL}
-LIB_DEPENDS+=	gtkspell:${PORTSDIR}/textproc/gtkspell
+LIB_DEPENDS+=	libgtkspell.so:${PORTSDIR}/textproc/gtkspell
 CONFIGURE_ARGS+=--enable-gtkspell
 .else
 CONFIGURE_ARGS+=--disable-gtkspell
