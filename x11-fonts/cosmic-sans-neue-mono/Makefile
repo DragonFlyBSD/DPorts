@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/cosmic-sans-neue-mono/Makefile 336031 2013-12-09 20:34:13Z rakuco $
+# $FreeBSD: x11-fonts/cosmic-sans-neue-mono/Makefile 337398 2013-12-24 23:22:35Z rakuco $
 
 PORTNAME=	cosmic-sans-neue-mono
 PORTVERSION=	1.3.1
@@ -12,10 +12,10 @@ COMMENT=	Programming font, designed with functionality in mind
 LICENSE=	OFL11
 
 NO_BUILD=	yes
+NO_WRKSUBDIR=	yes
 USE_ZIP=	yes
 
 FONTDIR=	${STAGEDIR}${PREFIX}/lib/X11/fonts/${PORTNAME}
-WRKSRC=		${WRKDIR}
 
 OPTIONS_DEFINE=	DOCS
 
