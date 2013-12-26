@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/xmixer/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD: audio/xmixer/Makefile 337243 2013-12-23 13:59:06Z amdmi3 $
 
 PORTNAME=	xmixer
 PORTVERSION=	0.9.4
@@ -16,9 +16,8 @@ WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PROGRAMS}
 
-MAN1=		xmixer.1
-PLIST_FILES=	bin/xmixer
-NO_STAGE=	yes
+PLIST_FILES=	bin/xmixer \
+		man/man1/xmixer.1.gz
 
 .include <bsd.port.pre.mk>
 
@@ -43,8 +42,8 @@ post-patch:
 
 do-install:
 .for file in ${PROGRAMS}
-	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${PREFIX}/bin/${file}
+	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/bin/${file}
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/xmixer.man ${MANPREFIX}/man/man1/xmixer.1
+	${INSTALL_MAN} ${WRKSRC}/xmixer.man ${STAGEDIR}${MAN1PREFIX}/man/man1/xmixer.1
 
 .include <bsd.port.post.mk>
