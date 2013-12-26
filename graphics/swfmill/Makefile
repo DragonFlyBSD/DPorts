@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/swfmill/Makefile 332496 2013-11-02 15:14:35Z wg $
+# $FreeBSD: graphics/swfmill/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	swfmill
 PORTVERSION=	0.3.3
@@ -14,9 +14,10 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 
-USES=		iconv gmake pkgconfig
+USES=		dos2unix iconv gmake pkgconfig
 USE_GNOME=	libxml2 libxslt
 USE_AUTOTOOLS=	libtool
+DOS2UNIX_FILES=	src/swft/swft_import_ttf.cpp
 
 PLIST_FILES=	bin/swfmill
 
