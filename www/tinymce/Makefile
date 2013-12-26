@@ -1,8 +1,8 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce/Makefile 336306 2013-12-13 01:17:49Z sunpoet $
+# $FreeBSD: www/tinymce/Makefile 337278 2013-12-23 18:29:56Z sunpoet $
 
 PORTNAME=	tinymce
-PORTVERSION=	4.0.11
+PORTVERSION=	4.0.12
 CATEGORIES=	www
 MASTER_SITES=	http://download.moxiecode.com/${PORTNAME}/ \
 		LOCAL/sunpoet
@@ -36,7 +36,9 @@ genplist: do-clean extract
 		${ECHO} "@group www" >> ${MS_PLIST} && \
 		${FIND} -s * -type f | ${SED} 's|^|%%WWWDIR%%/|' >> ${MS_PLIST} && \
 		${FIND} -s * -type d | ${TAIL} -r | ${SED} 's|^|@dirrm %%WWWDIR%%/|' >> ${MS_PLIST} && \
-		${ECHO} '@dirrmtry %%WWWDIR%%' >> ${MS_PLIST}
+		${ECHO} '@dirrmtry %%WWWDIR%%' >> ${MS_PLIST} && \
+		${ECHO} "@owner" > ${MS_PLIST} && \
+		${ECHO} "@group" >> ${MS_PLIST}
 #.for dir in ${MS_DIRRMTRY}
 #	${REINPLACE_CMD} '/^@dirrm %%WWWDIR%%\/${dir:C/\//\\\//g}$$/ s|@dirrm|&try|' ${MS_PLIST}
 #.endfor
