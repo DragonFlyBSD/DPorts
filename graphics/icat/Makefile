@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/icat/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD: graphics/icat/Makefile 336824 2013-12-18 11:59:14Z ehaupt $
 
 PORTNAME=	icat
 PORTVERSION=	0.4
@@ -8,8 +8,7 @@ CATEGORIES=	graphics
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Displays images in 256-color capable terminals
 
-USES=		gmake
-USE_DOS2UNIX=	Makefile
+USES=		gmake dos2unix
 USE_EFL=	imlib2
 USE_GITHUB=	yes
 GH_ACCOUNT=	atextor
