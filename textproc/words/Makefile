@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: textproc/words/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/words/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	words
 PORTVERSION=	1.97F
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://archives.nd.edu/whitaker/
 DISTNAME=	${PORTNAME}all
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A Latin-English Dictionary Program
 
 USES=		ada
