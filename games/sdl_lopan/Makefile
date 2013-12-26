@@ -1,4 +1,4 @@
-# $FreeBSD: games/sdl_lopan/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/sdl_lopan/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	sdl_lopan
 PORTVERSION=	10
@@ -11,7 +11,7 @@ DISTFILES=	sdllopan-${DISTVERSION}.tgz \
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	sdllopan-${DISTVERSION}.tgz
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Mahjong game remake
 
 LICENSE=	GPLv2
