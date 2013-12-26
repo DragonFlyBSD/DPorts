@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/cbview/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/cbview/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	cbview
 PORTVERSION=	0.06
@@ -6,7 +6,7 @@ PORTREVISION=	8
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.sourcefiles.org/Toys/Humor/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Viewer/converter for CBR/CBZ comic book archives
 
 LICENSE=	GPLv2
