@@ -1,8 +1,8 @@
 # Created by: Cyril Guibourg
-# $FreeBSD: mail/milter-greylist-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/milter-greylist-devel/Makefile 336739 2013-12-17 16:25:53Z swills $
 
 PORTNAME=	milter-greylist
-PORTVERSION=	4.3.9
+PORTVERSION=	4.5.7
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/ \
 		http://fossies.org/unix/privat/
@@ -14,7 +14,7 @@ COMMENT=	Easy-to-use greylist milter for sendmail and postfix (development)
 
 LICENSE=	BSD
 
-CONFLICTS=	milter-greylist-4.2.*
+CONFLICTS=	milter-greylist-4.2.* milter-greylist-4.4.*
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 MAKE_JOBS_UNSAFE=	yes
