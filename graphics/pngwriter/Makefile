@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/pngwriter/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pngwriter/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	pngwriter
 PORTVERSION=	0.5.4
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	graphics devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	C++ library for creating PNG images
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
