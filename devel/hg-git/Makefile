@@ -1,8 +1,8 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/hg-git/Makefile 330310 2013-10-14 12:10:40Z wg $
+# $FreeBSD: devel/hg-git/Makefile 337220 2013-12-22 21:21:24Z antoine $
 
 PORTNAME=	hg-git
-PORTVERSION=	0.4.0
+PORTVERSION=	0.5.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,6 +19,5 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}dulwich>=*:${PORTSDIR}/devel/dulwich \
 USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
-PYDISTUTILS_PKGNAME=	${PORTNAME:S/-/_/}
 
 .include <bsd.port.mk>
