@@ -1,39 +1,27 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/qiv/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/qiv/Makefile 337008 2013-12-20 13:13:31Z danilo $
 
 PORTNAME=	qiv
-PORTVERSION=	2.2.4
-PORTREVISION=	1
+PORTVERSION=	2.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://spiegl.de/qiv/download/ \
 		http://www.predatorlabs.net/dl/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Small, fast GDK/Imlib2 image viewer
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libImlib2.so:${PORTSDIR}/graphics/imlib2
+LIB_DEPENDS=	libImlib2.so:${PORTSDIR}/graphics/imlib2 \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
+		libexif.so:${PORTSDIR}/graphics/libexif
 
 USES=		gmake pkgconfig
 USE_GNOME=	gtk20
 
-OPTIONS_DEFINE=	XINERAMA
-
-MAN1=		qiv.1
-PLIST_FILES=	bin/qiv
+PLIST_FILES=	bin/qiv man/man1/qiv.1.gz
 USE_XORG+=	x11
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-post-patch-script:
-.if ${PORT_OPTIONS:MXINERAMA}
-USE_XORG+=	xinerama
-.else
-	@${REINPLACE_CMD} 's|GTD.*=|#|' ${WRKSRC}/Makefile
-.endif
 
 do-configure:
 	@${REINPLACE_CMD} 's|/usr/local|${PREFIX}|; \
@@ -43,7 +31,7 @@ do-configure:
 		${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qiv ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/qiv.1 ${MAN1PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/qiv ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/qiv.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
 
 .include <bsd.port.mk>
