@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/icebreaker/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/icebreaker/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	icebreaker
 PORTVERSION=	1.9.8
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://mattdm.org/icebreaker/1.9.x/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Game similar to Jezzball or Barrack
 
 LICENSE=	GPLv2
