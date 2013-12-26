@@ -1,5 +1,5 @@
 # Created by: ptiJo
-# $FreeBSD: x11-fm/xfe/Makefile 334946 2013-11-26 15:40:34Z gahr $
+# $FreeBSD: x11-fm/xfe/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	xfe
 PORTVERSION=	1.37
@@ -27,6 +27,7 @@ post-patch:
 		${WRKSRC}/src/XFileExplorer.cpp \
 		${WRKSRC}/src/help.h \
 		${WRKSRC}/src/xfedefs.h
+	@${REINPLACE_CMD} -e 's|freetype/||g' ${WRKSRC}/configure
 
 .include <bsd.port.options.mk>
 
