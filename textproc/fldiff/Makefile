@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/fldiff/Makefile 331328 2013-10-22 21:51:59Z ehaupt $
+# $FreeBSD: textproc/fldiff/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
@@ -14,7 +14,7 @@ COMMENT=	Graphical diff program using FLTK
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 
 GNU_CONFIGURE=	yes
 
