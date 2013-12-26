@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/zeroer/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/zeroer/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	zeroer
 PORTVERSION=	0.1
@@ -10,7 +10,7 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line utility for wiping unallocated space on a filesystem
 
-LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt
 
 PLIST_FILES=	bin/zeroer man/man1/zeroer.1.gz
 PORTDOCS=	README
