@@ -1,8 +1,8 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: audio/quimup/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD: audio/quimup/Makefile 336857 2013-12-18 18:58:09Z danilo $
 
 PORTNAME=	quimup
-PORTVERSION=	1.3.0
+PORTVERSION=	1.3.1
 CATEGORIES=	audio
 MASTER_SITES=	SF/musicpd/Quimup/${PORTVERSION}
 DISTNAME=	${PORTNAME}_${PORTVERSION}_src
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libmpdclient.so:${PORTSDIR}/audio/libmpdclient
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
-USES=		qmake
+USES=		pkgconfig qmake
 USE_QT4=	corelib gui network \
 		moc_build rcc_build uic_build
 
