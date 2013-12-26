@@ -1,11 +1,11 @@
 # Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-# $FreeBSD: emulators/javatari/Makefile 335680 2013-12-05 19:13:14Z danilo $
+# $FreeBSD: emulators/javatari/Makefile 336918 2013-12-19 14:43:27Z danilo $
 
 PORTNAME=	javatari
-PORTVERSION=	3.40
+PORTVERSION=	4.0
 CATEGORIES=	emulators java
 MASTER_SITES=	http://javatari.org/files/
-DISTNAME=	${PORTNAME}340
+DISTNAME=	${PORTNAME}40
 EXTRACT_SUFX=	.jar
 EXTRACT_ONLY=
 
@@ -20,7 +20,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 PLIST_FILES=	%%JAVAJARDIR%%/${DISTNAME}${EXTRACT_SUFX} \
-				bin/javatari
+		bin/javatari
 SUB_FILES=	javatari
 SUB_LIST+=	JARFILE="${JARFILE}"
 JARFILE=	${DISTNAME}${EXTRACT_SUFX}
