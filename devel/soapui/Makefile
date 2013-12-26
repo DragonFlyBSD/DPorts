@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: devel/soapui/Makefile 333371 2013-11-10 10:30:08Z wg $
+# $FreeBSD: devel/soapui/Makefile 336921 2013-12-19 15:11:32Z wg $
 
 PORTNAME=	soapui
-PORTVERSION=	4.6.1
+PORTVERSION=	4.6.3
 CATEGORIES=	devel java www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/
 DISTNAME=	SoapUI-${PORTVERSION}-linux-bin
