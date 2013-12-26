@@ -1,49 +1,41 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/vectoroids/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/vectoroids/Makefile 337234 2013-12-23 10:01:16Z nemysis $
 
 PORTNAME=	vectoroids
 PORTVERSION=	1.1.0
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/vectoroids/src/ \
 		ftp://ftp.billsgames.com/unix/x/vectoroids/src/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Vector-based rock-shooting game similar to Asteroids
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	image mixer sdl
 
-PLIST_FILES=	bin/${PORTNAME} \
-		share/pixmaps/${PORTNAME}.png
-
-MAN6=		${PORTNAME}.6
-
-PORTDATA=	*
 PORTDOCS=	CHANGES.txt README.txt
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
+
+DESKTOP_ENTRIES="Vectoroids" "" "${PORTNAME}" \
+		"${PORTNAME}" "Game;ArcadeGame;" ""
+
+post-patch:
+	@${FIND} ${WRKDIR} -name .xvpics | ${XARGS} ${RM} -rf
 
 do-install:
-# Executable
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+.for d in images music sounds
+	@(cd ${WRKSRC}/data && ${COPYTREE_SHARE} ${d} ${STAGEDIR}${DATADIR})
+.endfor
+	${LN} -sf ${DATADIR}/images/icon.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${MAN6PREFIX}/man/man6/
 
-# Data
-	(cd ${WRKSRC}/data && ${COPYTREE_SHARE} "images music sounds" ${DATADIR})
-
-# Pixmaps
-	${INSTALL_DATA} ${WRKSRC}/data/images/icon.png ${PREFIX}/share/pixmaps/${PORTNAME}.png
-
-# Documentation
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.  for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.  endfor
-.endif
-	${INSTALL_MAN} ${WRKSRC}/${MAN6} ${MAN6PREFIX}/man/man6
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
