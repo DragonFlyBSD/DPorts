@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/gcpio/Makefile 328015 2013-09-23 15:43:51Z naddy $
+# $FreeBSD: archivers/gcpio/Makefile 336736 2013-12-17 16:01:38Z naddy $
 
 PORTNAME=	cpio
 PORTVERSION=	2.11
@@ -26,6 +26,6 @@ NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
 
 regression-test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} check
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
 
 .include <bsd.port.mk>
