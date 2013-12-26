@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/skencil/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/skencil/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	skencil
 PORTVERSION=	1.0.a784
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.a/alpha_rev/}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Interactive drawing program
 
 LICENSE=	LGPL20
