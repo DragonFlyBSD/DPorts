@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: net/py-smb/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-smb/Makefile 337211 2013-12-22 19:36:00Z rm $
 
 PORTNAME=	smb
-PORTVERSION=	1.1.6
+PORTVERSION=	1.1.8
 CATEGORIES=	net python
 MASTER_SITES=	http://miketeo.net/files/Projects/py${PORTNAME}/ \
 		CHEESESHOP
@@ -14,23 +14,23 @@ COMMENT=	SMB/CIFS library written in Python
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0:${PORTSDIR}/devel/py-asn1
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	py${PORTNAME}
+OPTIONS_DEFINE=	DOCS
 
-DOCSDIR=	${PREFIX}/share/doc/py-smb
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
+DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}smb
+PORTDOCS=	*
+
 .include <bsd.port.options.mk>
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@(cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} _modules/ ${DOCSDIR}/)
-	@(cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} _static/ ${DOCSDIR}/)
-	@(cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} api/ ${DOCSDIR}/)
-	@(cd ${WRKSRC}/docs/html/ && ${CP} *.html ${DOCSDIR}/)
-	@(cd ${WRKSRC}/docs/html/ && ${CP} *.js ${DOCSDIR}/)
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} _modules/ ${STAGEDIR}${DOCSDIR}/)
+	(cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} _static/ ${STAGEDIR}${DOCSDIR}/)
+	(cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} api/ ${STAGEDIR}${DOCSDIR}/)
+	(cd ${WRKSRC}/docs/html/ && ${CP} *.html ${STAGEDIR}${DOCSDIR}/)
+	(cd ${WRKSRC}/docs/html/ && ${CP} *.js ${STAGEDIR}${DOCSDIR}/)
 
 .include <bsd.port.mk>
