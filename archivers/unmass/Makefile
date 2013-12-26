@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: archivers/unmass/Makefile 331324 2013-10-22 21:13:49Z ehaupt $
+# $FreeBSD: archivers/unmass/Makefile 336818 2013-12-18 11:53:20Z ehaupt $
 
 PORTNAME=	unmass
 PORTVERSION=	0.9
@@ -12,9 +12,8 @@ COMMENT=	Extract game archives such as wad, dar, mea exe's, and many more
 
 LICENSE=	GPLv2
 
-USES=		gmake
+USES=		gmake dos2unix
 GNU_CONFIGURE=	yes
-USE_DOS2UNIX=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/kdev
 
