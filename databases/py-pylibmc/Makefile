@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/py-pylibmc/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-pylibmc/Makefile 336749 2013-12-17 18:14:08Z danilo $
 
 PORTNAME=	pylibmc
 PORTVERSION=	1.2.3
@@ -12,11 +12,10 @@ COMMENT=	Python libmemcached wrapper
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	memcached:${PORTSDIR}/databases/libmemcached
+LIB_DEPENDS=	libmemcached.so:${PORTSDIR}/databases/libmemcached
 
 MAKE_ENV+=	LIBMEMCACHED="${LOCALBASE}"
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
