@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/moagg/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/moagg/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	moagg
 PORTVERSION=	1.95b
@@ -11,7 +11,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}-bin.zip \
 DIST_SUBDIR=	java
 EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}-bin.zip
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Pilot a small space ship
 
 LICENSE=	GPLv2
