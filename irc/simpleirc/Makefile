@@ -1,8 +1,8 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: irc/simpleirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/simpleirc/Makefile 336774 2013-12-17 21:49:44Z dhn $
 
 PORTNAME=	simpleirc
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	irc
 MASTER_SITES=	http://dl.suckless.org/tools/ \
 		${MASTER_SITE_LOCAL}
