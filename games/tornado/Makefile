@@ -1,5 +1,5 @@
-# Created by: minter
-# $FreeBSD: games/tornado/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# Created by: minter@lunenburg.org
+# $FreeBSD: games/tornado/Makefile 337024 2013-12-20 15:24:45Z swills $
 
 PORTNAME=	tornado
 PORTVERSION=	1.4
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://kiza.kcore.de/media/software/${PORTNAME}/
 
-MAINTAINER=	minter@lunenburg.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A curses-based game of weather destruction
 
 MAN6=		tornado.6
