@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: graphics/cbviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/cbviewer/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	cbviewer
 PORTVERSION=	0.8
@@ -12,7 +12,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Comic book viewer for comic book archives in cbz, cbr, zip, rar
 
 LICENSE=	GPLv2
