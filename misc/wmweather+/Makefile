@@ -1,5 +1,5 @@
 # Created by: Harald Wille <harald.wille@students.jku.at>
-# $FreeBSD: misc/wmweather+/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/wmweather+/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=		wmweather+
 PORTVERSION=		2.13
@@ -8,7 +8,7 @@ CATEGORIES=		misc windowmaker geography
 MASTER_SITES=		SF/wmweatherplus/wmweather%2B/
 DISTNAME=		wmweather%2B-${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Displays current conditions and forecasts with icons and text
 
 LICENSE=	GPLv2
