@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: math/py-symeig/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/py-symeig/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	symeig
 PORTVERSION=	1.4
@@ -8,7 +8,7 @@ CATEGORIES=	math python
 MASTER_SITES=	SF/mdp-toolkit/mdp-toolkit/2.3
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Symmetrical eigenvalue routines for NumPy
 
 BUILD_DEPENDS+=	${PYNUMPY}
