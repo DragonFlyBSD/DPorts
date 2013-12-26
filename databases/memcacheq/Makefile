@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: databases/memcacheq/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/memcacheq/Makefile 336999 2013-12-20 11:57:16Z antoine $
 
 PORTNAME=	memcacheq
 PORTVERSION=	0.2.0
@@ -14,7 +14,7 @@ COMMENT=	Simple queue service over Memcache
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	libevent-1.so:${PORTSDIR}/devel/libevent
+LIB_DEPENDS=	libevent-1.4.so:${PORTSDIR}/devel/libevent
 
 USE_CSTD=	gnu89
 CFLAGS+=	-I"${BDB_INCLUDE_DIR}"
