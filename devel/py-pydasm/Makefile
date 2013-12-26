@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-pydasm/Makefile 329382 2013-10-04 20:39:27Z antoine $
+# $FreeBSD: devel/py-pydasm/Makefile 337217 2013-12-22 20:35:21Z antoine $
 
 PORTNAME=	pydasm
 PORTVERSION=	1.5
@@ -12,7 +12,7 @@ DISTNAME=	libdasm-${PORTVERSION}
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Python interface to libdasm
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 WRKSRC_SUBDIR=	${PORTNAME}
 USE_PYTHON=	yes
