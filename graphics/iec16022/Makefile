@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/iec16022/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
+# $FreeBSD: graphics/iec16022/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	iec16022
 PORTVERSION=	0.2.4
@@ -12,7 +12,7 @@ COMMENT=	Create 2D barcodes, also known as DataMatrix
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	popt:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
