@@ -1,5 +1,5 @@
 # Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
-# $FreeBSD: devel/libbegemot/Makefile 334993 2013-11-27 02:52:01Z danilo $
+# $FreeBSD: devel/libbegemot/Makefile 337399 2013-12-24 23:37:14Z danilo $
 
 PORTNAME=	libbegemot
 PORTVERSION=	1.11
@@ -12,9 +12,6 @@ MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Function library for begemot tools
 
 LICENSE=	BSD2CLAUSE
-LICENSE_NAME=	FreeBSD BSD Variant (2 clause BSD)
-LICENSE_FILE=	${WRKDIR}/libbegemot-${PORTVERSION}/COPYRIGHT
-LICENSE_PERMS=	auto-accept
 
 GNU_CONFIGURE=	yes
 USES=	gmake
