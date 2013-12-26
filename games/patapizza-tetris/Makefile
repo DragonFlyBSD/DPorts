@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/patapizza-tetris/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/patapizza-tetris/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	patapizza-tetris
 PORTVERSION=	1.0
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	https://github.com/patapizza/tetris/downloads/
 DISTNAME=	${PORTNAME:S/patapizza-//}-${DISTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Unofficial clone of the original Tetris game
 
 LICENSE=	GPLv3
