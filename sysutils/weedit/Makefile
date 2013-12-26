@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/weedit/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/weedit/Makefile 336825 2013-12-18 11:59:54Z ehaupt $
 
 PORTNAME=	weedit
 PORTVERSION=	2.0.3
@@ -13,7 +13,7 @@ COMMENT=	File duplicate scanner with database support
 
 LICENSE=	GPLv2
 
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SRCF=		crc32 dlink weedit md5
