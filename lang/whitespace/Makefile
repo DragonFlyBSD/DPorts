@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: lang/whitespace/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/whitespace/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	whitespace
 PORTVERSION=	0.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://compsoc.dur.ac.uk/whitespace/downloads/
 DISTNAME=	wspace-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interpreter for the Whitespace programming language
 
 LICENSE=	GPLv2
