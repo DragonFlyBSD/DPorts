@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: japanese/py-mecab/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/py-mecab/Makefile 337041 2013-12-20 17:10:14Z amdmi3 $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
@@ -13,7 +13,7 @@ COMMENT=	Python bindings for MeCab
 LICENSE=	BSD GPLv2 LGPL21
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	swig>=1.3:${PORTSDIR}/devel/swig13
+BUILD_DEPENDS=	swig:${PORTSDIR}/devel/swig13
 LIB_DEPENDS=	mecab:${PORTSDIR}/japanese/mecab
 
 USE_PYTHON=	yes
