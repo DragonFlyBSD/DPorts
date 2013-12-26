@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/gemdropx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gemdropx/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	gemdropx
 PORTVERSION=	0.9
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/gemdropx/src/ \
 		ftp://ftp.billsgames.com/unix/x/gemdropx/src/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Interesting one-player puzzle game for X (SDL)
 
 LICENSE=	GPLv2
