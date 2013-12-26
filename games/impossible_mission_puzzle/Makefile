@@ -1,17 +1,18 @@
-# $FreeBSD: games/impossible_mission_puzzle/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
+# $FreeBSD: games/impossible_mission_puzzle/Makefile 337373 2013-12-24 16:48:19Z nemysis $
 
 PORTNAME=	impossible_mission_puzzle
 PORTVERSION=	1.0.1
 PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.linuxmotors.com/puzzle/downloads/ \
-		SF/nemysisfreebsdp/:icons
+		SF/nemysisfreebsdp/${CATEGORIES}/:icons
 DISTFILES=	puzzle-${DISTVERSION}.tgz \
 		${PORTNAME}.png:icons
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	puzzle-${DISTVERSION}.tgz
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	This is a puzzle from the old C64 Impossible Mission game
 
 LICENSE=	GPLv2
@@ -25,23 +26,19 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 PORTDOCS=	README
 
-DESKTOP_ENTRIES="Impossible Mission puzzle" "${COMMENT}" "${PORTNAME}" \
-		"${PORTNAME}" "Game;ArcadeGame;" ${FALSE}
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+DESKTOP_ENTRIES="Impossible Mission puzzle" "" "${PORTNAME}" \
+		"${PORTNAME}" "Game;ArcadeGame;" ""
 
 do-build:
 	@cd ${WRKSRC} && ${CC} -o ${PORTNAME} ${CFLAGS} \
 	`${SDL_CONFIG} --cflags --libs` puzzle.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}.png ${PREFIX}/share/pixmaps
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
