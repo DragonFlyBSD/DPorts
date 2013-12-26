@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-bs/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: net-im/pidgin-bs/Makefile 336838 2013-12-18 15:06:19Z ehaupt $
 
 PORTNAME=	pidgin-bs
 PORTVERSION=	1.3.0
@@ -13,7 +13,7 @@ COMMENT=	Pidgin plugin to prevent instant message spam
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	purple:${PORTSDIR}/net-im/libpurple
+LIB_DEPENDS=	libpurple.so:${PORTSDIR}/net-im/libpurple
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
 
 GNU_CONFIGURE=	yes
