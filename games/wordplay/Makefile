@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@scientia.demon.co.uk>
-# $FreeBSD: games/wordplay/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/wordplay/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	wordplay
 PORTVERSION=	7.22
@@ -9,7 +9,7 @@ MASTER_SITES=	http://hsvmovies.com/static_subpages/personal_orig/wordplay/
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Simple program to generate anagrams
 
 NO_WRKSUBDIR=	yes
