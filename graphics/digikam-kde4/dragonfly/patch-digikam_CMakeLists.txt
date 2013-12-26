@@ -1,0 +1,14 @@
+--- digikam/CMakeLists.txt.intermediate	2013-03-22 21:09:50.878356000 +0000
++++ digikam/CMakeLists.txt
+@@ -120,9 +120,9 @@ IF(Q_WS_X11)
+     TARGET_LINK_LIBRARIES(digikamcore ${X11_LIBRARIES})
+ ENDIF(Q_WS_X11)
+ 
+-IF(${node_platform} MATCHES freebsd)
++IF(${node_platform} MATCHES dragonfly)
+     TARGET_LINK_LIBRARIES(digikamcore ${KVM_LIBRARY})
+-ENDIF(${node_platform} MATCHES freebsd)
++ENDIF(${node_platform} MATCHES dragonfly)
+ 
+ # For Contents Aware Resizer and Lens auto-correction tools.
+ IF(GLIB2_FOUND)
