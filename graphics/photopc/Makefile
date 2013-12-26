@@ -1,12 +1,12 @@
 # Created by: Douglas Carmichael <dcarmich@mcs.com>
-# $FreeBSD: graphics/photopc/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/photopc/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	photopc
 PORTVERSION=	3.07
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Control cameras based on Sierra Imaging chipset and compatibles
 
 GNU_CONFIGURE=	yes
