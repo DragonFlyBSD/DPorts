@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/dnswall/Makefile 331326 2013-10-22 21:30:14Z ehaupt $
+# $FreeBSD: dns/dnswall/Makefile 336823 2013-12-18 11:57:51Z ehaupt $
 
 PORTNAME=	dnswall
 PORTVERSION=	0.1.4
@@ -10,9 +10,9 @@ MASTER_SITES=	GOOGLE_CODE CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Daemon that filters out private IP addresses in DNS responses
 
+USES=		dos2unix
 PROJECTHOST=	google-dnswall
 USE_AUTOTOOLS=	automake autoconf:env
-USE_DOS2UNIX=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
