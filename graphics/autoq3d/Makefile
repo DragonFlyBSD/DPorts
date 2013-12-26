@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: graphics/autoq3d/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD: graphics/autoq3d/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	autoq3d
 PORTVERSION=	1.40
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/AutoQ3D%20${PORTVERSION}
 DISTNAME=	AutoQ3DCommunity${PORTVERSION:C/\./-/}qt4source
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Qt 4 quick 3D model editor
 
 LICENSE=	GPLv2 GPLv3
