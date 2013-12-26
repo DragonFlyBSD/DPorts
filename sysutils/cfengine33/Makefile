@@ -1,9 +1,9 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine33/Makefile 330863 2013-10-19 12:28:02Z tijl $
+# $FreeBSD: sysutils/cfengine33/Makefile 336792 2013-12-17 23:54:04Z jgh $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.3.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 PKGNAMESUFFIX=	33
