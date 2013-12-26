@@ -1,9 +1,9 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: graphics/gplot/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/gplot/Makefile 337184 2013-12-22 11:42:11Z tijl $
 
 PORTNAME=	gplot
 PORTVERSION=	4.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.psc.edu/pub/gplot/
 DISTNAME=	${PORTNAME}
@@ -12,26 +12,22 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphic utilities for the processing of CGM metafiles
 
+OPTIONS_DEFINE=	DOCS
+
+CFLAGS+=	-Wno-return-type
 NO_WRKSUBDIR=	yes
 ALL_TARGET=	drawcgm gtex gplot
-MAN1=		gplot.1
-DOCS=		gplot.hlp gplot.txt gtex.doc
-USE_FORTRAN=	yes
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+PORTDOCS=	gplot.hlp gplot.txt gtex.doc
+USES=		fortran
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gplot ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/gtex ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/drawcgm/drawcgm.a ${PREFIX}/lib/libcgm.a
-	${INSTALL_MAN} ${WRKSRC}/gplot.man ${PREFIX}/man/man1/gplot.1
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/Gplot
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${PREFIX}/share/doc/Gplot
-	${GZIP_CMD} ${PREFIX}/share/doc/Gplot/$f
+	${INSTALL_PROGRAM} ${WRKSRC}/gplot ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/gtex ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/drawcgm/drawcgm.a ${STAGEDIR}${PREFIX}/lib/libcgm.a
+	${INSTALL_MAN} ${WRKSRC}/gplot.man ${STAGEDIR}${PREFIX}/man/man1/gplot.1
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+.for f in ${PORTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/$f ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
