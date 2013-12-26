@@ -1,9 +1,9 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine34/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cfengine34/Makefile 336792 2013-12-17 23:54:04Z jgh $
 
 PORTNAME=	cfengine
 PORTVERSION=	3.4.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cfengine.com/source-code/download?file=
 
@@ -78,7 +78,7 @@ LDFLAGS+=		-L${LOCALBASE}/lib/mysql
 
 .if ${PORT_OPTIONS:MLIBVIRT}
 CONFIGURE_ARGS+=	--with-libvirt=${LOCALBASE}
-LIB_DEPENDS+=		virt.1001${PORTSDIR}/devel/libvirt
+LIB_DEPENDS+=		libvirt.so:${PORTSDIR}/devel/libvirt
 .endif
 
 MAN8=	cf-agent.8	cf-key.8	cf-monitord.8	\
