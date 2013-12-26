@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/py-tagpy/Makefile 335350 2013-11-30 22:58:44Z nivit $
+# $FreeBSD: audio/py-tagpy/Makefile 336761 2013-12-17 20:35:25Z mva $
 
 PORTNAME=	tagpy
 PORTVERSION=	2013.1
@@ -13,8 +13,8 @@ COMMENT=	Python bindings for Scott Wheeler's TagLib
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs \
-		tag:${PORTSDIR}/audio/taglib
+LIB_DEPENDS=	libboost_python.so:${PORTSDIR}/devel/boost-python-libs \
+		libtag.so:${PORTSDIR}/audio/taglib
 
 USES=		shebangfix
 HAS_CONFIGURE=	yes
