@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/logstalgia/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/logstalgia/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	logstalgia
 PORTVERSION=	1.0.3
@@ -12,10 +12,10 @@ COMMENT=	Website access log visualization tool
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	ftgl:${PORTSDIR}/graphics/ftgl \
-		png15:${PORTSDIR}/graphics/png \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
-		pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libftgl.so:${PORTSDIR}/graphics/ftgl \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpcre.so:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
