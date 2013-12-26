@@ -1,12 +1,12 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: multimedia/gtk-youtube-viewer/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
+# $FreeBSD: multimedia/gtk-youtube-viewer/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	gtk-youtube-viewer
 PORTVERSION=	3.0.7
 PORTREVISION=	2
 CATEGORIES=	multimedia perl5
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	GTK Search and play YouTube videos streaming in MPlayer
 
 LICENSE=	GPLv3
