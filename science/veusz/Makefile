@@ -1,9 +1,8 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/veusz/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: science/veusz/Makefile 337192 2013-12-22 14:33:44Z makc $
 
 PORTNAME=	veusz
-PORTVERSION=	1.17.1
-PORTREVISION=	1
+PORTVERSION=	1.19.1
 CATEGORIES=	science kde
 MASTER_SITES=	http://download.gna.org/veusz/
 
@@ -15,13 +14,12 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}qt4-gui>=0:${PORTSDIR}/x11-toolkits/py-qt4-gui \
 		${PYTHON_PKGNAMEPREFIX}qt4-svg>0:${PORTSDIR}/graphics/py-qt4-svg
-BUILD_DEPENDS=	${RUN_DEPENDS}
+BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-INSTALLS_EGGINFO=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} \
