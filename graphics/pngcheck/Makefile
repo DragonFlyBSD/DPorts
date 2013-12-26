@@ -1,12 +1,12 @@
 # Created by: will
-# $FreeBSD: graphics/pngcheck/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pngcheck/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	pngcheck
 PORTVERSION=	2.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	SF/png-mng/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Checks the integrity of PNG images
 
 MAKEFILE=	Makefile.unx
