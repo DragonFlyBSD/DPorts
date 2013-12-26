@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/multican/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/multican/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	multican
 DISTVERSION=	0.0.5
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Remote control utility for Canon DSLR cameras
 
 LICENSE=	GPLv2
