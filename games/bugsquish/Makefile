@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/bugsquish/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/bugsquish/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	bugsquish
 PORTVERSION=	0.0.6
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/bugsquish/src/ \
 		ftp://ftp.billsgames.com/unix/x/bugsquish/src/
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Action game not unlike light gun arcade games
 
 LICENSE=	GPLv2
