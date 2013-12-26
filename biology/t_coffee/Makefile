@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/t_coffee/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: biology/t_coffee/Makefile 336851 2013-12-18 17:24:51Z tijl $
 
 PORTNAME=	t_coffee
 PORTVERSION=	9.03
@@ -21,22 +21,18 @@ OPTIONS_DEFINE=	EXAMPLES
 
 BUILD_WRKSRC=	${WRKSRC}/t_coffee_source
 
-USE_FORTRAN=	yes
+USES=		fortran
+CFLAGS+=	-Wno-return-type
 MAKE_ENV=	FCC="${FC} ${FFLAGS}"
 MAKEFILE=	makefile
 
 PORTEXAMPLES=	*
 PLIST_FILES=	bin/TMalign bin/t_coffee
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
 	(cd ${BUILD_WRKSRC} \
-		&& ${INSTALL_PROGRAM} TMalign t_coffee ${PREFIX}/bin)
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	@(cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${EXAMPLESDIR})
-.endif
+		&& ${INSTALL_PROGRAM} TMalign t_coffee ${STAGEDIR}${PREFIX}/bin)
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
 .include <bsd.port.mk>
