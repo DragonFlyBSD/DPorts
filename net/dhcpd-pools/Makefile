@@ -1,13 +1,13 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/dhcpd-pools/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/dhcpd-pools/Makefile 332655 2013-11-03 23:22:27Z zi $
 
 PORTNAME=	dhcpd-pools
-PORTVERSION=	2.23
+PORTVERSION=	2.24
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	zi@FreeBSD.org
-COMMENT=	A tool to analyze isc-dhcp pool usage based on leases
+COMMENT=	Tool to analyze isc-dhcp pool usage based on leases
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/COPYING
