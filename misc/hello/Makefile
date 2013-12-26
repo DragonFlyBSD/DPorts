@@ -1,8 +1,8 @@
 # Created by: shipley@dis.org
-# $FreeBSD: misc/hello/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/hello/Makefile 336802 2013-12-18 08:06:08Z dhn $
 
 PORTNAME=	hello
-PORTVERSION=	2.8
+PORTVERSION=	2.9
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	hello
