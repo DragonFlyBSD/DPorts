@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: science/py-mdp/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/py-mdp/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	mdp
 PORTVERSION=	3.2
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}-toolkit/${PORTNAME}-toolkit/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PORTNAME:tu}-${PORTVERSION}
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Modular toolkit for Data Processing
 
 LICENSE=	BSD
