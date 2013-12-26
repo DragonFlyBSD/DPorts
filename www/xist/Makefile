@@ -1,17 +1,19 @@
 # Created by: ijliao
-# $FreeBSD: www/xist/Makefile 329661 2013-10-07 07:50:36Z marino $
+# $FreeBSD: www/xist/Makefile 337137 2013-12-21 10:39:29Z wg $
 
 PORTNAME=	xist
 PORTVERSION=	3.25
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		http://ftp.livinglogic.de/xist/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	ll-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	python@FreeBSD.org
 COMMENT=	XML-based extensible HTML generator
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	${PYXML} \
 		${PYTHON_PKGNAMEPREFIX}imaging>0:${PORTSDIR}/graphics/py-imaging \
@@ -19,11 +21,9 @@ RUN_DEPENDS=	${PYXML} \
 
 CONFLICTS_INSTALL=	py*-ll-core-1*
 
-USE_PYTHON=		-2.7
-USE_PYDISTUTILS=	easy_install
-PYEASYINSTALL_ARCHDEP=	yes
 USE_BZIP2=		yes
-PYDISTUTILS_PKGNAME=	ll-xist
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
