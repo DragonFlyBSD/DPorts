@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-gitpython/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-gitpython/Makefile 337060 2013-12-20 18:21:40Z wg $
 
 PORTNAME=	GitPython
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ COMMENT=	Python Git Library
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gitdb>0:${PORTSDIR}/devel/py-gitdb
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
