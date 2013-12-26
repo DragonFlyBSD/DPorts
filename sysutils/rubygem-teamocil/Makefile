@@ -1,8 +1,8 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-teamocil/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rubygem-teamocil/Makefile 336759 2013-12-17 20:01:48Z dhn $
 
 PORTNAME=	teamocil
-PORTVERSION=	0.3.7
+PORTVERSION=	0.4.4
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
