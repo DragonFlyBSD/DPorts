@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/whichwayisup/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/whichwayisup/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	whichwayisup
 PORTVERSION=	0.7.9
@@ -12,7 +12,7 @@ DISTFILES=	${PORTNAME}_b${DISTVERSION:S/.//g}${EXTRACT_SUFX} \
 DIST_SUBDIR=	python
 EXTRACT_ONLY=	${PORTNAME}_b${DISTVERSION:S/.//g}${EXTRACT_SUFX}
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Platformer game with rotational twist
 
 LICENSE=	GPLv2
