@@ -1,26 +1,30 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/gtimelapse/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gtimelapse/Makefile 337065 2013-12-20 18:34:20Z pawel $
 
 PORTNAME=	gtimelapse
 DISTVERSION=	0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Relase	# yes, this is not a typo (here)
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An application for capturing images to generate timelapse videos
+COMMENT=	Application for capturing images to generate timelapse videos
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gphoto2.2:${PORTSDIR}/graphics/libgphoto2
+LIB_DEPENDS=	libgphoto2.so:${PORTSDIR}/graphics/libgphoto2
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-wx-config=${WX_CONFIG}
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
 USES=		pkgconfig
 USE_WX=		2.8+
-WRKSRC=		${WRKDIR}/${PORTNAME}
+WX_CONF_ARGS=	absolute
+USE_AUTOTOOLS=	libtoolize aclocal automake autoconf
+LIBTOOLIZE_ARGS=--copy --force
+AUTOMAKE_ARGS=	--add-missing --copy
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
+DESKTOP_ENTRIES="gTimelapse" "" "" "${PORTNAME}" "Graphics;GTK;" ""
+
 .include <bsd.port.mk>
