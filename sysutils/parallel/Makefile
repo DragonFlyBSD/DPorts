@@ -1,8 +1,9 @@
 # Created by: Chris Howey <howeyc@gmail.com>
-# $FreeBSD: sysutils/parallel/Makefile 334944 2013-11-26 15:07:40Z sunpoet $
+# $FreeBSD: sysutils/parallel/Makefile 337287 2013-12-23 20:04:25Z sunpoet $
 
 PORTNAME=	parallel
-PORTVERSION=	20131122
+PORTVERSION=	20131222
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
@@ -17,9 +18,8 @@ CONFLICTS=	moreutils-parallel-[0-9]*
 
 CONFIGURE_ARGS=	--docdir="${DOCSDIR}"
 GNU_CONFIGURE=	yes
-#NO_STAGE=	yes
 USE_BZIP2=	yes
-USES=		perl5
+USES=		perl5 shebangfix
 
 PLIST_FILES=	bin/niceload bin/parallel bin/sem bin/sql \
 		man/man1/niceload.1.gz man/man1/parallel.1.gz \
@@ -30,13 +30,8 @@ PORTDOCS=	niceload.html niceload.pdf niceload.texi \
 		sem.html sem.pdf sem.texi \
 		sql.html sql.pdf sql.texi
 
+SHEBANG_FILES=	src/niceload src/sql
+
 DOCS_BUILD_DEPENDS=	${LOCALBASE}/bin/pod2texi:${PORTSDIR}/print/texinfo
-
-.include <bsd.port.options.mk>
-
-post-patch:
-.if empty(PORT_OPTIONS:MDOCS)
-	@${REINPLACE_CMD} -e '/^install-data-am:/ s|install-docDATA||' ${WRKSRC}/src/Makefile.in
-.endif
 
 .include <bsd.port.mk>
