@@ -1,5 +1,5 @@
 # Created by: verm@drunkmonk.net
-# $FreeBSD: games/lmarbles/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/lmarbles/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	lmarbles
 PORTVERSION=	1.0.8
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/lgames/${PORTNAME} \
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 		${PORTNAME}_icons${EXTRACT_SUFX}:icons
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Atomix-like game of moving marbles in puzzles
 
 LICENSE=	GPLv2
