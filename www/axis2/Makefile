@@ -1,4 +1,4 @@
-# $FreeBSD: www/axis2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/axis2/Makefile 336812 2013-12-18 10:20:48Z nemysis $
 
 PORTNAME=	axis2
 PORTVERSION=	1.6.2
@@ -8,7 +8,7 @@ MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	axis/${PORTNAME}/java/core/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Provides a Web Services,SOAP and WSDL engine from Apache
 
 LICENSE=	AL2
