@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/dvdbackup/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/dvdbackup/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
 
 PORTNAME=	dvdbackup
 PORTVERSION=	0.4.2
@@ -11,7 +11,7 @@ COMMENT=	Backup content from DVD to hard disk
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	dvdread:${PORTSDIR}/multimedia/libdvdread
+LIB_DEPENDS=	libdvdread.so:${PORTSDIR}/multimedia/libdvdread
 
 GNU_CONFIGURE=	yes
 USES=		gmake
