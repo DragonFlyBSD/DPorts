@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: shells/fish/Makefile 328855 2013-09-30 19:58:20Z bsam $
+# $FreeBSD: shells/fish/Makefile 336965 2013-12-19 22:12:49Z pawel $
 
 PORTNAME=	fish
 PORTVERSION=	2.0.0
@@ -11,30 +11,19 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	User friendly command line shell
 
 OPTIONS_DEFINE=	DOCS NLS
+OPTIONS_SUB=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		iconv
-USE_GMAKE=	yes
+USES=		gmake iconv
 USE_AUTOTOOLS=	autoconf
-CONFIGURE_ARGS=	--docdir=${WRKDIR}/tmproot
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread ${ICONV_LIB}
 
-MAN1=		fish.1 fish_indent.1 fish_pager.1 fishd.1 mimedb.1
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-CONFIGURE_ENV+=	ac_cv_func_gettext=yes
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--without-gettext
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=		gettext
+NLS_CONFIGURE_ENV=	ac_cv_func_gettext=yes
+NLS_CONFIGURE_OFF=	--without-gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -49,17 +38,8 @@ post-patch:
 		 s|ncurses.h||' ${WRKSRC}/configure.ac
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@(cd ${WRKDIR}/tmproot && ${COPYTREE_SHARE} . ${DOCSDIR})
-.endif
 .for i in fish fish_indent fish_pager fishd mimedb
-	@${STRIP_CMD} ${PREFIX}/bin/${i}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${i}
 .endfor
-	if ${GREP} -q '${PREFIX}/bin/${PORTNAME}' /etc/shells; then \
-		${TRUE}; \
-	else \
-		${ECHO_CMD} '${PREFIX}/bin/${PORTNAME}' >> /etc/shells; \
-	fi
 
 .include <bsd.port.mk>
