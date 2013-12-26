@@ -1,31 +1,24 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: devel/gengetopt/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gengetopt/Makefile 337071 2013-12-20 18:49:51Z nemysis $
 
 PORTNAME=	gengetopt
 PORTVERSION=	2.22.6
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
-MAINTAINER=	nemysis@gmx.ch
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Tool for generating a C function which parses command line arguments
 
 LICENSE=	GPLv3
 
 INSTALL_WRKSRC=	${WRKSRC}/src
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
 
 CFLAGS+=	-D_GL_SYSTEM_GETOPT
-
-MAN1=		gengetopt.1
-INFO=		gengetopt
-
-PLIST_FILES=	bin/gengetopt %%DATADIR%%/getopt.c %%DATADIR%%/getopt1.c \
-		%%DATADIR%%/gnugetopt.h
-
-PLIST_DIRS=	%%DATADIR%%
 
 PORTDOCS=	*
 PORTEXAMPLES=	*
@@ -42,29 +35,26 @@ DOC_EXAMPLES=	README.example cmdline1.c cmdline1.h cmdline2.c cmdline2.h \
 TESTS_EXAMPLES=	test_manual_help.c test_manual_help_cmd.c \
 		test_manual_help_cmd.ggo test_manual_help_cmd.h
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/${MAN1} ${MAN1PREFIX}/man/man1
-	${MKDIR} ${PREFIX}/${INFO_PATH}
-	${INSTALL_DATA} ${WRKSRC}/doc/${INFO}.info ${PREFIX}/${INFO_PATH}
+	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 \
+		${STAGEDIR}${MAN1PREFIX}/man/man1/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${INFO_PATH}
+	${INSTALL_DATA} ${WRKSRC}/doc/${PORTNAME}.info \
+		${STAGEDIR}${PREFIX}/${INFO_PATH}
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${DOC_FILES1:S|^|${DOCSRCDIR1}/|} ${DOCSDIR}
-	${MKDIR} ${DOCSDIR2}
-	${INSTALL_DATA} ${DOC_FILES2:S|^|${DOCSRCDIR2}/|} ${DOCSDIR2}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOC_FILES1:S|^|${DOCSRCDIR1}/|} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR2}
+	${INSTALL_DATA} ${DOC_FILES2:S|^|${DOCSRCDIR2}/|} ${STAGEDIR}${DOCSDIR2}
 
-.if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for e in ${DOC_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/doc/${e} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${e} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
 .for e in ${TESTS_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/tests/${e} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/tests/${e} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
