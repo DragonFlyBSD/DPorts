@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/pgbouncer/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/pgbouncer/Makefile 337292 2013-12-23 20:42:11Z antoine $
 
 PORTNAME=	pgbouncer
 PORTVERSION=	1.5.4
@@ -12,7 +12,7 @@ COMMENT=	Lightweight connection pooler for PostgreSQL
 
 LICENSE=	BSD
 
-LIB_DEPENDS=	libevent-2.so:${PORTSDIR}/devel/libevent2
+LIB_DEPENDS=	libevent-2.0.so:${PORTSDIR}/devel/libevent2
 
 PORTSCOUT=	site:http://pgfoundry.org/frs/?group_id=1000258
 
