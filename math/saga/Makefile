@@ -1,63 +1,62 @@
-NO_STAGE=yes
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: ports/math/saga/Makefile,v 1.25 2013/01/23 15:05:36 svnexp Exp $
+# $FreeBSD: math/saga/Makefile 335601 2013-12-04 02:51:00Z jhale $
 
 PORTNAME=	saga
-PORTVERSION=	2.0.8
-PORTREVISION=	4
+PORTVERSION=	2.1.0
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]*$//}/SAGA%20${PORTVERSION}
-DISTNAME=	${PORTNAME}_${PORTVERSION}
+DISTNAME=	${PORTNAME}_${PORTVERSION}_src
 
 MAINTAINER=	rhurlin@gwdg.de
 COMMENT=	System for Automated Geoscientific Analyses
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	proj:${PORTSDIR}/graphics/proj \
-		gdal:${PORTSDIR}/graphics/gdal \
-		jasper:${PORTSDIR}/graphics/jasper \
-		tiff:${PORTSDIR}/graphics/tiff \
-		iodbc:${PORTSDIR}/databases/libiodbc \
-		las:${PORTSDIR}/devel/liblas \
-		opencv_legacy:${PORTSDIR}/graphics/opencv
+LIB_DEPENDS=	libproj.so:${PORTSDIR}/graphics/proj \
+		libgdal.so:${PORTSDIR}/graphics/gdal \
+		libjasper.so:${PORTSDIR}/graphics/jasper \
+		libtiff.so:${PORTSDIR}/graphics/tiff \
+		libiodbc.so:${PORTSDIR}/databases/libiodbc \
+		liblas.so:${PORTSDIR}/devel/liblas \
+		libopencv_core.so:${PORTSDIR}/graphics/opencv-core
 
-USE_WX=		2.8
+USE_ZIP=	yes
+USE_WX=		2.9
+WX_UNICODE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	autoconf autoheader automake aclocal libtoolize
+AUTOMAKE_ARGS=	--add-missing
+
+# CLANG is not able to handle neither Fortran nor OpenMP
 USE_GCC=	any
-USE_AUTOTOOLS=	libtool
 CFLAGS+=	-I${LOCALBASE}/include
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_DOS2UNIX=	dlg_about.cpp
 
 MAN1=		saga_cmd.1 saga_gui.1
 
-DESKTOP_ENTRIES=	"SAGA GIS" "${COMMENT}" "${DATADIR}/saga_icon_32.xpm" \
+DESKTOP_ENTRIES=	"SAGA GIS" "${COMMENT}" "${DATADIR}/saga.png" \
 			"saga_gui" "Science;Geoscience;Math;" true
 
-OPTIONS_DEFINE=	UNICODE PYTHON HARU VIGRA
-OPTIONS_DEFAULT=	UNICODE PYTHON
+OPTIONS_DEFINE=	PYTHON OPENMP HARU VIGRA
+OPTIONS_DEFAULT=	OPENMP HARU VIGRA
 NO_OPTIONS_SORT=	yes
-UNICODE_DESC=	Enable Unicode Support
+OPENMP_DESC=	Enable Multiprocessing
 HARU_DESC=	Enable Haru Free PDF Library
 VIGRA_DESC=	Enable 'Vision with Generic Algorithms' Library
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lopencv_core
 CONFIGURE_ARGS+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-
-.if ${PORT_OPTIONS:MUNICODE}
-WITH_UNICODE=	yes
-CONFIGURE_ARGS+=	--enable-unicode
-.else
-CONFIGURE_ARGS+=	--disable-unicode
-.endif
 
 .if ${PORT_OPTIONS:MPYTHON}
 CONFIGURE_ARGS+=	--enable-python
-BUILD_DEPENDS+=	swig:${PORTSDIR}/devel/swig13
+BUILD_DEPENDS+=	swig2.0:${PORTSDIR}/devel/swig20
+RUN_DEPENDS+=	swig2.0:${PORTSDIR}/devel/swig20
+CONFIGURE_ENV+=	SWIG="${LOCALBASE}/bin/swig2.0"
 USE_PYTHON=	2.6-2.7
 PLIST_SUB+=	SAGA_PYTHON=""
 .else
@@ -65,11 +64,19 @@ CONFIGURE_ARGS+=	--disable-python
 PLIST_SUB+=	SAGA_PYTHON="@comment "
 .endif
 
+.if ${PORT_OPTIONS:MOPENMP}
+LDFLAGS+=		${PTHREAD_LIBS}
+CONFIGURE_ARGS+=	--enable-openmp
+.else
+CONFIGURE_ARGS+=	--disable-openmp
+.endif
+
 .if ${PORT_OPTIONS:MHARU}
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libhpdf.so:${PORTSDIR}/print/libharu
 RUN_DEPENDS+=	${LOCALBASE}/lib/libhpdf.so:${PORTSDIR}/print/libharu
 PLIST_SUB+=	HARU=""
 .else
+CFLAGS+=	-D_SAGA_DONOTUSE_HARU
 PLIST_SUB+=	HARU="@comment "
 .endif
 
@@ -81,28 +88,41 @@ PLIST_SUB+=	VIGRA=""
 PLIST_SUB+=	VIGRA="@comment "
 .endif
 
-.include <bsd.port.pre.mk>
+post-extract:
+	@${REINPLACE_CMD} -e's|wx-config |${WX_CONFIG} |g' \
+		${WRKSRC}/configure.in \
+		${WRKSRC}/src/saga_core/saga_gui/Makefile.am \
+		${WRKSRC}/src/saga_core/saga_api/Makefile.am \
+		${WRKSRC}/src/saga_core/saga_cmd/Makefile.am \
+		${WRKSRC}/src/saga_core/saga_gdi/Makefile.am \
+		${WRKSRC}/src/modules_contrib/garden/garden_webservices/Makefile.am \
+		${WRKSRC}/src/modules_contrib/garden/garden_3d_viewer/Makefile.am \
+		${WRKSRC}/src/modules_io/shapes/io_shapes/Makefile.am \
+		${WRKSRC}/src/modules_io/grid/io_grid_image/Makefile.am \
+		${WRKSRC}/src/modules/pointcloud/pointcloud_tools/Makefile.am \
+		${WRKSRC}/src/modules/pointcloud/pointcloud_viewer/Makefile.am \
+		${WRKSRC}/src/modules/tin/tin_viewer/Makefile.am \
+		${WRKSRC}/src/modules_geostatistics/geostatistics/geostatistics_kriging/Makefile.am
 
 post-patch:
-	@${REINPLACE_CMD} -e 's/-lcv/-lopencv_legacy/g' \
-		${WRKSRC}/configure \
-		${WRKSRC}/src/modules_images/modules_opencv/opencv/Makefile.in
-	@for f in `${FIND} '${WRKSRC}' -name Makefile.in` \
-		${WRKSRC}/configure; do \
-		${REINPLACE_CMD} -e's|wx-config |${WX_CONFIG} |g' "$$f"; \
-	done
+	@${REINPLACE_CMD} -e 's|-lcv|-lopencv_core -lopencv_imgproc|g' \
+		${WRKSRC}/src/modules_images/modules_opencv/opencv/Makefile.am
+	@${REINPLACE_CMD} -e 's|\[cv\]|\[opencv_core\]|' \
+		${WRKSRC}/configure.in
+	@${REINPLACE_CMD} -e 's|\\n"), SAGA_VERSION)| (rev. 1760)\\n"), SAGA_VERSION)|' \
+		${WRKSRC}/src/saga_core/saga_gui/dlg_about.cpp
 .if ${ARCH} == "i386" || ${ARCH} == "powerpc"
 	@${REINPLACE_CMD} -e 's|typedef unsigned long	DWORD;|typedef unsigned int	DWORD;|' \
 		${WRKSRC}/src/saga_core/saga_api/api_core.h
 .endif
 
 post-install:
-	${MKDIR} ${DATADIR}
+	@${MKDIR} ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/saga_tip.txt ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/xpm/saga_icon_32.xpm ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/saga.png ${DATADIR}
 # library helper files are not needed and cripple some math/qgis extensions
 	@${RM} ${PREFIX}/lib/saga/*.la
 	@${RM} ${PREFIX}/lib/saga/*.a
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
