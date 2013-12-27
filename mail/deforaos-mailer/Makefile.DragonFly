@@ -1,1 +1,1 @@
-LIB_DEPENDS+= ssl:${PORTSDIR}/security/openssl
+WITH_OPENSSL_PORT=yes
