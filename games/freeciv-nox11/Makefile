@@ -1,14 +1,11 @@
-# New ports collection makefile for:	freeciv-nox11
-# Date created:		22 August 2006
-# Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
-#
-# $FreeBSD: ports/games/freeciv-nox11/Makefile,v 1.3 2012/11/17 05:57:38 svnexp Exp $
-#
+# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
+# $FreeBSD: games/freeciv-nox11/Makefile 329275 2013-10-04 09:36:32Z bapt $
 
 MASTERDIR=	${.CURDIR}/../freeciv
 
 # Explicitly exclude X11 options
-OPTIONS_DEFINE=	MYSQL IPV6
-OPTIONS_DEFAULT=MYSQL IPV6
+OPTIONS_EXCLUDE=	SDL X11
+PKGNAMESUFFIX=	-nox11
 
+NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
