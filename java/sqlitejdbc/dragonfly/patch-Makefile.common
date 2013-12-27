@@ -1,0 +1,11 @@
+--- Makefile.common.intermediate	2013-12-27 16:43:43.144686000 +0000
++++ Makefile.common
+@@ -33,7 +33,7 @@ sqlite := sqlite-$(sqlite_version)
+ 
+ sqlitejdbc := sqlitejdbc-v$(shell cat VERSION)
+ 
+-jni_md := $(shell find -L "$(JAVA_HOME)/include" -name jni_md.h)
++jni_md := $(shell find -L "$(JAVA_HOME)/include/dragonfly" -name jni_md.h)
+ ifneq ($(jni_md),)
+ jni_include := $(shell dirname "$(jni_md)")
+ endif
