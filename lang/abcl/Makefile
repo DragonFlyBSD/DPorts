@@ -1,11 +1,10 @@
-NO_STAGE=yes
 # Created by: Frank Fischer
-# $FreeBSD: lang/abcl/Makefile 316110 2013-04-19 15:42:58Z olgeni $
+# $FreeBSD: lang/abcl/Makefile 327741 2013-09-20 19:53:09Z bapt $
 
 PORTNAME=	abcl
-PORTVERSION=	1.1.1
+PORTVERSION=	1.2.1
 CATEGORIES=	lang lisp java
-MASTER_SITES=	http://common-lisp.net/project/armedbear/releases/${PORTVERSION}/
+MASTER_SITES=	http://abcl.org/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	fischer.frank@gmail.com
@@ -21,6 +20,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 USE_ANT=	yes
 
+NO_STAGE=	yes
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/dist/abcl.jar ${JAVAJARDIR}
 	@${INSTALL_SCRIPT} ${WRKDIR}/abcl ${PREFIX}/bin/abcl
