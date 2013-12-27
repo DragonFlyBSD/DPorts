@@ -1,6 +1,5 @@
-NO_STAGE=yes
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/fishsupper/Makefile 324744 2013-08-14 22:35:50Z ak $
+# $FreeBSD: games/fishsupper/Makefile 329253 2013-10-04 01:36:13Z amdmi3 $
 
 PORTNAME=	fishsupper
 PORTVERSION=	0.1.6
@@ -14,14 +13,16 @@ COMMENT=	Guide a cat across a series of rivers, jumping from log to log
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/bind.hpp:${PORTSDIR}/devel/boost-libs
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl image mixer
 USE_GL=		gl
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PORTDOCS=	README
+PLIST_FILES=	bin/${PORTNAME}
+PORTDOCS=	*
+PORTDATA=	*
 
 DESKTOP_ENTRIES="Fish Supper" \
 		"Guide a cat across a series of rivers, jumping from log to log" \
@@ -32,12 +33,15 @@ DESKTOP_ENTRIES="Fish Supper" \
 
 .include <bsd.port.options.mk>
 
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1000000
+post-patch:
+	@${REINPLACE_CMD} -e 's|std::tr1::shared_ptr|std::shared_ptr|g' ${WRKSRC}/src/*.h ${WRKSRC}/src/*.cpp
+.endif
+
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
