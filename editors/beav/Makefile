@@ -1,9 +1,9 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: editors/beav/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/beav/Makefile 336354 2013-12-13 15:14:41Z naddy $
 
 PORTNAME=	beav
 PORTVERSION=	1.40.18
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL}
 DISTNAME=	${PORTNAME}_${PORTVERSION:R}.orig
@@ -18,23 +18,16 @@ COMMENT=	Binary Editor And Viewer, a full featured binary file editor
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R:S/.//}
 
 ALL_TARGET=	beav
+MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DUNIX -DBSD -DNOPROTO"
 
-MAN1=		beav.1
-
-NO_STAGE=	yes
 post-patch:
-	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=-DUNIX -DBSD -DNOPROTO#|g ; \
-		 s|^CC=|CC?=|g ; \
-		 s|^(|\$$(|g' ${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -e 's|/usr/share/doc/beav|${DOCSDIR}|g ; \
-		s|beav140.txt.gz|beav.txt|' ${WRKSRC}/beav.1
+	${REINPLACE_CMD} -e 's|(OFILES):|$$(OFILES):|' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/beav.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/beav ${PREFIX}/bin/beav
-	${INSTALL_MAN} ${WRKSRC}/beav.1 ${MANPREFIX}/man/man1/beav.1
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/beav140.txt ${DOCSDIR}/beav.txt
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/beav ${STAGEDIR}${PREFIX}/bin/beav
+	${INSTALL_MAN} ${WRKSRC}/beav.1 ${STAGEDIR}${PREFIX}/man/man1/beav.1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/beav140.txt ${STAGEDIR}${DOCSDIR}/beav.txt
 
 .include <bsd.port.mk>
