@@ -1,0 +1,38 @@
+# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
+# $FreeBSD: games/simplevaders/Makefile 330782 2013-10-18 22:32:13Z amdmi3 $
+
+PORTNAME=	simplevaders
+PORTVERSION=	0.8
+PORTREVISION=	7
+CATEGORIES=	games
+MASTER_SITES=	http://dusted.dk/download/ \
+		http://mirror.amdmi3.ru/distfiles/
+
+MAINTAINER=	amdmi3@FreeBSD.org
+COMMENT=	A Space-Invaders like 2D space shooter
+
+LICENSE=	GPLv3
+
+USE_BZIP2=	yes
+USE_SDL=	sdl mixer image ttf
+USE_GL=		gl glu
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
+PLIST_FILES=	bin/${PORTNAME}
+PORTDATA=	*
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|data/|${DATADIR}/|' ${WRKSRC}/main.cpp
+	@${RM} ${WRKSRC}/data/*\~
+
+do-build:
+	cd ${WRKSRC} && ${CC} ${CFLAGS} main.cpp -o ${PORTNAME} \
+		`${SDL_CONFIG} --cflags --libs` -lSDL_ttf -lSDL_mixer \
+		-lSDL_image -lGL -lGLU -lm -lstdc++
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+
+.include <bsd.port.mk>
