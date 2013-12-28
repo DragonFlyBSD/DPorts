@@ -43,9 +43,7 @@ post-configure:
 		s|/usr/share\(/ssl/openssl.cnf\)|/etc\1|g; \
 		s|/usr/ports|${PORTSDIR}|g; \
 		s|/usr/lib\(/aspell\)|${PREFIX}/share\1|g; \
-		s|/usr/share/info|&:${PREFIX}/info|g; \
-		s|\$$(sysconfdir)/profile.d|${PREFIX}/bin|g; \
-		s|\(profiledir = \)${PREFIX}/bin|\1${DATADIR}|g;' \
+		s|/usr/share/info|&:${PREFIX}/info|g;' \
 		${WRKSRC}/completions/*
 
 post-install:
