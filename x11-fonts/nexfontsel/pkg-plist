@@ -1,0 +1,5 @@
+bin/nexfontsel
+lib/X11/app-defaults/NeXFontSel
+lib/X11/ja_JP.eucJP/app-defaults/NeXFontSel
+@dirrmtry lib/X11/ja_JP.eucJP/app-defaults
+@dirrmtry lib/X11/ja_JP.eucJP
