@@ -1,0 +1,20 @@
+--- Makefile.intermediate	2013-12-29 06:02:27.517432000 +0000
++++ Makefile
+@@ -471,7 +471,7 @@ ifdef windir
+ SW_LDFLAGS=$(SWLDFLAGS) -lmingw32 -lwsock32 -lSDLmain -lSDL
+ else
+ #pthread is needed because of SDL.
+-SW_LDFLAGS=$(SWLDFLAGS) `sdl-config --libs` $(IMAGELDFLAGS)
++SW_LDFLAGS=$(SWLDFLAGS) `sdl-config --libs` $(IMAGELDFLAGS) -lz
+ endif
+ SW_CFLAGS=$(SWCFLAGS) `sdl-config --cflags`
+ SWB_DIR=sw_sdl$(BITS)
+@@ -561,7 +561,7 @@ else
+ endif
+ 	GL_EXE_NAME=../fteqw.gl
+ 	GLCL_EXE_NAME=../fteqwcl.gl
+-	GL_LDFLAGS= -L/usr/local/lib $(GLLDFLAGS) $(GLXLDFLAGS) -lXxf86vm -lpthread
++	GL_LDFLAGS= -L/usr/local/lib $(GLLDFLAGS) $(GLXLDFLAGS) -lXxf86vm -lpthread -lz
+ 	GL_CFLAGS=$(GLCFLAGS) -I$(LOCALBASE)/include
+ 	GLB_DIR=gl_bsd
+ 	GLCL_DIR=glcl_bsd
