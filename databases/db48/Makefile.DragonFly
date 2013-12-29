@@ -1,0 +1,2 @@
+MUTARCH=		${ARCH:S/i386/x86/}
+CONFIGURE_ARGS+=	--with-mutex=${MUTARCH}/gcc-assembly
