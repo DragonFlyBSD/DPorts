@@ -1,8 +1,8 @@
 # Created by: trevor
-# $FreeBSD: devel/p5-Class-MethodMaker/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: devel/p5-Class-MethodMaker/Makefile 338206 2013-12-31 00:59:34Z sunpoet $
 
 PORTNAME=	Class-MethodMaker
-PORTVERSION=	2.18
+PORTVERSION=	2.19
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
