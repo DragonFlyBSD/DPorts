@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-itertools/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: devel/R-cran-itertools/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	itertools
 DISTVERSION=	0.1-1
@@ -12,7 +12,6 @@ COMMENT=	Iterator Tools for R
 
 RUN_DEPENDS=	R-cran-iterators>=1.0.0:${PORTSDIR}/devel/R-cran-iterators
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
