@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-MIME-Fast/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Fast/Makefile 338751 2014-01-05 12:07:20Z az $
 
 PORTNAME=	MIME-Fast
 PORTVERSION=	1.6
@@ -12,14 +12,11 @@ MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create, edit, and parse MIME messages (via gmime2 C library)
 
 BUILD_DEPENDS=	p5-Scalar-List-Utils>=0:${PORTSDIR}/lang/p5-Scalar-List-Utils
-LIB_DEPENDS=	gmime-2.0.4:${PORTSDIR}/mail/gmime2
+LIB_DEPENDS=	libgmime-2.0.so:${PORTSDIR}/mail/gmime2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ENV=	PREFIX="${PREFIX}" CCFLAGS="${CCFLAGS} ${PTHREAD_CFLAGS}"
 
-MAN3=		MIME::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
