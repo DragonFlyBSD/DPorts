@@ -1,4 +1,4 @@
-@comment $FreeBSD: devel/p5-App-Rad/pkg-plist 321861 2013-06-27 07:02:45Z miwi $
+@comment $FreeBSD: devel/p5-App-Rad/pkg-plist 338867 2014-01-06 12:18:47Z az $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/App/Rad/.packlist
 %%SITE_PERL%%/App/Rad.pm
 %%SITE_PERL%%/App/Rad/Config.pm
@@ -6,6 +6,11 @@
 %%SITE_PERL%%/App/Rad/Help.pm
 %%SITE_PERL%%/App/Rad/Include.pm
 %%SITE_PERL%%/App/Rad/Plugin.pod
+%%PERL5_MAN3%%/App::Rad.3.gz
+%%PERL5_MAN3%%/App::Rad::Exclude.3.gz
+%%PERL5_MAN3%%/App::Rad::Help.3.gz
+%%PERL5_MAN3%%/App::Rad::Include.3.gz
+%%PERL5_MAN3%%/App::Rad::Plugin.3.gz
 @dirrmtry %%SITE_PERL%%/App/Rad
 @dirrmtry %%SITE_PERL%%/App
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/App/Rad

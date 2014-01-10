@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-Rad/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-Rad/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	App-Rad
 PORTVERSION=	1.05
@@ -16,11 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::Rad.3 \
-		App::Rad::Exclude.3 \
-		App::Rad::Help.3 \
-		App::Rad::Include.3 \
-		App::Rad::Plugin.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
