@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/wwl/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/wwl/Makefile 337833 2013-12-28 05:03:44Z db $
 
 PORTNAME=	wwl
 PORTVERSION=	1.3
@@ -13,19 +13,13 @@ MAINTAINER=	db@FreeBSD.org
 COMMENT=	Calculates distance (qrb) used in Amateur Radio
 
 CONFLICTS=	locator*
-PORTDOCS=	INSTALL
-PLIST_FILES=	bin/wwl bin/locator
-MAN1=		wwl.1
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wwl ${PREFIX}/bin
-	${RM} -f ${PREFIX}/bin/locator
-	${LN} ${PREFIX}/bin/wwl ${PREFIX}/bin/locator
-	${INSTALL_DATA} ${WRKSRC}/wwl.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCSDIR}
-.endif
+	@${INSTALL_PROGRAM} ${WRKSRC}/wwl ${STAGEDIR}${PREFIX}/bin
+	@${RM} -f ${STAGEDIR}${PREFIX}/bin/locator
+	@${LN} -sf wwl ${STAGEDIR}${PREFIX}/bin/locator
+	@${INSTALL_DATA} ${WRKSRC}/wwl.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/INSTALL ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
