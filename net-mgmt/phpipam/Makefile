@@ -1,5 +1,5 @@
 # Created by: Jake Smith <jake@xz.cx>
-# $FreeBSD: net-mgmt/phpipam/Makefile 335437 2013-12-01 20:03:09Z antoine $
+# $FreeBSD: net-mgmt/phpipam/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	phpipam
 PORTVERSION=	0.9
@@ -14,8 +14,6 @@ COMMENT=	PHP IP Address Management IPv4/IPv6
 LICENSE=	GPLv3
 
 RUN_DEPENDS=	${LOCALBASE}/share/pear/System.php:${PORTSDIR}/devel/pear
-
-FETCH_ARGS=	-Fpr
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
