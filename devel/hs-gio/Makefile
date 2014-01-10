@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-gio/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-gio/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	gio
 PORTVERSION=	0.12.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	LGPL21
 USES=		pkgconfig
 USE_CABAL=	glib>=0.12.0 mtl
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
