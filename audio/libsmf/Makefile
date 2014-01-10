@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/libsmf/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/libsmf/Makefile 338664 2014-01-04 18:22:00Z bapt $
 
 PORTNAME=	libsmf
 PORTVERSION=	1.3
@@ -10,10 +10,8 @@ MAINTAINER=	trasz@FreeBSD.org
 COMMENT=	Standard MIDI File format library
 
 USES=	pathfix pkgconfig readline:port
-NO_STAGE=	yes
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-MAN1=		smfsh.1
 
 .include <bsd.port.mk>
