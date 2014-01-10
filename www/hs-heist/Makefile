@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-heist/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-heist/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	heist
 PORTVERSION=	0.12.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -16,6 +16,5 @@ USE_CABAL=	aeson>=0.6 attoparsec>=0.10 blaze-builder>=0.2 \
 		random>=1.0.1.0 text>=0.10 unordered-containers>=0.1.4 \
 		vector>=0.9 xmlhtml>=0.1.6
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
