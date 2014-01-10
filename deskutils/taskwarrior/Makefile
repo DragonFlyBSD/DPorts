@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: deskutils/taskwarrior/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/taskwarrior/Makefile 339084 2014-01-08 10:11:55Z gahr $
 
 PORTNAME=	taskwarrior
 PORTVERSION=	2.2.0
@@ -12,13 +12,13 @@ COMMENT=	A framework for supercharged task and contact management
 
 WRKSRC=		${WRKDIR}/task-${PORTVERSION}
 
-USES=		cmake:outsource
+USES=		cmake:outsource shebangfix
+SHEBANG_FILES=	scripts/*/*.pl \
+		scripts/*/*.rb \
+		scripts/*/*.py \
+		doc/rc/refresh
 CMAKE_ARGS+=	-DTASK_DOCDIR:STRING=${DATADIR:S/${PREFIX}\///} \
    		-DTASK_MAN1DIR:STRING=man/man1 \
 		-DTASK_MAN5DIR:STRING=man/man5
 
-MAN1=		task.1
-MAN5=		taskrc.5 task-faq.5 task-color.5 task-sync.5 task-tutorial.5
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
