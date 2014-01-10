@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/R-cran-chron/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: devel/R-cran-chron/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	chron
 DISTVERSION=	2.3-43
@@ -12,7 +12,6 @@ COMMENT=	R package for creating objects which can handle dates and times
 
 LICENSE=	GPLv2
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
