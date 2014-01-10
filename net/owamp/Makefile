@@ -1,4 +1,4 @@
-# $FreeBSD: net/owamp/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/owamp/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	owamp
 PORTVERSION=	3.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://software.internet2.edu/sources/owamp/
 MAINTAINER=	fbsd-ports@opsec.eu
 COMMENT=	Implementation of the One-Way Active Measurement Protocol
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 GNU_CONFIGURE=	yes
 
