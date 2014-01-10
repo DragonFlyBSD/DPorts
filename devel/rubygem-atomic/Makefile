@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-atomic/Makefile 333777 2013-11-14 17:17:56Z sunpoet $
+# $FreeBSD: devel/rubygem-atomic/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	atomic
 PORTVERSION=	1.1.14
@@ -9,7 +9,7 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Atomic reference implementation
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
