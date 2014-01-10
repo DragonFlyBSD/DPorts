@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: www/p5-Catalyst-Model-Adaptor/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Model-Adaptor/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	Catalyst-Model-Adaptor
 PORTVERSION=	0.10
@@ -19,13 +19,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Helper::Model::Adaptor.3 \
-	Catalyst::Helper::Model::Factory.3 \
-	Catalyst::Helper::Model::Factory::PerRequest.3 \
-	Catalyst::Model::Adaptor.3 \
-	Catalyst::Model::Adaptor::Base.3 \
-	Catalyst::Model::Factory.3 \
-	Catalyst::Model::Factory::PerRequest.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
