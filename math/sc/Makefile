@@ -1,26 +1,25 @@
 # Created by: Heinz Tschabitscher
-# $FreeBSD: math/sc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/sc/Makefile 338061 2013-12-30 08:05:33Z johans $
 
 PORTNAME=	sc
 PORTVERSION=	7.16
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	apps/financial/spreadsheet
 
 MAINTAINER=	johans@FreeBSD.org
-COMMENT=	A curses-based spreadsheet program
+COMMENT=	Curses-based spreadsheet program
 
-MAN1=		sc.1 psc.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^prefix=/s,=.*,=$${PREFIX},' \
 		-e '/^CC=/s,=.*,=${CC},' \
 		-e '/^CFLAGS=/s,=.*,=-DSYSV3 ${CFLAGS} -O0,' \
-		-e '/^LIBDIR=/s,=.*,=${DATADIR},' \
+		-e '/^LIBDIR=/s,=.*,=$${DESTDIR}${DATADIR},' \
+		-e '/^MANDIR=/s,=,=$${DESTDIR},' \
+		-e '/^EXDIR=/s,=.*,=$${DESTDIR}${PREFIX}/bin,' \
 		-e '/^YACC=/s,=.*,=${YACC},' \
 		-e '/usr.bin.crypt/s,^# *,,' \
 		-e '/mkdir.*plugins/d' \
