@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-HTTP-Cookies-w3m/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Cookies-w3m/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	HTTP-Cookies-w3m
 PORTVERSION=	0.01
@@ -14,10 +14,7 @@ COMMENT=	Cookie storage and management for w3m
 BUILD_DEPENDS=	p5-Module-Install>=0:${PORTSDIR}/devel/p5-Module-Install
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		HTTP::Cookies::w3m.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
