@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-CIDR-MobileJP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-CIDR-MobileJP/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	Net-CIDR-MobileJP
 PORTVERSION=	0.24
@@ -19,8 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::CIDR::MobileJP.3 \
-	Net::CIDR::net-cidr-mobilejp-scraper.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
