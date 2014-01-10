@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/metis/Makefile 334607 2013-11-22 19:24:37Z bf $
+# $FreeBSD: math/metis/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	metis
 PORTVERSION=	5.1.0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	A package for unstructured graph partitioning
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 CONFLICTS=	metis4-4* metis-edf-[0-9]*
 
