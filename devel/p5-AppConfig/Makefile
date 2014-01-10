@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: devel/p5-AppConfig/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AppConfig/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	AppConfig
 PORTVERSION=	1.66
@@ -8,18 +8,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lth@FreeBSD.org
-COMMENT=	A Perl module for reading configuration files
+COMMENT=	Perl module for reading configuration files
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AppConfig.3 \
-		AppConfig::Args.3 \
-		AppConfig::CGI.3 \
-		AppConfig::File.3 \
-		AppConfig::Getopt.3 \
-		AppConfig::State.3 \
-		AppConfig::Sys.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
