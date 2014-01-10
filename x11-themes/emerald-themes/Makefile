@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/emerald-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/emerald-themes/Makefile 338920 2014-01-06 18:51:30Z antoine $
 
 PORTNAME=	emerald-themes
 PORTVERSION=	0.6.0
@@ -12,16 +12,12 @@ BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake shebangfix
 USE_AUTOTOOLS=	autoconf:env automake:env aclocal:env autoheader:env
+SHEBANG_FILES=	themes/import.sh
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} 's|/bin/bash|${LOCALBASE}/bin/bash|' \
-			${WRKSRC}/themes/import.sh
 
 pre-configure:
 	@cd ${WRKSRC} && ./autogen.sh
