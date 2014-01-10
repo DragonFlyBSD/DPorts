@@ -1,5 +1,5 @@
 # Created by: matt@bdd.net
-# $FreeBSD: x11/xtacy/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xtacy/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xtacy
 PORTVERSION=	1.14
@@ -15,10 +15,8 @@ COMMENT=	X11 trippy color-cycling toy
 
 USES=		imake
 USE_XORG=	x11 xext
-MAN1=		xtacy.1
-PLIST_FILES=	bin/xtacy
+PLIST_FILES=	bin/xtacy man/man1/xtacy.1.gz
 
 WRKSRC=		${WRKDIR}/Xtacy
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
