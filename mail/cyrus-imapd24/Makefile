@@ -1,4 +1,4 @@
-# $FreeBSD: mail/cyrus-imapd24/Makefile 330243 2013-10-13 18:48:51Z ume $
+# $FreeBSD: mail/cyrus-imapd24/Makefile 338127 2013-12-30 16:01:04Z ume $
 
 PORTNAME=	cyrus-imapd
 PORTVERSION=	2.4.17
@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	24
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	The cyrus mail server, supporting POP3 and IMAP4 protocols
 
-LICENSE=	BSD
+LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2 \
