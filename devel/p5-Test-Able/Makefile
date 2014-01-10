@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Test-Able/Makefile 327885 2013-09-22 18:01:49Z sunpoet $
+# $FreeBSD: devel/p5-Test-Able/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Test-Able
 PORTVERSION=	0.11
@@ -16,19 +16,7 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-Moose>=0.94:${PORTSDIR}/devel/p5-Moose
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-NO_STAGE=	yes
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Test::Able.3 \
-		Test::Able::Cookbook.3 \
-		Test::Able::FatalException.3 \
-		Test::Able::Helpers.3 \
-		Test::Able::Method::Array.3 \
-		Test::Able::Object.3 \
-		Test::Able::Planner.3 \
-		Test::Able::Role.3 \
-		Test::Able::Role::Meta::Class.3 \
-		Test::Able::Role::Meta::Method.3
 
 .include <bsd.port.mk>
