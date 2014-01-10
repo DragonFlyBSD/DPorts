@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-shakespeare/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-shakespeare/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	shakespeare
 PORTVERSION=	1.0.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	MIT
 USE_CABAL=	parsec>=2 system-fileio>=0.3 system-filepath>=0.4 \
 		text>=0.7
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
