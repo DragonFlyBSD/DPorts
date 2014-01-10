@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rdoc/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD: devel/rubygem-rdoc/Makefile 338271 2013-12-31 10:09:12Z sunpoet $
 
 PORTNAME=	rdoc
 PORTVERSION=	3.12.2
@@ -7,6 +7,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	RDoc produces HTML and command-line documentation for Ruby projects
+
+LICENSE=	GPLv2 RUBY
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	rubygem-json>=1.4:${PORTSDIR}/devel/rubygem-json
 RUN_DEPENDS=	rubygem-json>=1.4:${PORTSDIR}/devel/rubygem-json
