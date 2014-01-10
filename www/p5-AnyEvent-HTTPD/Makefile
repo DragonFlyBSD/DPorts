@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: www/p5-AnyEvent-HTTPD/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-AnyEvent-HTTPD/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	AnyEvent-HTTPD
 PORTVERSION=	0.93
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:ELMEX
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mons@cpan.org
-COMMENT=	A simple lightweight event based web server
+COMMENT=	Simple lightweight event based web server
 
 RUN_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-Object-Event>=1.21:${PORTSDIR}/devel/p5-Object-Event \
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-AnyEvent>=0:${PORTSDIR}/devel/p5-AnyEvent \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	AnyEvent::HTTPD.3 AnyEvent::HTTPD::Request.3 AnyEvent::HTTPD::Util.3 AnyEvent::HTTPD::HTTPServer.3 AnyEvent::HTTPD::HTTPConnection.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
