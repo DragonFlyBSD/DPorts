@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/py-isodate/Makefile 335268 2013-11-30 09:12:02Z sunpoet $
+# $FreeBSD: devel/py-isodate/Makefile 337623 2013-12-26 21:53:15Z sunpoet $
 
 PORTNAME=	isodate
 PORTVERSION=	0.4.9
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ISO 8601 date/time/duration parser and formater
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
