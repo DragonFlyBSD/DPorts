@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/liblscp/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/liblscp/Makefile 337911 2013-12-28 20:54:43Z antoine $
 
 PORTNAME=	liblscp
 PORTVERSION=	0.5.6
@@ -13,7 +13,6 @@ COMMENT=	Wrapper around the LSCP network protocol
 LICENSE=	LGPL21
 
 USES=		gmake pathfix
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
