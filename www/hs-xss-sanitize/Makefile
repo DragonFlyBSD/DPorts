@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-xss-sanitize/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-xss-sanitize/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	xss-sanitize
 PORTVERSION=	0.3.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 USE_CABAL=	attoparsec>=0.10.0.3 css-text>=0.1.1 network>=2 \
 		tagsoup>=0.12.2 text>=0.11 utf8-string>=0.3
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
