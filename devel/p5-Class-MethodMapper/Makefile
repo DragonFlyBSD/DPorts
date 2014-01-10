@@ -1,18 +1,15 @@
-# $FreeBSD: devel/p5-Class-MethodMapper/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-MethodMapper/Makefile 338866 2014-01-06 12:05:42Z az $
 
-PORTNAME=		Class-MethodMapper
-PORTVERSION=		1.0
-CATEGORIES=		devel perl5
-MASTER_SITES=		CPAN
-PKGNAMEPREFIX=		p5-
+PORTNAME=	Class-MethodMapper
+PORTVERSION=	1.0
+CATEGORIES=	devel perl5
+MASTER_SITES=	CPAN
+PKGNAMEPREFIX=	p5-
 
-MAINTAINER=		kuriyama@FreeBSD.org
-COMMENT=		Perl module for abstract Class wrapper for AutoLoader
+MAINTAINER=	kuriyama@FreeBSD.org
+COMMENT=	Perl module for abstract Class wrapper for AutoLoader
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=			Class::MethodMapper.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
