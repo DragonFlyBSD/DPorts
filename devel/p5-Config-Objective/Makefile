@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@uiuc.edu>
-# $FreeBSD: devel/p5-Config-Objective/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-Objective/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Config-Objective
 PORTVERSION=	0.9.1
@@ -18,10 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Config::Objective::List.3 Config::Objective::Boolean.3 \
-		Config::Objective::Table.3 Config::Objective.3 \
-		Config::Objective::Hash.3 Config::Objective::Integer.3 \
-		Config::Objective::String.3 Config::Objective::DataType.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
