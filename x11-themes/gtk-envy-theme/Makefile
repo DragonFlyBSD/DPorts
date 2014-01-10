@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-themes/gtk-envy-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk-envy-theme/Makefile 338922 2014-01-06 19:04:06Z antoine $
 
 PORTNAME=	gtk-envy-theme
 PORTVERSION=	1.0.${SNAPSHOT}
@@ -20,12 +20,11 @@ USE_GNOME=	gtk20
 
 SNAPSHOT=	20060211
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/share/themes/Envy
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/Envy
 	${INSTALL_DATA} ${FILESDIR}/index.theme.in \
-		${PREFIX}/share/themes/Envy/index.theme
+		${STAGEDIR}${PREFIX}/share/themes/Envy/index.theme
 	@(cd ${WRKSRC}/Envy \
-		&& ${COPYTREE_SHARE} . ${PREFIX}/share/themes/Envy)
+		&& ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/themes/Envy)
 
 .include <bsd.port.mk>
