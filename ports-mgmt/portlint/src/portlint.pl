@@ -16,8 +16,8 @@
 # This code now mainly supports FreeBSD, but patches to update support for
 # OpenBSD and NetBSD will be accepted.
 #
-# $FreeBSD: ports-mgmt/portlint/src/portlint.pl 331698 2013-10-26 14:48:59Z marcus $
-# $MCom: portlint/portlint.pl,v 1.297 2013/10/26 14:41:47 marcus Exp $
+# $FreeBSD: ports-mgmt/portlint/src/portlint.pl 338746 2014-01-05 05:52:23Z marcus $
+# $MCom: portlint/portlint.pl,v 1.305 2014/01/05 05:50:13 marcus Exp $
 #
 
 use strict;
@@ -52,7 +52,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 14;
-my $micro = 7;
+my $micro = 9;
 
 sub l { '[{(]'; }
 sub r { '[)}]'; }
@@ -207,6 +207,7 @@ my @varlist =  qw(
 my %makevar;
 my $i = 0;
 for (split(/\n/, get_makevar(@varlist))) {
+	$_ =~ s/\0//;
 	print "OK: makevar: $varlist[$i] = $_\n" if ($verbose);
 	$makevar{$varlist[$i]} = $_;
 	$i++;
@@ -851,11 +852,11 @@ sub checkplist {
 			}
 		}
 
-		if ($_ =~ m{^%%PORT(\w+)%%(.*?)%%(\w+)DIR%%(.*)$} and $1 ne $3) {
+		if ($_ =~ m{^%%PORT(\w+)%%(.*?)%%(\w+)DIR%%(.*)$} and $1 ne $3 and
+			defined($check_xxxdir_ok{$3})) {
 			&perror("WARN", $file, $., "Do not mix %%PORT$1%% with %%$3DIR%%. ".
 				"Use '%%PORT$check_xxxdir_ok{$3}%%$2%%$3DIR%%$4' instead and update Makefile ".
-				"accordingly.") unless (defined($check_xxxdir_ok{$3}) and
-					$check_xxxdir_ok{$3} eq $1);
+				"accordingly.") unless ($check_xxxdir_ok{$3} eq $1);
 		}
 
 		if ($_ =~ m#man/([^/]+/)?man([$manchapters])/([^\.]+\.[$manchapters])(\.gz)?$#) {
@@ -1082,7 +1083,7 @@ sub checkpatch {
 	if ($whole =~ //) {
 		my $lineno = &linenumber($`);
 		&perror("WARN", $file, $lineno, "patch contains ^M characters. ".
-			"Consider defining USE_DOS2UNIX to remove DOS line endings ".
+			"Consider defining USES=dos2unix to remove DOS line endings ".
 			"from source files.");
 	}
 
@@ -1630,8 +1631,9 @@ sub checkmakefile {
 	#
 	print "OK: checking DESKTOP_ENTRIES for \${TRUE}/\${FALSE}.\n" if ($verbose);
 	$desktop_entries = &get_makevar_raw('DESKTOP_ENTRIES');
-	if ($desktop_entries =~ /\${TRUE}/ or $desktop_entries =~ /\${FALSE}/) {
-		&perror("FATAL", $file, -1, "Use true/false instead of \${TRUE}/\${FALSE} in DESKTOP_ENTRIES.");
+	if ($desktop_entries =~ /\${TRUE}/ or $desktop_entries =~ /\${FALSE}/ or
+	    $desktop_entries =~ /\"true\"/ or $desktop_entries =~ /\"false\"/) {
+		&perror("FATAL", $file, -1, "Use true/false (without quotes) instead of \${TRUE}/\${FALSE} in DESKTOP_ENTRIES.");
 	}
 
 	#
@@ -1754,10 +1756,14 @@ sub checkmakefile {
 	my $edate;
 	if (($edate) = ($whole =~ m/\nEXPIRATION_DATE\??=[ \t]*([^\n]*)\n/)) {
 		my $lineno = &linenumber($`);
-		if ($edate ne strftime("%Y-%m-%d", 0, 0, 0,
-					substr($edate, 8, 2),
-					substr($edate, 5, 2) - 1,
-					substr($edate, 0, 4) - 1900)) {
+		my $ndate = $edate;
+		if ($ndate eq '' || length $ndate < 10) {
+				$ndate = '0000-00-00';
+		}
+		if ($ndate ne strftime("%Y-%m-%d", 0, 0, 0,
+					substr($ndate, 8, 2),
+					substr($ndate, 5, 2) - 1,
+					substr($ndate, 0, 4) - 1900)) {
 			&perror("FATAL", $file, $lineno, "EXPIRATION_DATE ($edate) is ".
 				"either not in YYYY-MM-DD format or it is not a valid ".
 				"date.");
@@ -1893,6 +1899,11 @@ ruby sed sh sort sysctl touch tr which xargs xmkmf
 		# lines, and go through each one.
 		while ($j =~ /^(.*$i.*)$/gm) {
 			my $curline = $1;
+			my $dte_test = $curline;
+			$dte_test =~ s/^\s+//g;
+			if ($desktop_entries =~ /\Q$dte_test\E$/) {
+				next;
+			}
 			my $lineno = &linenumber($`);
 			if ($curline =~ /(?:^|\s)[\@\-]{0,2}$i(?:$|\s)/
 				&& $curline !~ /^[A-Z]+_TARGET[?+]?=[^\n]+$i/m
@@ -1905,6 +1916,9 @@ ruby sed sh sort sysctl touch tr which xargs xmkmf
 				&& $curline !~ /^CATEGORIES(.)?=[^\n]+$i/m
 				&& $curline !~ /^USES(.)?=[^\n]+$i/m
 				&& $curline !~ /^WX_COMPS(.)?=[^\n]+$i/m
+				&& $curline !~ /^ONLY_FOR_ARCHS_REASON(.)?=[^\n]+$i/m
+				&& $curline !~ /^NOT_FOR_ARCHS_REASON(.)?=[^\n]+$i/m
+				&& $curline !~ /^[A-Z0-9_]+_DESC=[^\n]+$i/m
 				&& $curline !~ /^\s*#.+$/m
 				&& $curline !~ /\-\-$i/m
 				&& $curline !~ /^COMMENT(.)?=[^\n]+$i/m) {
@@ -2146,8 +2160,7 @@ ruby sed sh sort sysctl touch tr which xargs xmkmf
 	# whole file: check for --build, --mandir, and --infodir
 	# when GNU_CONFIGURE
 	#
-	if (exists $makevar{GNU_CONFIGURE} &&
-		$makevar{GNU_CONFIGURE} ne '' &&
+	if ($makevar{GNU_CONFIGURE} ne '' &&
 		$makevar{CONFIGURE_ARGS} =~ /--(build|(man|info)dir)/) {
 		&perror("WARN", $file, -1, "--build, --mandir, and --infodir ".
 			"are not needed in CONFIGURE_ARGS as they are already set in ".
@@ -2192,7 +2205,7 @@ ruby sed sh sort sysctl touch tr which xargs xmkmf
 				"CFLAGS+=... instead");
 		}
 
-		if (defined($cxxflags) && $cflags !~ /\$\{CXXFLAGS/) {
+		if (defined($cxxflags) && $cxxflags !~ /\$\{CXXFLAGS/) {
 			&perror("FATAL", $file, -1, "CXXFLAGS are clobbered in ".
 				"CONFIGURE_ENV.  Alter CXXFLAGS in the Makefile with ".
 				"CXXFLAGS+=... instead");
@@ -2792,7 +2805,7 @@ DISTFILES EXTRACT_ONLY
 	#
 	print "OK: checking second section of $file (PATCH*: optional).\n"
 		if ($verbose);
-	$tmp = $sections[$idx];
+	$tmp = $sections[$idx] // '';
 
 	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP)/) {
 		&checkearlier($file, $tmp, @varnames);
@@ -2828,7 +2841,7 @@ PATCH_SITES PATCHFILES PATCH_DIST_STRIP
 	#
 	print "OK: checking third section of $file (MAINTAINER).\n"
 		if ($verbose);
-	$tmp = $sections[$idx];
+	$tmp = $sections[$idx] // '';
 
 	&checkearlier($file, $tmp, @varnames);
 	&checkorder('MAINTAINER', $tmp, $file, qw(
@@ -2932,7 +2945,7 @@ MAINTAINER COMMENT
 	#
 	print "OK: checking fifth section of $file (*_DEPENDS).\n"
 		if ($verbose);
-	$tmp = $sections[$idx];
+	$tmp = $sections[$idx] // '';
 
 	# Check for direct assignment of BUILD_DEPENDS to RUN_DEPENDS.
 	if ($tmp =~ /\nRUN_DEPENDS=[ \t]*\${BUILD_DEPENDS}/) {
@@ -3220,7 +3233,7 @@ TEST_DEPENDS FETCH_DEPENDS DEPENDS_TARGET
 				if ($i ne '' && ! -f "files/$i.in") {
 					&perror("FATAL", $file, -1, "$i listed in USE_RC_SUBR, ".
 						"but files/$i.in is missing.");
-				} elsif ($i eq '' && $mvar ne '') {
+				} elsif ($i eq '' && $mvar && $mvar ne '') {
 					&perror("WARN", $file, -1, "possible undefined make variable ".
 						"$mvar used as the value for USE_RC_SUBR.");
 				}
@@ -3289,6 +3302,9 @@ sub checkorder {
 	my(@items, $i, $j, $k, $invalidorder);
 
 	print "OK: checking the order of $section section.\n" if ($verbose);
+	if (!defined($str)) {
+		$str = '';
+	}
 
 	@items = ();
 	foreach my $i (split("\n", $str)) {
@@ -3345,6 +3361,10 @@ sub checkorder {
 sub checkearlier {
 	my($file, $str, @varnames) = @_;
 	my($i);
+
+	if (!defined($str)) {
+			$str = '';
+	}
 
 	print "OK: checking items that has to appear earlier.\n" if ($verbose);
 	foreach my $i (@varnames) {
@@ -3440,6 +3460,8 @@ sub get_makevar {
 	$result = `$cmd`;
 	chomp $result;
 
+	$result =~ s/\n\n/\n\0\n/g;
+
 	return $result;
 }
 
@@ -3449,6 +3471,8 @@ sub get_makevar_raw {
 	$cmd = join(' -XV ', "make $makeenv MASTER_SITE_BACKUP=''", @_);
 	$result = `$cmd`;
 	chomp $result;
+
+	$result =~ s/\n\n/\n\0\n/g;
 
 	return $result;
 }
@@ -3462,9 +3486,12 @@ sub is_predefined {
 		$site_re =~ s,$subdir_re,/(.*)/,;
 
 		if ($url =~ /$site_re/) {
-			&perror("WARN", $file, -1, "how about using ".
-				"\"\${MASTER_SITE_$predefined{$site}}\" with ".
-				"\"MASTER_SITE_SUBDIR=$1\", instead of \"$url\"?");
+			my $pe = "how about using \"\${MASTER_SITE_$predefined{$site}}\" ";
+			if ($1) {
+				$pe .= "with \"MASTER_SITE_SUBDIR=$1\", ";
+			}
+			$pe .= "instead of \"$url\"?";
+			&perror("WARN", $file, -1, $pe);
 			return &TRUE;
 		}
 	}
