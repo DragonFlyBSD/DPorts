@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-ConfigFile/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-ConfigFile/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	ConfigFile
 PORTVERSION=	1.1.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	LGPL21
 
 USE_CABAL=	MissingH>=1.0.0 mtl parsec
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
