@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-KFAS/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-KFAS/Makefile 338308 2013-12-31 14:17:19Z tota $
 
 PORTNAME=	KFAS
-PORTVERSION=	0.9.11
-PORTREVISION=	5
+PORTVERSION=	1.0.2
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
@@ -13,7 +12,6 @@ COMMENT=	Kalman filter and smoothers for exponential family state space models
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
