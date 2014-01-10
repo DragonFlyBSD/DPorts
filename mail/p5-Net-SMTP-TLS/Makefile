@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Net-SMTP-TLS/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Net-SMTP-TLS/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	Net-SMTP-TLS
 PORTVERSION=	0.12
@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gslin@gslin.org
-COMMENT=	An SMTP client supporting TLS and AUTH
+COMMENT=	SMTP client supporting TLS and AUTH
 
 RUN_DEPENDS=	p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
 		p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-Digest-HMAC>=0:${PORTSDIR}/security/p5-Digest-HMAC \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SMTP::TLS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
