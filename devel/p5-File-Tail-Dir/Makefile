@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: devel/p5-File-Tail-Dir/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Tail-Dir/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	File-Tail-Dir
 PORTVERSION=	0.14
@@ -21,7 +21,4 @@ RUN_DEPENDS=	p5-File-ChangeNotify>0:${PORTSDIR}/devel/p5-File-ChangeNotify \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Tail::Dir.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
