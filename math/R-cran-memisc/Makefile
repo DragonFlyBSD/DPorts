@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-memisc/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-memisc/Makefile 338307 2013-12-31 14:09:00Z tota $
 
 PORTNAME=	memisc
-DISTVERSION=	0.96-7
-PORTREVISION=	2
+DISTVERSION=	0.96-9
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -12,7 +11,6 @@ COMMENT=	Provides an infrastructure for the management of survey data
 
 LICENSE=	GPLv2
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
