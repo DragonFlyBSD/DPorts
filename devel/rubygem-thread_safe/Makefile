@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-thread_safe/Makefile 334436 2013-11-20 18:32:13Z sunpoet $
+# $FreeBSD: devel/rubygem-thread_safe/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	thread_safe
 PORTVERSION=	0.1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Thread-safe collections and utilities for Ruby
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	rubygem-atomic>=0:${PORTSDIR}/devel/rubygem-atomic
 
