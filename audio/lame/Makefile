@@ -1,5 +1,5 @@
 # Created by: yoshiaki Uchikawa
-# $FreeBSD: audio/lame/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/lame/Makefile 339010 2014-01-07 16:08:06Z adamw $
 
 PORTNAME=	lame
 PORTVERSION=	3.99.5
@@ -34,7 +34,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,test -d \.libs || mkdir,mkdir -p,' \
 		${WRKSRC}/libmp3lame/i386/Makefile.in
 
-.if defined(NOPORTDOCS)
+.if !${PORT_OPTIONS:MDOCS}
 do-install:
 	@cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install-exec
