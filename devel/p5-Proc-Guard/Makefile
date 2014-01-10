@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Proc-Guard/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Proc-Guard/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Proc-Guard
 PORTVERSION=	0.06
@@ -17,7 +17,4 @@ TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Proc::Guard.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
