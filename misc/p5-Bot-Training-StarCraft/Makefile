@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: misc/p5-Bot-Training-StarCraft/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Bot-Training-StarCraft/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Bot-Training-StarCraft
 PORTVERSION=	0.02
@@ -21,7 +21,4 @@ RUN_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Bot::Training::StarCraft.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
