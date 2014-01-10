@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/rubygem-bin_utils/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-bin_utils/Makefile 338625 2014-01-04 08:03:35Z vg $
 
 PORTNAME=	bin_utils
 PORTVERSION=	0.0.4
@@ -9,7 +9,6 @@ MASTER_SITES=	RG
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Extracting binary integers from binary string and packing back
 
-RUBY_VER=	1.9
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
