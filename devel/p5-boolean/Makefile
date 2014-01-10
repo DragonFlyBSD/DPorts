@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-boolean/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-boolean/Makefile 338872 2014-01-06 12:55:03Z az $
 
 PORTNAME=		boolean
 PORTVERSION=		0.30
@@ -17,7 +17,4 @@ LICENSE_COMB=		dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=			boolean.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
