@@ -1,5 +1,5 @@
 # Created by: Conor McDermottroe <ports@mcdermottroe.com>
-# $FreeBSD: www/p5-TestGen4Web-Runner/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-TestGen4Web-Runner/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	TestGen4Web-Runner
 PORTVERSION=	0.11
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	WWW/MACKERS
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	eg@fbsd.lt
-COMMENT=	A PERL module to replay files recorded with TestGen4Web
+COMMENT=	Perl module to replay files recorded with TestGen4Web
 
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		TestGen4Web::Runner.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
