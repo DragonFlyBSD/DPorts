@@ -1,5 +1,5 @@
 # Created by: Po-Chien Lin <linpc@cs.nctu.edu.tw>
-# $FreeBSD: devel/p5-syntax/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-syntax/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	syntax
 PORTVERSION=	0.004
@@ -21,7 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	syntax.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
