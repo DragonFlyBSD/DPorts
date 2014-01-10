@@ -1,5 +1,5 @@
 # Created by: coryking
-# $FreeBSD: www/p5-HTML-Location/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Location/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	HTML-Location
 PORTVERSION=	1.03
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Clone>=0.23:${PORTSDIR}/devel/p5-Clone \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Location.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
