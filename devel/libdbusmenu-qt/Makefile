@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: devel/libdbusmenu-qt/Makefile 332888 2013-11-05 18:18:03Z rakuco $
+# $FreeBSD: devel/libdbusmenu-qt/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	libdbusmenu-qt
 PORTVERSION=	0.9.2
@@ -14,7 +14,6 @@ LICENSE=	LGPL20
 
 USE_QT4=	corelib dbus gui \
 		moc_build qmake_build rcc_build uic_build
-FETCH_ARGS=	-Fpr
 USE_BZIP2=	yes
 USES=		cmake:outsource
 USE_LDCONFIG=	yes
