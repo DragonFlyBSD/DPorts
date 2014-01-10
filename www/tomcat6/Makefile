@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: www/tomcat6/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tomcat6/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	tomcat
 PORTVERSION=	6.0.37
@@ -11,7 +11,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Open-source Java web server by Apache, 6.x branch
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_JAVA=	yes
