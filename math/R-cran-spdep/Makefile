@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-spdep/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-spdep/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	spdep
 DISTVERSION=	0.5-68
@@ -17,7 +17,6 @@ RUN_DEPENDS=	R-cran-sp>=0.9:${PORTSDIR}/math/R-cran-sp \
 		R-cran-coda>0:${PORTSDIR}/math/R-cran-coda \
 		R-cran-LearnBayes>0:${PORTSDIR}/math/R-cran-LearnBayes
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
