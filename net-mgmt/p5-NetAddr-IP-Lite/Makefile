@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: net-mgmt/p5-NetAddr-IP-Lite/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-NetAddr-IP-Lite/Makefile 338788 2014-01-05 15:44:11Z az $
 
 PORTNAME=	NetAddr-IP-Lite
 PORTVERSION=	1.01
@@ -15,7 +15,4 @@ USE_PERL5=	configure
 
 CONFIGURE_ARGS=	-noxs
 
-MAN3=		NetAddr::IP::UtilPP.3 NetAddr::IP::Util.3 NetAddr::IP::Lite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
