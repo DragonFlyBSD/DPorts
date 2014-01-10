@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports-INDEXhash/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports-INDEXhash/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	FreeBSD-Ports-INDEXhash
 PORTVERSION=	1.2.2
@@ -13,7 +13,4 @@ COMMENT=	Make a hash out of the index file for the ports tree
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		FreeBSD::Ports::INDEXhash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
