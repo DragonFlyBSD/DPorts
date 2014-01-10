@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: www/flickcurl/Makefile 329648 2013-10-07 03:48:16Z danilo $
+# $FreeBSD: www/flickcurl/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	flickcurl
 PORTVERSION=	1.25
@@ -9,7 +9,7 @@ MASTER_SITES=	http://download.dajobe.org/flickcurl/
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	C library for the Flickr API
 
-LICENSE=	AL2 GPLv2 LGPL21
+LICENSE=	APACHE20 GPLv2 LGPL21
 LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
