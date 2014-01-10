@@ -1,4 +1,7 @@
-# $FreeBSD: news/inn/Makefile.layout 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: news/inn/Makefile.layout 338218 2013-12-31 03:45:01Z fluffy $
+
+# tell bmake we use the old :L :U modifiers
+.MAKE.FreeBSD_UL= yes
 
 INN_LAYOUT?=		old
 
