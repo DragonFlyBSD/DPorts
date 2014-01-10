@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/nltk/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/nltk/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	nltk
 PORTVERSION=	2.0.4
@@ -9,7 +9,7 @@ MASTER_SITES=	CHEESESHOP
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	Natural language toolkit written in python
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>=0:${PORTSDIR}/x11-toolkits/py-tkinter \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.09:${PORTSDIR}/devel/py-yaml
