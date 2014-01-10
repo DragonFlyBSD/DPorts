@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/caps-plugins/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/caps-plugins/Makefile 337974 2013-12-29 12:32:17Z antoine $
 
 PORTNAME=	caps-plugins
 PORTVERSION=	0.4.5
@@ -20,7 +20,6 @@ LICENSE_COMB=	dual
 
 WRKSRC=		${WRKDIR}/caps-${PORTVERSION}
 
-NO_STAGE=	yes
 USES=		gmake
 MAKE_ARGS=	CC="${CXX}" CFLAGS="${CXXFLAGS} -fPIC -DPIC"
 
@@ -30,9 +29,9 @@ PLIST_DIRSTRY=	share/ladspa/rdf share/ladspa
 OPTIMIZED_CFLAGS_CFLAGS=	-O2 -ffast-math -funroll-loops
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/ladspa
-	${INSTALL_DATA} ${WRKSRC}/caps.so ${PREFIX}/lib/ladspa
-	@${MKDIR} ${PREFIX}/share/ladspa/rdf
-	${INSTALL_DATA} ${WRKSRC}/caps.rdf ${PREFIX}/share/ladspa/rdf
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/ladspa
+	${INSTALL_LIB} ${WRKSRC}/caps.so ${STAGEDIR}${PREFIX}/lib/ladspa
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/ladspa/rdf
+	${INSTALL_DATA} ${WRKSRC}/caps.rdf ${STAGEDIR}${PREFIX}/share/ladspa/rdf
 
 .include <bsd.port.mk>
