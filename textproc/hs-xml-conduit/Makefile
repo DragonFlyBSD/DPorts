@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-xml-conduit/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: textproc/hs-xml-conduit/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	xml-conduit
 PORTVERSION=	1.1.0.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -16,6 +16,5 @@ USE_CABAL=	attoparsec>=0.10 attoparsec-conduit>=1.0 blaze-builder>=0.2 \
 		resourcet>=0.3 system-filepath>=0.4 text>=0.7 \
 		transformers>=0.2 xml-types>=0.3.3
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
