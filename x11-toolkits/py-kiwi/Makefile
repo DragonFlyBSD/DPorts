@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: x11-toolkits/py-kiwi/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-kiwi/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	kiwi
 PORTVERSION=	1.9.29
@@ -23,8 +23,6 @@ USE_XZ=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
-
-FETCH_ARGS=	-rRp
 
 NO_STAGE=	yes
 post-install:
