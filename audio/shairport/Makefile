@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <graudeejs@gmail.com>
-# $FreeBSD: audio/shairport/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/shairport/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	shairport
 PORTVERSION=	0.05
@@ -33,6 +33,8 @@ PORTDOCS=	README.md
 
 REV=		b1cb9ea
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|avahi-|${LOCALBASE}/bin/avahi-|g' \
 		-e 's|$$FindBin.*|"${PREFIX}/bin/hairtunes";|' \
@@ -44,7 +46,7 @@ do-install:
 .for file in ${PORTNAME} hairtunes
 	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${PREFIX}/bin
 .endfor
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} -p ${WRKSRC}/${i} ${DOCSDIR}
