@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/py-mpd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/py-mpd/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	mpd
 PORTVERSION=	0.3.0
@@ -18,7 +18,9 @@ NO_STAGE=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python_mpd
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
 post-install:
