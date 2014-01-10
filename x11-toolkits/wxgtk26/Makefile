@@ -1,12 +1,12 @@
 # Created by: fjoe@FreeBSD.org
-# $FreeBSD: x11-toolkits/wxgtk26/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk26/Makefile 338620 2014-01-04 01:16:19Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.6.4
 PORTREVISION?=	7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/wxwindows/wxGTK/${PORTVERSION}
-PKGNAMESUFFIX=	${WXGTK_FLAVOR}
+PKGNAMESUFFIX=	26-${WXGTK_FLAVOR}
 DISTNAME=	wxGTK-${PORTVERSION}
 
 MAINTAINER?=	fjoe@FreeBSD.org
