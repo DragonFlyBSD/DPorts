@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/lash/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/lash/Makefile 338138 2013-12-30 16:51:37Z antoine $
 
 PORTNAME=	lash
 PORTVERSION=	0.5.4
@@ -21,7 +21,6 @@ OPTIONS_DEFINE=	READLINE DOCS
 OPTIONS_DEFAULT=READLINE
 
 USES=		gmake pathfix pkgconfig
-NO_STAGE=	yes
 USE_GNOME=	gtk20 libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-alsa-midi
@@ -54,9 +53,9 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/docs/lash-manual-html-one-page \
-		&& ${INSTALL_DATA} lash-manual.html ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/lash-manual-html-one-page/lash-manual.html \
+		${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
