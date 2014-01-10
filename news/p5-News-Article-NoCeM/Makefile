@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: news/p5-News-Article-NoCeM/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/p5-News-Article-NoCeM/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	News-Article-NoCeM
 PORTVERSION=	0.08
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		News::Article::NoCeM.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
