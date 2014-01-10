@@ -1,5 +1,5 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: mail/p5-MIME-EncWords/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-EncWords/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	MIME-EncWords
 PORTVERSION=	1.011.1
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-MIME-Charset>=1.006.2:${PORTSDIR}/mail/p5-MIME-Charset
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::EncWords.3 MIME::EncWords::JA_JP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
