@@ -1,5 +1,5 @@
 # Created by: glewis
-# $FreeBSD: databases/java-mybatis/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/java-mybatis/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mybatis
 PORTVERSION=	3.0.3
@@ -18,7 +18,7 @@ COMMENT=	SQL Mapping Framework
 
 USE_JAVA=	yes
 USE_ZIP=	yes
-LICENSE=	AL2
+LICENSE=	APACHE20
 NO_BUILD=	yes
 
 JAR_FILE=	${PORTNAME}-${PORTVERSION}.jar
