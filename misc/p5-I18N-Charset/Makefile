@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: misc/p5-I18N-Charset/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-I18N-Charset/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	I18N-Charset
 PORTVERSION=	1.39.4
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		I18N::Charset.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
