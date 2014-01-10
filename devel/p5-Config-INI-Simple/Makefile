@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Config-INI-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-INI-Simple/Makefile 338872 2014-01-06 12:55:03Z az $
 
 PORTNAME=	Config-INI-Simple
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Simple reading and writing from an INI file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Config::INI::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
