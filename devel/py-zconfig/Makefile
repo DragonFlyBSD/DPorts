@@ -1,21 +1,22 @@
 # Created by: Landon Fuller <landonf@opendarwin.org>
-# $FreeBSD: devel/py-zconfig/Makefile 327705 2013-09-20 14:29:14Z rm $
+# $FreeBSD: devel/py-zconfig/Makefile 338852 2014-01-06 09:47:35Z rm $
 
 PORTNAME=	zconfig
 PORTVERSION=	2.9.3
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	ZConfig-${PORTVERSION}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	General use python configuration library
 
 LICENSE=	ZPL21
 
-NO_STAGE=	yes
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	ZConfig
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
