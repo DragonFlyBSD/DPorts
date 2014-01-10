@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Object/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Object/Makefile 338872 2014-01-06 12:55:03Z az $
 
 PORTNAME=	Test-Object
 PORTVERSION=	0.07
@@ -15,7 +15,4 @@ COMMENT=	Thoroughly testing objects via registered handlers
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Object.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
