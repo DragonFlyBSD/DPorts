@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	PSGI
 PORTVERSION=	1.102
@@ -13,9 +13,4 @@ COMMENT=	Pod documentation for Perl Web Server Gateway Interface Specification
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	PSGI::Extensions.3 \
-	PSGI::FAQ.3 \
-	PSGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
