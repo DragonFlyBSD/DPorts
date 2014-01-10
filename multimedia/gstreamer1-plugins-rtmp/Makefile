@@ -1,6 +1,6 @@
-# $FreeBSD: multimedia/gstreamer1-plugins-rtmp/Makefile 332416 2013-11-01 22:14:07Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins-rtmp/Makefile 338106 2013-12-30 12:56:11Z kwm $
 
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer rtmp plugin
