@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Aliases/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Aliases/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	MooseX-Aliases
 PORTVERSION=	0.11
@@ -21,9 +21,4 @@ TEST_DEPENDS=	p5-Test-Fatal>=0.003:${PORTSDIR}/devel/p5-Test-Fatal \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	MooseX::Aliases.3 \
-	MooseX::Aliases::Meta::Trait::Attribute.3 \
-	MooseX::Aliases::Meta::Trait::Method.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
