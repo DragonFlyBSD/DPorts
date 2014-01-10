@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 338291 2013-12-31 12:58:50Z kwm $
 
 PORTNAME=	xorg-vfbserver
 
@@ -16,12 +16,11 @@ USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
 		xkbui xxf86misc xxf86vm xaw7 xmu xpm xext pixman xtrans
 
 CONFIGURE_ARGS=	--disable-dmx --disable-xnest \
-		--without-xmlto --disable-docs --disable-devel1-docs \
+		--without-xmlto --disable-docs --disable-devel-docs \
 		--localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xvfb man/man1/Xvfb.1.gz
-
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/vfb/Xvfb ${STAGEDIR}${PREFIX}/bin/
