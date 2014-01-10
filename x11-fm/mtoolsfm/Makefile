@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: x11-fm/mtoolsfm/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/mtoolsfm/Makefile 337820 2013-12-27 22:36:08Z antoine $
 
 PORTNAME=	mtoolsfm
 PORTVERSION=	1.9.5
@@ -9,20 +9,17 @@ MASTER_SITES=	SF
 DISTNAME=	MToolsFM-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A graphical frontend to mtools
+COMMENT=	Graphical frontend to mtools
 
 RUN_DEPENDS=	mtools:${PORTSDIR}/emulators/mtools
 
-USES=        pathfix gettext
+USES=		gettext pathfix
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-conffile="${PREFIX}/etc/mtoolsfm.conf"
 
-MAN1=		mtoolsfm.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|MToolsFM|mtoolsfm|g' ${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name 'Makefile.in' | ${XARGS} ${REINPLACE_CMD} -e \
