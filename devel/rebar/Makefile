@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/rebar/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rebar/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	rebar
 PORTVERSION=	2.0.0
@@ -10,7 +10,7 @@ DISTNAME=	basho-${PORTNAME}-${GITVERSION}
 MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	A build-tool for Erlang that follows OTP principles
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/escript:${PORTSDIR}/lang/erlang
 RUN_DEPENDS:=	${BUILD_DEPENDS}
@@ -18,7 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 PLIST_FILES=	bin/${PORTNAME}
 
 GITVERSION=	1c98f6c
-FETCH_ARGS=	-Fpr
 
 NO_STAGE=	yes
 do-install:
