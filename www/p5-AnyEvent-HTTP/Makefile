@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: www/p5-AnyEvent-HTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-AnyEvent-HTTP/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	AnyEvent-HTTP
 PORTVERSION=	2.15
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AnyEvent::HTTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
