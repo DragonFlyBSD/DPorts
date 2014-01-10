@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-uniplate/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-uniplate/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	uniplate
 PORTVERSION=	1.6.10
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,8 +13,7 @@ LICENSE=	BSD
 
 USE_CABAL=	hashable>=1.1.2.3 syb unordered-containers>=0.2.1
 
-INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/uniplate.htm ${DATADIR}
+INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/uniplate.htm ${STAGEDIR}${DATADIR}
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
