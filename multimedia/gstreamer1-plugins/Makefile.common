@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 334511 2013-11-21 19:06:50Z kwm $
+# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 338106 2013-12-30 12:56:11Z kwm $
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile.common 11415 2013-04-26 22:58:21Z kwm $
 
 BASE_GST_ALL_PLUGINS= \
@@ -315,6 +315,13 @@ gst_ogg_LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 
 # opencv
 gst_opencv_LIB_DEPENDS=	libopencv_highgui.so:${PORTSDIR}/graphics/opencv
+gst_opencv_PLIST_FILES=	${GST_LIB_DIR}/libgstopencv.la \
+			${GST_LIB_DIR}/libgstopencv.so \
+			share/gst-plugins-bad/${VERSION}/opencv_haarcascades/fist.xml \
+			share/gst-plugins-bad/${VERSION}/opencv_haarcascades/palm.xml
+gst_opencv_PLIST_DIRSTRY=	share/gst-plugins-bad/${VERSION}/opencv_haarcascades \
+				share/gst-plugins-bad/${VERSION} \
+				share/gst-plugins-bad
 
 # openjpeg
 gst_openjpeg_LIB_DEPENDS=	libopenjpeg.so:${PORTSDIR}/graphics/openjpeg
