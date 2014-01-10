@@ -1,5 +1,5 @@
 # Created by: Robert Jenssen
-# $FreeBSD: math/qrupdate/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/qrupdate/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	qrupdate
 PORTVERSION=	1.1.2
@@ -12,8 +12,6 @@ MAINTAINER=	robertjenssen@ozemail.com.au
 COMMENT=	Fortran library for fast updates of QR and Cholesky decomposition
 
 LIB_DEPENDS=	blas.2:${PORTSDIR}/math/blas lapack.4:${PORTSDIR}/math/lapack
-
-FETCH_ARGS=	-p
 
 USES=		gmake
 
