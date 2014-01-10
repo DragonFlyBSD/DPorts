@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: graphics/wings/Makefile 337318 2013-12-24 03:30:22Z amdmi3 $
+# $FreeBSD: graphics/wings/Makefile 338996 2014-01-07 10:34:48Z amdmi3 $
 
 PORTNAME=	wings
 PORTVERSION=	1.4.1
@@ -15,8 +15,6 @@ BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang \
 		${LOCALBASE}/lib/erlang/lib/esdl/include/sdl.hrl:${PORTSDIR}/devel/esdl
 RUN_DEPENDS=	erl:${PORTSDIR}/lang/erlang \
 		${LOCALBASE}/lib/erlang/lib/esdl/include/sdl.hrl:${PORTSDIR}/devel/esdl
-
-CONFLICTS=	${PORTNAME}-devel-[0-9]*
 
 MAKE_ENV=	ESDL_PATH=${LOCALBASE}/lib/erlang/lib/esdl
 PLIST_SUB=	VERSION="${PORTVERSION}"
