@@ -1,5 +1,5 @@
 # Created by: Gabor Zahemszky <Gabor@Zahemszky.HU>
-# $FreeBSD: audio/aften/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/aften/Makefile 337569 2013-12-26 17:36:30Z bapt $
 
 PORTNAME=	aften
 PORTVERSION=	0.0.8
@@ -11,7 +11,6 @@ COMMENT=	ATSC A/52 audio encoder
 
 USE_BZIP2=	yes
 
-NO_STAGE=	yes
 USES=		cmake:outsource
 
 OPTIONS_DEFINE=		SHARED_LIB CXX_BINDINGS DOUBLE
