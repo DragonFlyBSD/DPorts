@@ -1,5 +1,5 @@
 # Created by: Yarodin <yarodin@gmail.com>
-# $FreeBSD: archivers/unrar-iconv/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/unrar-iconv/Makefile 338693 2014-01-04 23:45:06Z bapt $
 
 PKGNAMESUFFIX=	-iconv
 
@@ -9,7 +9,6 @@ MASTERDIR=	${.CURDIR}/../unrar
 
 EXTRA_PATCHES=	${.CURDIR}/files/patch-iconv
 
-NO_STAGE=	yes
 CPPFLAGS+=	-DWITH_ICONV -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 USES+=		iconv
