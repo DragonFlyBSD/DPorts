@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-httpclient/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jakarta-commons-httpclient/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	commons-httpclient
 DISTVERSION=	3.1
@@ -13,7 +13,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A package implementing the client side of the HTTP standard
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${JAVAJARDIR}/commons-logging.jar:${PORTSDIR}/java/jakarta-commons-logging
 BUILD_DEPENDS+=	${JAVAJARDIR}/commons-codec.jar:${PORTSDIR}/java/jakarta-commons-codec
