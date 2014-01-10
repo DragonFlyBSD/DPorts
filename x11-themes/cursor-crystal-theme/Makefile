@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 333149 2013-11-07 19:57:29Z dbn $
+# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 337845 2013-12-28 10:00:29Z dbn $
 
 PORTNAME=	cursor-crystal-theme
 DISTVERSION=	1.1.1
@@ -33,7 +33,7 @@ post-patch:
 		${WRKSRC}/white_src/Makefile
 
 pre-build:
-	@(cd ${WRKSRC}; ${ENV} ${MAKE_ENV} ${GMAKE} clean ${MAKE_ARGS})
+	@(cd ${WRKSRC}; ${ENV} ${MAKE_ENV} ${MAKE_CMD} clean ${MAKE_ARGS})
 
 pre-install:
 	@${REINPLACE_CMD} \
