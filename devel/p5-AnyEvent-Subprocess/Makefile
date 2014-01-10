@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-AnyEvent-Subprocess/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AnyEvent-Subprocess/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	AnyEvent-Subprocess
 PORTVERSION=	1.102912
@@ -36,38 +36,4 @@ TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AnyEvent::Subprocess.3 \
-		AnyEvent::Subprocess::DefaultDelegates.3 \
-		AnyEvent::Subprocess::Delegate.3 \
-		AnyEvent::Subprocess::Done.3 \
-		AnyEvent::Subprocess::Done::Delegate.3 \
-		AnyEvent::Subprocess::Done::Delegate::CaptureHandle.3 \
-		AnyEvent::Subprocess::Done::Delegate::Handle.3 \
-		AnyEvent::Subprocess::Done::Delegate::State.3 \
-		AnyEvent::Subprocess::Done::Delegate::Timeout.3 \
-		AnyEvent::Subprocess::Easy.3 \
-		AnyEvent::Subprocess::Handle.3 \
-		AnyEvent::Subprocess::Job.3 \
-		AnyEvent::Subprocess::Job::Delegate.3 \
-		AnyEvent::Subprocess::Job::Delegate::Callback.3 \
-		AnyEvent::Subprocess::Job::Delegate::CaptureHandle.3 \
-		AnyEvent::Subprocess::Job::Delegate::CompletionCondvar.3 \
-		AnyEvent::Subprocess::Job::Delegate::Handle.3 \
-		AnyEvent::Subprocess::Job::Delegate::MonitorHandle.3 \
-		AnyEvent::Subprocess::Job::Delegate::PrintError.3 \
-		AnyEvent::Subprocess::Job::Delegate::Pty.3 \
-		AnyEvent::Subprocess::Job::Delegate::Timeout.3 \
-		AnyEvent::Subprocess::Role::WithDelegates.3 \
-		AnyEvent::Subprocess::Role::WithDelegates::Manager.3 \
-		AnyEvent::Subprocess::Running.3 \
-		AnyEvent::Subprocess::Running::Delegate.3 \
-		AnyEvent::Subprocess::Running::Delegate::Callback.3 \
-		AnyEvent::Subprocess::Running::Delegate::CaptureHandle.3 \
-		AnyEvent::Subprocess::Running::Delegate::CompletionCondvar.3 \
-		AnyEvent::Subprocess::Running::Delegate::Handle.3 \
-		AnyEvent::Subprocess::Running::Delegate::MonitorHandle.3 \
-		AnyEvent::Subprocess::Running::Delegate::Timeout.3 \
-		AnyEvent::Subprocess::Types.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
