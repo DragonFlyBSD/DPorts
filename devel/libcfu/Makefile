@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libcfu/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libcfu/Makefile 337999 2013-12-29 14:50:31Z crees $
 
 PORTNAME=	libcfu
 DISTVERSION=	0.04a
@@ -8,7 +8,7 @@ MASTER_SITES=	GH
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Simple library of tools for developing multithreaded software
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	crees
@@ -25,7 +25,6 @@ INFO=		${PORTNAME}
 
 # XXX: work around an issue with automake-1.13 erroring out on a
 #      non-existent m4 directory before libtoolize creates it
-NO_STAGE=	yes
 pre-configure::
 	@${MKDIR} ${WRKSRC}/m4
 
