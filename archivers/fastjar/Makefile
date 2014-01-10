@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: archivers/fastjar/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/fastjar/Makefile 338668 2014-01-04 18:42:50Z bapt $
 
 PORTNAME=	fastjar
 PORTVERSION=	0.93.20060808
@@ -12,7 +12,6 @@ COMMENT=	Version of JDK's `jar' command written entirely in C
 
 LICENSE=	GPLv2
 
-NO_STAGE=	yes
 USES=		gmake perl5
 USES_PERL5=	build
 USE_BZIP2=	yes
@@ -20,19 +19,16 @@ GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PORTDOCS=	CHANGES ChangeLog NEWS README
-PLIST_FILES=	bin/fastjar bin/grepjar
+PLIST_FILES=	bin/fastjar bin/grepjar \
+		man/man1/fastjar.1.gz \
+		man/man1/grepjar.1.gz
 
 INFO=		fastjar
-MAN1=		fastjar.1 grepjar.1
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
