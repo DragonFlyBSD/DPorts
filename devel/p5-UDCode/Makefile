@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-UDCode/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-UDCode/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	UDCode
 PORTVERSION=	1.03
@@ -14,7 +14,4 @@ COMMENT=	Does a set of code words form a uniquely decodable code?
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	UDCode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
