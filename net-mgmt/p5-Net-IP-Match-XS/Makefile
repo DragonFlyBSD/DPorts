@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-Net-IP-Match-XS/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Net-IP-Match-XS/Makefile 338788 2014-01-05 15:44:11Z az $
 
 PORTNAME=	Net-IP-Match-XS
 PORTVERSION=	0.03
@@ -13,7 +13,4 @@ COMMENT=	Efficiently match IP addresses against IP ranges
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::IP::Match::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
