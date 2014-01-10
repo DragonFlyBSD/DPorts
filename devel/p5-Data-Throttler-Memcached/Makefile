@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-Data-Throttler-Memcached/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Throttler-Memcached/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	Data-Throttler-Memcached
 PORTVERSION=	0.00003
@@ -21,8 +21,4 @@ RUN_DEPENDS=	p5-Cache-Memcached-Managed>=0:${PORTSDIR}/databases/p5-Cache-Memcac
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Throttler::Memcached.3 \
-		Data::Throttler::BucketChain::Memcached.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
