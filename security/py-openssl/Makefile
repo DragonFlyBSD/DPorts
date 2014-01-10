@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-openssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-openssl/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	openssl
 PORTVERSION=	0.13
@@ -11,7 +11,7 @@ DISTNAME=	pyOpenSSL-${PORTVERSION}
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python interface to the OpenSSL library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_PYTHON=	yes
