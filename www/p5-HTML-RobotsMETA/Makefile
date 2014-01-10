@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-HTML-RobotsMETA/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-RobotsMETA/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	HTML-RobotsMETA
 PORTVERSION=	0.00004
@@ -17,8 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::RobotsMETA.3 \
-		HTML::RobotsMETA::Rules.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
