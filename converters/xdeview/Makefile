@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: converters/xdeview/Makefile 328169 2013-09-24 16:49:15Z gahr $
+# $FreeBSD: converters/xdeview/Makefile 338556 2014-01-03 16:12:21Z adamw $
 
 PORTNAME=	xdeview
 PORTVERSION=	0.5.20
@@ -39,14 +39,12 @@ NO_STAGE=	yes
 
 post-install:
 	${STRIP_CMD} ${PREFIX}/bin/uuwish
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} "===>  Installing documents to ${DOCSDIR}"
 	@${MKDIR} ${DOCSDIR}
 .for file in ${PORTDOCS}
 	@${INSTALL_DATA} ${FILESDIR}/${file} ${DOCSDIR}
 .endfor
-.else
-	@${ECHO_MSG} "===>  Not installing available documents"
 .endif
 	${INSTALL_MAN} ${WRKSRC}/man/xdeview.1 ${MANPREFIX}/man/man1
 
