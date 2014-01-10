@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11-fonts/croscorefonts-fonts-ttf/Makefile 329309 2013-10-04 14:10:59Z bapt $
+# $FreeBSD: x11-fonts/croscorefonts-fonts-ttf/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	croscorefonts
 PORTVERSION=	1.23.0
@@ -17,8 +17,6 @@ COMMENT=	Fonts created from by Google for ChromeOS to replace MS TTF
 
 BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
-
-FETCH_ARGS=	-Fpr
 
 USE_XORG=	x11
 
