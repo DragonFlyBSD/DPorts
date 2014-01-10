@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: security/rubygem-twitter_oauth/Makefile 332049 2013-10-30 02:56:33Z swills $
+# $FreeBSD: security/rubygem-twitter_oauth/Makefile 338275 2013-12-31 10:09:28Z sunpoet $
 
 PORTNAME=	twitter_oauth
 PORTVERSION=	0.4.94
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Twitter OAuth REST API client library for Ruby
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-json>=1.8.0:${PORTSDIR}/devel/rubygem-json \
 		rubygem-mime-types>=1.16:${PORTSDIR}/misc/rubygem-mime-types \
