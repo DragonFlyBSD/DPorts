@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-yesod-form/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-yesod-form/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	yesod-form
 PORTVERSION=	1.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -17,6 +17,5 @@ USE_CABAL=	aeson attoparsec>=0.10 blaze-builder>=0.2.1.4 blaze-html>=0.5 \
 		text>=0.9 transformers>=0.2.2 wai>=1.3 xss-sanitize>=0.3.0.1 \
 		yesod-core>=1.2 yesod-persistent>=1.2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
