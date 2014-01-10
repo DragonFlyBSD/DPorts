@@ -1,8 +1,9 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-pdf/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD: graphics/evas_generic_loaders-pdf/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	pdf
 PORTVERSION=	1.7.9
+PORTREVISION=	1
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.org/releases/ \
 		LOCAL/gblach/e17/
