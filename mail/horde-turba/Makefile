@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-turba/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: mail/horde-turba/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	turba
 PORTVERSION=	4.1.3
@@ -8,7 +8,7 @@ CATEGORIES=	mail www pear
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde web based address book
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LATEST_LINK=	horde-${PORTNAME}
