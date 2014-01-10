@@ -1,5 +1,5 @@
 # Created by: Thaddeus Covert <tcovert@grimmy.sahuagin.net>
-# $FreeBSD: devel/log4cxx/Makefile 334615 2013-11-22 20:28:02Z pawel $
+# $FreeBSD: devel/log4cxx/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	log4cxx
 PORTVERSION=	0.10.0
@@ -12,7 +12,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ port of the Log4j project
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	apr-1:${PORTSDIR}/devel/apr1
 
