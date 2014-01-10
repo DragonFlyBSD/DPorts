@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-stevedore/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-stevedore/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	stevedore
 PORTVERSION=	0.11
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Manage dynamic plugins for Python applications
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}argparse>=1.1:${PORTSDIR}/devel/py-argparse
 TEST_DEPENDS=	${PKGNAMEPREFIX}coverage>=3.5.3:${PORTSDIR}/devel/py-coverage \
