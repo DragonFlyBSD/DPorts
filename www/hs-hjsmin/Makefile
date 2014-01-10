@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-hjsmin/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-hjsmin/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	hjsmin
 PORTVERSION=	0.1.4.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	blaze-builder>=0.2 language-javascript>=0.5.1 text>=0.8
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
