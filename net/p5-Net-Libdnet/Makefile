@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Libdnet/Makefile 336809 2013-12-18 09:37:40Z dhn $
+# $FreeBSD: net/p5-Net-Libdnet/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	Net-Libdnet
 PORTVERSION=	0.98
@@ -12,16 +12,12 @@ COMMENT=	Libdnet interface
 
 BUILD_DEPENDS=	p5-Class-Gomor>=0:${PORTSDIR}/devel/p5-Class-Gomor
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-LIB_DEPENDS=	dnet.1:${PORTSDIR}/net/libdnet
+LIB_DEPENDS=	libdnet.so:${PORTSDIR}/net/libdnet
 
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ARGS=	INC='-I${LOCALBASE}/include'
-MAN3=	Net::Libdnet.3 Net::Libdnet::Entry::Intf.3 Net::Libdnet::Intf.3 \
-	Net::Libdnet::Ip.3 Net::Libdnet::Eth.3 Net::Libdnet::Tun.3 \
-	Net::Libdnet::Route.3 Net::Libdnet::Fw.3 Net::Libdnet::Arp.3
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|dumbnet|dnet|g' ${WRKSRC}/Libdnet.xs
 
