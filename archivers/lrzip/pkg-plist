@@ -1,4 +1,4 @@
-@comment $FreeBSD: archivers/lrzip/pkg-plist 302121 2012-08-05 18:24:25Z scheidell $
+@comment $FreeBSD: archivers/lrzip/pkg-plist 338699 2014-01-04 23:59:48Z bapt $
 %%DOCSDIR%%/AUTHORS
 %%DOCSDIR%%/BUGS
 %%DOCSDIR%%/COPYING
@@ -30,5 +30,11 @@ lib/liblrzip.la
 lib/liblrzip.so
 lib/liblrzip.so.0
 libdata/pkgconfig/lrzip.pc
+man/man1/lrunzip.1.gz
+man/man1/lrzcat.1.gz
+man/man1/lrzip.1.gz
+man/man1/lrztar.1.gz
+man/man1/lrzuntar.1.gz
+man/man5/lrzip.conf.5.gz
 @dirrm %%DOCSDIR%%/lzma
 @dirrm %%DOCSDIR%%
