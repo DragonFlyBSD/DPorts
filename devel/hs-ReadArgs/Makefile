@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-ReadArgs/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-ReadArgs/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	ReadArgs
 PORTVERSION=	1.2.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USE_CABAL=	system-filepath>=0.4.7 text>=0.11.1.13
 
 EXECUTABLE=	ReadArgsEx
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
