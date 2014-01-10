@@ -1,5 +1,5 @@
 # Created by: minter@lunenburg.org
-# $FreeBSD: x11-toolkits/p5-Tk-FileDialog/Makefile 337024 2013-12-20 15:24:45Z swills $
+# $FreeBSD: x11-toolkits/p5-Tk-FileDialog/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Tk-FileDialog
 PORTVERSION=	1.3
@@ -15,9 +15,7 @@ BUILD_DEPENDS=	p5-Tk>=0:${PORTSDIR}/x11-toolkits/p5-Tk
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Tk::FileDialog.3
 
 PLIST_SUB=	PERL_VERSION=${PERL_VERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
