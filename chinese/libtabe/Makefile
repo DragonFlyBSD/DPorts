@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/libtabe/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/libtabe/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	libtabe
 PORTVERSION=	0.2.6
@@ -55,7 +55,7 @@ post-patch:
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/tsi-src/README ${DOCSDIR}/README.tsi
 .if !defined(WITHOUT_X11)
