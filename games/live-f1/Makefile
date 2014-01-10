@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: games/live-f1/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/live-f1/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	live-f1
 PORTVERSION=	0.2.11
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	neon:${PORTSDIR}/www/neon29
 
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
 OPTIONS_DEFINE=	NLS
