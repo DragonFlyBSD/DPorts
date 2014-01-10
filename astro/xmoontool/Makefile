@@ -1,5 +1,5 @@
 # Created by: Frank W. Josellis <frank@dynamical-systems.org>
-# $FreeBSD: astro/xmoontool/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD: astro/xmoontool/Makefile 338543 2014-01-03 14:49:54Z adamw $
 
 PORTNAME=	xmoontool
 PORTVERSION=	3.0.3
@@ -23,6 +23,8 @@ MAKE_ENV+=	WITHOUT_LIBNOVA=yes
 LIB_DEPENDS+=	libnova.so:${PORTSDIR}/astro/libnova
 .endif
 
+.include <bsd.port.options.mk>
+
 pre-everything::
 .if !defined(WITHOUT_LIBNOVA)
 	@${ECHO_MSG} "You can disable libnova support by defining WITHOUT_LIBNOVA"
@@ -43,7 +45,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/xmoontool.1 ${PREFIX}/man/man1
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for i in ${PORTDOCS}
 	${INSTALL_MAN} ${WRKSRC}/${i} ${DOCSDIR}
