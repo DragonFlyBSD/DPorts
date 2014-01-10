@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Parser-XS/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Parser-XS/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	HTTP-Parser-XS
 PORTVERSION=	0.16
@@ -12,7 +12,4 @@ COMMENT=	Perl extension of fast, primitive HTTP request parser
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTTP::Parser::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
