@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: chinese/lunar/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/lunar/Makefile 339203 2014-01-09 07:20:37Z vanilla $
 
 PORTNAME=	lunar
 PORTVERSION=	2.1
@@ -11,13 +11,11 @@ MAINTAINER=	obrien@FreeBSD.org
 COMMENT=	Convert between Gregorian Solar Calendar (SC) and Lunar Calendar (LC)
 
 ALL_TARGET=
-MAN1=		lunar.1
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/share/chinese
-	${INSTALL_PROGRAM} ${WRKSRC}/lunar ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/lunar.bitmap ${PREFIX}/share/chinese
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/chinese
+	${INSTALL_PROGRAM} ${WRKSRC}/lunar ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/lunar.bitmap ${STAGEDIR}${PREFIX}/share/chinese
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
