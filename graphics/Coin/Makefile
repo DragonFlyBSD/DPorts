@@ -1,5 +1,5 @@
 # Created by: roland.jesse@gmx.net
-# $FreeBSD: graphics/Coin/Makefile 335398 2013-12-01 15:49:02Z sunpoet $
+# $FreeBSD: graphics/Coin/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	Coin
 PORTVERSION=	3.1.3
@@ -16,7 +16,7 @@ LICENSE=	BSD
 LIB_DEPENDS=	libsimage.so:${PORTSDIR}/graphics/simage
 
 USE_GCC=	any
-USE_OPENAL=	al
+USES=		openal:al
 USE_GL=		yes
 USE_XORG=	xt x11
 GNU_CONFIGURE=	yes
