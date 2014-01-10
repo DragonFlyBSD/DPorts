@@ -1,5 +1,5 @@
 # Created by: Max Campos <mcampos@bpsw.biz>
-# $FreeBSD: devel/p5-User-Identity/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-User-Identity/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	User-Identity
 PORTVERSION=	0.93
@@ -15,18 +15,4 @@ RUN_DEPENDS=	p5-Geography-Countries>=0:${PORTSDIR}/misc/p5-Geography-Countries
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Identity.3 \
-		User::Identity.3 \
-		User::Identity::Archive.3 \
-		User::Identity::Archive::Plain.3 \
-		User::Identity::Collection.3 \
-		User::Identity::Collection::Emails.3 \
-		User::Identity::Collection::Locations.3 \
-		User::Identity::Collection::Systems.3 \
-		User::Identity::Collection::Users.3 \
-		User::Identity::Item.3 \
-		User::Identity::Location.3 \
-		User::Identity::System.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
