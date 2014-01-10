@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: textproc/sarep/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/sarep/Makefile 338942 2014-01-06 21:35:19Z antoine $
 
 PORTNAME=	sarep
 PORTVERSION=	1.1
@@ -21,8 +21,7 @@ NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/sarep
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/sarep ${PREFIX}/bin
+	@${INSTALL_SCRIPT} ${WRKSRC}/sarep ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
