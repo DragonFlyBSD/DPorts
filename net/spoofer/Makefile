@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/spoofer/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/spoofer/Makefile 337794 2013-12-27 19:47:35Z jadawin $
 
 PORTNAME=	spoofer
 PORTVERSION=	0.8
@@ -14,14 +14,15 @@ PORTDOCS=	README CHANGES
 
 HAS_CONFIGURE=	yes
 
-NO_STAGE=	yes
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+.include <bsd.port.options.mk>
 
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
