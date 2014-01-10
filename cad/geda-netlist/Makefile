@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-netlist/Makefile 336172 2013-12-11 14:53:20Z bapt $
+# $FreeBSD: cad/geda-netlist/Makefile 338175 2013-12-30 21:46:21Z antoine $
 
 PORTNAME=	netlist
 PORTVERSION=	1.4.3
@@ -22,14 +22,12 @@ DOCSDIR=	${PREFIX}/share/doc/geda
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20
-USES=		pkgconfig
+USES=		pkgconfig shebangfix
+SHEBANG_FILES=	scripts/sch2eaglepos.sh
 CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		gnetlist.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s,^(DATADIR[[:space:]]*=[[:space:]]*)gEDA,\1geda," \
