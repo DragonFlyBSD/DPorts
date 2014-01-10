@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-zoo/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-zoo/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	zoo
 DISTVERSION=	1.7-10
@@ -12,7 +12,6 @@ COMMENT=	S3 Infrastructure for Regular and Irregular Time Series
 
 LICENSE=	GPLv2
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
