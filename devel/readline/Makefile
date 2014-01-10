@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: devel/readline/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/readline/Makefile 337927 2013-12-28 22:29:44Z johans $
 
 PORTNAME=	readline
 PORTVERSION=	6.2.${PATCHLEVEL}
@@ -25,20 +25,22 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 INFO=		readline rluserman history
-MAN3=		readline.3 history.3
 
-PATCHES=	1 2 3 4
+PATCHES=	1 2 3 4 5
 .for p in ${PATCHES:S/^/00/}
 PATCH_FILES+=	${PORTNAME}${PORTVERSION:R:S/.//}-${p:C/.*(...)$/\1/}
 .endfor
 PATCHLEVEL=	${PATCHES:Q:S/ /./g:E}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 pre-configure:
 .if ${PORT_OPTIONS:MTERMCAP}
 	${REINPLACE_CMD} "s/SHOBJ_LDFLAGS =/SHOBJ_LDFLAGS = -ltermcap/" ${WRKSRC}/shlib/Makefile.in
 .endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libreadline.so.6 \
+		${STAGEDIR}${PREFIX}/lib/libhistory.so.6
 
 .include <bsd.port.mk>
