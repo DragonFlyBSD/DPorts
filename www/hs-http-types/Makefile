@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-http-types/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-http-types/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	http-types
 PORTVERSION=	0.8.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	blaze-builder>=0.2.1.4 case-insensitive>=0.2 text>=0.11.0.2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
