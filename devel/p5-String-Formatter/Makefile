@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-String-Formatter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Formatter/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	String-Formatter
 PORTVERSION=	0.102082
@@ -19,8 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	String::Formatter.3 \
-	String::Formatter::Cookbook.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
