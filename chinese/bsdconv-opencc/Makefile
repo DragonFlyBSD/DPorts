@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/bsdconv-opencc/Makefile 327833 2013-09-21 15:42:16Z sunpoet $
+# $FreeBSD: chinese/bsdconv-opencc/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	opencc
 PORTVERSION=	11.1
@@ -21,7 +21,6 @@ GH_ACCOUNT=	buganini
 GH_PROJECT=	${PKGNAMEPREFIX}${PORTNAME}
 GH_COMMIT=	c48c74c
 
-MAKE_ARGS=	PREFIX=${PREFIX}
 NO_STAGE=	yes
 
 .include <bsd.port.mk>
