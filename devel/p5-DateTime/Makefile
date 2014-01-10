@@ -1,8 +1,8 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime/Makefile 337353 2013-12-24 13:32:47Z jadawin $
+# $FreeBSD: devel/p5-DateTime/Makefile 338456 2014-01-02 16:23:14Z sunpoet $
 
 PORTNAME=	DateTime
-PORTVERSION=	1.05
+PORTVERSION=	1.06
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DROLSKY
@@ -30,6 +30,6 @@ PORTDOCS=	CREDITS Changes TODO
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}/
+	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
