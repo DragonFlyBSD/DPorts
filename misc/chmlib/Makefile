@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/chmlib/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/chmlib/Makefile 338991 2014-01-07 09:58:08Z fluffy $
 
 PORTNAME=	chmlib
 PORTVERSION=	0.40
@@ -15,7 +15,6 @@ CONFIGURE_ARGS=	--disable-io64 --disable-pread --exec-prefix=${PREFIX} --disable
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,-lpthread,${PTHREAD_LIBS}," ${WRKSRC}/configure
 
