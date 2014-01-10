@@ -1,8 +1,9 @@
 # Created by: alan <Alan@Wave2.org>
-# $FreeBSD: devel/p5-MooseX-Attribute-ENV/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Attribute-ENV/Makefile 338959 2014-01-06 23:41:57Z bapt $
 
 PORTNAME=	MooseX-Attribute-ENV
 PORTVERSION=	0.02
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Attribute::ENV.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
