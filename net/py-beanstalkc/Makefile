@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: net/py-beanstalkc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-beanstalkc/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	beanstalkc
 PORTVERSION=	0.3.0
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	A simple beanstalkd client library for Python
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
