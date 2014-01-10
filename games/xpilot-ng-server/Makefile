@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/xpilot-ng-server/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xpilot-ng-server/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	xpilot-ng
 PORTVERSION=	4.7.3
@@ -80,7 +80,7 @@ PLIST_SUB+=	SDL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSOUND}
-USE_OPENAL=	al alut
+USES+=		openal:al,alut
 CONFIGURE_ARGS+=--enable-sound
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	${PTHREAD_LIBS}
