@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: x11/xbanner/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xbanner/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xbanner
 PORTVERSION=	1.31
@@ -14,7 +14,6 @@ COMMENT=	Make your XDM login screen look beautiful
 
 USE_XORG=	xpm x11
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -23,14 +22,14 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/XBanner.ad \
-		${PREFIX}/lib/X11/app-defaults/XBanner
+		${STAGEDIR}${PREFIX}/lib/X11/app-defaults/XBanner
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${PREFIX}/share/doc/XBanner
-	${INSTALL_DATA} ${WRKSRC}/QuickStart ${PREFIX}/share/doc/XBanner
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/XBanner
-	@${MKDIR} ${PREFIX}/share/examples/XBanner
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/XBanner
+	${INSTALL_DATA} ${WRKSRC}/QuickStart ${STAGEDIR}${PREFIX}/share/doc/XBanner
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${STAGEDIR}${PREFIX}/share/doc/XBanner
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/examples/XBanner
 	${INSTALL_DATA} ${WRKSRC}/samples/_other_ideas/* \
-		${PREFIX}/share/examples/XBanner
+		${STAGEDIR}${PREFIX}/share/examples/XBanner
 .endif
 
 .include <bsd.port.mk>
