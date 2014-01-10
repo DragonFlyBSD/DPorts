@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: net-p2p/transmission-cli/files/transmission.in 313230 2013-03-02 13:48:31Z crees $
+# $FreeBSD: net-p2p/transmission-cli/files/transmission.in 338648 2014-01-04 15:33:14Z crees $
 #
 # PROVIDE: transmission
-# REQUIRE: DAEMON 
+# REQUIRE: DAEMON
 # KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf to enable this service:
@@ -22,6 +22,9 @@
 #			     default.
 # transmission_web_home:     Use alternative directory for the web interface
 #			     files, such as javascript, html and graphics.
+# transmission_chown:	     By default, transmission checks and fixes the
+#			     permissions for its home directory.  If this
+#			     causes problems, set this variable to no.
 #
 
 . /etc/rc.subr
@@ -36,6 +39,7 @@ load_rc_config $name
 : ${transmission_download_dir=%%PREFIX%%/etc/transmission/home/Downloads}
 : ${transmission_user:=transmission}
 transmission_group=${transmission_group:-$transmission_user}
+: ${transmission_chown:=yes}
 
 command=%%PREFIX%%/bin/transmission-daemon
 pidfile=/var/run/transmission/daemon.pid
@@ -51,11 +55,13 @@ transmission_flags=" \
 transmission_prestart()
 {
 	install -d -o $transmission_user ${pidfile%/*}
-	mkdir -p $transmission_conf_dir $transmission_download_dir
-	chown $transmission_user:$transmission_group $transmission_download_dir
-	chown -R $transmission_user:$transmission_group $transmission_conf_dir
-	chgrp $transmission_group $transmission_conf_dir
-	chmod 750 $transmission_conf_dir
+	if checkyesno transmission_chown; then
+		mkdir -p $transmission_conf_dir $transmission_download_dir
+		chown $transmission_user:$transmission_group $transmission_download_dir
+		chown -R $transmission_user:$transmission_group $transmission_conf_dir
+		chgrp $transmission_group $transmission_conf_dir
+		chmod 750 $transmission_conf_dir
+	fi
 	if [ -n "$transmission_web_home" ]; then
 		TRANSMISSION_WEB_HOME=$transmission_web_home
 		export TRANSMISSION_WEB_HOME
