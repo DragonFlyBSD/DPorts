@@ -1,5 +1,5 @@
 # Created by: Anton Yuzhaninov <citrin@rambler-co.ru>
-# $FreeBSD: mail/p5-Email-Date-Format/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Date-Format/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	Email-Date-Format
 PORTVERSION=	1.002
@@ -14,7 +14,4 @@ COMMENT=	Produce RFC 2822 date strings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Email::Date::Format.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
