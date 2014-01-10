@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-HTML-FormFu-Model-DBIC/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-FormFu-Model-DBIC/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTML-FormFu-Model-DBIC
 PORTVERSION=	0.09010
@@ -26,8 +26,4 @@ TEST_DEPENDS=	p5-DateTime-Format-SQLite>=0:${PORTSDIR}/devel/p5-DateTime-Format-
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::FormFu::Constraint::DBIC::Unique.3 \
-		HTML::FormFu::Model::DBIC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
