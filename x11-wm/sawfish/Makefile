@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-wm/sawfish/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/sawfish/Makefile 337990 2013-12-29 14:19:49Z antoine $
 
 PORTNAME=	sawfish
 PORTVERSION=	1.9.1
@@ -15,7 +15,7 @@ LICENSE=	ART20 GPLv2
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	rep-gtk2>=0.90:${PORTSDIR}/x11-toolkits/rep-gtk2
-LIB_DEPENDS=	rep:${PORTSDIR}/lang/librep
+LIB_DEPENDS=	librep.so:${PORTSDIR}/lang/librep
 RUN_DEPENDS=	rep-gtk2>=0.90:${PORTSDIR}/x11-toolkits/rep-gtk2
 
 USE_XZ=		yes
@@ -30,13 +30,10 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MANCOMPRESSED=	yes
-MAN1=		sawfish.1 sawfish-client.1 sawfish-config.1
 INFO=		sawfish
 
 PORTSCOUT=	limit:^1\.9\.[0-9]
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/dnsdomainname/d' ${WRKSRC}/build-info
