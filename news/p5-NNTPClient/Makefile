@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: news/p5-NNTPClient/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/p5-NNTPClient/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	NNTPClient
 PORTVERSION=	0.37
@@ -14,7 +14,4 @@ COMMENT=	Client interface to NNTP (RFC977)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	News::NNTPClient.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
