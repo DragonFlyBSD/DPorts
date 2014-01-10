@@ -1,8 +1,8 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/py-libcloud/Makefile 330236 2013-10-13 15:54:53Z novel $
+# $FreeBSD: net/py-libcloud/Makefile 338530 2014-01-03 08:56:26Z novel $
 
 PORTNAME=	libcloud
-PORTVERSION=	0.13.2
+PORTVERSION=	0.13.3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -12,7 +12,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Standard client library for many popular cloud providers
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_BZIP2=	yes
