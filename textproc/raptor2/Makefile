@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/raptor2/Makefile 336564 2013-12-15 18:35:11Z rakuco $
+# $FreeBSD: textproc/raptor2/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	raptor2
 PORTVERSION=	2.0.12
@@ -12,7 +12,7 @@ COMMENT=	RDF Parser Toolkit for Redland
 
 # Even though GPLv3 is not explicitly mentioned in the port's LICENSE.html, one
 # of its licenses is "GPLv2 or newer", which includes GPLv3.
-LICENSE=	AL2 GPLv2 GPLv3 LGPL21
+LICENSE=	APACHE20 GPLv2 GPLv3 LGPL21
 LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
