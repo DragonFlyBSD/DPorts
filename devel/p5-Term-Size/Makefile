@@ -1,5 +1,5 @@
 # Created by: Brad Jones <brad@kazrak.com>
-# $FreeBSD: devel/p5-Term-Size/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Size/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Term-Size
 PORTVERSION=	0.207
@@ -8,12 +8,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	brad@kazrak.com
-COMMENT=	A Perl5 module to handle window size changes
+COMMENT=	Perl5 module to handle window size changes
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Size.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
