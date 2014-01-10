@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Mozilla-CA/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Mozilla-CA/Makefile 338758 2014-01-05 12:35:44Z az $
 
 PORTNAME=	Mozilla-CA
 PORTVERSION=	20130114
@@ -12,7 +12,4 @@ COMMENT=	Perl extension for Mozilla CA cert bundle in PEM format
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Mozilla::CA.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
