@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: palm/makeztxt/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD: palm/makeztxt/Makefile 337740 2013-12-27 15:16:28Z skreuzer $
 
 PORTNAME=	makeztxt
 PORTVERSION=	1.62
@@ -10,17 +10,18 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line utility to create GutenPalm's zTXT format databases
 
+LICENSE=	GPLv2
+
 PLIST_FILES=	bin/makeztxt
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_GMAKE=	yes
+USES=		gmake
 
 MAKE_ENV+=	USEPOSIX=1 LONG_OPTS=1
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} 's/-O2//' ${WRKSRC}/libztxt/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/makeztxt ${LOCALBASE}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/makeztxt ${STAGEDIR}${LOCALBASE}/bin/
 
 .include <bsd.port.mk>
