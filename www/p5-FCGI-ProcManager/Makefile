@@ -1,5 +1,5 @@
 # Created by: Peter <peter@vereshagin.org>
-# $FreeBSD: www/p5-FCGI-ProcManager/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-FCGI-ProcManager/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	FCGI-ProcManager
 PORTVERSION=	0.24
@@ -13,8 +13,4 @@ COMMENT=	Functions for managing FastCGI applications
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		FCGI::ProcManager.3 \
-		FCGI::ProcManager::Constrained.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
