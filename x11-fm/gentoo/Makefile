@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: x11-fm/gentoo/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/gentoo/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	gentoo
 PORTVERSION=	0.19.13
@@ -27,7 +27,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFAM}
-USE_FAM=	yes
+USES+=		fam
 .else
 CONFIGURE_ARGS+=	--disable-fam
 .endif
