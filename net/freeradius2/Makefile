@@ -1,8 +1,8 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: net/freeradius2/Makefile 337298 2013-12-23 21:36:47Z antoine $
+# $FreeBSD: net/freeradius2/Makefile 338045 2013-12-29 21:23:13Z zi $
 
 PORTNAME=	freeradius
-DISTVERSION=	2.2.2
+DISTVERSION=	2.2.3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/%SUBDIR%/ \
 		ftp://ftp.ntua.gr/pub/net/radius/freeradius/%SUBDIR%/ \
