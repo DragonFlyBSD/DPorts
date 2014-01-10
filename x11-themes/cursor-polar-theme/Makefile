@@ -1,5 +1,5 @@
 # Created by: Shawn Bell <decept@gmail.com>
-# $FreeBSD: x11-themes/cursor-polar-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/cursor-polar-theme/Makefile 338917 2014-01-06 18:11:15Z antoine $
 
 PORTNAME=	polar-theme
 PORTVERSION=	1.4
@@ -17,18 +17,17 @@ USE_BZIP2=	yes
 
 WRKSRC=		${WRKDIR}
 
-NO_STAGE=	yes
 do-install:
-		@${MKDIR} ${PREFIX}/lib/X11/icons/polar/cursors
-		cd ${WRKSRC}/PolarCursorTheme/cursors \
-			&& ${INSTALL_DATA} * ${PREFIX}/lib/X11/icons/polar/cursors
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/polar/cursors
+	${INSTALL_DATA} ${WRKSRC}/PolarCursorTheme/cursors/* \
+		${STAGEDIR}${PREFIX}/lib/X11/icons/polar/cursors
 
-		@${MKDIR} ${PREFIX}/lib/X11/icons/polarblue/cursors
-		cd ${WRKSRC}/PolarCursorTheme-Blue/cursors \
-			&& ${INSTALL_DATA} * ${PREFIX}/lib/X11/icons/polarblue/cursors
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/polarblue/cursors
+	${INSTALL_DATA} ${WRKSRC}/PolarCursorTheme-Blue/cursors/* \
+		${STAGEDIR}${PREFIX}/lib/X11/icons/polarblue/cursors
 
-		@${MKDIR} ${PREFIX}/lib/X11/icons/polargreen/cursors
-		cd ${WRKSRC}/PolarCursorTheme-Green/cursors \
-			&& ${INSTALL_DATA} * ${PREFIX}/lib/X11/icons/polargreen/cursors
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/polargreen/cursors
+	${INSTALL_DATA} ${WRKSRC}/PolarCursorTheme-Green/cursors/* \
+		${STAGEDIR}${PREFIX}/lib/X11/icons/polargreen/cursors
 
 .include <bsd.port.mk>
