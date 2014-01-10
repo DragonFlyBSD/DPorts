@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Filesys-Notify-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Filesys-Notify-Simple/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Filesys-Notify-Simple
 PORTVERSION=	0.12
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for simple and dumb file system watcher
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	Filesys::Notify::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
