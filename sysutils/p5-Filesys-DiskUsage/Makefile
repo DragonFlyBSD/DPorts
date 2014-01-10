@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: sysutils/p5-Filesys-DiskUsage/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Filesys-DiskUsage/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	Filesys-DiskUsage
 PORTVERSION=	0.05
@@ -13,9 +13,6 @@ COMMENT=	Perl equivalent of du(1)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Filesys::DiskUsage.3
-
-NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/Filesys/DiskUsage.pm.orig
 
