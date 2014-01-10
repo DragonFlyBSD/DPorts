@@ -1,5 +1,5 @@
 # Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
-# $FreeBSD: biology/p5-Bio-ASN1-EntrezGene/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/p5-Bio-ASN1-EntrezGene/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	Bio-ASN1-EntrezGene
 PORTVERSION=	1.091
@@ -16,10 +16,4 @@ WRKSRC=		${WRKDIR}/Bio-ASN1-EntrezGene-1.09
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Bio::ASN1::EntrezGene.3 \
-		Bio::ASN1::EntrezGene::Indexer.3 \
-		Bio::ASN1::Sequence.3 \
-		Bio::ASN1::Sequence::Indexer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
