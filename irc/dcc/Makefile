@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: irc/dcc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/dcc/Makefile 339281 2014-01-09 21:14:38Z antoine $
 
 PORTNAME=	dcc
 PORTVERSION=	2.5.6
@@ -26,8 +26,7 @@ LDFLAGS+=	-pthread
 
 PLIST_FILES=	bin/dcc
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dcc ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dcc ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
