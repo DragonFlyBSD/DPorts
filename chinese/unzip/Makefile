@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/unzip/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/unzip/Makefile 338633 2014-01-04 09:04:21Z antoine $
 
 CATEGORIES=	chinese
 
@@ -11,5 +11,4 @@ MASTERDIR=	${.CURDIR}/../../archivers/unzip
 
 EXTRA_PATCHES=	${.CURDIR}/files/patch-fileio.c
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
