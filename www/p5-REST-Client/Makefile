@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: www/p5-REST-Client/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-REST-Client/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	REST-Client
 PORTVERSION=	249
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	pauls@utdallas.edu
-COMMENT=	A simple client for interacting with RESTful http/https resources
+COMMENT=	Simple client for interacting with RESTful http/https resources
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
@@ -21,7 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		REST::Client.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
