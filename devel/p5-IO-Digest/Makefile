@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-IO-Digest/Makefile 327794 2013-09-21 07:24:09Z rafan $
+# $FreeBSD: devel/p5-IO-Digest/Makefile 338909 2014-01-06 17:28:12Z az $
 
 PORTNAME=	IO-Digest
 PORTVERSION=	0.11
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::Digest.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
