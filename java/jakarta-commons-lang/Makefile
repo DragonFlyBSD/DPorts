@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-lang/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jakarta-commons-lang/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	commons-lang
 PORTVERSION=	2.6
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	hq@FreeBSD.org
 COMMENT=	Jakarta library with helper utilities for the java.lang API
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
