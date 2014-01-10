@@ -1,5 +1,5 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: www/py-fcgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-fcgi/Makefile 338104 2013-12-30 12:44:07Z wg $
 
 PORTNAME=	fcgi
 PORTVERSION=	0.1
@@ -17,15 +17,19 @@ COMMENT=	Python FastCGI interface library
 USE_PYTHON=	yes
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 post-extract:
 	@${INSTALL_DATA} ${DISTDIR}/fcgi.py ${WRKSRC}
 
 do-build:
-	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
-	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
+	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+		-d ${PYTHONPREFIX_SITELIBDIR} \
+		-f ${WRKSRC}
+	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
+		-d ${PYTHONPREFIX_SITELIBDIR} \
+		-f ${WRKSRC}
 
 do-install:
-	@${INSTALL_DATA} ${WRKSRC}/fcgi.py* ${PYTHON_SITELIBDIR}
+	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/fcgi.py* ${STAGEDIR}${PYTHON_SITELIBDIR}
 
 .include <bsd.port.mk>
