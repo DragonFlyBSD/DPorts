@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/vamos/Makefile 329982 2013-10-10 11:49:18Z nemysis $
+# $FreeBSD: games/vamos/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	vamos
 PORTVERSION=	0.7.1
@@ -17,8 +17,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libboost_date_time.so:${PORTSDIR}/devel/boost-libs \
 		libpng15.so:${PORTSDIR}/graphics/png
 
-USES=		pkgconfig
-USE_OPENAL=	al alut
+USES=		openal:al,alut pkgconfig
 USE_XORG=	sm ice x11 xi xext xmu
 USE_GL=		glut
 USE_SDL=	sdl
