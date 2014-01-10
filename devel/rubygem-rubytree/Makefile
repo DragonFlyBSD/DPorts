@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/rubygem-rubytree/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD: devel/rubygem-rubytree/Makefile 338272 2013-12-31 10:09:16Z sunpoet $
 
 PORTNAME=	rubytree
 PORTVERSION=	0.8.3
@@ -9,8 +9,10 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Implementation of the Tree data structure for the Ruby
 
-RUN_DEPENDS=	rubygem-structured_warnings>=0:${PORTSDIR}/devel/rubygem-structured_warnings \
-		rubygem-json>=0:${PORTSDIR}/devel/rubygem-json
+LICENSE=	BSD3CLAUSE
+
+RUN_DEPENDS=	rubygem-json>=0:${PORTSDIR}/devel/rubygem-json \
+		rubygem-structured_warnings>=0:${PORTSDIR}/devel/rubygem-structured_warnings
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
