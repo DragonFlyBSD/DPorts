@@ -1,5 +1,5 @@
 # Created by: Scott Mace <smace@FreeBSD.org>
-# $FreeBSD: x11/xlockmore/Makefile 337074 2013-12-20 19:01:37Z jgh $
+# $FreeBSD: x11/xlockmore/Makefile 337934 2013-12-29 02:56:04Z jgh $
 
 PORTNAME=	xlockmore
 PORTVERSION=	5.43
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.tux.org/~bagleyd/xlock/${PORTNAME}-${PORTVERSION}/ \
 		ftp://ibiblio.org/pub/Linux/X11/screensavers/ \
 		CRITICAL
 
-MAINTAINER=	jgh@FreeBSD.org
+MAINTAINER?=	jgh@FreeBSD.org
 COMMENT=	Like XLock session locker/screen saver, but just more
 
 USE_BZIP2=	yes
@@ -46,6 +46,7 @@ NO_OPTIONS_SORT=yes
 
 MAKE_ARGS+=	bindir=${STAGEDIR}${PREFIX}/bin \
 		mandir=${STAGEDIR}${PREFIX}/man/man1 \
+		datarootdir=${STAGEDIR}${PREFIX}/share \
 		xapploaddir=${STAGEDIR}${PREFIX}/lib/X11/app-defaults
 
 .include <bsd.port.options.mk>
