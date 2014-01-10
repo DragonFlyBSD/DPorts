@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/libpinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/libpinyin/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	libpinyin
 PORTVERSION=	0.7.91
@@ -8,9 +8,6 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Library to deal with pinyin
-
-MAN1=		libpinyin.1 gen_binary_files.1 gen_unigram.1 \
-		import_interpolation.1
 
 USE_BDB=	yes
 USE_GNOME=	glib20
@@ -25,7 +22,6 @@ CONFIGURE_ARGS+=CPPFLAGS="-I${LOCALBASE}/include \
 
 PLIST_SUB+=	VER=${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 800107
