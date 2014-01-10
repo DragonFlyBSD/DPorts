@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Test-Number-Delta/Makefile 336024 2013-12-09 19:31:10Z sunpoet $
+# $FreeBSD: devel/p5-Test-Number-Delta/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Test-Number-Delta
 PORTVERSION=	1.04
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tjs@cdpa.nsysu.edu.tw
 COMMENT=	Compare the difference between two numbers within a specified amount
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USES=		perl5
 USE_PERL5=	configure
