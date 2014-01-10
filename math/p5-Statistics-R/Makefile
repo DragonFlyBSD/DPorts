@@ -1,9 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-R/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD: math/p5-Statistics-R/Makefile 337426 2013-12-25 15:08:07Z sunpoet $
 
 PORTNAME=	Statistics-R
-PORTVERSION=	0.31
-PORTREVISION=	4
+PORTVERSION=	0.32
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FANGLY
@@ -11,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Controls the R interpreter through Perl
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/R:${PORTSDIR}/math/R
 RUN_DEPENDS=	${LOCALBASE}/bin/R:${PORTSDIR}/math/R \
