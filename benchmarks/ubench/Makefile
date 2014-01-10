@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: benchmarks/ubench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/ubench/Makefile 338716 2014-01-05 00:36:43Z bapt $
 
 PORTNAME=	ubench
 PORTVERSION=	0.32
@@ -11,9 +11,10 @@ MAINTAINER=	brian@FreeBSD.org
 COMMENT=	Unix Benchmark Utility for CPU(s) and memory
 
 HAS_CONFIGURE=	yes
+MAKE_ARGS=	INSTALLDIR=${STAGEDIR}${PREFIX}/bin \
+		MANDIR=${STAGEDIR}${PREFIX}/man/man8
 
-MAN8=		ubench.8
-PLIST_FILES=	bin/ubench
+PLIST_FILES=	bin/ubench \
+		man/man8/ubench.8.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
