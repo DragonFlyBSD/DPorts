@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: security/keychain/Makefile 332316 2013-10-31 23:43:44Z garga $
+# $FreeBSD: security/keychain/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	keychain
 PORTVERSION=	2.7.1
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 USES=		gmake perl5
 USE_PERL5=	build
 OPTIONS_DEFINE=	DOCS
-FETCH_ARGS?=	-Fpr
 USE_BZIP2=	yes
 
 PLIST_FILES=	bin/${PORTNAME} \
