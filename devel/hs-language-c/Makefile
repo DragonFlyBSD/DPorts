@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-language-c/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-language-c/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	language-c
 PORTVERSION=	0.3.2.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USE_ALEX=	yes
 USE_HAPPY=	yes
 USE_CABAL=	syb
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
