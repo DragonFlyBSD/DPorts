@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Router/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Router/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTTP-Router
 PORTVERSION=	0.05
@@ -26,13 +26,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::README.3 \
-		HTTP::Router.3 \
-		HTTP::Router::Debug.3 \
-		HTTP::Router::Declare.3 \
-		HTTP::Router::Match.3 \
-		HTTP::Router::Route.3 \
-		Test::HTTP::Router.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
