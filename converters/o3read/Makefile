@@ -1,5 +1,5 @@
 # Created by: samm
-# $FreeBSD: converters/o3read/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/o3read/Makefile 339239 2014-01-09 14:19:44Z bapt $
 
 PORTNAME=	o3read
 PORTVERSION=	0.0.4
@@ -11,24 +11,17 @@ MASTER_SITE_SUBDIR=	distfiles
 MAINTAINER=	samm@os2.kiev.ua
 COMMENT=	Standalone converter for the OpenOffice.org writer and scalc formats
 
-MAN1=		o3read.1 utf8tolatin1.1
-MLINKS=		o3read.1 o3totxt.1 o3read.1 o3tohtml.1
 PORTDOCS=	README COPYING ChangeLog
-PLIST_FILES=	bin/o3read bin/o3totxt bin/o3tohtml bin/utf8tolatin1
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/o3read ${PREFIX}/bin
-	@${INSTALL_PROGRAM} ${WRKSRC}/o3totxt ${PREFIX}/bin
-	@${INSTALL_PROGRAM} ${WRKSRC}/o3tohtml ${PREFIX}/bin
-	@${INSTALL_PROGRAM} ${WRKSRC}/utf8tolatin1 ${PREFIX}/bin
-	@${INSTALL_MAN} ${WRKSRC}/o3read.1 ${MANPREFIX}/man/man1
-	@${INSTALL_MAN} ${WRKSRC}/utf8tolatin1.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/o3read ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/o3totxt ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/o3tohtml ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/utf8tolatin1 ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for FILE in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${FILE} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${FILE} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
