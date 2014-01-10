@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/aumix/Makefile 329268 2013-10-04 07:18:59Z bapt $
+# $FreeBSD: audio/aumix/Makefile 337577 2013-12-26 17:49:14Z bapt $
 
 PORTNAME=	aumix
 PORTVERSION=	2.9.1
@@ -23,10 +23,11 @@ CONFIGURE_ARGS=	--includedir="${LOCALBASE}/include" \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
-MAN1=		aumix.1 xaumix.1 mute.1
 PLIST_DIRS=	share/aumix
-PLIST_FILES=	bin/aumix bin/mute bin/xaumix
+PLIST_FILES=	bin/aumix bin/mute bin/xaumix \
+		man/man1/aumix.1.gz \
+		man/man1/xaumix.1.gz \
+		man/man1/mute.1.gz
 .for ii in ansi aumix.xpm fadein.set fadeout.set vt100 xterm
 PLIST_FILES+=	share/aumix/${ii}
 .endfor
