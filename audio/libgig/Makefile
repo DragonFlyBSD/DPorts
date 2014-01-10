@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/libgig/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/libgig/Makefile 337910 2013-12-28 20:52:17Z antoine $
 
 PORTNAME=	libgig
 PORTVERSION=	3.3.0
@@ -18,7 +18,6 @@ LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_BZIP2=	yes
-NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -26,7 +25,5 @@ MAKE_JOBS_UNSAFE=yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-MAN1=		dlsdump.1 gigdump.1 gigextract.1 rifftree.1
 
 .include <bsd.port.mk>
