@@ -1,10 +1,10 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/musicbox-tag-editor/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/musicbox-tag-editor/Makefile 337918 2013-12-28 21:24:17Z antoine $
 #   $MCom: ports/audio/musicbox-tag-editor/Makefile,v 1.5 2007/09/10 05:13:24 mezz Exp $
 
 PORTNAME=	musicbox-tag-editor
 PORTVERSION=	0.2.3
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	audio
 MASTER_SITES=	SF/musicbox/musicbox/${PORTVERSION}
 DISTNAME=	musicbox-${PORTVERSION}
@@ -14,14 +14,14 @@ COMMENT=	Simple GTK+ audio tag editor
 
 LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
-USES=		pathfix pkgconfig
-NO_STAGE=	yes
+USES=		pathfix pkgconfig shebangfix
 USE_GNOME=	gnomeprefix libglade2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 # avoid conflict with audio/musicbox
 CONFIGURE_ARGS=	--program-suffix=-tag-editor
+SHEBANG_FILES=	data/edit.pl
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/pixmaps|${PREFIX}/share/pixmaps|' \
