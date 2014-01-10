@@ -1,8 +1,8 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-salt/Makefile 336025 2013-12-09 19:31:16Z sunpoet $
+# $FreeBSD: sysutils/py-salt/Makefile 338580 2014-01-03 20:17:53Z vg $
 
 PORTNAME=	salt
-PORTVERSION=	0.17.3
+PORTVERSION=	0.17.4
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	christer.edwards@gmail.com
 COMMENT=	Distributed remote execution and configuration management system
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}pyzmq>=2.1.9:${PORTSDIR}/devel/py-pyzmq \
@@ -21,7 +21,6 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml \
 		sshpass>=0:${PORTSDIR}/security/sshpass
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-FETCH_ARGS=	-pRr
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
 
