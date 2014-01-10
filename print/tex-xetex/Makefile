@@ -1,7 +1,8 @@
-# $FreeBSD: print/tex-xetex/Makefile 336226 2013-12-11 21:53:56Z bapt $
+# $FreeBSD: print/tex-xetex/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	xetex
 PORTVERSION=	0.9999
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://people.allbsd.org/~hrs/FreeBSD/:web2c \
 		ftp://tug.org/historic/systems/texlive/2012/:texmf
