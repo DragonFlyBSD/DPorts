@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/libxmp/Makefile 333488 2013-11-11 12:27:53Z ehaupt $
+# $FreeBSD: audio/libxmp/Makefile 338060 2013-12-30 06:50:07Z ehaupt $
 
 PORTNAME=	libxmp
-PORTVERSION=	4.2.0
+PORTVERSION=	4.2.1
 CATEGORIES=	audio
 MASTER_SITES=	SF/xmp/${PORTNAME}/${PORTVERSION}
 
