@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: benchmarks/ttcp/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/ttcp/Makefile 338717 2014-01-05 00:39:01Z bapt $
 
 PORTNAME=	ttcp
 PORTVERSION=	1.12
@@ -20,23 +20,19 @@ LICENSE_TEXT=	The license: ${_LICENSE} (${_LICENSE_NAME}) is standard, please re
 
 NO_WRKSUBDIR=	yes
 DIST_SUBDIR=	${PORTNAME}
-MAN1=		ttcp.1
 
-NO_STAGE=	yes
 post-extract:
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/ttcp.c ${WRKSRC}/
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/ttcp.1 ${WRKSRC}/
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/README ${WRKSRC}/
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/ttcp.c ${WRKSRC}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/ttcp.1 ${WRKSRC}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/README ${WRKSRC}
 
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/ttcp ${WRKSRC}/ttcp.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ttcp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/ttcp.1 ${PREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/ttcp ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/ttcp.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
