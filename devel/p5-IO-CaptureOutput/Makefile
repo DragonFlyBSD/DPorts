@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-CaptureOutput/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-CaptureOutput/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	IO-CaptureOutput
 PORTVERSION=	1.11.02
@@ -14,7 +14,4 @@ COMMENT=	Capture STDOUT/STDERR from subprocesses and XS/C modules
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	IO::CaptureOutput.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
