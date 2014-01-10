@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-DateTime-Util-Astro/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Util-Astro/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	DateTime-Util-Astro
 PORTVERSION=	0.12000
@@ -19,10 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Util::Astro.3 \
-		DateTime::Util::Astro::Common.3 \
-		DateTime::Util::Astro::Moon.3 \
-		DateTime::Util::Astro::Sun.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
