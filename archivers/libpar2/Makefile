@@ -1,5 +1,5 @@
 # Created by: Jeff Burchell <toxic@doobie.com>
-# $FreeBSD: archivers/libpar2/Makefile 334132 2013-11-17 23:12:03Z feld $
+# $FreeBSD: archivers/libpar2/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	libpar2
 PORTVERSION=	0.4
@@ -15,7 +15,6 @@ LIB_DEPENDS=	libsigc-2.0.so:${PORTSDIR}/devel/libsigc++20
 
 GNU_CONFIGURE=	yes
 
-FETCH_ARGS=	-pRr
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
