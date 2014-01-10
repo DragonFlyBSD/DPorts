@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-zope.browserresource/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-zope.browserresource/Makefile 338824 2014-01-05 21:02:29Z rm $
 
 PORTNAME=	zope.browserresource
 PORTVERSION=	3.10.3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
@@ -23,10 +24,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=3.8.0:${PORTSDIR}/devel/py-z
 		${PYTHON_PKGNAMEPREFIX}zope.publisher>=3.8:${PORTSDIR}/devel/py-zope.publisher \
 		${PYTHON_PKGNAMEPREFIX}zope.traversing>3.7:${PORTSDIR}/devel/py-zope.traversing
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
