@@ -1,5 +1,5 @@
 # Created by: Joris Vandalon
-# $FreeBSD: archivers/libunrar4/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/libunrar4/Makefile 337521 2013-12-26 14:36:58Z bapt $
 
 PORTNAME=	libunrar4
 PORTVERSION=	4.2.4
@@ -12,7 +12,6 @@ COMMENT=	Library to work with RAR archives
 
 WRKSRC=		${WRKDIR}/unrar
 
-NO_STAGE=	yes
 USES=		gmake
 MAKE_ARGS=	CC="${CC}" CXX="${CXX}"
 MAKEFILE=	makefile.unix
@@ -20,9 +19,9 @@ ALL_TARGET=	lib
 USE_LDCONFIG=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/libunrar.so ${PREFIX}/lib/libunrar.so.4
-	cd ${PREFIX}/lib && ${LN} -sf libunrar.so.4 libunrar.so
-	${MKDIR} ${PREFIX}/include/libunrar4
-	${INSTALL_DATA} ${WRKSRC}/dll.hpp ${PREFIX}/include/libunrar4/dll.hpp
+	${INSTALL_LIB} ${WRKSRC}/libunrar.so ${STAGEDIR}${PREFIX}/lib/libunrar.so.4
+	cd ${STAGEDIR}${PREFIX}/lib && ${LN} -sf libunrar.so.4 libunrar.so
+	@${MKDIR} ${STAGEDIR}${PREFIX}/include/libunrar4
+	${INSTALL_DATA} ${WRKSRC}/dll.hpp ${STAGEDIR}${PREFIX}/include/libunrar4/dll.hpp
 
 .include <bsd.port.mk>
