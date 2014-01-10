@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-wai-app-static/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-wai-app-static/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	wai-app-static
 PORTVERSION=	1.3.1.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -16,6 +16,5 @@ USE_CABAL=	base64-bytestring>=0.1 blaze-builder>=0.2.1.4 blaze-html>=0.5 \
 		mime-types>=0.1 system-fileio>=0.3 system-filepath>=0.4 \
 		text>=0.7 transformers>=0.2.2 unix-compat>=0.2 wai>=1.3
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
