@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libgme/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD: audio/libgme/Makefile 339003 2014-01-07 13:14:45Z bapt $
 
 PORTNAME=	libgme
 PORTVERSION=	0.5.5
@@ -15,7 +15,7 @@ LICENSE_COMB=	dual
 
 PROJECTHOST=	game-music-emu
 USE_BZIP2=	yes
-USES=		cmake dos2unix
+USES=		cmake dos2unix ninja
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
