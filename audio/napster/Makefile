@@ -1,5 +1,5 @@
 # Created by: dburr@FreeBSD.org
-# $FreeBSD: audio/napster/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: audio/napster/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	nap
 PORTVERSION=	1.5.4
@@ -16,8 +16,10 @@ NO_STAGE=	yes
 
 MAN1=	nap.1
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for file in NEWS README doc/napster.txt doc/userguide.html
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
