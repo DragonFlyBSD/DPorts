@@ -1,7 +1,7 @@
-# $FreeBSD: databases/py-alembic/Makefile 335534 2013-12-02 19:40:20Z lwhsu $
+# $FreeBSD: databases/py-alembic/Makefile 338533 2014-01-03 08:57:52Z lwhsu $
 
 PORTNAME=	alembic
-PORTVERSION=	0.6.1
+PORTVERSION=	0.6.2
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
