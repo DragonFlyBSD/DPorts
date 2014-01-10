@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-POEx-Types/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POEx-Types/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	POEx-Types
 PORTVERSION=	1.100910
@@ -20,7 +20,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	POEx::Types.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
