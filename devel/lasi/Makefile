@@ -1,5 +1,5 @@
 # Created by: giffunip
-# $FreeBSD: devel/lasi/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD: devel/lasi/Makefile 337998 2013-12-29 14:48:48Z tijl $
 #    $MCom: ports/devel/lasi/Makefile,v 1.1 2006/10/04 20:25:40 ahze Exp $
 
 PORTNAME=	lasi
@@ -11,6 +11,8 @@ DISTNAME=	libLASi-${PORTVERSION}
 
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	C++ stream output interface for creating Postscript documents
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USES=		cmake pkgconfig
 USE_GNOME=	pango
