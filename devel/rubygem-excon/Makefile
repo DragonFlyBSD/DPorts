@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-excon/Makefile 331715 2013-10-26 16:25:13Z sunpoet $
+# $FreeBSD: devel/rubygem-excon/Makefile 338249 2013-12-31 07:24:51Z sunpoet $
 
 PORTNAME=	excon
-PORTVERSION=	0.27.6
+PORTVERSION=	0.31.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
