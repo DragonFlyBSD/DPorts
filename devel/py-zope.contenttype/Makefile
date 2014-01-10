@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-zope.contenttype/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-zope.contenttype/Makefile 338824 2014-01-05 21:02:29Z rm $
 
 PORTNAME=	zope.contenttype
 PORTVERSION=	3.5.5
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +13,9 @@ COMMENT=	Zope contenttype
 
 LICENSE=	ZPL21
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
