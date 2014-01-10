@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: converters/recode/Makefile 328213 2013-09-24 22:53:40Z madpilot $
+# $FreeBSD: converters/recode/Makefile 339229 2014-01-09 13:27:26Z bapt $
 
 PORTNAME=	recode
 PORTVERSION=	3.6
@@ -20,16 +20,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CFLAGS+=	-fPIC
 
-MAN1=		recode.1
 INFO=		recode
 
-post-extract: copy-po-files remove-info-files
-
-NO_STAGE=	yes
-copy-po-files:
+post-extract:
 	@${CP} ${FILESDIR}/ru.po ${WRKSRC}/i18n
-
-remove-info-files:
 	@${RM} -f ${WRKSRC}/doc/${PORTNAME}.info*
 
 post-patch:
