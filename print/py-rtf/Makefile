@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: print/py-rtf/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/py-rtf/Makefile 337960 2013-12-29 11:27:58Z wg $
 
 PORTNAME=	rtf
 PORTVERSION=	0.45
@@ -13,13 +13,13 @@ COMMENT=	Library to create RTF documents using the Python language
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	PyRTF
+PYDISTUTILS_AUTOPLIST=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-rtf
+PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
