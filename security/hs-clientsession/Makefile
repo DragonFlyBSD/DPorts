@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-clientsession/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-clientsession/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	clientsession
 PORTVERSION=	0.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USE_CABAL=	base64-bytestring>=0.1.1.1 cereal>=0.3 cipher-aes>=0.1.7 \
 		cprng-aes>=0.2 crypto-api>=0.8 entropy>=0.2.1 skein \
 		tagged>=0.1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
