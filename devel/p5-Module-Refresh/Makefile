@@ -1,5 +1,5 @@
 # Created by: aturetta@commit.it
-# $FreeBSD: devel/p5-Module-Refresh/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Refresh/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Module-Refresh
 PORTVERSION=	0.17
@@ -19,7 +19,4 @@ BUILD_DEPENDS=	p5-ExtUtils-MakeMaker>=6.42:${PORTSDIR}/devel/p5-ExtUtils-MakeMak
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Refresh.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
