@@ -1,5 +1,5 @@
 # Created by: shalunov
-# $FreeBSD: benchmarks/thrulay/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/thrulay/Makefile 338719 2014-01-05 00:41:32Z bapt $
 
 PORTNAME=	thrulay
 PORTVERSION=	0.9
@@ -10,9 +10,6 @@ MASTER_SITES=	SF \
 MAINTAINER=	shalunov@shlang.com
 COMMENT=	Network capacity tester
 
-MAN1=		thrulay.1
-MAN8=		thrulayd.8
-MANCOMPRESSED=	no
 HAS_CONFIGURE=	yes
 USES=		gmake
 USE_LDCONFIG=	yes
@@ -22,7 +19,6 @@ MAKE_JOBS_UNSAFE=	yes
 
 PORTDOCS=	ChangeLog README thrulay-protocol.txt thrulay-index.html
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '922s,datarootdir,prefix,g' ${WRKSRC}/configure
 
@@ -30,12 +26,9 @@ post-extract:
 	@${CP} ${WRKSRC}/doc/*.[ht]* ${WRKSRC}/
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docs in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docs} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
