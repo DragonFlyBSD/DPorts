@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Feed-Find/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Feed-Find/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	Feed-Find
 PORTVERSION=	0.07
@@ -20,7 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Feed::Find.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
