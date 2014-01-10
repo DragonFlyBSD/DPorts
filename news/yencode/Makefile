@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: news/yencode/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/yencode/Makefile 337664 2013-12-27 09:30:31Z bapt $
 
 PORTNAME=	yencode
 PORTVERSION=	0.46
@@ -8,16 +8,12 @@ CATEGORIES=	news
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A free (GPL) encoder and decoder for the yEnc Usenet file format
+COMMENT=	Free (GPL) encoder and decoder for the yEnc Usenet file format
 
 USES=		gettext
 GNU_CONFIGURE=	yes
 
-MAN1=	ydecode.1 yencode.1 ypost.1
-MAN5=	ypostrc.5
-
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
