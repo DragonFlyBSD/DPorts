@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dominic.marks@btinternet.com>
-# $FreeBSD: mail/dovecot/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/dovecot/Makefile 339260 2014-01-09 15:51:57Z mat $
 
 PORTNAME=	dovecot
 PORTVERSION=	1.2.17
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.dovecot.org/releases/${DOVECOTVERSION}/ \
 MAINTAINER=	yds@CoolRat.org
 COMMENT=	Secure and compact IMAP and POP3 servers
 
-CONFLICTS=	dovecot-2.*
+CONFLICTS=	dovecot2-*
 
 DOVECOTVERSION=	1.2
 
