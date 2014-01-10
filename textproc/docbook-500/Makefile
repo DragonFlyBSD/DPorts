@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@kovesdan.org>
-# $FreeBSD: textproc/docbook-500/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook-500/Makefile 338802 2014-01-05 17:21:23Z jgh $
 
 PORTNAME=	docbook
 PORTVERSION=	5.0
@@ -14,7 +14,7 @@ RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
 
 USE_ZIP=	yes
 NO_BUILD=	yes
-LATEST_LINK=	${PORTNAME}-500
+PKGNAMESUFFIX=	${PKGORIGIN:T:S/docbook-//}
 
 DOCBOOKDIR=	share/xml/${PORTNAME}/${PORTVERSION}
 DOCSDIR=	${PREFIX}/${DOCBOOKDIR}/docs
