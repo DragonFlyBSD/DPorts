@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: deskutils/remind/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/remind/Makefile 337673 2013-12-27 09:54:22Z jadawin $
 
 PORTNAME=	remind
 PORTVERSION=	3.1.12
@@ -18,17 +18,18 @@ OPTIONS_DEFINE=	TCLTK
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-MAN1=		rem.1 rem2ps.1 remind.1
+PLIST_FILES=	bin/rem \
+		bin/rem2ps \
+		bin/remind \
+		man/man1/rem.1.gz \
+		man/man1/rem2ps.1.gz \
+		man/man1/remind.1.gz
 
-PLIST_FILES=	bin/rem bin/rem2ps bin/remind
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTCLTK}
 USE_TK=		yes
 RUN_DEPENDS+=	dtplite:${PORTSDIR}/devel/tcllib
-MAN1+=		cm2rem.1 tkremind.1
 PLIST_FILES+=	bin/cm2rem.tcl bin/tkremind
 .endif
 
@@ -65,16 +66,16 @@ post-patch:
 
 do-install:
 .for i in rem2ps remind
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${i} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/${i}.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${i} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/${i}.1 ${STAGEDIR}${PREFIX}/man/man1
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/man/rem.1 ${PREFIX}/man/man1
-	${LN} -sf ${PREFIX}/bin/remind ${PREFIX}/bin/rem
+	${INSTALL_MAN} ${WRKSRC}/man/rem.1 ${STAGEDIR}${PREFIX}/man/man1
+	${LN} -sf ${PREFIX}/bin/remind ${STAGEDIR}${PREFIX}/bin/rem
 .if ${PORT_OPTIONS:MTCLTK}
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/cm2rem.tcl ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/tkremind ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/cm2rem.tcl ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/tkremind ${STAGEDIR}${PREFIX}/bin
 .for i in cm2rem tkremind
-	${INSTALL_MAN} ${WRKSRC}/man/${i}.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/${i}.1 ${STAGEDIR}${PREFIX}/man/man1
 .endfor
 .endif
 
