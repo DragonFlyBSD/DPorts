@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Any/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Any/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	Log-Any
 PORTVERSION=	0.15
@@ -13,10 +13,4 @@ COMMENT=	Perl extension to bring loggers and listeners together
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Log::Any.3 \
-	Log::Any::Adapter::Core.3 \
-	Log::Any::Adapter::Null.3 \
-	Log::Any::Test.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
