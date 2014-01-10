@@ -1,5 +1,5 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/phalcon/Makefile 336315 2013-12-13 03:01:27Z swills $
+# $FreeBSD: www/phalcon/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	phalcon
 PORTVERSION=	1.2.4
@@ -12,7 +12,6 @@ COMMENT=	Phalcon PHP Framework written in C-language
 
 LICENSE=	BSD
 
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/c${PORTNAME}-${PORTVERSION}/build/
 
 CFLAGS+=	-I${LOCALBASE}/include
