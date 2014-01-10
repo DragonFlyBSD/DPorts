@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Date-Leapyear/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Leapyear/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	Date-Leapyear
 PORTVERSION=	1.72
@@ -13,7 +13,4 @@ COMMENT=	Perl module to determine if a particular year a leap year
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Date::Leapyear.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
