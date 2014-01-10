@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-POP3Client/Makefile 329554 2013-10-06 12:31:21Z demon $
+# $FreeBSD: mail/p5-Mail-POP3Client/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Mail-POP3Client
 PORTVERSION=	2.19
@@ -13,7 +13,4 @@ COMMENT=	Perl5 module to talk to a POP3 (RFC1939) server
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::POP3Client.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
