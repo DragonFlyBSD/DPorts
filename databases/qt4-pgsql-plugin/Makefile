@@ -1,5 +1,5 @@
 # Created by: Lauri Watts <lauri@kde.org>
-# $FreeBSD: databases/qt4-pgsql-plugin/Makefile 330266 2013-10-13 23:15:50Z rakuco $
+# $FreeBSD: databases/qt4-pgsql-plugin/Makefile 338902 2014-01-06 16:16:52Z makc $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
@@ -11,7 +11,6 @@ COMMENT=	Qt PostgreSQL database plugin
 DB=		psql
 
 USE_QT4=	moc_build sql
-QT_NONSTANDARD=	yes
 QT_DIST=	yes
 
 USE_PGSQL=	yes
@@ -22,11 +21,11 @@ EXTRACT_AFTER_ARGS?=	${DISTNAME}/${DRIVER} \
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_ENV+=	DB="${DB}" DRIVER="${DRIVER}" MOC="${MOC}" \
 		PLUGIN="${PLUGIN}" \
-		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		QT_INCDIR="${QT_INCDIR}" \
 		QT_LIBDIR="${QT_LIBDIR}"
 PLIST_SUB=	DB=${DB}
+
+EXTRA_PATCHES=	# empty
 
 SQL_PLUGINDIR=	${PREFIX}/${QT_PLUGINDIR_REL}/sqldrivers
 
