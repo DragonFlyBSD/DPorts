@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Regexp-Shellish/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Regexp-Shellish/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Regexp-Shellish
 PORTVERSION=	0.93
@@ -12,7 +12,4 @@ COMMENT=	Perl module for shell-like regular expressions
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Regexp::Shellish.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
