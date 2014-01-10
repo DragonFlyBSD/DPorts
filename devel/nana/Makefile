@@ -1,5 +1,5 @@
 # Created by: Phil Maker <pjm@gnu.org>
-# $FreeBSD: devel/nana/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/nana/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	nana
 PORTVERSION=	2.5
@@ -10,7 +10,6 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/nana/ \
 MAINTAINER=	pjm@gnu.org
 COMMENT=	Support for assertion checking and logging using GNU C and GDB
 
-FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
