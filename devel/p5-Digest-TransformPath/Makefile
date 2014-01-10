@@ -1,5 +1,5 @@
 # Created by: Cory R. King <coryking@mozimedia.com>
-# $FreeBSD: devel/p5-Digest-TransformPath/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Digest-TransformPath/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Digest-TransformPath
 PORTVERSION=	1.00
@@ -14,7 +14,4 @@ COMMENT=	Implements the TransformPath concept
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Digest::TransformPath.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
