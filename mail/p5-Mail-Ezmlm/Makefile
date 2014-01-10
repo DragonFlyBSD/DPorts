@@ -1,5 +1,5 @@
 # Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-# $FreeBSD: mail/p5-Mail-Ezmlm/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Ezmlm/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	Mail-Ezmlm
 PORTVERSION=	0.08.2
@@ -25,7 +25,4 @@ USE_PERL5=	configure
 CONFIGURE_ENV=	BSD_BATCH_INSTALL=yes
 .endif
 
-MAN3=		Mail::Ezmlm.3 Mail::Ezmlm::GpgKeyRing.3 Mail::Ezmlm::GpgEzmlm.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
