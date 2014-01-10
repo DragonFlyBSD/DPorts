@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-Scalar/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Set-Scalar/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Set-Scalar
 PORTVERSION=	1.26
@@ -13,14 +13,4 @@ COMMENT=	Perl module containing a set of scalars, including references
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Set::Scalar.3 \
-		Set::Scalar::Base.3 \
-		Set::Scalar::Null.3 \
-		Set::Scalar::Real.3 \
-		Set::Scalar::Virtual.3 \
-		Set::Scalar::Valued.3 \
-		Set::Scalar::ValuedUniverse.3 \
-		Set::Scalar::Universe.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
