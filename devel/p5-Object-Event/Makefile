@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: devel/p5-Object-Event/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Object-Event/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Object-Event
 PORTVERSION=	1.220
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-AnyEvent>=3.5:${PORTSDIR}/devel/p5-AnyEvent \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Object::Event.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
