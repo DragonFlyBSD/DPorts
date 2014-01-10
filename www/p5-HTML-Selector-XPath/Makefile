@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: www/p5-HTML-Selector-XPath/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Selector-XPath/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	HTML-Selector-XPath
 PORTVERSION=	0.14
@@ -15,7 +15,4 @@ TEST_DEPENDS=	p5-Test-Base>=0:${PORTSDIR}/devel/p5-Test-Base
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Selector::XPath.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
