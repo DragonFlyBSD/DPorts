@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-# $FreeBSD: audio/portaudio2/Makefile 331344 2013-10-23 02:54:44Z nemysis $
+# $FreeBSD: audio/portaudio2/Makefile 339146 2014-01-08 14:59:08Z skreuzer $
 
 PORTNAME=	portaudio
 DISTVERSION=	19_20111121
@@ -23,8 +23,7 @@ CONFIGURE_ARGS+=PKG_CONFIG_LIBDIR=${PREFIX}/libdata/pkgconfig \
 			--libdir=${PREFIX}/lib/${PORTNAME}${PKGNAMESUFFIX} \
 			--includedir=${PREFIX}/include/${PORTNAME}${PKGNAMESUFFIX}
 
-USES=		gmake pathfix pkgconfig
-USE_DOS2UNIX=	yes
+USES=		gmake pathfix pkgconfig dos2unix
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}${PKGNAMESUFFIX}
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
