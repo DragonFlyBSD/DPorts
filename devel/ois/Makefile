@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/ois/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/ois/Makefile 337450 2013-12-25 20:14:43Z amdmi3 $
 
 PORTNAME=	ois
 PORTVERSION=	1.2.0
@@ -12,8 +12,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Object Oriented Input System
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix gmake
 USE_AUTOTOOLS=	libtool:env aclocal:env autoheader:env automake:env autoconf:env
 USE_XORG=	x11 xaw
 USE_LDCONFIG=	yes
@@ -23,7 +22,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|^pkgconfigdir = .*|pkgconfigdir=$${prefix}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.am
