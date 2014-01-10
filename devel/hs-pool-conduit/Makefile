@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-pool-conduit/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-pool-conduit/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	pool-conduit
 PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	MIT
 USE_CABAL=	monad-control resource-pool>=0.2.1 resourcet>=0.3 \
 		transformers>=0.2.1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
