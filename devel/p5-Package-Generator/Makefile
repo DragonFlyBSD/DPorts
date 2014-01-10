@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Package-Generator/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
+# $FreeBSD: devel/p5-Package-Generator/Makefile 338380 2014-01-01 16:41:33Z ehaupt $
 
 PORTNAME=	Package-Generator
-PORTVERSION=	1.105
+PORTVERSION=	1.106
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
