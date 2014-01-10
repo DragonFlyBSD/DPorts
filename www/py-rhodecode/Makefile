@@ -1,8 +1,9 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/py-rhodecode/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-rhodecode/Makefile 337536 2013-12-26 15:17:10Z wg $
 
 PORTNAME=	rhodecode
 PORTVERSION=	1.7.2
+PORTREVISION=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -38,8 +39,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pylons>=1.0:${PORTSDIR}/www/py-pylons \
 		mercurial>=2.6:${PORTSDIR}/devel/mercurial
 
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	RhodeCode
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 USE_RC_SUBR=		rhodecode
 SUB_FILES=		pkg-message
@@ -50,7 +51,6 @@ OPTIONS_DEFAULT=	GIT
 
 GIT_DESC=	GIT support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
@@ -60,8 +60,5 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}ldap>=2.4.6:${PORTSDIR}/net/py-ldap2
 .if ${PORT_OPTIONS:MGIT}
 RUN_DEPENDS+=	${LOCALBASE}/bin/git:${PORTSDIR}/devel/git
 .endif
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
