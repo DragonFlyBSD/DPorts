@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-DevPopup/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-DevPopup/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	CGI-Application-Plugin-DevPopup
 PORTVERSION=	1.08
@@ -21,10 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CGI::Application::Plugin::DevPopup.3 \
-	CGI::Application::Plugin::DevPopup::HTTPHeaders.3 \
-	CGI::Application::Plugin::DevPopup::Timing.3 \
-	CGI::Application::Plugin::DevPopup::Log.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
