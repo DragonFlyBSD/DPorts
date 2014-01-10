@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Collect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Collect/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	Module-Collect
 PORTVERSION=	0.06
@@ -16,9 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Collect.3 \
-		Module::README.3 \
-		Module::Collect::Package.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
