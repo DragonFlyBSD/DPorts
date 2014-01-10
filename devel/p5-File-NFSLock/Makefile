@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-NFSLock/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-NFSLock/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	File-NFSLock
 PORTVERSION=	1.21
@@ -13,7 +13,4 @@ COMMENT=	File::NFSLock - perl module to do NFS (or not) locking
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	File::NFSLock.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
