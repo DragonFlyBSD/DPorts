@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: textproc/hs-texmath/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: textproc/hs-texmath/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	texmath
 PORTVERSION=	0.6.1.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -17,7 +17,6 @@ OPTIONS_DEFINE=		CGI
 
 CGI_DESC=		Compile CGI executable
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MCGI}
