@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: shells/ambit/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/ambit/Makefile 337645 2013-12-27 08:09:02Z bapt $
 
 PORTNAME=	ambit
 PORTVERSION=	2.0.39
@@ -16,14 +16,11 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 AMBITDIR?=	/var/spool/${PORTNAME}
-MAN1=		${PORTNAME}.1
-MANCOMPRESSED=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PLIST_SUB=	AMBITDIR=${AMBITDIR}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e "s!/bin/bash!${LOCALBASE}/bin/bash!" \
@@ -32,13 +29,10 @@ post-patch:
 		-e "s!/var/.MyNameIs!${AMBITDIR}!" ${WRKSRC}/usr/bin/ambit
 
 do-install:
-	@${MKDIR} ${AMBITDIR}/hosts
-	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/ambit ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/usr/lib/ambit/libambit.sh ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/etc/${PORTNAME}/${PORTNAME}.conf ${PREFIX}/etc/${PORTNAME}.conf.sample
-	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man1/${PORTNAME}.1.gz ${MANPREFIX}/man/man1
-	@if [ ! -f ${PREFIX}/etc/${PORTNAME}.conf ]; then \
-	 ${CP} -p ${PREFIX}/etc/${PORTNAME}.conf.sample ${PREFIX}/etc/${PORTNAME}.conf ; \
-	fi
+	@${MKDIR} ${STAGEDIR}${AMBITDIR}/hosts
+	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/ambit ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/usr/lib/ambit/libambit.sh ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/etc/${PORTNAME}/${PORTNAME}.conf ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf.sample
+	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man1/${PORTNAME}.1.gz ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
