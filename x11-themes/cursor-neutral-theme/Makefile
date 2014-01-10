@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-themes/cursor-neutral-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/cursor-neutral-theme/Makefile 338914 2014-01-06 17:54:04Z antoine $
 
 PORTNAME=	cursor-neutral-theme
 DISTVERSION=	1.13a
@@ -15,10 +15,9 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/neutral
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/icons/neutral/cursors
-	cd ${WRKSRC}/cursors \
-		&& ${INSTALL_DATA} * ${PREFIX}/lib/X11/icons/neutral/cursors
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/neutral/cursors
+	${INSTALL_DATA} ${WRKSRC}/cursors/* \
+		${STAGEDIR}${PREFIX}/lib/X11/icons/neutral/cursors
 
 .include <bsd.port.mk>
