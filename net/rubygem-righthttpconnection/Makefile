@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/rubygem-righthttpconnection/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: net/rubygem-righthttpconnection/Makefile 337612 2013-12-26 20:04:56Z swills $
 
 PORTNAME=	righthttpconnection
 PORTVERSION=	1.4.0
@@ -7,7 +7,7 @@ CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 DISTNAME=	right_http_connection-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Persistent HTTP/HTTPS connections with error retries
 
 USE_RUBY=	yes
