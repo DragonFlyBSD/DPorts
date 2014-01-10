@@ -1,5 +1,5 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: databases/mongodb/Makefile 333506 2013-11-11 14:16:05Z ale $
+# $FreeBSD: databases/mongodb/Makefile 338446 2014-01-02 15:19:24Z demon $
 
 PORTNAME=	mongodb
 PORTVERSION=	2.4.8
@@ -10,8 +10,8 @@ DISTNAME=	${PORTNAME}-src-r${PORTVERSION}
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	NOSQL distributed document-oriented database
 
-# mongodb is AGPLv3, C++ driver is AL2
-LICENSE=	AGPLv3 AL2
+# mongodb is AGPLv3, C++ driver is APACHE20
+LICENSE=	AGPLv3 APACHE20
 LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
@@ -89,4 +89,4 @@ test: build-depends build
 		${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SMOKE_TESTS}
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
