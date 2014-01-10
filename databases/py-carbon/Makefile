@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: databases/py-carbon/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: databases/py-carbon/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	carbon
 PORTVERSION=	0.9.12
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	bsdports@wayfair.com
 COMMENT=	Backend storage application for graphite
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}txamqp>=0.3:${PORTSDIR}/net/py-txamqp \
 		${PYTHON_PKGNAMEPREFIX}whisper>=0.9.10:${PORTSDIR}/databases/py-whisper
