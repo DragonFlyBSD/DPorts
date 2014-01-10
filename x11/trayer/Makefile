@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/trayer/Makefile 328669 2013-09-29 10:49:03Z madpilot $
+# $FreeBSD: x11/trayer/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.5
@@ -11,7 +11,6 @@ MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Lightweight GTK2-based systray for UNIX desktop
 
 GITVERSION=	0-g5353f80
-FETCH_ARGS=	-pRr
 USE_GNOME=	gtk20 glib20 pango atk
 USES=		iconv gmake pkgconfig
 USE_XORG=	xmu
