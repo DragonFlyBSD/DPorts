@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-parsec/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: textproc/hs-parsec/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	parsec
 PORTVERSION=	3.1.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	mtl text>=0.2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
