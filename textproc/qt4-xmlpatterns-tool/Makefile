@@ -1,16 +1,15 @@
 # Created by: danny@ricin.com
-# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 330266 2013-10-13 23:15:50Z rakuco $
+# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 338902 2014-01-06 16:16:52Z makc $
 
 PORTNAME=	xmlpatterns-tool
 DISTVERSION=	${QT4_VERSION}
-CATEGORIES?=	textproc
+CATEGORIES=	textproc
 PKGNAMEPREFIX=	qt4-
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Qt4 command line utility for running XQueries
+COMMENT=	Qt command-line utility for running XQueries
 
 USE_QT4=	qmake_build xmlpatterns
-QT_NONSTANDARD=	yes
 QT_DIST=	yes
 
 HAS_CONFIGURE=	yes
@@ -35,12 +34,10 @@ EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 BUILD_WRKSRC=	${WRKSRC}/tools/xmlpatterns
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
-
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
 #	${REINPLACE_CMD} -e 's|^TARGET.*|TARGET=xmlpatterns|g' \
 #		${BUILD_WRKSRC}/xmlpatterns.pro
-	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
+	${LN} -sf ${QMAKE} ${WRKSRC}/bin/qmake
 
 .include <bsd.port.mk>
