@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: lang/v8/Makefile 336157 2013-12-11 11:31:07Z sunpoet $
+# $FreeBSD: lang/v8/Makefile 337829 2013-12-28 04:28:43Z vanilla $
 
 PORTNAME=	v8
 PORTVERSION=	3.18.5
@@ -11,6 +11,8 @@ COMMENT=	Google\'s open source JavaScript engine
 
 BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
+
+CONFLICTS=      v8-devel-*
 
 USES=		gmake
 USE_XZ=		yes
