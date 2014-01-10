@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-zope.dottedname/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-zope.dottedname/Makefile 338824 2014-01-05 21:02:29Z rm $
 
 PORTNAME=	zope.dottedname
 PORTVERSION=	3.4.6
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,9 +13,8 @@ COMMENT=	Resolver for Python dotted names
 
 LICENSE=	ZPL21
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
