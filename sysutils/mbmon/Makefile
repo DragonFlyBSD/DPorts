@@ -1,5 +1,5 @@
 # Created by: kaz@kobe1995.net (NAKAMURA Kauzushi)
-# $FreeBSD: sysutils/mbmon/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/mbmon/Makefile 337424 2013-12-25 15:07:57Z sunpoet $
 
 PORTNAME?=	mbmon
 PORTVERSION=	205
@@ -10,6 +10,9 @@ DISTNAME=	xmbmon${PORTVERSION}
 
 MAINTAINER=	5u623l20@gmail.com
 COMMENT?=	Motherboard monitor for LM78/79, W8378x, AS99127F, VT82C686 and ADM9240
+
+DEPRECATED=	Use sysutils/xmbmon instead. This port will be removed soon
+EXPIRATION_DATE=2014-01-31
 
 PORTSCOUT=	limit:^[0-9]+$
 PATCH_SITES+=	${MASTER_SITES}
