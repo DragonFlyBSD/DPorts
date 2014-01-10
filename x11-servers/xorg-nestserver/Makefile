@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-nestserver/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-servers/xorg-nestserver/Makefile 338291 2013-12-31 12:58:50Z kwm $
 
 PORTNAME=	xorg-nestserver
 
@@ -21,7 +21,6 @@ CONFIGURE_ARGS=	--disable-dmx --disable-xvfb \
 
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xnest man/man1/Xnest.1.gz
-
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/xnest/Xnest ${STAGEDIR}${PREFIX}/bin/
