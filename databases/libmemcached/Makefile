@@ -1,4 +1,4 @@
-# $FreeBSD: databases/libmemcached/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/libmemcached/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	libmemcached
 PORTVERSION=	1.0.7
@@ -12,7 +12,6 @@ COMMENT=	C and C++ client library to the memcached server
 LIB_DEPENDS?=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libevent-1.4.so:${PORTSDIR}/devel/libevent
 
-FETCH_ARGS?=	-pRr
 USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
