@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-capitalization/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-capitalization/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	capitalization
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		capitalization.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
