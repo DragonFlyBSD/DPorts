@@ -1,5 +1,5 @@
 # Created by: Jaap Boender <jaapb@kerguelen.org>
-# $FreeBSD: archivers/ocaml-bz2/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/ocaml-bz2/Makefile 338542 2014-01-03 14:42:07Z adamw $
 
 PORTNAME=	bz2
 PORTVERSION=	0.6.0
@@ -27,7 +27,7 @@ PORTDOCS=	*
 .include <bsd.port.pre.mk>
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${DOCSDIR})
