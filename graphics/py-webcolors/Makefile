@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/py-webcolors/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: graphics/py-webcolors/Makefile 339136 2014-01-08 14:25:26Z tota $
 
 PORTNAME=	webcolors
 PORTVERSION=	1.4
@@ -10,17 +10,21 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Library working with the sRGB color space as used in the HTML and CSS
 
+LICENSE=	BSD3CLAUSE
+
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-NO_STAGE=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
 PORTDOCS=	README
 
-.if !defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${INSTALL_WRKSRC}/${PORTDOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${INSTALL_WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
