@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/docbook-xml-440/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook-xml-440/Makefile 338804 2014-01-05 17:28:35Z jgh $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.4
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${XMLCATMGR}:${PORTSDIR}/textproc/xmlcatmgr
 USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-LATEST_LINK=	${PORTNAME}-440
+PKGNAMESUFFIX=	${PORTVERSION:S/.//}
 PLIST=		${WRKSRC}/pkg-plist
 
 XMLCATBASE=	share/xml
