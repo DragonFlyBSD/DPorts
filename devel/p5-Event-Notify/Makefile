@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-Event-Notify/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Event-Notify/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Event-Notify
 PORTVERSION=	0.00004
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Event::Notify.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
