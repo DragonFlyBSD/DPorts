@@ -1,9 +1,9 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-channel-symfony2/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-channel-symfony2/Makefile 338892 2014-01-06 15:11:43Z sunpoet $
 
 PORTNAME=	symfony2
-PORTREVISION=	1
 PORTVERSION=	20110826
+PORTREVISION=	2
 CATEGORIES=	devel www pear
 
 MAINTAINER=	gasol.wu@gmail.com
