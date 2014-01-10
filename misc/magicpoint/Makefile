@@ -1,5 +1,5 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: misc/magicpoint/Makefile 337403 2013-12-25 09:19:40Z kwm $
+# $FreeBSD: misc/magicpoint/Makefile 337836 2013-12-28 06:36:56Z dinoex $
 
 PORTNAME=	magicpoint
 PORTVERSION=	1.13a
@@ -68,7 +68,7 @@ post-configure:
 		${SETENV} ${MAKE_ENV} ${XMKMF} ${XMKMF_ARGS}
 	cd ${WRKSRC}/contrib/xmindpath && \
 		${SH} ${CONFIGURE_SCRIPT} --prefix=${PREFIX}
-	@${REINPLACE_CMD} -e 's|freetype1/freetype|freetype1|g' \
+	${REINPLACE_CMD} -e 's|freetype1/freetype|freetype1|g' \
 		${WRKSRC}/Makefile ${WRKSRC}/image/Makefile
 
 post-build:
