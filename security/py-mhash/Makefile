@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-mhash/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-mhash/Makefile 338082 2013-12-30 10:59:46Z wg $
 
 PORTNAME=	mhash
 PORTVERSION=	1.4
@@ -11,12 +11,11 @@ DISTNAME=	python-mhash-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python mhash module
 
-LIB_DEPENDS=	mhash:${PORTSDIR}/security/mhash
+LIB_DEPENDS=	libmhash.so:${PORTSDIR}/security/mhash
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/mhash.so
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	python-mhash
+PYDISTUTILS_AUTOPLIST=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -24,5 +23,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 test: install
 	${PYTHON_CMD} ${WRKSRC}/test.py
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
