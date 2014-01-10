@@ -1,5 +1,5 @@
 # Created by: OKAZAKI Tetsurou
-# $FreeBSD: converters/mule-ucs/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/mule-ucs/Makefile 338556 2014-01-03 16:12:21Z adamw $
 
 PORTNAME=	mule-ucs
 PORTVERSION=	0.85.r3
@@ -29,6 +29,9 @@ MULEUCS_DESTDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/mule-ucs
 EMACS_ARGS=	-q --no-site-file -batch
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 do-build:
 	cd ${WRKSRC}/lisp/big5conv && \
 	    ${EMACS_CMD} ${EMACS_ARGS} -l big5-comp.el
@@ -52,7 +55,7 @@ do-install:
 	@${RM} ${MULEUCS_DESTDIR}/jisx0213/x0213-comp.el
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC}/lisp; \
 	for i in ChangeLog MuleUni.txt README* ; do \
