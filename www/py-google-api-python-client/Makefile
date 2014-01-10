@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-google-api-python-client/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-google-api-python-client/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	google-api-python-client
 PORTVERSION=	1.1
@@ -11,7 +11,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}.tar.gz
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Google API Client Library for Python
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PKGNAMEPREFIX}gflags>=1.4:${PORTSDIR}/devel/py-gflags \
 		${PKGNAMEPREFIX}httplib2>=0.6.0:${PORTSDIR}/www/py-httplib2 \
