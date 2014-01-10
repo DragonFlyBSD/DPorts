@@ -1,0 +1,22 @@
+# Created by: Wen Heping <wen@FreeBSD.org>
+# $FreeBSD: www/py-uliweb/Makefile 338865 2014-01-06 12:04:12Z wen $
+
+PORTNAME=	uliweb
+PORTVERSION=	0.2.3
+CATEGORIES=	www python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	Uliweb-${DISTVERSION}
+
+MAINTAINER=	wen@FreeBSD.org
+COMMENT=	Easy python web framework
+
+LICENSE=	BSD
+
+USE_DOS2UNIX=		yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+PYDISTUTILS_PKGNAME=	Uliweb
+
+.include <bsd.port.mk>
