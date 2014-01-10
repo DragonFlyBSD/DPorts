@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: archivers/ruby-libarchive/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/ruby-libarchive/Makefile 338542 2014-01-03 14:42:07Z adamw $
 
 PORTNAME=	libarchive
 PORTVERSION=	0.1.1
@@ -21,8 +21,10 @@ WRKSRC=		${WRKDIR}/ext
 
 DOCS=		README.txt doc
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${RUBY_MODDOCDIR}
 	cd ${WRKDIR}; ${COPYTREE_SHARE} "${DOCS}" ${RUBY_MODDOCDIR}/
 .endif
