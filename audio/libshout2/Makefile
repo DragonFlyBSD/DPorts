@@ -1,5 +1,5 @@
 # Created by: Zach Zurflu <zach@pabst.bendnet.com>
-# $FreeBSD: audio/libshout2/Makefile 334833 2013-11-25 11:33:34Z sunpoet $
+# $FreeBSD: audio/libshout2/Makefile 338663 2014-01-04 18:21:00Z bapt $
 
 PORTNAME=	libshout
 PORTVERSION=	2.3.1
@@ -25,7 +25,6 @@ CFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 USE_LDCONFIG=	yes
-#NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 
 post-patch:
