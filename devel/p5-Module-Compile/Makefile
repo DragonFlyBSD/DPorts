@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: devel/p5-Module-Compile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Compile/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Module-Compile
 PORTVERSION=	0.23
@@ -16,11 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Compile.3 \
-		Module::Compile::Opt.3 \
-		Module::Install::Admin::PMC.3 \
-		Module::Install::PMC.3\
-		Module::Optimize.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
