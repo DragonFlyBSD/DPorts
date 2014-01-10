@@ -1,14 +1,14 @@
-# $FreeBSD: x11/i3status/Makefile 329213 2013-10-03 17:11:18Z bapt $
+# $FreeBSD: x11/i3status/Makefile 338860 2014-01-06 11:24:29Z bapt $
 
 PORTNAME=	i3status
-PORTVERSION=	2.7
+PORTVERSION=	2.8
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/i3status/
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Small program for generating a status bar
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 LIB_DEPENDS=	libconfuse.so:${PORTSDIR}/devel/libconfuse \
 		libyajl.so:${PORTSDIR}/devel/yajl
