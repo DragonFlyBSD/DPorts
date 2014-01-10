@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Sender/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Sender/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Mail-Sender
 PORTVERSION=	0.8.22
@@ -13,9 +13,6 @@ COMMENT=	Module for sending mails with attachments through an SMTP server
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Sender.3
-
-NO_STAGE=	yes
 post-patch:
 .if defined(BATCH)
 	@${REINPLACE_CMD}  -e 's/res = <STDIN>;/res = "N";/' ${WRKSRC}/Config.PL
