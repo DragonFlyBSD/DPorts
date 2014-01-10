@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/R-cran-SuppDists/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-SuppDists/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	SuppDists
 DISTVERSION=	1.1-9.1
@@ -17,8 +17,7 @@ COMMENT=	Supplementary distributions and RNG for R
 LICENSE=		GPLv2
 
 BENCHMARK_SCRIPT=	R-benchmark-25.R
-R_MOD_AUTOPLIST=	yes
-USE_R_MOD=		yes
+USES=	cran:auto-plist
 WRKSRC =		${WRKDIR}/${PORTNAME}
 
 .if defined(MAINTAINER_MODE)
