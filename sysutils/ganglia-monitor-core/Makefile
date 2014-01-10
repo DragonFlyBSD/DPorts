@@ -1,8 +1,8 @@
-# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 337307 2013-12-23 23:04:26Z antoine $
+# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 338980 2014-01-07 08:04:09Z martymac $
 
 PORTNAME=	monitor-core
 PORTVERSION=	3.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils net parallel
 MASTER_SITES=	SF/ganglia/ganglia%20monitoring%20core/${PORTVERSION}
 PKGNAMEPREFIX=	ganglia-
