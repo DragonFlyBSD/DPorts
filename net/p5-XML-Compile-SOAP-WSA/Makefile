@@ -1,5 +1,5 @@
 # Created by: Patrick Powell <papowell@astart.com>
-# $FreeBSD: net/p5-XML-Compile-SOAP-WSA/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-XML-Compile-SOAP-WSA/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	XML-Compile-SOAP-WSA
 PORTVERSION=	0.12
@@ -21,8 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	XML::Compile::SOAP::WSA.3 \
-	XML::Compile::SOAP::WSA::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
