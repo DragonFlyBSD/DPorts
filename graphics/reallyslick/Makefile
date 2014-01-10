@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/reallyslick/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/reallyslick/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	reallyslick
 PORTVERSION=	0.9.1
@@ -36,7 +36,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFREEALUT}
-USE_OPENAL=	alut
+USES+=		openal:alut
 .else
 CONFIGURE_ARGS+=	--disable-sound
 .endif
