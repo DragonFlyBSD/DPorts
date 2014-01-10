@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-Std-Utils/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Std-Utils/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Class-Std-Utils
 DISTVERSION=	v0.0.3
@@ -14,7 +14,4 @@ COMMENT=	Utility subroutines for building "inside-out" objects
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Std::Utils.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
