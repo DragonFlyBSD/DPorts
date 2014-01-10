@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: chinese/muni/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD: chinese/muni/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	muni
 PORTVERSION=	1.0
@@ -9,10 +9,12 @@ MASTER_SITES=	http://www.whizkidtech.redprince.net/i18n/muni/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Find Unicode values for Chinese characters
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/muni ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/m7773 ${STAGEDIR}${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/muni
 	${INSTALL_DATA} ${WRKSRC}/index.html ${STAGEDIR}${PREFIX}/share/doc/muni
 	${INSTALL_DATA} ${WRKSRC}/yung.gif ${STAGEDIR}${PREFIX}/share/doc/muni
