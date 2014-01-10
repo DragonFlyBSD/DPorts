@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: x11-toolkits/py-wxPython26/Makefile 338620 2014-01-04 01:16:19Z bapt $
 
 PORTNAME=	wxPython
 PORTVERSION=	2.6.3.3
@@ -7,6 +7,7 @@ PORTREVISION?=	7
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	SF/wxpython/wxPython/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	26
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	neal@nelson.name
@@ -83,7 +84,7 @@ PLIST_SUB+=	WX_VERSION=${WX_VERSION}
 
 .if defined(WITH_COMMON_ONLY)
 ## These are not shared amongst installations
-PKGNAMESUFFIX=	-common
+PKGNAMESUFFIX=	26-common
 
 PYDISTUTILS_BUILDARGS+=	\
 			INSTALL_MULTIVERSION=1
@@ -99,7 +100,7 @@ PYDISTUTILS_BUILDARGS+=	\
 . if defined(WITH_WXPYTHON_UNICODE)
 WX_UNICODE=	yes
 
-PKGNAMESUFFIX=	-unicode
+PKGNAMESUFFIX=	26-unicode
 
 PYDISTUTILS_BUILDARGS+=	\
 			UNICODE=1
