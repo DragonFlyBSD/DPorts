@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: print/py-relatorio/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/py-relatorio/Makefile 337958 2013-12-29 11:24:40Z wg $
 
 PORTNAME=	relatorio
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycha>=0.5.0:${PORTSDIR}/graphics/py-pycha \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.07:${PORTSDIR}/devel/py-yaml
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
