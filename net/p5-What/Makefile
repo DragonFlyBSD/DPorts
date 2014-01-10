@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-What/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-What/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	What
 PORTVERSION=	1.01
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		What.3 What::MTA.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
