@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-empy/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-empy/Makefile 338092 2013-12-30 11:46:38Z wg $
 
 PORTNAME=	empy
 PORTVERSION=	3.3
@@ -8,11 +8,10 @@ MASTER_SITES=	http://www.alcyone.com/software/empy/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A powerful and robust templating system for Python
+COMMENT=	Powerful and robust templating system for Python
 
-USE_PYTHON=	1.5+
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGVERSION=	3.1
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
