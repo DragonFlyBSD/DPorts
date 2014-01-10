@@ -1,4 +1,4 @@
-# $FreeBSD: www/transmission-web/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/transmission-web/Makefile 338028 2013-12-29 17:08:28Z crees $
 
 PORTREVISION=	0
 CATEGORIES=	www net-p2p
@@ -17,12 +17,11 @@ PORTDOCS=	*
 
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC}/web -name Makefile.* -delete
 
 do-install:
-	@${MKDIR} ${DATADIR}/web
-	@(cd ${WRKSRC}/web && ${COPYTREE_SHARE} \* ${DATADIR}/web)
+	${MKDIR} ${STAGEDIR}${DATADIR}/web
+	(cd ${WRKSRC}/web && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR}/web)
 
 .include "${MASTERDIR}/Makefile"
