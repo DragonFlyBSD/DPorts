@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Types-Structured/Makefile 334542 2013-11-21 23:16:44Z sunpoet $
+# $FreeBSD: devel/p5-MooseX-Types-Structured/Makefile 338211 2013-12-31 01:22:09Z sunpoet $
 
 PORTNAME=	MooseX-Types-Structured
-PORTVERSION=	0.29
+PORTVERSION=	0.30
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
