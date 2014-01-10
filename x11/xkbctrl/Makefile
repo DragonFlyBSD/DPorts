@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: x11/xkbctrl/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xkbctrl/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xkbctrl
 PORTVERSION=	1.0
@@ -18,7 +18,6 @@ USES=		imake
 USE_XORG=	x11 xkbfile
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 do-extract:
 		@${RM} -rf ${WRKDIR}
 		@${MKDIR} ${WRKDIR}
@@ -27,6 +26,6 @@ do-extract:
 		done
 
 do-install:
-		@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+		@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
