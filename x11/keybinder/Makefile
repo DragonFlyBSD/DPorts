@@ -1,4 +1,4 @@
-# $FreeBSD: x11/keybinder/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/keybinder/Makefile 338077 2013-12-30 10:05:42Z tijl $
 
 PORTNAME=	keybinder
 PORTVERSION=	0.3.0
@@ -20,7 +20,7 @@ USE_XORG=	x11 xext xrender
 USES=		pkgconfig pathfix
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	PYTHON LUA
+OPTIONS_DEFINE=	DOCS EXAMPLES PYTHON LUA
 OPTIONS_DEFAULT=	PYTHON
 
 # Override LUA description
