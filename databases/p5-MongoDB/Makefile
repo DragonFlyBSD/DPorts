@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-MongoDB/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: databases/p5-MongoDB/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	MongoDB
 PORTVERSION=	0.45
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Mongo Driver for Perl
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-Class-Method-Modifiers>=0:${PORTSDIR}/devel/p5-Class-Method-Modifiers \
