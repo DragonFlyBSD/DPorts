@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/libgooglepinyin/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/libgooglepinyin/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	libgooglepinyin
 PORTVERSION=	0.1.2
@@ -13,5 +13,4 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		cmake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
