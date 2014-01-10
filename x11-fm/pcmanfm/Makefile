@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: x11-fm/pcmanfm/Makefile 329402 2013-10-04 23:10:53Z nemysis $
+# $FreeBSD: x11-fm/pcmanfm/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	pcmanfm
 PORTVERSION=	1.1.2
@@ -15,10 +15,9 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libfm-gtk.so.4:${PORTSDIR}/x11/libfm
 
-USES=		gmake pkgconfig
+USES=		fam gmake pkgconfig
 USE_GNOME=	gtk20
 USE_AUTOTOOLS=	libtool
-USE_FAM=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
