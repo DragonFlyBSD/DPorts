@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-Event-Join/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Event-Join/Makefile 338909 2014-01-06 17:28:12Z az $
 
 PORTNAME=	Event-Join
 PORTVERSION=	0.06
@@ -22,7 +22,4 @@ TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Event::Join.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
