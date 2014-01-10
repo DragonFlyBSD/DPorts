@@ -1,9 +1,9 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-ldap/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: www/trac-ldap/Makefile 337578 2013-12-26 17:54:58Z wg $
 
 PORTNAME=	ldap
 PORTVERSION=	0.5.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	www devel python
 MASTER_SITES=	http://www.gerritbeine.de/download/trac/
 PKGNAMEPREFIX=	trac-
@@ -16,11 +16,8 @@ RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		${PYTHON_PKGNAMEPREFIX}ldap2>=2.3.1:${PORTSDIR}/net/py-ldap2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	LdapPlugin
-PYDISTUTILS_PKGVERSION=	${PORTVERSION}dev
-PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+USE_PYTHON=	2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
