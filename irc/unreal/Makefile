@@ -1,8 +1,8 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: irc/unreal/Makefile 332656 2013-11-04 00:08:07Z bdrewery $
+# $FreeBSD: irc/unreal/Makefile 338950 2014-01-06 22:36:23Z rakuco $
 
 PORTNAME=	Unreal
-PORTVERSION=	3.2.10.1
+PORTVERSION=	3.2.10.2
 CATEGORIES=	irc ipv6
 MASTER_SITES=	http://www.unrealircd.com/downloads/
 DISTNAME=	${PORTNAME}${PORTVERSION}
