@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-URI-Template-Restrict/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-URI-Template-Restrict/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	URI-Template-Restrict
 PORTVERSION=	0.06
@@ -23,8 +23,4 @@ BUILD_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		URI::Template::Restrict.3 \
-		URI::Template::Restrict::Expansion.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
