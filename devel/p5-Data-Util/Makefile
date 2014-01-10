@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Util/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Data-Util
 PORTVERSION=	0.62
@@ -20,11 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Util.3 \
-		Data::Util::Curry.3 \
-		Data::Util::Error.3 \
-		Data::Util::JA.3 \
-		Data::Util::PurePerl.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
