@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-WWW-Mechanize-PSGI/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-WWW-Mechanize-PSGI/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	Test-WWW-Mechanize-PSGI
 PORTVERSION=	0.35
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::WWW::Mechanize::PSGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
