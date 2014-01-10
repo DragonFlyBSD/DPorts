@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-Class-C3-Adopt-NEXT/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-C3-Adopt-NEXT/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Class-C3-Adopt-NEXT
 PORTVERSION=	0.13
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::C3::Adopt::NEXT.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
