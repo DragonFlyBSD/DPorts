@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 333352 2013-11-09 22:35:34Z sunpoet $
+# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 338232 2013-12-31 04:26:58Z sunpoet $
 
 PORTNAME=	Catalyst-Action-REST
-PORTVERSION=	1.13
+PORTVERSION=	1.14
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -27,8 +27,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 
+CONFIGURE_ARGS=	--default
 USES=		perl5
 USE_PERL5=	configure
-CONFIGURE_ARGS=	--default
 
 .include <bsd.port.mk>
