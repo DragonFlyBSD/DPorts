@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: misc/p5-I18N-LangTags/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-I18N-LangTags/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	I18N-LangTags
 PORTVERSION=	0.35
@@ -13,7 +13,4 @@ COMMENT=	Functions for dealing with RFC-1766-style language tags
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		I18N::LangTags.3 I18N::LangTags::Detect.3 I18N::LangTags::List.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
