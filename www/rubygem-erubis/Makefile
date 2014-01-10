@@ -1,19 +1,21 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-erubis/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: www/rubygem-erubis/Makefile 338244 2013-12-31 06:58:51Z sunpoet $
 
 PORTNAME=	erubis
 PORTVERSION=	2.7.0
+PORTREVISION=	1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fast, secure, and extensible implementation of eRuby
 
-RUN_DEPENDS=	rubygem-abstract>=1.0.0:${PORTSDIR}/devel/rubygem-abstract
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+
 PLIST_FILES=	bin/erubis
 
 .include <bsd.port.mk>
