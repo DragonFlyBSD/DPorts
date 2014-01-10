@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: devel/p5-File-Grep/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Grep/Makefile 338987 2014-01-07 09:28:30Z az $
 
 PORTNAME=	File-Grep
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Perl Module that Find matches to a pattern in files or function
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Grep.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
