@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-FastMmap/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-FastMmap/Makefile 338773 2014-01-05 13:41:52Z az $
 
 PORTNAME=	Catalyst-Plugin-Session-FastMmap
 PORTVERSION=	0.13
@@ -23,10 +23,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Plugin::Session::FastMmap.3
-
 regression-test: build
 	cd ${WRKSRC}/ && ${MAKE} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
