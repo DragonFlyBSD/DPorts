@@ -1,5 +1,5 @@
 # Created by: gnn@FreeBSD.org
-# $FreeBSD: devel/zookeeper/Makefile 335208 2013-11-29 17:50:36Z mva $
+# $FreeBSD: devel/zookeeper/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	zookeeper
 PORTVERSION=	3.3.6
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	zookeeper/zookeeper-${PORTVERSION}
 MAINTAINER=	gnn@FreeBSD.org
 COMMENT=	A Coordination Service for Distributed Applications
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	cppunit:${PORTSDIR}/devel/cppunit
 RUN_DEPENDS:=	${BUILD_DEPENDS}
