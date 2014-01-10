@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-IniFiles/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-IniFiles/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	Config-IniFiles
 PORTVERSION=	2.82
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Config::IniFiles.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
