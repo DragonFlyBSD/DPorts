@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/ttf2pt1/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/ttf2pt1/Makefile 339203 2014-01-09 07:20:37Z vanilla $
 
 PORTNAME=	ttf2pt1
 PORTVERSION=	3.4.0
@@ -17,5 +17,4 @@ MAKE_ARGS=	INSTDIR="${PREFIX}"
 
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
