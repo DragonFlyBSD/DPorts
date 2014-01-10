@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libkolabxml/Makefile 336262 2013-12-12 14:15:03Z bapt $
+# $FreeBSD: textproc/libkolabxml/Makefile 338806 2014-01-05 17:36:24Z rakuco $
 
 PORTNAME=	libkolabxml
 PORTVERSION=	0.8.4
@@ -9,9 +9,9 @@ MASTER_SITES=	http://mirror.kolabsys.com/pub/releases/
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Kolab XML Format Schema Definitions Library
 
-# The XSD schemas in schemas/ are AL2-licensed, and some files are
-# in public domain. The library itself and the installed headers are
-# considered LGPL3-licensed, though.
+# The XSD schemas in schemas/ are APACHE20-licensed, and some files
+# are in public domain. The library itself and the installed headers
+# are considered LGPL3-licensed, though.
 LICENSE=	LGPL3
 
 BUILD_DEPENDS=	xsdcxx:${PORTSDIR}/devel/xsd
@@ -31,5 +31,4 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
