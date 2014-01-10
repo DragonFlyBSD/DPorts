@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: graphics/netpbm/Makefile 336743 2013-12-17 16:50:18Z dinoex $
+# $FreeBSD: graphics/netpbm/Makefile 338093 2013-12-30 11:51:07Z dinoex $
 
 PORTNAME=	netpbm
 PORTVERSION=	10.35.89
@@ -18,7 +18,6 @@ LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff \
 		libjbig.so:${PORTSDIR}/graphics/jbigkit \
 		libjasper.so:${PORTSDIR}/graphics/jasper \
 		libxml2.so:${PORTSDIR}/textproc/libxml2
-RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 USES=		gmake perl5
 CFLAGS+=	-DPNG_DEPSTRUCT= -Iutil
