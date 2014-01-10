@@ -1,16 +1,16 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.mine.nu>
-# $FreeBSD: sysutils/puppet/Makefile 337084 2013-12-20 19:44:35Z swills $
+# $FreeBSD: sysutils/puppet/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	puppet
 PORTVERSION=	3.3.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.puppetlabs.com/puppet/
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	A configuration management framework written in Ruby
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	rubygem-facter>=0:${PORTSDIR}/sysutils/rubygem-facter \
 		rubygem-ruby-augeas>=0:${PORTSDIR}/textproc/rubygem-augeas \
