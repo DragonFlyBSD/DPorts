@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: finance/p5-Math-Financial/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Math-Financial/Makefile 338757 2014-01-05 12:33:14Z az $
 
 PORTNAME=	Math-Financial
 PORTVERSION=	0.76
@@ -13,7 +13,4 @@ COMMENT=	Perl module containing common functions for loans and annuities
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::Financial.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
