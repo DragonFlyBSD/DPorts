@@ -1,5 +1,5 @@
 # Created by: obrien@NUXI.com
-# $FreeBSD: x11-clocks/rclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/rclock/Makefile 337819 2013-12-27 22:29:18Z antoine $
 
 PORTNAME=	rclock
 PORTVERSION=	2.7.10
@@ -14,13 +14,11 @@ COMMENT=	Analog clock for X w/appointment reminder and mail notification
 USE_XORG=	x11 xau xdmcp ice xpm xv
 GNU_CONFIGURE=	yes
 ALL_TARGET=	clock
-MAN1=		rclock.1
 
-PLIST_FILES=	bin/rclock
+PLIST_FILES=	bin/rclock man/man1/rclock.1.gz
 
 CPPFLAGS+=	-DMAIL_SPOOL='\"/var/mail/\"'
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		's|^subdirs =.*$$|subdirs = rclock|g' ${WRKSRC}/Makefile.in
