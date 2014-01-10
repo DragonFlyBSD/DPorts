@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Toolkit-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Toolkit-Simple/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Template-Toolkit-Simple
 PORTVERSION=	0.16
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Toolkit::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
