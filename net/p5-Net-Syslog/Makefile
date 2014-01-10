@@ -1,5 +1,5 @@
 # Created by: Maksym Sobolyev <sobomax@pbxpress.it>
-# $FreeBSD: net/p5-Net-Syslog/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Syslog/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	Net-Syslog
 PORTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for sending syslog messages to a remote syslogd
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Syslog.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
