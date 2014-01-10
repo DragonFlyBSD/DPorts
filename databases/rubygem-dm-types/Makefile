@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: databases/rubygem-dm-types/Makefile 332032 2013-10-30 02:22:05Z swills $
+# $FreeBSD: databases/rubygem-dm-types/Makefile 338269 2013-12-31 10:09:04Z sunpoet $
 
 PORTNAME=	dm-types
 PORTVERSION=	1.2.2
@@ -9,13 +9,15 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DataMapper plugin providing extra data types
 
-RUN_DEPENDS=	rubygem-dm-core>=1.2.0:${PORTSDIR}/databases/rubygem-dm-core \
-		rubygem-stringex>=1.4:${PORTSDIR}/devel/rubygem-stringex \
-		rubygem-uuidtools>=2.1:${PORTSDIR}/devel/rubygem-uuidtools \
-		rubygem-multi_json>=1.0:${PORTSDIR}/devel/rubygem-multi_json \
-		rubygem-json>=1.6:${PORTSDIR}/devel/rubygem-json \
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-bcrypt-ruby>=3.0:${PORTSDIR}/security/rubygem-bcrypt-ruby \
+		rubygem-dm-core>=1.2.0:${PORTSDIR}/databases/rubygem-dm-core \
 		rubygem-fastercsv>=1.5:${PORTSDIR}/devel/rubygem-fastercsv \
-		rubygem-bcrypt-ruby>=3.0:${PORTSDIR}/security/rubygem-bcrypt-ruby
+		rubygem-json>=1.6:${PORTSDIR}/devel/rubygem-json \
+		rubygem-multi_json>=1.0:${PORTSDIR}/devel/rubygem-multi_json \
+		rubygem-stringex>=1.4:${PORTSDIR}/devel/rubygem-stringex \
+		rubygem-uuidtools>=2.1:${PORTSDIR}/devel/rubygem-uuidtools
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
