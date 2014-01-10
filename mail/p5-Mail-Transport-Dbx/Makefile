@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Transport-Dbx/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Transport-Dbx/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	Mail-Transport-Dbx
 PORTVERSION=	0.07
@@ -16,7 +16,4 @@ COMMENT=	Mail::Transport::Dbx - Parse Outlook Express mailboxes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Mail::Transport::Dbx.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
