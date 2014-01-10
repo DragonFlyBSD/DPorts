@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: sysutils/p5-File-Signature/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-File-Signature/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	File-Signature
 PORTVERSION=	1.009
@@ -13,7 +13,4 @@ COMMENT=	Detect changes to a file's content or attributes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Signature.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
