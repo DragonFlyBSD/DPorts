@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: mail/p5-Mail-Verp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Verp/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	Mail-Verp
 PORTVERSION=	0.06
@@ -13,7 +13,4 @@ COMMENT=	Encodes and decodes Variable Envelope Return Paths (VERP) addresses
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Mail::Verp.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
