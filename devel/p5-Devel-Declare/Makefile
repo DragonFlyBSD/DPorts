@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-Declare/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Declare/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	Devel-Declare
 PORTVERSION=	0.006014
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::Declare.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
