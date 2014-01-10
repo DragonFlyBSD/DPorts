@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	RPC-ExtDirect
 PORTVERSION=	2.13
@@ -18,21 +18,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.46:${PORTSDIR}/devel/p5-Test-Pod
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		RPC::ExtDirect.3 \
-		RPC::ExtDirect::API.3 \
-		RPC::ExtDirect::Config.3 \
-		RPC::ExtDirect::Demo::PollProvider.3 \
-		RPC::ExtDirect::Demo::Profile.3 \
-		RPC::ExtDirect::Demo::TestAction.3 \
-		RPC::ExtDirect::Deserialize.3 \
-		RPC::ExtDirect::Event.3 \
-		RPC::ExtDirect::EventProvider.3 \
-		RPC::ExtDirect::Exception.3 \
-		RPC::ExtDirect::Hook.3 \
-		RPC::ExtDirect::NoEvents.3 \
-		RPC::ExtDirect::Request.3 \
-		RPC::ExtDirect::Router.3 \
-		RPC::ExtDirect::Serialize.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
