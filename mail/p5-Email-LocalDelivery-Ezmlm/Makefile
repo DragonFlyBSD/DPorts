@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-LocalDelivery-Ezmlm/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-LocalDelivery-Ezmlm/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Email-LocalDelivery-Ezmlm
 PORTVERSION=	0.10
@@ -17,9 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Email::LocalDelivery::Ezmlm.3
-
-NO_STAGE=	yes
 post-patch:
 		@${RM} ${WRKSRC}/lib/Email/LocalDelivery/Ezmlm.pm.orig
 test:
