@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: ports-mgmt/pkg-plist/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/pkg-plist/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	pkg-plist
 PORTVERSION=	1.2
@@ -15,7 +15,6 @@ USE_PYTHON=	yes
 MAN1=		pkg-plist.1
 PLIST_FILES=	bin/pkg-plist
 NO_BUILD=	yes
-FETCH_ARGS=	-Fpr
 
 NO_STAGE=	yes
 do-install:
