@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Emulate-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Emulate-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	CGI-Emulate-PSGI
 PORTVERSION=	0.15
@@ -17,8 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CGI::Emulate::PSGI.3 \
-	CGI::Parse::PSGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
