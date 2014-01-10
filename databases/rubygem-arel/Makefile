@@ -1,13 +1,15 @@
-# $FreeBSD: databases/rubygem-arel/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD: databases/rubygem-arel/Makefile 338238 2013-12-31 06:58:25Z sunpoet $
 
 PORTNAME=	arel
-PORTVERSION=	3.0.2
+PORTVERSION=	5.0.0
 PORTEPOCH=	1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Relational Algebra for Ruby
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
