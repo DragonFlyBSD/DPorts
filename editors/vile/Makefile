@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/vile/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/vile/Makefile 339036 2014-01-07 21:06:11Z antoine $
 
 PORTNAME=	vile
 PORTVERSION=	9.8k
@@ -24,11 +24,8 @@ SHEBANG_FILES=	perl/vileget
 GNU_CONFIGURE=	yes
 MAKEFILE=	makefile
 
-MAN1=		vile.1
-
 CONFLICTS_INSTALL=	xvile-[0-9]*
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFILTERS}
@@ -62,11 +59,11 @@ post-patch:
 		's|defined(FLEX_BETA)|0|' ${WRKSRC}/filters/filters.h
 
 post-install:
-	@${MKDIR} ${DATADIR}/macros
-	(cd ${WRKSRC}/macros && ${INSTALL_DATA} *.rc ${DATADIR}/macros)
+	@${MKDIR} ${STAGEDIR}${DATADIR}/macros
+	${INSTALL_DATA} ${WRKSRC}/macros/*.rc ${STAGEDIR}${DATADIR}/macros
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC}/doc && ${INSTALL_DATA} *.doc ${DOCSDIR})
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.doc ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
