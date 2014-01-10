@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/libgpg-error/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libgpg-error/Makefile 338030 2013-12-29 17:16:15Z tijl $
 
 PORTNAME=	libgpg-error
 PORTVERSION=	1.12
@@ -9,6 +9,8 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Common error values for all GnuPG components
+
+OPTIONS_DEFINE=	DOCS NLS
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
