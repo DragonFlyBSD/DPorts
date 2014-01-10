@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11/libfm/Makefile 329402 2013-10-04 23:10:53Z nemysis $
+# $FreeBSD: x11/libfm/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	libfm
 PORTVERSION=	1.1.2.2
@@ -16,11 +16,10 @@ BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libmenu-cache.so:${PORTSDIR}/x11/menu-cache \
 		libexif.so:${PORTSDIR}/graphics/libexif
 
-USES=		gmake pkgconfig
+USES=		fam gmake pkgconfig
 USE_GNOME=	gnomehack gtk20
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS+=--sysconfdir=${LOCALBASE}/etc
-USE_FAM=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
