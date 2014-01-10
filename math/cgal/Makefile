@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: math/cgal/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/cgal/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	cgal
 PORTVERSION=	4.1
@@ -23,8 +23,6 @@ RUN_DEPENDS=	${LOCALBASE}/include/boost/tuple/tuple.hpp:${PORTSDIR}/devel/boost-
 LIB_DEPENDS=	GLU.1:${PORTSDIR}/graphics/libGLU \
 		gmp.10:${PORTSDIR}/math/gmp \
 		mpfr.4:${PORTSDIR}/math/mpfr
-
-FETCH_ARGS=	-pRr
 
 USE_BZIP2=		yes
 USE_LDCONFIG=		yes
