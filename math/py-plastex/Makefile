@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-plastex/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-plastex/Makefile 337853 2013-12-28 11:15:35Z wg $
 
 PORTNAME=	plastex
 PORTVERSION=	0.9.2
@@ -14,7 +14,6 @@ COMMENT=	LaTeX Document Processing Framework
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	plasTeX
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
