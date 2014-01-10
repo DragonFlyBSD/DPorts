@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 336812 2013-12-18 10:20:48Z nemysis $
+# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 339188 2014-01-08 23:38:55Z nemysis $
 
 PORTNAME=	lxde-icon-theme
 PORTVERSION=	0.5.0
@@ -12,8 +12,7 @@ COMMENT=	LXDE Icon Theme
 LICENSE=	GPLv3
 
 USE_BZIP2=	YES
-USE_GMAKE=	yes
-USES=		iconv
+USES=		gmake iconv
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
 
@@ -24,17 +23,12 @@ PORTDOCS=	AUTHORS
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|cp -raf --no-preserve=ownership|cp -RpPf|' \
 		${WRKSRC}/Makefile.in
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
