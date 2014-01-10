@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-LLHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-LLHash/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Tie-LLHash
 PORTVERSION=	1.003
@@ -14,7 +14,4 @@ COMMENT=	Perl module which implements an ordered hash-like object
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Tie::LLHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
