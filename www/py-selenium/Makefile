@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: www/py-selenium/Makefile 333485 2013-11-11 11:06:00Z wg $
+# $FreeBSD: www/py-selenium/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	selenium
 PORTVERSION=	2.37.2
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Python bindings for Selenium
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}rdflib>=3.1.0:${PORTSDIR}/textproc/py-rdflib
 
