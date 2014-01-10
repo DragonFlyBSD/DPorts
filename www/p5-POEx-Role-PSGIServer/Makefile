@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POEx-Role-PSGIServer/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-POEx-Role-PSGIServer/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	POEx-Role-PSGIServer
 PORTVERSION=	1.110670
@@ -32,10 +32,4 @@ TEST_DEPENDS=	p5-HTTP-Parser-XS>=0:${PORTSDIR}/www/p5-HTTP-Parser-XS \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	POEx::Role::PSGIServer.3 \
-	POEx::Role::PSGIServer::ProxyWriter.3 \
-	POEx::Role::PSGIServer::Streamer.3 \
-	POEx::Types::PSGIServer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
