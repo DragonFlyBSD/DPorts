@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: graphics/xmlgraphics-commons/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xmlgraphics-commons/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	xmlgraphics-commons
 PORTVERSION=	1.5
@@ -10,7 +10,7 @@ MASTER_SITES=	APACHE/xmlgraphics/commons/source
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Several reusable components used by Apache Batik and FOP
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
