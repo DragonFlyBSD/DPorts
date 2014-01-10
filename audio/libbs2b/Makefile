@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: audio/libbs2b/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/libbs2b/Makefile 338654 2014-01-04 17:50:10Z bapt $
 
 PORTNAME=	libbs2b
 PORTVERSION=	3.1.0
@@ -16,7 +16,6 @@ LIB_DEPENDS+=	libsndfile.so:${PORTSDIR}/audio/libsndfile \
 		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 USES=		gmake pkgconfig
-NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
