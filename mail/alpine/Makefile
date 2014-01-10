@@ -1,4 +1,4 @@
-# $FreeBSD: mail/alpine/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/alpine/Makefile 338626 2014-01-04 08:21:28Z jgh $
 
 PORTNAME?=	alpine
 PORTVERSION=	2.00
@@ -7,7 +7,7 @@ CATEGORIES?=	mail news ipv6
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
 DIST_SUBDIR=	alpine-${PORTVERSION}
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	Mail and news client descended from Pine
 
 OPTIONS_DEFINE+=	THREADS MOUSE NLS ISPELL NOSPELL
