@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-bootstrap-sass/Makefile 335249 2013-11-29 23:00:25Z sunpoet $
+# $FreeBSD: www/rubygem-bootstrap-sass/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	bootstrap-sass
 PORTVERSION=	3.0.2.1
@@ -8,7 +8,7 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Twitter's Bootstrap
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	rubygem-sass>=3.2:${PORTSDIR}/textproc/rubygem-sass
 
