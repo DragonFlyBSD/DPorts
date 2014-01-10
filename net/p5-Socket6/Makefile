@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: net/p5-Socket6/Makefile 335955 2013-12-09 08:43:59Z ume $
+# $FreeBSD: net/p5-Socket6/Makefile 338129 2013-12-30 16:12:16Z ume $
 
 PORTNAME=	Socket6
 PORTVERSION=	0.25
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	IPv6 related part of the C socket.h defines and structure manipulators
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 USES=		perl5
 USE_PERL5=	configure
