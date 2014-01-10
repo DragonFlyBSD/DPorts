@@ -1,5 +1,5 @@
 # Created by: znerd@FreeBSD.org
-# $FreeBSD: textproc/xalan-j/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xalan-j/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	xalan-j
 PORTVERSION=	2.7.1
@@ -13,7 +13,7 @@ COMMENT=	Apache XSLT processor for transforming XML documents
 
 RUN_DEPENDS=	${JAVALIBDIR}/xml-apis.jar:${PORTSDIR}/textproc/xerces-j
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USE_ZIP=	yes
