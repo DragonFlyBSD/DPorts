@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Record/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Record/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	Data-Record
 PORTVERSION=	0.02
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Record.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
