@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-# $FreeBSD: www/rubygem-ntlm-http/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD: www/rubygem-ntlm-http/Makefile 338314 2013-12-31 14:30:46Z sunpoet $
 
 PORTNAME=	ntlm-http
 PORTVERSION=	0.1.1
@@ -8,6 +8,9 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	NTLM HTTP provides NTLM authentication over http
+
+LICENSE=	BSD2CLAUSE RUBY
+LICENSE_COMB=	dual
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
