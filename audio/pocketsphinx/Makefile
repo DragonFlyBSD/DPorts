@@ -1,5 +1,5 @@
 # Created by: Richard Neese
-# $FreeBSD: audio/pocketsphinx/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/pocketsphinx/Makefile 337922 2013-12-28 21:47:21Z antoine $
 
 PORTNAME=	pocketsphinx
 PORTVERSION=	0.8
@@ -11,8 +11,7 @@ COMMENT=	Speech recognition system
 
 LIB_DEPENDS=	libsphinxad.so:${PORTSDIR}/audio/sphinxbase
 
-USES=		gmake pkgconfig
-NO_STAGE=	yes
+USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 
@@ -25,12 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	MKDIR="${MKDIR}" \
 		OSVERSION=${OSVERSION}
 
-MAN1=	pocketsphinx_batch.1 \
-	pocketsphinx_continuous.1 \
-	pocketsphinx_mdef_convert.1
-
 post-patch:
-	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -E -e 's|^([[:space:]]+programs )\\$$|\1|;' \
 		-e '/[[:space:]]+gst-plugin$$/D;' \
 		${WRKSRC}/src/Makefile.in
