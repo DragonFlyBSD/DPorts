@@ -1,4 +1,4 @@
-# $FreeBSD: x11/gnome-clipboard-daemon/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gnome-clipboard-daemon/Makefile 337987 2013-12-29 14:01:09Z antoine $
 
 PORTNAME=	gnome-clipboard-daemon
 PORTVERSION=	1.0
@@ -18,7 +18,6 @@ USE_GNOME=	gtk20
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CC=|CC?=| ; \
@@ -26,6 +25,6 @@ post-patch:
 		 s|-o clipboard-daemon |-o ${PORTNAME} |' ${WRKSRC}/Makefile
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${PORTNAME} ${PREFIX}/bin)
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
