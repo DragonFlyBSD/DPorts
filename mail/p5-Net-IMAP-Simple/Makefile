@@ -1,8 +1,8 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Net-IMAP-Simple/Makefile 329968 2013-10-10 07:11:09Z sunpoet $
+# $FreeBSD: mail/p5-Net-IMAP-Simple/Makefile 338225 2013-12-31 04:26:21Z sunpoet $
 
 PORTNAME=	Net-IMAP-Simple
-PORTVERSION=	1.2203
+PORTVERSION=	1.2204
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JETTERO
