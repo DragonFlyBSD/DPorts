@@ -1,4 +1,5 @@
-# $FreeBSD: graphics/cbview/Makefile 336812 2013-12-18 10:20:48Z nemysis $
+# Created by: Mezz <mezz@FreeBSD.org>
+# $FreeBSD: graphics/cbview/Makefile 338403 2014-01-01 23:44:27Z nemysis $
 
 PORTNAME=	cbview
 PORTVERSION=	0.06
@@ -23,19 +24,16 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	Changes README TODO
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl -w|${PERL}|' \
 		${WRKSRC}/${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
