@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POE-Filter-HTTP-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-POE-Filter-HTTP-Parser/Makefile 338788 2014-01-05 15:44:11Z az $
 
 PORTNAME=	POE-Filter-HTTP-Parser
 PORTVERSION=	1.06
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-Test-POE-Client-TCP>=0:${PORTSDIR}/devel/p5-Test-POE-Client-TCP
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Filter::HTTP::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
