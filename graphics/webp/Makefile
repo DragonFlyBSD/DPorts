@@ -1,9 +1,9 @@
 # Created by: johans
-# $FreeBSD: graphics/webp/Makefile 337191 2013-12-22 14:29:39Z makc $
+# $FreeBSD: graphics/webp/Makefile 337965 2013-12-29 11:42:32Z johans $
 
 PORTNAME=	webp
 PORTVERSION=	0.3.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
@@ -24,5 +24,13 @@ CONFIGURE_ARGS+=--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--enable-libwebpmux \
 		--enable-libwebpdemux  \
 		--enable-libwebpdecoder
+
+OPTIONS_DEFINE=	X11
+OPTIONS_SUB=	yes
+X11_USE=	GL=glut
+X11_CONFIGURE_OFF=	--with-glincludedir=/dev/null
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libwebp*.so
 
 .include <bsd.port.mk>
