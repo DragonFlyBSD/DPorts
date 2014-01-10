@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Peek/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/p5-Archive-Peek/Makefile 338681 2014-01-04 22:54:00Z bapt $
 
 PORTNAME=	Archive-Peek
 PORTVERSION=	0.35
@@ -20,9 +20,6 @@ TEST_DEPENDS=	p5-Test-Pod>=1.14:${PORTSDIR}/devel/p5-Test-Pod
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		Archive::Peek.3
 
 regression-test: build
 	cd ${WRKSRC}/ && ${MAKE} test
