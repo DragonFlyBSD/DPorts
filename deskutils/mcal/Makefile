@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: deskutils/mcal/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/mcal/Makefile 338796 2014-01-05 16:31:56Z rene $
 
 PORTNAME=	mcal
 PORTVERSION=	0.3
@@ -8,6 +8,9 @@ MASTER_SITES=	SF/lib${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	thierry@pompo.net
 COMMENT=	A libmcal powered cal replacement
+
+DEPRECATED=	Depends on expired misc/libmcal
+EXPIRATION_DATE=2014-02-01
 
 LIB_DEPENDS=	libmcal.so:${PORTSDIR}/misc/libmcal
 
