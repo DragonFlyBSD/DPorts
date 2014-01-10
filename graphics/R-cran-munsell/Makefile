@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-munsell/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: graphics/R-cran-munsell/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	munsell
 PORTVERSION=	0.4.2
@@ -18,7 +18,6 @@ LICENSE_PERMS_CW=	auto-accept
 
 RUN_DEPENDS=	R-cran-colorspace>0:${PORTSDIR}/graphics/R-cran-colorspace
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
