@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: devel/p5-Chooser/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Chooser/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	Chooser
 PORTVERSION=	2.0.0
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-Net-CIDR-Lite>=0.21:${PORTSDIR}/net/p5-Net-CIDR-Lite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Chooser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
