@@ -1,19 +1,20 @@
-# $FreeBSD: www/rubygem-gon/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD: www/rubygem-gon/Makefile 338277 2013-12-31 10:09:37Z sunpoet $
 
 PORTNAME=	gon
-PORTVERSION=	4.1.1
+PORTVERSION=	5.0.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Framework to pass data to JS easily
 
-RUN_DEPENDS=	rubygem-actionpack>=0:${PORTSDIR}/www/rubygem-actionpack \
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-actionpack>=2.3.0:${PORTSDIR}/www/rubygem-actionpack \
                 rubygem-json>=0:${PORTSDIR}/devel/rubygem-json
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
