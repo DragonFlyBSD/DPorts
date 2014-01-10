@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/apache-solr/Makefile 334839 2013-11-25 11:33:59Z sunpoet $
+# $FreeBSD: textproc/apache-solr/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	apache-solr
 PORTVERSION=	4.6.0
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	gaod@hychen.org
 COMMENT=	High performance search server built using Lucene Java
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 CONFLICT=	apache-solr-3.6.*
 
