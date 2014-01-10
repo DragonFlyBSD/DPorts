@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-resourcet/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-resourcet/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	resourcet
 PORTVERSION=	0.4.7.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 USE_CABAL=	lifted-base>=0.1 mmorph monad-control>=0.3.1 mtl>=2.0 \
 		transformers>=0.2.2 transformers-base>=0.4.1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
