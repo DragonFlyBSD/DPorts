@@ -1,4 +1,4 @@
-# $FreeBSD: devel/opengrok/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/opengrok/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	opengrok
 PORTVERSION=	0.11.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+opengrok/files/
 MAINTAINER=	tj@FreeBSD.org
 COMMENT=	Fast and powerful code search and cross-reference engine
 
-LICENSE=	CDDL AL2
+LICENSE=	CDDL APACHE20
 LICENSE_COMB=	multi
 
 RUN_DEPENDS=	exctags:${PORTSDIR}/devel/ctags
