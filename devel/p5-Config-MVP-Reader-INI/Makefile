@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Config-MVP-Reader-INI/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-MVP-Reader-INI/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Config-MVP-Reader-INI
 PORTVERSION=	2.101461
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	geraud@gcu.info
-COMMENT=	An MVP config reader for .ini files
+COMMENT=	MVP config reader for .ini files
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
@@ -20,7 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Config::MVP::Reader::INI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
