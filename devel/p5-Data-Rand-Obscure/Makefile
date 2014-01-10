@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Rand-Obscure/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Rand-Obscure/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	Data-Rand-Obscure
 PORTVERSION=	0.021
@@ -20,8 +20,4 @@ RUN_DEPENDS=	p5-Carp-Clan>=6.04:${PORTSDIR}/devel/p5-Carp-Clan \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Rand::Obscure.3 \
-		Data::Rand::Obscure::Generator.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
