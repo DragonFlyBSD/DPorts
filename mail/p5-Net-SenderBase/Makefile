@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: mail/p5-Net-SenderBase/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Net-SenderBase/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Net-SenderBase
 PORTVERSION=	1.02
@@ -16,9 +16,4 @@ RUN_DEPENDS=	p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SenderBase.3 \
-		Net::SenderBase::Query.3 \
-		Net::SenderBase::Results.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
