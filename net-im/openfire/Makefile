@@ -1,5 +1,5 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD: net-im/openfire/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/openfire/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	openfire
 PORTVERSION=	3.8.2
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}_src_${PORTVERSION:S/./_/g}
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Enterprise instant messaging server
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	classpath:${PORTSDIR}/java/javavmwrapper \
    		${JAVAJARDIR}/slf4j-api.jar:${PORTSDIR}/devel/slf4j
