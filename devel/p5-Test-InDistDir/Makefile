@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-InDistDir/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-InDistDir/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	Test-InDistDir
 PORTVERSION=	1.112071
@@ -14,10 +14,7 @@ COMMENT=	Test environment setup for development with IDE
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::InDistDir.3
-
 regression-test: build
 	cd ${WRKSRC}/ && ${MAKE} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
