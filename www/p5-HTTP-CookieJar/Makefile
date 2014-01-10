@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-CookieJar/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD: www/p5-HTTP-CookieJar/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	HTTP-CookieJar
 PORTVERSION=	0.005
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Minimalist HTTP user agent cookie jar
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	p5-HTTP-Date>=0:${PORTSDIR}/www/p5-HTTP-Date
 RUN_DEPENDS:=	${BUILD_DEPENDS}
