@@ -1,5 +1,5 @@
 # Created by: Horance Chou <horance@freedom.ie.cycu.edu.tw>
-# $FreeBSD: devel/libffi/Makefile 337118 2013-12-21 05:22:05Z koobs $
+# $FreeBSD: devel/libffi/Makefile 338001 2013-12-29 14:58:31Z tijl $
 
 PORTNAME=	libffi
 PORTVERSION=	3.0.13
@@ -15,7 +15,7 @@ LICENSE=	MIT
 
 TEST_DEPENDS=	runtest:${PORTSDIR}/misc/dejagnu
 
-USES=		pathfix pkgconfig
+USES=		pathfix
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
