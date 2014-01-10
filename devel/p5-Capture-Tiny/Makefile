@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-Capture-Tiny/Makefile 335206 2013-11-29 17:32:47Z sunpoet $
+# $FreeBSD: devel/p5-Capture-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Capture-Tiny
 PORTVERSION=	0.23
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	bill.brinzer@gmail.com
 COMMENT=	Capture STDOUT and STDERR from Perl, XS, or external programs
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 TEST_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
 
