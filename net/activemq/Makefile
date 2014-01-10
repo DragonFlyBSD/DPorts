@@ -1,4 +1,4 @@
-# $FreeBSD: net/activemq/Makefile 333919 2013-11-15 20:45:59Z tj $
+# $FreeBSD: net/activemq/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	activemq
 PORTVERSION=	5.9.0
@@ -12,7 +12,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}-bin
 MAINTAINER=	tj@FreeBSD.org
 COMMENT=	Messaging and Integration Patterns provider
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 NO_BUILD=	yes
 USE_JAVA=	yes
