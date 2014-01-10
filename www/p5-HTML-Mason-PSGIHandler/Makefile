@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Mason-PSGIHandler/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Mason-PSGIHandler/Makefile 338788 2014-01-05 15:44:11Z az $
 
 PORTNAME=	HTML-Mason-PSGIHandler
 PORTVERSION=	0.53
@@ -17,7 +17,4 @@ TEST_DEPENDS=	p5-Plack>=0:${PORTSDIR}/www/p5-Plack
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Mason::PSGIHandler.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
