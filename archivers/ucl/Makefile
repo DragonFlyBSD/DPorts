@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: archivers/ucl/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/ucl/Makefile 337547 2013-12-26 16:24:05Z bapt $
 
 PORTNAME=	ucl
 PORTVERSION=	1.03
@@ -12,7 +12,6 @@ COMMENT=	Data compression library with low memory usage
 
 LICENSE=	GPLv2
 
-NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -21,10 +20,8 @@ CONFIGURE_ARGS=	--enable-shared
 PORTDOCS=	AUTHORS NEWS README THANKS TODO
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/uclpack ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA}	${PORTDOCS} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/uclpack ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA}	${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
