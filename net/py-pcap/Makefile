@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: net/py-pcap/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-pcap/Makefile 337864 2013-12-28 11:35:56Z wg $
 
 PORTNAME=	pcap
 PORTVERSION=	0.6.4
@@ -12,18 +12,11 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python interface to LBL Packet Capture library (libpcap)
 
 LICENSE=	BSD
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	swig:${PORTSDIR}/devel/swig13
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	pylib${PORTNAME}
+PYDISTUTILS_AUTOPLIST=	yes
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_pcapmodule.so \
-		%%PYTHON_SITELIBDIR%%/pcap.py \
-		%%PYTHON_SITELIBDIR%%/pcap.pyc \
-		%%PYTHON_SITELIBDIR%%/pcap.pyo
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
