@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Assertions/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Assertions/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Test-Assertions
 PORTVERSION=	1.054
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	Test
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lth@FreeBSD.org
-COMMENT=	A simple set of building blocks for both unit and runtime testing
+COMMENT=	Simple set of building blocks for both unit and runtime testing
 
 RUN_DEPENDS=	p5-Log-Trace>0:${PORTSDIR}/devel/p5-Log-Trace
 BUILD_DEPENDS:=	${RUN_DEPENDS}
@@ -17,9 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Assertions.3 \
-	Test::Assertions::Manual.3 \
-	Test::Assertions::TestScript.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
