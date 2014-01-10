@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/qxkb/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/qxkb/Makefile 338760 2014-01-05 12:50:47Z antoine $
 
 PORTNAME=	qxkb
 PORTVERSION=	0.4.6
@@ -11,7 +11,7 @@ COMMENT=	Qt4-based advanced keyboard layout switcher
 
 LICENSE=	GPLv2 # (or later)
 
-LIB_DEPENDS=	xkbfile:${PORTSDIR}/x11/libxkbfile
+LIB_DEPENDS=	libxkbfile.so:${PORTSDIR}/x11/libxkbfile
 
 USE_BZIP2=	yes
 USES=		cmake
@@ -20,7 +20,6 @@ USE_QT4=	linguist_build moc_build qmake_build rcc_build uic_build \
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 # Fix path to the translation files
 	@${REINPLACE_CMD} -e 's,\.\./,,' ${WRKSRC}/CMakeLists.txt
