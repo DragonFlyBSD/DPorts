@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: archivers/zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/zip/Makefile 338569 2014-01-03 18:29:57Z bapt $
 
 PORTNAME=	zip
 PORTVERSION=	3.0
@@ -17,24 +17,20 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic
 
-PLIST_FILES=	bin/zip bin/zipcloak bin/zipnote bin/zipsplit
-MAN1=		zip.1 zipcloak.1 zipnote.1 zipsplit.1
+PLIST_FILES=	bin/zip bin/zipcloak bin/zipnote bin/zipsplit \
+		man/man1/zip.1.gz man/man1/zipcloak.1.gz \
+		man/man1/zipnote.1.gz man/man1/zipsplit.1.gz
 PORTDOCS=	*
 
-.include <bsd.port.options.mk>
-
 do-install:
-.for p in ${PLIST_FILES:T}
-	${INSTALL_PROGRAM} ${WRKSRC}/${p} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/${p}.1 ${MANPREFIX}/man/man1
+.for p in ${PLIST_FILES:Mbin*:T}
+	${INSTALL_PROGRAM} ${WRKSRC}/${p} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/${p}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 .endfor
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/ && ${INSTALL_DATA} CHANGES README* TODO WHATSNEW WHERE ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/ && ${INSTALL_DATA} CHANGES README* TODO WHATSNEW WHERE ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
