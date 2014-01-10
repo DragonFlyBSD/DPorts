@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: audio/mp3gain/Makefile 332206 2013-10-31 07:42:03Z bapt $
+# $FreeBSD: audio/mp3gain/Makefile 338975 2014-01-07 06:57:40Z dinoex $
 
 PORTNAME=	mp3gain
 PORTVERSION=	1.5.2
@@ -15,7 +15,7 @@ LICENSE=	LGPL21
 USES=		uidfix
 
 USE_ZIP=	yes
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/mp3gain
 
