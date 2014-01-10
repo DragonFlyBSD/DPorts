@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: chinese/scim-tables/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/scim-tables/Makefile 339203 2014-01-09 07:20:37Z vanilla $
 
 PORTNAME=	scim-tables
 PORTVERSION=	0.5.10
@@ -13,11 +13,9 @@ COMMENT=	SCIM table based Chinese input methods
 BUILD_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 RUN_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
@@ -27,11 +25,5 @@ CONFIGURE_ENV+=	SCIM_DATADIR=${PREFIX}/share/scim \
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 CONFIGURE_ARGS+=	--disable-skim-support
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO}
-	@${ECHO} To display this message again, type \`pkg_info -D ${PKGNAME}\'
-	@${ECHO}
 
 .include <bsd.port.post.mk>
