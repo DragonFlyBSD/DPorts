@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/py-fastimport/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/py-fastimport/Makefile 337609 2013-12-26 19:34:32Z wg $
 
 PORTNAME=	fastimport
 PORTVERSION=	0.9.2
@@ -14,9 +14,8 @@ COMMENT=	Fastimport parser in Python
 LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/python-${PORTNAME}-${PORTVERSION}
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	fastimport
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
