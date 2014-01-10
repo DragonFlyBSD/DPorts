@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: archivers/lbzip2/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/lbzip2/Makefile 337519 2013-12-26 14:34:42Z bapt $
 
 PORTNAME=	lbzip2
 PORTVERSION=	0.23
@@ -10,23 +10,19 @@ MAINTAINER=	gabor@FreeBSD.org
 COMMENT=	Multi-threaded bzip2/bunzip2 filter
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-PLIST_FILES=	bin/lbzip2
-
-NO_STAGE=	yes
-MAN1=		lbzip2.1
+PLIST_FILES=	bin/lbzip2 \
+		man/man1/lbzip2.1.gz
 
 PORTDOCS=	ChangeLog README
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/lbzip2 ${PREFIX}/bin/lbzip2
-	${INSTALL_MAN} ${WRKSRC}/lbzip2.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/lbzip2 ${STAGEDIR}${PREFIX}/bin/lbzip2
+	${INSTALL_MAN} ${WRKSRC}/lbzip2.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
