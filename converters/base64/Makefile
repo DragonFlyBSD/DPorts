@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: converters/base64/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/base64/Makefile 339223 2014-01-09 13:13:01Z bapt $
 
 PORTNAME=	base64
 PORTVERSION=	1.5
@@ -13,8 +13,7 @@ COMMENT=	Utility to encode and decode base64 files
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	prog
-MAN1=		base64.1
-PLIST_FILES=	bin/base64
+PLIST_FILES=	bin/base64 \
+		man/man1/base64.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
