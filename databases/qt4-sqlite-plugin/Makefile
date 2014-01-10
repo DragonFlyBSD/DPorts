@@ -1,20 +1,18 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: databases/qt4-sqlite-plugin/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/qt4-sqlite-plugin/Makefile 338902 2014-01-06 16:16:52Z makc $
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
 CATEGORIES=	databases
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Qt SQLite 2.x database plugin
+COMMENT=	Qt SQLite 2 database plugin
 
 DB=		sqlite2
 
-LIB_DEPENDS+=	libsqlite.so:${PORTSDIR}/databases/sqlite2
-
 USE_QT4=	moc_build sql
-QT_NONSTANDARD=	yes
 QT_DIST=	yes
+USE_SQLITE=	2
 
 DRIVER=		src/sql/drivers/${DB}
 PLUGIN=		src/plugins/sqldrivers/${DB}
@@ -24,11 +22,11 @@ EXTRACT_AFTER_ARGS?=	${DISTNAME}/${DRIVER} ${DISTNAME}/${PLUGIN} \
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 MAKE_ENV+=	DB="${DB}" DRIVER="${DRIVER}" MOC="${MOC}" \
 		PLUGIN="${PLUGIN}" \
-		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		QT_INCDIR="${QT_INCDIR}" \
 		QT_LIBDIR="${QT_LIBDIR}"
 PLIST_SUB=	DB=${DB}
+
+EXTRA_PATCHES=	# empty
 
 SQL_PLUGINDIR=	${PREFIX}/${QT_PLUGINDIR_REL}/sqldrivers
 
