@@ -1,8 +1,8 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/pear-Symfony_Component_Console/Makefile 335614 2013-12-04 10:25:32Z wg $
+# $FreeBSD: devel/pear-Symfony_Component_Console/Makefile 339159 2014-01-08 17:38:02Z wg $
 
 PORTNAME=	Console
-PORTVERSION=	2.4.0
+PORTVERSION=	2.4.1
 CATEGORIES=	devel pear
 PKGNAMEPREFIX=	pear-Symfony_Component_
 
