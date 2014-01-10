@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-server/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-servers/xorg-server/Makefile 338091 2013-12-30 11:41:18Z bsam $
 
 PORTNAME?=	xorg-server
 PORTVERSION=	${XORG_VERSION}
@@ -111,7 +111,7 @@ CONFIGURE_ARGS+=--enable-install-setuid=yes
 PLIST_SUB+=	SUID=""
 .else
 CONFIGURE_ARGS+=--enable-install-setuid=no
-PLIST_SUB+=	SUID="@comment"
+PLIST_SUB+=	SUID="@comment "
 .endif
 
 .if ${ARCH} == i386
