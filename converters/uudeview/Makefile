@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: converters/uudeview/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD: converters/uudeview/Makefile 338556 2014-01-03 16:12:21Z adamw $
 
 PORTNAME=	uudeview
 PORTVERSION=	0.5.20
@@ -37,13 +37,11 @@ CONFIGURE_ARGS+=	--enable-inews=${PREFIX}/news/lib/inews
 post-install:
 	@${STRIP_CMD} ${PREFIX}/bin/uudeview
 	@${STRIP_CMD} ${PREFIX}/bin/uuenview
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} "===>  Installing documents to ${DOCSDIR}"
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/HISTORY ${DOCSDIR}
 	@${INSTALL_DATA} ${FILESDIR}/porting.notes ${DOCSDIR}
-.else
-	@${ECHO_MSG} "===>  Not installing available documents"
 .endif
 
 .include <bsd.port.post.mk>
