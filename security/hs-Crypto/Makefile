@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-Crypto/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-Crypto/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	Crypto
 PORTVERSION=	4.2.5.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ USE_CABAL=	HUnit QuickCheck>=2.4.0.1 random
 
 EXECUTABLE=	HMACTest QuickTest RSATest SHA1Test SymmetricTest WordListTest
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
