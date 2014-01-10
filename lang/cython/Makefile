@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenhping@gmail.com>
-# $FreeBSD: lang/cython/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/cython/Makefile 338830 2014-01-05 23:08:04Z avilla $
 
 PORTNAME=	cython
 PORTVERSION=	0.19.1
+PORTREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.cython.org/release/ \
 		CHEESESHOP
@@ -10,6 +11,8 @@ DISTNAME=	Cython-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Compiler for Writing C Extensions for the Python Language
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pkg_resources.py:${PORTSDIR}/devel/py-setuptools
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
