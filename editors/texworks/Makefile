@@ -1,8 +1,9 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: editors/texworks/Makefile 334589 2013-11-22 12:55:22Z makc $
+# $FreeBSD: editors/texworks/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	texworks
 PORTVERSION=	0.4.5
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-${PORTVERSION}-r${VCS_REVISION}
