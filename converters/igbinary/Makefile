@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: converters/igbinary/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/igbinary/Makefile 339238 2014-01-09 14:10:39Z bapt $
 
 PORTNAME=	igbinary
 PORTVERSION=	1.1.1
@@ -15,5 +15,4 @@ USE_PHP_BUILD=	yes
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
