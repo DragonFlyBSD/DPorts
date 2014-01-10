@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-wm/phluid/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/phluid/Makefile 338005 2013-12-29 15:07:21Z antoine $
 
 PORTNAME=	phluid
 PORTVERSION=	0.0.3
@@ -16,5 +16,4 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lm -lX11
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
