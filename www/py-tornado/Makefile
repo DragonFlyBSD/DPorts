@@ -1,5 +1,5 @@
 # Created by: Guixing Bai<khsing.cn@gmail.com>
-# $FreeBSD: www/py-tornado/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-tornado/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	tornado
 PORTVERSION=	3.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	khsing.cn@gmail.com
 COMMENT=	Python Web Server from FriendFeed
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
