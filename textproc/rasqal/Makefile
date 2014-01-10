@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rasqal/Makefile 336567 2013-12-15 19:12:26Z rakuco $
+# $FreeBSD: textproc/rasqal/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	rasqal
 PORTVERSION=	0.9.31
@@ -12,7 +12,7 @@ COMMENT=	High-level interface for RDF
 
 # Even though GPLv3 is not explicitly mentioned in the port's LICENSE.html, one
 # of its licenses is "GPLv2 or newer", which includes GPLv3.
-LICENSE=	AL2 GPLv2 GPLv3 LGPL21
+LICENSE=	APACHE20 GPLv2 GPLv3 LGPL21
 LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libraptor2.so:${PORTSDIR}/textproc/raptor2 \
