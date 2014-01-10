@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/flite/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/flite/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	flite
 PORTVERSION=	1.4
@@ -21,10 +21,12 @@ MAKE_JOBS_UNSAFE=	yes
 
 CFLAGS:=	${CFLAGS:N-O:N-O[0123456789]} -O0
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-pd|-p|g' ${WRKSRC}/main/Makefile
 
-.ifndef NOPORTDOCS
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}/
 	${INSTALL_MAN} ${WRKSRC}/README ${DOCSDIR}/
