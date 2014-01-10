@@ -1,10 +1,11 @@
 # Created by: hrs
-# $FreeBSD: textproc/docbook-430/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook-430/Makefile 339258 2014-01-09 15:49:58Z mat $
 
 PORTNAME=	docbook
 PORTVERSION=	4.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/docbook/sgml/${PORTVERSION}/
+PKGNAMESUFFIX=	-430
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	DocBook/SGML DTD V4.3, designed for technical documentation
@@ -15,7 +16,6 @@ RUN_DEPENDS=	${LOCALBASE}/${ISOCAT}:${PORTSDIR}/textproc/iso8879 \
 USE_ZIP=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-LATEST_LINK=	${PORTNAME}-430
 PLIST=		${WRKSRC}/pkg-plist
 
 SGMLCATBASE=	share/sgml
