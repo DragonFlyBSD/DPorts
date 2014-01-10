@@ -1,11 +1,13 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/py-zope.i18n/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-zope.i18n/Makefile 338824 2014-01-05 21:02:29Z rm $
 
 PORTNAME=	zope.i18n
 PORTVERSION=	3.8.0
+PORTREVISION=	1
 CATEGORIES=	devel www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Zope Internationalization Support
@@ -17,10 +19,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.event>=0:${PORTSDIR}/devel/py-zope.even
 		${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0:${PORTSDIR}/devel/py-zope.interface \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
-USES=		gettext
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-
-NO_STAGE=	yes
+USES=			gettext
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
