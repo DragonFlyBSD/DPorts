@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/aubio/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/aubio/Makefile 337898 2013-12-28 20:21:11Z antoine $
 
 PORTNAME=	aubio
 PORTVERSION=	0.3.2
@@ -20,7 +20,6 @@ LIB_DEPENDS=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
 GNU_CONFIGURE=	yes
 # --disable-complex: does not compile due to missing carg(3) et al.
 CONFIGURE_ARGS=	--disable-complex
-NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 
