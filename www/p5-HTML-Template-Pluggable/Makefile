@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-HTML-Template-Pluggable/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Template-Pluggable/Makefile 338773 2014-01-05 13:41:52Z az $
 
 PORTNAME=	HTML-Template-Pluggable
 PORTVERSION=	0.17
@@ -19,8 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Template::Pluggable.3 \
-		HTML::Template::Plugin::Dot.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
