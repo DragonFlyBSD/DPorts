@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: audio/libcddb-doc/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libcddb-doc/Makefile 338655 2014-01-04 17:52:04Z bapt $
 
 PORTNAME=	libcddb-doc
 PORTVERSION=	1.3.0
@@ -10,13 +10,11 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Libcddb documentation
 
 USE_BZIP2=	yes
-NO_STAGE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/output
 
 do-install:
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
