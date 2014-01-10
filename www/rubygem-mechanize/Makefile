@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-mechanize/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD: www/rubygem-mechanize/Makefile 338237 2013-12-31 06:55:09Z sunpoet $
 
 PORTNAME=	mechanize
 PORTVERSION=	2.7.1
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	WWW::Mechanize, a handy web browsing ruby object
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-domain_name>=0.5.1:${PORTSDIR}/net/rubygem-domain_name \
 		rubygem-http-cookie>=1.0.0:${PORTSDIR}/www/rubygem-http-cookie \
