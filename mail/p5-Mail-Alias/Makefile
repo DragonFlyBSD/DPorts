@@ -1,5 +1,5 @@
 # Created by: snowchyld
-# $FreeBSD: mail/p5-Mail-Alias/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Alias/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Mail-Alias
 PORTVERSION=	1.12
@@ -13,7 +13,4 @@ COMMENT=	Mail::Alias
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Alias.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
