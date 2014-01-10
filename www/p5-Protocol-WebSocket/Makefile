@@ -1,5 +1,5 @@
 # Created by: Stefan `Sec` Zehl <sec@42.org>
-# $FreeBSD: www/p5-Protocol-WebSocket/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Protocol-WebSocket/Makefile 338778 2014-01-05 14:02:22Z az $
 
 PORTNAME=	Protocol-WebSocket
 PORTVERSION=	0.00906
@@ -18,19 +18,4 @@ RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Protocol::WebSocket.3 \
-		Protocol::WebSocket::Cookie.3 \
-		Protocol::WebSocket::Cookie::Request.3 \
-		Protocol::WebSocket::Cookie::Response.3 \
-		Protocol::WebSocket::Frame.3 \
-		Protocol::WebSocket::Handshake.3 \
-		Protocol::WebSocket::Handshake::Client.3 \
-		Protocol::WebSocket::Handshake::Server.3 \
-		Protocol::WebSocket::Message.3 \
-		Protocol::WebSocket::Request.3 \
-		Protocol::WebSocket::Response.3 \
-		Protocol::WebSocket::Stateful.3 \
-		Protocol::WebSocket::URL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
