@@ -1,17 +1,19 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-em-twitter/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD: www/rubygem-em-twitter/Makefile 338363 2014-01-01 06:51:21Z sunpoet $
 
 PORTNAME=	em-twitter
-PORTVERSION=	0.2.2
+PORTVERSION=	0.3.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Twitter Streaming API client for EventMachine
 
-RUN_DEPENDS=	rubygem-eventmachine>=1.0.0:${PORTSDIR}/devel/rubygem-eventmachine \
-		rubygem-http_parser.rb>=0.5:${PORTSDIR}/net/rubygem-http_parser.rb \
-		rubygem-simple_oauth>=0.1:${PORTSDIR}/net/rubygem-simple_oauth
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-eventmachine>=1:${PORTSDIR}/devel/rubygem-eventmachine \
+		rubygem-http_parser.rb>=0.6:${PORTSDIR}/net/rubygem-http_parser.rb \
+		rubygem-simple_oauth>=0.2:${PORTSDIR}/net/rubygem-simple_oauth
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
