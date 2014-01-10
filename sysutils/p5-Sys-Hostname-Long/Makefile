@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: sysutils/p5-Sys-Hostname-Long/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Sys-Hostname-Long/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	Sys-Hostname-Long
 PORTVERSION=	1.4
@@ -13,7 +13,4 @@ COMMENT=	Try every conceivable way to get full hostname
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sys::Hostname::Long.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
