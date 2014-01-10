@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Filesys-Virtual/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Filesys-Virtual/Makefile 338987 2014-01-07 09:28:30Z az $
 
 PORTNAME=	Filesys-Virtual
 PORTVERSION=	0.06
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to provide a framework for a virtual filesystem
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Filesys::Virtual.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
