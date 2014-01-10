@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: devel/abi-compliance-checker/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/abi-compliance-checker/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	abi-compliance-checker
 PORTVERSION=	1.99
@@ -25,7 +25,6 @@ USE_PERL5=	run
 RUN_DEPENDS?=	exctags:${PORTSDIR}/devel/ctags
 USE_GCC=	any
 
-FETCH_ARGS?=	-Fpr
 NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}.pl
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
