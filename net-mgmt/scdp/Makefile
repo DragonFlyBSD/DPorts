@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: net-mgmt/scdp/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/scdp/Makefile 338148 2013-12-30 17:22:40Z arved $
 
 PORTNAME=	scdp
 PORTVERSION=	1.0.b
@@ -24,7 +24,6 @@ PLIST_FILES=	bin/scdp
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,' ${WRKSRC}/scdp.c
 	${REINPLACE_CMD} -e 's|libnet-config|${LIBNET_CONFIG}|' \
