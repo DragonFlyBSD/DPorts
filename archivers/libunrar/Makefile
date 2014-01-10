@@ -1,5 +1,5 @@
 # Created by: samm@os2.kiev.ua
-# $FreeBSD: archivers/libunrar/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/libunrar/Makefile 337520 2013-12-26 14:36:02Z bapt $
 
 PORTNAME=	libunrar
 PORTVERSION=	3.9.10
@@ -13,16 +13,15 @@ COMMENT=	Library to work with RAR archives
 
 WRKSRC=		${WRKDIR}/unrar
 
-NO_STAGE=	yes
 USES=		gmake
 MAKEFILE=	makefile.unix
 ALL_TARGET=	lib
 USE_LDCONFIG=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/libunrar.so.3 ${PREFIX}/lib/
-	cd ${PREFIX}/lib && ${LN} -sf libunrar.so.3 libunrar.so
-	${MKDIR} ${PREFIX}/include/libunrar3
-	${INSTALL_DATA} ${WRKSRC}/dll.hpp ${PREFIX}/include/libunrar3/dll.hpp
+	${INSTALL_LIB} ${WRKSRC}/libunrar.so.3 ${STAGEDIR}${PREFIX}/lib/
+	cd ${STAGEDIR}${PREFIX}/lib && ${LN} -sf libunrar.so.3 libunrar.so
+	${MKDIR} ${STAGEDIR}${PREFIX}/include/libunrar3
+	${INSTALL_DATA} ${WRKSRC}/dll.hpp ${STAGEDIR}${PREFIX}/include/libunrar3/dll.hpp
 
 .include <bsd.port.mk>
