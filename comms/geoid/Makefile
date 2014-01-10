@@ -1,5 +1,4 @@
-# Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/geoid/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD: comms/geoid/Makefile 338171 2013-12-30 21:12:16Z db $
 
 PORTNAME=	geoid
 PORTVERSION=	1.0
@@ -20,18 +19,14 @@ LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 
-PLIST_FILES=	bin/geoid ${DATADIR_REL}/country.pos share/pixmaps/geoid.png
-PLIST_DIRS=	${DATADIR_REL}
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
-		's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/geoid.cxx
+		's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/geoid.cxx
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/geoid ${PREFIX}/bin
-	@${INSTALL_DATA} ${WRKSRC}/geoid.png ${PREFIX}/share/pixmaps
-	@${MKDIR} ${DATADIR}
-	@${INSTALL_DATA}	${WRKSRC}/country.pos ${DATADIR}
+	@${INSTALL_PROGRAM} ${WRKSRC}/geoid ${STAGEDIR}${PREFIX}/bin
+	@${INSTALL_DATA} ${WRKSRC}/geoid.png ${STAGEDIR}${PREFIX}/share/pixmaps
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	@${INSTALL_DATA}	${WRKSRC}/country.pos ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
