@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Date-Easter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Easter/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Date-Easter
 PORTVERSION=	1.14
@@ -13,7 +13,4 @@ COMMENT=	Calculates Easter for any given year
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::Easter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
