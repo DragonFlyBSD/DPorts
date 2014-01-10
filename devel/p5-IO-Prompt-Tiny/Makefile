@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Prompt-Tiny/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
+# $FreeBSD: devel/p5-IO-Prompt-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	IO-Prompt-Tiny
 PORTVERSION=	0.002
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Prompt for user input with a default option
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	p5-Capture-Tiny>=0.12:${PORTSDIR}/devel/p5-Capture-Tiny
 RUN_DEPENDS:=	${BUILD_DEPENDS}
