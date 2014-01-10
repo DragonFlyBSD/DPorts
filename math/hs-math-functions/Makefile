@@ -1,9 +1,9 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/hs-math-functions/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/hs-math-functions/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	math-functions
 PORTVERSION=	0.1.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 
 USE_CABAL=	erf>=2 vector>=0.7
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
