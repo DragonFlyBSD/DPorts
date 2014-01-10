@@ -1,12 +1,12 @@
 
-$FreeBSD: multimedia/libvpx/files/patch-configure 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: multimedia/libvpx/files/patch-configure 339215 2014-01-09 11:30:53Z ashish $
 
 --- configure.orig
 +++ configure
-@@ -134,6 +134,7 @@
- all_platforms="${all_platforms} universal-darwin10-gcc"
+@@ -149,6 +149,7 @@
  all_platforms="${all_platforms} universal-darwin11-gcc"
  all_platforms="${all_platforms} universal-darwin12-gcc"
+ all_platforms="${all_platforms} universal-darwin13-gcc"
 +all_platforms="${all_platforms} ia64-linux-gcc"
  all_platforms="${all_platforms} generic-gnu"
  
