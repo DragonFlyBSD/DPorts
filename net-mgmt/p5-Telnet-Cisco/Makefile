@@ -1,5 +1,5 @@
 # Created by: Michael Lyngbøl <lyngbol@wheel.dk>
-# $FreeBSD: net-mgmt/p5-Telnet-Cisco/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Telnet-Cisco/Makefile 338790 2014-01-05 15:52:33Z az $
 
 PORTNAME=	Net-Telnet-Cisco
 PORTVERSION=	1.10
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Net-Telnet>=3.02:${PORTSDIR}/net/p5-Net-Telnet \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Telnet::Cisco.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
