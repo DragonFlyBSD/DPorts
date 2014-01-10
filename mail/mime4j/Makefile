@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: mail/mime4j/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mime4j/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mime4j
 PORTVERSION=	0.7.2
@@ -13,7 +13,7 @@ COMMENT=	A Java parser for e-mail message streams
 
 RUN_DEPENDS=	${JAVAJARDIR}/commons-logging.jar:${PORTSDIR}/java/jakarta-commons-logging
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_JAVA=	yes
