@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-App-Trace/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-Trace/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	App-Trace
 PORTVERSION=	0.50
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-App-Options>=0:${PORTSDIR}/devel/p5-App-Options
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::Trace.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
