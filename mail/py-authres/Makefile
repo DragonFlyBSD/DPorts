@@ -1,5 +1,5 @@
 # Created by: Yasuhiro KIMURA <yasu@utahime.org>
-# $FreeBSD: mail/py-authres/Makefile 328353 2013-09-26 12:54:08Z wg $
+# $FreeBSD: mail/py-authres/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	authres
 PORTVERSION=	0.602
@@ -10,14 +10,12 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	yasu@utahime.org
 COMMENT=	Python module for RFC 5451 Authentication-Results headers
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 PLIST_SUB+=	PORTNAME=${PORTNAME}
-
-FETCH_ARGS=	-pRr
 
 PORTDOCS=	CHANGES README
 
