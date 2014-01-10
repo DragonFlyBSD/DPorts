@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: converters/ascii2binary/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/ascii2binary/Makefile 339221 2014-01-09 13:09:44Z bapt $
 
 PORTNAME=	ascii2binary
 PORTVERSION=	2.14
@@ -19,11 +19,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-PLIST_FILES=	bin/ascii2binary bin/binary2ascii
+PLIST_FILES=	bin/ascii2binary bin/binary2ascii \
+		man/man1/ascii2binary.1.gz \
+		man/man1/binary2ascii.1.gz
 
-MAN1=		ascii2binary.1 binary2ascii.1
-
-NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|" ${WRKSRC}/Makefile.in
 
