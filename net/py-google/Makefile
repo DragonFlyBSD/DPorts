@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: net/py-google/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-google/Makefile 337859 2013-12-28 11:29:48Z wg $
 
 PORTNAME=	google
 PORTVERSION=	0.6
@@ -15,16 +15,13 @@ RUN_DEPENDS=	${PYXML}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	pygoogle
-PYDISTUTILS_PKGVERSION=	0.5
+PYDISTUTILS_AUTOPLIST=	yes
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/py-google
+PORTEXAMPLES=	*
 EXAMPLESDIR=	${PREFIX}/share/examples/py-google
-.endif
 
-NO_STAGE=	yes
 post-patch:
 # www/py-websvcs has an incompatible version of SOAP.py
 	@${MV} ${WRKSRC}/SOAP.py ${WRKSRC}/SOAPgoogle.py
@@ -36,12 +33,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,.*extra_path.*,,g' ${WRKSRC}/setup.py
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_SCRIPT} ${WRKSRC}/tests/*.py ${EXAMPLESDIR}
-	@${MKDIR} ${DOCSDIR}
-	@${CP} -R ${WRKSRC}/doc/ ${DOCSDIR}
-.endif
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tests/*.py ${STAGEDIR}${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
