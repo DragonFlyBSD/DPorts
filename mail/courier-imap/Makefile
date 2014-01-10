@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/courier-imap/Makefile 330613 2013-10-17 07:21:30Z oliver $
+# $FreeBSD: mail/courier-imap/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	courier-imap
 PORTVERSION=	4.14
@@ -35,6 +35,7 @@ NO_STAGE=	yes
 OPTIONS_DEFINE=	FAM TRASHQUOTA GDBM IPV6
 FAM_DESC=	Fam support for IDLE command
 TRASHQUOTA_DESC=	Include deleted mails in the quota
+FAM_USES=	fam
 
 .if exists(${.CURDIR}/../../security/courier-authlib/Makefile.opt)
 .include "${.CURDIR}/../../security/courier-authlib/Makefile.opt"
@@ -86,7 +87,6 @@ CONFIGURE_ARGS+=--with-trashquota
 .if ${PORT_OPTIONS:MFAM}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_FAM=	yes
 .endif
 
 MAN1=		couriertcpd.1 maildiracl.1 maildirkw.1 \
