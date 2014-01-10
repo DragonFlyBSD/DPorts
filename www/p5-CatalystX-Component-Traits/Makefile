@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: www/p5-CatalystX-Component-Traits/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CatalystX-Component-Traits/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	CatalystX-Component-Traits
 PORTVERSION=	0.16
@@ -19,7 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CatalystX::Component::Traits.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
