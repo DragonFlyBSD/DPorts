@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: devel/p5-Locale-gettext/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Locale-gettext/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	Locale-gettext
 PORTVERSION=	1.05
@@ -16,7 +16,4 @@ CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 USES=		gettext perl5
 USE_PERL5=	configure
 
-MAN3=		Locale::gettext.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
