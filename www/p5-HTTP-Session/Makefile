@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Session/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Session/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	HTTP-Session
 PORTVERSION=	0.48
@@ -27,18 +27,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Session.3 \
-		HTTP::Session::State::Cookie.3 \
-		HTTP::Session::State::Null.3 \
-		HTTP::Session::State::Test.3 \
-		HTTP::Session::State::URI.3 \
-		HTTP::Session::Store::CHI.3 \
-		HTTP::Session::Store::DBM.3 \
-		HTTP::Session::Store::File.3 \
-		HTTP::Session::Store::Memcached.3 \
-		HTTP::Session::Store::Null.3 \
-		HTTP::Session::Store::OnMemory.3 \
-		HTTP::Session::Store::Test.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
