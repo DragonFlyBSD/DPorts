@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/rubygem-rightaws/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: net/rubygem-rightaws/Makefile 337612 2013-12-26 20:04:56Z swills $
 
 PORTNAME=	rightaws
 PORTVERSION=	3.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 DISTNAME=	right_aws-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Provides access to Amazon EC2, S3, SQS, and SDB web services
 
 LICENSE=	MIT
