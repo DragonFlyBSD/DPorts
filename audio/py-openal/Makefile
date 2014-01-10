@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: audio/py-openal/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/py-openal/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	openal
 PORTVERSION=	0.1.6
@@ -13,7 +13,7 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	PyOpenAL is a binding of OpenAL for Python
 
 DIST_SUBDIR=	python
-USE_OPENAL=	al alut
+USES=		openal:al,alut
 NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
@@ -21,12 +21,14 @@ PYDISTUTILS_PKGNAME=	PyOpenAL
 WRKSRC=		${WRKDIR}/PyOpenAL-${PORTVERSION}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-openal
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/setup.py
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/demo/* ${EXAMPLESDIR}
 .endif
