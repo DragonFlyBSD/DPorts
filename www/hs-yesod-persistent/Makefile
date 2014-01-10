@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-yesod-persistent/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-yesod-persistent/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	yesod-persistent
 PORTVERSION=	1.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USE_CABAL=	blaze-builder conduit lifted-base persistent>=1.2 \
 		persistent-template>=1.2 pool-conduit resourcet \
 		transformers>=0.2.2 yesod-core>=1.2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
