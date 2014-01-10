@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-asa/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-asa/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	asa
 PORTVERSION=	1.03
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to say your class/object working like something else
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	asa.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
