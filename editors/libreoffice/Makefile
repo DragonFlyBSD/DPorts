@@ -1,8 +1,8 @@
-# $FreeBSD: editors/libreoffice/Makefile 332185 2013-10-30 22:33:22Z jkim $
+# $FreeBSD: editors/libreoffice/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Full integrated office productivity suite
 
