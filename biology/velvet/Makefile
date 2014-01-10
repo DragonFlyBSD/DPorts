@@ -1,5 +1,5 @@
 # Created by: Motomichi Matsuzaki <mzaki@m.u-tokyo.ac.jp>
-# $FreeBSD: biology/velvet/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/velvet/Makefile 338550 2014-01-03 15:46:52Z adamw $
 
 PORTNAME=	velvet
 PORTVERSION=	1.1.04
@@ -59,6 +59,9 @@ PLIST_FILES+=	%%SITE_PERL%%/${f:H:T}/${f:T}
 PORTDOCS=	ChangeLog Manual.pdf Columbus_manual.pdf
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-patch:
 .for f in ${SCRIPTS}
 	${REINPLACE_CMD} -e s,#!/usr/bin/perl,${PERL}, ${WRKSRC}/${f}
@@ -80,7 +83,7 @@ do-install:
 .for f in ${PERLMOD_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/${SITE_PERL_REL}/${f:H:T}/${f:T}
 .endfor
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_MAN} ${WRKSRC}/${f} ${DOCSDIR}
