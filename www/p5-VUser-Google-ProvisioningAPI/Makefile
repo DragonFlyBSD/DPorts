@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/p5-VUser-Google-ProvisioningAPI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-VUser-Google-ProvisioningAPI/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	VUser-Google-ProvisioningAPI
 PORTVERSION=	0.24
@@ -18,13 +18,4 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	VUser::Google::ProvisioningAPI::V2_0::EmailListEntry.3 \
-	VUser::Google::ProvisioningAPI::V2_0::NicknameEntry.3 \
-	VUser::Google::ProvisioningAPI::V2_0.3 \
-	VUser::Google::ProvisioningAPI::V1_0.3 \
-	VUser::Google::ProvisioningAPI.3 \
-	VUser::Google::ProvisioningAPI::V2_0::EmailListRecipientEntry.3 \
-	VUser::Google::ProvisioningAPI::V2_0::UserEntry.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
