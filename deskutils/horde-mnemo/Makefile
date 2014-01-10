@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-mnemo/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: deskutils/horde-mnemo/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mnemo
 PORTVERSION=	4.1.2
@@ -8,7 +8,7 @@ PKGNAMEPREFIX=	horde-
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde web based notes manager
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LATEST_LINK=	horde-${PORTNAME}
