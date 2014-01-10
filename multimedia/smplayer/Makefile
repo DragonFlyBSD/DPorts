@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: multimedia/smplayer/Makefile 334587 2013-11-22 12:55:11Z makc $
+# $FreeBSD: multimedia/smplayer/Makefile 338904 2014-01-06 16:18:18Z makc $
 
 PORTNAME=	smplayer
 DISTVERSION=	0.8.6
@@ -12,12 +12,14 @@ COMMENT=	Complete front-end based on Qt4 for mplayer
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
 		${LOCALBASE}/share/smplayer/themes:${PORTSDIR}/multimedia/smplayer-themes
 
-USE_QT4=	gui network script xml qmake_build moc_build rcc_build uic_build \
+USE_QT4=	gui network script xml moc_build rcc_build uic_build \
 		uic3_build porting_build linguist_build
 
 ALL_TARGET=	src/smplayer
+CONFIGURE_WRKSRC=	${WRKSRC}/src
+MAKE_ARGS+=	PREFIX=${PREFIX} DESTDIR=${STAGEDIR}
 
-USES=		gmake
+USES=		gmake qmake
 USE_BZIP2=	yes
 INSTALLS_ICONS=	yes
 
@@ -27,9 +29,8 @@ PORTDOCS=	Changelog Copying.txt Install.txt Not_so_obvious_things.txt \
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|qmake|${QMAKE} ${QMAKE_ARGS}|g' \
+	@${REINPLACE_CMD} -e 's|&& $$(QMAKE) $$(QMAKE_OPTS)||' \
 		-e 's|lrelease|${LRELEASE}|g' \
-		-e 's|PREFIX=/usr/local|PREFIX=${PREFIX}|g' \
 		-e 's,/share/man,/man,g' \
 		-e 's, make, ${MAKE_CMD},g' \
 		${WRKSRC}/Makefile
