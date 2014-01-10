@@ -1,5 +1,5 @@
 # Created by: Matthieu Guegan <matt.guegan@free.fr>
-# $FreeBSD: audio/gimmix/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/gimmix/Makefile 337904 2013-12-28 20:29:35Z antoine $
 
 PORTNAME=	gimmix
 PORTVERSION=	0.5.7.1
@@ -20,13 +20,10 @@ LICENSE=	GPLv2
 OPTIONS_DEFINE=	NLS
 
 USE_GNOME=	gtk20 intltool libglade2
-NO_STAGE=	yes
 USE_BZIP2=	yes
 
 GNU_CONFIGURE=	yes
-USES=		gmake pkgconfig
-
-MAN1=		gimmix.1
+USES=		desktop-file-utils gmake pkgconfig
 
 CONFIGURE_ENV=	DATADIRNAME=share
 
