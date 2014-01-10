@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpcore/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/httpcore/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	httpcore
 DISTVERSION=	4.3
@@ -11,7 +11,7 @@ DISTNAME=	httpcomponents-core-${DISTVERSION}-bin
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Java components implementing the base HTTP protocol
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USE_JAVA=	yes
