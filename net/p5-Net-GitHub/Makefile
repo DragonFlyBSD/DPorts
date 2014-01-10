@@ -1,8 +1,8 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-GitHub/Makefile 328391 2013-09-26 16:47:39Z sunpoet $
+# $FreeBSD: net/p5-Net-GitHub/Makefile 338213 2013-12-31 01:22:19Z sunpoet $
 
 PORTNAME=	Net-GitHub
-DISTVERSION=	0.54
+DISTVERSION=	0.55
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FAYLAND
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	p5-Any-Moose>=0:${PORTSDIR}/devel/p5-Any-Moose \
 		p5-HTML-Tree>=0:${PORTSDIR}/www/p5-HTML-Tree \
 		p5-HTTP-Message>0:${PORTSDIR}/www/p5-HTTP-Message \
 		p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any \
-		p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-LWP-Protocol-https>=0:${PORTSDIR}/www/p5-LWP-Protocol-https \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-WWW-Mechanize-GZip>=0:${PORTSDIR}/www/p5-WWW-Mechanize-GZip
