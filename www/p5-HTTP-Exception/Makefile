@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Exception/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Exception/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTTP-Exception
 PORTVERSION=	0.04004
@@ -20,14 +20,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTTP::Exception.3 \
-	HTTP::Exception::1XX.3 \
-	HTTP::Exception::2XX.3 \
-	HTTP::Exception::3XX.3 \
-	HTTP::Exception::4XX.3 \
-	HTTP::Exception::5XX.3 \
-	HTTP::Exception::Base.3 \
-	HTTP::Exception::Loader.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
