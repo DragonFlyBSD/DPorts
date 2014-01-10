@@ -1,12 +1,14 @@
-# $FreeBSD: devel/rubygem-rake-compiler/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD: devel/rubygem-rake-compiler/Makefile 338339 2014-01-01 00:08:05Z sunpoet $
 
 PORTNAME=	rake-compiler
-PORTVERSION=	0.8.3
+PORTVERSION=	0.9.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Build and package Ruby extensions (C, Java) using Rake
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RAKE=	yes
