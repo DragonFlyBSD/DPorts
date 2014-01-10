@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-data-default/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-data-default/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	data-default
 PORTVERSION=	0.5.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USE_CABAL=	data-default-class data-default-instances-base \
 		data-default-instances-containers data-default-instances-dlist \
 		data-default-instances-old-locale
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
