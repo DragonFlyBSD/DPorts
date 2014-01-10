@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: net/p5-XML-Fast/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: net/p5-XML-Fast/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	XML-Fast
 PORTVERSION=	0.11
@@ -13,7 +13,4 @@ COMMENT=	Simple and fast XML to hash conversion
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	XML::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
