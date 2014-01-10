@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Options/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-Options/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	Config-Options
 PORTVERSION=	0.08
@@ -13,8 +13,4 @@ COMMENT=	Provide a configuration hash with options
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Config::Options.3 \
-	Config::Options::Threaded.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
