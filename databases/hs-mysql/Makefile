@@ -1,9 +1,9 @@
 # Created by: jyyou@cs.nctu.edu.tw
-# $FreeBSD: databases/hs-mysql/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: databases/hs-mysql/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	mysql
 PORTVERSION=	0.1.1.4
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	databases haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 
 USE_MYSQL=	yes
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
