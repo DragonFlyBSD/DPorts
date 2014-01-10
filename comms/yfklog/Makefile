@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/yfklog/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/yfklog/Makefile 338555 2014-01-03 16:06:00Z adamw $
 
 PORTNAME=	yfklog
 PORTVERSION=	0.3.5
@@ -26,6 +26,9 @@ NO_BUILD=	yes
 MAN1=		yfklog.1
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|' \
 	     ${WRKSRC}/yfk ${WRKSRC}/yfksubs.pl
@@ -42,7 +45,7 @@ do-install:
 	zweckform3421.lab zweckform3475.lab zweckform3657.lab config
 	@${INSTALL_DATA} ${WRKSRC}/$f ${DATADIR}
 .endfor
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}/onlinelog
 .for 	f in README  search.php test.txt
 	@${INSTALL_DATA} ${WRKSRC}/onlinelog/$f ${EXAMPLESDIR}/onlinelog
@@ -52,7 +55,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/clubs/$f ${EXAMPLESDIR}/clubs
 .endfor
 .endif
-.if     !defined(NOPORTDOCS)
+.if 	${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for	f in AUTHORS CHANGELOG COPYING INSTALL MANUAL README RELEASENOTES
 	@${INSTALL_DATA} ${WRKSRC}/$f ${DOCSDIR}
