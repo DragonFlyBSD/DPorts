@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: www/p5-ZConf-RSS/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-ZConf-RSS/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	ZConf-RSS
 PORTVERSION=	2.2.0
@@ -22,8 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		ZConf::RSS.3 \
-		ZConf::RSS::GUI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
