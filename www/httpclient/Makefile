@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpclient/Makefile 328481 2013-09-27 14:26:55Z ale $
+# $FreeBSD: www/httpclient/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	httpclient
 DISTVERSION=	4.3
@@ -11,7 +11,7 @@ DISTNAME=	httpcomponents-client-${DISTVERSION}-bin
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Java components implementing an advanced HTTP client
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	${JAVAJARDIR}/httpcore.jar:${PORTSDIR}/www/httpcore \
