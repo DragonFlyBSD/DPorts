@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/yasm/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/yasm/Makefile 338002 2013-12-29 15:01:33Z tijl $
 
 PORTNAME=	yasm
 PORTVERSION=	1.2.0
@@ -11,6 +11,7 @@ COMMENT=	A complete rewrite of the NASM assembler
 
 LICENSE=	BSD
 
+OPTIONS_DEFINE=	NLS
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-python --disable-python-bindings
