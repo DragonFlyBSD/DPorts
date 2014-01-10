@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pasm/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pasm/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	pasm
 PORTVERSION=	0.84
@@ -12,7 +12,6 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/pru_sw/utils/LICENCE.txt
 
 WRKSRC=		${WRKDIR}/am335x_pru_package-${PORTNAME}-${PORTVERSION}
-FETCH_ARGS=	"-Fpr"
 PLIST_FILES=	bin/pasm
 
 NO_STAGE=	yes
