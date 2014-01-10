@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: devel/p5-Config-YAML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-YAML/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	Config-YAML
 PORTVERSION=	1.42
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Config::YAML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
