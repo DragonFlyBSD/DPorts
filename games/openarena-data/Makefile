@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD: games/openarena-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/openarena-data/Makefile 338516 2014-01-03 01:53:21Z bapt $
 
 PORTNAME=	data
 PORTVERSION=	0.8.8
@@ -16,7 +16,6 @@ COMMENT=	OpenArena game data files
 
 WRKSRC=		${WRKDIR}/baseoa
 NO_BUILD=	yes
-FETCH_ARGS=
 
 OA_DATA=	${PKGNAMEPREFIX}${OA_DATA_VER}.zip
 OA_DATA_VER=	0.8.8
