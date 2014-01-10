@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Autoflush/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Autoflush/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Devel-Autoflush
 PORTVERSION=	0.05
@@ -14,10 +14,7 @@ COMMENT=	Set autoflush from the command line
 BUILD_DEPENDS=	p5-IO-CaptureOutput>0:${PORTSDIR}/devel/p5-IO-CaptureOutput
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		Devel::Autoflush.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
