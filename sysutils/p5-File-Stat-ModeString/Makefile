@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: sysutils/p5-File-Stat-ModeString/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-File-Stat-ModeString/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	File-Stat-ModeString
 PORTVERSION=	1.00
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Stat::ModeString.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
