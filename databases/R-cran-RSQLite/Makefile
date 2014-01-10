@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-RSQLite/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: databases/R-cran-RSQLite/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	RSQLite
 PORTVERSION=	0.11.2
@@ -15,7 +15,6 @@ LICENSE=	LGPL20
 BUILD_DEPENDS=	R-cran-DBI>=0.2.5:${PORTSDIR}/databases/R-cran-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
