@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Clone-More/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Clone-More/Makefile 338987 2014-01-07 09:28:30Z az $
 
 PORTNAME=	Clone-More
 PORTVERSION=	0.90.2
@@ -15,7 +15,4 @@ USE_PERL5=	configure
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAN3=		Clone::More.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
