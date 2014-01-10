@@ -1,8 +1,8 @@
 # Created by: torstenb
-# $FreeBSD: shells/zsh/Makefile 337112 2013-12-21 00:53:44Z bapt $
+# $FreeBSD: shells/zsh/Makefile 339070 2014-01-08 07:28:43Z bapt $
 
 PORTNAME=	zsh
-PORTVERSION=	5.0.4
+PORTVERSION=	5.0.5
 CATEGORIES=	shells
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
 		SF/${PORTNAME}/${PORTNAME}-doc/${PORTVERSION}:doc
