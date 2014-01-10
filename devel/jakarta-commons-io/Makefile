@@ -1,5 +1,5 @@
 # Created by: Michael Winking <mwfp@foldl.net>
-# $FreeBSD: devel/jakarta-commons-io/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/jakarta-commons-io/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	commons-io
 PORTVERSION=	2.4
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A collection of I/O utilities for Java
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${JAVALIBDIR}/junit.jar:${PORTSDIR}/java/junit
 
