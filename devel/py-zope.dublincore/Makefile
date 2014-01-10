@@ -1,10 +1,12 @@
-# $FreeBSD: devel/py-zope.dublincore/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-zope.dublincore/Makefile 338824 2014-01-05 21:02:29Z rm $
 
 PORTNAME=	zope.dublincore
 PORTVERSION=	3.8.2
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope Dublin Core implementation
@@ -19,11 +21,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz \
 		${PYTHON_PKGNAMEPREFIX}zope.schema>=0:${PORTSDIR}/devel/py-zope.schema \
 		${PYTHON_PKGNAMEPREFIX}zope.security>=0:${PORTSDIR}/security/py-zope.security
 
-DIST_SUBDIR=	zope
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 #USES=		zope
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
