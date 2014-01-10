@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: archivers/xdms/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/xdms/Makefile 337558 2013-12-26 17:01:25Z bapt $
 
 PORTNAME=	xdms
 PORTVERSION=	1.3.2
@@ -11,7 +11,6 @@ COMMENT=	Tool for decompressing Amiga DMS files
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
@@ -22,18 +21,14 @@ USE_CSTD=	gnu89
 PORTDOCS=	xdms.txt
 PLIST_FILES=	bin/xdms
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	${REINPLACE_CMD} "s@-O2 -Wall@$${CFLAGS} -Wall@g" ${WRKSRC}/src/Makefile.in
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/xdms ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xdms ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docs in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docs} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
