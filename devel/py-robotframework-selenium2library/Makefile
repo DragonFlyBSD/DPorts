@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	robotframework-selenium2library
 PORTVERSION=	1.4.0
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	Vladimir.Chukharev@gmail.com
 COMMENT=	Web testing library for Robot Framework
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}robotframework>=2.7.5:${PORTSDIR}/devel/py-robotframework \
 		${PYTHON_PKGNAMEPREFIX}decorator>=3.4.0:${PORTSDIR}/devel/py-decorator
