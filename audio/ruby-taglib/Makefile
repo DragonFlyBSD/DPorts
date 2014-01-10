@@ -1,5 +1,5 @@
 # Created by: TOMIDA, Hiroaki <t.hiroaki.209 at gmail.com>
-# $FreeBSD: audio/ruby-taglib/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/ruby-taglib/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	taglib
 PORTVERSION=	1.1
@@ -25,10 +25,12 @@ NO_BUILD=	yes
 
 DOCS=		README
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${MKDIR} ${RUBY_SITELIBDIR}/
 	${INSTALL_DATA} ${WRKSRC}/lib/taglib.rb ${RUBY_SITELIBDIR}/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${RUBY_MODDOCDIR}
 	${INSTALL_DATA} ${DOCS:S,^,${WRKSRC}/,} ${RUBY_MODDOCDIR}/
 .endif
