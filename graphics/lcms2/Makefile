@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/lcms2/Makefile 334539 2013-11-21 23:12:39Z sunpoet $
+# $FreeBSD: graphics/lcms2/Makefile 337449 2013-12-25 20:10:17Z sunpoet $
 
 PORTNAME=	lcms2
 PORTVERSION=	2.5
@@ -20,8 +20,9 @@ TIFFICC_DESC=	Build color profile applier for TIFF
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GNOME=	gnomehack lthack
+USE_GNOME=	lthack
 USE_LDCONFIG=	yes
+USES=		pathfix
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
