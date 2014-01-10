@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Testers-Report/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-CPAN-Testers-Report/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	CPAN-Testers-Report
 PORTVERSION=	1.999001
@@ -17,15 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CPAN::Testers::Fact::LegacyReport.3 \
-	CPAN::Testers::Fact::TestEnvironment.3 \
-	CPAN::Testers::Fact::InstalledModules.3 \
-	CPAN::Testers::Report.3 \
-	CPAN::Testers::Fact::TestSummary.3 \
-	CPAN::Testers::Fact::TesterComment.3 \
-	CPAN::Testers::Fact::TestOutput.3 \
-	CPAN::Testers::Fact::Prereqs.3 \
-	CPAN::Testers::Fact::PerlConfig.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
