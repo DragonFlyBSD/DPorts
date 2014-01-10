@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-Signature/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: net/p5-Net-Amazon-Signature/Makefile 338754 2014-01-05 12:20:02Z az $
 
 PORTNAME=	Net-Amazon-Signature
 PORTVERSION=	0.03
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to create Amazon AWS signatures
 
 TEST_DEPENDS=	p5-Spiffy>=0:${PORTSDIR}/devel/p5-Spiffy \
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-Spiffy>=0:${PORTSDIR}/devel/p5-Spiffy \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Amazon::Signature.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
