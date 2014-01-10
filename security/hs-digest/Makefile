@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-digest/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-digest/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	digest
 PORTVERSION=	0.0.1.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	zlib
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
