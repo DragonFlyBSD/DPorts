@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: x11/xrestop/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xrestop/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xrestop
 PORTVERSION=	0.4
@@ -19,8 +19,6 @@ CONFIGURE_ENV=	XLIBS="-L${LOCALBASE}/lib -lX11"
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 
-MAN1=		xrestop.1
-PLIST_FILES=	bin/xrestop
+PLIST_FILES=	bin/xrestop man/man1/xrestop.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
