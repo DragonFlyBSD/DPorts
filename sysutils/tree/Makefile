@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: sysutils/tree/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/tree/Makefile 339252 2014-01-09 15:17:56Z bapt $
 
 PORTNAME=	tree
 PORTVERSION=	1.6.0
@@ -14,20 +14,18 @@ COMMENT=	Display a tree-view of directories with optional color or HTML output
 LICENSE=	GPLv2
 
 MAKE_ENV+=	MKDIR="${MKDIR}"
-USE_GMAKE=	yes
+USES=		gmake
 
-MAN1=		tree.1
-PLIST_FILES=	bin/tree
+PLIST_FILES=	bin/tree \
+		man/man1/tree.1.gz
 
 PORTDOCS=	CHANGES README
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/tree ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
