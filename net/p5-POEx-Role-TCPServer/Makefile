@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-POEx-Role-TCPServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POEx-Role-TCPServer/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	POEx-Role-TCPServer
 PORTVERSION=	1.102740
@@ -23,7 +23,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	POEx::Role::TCPServer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
