@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: sysutils/p5-Plugtools/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Plugtools/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	Plugtools
 PORTVERSION=	1.3.0
@@ -24,8 +24,4 @@ RUN_DEPENDS=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Plugtools.3 \
-		Plugtools::Plugins::Dump.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
