@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-png/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: graphics/R-cran-png/Makefile 338290 2013-12-31 12:56:33Z tota $
 
 PORTNAME=	png
-DISTVERSION=	0.1-6
-PORTREVISION=	2
+DISTVERSION=	0.1-7
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -15,7 +14,6 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
