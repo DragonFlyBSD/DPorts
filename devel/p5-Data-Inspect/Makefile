@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Data-Inspect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Inspect/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Data-Inspect
 PORTVERSION=	0.04
@@ -14,7 +14,4 @@ COMMENT=	Another pretty-printer for perl objects
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Inspect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
