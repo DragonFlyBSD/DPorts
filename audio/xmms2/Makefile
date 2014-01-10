@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2/Makefile 334901 2013-11-25 22:13:06Z madpilot $
+# $FreeBSD: audio/xmms2/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME?=	xmms2
 PORTVERSION=	0.8
@@ -140,9 +140,8 @@ EXCLUDE+=	--without-plugins="faad" --without-plugins="mp4"
 PLIST_SUB+=	FAAD="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MDAM}
-USE_FAM=	yes
-WANT_FAM_SYSTEM=gamin
+.if ${PORT_OPTIONS:MFAM}
+USES+=		fam:gamin
 PLIST_SUB+=	FAM=""
 .else
 EXCLUDE+=	--without-optionals="medialib-updater"
