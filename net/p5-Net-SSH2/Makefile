@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-SSH2/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SSH2/Makefile 337794 2013-12-27 19:47:35Z jadawin $
 
 PORTNAME=	Net-SSH2
 PORTVERSION=	0.53
@@ -18,10 +18,4 @@ LIB_DEPENDS=	ssh2.1:${PORTSDIR}/security/libssh2
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SSH2.3 Net::SSH2::Channel.3 \
-		Net::SSH2::Dir.3 Net::SSH2::File.3 \
-		Net::SSH2::Listener.3 Net::SSH2::PublicKey.3 \
-		Net::SSH2::SFTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
