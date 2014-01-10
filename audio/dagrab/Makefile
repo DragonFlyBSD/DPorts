@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@CirX.ORG>
-# $FreeBSD: audio/dagrab/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/dagrab/Makefile 337592 2013-12-26 18:22:34Z bapt $
 
 PORTNAME=	dagrab
 PORTVERSION=	0.3.5
@@ -11,12 +11,11 @@ MASTER_SITE_SUBDIR=	apps/sound/cdrom
 MAINTAINER=	clkao@CirX.ORG
 COMMENT=	Read audio tracks from a CD into wav sound files
 
-NO_STAGE=	yes
-MAN1=		dagrab.1
-PLIST_FILES=	bin/dagrab
+PLIST_FILES=	bin/dagrab \
+		man/man1/dagrab.1.gz
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dagrab ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/dagrab.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/dagrab ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/dagrab.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
