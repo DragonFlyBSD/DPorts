@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/toolame/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/toolame/Makefile 338713 2014-01-05 00:30:21Z bapt $
 
 PORTNAME=	toolame
 PORTVERSION=	0.2l
@@ -12,10 +12,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Optimized mpeg 1/2 layer 2 audio encoder
 
+OPTIONS_DEFINE=	DOCS
+
 LICENSE=	LGPL21
 
 USES=		gmake
-NO_STAGE=	yes
 ALL_TARGET=	${PORTNAME}
 MAKE_ARGS=	CC="${CC}" TWEAKS="${CFLAGS}" ARCH="" PG="" OPTIM=""
 USE_CSTD=	gnu89
@@ -23,15 +24,11 @@ USE_CSTD=	gnu89
 PLIST_FILES=	bin/toolame
 PORTDOCS=	FUTURE HISTORY LGPL.txt README
 
-.include <bsd.port.pre.mk>
-
 do-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docs in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docs} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-	@${INSTALL_PROGRAM} ${WRKSRC}/toolame ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/toolame ${STAGEDIR}${PREFIX}/bin
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
