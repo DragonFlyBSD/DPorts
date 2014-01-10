@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Term-Encoding/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Encoding/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Term-Encoding
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Detect encoding of the current terminal
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Encoding.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
