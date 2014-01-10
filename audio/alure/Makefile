@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: audio/alure/Makefile 329396 2013-10-04 22:01:54Z nemysis $
+# $FreeBSD: audio/alure/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	alure
 PORTVERSION=	1.2
@@ -14,8 +14,7 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile
 
-USES=		cmake pkgconfig
-USE_OPENAL=	soft
+USES=		cmake openal:soft pkgconfig
 USE_LDCONFIG=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
