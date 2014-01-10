@@ -1,5 +1,5 @@
 # Created by: Toni Viemerö <toni.viemero@iki.fi>
-# $FreeBSD: devel/p5-PatchReader/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-PatchReader/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	PatchReader
 PORTVERSION=	0.9.6
@@ -14,7 +14,4 @@ COMMENT=	Perl module with utilities to read and manipulate patches and CVS
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		PatchReader.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
