@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-crypto-random-api/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-crypto-random-api/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	crypto-random-api
 PORTVERSION=	0.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	entropy
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
