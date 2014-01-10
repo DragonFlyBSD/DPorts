@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Class-Base/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Base/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	Class-Base
 PORTVERSION=	0.05
@@ -13,10 +13,7 @@ COMMENT=	Useful base class for deriving other modules
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Base.3
-
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
