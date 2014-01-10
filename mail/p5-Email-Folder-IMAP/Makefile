@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Folder-IMAP/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Folder-IMAP/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Email-Folder-IMAP
 PORTVERSION=	1.10.2
@@ -20,7 +20,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Email::Folder::IMAP.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
