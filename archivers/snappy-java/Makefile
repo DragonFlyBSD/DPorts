@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@filez.com>
-# $FreeBSD: archivers/snappy-java/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/snappy-java/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 # Note to committers:
 # With each version update, a new maven repository must be created and distributed
@@ -21,7 +21,7 @@ EXTRACT_ONLY=	snappy-${PORTVERSION}.tar.gz \
 MAINTAINER=	hsn@sendmail.cz
 COMMENT=	Fast compressor/decompressor library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${LOCALBASE}/share/java/maven3/bin/mvn:${PORTSDIR}/devel/maven3
 
