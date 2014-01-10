@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/pgp/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: security/pgp/Makefile 338976 2014-01-07 07:00:35Z dinoex $
 
 PORTNAME=	pgp
 PORTVERSION=	2.6.3i
@@ -12,6 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PGP International version - Public-Key encryption for the masses
 
 ONLY_FOR_ARCHS=	i386 alpha amd64 sparc64
+BROKEN_amd64=	unable to validate signatures
 
 WRKSRC=		${WRKDIR}/src
 MAKEFILE=	makefile
