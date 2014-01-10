@@ -1,5 +1,5 @@
 # Created by: Peter Schmiedeskamp <pschmied@qwest.net>
-# $FreeBSD: graphics/libexif/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libexif/Makefile 338003 2013-12-29 15:03:41Z tijl $
 
 PORTNAME=	libexif
 PORTVERSION=	0.6.21
@@ -10,6 +10,8 @@ MAINTAINER=	marius@nuenneri.ch
 COMMENT=	Library to read digital camera file meta-data
 
 LICENSE=	LGPL21
+
+OPTIONS_DEFINE=	DOCS NLS
 
 USES=		pkgconfig
 USE_BZIP2=	yes
