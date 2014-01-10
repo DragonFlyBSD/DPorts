@@ -1,9 +1,9 @@
 # Created by: markun@onohara.to
-# $FreeBSD: security/clamav/Makefile 332313 2013-10-31 23:42:29Z garga $
+# $FreeBSD: security/clamav/Makefile 339021 2014-01-07 19:34:42Z garga $
 
 PORTNAME=	clamav
 PORTVERSION=	0.98
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	SF
 
@@ -44,7 +44,6 @@ IPV6_CONFIGURE_ENABLE=	ipv6
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GCC=	any
 USES=		gmake
 USE_RC_SUBR=	clamav-clamd clamav-freshclam
 
@@ -117,7 +116,7 @@ PLIST_SUB+=	CLAMAVUSER=${CLAMAVUSER} \
 
 .if ${PORT_OPTIONS:MLLVM} && ( ${ARCH} == "i386" || ${ARCH} == "x86_64" )
 CONFIGURE_ARGS+=--enable-llvm
-. if defined(WITH_TESTS)
+. if ${PORT_OPTIONS:MTESTS}
 USE_PYTHON_BUILD=	yes
 . endif
 .else
