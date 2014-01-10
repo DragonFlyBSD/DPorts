@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-RT-Client-REST/Makefile 327986 2013-09-23 12:07:45Z culot $
+# $FreeBSD: www/p5-RT-Client-REST/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	RT-Client-REST
 PORTVERSION=	0.44
@@ -24,16 +24,4 @@ TEST_DEPENDS=	p5-DateTime-Format-DateParse>0:${PORTSDIR}/devel/p5-DateTime-Forma
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	RT::Client::REST.3 \
-	RT::Client::REST::Attachment.3 \
-	RT::Client::REST::Exception.3 \
-	RT::Client::REST::Group.3 \
-	RT::Client::REST::Object.3 \
-	RT::Client::REST::Queue.3 \
-	RT::Client::REST::SearchResult.3 \
-	RT::Client::REST::Ticket.3 \
-	RT::Client::REST::Transaction.3 \
-	RT::Client::REST::User.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
