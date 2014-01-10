@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Display/Makefile 327802 2013-09-21 10:17:54Z rafan $
+# $FreeBSD: www/p5-HTML-Display/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTML-Display
 PORTVERSION=	0.40
@@ -19,22 +19,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	HTML::Display.3 \
-	HTML::Display::Common.3 \
-	HTML::Display::Debian.3 \
-	HTML::Display::Dump.3 \
-	HTML::Display::Galeon.3 \
-	HTML::Display::Mozilla.3 \
-	HTML::Display::OSX.3 \
-	HTML::Display::Opera.3 \
-	HTML::Display::Phoenix.3 \
-	HTML::Display::TempFile.3 \
-	HTML::Display::Win32.3 \
-	HTML::Display::Win32::IE.3 \
-	HTML::Display::Win32::OLE.3
-
-NO_STAGE=	yes
 
 regression-test:
 	@${MAKE} test -C ${WRKSRC}
