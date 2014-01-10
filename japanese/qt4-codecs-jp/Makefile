@@ -1,9 +1,9 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: japanese/qt4-codecs-jp/Makefile 330266 2013-10-13 23:15:50Z rakuco $
+# $FreeBSD: japanese/qt4-codecs-jp/Makefile 338902 2014-01-06 16:16:52Z makc $
 
 PORTNAME=	codecs
 DISTVERSION=	${QT4_VERSION}
-CATEGORIES?=	japanese
+CATEGORIES=	japanese
 PKGNAMEPREFIX=	qt4-
 PKGNAMESUFFIX=	-jp
 
@@ -11,7 +11,6 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt EUC-JP/JIS codec plugins
 
 USE_QT4=	qmake_build corelib
-QT_NONSTANDARD=	yes
 QT_DIST=	yes
 
 #USE_BZIP2=	yes
@@ -37,10 +36,8 @@ EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/${dne}'
 BUILD_WRKSRC=	${WRKSRC}/src/plugins/${PORTNAME}/jp
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-EXTRA_PATCHES+=	${.CURDIR}/../../devel/qt4/files/patch-configure
-
 pre-configure:
 	${MKDIR} ${WRKSRC}/mkspecs
-	${LN} -sf ${LOCALBASE}/bin/qmake-qt4 ${WRKSRC}/bin/qmake
+	${LN} -sf ${QMAKE} ${WRKSRC}/bin/qmake
 
 .include <bsd.port.mk>
