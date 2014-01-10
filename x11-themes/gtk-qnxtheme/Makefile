@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: x11-themes/gtk-qnxtheme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk-qnxtheme/Makefile 338926 2014-01-06 19:31:43Z antoine $
 
 PORTNAME=	gtk-qnxtheme
 PORTVERSION=	0.1
@@ -20,7 +20,6 @@ NO_BUILD=	yes
 
 WANT_GNOME=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
@@ -38,15 +37,15 @@ post-patch:
 .endfor
 
 do-install:
-	@${MKDIR} ${PREFIX}/share/themes/qnxtheme
-	${INSTALL_DATA} ${WRKSRC}/QNX/README ${PREFIX}/share/themes/qnxtheme
-	@${MKDIR} ${PREFIX}/share/themes/qnxtheme/gtk
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/qnxtheme
+	${INSTALL_DATA} ${WRKSRC}/QNX/README ${STAGEDIR}${PREFIX}/share/themes/qnxtheme
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/qnxtheme/gtk
 	@(cd ${WRKSRC}/QNX/gtk \
-		&& ${COPYTREE_SHARE} . ${PREFIX}/share/themes/qnxtheme/gtk)
+		&& ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/themes/qnxtheme/gtk)
 .if ${PORT_OPTIONS:MGTK2}
-	@${MKDIR} ${PREFIX}/share/themes/qnxtheme/gtk-2.0
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/qnxtheme/gtk-2.0
 	@(cd ${WRKSRC}/QNX/gtk-2.0 \
-		&& ${COPYTREE_SHARE} . ${PREFIX}/share/themes/qnxtheme/gtk-2.0)
+		&& ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/themes/qnxtheme/gtk-2.0)
 .endif
 
 .include <bsd.port.mk>
