@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Phone-Info/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Phone-Info/Makefile 338808 2014-01-05 17:43:05Z az $
 
 PORTNAME=	Phone-Info
 PORTVERSION=	0.0.1
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Net-WhitePages>=0:${PORTSDIR}/net/p5-Net-WhitePages
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Phone::Info.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
