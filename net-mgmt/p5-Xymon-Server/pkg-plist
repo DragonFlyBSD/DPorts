@@ -1,6 +1,7 @@
-@comment $FreeBSD: net-mgmt/p5-Xymon-Server/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: net-mgmt/p5-Xymon-Server/pkg-plist 338791 2014-01-05 16:08:00Z az $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xymon/Server/.packlist
 %%SITE_PERL%%/Xymon/Server.pm
+%%PERL5_MAN3%%/Xymon::Server.3.gz
 @dirrmtry %%SITE_PERL%%/Xymon
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xymon/Server
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Xymon
