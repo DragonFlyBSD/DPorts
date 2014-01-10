@@ -1,15 +1,15 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/pciids/Makefile 335386 2013-12-01 15:02:35Z sunpoet $
+# $FreeBSD: misc/pciids/Makefile 337635 2013-12-27 02:16:16Z sunpoet $
 
 PORTNAME=	pciids
-PORTVERSION=	20131130
+PORTVERSION=	20131225
 CATEGORIES=	misc
 MASTER_SITES=	LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Database of all known IDs used in PCI devices
 
-LICENSE=	BSD GPLv2 GPLv3
+LICENSE=	BSD3CLAUSE GPLv2 GPLv3
 LICENSE_COMB=	dual
 
 NO_BUILD=	yes
