@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11/menu-cache/Makefile 335355 2013-12-01 00:12:03Z nemysis $
+# $FreeBSD: x11/menu-cache/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	menu-cache
 PORTVERSION=	0.5.1
@@ -9,11 +9,10 @@ MASTER_SITES=	SF/lxde/menu-cache/menu-cache%20$${PORTVERSION:R}.x/
 MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	The menu-cache portion of LXDE
 
-USES=		gmake pkgconfig
+USES=		fam gmake pkgconfig
 USE_GNOME=	gnomehack glib20
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_FAM=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
