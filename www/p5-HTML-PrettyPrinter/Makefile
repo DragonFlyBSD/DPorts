@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-HTML-PrettyPrinter/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-PrettyPrinter/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	HTML-PrettyPrinter
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::PrettyPrinter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
