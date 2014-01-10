@@ -1,10 +1,11 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: mail/dovecot2/Makefile 334882 2013-11-25 19:03:16Z danilo $
+# $FreeBSD: mail/dovecot2/Makefile 339260 2014-01-09 15:51:57Z mat $
 
 PORTNAME=	dovecot
 PORTVERSION=	2.2.9
 CATEGORIES=	mail ipv6
 MASTER_SITES=	http://www.dovecot.org/releases/${PORTVERSION:R}/
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	bra@fsn.hu
 COMMENT=	Secure and compact IMAP and POP3 servers
@@ -12,7 +13,6 @@ COMMENT=	Secure and compact IMAP and POP3 servers
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	dual
 
-LATEST_LINK=	dovecot2
 CONFLICTS=	dovecot-1.[0-9]*
 
 ######################################################################
