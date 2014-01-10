@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/freepats/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/freepats/Makefile 337902 2013-12-28 20:26:37Z antoine $
 
 PORTNAME=	freepats
 PORTVERSION=	20060219
@@ -10,12 +10,11 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free and open set of instrument patches
 
 USE_BZIP2=	yes
-NO_STAGE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
 
 do-install:
-	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${DATADIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
