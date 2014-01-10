@@ -1,10 +1,12 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: net/boinc-client/Makefile 337233 2013-12-23 10:00:02Z rene $
+# $FreeBSD: net/boinc-client/Makefile 338546 2014-01-03 15:22:12Z rene $
 
 PORTNAME=	boinc-client
 PORTVERSION=	7.2.33
 CATEGORIES=	net
-MASTER_SITES=	ftp://rene-ladan.nl/pub/distfiles/
+MASTER_SITES=	${MASTER_SITE_LOCAL} \
+		ftp://rene-ladan.nl/pub/distfiles/
+MASTER_SITE_SUBDIR=rene
 
 MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Berkeley Open Infrastructure for Network Computing client
