@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: mail/p5-Mail-Cache/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Cache/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	Mail-Cache
 PORTVERSION=	0.1.2
@@ -17,7 +17,4 @@ BUILD_DEPENDS=	p5-File-BaseDir>=0:${PORTSDIR}/devel/p5-File-BaseDir \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Cache.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
