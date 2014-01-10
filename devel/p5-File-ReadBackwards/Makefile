@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: devel/p5-File-ReadBackwards/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-ReadBackwards/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	File-ReadBackwards
 PORTVERSION=	1.05
@@ -15,7 +15,4 @@ TEST_DEPENDS=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::ReadBackwards.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
