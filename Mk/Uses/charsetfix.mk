@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/charsetfix.mk 334392 2013-11-20 07:29:08Z bapt $
+# $FreeBSD: Mk/Uses/charsetfix.mk 338601 2014-01-04 00:02:08Z bapt $
 #
 # Lookup in Makefile.in to prevent a package from installing/modifying charset.alias
 #
@@ -17,9 +17,6 @@ IGNORE=	USES=charsetfix does not require args
 .endif
 
 CHARSETFIX_MAKEFILEIN?=	Makefile.in
-
-.PHONY: charsetfix-post-patch
-post-patch: charsetfix-post-patch
 
 charsetfix-post-patch:
 	@${FIND} ${WRKSRC} -name "${CHARSETFIX_MAKEFILEIN}" -type f | ${XARGS} ${REINPLACE_CMD} \

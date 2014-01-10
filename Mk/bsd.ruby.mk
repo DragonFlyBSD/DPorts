@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.ruby.mk 335012 2013-11-27 13:21:30Z swills $
+# $FreeBSD: Mk/bsd.ruby.mk 338496 2014-01-02 20:46:29Z swills $
 #
 
 .if !defined(Ruby_Include)
@@ -204,7 +204,7 @@ RUBY20=			"@comment "
 # Ruby 2.0
 #
 RUBY_RELVERSION=	2.0.0
-RUBY_PORTREVISION=	1
+RUBY_PORTREVISION=	3
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	353
 

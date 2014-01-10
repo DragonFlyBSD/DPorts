@@ -32,7 +32,6 @@
 # USE_FORTRAN= knob.  Here is the list of options for that knob:
 #
 #   USE_FORTRAN=	yes		# use gfortran47 (lang/gcc-aux)
-#   USE_FORTRAN=	g77		# use g77-34 (lang/gcc34)
 #   USE_FORTRAN=	ifort	# use the Intel compiler (lang/ifc)
 #
 # Due to object file incompatiblity between Fortran compilers, we strongly
@@ -41,23 +40,20 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 335855 2013-12-07 22:36:21Z gerald $
+# $FreeBSD: Mk/bsd.gcc.mk 338649 2014-01-04 15:49:15Z rene $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
 
 # All GCC versions supported by the ports framework.  Keep them in
 # ascending order and in sync with the table below. 
-GCCVERSIONS=	030402 040200 040400 040600 040700 040800 040900
+GCCVERSIONS=	040400 040600 040700 040800 040900
 
 # The first field if the DFLYVERSION in which it appeared in the base.
 # The second field is the DFLYVERSION in which it disappeared from the base.
 # The third field is the version as USE_GCC would use.
 # This doesn't work so well with DragonFly due to dual compilers
 # DPorts wasn't supported until DragonFly 3.3.
-GCCVERSION_030402=	100000  200000 3.4
-GCCVERSION_040100=	200000  300200 4.1
-GCCVERSION_040200=	     0       0 4.2
 GCCVERSION_040400=	300200  300400 4.4
 GCCVERSION_040600=	     0       0 4.6
 GCCVERSION_040700=	300400 9999999 4.7
@@ -114,11 +110,6 @@ RUN_DEPENDS+=	${LOCALBASE}/intel_fc_80/bin/ifort:${PORTSDIR}/lang/ifc
 FC:=	${LOCALBASE}/intel_fc_80/bin/ifort
 F77:=	${LOCALBASE}/intel_fc_80/bin/ifort
 
-# g77 from lang/gcc34.
-. elif ${USE_FORTRAN} == g77
-_USE_GCC:=	3.4
-FC:=	g77-34
-F77:=	g77-34
 . else
 IGNORE=	specifies unknown value "${USE_FORTRAN}" for USE_FORTRAN
 . endif
@@ -217,7 +208,6 @@ _GCC_PORT:=		gcc${V}
 CC:=			gcc${V}
 CXX:=			g++${V}
 CPP:=			cpp${V}
-.   if ${_USE_GCC} != 3.4
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
@@ -230,7 +220,6 @@ FFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 # The following is for the sakes of some ports which use this without
 # ever telling us; to be fixed.
 _GCC_BUILD_DEPENDS:=	${_GCC_PORT_DEPENDS}
-.   endif # ${_USE_GCC} != 3.4
 .  else # Use GCC in base.
 CC:=			gcc
 CXX:=			g++
@@ -244,14 +233,12 @@ MAKE_ENV+=		CCVER=gcc${DFLY_DEFAULT_VERSION}
 
 .if defined(_GCC_PORT_DEPENDS)
 BUILD_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
-. if ${_USE_GCC} != 3.4
 RUN_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
 .  if ${_USE_GCC:S/.//} > ${GCC_DEFAULT_VERSION}
 # Later GCC ports already depend on binutils; make sure whatever we
 # build leverages this as well.
 USE_BINUTILS=	yes
 .  endif
-. endif
 .endif
 .endif # defined(_USE_GCC) && !defined(FORCE_BASE_CC_FOR_TESTING)
 

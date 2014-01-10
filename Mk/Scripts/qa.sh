@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: Mk/Scripts/qa.sh 335787 2013-12-06 23:12:52Z bapt $
+# $FreeBSD: Mk/Scripts/qa.sh 339268 2014-01-09 18:43:36Z antoine $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -54,9 +54,8 @@ symlinks() {
 
 paths() {
 	rc=0
-	dirs="${STAGEDIR} ${WRKDIR}"
 	IFS="$LF" ; for f in `find ${STAGEDIR} -type f`;do
-		for d in ${dirs}; do
+		for d in ${STAGEDIR} ${WRKDIR}; do
 			if grep -q ${d} ${f} ; then
 				err "${f} is referring to ${d}"
 				rc=1

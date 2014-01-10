@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.licenses.mk 336084 2013-12-10 19:10:13Z bapt $
+# $FreeBSD: Mk/bsd.licenses.mk 338592 2014-01-03 23:05:37Z bapt $
 
 Licenses_Include_MAINTAINER=         portmgr@FreeBSD.org
 
@@ -760,13 +760,12 @@ install-license:
 .	endfor
 .endif
 # XXX @dirrmtry entry must be here (no way to do with PLIST_* vars)
+	@${ECHO_CMD} "@owner root" >> ${TMPPLIST}
+	@${ECHO_CMD} "@group wheel" >> ${TMPPLIST}
 	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dirrm ${_LICENSE_DIR_REL}" >> ${TMPPLIST}
 	@${ECHO_CMD} "@unexec rmdir %D/share/licenses 2>/dev/null || true" >> ${TMPPLIST}
 
-.else
-install-license:
-	@${DO_NADA}
 .endif
 
 .else	# !LICENSE

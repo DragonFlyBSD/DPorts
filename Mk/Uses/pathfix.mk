@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/pathfix.mk 334392 2013-11-20 07:29:08Z bapt $
+# $FreeBSD: Mk/Uses/pathfix.mk 338601 2014-01-04 00:02:08Z bapt $
 #
 # Lookup in Makefile.in and configure for common incorrect paths and set them
 # to respect FreeBSD hier
@@ -18,9 +18,6 @@ IGNORE=	USES=pathfix does not require args
 .endif
 
 PATHFIX_MAKEFILEIN?=	Makefile.in
-
-.PHONY: pathfix-pre-patch
-pre-patch: pathfix-pre-patch
 
 pathfix-pre-patch:
 	@${FIND} ${WRKSRC} -name "${PATHFIX_MAKEFILEIN}" -type f | ${XARGS} ${REINPLACE_CMD} -e \

@@ -1,11 +1,15 @@
 #
-# $FreeBSD: Mk/bsd.stage.mk 335625 2013-12-04 17:48:26Z antoine $
+# $FreeBSD: Mk/bsd.stage.mk 338982 2014-01-07 08:17:17Z bapt $
 #
 
 STAGEDIR?=	${WRKDIR}/stage
 DESTDIRNAME?=	DESTDIR
 
+.if defined(_DESTDIR_VIA_ENV)
+MAKE_ENV+=	${DESTDIRNAME}=${STAGEDIR}
+.else
 MAKE_ARGS+=	${DESTDIRNAME}=${STAGEDIR}
+.endif
 QA_ENV+=	STAGEDIR=${STAGEDIR} \
 		PREFIX=${PREFIX} \
 		LOCALBASE=${LOCALBASE} \

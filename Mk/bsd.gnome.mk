@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.gnome.mk 335873 2013-12-08 09:55:41Z kwm $
+# $FreeBSD: Mk/bsd.gnome.mk 337745 2013-12-27 16:05:36Z kwm $
 #	$NetBSD: $
 #     $MCom: ports/trunk/Mk/bsd.gnome.mk 18899 2013-11-18 18:34:00Z kwm $
 #
@@ -742,6 +742,9 @@ ltverhack_PRE_PATCH=	\
 			${REINPLACE_CMD} -e \
 			'/freebsd-elf)/,/;;/ s|major="\.$$current"|${ltverhack_LIB_VERSION}|; \
 			 /freebsd-elf)/,/;;/ s|versuffix="\.$$current"|versuffix="$$major"|' \
+			-e \
+			'/freebsd-elf)/,/;;/ s|major=\.$$current|${ltverhack_LIB_VERSION}|; \
+			 /freebsd-elf)/,/;;/ s|versuffix=\.$$current|versuffix="$$major"|' \
 			${WRKSRC}/$$file; \
 		fi; \
 	done

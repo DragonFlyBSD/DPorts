@@ -1,10 +1,19 @@
-# Date created:		2009-01-25
-# Whom:			Wen Heping <wenheping@gmail.com>
+# $FreeBSD: Mk/Uses/cran.mk 337869 2013-12-28 12:03:18Z bapt $
 #
-# $FreeBSD: Mk/bsd.cran.mk 335044 2013-11-27 18:56:43Z dbn $
+# Use the Comprehensive R Archive Network 
 #
+# MAINTAINER=	wen@FreeBSD.org
+#
+# Feature:	cran
+# Usage:	USES=cran or USES=cran:ARGS
+# Valid ARGS:	auto-plist
+#
+# auto-plist	The pkg-plist can be automatically compiled
 
-CRAN_Include_MAINTAINER=	wen@FreeBSD.org
+.if !defined(_INCLUDE_USES_CRAN_MK)
+_INCLUDE_USES_CRAN_MK=	yes
+
+VALID_ARGS=	auto-plist
 
 MASTER_SITE_CRAN+=	http://ftp.ctex.org/mirrors/CRAN/src/contrib/ \
 			http://cran.rakanu.com/src/contrib/ \
@@ -73,7 +82,7 @@ do-install:
 	${R_POSTCMD_INSTALL_OPTIONS} ${PORTNAME}
 .endif
 
-.if defined(R_MOD_AUTOPLIST)
+.if ${cran_ARGS:Mauto-plist}
 .if !target(post-install-script)
 post-install-script:
 	@${FIND} -ds ${STAGEDIR}${PREFIX}/${R_MOD_DIR} \( -type f -or -type l \) -print | \
@@ -83,3 +92,4 @@ post-install-script:
 .endif
 .endif
 
+.endif #_INCLUDE_USES_CRAN_MK

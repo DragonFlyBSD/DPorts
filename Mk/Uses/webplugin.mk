@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/webplugin.mk 334392 2013-11-20 07:29:08Z bapt $
+# $FreeBSD: Mk/Uses/webplugin.mk 338605 2014-01-04 00:26:03Z bapt $
 #
 # MAINTAINER= gecko@FreeBSD.org
 #
@@ -166,7 +166,6 @@ WEBPLUGIN_DIR?=		${_WEBPLUGIN_LIBDIR:S,^${LOCALBASE}/,${PREFIX}/,}/${WEBPLUGIN_N
 
 PLIST_SUB+=		WEBPLUGIN_DIR="${WEBPLUGIN_DIR:S,^${PREFIX}/,,}"
 
-.PHONY: webplugin-post-install
 webplugin-post-install:
 	@${ECHO_CMD} "@cwd ${LOCALBASE}" >> ${TMPPLIST}
 .for d in ${_WEBPLUGIN_LINKFARMS}
@@ -179,7 +178,5 @@ webplugin-post-install:
 .endfor
 	@${ECHO_CMD} "@unexec rmdir ${_WEBPLUGIN_SLDIR:S,^${LOCALBASE},%D,} 2>/dev/null || true" >> ${TMPPLIST}
 	@${ECHO_CMD} "@unexec rmdir ${_WEBPLUGIN_LIBDIR:S,^${LOCALBASE},%D,} 2>/dev/null || true" >> ${TMPPLIST}
-
-post-install: webplugin-post-install
 
 .endif

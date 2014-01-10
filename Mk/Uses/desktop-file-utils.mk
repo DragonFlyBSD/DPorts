@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/desktop-file-utils.mk 334392 2013-11-20 07:29:08Z bapt $
+# $FreeBSD: Mk/Uses/desktop-file-utils.mk 338605 2014-01-04 00:26:03Z bapt $
 #
 # handle dependency depends on desktop-file-utils and package regen
 #
@@ -18,10 +18,6 @@ IGNORE=	USES=desktop-file-utils does not require args
 
 BUILD_DEPENDS+=	update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 RUN_DEPENDS+=	update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
-
-# bolt our post-install target to post-install
-.PHONY: desktop-file-post-install
-post-install: desktop-file-post-install
 
 desktop-file-post-install:
 .if defined(NO_STAGE)

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/shebangfix.mk 335130 2013-11-28 23:57:53Z gerald $
+# $FreeBSD: Mk/Uses/shebangfix.mk 338605 2014-01-04 00:26:03Z bapt $
 #
 # Replace #! interpreters in scripts by what we actually have.
 #
@@ -52,9 +52,6 @@ IGNORE+=	missing definition for ${lang}_OLD_CMD
 .endif
 _SHEBANG_REINPLACE_ARGS+=	-e "1s|^\#![[:space:]]*${${lang}_OLD_CMD}|\#!${${lang}_CMD}|"
 .endfor
-
-.PHONY: fix-shebang
-pre-patch: fix-shebang
 
 fix-shebang:
 	@cd ${WRKSRC}; \
