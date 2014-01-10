@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: devel/p5-MouseX-ConfigFromFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MouseX-ConfigFromFile/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	MouseX-ConfigFromFile
 PORTVERSION=	0.05
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:MASAKI
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	markun@onohara.to
-COMMENT=	An abstract Mouse role for setting attributes from a configfile
+COMMENT=	Abstract Mouse role for setting attributes from a configfile
 
 BUILD_DEPENDS=	p5-Filter>=0:${PORTSDIR}/devel/p5-Filter \
 		p5-Mouse>=0.19:${PORTSDIR}/devel/p5-Mouse \
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MouseX::ConfigFromFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
