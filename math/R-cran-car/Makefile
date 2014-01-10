@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-car/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-car/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	car
 DISTVERSION=	2.0-19
@@ -12,7 +12,6 @@ COMMENT=	Companion to Applied Regression for R
 
 LICENSE=	GPLv2
 
-USE_R_MOD=		yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
