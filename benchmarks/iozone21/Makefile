@@ -1,18 +1,18 @@
 # Created by: jmz
-# $FreeBSD: benchmarks/iozone21/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/iozone21/Makefile 338610 2014-01-04 00:48:30Z bapt $
 
 PORTNAME=	iozone
 PORTVERSION=	2.01
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.cs.uni-sb.de/pub/others/
 EXTRACT_SUFX=	.shar.gz
+PKGNAMESUFFIX=	21
 
 MAINTAINER=	chifeng@gmail.com
 COMMENT=	Performance Test of Sequential File I/O (older version)
 
 CONFLICTS=	iozone-3.*
 
-LATEST_LINK=	iozone21
 PLIST_FILES=	bin/iozone
 
 EXTRACT_CMD=	( ${GZCAT} | ${AWK} '{if (/^\#!/) x++} {if(x) print $$0'}| ${SH} )
