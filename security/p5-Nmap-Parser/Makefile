@@ -1,5 +1,5 @@
 # Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
-# $FreeBSD: security/p5-Nmap-Parser/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Nmap-Parser/Makefile 337794 2013-12-27 19:47:35Z jadawin $
 
 PORTNAME=	Nmap-Parser
 PORTVERSION=	1.31
@@ -18,9 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Nmap::Parser.3
-
-NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^(POD2MAN_EXE.*)$$/\1 --lax/;' ${WRKSRC}/Makefile
 
