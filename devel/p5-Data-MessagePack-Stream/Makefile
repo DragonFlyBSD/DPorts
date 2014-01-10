@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-MessagePack-Stream/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-MessagePack-Stream/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Data-MessagePack-Stream
 PORTVERSION=	0.07
@@ -16,7 +16,4 @@ USES=		perl5
 USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=	yes
 
-MAN3=	Data::MessagePack::Stream.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
