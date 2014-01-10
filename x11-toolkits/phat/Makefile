@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: x11-toolkits/phat/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/phat/Makefile 337813 2013-12-27 21:48:55Z antoine $
 
 PORTNAME=	phat
 PORTVERSION=	0.4.1
@@ -12,12 +12,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of GTK+ widgets geared toward pro-audio apps
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk20 libgnomecanvas
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
 		-e 's|-Werror||g' \
