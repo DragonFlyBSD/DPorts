@@ -1,9 +1,9 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-c2hs/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-c2hs/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	c2hs
 PORTVERSION=	0.16.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -21,6 +21,5 @@ EXECUTABLE=	c2hs
 MAN1=		c2hs.1
 MAN1SRC=	doc/man1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
