@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: x11/tkXwin/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/tkXwin/Makefile 339205 2014-01-09 08:49:35Z gahr $
 
 PORTNAME=	tkXwin
 PORTVERSION=	1.0
@@ -11,16 +11,16 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dsh@vlink.ru
 COMMENT=	Tcl/Tk library to detect idle periods of an X session
 
+USES=		tk:84
 GNU_CONFIGURE=	yes
 USE_XORG=	xt xscrnsaver
 USE_LDCONFIG=	yes
-USE_TK=		84+
 
-CONFIGURE_ARGS=	--with-tcl=${TCL_LIBDIR} \
+CONFIGURE_ARGS=	--prefix=${PREFIX} \
+		--with-tcl=${TCL_LIBDIR} \
 		--with-tclinclude=${TCL_INCLUDEDIR} \
 		--with-tk=${TK_LIBDIR} \
 		--with-tkinclude=${TK_INCLUDEDIR}
 CONFIGURE_ENV=	INSTALL="${INSTALL_DATA}"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
