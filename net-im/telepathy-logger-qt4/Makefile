@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-logger-qt4/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/telepathy-logger-qt4/Makefile 338822 2014-01-05 20:31:13Z rakuco $
 
 PORTNAME=	telepathy-logger-qt4
 PORTVERSION=	0.6.0
@@ -28,7 +28,6 @@ USE_BZIP2=	yes
 CMAKE_ARGS=	-DUSE_COMMON_CMAKE_PACKAGE_CONFIG_DIR:BOOL=True
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/FIND_PROGRAM/ s,qmake ,,' \
 		${WRKSRC}/cmake/modules/FindQt.cmake
