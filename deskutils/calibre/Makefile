@@ -1,8 +1,9 @@
 # Created by: stas
-# $FreeBSD: deskutils/calibre/Makefile 335600 2013-12-04 00:56:26Z madpilot $
+# $FreeBSD: deskutils/calibre/Makefile 338906 2014-01-06 16:24:22Z makc $
 
 PORTNAME=	calibre
 PORTVERSION=	1.13.0
+PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 
@@ -56,7 +57,7 @@ SHEBANG_FILES=	src/calibre/ebooks/metadata/odt.py \
 		src/odf/*.py
 USE_XZ=		yes
 USE_PYTHON=	2.7
-USE_QT4=	qmake_build moc_build
+USE_QT4=	dbus qmake_build moc_build
 INSTALLS_ICONS=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-src
 CFLAGS+=	-I${LOCALBASE}/include
