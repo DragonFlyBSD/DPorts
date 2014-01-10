@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: games/vavoom/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/vavoom/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	vavoom
 PORTVERSION=	1.33
@@ -75,7 +75,7 @@ CMAKE_ARGS+=	-DWITH_MIKMOD=N
 .endif
 
 .if ${PORT_OPTIONS:MOPENAL}
-USE_OPENAL=	al
+USES+=		openal:al
 CMAKE_ARGS+=	-DWITH_OPENAL=Y
 .else
 CMAKE_ARGS+=	-DWITH_OPENAL=N
