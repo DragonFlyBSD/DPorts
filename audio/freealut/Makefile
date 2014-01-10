@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: audio/freealut/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/freealut/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	freealut
 PORTVERSION=	1.1.0
@@ -15,8 +15,7 @@ NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USES=		gmake pathfix pkgconfig
-USE_OPENAL=	al
+USES=		gmake openal:al pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 .include <bsd.port.pre.mk>
