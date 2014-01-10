@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Dumpfile/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/p5-SVN-Dumpfile/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	SVN-Dumpfile
 PORTVERSION=	0.13.107
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to access and manipulate Subversion dumpfiles
 
 BUILD_DEPENDS=	p5-Data-GUID>=0:${PORTSDIR}/devel/p5-Data-GUID \
@@ -19,12 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SVN::Dumpfile.3 \
-		SVN::Dumpfile::Node.3 \
-		SVN::Dumpfile::Node::Content.3 \
-		SVN::Dumpfile::Node::Headers.3 \
-		SVN::Dumpfile::Node::Properties.3 \
-		SVN::Dumpfile::Tutorial.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
