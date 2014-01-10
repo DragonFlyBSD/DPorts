@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: x11-themes/gtk-lila-theme-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk-lila-theme-extras/Makefile 338925 2014-01-06 19:28:31Z antoine $
 
 PORTNAME=	gtk-lila-theme-extras
 PORTVERSION=	0.4.5
@@ -17,11 +17,10 @@ NO_BUILD=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 
-NO_STAGE=	yes
 .SILENT:
 
 do-install:
-	${MKDIR} ${PREFIX}/share/themes
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${PREFIX}/share/themes)
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/themes)
 
 .include <bsd.port.mk>
