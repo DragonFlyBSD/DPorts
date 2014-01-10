@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@eborcom.com>
-# $FreeBSD: mail/maildrop/Makefile 335170 2013-11-29 12:00:30Z madpilot $
+# $FreeBSD: mail/maildrop/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 # You can define the following to enable further compile time
 # customizations:
@@ -93,7 +93,7 @@ CONFIGURE_ARGS+=	--enable-sendmail=/usr/sbin/sendmail
 .endif
 
 .if ${PORT_OPTIONS:MFAM} || exists(${LOCALBASE}/lib/libfam.so.0)
-USE_FAM=	yes
+USES+=			fam
 .endif
 
 .if defined(MAILDROP_TRUSTED_USERS)
