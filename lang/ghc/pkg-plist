@@ -1,4 +1,4 @@
-@comment $FreeBSD: lang/ghc/pkg-plist 319894 2013-06-04 18:53:40Z pgj $
+@comment $FreeBSD: lang/ghc/pkg-plist 339286 2014-01-09 21:32:12Z pgj $
 bin/ghc
 bin/ghci
 bin/ghc-pkg
@@ -12,6 +12,7 @@ bin/ghci-%%GHC_VERSION%%
 bin/ghc-pkg-%%GHC_VERSION%%
 bin/haddock-ghc-%%GHC_VERSION%%
 bin/runghc-%%GHC_VERSION%%
+man/man1/ghc.1.gz
 @exec /bin/ln -sf %D/bin/haddock-ghc-%%GHC_VERSION%% %D/bin/haddock || return true
 @unexec /bin/rm -f %D/bin/haddock || return true
 @exec /bin/mkdir -p %D/lib/cabal/ghc-%%GHC_VERSION%%             || return true
