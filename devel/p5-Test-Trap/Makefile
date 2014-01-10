@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Trap/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
+# $FreeBSD: devel/p5-Test-Trap/Makefile 338319 2013-12-31 14:58:39Z sunpoet $
 
 PORTNAME=	Test-Trap
-PORTVERSION=	0.2.2
+PORTVERSION=	0.2.3
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Trap exit codes, exceptions, output, etc
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Data-Dump>=0:${PORTSDIR}/devel/p5-Data-Dump
 RUN_DEPENDS:=	${BUILD_DEPENDS}
