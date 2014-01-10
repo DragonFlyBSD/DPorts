@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-Telnet/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Telnet/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	Net-Telnet
 PORTVERSION=	3.04
@@ -12,7 +12,4 @@ COMMENT=	Perl5 module to access and use telnet protocol
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Telnet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
