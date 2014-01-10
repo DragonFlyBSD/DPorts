@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: security/apache-xml-security-c/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/apache-xml-security-c/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	xml-security-c
 PORTVERSION=	1.7.2
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	apache-
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Apache XML security libraries - C++ version
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 OPTIONS_DEFINE=		XERCES_3
 OPTIONS_DEFAULT=	XERCES_3
