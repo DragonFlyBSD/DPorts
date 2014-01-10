@@ -1,5 +1,5 @@
 # Created by: William Grzybowski
-# $FreeBSD: devel/py-hgtools/Makefile 328039 2013-09-23 20:09:24Z wg $
+# $FreeBSD: devel/py-hgtools/Makefile 337524 2013-12-26 14:40:41Z wg $
 
 PORTNAME=	hgtools
 PORTVERSION=	4.0
@@ -14,12 +14,7 @@ LICENSE=	GPLv2
 
 USE_ZIP=	yes
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-
-NO_STAGE=	yes
-
-post-patch:
-	@${REINPLACE_CMD} 's/license="GPL2",/license="GPL2", zip_safe=False,/' \
-		${WRKSRC}/setup.py
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
