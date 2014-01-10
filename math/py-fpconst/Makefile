@@ -1,18 +1,17 @@
 # Created by: Rui Lopes <rui@ruilopes.com>
-# $FreeBSD: math/py-fpconst/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-fpconst/Makefile 337848 2013-12-28 10:53:33Z wg $
 
 PORTNAME=		fpconst
 PORTVERSION=		0.7.2
 CATEGORIES=		math python
-MASTER_SITES=		${MASTER_SITE_CHEESESHOP}
-MASTER_SITE_SUBDIR=	source/f/fpconst
+MASTER_SITES=		CHEESESHOP
 PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Utilities for handling IEEE 754 floating point special values
 
-USE_PYTHON=		yes
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
