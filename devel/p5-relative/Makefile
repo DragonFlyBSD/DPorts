@@ -1,5 +1,5 @@
 # Created by: skreuzer@exit2shell.com
-# $FreeBSD: devel/p5-relative/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-relative/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	relative
 PORTVERSION=	0.04
@@ -19,7 +19,4 @@ BUILD_DEPEND=	${RUN_DEPENDS} \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		relative.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
