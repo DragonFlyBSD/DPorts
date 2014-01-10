@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: devel/p5-Gtk2-Spell/Makefile 329062 2013-10-02 16:13:01Z acm $
+# $FreeBSD: devel/p5-Gtk2-Spell/Makefile 338909 2014-01-06 17:28:12Z az $
 
 PORTNAME=	Gtk2-Spell
 PORTVERSION=	1.04
@@ -15,14 +15,11 @@ BUILD_DEPENDS=	p5-Cairo>=0:${PORTSDIR}/graphics/p5-Cairo \
 		p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig \
 		p5-Glib2>=1.001:${PORTSDIR}/devel/p5-Glib2 \
 		p5-Gtk2>=1.001:${PORTSDIR}/x11-toolkits/p5-Gtk2
-LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
+LIB_DEPENDS=	libgtkspell.so:${PORTSDIR}/textproc/gtkspell
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Gtk2::Spell.3
-
-NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -e 's=1.00rc2=1.001=g' ${WRKSRC}/Makefile.PL
 
