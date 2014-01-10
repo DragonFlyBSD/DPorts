@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gnome-vfs/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gnome-vfs/Makefile 338691 2014-01-04 23:40:44Z antoine $
 #   $MCom: ports/devel/gnome-vfs/Makefile,v 1.191 2010/09/29 12:30:29 kwm Exp $
 
 PORTNAME=	gnome-vfs
@@ -48,7 +48,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libfam.so) || !defined(WITHOUT_FAM)
-USE_FAM=	yes
+USES+=		fam
 .endif
 
 .if exists(${LOCALBASE}/lib/libkrb5.so)
