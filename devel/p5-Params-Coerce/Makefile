@@ -1,5 +1,5 @@
 # Created by: Cory R. King <coryking@mozimedia.com>
-# $FreeBSD: devel/p5-Params-Coerce/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Params-Coerce/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Params-Coerce
 PORTVERSION=	0.14
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Params-Util>=0.20:${PORTSDIR}/devel/p5-Params-Util
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Params::Coerce.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
