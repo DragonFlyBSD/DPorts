@@ -1,5 +1,5 @@
 # Created by: FreeBSD Bio porters (bio@freebsd.net)
-# $FreeBSD: biology/biojava/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/biojava/Makefile 338550 2014-01-03 15:46:52Z adamw $
 
 PORTNAME=	biojava
 DISTVERSION=	1.7
@@ -24,8 +24,11 @@ PORTDOCS=	biojava
 PORTEXAMPLES=	demos
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-.if !defined(WITHOUT_TESTS)
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
+.if !defined(WITHOUT_TESTS)
 regression-test:
 	@(cd ${BUILD_WRKSRC}; \
 		${SETENV} ${MAKE_ENV} ${ANT} ${MAKE_ARGS} runtests)
@@ -40,7 +43,7 @@ do-install:
 .endfor
 	@${ECHO_MSG} " [ DONE ]"
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} -n ">> Installing documentation in ${DOCSDIR}..."
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCSDIR}
@@ -51,7 +54,7 @@ do-install:
 	@${ECHO_MSG} " [ DONE ]"
 .endif
 
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${ECHO_MSG} -n ">> Installing examples in ${EXAMPLESDIR}..."
 	@${MKDIR} ${EXAMPLESDIR}
 	cd ${WRKSRC}/doc && \
