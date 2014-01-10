@@ -1,8 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: x11/eaglemode/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/eaglemode/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	eaglemode
 PORTVERSION=	0.84.0
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -53,7 +54,7 @@ PLIST_SUB+=	EMSVG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPDF}
-LIB_DEPENDS+=	poppler-glib:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS+=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 USE_GNOME+=	gtk20
 PLIST_SUB+=	EMPDF=""
 .else
