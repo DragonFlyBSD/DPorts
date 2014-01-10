@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Proc-PID-File/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Proc-PID-File/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	Proc-PID-File
 PORTVERSION=	1.27
@@ -8,12 +8,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lth@FreeBSD.org
-COMMENT=	A module to manage process id files
+COMMENT=	Perl module to manage process id files
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Proc::PID::File.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
