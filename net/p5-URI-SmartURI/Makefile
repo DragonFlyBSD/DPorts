@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: net/p5-URI-SmartURI/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-URI-SmartURI/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	URI-SmartURI
 PORTVERSION=	0.032
@@ -27,7 +27,4 @@ TEST_DEPENDS=	p5-Test-Fatal>0:${PORTSDIR}/devel/p5-Test-Fatal \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		URI::SmartURI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
