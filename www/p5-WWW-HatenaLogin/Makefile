@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WWW-HatenaLogin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-HatenaLogin/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	WWW-HatenaLogin
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::HatenaLogin.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
