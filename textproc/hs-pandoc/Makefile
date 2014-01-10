@@ -1,9 +1,9 @@
 # Created by: John MacFarlane <jgm@berkeley.edu>
-# $FreeBSD: textproc/hs-pandoc/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: textproc/hs-pandoc/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	pandoc
 PORTVERSION=	1.11.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -31,7 +31,6 @@ OPTIONS_DEFINE=		EMBED_DATA_FILES
 
 EMBED_DATA_FILES_DESC=	Embed data files in binary for relocatable executable
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MEMBED_DATA_FILES}
