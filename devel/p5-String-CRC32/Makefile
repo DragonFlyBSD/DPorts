@@ -1,8 +1,8 @@
 # Created by: ache
-# $FreeBSD: devel/p5-String-CRC32/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD: devel/p5-String-CRC32/Makefile 338321 2013-12-31 14:59:40Z sunpoet $
 
 PORTNAME=	String-CRC32
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
