@@ -1,8 +1,9 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 334447 2013-11-20 19:56:07Z delphij $
+# $FreeBSD: graphics/ImageMagick/Makefile 338965 2014-01-07 00:23:34Z rakuco $
 
 PORTNAME=	ImageMagick
 DISTVERSION=	6.8.0-7
 PORTREVISION=	3
+PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
 		http://servingzone.com/mirrors/ImageMagick/ \
@@ -27,10 +28,10 @@ MASTER_SITES=	http://www.imagemagick.org/download/ \
 		ftp://ftp.is.co.za/pub/imagemagick/ \
 		ftp://ftp.fifi.org/pub/ImageMagick/
 
-MAINTAINER=	c.petrik.sosa@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Image processing tools
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USES=		pkgconfig:both pathfix perl5
 USE_XZ=		yes
@@ -92,7 +93,7 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5}
 PLIST_SUB+=		WITH_PERL=''
 MAN3=			Image::Magick.3
 MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VER}
-# PerlMagick not works with threads, if perl is not threaded, and vice versa
+# PerlMagick does not work with threads, if perl is not threaded, and vice versa
 . if defined(PERL_THREADED)
 _IMAGEMAGICK_THREADS_PERL_MSG=Perl is threaded
 _IMAGEMAGICK_THREADS=yes
@@ -130,10 +131,10 @@ CONFIGURE_ARGS+=	--enable-openmp
 CONFIGURE_ARGS+=	--disable-openmp
 .endif
 
-# Faster, but poor quality
 .if ${PORT_OPTIONS:M16BIT_PIXEL}
 PLIST_SUB+=		QBIT='Q16'
 .else
+# Faster, but poor quality
 CONFIGURE_ARGS+=	--with-quantum-depth=8
 PLIST_SUB+=		QBIT='Q8'
 .endif
