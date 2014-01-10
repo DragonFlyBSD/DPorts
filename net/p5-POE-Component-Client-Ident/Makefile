@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/p5-POE-Component-Client-Ident/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POE-Component-Client-Ident/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	POE-Component-Client-Ident
 PORTVERSION=	1.16
@@ -17,9 +17,4 @@ TEST_DEPENDS=	p5-Test-POE-Server-TCP>=0:${PORTSDIR}/devel/p5-Test-POE-Server-TCP
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Client::Ident.3 \
-		POE::Component::Client::Ident::Agent.3 \
-		POE::Filter::Ident.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
