@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: devel/p5-IO-MultiPipe/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-MultiPipe/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	IO-MultiPipe
 PORTVERSION=	0.0.0
@@ -14,7 +14,4 @@ COMMENT=	Check for errors when running a command through multiple pipes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::MultiPipe.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
