@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Type-Tiny/Makefile 337269 2013-12-23 17:54:15Z sunpoet $
+# $FreeBSD: devel/p5-Type-Tiny/Makefile 338454 2014-01-02 16:23:02Z sunpoet $
 
 PORTNAME=	Type-Tiny
-PORTVERSION=	0.036
+PORTVERSION=	0.038
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TOBYINK
