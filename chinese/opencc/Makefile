@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/opencc/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/opencc/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	opencc
 PORTVERSION=	0.3.0
@@ -9,14 +9,11 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Open Chinese Convert library and utilities
 
-LICENSE=	AL2
-
-MAN1=	opencc.1 opencc_dict.1
+LICENSE=	APACHE20
 
 USES=		cmake
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
