@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/cego/Makefile 334910 2013-11-26 00:30:44Z wg $
+# $FreeBSD: databases/cego/Makefile 339018 2014-01-07 18:53:09Z wg $
 
 PORTNAME=	cego
-PORTVERSION=	2.19.13
+PORTVERSION=	2.19.14
 CATEGORIES=	databases
 MASTER_SITES=	http://www.lemke-it.com/
 
