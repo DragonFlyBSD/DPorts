@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: mail/p5-Email-Find/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Find/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Email-Find
 PORTVERSION=	0.10
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Email::Find.3 Email::Find::addrspec.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
