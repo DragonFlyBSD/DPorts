@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Algorithm-KMeans/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Algorithm-KMeans/Makefile 338751 2014-01-05 12:07:20Z az $
 
 PORTNAME=	Algorithm-KMeans
 PORTVERSION=	1.40
@@ -21,7 +21,4 @@ RUN_DEPENDS=	p5-Graphics-GnuplotIF>=1.4:${PORTSDIR}/graphics/p5-Graphics-Gnuplot
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::KMeans.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
