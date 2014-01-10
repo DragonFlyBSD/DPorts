@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/py-s3cmd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-s3cmd/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	s3cmd
 PORTVERSION=	1.0.1
@@ -15,8 +15,6 @@ USE_PYDISTUTILS=	yes
 USE_PYTHON=	2.5-2.7
 
 MAN1=		s3cmd.1
-
-FETCH_ARGS=	-Fpr
 
 NO_STAGE=	yes
 post-patch:
