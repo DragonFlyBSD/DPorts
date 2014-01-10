@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/thrift/Makefile 333296 2013-11-09 15:09:13Z wg $
+# $FreeBSD: devel/thrift/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION}	# get these from bsd.thrift.mk. any upgrade needs to check ALL dependencies
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	/thrift/${PORTVERSION}
 MAINTAINER=	komarov@valerka.net
 COMMENT=	Framework for scalable cross-language services development
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_AUTOTOOLS=	autoconf autoheader:env aclocal automake libtool
 ACLOCAL_ARGS=	-I${WRKSRC}/aclocal
