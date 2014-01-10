@@ -1,10 +1,10 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: shells/bash/Makefile 332973 2013-11-06 12:18:54Z mat $
+# $FreeBSD: shells/bash/Makefile 337433 2013-12-25 17:42:54Z bapt $
 
 PORTNAME=		bash
 PATCHLEVEL=		45
 PORTVERSION=		4.2.${PATCHLEVEL:S/^0//g}
-PORTREVISION?=		0
+PORTREVISION?=		1
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GNU:S/$/:bash/} \
 			ftp://ftp.cwru.edu/pub/%SUBDIR%/:faq
@@ -91,7 +91,8 @@ CPPFLAGS+=		${PTHREAD_CFLAGS} \
 			-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 
-CONFIGURE_ENV=		YACC="bison -y"
+CONFIGURE_ENV=		YACC="bison -y" \
+			bash_cv_dev_fd=absent
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/doc/bash.1
