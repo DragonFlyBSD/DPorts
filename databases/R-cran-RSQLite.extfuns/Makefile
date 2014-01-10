@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-RSQLite.extfuns/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: databases/R-cran-RSQLite.extfuns/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	RSQLite.extfuns
 PORTVERSION=	0.0.1
@@ -10,12 +10,11 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	SQLite extension functions for RSQLite
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	R-cran-RSQLite>=0.11.1:${PORTSDIR}/databases/R-cran-RSQLite
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
