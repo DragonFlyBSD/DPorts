@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-B-Hooks-OP-PPAddr/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Hooks-OP-PPAddr/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	B-Hooks-OP-PPAddr
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	B::Hooks::OP::PPAddr.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
