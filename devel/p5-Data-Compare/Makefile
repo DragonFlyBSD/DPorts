@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Data-Compare/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Compare/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Data-Compare
 PORTVERSION=	1.2200
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Compare.3 Data::Compare::Plugins.3 \
-		Data::Compare::Plugins::Scalar::Properties.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
