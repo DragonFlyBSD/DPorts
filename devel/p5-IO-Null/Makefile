@@ -1,5 +1,5 @@
 # Created by: Rouslan Iskhakov <rouslan@rshell.net>
-# $FreeBSD: devel/p5-IO-Null/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-Null/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	IO-Null
 PORTVERSION=	1.01
@@ -13,7 +13,4 @@ COMMENT=	IO::Null - class for null filehandles
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::Null.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
