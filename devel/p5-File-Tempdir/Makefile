@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: devel/p5-File-Tempdir/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Tempdir/Makefile 338909 2014-01-06 17:28:12Z az $
 
 PORTNAME=	File-Tempdir
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Perl5 module to provide an object interface for File::Temp
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Tempdir.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
