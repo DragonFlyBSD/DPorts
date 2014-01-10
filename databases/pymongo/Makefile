@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: databases/pymongo/Makefile 336627 2013-12-16 11:49:54Z wg $
+# $FreeBSD: databases/pymongo/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	pymongo
 PORTVERSION=	2.6.3
@@ -9,7 +9,7 @@ MASTER_SITES=	CHEESESHOP
 MAINTAINER=	wg@FreeBSD.org
 COMMENT=	Python driver for MongoDB
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
