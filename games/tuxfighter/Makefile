@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/tuxfighter/Makefile 335241 2013-11-29 22:26:25Z nemysis $
+# $FreeBSD: games/tuxfighter/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	tuxfighter
 PORTVERSION=	54
@@ -20,7 +20,6 @@ RUN_DEPENDS=	${PYGAME}
 
 WRKSRC=		${WRKDIR}
 
-FETCH_ARGS?=	-Fpr
 USE_PYTHON=	yes
 
 PORTDOCS=	readme_TuxFighter54.txt
