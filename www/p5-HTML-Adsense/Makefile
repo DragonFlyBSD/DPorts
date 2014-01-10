@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-HTML-Adsense/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Adsense/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	HTML-Adsense
 PORTVERSION=	0.2
@@ -16,9 +16,6 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Adsense.3
-
-NO_STAGE=	yes
 post-patch:
 	${RM} -f ${WRKSRC}/lib/HTML/._Adsense.pm
 
