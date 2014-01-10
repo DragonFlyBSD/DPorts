@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@luna2.org>
-# $FreeBSD: audio/timidity++/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/timidity++/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	timidity++
 PORTVERSION=	2.13.2
@@ -80,7 +80,7 @@ post-install::
 .endif # !defined(PKGNAMESUFFIX)
 
 post-install::
-.if !defined(NOPORTDOCS) && defined(DOCFILES)
+.if ${PORT_OPTIONS:MDOCS} && defined(DOCFILES)
 .for lang in ${DOCLANG}
 	${MKDIR} ${PREFIX}/share/doc/${lang:C,^C$,,:C,ja_.*,ja/,}timidity++
 	cd ${WRKSRC}/doc/${lang} && ${INSTALL_DATA} ${DOCFILES}	\
