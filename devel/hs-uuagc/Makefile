@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-uuagc/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-uuagc/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	uuagc
 PORTVERSION=	0.9.42.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -16,6 +16,5 @@ USE_CABAL=	haskell-src-exts>=1.11.1 mtl>=1.1.1.1 uuagc-cabal>=1.0.2.0 \
 
 EXECUTABLE=	uuagc
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
