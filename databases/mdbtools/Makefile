@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: databases/mdbtools/Makefile 333427 2013-11-10 19:18:42Z wg $
+# $FreeBSD: databases/mdbtools/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	mdbtools
 PORTVERSION=	0.7.1
@@ -17,7 +17,6 @@ BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk \
 		txt2man:${PORTSDIR}/textproc/txt2man
 LIB_DEPENDS=	libiodbc.so:${PORTSDIR}/databases/libiodbc
 
-FETCH_ARGS?=	-Fpr
 USES=		bison pkgconfig iconv
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_LDCONFIG=	yes
