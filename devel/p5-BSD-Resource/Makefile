@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-BSD-Resource/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-BSD-Resource/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	BSD-Resource
 PORTVERSION=	1.2907
@@ -13,7 +13,4 @@ COMMENT=	Perl module to access BSD resource limit and priority functions
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BSD::Resource.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
