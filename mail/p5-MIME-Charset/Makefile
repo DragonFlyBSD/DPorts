@@ -1,5 +1,5 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: mail/p5-MIME-Charset/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Charset/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	MIME-Charset
 PORTVERSION=	1.008
@@ -14,7 +14,4 @@ COMMENT=	Charset Informations for MIME
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::Charset.3 MIME::Charset::JA_JP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
