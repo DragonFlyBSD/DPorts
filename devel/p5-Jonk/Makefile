@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Jonk/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Jonk/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Jonk
 PORTVERSION=	0.05
@@ -18,14 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Jonk.3 \
-	Jonk::Client.3 \
-	Jonk::Cookbook.3 \
-	Jonk::Cookbook::Basic.3 \
-	Jonk::Cookbook::DequeueSpecificJob.3 \
-	Jonk::Cookbook::ErrorHandling.3 \
-	Jonk::Cookbook::ForkModel.3 \
-	Jonk::Worker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
