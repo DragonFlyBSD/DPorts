@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Plugin-Log-Dispatch/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Log-Dispatch/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Catalyst-Plugin-Log-Dispatch
 PORTVERSION=	0.121
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Plugin::Log::Dispatch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
