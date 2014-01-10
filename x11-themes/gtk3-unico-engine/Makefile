@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/gtk3-unico-engine/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk3-unico-engine/Makefile 339272 2014-01-09 20:06:36Z olivierd $
 
 PORTNAME=	unico
 PORTVERSION=	1.0.2
@@ -13,11 +13,11 @@ PKGNAMESUFFIX=	-engine
 MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Gtk+ 3.0 engine
 
+LICENSE=	LGPL3
+
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		pkgconfig gmake
 USE_GNOME=	cairo glib20 gtk30
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
