@@ -1,9 +1,8 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-dogpile.cache/Makefile 337172 2013-12-22 00:29:05Z wg $
+# $FreeBSD: devel/py-dogpile.cache/Makefile 339216 2014-01-09 11:41:49Z wg $
 
 PORTNAME=	dogpile.cache
-PORTVERSION=	0.5.2
-PORTREVISION=	1
+PORTVERSION=	0.5.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
