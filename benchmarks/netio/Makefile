@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: benchmarks/netio/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/netio/Makefile 338135 2013-12-30 16:34:57Z arved $
 
 PORTNAME=	netio
 PORTVERSION=	1.26
@@ -22,7 +22,6 @@ MAKE_ENV+=	OUT="-o" LIBS=${PTHREAD_LIBS}
 PLIST_FILES+=	bin/netio6
 .endif
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} O=.o CFLAGS="${CFLAGS}" ${GMAKE} all
@@ -32,9 +31,9 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/netio ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/netio ${STAGEDIR}${PREFIX}/bin
 .if defined(WITH_IPV6)
-	${INSTALL_PROGRAM} ${WRKSRC}/netio6 ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/netio6 ${STAGEDIR}${PREFIX}/bin
 .endif
 
 .include <bsd.port.mk>
