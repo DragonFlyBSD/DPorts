@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/p5-parent/Makefile 327796 2013-09-21 08:04:04Z rafan $
+# $FreeBSD: devel/p5-parent/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	parent
 PORTVERSION=	0.228
@@ -14,9 +14,6 @@ COMMENT=	Establish an ISA relationship with base classes at compile time
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		parent.3
-
-NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
 
