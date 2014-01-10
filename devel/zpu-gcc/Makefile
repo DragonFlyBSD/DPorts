@@ -1,0 +1,35 @@
+# $FreeBSD: devel/zpu-gcc/Makefile 338833 2014-01-05 23:27:06Z db $
+
+PORTNAME=	zpu-gcc
+PORTVERSION=	1.0
+CATEGORIES=	devel
+MASTER_SITES=	http://opensource.zylin.com/zpudownload.html/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	db
+DISTNAME=	zpu-toolchain-${PORTVERSION}
+
+MAINTAINER=	db@FreeBSD.org
+COMMENT=	ZPU gcc compiler
+
+BUILD_DEPENDS=	${LOCALBASE}/zpu/bin/zpu-elf-as:${PORTSDIR}/devel/zpu-binutils
+RUN_DEPENDS:=	${BUILD_DEPENDS}
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/toolchain
+USES=		gettext gmake
+MANDIRS=	${PREFIX}/zpu/man
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/%%CC%%/${CC}/' ${WRKSRC}/build.sh
+	${CP}	${FILESDIR}/install.sh ${WRKSRC}
+	@${REINPLACE_CMD} -e 's/%%GMAKE%%/${GMAKE}/' ${WRKSRC}/build.sh \
+		${WRKSRC}/install.sh
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/build.sh
+	@${REINPLACE_CMD} -e 's|%%DESTDIR%%|${STAGEDIR}|g' ${WRKSRC}/gcc/Makefile.in 
+
+do-install:
+	cd ${WRKSRC} && ${SH} install.sh
+
+do-build:
+	cd ${WRKSRC} && ${SH} build.sh
+
+.include <bsd.port.mk>
