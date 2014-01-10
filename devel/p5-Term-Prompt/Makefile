@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Term-Prompt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-Prompt/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	Term-Prompt
 PORTVERSION=	1.04
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Term::Prompt.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
