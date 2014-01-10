@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: net/p5-Net-Google-AuthSub/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Google-AuthSub/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	Net-Google-AuthSub
 PORTVERSION=	0.5
@@ -17,8 +17,4 @@ RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Google::AuthSub::Response.3 \
-		Net::Google::AuthSub.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
