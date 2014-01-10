@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: audio/arss/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/arss/Makefile 337574 2013-12-26 17:43:16Z bapt $
 
 PORTNAME=	arss
 PORTVERSION=	0.2.3
@@ -15,7 +15,6 @@ LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/src
 
-NO_STAGE=	yes
 USES=		cmake
 USE_LDCONFIG=	${PREFIX}/lib
 CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
@@ -23,9 +22,7 @@ CMAKE_C_FLAGS=	${CFLAGS}
 
 PLIST_FILES=	bin/arss
 
-.include <bsd.port.pre.mk>
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/arss ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/arss ${STAGEDIR}${PREFIX}/bin
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
