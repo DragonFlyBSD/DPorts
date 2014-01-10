@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-traits/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/py-traits/Makefile 338516 2014-01-03 01:53:21Z bapt $
 
 PORTNAME=	traits
 PORTVERSION=	3.6.0
@@ -16,7 +16,6 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}EnthoughtBase>=3.0.1:${PORTSDIR}/devel/py-
 		${PYNUMPY}
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-FETCH_ARGS=		-pRr
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Traits
