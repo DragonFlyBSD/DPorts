@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 338773 2014-01-05 13:41:52Z az $
 
 PORTNAME=	Catalyst-Authentication-Store-DBIx-Class
 PORTVERSION=	0.1505
@@ -26,9 +26,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Authentication::Realm::SimpleDB.3 \
-		Catalyst::Authentication::Store::DBIx::Class.3 \
-		Catalyst::Authentication::Store::DBIx::Class::User.3 \
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
