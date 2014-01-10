@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/google-appengine/Makefile 331956 2013-10-29 14:51:28Z nivit $
+# $FreeBSD: www/google-appengine/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	google-appengine
 PORTVERSION=	1.8.6
@@ -11,7 +11,7 @@ DISTFILES=	${PORTNAME:S|-|_|}_${PORTVERSION}.zip
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Development tools for Google App Engine (SDK)
 
-LICENSE=	AL2 BSD GPLv2 LGPL21 MIT MPL PSFL
+LICENSE=	APACHE20 BSD GPLv2 LGPL21 MIT MPL PSFL
 LICENSE_COMB=	multi
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>=${PYTHON_VER}:${PORTSDIR}/databases/py-sqlite3 \
