@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-StackTrace-AsHTML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-StackTrace-AsHTML/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Devel-StackTrace-AsHTML
 PORTVERSION=	0.14
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Devel::StackTrace::AsHTML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
