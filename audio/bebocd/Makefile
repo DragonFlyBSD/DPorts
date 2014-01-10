@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/bebocd/Makefile 334759 2013-11-24 18:45:54Z bapt $
+# $FreeBSD: audio/bebocd/Makefile 339110 2014-01-08 12:10:20Z novel $
 
 PORTNAME=	bebocd
 PORTVERSION=	0.4
@@ -11,6 +11,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK2 CD Player
 
 LIB_DEPENDS=	libcdaudio.so:${PORTSDIR}/audio/libcdaudio
+
+DEPRECATED=	abandoned by mainstream
+EXPIRATION_DATE=	2014-02-08
 
 USE_XORG=	x11
 USES=		gmake pathfix pkgconfig
