@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: benchmarks/blogbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/blogbench/Makefile 338548 2014-01-03 15:34:13Z adamw $
 
 PORTNAME=	blogbench
 PORTVERSION=	1.1
@@ -18,8 +18,11 @@ PLIST_FILES=	bin/blogbench
 PORTDOCS=	README
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
 .endif
