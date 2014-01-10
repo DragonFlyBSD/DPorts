@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net/p5-Net-SSH-Expect/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SSH-Expect/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	Net-SSH-Expect
 PORTVERSION=	1.09
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SSH::Expect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
