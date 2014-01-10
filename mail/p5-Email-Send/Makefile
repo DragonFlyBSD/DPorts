@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Send/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Send/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Email-Send
 PORTVERSION=	2.199
@@ -20,12 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Email::Send.3 \
-	Email::Send::NNTP.3 \
-	Email::Send::Qmail.3 \
-	Email::Send::SMTP.3 \
-	Email::Send::Sendmail.3 \
-	Email::Send::Test.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
