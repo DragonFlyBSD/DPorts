@@ -1,8 +1,8 @@
-# $FreeBSD: textproc/hs-xmlhtml/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: textproc/hs-xmlhtml/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	xmlhtml
 PORTVERSION=	0.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 USE_CABAL=	blaze-builder>=0.2 blaze-html>=0.5 blaze-markup>=0.5 \
 		parsec>=3.1.2 text>=0.11 unordered-containers>=0.1.4
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
