@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba36/Makefile 336043 2013-12-10 04:18:02Z timur $
+# $FreeBSD: net/samba36/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.22
@@ -239,7 +239,7 @@ WANT_EXP_MODULES+=	vfs_cacheprime vfs_catia vfs_commit vfs_dirsort \
 .endif
 
 .if ${PORT_OPTIONS:MFAM_SUPPORT}
-USE_FAM=		yes
+USES+=			fam
 WANT_EXP_MODULES+=	vfs_notify_fam
 CONFIGURE_ARGS+=	--enable-fam
 .else
