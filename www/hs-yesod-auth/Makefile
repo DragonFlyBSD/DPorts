@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-yesod-auth/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-yesod-auth/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	yesod-auth
 PORTVERSION=	1.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -20,6 +20,5 @@ USE_CABAL=	aeson>=0.5 authenticate>=1.3 blaze-html>=0.5 \
 		unordered-containers wai>=1.4 yesod-core>=1.2 yesod-form>=1.3 \
 		yesod-persistent>=1.2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
