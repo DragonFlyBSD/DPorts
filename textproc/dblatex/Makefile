@@ -1,9 +1,9 @@
 # Created by: Peter Johnson <johnson.peter@gmail.com>
-# $FreeBSD: textproc/dblatex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/dblatex/Makefile 337966 2013-12-29 11:45:46Z antoine $
 
 PORTNAME=	dblatex
 PORTVERSION=	0.3.2
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -16,17 +16,23 @@ RUN_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
 
 USE_BZIP2=	yes
 USE_TEX=	tex
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=yes
 
-USE_PYDISTUTILS=		yes
-PYDISTUTILS_AUTOPLIST=		yes
-PYDISTUTILS_INSTALLARGS=	-c -O1 --prefix=${PREFIX} \
-				--catalogs=${PREFIX}/share/xml/catalog.ports
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e '/pdfdocs),/d' ${WRKSRC}/setup.py
 	@${REINPLACE_CMD} -e '/htmldoc)/d' ${WRKSRC}/setup.py
 .endif
 	@${REINPLACE_CMD} -e "s,share/man/man1,man/man1,g" ${WRKSRC}/setup.py
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+PYDISTUTILS_INSTALLARGS+=	--catalogs=${PREFIX}/share/xml/catalog.ports
+
+.include <bsd.port.post.mk>
