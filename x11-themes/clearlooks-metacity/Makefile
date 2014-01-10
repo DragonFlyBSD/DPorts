@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-themes/clearlooks-metacity/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/clearlooks-metacity/Makefile 338911 2014-01-06 17:42:09Z antoine $
 #   $MCom: ports/x11-themes/clearlooks-metacity/Makefile,v 1.3 2007/09/10 15:44:29 mezz Exp $
 
 PORTNAME=	clearlooks-metacity
@@ -24,9 +24,8 @@ PLIST_FILES=	%%DATADIR%%/metacity-theme-1.xml
 PLIST_DIRS=	%%DATADIR%% \
 		share/themes/Clearlooks
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${PREFIX}/${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/metacity-theme-1.xml ${PREFIX}/${DATADIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/metacity-theme-1.xml ${STAGEDIR}${PREFIX}/${DATADIR}
 
 .include <bsd.port.mk>
