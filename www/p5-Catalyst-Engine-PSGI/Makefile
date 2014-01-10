@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-Engine-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Engine-PSGI/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	Catalyst-Engine-PSGI
 PORTVERSION=	0.13
@@ -18,10 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Controller::Metal.3 \
-	Catalyst::Engine::PSGI.3 \
-	Catalyst::Helper::PSGI.3 \
-	Plack::Test::Adopt::Catalyst.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
