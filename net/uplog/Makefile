@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: net/uplog/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/uplog/Makefile 337794 2013-12-27 19:47:35Z jadawin $
 
 PORTNAME=	uplog
 PORTVERSION=	0.3
@@ -16,17 +16,18 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 PORTDOCS=	README
 PLIST_FILES=	bin/uplog
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 post-patch:
 	${REINPLACE_CMD} -e \
 	's|#include <malloc.h>||g' \
 		${WRKSRC}/${PORTNAME}.c
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in README
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
