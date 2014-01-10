@@ -1,5 +1,5 @@
 # Created by: skreuzer
-# $FreeBSD: net/p5-Net-OAuth-Simple/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-OAuth-Simple/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	Net-OAuth-Simple
 PORTVERSION=	1.5
@@ -19,7 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=	Net::OAuth::Simple.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
