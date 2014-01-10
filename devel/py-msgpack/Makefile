@@ -1,5 +1,5 @@
 # Created by: Andrey Zonov <andrey@zonov.org>
-# $FreeBSD: devel/py-msgpack/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-msgpack/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	msgpack
 PORTVERSION=	0.2.2
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-python-${PORTVERSION}
 MAINTAINER=	zont@FreeBSD.org
 COMMENT=	MessagePack (de)serializer for Python
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
