@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/R-cran-stringr/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: textproc/R-cran-stringr/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	stringr
 PORTVERSION=	0.6.2
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	R-cran-plyr>0:${PORTSDIR}/devel/R-cran-plyr
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
