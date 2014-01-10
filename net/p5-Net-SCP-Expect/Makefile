@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: net/p5-Net-SCP-Expect/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SCP-Expect/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	Net-SCP-Expect
 PORTVERSION=	0.16
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SCP::Expect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
