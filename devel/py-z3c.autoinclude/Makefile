@@ -1,10 +1,12 @@
-# $FreeBSD: devel/py-z3c.autoinclude/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-z3c.autoinclude/Makefile 338852 2014-01-06 09:47:35Z rm $
 
 PORTNAME=	z3c.autoinclude
 PORTVERSION=	0.3.4
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Automatically include ZCML
@@ -17,11 +19,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.dottedname>=0:${PORTSDIR}/devel/py-zope
 		${PYTHON_PKGNAMEPREFIX}zope.schema>=0:${PORTSDIR}/devel/py-zope.schema \
 		${PYTHON_PKGNAMEPREFIX}zc.buildout>=0:${PORTSDIR}/devel/py-zc.buildout
 
-DIST_SUBDIR=	zope
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
