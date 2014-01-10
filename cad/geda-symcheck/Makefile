@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-symcheck/Makefile 336172 2013-12-11 14:53:20Z bapt $
+# $FreeBSD: cad/geda-symcheck/Makefile 338177 2013-12-30 21:51:27Z antoine $
 
 PORTNAME=	symcheck
 PORTVERSION=	1.4.3
@@ -27,9 +27,6 @@ CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		gsymcheck.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s,^(DATADIR[[:space:]]*=[[:space:]]*)gEDA,\1geda," \
