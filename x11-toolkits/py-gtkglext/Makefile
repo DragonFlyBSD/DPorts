@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/py-gtkglext/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: x11-toolkits/py-gtkglext/Makefile 338111 2013-12-30 13:21:49Z wg $
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.1.0
@@ -18,10 +18,8 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/OpenGL/__init__.py:${PORTSDIR}/graphics/py-ope
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	pygtk2
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
