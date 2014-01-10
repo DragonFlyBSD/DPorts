@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-BBS-UserInfo-Wretch/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-BBS-UserInfo-Wretch/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	BBS-UserInfo-Wretch
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Expect>=0:${PORTSDIR}/lang/p5-Expect
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BBS::UserInfo::Wretch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
