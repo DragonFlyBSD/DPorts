@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Net-LDAP-Makepath/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-LDAP-Makepath/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	Net-LDAP-Makepath
 PORTVERSION=	1.0.1
@@ -17,7 +17,4 @@ RUN_DEPENDS=	 p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::LDAP::Makepath.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
