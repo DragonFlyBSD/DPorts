@@ -1,24 +1,26 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-sexy/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-sexy/Makefile 339209 2014-01-09 08:53:56Z nemysis $
 
 PORTNAME=	sexy
 PORTVERSION=	0.1.9
 PORTREVISION=	6
 DISTVERSIONPREFIX=	python-
 CATEGORIES=	x11-toolkits python
-MASTER_SITES=	http://releases.chipx86.com/libsexy/sexy-python/ CENKES
+MASTER_SITES=	http://releases.chipx86.com/libsexy/sexy-python/ \
+		CENKES
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Libsexy bindings for Python
 
-LIB_DEPENDS=	sexy.2:${PORTSDIR}/x11-toolkits/libsexy
+LICENSE=	LGPL21
 
-USE_AUTOTOOLS=	libtool
-USE_GNOME=	pygtk2
-USE_PYTHON=	yes
+LIB_DEPENDS=	libsexy.so:${PORTSDIR}/x11-toolkits/libsexy
+
 USES=		pkgconfig
+USE_GNOME=	pygtk2
 GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool
+USE_PYTHON=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
