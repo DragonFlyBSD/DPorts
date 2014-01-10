@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Net-LDAP-AutoDNs/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-LDAP-AutoDNs/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	Net-LDAP-AutoDNs
 PORTVERSION=	0.2.2
@@ -14,7 +14,4 @@ COMMENT=	Automatically make some default decisions some LDAP DNs and scopes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::LDAP::AutoDNs.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
