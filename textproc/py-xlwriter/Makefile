@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: textproc/py-xlwriter/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-xlwriter/Makefile 338100 2013-12-30 12:12:10Z wg $
 
 PORTNAME=	xlwriter
 PORTVERSION=	0.4a3
@@ -9,16 +9,17 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyXLWriter-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A python library for generating Excel-compatible spreadsheets
+COMMENT=	Python library for generating Excel-compatible spreadsheets
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_ZIP=	yes
-PYDISTUTILS_PKGNAME=	pyXLWriter
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
+PORTEXAMPLES=	*
+
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
-	${FIND} ${WRKSRC}/examples -type f -exec ${INSTALL_DATA} {} ${EXAMPLESDIR} \;
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${FIND} ${WRKSRC}/examples -type f -exec ${INSTALL_DATA} {} ${STAGEDIR}${EXAMPLESDIR} \;
 
 .include <bsd.port.mk>
