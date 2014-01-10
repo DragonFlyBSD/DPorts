@@ -1,5 +1,5 @@
 # Created by: George Sorsby <george@crackpipe.net>
-# $FreeBSD: news/nget/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/nget/Makefile 337671 2013-12-27 09:52:21Z bapt $
 
 PORTNAME=	nget
 PORTVERSION=	0.27.1
@@ -11,29 +11,21 @@ DISTNAME=	nget-${PORTVERSION}+uulib
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Auto-resuming command line nntp file grabber
 
-MAN1=		nget.1 ngetlite.1
-MANCOMPRESSED=	no
+USES=		gmake
+USE_GCC=	any
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 post-extract:
 	${LN} -s nget-${PORTVERSION} ${WRKDIR}/${DISTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nget ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/ngetlite ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/nget.1 ${MANPREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/ngetlite.1 ${MANPREFIX}/man/man1
-
-post-install:
-	${STRIP_CMD} ${PREFIX}/bin/nget
-	${STRIP_CMD} ${PREFIX}/bin/ngetlite
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/nget ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ngetlite ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/nget.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/ngetlite.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in README FAQ
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
