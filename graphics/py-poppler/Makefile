@@ -1,8 +1,9 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: graphics/py-poppler/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-poppler/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	poppler
 PORTVERSION=	0.12.1
+PORTREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	https://launchpad.net/poppler-python/trunk/development/+download/ \
 		http://launchpadlibrarian.net/30270080/ \
@@ -13,7 +14,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	Python bindings for the Poppler PDF rendering library
 
-LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
