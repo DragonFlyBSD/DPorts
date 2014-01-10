@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@FreeBSD.org>
-# $FreeBSD: mail/cclient/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/cclient/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	cclient
 PORTVERSION=	2007f
@@ -15,7 +15,7 @@ DISTNAME=	imap-${PORTVERSION}
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	Mark Crispin's C-client mail access routines
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 OPTIONS_DEFINE=	SSL SSL_AND_PLAINTEXT IPV6 MBX_DEFAULT
