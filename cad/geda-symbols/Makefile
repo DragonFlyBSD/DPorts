@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-symbols/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/geda-symbols/Makefile 338176 2013-12-30 21:49:01Z antoine $
 
 PORTNAME=	symbols
 PORTVERSION=	1.4.3
@@ -21,13 +21,12 @@ CONFIGURE_ARGS=	--with-docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e "s,^(DATADIR[[:space:]]*=[[:space:]]*)gEDA,\1geda," \
 		${WRKSRC}/configure
 
 post-install:
-	@${TOUCH} ${DATADIR}/sym/local/.keep_me
+	@${TOUCH} ${STAGEDIR}${DATADIR}/sym/local/.keep_me
 
 .include <bsd.port.mk>
