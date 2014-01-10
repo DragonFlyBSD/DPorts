@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: sysutils/py-pytsk/Makefile 336478 2013-12-14 19:41:58Z antoine $
+# $FreeBSD: sysutils/py-pytsk/Makefile 338419 2014-01-02 07:08:14Z antoine $
 
 PORTNAME=	pytsk
-DISTVERSION=	2013-12-13
+DISTVERSION=	2013-12-30
 CATEGORIES=	sysutils security devel python
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiScUxsUm54cG02RDA/ \
 		LOCAL/antoine
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Python bindings for the Sleuthkit
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libtsk.so:${PORTSDIR}/sysutils/sleuthkit
 
