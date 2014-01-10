@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 332934 2013-11-05 23:58:44Z fluffy $
+# $FreeBSD: net/freerdp/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	freerdp
 PORTVERSION=	1.0.2
@@ -8,7 +8,7 @@ CATEGORIES=	net comms ipv6
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	A free implementation of Remote Desktop Protocol
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_OPENSSL=	yes
