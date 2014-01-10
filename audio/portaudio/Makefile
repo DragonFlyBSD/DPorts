@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-# $FreeBSD: audio/portaudio/Makefile 329856 2013-10-09 03:14:49Z nemysis $
+# $FreeBSD: audio/portaudio/Makefile 339146 2014-01-08 14:59:08Z skreuzer $
 
 PORTNAME=	portaudio
 PORTVERSION=	18.1
@@ -13,11 +13,10 @@ COMMENT=	Portable cross-platform Audio API
 
 LICENSE=	MIT
 
-USES=		gmake
+USES=		gmake dos2unix
 USE_ZIP=	yes
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
-USE_DOS2UNIX=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
