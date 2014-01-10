@@ -1,8 +1,8 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: deskutils/docear/Makefile 335914 2013-12-08 17:35:24Z mandree $
+# $FreeBSD: deskutils/docear/Makefile 338199 2013-12-30 23:54:38Z mandree $
 
 PORTNAME=	docear
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 _suffix=	_stable
 CATEGORIES=	deskutils java
 MASTER_SITES=	http://downloads.docear.org/${PORTVERSION}${_suffix}/ \
@@ -24,7 +24,7 @@ NO_BUILD=	yes
 JDATADIR=	${JAVASHAREDIR}/${PORTNAME}
 icon=		${DATADIR}/${PORTNAME}-icon48x48.png
 
-WRKSRC=		${WRKDIR}/docear-1.0.1.1_stable_build216
+WRKSRC=		${WRKDIR}/docear-1.0.2.2_stable_build219
 SUB_FILES=	docear.desktop
 
 post-patch:
