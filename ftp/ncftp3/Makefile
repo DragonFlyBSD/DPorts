@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ftp/ncftp3/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/ncftp3/Makefile 338614 2014-01-04 00:56:14Z bapt $
 
 PORTNAME=	ncftp
 PORTVERSION=	3.2.5
@@ -23,11 +23,6 @@ USE_BZIP2=	yes
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
-.if defined(INSTALL_AS_NCFTP3)
-LATEST_LINK=	ncftp3
-.else
-LATEST_LINK=	ncftp
-.endif
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
