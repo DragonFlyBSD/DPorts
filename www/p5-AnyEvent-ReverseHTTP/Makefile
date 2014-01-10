@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-AnyEvent-ReverseHTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-AnyEvent-ReverseHTTP/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	AnyEvent-ReverseHTTP
 PORTVERSION=	0.05
@@ -20,7 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	AnyEvent::ReverseHTTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
