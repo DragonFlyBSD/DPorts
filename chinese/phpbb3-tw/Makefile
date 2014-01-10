@@ -1,5 +1,5 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: chinese/phpbb3-tw/Makefile 330275 2013-10-14 06:52:32Z bapt $
+# $FreeBSD: chinese/phpbb3-tw/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11
@@ -41,6 +41,8 @@ NO_STAGE=	yes
 PHPBBDIR=	${WWWDOCROOT}/${PHPBBURL}
 PKGOPTS=	${FILESDIR}/pkg-opts
 
+.include <bsd.port.options.mk>
+
 options:
 	@ ${ECHO_MSG} "===>  Build options for ${PKGNAME}:"
 	@ ${CAT} ${PKGOPTS}
@@ -63,7 +65,7 @@ do-install:
 	@ ${ECHO_CMD} '@exec ${CHMOD} -R 0755 ${PREFIX}/${PHPBBDIR}' >> ${TMPPLIST}
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@ ${MKDIR} ${DOCSDIR}
 	@ cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${DOCSDIR}
 
