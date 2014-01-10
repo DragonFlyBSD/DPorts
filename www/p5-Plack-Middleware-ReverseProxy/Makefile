@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-ReverseProxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-Middleware-ReverseProxy/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	Plack-Middleware-ReverseProxy
 PORTVERSION=	0.15
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plack::Middleware::ReverseProxy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
