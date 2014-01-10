@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-cli/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jakarta-commons-cli/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	commons-cli
 PORTVERSION=	1.2
@@ -13,7 +13,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 MAINTAINER=	hq@FreeBSD.org
 COMMENT=	Java library for command line arguments and options
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
