@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: security/libssh/Makefile 334710 2013-11-24 08:28:43Z fluffy $
+# $FreeBSD: security/libssh/Makefile 338993 2014-01-07 10:02:05Z fluffy $
 
 PORTNAME=	libssh
 DISTVERSION=	0.5.5
@@ -25,11 +25,10 @@ USE_LDCONFIG=	yes
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCRYPT}
-LIB_DEPENDS+=	gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS+=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
 CMAKE_ARGS+=	-DWITH_GCRYPT:BOOL=ON
 .else
 USE_OPENSSL=	yes
