@@ -1,8 +1,8 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: math/glm/Makefile 332826 2013-11-05 10:05:23Z demon $
+# $FreeBSD: math/glm/Makefile 337596 2013-12-26 18:45:50Z demon $
 
 PORTNAME=	glm
-PORTVERSION=	0.9.4.6
+PORTVERSION=	0.9.5.0
 CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	ogl-math/${PORTNAME}-${PORTVERSION}
