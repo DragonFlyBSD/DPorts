@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-# $FreeBSD: devel/p5-Sys-SigAction/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sys-SigAction/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Sys-SigAction
 PORTVERSION=	0.20
@@ -19,9 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sys::SigAction.3
-
-NO_STAGE=	yes
 post-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
