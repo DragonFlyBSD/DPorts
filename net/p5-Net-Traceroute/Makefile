@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: net/p5-Net-Traceroute/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Traceroute/Makefile 338808 2014-01-05 17:43:05Z az $
 
 PORTNAME=	Net-Traceroute
 PORTVERSION=	1.14
@@ -14,7 +14,4 @@ COMMENT=	Perl module to parse traceroute(8)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Traceroute.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
