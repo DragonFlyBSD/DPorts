@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: devel/p5-POE-Component-Syndicator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-POE-Component-Syndicator/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	POE-Component-Syndicator
 PORTVERSION=	0.06
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	CPAN:HINRIK
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jase@FreeBSD.org
-COMMENT=	A POE component base class which implements the Observer pattern
+COMMENT=	POE component base class which implements the Observer pattern
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
@@ -22,7 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Syndicator.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
