@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-themes/cursor-grounation-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/cursor-grounation-theme/Makefile 338913 2014-01-06 17:48:27Z antoine $
 
 PORTNAME=	cursor-grounation-theme
 PORTVERSION=	0.3
@@ -16,10 +16,9 @@ USE_BZIP2=	yes
 
 WRKSRC=		${WRKDIR}/Grounation-${PORTVERSION}
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/icons/grounation/cursors
-	cd ${WRKSRC}/Grounation/cursors \
-		&& ${INSTALL_DATA} * ${PREFIX}/lib/X11/icons/grounation/cursors
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/grounation/cursors
+	${INSTALL_DATA} ${WRKSRC}/Grounation/cursors/* \
+		${STAGEDIR}${PREFIX}/lib/X11/icons/grounation/cursors
 
 .include <bsd.port.mk>
