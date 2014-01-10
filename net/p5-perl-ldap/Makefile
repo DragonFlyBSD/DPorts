@@ -1,8 +1,8 @@
 # Created by: scrappy@FreeBSD.org
-# $FreeBSD: net/p5-perl-ldap/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: net/p5-perl-ldap/Makefile 337443 2013-12-25 19:39:16Z sunpoet $
 
 PORTNAME=	perl-ldap
-PORTVERSION=	0.5700
+PORTVERSION=	0.5800
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MARSCHAP
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Client interface to LDAP (includes Net::LDAP)
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Authen-SASL>=2.00:${PORTSDIR}/security/p5-Authen-SASL \
 		p5-Convert-ASN1>=0.20:${PORTSDIR}/converters/p5-Convert-ASN1 \
