@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: textproc/lucene/Makefile 328945 2013-10-01 12:51:02Z danilo $
+# $FreeBSD: textproc/lucene/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	lucene
 PORTVERSION=	3.6.2
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Full-text search engine for Java
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 CONFLICTS=	lucene4-[0-9].*
 
