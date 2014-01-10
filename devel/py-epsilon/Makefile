@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-epsilon/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: devel/py-epsilon/Makefile 337606 2013-12-26 19:31:28Z wg $
 
 PORTNAME=	epsilon
 PORTVERSION=	0.6.0
@@ -19,8 +19,6 @@ CONFLICTS=	brlcad-[0-9]*
 USES=		twisted
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	Epsilon
-NO_BUILD=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
