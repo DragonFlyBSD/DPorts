@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Find-Lib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Find-Lib/Makefile 338909 2014-01-06 17:28:12Z az $
 
 PORTNAME=	Find-Lib
 PORTVERSION=	1.04
@@ -13,7 +13,4 @@ COMMENT=	Helper to smartly find libs to use in the filesystem tree
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Find::Lib.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
