@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Continuity/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Continuity/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Continuity
 PORTVERSION=	1.5
@@ -22,14 +22,4 @@ RUN_DEPENDS=	${COMMON_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Continuity.3 \
-	Continuity::Adapt::FCGI.3 \
-	Continuity::Adapt::HttpDaemon.3 \
-	Continuity::Adapt::PSGI.3 \
-	Continuity::Inspector.3 \
-	Continuity::Mapper.3 \
-	Continuity::Request.3 \
-	Continuity::RequestCallbacks.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
