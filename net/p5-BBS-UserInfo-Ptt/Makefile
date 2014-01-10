@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-BBS-UserInfo-Ptt/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-BBS-UserInfo-Ptt/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	BBS-UserInfo-Ptt
 PORTVERSION=	0.06
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Expect>=0:${PORTSDIR}/lang/p5-Expect
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BBS::UserInfo::Ptt.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
