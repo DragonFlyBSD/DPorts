@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@ipass.net>
-# $FreeBSD: graphics/py-opengl/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: graphics/py-opengl/Makefile 337763 2013-12-27 17:37:52Z wg $
 
 PORTNAME=	opengl
 PORTVERSION=	3.0.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	PyOpenGL-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An OpenGL (and related library) interface for Python
+COMMENT=	OpenGL (and related library) interface for Python
 
 BUILD_DEPENDS=	${PYNUMPY} \
 		${PYTHON_SITELIBDIR}/PIL.pth:${PORTSDIR}/graphics/py-imaging
@@ -26,8 +26,7 @@ USES=		dos2unix
 USE_GL=		glut
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	PyOpenGL
-PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/.b/b/}
+PYDISTUTILS_AUTOPLIST=	yes
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
@@ -42,11 +41,5 @@ post-patch:
 		's|<malloc\.h>|<stdlib.h>|g'
 	@${FIND} ${WRKSRC} -name "*.bak" -delete
 	${REINPLACE_CMD} -e 's|posix |posix|g' ${WRKSRC}/OpenGL/__init__.py
-
-post-install:
-	@${FIND} ${PYTHON_SITELIBDIR}/OpenGL -type f | \
-		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${FIND} ${PYTHON_SITELIBDIR}/OpenGL -type d | ${SORT} -r | \
-		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>
