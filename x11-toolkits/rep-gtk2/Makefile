@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 337816 2013-12-27 22:16:08Z antoine $
 
 PORTNAME=	rep-gtk2
 PORTVERSION=	0.90.8.1
@@ -14,16 +14,14 @@ COMMENT=	GTK+-2 binding for rep Lisp interpreter
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	rep:${PORTSDIR}/lang/librep
+LIB_DEPENDS=	librep.so:${PORTSDIR}/lang/librep
 
 USE_XZ=		yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
