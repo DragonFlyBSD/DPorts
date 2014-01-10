@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Tiny/Makefile 336869 2013-12-19 07:23:37Z sunpoet $
+# $FreeBSD: devel/p5-Path-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Path-Tiny
 PORTVERSION=	0.047
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	File path utility
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 TEST_DEPENDS=	p5-Test-FailWarnings>=0:${PORTSDIR}/devel/p5-Test-FailWarnings
 
