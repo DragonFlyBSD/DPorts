@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Tie-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-Simple/Makefile 338909 2014-01-06 17:28:12Z az $
 
 PORTNAME=	Tie-Simple
 PORTVERSION=	1.03
@@ -13,7 +13,4 @@ COMMENT=	Variable ties made easier: much, much, much easier
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tie::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
