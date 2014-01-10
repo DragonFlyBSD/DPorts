@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gpac-libgpac/Makefile 332893 2013-11-05 19:01:43Z wg $
+# $FreeBSD: multimedia/gpac-libgpac/Makefile 337879 2013-12-28 16:33:58Z bapt $
 
 PORTNAME=	gpac
 PORTVERSION=	0.5.0
@@ -16,10 +16,10 @@ LICENSE=	LGPL21
 WRKSRC=		${WRKDIR}/gpac
 ALL_TARGET=	lib
 INSTALL_TARGET=	install-lib
-USES=		gmake
+USES=		gmake dos2unix
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_DOS2UNIX=	src/utils/os_config_init.c
+DOS2UNIX_FILES=	src/utils/os_config_init.c
 
 OPTIONS_DEFINE=	IPV6 JPEG OPENGL SSL PNG XVIDEO
 OPTIONS_DEFAULT=	IPV6 JPEG SSL PNG
