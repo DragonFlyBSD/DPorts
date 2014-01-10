@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-gdata/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-gdata/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	gdata
 PORTVERSION=	2.0.18
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	GData Python Client Library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 PROJECTHOST=	gdata-python-client
 USE_PYTHON=	-2.7
