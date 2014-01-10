@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/p5-MediaWiki-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-MediaWiki-API/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	MediaWiki-API
 PORTVERSION=	0.39
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-JSON-Any>=0:${PORTSDIR}/converters/p5-JSON-Any
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MediaWiki::API.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
