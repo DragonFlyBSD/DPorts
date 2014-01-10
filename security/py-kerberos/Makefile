@@ -1,5 +1,5 @@
 # Created by: Roland van Laar <roland@micite.net>
-# $FreeBSD: security/py-kerberos/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-kerberos/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=		kerberos
 PORTVERSION=		1.1.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=		roland@micite.net
 COMMENT=		Kerberos bindings for python
 
-LICENSE=		AL2
+LICENSE=		APACHE20
 
 BUILD_DEPENDS=		krb5-config:${PORTSDIR}/security/krb5
 LIB_DEPENDS=		krb5support.0:${PORTSDIR}/security/krb5
