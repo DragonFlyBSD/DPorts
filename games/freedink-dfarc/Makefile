@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: games/freedink-dfarc/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/freedink-dfarc/Makefile 337953 2013-12-29 10:40:02Z antoine $
 
 PORTNAME=	freedink-dfarc
 PORTVERSION=	3.10
@@ -11,14 +11,11 @@ DISTNAME=	dfarc-${PORTVERSION}
 MAINTAINER=	shurd@sasktel.net
 COMMENT=	Frontend and .dmod installer for GNU FreeDink
 
-USES=		gettext gmake
+USES=		desktop-file-utils gettext gmake shared-mime-info
 USE_WX=		2.6+
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	intltool
 CONFIGURE_ARGS=	--with-wx-config=${WX_CONFIG} --disable-upx --disable-static
 
-MAN1=		dfarc.1 freedink-dfarc.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
