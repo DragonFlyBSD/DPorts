@@ -1,5 +1,5 @@
 # Created by: Anthony Kim
-# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 335742 2013-12-06 12:47:57Z mat $
+# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Mail-SpamAssassin
 PORTVERSION=	3.3.2
@@ -13,7 +13,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:apache,cpan
 MAINTAINER?=	beech@FreeBSD.org
 COMMENT?=	A highly efficient mail filter for identifying spam
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	p5-NetAddr-IP>=4.00.7:${PORTSDIR}/net-mgmt/p5-NetAddr-IP \
 		p5-Net-DNS>=0.63:${PORTSDIR}/dns/p5-Net-DNS \
