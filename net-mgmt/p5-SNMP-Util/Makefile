@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-SNMP-Util/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-SNMP-Util/Makefile 338754 2014-01-05 12:20:02Z az $
 
 PORTNAME=	SNMP-Util
 PORTVERSION=	1.8
@@ -8,7 +8,7 @@ CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl modules to perform SNMP set,get,walk,next,walk_hash etc
 
 RUN_DEPENDS=	net-snmp>=0:${PORTSDIR}/net-mgmt/net-snmp
@@ -18,7 +18,4 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-net-snmp-patch-Makefile.PL
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SNMP::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
