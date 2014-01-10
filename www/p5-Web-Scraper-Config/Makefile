@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-Web-Scraper-Config/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Web-Scraper-Config/Makefile 338778 2014-01-05 14:02:22Z az $
 
 PORTNAME=	Web-Scraper-Config
 PORTVERSION=	0.01
@@ -22,7 +22,4 @@ RUN_DEPENDS=	p5-Config-Any>=0:${PORTSDIR}/devel/p5-Config-Any \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Web::Scraper::Config.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
