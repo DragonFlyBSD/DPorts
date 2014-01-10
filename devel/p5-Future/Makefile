@@ -1,8 +1,8 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Future/Makefile 334398 2013-11-20 08:09:59Z culot $
+# $FreeBSD: devel/p5-Future/Makefile 338636 2014-01-04 09:38:39Z culot $
 
 PORTNAME=	Future
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
