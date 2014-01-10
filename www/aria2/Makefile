@@ -1,9 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 335824 2013-12-07 10:50:23Z gjb $
+# $FreeBSD: www/aria2/Makefile 338066 2013-12-30 09:19:31Z sunpoet $
 
 PORTNAME=	aria2
-PORTVERSION=	1.18.1
-PORTREVISION=	1
+PORTVERSION=	1.18.2
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${PORTVERSION}
 
@@ -47,10 +46,6 @@ SQLITE_USE=		SQLITE=yes
 ARIA2_DISK_CACHE?=	16M
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 1000100 && !exists(/usr/lib/libc++.so)
-BROKEN=		Build with clang and libc++ only
-.endif
 
 .if ${ARCH} == "powerpc" && ${OSVERSION} > 900000
 BROKEN=		Does not install on powerpc-9
