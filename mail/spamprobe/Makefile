@@ -1,17 +1,18 @@
 # Created by: Matthew N. Dodd <mdodd@FreeBSD.org>
-# $FreeBSD: mail/spamprobe/Makefile 336581 2013-12-15 20:51:37Z adamw $
+# $FreeBSD: mail/spamprobe/Makefile 338647 2014-01-04 14:35:01Z stefan $
 
 PORTNAME=		spamprobe
 PORTVERSION=	1.4d
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=		mail
 MASTER_SITES=	SF
 
-MAINTAINER=	stefan@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spam detector using Bayesian analysis of word counts
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-default-8bit
+USE_GCC=	any
 
 PLIST_FILES=	bin/spamprobe man/man1/spamprobe.1.gz
 
