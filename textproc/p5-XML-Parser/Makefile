@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Parser/Makefile 339248 2014-01-09 15:01:07Z demon $
 
 PORTNAME=	XML-Parser
 PORTVERSION=	2.41
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension interface to James Clark's XML parser, expat
 
-LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 USES=		perl5
 USE_PERL5=	configure
