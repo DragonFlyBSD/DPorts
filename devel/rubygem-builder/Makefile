@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/rubygem-builder/Makefile 333773 2013-11-14 17:06:17Z sunpoet $
+# $FreeBSD: devel/rubygem-builder/Makefile 338239 2013-12-31 06:58:29Z sunpoet $
 
 PORTNAME=	builder
 PORTVERSION=	3.0.4
@@ -10,6 +10,8 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Facilitate programmatic generation of XML markup
 
 LICENSE=	MIT
+
+PORTSCOUT=	limit:^3.0
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
