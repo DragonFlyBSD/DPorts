@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: mail/p5-MIME-Lite-HTML/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Lite-HTML/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	MIME-Lite-HTML
 PORTVERSION=	1.24
@@ -22,7 +22,4 @@ RUN_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::Lite::HTML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
