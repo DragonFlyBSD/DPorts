@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-binplist/Makefile 337164 2013-12-21 21:34:18Z antoine $
+# $FreeBSD: devel/py-binplist/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	binplist
 PORTVERSION=	0.1.4
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Binary plist parser
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz
 
