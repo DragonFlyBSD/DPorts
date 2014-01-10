@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Base/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Base/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	Test-Base
 PORTVERSION=	0.60
@@ -19,9 +19,4 @@ RUN_DEPENDS=	${COMMON_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Base.3 \
-	Test::Base::Filter.3 \
-	Module::Install::TestBase.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
