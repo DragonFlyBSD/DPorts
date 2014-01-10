@@ -1,8 +1,9 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: databases/p5-SQL-Translator/Makefile 332881 2013-11-05 17:56:05Z sunpoet $
+# $FreeBSD: databases/p5-SQL-Translator/Makefile 338561 2014-01-03 16:22:02Z antoine $
 
 PORTNAME=	SQL-Translator
 PORTVERSION=	0.11018
+PORTREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
