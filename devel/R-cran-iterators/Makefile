@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-iterators/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: devel/R-cran-iterators/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	iterators
 PORTVERSION=	1.0.6
@@ -10,9 +10,8 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Iterator construct for R
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
