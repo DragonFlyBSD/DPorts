@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Install-Repository/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Install-Repository/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Module-Install-Repository
 PORTVERSION=	0.06
@@ -12,7 +12,4 @@ COMMENT=	Perl extension to set repository URL from svn/svk/Git checkout
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Module::Install::Repository.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
