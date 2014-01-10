@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WWW-RobotRules-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-RobotRules-Parser/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	WWW-RobotRules-Parser
 PORTVERSION=	0.04001
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::RobotRules::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
