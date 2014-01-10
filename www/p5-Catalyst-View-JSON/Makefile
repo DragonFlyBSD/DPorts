@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-View-JSON/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-View-JSON/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Catalyst-View-JSON
 PORTVERSION=	0.33
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Helper::View::JSON.3 Catalyst::View::JSON.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
