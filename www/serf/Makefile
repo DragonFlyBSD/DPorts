@@ -1,5 +1,5 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: www/serf/Makefile 333335 2013-11-09 20:21:36Z ohauer $
+# $FreeBSD: www/serf/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	serf
 PORTVERSION=	1.3.2
@@ -10,7 +10,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Serf HTTP client library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS+=	apr-1:${PORTSDIR}/devel/apr1
 
