@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-PortNumber/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Types-PortNumber/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	MooseX-Types-PortNumber
 PORTVERSION=	0.02
@@ -20,10 +20,7 @@ TEST_DEPENDS=	p5-Test-Exception>=0.31:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Types::PortNumber.3
-
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
