@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-PSGI/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	CGI-PSGI
 PORTVERSION=	0.15
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to enable CGI.pm applications to adapt PSGI
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CGI::PSGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
