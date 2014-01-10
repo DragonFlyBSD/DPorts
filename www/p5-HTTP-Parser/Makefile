@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-HTTP-Parser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Parser/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTTP-Parser
 PORTVERSION=	0.06
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
