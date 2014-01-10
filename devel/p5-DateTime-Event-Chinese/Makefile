@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-DateTime-Event-Chinese/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Event-Chinese/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	DateTime-Event-Chinese
 PORTVERSION=	1.00
@@ -22,7 +22,4 @@ RUN_DEPENDS=	p5-DateTime-Astro>=0:${PORTSDIR}/devel/p5-DateTime-Astro \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Event::Chinese.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
