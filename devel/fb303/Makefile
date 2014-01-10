@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/fb303/Makefile 333300 2013-11-09 15:19:58Z wg $
+# $FreeBSD: devel/fb303/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	fb303
 PORTVERSION=	${THRIFT_PORTVERSION}
@@ -12,7 +12,7 @@ DISTNAME=	thrift-${PORTVERSION}
 MAINTAINER=	komarov@valerka.net
 COMMENT=	Facebook Bassline
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libthrift.so:${PORTSDIR}/devel/thrift-cpp
 BUILD_DEPENDS=	thrift:${PORTSDIR}/devel/thrift
