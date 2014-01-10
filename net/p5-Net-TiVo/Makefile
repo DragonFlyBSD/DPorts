@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: net/p5-Net-TiVo/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-TiVo/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	Net-TiVo
 PORTVERSION=	0.11
@@ -19,9 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::TiVo.3 \
-		Net::TiVo::Show.3 \
-		Net::TiVo::Folder.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
