@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-pbr/Makefile 335608 2013-12-04 10:07:23Z koobs $
+# $FreeBSD: devel/py-pbr/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	pbr
 PORTVERSION=	0.5.23
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Python Build Reasonableness
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>=1.0:${PORTSDIR}/devel/py-pip
 
