@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Algorithm-Permute/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-Permute/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	Algorithm-Permute
 PORTVERSION=	0.12
@@ -13,7 +13,4 @@ COMMENT=	Perl interface to handy and fast permutation
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::Permute.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
