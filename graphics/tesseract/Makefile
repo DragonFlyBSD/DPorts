@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/tesseract/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/tesseract/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	tesseract
 PORTVERSION=	3.02.02
@@ -11,7 +11,7 @@ DISTFILES=	tesseract-ocr-${PORTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Commercial quality open source OCR engine
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	lept:${PORTSDIR}/graphics/leptonica
 
