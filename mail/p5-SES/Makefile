@@ -1,5 +1,5 @@
 # Created by: Stephon Chen <stephon@pixnet.tw>
-# $FreeBSD: mail/p5-SES/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-SES/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	SES
 PORTVERSION=	1.01
@@ -12,7 +12,7 @@ DISTNAME=	ses-tools-2011-11-14
 MAINTAINER=	stephon@gmail.com
 COMMENT=	Perl module of Amazon Simple Email Services
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	p5-LWP-Protocol-https>=0:${PORTSDIR}/www/p5-LWP-Protocol-https \
