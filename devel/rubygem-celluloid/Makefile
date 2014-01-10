@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-celluloid/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD: devel/rubygem-celluloid/Makefile 338472 2014-01-02 19:46:01Z swills $
 
 PORTNAME=	celluloid
 PORTVERSION=	0.15.2
@@ -17,10 +17,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${RUBY_VER} == 1.8
-BROKEN=		does not build with ruby ${RUBY_VER}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
