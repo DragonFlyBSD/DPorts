@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: graphics/cadubi/Makefile 336812 2013-12-18 10:20:48Z nemysis $
+# $FreeBSD: graphics/cadubi/Makefile 338395 2014-01-01 21:49:38Z nemysis $
 
 PORTNAME=	cadubi
 PORTVERSION=	1.3
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	graphics editors
 MASTER_SITES=	http://langworth.com/pub/
 
-MAINTAINER=	nemysis@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ASCII drawing utility
 
 LICENSE=	ART10
