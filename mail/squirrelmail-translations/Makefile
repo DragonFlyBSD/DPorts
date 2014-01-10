@@ -1,8 +1,8 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-translations/Makefile 331709 2013-10-26 16:10:55Z adamw $
+# $FreeBSD: mail/squirrelmail-translations/Makefile 338018 2013-12-29 16:06:55Z adamw $
 
 PORTNAME=		squirrelmail-translations
-PORTVERSION=	20131026
+PORTVERSION=	20131229
 CATEGORIES=		mail www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	adamw/squirrelmail
