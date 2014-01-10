@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-pwstore-fast/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-pwstore-fast/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	pwstore-fast
 PORTVERSION=	2.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	base64-bytestring>=0.1 cryptohash>=0.6 random>=1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
