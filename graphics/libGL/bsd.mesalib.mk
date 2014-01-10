@@ -9,7 +9,7 @@
 #    - grahpics/libglesv2
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 336713 2013-12-17 10:55:26Z kwm $
+# $FreeBSD: graphics/libGL/bsd.mesalib.mk 338653 2014-01-04 17:35:53Z bapt $
 
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
@@ -26,7 +26,8 @@ MESASUBVERSION=
 PLIST_SUB+=	OLD="" NEW="@comment "
 .endif
 
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/ \
+		http://files.etoilebsd.net/mesa/
 DISTFILES=	MesaLib-${MESADISTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	x11@FreeBSD.org
 
