@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-gamin/Makefile 335888 2013-12-08 13:24:03Z mva $
+# $FreeBSD: devel/py-gamin/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTREVISION=	2
 CATEGORIES=	devel python
@@ -13,12 +13,10 @@ BUILD_WRKSRC=	${WRKSRC}/python
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
-USE_FAM=	yes
-WANT_FAM_SYSTEM=gamin
 
 GAMIN_SLAVE=	yes
 
-USES=	pathfix
+USES=		fam:gamin
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--with-python=${PYTHON_CMD} \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc
