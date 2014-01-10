@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-WikiDoc/Makefile 333880 2013-11-15 15:59:23Z mat $
+# $FreeBSD: textproc/p5-Pod-WikiDoc/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Pod-WikiDoc
 PORTVERSION=	0.20
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Generate Pod from inline wiki style text
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-File-pushd>=0:${PORTSDIR}/devel/p5-File-pushd \
