@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: games/py-fife/Makefile 336255 2013-12-12 11:14:49Z bapt $
+# $FreeBSD: games/py-fife/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=		fife
 PORTVERSION=		0.3.4
@@ -22,10 +22,7 @@ LIB_DEPENDS=		libvorbisfile.so:${PORTSDIR}/audio/libvorbis \
 			libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
 			libpng15.so:${PORTSDIR}/graphics/png
 
-FETCH_ARGS=		-Fpr
-
 USE_SDL=		sdl ttf image
-USE_OPENAL=		al
 
 USE_SCONS=		yes
 SCONS_ARGS=		--prefix=${PREFIX} --python-prefix=${PYTHON_SITELIBDIR}
@@ -39,7 +36,7 @@ USE_PYTHON=		2.7
 USE_XORG=		xcursor
 USE_GL=			gl
 
-USES=			pkgconfig
+USES=			openal:al pkgconfig
 
 NO_STAGE=	yes
 post-patch:
