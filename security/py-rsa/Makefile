@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-rsa/Makefile 328367 2013-09-26 14:40:36Z koobs $
+# $FreeBSD: security/py-rsa/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	rsa
 PORTVERSION=	3.1.2
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Pure-Python RSA implementation
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1>=0.1.3:${PORTSDIR}/devel/py-asn1
 TEST_DEPENDS:=	${PYTHON_PKGNAMEPREFIX}unittest2>0:${PORTSDIR}/devel/py-unittest2 \
