@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-http-conduit/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-http-conduit/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	http-conduit
 PORTVERSION=	1.9.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -20,6 +20,5 @@ USE_CABAL=	asn1-data>=0.5.1 base64-bytestring>=0.1 blaze-builder>=0.2.1 \
 		transformers-base>=0.4 utf8-string>=0.3.4 void>=0.5.5 \
 		zlib-conduit>=0.5
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
