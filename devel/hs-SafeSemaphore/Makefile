@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-SafeSemaphore/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-SafeSemaphore/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	SafeSemaphore
 PORTVERSION=	0.9.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	stm
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
