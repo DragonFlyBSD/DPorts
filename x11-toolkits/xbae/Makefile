@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: x11-toolkits/xbae/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/xbae/Makefile 337807 2013-12-27 21:11:24Z antoine $
 
 PORTNAME=	Xbae
 PORTVERSION=	4.60.4
@@ -16,7 +16,4 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--enable-production --enable-static
 
-MAN3=		XbaeCaption.3 XbaeInput.3 XbaeMatrix.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
