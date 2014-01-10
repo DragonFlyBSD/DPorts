@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/gamin/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gamin/Makefile 338691 2014-01-04 23:40:44Z antoine $
 #    $MCom: ports/trunk/devel/gamin/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	gamin
@@ -11,7 +11,7 @@ MASTER_SITES=	http://people.gnome.org/~veillard/gamin/sources/
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	A file and directory monitoring system
 
-USES=		gettext gmake pathfix pkgconfig
+USES+=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME?=	glib20
 USE_LDCONFIG=	yes
