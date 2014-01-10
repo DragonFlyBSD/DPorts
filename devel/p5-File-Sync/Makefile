@@ -1,5 +1,5 @@
 # Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-# $FreeBSD: devel/p5-File-Sync/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-File-Sync/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	File-Sync
 PORTVERSION=	0.11
@@ -13,7 +13,4 @@ COMMENT=	Perl5 module interface to the UNIX sync(2) and POSIX.1b fsync(2)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::Sync.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
