@@ -1,7 +1,8 @@
-# $FreeBSD: print/tex-luatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/tex-luatex/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	luatex
 PORTVERSION=	0.70.2
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2012/
 PKGNAMEPREFIX=	tex-
@@ -18,7 +19,7 @@ LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		graphite:${PORTSDIR}/graphics/silgraphite \
 		icuio:${PORTSDIR}/devel/icu \
 		png15:${PORTSDIR}/graphics/png \
-		poppler:${PORTSDIR}/graphics/poppler \
+		libpoppler.so:${PORTSDIR}/graphics/poppler \
 		TECkit:${PORTSDIR}/textproc/teckit \
 		zzip:${PORTSDIR}/devel/zziplib
 
