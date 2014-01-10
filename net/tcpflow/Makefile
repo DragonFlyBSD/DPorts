@@ -1,8 +1,8 @@
 # Created by: Jose M. Alcaide <jose@we.lc.ehu.es>
-# $FreeBSD: net/tcpflow/Makefile 334651 2013-11-23 09:25:06Z antoine $
+# $FreeBSD: net/tcpflow/Makefile 338378 2014-01-01 16:01:56Z antoine $
 
 PORTNAME=	tcpflow
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.digitalcorpora.org/downloads/${PORTNAME}/
 
