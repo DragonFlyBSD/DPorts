@@ -1,5 +1,5 @@
 # Created by: Guillaume Paquet <amyfoub@gmail.com>
-# $FreeBSD: deskutils/xpad/Makefile 328257 2013-09-25 06:44:35Z jgh $
+# $FreeBSD: deskutils/xpad/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	xpad
 PORTVERSION=	3.1
@@ -16,7 +16,6 @@ OPTIONS_DEFINE=	NLS
 
 CONFLICTS_INSTALL=	xpad-current-[0-9]*
 
-FETCH_ARGS=	"-pRr"
 USE_BZIP2=	yes
 USE_XORG=	x11 sm
 USE_GNOME=	gtk20 gnomehier intltool
