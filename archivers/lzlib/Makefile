@@ -1,5 +1,5 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: archivers/lzlib/Makefile 328397 2013-09-26 17:29:29Z delphij $
+# $FreeBSD: archivers/lzlib/Makefile 337543 2013-12-26 16:06:13Z bapt $
 
 PORTNAME=	lzlib
 PORTVERSION=	1.5
@@ -12,7 +12,6 @@ COMMENT=	In-memory LZMA compression and decompression library
 PLIST_FILES=	include/lzlib.h \
 		lib/liblz.a
 
-NO_STAGE=		yes
 USES=		gmake
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	${MAKE_ENV}
