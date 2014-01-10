@@ -1,5 +1,5 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/duplicity/Makefile 332631 2013-11-03 17:26:45Z jase $
+# $FreeBSD: sysutils/duplicity/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	duplicity
 PORTVERSION=	0.6.22
@@ -12,8 +12,6 @@ COMMENT=	Backup tool that uses librsync and GnuPG
 
 LIB_DEPENDS=	librsync.so:${PORTSDIR}/net/librsync
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-
-FETCH_ARGS=	-pRr
 
 CONFLICTS=	duplicity-0.5.* duplicity-devel-[0-9]*
 
