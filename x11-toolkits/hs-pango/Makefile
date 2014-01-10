@@ -1,8 +1,8 @@
-# $FreeBSD: x11-toolkits/hs-pango/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: x11-toolkits/hs-pango/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	pango
 PORTVERSION=	0.12.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USES=		pkgconfig
 USE_CABAL=	cairo>=0.12.0 glib>=0.12.0 mtl
 USE_GNOME=	pango
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
