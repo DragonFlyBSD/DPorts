@@ -1,5 +1,5 @@
 # Created by: John Holland <john@zoner.org>
-# $FreeBSD: news/ubh/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/ubh/Makefile 337667 2013-12-27 09:35:29Z bapt $
 
 PORTNAME=	ubh
 PORTVERSION=	2.5
@@ -20,18 +20,15 @@ RUN_DEPENDS=	\
 NO_BUILD=	YES
 USES=		perl5
 
-NO_STAGE=	yes
 pre-patch:
 	@${MV} ${WRKSRC}/ubh ${WRKSRC}/ubh.old
 	@${SED} -e '1,1s:/usr/bin/perl:${PERL5}:' \
 		${WRKSRC}/ubh.old > ${WRKSRC}/ubh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ubh ${PREFIX}/bin
-	${CP} -R ${WRKSRC}/examples ${PREFIX}/share/ubh
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/ubh
-	${INSTALL_DATA} ${WRKSRC}/doc/ubh.html ${PREFIX}/share/doc/ubh
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/ubh ${STAGEDIR}${PREFIX}/bin
+	${CP} -R ${WRKSRC}/examples ${STAGEDIR}${PREFIX}/share/ubh
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/ubh
+	${INSTALL_DATA} ${WRKSRC}/doc/ubh.html ${STAGEDIR}${PREFIX}/share/doc/ubh
 
 .include <bsd.port.mk>
