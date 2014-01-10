@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: devel/p5-EV/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-EV/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	EV
 PORTVERSION=	4.15
@@ -19,9 +19,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ENV=	PERL_MM_USE_DEFAULT="YES"
 
-MAN3=		EV.3 \
-		EV::MakeMaker.3 \
-		EV::libev.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
