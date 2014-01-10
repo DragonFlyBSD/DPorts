@@ -1,5 +1,5 @@
 # Created by: Anthony Ginepro <anthony.ginepro@laposte.net>
-# $FreeBSD: audio/tagtool/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/tagtool/Makefile 338150 2013-12-30 17:27:37Z antoine $
 #    $MCom: ports/audio/tagtool/Makefile,v 1.1 2006/09/30 01:15:37 ahze Exp $
 
 PORTNAME=	tagtool
@@ -15,8 +15,7 @@ LIB_DEPENDS=	libid3-3.8.so:${PORTSDIR}/audio/id3lib \
 		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
 USE_BZIP2=	yes
-NO_STAGE=	yes
-USES=		pathfix gettext gmake pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack libglade2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
