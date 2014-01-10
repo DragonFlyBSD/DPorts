@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: math/R-cran-nnls/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-nnls/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	nnls
 PORTVERSION=	1.4
@@ -12,7 +12,6 @@ COMMENT=	R implementation of an algorithm for non-negative least squares
 
 LICENSE=	GPLv2
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
