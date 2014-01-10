@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-warp/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-warp/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	warp
 PORTVERSION=	1.3.8.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -16,6 +16,5 @@ USE_CABAL=	blaze-builder>=0.2.1.4 blaze-builder-conduit>=0.5 \
 		simple-sendfile>=0.2.7 transformers>=0.2.2 unix-compat>=0.2 \
 		void wai>=1.3
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
