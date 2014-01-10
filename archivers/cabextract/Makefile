@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: archivers/cabextract/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/cabextract/Makefile 337550 2013-12-26 16:34:35Z bapt $
 
 PORTNAME=	cabextract
 PORTVERSION=	1.4
@@ -11,13 +11,11 @@ COMMENT=	Program to extract Microsoft cabinet (.CAB) files
 
 LICENSE=	GPLv3
 
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
-MANLANG=	"" ja
-MAN1=		cabextract.1
-
-PLIST_FILES=	bin/cabextract
+PLIST_FILES=	bin/cabextract \
+		man/ja/man1/cabextract.1.gz \
+		man/man1/cabextract.1.gz
 DOCS=		AUTHORS ChangeLog NEWS README TODO
 DOC_DOCS=	magic wince_cab_format.html
 SRC_DOCS=	wince_info wince_rename
@@ -25,22 +23,18 @@ PORTDOCS=	${DOCS} ${DOC_DOCS} ${SRC_DOCS}
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/cabextract.1 ${MAN1PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/ja/cabextract.1 ${MAN1PREFIX}/man/ja/man1
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/doc/cabextract.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/ja/cabextract.1 ${STAGEDIR}${MAN1PREFIX}/man/ja/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .for i in ${DOC_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .for i in ${SRC_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/src/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
