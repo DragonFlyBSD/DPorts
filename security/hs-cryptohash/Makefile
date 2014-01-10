@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-cryptohash/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-cryptohash/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	cryptohash
 PORTVERSION=	0.9.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	cereal>=0.2 crypto-api>=0.5 tagged>=0.1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
