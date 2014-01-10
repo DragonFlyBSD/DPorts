@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/ttfm/Makefile 336173 2013-12-11 14:58:29Z bapt $
+# $FreeBSD: chinese/ttfm/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	ttfm
 PORTVERSION=	0.9.5
@@ -20,6 +20,9 @@ PORTDOCS=	README USAGE
 MAN1=		ttfm.sh.1
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},' \
 		-e 's,%%PREFIX%%,${PREFIX},' \
@@ -30,7 +33,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttfinfo ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/ttfm.sh ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for doc in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}/
