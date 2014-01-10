@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Mail-SendEasy/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-SendEasy/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Mail-SendEasy
 PORTVERSION=	1.2
@@ -13,8 +13,4 @@ COMMENT=	Send plain/html e-mails through SMTP servers
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::SendEasy.3 Mail::SendEasy::AUTH.3 \
-	       	Mail::SendEasy::SMTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
