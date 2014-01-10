@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: audio/py-pyliblo/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/py-pyliblo/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	pyliblo
 PORTVERSION=	0.9.1
@@ -22,6 +22,8 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 
 MAN1=	dump_osc.1 send_osc.1
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	${REINPLACE_CMD} -e 's#%%LOCALBASE%%#${LOCALBASE}#g' ${WRKSRC}/setup.py
 
@@ -29,7 +31,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/scripts/dump_osc.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/scripts/send_osc.1 ${PREFIX}/man/man1
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/doc/API.html ${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/doc/examples.html ${DOCSDIR}
