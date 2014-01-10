@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-SOAP-MySOAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-SOAP-MySOAP/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	SOAP-MySOAP
 PORTVERSION=	0.023
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	SOAP
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gslin@gslin.org
-COMMENT=	An extremely basic SOAP client module
+COMMENT=	Extremely basic SOAP client module
 
 BUILD_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SOAP::MySOAP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
