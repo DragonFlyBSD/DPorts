@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-hint/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-hint/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	hint
 PORTVERSION=	0.3.3.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,11 +14,10 @@ LICENSE=	BSD
 USE_CABAL=	ghc-mtl>=1.0.1.0 ghc-paths haskell-src MonadCatchIO-mtl>=0.3 \
 		mtl random utf8-string
 
-INSTALL_PORTEXAMPLES=	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}
+INSTALL_PORTEXAMPLES=	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
 	
-INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DATADIR} \
-			  && ${INSTALL_DATA} ${WRKSRC}/Changes ${DATADIR}
+INSTALL_PORTDATA=	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/Changes \
+			    ${STAGEDIR}${DATADIR}
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
