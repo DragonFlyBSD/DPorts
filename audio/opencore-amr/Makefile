@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: audio/opencore-amr/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/opencore-amr/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	opencore-amr
 PORTVERSION=	0.1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 MAINTAINER=	gslin@gslin.org
 COMMENT=	OpenCORE implementation of AMR Narrowband & Wideband speech codec
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix
