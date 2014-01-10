@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Install-AuthorTests/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Install-AuthorTests/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Module-Install-AuthorTests
 PORTVERSION=	0.002
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Module::Install::AuthorTests.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
