@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Data/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Data/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	Test-Data
 PORTVERSION=	1.23
@@ -17,11 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Data.3 \
-		Test::Data::Array.3 \
-		Test::Data::Function.3 \
-		Test::Data::Hash.3 \
-		Test::Data::Scalar.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
