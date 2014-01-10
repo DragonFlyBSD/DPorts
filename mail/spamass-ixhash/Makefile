@@ -1,5 +1,5 @@
 # Created by: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: mail/spamass-ixhash/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/spamass-ixhash/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	iXhash
 PORTVERSION=	1.5.5
@@ -16,7 +16,7 @@ RUN_DEPENDS=	spamc:${PORTSDIR}/mail/p5-Mail-SpamAssassin \
 		p5-Digest-MD5>=0:${PORTSDIR}/security/p5-Digest-MD5 \
 		p5-Net-DNS>=0.63:${PORTSDIR}/dns/p5-Net-DNS
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 SUB_FILES=	pkg-message
 NO_BUILD=	yes
