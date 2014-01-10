@@ -1,18 +1,20 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-cloudfiles/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD: devel/rubygem-cloudfiles/Makefile 338270 2013-12-31 10:09:08Z sunpoet $
 
 PORTNAME=	cloudfiles
-PORTVERSION=	1.5.0.2
+PORTVERSION=	1.5.0.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A Ruby version of the Rackspace Cloud Files API
+COMMENT=	Ruby version of the Rackspace Cloud Files API
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-json>=0:${PORTSDIR}/devel/rubygem-json
 
-USE_RUBY=		yes
-USE_RUBYGEMS=		yes
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
