@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: devel/maven3/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/maven3/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	maven3
 DISTVERSION=	3.0.4
@@ -11,7 +11,7 @@ DISTNAME=	apache-maven-${DISTVERSION}-bin
 MAINTAINER=	hq@FreeBSD.org
 COMMENT=	Java project management tool, 3.x branch
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	mvn:${PORTSDIR}/devel/maven-wrapper
 
