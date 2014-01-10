@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: math/R-cran-quadprog/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-quadprog/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	quadprog
 DISTVERSION=	1.5-5
@@ -13,7 +13,6 @@ COMMENT=	Functions to solve Quadratic Programming Problems
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
