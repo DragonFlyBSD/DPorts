@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-rdtool/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ruby-rdtool/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	rdtool
 PORTVERSION=	0.6.38
@@ -15,7 +15,6 @@ COMMENT=	RD to HTML/man/etc. converter (RD is to Ruby as POD is to Perl)
 BUILD_DEPENDS=	racc:${PORTSDIR}/devel/rubygem-racc
 
 GITVERSION=	c895345
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/uwabami-${PORTNAME}-${GITVERSION}
 
 USE_RUBY=	yes
