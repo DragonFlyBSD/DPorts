@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-RColorBrewer/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: graphics/R-cran-RColorBrewer/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	RColorBrewer
 DISTVERSION=	1.0-5
@@ -10,9 +10,8 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	ColorBrewer palettes
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
