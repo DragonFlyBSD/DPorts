@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: archivers/rpm2cpio/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/rpm2cpio/Makefile 338673 2014-01-04 18:55:52Z bapt $
 
 PORTNAME=	rpm2cpio
 PORTVERSION=	1.3
@@ -14,26 +14,18 @@ COMMENT=	Convert .rpm files for extraction with /usr/bin/cpio, needs just perl
 NO_WRKSUBDIR=	yes
 
 USES=		perl5
-NO_STAGE=	yes
 NO_BUILD=	yes
 REINPLACE_ARGS=
 
 PLIST_FILES=	bin/rpm2cpio.pl
 
-.include <bsd.port.pre.mk>
-
-.if ( (${OSVERSION} >= 900000 && ${OSVERSION} < 900012) || ${OSVERSION} < 800505 )
-RUN_DEPENDS+=	${LOCALBASE}/bin/xz:${PORTSDIR}/archivers/xz
-.endif
-
-do-fetch:
-	@${DO_NADA}
+RUN_DEPENDS+=	xz:${PORTSDIR}/archivers/xz
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${REINPLACE_CMD} -e 's|^#!/usr/bin/perl|#!${PERL}|' ${FILESDIR}/${PORTNAME} >${WRKDIR}/${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}.pl
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}.pl
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
