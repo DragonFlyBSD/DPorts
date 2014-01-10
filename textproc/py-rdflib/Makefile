@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-rdflib/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-rdflib/Makefile 339090 2014-01-08 11:08:29Z wg $
 
 PORTNAME=	rdflib
 PORTVERSION=	4.0.1
@@ -14,11 +14,9 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}isodate>=0:${PORTSDIR}/devel/py-isodate
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e 's|setuptools|distutils.core|' ${WRKSRC}/${PYSETUP}
 
 .include <bsd.port.mk>
