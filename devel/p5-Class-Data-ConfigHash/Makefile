@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: devel/p5-Class-Data-ConfigHash/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Data-ConfigHash/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Class-Data-ConfigHash
 PORTVERSION=	0.00002
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Class-Data-Inheritable>=0:${PORTSDIR}/devel/p5-Class-Data-Inheri
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Data::ConfigHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
