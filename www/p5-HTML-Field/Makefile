@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: www/p5-HTML-Field/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Field/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	HTML-Field
 PORTVERSION=	1.19
@@ -8,13 +8,9 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sahil@FreeBSD.org
-COMMENT=	A perl module to generate HTML form elements
-
-MAN3=		HTML::Field.3 \
-		HTML::FieldForm.3
+COMMENT=	Perl module to generate HTML form elements
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
