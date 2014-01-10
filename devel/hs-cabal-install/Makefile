@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-cabal-install/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-cabal-install/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	cabal-install
 PORTVERSION=	1.16.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -19,10 +19,9 @@ EXECUTABLE=	cabal-install
 SUB_FILES=	cabal
 SUB_LIST=	AR=${AR} CC=${CC} CPP=${CPP} LD=${LD} RANLIB=${RANLIB}
 
-NO_STAGE=	yes
 post-install::
-	@${MV} ${PREFIX}/bin/cabal ${PREFIX}/bin/cabal-install
-	${INSTALL_SCRIPT} ${WRKDIR}/cabal ${PREFIX}/bin
+	@${MV} ${STAGEDIR}${PREFIX}/bin/cabal ${STAGEDIR}${PREFIX}/bin/cabal-install
+	${INSTALL_SCRIPT} ${WRKDIR}/cabal ${STAGEDIR}${PREFIX}/bin
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
