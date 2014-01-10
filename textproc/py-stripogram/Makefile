@@ -1,5 +1,5 @@
 # Created by: Oleg Ukraincev <oleg@ht-systems.ru>
-# $FreeBSD: textproc/py-stripogram/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-stripogram/Makefile 338097 2013-12-30 12:03:37Z wg $
 
 PORTNAME=	stripogram
 PORTVERSION=	1.4
@@ -16,6 +16,6 @@ WRKSRC=		${WRKDIR}/stripogram
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
