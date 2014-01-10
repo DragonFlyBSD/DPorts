@@ -1,8 +1,8 @@
-# $FreeBSD: net/hs-sendfile/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: net/hs-sendfile/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	sendfile
 PORTVERSION=	0.7.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	network>=2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
