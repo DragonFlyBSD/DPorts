@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: www/download-gemist/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/download-gemist/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	download-gemist
 PORTVERSION=	1.2
@@ -13,7 +13,6 @@ LICENSE=	MIT
 
 USE_PYTHON=	yes
 NO_BUILD=	yes
-FETCH_ARGS=	-Fpr
 
 PLIST_DIRS=	%%DOCSDIR%%
 PLIST_FILES=	bin/download-gemist \
