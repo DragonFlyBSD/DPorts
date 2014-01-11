@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: java/netbeans/Makefile 332088 2013-10-30 09:53:10Z gahr $
+# $FreeBSD: java/netbeans/Makefile 339083 2014-01-08 10:11:20Z gahr $
 
 PORTNAME=	netbeans
 PORTVERSION=	7.4
@@ -10,6 +10,9 @@ DISTNAME=	netbeans-${PORTVERSION}-201310111528
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	A full-featured integrated environment for Java
+
+LICENSE=	CDDL GPLv2
+LICENSE_COMB=	multi
 
 USE_ZIP=	yes
 USE_JAVA=	yes
@@ -26,7 +29,7 @@ DESKTOP_ENTRIES="NetBeans" \
 		${DATADIR}/nb/netbeans.png \
 		${PORTNAME}-${PORTVERSION} \
 		"Development;" \
-		${FALSE}
+		false
 
 post-patch:
 	@${REINPLACE_CMD} -i "" -e '57s|#||;57s|/path/to/jdk|${JAVA_HOME}|' \
