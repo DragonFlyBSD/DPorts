@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/py-salt-api/Makefile 332160 2013-10-30 18:04:56Z wg $
+# $FreeBSD: sysutils/py-salt-api/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	salt-api
 PORTVERSION=	0.8.3
@@ -9,9 +9,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	christer.edwards@gmail.com
 COMMENT=	Exposes the fundamental aspects of Salt control to external sources
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
-FETCH_ARGS=	-pRr
 USE_PYTHON=	2.6-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
