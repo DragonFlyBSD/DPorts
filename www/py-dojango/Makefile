@@ -1,9 +1,9 @@
 # Created by: jpaetzel
-# $FreeBSD: www/py-dojango/Makefile 336935 2013-12-19 16:45:57Z wg $
+# $FreeBSD: www/py-dojango/Makefile 338329 2013-12-31 16:33:23Z wg $
 
 PORTNAME=	dojango
 PORTVERSION=	0.5.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python java
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
