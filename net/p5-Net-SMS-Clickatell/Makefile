@@ -1,5 +1,5 @@
 # Created by: John Bayly <freebsd.ports@tipstrade.net>
-# $FreeBSD: net/p5-Net-SMS-Clickatell/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SMS-Clickatell/Makefile 338754 2014-01-05 12:20:02Z az $
 
 PORTNAME=	Net-SMS-Clickatell
 PORTVERSION=	0.05
@@ -15,9 +15,6 @@ TEST_DEPENDS=	p5-libwww>=5.816:${PORTSDIR}/www/p5-libwww
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SMS::Clickatell.3
-
-NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -delete
 
