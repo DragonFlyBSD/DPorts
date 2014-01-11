@@ -1,8 +1,8 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/tcpdump/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/tcpdump/Makefile 338042 2013-12-29 20:44:20Z wxs $
 
 PORTNAME=	tcpdump
-PORTVERSION=	4.4.0
+PORTVERSION=	4.5.1
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.tcpdump.org/release/
 
@@ -29,8 +29,10 @@ SMI_DESC=	Allow MIBs to be loaded on the fly
 USER_DESC=	Drop privileges to nobody
 CHROOT_DESC=	Chroot to /var/run/tcpdump (set CHROOTDIR to change)
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+CONFIGURE_ARGS+=	--enable-pcap_setdirection --with-pcap_setdirection
+
 # The --without-crypto flag needs to be explicitly specified. The
 # configure script gets confused if you specify --with-crypto and
 # thinks this means you *don't* want crypto.
@@ -65,14 +67,14 @@ CONFIGURE_ARGS+=	--with-chroot=${CHROOTDIR}
 
 .include <bsd.port.pre.mk>
 
-MAN1=		tcpdump.1
-PLIST_FILES=	sbin/tcpdump
+PLIST_FILES=	sbin/tcpdump \
+		man/man1/tcpdump.1.gz
 
 post-configure:
 	@${REINPLACE_CMD} -e "s,\./\.\./${LIBPCAP_FORCE_VER}/libpcap\.a,${LOCALBASE}/lib/libpcap.so.1," ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tcpdump ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/tcpdump.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/tcpdump ${STAGEDIR}/${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/tcpdump.1 ${STAGEDIR}/${MAN1PREFIX}/man/man1
 
 .include <bsd.port.post.mk>
