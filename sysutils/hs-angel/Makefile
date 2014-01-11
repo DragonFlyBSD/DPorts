@@ -1,8 +1,8 @@
-# $FreeBSD: sysutils/hs-angel/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: sysutils/hs-angel/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	angel
 PORTVERSION=	0.3.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -17,6 +17,5 @@ EXECUTABLE=	angel
 
 STANDALONE=	yes
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
