@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mysql-udf-preg/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/mysql-udf-preg/Makefile 338286 2013-12-31 12:47:23Z antoine $
 
 PORTNAME=	mysql-udf-preg
 PORTVERSION=	1.0.1
@@ -14,25 +14,23 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/mysql/plugin
-USE_GMAKE=	yes
+USES=		gmake
 USE_MYSQL=	yes
 
 USE_LDCONFIG=	yes
 
-WRKSRC=	${WRKDIR}/lib_mysqludf_preg-${PORTVERSION}
+WRKSRC=		${WRKDIR}/lib_mysqludf_preg-${PORTVERSION}
 
 PLIST_FILES=	lib/mysql/plugin/lib_mysqludf_preg.a \
-				lib/mysql/plugin/lib_mysqludf_preg.la \
-				lib/mysql/plugin/lib_mysqludf_preg.so \
-				%%DATADIR%%/installdb.sql \
-				%%DATADIR%%/uninstalldb.sql
+		lib/mysql/plugin/lib_mysqludf_preg.la \
+		lib/mysql/plugin/lib_mysqludf_preg.so \
+		%%DATADIR%%/installdb.sql \
+		%%DATADIR%%/uninstalldb.sql
 PLIST_DIRS=	${DATADIR_REL} lib/mysql/plugin
 
-NO_STAGE=	yes
 post-install:
-	${MKDIR} ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/installdb.sql ${DATADIR}/
-	${INSTALL_DATA} ${WRKSRC}/uninstalldb.sql ${DATADIR}/
-	${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/installdb.sql ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/uninstalldb.sql ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
