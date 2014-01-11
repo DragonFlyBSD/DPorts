@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 336968 2013-12-20 00:12:10Z delphij $
+# $FreeBSD: chinese/ibus-pinyin/Makefile 338933 2014-01-06 21:04:14Z delphij $
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
@@ -31,6 +31,12 @@ OPTIONS_DEFAULT=	ANDROID_DB
 ANDROID_DB_DESC=	Build Android DB
 OPENPHRASE_DB_DESC=	Build Open Phrase DB
 OPENCC_DESC=		Use opencc
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1000024
+USE_GCC=	yes
+.endif
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
@@ -78,4 +84,4 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|DATADIRNAME=lib|DATADIRNAME=share|' ${WRKSRC}/configure
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
