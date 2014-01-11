@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/fbreader/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/fbreader/Makefile 338988 2014-01-07 09:46:29Z fluffy $
 
 PORTNAME=	fbreader
 PORTVERSION=	0.99.4
@@ -47,7 +47,6 @@ MAKE_ENV+=	TARGET_ARCH=desktop UI_TYPE=${UI} TARGET_STATUS=${STATUS} \
 		LD="${CXX}"
 MAKE_ARGS+=	MAKE=${GMAKE} LIBDIR=${PREFIX}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^CFLAGS/s,-pipe.*$$,${CFLAGS} -DDO_ICONV_CAST -DLIBICONV_PLUG,' \
 		-e '/^CC/d;/^LD/d;/QTINCLUDE/s,-I.*$$,-I${QT_INCDIR},;s,libpng ,libpng15 ,' \
