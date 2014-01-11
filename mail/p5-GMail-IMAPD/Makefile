@@ -1,5 +1,5 @@
 # Created by: Ali Mashtizadeh <ali@mashtizadeh.org>
-# $FreeBSD: mail/p5-GMail-IMAPD/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-GMail-IMAPD/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	GMail-IMAPD
 PORTVERSION=	0.94
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		GMail::IMAPD.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
