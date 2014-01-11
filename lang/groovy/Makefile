@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: lang/groovy/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/groovy/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	groovy
 DISTVERSION=	2.0.5
@@ -11,7 +11,7 @@ DISTFILES=	groovy-binary-${PORTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	mjs@Bur.st
 COMMENT=	Agile dynamic language for the JVM
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:tu}
 
