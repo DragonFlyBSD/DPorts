@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Spool/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Spool/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Mail-Spool
 PORTVERSION=	0.50
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	chifeng@gmail.com
-COMMENT=	"Pure Perl" implementation of mail spooling, unspooling, and sending
+COMMENT=	Pure Perl implementation of mail spooling, unspooling, and sending
 
 BUILD_DEPENDS=	p5-File-NFSLock>=0:${PORTSDIR}/devel/p5-File-NFSLock \
 		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools \
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Spool.3 Mail::Spool::Handle.3 Mail::Spool::Node.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
