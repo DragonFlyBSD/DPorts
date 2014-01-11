@@ -1,5 +1,5 @@
 # Created by: Richard Rose <freebsd-security@rikrose.net>
-# $FreeBSD: shells/nologinmsg/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/nologinmsg/Makefile 337654 2013-12-27 08:41:30Z bapt $
 
 PORTNAME=	nologinmsg
 PORTVERSION=	1.0
@@ -10,10 +10,8 @@ DISTFILES=	# none
 MAINTAINER=	freebsd-security@rikrose.net
 COMMENT=	More functional native binary replacement for /sbin/nologin
 
-MAN8=		nologinmsg.8
-MANCOMPRESSED=	yes
+USES=		uidfix
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 .for i in Makefile nologinmsg.c nologinmsg.8 pathnames.h
@@ -25,9 +23,6 @@ post-patch:
 		${WRKSRC}/pathnames.h
 
 pre-install:
-	${MKDIR} ${PREFIX}/etc/nologinmsgs
-
-post-install:
-	${STRIP_CMD} ${PREFIX}/bin/nologinmsg
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nologinmsgs
 
 .include <bsd.port.mk>
