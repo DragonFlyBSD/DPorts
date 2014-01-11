@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: chinese/oxim/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/oxim/Makefile 338683 2014-01-04 23:27:58Z antoine $
 
 PORTNAME=	oxim
 PORTVERSION=	1.2.2
@@ -34,9 +34,6 @@ CONFIGURE_ARGS+=--disable-bimsphone-module \
 # oxim requires qinputcontextplugin.h which only exists in Debian package
 CONFIGURE_ARGS+=--disable-qt-immodule
 
-MAN1=		oxim.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
@@ -82,12 +79,5 @@ PLIST_SUB+=	NLS=""
 post-patch:
 	${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|' \
 			${WRKSRC}/src/gtk-immodule/gtkintl.h
-
-post-install:
-.if ${PORT_OPTIONS:MGTK2}
-	@${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${PREFIX}/etc/gtk-2.0/gtk.immodules
-.endif
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO} To display this message again, type ${PKG_INFO} -D ${PKGNAME}
 
 .include <bsd.port.mk>
