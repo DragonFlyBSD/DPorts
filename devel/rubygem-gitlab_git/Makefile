@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gitlab_git/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD: devel/rubygem-gitlab_git/Makefile 338344 2014-01-01 00:08:40Z sunpoet $
 
 PORTNAME=	gitlab_git
 PORTVERSION=	2.3.1
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	GitLab wrapper around git objects
 
+LICENSE=	MIT
+
 RUN_DEPENDS=	rubygem-activesupport>=3.2.13:${PORTSDIR}/devel/rubygem-activesupport \
 		rubygem-github-linguist>=2.3.4:${PORTSDIR}/textproc/rubygem-github-linguist \
 		rubygem-gitlab-grit>=2.6.0:${PORTSDIR}/textproc/rubygem-gitlab-grit
@@ -15,6 +17,5 @@ RUN_DEPENDS=	rubygem-activesupport>=3.2.13:${PORTSDIR}/devel/rubygem-activesuppo
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
