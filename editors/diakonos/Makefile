@@ -1,5 +1,5 @@
 # Created by: Chris Petrik <chris@officialunix.com>
-# $FreeBSD: editors/diakonos/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/diakonos/Makefile 338475 2014-01-02 19:55:31Z swills $
 
 PORTNAME=	diakonos
 PORTVERSION=	0.9.1
@@ -12,7 +12,6 @@ COMMENT=	Linux editor for the masses
 LICENSE=	MIT
 
 USE_RUBY=	yes
-RUBY_VER=	1.9
 
 NO_BUILD=	yes
 SUB_FILES=	installation.rb
