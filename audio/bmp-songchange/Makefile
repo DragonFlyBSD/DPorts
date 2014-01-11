@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/bmp-songchange/Makefile 334765 2013-11-24 19:01:35Z bapt $
+# $FreeBSD: audio/bmp-songchange/Makefile 338527 2014-01-03 08:21:27Z rene $
 
 PORTNAME=	bmp-songchange
 PORTVERSION=	0.0.2
@@ -9,9 +9,6 @@ MASTER_SITES=	BERLIOS/bmp-plugins
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Beep Media Player do-this-on-song-change plugin
-
-EXPIRATION_DATE=	2013-12-24
-DEPRECATED=	No public distfiles available anymore
 
 LICENSE=	GPLv2
 
