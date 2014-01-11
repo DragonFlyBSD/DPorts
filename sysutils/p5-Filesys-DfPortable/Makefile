@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Filesys-DfPortable/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Filesys-DfPortable/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	Filesys-DfPortable
 PORTVERSION=	0.85
@@ -9,12 +9,9 @@ MASTER_SITE_SUBDIR=	Filesys
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lth@FreeBSD.org
-COMMENT=	Filesys::DfPortable - Perl extension for filesystem disk space information.
+COMMENT=	Perl extension for filesystem disk space information
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Filesys::DfPortable.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
