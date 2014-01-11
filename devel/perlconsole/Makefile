@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: devel/perlconsole/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/perlconsole/Makefile 337673 2013-12-27 09:54:22Z jadawin $
 
 PORTNAME=	perlconsole
 PORTVERSION=	0.4
@@ -32,19 +32,20 @@ PLIST_FILES=	bin/perlconsole \
 
 PLIST_DIRS=	${SITE_PERL_REL}/PerlConsole
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 do-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in README AUTHORS CHANGES
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
-	${MKDIR} ${PREFIX}/${SITE_PERL_REL}/PerlConsole/
+	${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/PerlConsole/
 	${CP} -R ${WRKSRC}/lib/PerlConsole/ \
-		${PREFIX}/${SITE_PERL_REL}/PerlConsole/
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/PerlConsole/
 	${CP} ${WRKSRC}/lib/PerlConsole.pm \
-		${PREFIX}/${SITE_PERL_REL}/PerlConsole.pm
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/PerlConsole.pm
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
