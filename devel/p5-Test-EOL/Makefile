@@ -1,5 +1,5 @@
 # Created by: milki@rescomp.berkeley.edu
-# $FreeBSD: devel/p5-Test-EOL/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-EOL/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Test-EOL
 PORTVERSION=	1.5
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Pod-Coverage>=1.08:${PORTSDIR}/devel/p5-Pod-Coverage \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::EOL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
