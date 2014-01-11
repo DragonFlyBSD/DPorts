@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: news/xrn/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/xrn/Makefile 337665 2013-12-27 09:32:18Z bapt $
 
 PORTNAME=	xrn
 DISTVERSION=	10.00-beta-3
@@ -10,16 +10,13 @@ MASTER_SITES=	ftp://sipb.mit.edu/pub/xrn/ \
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Usenet News reader for the X Window System
 
-MAN1=		xrn.1
-MANCOMPRESSED=	no
-GNU_CONFIGURE=	yes
 USES=		bison gmake pkgconfig
+GNU_CONFIGURE=	yes
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
 DOCS=		COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E -e "s|^#error.+||g" \
 		-e "s|/usr/lib/sendmail|/usr/sbin/sendmail|g" \
@@ -27,11 +24,9 @@ post-patch:
 		${WRKSRC}/config.h
 
 post-install:
-.ifndef		NOPORTDOCS
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
