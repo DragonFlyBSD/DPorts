@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: lang/fsharp/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/fsharp/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	fsharp
 PORTVERSION=	3.0.25
@@ -11,7 +11,7 @@ DISTFILES=	${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Functional and object-oriented language for the .NET platform
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	mono>=3.0:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono>=3.0:${PORTSDIR}/lang/mono
