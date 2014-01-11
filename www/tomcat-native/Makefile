@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/tomcat-native/Makefile 336727 2013-12-17 14:19:30Z ale $
+# $FreeBSD: www/tomcat-native/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	tomcat-native
 PORTVERSION=	1.1.29
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Tomcat native library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libapr-1.so.4:${PORTSDIR}/devel/apr1
 
