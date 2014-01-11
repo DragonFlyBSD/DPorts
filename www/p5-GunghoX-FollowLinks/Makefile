@@ -1,10 +1,10 @@
-# $FreeBSD: www/p5-GunghoX-FollowLinks/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-GunghoX-FollowLinks/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	GunghoX-FollowLinks
 PORTVERSION=	0.00006
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	../../authors/id/D/DM/DMAKI
+MASTER_SITE_SUBDIR=	CPAN:DMAKI
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
@@ -23,20 +23,4 @@ TEST_DEPENDS=	p5-Class-Null>0:${PORTSDIR}/devel/p5-Class-Null
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	GunghoX::FollowLinks.3 \
-	GunghoX::FollowLinks::Filter.3 \
-	GunghoX::FollowLinks::Parser.3 \
-	GunghoX::FollowLinks::Parser::HTML.3 \
-	GunghoX::FollowLinks::Parser::Text.3 \
-	GunghoX::FollowLinks::Rule.3 \
-	GunghoX::FollowLinks::Rule::Allow.3 \
-	GunghoX::FollowLinks::Rule::Deny.3 \
-	GunghoX::FollowLinks::Rule::Fresh.3 \
-	GunghoX::FollowLinks::Rule::Fresh::Cache.3 \
-	GunghoX::FollowLinks::Rule::Fresh::Memory.3 \
-	GunghoX::FollowLinks::Rule::HTML::SelectedTags.3 \
-	GunghoX::FollowLinks::Rule::MIME.3 \
-	GunghoX::FollowLinks::Rule::URI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
