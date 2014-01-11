@@ -1,5 +1,5 @@
 # Created by: Rodrigo Graeff <delphus@gmail.com>
-# $FreeBSD: converters/ytnef/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD: converters/ytnef/Makefile 339246 2014-01-09 14:49:45Z bapt $
 
 PORTNAME=	ytnef
 PORTVERSION=	2.6
@@ -9,6 +9,8 @@ MASTER_SITES=	SF
 
 MAINTAINER=	delphus@gmail.com
 COMMENT=	Unpack data in MS Outlook TNEF format
+
+OPTIONS_DEFINE=	DOCS
 
 LIB_DEPENDS=	libytnef.so:${PORTSDIR}/devel/libytnef
 RUN_DEPENDS=	p5-MIME-Tools>=0:${PORTSDIR}/mail/p5-MIME-Tools
@@ -23,15 +25,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/ytnef bin/ytnefprocess.pl bin/ytnefprint
 PORTDOCS=	AUTHORS NEWS README
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^#!/usr/bin/perl|#!${PERL}|' \
 		${WRKSRC}/src/ytnef/ytnefprocess.pl
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
