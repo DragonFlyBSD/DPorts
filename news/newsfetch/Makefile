@@ -1,5 +1,5 @@
 # Created by: Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: news/newsfetch/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/newsfetch/Makefile 337681 2013-12-27 10:04:01Z bapt $
 
 PORTNAME=	newsfetch
 PORTVERSION=	1.21
@@ -13,11 +13,11 @@ COMMENT=	Download news articles from NNTP server
 
 MAKE_ENV=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/man/man"
 
-MAN1=		newsfetch.1
-MANCOMPRESSED=	maybe
-PLIST_FILES=	bin/newsfetch
+USES=		uidfix
+CFLAGS+=	-Wno-return-type
+PLIST_FILES=	bin/newsfetch \
+		man/man1/newsfetch.1.gz
 
-NO_STAGE=	yes
 do-configure:
 	cd ${WRKSRC} && ( \
 	${ECHO_CMD} "PROG= newsfetch"; \
