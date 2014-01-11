@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: misc/libmetalink/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: misc/libmetalink/Makefile 338516 2014-01-03 01:53:21Z bapt $
 
 PORTNAME=	libmetalink
 PORTVERSION=	0.0.3
@@ -15,7 +15,6 @@ LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-FETCH_ARGS=
 USE_BZIP2=	yes
 USE_GCC=	yes
 GNU_CONFIGURE=	yes
