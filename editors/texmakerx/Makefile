@@ -1,9 +1,9 @@
 # Created by: lx
-# $FreeBSD: editors/texmakerx/Makefile 334588 2013-11-22 12:55:18Z makc $
+# $FreeBSD: editors/texmakerx/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	texmakerx
 PORTVERSION=	2.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/TexMakerX%20${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION:S:.0::}
