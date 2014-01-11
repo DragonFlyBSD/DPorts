@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: security/pam_google_authenticator/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pam_google_authenticator/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	pam_google_authenticator
 PORTVERSION=	20120831
@@ -10,7 +10,7 @@ DISTNAME=	google-authenticator-${PORTVERSION}
 MAINTAINER=	jnlin@csie.nctu.edu.tw
 COMMENT=	PAM module for two-step authentication from Google
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_GMAKE=	yes
 
