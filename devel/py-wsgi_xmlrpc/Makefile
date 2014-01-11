@@ -1,5 +1,5 @@
 # Created by: Yevgen Drachenko <geka@sippysoft.com>
-# $FreeBSD: devel/py-wsgi_xmlrpc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-wsgi_xmlrpc/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	wsgi_xmlrpc
 PORTVERSION=	0.2.8
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME:S/_/-/}-${PORTVERSION}
 MAINTAINER=	geka@sippysoft.com
 COMMENT=	WSGI application for a simple XMLRPC method dispatching
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=	2.5+
 USE_PYDISTUTILS=	easy_install
