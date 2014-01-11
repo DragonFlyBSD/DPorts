@@ -1,5 +1,5 @@
 # Created by: Phil Phillips
-# $FreeBSD: net-mgmt/p5-Zenoss/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Zenoss/Makefile 338790 2014-01-05 15:52:33Z az $
 
 PORTNAME=	Zenoss
 PORTVERSION=	1.11
@@ -22,26 +22,4 @@ RUN_DEPENDS=	p5-HTTP-Message>=0:${PORTSDIR}/www/p5-HTTP-Message \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Zenoss.3 \
-		Zenoss::Connector.3 \
-		Zenoss::Error.3 \
-		Zenoss::Examples.3 \
-		Zenoss::MetaHelper.3 \
-		Zenoss::Response.3 \
-		Zenoss::Router.3 \
-		Zenoss::Router::DetailNav.3 \
-		Zenoss::Router::Device.3 \
-		Zenoss::Router::Events.3 \
-		Zenoss::Router::Messaging.3 \
-		Zenoss::Router::Mib.3 \
-		Zenoss::Router::Network.3 \
-		Zenoss::Router::Process.3 \
-		Zenoss::Router::Report.3 \
-		Zenoss::Router::Search.3 \
-		Zenoss::Router::Service.3 \
-		Zenoss::Router::Template.3 \
-		Zenoss::Router::Tree.3 \
-		Zenoss::Router::ZenPack.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
