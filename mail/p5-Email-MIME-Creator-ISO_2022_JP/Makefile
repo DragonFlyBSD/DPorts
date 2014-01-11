@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-MIME-Creator-ISO_2022_JP/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-MIME-Creator-ISO_2022_JP/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Email-MIME-Creator-ISO_2022_JP
 PORTVERSION=	0.02
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Test-Classy>=0:${PORTSDIR}/devel/p5-Test-Classy \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Email::MIME::Creator::ISO_2022_JP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
