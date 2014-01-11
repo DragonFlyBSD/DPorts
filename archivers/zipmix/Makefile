@@ -1,18 +1,17 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: archivers/zipmix/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/zipmix/Makefile 337556 2013-12-26 16:55:34Z bapt $
 
 PORTNAME=	zipmix
 DISTVERSION=	20070221
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.advsys.net/ken/util/
 DISTNAME=	${PORTNAME}_src
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	Produce a .ZIP file from 2 other ones with the best compressed files
 
-NO_STAGE=	yes
-USE_DOS2UNIX=	yes
-USE_ZIP=	yes
+USES=		dos2unix
 NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
@@ -21,6 +20,6 @@ pre-build:
 	@${CP} ${FILESDIR}/${MAKEFILE} ${WRKSRC}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
