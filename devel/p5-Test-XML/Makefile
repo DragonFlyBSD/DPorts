@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-XML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-XML/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	Test-XML
 PORTVERSION=	0.08
@@ -17,10 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::XML.3 \
-	Test::XML::SAX.3 \
-	Test::XML::Twig.3 \
-	Test::XML::XPath.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
