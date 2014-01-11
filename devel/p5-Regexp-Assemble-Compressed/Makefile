@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Regexp-Assemble-Compressed/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Regexp-Assemble-Compressed/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Regexp-Assemble-Compressed
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Regexp::Assemble::Compressed.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
