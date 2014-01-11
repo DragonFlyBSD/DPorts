@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Test-HasVersion/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-HasVersion/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Test-HasVersion
 PORTVERSION=	0.01.2
@@ -14,7 +14,4 @@ COMMENT=	Check Perl modules have version numbers
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::HasVersion.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
