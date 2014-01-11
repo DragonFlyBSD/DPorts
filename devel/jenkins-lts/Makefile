@@ -1,4 +1,4 @@
-# $FreeBSD: devel/jenkins-lts/Makefile 335035 2013-11-27 16:53:11Z swills $
+# $FreeBSD: devel/jenkins-lts/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	jenkins
 PORTVERSION=	1.532.1
@@ -19,7 +19,6 @@ CONFLICTS=	jenkins-[0-9]*
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 
-FETCH_ARGS=	-Fpr
 NO_BUILD=	yes
 
 USE_RC_SUBR=	jenkins
