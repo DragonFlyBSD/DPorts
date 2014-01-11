@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: www/phpgedview/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/phpgedview/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	phpGedView
 PORTVERSION=	4.2.3
@@ -12,7 +12,6 @@ COMMENT=	Online genealogy viewer
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
-FETCH_ARGS=	-pRr
 
 USE_ZIP=	yes
 USE_PHP=	calendar dom gd pcre session xml
