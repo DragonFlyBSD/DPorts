@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-diagram/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: graphics/R-cran-diagram/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	diagram
 PORTVERSION=	1.6.1
@@ -15,7 +15,6 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	R-cran-shape>0:${PORTSDIR}/graphics/R-cran-shape
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
