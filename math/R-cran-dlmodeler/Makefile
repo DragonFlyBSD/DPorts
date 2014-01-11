@@ -1,5 +1,5 @@
 # Created by: Cyrille Szymanski <cnszym@gmail.com>
-# $FreeBSD: math/R-cran-dlmodeler/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-dlmodeler/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	dlmodeler
 DISTVERSION=	1.2-1
@@ -13,7 +13,6 @@ COMMENT=	Generalized Dynamic Linear Modeler
 LICENSE=	GPLv2 GPLv3 BSD
 LICENSE_COMB=	dual
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
