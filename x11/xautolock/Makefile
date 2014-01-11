@@ -1,5 +1,5 @@
 # Created by: Eric Blood <eblood@cs.unr.edu>
-# $FreeBSD: x11/xautolock/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xautolock/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xautolock
 PORTVERSION=	2.2
@@ -21,8 +21,6 @@ XLOCK_DESC=	Force dependency on x11/xlockmore
 
 XLOCK_RUN_DEPENDS=	xlock:${PORTSDIR}/x11/xlockmore
 
-MAN1=		xautolock.1
-PLIST_FILES=	bin/xautolock
+PLIST_FILES=	bin/xautolock man/man1/xautolock.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
