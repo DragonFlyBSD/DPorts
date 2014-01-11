@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Parse-CPAN-Packages/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Parse-CPAN-Packages
 PORTVERSION=	2.38
@@ -23,12 +23,7 @@ TEST_DEPENDS=	p5-Test-InDistDir>0:${PORTSDIR}/devel/p5-Test-InDistDir \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Parse::CPAN::Packages.3 \
-	Parse::CPAN::Packages::Distribution.3 \
-	Parse::CPAN::Packages::Package.3
-
 regression-test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
