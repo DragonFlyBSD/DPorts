@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Net-STF-Client/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Net-STF-Client/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	Net-STF-Client
 PORTVERSION=	1.01
@@ -24,9 +24,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::STF::Bucket.3 \
-	Net::STF::Client.3 \
-	Net::STF::Object.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
