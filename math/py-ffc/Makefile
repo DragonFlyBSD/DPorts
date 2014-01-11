@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ffc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-ffc/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	ffc
 PORTVERSION=	${MMVERSION}.0
@@ -15,8 +15,6 @@ LICENSE=	LGPL3
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	FFC
-
-FETCH_ARGS=	-F
 
 MAN1=		ffc.1
 MANCOMPRESSED=	yes
