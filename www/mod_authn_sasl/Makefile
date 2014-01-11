@@ -1,5 +1,5 @@
 # Created by: Joerg Pulz <Joerg.Pulz@frm2.tum.de>
-# $FreeBSD: www/mod_authn_sasl/Makefile 336534 2013-12-15 13:54:30Z ohauer $
+# $FreeBSD: www/mod_authn_sasl/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_authn_sasl
 PORTVERSION=	1.2
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=mod-authn-sasl/mod-authn-sasl/${PORTVERSION}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows user authentication based on libsasl2 mechanisms on apache 2.2
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 
