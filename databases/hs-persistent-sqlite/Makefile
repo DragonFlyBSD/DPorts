@@ -1,8 +1,8 @@
-# $FreeBSD: databases/hs-persistent-sqlite/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: databases/hs-persistent-sqlite/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	persistent-sqlite
 PORTVERSION=	1.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ USE_CABAL=	aeson>=0.5 conduit>=0.5.3 monad-control>=0.2 \
 		monad-logger>=0.2.4 persistent>=1.2 text>=0.7 \
 		transformers>=0.2.1
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
