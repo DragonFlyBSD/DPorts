@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/ksmp3play/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/ksmp3play/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	ksmp3play
 PORTVERSION=	0.5.2.1
@@ -23,8 +23,10 @@ MAN1=		ksmp3play.1
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${TAR} -C ${WRKSRC}/doc --exclude "CVS" -cf - . | \
 		${TAR} -C ${DOCSDIR} --unlink -xf -
