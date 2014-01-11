@@ -1,5 +1,5 @@
 # Created by: rch@richard.eu.org
-# $FreeBSD: editors/yudit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/yudit/Makefile 339033 2014-01-07 20:42:47Z antoine $
 
 PORTNAME=	yudit
 PORTVERSION=	2.9.2
@@ -13,13 +13,10 @@ COMMENT=	Multi-lingual Unicode text editor with TTF support
 CONFLICTS=	netatalk-[0-9]*
 
 USE_XORG=	x11
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LC_ALL=
 MAKE_ENV=	LC_ALL=
 MAKE_JOBS_UNSAFE=	yes
 
-MAN1=		mytool.1 uniconv.1 uniprint.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
