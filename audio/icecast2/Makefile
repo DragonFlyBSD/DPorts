@@ -1,5 +1,5 @@
 # Created by: Chip Marshall <chip@eboai.org>
-# $FreeBSD: audio/icecast2/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/icecast2/Makefile 337636 2013-12-27 02:16:20Z sunpoet $
 
 PORTNAME=	icecast2
 PORTVERSION=	2.3.3
@@ -33,7 +33,6 @@ CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	OGG_PREFIX=${LOCALBASE}
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	${PORTNAME}
-NO_STAGE=	yes
 USES=		gmake
 WRKSRC=		${WRKDIR}/icecast-${PORTVERSION}
 
@@ -50,7 +49,6 @@ post-patch:
 .endif
 
 post-install:
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/favicon.ico ${DATADIR}/web/
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/favicon.ico ${STAGEDIR}${DATADIR}/web/
 
 .include <bsd.port.mk>
