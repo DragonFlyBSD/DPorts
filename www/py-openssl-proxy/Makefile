@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/py-openssl-proxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-openssl-proxy/Makefile 338112 2013-12-30 13:25:50Z wg $
 
 PORTNAME=	openssl-proxy
 PORTVERSION=	0.1
@@ -13,13 +13,8 @@ COMMENT=	HTTPS proxy support
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openssl>0:${PORTSDIR}/security/py-openssl
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	pyOpenSSLProxy
+PYDISTUTILS_AUTOPLIST=	yes
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/OpenSSLProxy.py \
-		%%PYTHON_SITELIBDIR%%/OpenSSLProxy.pyc \
-		%%PYTHON_SITELIBDIR%%/OpenSSLProxy.pyo
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
