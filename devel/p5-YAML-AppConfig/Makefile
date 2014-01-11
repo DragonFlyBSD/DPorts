@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-YAML-AppConfig/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-YAML-AppConfig/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	YAML-AppConfig
 PORTVERSION=	0.16
@@ -18,10 +18,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	YAML::AppConfig.3
-
-NO_STAGE=	yes
 post-patch:
-	${FIND} ${WRKSRC} -name '*.orig' | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name '*.orig' -delete
 
 .include <bsd.port.mk>
