@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Folder/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Folder/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Mail-Folder
 PORTVERSION=	0.07
@@ -20,10 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Mail::Folder.3 Mail::Folder::Emaul.3 Mail::Folder::Mbox.3 \
-		Mail::Folder::NNTP.3 Mail::Folder::Maildir.3
-
-NO_STAGE=	yes
 post-configure:
 	@${PERL} -pi -e 's/^FULLEXT.*/FULLEXT=Mail\/Folder/' \
 		${WRKSRC}/Makefile
