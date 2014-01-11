@@ -1,5 +1,5 @@
 # Created by: Cory R. King <coryking@mozimedia.com>
-# $FreeBSD: net/p5-Net-Trackback/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Trackback/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	Net-Trackback
 PORTVERSION=	1.01
@@ -16,15 +16,7 @@ BUILD_DEPENDS=	p5-Class-ErrorHandler>=0.01:${PORTSDIR}/devel/p5-Class-ErrorHandl
 RUN_DEPENDS=	p5-Class-ErrorHandler>=0.01:${PORTSDIR}/devel/p5-Class-ErrorHandler \
 		p5-libwww>0:${PORTSDIR}/www/p5-libwww
 
-MAN3=		Net::Trackback.3 \
-		Net::Trackback::Client.3 \
-		Net::Trackback::Data.3 \
-		Net::Trackback::Message.3 \
-		Net::Trackback::Ping.3 \
-		Net::Trackback::Server.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
