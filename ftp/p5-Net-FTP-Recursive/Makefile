@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/p5-Net-FTP-Recursive/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/p5-Net-FTP-Recursive/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Net-FTP-Recursive
 PORTVERSION=	2.04
@@ -17,7 +17,4 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::FTP::Recursive.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
