@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-optik/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/py-optik/Makefile 337701 2013-12-27 10:39:19Z wg $
 
 PORTNAME=	optik
 PORTVERSION=	1.5.3
@@ -8,24 +8,22 @@ MASTER_SITES=	SF
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A command-line parsing library for Python
+COMMENT=	Command-line parsing library for Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-NO_STAGE=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-.if !defined(NOPORTDOCS)
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
-PLIST_SUB+=	DOCSDIR=${DOCSDIR:S@^${PREFIX}/@@}
-post-install::
-	@${MKDIR} ${DOCSDIR}/test
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/test/* ${DOCSDIR}/test
-.endif
-EXAMPLES=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
-PLIST_SUB+=	EXAMPLES=${EXAMPLES:S@^${PREFIX}/@@}
-post-install::
-	@${MKDIR} ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLES}
+EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
+PORTDOCS=	*
+PORTEXAMPLES=	*
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/test
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/test/* ${STAGEDIR}${DOCSDIR}/test
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
