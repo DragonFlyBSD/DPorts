@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-subtickets/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-subtickets/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	subtickets
 PORTVERSION=	0.2.0.${GITDATE}
@@ -24,7 +24,6 @@ WRKSRC=		${WRKDIR}/itota-trac-${PORTNAME}-plugin-${GITVERSION}
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	easy_install
 
-FETCH_ARGS=	-Fpr
 PYDISTUTILS_PKGNAME=	TracSubTicketsPlugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/${GITDATE}//g}dev
 PLIST_FILES=		bin/check-trac-subtickets \
