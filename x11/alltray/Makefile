@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: x11/alltray/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/alltray/Makefile 338839 2014-01-06 08:24:24Z bapt $
 
 PORTNAME=	alltray
 PORTVERSION=	0.70
@@ -17,17 +17,13 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		alltray.1
-
 OPTIONS_DEFINE=	KDE
 KDE_DESC=	Support only KDE desktop
+KDE_CONFIGURE_ON=	--disable-gconf
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MKDE}
-CONFIGURE_ARGS=	--disable-gconf
-.else
+.if ! ${PORT_OPTIONS:MKDE}
 USE_GNOME+=	gconf2
 .endif
 
