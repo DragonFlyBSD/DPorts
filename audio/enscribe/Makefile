@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/enscribe/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/enscribe/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	enscribe
 PORTVERSION=	0.1.0
@@ -25,6 +25,8 @@ LICENSE=	GPLv2
 PORTDOCS=	README
 PLIST_FILES=	bin/enscribe
 
+.include <bsd.port.options.mk>
+
 do-build:
 	cd ${BUILD_WRKSRC}; ${CC} ${CFLAGS} \
 		`pkg-config --cflags --libs sndfile freetype2` \
@@ -34,7 +36,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/enscribe ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
 .endif
