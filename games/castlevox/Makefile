@@ -1,5 +1,5 @@
 # Created by: Martin Otto
-# $FreeBSD: games/castlevox/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/castlevox/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	CastleVox
 PORTVERSION=	1.2
@@ -11,7 +11,6 @@ DISTNAME=	${PORTNAME}-linux
 MAINTAINER=	gamato@users.sf.net
 COMMENT=	Fast world domination game
 
-FETCH_ARGS=	-Fpr
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
