@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/par/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/par/Makefile 338703 2014-01-05 00:13:03Z bapt $
 
 PORTNAME=	par
 PORTVERSION=	0.03.01
@@ -14,17 +14,14 @@ LICENSE=	GPLv2
 
 CONFLICTS=	par-[0-9]*
 
-NO_STAGE=	yes
 MAKEFILE=	Makefile.Linux
 MAKE_ARGS=	CC="${CC}"
 
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 PORTDOCS=	ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,-Wall.*-pipe,${CFLAGS}, ; \
@@ -32,11 +29,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,off_t,uint32_t,g' ${WRKSRC}/par.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MANPREFIX}/man/man1
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
