@@ -1,5 +1,5 @@
 # Created by: Leif Pedersen <pedersen@meridian-enviro.com>
-# $FreeBSD: devel/p5-Shape/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Shape/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Shape
 PORTVERSION=	0.04
@@ -11,11 +11,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pedersen@meridian-enviro.com
 COMMENT=	Perl5 module to read and write shapefiles via shapelib
 
-LIB_DEPENDS=	shp:${PORTSDIR}/devel/shapelib
+LIB_DEPENDS=	libshp.so:${PORTSDIR}/devel/shapelib
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Shape.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
