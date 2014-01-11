@@ -1,5 +1,5 @@
 # Created by: Dan Moschuk <dan@FreeBSD.org>
-# $FreeBSD: misc/sshbuddy/Makefile 336134 2013-12-11 01:11:12Z danilo $
+# $FreeBSD: misc/sshbuddy/Makefile 338338 2013-12-31 23:48:41Z sunpoet $
 
 PORTNAME=	sshbuddy
 PORTVERSION=	1.05
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://linuxmafia.com/pub/linux/security/sshbuddy/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	wrighrc@gmail.com
 COMMENT=	Simple and small GUI utility to manage ssh sessions
 
 RUN_DEPENDS=	expectk:${PORTSDIR}/lang/expect
