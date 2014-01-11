@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Weaken/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Weaken/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Test-Weaken
 PORTVERSION=	3.022000
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Weaken.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
