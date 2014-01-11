@@ -1,5 +1,5 @@
 # Created by: gugod@gugod.org
-# $FreeBSD: chinese/aterm/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/aterm/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
@@ -13,11 +13,9 @@ USE_XORG=	xpm
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-xim --enable-big5
 
-NO_STAGE=	yes
 post-install:
-	@${CHMOD} 4711 ${PREFIX}/bin/aterm
+	@${CHMOD} 4711 ${STAGEDIR}${PREFIX}/bin/aterm
 
-MAN1=		aterm.1
-PLIST_FILES=	bin/aterm
+PLIST_FILES=	bin/aterm man/man1/aterm.1.gz
 
 .include <bsd.port.mk>
