@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/R-cran-sqldf/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: databases/R-cran-sqldf/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	sqldf
 DISTVERSION=	0.4-6.4
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	R-cran-proto>=0.3.9.2_6:${PORTSDIR}/devel/R-cran-proto \
 		R-cran-RSQLite.extfuns>=0.0.1:${PORTSDIR}/databases/R-cran-RSQLite.extfuns
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
