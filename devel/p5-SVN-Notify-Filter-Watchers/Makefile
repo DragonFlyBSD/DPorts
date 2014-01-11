@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Notify-Filter-Watchers/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/p5-SVN-Notify-Filter-Watchers/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	SVN-Notify-Filter-Watchers
 PORTVERSION=	0.10
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-SVN-Notify>=2.72:${PORTSDIR}/devel/p5-SVN-Notify
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SVN::Notify::Filter::Watchers.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
