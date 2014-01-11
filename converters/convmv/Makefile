@@ -1,5 +1,5 @@
 # Created by: Kuang-che Wu <kcwu@csie.org>
-# $FreeBSD: converters/convmv/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/convmv/Makefile 339226 2014-01-09 13:19:09Z bapt $
 
 PORTNAME=	convmv
 PORTVERSION=	1.15
@@ -13,10 +13,8 @@ COMMENT=	Convert filenames from one encoding to another
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USES=		perl5
-PLIST_FILES=	bin/convmv
+USES=		perl5 shebangfix
+SHEBANG_FILES=	convmv
+PLIST_FILES=	bin/convmv man/man1/convmv.1.gz
 
-MAN1=		convmv.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
