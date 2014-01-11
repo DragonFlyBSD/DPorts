@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-LoadAllModules/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-LoadAllModules/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Test-LoadAllModules
 PORTVERSION=	0.022
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::LoadAllModules.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
