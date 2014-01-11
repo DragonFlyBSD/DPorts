@@ -1,5 +1,5 @@
 # Created by: asaddi@philosophysw.com
-# $FreeBSD: news/newsfish/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/newsfish/Makefile 337679 2013-12-27 10:02:11Z bapt $
 
 PORTNAME=	newsfish
 PORTVERSION=	1.2.6
@@ -9,11 +9,10 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Batch USENET news reader with filter capabilities
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 
-MAN1=		newsfish.1
-PLIST_FILES=	bin/newsfish
+PLIST_FILES=	bin/newsfish \
+		man/man1/newsfish.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
