@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: mail/biabam/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/biabam/Makefile 338013 2013-12-29 15:46:13Z crees $
 
 PORTNAME=	biabam
 PORTVERSION=	0.9.7
@@ -17,13 +17,10 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 NO_BUILD=	yes
 PLIST_FILES=	bin/biabam
-
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e '1s|\(#!\)\(/bin/bash\)|\1${LOCALBASE}\2|' \
-		${WRKSRC}/${PORTNAME}
+USES=		shebangfix
+SHEBANG_FILES=${PORTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/biabam ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/biabam ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
