@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-remind/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: www/trac-remind/Makefile 337582 2013-12-26 18:02:35Z wg $
 
 PORTNAME=	remind
 PORTVERSION=	1
@@ -16,17 +16,16 @@ RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
 NO_BUILD=	yes
 USE_ZIP=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 PLIST_FILES=	bin/tracremind.py etc/tracremind.conf
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX}," \
 		 -e "s,%%PYTHON%%,${PYTHON_CMD}," ${WRKSRC}/tracremind.py
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tracremind.py ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/tracremind.conf ${PREFIX}/etc
+	${INSTALL_SCRIPT} ${WRKSRC}/tracremind.py ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/tracremind.conf ${STAGEDIR}${PREFIX}/etc
 
 .include <bsd.port.mk>
