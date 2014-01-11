@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11/xclick/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xclick/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xclick
 PORTVERSION=	0.1
@@ -17,13 +17,12 @@ USE_XORG=	x11 xtst xext xfixes xi
 
 PLIST_FILES=	bin/${PORTNAME}
 
-NO_STAGE=	yes
 do-build:
 	@cd ${WRKSRC} && \
 		${CC} -L${LOCALBASE}/lib -I${LOCALBASE}/include click.c \
 			-lX11 -lXtst -o ${PORTNAME}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
