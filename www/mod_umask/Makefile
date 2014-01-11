@@ -1,5 +1,5 @@
 # Created by: Ralf Gebhart <gebhart@secnetix.de>
-# $FreeBSD: www/mod_umask/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD: www/mod_umask/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_umask
 PORTVERSION=	0.1.0
@@ -11,7 +11,7 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	gebhart@secnetix.de
 COMMENT=	Apache 2.x module to set umask of created files
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
