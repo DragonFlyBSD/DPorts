@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/htmlcompressor/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/htmlcompressor/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	htmlcompressor
 PORTVERSION=	1.5.3
@@ -13,7 +13,7 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML/XML Compressor
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 NO_WRKSUBDIR=	yes
 USE_JAVA=	yes
