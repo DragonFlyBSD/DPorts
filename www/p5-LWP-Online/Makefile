@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: www/p5-LWP-Online/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-LWP-Online/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	LWP-Online
 PORTVERSION=	1.08
@@ -20,7 +20,4 @@ RUN_DEPENDS+=	p5-libwww>=5.805:${PORTSDIR}/www/p5-libwww \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		LWP::Online.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
