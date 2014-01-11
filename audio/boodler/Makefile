@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <daniel+boodler@pelleg.org>
-# $FreeBSD: audio/boodler/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/boodler/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	boodler
 PORTVERSION=	1.5.3
@@ -61,7 +61,7 @@ do-install:
 	@${CHMOD} -R u+w,a+r,og-w ${WRKDIR}/boodler-snd
 	@${FIND} ${WRKDIR}/boodler-snd -type d -print0 | ${XARGS} -0 ${CHMOD} 755
 	@cd ${WRKDIR} && ${CP} -pPR boodler/boodle boodler/effects boodler-snd ${BHOME}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	@${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCSDIR}
 .endif
