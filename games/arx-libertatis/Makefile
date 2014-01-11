@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/arx-libertatis/Makefile 330694 2013-10-17 23:52:17Z amdmi3 $
+# $FreeBSD: games/arx-libertatis/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	arx-libertatis
 PORTVERSION=	1.0.3
@@ -19,10 +19,9 @@ LIB_DEPENDS=	libIL.so:${PORTSDIR}/graphics/devil \
 		libboost_program_options.so:${PORTSDIR}/devel/boost-libs
 
 USE_XZ=		yes
-USE_OPENAL=	yes
 USE_SDL=	sdl
 USE_GL=		gl glu
-USES=		cmake
+USES=		cmake openal
 CMAKE_ARGS=	-DCMAKE_INSTALL_MANDIR="man" -DDATA_DIR=arx
 
 SUB_FILES=	pkg-message
