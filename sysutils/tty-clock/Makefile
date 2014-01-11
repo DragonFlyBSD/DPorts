@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: sysutils/tty-clock/Makefile 333992 2013-11-16 13:25:19Z vanilla $
+# $FreeBSD: sysutils/tty-clock/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	tty-clock
 PORTVERSION=	2.0.0
@@ -12,7 +12,6 @@ EXTRACT_SUFX=	# none
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Terminal based clock
 
-FETCH_ARGS=	-pRr
 WRKSRC=		"${WRKDIR}/xorg62-${PORTNAME}-${DISTNAME}"
 PLIST_FILES=	bin/tty-clock
 
