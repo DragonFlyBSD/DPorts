@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/reciteword/Makefile 336173 2013-12-11 14:58:29Z bapt $
+# $FreeBSD: chinese/reciteword/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	reciteword
 PORTVERSION=	0.8.5
@@ -36,7 +36,7 @@ post-patch:
 post-install:
 	@${MKDIR} ${DATADIR}
 	(cd ${WRKDIR}/ && ${COPYTREE_SHARE} "books dicts" ${DATADIR})
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for doc in ${PORTDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
