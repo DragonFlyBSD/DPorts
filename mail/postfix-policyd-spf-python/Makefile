@@ -1,5 +1,5 @@
 # Created by: Giel van Schijndel <me@mortis.eu>
-# $FreeBSD: mail/postfix-policyd-spf-python/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: mail/postfix-policyd-spf-python/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	postfix-policyd-spf-python
 PORTVERSION=	1.2
@@ -11,7 +11,7 @@ DISTNAME=	pypolicyd-spf-${PORTVERSION}
 MAINTAINER=	me@mortis.eu
 COMMENT=	Pure Python Postfix policy daemon for SPF checking
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ipaddr>0:${PORTSDIR}/devel/py-ipaddr \
 		${PYTHON_PKGNAMEPREFIX}spf>0:${PORTSDIR}/mail/py-spf \
