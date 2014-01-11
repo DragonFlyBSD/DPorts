@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: editors/texmaker/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD: editors/texmaker/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	texmaker
 PORTVERSION=	4.1
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
