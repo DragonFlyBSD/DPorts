@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/py-twitter/Makefile 329887 2013-10-09 12:24:19Z sunpoet $
+# $FreeBSD: net/py-twitter/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	twitter
 PORTVERSION=	1.1
@@ -11,7 +11,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python wrapper around the Twitter API
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httplib2>=0:${PORTSDIR}/www/py-httplib2 \
 		${PYTHON_PKGNAMEPREFIX}oauth2>=0:${PORTSDIR}/net/py-oauth2 \
