@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/rendercheck/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/rendercheck/Makefile 337798 2013-12-27 20:21:58Z antoine $
 
 PORTNAME=	rendercheck
 PORTVERSION=	1.4
@@ -11,9 +11,6 @@ COMMENT=	Small program for testing basic Render extension conformance
 XORG_CAT=	app
 USE_XORG=	xrender
 
-MAN1=		rendercheck.1
+PLIST_FILES=	bin/rendercheck man/man1/rendercheck.1.gz
 
-PLIST_FILES=	bin/rendercheck
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
