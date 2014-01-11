@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: games/daimonin/Makefile 334292 2013-11-19 10:01:03Z rene $
+# $FreeBSD: games/daimonin/Makefile 337626 2013-12-26 22:21:46Z rene $
 
 PORTNAME=	daimonin
 PORTVERSION=	0.10.5
@@ -11,8 +11,8 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free open source Massively Multiplayer On-line Role-playing Game (MMORPG)
 
-LIB_DEPENDS=	physfs.1:${PORTSDIR}/devel/physfs \
-		curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libphysfs.so.1:${PORTSDIR}/devel/physfs \
+		libcurl.so:${PORTSDIR}/ftp/curl
 
 SVN_REVISION=	6021
 FETCH_BEFORE_ARGS=	-o ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
