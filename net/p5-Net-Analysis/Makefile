@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-Analysis/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Analysis/Makefile 338808 2014-01-05 17:43:05Z az $
 
 PORTNAME=	Net-Analysis
 PORTVERSION=	0.41
@@ -20,22 +20,4 @@ TEST_DEPENDS=	p5-Test-MockObject>=0:${PORTSDIR}/devel/p5-Test-MockObject
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Analysis.3 \
-		Net::Analysis::Constants.3 \
-		Net::Analysis::Dispatcher.3 \
-		Net::Analysis::EventLoop.3 \
-		Net::Analysis::Listener::Base.3 \
-		Net::Analysis::Listener::Example1.3 \
-		Net::Analysis::Listener::Example2.3 \
-		Net::Analysis::Listener::Example3.3 \
-		Net::Analysis::Listener::HTTP.3 \
-		Net::Analysis::Listener::HTTPPipelining.3 \
-		Net::Analysis::Listener::PortCounter.3 \
-		Net::Analysis::Listener::TCP.3 \
-		Net::Analysis::Packet.3 \
-		Net::Analysis::TCPMonologue.3 \
-		Net::Analysis::TCPSession.3 \
-		Net::Analysis::Time.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
