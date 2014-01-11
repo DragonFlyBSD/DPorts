@@ -1,5 +1,5 @@
 # Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
-# $FreeBSD: sysutils/p5-Sys-Load/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Sys-Load/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	Sys-Load
 PORTVERSION=	0.2
@@ -14,7 +14,4 @@ COMMENT=	Getting the current system load and uptime
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Sys::Load.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
