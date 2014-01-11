@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-ride/Makefile 336371 2013-12-13 19:57:09Z wg $
+# $FreeBSD: devel/py-robotframework-ride/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	robotframework-ride
 PORTVERSION=	1.2.3
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	Vladimir.Chukharev@gmail.com
 COMMENT=	Test data editor for Robot Framework
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}robotframework>=2.7.5:${PORTSDIR}/devel/py-robotframework \
 		${PYTHON_PKGNAMEPREFIX}robotframework-selenium2library>=1.1.0:${PORTSDIR}/devel/py-robotframework-selenium2library
