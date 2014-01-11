@@ -1,5 +1,5 @@
 # Created by: Dmitry Afanasiev <KOT@MATPOCKuH.Ru>
-# $FreeBSD: audio/autocd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/autocd/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	autocd
 PORTVERSION=	3.02.12b
@@ -20,8 +20,10 @@ PORTDOCS=	README.rus.html
 
 USE_RC_SUBR=	autocd
 
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
 .endif
