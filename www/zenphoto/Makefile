@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: www/zenphoto/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/zenphoto/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	zenphoto
 PORTVERSION=	1.4.5
@@ -12,7 +12,6 @@ COMMENT=	Simpler web photo gallery
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-FETCH_ARGS=	-Fpr
 NO_BUILD=	yes
 USE_PHP=	gd gettext json mbstring mysql pcre session
 WANT_PHP_WEB=	yes
