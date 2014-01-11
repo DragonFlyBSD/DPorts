@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: www/pmwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pmwiki/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	pmwiki
 PORTVERSION=	2.2.48
@@ -18,7 +18,6 @@ NO_BUILD=	yes
 
 PORTDOCS=	*
 
-FETCH_ARGS=	-pRr
 PLIST_SUB+=	PMWIKIDIR=${PMWIKIDIR}
 SUB_LIST+=	PMWIKIDIR=${PMWIKIDIR}
 SUB_FILES=	pkg-message
