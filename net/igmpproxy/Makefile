@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: net/igmpproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/igmpproxy/Makefile 339066 2014-01-08 01:23:03Z garga $
 
 PORTNAME=	igmpproxy
 PORTVERSION=	0.1
@@ -18,8 +18,4 @@ USE_RC_SUBR=	igmpproxy
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-MAN5=		igmpproxy.conf.5
-MAN8=		igmpproxy.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
