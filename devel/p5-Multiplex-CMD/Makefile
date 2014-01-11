@@ -1,5 +1,5 @@
 # Created by: Andrey Ignatov <rdna@rdna.ru>
-# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	Multiplex-CMD
 PORTVERSION=	0.03
@@ -14,7 +14,4 @@ COMMENT=	Perl5 module which provides Multiplexed Fork Client
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Multiplex::CMD.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
