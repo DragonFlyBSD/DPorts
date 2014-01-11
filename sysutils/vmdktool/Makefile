@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: sysutils/vmdktool/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/vmdktool/Makefile 337792 2013-12-27 19:29:30Z bapt $
 
 PORTNAME=	vmdktool
 PORTVERSION=	1.3
@@ -13,9 +13,7 @@ COMMENT=	Convert VMDK files to/from raw disk images
 
 LICENSE=	BSD
 
-MAN8=		vmdktool.8
+PLIST_FILES=	bin/vmdktool \
+		man/man8/vmdktool.8.gz
 
-PLIST_FILES=	bin/vmdktool
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
