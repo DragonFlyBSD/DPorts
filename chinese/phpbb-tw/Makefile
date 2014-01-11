@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/phpbb-tw/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/phpbb-tw/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	phpbb
 PORTVERSION=	2.0.23
@@ -53,6 +53,8 @@ EXCEPTFILES=	${PREFIX}/${PHPBBDIR}/install/install.php \
 		${PREFIX}/${PHPBBDIR}/install/upgrade.php \
 		${PREFIX}/${PHPBBDIR}/install/update_to_latest.php
 
+.include <bsd.port.options.mk>
+
 options:
 	@ ${ECHO_MSG} "===>  Build options for ${PKGNAME}:"
 	@ ${CAT} ${PKGOPTS}
@@ -85,7 +87,7 @@ do-install:
 post-install:
 #	@ cd ${DATADIR} && ${INSTALL} -c -o ${WWWOWN} -g ${WWWGRP} \
 #	  ${EXCEPTFILES} ${PREFIX}/${PHPBBDIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@ ${MKDIR} ${DOCSDIR}
 	@ cd ${WRKSRC}/docs && ${FIND} * -type f -maxdepth 0 \! -name \*.bak \
 	  \! -name COPYING -exec ${INSTALL_DATA} {} ${DOCSDIR} \;
