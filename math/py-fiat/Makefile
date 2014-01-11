@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-fiat/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/py-fiat/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	fiat
 PORTVERSION=	${MMVERSION}.0
@@ -20,8 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	FIAT
-
-FETCH_ARGS=	-F
 
 MMVERSION=	1.1
 
