@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/eruby/Makefile 335396 2013-12-01 15:32:42Z dinoex $
+# $FreeBSD: textproc/eruby/Makefile 338490 2014-01-02 20:25:40Z swills $
 
 PORTNAME=	eruby
 PORTVERSION=	1.0.5
@@ -51,8 +51,6 @@ post-install:
 .endfor
 .endif
 
-.if ${RUBY_VER} == "1.9"
 CONFIGURE_ENV+=	EXTRA_CFLAGS="${EXTRA_CFLAGS} -DWITH_RUBY_19"
-.endif
 
 .include <bsd.port.post.mk>
