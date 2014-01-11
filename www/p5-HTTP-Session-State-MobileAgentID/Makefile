@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Session-State-MobileAgentID/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Session-State-MobileAgentID/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTTP-Session-State-MobileAgentID
 PORTVERSION=	0.46
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTTP::Session::State::MobileAgentID.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
