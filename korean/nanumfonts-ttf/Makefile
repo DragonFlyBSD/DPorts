@@ -1,9 +1,8 @@
-# $FreeBSD: korean/nanumfonts-ttf/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/nanumfonts-ttf/Makefile 339059 2014-01-08 00:06:49Z jkim $
 
 MASTERDIR=	${.CURDIR}/../nanumfonts-otf
 
 FONTTYPE=	ttf
 FONTFORMAT=	TrueType
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
