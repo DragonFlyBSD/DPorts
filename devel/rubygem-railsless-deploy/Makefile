@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-railsless-deploy/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD: devel/rubygem-railsless-deploy/Makefile 338313 2013-12-31 14:30:42Z sunpoet $
 
 PORTNAME=	railsless-deploy
 PORTVERSION=	1.1.2
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Replacement for the rails deploy strategy which ships with Capistrano
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-capistrano>=1.0.0:${PORTSDIR}/sysutils/rubygem-capistrano
 
