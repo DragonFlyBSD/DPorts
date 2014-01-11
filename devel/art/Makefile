@@ -1,5 +1,5 @@
 # Created by: Vladimir Gorelov <virtual.lark@gmail.com>
-# $FreeBSD: devel/art/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/art/Makefile 337600 2013-12-26 19:16:54Z bapt $
 
 PORTNAME=	art
 PORTVERSION=	0.9.01
@@ -8,25 +8,22 @@ MASTER_SITES=	http://skylark.tsu.ru/art/0.9/download/src/ \
 		SF/art-project/src/
 
 MAINTAINER=	virtual.lark@gmail.com
-COMMENT=	A resource tracing, debugging, and profiling tool
+COMMENT=	Resource tracing, debugging, and profiling tool
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	xml++-2.6:${PORTSDIR}/textproc/libxml++26
+LIB_DEPENDS=	libxml++-2.6.so:${PORTSDIR}/textproc/libxml++26
 
 USES=	gmake pkgconfig
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/artlibgen/src/artlibgen ${PREFIX}/bin
-	@${INSTALL_PROGRAM} ${WRKSRC}/artrepgen/artrepgen ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/artlibgen/src/artlibgen ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/artrepgen/artrepgen ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docs in posix-gcc-mt-file-lint.xml posix-gcc-mt-netw-lint.xml \
  posix-gcc-mt-file-special.xml
-	@${INSTALL_DATA} ${WRKSRC}/artlibgen/templates/${docs} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/artlibgen/templates/${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .if defined(MAINTAINER_MODE)
 full-regression-test: build
