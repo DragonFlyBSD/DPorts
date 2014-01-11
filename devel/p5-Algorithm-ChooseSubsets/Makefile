@@ -1,5 +1,5 @@
 # Created by: lars.eggert@gmx.net
-# $FreeBSD: devel/p5-Algorithm-ChooseSubsets/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-ChooseSubsets/Makefile 338987 2014-01-07 09:28:30Z az $
 
 PORTNAME=	Algorithm-ChooseSubsets
 PORTVERSION=	0.02
@@ -13,7 +13,4 @@ COMMENT=	Perl algorithm to iterate through subsets of a list
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::ChooseSubsets.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
