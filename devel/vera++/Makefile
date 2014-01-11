@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@outlook.com>
-# $FreeBSD: devel/vera++/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/vera++/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	vera++
 PORTVERSION=	1.2.1
@@ -16,8 +16,6 @@ BUILD_DEPENDS=	boost-libs>=0:${PORTSDIR}/devel/boost-libs
 USE_TCL=	yes
 USE_TK=		yes
 USES=		cmake:outsource
-
-FETCH_ARGS=	-pRr
 
 CMAKE_ARGS+=	-DTCL_INCLUDE_PATH=${TCL_INCLUDEDIR} \
 		-DTK_INCLUDE_PATH=${TK_INCLUDEDIR}
