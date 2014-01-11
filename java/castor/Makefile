@@ -1,5 +1,5 @@
 # Created by: Adam VanderHook <acidos@bandwidth-junkies.net>
-# $FreeBSD: java/castor/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/castor/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	castor
 PORTVERSION=	1.3.2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Data binding for XML (JAXB) and SQL database (JDO)
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -27,18 +27,13 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}-anttasks.jar \
 PORTDOCS=	*.html *.txt *.css *.dtd *.xsd *.pdf \
 		ora-mar-2k images rss
 
-NO_STAGE=	yes
 do-install:
 .for f in ${PLIST_FILES:T:R}
-	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/${f}.jar..."
-	@${INSTALL_DATA} \
+	${INSTALL_DATA} \
 		${WRKSRC}/${f:S/tor/tor-${PORTVERSION}/}.jar \
-		${JAVAJARDIR}/${f}.jar
-	@${ECHO_MSG} " [ DONE ]"
+		${STAGEDIR}${JAVAJARDIR}/${f}.jar
 .endfor
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} \* ${DOCSDIR})
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@(cd ${WRKSRC}/doc/ && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
