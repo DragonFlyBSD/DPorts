@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-StickyQuery-DoCoMoGUID/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-StickyQuery-DoCoMoGUID/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	HTML-StickyQuery-DoCoMoGUID
 PORTVERSION=	0.03
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTML::StickyQuery::DoCoMoGUID.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
