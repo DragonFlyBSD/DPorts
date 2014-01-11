@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: lang/hs-brainfuck/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: lang/hs-brainfuck/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	brainfuck
 PORTVERSION=	0.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	lang haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -15,6 +15,5 @@ USE_CABAL=	mtl
 
 EXECUTABLE=	bf
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
