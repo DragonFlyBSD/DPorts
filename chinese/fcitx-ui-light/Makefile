@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-ui-light/Makefile 336173 2013-12-11 14:58:29Z bapt $
+# $FreeBSD: chinese/fcitx-ui-light/Makefile 339153 2014-01-08 16:12:38Z vanilla $
 
 PORTNAME=	fcitx-ui-light
 PORTVERSION=	0.1.3
@@ -20,9 +20,5 @@ USES=		cmake gettext pkgconfig
 USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
