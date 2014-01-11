@@ -1,5 +1,5 @@
 # Created by: Kuan-Chung Chiu <buganini@gmail.com>
-# $FreeBSD: textproc/kmfl-khmer/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/kmfl-khmer/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	khmer
 PORTVERSION=	1.0
@@ -14,7 +14,6 @@ COMMENT=	KMFL SCIM IMEngine keyboard for Khmer language
 RUN_DEPENDS=	kmflcomp:${PORTSDIR}/textproc/kmflcomp
 
 GITVERSION=	a20cc89
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/buganini-kmfl-${PORTNAME}-${GITVERSION}/kmfl
 NO_BUILD=	yes
 
