@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-APNS/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-APNS/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	Net-APNS
 PORTVERSION=	0.0202
@@ -19,8 +19,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::APNS.3 \
-	Net::APNS::Notification.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
