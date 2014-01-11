@@ -1,5 +1,5 @@
 # Created by: Rob Zinkov
-# $FreeBSD: lang/gambit-c/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/gambit-c/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	gambit-c
 DISTVERSION=	v4_6_6
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pmn@bakarika.net
 COMMENT=	Gambit programming system where the compiler generates portable C code
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 MAN1=		gsi.1
 
