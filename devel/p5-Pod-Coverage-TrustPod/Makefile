@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-Pod-Coverage-TrustPod/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Pod-Coverage-TrustPod/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Pod-Coverage-TrustPod
 PORTVERSION=	0.100002
@@ -24,7 +24,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.41:${PORTSDIR}/devel/p5-Test-Pod
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Pod::Coverage::TrustPod.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
