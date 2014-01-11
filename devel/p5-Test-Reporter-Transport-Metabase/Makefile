@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Reporter-Transport-Metabase/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Reporter-Transport-Metabase/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Test-Reporter-Transport-Metabase
 PORTVERSION=	1.999008
@@ -22,7 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Reporter::Transport::Metabase.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
