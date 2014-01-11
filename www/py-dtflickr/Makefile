@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: www/py-dtflickr/Makefile 335037 2013-11-27 17:12:03Z sunpoet $
+# $FreeBSD: www/py-dtflickr/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	dtflickr
 PORTVERSION=	1.5
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Spiffy Flickr API library using JSON
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
