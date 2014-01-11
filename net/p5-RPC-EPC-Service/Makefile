@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-RPC-EPC-Service/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-RPC-EPC-Service/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	RPC-EPC-Service
 PORTVERSION=	0.0.7
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	RPC::EPC::Service.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
