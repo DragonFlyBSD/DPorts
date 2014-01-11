@@ -1,5 +1,5 @@
 # Created by: Vladimir Perepelitsa <mons@cpan.org>
-# $FreeBSD: devel/p5-ToolSet/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ToolSet/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	ToolSet
 PORTVERSION=	1.00
@@ -13,8 +13,5 @@ COMMENT=	Load your commonly-used modules in a single import
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=	ToolSet.3 \
-	ToolSet::SWC.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
