@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/grabc/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/grabc/Makefile 337985 2013-12-29 13:55:50Z antoine $
 
 PORTNAME=	grabc
 PORTVERSION=	1.1
@@ -16,11 +16,10 @@ USE_XORG=	x11
 CFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib -lX11
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o ${PORTNAME} ${PORTNAME}.c ${LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
