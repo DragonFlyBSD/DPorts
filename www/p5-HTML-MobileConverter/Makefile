@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: www/p5-HTML-MobileConverter/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-MobileConverter/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	HTML-MobileConverter
 PORTVERSION=	0.011
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-HTML-Parser>=3.45:${PORTSDIR}/www/p5-HTML-Parser \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::MobileConverter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
