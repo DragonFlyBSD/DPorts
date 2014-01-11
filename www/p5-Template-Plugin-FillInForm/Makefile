@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Plugin-FillInForm/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Plugin-FillInForm/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Template-Plugin-FillInForm
 PORTVERSION=	0.04
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Plugin::FillInForm.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
