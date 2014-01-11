@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/sbt/Makefile 336700 2013-12-17 08:56:06Z ale $
+# $FreeBSD: devel/sbt/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	sbt
 PORTVERSION=	0.13.1
@@ -12,7 +12,7 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A build tool for Scala projects
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 OPTIONS_DEFINE=	ADVANCED
 ADVANCED_DESC=	Install advanced bash shell-script
