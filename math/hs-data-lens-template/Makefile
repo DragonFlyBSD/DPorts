@@ -1,8 +1,8 @@
-# $FreeBSD: math/hs-data-lens-template/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/hs-data-lens-template/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	data-lens-template
 PORTVERSION=	2.1.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	data-lens>=2.0
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
