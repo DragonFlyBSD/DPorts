@@ -1,5 +1,5 @@
 # Created by: verm
-# $FreeBSD: editors/ssed/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/ssed/Makefile 339037 2014-01-07 21:11:44Z antoine $
 
 PORTNAME=	sed
 PORTVERSION=	3.62
@@ -14,9 +14,6 @@ COMMENT=	Super-sed - a heavily enhanced version of sed
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=s
 
-MAN1=		ssed.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
