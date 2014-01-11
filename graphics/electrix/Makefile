@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/electrix/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/electrix/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	electrix
 PORTVERSION=	0.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics print
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTVERSION}
 
@@ -43,7 +43,7 @@ PLIST_SUB=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPDF}
-LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 .else
 CONFIGURE_ARGS+=	--disable-pdf
 .endif
