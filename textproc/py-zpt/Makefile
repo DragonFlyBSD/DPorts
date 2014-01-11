@@ -1,5 +1,5 @@
 # Created by: Benno Rice <benno@jeamland.net>
-# $FreeBSD: textproc/py-zpt/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-zpt/Makefile 338101 2013-12-30 12:30:11Z wg $
 
 PORTNAME=	zpt
 PORTVERSION=	2.5
@@ -10,14 +10,11 @@ DISTNAME=	ZopePageTemplates-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Zope-less version of Zope Page Templates
+COMMENT=	Zope-less version of Zope Page Templates
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	ZopePageTemplates
-PYDISTUTILS_PKGVERSION=	0.0.0
-PYDISTUTILS_EGGINFODIR=	${PYTHONPREFIX_SITELIBDIR}/ZopePageTemplates
+PYDISTUTILS_AUTOPLIST=	yes
 WRKSRC=		${WRKDIR}/ZopePageTemplates
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
