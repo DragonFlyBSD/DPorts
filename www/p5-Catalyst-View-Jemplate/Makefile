@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-View-Jemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-View-Jemplate/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	Catalyst-View-Jemplate
 PORTVERSION=	0.06
@@ -19,8 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Helper::View::Jemplate.3 \
-	Catalyst::View::Jemplate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
