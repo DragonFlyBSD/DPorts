@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: chinese/hanzim/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/hanzim/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	hanzim
 PORTVERSION=	1.3
@@ -24,6 +24,9 @@ ALL_TARGET=	${PORTNAME}
 MAN1=		hanzim.1
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' ${WRKSRC}/hanzim.c
 
@@ -32,7 +35,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/hanzim.man ${PREFIX}/man/man1/hanzim.1
 	@${MKDIR} ${PREFIX}/lib/hanzim
 	${INSTALL_DATA} ${WRKSRC}/Data/* ${PREFIX}/lib/hanzim
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/hanzim.doc ${DOCSDIR}
 .endif
