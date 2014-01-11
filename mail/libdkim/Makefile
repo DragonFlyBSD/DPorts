@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/libdkim/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/libdkim/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	libdkim
 PORTVERSION=	1.0.21
@@ -9,7 +9,7 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DKIM (DomainKeys Identified Mail) library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_ZIP=	YES
 USE_LDCONFIG=	YES
