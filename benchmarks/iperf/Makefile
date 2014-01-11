@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: benchmarks/iperf/Makefile 335275 2013-11-30 09:58:36Z sunpoet $
+# $FreeBSD: benchmarks/iperf/Makefile 337617 2013-12-26 21:40:49Z sunpoet $
 
 PORTNAME=	iperf
 PORTVERSION=	2.0.5
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tool to measure maximum TCP and UDP bandwidth
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 OPTIONS_DEFINE=	DOCS IPV6 THREADS
 OPTIONS_DEFAULT=THREADS
