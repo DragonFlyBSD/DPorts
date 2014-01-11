@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/mahara/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mahara/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	mahara
 PORTVERSION=	1.1.8
@@ -11,7 +11,6 @@ COMMENT=	An open source ePortfolio system
 
 USE_BZIP2=	yes
 USE_PHP=	session json curl xml xmlrpc openssl simplexml
-FETCH_ARGS=	-pRr
 
 OPTIONS_DEFINE=	MYSQL PGSQL
 OPTIONS_DEFAULT=	MYSQL
