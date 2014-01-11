@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: x11-wm/peksystray/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/peksystray/Makefile 337821 2013-12-27 22:39:23Z antoine $
 
 PORTNAME=	peksystray
 PORTVERSION=	0.4.0
@@ -8,7 +8,7 @@ CATEGORIES=	x11-wm
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A system tray dockapp similar to the GNOME notification area applet
+COMMENT=	System tray dockapp similar to the GNOME notification area applet
 
 LICENSE=	GPLv2
 
@@ -18,7 +18,6 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/peksystray
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|@x_includes@|| ; s|@x_libraries@||' \
 		${WRKSRC}/src/Makefile.in
