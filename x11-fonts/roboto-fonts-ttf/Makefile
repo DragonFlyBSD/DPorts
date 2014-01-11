@@ -1,5 +1,5 @@
 # Created by: Winston Weinert <winstonw@lavabit.com>
-# $FreeBSD: x11-fonts/roboto-fonts-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/roboto-fonts-ttf/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	roboto-fonts-ttf
 PORTVERSION=	20111129
@@ -10,7 +10,7 @@ DISTNAME=	Roboto_Hinted_${PORTVERSION}
 MAINTAINER=	winstonw@lavabit.com
 COMMENT=	The Roboto typeface family
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
