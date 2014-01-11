@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: devel/p5-Log-Dispatch-File-Stamped/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-File-Stamped/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	Log-Dispatch-File-Stamped
 PORTVERSION=	0.12
@@ -26,7 +26,4 @@ TEST_DEPENDS=	p5-Path-Tiny>0:${PORTSDIR}/devel/p5-Path-Tiny \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Log::Dispatch::File::Stamped.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
