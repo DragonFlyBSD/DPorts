@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Facebook-Graph/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Facebook-Graph/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Facebook-Graph
 PORTVERSION=	1.0600
@@ -24,33 +24,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Facebook::Graph.3 \
-	Facebook::Graph::AccessToken.3 \
-	Facebook::Graph::AccessToken::Response.3 \
-	Facebook::Graph::Authorize.3 \
-	Facebook::Graph::BatchRequests.3 \
-	Facebook::Graph::Cookbook.3 \
-	Facebook::Graph::Cookbook::Recipe1.3 \
-	Facebook::Graph::Cookbook::Recipe2.3 \
-	Facebook::Graph::Cookbook::Recipe3.3 \
-	Facebook::Graph::Picture.3 \
-	Facebook::Graph::Publish.3 \
-	Facebook::Graph::Publish::Checkin.3 \
-	Facebook::Graph::Publish::Comment.3 \
-	Facebook::Graph::Publish::Event.3 \
-	Facebook::Graph::Publish::Like.3 \
-	Facebook::Graph::Publish::Link.3 \
-	Facebook::Graph::Publish::Note.3 \
-	Facebook::Graph::Publish::Photo.3 \
-	Facebook::Graph::Publish::Post.3 \
-	Facebook::Graph::Publish::RSVPAttending.3 \
-	Facebook::Graph::Publish::RSVPDeclined.3 \
-	Facebook::Graph::Publish::RSVPMaybe.3 \
-	Facebook::Graph::Query.3 \
-	Facebook::Graph::Request.3 \
-	Facebook::Graph::Response.3 \
-	Facebook::Graph::Role::Uri.3 \
-	Facebook::Graph::Session.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
