@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/sgrep2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/sgrep2/Makefile 338938 2014-01-06 21:23:31Z antoine $
 
 PORTNAME=	sgrep2
 PORTVERSION=	1.94a
@@ -10,14 +10,11 @@ MASTER_SITE_SUBDIR=	jkoshy
 DISTNAME=	sgrep-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A `grep' for structured text like SGML and HTML
+COMMENT=	Grep for structured text like SGML and HTML
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${DATADIR}
 
 CONFLICTS=	sgrep-0.*
 
-MAN1=		sgrep.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
