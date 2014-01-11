@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: deskutils/gmcal/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/gmcal/Makefile 338795 2014-01-05 16:30:31Z rene $
 
 PORTNAME=	gmcal
 PORTVERSION=	0.0.1
@@ -9,6 +9,9 @@ MASTER_SITES=	SF/libmcal/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	thierry@pompo.net
 COMMENT=	GMCAL is a GTK+ frontend for the libmcal package
+
+DEPRECATED=	Depends on expired misc/libmcal
+EXPIRATION_DATE=2014-02-01
 
 LIB_DEPENDS=	libmcal.so:${PORTSDIR}/misc/libmcal
 RUN_DEPENDS=	${LOCALBASE}/mcal/mcal:${PORTSDIR}/deskutils/mcal
