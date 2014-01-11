@@ -1,8 +1,8 @@
 # Created by: gpalmer
-# $FreeBSD: x11-clocks/xdaliclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/xdaliclock/Makefile 337939 2013-12-29 05:23:23Z wxs $
 
 PORTNAME=	xdaliclock
-PORTVERSION=	2.39
+PORTVERSION=	2.40
 CATEGORIES=	x11-clocks
 MASTER_SITES=	http://www.jwz.org/xdaliclock/
 MASTER_SITE_SUBDIR=	applications
