@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Log-Dispatch-Configurator-YAML/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-Configurator-YAML/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Log-Dispatch-Configurator-YAML
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ BUILD_DEPENDS=	p5-Log-Dispatch-Config>=0:${PORTSDIR}/devel/p5-Log-Dispatch-Confi
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Log::Dispatch::Configurator::YAML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
