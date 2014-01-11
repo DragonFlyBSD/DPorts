@@ -1,5 +1,5 @@
 # Created by: jhb
-# $FreeBSD: x11/imwheel/Makefile 330213 2013-10-13 06:15:19Z eadler $
+# $FreeBSD: x11/imwheel/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	imwheel
 PORTVERSION=	1.0.0.p12
@@ -18,9 +18,6 @@ USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gpm
 
-MAN1=		imwheel.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -30,8 +27,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/EMACS ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/EMACS ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
