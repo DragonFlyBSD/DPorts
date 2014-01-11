@@ -1,5 +1,5 @@
 # Created by: Dan Rue <drue@therub.org>
-# $FreeBSD: math/R-cran-psych/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: math/R-cran-psych/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	psych
 PORTVERSION=	1.2.1
@@ -10,7 +10,6 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	drue@therub.org
 COMMENT=	Psych package for the R project
 
-USE_R_MOD=		yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
