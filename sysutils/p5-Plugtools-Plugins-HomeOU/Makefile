@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: sysutils/p5-Plugtools-Plugins-HomeOU/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Plugtools-Plugins-HomeOU/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	Plugtools-Plugins-HomeOU
 PORTVERSION=	0.0.0
@@ -16,8 +16,4 @@ RUN_DEPENDS=	p5-Plugtools>=0:${PORTSDIR}/sysutils/p5-Plugtools
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Plugtools::Plugins::HomeOU.3 \
-		Plugtools::Plugins::HomeOUremove.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
