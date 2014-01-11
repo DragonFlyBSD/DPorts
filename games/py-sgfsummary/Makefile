@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: games/py-sgfsummary/Makefile 336813 2013-12-18 10:38:33Z koobs $
+# $FreeBSD: games/py-sgfsummary/Makefile 337753 2013-12-27 17:24:21Z wg $
 
 PORTNAME=	sgfsummary
 PORTVERSION=	1.0
@@ -19,8 +19,7 @@ USE_PYTHON=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/sgfsummary.py ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/sgfsummary.py ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
