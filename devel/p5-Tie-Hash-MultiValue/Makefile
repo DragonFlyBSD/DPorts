@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Tie-Hash-MultiValue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-Hash-MultiValue/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	Tie-Hash-MultiValue
 PORTVERSION=	1.02
@@ -13,7 +13,4 @@ COMMENT=	Store multiple values per key
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tie::Hash::MultiValue.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
