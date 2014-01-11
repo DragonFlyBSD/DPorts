@@ -1,22 +1,22 @@
 # Created by: Dmitri Nikulin <setagllib@optusnet.com.au>
-# $FreeBSD: sysutils/stress/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/stress/Makefile 339280 2014-01-09 21:13:33Z skreuzer $
 
 PORTNAME=	stress
 PORTVERSION=	1.0.4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://weather.ou.edu/~apw/projects/stress/ \
-		http://fresh.t-systems-sfr.com/unix/src/privat2/
+MASTER_SITES=	http://people.seas.harvard.edu/~apw/stress/ \
+		http://fossies.org/linux/privat/
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Tool to impose load on and stress test Unix-like systems
 
+LICENSE=	GPLv3
+
 GNU_CONFIGURE=	yes
 
 INFO=		stress
-MAN1=		stress.1
-PLIST_FILES=	bin/stress
+PLIST_FILES=	bin/stress man/man1/stress.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(CFLAGS\ \)=|\1 +=|; s|^\(CFLAGS.*\)-Wall|\1|' \
 		${WRKSRC}/src/Makefile.in
