@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: net/jags/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/jags/Makefile 339078 2014-01-08 09:19:59Z gahr $
 
 PORTNAME=	jags
 PORTVERSION=	0.22.1
@@ -16,16 +16,10 @@ SAMBA_PORT?=	net/samba36
 
 CONFLICTS=	jags-1.*
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xi xext x11
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} >= 700042
 CFLAGS+=	-ffriend-injection
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
