@@ -1,9 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: net/p5-Net-Works/Makefile 325225 2013-08-22 19:08:14Z mat $
-#
+# $FreeBSD: net/p5-Net-Works/Makefile 339251 2014-01-09 15:16:47Z wg $
 
 PORTNAME=	Net-Works
-PORTVERSION=	0.13
+PORTVERSION=	0.16
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DROLSKY
@@ -22,8 +21,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Net::Works.3 Net::Works::Util.3 Net::Works::Address.3 \
-		Net::Works::Network.3
 
 .include <bsd.port.mk>
