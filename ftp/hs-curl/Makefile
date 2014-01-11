@@ -1,8 +1,8 @@
-# $FreeBSD: ftp/hs-curl/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: ftp/hs-curl/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	curl
 PORTVERSION=	1.3.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	ftp haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,6 +14,5 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 USE_GHC_NATIVE=	yes
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
