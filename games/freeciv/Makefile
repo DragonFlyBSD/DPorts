@@ -1,9 +1,8 @@
 # Created by: ada@bsd.org
-# $FreeBSD: games/freeciv/Makefile 330187 2013-10-12 20:47:03Z johans $
+# $FreeBSD: games/freeciv/Makefile 337842 2013-12-28 09:10:11Z johans $
 
 PORTNAME=	freeciv
-PORTVERSION=	2.4.0
-PORTREVISION=	1
+PORTVERSION=	2.4.1
 CATEGORIES=	games
 MASTER_SITES=	SF/freeciv/Freeciv%20${PORTVERSION:R}/${PORTVERSION}
 
@@ -14,9 +13,9 @@ RUN_DEPENDS=	hicolor-icon-theme>=0:${PORTSDIR}/misc/hicolor-icon-theme
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
 USES=		gettext gmake iconv pkgconfig
+USE_SQLITE=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USE_SQLITE=	yes
 USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
