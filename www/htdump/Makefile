@@ -1,5 +1,5 @@
 # Created by: Maxime Henrion (mux@FreeBSD.org)
-# $FreeBSD: www/htdump/Makefile 332413 2013-11-01 21:52:15Z pawel $
+# $FreeBSD: www/htdump/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	htdump
 PORTVERSION=	0.9y
@@ -9,7 +9,7 @@ MASTER_SITES=	http://ivo.palli.nl/prog/linux/htdump/bin/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to retrieve WWW data
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 OPTIONS_DEFINE=	SSL
 OPTIONS_DEFAULT=SSL
