@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/flwrap/Makefile 337148 2013-12-21 14:29:43Z db $
+# $FreeBSD: comms/flwrap/Makefile 338966 2014-01-07 01:16:36Z db $
 
 PORTNAME=	flwrap
 PORTVERSION=	1.3.4
@@ -15,9 +15,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
 
-USE_GMAKE=	yes
+USES=		gmake dos2unix
 GNU_CONFIGURE=	yes
-USE_DOS2UNIX=	yes
 CONFIGURE_ENV=	FLTK_CONFIG="${LOCALBASE}/bin/fltk-config"
 
 post-configure:
