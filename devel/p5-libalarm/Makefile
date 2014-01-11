@@ -1,5 +1,5 @@
 # Created by: Marzhan Mykola <delgod@portaone.com>
-# $FreeBSD: devel/p5-libalarm/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-libalarm/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	libalarm
 PORTVERSION=	1.0
@@ -14,11 +14,6 @@ COMMENT=	Allow multiple, queued alarms
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Alarm::_TieSIG.3 \
-		Alarm::Concurrent.3 \
-		Alarm::Queued.3
-
-NO_STAGE=	yes
 post-patch:
 	@${RM} ${WRKSRC}/lib/Alarm/Concurrent.pm.orig
 
