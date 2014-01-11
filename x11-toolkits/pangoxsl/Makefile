@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: x11-toolkits/pangoxsl/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/pangoxsl/Makefile 337814 2013-12-27 21:53:47Z antoine $
 
 PORTNAME=	pangoxsl
 PORTVERSION=	1.6.0.3
@@ -10,8 +10,7 @@ MASTER_SITES=	SF/pangopdf/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implements Pango library with a PDF backend for PDF output
 
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	pango
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
@@ -21,5 +20,4 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
