@@ -1,8 +1,9 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: www/tikiwiki/Makefile 334801 2013-11-25 00:03:38Z linimon $
+# $FreeBSD: www/tikiwiki/Makefile 338955 2014-01-06 23:28:42Z bapt $
 
 PORTNAME=	tikiwiki
 PORTVERSION=	11.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/Tiki_11.x_Vega/${PORTVERSION}/
 DISTNAME=	tiki-${PORTVERSION}
