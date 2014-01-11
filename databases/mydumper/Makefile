@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/mydumper/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/mydumper/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	mydumper
 PORTVERSION=	0.5.2
@@ -15,7 +15,6 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/a//}
 
-FETCH_ARGS?=	-pRr
 PLIST_FILES=	sbin/mydumper sbin/myloader
 USE_GNOME=	glib20
 USE_MYSQL=	yes
