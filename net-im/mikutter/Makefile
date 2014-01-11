@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net-im/mikutter/Makefile 334869 2013-11-25 17:51:17Z tota $
+# $FreeBSD: net-im/mikutter/Makefile 339284 2014-01-09 21:27:56Z tota $
 
 PORTNAME=	mikutter
-PORTVERSION=	0.2.2.1430
+PORTVERSION=	0.2.2.1476
 CATEGORIES=	net-im ruby
 MASTER_SITES=	http://mikutter.hachune.net/bin/ \
 		LOCAL
@@ -56,7 +56,7 @@ RUN_DEPENDS+=	notify-send:${PORTSDIR}/devel/libnotify
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -i '' -e "s|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|" \
+	@${REINPLACE_CMD} -e "s|%%RUBY_SITELIBDIR%%|${RUBY_SITELIBDIR}|" \
 		${WRKSRC}/mikutter.rb
 	@${RM} -r ${WRKSRC}/vendor
 
