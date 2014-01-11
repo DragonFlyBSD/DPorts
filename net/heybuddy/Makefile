@@ -1,5 +1,5 @@
 # Created by: Beni Keller <navigium@grindcore.ch>
-# $FreeBSD: net/heybuddy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/heybuddy/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	heybuddy
 PORTVERSION=	0.2.4
@@ -14,7 +14,6 @@ COMMENT=	Supposedly light, feature free identi.ca client
 
 LICENSE=	GPLv3
 
-FETCH_ARGS=	-Fpr
 USE_PYTHON=	yes
 USE_GNOME=	desktopfileutils pygtk2
 
