@@ -1,8 +1,9 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: converters/pdf2djvu/Makefile 333019 2013-11-06 18:04:20Z madpilot $
+# $FreeBSD: converters/pdf2djvu/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	pdf2djvu
 PORTVERSION=	0.7.17
+PORTREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTNAME=	${PORTNAME}_${PORTVERSION}${EXTRACT_SUFFIX}
