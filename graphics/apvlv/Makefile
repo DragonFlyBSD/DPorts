@@ -1,9 +1,9 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: graphics/apvlv/Makefile 332738 2013-11-04 14:57:27Z feld $
+# $FreeBSD: graphics/apvlv/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	apvlv
 PORTVERSION=	0.1.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cloud.github.com/downloads/naihe2010/apvlv/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-Source
