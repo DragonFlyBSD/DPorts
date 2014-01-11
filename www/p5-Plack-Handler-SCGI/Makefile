@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-SCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-Handler-SCGI/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Plack-Handler-SCGI
 PORTVERSION=	0.02
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plack::Handler::SCGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
