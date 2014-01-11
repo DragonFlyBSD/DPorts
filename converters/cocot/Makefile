@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: converters/cocot/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/cocot/Makefile 339228 2014-01-09 13:23:06Z bapt $
 
 PORTNAME=	cocot
 PORTVERSION=	20120313
@@ -8,11 +8,13 @@ MASTER_SITES=	ftp://ftp.iDaemons.org/pub/distfiles/ \
 		${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	knu
 DISTNAME=	${PORTNAME}-1.1-${PORTVERSION}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	knu@FreeBSD.org
 COMMENT=	Code Converter on TTY
 
-USE_ZIP=	yes
+OPTIONS_DEFINE=	DOCS
+
 USES=		iconv
 WRKSRC=		${WRKDIR}/vmi-${PORTNAME}-8bc9f64
 GNU_CONFIGURE=	yes
@@ -23,17 +25,13 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 DOCS_EN=	COPYING ChangeLog
 DOCS_JA=	ChangeLog.ja README.ja
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${MKDIR} ${DOCSDIR}/ja
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/ja
 .for f in ${DOCS_EN}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .for f in ${DOCS_JA}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/ja
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/ja
 .endfor
-.endif
 
 .include <bsd.port.mk>
