@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: chinese/cless/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/cless/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	cless
 PORTVERSION=	290
@@ -12,13 +12,13 @@ COMMENT=	A better pager utility (and it speaks Chinese)
 GNU_CONFIGURE=	yes
 CFLAGS+=	-DHANZI # LDFLAGS=-s datadir=/usr/local/lib/less
 CPP=		#
-MAN1=		cless.1 clesskey.1
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/cless
-	${INSTALL_DATA} ${WRKSRC}/README.CLESS ${PREFIX}/share/doc/cless
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/cless
+	${INSTALL_DATA} ${WRKSRC}/README.CLESS ${STAGEDIR}${PREFIX}/share/doc/cless
 .endif
 
 .include <bsd.port.mk>
