@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/vertx/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/vertx/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	vertx
 PORTVERSION=	1.3.1
@@ -11,7 +11,7 @@ DISTNAME=	vert.x-${PORTVERSION}.final
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Effortless asynchronous application development for the modern web
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
