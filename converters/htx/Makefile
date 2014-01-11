@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: converters/htx/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/htx/Makefile 339234 2014-01-09 13:59:28Z bapt $
 
 PORTNAME=	htx
 DISTVERSION=	0.7.8
@@ -14,8 +14,7 @@ SHEBANG_FILES=	htx
 NO_BUILD=	yes
 PLIST_FILES=	bin/htx
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/htx ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/htx ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
