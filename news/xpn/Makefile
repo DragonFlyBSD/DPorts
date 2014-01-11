@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: news/xpn/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/xpn/Makefile 337666 2013-12-27 09:33:23Z bapt $
 
 PORTNAME=	xpn
 PORTVERSION=	1.2.6
@@ -27,16 +27,13 @@ USES=		gettext
 
 XPN=	${PORTNAME}.py
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/${XPN} ${DATADIR}/${XPN}
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/${PORTNAME}
-	cd ${WRKSRC} && ${FIND} . ${FIND_DIRS} -exec ${MKDIR} ${DATADIR}/{} ";"
-	cd ${WRKSRC} && ${FIND} . ${FIND_DATA} -exec ${INSTALL_DATA} {} ${DATADIR}/{} ";"
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.html ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/${XPN} ${STAGEDIR}${DATADIR}/${XPN}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	cd ${WRKSRC} && ${FIND} . ${FIND_DIRS} -exec ${MKDIR} ${STAGEDIR}${DATADIR}/{} ";"
+	cd ${WRKSRC} && ${FIND} . ${FIND_DATA} -exec ${INSTALL_DATA} {} ${STAGEDIR}${DATADIR}/{} ";"
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.html ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
