@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: mail/phpmailer/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/phpmailer/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	phpmailer
 PORTVERSION=	5.2.6
@@ -14,7 +14,6 @@ LICENSE=	LGPL3
 
 WRKSRC=		${WRKDIR}/PHPMailer-${PORTVERSION}
 
-FETCH_ARGS=	-Fpr
 USE_DOS2UNIX=	yes
 NO_BUILD=	yes
 USE_PHP=	yes
