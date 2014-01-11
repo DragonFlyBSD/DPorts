@@ -1,5 +1,5 @@
 # Created by: George Cox <gjvc@gjvc.com>
-# $FreeBSD: sysutils/p5-Unix-Lsof/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Unix-Lsof/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	Unix-Lsof
 PORTVERSION=	0.0.5
@@ -18,6 +18,4 @@ RUN_DEPENDS=	p5-IPC-Run3>=0:${PORTSDIR}/devel/p5-IPC-Run3
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Unix::Lsof.3 Unix::Lsof::Result.3
-NO_STAGE=	yes
 .include <bsd.port.mk>
