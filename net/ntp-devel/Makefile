@@ -1,9 +1,8 @@
 # Created by: andreas
-# $FreeBSD: net/ntp-devel/Makefile 334001 2013-11-16 14:32:43Z cy $
+# $FreeBSD: net/ntp-devel/Makefile 337832 2013-12-28 04:52:46Z cy $
 
 PORTNAME=	ntp
-PORTVERSION=	4.2.7p364
-PORTREVISION=	2
+PORTVERSION=	4.2.7p404
 CATEGORIES=	net ipv6
 PKGNAMESUFFIX=	-devel
 MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/ntp-dev/ \
@@ -22,7 +21,7 @@ USES=	pathfix
 LIB_DEPENDS=	event-2.0:${PORTSDIR}/devel/libevent2
 
 MAN5=		ntp.conf.5 ntp.keys.5
-MAN8=		ntp-keygen.8 ntpd.8 ntpdc.8 ntpq.8 sntp.8 ntp-wait.8
+MAN8=		ntp-keygen.8 ntpd.8 ntpdc.8 ntpq.8 sntp.8
 
 NO_STAGE=	yes
 .include "Makefile.inc"
