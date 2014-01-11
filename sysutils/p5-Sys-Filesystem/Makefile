@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Sys-Filesystem/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Sys-Filesystem/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Sys-Filesystem
 PORTVERSION=	1.401
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Perl module to Retrieve list of filesystems and their properties
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	p5-Params-Util>=1.0:${PORTSDIR}/devel/p5-Params-Util \
 		p5-IPC-Cmd>=0.80:${PORTSDIR}/devel/p5-IPC-Cmd \
