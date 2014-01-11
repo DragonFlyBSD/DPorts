@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: mail/p5-Email-Sender-Transport-SQLite/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Sender-Transport-SQLite/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Email-Sender-Transport-SQLite
 PORTVERSION=	0.092000
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Email::Sender::Transport::SQLite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
