@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: sysutils/p5-Sys-Hostname-FQDN/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Sys-Hostname-FQDN/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	Sys-Hostname-FQDN
 PORTVERSION=	0.11
@@ -15,7 +15,4 @@ LICENSE=	ART20
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sys::Hostname::FQDN.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
