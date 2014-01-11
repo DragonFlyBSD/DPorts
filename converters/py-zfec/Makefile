@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: converters/py-zfec/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/py-zfec/Makefile 338556 2014-01-03 16:12:21Z adamw $
 
 PORTNAME=	zfec
 PORTVERSION=	1.4.22
@@ -33,7 +33,7 @@ post-patch:
 		s#(doc_loc, data_fnames)##g' ${WRKSRC}/setup.py
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for DOC in COPYING.GPL COPYING.TGPPL.html README.rst TODO changelog
 	${INSTALL_DATA} ${WRKSRC}/${DOC} ${DOCSDIR}
