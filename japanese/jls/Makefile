@@ -1,0 +1,29 @@
+# Created by: shige
+# $FreeBSD: japanese/jls/Makefile 327737 2013-09-20 18:47:54Z bapt $
+
+PORTNAME=	ls
+PORTVERSION=	0.5
+CATEGORIES=	japanese
+MASTER_SITES=	http://www.angels.vg/bsd/
+DISTNAME=	freebsd-ls.releng_4_9_0_release
+
+PATCH_SITES=	${MASTER_SITES}
+PATCHFILES=	j${PORTNAME}-${PORTVERSION}.patch.gz
+PATCH_DIST_STRIP=	-p1
+
+MAINTAINER=	kazami@angels.vg
+COMMENT=	Japanized ls
+
+CONFLICTS=	sleuthkit-[0-9]*
+
+MAN1=		jls.1
+MANCOMPRESSED=	yes
+PLIST_FILES=	bin/jls
+
+WRKSRC=	${WRKDIR}/ls
+
+NO_STAGE=	yes
+pre-patch:
+	cd ${WRKSRC}; ${MV} ls.1 jls.1
+
+.include <bsd.port.mk>
