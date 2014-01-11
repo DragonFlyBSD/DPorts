@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/xmms-ladspa/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-ladspa/Makefile 338133 2013-12-30 16:27:04Z arved $
 
 PORTNAME=	xmms-ladspa
 PORTVERSION=	1.1
@@ -22,9 +22,9 @@ LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 PLIST_FILES=	lib/xmms/Effect/ladspa.so
 
 USE_GNOME=	gtk12
-NO_STAGE=	yes
 
 do-install:
-	@${INSTALL_DATA} ${WRKSRC}/ladspa.so ${PREFIX}/lib/xmms/Effect/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/xmms/Effect/
+	@${INSTALL_DATA} ${WRKSRC}/ladspa.so ${STAGEDIR}${PREFIX}/lib/xmms/Effect/
 
 .include <bsd.port.mk>
