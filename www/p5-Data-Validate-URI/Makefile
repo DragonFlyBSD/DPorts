@@ -1,5 +1,5 @@
 # Created by: Tuc <freebsd-ports@t-b-o-h.net>
-# $FreeBSD: www/p5-Data-Validate-URI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Data-Validate-URI/Makefile 338754 2014-01-05 12:20:02Z az $
 
 PORTNAME=	Data-Validate-URI
 PORTVERSION=	0.06
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Data-Validate-Domain>=0:${PORTSDIR}/dns/p5-Data-Validate-Domain 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Validate::URI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
