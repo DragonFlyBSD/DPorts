@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-fsnotify/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-fsnotify/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	fsnotify
 PORTVERSION=	0.0.11
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 USE_CABAL=	hinotify>=0.3.5 system-fileio>=0.3.8 system-filepath>=0.4.6 \
 		text>=0.11.0
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
