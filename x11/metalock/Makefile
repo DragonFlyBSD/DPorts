@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: x11/metalock/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/metalock/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	metalock
 PORTVERSION=	0.8.0
@@ -15,7 +15,6 @@ COMMENT=	Enhanced X11 screen locker
 LICENSE=	MIT
 LICENSE_FILE=	${WRKDIR}/${DISTNAME}/LICENSE
 
-FETCH_ARGS=	"-Fpr"
 USE_BZIP2=	yes
 USE_XORG=	x11 xt xproto xext xpm
 
