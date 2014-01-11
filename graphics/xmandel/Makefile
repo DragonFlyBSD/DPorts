@@ -1,5 +1,5 @@
 # Created by: andreas@marvin.robin.de
-# $FreeBSD: graphics/xmandel/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xmandel/Makefile 339287 2014-01-09 21:39:48Z antoine $
 
 PORTNAME=	xmandel
 PORTVERSION=	1.0
@@ -21,10 +21,8 @@ USES=		imake perl5
 USE_XORG=	ice sm x11 xaw xext xmu xt
 USE_PERL5=	build
 NO_WRKSUBDIR=	yes
-MAN1=		xmandel.1
-PLIST_FILES=	bin/xmandel
+PLIST_FILES=	bin/xmandel man/man1/xmandel.1.gz
 
-NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|malloc.h|stdlib.h|' ${WRKSRC}/mandel.c
 
