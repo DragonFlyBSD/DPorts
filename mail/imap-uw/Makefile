@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: mail/imap-uw/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/imap-uw/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	imap
 PORTVERSION=	2007f
@@ -15,7 +15,7 @@ PKGNAMESUFFIX=	-uw
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	University of Washington IMAP4rev1/POP2/POP3 mail servers
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	c-client4.9:${PORTSDIR}/mail/cclient
