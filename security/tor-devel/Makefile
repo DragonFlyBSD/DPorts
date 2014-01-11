@@ -1,8 +1,8 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: security/tor-devel/Makefile 334155 2013-11-18 07:45:54Z bf $
+# $FreeBSD: security/tor-devel/Makefile 338607 2014-01-04 00:29:51Z bf $
 
 PORTNAME=	tor
-DISTVERSION=	0.2.4.18-rc
+DISTVERSION=	0.2.4.20
 CATEGORIES=	security net ipv6
 MASTER_SITES=	https://www.torproject.org/dist/ \
 		ftp://ftp.bit.nl/mirror/tor/ \
@@ -47,7 +47,7 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	An anonymizing overlay network for TCP
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
