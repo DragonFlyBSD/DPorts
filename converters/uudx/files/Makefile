@@ -1,7 +1,7 @@
 #
 # makefile of uudx
 #
-# $FreeBSD: converters/uudx/files/Makefile 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: converters/uudx/files/Makefile 339243 2014-01-09 14:34:22Z bapt $
 
 CFLAGS += -DBSD=1 -DEUC=1 -DUTIME_EXIST -DMKDIR_HAS_MODE
 PROGRAM = uudx
@@ -18,5 +18,5 @@ ${PROGRAM}:     ${OBJ}
 	mv -f ${MANPAGE}.tmp ${MANPAGE}
 
 install:        ${PROGRAM}
-	${BSD_INSTALL_PROGRAM} ${PROGRAM} ${PREFIX}/bin
-	${BSD_INSTALL_MAN} ${MANPAGE} ${MANDIR}
+	${BSD_INSTALL_PROGRAM} ${PROGRAM} ${DESTDIR}${PREFIX}/bin
+	${BSD_INSTALL_MAN} ${MANPAGE} ${DESTDIR}${MANDIR}
