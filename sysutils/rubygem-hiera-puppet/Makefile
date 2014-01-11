@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-hiera-puppet/Makefile 336657 2013-12-16 18:57:31Z mat $
+# $FreeBSD: sysutils/rubygem-hiera-puppet/Makefile 337533 2013-12-26 14:58:22Z mat $
 
 PORTNAME=	hiera-puppet
 PORTVERSION=	1.0.0
@@ -20,5 +20,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/extlookup2hiera
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
