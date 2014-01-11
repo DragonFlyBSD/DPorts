@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Search-Binary/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Search-Binary/Makefile 338872 2014-01-06 12:55:03Z az $
 
 PORTNAME=	Search-Binary
 PORTVERSION=	0.95
@@ -13,9 +13,6 @@ COMMENT=	Perl module that implements a generic binary search algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Search::Binary.3
-
-NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -i '' -e 's|Seach|Search|' \
 		${WRKSRC}/Binary.pm
