@@ -1,8 +1,8 @@
 # Created by: Ross Timson <ross@rosstimson.com>
-# $FreeBSD: devel/chruby/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/chruby/Makefile 338423 2014-01-02 08:16:44Z jgh $
 
 PORTNAME=	chruby
-PORTVERSION=	0.3.6
+PORTVERSION=	0.3.8
 CATEGORIES=	devel ruby
 MASTER_SITES=	GH
 
@@ -21,18 +21,13 @@ SUB_FILES=	pkg-message
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	postmodern
-GH_PROJECT=	chruby
-GH_COMMIT=	f271d06
+GH_COMMIT=	b529bf2
 GH_TAGNAME=	v${PORTVERSION}
 
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/chruby-exec ${PREFIX}/bin
-	( cd ${WRKSRC}/share/chruby && ${COPYTREE_BIN} \* ${PREFIX}/share/chruby )
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/chruby-exec ${STAGEDIR}${PREFIX}/bin
+	( cd ${WRKSRC}/share/chruby && ${COPYTREE_BIN} \* ${STAGEDIR}${PREFIX}/share/chruby )
 
 .include <bsd.port.mk>
