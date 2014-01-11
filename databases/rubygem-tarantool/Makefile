@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/rubygem-tarantool/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-tarantool/Makefile 338470 2014-01-02 19:43:39Z swills $
 
 PORTNAME=	tarantool
 PORTVERSION=	0.4.3.3
@@ -14,7 +14,6 @@ RUN_DEPENDS=	rubygem-bin_utils=0.0.3:${PORTSDIR}/devel/rubygem-bin_utils \
 		rubygem-murmurhash3>=0.1.1:${PORTSDIR}/devel/rubygem-murmurhash3 \
 		rubygem-sumbur>=0.0.2:${PORTSDIR}/devel/rubygem-sumbur
 
-RUBY_VER=	1.9
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
