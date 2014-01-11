@@ -1,8 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/py-flexget/Makefile 336718 2013-12-17 12:05:25Z wg $
+# $FreeBSD: www/py-flexget/Makefile 339217 2014-01-09 11:44:51Z wg $
 
 PORTNAME=	flexget
-PORTVERSION=	1.1.170
+PORTVERSION=	1.2.27
 PORTEPOCH=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
@@ -24,6 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}feedparser>=5.1.3:${PORTSDIR}/textproc/py-fe
 		${PYTHON_PKGNAMEPREFIX}rss2gen>0:${PORTSDIR}/textproc/py-rss2gen \
 		${PYTHON_PKGNAMEPREFIX}pynzb>0:${PORTSDIR}/news/py-pynzb \
 		${PYTHON_PKGNAMEPREFIX}progressbar>0:${PORTSDIR}/misc/py-progressbar \
+		${PYTHON_PKGNAMEPREFIX}rpyc>0:${PORTSDIR}/devel/py-RPyC \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:${PORTSDIR}/devel/py-Jinja2 \
 		${PYTHON_PKGNAMEPREFIX}Flask>0:${PORTSDIR}/www/py-flask \
 		${PYTHON_PKGNAMEPREFIX}cherrypy>0:${PORTSDIR}/www/py-cherrypy \
@@ -36,10 +37,9 @@ TEST_DEPENDS:=	${RUN_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose \
 		${PYTHON_PKGNAMEPREFIX}mock>0:${PORTSDIR}/devel/py-mock
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
-
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
