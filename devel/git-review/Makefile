@@ -1,4 +1,4 @@
-# $FreeBSD: devel/git-review/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/git-review/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	git-review
 PORTVERSION=	1.23
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	source/g/${PORTNAME}
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	Allow to push review and interact with a Gerrit server
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argparse>0:${PORTSDIR}/devel/py-argparse \
 		git:${PORTSDIR}/devel/git
