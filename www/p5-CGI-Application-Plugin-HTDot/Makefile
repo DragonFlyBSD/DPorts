@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-CGI-Application-Plugin-HTDot/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-HTDot/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	CGI-Application-Plugin-HTDot
 PORTVERSION=	0.07
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::Application::Plugin::HTDot.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
