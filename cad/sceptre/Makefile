@@ -1,5 +1,5 @@
 # Created by: grog
-# $FreeBSD: cad/sceptre/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: cad/sceptre/Makefile 338552 2014-01-03 15:53:42Z adamw $
 
 PORTNAME=	sceptre
 PORTVERSION=	2012.061
@@ -22,9 +22,7 @@ NO_STAGE=	yes
 
 FFLAGS+=	-fno-automatic
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	doc_en.pdf doc_ger.pdf install.pdf
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -E \
@@ -50,7 +48,7 @@ post-patch:
 				${WRKSRC}/bin/sceptre
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/install.pdf ${DOCSDIR}
 	cd ${WRKSRC}/doc ; ${INSTALL_DATA} ${PORTDOCS:Mdoc_*} ${DOCSDIR}
