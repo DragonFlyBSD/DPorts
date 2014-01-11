@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: misc/p5-Test-Dir/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Test-Dir/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Test-Dir
 PORTVERSION=	1.014
@@ -13,9 +13,4 @@ COMMENT=	Test directory attributes
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Dir.3 \
-		Test::Dir::Base.3 \
-		Test::Folder.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
