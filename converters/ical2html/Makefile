@@ -1,5 +1,5 @@
 # Created by: keiichi@iijlab.net
-# $FreeBSD: converters/ical2html/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD: converters/ical2html/Makefile 339235 2014-01-09 14:02:59Z bapt $
 
 PORTNAME=	ical2html
 PORTVERSION=	2.0
@@ -17,5 +17,4 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include/libical -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
