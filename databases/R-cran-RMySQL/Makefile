@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: databases/R-cran-RMySQL/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: databases/R-cran-RMySQL/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	RMySQL
 DISTVERSION=	0.9-3
@@ -15,7 +15,6 @@ LICENSE=	GPLv2
 RUN_DEPENDS=	R-cran-DBI>=0.2.2:${PORTSDIR}/databases/R-cran-DBI
 
 USE_MYSQL=	yes
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
