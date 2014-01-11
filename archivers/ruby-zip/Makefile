@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: archivers/ruby-zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/ruby-zip/Makefile 338707 2014-01-05 00:21:37Z bapt $
 
 PORTNAME=	zip
 PORTVERSION=	0.9.4
@@ -13,7 +13,6 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby module for reading and writing ZIP files
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBY_FEATURES=	zlib
 
@@ -24,17 +23,15 @@ DOCS=		ChangeLog NEWS README TODO
 EXAMPLES=	samples/*
 
 do-install:
-	${MKDIR} ${RUBY_SITELIBDIR}/zip
-	${INSTALL_DATA} ${WRKSRC}/lib/zip/*.rb ${RUBY_SITELIBDIR}/zip
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${RUBY_MODEXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${RUBY_SITELIBDIR}/zip
+	${INSTALL_DATA} ${WRKSRC}/lib/zip/*.rb ${STAGEDIR}${RUBY_SITELIBDIR}/zip
+	${MKDIR} ${STAGEDIR}${RUBY_MODEXAMPLESDIR}
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_MODEXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${RUBY_MODEXAMPLESDIR}/
 .endfor
-	${MKDIR} ${RUBY_MODDOCDIR}
+	${MKDIR} ${STAGEDIR}${RUBY_MODDOCDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_MODDOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${RUBY_MODDOCDIR}/
 .endfor
-.endif
 
 .include <bsd.port.mk>
