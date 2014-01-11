@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-pylast/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/py-pylast/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	pylast
 PORTVERSION=	0.5.11
@@ -9,7 +9,7 @@ MASTER_SITES=	CHEESESHOP
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	A Python interface to Last.fm
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	yes
