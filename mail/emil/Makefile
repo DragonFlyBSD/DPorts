@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: mail/emil/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/emil/Makefile 338040 2013-12-29 20:25:29Z johans $
 
 PORTNAME=	emil
 PORTVERSION=	2.1b9
@@ -17,11 +17,9 @@ COMMENT=	Mail format/encoding converter
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	YACC=byacc
-MAN1=		emil.1 emil.cf.1
 
 .if defined(NOPORTDOCS)
 MAKE_ENV=	NOPORTDOCS=${NOPORTDOCS}
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
