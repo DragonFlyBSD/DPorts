@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Logger-Log4perl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Dancer-Logger-Log4perl/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	Dancer-Logger-Log4perl
 PORTVERSION=	0.8.1
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Dancer::Logger::Log4perl.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
