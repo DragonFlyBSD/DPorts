@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/credis/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/credis/Makefile 339278 2014-01-09 21:09:02Z skreuzer $
 
 PORTNAME=	credis
 PORTVERSION=	0.2.3
@@ -9,10 +9,11 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Library for communicating with Redis servers
 
-USE_GMAKE=	yes
+LICENSE=	BSD3CLAUSE
+
+USES=	gmake
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
