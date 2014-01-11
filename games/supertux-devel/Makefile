@@ -1,4 +1,4 @@
-# $FreeBSD: games/supertux-devel/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD: games/supertux-devel/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	supertux
 PORTVERSION=	0.3.4
@@ -16,9 +16,8 @@ LIB_DEPENDS=	libphysfs.so:${PORTSDIR}/devel/physfs \
 
 USE_BZIP2=	yes
 USE_SDL=	image
-USE_OPENAL=	al
 USE_GL=		glew
-USES=		cmake:outsource iconv
+USES=		cmake:outsource iconv openal:al
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 
 post-patch:
