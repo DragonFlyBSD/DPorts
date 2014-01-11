@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: www/p5-WWW-Shorten-NotLong/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Shorten-NotLong/Makefile 338773 2014-01-05 13:41:52Z az $
 
 PORTNAME=	WWW-Shorten-NotLong
 PORTVERSION=	2.00
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-libwww>=5.75:${PORTSDIR}/www/p5-libwww \
 		p5-WWW-Shorten>=0:${PORTSDIR}/www/p5-WWW-Shorten
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		WWW::Shorten::NotLong.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
