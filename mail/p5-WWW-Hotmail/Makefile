@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@f2o.org>
-# $FreeBSD: mail/p5-WWW-Hotmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-WWW-Hotmail/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	WWW-Hotmail
 PORTVERSION=	0.10
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Hotmail.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
