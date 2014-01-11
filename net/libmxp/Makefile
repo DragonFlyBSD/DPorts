@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: net/libmxp/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/libmxp/Makefile 338050 2013-12-29 22:06:33Z johans $
 
 PORTNAME=	libmxp
 PORTVERSION=	0.2.4
@@ -12,7 +12,6 @@ COMMENT=	Parser for the MUD eXtension protocol
 USES=		cmake
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|objformat=.*|objformat=elf|g' \
 		${WRKSRC}/configure
