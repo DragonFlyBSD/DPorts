@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: www/p5-WWW-FreeProxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-FreeProxy/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	WWW-FreeProxy
 PORTVERSION=	0.04
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::FreeProxy.3 WWW::FreeProxy::Proxy4Free.3 WWW::FreeProxy::Samair.3 WWW::FreeProxy::Look.3 WWW::FreeProxy::PublicProxyServers.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
