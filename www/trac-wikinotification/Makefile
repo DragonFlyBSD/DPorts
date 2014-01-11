@@ -1,9 +1,9 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-wikinotification/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: www/trac-wikinotification/Makefile 337593 2013-12-26 18:37:37Z wg $
 
 PORTNAME=	wikinotificationplugin
 PORTVERSION=	0.2.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	brooks
@@ -17,9 +17,7 @@ RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-PYDISTUTILS_PKGNAME=	TracWikiNotification
-PYDISTUTILS_PKGVERSION=	${PORTVERSION:S/p/rc/}
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
