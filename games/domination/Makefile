@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/domination/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/domination/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	domination
 PORTVERSION=	1.1.1.5
@@ -16,7 +16,6 @@ COMMENT=	Board game that is a bit like the well known game Risk
 
 LICENSE=	GPLv3
 
-FETCH_ARGS?=	-Fpr
 USE_ZIP=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
