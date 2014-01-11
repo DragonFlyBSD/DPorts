@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/locator/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/locator/Makefile 338058 2013-12-30 01:20:55Z db $
 
 PORTNAME=	locator
 PORTVERSION=	0.1
@@ -10,18 +10,10 @@ MAINTAINER=	db@FreeBSD.org
 COMMENT=	Grid square calculator program used in Amateur Radio and GPS work
 
 CONFLICTS=	wwl*
-PORTDOCS=	README
-PLIST_FILES=	bin/locator
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/locator ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	@${ECHO} ""
-	@${ECHO} "locator README installed in ${DOCSDIR}"
-	@${ECHO} ""
-.endif
+	@${INSTALL_PROGRAM} ${WRKSRC}/locator ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
