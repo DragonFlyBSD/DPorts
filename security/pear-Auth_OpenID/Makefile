@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Auth_OpenID/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: security/pear-Auth_OpenID/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Auth_OpenID
 PORTVERSION=	2.1.3
@@ -15,7 +15,7 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 CONFLICTS=	php-Auth_OpenID-1.*
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_BZIP2=	yes
