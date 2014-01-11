@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: www/varnish-libvmod-header/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/varnish-libvmod-header/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	libvmod-header
 DISTVERSION=	0.3-5
@@ -16,8 +16,6 @@ LICENSE=	BSD
 
 BUILD_DEPENDS=	${LOCALBASE}/include/varnish/varnishapi.h:${PORTSDIR}/www/varnish \
 		rst2man:${PORTSDIR}/textproc/py-docutils
-
-FETCH_ARGS=	-Fpr
 
 USE_AUTOTOOLS=	aclocal libtool libtoolize autoheader automake autoconf
 USES=		gmake pkgconfig
