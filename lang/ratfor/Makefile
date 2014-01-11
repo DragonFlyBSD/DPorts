@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: lang/ratfor/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: lang/ratfor/Makefile 339045 2014-01-07 22:55:35Z mat $
 
 PORTNAME=	ratfor
 PORTVERSION=	1985.06
@@ -26,7 +26,6 @@ USE_FORTRAN=	yes
 NO_STAGE=	yes
 post-patch:
 	@cd ${WRKSRC} ; ${PATCH} --quiet < testw.patch
-	@${REINPLACE_CMD} -e 's|%%F77%%|${F77}|' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ratfor77 ${PREFIX}/bin
