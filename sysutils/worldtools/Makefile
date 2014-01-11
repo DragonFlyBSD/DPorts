@@ -1,5 +1,5 @@
 # Created by: anarcat
-# $FreeBSD: sysutils/worldtools/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/worldtools/Makefile 337789 2013-12-27 19:21:50Z bapt $
 
 PORTNAME=	worldtools
 PORTVERSION=	1.3.1
@@ -10,13 +10,10 @@ MASTER_SITES=	http://anarcat.ath.cx/software/distfiles/
 MAINTAINER=	anarcat@anarcat.ath.cx
 COMMENT=	Handy tools for living with make world
 
-USES=		perl5
+USES=		perl5 uidfix shebangfix
+SHEBANG_FILES=	whereintheworld
 USE_PERL5=	run
 
-MAN8=		buildit.8 upgrade.8 whereintheworld.8
-
 MAKE_ARGS=	SHAREDIR=${PREFIX}
-MANCOMPRESSED=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
