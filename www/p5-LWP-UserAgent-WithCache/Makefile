@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: www/p5-LWP-UserAgent-WithCache/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-LWP-UserAgent-WithCache/Makefile 338767 2014-01-05 13:23:32Z az $
 
 PORTNAME=	LWP-UserAgent-WithCache
 PORTVERSION=	0.12
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		LWP::UserAgent::WithCache.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
