@@ -1,4 +1,4 @@
-# $FreeBSD: astro/libkgeomap/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/libkgeomap/Makefile 338834 2014-01-05 23:37:25Z rakuco $
 
 PORTNAME=	libkgeomap
 PORTVERSION=	${DIGIKAM_VER}
@@ -7,7 +7,6 @@ CATEGORIES=	astro kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE4 library for browsing photos on a map
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../graphics/digikam-kde4/Makefile.common"
 
 USE_KDE4+=	libkexiv2 marble
