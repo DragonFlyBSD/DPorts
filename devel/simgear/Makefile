@@ -1,9 +1,9 @@
-# $FreeBSD: devel/simgear/Makefile 332081 2013-10-30 07:13:02Z martymac $
+# $FreeBSD: devel/simgear/Makefile 338879 2014-01-06 13:50:21Z martymac $
 
 PORTNAME=	simgear
-PORTVERSION=	2.12.0
+PORTVERSION=	2.12.1
 CATEGORIES=	devel games
-MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/ \
+MASTER_SITES=	http://mirrors.ibiblio.org/simgear/ftp/Source/ \
 		ftp://ftp.de.flightgear.org/pub/simgear/Source/ \
 		ftp://goflyflightgear.com/simgear/Source/ \
 		ftp://flightgear.wo0t.de/simgear-ftp/ftp/Source/
@@ -21,9 +21,8 @@ LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 
 USE_BZIP2=	yes
 USE_XORG=	ice sm x11 xext xi xt xmu
-USE_OPENAL=	al alut
 USE_GL=		gl glu glut
-USES=		cmake
+USES=		cmake openal:al,alut
 CMAKE_ARGS+=	-DJPEG_FACTORY:BOOL=ON
 
 .include <bsd.port.mk>
