@@ -1,5 +1,5 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 336531 2013-12-15 13:37:14Z wg $
+# $FreeBSD: net/samba4/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
@@ -131,6 +131,8 @@ QUOTAS_DESC=		Disk quota support
 SWAT_DESC=		SWAT WebGUI
 UTMP_DESC=		UTMP accounting support
 WINBIND_DESC=		WinBIND support
+
+FAM_SUPPORT_USES=	fam
 ##############################################################################
 OPTIONS_DEFINE+=	DEVELOPER MANPAGES EXP_MODULES
 
@@ -290,7 +292,6 @@ CONFIGURE_ARGS+=	--without-dnsupdate
 
 # https://bugzilla.samba.org/show_bug.cgi?id=9545
 .if ${PORT_OPTIONS:MFAM_SUPPORT}
-USE_FAM=		yes
 CONFIGURE_ARGS+=	--with-fam
 WANT_EXP_MODULES+=	vfs_notify_fam
 SAMBA4_MODULES+=	vfs_notify_fam
