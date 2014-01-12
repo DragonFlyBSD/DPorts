@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-contact-list/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/ktp-contact-list/Makefile 338828 2014-01-05 23:05:13Z rakuco $
 
 PORTNAME=	ktp-contact-list
 PORTVERSION=	${KTP_VERSION}
@@ -18,5 +18,4 @@ USE_QT4=	corelib moc_build qmake_build rcc_build uic_build
 USES=		cmake gettext
 USE_BZIP2=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
