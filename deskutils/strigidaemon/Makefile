@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/strigidaemon/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/strigidaemon/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	strigidaemon
 PORTVERSION=	${STRIGI_VERSION}
@@ -12,8 +12,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libstreams.so:${PORTSDIR}/deskutils/libstreams \
 		libstreamanalyzer.so:${PORTSDIR}/deskutils/libstreamanalyzer
 
-USES=		pkgconfig
-USE_FAM=	yes
+USES=		fam pkgconfig
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
