@@ -1,10 +1,10 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/gimp-app/Makefile 335541 2013-12-02 21:19:11Z kwm $
+# $FreeBSD: graphics/gimp-app/Makefile 337749 2013-12-27 16:54:21Z kwm $
 #   $MCom: ports/graphics/gimp-app/Makefile,v 1.65 2012/12/30 18:09:11 mezz Exp $
 
 PORTNAME?=	gimp-app
 PORTVERSION=	2.8.10
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
