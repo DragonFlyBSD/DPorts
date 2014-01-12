@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp/Makefile 332507 2013-11-02 17:07:26Z sunpoet $
+# $FreeBSD: net/gupnp/Makefile 337787 2013-12-27 19:21:30Z sunpoet $
 
 PORTNAME=	gupnp
-PORTVERSION=	0.20.8
+PORTVERSION=	0.20.9
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libgssdp-1.0.so:${PORTSDIR}/net/gssdp \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 CONFIGURE_ARGS=	--enable-introspection=yes
-CONFIGURE_ENV=	VAPIGEN=""
+CONFIGURE_ENV=	VAPIGEN="" ac_cv_path_VAPIGEN=""
 GNU_CONFIGURE=	yes
 MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 USE_GNOME=	glib20 introspection:build
