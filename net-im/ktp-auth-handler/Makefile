@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-auth-handler/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/ktp-auth-handler/Makefile 338828 2014-01-05 23:05:13Z rakuco $
 
 PORTNAME=	ktp-auth-handler
 PORTVERSION=	${KTP_VERSION}
@@ -20,5 +20,4 @@ USE_QT4=	corelib dbus gui xml webkit \
 USES=		cmake gettext
 USE_BZIP2=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
