@@ -1,12 +1,12 @@
 # Created by: fjoe@FreeBSD.org
-# $FreeBSD: x11-toolkits/wxgtk29/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk29/Makefile 338620 2014-01-04 01:16:19Z bapt $
 
 PORTNAME=	wx
 PORTVERSION=	2.9.4
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/wxwindows/${PORTVERSION}
-PKGNAMESUFFIX=	gtk2
+PKGNAMESUFFIX=	29-gtk2
 DISTNAME=	wxWidgets-${PORTVERSION}
 
 MAINTAINER?=	fjoe@FreeBSD.org
