@@ -1,11 +1,11 @@
 # Created by: Brian Buchanan <brian@CSUA.Berkeley.EDU>
-# $FreeBSD: games/flightgear/Makefile 332081 2013-10-30 07:13:02Z martymac $
+# $FreeBSD: games/flightgear/Makefile 338879 2014-01-06 13:50:21Z martymac $
 
 PORTNAME=	flightgear
-PORTVERSION=	2.12.0
+PORTVERSION=	2.12.1
 CATEGORIES=	games
 # see http://www.flightgear.org/templates.js
-MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/ \
+MASTER_SITES=	http://mirrors.ibiblio.org/flightgear/ftp/Source/ \
 		http://ftp.linux.kiev.ua/pub/mirrors/ftp.flightgear.org/flightgear/Source/ \
 		ftp://ftp.kingmont.com/flightsims/flightgear/Source/ \
 		ftp://ftp.de.flightgear.org/pub/fgfs/Source/ \
@@ -30,8 +30,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libplibsl.a:${PORTSDIR}/x11-toolkits/plib \
 USE_BZIP2=	yes
 USE_XORG=	ice sm x11 xext xft xi xinerama xt xmu
 USE_GL=		gl glu glut
-USE_OPENAL=	al alut
-USES=		cmake
+USES=		cmake openal:al,alut
 CMAKE_ARGS+=	-DJPEG_FACTORY:BOOL=ON \
 		-DENABLE_JS_SERVER:BOOL=ON \
 		-DFG_DATA_DIR:PATH=${LOCALBASE}/share/${PORTNAME} \
