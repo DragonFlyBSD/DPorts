@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/net6/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/net6/Makefile 339160 2014-01-08 18:01:20Z antoine $
 
 PORTNAME=	net6
 PORTVERSION=	1.3.14
@@ -12,24 +12,19 @@ COMMENT=	Network access framework for IPv4/IPv6
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
-		gnutls.26:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	libsigc-2.0.so:${PORTSDIR}/devel/libsigc++20 \
+		libgnutls.so:${PORTSDIR}/security/gnutls
 
-USES=	pathfix pkgconfig
+USES=		pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=	gettext
+NLS_CONFIGURE_ENABLE=	nls
+NLS_CPPFLAGS=	-I${LOCALBASE}/include
+NLS_LDFLAGS=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
