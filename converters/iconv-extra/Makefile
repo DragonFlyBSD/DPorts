@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv-extra/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD: converters/iconv-extra/Makefile 339236 2014-01-09 14:04:49Z bapt $
 
 PORTNAME=	iconv-extra
 PORTVERSION=	2.0
@@ -12,7 +12,6 @@ COMMENT=	Additional charsets for the iconv library (those from the Unicode site)
 
 LIB_DEPENDS=	libbiconv.so:${PORTSDIR}/converters/iconv
 
-USES=		perl5
+USES=		perl5 uidfix
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
