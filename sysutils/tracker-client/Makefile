@@ -1,10 +1,10 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/tracker-client/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/tracker-client/Makefile 338691 2014-01-04 23:40:44Z antoine $
 #   $MCom: ports/sysutils/tracker-client/Makefile,v 1.14 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME=	tracker
 PORTVERSION=	0.6.95
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX?=	-client
@@ -14,7 +14,7 @@ COMMENT=	Object database, tag/metadata database, search tool and indexer
 
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		poppler-glib.8:${PORTSDIR}/graphics/poppler-glib \
+		libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		wv-1.2.4:${PORTSDIR}/textproc/wv \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
@@ -31,11 +31,9 @@ RUN_DEPENDS=	xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils \
 		w3m:${PORTSDIR}/www/w3m
 
 USE_BZIP2=	yes
-USE_FAM=	yes
-WANT_FAM_SYSTEM=gamin
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomehack gnomeprefix ltasneededhack intltool ltverhack
-USES=		gettext gmake pkgconfig
+USES=		fam:gamin gettext gmake pkgconfig
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	core
 INSTALLS_ICONS=	yes
