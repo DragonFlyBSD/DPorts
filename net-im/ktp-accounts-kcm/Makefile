@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-accounts-kcm/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/ktp-accounts-kcm/Makefile 338828 2014-01-05 23:05:13Z rakuco $
 
 PORTNAME=	ktp-accounts-kcm
 PORTVERSION=	${KTP_VERSION}
@@ -27,7 +27,6 @@ HAZE_DESC=	libpurple protocols support
 IRC_DESC=	Internet Relay Chat support
 SALUT_DESC=	Link-local (serverless) XMPP support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHAZE}
