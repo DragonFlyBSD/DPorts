@@ -1,9 +1,9 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: graphics/osg/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD: graphics/osg/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	osg
 PORTVERSION=	3.0.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-${PORTVERSION}/source/ \
 		http://mirror.amdmi3.ru/distfiles/
