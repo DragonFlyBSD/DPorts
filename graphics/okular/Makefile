@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/okular/Makefile 336184 2013-12-11 17:06:36Z avilla $
+# $FreeBSD: graphics/okular/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	okular
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
@@ -15,7 +15,7 @@ LIB_DEPENDS=	djvulibre:${PORTSDIR}/graphics/djvulibre \
 		jpeg:${PORTSDIR}/graphics/jpeg \
 		qca:${PORTSDIR}/devel/qca \
 		tiff:${PORTSDIR}/graphics/tiff \
-		poppler-qt4:${PORTSDIR}/graphics/poppler-qt4 \
+		libpoppler-qt4.so:${PORTSDIR}/graphics/poppler-qt4 \
 		spectre:${PORTSDIR}/print/libspectre \
 		chm:${PORTSDIR}/misc/chmlib \
 		freetype:${PORTSDIR}/print/freetype2 \
