@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-common-internals/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/ktp-common-internals/Makefile 338828 2014-01-05 23:05:13Z rakuco $
 
 PORTNAME=	ktp-common-internals
 PORTVERSION=	${KTP_VERSION}
@@ -21,5 +21,4 @@ USES=		cmake gettext
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
