@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: x11-fm/krusader2/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/krusader2/Makefile 338803 2014-01-05 17:27:15Z rakuco $
 
 PORTNAME=	krusader
 DISTVERSION=	2.4.0-beta3
@@ -14,7 +14,4 @@ USES=		cmake:outsource gettext
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 
-LATEST_LINK=	${PORTNAME}2
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
