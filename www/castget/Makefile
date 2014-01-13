@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/castget/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/castget/Makefile 338017 2013-12-29 16:03:47Z antoine $
 
 PORTNAME=	castget
 PORTVERSION=	1.0.1
@@ -10,8 +10,8 @@ MASTER_SITES=	SAVANNAH CENKES
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command-line podcast downloader
 
-LIB_DEPENDS=	id3-3.8.3:${PORTSDIR}/audio/id3lib \
-		curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libid3.so:${PORTSDIR}/audio/id3lib \
+		libcurl.so:${PORTSDIR}/ftp/curl
 
 USE_LDCONFIG=	yes
 USES=		pkgconfig
@@ -21,9 +21,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-static
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/castget include/libcastget.h lib/libcastget.la lib/libcastget.so lib/libcastget.so.0
-MAN1=	castget.1
-MAN5=	castgetrc.5
+PLIST_FILES=	bin/castget include/libcastget.h \
+		lib/libcastget.la lib/libcastget.so lib/libcastget.so.0 \
+		man/man1/castget.1.gz man/man5/castgetrc.5.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
