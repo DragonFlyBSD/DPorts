@@ -1,9 +1,9 @@
 # Created by: ache
-# $FreeBSD: www/WebMagick/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/WebMagick/Makefile 338883 2014-01-06 14:35:06Z ache $
 
 PORTNAME=	WebMagick
-PORTVERSION=	2.03p23
-DISTVERSION=	2.03pre23
+PORTVERSION=	2.03p24
+DISTVERSION=	2.03pre24
 PORTEPOCH=	1
 CATEGORIES=	www graphics
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}-beta/${DISTVERSION}
