@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: textproc/py-ltxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-ltxml/Makefile 338094 2013-12-30 11:56:34Z wg $
 
 PORTNAME=	ltxml
 PORTVERSION=	1.3
@@ -17,12 +17,14 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	PyLTXML
+PYDISTUTILS_AUTOPLIST=	yes
 USE_LDCONFIG=	yes
+
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
+PORTDOCS=	*
+PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
@@ -33,10 +35,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/group/ltg/projects/lcontrib9|${LOCALBASE}|' ${WRKSRC}/setup.py
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/00README ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/example/* ${EXAMPLESDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/00README ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/example/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.post.mk>
