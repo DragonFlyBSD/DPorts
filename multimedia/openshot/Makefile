@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/openshot/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/openshot/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	openshot
 PORTVERSION=	1.4.3
@@ -29,7 +29,6 @@ INSTALLS_OMF=	yes
 
 MAN1=		${PORTNAME}.1 \
 		${PORTNAME}-render.1
-FETCH_ARGS=	-pRr
 
 NO_STAGE=	yes
 post-patch:
