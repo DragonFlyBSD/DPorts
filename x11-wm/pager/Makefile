@@ -1,5 +1,5 @@
 # Created by: Michael Ebert <ebert@informatik.unibw-muenchen.de>
-# $FreeBSD: x11-wm/pager/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/pager/Makefile 337805 2013-12-27 20:57:47Z antoine $
 
 PORTNAME=	pager
 PORTVERSION=	0.90.3
@@ -9,24 +9,21 @@ MASTER_SITES=	http://download.tuxfamily.org/sawfishpager/
 DISTNAME=	sawfish-pager-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A pager for sawfish without GNOME
+COMMENT=	Pager for sawfish without GNOME
 
 BUILD_DEPENDS=	sawfish:${PORTSDIR}/x11-wm/sawfish
 RUN_DEPENDS=	sawfish:${PORTSDIR}/x11-wm/sawfish
 
 USE_XZ=		yes
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 PLIST_FILES=	lib/sawfish/sawfishpager \
 		share/sawfish/lisp/sawfish/wm/ext/pager.jl \
 		share/sawfish/lisp/sawfish/wm/ext/pager.jlc
 
-NO_STAGE=	yes
 post-install:
-	@${STRIP_CMD} ${PREFIX}/lib/sawfish/sawfishpager
-	@${CAT} ${PKGMESSAGE}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/sawfish/sawfishpager
 
 .include <bsd.port.mk>
