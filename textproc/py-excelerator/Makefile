@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: textproc/py-excelerator/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-excelerator/Makefile 338088 2013-12-30 11:31:14Z wg $
 
 PORTNAME=	excelerator
 PORTVERSION=	0.6.4.1
@@ -10,26 +10,23 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyexcelerator-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Python library for generating Excel 97/2000/XP/2003 files
+COMMENT=	Python library for generating Excel 97/2000/XP/2003 files
 
 USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	pyExcelerator
+PYDISTUTILS_AUTOPLIST=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-excelerator
 EXAMPLESDIR=	${PREFIX}/share/examples/py-excelerator
+PORTDOCS=	*
+PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${DOCSDIR}
-.endif
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/*.bmp ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/*.py ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/*.bmp ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/*.py ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
