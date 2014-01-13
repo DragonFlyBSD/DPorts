@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: security/honggfuzz/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/honggfuzz/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	honggfuzz
 PORTVERSION=	0.3
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	General-purpose fuzzer with simple, command-line interface
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=   ${WRKSRC}/COPYING
 
 USE_GMAKE=	yes
