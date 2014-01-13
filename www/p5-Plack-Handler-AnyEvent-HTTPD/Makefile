@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-AnyEvent-HTTPD/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-Handler-AnyEvent-HTTPD/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	Plack-Handler-AnyEvent-HTTPD
 PORTVERSION=	0.03
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-Test-TCP>0:${PORTSDIR}/devel/p5-Test-TCP
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plack::Handler::AnyEvent::HTTPD.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
