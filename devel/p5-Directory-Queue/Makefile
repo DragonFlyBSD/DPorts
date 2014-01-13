@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Directory-Queue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Directory-Queue/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	Directory-Queue
 PORTVERSION=	1.8
@@ -16,11 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Directory::Queue.3 \
-	Directory::Queue::Normal.3 \
-	Directory::Queue::Null.3 \
-	Directory::Queue::Set.3 \
-	Directory::Queue::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
