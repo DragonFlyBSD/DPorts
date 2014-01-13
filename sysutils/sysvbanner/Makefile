@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: sysutils/sysvbanner/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sysvbanner/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	sysvbanner
 PORTVERSION=	1.0.15
@@ -8,8 +8,6 @@ MASTER_SITES=	http://github.com/uffejakobsen/${PORTNAME}/archive/v${PORTVERSION}
 
 MAINTAINER=	uffe@uffe.org
 COMMENT=	SysV banner
-
-FETCH_ARGS=	-Fpr
 
 USES=		gmake
 
