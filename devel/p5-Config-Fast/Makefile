@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: devel/p5-Config-Fast/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Config-Fast/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Config-Fast
 PORTVERSION=	1.07
@@ -13,7 +13,4 @@ COMMENT=	Extremely fast configuration file parser
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Config::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
