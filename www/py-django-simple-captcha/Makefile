@@ -1,8 +1,8 @@
 # Created by: John Hixson <john@ixsystems.com>
-# $FreeBSD: www/py-django-simple-captcha/Makefile 335272 2013-11-30 09:39:47Z sunpoet $
+# $FreeBSD: www/py-django-simple-captcha/Makefile 338437 2014-01-02 12:42:28Z wg $
 
 PORTNAME=	django-simple-captcha
-PORTVERSION=	0.4.0
+PORTVERSION=	0.4.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.3:${PORTSDIR}/www/py-django \
 		${PYTHON_PKGNAMEPREFIX}six>=1.2.0:${PORTSDIR}/devel/py-six
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-PYDISTUTILS_PKGNAME=	${PORTNAME:S/-/_/g}
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
