@@ -1,5 +1,5 @@
 # Created by: <koshy@india.hp.com>
-# $FreeBSD: textproc/sgrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/sgrep/Makefile 338937 2014-01-06 21:22:40Z antoine $
 
 PORTNAME=	sgrep
 PORTVERSION=	0.99
@@ -10,17 +10,14 @@ MASTER_SITES=	ftp://ftp.cs.helsinki.fi/pub/Software/Local/Sgrep/ \
 MASTER_SITE_SUBDIR=	jkoshy
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A `grep' for structured text like SGML and HTML
+COMMENT=	Grep for structured text like SGML and HTML
 
 CONFLICTS=	sgrep2-1.*
 
-MAN1=		sgrep.1
-
 # Override the install target in the supplied makefile
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sgrep ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/sgrep.1 ${MANPREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/sample.sgreprc ${PREFIX}/share/sgreprc
+	${INSTALL_PROGRAM} ${WRKSRC}/sgrep ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/sgrep.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/sample.sgreprc ${STAGEDIR}${PREFIX}/share/sgreprc
 
 .include <bsd.port.mk>
