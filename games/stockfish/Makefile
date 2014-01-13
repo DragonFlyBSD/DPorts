@@ -1,5 +1,5 @@
 # Created by: Gautam Mani <execve@gmail.com>
-# $FreeBSD: games/stockfish/Makefile 331711 2013-10-26 16:17:33Z wg $
+# $FreeBSD: games/stockfish/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	stockfish
 PORTVERSION=	4
@@ -24,7 +24,6 @@ MYARCH=		${ARCH}
 BOOKDIR=	.
 PORTDOCS=	Readme.md polyglot.ini
 PORTDATA=	Book.bin
-FETCH_ARGS=	-Fpr
 
 PLIST_FILES=	bin/stockfish
 
