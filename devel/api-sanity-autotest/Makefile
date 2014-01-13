@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: devel/api-sanity-autotest/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/api-sanity-autotest/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	api-sanity-checker
 PORTVERSION=	1.98.4
@@ -26,7 +26,6 @@ USE_PERL5=	run
 .endif
 USE_GCC=	any
 
-FETCH_ARGS?=	-Fpr
 NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}.pl
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
