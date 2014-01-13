@@ -1,5 +1,5 @@
 # Created by: moeti <freebsd@simplerezo.com>
-# $FreeBSD: mail/qmail-scanner/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/qmail-scanner/Makefile 338615 2014-01-04 00:57:53Z bapt $
 
 PORTNAME=	qmail-scanner
 PORTVERSION=	2.10
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	reformime:${PORTSDIR}/mail/maildrop \
 		setuidgid:${PORTSDIR}/sysutils/daemontools \
 		bash:${PORTSDIR}/shells/bash
 
-CONFLICTS=	qmail-scanner-1.*
+CONFLICTS=	qmail-scanner-1.* qmail-scanner1-*
 
 USES=		qmail perl5
 
