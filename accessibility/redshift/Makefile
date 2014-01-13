@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: accessibility/redshift/Makefile 334904 2013-11-25 22:47:00Z feld $
+# $FreeBSD: accessibility/redshift/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	redshift
 PORTVERSION=	1.7
@@ -10,7 +10,6 @@ MASTER_SITES=	http://launchpad.net/redshift/trunk/${PORTVERSION}/+download/
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Adjusts the color temperature of your screen
 
-FETCH_ARGS=	"-pRr"
 USES=		gmake pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
