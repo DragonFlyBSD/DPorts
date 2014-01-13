@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/admesh/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/admesh/Makefile 338157 2013-12-30 18:31:26Z antoine $
 
 PORTNAME=	admesh
 PORTVERSION=	0.95
@@ -20,17 +20,16 @@ GNU_CONFIGURE=	yes
 PORTDOCS=	admesh.doc
 PLIST_FILES=	bin/admesh
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/configure
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/admesh ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/admesh ${STAGEDIR}${PREFIX}/bin/
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/ADMESH.DOC ${DOCSDIR}/admesh.doc
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/ADMESH.DOC ${STAGEDIR}${DOCSDIR}/admesh.doc
 .endif
 
 .include <bsd.port.mk>
