@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: www/mod_limitipconn2/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD: www/mod_limitipconn2/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_limitipconn
 PORTVERSION=	0.23
@@ -13,7 +13,7 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	Allows you to limit the number of simultaneous connexions
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_APACHE=	22
 USE_BZIP2=	yes
