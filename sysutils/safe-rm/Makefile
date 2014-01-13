@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/safe-rm/Makefile 333988 2013-11-16 12:33:15Z vanilla $
+# $FreeBSD: sysutils/safe-rm/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	safe-rm
 PORTVERSION=	0.10
@@ -14,8 +14,6 @@ LICENSE=	GPLv3
 USES=		perl5
 USE_PERL5=	run
 NO_BUILD=	yes
-
-FETCH_ARGS=	-pRr
 
 DOCS=		COPYING Changes README
 
