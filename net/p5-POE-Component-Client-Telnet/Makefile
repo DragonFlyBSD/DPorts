@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Client-Telnet/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POE-Component-Client-Telnet/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	POE-Component-Client-Telnet
 PORTVERSION=	0.06
@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tjs@cdpa.nsysu.edu.tw
-COMMENT=	A POE component that provides non-blocking access to Net::Telnet
+COMMENT=	POE component that provides non-blocking access to Net::Telnet
 
 BUILD_DEPENDS=	p5-POE>=0.31:${PORTSDIR}/devel/p5-POE \
 		p5-Net-Telnet>=0:${PORTSDIR}/net/p5-Net-Telnet \
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	POE::Component::Client::Telnet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
