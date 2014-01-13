@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/prelude-lml/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/prelude-lml/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	prelude-lml
 PORTVERSION=	1.0.1
@@ -28,16 +28,10 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 USES=		charsetfix gettext iconv pkgconfig
 
 OPTIONS_DEFINE=	FAM
+FAM_CONFIGURE_ENABLE=	fam
+FAM_USES=	fam
 
 NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MFAM}
-USE_FAM=	yes
-CONFIGURE_ARGS+=	--enable-fam
-.else
-CONFIGURE_ARGS+=	--disable-fam
-.endif
 
 post-install:
 	@if [ ! -f ${PREFIX}/etc/prelude-lml/prelude-lml.conf ]; then \
