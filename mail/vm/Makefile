@@ -1,5 +1,5 @@
 # Created by: olive
-# $FreeBSD: mail/vm/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/vm/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	vm
 PORTVERSION=	8.1.2
@@ -12,7 +12,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jhein@symmetricom.com
 COMMENT=	A mail reader running inside Emacs or XEmacs
 
-FETCH_ARGS=	-prR
 GNU_CONFIGURE=	yes
 USE_EMACS=	yes
 USE_GMAKE=	yes
