@@ -1,5 +1,5 @@
 # Created by: den
-# $FreeBSD: russian/unzip/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/unzip/Makefile 338633 2014-01-04 09:04:21Z antoine $
 
 CATEGORIES=	russian archivers
 
@@ -12,5 +12,4 @@ EXTRA_PATCHES=	${.CURDIR}/files/patch-ebcdic.h
 
 MASTERDIR=	${.CURDIR}/../../archivers/unzip
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
