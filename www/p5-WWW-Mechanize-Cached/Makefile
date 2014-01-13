@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Mechanize-Cached/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Mechanize-Cached/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	WWW-Mechanize-Cached
 PORTVERSION=	1.43
@@ -24,7 +24,4 @@ TEST_DEPENDS=	p5-Test-Warn>0:${PORTSDIR}/devel/p5-Test-Warn
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	WWW::Mechanize::Cached.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
