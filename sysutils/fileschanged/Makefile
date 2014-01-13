@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: sysutils/fileschanged/Makefile 333680 2013-11-13 12:50:18Z vanilla $
+# $FreeBSD: sysutils/fileschanged/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	fileschanged
 PORTVERSION=	0.6.5
@@ -14,8 +14,7 @@ LIB_DEPENDS=	libargp.so:${PORTSDIR}/devel/argp-standalone
 BUILD_DEPENDS=	help2man:${PORTSDIR}/misc/help2man
 
 GNU_CONFIGURE=	yes
-USES=		gmake
-USE_FAM=	yes
+USES=		fam gmake
 CONFIGURE_ENV+=	LIBS="-largp"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
