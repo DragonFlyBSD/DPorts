@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: net/py-netaddr/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-netaddr/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	netaddr
 PORTVERSION=	0.7.10
@@ -8,27 +8,22 @@ MASTER_SITES=	https://github.com/downloads/drkjam/netaddr/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A python library for the manipulation of network addresses
+COMMENT=	Python library for the manipulation of network addresses
 
 LICENSE=	BSD
 
-FETCH_ARGS=	-pRr
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 
 PORTDOCS=	AUTHORS CHANGELOG README
 TESTFILES=	__init__.py
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 regression-test:
 .for f in ${TESTFILES}
