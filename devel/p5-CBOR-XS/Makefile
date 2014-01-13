@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/p5-CBOR-XS/Makefile 337294 2013-12-23 20:57:30Z wg $
+# $FreeBSD: devel/p5-CBOR-XS/Makefile 339017 2014-01-07 18:51:38Z wg $
 
 PORTNAME=	CBOR-XS
-PORTVERSION=	1.2
+PORTVERSION=	1.25
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MLEHMANN
