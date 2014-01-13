@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: benchmarks/webbench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/webbench/Makefile 338715 2014-01-05 00:35:05Z bapt $
 
 PORTNAME=	webbench
 PORTVERSION=	1.5
@@ -12,26 +12,16 @@ COMMENT=	Simple forking web benchmark
 
 MAKE_ARGS+=	CFLAGS="${CPPFLAGS} ${CFLAGS}"
 
-.if !defined(NO_INSTALL_MANPAGES)
-MAN1=		webbench.1
-.endif
-
-.if !defined(NOPORTDOCS)
 PORTDOCS=	copyright changelog
-.endif
 
-PLIST_FILES=	bin/webbench
+PLIST_FILES=	bin/webbench \
+		man/man1/webbench.1.gz
 
-NO_STAGE=	yes
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/webbench ${PREFIX}/bin
-.if !defined(NO_INSTALL_MANPAGES)
-		${INSTALL_MAN} ${WRKSRC}/webbench.1 ${MAN1PREFIX}/man/man1
-.endif
-.if !defined(NOPORTDOCS)
-		${MKDIR} ${DOCSDIR}
-		${INSTALL_DATA} ${WRKSRC}/debian/copyright ${DOCSDIR}
-		${INSTALL_DATA} ${WRKSRC}/debian/changelog ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/webbench ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/webbench.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/debian/copyright ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
