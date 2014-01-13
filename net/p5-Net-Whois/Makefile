@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Whois/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Whois/Makefile 338808 2014-01-05 17:43:05Z az $
 
 PORTNAME=	Net-Whois
 PORTVERSION=	1.9
@@ -8,14 +8,11 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	demon@FreeBSD.org
-COMMENT=	A perl5 module to get information using the Whois protocol
+COMMENT=	Perl5 module to get information using the Whois protocol
 
 RUN_DEPENDS=	p5-Locale-Codes>=0:${PORTSDIR}/misc/p5-Locale-Codes
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Whois.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
