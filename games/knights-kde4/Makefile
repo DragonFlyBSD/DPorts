@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: games/knights-kde4/Makefile 336925 2013-12-19 15:27:54Z dbn $
+# $FreeBSD: games/knights-kde4/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	knights
 PORTVERSION=	2.5.0
@@ -14,7 +14,6 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gnuchess:${PORTSDIR}/games/gnuchess
 
 LICENSE=	GPLv2
 
-FETCH_ARGS?=	-Fpr
 USE_BZIP2=	yes
 USES=		cmake:outsource
 USE_KDE4=	kdelibs kdehier kdeprefix automoc4 workspace libkdegames
