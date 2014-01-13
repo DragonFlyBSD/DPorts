@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: www/p5-WebService-Google-Reader/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WebService-Google-Reader/Makefile 338778 2014-01-05 14:02:22Z az $
 
 PORTNAME=	WebService-Google-Reader
 PORTVERSION=	0.22
@@ -30,10 +30,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WebService::Google::Reader.3 \
-		WebService::Google::Reader::Constants.3 \
-		WebService::Google::Reader::Feed.3 \
-		WebService::Google::Reader::ListElement.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
