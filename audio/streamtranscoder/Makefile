@@ -1,5 +1,5 @@
 # Created by: Mark Kane <mark@mkproductions.org>
-# $FreeBSD: audio/streamtranscoder/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/streamtranscoder/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	streamtranscoder
 PORTVERSION=	1.2.8
@@ -24,6 +24,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/streamTranscoder
 PORTDOCS=	AUTHORS README
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-D_REENTRANT|${PTHREAD_CFLAGS}|g; \
 		s|-pthread|${PTHREAD_LIBS}|g; s|-O20|$$CFLAGS|g' \
@@ -33,7 +35,7 @@ post-patch:
 		${WRKSRC}/src/libtranscoder/transcurl.cpp
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
 .endif
