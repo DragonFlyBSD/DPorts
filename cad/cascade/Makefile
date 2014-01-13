@@ -1,5 +1,5 @@
 # Created by: Marc Fonvieille <blackend@FreeBSD.org>
-# $FreeBSD: cad/cascade/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/cascade/Makefile 338552 2014-01-03 15:53:42Z adamw $
 
 PORTNAME=	cascade
 PORTVERSION=	1.4
@@ -18,15 +18,18 @@ PLIST_FILES=	bin/cascade
 MAN1=		cascade.1
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 do-install:
 		@${INSTALL_SCRIPT} ${WRKSRC}/cascade ${PREFIX}/bin
 		@${INSTALL_MAN} ${WRKSRC}/cascade.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 		@${MKDIR} ${EXAMPLESDIR}
 		@${INSTALL_DATA} ${WRKSRC}/examples/* \
 			${WRKSRC}/cascade-mode.el ${EXAMPLESDIR}
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 		@${MKDIR} ${DOCSDIR}
 		@cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
 .endif
