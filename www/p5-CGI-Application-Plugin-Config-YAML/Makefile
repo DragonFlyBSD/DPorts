@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Config-YAML/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-Config-YAML/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	CGI-Application-Plugin-Config-YAML
 PORTVERSION=	0.01
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-CGI-Application>4.01:${PORTSDIR}/www/p5-CGI-Application \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CGI::Application::Plugin::Config::YAML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
