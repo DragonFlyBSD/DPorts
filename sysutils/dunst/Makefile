@@ -1,5 +1,5 @@
 # Created by: Rod Person <rodperson@rodperson.com>
-# $FreeBSD: sysutils/dunst/Makefile 333264 2013-11-08 22:06:57Z vg $
+# $FreeBSD: sysutils/dunst/Makefile 337469 2013-12-26 00:05:15Z bapt $
 
 PORTNAME=	dunst
 PORTVERSION=	1.0.0
@@ -19,10 +19,9 @@ LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
 		libpango-1.0.so:${PORTSDIR}/x11-toolkits/pango \
 		libxdg-basedir.so:${PORTSDIR}/x11/libxdg-basedir
 
-USES=		gmake pkgconfig:build
+USES=		gmake pkgconfig:build perl5
 USE_BZIP2=	yes
 USE_GNOME=	glib20
-USE_PERL=	yes
 USE_XORG=	xext xft xinerama xscrnsaver
 MAKE_ARGS+=	MANPREFIX="${PREFIX}/man"
 
