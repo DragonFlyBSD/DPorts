@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/gkrellm2/Makefile 330163 2013-10-12 18:08:23Z ume $
+# $FreeBSD: sysutils/gkrellm2/Makefile 338131 2013-12-30 16:18:01Z ume $
 
 PORTNAME=	gkrellm
 PORTVERSION=	2.3.5
@@ -13,7 +13,6 @@ MAINTAINER=	ume@FreeBSD.org
 COMMENT=	A GTK based system monitor
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gmake pkgconfig
 USE_BZIP2=	yes

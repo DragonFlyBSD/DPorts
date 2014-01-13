@@ -1,6 +1,6 @@
---- src/sysdeps/dragonfly.c.orig	2013-05-12 12:48:12.267284000 +0000
+--- src/sysdeps/dragonfly.c.orig	2014-01-13 14:18:10.914643000 +0000
 +++ src/sysdeps/dragonfly.c
-@@ -0,0 +1,1162 @@
+@@ -0,0 +1,1167 @@
 +/* GKrellM
 +|  Copyright (C) 1999-2010 Bill Wilson
 +|
@@ -821,8 +821,13 @@
 +#include <machine/cpufunc.h>
 +#if (__DragonFly_version < 200700)
 +#include <machine/smb.h>
-+#else
++#define	CMDDATA	data.byte_ptr
++#elif (__DragonFly_version < 300701)
 +#include <bus/smbus/smb.h>
++#define	CMDDATA	data.byte_ptr
++#else
++#include <dev/smbus/smb/smb.h>
++#define	CMDDATA	rdata.byte
 +#endif
 +
 +/* Interface types */
@@ -861,7 +866,7 @@
 +		struct smbcmd cmd;
 +
 +		bzero(&cmd, sizeof(cmd));
-+		cmd.data.byte_ptr = &byte;
++		cmd.CMDDATA = &byte;
 +		cmd.slave         = 0x5a;
 +		cmd.cmd           = command;
 +		if (ioctl(iodev, SMB_READB, (caddr_t)&cmd) == -1)
