@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: sysutils/dtpstree/Makefile 330995 2013-10-20 09:33:04Z sunpoet $
+# $FreeBSD: sysutils/dtpstree/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	dtpstree
 PORTVERSION=	1.0.3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://apt.douglasthrift.net/files/${PORTNAME}/ \
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Display a tree of processes
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
