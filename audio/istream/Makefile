@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: audio/istream/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/istream/Makefile 337908 2013-12-28 20:36:37Z antoine $
 
 PORTNAME=	istream
 PORTVERSION=	0.10
@@ -11,7 +11,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet radio player applet for GNOME Panel
 
 USES=		gmake pkgconfig
-NO_STAGE=	yes
 USE_GNOME=	gnomepanel libgnomeui
 USE_GSTREAMER=	yes
 USE_XORG=	xtst
