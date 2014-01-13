@@ -1,5 +1,5 @@
 # Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-# $FreeBSD: editors/emacs-devel/Makefile 335977 2013-12-09 13:01:12Z ashish $
+# $FreeBSD: editors/emacs-devel/Makefile 338536 2014-01-03 10:55:40Z ashish $
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}.${EMACS_REV}
@@ -16,8 +16,8 @@ COMMENT=	GNU editing macros
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-CONFLICTS=	emacs-19.* emacs-21.* emacs-22.* emacs-23.* \
-		xemacs-[0-9]* xemacs-devel-[0-9]* \
+CONFLICTS=	emacs-19.* emacs21-* emacs22-* emacs23-* \
+		emacs24-* xemacs-[0-9]* xemacs-devel-[0-9]* \
 		xemacs-mule-[0-9]* xemacs-devel-mule-[0-9]* \
 		emacs-nox11-[0-9]*
 
