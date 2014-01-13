@@ -1,5 +1,5 @@
 # Created by: patrick
-# $FreeBSD: lang/pfe/Makefile 336356 2013-12-13 15:26:52Z bapt $
+# $FreeBSD: lang/pfe/Makefile 338032 2013-12-29 17:39:46Z johans $
 
 PORTNAME=	pfe
 PORTVERSION=	0.33.71
@@ -13,12 +13,10 @@ USE_BZIP2=	yes
 USES=		gmake perl5
 USE_PERL5=	build
 USE_AUTOTOOLS=	libtool
+USE_LDCONFIG=	yes
 LIBTOOLFILES=	pfe/configure
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 
-MAN1=		pfe.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
