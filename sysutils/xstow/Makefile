@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: sysutils/xstow/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xstow/Makefile 338718 2014-01-05 00:41:13Z rakuco $
 
 PORTNAME=	xstow
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/
 
@@ -16,16 +16,15 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
-PLIST_FILES=	bin/merge-info bin/xstow bin/xstow-static bin/xstow-stow
-MAN1=		merge-info.1 xstow.1
-MAN5=		xstow.ini.5
-
-# This port always installs documentation, so we cannot respect NOPORTDOCS
+PLIST_FILES=	bin/merge-info bin/xstow \
+		man/man1/merge-info.1.gz man/man1/xstow.1.gz \
+		man/man5/xstow.ini.5.gz
 PORTDOCS=	AUTHORS COPYING ChangeLog NEWS README TODO xstow.html xstow.ini xstow.ini.html
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 post-install:
 	(cd ${WRKSRC} && \
-	 ${INSTALL_MAN} AUTHORS COPYING ChangeLog NEWS README TODO ${DOCSDIR})
+	 ${INSTALL_MAN} AUTHORS COPYING ChangeLog NEWS README TODO ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
