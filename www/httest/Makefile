@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
+# $FreeBSD: www/httest/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	httest
 PORTVERSION=	2.4.9
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/htt/htt${PORTVERSION:R}/${PORTNAME}-${PORTVERSION}
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	HTTP Test Tool
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libapr-1.so:${PORTSDIR}/devel/apr1 \
 		libpcre.so:${PORTSDIR}/devel/pcre
