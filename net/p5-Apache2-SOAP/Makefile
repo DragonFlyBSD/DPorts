@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: net/p5-Apache2-SOAP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Apache2-SOAP/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	Apache2-SOAP
 PORTVERSION=	0.73
@@ -19,7 +19,4 @@ USES=		perl5
 USE_PERL5=	configure
 USE_APACHE=	22+
 
-MAN3=		Apache2::SOAP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
