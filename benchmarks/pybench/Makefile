@@ -1,38 +1,35 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: benchmarks/pybench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/pybench/Makefile 338724 2014-01-05 00:53:05Z bapt $
 
 PORTNAME=	pybench
 PORTVERSION=	2.0
 CATEGORIES=	benchmarks python
 MASTER_SITES=	http://downloads.egenix.com/python/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	An extensible benchmark suite for Python
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USE_ZIP=	yes
 USE_PYTHON=	yes
 
 PORTDOCS=	README
 
-NO_STAGE=	yes
 do-build:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 
 do-install:
-	@${MKDIR} ${DATADIR}
-	@(cd ${WRKSRC} && ${TAR} --exclude README -c -f - .) \
-		| (cd ${DATADIR} && ${TAR} --unlink -x -f -)
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	@${TAR} --exclude README -C ${WRKSRC} -c -f - . \
+		| ${TAR} --unlink -x -C ${STAGEDIR}${DATADIR} -f -
 	@${PRINTF} '#!/bin/sh\n${PYTHON_CMD} ${DATADIR}/pybench.py "$$@"\n' \
 		> ${WRKDIR}/pybench.sh
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for docs in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${docs} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-	@${INSTALL_SCRIPT} ${WRKDIR}/pybench.sh ${PREFIX}/bin/pybench
+	@${INSTALL_SCRIPT} ${WRKDIR}/pybench.sh ${STAGEDIR}${PREFIX}/bin/pybench
 
 .include <bsd.port.mk>
