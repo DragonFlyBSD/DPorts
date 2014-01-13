@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-gitit/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-gitit/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	gitit
 PORTVERSION=	0.10.3.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -20,6 +20,5 @@ USE_CABAL=	base64-bytestring>=0.1 blaze-html>=0.4 cgi ConfigFile>=1 \
 
 EXECUTABLE=	expireGititCache gitit
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
