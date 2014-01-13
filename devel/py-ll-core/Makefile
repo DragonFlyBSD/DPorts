@@ -1,9 +1,9 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: devel/py-ll-core/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-ll-core/Makefile 337687 2013-12-27 10:15:32Z wg $
 
 PORTNAME=	ll-core
 PORTVERSION=	1.11.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	http://ftp.livinglogic.de/core/ \
 		http://cheeseshop.python.org/packages/source/l/ll-core/
@@ -12,10 +12,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility functions and classes used by the other LivingLogic packages
 
-USE_PYTHON=		2.5+
-USE_PYDISTUTILS=	easy_install
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_ZIP=		yes
-PYEASYINSTALL_ARCHDEP=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
