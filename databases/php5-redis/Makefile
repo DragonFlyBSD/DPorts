@@ -1,5 +1,5 @@
 # Created by: Benedikt Niessen <ports@niessen.ch>
-# $FreeBSD: databases/php5-redis/Makefile 333737 2013-11-14 04:03:35Z swills $
+# $FreeBSD: databases/php5-redis/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	redis
 PORTVERSION=	2.2.4
@@ -14,7 +14,6 @@ COMMENT=	PHP5-Extension for Redis
 LICENSE=	PHP301
 
 GITVERSION=	0f0661e
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/nicolasff-phpredis-${GITVERSION}
 
 USE_PHP=	session
