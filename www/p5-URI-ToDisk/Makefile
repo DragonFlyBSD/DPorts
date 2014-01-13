@@ -1,5 +1,5 @@
 # Created by: Cory R King <coryking@mozimedia.com>
-# $FreeBSD: www/p5-URI-ToDisk/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-URI-ToDisk/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	URI-ToDisk
 PORTVERSION=	1.12
@@ -21,7 +21,4 @@ RUN_DEPENDS=	p5-Clone>=0.23:${PORTSDIR}/devel/p5-Clone \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		URI::ToDisk.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
