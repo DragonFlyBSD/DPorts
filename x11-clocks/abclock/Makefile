@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: x11-clocks/abclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/abclock/Makefile 338007 2013-12-29 15:13:37Z antoine $
 
 PORTNAME=	abclock
 PORTVERSION=	1.0d
@@ -16,9 +16,8 @@ MAKE_ARGS=	CC="${CC}" OPT="${CFLAGS}"
 
 USE_XORG=	x11 xau xdmcp
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/abclock ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/abc_img ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/abclock ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/abc_img ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
