@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/emerald/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/emerald/Makefile 337997 2013-12-29 14:46:23Z antoine $
 
 PORTNAME=	emerald
 PORTVERSION=	0.8.4
@@ -16,21 +16,16 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_GL=		gl
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig gettext
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig shared-mime-info
 USE_GNOME=	gtk20 libwnck pango
 USE_XORG=	xrender
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 
-MAN1=		emerald.1 \
-		emerald-theme-manager.1
-
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 # XXX - might want to change that
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|icons/gnome|icons/hicolor|' ${WRKSRC}/misc/Makefile.in
 	@${REINPLACE_CMD} -e 's|#define GDK_DISABLE_DEPRECATED||g' \
