@@ -1,4 +1,4 @@
-# $FreeBSD: lang/ironpython/Makefile 333995 2013-11-16 13:36:51Z mva $
+# $FreeBSD: lang/ironpython/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	ironpython
 PORTVERSION=	2.7.4
@@ -8,7 +8,7 @@ DISTNAME=	ipy-${PORTVERSION}
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Python implementation based on .NET
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono
