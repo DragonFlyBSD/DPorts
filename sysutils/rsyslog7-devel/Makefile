@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog7-devel/Makefile 336690 2013-12-17 03:07:00Z brd $
+# $FreeBSD: sysutils/rsyslog7-devel/Makefile 338334 2013-12-31 19:18:42Z jgh $
 
 PORTNAME=	rsyslog
 PORTVERSION=	7.5.7
@@ -21,7 +21,7 @@ USE_AUTOTOOLS=	autoconf
 PORTSCOUT=	limit:^7\.5
 PORTDOCS=	*
 PORTEXAMPLES=	*
-PKGNAMESUFFIX=	-devel
+PKGNAMESUFFIX=	7-devel
 
 OPTIONS_DEFINE=	DBI DOCS GNUTLS GSSAPI MYSQL PGSQL RELP RFC3195 SNMP
 
