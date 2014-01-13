@@ -1,41 +1,36 @@
 # Created by: db
-# $FreeBSD: irc/cwirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/cwirc/Makefile 338196 2013-12-30 23:37:14Z db $
 
 PORTNAME=	cwirc
 PORTVERSION=	2.0.0
 PORTREVISION=	4
 CATEGORIES=	irc comms hamradio
 MASTER_SITES=	http://users.skynet.be/ppc/cwirc/download/ \
-		http://www.db.net/downloads/ \
 		${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	db
 
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	X-Chat Morse plugin
 
+LICENSE=	GPLv2
+
 BUILD_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
 USES=		pkgconfig
 
-NO_STAGE=	yes
 post-patch:
-	${CP} ${FILESDIR}/Makefile ${WRKSRC}
-	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' \
-	${WRKSRC}/Makefile
+	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' \
+	  -e 's|%%STAGEDIR%%|${STAGEDIR}|' ${WRKSRC}/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in COPYING LISEZMOI README RELEASE_NOTES
-	@${INSTALL_DATA}  ${WRKSRC}/$f ${DOCSDIR}
+	@${INSTALL_DATA}  ${WRKSRC}/$f ${STAGEDIR}${DOCSDIR}
 .endfor
-	${MKDIR} ${DOCSDIR}/schematics
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/schematics
 .for f in cw_oscillator.jpg rs232_key_connection.jpg
-	@${INSTALL_DATA} ${WRKSRC}/schematics/$f ${DOCSDIR}/schematics
+	@${INSTALL_DATA} ${WRKSRC}/schematics/$f ${STAGEDIR}${DOCSDIR}/schematics
 .endfor
-	@${ECHO} ""
-	@${ECHO} "cwirc docs installed in ${DOCSDIR}"
-	@${ECHO} ""
-.endif
 
 .include <bsd.port.mk>

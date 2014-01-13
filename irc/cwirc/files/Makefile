@@ -15,11 +15,11 @@
 #   (for example, "-lossaudio" with NetBSD 1.6.1)
 ################################################################################
 #
-# $FreeBSD: irc/cwirc/files/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: irc/cwirc/files/Makefile 338196 2013-12-30 23:37:14Z db $
 TARGET_OS=FREEBSD
-PLUGIN_INSTALL_DIRECTORY=%%PREFIX%%/lib/xchat/plugins
-FRONTEND_INSTALL_DIRECTORY=%%PREFIX%%/bin
-CWIRC_EXTENSIONS_DIRECTORY=%%PREFIX%%/share/cwirc/extensions
+PLUGIN_INSTALL_DIRECTORY=%%STAGEDIR%%%%PREFIX%%/lib/xchat/plugins
+FRONTEND_INSTALL_DIRECTORY=%%STAGEDIR%%%%PREFIX%%/bin
+CWIRC_EXTENSIONS_DIRECTORY=%%STAGEDIR%%%%PREFIX%%/share/cwirc/extensions
 #EXTRA_LDFLAGS=
 
 # Use these with Debian GNU/Linux for example
