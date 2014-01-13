@@ -1,33 +1,34 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: devel/silentbob/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/silentbob/Makefile 338361 2014-01-01 06:49:18Z tota $
 
 PORTNAME=	silentbob
-PORTVERSION=	2.4.2
+PORTVERSION=	3.0
 CATEGORIES=	devel
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}2/${PORTNAME}-2.4/
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}2/${PORTNAME}-${PORTVERSION:C@\.[0-9]+$@@}/
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Yet another sourcecode indexing tool
 
-USES=		cmake
+LICENSE=	GPLv2
 
-LICENSE=	GPLv1
-LICENSE_FILE=	${WRKSRC}/COPYING
+USES=		cmake:outsource
 
-PORTDOCS=	*
-PLIST_FILES=	bin/bob
+PORTDOCS=	README
+PLIST_FILES=	bin/silentbob
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${RM} ${WRKSRC}/CMakeCache.txt
 	@${REINPLACE_CMD} -e 's|/usr/lib/silent_bob/|${PREFIX}/lib/silent_bob/|' \
 		${WRKSRC}/src/init.cxx
 
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
