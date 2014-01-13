@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-sapplug/Makefile 333582 2013-11-12 15:52:20Z ehaupt $
+# $FreeBSD: audio/xmms-sapplug/Makefile 337707 2013-12-27 11:05:30Z bapt $
 
 PORTNAME=	xmms-sapplug
 DISTVERSION=	0.3f
@@ -27,15 +27,14 @@ PLIST_FILES=	lib/xmms/Input/libsap.so
 
 OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 
+CFLAGS_x86_64=	-fpic -DPIC
+CFLAGS_ia64=	-fpic -DPIC
+
 .include <bsd.port.pre.mk>
 
 # clang can build this without -fno-exceptions
 .if ${COMPILER_TYPE} == "gcc"
 CXXFLAGS+=	-fno-exceptions
-.endif
-
-.if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
-CFLAGS+=	-fpic -DPIC
 .endif
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
