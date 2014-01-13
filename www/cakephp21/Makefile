@@ -1,5 +1,5 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp21/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD: www/cakephp21/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	cakephp
 PORTVERSION=	2.1.3
@@ -14,7 +14,6 @@ COMMENT=	Framework for developing PHP web applications
 LICENSE=	MIT
 
 GITVERSION=	0-gc26df70
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-4b81775
 
 PORTDOCS=	README
