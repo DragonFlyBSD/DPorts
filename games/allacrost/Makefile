@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/allacrost/Makefile 332143 2013-10-30 16:09:08Z amdmi3 $
+# $FreeBSD: games/allacrost/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	allacrost
 PORTVERSION=	1.0.2
@@ -20,8 +20,7 @@ LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USES=		gmake gettext
-USE_OPENAL=	al
+USES=		gettext gmake openal:al
 USE_LUA=	5.1
 USE_SDL=	sdl ttf net
 USE_GL=		yes
