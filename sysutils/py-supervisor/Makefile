@@ -1,8 +1,9 @@
 # Created by: Hizbulin Ildar <hizel@vyborg.ru>
-# $FreeBSD: sysutils/py-supervisor/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-supervisor/Makefile 337484 2013-12-26 11:49:42Z wg $
 
 PORTNAME=	supervisor
 PORTVERSION=	3.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
@@ -19,7 +20,6 @@ OPTIONS_DEFINE=	TESTS
 TESTS_DESC=	Install mock for running unit tests
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTESTS}
@@ -29,7 +29,8 @@ BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}mock>0:${PORTSDIR}/devel/py-mock
 PORTDOCS=	*.txt *.rst
 
 USE_PYTHON=	-2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 PIDDIR?=	/var/run/supervisor
 
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} \
@@ -41,15 +42,11 @@ post-patch:
 	@${REINPLACE_CMD} -e 's!%%PREFIX%%!${PREFIX}!' ${WRKSRC}/supervisor/options.py
 
 post-install:
-	[ -d ${PIDDIR} ] || ${MKDIR} ${PIDDIR}
-	${INSTALL_DATA} ${FILESDIR}/supervisord.conf.sample ${PREFIX}/etc
-	[ -f ${PREFIX}/etc/supervisord.conf ] || ${CP} -p ${PREFIX}/etc/supervisord.conf.sample ${PREFIX}/etc/supervisord.conf
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_DATA} ${FILESDIR}/supervisord.conf.sample ${STAGEDIR}${PREFIX}/etc
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}/
 .endfor
-.endif
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
