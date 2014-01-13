@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: games/gemrb/Makefile 334665 2013-11-23 13:16:59Z ak $
+# $FreeBSD: games/gemrb/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	gemrb
 PORTVERSION=	0.8.0.1
@@ -15,9 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
 		libvorbis.so:${PORTSDIR}/audio/libvorbis
 
-USES=		cmake
+USES=		cmake openal:al,alut
 USE_SDL=	sdl mixer ttf
-USE_OPENAL=	al alut
 USE_LDCONFIG=	yes
 USE_PYTHON=	2.6+
 CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
