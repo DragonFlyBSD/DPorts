@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: games/patapizza-tetris/files/patapizza-tetris.sh.in 304694 2012-09-22 16:22:48Z bsam $
-
-echo "patapizza Tetris: Starting up..."
-cd "%%DATADIR%%"
-./patapizza-tetris
