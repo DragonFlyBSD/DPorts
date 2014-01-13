@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Generate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Generate/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	B-Generate
 PORTVERSION=	1.47
@@ -16,7 +16,4 @@ RUN_DEPENDS=	${COMMON_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	B::Generate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
