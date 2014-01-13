@@ -1,5 +1,5 @@
 # Created by: Necati Ersen SISECI <siseci@enderunix.org>
-# $FreeBSD: audio/voipong/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/voipong/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	voipong
 PORTVERSION=	2.0
@@ -14,11 +14,12 @@ PORTDOCS=	ALGORITHMS AUTHORS ChangeLog COPYING INSTALL KNOWN_BUGS \
 		LICENSE  NEWS README THANKS TODO
 NO_STAGE=	yes
 
+.include <bsd.port.options.mk>
 post-patch:
 	${MV} ${WRKSRC}/Makefile.bsd ${WRKSRC}/Makefile
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${MKDIR} ${DOCSDIR}/users-manual
 	${INSTALL_DATA} ${WRKSRC}/docs/users-manual/*.html ${DOCSDIR}/users-manual/
