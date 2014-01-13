@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/confget/Makefile 332746 2013-11-04 17:01:15Z sunpoet $
+# $FreeBSD: textproc/confget/Makefile 337622 2013-12-26 21:51:58Z sunpoet $
 
 PORTNAME=	confget
 PORTVERSION=	1.05
@@ -10,7 +10,7 @@ MASTER_SITES=	http://devel.ringlet.net/textproc/confget/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read variables from INI-style configuration files
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 OPTIONS_DEFINE=	EXAMPLES PCRE
 OPTIONS_DEFAULT=PCRE
