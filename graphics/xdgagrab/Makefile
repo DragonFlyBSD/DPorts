@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: graphics/xdgagrab/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xdgagrab/Makefile 339289 2014-01-09 21:42:19Z antoine $
 
 PORTNAME=	xdgagrab
 PORTVERSION=	0.3
@@ -14,8 +14,7 @@ USE_XORG=	x11 xxf86dga
 ALL_TARGET=	xdgagrab
 PLIST_FILES=	bin/xdgagrab
 
-NO_STAGE=	yes
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/xdgagrab ${PREFIX}/bin
+		${INSTALL_PROGRAM} ${WRKSRC}/xdgagrab ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
