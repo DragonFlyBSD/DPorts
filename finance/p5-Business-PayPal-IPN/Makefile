@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: finance/p5-Business-PayPal-IPN/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Business-PayPal-IPN/Makefile 338757 2014-01-05 12:33:14Z az $
 
 PORTNAME=	Business-PayPal-IPN
 PORTVERSION=	1.94
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-Crypt-SSLeay>=0.56:${PORTSDIR}/security/p5-Crypt-SSLeay \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::PayPal::IPN.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
