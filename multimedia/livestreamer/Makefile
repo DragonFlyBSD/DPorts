@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: multimedia/livestreamer/Makefile 335866 2013-12-08 06:10:24Z eadler $
+# $FreeBSD: multimedia/livestreamer/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	livestreamer
 PORTVERSION=	1.7.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Extract web streams and pipe them into video player of choice
 
-LICENSE=	BSD MIT AL2
+LICENSE=	BSD MIT APACHE20
 LICENSE_COMB=	multi
 
 RUN_DEPENDS=	rtmpdump:${PORTSDIR}/multimedia/rtmpdump \
