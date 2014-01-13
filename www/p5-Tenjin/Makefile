@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Tenjin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Tenjin/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Tenjin
 PORTVERSION=	0.070001
@@ -16,11 +16,4 @@ TEST_DEPENDS=	p5-Try-Tiny>0:${PORTSDIR}/lang/p5-Try-Tiny
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Tenjin.3 \
-	Tenjin::Context.3 \
-	Tenjin::Preprocessor.3 \
-	Tenjin::Template.3 \
-	Tenjin::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
