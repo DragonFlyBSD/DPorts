@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: mail/gnubiff/Makefile 336333 2013-12-13 11:23:11Z bapt $
+# $FreeBSD: mail/gnubiff/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	gnubiff
 PORTVERSION=	2.2.13
@@ -15,8 +15,7 @@ OPTIONS_DEFINE=	NLS
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 USE_GNOME=	intlhack libglade2 esound
-USES=		gmake pkgconfig
-USE_FAM=	yes
+USES=		fam gmake pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
