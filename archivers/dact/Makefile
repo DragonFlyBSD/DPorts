@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: archivers/dact/Makefile 336153 2013-12-11 10:04:56Z bapt $
+# $FreeBSD: archivers/dact/Makefile 338542 2014-01-03 14:42:07Z adamw $
 
 PORTNAME=	dact
 PORTVERSION=	0.8.42
@@ -23,6 +23,7 @@ MAKE_ARGS=	TOBUILD="dact libdact.so dact.conf"
 MAN1=		dact.1
 USE_LDCONFIG=	yes
 
+.include <bsd.port.options.mk>
 post-patch:
 	@${REINPLACE_CMD} -e "s|prefix = @prefix@|prefix = ${PREFIX}|" \
 	-e "s|libdir = @libdir@|libdir = ${PREFIX}/lib|" \
@@ -32,11 +33,11 @@ pre-install:
 	@${RM} -f ${WRKSRC}/libdact.a
 
 post-install:
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	@${MKDIR} ${EXAMPLESDIR}
 	${CP} -n ${WRKSRC}/dact.conf ${EXAMPLESDIR} || ${TRUE}
 .endif
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/Docs/dact.txt ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
