@@ -1,8 +1,8 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-pyramid_rpc/Makefile 327879 2013-09-22 16:30:10Z lwhsu $
+# $FreeBSD: www/py-pyramid_rpc/Makefile 338531 2014-01-03 08:57:11Z lwhsu $
 
 PORTNAME=	pyramid_rpc
-PORTVERSION=	0.5.1
+PORTVERSION=	0.5.2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
