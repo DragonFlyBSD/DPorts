@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-python-registry/Makefile 331050 2013-10-20 18:29:53Z antoine $
+# $FreeBSD: security/py-python-registry/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	python-registry
 PORTVERSION=	1.0.0
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Read access to Windows Registry files
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	williballenthin
