@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/qterm/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/qterm/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	qterm
 PORTVERSION=	0.5.12
@@ -27,7 +27,6 @@ PHONON_DESC=	Multimedia support via Phonon
 QTSCRIPT_DESC=	Scripting support via QtScript Bindings
 KDE_DESC=	Password management via KWallet
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
