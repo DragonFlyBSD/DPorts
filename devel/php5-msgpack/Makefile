@@ -1,5 +1,5 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD: devel/php5-msgpack/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/php5-msgpack/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	msgpack
 PORTVERSION=	2012.05.05
@@ -16,7 +16,6 @@ WRKSRC=		${WRKDIR}/msgpack-msgpack-${GITVERSION}/php
 GITHUB_USER=	msgpack
 GITHUB_REPO=	msgpack
 GITVERSION=	980a652
-FETCH_ARGS=	-pRr
 
 USE_PHP=	session
 USE_PHP_BUILD=	yes
