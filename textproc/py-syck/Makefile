@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: textproc/py-syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-syck/Makefile 338099 2013-12-30 12:10:11Z wg $
 
 PORTNAME=	syck
 PORTVERSION=	0.61.2
@@ -7,7 +7,7 @@ CATEGORIES=	textproc devel python
 MASTER_SITES=	http://pyyaml.org/download/pysyck/ \
 		LOCAL/avl
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	${PYDISTUTILS_PKGNAME}-${PORTVERSION}
+DISTNAME=	PySyck-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python binding for Syck, a YAML parser and emitter
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libsyck.a:${PORTSDIR}/textproc/syck
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	PySyck
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#include|include|g ; s|#library_dirs|library_dirs|g ; \
 		s|/usr/local|${LOCALBASE}|g ' ${WRKSRC}/setup.cfg
