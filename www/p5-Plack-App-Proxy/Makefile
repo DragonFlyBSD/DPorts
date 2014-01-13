@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	Plack-App-Proxy
 PORTVERSION=	0.27
@@ -22,15 +22,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plack::App::Proxy.3 \
-	Plack::App::Proxy::Backend.3 \
-	Plack::App::Proxy::Backend::AnyEvent::HTTP.3 \
-	Plack::App::Proxy::Backend::LWP.3 \
-	Plack::App::Proxy::Test.3 \
-	Plack::Middleware::Proxy::AddVia.3 \
-	Plack::Middleware::Proxy::Connect.3 \
-	Plack::Middleware::Proxy::LoadBalancer.3 \
-	Plack::Middleware::Proxy::RewriteLocation.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
