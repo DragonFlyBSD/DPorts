@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Todoist/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Todoist/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	Net-Todoist
 PORTVERSION=	0.04
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Todoist.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
