@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-GoogleMaps/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-GoogleMaps/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTML-GoogleMaps
 PORTVERSION=	10
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	leeym@FreeBSD.org
-COMMENT=	A simple wrapper around the Google Maps API
+COMMENT=	Simple wrapper around the Google Maps API
 
 RUN_DEPENDS=	p5-Geo-Coder-Google>=0.02:${PORTSDIR}/misc/p5-Geo-Coder-Google
 BUILD_DEPENDS:=	${RUN_DEPENDS}
@@ -16,9 +16,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::GoogleMaps.3
-
-NO_STAGE=	yes
 post-extract:
 	@${FIND} ${WRKSRC} -name ".*.pm" -delete
 
