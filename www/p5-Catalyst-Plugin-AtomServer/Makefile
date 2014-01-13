@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Plugin-AtomServer/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-AtomServer/Makefile 338778 2014-01-05 14:02:22Z az $
 
 PORTNAME=	Catalyst-Plugin-AtomServer
 PORTVERSION=	0.04
@@ -22,9 +22,4 @@ RUN_DEPENDS=	p5-Catalyst-Runtime>=0:${PORTSDIR}/www/p5-Catalyst-Runtime	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::Plugin::AtomServer.3					\
-		Catalyst::Plugin::Authentication::Credential::Atom.3		\
-		Catalyst::View::Atom::XML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
