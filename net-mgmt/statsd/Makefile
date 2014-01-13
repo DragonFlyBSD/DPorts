@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/statsd/Makefile 337198 2013-12-22 16:25:58Z swills $
+# $FreeBSD: net-mgmt/statsd/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	statsd
 PORTVERSION=	0.7.0
@@ -11,7 +11,6 @@ COMMENT=	Simple daemon for easy stats aggregation
 RUN_DEPENDS=	node:${PORTSDIR}/www/node
 
 NO_BUILD=	yes
-FETCH_ARGS=	-Fpr
 
 USERS=		statsd
 GROUPS=		statsd
