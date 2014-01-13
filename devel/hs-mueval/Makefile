@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-mueval/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-mueval/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	mueval
 PORTVERSION=	0.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -17,6 +17,5 @@ EXECUTABLE=	mueval mueval-core
 
 CONFIGURE_ARGS+=	--ghc-options="-dynamic"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
