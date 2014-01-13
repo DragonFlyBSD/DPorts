@@ -1,5 +1,5 @@
 # Created by: shane@freebsdhackers.net
-# $FreeBSD: security/destroy/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/destroy/Makefile 339306 2014-01-10 02:49:37Z tabthorpe $
 
 PORTNAME=	destroy
 PORTVERSION=	20050329
@@ -8,8 +8,11 @@ MASTER_SITES=	http://www.freebsdhackers.net/destroy/ \
 		http://destroy.rider.us/ \
 		http://www.impurity.org/mirrors/destroy/
 
-MAINTAINER=	shane@freebsdhackers.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to securely destroy files on the hard disk
+
+DEPRECATED=	No longer under active development
+EXPIRATION_DATE=	20130201
 
 USE_GMAKE=	yes
 
