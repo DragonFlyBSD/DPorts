@@ -1,4 +1,4 @@
-# $FreeBSD: www/kwebkitpart/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/kwebkitpart/Makefile 338801 2014-01-05 17:19:49Z rakuco $
 
 PORTNAME=	kwebkitpart
 PORTVERSION=	1.3.2
@@ -13,9 +13,5 @@ USE_QT4=	designer gui webkit \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USES=		cmake
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
