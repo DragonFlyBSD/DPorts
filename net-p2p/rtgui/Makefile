@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/rtgui/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/rtgui/Makefile 337733 2013-12-27 14:47:58Z jadawin $
 
 PORTNAME=	rtgui
 PORTVERSION=	0.2.81
@@ -17,7 +17,6 @@ OPTIONS_DEFAULTS=	APACHE
 
 BUILD_DEPENDS+=	xmlrpc-c-config:${PORTSDIR}/net/xmlrpc-c
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAPACHE}
@@ -37,19 +36,15 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
-SUB_LIST=	WWWDIR=${WWWDIR} \
-		PORTNAME=${PORTNAME}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/import_request_variables("gp","r_")/extract(\$_REQUEST, EXTR_PREFIX_ALL|EXTR_REFS, "r")/' ${WRKSRC}/*.php
-	@${FIND} ${WRKSRC} -name "*.bak" -delete
+	@${FIND} ${WRKSRC} -name "*.bak"  -delete
+	@${FIND} ${WRKSRC} -name "*.php~"  -delete
 
 do-install:
-	${MKDIR} ${WWWDIR}
-	${RM} ${WRKSRC}/functions.php~
-	${RM} ${WRKSRC}/index.php~
-	${CP} -r ${WRKSRC}/* ${WWWDIR}
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${WWWDIR}
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+	${CP} -r ${WRKSRC}/* ${STAGEDIR}${WWWDIR}
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
