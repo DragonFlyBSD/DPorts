@@ -1,11 +1,12 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/physfs-devel/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/physfs-devel/Makefile 338617 2014-01-04 01:00:01Z bapt $
 
 PORTNAME=	physfs
 PORTVERSION=	1.1.1
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://offload1.icculus.org/${PORTNAME}/downloads/
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	A library to provide abstract access to various archives
@@ -13,7 +14,6 @@ COMMENT=	A library to provide abstract access to various archives
 USES=		cmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-NO_LATEST_LINK=	yes
 
 NO_STAGE=	yes
 patch-autotools-libtool:
