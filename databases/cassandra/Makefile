@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/cassandra/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/cassandra/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	cassandra
 PORTVERSION=	1.1.12
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	-bin.tar.gz
 MAINTAINER=	hsn@sendmail.cz
 COMMENT=	Open source distributed database management system
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 JAVA_VERSION=	1.7
 JAVA_VENDOR=	openjdk
