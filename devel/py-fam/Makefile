@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-fam/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-fam/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	fam
 PORTVERSION=	1.1.1
@@ -12,13 +12,11 @@ DISTNAME=	python-fam-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python Interface to the File Alteration Monitor
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/_fam.so
+USES=		fam
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGVERSION=	0.0.0
-USE_FAM=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/setup.py ${WRKSRC}
 
