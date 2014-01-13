@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Dispatch-Screen-Color/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-Screen-Color/Makefile 338878 2014-01-06 13:41:40Z az $
 
 PORTNAME=	Log-Dispatch-Screen-Color
 PORTVERSION=	0.04
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-IO-stringy>0:${PORTSDIR}/devel/p5-IO-stringy
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Log::Dispatch::Screen::Color.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
