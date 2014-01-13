@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/alephone-scenarios/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/alephone-scenarios/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	scenarios
 PORTVERSION=	1.0
@@ -44,7 +44,6 @@ NO_STAGE=	yes
 DATADIR!=	cd ${PORTSDIR}/games/alephone && ${MAKE} -V DATADIR
 
 .if ${PORT_OPTIONS:MEMR}
-FETCH_ARGS=	-Fpr
 EMR_FILE=	emr-3.0-0602.tgz
 DISTFILES+=	${EMR_FILE}:emr
 PLIST_SUB+=	EMR=""
