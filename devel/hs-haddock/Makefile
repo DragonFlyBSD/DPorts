@@ -1,9 +1,9 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: devel/hs-haddock/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-haddock/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	haddock
 PORTVERSION=	2.13.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -22,7 +22,6 @@ PLIST_SUB+=	GHC_HADDOCK_CMD=${GHC_HADDOCK_CMD} HADDOCK=${PREFIX}/bin/haddock EXE
 
 CONFIGURE_ARGS+=	--program-suffix=-${PORTVERSION}
 
-NO_STAGE=	yes
 post-install::
 	@${LN} -sf ${PREFIX}/bin/${EXECUTABLE} ${PREFIX}/bin/haddock
 
