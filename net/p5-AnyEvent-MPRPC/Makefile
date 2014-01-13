@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-AnyEvent-MPRPC/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-AnyEvent-MPRPC/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	AnyEvent-MPRPC
 PORTVERSION=	0.20
@@ -21,10 +21,4 @@ TEST_DEPENDS=	p5-Test-TCP>=0:${PORTSDIR}/devel/p5-Test-TCP
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	AnyEvent::MPRPC.3 \
-	AnyEvent::MPRPC::Client.3 \
-	AnyEvent::MPRPC::CondVar.3 \
-	AnyEvent::MPRPC::Server.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
