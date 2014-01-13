@@ -1,5 +1,5 @@
 # Created by: Alex Bakhtin <Alex.Bakhtin@gmail.com>
-# $FreeBSD: www/p5-Catalyst-TraitFor-Controller-DBIC-DoesPaging/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-TraitFor-Controller-DBIC-DoesPaging/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	Catalyst-TraitFor-Controller-DBIC-DoesPaging
 PORTVERSION=	1.001000
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Catalyst-View-JSON>=0:${PORTSDIR}/www/p5-Catalyst-View-JSON \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Catalyst::TraitFor::Controller::DBIC::DoesPaging.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
