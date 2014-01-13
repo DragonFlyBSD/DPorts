@@ -1,12 +1,12 @@
 # Created by: Yaroslav Berezhinskiy <yaroslav@berezhinskiy.org.ua>
-# $FreeBSD: sysutils/backupme/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/backupme/Makefile 339308 2014-01-10 02:55:49Z tabthorpe $
 
 PORTNAME=	backupme
 PORTVERSION=	0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://backupme.org.ua/
 
-MAINTAINER=	yaroslav@berezhinskiy.org.ua
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flexible and easy backup utility
 
 RUN_DEPENDS=	p5-Log-Log4perl>=0:${PORTSDIR}/devel/p5-Log-Log4perl \
