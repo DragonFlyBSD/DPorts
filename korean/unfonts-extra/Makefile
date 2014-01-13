@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: korean/unfonts-extra/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/unfonts-extra/Makefile 339059 2014-01-08 00:06:49Z jkim $
 
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -18,5 +18,4 @@ FONTLIST=	UnJamoBatang \
 
 MASTERDIR=	${.CURDIR}/../unfonts-core
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
