@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: deskutils/sugarcrm/Makefile 329196 2013-10-03 14:17:24Z wen $
+# $FreeBSD: deskutils/sugarcrm/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	sugarcrm
 PORTVERSION=	6.5.15
@@ -11,7 +11,6 @@ DISTNAME=	SugarCE-${PORTVERSION}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Web based customer relationship management suite
 
-FETCH_ARGS=	-pRr
 USE_PHP=	gd mysql session pcre xml zlib mbstring curl imap spl posix
 USE_ZIP=	yes
 NO_BUILD=	yes
