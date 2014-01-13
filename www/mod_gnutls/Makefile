@@ -1,5 +1,5 @@
 # Created by: Fumiyuki Shimizu <fumifumi@abacustech.jp>
-# $FreeBSD: www/mod_gnutls/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_gnutls/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_gnutls
 PORTVERSION=	0.5.10
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 MAINTAINER=	fumifumi@abacustech.jp
 COMMENT=	mod_gnutls uses the GnuTLS library to provide SSL, and TLS encryption for Apache HTTPD
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
