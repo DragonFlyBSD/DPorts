@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/xml-security/Makefile 333560 2013-11-12 10:36:16Z bapt $
+# $FreeBSD: security/xml-security/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	xml-security
 PORTVERSION=	1.5.5
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:${PORTSDIR}/java/jakarta-common
 		${JAVALIBDIR}/xalan.jar:${PORTSDIR}/textproc/xalan-j
 RUN_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:${PORTSDIR}/java/jakarta-commons-logging
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 USE_ZIP=	yes
