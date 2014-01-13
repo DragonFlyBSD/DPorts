@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/closure-compiler/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/closure-compiler/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	closure-compiler
 PORTVERSION=	20120430
@@ -10,7 +10,7 @@ DISTNAME=	compiler-${PORTVERSION}
 MAINTAINER=	jlaffaye@FreeBSD.org
 COMMENT=	Closure Compiler
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
