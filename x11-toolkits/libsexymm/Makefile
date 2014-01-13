@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexymm/Makefile 336812 2013-12-18 10:20:48Z nemysis $
+# $FreeBSD: x11-toolkits/libsexymm/Makefile 339208 2014-01-09 08:53:38Z nemysis $
 
 PORTNAME=	libsexymm
 PORTVERSION=	0.1.9
@@ -12,14 +12,12 @@ COMMENT=	C++ bindings for libsexy
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	gtkmm-2:${PORTSDIR}/x11-toolkits/gtkmm24 \
-		sexy:${PORTSDIR}/x11-toolkits/libsexy
+LIB_DEPENDS=	libsexy.so:${PORTSDIR}/x11-toolkits/libsexy \
+		libgtkmm-2.4.so:${PORTSDIR}/x11-toolkits/gtkmm24
 
+USES=		gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
