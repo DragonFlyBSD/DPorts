@@ -1,9 +1,9 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: misc/tellico-kde4/Makefile 333419 2013-11-10 18:00:41Z rakuco $
+# $FreeBSD: misc/tellico-kde4/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	tellico
 PORTVERSION=	2.3.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc kde
 MASTER_SITES=	http://tellico-project.org/files/
 
@@ -13,7 +13,7 @@ COMMENT=	Collection manager for KDE
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	tag:${PORTSDIR}/audio/taglib \
-		poppler-qt4:${PORTSDIR}/graphics/poppler-qt4 \
+		libpoppler-qt4.so:${PORTSDIR}/graphics/poppler-qt4 \
 		yaz:${PORTSDIR}/net/yaz \
 		exempi:${PORTSDIR}/textproc/exempi \
 		qjson:${PORTSDIR}/devel/qjson
