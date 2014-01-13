@@ -1,5 +1,5 @@
 # Created by: Jan Srzednicki <w@wrzask.pl>
-# $FreeBSD: astro/gkrellmoon2/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/gkrellmoon2/Makefile 338543 2014-01-03 14:49:54Z adamw $
 
 PORTNAME=	gkrellmoon2
 PORTVERSION=	0.6
@@ -20,10 +20,12 @@ USE_GNOME=	gtk20
 
 ALL_TARGET=	gkrellmoon.so
 
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gkrellmoon.so \
 		${PREFIX}/libexec/gkrellm2/plugins
-.ifndef(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} -m ${SHAREMODE} \
 		${PREFIX}/share/doc/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PORTNAME}
