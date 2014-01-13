@@ -1,8 +1,8 @@
-# $FreeBSD: security/hs-RSA/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: security/hs-RSA/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	RSA
 PORTVERSION=	1.2.2.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -18,7 +18,6 @@ OPTIONS_DEFAULT=	MD5 BINARY
 MD5_DESC=		Include support for using MD5
 BINARY_DESC=		Use the binary package for serialization
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MMD5}
