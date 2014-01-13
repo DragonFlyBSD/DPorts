@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: chinese/gb2ps/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD: chinese/gb2ps/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	gb2ps
 PORTVERSION=	2.02
@@ -17,6 +17,8 @@ COMMENT=	Converts Chinese GB (simple) encoded text to PostScript
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=		${WRKDIR}/GB2PS
 
+.include <bsd.port.options.mk>
+
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/chinese/gb
 	${INSTALL_PROGRAM} ${WRKSRC}/gb2ps ${STAGEDIR}${PREFIX}/bin
@@ -24,7 +26,7 @@ do-install:
 .for font in csong24.ccf ckai24.ccf cfang24.ccf chei24.ccf cfan24.ccf
 	${GUNZIP_CMD} -c ${DISTDIR}/${font}.gz > ${STAGEDIR}${PREFIX}/share/chinese/gb/${font}
 .endfor
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/gb2ps
 	${INSTALL_DATA} ${WRKSRC}/gb2ps.help ${STAGEDIR}${PREFIX}/share/doc/gb2ps
 .endif
