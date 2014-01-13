@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: audio/fapg/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/fapg/Makefile 338637 2014-01-04 09:43:04Z antoine $
 
 PORTNAME=	fapg
 PORTVERSION=	0.41
@@ -12,22 +12,21 @@ COMMENT=	Fast Audio Playlist Generator
 LIB_DEPENDS=	liburiparser.so:${PORTSDIR}/net/uriparser
 
 MAKE_ARGS+=	CC="${CC}"
-NO_STAGE=	yes
 
-MAN1=		fapg.1
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 do-build:
 	@cd ${WRKSRC} && ${MAKE} ${PORTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/fapg.1 ${MAN1PREFIX}/man/man1
-
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/fapg.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+.if ${PORT_OPTIONS:MDOCS}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in COPYING README
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
