@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/mbrolavox/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mbrolavox/Makefile 337917 2013-12-28 21:16:26Z antoine $
 
 PORTNAME=	mbrolavox
 PORTVERSION=	3.0.1
@@ -12,7 +12,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Voices for MBROLA voice synthesizer
 
 USE_ZIP=	yes
-NO_STAGE=	yes
 NO_BUILD=	yes
 RESTRICTED=	No commercial nor military use, no sale
 WRKSRC=		${WRKDIR}/voices
@@ -46,7 +45,7 @@ do-extract:
 .endfor
 
 do-install:
-	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${DATADIR}
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
 
 # Generates OPTIONS file from voices.conf -- really for maintainer use
 # Only included for compatibility with anyone who wants to modify voices.conf
