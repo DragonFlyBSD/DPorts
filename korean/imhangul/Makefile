@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/imhangul/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/imhangul/Makefile 338683 2014-01-04 23:27:58Z antoine $
 
 PORTNAME=	imhangul
 PORTVERSION=	${GTKVER}.1.1
@@ -15,13 +15,11 @@ LIB_DEPENDS=	hangul:${PORTSDIR}/korean/libhangul
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pkgconfig
+USES=		gmake pkgconfig
 
 OPTIONS_DEFINE=	GTK3 NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK3}
@@ -42,12 +40,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_SUB+=	NLS=""
 .else
 PLIST_SUB+=	NLS="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MGTK3}
-post-install:
-	@${LOCALBASE}/bin/gtk-query-immodules-3.0 > \
-	    ${LOCALBASE}/lib/gtk-3.0/${GTK3_VERSION}/immodules.cache
 .endif
 
 .include <bsd.port.mk>
