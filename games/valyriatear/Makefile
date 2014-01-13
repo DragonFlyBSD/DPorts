@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/valyriatear/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD: games/valyriatear/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	valyriatear
 PORTVERSION=	0.6.0
@@ -22,11 +22,10 @@ GH_ACCOUNT=	Bertram25
 GH_PROJECT=	ValyriaTear
 GH_COMMIT=	a324297
 
-USES=		cmake iconv
+USES=		cmake iconv openal
 CMAKE_ARGS=	-DUSE_PCH_COMPILATION=OFF
 USE_SDL=	sdl image ttf
 USE_GL=		gl
-USE_OPENAL=	yes
 USE_LUA=	5.1
 INSTALLS_ICONS=	yes
 LDFLAGS=	-L${LOCALBASE}/lib ${ICONV_LIB} -lintl
