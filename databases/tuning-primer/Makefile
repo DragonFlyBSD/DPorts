@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: databases/tuning-primer/Makefile 332420 2013-11-01 23:05:48Z bdrewery $
+# $FreeBSD: databases/tuning-primer/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	tuning-primer
 PORTVERSION=	1.6.r1
@@ -15,7 +15,6 @@ COMMENT=	MySQL performance tuning primer script
 
 LICENSE=	GPLv2
 
-FETCH_ARGS=	-pRr
 NO_BUILD=	yes
 USE_MYSQL=	yes
 
