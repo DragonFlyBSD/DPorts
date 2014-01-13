@@ -1,5 +1,5 @@
 # Created by: Martin Neubauer <m.ne@gmx.net>
-# $FreeBSD: misc/p5-Business-EDI/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Business-EDI/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Business-EDI
 PORTVERSION=	0.05
@@ -27,10 +27,4 @@ WRKSRC=		${WRKDIR}/atz-${PORTNAME}-327e01f
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Business::EDI.3 \
-		Business::EDI::CodeList.3 \
-		Business::EDI::Composite.3 \
-		Business::EDI::Spec.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
