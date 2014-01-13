@@ -1,8 +1,8 @@
-# $FreeBSD: www/hs-snap/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-snap/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	snap
 PORTVERSION=	0.12.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -23,6 +23,5 @@ EXECUTABLE=	snap
 
 IGNORE_DYNAMIC=	yes
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
