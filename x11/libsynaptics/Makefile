@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: x11/libsynaptics/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libsynaptics/Makefile 337800 2013-12-27 20:31:13Z antoine $
 
 PORTNAME=	libsynaptics
 PORTVERSION=	0.14.6b
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/%%PTHREAD_LIBS%%/${PTHREAD_LIBS}/g' \
 		${WRKSRC}/Makefile.in
