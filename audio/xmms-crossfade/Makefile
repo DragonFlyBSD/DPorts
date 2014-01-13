@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-crossfade/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-crossfade/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	crossfade
 PORTVERSION=	0.3.14
@@ -18,6 +18,7 @@ HAS_CONFIGURE=	yes
 USE_CSTD=	gnu89
 NO_STAGE=	yes
 USES=		pkgconfig
+
 APP?=		xmms
 .if ${APP} == bmp
 PORTVERSION=	0.3.12
@@ -29,12 +30,13 @@ PLIST_FILES=	${PLUGDIR}/libcrossfade.so
 DOCSDIR?=	${PREFIX}/share/doc/${UNIQUENAME}
 CONFIGURE_ARGS+=	--enable-player=${APP}
 
-.ifndef WITHOUT_SAMPLERATE
-LIB_DEPENDS+=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS+=--enable-samplerate
-.endif
+OPTIONS_DEFINE=	SAMPLERATE
+SAMPLERATE_LIB_DEPENDS=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate
+SAMPLERATE_CPPFLAGS=	-I${LOCALBASE}/include
+SAMPLERATE_LDFLAGS=		-L${LOCALBASE}/lib
+SAMPLERATE_CONFIGURE_ENABLE=	samplerate
+
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/objformat=/s|aout|elf|; \
@@ -43,7 +45,7 @@ post-patch:
 do-install:
 	@${MKDIR} ${PREFIX}/${PLUGDIR}/
 	${INSTALL_PROGRAM} ${WRKSRC}/.libs/libcrossfade.so ${PREFIX}/${PLUGDIR}/
-.ifndef NOPORTDOCS
+.if ${PORT_OPTIONS:MDOCS}
 	@${INSTALL} -d ${DOCSDIR}/
 	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
 .endif
