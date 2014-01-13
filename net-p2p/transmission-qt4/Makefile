@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-qt4/Makefile 334587 2013-11-22 12:55:11Z makc $
+# $FreeBSD: net-p2p/transmission-qt4/Makefile 338392 2014-01-01 19:46:53Z crees $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4
@@ -16,7 +16,7 @@ SLAVEPORT=	qt4
 
 QT_NONSTANDARD=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build gui dbus network
-USE_GNOME=	desktopfileutils
+USES=		desktop-file-utils
 LDFLAGS+=	-lcrypto
 
 EXTRA_CONF_ARGS=--disable-cli \
@@ -25,28 +25,24 @@ EXTRA_CONF_ARGS=--disable-cli \
 		--disable-mac \
 		--disable-nls
 
-MAN1=		transmission-qt.1
-
 post-patch: general-patch
 	@${REINPLACE_CMD} -e 's|/share/man|/man|g ; /PKGCONFIG/s| openssl||g' \
 		${WRKSRC}/qt/qtr.pro
 
-NO_STAGE=	yes
 post-build:
 	@(cd ${WRKSRC}/qt ; ${QMAKE} ${QMAKE_ARGS} qtr.pro ; ${GMAKE})
 
 do-install:
-	@(cd ${WRKSRC}/qt ; ${SETENV} INSTALL_ROOT=${PREFIX} ${MAKE} install)
+	@(cd ${WRKSRC}/qt ; \
+		${SETENV} INSTALL_ROOT=${STAGEDIR}${PREFIX} ${MAKE} install)
 
 post-install: general-install
-.ifndef (NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/qt/README.txt ${DOCSDIR}/README-qt4
-.endif
+	@${INSTALL_DATA} ${WRKSRC}/qt/README.txt \
+		${STAGEDIR}${DOCSDIR}/README-qt4
 	@${INSTALL_DATA} ${WRKSRC}/qt/transmission-qt.desktop \
-		${PREFIX}/share/applications/
+		${STAGEDIR}${PREFIX}/share/applications/
 	@${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png \
-		${PREFIX}/share/pixmaps/transmission-qt.png
-	@-update-desktop-database
+		${STAGEDIR}${PREFIX}/share/pixmaps/transmission-qt.png
 
 .include "${MASTERDIR}/Makefile"
