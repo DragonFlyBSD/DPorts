@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: x11-toolkits/p5-Gtk2-GladeXML/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/p5-Gtk2-GladeXML/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Gtk2-GladeXML
 PORTVERSION=	1.007
@@ -23,7 +23,5 @@ USE_GNOME=	libglade2
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=	${PORTNAME:S/-/::/g}.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
