@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-Google-Analytics/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Google-Analytics/Makefile 338813 2014-01-05 18:05:39Z az $
 
 PORTNAME=	Net-Google-Analytics
 PORTVERSION=	3.01
@@ -19,11 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::Google::Analytics.3 \
-	Net::Google::Analytics::OAuth2.3 \
-	Net::Google::Analytics::Request.3 \
-	Net::Google::Analytics::Response.3 \
-	Net::Google::Analytics::Row.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
