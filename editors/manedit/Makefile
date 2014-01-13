@@ -1,13 +1,14 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/manedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/manedit/Makefile 337949 2013-12-29 09:51:52Z johans $
 
 PORTNAME=	manedit
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://wolfsinger.com/~wolfpack/packages/
 
 MAINTAINER=	johans@FreeBSD.org
-COMMENT=	A UNIX manual page editor and viewer
+COMMENT=	UNIX manual page editor and viewer
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}
 
@@ -15,16 +16,21 @@ MAKEFILE=	Makefile.FreeBSD
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 
-MAN1=		manedit.1
+MAKE_ARGS=	STAGEDIR="$(STAGEDIR)"
 
-NO_STAGE=	yes
 pre-configure:
 	@${CP} ${FILESDIR}/mntent* ${WRKSRC}
 
 post-patch:
 	@${REINPLACE_CMD} -e '/-o $$(BIN)/s/(CC)/(CXX)/' ${WRKSRC}/${MAKEFILE}
-	@${REINPLACE_CMD} -e '/^MAN/s/.bz2//' ${WRKSRC}/Makefile.install.FreeBSD
+	@${REINPLACE_CMD} -e '/^MAN/s/.bz2//' \
+		-e 's/(PREFIX)/(STAGEDIR)$$&/' \
+		-e '/@echo/s/^/#/' \
+		${WRKSRC}/Makefile.install.FreeBSD
 	@${REINPLACE_CMD} -e '/^SRC_C =/s//& mntent_compat.c/' \
 		${WRKSRC}/Makefile.srclist
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/manedit
 
 .include <bsd.port.mk>
