@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: games/chromium-bsu/Makefile 328535 2013-09-28 00:30:22Z amdmi3 $
+# $FreeBSD: games/chromium-bsu/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	chromium-bsu
 PORTVERSION=	0.9.15.1
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=--disable-glut
 USE_SDL+=	mixer
 CONFIGURE_ARGS+=--disable-openal
 .else
-USE_OPENAL=	al alut
+USES+=		openal:al,alut
 CONFIGURE_ARGS+=--disable-sdlmixer
 .endif
 
