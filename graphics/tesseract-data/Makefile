@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: graphics/tesseract-data/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/tesseract-data/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	tesseract-data
 PORTVERSION=	3.02
@@ -14,7 +14,7 @@ EXTRACT_ONLY=	#empty
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Trained language data for the Tesseract OCR engine
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 DIST_SUBDIR=	tesseract
 PROJECTHOST=	tesseract-ocr
