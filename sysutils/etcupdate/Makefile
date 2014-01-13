@@ -1,8 +1,8 @@
 # Created by: jhb
-# $FreeBSD: sysutils/etcupdate/Makefile 333612 2013-11-12 20:03:21Z antoine $
+# $FreeBSD: sysutils/etcupdate/Makefile 337796 2013-12-27 20:07:00Z jhb $
 
 PORTNAME=	etcupdate
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
