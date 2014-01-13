@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: graphics/hs-HGL/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/hs-HGL/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	HGL
 PORTVERSION=	3.2.0.2
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 
 USE_CABAL=	X11
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
