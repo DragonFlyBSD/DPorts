@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/atom/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/atom/Makefile 338028 2013-12-29 17:08:28Z crees $
 
 PORTNAME=	atom
 PORTVERSION=	1.0
@@ -12,25 +12,15 @@ COMMENT=	Converts text files to html with special attributes
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAN1=	atom.1
-MANCOMPRESSED=	no
-
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/atom
-PORTDOCS=	README \
-		TODO \
-		testFile
+PLIST_FILES=	bin/atom man/man1/atom.1.gz
+PORTDOCS=	README TODO testFile
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-.	for DOC in ${PORTDOCS}
-		${CP} -R ${WRKSRC}/${DOC} ${DOCSDIR}/
-.	endfor
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
