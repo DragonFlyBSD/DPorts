@@ -1,18 +1,18 @@
 # Created by: Chin-San Huang <chinsan@mail2000.com.tw>
-# $FreeBSD: www/dokuwiki/Makefile 336232 2013-12-11 22:11:32Z delphij $
+# $FreeBSD: www/dokuwiki/Makefile 338960 2014-01-06 23:43:43Z bapt $
 
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.dokuwiki.org/src/dokuwiki/
 DISTNAME=	${DIST_VER}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	delphij@FreeBSD.org
-COMMENT=	A simple and easy to use wiki, no database required
+COMMENT=	Simple and easy to use wiki, no database required
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 DIST_VER=	${PORTNAME}-2013-12-08
 USE_PHP=	gd mbstring openssl pcre session xml zlib
