@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: devel/p5-Parse-PlainConfig/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Parse-PlainConfig/Makefile 338872 2014-01-06 12:55:03Z az $
 
 PORTNAME=	Parse-PlainConfig
 PORTVERSION=	2.06
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Paranoid>0:${PORTSDIR}/devel/p5-Paranoid \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parse::PlainConfig.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
