@@ -1,8 +1,8 @@
-# $FreeBSD: math/hs-categories/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/hs-categories/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	categories
 PORTVERSION=	1.0.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	void>=0.5.4.2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
