@@ -1,5 +1,4 @@
-# Created by: utisoft@gmail.com
-# $FreeBSD: net/opentracker/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/opentracker/Makefile 338025 2013-12-29 16:29:03Z crees $
 
 PORTNAME=	opentracker
 PORTVERSION=	0.2010.05.30
@@ -31,7 +30,6 @@ DEBUG_HTTPERROR_DESC=	Verbose HTTPERRORs
 FULLSCRAPE_DESC=	Can query tracker for all torrents
 RESTRICT_STATS_DESC=	Limit stats access based on IP
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MACCESSLIST_BLACK}
@@ -66,16 +64,9 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/etc/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.conf.sample \
-		${PREFIX}/etc/${PORTNAME}/${PORTNAME}.conf.sample
-
-post-install:
-	@if [ ! -f ${PREFIX}/etc/${PORTNAME}/${PORTNAME}.conf ]; then \
-		${CP} -p ${PREFIX}/etc/${PORTNAME}/${PORTNAME}.conf.sample \
-			${PREFIX}/etc/${PORTNAME}/${PORTNAME}.conf ; \
-		fi
-	@${CAT} ${PKGMESSAGE}
+		${STAGEDIR}${ETCDIR}/${PORTNAME}.conf.sample
 
 .include <bsd.port.mk>
