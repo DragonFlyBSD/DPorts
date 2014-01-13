@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
-# $FreeBSD: devel/p5-DateTime-Format-XSD/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Format-XSD/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	DateTime-Format-XSD
 PORTVERSION=	0.2
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-DateTime-Format-ISO8601>=0:${PORTSDIR}/devel/p5-DateTime-Format-
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Format::XSD.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
