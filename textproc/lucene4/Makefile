@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: textproc/lucene4/Makefile 335067 2013-11-27 22:05:31Z mva $
+# $FreeBSD: textproc/lucene4/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	lucene
 PORTVERSION=	4.6.0
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Full-text search engine for Java, 4.x branch
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 CONFLICTS=	lucene-[0-9].*
 
