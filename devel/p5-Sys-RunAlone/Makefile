@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Sys-RunAlone/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sys-RunAlone/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	Sys-RunAlone
 PORTVERSION=	0.12
@@ -14,7 +14,4 @@ COMMENT=	Make sure only one invocation of a script is active at a time
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Sys::RunAlone.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
