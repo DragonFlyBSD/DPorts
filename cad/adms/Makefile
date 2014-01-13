@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/adms/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/adms/Makefile 338158 2013-12-30 18:36:10Z antoine $
 
 PORTNAME=	adms
 PORTVERSION=	2.3.0
@@ -8,18 +8,14 @@ CATEGORIES=	cad
 MASTER_SITES=	SF/mot-${PORTNAME}/${PORTNAME}-source/${PORTVERSION:R}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A model generator for SPICE simulators
+COMMENT=	Model generator for SPICE simulators
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		pkgconfig
+USES=		gmake pkgconfig
 USE_GNOME=	glib20
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAN1=		admsXml.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
