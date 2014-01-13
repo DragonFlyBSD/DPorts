@@ -1,5 +1,5 @@
 # Created by: James Raftery <james@now.ie>
-# $FreeBSD: mail/p5-Net-QMTP/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Net-QMTP/Makefile 338791 2014-01-05 16:08:00Z az $
 
 PORTNAME=	Net-QMTP
 PORTVERSION=	0.06
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Text-Netstring>=0:${PORTSDIR}/textproc/p5-Text-Netstring
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::QMTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
