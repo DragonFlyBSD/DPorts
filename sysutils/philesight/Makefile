@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: sysutils/philesight/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/philesight/Makefile 338487 2014-01-02 20:09:36Z swills $
 
 PORTNAME=	philesight
 PORTVERSION=	20090105
@@ -29,9 +29,7 @@ PORTEXAMPLES=	${PORTNAME}.cgi
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
-.if ${RUBY_VER} == 1.9
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-ruby19
-.endif
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
