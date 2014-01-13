@@ -1,5 +1,5 @@
 # Created by: Danijel Tasov <danielt@pilgerer.org>
-# $FreeBSD: shells/heirloom-sh/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/heirloom-sh/Makefile 337649 2013-12-27 08:23:12Z bapt $
 
 PORTNAME=	heirloom-sh
 PORTVERSION=	050706
@@ -9,32 +9,19 @@ MASTER_SITES=	SF/heirloom/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	danielt@pilgerer.org
 COMMENT=	Portable version of OpenSolaris' Bourne Shell
 
+MAKEFILE=	makefile
 USE_BZIP2=	yes
-MAN1=		jsh.1
-PLIST_FILES=	bin/jsh
+PLIST_FILES=	bin/jsh \
+		man/man1/jsh.1.gz
 PORTDOCS=	CALDERA.LICENSE OPENSOLARIS.LICENSE CHANGES README
 
 PKGINSTALL=	pkg-install
 PKGDEINSTALL=	pkg-deinstall
 
-NO_STAGE=	yes
-do-build:
-	cd ${WRKSRC} && make
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/jsh ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/sh.1.out ${MANPREFIX}/man/man1/jsh.1
-
-pre-install:
-	@${SETENV} PKG_PREFIX="${PREFIX}" PKG_DESTDIR="${DESTDIR}" \
-		${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
-
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
-	@${SETENV} PKG_PREFIX="${PREFIX}" PKG_DESTDIR="${DESTDIR}" \
-		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	${INSTALL_PROGRAM} ${WRKSRC}/jsh ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/sh.1.out ${STAGEDIR}${MANPREFIX}/man/man1/jsh.1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
