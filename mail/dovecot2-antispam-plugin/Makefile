@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: mail/dovecot2-antispam-plugin/Makefile 334882 2013-11-25 19:03:16Z danilo $
+# $FreeBSD: mail/dovecot2-antispam-plugin/Makefile 339343 2014-01-10 11:44:55Z olgeni $
 
 PORTNAME=	dovecot2-antispam-plugin
 PORTVERSION=	20130429
@@ -12,9 +12,9 @@ DISTFILES=	dovecot-antispam-plugin-${DISTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Dovecot 2.x plugin for spam systems training
 
-BUILD_DEPENDS=	dovecot>=2.2.0:${PORTSDIR}/mail/dovecot2 \
+BUILD_DEPENDS=	dovecot2>=2.2.0:${PORTSDIR}/mail/dovecot2 \
 		gawk:${PORTSDIR}/lang/gawk
-RUN_DEPENDS=	dovecot>=2.2.0:${PORTSDIR}/mail/dovecot2
+RUN_DEPENDS=	dovecot2>=2.2.0:${PORTSDIR}/mail/dovecot2
 
 CONFLICTS=	dovecot-antispam-1.*
 WRKSRC=		${WRKDIR}/dovecot-antispam-plugin-5ebc6aae4d7c
