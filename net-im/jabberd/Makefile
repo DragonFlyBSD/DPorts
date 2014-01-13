@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net-im/jabberd/Makefile 336707 2013-12-17 10:15:59Z matthew $
+# $FreeBSD: net-im/jabberd/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	jabberd
 DISTVERSION=	2.3.1
@@ -24,7 +24,6 @@ OPTIONS_DEFAULT=MYSQL DEBUG GSASL
 OPTIONS_SUB=	yes
 
 USE_XZ=		yes
-FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
 USE_PERL5=	run
 USE_OPENSSL=	yes
