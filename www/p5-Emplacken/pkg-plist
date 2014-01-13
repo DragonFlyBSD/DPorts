@@ -1,4 +1,4 @@
-@comment $FreeBSD: www/p5-Emplacken/pkg-plist 300897 2012-07-14 14:29:18Z beat $
+@comment $FreeBSD: www/p5-Emplacken/pkg-plist 338769 2014-01-05 13:31:10Z az $
 bin/emplacken
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Emplacken/.packlist
 %%SITE_PERL%%/Emplacken.pm
@@ -13,6 +13,8 @@ bin/emplacken
 %%SITE_PERL%%/Emplacken/Stderr.pm
 %%SITE_PERL%%/Emplacken/Types.pm
 %%SITE_PERL%%/Emplacken/Types/Internal.pm
+%%PERL5_MAN3%%/Emplacken.3.gz
+%%PERL5_MAN3%%/Emplacken::Types.3.gz
 @dirrmtry %%SITE_PERL%%/Emplacken/Types
 @dirrmtry %%SITE_PERL%%/Emplacken/Role
 @dirrmtry %%SITE_PERL%%/Emplacken/CodeBuilder
