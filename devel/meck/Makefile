@@ -1,4 +1,4 @@
-# $FreeBSD: devel/meck/Makefile 331965 2013-10-29 16:31:20Z olgeni $
+# $FreeBSD: devel/meck/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	meck
 PORTVERSION=	0.8.1
@@ -8,7 +8,7 @@ MASTER_SITES=	GH
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Erlang library for building mock modules
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang \
 		rebar:${PORTSDIR}/devel/rebar
