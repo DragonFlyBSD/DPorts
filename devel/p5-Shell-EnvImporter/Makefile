@@ -1,5 +1,5 @@
 # Created by: Martin Jackson (mhjacks@swbell.net)
-# $FreeBSD: devel/p5-Shell-EnvImporter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Shell-EnvImporter/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	Shell-EnvImporter
 PORTVERSION=	1.07
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Class-MethodMaker>=0:${PORTSDIR}/devel/p5-Class-MethodMaker
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Shell::EnvImporter.3 Shell::EnvImporter::Result.3 Shell::EnvImporter::Shell.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
