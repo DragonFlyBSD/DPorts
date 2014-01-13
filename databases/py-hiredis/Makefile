@@ -1,9 +1,8 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: databases/py-hiredis/Makefile 331899 2013-10-28 21:37:00Z wg $
+# $FreeBSD: databases/py-hiredis/Makefile 339089 2014-01-08 11:06:04Z wg $
 
 PORTNAME=	hiredis
-PORTVERSION=	0.1.1
-PORTREVISION=	1
+PORTVERSION=	0.1.2
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
