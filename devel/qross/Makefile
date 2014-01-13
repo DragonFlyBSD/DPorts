@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/qross/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/qross/Makefile 338906 2014-01-06 16:24:22Z makc $
 
 PORTNAME=	qross
 PORTVERSION=	0.2.2
@@ -14,7 +14,7 @@ USE_BZIP2=	yes
 USES=		cmake
 USE_LDCONFIG=	yes
 USE_QT4=	designer gui network xml qmake_build uic_build moc_build \
-		rcc_build script
+		rcc_build script testlib
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
