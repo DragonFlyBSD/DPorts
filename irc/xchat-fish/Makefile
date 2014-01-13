@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: irc/xchat-fish/Makefile 335216 2013-11-29 19:55:29Z dinoex $
+# $FreeBSD: irc/xchat-fish/Makefile 338975 2014-01-07 06:57:40Z dinoex $
 #    $MCom: ports/irc/xchat-fish/Makefile,v 1.1 2006/10/04 22:30:07 ahze Exp $
 
 PORTNAME=	fish
@@ -18,8 +18,8 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libmiracl.a:${PORTSDIR}/math/miracl
 RUN_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
 USE_ZIP=	yes
+USES=		dos2unix
 NO_WRKSUBDIR=	yes
-USE_DOS2UNIX=	yes
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 CCFLAGS+=	-Wall -O2 -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
