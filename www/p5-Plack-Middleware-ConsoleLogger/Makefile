@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-ConsoleLogger/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-Middleware-ConsoleLogger/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Plack-Middleware-ConsoleLogger
 PORTVERSION=	0.04
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plack::Middleware::ConsoleLogger.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
