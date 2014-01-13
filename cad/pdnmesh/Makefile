@@ -1,5 +1,5 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: cad/pdnmesh/Makefile 337045 2013-12-20 17:25:22Z tijl $
+# $FreeBSD: cad/pdnmesh/Makefile 337590 2013-12-26 18:17:07Z marino $
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
@@ -21,6 +21,7 @@ USES=		fortran pkgconfig
 USE_GL=		glu
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-lm
 
 DESKTOP_ENTRIES="pdnMesh" "${COMMENT}" "" "${PORTNAME}" "" "true"
 
