@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <Cy.Schubert@uumail.gov.bc.ca>
-# $FreeBSD: x11/xcut/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xcut/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xcut
 PORTVERSION=	0.2
@@ -14,8 +14,6 @@ COMMENT=	Manipulate X cut buffers from the commandline
 
 USES=		imake
 USE_XORG=	x11
-MAN1=		xcut.1
-PLIST_FILES=	bin/xcut
+PLIST_FILES=	bin/xcut man/man1/xcut.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
