@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: science/R-cran-DCluster/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: science/R-cran-DCluster/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	DCluster
 DISTVERSION=	0.2-6
@@ -15,7 +15,6 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	R-cran-spdep>0:${PORTSDIR}/math/R-cran-spdep
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
