@@ -1,5 +1,5 @@
 # Created by: adsharma@sharams.dhs.org
-# $FreeBSD: devel/py-ncurses/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-ncurses/Makefile 337700 2013-12-27 10:36:49Z wg $
 
 PORTNAME=	ncurses
 PORTVERSION=	0.3
@@ -10,13 +10,12 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyncurses-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A ncurses binding for Python
+COMMENT=	Ncurses binding for Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	pyncurses
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
