@@ -1,5 +1,5 @@
 # Created by: Masanori Kiriake <seiken@nbs.co.jp>
-# $FreeBSD: converters/aish/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/aish/Makefile 339221 2014-01-09 13:09:44Z bapt $
 
 PORTNAME=	aish
 PORTVERSION=	1.13
@@ -10,11 +10,10 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}u
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ish/uuencode/Base64 converter
 
-NO_STAGE=	yes
+MAKE_ARGS=	DSTDIR=${STAGEDIR}${PREFIX}/bin
+
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${PREFIX}/share/doc/ja/aish
-	${INSTALL_DATA} ${WRKSRC}/aish.txt ${PREFIX}/share/doc/ja/aish
-.endif
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/ja/aish
+	${INSTALL_DATA} ${WRKSRC}/aish.txt ${STAGEDIR}${PREFIX}/share/doc/ja/aish
 
 .include <bsd.port.mk>
