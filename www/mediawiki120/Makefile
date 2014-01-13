@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki120/Makefile 335547 2013-12-03 07:08:40Z mat $
+# $FreeBSD: www/mediawiki120/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	mediawiki
 PORTVERSION=	1.20.8
@@ -14,7 +14,6 @@ LICENSE=	GPLv2
 
 CONFLICTS=	mediawiki-1.1[0-9].* mediawiki-1.21.*
 
-FETCH_ARGS=	-pr
 USE_PHP=	ctype hash iconv mbstring pcre session xml zlib readline dom
 WANT_PHP_WEB=	yes
 MEDIAWIKIDIR?=	www/mediawiki
