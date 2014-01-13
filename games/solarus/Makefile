@@ -1,4 +1,4 @@
-# $FreeBSD: games/solarus/Makefile 330721 2013-10-18 04:21:07Z eadler $
+# $FreeBSD: games/solarus/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	solarus
 PORTVERSION=	1.1.0
@@ -16,11 +16,10 @@ LIB_DEPENDS=	libphysfs.so:${PORTSDIR}/devel/physfs \
 		libogg.so:${PORTSDIR}/audio/libogg
 
 USE_SDL=	sdl ttf image
-USE_OPENAL=	yes
 
 PLIST_FILES=	bin/solarus
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USES=		cmake
+USES=		cmake openal
 
 .include <bsd.port.mk>
