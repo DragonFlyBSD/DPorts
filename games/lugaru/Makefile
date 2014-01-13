@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/lugaru/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/lugaru/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	lugaru
 PORTVERSION=	269
@@ -19,9 +19,8 @@ LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
 		libogg.so:${PORTSDIR}/audio/libogg
 
 USE_BZIP2=	yes
-USES=		cmake pkgconfig
+USES=		cmake openal:soft pkgconfig
 USE_GL=		glu
-USE_OPENAL=	soft
 USE_SDL=	sdl
 USE_XORG=	sm
 USE_GCC=	yes
