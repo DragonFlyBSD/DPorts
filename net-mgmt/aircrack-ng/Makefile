@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: net-mgmt/aircrack-ng/Makefile 337097 2013-12-20 22:33:05Z lme $
+# $FreeBSD: net-mgmt/aircrack-ng/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	aircrack-ng
 DISTVERSION=	1.2b2
@@ -12,7 +12,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION:C/b/-beta/}
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	An 802.11 WEP and WPA-PSK keys cracking program
 
-LICENSE=	GPLv2 BSD3CLAUSE AL2
+LICENSE=	GPLv2 BSD3CLAUSE APACHE20
 LICENSE_COMB=	dual
 
 USES=		gmake dos2unix
