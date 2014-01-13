@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: misc/p5-Norge/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Norge/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Norge
 PORTVERSION=	1.08
@@ -13,7 +13,4 @@ COMMENT=	Misc. Norwegian methods for Perl, conversion/dates/numbers etc.
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		No::Sort.3 No::KontoNr.3 No::PersonNr.3 No::Dato.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
