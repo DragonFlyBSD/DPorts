@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-twofish/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-twofish/Makefile 338085 2013-12-30 11:12:10Z wg $
 
 PORTNAME=	twofish
 PORTVERSION=	0.7
@@ -12,17 +12,15 @@ DISTNAME=	twofishmodule-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Twofish cryptographic module for Python
 
-USE_PYTHON=	yes
+USE_PYTHON=	2
 GNU_CONFIGURE=	yes
 CFLAGS+=	-fPIC
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/_twofish.so ${PYTHON_SITELIBDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/*.py ${PYTHON_SITELIBDIR}
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/_twofish.so ${STAGEDIR}${PYTHON_SITELIBDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/*.py ${STAGEDIR}${PYTHON_SITELIBDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
