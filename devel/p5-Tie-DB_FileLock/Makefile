@@ -1,5 +1,5 @@
 # Created by: Josh Tiefenbach <josh@zipperup.org>
-# $FreeBSD: devel/p5-Tie-DB_FileLock/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-DB_FileLock/Makefile 338875 2014-01-06 13:26:14Z az $
 
 PORTNAME=	Tie-DB_FileLock
 PORTVERSION=	0.11
@@ -13,7 +13,4 @@ COMMENT=	Locking access to Berkeley DB v1.x
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=			Tie::DB_FileLock.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
