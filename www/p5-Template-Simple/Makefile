@@ -1,5 +1,5 @@
 # Created by: Ken McGlothlen <ken.mcglothlen@gmail.com>
-# $FreeBSD: www/p5-Template-Simple/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: www/p5-Template-Simple/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	Template-Simple
 PORTVERSION=	0.06
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Template::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
