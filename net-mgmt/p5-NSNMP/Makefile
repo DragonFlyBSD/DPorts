@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-NSNMP/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-NSNMP/Makefile 338790 2014-01-05 15:52:33Z az $
 
 PORTNAME=	NSNMP
 PORTVERSION=	0.5
@@ -14,8 +14,4 @@ COMMENT=	NSNMP - fast, flexible, low-level, pure-Perl SNMP library
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	NSNMP.3 \
-	NSNMP::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
