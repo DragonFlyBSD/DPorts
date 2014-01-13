@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: sysutils/zfs-snapshot-clean/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/zfs-snapshot-clean/Makefile 337777 2013-12-27 18:34:49Z bapt $
 
 PORTNAME=	zfs-snapshot-clean
 PORTVERSION=	0.1.3
@@ -8,13 +8,12 @@ MASTER_SITES=	http://cloud.github.com/downloads/knu/${PORTNAME}/ \
 		ftp://ftp.iDaemons.org/pub/distfiles/
 
 MAINTAINER=	knu@FreeBSD.org
-COMMENT=	A tool to sieve ZFS snapshots as per given spec a la 'pdumpfs-clean'
+COMMENT=	Tool to sieve ZFS snapshots as per given spec a la 'pdumpfs-clean'
 
 NO_BUILD=	yes
 PLIST_FILES=	sbin/${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin/
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin/
 
 .include <bsd.port.mk>
