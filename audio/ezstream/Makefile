@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: audio/ezstream/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/ezstream/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	ezstream
 PORTVERSION=	0.5.6
@@ -50,7 +50,7 @@ post-patch:
 		s|: install-dist_docDATA|:|g' ${WRKSRC}/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}/
 .for file in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}/
