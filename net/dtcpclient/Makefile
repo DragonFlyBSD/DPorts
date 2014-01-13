@@ -1,4 +1,4 @@
-# $FreeBSD: net/dtcpclient/Makefile 332214 2013-10-31 08:02:52Z bapt $
+# $FreeBSD: net/dtcpclient/Makefile 338129 2013-12-30 16:12:16Z ume $
 
 PORTNAME=	dtcpclient
 PORTVERSION=	20090812
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.mahoroba.org/~ume/ipv6/ \
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Dynamic Tunnel Configuration Protocol client
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 USES=		uidfix
 USE_RC_SUBR=	dtcpclient
