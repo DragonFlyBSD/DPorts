@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: lang/intercal/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/intercal/Makefile 338023 2013-12-29 16:19:57Z johans $
 
 PORTNAME=	intercal
 PORTVERSION=	0.29
@@ -11,14 +11,12 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	The C-INTERCAL compiler, ick, and supporting libraries
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 CFLAGS+=	-D_POSIX_SOURCE
 DATADIR=	${PREFIX}/share/ick
 
-MAN1=		ick.1 convickt.1
 INFO=		ick
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/ICK_SPECIFIC_SUBDIR/s/-@PACKAGE_VERSION@// ' \
 		${WRKSRC}/buildaux/Makefile.in
