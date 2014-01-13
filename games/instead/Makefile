@@ -1,9 +1,9 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD: games/instead/Makefile 336623 2013-12-16 11:17:42Z amdmi3 $
+# $FreeBSD: games/instead/Makefile 337420 2013-12-25 14:55:33Z amdmi3 $
 
 PORTNAME=	instead
 PORTVERSION=	1.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/instead/instead/${PORTVERSION}/ \
 		http://mirror.amdmi3.ru/distfiles/
