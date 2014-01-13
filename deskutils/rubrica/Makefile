@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/rubrica/Makefile 329399 2013-10-04 22:29:20Z nemysis $
+# $FreeBSD: deskutils/rubrica/Makefile 338516 2014-01-03 01:53:21Z bapt $
 
 PORTNAME=	rubrica
 PORTVERSION=	2.0.12
@@ -15,7 +15,6 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 
-FETCH_ARGS?=	-Fpr
 USE_BZIP2=	yes
 USES=		desktop-file-utils gmake pathfix pkgconfig
 USE_GNOME=	gconf2 gnomeprefix libglade2
