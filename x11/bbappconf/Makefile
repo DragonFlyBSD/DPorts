@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: x11/bbappconf/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/bbappconf/Makefile 338768 2014-01-05 13:29:17Z antoine $
 
 PORTNAME=	bbappconf
 PORTVERSION=	0.0.2
@@ -13,12 +13,11 @@ COMMENT=	Application configuring tool for the blackbox window manager
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/bbappconf ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/bbtools
+	${INSTALL_PROGRAM} ${WRKSRC}/bbappconf ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/bbtools
 .for a in README.bbappconf bbappconf.bb bbappconf.nobb
-	@${INSTALL_DATA} ${WRKSRC}/data/${a} ${PREFIX}/share/bbtools
+	${INSTALL_DATA} ${WRKSRC}/data/${a} ${STAGEDIR}${PREFIX}/share/bbtools
 .endfor
 
 .include <bsd.port.mk>
