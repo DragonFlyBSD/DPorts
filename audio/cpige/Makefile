@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/cpige/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/cpige/Makefile 337588 2013-12-26 18:12:28Z bapt $
 
 PORTNAME=	cpige
 DISTVERSION=	1.5
@@ -12,7 +12,6 @@ MAINTAINER=	itetcu@FreeBSD.org
 COMMENT=	Icecast/Shoutcast stream ripper
 
 USES=		gmake
-NO_STAGE=	yes
 
 MAKE_ARGS=	CC="${CC}"
 
@@ -24,6 +23,6 @@ STRIP=
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
