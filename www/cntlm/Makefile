@@ -1,5 +1,5 @@
 # Created by: Antony Mawer <ports@mawer.org>
-# $FreeBSD: www/cntlm/Makefile 330040 2013-10-11 01:40:34Z nemysis $
+# $FreeBSD: www/cntlm/Makefile 337439 2013-12-25 19:16:49Z pawel $
 
 PORTNAME=	cntlm
 PORTVERSION=	0.92.3
@@ -17,14 +17,29 @@ HAS_CONFIGURE=	yes
 ALL_TARGET=	cntlm
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|DESTDIR=|DESTDIR=${PREFIX}|' \
-		-e 's|CC=|CC?=|' \
-		-e 's|-Wno-unused-but-set-variable -pedantic -O3||' \
-		${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e \
+		's|$$(DESTDIR)/etc|$$(PREFIX)/etc| ; \
+		 s|^CC=|CC?=| ; \
+		 s| -Wno-unused-but-set-variable | | ; \
+		 s| -pedantic | | ; \
+		 s| -O3 | | ; \
+		 s|@$$(CC)|$$(CC)| ; \
+		 s|@if|if| ; \
+		 s|-lpthread|-pthread|' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e \
+		's|^CCS=|#CCS=| ; \
+		 s|mv |: | ; \
+		 s|ln |: |' ${WRKSRC}/configure
+
+post-build:
+	@${LN} -sf cntlm.conf ${WRKSRC}/doc/cntlm.conf.sample
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cntlm ${STAGEDIR}${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/doc/cntlm.conf ${STAGEDIR}${PREFIX}/etc/cntlm.conf.sample
-	${INSTALL_MAN} ${WRKSRC}/doc/cntlm.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} cntlm \
+		${STAGEDIR}${PREFIX}/bin)
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} cntlm.conf.sample \
+		${STAGEDIR}${PREFIX}/etc)
+	(cd ${WRKSRC}/doc && ${INSTALL_MAN} cntlm.1 \
+		${STAGEDIR}${MANPREFIX}/man/man1)
 
 .include <bsd.port.mk>
