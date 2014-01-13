@@ -1,5 +1,5 @@
 # Created by: Lasse L. Johnsen (lasse@freebsdcluster.org)
-# $FreeBSD: news/nnap/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/nnap/Makefile 337675 2013-12-27 09:58:03Z bapt $
 
 PORTNAME=	nnap
 PORTVERSION=	1.1
@@ -14,7 +14,6 @@ COMMENT=	Nnap is a lightweight NNTP authentication proxy
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	sbin/nnap
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKDIR}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKDIR}
@@ -23,6 +22,6 @@ do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -o ${PORTNAME} ${DISTNAME}.c)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin
 
 .include <bsd.port.mk>
