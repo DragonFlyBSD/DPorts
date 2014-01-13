@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-RgoogleMaps/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: www/R-cran-RgoogleMaps/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	RgoogleMaps
 PORTVERSION=	1.2.0.5
@@ -16,7 +16,6 @@ LICENSE_COMB=	dual
 RUN_DEPENDS=	R-cran-png>0:${PORTSDIR}/graphics/R-cran-png \
 		R-cran-RJSONIO>0:${PORTSDIR}/converters/R-cran-RJSONIO
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
