@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <i@levsha.me>
-# $FreeBSD: multimedia/bino/Makefile 330909 2013-10-19 16:43:32Z wg $
+# $FreeBSD: multimedia/bino/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	bino
 PORTVERSION=	1.4.2
@@ -11,7 +11,6 @@ COMMENT=	3D video player with multi-display support
 
 LICENSE=	GPLv3
 
-FETCH_ARGS=	-Fpr
 USES=		gmake pkgconfig
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
