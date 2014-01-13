@@ -1,5 +1,5 @@
 # Created by: Glen Barber <gjb@FreeBSD.org>
-# $FreeBSD: databases/php53-redis/Makefile 332429 2013-11-01 23:49:56Z flo $
+# $FreeBSD: databases/php53-redis/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	redis
 PORTVERSION=	2.2.1
@@ -14,7 +14,6 @@ COMMENT=	PHP5-Extension for Redis
 LICENSE=	PHP301
 
 GITVERSION=	g882c7dc
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/nicolasff-phpredis-250e81b
 
 USE_PHP=	session
