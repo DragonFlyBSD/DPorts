@@ -1,8 +1,8 @@
 # Created by: Tobias Gion
-# $FreeBSD: games/manaplus/Makefile 335123 2013-11-28 21:56:19Z mva $
+# $FreeBSD: games/manaplus/Makefile 338907 2014-01-06 17:12:44Z mva $
 
 PORTNAME=	manaplus
-PORTVERSION=	1.3.11.24
+PORTVERSION=	1.4.1.4
 CATEGORIES=	games
 MASTER_SITES=	http://download.evolonline.org/manaplus/download/${PORTVERSION}/
 
