@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: benchmarks/netpipe/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/netpipe/Makefile 338735 2014-01-05 01:26:41Z bapt $
 
 PORTNAME=	NetPIPE
 PORTVERSION=	3.7.1
@@ -7,32 +7,28 @@ CATEGORIES=	benchmarks net
 MASTER_SITES=	http://www.scl.ameslab.gov/Projects/Netpipe/code/
 
 MAINTAINER=	skreuzer@FreeBSD.org
-COMMENT=	A self-scaling network benchmark
+COMMENT=	Self-scaling network benchmark
 
 # The default port builds and installs only the TCP version of
 # netpipe(1).  The sources support many other variants.
 
-MAN1=		netpipe.1
 PORTDOCS=	README netpipe_paper.ps
-PLIST_FILES=	bin/NPtcp bin/NPtcp6
+PLIST_FILES=	bin/NPtcp bin/NPtcp6 man/man1/netpipe.1.gz
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:tl}
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} \
 		&& ${CC} ${CFLAGS} src/netpipe.c src/tcp.c -DTCP -o NPtcp \
 		&& ${CC} ${CFLAGS} src/netpipe.c src/tcp6.c -DTCP6 -o NPtcp6
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/NPtcp ${PREFIX}/bin/NPtcp
-	${INSTALL_PROGRAM} ${WRKSRC}/NPtcp6 ${PREFIX}/bin/NPtcp6
-	${INSTALL_MAN} ${WRKSRC}/dox/netpipe.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
+	${INSTALL_PROGRAM} ${WRKSRC}/NPtcp ${STAGEDIR}${PREFIX}/bin/NPtcp
+	${INSTALL_PROGRAM} ${WRKSRC}/NPtcp6 ${STAGEDIR}${PREFIX}/bin/NPtcp6
+	${INSTALL_MAN} ${WRKSRC}/dox/netpipe.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 .for doc in ${PORTDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/dox/${doc} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/dox/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
