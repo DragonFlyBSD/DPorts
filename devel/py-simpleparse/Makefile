@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-simpleparse/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-simpleparse/Makefile 337716 2013-12-27 11:51:46Z wg $
 
 PORTNAME=	simpleparse
 PORTVERSION=	2.1.1
@@ -13,9 +13,8 @@ COMMENT=	Python EBNF parser generator for use with mx.TextTools
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mx-base>0:${PORTSDIR}/lang/py-mx-base
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	SimpleParse
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
