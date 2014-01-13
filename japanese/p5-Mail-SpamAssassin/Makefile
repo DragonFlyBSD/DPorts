@@ -1,5 +1,5 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: japanese/p5-Mail-SpamAssassin/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-Mail-SpamAssassin/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTREVISION=	4
 CATEGORIES=	japanese mail perl5
@@ -8,7 +8,7 @@ PKGNAMEPREFIX=	ja-p5-
 MAINTAINER=	masaki@club.kyutech.ac.jp
 COMMENT=	SpamAssassin with patches to handle multibyte character
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 MASTERDIR=	${.CURDIR}/../../mail/p5-Mail-SpamAssassin
 
