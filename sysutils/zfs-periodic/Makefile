@@ -1,5 +1,5 @@
 # Created by: Peter Ankerstal <peter@pean.org>
-# $FreeBSD: sysutils/zfs-periodic/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/zfs-periodic/Makefile 337778 2013-12-27 18:36:49Z bapt $
 
 PORTNAME=	zfs-periodic
 PORTVERSION=	1.0.20130213
@@ -27,7 +27,6 @@ PERIODIC_FILES=	etc/periodic/hourly/000.zfs-snapshot \
 PLIST_FILES=	${PERIODIC_FILES} bin/zfs-snapshot
 PLIST_DIRSTRY=	${PERIODIC_DIRS}
 
-NO_STAGE=	yes
 post-patch:
 .for _file in ${PERIODIC_FILES}
 	@${REINPLACE_CMD} -e "s|/etc/periodic/zfs-snapshot|${PREFIX}/bin/zfs-snapshot|" \
@@ -35,17 +34,13 @@ post-patch:
 .endfor
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/etc/periodic/zfs-snapshot ${PREFIX}/bin
-
+	${INSTALL_SCRIPT} ${WRKSRC}/etc/periodic/zfs-snapshot ${STAGEDIR}${PREFIX}/bin
 .for _dir in ${PERIODIC_DIRS}
-	@${MKDIR} ${PREFIX}/${_dir}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${_dir}
 .endfor
 
 .for _file in ${PERIODIC_FILES}
-	@${INSTALL_SCRIPT} ${WRKSRC}/${_file} ${PREFIX}/${_file}
+	${INSTALL_SCRIPT} ${WRKSRC}/${_file} ${STAGEDIR}${PREFIX}/${_file}
 .endfor
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
