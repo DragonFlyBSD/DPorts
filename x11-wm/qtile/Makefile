@@ -1,8 +1,9 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: x11-wm/qtile/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/qtile/Makefile 337537 2013-12-26 15:18:49Z wg $
 
 PORTNAME=	qtile
 PORTVERSION=	0.6
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 
 MAINTAINER=	wg@FreeBSD.org
@@ -21,19 +22,17 @@ GH_TAGNAME=	v0.6
 USE_GNOME=	pygobject pygtk2
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-PORTDOCS=	CHANGELOG INSTALL.rst LICENSE README.rst
+PORTDOCS=	CHANGELOG INSTALL.rst README.rst
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-. for f in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-. endfor
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
