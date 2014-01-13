@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/naev/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/naev/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	naev
 PORTVERSION=	0.5.3
@@ -41,7 +41,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
-USE_OPENAL=		yes
+USES+=			openal
 CONFIGURE_ARGS+=	--with-openal=yes
 .else
 CONFIGURE_ARGS+=	--with-openal=no
