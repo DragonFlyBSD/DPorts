@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: java/netty/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/netty/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	netty
 PORTVERSION=	3.5.5
@@ -10,9 +10,7 @@ MASTER_SITES=	https://github.com/downloads/netty/netty/
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Java NIO client server framework
 
-LICENSE=	AL2
-
-FETCH_ARGS=	-Fpr
+LICENSE=	APACHE20
 
 USE_JAVA=	yes
 USE_BZIP2=	yes
