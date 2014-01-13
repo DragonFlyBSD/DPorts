@@ -1,5 +1,5 @@
 # Created by: Manuel Rábade <mig@mig-29.net>
-# $FreeBSD: www/p5-HTML-Template-Associate/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Template-Associate/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	HTML-Template-Associate
 PORTVERSION=	2.01
@@ -18,9 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Template::Associate.3 \
-		HTML::Template::Associate::DBI.3 \
-		HTML::Template::Associate::FormValidator.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
