@@ -1,5 +1,4 @@
-# Created by: crees
-# $FreeBSD: databases/vfront/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/vfront/Makefile 337999 2013-12-29 14:50:31Z crees $
 
 PORTNAME=	vfront
 DISTVERSION=	0.96c
@@ -20,7 +19,6 @@ OPTIONS_MULTI=	database
 OPTIONS_MULTI_database=	MYSQL PGSQL
 OPTIONS_DEFAULT=	MYSQL PGSQL
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
@@ -45,10 +43,10 @@ pre-install:
 	    ${FIND} * -type d | ${SORT} -r | \
 			${SED} 's,^,@dirrmtry %%WWWDIR%%/,' >> ${PLIST})
 	@${ECHO_CMD} '@dirrmtry %%WWWDIR%%' >> ${PLIST}
+	@${ECHO_CMD} '@exec ${CHOWN} -R ${WWWOWN} %D/%%WWWDIR%%' >> ${PLIST}
+	@${ECHO_CMD} '@exec ${CHMOD} 700 %D/%%WWWDIR%%/conf' >> ${PLIST}
 
 do-install:
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${WWWDIR})
-	${CHOWN} -R ${WWWOWN} ${WWWDIR}
-	${CHMOD} 700 ${WWWDIR}/conf
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${WWWDIR})
 
 .include <bsd.port.mk>
