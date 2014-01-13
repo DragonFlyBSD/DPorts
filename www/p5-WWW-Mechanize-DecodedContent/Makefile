@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WWW-Mechanize-DecodedContent/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Mechanize-DecodedContent/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	WWW-Mechanize-DecodedContent
 PORTVERSION=	0.02
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Mechanize::DecodedContent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
