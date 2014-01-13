@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: benchmarks/tsung/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/tsung/Makefile 338726 2014-01-05 01:01:33Z bapt $
 
 PORTNAME=	tsung
 PORTVERSION=	1.5.0
@@ -18,13 +18,11 @@ USE_PERL5=	run
 USE_PYTHON_RUN=	yes
 
 GNU_CONFIGURE=	yes
-USES=		gmake perl5
+USES=		gmake perl5 shebangfix
+SHEBANG_FILES=	src/*.pl.in src/tsung-plotter/tsung/tsung.py
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
-MAN1=	tsplot.1 tsung-recorder.1 tsung.1
-
-NO_STAGE=	yes
 post-patch-script:
 	@${REINPLACE_CMD} -e 's|MAN_DIR   = $$(datadir)/man/man1/|MAN_DIR   = $$(prefix)/man/man1/|' \
 		${WRKSRC}/Makefile.in
