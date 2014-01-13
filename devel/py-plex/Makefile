@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-plex/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-plex/Makefile 337705 2013-12-27 10:51:57Z wg $
 
 PORTNAME=	plex
 PORTVERSION=	1.1.5
@@ -13,22 +13,23 @@ COMMENT=	Lexical Analysis Module for Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 NO_WRKSUBDIR=	yes
-DOCSDIR=	share/doc/${PKGNAMEPREFIX}${PORTNAME}
-EXAMPLESDIR=	share/examples/${PKGNAMEPREFIX}${PORTNAME}
+DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
+EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 
-NO_STAGE=	yes
+PORTDOCS=	*
+PORTEXAMPLES=	*
+
 post-extract:
 	${SED} -e 's|%%PORTVERSION%%|${PORTVERSION}|g' ${FILESDIR}/setup.py \
 		> ${WRKSRC}/setup.py
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/${DOCSDIR}
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} ./* ${PREFIX}/${DOCSDIR}
-	${MKDIR} ${PREFIX}/${EXAMPLESDIR}
-	cd ${WRKSRC}/examples && ${INSTALL_DATA} ./* ${PREFIX}/${EXAMPLESDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} ./* ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${INSTALL_DATA} ./* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
