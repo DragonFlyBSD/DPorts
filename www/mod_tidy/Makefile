@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: www/mod_tidy/Makefile 336555 2013-12-15 16:45:38Z ohauer $
+# $FreeBSD: www/mod_tidy/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_tidy
 PORTVERSION=	0.5.5
@@ -11,7 +11,7 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Validates the HTML output of your apache2 webserver
 
-LICENSE=	AL2 MIT
+LICENSE=	APACHE20 MIT
 LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libtidy.so:${PORTSDIR}/www/tidy-lib
