@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/mod_memcache_block/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD: www/mod_memcache_block/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	mod_memcache_block
 PORTVERSION=	20120821
@@ -13,7 +13,6 @@ COMMENT=	Apache 2.2 module to block IPs from lists stored in memcache
 
 LIB_DEPENDS+=	libmemcached.so:${PORTSDIR}/databases/libmemcached
 
-FETCH_ARGS=	-Fpr
 GITVERSION=	7b1fcec
 WRKSRC=		${WRKDIR}/netik-${DISTNAME}
 LATEST_LINK=	mod_memcache_block
