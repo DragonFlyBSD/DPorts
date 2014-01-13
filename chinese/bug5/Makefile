@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/bug5/Makefile 327832 2013-09-21 15:42:12Z sunpoet $
+# $FreeBSD: chinese/bug5/Makefile 339155 2014-01-08 16:15:16Z vanilla $
 
 PORTNAME=	bug5
 PORTVERSION=	1.17
@@ -18,7 +18,6 @@ GH_ACCOUNT=	buganini
 GH_COMMIT=	992e2d3
 
 MAKE_ARGS=	PREFIX=${PREFIX}
-NO_STAGE=	yes
 
 PLIST_FILES=	bin/bug5
 
