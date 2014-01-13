@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/apricots/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD: games/apricots/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	apricots
 PORTVERSION=	0.2.6
@@ -33,7 +33,7 @@ OPTIONS_DEFAULT=OPENAL
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
-USE_OPENAL=	al alut
+USES+=		openal:al,alut
 CPPFLAGS+=	-DAP_AUDIO_OPENAL
 LDFLAGS+=	-L${LOCALBASE}/lib -lopenal -lalut
 .endif
