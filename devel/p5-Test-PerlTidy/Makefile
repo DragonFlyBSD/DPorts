@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-PerlTidy/Makefile 333896 2013-11-15 17:40:36Z mat $
+# $FreeBSD: devel/p5-Test-PerlTidy/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	Test-PerlTidy
 PORTVERSION=	20130104
@@ -19,7 +19,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::PerlTidy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
