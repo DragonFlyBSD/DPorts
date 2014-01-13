@@ -1,4 +1,4 @@
-# $FreeBSD: www/mod_reproxy/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD: www/mod_reproxy/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_reproxy
 PORTVERSION=	0.02.20110826
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	kuriyama
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Apache module to support x-reproxy-url header
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 WRKSRC=		${WRKDIR}/lestrrat-mod_reproxy-0f945ff
 
