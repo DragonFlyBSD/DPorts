@@ -1,8 +1,9 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/mate-document-viewer/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD: graphics/mate-document-viewer/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	mate-document-viewer
 PORTVERSION=	1.6.1
+PORTREVISION=	1
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
