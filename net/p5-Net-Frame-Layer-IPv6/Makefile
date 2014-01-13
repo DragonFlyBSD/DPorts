@@ -1,5 +1,5 @@
 # Created by: Mars G Miro <spry@anarchy.in.the.ph>
-# $FreeBSD: net/p5-Net-Frame-Layer-IPv6/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Frame-Layer-IPv6/Makefile 338810 2014-01-05 17:53:15Z az $
 
 PORTNAME=	Net-Frame-Layer-IPv6
 PORTVERSION=	1.05
@@ -19,12 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Frame::Layer::IPv6.3 \
-		Net::Frame::Layer::IPv6::Fragment.3 \
-		Net::Frame::Layer::IPv6::Routing.3 \
-		Net::Frame::Layer::IPv6::HopByHop.3 \
-		Net::Frame::Layer::IPv6::Option.3 \
-		Net::Frame::Layer::IPv6::Destination.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
