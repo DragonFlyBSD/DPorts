@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 335032 2013-11-27 16:39:43Z sunpoet $
+# $FreeBSD: security/p5-Net-SAML/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.18
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for using SAML SSO
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libzxid.so:${PORTSDIR}/security/zxid
