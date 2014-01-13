@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: security/skipfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/skipfish/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	skipfish
 PORTVERSION=	2.10b
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	A fully automated, active web application security reconnaissance tool
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	idn:${PORTSDIR}/dns/libidn \
