@@ -1,5 +1,5 @@
 # Created by: Mykola Marzhan <delgod@portaone.com>
-# $FreeBSD: www/p5-HTTP-Daemon-SSL/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Daemon-SSL/Makefile 338767 2014-01-05 13:23:32Z az $
 
 PORTNAME=	HTTP-Daemon-SSL
 PORTVERSION=	1.04
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	delgod@portaone.com
-COMMENT=	A simple http server class with SSL support
+COMMENT=	Simple http server class with SSL support
 
 RUN_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTTP::Daemon::SSL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
