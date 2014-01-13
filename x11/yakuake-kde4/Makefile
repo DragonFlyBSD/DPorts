@@ -1,5 +1,5 @@
 # Created by: Shane Bell <decept0@gmail.com>
-# $FreeBSD: x11/yakuake-kde4/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/yakuake-kde4/Makefile 337983 2013-12-29 13:51:46Z antoine $
 
 PORTNAME=	yakuake
 PORTVERSION=	2.9.9
@@ -21,5 +21,4 @@ INSTALLS_ICONS=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
