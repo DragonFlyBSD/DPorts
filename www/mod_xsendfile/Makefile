@@ -1,5 +1,5 @@
 # Created by: Andrew T. Bennett <potatosaladx@gmail.com>
-# $FreeBSD: www/mod_xsendfile/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD: www/mod_xsendfile/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_xsendfile
 PORTVERSION=	0.12
@@ -11,7 +11,7 @@ MASTER_SITES=	https://tn123.org/mod_xsendfile/ \
 MAINTAINER=	potatosaladx@gmail.com
 COMMENT=	Apache2 module that processes X-SENDFILE headers
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_APACHE=	22+
 AP_FAST_BUILD=	yes
