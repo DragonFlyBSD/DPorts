@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: textproc/docbook-241/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook-241/Makefile 338802 2014-01-05 17:21:23Z jgh $
 
 PORTNAME=	docbook
 PORTVERSION=	2.4.1
@@ -34,7 +34,7 @@ SGMLCAT_ADD=	${XMLCATMGR} -sc ${SGMLCAT} add CATALOG \
 SGMLCAT_RM=	${XMLCATMGR} -sc ${SGMLCAT} remove \
 		    ${PREFIX}/${DTDDIR}/catalog
 
-LATEST_LINK=	docbook-241
+PKGNAMESUFFIX=	${PKGORIGIN:T:S/docbook-//}
 
 NO_STAGE=	yes
 do-install:
