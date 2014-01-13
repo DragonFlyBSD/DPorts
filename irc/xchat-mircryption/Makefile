@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: irc/xchat-mircryption/Makefile 335216 2013-11-29 19:55:29Z dinoex $
+# $FreeBSD: irc/xchat-mircryption/Makefile 338975 2014-01-07 06:57:40Z dinoex $
 #    $MCom: ports/irc/xchat-mircryption/Makefile,v 1.2 2006/10/10 20:22:11 mezz Exp $
 
 PORTNAME=	mircryption
@@ -17,7 +17,7 @@ COMMENT=	A free encryption add-on for the popular XChat irc client
 RUN_DEPENDS=	xchat:${PORTSDIR}/irc/xchat
 
 USE_ZIP=	yes
-USE_DOS2UNIX=	yes
+USES=		dos2unix
 ALL_TARGET=	freebsd
 CFLAGS+=	-fPIC
 USE_LDCONFIG=	yes
