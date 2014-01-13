@@ -1,5 +1,5 @@
 # Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-# $FreeBSD: www/p5-WWW-Plurk/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Plurk/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	WWW-Plurk
 PORTVERSION=	0.02
@@ -22,9 +22,6 @@ BUILD_DEPENDS+=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Plurk.3 WWW::Plurk::Friend.3 WWW::Plurk::Message.3
-
-NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -delete
 
