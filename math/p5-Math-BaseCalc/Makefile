@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: math/p5-Math-BaseCalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-BaseCalc/Makefile 337727 2013-12-27 13:08:28Z jadawin $
 
 PORTNAME=	Math-BaseCalc
 PORTVERSION=	1.017
@@ -13,7 +13,4 @@ COMMENT=	Convert numbers between various bases
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::BaseCalc.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
