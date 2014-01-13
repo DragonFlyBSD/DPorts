@@ -1,22 +1,21 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: benchmarks/scimark2c/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/scimark2c/Makefile 338722 2014-01-05 00:48:45Z bapt $
 
 PORTNAME=	scimark2c
 DISTVERSION=	2_1
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://math.nist.gov/scimark2/
 DISTNAME=	${PORTNAME:S/2/${DISTVERSION}/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	thierry@pompo.net
-COMMENT=	An ANSI C version of the SciMark2 benchmark
+COMMENT=	ANSI C version of the SciMark2 benchmark
 
 PLIST_FILES=	bin/scimark2
 WRKSRC=		${WRKDIR}
-USE_ZIP=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/scimark2 ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/scimark2 ${STAGEDIR}${PREFIX}/bin
 
 post-install:
 	@${ECHO} "*****************************************************************************"
