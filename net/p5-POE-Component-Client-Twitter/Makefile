@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: net/p5-POE-Component-Client-Twitter/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POE-Component-Client-Twitter/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	POE-Component-Client-Twitter
 PORTVERSION=	0.01
@@ -24,7 +24,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Client::Twitter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
