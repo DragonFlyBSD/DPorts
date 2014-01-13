@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/fdmf/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/fdmf/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	fdmf
 DISTVERSION=	0.0.9s
@@ -27,13 +27,15 @@ BINS=		sonic_reducer vector_pairs
 SCRS=		${PORTNAME} ${PORTNAME}_bench cleanup_dups optparam
 PLIST_FILES=	${BINS:S,^,bin/,} ${SCRS:S,^,bin/,}
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -Ee '/^(CFLAGS|CC) =/s|.*||' -e 's|common/||g' ${WRKSRC}/Makefile
 
 do-install:
 	@${INSTALL_PROGRAM} ${BINS:S,^,${WRKSRC}/,} ${PREFIX}/bin/
 	@${INSTALL_SCRIPT} ${SCRS:S,^,${WRKSRC}/,} ${PREFIX}/bin/
-.ifndef NOPORTDOCS
+.if ${PORT_OPTIONS:MDOCS}
 	@${INSTALL} -d ${DOCSDIR}/
 	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
 .endif
