@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-watchdog/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-watchdog/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	watchdog
 PORTVERSION=	0.6.0
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python API library to monitor file system events
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PKGNAMEPREFIX}argh>=0.15.1:${PORTSDIR}/devel/py-argh \
 		${PKGNAMEPREFIX}yaml>=3.10:${PORTSDIR}/devel/py-yaml \
