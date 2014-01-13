@@ -1,9 +1,9 @@
 # Created by: Matthieu Guegan <matt.guegan@free.fr>
-# $FreeBSD: x11-wm/hs-xmonad-contrib/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: x11-wm/hs-xmonad-contrib/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	xmonad-contrib
 PORTVERSION=	0.11.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-wm haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -21,7 +21,6 @@ OPTIONS_DEFAULT=	XFT
 
 XFT_DESC=		Use Xft to render text
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MXFT}
