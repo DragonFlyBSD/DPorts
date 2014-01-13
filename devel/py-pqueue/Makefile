@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: devel/py-pqueue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pqueue/Makefile 337711 2013-12-27 11:41:17Z wg $
 
 PORTNAME=	pqueue
 PORTVERSION=	0.2
@@ -11,15 +11,13 @@ DISTNAME=	PQueue-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fibonacci-Heap based Priority-Queue Extension for Python
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pqueue.so
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGVERSION=	0.0.0
+PYDISTUTILS_AUTOPLIST=	yes
 
 WRKSRC=		${WRKDIR}/PQueue
 
-NO_STAGE=	yes
 post-patch:
 	${CP} ${FILESDIR}/setup.py ${WRKSRC}
 
