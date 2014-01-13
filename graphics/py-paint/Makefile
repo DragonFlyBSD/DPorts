@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: graphics/py-paint/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-paint/Makefile 337766 2013-12-27 17:41:28Z wg $
 
 PORTNAME=	paint
 PORTVERSION=	0.3
@@ -12,11 +12,12 @@ DISTNAME=	pypaint-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple and flexible painting adaptor to libart for Python
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
-		ttf:${PORTSDIR}/print/freetype
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
+		libttf.so:${PORTSDIR}/print/freetype
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_GNOME=	libartlgpl2
 NO_WRKSUBDIR=	yes
 CFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libart-2.0 \
@@ -24,16 +25,13 @@ CFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libart-2.0 \
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
+PORTEXAMPLES=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 post-patch:
 	@${REINPLACE_CMD} -e "s,art_lgpl,art_lgpl_2," ${WRKSRC}/setup.py
 
-.if ${PORT_OPTIONS:MEXAMPLES}
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	${CP} ${WRKSRC}/test* ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${CP} ${WRKSRC}/test* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
