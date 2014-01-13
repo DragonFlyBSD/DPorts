@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: www/mod_auth_external2/Makefile 336524 2013-12-15 12:58:07Z ohauer $
+# $FreeBSD: www/mod_auth_external2/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_auth_external
 PORTVERSION=	2.2.11
@@ -12,7 +12,7 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows users authentication based on external mechanisms
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_APACHE=	22
 AP_FAST_BUILD=	yes
