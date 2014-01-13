@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 332526 2013-11-02 18:01:26Z ume $
+# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 338126 2013-12-30 15:55:08Z ume $
 
 PORTNAME=	ldapdb
 PORTVERSION=	2.1.26
@@ -11,7 +11,7 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTVERSION}
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	SASL LDAPDB auxprop plugin
 
-LICENSE=	BSD
+LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
