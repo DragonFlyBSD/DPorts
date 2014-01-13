@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11/aterm/Makefile 329631 2013-10-06 21:51:02Z marino $
+# $FreeBSD: x11/aterm/Makefile 338842 2014-01-06 08:35:37Z bapt $
 
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
@@ -33,57 +33,29 @@ KANJI_DESC=	Kanji (EUC-JP or SJIS) support
 BIG5S_DESC=	Chinese character (BIG5) support
 GREEK_DESC=	Greek keyboard support
 
-MAN1=		aterm.1
+PLIST_FILES=	bin/aterm \
+		man/man1/aterm.1.gz
 
-PLIST_FILES=       bin/aterm
+TRANS_CONFIGURE_ENABLE=	transparency
+BSDEL_CONFIGURE_OFF=	--disable-backspace-key --disable-delete-key
+BSDEL_CONFIGURE_ON=	--enable-backspace-key --enable-delete-key
+MOUSE_CONFIGURE_ENABLE=	mousewheel
+BGIMG_LIB_DEPENDS=	libAfterImage.so:${PORTSDIR}/graphics/libafterimage \
+			libpng15.so:${PORTSDIR}/graphics/png \
+			libjpeg.so:${PORTSDIR}/graphics/jpeg
+BGIMG_CONFIGURE_ON=	--with-afterimage-config --with-png --with-jpeg
+BGIMG_CONFIGURE_OFF=	--without-afterimage-config --with-png=no --with-jpeg=no
+KANJI_CONFIGURE_ENABLE=	kanji
+BIG5S_CONFIGURE_ENABLE=	big5
+GREEK_CONFIGURE_ENABLE=	greek
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+
+.include <bsd.port.options.mk>
+
 .if ${OSVERSION} > 900007
 CONFIGURE_ARGS+=	--disable-utmp
 .else
 CONFIGURE_ARGS+=	--enable-utmp
 .endif
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MTRANS}
-CONFIGURE_ARGS+=	--enable-transparency
-.else
-CONFIGURE_ARGS+=	--disable-transparency
-.endif
-
-.if ${PORT_OPTIONS:MBSDEL}
-CONFIGURE_ARGS+=	--disable-backspace-key --disable-delete-key
-.else
-CONFIGURE_ARGS+=	--enable-backspace-key --enable-delete-key
-.endif
-
-.if ${PORT_OPTIONS:MMOUSE}
-CONFIGURE_ARGS+=	--enable-mousewheel
-.else
-CONFIGURE_ARGS+=	--disable-mousewheel
-.endif
-
-.if ${PORT_OPTIONS:MBGIMG}
-LIB_DEPENDS+=	AfterImage:${PORTSDIR}/graphics/libafterimage \
-		png15:${PORTSDIR}/graphics/png \
-		jpeg:${PORTSDIR}/graphics/jpeg
-CONFIGURE_ARGS+=	--with-afterimage-config --with-png --with-jpeg
-.else
-CONFIGURE_ARGS+=	--without-afterimage-config --with-png=no --with-jpeg=no
-.endif
-
-.if ${PORT_OPTIONS:MKANJI}
-CONFIGURE_ARGS+=	--enable-kanji
-.endif
-
-.if ${PORT_OPTIONS:MBIG5S}
-CONFIGURE_ARGS+=	--enable-big5
-.endif
-
-.if ${PORT_OPTIONS:MGREEK}
-CONFIGURE_ARGS+=	--enable-greek
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
