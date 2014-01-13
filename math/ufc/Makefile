@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/ufc/Makefile 336260 2013-12-12 13:01:40Z bapt $
+# $FreeBSD: math/ufc/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	ufc
 PORTVERSION=	${MMVERSION}.0
@@ -19,8 +19,6 @@ USE_PYTHON=	-2.7
 PYDISTUTILS_PKGNAME=	ufc
 
 CMAKE_ARGS+=	-DUFC_PKGCONFIG_DIR=${PREFIX}/libdata/pkgconfig
-
-FETCH_ARGS=	-F
 
 MMVERSION=	2.2
 
