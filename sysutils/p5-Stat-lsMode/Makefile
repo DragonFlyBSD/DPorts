@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: sysutils/p5-Stat-lsMode/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Stat-lsMode/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	Stat-lsMode
 PORTVERSION=	0.50
@@ -13,7 +13,4 @@ COMMENT=	Stat::lsMode - format file modes like the ls -l command does
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Stat::lsMode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
