@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-Glite/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/p5-Bio-Glite/Makefile 338751 2014-01-05 12:07:20Z az $
 
 PORTNAME=	Bio-Glite
 PORTVERSION=	0.10
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Bio::Glite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
