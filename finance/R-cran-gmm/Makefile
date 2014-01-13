@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-gmm/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: finance/R-cran-gmm/Makefile 338352 2014-01-01 03:43:00Z tota $
 
 PORTNAME=	gmm
-DISTVERSION=	1.4-5
-PORTREVISION=	4
+DISTVERSION=	1.5-0
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -15,7 +14,6 @@ LICENSE_COMB=	dual
 
 RUN_DEPENDS=	R-cran-sandwich>0:${PORTSDIR}/math/R-cran-sandwich
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
