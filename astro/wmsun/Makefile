@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: astro/wmsun/Makefile 331558 2013-10-25 06:28:14Z vanilla $
+# $FreeBSD: astro/wmsun/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	wmsun
 PORTVERSION=	1.03
@@ -10,8 +10,6 @@ DISTNAME=	wmSun-1.03
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockapp that displays the rise and set times of the Sun
-
-FETCH_ARGS=	-Fpr
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmSun
 
