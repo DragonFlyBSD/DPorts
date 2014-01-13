@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: finance/vanitygen/Makefile 332414 2013-11-01 21:52:46Z zi $
+# $FreeBSD: finance/vanitygen/Makefile 339025 2014-01-07 19:54:20Z antoine $
 
 PORTNAME=	vanitygen
 PORTVERSION=	0.21
@@ -19,8 +19,6 @@ GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	20130402
 PLIST_FILES=	bin/keyconv bin/vanitygen
 
-NO_STAGE=	yes
-
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 post-patch:
@@ -30,7 +28,7 @@ post-patch:
 	    	${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/keyconv ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/vanitygen ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/keyconv ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/vanitygen ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
