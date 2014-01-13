@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: databases/mysqltuner/Makefile 329005 2013-10-01 22:21:55Z ak $
+# $FreeBSD: databases/mysqltuner/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	mysqltuner
 PORTVERSION=	1.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	fbsd-ports@opsec.eu
 COMMENT=	Assist you with MySQL Configuration
 
 LICENSE=	GPLv3
-
-FETCH_ARGS=	-pRr
 
 USES=		perl5
 NO_BUILD=	yes
