@@ -1,5 +1,5 @@
 # Created by: Vladimir Kotal <vlada@devnull.cz>
-# $FreeBSD: net-mgmt/ipv6gen/Makefile 333985 2013-11-16 11:29:06Z antoine $
+# $FreeBSD: net-mgmt/ipv6gen/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	ipv6gen
 PORTVERSION=	1.0
@@ -11,7 +11,6 @@ COMMENT=	IPv6 prefix generator
 
 LICENSE=	GPLv2
 
-FETCH_ARGS=	-Fpr
 NO_BUILD=
 USES=		perl5 shebangfix
 USE_PERL5=	run
