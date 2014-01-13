@@ -1,5 +1,5 @@
 # Created by: David Xu
-# $FreeBSD: devel/byaccj/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/byaccj/Makefile 339249 2014-01-09 15:02:45Z bapt $
 
 PORTNAME=	byaccj
 PORTVERSION=	1.15
@@ -13,11 +13,10 @@ COMMENT=	Java extension of BSD YACC-compatible parser generator
 PLIST_FILES=	bin/byaccj
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION}/src
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#<malloc.h>#<stdlib.h>#' ${WRKSRC}/defs.h ${WRKSRC}/*c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/yacc ${PREFIX}/bin/byaccj
+	${INSTALL_PROGRAM} ${WRKSRC}/yacc ${STAGEDIR}${PREFIX}/bin/byaccj
 
 .include <bsd.port.mk>
