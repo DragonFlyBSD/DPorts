@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/ioquake3/Makefile 330312 2013-10-14 12:13:00Z wg $
+# $FreeBSD: games/ioquake3/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME?=	ioquake3
 DISTVERSION?=	1.36
@@ -138,7 +138,7 @@ MAKE_ARGS+=	USE_CURL=0
 .endif
 
 .if ${PORT_OPTIONS:MOPENAL}
-USE_OPENAL=	al
+USES+=		openal:al
 MAKE_ARGS+=	USE_OPENAL=1 USE_OPENAL_DLOPEN=0
 .else
 MAKE_ARGS+=	USE_OPENAL=0
