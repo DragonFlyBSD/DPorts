@@ -1,4 +1,4 @@
-# $FreeBSD: audio/acoustid-fingerprinter/Makefile 331147 2013-10-21 14:54:12Z wg $
+# $FreeBSD: audio/acoustid-fingerprinter/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	acoustid-fingerprinter
 PORTVERSION=	0.6
@@ -20,8 +20,6 @@ USES=		cmake
 USE_QT4=	gui network \
 		qmake_build moc_build rcc_build uic_build
 INSTALLS_ICONS=	yes
-
-FETCH_ARGS=	-Fpr
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
