@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/mirmon/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/mirmon/Makefile 337738 2013-12-27 15:13:08Z jadawin $
 
 PORTNAME=	mirmon
 PORTVERSION=	2.9
@@ -19,7 +19,6 @@ SUB_LIST=	PREFIX=${PREFIX}
 PLIST_FILES=	bin/mirmon bin/probe
 MAN1=		mirmon.1
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MDOCS}
@@ -33,18 +32,17 @@ post-patch:
 		-e "s,/usr/bin/rsync,${LOCALBASE}/bin/rsync," ${WRKSRC}/probe
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mirmon ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/probe ${PREFIX}/bin
-	@${MKDIR} ${DATADIR}
-	${CP} -R ${WRKSRC}/countries.list ${WRKSRC}/icons ${DATADIR}
-	@${FIND} ${DATADIR} ! -type d | \
-		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${FIND} ${DATADIR} -type d | ${SORT} -r | \
-		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-	${INSTALL_MAN} ${WRKSRC}/mirmon.1 ${MANPREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/mirmon ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/probe ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${CP} -R ${WRKSRC}/countries.list ${WRKSRC}/icons ${STAGEDIR}${DATADIR}
+	@${FIND} ${STAGEDIR}${DATADIR} ! -type d | \
+		${SED} 's,^${STAGEDIR}${PREFIX}/,,' >> ${TMPPLIST}
+	@${FIND} ${STAGEDIR}${DATADIR} -type d | ${SORT} -r | \
+		${SED} 's,^${STAGEDIR}${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
 .if ! ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${CP} ${WRKSRC}/mirmon.html ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${CP} ${WRKSRC}/mirmon.html ${STAGEDIR}${DOCSDIR}
 .endif
 
 post-install:
