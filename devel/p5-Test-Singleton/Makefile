@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Test-Singleton/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Singleton/Makefile 338884 2014-01-06 14:40:31Z az $
 
 PORTNAME=	Test-Singleton
 PORTVERSION=	1.03
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Singleton.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
