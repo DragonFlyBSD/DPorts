@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
-# $FreeBSD: comms/gammu-devel/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/gammu-devel/Makefile 338555 2014-01-03 16:06:00Z adamw $
 
 PORTNAME=	gammu
 PORTVERSION=	1.31.90
@@ -27,7 +27,9 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	*
 
-.if defined(NOPORTDOCS)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 CMAKE_ARGS+=	-DINSTALL_DOC=OFF -DINSTALL_PHP_EXAMPLES=OFF -DINSTALL_MEDIA=OFF
 .else
 MAN1=		gammu.1 gammu-config.1 jadmaker.1 gammu-smsd.1 gammu-smsd-inject.1 \
