@@ -1,5 +1,5 @@
 # Created by: Nikola Kolev <koue@chaosophia.net>
-# $FreeBSD: sysutils/graffer/Makefile 329536 2013-10-06 06:45:45Z lippe $
+# $FreeBSD: sysutils/graffer/Makefile 337466 2013-12-25 23:50:00Z bapt $
 
 PORTNAME=	graffer
 PORTVERSION=	1.0
@@ -10,18 +10,16 @@ MASTER_SITES=	http://chaosophia.net/downloads/graffer/ \
 MAINTAINER=	koue@chaosophia.net
 COMMENT=	Utility to render graphical statistics
 
-LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	libgd.so:${PORTSDIR}/graphics/gd
 
+USES=		iconv
 MAKE_ARGS=	"LD_GD=gd"
 MAKE_END+=	__MAKE_CONF=/dev/null
-USE_ICONV=	yes
 
 PLIST_FILES=	bin/graffer \
 		etc/graffer/graffer.conf.example \
 		man/man8/graffer.8.gz
 PLIST_DIRS=	etc/graffer
-
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lgd|-l$${LD_GD}|; s| -lttf||' \
@@ -37,4 +35,4 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/graffer
 	${INSTALL_DATA} ${WRKSRC}/graffer.conf.example ${STAGEDIR}${PREFIX}/etc/graffer
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
