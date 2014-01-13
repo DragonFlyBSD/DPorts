@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: net/p5-Net-SFTP-Foreign/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SFTP-Foreign/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	Net-SFTP-Foreign
 PORTVERSION=	1.73
@@ -18,13 +18,4 @@ TEST_DEPENDS=	p5-File-Which>=0:${PORTSDIR}/sysutils/p5-File-Which
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::SFTP::Foreign.3 \
-		Net::SFTP::Foreign::Attributes.3 \
-		Net::SFTP::Foreign::Attributes::Compat.3 \
-		Net::SFTP::Foreign::Buffer.3 \
-		Net::SFTP::Foreign::Compat.3 \
-		Net::SFTP::Foreign::Constants.3 \
-		Net::SFTP::Foreign::Local.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
