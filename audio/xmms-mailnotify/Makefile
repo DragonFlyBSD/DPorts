@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/xmms-mailnotify/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-mailnotify/Makefile 338134 2013-12-30 16:33:20Z arved $
 
 PORTNAME=	xmms-mailnotify
 PORTVERSION=	0.2.0
@@ -18,7 +18,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
 USES=		gmake
-NO_STAGE=	yes
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
 
@@ -27,5 +26,10 @@ PLIST_FILES=	lib/xmms/General/libmailnotify.so \
 
 post-patch:
 	${REINPLACE_CMD} -e "s,/usr/lib,${LOCALBASE}/lib," ${WRKSRC}/mailnotify.c
+
+do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/xmms/General/
+	@${INSTALL_DATA} ${WRKSRC}/libmailnotify.so ${STAGEDIR}${PREFIX}/lib/xmms/General/
+	@${INSTALL_DATA} ${WRKSRC}/alert.wav ${STAGEDIR}${PREFIX}/lib/xmms/General/
 
 .include <bsd.port.mk>
