@@ -1,5 +1,5 @@
 # Created by: Eric W. Bates
-# $FreeBSD: mail/pop-before-smtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pop-before-smtp/Makefile 337703 2013-12-27 10:45:40Z jadawin $
 
 PORTNAME=	pop-before-smtp
 PORTVERSION=	1.42
@@ -8,6 +8,9 @@ MASTER_SITES=	SF/popbsmtp/Source%20tar/${PORTVERSION}
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	A log parser to identify valid POP/IMAP logins for later smtp
+
+DEPRECATED=	No more active project
+EXPIRATION_DATE=	2014-01-27
 
 RUN_DEPENDS=	p5-Net-Netmask>=0:${PORTSDIR}/net-mgmt/p5-Net-Netmask \
 		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
