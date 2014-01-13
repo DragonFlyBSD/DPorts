@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: sysutils/p5-ZConf-Cron/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-ZConf-Cron/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	ZConf-Cron
 PORTVERSION=	1.1.1
@@ -25,8 +25,4 @@ RUN_DEPENDS:=	p5-DateTime-Event-Cron>=0:${PORTSDIR}/devel/p5-DateTime-Event-Cron
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		ZConf::Cron.3 \
-		ZConf::Cron::GUI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
