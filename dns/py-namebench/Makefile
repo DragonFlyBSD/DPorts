@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: dns/py-namebench/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/py-namebench/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	namebench
 PORTVERSION=	1.3.1
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	An open-source DNS benchmark utility
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS+=	\
 	${PYTHON_PKGNAMEPREFIX}Jinja2>=2.5.5:${PORTSDIR}/devel/py-Jinja2 \
