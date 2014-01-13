@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: deskutils/tine20/Makefile 332417 2013-11-01 22:41:09Z feld $
+# $FreeBSD: deskutils/tine20/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	tine20
 PORTVERSION=	0.0.2012.10.04
@@ -14,8 +14,6 @@ COMMENT=	Professional Open Source Groupware and CRM
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_BZIP2=	yes
-
-FETCH_ARGS=	-Fpr
 
 NO_BUILD=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}
