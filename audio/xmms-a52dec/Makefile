@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: audio/xmms-a52dec/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-a52dec/Makefile 338411 2014-01-02 00:24:27Z rakuco $
 
 PORTNAME=	xmms-a52dec
 PORTVERSION=	1.0
@@ -18,10 +18,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gtk12
 CFLAGS+=	`xmms-config --cflags` -L${LOCALBASE}/lib
 
-.include <bsd.port.pre.mk>
-.if ${ARCH} == "x86_64"
-CFLAGS+=	-fPIC
-.endif
+CFLAGS_x86_64=	-fPIC
 
 PLIST_FILES=	lib/xmms/Input/liba52dec.so
 
@@ -33,4 +30,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/liba52dec.so \
 		${STAGEDIR}${PREFIX}/lib/xmms/Input/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
