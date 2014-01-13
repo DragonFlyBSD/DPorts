@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: devel/pymacs/Makefile 336491 2013-12-14 22:19:14Z antoine $
+# $FreeBSD: devel/pymacs/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	Pymacs
 PORTVERSION=	0.25
@@ -13,7 +13,6 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USE_PYTHON_PREFIX=	yes
 USE_EMACS=	yes
-FETCH_ARGS=   -Fpr
 
 NO_STAGE=	yes
 pre-configure:
