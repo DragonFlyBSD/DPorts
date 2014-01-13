@@ -1,5 +1,5 @@
 # Created by: Ricky E. <codeblock@eighthbit.net>
-# $FreeBSD: www/gist/Makefile 330219 2013-10-13 10:37:03Z lwhsu $
+# $FreeBSD: www/gist/Makefile 338493 2014-01-02 20:30:09Z swills $
 
 PORTNAME=	gist
 PORTVERSION=	3.1.0
@@ -28,10 +28,6 @@ PLIST_FILES=	bin/gist \
 		man/man1/gist.1.gz
 
 .include <bsd.port.pre.mk>
-
-.if ${RUBY_VER} < 1.9
-RUN_DEPENDS+=	${DEPEND_RUBY_ICONV}
-.endif
 
 .if ${PORT_OPTIONS:MNSSCA}
 RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
