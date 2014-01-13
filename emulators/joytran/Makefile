@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: emulators/joytran/Makefile 334658 2013-11-23 10:53:02Z pawel $
+# $FreeBSD: emulators/joytran/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	joytran
 PORTVERSION=	0.9.5.1
@@ -14,7 +14,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 # This is needed to fetch from BerliOS
-FETCH_ARGS=	"-Fpr"
 USE_BZIP2=	yes
 USE_SDL=	sdl2
 USES=		cmake pkgconfig
