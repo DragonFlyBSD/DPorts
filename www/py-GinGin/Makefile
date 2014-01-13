@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@cowboy.branda.to>
-# $FreeBSD: www/py-GinGin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-GinGin/Makefile 338103 2013-12-30 12:37:25Z wg $
 
 PORTNAME=	GinGin
 PORTVERSION=	1.0.1
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A hybrid of WIKI and BLOG system
+COMMENT=	Hybrid of WIKI and BLOG system
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/mez_xml/__init__.py:${PORTSDIR}/devel/py-mez_xml
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
@@ -17,6 +17,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
