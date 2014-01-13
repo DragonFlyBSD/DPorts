@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: net/googlecl/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/googlecl/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	googlecl
 PORTVERSION=	0.9.14
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Command line tools for the Google Data APIs
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gdata/__init__.py:${PORTSDIR}/devel/py-gdata
 
