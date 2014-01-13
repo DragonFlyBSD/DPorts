@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: www/p5-Template-Plugin-Monta/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Plugin-Monta/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	Template-Plugin-Monta
 PORTVERSION=	0.03
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Template::Plugin::Monta.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
