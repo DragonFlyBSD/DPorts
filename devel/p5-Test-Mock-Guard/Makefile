@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Mock-Guard/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Mock-Guard/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Test-Mock-Guard
 PORTVERSION=	0.09
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Class-Load>=0.06:${PORTSDIR}/devel/p5-Class-Load
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Mock::Guard.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
