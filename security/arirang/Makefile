@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: security/arirang/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: security/arirang/Makefile 338486 2014-01-02 20:08:18Z swills $
 
 PORTNAME=	arirang
 PORTVERSION=	2.03
@@ -13,7 +13,7 @@ COMMENT=	Powerful webserver security scanner for network
 
 LICENSE=	BSD
 
-USE_RUBY=	1.8+
+USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 USE_LIBRUBY=	yes
 
