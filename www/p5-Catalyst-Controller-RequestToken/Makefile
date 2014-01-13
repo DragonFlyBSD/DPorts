@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: www/p5-Catalyst-Controller-RequestToken/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Controller-RequestToken/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Catalyst-Controller-RequestToken
 PORTVERSION=	0.07
@@ -21,10 +21,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::Controller::RequestToken.3 \
-	Catalyst::Controller::RequestToken::Action::CreateToken.3 \
-	Catalyst::Controller::RequestToken::Action::RemoveToken.3 \
-	Catalyst::Controller::RequestToken::Action::ValidateToken.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
