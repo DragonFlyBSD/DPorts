@@ -1,5 +1,5 @@
 # Created by: Oleg Alexeenkov
-# $FreeBSD: games/openastromenace/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/openastromenace/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	openastromenace
 PORTVERSION=	1.2.0
@@ -20,12 +20,10 @@ LIB_DEPENDS+=	vorbisfile:${PORTSDIR}/audio/libvorbis \
 
 USE_BZIP2=	yes
 USE_GL=		gl glu
-USE_OPENAL=	al alut
 WANT_SDL=	yes
 USE_SDL=	sdl
-USES=		cmake
+USES=		cmake dos2unix openal:al,alut
 WRKSRC=		${WRKDIR}/OpenAstroMenaceSVN
-USE_DOS2UNIX=	yes
 
 OPTIONS_SINGLE=	LANG
 OPTIONS_SINGLE_LANG=	EN DE RU
