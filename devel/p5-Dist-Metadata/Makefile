@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Dist-Metadata/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Dist-Metadata/Makefile 338870 2014-01-06 12:43:03Z az $
 
 PORTNAME=	Dist-Metadata
 PORTVERSION=	0.925
@@ -26,13 +26,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Dist::Metadata.3 \
-	Dist::Metadata::Archive.3 \
-	Dist::Metadata::Dir.3 \
-	Dist::Metadata::Dist.3 \
-	Dist::Metadata::Struct.3 \
-	Dist::Metadata::Tar.3 \
-	Dist::Metadata::Zip.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
