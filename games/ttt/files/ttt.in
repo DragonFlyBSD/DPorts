@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/ttt/files/ttt.in 304004 2012-09-09 22:08:43Z swills $
+# $FreeBSD: games/ttt/files/ttt.in 337982 2013-12-29 13:35:32Z nemysis $
+#
 
-echo "Tic Tac Toe: Starting up..."
 cd "%%DATADIR%%"
-./ttt
+exec ./ttt "${@}"
