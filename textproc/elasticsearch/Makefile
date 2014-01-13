@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: textproc/elasticsearch/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/elasticsearch/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	elasticsearch
 PORTVERSION=	0.90.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.elasticsearch.org/${PORTNAME}/${PORTNAME}/ \
 MAINTAINER=	tj@FreeBSD.org
 COMMENT=	A full-text search engine for Java
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_JAVA=	yes
 NO_BUILD=	yes
