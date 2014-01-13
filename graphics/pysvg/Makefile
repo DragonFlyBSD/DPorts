@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: graphics/pysvg/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pysvg/Makefile 337894 2013-12-28 18:48:49Z marino $
 
 PORTNAME=	pysvg
 PORTVERSION=	0.2.1
