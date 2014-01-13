@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: www/closure-linter/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/closure-linter/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	closure-linter
 PORTVERSION=	2.3.5
@@ -10,7 +10,7 @@ DISTNAME=	closure_linter-${PORTVERSION}
 MAINTAINER=	jlaffaye@FreeBSD.org
 COMMENT=	JavaScript linter
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gflags:${PORTSDIR}/devel/py-gflags
 
