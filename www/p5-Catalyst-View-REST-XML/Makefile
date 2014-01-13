@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-View-REST-XML/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-View-REST-XML/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	Catalyst-View-REST-XML
 PORTVERSION=	0.02
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Catalyst::View::REST::XML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
