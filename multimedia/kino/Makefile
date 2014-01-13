@@ -1,5 +1,5 @@
 # Created by: pb@FreeBSD.org
-# $FreeBSD: multimedia/kino/Makefile 330909 2013-10-19 16:43:32Z wg $
+# $FreeBSD: multimedia/kino/Makefile 338190 2013-12-30 22:49:33Z kwm $
 
 PORTNAME=	kino
 PORTVERSION=	1.3.4
@@ -15,6 +15,9 @@ LIB_DEPENDS=	dv.4:${PORTSDIR}/multimedia/libdv	\
 		samplerate.1:${PORTSDIR}/audio/libsamplerate
 RUN_DEPENDS=	mencoder:${PORTSDIR}/multimedia/mencoder	\
 		mplex:${PORTSDIR}/multimedia/mjpegtools
+
+DEPRECATED=	Not developed since 2009, declared dead 05.08.2013 on there website.
+EXPIRATION_DATE=	20140130
 
 OPTIONS_DEFINE=	QUICKTIME FFMPEG_KINO
 QUICKTIME_DESC=	With Quicktime support
