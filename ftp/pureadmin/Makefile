@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/pureadmin/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD: ftp/pureadmin/Makefile 338691 2014-01-04 23:40:44Z antoine $
 
 PORTNAME=	pureadmin
 PORTVERSION=	0.4
@@ -10,10 +10,8 @@ MASTER_SITES=	SF/purify/Default/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Management utility for the PureFTPd
 
-USES=		pkgconfig gettext
-USE_GNOME=	gnomehack libglade2
-USE_FAM=	yes
-USE_GMAKE=	yes
+USES=		fam gettext gmake pathfix pkgconfig
+USE_GNOME=	libglade2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
