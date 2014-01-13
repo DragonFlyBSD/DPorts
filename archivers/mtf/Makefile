@@ -1,5 +1,5 @@
 # Created by: Philippe Casidy <pcasidy@casidy.com>
-# $FreeBSD: archivers/mtf/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/mtf/Makefile 337534 2013-12-26 15:03:41Z bapt $
 
 PORTNAME=	mtf
 PORTVERSION=	0.2.1
@@ -15,19 +15,13 @@ COMMENT=	Unix reader for the Microsoft Tape Format used by NT Backup
 LICENSE=	GPLv2
 
 ALL_TARGET=	# empty
-NO_STAGE=	yes
 PLIST_FILES=	bin/mtf
 PORTDOCS=	README
-
-post-patch:
-	@${REINPLACE_CMD} -e "s|CC=|CC?=|" -e "s|CFLAGS=|CFLAGS?=|" \
-		${WRKSRC}/Makefile
+MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mtf ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/mtf ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
