@@ -1,5 +1,5 @@
 # Created by: schmidtcarl@earthlink.net
-# $FreeBSD: deskutils/ljcharm/Makefile 337286 2013-12-23 19:33:52Z rm $
+# $FreeBSD: deskutils/ljcharm/Makefile 338645 2014-01-04 13:14:13Z antoine $
 
 PORTNAME=	charm
 PORTVERSION=	1.9.2
@@ -16,6 +16,9 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
 PORTDOCS=	*
+PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 post-patch:
 	${REINPLACE_CMD} -e 's,share/doc/charm,${DOCSDIR},' ${WRKSRC}/setup.py
