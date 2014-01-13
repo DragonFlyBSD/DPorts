@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@rrnet.com>
-# $FreeBSD: x11/9menu/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/9menu/Makefile 338777 2014-01-05 13:56:24Z antoine $
 
 PORTNAME=	9menu
 PORTVERSION=	1.8
@@ -22,12 +22,10 @@ MAKEFILE=	Makefile.noimake
 ALL_TARGET=	9menu
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lX11"
-PLIST_FILES=	bin/9menu
-MAN1=		9menu.1
+PLIST_FILES=	bin/9menu man/man1/9menu.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/9menu.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
