@@ -1,5 +1,5 @@
 # Created by: Alexander Gromnitsky
-# $FreeBSD: graphics/xoris/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xoris/Makefile 337772 2013-12-27 18:13:38Z bapt $
 
 PORTNAME=	xoris
 PORTVERSION=	0.1e
@@ -13,7 +13,6 @@ COMMENT=	X11 pixel color grabber
 USES=		imake
 USE_XORG=	x11
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
@@ -21,12 +20,8 @@ SUB_FILES=	pkg-message
 .endif
 
 post-install:
-	@ ${INSTALL_SCRIPT} ${FILESDIR}/xoris-run.sh ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@ ${ECHO_MSG} "===>   Installing documentation for ${PORTNAME}"
-	@ ${MKDIR} ${DOCSDIR}
-	@ ${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-	@ ${CAT} ${PKGMESSAGE}
-.endif
+	${INSTALL_SCRIPT} ${FILESDIR}/xoris-run.sh ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
