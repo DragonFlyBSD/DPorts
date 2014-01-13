@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: print/p5-Net-CUPS/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/p5-Net-CUPS/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	Net-CUPS
 PORTVERSION=	0.61
@@ -12,15 +12,9 @@ MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Interface to the CUPS API
 
 BUILD_DEPENDS=	cups-config:${PORTSDIR}/print/cups-client
-LIB_DEPENDS=	cupsimage.2:${PORTSDIR}/print/cups-image
+LIB_DEPENDS=	libcupsimage.so:${PORTSDIR}/print/cups-image
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::CUPS.3 \
-		Net::CUPS::Destination.3 \
-		Net::CUPS::IPP.3 \
-		Net::CUPS::PPD.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
