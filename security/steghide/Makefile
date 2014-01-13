@@ -1,5 +1,5 @@
 # Created by: RaRa Rasputin <rasputin@submonkey.net>
-# $FreeBSD: security/steghide/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/steghide/Makefile 338427 2014-01-02 09:03:39Z arved $
 
 PORTNAME=	steghide
 PORTVERSION=	0.5.1
@@ -23,14 +23,7 @@ USE_GMAKE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl -lmcrypt"
 CPPFLAGS+=	${CFLAGS} -I${LOCALBASE}/include -fpermissive
 
-MAN1=		steghide.1
-
-NO_STAGE=	yes
 post-patch:
-.ifdef(NOPORTDOCS)
-	${REINPLACE_CMD} -e 's|install-data-am\: install-docDATA||' \
-		${WRKSRC}/Makefile.in
-.endif
 	${REINPLACE_CMD} -e 's,SHELL) libtool,SHELL) ${LIBTOOL} --tag=CXX,' \
 		${WRKSRC}/src/Makefile.in
 	${REINPLACE_CMD} -e 's,-O2,${CFLAGS},' ${WRKSRC}/configure
