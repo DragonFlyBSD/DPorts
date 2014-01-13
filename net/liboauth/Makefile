@@ -1,4 +1,4 @@
-# $FreeBSD: net/liboauth/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/liboauth/Makefile 338051 2013-12-29 22:08:48Z johans $
 
 PORTNAME=	liboauth
 PORTVERSION=	1.0.1
@@ -18,9 +18,6 @@ USE_OPENSSL=	yes
 USES=		pkgconfig
 USE_LDCONFIG=	yes
 
-MAN3=		oauth.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/PC_REQ=/s/ libcrypto//' ${WRKSRC}/configure
 
