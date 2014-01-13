@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/R-cran-RUnit/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: devel/R-cran-RUnit/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	RUnit
 PORTVERSION=	0.4.26
@@ -12,7 +12,6 @@ COMMENT=	R functions implementing a Unit Testing framework
 
 LICENSE=	GPLv2
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
