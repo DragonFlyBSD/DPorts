@@ -1,8 +1,9 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: devel/py-testoob/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: devel/py-testoob/Makefile 337717 2013-12-27 11:53:55Z wg $
 
 PORTNAME=	testoob
 PORTVERSION=	1.15
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	SF \
 		CHEESESHOP
@@ -20,12 +21,9 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	${PORTNAME}
-PYDISTUTILS_PKGVERSION=	${PORTVERSION}
-PYDISTUTILS_NOEGGINFO=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTWISTED}
