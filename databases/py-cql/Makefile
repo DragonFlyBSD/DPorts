@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sendmail.cz>
-# $FreeBSD: databases/py-cql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-cql/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	cql
 PORTVERSION=	1.4.0
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	hsn@sendmail.cz
 COMMENT=	Python DB-API 2.0 client interface for Cassandra
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/thrift/Thrift.py:${PORTSDIR}/devel/py-thrift
 
