@@ -1,5 +1,5 @@
 # Created by: Laurent Courty
-# $FreeBSD: graphics/qgis/Makefile 332843 2013-11-05 12:42:02Z wen $
+# $FreeBSD: graphics/qgis/Makefile 338906 2014-01-06 16:24:22Z makc $
 
 PORTNAME=	qgis
 PORTVERSION=	1.8.0
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 USE_PYTHON=	yes
 USES=		bison cmake
 USE_SQLITE=	yes
-USE_QT4=	gui svg xml network sql designer linguist_build \
+USE_QT4=	gui svg xml network sql designer testlib linguist_build \
 		qmake_build moc_build rcc_build uic_build
 
 USE_LDCONFIG=	yes
