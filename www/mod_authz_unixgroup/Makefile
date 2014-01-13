@@ -1,5 +1,5 @@
 # Created by: Will Stacey <will@at.org>
-# $FreeBSD: www/mod_authz_unixgroup/Makefile 336522 2013-12-15 12:34:18Z ohauer $
+# $FreeBSD: www/mod_authz_unixgroup/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_authz_unixgroup
 PORTVERSION=	1.0.3
@@ -10,7 +10,7 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	UNIX group access control module for Apache 2.2
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 PORTSCOUT=	limit:^1\.0\.
 
