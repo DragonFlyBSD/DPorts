@@ -1,7 +1,7 @@
-# $FreeBSD: www/coppermine/Makefile 330865 2013-10-19 13:27:32Z danilo $
+# $FreeBSD: www/coppermine/Makefile 339279 2014-01-09 21:13:02Z danilo $
 
 PORTNAME=	coppermine
-PORTVERSION=	1.5.24
+PORTVERSION=	1.5.26
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/Coppermine/1.5.x/
 DISTNAME=	cpg${PORTVERSION}
