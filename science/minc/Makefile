@@ -1,5 +1,5 @@
 # Created by: jbacon
-# $FreeBSD: science/minc/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/minc/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 ############################################################################
 # http://www.bic.mni.mcgill.ca/software/minc/
@@ -68,8 +68,6 @@ MAN1=	dcm2mnc.1 \
 	xfminvert.1
 
 MAN3=	ParseArgv.3
-
-FETCH_ARGS+=	-F
 
 NO_STAGE=	yes
 post-install:
