@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: cad/varkon/Makefile 336172 2013-12-11 14:53:20Z bapt $
+# $FreeBSD: cad/varkon/Makefile 338552 2014-01-03 15:53:42Z adamw $
 
 PORTNAME=	varkon
 PORTVERSION=	1.19E
@@ -27,6 +27,9 @@ MAKE_JOBS_UNSAFE=	yes
 VARKON_PREFIX=	${PREFIX}/lib/${PORTNAME}
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-extract:
 	@${FIND} ${WRKSRC} -name "*.o" -delete
 
@@ -58,7 +61,7 @@ do-install:
 	@${MKDIR} ${VARKON_PREFIX}/cnf/ini
 	(cd ${WRKSRC}/cnf/ini/english && ${INSTALL_DATA} linux \
 		${VARKON_PREFIX}/cnf/ini/freebsd)
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}	#Varkon Manual
 	@(cd ${WRKSRC}/man && ${COPYTREE_SHARE} . ${DOCSDIR})
 .endif
