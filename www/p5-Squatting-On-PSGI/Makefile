@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Squatting-On-PSGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Squatting-On-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Squatting-On-PSGI
 PORTVERSION=	0.06
@@ -21,7 +21,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Squatting::On::PSGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
