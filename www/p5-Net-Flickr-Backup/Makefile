@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-Net-Flickr-Backup/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Net-Flickr-Backup/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	Net-Flickr-Backup
 PORTVERSION=	3.1
@@ -25,7 +25,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Flickr::Backup.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
