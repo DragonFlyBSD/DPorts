@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: www/jspwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/jspwiki/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	jspwiki
 PORTVERSION=	2.8.4
@@ -11,7 +11,7 @@ DISTNAME=	JSPWiki-${PORTVERSION}-bin
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Feature-rich and extensible Wiki engine built around J2EE
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_ZIP=	yes
 USE_JAVA=	1.6+
