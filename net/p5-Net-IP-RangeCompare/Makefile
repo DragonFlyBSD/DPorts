@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-IP-RangeCompare/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-IP-RangeCompare/Makefile 338808 2014-01-05 17:43:05Z az $
 
 PORTNAME=	Net-IP-RangeCompare
 PORTVERSION=	4.025
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Data-IPV4-Range-Parse>=0.05:${PORTSDIR}/net/p5-Data-IPV4-Range-P
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::IP::RangeCompare.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
