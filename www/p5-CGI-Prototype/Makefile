@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Prototype/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Prototype/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	CGI-Prototype
 PORTVERSION=	0.9054
@@ -18,8 +18,4 @@ RUN_DEPENDS=	${COMMON_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CGI::Prototype.3 \
-	CGI::Prototype::Hidden.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
