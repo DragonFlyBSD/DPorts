@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: www/cgichk/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cgichk/Makefile 338024 2013-12-29 16:20:08Z antoine $
 
 PORTNAME=	cgichk
 PORTVERSION=	2.60
@@ -9,12 +9,11 @@ MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A web site vulnerability scanner
+COMMENT=	Web site vulnerability scanner
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=	cgichk
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s/^(CC|CFLAGS).+//g" ${WRKSRC}/Makefile
 	${REINPLACE_CMD} -e \
@@ -22,10 +21,7 @@ post-patch:
 		${WRKSRC}/cgichk.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cgichk ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/cgichk.cfg ${PREFIX}/etc/cgichk.cfg.sample
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_PROGRAM} ${WRKSRC}/cgichk ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/cgichk.cfg ${STAGEDIR}${PREFIX}/etc/cgichk.cfg.sample
 
 .include <bsd.port.mk>
