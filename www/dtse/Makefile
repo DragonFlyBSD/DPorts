@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: www/dtse/Makefile 334949 2013-11-26 15:45:50Z sunpoet $
+# $FreeBSD: www/dtse/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	dtse
 PORTVERSION=	1.3
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	An indexing search engine for use on small websites
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	${LOCALBASE}/share/aclocal/ax_check_gnu_make.m4:${PORTSDIR}/devel/autoconf-archive
 
