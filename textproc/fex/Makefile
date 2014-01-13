@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/fex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/fex/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	fex
 PORTVERSION=	2.0.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://semicomplete.googlecode.com/files/ \
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	A powerful field extraction tool
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 MAKE_ENV+=	INSTALLMAN=${PREFIX}/man
 
