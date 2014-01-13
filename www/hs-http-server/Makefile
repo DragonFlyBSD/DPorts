@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-http-server/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-http-server/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	http-server
 PORTVERSION=	1.0.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -14,17 +14,18 @@ LICENSE=	BSD
 USE_CABAL=	HTTP>=4000.2.0 mime>=0.3 network>=2 url>=2 utf8-string>=0.3.4
 
 INSTALL_PORTEXAMPLES=	cd ${WRKSRC}/example && \
-			  ${COPYTREE_SHARE} \* ${EXAMPLESDIR}
+			  ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
 
 OPTIONS_DEFINE=		EXAMPLES
 OPTIONS_DEFAULT=	EXAMPLES
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MEXAMPLES}
 SUB_FILES=	pkg-message
-SHOW_PKGMSG=	yes
+
+post-install::
+	@${CAT} ${PKGMESSAGE}
 .endif
 
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
