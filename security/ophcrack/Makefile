@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: security/ophcrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ophcrack/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	ophcrack
 PORTVERSION=	3.6.0
@@ -9,7 +9,7 @@ MASTER_SITES=	SF
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Windows password cracker based on rainbow tables
 
-LICENSE=	AL2 GPLv2
+LICENSE=	APACHE20 GPLv2
 LICENSE_COMB=	multi
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
