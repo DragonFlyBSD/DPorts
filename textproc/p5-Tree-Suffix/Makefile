@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: textproc/p5-Tree-Suffix/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Tree-Suffix/Makefile 338751 2014-01-05 12:07:20Z az $
 
 PORTNAME=	Tree-Suffix
 PORTVERSION=	0.21
@@ -10,13 +10,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the libstree library
 
-LIB_DEPENDS=	stree.0:${PORTSDIR}/textproc/libstree
+LIB_DEPENDS=	libstree.so:${PORTSDIR}/textproc/libstree
 
 USES=		perl5
 USE_PERL5=	configure
 CFLAGS+=	-I${LOCALBASE}/include
 
-MAN3=		Tree::Suffix.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
