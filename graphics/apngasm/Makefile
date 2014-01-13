@@ -1,5 +1,5 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: graphics/apngasm/Makefile 336852 2013-12-18 17:51:04Z danilo $
+# $FreeBSD: graphics/apngasm/Makefile 337611 2013-12-26 19:50:48Z marino $
 
 PORTNAME=	apngasm
 PORTVERSION=	2.8
@@ -18,6 +18,8 @@ NO_WRKSUBDIR=	yes
 
 USE_ZIP=	yes
 USES=		dos2unix gmake
+
+LDFLAGS+=	-lz
 
 PORTDOCS=	readme.txt
 PLIST_FILES=	bin/${PORTNAME}
