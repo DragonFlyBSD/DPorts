@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2-scrobbler/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms2-scrobbler/Makefile 338547 2014-01-03 15:26:06Z adamw $
 
 PORTNAME=	xmms2-scrobbler
 PORTVERSION=	0.4.0
@@ -24,11 +24,13 @@ PORTDOCS=	README
 
 SUB_FILES=	pkg-message
 
+.include <bsd.port.options.mk>
+
 post-install:
 	@${ECHO_MSG}
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_MSG}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}; \
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${DOCSDIR}
 .endif
