@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: www/p5-Template-Mustache/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Mustache/Makefile 338773 2014-01-05 13:41:52Z az $
 
 PORTNAME=	Template-Mustache
 PORTVERSION=	v0.5.1
@@ -19,7 +19,4 @@ TEST_DEPENDS:=	p5-Test-Mini-Unit>=v1.0.3:${PORTSDIR}/devel/p5-Test-Mini-Unit
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Mustache.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
