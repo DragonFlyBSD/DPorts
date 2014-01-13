@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: net/p5-Net-Rendezvous-Publish/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Rendezvous-Publish/Makefile 338849 2014-01-06 09:14:19Z az $
 
 PORTNAME=	Net-Rendezvous-Publish
 PORTVERSION=	0.04
@@ -17,8 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Rendezvous::Publish.3 \
-		Net::Rendezvous::Publish::Service.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
