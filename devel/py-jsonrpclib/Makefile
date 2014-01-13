@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: devel/py-jsonrpclib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-jsonrpclib/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	jsonrpclib
 PORTVERSION=	0.1.3
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	bra@fsn.hu
 COMMENT=	Implements the JSON-RPC 2.0 proposed specification in pure Python
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_PYTHON=	-2.7
 USE_PYDISTUTILS=yes
