@@ -1,5 +1,5 @@
 # Created by: raven428 <raven428@gmail.com>
-# $FreeBSD: devel/pinba_engine/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pinba_engine/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	pinba_engine
 PORTVERSION=	2011.08.18
@@ -21,7 +21,6 @@ BUILD_DEPENDS=	${LOCALBASE}/include/google/protobuf/descriptor.h:${PORTSDIR}/dev
 LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
 
 GITVERSION=	3a0cb51
-FETCH_ARGS=	-pRr
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_MYSQL=	yes
