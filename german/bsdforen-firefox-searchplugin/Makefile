@@ -1,5 +1,5 @@
 # Created by: Stefan 'Steve' Tell <stefan.tell@crashmail.de>
-# $FreeBSD: german/bsdforen-firefox-searchplugin/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/bsdforen-firefox-searchplugin/Makefile 339307 2014-01-10 02:53:41Z tabthorpe $
 
 PORTNAME=	bsdforen-firefox-searchplugin
 PORTVERSION=	0.3
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.crashmail.de/files/ \
 DISTFILES=	bsdforen.src bsdforen.png bsdforen-wiki.src bsdforen-wiki.png
 EXTRACT_ONLY=	yes
 
-MAINTAINER=	stefan.tell@crashmail.de
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Firefox search plugins for the www.bsdforen.de board and wiki
 
 USE_FIREFOX=	yes
