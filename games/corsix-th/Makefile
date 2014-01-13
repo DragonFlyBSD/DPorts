@@ -1,13 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 331152 2013-10-21 16:07:53Z wg $
+# $FreeBSD: games/corsix-th/Makefile 338447 2014-01-02 15:23:42Z madpilot $
 
 PORTNAME=	corsixth
-PORTVERSION=	0.21
-PORTREVISION=	2
+PORTVERSION=	0.30
 CATEGORIES=	games
-MASTER_SITES=	GOOGLE_CODE
-PROJECTHOST=	corsix-th
-DISTNAME=	CorsixTH-${DISTVERSION}-Source
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Open source clone of Theme Hospital
@@ -16,12 +12,17 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
-USES=		cmake compiler:c++11-lang pkgconfig
+USES=		cmake compiler:c++11-lang dos2unix pkgconfig
 USE_LUA=	yes
 USE_SDL=	mixer
-USE_DOS2UNIX=	CMake/FindFFmpeg.cmake \
+DOS2UNIX_FILES=	CMake/FindFFmpeg.cmake \
 		CorsixTH/CMakeLists.txt \
 		CorsixTH/Src/iso_fs.cpp
+
+USE_GITHUB=	yes
+GH_ACCOUNT=     CorsixTH
+GH_PROJECT=     CorsixTH
+GH_COMMIT=	69a3ed8
 
 OPTIONS_DEFINE=	MOVIES
 OPTIONS_DEFAULT=	MOVIES
