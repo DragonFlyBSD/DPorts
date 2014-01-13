@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-Agda/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/hs-Agda/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	Agda
 PORTVERSION=	2.3.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -19,14 +19,13 @@ USES=		iconv
 
 EXECUTABLE=	agda-mode agda
 
-INSTALL_PORTDATA=	(cd ${WRKSRC} && ${INSTALL_DATA} README ${DATADIR}; \
-			 cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${DATADIR})
+INSTALL_PORTDATA=	(cd ${WRKSRC} && ${INSTALL_DATA} README ${STAGEDIR}${DATADIR}; \
+			 cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR})
 
 OPTIONS_DEFINE=		EPIC
 
 EPIC_DESC=		Install the Epic compiler
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.options.mk"
 
 .if ${PORT_OPTIONS:MEPIC}
