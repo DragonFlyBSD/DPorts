@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: converters/rcctools/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD: converters/rcctools/Makefile 339240 2014-01-09 14:23:58Z bapt $
 
 PORTNAME=	rcctools
 PORTVERSION=	0.1.1
@@ -20,5 +20,4 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 PLIST_FILES=	bin/rcc-recode
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
