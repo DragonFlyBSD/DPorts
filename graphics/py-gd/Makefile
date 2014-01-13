@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: graphics/py-gd/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-gd/Makefile 337762 2013-12-27 17:35:27Z wg $
 
 PORTNAME=	gd
 PORTVERSION=	0.58
@@ -12,15 +12,14 @@ DISTNAME=	gdmodule-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python interface to the GD library
 
-LIB_DEPENDS=	gd:${PORTSDIR}/graphics/gd
+LIB_DEPENDS=	libgd.so:${PORTSDIR}/graphics/gd
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYSETUP=	Setup.py
 USE_PYTHON_PREFIX=	yes
-PYDISTUTILS_PKGNAME=	gdmodule
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/\/usr\/lib/d ; \
