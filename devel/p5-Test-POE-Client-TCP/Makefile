@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-POE-Client-TCP/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-POE-Client-TCP/Makefile 338867 2014-01-06 12:18:47Z az $
 
 PORTNAME=	Test-POE-Client-TCP
 PORTVERSION=	1.12
@@ -7,7 +7,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lth@FreeBSD.org
-COMMENT=	A POE Component providing TCP client services for test cases
+COMMENT=	POE Component providing TCP client services for test cases
 
 BUILD_DEPENDS=	p5-POE>=1.28:${PORTSDIR}/devel/p5-POE
 RUN_DEPENDS:=	${BUILD_DEPENDS}
@@ -15,7 +15,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::POE::Client::TCP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
