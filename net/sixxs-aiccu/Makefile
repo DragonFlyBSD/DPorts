@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: net/sixxs-aiccu/Makefile 331810 2013-10-27 22:29:46Z dinoex $
+# $FreeBSD: net/sixxs-aiccu/Makefile 338977 2014-01-07 07:04:42Z dinoex $
 
 PORTNAME=	aiccu
 PORTVERSION=	20070115
@@ -12,13 +12,13 @@ DISTNAME=	aiccu_20070115
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	SixXS IPv6 TIC+ tunnel broker heartbeat client
 
-LIB_DEPENDS=	gnutls-openssl:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	libgnutls-openssl.so:${PORTSDIR}/security/gnutls
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
 
 USE_RC_SUBR=	sixxs-aiccu
-USE_GMAKE=	yes
+USES=		gmake
 
 CFLAGS+=	${PTHREAD_CFLAGS} -D_REENTRANT -DAICCU_GNUTLS -I${LOCALBASE}/include
 LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib -lgnutls
