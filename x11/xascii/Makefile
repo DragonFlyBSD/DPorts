@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <cy@FreeBSD.org>
-# $FreeBSD: x11/xascii/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xascii/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xascii
 PORTVERSION=	1.0
@@ -15,8 +15,6 @@ COMMENT=	Display an ASCII table in decimal, octal, and hexadecimal.
 MAKE_ARGS+=	PREFIX=${PREFIX}
 USES=		imake
 USE_XORG=	x11 xt xaw
-MAN1=		xascii.1
-PLIST_FILES=	bin/xascii
+PLIST_FILES=	bin/xascii man/man1/xascii.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
