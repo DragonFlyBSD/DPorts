@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-I18N-AcceptLanguage/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-I18N-AcceptLanguage/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	I18N-AcceptLanguage
 PORTVERSION=	1.04
@@ -12,7 +12,4 @@ COMMENT=	Perl extension to matches language preference (HTTP Accept-Language)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	I18N::AcceptLanguage.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
