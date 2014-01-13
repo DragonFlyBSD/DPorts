@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: shells/jailkit/Makefile 336517 2013-12-15 12:19:33Z wg $
+# $FreeBSD: shells/jailkit/Makefile 337650 2013-12-27 08:24:48Z bapt $
 
 PORTNAME=	jailkit
 PORTVERSION=	2.15
@@ -16,36 +16,10 @@ USE_PYTHON=	2
 
 SHELLS=		/etc/shells
 
-MAN8=		jailkit.8 \
-		jk_addjailuser.8 \
-		jk_check.8 \
-		jk_chrootlaunch.8 \
-		jk_chrootsh.8 \
-		jk_cp.8 \
-		jk_init.8 \
-		jk_jailuser.8 \
-		jk_list.8 \
-		jk_lsh.8 \
-		jk_socketd.8 \
-		jk_uchroot.8 \
-		jk_update.8
-MANCOMPRESSED=	yes
-
 PORTDOCS=	COPYRIGHT README.txt
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-	@${ECHO_MSG} "Updating ${SHELLS}"
-	@${CP} ${SHELLS} ${SHELLS}.bak
-	@(${GREP} -v ${PREFIX}/sbin/jk_chrootsh ${SHELLS}.bak; \
-		${ECHO_CMD} ${PREFIX}/sbin/jk_chrootsh) > ${SHELLS}
-	@${RM} -f ${SHELLS}.bak
-
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
