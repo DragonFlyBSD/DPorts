@@ -1,8 +1,9 @@
 # Created by: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: textproc/pdfgrep/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pdfgrep/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	pdfgrep
 PORTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -12,7 +13,7 @@ COMMENT=	A tool to search text in PDF files
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	poppler:${PORTSDIR}/graphics/poppler
+LIB_DEPENDS=	libpoppler.so:${PORTSDIR}/graphics/poppler
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
