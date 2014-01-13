@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/p5-Net-FTP-Common/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/p5-Net-FTP-Common/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Net-FTP-Common
 PORTVERSION=	7.0.d
@@ -14,7 +14,4 @@ RUN_DEPENDS=	p5-Net>=0:${PORTSDIR}/net/p5-Net
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::FTP::Common.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
