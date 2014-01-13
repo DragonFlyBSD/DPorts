@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/glmaze/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/glmaze/Makefile 337631 2013-12-27 00:21:56Z amdmi3 $
 
 PORTNAME=	glmaze
 PORTVERSION=	1.1a
@@ -14,9 +14,10 @@ USE_GL=		gl
 USE_SDL=	mixer sdl
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAN1=		glmaze.1
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/glmaze.1.gz
+PORTDATA=	*
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/shot.c
 
