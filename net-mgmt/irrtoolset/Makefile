@@ -1,21 +1,19 @@
-# $FreeBSD: net-mgmt/irrtoolset/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/irrtoolset/Makefile 339011 2014-01-07 16:10:48Z jgh $
 
 PORTNAME=	irrtoolset
 PORTVERSION=	5.0.1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	ISC/IRRToolSet/IRRToolSet-${PORTVERSION}
 
-MAINTAINER=	oberman@es.net
-COMMENT=	A suite of routing policy tools to interact with the IRR
+MAINTAINER=	rkoberman@gmail.com
+COMMENT=	Suite of routing policy tools to interact with the IRR
 
-PLIST_FILES=	bin/rpslcheck bin/peval bin/rtconfig
+PLIST_FILES=	bin/rpslcheck bin/peval bin/rtconfig \
+		man/man1/rtconfig.1.gz man/man1/peval.1.gz \
+		man/man1/rpslcheck.1.gz man/man1/irrtoolset-errors.1.gz
 
-USES=		bison
-USE_GMAKE=	yes
+USES=		bison gmake
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 
-MAN1=		rtconfig.1 peval.1 rpslcheck.1 irrtoolset-errors.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
