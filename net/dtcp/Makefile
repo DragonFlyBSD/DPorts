@@ -1,4 +1,4 @@
-# $FreeBSD: net/dtcp/Makefile 332213 2013-10-31 08:01:57Z bapt $
+# $FreeBSD: net/dtcp/Makefile 338129 2013-12-30 16:12:16Z ume $
 
 PORTNAME=	dtcp
 PORTVERSION=	20130602
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.mahoroba.org/~ume/ipv6/ \
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Dynamic Tunnel Configuration Protocol daemon and client
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 .if defined(WITH_QPOPAUTH)
 RUN_DEPENDS=	qpopauth:${PORTSDIR}/mail/qpopper
