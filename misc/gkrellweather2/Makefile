@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: misc/gkrellweather2/Makefile 332478 2013-11-02 12:58:52Z pawel $
+# $FreeBSD: misc/gkrellweather2/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	gkrellweather
 PORTVERSION=	2.0.8
@@ -14,8 +14,6 @@ LICENSE=	GPLv2 # (or later)
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
-
-FETCH_ARGS=	-Fpr
 
 USES=		gettext gmake pkgconfig
 MAKE_ENV=	enable_nls=1
