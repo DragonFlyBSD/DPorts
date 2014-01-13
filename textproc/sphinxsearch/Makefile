@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: textproc/sphinxsearch/Makefile 336971 2013-12-20 06:23:20Z matthew $
+# $FreeBSD: textproc/sphinxsearch/Makefile 337476 2013-12-26 09:38:26Z matthew $
 
 # Note: the Sphinx Storage Engine MySQL plugin is not supported by
 # this port.  You need a patched version of mysql server for that.
@@ -108,15 +108,10 @@ SUB_LIST+=	PORTNAME=${PORTNAME}	 \
 		SPHINX_LOG=${SPHINX_LOG}
 SUB_FILES+=	pkg-deinstall
 
-.if ${PORT_OPTIONS:MEXAMPLES}
 EXAMPLES=	example.sql api
-PORTEXAMPLES=	*
-.endif
 
-.if ${PORT_OPTIONS:MDOCS}
 DOCS=		doc/sphinx.css doc/sphinx.html doc/sphinx.txt doc/sphinx.xml
 DOCSRC=		${WRKSRC}/doc
-.endif
 
 MAN1SRC=	indexer.1 indextool.1 search.1 spelldump.1
 MAN8SRC=	searchd.8
