@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-oeis/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/hs-oeis/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	oeis
 PORTVERSION=	0.3.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	BSD
 
 USE_CABAL=	HTTP>=4000.0.2 network>=2
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
