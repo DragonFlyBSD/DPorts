@@ -1,5 +1,5 @@
 # Created by: Mitsuru YOSHIDA
-# $FreeBSD: devel/scalatest/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/scalatest/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	scalatest
 PORTVERSION=	1.6.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.artima.com/downloadScalaTest/ \
 MAINTAINER=	mitsururike@gmail.com
 COMMENT=	A regression testing utility for use with the Scala Language
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	scala>=2.9.0:${PORTSDIR}/lang/scala
