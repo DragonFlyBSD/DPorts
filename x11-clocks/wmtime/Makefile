@@ -1,5 +1,5 @@
 # Created by: Rich Neswold <rneswold@mcs.net>
-# $FreeBSD: x11-clocks/wmtime/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/wmtime/Makefile 339175 2014-01-08 20:54:35Z antoine $
 
 PORTNAME=	wmtime
 PORTVERSION=	1.0b2
@@ -12,12 +12,13 @@ MASTER_SITES=	http://web.cs.mun.ca/~gstarkes/wmaker/dockapps/files/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Time/Date applet for WindowMaker
 
-PLIST_FILES=	bin/wmtime
 WRKSRC=		${WRKDIR}/wmtime.app/wmtime
 USES=		imake
 USE_XORG=	xpm
+USE_CSTD=	gnu89
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/wmtime
+
 post-extract:
 	${CP} ${WRKSRC}/../Imakefile ${WRKSRC}/Imakefile
 
