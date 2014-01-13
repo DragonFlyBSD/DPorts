@@ -1,4 +1,4 @@
-# $FreeBSD: security/rndpassw/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rndpassw/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	rndpassw
 PORTVERSION=	0.1
@@ -11,7 +11,6 @@ COMMENT=	CLI password generator
 LICENSE=	BSD
 
 USE_BZIP2=	yes
-FETCH_ARGS=	-Fpr
 
 MAN1=		rndpassw.1
 PLIST_FILES=	bin/rndpassw
