@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/get_flash_videos/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/get_flash_videos/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	get_flash_videos
 DISTVERSION=	1.24.${DISTFILE_DATE}
@@ -12,7 +12,7 @@ EXTRACT_ONLY=
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	Download videos from various Flash-based video hosting sites
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	\
 		p5-Crypt-Blowfish_PP>=0:${PORTSDIR}/security/p5-Crypt-Blowfish_PP \
@@ -25,7 +25,6 @@ RUN_DEPENDS=	\
 		p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple \
 		rtmpdump>=2.4.0:${PORTSDIR}/multimedia/rtmpdump
 
-FETCH_ARGS=	-Fpr	# work around 302 redirect at github
 USES=		perl5
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
