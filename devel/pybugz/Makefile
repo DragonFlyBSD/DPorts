@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pybugz/Makefile 335630 2013-12-04 20:15:00Z crees $
+# $FreeBSD: devel/pybugz/Makefile 337999 2013-12-29 14:50:31Z crees $
 
 PORTNAME=	pybugz
 PORTVERSION=	0.9.3
@@ -20,5 +20,4 @@ PLIST_FILES=	bin/bugz
 DATADIR=	${PYTHONPREFIX_SITELIBDIR}/bugz
 PORTDATA=	*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
