@@ -1,5 +1,5 @@
 # Created by: Jukka A. Ukkonen <jau@iki.fi>
-# $FreeBSD: www/mod_geoip2/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD: www/mod_geoip2/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_geoip2
 PORTVERSION=	1.2.8
@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	jau@iki.fi
 COMMENT=	Apache module that provides the country code of the client IP
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	GeoIP>=1.4.4:${PORTSDIR}/net/GeoIP
 RUN_DEPENDS=	GeoIP>=1.4.4:${PORTSDIR}/net/GeoIP
