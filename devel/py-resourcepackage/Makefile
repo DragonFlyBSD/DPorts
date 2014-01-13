@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-resourcepackage/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-resourcepackage/Makefile 337712 2013-12-27 11:48:00Z wg $
 
 PORTNAME=	resourcepackage
 PORTVERSION=	1.0.0
@@ -13,13 +13,6 @@ COMMENT=	Automated resource-as-package embedding mechanism
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	ResourcePackage
-
-NO_STAGE=	yes
-post-install:
-	@${FIND} ${PYTHON_SITELIBDIR}/resourcepackage -type f | \
-		${SED} "s,^${PREFIX}/,," >> ${TMPPLIST}
-	@${FIND} ${PYTHON_SITELIBDIR}/resourcepackage -type d | ${SORT} -r | \
-		${SED} "s,^${PREFIX}/,@dirrm ," >> ${TMPPLIST}
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
