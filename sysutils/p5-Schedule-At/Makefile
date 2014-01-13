@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: sysutils/p5-Schedule-At/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-Schedule-At/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	Schedule-At
 PORTVERSION=	1.15
@@ -13,7 +13,4 @@ COMMENT=	OS independent interface to the Unix 'at' command
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Schedule::At.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
