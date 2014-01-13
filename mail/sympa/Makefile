@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: mail/sympa/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/sympa/Makefile 338394 2014-01-01 20:46:35Z crees $
 
 PORTNAME=	sympa
 PORTVERSION=	6.1.17
@@ -42,6 +42,7 @@ PORTSCOUT=	limit:^[0-9]+(\.[0-9]+)*$$
 
 USERS=		sympa
 GROUPS=		sympa
+# Shebang is corrected by configure script
 USES=		perl5
 GNU_CONFIGURE=	yes
 ICONSDIR?=	www/icons
@@ -62,10 +63,9 @@ CONFIGURE_ARGS+=--bindir=${PREFIX}/libexec/${PORTNAME}	\
 CONFIGURE_ENV+=	lt_cv_sys_max_cmd_len=${CONFIGURE_MAX_CMD_LEN}
 MAKE_ENV?=	PERL_EXTUTILS_AUTOINSTALL=--skip
 SUB_FILES=	pkg-install
+SUB_LIST=	DB_TYPE=${DB_TYPE:tl} WITH_FASTCGI=${PORT_OPTIONS:MFASTCGI}
 
 USE_RC_SUBR=	sympa
-
-MAN8=		alias_manager.8 archived.8 bounced.8 sympa.8
 
 CONFLICTS=	sympa-5*
 
@@ -86,7 +86,6 @@ OPTIONS_SET+=	${option}
 .  endfor
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -107,18 +106,19 @@ RUN_DEPENDS+=	${LOCALBASE}/${APACHEMODDIR}/mod_fastcgi.so:${PORTSDIR}/www/mod_fa
 
 .if ${PORT_OPTIONS:MORACLE}
 RUN_DEPENDS+=	p5-DBD-Oracle>=0:${PORTSDIR}/databases/p5-DBD-Oracle
+DB_TYPE=	oracle
 .elif ${PORT_OPTIONS:MPGSQL}
 SUB_LIST+=	REQ_MYSQL="" REQ_PGSQL=postgresql
 RUN_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
+DB_TYPE=	pg
 .elif ${PORT_OPTIONS:MSYBASE}
 RUN_DEPENDS+=	p5-DBD-Sybase>=0:${PORTSDIR}/databases/p5-DBD-Sybase
+DB_TYPE=	sybase
 .elif ${PORT_OPTIONS:MMYSQL}
 SUB_LIST+=	REQ_MYSQL=mysql REQ_PGSQL=""
 RUN_DEPENDS+=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql
+DB_TYPE=	mysql
 .endif
-
-pre-install:
-	@PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\( *staticdir=\).*$$|\1${DATADIR}|'	\
@@ -127,13 +127,24 @@ post-patch:
 	    -e 's|^\( *bouncedir=\).*$$|\1${DATADIR}/bounce|'		\
 	    -e 's|^\( *execcgidir=\).*$$|\1${PREFIX}/libexec/${PORTNAME}|' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|\(--target.*sympa.conf\)|\1.sample|'	\
+	${REINPLACE_CMD} -e 's|\(--target.*sympa.conf\)|\1.sample|'	\
+			  -e 's|/bin/true$$|:|'				\
 		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's/\$$(DESTDIR)\$$(sampledir)/\$$(sampledir)/g' \
+	@${REINPLACE_CMD} -e 's#\$$(DESTDIR)\$$(sampledir)#${STAGEDIR}\$$(sampledir)#g' \
 		${WRKSRC}/doc/sample/Makefile.in
 
+pre-install:
+	${MKDIR} ${STAGEDIR}${ETCDIR}
+
 post-install:
-	@PKG_PREFIX=${PREFIX} DB_TYPE=${DB_TYPE} WITH_FASTCGI=${WITH_FASTCGI} \
-		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	for dir in $$(sort ${WRKSRC}/createddirs); do \
+		${MKDIR} -m755 ${STAGEDIR}$$dir; \
+		${TOUCH} ${STAGEDIR}$$dir/.keep; \
+		${ECHO_CMD} "@exec chown ${USERS}:${GROUPS} $${dir#${PREFIX}/}" >> ${TMPPLIST}; \
+		${ECHO_CMD} "$${dir#${PREFIX}/}/.keep" >> ${TMPPLIST}; \
+	done; \
+	for dir in $$(sort -r ${WRKSRC}/createddirs); do \
+		${ECHO_CMD} "@unexec rmdir $$dir" >> ${TMPPLIST}; \
+	done
 
 .include <bsd.port.mk>
