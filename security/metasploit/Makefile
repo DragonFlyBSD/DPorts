@@ -1,8 +1,8 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: security/metasploit/Makefile 332457 2013-11-02 08:54:02Z antoine $
+# $FreeBSD: security/metasploit/Makefile 337948 2013-12-29 09:42:39Z antoine $
 
 PORTNAME=	metasploit
-DISTVERSION=	4.7.2
+DISTVERSION=	4.8.2
 CATEGORIES=	security
 MASTER_SITES=	http://downloads.metasploit.com/data/releases/archive/
 DISTNAME=	framework-${DISTVERSION}
