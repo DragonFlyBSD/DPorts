@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: cad/gdsreader/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/gdsreader/Makefile 338552 2014-01-03 15:53:42Z adamw $
 
 PORTNAME=	gdsreader
 PORTVERSION=	0.3.2
@@ -19,9 +19,12 @@ PLIST_FILES=	bin/gdsreader bin/maptolayer \
 PLIST_DIRS=	${EXAMPLESDIR_REL}
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 post-install:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} install-data
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} install-docs
 .endif
 
