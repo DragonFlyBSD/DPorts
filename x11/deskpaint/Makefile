@@ -1,5 +1,5 @@
 # Created by: Kirn Gill <segin2005@gmail.com>
-# $FreeBSD: x11/deskpaint/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/deskpaint/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	deskpaint
 PORTVERSION=	3.1
@@ -15,5 +15,4 @@ PLIST_FILES=	bin/deskpaint
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
