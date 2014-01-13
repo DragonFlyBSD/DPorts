@@ -1,5 +1,5 @@
 # Created by: Alexander Koch <fbsd@meersau.de>
-# $FreeBSD: www/p5-HTML-Chunks/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Chunks/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	HTML-Chunks
 PORTVERSION=	1.55.1
@@ -17,7 +17,4 @@ USE_PERL5=	configure
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAN3=		HTML::Chunks.3 HTML::Chunks::Local.3 HTML::Chunks::Super.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
