@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-epicalc/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: science/R-cran-epicalc/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	epicalc
 PORTVERSION=	2.15.1.0
@@ -10,7 +10,6 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Epidemiological calculator
 
-USE_R_MOD=		yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
