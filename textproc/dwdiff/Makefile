@@ -1,8 +1,8 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: textproc/dwdiff/Makefile 329603 2013-10-06 16:45:07Z danilo $
+# $FreeBSD: textproc/dwdiff/Makefile 338819 2014-01-05 19:44:38Z danilo $
 
 PORTNAME=	dwdiff
-PORTVERSION=	2.0.7
+PORTVERSION=	2.0.9
 CATEGORIES=	textproc
 MASTER_SITES=	http://os.ghalkes.nl/dist/ \
  		http://fossies.org/unix/privat/
@@ -27,8 +27,6 @@ HAS_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--mandir=${MANPREFIX}/man
-
-MANLANG=	"" nl nl.UTF-8
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/doc/${PORTNAME}-${PORTVERSION}|${DOCSDIR_REL}|' \
