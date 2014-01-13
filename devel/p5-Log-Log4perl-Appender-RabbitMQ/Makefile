@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Log-Log4perl-Appender-RabbitMQ/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Log4perl-Appender-RabbitMQ/Makefile 338872 2014-01-06 12:55:03Z az $
 
 PORTNAME=	Log-Log4perl-Appender-RabbitMQ
 PORTVERSION=	0.102220
@@ -21,10 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/l4p-tmpl:${PORTSDIR}/devel/p5-Log-Log4perl \
 		p5-Test-Output>0:${PORTSDIR}/devel/p5-Test-Output \
 		p5-Test-Net-RabbitMQ>0:${PORTSDIR}/devel/p5-Test-Net-RabbitMQ
 
-MAN3=		Log::Log4perl::Appender::RabbitMQ.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
