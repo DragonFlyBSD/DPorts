@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-Cassandra/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Cassandra/Makefile 338808 2014-01-05 17:43:05Z az $
 
 PORTNAME=	Net-Cassandra
 PORTVERSION=	0.35
@@ -14,9 +14,7 @@ COMMENT=	Interface to Cassandra
 RUN_DEPENDS=	p5-Moose>0:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-StrictConstructor>0:${PORTSDIR}/devel/p5-MooseX-StrictConstructor
 
-MAN3=		Net::Cassandra.3
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
