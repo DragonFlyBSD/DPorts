@@ -1,5 +1,5 @@
 # Created by: Erik Greenwald <erik@smluc.org>
-# $FreeBSD: games/fgkicker/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/fgkicker/Makefile 337584 2013-12-26 18:04:55Z marino $
 
 PORTNAME=	fgkicker
 PORTVERSION=	1.0
@@ -9,12 +9,12 @@ MASTER_SITES=	http://www.larfeliz.be/projects/files/fgkicker/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	erik@bz.bzflag.bz
-COMMENT=	A launcher frontend for FlightGear
+COMMENT=	Launcher frontend for FlightGear
 
 RUN_DEPENDS=	fgfs:${PORTSDIR}/games/flightgear
 
 USE_GNOME=	gtk20
-USE_GMAKE=	yes
+USES=		gmake pkgconfig
 
 NO_STAGE=	yes
 post-patch:
