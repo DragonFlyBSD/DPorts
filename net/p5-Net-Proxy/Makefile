@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: net/p5-Net-Proxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Proxy/Makefile 337794 2013-12-27 19:47:35Z jadawin $
 
 PORTNAME=	Net-Proxy
 PORTVERSION=	0.12
@@ -14,18 +14,7 @@ COMMENT=	Framework for proxying network connections in many ways
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::Proxy.3 \
-	Net::Proxy::Connector.3 \
-	Net::Proxy::Connector::connect.3 \
-	Net::Proxy::Connector::connect_ssl.3 \
-	Net::Proxy::Connector::dual.3 \
-	Net::Proxy::Connector::dummy.3 \
-	Net::Proxy::Connector::ssl.3 \
-	Net::Proxy::Connector::tcp.3 \
-	Net::Proxy::Tutorial.3
-
 MAN1=	connect-tunnel.1 \
 	sslh.1
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
