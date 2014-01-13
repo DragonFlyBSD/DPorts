@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: science/libkml/Makefile 333367 2013-11-10 07:10:14Z sunpoet $
+# $FreeBSD: science/libkml/Makefile 337621 2013-12-26 21:48:54Z sunpoet $
 
 PORTNAME=	libkml
 PORTVERSION=	1.2.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for parse, generate, and operate on KML
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 BUILD_DEPENDS=	${LOCALBASE}/include/expat.h:${PORTSDIR}/textproc/expat2 \
 		${LOCALBASE}/bin/curl-config:${PORTSDIR}/ftp/curl
