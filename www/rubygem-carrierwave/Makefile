@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-carrierwave/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD: www/rubygem-carrierwave/Makefile 338276 2013-12-31 10:09:32Z sunpoet $
 
 PORTNAME=	carrierwave
 PORTVERSION=	0.9.0
@@ -8,13 +8,14 @@ MASTER_SITES=	RG
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Upload files, map them to a range of ORMs, store on different backends
 
-RUN_DEPENDS=	rubygem-activesupport>=3.2.0:${PORTSDIR}/devel/rubygem-activesupport \
-		rubygem-activemodel>=3.2.0:${PORTSDIR}/databases/rubygem-activemodel \
+LICENSE=	MIT
+
+RUN_DEPENDS=	rubygem-activemodel>=3.2.0:${PORTSDIR}/databases/rubygem-activemodel \
+		rubygem-activesupport>=3.2.0:${PORTSDIR}/devel/rubygem-activesupport \
 		rubygem-json>=1.7:${PORTSDIR}/devel/rubygem-json
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
 
 .include <bsd.port.mk>
