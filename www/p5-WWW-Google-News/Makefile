@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-WWW-Google-News/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Google-News/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	WWW-Google-News
 PORTVERSION=	0.12
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Google::News.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
