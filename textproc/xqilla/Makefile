@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: textproc/xqilla/Makefile 329980 2013-10-10 09:13:07Z gahr $
+# $FreeBSD: textproc/xqilla/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	xqilla
 PORTVERSION=	2.3.0
@@ -14,7 +14,7 @@ COMMENT=	XQuery and XPath2 library
 
 OPTIONS_DEFINE=	DOCS
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 LIB_DEPENDS=	libxerces-c.so.3:${PORTSDIR}/textproc/xerces-c3
 
