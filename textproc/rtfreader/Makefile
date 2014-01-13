@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: textproc/rtfreader/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rtfreader/Makefile 338945 2014-01-06 21:47:06Z antoine $
 
 PORTNAME=	rtfreader
 PORTVERSION=	1.0
@@ -9,14 +9,13 @@ MASTER_SITES=	http://www.fiction.net/blong/programs/
 DISTNAME=	ms-rtf
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A portable application/ms-rtf parser
+COMMENT=	Portable application/ms-rtf parser
 
 ALL_TARGET=	rtfreader
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/rtfreader
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/rtfreader ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/rtfreader ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
