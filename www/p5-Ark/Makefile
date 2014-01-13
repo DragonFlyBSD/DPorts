@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Ark/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Ark/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	Ark
 PORTVERSION=	0.1.r1
@@ -36,12 +36,4 @@ RUN_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Ark::Command.3 \
-	Ark::Command::Controller.3 \
-	Ark::Command::Model.3 \
-	Ark::Command::Newapp.3 \
-	Ark::Command::Server.3 \
-	Ark::Command::View.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
