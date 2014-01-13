@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/liquibase/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/liquibase/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	liquibase
 PORTVERSION=	2.0.5
@@ -10,7 +10,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}-bin${EXTRACT_SUFX}
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Database Change Management
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
