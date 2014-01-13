@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-vars/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: finance/R-cran-vars/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	vars
 DISTVERSION=	1.5-2
@@ -18,7 +18,6 @@ RUN_DEPENDS=	R-cran-strucchange>0:${PORTSDIR}/finance/R-cran-strucchange \
 		R-cran-lmtest>=0.9.26:${PORTSDIR}/finance/R-cran-lmtest \
 		R-cran-sandwich>=2.2.4:${PORTSDIR}/math/R-cran-sandwich
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
