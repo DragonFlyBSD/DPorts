@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: games/atr3d/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/atr3d/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	atr3d
 PORTVERSION=	0.6
@@ -34,7 +34,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
-USE_OPENAL=		alut
+USES+=			openal:alut
 CONFIGURE_ARGS+=	--enable-sound
 .else
 CONFIGURE_ARGS+=	--disable-sound
