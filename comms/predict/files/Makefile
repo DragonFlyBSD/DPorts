@@ -1,4 +1,7 @@
-# $FreeBSD: comms/predict/files/Makefile 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: comms/predict/files/Makefile 337931 2013-12-29 00:01:51Z db $
+
+PREFIX=		%%PREFIX%%
+STAGEDIR=	%%STAGEDIR%%
 
 .ifndef	CC
 CC	= 	-cc
@@ -24,17 +27,17 @@ clean:
 	rm -f *.o predict *core *~ \#* *.txt vocalizer/vocalizer
 
 install:
-	mkdir -p ${PREFIX}/share/predict/
-	mkdir ${PREFIX}/share/predict/default
-	mkdir ${PREFIX}/share/predict/vocalizer
-	cp default/predict.db ${PREFIX}/share/predict/default
-	cp default/predict.qth ${PREFIX}/share/predict/default
-	cp default/predict.tle ${PREFIX}/share/predict/default
-	cp vocalizer/*.wav ${PREFIX}/share/predict/vocalizer
-	install	predict ${PREFIX}/bin
-	install vocalizer/vocalizer ${PREFIX}/bin
+	mkdir -p ${STAGEDIR}${PREFIX}/share/predict/
+	mkdir ${STAGEDIR}${PREFIX}/share/predict/default
+	mkdir ${STAGEDIR}${PREFIX}/share/predict/vocalizer
+	cp default/predict.db ${STAGEDIR}${PREFIX}/share/predict/default
+	cp default/predict.qth ${STAGEDIR}${PREFIX}/share/predict/default
+	cp default/predict.tle ${STAGEDIR}${PREFIX}/share/predict/default
+	cp vocalizer/*.wav ${STAGEDIR}${PREFIX}/share/predict/vocalizer
+	cp predict ${STAGEDIR}${PREFIX}/bin
+	cp vocalizer/vocalizer ${STAGEDIR}${PREFIX}/bin
 
 install.man:
-	install docs/man/predict.1 ${PREFIX}/man/man1
+	install docs/man/predict.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .PHONY:	clean build
