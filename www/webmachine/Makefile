@@ -1,4 +1,4 @@
-# $FreeBSD: www/webmachine/Makefile 334037 2013-11-16 23:35:39Z olgeni $
+# $FreeBSD: www/webmachine/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	webmachine
 PORTVERSION=	1.10.5
@@ -7,7 +7,7 @@ CATEGORIES=	www devel
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	HTTP semantic awareness on top mochiweb
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang \
 		mochiweb-basho>=0:${PORTSDIR}/www/mochiweb-basho
