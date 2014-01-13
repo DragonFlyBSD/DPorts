@@ -1,9 +1,9 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/epdfview/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD: graphics/epdfview/Makefile 337749 2013-12-27 16:54:21Z kwm $
 
 PORTNAME=	epdfview
 PORTVERSION=	0.1.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	http://trac.emma-soft.com/epdfview/chrome/site/releases/ \
 		http://mirror.slitaz.org/sources/packages/e/
@@ -14,7 +14,7 @@ COMMENT=	A lightweight PDF document viewer
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	cppunit-config:${PORTSDIR}/devel/cppunit
-LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
