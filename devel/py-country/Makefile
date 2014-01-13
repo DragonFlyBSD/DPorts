@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-country/Makefile 336155 2013-12-11 10:34:02Z demon $
+# $FreeBSD: devel/py-country/Makefile 338029 2013-12-29 17:15:51Z demon $
 
 PORTNAME=	country
 PORTVERSION=	1.3
@@ -14,10 +14,17 @@ COMMENT=	Python API for ISO country, subdivision, language and currency
 
 USE_ZIP=	yes
 USE_PYTHON=	yes
+USES=		gettext:build
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	pycountry
 PYDISTUTILS_AUTOPLIST=	yes
 
 NO_STAGE=	yes
+
+post-patch:
+	${RM} ${WRKSRC}/src/pycountry/locales/tr/LC_MESSAGES/iso639.po.orig
+
+pre-build:
+	${LOCALBASE}/bin/msgfmt ${WRKSRC}/src/pycountry/locales/tr/LC_MESSAGES/iso639.po -o ${WRKSRC}/src/pycountry/locales/tr/LC_MESSAGES/iso639.mo
 
 .include <bsd.port.mk>
