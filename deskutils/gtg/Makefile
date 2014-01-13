@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gtg/Makefile 337232 2013-12-23 08:53:45Z rm $
+# $FreeBSD: deskutils/gtg/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	gtg
 PORTVERSION=	0.3.1
@@ -15,7 +15,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.82.4:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_PKGNAMEPREFIX}liblarch>=2.1:${PORTSDIR}/devel/py-liblarch \
 		xset:${PORTSDIR}/x11/xset
 
-FETCH_ARGS=	-pRr
 USE_GNOME=	pygobject pygtk2
 USES=		gettext desktop-file-utils shebangfix
 INSTALLS_ICONS=	yes
