@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/chiconv/Makefile 327835 2013-09-21 15:42:24Z sunpoet $
+# $FreeBSD: chinese/chiconv/Makefile 339203 2014-01-09 07:20:37Z vanilla $
 
 PORTNAME=	chiconv
 PORTVERSION=	11.1
@@ -18,7 +18,6 @@ GH_ACCOUNT=	buganini
 GH_COMMIT=	9501c80
 
 MAKE_ARGS=	PREFIX=${PREFIX}
-NO_STAGE=	yes
 
 PLIST_FILES=	bin/chiconv
 
