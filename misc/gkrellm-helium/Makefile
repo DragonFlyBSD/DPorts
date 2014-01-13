@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: misc/gkrellm-helium/Makefile 332480 2013-11-02 13:27:04Z pawel $
+# $FreeBSD: misc/gkrellm-helium/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	gkrellm-helium
 PORTVERSION=	2.3.1
@@ -14,8 +14,6 @@ COMMENT=	GKrellM plugin reading data from helium thermometer at Strahov, Prague
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
-
-FETCH_ARGS=	-Fpr
 
 USES=		pkgconfig
 
