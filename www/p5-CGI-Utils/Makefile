@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: www/p5-CGI-Utils/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Utils/Makefile 338785 2014-01-05 15:36:32Z az $
 
 PORTNAME=	CGI-Utils
 PORTVERSION=	0.12
@@ -13,8 +13,4 @@ COMMENT=	Utilities for retrieving information through the CGI
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::Utils.3 \
-		CGI::Utils::UploadFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
