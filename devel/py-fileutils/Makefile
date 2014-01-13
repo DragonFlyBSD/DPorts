@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-fileutils/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-fileutils/Makefile 337680 2013-12-27 10:02:34Z wg $
 
 PORTNAME=	fileutils
 PORTVERSION=	0.6
@@ -14,7 +14,6 @@ COMMENT=	File I/O related functions and classes
 USE_BZIP2=		yes
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	FileUtils
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
