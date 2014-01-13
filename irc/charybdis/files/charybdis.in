@@ -1,6 +1,6 @@
 #!/bin/sh
-
-# $FreeBSD: irc/charybdis/files/charybdis.in 309821 2013-01-02 15:27:48Z crees $
+#
+# $FreeBSD: irc/charybdis/files/charybdis.in 338013 2013-12-29 15:46:13Z crees $
 #
 # PROVIDE: charybdis
 # REQUIRE: LOGIN
