@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Locator/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Locator/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	HTTP-MobileAgent-Plugin-Locator
 PORTVERSION=	0.04
@@ -21,7 +21,4 @@ TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTTP::MobileAgent::Plugin::Locator.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
