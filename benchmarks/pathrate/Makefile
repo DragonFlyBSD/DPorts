@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: benchmarks/pathrate/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/pathrate/Makefile 338728 2014-01-05 01:06:11Z bapt $
 
 PORTNAME=	pathrate
 PORTVERSION=	2.4.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.cc.gatech.edu/fac/Constantinos.Dovrolis/
 DISTNAME=	${PORTNAME}
 
 MAINTAINER=	dikshie@lapi.itb.ac.id
-COMMENT=	A measurement tool for capacity estimation of network paths
+COMMENT=	Measurement tool for capacity estimation of network paths
 
 GNU_CONFIGURE=	yes
 USES=		gmake
@@ -18,10 +18,9 @@ MAKEFILE=	makefile
 
 PLIST_FILES=	bin/pathrate_rcv bin/pathrate_snd
 
-NO_STAGE=	yes
 do-install:
 .for f in pathrate_rcv pathrate_snd
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
 .include <bsd.port.mk>
