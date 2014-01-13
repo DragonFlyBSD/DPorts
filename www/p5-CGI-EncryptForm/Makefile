@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: www/p5-CGI-EncryptForm/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-EncryptForm/Makefile 338776 2014-01-05 13:53:37Z az $
 
 PORTNAME=	CGI-EncryptForm
 PORTVERSION=	1.02
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CGI::EncryptForm.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
