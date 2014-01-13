@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/py-probstat/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-probstat/Makefile 337852 2013-12-28 11:14:20Z wg $
 
 PORTNAME=	probstat
 PORTVERSION=	0.912
@@ -12,11 +12,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Probability And Statistics Utils for Python
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/probstat.so
-PLIST_SUB=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR:S,^${LOCALBASE}/,,g}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGVERSION=	0.9
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
