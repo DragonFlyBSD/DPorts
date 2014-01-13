@@ -1,5 +1,5 @@
 # Created by: Ayumi M <ayu@commun.jp>
-# $FreeBSD: archivers/packddir/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/packddir/Makefile 338669 2014-01-04 18:45:44Z bapt $
 
 PORTNAME=	packddir
 PORTVERSION=	0.0.6
@@ -13,16 +13,15 @@ COMMENT=	These trivial utilities can unpack and create PackdDir archives
 
 WRKSRC=		${WRKDIR}/src
 
-NO_STAGE=	yes
-PLIST_FILES=	bin/upackddir
-MAN1=		upackddir.1
-
-.include <bsd.port.pre.mk>
+PLIST_FILES=	bin/upackddir \
+		man/man1/upackddir.1.gz
+MAKE_ARGS=	CC=${CC}
 
 post-patch:
-	${REINPLACE_CMD} -e 's|$$(DESTDIR)/usr|${PREFIX}|' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's|$$(DESTDIR)/usr|$$(DESTDIR)${PREFIX}|' ${WRKSRC}/Makefile
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/upackddir.1 ${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/upackddir.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/upackddir
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
