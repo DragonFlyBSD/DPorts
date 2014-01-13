@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Fixture-DBIC-Schema/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Fixture-DBIC-Schema/Makefile 338866 2014-01-06 12:05:42Z az $
 
 PORTNAME=	Test-Fixture-DBIC-Schema
 PORTVERSION=	0.04
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Fixture::DBIC::Schema.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
