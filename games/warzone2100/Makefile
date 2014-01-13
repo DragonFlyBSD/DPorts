@@ -1,4 +1,4 @@
-# $FreeBSD: games/warzone2100/Makefile 337222 2013-12-22 22:44:48Z amdmi3 $
+# $FreeBSD: games/warzone2100/Makefile 339168 2014-01-08 20:05:12Z amdmi3 $
 
 PORTNAME=	warzone2100
 PORTVERSION=	3.1.1
@@ -25,16 +25,17 @@ LIB_DEPENDS=	libphysfs.so:${PORTSDIR}/devel/physfs \
 RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fonts/dejavu
 
 USE_XZ=		yes
-USES=		bison gmake pkgconfig compiler:c++11-lang # actually, old gcc fails on unknown -W flag
+USES=		bison gmake openal:al pkgconfig compiler:c++11-lang # actually, old gcc fails on unknown -W flag
 GNU_CONFIGURE=	yes
-USE_OPENAL=	al
 USE_GL=		yes
 USE_SDL=	sdl
 USE_QT4=	corelib network script gui moc_build
 QT_NONSTANDARD=	yes
 CONFIGURE_ARGS=	--program-transform-name="" --with-distributor="FreeBSD ports"
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}" \
-		PATH="${LOCALBASE}/bin:$$PATH"
+		PATH="${LOCALBASE}/bin:$$PATH" \
+		CCOMPILER="${CC}" \
+		CXXCOMPILER="${CXX}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 REINPLACE_ARGS=	-i ''
