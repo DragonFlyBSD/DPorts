@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-libpinyin/Makefile 336173 2013-12-11 14:58:29Z bapt $
+# $FreeBSD: chinese/fcitx-libpinyin/Makefile 339153 2014-01-08 16:12:38Z vanilla $
 
 PORTNAME=	fcitx-libpinyin
 PORTVERSION=	0.2.1
@@ -22,7 +22,6 @@ USES=		cmake gettext pkgconfig
 USE_GNOME=	intltool
 INSTALLS_ICONS=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${LN} -s ${_DISTDIR}/model.text.${MDVER}.tar.gz ${WRKSRC}/data
 
