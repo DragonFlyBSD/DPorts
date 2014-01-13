@@ -1,4 +1,4 @@
-# $FreeBSD: devel/R-cran-randomForest/Makefile 335044 2013-11-27 18:56:43Z dbn $
+# $FreeBSD: devel/R-cran-randomForest/Makefile 337846 2013-12-28 10:28:40Z dbn $
 
 PORTNAME=	randomForest
 DISTVERSION=	4.6-7
@@ -11,7 +11,6 @@ COMMENT=	Classification based on a forest of trees using random inputs
 
 RUN_DEPENDS=	R-cran-RColorBrewer>=1.0.5_6:${PORTSDIR}/graphics/R-cran-RColorBrewer
 
-USE_R_MOD=	yes
-R_MOD_AUTOPLIST=	yes
+USES=	cran:auto-plist
 
 .include <bsd.port.mk>
