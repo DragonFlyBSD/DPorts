@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/hexcurse/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/hexcurse/Makefile 337727 2013-12-27 13:08:28Z jadawin $
 
 PORTNAME=	hexcurse
 PORTVERSION=	1.55
@@ -12,8 +12,6 @@ COMMENT=	A versatile ncurses-based hex editor
 
 GNU_CONFIGURE=	yes
 
-MAN1=		hexcurse.1
-PLIST_FILES=	bin/hexcurse
+PLIST_FILES=	bin/hexcurse man/man1/hexcurse.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
