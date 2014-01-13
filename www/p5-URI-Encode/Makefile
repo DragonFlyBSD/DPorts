@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: www/p5-URI-Encode/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-URI-Encode/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	URI-Encode
 PORTVERSION=	0.09
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		URI::Encode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
