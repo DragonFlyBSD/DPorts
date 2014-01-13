@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: multimedia/kaffeine/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/kaffeine/Makefile 338429 2014-01-02 09:15:39Z arved $
 
 PORTNAME=	kaffeine
 PORTVERSION=	1.2.2
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia kde
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	kaffeine/current
 
-MAINTAINER=	arved@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A xine-base multimedia player
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/dvb/ca.h:${PORTSDIR}/multimedia/v4l_compat
