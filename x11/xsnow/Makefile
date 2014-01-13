@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xsnow/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xsnow/Makefile 339245 2014-01-09 14:48:54Z vanilla $
 
 PORTNAME=	xsnow
 PORTVERSION=	1.42
@@ -12,10 +12,8 @@ COMMENT=	Create a snowy and Santa-y desktop
 
 USES=		imake
 USE_XORG=	xpm
-MAN6=		xsnow.6
-PLIST_FILES=	bin/xsnow
+PLIST_FILES=	bin/xsnow man/man6/xsnow.6.gz
 
-NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} \
 		-e 's: BINDIR .*:BINDIR=${PREFIX}/bin:' \
