@@ -1,4 +1,4 @@
-# $FreeBSD: dns/bind-tools/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/bind-tools/Makefile 338877 2014-01-06 13:34:48Z mat $
 
 PORTNAME=	bind-tools
 
@@ -12,12 +12,10 @@ MASTERDIR=	${.CURDIR}/../../dns/bind99
 
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
+PKGINSTALL=	/nonexistent
 
 BIND_TOOLS_SLAVE=	YES
 
-MAN1=	dig.1 host.1 nslookup.1
-
-NO_STAGE=	yes
 post-patch:
 	@${MV} ${WRKSRC}/Makefile.in ${WRKSRC}/Makefile.in.presed
 	@${SED} -e 's#^SUBDIRS.*#SUBDIRS = lib bin#' \
@@ -32,8 +30,8 @@ post-patch:
 
 do-install:
 .for file in dig host nslookup
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/dig/${file} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bin/dig/${file}.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/dig/${file} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/bin/dig/${file}.1 ${STAGEDIR}${MANPREFIX}/man/man1
 .endfor
 
 .include "${MASTERDIR}/Makefile"
