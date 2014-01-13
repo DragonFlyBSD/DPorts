@@ -1,8 +1,9 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: lang/lua52/Makefile 336503 2013-12-15 00:56:05Z bapt $
+# $FreeBSD: lang/lua52/Makefile 339329 2014-01-10 08:39:12Z bapt $
 
 PORTNAME=	lua
 PORTVERSION=	5.2.3
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.lua.org/ftp/
 PKGNAMESUFFIX=	52
@@ -40,11 +41,22 @@ MAKE_ARGS+=	MYCFLAGS="${CFLAGS} -DLUA_USE_LINUX" \
 		INSTALL_INC=${STAGEDIR}${PREFIX}/include/lua52 \
 		INSTALL_EXEC="${INSTALL_PROGRAM}"
 
-.include <bsd.port.options.mk>
+# Cope with the lack of support for Lua 5.2 in bsd.lua.mk.  These
+# overrides, which are required below, should be removed once bsd.lua.mk
+# understands this lua version.
+LUA_PREFIX?=	${PREFIX}
+LUA_SUBDIR?=	lua${PKGNAMESUFFIX}
+LUA_INCDIR?=	${LUA_PREFIX}/include/${LUA_SUBDIR}
+LUA_LIBDIR?=	${LUA_PREFIX}/lib
 
-.if ${ARCH} == "x86_64" || ${ARCH} == "powerpc"
-CFLAGS+=	-fPIC
-.endif
+SUB_FILES=	lua-${LUA_VER}.pc
+SUB_LIST=	version=${PORTVERSION} \
+		includedir=${LUA_INCDIR} \
+		libdir=${LUA_LIBDIR} \
+		soname=lua-${LUA_VER}
+
+CFLAGS_x86_64=	-fPIC
+CFLAGS_powerpc=	-fPIC
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,rand *(,random(,g' \
@@ -53,9 +65,12 @@ post-patch:
 		${WRKSRC}/src/luaconf.h
 
 post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/liblua-${LUA_VER}.so
 	@${MV} ${STAGEDIR}${PREFIX}/man/man1/lua.1 \
 		${STAGEDIR}${PREFIX}/man/man1/lua52.1
 	@${MV} ${STAGEDIR}${PREFIX}/man/man1/luac.1 \
 		${STAGEDIR}${PREFIX}/man/man1/luac52.1
+	${INSTALL_DATA} ${WRKDIR}/lua-${LUA_VER}.pc \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.mk>
