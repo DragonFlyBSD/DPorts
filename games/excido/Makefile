@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/excido/Makefile 332367 2013-11-01 13:18:26Z danilo $
+# $FreeBSD: games/excido/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	excido
 PORTVERSION=	0.1.5c
@@ -22,8 +22,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_BZIP2=	yes
 USE_GL=		yes
 USE_SDL=	image sdl ttf
-USE_OPENAL=	al alut
-USES=		gmake
+USES=		gmake openal:al,alut
 
 OPTIONS_DEFINE=	DOCS
 
