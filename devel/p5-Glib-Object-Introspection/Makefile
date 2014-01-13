@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Glib-Object-Introspection/Makefile 336197 2013-12-11 18:49:33Z sunpoet $
+# $FreeBSD: devel/p5-Glib-Object-Introspection/Makefile 338457 2014-01-02 16:23:19Z sunpoet $
 
 PORTNAME=	Glib-Object-Introspection
-PORTVERSION=	0.017
+PORTVERSION=	0.018
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
