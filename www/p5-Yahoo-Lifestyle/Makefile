@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: www/p5-Yahoo-Lifestyle/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Yahoo-Lifestyle/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Yahoo-Lifestyle
 PORTVERSION=	0.2
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	hcchien@hcchien.org
-COMMENT=	A simple interface for Yahoo! Taiwan Lifestyle open APIs
+COMMENT=	Simple interface for Yahoo! Taiwan Lifestyle open APIs
 
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Yahoo-BBAuth>=0:${PORTSDIR}/security/p5-Yahoo-BBAuth \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Yahoo::Lifestyle.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
