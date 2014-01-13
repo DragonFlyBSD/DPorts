@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/freeciv-nox11/Makefile 329275 2013-10-04 09:36:32Z bapt $
+# $FreeBSD: games/freeciv-nox11/Makefile 337972 2013-12-29 12:27:20Z johans $
 
 MASTERDIR=	${.CURDIR}/../freeciv
 
@@ -7,5 +7,4 @@ MASTERDIR=	${.CURDIR}/../freeciv
 OPTIONS_EXCLUDE=	SDL X11
 PKGNAMESUFFIX=	-nox11
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
