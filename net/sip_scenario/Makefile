@@ -1,5 +1,5 @@
 # Created by: dterry@digifonica.com
-# $FreeBSD: net/sip_scenario/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/sip_scenario/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	sip_scenario
 PORTVERSION=	1.2.7
@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME}.v${PORTVERSION}
 MAINTAINER=	fbsd-ports@opsec.eu
 COMMENT=	SIP call flow creator (HTML format)
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 USE_ZIP=	yes
 USES=		perl5
