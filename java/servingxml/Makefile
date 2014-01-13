@@ -1,5 +1,5 @@
 # Created by: jpbeconne
-# $FreeBSD: java/servingxml/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/servingxml/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	servingxml
 PORTVERSION=	1.1.2
@@ -18,7 +18,6 @@ ANT_CMD?=	${LOCALBASE}/bin/ant
 ANT=	${SETENV} JAVA_HOME=${JAVA_HOME} ${ANT_CMD}
 ANT_TARGETS=	dist
 JAVA_BUILD=	yes
-FETCH_ARGS=	-pRr
 
 NO_STAGE=	yes
 do-build:
