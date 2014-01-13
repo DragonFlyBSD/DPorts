@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: shells/vshnu/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/vshnu/Makefile 337662 2013-12-27 09:24:39Z bapt $
 
 PORTNAME=	vshnu
 PORTVERSION=	1.0305
@@ -13,8 +13,8 @@ COMMENT=	New Visual Shell
 BUILD_DEPENDS=	p5-Term-Screen>=0:${PORTSDIR}/devel/p5-Term-Screen
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
+USES=		perl5 shebangfix
 USE_PERL5=	configure
+SHEBANG_FILES=	*.pl
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
