@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Model-Tarantool/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Model-Tarantool/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Catalyst-Model-Tarantool
 PORTVERSION=	0.0.1
@@ -19,7 +19,4 @@ USES=		perl5
 USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-MAN3=		Catalyst::Model::Tarantool.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
