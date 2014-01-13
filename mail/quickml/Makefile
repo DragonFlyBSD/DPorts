@@ -1,5 +1,5 @@
 # Created by: Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
-# $FreeBSD: mail/quickml/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/quickml/Makefile 338481 2014-01-02 20:05:44Z swills $
 
 PORTNAME=	quickml
 PORTVERSION=	0.7
@@ -36,9 +36,7 @@ LIMIT_DESC=	Creators and Members Limitation Patch
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
-.if ${RUBY_VER} == 1.9
 EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-ruby19-*
-.endif
 
 .if ${PORT_OPTIONS:MANALOG}
 USE_GHOSTSCRIPT_RUN=	yes
