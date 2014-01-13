@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/vo-amrwbenc/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: audio/vo-amrwbenc/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	vo-amrwbenc
 PORTVERSION=	0.1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	VisualOn AMR-WB encoder library
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
