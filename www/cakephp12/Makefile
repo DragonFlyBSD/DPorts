@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/cakephp12/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: www/cakephp12/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	cakephp
 PORTVERSION=	1.2.10
@@ -13,7 +13,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A framework for developing PHP web applications
 
 GITVERSION=	0-ge6e50e8
-FETCH_ARGS=	-pRr
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-da67eb8
 
 PORTDOCS=	README
