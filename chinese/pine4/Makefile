@@ -1,5 +1,5 @@
 # Created by: Tai-hwa Liang <avatar@www.mmlab.cse.yzu.edu.tw>
-# $FreeBSD: chinese/pine4/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/pine4/Makefile 338553 2014-01-03 15:59:41Z adamw $
 
 PORTNAME=	pine
 PORTVERSION=	4.64
@@ -28,6 +28,9 @@ NO_LATEST_LINK=	yes
 MAN1=		pine.1 pico.1 pilot.1
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 pre-fetch:
 .if !defined(BATCH) && !defined(PACKAGE_BUILDING)
 	${SH} pkg-install
@@ -82,7 +85,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1/pico.1
 	${INSTALL_MAN} ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1/pilot.1
 	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1/pine.1
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${INSTALL} -d -o ${SHAREOWN} -g ${SHAREGRP} \
 			${PREFIX}/share/doc/pine \
 			${PREFIX}/share/doc/pine/tech-notes
