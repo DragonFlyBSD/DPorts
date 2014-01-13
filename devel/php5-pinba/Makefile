@@ -1,5 +1,5 @@
 # Created by: raven428 <raven428@gmail.com>
-# $FreeBSD: devel/php5-pinba/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/php5-pinba/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	pinba
 PORTVERSION=	2012.03.20
@@ -15,7 +15,6 @@ COMMENT=	PHP-extension part of statistics server for PHP
 LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
 
 GITVERSION=	f76b673
-FETCH_ARGS=	-pRr
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
