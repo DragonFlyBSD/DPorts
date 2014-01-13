@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-instant/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-instant/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	instant
 PORTVERSION=	${MMVERSION}.0
@@ -17,8 +17,6 @@ RUN_DEPENDS=	swig2.0:${PORTSDIR}/devel/swig20
 USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	instant
-
-FETCH_ARGS=	-F
 
 MAN1=		instant-clean.1 \
 		instant-showcache.1
