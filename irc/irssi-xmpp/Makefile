@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: irc/irssi-xmpp/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/irssi-xmpp/Makefile 337727 2013-12-27 13:08:28Z jadawin $
 
 PORTNAME=	irssi-xmpp
 PORTVERSION=	0.52
@@ -17,23 +17,16 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		pkgconfig
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 DATADIR=	${PREFIX}/share/irssi
 DOCSDIR=	${PREFIX}/share/doc/irssi
+CFLAGS_x86_64=	-fPIC
 
 OPTIONS_DEFINE=	DOCS
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 # Try to unbreak parallel builds (-jX)
 	@${REINPLACE_CMD} -E 's|cd (.+) && (\$${MAKE})|\2 -C \1|' \
 		${WRKSRC}/Makefile ${WRKSRC}/src/Makefile
-# Uphold CFLAGS
-	@${REINPLACE_CMD} -e 's|CFLAGS =|CFLAGS +=|' ${WRKSRC}/config.mk
-.if ! ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e 's|doc-install ||' ${WRKSRC}/Makefile
-.endif
 
 .include <bsd.port.mk>
