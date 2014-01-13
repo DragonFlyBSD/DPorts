@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-UNIVERSAL-which/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-UNIVERSAL-which/Makefile 338853 2014-01-06 09:57:19Z az $
 
 PORTNAME=	UNIVERSAL-which
 PORTVERSION=	0.06
@@ -11,7 +11,5 @@ COMMENT=	Perl extension for telling fully qualified name of the method
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		UNIVERSAL::which.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
