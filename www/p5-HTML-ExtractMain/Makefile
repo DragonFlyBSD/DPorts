@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: www/p5-HTML-ExtractMain/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-ExtractMain/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	HTML-ExtractMain
 PORTVERSION=	0.62
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-File-Slurp>=9999.12:${PORTSDIR}/devel/p5-File-Slurp \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTML::ExtractMain.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
