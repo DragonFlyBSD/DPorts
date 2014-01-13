@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ufl/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-ufl/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	ufl
 PORTVERSION=	${MMVERSION}0
@@ -16,8 +16,6 @@ LICENSE=	LGPL3
 USE_PYTHON=		-2.7
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	UFL
-
-FETCH_ARGS=	-F
 
 MAN1=		form2ufl.1 \
 		ufl-analyse.1 \
