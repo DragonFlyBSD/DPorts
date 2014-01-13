@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/py-seqdiag/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-seqdiag/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	seqdiag
 PORTVERSION=	0.8.2
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Simple sequence-diagram image generator
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PKGNAMEPREFIX}imaging>=1.1.5:${PORTSDIR}/graphics/py-imaging \
 		${PKGNAMEPREFIX}funcparserlib>=0.3.4:${PORTSDIR}/devel/py-funcparserlib \
