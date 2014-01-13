@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-ExtractContent/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-ExtractContent/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	HTML-ExtractContent
 PORTVERSION=	0.10
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTML::ExtractContent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
