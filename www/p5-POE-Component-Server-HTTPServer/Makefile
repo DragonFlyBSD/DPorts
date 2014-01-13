@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-# $FreeBSD: www/p5-POE-Component-Server-HTTPServer/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-POE-Component-Server-HTTPServer/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	POE-Component-Server-HTTPServer
 PORTVERSION=	0.9.2
@@ -21,14 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Server::HTTPServer.3 \
-		POE::Component::Server::HTTPServer::BasicAuthenHandler.3 \
-		POE::Component::Server::HTTPServer::Examples.3 \
-		POE::Component::Server::HTTPServer::Handler.3 \
-		POE::Component::Server::HTTPServer::NotFoundHandler.3 \
-		POE::Component::Server::HTTPServer::ParameterParseHandler.3 \
-		POE::Component::Server::HTTPServer::StaticHandler.3 \
-		POE::Component::Server::HTTPServer::TemplateHandler.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
