@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: www/py-falcon/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-falcon/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	falcon
 PORTVERSION=	0.1.4
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	lichray@gmail.com
 COMMENT=	High-performance Python framework for building cloud APIs
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	cython>=0.11.2:${PORTSDIR}/lang/cython
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}testtools>=0:${PORTSDIR}/devel/py-testtools \
