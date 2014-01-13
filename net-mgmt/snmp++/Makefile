@@ -1,5 +1,5 @@
 # Created by: nicolai@catpipe.net
-# $FreeBSD: net-mgmt/snmp++/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/snmp++/Makefile 339140 2014-01-08 14:39:51Z bapt $
 
 PORTNAME=	snmp++
 PORTVERSION=	3.2.25
@@ -13,14 +13,15 @@ COMMENT=	SNMP C++ library with V3 support
 MAKEFILE=	Makefile.FreeBSD
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
+MAKE_ARGS=	CC="${CXX}"
 
-NO_STAGE=	yes
 post-extract:
 	${CP} ${FILESDIR}/Makefile.FreeBSD ${WRKSRC}
 
 post-install:
-	${LN} -sf ${PREFIX}/lib/libsnmp++.so.2.0.0 ${PREFIX}/lib/libsnmp++.so
+	${LN} -sf ${PREFIX}/lib/libsnmp++.so.2.0.0 ${STAGEDIR}${PREFIX}/lib/libsnmp++.so
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libsnmp++.so.2.0.0
 
 .include <bsd.port.mk>
