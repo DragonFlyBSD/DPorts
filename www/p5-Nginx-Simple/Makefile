@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: www/p5-Nginx-Simple/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Nginx-Simple/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	Nginx-Simple
 PORTVERSION=	0.07
@@ -13,10 +13,4 @@ COMMENT=	Perl 5 module for easy to use interface for Nginx Perl Module
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Nginx::Simple::Dispatch.3 Nginx::Simple::Cookie.3 \
-		Nginx::Simple::Ajax.3 Nginx::Simple.3 \
-		Nginx::Simple::Dispatcher::Attributes.3 \
-		Nginx::Simple::Dispatcher.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
