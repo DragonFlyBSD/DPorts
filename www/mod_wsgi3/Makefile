@@ -1,4 +1,4 @@
-# $FreeBSD: www/mod_wsgi3/Makefile 334797 2013-11-24 23:33:15Z ohauer $
+# $FreeBSD: www/mod_wsgi3/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	mod_wsgi
 PORTVERSION=	3.4
@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	3
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Python WSGI adapter module for Apache
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 CONFLICTS=	${PKGNAMEPREFIX}mod_wsgi2.* mod_wsgi2.* \
 		${PKGNAMEPREFIX}mod_wsgi-2.* mod_wsgi-2.*
