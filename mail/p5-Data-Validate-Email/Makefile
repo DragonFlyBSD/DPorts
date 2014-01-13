@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: mail/p5-Data-Validate-Email/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Data-Validate-Email/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Data-Validate-Email
 PORTVERSION=	0.04
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mopsfelder@gmail.com
-COMMENT=	A common email validation written in Perl
+COMMENT=	Common email validation written in Perl
 
 RUN_DEPENDS=	p5-Data-Validate-Domain>=0:${PORTSDIR}/dns/p5-Data-Validate-Domain \
 		p5-Email-Address>=0:${PORTSDIR}/mail/p5-Email-Address \
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Data-Validate-Domain>=0:${PORTSDIR}/dns/p5-Data-Validate-Domain 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Validate::Email.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
