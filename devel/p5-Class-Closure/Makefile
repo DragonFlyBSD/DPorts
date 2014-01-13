@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Closure/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Closure/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	Class-Closure
 PORTVERSION=	0.30
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Class::Closure.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
