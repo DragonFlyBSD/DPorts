@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-AnyEvent-Mojo/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-AnyEvent-Mojo/Makefile 338763 2014-01-05 13:05:56Z az $
 
 PORTNAME=	AnyEvent-Mojo
 PORTVERSION=	0.8003
@@ -21,9 +21,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	AnyEvent::Mojo.3 \
-	AnyEvent::Mojo::Server.3 \
-	AnyEvent::Mojo::Server::Connection.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
