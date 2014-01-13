@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-ExtDirect/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-ExtDirect/Makefile 338788 2014-01-05 15:44:11Z az $
 
 PORTNAME=	CGI-ExtDirect
 PORTVERSION=	2.02
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::ExtDirect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
