@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-hiera-json/Makefile 336657 2013-12-16 18:57:31Z mat $
+# $FreeBSD: sysutils/rubygem-hiera-json/Makefile 337533 2013-12-26 14:58:22Z mat $
 
 PORTNAME=	hiera-json
 PORTVERSION=	0.4.0
@@ -17,5 +17,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
