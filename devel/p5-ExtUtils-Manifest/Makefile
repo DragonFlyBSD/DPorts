@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-ExtUtils-Manifest/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ExtUtils-Manifest/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	ExtUtils-Manifest
 PORTVERSION=	1.61
@@ -14,7 +14,4 @@ COMMENT=	Utilities to write and check a MANIFEST file
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		ExtUtils::Manifest.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
