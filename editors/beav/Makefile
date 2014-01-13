@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: editors/beav/Makefile 336354 2013-12-13 15:14:41Z naddy $
+# $FreeBSD: editors/beav/Makefile 337830 2013-12-28 04:28:50Z marino $
 
 PORTNAME=	beav
 PORTVERSION=	1.40.18
@@ -21,7 +21,7 @@ ALL_TARGET=	beav
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DUNIX -DBSD -DNOPROTO"
 
 post-patch:
-	${REINPLACE_CMD} -e 's|(OFILES):|$$(OFILES):|' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's|(OFILES):|$$(OFILES):|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/beav.1
 
 do-install:
