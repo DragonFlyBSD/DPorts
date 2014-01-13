@@ -1,5 +1,5 @@
 # Created by: Oyvind Moll <oyvindmo@initio.no>
-# $FreeBSD: audio/juke/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/juke/Makefile 337979 2013-12-29 13:01:28Z antoine $
 
 PORTNAME=	juke
 PORTVERSION=	0.7
@@ -11,10 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple (n)curses based juke box program
 
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 
-MAN1=		juke.1
-PLIST_FILES=	bin/juke etc/juke.conf.sample
 SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	VI_BINDINGS
@@ -27,9 +24,6 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-vi
 .endif
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/juke.conf ${PREFIX}/etc/juke.conf.sample
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
+	${INSTALL_DATA} ${WRKSRC}/juke.conf ${STAGEDIR}${PREFIX}/etc/juke.conf.sample
 
 .include <bsd.port.mk>
