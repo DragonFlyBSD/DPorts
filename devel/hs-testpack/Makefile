@@ -1,9 +1,9 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-testpack/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-testpack/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	testpack
 PORTVERSION=	2.1.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -13,6 +13,5 @@ LICENSE=	LGPL21
 
 USE_CABAL=	HUnit mtl QuickCheck>=2.1.0.3 random
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
