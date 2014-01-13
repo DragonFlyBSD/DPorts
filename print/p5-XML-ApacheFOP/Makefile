@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis@yahoo.com>
-# $FreeBSD: print/p5-XML-ApacheFOP/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/p5-XML-ApacheFOP/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	XML-ApacheFOP
 PORTVERSION=	0.03
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::ApacheFOP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
