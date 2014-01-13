@@ -1,8 +1,8 @@
-# $FreeBSD: devel/hs-test-framework-hunit/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/hs-test-framework-hunit/Makefile 339286 2014-01-09 21:32:12Z pgj $
 
 PORTNAME=	test-framework-hunit
 PORTVERSION=	0.3.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -12,6 +12,5 @@ LICENSE=	BSD
 
 USE_CABAL=	HUnit>=1.2 test-framework>=0.2.0
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
