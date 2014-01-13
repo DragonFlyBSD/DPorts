@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/scribus/Makefile 336262 2013-12-12 14:15:03Z bapt $
+# $FreeBSD: print/scribus/Makefile 337723 2013-12-27 12:34:09Z antoine $
 
 PORTNAME=	scribus
 PORTVERSION=	1.4.3
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libpodofo.so:${PORTSDIR}/graphics/podofo \
 		libboost_thread.so:${PORTSDIR}/devel/boost-libs \
-		libhunspell.so:${PORTSDIR}/textproc/hunspell \
+		libhunspell-1.3.so:${PORTSDIR}/textproc/hunspell \
 		libcairo.so:${PORTSDIR}/graphics/cairo \
 		libhyphen.so:${PORTSDIR}/textproc/hyphen \
 		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
