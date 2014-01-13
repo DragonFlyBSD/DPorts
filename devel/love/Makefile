@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/love/Makefile 328588 2013-09-28 15:48:37Z amdmi3 $
+# $FreeBSD: devel/love/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	love
 PORTVERSION=	0.8.0
@@ -20,8 +20,7 @@ LIB_DEPENDS=	libIL.so:${PORTSDIR}/graphics/devil \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
-USES=		gmake
-USE_OPENAL=	yes
+USES=		gmake openal
 USE_SDL=	sdl mixer
 USE_GL=		gl glu
 USE_LUA=	5.1+
