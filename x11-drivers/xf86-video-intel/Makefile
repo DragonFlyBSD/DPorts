@@ -26,7 +26,7 @@ USE_XORG=	glproto \
 .include <bsd.port.options.mk>
 
 .if defined(WITH_NEW_XORG)
-.  if ${DFLYVERSION} < 300701
+.  if ${DFLYVERSION} < 300751
 INTEL_VERSION=	2.21.9
 INTEL_REVISION=	0
 CONFIGURE_ARGS+=	--enable-sna --with-default-accel=sna
