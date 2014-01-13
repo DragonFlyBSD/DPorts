@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: korean/aleefonts-ttf/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/aleefonts-ttf/Makefile 339059 2014-01-08 00:06:49Z jkim $
 
 PORTNAME=	aleefonts
 PORTVERSION=	12
@@ -15,36 +15,27 @@ COMMENT=	A-Lee's Hangul truetype fonts #'
 LICENSE=	ART10
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
+BUILD_DEPENDS=	${LOCALBASE}/bin/mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
 		${LOCALBASE}/bin/mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 FONTSDIR=	lib/X11/fonts/alee${PKGNAMESUFFIX}
 FONTLIST=	Bandal Bangwool Eunjin EunjinNakseo Guseul
+FONTFILES=	${FONTLIST:S/$/.ttf/} fonts.dir fonts.scale
 
 PLIST_DIRS=	${FONTSDIR}
-.for f in ${FONTLIST}
-PLIST_FILES+=	${FONTSDIR}/${f}.ttf
-.endfor
-PLIST_FILES+=	${FONTSDIR}/fonts.dir \
-		${FONTSDIR}/fonts.scale
+PLIST_FILES=	${FONTFILES:S|^|${FONTSDIR}/|}
 
-NO_STAGE=	yes
 do-build:
 	${LOCALBASE}/bin/mkfontscale ${WRKSRC}
 	${LOCALBASE}/bin/mkfontdir ${WRKSRC}
 
 do-install:
-	${MKDIR} ${PREFIX}/${FONTSDIR}
-.for f in ${FONTLIST}
-	${INSTALL_DATA} ${WRKSRC}/${f}.ttf ${PREFIX}/${FONTSDIR}
-.endfor
-	${INSTALL_DATA} ${WRKSRC}/fonts.dir ${PREFIX}/${FONTSDIR}
-	${INSTALL_DATA} ${WRKSRC}/fonts.scale ${PREFIX}/${FONTSDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/${FONTSDIR}
+	${INSTALL_DATA} ${FONTFILES:S|^|${WRKSRC}/|} ${STAGEDIR}${PREFIX}/${FONTSDIR}
 
 post-install:
 	@${ECHO_CMD} "@exec fc-cache -s %D/${FONTSDIR} 2>/dev/null || true" >> ${TMPPLIST}
 	@${ECHO_CMD} "@unexec fc-cache -s %D/${FONTSDIR} 2>/dev/null || true" >> ${TMPPLIST}
-	@-${LOCALBASE}/bin/fc-cache -s ${PREFIX}/${FONTSDIR} 2>/dev/null
 
 .include <bsd.port.mk>
