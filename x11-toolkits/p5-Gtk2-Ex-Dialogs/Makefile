@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-Dialogs/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-Dialogs/Makefile 338755 2014-01-05 12:30:05Z az $
 
 PORTNAME=	Gtk2-Ex-Dialogs
 PORTVERSION=	0.11
@@ -17,13 +17,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Gtk2::Ex::Dialogs::Question.3 \
-		Gtk2::Ex::Dialogs::ChooseDirectory.3 \
-		Gtk2::Ex::Dialogs::Message.3 \
-		Gtk2::Ex::Dialogs::ErrorMsg.3 \
-		Gtk2::Ex::Dialogs::ChooseFile.3 \
-		Gtk2::Ex::Dialogs::ChoosePreviewFile.3 \
-		Gtk2::Ex::Dialogs.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
