@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: games/deng/Makefile 332339 2013-11-01 02:59:24Z danilo $
+# $FreeBSD: games/deng/Makefile 337464 2013-12-25 23:29:34Z antoine $
 
 PORTNAME=	deng
 PORTVERSION=	1.9.0b6.9
@@ -34,7 +34,7 @@ OPENAL_DESC=	Build OpenAL sound plugin
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENAL}
-USE_OPENAL=	al
+USES+=		openal:al
 CMAKE_ARGS+=	-DBUILDOPENAL:BOOL=ON
 PLIST_SUB=	OPENAL=""
 .else
