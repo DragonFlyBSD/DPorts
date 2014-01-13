@@ -1,5 +1,5 @@
 # Created by: TJ Ninneman <tj@harperdog.com>
-# $FreeBSD: databases/py-riak/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-riak/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	riak
 PORTVERSION=	1.4.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	tj@harperdog.com
 COMMENT=	Python API for Riak, a Dynamo-inspired key/value store
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}protobuf>=2.4.0:${PORTSDIR}/devel/py-protobuf
 
