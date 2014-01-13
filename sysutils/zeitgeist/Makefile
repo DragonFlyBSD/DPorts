@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/zeitgeist/Makefile 336496 2013-12-14 23:12:48Z wg $
+# $FreeBSD: sysutils/zeitgeist/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	zeitgeist
 PORTVERSION=	0.8.2
@@ -20,7 +20,6 @@ RUN_DEPENDS=	python:${PORTSDIR}/lang/python \
 
 USE_GNOME=	gnomehack intlhack pygobject
 USE_PYTHON=	yes
-FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
 USES=		gmake gettext
 CPPFLAGS+=	-I${LOCALBASE}/include
