@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: archivers/upx/Makefile 336153 2013-12-11 10:04:56Z bapt $
+# $FreeBSD: archivers/upx/Makefile 337555 2013-12-26 16:53:14Z bapt $
 
 PORTNAME=	upx
 PORTVERSION=	3.09
@@ -14,7 +14,6 @@ COMMENT=	The Ultimate Packer for eXecutables
 
 LIB_DEPENDS=	libucl.so:${PORTSDIR}/archivers/ucl
 
-NO_STAGE=	yes
 LZMA_VER=	4.65
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}-src
 USE_BZIP2=	yes
@@ -27,15 +26,13 @@ NOT_FOR_ARCHS=	sparc64
 
 PORTDOCS=	BUGS COPYING LICENSE NEWS PROJECTS README\
 		README.1ST README.SRC THANKS TODO
-MAN1=		upx.1
-PLIST_FILES=	bin/upx
+PLIST_FILES=	bin/upx \
+		man/man1/upx.1.gz
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/src/upx.out ${PREFIX}/bin/upx
-	@${INSTALL_MAN} ${WRKSRC}/doc/upx.1 ${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}/
-.endif
+	@${INSTALL_PROGRAM} ${WRKSRC}/src/upx.out ${STAGEDIR}${PREFIX}/bin/upx
+	@${INSTALL_MAN} ${WRKSRC}/doc/upx.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
