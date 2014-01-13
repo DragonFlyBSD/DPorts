@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: www/p5-Apache-ParseFormData/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Apache-ParseFormData/Makefile 338769 2014-01-05 13:31:10Z az $
 
 PORTNAME=	Apache-ParseFormData
 PORTVERSION=	0.09
@@ -18,9 +18,6 @@ USES=		perl5
 USE_PERL5=	configure
 USE_APACHE=	22+
 
-MAN3=		Apache::ParseFormData.3
-
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
