@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: comms/qico/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/qico/Makefile 338555 2014-01-03 16:06:00Z adamw $
 
 PORTNAME=	qico
 PORTVERSION=	0.49.10.3
@@ -25,6 +25,9 @@ PLIST_SUB+=	WITH_QICO_MORDA="@comment "
 .endif
 
 NO_STAGE=	yes
+
+.include <bsd.port.options.mk>
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/qico.conf.sample ${PREFIX}/etc/
 	${INSTALL_PROGRAM} ${WRKSRC}/src/qico ${PREFIX}/libexec/
@@ -32,7 +35,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/qcc ${PREFIX}/bin/
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${PREFIX}/share/doc/qico
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/qico/FAQ.ru
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/qico/README.ru
