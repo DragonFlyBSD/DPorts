@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: chinese/fqterm/Makefile 329015 2013-10-02 06:19:40Z marino $
+# $FreeBSD: chinese/fqterm/Makefile 339152 2014-01-08 15:47:09Z vanilla $
 
 PORTNAME=	fqterm
 PORTVERSION=	0.9.3
@@ -26,8 +26,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DESKTOP_ENTRIES=	"FQTerm" "BBS client" "${PREFIX}/share/FQTerm/pic/fqterm.png" \
 			"fqterm -caption \"%c\" %i %m %u" "Network;Qt;" ""
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
