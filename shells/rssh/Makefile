@@ -1,5 +1,5 @@
 # Created by: enigmatyc
-# $FreeBSD: shells/rssh/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/rssh/Makefile 337656 2013-12-27 09:03:30Z bapt $
 
 PORTNAME=	rssh
 PORTVERSION=	2.3.4
@@ -11,29 +11,15 @@ COMMENT=	Restricted Secure SHell only for sftp or/and scp
 
 GNU_CONFIGURE=	yes
 
-MAN1=		rssh.1
-MAN5=		rssh.conf.5
-
+USE_CSTD=	gnu89
 OPTIONS_DEFINE=	RDIST
 RDIST_DESC=	rdist support
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MRDIST}
-RUN_DEPENDS+=	${LOCALBASE}/bin/rdist6:${PORTSDIR}/net/rdist6
-CONFIGURE_ARGS+=--with-rdist=${LOCALBASE}/bin/rdist6
-.endif
+RDIST_RUN_DEPENDS=	rdist6:${PORTSDIR}/net/rdist6
+RDIST_CONFIGURE_ON=	--with-rdist=${LOCALBASE}/bin/rdist6
 
 post-patch:
 	@${REINPLACE_CMD} -E -e 's,(\$$\(DESTDIR\)\$$\(sysconfdir\)/\$$\$$f),\1.dist,g' \
+		-e 's,u\+s ,u+s $$\(DESTDIR\),g' \
 		${WRKSRC}/Makefile.in
-
-post-install:
-	@${ECHO_MSG} "updating /etc/shells"
-	@${CP} /etc/shells /etc/shells.bak
-	@(${GREP} -v ${PREFIX}/bin/${PORTNAME} /etc/shells.bak; \
-		${ECHO_CMD} ${PREFIX}/bin/${PORTNAME}) > /etc/shells
-	@${RM} /etc/shells.bak
 
 .include <bsd.port.mk>
