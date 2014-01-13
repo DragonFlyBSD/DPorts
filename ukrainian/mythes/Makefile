@@ -1,8 +1,7 @@
-# $FreeBSD: ukrainian/mythes/Makefile 332691 2013-11-04 11:11:44Z bapt $
+# $FreeBSD: ukrainian/mythes/Makefile 338075 2013-12-30 09:51:55Z sunpoet $
 
 PORTNAME=	mythes
-PORTVERSION=	1.6.5
-PORTREVISION=	1
+PORTVERSION=	1.7.0
 CATEGORIES=	ukrainian textproc
 MASTER_SITES=	SF/ispell-uk/spell-uk/${PORTVERSION}
 DISTNAME=	spell-uk-${PORTVERSION}
