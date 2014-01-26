@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/rexx-regina/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/rexx-regina/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	regina
 PORTVERSION=	3.7
