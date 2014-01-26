@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/lfcbase/Makefile 331665 2013-10-26 09:01:51Z antoine $
+# $FreeBSD: devel/lfcbase/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lfcbase
 PORTVERSION=	1.5.8
