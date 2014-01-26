@@ -1,10 +1,10 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: devel/epm/Makefile 329282 2013-10-04 10:18:25Z bapt $
+# $FreeBSD: devel/epm/Makefile 340749 2014-01-22 23:37:53Z mandree $
 
 PORTNAME=	epm
 PORTVERSION=	4.2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_EASYSW}
+MASTER_SITES=	http://www.msweet.org/files/project2/
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_SUFX=	-source.tar.bz2
 
