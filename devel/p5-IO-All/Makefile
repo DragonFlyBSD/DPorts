@@ -1,8 +1,8 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: devel/p5-IO-All/Makefile 338248 2013-12-31 07:20:53Z sunpoet $
+# $FreeBSD: devel/p5-IO-All/Makefile 340054 2014-01-17 15:18:17Z skreuzer $
 
 PORTNAME=	IO-All
-PORTVERSION=	0.51
+PORTVERSION=	0.52
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
