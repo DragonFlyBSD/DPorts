@@ -1,5 +1,5 @@
 # Created by: gno@yahoo-inc.com
-# $FreeBSD: devel/json-c/Makefile 333306 2013-11-09 15:57:18Z wg $
+# $FreeBSD: devel/json-c/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	json-c
 PORTVERSION=	0.11
