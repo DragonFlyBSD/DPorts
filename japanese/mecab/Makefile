@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/mecab/Makefile 328624 2013-09-28 19:36:55Z antoine $
+# $FreeBSD: japanese/mecab/Makefile 340097 2014-01-17 19:48:56Z rakuco $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
@@ -9,7 +9,7 @@ MASTER_SITES=	GOOGLE_CODE
 MAINTAINER=	yasu@utahime.org
 COMMENT=	Yet Another Part-of-Speech and Morphological Analyzer
 
-LICENSE=	BSD GPLv2 LGPL21
+LICENSE=	BSD3CLAUSE GPLv2 LGPL21
 LICENSE_COMB=	dual
 
 USE_AUTOTOOLS=	autoconf autoheader automake aclocal libtool
