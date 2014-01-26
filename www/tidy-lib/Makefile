@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: www/tidy-lib/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tidy-lib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tidy
 CATEGORIES=	www
