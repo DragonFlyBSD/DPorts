@@ -1,4 +1,4 @@
-$FreeBSD: textproc/p5-XML-Parser/files/patch-CheckLib.pm 310260 2013-01-12 03:06:37Z kuriyama $
+$FreeBSD: textproc/p5-XML-Parser/files/patch-CheckLib.pm 340725 2014-01-22 17:40:44Z mat $
 
 --- inc/Devel/CheckLib.pm.orig	2013-01-11 11:43:02.293444337 +0900
 +++ inc/Devel/CheckLib.pm	2013-01-11 11:48:47.556449831 +0900
