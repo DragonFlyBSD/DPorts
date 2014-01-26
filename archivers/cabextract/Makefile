@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: archivers/cabextract/Makefile 337550 2013-12-26 16:34:35Z bapt $
+# $FreeBSD: archivers/cabextract/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cabextract
 PORTVERSION=	1.4
