@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: devel/libconfig/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libconfig/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libconfig
 PORTVERSION=	1.4.9
@@ -11,12 +11,10 @@ COMMENT=	Simple library for manipulating structured configuration files
 
 CONFLICTS=	wand-libconfig-[0-9]*
 
-USES=	pathfix
+USES=		gmake pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --infodir=${PREFIX}/${INFO_PATH}
 INFO=		libconfig
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
