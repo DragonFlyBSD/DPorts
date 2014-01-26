@@ -1,8 +1,8 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: www/p5-Mojolicious/Makefile 338230 2013-12-31 04:26:47Z sunpoet $
+# $FreeBSD: www/p5-Mojolicious/Makefile 340786 2014-01-23 03:27:58Z sunpoet $
 
 PORTNAME=	Mojolicious
-PORTVERSION=	4.63
+PORTVERSION=	4.68
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SRI
