@@ -1,5 +1,5 @@
 # Created by: Michael Elbel (me@FreeBSD.org)
-# $FreeBSD: editors/xemacs-packages/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/xemacs-packages/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xemacs-packages
 PORTVERSION=	14.2
