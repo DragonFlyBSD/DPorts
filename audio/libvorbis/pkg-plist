@@ -1,4 +1,3 @@
-@comment $FreeBSD: audio/libvorbis/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
