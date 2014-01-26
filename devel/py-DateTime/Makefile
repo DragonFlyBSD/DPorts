@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-DateTime/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD: devel/py-DateTime/Makefile 340933 2014-01-24 21:28:22Z rm $
 
 PORTNAME=	DateTime
 PORTVERSION=	3.0.3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
@@ -16,10 +17,9 @@ LICENSE=	ZPL21
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz \
 		${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.interface
 
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
