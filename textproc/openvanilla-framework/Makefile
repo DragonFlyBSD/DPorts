@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: textproc/openvanilla-framework/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/openvanilla-framework/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openvanilla-framework
 PORTVERSION=	0.7.2.20070514
