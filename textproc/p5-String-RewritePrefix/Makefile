@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: textproc/p5-String-RewritePrefix/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-String-RewritePrefix/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	String-RewritePrefix
 PORTVERSION=	0.006
@@ -11,12 +11,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	bill.brinzer@gmail.com
 COMMENT=	Rewrite strings based on a set of known prefixes
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 TEST_DEPENDS=	p5-Sub-Exporter>0:${PORTSDIR}/devel/p5-Sub-Exporter
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	String::RewritePrefix.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
