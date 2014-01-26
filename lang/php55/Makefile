@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/php55/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD: lang/php55/Makefile 340624 2014-01-21 17:09:52Z ale $
 
 PORTNAME=	php55
-PORTVERSION=	5.5.7
+PORTVERSION=	5.5.8
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
