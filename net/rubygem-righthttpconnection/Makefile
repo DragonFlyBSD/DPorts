@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/rubygem-righthttpconnection/Makefile 337612 2013-12-26 20:04:56Z swills $
+# $FreeBSD: net/rubygem-righthttpconnection/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	righthttpconnection
 PORTVERSION=	1.4.0
@@ -17,5 +17,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 LICENSE=	MIT
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
