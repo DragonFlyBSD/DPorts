@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libSM/Makefile 328711 2013-09-29 17:01:41Z zeising $
+# $FreeBSD: x11/libSM/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libSM
 PORTVERSION=	1.2.2
