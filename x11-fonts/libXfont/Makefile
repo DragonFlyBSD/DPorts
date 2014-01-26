@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-fonts/libXfont/Makefile 339086 2014-01-08 10:42:04Z zeising $
+# $FreeBSD: x11-fonts/libXfont/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libXfont
 PORTVERSION=	1.4.7
