@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-symbols/Makefile 338176 2013-12-30 21:49:01Z antoine $
+# $FreeBSD: cad/geda-symbols/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	symbols
 PORTVERSION=	1.4.3
