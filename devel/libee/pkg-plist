@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/libee/pkg-plist 304973 2012-09-27 19:14:38Z brd $
 include/libee/apache.h
 include/libee/ctx.h
 include/libee/event.h
