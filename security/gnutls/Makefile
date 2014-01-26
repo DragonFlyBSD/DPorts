@@ -1,12 +1,13 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/gnutls/Makefile 339094 2014-01-08 11:18:44Z novel $
+# $FreeBSD: security/gnutls/Makefile 340681 2014-01-22 07:06:18Z novel $
 
 PORTNAME=	gnutls
 PORTVERSION=	2.12.23
 PORTREVISION=	3
 CATEGORIES=	security net
 MASTER_SITES=	\
-	ftp://ftp.gnutls.org/gcrypt/gnutls/v${PORTVERSION:C/.[0-9]+$//}/
+	ftp://ftp.gnutls.org/gcrypt/gnutls/v${PORTVERSION:C/.[0-9]+$//}/ \
+	http://www.ring.gr.jp/pub/net/gnupg/gnutls/v${PORTVERSION:C/.[0-9]+$//}/
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	GNU Transport Layer Security library
