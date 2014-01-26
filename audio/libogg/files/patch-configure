@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/libogg/files/patch-configure 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/libogg/files/patch-configure 340725 2014-01-22 17:40:44Z mat $
 
 --- configure.orig	Mon Nov 17 17:34:08 2003
 +++ configure	Mon Nov 24 18:26:28 2003
