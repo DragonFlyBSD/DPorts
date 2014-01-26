@@ -1,4 +1,3 @@
-@comment $FreeBSD: converters/p5-Encode/pkg-plist 327362 2013-09-16 02:43:52Z rafan $
 %%SITE_PERL%%/%%PERL_ARCH%%/Encode.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Encode/Alias.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Encode/Byte.pm
