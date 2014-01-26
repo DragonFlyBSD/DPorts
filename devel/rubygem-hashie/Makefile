@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-hashie/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-hashie/Makefile 340901 2014-01-24 14:46:50Z miwi $
 
 PORTNAME=	hashie
 PORTVERSION=	2.0.5
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
