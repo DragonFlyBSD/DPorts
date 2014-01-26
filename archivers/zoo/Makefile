@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: archivers/zoo/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/zoo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zoo
 PORTVERSION=	2.10.1
