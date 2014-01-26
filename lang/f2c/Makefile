@@ -1,5 +1,5 @@
 # Created by: Steven G. Kargl
-# $FreeBSD: lang/f2c/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/f2c/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	f2c
 PORTVERSION=	20060810
