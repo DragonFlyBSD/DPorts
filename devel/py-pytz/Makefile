@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: devel/py-pytz/Makefile 338651 2014-01-04 16:01:18Z lwhsu $
+# $FreeBSD: devel/py-pytz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pytz
 PORTVERSION=	2013.9
