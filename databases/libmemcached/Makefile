@@ -1,4 +1,4 @@
-# $FreeBSD: databases/libmemcached/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: databases/libmemcached/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libmemcached
 PORTVERSION=	1.0.7
