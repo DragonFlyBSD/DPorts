@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: audio/libcdaudio/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: audio/libcdaudio/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libcdaudio
 PORTVERSION=	0.99.12p2
