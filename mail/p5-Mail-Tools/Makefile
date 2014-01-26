@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Tools/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD: mail/p5-Mail-Tools/Makefile 339503 2014-01-12 13:47:46Z kuriyama $
 
 PORTNAME=	Mail-Tools
-PORTVERSION=	2.12
+PORTVERSION=	2.13
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
