@@ -1,4 +1,3 @@
-@comment $FreeBSD: java/java-zoneinfo/pkg-plist 337162 2013-12-21 21:08:42Z glewis $
 share/java/zi/Africa/Abidjan
 share/java/zi/Africa/Accra
 share/java/zi/Africa/Addis_Ababa
