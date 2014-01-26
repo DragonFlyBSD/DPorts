@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv/Makefile 339194 2014-01-09 00:16:37Z bapt $
+# $FreeBSD: converters/iconv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iconv
 PORTVERSION=	2.0
@@ -29,6 +29,12 @@ CCSUTIL_DESC=	Install Coded character set (CCS) util
 USE_PERL5+=	run
 .else
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-ccs_Makefile
+.endif
+
+.if defined(NO_PROFILE)
+PLIST_SUB+=	PROFILE="@comment "
+.else
+PLIST_SUB+=	PROFILE=""
 .endif
 
 .include <bsd.port.mk>

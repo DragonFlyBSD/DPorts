@@ -1,5 +1,5 @@
 
-$FreeBSD: converters/iconv/files/patch-ai 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: converters/iconv/files/patch-ai 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/Makefile.orig	Tue Nov 28 01:33:49 2000
 +++ lib/Makefile	Mon Jun  3 14:16:50 2002

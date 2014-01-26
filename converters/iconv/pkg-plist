@@ -4,6 +4,7 @@ include/biconv.h
 lib/libbiconv.a
 lib/libbiconv.so
 lib/libbiconv.so.2
+%%PROFILE%%lib/libbiconv_p.a
 libexec/iconv/euc-jp.so
 libexec/iconv/euc-kr.so
 libexec/iconv/euc-tw.so
