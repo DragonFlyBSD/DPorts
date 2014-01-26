@@ -25,7 +25,7 @@
 # Greg Lewis
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: java/javavmwrapper/src/javavmwrapper.sh 308662 2012-12-11 05:37:54Z glewis $
+# $FreeBSD: java/javavmwrapper/src/javavmwrapper.sh 340872 2014-01-24 00:14:07Z mat $
 #
 # MAINTAINER=java@FreeBSD.org
 
