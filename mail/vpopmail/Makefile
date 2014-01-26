@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/vpopmail/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: mail/vpopmail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vpopmail
 PORTVERSION=	5.4.32
