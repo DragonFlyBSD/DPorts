@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: net/yaz/Makefile 337599 2013-12-26 19:16:33Z pawel $
+# $FreeBSD: net/yaz/Makefile 340735 2014-01-22 21:50:58Z pawel $
 
 PORTNAME=	yaz
-PORTVERSION=	5.0.9
+PORTVERSION=	5.0.11
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
@@ -21,6 +21,7 @@ GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_GNOME=	libxml2 libxslt
 USE_LDCONFIG=	yes
+MAKE_JOBS_UNSAFE=	yes
 
 CONFIGURE_ARGS+=--enable-shared --with-openssl=${OPENSSLBASE} \
 		--with-iconv=${ICONV_PREFIX} --with-xml2=${LOCALBASE} \
