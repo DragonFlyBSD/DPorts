@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: net/rsync/files/extrapatch-renamed-flags.diff 340725 2014-01-22 17:40:44Z mat $
 
 --- a/patches/detect-renamed.diff	2013-09-29 07:02:08.000000000 +0400
 +++ b/patches/detect-renamed.diff	2013-10-23 14:56:21.073464928 +0400
