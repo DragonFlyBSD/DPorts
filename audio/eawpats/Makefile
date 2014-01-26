@@ -1,5 +1,5 @@
 # Created by: Jonathan Lennox <lennox@cs.columbia.edu>
-# $FreeBSD: audio/eawpats/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/eawpats/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eawpats
 PORTVERSION=	12
