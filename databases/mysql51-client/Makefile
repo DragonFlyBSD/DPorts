@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql51-client/Makefile 336733 2013-12-17 15:00:17Z ale $
+# $FreeBSD: databases/mysql51-client/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql
 PKGNAMESUFFIX=	51-client
