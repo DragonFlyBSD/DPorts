@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: textproc/iso8879/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/iso8879/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iso8879
 PORTVERSION=	1986
