@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/naev-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/naev-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	data
 PORTVERSION=	0.5.3
