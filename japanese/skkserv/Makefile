@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skkserv/Makefile 335572 2013-12-03 15:05:17Z tijl $
+# $FreeBSD: japanese/skkserv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	skkserv
 PORTVERSION=	9.6

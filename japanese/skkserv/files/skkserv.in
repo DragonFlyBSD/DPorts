@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: japanese/skkserv/files/skkserv.in 335572 2013-12-03 15:05:17Z tijl $
+# $FreeBSD: japanese/skkserv/files/skkserv.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: skkserv
 # REQUIRE: LOGIN
