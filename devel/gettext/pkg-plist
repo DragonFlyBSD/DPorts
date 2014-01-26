@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/gettext/pkg-plist 323088 2013-07-16 05:42:36Z ade $
 bin/autopoint
 bin/envsubst
 bin/gettext
