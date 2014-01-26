@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: textproc/p5-Sort-Naturally/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Sort-Naturally/Makefile 340672 2014-01-21 23:21:10Z mat $
 
 PORTNAME=	Sort-Naturally
 PORTVERSION=	1.03
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Sort::Naturally.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
