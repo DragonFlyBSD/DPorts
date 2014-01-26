@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/gnome-audio/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/gnome-audio/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/audio/gnome-audio/Makefile,v 1.10 2008/05/07 18:52:29 mezz Exp $
 
 PORTNAME=	gnome-audio
