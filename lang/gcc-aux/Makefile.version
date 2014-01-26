@@ -1,4 +1,4 @@
-# $FreeBSD: lang/gcc-aux/Makefile.version 323380 2013-07-21 13:00:46Z marino $
+# $FreeBSD: lang/gcc-aux/Makefile.version 340722 2014-01-22 17:00:46Z mat $
 
 GCC_BRANCH=		4.7
 GCC_POINT=		3
