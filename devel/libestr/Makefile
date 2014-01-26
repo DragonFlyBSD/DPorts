@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: devel/libestr/Makefile 331497 2013-10-24 15:47:05Z brd $
+# $FreeBSD: devel/libestr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libestr
 PORTVERSION=	0.1.8
