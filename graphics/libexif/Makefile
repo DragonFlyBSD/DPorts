@@ -1,5 +1,5 @@
 # Created by: Peter Schmiedeskamp <pschmied@qwest.net>
-# $FreeBSD: graphics/libexif/Makefile 338003 2013-12-29 15:03:41Z tijl $
+# $FreeBSD: graphics/libexif/Makefile 340381 2014-01-20 10:13:54Z rakuco $
 
 PORTNAME=	libexif
 PORTVERSION=	0.6.21
@@ -13,10 +13,9 @@ LICENSE=	LGPL21
 
 OPTIONS_DEFINE=	DOCS NLS
 
-USES=		pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack ltverhack
-USE_GMAKE=	yes
+USE_GNOME=	ltverhack
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
