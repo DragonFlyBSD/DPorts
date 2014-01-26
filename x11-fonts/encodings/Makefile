@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/encodings/Makefile 336887 2013-12-19 11:04:04Z zeising $
+# $FreeBSD: x11-fonts/encodings/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	encodings
 PORTVERSION=	1.0.4
