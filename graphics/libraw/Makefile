@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: graphics/libraw/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libraw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libraw
 PORTVERSION=	0.14.7
@@ -54,7 +54,8 @@ CONFIGURE_ARGS+=--disable-lcms
 .endif
 
 .if ${PORT_OPTIONS:MDEMOSAIC_PACK_GPL2}
-LICENSE+=	GPLv2
+LICENSE=	GPLv2
+LICENSE_COMB=	single
 DISTFILES+=	LibRaw-demosaic-pack-GPL2-${PORTVERSION}.tar.gz
 CONFIGURE_ARGS+=--enable-demosaic-pack-gpl2=../LibRaw-demosaic-pack-GPL2-${PORTVERSION}
 .else
@@ -62,7 +63,8 @@ CONFIGURE_ARGS+=--disable-demosaic-pack-gpl2
 .endif
 
 .if ${PORT_OPTIONS:MDEMOSAIC_PACK_GPL3}
-LICENSE+=	GPLv3
+LICENSE=	GPLv3
+LICENSE_COMB=	single
 DISTFILES+=	LibRaw-demosaic-pack-GPL3-${PORTVERSION}.tar.gz
 CONFIGURE_ARGS+=--enable-demosaic-pack-gpl3=../LibRaw-demosaic-pack-GPL3-${PORTVERSION}
 .else
