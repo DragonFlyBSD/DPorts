@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@amis.net>
-# $FreeBSD: sysutils/p5-Unix-Syslog/Makefile 332957 2013-11-06 08:54:17Z vanilla $
+# $FreeBSD: sysutils/p5-Unix-Syslog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Unix-Syslog
 PORTVERSION=	1.1
