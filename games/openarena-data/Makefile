@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD: games/openarena-data/Makefile 338516 2014-01-03 01:53:21Z bapt $
+# $FreeBSD: games/openarena-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	data
 PORTVERSION=	0.8.8
