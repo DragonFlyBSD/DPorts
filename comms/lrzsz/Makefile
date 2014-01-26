@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: comms/lrzsz/Makefile 334608 2013-11-22 19:33:41Z dinoex $
+# $FreeBSD: comms/lrzsz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lrzsz
 PORTVERSION=	0.12.20
