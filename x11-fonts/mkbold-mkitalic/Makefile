@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro
-# $FreeBSD: x11-fonts/mkbold-mkitalic/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/mkbold-mkitalic/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mkbold-mkitalic
 PORTVERSION=	0.11
