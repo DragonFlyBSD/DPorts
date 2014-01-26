@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: audio/espeak/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/espeak/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	espeak
 PORTVERSION=	1.47.11
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A software speech synthesizer
+COMMENT=	Software speech synthesizer
 
 LICENSE=	GPLv3
 
@@ -44,6 +44,8 @@ INSTALL_WRKSRC=	${WRKSRC}/src
 REINPLACE_FILES=	Makefile speech.h
 REINPLACE_ARGS=	-i.bak -e "s|%%DATADIR%%|${DATADIR}|g"
 
+BROKEN_sparc64=	Does not compile on sparc64
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRUNTIME}
@@ -67,10 +69,4 @@ post-install:
 	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${DOCSDIR}
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "sparc64"
-BROKEN=		Does not compile on sparc64
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
