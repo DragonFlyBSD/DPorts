@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Patch/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Patch/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-Patch
 PORTVERSION=	1.8
@@ -15,7 +15,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Text::Patch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
