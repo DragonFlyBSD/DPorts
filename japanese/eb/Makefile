@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: japanese/eb/Makefile 328621 2013-09-28 19:09:26Z antoine $
+# $FreeBSD: japanese/eb/Makefile 339761 2014-01-15 07:24:05Z miwi $
 
 PORTNAME=	eb
 PORTVERSION=	4.4.3
@@ -14,7 +14,7 @@ EXTRACT_ONLY=	${EBFILES}
 MAINTAINER=	yasu@utahime.org
 COMMENT=	C library for accessing EB, EBG, EBXA, and EPWING CD-ROM dictionaries
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 EBFILES=	${DISTNAME}${EXTRACT_SUFX}
 APPENDIXFILES=	appendix/cencro-1.0.tar.gz \
