@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: devel/libinotify/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: devel/libinotify/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libinotify
 PORTVERSION=	20110829
