@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-fonts/dejavu/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%FCDIR_REL%%/20-unhint-small-dejavu-sans-mono.conf
 %%FCDIR_REL%%/20-unhint-small-dejavu-sans.conf
 %%FCDIR_REL%%/20-unhint-small-dejavu-serif.conf
