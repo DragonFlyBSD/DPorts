@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: devel/readline/Makefile 337927 2013-12-28 22:29:44Z johans $
+# $FreeBSD: devel/readline/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	readline
 PORTVERSION=	6.2.${PATCHLEVEL}
