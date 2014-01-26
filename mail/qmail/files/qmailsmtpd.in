@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: mail/qmail/files/qmailsmtpd.in 312845 2013-02-23 18:49:29Z bdrewery $
+# $FreeBSD: mail/qmail/files/qmailsmtpd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: qmailsmtpd
 # REQUIRE: LOGIN cleanvar

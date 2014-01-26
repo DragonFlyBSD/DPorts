@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/qmail/files/pkg-install.in 312845 2013-02-23 18:49:29Z bdrewery $
+# $FreeBSD: mail/qmail/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
