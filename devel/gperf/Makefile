@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gperf/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: devel/gperf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gperf
 PORTVERSION=	3.0.3
