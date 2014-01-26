@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-header/Makefile 336457 2013-12-14 16:25:21Z kwm $
+# $FreeBSD: net/avahi-header/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/net/avahi-header/Makefile,v 1.4 2012/07/09 18:22:19 kwm Exp $
 
 PORTREVISION=	0
