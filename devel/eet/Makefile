@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/eet/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD: devel/eet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eet
 PORTVERSION=	1.7.9
