@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/nettle/Makefile 335369 2013-12-01 09:16:16Z johans $
+# $FreeBSD: security/nettle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nettle
 PORTVERSION=	2.7.1
