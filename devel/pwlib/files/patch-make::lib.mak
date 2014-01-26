@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/pwlib/files/patch-make::lib.mak 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: devel/pwlib/files/patch-make::lib.mak 340725 2014-01-22 17:40:44Z mat $
 
 --- make/lib.mak
 +++ make/lib.mak
