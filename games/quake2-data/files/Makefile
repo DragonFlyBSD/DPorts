@@ -1,4 +1,4 @@
-# $FreeBSD: games/quake2-data/files/Makefile 314353 2013-03-16 13:33:12Z danfe $
+# $FreeBSD: games/quake2-data/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 SHLIB=		game
 SHLIB_NAME=	game.so
