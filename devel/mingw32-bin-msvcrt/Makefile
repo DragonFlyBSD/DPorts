@@ -1,5 +1,5 @@
 # Created by: Lev A. Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/mingw32-bin-msvcrt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/mingw32-bin-msvcrt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bin-msvcrt
 PORTVERSION=	r${RUNTIMEVERSION}.a${APIVERSION:S/-/./}
@@ -28,19 +28,8 @@ MAKE_ARGS+=	INSTALL_AS_USER=yes
 .endif
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ( (${OSVERSION} >= 900000 && ${OSVERSION} < 900012) || ${OSVERSION} < 800505 )
-EXTRACT_DEPENDS=${LOCALBASE}/bin/xz:${PORTSDIR}/archivers/xz
-EXTRACT_ONLY=	mingwrt-${RUNTIMEVERSION}-mingw32-dev${EXTRACT_SUFX} \
-		mingwrt-${RUNTIMEVERSION}-mingw32-dll${EXTRACT_SUFX}
-.endif
 
 post-extract:
 	@${CP} ${FILESDIR}/Makefile ${WRKDIR}
-.if ( (${OSVERSION} >= 900000 && ${OSVERSION} < 900012) || ${OSVERSION} < 800505 )
-	@cd ${WRKDIR} && xzcat \
-	${_DISTDIR}/w32api-${APIVERSION}-mingw32-dev.tar.lzma | ${TAR} -xf -
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
