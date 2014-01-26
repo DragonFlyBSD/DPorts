@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Regexp-IPv6/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Regexp-IPv6/Makefile 340672 2014-01-21 23:21:10Z mat $
 
 PORTNAME=	Regexp-IPv6
 PORTVERSION=	0.03
@@ -13,7 +13,4 @@ COMMENT=	Regular expression for IPv6 addresses
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Regexp::IPv6.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
