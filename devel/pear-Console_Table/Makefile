@@ -1,8 +1,8 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: devel/pear-Console_Table/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-Console_Table/Makefile 339736 2014-01-15 02:57:01Z miwi $
 
 PORTNAME=	Console_Table
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.6
 CATEGORIES=	devel pear
 
 MAINTAINER=	miwi@FreeBSD.org
