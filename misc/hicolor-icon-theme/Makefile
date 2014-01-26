@@ -1,5 +1,5 @@
 # Created by: marcus@FreeBSD.org
-# $FreeBSD: misc/hicolor-icon-theme/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/hicolor-icon-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/misc/hicolor-icon-theme/Makefile,v 1.9 2009/09/26 12:53:31 marcus Exp $
 
 PORTNAME=	hicolor-icon-theme

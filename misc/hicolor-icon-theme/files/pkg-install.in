@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: misc/hicolor-icon-theme/files/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: misc/hicolor-icon-theme/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 #    $MCom: ports/misc/hicolor-icon-theme/files/pkg-install.in,v 1.7 2009/09/26 13:42:00 marcus Exp $
 
 PATH=/bin:/usr/bin:/usr/sbin
