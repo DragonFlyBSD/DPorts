@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: databases/db41/Makefile 336664 2013-12-16 20:46:12Z mandree $
+# $FreeBSD: databases/db41/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	db41
 PORTVERSION=	4.1.25
@@ -38,7 +38,6 @@ PORTDOCS=	*
 .endif
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64
 CONFIGURE_ARGS+=	--with-mutex=x86/gcc-assembly
@@ -48,4 +47,4 @@ post-patch:
 	@${REINPLACE_CMD} -Ee \
 		's|-l?pthread|${PTHREAD_LIBS}|g' ${WRKSRC}/${CONFIGURE_SCRIPT}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
