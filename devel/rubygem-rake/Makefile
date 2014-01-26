@@ -1,8 +1,8 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rake/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rake/Makefile 340626 2014-01-21 18:13:57Z swills $
 
 PORTNAME=	rake
-PORTVERSION=	10.0.4
+PORTVERSION=	10.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
