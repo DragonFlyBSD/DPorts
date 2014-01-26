@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/rubygem-http_parser.rb/Makefile 338357 2014-01-01 04:08:15Z tota $
+# $FreeBSD: net/rubygem-http_parser.rb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	http_parser.rb
 PORTVERSION=	0.6.0
