@@ -1,12 +1,12 @@
 # Created by: ache
-# $FreeBSD: devel/patch/Makefile 338600 2014-01-03 23:49:10Z danilo $
+# $FreeBSD: devel/patch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	patch
 PORTVERSION=	2.7.1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	johans@FreeBSD.org
 COMMENT=	GNU patch utility
 
 LICENSE=	GPLv3
