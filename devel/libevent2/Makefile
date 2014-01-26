@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/libevent2/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libevent2/Makefile 340265 2014-01-19 11:38:34Z mm $
 
 PORTNAME=	libevent2
 PORTVERSION=	2.0.21
@@ -23,7 +23,6 @@ OPTIONS_DEFAULT=	OPENSSL THREADS
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/event2
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
@@ -49,7 +48,7 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/event_rpcgen.py ${PREFIX}/bin/event2_rpcgen.py
+	@${INSTALL_SCRIPT} ${WRKSRC}/event_rpcgen.py ${STAGEDIR}${PREFIX}/bin/event2_rpcgen.py
 
 regression-test: build
 	@(${SH} ${WRKSRC}/test/regress)
