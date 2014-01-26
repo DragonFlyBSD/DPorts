@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/swig13/Makefile 331280 2013-10-22 14:52:11Z amdmi3 $
+# $FreeBSD: devel/swig13/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	swig
 PORTVERSION=	1.3.40
