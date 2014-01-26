@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/aalib/Makefile 328640 2013-09-29 00:54:23Z eadler $
+# $FreeBSD: graphics/aalib/Makefile 341148 2014-01-26 00:27:55Z eadler $
 
 PORTNAME=	aalib
 PORTVERSION=	1.4.r5
@@ -10,6 +10,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.r/rc/}
 
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	ASCII art library
+
+OPTIONS_DEFINE=	X11
 
 USES=		ncurses
 USE_AUTOTOOLS=	libtool
