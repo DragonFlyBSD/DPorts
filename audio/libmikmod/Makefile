@@ -1,8 +1,9 @@
 # Created by: Michael Haro <mharo@area51.fremont.ca.us>
-# $FreeBSD: audio/libmikmod/Makefile 338657 2014-01-04 18:01:18Z bapt $
+# $FreeBSD: audio/libmikmod/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libmikmod
 PORTVERSION=	3.1.12
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF/mikmod/libmikmod%20%28source%29/${PORTVERSION}/
 
