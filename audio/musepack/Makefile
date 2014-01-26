@@ -1,5 +1,5 @@
 # Created by: Stefan Ehmann <shoesoft@gmx.net>
-# $FreeBSD: audio/musepack/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/musepack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	musepack
 PORTVERSION=	2009.03.01
