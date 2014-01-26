@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: devel/libsigc++12/Makefile 334712 2013-11-24 09:16:33Z kwm $
+# $FreeBSD: devel/libsigc++12/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsigc++
 PORTVERSION=	1.2.7
