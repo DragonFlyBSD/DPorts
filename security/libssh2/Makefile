@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger <netchild@FreeBSD.org>
-# $FreeBSD: security/libssh2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libssh2/Makefile 339935 2014-01-16 17:06:35Z rakuco $
 
 PORTNAME=	libssh2
 PORTVERSION=	1.4.3
@@ -12,7 +12,7 @@ MASTER_SITES=	http://www.libssh2.org/download/ \
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Library implementing the SSH2 protocol
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 USE_OPENSSL=	yes
 USE_AUTOTOOLS=	autoconf
