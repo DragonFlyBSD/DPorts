@@ -40,21 +40,19 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: Mk/bsd.gcc.mk 338649 2014-01-04 15:49:15Z rene $
+# $FreeBSD: Mk/bsd.gcc.mk 341241 2014-01-26 16:33:53Z rene $
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
 
 # All GCC versions supported by the ports framework.  Keep them in
 # ascending order and in sync with the table below. 
-GCCVERSIONS=	040400 040600 040700 040800 040900
+GCCVERSIONS=	040200 040600 040700 040800 040900
 
-# The first field if the DFLYVERSION in which it appeared in the base.
-# The second field is the DFLYVERSION in which it disappeared from the base.
+# The first field if the OSVERSION in which it appeared in the base.
+# The second field is the OSVERSION in which it disappeared from the base.
 # The third field is the version as USE_GCC would use.
-# This doesn't work so well with DragonFly due to dual compilers
-# DPorts wasn't supported until DragonFly 3.3.
-GCCVERSION_040400=	300200  300400 4.4
+GCCVERSION_040200=	     0       0 4.2
 GCCVERSION_040600=	     0       0 4.6
 GCCVERSION_040700=	300400 9999999 4.7
 GCCVERSION_040800=	     0       0 4.8

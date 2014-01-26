@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: Tools/scripts/MOVEDlint.awk 305939 2012-10-15 21:34:19Z eadler $
+# $FreeBSD: Tools/scripts/MOVEDlint.awk 340914 2014-01-24 15:44:54Z eadler $
 #
 # MOVEDlint - check MOVED for consistency
 #
@@ -88,7 +88,7 @@ $3 !~ /^20[0-3][0-9]-[01][0-9]-[0-3][0-9]$/ {
 #       printf "Initial value of 'reason' is lowercase: %5d (%s)\n", NR, $4
 
     if ($4 ~ /\.$/)
-        printf "Final character is a dot: %5d (%s)\n", NR, $4
+        printf "%5d: Final character is a dot: (%s)\n", NR, $4
 }
 
 END {

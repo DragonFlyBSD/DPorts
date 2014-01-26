@@ -1,6 +1,6 @@
 #
 # $MBSDlabs: portmk/bsd.efl.mk,v 1.17 2006/10/02 14:57:48 stas Exp $
-# $FreeBSD: Mk/bsd.efl.mk 328658 2013-09-29 09:31:56Z gblach $
+# $FreeBSD: Mk/bsd.efl.mk 340713 2014-01-22 15:12:27Z mat $
 #
 # bsd.efl.mk - Support for Enlightenment Foundation Libraries (EFL)
 #

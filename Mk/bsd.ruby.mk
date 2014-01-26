@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.ruby.mk 338496 2014-01-02 20:46:29Z swills $
+# $FreeBSD: Mk/bsd.ruby.mk 341124 2014-01-25 22:10:56Z swills $
 #
 
 .if !defined(Ruby_Include)
@@ -177,7 +177,7 @@ RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 # Ruby 1.9
 #
 RUBY_RELVERSION=	1.9.3
-RUBY_PORTREVISION=	0
+RUBY_PORTREVISION=	1
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	484
 
@@ -204,7 +204,7 @@ RUBY20=			"@comment "
 # Ruby 2.0
 #
 RUBY_RELVERSION=	2.0.0
-RUBY_PORTREVISION=	3
+RUBY_PORTREVISION=	4
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	353
 
@@ -440,6 +440,7 @@ GEMFILES=	${DISTNAME}${EXTRACT_SUFX}
 RUBYGEM_ARGS=-l --no-update-sources --no-ri --install-dir ${PREFIX}/lib/ruby/gems/${RUBY_VER}
 .else
 RUBYGEM_ARGS=-l --no-update-sources --no-ri --install-dir ${STAGEDIR}${PREFIX}/lib/ruby/gems/${RUBY_VER} --ignore-dependencies --bindir=${STAGEDIR}${PREFIX}/bin
+GEM_ENV+=	RB_USER_INSTALL=yes
 .endif
 .if defined(NOPORTDOCS)
 RUBYGEM_ARGS+=	--no-rdoc

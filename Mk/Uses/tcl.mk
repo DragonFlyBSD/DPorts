@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/tcl.mk 328462 2013-09-27 12:53:20Z gahr $
+# $FreeBSD: Mk/Uses/tcl.mk 339357 2014-01-10 13:44:54Z gahr $
 #
 # vim: ts=8 noexpandtab
 #
@@ -57,7 +57,13 @@
 # Build-time / Run-time only dependencies can be specified with build or run.
 #
 
-.if !defined(_INCLUDE_USES_TCL_MK)
+.if ${USES:Mtk} || ${USES:Mtk\:*}
+.if !defined(_TCLTK_PORT)
+_TCLTK_IGNORE=	yes
+.endif
+.endif
+
+.if !defined(_INCLUDE_USES_TCL_MK) && !defined(_TCLTK_IGNORE)
 _INCLUDE_USES_TCL_MK=	yes
 
 #
@@ -200,3 +206,5 @@ LIB_DEPENDS+=	${_TCLTK_LIB_LINE}
 .endif
 
 .endif # defined(_INCLUDE_USES_TCL_MK)
+
+.undef _TCLTK_IGNORE

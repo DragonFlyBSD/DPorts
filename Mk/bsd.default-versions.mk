@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.default-versions.mk 331361 2013-10-23 10:26:23Z mat $
+# $FreeBSD: Mk/bsd.default-versions.mk 339550 2014-01-12 21:16:06Z crees $
 #
 # MAINTAINER:	ports@FreeBSD.org
 #
@@ -17,11 +17,13 @@ _l=		${lang:C/=.*//g}
 ${_l:tu}_DEFAULT=	${lang:C/.*=//g}
 .endfor
 
+LUA_DEFAULT?=		5.2
 PERL5_DEFAULT?=		5.16
-RUBY_DEFAULT?=		1.9
-TCLTK_DEFAULT?=		8.6
+PGSQL_DEFAULT?=		9.0
 PYTHON_DEFAULT?=	2.7
 PYTHON2_DEFAULT?=	2.7
 PYTHON3_DEFAULT?=	3.3
+RUBY_DEFAULT?=		1.9
+TCLTK_DEFAULT?=		8.6
 
 .endif

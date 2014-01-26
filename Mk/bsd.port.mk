@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 339057 2014-01-07 23:34:54Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 340377 2014-01-20 09:09:04Z bapt $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1854,6 +1854,13 @@ RUN_DEPENDS+=	${_GL_${_component}_RUN_DEPENDS}
 
 .if !defined(NO_STAGE)
 .include "${PORTSDIR}/Mk/bsd.stage.mk"
+.else
+# Ignore STAGEDIR if set from make.conf
+.undef STAGEDIR
+# From command line it is impossible to undefined so we must raise an error
+.if defined(STAGEDIR)
+IGNORE=	Do not define STAGEDIR in command line
+.endif
 .endif
 
 .if defined(WITH_PKGNG)
@@ -6489,19 +6496,20 @@ _STAGE_SEQ=		stage-message stage-dir run-depends lib-depends apply-slist pre-ins
 .if defined(NEED_ROOT)
 _STAGE_SUSEQ=	create-users-groups do-install desktop-file-post-install kmod-post-install \
 				shared-mime-post-install webplugin-post-install \
-				post-install post-install-script post-stage compress-man \
+				post-install post-install-script move-uniquefiles post-stage compress-man \
 				install-rc-script install-ldconfig-file install-license \
 				install-desktop-entries add-plist-info add-plist-docs add-plist-examples \
-				add-plist-data add-plist-post fix-plist-sequence
+				add-plist-data add-plist-post move-uniquefiles-plist fix-plist-sequence
 .if defined(DEVELOPER)
 _STAGE_SUSEQ+=	stage-qa
 .endif
 .else
 _STAGE_SEQ+=	create-users-groups do-install desktop-file-post-install kmod-post-install \
 				shared-mime-post-install webplugin-post-install post-install post-install-script \
-				post-stage compress-man install-rc-script install-ldconfig-file install-license \
-				install-desktop-entries add-plist-info add-plist-docs add-plist-examples \
-				add-plist-data add-plist-post fix-plist-sequence
+				move-uniquefiles post-stage compress-man install-rc-script install-ldconfig-file \
+				install-license install-desktop-entries add-plist-info add-plist-docs \
+				add-plist-examples add-plist-data add-plist-post move-uniquefiles-plist \
+				fix-plist-sequence
 .if defined(DEVELOPER)
 _STAGE_SEQ+=	stage-qa
 .endif

@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: Mk/Scripts/dialog4ports.sh 329935 2013-10-09 23:01:54Z bdrewery $
+# $FreeBSD: Mk/Scripts/dialog4ports.sh 340713 2014-01-22 15:12:27Z mat $
 # Maintainer: portmgr@FreeBSD.org
 set -e
 

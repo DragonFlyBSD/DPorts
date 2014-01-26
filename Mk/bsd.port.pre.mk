@@ -1,4 +1,4 @@
-# $FreeBSD: ports/Mk/bsd.port.pre.mk,v 1.4 2012/11/17 05:54:18 svnexp Exp $
+# $FreeBSD: Mk/bsd.port.pre.mk 340713 2014-01-22 15:12:27Z mat $
 
 BEFOREPORTMK=	yes
 

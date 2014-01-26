@@ -1,4 +1,4 @@
-# $FreeBSD: Templates/config.site 326136 2013-09-03 11:39:21Z bdrewery $
+# $FreeBSD: Templates/config.site 340851 2014-01-23 19:55:14Z mat $
 # Do not add:
 #	- toolchain related
 #	- arch-dependent values

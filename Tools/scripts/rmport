@@ -32,7 +32,7 @@
 # Others:
 # Chris Rees <crees@FreeBSD.org>
 #
-# $FreeBSD: Tools/scripts/rmport 313779 2013-03-09 23:49:02Z bapt $
+# $FreeBSD: Tools/scripts/rmport 340851 2014-01-23 19:55:14Z mat $
 #
 # MAINTAINER=	crees@FreeBSD.org
 #

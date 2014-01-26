@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 338956 2014-01-06 23:34:29Z bapt $
+# $FreeBSD: Mk/bsd.pkgng.mk 340084 2014-01-17 17:22:50Z antoine $
 #
 
 .if defined(_POSTMKINCLUDED)
@@ -41,7 +41,7 @@ create-manifest:
 	@${ECHO_CMD} "version: ${PKGVERSION}" >> ${MANIFESTF}
 	@${ECHO_CMD} "origin: ${PKGORIGIN}" >> ${MANIFESTF}
 	@${ECHO_CMD} "comment: |" >> ${MANIFESTF}
-	@${ECHO_CMD} "  "${COMMENT:Q} | ${AWK} -f ${SCRIPTSDIR}/pkgencode.awk >> ${MANIFESTF}
+	@${ECHO_CMD} "  "${COMMENT:Q} >> ${MANIFESTF}
 	@${ECHO_CMD} "maintainer: ${MAINTAINER}" >> ${MANIFESTF}
 	@${ECHO_CMD} "prefix: ${PREFIX}" >> ${MANIFESTF}
 #.if defined(NO_ARCH)
@@ -246,7 +246,7 @@ do-package: ${TMPPLIST}
 	@for cat in ${CATEGORIES}; do \
 		${RM} -f ${PACKAGES}/$$cat/${PKGNAMEPREFIX}${PORTNAME}*${PKG_SUFX} ; \
 	done
-	@if ${PKG_CREATE} ${PKG_CREATE_ARGS} -o ${PKGREPOSITORY} ${PKGNAME}; then \
+	@if ${SETENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_CREATE} ${PKG_CREATE_ARGS} -o ${PKGREPOSITORY} ${PKGNAME}; then \
 		if [ -n "${WITH_PKGNG}" ]; then \
 			if [ "${PKGORIGIN}" = "ports-mgmt/pkg" -o "${PKGORIGIN}" = "ports-mgmt/pkg-devel" ]; then \
 				if [ ! -d ${PKGLATESTREPOSITORY} ]; then \

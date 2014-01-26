@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.gnustep.mk 336677 2013-12-16 23:12:24Z bapt $
+# $FreeBSD: Mk/bsd.gnustep.mk 340729 2014-01-22 18:36:06Z theraven $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.
@@ -208,8 +208,8 @@ RUN_DEPENDS+=	${GNUSTEP_SYSTEM_LIBRARIES}/libgnustep-gui.so:${PORTSDIR}/${GNUSTE
 # using any backend
 #
 .if defined(USE_GNUSTEP_BACK)
-BACKSUFFIX?=	-023
-BACKCAIRO=     libgnustep-cairo${BACKSUFFIX}
+BACKSUFFIX?=	-024
+BACKCAIRO=     libgnustep-back${BACKSUFFIX}
 
 BUILD_DEPENDS+=	${GNUSTEP_SYSTEM_BUNDLES}/${BACKCAIRO}.bundle/${BACKCAIRO}:${PORTSDIR}/${GNUSTEP_BACK_PORT}
 RUN_DEPENDS+=	${GNUSTEP_SYSTEM_BUNDLES}/${BACKCAIRO}.bundle/${BACKCAIRO}:${PORTSDIR}/${GNUSTEP_BACK_PORT}

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.tex.mk 320243 2013-06-08 11:48:04Z hrs $
+# $FreeBSD: Mk/bsd.tex.mk 340713 2014-01-22 15:12:27Z mat $
 #
 # bsd.tex.mk - Common part for TeX related ports
 #

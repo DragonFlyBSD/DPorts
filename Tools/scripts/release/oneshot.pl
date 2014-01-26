@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# $FreeBSD: Tools/scripts/release/oneshot.pl 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: Tools/scripts/release/oneshot.pl 340851 2014-01-23 19:55:14Z mat $
 
 use File::Basename;
 use File::Find;

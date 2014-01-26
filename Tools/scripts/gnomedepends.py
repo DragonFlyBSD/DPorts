@@ -13,7 +13,7 @@
 # Maxim Sobolev
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: Tools/scripts/gnomedepends.py 308967 2012-12-15 22:07:24Z eadler $
+# $FreeBSD: Tools/scripts/gnomedepends.py 340851 2014-01-23 19:55:14Z mat $
 #
 # MAINTAINER= sobomax@FreeBSD.org
 #

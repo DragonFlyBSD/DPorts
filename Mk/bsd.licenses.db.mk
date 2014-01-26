@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.licenses.db.mk 338194 2013-12-30 23:06:37Z mat $
+# $FreeBSD: Mk/bsd.licenses.db.mk 340932 2014-01-24 21:22:09Z antoine $
 
 Licenses_db_Include_MAINTAINER=         portmgr@FreeBSD.org
 
@@ -103,7 +103,7 @@ _LICENSE_NAME_BSD3CLAUSE=	BSD 3-clause "New" or "Revised" License
 _LICENSE_GROUPS_BSD3CLAUSE=	FSF OSI COPYFREE
 	
 _LICENSE_NAME_BSD4CLAUSE=	BSD 4-clause "Original" or "Old" License
-_LICENSE_GROUPS_BSD4CLAUSE=	
+_LICENSE_GROUPS_BSD4CLAUSE=	FSF
 
 _LICENSE_NAME_BSL=	Boost Software License
 _LICENSE_GROUPS_BSL=	FSF OSI COPYFREE

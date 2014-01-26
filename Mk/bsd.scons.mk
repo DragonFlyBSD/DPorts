@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.scons.mk 329119 2013-10-02 22:33:27Z bapt $
+# $FreeBSD: Mk/bsd.scons.mk 340713 2014-01-22 15:12:27Z mat $
 #
 # bsd.scons.mk - Python-based SCons build system interface.
 # Author: Alexander Botero-Lowry <alexbl@FreeBSD.org>

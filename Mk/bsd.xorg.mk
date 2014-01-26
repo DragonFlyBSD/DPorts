@@ -7,7 +7,7 @@
 #
 # !!! Here be dragons !!! (yeah, here as well...)
 #
-# $FreeBSD: Mk/bsd.xorg.mk 336886 2013-12-19 10:49:00Z zeising $
+# $FreeBSD: Mk/bsd.xorg.mk 340713 2014-01-22 15:12:27Z mat $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Xorg_Pre_Include)

@@ -14,7 +14,7 @@
 # Maxim Sobolev
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: Tools/scripts/patchtool.py 311969 2013-02-09 12:00:52Z crees $
+# $FreeBSD: Tools/scripts/patchtool.py 340851 2014-01-23 19:55:14Z mat $
 #
 # MAINTAINER= sobomax@FreeBSD.org <- any unapproved commits to this file are
 #				     highly discouraged!!!

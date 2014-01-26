@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: ports/Mk/bsd.destdir.mk,v 1.5 2012/11/17 05:54:17 svnexp Exp $
+# $FreeBSD: Mk/bsd.destdir.mk 340713 2014-01-22 15:12:27Z mat $
 #
 # Please make sure all changes to this file are passed through the maintainer.
 

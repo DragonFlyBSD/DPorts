@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.commands.mk 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD: Mk/bsd.commands.mk 339573 2014-01-13 07:28:31Z bapt $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -101,11 +101,8 @@ XMKMF?=		${LOCALBASE}/bin/xmkmf
 YACC?=		/usr/bin/yacc
 
 XZ?=	-Mmax
-.if exists(/usr/bin/xz)
+XZCAT=	/usr/bin/xzcat ${XZ}
 XZ_CMD?=	/usr/bin/xz ${XZ}
-.else
-XZ_CMD?=	${LOCALBASE}/bin/xz ${XZ}
-.endif
 
 MD5?=		/sbin/md5
 SHA256?=	/sbin/sha256

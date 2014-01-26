@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# $FreeBSD: Tools/scripts/release/scrubindex.pl 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: Tools/scripts/release/scrubindex.pl 340851 2014-01-23 19:55:14Z mat $
 
 die "$0 <pkgdir> <indexfile>\n" if ($#ARGV != 1);
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: Tools/scripts/release/setup.sh 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: Tools/scripts/release/setup.sh 340851 2014-01-23 19:55:14Z mat $
 
 dir=$@
 if [ -z $dir ]; then

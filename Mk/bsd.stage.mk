@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.stage.mk 338982 2014-01-07 08:17:17Z bapt $
+# $FreeBSD: Mk/bsd.stage.mk 341098 2014-01-25 20:49:39Z antoine $
 #
 
 STAGEDIR?=	${WRKDIR}/stage
@@ -13,6 +13,7 @@ MAKE_ARGS+=	${DESTDIRNAME}=${STAGEDIR}
 QA_ENV+=	STAGEDIR=${STAGEDIR} \
 		PREFIX=${PREFIX} \
 		LOCALBASE=${LOCALBASE} \
+		WRKDIR=${WRKDIR} \
 		USESDESKTOPFILEUTILS=${USES:Mdesktop-file-utils} \
 		USESSHAREDMIMEINFO=${USES:Mshared-mime-info} \
 		"STRIP=${STRIP}"

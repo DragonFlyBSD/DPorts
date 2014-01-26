@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: Tools/scripts/consistency-check 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: Tools/scripts/consistency-check 340851 2014-01-23 19:55:14Z mat $
 #
 
 #my($path) = "/var/qmail";

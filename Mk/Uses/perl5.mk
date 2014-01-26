@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/perl5.mk 331787 2013-10-27 17:35:52Z sunpoet $
+# $FreeBSD: Mk/Uses/perl5.mk 339458 2014-01-11 21:37:10Z mat $
 #
 # Provide support to use perl5
 #
@@ -54,7 +54,7 @@ PERL_VERSION=	5.14.4
 .elif ${PERL5_DEFAULT} == 5.16
 PERL_VERSION=	5.16.3
 .elif ${PERL5_DEFAULT} == 5.18
-PERL_VERSION=	5.18.1
+PERL_VERSION=	5.18.2
 .else
 IGNORE=	Invalid perl5 version ${PERL5_DEFAULT}
 .endif

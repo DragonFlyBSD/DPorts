@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/cran.mk 337869 2013-12-28 12:03:18Z bapt $
+# $FreeBSD: Mk/Uses/cran.mk 340713 2014-01-22 15:12:27Z mat $
 #
 # Use the Comprehensive R Archive Network 
 #

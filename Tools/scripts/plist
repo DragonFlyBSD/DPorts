@@ -1,7 +1,7 @@
 #!/usr/local/bin/ruby
 # pkg-plist generator by Brian Fundakowski Feldman <green@FreeBSD.org>
 # (public domain)
-# $FreeBSD: Tools/scripts/plist 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: Tools/scripts/plist 340851 2014-01-23 19:55:14Z mat $
 
 class Plist
 	def initialize(no_manpages = true, mtree = [])

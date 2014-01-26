@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/compiler.mk 339202 2014-01-09 07:10:02Z bapt $
+# $FreeBSD: Mk/Uses/compiler.mk 339386 2014-01-10 22:09:07Z rene $
 #
 # Allows to determine the compiler being used
 #
@@ -6,8 +6,9 @@
 #
 # Feature:	compiler
 # Usage:	USES=compiler or USES=compiler:ARGS
-# Valid ARGS:	env (default, implicit) c++11-lib c++11-lang c11 openmp nestedfct features
+# Valid ARGS:	env (default, implicit) c++0x c++11-lib c++11-lang c11 openmp nestedfct features
 #
+# c++0x:	The port needs a compiler understanding C++0X
 # c++11-lang:	The port needs a compiler understanding C++11
 # c++11-lib:	The port needs a compiler understanding C++11 and with a C++11 ready standard library
 # c11:		The port needs a compiler understanding C11
