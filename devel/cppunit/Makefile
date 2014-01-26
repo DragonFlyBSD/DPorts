@@ -1,5 +1,5 @@
 # Created by: Graeme Cross <gcross@netspace.net.au>
-# $FreeBSD: devel/cppunit/Makefile 331940 2013-10-29 11:35:48Z bdrewery $
+# $FreeBSD: devel/cppunit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cppunit
 PORTVERSION=	1.12.1
