@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: misc/getopt/Makefile 335813 2013-12-07 05:35:04Z eadler $
+# $FreeBSD: misc/getopt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	getopt
 PORTVERSION=	1.1.5
