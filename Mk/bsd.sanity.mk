@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.sanity.mk 338770 2014-01-05 13:33:37Z antoine $
+# $FreeBSD: Mk/bsd.sanity.mk 341284 2014-01-26 20:48:58Z ak $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -114,6 +114,12 @@ DEV_WARNING+=	"USE_TCL and USE_TK are deprecated, please use USES=tcl or USES=tk
 
 .if defined(USE_SCONS)
 DEV_WARNING+=	"USE_SCONS=yes is deprecated, please use USES=scons"
+.endif
+
+# print warning if no reason given for NO_STAGE
+.if defined(NO_STAGE) && ${NO_STAGE:tl} == yes
+DEV_WARNING+=	"NO_STAGE is deprecated, convert port to stage directory:"
+DEV_WARNING+=	"https://wiki.freebsd.org/action/diff/ports/StageDir"
 .endif
 
 .if !defined(NO_STAGE)
