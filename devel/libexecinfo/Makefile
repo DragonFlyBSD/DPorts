@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libexecinfo/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libexecinfo/Makefile 340517 2014-01-21 00:31:31Z bapt $
 
 PORTNAME=	libexecinfo
 PORTVERSION=	1.1
@@ -9,8 +9,11 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	itetcu
 
 MAINTAINER=	itetcu@FreeBSD.org
-COMMENT=	A library for inspecting program's backtrace
+COMMENT=	Library for inspecting program's backtrace
 
+OPTIONS_DEFINE=	DOCS
+
+USES=		uidfix
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 MAKE_FLAGS=	LIBDIR=${PREFIX}/lib \
@@ -18,17 +21,10 @@ MAKE_FLAGS=	LIBDIR=${PREFIX}/lib \
 
 PORTDOCS=	README
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "x86_64"
-CFLAGS+=	-fno-omit-frame-pointer
-.endif
+CFLAGS_x86_64=	-fno-omit-frame-pointer
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
