@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear/bsd.pear.channel.mk 333262 2013-11-08 21:38:06Z antoine $
+# $FreeBSD: devel/pear/bsd.pear.channel.mk 340722 2014-01-22 17:00:46Z mat $
 #
 # Common code for PEAR channels
 

@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear/bsd.pear.mk 333480 2013-11-11 09:17:51Z antoine $
+# $FreeBSD: devel/pear/bsd.pear.mk 340722 2014-01-22 17:00:46Z mat $
 
 # Common code for pear- ports.
 
