@@ -11,6 +11,7 @@ lib/lib%%PYTHON_VERSION%%%%PYABIVER%%.a
 lib/lib%%PYTHON_VERSION%%%%PYABIVER%%.so
 lib/lib%%PYTHON_VERSION%%%%PYABIVER%%.so.1
 libdata/pkgconfig/python-%%PYVER%%.pc
+man/man1/python3.3.1.gz
 %%PYTHON_INCLUDEDIR%%%%PYABIVER%%/accu.h
 %%PYTHON_INCLUDEDIR%%%%PYABIVER%%/Python-ast.h
 %%PYTHON_INCLUDEDIR%%%%PYABIVER%%/Python.h
@@ -2134,6 +2135,10 @@ libdata/pkgconfig/python-%%PYVER%%.pc
 %%PYTHON_LIBDIR%%/pickletools.py
 %%PYTHON_LIBDIR%%/pipes.py
 %%PYTHON_LIBDIR%%/pkgutil.py
+%%PYTHON_LIBDIR%%/plat-dragonfly3/IN.py
+%%PYTHON_LIBDIR%%/plat-dragonfly3/__pycache__/IN.cpython-33.pyc
+%%PYTHON_LIBDIR%%/plat-dragonfly3/__pycache__/IN.cpython-33.pyo
+%%PYTHON_LIBDIR%%/plat-dragonfly3/regen
 %%PYTHON_LIBDIR%%/plat-freebsd10/IN.py
 %%PYTHON_LIBDIR%%/plat-freebsd10/__pycache__/IN.cpython-33.pyc
 %%PYTHON_LIBDIR%%/plat-freebsd10/__pycache__/IN.cpython-33.pyo
@@ -4592,6 +4597,8 @@ libdata/pkgconfig/python-%%PYVER%%.pc
 @dirrm %%PYTHON_LIBDIR%%/plat-freebsd10
 @dirrm %%PYTHON_LIBDIR%%/plat-freebsd11/__pycache__
 @dirrm %%PYTHON_LIBDIR%%/plat-freebsd11
+@dirrm %%PYTHON_LIBDIR%%/plat-dragonfly3/__pycache__
+@dirrm %%PYTHON_LIBDIR%%/plat-dragonfly3
 @dirrm %%PYTHON_LIBDIR%%/pydoc_data/__pycache__
 @dirrm %%PYTHON_LIBDIR%%/pydoc_data
 @dirrm %%PYTHON_LIBDIR%%/site-packages
