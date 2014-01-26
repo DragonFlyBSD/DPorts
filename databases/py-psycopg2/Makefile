@@ -1,8 +1,8 @@
 # Created by: Martin Wilke 	<miwi@FreeBSD.org>
-# $FreeBSD: databases/py-psycopg2/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-psycopg2/Makefile 340991 2014-01-25 06:05:35Z miwi $
 
 PORTNAME=	psycopg2
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.2
 CATEGORIES=	databases python
 MASTER_SITES=	http://initd.org/psycopg/tarballs/PSYCOPG-2-5/ \
 		CHEESESHOP
@@ -26,18 +26,17 @@ EXAMPLES=	binary.py copy_from.py copy_to.py cursor.py dialtone.py \
 
 DOCS=		AUTHORS INSTALL README NEWS PKG-INFO
 
-NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	@${INSTALL_DATA} ${WRKSRC}/examples/${f} ${EXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/examples/${f} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
 .endif
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
