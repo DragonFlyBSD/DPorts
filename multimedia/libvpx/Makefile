@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: multimedia/libvpx/Makefile 339215 2014-01-09 11:30:53Z ashish $
+# $FreeBSD: multimedia/libvpx/Makefile 339519 2014-01-12 16:08:27Z ashish $
 
 PORTNAME=	libvpx
 PORTVERSION=	1.3.0
@@ -53,6 +53,12 @@ SHARED_CONFIGURE_ON=	--enable-shared
 .if ${ARCH} == "x86_64"
 USE_GCC=	yes
 .endif
+.endif
+
+# Workaround for GCC in 9.x post r260075
+# OSVERSION taken from r260135, the closest OSVERSION
+.if ${OSVERSION} >  902505 && ${OSVERSION} < 1000000
+CFLAGS+=	-flax-vector-conversions
 .endif
 
 .if ${OSVERSION} >= 1000000
