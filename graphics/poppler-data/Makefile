@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/poppler-data/Makefile 328619 2013-09-28 18:52:35Z kwm $
+# $FreeBSD: graphics/poppler-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/graphics/poppler-data/Makefile,v 1.5 2010/11/17 15:12:27 kwm Exp $
 
 PORTNAME=	poppler-data
