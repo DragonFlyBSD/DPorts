@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: security/p11-kit/Makefile 332602 2013-11-03 10:49:05Z novel $
+# $FreeBSD: security/p11-kit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	p11-kit
 PORTVERSION=	0.20.1
