@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Metadata/Makefile 332663 2013-11-04 02:23:57Z kuriyama $
+# $FreeBSD: devel/p5-Module-Metadata/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Module-Metadata
 PORTVERSION=	1.000019
