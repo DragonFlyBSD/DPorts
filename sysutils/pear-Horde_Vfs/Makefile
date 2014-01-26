@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/pear-Horde_Vfs/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: sysutils/pear-Horde_Vfs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Vfs
 PORTVERSION=	2.1.2
