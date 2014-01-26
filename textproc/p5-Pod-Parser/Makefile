@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Parser/Makefile 334223 2013-11-18 16:45:09Z mat $
+# $FreeBSD: textproc/p5-Pod-Parser/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Pod-Parser
 PORTVERSION=	1.61
