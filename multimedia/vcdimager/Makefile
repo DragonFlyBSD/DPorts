@@ -1,5 +1,5 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: multimedia/vcdimager/Makefile 330905 2013-10-19 16:27:11Z bapt $
+# $FreeBSD: multimedia/vcdimager/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vcdimager
 PORTVERSION=	0.7.24
