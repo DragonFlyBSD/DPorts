@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: www/smarty2/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: www/smarty2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	smarty
 PORTVERSION=	2.6.27
