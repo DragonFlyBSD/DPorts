@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Number/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Number/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	Lingua-EN-Inflect-Number
 PORTVERSION=	1.1
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Lingua::EN::Inflect::Number.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
