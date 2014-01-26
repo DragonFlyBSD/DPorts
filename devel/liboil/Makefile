@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/liboil/Makefile 330858 2013-10-19 11:07:36Z tijl $
+# $FreeBSD: devel/liboil/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/devel/liboil/Makefile,v 1.7 2008/03/23 06:57:57 marcus Exp $
 
 PORTNAME=	liboil
