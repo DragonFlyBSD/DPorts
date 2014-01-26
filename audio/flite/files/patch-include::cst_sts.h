@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/flite/files/patch-include::cst_sts.h 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/flite/files/patch-include::cst_sts.h 340725 2014-01-22 17:40:44Z mat $
 
 --- include/cst_sts.h
 +++ include/cst_sts.h

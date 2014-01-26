@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/flite/files/patch-src-audio-au_sun.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/flite/files/patch-src-audio-au_sun.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/audio/au_sun.c.orig
 +++ src/audio/au_sun.c

@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/flite/files/patch-lang-cmulex-make_cmulex 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/flite/files/patch-lang-cmulex-make_cmulex 340725 2014-01-22 17:40:44Z mat $
 
 --- lang/cmulex/make_cmulex.orig
 +++ lang/cmulex/make_cmulex
