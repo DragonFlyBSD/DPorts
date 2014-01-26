@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/erlang/files/patch-lib_erl__interface_src_connect_ei__resolve.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: lang/erlang/files/patch-lib_erl__interface_src_connect_ei__resolve.c 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/erl_interface/src/connect/ei_resolve.c.orig
 +++ lib/erl_interface/src/connect/ei_resolve.c
