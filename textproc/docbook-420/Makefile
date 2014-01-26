@@ -1,5 +1,5 @@
 # Created by: kutulu
-# $FreeBSD: textproc/docbook-420/Makefile 339258 2014-01-09 15:49:58Z mat $
+# $FreeBSD: textproc/docbook-420/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook
 PORTVERSION=	4.2
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.docbook.org/sgml/4.2/
 PKGNAMESUFFIX=	-420
 
-MAINTAINER=	kutulu@kutulu.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	V4.2 of the DocBook DTD, designed for technical documentation
 
 EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
