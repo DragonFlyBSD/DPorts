@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: japanese/mozc-additions/files/mozc_tool_character_palette 323333 2013-07-20 04:02:49Z hrs $
+# $FreeBSD: japanese/mozc-additions/files/mozc_tool_character_palette 340872 2014-01-24 00:14:07Z mat $
 #
 # Copyright (c) 2011 Daichi GOTO <daichi@ongs.co.jp>
 # All rights reserved.

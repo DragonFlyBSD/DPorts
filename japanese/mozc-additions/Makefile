@@ -1,5 +1,5 @@
 # Created by: Daichi GOTO <daichi@FreeBSD.org>
-# $FreeBSD: japanese/mozc-additions/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/mozc-additions/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mozc-additions
 PORTVERSION=	1.11.1502.102
