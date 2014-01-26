@@ -1,8 +1,8 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: textproc/freexl/Makefile 332847 2013-11-05 13:24:00Z wen $
+# $FreeBSD: textproc/freexl/Makefile 339952 2014-01-16 18:05:51Z pawel $
 
 PORTNAME=	freexl
-DISTVERSION=	1.0.0f
+DISTVERSION=	1.0.0g
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/freexl-sources/
 
@@ -18,7 +18,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/Makefile.in
