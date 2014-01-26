@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <Martin.Dieringer@t-online.de>
-# $FreeBSD: audio/mac/Makefile 329371 2013-10-04 19:57:12Z bapt $
+# $FreeBSD: audio/mac/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mac
 PORTVERSION=	3.99.4.5
