@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: security/p5-Text-Password-Pronounceable/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Text-Password-Pronounceable/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-Password-Pronounceable
 PORTVERSION=	0.30
