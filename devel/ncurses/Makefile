@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/ncurses/Makefile 337875 2013-12-28 14:59:25Z bapt $
+# $FreeBSD: devel/ncurses/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ncurses
 DISTVERSION=	${RELEASE}-20131221
