@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/ttfm/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD: chinese/ttfm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ttfm
 PORTVERSION=	0.9.5

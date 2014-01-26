@@ -2,7 +2,7 @@
 # Date created:		17 Feb 2005
 # Whom:			leeym
 #
-# $FreeBSD: chinese/ttfm/Makefile.ttf 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: chinese/ttfm/Makefile.ttf 340722 2014-01-22 17:00:46Z mat $
 #
 # The variable(s) for installing TrueType fonts.
 # TTF		- Name(s) of font file(s) installed in FONTSDIR. Mandatory.
