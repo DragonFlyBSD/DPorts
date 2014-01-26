@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/giflib/Makefile 329724 2013-10-07 19:01:37Z dinoex $
+# $FreeBSD: graphics/giflib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	giflib
 PORTVERSION=	4.2.3
