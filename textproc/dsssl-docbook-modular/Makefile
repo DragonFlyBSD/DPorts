@@ -1,5 +1,5 @@
 # Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-# $FreeBSD: textproc/dsssl-docbook-modular/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/dsssl-docbook-modular/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dsssl-docbook-modular
 PORTVERSION=	1.79
