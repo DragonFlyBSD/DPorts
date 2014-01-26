@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/pgp/Makefile 338976 2014-01-07 07:00:35Z dinoex $
+# $FreeBSD: security/pgp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pgp
 PORTVERSION=	2.6.3i
