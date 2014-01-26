@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/aspell/Makefile.inc 332672 2013-11-04 08:30:37Z bapt $
+# $FreeBSD: textproc/aspell/Makefile.inc 340722 2014-01-22 17:00:46Z mat $
 # To be included by dictionaries ports.
 
 MASTER_SITES?=	${MASTER_SITE_GNU}
