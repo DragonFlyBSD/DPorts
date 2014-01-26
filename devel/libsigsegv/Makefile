@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/libsigsegv/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: devel/libsigsegv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsigsegv
 PORTVERSION=	2.10
