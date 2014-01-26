@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: textproc/expat2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/expat2/Makefile 341273 2014-01-26 20:15:41Z mat $
 
 PORTNAME=	expat
 PORTVERSION=	2.1.0
@@ -13,14 +13,12 @@ GNU_CONFIGURE=	yes
 ALL_TARGET=	default
 USES=		pathfix
 USE_LDCONFIG=	yes
-MAN1=		xmlwf.1
 
 # Increment only when there are incompatible API changes.
 SHLIB_MAJOR=	6
 
 PLIST_SUB=	SHLIB_MAJOR="${SHLIB_MAJOR}"
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's/@LIBCURRENT.*@/${SHLIB_MAJOR}/' \
