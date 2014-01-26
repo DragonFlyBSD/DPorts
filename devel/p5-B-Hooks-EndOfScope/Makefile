@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD: devel/p5-B-Hooks-EndOfScope/Makefile 340785 2014-01-23 03:27:52Z sunpoet $
 
 PORTNAME=	B-Hooks-EndOfScope
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
