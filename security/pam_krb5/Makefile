@@ -19,11 +19,12 @@ USES=		perl5
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
-# Make DragonFly default to mit (heimdal fails to configure)
+# Make DragonFly default to heimdal
 # Source builder can override in make.conf or command line
-KRB5_IMPL?= mit
+KRB5_IMPL?= heimdal
 
 .if defined(KRB5_IMPL) && ${KRB5_IMPL} == heimdal
+LIB_DEPENDS+=		libkrb5.so:${PORTSDIR}/security/heimdal
 .if defined(HEIMDAL_HOME)
 KRB5_DIR?=		${HEIMDAL_HOME}
 .endif
