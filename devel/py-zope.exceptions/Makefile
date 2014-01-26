@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-zope.exceptions/Makefile 338824 2014-01-05 21:02:29Z rm $
+# $FreeBSD: devel/py-zope.exceptions/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope.exceptions
 PORTVERSION=	4.0.0.1
