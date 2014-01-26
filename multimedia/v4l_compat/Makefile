@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/v4l_compat/Makefile 330903 2013-10-19 16:22:01Z bapt $
+# $FreeBSD: multimedia/v4l_compat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	v4l_compat
 PORTVERSION=	1.0.${DUMMYDATE}
