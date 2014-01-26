@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: polish/gimp-help/Makefile 327761 2013-09-20 22:34:42Z bapt $
+# $FreeBSD: polish/gimp-help/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	polish graphics
 
