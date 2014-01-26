@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/openssl/Makefile 339174 2014-01-08 20:52:58Z dinoex $
+# $FreeBSD: security/openssl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.1
