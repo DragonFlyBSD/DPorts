@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: games/gnuchess/Makefile 334969 2013-11-26 20:37:47Z johans $
+# $FreeBSD: games/gnuchess/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnuchess
 PORTVERSION=	6.1.1
