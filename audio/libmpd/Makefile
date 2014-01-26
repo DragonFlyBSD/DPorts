@@ -1,5 +1,5 @@
 # Created by: Stepan Zastupov [RedChrom] <redchrom@gmail.com>
-# $FreeBSD: audio/libmpd/Makefile 338658 2014-01-04 18:07:32Z bapt $
+# $FreeBSD: audio/libmpd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libmpd
 PORTVERSION=	11.8.17
