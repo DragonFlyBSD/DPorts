@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: archivers/snappy/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: archivers/snappy/Makefile 339829 2014-01-15 22:22:20Z bapt $
 
 PORTNAME=	snappy
 PORTVERSION=	1.1.0
@@ -16,19 +16,6 @@ CONFIGURE_ARGS=	--disable-gtest
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-.include <bsd.port.options.mk>
+BROKEN_sparc64=	Does not compile on sparc64
 
-post-patch:
-.if empty(PORT_OPTIONS:MDOCS)
-	${REINPLACE_CMD} -e \
-		'/^install-data-am:/ s|install-dist_docDATA||' \
-		${WRKSRC}/Makefile.in
-.endif
-
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "sparc64"
-BROKEN=		Does not compile on sparc64
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
