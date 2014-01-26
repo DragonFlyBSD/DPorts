@@ -1,5 +1,5 @@
 # Created by: Joao Carlos Mendes Luis <jonny@jonny.eng.br>
-# $FreeBSD: archivers/unace/Makefile 337540 2013-12-26 15:38:54Z bapt $
+# $FreeBSD: archivers/unace/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unace
 PORTVERSION=	1.2b
