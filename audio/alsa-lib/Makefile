@@ -1,5 +1,5 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: audio/alsa-lib/Makefile 336451 2013-12-14 14:41:17Z flo $
+# $FreeBSD: audio/alsa-lib/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	alsa-lib
 PORTVERSION=	1.0.27.2
@@ -22,7 +22,7 @@ OPTIONS_SUB=	${OPTIONS_DEFINE}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 .else
 CONFIGURE_ARGS+=--disable-python
 .endif
