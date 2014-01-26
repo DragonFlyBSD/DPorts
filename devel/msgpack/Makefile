@@ -1,4 +1,4 @@
-# $FreeBSD: devel/msgpack/Makefile 329871 2013-10-09 06:58:43Z bapt $
+# $FreeBSD: devel/msgpack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	msgpack
 PORTVERSION=	0.5.7
