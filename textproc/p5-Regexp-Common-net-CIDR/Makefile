@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Regexp-Common-net-CIDR/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Regexp-Common-net-CIDR/Makefile 340595 2014-01-21 10:46:48Z mat $
 
 PORTNAME=	Regexp-Common-net-CIDR
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Regexp::Common::net::CIDR.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
