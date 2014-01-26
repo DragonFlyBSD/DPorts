@@ -1,5 +1,5 @@
 
-$FreeBSD: converters/recode/files/patch-i18n::el.po 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: converters/recode/files/patch-i18n::el.po 340725 2014-01-22 17:40:44Z mat $
 
 --- i18n/el.po.orig	Mon Apr  1 14:02:27 2002
 +++ i18n/el.po	Mon Apr  1 15:09:02 2002
