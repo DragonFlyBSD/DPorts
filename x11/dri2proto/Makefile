@@ -1,4 +1,4 @@
-# $FreeBSD: x11/dri2proto/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: x11/dri2proto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dri2proto
 PORTVERSION=	2.8
