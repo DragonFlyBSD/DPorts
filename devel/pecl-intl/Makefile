@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/pecl-intl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-intl/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	intl
 PORTVERSION=	3.0.0
@@ -18,7 +18,5 @@ LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
-#IGNORE_WITH_PHP=52
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
