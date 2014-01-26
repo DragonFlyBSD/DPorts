@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/unbound/files/unbound.in 303943 2012-09-09 01:08:36Z sem $
+# $FreeBSD: dns/unbound/files/unbound.in 340872 2014-01-24 00:14:07Z mat $
 #
 # unbound freebsd startup rc.d script, modified from the named script.
 # uses the default unbound installation path and pidfile location.

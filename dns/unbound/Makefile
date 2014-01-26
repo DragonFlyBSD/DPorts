@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: dns/unbound/Makefile 329167 2013-10-03 11:02:37Z bdrewery $
+# $FreeBSD: dns/unbound/Makefile 340025 2014-01-17 10:30:16Z sem $
 
 PORTNAME=	unbound
 PORTVERSION=	1.4.21
@@ -118,7 +118,6 @@ post-patch:
 	@${RM} ${WRKSRC}/util/configlexer.c
 
 post-install:
-	@${CHOWN} ${USERS} ${ETCDIR}
 .if ${PORT_OPTIONS:MMUNIN}
 	@${MKDIR} ${PREFIX}/share/munin/plugins
 	@${MKDIR} ${PREFIX}/etc/munin/plugins
