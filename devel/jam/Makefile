@@ -1,24 +1,22 @@
 # Created by: Jeffrey Hsu <hsu@FreeBSD.org>
-# $FreeBSD: devel/jam/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/jam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jam
 PORTVERSION=	2.5
 PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.perforce.com/jam/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A build utility like make(1)
+COMMENT=	Build utility like make(1)
 
-USE_ZIP=	yes
+OPTIONS_DEFINE=	DOCS
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.html ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.html ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
