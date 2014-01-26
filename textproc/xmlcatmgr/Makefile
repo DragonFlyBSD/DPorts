@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/xmlcatmgr/Makefile 332525 2013-11-02 17:52:48Z hrs $
+# $FreeBSD: textproc/xmlcatmgr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmlcatmgr
 PORTVERSION=	2.2
