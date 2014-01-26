@@ -1,5 +1,5 @@
 # Created by: nils@guru.ims.uni-stuttgart.de
-# $FreeBSD: devel/dmake/Makefile 329283 2013-10-04 10:25:40Z bapt $
+# $FreeBSD: devel/dmake/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dmake
 PORTVERSION=	4.12.2
