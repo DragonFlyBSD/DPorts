@@ -1,5 +1,5 @@
 # Created by: <dmagda+libsamplerate@ee.ryerson.ca>
-# $FreeBSD: audio/libsamplerate/Makefile 334696 2013-11-23 22:44:00Z kwm $
+# $FreeBSD: audio/libsamplerate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsamplerate
 PORTVERSION=	0.1.8
