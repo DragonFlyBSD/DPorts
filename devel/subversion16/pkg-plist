@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/subversion16/pkg-plist 334888 2013-11-25 19:52:24Z ohauer $
 %%ASVN%%bin/asvn
 bin/svn
 %%TOOLS%%bin/svn-populate-node-origins-index
