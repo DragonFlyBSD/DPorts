@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-DelimMatch/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-DelimMatch/Makefile 340601 2014-01-21 11:52:07Z mat $
 
 PORTNAME=	DelimMatch
 PORTVERSION=	1.05
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to find regexp delimited strings with proper nesting
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::DelimMatch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
