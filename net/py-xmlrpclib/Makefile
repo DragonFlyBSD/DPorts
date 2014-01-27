@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: net/py-xmlrpclib/Makefile 337868 2013-12-28 11:47:30Z wg $
+# $FreeBSD: net/py-xmlrpclib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmlrpclib
 PORTVERSION=	1.0.1
