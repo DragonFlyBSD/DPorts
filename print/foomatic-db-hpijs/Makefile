@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: print/foomatic-db-hpijs/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/foomatic-db-hpijs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	foomatic-db-hpijs
 PORTVERSION=	1.4
