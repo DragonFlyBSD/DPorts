@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: security/py-gnutls/Makefile 338529 2014-01-03 08:53:08Z lwhsu $
+# $FreeBSD: security/py-gnutls/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnutls
 PORTVERSION=	1.2.5
