@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-spark/Makefile 337052 2013-12-20 18:05:04Z wg $
+# $FreeBSD: devel/py-spark/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spark
 PORTVERSION=	0.6.1
