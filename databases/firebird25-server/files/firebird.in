@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/firebird25-server/files/firebird.in 329146 2013-10-03 06:55:36Z acm $
+# $FreeBSD: databases/firebird25-server/files/firebird.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: firebird
 # REQUIRE: LOGIN

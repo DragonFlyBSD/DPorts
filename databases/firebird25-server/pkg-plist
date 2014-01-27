@@ -1,4 +1,3 @@
-@comment $FreeBSD: databases/firebird25-server/pkg-plist 329146 2013-10-03 06:55:36Z acm $
 bin/fbguard
 bin/fbsplit
 bin/fbstat
