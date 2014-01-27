@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-logilab-common/Makefile 337475 2013-12-26 09:36:22Z mva $
+# $FreeBSD: devel/py-logilab-common/Makefile 340203 2014-01-18 18:58:32Z mva $
 
 PORTNAME=	logilab-common
 PORTVERSION=	0.60.1
@@ -9,6 +9,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Common low-level libraries shared among logilab projects
+
+LICENSE=	LGPL20
 
 MAKE_ENV=	NO_SETUPTOOLS=1
 USE_PYTHON=	yes
