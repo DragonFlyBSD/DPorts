@@ -1,28 +1,31 @@
 # Created by: vanilla@
-# $FreeBSD: converters/lua-iconv/Makefile 328152 2013-09-24 16:05:33Z vanilla $
+# $FreeBSD: converters/lua-iconv/Makefile 339574 2014-01-13 07:50:03Z bapt $
 
 PORTNAME=	iconv
-PORTVERSION=	6
+PORTVERSION=	7
 CATEGORIES=	converters
-MASTER_SITES=	http://luaforge.net/frs/download.php/4181/
+MASTER_SITES=	GHC
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
+DISTNAME=	lua-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Iconv binding for Lua 5
 
 WRKSRC=		${WRKDIR}/lua-${PORTNAME}-${PORTVERSION}
-USE_LUA?=	5.1
-USES=		pkgconfig iconv
+USES=		pkgconfig iconv lua
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	ittner
+GH_PROJECT=	lua-${PORTNAME}
 
 PLIST_FILES=	%%LUA_MODLIBDIR%%/iconv.so
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%INCDIR%%|-I${PREFIX}/include| ; \
-		s|%%LIBDIR%%|-L${PREFIX}/lib|; \
-		s|%%ICONV_LIB%%|${ICONV_LIB}|' ${WRKSRC}/Makefile
+CFLAGS+=	`pkgconf --cflags lua-${LUA_VER}` -I${LOCALBASE}/include
+MAKE_ARGS=	LUABIN=${LUA_CMD} CFLAGS="${CFLAGS}"
+LDFLAGS=	-shared ${ICONV_LIB} -L${LOCALBASE}/lib
+CFLAGS_x86_64=	-fPIC
 
 do-install:
-	@if [ ! -d ${STAGEDIR}${LUA_MODLIBDIR} ]; then ${MKDIR} ${STAGEDIR}/${LUA_MODLIBDIR}; fi
-	@${INSTALL_PROGRAM} ${WRKSRC}/iconv.so ${STAGEDIR}/${LUA_MODLIBDIR}
+	@${MKDIR} ${STAGEDIR}${LUA_MODLIBDIR}
+	${INSTALL_LIB} ${WRKSRC}/iconv.so ${STAGEDIR}${LUA_MODLIBDIR}
 
 .include <bsd.port.mk>
