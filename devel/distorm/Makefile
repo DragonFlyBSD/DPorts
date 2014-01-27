@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: devel/distorm/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/distorm/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME?=	distorm
 DISTVERSION=	20121220-r230
@@ -26,7 +26,7 @@ USE_DOS2UNIX=	yes
 USE_XZ =	yes
 
 .if defined(PYTHON_SLAVEPORT)
-USE_PYTHON=		2.6-2.7
+USE_PYTHON=		2
 
 USE_PYDISTUTILS=		yes
 PYDISTUTILS_PKGNAME=		distorm3
