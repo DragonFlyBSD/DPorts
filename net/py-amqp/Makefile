@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-amqp/Makefile 333685 2013-11-13 13:50:11Z wg $
+# $FreeBSD: net/py-amqp/Makefile 340391 2014-01-20 13:20:08Z wg $
 
 PORTNAME=	amqp
-PORTVERSION=	1.3.3
+PORTVERSION=	1.4.1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +18,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}unittest2>=0.4.0:${PORTSDIR}/devel/py-unitt
 LICENSE=	LGPL21
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
 regression-test: build
