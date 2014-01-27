@@ -1,8 +1,8 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-File/Makefile 330140 2013-10-12 16:39:51Z sunpoet $
+# $FreeBSD: devel/p5-Test-File/Makefile 339405 2014-01-11 08:19:57Z culot $
 
 PORTNAME=	Test-File
-PORTVERSION=	1.35
+PORTVERSION=	1.36
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
