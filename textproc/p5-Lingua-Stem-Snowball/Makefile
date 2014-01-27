@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Lingua-Stem-Snowball/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Lingua-Stem-Snowball/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	Lingua-Stem-Snowball
 PORTVERSION=	0.952
@@ -10,10 +10,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	Lingua::Stem::Snowball - Perl interface to Snowball stemmers
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Lingua::Stem::Snowball.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
