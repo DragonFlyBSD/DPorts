@@ -1,5 +1,5 @@
 # Created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: sysutils/moosefs-master/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/moosefs-master/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	moosefs
 PORTVERSION=	#set via include
@@ -11,7 +11,7 @@ NO_STAGE=	yes
 MAINTAINER=	chifeng@gmail.com
 COMMENT=	Managing the whole filesystem and storing metadata
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 USE_RC_SUBR=	mfsmaster mfsmetalogger mfscgiserv
 MFS_CGIDIR=	${PREFIX}/share/mfscgi
