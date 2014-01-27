@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: chinese/font-std/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/font-std/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	font-std
 PORTVERSION=	0.0.20090602
