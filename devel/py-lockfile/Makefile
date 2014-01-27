@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-lockfile/Makefile 337064 2013-12-20 18:30:53Z wg $
+# $FreeBSD: devel/py-lockfile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lockfile
 PORTVERSION=	0.9.1
