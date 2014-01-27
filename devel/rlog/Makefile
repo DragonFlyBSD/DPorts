@@ -1,31 +1,22 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: devel/rlog/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rlog/Makefile 340965 2014-01-25 00:30:32Z bapt $
 
 PORTNAME=	rlog
 PORTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A flexible message logging facility for C++
+COMMENT=	Flexible message logging facility for C++
+
+OPTIONS_DEFINE=	DOCS
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 
-USES=	pathfix
-USE_GMAKE=	yes
+USES=	gmake pathfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e \
-		'/^SUBDIRS/s|docs||' ${WRKSRC}/Makefile.in
-
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/html
-	@(cd ${WRKSRC}/docs/html && ${COPYTREE_SHARE} . ${DOCSDIR}/html)
-.endif
 
 .include <bsd.port.mk>
