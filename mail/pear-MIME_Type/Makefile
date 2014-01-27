@@ -1,8 +1,8 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: mail/pear-MIME_Type/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: mail/pear-MIME_Type/Makefile 339747 2014-01-15 04:17:50Z miwi $
 
 PORTNAME=	MIME_Type
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.3
 CATEGORIES=	mail www pear
 
 MAINTAINER=	miwi@FreeBSD.org
