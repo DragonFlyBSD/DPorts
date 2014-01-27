@@ -1,5 +1,5 @@
 # Created by: Sven Moeller <smoeller@nichthelfer.de>
-# $FreeBSD: games/megaglest-data/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/megaglest-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	megaglest
 PORTVERSION=	3.7.1
