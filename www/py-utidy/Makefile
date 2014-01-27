@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: www/py-utidy/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: www/py-utidy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	utidy
 PORTVERSION=	0.2
@@ -17,7 +17,7 @@ COMMENT=	Python interface to tidy-lib
 LIB_DEPENDS=	tidy-0.99.0:${PORTSDIR}/www/tidy-lib
 
 USE_ZIP=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
