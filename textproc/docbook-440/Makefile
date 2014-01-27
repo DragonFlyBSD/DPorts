@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@kovesdan.org>
-# $FreeBSD: textproc/docbook-440/Makefile 339180 2014-01-08 21:39:02Z amdmi3 $
+# $FreeBSD: textproc/docbook-440/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook
 PORTVERSION=	4.4
