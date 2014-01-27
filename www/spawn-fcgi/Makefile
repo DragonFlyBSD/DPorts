@@ -1,5 +1,5 @@
 # Created by: genserg@hotmail.com
-# $FreeBSD: www/spawn-fcgi/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/spawn-fcgi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spawn-fcgi
 PORTVERSION=	1.6.3
