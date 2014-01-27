@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: hebrew/culmus/Makefile 327734 2013-09-20 18:41:52Z bapt $
+# $FreeBSD: hebrew/culmus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	culmus
 PORTVERSION=	0.101
