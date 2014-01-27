@@ -1,5 +1,5 @@
 
-$FreeBSD: textproc/agrep/files/patch-follow.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: textproc/agrep/files/patch-follow.c 340725 2014-01-22 17:40:44Z mat $
 
 --- follow.c.orig	Fri Jan 17 20:14:42 1992
 +++ follow.c	Sun Jul 21 03:50:47 2002
