@@ -1,8 +1,8 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: net/pear-Net_SMTP/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: net/pear-Net_SMTP/Makefile 339745 2014-01-15 04:17:09Z miwi $
 
 PORTNAME=	Net_SMTP
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	net mail www pear
 
 MAINTAINER=	miwi@FreeBSD.org
