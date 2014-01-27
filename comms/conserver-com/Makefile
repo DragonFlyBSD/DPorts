@@ -1,4 +1,4 @@
-# $FreeBSD: comms/conserver-com/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/conserver-com/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	conserver
 PORTVERSION=	8.1.18
@@ -31,8 +31,6 @@ NO_STAGE=	yes
 DEFAULTPORT?=	782
 DEFAULTHOST?=	localhost
 
-.include <bsd.port.pre.mk>
-
 .if ${PORT_OPTIONS:MUDS}
 CONFIGURE_ARGS+=	--with-uds
 .endif
@@ -47,4 +45,4 @@ EXTRA_PATCHES=		${FILESDIR}/extra-patch-conserver__master.c
 .endif
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
