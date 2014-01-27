@@ -1,5 +1,5 @@
 # Created by: Jason R. Mastaler <jason@mastaler.com>
-# $FreeBSD: audio/mad/Makefile 337250 2013-12-23 14:02:38Z amdmi3 $
+# $FreeBSD: audio/mad/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mad
 PORTVERSION=	0.15.0b
