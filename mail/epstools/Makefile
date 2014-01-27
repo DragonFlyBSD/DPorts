@@ -1,5 +1,5 @@
 # Created by: ismail@enderunix.org
-# $FreeBSD: mail/epstools/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/epstools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	epstools
 PORTVERSION=	1.8
