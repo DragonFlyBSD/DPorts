@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: sysutils/screen/Makefile 331314 2013-10-22 20:15:16Z cy $
+# $FreeBSD: sysutils/screen/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	screen
 PORTVERSION=	4.0.3
