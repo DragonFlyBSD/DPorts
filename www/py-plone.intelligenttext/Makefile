@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.intelligenttext/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-plone.intelligenttext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.intelligenttext
 PORTVERSION=	2.0.2
