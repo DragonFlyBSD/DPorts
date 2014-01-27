@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: japanese/rubygem-jpmobile/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/rubygem-jpmobile/Makefile 340903 2014-01-24 14:49:29Z miwi $
 
 PORTNAME=	jpmobile
 PORTVERSION=	3.0.7
@@ -24,7 +24,6 @@ TERMINFO_DESC=		terminal information support
 
 OPTIONS_DEFAULT=	IPADDRESSES TERMINFO
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}rubygem-
