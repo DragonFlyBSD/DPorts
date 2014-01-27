@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-Record/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-Record/Makefile 341162 2014-01-26 12:01:03Z rm $
 
 PORTNAME=	Record
 PORTVERSION=	2.13.0
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,11 +15,9 @@ LICENSE=	ZPL21
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ExtensionClass>=0:${PORTSDIR}/devel/py-ExtensionClass
 
-PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_ZIP=		yes
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
