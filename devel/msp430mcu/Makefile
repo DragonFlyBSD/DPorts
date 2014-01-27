@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430mcu/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/msp430mcu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	${MCUTARGET}mcu
 PORTVERSION=	1.0.${MCUVERSION}
