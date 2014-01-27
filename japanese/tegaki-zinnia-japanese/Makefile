@@ -1,9 +1,9 @@
-# $FreeBSD: japanese/tegaki-zinnia-japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/tegaki-zinnia-japanese/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # Date created:				15 Aug 2010
 # Whom:					Timothy Beyer <beyert@cs.ucr.edu>
 #
-# $FreeBSD: japanese/tegaki-zinnia-japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/tegaki-zinnia-japanese/Makefile 340722 2014-01-22 17:00:46Z mat $
 #
 
 PORTNAME=	tegaki
