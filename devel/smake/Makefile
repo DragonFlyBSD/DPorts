@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/smake/Makefile 333172 2013-11-08 01:21:21Z eadler $
+# $FreeBSD: devel/smake/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	smake
 PORTVERSION=	1.2.3
