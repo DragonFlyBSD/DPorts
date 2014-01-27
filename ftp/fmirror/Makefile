@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: ftp/fmirror/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/fmirror/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fmirror
 PORTVERSION=	0.8.4
