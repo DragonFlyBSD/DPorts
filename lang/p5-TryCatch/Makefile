@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-TryCatch/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-TryCatch/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	TryCatch
 PORTVERSION=	1.003002
@@ -7,7 +7,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ASH
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	First class try catch semantics for Perl, without source filters
 
 LICENSE=	ART10 GPLv1
