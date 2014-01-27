@@ -1,5 +1,5 @@
 #
-# $FreeBSD: archivers/squsq/files/Makefile 319452 2013-05-30 19:51:38Z antoine $
+# $FreeBSD: archivers/squsq/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 #
 
 all: sq usq
