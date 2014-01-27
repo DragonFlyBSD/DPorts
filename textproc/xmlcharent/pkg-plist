@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/xmlcharent/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec %%XMLCATMGR%% -sc %%CATALOG_PORTS_SGML%% remove CATALOG %%XMLDIR%%/catalog
 share/xml/xmlcharent/catalog
 @exec %%XMLCATMGR%% -sc %%CATALOG_PORTS_SGML%% add CATALOG %%XMLDIR%%/catalog
