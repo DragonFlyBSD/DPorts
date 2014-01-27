@@ -1,5 +1,5 @@
 # Created by: Joao Carlos Mendes Luis <jonny@jonny.eng.br>
-# $FreeBSD: misc/buffer/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/buffer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	buffer
 PORTVERSION=	1.19
