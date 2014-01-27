@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger
-# $FreeBSD: astro/fowsr/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/fowsr/Makefile 340340 2014-01-19 18:56:23Z bapt $
 
 PORTNAME=	fowsr
 PORTVERSION=	${FILEVER}.${FILEDATE}
@@ -16,12 +16,9 @@ FILEVER=	1.0
 FILEDATE=	20100718
 WRKSRC=		${WRKDIR}/${PORTNAME}-${FILEVER}
 
-USES=		gmake
-NO_STAGE=	yes
+USES=		gmake dos2unix
 
 PLIST_FILES=	bin/fowsr
-
-USE_DOS2UNIX=	yes
 
 post-patch:
 	${REINPLACE_CMD} 's:gcc:${CC}:g' ${WRKSRC}/Makefile
@@ -29,6 +26,6 @@ post-patch:
 	    ${WRKSRC}/*.sh ${WRKSRC}/fowsr.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fowsr ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/fowsr ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
