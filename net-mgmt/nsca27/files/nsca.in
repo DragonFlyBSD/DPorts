@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-mgmt/nsca27/files/nsca.in 311182 2013-01-29 19:49:38Z mm $
+# $FreeBSD: net-mgmt/nsca27/files/nsca.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: nsca
 # REQUIRE: nagios
