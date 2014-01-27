@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/stymulator/Makefile 336821 2013-12-18 11:56:04Z ehaupt $
+# $FreeBSD: audio/stymulator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stymulator
 DISTVERSION=	0.21a
@@ -19,7 +19,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-MAN1=		ymplayer.1 ym2wav.1
+MANPAGE1=	ymplayer.1 ym2wav.1
 PLIST_FILES=	bin/ym2wav bin/ymplayer bin/stymulator man/man1/ymplayer.1.gz \
 		man/man1/ym2wav.1.gz
 
@@ -27,7 +27,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ym2wav ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/ymplayer ${STAGEDIR}${PREFIX}/bin
 	${LN} ${STAGEDIR}${PREFIX}/bin/ymplayer ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-.for f in ${MAN1}
+.for f in ${MANPAGE1}
 	${INSTALL_MAN} ${FILESDIR}/${f} ${STAGEDIR}${MANPREFIX}/man/man1
 .endfor
 
