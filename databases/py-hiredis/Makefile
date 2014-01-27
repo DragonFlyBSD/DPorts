@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: databases/py-hiredis/Makefile 339089 2014-01-08 11:06:04Z wg $
+# $FreeBSD: databases/py-hiredis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hiredis
 PORTVERSION=	0.1.2
