@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: converters/psiconv/Makefile 339192 2014-01-09 00:10:08Z bapt $
+# $FreeBSD: converters/psiconv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	psiconv
 PORTVERSION=	0.9.8
