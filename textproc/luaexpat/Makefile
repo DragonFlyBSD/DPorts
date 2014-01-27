@@ -1,5 +1,5 @@
 # Created by: Andrew Lewis <freeghb@gmail.com>
-# $FreeBSD: textproc/luaexpat/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/luaexpat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	luaexpat
 PORTVERSION=	1.2.0
