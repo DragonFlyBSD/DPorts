@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: sysutils/wiimms/Makefile 331839 2013-10-28 09:58:03Z gahr $
+# $FreeBSD: sysutils/wiimms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wiimms
 DISTVERSION=	2.23a
