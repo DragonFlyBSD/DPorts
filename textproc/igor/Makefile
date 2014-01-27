@@ -1,9 +1,9 @@
-# $FreeBSD: textproc/igor/Makefile 334794 2013-11-24 21:59:09Z ak $
+# $FreeBSD: textproc/igor/Makefile 340866 2014-01-23 22:40:23Z eadler $
 
 PORTNAME=	igor
-PORTVERSION=	1.397
+PORTVERSION=	1.419
 CATEGORIES=	textproc
-MASTER_SITES=	https://docscripts.glenbarber.us/tags/${PORTNAME}/${PORTVERSION}/
+MASTER_SITES=	http://docscripts.glenbarber.us/tags/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	wblock@FreeBSD.org
 COMMENT=	FreeBSD Documentation Project sanity check script
