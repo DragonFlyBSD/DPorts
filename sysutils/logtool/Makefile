@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: sysutils/logtool/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/logtool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	logtool
 PORTVERSION=	1.3.1
