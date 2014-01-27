@@ -1,5 +1,5 @@
 # Created by: Glen Barber <gjb@FreeBSD.org>
-# $FreeBSD: mail/rubygem-qmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/rubygem-qmail/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	ruby-qmail
 PORTVERSION=	0.1.1
@@ -15,5 +15,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
