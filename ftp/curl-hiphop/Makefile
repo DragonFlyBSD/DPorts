@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: ftp/curl-hiphop/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/curl-hiphop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-hiphop
 
