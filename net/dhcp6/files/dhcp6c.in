@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/dhcp6/files/dhcp6c.in 316808 2013-04-29 11:38:49Z stefan $
+# $FreeBSD: net/dhcp6/files/dhcp6c.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: dhcp6c
