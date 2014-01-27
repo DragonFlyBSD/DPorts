@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-greasemonkey/Makefile 327811 2013-09-21 12:18:11Z flo $
+# $FreeBSD: www/xpi-greasemonkey/Makefile 341207 2014-01-26 15:10:29Z miwi $
 
 PORTNAME=	greasemonkey
 PORTVERSION=	1.12
@@ -12,6 +12,5 @@ COMMENT=	Add bits of DHTML to any web page to change its behavior
 XPI_ID=		{e4a8a97b-f2ed-450b-b12d-ee082ba24781}
 XPI_NUM=	748
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
