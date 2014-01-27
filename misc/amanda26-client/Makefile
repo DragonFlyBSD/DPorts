@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda26-client/Makefile 333014 2013-11-06 17:28:33Z bapt $
+# $FreeBSD: misc/amanda26-client/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	26-client
 PORTREVISION=	2
