@@ -1,4 +1,4 @@
-# $FreeBSD: security/qca-gnupg/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/qca-gnupg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qca-gnupg
 DISTVERSION=	2.0.0-beta3
