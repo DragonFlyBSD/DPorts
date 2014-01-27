@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: devel/py-kjbuckets/Makefile 337686 2013-12-27 10:14:09Z wg $
+# $FreeBSD: devel/py-kjbuckets/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		kjbuckets
 PORTVERSION=		1.0.0
