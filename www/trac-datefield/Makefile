@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: www/trac-datefield/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-datefield/Makefile 341181 2014-01-26 14:31:18Z miwi $
 
 PORTNAME=	datefield
 PORTVERSION=	1.0.1
@@ -14,7 +14,7 @@ COMMENT=	Plugin for creating date fields
 
 RUN_DEPENDS+=	trac>=0.11:${PORTSDIR}/www/trac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_ZIP=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracDateField
@@ -22,5 +22,4 @@ WRKSRC=		${WRKDIR}/datefieldplugin/0.11
 REL=		7267
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
