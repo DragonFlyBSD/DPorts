@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-gdbm/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/ruby-gdbm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gdbm
 PORTVERSION=	${RUBY_PORTVERSION}
