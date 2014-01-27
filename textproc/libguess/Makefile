@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: textproc/libguess/Makefile 328138 2013-09-24 14:14:06Z wg $
+# $FreeBSD: textproc/libguess/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libguess
 PORTVERSION=	1.1
