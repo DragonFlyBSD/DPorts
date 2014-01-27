@@ -1,5 +1,5 @@
 # Created by: kwm@rainbow-runner.nl
-# $FreeBSD: audio/libtremor/Makefile 338656 2014-01-04 17:56:05Z bapt $
+# $FreeBSD: audio/libtremor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libtremor
 PORTVERSION=	1.0.2.${SNAP_DATE}
