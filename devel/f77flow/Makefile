@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/f77flow/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/f77flow/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		f77flow
 PORTVERSION=		0.12
