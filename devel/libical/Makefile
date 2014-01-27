@@ -1,38 +1,28 @@
 # Created by: Joe Kelsey
-# $FreeBSD: devel/libical/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libical/Makefile 339537 2014-01-12 19:48:11Z kwm $
 
 PORTNAME=	libical
-PORTVERSION=	0.48
+PORTVERSION=	1.0
 CATEGORIES=	devel
 MASTER_SITES=	SF/freeassociation/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	An implementation of the IETF Calendaring and Scheduling protocols
+COMMENT=	Implementation of the IETF Calendaring and Scheduling protocols
 
-USES=		gmake perl5
+LICENSE_COMB=	dual
+LICENSE=	MPL LGPL21
+
+USES=		cmake gmake pathfix perl5
 USE_PERL5=	build
-USE_GNOME=	gnomehack ltverhack
-USE_AUTOTOOLS=	libtool
-GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-
-OPTIONS_DEFINE=	PYTHON
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MPYTHON}
-CONFIGURE_ARGS=	--enable-python=yes
-USE_PYTHON=	yes
-.else
-CONFIGURE_ARGS=	--enable-python=no
-.endif
 
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "ia64"
 CFLAGS+=	-fPIC
 .endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libical*.so.1.0.0
 
 .include <bsd.port.post.mk>
