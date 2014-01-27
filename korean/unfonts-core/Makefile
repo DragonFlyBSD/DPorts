@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: korean/unfonts-core/Makefile 339059 2014-01-08 00:06:49Z jkim $
+# $FreeBSD: korean/unfonts-core/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unfonts
 PORTVERSION?=	1.0.2.080608
