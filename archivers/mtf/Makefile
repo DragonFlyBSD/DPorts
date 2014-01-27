@@ -1,5 +1,5 @@
 # Created by: Philippe Casidy <pcasidy@casidy.com>
-# $FreeBSD: archivers/mtf/Makefile 337534 2013-12-26 15:03:41Z bapt $
+# $FreeBSD: archivers/mtf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mtf
 PORTVERSION=	0.2.1
