@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: multimedia/vcdgear/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/vcdgear/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vcdgear
 PORTVERSION=	1.6d
