@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/spamd/files/obspamlogd.in 310092 2013-01-08 14:46:14Z uqs $
+# $FreeBSD: mail/spamd/files/obspamlogd.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: obspamlogd
