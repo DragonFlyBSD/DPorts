@@ -1,5 +1,5 @@
 # Created by: Andrei Antoukh <niwi@niwi.be>
-# $FreeBSD: databases/py-couchdb/Makefile 328795 2013-09-30 14:23:02Z bdrewery $
+# $FreeBSD: databases/py-couchdb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	CouchDB
 PORTVERSION=	0.8
@@ -11,7 +11,7 @@ DIST_SUBDIR=	python
 MAINTAINER=	niwi@niwi.be
 COMMENT=	Simple Library to Allow Python Applications to Use CouchDB
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
 
