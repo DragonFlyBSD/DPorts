@@ -1,4 +1,4 @@
-# $FreeBSD: net/py-gntp/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-gntp/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gntp
 PORTVERSION=	0.8
@@ -19,7 +19,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS
 
 USE_GITHUB=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
