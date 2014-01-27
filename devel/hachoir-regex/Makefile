@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/hachoir-regex/Makefile 334329 2013-11-19 17:07:02Z lwhsu $
+# $FreeBSD: devel/hachoir-regex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hachoir-regex
 PORTVERSION=	1.0.5
