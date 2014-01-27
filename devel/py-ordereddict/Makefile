@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/py-ordereddict/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-ordereddict/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ordereddict
 PORTVERSION=	1.1
@@ -13,7 +13,7 @@ COMMENT=	A drop-in substitute for Py2.7's new collections
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_PYTHON=	2.4-2.7 # for graphics/py-blockdiag
+USE_PYTHON=	2 # for graphics/py-blockdiag
 USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/ordereddict.py \
