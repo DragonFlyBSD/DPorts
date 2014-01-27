@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: math/py-numeric/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: math/py-numeric/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	numeric
 PORTVERSION=	24.2
