@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-faraday_middleware/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-faraday_middleware/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	faraday_middleware
 PORTVERSION=	0.9.0
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
