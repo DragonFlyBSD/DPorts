@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/unzip/Makefile 338633 2014-01-04 09:04:21Z antoine $
+# $FreeBSD: chinese/unzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	chinese
 
