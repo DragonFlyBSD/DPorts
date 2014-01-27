@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-regex-pcre-builtin/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: textproc/hs-regex-pcre-builtin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	regex-pcre-builtin
 PORTVERSION=	0.94.4.5.8.31
