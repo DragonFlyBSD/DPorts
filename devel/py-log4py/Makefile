@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-log4py/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/py-log4py/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	log4py
 PORTVERSION=	1.3
