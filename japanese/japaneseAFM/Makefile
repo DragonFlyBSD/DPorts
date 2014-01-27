@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: japanese/japaneseAFM/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/japaneseAFM/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	japaneseAFM
 PORTVERSION=	1.0
