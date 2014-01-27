@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/hdf5/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/hdf5/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hdf5
 PORTVERSION=	1.6.9
