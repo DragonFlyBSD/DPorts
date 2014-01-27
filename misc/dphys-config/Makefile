@@ -1,5 +1,5 @@
 # Created by: <gurkan@phys.ethz.ch>
-# $FreeBSD: misc/dphys-config/Makefile 336005 2013-12-09 16:46:41Z danilo $
+# $FreeBSD: misc/dphys-config/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dphys-config
 PORTVERSION=	20100216
