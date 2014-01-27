@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/teTeX-texmf/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%TEXMFDISTDIR%%/ChangeLog
 %%TEXMFDISTDIR%%/LICENSE.texmf
 %%TEXMFDISTDIR%%/aliases
