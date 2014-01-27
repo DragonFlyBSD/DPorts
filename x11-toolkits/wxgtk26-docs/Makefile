@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: x11-toolkits/wxgtk26-docs/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/wxgtk26-docs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wxgtk_doc
 PORTVERSION=	2.6.4
