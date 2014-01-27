@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: security/py-tlslite/Makefile 338084 2013-12-30 11:10:15Z wg $
+# $FreeBSD: security/py-tlslite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tlslite
 PORTVERSION=	0.4.3
