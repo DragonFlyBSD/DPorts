@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/turses/Makefile 333281 2013-11-09 12:03:14Z koobs $
+# $FreeBSD: net/turses/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	turses
 PORTVERSION=	0.2.19
@@ -26,7 +26,7 @@ OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 
