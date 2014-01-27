@@ -1,5 +1,5 @@
 # Created by: Fernando Durango <fernando@secret.org>
-# $FreeBSD: www/metacafe_dl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/metacafe_dl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	metacafe_dl
 PORTVERSION=	2007.09.13
@@ -16,7 +16,7 @@ COMMENT=	A program for downloading videos from metacafe.com
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 PLIST_FILES=	bin/metacafe-dl
 
