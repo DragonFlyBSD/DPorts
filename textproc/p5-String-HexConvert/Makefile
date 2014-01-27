@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: textproc/p5-String-HexConvert/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-String-HexConvert/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	String-HexConvert
 PORTVERSION=	0.01
@@ -16,7 +16,4 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	String::HexConvert.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
