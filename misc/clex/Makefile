@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: misc/clex/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/clex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	clex
 PORTVERSION=	4.6.6
