@@ -1,5 +1,5 @@
 # Created by: William Grzybowski
-# $FreeBSD: devel/py-mimeparse/Makefile 335610 2013-12-04 10:19:11Z wg $
+# $FreeBSD: devel/py-mimeparse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mimeparse
 PORTVERSION=	0.1.4
