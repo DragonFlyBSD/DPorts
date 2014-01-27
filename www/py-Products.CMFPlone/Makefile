@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-Products.CMFPlone/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD: www/py-Products.CMFPlone/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	Products.CMFPlone
 PORTVERSION=	4.3.2
@@ -115,7 +115,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisit
 		${PYTHON_PKGNAMEPREFIX}zope.traversing>=0:${PORTSDIR}/devel/py-zope.traversing
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
