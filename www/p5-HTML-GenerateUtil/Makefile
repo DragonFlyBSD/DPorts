@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl (kurt.lidl@cello.com)
-# $FreeBSD: www/p5-HTML-GenerateUtil/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD: www/p5-HTML-GenerateUtil/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	HTML-GenerateUtil
 PORTVERSION=	1.11
