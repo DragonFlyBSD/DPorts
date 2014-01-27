@@ -1,5 +1,5 @@
 # Created by: Hsin-Hsiung Chang
-# $FreeBSD: mail/mailmgr/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mailmgr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mailmgr
 PORTVERSION=	1.2.3
