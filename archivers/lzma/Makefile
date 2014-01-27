@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@netmag.cz>
-# $FreeBSD: archivers/lzma/Makefile 337525 2013-12-26 14:41:11Z bapt $
+# $FreeBSD: archivers/lzma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lzma
 PORTVERSION=	9.22
