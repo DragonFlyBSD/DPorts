@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-content/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/horde-content/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	content
 PORTVERSION=	2.0.3
