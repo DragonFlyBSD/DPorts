@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope
-# $FreeBSD: textproc/add-css-links/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/add-css-links/Makefile 341120 2014-01-25 22:03:15Z mat $
 
 PORTNAME=	add-css-links
 PORTVERSION=	1.0
@@ -11,11 +11,13 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Add one or more CSS <link> elements to an XHTML document
 
 NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/xhtml
 
-NO_STAGE=	yes
+PLIST_FILES=	share/xsl/xhtml/add-css-links.xsl
+PLIST_DIRSTRY=	share/xsl/xhtml share/xsl
+
 do-install:
-	@${ECHO} "Installing in ${PREFIX}/share/xsl/xhtml/"
-	@${MKDIR} ${PREFIX}/share/xsl/xhtml
-	@${CP} ${WRKDIR}/xhtml/*.xsl ${PREFIX}/share/xsl/xhtml/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/xsl/xhtml
+	${CP} ${WRKSRC}/*.xsl ${STAGEDIR}${PREFIX}/share/xsl/xhtml/
 
 .include <bsd.port.mk>
