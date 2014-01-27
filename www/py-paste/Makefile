@@ -1,5 +1,5 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD: www/py-paste/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/py-paste/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Paste
 PORTVERSION=	1.7.5.1
@@ -13,7 +13,7 @@ COMMENT=	Tools for using a Web Server Gateway Interface stack
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 NO_STAGE=	yes
