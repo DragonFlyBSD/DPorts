@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: astro/pyephem/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/pyephem/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyephem
 PORTVERSION=	3.7.5.1
@@ -11,7 +11,7 @@ MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Scientific-grade astronomical computations for Python
 
 NO_STAGE=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 .include <bsd.port.mk>
