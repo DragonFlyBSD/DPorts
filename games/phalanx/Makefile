@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/phalanx/Makefile 332794 2013-11-05 00:39:45Z danilo $
+# $FreeBSD: games/phalanx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phalanx
 PORTVERSION=	23.b
