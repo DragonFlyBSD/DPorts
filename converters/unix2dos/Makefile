@@ -1,5 +1,5 @@
 # Created by: Oscar Bonilla <obonilla@fisicc-ufm.edu>
-# $FreeBSD: converters/unix2dos/Makefile 339191 2014-01-09 00:06:20Z bapt $
+# $FreeBSD: converters/unix2dos/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unix2dos
 PORTVERSION=	1.3
