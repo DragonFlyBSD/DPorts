@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: www/eldav.el/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/eldav.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eldav.el
 PORTVERSION=	0.8.1
