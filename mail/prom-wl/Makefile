@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
-# $FreeBSD: mail/prom-wl/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: mail/prom-wl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	prom-wl
 PORTVERSION=	2.7.0
