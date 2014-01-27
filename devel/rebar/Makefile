@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/rebar/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: devel/rebar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rebar
 PORTVERSION=	2.0.0
