@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/py-biopython/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: biology/py-biopython/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	biopython
 PORTVERSION=	1.60
@@ -14,7 +14,7 @@ COMMENT=	Collection of Python modules for bioinformatics
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
