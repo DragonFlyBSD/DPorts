@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: devel/py-speaklater/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-speaklater/Makefile 340894 2014-01-24 13:34:31Z olivierd $
 
 PORTNAME=	speaklater
 PORTVERSION=	1.3
@@ -14,13 +14,7 @@ COMMENT=	Lazy string Python module for translations
 LICENSE=	BSD
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
