@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: graphics/gracula/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gracula/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gracula
 PORTVERSION=	3.0
