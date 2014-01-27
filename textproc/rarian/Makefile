@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: textproc/rarian/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rarian/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/textproc/rarian/Makefile,v 1.12 2008/03/09 21:41:22 mezz Exp $
 
 PORTNAME=	rarian
