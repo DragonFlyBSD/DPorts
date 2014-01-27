@@ -1,2 +1,2 @@
-@comment $FreeBSD: vietnamese/vnroff/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/vnroff
+man/man1/vnroff.1.gz
