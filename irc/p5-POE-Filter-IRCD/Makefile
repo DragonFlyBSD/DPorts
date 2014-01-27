@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: irc/p5-POE-Filter-IRCD/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/p5-POE-Filter-IRCD/Makefile 339749 2014-01-15 04:18:26Z miwi $
 
 PORTNAME=	POE-Filter-IRCD
-PORTVERSION=	2.42
+PORTVERSION=	2.44
 CATEGORIES=	irc devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
