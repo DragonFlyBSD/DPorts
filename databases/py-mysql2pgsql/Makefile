@@ -1,4 +1,4 @@
-# $FreeBSD: databases/py-mysql2pgsql/Makefile 335660 2013-12-05 11:39:38Z koobs $
+# $FreeBSD: databases/py-mysql2pgsql/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mysql2pgsql
 PORTVERSION=	0.1.6
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MySQLdb>=1.2.3:${PORTSDIR}/databases/py-MySQ
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.10.0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
-USE_PYTHON=		2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	py_${PORTNAME}
 PYDISTUTILS_AUTOPLIST=	yes
