@@ -1,5 +1,5 @@
 # Created by: Petri Totterman <petri.totterman@hmv.fi>
-# $FreeBSD: devel/log4cplus/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/log4cplus/Makefile 340767 2014-01-23 00:35:31Z bapt $
 
 PORTNAME=	log4cplus
 PORTVERSION=	1.0.4
@@ -8,7 +8,9 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 DISTFILES=	log4cplus-${PORTVERSION}.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-COMMENT=	A logging library for C++
+COMMENT=	logging library for C++
+
+OPTIONS_DEFINE=	DOCS
 
 USE_GCC=	any
 USE_AUTOTOOLS=	libtool
@@ -17,18 +19,13 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-threads=yes
 MAKE_JOBS_UNSAFE=	yes
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	*
-.endif
 
-NO_STAGE=	yes
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/include/log4cplus
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/*.config ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/*.html ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/docs/doxygen.css ${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${STAGEDIR}${PREFIX}/include/log4cplus
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/docs/*.config ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/docs/*.html ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/docs/doxygen.css ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
