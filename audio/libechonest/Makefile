@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/libechonest/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/libechonest/Makefile 340670 2014-01-21 22:55:59Z bapt $
 
 PORTNAME=	libechonest
 PORTVERSION=	2.0.3
@@ -20,7 +20,6 @@ GH_COMMIT=	c02854c
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 USES=		cmake pkgconfig
-NO_STAGE=	yes
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 

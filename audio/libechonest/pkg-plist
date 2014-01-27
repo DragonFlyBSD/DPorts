@@ -1,4 +1,3 @@
-@comment $FreeBSD: audio/libechonest/pkg-plist 321987 2013-06-28 21:17:09Z nivit $
 include/echonest/Artist.h
 include/echonest/ArtistTypes.h
 include/echonest/AudioSummary.h
