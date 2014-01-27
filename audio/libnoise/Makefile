@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/libnoise/Makefile 338660 2014-01-04 18:14:11Z bapt $
+# $FreeBSD: audio/libnoise/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libnoise
 DISTVERSION=	1.0.0
