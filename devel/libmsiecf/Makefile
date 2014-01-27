@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libmsiecf/Makefile 330653 2013-10-17 16:18:10Z antoine $
+# $FreeBSD: devel/libmsiecf/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	libmsiecf
 DISTVERSION=	alpha-20131015
@@ -15,7 +15,7 @@ LICENSE=	LGPL3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python --with-libintl-prefix=${LOCALBASE} ${ICONV_CONFIGURE_ARG}
 USES=		gettext iconv pathfix
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:E}
 
