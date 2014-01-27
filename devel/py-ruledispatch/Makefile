@@ -1,5 +1,5 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD: devel/py-ruledispatch/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-ruledispatch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	RuleDispatch
 PORTVERSION=	0.5.a1.r2506
@@ -16,7 +16,7 @@ COMMENT=	Rule-based Dispatching and Generic Functions
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}PyProtocols>=1.0.a0.r2302:${PORTSDIR}/devel/py-protocols-devel \
 		${PYTHON_PKGNAMEPREFIX}Extremes>=1.1:${PORTSDIR}/devel/py-extremes
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGVERSION=	0.5a1.dev_r2506
 PYEASYINSTALL_ARCHDEP=	yes
