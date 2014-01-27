@@ -1,4 +1,4 @@
-# $FreeBSD: net/libilbc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/libilbc/Makefile 340167 2014-01-18 11:12:17Z mva $
 
 PORTNAME=	libilbc
 DISTVERSION=	1.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Internet Low Bit Rate codec (RFC3951)
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	ilbc-r[0-9]*
@@ -20,7 +20,6 @@ GH_TAGNAME=	${GH_COMMIT}
 USES=		cmake
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|lib/$${CMAKE_LIBRARY_ARCHITECTURE}/pkgconfig|libdata/pkgconfig|' ${WRKSRC}/CMakeLists.txt
 
