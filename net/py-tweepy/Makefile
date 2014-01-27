@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-tweepy/Makefile 330967 2013-10-20 03:56:01Z koobs $
+# $FreeBSD: net/py-tweepy/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	tweepy
 PORTVERSION=	2.1
@@ -12,7 +12,7 @@ COMMENT=	Twitter API library for Python!
 
 LICENSE=	MIT
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
