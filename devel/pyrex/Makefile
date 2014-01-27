@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/pyrex/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pyrex/Makefile 340591 2014-01-21 10:33:24Z mva $
 
 PORTNAME=	pyrex
 PORTVERSION=	0.9.9
@@ -11,25 +11,19 @@ DISTNAME=	Pyrex-${PORTVERSION}
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Programming Language for writing Python extension modules
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=yes
-PYDISTUTILS_PKGNAME=	Pyrex
+LICENSE=	APACHE20
 
-NO_STAGE=	yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
 post-install:
-	@# precompile lexicon pickle
-	@cd ${WRKSRC}/Demos && ${PYTHON_CMD} ${PREFIX}/bin/pyrexc primes.pyx
-
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/Manual
-	@cd ${WRKSRC}/Doc && ${INSTALL_DATA} ./[^M]* ${DOCSDIR}
-	@cd ${WRKSRC}/Doc/Manual && ${INSTALL_DATA} ./* ${DOCSDIR}/Manual
-.endif
-.if !defined(NOPORTEXAMPLES)
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/Manual
+	@cd ${WRKSRC}/Doc && ${INSTALL_DATA} ./[^M]* ${STAGEDIR}${DOCSDIR}
+	@cd ${WRKSRC}/Doc/Manual && ${INSTALL_DATA} ./* ${STAGEDIR}${DOCSDIR}/Manual
 	@cd ${WRKSRC}/Demos && ${MAKE} clean
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	@${TAR} -C ${WRKSRC}/Demos -cf - . | \
-	 ${TAR} -C ${EXAMPLESDIR} -xf -
-.endif
+		${TAR} -C ${STAGEDIR}${EXAMPLESDIR} -xf -
 
 .include <bsd.port.mk>
