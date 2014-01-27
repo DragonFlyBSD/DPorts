@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: devel/ats-contrib-testing/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/ats-contrib-testing/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	testing
 PORTVERSION=	${ATS_VER}
