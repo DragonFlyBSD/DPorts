@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-Products.TinyMCE/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD: www/py-Products.TinyMCE/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	Products.TinyMCE
 PORTVERSION=	1.3.5
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.app.imaging>=1.0.2:${PORTSDIR}/www/py-
 		${PYTHON_PKGNAMEPREFIX}zope.schema>0:${PORTSDIR}/devel/py-zope.schema
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
