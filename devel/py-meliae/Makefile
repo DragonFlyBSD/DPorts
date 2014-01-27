@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-meliae/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-meliae/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	meliae
 PORTVERSION=	0.4.0
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	cython>0:${PORTSDIR}/lang/cython
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	${PORTVERSION}.final.0
 
