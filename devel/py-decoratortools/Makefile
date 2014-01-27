@@ -1,5 +1,5 @@
 # Created by: alexander smishlajev
-# $FreeBSD: devel/py-decoratortools/Makefile 336322 2013-12-13 07:45:18Z sunpoet $
+# $FreeBSD: devel/py-decoratortools/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	DecoratorTools
 PORTVERSION=	1.8
@@ -15,7 +15,7 @@ COMMENT=	Class, function, and metaclass decorators
 LICENSE=	PSFL ZPL21
 LICENSE_COMB=	dual
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
