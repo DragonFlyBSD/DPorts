@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Date_Holidays_Netherlands/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-Date_Holidays_Netherlands/Makefile 339738 2014-01-15 03:01:26Z miwi $
 
 PORTNAME=	Date_Holidays_Netherlands
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.4
 CATEGORIES=	devel www pear
 
 MAINTAINER=	miwi@FreeBSD.org
