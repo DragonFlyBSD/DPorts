@@ -1,8 +1,8 @@
 # Created by: Andrey Zonov <andrey@zonov.org>
-# $FreeBSD: devel/py-msgpack/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/py-msgpack/Makefile 340931 2014-01-24 20:05:47Z rm $
 
 PORTNAME=	msgpack
-PORTVERSION=	0.2.2
+PORTVERSION=	0.4.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,11 +13,8 @@ COMMENT=	MessagePack (de)serializer for Python
 
 LICENSE=	APACHE20
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_INSTALLARGS=	-O 1 -N -Z -S ${PYTHON_SITELIBDIR} -d ${PYEASYINSTALL_SITELIBDIR} ${WRKSRC}/dist/${PYEASYINSTALL_EGG}
-PYDISTUTILS_PKGNAME=	${PORTNAME}_python
-PYEASYINSTALL_ARCHDEP=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
