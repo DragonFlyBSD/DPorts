@@ -1,5 +1,5 @@
 # Created by: Volodymyr Kostyrko <c.kworr@gmail.com>
-# $FreeBSD: devel/py-termcolor/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-termcolor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	termcolor
 PORTVERSION=	1.1.0
