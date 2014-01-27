@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: devel/py-turbocheetah/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-turbocheetah/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	TurboCheetah
 PORTVERSION=	1.0
@@ -15,7 +15,7 @@ COMMENT=	TurboGears plugin to support use of Cheetah templates
 
 RUN_DEPENDS=	cheetah:${PORTSDIR}/devel/py-cheetah
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
