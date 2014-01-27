@@ -1,5 +1,5 @@
 # Created by: Max Campos <mcampos@bpsw.biz>
-# $FreeBSD: devel/p5-User-Identity/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD: devel/p5-User-Identity/Makefile 341194 2014-01-26 14:53:13Z zi $
 
 PORTNAME=	User-Identity
 PORTVERSION=	0.93
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	mcampos@bpsw.biz
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl module for abstracting information about a physical person
 
 RUN_DEPENDS=	p5-Geography-Countries>=0:${PORTSDIR}/misc/p5-Geography-Countries
