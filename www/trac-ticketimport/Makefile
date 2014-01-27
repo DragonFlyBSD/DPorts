@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-ticketimport/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/trac-ticketimport/Makefile 341187 2014-01-26 14:32:48Z miwi $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.7c
@@ -14,9 +14,8 @@ COMMENT=	Import or update tickets from a CSV file or Excel file
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		${PYTHON_PKGNAMEPREFIX}xlrd>=0.7.1:${PORTSDIR}/textproc/py-xlrd
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
-NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	TicketImport
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
