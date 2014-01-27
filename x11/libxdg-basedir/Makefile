@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@cs.uoi.gr>
-# $FreeBSD: x11/libxdg-basedir/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/libxdg-basedir/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libxdg-basedir
 PORTVERSION=	1.2.0
@@ -9,11 +9,10 @@ MASTER_SITES=	http://nevill.ch/libxdg-basedir/downloads/
 MAINTAINER=	ntarmos@ceid.upatras.gr
 COMMENT=	Implementation of the XDG Base Directory specification
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e \
 		's|$$(libdir)/pkgconfig|$${prefix}/libdata/pkgconfig|' \
