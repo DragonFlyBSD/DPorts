@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: sysutils/py-pytsk/Makefile 338419 2014-01-02 07:08:14Z antoine $
+# $FreeBSD: sysutils/py-pytsk/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pytsk
 DISTVERSION=	2013-12-30
@@ -22,7 +22,7 @@ USES=		shebangfix
 SHEBANG_FILES=	samples/*.py
 python_OLD_CMD=	.*
 python_CMD=	${PYTHON_CMD}
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=yes
 
