@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build-XSUtil/Makefile 335051 2013-11-27 19:51:38Z sunpoet $
+# $FreeBSD: devel/p5-Module-Build-XSUtil/Makefile 340244 2014-01-19 09:26:31Z sunpoet $
 
 PORTNAME=	Module-Build-XSUtil
-PORTVERSION=	0.05
+PORTVERSION=	0.06
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
