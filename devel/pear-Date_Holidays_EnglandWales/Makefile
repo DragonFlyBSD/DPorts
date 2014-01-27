@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Date_Holidays_EnglandWales/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-Date_Holidays_EnglandWales/Makefile 339737 2014-01-15 02:58:41Z miwi $
 
 PORTNAME=	Date_Holidays_EnglandWales
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.5
 CATEGORIES=	devel www pear
 
 MAINTAINER=	miwi@FreeBSD.org
