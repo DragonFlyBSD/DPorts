@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/mpg321/Makefile 329297 2013-10-04 12:35:10Z naddy $
+# $FreeBSD: audio/mpg321/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mpg321
 PORTVERSION=	0.2.10
