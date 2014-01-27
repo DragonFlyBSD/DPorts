@@ -1,5 +1,5 @@
 # Created by: Abel Chow <achow@transoft.net>
-# $FreeBSD: www/tidy/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: www/tidy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tidy4
 PORTVERSION=	20000804
