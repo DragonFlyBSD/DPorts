@@ -1,5 +1,5 @@
 # Created by: craig001@lerwick.hopto.org
-# $FreeBSD: mail/ilohamail-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/ilohamail-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ilohamail-devel
 PORTVERSION=	0.9.20050415
