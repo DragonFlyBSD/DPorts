@@ -1,5 +1,5 @@
 # Created by: Yasuhiro KIMURA <yasu@utahime.org>
-# $FreeBSD: mail/py-authres/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: mail/py-authres/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	authres
 PORTVERSION=	0.602
