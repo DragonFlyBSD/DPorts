@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 334161 2013-11-18 09:13:32Z marino $
+# $FreeBSD: devel/gdb66/Makefile 339877 2014-01-16 00:00:04Z bapt $
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
@@ -73,11 +73,9 @@ PLIST_SUB+=	INSIGHT='@comment '
 CONFLICTS+=	gdb-insight*
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "ia64" || ${ARCH} == "powerpc"
-BROKEN=		Does not configure on ia64 or powerpc
-.endif
+.for a in ia64 powerpc
+BROKEN_${a}=	Does not configure on ia64 or powerpc
+.endfor
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${PREFIX}/bin/gdb${VER}
@@ -100,4 +98,4 @@ do-install:
 			${PREFIX}/lib/insight1.0
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
