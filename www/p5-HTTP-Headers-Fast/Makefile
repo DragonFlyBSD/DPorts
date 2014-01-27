@@ -1,8 +1,7 @@
-# $FreeBSD: www/p5-HTTP-Headers-Fast/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Headers-Fast/Makefile 339465 2014-01-12 01:56:13Z kuriyama $
 
 PORTNAME=	HTTP-Headers-Fast
-PORTVERSION=	0.16
-PORTREVISION=	1
+PORTVERSION=	0.17
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
