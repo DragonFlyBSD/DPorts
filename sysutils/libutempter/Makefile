@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>,
-# $FreeBSD: sysutils/libutempter/Makefile 329642 2013-10-06 23:43:15Z marino $
+# $FreeBSD: sysutils/libutempter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libutempter
 PORTVERSION=	1.1.5
