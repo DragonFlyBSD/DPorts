@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: ports-mgmt/portdowngrade/Makefile 332402 2013-11-01 19:38:50Z crees $
+# $FreeBSD: ports-mgmt/portdowngrade/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	portdowngrade
 PORTVERSION=	1.5
