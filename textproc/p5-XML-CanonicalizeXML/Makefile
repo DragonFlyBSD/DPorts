@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-CanonicalizeXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-CanonicalizeXML/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	XML-CanonicalizeXML
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::CanonicalizeXML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
