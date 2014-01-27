@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/gnake/Makefile 333179 2013-11-08 03:44:06Z jgh $
+# $FreeBSD: games/gnake/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnake
 PORTVERSION=	0.94b
