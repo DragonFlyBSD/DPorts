@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: www/py-httplib2/Makefile 332074 2013-10-30 06:09:45Z lwhsu $
+# $FreeBSD: www/py-httplib2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	httplib2
 PORTVERSION=	0.8
