@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: audio/simplemod/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/simplemod/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simplemod
 PORTVERSION=	1.1
