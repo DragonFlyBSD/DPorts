@@ -1,5 +1,5 @@
 # Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: net/asio/Makefile 336263 2013-12-12 14:23:25Z bapt $
+# $FreeBSD: net/asio/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asio
 PORTVERSION=	1.4.8
