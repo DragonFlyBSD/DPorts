@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/ecm/Makefile 331320 2013-10-22 20:48:13Z ehaupt $
+# $FreeBSD: archivers/ecm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ecm
 PORTVERSION=	1.0
