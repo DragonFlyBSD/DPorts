@@ -1,4 +1,4 @@
-# $FreeBSD: editors/pico-alpine/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/pico-alpine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pico-alpine
 PORTREVISION=	1
