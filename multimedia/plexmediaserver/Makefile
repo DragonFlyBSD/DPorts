@@ -1,5 +1,5 @@
 # Created by: KalleDK <plexmaintainer@k-moeller.dk>
-# $FreeBSD: multimedia/plexmediaserver/Makefile 338059 2013-12-30 02:21:31Z feld $
+# $FreeBSD: multimedia/plexmediaserver/Makefile 341261 2014-01-26 19:27:57Z marino $
 
 PORTNAME=	plexmediaserver
 PORTVERSION=	0.9.8.18.290
@@ -29,12 +29,15 @@ ONLY_FOR_ARCHS=	amd64
 
 .include <bsd.port.pre.mk>
 
+.if ${OPSYS} == FreeBSD
 .if ${OSVERSION} < 900000
 IGNORE= supplied binaries compiled for FreeBSD 9
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000054
+.if ${OSVERSION} >= 1000054
+BROKEN=	Waiting for Plex to include Python patch http://bugs.python.org/issue18178
 RUN_DEPENDS+=	${LOCALBASE}/lib/compat/libstdc++.so.6:${PORTSDIR}/misc/compat9x
+.endif
 .endif
 
 do-install:
