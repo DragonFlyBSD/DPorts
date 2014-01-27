@@ -1,5 +1,5 @@
 # Created by: alexander smishlajev
-# $FreeBSD: devel/py-extremes/Makefile 337058 2013-12-20 18:18:37Z wg $
+# $FreeBSD: devel/py-extremes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Extremes
 PORTVERSION=	1.1.1
