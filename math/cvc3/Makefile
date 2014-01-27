@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: math/cvc3/Makefile 333703 2013-11-13 15:55:09Z lwhsu $
+# $FreeBSD: math/cvc3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cvc3
 PORTVERSION=	2.4.1
