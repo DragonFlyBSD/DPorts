@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: irc/py-irc/Makefile 334318 2013-11-19 13:44:40Z wg $
+# $FreeBSD: irc/py-irc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	irc
 PORTVERSION=	8.5.4
