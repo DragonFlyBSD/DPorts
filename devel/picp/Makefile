@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@spc.org>
-# $FreeBSD: devel/picp/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/picp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	picp
 PORTVERSION=	0.6.8
