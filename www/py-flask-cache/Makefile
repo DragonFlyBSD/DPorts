@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: www/py-flask-cache/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-flask-cache/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Flask-Cache
 PORTVERSION=	0.9.2
@@ -15,7 +15,7 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.8:${PORTSDIR}/www/py-flask
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Flask_Cache
 
