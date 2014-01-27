@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: net/py-gspreadsheet/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: net/py-gspreadsheet/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gspreadsheet
 PORTVERSION=	0.3.0
@@ -14,7 +14,7 @@ LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gdata>0:${PORTSDIR}/devel/py-gdata
 
-USE_PYTHON=		2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 
