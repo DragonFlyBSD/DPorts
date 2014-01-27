@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: french/gimp-help/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD: french/gimp-help/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	french graphics
 
