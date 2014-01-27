@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: math/unuran/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/unuran/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unuran
 PORTVERSION=	1.8.1
