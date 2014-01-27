@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/lmdbg/Makefile 329994 2013-10-10 13:28:17Z trociny $
+# $FreeBSD: devel/lmdbg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lmdbg
 PORTVERSION=	1.2.0
