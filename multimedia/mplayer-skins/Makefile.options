@@ -1,6 +1,6 @@
 # This file lists the options to not bloat Makefile
 #
-# $FreeBSD: multimedia/mplayer-skins/Makefile.options 319909 2013-06-04 21:20:31Z jgh $
+# $FreeBSD: multimedia/mplayer-skins/Makefile.options 340722 2014-01-22 17:00:46Z mat $
 #
 
 OPTIONS_MULTI=	SKIN
