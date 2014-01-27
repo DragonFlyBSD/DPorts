@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/py-ming/Makefile 334072 2013-11-17 10:33:00Z sunpoet $
+# $FreeBSD: graphics/py-ming/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ming
 PORTREVISION=	0
@@ -18,7 +18,7 @@ INSTALL_WRKSRC=	${WRKSRC}/py_ext
 PATCH_WRKSRC=	${WRKSRC}/py_ext
 PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 MASTERDIR=	${.CURDIR}/../../graphics/ming
