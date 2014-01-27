@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: databases/memcacheq/Makefile 336999 2013-12-20 11:57:16Z antoine $
+# $FreeBSD: databases/memcacheq/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	memcacheq
 PORTVERSION=	0.2.0
