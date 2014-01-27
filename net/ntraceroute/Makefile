@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/ntraceroute/Makefile 332974 2013-11-06 12:20:00Z mat $
+# $FreeBSD: net/ntraceroute/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ntraceroute
 PORTVERSION=	6.4.2
