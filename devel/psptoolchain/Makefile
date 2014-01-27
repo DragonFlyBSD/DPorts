@@ -1,5 +1,5 @@
 # Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-# $FreeBSD: devel/psptoolchain/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/psptoolchain/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		psptoolchain
 PORTVERSION=		20111215
