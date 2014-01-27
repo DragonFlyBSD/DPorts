@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: sysutils/flog/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/flog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	flog
 PORTVERSION=	1.8
