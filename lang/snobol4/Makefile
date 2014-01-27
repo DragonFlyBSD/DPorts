@@ -1,5 +1,5 @@
 # Created by: Wes Peters <wes@softweyr.com>
-# $FreeBSD: lang/snobol4/Makefile 329570 2013-10-06 14:08:53Z johans $
+# $FreeBSD: lang/snobol4/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	snobol4
 PORTVERSION=	1.5
