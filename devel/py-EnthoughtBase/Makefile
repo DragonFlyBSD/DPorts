@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-EnthoughtBase/Makefile 337604 2013-12-26 19:27:06Z wg $
+# $FreeBSD: devel/py-EnthoughtBase/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	EnthoughtBase
 PORTVERSION=	3.1.0
