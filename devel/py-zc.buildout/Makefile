@@ -1,8 +1,7 @@
-# $FreeBSD: devel/py-zc.buildout/Makefile 338852 2014-01-06 09:47:35Z rm $
+# $FreeBSD: devel/py-zc.buildout/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zc.buildout
-PORTVERSION=	1.5.2
-PORTREVISION=	1
+PORTVERSION=	2.2.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +13,7 @@ COMMENT=	System for managing development buildouts
 LICENSE=	ZPL21
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
