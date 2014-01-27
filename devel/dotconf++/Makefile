@@ -1,5 +1,5 @@
 # Created by: Mark Starovoytov <mark_sf@kikg.ifmo.ru>
-# $FreeBSD: devel/dotconf++/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: devel/dotconf++/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dotconfpp
 PORTVERSION=	0.0.5
