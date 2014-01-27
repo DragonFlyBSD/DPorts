@@ -1,5 +1,5 @@
 # Created by: bms@FreeBSD.org
-# $FreeBSD: devel/calibrator/Makefile 336117 2013-12-10 21:12:30Z bapt $
+# $FreeBSD: devel/calibrator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		calibrator
 PORTVERSION=		0.9
