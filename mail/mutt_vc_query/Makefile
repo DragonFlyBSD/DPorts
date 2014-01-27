@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: mail/mutt_vc_query/Makefile 330848 2013-10-19 06:40:36Z jgh $
+# $FreeBSD: mail/mutt_vc_query/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mutt_vc_query
 PORTVERSION=	002
