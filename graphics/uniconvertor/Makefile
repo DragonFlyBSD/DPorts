@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/uniconvertor/Makefile 330573 2013-10-16 23:55:07Z amdmi3 $
+# $FreeBSD: graphics/uniconvertor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uniconvertor
 PORTVERSION=	1.1.5
