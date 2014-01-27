@@ -1,5 +1,5 @@
 # Created by: olgeni@uli.it
-# $FreeBSD: lang/ruby-man/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/ruby-man/Makefile 341096 2014-01-25 20:47:28Z swills $
 
 PORTNAME=	ruby-man
 PORTVERSION=	1.4.6
@@ -23,6 +23,10 @@ NO_BUILD=	yes
 PLIST_SUB=	LANGSUFFIX="${LANGSUFFIX}"
 
 NO_STAGE=	yes
+
+DEPRECATED=		Documents EOLd version of Ruby and unmaintained
+EXPIRATION_DATE=	2014-02-25
+
 do-install:
 	${MKDIR} ${RUBY_MODDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.html ${RUBY_MODDOCDIR}
