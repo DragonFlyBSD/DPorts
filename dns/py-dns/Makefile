@@ -1,5 +1,5 @@
 # Created by: Mark Linimon <linimon@lonesome.com>
-# $FreeBSD: dns/py-dns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/py-dns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dns
 PORTVERSION=	2.3.6
@@ -17,7 +17,7 @@ LICENSE_NAME=	CNRI LICENSE AGREEMENT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pydns
 
