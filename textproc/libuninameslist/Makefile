@@ -1,5 +1,5 @@
 # Created by: KANOU Hiroki <kanou@khdd.net>
-# $FreeBSD: textproc/libuninameslist/Makefile 337317 2013-12-24 03:20:14Z amdmi3 $
+# $FreeBSD: textproc/libuninameslist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libuninameslist
 PORTVERSION=	20091231
