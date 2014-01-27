@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/py-scriptaculous/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-scriptaculous/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scriptaculous
 PORTVERSION=	1.8.1.1
@@ -19,7 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 PYDISTUTILS_PKGNAME=	Scriptaculous
 
 # Use the same version of www/py-turbogears
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 
