@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: graphics/libemf/Makefile 331928 2013-10-29 02:54:44Z maho $
+# $FreeBSD: graphics/libemf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libEMF
 PORTVERSION=	1.0.7
