@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: polish/aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
+# $FreeBSD: polish/aspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aspell
 DISTVERSION=	6-pl-6.0_20061121-0
