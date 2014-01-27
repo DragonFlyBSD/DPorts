@@ -1,4 +1,4 @@
-/* $FreeBSD: lang/pcc/files/f77config.h 300896 2012-07-14 13:54:48Z beat $ */
+/* $FreeBSD: lang/pcc/files/f77config.h 340872 2014-01-24 00:14:07Z mat $ */
 /*	$Id: f77config.h,v 1.1 2005/04/17 20:22:18 ragge Exp $	*/
 
 /*
