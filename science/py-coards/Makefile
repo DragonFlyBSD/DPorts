@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-coards/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/py-coards/Makefile 341150 2014-01-26 00:52:15Z koobs $
 
 PORTNAME=	coards
 PORTVERSION=	1.0.5
@@ -12,8 +12,8 @@ COMMENT=	COARDS compliant time parser
 
 LICENSE=	MIT
 
-USE_PYTHON=		2.7
-USE_PYDISTUTILS=	easy_install
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
