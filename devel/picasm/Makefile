@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: devel/picasm/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/picasm/Makefile 340049 2014-01-17 14:45:02Z bapt $
 
 PORTNAME=	picasm
 PORTVERSION=	1.14
@@ -10,6 +10,8 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable assembler for 16C84 series PICs
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USE_BZIP2=	yes
 
@@ -23,22 +25,15 @@ ALL_TARGET=
 
 EXAMPLE_FILES=	example.asm morse.asm morse.i pic16f84.i picmac.i
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/picasm.txt ${DOCSDIR}
-.endif
-.if !defined(NOPORTEXAMPLES)
+	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/picasm.txt ${STAGEDIR}${DOCSDIR}
 .for EXAMPLE in ${EXAMPLE_FILES}
-	@ ${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/${EXAMPLE} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/${EXAMPLE} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
-.endif
-.if !defined(NOPORTDATA)
-	${MKDIR} ${DATADIR}/device_definitions
-	${INSTALL_DATA} ${WRKSRC}/device_definitions/*.i ${DATADIR}/device_definitions
-.endif
+	@${MKDIR} ${STAGEDIR}${DATADIR}/device_definitions
+	${INSTALL_DATA} ${WRKSRC}/device_definitions/*.i ${STAGEDIR}${DATADIR}/device_definitions
 
 .include <bsd.port.mk>
