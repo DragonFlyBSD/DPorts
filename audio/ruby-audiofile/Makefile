@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: audio/ruby-audiofile/Makefile 333231 2013-11-08 14:31:40Z kwm $
+# $FreeBSD: audio/ruby-audiofile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	audiofile
 PORTVERSION=	0.2.4
