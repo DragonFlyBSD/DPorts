@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: converters/mpack/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: converters/mpack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mpack
 PORTVERSION=	1.6
