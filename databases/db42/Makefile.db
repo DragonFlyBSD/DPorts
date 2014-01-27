@@ -1,3 +1,5 @@
+# $FreeBSD: databases/db42/Makefile.db 340722 2014-01-22 17:00:46Z mat $
+
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 DISTNAME?=	db-${PORTVERSION}
 DIST_SUBDIR=	bdb
