@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: cad/kicad-library/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/kicad-library/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kicad
 PORTVERSION=	1.0
