@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/buzhug/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/buzhug/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	buzhug
 PORTVERSION=	1.8
