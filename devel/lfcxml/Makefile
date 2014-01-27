@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/lfcxml/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/lfcxml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lfcxml
 PORTVERSION=	1.1.5
@@ -11,7 +11,7 @@ COMMENT=	C++ XML library, used for databases/cego
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	lfcbase:${PORTSDIR}/devel/lfcbase
+LIB_DEPENDS=	liblfcbase.so:${PORTSDIR}/devel/lfcbase
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -19,5 +19,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf:env
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
