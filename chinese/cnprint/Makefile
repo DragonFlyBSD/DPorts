@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/cnprint/Makefile 334192 2013-11-18 13:42:01Z lwhsu $
+# $FreeBSD: chinese/cnprint/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cnprint
 PORTVERSION=	3.30b
