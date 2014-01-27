@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: www/p5-HTML-Summary/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD: www/p5-HTML-Summary/Makefile 339679 2014-01-14 11:19:12Z demon $
 
 PORTNAME=	HTML-Summary
-PORTVERSION=	0.017
+PORTVERSION=	0.018
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
