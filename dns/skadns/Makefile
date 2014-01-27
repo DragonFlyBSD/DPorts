@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: dns/skadns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/skadns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	skadns
 PORTVERSION=	0.25
