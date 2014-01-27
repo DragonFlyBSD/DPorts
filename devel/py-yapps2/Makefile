@@ -1,5 +1,5 @@
 # Created by: xenophon+fbsdports@irtnog.org
-# $FreeBSD: devel/py-yapps2/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-yapps2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yapps2
 PORTVERSION=	2.1.1
