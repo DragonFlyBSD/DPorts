@@ -1,6 +1,6 @@
 # ex:ts=8
 #
-# $FreeBSD: lang/pure/bsd.pure.mk 324440 2013-08-09 14:29:39Z danfe $
+# $FreeBSD: lang/pure/bsd.pure.mk 340722 2014-01-22 17:00:46Z mat $
 #
 # bsd.pure.mk - Support for the Pure language packages
 #
