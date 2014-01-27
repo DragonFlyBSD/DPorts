@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: devel/py-prettytable/Makefile 330237 2013-10-13 16:14:01Z novel $
+# $FreeBSD: devel/py-prettytable/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	prettytable
 PORTVERSION=	0.7.2
