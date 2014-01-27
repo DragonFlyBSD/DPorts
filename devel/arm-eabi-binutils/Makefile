@@ -1,4 +1,4 @@
-# $FreeBSD: devel/arm-eabi-binutils/Makefile 328410 2013-09-26 20:08:38Z eadler $
+# $FreeBSD: devel/arm-eabi-binutils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	binutils
 PORTVERSION=	2.23.2
