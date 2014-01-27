@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake2-3zb2/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/quake2-3zb2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	3zb2
 PORTVERSION=	0.97
