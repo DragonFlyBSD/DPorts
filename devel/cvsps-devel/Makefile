@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsps-devel/Makefile 331231 2013-10-22 07:53:02Z amdmi3 $
+# $FreeBSD: devel/cvsps-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cvsps
 DISTVERSION=	2.2b1
