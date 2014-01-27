@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: ftp/py-pyftpdlib/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/py-pyftpdlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyftpdlib
 PORTVERSION=	0.7.0
@@ -13,7 +13,7 @@ COMMENT=	Python FTP server library
 
 LICENSE=	MIT
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 
 OPTIONS_DEFINE=		SENDFILE OPENSSL
