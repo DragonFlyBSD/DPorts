@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-olefileio_pl/Makefile 334358 2013-11-19 22:24:58Z antoine $
+# $FreeBSD: devel/py-olefileio_pl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	olefileio_pl
 PORTVERSION=	0.26
@@ -15,7 +15,7 @@ COMMENT=	Python module to read MS OLE2 files
 LICENSE=	MIT
 
 USES=		dos2unix
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=OleFileIO_PL
 
