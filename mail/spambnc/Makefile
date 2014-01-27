@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: mail/spambnc/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/spambnc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spambnc
 PORTVERSION=	20060416
