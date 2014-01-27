@@ -1,5 +1,5 @@
 # Created by: Yoshihide SONODA <ysonoda@dontaku.csce.kyushu-u.ac.jp>
-# $FreeBSD: audio/waveplay/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/waveplay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		waveplay
 PORTVERSION=		2001.09.24
