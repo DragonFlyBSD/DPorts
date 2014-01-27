@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: devel/elfrc/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/elfrc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	elfrc
 PORTVERSION=	0.7
