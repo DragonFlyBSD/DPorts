@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/edid-decode/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/edid-decode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	edid-decode
 PORTVERSION=	0.1.20121128
