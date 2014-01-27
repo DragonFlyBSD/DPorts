@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: graphics/pymorph/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/pymorph/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pymorph
 PORTVERSION=	0.96
@@ -14,7 +14,7 @@ LICENSE=	BSD
 
 RUN_DEPENDS+=	${PYNUMPY}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
