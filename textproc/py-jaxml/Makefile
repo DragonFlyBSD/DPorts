@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-jaxml/Makefile 338090 2013-12-30 11:40:41Z wg $
+# $FreeBSD: textproc/py-jaxml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jaxml
 PORTVERSION=	3.02
