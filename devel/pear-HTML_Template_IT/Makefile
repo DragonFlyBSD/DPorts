@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: devel/pear-HTML_Template_IT/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-HTML_Template_IT/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	HTML_Template_IT
 PORTVERSION=	1.3.0
