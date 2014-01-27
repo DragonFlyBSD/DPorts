@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-wikitopdf/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-wikitopdf/Makefile 341188 2014-01-26 14:33:08Z miwi $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	2.2.2
@@ -15,11 +15,10 @@ COMMENT=	Plugin to generate PDF documents from the Wiki
 RUN_DEPENDS+=	htmldoc:${PORTSDIR}/textproc/htmldoc \
 		tracd:${PORTSDIR}/www/trac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracWikiToPdfPlugin
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 WRKSRC=			${WRKDIR}/${PORTNAME}plugin
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
