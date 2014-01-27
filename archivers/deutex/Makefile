@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/deutex/Makefile 338704 2014-01-05 00:15:00Z bapt $
+# $FreeBSD: archivers/deutex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	deutex
 PORTVERSION=	4.4.0
