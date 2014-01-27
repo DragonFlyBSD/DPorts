@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-p2p/transmission-cli/files/transmission.in 338648 2014-01-04 15:33:14Z crees $
+# $FreeBSD: net-p2p/transmission-cli/files/transmission.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: transmission
 # REQUIRE: DAEMON
