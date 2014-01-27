@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-GFF3/Makefile 332533 2013-11-02 19:55:32Z sunpoet $
+# $FreeBSD: biology/p5-Bio-GFF3/Makefile 340794 2014-01-23 03:28:37Z sunpoet $
 
 PORTNAME=	Bio-GFF3
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 CATEGORIES=	biology perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,8 +17,7 @@ BUILD_DEPENDS=	p5-File-ReadBackwards>=0:${PORTSDIR}/devel/p5-File-ReadBackwards 
 		p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
-		p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy
+TEST_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String
 
 USES=		perl5
 USE_PERL5=	configure
