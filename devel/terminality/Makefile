@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/terminality/Makefile 329774 2013-10-08 11:16:43Z bsam $
+# $FreeBSD: devel/terminality/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	terminality
 PORTVERSION=	2.1
