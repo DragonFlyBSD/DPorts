@@ -1,5 +1,5 @@
 # Created by: makeport.pl
-# $FreeBSD: audio/py-vorbis/Makefile 328530 2013-09-27 22:36:11Z mva $
+# $FreeBSD: audio/py-vorbis/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	vorbis
 PORTVERSION=	1.4
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/ogg/_ogg.so:${PORTSDIR}/audio/py-ogg
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/ogg/_ogg.so:${PORTSDIR}/audio/py-ogg
 LIB_DEPENDS=	libvorbis.so:${PORTSDIR}/audio/libvorbis
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	pyvorbis
