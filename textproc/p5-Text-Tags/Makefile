@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Text-Tags/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Tags/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-Tags
 PORTVERSION=	0.04
@@ -10,10 +10,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Parses folksonomy space-separated tags
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Tags.3 Text::Tags::Parser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
