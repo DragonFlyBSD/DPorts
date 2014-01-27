@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: devel/py-rtree/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-rtree/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rtree
 PORTVERSION=	0.7.0
@@ -15,7 +15,7 @@ COMMENT=	R-Tree Spatial Index For Python GIS
 BUILD_DEPENDS+=	${LOCALBASE}/include/spatialindex/SpatialIndex.h:${PORTSDIR}/devel/spatialindex
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Rtree
 PYDISTUTILS_NOEGGINFO=	yes
