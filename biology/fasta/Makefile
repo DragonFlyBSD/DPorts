@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/fasta/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/fasta/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fasta
 PORTVERSION=	21.1.1
@@ -33,6 +33,8 @@ do-extract:
 	  cd ${WRKSRC} && (${GZCAT} ${DISTDIR}/$${f} | ${SH} >/dev/null); \
 	done
 
+BROKEN_powerpc=	Does not build: runs out of space on powerpc
+
 .include <bsd.port.options.mk>
 
 post-install:
@@ -46,10 +48,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "powerpc"
-IGNORE=		does not build: runs out of space on powerpc
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
