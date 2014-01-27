@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/pear-Horde_SyncMl/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: comms/pear-Horde_SyncMl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_SyncMl
 PORTVERSION=	2.0.3
