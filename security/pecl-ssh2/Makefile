@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger <netchild@FreeBSD.org>
-# $FreeBSD: security/pecl-ssh2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pecl-ssh2/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	ssh2
 PORTVERSION=	0.12
@@ -21,7 +21,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
 
 CONFIGURE_ARGS=	--with-ssh2
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
