@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: textproc/libtext-charwidth-perl/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libtext-charwidth-perl/Makefile 340562 2014-01-21 07:28:52Z mat $
 
 PORTNAME=	libtext-charwidth-perl
 PORTVERSION=	0.04
@@ -16,9 +16,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::CharWidth.3
-
-NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}.orig ${WRKSRC}
 
