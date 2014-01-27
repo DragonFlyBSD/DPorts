@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-zope.app.securitypolicy/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: security/py-zope.app.securitypolicy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope.app.securitypolicy
 PORTVERSION=	3.6.1
