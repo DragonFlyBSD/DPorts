@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/font-shinonome/Makefile 330478 2013-10-16 04:56:32Z hrs $
+# $FreeBSD: japanese/font-shinonome/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shinonome
 PORTVERSION=	0.9.11.p1
