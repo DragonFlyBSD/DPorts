@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: security/ratproxy/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ratproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ratproxy
 PORTVERSION=	1.58
