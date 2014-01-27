@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: www/cgic/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cgic/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cgic
 PORTVERSION=	2.05
