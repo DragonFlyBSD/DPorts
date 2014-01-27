@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.users/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: www/py-plone.app.users/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.app.users
 PORTVERSION=	1.1.5
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.formlib>=0:${PORTSDIR}/devel/py-five.fo
 		zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 #USES=		zope
