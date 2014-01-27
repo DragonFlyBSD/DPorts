@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-RecordParser/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-RecordParser/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-RecordParser
 PORTVERSION=	1.6.3
@@ -10,6 +10,8 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Read record-oriented files
+
+LICENSE=	GPLv2
 
 BUILD_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
@@ -26,12 +28,6 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		tablify.1 tabmerge.1 tab2graph.1
-MAN3=		Text::RecordParser.3 \
-		Text::RecordParser::Tab.3 \
-		Text::RecordParser::Object.3
-
-NO_STAGE=	yes
 post-extract:
 		# workaround for https://rt.cpan.org/Public/Bug/Display.html?id=87855
 		${CHMOD} +w ${WRKSRC}/README.md
