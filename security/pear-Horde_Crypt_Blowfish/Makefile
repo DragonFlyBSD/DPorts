@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Horde_Crypt_Blowfish/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: security/pear-Horde_Crypt_Blowfish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Crypt_Blowfish
 PORTVERSION=	1.0.2
