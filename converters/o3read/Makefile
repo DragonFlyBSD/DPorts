@@ -1,5 +1,5 @@
 # Created by: samm
-# $FreeBSD: converters/o3read/Makefile 339239 2014-01-09 14:19:44Z bapt $
+# $FreeBSD: converters/o3read/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	o3read
 PORTVERSION=	0.0.4
