@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ufl/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: math/py-ufl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ufl
 PORTVERSION=	${MMVERSION}0
@@ -13,7 +13,7 @@ COMMENT=	Unified Form Language for finite element discretizations
 
 LICENSE=	LGPL3
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	UFL
 
