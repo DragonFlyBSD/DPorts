@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: lang/v8/Makefile 337829 2013-12-28 04:28:43Z vanilla $
+# $FreeBSD: lang/v8/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	v8
 PORTVERSION=	3.18.5
@@ -16,7 +16,7 @@ CONFLICTS=      v8-devel-*
 
 USES=		gmake
 USE_XZ=		yes
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 USE_LDCONFIG=	yes
 ALL_TARGET=	native
 MAKE_ARGS=	strictaliasing=off
