@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: textproc/libxml++26-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
+# $FreeBSD: textproc/libxml++26-reference/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/textproc/libxml++26-reference/Makefile,v 1.1 2010/04/03 16:21:50 avl Exp $
 
 PORTREVISION=	0
