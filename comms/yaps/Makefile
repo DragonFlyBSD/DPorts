@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: comms/yaps/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD: comms/yaps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yaps
 PORTVERSION=	0.96
