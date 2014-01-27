@@ -1,4 +1,4 @@
-# $FreeBSD: comms/vrflash/Makefile 331810 2013-10-27 22:29:46Z dinoex $
+# $FreeBSD: comms/vrflash/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vrflash
 PORTVERSION=	0.20
