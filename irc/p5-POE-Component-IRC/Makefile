@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: irc/p5-POE-Component-IRC/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/p5-POE-Component-IRC/Makefile 339751 2014-01-15 04:19:22Z miwi $
 
 PORTNAME=	POE-Component-IRC
-PORTVERSION=	6.81
+PORTVERSION=	6.83
 CATEGORIES=	irc devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BINGOS
