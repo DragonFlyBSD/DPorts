@@ -1,27 +1,23 @@
-# $FreeBSD: textproc/p5-XML-AutoWriter/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-AutoWriter/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	XML-AutoWriter
 PORTVERSION=	0.40
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
-DISTNAME=	${PORTNAME}-0.4
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-0.4
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl module for DOCTYPE based XML output
+
+LICENSE=	ART10 GPLv1 BSD4CLAUSE
+LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::AutoWriter.3 \
-		XML::Doctype::AttDef.3 \
-		XML::ValidWriter.3 \
-		XML::Doctype::ElementDecl.3 \
-		XML::Doctype.3
-
-NO_STAGE=	yes
 post-patch:
 	${RM} ${WRKSRC}/lib/XML/*.orig
 
