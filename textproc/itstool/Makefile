@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: textproc/itstool/Makefile 336847 2013-12-18 16:30:41Z kwm $
+# $FreeBSD: textproc/itstool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	itstool
 PORTVERSION=	2.0.2
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2
 
 USE_BZIP2=	yes
-USE_PYTHON_RUN=	-2.7
+USE_PYTHON_RUN=	2
 GNU_CONFIGURE=	yes
 
 post-patch:
