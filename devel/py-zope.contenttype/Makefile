@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zope.contenttype/Makefile 338824 2014-01-05 21:02:29Z rm $
+# $FreeBSD: devel/py-zope.contenttype/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope.contenttype
 PORTVERSION=	3.5.5
