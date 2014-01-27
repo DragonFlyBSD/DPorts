@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: sysutils/syslogger/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/syslogger/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	syslogger
 PORTVERSION=	1.0
