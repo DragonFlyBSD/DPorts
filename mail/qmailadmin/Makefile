@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/qmailadmin/Makefile 330939 2013-10-19 21:36:35Z bdrewery $
+# $FreeBSD: mail/qmailadmin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qmailadmin
 PORTVERSION=	1.2.15
