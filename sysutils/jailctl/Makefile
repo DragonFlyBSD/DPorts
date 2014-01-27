@@ -1,5 +1,5 @@
 # Created by: Eirik Oeverby <ltning@anduin.net>
-# $FreeBSD: sysutils/jailctl/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/jailctl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jailctl
 PORTVERSION=	0.80
