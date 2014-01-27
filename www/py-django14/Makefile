@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: www/py-django14/Makefile 338538 2014-01-03 13:37:21Z lwhsu $
+# $FreeBSD: www/py-django14/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	django
 PORTVERSION=	1.4.10
@@ -16,7 +16,7 @@ COMMENT=	High-level Python Web framework
 
 LICENSE=	BSD
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Django
 
