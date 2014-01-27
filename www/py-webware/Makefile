@@ -1,5 +1,5 @@
 # Created by: Stefan Schwarzer <sschwarzer@sschwarzer.net>
-# $FreeBSD: www/py-webware/Makefile 336429 2013-12-14 09:27:14Z mva $
+# $FreeBSD: www/py-webware/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	webware
 DISTVERSION=	1.1.1
@@ -13,7 +13,7 @@ COMMENT=	A versatile web application server written in Python
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mx-base>0:${PORTSDIR}/lang/py-mx-base
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 WEBWARE_USER?=	webkit
