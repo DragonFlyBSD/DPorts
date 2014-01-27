@@ -1,14 +1,16 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gts/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gts/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gts
 PORTVERSION=	0.7.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	GNU Triangulated Surface Library
+
+LICENSE=	LGPL20
 
 USES=		pkgconfig
 USE_GNOME=	glib20
@@ -16,20 +18,15 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	NETPBM
-NETPBM_DESC=	Build with libnetpbm support
+OPTIONS_SUB=	yes
+
+NETPBM_DESC=		Build with libnetpbm support
+NETPBM_LIB_DEPENDS=	libnetpbm.so:${PORTSDIR}/graphics/netpbm
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNETPBM}
-LIB_DEPENDS+=	netpbm.1:${PORTSDIR}/graphics/netpbm
-PLIST_SUB=	NETPBM=""
-.else
-PLIST_SUB=	NETPBM="@comment "
-.endif
 
 post-extract:
 .if ! ${PORT_OPTIONS:MNETPBM}
