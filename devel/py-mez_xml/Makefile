@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@branda.to>
-# $FreeBSD: devel/py-mez_xml/Makefile 337699 2013-12-27 10:35:36Z wg $
+# $FreeBSD: devel/py-mez_xml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mez_xml
 PORTVERSION=	0.4
