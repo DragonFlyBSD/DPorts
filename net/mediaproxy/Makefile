@@ -1,5 +1,5 @@
 # Created by: Steve Ames <steve@energistic.com>
-# $FreeBSD: net/mediaproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/mediaproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mediaproxy
 PORTVERSION=	1.8.2
@@ -13,7 +13,7 @@ COMMENT=	A far-end NAT traversal solution for SER/OpenSER
 
 USE_RC_SUBR=	mediaproxy proxydispatcher
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
