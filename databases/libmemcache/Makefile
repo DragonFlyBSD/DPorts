@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: databases/libmemcache/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: databases/libmemcache/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libmemcache
 DISTVERSION=	1.4.0.rc2
