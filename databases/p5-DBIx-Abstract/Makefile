@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: databases/p5-DBIx-Abstract/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Abstract/Makefile 341074 2014-01-25 18:45:18Z antoine $
 
 PORTNAME=	DBIx-Abstract
 PORTVERSION=	1.010
@@ -20,7 +20,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBIx::Abstract.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
