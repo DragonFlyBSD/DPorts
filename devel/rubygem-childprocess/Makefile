@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/rubygem-childprocess/Makefile 337612 2013-12-26 20:04:56Z swills $
+# $FreeBSD: devel/rubygem-childprocess/Makefile 340900 2014-01-24 14:46:28Z miwi $
 
 PORTNAME=	childprocess
 PORTVERSION=	0.3.9
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
