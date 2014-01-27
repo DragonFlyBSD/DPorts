@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: textproc/py-mako/Makefile 334283 2013-11-19 06:38:54Z lwhsu $
+# $FreeBSD: textproc/py-mako/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mako
 PORTVERSION=	0.9.0
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beaker>=1.1:${PORTSDIR}/www/py-beaker \
 		${PYTHON_PKGNAMEPREFIX}Babel>0:${PORTSDIR}/devel/py-babel
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 
-USE_PYTHON=		2.7+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	Mako
