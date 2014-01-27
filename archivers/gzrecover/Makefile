@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/gzrecover/Makefile 329172 2013-10-03 12:46:23Z ehaupt $
+# $FreeBSD: archivers/gzrecover/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gzrecover
 PORTVERSION=	0.8
