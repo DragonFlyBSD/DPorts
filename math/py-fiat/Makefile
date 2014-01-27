@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-fiat/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: math/py-fiat/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	fiat
 PORTVERSION=	${MMVERSION}.0
@@ -17,7 +17,7 @@ LICENSE=	LGPL3
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}scientific>=0:${PORTSDIR}/math/py-scientific
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	FIAT
 
