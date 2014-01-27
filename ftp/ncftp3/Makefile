@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ftp/ncftp3/Makefile 338614 2014-01-04 00:56:14Z bapt $
+# $FreeBSD: ftp/ncftp3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ncftp
 PORTVERSION=	3.2.5
