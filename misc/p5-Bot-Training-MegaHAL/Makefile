@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: misc/p5-Bot-Training-MegaHAL/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD: misc/p5-Bot-Training-MegaHAL/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Bot-Training-MegaHAL
 PORTVERSION=	0.02
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:AVAR
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Provide megahal.trn via Bot::Training
 
 LICENSE=	ART10 GPLv1
