@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: security/p5-CACertOrg-CA/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
+# $FreeBSD: security/p5-CACertOrg-CA/Makefile 339472 2014-01-12 03:52:10Z sunpoet $
 
 PORTNAME=	CACertOrg-CA
-PORTVERSION=	20110724.002
+PORTVERSION=	20110724.004
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BDFOY
