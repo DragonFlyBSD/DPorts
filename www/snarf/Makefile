@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: www/snarf/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/snarf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	snarf
 PORTVERSION=	7.0
