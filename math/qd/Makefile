@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <maho@FreeBSD.org>
-# $FreeBSD: math/qd/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/qd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qd
 PORTVERSION=	2.3.7
