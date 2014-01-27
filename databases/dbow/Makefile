@@ -1,5 +1,5 @@
 # Created by: Dermot Tynan <dtynan@kalopa.com>
-# $FreeBSD: databases/dbow/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/dbow/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dbow
 PORTVERSION=	0.7
