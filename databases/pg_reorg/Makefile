@@ -1,5 +1,5 @@
 # Created by: Alexander Pyhalov <alp@sfedu.ru>
-# $FreeBSD: databases/pg_reorg/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pg_reorg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pg_reorg
 PORTVERSION=	1.1.8
