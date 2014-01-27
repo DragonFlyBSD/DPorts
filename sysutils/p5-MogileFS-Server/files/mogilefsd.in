@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/p5-MogileFS-Server/files/mogilefsd.in 310494 2013-01-16 15:07:59Z tobez $
+# $FreeBSD: sysutils/p5-MogileFS-Server/files/mogilefsd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: mogilefsd
 # REQUIRE: LOGIN cleanvar
