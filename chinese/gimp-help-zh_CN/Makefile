@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: chinese/gimp-help-zh_CN/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/gimp-help-zh_CN/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	chinese graphics
 
