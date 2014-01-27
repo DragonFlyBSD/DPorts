@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: devel/tpasm/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/tpasm/Makefile 339898 2014-01-16 06:00:17Z danfe $
 
 PORTNAME=	tpasm
 PORTVERSION=	1.8
@@ -20,20 +20,14 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/libdata/${PORTNAME}
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/libdata/${PORTNAME}
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/samples/* ${EXAMPLESDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libdata/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/include/* \
+		${STAGEDIR}${PREFIX}/libdata/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
