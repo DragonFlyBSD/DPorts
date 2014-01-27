@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: shells/ambit/Makefile 337645 2013-12-27 08:09:02Z bapt $
+# $FreeBSD: shells/ambit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ambit
 PORTVERSION=	2.0.39
