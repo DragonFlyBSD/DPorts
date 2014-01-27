@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/py-vobject/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/py-vobject/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vobject
 PORTVERSION=	0.8.1c
@@ -13,7 +13,7 @@ COMMENT=	ICalendar library
 
 RUN_DEPENDS=	py*-dateutil>=1.1:${PORTSDIR}/devel/py-dateutil
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
 NO_STAGE=	yes
