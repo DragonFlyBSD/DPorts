@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/ufc/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: math/ufc/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ufc
 PORTVERSION=	${MMVERSION}.0
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libboost_math_c99.so:${PORTSDIR}/devel/boost-libs
 # LICENSE=	public domain
 
 USES=		cmake
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 PYDISTUTILS_PKGNAME=	ufc
 
 CMAKE_ARGS+=	-DUFC_PKGCONFIG_DIR=${PREFIX}/libdata/pkgconfig
