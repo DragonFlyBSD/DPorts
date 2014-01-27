@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/rubygem-librmpd/Makefile 329245 2013-10-03 22:35:12Z vg $
+# $FreeBSD: audio/rubygem-librmpd/Makefile 340899 2014-01-24 14:45:58Z miwi $
 
 PORTNAME=	librmpd
 PORTVERSION=	0.1.1
@@ -10,7 +10,6 @@ MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Is a simple yet powerful Music Player Daemon library
 
 USE_RUBY=	yes
-NO_STAGE=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
