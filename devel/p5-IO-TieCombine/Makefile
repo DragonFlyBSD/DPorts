@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-TieCombine/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-TieCombine/Makefile 339735 2014-01-15 02:56:32Z miwi $
 
 PORTNAME=	IO-TieCombine
-PORTVERSION=	1.002
+PORTVERSION=	1.003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
