@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: sysutils/disktype/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/disktype/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	disktype
 PORTVERSION=	9
