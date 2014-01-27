@@ -1,5 +1,5 @@
 # Created by: Kuan-Chung Chiu <buganini@gmail.com>
-# $FreeBSD: x11-fonts/padauk/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/padauk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	padauk
 PORTVERSION=	2.8
