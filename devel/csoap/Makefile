@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/csoap/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/csoap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	csoap
 PORTVERSION=	1.1.0
@@ -8,13 +8,13 @@ MASTER_SITES=	SF/${PORTNAME}/libsoap/${PORTVERSION}
 DISTNAME=	libsoap-${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A client/server SOAP library written in pure C
+COMMENT=	Client/server SOAP library written in pure C
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	libxml2 gnomehack
+USES=		pathfix
+USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/libsoap-${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
