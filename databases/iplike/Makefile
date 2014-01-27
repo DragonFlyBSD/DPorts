@@ -1,5 +1,5 @@
 # Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-# $FreeBSD: databases/iplike/Makefile 329858 2013-10-09 04:41:30Z danilo $
+# $FreeBSD: databases/iplike/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iplike
 PORTVERSION=	2.0.3
