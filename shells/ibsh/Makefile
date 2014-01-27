@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan
-# $FreeBSD: shells/ibsh/Makefile 333218 2013-11-08 13:00:49Z bapt $
+# $FreeBSD: shells/ibsh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ibsh
 PORTVERSION=	0.3e
