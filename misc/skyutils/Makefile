@@ -1,5 +1,5 @@
 # Created by: Machiel Mastenbroek <machiel_mastenbroek@hotmail.com>
-# $FreeBSD: misc/skyutils/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/skyutils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	skyutils
 PORTVERSION=	2.9
