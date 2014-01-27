@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-bitarray/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-bitarray/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	bitarray
 PORTVERSION=	0.8.1
@@ -12,7 +12,7 @@ COMMENT=	Efficient arrays of booleans
 
 LICENSE=	PSFL
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 PYEASYINSTALL_EGG=	${PYDISTUTILS_PKGNAME}-${PORTVERSION}-py${PYTHON_VER}${PYEASYINSTALL_OSARCH}.egg
