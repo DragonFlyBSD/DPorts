@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: textproc/py-wordnet/Makefile 338102 2013-12-30 12:33:52Z wg $
+# $FreeBSD: textproc/py-wordnet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wordnet
 PORTVERSION=	2.0.1
