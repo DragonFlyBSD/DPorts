@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.subrequest/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-plone.subrequest/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.subrequest
 PORTVERSION=	1.6.7
