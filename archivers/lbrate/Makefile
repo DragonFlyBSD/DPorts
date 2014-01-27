@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-# $FreeBSD: archivers/lbrate/Makefile 338686 2014-01-04 23:35:15Z bapt $
+# $FreeBSD: archivers/lbrate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lbrate
 PORTVERSION=	1.1
