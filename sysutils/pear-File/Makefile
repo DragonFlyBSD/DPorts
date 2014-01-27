@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: sysutils/pear-File/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: sysutils/pear-File/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	File
 PORTVERSION=	1.4.1
