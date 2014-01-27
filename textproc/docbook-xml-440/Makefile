@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/docbook-xml-440/Makefile 338804 2014-01-05 17:28:35Z jgh $
+# $FreeBSD: textproc/docbook-xml-440/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.4
