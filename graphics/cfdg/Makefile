@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: graphics/cfdg/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/cfdg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cfdg
 PORTVERSION=	2.2.2
