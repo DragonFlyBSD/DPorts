@@ -1,5 +1,5 @@
 # Created by: "Choe, Cheng-Dae" whitekid
-# $FreeBSD: databases/py-sqlobject/Makefile 336620 2013-12-16 11:09:21Z wg $
+# $FreeBSD: databases/py-sqlobject/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlobject
 PORTVERSION=	1.5.1
