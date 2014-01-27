@@ -1,5 +1,5 @@
 # Created by: Shane Ambler <FreeBSD@Shaneware.biz>
-# $FreeBSD: graphics/opencolorio/Makefile 336544 2013-12-15 15:22:14Z mva $
+# $FreeBSD: graphics/opencolorio/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	opencolorio
 PORTVERSION=	1.0.8
@@ -40,7 +40,7 @@ CMAKE_ARGS+=	-DOCIO_USE_SSE:BOOL=OFF
 BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
 LIB_DEPENDS=	libtinyxml.so:${PORTSDIR}/textproc/tinyxml \
 		libyaml-cpp.so:${PORTSDIR}/devel/yaml-cpp
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 CMAKE_ARGS+=	-DOCIO_BUILD_APPS:BOOL=OFF \
 		-DOCIO_BUILD_SHARED:BOOL=ON \
