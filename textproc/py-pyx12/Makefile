@@ -1,5 +1,5 @@
 # Created by: john@zoner.org
-# $FreeBSD: textproc/py-pyx12/Makefile 336495 2013-12-14 22:56:16Z wg $
+# $FreeBSD: textproc/py-pyx12/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyx12
 PORTVERSION=	1.5.0
