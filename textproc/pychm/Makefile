@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: textproc/pychm/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: textproc/pychm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pychm
 PORTVERSION=	0.8.4
