@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: misc/bdelta/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/bdelta/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bdelta
 PORTVERSION=	0.1.0
