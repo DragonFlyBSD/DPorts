@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer
-# $FreeBSD: devel/rubygem-rcov/Makefile 338449 2014-01-02 15:36:47Z skreuzer $
+# $FreeBSD: devel/rubygem-rcov/Makefile 340903 2014-01-24 14:49:29Z miwi $
 
 PORTNAME=	rcov
 PORTVERSION=	0.9.11
@@ -16,8 +16,6 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rcov
-
-NO_STAGE=	yes
 
 .include <bsd.port.pre.mk>
 
