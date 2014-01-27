@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/py-bottle/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/bottle.py
 %%PYTHON_SITELIBDIR%%/bottle.py
 %%PYTHON_SITELIBDIR%%/bottle.pyc
