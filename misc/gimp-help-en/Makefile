@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: misc/gimp-help-en/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gimp-help-en/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gimp-help
 PORTVERSION=	2.6.1
