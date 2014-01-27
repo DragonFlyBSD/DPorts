@@ -1,5 +1,5 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD: www/py-pastescript/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-pastescript/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PasteScript
 PORTVERSION=	1.7.5
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cheetah>=2.0.1:${PORTSDIR}/devel/py-cheeta
 		${PYTHON_PKGNAMEPREFIX}wsgiutils>0:${PORTSDIR}/devel/py-wsgiutils
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes # XXX convert easy_install support to bsd.python.mk's
 
