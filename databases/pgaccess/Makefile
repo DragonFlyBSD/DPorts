@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/pgaccess/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pgaccess/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pgaccess
 PORTVERSION=	0.99.0.20040219
