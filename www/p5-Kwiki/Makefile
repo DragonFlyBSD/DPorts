@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-Kwiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Kwiki/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Kwiki
 PORTVERSION=	0.39
