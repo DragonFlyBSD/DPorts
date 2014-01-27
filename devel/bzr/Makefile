@@ -1,5 +1,5 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: devel/bzr/Makefile 330334 2013-10-14 16:10:52Z antoine $
+# $FreeBSD: devel/bzr/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	bzr
 PORTVERSION=	2.6.0
@@ -18,7 +18,7 @@ SFTP_DESC=	Paramiko for SFTP support
 CA_BUNDLE_DESC=	Include CA bundle for SSL cert validation
 OPTIONS_DEFAULT=	SFTP CA_BUNDLE
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	bzr
 USES=		gettext
