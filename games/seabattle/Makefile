@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/seabattle/Makefile 333458 2013-11-11 00:30:27Z danilo $
+# $FreeBSD: games/seabattle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	seabattle
 PORTVERSION=	1.0
