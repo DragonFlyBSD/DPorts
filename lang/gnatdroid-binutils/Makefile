@@ -1,9 +1,8 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-binutils/Makefile 334617 2013-11-22 20:46:56Z marino $
+# $FreeBSD: lang/gnatdroid-binutils/Makefile 340397 2014-01-20 14:18:07Z marino $
 
 PORTNAME=		binutils
-PORTVERSION=		2.21.1
-PORTREVISION=		1
+PORTVERSION=		2.24
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	binutils/releases
@@ -42,6 +41,8 @@ CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--disable-nls
 
 post-install:
+#	Move the unwanted documentation out of the stage directory
+	${MV} ${STAGEDIR}${BR1_PREFIX}/share ${WRKDIR}
 	${MKDIR} ${STAGEDIR}${BR2_PREFIX}
 	(cd ${STAGEDIR}${BR1_PREFIX} && ${COPYTREE_BIN} \* \
 		${STAGEDIR}${BR2_PREFIX})
