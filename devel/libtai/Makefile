@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: devel/libtai/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libtai/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libtai
 PORTVERSION=	0.60
