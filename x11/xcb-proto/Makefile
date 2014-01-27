@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/xcb-proto/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11/xcb-proto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcb-proto
 PORTVERSION=	1.9
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	xmllint:${PORTSDIR}/textproc/libxml2
 
 USE_BZIP2=	yes
 USES=		pathfix
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 
 DATADIR=	${PREFIX}/share/xcb
