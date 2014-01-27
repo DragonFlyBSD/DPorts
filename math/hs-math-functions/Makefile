@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/hs-math-functions/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: math/hs-math-functions/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	math-functions
 PORTVERSION=	0.1.3.0
