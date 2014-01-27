@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: multimedia/libkate/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/libkate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libkate
 PORTVERSION=	0.4.1
