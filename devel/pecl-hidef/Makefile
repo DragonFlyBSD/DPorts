@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pecl-hidef/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-hidef/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	hidef
 PORTVERSION=	0.1.13
@@ -22,7 +22,6 @@ CONFIGURE_ARGS=	--enable-hidef
 CFLAGS+=-I${LOCALBASE}/include
 LDFLAGS+=-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,g' \
 	${WRKSRC}/hidef.c
