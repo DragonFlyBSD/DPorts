@@ -1,10 +1,12 @@
-# $FreeBSD: devel/py-Products.CMFDiffTool/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-Products.CMFDiffTool/Makefile 341094 2014-01-25 20:42:19Z rm $
 
 PORTNAME=	Products.CMFDiffTool
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Diff tool for Plone
@@ -16,12 +18,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=0:${PORTSDIR}/devel/py-zope.
 		${PYTHON_PKGNAMEPREFIX}Products.GenericSetup>=0:${PORTSDIR}/devel/py-Products.GenericSetup \
 		${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisition
 
-DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-#USES=		zope
-
-NO_STAGE=	yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
+#USES=			zope
 
 .include <bsd.port.mk>
