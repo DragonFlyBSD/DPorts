@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: biology/clustalw/Makefile 337026 2013-12-20 15:29:07Z wen $
+# $FreeBSD: biology/clustalw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	clustalw
 PORTVERSION=	2.1
