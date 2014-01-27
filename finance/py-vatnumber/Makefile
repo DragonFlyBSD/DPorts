@@ -1,5 +1,5 @@
 # Created by: Qian Jin <eric.siroh@gmail.com>
-# $FreeBSD: finance/py-vatnumber/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/py-vatnumber/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vatnumber
 PORTVERSION=	1.1
