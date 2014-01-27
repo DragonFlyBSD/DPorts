@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx3/Makefile 336426 2013-12-14 09:14:47Z mva $
+# $FreeBSD: databases/postgresql-libpqxx3/Makefile 341229 2014-01-26 15:41:20Z marino $
 
 PORTNAME=	libpqxx
 PORTVERSION=	3.1.1
@@ -27,5 +27,4 @@ python_CMD=	${PYTHON_CMD}
 
 CONFIGURE_ARGS=	--enable-shared
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
