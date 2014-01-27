@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-XML-Dumper/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-XML-Dumper/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	XML-Dumper
 PORTVERSION=	0.81
