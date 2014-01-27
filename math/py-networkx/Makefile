@@ -1,5 +1,5 @@
 # Created by: dikshie
-# $FreeBSD: math/py-networkx/Makefile 337257 2013-12-23 15:09:56Z demon $
+# $FreeBSD: math/py-networkx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	networkx
 PORTVERSION=	1.8.1
