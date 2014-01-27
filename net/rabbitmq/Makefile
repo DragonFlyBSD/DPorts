@@ -1,14 +1,16 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: net/rabbitmq/Makefile 339111 2014-01-08 12:35:39Z olgeni $
+# $FreeBSD: net/rabbitmq/Makefile 340888 2014-01-24 10:36:33Z olgeni $
 
 PORTNAME=	rabbitmq
-PORTVERSION=	3.2.2
+PORTVERSION=	3.2.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.rabbitmq.com/releases/rabbitmq-server/v${PORTVERSION}/
 DISTNAME=	${PORTNAME}-server-${PORTVERSION}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	RabbitMQ is an implementation of AMQP
+
+LICENSE=	MPL
 
 BUILD_DEPENDS=	erl:${PORTSDIR}/lang/erlang \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=2.0:${PORTSDIR}/devel/py-simplejson \
