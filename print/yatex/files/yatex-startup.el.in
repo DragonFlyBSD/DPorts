@@ -1,6 +1,6 @@
 ;; a startup elisp for YaTeX
 ;;   -- S. Taoka <taoka@FreeBSD.org>
-;; $FreeBSD: print/yatex/files/yatex-startup.el.in 318638 2013-05-21 03:33:12Z hrs $
+;; $FreeBSD: print/yatex/files/yatex-startup.el.in 340872 2014-01-24 00:14:07Z mat $
 
 (setq load-path (append (list 
         "%%PREFIX%%/%%EMACS_SITE_LISPDIR%%/yatex"
