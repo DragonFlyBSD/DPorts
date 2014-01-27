@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: devel/cmake-fedora/Makefile 327826 2013-09-21 15:41:43Z sunpoet $
+# $FreeBSD: devel/cmake-fedora/Makefile 340756 2014-01-23 00:07:29Z bapt $
 
 PORTNAME=	cmake-fedora
 PORTVERSION=	1.0.5
@@ -14,15 +14,14 @@ LICENSE=	BSD
 
 WRKSRC=		${WRKDIR}/Modules
 NO_BUILD=	yes
-NO_STAGE=	yes
 REINPLACE_ARGS=	-i ''
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|date --utc|date -u|' ${WRKSRC}/DateTimeFormat.cmake
 
 do-install:
-	${MKDIR} ${PREFIX}/share/cmake/Modules
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/cmake/Modules
 	cd ${WRKSRC}/ && \
-		${INSTALL_DATA} * ${PREFIX}/share/cmake/Modules
+		${INSTALL_DATA} * ${STAGEDIR}${PREFIX}/share/cmake/Modules
 
 .include <bsd.port.mk>
