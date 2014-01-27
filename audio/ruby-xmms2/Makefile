@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/ruby-xmms2/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/ruby-xmms2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTREVISION=	4
 CATEGORIES=	audio ruby
