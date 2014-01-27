@@ -1,5 +1,5 @@
 # Created by: Tobias Rehbein <tobias.rehbein@web.de>
-# $FreeBSD: audio/p5-MusicBrainz-DiscID/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/p5-MusicBrainz-DiscID/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	MusicBrainz-DiscID
 PORTVERSION=	0.03
