@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Twiggy/Makefile 332731 2013-11-04 14:29:44Z kuriyama $
+# $FreeBSD: www/p5-Twiggy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Twiggy
 PORTVERSION=	0.1024
