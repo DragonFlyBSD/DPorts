@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: misc/shuffle-db/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD: misc/shuffle-db/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shuffle-db
 DISTVERSION=	1.0-rc1
