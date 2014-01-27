@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: www/mod_wsgi2/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/mod_wsgi2/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mod_wsgi
 PORTVERSION=	2.8
@@ -19,7 +19,7 @@ CONFLICTS=	${PKGNAMEPREFIX}mod_wsgi-3.* ${PKGNAMEPREFIX}mod_wsgi3.* mod_wsgi-3.*
 PROJECTHOST=	modwsgi
 
 USE_APACHE=	22
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-apxs="${APXS}" --with-python="${PYTHON_CMD}"
