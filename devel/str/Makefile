@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: devel/str/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/str/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	str
 PORTVERSION=	0.9.12
