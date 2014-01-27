@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: databases/pgpool-II/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD: databases/pgpool-II/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pgpool-II
 PORTVERSION=	3.1.6
@@ -8,11 +8,11 @@ MASTER_SITES=	LOCAL/kuriyama \
 		http://www.pgpool.net/mediawiki/images/
 
 MAINTAINER=	kuriyama@FreeBSD.org
-COMMENT=	A connection pool server for PostgreSQL
+COMMENT=	Connection pool server for PostgreSQL
 
 LICENSE=	BSD
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_PGSQL=	yes
 USE_LDCONFIG=	yes
@@ -29,7 +29,7 @@ PORTDOCShtml+=	tutorial-en.html tutorial-ja.html
 
 MAN8=		pgpool.8
 
-OPTIONS_DEFINE+=SSL
+OPTIONS_DEFINE+=	DOCS SSL
 SSL_DESC=	Build with OpenSSL support
 
 NO_STAGE=	yes
@@ -39,8 +39,6 @@ NO_STAGE=	yes
 USE_OPENSSL=	yes
 CONFIGURE_ARGS+=--with-openssl
 .endif
-
-.include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/include/postgresql/server/replication/walreceiver.h)
 FUNCTIONS=	pgpool-recovery pgpool-regclass pgpool-walrecrunning
@@ -71,7 +69,7 @@ post-install:
 .for f in pgpool_recovery pgpool_recovery_pitr pgpool_remote_start
 	${INSTALL_SCRIPT} ${WRKSRC}/sample/${f} ${EXAMPLESDIR}
 .endfor
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_MAN} ${WRKSRC}/$f ${DOCSDIR}
@@ -82,4 +80,4 @@ post-install:
 PORTDOCS+=	${PORTDOCShtml}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
