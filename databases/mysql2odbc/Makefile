@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: databases/mysql2odbc/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/mysql2odbc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql2odbc
 PORTVERSION=	0.99.2
