@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-mx-experimental/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: devel/py-mx-experimental/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mx-experimental
 PORTVERSION=	3.0.0
