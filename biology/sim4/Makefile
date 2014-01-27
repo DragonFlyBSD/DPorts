@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/sim4/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/sim4/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sim4
 PORTVERSION=	2003.09.21
