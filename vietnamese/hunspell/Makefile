@@ -1,4 +1,4 @@
-# $FreeBSD: vietnamese/hunspell/Makefile 332687 2013-11-04 10:49:03Z bapt $
+# $FreeBSD: vietnamese/hunspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hunspell
 PORTVERSION=	20080604
