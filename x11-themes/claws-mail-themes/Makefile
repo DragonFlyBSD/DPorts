@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11-themes/claws-mail-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/claws-mail-themes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	claws-mail-themes
 PORTVERSION=	20120129
