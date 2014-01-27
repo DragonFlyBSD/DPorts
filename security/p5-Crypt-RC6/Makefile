@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-RC6/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Crypt-RC6/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Crypt-RC6
 PORTVERSION=	1.0
@@ -10,10 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of the RC6 encryption algorithm
 
-USES=		perl5
+USES=		perl5 dos2unix
 USE_PERL5=	configure
-
-do-patch:
-	${REINPLACE_CMD} -e 's///' ${WRKSRC}/RC6.pm
 
 .include <bsd.port.mk>
