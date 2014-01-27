@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/py-bcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-bcrypt/Makefile 339748 2014-01-15 04:18:03Z miwi $
 
 PORTNAME=	bcrypt
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	security python
 MASTER_SITES=	GOOGLE_CODE \
 		http://www.mindrot.org/files/py-bcrypt/
