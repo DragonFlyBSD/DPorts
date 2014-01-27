@@ -1,4 +1,3 @@
-@comment $FreeBSD: archivers/lrzip/pkg-plist 338699 2014-01-04 23:59:48Z bapt $
 %%DOCSDIR%%/AUTHORS
 %%DOCSDIR%%/BUGS
 %%DOCSDIR%%/COPYING
