@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 333772 2013-11-14 16:49:41Z swills $
+# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Dist-CheckConflicts
 PORTVERSION=	0.09
@@ -7,7 +7,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DOY
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Declare version conflicts for your dist
 
 LICENSE=	ART10 GPLv1
