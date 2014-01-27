@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: science/py-ws2300/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/py-ws2300/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ws2300
 PORTVERSION=	1.7
