@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: archivers/rvm/Makefile 329835 2013-10-08 20:48:34Z bapt $
+# $FreeBSD: archivers/rvm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rvm
 PORTVERSION=	1.07
