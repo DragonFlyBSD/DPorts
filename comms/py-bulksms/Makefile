@@ -1,5 +1,5 @@
 # Created by: Andy Gilligan <andy@evo6.org>
-# $FreeBSD: comms/py-bulksms/Makefile 338555 2014-01-03 16:06:00Z adamw $
+# $FreeBSD: comms/py-bulksms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bulksms
 PORTVERSION=	0.1
