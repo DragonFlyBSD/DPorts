@@ -1,4 +1,3 @@
-@comment $FreeBSD: audio/mp3blaster/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/mp3blaster
 bin/mp3tag
 bin/nmixer
