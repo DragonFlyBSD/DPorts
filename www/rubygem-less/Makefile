@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/rubygem-less/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-less/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	less
 PORTVERSION=	1.2.21
@@ -19,5 +19,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/lessc
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
