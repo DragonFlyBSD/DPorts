@@ -1,5 +1,5 @@
 # Created by: Andrey Simonenko
-# $FreeBSD: sysutils/ipa/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ipa/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ipa
 PORTVERSION=	2.1.2
