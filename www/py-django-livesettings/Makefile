@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-livesettings/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-django-livesettings/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	django-livesettings
 DISTVERSION=	1.4-12
@@ -16,7 +16,7 @@ LICENSE=	BSD
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_hg>=0.4:${PORTSDIR}/devel/py-setuptools_hg
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>0:${PORTSDIR}/www/py-django
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/-/_/}
 PYDISTUTILS_PKGVERSION=	${DISTVERSION:S/-/_/}
