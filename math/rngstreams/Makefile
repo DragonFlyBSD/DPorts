@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: math/rngstreams/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/rngstreams/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rngstreams
 PORTVERSION=	1.0.1
