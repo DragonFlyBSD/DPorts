@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 338066 2013-12-30 09:19:31Z sunpoet $
+# $FreeBSD: www/aria2/Makefile 339479 2014-01-12 03:52:49Z sunpoet $
 
 PORTNAME=	aria2
-PORTVERSION=	1.18.2
+PORTVERSION=	1.18.3
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${PORTVERSION}
 
