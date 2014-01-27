@@ -1,9 +1,9 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/x264/Makefile 332289 2013-10-31 21:33:48Z wg $
+# $FreeBSD: multimedia/x264/Makefile 341152 2014-01-26 00:58:05Z koobs $
 
 PORTNAME=	x264
 PORTVERSION=	0.${X264_BUILD}.${X264_REV}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/x264/snapshots/ \
 		http://samples.mplayerhq.hu/yuv4mpeg2/:pgo
@@ -32,10 +32,11 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LDCONFIG=	yes
 HAS_CONFIGURE=	yes
 
-OPTIONS_DEFINE=		ASM DEBUG PGO GCC GPAC X11_OUTPUT
-OPTIONS_DEFAULT=	ASM GPAC
+OPTIONS_DEFINE=		ASM DEBUG HI10P PGO GCC GPAC X11_OUTPUT
+OPTIONS_DEFAULT=	ASM GPAC HI10P
 ASM_DESC=		Enable Assembly Optimizations
 GCC_DESC=		Use current GCC
+HI10P_DESC=		Enable High 10 Profile 10-bit encoding
 GPAC_DESC=		Enable MPEG-4 Output
 X11_OUTPUT_DESC=	Enable X11 Output
 
@@ -56,6 +57,10 @@ USE_GCC=	any
 
 .if !${PORT_OPTIONS:MASM}
 CONFIGURE_ARGS+=	--disable-asm
+.endif
+
+.if ${PORT_OPTIONS:MHI10P}
+CONFIGURE_ARGS+=	--bit-depth=10
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG} || defined(WITH_DEBUG)
