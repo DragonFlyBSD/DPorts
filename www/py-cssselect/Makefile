@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/py-cssselect/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-cssselect/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	cssselect
 PORTVERSION=	0.7.1
@@ -23,7 +23,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Python3 ready
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
