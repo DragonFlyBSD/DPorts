@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: sysutils/p5-Schedule-Load/Makefile 332957 2013-11-06 08:54:17Z vanilla $
+# $FreeBSD: sysutils/p5-Schedule-Load/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Schedule-Load
 PORTVERSION=	3.064
