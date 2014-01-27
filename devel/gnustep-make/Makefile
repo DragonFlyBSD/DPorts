@@ -1,8 +1,8 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep-make/Makefile 337691 2013-12-27 10:24:34Z bapt $
+# $FreeBSD: devel/gnustep-make/Makefile 339559 2014-01-12 22:54:58Z theraven $
 
 PORTNAME=	gnustep-make
-PORTVERSION=	2.6.5
+PORTVERSION=	2.6.6
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP}
 MASTER_SITE_SUBDIR=	core
