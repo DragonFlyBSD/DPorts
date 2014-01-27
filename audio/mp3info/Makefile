@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: audio/mp3info/Makefile 332970 2013-11-06 12:14:48Z mat $
+# $FreeBSD: audio/mp3info/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp3info
 PORTVERSION=	0.8.5
