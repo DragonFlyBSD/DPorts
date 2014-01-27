@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: editors/chexedit/Makefile 330818 2013-10-19 01:43:44Z amdmi3 $
+# $FreeBSD: editors/chexedit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	chexedit
 PORTVERSION=	0.9.7
