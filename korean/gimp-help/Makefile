@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: korean/gimp-help/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/gimp-help/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	korean graphics
 
