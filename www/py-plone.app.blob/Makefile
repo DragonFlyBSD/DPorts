@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.blob/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-plone.app.blob/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.app.blob
 PORTVERSION=	1.5.8
@@ -18,7 +18,7 @@ RUN_DEPENDS=	zodb${PYTHON_PKGNAMESUFFIX}>=3.8.1:${PORTSDIR}/databases/zodb3 \
 		${PYTHON_PKGNAMEPREFIX}plone.scale>=0:${PORTSDIR}/www/py-plone.scale
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
