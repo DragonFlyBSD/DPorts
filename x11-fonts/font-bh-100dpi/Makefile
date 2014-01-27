@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-bh-100dpi/Makefile 336886 2013-12-19 10:49:00Z zeising $
+# $FreeBSD: x11-fonts/font-bh-100dpi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	font-bh-100dpi
 PORTVERSION=	1.0.3
