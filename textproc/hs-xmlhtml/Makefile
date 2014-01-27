@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-xmlhtml/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: textproc/hs-xmlhtml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmlhtml
 PORTVERSION=	0.2.1
