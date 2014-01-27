@@ -1,7 +1,7 @@
-# $FreeBSD: databases/p5-DBIx-Class-Fixtures/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-Fixtures/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	DBIx-Class-Fixtures
-PORTVERSION=	1.001020
+PORTVERSION=	1.001021
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JJNAPIORK
@@ -33,8 +33,4 @@ TEST_DEPENDS=	\
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::Fixtures.3 \
-	DBIx::Class::Fixtures::External::File.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
