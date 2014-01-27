@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/Wnn7-lib/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/Wnn7-lib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Wnn7
 PORTVERSION=	2001.10.17
