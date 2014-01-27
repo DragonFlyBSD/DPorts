@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: multimedia/msdl/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/msdl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	msdl
 PORTVERSION=	1.2.7
