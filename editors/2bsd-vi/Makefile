@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: editors/2bsd-vi/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/2bsd-vi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vi
 PORTVERSION=	050325
