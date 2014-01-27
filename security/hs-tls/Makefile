@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-tls/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: security/hs-tls/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tls
 PORTVERSION=	1.1.2
