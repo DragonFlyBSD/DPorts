@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.scale/Makefile 328478 2013-09-27 14:24:18Z rm $
+# $FreeBSD: www/py-plone.scale/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.scale
 PORTVERSION=	1.3.2
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.annotation>=0:${PORTSDIR}/devel/py-zope
 		${PYTHON_PKGNAMEPREFIX}Persistence>=0:${PORTSDIR}/devel/py-Persistence
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
