@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: print/py-rtf/Makefile 337960 2013-12-29 11:27:58Z wg $
+# $FreeBSD: print/py-rtf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rtf
 PORTVERSION=	0.45
