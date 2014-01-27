@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/py-html5lib/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-html5lib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	html5lib
 PORTVERSION=	0.95
@@ -13,7 +13,7 @@ COMMENT=	Python based HTML parser based on the HTML5 spec
 
 LICENSE=	MIT
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
