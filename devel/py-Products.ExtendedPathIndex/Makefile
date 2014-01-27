@@ -1,10 +1,12 @@
-# $FreeBSD: devel/py-Products.ExtendedPathIndex/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-Products.ExtendedPathIndex/Makefile 340992 2014-01-25 07:19:34Z rm $
 
 PORTNAME=	Products.ExtendedPathIndex
 PORTVERSION=	3.1
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope catalog index for paths
@@ -15,12 +17,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}AccessControl>0:${PORTSDIR}/security/py-Acce
 		${PYTHON_PKGNAMEPREFIX}transaction>0:${PORTSDIR}/devel/py-transaction \
 		zodb${PYTHON_PKGNAMESUFFIX}>0:${PORTSDIR}/databases/zodb3
 
-DIST_SUBDIR=	zope
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-USES=		zope
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
+USES=			zope
 
 .include <bsd.port.mk>
