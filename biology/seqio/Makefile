@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: biology/seqio/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/seqio/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	seqio
 PORTVERSION=	1.2.2
