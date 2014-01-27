@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/py-html2text/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-html2text/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	html2text
 PORTVERSION=	3.200.3
