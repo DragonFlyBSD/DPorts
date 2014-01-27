@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/p5-Crypt-Rijndael_PP/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Crypt-Rijndael_PP/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Crypt-Rijndael_PP
 PORTVERSION=	0.05
