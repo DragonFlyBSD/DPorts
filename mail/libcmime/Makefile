@@ -1,8 +1,8 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/libcmime/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/libcmime/Makefile 339707 2014-01-14 18:57:38Z antoine $
 
 PORTNAME=	libcmime
-PORTVERSION=	0.1.8
+PORTVERSION=	0.1.11
 CATEGORIES=	mail
 MASTER_SITES=	http://www.libcmime.org/files/
 
@@ -11,20 +11,20 @@ COMMENT=	Lightweight C mime library
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	bison>=1.8:${PORTSDIR}/devel/bison \
-		flex>=2.5.33:${PORTSDIR}/textproc/flex
-
-USES=		cmake pkgconfig
-CMAKE_ARGS+=	--no-warn-unused-cli -DCMAKE_PREFIX_PATH:PATH=${LOCALBASE}
-
+USES=		bison cmake pkgconfig
 USE_LDCONFIG=	yes
+CMAKE_ARGS=	--no-warn-unused-cli
 
 OPTIONS_DEFINE=	DEBUG DOCS
 
 PORTDOCS=	AUTHORS CHANGELOG INSTALL README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+.if ${OSVERSION} < 1000033
+BUILD_DEPENDS+=	flex>=2.5.33:${PORTSDIR}/textproc/flex
+CMAKE_ARGS+=	-DFLEX_EXECUTABLE:FILEPATH=${LOCALBASE}/bin/flex
+.endif
 
 .if ${PORT_OPTIONS:MDEBUG}
 CMAKE_ARGS+=	-DENABLE_DEBUG=TRUE
@@ -32,12 +32,12 @@ CMAKE_ARGS+=	-DENABLE_DEBUG=TRUE
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -E -e 's|\$${LIBDIR}(/pkgconfig)|$${CMAKE_INSTALL_PREFIX}/libdata\1|' \
+	@${REINPLACE_CMD} -E -e 's|\$${CMAKE_INSTALL_LIBDIR}(/pkgconfig)|$${CMAKE_INSTALL_PREFIX}/libdata\1|' \
 		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>
