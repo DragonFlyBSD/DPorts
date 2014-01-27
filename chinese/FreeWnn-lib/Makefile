@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: chinese/FreeWnn-lib/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/FreeWnn-lib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	chinese
 PKGNAMESUFFIX=	-lib
