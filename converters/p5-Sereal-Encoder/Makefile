@@ -1,7 +1,7 @@
-# $FreeBSD: converters/p5-Sereal-Encoder/Makefile 331758 2013-10-27 10:27:52Z kuriyama $
+# $FreeBSD: converters/p5-Sereal-Encoder/Makefile 339579 2014-01-13 10:21:14Z kuriyama $
 
 PORTNAME=	Sereal-Encoder
-PORTVERSION=	0.37
+PORTVERSION=	2.03
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SMUELLER
@@ -13,7 +13,7 @@ COMMENT=	Perl extension for fast, compact, powerful binary serialization
 TEST_DEPENDS=	\
 	p5-Test-LongString>0:${PORTSDIR}/devel/p5-Test-LongString \
 	p5-Test-Warn>0:${PORTSDIR}/devel/p5-Test-Warn \
-	p5-Sereal-Decoder>0:${PORTSDIR}/converters/p5-Sereal-Decoder
+	p5-Sereal-Decoder>=2.03:${PORTSDIR}/converters/p5-Sereal-Decoder
 
 USES=		perl5
 USE_PERL5=	configure
