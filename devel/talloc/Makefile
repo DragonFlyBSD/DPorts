@@ -1,4 +1,4 @@
-# $FreeBSD: devel/talloc/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/talloc/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=		talloc
 PORTVERSION=		2.0.8
@@ -16,7 +16,7 @@ LICENSE=		LGPL3
 CONFLICTS=		samba33-3.*
 
 USES=			pkgconfig
-USE_PYTHON_BUILD=	-2.7
+USE_PYTHON_BUILD=	2
 USE_LDCONFIG=		yes
 HAS_CONFIGURE=		yes
 WAF_TOOL=		buildtools/bin/waf
