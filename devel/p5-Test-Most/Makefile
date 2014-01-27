@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Test-Most/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Most/Makefile 339577 2014-01-13 09:59:47Z kuriyama $
 
 PORTNAME=	Test-Most
-PORTVERSION=	0.31
+PORTVERSION=	0.33
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,8 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Most.3 \
-	Test::Most::Exception.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
