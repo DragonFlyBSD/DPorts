@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: sysutils/httplog/Makefile 333814 2013-11-15 03:26:59Z vanilla $
+# $FreeBSD: sysutils/httplog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	httplog
 PORTVERSION=	2.1
