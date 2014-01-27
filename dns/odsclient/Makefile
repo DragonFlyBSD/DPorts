@@ -1,5 +1,5 @@
 # Created by: geniusj@ods.org
-# $FreeBSD: dns/odsclient/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/odsclient/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	odsclient
 PORTVERSION=	1.03
