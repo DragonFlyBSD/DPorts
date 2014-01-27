@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Starlet/Makefile 332713 2013-11-04 13:22:29Z kuriyama $
+# $FreeBSD: www/p5-Starlet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Starlet
-PORTVERSION=	0.20
+PORTVERSION=	0.21
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:KAZUHO
