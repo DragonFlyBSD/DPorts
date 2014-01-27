@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: science/svmlight/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/svmlight/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	svmlight
 PORTVERSION=	6.02
