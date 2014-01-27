@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/arphicttf/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/arphicttf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	arphicttf
 PORTVERSION=	2.11
