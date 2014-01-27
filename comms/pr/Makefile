@@ -1,5 +1,5 @@
 # Created by: Anton Voronin <anton@urc.ac.ru>
-# $FreeBSD: comms/pr/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/pr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pr
 PORTVERSION=	1.1
