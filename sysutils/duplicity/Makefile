@@ -1,5 +1,5 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/duplicity/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: sysutils/duplicity/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	duplicity
 PORTVERSION=	0.6.22
@@ -15,7 +15,7 @@ RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 CONFLICTS=	duplicity-0.5.* duplicity-devel-[0-9]*
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 USE_LDCONFIG=	yes
 
