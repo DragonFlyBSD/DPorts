@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: net-p2p/py-vertex/Makefile 337858 2013-12-28 11:29:06Z wg $
+# $FreeBSD: net-p2p/py-vertex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vertex
 PORTVERSION=	0.3.0
