@@ -1,11 +1,11 @@
 # Created by: ejc@bazzle.com
-# $FreeBSD: devel/omniORB/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/omniORB/Makefile 339922 2014-01-16 15:43:27Z sem $
 
 PORTNAME=	omniORB
 PORTVERSION=	4.1.6
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
-MAINTAINER=	sem@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A robust high performance CORBA ORB for C++ and Python
 
 PLIST_SUB+=	SONUM=${PORTVERSION:C/.*\.//}
