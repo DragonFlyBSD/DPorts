@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: databases/hiredis/Makefile 328633 2013-09-29 00:02:58Z gblach $
+# $FreeBSD: databases/hiredis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hiredis
 PORTVERSION=	0.11.0
