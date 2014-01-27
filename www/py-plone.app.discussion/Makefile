@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.discussion/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD: www/py-plone.app.discussion/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.app.discussion
 PORTVERSION=	2.2.8
@@ -30,7 +30,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}collective.monkeypatcher>=0:${PORTSDIR}/deve
 		${PYTHON_PKGNAMEPREFIX}z3c.form>=2.3.3:${PORTSDIR}/devel/py-z3c.form
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
