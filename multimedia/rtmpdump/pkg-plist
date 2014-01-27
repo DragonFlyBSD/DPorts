@@ -1,4 +1,3 @@
-@comment $FreeBSD: multimedia/rtmpdump/pkg-plist 332194 2013-10-31 02:03:01Z hrs $
 bin/rtmpdump
 sbin/rtmpgw
 sbin/rtmpsrv
