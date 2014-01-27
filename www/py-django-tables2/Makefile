@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/py-django-tables2/Makefile 334789 2013-11-24 20:36:40Z cs $
+# $FreeBSD: www/py-django-tables2/Makefile 340285 2014-01-19 13:41:31Z mva $
 
 PORTNAME=	django-tables2
 PORTVERSION=	0.14.0
@@ -10,17 +10,13 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	kozlov.sergey.404@gmail.com
 COMMENT=	Table/data-grid framework for Django
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-django \
 		${PYTHON_PKGNAMEPREFIX}six>=0:${PORTSDIR}/devel/py-six
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-PYDISTUTILS_AUTOPLIST=yes
-
-post-patch:
-	@${REINPLACE_CMD} 's|classifiers=\[|zip_safe=False, classifiers=\[|' \
-		${WRKSRC}/setup.py
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
