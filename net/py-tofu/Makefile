@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: net/py-tofu/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: net/py-tofu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tofu
 PORTVERSION=	0.5
