@@ -1,5 +1,5 @@
 # Created by: Tim Niemueller <tim@niemueller.de>
-# $FreeBSD: devel/yaml-cpp/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/yaml-cpp/Makefile 340585 2014-01-21 09:02:38Z bapt $
 
 PORTNAME=	yaml-cpp
 PORTVERSION=	0.3.0
@@ -21,5 +21,4 @@ post-patch:     .SILENT
 	${REINPLACE_CMD} 's|$${LIB_INSTALL_DIR}/pkgconfig|${LOCALBASE}/libdata/pkgconfig|' \
 		${WRKSRC}/CMakeLists.txt
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
