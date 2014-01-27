@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: databases/libgda2-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
+# $FreeBSD: databases/libgda2-reference/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTREVISION=	1
 PORTEPOCH=	0
