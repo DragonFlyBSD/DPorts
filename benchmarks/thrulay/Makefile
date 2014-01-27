@@ -1,5 +1,5 @@
 # Created by: shalunov
-# $FreeBSD: benchmarks/thrulay/Makefile 338719 2014-01-05 00:41:32Z bapt $
+# $FreeBSD: benchmarks/thrulay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	thrulay
 PORTVERSION=	0.9
