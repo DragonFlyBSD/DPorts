@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anrays@gmail.com>
-# $FreeBSD: misc/boxquote.el/Makefile 336007 2013-12-09 16:51:00Z danilo $
+# $FreeBSD: misc/boxquote.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	boxquote.el
 PORTVERSION=	1.18
