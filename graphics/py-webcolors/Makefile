@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/py-webcolors/Makefile 339136 2014-01-08 14:25:26Z tota $
+# $FreeBSD: graphics/py-webcolors/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	webcolors
 PORTVERSION=	1.4
