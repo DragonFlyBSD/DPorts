@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-Text-CharWidth/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Text-CharWidth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-CharWidth
 DISTVERSION=	0.04
