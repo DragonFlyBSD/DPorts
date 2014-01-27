@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: sysutils/py-bcfg2/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-bcfg2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bcfg2
 PORTVERSION=	1.1.1
