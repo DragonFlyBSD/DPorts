@@ -1,4 +1,3 @@
-@comment $FreeBSD: news/papercut/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/papercut
 %%DATADIR%%/papercut.py
 %%DATADIR%%/papercut_cache.py
