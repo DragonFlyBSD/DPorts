@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/pear-Horde_Compress_Fast/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: archivers/pear-Horde_Compress_Fast/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Compress_Fast
 PORTVERSION=	1.0.2
