@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-DocumentTemplate/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-DocumentTemplate/Makefile 340933 2014-01-24 21:28:22Z rm $
 
 PORTNAME=	DocumentTemplate
 PORTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,11 +21,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}AccessControl>=0:${PORTSDIR}/security/py-Acc
 		${PYTHON_PKGNAMEPREFIX}zope.sequencesort>=0:${PORTSDIR}/devel/py-zope.sequencesort \
 		${PYTHON_PKGNAMEPREFIX}zope.structuredtext>=0:${PORTSDIR}/textproc/py-zope.structuredtext
 
-PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_ZIP=		yes
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
