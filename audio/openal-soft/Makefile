@@ -1,4 +1,4 @@
-# $FreeBSD: audio/openal-soft/Makefile 328680 2013-09-29 11:31:53Z mva $
+# $FreeBSD: audio/openal-soft/Makefile 340203 2014-01-18 18:58:32Z mva $
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.15.1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	A software implementation of the OpenAL specification
+
+LICENSE=	LGPL20
 
 CONFLICTS=	openal-200[0-9]*
 
