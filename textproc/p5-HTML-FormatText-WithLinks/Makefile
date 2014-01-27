@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: textproc/p5-HTML-FormatText-WithLinks/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-HTML-FormatText-WithLinks/Makefile 340610 2014-01-21 14:03:59Z mat $
 
 PORTNAME=	HTML-FormatText-WithLinks
 PORTVERSION=	0.14
@@ -10,13 +10,14 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	loader@freebsdmall.com
 COMMENT=	Perl5 module to convert HTML to text with links as footnotes
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-HTML-Format>=0:${PORTSDIR}/textproc/p5-HTML-Format \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		HTML::FormatText::WithLinks.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
