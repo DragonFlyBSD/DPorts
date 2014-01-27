@@ -1,5 +1,5 @@
 # Created by: Rich Neese <r.neese@gmail.com>
-# $FreeBSD: audio/autotalent/Makefile 334757 2013-11-24 18:38:14Z bapt $
+# $FreeBSD: audio/autotalent/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	autotalent
 PORTVERSION=	0.2
