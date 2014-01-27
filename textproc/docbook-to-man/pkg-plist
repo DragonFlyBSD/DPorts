@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/docbook-to-man/pkg-plist 331227 2013-10-22 07:48:55Z amdmi3 $
 bin/docbook-to-man
 bin/oinstant
 man/man1/oinstant.1.gz
