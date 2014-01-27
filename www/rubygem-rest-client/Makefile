@@ -1,5 +1,5 @@
 # Created by: Renaud Chaput <renchap@cocoa-x.com>
-# $FreeBSD: www/rubygem-rest-client/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-rest-client/Makefile 340906 2014-01-24 14:56:38Z miwi $
 
 PORTNAME=	rest-client
 PORTVERSION=	1.6.7
@@ -16,5 +16,4 @@ USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/restclient
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
