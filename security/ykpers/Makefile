@@ -1,7 +1,7 @@
-# $FreeBSD: security/ykpers/Makefile 338405 2014-01-01 23:49:53Z danilo $
+# $FreeBSD: security/ykpers/Makefile 340142 2014-01-18 02:35:59Z danilo $
 
 PORTNAME=	ykpers
-PORTVERSION=	1.14.1
+PORTVERSION=	1.15.0
 CATEGORIES=	security
 MASTER_SITES=	http://opensource.yubico.com/yubikey-personalization/releases/
 
@@ -27,7 +27,7 @@ PLIST_FILES=	bin/ykchalresp \
 		include/ykpers-1/ykstatus.h \
 		lib/libykpers-1.la \
 		lib/libykpers-1.so \
-		lib/libykpers-1.so.15 \
+		lib/libykpers-1.so.16 \
 		libdata/pkgconfig/ykpers-1.pc \
 		man/man1/ykchalresp.1.gz \
 		man/man1/ykinfo.1.gz \
