@@ -1,45 +1,40 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: www/cgicc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/cgicc/Makefile 339887 2014-01-16 03:23:23Z danilo $
 
 PORTNAME=	cgicc
-PORTVERSION=	3.2.10
-PORTREVISION=	1
+PORTVERSION=	3.2.12
 CATEGORIES=	www devel
 MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ class library for writing CGI applications
 
-USE_GMAKE=	yes
+LICENSE=	LGPL3 # (or later)
+
+OPTIONS_DEFINE=	DOCS
+
+USES=		gmake pathfix
 USE_AUTOTOOLS=	libtool
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \
 		AUTOMAKE="${TRUE}"
 USE_LDCONFIG=	yes
-USES=		pathfix
 
-PORTDOCS=	*
 CXXFLAGS+=	-Wno-unknown-pragmas
 
-.if !defined(NOPORTDOCS)
+PORTDOCS=	*
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+.else
+CONFIGURE_ENV+=	ac_cv_prog_DOXYGEN="${ECHO_CMD}"
 .endif
 
-NO_STAGE=	yes
 post-patch:
-	@${REINPLACE_CMD} -e '/CXXFLAGS/s|-pedantic||g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e '/^SUBDIRS/s|doc||g' ${WRKSRC}/Makefile.in
-
-post-build:
-.if !defined(NOPORTDOCS)
-	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		${MAKEFILE} ${ALL_TARGET})
-.endif
-
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@(cd ${WRKSRC}/doc/html && ${COPYTREE_SHARE} . ${DOCSDIR})
-.endif
-	${RM} -f ${PREFIX}/lib/libcgicc.la
+	@${REINPLACE_CMD} -e \
+		's|-lstdc++||' ${WRKSRC}/cgicc/Makefile.in
+	@${REINPLACE_CMD} -e \
+		'/^docdir/s|=.*|= @docdir@|' ${WRKSRC}/doc/Makefile.in
 
 .include <bsd.port.mk>
