@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net/ruby-dict/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/ruby-dict/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dict
 PORTVERSION=	0.9.4
