@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-dynrules/Makefile 328655 2013-09-29 09:19:23Z mva $
+# $FreeBSD: devel/py-dynrules/Makefile 340203 2014-01-18 18:58:32Z mva $
 
 PORTNAME=	dynrules
 PORTVERSION=	0.1.0
@@ -9,6 +9,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Dynamic Scripting for adaptive AI systems
+
+LICENSE=	ZLIB
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
