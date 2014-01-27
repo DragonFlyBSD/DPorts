@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: misc/py-qt4-doc/Makefile 330665 2013-10-17 19:22:58Z rakuco $
+# $FreeBSD: misc/py-qt4-doc/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	doc
 PORTVERSION=	${PYQT4_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Python bindings for the Qt4 toolkit, documentation
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 NO_BUILD=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-qt4
 PORTDOCS=	*
