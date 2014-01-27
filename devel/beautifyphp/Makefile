@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/beautifyphp/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/beautifyphp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	beautifyphp
 PORTVERSION=	0.5.0
