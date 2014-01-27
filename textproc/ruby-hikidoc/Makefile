@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/ruby-hikidoc/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: textproc/ruby-hikidoc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hikidoc
 PORTVERSION=	0.0.6
