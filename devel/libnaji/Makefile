@@ -1,5 +1,5 @@
 # Created by: NECDET COKYAZICI <cokyazici@yahoo.co.uk>
-# $FreeBSD: devel/libnaji/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libnaji/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libnaji
 PORTVERSION=	0.6.4
@@ -9,13 +9,12 @@ MASTER_SITES=	SF/najitool/${PORTNAME}/${PORTVERSION}
 MAINTAINER=	rodrigo@bebik.net
 COMMENT=	Library that generates, converts, and filters files
 
-MAKE_ARGS=	cc=${CC}
+MAKE_ARGS=	cc="${CC}"
 
 DISTVERSIONSUFFIX=	.src
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libnaji.h ${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/libnaji.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/libnaji.h ${STAGEDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/libnaji.a ${STAGEDIR}${PREFIX}/lib
 
 .include <bsd.port.mk>
