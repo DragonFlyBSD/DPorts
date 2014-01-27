@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: devel/tnt/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/tnt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tnt
 PORTVERSION=	1.2.6
