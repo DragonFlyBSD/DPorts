@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql93-docs/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/postgresql93-docs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 WANT_PGSQL_VER=93
 
