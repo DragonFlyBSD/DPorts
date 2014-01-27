@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mysql-udf-preg/Makefile 338286 2013-12-31 12:47:23Z antoine $
+# $FreeBSD: databases/mysql-udf-preg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql-udf-preg
 PORTVERSION=	1.0.1
