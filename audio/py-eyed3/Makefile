@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: audio/py-eyed3/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/py-eyed3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eyed3
 PORTVERSION=	0.6.18
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:${PORTSDIR}/devel/py-setuptools
 
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 NO_STAGE=	yes
 USE_PYTHON_PREFIX=	yes
 USES=		gmake
