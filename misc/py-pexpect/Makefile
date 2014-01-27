@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: misc/py-pexpect/Makefile 337480 2013-12-26 10:39:19Z wg $
+# $FreeBSD: misc/py-pexpect/Makefile 340833 2014-01-23 15:44:14Z wg $
 
 PORTNAME=	pexpect
-PORTVERSION=	3.0
+PORTVERSION=	3.1
 CATEGORIES=	misc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
