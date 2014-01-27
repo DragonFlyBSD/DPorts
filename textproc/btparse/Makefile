@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: textproc/btparse/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/btparse/Makefile 341143 2014-01-26 00:03:51Z mat $
 
 PORTNAME=	btparse
 PORTVERSION=	0.35
@@ -15,11 +15,6 @@ USE_LDCONFIG=	yes
 USES=		perl5
 USE_PERL5=	build
 
-MAN3=		btparse.3 bt_language.3 bt_input.3 bt_traversal.3 \
-		bt_postprocess.3 bt_macros.3 bt_split_names.3 \
-		bt_format_names.3 bt_misc.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
