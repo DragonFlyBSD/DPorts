@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: www/py-pylons/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-pylons/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pylons
 PORTVERSION=	1.0
@@ -29,7 +29,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Paste>=1.7.2:${PORTSDIR}/www/py-paste \
 		${PYTHON_PKGNAMEPREFIX}Genshi>=0.4.4:${PORTSDIR}/textproc/py-genshi
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Pylons
 PYDISTUTILS_NOEGGINFO=	yes
