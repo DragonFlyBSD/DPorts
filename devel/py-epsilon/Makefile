@@ -1,15 +1,15 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-epsilon/Makefile 337606 2013-12-26 19:31:28Z wg $
+# $FreeBSD: devel/py-epsilon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	epsilon
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	Epsilon-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Epsilon is a set of Python utility modules used by DivMod projects
+COMMENT=	Set of Python utility modules used by DivMod projects
 
 LICENSE=	MIT
 
