@@ -1,5 +1,5 @@
 # Created by: David Cornejo <dave@dogwood.com>
-# $FreeBSD: databases/mysql-udf-sys/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/mysql-udf-sys/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql-udf-sys
 PORTVERSION=	0.0.3
