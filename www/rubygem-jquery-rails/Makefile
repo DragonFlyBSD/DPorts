@@ -1,8 +1,8 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: www/rubygem-jquery-rails/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD: www/rubygem-jquery-rails/Makefile 340547 2014-01-21 03:48:40Z swills $
 
 PORTNAME=	jquery-rails
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.4
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
