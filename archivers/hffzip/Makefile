@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: archivers/hffzip/Makefile 328238 2013-09-25 02:22:52Z vanilla $
+# $FreeBSD: archivers/hffzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hffzip
 PORTVERSION=	1.01
