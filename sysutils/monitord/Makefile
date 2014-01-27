@@ -1,5 +1,5 @@
 # Created by: walt
-# $FreeBSD: sysutils/monitord/Makefile 333877 2013-11-15 15:25:56Z vanilla $
+# $FreeBSD: sysutils/monitord/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	monitord
 PORTVERSION=	0.4.1
