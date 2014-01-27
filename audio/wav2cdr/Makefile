@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/wav2cdr/Makefile 331757 2013-10-27 09:35:12Z ehaupt $
+# $FreeBSD: audio/wav2cdr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wav2cdr
 PORTVERSION=	2.3.3
