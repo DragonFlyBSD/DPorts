@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-five.localsitemanager/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-five.localsitemanager/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	five.localsitemanager
 PORTVERSION=	2.0.5
