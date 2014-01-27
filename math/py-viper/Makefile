@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-viper/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: math/py-viper/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	viper
 PORTVERSION=	${MMVERSION}.1
@@ -12,7 +12,7 @@ COMMENT=	Minimalistic scientific plotter and visualization module
 
 LICENSE=	LGPL3
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	viper
 
