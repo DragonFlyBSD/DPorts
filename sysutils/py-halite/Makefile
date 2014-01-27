@@ -1,5 +1,5 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-halite/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: sysutils/py-halite/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	halite
 PORTVERSION=	0.1.09
@@ -12,7 +12,7 @@ COMMENT=	SaltStack Web UI
 
 LICENSE=	APACHE20
 
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_AUTOPLIST=yes
 
