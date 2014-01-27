@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: devel/py-omniorb/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-omniorb/Makefile 339922 2014-01-16 15:43:27Z sem $
 
 PORTNAME=	omniorb
 PORTVERSION=	3.6
@@ -8,7 +8,7 @@ MASTER_SITES=	SF/${PORTNAME}/omniORBpy/omniORBpy-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	omniORBpy-${PORTVERSION}
 
-MAINTAINER=	sem@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python bindings for omniORB4, a CORBA 2.6 ORB
 
 LIB_DEPENDS=	omniORB4.1:${PORTSDIR}/devel/omniORB
