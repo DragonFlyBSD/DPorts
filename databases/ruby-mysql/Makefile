@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-mysql/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD: databases/ruby-mysql/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql
 PORTVERSION=	2.8.2
