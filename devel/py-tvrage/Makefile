@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-tvrage/Makefile 328313 2013-09-25 20:19:42Z wg $
+# $FreeBSD: devel/py-tvrage/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	tvrage
 PORTVERSION=	0.4.1
@@ -18,7 +18,7 @@ GH_COMMIT=	c8e9781
 GH_TAGNAME=	${PORTVERSION}
 GH_PROJECT=	python-${PORTNAME}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python_${PORTNAME}
 
