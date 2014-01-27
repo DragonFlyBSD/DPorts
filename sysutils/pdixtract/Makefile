@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: sysutils/pdixtract/Makefile 333977 2013-11-16 03:33:37Z vanilla $
+# $FreeBSD: sysutils/pdixtract/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pdixtract
 PORTVERSION=	1.5
