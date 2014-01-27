@@ -1,5 +1,5 @@
 # Created by: Carlos A M dos Santos <unixmania@gmail.com>
-# $FreeBSD: devel/lndir/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/lndir/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lndir
 PORTVERSION=	1.0.3
@@ -11,9 +11,7 @@ COMMENT=	Create a shadow directory of symbolic links to another directory tree
 XORG_CAT=	util
 USE_XORG=	xproto
 
-PLIST_FILES=	bin/lndir
+PLIST_FILES=	bin/lndir \
+		man/man1/lndir.1.gz
 
-MAN1=		lndir.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
