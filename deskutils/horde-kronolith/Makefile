@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: deskutils/horde-kronolith/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: deskutils/horde-kronolith/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kronolith
 PORTVERSION=	4.1.4
