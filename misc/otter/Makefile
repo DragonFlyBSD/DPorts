@@ -1,5 +1,5 @@
 # Created by: Garrett Wollman <wollman@FreeBSD.org>
-# $FreeBSD: misc/otter/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/otter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	otter
 PORTVERSION=	3.3f
