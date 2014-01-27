@@ -1,10 +1,12 @@
-# $FreeBSD: devel/py-Products.CMFCore/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-Products.CMFCore/Makefile 341093 2014-01-25 20:40:33Z rm $
 
 PORTNAME=	Products.CMFCore
 PORTVERSION=	2.2.7
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope Content Management Framework core components
@@ -17,11 +19,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.localsitemanager>=0:${PORTSDIR}/devel/p
 		${PYTHON_PKGNAMEPREFIX}Products.ZSQLMethods>0:${PORTSDIR}/devel/py-Products.ZSQLMethods \
 		${PYTHON_PKGNAMEPREFIX}zope.app.publication>0:${PORTSDIR}/devel/py-zope.app.publication
 
-DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=easy_install
-#USES=		zope # cyclic dependency
-
-NO_STAGE=	yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+#USES=			zope # cyclic dependency
 
 .include <bsd.port.mk>
