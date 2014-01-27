@@ -1,5 +1,5 @@
 # Created by: Gabor Pali <pgj@FreeBSD.org>
-# $FreeBSD: devel/cppcheck/Makefile 334262 2013-11-18 20:38:42Z bf $
+# $FreeBSD: devel/cppcheck/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	cppcheck
 PORTVERSION=	1.62
@@ -45,7 +45,7 @@ post-install:
 
 .if ${PORT_OPTIONS:MMATCHCOMPILER}
 MAKE_ENV+=		SRCDIR=build
-USE_PYTHON_BUILD=	-2.7
+USE_PYTHON_BUILD=	2
 .endif
 
 .if ${PORT_OPTIONS:MRULES}
