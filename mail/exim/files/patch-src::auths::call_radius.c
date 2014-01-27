@@ -1,5 +1,5 @@
 
-$FreeBSD: mail/exim/files/patch-src::auths::call_radius.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: mail/exim/files/patch-src::auths::call_radius.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/auths/call_radius.c
 +++ src/auths/call_radius.c
