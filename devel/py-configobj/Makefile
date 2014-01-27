@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: devel/py-configobj/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-configobj/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	configobj
 PORTVERSION=	4.7.2
