@@ -1,5 +1,5 @@
 # Created by: Andrew Stevenson <andrew@ugh.net.au>
-# $FreeBSD: sysutils/wait_on/Makefile 333997 2013-11-16 13:50:53Z vanilla $
+# $FreeBSD: sysutils/wait_on/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wait_on
 PORTVERSION=	1.1
