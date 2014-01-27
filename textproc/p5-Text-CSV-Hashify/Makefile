@@ -1,5 +1,5 @@
 # Created by: tj@FreeBSD.org
-# $FreeBSD: textproc/p5-Text-CSV-Hashify/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-CSV-Hashify/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Text-CSV-Hashify
 PORTVERSION=	0.05
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::CSV::Hashify.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
