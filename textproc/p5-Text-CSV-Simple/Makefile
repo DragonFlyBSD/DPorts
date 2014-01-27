@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-CSV-Simple/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-CSV-Simple/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Text-CSV-Simple
 PORTVERSION=	1.00
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::CSV::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
