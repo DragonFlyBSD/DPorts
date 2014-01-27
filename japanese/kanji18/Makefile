@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: japanese/kanji18/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/kanji18/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kanji
 PORTVERSION?=	1.0
