@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-MediaTypes/Makefile 333112 2013-11-07 15:07:21Z vanilla $
+# $FreeBSD: www/p5-LWP-MediaTypes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	LWP-MediaTypes
 PORTVERSION=	6.02
