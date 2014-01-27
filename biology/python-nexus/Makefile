@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/python-nexus/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/python-nexus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	python-nexus
 PORTVERSION=	0.87
