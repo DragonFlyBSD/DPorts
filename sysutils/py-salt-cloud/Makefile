@@ -1,5 +1,5 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-salt-cloud/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: sysutils/py-salt-cloud/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	salt-cloud
 PORTVERSION=	0.8.10
@@ -12,7 +12,7 @@ COMMENT=	Provisioning salted minions to various cloud providers
 
 LICENSE=	APACHE20
 
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
