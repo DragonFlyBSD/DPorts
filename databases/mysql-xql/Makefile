@@ -1,5 +1,5 @@
 # Created by: Mina R Waheeb <syncer@gmail.com>
-# $FreeBSD: databases/mysql-xql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/mysql-xql/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql-xql
 PORTVERSION=	1.0.0
