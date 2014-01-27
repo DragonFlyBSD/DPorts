@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/py-google-api-python-client/pkg-plist 313999 2013-03-12 20:22:03Z nivit $
 bin/enable-app-engine-project
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 %%PORTDOCS%%%%DOCSDIR%%/FAQ
