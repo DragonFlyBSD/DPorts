@@ -1,5 +1,5 @@
 # Created by: Ralf van Dooren <r.vdooren@snow.nl>
-# $FreeBSD: sysutils/rsnapshot/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rsnapshot/Makefile 339652 2014-01-14 00:44:46Z garga $
 
 PORTNAME=	rsnapshot
 PORTVERSION=	1.3.1
@@ -16,19 +16,15 @@ RUN_DEPENDS=	rsync:${PORTSDIR}/net/rsync \
 
 USES=		shebangfix perl5
 GNU_CONFIGURE=	yes
-SHEBANG_FILES=	rsnapshot-program.pl
+SHEBANG_FILES=	rsnapshot-program.pl rsnapshot-diff.pl
 
-MAN1=		rsnapshot.1 rsnapshot-diff.1
 PORTDOCS=	AUTHORS ChangeLog README TODO
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/bin/pod2man,pod2man,' ${WRKSRC}/Makefile.in
 
-.if !defined(NOPORTDOCS)
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
