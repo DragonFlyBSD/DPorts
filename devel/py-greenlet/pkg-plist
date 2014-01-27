@@ -1,4 +1,0 @@
-@comment $FreeBSD: devel/py-greenlet/pkg-plist 300896 2012-07-14 13:54:48Z beat $
-%%PYTHON_INCLUDEDIR%%/greenlet/greenlet.h
-%%PYTHON_SITELIBDIR%%/greenlet.so
-@dirrm %%PYTHON_INCLUDEDIR%%/greenlet
