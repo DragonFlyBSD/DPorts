@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Stream/Makefile 334186 2013-11-18 13:12:01Z mm $
+# $FreeBSD: devel/pear-Horde_Stream/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Stream
 PORTVERSION=	1.5.0
