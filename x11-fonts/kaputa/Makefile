@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-fonts/kaputa/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/kaputa/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kaputa
 PORTVERSION=	1.000
