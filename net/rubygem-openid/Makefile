@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/rubygem-openid/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD: net/rubygem-openid/Makefile 340661 2014-01-21 21:26:24Z swills $
 
 PORTNAME=	openid
-PORTVERSION=	2.2.3
+PORTVERSION=	2.3.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 DISTNAME=	ruby-${PORTNAME}-${PORTVERSION}
