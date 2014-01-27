@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/atftp/Makefile 332071 2013-10-30 05:45:42Z kevlo $
+# $FreeBSD: ftp/atftp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	atftp
 PORTVERSION=	0.7
