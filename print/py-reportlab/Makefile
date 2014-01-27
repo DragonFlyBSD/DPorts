@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: print/py-reportlab/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/py-reportlab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	reportlab
 PORTVERSION=	1.21.2
@@ -18,7 +18,7 @@ COMMENT=	Library to create PDF documents using the Python language
 
 PORTSCOUT=	ignore:1	# Last version of 1.X branch
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	Reportlab
 
