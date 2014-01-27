@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: java/langspec/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/langspec/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	langspec
 PORTVERSION=	3.0
