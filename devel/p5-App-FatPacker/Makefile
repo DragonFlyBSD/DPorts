@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-App-FatPacker/Makefile 333063 2013-11-07 05:37:32Z kuriyama $
+# $FreeBSD: devel/p5-App-FatPacker/Makefile 339505 2014-01-12 14:31:58Z kuriyama $
 
 PORTNAME=	App-FatPacker
-PORTVERSION=	0.009018
+PORTVERSION=	0.010000
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
