@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: mail/qmail-activedir/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/qmail-activedir/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qmail-activedir
 PORTVERSION=	0.17
