@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rubygem-gettext/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-gettext/Makefile 340901 2014-01-24 14:46:50Z miwi $
 
 PORTNAME=	gettext
 PORTVERSION=	2.3.1
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rmsgfmt bin/rmsginit bin/rmsgmerge bin/rxgettext
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
