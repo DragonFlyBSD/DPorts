@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: devel/rubygem-racc/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-racc/Makefile 340902 2014-01-24 14:47:11Z miwi $
 
 PORTNAME=	racc
 PORTVERSION=	1.4.9
@@ -18,5 +18,4 @@ PLIST_FILES=	bin/racc bin/racc2y bin/y2racc
 
 CONFLICTS=	ruby1[89]-racc-1\.4\*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
