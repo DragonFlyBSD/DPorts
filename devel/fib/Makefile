@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: devel/fib/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/fib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fib
 PORTVERSION=	1.1
