@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: textproc/sgmlformat/Makefile 332981 2013-11-06 12:30:49Z mat $
+# $FreeBSD: textproc/sgmlformat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sgmlformat
 PORTVERSION=	1.7
