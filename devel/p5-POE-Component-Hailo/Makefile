@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-POE-Component-Hailo/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD: devel/p5-POE-Component-Hailo/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	POE-Component-Hailo
 PORTVERSION=	0.10
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HINRIK
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Non-blocking wrapper around Hailo
 
 LICENSE=	ART10 GPLv1
