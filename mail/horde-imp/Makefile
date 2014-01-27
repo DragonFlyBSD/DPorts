@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-imp/Makefile 334527 2013-11-21 21:55:54Z mm $
+# $FreeBSD: mail/horde-imp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imp
 PORTVERSION=	6.1.6
