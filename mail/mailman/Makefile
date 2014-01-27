@@ -1,5 +1,5 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 334818 2013-11-25 07:56:14Z mandree $
+# $FreeBSD: mail/mailman/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.17
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/gnu-COPYING-GPL
 CONFLICTS=	ja-mailman-2.1.*
 
 USE_AUTOTOOLS=	autoconf
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 USE_RC_SUBR=	mailman
 
 GNU_CONFIGURE_PREFIX=	${MAILMANDIR}
