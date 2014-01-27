@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-RestrictedPython/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: security/py-RestrictedPython/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	RestrictedPython
 PORTVERSION=	3.6.0
@@ -13,7 +13,7 @@ COMMENT=	Restricted execution environment for Python
 
 LICENSE=	ZPL21
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
