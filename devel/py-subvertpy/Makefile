@@ -1,5 +1,5 @@
 # Created by: Carlo Strub (c-s@c-s.li)
-# $FreeBSD: devel/py-subvertpy/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-subvertpy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	subvertpy
 PORTVERSION=	0.8.10
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	subvertpy
 
