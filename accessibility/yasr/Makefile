@@ -1,5 +1,5 @@
 # Created by: David K. Gerry
-# $FreeBSD: accessibility/yasr/Makefile 337518 2013-12-26 14:30:37Z bapt $
+# $FreeBSD: accessibility/yasr/Makefile 339617 2014-01-13 18:21:04Z marino $
 
 PORTNAME=	yasr
 PORTVERSION=	0.6.9
