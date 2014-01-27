@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: net-mgmt/p5-Net-IPAddress/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Net-IPAddress/Makefile 340943 2014-01-24 23:14:40Z antoine $
 
 PORTNAME=	Net-IPAddress
 PORTVERSION=	1.10
@@ -14,7 +14,4 @@ COMMENT=	Perl functions used to manipulate IP addresses, masks and FQDN's
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::IPAddress.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
