@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: mail/ezmlm-idx/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: mail/ezmlm-idx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ezmlm-idx
 PORTVERSION=	7.1.1
