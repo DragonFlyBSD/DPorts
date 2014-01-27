@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: misc/talkfilters/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
+# $FreeBSD: misc/talkfilters/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	talkfilters
 PORTVERSION=	2.3.8
