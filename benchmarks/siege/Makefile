@@ -1,22 +1,32 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: benchmarks/siege/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: benchmarks/siege/Makefile 339921 2014-01-16 15:11:26Z miwi $
 
 PORTNAME=	siege
-PORTVERSION=	3.0.5
-CATEGORIES=	benchmarks
-MASTER_SITES=	http://www.joedog.org/pub/siege/
+PORTVERSION=	3.0.6
+CATEGORIES=	benchmarks www
+MASTER_SITES=	http://www.joedog.org/pub/siege/ \
+		http://fossies.org/linux/www/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTTP regression testing and benchmarking utility
 
 LICENSE=	GPLv2
 
-GNU_CONFIGURE=	yes
-USE_OPENSSL=	yes
-
 USES=		perl5
-
+USE_OPENSSL=	yes
+USE_AUTOTOOLS=	libtoolize aclocal autoheader automake autoconf
+LIBTOOLIZE_ARGS=--copy --force
+AUTOMAKE_ARGS=	--add-missing --copy
+CONFIGURE_ENV=	PERL="${PERL}"
 CONFIGURE_ARGS=	--with-ssl=${OPENSSLBASE} --disable-shared \
 		--sysconfdir=${ETCDIR}
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|^\(AC_PROG_SHELL\)|dnl \1|' ${WRKSRC}/configure.ac
+
+pre-configure:
+	@${RM} -f ${WRKSRC}/acinclude.m4
+	@${RM} -f ${WRKSRC}/utils/missing
 
 .include <bsd.port.mk>
