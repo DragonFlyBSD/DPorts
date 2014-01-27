@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: archivers/p5-Compress-Raw-Lzma/Makefile 337634 2013-12-27 02:16:12Z sunpoet $
+# $FreeBSD: archivers/p5-Compress-Raw-Lzma/Makefile 339572 2014-01-13 07:23:43Z bapt $
 
 PORTNAME=	Compress-Raw-Lzma
 PORTVERSION=	2.063
@@ -21,18 +21,8 @@ USES=		perl5
 
 LZMA_DEPEND?=	sys
 
-.include <bsd.port.pre.mk>
-
-.if (${ARCH} == "sparc64")
-LZMA_DEPEND=	xz
-.endif
-
 .if ${LZMA_DEPEND} == "lzmalib"
 LIB_DEPENDS+=	liblzma.so.1:${PORTSDIR}/archivers/lzmalib
-.endif
-
-.if ${LZMA_DEPEND} == "xz"
-LIB_DEPENDS+=	liblzma.so.5:${PORTSDIR}/archivers/xz
 .endif
 
 pre-build:
@@ -40,4 +30,4 @@ pre-build:
 	@${REINPLACE_CMD} -e "/^LDDLFLAGS/ s|${LOCALBASE}/lib|${LIBDIR}|" ${WRKSRC}/Makefile
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
