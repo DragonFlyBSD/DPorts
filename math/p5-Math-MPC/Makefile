@@ -1,9 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPC/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD: math/p5-Math-MPC/Makefile 340043 2014-01-17 14:11:32Z skreuzer $
 
 PORTNAME=	Math-MPC
-PORTVERSION=	1.00
-PORTREVISION=	1
+PORTVERSION=	1.01
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 #MASTER_SITE_SUBDIR=	CPAN:SISYPHUS
