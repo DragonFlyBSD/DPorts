@@ -1,5 +1,5 @@
 # Created by: Abel Chow <abel_chow@yahoo.com>
-# $FreeBSD: devel/cproto/Makefile 331720 2013-10-26 17:00:29Z danilo $
+# $FreeBSD: devel/cproto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cproto
 PORTVERSION=	4.7k
