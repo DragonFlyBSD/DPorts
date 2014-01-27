@@ -1,5 +1,5 @@
 # Created by: Murray Nesbitt <freebsd@nesbitt.ca>
-# $FreeBSD: misc/loop/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/loop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	loop
 PORTVERSION=	1.0
