@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/kcc/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/kcc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kcc
 PORTVERSION=	1.0
