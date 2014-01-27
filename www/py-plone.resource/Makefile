@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.resource/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: www/py-plone.resource/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.resource
 PORTVERSION=	1.0.2
