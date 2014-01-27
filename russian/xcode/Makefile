@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: russian/xcode/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/xcode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcode
 PORTVERSION=	4.1
