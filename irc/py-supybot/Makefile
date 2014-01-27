@@ -1,5 +1,5 @@
 # Created by: Tim Middleton <x@vex.net>
-# $FreeBSD: irc/py-supybot/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/py-supybot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	supybot
 PORTVERSION=	0.83.4.1
@@ -12,7 +12,7 @@ MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Supybot - A Superb Python IRC bot
 
 USE_BZIP2=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	0.83.1+darcs
 PYDISTUTILS_EGGINFO=	supybot-${PORTVERSION}-py${PYTHON_VER}.egg-info
