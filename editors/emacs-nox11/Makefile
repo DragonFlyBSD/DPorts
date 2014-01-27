@@ -1,5 +1,5 @@
 # Created by: phoffman@proper.com
-# $FreeBSD: editors/emacs-nox11/Makefile 338676 2014-01-04 20:12:38Z ashish $
+# $FreeBSD: editors/emacs-nox11/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-nox11
 
