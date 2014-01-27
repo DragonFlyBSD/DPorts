@@ -1,5 +1,5 @@
 # Created by: Vasiliy Ch <blttll@gmail.com>
-# $FreeBSD: sysutils/ciso/Makefile 328249 2013-09-25 03:49:38Z amdmi3 $
+# $FreeBSD: sysutils/ciso/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ciso
 PORTVERSION=	1.0.0
