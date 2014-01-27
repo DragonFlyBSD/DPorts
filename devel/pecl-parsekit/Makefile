@@ -1,5 +1,5 @@
 # Created by: Sébastien Santoro <dereckson@gmail.com>
-# $FreeBSD: devel/pecl-parsekit/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-parsekit/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	parsekit
 PORTVERSION=	1.3.0
@@ -21,5 +21,4 @@ USE_PHPEXT=	yes
 CONFIGURE_ARGS=	--enable-parsekit
 CFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
