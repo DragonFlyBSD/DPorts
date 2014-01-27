@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-colo/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-colo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-colo
 PORTVERSION=	0.4.0
@@ -19,7 +19,6 @@ RUN_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	bzr_colo
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
