@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: textproc/p5-Text-Hyphen/Makefile 327883 2013-09-22 17:59:36Z sunpoet $
+# $FreeBSD: textproc/p5-Text-Hyphen/Makefile 340908 2014-01-24 14:59:10Z mat $
 
 PORTNAME=	Text-Hyphen
 PORTVERSION=	0.11
@@ -12,10 +12,7 @@ COMMENT=	Determine positions for hyphens inside words
 
 LICENSE=	BSD
 
-NO_STAGE=	yes
 USE_PERL5=	configure
 USES=		perl5
-
-MAN3=		Text::Hyphen.3
 
 .include <bsd.port.mk>
