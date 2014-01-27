@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-CGI-XMLApplication/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD: www/p5-CGI-XMLApplication/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	CGI-XMLApplication
 PORTVERSION=	1.1.3
