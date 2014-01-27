@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: www/session2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/session2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	session2
 PORTVERSION=	0.6.1
@@ -12,7 +12,7 @@ DISTNAME=	session2-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A quixote session manager with persistence support
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	0.6
 
