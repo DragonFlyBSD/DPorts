@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: databases/py-forgetsql/Makefile 328563 2013-09-28 11:13:15Z mva $
+# $FreeBSD: databases/py-forgetsql/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	forgetsql
 PORTVERSION=	0.5.1
@@ -12,7 +12,7 @@ DISTNAME=	forgetSQL-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python module for object-oriented access to SQL databases
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	forgetSQL
