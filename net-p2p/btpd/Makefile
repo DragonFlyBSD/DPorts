@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/btpd/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: net-p2p/btpd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	btpd
 PORTVERSION=	0.16
