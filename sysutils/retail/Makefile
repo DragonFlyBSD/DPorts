@@ -1,24 +1,25 @@
 # Created by: Oleg Ginzburg
-# $FreeBSD: sysutils/retail/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/retail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	retail
 PORTVERSION=	1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://xjack.org/retail/download/ \
-		http://olevole.ru/freebsd/distfiles/
+		http://www.bsdstore.ru/downloads/
 
 MAINTAINER=	olevole@olevole.ru
-COMMENT=	A program for incremental logfile reader
+COMMENT=	Program for incremental logfile reader
+
+LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-MAN1=		retail.1
-PLIST_FILES=	bin/retail
+PLIST_FILES=	bin/retail man/man1/retail.1.gz
 
-NO_STAGE=	yes
 post-configure:
 	${REINPLACE_CMD} -e 's/%.o: %.c \*.h ..\/config.h//g' ${WRKSRC}/src/Makefile
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/retail.1 ${PREFIX}/man/man1/
+	${INSTALL_DATA} ${WRKSRC}/doc/retail.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
