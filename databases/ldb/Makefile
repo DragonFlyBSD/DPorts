@@ -1,4 +1,4 @@
-# $FreeBSD: databases/ldb/Makefile 335917 2013-12-08 18:34:35Z timur $
+# $FreeBSD: databases/ldb/Makefile 339862 2014-01-15 23:34:24Z bapt $
 
 PORTNAME=		ldb
 PORTVERSION=		1.1.16
@@ -16,7 +16,7 @@ LICENSE=		GPLv3
 CONFLICTS=		*samba3[0-4]-3.*
 
 USES=			pkgconfig
-USE_PYTHON_BUILD=	-2.7
+USE_PYTHON_BUILD=	2
 USE_LDCONFIG=		yes
 WAF_TOOL=		buildtools/bin/waf
 CONFIGURE_LOG=		bin/config.log
@@ -103,8 +103,6 @@ CONFIGURE_TARGET=	configure
 ALL_TARGET=		build
 INSTALL_TARGET=		install
 
-.include <bsd.port.pre.mk>
-
 IGNORE_NONTHREAD_PYTHON=needs port lang/python${PYTHON_SUFFIX} to be build with THREADS support
 
 post-patch:
@@ -156,4 +154,4 @@ do-build:
 do-install:
 			@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} ${INSTALL_WRKSRC}/${WAF_TOOL} ${MAKE_ARGS} ${INSTALL_TARGET})
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
