@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: textproc/antiword/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/antiword/Makefile 341120 2014-01-25 22:03:15Z mat $
 
 PORTNAME=	antiword
 PORTVERSION=	0.37
@@ -10,18 +10,16 @@ MASTER_SITES=	http://www.winfield.demon.nl/linux/
 MAINTAINER=	leeym@FreeBSD.org
 COMMENT=	An application to display Microsoft(tm) Word files
 
-USE_GMAKE=	yes
+LICENSE=	GPLv2
+
+USES=	gmake
 MAKE_JOBS_UNSAFE=yes
 INSTALL_TARGET=	global_install
 
-MAN1=		antiword.1
 PORTDOCS=	COPYING ChangeLog Emacs Exmh FAQ History Mozilla Mutt Netscape \
 		QandA ReadMe antiword.1 antiword.man antiword.php testdoc.doc
 
 CFLAGS+=	-DNDEBUG
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} \
@@ -32,10 +30,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/bin/perl,${PERL},' ${WRKSRC}/Unix-only/fontinfo.pl
 
 post-install:
-	@${INSTALL_MAN} ${WRKSRC}/Docs/antiword.1 ${MANPREFIX}/man/man1
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC}/Docs && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
+	${INSTALL_MAN} ${WRKSRC}/Docs/antiword.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/Docs && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
