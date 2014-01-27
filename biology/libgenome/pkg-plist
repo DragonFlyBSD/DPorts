@@ -1,4 +1,3 @@
-@comment $FreeBSD: biology/libgenome/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 include/gn/gnABISource.h
 include/gn/gnBaseFeature.h
 include/gn/gnBaseFilter.h
