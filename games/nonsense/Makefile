@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: games/nonsense/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD: games/nonsense/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nonsense
 PORTVERSION=	0.6
