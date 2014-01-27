@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: games/sudsol/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/sudsol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sudsol
 PORTVERSION=	0.1
