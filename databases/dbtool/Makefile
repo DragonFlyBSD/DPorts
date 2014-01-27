@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/dbtool/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/dbtool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dbtool
 PORTVERSION=	1.7
