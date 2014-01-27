@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-ncurses/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-ncurses/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ncurses
 PORTVERSION=	1.2.4
