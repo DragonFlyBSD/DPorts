@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: japanese/tegaki-recognize/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: japanese/tegaki-recognize/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tegaki
 PORTVERSION=	0.3.1.2
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libzinnia.so:${PORTSDIR}/japanese/zinnia
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tegakigtk/recognizer.py:${PORTSDIR}/japanese/py-tegaki-gtk
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME}_recognize
 
