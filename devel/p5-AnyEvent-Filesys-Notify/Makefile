@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 332373 2013-11-01 13:49:06Z kuriyama $
+# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 339576 2014-01-13 09:54:47Z kuriyama $
 
 PORTNAME=	AnyEvent-Filesys-Notify
-PORTVERSION=	0.24
+PORTVERSION=	1.14
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MGRIMES
