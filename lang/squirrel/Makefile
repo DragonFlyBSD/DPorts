@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: lang/squirrel/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: lang/squirrel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	squirrel
 PORTVERSION=	2.2.5
