@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD: games/ioquake3-devel-server/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ioquake3-devel-server/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ioquake3-devel
 PKGNAMESUFFIX=	-server
