@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-SpellChecker/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-SpellChecker/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-SpellChecker
 PORTVERSION=	0.11
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Text-Aspell>=0:${PORTSDIR}/textproc/p5-Text-Aspell
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::SpellChecker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
