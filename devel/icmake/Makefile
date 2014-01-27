@@ -1,4 +1,4 @@
-# $FreeBSD: devel/icmake/Makefile 335077 2013-11-28 07:13:42Z pgj $
+# $FreeBSD: devel/icmake/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	icmake
 PORTVERSION=	7.21.00
