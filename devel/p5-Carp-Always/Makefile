@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Carp-Always/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD: devel/p5-Carp-Always/Makefile 339489 2014-01-12 09:53:37Z kuriyama $
 
 PORTNAME=	Carp-Always
-PORTVERSION=	0.12
+PORTVERSION=	0.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
