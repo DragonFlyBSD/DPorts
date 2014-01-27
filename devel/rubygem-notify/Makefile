@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: devel/rubygem-notify/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-notify/Makefile 340902 2014-01-24 14:47:11Z miwi $
 
 PORTNAME=	notify
 PORTVERSION=	0.5.2
@@ -17,5 +17,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/notify
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
