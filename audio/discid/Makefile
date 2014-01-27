@@ -1,5 +1,5 @@
 # Created by: Oliver Breuninger <ob@breuninger.org>
-# $FreeBSD: audio/discid/Makefile 334774 2013-11-24 19:27:20Z bapt $
+# $FreeBSD: audio/discid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	discid
 PORTVERSION=	1.3
