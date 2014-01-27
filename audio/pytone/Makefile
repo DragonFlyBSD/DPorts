@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@FreeBSD.org>
-# $FreeBSD: audio/pytone/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/pytone/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pytone
 PORTVERSION=	3.0.2
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 
 USES=		ncurses
 NO_STAGE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyTone
 
