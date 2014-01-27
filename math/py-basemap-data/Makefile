@@ -1,5 +1,5 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: math/py-basemap-data/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-basemap-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	basemap-data
 PORTVERSION=	0.9
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	mainland@apeiron.net
 COMMENT=	Map data for py-basemap
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 DATADIR=	${PREFIX}/share/py-${PORTNAME}
