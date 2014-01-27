@@ -1,5 +1,5 @@
 # Created by: chris@still.whet.org
-# $FreeBSD: security/portsentry/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/portsentry/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	portsentry
 PORTVERSION=	1.2
