@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-termcolor/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-termcolor/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	termcolor
 PORTVERSION=	1.2.2
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
