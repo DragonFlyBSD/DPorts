@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/font-ipa/Makefile 330478 2013-10-16 04:56:32Z hrs $
+# $FreeBSD: japanese/font-ipa/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ipa
 PORTVERSION=	00303
