@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/bzip/Makefile 331187 2013-10-21 20:22:15Z danilo $
+# $FreeBSD: archivers/bzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzip
 PORTVERSION=	0.21
