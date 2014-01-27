@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/qooxdoo/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/qooxdoo/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	qooxdoo
 PORTVERSION=	2.1.1
@@ -21,7 +21,7 @@ QXDDIRS=	component framework tool
 
 REINPLACE_ARGS=	-e 's,/usr/bin/env python,&${PYTHON_VER},' -i.bak
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_ZIP=	yes
 
 SHAREMODE=	644

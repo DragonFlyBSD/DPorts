@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/qooxdoo/pkg-plist 313827 2013-03-10 14:47:31Z nivit $
 %%PORTDOCS%%%%DOCSDIR%%/_downloads/databindingcheatsheet.pdf
 %%PORTDOCS%%%%DOCSDIR%%/_images/Transform.png
 %%PORTDOCS%%%%DOCSDIR%%/_images/android.png
