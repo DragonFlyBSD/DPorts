@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-pysendfile/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-pysendfile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pysendfile
 PORTVERSION=	2.0.0
@@ -12,7 +12,7 @@ COMMENT=	A Python interface to sendfile(2)
 
 CONFLICTS_INSTALL=	py*-sendfile-[0-9]*
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
