@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/py-funcparserlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-funcparserlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	funcparserlib
 PORTVERSION=	0.3.6
