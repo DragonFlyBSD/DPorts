@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-No/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Lingua-Stem-Snowball-No/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Lingua-Stem-Snowball-No
 PORTVERSION=	1.2
