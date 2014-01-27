@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.sanity.mk 341284 2014-01-26 20:48:58Z ak $
+# $FreeBSD: Mk/bsd.sanity.mk 341331 2014-01-27 07:23:07Z bapt $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -117,9 +117,9 @@ DEV_WARNING+=	"USE_SCONS=yes is deprecated, please use USES=scons"
 .endif
 
 # print warning if no reason given for NO_STAGE
-.if defined(NO_STAGE) && ${NO_STAGE:tl} == yes
+.if defined(NO_STAGE)
 DEV_WARNING+=	"NO_STAGE is deprecated, convert port to stage directory:"
-DEV_WARNING+=	"https://wiki.freebsd.org/action/diff/ports/StageDir"
+DEV_WARNING+=	"https://wiki.freebsd.org/ports/StageDir"
 .endif
 
 .if !defined(NO_STAGE)

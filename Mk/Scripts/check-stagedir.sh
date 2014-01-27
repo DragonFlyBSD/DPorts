@@ -1,6 +1,6 @@
 #!/bin/sh
 # ports/Mk/Scripts/check-stagedir.sh - called from ports/Mk/bsd.stage.mk
-# $FreeBSD: Mk/Scripts/check-stagedir.sh 335192 2013-11-29 16:08:41Z mat $
+# $FreeBSD: Mk/Scripts/check-stagedir.sh 341366 2014-01-27 10:35:19Z bapt $
 
 set -e
 export LC_ALL=C
@@ -58,6 +58,11 @@ if [ $makeplist = 0 ] ; then
 			/*) echo >&3 "$line" ;;
 			*)  echo >&3 "$cwd/$line" ;;
 			esac
+		;;
+		@info*)
+			set -- $line
+			shift
+			echo "$cwd/$@"
 		;;
 		# order matters here - we must check @cwd first because
 		# otherwise the @cwd* would also match it first, shadowing the

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/perl5.mk 339458 2014-01-11 21:37:10Z mat $
+# $FreeBSD: Mk/Uses/perl5.mk 341314 2014-01-27 00:02:42Z bapt $
 #
 # Provide support to use perl5
 #
@@ -258,9 +258,9 @@ do-install:
 .endif # ! USES=gmake
 .endif # modbuild
 
-post-stage::
 # TODO: change to ${_USE_PERL5:Mconfigure} when M::B creates .packlist
 .if ${USE_PERL5:Mconfigure} || ${USE_PERL5:Mmodbuildtiny}
+post-stage::
 	-@[ -d ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto ] && ${FIND} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto -name .packlist -exec ${SED} -i '' 's|^${STAGEDIR}||' '{}' \;
 .endif
 .endif # defined(_POSTMKINCLUDED)

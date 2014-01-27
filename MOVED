@@ -1,7 +1,7 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
 #
-# $FreeBSD: MOVED 340947 2014-01-24 23:37:10Z mat $
+# $FreeBSD: MOVED 341444 2014-01-27 19:31:17Z jadawin $
 #
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
@@ -1458,3 +1458,6 @@ cad/salome-sierpinsky||2014-01-24|Has expired: depends on expired cad/salome-ker
 cad/salome-geom||2014-01-24|Has expired: depends on expired cad/salome-kernel
 devel/combat||2014-01-24|Has expired: depends on expired devel/mico
 net-mgmt/nagios-devel|net-mgmt/nagios|2014-01-25|Master site gone, outdated
+math/math/octave-forge-image-acquisition||2014-01-27|Depends on multimedia/libv4l which no longer has necessary headers
+lang/racket-textual|lang/racket-minimal|2014-01-27|Renamed upstream
+mail/pop-before-smtp||2014-01-27|Removed
