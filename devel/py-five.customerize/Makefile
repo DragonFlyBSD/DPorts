@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-five.customerize/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-five.customerize/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	five.customerize
 PORTVERSION=	1.1
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.portlets>=0:${PORTSDIR}/www/py-plone.p
 		${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisition
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 USES=		zope
