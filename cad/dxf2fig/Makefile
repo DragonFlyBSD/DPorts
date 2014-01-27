@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/dxf2fig/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/dxf2fig/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dxf2fig
 PORTVERSION=	2.13
@@ -11,7 +11,6 @@ COMMENT=	DXF to FIG converter
 
 PLIST_FILES=	bin/dxf2fig
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|CFLAGS+=|g ; \
 		 s|-O -s||g ; \
@@ -19,6 +18,6 @@ post-patch:
 		 s|-L|#-L|' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
