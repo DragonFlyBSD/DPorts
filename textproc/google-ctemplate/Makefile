@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/google-ctemplate/Makefile 328232 2013-09-25 01:35:23Z vanilla $
+# $FreeBSD: textproc/google-ctemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	google-ctemplate
 PORTVERSION=	2.2
