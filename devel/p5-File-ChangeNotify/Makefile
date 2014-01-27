@@ -1,8 +1,9 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-File-ChangeNotify/Makefile 335310 2013-11-30 17:48:16Z alexey $
+# $FreeBSD: devel/p5-File-ChangeNotify/Makefile 340941 2014-01-24 23:00:08Z antoine $
 
 PORTNAME=	File-ChangeNotify
 PORTVERSION=	0.24
+PORTREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -19,14 +20,6 @@ RUN_DEPENDS=	p5-Moose>=2:${PORTSDIR}/devel/p5-Moose \
 		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 TEST_DEPENDS=	p5-Test-Exception>0:${PORTSDIR}/devel/p5-Test-Exception
-
-MAN3=		File::ChangeNotify.3 \
-		File::ChangeNotify::ConfigData.3 \
-		File::ChangeNotify::Event.3 \
-		File::ChangeNotify::Watcher.3 \
-		File::ChangeNotify::Watcher::Default.3 \
-		File::ChangeNotify::Watcher::Inotify.3 \
-		File::ChangeNotify::Watcher::KQueue.3
 
 USES=		perl5
 USE_PERL5=	modbuild
