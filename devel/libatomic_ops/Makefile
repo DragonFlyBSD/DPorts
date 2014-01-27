@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/libatomic_ops/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: devel/libatomic_ops/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libatomic_ops
 DISTVERSION=	7.3alpha2
