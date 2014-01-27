@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: archivers/amigadepacker/Makefile 331325 2013-10-22 21:15:14Z ehaupt $
+# $FreeBSD: archivers/amigadepacker/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	amigadepacker
 PORTVERSION=	0.04
