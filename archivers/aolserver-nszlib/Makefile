@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: archivers/aolserver-nszlib/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/aolserver-nszlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nszlib
 PORTVERSION=	1.1
