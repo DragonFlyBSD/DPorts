@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-hierwiki/Makefile 337578 2013-12-26 17:54:58Z wg $
+# $FreeBSD: www/trac-hierwiki/Makefile 341223 2014-01-26 15:28:09Z rm $
 
 PORTNAME=	hierwiki
 PORTVERSION=	1.0
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dealing with the trac wiki as a hierarchy
+
+DEPRECATED=	Runtime is broken, doesn't support Trac>0.11
+EXPIRATION_DATE=2014-02-26
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
