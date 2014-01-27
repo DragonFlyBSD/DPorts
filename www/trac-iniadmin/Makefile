@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-iniadmin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-iniadmin/Makefile 341185 2014-01-26 14:32:17Z miwi $
 
 PORTNAME=	iniadmin
 PORTVERSION=	0.2.3915
@@ -15,12 +15,11 @@ COMMENT=	Edit all trac.ini option via the WebAdminPlugin
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin/0.11
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	IniAdmin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}
 PLIST_SUB+=	PORTVERSION=${PORTVERSION:R} PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
