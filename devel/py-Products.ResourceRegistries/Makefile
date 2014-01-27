@@ -1,10 +1,12 @@
-# $FreeBSD: devel/py-Products.ResourceRegistries/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: devel/py-Products.ResourceRegistries/Makefile 341162 2014-01-26 12:01:03Z rm $
 
 PORTNAME=	Products.ResourceRegistries
 PORTVERSION=	2.2.9
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Registry for managing CSS and JS
@@ -21,12 +23,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 		zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3 \
 		${PYTHON_PKGNAMEPREFIX}plone.app.registry>0:${PORTSDIR}/www/py-plone.app.registry
 
-DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-USES=		zope
-
-NO_STAGE=	yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+USE_ZIP=		yes
+USES=			zope
 
 .include <bsd.port.mk>
