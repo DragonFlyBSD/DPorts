@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-RO/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: astro/py-RO/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	RO
 PORTVERSION=	3.2.0
