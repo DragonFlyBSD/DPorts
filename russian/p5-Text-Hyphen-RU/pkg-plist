@@ -1,4 +1,3 @@
-@comment $FreeBSD: russian/p5-Text-Hyphen-RU/pkg-plist 327884 2013-09-22 17:59:41Z sunpoet $
 %%SITE_PERL%%/Text/Hyphen/RU.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/Hyphen/RU/.packlist
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Text/Hyphen/RU
