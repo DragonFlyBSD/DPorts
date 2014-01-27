@@ -1,5 +1,5 @@
 # Created by: Stefan Zehl <sec@42.org>
-# $FreeBSD: audio/shorten/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/shorten/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shorten
 PORTVERSION=	3.6.1
