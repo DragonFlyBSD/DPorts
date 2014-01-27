@@ -1,5 +1,5 @@
 # Created by: April 15 2009
-# $FreeBSD: databases/py-odbc/Makefile 334591 2013-11-22 13:18:12Z wg $
+# $FreeBSD: databases/py-odbc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyodbc
 PORTVERSION=	3.0.7
