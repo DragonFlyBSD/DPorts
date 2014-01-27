@@ -1,5 +1,5 @@
 # Created by: Evgueni V. Gavrilov <aquatique@rusunix.org>
-# $FreeBSD: russian/ircd-hybrid/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/ircd-hybrid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ircd
 PORTVERSION=	7.2.4
