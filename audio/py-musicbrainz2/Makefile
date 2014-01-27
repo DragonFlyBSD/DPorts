@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/py-musicbrainz2/Makefile 329877 2013-10-09 09:29:59Z jhale $
+# $FreeBSD: audio/py-musicbrainz2/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	musicbrainz2
 PORTVERSION=	0.7.4
@@ -18,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
 LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-musicbrainz2
 
