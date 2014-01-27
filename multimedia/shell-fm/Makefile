@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD: multimedia/shell-fm/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/shell-fm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shell-fm
 PORTVERSION=	0.7
