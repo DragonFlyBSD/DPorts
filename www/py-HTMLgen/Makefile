@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: www/py-HTMLgen/Makefile 335375 2013-12-01 11:56:09Z mva $
+# $FreeBSD: www/py-HTMLgen/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	HTMLgen
 PORTVERSION=	2.2.2
@@ -14,7 +14,7 @@ DISTNAME=	HTMLgen
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	A Python library for the generation of HTML documents
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 NO_STAGE=	yes
 
