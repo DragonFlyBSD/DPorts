@@ -1,4 +1,4 @@
-# $FreeBSD: net/py-ldap2/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-ldap2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ldap2
 PORTVERSION=	2.4.13
@@ -14,7 +14,7 @@ LICENSE=	PSFL
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}asn1-modules>=0:${PORTSDIR}/devel/py-asn1-modules
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 USE_OPENLDAP=	yes
 PYDISTUTILS_PKGNAME=	python-ldap
