@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: databases/p5-DBIx-Class/Makefile 339867 2014-01-15 23:43:52Z bapt $
 
 PORTNAME=	DBIx-Class
 PORTVERSION=	0.08250
@@ -62,16 +62,6 @@ USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ENV=	DBICTEST_NO_SQLITE_CHECK=1
 
-.include <bsd.port.options.mk>
+SQLT_RUN_DEPENDS=	p5-SQL-Translator>=0.09.004:${PORTSDIR}/databases/p5-SQL-Translator
 
-.if ${PORT_OPTIONS:MSQLT}
-RUN_DEPENDS+=	p5-SQL-Translator>=0.09.004:${PORTSDIR}/databases/p5-SQL-Translator
-.endif
-
-.include <bsd.port.pre.mk>
-
-#.if ${PERL_LEVEL} < 501600
-#BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.59:${PORTSDIR}/devel/p5-ExtUtils-MakeMaker
-#.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
