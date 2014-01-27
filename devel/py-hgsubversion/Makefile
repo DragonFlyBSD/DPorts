@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-hgsubversion/Makefile 328479 2013-09-27 14:25:52Z wg $
+# $FreeBSD: devel/py-hgsubversion/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hgsubversion
 PORTVERSION=	1.5.1
@@ -16,7 +16,7 @@ OPTIONS_DEFINE=	SUBVERTPY
 OPTIONS_DEFAULT=SUBVERTPY
 SUBVERTPY_DESC=	Use subvertpy python bindings
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 .include <bsd.port.options.mk>
