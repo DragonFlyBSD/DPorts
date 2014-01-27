@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/argtable/Makefile 336111 2013-12-10 20:59:41Z bapt $
+# $FreeBSD: devel/argtable/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	argtable
 PORTVERSION=	2.13
