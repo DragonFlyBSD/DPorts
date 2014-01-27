@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-Entities-Numbered/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-HTML-Entities-Numbered/Makefile 340610 2014-01-21 14:03:59Z mat $
 
 PORTNAME=	HTML-Entities-Numbered
 PORTVERSION=	0.04
@@ -13,8 +13,4 @@ COMMENT=	HTML::Entities::Numbered - Conversion of numbered HTML entities
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	HTML::Entities::Numbered.3 \
-	HTML::Entities::Numbered::Table.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
