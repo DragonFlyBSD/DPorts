@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Module-Reader/Makefile 333066 2013-11-07 07:32:58Z kuriyama $
+# $FreeBSD: devel/p5-Module-Reader/Makefile 339498 2014-01-12 12:55:32Z kuriyama $
 
 PORTNAME=	Module-Reader
-PORTVERSION=	0.002000
+PORTVERSION=	0.002001
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
