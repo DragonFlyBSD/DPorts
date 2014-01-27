@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: misc/countrycodes/Makefile 331588 2013-10-25 14:33:17Z ehaupt $
+# $FreeBSD: misc/countrycodes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	countrycodes
 PORTVERSION=	1.0.5
