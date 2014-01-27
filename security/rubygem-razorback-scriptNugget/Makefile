@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: security/rubygem-razorback-scriptNugget/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-razorback-scriptNugget/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	razorback-scriptNugget
 PORTVERSION=	0.5.0
@@ -15,5 +15,4 @@ USE_RUBY=		yes
 USE_RUBYGEMS=		yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
