@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/pecl-geoip/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/pecl-geoip/Makefile 340828 2014-01-23 14:32:34Z miwi $
 
 PORTNAME=	geoip
 PORTVERSION=	1.0.8
@@ -17,7 +17,6 @@ LIB_DEPENDS=	GeoIP:${PORTSDIR}/net/GeoIP
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's/-ldl//g' ${WRKSRC}/config.m4
 
