@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: cad/iverilog/Makefile 336066 2013-12-10 16:08:47Z zeising $
+# $FreeBSD: cad/iverilog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iverilog
 PORTVERSION=	0.9.7
