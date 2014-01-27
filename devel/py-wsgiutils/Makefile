@@ -1,5 +1,5 @@
 # Created by: Jordi Haarman
-# $FreeBSD: devel/py-wsgiutils/Makefile 337070 2013-12-20 18:47:52Z wg $
+# $FreeBSD: devel/py-wsgiutils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wsgiutils
 PORTVERSION=	0.7
