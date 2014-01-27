@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: archivers/lzip/Makefile 333291 2013-11-09 13:45:42Z wg $
+# $FreeBSD: archivers/lzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lzip
 PORTVERSION=	1.15
