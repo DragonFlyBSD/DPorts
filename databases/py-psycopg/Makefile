@@ -1,5 +1,5 @@
 # Created by: Alex Rodioukov <simuran@shaw.ca>
-# $FreeBSD: databases/py-psycopg/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: databases/py-psycopg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	psycopg
 PORTVERSION=	1.1.21
