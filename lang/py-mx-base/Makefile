@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/py-mx-base/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: lang/py-mx-base/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mx-base
 PORTVERSION=	3.2.6
@@ -11,7 +11,7 @@ DISTNAME=	egenix-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	eGenix mx-Extension Series for Python
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 PYDISTUTILS_PKGNAME=	egenix-mx-base
