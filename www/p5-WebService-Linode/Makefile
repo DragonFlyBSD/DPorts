@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-Linode/Makefile 333227 2013-11-08 14:14:12Z sunpoet $
+# $FreeBSD: www/p5-WebService-Linode/Makefile 340788 2014-01-23 03:28:09Z sunpoet $
 
 PORTNAME=	WebService-Linode
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	www
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
