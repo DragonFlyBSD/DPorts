@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/py-qserve/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-qserve/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qserve
 PORTVERSION=	0.2.8
@@ -11,7 +11,7 @@ MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Job queue server
 
 USE_ZIP=	yes
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
 NO_STAGE=	yes
