@@ -1,5 +1,5 @@
 # Created by: Justin Stanford <jus@security.za.net>
-# $FreeBSD: mail/ripmime/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: mail/ripmime/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ripmime
 PORTVERSION=	1.4.0.10
