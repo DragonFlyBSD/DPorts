@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/termatrix/Makefile 336002 2013-12-09 16:18:08Z danilo $
+# $FreeBSD: misc/termatrix/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	termatrix
 PORTVERSION=	0.2
