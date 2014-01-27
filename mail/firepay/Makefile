@@ -1,5 +1,5 @@
 # Created by: Dean Hollister <dean@odyssey.apana.org.au>
-# $FreeBSD: mail/firepay/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/firepay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	firepay
 PORTVERSION=	0.9.5
