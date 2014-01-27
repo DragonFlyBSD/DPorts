@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: textproc/p5-Text-German/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Text-German/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-German
 PORTVERSION=	0.06
