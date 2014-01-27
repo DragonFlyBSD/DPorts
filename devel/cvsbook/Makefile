@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: devel/cvsbook/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/cvsbook/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cvsbook
 PORTVERSION=	1.21
