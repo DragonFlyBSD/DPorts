@@ -3,7 +3,7 @@
 @@ -1,26 +1,27 @@
 -# ARPACK++ v1.2 2/18/2000
 +# ARPACK++ v1.2 2/20/2000
-+# $FreeBSD: math/arpack++/files/patch-Makefile.inc 300896 2012-07-14 13:54:48Z beat $
++# $FreeBSD: math/arpack++/files/patch-Makefile.inc 340725 2014-01-22 17:40:44Z mat $
  # c++ interface to ARPACK code.
  # This file contains some definitions used to compile arpack++ examples
 -# with the g++ compiler under Sun Solaris.
