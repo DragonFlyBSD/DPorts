@@ -1,5 +1,5 @@
 # Created by: Lawrence Stewart <lstewart@FreeBSD.org>
-# $FreeBSD: www/py-Products.PloneLDAP/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-Products.PloneLDAP/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Products.PloneLDAP
 PORTVERSION=	1.1
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.LDAPMultiPlugins>=1.10:${PORTSDIR}/
 		${PYTHON_PKGNAMEPREFIX}Products.LDAPUserFolder>=2.9:${PORTSDIR}/devel/py-Products.LDAPUserFolder
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 
 NO_STAGE=	yes
