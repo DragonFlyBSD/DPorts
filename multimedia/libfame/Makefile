@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/libfame/Makefile 330873 2013-10-19 14:19:13Z bapt $
+# $FreeBSD: multimedia/libfame/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libfame
 PORTVERSION=	0.9.1
