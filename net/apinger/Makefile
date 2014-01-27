@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: net/apinger/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/apinger/Makefile 339608 2014-01-13 16:57:22Z garga $
 
 PORTNAME=	apinger
 PORTVERSION=	0.6.1
@@ -17,7 +17,6 @@ SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	IPV6
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MIPV6}
@@ -25,16 +24,10 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/apinger.conf ${PREFIX}/etc/apinger.conf.sample
-.if !defined(BATCH)
-	@${CAT} ${PKGMESSAGE}
-.endif
-
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/README
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${DOCSDIR}/NEWS
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DOCSDIR}/AUTHORS
-.endif
+	${INSTALL_DATA} ${WRKSRC}/src/apinger.conf ${STAGEDIR}${PREFIX}/etc/apinger.conf.sample
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}/README
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${STAGEDIR}${DOCSDIR}/NEWS
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${STAGEDIR}${DOCSDIR}/AUTHORS
 
 .include <bsd.port.mk>
