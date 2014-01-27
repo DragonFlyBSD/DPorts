@@ -1,4 +1,3 @@
-@comment $FreeBSD: games/robotfindskitten/pkg-plist 311948 2013-02-08 18:49:08Z skreuzer $
 bin/robotfindskitten
 %%DATADIR%%/vanilla.nki
 %%EXTRANKI%%%%DATADIR%%/freebsd.nki
