@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/biorythm/Makefile 332069 2013-10-30 05:37:56Z danilo $
+# $FreeBSD: games/biorythm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	biorythm
 PORTVERSION=	1.1.4
