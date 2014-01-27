@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-Tiny/Makefile 335754 2013-12-06 15:23:18Z sunpoet $
+# $FreeBSD: converters/p5-JSON-Tiny/Makefile 340412 2014-01-20 17:02:25Z sunpoet $
 
 PORTNAME=	JSON-Tiny
-PORTVERSION=	0.38
+PORTVERSION=	0.40
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
