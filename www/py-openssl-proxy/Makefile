@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/py-openssl-proxy/Makefile 338112 2013-12-30 13:25:50Z wg $
+# $FreeBSD: www/py-openssl-proxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openssl-proxy
 PORTVERSION=	0.1
