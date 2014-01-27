@@ -1,9 +1,9 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/libquvi/Makefile 334535 2013-11-21 23:12:23Z sunpoet $
+# $FreeBSD: multimedia/libquvi/Makefile 339515 2014-01-12 15:18:33Z bapt $
 
 PORTNAME=	libquvi
 PORTVERSION=	0.4.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia devel
 MASTER_SITES=	SF/quvi/${PORTVERSION:R}/${PORTNAME}/ \
 		GOOGLE_CODE
@@ -25,11 +25,13 @@ PORTSCOUT=	limit:0.4.[0-9]*
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_LUA=	yes
 USE_XZ=		yes
-USES=		iconv pathfix pkgconfig
+USES=		iconv lua pathfix pkgconfig
 
 PROJECTHOST=	quvi
+
+post-patch:
+	@${REINPLACE_CMD} 's/lua-5.1/lua-${LUA_VER}/g' ${WRKSRC}/configure
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
