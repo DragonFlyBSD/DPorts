@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/sharedance/Makefile 336999 2013-12-20 11:57:16Z antoine $
+# $FreeBSD: databases/sharedance/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sharedance
 PORTVERSION=	0.6
