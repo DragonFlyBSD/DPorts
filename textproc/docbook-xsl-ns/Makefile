@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/docbook-xsl-ns/Makefile 333527 2013-11-11 17:41:15Z hrs $
+# $FreeBSD: textproc/docbook-xsl-ns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook-xsl-ns
 PORTVERSION=	1.78.1
