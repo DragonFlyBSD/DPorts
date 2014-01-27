@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-TurboJinja/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-TurboJinja/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	TurboJinja
 PORTVERSION=	0.9.1
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}TurboGears>=1.1.2:${PORTSDIR}/www/py-turbo
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}Jinja>=0.9:${PORTSDIR}/devel/py-Jinja
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 USE_ZIP=	yes
 
