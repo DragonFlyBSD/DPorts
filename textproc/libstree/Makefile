@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: textproc/libstree/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libstree/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libstree
 PORTVERSION=	0.4.2
