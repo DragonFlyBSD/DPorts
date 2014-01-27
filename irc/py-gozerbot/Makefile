@@ -1,5 +1,5 @@
 # Created by: Sten Spans <sten@blinkenlights.nl>
-# $FreeBSD: irc/py-gozerbot/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/py-gozerbot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gozerbot
 PORTVERSION=	0.8.1.1
@@ -13,7 +13,7 @@ DISTNAME=	gozerbot-${PORTVERSION}
 MAINTAINER=	sten@blinkenlights.nl
 COMMENT=	Gozerbot - A modular Python IRC and Jabber bot
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 SUB_FILES=		pkg-message
 
