@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/dotconf/Makefile 336128 2013-12-10 23:06:45Z bapt $
+# $FreeBSD: devel/dotconf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dotconf
 PORTVERSION=	1.3
