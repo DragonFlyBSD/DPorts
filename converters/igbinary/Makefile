@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: converters/igbinary/Makefile 339238 2014-01-09 14:10:39Z bapt $
+# $FreeBSD: converters/igbinary/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	igbinary
 PORTVERSION=	1.1.1
