@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/py-tvnamer/Makefile 337559 2013-12-26 17:02:04Z wg $
+# $FreeBSD: multimedia/py-tvnamer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tvnamer
 PORTVERSION=	2.2
