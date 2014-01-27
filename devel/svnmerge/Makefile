@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: devel/svnmerge/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/svnmerge/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	svnmerge
 PORTVERSION=	#  See ../subversion16/Makefile.inc
@@ -14,7 +14,7 @@ COMMENT=	A Python script to managing merges in a Subversion repository
 RUN_DEPENDS=	${LOCALBASE}/bin/svn:${PORTSDIR}/devel/subversion16
 
 USE_BZIP2=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/subversion-${PORTVERSION}/contrib/client-side/svnmerge
