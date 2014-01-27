@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: sysutils/sloth/Makefile 333988 2013-11-16 12:33:15Z vanilla $
+# $FreeBSD: sysutils/sloth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sloth
 PORTVERSION=	1.1.0
