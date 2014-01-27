@@ -1,5 +1,5 @@
 # Created by: Roman Neuhauser (<neuhauser@chello.cz>)
-# $FreeBSD: devel/simpletest/Makefile 328572 2013-09-28 14:48:43Z danilo $
+# $FreeBSD: devel/simpletest/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simpletest
 PORTVERSION=	1.1.0
