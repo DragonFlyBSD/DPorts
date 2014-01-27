@@ -1,4 +1,4 @@
-# $FreeBSD: www/zope213/Makefile 327716 2013-09-20 16:07:33Z rm $
+# $FreeBSD: www/zope213/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope213
 PORTVERSION=	2.13.21
@@ -79,7 +79,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}AccessControl>=2.13.2:${PORTSDIR}/security/p
 		${PYTHON_PKGNAMEPREFIX}Products.StandardCacheManagers>=0:${PORTSDIR}/devel/py-Products.StandardCacheManagers \
 		${PYTHON_PKGNAMEPREFIX}manuel>=0:${PORTSDIR}/devel/py-manuel
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Zope2
 USE_ZIP=	yes
