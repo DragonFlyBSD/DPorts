@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/dzip/Makefile 334182 2013-11-18 12:59:19Z bapt $
+# $FreeBSD: archivers/dzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dzip
 PORTVERSION=	2.9
