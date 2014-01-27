@@ -1,5 +1,5 @@
 # Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-# $FreeBSD: math/ruby-numru_misc/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/ruby-numru_misc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	numru_misc
 PORTVERSION=	0.1.1
