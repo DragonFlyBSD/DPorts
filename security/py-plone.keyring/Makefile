@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-plone.keyring/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: security/py-plone.keyring/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.keyring
 PORTVERSION=	2.0.1
