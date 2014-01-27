@@ -1,4 +1,4 @@
-# $FreeBSD: mail/alpine/Makefile 338626 2014-01-04 08:21:28Z jgh $
+# $FreeBSD: mail/alpine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME?=	alpine
 PORTVERSION=	2.00
