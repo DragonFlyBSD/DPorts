@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: www/py-turbogears/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-turbogears/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	TurboGears
 PORTVERSION=	1.5.1
@@ -25,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cherrypy>=3.1.2:${PORTSDIR}/www/py-cherrypy 
 		${PYTHON_PKGNAMEPREFIX}TGScheduler>0:${PORTSDIR}/devel/py-TGScheduler
 
 USES=		gettext
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
