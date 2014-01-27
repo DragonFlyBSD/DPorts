@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: audio/py-id3/Makefile 328530 2013-09-27 22:36:11Z mva $
+# $FreeBSD: audio/py-id3/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	id3
 PORTVERSION=	1.2
@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python module for retrieving and setting ID3 tags on MP3 files
 
 WRKSRC=		${WRKDIR}/id3-py-${PORTVERSION}
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
 PYDISTUTILS_AUTOPLIST=	yes
