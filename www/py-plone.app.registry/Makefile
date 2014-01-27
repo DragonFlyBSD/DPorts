@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.registry/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: www/py-plone.app.registry/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.app.registry
 PORTVERSION=	1.2.3
@@ -25,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}plone.registry>=1.0:${PORTSDIR}/www/py-plone
 		${PYTHON_PKGNAMEPREFIX}zope.dottedname>=0:${PORTSDIR}/devel/py-zope.dottedname
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 USES=		zope
