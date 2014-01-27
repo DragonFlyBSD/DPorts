@@ -1,5 +1,5 @@
 # Created by: JoeHorn <joehorn@gmail.com>
-# $FreeBSD: databases/php-adodb-ext/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/php-adodb-ext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	adodb-ext
 PORTVERSION=	5.04

@@ -1,5 +1,5 @@
 # Created by: Pankov Pavel <pankov_p@mail.ru>
-# $FreeBSD: net/micro_inetd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/micro_inetd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	micro_inetd
 PORTVERSION=	2005.06.29

@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: databases/pure-sql3/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/pure-sql3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pure-sql3
 PORTVERSION=	0.4

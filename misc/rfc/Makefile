@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: misc/rfc/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/rfc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rfc
 PORTVERSION=	3.2.3

@@ -1,4 +1,4 @@
-# $FreeBSD: security/pssh/Makefile 330755 2013-10-18 14:40:44Z brooks $
+# $FreeBSD: security/pssh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pssh
 PORTVERSION=	2.3.1

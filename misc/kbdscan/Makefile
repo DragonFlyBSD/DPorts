@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kbdscan/Makefile 328333 2013-09-26 04:03:59Z eadler $
+# $FreeBSD: misc/kbdscan/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kbdscan
 PORTVERSION=	20110507

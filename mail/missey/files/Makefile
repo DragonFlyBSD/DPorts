@@ -1,4 +1,4 @@
-# $FreeBSD: mail/missey/files/Makefile 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: mail/missey/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 SRCS_M	=	main.c pop3d.c auth.c plcat.c mydaemon.c listen.c mylog.c cfg.c checkip.c
 SRCS_B	=	bent.c

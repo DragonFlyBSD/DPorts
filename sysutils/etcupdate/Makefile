@@ -1,5 +1,5 @@
 # Created by: jhb
-# $FreeBSD: sysutils/etcupdate/Makefile 337796 2013-12-27 20:07:00Z jhb $
+# $FreeBSD: sysutils/etcupdate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	etcupdate
 PORTVERSION=	1.1

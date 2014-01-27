@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: databases/db41-nocrypto/Makefile 336383 2013-12-13 23:27:33Z mandree $
+# $FreeBSD: databases/db41-nocrypto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-nocrypto
 DISTNAME=	db-${PORTVERSION}.NC

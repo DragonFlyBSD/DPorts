@@ -1,5 +1,5 @@
 # Created by: Vsevolod Lobko <seva@sevasoft.kiev.ua>
-# $FreeBSD: mail/py-milter/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/py-milter/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	milter
 PORTVERSION=	0.9.7
@@ -21,7 +21,7 @@ LIB_DEPENDS=	milter:${PORTSDIR}/mail/sendmail
 PYPORTNAME=	${PKGNAMEPREFIX:C/[0-9]+-//}${PORTNAME}
 
 DIST_SUBDIR=	python
-USE_PYTHON=	2.6-2.9
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PYPORTNAME}
 

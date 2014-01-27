@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-aspyct/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-aspyct/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aspyct
 PORTVERSION=	3.0
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME:C/a/A/}-${PORTVERSION}_beta_4
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python library including an aspect-oriented programming (AOP) engine
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_EGGINFO=	${DISTNAME}-py${PYTHON_VER}.egg-info
 

@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: editors/sted/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/sted/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sted
 PORTVERSION=	0.2.2

@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/pecl-mcve/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-mcve/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	mcve
 PORTVERSION=	7.0.3
@@ -22,7 +22,6 @@ DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
 CONFIGURE_ARGS+=--with-mcve="${LOCALBASE}"
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e '/SEARCH_PATH/ s,=",="${LOCALBASE} ${PREFIX} ,' \
 		${WRKSRC}/config.m4

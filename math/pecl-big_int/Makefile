@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: math/pecl-big_int/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: math/pecl-big_int/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	big_int
 PORTVERSION=	1.0.7

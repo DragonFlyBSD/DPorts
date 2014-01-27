@@ -1,5 +1,5 @@
 # Created by: Takayuki Nakao <t@nakao.org>
-# $FreeBSD: japanese/icanna/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/icanna/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	icanna
 PORTVERSION=	0.9.0

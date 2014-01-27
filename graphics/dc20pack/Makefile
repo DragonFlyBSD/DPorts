@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: graphics/dc20pack/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/dc20pack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		dc20pack
 PORTVERSION=		1.0

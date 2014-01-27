@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-bitstring/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-bitstring/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	bitstring
 PORTVERSION=	3.1.2
@@ -12,7 +12,7 @@ COMMENT=	Simple construction, analysis, and modification of binary data
 
 LICENSE=	MIT
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_ZIP=	yes
 

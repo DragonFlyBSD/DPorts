@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/py-qp/Makefile 335276 2013-11-30 10:05:54Z sunpoet $
+# $FreeBSD: www/py-qp/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	qp
 PORTVERSION=	2.2
@@ -20,7 +20,7 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 MAKE_ENV=	USE_DISTUTILS=yes
 USE_PYDISTUTILS=yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 SUB_FILES=	pkg-message
 

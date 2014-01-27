@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-attachmentpolicy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-attachmentpolicy/Makefile 341180 2014-01-26 14:30:59Z miwi $
 
 PORTNAME=	attachmentpolicy
 PORTVERSION=	0.1.0.${SVN_REV}
@@ -20,7 +20,7 @@ RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin/0.12
 USE_ZIP=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 FETCH_BEFORE_ARGS=	-o ${DISTFILES}
@@ -28,5 +28,4 @@ PYDISTUTILS_PKGNAME=	Attachment_Policy_Plugin
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/.${SVN_REV}//g}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

@@ -1,4 +1,3 @@
-@comment $FreeBSD: irc/irssi-xmpp/pkg-plist 325098 2013-08-21 08:46:00Z jadawin $
 %%DATADIR%%/help/roster
 %%DATADIR%%/help/xmppconnect
 %%DATADIR%%/help/xmppserver

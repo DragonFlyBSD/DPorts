@@ -1,5 +1,5 @@
 # Created by: Kelley Reynolds <kelley@insidesystems.net>
-# $FreeBSD: sysutils/rsyncmanager/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/rsyncmanager/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rsyncmanager
 PORTVERSION=	1.1

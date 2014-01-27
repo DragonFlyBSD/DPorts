@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: textproc/p5-Text-Report/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Report/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-Report
 PORTVERSION=	1.004
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Report.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

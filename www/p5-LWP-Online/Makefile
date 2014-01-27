@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: www/p5-LWP-Online/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD: www/p5-LWP-Online/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	LWP-Online
 PORTVERSION=	1.08
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ADAMK
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Checks if process has access to the web
 
 LICENSE=	ART10 GPLv1

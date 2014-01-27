@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: sysutils/vils/Makefile 330691 2013-10-17 23:51:36Z amdmi3 $
+# $FreeBSD: sysutils/vils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vils
 PORTVERSION=	20020228

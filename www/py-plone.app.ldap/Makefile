@@ -1,5 +1,5 @@
 # Created by: Lawrence Stewart <lstewart@FreeBSD.org>
-# $FreeBSD: www/py-plone.app.ldap/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-plone.app.ldap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.app.ldap
 PORTVERSION=	1.3.0
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Products.CMFCore>=2.1.0:${PORTSDIR}/devel/py
 		${PYTHON_PKGNAMEPREFIX}Products.PloneLDAP>=1.0:${PORTSDIR}/www/py-Products.PloneLDAP
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 

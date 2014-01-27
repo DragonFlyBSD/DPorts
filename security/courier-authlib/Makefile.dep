@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann
-# $FreeBSD: security/courier-authlib/Makefile.dep 318826 2013-05-23 02:19:02Z jgh $
+# $FreeBSD: security/courier-authlib/Makefile.dep 340722 2014-01-22 17:00:46Z mat $
 
 # To depend on courier-authlib you might consider using this file by specifying 
 #

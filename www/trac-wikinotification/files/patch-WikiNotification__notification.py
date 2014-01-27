@@ -1,5 +1,5 @@
 
-$FreeBSD: www/trac-wikinotification/files/patch-WikiNotification__notification.py 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: www/trac-wikinotification/files/patch-WikiNotification__notification.py 340725 2014-01-22 17:40:44Z mat $
 
 --- ./WikiNotification/notification.py.orig
 +++ ./WikiNotification/notification.py

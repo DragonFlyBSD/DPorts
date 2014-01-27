@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/xpi-cookiesafe/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-cookiesafe/Makefile 341199 2014-01-26 15:07:37Z miwi $
 
 PORTNAME=	cookiesafe
 PORTVERSION=	3.0.5
@@ -23,7 +23,6 @@ XPI_FILES=	chrome/cookiesafe.jar defaults/preferences/cookiesafe.js \
 		chrome.manifest install.js install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|0\.7|1.*|' ${WRKSRC}/install.rdf
 	@${RM} -f ${WRKSRC}/install.rdf.bak

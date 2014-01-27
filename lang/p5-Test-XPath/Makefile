@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-Test-XPath/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Test-XPath/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Test-XPath
 PORTVERSION=	0.16
@@ -7,7 +7,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DWHEELER
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Test XML and HTML content and structure with XPath expressions
 
 LICENSE=	ART10 GPLv1

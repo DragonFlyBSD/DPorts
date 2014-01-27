@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/libvisual/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: graphics/libvisual/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # WARNING: when updating this port check if the ports that use libvisual
 # can work with it. Backwards compatibility is known to be broken in the past.

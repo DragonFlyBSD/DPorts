@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: security/fuzz/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/fuzz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fuzz
 PORTVERSION=	0.6

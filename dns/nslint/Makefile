@@ -1,5 +1,5 @@
 # Created by: dglo@ssec.wisc.edu
-# $FreeBSD: dns/nslint/Makefile 331326 2013-10-22 21:30:14Z ehaupt $
+# $FreeBSD: dns/nslint/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nslint
 PORTVERSION=	3.1

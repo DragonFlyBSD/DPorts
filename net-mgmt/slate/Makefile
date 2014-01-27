@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: net-mgmt/slate/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/slate/Makefile 341126 2014-01-25 22:17:03Z bapt $
 
 PORTNAME=	slate
 PORTVERSION=	5.0.1
@@ -11,8 +11,7 @@ COMMENT=	Simple traffic analysis and data reporting collection server for LFAP
 
 PLIST_FILES=	bin/sfas
 
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: devel/py-sysv_ipc/Makefile 338545 2014-01-03 15:16:56Z lwhsu $
+# $FreeBSD: devel/py-sysv_ipc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sysv_ipc
 PORTVERSION=	0.6.6

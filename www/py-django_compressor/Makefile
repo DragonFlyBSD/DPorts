@@ -1,5 +1,5 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: www/py-django_compressor/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-django_compressor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	django_compressor
 PORTVERSION=	1.1.2
@@ -15,7 +15,7 @@ LICENSE=	MIT
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}versiontools>=1.8.2:${PORTSDIR}/devel/py-versiontools
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django-appconf>=0.4:${PORTSDIR}/www/py-django-appconf
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 OPTIONS_DEFINE=	BEAUTIFULSOUP LXML HTML5LIB

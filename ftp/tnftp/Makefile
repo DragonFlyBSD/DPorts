@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: ftp/tnftp/Makefile 328693 2013-09-29 13:46:55Z danilo $
+# $FreeBSD: ftp/tnftp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tnftp
 PORTVERSION=	20130505

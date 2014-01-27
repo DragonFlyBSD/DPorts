@@ -1,14 +1,13 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/spdylay/Makefile 332685 2013-11-04 10:40:33Z sunpoet $
+# $FreeBSD: www/spdylay/Makefile 340241 2014-01-19 09:26:22Z sunpoet $
 
 PORTNAME=	spdylay
-PORTVERSION=	1.1.0
-PORTREVISION=	1
+PORTVERSION=	1.2.2
 CATEGORIES=	www net
-MASTER_SITES=	SF/${PORTNAME}/stable/${PORTNAME}-${PORTVERSION}
+MASTER_SITES=	https://github.com/tatsuhiro-t/${PORTNAME}/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	SPDY protocol version 2 and 3 implementation in C
+COMMENT=	SPDY protocol version 2, 3 and 3.1 implementation in C
 
 LICENSE=	MIT
 
@@ -16,7 +15,7 @@ LIB_DEPENDS=	libevent_openssl.so:${PORTSDIR}/devel/libevent2
 
 CONFIGURE_ARGS=	--enable-examples
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
-		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
+		OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto -lssl" \
 		ZLIB_CFLAGS="-I${INCLUDEDIR}" \
 		ZLIB_LIBS="-L${LIBDIR} -lz"
 GNU_CONFIGURE=	yes
@@ -36,7 +35,7 @@ IGNORE=		spdylay requires OpenSSL 1.0.1+
 .endif
 
 post-build:
-	@${STRIP_CMD} ${WRKSRC}/lib/.libs/libspdylay.so.6
+	@${STRIP_CMD} ${WRKSRC}/lib/.libs/libspdylay.so.7
 
 post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/examples/spdycli ${STAGEDIR}${PREFIX}/bin/

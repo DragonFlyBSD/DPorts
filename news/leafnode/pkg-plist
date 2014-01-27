@@ -1,4 +1,3 @@
-@comment $FreeBSD: news/leafnode/pkg-plist 332195 2013-10-31 02:22:14Z mandree $
 bin/leafnode-version
 bin/newsq
 %%ETCDIR%%/config.example

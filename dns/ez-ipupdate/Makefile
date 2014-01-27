@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: dns/ez-ipupdate/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/ez-ipupdate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ez-ipupdate
 PORTVERSION=	3.0.11b8

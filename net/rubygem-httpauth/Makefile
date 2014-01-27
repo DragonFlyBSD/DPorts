@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-httpauth/Makefile 335232 2013-11-29 21:31:29Z sunpoet $
+# $FreeBSD: net/rubygem-httpauth/Makefile 340782 2014-01-23 03:27:37Z sunpoet $
 
 PORTNAME=	httpauth
-PORTVERSION=	0.2.0
+PORTVERSION=	0.2.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 

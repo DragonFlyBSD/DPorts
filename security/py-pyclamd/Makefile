@@ -1,5 +1,5 @@
 # Created by: Milan Obuch
-# $FreeBSD: security/py-pyclamd/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-pyclamd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyclamd
 PORTVERSION=	0.2.2

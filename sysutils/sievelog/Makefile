@@ -1,5 +1,5 @@
 # Created by: Jesse Kempf <jessekempf@gmail.com>
-# $FreeBSD: sysutils/sievelog/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sievelog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sievelog
 PORTVERSION=	1.0.1
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	jessekempf@gmail.com
 COMMENT=	Syslog message filter
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
 SUB_FILES=	pkg-message

@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: math/py-bitvector/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/py-bitvector/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bitvector
 PORTVERSION=	3.1

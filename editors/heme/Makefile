@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: editors/heme/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/heme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	heme
 PORTVERSION=	0.4.2
@@ -12,21 +12,16 @@ COMMENT=	Small and fast console hex editor for Unix-like systems
 LICENSE=	GPLv2
 
 ALL_TARGET=	${PORTNAME}
-MAKE_ARGS=	CFLAGS="${CFLAGS} -Wall -DHAVE_MMAP" INSTALL_PREFIX="${PREFIX}"
+MAKE_ARGS=	CFLAGS="${CFLAGS} -Wall -DHAVE_MMAP" \
+		INSTALL_PREFIX="${STAGEDIR}${PREFIX}"
 
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

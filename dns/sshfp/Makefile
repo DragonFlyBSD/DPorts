@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/sshfp/Makefile 333681 2013-11-13 13:02:56Z ehaupt $
+# $FreeBSD: dns/sshfp/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	sshfp
 PORTVERSION=	1.2.2
@@ -16,7 +16,7 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dns/__init__.py:${PORTSDIR}/dns/py-dnspython 
 		${PYTHON_SITELIBDIR}/ldns.py:${PORTSDIR}/dns/py-ldns
 
 NO_BUILD=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	xelerance
 GH_TAGNAME=	${PORTVERSION}

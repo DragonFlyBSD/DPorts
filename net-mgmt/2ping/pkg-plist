@@ -1,3 +1,4 @@
-@comment $FreeBSD: net-mgmt/2ping/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/2ping
 bin/2ping6
+man/man8/2ping.8.gz
+man/man8/2ping6.8.gz

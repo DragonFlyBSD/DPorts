@@ -1,5 +1,5 @@
 # Created by: Martin Horcicka <martin@horcicka.eu>
-# $FreeBSD: devel/py-lock_file/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-lock_file/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lock_file
 PORTVERSION=	2.0
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	martin@horcicka.eu
 COMMENT=	Lock file manipulation
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes

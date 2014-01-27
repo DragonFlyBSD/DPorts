@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Apache-DB/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD: www/p5-Apache-DB/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Apache-DB
 PORTVERSION=	0.14

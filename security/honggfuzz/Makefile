@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: security/honggfuzz/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: security/honggfuzz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	honggfuzz
 PORTVERSION=	0.3

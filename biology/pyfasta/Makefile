@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/pyfasta/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: biology/pyfasta/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyfasta
 PORTVERSION=	0.5.1
@@ -13,7 +13,7 @@ COMMENT=	Fast, memory-efficient, pythonic access to fasta sequence files
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes

@@ -1,5 +1,5 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: mail/rblcheck/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/rblcheck/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rblcheck
 PORTVERSION=	1.5

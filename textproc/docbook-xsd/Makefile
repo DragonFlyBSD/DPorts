@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/docbook-xsd/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook-xsd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook-xsd
 PORTVERSION=	1.0.b1

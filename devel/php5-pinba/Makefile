@@ -1,5 +1,5 @@
 # Created by: raven428 <raven428@gmail.com>
-# $FreeBSD: devel/php5-pinba/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: devel/php5-pinba/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pinba
 PORTVERSION=	2012.03.20

@@ -1,5 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: devel/pecl-libevent/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-libevent/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	libevent
 PORTVERSION=	0.0.5
@@ -22,5 +22,4 @@ USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	libevent
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

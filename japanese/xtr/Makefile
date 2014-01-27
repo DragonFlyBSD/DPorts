@@ -1,5 +1,5 @@
 # Created by: TANAKA Hiroyuki <kattyo@abk.nu>
-# $FreeBSD: japanese/xtr/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/xtr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtr
 PORTVERSION=	1.50e.0.2

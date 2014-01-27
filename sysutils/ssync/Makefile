@@ -1,5 +1,5 @@
 # Created by: Andrew Shevtsov <nyxo@dnuc.polyn.kiae.su>
-# $FreeBSD: sysutils/ssync/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ssync/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ssync
 PORTVERSION=	2.3

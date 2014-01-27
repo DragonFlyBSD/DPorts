@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Migration/Makefile 332347 2013-11-01 10:17:58Z kuriyama $
+# $FreeBSD: databases/p5-DBIx-Class-Migration/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	DBIx-Class-Migration
 PORTVERSION=	0.044

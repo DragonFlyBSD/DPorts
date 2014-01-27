@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libpff/Makefile 329091 2013-10-02 18:25:44Z antoine $
+# $FreeBSD: devel/libpff/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	libpff
 DISTVERSION=	alpha-20120802
@@ -15,7 +15,7 @@ LICENSE=	LGPL3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python --with-libintl-prefix=${LOCALBASE} ${ICONV_CONFIGURE_ARG}
 USES=		gettext iconv pathfix
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_LDCONFIG=	yes
 # Remove when configure gets LDFLAGS for python correctly
 LDFLAGS+=	-L${LOCALBASE}/lib

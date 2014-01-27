@@ -1,4 +1,3 @@
-@comment $FreeBSD: dns/zonecheck/pkg-plist 333571 2013-11-12 13:32:54Z mat $
 bin/zonecheck
 etc/zonecheck-dist/de.profile
 etc/zonecheck-dist/default.profile

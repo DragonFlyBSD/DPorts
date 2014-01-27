@@ -1,5 +1,5 @@
 # Created by: issei
-# $FreeBSD: japanese/ctags/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/ctags/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ctags
 PORTVERSION=	5.8j2

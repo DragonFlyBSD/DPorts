@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-CSS-Compressor/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-CSS-Compressor/Makefile 340601 2014-01-21 11:52:07Z mat $
 
 PORTNAME=	CSS-Compressor
 PORTVERSION=	0.02
@@ -14,10 +14,7 @@ COMMENT=	Perl extension for CSS minification
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/csscompressor ${PREFIX}/bin
-
-MAN3=		CSS::Compressor.3
+	${INSTALL_SCRIPT} ${FILESDIR}/csscompressor ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

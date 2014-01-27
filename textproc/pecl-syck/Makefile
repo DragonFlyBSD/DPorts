@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: textproc/pecl-syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-syck/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	syck
 PORTVERSION=	0.9.3
@@ -21,5 +21,4 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-syck
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

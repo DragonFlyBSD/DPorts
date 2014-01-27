@@ -1,5 +1,5 @@
 # Created by: Joachim Strombergson <watchman@ludd.ltu.se>
-# $FreeBSD: converters/shftool/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD: converters/shftool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shftool
 PORTVERSION=	1.2.0

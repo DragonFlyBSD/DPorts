@@ -1,8 +1,9 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: www/uwsgitop/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/uwsgitop/Makefile 340825 2014-01-23 12:32:36Z demon $
 
 PORTNAME=	uwsgitop
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=source/u/${PORTNAME}

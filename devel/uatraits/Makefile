@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/uatraits/Makefile 336253 2013-12-12 10:53:38Z bapt $
+# $FreeBSD: devel/uatraits/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uatraits
 PORTVERSION=	20130430

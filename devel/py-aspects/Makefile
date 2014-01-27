@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/py-aspects/Makefile 335159 2013-11-29 10:16:51Z sbz $
+# $FreeBSD: devel/py-aspects/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aspects
 PORTVERSION=	1.3
@@ -15,7 +15,7 @@ COMMENT=	Lightweight aspect oriented programming library for Python
 LICENSE=	LGPL21
 
 USES=	gmake
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-${PORTNAME}
 

@@ -1,5 +1,5 @@
 
-$FreeBSD: mail/pop3proxy/files/patch-src_imapcommon.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: mail/pop3proxy/files/patch-src_imapcommon.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/imapcommon.c.orig
 +++ src/imapcommon.c

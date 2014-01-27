@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/checkpassword-pam/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/checkpassword-pam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	checkpassword-pam
 PORTVERSION=	0.99

@@ -1,5 +1,5 @@
 # Created by: Rashid N. Achilov <shelton@granch.ru>
-# $FreeBSD: sysutils/mountsmb2/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/mountsmb2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mountsmb2
 PORTVERSION=	0.90.2

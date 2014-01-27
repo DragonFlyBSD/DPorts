@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-HsOpenSSL/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: security/hs-HsOpenSSL/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	HsOpenSSL
 PORTVERSION=	0.10.3.3

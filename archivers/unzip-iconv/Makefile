@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro <koma2@lovepeers.org>
-# $FreeBSD: archivers/unzip-iconv/Makefile 337554 2013-12-26 16:50:13Z bapt $
+# $FreeBSD: archivers/unzip-iconv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-iconv
 

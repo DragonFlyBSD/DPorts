@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: sysutils/etcmerge/Makefile 333275 2013-11-09 05:55:32Z vanilla $
+# $FreeBSD: sysutils/etcmerge/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	etcmerge
 PORTVERSION=	0.4

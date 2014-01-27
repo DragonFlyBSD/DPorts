@@ -1,5 +1,5 @@
 # Created by: Emil Smolenski <am@raisa.eu.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery/Makefile 339734 2014-01-15 02:41:00Z tabthorpe $
 
 PORTNAME=	FusionInventory-Agent-Task-SNMPQuery
 PORTVERSION=	1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FUSINV
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	am@raisa.eu.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SNMP support for FusionInventory Agent
 
 LICENSE=	GPLv2

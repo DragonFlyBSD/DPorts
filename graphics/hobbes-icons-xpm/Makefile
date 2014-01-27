@@ -1,5 +1,5 @@
 # Created by: pgs
-# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 332211 2013-10-31 07:54:27Z bapt $
+# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hobbes-icons-xpm3
 PORTVERSION=	1.0

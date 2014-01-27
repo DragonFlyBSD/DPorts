@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-TeX-Hyphen/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-TeX-Hyphen/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	TeX-Hyphen
 PORTVERSION=	1.01
@@ -12,7 +12,4 @@ COMMENT=	Hyphenate words using TeX's patterns
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		TeX::Hyphen.3 TeX::Hyphen::czech.3 TeX::Hyphen::german.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

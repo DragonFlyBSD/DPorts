@@ -1,5 +1,5 @@
 # Created by: liamfoy@sepulcrum.org
-# $FreeBSD: mail/qsf/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/qsf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qsf
 PORTVERSION=	1.2.7

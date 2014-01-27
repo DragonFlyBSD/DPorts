@@ -1,5 +1,5 @@
 # Created by: wosch
-# $FreeBSD: german/dict/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/dict/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dict
 PORTVERSION=	1.2

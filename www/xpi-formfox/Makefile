@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-formfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-formfox/Makefile 341205 2014-01-26 15:09:46Z miwi $
 
 PORTNAME=	formfox
 PORTVERSION=	1.7
@@ -12,6 +12,5 @@ COMMENT=	An extension to display form's action
 XPI_NUM=	1579
 XPI_ID=		formfox@daniel.steinbrook
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/py-pudb/Makefile 335404 2013-12-01 16:34:48Z wg $
+# $FreeBSD: devel/py-pudb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pudb
 PORTVERSION=	2013.3.5

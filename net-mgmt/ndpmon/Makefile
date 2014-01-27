@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/ndpmon/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/ndpmon/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ndpmon
 PORTVERSION=	1.4.0
@@ -25,7 +25,7 @@ NO_STAGE=	yes
 
 .if ${PORT_OPTIONS:MPY4SUITE}
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/Ft/Xml/Domlette.py:${PORTSDIR}/textproc/py-4suite-xml
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 PLIST_SUB+=	PY=""
 .else
 PLIST_SUB+=	PY="@comment "

@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-ServerStatus-Lite/Makefile 332722 2013-11-04 14:12:29Z kuriyama $
+# $FreeBSD: www/p5-Plack-Middleware-ServerStatus-Lite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Plack-Middleware-ServerStatus-Lite
 PORTVERSION=	0.33

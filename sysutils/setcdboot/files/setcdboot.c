@@ -28,7 +28,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: sysutils/setcdboot/files/setcdboot.c 300897 2012-07-14 14:29:18Z beat $
+ * $FreeBSD: sysutils/setcdboot/files/setcdboot.c 340872 2014-01-24 00:14:07Z mat $
  */
 
 /*

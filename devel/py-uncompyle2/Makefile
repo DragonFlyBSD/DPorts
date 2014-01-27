@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: devel/py-uncompyle2/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: devel/py-uncompyle2/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	uncompyle2
 PORTVERSION=	1.1
@@ -12,7 +12,7 @@ MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Decompiler for Python's .pyc and .pyo files
 
 HASH	=	3956a5a
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 REINPLACE_ARGS=	-i ""
 

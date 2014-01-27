@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-pp/Makefile 327868 2013-09-22 11:07:22Z lwhsu $
+# $FreeBSD: devel/py-pp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pp
 PORTVERSION=	1.6.4
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Parallel python execution server
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes

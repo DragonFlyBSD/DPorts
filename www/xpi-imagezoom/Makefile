@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: www/xpi-imagezoom/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-imagezoom/Makefile 341207 2014-01-26 15:10:29Z miwi $
 
 PORTNAME=	imagezoom
 PORTVERSION=	0.3.1
@@ -16,7 +16,6 @@ XPI_FILES=	chrome/imagezoom.jar defaults/preferences/imagezoom-defaults.js \
 		gpl.txt chrome.manifest install.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/maxVersion/s|3.0b4|3.0.\*|' ${WRKSRC}/install.rdf
 	@${RM} -f ${WRKSRC}/install.rdf.bak

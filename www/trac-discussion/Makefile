@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-discussion/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/trac-discussion/Makefile 341183 2014-01-26 14:31:44Z miwi $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.7
@@ -14,9 +14,8 @@ COMMENT=	Discussion forum plugin for Trac
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		trac-TracSpamFilter>=0.2.1:${PORTSDIR}/www/trac-spam-filter
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
-NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	TracDiscussion
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 

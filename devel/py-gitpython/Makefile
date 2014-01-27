@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-gitpython/Makefile 337060 2013-12-20 18:21:40Z wg $
+# $FreeBSD: devel/py-gitpython/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	GitPython
 PORTVERSION=	0.3.1

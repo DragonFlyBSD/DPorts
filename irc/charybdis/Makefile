@@ -1,4 +1,4 @@
-# $FreeBSD: irc/charybdis/Makefile 338013 2013-12-29 15:46:13Z crees $
+# $FreeBSD: irc/charybdis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	charybdis
 PORTVERSION=	3.4.2

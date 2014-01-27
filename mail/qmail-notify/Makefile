@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: mail/qmail-notify/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/qmail-notify/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qmail-notify
 PORTVERSION=	0.93

@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: misc/cwish/Makefile 335981 2013-12-09 13:24:51Z danilo $
+# $FreeBSD: misc/cwish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cwish
 PORTVERSION=	3.52

@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-geojson/Makefile 335259 2013-11-30 02:27:05Z wen $
+# $FreeBSD: devel/py-geojson/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	geojson
 PORTVERSION=	1.0.5
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>1.9:${PORTSDIR}/devel/py-simplejs
 
 DOCSFILE=	LICENSE.rst CHANGELOG.rst README.rst
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 

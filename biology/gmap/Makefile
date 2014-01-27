@@ -1,5 +1,5 @@
 # Created by: Bob Zimmermann <rpz@cse.wustl.edu>
-# $FreeBSD: biology/gmap/Makefile 336070 2013-12-10 17:21:46Z bapt $
+# $FreeBSD: biology/gmap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gmap
 PORTVERSION=	2006.04.21

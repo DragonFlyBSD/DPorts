@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: sysutils/tentakel/Makefile 333992 2013-11-16 13:25:19Z vanilla $
+# $FreeBSD: sysutils/tentakel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tentakel
 PORTVERSION=	2.2

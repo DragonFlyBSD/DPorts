@@ -1,5 +1,5 @@
 # Created by: cy@FreeBSD.org
-# $FreeBSD: security/krb5-appl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/krb5-appl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		krb5-appl
 PORTVERSION=		1.0.3

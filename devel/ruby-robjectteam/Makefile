@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-robjectteam/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-robjectteam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	robjectteam
 PORTVERSION=	1.0

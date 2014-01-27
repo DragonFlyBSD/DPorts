@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: devel/ossp-val/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/ossp-val/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	val
 PORTVERSION=	0.9.4

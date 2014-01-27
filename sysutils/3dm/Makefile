@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org>
-# $FreeBSD: sysutils/3dm/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/3dm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	3dm
 PORTVERSION=	2.11.00.019

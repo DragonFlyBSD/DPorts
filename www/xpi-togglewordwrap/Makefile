@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-togglewordwrap/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-togglewordwrap/Makefile 341218 2014-01-26 15:14:03Z miwi $
 
 PORTNAME=	togglewordwrap
 PORTVERSION=	1.8
@@ -13,6 +13,5 @@ XPI_DISTNAME=	toggle_word_wrap
 XPI_NUM=	2351
 XPI_ID=		{cafe3945-058e-47e3-87f8-75bc120b9638}
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

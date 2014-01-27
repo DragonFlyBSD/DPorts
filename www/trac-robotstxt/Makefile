@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/trac-robotstxt/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-robotstxt/Makefile 341186 2014-01-26 14:32:32Z miwi $
 
 PORTNAME=	robotxt
 PORTVERSION=	1.0.1
@@ -14,10 +14,9 @@ COMMENT=	Allows simple management of a robots.txt
 
 RUN_DEPENDS=	tracd:${PORTSDIR}/www/trac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracRobotsTxt
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

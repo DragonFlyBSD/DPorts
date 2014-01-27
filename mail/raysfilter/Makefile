@@ -1,4 +1,4 @@
-# $FreeBSD: mail/raysfilter/Makefile 331810 2013-10-27 22:29:46Z dinoex $
+# $FreeBSD: mail/raysfilter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	raysfilter
 PORTVERSION=	1.14

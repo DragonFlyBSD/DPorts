@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Text-Hatena/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Text-Hatena/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-Hatena
 PORTVERSION=	0.20

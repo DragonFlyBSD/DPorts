@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: security/ddos_scan/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ddos_scan/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ddos_scan
 PORTVERSION=	1.6

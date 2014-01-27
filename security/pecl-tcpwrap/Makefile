@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: security/pecl-tcpwrap/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pecl-tcpwrap/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	tcpwrap
 PORTVERSION=	1.1.3
@@ -17,7 +17,6 @@ USE_PHPEXT=	yes
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's, -ldl,,' ${WRKSRC}/config.m4
 

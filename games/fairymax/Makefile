@@ -1,5 +1,5 @@
 # Created by: Kalten <kalten@gmx.at>
-# $FreeBSD: games/fairymax/Makefile 334265 2013-11-18 21:52:24Z danilo $
+# $FreeBSD: games/fairymax/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fairymax
 PORTVERSION=	4.8S.6

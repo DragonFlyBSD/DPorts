@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/exabgp/pkg-plist 336900 2013-12-19 13:27:24Z zi $
 etc/exabgp/exabgp.env
 sbin/exabgp
 %%PYTHON_SITELIBDIR%%/exabgp/__init__.py

@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: mail/qmail-mysql/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: mail/qmail-mysql/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qmail
 PORTVERSION=	${QMAIL_VERSION}.${MYSQL_PATCH_VERSION}

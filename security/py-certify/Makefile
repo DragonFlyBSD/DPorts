@@ -1,17 +1,19 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: security/py-certify/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-certify/Makefile 340891 2014-01-24 12:23:42Z olivierd $
 
 PORTNAME=	certifi
-PORTVERSION=	0.0.8
+PORTVERSION=	1.0.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	duchateau.olivier@gmail.com
+MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Mozilla's SSL certificates
 
-USE_PYTHON=	2.6+
-USE_PYDISTUTILS=	yes
+LICENSE=	ISCL
 
-NO_STAGE=	yes
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 
-$FreeBSD: net/ortp/files/patch-src::stun.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net/ortp/files/patch-src::stun.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/stun.c
 +++ src/stun.c

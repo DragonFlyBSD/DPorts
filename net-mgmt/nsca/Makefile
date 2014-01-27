@@ -1,5 +1,5 @@
 # Created by: Paul Dlug <paul@nerdlabs.com>
-# $FreeBSD: net-mgmt/nsca/Makefile 332229 2013-10-31 11:39:05Z bapt $
+# $FreeBSD: net-mgmt/nsca/Makefile 340263 2014-01-19 11:35:27Z mm $
 
 PORTNAME=	nsca
 PORTVERSION=	2.9.1
@@ -49,22 +49,21 @@ PLIST_SUB+=	CLIENT="@comment "
 
 DOCS=		Changelog LEGAL README SECURITY
 
-NO_STAGE=	yes
 do-install:
 .if defined(_BUILDING_NSCA_CLIENT)
-	${INSTALL_PROGRAM} ${WRKSRC}/src/send_nsca ${PREFIX}/sbin/send_nsca
-	${MKDIR} ${PREFIX}/etc/nagios
-	${INSTALL_DATA} ${WRKSRC}/sample-config/send_nsca.cfg ${PREFIX}/etc/nagios/send_nsca.cfg-sample
+	${INSTALL_PROGRAM} ${WRKSRC}/src/send_nsca ${STAGEDIR}${PREFIX}/sbin/send_nsca
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nagios
+	${INSTALL_DATA} ${WRKSRC}/sample-config/send_nsca.cfg ${STAGEDIR}${PREFIX}/etc/nagios/send_nsca.cfg-sample
 .else
-	${INSTALL_PROGRAM} ${WRKSRC}/src/nsca ${PREFIX}/sbin/nsca
-	${MKDIR} ${PREFIX}/etc/nagios
-	${INSTALL_DATA} ${WRKSRC}/sample-config/nsca.cfg ${PREFIX}/etc/nagios/nsca.cfg-sample
+	${INSTALL_PROGRAM} ${WRKSRC}/src/nsca ${STAGEDIR}${PREFIX}/sbin/nsca
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/nagios
+	${INSTALL_DATA} ${WRKSRC}/sample-config/nsca.cfg ${STAGEDIR}${PREFIX}/etc/nagios/nsca.cfg-sample
 .endif
 
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 	@${CAT} ${PKGMESSAGE}
 

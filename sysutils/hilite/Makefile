@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/hilite/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/hilite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hilite
 PORTVERSION=	1.5

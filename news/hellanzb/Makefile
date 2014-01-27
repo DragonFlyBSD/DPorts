@@ -1,5 +1,5 @@
 # Created by: Philip Jenvey <pjenvey@groovie.org>
-# $FreeBSD: news/hellanzb/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: news/hellanzb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hellanzb
 PORTVERSION=	0.13
@@ -18,7 +18,7 @@ RUN_DEPENDS=	par2:${PORTSDIR}/archivers/par2cmdline \
 		${PYTHON_PKGNAMEPREFIX}yenc>=0:${PORTSDIR}/news/py-yenc \
 		mac:${PORTSDIR}/audio/mac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 USES=		twisted:run,web
 PORTDOCS=	CHANGELOG CREDITS README

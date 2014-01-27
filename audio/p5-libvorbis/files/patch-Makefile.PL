@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/p5-libvorbis/files/patch-Makefile.PL 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/p5-libvorbis/files/patch-Makefile.PL 340725 2014-01-22 17:40:44Z mat $
 
 --- Makefile.PL.orig	Mon Oct 23 08:53:08 2000
 +++ Makefile.PL	Wed Jul 31 16:09:47 2002

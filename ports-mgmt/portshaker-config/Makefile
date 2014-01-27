@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: ports-mgmt/portshaker-config/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/portshaker-config/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	portshaker-config
 CATEGORIES=	ports-mgmt

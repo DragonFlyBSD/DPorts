@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/libdc1394/Makefile 328051 2013-09-23 21:04:56Z bapt $
+# $FreeBSD: multimedia/libdc1394/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libdc1394
 PORTVERSION=	2.2.1

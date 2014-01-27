@@ -1,5 +1,5 @@
 # Created by: Andreev Maxim <andreevmaxim@gmail.com>
-# $FreeBSD: devel/qconf/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/qconf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qconf
 PORTVERSION=	1.4

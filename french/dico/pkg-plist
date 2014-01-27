@@ -1,4 +1,3 @@
-@comment $FreeBSD: french/dico/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/dico
 %%DATADIR%%/a.dic
 %%DATADIR%%/b.dic

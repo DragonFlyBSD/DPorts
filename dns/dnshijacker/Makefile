@@ -1,5 +1,5 @@
 # Created by: lx@redundancy.redundancy.org
-# $FreeBSD: dns/dnshijacker/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dnshijacker/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dnshijacker
 PORTVERSION=	1.3

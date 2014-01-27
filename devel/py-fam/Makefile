@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-fam/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD: devel/py-fam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fam
 PORTVERSION=	1.1.1

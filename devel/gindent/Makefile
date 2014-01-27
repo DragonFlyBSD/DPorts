@@ -1,5 +1,5 @@
 # Created by: Kapil Chowksey <kchowksey@hss.hns.com>
-# $FreeBSD: devel/gindent/Makefile 332669 2013-11-04 07:30:34Z johans $
+# $FreeBSD: devel/gindent/Makefile 339878 2014-01-16 00:01:37Z bapt $
 
 PORTNAME=	gindent
 PORTVERSION=	2.2.10
@@ -12,34 +12,26 @@ DISTNAME=	indent-${PORTVERSION}
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	GNU indent
 
+OPTIONS_DEFINE=	DOCS NLS
+
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DBERKELEY_DEFAULTS=1
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--program-prefix=g
 MAKE_JOBS_UNSAFE=	yes
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=	gettext
+OPTIONS_SUB=	yes
+NLS_CONFIGURE_OFF=	--disable-nls
 
 INFO=		indent
-
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${GREP} -lR "malloc\.h" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|g'
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/indent.html ${STAGEDIR}${DOCSDIR}
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Dmitri Nikulin <setagllib@optusnet.com.au>
-# $FreeBSD: sysutils/stress/Makefile 339280 2014-01-09 21:13:33Z skreuzer $
+# $FreeBSD: sysutils/stress/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stress
 PORTVERSION=	1.0.4

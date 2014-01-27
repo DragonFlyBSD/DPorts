@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: archivers/xpk/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: archivers/xpk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpk
 PORTVERSION=	0.1.4

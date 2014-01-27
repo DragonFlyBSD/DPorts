@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: editors/beav/Makefile 337830 2013-12-28 04:28:50Z marino $
+# $FreeBSD: editors/beav/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	beav
 PORTVERSION=	1.40.18

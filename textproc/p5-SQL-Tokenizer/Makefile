@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: textproc/p5-SQL-Tokenizer/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-SQL-Tokenizer/Makefile 340672 2014-01-21 23:21:10Z mat $
 
 PORTNAME=	SQL-Tokenizer
 PORTVERSION=	0.24
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:IZUT
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Simple regular expressions based SQL tokenizer
 
 LICENSE=	ART10 GPLv1
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SQL::Tokenizer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

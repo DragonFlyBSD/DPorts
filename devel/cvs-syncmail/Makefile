@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/cvs-syncmail/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/cvs-syncmail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cvs-syncmail
 PORTVERSION=	2.1
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/cvsnt:${PORTSDIR}/devel/cvsnt
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-USE_PYTHON=	2.0+
+USE_PYTHON=	yes
 
 PLIST_FILES=	bin/${DISTNAME}
 

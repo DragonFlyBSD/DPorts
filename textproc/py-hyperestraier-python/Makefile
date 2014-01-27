@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: textproc/py-hyperestraier-python/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-hyperestraier-python/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hyperestraier
 PORTVERSION=	0.10.10

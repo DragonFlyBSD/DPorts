@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/lha-ac/Makefile 336225 2013-12-11 21:52:30Z dinoex $
+# $FreeBSD: archivers/lha-ac/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lha
 PORTVERSION=	1.14i

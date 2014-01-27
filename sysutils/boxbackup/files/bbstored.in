@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/boxbackup/files/bbstored.in 312808 2013-02-23 12:30:08Z crees $
+# $FreeBSD: sysutils/boxbackup/files/bbstored.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: bbstored
 # REQUIRE: NETWORKING

@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-double-conversion/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: textproc/hs-double-conversion/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	double-conversion
 PORTVERSION=	0.2.0.6

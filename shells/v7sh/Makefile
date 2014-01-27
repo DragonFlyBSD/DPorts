@@ -1,5 +1,5 @@
 # Created by: Cyrille.Lefevre@laposte.net
-# $FreeBSD: shells/v7sh/Makefile 337660 2013-12-27 09:20:54Z bapt $
+# $FreeBSD: shells/v7sh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	v7sh
 PORTVERSION=	1.0

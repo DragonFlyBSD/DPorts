@@ -1,5 +1,5 @@
 # Created by: clive@FreeBSD.org
-# $FreeBSD: databases/p5-DBD-ODBC/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD: databases/p5-DBD-ODBC/Makefile 339866 2014-01-15 23:42:56Z bapt $
 
 PORTNAME=	DBD-ODBC
 PORTVERSION=	1.45
@@ -45,8 +45,6 @@ MYODBC=		iodbc
 MYODBC=		unixodbc
 .endif
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e '/my $$myodbc/ s|q{}|"${MYODBC}"|' ${WRKSRC}/Makefile.PL
 
@@ -64,4 +62,4 @@ post-install:
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

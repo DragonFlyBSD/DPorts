@@ -1,8 +1,8 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/phpvirtualbox/Makefile 331239 2013-10-22 08:21:15Z decke $
+# $FreeBSD: www/phpvirtualbox/Makefile 340841 2014-01-23 17:19:17Z decke $
 
 PORTNAME=	phpvirtualbox
-DISTVERSION=	4.2-8
+DISTVERSION=	4.3-1
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME} \
 		LOCAL/decke
@@ -17,8 +17,6 @@ USE_PHP=	json session soap simplexml
 NO_BUILD=	yes
 USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(php|txt|js|css|html)
-NO_WRKSUBDIR=	yes
-STAGEDIR=	${WRKDIR}/.stage
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${WWWDIR}

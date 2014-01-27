@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: graphics/pngrewrite/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: graphics/pngrewrite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pngrewrite
 PORTVERSION=	1.4.0

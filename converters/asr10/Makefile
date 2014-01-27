@@ -1,5 +1,5 @@
 # Created by: M.Indlekofer@gmx.de
-# $FreeBSD: converters/asr10/Makefile 339222 2014-01-09 13:11:30Z bapt $
+# $FreeBSD: converters/asr10/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=      asr10
 PORTVERSION=   1.0

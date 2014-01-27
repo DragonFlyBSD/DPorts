@@ -1,5 +1,5 @@
 # Created by: Marc E.E. van Woerkom <marc.vanwoerkom@fernuni-hagen.de>
-# $FreeBSD: devel/smv/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/smv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	smv
 PORTVERSION=	2.5.4.3

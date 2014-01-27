@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Devel-TraceSAX/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Devel-TraceSAX/Makefile 340601 2014-01-21 11:52:07Z mat $
 
 PORTNAME=	Devel-TraceSAX
 PORTVERSION=	0.021
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::TraceSAX.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

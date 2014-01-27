@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/librelp/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/librelp/Makefile 340532 2014-01-21 00:53:23Z bapt $
 
 PORTNAME=	librelp
 PORTVERSION=	1.2.0
@@ -22,7 +22,6 @@ PLIST_FILES=	include/${PORTNAME}.h \
 
 PORT_VERBS=	relp
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/CFLAGS/s| -g||g' \
 		${WRKSRC}/configure

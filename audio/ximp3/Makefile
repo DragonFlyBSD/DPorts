@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/ximp3/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD: audio/ximp3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ximp3
 PORTVERSION=	0.1.15

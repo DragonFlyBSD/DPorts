@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/py-json-py/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/json.py
 %%PYTHON_SITELIBDIR%%/json.pyc
 %%PYTHON_SITELIBDIR%%/jsontest.py

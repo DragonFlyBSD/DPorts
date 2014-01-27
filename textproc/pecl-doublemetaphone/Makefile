@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: textproc/pecl-doublemetaphone/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-doublemetaphone/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	doublemetaphone
 PORTVERSION=	1.0.0
@@ -18,5 +18,4 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-doublemetaphone
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: net/tcpmssd/src/tcpmssd.c 300897 2012-07-14 14:29:18Z beat $
+ * $FreeBSD: net/tcpmssd/src/tcpmssd.c 340872 2014-01-24 00:14:07Z mat $
  */
 
 #include <sys/param.h>

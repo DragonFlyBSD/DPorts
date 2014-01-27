@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/weedit/Makefile 336825 2013-12-18 11:59:54Z ehaupt $
+# $FreeBSD: sysutils/weedit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	weedit
 PORTVERSION=	2.0.3

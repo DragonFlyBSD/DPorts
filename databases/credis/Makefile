@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: databases/credis/Makefile 339278 2014-01-09 21:09:02Z skreuzer $
+# $FreeBSD: databases/credis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	credis
 PORTVERSION=	0.2.3

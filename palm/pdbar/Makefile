@@ -1,5 +1,5 @@
 # Created by: Eric P. Scott <eps+pdbar@ana.com>
-# $FreeBSD: palm/pdbar/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD: palm/pdbar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pdbar
 PORTVERSION=	00.05.01

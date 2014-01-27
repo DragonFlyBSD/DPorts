@@ -1,5 +1,5 @@
 # Created by: Phil Maker <pjm@gnu.org>
-# $FreeBSD: devel/nana/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: devel/nana/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nana
 PORTVERSION=	2.5

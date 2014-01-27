@@ -1,5 +1,5 @@
 # Created by: Ralf Becker <ralf@akk.org>
-# $FreeBSD: games/moon-buggy/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: games/moon-buggy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	moon-buggy
 PORTVERSION=	1.0.51

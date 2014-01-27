@@ -1,5 +1,5 @@
 # Created by: bkhl
-# $FreeBSD: dns/sheerdns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/sheerdns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sheerdns
 PORTVERSION=	1.0.3

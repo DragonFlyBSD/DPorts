@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: www/shellinabox/files/shellinaboxd.in 307542 2012-11-18 16:33:31Z hrs $
+# $FreeBSD: www/shellinabox/files/shellinaboxd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # Shell in a Box Daemon startup script
 #

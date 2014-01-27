@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: sysutils/npadmin/Makefile 333882 2013-11-15 16:05:56Z vanilla $
+# $FreeBSD: sysutils/npadmin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	npadmin
 PORTVERSION=	0.8.7

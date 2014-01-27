@@ -1,5 +1,5 @@
 # Created by: Hannes Frederic Sowa <hannes@stressinduktion.org>
-# $FreeBSD: www/xpi-scrapbook/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-scrapbook/Makefile 341214 2014-01-26 15:13:02Z miwi $
 
 PORTNAME=	scrapbook
 PORTVERSION=	1.2.0.8
@@ -14,6 +14,5 @@ XPI_NUM=	427
 XPI_FILES=	LICENSE.txt chrome/scrapbook.jar chrome.manifest defaults/preferences/scrapbook-prefs.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

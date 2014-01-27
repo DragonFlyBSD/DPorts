@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: devel/py-pqueue/Makefile 337711 2013-12-27 11:41:17Z wg $
+# $FreeBSD: devel/py-pqueue/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pqueue
 PORTVERSION=	0.2

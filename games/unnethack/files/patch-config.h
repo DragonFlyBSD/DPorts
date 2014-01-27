@@ -1,4 +1,4 @@
-$FreeBSD: games/unnethack/files/patch-config.h 302674 2012-08-17 10:20:48Z knu $
+$FreeBSD: games/unnethack/files/patch-config.h 340725 2014-01-22 17:40:44Z mat $
 
 --- include/config.h.orig	2012-04-01 23:34:10.000000000 +0900
 +++ include/config.h	2012-08-17 16:37:54.135991792 +0900

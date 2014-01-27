@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Flowchart/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Flowchart/Makefile 340908 2014-01-24 14:59:10Z mat $
 
 PORTNAME=	Text-Flowchart
 PORTVERSION=	1.00
@@ -13,7 +13,4 @@ COMMENT=	ASCII Flowchart maker
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Flowchart.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

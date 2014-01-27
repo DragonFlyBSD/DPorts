@@ -1,5 +1,5 @@
 # Created by: mich@FreeBSD.org
-# $FreeBSD: devel/svndelta/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/svndelta/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	svndelta
 PORTVERSION=	1.0.6

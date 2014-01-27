@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: misc/libeatmydata/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/libeatmydata/Makefile 340041 2014-01-17 14:10:15Z miwi $
 
 PORTNAME=	libeatmydata
 PORTVERSION=	9
@@ -18,6 +18,9 @@ PLIST_FILES=	lib/libeatmydata.so \
 		lib/libeatmydata.so.1.0
 
 NO_STAGE=	yes
+post-patch:
+	${SED} -i '' -e 's/gcc/${CC}/' ${WRKSRC}/Makefile
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libeatmydata.so.1.0 ${PREFIX}/lib
 

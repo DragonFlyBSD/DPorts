@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-hghooks/Makefile 333289 2013-11-09 13:24:05Z wg $
+# $FreeBSD: devel/py-hghooks/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hghooks
 PORTVERSION=	0.6.0
@@ -12,7 +12,7 @@ COMMENT=	Set of Mercurial hooks
 
 LICENSE=	LGPL3
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 

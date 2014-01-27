@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<gerrit.beine@gmx.de>)
-# $FreeBSD: devel/pear-PhpDocumentor/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-PhpDocumentor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PhpDocumentor
 PORTVERSION=	1.4.4

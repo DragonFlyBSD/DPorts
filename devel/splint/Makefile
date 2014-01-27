@@ -1,5 +1,5 @@
 # Created by: moeding
-# $FreeBSD: devel/splint/Makefile 334393 2013-11-20 07:30:53Z lwhsu $
+# $FreeBSD: devel/splint/Makefile 340962 2014-01-25 00:23:18Z bapt $
 
 PORTNAME=	splint
 PORTVERSION=	3.1.2
@@ -10,11 +10,9 @@ EXTRACT_SUFX=	.src.tgz
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Tool for statically checking sourcecode for security vulnerabilities
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
-
-MAN1=		splint.1
 
 post-patch:
 	@${REINPLACE_CMD} -e \

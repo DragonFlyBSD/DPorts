@@ -1,5 +1,5 @@
 # Created by: Amarendra Godbole <amarendra.godbole@gmail.com>
-# $FreeBSD: math/wcalc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/wcalc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wcalc
 PORTVERSION=	2.4

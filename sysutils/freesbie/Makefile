@@ -1,5 +1,5 @@
 # Created by: Thomas E. Zander <riggs@rrr.de>
-# $FreeBSD: sysutils/freesbie/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/freesbie/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freesbie
 PORTVERSION=	2.0.20070710

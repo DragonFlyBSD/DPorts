@@ -1,5 +1,5 @@
 # Created by: kline
-# $FreeBSD: print/enscriptfonts/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: print/enscriptfonts/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	enscriptfonts
 PORTVERSION=	0.81

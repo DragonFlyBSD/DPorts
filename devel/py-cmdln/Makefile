@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-cmdln/Makefile 337056 2013-12-20 18:12:33Z wg $
+# $FreeBSD: devel/py-cmdln/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cmdln
 PORTVERSION=	1.1.2

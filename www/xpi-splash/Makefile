@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/xpi-splash/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-splash/Makefile 341217 2014-01-26 15:13:43Z miwi $
 
 PORTNAME=	splash
 PORTVERSION=	2.0.2
@@ -16,6 +16,5 @@ XPI_FILES=	chrome/splash.jar components/.autoreg components/splash.js \
 		defaults/preferences/splash.js chrome.manifest install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

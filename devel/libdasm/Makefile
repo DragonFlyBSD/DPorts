@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libdasm/Makefile 337217 2013-12-22 20:35:21Z antoine $
+# $FreeBSD: devel/libdasm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libdasm
 PORTVERSION=	1.5

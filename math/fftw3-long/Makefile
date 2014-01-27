@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: math/fftw3-long/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/fftw3-long/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports-experimental/math/fftw3-long/Makefile,v 1.1 2006/03/28 00:08:58 ahze Exp $
 
 COMMENT=	Fast Discrete Fourier Transform (Long Double Precision C Routines)

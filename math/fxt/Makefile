@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/fxt/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/fxt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fxt
 PORTVERSION=	2012.06.18

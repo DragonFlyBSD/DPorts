@@ -1,5 +1,5 @@
 # Created by: uminac
-# $FreeBSD: benchmarks/cpipe/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/cpipe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cpipe
 PORTVERSION=	3.0.2

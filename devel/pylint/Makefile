@@ -1,8 +1,8 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/pylint/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pylint/Makefile 339383 2014-01-10 20:38:05Z mva $
 
 PORTNAME=	pylint
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	LOGILAB
 PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
@@ -14,14 +14,11 @@ LICENSE=	LGPL21
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astroid>=1.0.0:${PORTSDIR}/devel/py-astroid
 
-MAKE_ENV=	NO_SETUPTOOLS=1
-USE_PYTHON=	yes
-USE_PYDISTUTILS=yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
 
 OPTIONS_DEFINE=	GUI
-OPTIONS_DEFAULTS=
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI}

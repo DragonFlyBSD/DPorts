@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: devel/py-json-py/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-json-py/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	json-py
 PORTVERSION=	3.4
@@ -15,7 +15,7 @@ COMMENT=	A python implementation of a JSON (http//:json.org) reader/writer
 
 NO_WRKSUBDIR=	yes
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_ZIP=	yes
 
 NO_STAGE=	yes

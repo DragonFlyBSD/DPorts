@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: net-p2p/opennap/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/opennap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	opennap
 PORTVERSION=	0.44

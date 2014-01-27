@@ -1,5 +1,5 @@
 # Created by: schmidtcarl@earthlink.net
-# $FreeBSD: deskutils/ljcharm/Makefile 338645 2014-01-04 13:14:13Z antoine $
+# $FreeBSD: deskutils/ljcharm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	charm
 PORTVERSION=	1.9.2

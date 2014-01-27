@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/rubygem-scruffy/Makefile 334997 2013-11-27 05:58:14Z dinoex $
+# $FreeBSD: graphics/rubygem-scruffy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scruffy
 PORTVERSION=	0.2.6

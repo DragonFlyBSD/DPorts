@@ -1,5 +1,5 @@
 # Created by: mich@freebsdcluster.org
-# $FreeBSD: sysutils/wtail/Makefile 337785 2013-12-27 19:20:21Z bapt $
+# $FreeBSD: sysutils/wtail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wtail
 PORTVERSION=	0.2.2

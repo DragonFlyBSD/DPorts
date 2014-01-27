@@ -1,5 +1,5 @@
 # Created by: David Holm <david@realityrift.com>
-# $FreeBSD: devel/sgl/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sgl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sgl
 PORTVERSION=	2.0a3

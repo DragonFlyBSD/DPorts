@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/2ping/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/2ping/Makefile 341118 2014-01-25 21:58:31Z bapt $
 
 PORTNAME=	2ping
 PORTVERSION=	2.0
@@ -6,7 +6,7 @@ CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	http://www.finnie.org/software/2ping/
 
 MAINTAINER=	gslin@gslin.org
-COMMENT=	A bi-directional ping utility
+COMMENT=	Bi-directional ping utility
 
 LICENSE=	GPLv2
 
@@ -15,10 +15,7 @@ RUN_DEPENDS=	p5-Digest-CRC>=0:${PORTSDIR}/security/p5-Digest-CRC \
 		p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
 		p5-IO-Socket-INET6>=0:${PORTSDIR}/net/p5-IO-Socket-INET6
 
-USE_GMAKE=	yes
-USES=		perl5
+USES=		gmake perl5 shebangfix
+SHEBANG_FILES=	src/2ping.pl
 
-MAN8=		2ping.8 2ping6.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

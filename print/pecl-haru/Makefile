@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: print/pecl-haru/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/pecl-haru/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	haru
 PORTVERSION=	1.0.4
@@ -22,5 +22,4 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

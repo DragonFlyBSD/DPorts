@@ -1,5 +1,5 @@
 
-$FreeBSD: net-mgmt/ehnt/files/patch-ProcessASN.pl 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net-mgmt/ehnt/files/patch-ProcessASN.pl 340725 2014-01-22 17:40:44Z mat $
 
 --- ProcessASN.pl.orig	Tue Oct 22 00:21:49 2002
 +++ ProcessASN.pl	Tue Oct 22 00:21:53 2002

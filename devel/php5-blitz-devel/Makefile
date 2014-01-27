@@ -1,5 +1,5 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD: devel/php5-blitz-devel/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/php5-blitz-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	blitz-devel
 PORTVERSION=	0.7.2

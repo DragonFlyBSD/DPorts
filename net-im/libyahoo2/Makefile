@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-im/libyahoo2/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/libyahoo2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libyahoo2
 PORTVERSION=	1.0.1

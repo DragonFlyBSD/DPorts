@@ -1,8 +1,8 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-CSS-Inliner/Makefile 335620 2013-12-04 14:46:13Z jadawin $
+# $FreeBSD: www/p5-CSS-Inliner/Makefile 340150 2014-01-18 08:14:23Z culot $
 
 PORTNAME=	CSS-Inliner
-PORTVERSION=	3933
+PORTVERSION=	3936
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

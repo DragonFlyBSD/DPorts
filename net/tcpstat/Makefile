@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: net/tcpstat/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: net/tcpstat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tcpstat
 PORTVERSION=	1.5

@@ -1,4 +1,3 @@
-@comment $FreeBSD: sysutils/pdsh/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/dshbak
 bin/pdcp
 bin/pdsh

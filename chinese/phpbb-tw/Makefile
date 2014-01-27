@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/phpbb-tw/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD: chinese/phpbb-tw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phpbb
 PORTVERSION=	2.0.23

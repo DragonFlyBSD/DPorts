@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: sysutils/dcfldd/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/dcfldd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dcfldd
 DISTVERSION=	1.3.4-1

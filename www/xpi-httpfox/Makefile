@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: www/xpi-httpfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-httpfox/Makefile 341207 2014-01-26 15:10:29Z miwi $
 
 PORTNAME=	httpfox
 PORTVERSION=	0.8.10
@@ -12,6 +12,5 @@ COMMENT=	HTTP analyzer addon for Firefox
 XPI_NUM=	6647
 XPI_ID=	{4093c4de-454a-4329-8aff-c6b0b123c386}
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

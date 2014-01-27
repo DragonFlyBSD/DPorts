@@ -1,4 +1,4 @@
-$FreeBSD: net/openntpd/files/patch-ntpd.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net/openntpd/files/patch-ntpd.c 340725 2014-01-22 17:40:44Z mat $
 
 Drift file in ppm for compatibility with reference ntpd.
 

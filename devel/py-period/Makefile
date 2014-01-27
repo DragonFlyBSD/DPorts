@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-period/Makefile 337702 2013-12-27 10:44:56Z wg $
+# $FreeBSD: devel/py-period/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	period
 PORTVERSION=	0.5

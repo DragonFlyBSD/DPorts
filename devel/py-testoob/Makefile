@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: devel/py-testoob/Makefile 337717 2013-12-27 11:53:55Z wg $
+# $FreeBSD: devel/py-testoob/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	testoob
 PORTVERSION=	1.15

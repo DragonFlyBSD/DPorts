@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: ports-mgmt/portbuilder/Makefile 334233 2013-11-18 18:12:18Z dbn $
+# $FreeBSD: ports-mgmt/portbuilder/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	portbuilder
 DISTVERSION=	0.1.5.4
@@ -12,7 +12,7 @@ COMMENT=	Concurrent FreeBSD port builder
 
 LICENSE=	BSD
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 USE_XZ=		yes
 

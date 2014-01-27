@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: graphics/mahotas/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/mahotas/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mahotas
 PORTVERSION=	0.9.6
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	freeimage:${PORTSDIR}/graphics/freeimage
 
 USE_GCC=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 

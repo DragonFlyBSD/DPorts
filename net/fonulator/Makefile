@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: net/fonulator/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/fonulator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fonulator
 PORTVERSION=	2.0.1

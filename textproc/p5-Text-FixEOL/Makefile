@@ -1,5 +1,5 @@
 # Created by: lth@FreeBSD.org
-# $FreeBSD: textproc/p5-Text-FixEOL/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-FixEOL/Makefile 340908 2014-01-24 14:59:10Z mat $
 
 PORTNAME=	Text-FixEOL
 PORTVERSION=	1.06
@@ -11,10 +11,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Canonicalizes text to a specified EOL/EOF convention
 
-MAN3=		Text::FixEOL.3
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	modbuild
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

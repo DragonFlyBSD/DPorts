@@ -1,5 +1,5 @@
 # Created by: marcus
-# $FreeBSD: misc/gone/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gone/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gone
 PORTVERSION=	1.3.6

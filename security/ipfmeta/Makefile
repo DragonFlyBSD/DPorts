@@ -1,12 +1,12 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/ipfmeta/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ipfmeta/Makefile 339486 2014-01-12 08:09:12Z cy $
 
 PORTNAME=	ipfmeta
 PORTVERSION=	1.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.sentia.org/downloads/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	cy@FreeBSD.org
 COMMENT=	ipfmeta - use objects in IPfilter files
 
 USES=		perl5

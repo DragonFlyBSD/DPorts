@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: devel/py-ll-core/Makefile 337687 2013-12-27 10:15:32Z wg $
+# $FreeBSD: devel/py-ll-core/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ll-core
 PORTVERSION=	1.11.1

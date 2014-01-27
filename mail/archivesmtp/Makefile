@@ -1,5 +1,5 @@
 # Created by: Netherby <netherby@dancingfortune.com>
-# $FreeBSD: mail/archivesmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/archivesmtp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	archivesmtp
 PORTVERSION=	1.1.b1

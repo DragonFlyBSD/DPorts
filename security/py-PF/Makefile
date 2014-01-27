@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: security/py-PF/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-PF/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PF
 PORTVERSION=	0.0.6
@@ -15,7 +15,7 @@ COMMENT=	A pure-Python module for managing OpenBSD Packet Filter
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PYTHON_PKGNAMEPREFIX:C/[0-9]+//}_${PORTNAME}
 

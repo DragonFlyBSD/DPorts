@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: ftp/omi/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/omi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	omi
 PORTVERSION=	20030719

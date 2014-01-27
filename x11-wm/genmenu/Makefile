@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-wm/genmenu/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/genmenu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	genmenu
 PORTVERSION=	1.0.7

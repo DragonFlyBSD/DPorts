@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/rubygem-tinymce-rails/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-tinymce-rails/Makefile 340906 2014-01-24 14:56:38Z miwi $
 
 PORTNAME=	tinymce-rails
 PORTVERSION=	4.0.2
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

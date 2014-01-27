@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/pigz/Makefile 335450 2013-12-02 04:34:58Z delphij $
+# $FreeBSD: archivers/pigz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pigz
 PORTVERSION=	2.3.1

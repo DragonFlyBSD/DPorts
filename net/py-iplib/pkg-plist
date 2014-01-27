@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/py-iplib/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/iplib.py
 %%PYTHON_SITELIBDIR%%/iplib.pyc
 %%PYTHON_SITELIBDIR%%/iplib.pyo

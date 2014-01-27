@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/openclipart/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/openclipart/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports-stable/graphics/openclipart/Makefile,v 1.1 2005/08/09 02:14:05 ahze Exp $
 
 PORTNAME=	openclipart

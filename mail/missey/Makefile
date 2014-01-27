@@ -1,5 +1,5 @@
 # Created by: delphij@FreeBSD.org.cn
-# $FreeBSD: mail/missey/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/missey/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	missey
 PORTVERSION=	1.2.0

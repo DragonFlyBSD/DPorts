@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: graphics/py-paint/Makefile 337766 2013-12-27 17:41:28Z wg $
+# $FreeBSD: graphics/py-paint/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	paint
 PORTVERSION=	0.3

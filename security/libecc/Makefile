@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/libecc/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: security/libecc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libecc
 PORTVERSION=	0.14.0

@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: editors/bvi/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/bvi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bvi
 PORTVERSION=	1.3.2

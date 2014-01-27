@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/tbclock/Makefile 333473 2013-11-11 02:49:51Z danilo $
+# $FreeBSD: games/tbclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tbclock
 PORTVERSION=	1.10

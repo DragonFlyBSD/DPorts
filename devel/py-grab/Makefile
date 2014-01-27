@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-grab/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-grab/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	grab
 PORTVERSION=	0.4.13
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:${PORTSDIR}/devel/py-lxml
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:${PORTSDIR}/devel/py-lxml \
 		${PYTHON_PKGNAMEPREFIX}curl>0:${PORTSDIR}/ftp/py-curl
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes

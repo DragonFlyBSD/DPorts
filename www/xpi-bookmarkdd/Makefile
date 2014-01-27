@@ -1,5 +1,5 @@
 # Created by: Gustavo Fukao <gustavofukao@gmail.com>
-# $FreeBSD: www/xpi-bookmarkdd/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-bookmarkdd/Makefile 341198 2014-01-26 15:07:21Z miwi $
 
 PORTNAME=	bookmarkdd
 PORTVERSION=	0.7.5
@@ -17,6 +17,5 @@ XPI_FILES=	chrome.manifest install.rdf \
 		defaults/preferences/prefs.js
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

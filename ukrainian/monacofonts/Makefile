@@ -1,5 +1,5 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: ukrainian/monacofonts/Makefile 327774 2013-09-20 23:19:33Z bapt $
+# $FreeBSD: ukrainian/monacofonts/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	monaco
 PORTVERSION=	1.0

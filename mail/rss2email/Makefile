@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/rss2email/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/rss2email/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rss2email
 PORTVERSION=	2.70

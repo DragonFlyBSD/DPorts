@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-wysiwyg/Makefile 337595 2013-12-26 18:41:32Z wg $
+# $FreeBSD: www/trac-wysiwyg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wysiwyg
 DISTVERSION=	0.4.${SVN_REV}

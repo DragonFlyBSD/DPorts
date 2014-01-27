@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@branda.to>
-# $FreeBSD: devel/py-sqlcc/Makefile 328313 2013-09-25 20:19:42Z wg $
+# $FreeBSD: devel/py-sqlcc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlcc
 PORTVERSION=	0.3.2

@@ -1,4 +1,3 @@
-@comment $FreeBSD: mail/milter-manager/pkg-plist 313662 2013-03-08 17:59:31Z beech $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-report-statistics

@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko
-# $FreeBSD: misc/bbjd/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/bbjd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bbjd
 PORTVERSION=	1.01

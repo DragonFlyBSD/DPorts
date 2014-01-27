@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-Test-NoTabs/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD: devel/p5-Test-NoTabs/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Test-NoTabs
 PORTVERSION=	1.3
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:BOBTFISH
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Check the presence of tabs in your project
 
 LICENSE=	ART10 GPLv1

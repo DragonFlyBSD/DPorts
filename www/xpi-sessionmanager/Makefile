@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: www/xpi-sessionmanager/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-sessionmanager/Makefile 341216 2014-01-26 15:13:24Z miwi $
 
 PORTNAME=	sessionmanager
 PORTVERSION=	0.6.3.5
@@ -19,6 +19,5 @@ XPI_FILES=	chrome/sessionmanager.jar \
 		chrome.manifest install.rdf license.txt
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

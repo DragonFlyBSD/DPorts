@@ -1,5 +1,5 @@
 # Created by: Charlie & <root@lame.novel.ru>
-# $FreeBSD: sysutils/cdf/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: sysutils/cdf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cdf
 PORTVERSION=	0.2

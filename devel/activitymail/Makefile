@@ -1,5 +1,5 @@
 # Created by: Joseph Scott <joseph@randomnetworks.com>
-# $FreeBSD: devel/activitymail/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/activitymail/Makefile 340708 2014-01-22 13:29:30Z bapt $
 
 PORTNAME=	activitymail
 PORTVERSION=	1.26
@@ -8,13 +8,12 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DWHEELER/activitymail
 
 MAINTAINER=	joseph@randomnetworks.com
-COMMENT=	A program for sending email messages for CVS repository commits
+COMMENT=	Program for sending email messages for CVS repository commits
 
 USES=		perl5
 USE_PERL5=	modbuild
 
-PLIST_FILES=	bin/activitymail
-MAN1=		activitymail.1
+PLIST_FILES=	bin/activitymail \
+		man/man1/activitymail.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

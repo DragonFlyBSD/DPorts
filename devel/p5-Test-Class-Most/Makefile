@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: devel/p5-Test-Class-Most/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Class-Most/Makefile 339698 2014-01-14 16:27:08Z mat $
 
 PORTNAME=	Test-Class-Most
 PORTVERSION=	0.08
@@ -21,10 +21,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-PLIST_FILES=	%%SITE_PERL%%/Test/Class/Most.pm
+PLIST_FILES=	%%SITE_PERL%%/Test/Class/Most.pm \
+		%%PERL5_MAN3%%/Test::Class::Most.3.gz
 PLIST_DIRSTRY=	%%SITE_PERL%%/Test/Class %%SITE_PERL%%/Test
 
-MAN3=		Test::Class::Most.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

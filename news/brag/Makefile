@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: news/brag/Makefile 331656 2013-10-26 07:52:07Z ehaupt $
+# $FreeBSD: news/brag/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	brag
 PORTVERSION=	1.4.1

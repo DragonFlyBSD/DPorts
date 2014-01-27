@@ -1,5 +1,5 @@
 # Created by: hr <holgerrepp@googlemail.com>
-# $FreeBSD: net-mgmt/nagios-check_tftp/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/nagios-check_tftp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	check_tftp
 PORTVERSION=	1.0.1

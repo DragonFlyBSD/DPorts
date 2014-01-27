@@ -1,5 +1,5 @@
 # Created by: jamie
-# $FreeBSD: graphics/intergif/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/intergif/Makefile 340740 2014-01-22 22:13:48Z antoine $
 
 PORTNAME=	interGif
 PORTVERSION=	6.15
@@ -18,7 +18,6 @@ ALL_TARGET=	intergif
 
 PLIST_FILES=	bin/intergif
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|=.*cc|= $$(CC)| ; \
@@ -27,6 +26,6 @@ post-patch:
 		 s|@$$(cc)|$$(cc)|' ${WRKSRC}/src/makefile.ix
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} intergif ${PREFIX}/bin)
+	${INSTALL_PROGRAM} ${WRKSRC}/intergif ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

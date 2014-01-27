@@ -1,8 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Plugin-SiteMap/Makefile 329847 2013-10-08 22:46:04Z gblach $
+# $FreeBSD: www/p5-Dancer-Plugin-SiteMap/Makefile 339786 2014-01-15 15:27:45Z gblach $
 
 PORTNAME=	Dancer-Plugin-SiteMap
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JAMESR

@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby-usersguide/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/ruby-usersguide/Makefile 341096 2014-01-25 20:47:28Z swills $
 
 PORTNAME=	usersguide
 PORTVERSION=	20051121
@@ -23,6 +23,10 @@ NO_BUILD=	yes
 DOCSDIR=	${RUBY_MODDOCDIR}
 
 NO_STAGE=	yes
+
+DEPRECATED=		Documents EOLd version of Ruby and unmaintained
+EXPIRATION_DATE=	2014-02-25
+
 do-install:
 	${MKDIR} ${RUBY_MODDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/* ${RUBY_MODDOCDIR}

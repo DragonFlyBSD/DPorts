@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/dnswall/Makefile 336823 2013-12-18 11:57:51Z ehaupt $
+# $FreeBSD: dns/dnswall/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dnswall
 PORTVERSION=	0.1.4

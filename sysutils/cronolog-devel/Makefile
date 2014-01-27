@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/cronolog-devel/Makefile 330951 2013-10-20 00:33:52Z bdrewery $
+# $FreeBSD: sysutils/cronolog-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cronolog
 PORTVERSION=	1.7.0

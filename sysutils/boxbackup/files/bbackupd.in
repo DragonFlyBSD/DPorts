@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/boxbackup/files/bbackupd.in 312733 2013-02-21 18:56:13Z thompsa $
+# $FreeBSD: sysutils/boxbackup/files/bbackupd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: bbackupd
 # REQUIRE: NETWORKING

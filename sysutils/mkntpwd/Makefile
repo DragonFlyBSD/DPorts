@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/mkntpwd/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/mkntpwd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mkntpwd
 PORTVERSION=	1.0

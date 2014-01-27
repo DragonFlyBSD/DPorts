@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: sysutils/downtimed/files/downtimed.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/downtimed/files/downtimed.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: downtimed
 # REQUIRE: LOGIN syslogd

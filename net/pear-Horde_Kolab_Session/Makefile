@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: net/pear-Horde_Kolab_Session/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: net/pear-Horde_Kolab_Session/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Kolab_Session
 PORTVERSION=	2.0.1

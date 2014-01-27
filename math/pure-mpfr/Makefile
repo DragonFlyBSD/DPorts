@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: math/pure-mpfr/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: math/pure-mpfr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pure-mpfr
 PORTVERSION=	0.4

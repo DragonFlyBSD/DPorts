@@ -1,5 +1,5 @@
 # Created by: Jose Liang <jose@jose.idv.tw>
-# $FreeBSD: www/simplog/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/simplog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simplog
 PORTVERSION=	0.9.3.4

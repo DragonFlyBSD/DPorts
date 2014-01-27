@@ -1,5 +1,5 @@
 # Created by: Bill Moran <wmoran@collaborativefusion.com>
-# $FreeBSD: security/pecl-crack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pecl-crack/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	crack
 PORTVERSION=	0.4.1
@@ -25,5 +25,4 @@ IGNORE_WITH_PHP=5
 
 WRKSRC=		${WRKDIR}/crack-0.4
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

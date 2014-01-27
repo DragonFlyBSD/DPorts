@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer
-# $FreeBSD: security/rubygem-ezcrypto/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rubygem-ezcrypto/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	ezcrypto
 PORTVERSION=	0.7.2
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

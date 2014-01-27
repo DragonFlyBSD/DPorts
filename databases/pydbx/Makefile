@@ -1,5 +1,5 @@
 # Created by: David Phillips <david@acz.org>
-# $FreeBSD: databases/pydbx/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pydbx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pydbx
 PORTVERSION=	0.14

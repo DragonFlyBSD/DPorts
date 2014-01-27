@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: security/tlswrap/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/tlswrap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tlswrap
 PORTVERSION=	1.0.4
@@ -9,25 +9,20 @@ MASTER_SITES=	http://www.tlswrap.com/
 DISTNAME=	${PORTNAME}-1.04
 
 MAINTAINER=	johans@FreeBSD.org
-COMMENT=	An FTP proxy that wraps data and control with TLS/SSL
+COMMENT=	FTP proxy that wraps data and control with TLS/SSL
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 
-PLIST_FILES=	bin/tlswrap
-PORTDOCS=	README
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E 's,^(CC|CFLAGS|LDFLAGS).*=,\1?=,g' \
 		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -E 's,pipe([12]),pipe0\1,g' \
 		${WRKSRC}/misc.[ch] ${WRKSRC}/network.c ${WRKSRC}/tlswrap.c
 
-post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}/
-.endif
+do-install:
+	@${INSTALL_PROGRAM} ${WRKSRC}/tlswrap ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

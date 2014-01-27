@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Lorem/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Text-Lorem/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-Lorem
 PORTVERSION=	0.3

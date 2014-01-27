@@ -1,5 +1,5 @@
 # Created by: ivoras
-# $FreeBSD: databases/sqlcached/Makefile 328728 2013-09-29 20:08:50Z ohauer $
+# $FreeBSD: databases/sqlcached/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlcached
 PORTVERSION=	r6

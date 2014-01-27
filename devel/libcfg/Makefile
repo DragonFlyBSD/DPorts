@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/libcfg/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libcfg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libcfg
 PORTVERSION=	0.6.2

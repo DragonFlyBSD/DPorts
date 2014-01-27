@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/py-DendroPy/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/py-DendroPy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	DendroPy
 PORTVERSION=	3.12.0

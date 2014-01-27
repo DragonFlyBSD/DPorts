@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/heirloom-doctools/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/tmac/vgrind
 %%DATADIR%%/tmac/v
 %%DATADIR%%/tmac/thesis.me

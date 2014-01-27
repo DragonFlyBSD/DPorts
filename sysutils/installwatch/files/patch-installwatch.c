@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/installwatch/files/patch-installwatch.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/installwatch/files/patch-installwatch.c 340725 2014-01-22 17:40:44Z mat $
 
 --- installwatch.c.orig
 +++ installwatch.c

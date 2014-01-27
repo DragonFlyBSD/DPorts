@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-menueditor/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-menueditor/Makefile 341211 2014-01-26 15:11:55Z miwi $
 
 PORTNAME=	menueditor
 PORTVERSION=	1.2.7
@@ -13,6 +13,5 @@ XPI_DISTNAME=	menu_editor
 XPI_ID=		{EDA7B1D7-F793-4e03-B074-E6F303317FB0}
 XPI_NUM=	710
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Andrea Venturoli <freebsd@netfence.it>
-# $FreeBSD: security/snortreport/Makefile 328595 2013-09-28 16:54:24Z ohauer $
+# $FreeBSD: security/snortreport/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	snortreport
 PORTVERSION=	1.3.4

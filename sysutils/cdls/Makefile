@@ -1,5 +1,5 @@
 # Created by: Hans de Hartog <hans@dehartog.nl>
-# $FreeBSD: sysutils/cdls/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cdls/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cdls
 PORTVERSION=	4.2

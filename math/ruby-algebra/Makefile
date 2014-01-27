@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: math/ruby-algebra/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: math/ruby-algebra/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	algebra
 PORTVERSION=	0.72

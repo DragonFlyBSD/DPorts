@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: mail/pecl-esmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pecl-esmtp/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	esmtp
 PORTVERSION=	0.3.1
@@ -23,7 +23,6 @@ OPTIONS_DEFINE=	RE2C
 OPTIONS_DEFAULT=	RE2C
 RE2C_DESC=	Use re2c to regenerate PHP parsers
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRE2C}

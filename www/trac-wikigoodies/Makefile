@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: www/trac-wikigoodies/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-wikigoodies/Makefile 341188 2014-01-26 14:33:08Z miwi $
 
 PORTNAME=	wikigoodies
 PORTVERSION=	0.3.3522
@@ -27,5 +27,4 @@ PLIST_SUB+=	PORTVERSION=${PORTVERSION:R} \
 		PYTHONVERSION=${PYTHON_VER}
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

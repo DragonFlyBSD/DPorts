@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gitolite/Makefile 333782 2013-11-14 18:30:39Z swills $
+# $FreeBSD: devel/gitolite/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	gitolite
 PORTVERSION=	3.5.2
@@ -8,7 +8,7 @@ MASTER_SITES=	GH \
 		LOCAL/tdb
 DISTNAME=	g-${GH_ACCOUNT}-${GH_PROJECT}-${PORTVERSION}-${GH_COMMIT}
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	An access control layer on top of git
 
 LICENSE=	GPLv2

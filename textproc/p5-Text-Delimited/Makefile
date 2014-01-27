@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Text-Delimited/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Delimited/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Text-Delimited
 PORTVERSION=	2.00
@@ -13,7 +13,4 @@ COMMENT=	Module for parsing delimited text files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Delimited.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

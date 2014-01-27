@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/usermin/files/patch-setup.sh 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/usermin/files/patch-setup.sh 340725 2014-01-22 17:40:44Z mat $
 
 --- setup.sh.orig
 +++ setup.sh

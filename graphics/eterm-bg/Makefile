@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: graphics/eterm-bg/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/eterm-bg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eterm-bg
 PORTVERSION=	0.9.6

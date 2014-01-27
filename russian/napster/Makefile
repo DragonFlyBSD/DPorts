@@ -1,5 +1,5 @@
 # Created by: Roman Y. Bogdanov <sam@brj.pp.ru>
-# $FreeBSD: russian/napster/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/napster/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nap
 CATEGORIES=	russian
@@ -13,7 +13,6 @@ CONFLICTS=	nap-[0-9]*
 
 WITH_ENCODING_PATCH=	yes
 
-NO_STAGE=	yes
 pre-configure:
 	@${PATCH} ${PATCH_ARGS} < ${.CURDIR}/files/extra-win2koi
 

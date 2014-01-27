@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: devel/msp430-libc/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/msp430-libc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libc
 PORTVERSION=	1.0.${LIBCVERSION}

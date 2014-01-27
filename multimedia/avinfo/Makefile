@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/avinfo/Makefile 332121 2013-10-30 14:48:37Z amdmi3 $
+# $FreeBSD: multimedia/avinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	avinfo
 PORTVERSION=	1.0.a15

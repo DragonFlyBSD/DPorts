@@ -1,5 +1,5 @@
 # Created by: Roland van Laar <roland@micite.net>
-# $FreeBSD: databases/py-sqlparse/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sqlparse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlparse
 PORTVERSION=	0.1.2

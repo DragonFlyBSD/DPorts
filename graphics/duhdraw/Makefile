@@ -1,5 +1,5 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: graphics/duhdraw/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/duhdraw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	duhdraw
 PORTVERSION=	2.8.13
@@ -7,19 +7,18 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.cs.helsinki.fi/u/penberg/duhdraw/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An ANSI graphic drawing program
+COMMENT=	ANSI graphic drawing program
 
 MAKE_ARGS=	CC="${CC} ${CFLAGS}"
 
 PLIST_FILES=	bin/ansi bin/ansitoc bin/duhdraw
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<malloc.h>/d' ${WRKSRC}/duhdraw.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ansi ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/ansitoc ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/duhdraw ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ansi ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ansitoc ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/duhdraw ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

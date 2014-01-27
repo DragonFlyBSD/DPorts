@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: news/rawdog/Makefile 330731 2013-10-18 09:23:34Z tdb $
+# $FreeBSD: news/rawdog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rawdog
 PORTVERSION=	2.18

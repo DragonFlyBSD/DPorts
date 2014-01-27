@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-remind/Makefile 337582 2013-12-26 18:02:35Z wg $
+# $FreeBSD: www/trac-remind/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	remind
 PORTVERSION=	1

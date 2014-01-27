@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/rubygem-rightaws/Makefile 337612 2013-12-26 20:04:56Z swills $
+# $FreeBSD: net/rubygem-rightaws/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	rightaws
 PORTVERSION=	3.1.0
@@ -23,7 +23,6 @@ UNIQUENAME=	${PORTNAME}
 OPTIONS_DEFINE=	LIBXML
 LIBXML_DESC=	Use libxml instead of REXML
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBXML}

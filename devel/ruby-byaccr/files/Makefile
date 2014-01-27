@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-byaccr/files/Makefile 317278 2013-05-03 22:04:50Z bapt $
+# $FreeBSD: devel/ruby-byaccr/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PROG=	byaccr
 SRCS=	closure.c \

@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: textproc/fixrtf/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/fixrtf/Makefile 341282 2014-01-26 20:42:34Z mat $
 
 PORTNAME=	fixrtf
 PORTVERSION=	0.1.20060303
@@ -14,13 +14,12 @@ DISTFILES=	# none
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	A patch making it possible to embed PNGs into RTFs
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
 WRKSRC=		${WRKDIR}/src
 
 SRC=		${.CURDIR}/src
 
-NO_STAGE=	yes
 do-fetch:
 	@${DO_NADA}
 

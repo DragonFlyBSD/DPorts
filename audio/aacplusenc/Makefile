@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: audio/aacplusenc/Makefile 334751 2013-11-24 18:28:01Z bapt $
+# $FreeBSD: audio/aacplusenc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aacplusenc
 PORTVERSION=	0.17.5

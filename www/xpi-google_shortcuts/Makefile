@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-google_shortcuts/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-google_shortcuts/Makefile 341206 2014-01-26 15:10:06Z miwi $
 
 PORTNAME=	google_shortcuts
 PORTVERSION=	2.1.5
@@ -15,6 +15,5 @@ XPI_FILES=	chrome/googleshortcuts.jar chrome.manifest \
 		defaults/preferences/install.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

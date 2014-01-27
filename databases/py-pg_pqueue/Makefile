@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/py-pg_pqueue/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-pg_pqueue/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pg_pqueue
 PORTVERSION=	1.0.2
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	PostgreSQL PQ Protocol Modules
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 

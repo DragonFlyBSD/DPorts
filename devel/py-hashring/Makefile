@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-hashring/Makefile 337515 2013-12-26 13:49:10Z wg $
+# $FreeBSD: devel/py-hashring/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hashring
 PORTVERSION=	1.3.1

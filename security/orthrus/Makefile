@@ -1,5 +1,5 @@
 # Created by: Gavin McDonald <gavin@16degrees.com.au>
-# $FreeBSD: security/orthrus/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: security/orthrus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	orthrus
 PORTVERSION=	0.8.0

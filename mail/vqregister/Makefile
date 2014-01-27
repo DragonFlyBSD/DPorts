@@ -1,5 +1,5 @@
 # Created by: Dan Caescu <daniel@freebsd.ro>
-# $FreeBSD: mail/vqregister/Makefile 335143 2013-11-29 03:54:28Z eadler $
+# $FreeBSD: mail/vqregister/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vqregister
 PORTVERSION=	2.6

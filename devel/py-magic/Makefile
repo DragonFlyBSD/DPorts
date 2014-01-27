@@ -1,8 +1,9 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: devel/py-magic/Makefile 335570 2013-12-03 14:23:40Z lwhsu $
+# $FreeBSD: devel/py-magic/Makefile 341108 2014-01-25 21:23:07Z antoine $
 
 PORTNAME=	magic
 PORTVERSION=	5.16
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	ftp://ftp.astron.com/pub/file/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/file/ \
@@ -15,8 +16,7 @@ COMMENT=	Python module for determining file type
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	Magic_file_extensions
-PYDISTUTILS_PKGVERSION=	0.2
+PYDISTUTILS_AUTOPLIST=	yes
 
 WRKSRC=	${WRKDIR}/file-${PORTVERSION}/python
 

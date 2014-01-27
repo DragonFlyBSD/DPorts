@@ -1,5 +1,5 @@
 # Created by: joris
-# $FreeBSD: graphics/tilecache/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/tilecache/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tilecache
 PORTVERSION=	2.11
@@ -14,7 +14,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flup>0:${PORTSDIR}/www/py-flup \
 
 LICENSE=	BSD
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TileCache
 

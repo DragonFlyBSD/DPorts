@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: textproc/py-xlwriter/Makefile 338100 2013-12-30 12:12:10Z wg $
+# $FreeBSD: textproc/py-xlwriter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xlwriter
 PORTVERSION=	0.4a3

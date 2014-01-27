@@ -1,5 +1,5 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: devel/py-ujson/Makefile 332163 2013-10-30 18:50:38Z wg $
+# $FreeBSD: devel/py-ujson/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ujson
 PORTVERSION=	1.33

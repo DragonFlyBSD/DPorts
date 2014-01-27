@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/nylon/files/nylon.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: net/nylon/files/nylon.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: nylon
 # REQUIRE: LOGIN

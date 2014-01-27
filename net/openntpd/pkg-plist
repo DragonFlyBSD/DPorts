@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/openntpd/pkg-plist 329324 2013-10-04 15:30:43Z naddy $
 man/man5/ntpd.conf.5.gz
 man/man8/ntpd.8.gz
 sbin/ntpd

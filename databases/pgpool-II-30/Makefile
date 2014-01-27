@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: databases/pgpool-II-30/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD: databases/pgpool-II-30/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pgpool-II
 PORTVERSION=	3.0.4

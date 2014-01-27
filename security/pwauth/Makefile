@@ -1,5 +1,5 @@
 # Created by: clement
-# $FreeBSD: security/pwauth/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pwauth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pwauth
 PORTVERSION=	2.3.10

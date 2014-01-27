@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: misc/py-YABT/Makefile 337855 2013-12-28 11:23:04Z wg $
+# $FreeBSD: misc/py-YABT/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	YABT
 PORTVERSION=	2.0.2

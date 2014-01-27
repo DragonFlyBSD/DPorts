@@ -1,5 +1,5 @@
 # Created by: kevit
-# $FreeBSD: textproc/p5-Template-Plugin-XML-Escape/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Template-Plugin-XML-Escape/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Template-Plugin-XML-Escape
 PORTVERSION=	0.02
@@ -15,7 +15,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Template::Plugin::XML::Escape.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

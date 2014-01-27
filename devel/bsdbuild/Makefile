@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bsdbuild/Makefile 328215 2013-09-24 23:32:30Z bapt $
+# $FreeBSD: devel/bsdbuild/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bsdbuild
 PORTVERSION=	3.0

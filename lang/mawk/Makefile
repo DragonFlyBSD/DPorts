@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: lang/mawk/Makefile 339214 2014-01-09 10:32:28Z bapt $
+# $FreeBSD: lang/mawk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mawk
 DISTVERSION=	1.3.4-20131226

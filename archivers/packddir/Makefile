@@ -1,5 +1,5 @@
 # Created by: Ayumi M <ayu@commun.jp>
-# $FreeBSD: archivers/packddir/Makefile 338669 2014-01-04 18:45:44Z bapt $
+# $FreeBSD: archivers/packddir/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	packddir
 PORTVERSION=	0.0.6

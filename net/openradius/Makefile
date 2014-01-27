@@ -1,5 +1,5 @@
 # Created by: Adam Jette <jettea46@yahoo.com>
-# $FreeBSD: net/openradius/Makefile 338025 2013-12-29 16:29:03Z crees $
+# $FreeBSD: net/openradius/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openradius
 PORTVERSION=	0.9.12c

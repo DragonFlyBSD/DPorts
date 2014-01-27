@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/freeciv-nox11/Makefile 337972 2013-12-29 12:27:20Z johans $
+# $FreeBSD: games/freeciv-nox11/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MASTERDIR=	${.CURDIR}/../freeciv
 

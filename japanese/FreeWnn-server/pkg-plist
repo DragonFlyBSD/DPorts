@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/FreeWnn-server/pkg-plist 320873 2013-06-14 01:58:45Z miwi $
 bin/Wnn4/atod
 bin/Wnn4/atof
 bin/Wnn4/dtoa

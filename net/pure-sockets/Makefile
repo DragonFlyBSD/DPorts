@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: net/pure-sockets/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: net/pure-sockets/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pure-sockets
 PORTVERSION=	0.6

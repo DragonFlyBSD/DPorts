@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: print/kde_poster/Makefile 337383 2013-12-24 20:50:05Z rakuco $
+# $FreeBSD: print/kde_poster/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kde_poster
 PORTVERSION=	1.0

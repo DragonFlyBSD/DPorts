@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-fileutils/Makefile 337680 2013-12-27 10:02:34Z wg $
+# $FreeBSD: devel/py-fileutils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fileutils
 PORTVERSION=	0.6

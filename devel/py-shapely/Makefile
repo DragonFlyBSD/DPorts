@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-shapely/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-shapely/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Shapely
 PORTVERSION=	1.2.18
@@ -14,7 +14,7 @@ COMMENT=	Python Package for Manipulation 2D Geospatial Geometry
 LIB_DEPENDS=	geos_c:${PORTSDIR}/graphics/geos
 
 CFLAGS+=	-I${LOCALBASE}/include
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes

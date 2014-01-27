@@ -1,4 +1,4 @@
-$FreeBSD: textproc/html-pretty/files/patch-Makefile.in 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: textproc/html-pretty/files/patch-Makefile.in 340725 2014-01-22 17:40:44Z mat $
 
 --- Makefile.in.orig	Sat Aug 25 15:56:14 2001
 +++ Makefile.in	Tue Mar 16 17:58:19 2004

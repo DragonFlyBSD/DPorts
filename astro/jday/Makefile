@@ -1,4 +1,4 @@
-# $FreeBSD: astro/jday/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD: astro/jday/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jday
 PORTVERSION=	2.4

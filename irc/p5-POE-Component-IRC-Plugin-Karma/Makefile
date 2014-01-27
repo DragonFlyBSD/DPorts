@@ -1,4 +1,4 @@
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Karma/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Karma/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	POE-Component-IRC-Plugin-Karma
 PORTVERSION=	0.003
@@ -7,7 +7,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:APOCAL
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	A PoCo-IRC plugin that keeps track of karma
 
 LICENSE=	ART10 GPLv1

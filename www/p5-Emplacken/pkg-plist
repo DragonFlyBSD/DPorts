@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/p5-Emplacken/pkg-plist 338769 2014-01-05 13:31:10Z az $
 bin/emplacken
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Emplacken/.packlist
 %%SITE_PERL%%/Emplacken.pm

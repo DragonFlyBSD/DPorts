@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: devel/safe-iop/Makefile 334471 2013-11-21 08:25:54Z bsam $
+# $FreeBSD: devel/safe-iop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	safe-iop
 PORTVERSION=	0.3.1

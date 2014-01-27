@@ -1,5 +1,5 @@
 # Created by: Anton Voronin <anton@urc.ac.ru>
-# $FreeBSD: russian/tac+ia/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/tac+ia/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tac+ia
 PORTVERSION=	0.96p9.3

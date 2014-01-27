@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/block/Makefile 332070 2013-10-30 05:43:05Z danilo $
+# $FreeBSD: games/block/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	block
 PORTVERSION=	0.6

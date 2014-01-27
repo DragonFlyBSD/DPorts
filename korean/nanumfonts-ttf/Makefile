@@ -1,4 +1,4 @@
-# $FreeBSD: korean/nanumfonts-ttf/Makefile 339059 2014-01-08 00:06:49Z jkim $
+# $FreeBSD: korean/nanumfonts-ttf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MASTERDIR=	${.CURDIR}/../nanumfonts-otf
 

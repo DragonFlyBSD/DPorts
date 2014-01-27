@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@wizard.volgograd.ru>
-# $FreeBSD: mail/pysieved/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pysieved/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pysieved
 PORTVERSION=	1.0
@@ -12,7 +12,7 @@ MAINTAINER=	dsh@wizard.volgograd.ru
 COMMENT=	Python Managesieve Server
 
 USE_BZIP2=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_RC_SUBR=	${PORTNAME}
 
 PORTEXAMPLES=	pysieved.xinetd

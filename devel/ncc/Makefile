@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: devel/ncc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/ncc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ncc
 PORTVERSION=	2.8

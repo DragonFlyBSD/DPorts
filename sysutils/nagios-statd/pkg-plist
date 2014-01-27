@@ -1,3 +1,2 @@
-@comment $FreeBSD: sysutils/nagios-statd/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/nagios-stat
 sbin/nagios-statd

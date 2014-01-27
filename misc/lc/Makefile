@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: misc/lc/Makefile 335899 2013-12-08 14:58:34Z danilo $
+# $FreeBSD: misc/lc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lc
 PORTVERSION=	1.0

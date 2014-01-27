@@ -1,5 +1,5 @@
 # Created by: Rick Elrod <codeblock@eighthbit.net>
-# $FreeBSD: comms/callsign/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD: comms/callsign/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	callsign
 PORTVERSION=	1.0.2

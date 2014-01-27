@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: graphics/py-gvgen/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-gvgen/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gvgen
 PORTVERSION=	0.9
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	An easy python interface to generate dot files
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=easy-install
 PYDISTUTILS_PKGVERSION=	0.9
 PYDISTUTILS_EGGINFO=	GvGen-${PORTVERSION}-py${PYTHON_VER}.egg-info

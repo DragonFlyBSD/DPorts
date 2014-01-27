@@ -1,5 +1,5 @@
 # Created by: luigi@FreeBSD.org
-# $FreeBSD: graphics/jpg2pdf/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/jpg2pdf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jpg2pdf
 PORTVERSION=	20090113

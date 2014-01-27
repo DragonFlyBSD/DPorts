@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/cryptoslam/Makefile 332288 2013-10-31 21:31:42Z danilo $
+# $FreeBSD: games/cryptoslam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cryptoslam
 PORTVERSION=	1.2

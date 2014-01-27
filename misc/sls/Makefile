@@ -1,5 +1,5 @@
 # Created by: sec@42.org
-# $FreeBSD: misc/sls/Makefile 330101 2013-10-11 20:46:29Z danilo $
+# $FreeBSD: misc/sls/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sls
 PORTVERSION=	1.00

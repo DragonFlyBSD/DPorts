@@ -1,5 +1,5 @@
 # Created by: ddurieux <d.durieux@siprossii.com>
-# $FreeBSD: textproc/glpi-plugins-AdditionalReports/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/glpi-plugins-AdditionalReports/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	AdditionalReports
 DISTVERSION=	1.3.0

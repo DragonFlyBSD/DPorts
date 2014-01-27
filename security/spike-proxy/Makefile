@@ -1,5 +1,5 @@
 # Created by: Yonatan <Yonatan@xpert.com>
-# $FreeBSD: security/spike-proxy/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/spike-proxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spike-proxy
 PORTVERSION=	1.4.8

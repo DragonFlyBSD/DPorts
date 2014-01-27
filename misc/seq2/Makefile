@@ -1,5 +1,5 @@
 # Created by: osa
-# $FreeBSD: misc/seq2/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/seq2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	seq2
 PORTVERSION=	0.2

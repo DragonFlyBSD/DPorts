@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: sysutils/snowlog/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/snowlog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	snowlog
 PORTVERSION=	1.1.1

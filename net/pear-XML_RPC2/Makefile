@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/pear-XML_RPC2/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: net/pear-XML_RPC2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	XML_RPC2
 PORTVERSION=	1.1.1

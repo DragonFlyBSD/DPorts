@@ -1,5 +1,5 @@
 # Created by: TAKANO Yuji <takano@net-chef.net>
-# $FreeBSD: net/irrd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/irrd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	irrd
 PORTVERSION=	2.3.10

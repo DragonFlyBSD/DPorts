@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-MooseX-Types-JSON/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Types-JSON/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	MooseX-Types-JSON
 PORTVERSION=	0.02
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MILA
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	JSON and relaxedJSON datatype for Moose
 
 LICENSE=	ART10 GPLv1

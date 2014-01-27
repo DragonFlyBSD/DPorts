@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: security/aescrypt/Makefile 333863 2013-11-15 13:01:11Z ehaupt $
+# $FreeBSD: security/aescrypt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aescrypt
 PORTVERSION=	0.7

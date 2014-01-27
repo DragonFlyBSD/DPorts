@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: net/py-xmlrpc/Makefile 337867 2013-12-28 11:40:54Z wg $
+# $FreeBSD: net/py-xmlrpc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmlrpc
 PORTVERSION=	0.8.8.3

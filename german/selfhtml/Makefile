@@ -1,5 +1,5 @@
 # Created by: Frerich Raabe <frerich.raabe@gmx.de>
-# $FreeBSD: german/selfhtml/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: german/selfhtml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	selfhtml
 PORTVERSION=	8.1.2

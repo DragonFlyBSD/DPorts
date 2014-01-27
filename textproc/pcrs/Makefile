@@ -1,5 +1,5 @@
 # Created by: Ken Wong <wongk@apt.homeunix.net>
-# $FreeBSD: textproc/pcrs/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pcrs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pcrs
 PORTVERSION=	0.0.3

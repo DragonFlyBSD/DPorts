@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/s5/Makefile 334286 2013-11-19 07:42:41Z bapt $
+# $FreeBSD: textproc/s5/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	s5
 PORTVERSION=	1.1

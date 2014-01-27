@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: misc/gnuit/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gnuit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnuit
 PORTVERSION=	4.9.5

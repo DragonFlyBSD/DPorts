@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/py-smb/Makefile 337211 2013-12-22 19:36:00Z rm $
+# $FreeBSD: net/py-smb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	smb
 PORTVERSION=	1.1.8

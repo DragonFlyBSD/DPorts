@@ -1,5 +1,5 @@
 # Created by: Mij <mij@bitchx.it>
-# $FreeBSD: security/sshguard/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/sshguard/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sshguard
 PORTVERSION=	1.5

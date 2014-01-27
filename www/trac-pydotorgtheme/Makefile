@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-pydotorgtheme/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-pydotorgtheme/Makefile 341186 2014-01-26 14:32:32Z miwi $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;:tl}
 PORTVERSION=	2.0
@@ -14,11 +14,10 @@ COMMENT=	Theme that emulates the look of python.org
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		trac-themeengine>=2.0:${PORTSDIR}/www/trac-themeengine
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracPyDotOrgTheme
 WRKSRC=			${WRKDIR}/${PORTNAME}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/umodplayer/Makefile 337241 2013-12-23 13:58:43Z amdmi3 $
+# $FreeBSD: audio/umodplayer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	umodplayer
 PORTVERSION=	0.${DISTVERSION:tl}

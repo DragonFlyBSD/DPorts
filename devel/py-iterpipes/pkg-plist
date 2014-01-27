@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/py-iterpipes/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/iterpipes/__init__.py
 %%PYTHON_SITELIBDIR%%/iterpipes/__init__.pyc
 %%PYTHON_SITELIBDIR%%/iterpipes/__init__.pyo

@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hhm/files/Makefile 317260 2013-05-03 21:18:57Z bapt $
+# $FreeBSD: textproc/hhm/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PROG=	hhm
 

@@ -1,5 +1,5 @@
 # Created by: Sergey Kandaurov <pluknet@gmail.com>
-# $FreeBSD: net/simpleproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/simpleproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simpleproxy
 PORTVERSION=	3.4

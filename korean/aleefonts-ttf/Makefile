@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: korean/aleefonts-ttf/Makefile 339059 2014-01-08 00:06:49Z jkim $
+# $FreeBSD: korean/aleefonts-ttf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aleefonts
 PORTVERSION=	12

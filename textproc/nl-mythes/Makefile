@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/nl-mythes/Makefile 332692 2013-11-04 11:20:38Z bapt $
+# $FreeBSD: textproc/nl-mythes/Makefile 340424 2014-01-20 17:13:54Z sunpoet $
 
 PORTNAME=	mythes
 PORTVERSION=	2012.12.11
@@ -12,7 +12,7 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Dutch thesaurus
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes

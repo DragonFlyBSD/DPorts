@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: textproc/dadadodo/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/dadadodo/Makefile 341163 2014-01-26 12:08:06Z mat $
 
 PORTNAME=	dadadodo
 PORTVERSION=	1.04
@@ -11,11 +11,10 @@ COMMENT=	Text processor which analyses text and generates random sentences
 
 PLIST_FILES=	bin/dadadodo
 
-NO_STAGE=	yes
 pre-patch:
 	${REINPLACE_CMD} -E "s/^(CC|CFLAGS).+//" ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dadadodo ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dadadodo ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

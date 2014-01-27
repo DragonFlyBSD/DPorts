@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-live_pagerank/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-live_pagerank/Makefile 341211 2014-01-26 15:11:55Z miwi $
 
 PORTNAME=	live_pagerank
 PORTVERSION=	0.9.7
@@ -15,6 +15,5 @@ XPI_FILES=	chrome.manifest chrome/livepr.jar \
 		install.rdf
 XPI_DIRS=	chrome
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

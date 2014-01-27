@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/mutt/scripts/generate-plist 314137 2013-03-14 07:34:30Z jgh $
+# $FreeBSD: mail/mutt/scripts/generate-plist 340872 2014-01-24 00:14:07Z mat $
 #
 # set -x
 

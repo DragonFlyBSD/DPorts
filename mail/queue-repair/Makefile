@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: mail/queue-repair/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: mail/queue-repair/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	queue-repair
 PORTVERSION=	0.9.0

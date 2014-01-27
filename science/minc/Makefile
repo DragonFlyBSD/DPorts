@@ -1,5 +1,5 @@
 # Created by: jbacon
-# $FreeBSD: science/minc/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: science/minc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 ############################################################################
 # http://www.bic.mni.mcgill.ca/software/minc/

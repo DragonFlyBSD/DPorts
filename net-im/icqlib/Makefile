@@ -1,5 +1,5 @@
 # Created by: Pavel Andreev
-# $FreeBSD: net-im/icqlib/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/icqlib/Makefile 341116 2014-01-25 21:47:47Z bapt $
 
 PORTNAME=	icqlib
 PORTVERSION=	1.0.0
@@ -8,14 +8,13 @@ CATEGORIES=	net-im
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A library required by kicq (not libicq)
+COMMENT=	Library required by kicq (not libicq)
 
+USES=		gmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure

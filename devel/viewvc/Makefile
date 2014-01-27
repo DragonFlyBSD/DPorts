@@ -1,8 +1,8 @@
 # Created by: will
-# $FreeBSD: devel/viewvc/Makefile 334894 2013-11-25 20:06:35Z ohauer $
+# $FreeBSD: devel/viewvc/Makefile 339820 2014-01-15 20:53:05Z ohauer $
 
 PORTNAME=	viewvc
-PORTVERSION=	1.1.21
+PORTVERSION=	1.1.22
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.viewvc.org/ \
 		LOCAL/ohauer
@@ -38,7 +38,7 @@ MYSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MySQLdb>=0:${PORTSDIR}/databases/py-My
 
 NO_BUILD=	yes
 USE_RC_SUBR=	viewvc
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 SUB_FILES=	pkg-message
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} \
 		ECHO=${ECHO} EGREP=${EGREP} TOUCH=${TOUCH} \

@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edy>
-# $FreeBSD: databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Class-DBI-Plugin-DeepAbstractSearch
 PORTVERSION=	0.08
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SRIHA
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Provides deep_search_where() for Class::DBI
 
 LICENSE=	ART10 GPLv1

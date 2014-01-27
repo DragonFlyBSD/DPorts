@@ -1,5 +1,5 @@
 # Created by: rafan@infor.org
-# $FreeBSD: science/libsvm-python/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/libsvm-python/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-python
 

@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-anonfunc/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: devel/py-anonfunc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	anonfunc
 PORTVERSION=	1.0

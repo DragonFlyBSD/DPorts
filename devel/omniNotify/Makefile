@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: devel/omniNotify/Makefile 328688 2013-09-29 13:13:17Z antoine $
+# $FreeBSD: devel/omniNotify/Makefile 339922 2014-01-16 15:43:27Z sem $
 
 PORTNAME=	omniNotify
 PORTVERSION=	2.1.01
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://www.stasyan.com/devel/distfiles/
 DISTNAME=	omniNotify-2-latest
 
-MAINTAINER=	sem@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CORBA Notification Service (CosNotification) for omniORB
 
 LIB_DEPENDS=	omniORB4.1:${PORTSDIR}/devel/omniORB

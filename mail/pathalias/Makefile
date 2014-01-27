@@ -1,4 +1,4 @@
-# $FreeBSD: mail/pathalias/Makefile 337871 2013-12-28 12:22:27Z dinoex $
+# $FreeBSD: mail/pathalias/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pathalias
 PORTVERSION=	9.16

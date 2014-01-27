@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/blindelephant/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/blindelephant/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	blindelephant
 PORTVERSION=	1.0
@@ -15,7 +15,7 @@ COMMENT=	Fingerprint the web applications used by a web site
 
 LICENSE=	LGPL3
 USE_BZIP2=	YES
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	YES
 
 SUB_FILES=	${PORTNAME}.sh

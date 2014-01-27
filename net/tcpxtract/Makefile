@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: net/tcpxtract/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/tcpxtract/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tcpxtract
 PORTVERSION=	1.0.1

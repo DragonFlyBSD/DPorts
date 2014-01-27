@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-im/prosody/files/prosody.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net-im/prosody/files/prosody.in 340984 2014-01-25 05:06:30Z lx $
 #
 # PROVIDE: prosody
 # REQUIRE: LOGIN
@@ -16,12 +16,12 @@
 
 name="prosody"
 rcvar=prosody_enable
-pidfile="%%PREFIX%%/var/lib/prosody/prosody.pid"
 command="%%PREFIX%%/bin/prosodyctl"
 
 load_rc_config $name
 
-prosody=${prosody_enable-"NO"}
+prosody_enable=${prosody_enable:-"NO"}
+pidfile=${prosody_pidfile:-"%%PREFIX%%/var/lib/prosody/prosody.pid"}
 
 extra_commands="status"
 

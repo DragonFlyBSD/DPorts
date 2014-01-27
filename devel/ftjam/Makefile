@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: devel/ftjam/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/ftjam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ftjam
 PORTVERSION=	2.5.2

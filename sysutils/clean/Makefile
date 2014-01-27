@@ -1,5 +1,5 @@
 # Created by: chuck@pkix.net
-# $FreeBSD: sysutils/clean/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/clean/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	clean
 PORTVERSION=	3.4

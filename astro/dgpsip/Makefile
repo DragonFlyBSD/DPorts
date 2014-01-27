@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org>
-# $FreeBSD: astro/dgpsip/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/dgpsip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dgpsip
 PORTVERSION=	1.35
@@ -10,9 +10,8 @@ MAINTAINER=	jharris@widomaker.com
 COMMENT=	Differential GPS over IP communication device
 
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 
-MAN1=	dgpsip.1
-PLIST_FILES=	bin/dgpsip
+PLIST_FILES=	bin/dgpsip \
+		man/man1/dgpsip.1.gz
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 
-$FreeBSD: net-mgmt/ehnt/files/patch-ehnt__client.c 327054 2013-09-12 11:40:30Z marck $
+$FreeBSD: net-mgmt/ehnt/files/patch-ehnt__client.c 340725 2014-01-22 17:40:44Z mat $
 
 --- ehnt_client.c.orig
 +++ ehnt_client.c

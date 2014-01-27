@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: sysutils/sysinfo/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sysinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sysinfo
 PORTVERSION=	1.0.1

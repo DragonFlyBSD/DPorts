@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/py-icalendar/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-icalendar/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	icalendar
 PORTVERSION=	3.5
@@ -15,7 +15,7 @@ LICENSE=	BSD
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>0:${PORTSDIR}/devel/py-dateutil \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}

@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: sysutils/dolly/Makefile 333273 2013-11-09 03:12:42Z vanilla $
+# $FreeBSD: sysutils/dolly/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dolly
 DISTVERSION=	0.58C

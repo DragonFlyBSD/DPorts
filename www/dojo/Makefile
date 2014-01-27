@@ -1,4 +1,4 @@
-# $FreeBSD: www/dojo/Makefile 336835 2013-12-18 14:31:07Z wg $
+# $FreeBSD: www/dojo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		dojo
 PORTVERSION=		1.9.2

@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/showgrammar/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/showgrammar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	showgrammar
 PORTVERSION=	1.1

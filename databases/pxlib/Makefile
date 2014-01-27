@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: databases/pxlib/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pxlib/Makefile 339922 2014-01-16 15:43:27Z sem $
 
 PORTNAME=	pxlib
 PORTVERSION=	0.6.3
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	SF
 
-MAINTAINER=	sem@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library to read various Paradox files
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser

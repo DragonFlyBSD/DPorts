@@ -1,5 +1,5 @@
 # Created by: adsharma@sharams.dhs.org
-# $FreeBSD: devel/py-ncurses/Makefile 337700 2013-12-27 10:36:49Z wg $
+# $FreeBSD: devel/py-ncurses/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ncurses
 PORTVERSION=	0.3

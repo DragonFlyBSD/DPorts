@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: net/nifmon/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/nifmon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nifmon
 PORTVERSION=	1.4

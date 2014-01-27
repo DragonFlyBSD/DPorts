@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd@rambler-co.ru>
-# $FreeBSD: devel/py-pyev/Makefile 331899 2013-10-28 21:37:00Z wg $
+# $FreeBSD: devel/py-pyev/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyev
 PORTVERSION=	0.9.0

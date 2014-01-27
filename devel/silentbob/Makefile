@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: devel/silentbob/Makefile 338361 2014-01-01 06:49:18Z tota $
+# $FreeBSD: devel/silentbob/Makefile 339784 2014-01-15 15:20:21Z tota $
 
 PORTNAME=	silentbob
 PORTVERSION=	3.0
@@ -18,17 +18,13 @@ PLIST_FILES=	bin/silentbob
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${RM} ${WRKSRC}/CMakeCache.txt
-	@${REINPLACE_CMD} -e 's|/usr/lib/silent_bob/|${PREFIX}/lib/silent_bob/|' \
+	@${REINPLACE_CMD} -e '/lib\/silent_bob/s|/usr|${PREFIX}|' \
 		${WRKSRC}/src/init.cxx
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: sysutils/hatop/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hatop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hatop
 PORTVERSION=	0.7.7

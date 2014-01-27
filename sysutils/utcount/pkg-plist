@@ -1,4 +1,3 @@
-@comment $FreeBSD: sysutils/utcount/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/count_client
 bin/count_gate
 bin/count_ipa

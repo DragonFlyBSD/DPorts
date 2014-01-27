@@ -1,5 +1,5 @@
 # Created by: Karl Dietz (Karl.Dietz@frankfurt.netsurf.de)
-# $FreeBSD: dns/dnsutl/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dnsutl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dnsutl
 PORTVERSION=	1.11

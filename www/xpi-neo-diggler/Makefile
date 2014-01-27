@@ -1,5 +1,5 @@
 # Created by: Harald Schmalzbauer <h.schmalzbauer@omnisec.de>
-# $FreeBSD: www/xpi-neo-diggler/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-neo-diggler/Makefile 341212 2014-01-26 15:12:21Z miwi $
 
 PORTNAME=	neo-diggler
 PORTVERSION=	1.0.6
@@ -16,6 +16,5 @@ XPI_FILES=	chrome.manifest install.rdf \
 		chrome/diggler.jar defaults/preferences/diggler.js
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

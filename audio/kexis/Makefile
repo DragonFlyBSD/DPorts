@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/kexis/Makefile 337980 2013-12-29 13:10:31Z antoine $
+# $FreeBSD: audio/kexis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kexis
 PORTVERSION=	0.2.2

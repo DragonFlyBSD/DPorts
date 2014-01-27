@@ -1,5 +1,5 @@
 # Created by: Manuel Giraud <manuel.giraud@gmail.com>
-# $FreeBSD: devel/pcl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pcl/Makefile 340993 2014-01-25 07:46:02Z danfe $
 
 PORTNAME=	pcl
 PORTVERSION=	1.6
@@ -9,19 +9,14 @@ MASTER_SITES=	http://www.xmailserver.org/
 MAINTAINER=	manuel.giraud@gmail.com
 COMMENT=	Portable Coroutine Library
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAN3=		pcl.3
-
 WRKSRC=		${WRKDIR}/lib${PORTNAME}-${PORTVERSION}
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+post-patch:	# required at least on sparc64
+	@${REINPLACE_CMD} -e '/<ucontext/ { x ; \
+		s,.*,#include <inttypes.h>, ; G ; }' ${WRKSRC}/pcl/pcl.c
 
-.if ${ARCH} == "sparc64"
-BROKEN=		Does not compile on sparc64
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

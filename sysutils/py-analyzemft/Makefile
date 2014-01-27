@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: sysutils/py-analyzemft/Makefile 328727 2013-09-29 20:04:00Z antoine $
+# $FreeBSD: sysutils/py-analyzemft/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	analyzemft
 PORTVERSION=	2.0.10
@@ -16,7 +16,7 @@ LICENSE_NAME=	Common Public License
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=analyzeMFT
 

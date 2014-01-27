@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/sqlitemanager/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/sqlitemanager/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlitemanager
 PORTVERSION=	1.2.3

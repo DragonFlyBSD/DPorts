@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: mail/ilohamail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/ilohamail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ilohamail
 PORTVERSION=	0.8.13

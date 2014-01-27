@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: misc/libhome/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/libhome/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libhome
 PORTVERSION=	0.10.2

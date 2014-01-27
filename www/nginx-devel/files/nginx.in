@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/nginx-devel/files/nginx.in 312147 2013-02-13 09:23:58Z osa $
+# $FreeBSD: www/nginx-devel/files/nginx.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: nginx
 # REQUIRE: LOGIN cleanvar

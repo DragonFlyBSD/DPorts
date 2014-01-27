@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake2-rogue/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/quake2-rogue/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rogue
 PORTVERSION=	3.20

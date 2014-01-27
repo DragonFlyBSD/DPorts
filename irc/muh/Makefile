@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: irc/muh/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/muh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	muh
 PORTVERSION=	2.2a

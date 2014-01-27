@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/py-mt/Makefile 338109 2013-12-30 13:08:40Z wg $
+# $FreeBSD: www/py-mt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mt
 PORTVERSION=	1.0
@@ -11,7 +11,7 @@ DISTNAME=	PyMT-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python module which provides Movable Type XML-RPC connectivity
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/PyMT.py
 

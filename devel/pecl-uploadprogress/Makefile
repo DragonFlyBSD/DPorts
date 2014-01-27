@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/pecl-uploadprogress/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-uploadprogress/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	uploadprogress
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -14,9 +14,7 @@ COMMENT=	Provides track progress of a file upload
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
-IGNORE_WITH_PHP=4
 
 CONFIGURE_ARGS=	--enable-uploadprogress
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

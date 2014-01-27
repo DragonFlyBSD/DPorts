@@ -1,5 +1,5 @@
 # Created by: Diego_Rocha <diegorocha1987@gmail.com>
-# $FreeBSD: ports-mgmt/pkgsearch/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/pkgsearch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pkgsearch
 PORTVERSION=	1.1.0

@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-pymarc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pymarc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pymarc
 PORTVERSION=	2.8.9
@@ -14,7 +14,7 @@ COMMENT=	Read Write And Modify MARC Bibliographic Data
 LICENSE=	BSD
 
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 
 regression-test: build

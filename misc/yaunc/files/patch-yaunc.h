@@ -1,5 +1,5 @@
 
-$FreeBSD: misc/yaunc/files/patch-yaunc.h 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: misc/yaunc/files/patch-yaunc.h 340725 2014-01-22 17:40:44Z mat $
 
 --- yaunc.h.orig	Fri Mar 14 07:14:11 2003
 +++ yaunc.h	Sun Apr 27 19:15:49 2003

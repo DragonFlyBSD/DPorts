@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: databases/py-bsddb3/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-bsddb3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bsddb3
 PORTVERSION=	5.3.0

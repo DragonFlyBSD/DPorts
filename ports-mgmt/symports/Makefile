@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/symports/Makefile 336237 2013-12-11 23:44:27Z eadler $
+# $FreeBSD: ports-mgmt/symports/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	symports
 PORTVERSION=	1.1

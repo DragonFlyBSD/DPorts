@@ -1,5 +1,5 @@
 # Created by: Christopher Nehren <apeiron@coitusmentis.info>
-# $FreeBSD: devel/log4net/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/log4net/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	log4net
 PORTVERSION=	1.2.10

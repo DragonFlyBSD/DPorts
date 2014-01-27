@@ -1,5 +1,5 @@
 # Created by: Gregory Bond <gnb@itga.com.au>
-# $FreeBSD: databases/py-sybase/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/py-sybase/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sybase
 PORTVERSION=	0.37

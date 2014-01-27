@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: mail/mailutils/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mailutils/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mailutils
 PORTVERSION=	2.2
@@ -98,7 +98,7 @@ CONFIGURE_ARGS+=	--without-ldap
 
 .if ${PORT_OPTIONS:MPYTHON}
 CONFIGURE_ARGS+=	--with-python --with-pythondir=${PYTHON_SITELIBDIR}
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 PLIST_SUB+=		PYTHON=""
 .else
 CONFIGURE_ARGS+=	--without-python

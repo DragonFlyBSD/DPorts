@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <sean@chittenden.org>
-# $FreeBSD: devel/ruby-rbprof/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-rbprof/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rbprof
 PORTVERSION=	0.2.1

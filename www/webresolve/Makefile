@@ -1,5 +1,5 @@
 # Created by: Joseph Scott <joseph@randomnetworks.com>
-# $FreeBSD: www/webresolve/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/webresolve/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	webresolve
 PORTVERSION=	0.2.0

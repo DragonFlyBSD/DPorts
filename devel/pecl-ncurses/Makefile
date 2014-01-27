@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans <jille@quis.cx>
-# $FreeBSD: devel/pecl-ncurses/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-ncurses/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	ncurses
 PORTVERSION=	1.0.2
@@ -18,7 +18,6 @@ USE_PHP=	yes
 USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 WANT_PHP_CLI=	yes
-IGNORE_WITH_PHP=4 52
+IGNORE_WITH_PHP=52
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

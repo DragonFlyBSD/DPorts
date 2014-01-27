@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: mail/nocc/Makefile 333120 2013-11-07 15:31:39Z ale $
+# $FreeBSD: mail/nocc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nocc
 PORTVERSION=	1.9.4

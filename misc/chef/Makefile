@@ -1,4 +1,4 @@
-# $FreeBSD: misc/chef/Makefile 330749 2013-10-18 14:14:25Z brooks $
+# $FreeBSD: misc/chef/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	chef
 PORTVERSION=	19930426

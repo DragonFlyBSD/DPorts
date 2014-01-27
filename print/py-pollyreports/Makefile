@@ -1,5 +1,5 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: print/py-pollyreports/Makefile 335622 2013-12-04 15:31:07Z culot $
+# $FreeBSD: print/py-pollyreports/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	PollyReports
 PORTVERSION=	1.7.6
@@ -12,7 +12,7 @@ COMMENT=	Band-oriented PDF report generation from database query
 
 LICENSE=	BSD
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/PollyReports.py \

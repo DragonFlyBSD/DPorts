@@ -1,5 +1,5 @@
 # Created by: wolpert
-# $FreeBSD: mail/rbl-milter/Makefile 335807 2013-12-07 05:06:24Z dinoex $
+# $FreeBSD: mail/rbl-milter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rbl-milter
 PORTVERSION=	0.30

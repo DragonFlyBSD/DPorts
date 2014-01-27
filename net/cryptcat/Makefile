@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net/cryptcat/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/cryptcat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cryptcat
 PORTVERSION=	1.2.1

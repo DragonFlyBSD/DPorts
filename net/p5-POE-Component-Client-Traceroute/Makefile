@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Client-Traceroute/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-POE-Component-Client-Traceroute/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	POE-Component-Client-Traceroute
 PORTVERSION=	0.21
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tjs@cdpa.nsysu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A non-blocking traceroute client
 
 RUN_DEPENDS=	p5-POE>=0.11:${PORTSDIR}/devel/p5-POE

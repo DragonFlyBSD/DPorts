@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <chat95@mbox.kyoto-inet.or.jp>
-# $FreeBSD: math/lapack++/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/lapack++/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lapack++
 PORTVERSION=	2.5.3

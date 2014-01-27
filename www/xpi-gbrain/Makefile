@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-gbrain/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-gbrain/Makefile 341205 2014-01-26 15:09:46Z miwi $
 
 PORTNAME=	gbrain
 PORTVERSION=	0.5.4
@@ -14,6 +14,5 @@ XPI_ID=		gbrain@andreas.gohr
 XPI_FILES=	chrome/gbrain.jar chrome.manifest defaults/preferences/gbrain.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

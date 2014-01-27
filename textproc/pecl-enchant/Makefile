@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: textproc/pecl-enchant/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-enchant/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	enchant
 DISTVERSION=	1.1.0
@@ -22,5 +22,4 @@ PHP_MODNAME=	${PORTNAME}
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

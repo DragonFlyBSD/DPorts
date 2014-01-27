@@ -1,4 +1,3 @@
-@comment $FreeBSD: lang/mono-basic/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/vbnc
 bin/vbnc2
 lib/mono/2.0/Microsoft.VisualBasic.dll

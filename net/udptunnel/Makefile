@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: net/udptunnel/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: net/udptunnel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	udptunnel
 PORTVERSION=	1.1

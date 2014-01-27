@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/sysfsutils/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sysfsutils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sysfsutils
 PORTVERSION=	2.1.0

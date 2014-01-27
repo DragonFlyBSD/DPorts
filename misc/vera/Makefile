@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko	<dima@chg.ru>
-# $FreeBSD: misc/vera/Makefile 338844 2014-01-06 08:38:49Z demon $
+# $FreeBSD: misc/vera/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vera
 PORTVERSION=	1.21a

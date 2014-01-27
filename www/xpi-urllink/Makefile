@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-urllink/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-urllink/Makefile 341219 2014-01-26 15:14:34Z miwi $
 
 PORTNAME=	urllink
 PORTVERSION=	2.03.3
@@ -16,6 +16,5 @@ XPI_FILES=	chrome/urllink.jar chrome.manifest \
 		defaults/preferences/urllink.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

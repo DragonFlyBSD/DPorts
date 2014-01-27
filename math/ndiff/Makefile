@@ -1,5 +1,5 @@
 # Created by: Stefan A. Deutscher (sad@mailaps.org)
-# $FreeBSD: math/ndiff/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ndiff/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ndiff
 PORTVERSION=	2.00

@@ -1,8 +1,8 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: security/p5-Digest-SHA-PurePerl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-SHA-PurePerl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Digest-SHA-PurePerl
-PORTVERSION=	5.81
+PORTVERSION=	5.85
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -14,19 +14,13 @@ USES=		perl5
 USE_PERL5=	configure
 
 PORTEXAMPLES=	dups
-MAN3=	Digest::SHA::PurePerl.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/EXE_FILES/d' ${WRKSRC}/Makefile.PL
 
-.if ${PORT_OPTIONS:MEXAMPLES}
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${PORTEXAMPLES:S,^,${WRKSRC}/examples/,} ${EXAMPLESDIR}
-
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${INSTALL_DATA} ${PORTEXAMPLES:S,^,${WRKSRC}/examples/,} ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>

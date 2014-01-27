@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <scjamorim@bsd.com.br>
-# $FreeBSD: shells/lshell/Makefile 337652 2013-12-27 08:34:05Z bapt $
+# $FreeBSD: shells/lshell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lshell
 PORTVERSION=	0.9.15.1

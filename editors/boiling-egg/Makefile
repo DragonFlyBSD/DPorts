@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: editors/boiling-egg/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/boiling-egg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	boiling-egg
 PORTVERSION=	0.02

@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul@it.ca>
-# $FreeBSD: security/proxycheck/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/proxycheck/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	proxycheck
 PORTVERSION=	0.49a

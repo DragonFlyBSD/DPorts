@@ -1,5 +1,5 @@
 # Created by: Benoit Calvez <benoit@litchis.org>
-# $FreeBSD: devel/py-pytemplate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pytemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pytemplate
 PORTVERSION=	1.5.1
@@ -13,7 +13,7 @@ COMMENT=	Pytemplate gives python developers a starting framework
 
 LICENSE=	GPLv3
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 EXAMPLESDIR=	${PREFIX}/share/examples/py-pytemplate

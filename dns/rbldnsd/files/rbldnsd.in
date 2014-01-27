@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/rbldnsd/files/rbldnsd.in 325891 2013-09-01 17:28:59Z feld $
+# $FreeBSD: dns/rbldnsd/files/rbldnsd.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: rbldnsd

@@ -1,5 +1,5 @@
 # Created by: roam@orbitel.bg
-# $FreeBSD: misc/bogosort/Makefile 328332 2013-09-26 03:18:22Z eadler $
+# $FreeBSD: misc/bogosort/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bogosort
 PORTVERSION=	0.4.2

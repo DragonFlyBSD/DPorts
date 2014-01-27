@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/fluctuate/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/fluctuate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fluctuate
 PORTVERSION=	1.40

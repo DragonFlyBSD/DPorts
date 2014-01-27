@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: devel/libopendaap/Makefile 329377 2013-10-04 20:15:46Z bapt $
+# $FreeBSD: devel/libopendaap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libopendaap
 PORTVERSION=	0.4.0

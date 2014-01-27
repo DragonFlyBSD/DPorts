@@ -1,5 +1,5 @@
 # Created by: Balwinder S "bsd" Dheeman <bsd@rubyforge.org>
-# $FreeBSD: devel/ta-lib/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ta-lib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ta-lib
 PORTVERSION=	0.4.0

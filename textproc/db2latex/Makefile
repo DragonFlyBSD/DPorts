@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/db2latex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/db2latex/Makefile 341164 2014-01-26 12:14:29Z mat $
 
 PORTNAME=	db2latex
 PORTVERSION=	0.8p1
@@ -17,21 +17,16 @@ RUN_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
 
 NO_BUILD=	yes
 
-.if !defined(NOPORTDOCS)
 PORTDOCS=	*
-.endif
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${DATADIR}
-	${CP} -R ${WRKSRC}/xsl ${DATADIR}
-	@${FIND} ${DATADIR} ! -type d | \
-		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${FIND} ${DATADIR} -type d | ${SORT} -r | \
-		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${CP} -R ${WRKSRC}/doc/ ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${CP} -R ${WRKSRC}/xsl ${STAGEDIR}${DATADIR}
+	@${FIND} ${STAGEDIR}${DATADIR} ! -type d | \
+		${SED} 's,^${STAGEDIR}${PREFIX}/,,' >> ${TMPPLIST}
+	@${FIND} ${STAGEDIR}${DATADIR} -type d | ${SORT} -r | \
+		${SED} 's,^${STAGEDIR}${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${CP} -R ${WRKSRC}/doc/ ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

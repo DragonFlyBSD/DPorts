@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-resourcepackage/Makefile 337712 2013-12-27 11:48:00Z wg $
+# $FreeBSD: devel/py-resourcepackage/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	resourcepackage
 PORTVERSION=	1.0.0

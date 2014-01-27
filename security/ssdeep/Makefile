@@ -1,8 +1,8 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: security/ssdeep/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ssdeep/Makefile 340038 2014-01-17 14:03:41Z nobutaka $
 
 PORTNAME=	ssdeep
-PORTVERSION=	2.9
+PORTVERSION=	2.10
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 

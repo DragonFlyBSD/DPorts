@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/cfv/Makefile 336520 2013-12-15 12:28:10Z wg $
+# $FreeBSD: security/cfv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cfv
 PORTVERSION=	1.18.3

@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-gearman/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-gearman/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gearman
 PORTVERSION=	2.0.2
@@ -13,7 +13,7 @@ COMMENT=	Gearman Library for Python
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes

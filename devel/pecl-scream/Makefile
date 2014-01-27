@@ -1,5 +1,5 @@
 # Created by: Volodymyr Kostyrko <c.kworr@gmail.com>
-# $FreeBSD: devel/pecl-scream/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-scream/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	scream
 DISTVERSION=	0.1.0
@@ -20,5 +20,4 @@ USE_PHPEXT=	yes
 test: build
 	@(cd ${WRKSRC} && ${MAKE} test)
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

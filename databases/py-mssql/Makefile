@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: databases/py-mssql/Makefile 328563 2013-09-28 11:13:15Z mva $
+# $FreeBSD: databases/py-mssql/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mssql
 PORTVERSION=	1.0.2
@@ -13,7 +13,7 @@ COMMENT=	Python database interface for simple MS-SQL access
 
 LIB_DEPENDS=	libsybdb.so:${PORTSDIR}/databases/freetds-msdblib
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	pymssql

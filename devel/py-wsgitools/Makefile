@@ -1,5 +1,5 @@
 # Created by: Klaus T. Aehlig <aehlig@linta.de>
-# $FreeBSD: devel/py-wsgitools/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-wsgitools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wsgitools
 PORTVERSION=	0.2.4
@@ -12,7 +12,7 @@ COMMENT=	Useful middlewares and filters for wsgi as well as scgi servers
 
 LICENSE=	GPLv2                    # or higher
 
-USE_PYTHON=	2.5-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 NO_STAGE=	yes

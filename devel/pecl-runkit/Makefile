@@ -1,5 +1,5 @@
 # Created by: Elias Mandouvalos <ocean@mail.gr>
-# $FreeBSD: devel/pecl-runkit/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-runkit/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	runkit
 PORTVERSION=	0.9
@@ -20,5 +20,4 @@ DEFAULT_PHP_VER=53
 
 CONFIGURE_ARGS=	--enable-runkit=classkit
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

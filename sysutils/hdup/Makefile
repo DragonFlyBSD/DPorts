@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: sysutils/hdup/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hdup/Makefile 339922 2014-01-16 15:43:27Z sem $
 
 PORTNAME=	hdup
 PORTVERSION=	2.0.14
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.miek.nl/projects/hdup2/ \
 		http://www.miek.nl/projects/hdup2/previous/
 
-MAINTAINER=	sem@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The little, spiffy, backup tool
 
 #WRKSRC=		${WRKDIR}/hdup2

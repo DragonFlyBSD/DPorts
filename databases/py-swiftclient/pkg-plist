@@ -1,3 +1,2 @@
-@comment $FreeBSD: databases/py-swiftclient/pkg-plist 335832 2013-12-07 15:01:54Z trociny $
 bin/swift
 man/man1/swift.1.gz

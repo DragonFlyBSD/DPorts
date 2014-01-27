@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/parchive/files/Makefile 317282 2013-05-03 22:16:19Z bapt $
+# $FreeBSD: archivers/parchive/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PREFIX?=/usr/local
 BINDIR=	${PREFIX}/bin

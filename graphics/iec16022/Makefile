@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/iec16022/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
+# $FreeBSD: graphics/iec16022/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iec16022
 PORTVERSION=	0.2.4

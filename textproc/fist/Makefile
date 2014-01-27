@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@stevenwills.com>
-# $FreeBSD: textproc/fist/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/fist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fist
 PORTVERSION=	4.0
@@ -10,8 +10,6 @@ MAINTAINER=	swills@FreeBSD.org
 COMMENT=	An emphatic message generator
 
 GNU_CONFIGURE=	yes
-MAN1=		fist.1
-PLIST_FILES=	bin/fist
+PLIST_FILES=	bin/fist man/man1/fist.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

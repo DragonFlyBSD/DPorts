@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/mctoolame-encoder/Makefile 338639 2014-01-04 10:07:40Z antoine $
+# $FreeBSD: audio/mctoolame-encoder/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mctoolame
 PORTVERSION=	0.1.a

@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-parsedatetime/Makefile 327942 2013-09-23 06:47:08Z lwhsu $
+# $FreeBSD: devel/py-parsedatetime/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	parsedatetime
 PORTVERSION=	1.1.2

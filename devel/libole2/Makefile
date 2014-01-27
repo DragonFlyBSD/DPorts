@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/libole2/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libole2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libole2
 PORTVERSION=	0.2.4

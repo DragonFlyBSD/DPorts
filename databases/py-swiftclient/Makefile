@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <trociny@FreeBSD.org>
-# $FreeBSD: databases/py-swiftclient/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: databases/py-swiftclient/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	swiftclient
 PORTVERSION=	1.8.0
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>=0.5.21:${PORTSDIR}/devel/py-pbr
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}simplejson>=2.0.9:${PORTSDIR}/devel/py-simplejson
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	python_${PORTNAME}

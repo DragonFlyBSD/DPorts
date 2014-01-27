@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tdb@FreeBSD.org>
-# $FreeBSD: devel/rubygem-piston/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-piston/Makefile 340902 2014-01-24 14:47:11Z miwi $
 
 PORTNAME=	piston
 PORTVERSION=	1.4.0
@@ -14,5 +14,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/piston
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

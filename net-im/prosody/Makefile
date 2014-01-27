@@ -1,5 +1,5 @@
 # Created by: Andrew Lewis <freeghb@gmail.com>
-# $FreeBSD: net-im/prosody/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/prosody/Makefile 340984 2014-01-25 05:06:30Z lx $
 
 PORTNAME=	prosody
 PORTVERSION=	0.8.2
@@ -26,7 +26,7 @@ WANT_LUA_VER=	5.1
 USE_GMAKE=	yes
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+="--ostype=freebsd"
+CONFIGURE_ARGS+=	--ostype=freebsd --c-compiler="${CC}" --linker="${LD}"
 CONFIGURE_ENV+=	LOCALBASE="${LOCALBASE}" PREFIX="${PREFIX}" LUA_SUFFIX="-${LUA_VER}" LUA_LIBDIR="${LUA_LIBDIR}" LUA_INCDIR="${LUA_INCDIR}"
 
 SUB_FILES=	pkg-install pkg-deinstall

@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-no-referrer/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-no-referrer/Makefile 341212 2014-01-26 15:12:21Z miwi $
 
 PORTNAME=	no-referrer
 PORTVERSION=	1.0.1
@@ -15,6 +15,5 @@ XPI_FILES=	chrome/icon.gif chrome/referrer.js chrome/referrer.xul \
 		chrome.manifest install.rdf
 XPI_DIRS=	chrome
 
-NO_STAGE=	yes
 .include "../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

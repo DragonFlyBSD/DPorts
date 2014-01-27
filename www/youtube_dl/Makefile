@@ -1,7 +1,7 @@
-# $FreeBSD: www/youtube_dl/Makefile 333037 2013-11-06 20:03:16Z sunpoet $
+# $FreeBSD: www/youtube_dl/Makefile 341248 2014-01-26 17:48:12Z ak $
 
 PORTNAME=	youtube_dl
-PORTVERSION=	2013.11.06
+PORTVERSION=	2014.01.23.4
 CATEGORIES=	www
 MASTER_SITES=	https://yt-dl.org/downloads/${PORTVERSION}/
 DISTNAME=	youtube-dl-${PORTVERSION}
@@ -16,7 +16,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
-USE_PYTHON_RUN=	2.6-2.7
+USE_PYTHON_RUN=	2
 ALL_TARGET=	youtube-dl
 
 OPTIONS_DEFINE=	BASH RTMPDUMP FFMPEG

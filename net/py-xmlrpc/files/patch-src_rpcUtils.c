@@ -1,5 +1,5 @@
 
-$FreeBSD: net/py-xmlrpc/files/patch-src_rpcUtils.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net/py-xmlrpc/files/patch-src_rpcUtils.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/rpcUtils.c.orig
 +++ src/rpcUtils.c

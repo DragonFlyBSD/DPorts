@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: misc/asr-manpages/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/asr-manpages/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asr-manpages
 PORTVERSION=	20000406

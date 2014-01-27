@@ -1,5 +1,5 @@
 # Created by: kirk@strauser.com
-# $FreeBSD: shells/bash-completion/Makefile 338885 2014-01-06 14:53:34Z adamw $
+# $FreeBSD: shells/bash-completion/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		bash-completion
 PORTVERSION=	2.1

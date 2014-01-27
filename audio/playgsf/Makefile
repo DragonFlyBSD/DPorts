@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/playgsf/Makefile 336820 2013-12-18 11:55:28Z ehaupt $
+# $FreeBSD: audio/playgsf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	playgsf
 PORTVERSION=	0.7.1

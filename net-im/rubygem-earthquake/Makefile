@@ -1,5 +1,5 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net-im/rubygem-earthquake/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/rubygem-earthquake/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	earthquake
 PORTVERSION=	1.0.0
@@ -26,5 +26,4 @@ USE_RAKE=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/earthquake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

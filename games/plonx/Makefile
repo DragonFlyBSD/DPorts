@@ -1,5 +1,5 @@
 # Created by: clive crous <clive@darkarts.co.za>
-# $FreeBSD: games/plonx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/plonx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plonx
 PORTVERSION=	0.03

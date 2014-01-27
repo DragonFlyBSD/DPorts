@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/lcab/Makefile 328240 2013-09-25 02:56:20Z vanilla $
+# $FreeBSD: archivers/lcab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lcab
 DISTVERSION=	1.0b12

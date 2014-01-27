@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-simpleparse/Makefile 337716 2013-12-27 11:51:46Z wg $
+# $FreeBSD: devel/py-simpleparse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simpleparse
 PORTVERSION=	2.1.1

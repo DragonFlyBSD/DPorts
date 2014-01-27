@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: russian/d1489/Makefile 328720 2013-09-29 17:55:04Z bsam $
+# $FreeBSD: russian/d1489/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	d1489
 PORTVERSION=	1.5.1

@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: chinese/celvis/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/celvis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	celvis
 PORTVERSION=	1.3

@@ -1,4 +1,4 @@
-# $FreeBSD: databases/vfront/Makefile 337999 2013-12-29 14:50:31Z crees $
+# $FreeBSD: databases/vfront/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vfront
 DISTVERSION=	0.96c

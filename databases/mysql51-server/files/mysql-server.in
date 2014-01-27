@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/mysql51-server/files/mysql-server.in 316456 2013-04-24 17:28:01Z crees $
+# $FreeBSD: databases/mysql51-server/files/mysql-server.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: mysql

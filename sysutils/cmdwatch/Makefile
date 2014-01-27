@@ -1,5 +1,5 @@
 # Created by: bjohnson@wedgie.org
-# $FreeBSD: sysutils/cmdwatch/Makefile 334191 2013-11-18 13:29:35Z beat $
+# $FreeBSD: sysutils/cmdwatch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cmdwatch
 PORTVERSION=	0.2.0

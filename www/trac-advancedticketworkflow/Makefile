@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/trac-advancedticketworkflow/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-advancedticketworkflow/Makefile 341180 2014-01-26 14:30:59Z miwi $
 
 PORTNAME=	advancedticketworkflow
 PORTVERSION=	0.10.3940
@@ -23,5 +23,4 @@ PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}dev
 PLIST_SUB+=	PORTVERSION=${PORTVERSION:R}dev PYTHONVERSION=${PYTHON_VER}
 PYDISTUTILS_NOEGGINFO=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

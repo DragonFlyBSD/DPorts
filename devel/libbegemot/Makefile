@@ -1,5 +1,5 @@
 # Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
-# $FreeBSD: devel/libbegemot/Makefile 337399 2013-12-24 23:37:14Z danilo $
+# $FreeBSD: devel/libbegemot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libbegemot
 PORTVERSION=	1.11

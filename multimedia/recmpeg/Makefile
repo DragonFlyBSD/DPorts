@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/recmpeg/Makefile 337561 2013-12-26 17:15:08Z wg $
+# $FreeBSD: multimedia/recmpeg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	recmpeg
 PORTVERSION=	1.0.5

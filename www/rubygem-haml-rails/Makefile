@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-haml-rails/Makefile 331570 2013-10-25 12:27:53Z swills $
+# $FreeBSD: www/rubygem-haml-rails/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	haml-rails
 PORTVERSION=	0.4
@@ -16,7 +16,5 @@ RUN_DEPENDS=	rubygem-actionpack>=3.1:${PORTSDIR}/www/rubygem-actionpack \
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <sutton@aardvark.apana.org.au>
-# $FreeBSD: games/yahtzee/Makefile 333965 2013-11-16 01:38:30Z danilo $
+# $FreeBSD: games/yahtzee/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yahtzee
 PORTVERSION=	1.0

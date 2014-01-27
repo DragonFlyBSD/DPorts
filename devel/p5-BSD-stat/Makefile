@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-BSD-stat/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD: devel/p5-BSD-stat/Makefile 339403 2014-01-11 08:07:39Z culot $
 
 PORTNAME=	BSD-stat
-PORTVERSION=	1.34
+PORTVERSION=	1.35
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-

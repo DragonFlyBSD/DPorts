@@ -1,5 +1,5 @@
 # Created by: Fanying Jen <fanying@fynet.com>
-# $FreeBSD: www/p5-WWW-Search-AltaVista/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD: www/p5-WWW-Search-AltaVista/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	WWW-Search-AltaVista
 PORTVERSION=	2.154

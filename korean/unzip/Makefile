@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: korean/unzip/Makefile 335157 2013-11-29 09:54:18Z ehaupt $
+# $FreeBSD: korean/unzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	korean archivers
 

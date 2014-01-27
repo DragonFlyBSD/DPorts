@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: math/randlib/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/randlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	randlib
 PORTVERSION=	1.3

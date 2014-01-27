@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-blogofile/Makefile 329129 2013-10-02 23:38:51Z wg $
+# $FreeBSD: www/py-blogofile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	blogofile
 PORTVERSION=	0.7.1

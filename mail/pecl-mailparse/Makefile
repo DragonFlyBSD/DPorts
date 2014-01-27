@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: mail/pecl-mailparse/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pecl-mailparse/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	mailparse
 PORTVERSION=	2.1.6
@@ -18,5 +18,4 @@ USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	mailparse
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

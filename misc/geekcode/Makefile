@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: misc/geekcode/Makefile 335902 2013-12-08 15:08:09Z danilo $
+# $FreeBSD: misc/geekcode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	geekcode
 PORTVERSION=	1.7.3

@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: www/trac-OhlohWidgetsMacro/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-OhlohWidgetsMacro/Makefile 341179 2014-01-26 14:30:44Z miwi $
 
 PORTNAME=	OhlohWidgetsMacro
 PORTVERSION=	0.2
@@ -18,5 +18,4 @@ LICENSE=	MIT
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

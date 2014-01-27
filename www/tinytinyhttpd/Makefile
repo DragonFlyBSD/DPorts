@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: www/tinytinyhttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tinytinyhttpd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tinytinyhttpd
 PORTVERSION=	0.0.11

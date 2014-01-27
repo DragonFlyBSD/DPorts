@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Search-Odeum/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Search-Odeum/Makefile 340672 2014-01-21 23:21:10Z mat $
 
 PORTNAME=	Search-Odeum
 PORTVERSION=	0.02
@@ -12,16 +12,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Perl interface to the Odeum inverted index API
 
-LIB_DEPENDS=	qdbm:${PORTSDIR}/databases/qdbm
+LIB_DEPENDS=	libqdbm.so:${PORTSDIR}/databases/qdbm
 
 CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	CFLAGS="${CFLAGS}"
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Search::Odeum.3 \
-		Search::Odeum::Document.3 \
-		Search::Odeum::Result.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

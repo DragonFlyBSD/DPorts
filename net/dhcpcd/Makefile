@@ -1,5 +1,5 @@
 # Created by: Roy Marples <roy@marples.name>
-# $FreeBSD: net/dhcpcd/Makefile 331931 2013-10-29 06:13:15Z delphij $
+# $FreeBSD: net/dhcpcd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dhcpcd
 PORTVERSION=	5.5.6

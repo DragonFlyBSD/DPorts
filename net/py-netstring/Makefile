@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: net/py-netstring/Makefile 337863 2013-12-28 11:35:17Z wg $
+# $FreeBSD: net/py-netstring/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	netstring
 PORTVERSION=	1.14

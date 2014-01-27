@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/tumgreyspf/Makefile 335694 2013-12-05 20:26:35Z sunpoet $
+# $FreeBSD: mail/tumgreyspf/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	tumgreyspf
 PORTVERSION=	1.37
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/spf.py:${PORTSDIR}/mail/py-spf
 OPTIONS_DEFINE=	DOCS
 
 NO_BUILD=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=		shebangfix
 
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall

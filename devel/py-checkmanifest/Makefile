@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-checkmanifest/Makefile 335994 2013-12-09 14:59:00Z wg $
+# $FreeBSD: devel/py-checkmanifest/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	checkmanifest
 PORTVERSION=	0.17
@@ -16,7 +16,7 @@ LICENSE=	MIT
 PORTDOCS=	README.rst \
 		CHANGES.rst
 
-USE_PYTHON=		2.7+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	check_manifest

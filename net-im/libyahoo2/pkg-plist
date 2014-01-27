@@ -1,4 +1,3 @@
-@comment $FreeBSD: net-im/libyahoo2/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 include/libyahoo2/yahoo2.h
 include/libyahoo2/yahoo2_callbacks.h
 include/libyahoo2/yahoo2_types.h

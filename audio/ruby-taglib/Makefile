@@ -1,5 +1,5 @@
 # Created by: TOMIDA, Hiroaki <t.hiroaki.209 at gmail.com>
-# $FreeBSD: audio/ruby-taglib/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/ruby-taglib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	taglib
 PORTVERSION=	1.1

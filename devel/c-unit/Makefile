@@ -1,5 +1,5 @@
 # Created by: Takanori Sawada <tak.swd@gmail.com>
-# $FreeBSD: devel/c-unit/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/c-unit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	c-unit
 DISTVERSION=	1.1.1

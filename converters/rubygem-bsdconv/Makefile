@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/rubygem-bsdconv/Makefile 327830 2013-09-21 15:42:02Z sunpoet $
+# $FreeBSD: converters/rubygem-bsdconv/Makefile 340899 2014-01-24 14:45:58Z miwi $
 
 PORTNAME=	bsdconv
 PORTVERSION=	11.1.0
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=--with-bsdconv-dir=${LOCALBASE}
 
 GEM_NAME=	${DISTNAME}
 
-NO_STAGE=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes

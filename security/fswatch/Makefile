@@ -1,5 +1,5 @@
 # Created by: dominik karczmarski <dominik@karczmarski.com>
-# $FreeBSD: security/fswatch/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/fswatch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		fswatch
 DISTVERSION=		0.02beta5

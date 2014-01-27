@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: benchmarks/himenobench/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: benchmarks/himenobench/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	himenobench
 PORTVERSION=	2004.08.16

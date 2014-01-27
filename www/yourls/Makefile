@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: www/yourls/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/yourls/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		yourls
 DISTVERSION=		1.5.1

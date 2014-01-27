@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov <andy@icc.surw.chel.su>
-# $FreeBSD: games/ztrack/Makefile 333967 2013-11-16 01:49:31Z danilo $
+# $FreeBSD: games/ztrack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ztrack
 PORTVERSION=	1.0

@@ -1,5 +1,5 @@
 # Created by: Phil Oleson
-# $FreeBSD: multimedia/dv2sub/Makefile 331316 2013-10-22 20:22:46Z tijl $
+# $FreeBSD: multimedia/dv2sub/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dv2sub
 PORTVERSION=	0.3

@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-xmlsec/Makefile 338089 2013-12-30 11:34:40Z wg $
+# $FreeBSD: security/py-xmlsec/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmlsec
 PORTVERSION=	0.3.0

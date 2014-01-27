@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/pyst/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pyst/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyst
 PORTVERSION=	0.4.38
@@ -12,7 +12,7 @@ COMMENT=	Python interface to allow Asterisk programming
 LICENSE=	LGPL21 PSFL
 LICENSE_COMB=	dual
 
-USE_PYTHON=	2.5-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 PORTDOCS=	README README.html ChangeLog

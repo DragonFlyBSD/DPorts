@@ -1,5 +1,5 @@
 # Created by: Aron Schlesinger <as@bsdgroup.de>
-# $FreeBSD: german/bsdpaste/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/bsdpaste/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	bsdpaste
 PORTVERSION=	1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	german ruby
 MASTER_SITES=	http://people.bsdgroup.de/~as/bsdpaste/
 DISTNAME=	${PORTNAME}-${DISTVERSION}
 
-MAINTAINER=	as@bsdgroup.de
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pastebin web application to upload and read text on a webserver
 
 NO_BUILD=	yes

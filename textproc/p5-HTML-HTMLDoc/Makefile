@@ -1,5 +1,5 @@
 # Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
-# $FreeBSD: textproc/p5-HTML-HTMLDoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-HTML-HTMLDoc/Makefile 340610 2014-01-21 14:03:59Z mat $
 
 PORTNAME=	HTML-HTMLDoc
 PORTVERSION=	0.10
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::HTMLDoc.3 HTML::HTMLDoc::PDF.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

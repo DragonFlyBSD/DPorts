@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: textproc/mguesser/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/mguesser/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mguesser
 PORTVERSION=	0.4

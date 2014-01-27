@@ -1,5 +1,5 @@
 # Created by: Andrey Simonenko
-# $FreeBSD: databases/ipa_sdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ipa_sdb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ipa_sdb
 PORTVERSION=	1.1.1
@@ -23,33 +23,9 @@ RULES_DESC=		Enable static rules support
 LIMITS_DESC=		Enable limits support
 THRESHOLDS_DESC=	Enable thresholds support
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+AUTORULES_CONFIGURE_OFF=	--disable-autorules
+RULES_CONFIGURE_OFF=		--disable-rules
+LIMITS_CONFIGURE_OFF=		--disable-limits
+THRESHOLDS_CONFIGURE_OFF=	--disable-thresholds
 
-.if empty(PORT_OPTIONS:MAUTORULES)
-CONFIGURE_ARGS+=	--disable-autorules
-.endif
-
-.if empty(PORT_OPTIONS:MRULES)
-CONFIGURE_ARGS+=	--disable-rules
-.endif
-
-.if empty(PORT_OPTIONS:MLIMITS)
-CONFIGURE_ARGS+=	--disable-limits
-.endif
-
-.if empty(PORT_OPTIONS:MTHRESHOLDS)
-CONFIGURE_ARGS+=	--disable-thresholds
-.endif
-
-.include <bsd.port.pre.mk>
-
-PLIST_FILES=	bin/ipa_sdb_dump include/ipa_sdb.h include/ipa_sdb_config.h \
-		lib/ipa_db_sdb.so lib/ipa_st_sdb.so \
-		lib/ipa_db_sdb.la lib/ipa_st_sdb.la
-
-MAN5=		ipa_sdb.5
-MAN8=		ipa_db_sdb.8 ipa_st_sdb.8 ipa_sdb_dump.8
-MANLANG=	"" ru.KOI8-R
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

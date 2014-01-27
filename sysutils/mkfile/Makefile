@@ -1,5 +1,5 @@
 # Created by: HATANO Tomomi <hatanou@infolab.ne.jp>
-# $FreeBSD: sysutils/mkfile/Makefile 331648 2013-10-26 03:43:34Z danilo $
+# $FreeBSD: sysutils/mkfile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mkfile
 PORTVERSION=	1.1.3

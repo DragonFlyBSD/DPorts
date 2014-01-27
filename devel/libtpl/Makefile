@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/libtpl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libtpl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libtpl
 PORTVERSION=	1.6
@@ -8,6 +8,8 @@ MASTER_SITES=	GH
 
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Tpl is a library for serializing C data
+
+OPTIONS_DEFINE=	DOCS
 
 LICENSE=	BSD
 
@@ -27,15 +29,10 @@ PLIST_FILES=	lib/libtpl.la lib/libtpl.a \
 
 PORTDOCS=	ChangeLog.txt examples.txt userguide.txt compiling.txt
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>

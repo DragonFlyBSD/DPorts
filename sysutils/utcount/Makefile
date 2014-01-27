@@ -1,5 +1,5 @@
 # Created by: Denis N. Peplin <info@volginfo.ru>
-# $FreeBSD: sysutils/utcount/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/utcount/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	utcount
 PORTVERSION=	0.1

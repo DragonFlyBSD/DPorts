@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan@FreeBSD.org>
-# $FreeBSD: devel/pecl-bcompiler/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-bcompiler/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	bcompiler
 PORTVERSION=	1.0.2
@@ -19,5 +19,4 @@ IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--enable-bcompiler
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

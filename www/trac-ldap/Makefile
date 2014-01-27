@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-ldap/Makefile 337578 2013-12-26 17:54:58Z wg $
+# $FreeBSD: www/trac-ldap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ldap
 PORTVERSION=	0.5.1

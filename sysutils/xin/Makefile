@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/xin/Makefile 334050 2013-11-17 02:58:44Z vanilla $
+# $FreeBSD: sysutils/xin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xin
 PORTVERSION=	1.0.0

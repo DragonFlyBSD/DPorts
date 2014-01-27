@@ -1,4 +1,4 @@
-# $FreeBSD: net/openntpd/Makefile 329324 2013-10-04 15:30:43Z naddy $
+# $FreeBSD: net/openntpd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openntpd
 PORTVERSION=	4.6

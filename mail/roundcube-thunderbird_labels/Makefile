@@ -1,5 +1,5 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: mail/roundcube-thunderbird_labels/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/roundcube-thunderbird_labels/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	thunderbird_labels
 PORTVERSION=	0.8.1

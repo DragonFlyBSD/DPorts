@@ -1,5 +1,5 @@
 # Created by: dindin@dindin.ru
-# $FreeBSD: russian/fortune-bashorgru/Makefile 328715 2013-09-29 17:22:55Z bsam $
+# $FreeBSD: russian/fortune-bashorgru/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fortune-bashorgru
 PORTVERSION=	20080903

@@ -1,5 +1,5 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: devel/pecl-APCu/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-APCu/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	APCu
 PORTVERSION=	4.0.2
@@ -22,8 +22,7 @@ USE_PHP_BUILD=	yes
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	${PORTNAME:tl}
-IGNORE_WITH_PHP=4 52
+IGNORE_WITH_PHP=52
 WRKSRC=		${WRKDIR}/${PORTNAME:tl}-${PORTVERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

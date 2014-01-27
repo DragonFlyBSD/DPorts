@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: misc/teseq/Makefile 328757 2013-09-29 23:31:56Z danilo $
+# $FreeBSD: misc/teseq/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	teseq
 PORTVERSION=	1.1

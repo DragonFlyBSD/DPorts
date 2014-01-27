@@ -1,5 +1,5 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: chinese/phpbb3-tw/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD: chinese/phpbb3-tw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11

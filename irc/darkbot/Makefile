@@ -1,9 +1,9 @@
 # Created by: A. Gabriel <backslash@BSDCode.org>
-# $FreeBSD: irc/darkbot/Makefile 330473 2013-10-16 02:55:17Z eadler $
+# $FreeBSD: irc/darkbot/Makefile 341057 2014-01-25 16:54:32Z miwi $
 
 PORTNAME=	darkbot
 PORTVERSION=	6f6.r6
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	irc
 MASTER_SITES=	http://darkbot.sourceforge.net/archive/unix/ \
@@ -21,7 +21,7 @@ PLIST_DIRSTRY=	%%ETCDIR%%/logs/ %%ETCDIR%%/dat/ %%ETCDIR%%
 
 .include <bsd.port.options.mk>
 
-post-patch:
+pre-configure:
 	${CP} ${WRKSRC}/configure ${WRKSRC}/config
 
 do-install:

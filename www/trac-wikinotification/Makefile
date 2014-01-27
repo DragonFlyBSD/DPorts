@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-wikinotification/Makefile 337593 2013-12-26 18:37:37Z wg $
+# $FreeBSD: www/trac-wikinotification/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wikinotificationplugin
 PORTVERSION=	0.2.1

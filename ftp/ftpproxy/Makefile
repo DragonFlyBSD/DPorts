@@ -1,5 +1,5 @@
 # Created by: Philippe Le Berre <philippe@le-berre.com>
-# $FreeBSD: ftp/ftpproxy/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/ftpproxy/Makefile 341097 2014-01-25 20:47:31Z bapt $
 
 PORTNAME=	ftpproxy
 PORTVERSION=	1.2.3
@@ -10,22 +10,21 @@ MASTER_SITES=	http://www.ftpproxy.org/download/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	philippe@le-berre.com
-COMMENT=	A ftp proxy
+COMMENT=	ftp proxy
 
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_JOBS_UNSAFE=	yes
+MAKE_ARGS=	CC=${CC}
 
-MAN1=		ftp.proxy.1
-MANCOMPRESSED=	no
-PLIST_FILES=	sbin/ftp.proxy
+PLIST_FILES=	sbin/ftp.proxy \
+		man/man1/ftp.proxy.1.gz
 
-NO_STAGE=	yes
 pre-build:
 	@${REINPLACE_CMD} -e 's|^CFLAGS.*|CFLAGS=${CFLAGS} \
 	     -DVERSION=\\"${PORTVERSION}\\"|' ${WRKSRC}/src/Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/src/ftp.proxy ${PREFIX}/sbin
-	@${INSTALL_MAN} ${WRKSRC}/doc/ftp.proxy.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ftp.proxy ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/doc/ftp.proxy.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>

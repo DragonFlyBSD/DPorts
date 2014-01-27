@@ -1,4 +1,3 @@
-@comment $FreeBSD: sysutils/cfengine34/pkg-plist 311268 2013-01-30 20:03:47Z cy $
 libexec/cfengine/libpromises.la
 libexec/cfengine/libpromises.so
 libexec/cfengine/libpromises.so.1

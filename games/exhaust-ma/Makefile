@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/exhaust-ma/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: games/exhaust-ma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	exhaust-ma
 PORTVERSION=	1.9

@@ -1,5 +1,5 @@
 
-$FreeBSD: www/webresolve/files/patch-webresolve.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: www/webresolve/files/patch-webresolve.c 340725 2014-01-22 17:40:44Z mat $
 
 --- webresolve.c	2001/03/14 14:44:11	1.1
 +++ webresolve.c	2001/03/14 14:44:26

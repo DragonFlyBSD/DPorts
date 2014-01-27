@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: graphics/libpcd/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libpcd/Makefile 341110 2014-01-25 21:25:09Z bapt $
 
 PORTNAME=	libpcd
 PORTVERSION=	1.0.1
@@ -8,13 +8,12 @@ MASTER_SITES=	http://www.kraxel.org/releases/libpcd/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A library for reading PhotoCD images
+COMMENT=	Library for reading PhotoCD images
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 
-USE_GMAKE=	yes
-MAKEFILE=	${WRKSRC}/GNUmakefile
+USES=		gmake
+MAKEFILE=	GNUmakefile
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

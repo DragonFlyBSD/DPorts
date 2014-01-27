@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: lang/php52-extensions/Makefile 327957 2013-09-23 09:19:17Z mat $
+# $FreeBSD: lang/php52-extensions/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	php52
 PORTVERSION=	1.3

@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/fig2sxd/Makefile 331587 2013-10-25 14:17:10Z ehaupt $
+# $FreeBSD: graphics/fig2sxd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fig2sxd
 PORTVERSION=	0.21

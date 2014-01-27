@@ -1,4 +1,3 @@
-@comment $FreeBSD: chinese/FreeWnn-server/pkg-plist 320862 2013-06-13 23:49:58Z miwi $
 bin/cWnn4/catod
 bin/cWnn4/catof
 bin/cWnn4/cdtoa

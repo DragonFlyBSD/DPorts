@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: german/alt-aspell/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/alt-aspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	alt-aspell
 DISTVERSION=	6-de-20030222-1

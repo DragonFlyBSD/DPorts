@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/py-twitter/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: net/py-twitter/Makefile 341222 2014-01-26 15:25:32Z mva $
 
 PORTNAME=	twitter
 PORTVERSION=	1.1
@@ -17,9 +17,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httplib2>=0:${PORTSDIR}/www/py-httplib2 \
 		${PYTHON_PKGNAMEPREFIX}oauth2>=0:${PORTSDIR}/net/py-oauth2 \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=0:${PORTSDIR}/devel/py-simplejson
 
-NO_STAGE=	yes
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-PYDISTUTILS_PKGNAME=	python_twitter
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>

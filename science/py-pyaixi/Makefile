@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-pyaixi/Makefile 335895 2013-12-08 14:12:47Z wg $
+# $FreeBSD: science/py-pyaixi/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pyaixi
 PORTVERSION=	1.0.3
@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LICENSE_PERMS=	auto-accept dist-mirror pkg-mirror pkg-sell dist-sell
 
 USES=	dos2unix
-USE_PYTHON=		2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 

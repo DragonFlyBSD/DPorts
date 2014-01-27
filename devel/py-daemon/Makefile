@@ -1,5 +1,5 @@
 # Created by: jessekempf@gmail.com
-# $FreeBSD: devel/py-daemon/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-daemon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	daemon
 PORTVERSION=	1.5.5

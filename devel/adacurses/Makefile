@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: devel/adacurses/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/adacurses/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		adacurses
 PORTVERSION=		5.9

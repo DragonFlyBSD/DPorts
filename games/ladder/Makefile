@@ -1,5 +1,5 @@
 # Created by: Stefan Zehl <sec@42.org>
-# $FreeBSD: games/ladder/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ladder/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ladder
 PORTVERSION=	1.00

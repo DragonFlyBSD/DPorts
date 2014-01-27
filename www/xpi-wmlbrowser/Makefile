@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-wmlbrowser/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-wmlbrowser/Makefile 341220 2014-01-26 15:14:57Z miwi $
 
 PORTNAME=	wmlbrowser
 PORTVERSION=	0.7.28
@@ -14,6 +14,5 @@ XPI_FILES=	chrome/wmlbrowser.jar components/wml-service.js defaults/preferences/
 		install.js install.rdf chrome.manifest
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>

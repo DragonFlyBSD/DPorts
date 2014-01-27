@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@chg.ru>
-# $FreeBSD: benchmarks/polygraph/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD: benchmarks/polygraph/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	polygraph
 PORTVERSION=	4.3.2
@@ -9,10 +9,10 @@ MASTER_SITES=	http://www.web-polygraph.org/downloads/srcs/ \
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	as@bsdgroup.de
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A benchmarking tool for Web proxies
 
-LICENSE=	AL2
+LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GCC=	4.2+

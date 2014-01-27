@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: security/py-trustedpickle/Makefile 334286 2013-11-19 07:42:41Z bapt $
+# $FreeBSD: security/py-trustedpickle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	trustedpickle
 PORTVERSION=	0.02

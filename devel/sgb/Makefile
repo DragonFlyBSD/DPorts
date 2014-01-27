@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: devel/sgb/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sgb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sgb
 PORTVERSION=	20090810

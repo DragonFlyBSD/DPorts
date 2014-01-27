@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/py-instant/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: devel/py-instant/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	instant
 PORTVERSION=	${MMVERSION}.0
@@ -14,7 +14,7 @@ LICENSE=	LGPL3
 
 RUN_DEPENDS=	swig2.0:${PORTSDIR}/devel/swig20
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	instant
 

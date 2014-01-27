@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/atom/Makefile 338028 2013-12-29 17:08:28Z crees $
+# $FreeBSD: textproc/atom/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	atom
 PORTVERSION=	1.0

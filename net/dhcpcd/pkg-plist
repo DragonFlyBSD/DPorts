@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/dhcpcd/pkg-plist 331931 2013-10-29 06:13:15Z delphij $
 etc/dhcpcd.conf
 sbin/dhcpcd
 libexec/dhcpcd-hooks/50-ypbind

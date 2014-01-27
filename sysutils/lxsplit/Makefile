@@ -1,5 +1,5 @@
 # Created by: kiesel@schlund.de
-# $FreeBSD: sysutils/lxsplit/Makefile 333873 2013-11-15 14:58:59Z vanilla $
+# $FreeBSD: sysutils/lxsplit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lxsplit
 PORTVERSION=	0.2.4

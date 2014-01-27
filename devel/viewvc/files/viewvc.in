@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: devel/viewvc/files/viewvc.in 328494 2013-09-27 15:53:09Z ohauer $
+# $FreeBSD: devel/viewvc/files/viewvc.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: viewvc
 # REQUIRE: LOGIN

@@ -1,5 +1,5 @@
 # Created by: Alex Pesternikov <apesternikov@page2rss.com>
-# $FreeBSD: devel/py-cog/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-cog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cog
 PORTVERSION=	2.3

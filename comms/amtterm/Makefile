@@ -1,4 +1,4 @@
-# $FreeBSD: comms/amtterm/Makefile 335882 2013-12-08 13:09:07Z crees $
+# $FreeBSD: comms/amtterm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	amtterm
 PORTVERSION=	1.3

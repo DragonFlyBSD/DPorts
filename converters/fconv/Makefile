@@ -1,5 +1,5 @@
 # Created by: Chris Costello <chris@FreeBSD.org>
-# $FreeBSD: converters/fconv/Makefile 339230 2014-01-09 13:30:29Z bapt $
+# $FreeBSD: converters/fconv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fconv
 PORTVERSION=	1.1
