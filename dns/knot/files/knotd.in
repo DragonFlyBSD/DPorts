@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/knot/files/knotd.in 337542 2013-12-26 16:02:50Z rakuco $
+# $FreeBSD: dns/knot/files/knotd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: knot
 # REQUIRE: SERVERS cleanvar
