@@ -1,5 +1,5 @@
 # Created by: jpaetzel
-# $FreeBSD: www/py-dojango/Makefile 338329 2013-12-31 16:33:23Z wg $
+# $FreeBSD: www/py-dojango/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dojango
 PORTVERSION=	0.5.6
