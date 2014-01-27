@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: math/physcalc/Makefile 335140 2013-11-29 02:59:16Z eadler $
+# $FreeBSD: math/physcalc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	physcalc
 PORTVERSION=	2.4
