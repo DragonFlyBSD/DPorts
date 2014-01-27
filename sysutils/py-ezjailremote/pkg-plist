@@ -1,4 +1,3 @@
-@comment $FreeBSD: sysutils/py-ezjailremote/pkg-plist 317204 2013-05-03 13:30:47Z koobs $
 bin/ezjail-remote
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/PKG-INFO
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/EGG-INFO/SOURCES.txt
