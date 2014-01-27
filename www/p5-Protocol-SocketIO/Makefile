@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Protocol-SocketIO/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD: www/p5-Protocol-SocketIO/Makefile 339473 2014-01-12 03:52:17Z sunpoet $
 
 PORTNAME=	Protocol-SocketIO
-PORTVERSION=	0.04
+PORTVERSION=	0.06
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:VTI
@@ -16,7 +16,7 @@ LICENSE=	ART20
 BUILD_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	configure
+USE_PERL5=	modbuild
 USES=		perl5
 
 .include <bsd.port.mk>
