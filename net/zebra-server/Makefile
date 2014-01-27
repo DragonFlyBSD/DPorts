@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/zebra-server/Makefile 331781 2013-10-27 15:17:05Z pawel $
+# $FreeBSD: net/zebra-server/Makefile 340019 2014-01-17 09:18:48Z gahr $
 
 PORTNAME=	zebra-server
 PORTVERSION=	2.0.55
@@ -18,8 +18,7 @@ CONFIGURE_ARGS=	--with-yaz=${LOCALBASE}/bin \
 		--with-tclconfig=${TCL_LIBDIR} \
 		--with-iconv=${ICONV_PREFIX} --with-expat=${LOCALBASE}
 
-USES=		iconv
+USES=		iconv tcl
 USE_LDCONFIG=	yes
-USE_TCL=	yes
 
 .include <bsd.port.mk>
