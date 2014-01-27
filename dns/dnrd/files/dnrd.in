@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: dns/dnrd/files/dnrd.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: dns/dnrd/files/dnrd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: dnrd
 # REQUIRE: DAEMON NETWORKING SERVERS
