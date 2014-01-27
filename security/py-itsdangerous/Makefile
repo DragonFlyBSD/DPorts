@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: security/py-itsdangerous/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-itsdangerous/Makefile 340894 2014-01-24 13:34:31Z olivierd $
 
 PORTNAME=	itsdangerous
 PORTVERSION=	0.23
@@ -11,22 +11,16 @@ MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Various helpers to pass data in untrusted environments
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	JSON
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
-
-.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MJSON}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>=3.0:${PORTSDIR}/devel/py-simplejson
 .endif
 
-.if ${PYTHON_REL} >= 320
-.include "${PORTSDIR}/devel/py-virtualenv/files/py3k-fix-pkg-plist.inc"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
