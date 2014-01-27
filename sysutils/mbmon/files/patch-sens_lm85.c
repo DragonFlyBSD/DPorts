@@ -1,4 +1,4 @@
-$FreeBSD: sysutils/mbmon/files/patch-sens_lm85.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/mbmon/files/patch-sens_lm85.c 340725 2014-01-22 17:40:44Z mat $
 
 --- sens_lm85.c	Mon Oct 13 10:12:58 2003
 +++ sens_lm85.c	Wed Dec 21 15:37:56 2005

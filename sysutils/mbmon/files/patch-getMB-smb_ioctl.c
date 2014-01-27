@@ -1,4 +1,4 @@
-$FreeBSD: sysutils/mbmon/files/patch-getMB-smb_ioctl.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/mbmon/files/patch-getMB-smb_ioctl.c 340725 2014-01-22 17:40:44Z mat $
 
 --- getMB-smb_ioctl.c.orig	Sat Jul  5 18:15:24 2003
 +++ getMB-smb_ioctl.c	Fri Dec 16 17:56:54 2005

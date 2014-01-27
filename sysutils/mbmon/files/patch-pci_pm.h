@@ -1,4 +1,4 @@
-$FreeBSD: sysutils/mbmon/files/patch-pci_pm.h 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/mbmon/files/patch-pci_pm.h 340725 2014-01-22 17:40:44Z mat $
 
 --- pci_pm.h	Wed Jul 14 18:02:49 2004
 +++ pci_pm.h	Fri Dec 30 23:06:26 2005

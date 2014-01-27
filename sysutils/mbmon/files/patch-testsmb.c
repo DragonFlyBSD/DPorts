@@ -1,4 +1,4 @@
-$FreeBSD: sysutils/mbmon/files/patch-testsmb.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/mbmon/files/patch-testsmb.c 340725 2014-01-22 17:40:44Z mat $
 
 --- testsmb.c	Thu Aug 12 07:34:48 2004
 +++ testsmb.c	Fri Dec 30 23:11:29 2005
