@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: archivers/qpress/Makefile 337532 2013-12-26 14:56:40Z bapt $
+# $FreeBSD: archivers/qpress/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qpress
 PORTVERSION=	1.1
