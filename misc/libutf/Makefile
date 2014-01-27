@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <gagnon__s@videotron.ca>
-# $FreeBSD: misc/libutf/Makefile 335983 2013-12-09 13:56:40Z danilo $
+# $FreeBSD: misc/libutf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libutf
 PORTVERSION=	2.10
