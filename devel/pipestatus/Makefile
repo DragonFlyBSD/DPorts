@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pipestatus/Makefile 328543 2013-09-28 03:14:41Z eadler $
+# $FreeBSD: devel/pipestatus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pipestatus
 PORTVERSION=	0.6.0
