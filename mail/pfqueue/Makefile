@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/pfqueue/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pfqueue/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pfqueue
 PORTVERSION=	0.5.6
