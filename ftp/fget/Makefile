@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: ftp/fget/Makefile 337545 2013-12-26 16:17:25Z bapt $
+# $FreeBSD: ftp/fget/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fget
 PORTVERSION=	1.3.3
