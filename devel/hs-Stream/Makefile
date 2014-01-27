@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: devel/hs-Stream/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: devel/hs-Stream/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Stream
 PORTVERSION=	0.4.6.1
