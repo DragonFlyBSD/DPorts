@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: databases/pecl-pdo_user/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pecl-pdo_user/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	pdo_user
 PORTVERSION=	0.3.0
@@ -21,5 +21,4 @@ USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	pdo_user
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
