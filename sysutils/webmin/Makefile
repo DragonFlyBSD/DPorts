@@ -1,8 +1,8 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: sysutils/webmin/Makefile 329769 2013-10-08 10:50:23Z olgeni $
+# $FreeBSD: sysutils/webmin/Makefile 339680 2014-01-14 11:25:55Z olgeni $
 
 PORTNAME=	webmin
-PORTVERSION=	1.660
+PORTVERSION=	1.670
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.webmin.com/updates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf \
@@ -24,7 +24,7 @@ USE_RC_SUBR=	webmin
 SUB_LIST=	PERL5=${PERL}
 SUB_FILES=	pkg-message
 
-WEBMIN_MODULES=
+WEBMIN_MODULES=	acl-1.670-2.wbm.gz
 
 post-extract:
 	@${RM} -f ${WRKSRC}/mount/freebsd-mounts-?
