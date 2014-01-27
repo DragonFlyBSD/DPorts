@@ -1,5 +1,5 @@
 # Created by: bsdx
-# $FreeBSD: sysutils/bchunk/Makefile 333238 2013-11-08 15:06:28Z vanilla $
+# $FreeBSD: sysutils/bchunk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bchunk
 PORTVERSION=	1.2.0
