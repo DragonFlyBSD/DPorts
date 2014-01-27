@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: www/xaraya/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xaraya/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xaraya
 PORTVERSION=	1.2.3
