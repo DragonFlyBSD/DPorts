@@ -1,5 +1,5 @@
 # Created by: Kay Abendroth <kay.abendroth@raxion.net>
-# $FreeBSD: mail/p5-Email-Reply/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Email-Reply/Makefile 341169 2014-01-26 12:34:45Z antoine $
 
 PORTNAME=	Email-Reply
 PORTVERSION=	1.202
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Email-Abstract>=2.01:${PORTSDIR}/mail/p5-Email-Abstract \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Email::Reply.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
