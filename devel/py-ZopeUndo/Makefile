@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-ZopeUndo/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-ZopeUndo/Makefile 341162 2014-01-26 12:01:03Z rm $
 
 PORTNAME=	ZopeUndo
 PORTVERSION=	2.12.0
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +13,9 @@ COMMENT=	ZODB undo support for Zope2
 
 LICENSE=	ZPL21
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
