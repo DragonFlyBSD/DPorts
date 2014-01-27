@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Hash-LX/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Hash-LX/Makefile 340560 2014-01-21 07:25:23Z mat $
 
 PORTNAME=	XML-Hash-LX
 PORTVERSION=	0.0603
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Hash::LX.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
