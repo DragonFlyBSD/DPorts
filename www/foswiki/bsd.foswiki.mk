@@ -5,7 +5,7 @@
 # Whom:			Greg Larkin <glarkin@FreeBSD.org>
 # Copied From Whom:	Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: www/foswiki/bsd.foswiki.mk 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/foswiki/bsd.foswiki.mk 340722 2014-01-22 17:00:46Z mat $
 #
 
 #
