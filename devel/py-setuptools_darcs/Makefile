@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-setuptools_darcs/Makefile 337715 2013-12-27 11:51:20Z wg $
+# $FreeBSD: devel/py-setuptools_darcs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	setuptools_darcs
 PORTVERSION=	1.2.11
