@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-locale/Makefile 334996 2013-11-27 05:41:11Z dinoex $
+# $FreeBSD: devel/ruby-locale/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	locale
 PORTVERSION=	0.2
