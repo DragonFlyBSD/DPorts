@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <cyrille.lefevre@laposte.net>
-# $FreeBSD: archivers/gzip/Makefile 337913 2013-12-28 20:58:39Z johans $
+# $FreeBSD: archivers/gzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gzip
 PORTVERSION=	1.6

@@ -1,4 +1,3 @@
-@comment $FreeBSD: archivers/gzip/pkg-plist 337913 2013-12-28 20:58:39Z johans $
 bin/gunzip
 bin/gzexe
 bin/gzip
