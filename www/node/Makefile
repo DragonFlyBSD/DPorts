@@ -1,5 +1,5 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/node/Makefile 336427 2013-12-14 09:17:38Z mva $
+# $FreeBSD: www/node/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	node
 PORTVERSION=	0.10.22
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 USES=		gmake
 
 CONFLICTS=	node-0.[02-9][0-9]* node-devel-0.[0-9]*
