@@ -1,8 +1,7 @@
-# $FreeBSD: dns/bind98/Makefile 339186 2014-01-08 22:52:19Z mat $
+# $FreeBSD: dns/bind98/Makefile 341073 2014-01-25 18:28:03Z garga $
 
 PORTNAME=	bind98
-PORTVERSION=	9.8.6
-PORTREVISION=	8
+PORTVERSION=	9.8.6.2
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -14,7 +13,7 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	ISCL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.8.6
+ISCVERSION=	9.8.6-P2
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -105,6 +104,7 @@ GSSAPI_CONFIGURE_WITH=	gssapi
 
 .if (${ARCH} == "x86_64")
 ARCH=		x86_64
+CFLAGS+=	-fPIC
 .endif
 
 .if !${PORT_OPTIONS:MLINKS} || ${PORT_OPTIONS:MREPLACE_BASE}
