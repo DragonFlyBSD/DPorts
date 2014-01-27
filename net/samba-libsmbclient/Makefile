@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba-libsmbclient/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/samba-libsmbclient/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTREVISION=		0
 PORTEPOCH=		0
