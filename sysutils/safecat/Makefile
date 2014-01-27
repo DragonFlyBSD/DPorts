@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/safecat/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/safecat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	safecat
 PORTVERSION=	1.13
