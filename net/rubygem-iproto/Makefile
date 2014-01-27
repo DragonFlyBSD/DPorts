@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: net/rubygem-iproto/Makefile 338485 2014-01-02 20:06:14Z swills $
+# $FreeBSD: net/rubygem-iproto/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	iproto
 PORTVERSION=	0.3.10
@@ -15,5 +15,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
