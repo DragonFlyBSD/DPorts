@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: security/ruby-hmac/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ruby-hmac/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hmac
 PORTVERSION=	0.4.0
