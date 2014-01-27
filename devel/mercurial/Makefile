@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn
-# $FreeBSD: devel/mercurial/Makefile 338448 2014-01-02 15:23:48Z olivierd $
+# $FreeBSD: devel/mercurial/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mercurial
 PORTVERSION=	2.8.2
@@ -11,7 +11,7 @@ COMMENT=	Fast, lightweight source control management system
 
 LICENSE=	GPLv2
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 USES=		shebangfix
 
