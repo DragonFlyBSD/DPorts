@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: textproc/p5-PPIx-EditorTools/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-PPIx-EditorTools/Makefile 340668 2014-01-21 22:29:50Z mat $
 
 PORTNAME=	PPIx-EditorTools
 PORTVERSION=	0.18
@@ -24,16 +24,4 @@ TEST_DEPENDS=	p5-Test-Differences>=0:${PORTSDIR}/devel/p5-Test-Differences \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	PPIx::EditorTools.3 \
-	PPIx::EditorTools::FindUnmatchedBrace.3 \
-	PPIx::EditorTools::FindVariableDeclaration.3 \
-	PPIx::EditorTools::IntroduceTemporaryVariable.3 \
-	PPIx::EditorTools::Lexer.3 \
-	PPIx::EditorTools::Outline.3 \
-	PPIx::EditorTools::RenamePackage.3 \
-	PPIx::EditorTools::RenamePackageFromPath.3 \
-	PPIx::EditorTools::RenameVariable.3 \
-	PPIx::EditorTools::ReturnObject.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
