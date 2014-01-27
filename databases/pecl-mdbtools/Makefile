@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: databases/pecl-mdbtools/Makefile 333581 2013-11-12 15:43:31Z wg $
+# $FreeBSD: databases/pecl-mdbtools/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	mdbtools
 PORTVERSION=	1.0.0
@@ -25,8 +25,6 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libmdb.a:${PORTSDIR}/databases/mdbtools
 RUN_DEPENDS=	${LOCALBASE}/lib/libmdb.a:${PORTSDIR}/databases/mdbtools
 
 CONFIGURE_ARGS=	--with-mdbtools=${LOCALBASE}
-
-NO_STAGE=	yes
 
 post-extract:
 	@${REINPLACE_CMD} -e 's|MDB_SDATETIME|MDB_DATETIME|g' \
