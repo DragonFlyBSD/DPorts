@@ -1,9 +1,8 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: devel/p5-MooseX-Object-Pluggable/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD: devel/p5-MooseX-Object-Pluggable/Makefile 339893 2014-01-16 05:16:43Z ashish $
 
 PORTNAME=	MooseX-Object-Pluggable
-PORTVERSION=	0.0011
-PORTREVISION=	1
+PORTVERSION=	0.0012
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
