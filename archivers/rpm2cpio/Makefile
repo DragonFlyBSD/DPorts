@@ -1,9 +1,9 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: archivers/rpm2cpio/Makefile 338673 2014-01-04 18:55:52Z bapt $
+# $FreeBSD: archivers/rpm2cpio/Makefile 339549 2014-01-12 21:16:05Z naddy $
 
 PORTNAME=	rpm2cpio
 PORTVERSION=	1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -18,8 +18,6 @@ NO_BUILD=	yes
 REINPLACE_ARGS=
 
 PLIST_FILES=	bin/rpm2cpio.pl
-
-RUN_DEPENDS+=	xz:${PORTSDIR}/archivers/xz
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
