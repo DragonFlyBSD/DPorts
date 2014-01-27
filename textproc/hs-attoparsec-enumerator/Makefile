@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-attoparsec-enumerator/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: textproc/hs-attoparsec-enumerator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	attoparsec-enumerator
 PORTVERSION=	0.3.1
