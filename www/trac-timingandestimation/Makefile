@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-timingandestimation/Makefile 337589 2013-12-26 18:12:45Z wg $
+# $FreeBSD: www/trac-timingandestimation/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	timingandestimation
 PORTVERSION=	1.0.8b
