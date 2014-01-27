@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/chipvault/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/chipvault/Makefile 340465 2014-01-20 20:30:18Z antoine $
 
 PORTNAME=	chipvault
 PORTVERSION=	200607
@@ -9,7 +9,7 @@ DISTNAME=	cv.pl
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A project organizer for VHDL and Verilog RTL hardware designs
+COMMENT=	Project organizer for VHDL and Verilog RTL hardware designs
 
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${GZCAT}
@@ -17,11 +17,11 @@ EXTRACT_BEFORE_ARGS=	# empty
 EXTRACT_AFTER_ARGS=	> ${DISTNAME}
 NO_BUILD=	yes
 PLIST_FILES=	bin/cv
-USES=		perl5
+USES=		perl5 shebangfix
 USE_PERL5=	run
+SHEBANG_FILES=	cv.pl
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/cv.pl ${PREFIX}/bin/cv
+	${INSTALL_SCRIPT} ${WRKSRC}/cv.pl ${STAGEDIR}${PREFIX}/bin/cv
 
 .include <bsd.port.mk>
