@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-unittest2/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-unittest2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unittest2
 PORTVERSION=	0.5.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,10 +12,9 @@ COMMENT=	Unittest features for Python 2.7 backported to Python 2.3+
 
 LICENSE=	BSD
 
-PLIST_SUB+=	PYTHON_VER=${PYTHON_VER}
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
