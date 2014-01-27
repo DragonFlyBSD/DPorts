@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: devel/hs-uulib/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: devel/hs-uulib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uulib
 PORTVERSION=	0.9.15
