@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-comonad-transformers/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: math/hs-comonad-transformers/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	comonad-transformers
 PORTVERSION=	3.0.2
