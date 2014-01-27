@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/tycho/Makefile 333609 2013-11-12 19:47:07Z danilo $
+# $FreeBSD: games/tycho/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tycho
 PORTVERSION=	0.1
