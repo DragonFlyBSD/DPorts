@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-django-dpaste/Makefile 336618 2013-12-16 10:55:38Z koobs $
+# $FreeBSD: www/py-django-dpaste/Makefile 339901 2014-01-16 08:19:36Z koobs $
 
 PORTNAME=	dpaste
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}django-
 
