@@ -1,15 +1,17 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Test-Output/Makefile 333313 2013-11-09 18:48:15Z sunpoet $
+# $FreeBSD: devel/p5-Test-Output/Makefile 339406 2014-01-11 08:29:45Z culot $
 
 PORTNAME=	Test-Output
-PORTVERSION=	1.02
-PORTREVISION=	1
+PORTVERSION=	1.03
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Utilities to test STDOUT and STDERR messages
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Capture-Tiny>=0.17:${PORTSDIR}/devel/p5-Capture-Tiny \
 		p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
