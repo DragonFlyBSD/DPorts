@@ -1,5 +1,5 @@
 # Created by: Prudhvi Krishna <prudhvikrishna@gmail.com>
-# $FreeBSD: x11-fonts/fonts-te/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/fonts-te/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fonts-te
 PORTVERSION=	1.0
