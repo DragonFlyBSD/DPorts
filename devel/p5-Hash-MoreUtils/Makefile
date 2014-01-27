@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Hash-MoreUtils/Makefile 332597 2013-11-03 09:36:46Z kuriyama $
+# $FreeBSD: devel/p5-Hash-MoreUtils/Makefile 339490 2014-01-12 09:57:14Z kuriyama $
 
 PORTNAME=	Hash-MoreUtils
-PORTVERSION=	0.04
+PORTVERSION=	0.05
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
