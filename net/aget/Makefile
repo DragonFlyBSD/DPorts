@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: net/aget/Makefile 339170 2014-01-08 20:22:53Z antoine $
+# $FreeBSD: net/aget/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aget
 PORTVERSION=	0.4.1
