@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/whowatch/files/patch-procinfo.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/whowatch/files/patch-procinfo.c 340725 2014-01-22 17:40:44Z mat $
 
 --- procinfo.c.orig
 +++ procinfo.c
