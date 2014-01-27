@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: audio/pecl-id3/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/pecl-id3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	id3
 PORTVERSION=	0.2
