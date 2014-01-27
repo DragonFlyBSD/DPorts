@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-empy/Makefile 338092 2013-12-30 11:46:38Z wg $
+# $FreeBSD: textproc/py-empy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	empy
 PORTVERSION=	3.3
