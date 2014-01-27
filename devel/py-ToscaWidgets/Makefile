@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-ToscaWidgets/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-ToscaWidgets/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ToscaWidgets
 PORTVERSION=	0.9.12
@@ -13,7 +13,7 @@ COMMENT=	A python framework for building reusable web components
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webob>=0:${PORTSDIR}/www/py-webob
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
