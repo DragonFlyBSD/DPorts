@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: databases/py-carbon/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: databases/py-carbon/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	carbon
 PORTVERSION=	0.9.12
@@ -15,7 +15,7 @@ LICENSE=	APACHE20
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}txamqp>=0.3:${PORTSDIR}/net/py-txamqp \
 		${PYTHON_PKGNAMEPREFIX}whisper>=0.9.10:${PORTSDIR}/databases/py-whisper
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 USES=		twisted:run
 FETCH_ARGS=	-o ${DISTNAME}${EXTRACT_SUFX}
