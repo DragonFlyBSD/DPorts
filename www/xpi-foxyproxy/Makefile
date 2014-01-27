@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: www/xpi-foxyproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-foxyproxy/Makefile 341205 2014-01-26 15:09:46Z miwi $
 
 PORTNAME=	foxyproxy
 PORTVERSION=	4.1.1
@@ -16,7 +16,6 @@ XPI_DISTNAME=	foxyproxy_standard
 XPI_NUM=	2464
 XPI_ID=		foxyproxy@eric.h.jung
 
-NO_STAGE=	yes
 xpi-post-extract:
 	@${FIND} ${WRKSRC} -type f -name '*.js' |${XARGS} ${SED} -i '' -e 's/[[:space:]]*$$//g'
 
