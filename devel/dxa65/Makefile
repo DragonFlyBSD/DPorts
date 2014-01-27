@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/dxa65/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/dxa65/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dxa
 PORTVERSION=	0.1.3
