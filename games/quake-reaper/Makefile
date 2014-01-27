@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/quake-reaper/Makefile 334699 2013-11-23 23:45:59Z danilo $
+# $FreeBSD: games/quake-reaper/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	reaper
 PORTVERSION=	0.81
