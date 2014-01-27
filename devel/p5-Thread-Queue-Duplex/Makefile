@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Thread-Queue-Duplex/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Thread-Queue-Duplex/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	Thread-Queue-Duplex
 PORTVERSION=	0.92
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tjs@cdpa.nsysu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Thread-safe request/response queue with identifiable elements
 
 USES=		perl5
