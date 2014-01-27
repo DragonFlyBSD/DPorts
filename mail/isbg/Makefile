@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: mail/isbg/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/isbg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	isbg
 PORTVERSION=	0.99
@@ -17,7 +17,7 @@ RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 
 DISTDATE=	20100303
 NO_BUILD=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
