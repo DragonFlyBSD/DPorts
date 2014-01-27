@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD: security/py-slowaes/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: security/py-slowaes/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	slowaes
 DISTVERSION=	0.1a1
@@ -12,7 +12,7 @@ COMMENT=	Implementation of AES in pure Python
 
 LICENSE=	APACHE20
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
 
