@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-pyfits/Makefile 337560 2013-12-26 17:06:19Z wg $
+# $FreeBSD: astro/py-pyfits/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyfits
 PORTVERSION=	3.1.2
