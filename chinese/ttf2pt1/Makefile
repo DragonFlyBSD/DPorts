@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/ttf2pt1/Makefile 339203 2014-01-09 07:20:37Z vanilla $
+# $FreeBSD: chinese/ttf2pt1/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ttf2pt1
 PORTVERSION=	3.4.0
