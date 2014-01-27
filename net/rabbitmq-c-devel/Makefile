@@ -1,5 +1,5 @@
 # Created by: Geoff Garside
-# $FreeBSD: net/rabbitmq-c-devel/Makefile 336536 2013-12-15 13:56:47Z wg $
+# $FreeBSD: net/rabbitmq-c-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rabbitmq-c
 PORTVERSION=	0.0.1
