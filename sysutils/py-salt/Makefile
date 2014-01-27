@@ -1,5 +1,5 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-salt/Makefile 338580 2014-01-03 20:17:53Z vg $
+# $FreeBSD: sysutils/py-salt/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	salt
 PORTVERSION=	0.17.4
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml \
 		sshpass>=0:${PORTSDIR}/security/sshpass
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 PYDISTUTILS_INSTALLARGS+=\
