@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/pmt/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: sysutils/pmt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pmt
 PORTVERSION=	0.2
