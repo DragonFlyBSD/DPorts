@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/jbig2dec/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: graphics/jbig2dec/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jbig2dec
 PORTVERSION=	0.11
