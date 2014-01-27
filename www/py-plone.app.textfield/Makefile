@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.textfield/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-plone.app.textfield/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.app.textfield
 PORTVERSION=	1.2.2
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.schema>0:${PORTSDIR}/devel/py-zope.sche
 		zodb${PYTHON_PKGNAMESUFFIX}>=3.8.1:${PORTSDIR}/databases/zodb3
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
