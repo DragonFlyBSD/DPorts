@@ -1,5 +1,5 @@
 # Created by: Tig <tigger@lvlworld.com>
-# $FreeBSD: sysutils/sysupdate/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sysupdate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sysupdate
 PORTVERSION=	0.5.8
