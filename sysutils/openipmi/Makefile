@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <alex.deiter@gmail.com>
-# $FreeBSD: sysutils/openipmi/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/openipmi/Makefile 339593 2014-01-13 12:18:11Z gahr $
 
 PORTNAME=	openipmi
 PORTVERSION=	2.0.19
@@ -65,7 +65,6 @@ CONFIGURE_ARGS+=	--with-openssl=no
 .endif
 
 .if ${PORT_OPTIONS:MTKINTER}
-WITH_TCL=		yes
 USE_PYTHON=		yes
 WITH_PYTHON=		yes
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter \
@@ -105,10 +104,10 @@ CONFIGURE_ARGS+=	--with-swig=no
 .endif
 
 .if ${PORT_OPTIONS:MTCL}
-USE_TCL=		84
+USES+=			tcl
 CONFIGURE_ARGS+=	--with-tcl \
 			--with-tclcflags=-I${TCL_INCLUDEDIR} \
-			--with-tcllibs=-ltcl${TCL_VER:S/.//}
+			--with-tcllibs=-ltcl${TCL_SHLIB_VER}
 PLIST_SUB+=		TCL=""
 .else
 CONFIGURE_ARGS+=	--with-tcl=no
