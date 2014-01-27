@@ -1,5 +1,5 @@
 # Created by: Renaud Chaput <renchap@cocoa-x.com>
-# $FreeBSD: sysutils/rubygem-ohai/Makefile 333736 2013-11-14 03:08:36Z swills $
+# $FreeBSD: sysutils/rubygem-ohai/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	ohai
 PORTVERSION=	6.18.0
@@ -23,5 +23,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/ohai
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
