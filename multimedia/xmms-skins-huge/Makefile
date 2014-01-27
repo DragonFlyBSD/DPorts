@@ -1,5 +1,5 @@
 # Created by: Jesse <jessefrgsmith@yahoo.ca>
-# $FreeBSD: multimedia/xmms-skins-huge/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/xmms-skins-huge/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-skins-huge
 PORTVERSION=	1.0.0
