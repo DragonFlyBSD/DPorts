@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: sysutils/py-zdaemon/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-zdaemon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zdaemon
 PORTVERSION=	2.0.7
@@ -14,7 +14,7 @@ LICENSE=	ZPL21
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zconfig>0:${PORTSDIR}/devel/py-zconfig
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
