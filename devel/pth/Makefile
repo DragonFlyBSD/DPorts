@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall <rse@gnu.org>
-# $FreeBSD: devel/pth/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pth
 PORTVERSION=	2.0.7
