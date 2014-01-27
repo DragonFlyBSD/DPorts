@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/mk-configure/Makefile 329995 2013-10-10 13:31:37Z trociny $
+# $FreeBSD: devel/mk-configure/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mk-configure
 PORTVERSION=	0.24.0
