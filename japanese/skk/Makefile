@@ -1,5 +1,5 @@
 # Created by: Makoto Matsushita <matusita@jp.freebsd.org>
-# $FreeBSD: japanese/skk/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/skk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	skk
 PORTVERSION=	9.6
