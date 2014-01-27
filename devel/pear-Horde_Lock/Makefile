@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Lock/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-Horde_Lock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Lock
 PORTVERSION=	2.1.0
