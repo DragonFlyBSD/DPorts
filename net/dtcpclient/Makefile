@@ -1,4 +1,4 @@
-# $FreeBSD: net/dtcpclient/Makefile 338129 2013-12-30 16:12:16Z ume $
+# $FreeBSD: net/dtcpclient/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dtcpclient
 PORTVERSION=	20090812
