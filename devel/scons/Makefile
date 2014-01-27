@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: devel/scons/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: devel/scons/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	scons
 PORTVERSION=	2.3.0
@@ -17,7 +17,7 @@ PYDISTUTILS_AUTOPLIST=	yes
 
 PLIST_SUB+=	SCONS_VER=${PORTVERSION}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 
 post-patch:
