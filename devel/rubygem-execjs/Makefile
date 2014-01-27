@@ -1,13 +1,15 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-execjs/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD: devel/rubygem-execjs/Makefile 340433 2014-01-20 17:25:08Z sunpoet $
 
 PORTNAME=	execjs
-PORTVERSION=	1.4.0
+PORTVERSION=	2.0.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	ExecJS lets you run JavaScript code from Ruby
+
+LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-multi_json>=1.0:${PORTSDIR}/devel/rubygem-multi_json
 
