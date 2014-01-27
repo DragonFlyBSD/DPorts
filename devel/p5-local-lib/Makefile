@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-local-lib/Makefile 333408 2013-11-10 16:05:53Z kuriyama $
+# $FreeBSD: devel/p5-local-lib/Makefile 339504 2014-01-12 13:49:29Z kuriyama $
 
 PORTNAME=	local-lib
-PORTVERSION=	1.008026
+PORTVERSION=	2.000004
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HAARG
