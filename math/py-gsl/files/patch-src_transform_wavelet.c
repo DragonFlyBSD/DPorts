@@ -1,5 +1,5 @@
 
-$FreeBSD: math/py-gsl/files/patch-src_transform_wavelet.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: math/py-gsl/files/patch-src_transform_wavelet.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/transform/wavelet.c.orig
 +++ src/transform/wavelet.c
