@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Query/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Query/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-Query
 PORTVERSION=	0.09
@@ -13,15 +13,6 @@ COMMENT=	Query processing framework
 USES=		perl5
 USE_PERL5=	configure patch
 
-MAN3=		Text::Query.3 Text::Query::Build.3 \
-		Text::Query::BuildAdvancedString.3 \
-		Text::Query::BuildSimpleString.3 Text::Query::Optimize.3 \
-		Text::Query::Parse.3 Text::Query::ParseAdvanced.3 \
-		Text::Query::ParseSimple.3 Text::Query::Solve.3 \
-		Text::Query::SolveAdvancedString.3 \
-		Text::Query::SolveSimpleString.3
-
-NO_STAGE=	yes
 pre-patch:
 	@${PERL} -pi -e 's/factor\(\$$self\)/\&factor(\$$self)/' \
 		${WRKSRC}/lib/Text/Query/ParseAdvanced.pm
