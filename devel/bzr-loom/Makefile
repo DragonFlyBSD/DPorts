@@ -1,5 +1,5 @@
 # Created by: Carlo Strub <c-s@c-s.li>
-# $FreeBSD: devel/bzr-loom/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-loom/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-loom
 PORTVERSION=	2.2.0
@@ -20,8 +20,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	Loom
-PYDISTUTILS_PKGVERSION=	2.2.1dev0
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
