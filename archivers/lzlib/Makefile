@@ -1,5 +1,5 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: archivers/lzlib/Makefile 337543 2013-12-26 16:06:13Z bapt $
+# $FreeBSD: archivers/lzlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lzlib
 PORTVERSION=	1.5
