@@ -1,5 +1,5 @@
 # Created by: Wes Peters <@FreeBSD.org>
-# $FreeBSD: devel/avra/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/avra/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	avra
 PORTVERSION=	1.3.0
