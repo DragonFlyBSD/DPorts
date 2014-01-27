@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ffc/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: math/py-ffc/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ffc
 PORTVERSION=	${MMVERSION}.0
@@ -12,7 +12,7 @@ COMMENT=	C++ code generator for multilinear forms
 
 LICENSE=	LGPL3
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	FFC
 
