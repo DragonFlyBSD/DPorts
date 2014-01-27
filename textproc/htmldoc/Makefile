@@ -1,11 +1,12 @@
 # Created by: Glenn Trewitt <glenn@trewitt.org>
-# $FreeBSD: textproc/htmldoc/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/htmldoc/Makefile 340749 2014-01-22 23:37:53Z mandree $
 
 PORTNAME=	htmldoc
 PORTVERSION=	1.8.27
 PORTREVISION=	7
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_EASYSW}
+MASTER_SITES=	http://www.msweet.org/files/project1/ \
+		${MASTER_SITE_EASYSW}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
