@@ -1,5 +1,5 @@
 # Created by: Gregory Edigarov <greg@bestnet.kharkov.ua>
-# $FreeBSD: net/sflowtool/Makefile 332004 2013-10-29 21:04:37Z ohauer $
+# $FreeBSD: net/sflowtool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sflowtool
 PORTVERSION=	3.30
