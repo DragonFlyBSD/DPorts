@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cdk/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: devel/cdk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cdk
 PORTVERSION=	5.0.20120323
