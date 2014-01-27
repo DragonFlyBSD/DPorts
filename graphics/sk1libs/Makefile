@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/sk1libs/Makefile 330571 2013-10-16 23:54:45Z amdmi3 $
+# $FreeBSD: graphics/sk1libs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sk1libs
 PORTVERSION=	0.9.1
