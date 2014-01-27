@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/librtmp/Makefile 332194 2013-10-31 02:03:01Z hrs $
+# $FreeBSD: multimedia/librtmp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	librtmp
 PORTVERSION=	2.4.20130923
