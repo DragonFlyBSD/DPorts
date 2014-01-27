@@ -1,5 +1,5 @@
 # Created by: Eugene Grosbein <ports@grosbein.net>
-# $FreeBSD: devel/py-application/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-application/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	application
 PORTVERSION=	1.2.9
