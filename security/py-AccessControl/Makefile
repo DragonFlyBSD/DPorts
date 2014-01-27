@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-AccessControl/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD: security/py-AccessControl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	AccessControl
 PORTVERSION=	3.0.8
@@ -32,7 +32,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Acquisition>=0:${PORTSDIR}/devel/py-Acquisit
 
 NO_STAGE=	yes
 PYEASYINSTALL_ARCHDEP=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
