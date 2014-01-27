@@ -1,5 +1,5 @@
 # Created by: Dave Walton <dwalton@acm.org>
-# $FreeBSD: games/taipan/Makefile 333472 2013-11-11 02:48:18Z danilo $
+# $FreeBSD: games/taipan/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	taipan
 PORTVERSION=	0.9
