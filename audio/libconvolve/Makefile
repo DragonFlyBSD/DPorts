@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/libconvolve/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/libconvolve/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libconvolve
 PORTVERSION=	0.0.8
