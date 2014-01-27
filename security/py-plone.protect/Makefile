@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-plone.protect/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: security/py-plone.protect/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.protect
 PORTVERSION=	2.0.2
