@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: net/freebsd-uucp/Makefile 338162 2013-12-30 19:33:46Z dinoex $
+# $FreeBSD: net/freebsd-uucp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freebsd-uucp
 PORTVERSION=	1.07.3
