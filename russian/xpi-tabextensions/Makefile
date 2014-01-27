@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: russian/xpi-tabextensions/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/xpi-tabextensions/Makefile 341201 2014-01-26 15:08:31Z miwi $
 
 PORTNAME=	tabextensions
 PORTVERSION=	2.1.2006031301
@@ -20,6 +20,5 @@ XPI_FILES=	chrome/tabextensions.jar chrome.manifest install.js install.rdf \
 		locale.inf options.inf
 XPI_DIRS=	chrome
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
