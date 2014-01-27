@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-term-ansicolor/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-term-ansicolor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	term-ansicolor
 PORTVERSION=	1.2.2
