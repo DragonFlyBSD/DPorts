@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/rubygem-rudy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-rudy/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	rudy
 PORTVERSION=	0.9.8.020
@@ -26,5 +26,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rudy bin/rudy-ec2 bin/rudy-s3 bin/rudy-sdb
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
