@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-nag/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: deskutils/horde-nag/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nag
 PORTVERSION=	4.1.3
