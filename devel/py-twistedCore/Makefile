@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: devel/py-twistedCore/Makefile 335106 2013-11-28 16:08:33Z lwhsu $
+# $FreeBSD: devel/py-twistedCore/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	twistedCore
 PORTVERSION=	13.2.0
@@ -23,7 +23,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 #   separately if desired.
 
 USE_BZIP2=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:S/twisted/Twisted_/}
 REINPLACE_ARGS=	-i ''
