@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/pecl-yac/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-yac/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	yac
 PORTVERSION=	0.2.0.r20130811
@@ -19,5 +19,4 @@ USE_PHP_BUILD=	yes
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
