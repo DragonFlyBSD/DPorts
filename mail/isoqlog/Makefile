@@ -1,5 +1,5 @@
 # Created by: ofsen@enderunix.org
-# $FreeBSD: mail/isoqlog/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/isoqlog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	isoqlog
 PORTVERSION=	2.2.1
