@@ -1,7 +1,7 @@
-# $FreeBSD: net/rubygem-packetfu/Makefile 337217 2013-12-22 20:35:21Z antoine $
+# $FreeBSD: net/rubygem-packetfu/Makefile 339636 2014-01-13 21:05:31Z antoine $
 
 PORTNAME=	packetfu
-PORTVERSION=	1.1.9
+PORTVERSION=	1.1.10
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
