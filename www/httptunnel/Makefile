@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: www/httptunnel/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/httptunnel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	httptunnel
 PORTVERSION=	3.3
