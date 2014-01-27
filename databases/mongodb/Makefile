@@ -1,5 +1,5 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: databases/mongodb/Makefile 338446 2014-01-02 15:19:24Z demon $
+# $FreeBSD: databases/mongodb/Makefile 339865 2014-01-15 23:42:17Z bapt $
 
 PORTNAME=	mongodb
 PORTVERSION=	2.4.8
@@ -70,8 +70,6 @@ SMOKE_TESTS+=	smokeSsl
 SCONS_TARGET=	core tools
 .endif
 
-.include <bsd.port.pre.mk>
-
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000024
 EXTRA_PATCHES=	${PATCHDIR}/clang-patch-src_mongo_db_fts_stemmer.cpp \
 		${PATCHDIR}/clang-patch-src_mongo_platform_unordered_map.h \
@@ -89,4 +87,4 @@ test: build-depends build
 		${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SMOKE_TESTS}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
