@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Hailo/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	POE-Component-IRC-Plugin-Hailo
 PORTVERSION=	0.18
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:HINRIK
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	A PoCo-IRC plugin for a Hailo conversation simulator
 
 LICENSE=	ART10 GPLv1
