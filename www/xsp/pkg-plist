@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/xsp/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/asp-state
 bin/asp-state2
 bin/asp-state4
