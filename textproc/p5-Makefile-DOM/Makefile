@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Makefile-DOM/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Makefile-DOM/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	Makefile-DOM
 PORTVERSION=	0.006
@@ -11,6 +11,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Simple DOM parser for Makefiles
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 RUN_DEPENDS=	p5-Clone>=0.18:${PORTSDIR}/devel/p5-Clone \
 		p5-List-MoreUtils>=0.21:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Params-Util>=0.22:${PORTSDIR}/devel/p5-Params-Util
@@ -18,14 +21,4 @@ RUN_DEPENDS=	p5-Clone>=0.18:${PORTSDIR}/devel/p5-Clone \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MDOM::Dumper.3 \
-		MDOM::Element.3 \
-		MDOM::Node.3 \
-		MDOM::Token.3 \
-		MDOM::Token::Comment.3 \
-		MDOM::Token::Separator.3 \
-		MDOM::Token::Whitespace.3 \
-		Makefile::DOM.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
