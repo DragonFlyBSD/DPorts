@@ -1,5 +1,5 @@
 # Created by: oyvindmo@initio.no
-# $FreeBSD: audio/ripit/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/ripit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ripit
 PORTVERSION=	3.9.0
