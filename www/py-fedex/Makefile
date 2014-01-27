@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-fedex/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-fedex/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	fedex
 PORTVERSION=	1.0.14
@@ -14,7 +14,7 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}suds>=0:${PORTSDIR}/net/py-suds
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
