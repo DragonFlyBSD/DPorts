@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/distcc/pkg-plist 309848 2013-01-02 23:15:32Z skreuzer $
 bin/distcc
 bin/distccmon-text
 bin/lsdistcc
