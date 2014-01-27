@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/cfengine/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/cfengine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 VERSIONS=		22 32 33 34 35 -devel
 CFENGINE_VERSION?=	35
