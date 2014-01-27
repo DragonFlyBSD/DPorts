@@ -1,5 +1,5 @@
 # Created by: sethk
-# $FreeBSD: audio/chordpack/Makefile 337586 2013-12-26 18:05:57Z bapt $
+# $FreeBSD: audio/chordpack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	chordpack
 PORTVERSION=	0.8.1
