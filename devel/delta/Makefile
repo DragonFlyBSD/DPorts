@@ -1,4 +1,4 @@
-# $FreeBSD: devel/delta/Makefile 336365 2013-12-13 18:45:15Z eadler $
+# $FreeBSD: devel/delta/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	delta
 PORTVERSION=	2006.08.03
