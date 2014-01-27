@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: ports-mgmt/porttools/Makefile 333865 2013-11-15 14:06:13Z mat $
+# $FreeBSD: ports-mgmt/porttools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	porttools
 PORTVERSION=	0.99

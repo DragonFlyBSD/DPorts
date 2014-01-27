@@ -1,4 +1,3 @@
-@comment $FreeBSD: ports-mgmt/porttools/pkg-plist 332978 2013-11-06 12:25:51Z mat $
 bin/port
 man/man1/port.1.gz
 man/man5/porttools.5.gz
