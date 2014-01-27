@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.resourceeditor/Makefile 327899 2013-09-22 22:21:57Z rm $
+# $FreeBSD: www/py-plone.resourceeditor/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.resourceeditor
 PORTVERSION=	1.0
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>0:${PORTSDIR}/devel/py-zope.i
 		${PYTHON_PKGNAMEPREFIX}plone.resource>0:${PORTSDIR}/www/py-plone.resource
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
