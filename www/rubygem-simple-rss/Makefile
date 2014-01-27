@@ -1,8 +1,8 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/rubygem-simple-rss/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-simple-rss/Makefile 340906 2014-01-24 14:56:38Z miwi $
 
 PORTNAME=	simple-rss
-PORTVERSION=	1.2.3
+PORTVERSION=	1.3.1
 CATEGORIES=	www textproc rubygems
 MASTER_SITES=	RG
 
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
