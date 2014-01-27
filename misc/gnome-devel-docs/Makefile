@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/gnome-devel-docs/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gnome-devel-docs/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.22 2010/09/29 15:17:53 kwm Exp $
 
 PORTNAME=	gnome-devel-docs
