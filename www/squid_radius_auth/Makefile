@@ -1,5 +1,5 @@
 # Created by: Michael Capp <myntric@exeonline.com>
-# $FreeBSD: www/squid_radius_auth/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/squid_radius_auth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	squid_radius_auth
 PORTVERSION=	1.10
