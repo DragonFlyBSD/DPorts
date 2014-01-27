@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: mail/xpi-dispmua/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/xpi-dispmua/Makefile 341201 2014-01-26 15:08:31Z miwi $
 
 PORTNAME=	dispmua
 PORTVERSION=	1.6.9
@@ -16,6 +16,5 @@ XPI_ID=		{F8147CF4-B9E3-445B-AA87-081ED66548F8}
 XPI_FILES=	CHANGELOG LICENSE chrome/chrome.jar chrome.manifest defaults/preferences/prefs.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
