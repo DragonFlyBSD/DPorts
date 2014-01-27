@@ -1,5 +1,5 @@
 # Created by: Stefan Pauly <stefan@fh-mainz.de>
-# $FreeBSD: devel/cunit/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cunit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cunit
 DISTVERSION=	2.1-0
