@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/linuxlibertine-g/Makefile 329310 2013-10-04 14:13:50Z bapt $
+# $FreeBSD: x11-fonts/linuxlibertine-g/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	linuxlibertine-g
 PORTVERSION=	20120116
