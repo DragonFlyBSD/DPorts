@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: mail/spamdb-curses/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: mail/spamdb-curses/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spamdb-curses
 PORTVERSION=	1.2
