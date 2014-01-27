@@ -1,5 +1,5 @@
 # Created by: Espen Volden aka voldern <voldern@hoeggen.net>
-# $FreeBSD: databases/rubygem-do_postgres/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/rubygem-do_postgres/Makefile 340899 2014-01-24 14:45:58Z miwi $
 
 PORTNAME=	do_postgres
 PORTVERSION=	0.10.13
@@ -17,5 +17,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
