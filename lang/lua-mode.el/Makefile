@@ -1,5 +1,5 @@
 # Created by: Josh Elsasser <jre@vineyard.net>
-# $FreeBSD: lang/lua-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/lua-mode.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lua-mode.el
 PORTVERSION=	1.26
