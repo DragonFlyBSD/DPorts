@@ -1,5 +1,5 @@
 # Created by: Brian Feldman & Matt Heckaman
-# $FreeBSD: net-im/licq/Makefile 336722 2013-12-17 13:20:40Z dinoex $
+# $FreeBSD: net-im/licq/Makefile 339400 2014-01-11 06:33:06Z dinoex $
 
 PORTNAME=	base
 PORTVERSION=	${LICQ_VER}
@@ -14,6 +14,7 @@ LIB_DEPENDS=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 
 LICENSE=	GPLv2
 
+USE_GCC=	yes
 USES=		cmake iconv
 WRKSRC=		${WRKDIR}/${DISTNAME}
 LICQ_PORT?=	net-im/licq

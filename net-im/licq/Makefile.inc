@@ -1,5 +1,5 @@
 # Common stuff for Licq-based ports
-# $FreeBSD: net-im/licq/Makefile.inc 325717 2013-08-30 19:24:37Z dinoex $
+# $FreeBSD: net-im/licq/Makefile.inc 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMEPREFIX=		licq-
 LICQ_VER=		1.8.0
