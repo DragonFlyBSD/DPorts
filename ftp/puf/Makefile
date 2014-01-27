@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ftp/puf/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/puf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	puf
 PORTVERSION=	1.0.0
