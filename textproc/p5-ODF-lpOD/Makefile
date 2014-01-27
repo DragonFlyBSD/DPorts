@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-ODF-lpOD/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-ODF-lpOD/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ODF-lpOD
 PORTVERSION=	1.121
