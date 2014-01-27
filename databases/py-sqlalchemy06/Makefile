@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy06/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sqlalchemy06/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlalchemy06
 PORTVERSION=	0.6.9
