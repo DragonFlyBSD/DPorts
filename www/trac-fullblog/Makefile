@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-fullblog/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/trac-fullblog/Makefile 341184 2014-01-26 14:32:00Z miwi $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.1.1
@@ -16,9 +16,8 @@ COMMENT=	Plugin that provides a project Blog
 RUN_DEPENDS+=	htmldoc:${PORTSDIR}/textproc/htmldoc \
 		tracd:${PORTSDIR}/www/trac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
-NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	TracFullBlogPlugin
 
 .if defined(BOOTSTRAP)
