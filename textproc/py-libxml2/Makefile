@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: textproc/py-libxml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-libxml2/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTREVISION=	0
 CATEGORIES=	textproc gnome python
@@ -15,7 +15,7 @@ DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
 
 USE_GNOME+=	libxml2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=		iconv
 CPPFLAGS+=	`${PYTHON_VERSION}-config --cflags`
 LDFLAGS+=	-L${LOCALBASE}/lib `${PYTHON_VERSION}-config --libs`
