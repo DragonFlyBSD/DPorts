@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: devel/py-urwid/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-urwid/Makefile 340926 2014-01-24 19:16:13Z mva $
 
 PORTNAME=	urwid
 PORTVERSION=	1.1.1
@@ -16,8 +16,9 @@ LICENSE=	LGPL21
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	EXAMPLES
 
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 PORTEXAMPLES=	bigtext.py \
 		browse.py \
@@ -35,7 +36,6 @@ PORTEXAMPLES=	bigtext.py \
 		treesample.py
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -44,8 +44,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}/
-	@cd ${WRKSRC}/examples && ${INSTALL_DATA} ${PORTEXAMPLES} ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	(cd ${WRKSRC}/examples && ${INSTALL_DATA} ${PORTEXAMPLES} ${STAGEDIR}${EXAMPLESDIR}/)
 .endif
 
 regression-test: build
