@@ -1,5 +1,5 @@
 # Created by: Necati Ersen SISECI <siseci@enderunix.org>
-# $FreeBSD: audio/voipong/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/voipong/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	voipong
 PORTVERSION=	2.0
