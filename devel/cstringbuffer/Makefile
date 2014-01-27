@@ -1,5 +1,5 @@
 # Created by: Mooneer Salem <mooneer@translator.cx>
-# $FreeBSD: devel/cstringbuffer/Makefile 336119 2013-12-10 22:35:11Z bapt $
+# $FreeBSD: devel/cstringbuffer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cstringbuffer
 PORTVERSION=	0.1.6
