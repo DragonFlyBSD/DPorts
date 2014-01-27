@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/cbedic/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/cbedic/Makefile 341161 2014-01-26 11:57:13Z mat $
 
 PORTNAME=	cbedic
 PORTVERSION=	1.2
@@ -10,15 +10,18 @@ MASTER_SITES=	SF/kbedic/CBE%20Dictionary/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An English-to-Bulgarian and Bulgarian-to-English dictionary
 
+LICENSE=	GPLv2
+
 RUN_DEPENDS=	${DICT_DIR}/${DICT_CHECK}:${PORTSDIR}/textproc/bedic-data
 
 DICT_CHECK?=	buleng.dat
 DICT_DIR?=	${LOCALBASE}/share
 
+USES=	gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
 CONFIGURE_ARGS=	--datadir=${DICT_DIR}
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/cbedic
+
 .include <bsd.port.mk>
