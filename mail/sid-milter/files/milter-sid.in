@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/sid-milter/files/milter-sid.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: mail/sid-milter/files/milter-sid.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: miltersid

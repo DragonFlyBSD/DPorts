@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sid-milter/Makefile 335605 2013-12-04 07:08:54Z dinoex $
+# $FreeBSD: mail/sid-milter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sid-milter
 PORTVERSION=	1.0.0
