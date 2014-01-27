@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/libqrencode/Makefile 328162 2013-09-24 16:38:37Z vanilla $
+# $FreeBSD: graphics/libqrencode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libqrencode
 PORTVERSION=	3.4.3
