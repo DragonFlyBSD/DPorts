@@ -1,5 +1,5 @@
 # Created by: SeaD
-# $FreeBSD: mail/clamfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/clamfilter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # Anyone upgrading this port is advised to check all changes since the
 # previous tarball; I have updated MASTER_SITES to an alternative
