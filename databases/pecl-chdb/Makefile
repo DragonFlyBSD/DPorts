@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <esarmiento@wayfair.com>
-# $FreeBSD: databases/pecl-chdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pecl-chdb/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	chdb
 PORTVERSION=	1.0.2
@@ -29,5 +29,4 @@ GH_COMMIT=	169f45d
 
 CONFIGURE_ARGS=	--with-libcmph-dir=${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
