@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/p5-Hash-Diff/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Hash/Diff/.packlist
 %%SITE_PERL%%/Hash/Diff.pm
 @dirrmtry %%SITE_PERL%%/%%PERL_ARCH%%/auto/Hash/Diff
