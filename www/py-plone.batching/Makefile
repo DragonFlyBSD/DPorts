@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.batching/Makefile 327899 2013-09-22 22:21:57Z rm $
+# $FreeBSD: www/py-plone.batching/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.batching
 PORTVERSION=	1.0
@@ -12,7 +12,7 @@ COMMENT=	Batching facilities used in Plone
 LICENSE=	GPLv2
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 
