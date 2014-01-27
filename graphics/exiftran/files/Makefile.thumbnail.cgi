@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/exiftran/files/Makefile.thumbnail.cgi 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: graphics/exiftran/files/Makefile.thumbnail.cgi 340722 2014-01-22 17:00:46Z mat $
 
 PROG=	thumbnail.cgi
 
