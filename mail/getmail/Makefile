@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: mail/getmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/getmail/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	getmail
 PORTVERSION=	4.43.0
@@ -12,7 +12,7 @@ COMMENT=	POP3/IMAP4 mail retriever with Maildir and command delivery
 
 LICENSE=	GPLv2
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 MAN1=		getmail.1 getmail_fetch.1 getmail_maildir.1 getmail_mbox.1
