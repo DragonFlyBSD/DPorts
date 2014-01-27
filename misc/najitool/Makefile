@@ -1,8 +1,10 @@
 # Created by: NECDET COKYAZICI <cokyazici@yahoo.co.uk>
-# $FreeBSD: misc/najitool/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/najitool/Makefile 341058 2014-01-25 16:57:05Z miwi $
 
 PORTNAME=	najitool
 PORTVERSION=	0.8.4
+DISTVERSIONSUFFIX=	.src
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	SF
 
@@ -11,13 +13,17 @@ COMMENT=	Generates, converts, and filters files
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libnaji.a:${PORTSDIR}/devel/libnaji
 
-DISTVERSIONSUFFIX=	.src
+PLIST_FILES=	bin/najitool
 
-NO_STAGE=	yes
 post-patch:
-	${REINPLACE_CMD} -e 's|cflags =|cflags = -I${LOCALBASE}/include|; s|libnaji.a|${LOCALBASE}/lib/libnaji.a|' ${WRKSRC}/${MAKEFILE}
+	@${REINPLACE_CMD} -e \
+		'/^cc/s|=.*|= $${CC}| ; \
+		 /^ld/s|=.*|= $${CC}| ; \
+		 /^cflags/s|=.*|= $${CFLAGS} -I$${LOCALBASE}/include| ; \
+		 s| libnaji.a| $${LOCALBASE}/lib/libnaji.a|' \
+		${WRKSRC}/${MAKEFILE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/najitool ${PREFIX}/bin
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} najitool ${STAGEDIR}${PREFIX}/bin)
 
 .include <bsd.port.mk>
