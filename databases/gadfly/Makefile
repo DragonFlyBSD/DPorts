@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: databases/gadfly/Makefile 328563 2013-09-28 11:13:15Z mva $
+# $FreeBSD: databases/gadfly/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gadfly
 PORTVERSION=	1.0.0
@@ -12,7 +12,7 @@ COMMENT=	SQL database written in Python
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/kjbuckets.so:${PORTSDIR}/devel/py-kjbuckets
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
