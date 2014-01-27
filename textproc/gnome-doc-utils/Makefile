@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/gnome-doc-utils/Makefile 331973 2013-10-29 17:05:50Z kwm $
+# $FreeBSD: textproc/gnome-doc-utils/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/trunk/textproc/gnome-doc-utils/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-doc-utils
@@ -22,7 +22,7 @@ USE_XZ=		yes
 MAKE_JOBS_UNSAFE=yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomehier libxslt intlhack
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-omf-dir=${PREFIX}/share/omf
