@@ -1,16 +1,20 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: ports-mgmt/portshaker/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD: ports-mgmt/portshaker/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME?=	portshaker
-PORTVERSION=	1.0.8
+PORTVERSION=	1.0.9
 PORTREVISION?=	0
 CATEGORIES?=	ports-mgmt
-MASTER_SITES=	http://bsd-sharp.googlecode.com/files/ \
-		http://romain.blogreen.org/distfiles/
 DISTNAME=	portshaker-${PORTVERSION}
 
 MAINTAINER?=	romain@FreeBSD.org
 COMMENT?=	Maintain ports tree using multiple sources
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	smortex
+GH_PROJECT=	portshaker
+GH_TAGNAME=	v${PORTVERSION}
+GH_COMMIT=	4b9cdfe
 
 .if ${PORTNAME} == "portshaker"
 OPTIONS_DEFINE=	RSYNC SVN GIT HG
