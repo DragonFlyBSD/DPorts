@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: textproc/libnxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libnxml/Makefile 340559 2014-01-21 07:24:04Z mat $
 
 PORTNAME=	libnxml
 PORTVERSION=	0.18.3
@@ -21,7 +21,6 @@ USE_LDCONFIG=	yes
 
 WANT_GNOME=	yes
 
-NO_STAGE=	yes
 pre-patch:
 	${gnomehack_PRE_PATCH}
 
