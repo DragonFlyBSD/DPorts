@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: textproc/asciidoc/Makefile 338893 2014-01-06 15:11:48Z sunpoet $
+# $FreeBSD: textproc/asciidoc/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.9
@@ -16,7 +16,7 @@ LICENSE_COMB=	multi
 RUN_DEPENDS=	python2:${PORTSDIR}/lang/python2
 
 GNU_CONFIGURE=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=		gmake shebangfix
 
 CONF_FILES=	asciidoc.conf docbook45.conf filters/code/code-filter.conf \
