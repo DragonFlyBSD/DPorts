@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD: security/py-ecdsa/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-ecdsa/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ecdsa
 PORTVERSION=	0.8
@@ -12,7 +12,7 @@ COMMENT=	ECDSA cryptographic signature library (pure python)
 
 LICENSE=	MIT
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 regression-test: build
