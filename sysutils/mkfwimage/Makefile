@@ -1,5 +1,5 @@
 # Created by: Adrian Chadd <adrian@FreeBSD.org>
-# $FreeBSD: sysutils/mkfwimage/Makefile 333624 2013-11-12 21:35:45Z bapt $
+# $FreeBSD: sysutils/mkfwimage/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mkfwimage
 DISTVERSION=	r1
