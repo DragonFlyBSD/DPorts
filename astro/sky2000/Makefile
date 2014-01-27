@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: astro/sky2000/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD: astro/sky2000/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sky2000
 PORTVERSION=	0.2
