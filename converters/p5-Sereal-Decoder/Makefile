@@ -1,7 +1,7 @@
-# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 331758 2013-10-27 10:27:52Z kuriyama $
+# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 339579 2014-01-13 10:21:14Z kuriyama $
 
 PORTNAME=	Sereal-Decoder
-PORTVERSION=	0.37
+PORTVERSION=	2.03
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SMUELLER
