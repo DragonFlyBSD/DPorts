@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/my2cego/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/my2cego/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	my2cego
 PORTVERSION=	1.1.3
