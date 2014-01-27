@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: devel/py-turbokid/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-turbokid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	TurboKid
 PORTVERSION=	1.0.5
@@ -14,7 +14,7 @@ COMMENT=	Python template plugin that supports Kid templates
 
 RUN_DEPENDS=	kid:${PORTSDIR}/devel/py-kid
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
