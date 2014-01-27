@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: devel/phptags/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/phptags/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phptags
 PORTVERSION=	0.3.0
