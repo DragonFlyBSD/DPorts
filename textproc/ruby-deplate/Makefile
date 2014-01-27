@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: textproc/ruby-deplate/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ruby-deplate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		deplate
 PORTVERSION=		0.8.5
