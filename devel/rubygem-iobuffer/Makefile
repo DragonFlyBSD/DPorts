@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-iobuffer/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-iobuffer/Makefile 340901 2014-01-24 14:46:50Z miwi $
 
 PORTNAME=	iobuffer
 PORTVERSION=	1.1.2
@@ -12,5 +12,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
