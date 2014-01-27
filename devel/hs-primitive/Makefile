@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-primitive/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: devel/hs-primitive/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	primitive
 PORTVERSION=	0.5.0.1
