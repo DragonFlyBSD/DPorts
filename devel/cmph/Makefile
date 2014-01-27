@@ -1,5 +1,5 @@
 # Created by: Jesse Kempf (jessekempf@gmail.com)
-# $FreeBSD: devel/cmph/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/cmph/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cmph
 PORTVERSION=	2.0
@@ -13,7 +13,4 @@ GNU_CONFIGURE=	yes
 USES=	pathfix
 USE_LDCONFIG=	yes
 
-MAN1=		cmph.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
