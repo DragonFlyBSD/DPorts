@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	IO-Socket-Multicast6
 PORTVERSION=	0.03
@@ -8,7 +8,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tjs@cdpa.nsysu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Send and receive IPv4 and IPv6 multicast messages
 
 BUILD_DEPENDS=	p5-IO-Interface>=1.01:${PORTSDIR}/net/p5-IO-Interface \
