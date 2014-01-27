@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: textproc/docbook/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/docbook/Makefile 341240 2014-01-26 16:23:27Z mat $
 
 PORTNAME=	docbook
 PORTVERSION=	1.4
@@ -37,7 +37,6 @@ SDB_XML_DESC=	Simplified DocBook XML DTD
 SGMLCHARENT_DESC=	ISO 8879:1986 character entity sets (SGML)
 XMLCHARENT_DESC=	ISO 8879:1986 character entity sets (XML)
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDB241}
