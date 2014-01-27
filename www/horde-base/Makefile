@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-base/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: www/horde-base/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	horde
 PORTVERSION=	5.1.5
