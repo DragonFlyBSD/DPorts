@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rot/Makefile 338946 2014-01-06 21:50:26Z antoine $
+# $FreeBSD: textproc/rot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rot
 PORTVERSION=	1.2
