@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/bmake/Makefile 339274 2014-01-09 20:31:25Z trociny $
+# $FreeBSD: devel/bmake/Makefile 339387 2014-01-10 22:21:24Z trociny $
 
 PORTNAME=	bmake
 PORTVERSION=	20140101
@@ -37,7 +37,8 @@ do-install:
 	    	>${WRKDIR}/PLIST.share-mk
 	cd ${STAGEDIR}${PREFIX} ;					\
 	    ${FIND} share/mk -type d					\
-	    	| ${SORT} -r | ${SED} -e 's/^/@dirrmtry /'		\
+	    	| ${SORT} -r						\
+		| ${SED} -e 's/^/@dirrmtry /; ${PLIST_REINPLACE_DIRRMTRY}' \
 		>>${WRKDIR}/PLIST.share-mk
 	${ECHO_CMD} "r ${TMPPLIST}"			> ${WRKDIR}/ex.script
 	${ECHO_CMD} "/Insert PLIST.share-mk"		>> ${WRKDIR}/ex.script
