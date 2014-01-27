@@ -1,5 +1,5 @@
 # Created by: okeeblow <root@cooltrainer.org>
-# $FreeBSD: sysutils/abgx360/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/abgx360/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	abgx360
 PORTVERSION=	1.0.6
