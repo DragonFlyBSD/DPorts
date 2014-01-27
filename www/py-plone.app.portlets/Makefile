@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.portlets/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: www/py-plone.app.portlets/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.app.portlets
 PORTVERSION=	2.4.5
@@ -46,7 +46,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}five.formlib>=0:${PORTSDIR}/devel/py-five.fo
 		${PYTHON_PKGNAMEPREFIX}feedparser>=0:${PORTSDIR}/textproc/py-feedparser
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 USES=		zope
