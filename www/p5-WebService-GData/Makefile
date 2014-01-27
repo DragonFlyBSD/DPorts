@@ -1,11 +1,11 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-WebService-GData/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD: www/p5-WebService-GData/Makefile 339639 2014-01-13 21:31:57Z ehaupt $
 
 PORTNAME=	WebService-GData
-PORTVERSION=	0.0501
+PORTVERSION=	0.06
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:SHIRIRU
+MASTER_SITE_SUBDIR=	CPAN:SZABGAB
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
