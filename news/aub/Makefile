@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: news/aub/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/aub/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aub
 PORTVERSION=	2.2
