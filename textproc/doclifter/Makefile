@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/doclifter/Makefile 328770 2013-09-30 04:17:06Z araujo $
+# $FreeBSD: textproc/doclifter/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	doclifter
 PORTVERSION=	2.13
@@ -12,7 +12,7 @@ COMMENT=	Translates documents written in troff macros to DocBook
 
 RUN_DEPENDS+=	python2:${PORTSDIR}/lang/python2
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/doclifter \
