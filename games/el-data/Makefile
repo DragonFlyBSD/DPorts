@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/el-data/Makefile 338896 2014-01-06 15:17:02Z rene $
+# $FreeBSD: games/el-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	data
 PORTVERSION=	193
