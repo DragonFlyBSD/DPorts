@@ -1,8 +1,8 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: mail/imapsync/Makefile 333008 2013-11-06 16:06:07Z wg $
+# $FreeBSD: mail/imapsync/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imapsync
-PORTVERSION=	1.569
+PORTVERSION=	1.580
 PORTREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	https://fedorahosted.org/released/${PORTNAME}/
