@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/pecl-memcached/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/pecl-memcached/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	memcached
 PORTVERSION=	2.1.0
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=--with-libmemcached-dir=${LOCALBASE}
 OPTIONS_DEFINE=	IGBINARY
 IGBINARY_DESC=	Binary serializer support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIGBINARY}
