@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/py-zope.structuredtext/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: textproc/py-zope.structuredtext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope.structuredtext
 PORTVERSION=	3.5.1
