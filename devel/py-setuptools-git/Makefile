@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/py-setuptools-git/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-setuptools-git/Makefile 339743 2014-01-15 03:51:25Z miwi $
 
 PORTNAME=	setuptools-git
-PORTVERSION=	0.4.2
+PORTVERSION=	1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
