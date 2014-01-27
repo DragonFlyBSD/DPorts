@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: math/solitaire/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/solitaire/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	solitaire
 PORTVERSION=	19980817
