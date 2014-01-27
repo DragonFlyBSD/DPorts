@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: archivers/ucl/Makefile 337547 2013-12-26 16:24:05Z bapt $
+# $FreeBSD: archivers/ucl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ucl
 PORTVERSION=	1.03
