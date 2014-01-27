@@ -1,8 +1,8 @@
 # Created by: Yoshiaki Uchikawa
-# $FreeBSD: audio/mikmod/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/mikmod/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mikmod
-PORTVERSION=	3.2.4
+PORTVERSION=	3.2.5
 CATEGORIES=	audio
 MASTER_SITES=	SF \
 		CRITICAL
