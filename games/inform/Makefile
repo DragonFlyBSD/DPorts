@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/inform/Makefile 334206 2013-11-18 15:08:34Z danilo $
+# $FreeBSD: games/inform/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	inform
 PORTVERSION=	6.32
