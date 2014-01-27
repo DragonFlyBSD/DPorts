@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-ToUnicode/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-LaTeX-ToUnicode/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	LaTeX-ToUnicode
 PORTVERSION=	0.03
@@ -11,11 +11,10 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Convert LaTeX commands to Unicode
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		LaTeX::ToUnicode::Tables.3 \
-		LaTeX::ToUnicode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
