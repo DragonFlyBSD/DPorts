@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: news/noffle/Makefile 337670 2013-12-27 09:49:49Z bapt $
+# $FreeBSD: news/noffle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	noffle
 PORTVERSION=	1.1.5
