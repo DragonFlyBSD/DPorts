@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-cprng-aes/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: security/hs-cprng-aes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cprng-aes
 PORTVERSION=	0.3.4
