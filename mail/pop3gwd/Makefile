@@ -1,5 +1,5 @@
 # Created by: jonny@jonny.eng.br
-# $FreeBSD: mail/pop3gwd/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pop3gwd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pop3gwd
 PORTVERSION=	1.2
