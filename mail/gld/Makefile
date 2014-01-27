@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: mail/gld/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gld/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gld
 PORTVERSION=	1.8

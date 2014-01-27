@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/gld/files/gld.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: mail/gld/files/gld.in 340872 2014-01-24 00:14:07Z mat $
 # was: $ FreeBSD: ports/mail/gld/files/gld.sh.tmpl,v 1.2 2004/09/01 08:06:24 vs Exp $
 #
 
