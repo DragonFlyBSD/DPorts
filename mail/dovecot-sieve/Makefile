@@ -1,5 +1,5 @@
 # Created by: Nils Vogels <nivo+kw+ports.bfa274@is-root.com>
-# $FreeBSD: mail/dovecot-sieve/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/dovecot-sieve/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dovecot-sieve
 PORTVERSION=	${DOVECOTVERSION}+${DISTVERSION}
