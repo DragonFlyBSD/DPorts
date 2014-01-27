@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/mp-letter/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/digestp
 bin/filep
 bin/filofaxp

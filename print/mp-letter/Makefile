@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: print/mp-letter/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/mp-letter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp-${PAPERSIZE}
 PORTVERSION=	3.0.1
