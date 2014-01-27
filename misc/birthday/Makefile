@@ -1,5 +1,5 @@
 # Created by: Niek Bergboer <niek@bergboer.net>
-# $FreeBSD: misc/birthday/Makefile 335978 2013-12-09 13:05:45Z danilo $
+# $FreeBSD: misc/birthday/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	birthday
 PORTVERSION=	1.5
