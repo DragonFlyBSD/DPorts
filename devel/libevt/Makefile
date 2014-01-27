@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libevt/Makefile 336281 2013-12-12 18:34:57Z antoine $
+# $FreeBSD: devel/libevt/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	libevt
-DISTVERSION=	alpha-20131211
+DISTVERSION=	alpha-20140112
 CATEGORIES=	devel
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSYm01VnUtLXNUZ2M/ \
 		LOCAL/antoine
@@ -15,7 +15,7 @@ LICENSE=	LGPL3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python --with-libintl-prefix=${LOCALBASE} ${ICONV_CONFIGURE_ARG}
 USES=		gettext iconv pathfix
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:E}
 
