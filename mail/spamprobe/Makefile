@@ -1,5 +1,5 @@
 # Created by: Matthew N. Dodd <mdodd@FreeBSD.org>
-# $FreeBSD: mail/spamprobe/Makefile 338647 2014-01-04 14:35:01Z stefan $
+# $FreeBSD: mail/spamprobe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		spamprobe
 PORTVERSION=	1.4d
