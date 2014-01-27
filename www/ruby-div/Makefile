@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/ruby-div/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/ruby-div/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	div
 PORTVERSION=	1.3.2
