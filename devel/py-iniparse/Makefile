@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-iniparse/Makefile 337539 2013-12-26 15:29:10Z wg $
+# $FreeBSD: devel/py-iniparse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iniparse
 PORTVERSION=	0.4
