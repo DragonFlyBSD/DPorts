@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: science/pycdf/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/pycdf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pycdf
 PORTVERSION=	0.6.3
@@ -17,7 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 LDFLAGS+=	"-L${LOCALBASE}/lib"
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYTHON_PKGNAMEPREFIX=	yes
 PYDISTUTILS_EGGINFO=	pycdf-0.6_3b-py${PYTHON_VER}.egg-info
