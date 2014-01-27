@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: misc/p5-Bot-Training/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/p5-Bot-Training/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Bot-Training
 PORTVERSION=	0.04
@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:AVAR
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Plain text training material for bots like Hailo and MegaHAL
 
 LICENSE=	ART10 GPLv1
