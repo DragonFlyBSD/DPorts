@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: misc/man.el/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/man.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	i18n-man
 PORTVERSION=	1.1
