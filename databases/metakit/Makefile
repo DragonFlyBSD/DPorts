@@ -1,5 +1,5 @@
 # Created by: Russell L. Carter <rcarter@pinyon.org>
-# $FreeBSD: databases/metakit/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/metakit/Makefile 339864 2014-01-15 23:40:29Z bapt $
 
 PORTNAME=	metakit
 PORTVERSION=	2.4.9.7
@@ -11,7 +11,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ embedded database engine, supports Python and Tcl
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/../license.terms
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/builds
 GNU_CONFIGURE=	yes
@@ -39,8 +38,6 @@ PLIST_SUB+=	WITH_PYTHON="@comment "
 CATEGORIES+=	tcl
 USE_TCL=	84+
 .endif
-
-.include <bsd.port.pre.mk>
 
 .if defined(USE_TCL)
 CONFIGURE_ARGS+=	--with-tcl=${TCL_INCLUDEDIR}
@@ -90,4 +87,4 @@ test:
 	${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test-tcl)
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
