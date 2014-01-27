@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/nl-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
+# $FreeBSD: textproc/nl-hunspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hunspell
 PORTVERSION=	2.10
