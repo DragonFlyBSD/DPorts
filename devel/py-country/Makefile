@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-country/Makefile 338029 2013-12-29 17:15:51Z demon $
+# $FreeBSD: devel/py-country/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	country
 PORTVERSION=	1.3
