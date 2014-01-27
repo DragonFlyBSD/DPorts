@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/mar/Makefile 331357 2013-10-23 07:40:52Z ehaupt $
+# $FreeBSD: archivers/mar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mar
 DISTVERSION=	0.5
