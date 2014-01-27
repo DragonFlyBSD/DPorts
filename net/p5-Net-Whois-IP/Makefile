@@ -1,8 +1,8 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Whois-IP/Makefile 329425 2013-10-05 07:58:46Z culot $
+# $FreeBSD: net/p5-Net-Whois-IP/Makefile 341234 2014-01-26 16:09:07Z culot $
 
 PORTNAME=	Net-Whois-IP
-PORTVERSION=	1.14
+PORTVERSION=	1.15
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
