@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: audio/cam/Makefile 334767 2013-11-24 19:08:54Z bapt $
+# $FreeBSD: audio/cam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cam
 PORTVERSION=	1.02
