@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/flvtool++/Makefile 336260 2013-12-12 13:01:40Z bapt $
+# $FreeBSD: multimedia/flvtool++/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	flvtool++
 PORTVERSION=	1.2.1
