@@ -1,5 +1,5 @@
 # Created by: Christopher Preston <rbg@gayteenresource.org>
-# $FreeBSD: games/nettoe/Makefile 334350 2013-11-19 20:24:55Z cs $
+# $FreeBSD: games/nettoe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nettoe
 PORTVERSION=	1.4.2
