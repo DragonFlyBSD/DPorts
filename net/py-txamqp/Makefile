@@ -1,5 +1,5 @@
 # Created by: Bruce Simpson
-# $FreeBSD: net/py-txamqp/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: net/py-txamqp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	txamqp
 PORTVERSION=	0.3
@@ -15,7 +15,7 @@ COMMENT=	Twisted Python library for the AMQP messaging protocol
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}thrift>0:${PORTSDIR}/devel/py-thrift
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USES=		twisted
 
