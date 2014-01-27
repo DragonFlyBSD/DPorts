@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: archivers/rzip/Makefile 333826 2013-11-15 09:41:40Z ehaupt $
+# $FreeBSD: archivers/rzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rzip
 PORTVERSION=	2.1
