@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: mail/mboxstats/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mboxstats/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mboxstats
 PORTVERSION=	3.1
