@@ -1,5 +1,5 @@
 # Created by: glewis
-# $FreeBSD: science/szip/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/szip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	szip
 PORTVERSION=	2.1
