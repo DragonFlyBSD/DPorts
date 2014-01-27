@@ -1,5 +1,5 @@
 # Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
-# $FreeBSD: textproc/p5-Syntax-Highlight-Perl-Improved/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Syntax-Highlight-Perl-Improved/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	Syntax-Highlight-Perl-Improved
 PORTVERSION=	1.01
@@ -14,7 +14,4 @@ COMMENT=	Syntax highlighting for Perl code
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Syntax::Highlight::Perl::Improved.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
