@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: archivers/py-liblzma/Makefile 336923 2013-12-19 15:16:59Z dbn $
+# $FreeBSD: archivers/py-liblzma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	liblzma
 PORTVERSION=	0.5.3
@@ -21,17 +21,11 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	liblzma.so:${PORTSDIR}/archivers/xz
-.else
 post-patch:
 	@${REINPLACE_CMD} -e 's/pc_cflags = .*/pc_cflags = ""/' \
 		-e 's/pc_libs = .*/pc_libs = "-llzma"/' ${WRKSRC}/setup.py
-.endif
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/lzma.so
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
