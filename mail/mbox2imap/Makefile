@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: mail/mbox2imap/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mbox2imap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mbox2imap
 PORTVERSION=	1.0
