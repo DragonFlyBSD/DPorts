@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: multimedia/clive1/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/clive1/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	clive
 PORTVERSION=	1.0.2
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 
 USE_BZIP2=	yes
 # not compatible with 3.0
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 .if !defined(NO_INSTALL_MANPAGES)
 MAN1=	${PORTNAME}.1 ${PORTNAME}-passwd.1
