@@ -1,5 +1,5 @@
 # Created by: Dryice Liu<dryice@dryice.name>
-# $FreeBSD: devel/py-babel/Makefile 335457 2013-12-02 08:03:05Z lwhsu $
+# $FreeBSD: devel/py-babel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Babel
 PORTVERSION=	1.3
@@ -13,7 +13,7 @@ COMMENT=	Collection of tools for internationalizing Python applications
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
-USE_PYTHON=		2.7+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_AUTOPLIST=	yes
 
