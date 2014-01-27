@@ -1,5 +1,5 @@
 # Created by: Eugene Grosbein <ports@grosbein.net>
-# $FreeBSD: devel/py-xcaplib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-xcaplib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcaplib
 PORTVERSION=	1.0.16
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twistedCore>=8.1.0:${PORTSDIR}/devel/py-tw
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=python_${PORTNAME}
 
