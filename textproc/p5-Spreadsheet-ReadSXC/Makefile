@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: textproc/p5-Spreadsheet-ReadSXC/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Spreadsheet-ReadSXC/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	Spreadsheet-ReadSXC
 PORTVERSION=	0.20
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Spreadsheet::ReadSXC.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
