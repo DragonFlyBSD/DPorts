@@ -1,9 +1,8 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: news/nzbget/Makefile 330759 2013-10-18 15:02:22Z feld $
+# $FreeBSD: news/nzbget/Makefile 340301 2014-01-19 14:18:17Z rakuco $
 
 PORTNAME=	nzbget
-PORTVERSION=	11.0
-PORTREVISION=	1
+PORTVERSION=	12.0
 CATEGORIES=	news
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 
