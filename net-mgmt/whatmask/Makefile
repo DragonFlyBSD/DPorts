@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-mgmt/whatmask/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: net-mgmt/whatmask/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	whatmask
 PORTVERSION=	1.2
