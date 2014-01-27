@@ -1,4 +1,4 @@
-# $FreeBSD: mail/pear-Horde_Smtp/Makefile 337825 2013-12-27 23:49:33Z mm $
+# $FreeBSD: mail/pear-Horde_Smtp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Smtp
 PORTVERSION=	1.3.1
