@@ -1,5 +1,5 @@
 # Created by: Craig Leres <leres@ee.lbl.gov>
-# $FreeBSD: sysutils/lbl-hf/Makefile 327808 2013-09-21 11:20:53Z bdrewery $
+# $FreeBSD: sysutils/lbl-hf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hf
 PORTVERSION=	1.4
