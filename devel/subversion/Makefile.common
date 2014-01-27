@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile.common 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/subversion/Makefile.common 340652 2014-01-21 20:23:38Z rakuco $
 
 PORTNAME=	subversion
 PORTVERSION=	1.8.5
@@ -72,10 +72,6 @@ STATIC_CONFIGURE_ON=		--enable-all-static
 
 .if ${PORT_OPTIONS:MMOD_DONTDOTHAT} && !${PORT_OPTIONS:MMOD_DAV_SVN}
 IGNORE=	to build mod_dontdothat OPTION mod_dav_svn is required
-.endif
-
-.if ${PORT_OPTIONS:MKDE_KWALLET} && !${PORT_OPTIONS:MNLS}
-IGNORE= KWallet requires OPTION NLS set to ON
 .endif
 
 APR_CONFIG=	${LOCALBASE}/bin/apr-1-config

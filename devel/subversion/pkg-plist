@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/subversion/pkg-plist 334888 2013-11-25 19:52:24Z ohauer $
 %%TOOLS%%bin/fsfs-access-map
 %%TOOLS%%bin/fsfs-reorg
 %%TOOLS%%bin/fsfs-stats
