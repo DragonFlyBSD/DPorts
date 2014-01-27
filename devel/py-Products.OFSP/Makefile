@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-Products.OFSP/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: devel/py-Products.OFSP/Makefile 341081 2014-01-25 19:42:03Z rm $
 
 PORTNAME=	Products.OFSP
 PORTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,10 +16,9 @@ LICENSE=	ZPL21
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}AccessControl>=0:${PORTSDIR}/security/py-AccessControl \
 		${PYTHON_PKGNAMEPREFIX}Persistence>=0:${PORTSDIR}/devel/py-Persistence
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
-USE_ZIP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
