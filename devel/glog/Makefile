@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/glog/Makefile 333122 2013-11-07 15:37:32Z clsung $
+# $FreeBSD: devel/glog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glog
 PORTVERSION=	0.3.3
