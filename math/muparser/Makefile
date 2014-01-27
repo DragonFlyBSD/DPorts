@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: math/muparser/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/muparser/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	muparser
 PORTVERSION=	2.2.0
