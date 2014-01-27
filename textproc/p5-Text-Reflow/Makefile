@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: textproc/p5-Text-Reflow/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Text-Reflow/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-Reflow
 PORTVERSION=	1.09
