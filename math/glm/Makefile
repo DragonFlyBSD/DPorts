@@ -1,5 +1,5 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: math/glm/Makefile 337596 2013-12-26 18:45:50Z demon $
+# $FreeBSD: math/glm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glm
 PORTVERSION=	0.9.5.0
