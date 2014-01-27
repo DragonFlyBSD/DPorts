@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/mp-player/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/mp-player/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp-player
 PORTVERSION=	0.6
