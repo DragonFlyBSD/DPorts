@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/py-robotframework/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	robotframework
 PORTVERSION=	2.8.3
@@ -12,7 +12,7 @@ COMMENT=	Generic test automation framework
 
 LICENSE=	APACHE20
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 
