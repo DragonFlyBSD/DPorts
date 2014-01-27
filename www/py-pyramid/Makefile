@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-pyramid/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-pyramid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyramid
 PORTVERSION=	1.4.2
@@ -24,7 +24,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 #TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}WebTest>=1.1:${PORTSDIR}/www/py-WebTest \
 #		${PYTHON_PKGNAMEPREFIX}zope.component>=3.6.0:${PORTSDIR}/devel/py-zope.component
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
