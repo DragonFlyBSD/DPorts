@@ -1,5 +1,5 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: www/py-fcgi/Makefile 338104 2013-12-30 12:44:07Z wg $
+# $FreeBSD: www/py-fcgi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fcgi
 PORTVERSION=	0.1
