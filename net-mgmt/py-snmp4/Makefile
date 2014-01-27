@@ -1,5 +1,5 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: net-mgmt/py-snmp4/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/py-snmp4/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	snmp4
 PORTVERSION=	4.2.3
