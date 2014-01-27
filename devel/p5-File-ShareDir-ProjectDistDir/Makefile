@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-ShareDir-ProjectDistDir/Makefile 337120 2013-12-21 10:09:12Z kuriyama $
+# $FreeBSD: devel/p5-File-ShareDir-ProjectDistDir/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	File-ShareDir-ProjectDistDir
 PORTVERSION=	0.5.2
