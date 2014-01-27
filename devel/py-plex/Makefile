@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-plex/Makefile 337705 2013-12-27 10:51:57Z wg $
+# $FreeBSD: devel/py-plex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plex
 PORTVERSION=	1.1.5
