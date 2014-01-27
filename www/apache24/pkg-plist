@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/apache24/pkg-plist 334786 2013-11-24 20:09:07Z ohauer $
 @comment keep the next three lines on top (only required for old pkg_... tools)
 @exec mkdir -p %D/%%ETCDIR%%/envvars.d
 @exec mkdir -p %D/%%ETCDIR%%/extra
