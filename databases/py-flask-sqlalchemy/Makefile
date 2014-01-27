@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: databases/py-flask-sqlalchemy/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-flask-sqlalchemy/Makefile 340894 2014-01-24 13:34:31Z olivierd $
 
 PORTNAME=	Flask-SQLAlchemy
 PORTVERSION=	1.0
@@ -15,8 +15,8 @@ LICENSE=	BSD
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0.10:${PORTSDIR}/www/py-flask \
 	${PYTHON_PKGNAMEPREFIX}sqlalchemy>=0.7:${PORTSDIR}/databases/py-sqlalchemy
 
-USE_PYTHON=	2.6+
-USE_PYDISTUTILS=	easy_install
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
