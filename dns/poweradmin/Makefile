@@ -1,5 +1,5 @@
 # Created by: geo
-# $FreeBSD: dns/poweradmin/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/poweradmin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	poweradmin
 PORTVERSION=	2.1.6
