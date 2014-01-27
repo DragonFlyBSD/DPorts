@@ -1,5 +1,5 @@
 # Created by: Peter Kieser <peter@kieser.ca>
-# $FreeBSD: mail/spamdyke/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: mail/spamdyke/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spamdyke
 PORTVERSION=	4.3.1
