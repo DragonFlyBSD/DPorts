@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: news/newspost/Makefile 337677 2013-12-27 10:00:14Z bapt $
+# $FreeBSD: news/newspost/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	newspost
 PORTVERSION=	2.1.1
