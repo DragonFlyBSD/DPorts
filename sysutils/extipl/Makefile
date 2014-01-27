@@ -1,5 +1,5 @@
 # Created by: KIMURA Takamichi <takamiti@tsden.org>
-# $FreeBSD: sysutils/extipl/Makefile 333275 2013-11-09 05:55:32Z vanilla $
+# $FreeBSD: sysutils/extipl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	extipl
 PORTVERSION=	5.04
