@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: security/py-m2crypto/Makefile 334462 2013-11-20 22:09:45Z sunpoet $
+# $FreeBSD: security/py-m2crypto/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	m2crypto
 PORTVERSION=	0.21.1
@@ -18,7 +18,7 @@ PYDISTUTILS_BUILDARGS=	build_ext --openssl="${OPENSSLBASE}"
 PYDISTUTILS_PKGNAME=	M2Crypto
 USE_OPENSSL=	yes
 USE_PYDISTUTILS=yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 MAKE_ARGS=	PYTHON_VERSION=${PYTHON_VER}
 
 post-patch:
