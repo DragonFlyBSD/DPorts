@@ -1,5 +1,5 @@
 # Created by: Peter Johnson <johnson.peter@gmail.com>
-# $FreeBSD: devel/djgpp-crx/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/djgpp-crx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	crx
 PORTVERSION=	2.03
