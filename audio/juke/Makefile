@@ -1,5 +1,5 @@
 # Created by: Oyvind Moll <oyvindmo@initio.no>
-# $FreeBSD: audio/juke/Makefile 337979 2013-12-29 13:01:28Z antoine $
+# $FreeBSD: audio/juke/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	juke
 PORTVERSION=	0.7
