@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: games/tads/Makefile 333471 2013-11-11 02:44:52Z danilo $
+# $FreeBSD: games/tads/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tads
 PORTVERSION=	2.5.9
