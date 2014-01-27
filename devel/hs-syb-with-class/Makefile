@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-syb-with-class/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: devel/hs-syb-with-class/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	syb-with-class
 PORTVERSION=	0.6.1.4
