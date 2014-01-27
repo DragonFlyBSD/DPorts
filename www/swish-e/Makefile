@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <doconnor@gsoft.com.au>
-# $FreeBSD: www/swish-e/Makefile 328498 2013-09-27 16:18:45Z antoine $
+# $FreeBSD: www/swish-e/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	swish-e
 PORTVERSION=	2.4.7
