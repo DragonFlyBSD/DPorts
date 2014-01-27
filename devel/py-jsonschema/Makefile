@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-jsonschema/Makefile 332644 2013-11-03 20:00:12Z wg $
+# $FreeBSD: devel/py-jsonschema/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	jsonschema
 PORTVERSION=	2.3.0
@@ -12,7 +12,7 @@ COMMENT=	JSON Schema validation for Python
 
 LICENSE=	MIT
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
