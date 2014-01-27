@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-asn1-modules/Makefile 337305 2013-12-23 22:42:48Z rm $
+# $FreeBSD: devel/py-asn1-modules/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asn1-modules
 PORTVERSION=	0.0.5
