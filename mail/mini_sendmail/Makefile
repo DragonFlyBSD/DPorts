@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: mail/mini_sendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mini_sendmail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mini_sendmail
 PORTVERSION=	1.3.6
