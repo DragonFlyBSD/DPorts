@@ -1,5 +1,5 @@
 # Created by: IWATSUKI Hiroyuki <don@na.rim.or.jp>
-# $FreeBSD: devel/rubygem-platform/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-platform/Makefile 340902 2014-01-24 14:47:11Z miwi $
 
 PORTNAME=	platform
 PORTVERSION=	0.4.0
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
