@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/py-periscope/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/py-periscope/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	periscope
 PORTVERSION=	0.2.4
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/BeautifulSoup.py:${PORTSDIR}/www/py-beautifuls
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USE_GNOME=	desktopfileutils
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 NO_WRKSUBDIR=	yes
 USES=	desktop-file-utils
