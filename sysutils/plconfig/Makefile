@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: sysutils/plconfig/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/plconfig/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plconfig
 PORTVERSION=	0.2
