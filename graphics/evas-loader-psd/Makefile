@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-psd/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD: graphics/evas-loader-psd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	loader-psd
 PORTVERSION=	1.7.9
