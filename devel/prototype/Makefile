@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/prototype/Makefile 330460 2013-10-15 21:17:55Z eadler $
+# $FreeBSD: devel/prototype/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	prototype
 PORTVERSION=	1.10
