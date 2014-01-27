@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tevent/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/tevent/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=		tevent
 PORTVERSION=		0.9.18
@@ -15,7 +15,7 @@ LICENSE=		LGPL3
 
 CONFLICTS=
 
-USE_PYTHON_BUILD=	-2.7
+USE_PYTHON_BUILD=	2
 USE_LDCONFIG=		yes
 HAS_CONFIGURE=		yes
 WAF_TOOL=		buildtools/bin/waf
