@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-TOM/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-LaTeX-TOM/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	LaTeX-TOM
 PORTVERSION=	1.03
