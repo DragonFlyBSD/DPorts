@@ -1,5 +1,5 @@
 # Created by: Max Kochubey <root@hangover.org.ru>
-# $FreeBSD: databases/firebird21-client/Makefile 329152 2013-10-03 06:59:02Z acm $
+# $FreeBSD: databases/firebird21-client/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	firebird
 PORTREVISION=	1
