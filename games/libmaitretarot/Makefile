@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/libmaitretarot/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/libmaitretarot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		libmaitretarot
 PORTVERSION=		0.1.98
