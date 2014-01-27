@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: www/py-scrapy/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: www/py-scrapy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Scrapy
 PORTVERSION=	0.16.5
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.0:${PORTSDIR}/devel/py-lxml \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}w3lib>=1.2:${PORTSDIR}/www/py-w3lib
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=		twisted:run
 USE_PYDISTUTILS=easy_install
 
