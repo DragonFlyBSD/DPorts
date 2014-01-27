@@ -1,5 +1,5 @@
 # Created by: Jan Hornyak <pav@oook.cz>
-# $FreeBSD: net/luasocket/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/luasocket/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	luasocket
 PORTVERSION=	2.0.2
