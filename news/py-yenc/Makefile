@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: news/py-yenc/Makefile 337668 2013-12-27 09:43:50Z bapt $
+# $FreeBSD: news/py-yenc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yenc
 PORTVERSION=	0.3
