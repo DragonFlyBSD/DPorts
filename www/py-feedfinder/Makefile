@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/py-feedfinder/Makefile 338105 2013-12-30 12:51:45Z wg $
+# $FreeBSD: www/py-feedfinder/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	feedfinder
 PORTVERSION=	1.3.7.1
