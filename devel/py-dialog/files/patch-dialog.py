@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/py-dialog/files/patch-dialog.py 308727 2012-12-12 01:13:40Z sobomax $
+$FreeBSD: devel/py-dialog/files/patch-dialog.py 340725 2014-01-22 17:40:44Z mat $
 
 --- dialog.py.orig
 +++ dialog.py
