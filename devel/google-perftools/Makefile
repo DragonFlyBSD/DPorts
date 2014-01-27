@@ -1,46 +1,44 @@
 # Created by: Yuri Victorovich <yuri@tsoft.com>
-# $FreeBSD: devel/google-perftools/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/google-perftools/Makefile 339826 2014-01-15 22:07:44Z mandree $
 
 PORTNAME=	google-perftools
-PORTVERSION=	1.8.3
+PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	vd/${PORTNAME}
+DISTNAME=	gperftools-${PORTVERSION}
 
 MAINTAINER=	yuri@tsoft.com
 COMMENT=	Fast, multi-threaded malloc() and nifty performance analysis tools
 
-GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
-MAN1=		pprof.1
-
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=	pathfix
+PROJECTHOST=	gperftools
 
-NO_STAGE=	yes
-post-patch:
-.if defined(NOPORTDOCS)
-	${REINPLACE_CMD} -e \
-		'/^install-data-am:/ s|install-dist_docDATA||' \
-		${WRKSRC}/Makefile.in
-.endif
+WRKSRC=		${WRKDIR}/gperftools-${PORTVERSION}
+DOCSDIR=	${PREFIX}/share/doc/gperftools
 
-post-build:
-	@${ECHO}
-	@${ECHO} "Please run 'make check' and verify there are no failing testcases on your system."
-	@${ECHO} "Report any testcase failures to http://code.google.com/p/google-perftools/issues/list"
-	@${ECHO}
+BUILD_DEPENDS+=	${LOCALBASE}/include/execinfo.h:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS+=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
-# four of the tests are known to fail on 7.0, uncomment this as soon as this is fixed
-#regression-test: check
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+USES=		compiler
 
-check: build
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check
+CPPFLAGS+=	-I${LOCALBASE}/include
+LIBS+=		-lexecinfo
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=LIBS="${LIBS}"
 
 .include <bsd.port.pre.mk>
+
+.if ${COMPILER_TYPE} == "clang" && !defined(USE_GCC)
+# clang cannot disable builtins individually
+CXXFLAGS+=	-fno-builtin
+.endif
 
 .if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=--enable-frame-pointers
@@ -48,5 +46,33 @@ CONFIGURE_ARGS+=--enable-frame-pointers
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
 BROKEN=	Does not build, assembly not supported, see PR-94: http://code.google.com/p/google-perftools/issues/detail?id=94&can=1
 .endif
+
+post-patch:
+.if ${COMPILER_TYPE} == "clang" && !defined(USE_GCC)
+	${REINPLACE_CMD} -Ee \
+		's|-fno-builtin-[a-z_]+||g' \
+		${WRKSRC}/Makefile.in
+.endif
+.if empty(PORT_OPTIONS:MDOCS)
+	${REINPLACE_CMD} -e \
+		'/^install-data-am:/ s|install-dist_docDATA||' \
+		${WRKSRC}/Makefile.in
+.endif
+
+post-build:
+	@${ECHO}
+	@${ECHO} "Please run 'make check'. Two testcases are known to fail."
+	@${ECHO} "Report any testcase failures to http://code.google.com/p/google-perftools/issues/list"
+	@${ECHO}
+
+post-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/libdata
+	${MV} ${STAGEDIR}${PREFIX}/lib/pkgconfig ${STAGEDIR}${PREFIX}/libdata
+
+# four of the tests are known to fail on 7.0, uncomment this as soon as this is fixed
+#regression-test: check
+
+check: build
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check
 
 .include <bsd.port.post.mk>
