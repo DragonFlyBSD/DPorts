@@ -1,8 +1,9 @@
 # Created by: Pete French <pete@twisted.org.uk>
-# $FreeBSD: lang/libobjc2/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/libobjc2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libobjc2
 PORTVERSION=	1.7
+PORTREVISION=	1
 CATEGORIES=	lang devel gnustep
 MASTER_SITES=	http://download.gna.org/gnustep/
 
