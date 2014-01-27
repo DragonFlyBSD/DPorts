@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/c-icap/files/pkg-deinstall.in 302543 2012-08-15 00:09:41Z mm $
+# $FreeBSD: www/c-icap/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 
 LOG_DIR=$DEST_DIR%%LOG_DIR%%
 RUN_DIR=$DEST_DIR%%RUN_DIR%%
