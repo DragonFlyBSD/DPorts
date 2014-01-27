@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $FreeBSD: databases/postgresql91-server/pkg-install-server 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: databases/postgresql91-server/pkg-install-server 340719 2014-01-22 15:52:06Z mat $
 
 PATH=/bin:/usr/bin:/usr/sbin
 
