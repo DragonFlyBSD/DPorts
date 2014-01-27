@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: mail/dk-milter/Makefile 334030 2013-11-16 20:11:28Z dinoex $
+# $FreeBSD: mail/dk-milter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dk-milter
 PORTVERSION=	1.0.2
