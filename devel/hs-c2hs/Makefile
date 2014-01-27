@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: devel/hs-c2hs/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: devel/hs-c2hs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	c2hs
 PORTVERSION=	0.16.4
