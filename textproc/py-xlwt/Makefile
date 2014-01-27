@@ -1,5 +1,5 @@
 # Created by: Dikshie
-# $FreeBSD: textproc/py-xlwt/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-xlwt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xlwt
 PORTVERSION=	0.7.5
@@ -10,10 +10,10 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	dikshie@sfc.wide.ad.jp
 COMMENT=	Writing data and formatting information from Excel files
 
-PLIST_SUB=	PYTHON_VER=${PYTHON_VER}
+LICENSE=	BSD4CLAUSE
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
