@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-rdtool/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: textproc/ruby-rdtool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rdtool
 PORTVERSION=	0.6.38
