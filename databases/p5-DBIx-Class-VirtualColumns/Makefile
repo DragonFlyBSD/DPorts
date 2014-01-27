@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: databases/p5-DBIx-Class-VirtualColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-VirtualColumns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	DBIx-Class-VirtualColumns
 PORTVERSION=	1.03
