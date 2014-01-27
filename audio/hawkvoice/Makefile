@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: audio/hawkvoice/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/hawkvoice/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hawkvoice
 PORTVERSION=	0.91
