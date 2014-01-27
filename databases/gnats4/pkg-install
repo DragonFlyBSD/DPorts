@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/gnats4/pkg-install 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: databases/gnats4/pkg-install 340719 2014-01-22 15:52:06Z mat $
 #
 
 ECHO_CMD=echo
