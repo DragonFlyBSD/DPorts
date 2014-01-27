@@ -1,9 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: sysutils/pdumpfs/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pdumpfs/Makefile 341085 2014-01-25 20:00:33Z swills $
 
 PORTNAME=	pdumpfs
 PORTVERSION=	1.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://0xcc.net/pdumpfs/
 
