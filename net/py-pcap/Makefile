@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: net/py-pcap/Makefile 337864 2013-12-28 11:35:56Z wg $
+# $FreeBSD: net/py-pcap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pcap
 PORTVERSION=	0.6.4
