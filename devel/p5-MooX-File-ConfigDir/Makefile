@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooX-File-ConfigDir/Makefile 335409 2013-12-01 17:44:55Z sunpoet $
+# $FreeBSD: devel/p5-MooX-File-ConfigDir/Makefile 339471 2014-01-12 03:52:04Z sunpoet $
 
 PORTNAME=	MooX-File-ConfigDir
-PORTVERSION=	0.002
+PORTVERSION=	0.003
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,12 +13,12 @@ COMMENT=	Moo eXtension for File::ConfigDir
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-File-ConfigDir>=0.006:${PORTSDIR}/devel/p5-File-ConfigDir \
+BUILD_DEPENDS=	p5-File-ConfigDir>=0.011:${PORTSDIR}/devel/p5-File-ConfigDir \
 		p5-Moo>=1.003000:${PORTSDIR}/devel/p5-Moo \
-		p5-namespace-autoclean>=0:${PORTSDIR}/devel/p5-namespace-autoclean
+		p5-namespace-clean>=0:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PERL5=	modbuild
+USE_PERL5=	configure
 USES=		perl5
 
 .include <bsd.port.mk>
