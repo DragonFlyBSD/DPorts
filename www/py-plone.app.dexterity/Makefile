@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.dexterity/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD: www/py-plone.app.dexterity/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	plone.app.dexterity
 PORTVERSION=	2.0.9
@@ -39,7 +39,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}collective.z3cform.datetimewidget>0:${PORTSD
 		${PYTHON_PKGNAMEPREFIX}z3c.form>0:${PORTSDIR}/devel/py-z3c.form
 
 DIST_SUBDIR=	zope
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_ZIP=	yes
 USES=		zope
