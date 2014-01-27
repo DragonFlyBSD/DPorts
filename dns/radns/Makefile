@@ -1,5 +1,5 @@
 # Created by: Michael Cardell Widerkrantz <mc@hack.org>
-# $FreeBSD: dns/radns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/radns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	radns
 PORTVERSION=	20110809.2
