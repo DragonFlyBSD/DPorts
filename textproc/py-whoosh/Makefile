@@ -1,5 +1,5 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: textproc/py-whoosh/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-whoosh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	whoosh
 PORTVERSION=	2.4.1
