@@ -1,5 +1,5 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: devel/py-asn1/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-asn1/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asn1
 PORTVERSION=	0.1.4
