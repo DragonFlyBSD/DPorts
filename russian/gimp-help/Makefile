@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: russian/gimp-help/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/gimp-help/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	russian graphics
 
