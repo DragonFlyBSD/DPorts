@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Random/Makefile 332537 2013-11-02 20:01:09Z sunpoet $
+# $FreeBSD: devel/p5-Data-Random/Makefile 340797 2014-01-23 03:28:52Z sunpoet $
 
 PORTNAME=	Data-Random
-PORTVERSION=	0.10
+PORTVERSION=	0.11
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
