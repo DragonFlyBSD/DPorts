@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-pefile/Makefile 336280 2013-12-12 18:01:05Z antoine $
+# $FreeBSD: devel/py-pefile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pefile
 DISTVERSION=	1.2.10-139
@@ -12,7 +12,7 @@ COMMENT=	Python module to read and work with PE files
 
 LICENSE=	MIT
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
