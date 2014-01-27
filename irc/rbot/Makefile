@@ -1,5 +1,5 @@
 # Created by: David Bushong <david+ports@bushong.net>
-# $FreeBSD: irc/rbot/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: irc/rbot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rbot
 PORTVERSION=	0.9.15
