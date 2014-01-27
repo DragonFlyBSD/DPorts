@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: textproc/cdiff/Makefile 335484 2013-12-02 13:27:19Z mat $
+# $FreeBSD: textproc/cdiff/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cdiff
 PORTVERSION=	0.9.3
