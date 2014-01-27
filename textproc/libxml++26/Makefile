@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/libxml++26/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libxml++26/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/textproc/libxml++26/Makefile,v 1.43 2011/04/18 19:58:29 kwm Exp $
 
 PORTNAME=	libxml++
