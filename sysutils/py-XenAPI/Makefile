@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <bsdports@wayfair.com>
-# $FreeBSD: sysutils/py-XenAPI/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-XenAPI/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	XenAPI
 PORTVERSION=	1.0
@@ -13,7 +13,7 @@ EXTRACT_ONLY=
 MAINTAINER=	bsdports@wayfair.com
 COMMENT=	Xen API Library for Python
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/XenAPI.py \
 		%%PYTHON_SITELIBDIR%%/XenAPI.pyc \
