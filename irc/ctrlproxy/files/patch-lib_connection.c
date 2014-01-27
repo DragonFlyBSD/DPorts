@@ -1,5 +1,5 @@
 
-$FreeBSD: irc/ctrlproxy/files/patch-lib_connection.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: irc/ctrlproxy/files/patch-lib_connection.c 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/connection.c.orig
 +++ lib/connection.c
