@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/translate-toolkit/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/translate-toolkit/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	translate-toolkit
 PORTVERSION=	1.9.0
@@ -25,7 +25,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
 USES=		gettext
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 MAN1=		csv2po.1 csv2tbx.1 html2po.1 ical2po.1 ini2po.1 \
