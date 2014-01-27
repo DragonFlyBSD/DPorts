@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-DHCP/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-DHCP/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	Net-DHCP
 PORTVERSION=	0.693
@@ -7,7 +7,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tjs@cdpa.nsysu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DHCP set of classes designed to handle basic DHCP handling
 
 LICENSE=	ART10 GPLv1
