@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-String-Compare-ConstantTime/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-String-Compare-ConstantTime/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	String-Compare-ConstantTime
 PORTVERSION=	0.300
@@ -12,8 +12,4 @@ COMMENT=	Perl extension for timing side-channel protected string compare
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	String::Compare::ConstantTime.3 \
-	String::Compare::README.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
