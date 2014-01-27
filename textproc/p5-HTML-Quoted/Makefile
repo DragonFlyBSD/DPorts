@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-HTML-Quoted/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-HTML-Quoted/Makefile 340610 2014-01-21 14:03:59Z mat $
 
 PORTNAME=	HTML-Quoted
 PORTVERSION=	0.04
@@ -9,13 +9,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Extract structure of quoted HTML mail message
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-HTML-Parser>=3.0:${PORTSDIR}/www/p5-HTML-Parser
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Quoted.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
