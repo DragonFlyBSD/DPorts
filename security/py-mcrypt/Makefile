@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-mcrypt/Makefile 338081 2013-12-30 10:59:28Z wg $
+# $FreeBSD: security/py-mcrypt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mcrypt
 PORTVERSION=	1.1
