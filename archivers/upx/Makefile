@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: archivers/upx/Makefile 337555 2013-12-26 16:53:14Z bapt $
+# $FreeBSD: archivers/upx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	upx
 PORTVERSION=	3.09
