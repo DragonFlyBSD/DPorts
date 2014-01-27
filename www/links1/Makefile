@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/links1/Makefile 332222 2013-10-31 11:06:16Z bapt $
+# $FreeBSD: www/links1/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	links
 PORTVERSION=	1.03
