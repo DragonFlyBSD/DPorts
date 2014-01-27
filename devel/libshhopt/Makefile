@@ -1,27 +1,28 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/libshhopt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libshhopt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libshhopt
 PORTVERSION=	1.1.7
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://shh.thathost.com/pub-unix/files/
 DISTNAME=	shhopt-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A library for parsing command line options
+COMMENT=	Library for parsing command line options
 
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+USES=		uidfix
 MAKEFILE=	${FILESDIR}/Makefile.lib
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${FILESDIR}/Makefile ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/example.c ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CREDITS ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${FILESDIR}/Makefile ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/example.c ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>

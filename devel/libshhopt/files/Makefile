@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libshhopt/files/Makefile 319443 2013-05-30 18:09:52Z antoine $
+# $FreeBSD: devel/libshhopt/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PREFIX	= /usr/local
 LIBDIR	= $(PREFIX)/lib
