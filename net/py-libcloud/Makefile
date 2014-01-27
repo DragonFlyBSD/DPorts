@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/py-libcloud/Makefile 338530 2014-01-03 08:56:26Z novel $
+# $FreeBSD: net/py-libcloud/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libcloud
 PORTVERSION=	0.13.3
