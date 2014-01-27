@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-failure/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: devel/hs-failure/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	failure
 PORTVERSION=	0.2.0.1
