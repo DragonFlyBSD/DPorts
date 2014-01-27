@@ -1,4 +1,4 @@
-# $FreeBSD: databases/libodbc++/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/libodbc++/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libodbc++
 PORTVERSION=	0.2.5
