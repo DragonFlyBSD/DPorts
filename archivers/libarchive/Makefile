@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/libarchive/Makefile 338571 2014-01-03 18:35:01Z bapt $
+# $FreeBSD: archivers/libarchive/Makefile 339572 2014-01-13 07:23:43Z bapt $
 
 PORTNAME=	libarchive
 PORTVERSION=	3.1.2
@@ -103,13 +103,7 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-openssl --without-nettle
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	lzma:${PORTSDIR}/archivers/xz
-.endif
-
 check:
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} check)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
