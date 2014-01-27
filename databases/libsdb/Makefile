@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/libsdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/libsdb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsdb
 PORTVERSION=	0.10.0
