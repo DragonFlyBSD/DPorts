@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/py-probstat/Makefile 337852 2013-12-28 11:14:20Z wg $
+# $FreeBSD: math/py-probstat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	probstat
 PORTVERSION=	0.912
