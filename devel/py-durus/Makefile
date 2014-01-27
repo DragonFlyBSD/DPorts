@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: devel/py-durus/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-durus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	durus
 PORTVERSION=	3.9
@@ -12,7 +12,7 @@ DISTNAME=	Durus-${PORTVERSION}
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	A persistent object storage system for Python
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 PYDISTUTILS_PKGNAME=	Durus
