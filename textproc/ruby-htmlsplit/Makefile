@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-htmlsplit/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ruby-htmlsplit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	htmlsplit
 PORTVERSION=	1.0.2
