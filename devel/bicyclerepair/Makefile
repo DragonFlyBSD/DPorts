@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: devel/bicyclerepair/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/bicyclerepair/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bicyclerepair
 PORTVERSION=	0.9
@@ -10,7 +10,7 @@ PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 MAINTAINER=	mwm@mired.org
 COMMENT=	A python refactoring tool
 
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 NO_STAGE=	yes
 
