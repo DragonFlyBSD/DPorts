@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-jslib/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-jslib/Makefile 341209 2014-01-26 15:10:59Z miwi $
 
 PORTNAME=	jslib
 PORTVERSION=	0.1.371
@@ -13,10 +13,11 @@ COMMENT=	Library of common useful routines for XPI developers
 LICENSE=	MPL
 
 XPI_ID=		{DF8E5247-8E0A-4de6-B393-0735A39DFD80}
-XPI_FILES=	application.ini chrome/jslib.jar chrome/jsliblive/contents.rdf chrome/jsliblive/jsliblive.xul chrome.manifest components/jslib-dom.js components/jslib-service.js components/jslib.xpt defaults/preferences/prefs.js install.js install.rdf
+XPI_FILES=	application.ini chrome/jslib.jar chrome/jsliblive/contents.rdf chrome/jsliblive/jsliblive.xul chrome.manifest \
+		components/jslib-dom.js components/jslib-service.js components/jslib.xpt defaults/preferences/prefs.js \
+		install.js install.rdf
 XPI_DIRS=	chrome/jsliblive chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 post-patch:
 		${REINPLACE_CMD} -Ee '/Suite/,/Flock/s/>2[.]0[.][*]</>2.4.*</' ${WRKSRC}/install.rdf
 		${RM} -f ${WRKSRC}/install.rdf.bak
