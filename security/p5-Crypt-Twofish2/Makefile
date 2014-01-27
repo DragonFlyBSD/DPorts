@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-Twofish2/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Crypt-Twofish2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Crypt-Twofish2
 PORTVERSION=	1.02
