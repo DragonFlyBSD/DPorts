@@ -1,5 +1,5 @@
 # Created by: vanhu <vanhu@netasq.com>
-# $FreeBSD: net/scapy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/scapy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scapy
 PORTVERSION=	2.2.0
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/dnet.so:${PORTSDIR}/net/py-libdnet \
 MAN1=		scapy.1
 MANCOMPRESSED=	yes
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
 OPTIONS_DEFINE=	PYX PYCRYPTO PYGNUPLOT GRAPH P0F_BASE QUESO_BASE MMAP MANUF
