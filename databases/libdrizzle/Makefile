@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: databases/libdrizzle/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: databases/libdrizzle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libdrizzle
 PORTVERSION=	0.8
