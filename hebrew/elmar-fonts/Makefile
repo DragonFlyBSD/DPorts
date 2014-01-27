@@ -1,5 +1,5 @@
 # Created by: nadav@cs.technion.ac.il
-# $FreeBSD: hebrew/elmar-fonts/Makefile 327734 2013-09-20 18:41:52Z bapt $
+# $FreeBSD: hebrew/elmar-fonts/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	elmar-fonts
 PORTVERSION=	3.3
