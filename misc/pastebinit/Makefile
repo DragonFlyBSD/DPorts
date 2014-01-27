@@ -1,4 +1,4 @@
-# $FreeBSD: misc/pastebinit/Makefile 328304 2013-09-25 18:17:57Z eadler $
+# $FreeBSD: misc/pastebinit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pastebinit
 PORTVERSION=	1.3.1
