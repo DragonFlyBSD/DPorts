@@ -1,5 +1,5 @@
 # Created by: Giel van Schijndel <me@mortis.eu>
-# $FreeBSD: mail/postfix-policyd-spf-python/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: mail/postfix-policyd-spf-python/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	postfix-policyd-spf-python
 PORTVERSION=	1.2
