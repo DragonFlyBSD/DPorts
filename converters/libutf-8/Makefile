@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: converters/libutf-8/Makefile 339237 2014-01-09 14:07:36Z bapt $
+# $FreeBSD: converters/libutf-8/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libutf-8
 PORTVERSION=	1.0
