@@ -1,5 +1,5 @@
 
-$FreeBSD: print/enscript-letter/files/patch-src_util.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: print/enscript-letter/files/patch-src_util.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/util.c.orig
 +++ src/util.c
