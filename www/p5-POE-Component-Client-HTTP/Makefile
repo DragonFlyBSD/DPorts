@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-POE-Component-Client-HTTP/Makefile 333117 2013-11-07 15:22:45Z vanilla $
+# $FreeBSD: www/p5-POE-Component-Client-HTTP/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	POE-Component-Client-HTTP
 PORTVERSION=	0.9480
