@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: devel/rubygem-rubyinlineaccel/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-rubyinlineaccel/Makefile 340903 2014-01-24 14:49:29Z miwi $
 
 PORTNAME=	rubyinlineaccel
 PORTVERSION=	0.0.1
@@ -20,5 +20,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
