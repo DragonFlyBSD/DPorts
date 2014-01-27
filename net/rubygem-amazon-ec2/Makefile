@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/rubygem-amazon-ec2/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-amazon-ec2/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	amazon-ec2
 PORTVERSION=	0.9.17
@@ -16,5 +16,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/awshell bin/ec2-gem-example.rb bin/ec2-gem-profile.rb bin/ec2sh bin/setup.rb
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
