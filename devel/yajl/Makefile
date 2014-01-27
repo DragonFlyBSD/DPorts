@@ -1,4 +1,4 @@
-# $FreeBSD: devel/yajl/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: devel/yajl/Makefile 341141 2014-01-25 23:54:15Z bapt $
 
 PORTNAME=	yajl
 PORTVERSION=	2.0.4
@@ -12,7 +12,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	lloyd
 GH_COMMIT=	fee1ebe
 
-LICENSE=	BSD
+LICENSE=	ISCL
 
 USE_LDCONFIG=	yes
 USES=		cmake
