@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/the_silver_searcher/Makefile 331247 2013-10-22 10:11:00Z mat $
+# $FreeBSD: textproc/the_silver_searcher/Makefile 339572 2014-01-13 07:23:43Z bapt $
 
 PORTNAME=	the_silver_searcher
 PORTVERSION=	0.17
@@ -20,12 +20,7 @@ ACLOCAL_ARGS+=	-I ${ACLOCAL_DIR}
 AUTOMAKE_ARGS+=	--add-missing
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	LZMA_LIBS=-llzma
-.if exists(/usr/include/lzma.h)
 CONFIGURE_ARGS+=	LZMA_CFLAGS=-I/usr/include
-.else
-LIB_DEPENDS+=	liblzma.so:${PORTSDIR}/archivers/xz
-CONFIGURE_ARGS+=	LZMA_CFLAGS=-I${LOCALBASE}/include
-.endif
 USE_AUTOTOOLS=	aclocal autoconf autoheader automake
 USES=		pkgconfig
 
