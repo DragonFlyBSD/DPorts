@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/dasm/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/dasm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dasm
 PORTVERSION=	2.20.11
@@ -22,18 +22,11 @@ PORTDOCS=	*
 PLIST_FILES=	bin/dasm \
 		bin/ftohex
 
-NO_STAGE=	yes
 do-install:
 .for filename in dasm ftohex
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${filename} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${filename} ${STAGEDIR}${PREFIX}/bin
 .endfor
-
-.include <bsd.port.options.mk>
-
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
