@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: devel/py-gflags/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-gflags/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
@@ -13,7 +13,7 @@ COMMENT=	Commandline flags module for Python
 
 LICENSE=	BSD
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	python_gflags
 
