@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-sanetime/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-sanetime/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	sanetime
 PORTVERSION=	4.2.3
@@ -27,7 +27,7 @@ NO_STAGE=	yes
 BUILD_DEPENDS:=	${TEST_DEPENDS}
 .endif
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 
 regression-test: build
