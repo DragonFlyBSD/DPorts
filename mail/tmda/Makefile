@@ -1,5 +1,5 @@
 # Created by: Jason R. Mastaler <jason@mastaler.com>
-# $FreeBSD: mail/tmda/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/tmda/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tmda
 PORTVERSION=	1.1.12
@@ -17,7 +17,7 @@ COMMENT=	Python-based SPAM reduction system
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/cdbmodule.so:${PORTSDIR}/databases/py-cdb
 .endif
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 SUB_FILES=	pkg-message
 
