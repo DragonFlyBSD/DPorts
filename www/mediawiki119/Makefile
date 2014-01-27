@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki119/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: www/mediawiki119/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mediawiki
 PORTVERSION=	1.19.8
