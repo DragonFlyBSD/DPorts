@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: archivers/nwreckdum/Makefile 328246 2013-09-25 03:26:07Z vanilla $
+# $FreeBSD: archivers/nwreckdum/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nwreckdum
 PORTVERSION=	0.0.6
