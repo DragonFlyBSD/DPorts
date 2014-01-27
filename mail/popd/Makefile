@@ -1,5 +1,5 @@
 # Created by: ianf@za.uu.net
-# $FreeBSD: mail/popd/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/popd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	popd
 PORTVERSION=	2.2.2a
