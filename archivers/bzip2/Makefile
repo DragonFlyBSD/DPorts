@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: archivers/bzip2/Makefile 338698 2014-01-04 23:57:39Z bapt $
+# $FreeBSD: archivers/bzip2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzip2
 PORTVERSION=	1.0.6
