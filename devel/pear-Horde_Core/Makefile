@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Core/Makefile 334527 2013-11-21 21:55:54Z mm $
+# $FreeBSD: devel/pear-Horde_Core/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Core
 PORTVERSION=	2.11.1
