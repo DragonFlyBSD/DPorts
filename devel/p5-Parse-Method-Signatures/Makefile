@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Parse-Method-Signatures/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
+# $FreeBSD: devel/p5-Parse-Method-Signatures/Makefile 340246 2014-01-19 09:26:40Z sunpoet $
 
 PORTNAME=	Parse-Method-Signatures
-PORTVERSION=	1.003015
+PORTVERSION=	1.003016
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,7 +13,8 @@ COMMENT=	Perl6 like method signature parser
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-List-MoreUtils>=0.20:${PORTSDIR}/lang/p5-List-MoreUtils \
+BUILD_DEPENDS=	p5-Class-Load>=0.19:${PORTSDIR}/devel/p5-Class-Load \
+		p5-List-MoreUtils>=0.20:${PORTSDIR}/lang/p5-List-MoreUtils \
 		p5-Moose>=0:${PORTSDIR}/devel/p5-Moose \
 		p5-MooseX-Traits>=0.06:${PORTSDIR}/devel/p5-MooseX-Traits \
 		p5-MooseX-Types>=0.17:${PORTSDIR}/devel/p5-MooseX-Types \
