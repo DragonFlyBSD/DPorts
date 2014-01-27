@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-http-date/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: www/hs-http-date/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	http-date
 PORTVERSION=	0.0.4
