@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: databases/ip4r/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/ip4r/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ip4r
 PORTVERSION=	1.05

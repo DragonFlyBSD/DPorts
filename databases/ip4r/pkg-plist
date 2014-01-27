@@ -1,4 +1,3 @@
-@comment $FreeBSD: databases/ip4r/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/postgresql/ip4r.so
 share/doc/postgresql/contrib/README.ip4r
 share/postgresql/contrib/ip4r.sql
