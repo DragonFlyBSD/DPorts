@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-change_sqlpass-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD: mail/squirrelmail-change_sqlpass-plugin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	change-sqlpass
 PORTVERSION=	3.3
