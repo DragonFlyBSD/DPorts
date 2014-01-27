@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-traits/Makefile 338516 2014-01-03 01:53:21Z bapt $
+# $FreeBSD: devel/py-traits/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	traits
 PORTVERSION=	3.6.0
