@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/py-Jinja/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: devel/py-Jinja/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Jinja
 PORTVERSION=	1.2
@@ -12,7 +12,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	A fast and easy to use stand-alone template engine
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 NO_STAGE=	yes
 
