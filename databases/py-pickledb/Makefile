@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: databases/py-pickledb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-pickledb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pickleDB
 PORTVERSION=	0.3
@@ -12,7 +12,7 @@ COMMENT=	A lightweight, fast, and simple key-value store
 
 LICENSE=	BSD
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/pickledb.py \
