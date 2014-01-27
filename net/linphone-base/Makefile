@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/linphone-base/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
+# $FreeBSD: net/linphone-base/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	linphone
 PORTVERSION=	3.2.1
