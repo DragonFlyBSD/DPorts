@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-mgmt/py-ipy/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/py-ipy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ipy
 PORTVERSION=	0.81
