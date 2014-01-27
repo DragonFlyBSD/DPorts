@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: mail/py-libgmail/Makefile 337847 2013-12-28 10:51:54Z wg $
+# $FreeBSD: mail/py-libgmail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libgmail
 DISTVERSION=	0.1.11
