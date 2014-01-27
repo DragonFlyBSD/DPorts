@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-Rose-DBx-Object-MoreHelpers/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Rose-DBx-Object-MoreHelpers/Makefile 340989 2014-01-25 06:04:49Z miwi $
 
 PORTNAME=	Rose-DBx-Object-MoreHelpers
 PORTVERSION=	0.09
+PORTREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	Rose/KARMAN
@@ -17,7 +18,4 @@ RUN_DEPENDS=	p5-Rose-DB-Object>=0.7730,1:${PORTSDIR}/databases/p5-Rose-DB-Object
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Rose::DBx::Object::MoreHelpers.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
