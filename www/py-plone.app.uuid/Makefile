@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.uuid/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: www/py-plone.app.uuid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plone.app.uuid
 PORTVERSION=	1.0
