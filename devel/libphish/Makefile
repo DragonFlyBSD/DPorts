@@ -1,16 +1,19 @@
 # Created by: Rashid N. Achilov <shelton@granch.ru>
-# $FreeBSD: devel/libphish/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libphish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libphish
 PORTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.berlios.de/opdb/ \
 		http://download2.berlios.de/opdb/ \
 
 MAINTAINER=	citycat4@ngs.ru
-COMMENT=	A cross-platform library to interact with the Open Phishing Database
+COMMENT=	Cross-platform library to interact with the Open Phishing Database
 
 BUILD_DEPENDS=	xmlwf:${PORTSDIR}/textproc/expat2
+
+OPTIONS_DEFINE=	DOCS
 
 USE_AUTOTOOLS=	libtool
 USE_BZIP2=	yes
@@ -20,11 +23,8 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DFreeBSD
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} `${LS}` ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
