@@ -1,5 +1,5 @@
 # Created by: Yonatan <Yonatan@xpert.com>
-# $FreeBSD: sysutils/foremost/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/foremost/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	foremost
 PORTVERSION=	1.5.7
