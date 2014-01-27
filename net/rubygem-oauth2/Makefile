@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-oauth2/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD: net/rubygem-oauth2/Makefile 340250 2014-01-19 09:26:59Z sunpoet $
 
 PORTNAME=	oauth2
-PORTVERSION=	0.9.2
+PORTVERSION=	0.9.3
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
@@ -12,9 +12,8 @@ COMMENT=	Ruby wrapper for the OAuth 2.0 protocol
 LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-faraday>=0.8:${PORTSDIR}/www/rubygem-faraday \
-		rubygem-httpauth>=0.2:${PORTSDIR}/net/rubygem-httpauth \
-		rubygem-jwt>=0.1.4:${PORTSDIR}/www/rubygem-jwt \
-		rubygem-multi_json>=1.0:${PORTSDIR}/devel/rubygem-multi_json \
+		rubygem-jwt>=0.1.8:${PORTSDIR}/www/rubygem-jwt \
+		rubygem-multi_json>=1.3:${PORTSDIR}/devel/rubygem-multi_json \
 		rubygem-multi_xml>=0.5:${PORTSDIR}/textproc/rubygem-multi_xml \
 		rubygem-rack>=1.2:${PORTSDIR}/www/rubygem-rack
 
