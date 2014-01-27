@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-git/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-git/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-git
 PORTVERSION=	0.6.8
@@ -15,13 +15,12 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
 RUN_DEPENDS=	bzr:${PORTSDIR}/devel/bzr \
-		py*-dulwich>=0.8.0:${PORTSDIR}/devel/dulwich \
+		${PYTHON_PKGNAMEPREFIX}dulwich>=0.8.0:${PORTSDIR}/devel/dulwich \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	bzr_git
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
