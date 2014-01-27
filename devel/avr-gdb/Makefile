@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: devel/avr-gdb/Makefile 330734 2013-10-18 09:59:43Z tijl $
+# $FreeBSD: devel/avr-gdb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gdb
 PORTVERSION=	7.3.1
