@@ -1,8 +1,8 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/liblnk/Makefile 330654 2013-10-17 16:20:41Z antoine $
+# $FreeBSD: devel/liblnk/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	liblnk
-PORTVERSION=	20131015
+PORTVERSION=	20140112
 CATEGORIES=	devel
 MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSQmluVC1YeDVvZWM/ \
 		LOCAL/antoine
@@ -16,7 +16,7 @@ LICENSE=	LGPL3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python --with-libintl-prefix=${LOCALBASE} ${ICONV_CONFIGURE_ARG}
 USES=		gettext iconv pathfix
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
