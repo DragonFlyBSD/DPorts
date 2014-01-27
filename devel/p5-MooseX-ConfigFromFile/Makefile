@@ -1,8 +1,7 @@
-# $FreeBSD: devel/p5-MooseX-ConfigFromFile/Makefile 332739 2013-11-04 16:06:15Z kuriyama $
+# $FreeBSD: devel/p5-MooseX-ConfigFromFile/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	MooseX-ConfigFromFile
-PORTVERSION=	0.12
-PORTREVISION=	1
+PORTVERSION=	0.13
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
