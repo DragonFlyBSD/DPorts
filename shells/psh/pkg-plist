@@ -1,4 +1,3 @@
-@comment $FreeBSD: shells/psh/pkg-plist 331448 2013-10-23 23:38:12Z garga $
 bin/psh
 %%DATADIR%%/complete/debian
 %%DATADIR%%/complete/perl
