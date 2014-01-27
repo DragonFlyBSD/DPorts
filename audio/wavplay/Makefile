@@ -1,5 +1,5 @@
 # Created by: greg
-# $FreeBSD: audio/wavplay/Makefile 328584 2013-09-28 15:35:04Z amdmi3 $
+# $FreeBSD: audio/wavplay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wavplay
 PORTVERSION=	1.4
