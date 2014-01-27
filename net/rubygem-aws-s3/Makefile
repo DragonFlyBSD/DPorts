@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/rubygem-aws-s3/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-aws-s3/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	aws-s3
 PORTVERSION=	0.6.3
@@ -18,5 +18,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/s3sh
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
