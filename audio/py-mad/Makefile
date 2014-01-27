@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: audio/py-mad/Makefile 328530 2013-09-27 22:36:11Z mva $
+# $FreeBSD: audio/py-mad/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mad
 PORTVERSION=	0.7
@@ -16,7 +16,7 @@ LICENSE=	LGPL20
 
 LIB_DEPENDS=	libmad.so:${PORTSDIR}/audio/mad
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 USE_PYTHON_PREFIX=	yes
 PYDISTUTILS_AUTOPLIST=	yes
