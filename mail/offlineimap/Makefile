@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: mail/offlineimap/Makefile 329495 2013-10-05 18:36:06Z rea $
+# $FreeBSD: mail/offlineimap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	offlineimap
 DISTVERSION=	6.5.5
@@ -28,7 +28,7 @@ GH_ACCOUNT=	OfflineIMAP
 GH_TAGNAME=	v${DISTVERSION}
 GH_COMMIT=	8bc2f35
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 DOC_FILES=	Changelog.maint.rst Changelog.rst \
