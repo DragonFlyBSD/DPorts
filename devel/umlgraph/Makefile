@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/umlgraph/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/umlgraph/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	umlgraph
 PORTVERSION=	5.6
