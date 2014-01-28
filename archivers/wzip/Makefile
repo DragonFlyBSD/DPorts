@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: archivers/wzip/Makefile 338700 2014-01-05 00:03:49Z bapt $
+# $FreeBSD: archivers/wzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wzip
 PORTVERSION=	1.1.1
