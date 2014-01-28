@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: devel/wininfo/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/wininfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wininfo
 PORTVERSION=	0.7
