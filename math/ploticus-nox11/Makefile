@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: math/ploticus-nox11/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/ploticus-nox11/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generates plots and graphs from data (no X11 required)
