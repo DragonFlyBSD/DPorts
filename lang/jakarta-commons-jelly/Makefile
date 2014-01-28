@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: lang/jakarta-commons-jelly/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/jakarta-commons-jelly/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	commons-jelly
 PORTVERSION=	1.0
