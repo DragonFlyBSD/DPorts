@@ -1,5 +1,5 @@
 # Created by: Yuri Momotiuk <yurkis@gmail.com>
-# $FreeBSD: devel/qt4-qtsolutions-singleapplication/Makefile 334873 2013-11-25 18:01:01Z makc $
+# $FreeBSD: devel/qt4-qtsolutions-singleapplication/Makefile 339587 2014-01-13 11:52:27Z gahr $
 
 PORTNAME=	qt4-qtsolutions-singleapplication
 PORTVERSION=	20110722
@@ -16,13 +16,15 @@ USES=		qmake
 USE_QT4=	moc_build rcc_build uic_build gui network
 USE_LDCONFIG=	yes
 
-WRKSRC=		${WRKDIR}/qt-solutions-qt-solutions/qtsingleapplication
+WRKSRC=		${WRKDIR}/qt-solutions-qt-solutions/${SUB_PROJECT_NAME}
 BUILD_WRKSRC=	${WRKSRC}/buildlib
 CONFIGURE_WRKSRC=	${BUILD_WRKSRC}
 
 PLIST_FILES=	${LIBRARY_HEADERS:S,^,include/,} \
 		lib/${LIBRARY_NAME} \
 		lib/${LIBRARY_NAME}.1
+
+SUB_PROJECT_NAME=qtsingleapplication
 
 LIBRARY_NAME=	libQtSolutions_SingleApplication-head.so
 LIBRARY_HEADERS=	qtsingleapplication.h qtsinglecoreapplication.h
