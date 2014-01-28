@@ -1,4 +1,3 @@
-@comment $FreeBSD: mail/bsmtp/pkg-plist 332607 2013-11-03 12:32:32Z naddy $
 @owner uucp
 @mode 4555
 bin/_bqueue
