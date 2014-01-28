@@ -1,5 +1,5 @@
 # Created by: Makoto Matsushita <matusita@jp.FreeBSD.ORG>
-# $FreeBSD: japanese/dbskkd-cdb/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/dbskkd-cdb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dbskkd-cdb
 PORTVERSION=	2.00
