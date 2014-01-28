@@ -1,5 +1,5 @@
 # Created by: Murray Stokely <murray@cdrom.com>
-# $FreeBSD: mail/mailcrypt/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mailcrypt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mailcrypt
 PORTVERSION=	3.5.9
