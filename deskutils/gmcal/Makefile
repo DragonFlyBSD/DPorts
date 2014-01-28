@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: deskutils/gmcal/Makefile 338795 2014-01-05 16:30:31Z rene $
+# $FreeBSD: deskutils/gmcal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gmcal
 PORTVERSION=	0.0.1
