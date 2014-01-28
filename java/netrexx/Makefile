@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: java/netrexx/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/netrexx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	NetRexx
 PORTVERSION=	2.05

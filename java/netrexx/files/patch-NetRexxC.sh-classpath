@@ -1,4 +1,4 @@
-$FreeBSD: java/netrexx/files/patch-NetRexxC.sh-classpath 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: java/netrexx/files/patch-NetRexxC.sh-classpath 340725 2014-01-22 17:40:44Z mat $
 
 Add ${JAVA_HOME}/lib/tools.jar to the CLASSPATH.
 
