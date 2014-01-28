@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: games/oneisenough/files/oneisenough.in 339733 2014-01-15 00:31:27Z nemysis $
+#
+
+cd "%%DATADIR%%"
+exec ./run_game.py "${@}"
