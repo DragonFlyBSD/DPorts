@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/ninja-ide/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/ninja-ide/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ninja-ide
 PORTVERSION=	2.3
@@ -23,7 +23,7 @@ PYDISTUTILS_PKGNAME=	${PORTNAME:tu:S,-,_,}
 #PYDISTUTILS_PKGVERSION=	${PORTVERSION:R}_dev
 
 USE_GITHUB=	yes
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 GH_ACCOUNT=	ninja-ide
