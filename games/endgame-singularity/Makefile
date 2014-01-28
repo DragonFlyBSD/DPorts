@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/endgame-singularity/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/endgame-singularity/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	singularity
 PORTVERSION=	0.30c
