@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: games/sarien/Makefile 333405 2013-11-10 15:25:39Z danilo $
+# $FreeBSD: games/sarien/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sarien
 PORTVERSION=	0.7.0
