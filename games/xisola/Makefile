@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xisola/Makefile 333714 2013-11-13 19:09:26Z danilo $
+# $FreeBSD: games/xisola/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xisola
 PORTVERSION=	1.0
