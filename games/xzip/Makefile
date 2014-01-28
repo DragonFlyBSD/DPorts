@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/xzip/Makefile 334917 2013-11-26 05:46:38Z dinoex $
+# $FreeBSD: games/xzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xzip
 PORTVERSION=	1.8.2
