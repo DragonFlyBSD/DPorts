@@ -1,5 +1,5 @@
 # Created by: Aaron VonderHaar <avh4@usa.net>
-# $FreeBSD: games/gnurobots/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gnurobots/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnurobots
 PORTVERSION=	1.2.0
