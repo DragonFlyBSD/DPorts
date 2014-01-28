@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-svn/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-svn/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-svn
 PORTVERSION=	1.2.2
@@ -18,9 +18,8 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/subvertpy/__init__.py:${PORTSDIR}/devel/py-su
 		bzr:${PORTSDIR}/devel/bzr
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	bzr_svn
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
