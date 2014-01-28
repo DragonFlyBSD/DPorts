@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/gomoku/Makefile 333972 2013-11-16 02:52:58Z danilo $
+# $FreeBSD: games/gomoku/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gomoku
 PORTVERSION=	1.2.9
