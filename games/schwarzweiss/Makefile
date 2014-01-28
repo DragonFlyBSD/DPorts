@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/schwarzweiss/Makefile 335920 2013-12-08 18:57:40Z nemysis $
+# $FreeBSD: games/schwarzweiss/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	schwarzweiss
 PORTVERSION=	20110806
@@ -23,7 +23,7 @@ GH_PROJECT=	schwarzweiss
 GH_TAGNAME=	${GH_COMMIT}
 GH_COMMIT=	d95263f
 
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 
 PORTDOCS=	readme.txt
 
