@@ -1,5 +1,5 @@
 # Created by: marc@informatik.uni-bremen.de
-# $FreeBSD: x11-toolkits/py-gtk2/Makefile 331971 2013-10-29 16:56:41Z kwm $
+# $FreeBSD: x11-toolkits/py-gtk2/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.78 2011/04/01 12:35:27 kwm Exp $
 
 PORTNAME=	gtk
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cair
 USE_BZIP2=	yes
 USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	libglade2 pygobject
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PYTHON="${PYTHON_VERSION}"
 CPPFLAGS+=	-I${LOCALBASE}/include
