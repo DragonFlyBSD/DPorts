@@ -1,5 +1,5 @@
 # Created by: David Xu
-# $FreeBSD: devel/byaccj/Makefile 339249 2014-01-09 15:02:45Z bapt $
+# $FreeBSD: devel/byaccj/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	byaccj
 PORTVERSION=	1.15
