@@ -1,5 +1,5 @@
 # Created by: Wouter Reckman <gennerate@zonnet.nl>
-# $FreeBSD: games/enygma/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/enygma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		enygma
 PORTVERSION=	1.04
