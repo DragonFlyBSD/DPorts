@@ -1,8 +1,8 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal7/Makefile 337239 2013-12-23 13:58:19Z zi $
+# $FreeBSD: www/drupal7/Makefile 339913 2014-01-16 15:00:10Z miwi $
 
 PORTNAME=	drupal7
-PORTVERSION=	7.24
+PORTVERSION=	7.26
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drupal-${PORTVERSION}
