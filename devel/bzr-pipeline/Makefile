@@ -1,5 +1,5 @@
 # Created by: Carlo Strub <c-s@c-s.li>
-# $FreeBSD: devel/bzr-pipeline/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-pipeline/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-pipeline
 PORTVERSION=	1.4
@@ -18,8 +18,7 @@ RUN_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	BzrPipeline
+PYDISTUTILS_AUTOPLIST=	yes
 WRKSRC=			${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
