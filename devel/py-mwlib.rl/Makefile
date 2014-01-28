@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-mwlib.rl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-mwlib.rl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mwlib.rl
 PORTVERSION=	0.14.3
@@ -20,7 +20,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_ZIP=	yes
 USES=		gettext
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
