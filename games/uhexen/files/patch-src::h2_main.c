@@ -1,5 +1,5 @@
 
-$FreeBSD: games/uhexen/files/patch-src::h2_main.c 307656 2012-11-22 15:37:58Z danfe $
+$FreeBSD: games/uhexen/files/patch-src::h2_main.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/h2_main.c.orig	Tue Dec  4 18:11:47 2001
 +++ src/h2_main.c	Mon Feb 10 16:56:31 2003

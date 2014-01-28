@@ -1,5 +1,5 @@
 
-$FreeBSD: games/uhexen/files/patch-include::h2def.h 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: games/uhexen/files/patch-include::h2def.h 340725 2014-01-22 17:40:44Z mat $
 
 --- include/h2def.h	2003/02/10 14:43:33	1.1
 +++ include/h2def.h	2003/02/10 14:46:37
