@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: german/steak/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/steak/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	steak
 PORTVERSION=	1.7.3
