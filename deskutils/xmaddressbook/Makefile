@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: deskutils/xmaddressbook/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/xmaddressbook/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmaddressbook
 PORTVERSION=	1.5.3
