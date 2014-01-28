@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: x11/xmsg/Makefile 336387 2013-12-13 23:31:48Z bapt $
+# $FreeBSD: x11/xmsg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmsg
 PORTVERSION=	1.1
