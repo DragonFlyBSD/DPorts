@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xshogi/Makefile 337977 2013-12-29 12:42:57Z johans $
+# $FreeBSD: games/xshogi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xshogi
 PORTVERSION=	${GNUSHOGI_PORTVERSION}
