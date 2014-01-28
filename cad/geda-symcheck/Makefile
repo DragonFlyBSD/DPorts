@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-symcheck/Makefile 338177 2013-12-30 21:51:27Z antoine $
+# $FreeBSD: cad/geda-symcheck/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	symcheck
 PORTVERSION=	1.4.3
