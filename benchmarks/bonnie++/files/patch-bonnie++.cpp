@@ -1,4 +1,4 @@
-$FreeBSD: benchmarks/bonnie++/files/patch-bonnie++.cpp 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: benchmarks/bonnie++/files/patch-bonnie++.cpp 340725 2014-01-22 17:40:44Z mat $
 
 --- bonnie++.cpp.orig	Mon Aug 25 17:08:46 2003
 +++ bonnie++.cpp	Mon Aug 25 17:08:46 2003
