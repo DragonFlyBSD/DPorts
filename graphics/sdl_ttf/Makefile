@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/sdl_ttf/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/sdl_ttf/Makefile 340160 2014-01-18 09:37:49Z mva $
 
 PORTNAME=	sdl_ttf
 PORTVERSION=	2.0.11
@@ -8,25 +8,29 @@ MASTER_SITES=	http://www.libsdl.org/projects/SDL_ttf/release/
 DISTNAME=	SDL_ttf-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
-COMMENT=	A library to use TrueType fonts to render text in SDL applications
+COMMENT=	Library to use TrueType fonts to render text in SDL applications
 
-LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2
+LICENSE=	ZLIB
+
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl
 USES=		gmake pathfix pkgconfig
+USE_XORG=	x11
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
-.if !defined(WITHOUT_X11) && !defined(WITHOUT_GL)
-USE_GL=		yes
-.endif
+OPTIONS_DEFINE=		OPENGL
+OPTIONS_DEFAULT=	OPENGL
 
-NO_STAGE=	yes
+OPENGL_USE=	GL=yes
+
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/.libs/glfont ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/.libs/showfont ${PREFIX}/bin/sdl-showfont
+	${INSTALL_PROGRAM} ${WRKSRC}/.libs/glfont ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/.libs/showfont \
+		${STAGEDIR}${PREFIX}/bin/sdl-showfont
 
 .include <bsd.port.mk>
