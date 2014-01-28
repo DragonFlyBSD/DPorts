@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: audio/xmms-a52dec/Makefile 338411 2014-01-02 00:24:27Z rakuco $
+# $FreeBSD: audio/xmms-a52dec/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-a52dec
 PORTVERSION=	1.0
