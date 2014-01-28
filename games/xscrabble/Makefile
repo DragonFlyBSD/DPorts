@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xscrabble/Makefile 334918 2013-11-26 06:05:19Z dinoex $
+# $FreeBSD: games/xscrabble/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xscrabble
 PORTVERSION=	2.12
