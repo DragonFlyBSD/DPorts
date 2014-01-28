@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: audio/gkrellmss2/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/gkrellmss2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellmss
 PORTVERSION=	2.7
