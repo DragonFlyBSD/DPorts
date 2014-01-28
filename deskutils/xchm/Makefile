@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: deskutils/xchm/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/xchm/Makefile 340602 2014-01-21 12:06:04Z rm $
 
 PORTNAME=	xchm
 PORTVERSION=	1.23
@@ -13,22 +13,15 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libchm.so:${PORTSDIR}/misc/chmlib
 
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+NLS_USES=	gettext
+
 GNU_CONFIGURE=	yes
 USE_WX=		2.6+
 WX_UNICODE=	yes
 WX_CONF_ARGS=	absolute
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CPPFLAGS+=	-I${LOCALBASE}/include
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=	--disable-nls
-PLIST_SUB+=	NLS="@comment "
-.endif
 
 .include <bsd.port.mk>
