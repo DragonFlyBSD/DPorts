@@ -1,5 +1,5 @@
 # Created by: Sergey Osokin aka oZZ <ozz@FreeBSD.org.ru>
-# $FreeBSD: graphics/wmgrabimage/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/wmgrabimage/Makefile 340988 2014-01-25 05:47:47Z ak $
 
 PORTNAME=	wmGrabImage
 PORTVERSION=	0.72
@@ -10,6 +10,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	sascha@root-login.org
 COMMENT=	Monitor your favorite web image
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-02-25
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
