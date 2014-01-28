@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/rdesktop/pkg-plist 331499 2013-10-24 16:41:28Z madpilot $
 bin/rdesktop
 man/man1/rdesktop.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
