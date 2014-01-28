@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/mixer.app/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/mixer.app/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mixer.app
 PORTVERSION=	1.8.0
@@ -18,9 +18,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lXpm -lXext -lX11
 MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
 
 USE_XORG=	xpm xext x11
-NO_STAGE=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Mixer.app ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/Mixer.app ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
