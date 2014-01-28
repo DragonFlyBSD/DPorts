@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-notify/Makefile 331973 2013-10-29 17:05:50Z kwm $
+# $FreeBSD: devel/py-notify/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	notify
 PORTVERSION=	0.1.1
@@ -16,7 +16,7 @@ LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
 USE_BZIP2=	yes
 USES=		gmake pkgconfig
 USE_GNOME=	gnomehack pygtk2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 GNU_CONFIGURE=	yes
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS
