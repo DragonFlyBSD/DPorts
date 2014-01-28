@@ -1,4 +1,3 @@
-@comment $FreeBSD: audio/xmms-shn/pkg-plist 328596 2013-09-28 16:59:55Z naddy $
 lib/xmms/Input/libshn.so
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
