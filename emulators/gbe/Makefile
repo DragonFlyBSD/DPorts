@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: emulators/gbe/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/gbe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gbe
 PORTVERSION=	0.0.22
