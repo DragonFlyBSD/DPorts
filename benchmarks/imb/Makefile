@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: benchmarks/imb/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD: benchmarks/imb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imb
 PORTVERSION=	3.0
@@ -48,7 +48,7 @@ MAKE_ENV+=	MPI_HOME=${LOCALBASE}
 .endif
 
 do-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_MAN} ${WRKDIR}/IMB_3.0/doc/IMB_ug-3.0.pdf ${DOCSDIR}
 	${INSTALL_MAN} ${WRKDIR}/IMB_3.0/license/license.txt ${DOCSDIR}
