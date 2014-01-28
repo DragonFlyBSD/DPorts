@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: databases/py-sqlkit/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-sqlkit/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	sqlkit
 PORTVERSION=	0.9.5.1
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy06>=0.5:${PORTSDIR}/databases/py-s
 		${PYTHON_PKGNAMEPREFIX}dateutil>=0:${PORTSDIR}/devel/py-dateutil \
 		${PYTHON_PKGNAMEPREFIX}Babel>=0:${PORTSDIR}/devel/py-babel
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_GNOME=	pygtk2
 USES=		desktop-file-utils gettext
