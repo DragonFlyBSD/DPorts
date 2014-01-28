@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/powermanga/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD: games/powermanga/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	powermanga
 PORTVERSION=	0.91

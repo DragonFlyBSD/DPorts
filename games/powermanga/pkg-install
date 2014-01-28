@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/powermanga/pkg-install 330815 2013-10-19 00:56:58Z amdmi3 $
+# $FreeBSD: games/powermanga/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 SCOREDIR="/var/games/powermanga"
 SCOREBASE="${SCOREDIR}/powermanga.hi"
