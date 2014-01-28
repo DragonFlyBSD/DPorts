@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/superkaramba/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/superkaramba/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	superkaramba
 PORTVERSION=	${KDE4_VERSION}
@@ -13,7 +13,7 @@ COMMENT=	Widget framework for KDE
 CONFLICTS=	kdeutils-4.[0-7].*
 
 USE_XZ=		yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4 qimageblitz
 USES=		cmake:outsource
 USE_QT4=	qmake_build moc_build rcc_build uic_build
