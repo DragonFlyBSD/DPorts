@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: games/egoboo/Makefile 337109 2013-12-21 00:36:41Z amdmi3 $
+# $FreeBSD: games/egoboo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	egoboo
 PORTVERSION=	2.7.5
