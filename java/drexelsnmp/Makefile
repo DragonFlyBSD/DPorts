@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: java/drexelsnmp/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/drexelsnmp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	drexelsnmp
 PORTVERSION=	1.4.2
