@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/concentration/Makefile 330508 2013-10-16 13:00:35Z amdmi3 $
+# $FreeBSD: games/concentration/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	concentration
 PORTVERSION=	1.2
