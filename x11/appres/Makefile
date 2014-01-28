@@ -1,4 +1,4 @@
-# $FreeBSD: x11/appres/Makefile 330442 2013-10-15 19:37:03Z eadler $
+# $FreeBSD: x11/appres/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	appres
 PORTVERSION=	1.0.4
