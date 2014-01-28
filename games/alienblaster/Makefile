@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/alienblaster/Makefile 331987 2013-10-29 19:52:24Z danilo $
+# $FreeBSD: games/alienblaster/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	alienblaster
 PORTVERSION=	1.1.0
