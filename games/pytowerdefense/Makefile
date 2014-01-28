@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/pytowerdefense/Makefile 335288 2013-11-30 12:34:18Z nemysis $
+# $FreeBSD: games/pytowerdefense/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pytowerdefense
 PORTVERSION=	0.5
@@ -16,7 +16,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	${PYGAME}
 
 USE_ZIP=	yes
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 INSTALLS_ICONS=	yes
 
 PORTDOCS=	README modding.txt
