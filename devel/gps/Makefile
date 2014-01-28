@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/gps/Makefile 333446 2013-11-10 20:45:06Z marino $
+# $FreeBSD: devel/gps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gps
 PORTVERSION=	5.2.1
@@ -86,7 +86,7 @@ USE_PGSQL=		true
 
 .if ${PORT_OPTIONS:MPYTHON}
 CONFIGURE_ARGS+=	--with-python=${PREFIX}
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_GNOME=		pygtk2
 PYCOMPILE=		${PREFIX}/lib/${PYTHON_VERSION}/compileall.py
 .else
