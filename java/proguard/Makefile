@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: java/proguard/Makefile 338062 2013-12-30 08:45:30Z ale $
+# $FreeBSD: java/proguard/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	proguard
 PORTVERSION=	4.11
