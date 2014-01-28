@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/etcd/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/etcd/Makefile 339366 2014-01-10 16:28:07Z gahr $
 
 PORTNAME=	etcd
 PORTVERSION=	1.0.1
@@ -13,15 +13,13 @@ MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Enhanced Tiny CD, a simple ncurses-based CD player
 
 USE_SDL=	sdl
-NO_STAGE=	yes
-MANCOMPRESSED=	no
 
 MAKE_ARGS=	INCDIR=${LOCALBASE}/include LIBDIR=${LOCALBASE}/lib \
-		SDL_LIBS=-lSDL NCURSES_LIBS="-lncursesw ${PTHREAD_LIBS}"
+		SDL_LIBS="-lSDL -pthread" NCURSES_LIBS="-lncursesw"
 
 PLIST_FILES=	bin/etcd
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/etcd ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/etcd ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
