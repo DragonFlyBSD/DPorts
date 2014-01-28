@@ -1,5 +1,5 @@
 # Created by: umeno@rr.iij4u.or.jp
-# $FreeBSD: japanese/xlockmore/Makefile 338519 2014-01-03 03:33:06Z jgh $
+# $FreeBSD: japanese/xlockmore/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	japanese x11
 
