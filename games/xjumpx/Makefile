@@ -1,5 +1,5 @@
 # Created by: Tatsuya Kuidoh <cdr@ga.xdsl.ne.jp>
-# $FreeBSD: games/xjumpx/Makefile 333718 2013-11-13 19:34:19Z danilo $
+# $FreeBSD: games/xjumpx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xjumpx
 PORTVERSION=	1.4
