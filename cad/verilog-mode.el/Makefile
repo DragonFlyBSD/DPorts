@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: cad/verilog-mode.el/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/verilog-mode.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	verilog-mode.el
 PORTVERSION=	801
@@ -26,10 +26,8 @@ EMACS_NO_BUILD_DEPENDS=	yes
 
 PLIST_FILES=	${EMACS_SITE_LISPDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/${EMACS_SITE_LISPDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME} ${PREFIX}/${EMACS_SITE_LISPDIR}
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
 
 .include <bsd.port.mk>
