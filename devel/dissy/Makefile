@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: devel/dissy/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/dissy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dissy
 PORTVERSION=	10
