@@ -1,5 +1,5 @@
 # Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-# $FreeBSD: japanese/sj3-server/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/sj3-server/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sj3
 PORTVERSION=	2.0.1.20
