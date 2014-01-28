@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: archivers/nomarch/Makefile 337531 2013-12-26 14:54:21Z bapt $
+# $FreeBSD: archivers/nomarch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nomarch
 PORTVERSION=	1.4
