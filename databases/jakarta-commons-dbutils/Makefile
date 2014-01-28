@@ -1,5 +1,5 @@
 # Created by: Michael Winking <mwfp@foldl.net>
-# $FreeBSD: databases/jakarta-commons-dbutils/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/jakarta-commons-dbutils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	commons-dbutils
 PORTVERSION=	1.1
