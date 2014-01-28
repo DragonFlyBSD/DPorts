@@ -1,5 +1,5 @@
 # Created by: patrick
-# $FreeBSD: lang/pfe/Makefile 338032 2013-12-29 17:39:46Z johans $
+# $FreeBSD: lang/pfe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pfe
 PORTVERSION=	0.33.71
