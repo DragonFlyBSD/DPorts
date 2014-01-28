@@ -1,4 +1,4 @@
-# $FreeBSD: audio/puddletag/Makefile 333265 2013-11-08 22:12:35Z pawel $
+# $FreeBSD: audio/puddletag/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	puddletag
 PORTVERSION=	1.0.2
@@ -19,7 +19,7 @@ RUN_DEPENDS=	chromaprint>=0.4:${PORTSDIR}/audio/chromaprint \
 		${PYTHON_PKGNAMEPREFIX}qt4-svg>=4.5.0:${PORTSDIR}/graphics/py-qt4-svg \
 		${PYTHON_PKGNAMEPREFIX}qt4-gui>=4.5.0:${PORTSDIR}/x11-toolkits/py-qt4-gui
 
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 INSTALLS_ICONS=	yes
 NO_BUILD=	yes
