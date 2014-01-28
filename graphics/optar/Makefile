@@ -1,5 +1,5 @@
 # Created by: antonakis@gmail.com
-# $FreeBSD: graphics/optar/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/optar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	optar
 PORTVERSION=	1.0
