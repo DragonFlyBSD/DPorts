@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: games/xfrisk/Makefile 333692 2013-11-13 14:32:26Z danilo $
+# $FreeBSD: games/xfrisk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xfrisk
 PORTVERSION=	1.2
