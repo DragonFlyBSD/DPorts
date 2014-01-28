@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/solarconquest/Makefile 330577 2013-10-17 00:18:27Z amdmi3 $
+# $FreeBSD: games/solarconquest/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	solarconquest
 PORTVERSION=	0.2
