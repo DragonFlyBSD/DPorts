@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <maho@FreeBSD.org>
-# $FreeBSD: science/liboglappth/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/liboglappth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	liboglappth
 PORTVERSION=	1.0.0
