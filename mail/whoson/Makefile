@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: mail/whoson/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/whoson/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	whoson
 PORTVERSION=	2.05
