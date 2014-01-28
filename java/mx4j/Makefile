@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: java/mx4j/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/mx4j/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mx4j
 PORTVERSION=	3.0.2
