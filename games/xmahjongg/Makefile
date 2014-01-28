@@ -1,5 +1,5 @@
 # Created by: joerg@FreeBSD.org
-# $FreeBSD: games/xmahjongg/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xmahjongg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmahjongg
 PORTVERSION=	3.7
