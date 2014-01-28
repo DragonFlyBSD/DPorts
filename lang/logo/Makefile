@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: lang/logo/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/logo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ucblogo
 PORTVERSION=	5.5
