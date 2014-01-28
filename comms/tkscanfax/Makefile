@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: comms/tkscanfax/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD: comms/tkscanfax/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tkscanfax
 PORTVERSION=	1.1.8
