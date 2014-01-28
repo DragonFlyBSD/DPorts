@@ -1,5 +1,5 @@
 # Created by: Kengo Ichiki <kichiki@users.sourceforge.net>
-# $FreeBSD: audio/waon/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/waon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	waon
 PORTVERSION=	0.9
