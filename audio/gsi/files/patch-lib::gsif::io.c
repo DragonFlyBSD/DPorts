@@ -1,4 +1,4 @@
-$FreeBSD: audio/gsi/files/patch-lib::gsif::io.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/gsi/files/patch-lib::gsif::io.c 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/gsif/io.c.orig	Sat Jan 10 22:22:35 2004
 +++ lib/gsif/io.c	Sat Jan 10 22:21:32 2004
