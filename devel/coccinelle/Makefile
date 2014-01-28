@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon
-# $FreeBSD: devel/coccinelle/Makefile 336748 2013-12-17 17:55:43Z mva $
+# $FreeBSD: devel/coccinelle/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	coccinelle
 DISTVERSION=	1.0.0-rc18
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 USES=		shebangfix gmake perl5 pkgconfig:build
 GNU_CONFIGURE=	yes
 USE_PERL5=	build
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_OCAML=	3.0+
 bash_CMD=	${SH}
 SHEBANG_FILES=	setup/echo.sh
