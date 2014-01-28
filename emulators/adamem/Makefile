@@ -1,5 +1,5 @@
 # Created by: Jeremy Karlson
-# $FreeBSD: emulators/adamem/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/adamem/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	adamem
 PORTVERSION=	1.0
