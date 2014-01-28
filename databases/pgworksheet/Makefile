@@ -1,5 +1,5 @@
 # Created by: Henri Michelon
-# $FreeBSD: databases/pgworksheet/Makefile 328563 2013-09-28 11:13:15Z mva $
+# $FreeBSD: databases/pgworksheet/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pgworksheet
 PORTVERSION=	1.9
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pyPgSQL/libpq/__init__.py:${PORTSDIR}/database
 USE_PGSQL=	yes
 USE_BZIP2=	yes
 USE_GNOME=	pygtk2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGVERSION=	1.9
