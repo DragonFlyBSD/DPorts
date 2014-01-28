@@ -1,5 +1,5 @@
 
-$FreeBSD: games/farblazer/files/patch-code::sprites::objrocket.py 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: games/farblazer/files/patch-code::sprites::objrocket.py 340725 2014-01-22 17:40:44Z mat $
 
 --- code/sprites/objrocket.py	2002/05/10 00:24:42	1.1
 +++ code/sprites/objrocket.py	2002/05/10 00:24:53

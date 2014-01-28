@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/farblazer/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/farblazer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	farblazer
 PORTVERSION=	0.7
