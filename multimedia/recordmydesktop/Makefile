@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/recordmydesktop/Makefile 333817 2013-11-15 05:52:28Z kevlo $
+# $FreeBSD: multimedia/recordmydesktop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	recordmydesktop
 DISTVERSION=	0.3.8.1
