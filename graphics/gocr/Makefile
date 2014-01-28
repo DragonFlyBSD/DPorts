@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann
-# $FreeBSD: graphics/gocr/Makefile 336766 2013-12-17 20:49:16Z dhn $
+# $FreeBSD: graphics/gocr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gocr
 PORTVERSION=	0.50
