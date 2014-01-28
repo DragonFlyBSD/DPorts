@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-python/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/telepathy-python/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/net-im/telepathy-python/Makefile,v 1.5 2009/01/08 07:07:51 marcus Exp $
 
 PORTNAME=	telepathy-python
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
