@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-dspectogram/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: graphics/xmms-dspectogram/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dspectogram
 PORTVERSION=	1.2.1
