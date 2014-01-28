@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11/libxcb/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11/libxcb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libxcb
 PORTVERSION=	1.9.3
@@ -24,7 +24,7 @@ USES=		gmake pathfix pkgconfig
 USE_GNOME=	libxslt:build
 USE_LDCONFIG=	yes
 USE_XORG=	xau xdmcp
-USE_PYTHON_BUILD=	2.5+
+USE_PYTHON_BUILD=	yes
 
 GNU_CONFIGURE=	yes
 .for f in XPROTO_CFLAGS XPROTO_LIBS XDMCP_CFLAGS XDMCP_LIBS NEEDED_CFLAGS NEEDED_LIBS
