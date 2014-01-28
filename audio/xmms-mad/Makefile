@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-mad/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-mad/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-mad
 PORTVERSION=	0.10
