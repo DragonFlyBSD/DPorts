@@ -1,5 +1,5 @@
 # Created by: Dave Chapeskie <dchapes@ddm.on.ca>
-# $FreeBSD: games/xmemory/Makefile 333723 2013-11-13 20:06:15Z danilo $
+# $FreeBSD: games/xmemory/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmemory
 PORTVERSION=	3.7
