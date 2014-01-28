@@ -1,5 +1,5 @@
 # Created by: Steven G. Kargl
-# $FreeBSD: lang/f77/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/f77/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	f77
 PORTVERSION=	0.3
