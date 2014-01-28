@@ -1,5 +1,5 @@
 # Created by: John MacFarlane <jgm@berkeley.edu>
-# $FreeBSD: textproc/hs-pandoc/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: textproc/hs-pandoc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pandoc
 PORTVERSION=	1.11.1
