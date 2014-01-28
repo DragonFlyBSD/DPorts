@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: games/xpired/Makefile 330605 2013-10-17 06:19:32Z edwin $
+# $FreeBSD: games/xpired/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpired
 PORTVERSION=	1.22
