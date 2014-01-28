@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pecl-automap/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-automap/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	automap
 PORTVERSION=	2.1.0
@@ -21,5 +21,4 @@ PHP_MODNAME=	automap
 
 CONFIGURE_ARGS=	--enable-automap
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
