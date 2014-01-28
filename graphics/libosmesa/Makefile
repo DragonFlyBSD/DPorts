@@ -1,9 +1,8 @@
 # Created by: gahr
-# $FreeBSD: graphics/libosmesa/Makefile 339135 2014-01-08 14:21:03Z gahr $
+# $FreeBSD: graphics/libosmesa/Makefile 340710 2014-01-22 14:20:41Z gahr $
 
 PORTNAME=	libosmesa
-PORTVERSION=	10.0.1
-PORTREVISION=	1
+PORTVERSION=	10.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PORTVERSION}/
 DISTNAME=	MesaLib-${PORTVERSION}
