@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: graphics/commons-utilities/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/commons-utilities/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	commons-utilities
 PORTVERSION=	1.0
@@ -21,7 +21,7 @@ RUN_DEPENDS=	p5-Image-ExifTool>=0:${PORTSDIR}/graphics/p5-Image-ExifTool \
 NO_BUILD=	yes
 USES=		perl5
 USE_PERL5=	run
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 LICENSE=	GPLv3
 
