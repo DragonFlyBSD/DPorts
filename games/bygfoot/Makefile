@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: games/bygfoot/Makefile 332078 2013-10-30 06:35:35Z danilo $
+# $FreeBSD: games/bygfoot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bygfoot
 PORTVERSION=	2.2.1
