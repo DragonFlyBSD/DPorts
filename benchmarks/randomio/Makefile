@@ -1,5 +1,5 @@
 # Created by: Sergey Kandaurov <pluknet@gmail.com>
-# $FreeBSD: benchmarks/randomio/Makefile 338723 2014-01-05 00:49:55Z bapt $
+# $FreeBSD: benchmarks/randomio/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	randomio
 PORTVERSION=	1.4
