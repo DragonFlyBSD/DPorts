@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: audio/dir2ogg/Makefile 334773 2013-11-24 19:26:11Z bapt $
+# $FreeBSD: audio/dir2ogg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dir2ogg
 PORTVERSION=	0.11.8
