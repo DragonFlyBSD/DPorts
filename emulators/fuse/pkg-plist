@@ -1,4 +1,3 @@
-@comment $FreeBSD: emulators/fuse/pkg-plist 335163 2013-11-29 11:38:05Z rene $
 bin/fuse
 man/man1/fuse.1.gz
 %%ICONS%%share/applications/fuse.desktop
