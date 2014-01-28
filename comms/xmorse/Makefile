@@ -1,9 +1,9 @@
 # Created by: Sunry Chen <sunrychen@gmail.com>
-# $FreeBSD: comms/xmorse/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD: comms/xmorse/Makefile 341000 2014-01-25 09:28:51Z marino $
 
 PORTNAME=	xmorse
 PORTVERSION=	20041125
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	comms hamradio
 MASTER_SITES=	http://c2.com/morse/files/SourceCode/ \
 		http://www.525183.com/freebsd/xmorse/ \
@@ -21,6 +21,9 @@ USE_SDL=	sdl
 
 PLIST_FILES=	bin/xmorse
 NO_WRKSUBDIR=	yes
+MAKE_ARGS=	PREFIX="${STAGEDIR}${PREFIX}" INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
-NO_STAGE=	yes
+post-patch:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+
 .include <bsd.port.mk>
