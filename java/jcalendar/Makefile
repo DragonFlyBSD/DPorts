@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: java/jcalendar/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: java/jcalendar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jcalendar
 PORTVERSION=	1.3.3
