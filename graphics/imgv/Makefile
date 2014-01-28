@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: graphics/imgv/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/imgv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imgv
 PORTVERSION=	3.1.6
@@ -14,7 +14,7 @@ COMMENT=	A unique and feature rich Image Viewer
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging
 
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 
 NO_STAGE=	yes
