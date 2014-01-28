@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-explorer/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-explorer/Makefile 340120 2014-01-17 21:49:50Z antoine $
 
 PORTNAME=	bzr-explorer
 PORTVERSION=	1.3.0
@@ -16,10 +16,9 @@ BUILD_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/bzrlib/plugins/qbzr/__init__.py:${PORTSDIR}/devel/qbzr \
 		bzr:${PORTSDIR}/devel/bzr
 
+USES=		gettext
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	explorer
-USES=		gettext
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
