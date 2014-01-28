@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/spdict/Makefile 328161 2013-09-24 16:35:39Z vanilla $
+# $FreeBSD: devel/spdict/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spdict
 PORTVERSION=	0.3
