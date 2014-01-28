@@ -1,5 +1,5 @@
 # Created by: John Hay
-# $FreeBSD: graphics/gpsmanshp/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gpsmanshp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gpsmanshp
 PORTVERSION=	1.2
