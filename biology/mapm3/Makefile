@@ -1,5 +1,5 @@
 # Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-# $FreeBSD: biology/mapm3/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/mapm3/Makefile 339532 2014-01-12 19:07:28Z riggs $
 
 PORTNAME=	mapm3
 PORTVERSION=	3.0
@@ -14,11 +14,15 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tphilipp@potion-studios.com
 COMMENT=	Constructs linkage maps of markers segregating in experimental crosses
 
+USE_CSTD=	gnu89
+CFLAGS+=	-Wno-return-type
 NO_WRKSUBDIR=	yes
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	${CP} ${WRKSRC}/sun/* ${WRKSRC}
+
+pre-install:
+	@${REINPLACE_CMD} -e 's|/usr/local|${STAGEDIR}${PREFIX}|' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>
