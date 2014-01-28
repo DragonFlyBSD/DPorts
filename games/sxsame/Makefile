@@ -1,5 +1,5 @@
 # Created by: Yuichi Narahara
-# $FreeBSD: games/sxsame/Makefile 334213 2013-11-18 15:43:39Z danilo $
+# $FreeBSD: games/sxsame/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sxsame
 PORTVERSION=	3.02
