@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/php-facedetect/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD: graphics/php-facedetect/Makefile 338513 2014-01-03 01:12:59Z bapt $
 
 PORTNAME=	facedetect
 PORTVERSION=	1.1
@@ -17,7 +17,6 @@ LICENSE=	PHP30
 LIB_DEPENDS=	libopencv_objdetect.so:${PORTSDIR}/graphics/opencv
 
 GITVERSION=	4b1dfe1
-FETCH_ARGS=	-pRr
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
