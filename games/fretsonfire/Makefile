@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: games/fretsonfire/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/fretsonfire/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fretsonfire
 PORTVERSION=	1.3.110
