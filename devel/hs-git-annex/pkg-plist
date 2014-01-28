@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/hs-git-annex/pkg-plist 331268 2013-10-22 13:52:24Z amdmi3 $
 etc/xdg/autostart/git-annex.desktop
 share/applications/git-annex.desktop
 @dirrmtry etc/xdg/autostart
