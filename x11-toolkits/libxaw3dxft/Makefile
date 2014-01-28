@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/libxaw3dxft/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/libxaw3dxft/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libxaw3dxft
 DISTVERSION=	1.6.2b
