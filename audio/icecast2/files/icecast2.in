@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: audio/icecast2/files/icecast2.in 302141 2012-08-05 23:19:36Z dougb $
+# $FreeBSD: audio/icecast2/files/icecast2.in 340851 2014-01-23 19:55:14Z mat $
 #
 
 # PROVIDE: icecast2
