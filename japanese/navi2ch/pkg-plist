@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/navi2ch/pkg-plist 317153 2013-05-02 21:41:04Z hrs $
 %%EMACS_LIBDIR_WITH_VER%%/etc/navi2ch/icons/plugged.xpm
 %%EMACS_LIBDIR_WITH_VER%%/etc/navi2ch/icons/unplugged.xpm
 @dirrm %%EMACS_LIBDIR_WITH_VER%%/etc/navi2ch/icons
