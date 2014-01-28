@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: devel/xtla/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/xtla/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtla
 PORTVERSION=	1.2.1
