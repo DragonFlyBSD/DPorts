@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: devel/runsnakerun/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/runsnakerun/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	runsnakerun
 DISTVERSION=	2.0.3
@@ -16,7 +16,7 @@ LICENSE=	BSD
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}SquareMap>0:${PORTSDIR}/x11-toolkits/py-SquareMap \
 		${PYTHON_PKGNAMEPREFIX}meliae>0:${PORTSDIR}/devel/py-meliae
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	${PORTNAME:C/r/R/g:C/s/S/}
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
