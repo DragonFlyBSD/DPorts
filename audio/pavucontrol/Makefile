@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/pavucontrol/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/pavucontrol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pavucontrol
 PORTVERSION=	0.9.10
