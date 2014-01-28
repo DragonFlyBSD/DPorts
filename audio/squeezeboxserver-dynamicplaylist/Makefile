@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tdb@FreeBSD.org>
-# $FreeBSD: audio/squeezeboxserver-dynamicplaylist/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/squeezeboxserver-dynamicplaylist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dynamicplaylist
 PORTVERSION=	2.8.6
