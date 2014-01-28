@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/gozer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gozer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gozer
 PORTVERSION=	0.7
