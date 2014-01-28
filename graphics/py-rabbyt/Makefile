@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/py-rabbyt/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-rabbyt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rabbyt
 PORTVERSION=	0.8.2
@@ -12,7 +12,7 @@ DISTNAME=	Rabbyt-${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A fast sprite library for Python
 
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Rabbyt
 PYEASYINSTALL_ARCHDEP=	yes
