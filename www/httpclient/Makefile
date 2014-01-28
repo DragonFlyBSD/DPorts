@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpclient/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/httpclient/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	httpclient
 DISTVERSION=	4.3
