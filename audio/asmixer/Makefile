@@ -1,5 +1,5 @@
 # Created by: Mike Makonnen <mtm@identd.net>
-# $FreeBSD: audio/asmixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/asmixer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asmixer
 PORTVERSION=	0.5
