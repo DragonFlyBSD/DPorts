@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: graphics/pear-Image_Barcode/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: graphics/pear-Image_Barcode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Image_Barcode
 PORTVERSION=	1.1.3
