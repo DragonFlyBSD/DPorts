@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: games/freedink-dfarc/Makefile 337953 2013-12-29 10:40:02Z antoine $
+# $FreeBSD: games/freedink-dfarc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freedink-dfarc
 PORTVERSION=	3.10
