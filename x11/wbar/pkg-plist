@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11/wbar/pkg-plist 320691 2013-06-12 13:40:53Z miwi $
 bin/wbar
 %%WBARCONFIG%%bin/wbar-config
 etc/bash_completion.d/wbar
