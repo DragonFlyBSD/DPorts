@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: graphics/scr2png/Makefile 330210 2013-10-13 06:07:30Z eadler $
+# $FreeBSD: graphics/scr2png/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scr2png
 PORTVERSION=	1.2
