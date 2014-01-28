@@ -1,6 +1,6 @@
-@comment $FreeBSD: devel/jep/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/libjep.a
 lib/libjep.la
 lib/libjep.so.2
 lib/libjep.so
+man/man1/jep.1.gz
 %%JAVAJARDIR%%/jep.jar
