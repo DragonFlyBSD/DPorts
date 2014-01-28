@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis
-# $FreeBSD: games/xrally/Makefile 330602 2013-10-17 06:03:18Z edwin $
+# $FreeBSD: games/xrally/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrally
 PORTVERSION=	1.1.1
