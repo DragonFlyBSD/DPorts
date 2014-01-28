@@ -1,5 +1,5 @@
 # Created by: Josh Elsasser <jre@vineyard.net>
-# $FreeBSD: lang/haskell-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/haskell-mode.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	haskell-mode
 PORTVERSION=	2.9.1
