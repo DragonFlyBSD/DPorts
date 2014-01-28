@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: textproc/libwps/Makefile 336413 2013-12-14 01:06:35Z bapt $
+# $FreeBSD: textproc/libwps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libwps
 PORTVERSION=	0.2.9
