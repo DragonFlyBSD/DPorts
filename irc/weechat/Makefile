@@ -1,5 +1,5 @@
 # Created by: clement
-# $FreeBSD: irc/weechat/Makefile 330776 2013-10-18 21:50:45Z jase $
+# $FreeBSD: irc/weechat/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	weechat
 PORTVERSION=	0.4.2
@@ -62,7 +62,7 @@ PLIST_SUB+=	ASPELL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	2.6-
+USE_PYTHON=	2
 CMAKE_ARGS+=	-DBSD_PYTHON_CMD=${PYTHON_CMD} \
 		-DBSD_PYTHON_VER=${PYTHON_VERSION}
 PLIST_SUB+=	PYTHON=""
