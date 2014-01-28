@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: devel/libtool/Makefile 330102 2013-10-11 20:47:43Z ade $
+# $FreeBSD: devel/libtool/Makefile 341367 2014-01-27 10:37:08Z bapt $
 
 PORTNAME?=	libtool
 PORTVERSION=	2.4.2
@@ -13,7 +13,6 @@ MAINTAINER=	autotools@FreeBSD.org
 COMMENT?=	Generic shared library support script
 
 LICENSE?=        GPLv2
-LICENSE_FILE?=   ${WRKSRC}/COPYING
 
 CONFLICTS=	libtool-fixed-[0-9]*
 
@@ -21,11 +20,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS?= --disable-ltdl-install
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
 INFO?=		libtool
-.if ${PORTNAME} != "libltdl"
-MAN1=		libtool.1 libtoolize.1
-.endif
-
-NO_STAGE=	yes
 
 post-extract:
 	@${RM} -f ${WRKSRC}/doc/*.info*
