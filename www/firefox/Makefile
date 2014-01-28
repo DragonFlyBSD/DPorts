@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/firefox/Makefile 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD: www/firefox/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	firefox
 DISTVERSION=	26.0
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	nspr>=4.10.2:${PORTSDIR}/devel/nspr \
 LIB_DEPENDS=	libv4l2.so:${PORTSDIR}/multimedia/libv4l
 
 USE_AUTOTOOLS=	autoconf213:env
-USE_PYTHON_BUILD=-2.7
+USE_PYTHON_BUILD=2
 OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_GECKO=	gecko
 CONFLICTS=	firefox-esr-24.* firefox-esr-17.* firefox-1[07].*
