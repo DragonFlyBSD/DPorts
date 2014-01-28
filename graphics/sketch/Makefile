@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: graphics/sketch/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/sketch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sketch
 PORTVERSION=	0.3.7
