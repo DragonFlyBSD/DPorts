@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: editors/hexedit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: editors/hexedit/Makefile 341419 2014-01-27 15:52:56Z ehaupt $
 
 PORTNAME=	hexedit
 PORTVERSION=	1.2.13
@@ -15,13 +15,11 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-${PORTVERSION}//}
 
 GNU_CONFIGURE=	yes
-MAN1=		hexedit.1
 
-PLIST_FILES=	bin/hexedit
+PLIST_FILES=	bin/hexedit man/man1/hexedit.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hexedit ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/hexedit.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/hexedit ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/hexedit.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
