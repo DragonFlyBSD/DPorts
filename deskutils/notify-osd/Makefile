@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/notify-osd/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/notify-osd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	notify-osd
 PORTVERSION=	0.9.29
