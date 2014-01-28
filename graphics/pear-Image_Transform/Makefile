@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/pear-Image_Transform/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: graphics/pear-Image_Transform/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Image_Transform
 PORTVERSION=	0.9.5
