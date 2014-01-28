@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/atris/Makefile 335927 2013-12-08 19:21:23Z marino $
+# $FreeBSD: games/atris/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	atris
 PORTVERSION=	1.0.7
