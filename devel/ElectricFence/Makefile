@@ -1,5 +1,5 @@
 # Created by: jraynard
-# $FreeBSD: devel/ElectricFence/Makefile 336109 2013-12-10 20:48:33Z bapt $
+# $FreeBSD: devel/ElectricFence/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	electricfence
 PORTVERSION=	2.2.2
