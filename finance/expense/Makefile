@@ -1,4 +1,4 @@
-# $FreeBSD: finance/expense/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/expense/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	expense
 PORTVERSION=	0.1
