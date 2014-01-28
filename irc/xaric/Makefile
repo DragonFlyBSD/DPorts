@@ -1,5 +1,5 @@
 # Created by: alanp@unixpower.org
-# $FreeBSD: irc/xaric/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/xaric/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xaric
 PORTVERSION=	0.13.6
