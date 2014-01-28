@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/affenspiel/Makefile 331983 2013-10-29 19:34:23Z danilo $
+# $FreeBSD: games/affenspiel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	affenspiel
 PORTVERSION=	1.0
