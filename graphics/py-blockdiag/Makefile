@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/py-blockdiag/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: graphics/py-blockdiag/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	blockdiag
 PORTVERSION=	1.2.4
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}imaging>=1.1.5:${PORTSDIR}/graphics/py-imaging \
 
 UNIQUENAME=	py-${PORTNAME}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 MAN1=	${PORTNAME}.1
