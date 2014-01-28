@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: graphics/pecl-qrencode/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pecl-qrencode/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	qrencode
 PORTVERSION=	0.4
@@ -22,5 +22,4 @@ CONFIGURE_ARGS=	--with-qrencode=${LOCALBASE}
 LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
 CFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
