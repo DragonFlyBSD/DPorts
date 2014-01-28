@@ -1,5 +1,5 @@
 # Created by: Keith Walker <kew@icehouse.net>
-# $FreeBSD: astro/sscalc/Makefile 331558 2013-10-25 06:28:14Z vanilla $
+# $FreeBSD: astro/sscalc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sscalc
 PORTVERSION=	1.0
