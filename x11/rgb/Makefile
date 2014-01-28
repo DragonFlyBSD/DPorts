@@ -1,4 +1,4 @@
-# $FreeBSD: x11/rgb/Makefile 328645 2013-09-29 03:16:52Z eadler $
+# $FreeBSD: x11/rgb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rgb
 PORTVERSION=	1.0.5
