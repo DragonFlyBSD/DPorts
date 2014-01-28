@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xsoldier/Makefile 329492 2013-10-05 18:17:39Z naddy $
+# $FreeBSD: games/xsoldier/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xsoldier
 PORTVERSION=	1.8

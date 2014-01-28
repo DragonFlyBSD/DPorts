@@ -1,4 +1,3 @@
-@comment $FreeBSD: games/xsoldier/pkg-plist 329492 2013-10-05 18:17:39Z naddy $
 @group games
 @mode 2555
 bin/xsoldier

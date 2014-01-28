@@ -1,5 +1,5 @@
 
-$FreeBSD: games/xsoldier/files/patch-opening.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: games/xsoldier/files/patch-opening.c 340725 2014-01-22 17:40:44Z mat $
 
 --- opening.c.orig
 +++ opening.c

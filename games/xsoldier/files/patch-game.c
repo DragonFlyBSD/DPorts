@@ -1,5 +1,5 @@
 
-$FreeBSD: games/xsoldier/files/patch-game.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: games/xsoldier/files/patch-game.c 340725 2014-01-22 17:40:44Z mat $
 
 --- game.c.orig
 +++ game.c

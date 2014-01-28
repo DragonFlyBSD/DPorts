@@ -1,5 +1,5 @@
 
-$FreeBSD: games/xsoldier/files/patch-xsoldier.h 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: games/xsoldier/files/patch-xsoldier.h 340725 2014-01-22 17:40:44Z mat $
 
 --- xsoldier.h.orig
 +++ xsoldier.h
