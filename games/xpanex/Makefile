@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xpanex/Makefile 333798 2013-11-14 21:25:36Z danilo $
+# $FreeBSD: games/xpanex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpanex
 PORTVERSION=	5.5.2
