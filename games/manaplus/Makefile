@@ -1,13 +1,13 @@
 # Created by: Tobias Gion
-# $FreeBSD: games/manaplus/Makefile 338907 2014-01-06 17:12:44Z mva $
+# $FreeBSD: games/manaplus/Makefile 340238 2014-01-19 09:01:55Z mva $
 
 PORTNAME=	manaplus
-PORTVERSION=	1.4.1.4
+PORTVERSION=	1.4.1.18
 CATEGORIES=	games
 MASTER_SITES=	http://download.evolonline.org/manaplus/download/${PORTVERSION}/
 
 MAINTAINER=	mva@FreeBSD.org
-COMMENT=	Free open source 2D MMORPG in development
+COMMENT=	Free open source 2D MMORPG client for athena and evol servers
 
 LICENSE=	GPLv2
 
