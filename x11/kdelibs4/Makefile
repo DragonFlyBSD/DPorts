@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: x11/kdelibs4/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD: x11/kdelibs4/Makefile 339572 2014-01-13 07:23:43Z bapt $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
@@ -83,10 +83,6 @@ AVAHI_DESC=	Use Avahi's mDNSResponder (otherwise Apple's)
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	lzma.5:${PORTSDIR}/archivers/xz
-.endif
 
 .if ${OSVERSION} < 900004
 LIB_DEPENDS+=	utempter:${PORTSDIR}/sysutils/libutempter
