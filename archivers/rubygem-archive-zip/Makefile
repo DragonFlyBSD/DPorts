@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: archivers/rubygem-archive-zip/Makefile 338708 2014-01-05 00:24:08Z bapt $
+# $FreeBSD: archivers/rubygem-archive-zip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	archive-zip
 PORTVERSION=	0.6.0
