@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: devel/gnome-vfs/pkg-install.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: devel/gnome-vfs/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 #   $MCom: ports/devel/gnome-vfs/pkg-install.in,v 1.28 2010/09/29 12:30:29 kwm Exp $
 #
 # Restore gconf keys of libgnome.
