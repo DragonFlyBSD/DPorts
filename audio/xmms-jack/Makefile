@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-jack/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-jack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-jack
 PORTVERSION=	0.19
