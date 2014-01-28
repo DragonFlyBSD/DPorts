@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: games/speyes/Makefile 333466 2013-11-11 01:23:28Z danilo $
+# $FreeBSD: games/speyes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	speyes
 PORTVERSION=	1.2.0
