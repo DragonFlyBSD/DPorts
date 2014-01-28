@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xoct/Makefile 333792 2013-11-14 21:12:49Z danilo $
+# $FreeBSD: games/xoct/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xoct
 PORTVERSION=	5.5.2
