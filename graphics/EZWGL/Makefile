@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/EZWGL/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/EZWGL/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	EZWGL
 PORTVERSION=	1.50
