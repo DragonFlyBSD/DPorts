@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: biology/mummer/Makefile 338550 2014-01-03 15:46:52Z adamw $
+# $FreeBSD: biology/mummer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mummer
 PORTVERSION=	3.23
