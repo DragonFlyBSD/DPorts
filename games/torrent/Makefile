@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/torrent/Makefile 330575 2013-10-16 23:59:16Z amdmi3 $
+# $FreeBSD: games/torrent/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	torrent
 PORTVERSION=	0.8.2
