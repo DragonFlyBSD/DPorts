@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/CaribbeanStud/Makefile 331976 2013-10-29 18:00:51Z danilo $
+# $FreeBSD: games/CaribbeanStud/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	CaribbeanStud
 PORTVERSION=	1.0
