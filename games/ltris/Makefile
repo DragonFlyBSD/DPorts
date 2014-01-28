@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/ltris/Makefile 333523 2013-11-11 17:07:11Z johans $
+# $FreeBSD: games/ltris/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ltris
 PORTVERSION=	1.0.19
