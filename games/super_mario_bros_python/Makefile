@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/super_mario_bros_python/Makefile 335925 2013-12-08 19:08:56Z nemysis $
+# $FreeBSD: games/super_mario_bros_python/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	super_mario_bros_python
 PORTVERSION=	0.1
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYGAME}
 WRKSRC=		${WRKDIR}/Super-Mario-Bros-Python-v${DISTVERSION}release
 
 USE_ZIP=	yes
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 
 PORTDOCS=	changelog.txt readme.txt
 
