@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rcs/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rcs/Makefile 341339 2014-01-27 08:30:47Z bapt $
 
 PORTNAME=	rcs
 PORTVERSION=	5.8.2
@@ -13,9 +13,6 @@ LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
 
-MAN1=	ci.1 co.1 ident.1 merge.1 rcs.1 rcsclean.1 rcsdiff.1 rcsmerge.1 rlog.1
-MAN5=	rcsfile.5
 INFO=	rcs
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
