@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: print/dvipsk-tetex/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: print/dvipsk-tetex/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 
 PAPERSIZE=%%PAPERSIZE%%
 DVIPSDIR=%%DVIPSDIR%%
