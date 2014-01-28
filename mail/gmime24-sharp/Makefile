@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: mail/gmime24-sharp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gmime24-sharp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTREVISION=	2
 CATEGORIES=	mail
