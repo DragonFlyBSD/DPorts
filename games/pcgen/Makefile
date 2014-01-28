@@ -1,10 +1,10 @@
-# $FreeBSD: games/pcgen/Makefile 331219 2013-10-22 04:06:52Z eadler $
+# $FreeBSD: games/pcgen/Makefile 340920 2014-01-24 16:53:49Z eadler $
 
 PORTNAME=	pcgen
-PORTVERSION=	6.00.1
+PORTVERSION=	6.02.0
 CATEGORIES=	games java
 MASTER_SITES=	SF/${PORTNAME}/PCGen%20Stable/${PORTVERSION}
-DISTNAME=	pcgen${PORTVERSION:S/.//g}_full
+DISTNAME=	pcgen${PORTVERSION:S/.//g}0_full
 
 MAINTAINER=	eadler@FreeBSD.org
 COMMENT=	Java-based RPG character generator and maintenance program
@@ -12,7 +12,7 @@ COMMENT=	Java-based RPG character generator and maintenance program
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ZIP=	YES
-WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:S/.//g}
+WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION:S/.//g}0
 USE_JAVA=	YES
 JAVA_VERSION=	1.6+
 NO_BUILD=	YES
