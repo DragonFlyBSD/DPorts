@@ -1,5 +1,5 @@
 # Created by: IWASHITA Yoji <shuna@pop16.odn.ne.jp>
-# $FreeBSD: japanese/celrw/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/celrw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	celrw
 PORTVERSION=	0.16
