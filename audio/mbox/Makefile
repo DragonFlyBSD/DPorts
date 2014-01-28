@@ -1,5 +1,5 @@
 # Created by: Vladimir Osintsev <oc@nm.ru>
-# $FreeBSD: audio/mbox/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: audio/mbox/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mbox
 PORTVERSION=	0.7.2
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/ogg/__init__.py:${PORTSDIR}/audio/py-ogg \
 
 WRKSRC=		${WRKDIR}/mBox-${PORTVERSION}
 USE_BZIP2=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	mBox
