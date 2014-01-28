@@ -1,4 +1,4 @@
-# $FreeBSD: print/ghostscript9/files/Makefile.drivers_post 323630 2013-07-25 09:25:16Z hrs $
+# $FreeBSD: print/ghostscript9/files/Makefile.drivers_post 340722 2014-01-22 17:00:46Z mat $
 # pre/postprocessing driver variables
 
 # dmprt specific
