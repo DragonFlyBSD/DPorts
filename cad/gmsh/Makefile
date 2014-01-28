@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/gmsh/Makefile 336172 2013-12-11 14:53:20Z bapt $
+# $FreeBSD: cad/gmsh/Makefile 341297 2014-01-26 22:25:15Z stephen $
 
 PORTNAME=	gmsh
 PORTVERSION=	2.8.3
@@ -34,8 +34,6 @@ USE_GL=		yes
 ALL_TARGET=	all
 
 MAKE_JOBS_UNSAFE=	yes
-
-MAN1=		gmsh.1
 
 CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=YES
 
@@ -125,7 +123,6 @@ CONFLICTS=	gmsh-occ-2.*
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
@@ -202,12 +199,8 @@ post-patch:
 
 post-install:
 .if !defined(WITHOUT_METIS)
-	${MKDIR} ${DOCSDIR}/metis
-	${INSTALL_DATA} ${WRKDIR}/manual.pdf ${DOCSDIR}/metis
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/metis
+	${INSTALL_DATA} ${WRKDIR}/manual.pdf ${STAGEDIR}${DOCSDIR}/metis
 .endif
-
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
 
 .include <bsd.port.post.mk>
