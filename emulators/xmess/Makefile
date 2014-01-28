@@ -1,5 +1,5 @@
 # Created by: nox@jelal.kn-bremen.de
-# $FreeBSD: emulators/xmess/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/xmess/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmess
 PORTREVISION=	3
