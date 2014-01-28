@@ -1,5 +1,5 @@
 # Created by: darius@dons.net.au
-# $FreeBSD: astro/xplanet/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD: astro/xplanet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xplanet
 PORTVERSION=	1.3.0
