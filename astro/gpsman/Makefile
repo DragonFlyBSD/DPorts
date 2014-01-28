@@ -1,5 +1,5 @@
 # Created by: David Wolfskill
-# $FreeBSD: astro/gpsman/Makefile 329659 2013-10-07 07:31:55Z gahr $
+# $FreeBSD: astro/gpsman/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gpsman
 PORTVERSION=	6.4.4.2

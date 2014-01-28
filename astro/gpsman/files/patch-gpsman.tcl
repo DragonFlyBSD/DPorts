@@ -1,4 +1,4 @@
-$FreeBSD: astro/gpsman/files/patch-gpsman.tcl 329659 2013-10-07 07:31:55Z gahr $
+$FreeBSD: astro/gpsman/files/patch-gpsman.tcl 340725 2014-01-22 17:40:44Z mat $
 
 diff -ruN gpsman.tcl gpsman.tcl
 --- gpsman.tcl	Tue May  9 02:37:24 2006
