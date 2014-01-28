@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: astro/gpsprune/files/gpsprune.sh.in 308179 2012-12-03 23:20:38Z amdmi3 $
+# $FreeBSD: astro/gpsprune/files/gpsprune.sh.in 340851 2014-01-23 19:55:14Z mat $
 
 JAVA="%%LOCALBASE%%/bin/java"
 JARPATH="%%JAVALIBDIR%%"

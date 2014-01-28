@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/gpsprune/Makefile 328586 2013-09-28 15:37:25Z amdmi3 $
+# $FreeBSD: astro/gpsprune/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gpsprune
 PORTVERSION=	15.1
