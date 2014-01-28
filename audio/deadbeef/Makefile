@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/deadbeef/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/deadbeef/Makefile 339833 2014-01-15 22:31:05Z bapt $
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.5.5
@@ -366,10 +366,8 @@ post-patch:
 		-e 's,libavformat ,libavformat0 ,g' \
 		${WRKSRC}/configure
 
-.include <bsd.port.pre.mk>
-
 .if ${ARCH} == "powerpc" && ${OSVERSION} > 900000
 BROKEN=		Does not build on powerpc-9: fails to compile
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
