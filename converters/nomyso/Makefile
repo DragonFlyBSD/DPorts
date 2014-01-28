@@ -1,24 +1,23 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: converters/nomyso/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/nomyso/Makefile 340446 2014-01-20 18:39:49Z antoine $
 
 PORTNAME=	nomyso
 PORTVERSION=	4.3
 CATEGORIES=	converters devel
 MASTER_SITES=	http://www.devoresoftware.com/nomyso/
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert MASM/TASM files to NASM compatible sources
 
 USES=		perl5
-USE_ZIP=	yes
 USE_PERL5=	run
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}.pl
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|[[:cntrl:]]$$||' \
@@ -28,6 +27,6 @@ post-patch:
 do-install:
 	@${INSTALL_SCRIPT} \
 		${WRKSRC}/${PORTNAME}.pl \
-		${PREFIX}/bin
+		${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
