@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/xrot/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xrot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrot
 PORTVERSION=	1.3.2
