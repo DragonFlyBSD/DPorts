@@ -1,4 +1,4 @@
-$FreeBSD: audio/trommler/files/patch-gui.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/trommler/files/patch-gui.c 340725 2014-01-22 17:40:44Z mat $
 
 --- gui.c.orig	Thu Feb 20 15:43:08 2003
 +++ gui.c	Thu Feb 20 15:43:21 2003
