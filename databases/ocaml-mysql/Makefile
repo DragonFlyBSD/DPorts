@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: databases/ocaml-mysql/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: databases/ocaml-mysql/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysql
 PORTVERSION=	1.1.1
