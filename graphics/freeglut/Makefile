@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/freeglut/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: graphics/freeglut/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freeglut
 PORTVERSION=	2.8.1
