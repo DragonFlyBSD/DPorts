@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/vera-fpw/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/vera-fpw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vera-fpw
 PORTVERSION=	${VERA_VER}.${VERAFPW_VER}
