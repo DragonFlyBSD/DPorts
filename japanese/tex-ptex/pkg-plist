@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/tex-ptex/pkg-plist 319152 2013-05-27 02:40:17Z hrs $
 bin/ptex
 bin/eptex
 bin/uptex
