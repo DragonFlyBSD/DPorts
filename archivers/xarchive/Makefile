@@ -1,5 +1,5 @@
 # Created by: Mark Kane <mark@mkproductions.org>
-# $FreeBSD: archivers/xarchive/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/xarchive/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xarchive
 DISTVERSION=	0.2.8-6
