@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/uniconvw/Makefile 330572 2013-10-16 23:54:59Z amdmi3 $
+# $FreeBSD: graphics/uniconvw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uniconvw
 PORTVERSION=	1.1.5
