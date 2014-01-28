@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-fastimport/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-fastimport/Makefile 340125 2014-01-17 21:57:41Z antoine $
 
 PORTNAME=	bzr-fastimport
 PORTVERSION=	0.13.0
@@ -20,8 +20,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
-PYDISTUTILS_PKGNAME=	bzr_fastimport
-PYDISTUTILS_PKGVERSION=	${PORTVERSION}.final.0
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
