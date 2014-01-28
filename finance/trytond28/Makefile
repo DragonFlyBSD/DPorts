@@ -1,5 +1,5 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond28/Makefile 334432 2013-11-20 17:20:57Z bsam $
+# $FreeBSD: finance/trytond28/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	trytond
 PORTVERSION=	2.8.2
