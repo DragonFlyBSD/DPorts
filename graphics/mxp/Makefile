@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: graphics/mxp/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/mxp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mxp
 PORTVERSION=	1.3
