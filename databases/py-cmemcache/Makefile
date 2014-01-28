@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: databases/py-cmemcache/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/py-cmemcache/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cmemcache
 PORTVERSION=	0.95
