@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: games/nInvaders/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/nInvaders/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nInvaders
 PORTVERSION=	0.1.1
