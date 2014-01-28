@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-luatex/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD: print/tex-luatex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	luatex
 PORTVERSION=	0.70.2
