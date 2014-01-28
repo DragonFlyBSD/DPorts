@@ -1,8 +1,9 @@
 # Created by: Marc Fonvieille <blackend@FreeBSD.org>
-# $FreeBSD: cad/atlc/Makefile 339190 2014-01-09 00:00:05Z bapt $
+# $FreeBSD: cad/atlc/Makefile 341079 2014-01-25 19:32:14Z antoine $
 
 PORTNAME=	atlc
 PORTVERSION=	4.6.1
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -17,6 +18,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
 PORTDOCS=	*
+PORTEXAMPLES=	*
 
 MAKE_ARGS=	examplesdir=${EXAMPLESDIR} \
 		htmldir=${DOCSDIR}/html-docs \
