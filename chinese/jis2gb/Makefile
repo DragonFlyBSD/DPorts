@@ -1,5 +1,5 @@
 # Created by: Zhang Shu
-# $FreeBSD: chinese/jis2gb/Makefile 328366 2013-09-26 14:35:04Z vanilla $
+# $FreeBSD: chinese/jis2gb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jis2gb
 PORTVERSION=	1.5
