@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-mnemo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/horde-mnemo/Makefile 341400 2014-01-27 13:17:56Z miwi $
 
 PORTNAME=	mnemo
 PORTVERSION=	4.1.2
@@ -37,7 +37,6 @@ OPTIONS_DEFAULT=	PDF
 OPTIONS_DEFINE=		PDF
 PDF_DESC=		Support PDF generation
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPDF}
