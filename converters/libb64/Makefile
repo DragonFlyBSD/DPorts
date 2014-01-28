@@ -1,5 +1,5 @@
 # Created by: Ismail Yenigul <ismail.yenigul@surgate.com>
-# $FreeBSD: converters/libb64/Makefile 339193 2014-01-09 00:13:15Z bapt $
+# $FreeBSD: converters/libb64/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libb64
 PORTVERSION=	1.2
