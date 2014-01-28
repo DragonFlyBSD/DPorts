@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/sdl_net/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/sdl_net/Makefile 340168 2014-01-18 12:20:08Z mva $
 
 PORTNAME=	sdl_net
 PORTVERSION=	1.2.8
@@ -8,7 +8,9 @@ MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 DISTNAME=	SDL_net-${PORTVERSION}
 
 MAINTAINER=	mva@FreeBSD.org
-COMMENT=	A small sample cross-platform networking library
+COMMENT=	Small sample cross-platform networking library
+
+LICENSE=	ZLIB
 
 USE_AUTOTOOLS=	libtool
 USE_SDL=	sdl
@@ -18,7 +20,6 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=--disable-gui
 
-NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} -e \
 		's|^deplibs_check_method=.*|deplibs_check_method=pass_all|' \
