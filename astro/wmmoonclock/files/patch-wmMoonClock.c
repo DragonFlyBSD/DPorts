@@ -1,5 +1,5 @@
 
-$FreeBSD: astro/wmmoonclock/files/patch-wmMoonClock.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: astro/wmmoonclock/files/patch-wmMoonClock.c 340725 2014-01-22 17:40:44Z mat $
 
 --- wmMoonClock.c.orig	Thu Aug 15 18:15:26 2002
 +++ wmMoonClock.c	Thu Aug 15 18:15:51 2002
