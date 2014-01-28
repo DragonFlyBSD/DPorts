@@ -1,5 +1,5 @@
 # Created by: dgilbert@velocet.ca
-# $FreeBSD: print/gutenprint/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/gutenprint/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/print/gutenprint/Makefile,v 1.8 2007/04/03 17:42:21 ahze Exp $
 
 PORTNAME=	gutenprint
