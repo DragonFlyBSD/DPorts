@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: devel/doctorj/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/doctorj/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	doctorj
 PORTVERSION=	5.1.2
