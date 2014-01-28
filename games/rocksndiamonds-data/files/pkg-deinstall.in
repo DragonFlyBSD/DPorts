@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/rocksndiamonds-data/files/pkg-deinstall.in 314981 2013-03-23 02:31:44Z beech $
+# $FreeBSD: games/rocksndiamonds-data/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 if [ "$2" = "POST-DEINSTALL" ]; then
