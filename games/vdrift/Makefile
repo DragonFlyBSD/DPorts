@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/vdrift/Makefile 336255 2013-12-12 11:14:49Z bapt $
+# $FreeBSD: games/vdrift/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vdrift
 PORTVERSION=	20100630
