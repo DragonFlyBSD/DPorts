@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: graphics/rubygem-gd2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-gd2/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	gd2
 PORTVERSION=	1.1.1
@@ -18,8 +18,7 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 post-install:
-	@${REINPLACE_CMD} 's|so.2|so.4|' ${PREFIX}/${GEM_LIB_DIR}/lib/gd2.rb
+	@${REINPLACE_CMD} 's|so.2|so.4|' ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/lib/gd2.rb
 
 .include <bsd.port.mk>
