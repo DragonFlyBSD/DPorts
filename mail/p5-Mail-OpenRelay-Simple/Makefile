@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: mail/p5-Mail-OpenRelay-Simple/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD: mail/p5-Mail-OpenRelay-Simple/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	Mail-OpenRelay-Simple
 PORTVERSION=	0.02
@@ -7,7 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tjs@cdpa.nsysu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Check if a mail server runs as an open relay
 
 RUN_DEPENDS=	p5-Class-Accessor>=0.25:${PORTSDIR}/devel/p5-Class-Accessor \
