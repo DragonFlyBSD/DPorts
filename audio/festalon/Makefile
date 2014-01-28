@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/festalon/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/festalon/Makefile 340829 2014-01-23 14:51:06Z ehaupt $
 
 PORTNAME=	festalon
 PORTVERSION=	0.5.5
@@ -29,7 +29,7 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
-BROKEN=		does not build on FreeBSD 10.x and later
+BROKEN_i386=	does not build on i386 FreeBSD 10.x and later
 .endif
 
 .if ${PKGNAMEPREFIX} == ""
