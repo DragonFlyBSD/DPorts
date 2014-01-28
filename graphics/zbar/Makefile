@@ -1,5 +1,5 @@
 # Created by: Oliver Heesakkers <dev2@heesakkers.info>
-# $FreeBSD: graphics/zbar/Makefile 334167 2013-11-18 10:05:48Z marino $
+# $FreeBSD: graphics/zbar/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	zbar
 PORTVERSION=	0.10
@@ -55,7 +55,7 @@ PLIST_SUB+=	V4L="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	2.5-2.7
+USE_PYTHON=	2
 USE_GNOME+=	pygtk2
 CONFIGURE_ARGS+=	--with-python=yes
 PLIST_SUB+=	PYTHON=""
