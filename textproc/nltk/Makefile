@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/nltk/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: textproc/nltk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nltk
 PORTVERSION=	2.0.4
@@ -14,7 +14,7 @@ LICENSE=	APACHE20
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>=0:${PORTSDIR}/x11-toolkits/py-tkinter \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.09:${PORTSDIR}/devel/py-yaml
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
