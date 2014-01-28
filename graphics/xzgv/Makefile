@@ -1,5 +1,5 @@
 # Created by: Norio Suzuki <nosuzuki@e-mail.ne.jp>
-# $FreeBSD: graphics/xzgv/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xzgv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xzgv
 PORTVERSION=	0.9
