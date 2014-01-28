@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/dnstracer/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dnstracer/Makefile 340974 2014-01-25 00:54:22Z bapt $
 
 PORTNAME=	dnstracer
 PORTVERSION=	1.9
@@ -11,18 +11,13 @@ COMMENT=	Trace a chain of DNS servers to the source
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-USE_GMAKE=	yes
+USES=		gmake
 
-MAN8=		dnstracer.8
-PLIST_FILES=	bin/dnstracer
+PLIST_FILES=	bin/dnstracer \
+		man/man8/dnstracer.8.gz
 
 OPTIONS_DEFINE=		IPV6
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MIPV6}
-CONFIGURE_ARGS+=--disable-ipv6
-.endif
+IPV6_CONFIGURE_ENABLE=	--disable-ipv6
 
 .include <bsd.port.mk>
