@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: comms/tits/files/tits.in 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: comms/tits/files/tits.in 340851 2014-01-23 19:55:14Z mat $
 
 # PROVIDE: tits
 # REQUIRE: DAEMON

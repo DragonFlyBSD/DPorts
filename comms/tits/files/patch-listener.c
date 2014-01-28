@@ -1,5 +1,5 @@
 
-$FreeBSD: comms/tits/files/patch-listener.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: comms/tits/files/patch-listener.c 340725 2014-01-22 17:40:44Z mat $
 
 --- listener.c.orig
 +++ listener.c

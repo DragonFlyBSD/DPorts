@@ -1,5 +1,5 @@
 # Created by: Steve Woodford <scw@netbsd.hut.fi>
-# $FreeBSD: comms/tits/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/tits/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tits
 PORTVERSION=	1.1.2
