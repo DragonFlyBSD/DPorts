@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/xorg-libraries/Makefile 336639 2013-12-16 14:17:10Z zeising $
+# $FreeBSD: x11/xorg-libraries/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xorg-libraries
 PORTVERSION=	7.7
