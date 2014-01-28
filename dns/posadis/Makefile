@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: dns/posadis/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: dns/posadis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	posadis
 PORTVERSION=	0.60.5
