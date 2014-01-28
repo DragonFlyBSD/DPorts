@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: archivers/jzip.org/Makefile 328239 2013-09-25 02:54:34Z vanilla $
+# $FreeBSD: archivers/jzip.org/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jzip.org
 PORTVERSION=	0.2.0
