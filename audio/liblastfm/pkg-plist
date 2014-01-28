@@ -1,4 +1,3 @@
-@comment $FreeBSD: audio/liblastfm/pkg-plist 313548 2013-03-06 22:37:48Z nivit $
 include/lastfm/AbstractType.h
 include/lastfm/Album.h
 include/lastfm/Artist.h

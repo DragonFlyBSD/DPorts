@@ -1,12 +1,12 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/liblastfm/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/liblastfm/Makefile 339969 2014-01-16 19:45:01Z antoine $
 
 PORTNAME=	liblastfm
 PORTVERSION=	1.0.6
 #PORTREVISION=	0
 CATEGORIES=	audio
 
-MAINTAINER=	datahead4@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt C++ library for the Last.fm webservices
 
 LICENSE=	GPLv3
@@ -28,7 +28,6 @@ TESTS_DESC=		Build liblastfm tests
 OPTIONS_DEFAULT=	FINGERPRINT
 
 USES=		cmake pkgconfig
-NO_STAGE=	yes
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 USE_QT4=	dbus moc_build rcc_build network qmake_build qtestlib sql xml
