@@ -1,5 +1,5 @@
 # Created by: Pierre-Emmanuel Andre
-# $FreeBSD: databases/pgloader/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pgloader/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pgloader
 PORTVERSION=	2.3.1
@@ -13,7 +13,7 @@ COMMENT=	Import CSV data and Large Object to PostgreSQL
 MAN1=		pgloader.1
 
 NO_BUILD=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/psycopg2/__init__.py:${PORTSDIR}/databases/py-psycopg2
 
