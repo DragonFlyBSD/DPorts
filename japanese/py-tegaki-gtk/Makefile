@@ -1,10 +1,5 @@
-# $FreeBSD: japanese/py-tegaki-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
-
-# Date created:				15 Aug 2010
-# Whom:					Timothy Beyer <beyert@cs.ucr.edu>
-#
-# $FreeBSD: japanese/py-tegaki-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
-#
+# Created by: Timothy Beyer <beyert@cs.ucr.edu>
+# $FreeBSD: japanese/py-tegaki-gtk/Makefile 341365 2014-01-27 10:27:53Z danfe $
 
 PORTNAME=	tegaki
 PORTVERSION=	0.3.1
@@ -15,17 +10,15 @@ PKGNAMESUFFIX=	-gtk
 DISTNAME=	${PORTNAME}-pygtk-${PORTVERSION}
 
 MAINTAINER=	beyert@cs.ucr.edu
-COMMENT=	Tegaki pygtk interface
-
-LIB_DEPENDS=	zinnia.0:${PORTSDIR}/japanese/zinnia
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tegaki/engine.py:${PORTSDIR}/japanese/py-tegaki
+COMMENT=	Tegaki PyGTK interface
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
+
+LIB_DEPENDS=	libzinnia.so:${PORTSDIR}/japanese/zinnia
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tegaki/engine.py:${PORTSDIR}/japanese/py-tegaki
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME}_pygtk
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
