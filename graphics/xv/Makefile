@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: graphics/xv/Makefile 335047 2013-11-27 19:27:27Z dinoex $
+# $FreeBSD: graphics/xv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xv
 PORTVERSION=	3.10a
