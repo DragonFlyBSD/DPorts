@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-panel/Makefile 330350 2013-10-14 20:03:16Z olivierd $
+# $FreeBSD: x11-wm/xfce4-panel/Makefile 340827 2014-01-23 13:50:19Z ehaupt $
 
 PORTNAME=	xfce4-panel
 PORTVERSION=	4.10.1
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libwnck-1.so:${PORTSDIR}/x11-toolkits/libwnck \
 		libcairo.so:${PORTSDIR}/graphics/cairo \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
-USES=	desktop-file-utils gmake pathfix perl5 pkgconfig
+USES=		desktop-file-utils gmake pathfix perl5 pkgconfig compiler
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
@@ -28,7 +28,13 @@ CONFIGURE_ARGS+=--enable-gio-unix
 
 OPTIONS_DEFINE=		NLS DOCS
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} >= 1000000
+.if ${COMPILER_TYPE} == clang
+CFLAGS_x86_64=	-fPIC
+.endif
+.endif
 
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
@@ -47,4 +53,4 @@ CONFIGURE_ARGS+=--without-html-dir
 PLIST_SUB+=	APIDOCS="@comment "
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
