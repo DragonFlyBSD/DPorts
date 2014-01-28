@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: devel/cvsspam/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD: devel/cvsspam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cvsspam
 PORTVERSION=	0.2.12
