@@ -1,4 +1,4 @@
-# $FreeBSD: x11/liboldX/Makefile 330449 2013-10-15 19:46:25Z eadler $
+# $FreeBSD: x11/liboldX/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	liboldX
 PORTVERSION=	1.0.1
