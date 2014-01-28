@@ -1,5 +1,5 @@
 # Created by: piero
-# $FreeBSD: multimedia/xanim/Makefile 336225 2013-12-11 21:52:30Z dinoex $
+# $FreeBSD: multimedia/xanim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xanim
 PORTVERSION=	2.92.0
