@@ -1,12 +1,13 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups-base/Makefile 335993 2013-12-09 14:49:08Z bsam $
+# $FreeBSD: print/cups-base/Makefile 340749 2014-01-22 23:37:53Z mandree $
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
 DISTVERSIONSUFFIX=	-source
 PORTREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	EASYSW/${PORTNAME}/${DISTVERSION}
+MASTER_SITES=	http://www.cups.org/software/${DISTVERSION}/ \
+		EASYSW/${PORTNAME}/${DISTVERSION}
 PKGNAMESUFFIX=	${CUPS_SUFFIX}${PKGNAMESUFFIX2}
 
 MAINTAINER=	bsam@FreeBSD.org
