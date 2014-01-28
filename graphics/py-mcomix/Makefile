@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: graphics/py-mcomix/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-mcomix/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	mcomix
 PORTVERSION=	0.99
@@ -15,7 +15,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=		yes
 USE_GNOME=		pygtk2
-USE_PYTHON=		2.6+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	easy_install
 
 NO_STAGE=	yes
