@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: security/gnome-keyring-sharp/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/gnome-keyring-sharp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnome-keyring-sharp
 PORTVERSION=	1.0.2
