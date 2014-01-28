@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xmille/Makefile 333724 2013-11-13 20:09:22Z danilo $
+# $FreeBSD: games/xmille/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmille
 PORTVERSION=	2.0
