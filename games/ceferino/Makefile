@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/ceferino/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/ceferino/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ceferino
 PORTVERSION=	0.97.8
