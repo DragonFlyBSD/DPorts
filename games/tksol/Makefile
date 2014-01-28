@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/tksol/Makefile 333477 2013-11-11 03:19:37Z danilo $
+# $FreeBSD: games/tksol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tksol
 PORTVERSION=	1.8.4
