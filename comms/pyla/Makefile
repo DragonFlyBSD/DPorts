@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger (mike@Reifenberger.com)
-# $FreeBSD: comms/pyla/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/pyla/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyla
 PORTVERSION=	1.1.7.1
