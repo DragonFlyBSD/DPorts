@@ -1,5 +1,5 @@
 # Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-# $FreeBSD: japanese/sed/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/sed/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sed
 PORTVERSION=	3.02
