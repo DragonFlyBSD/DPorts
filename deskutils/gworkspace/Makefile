@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gworkspace/Makefile 329827 2013-10-08 19:30:12Z theraven $
+# $FreeBSD: deskutils/gworkspace/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gworkspace
 PORTVERSION=	0.9.2
