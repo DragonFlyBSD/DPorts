@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-rauth/Makefile 335303 2013-11-30 15:46:48Z koobs $
+# $FreeBSD: devel/py-rauth/Makefile 341385 2014-01-27 12:14:09Z koobs $
 
 PORTNAME=	rauth
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	devel www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,7 +12,7 @@ COMMENT=	Python library for OAuth 1.0/a, 2.0, and Ofly consumers
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=1.2.3:${PORTSDIR}/www/py-requests
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests1>=1.2.3:${PORTSDIR}/www/py-requests1
 TEST_DEPENDS:=	${RUN_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}nose>=1.2.1:${PORTSDIR}/devel/py-nose \
 		${PYTHON_PKGNAMEPREFIX}mock>=1.0.1:${PORTSDIR}/devel/py-mock \
