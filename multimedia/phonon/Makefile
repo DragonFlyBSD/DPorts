@@ -1,11 +1,10 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon/Makefile 333638 2013-11-13 01:57:13Z avilla $
+# $FreeBSD: multimedia/phonon/Makefile 340692 2014-01-22 08:19:10Z makc $
 
 PORTNAME=	phonon
-PORTVERSION=	4.7.0
-CATEGORIES=	multimedia kde ipv6
-MASTER_SITES=	${MASTER_SITE_KDE}
-MASTER_SITE_SUBDIR=	${PHONON_BRANCH}/${PORTNAME}/${PORTVERSION}
+PORTVERSION=	4.7.1
+CATEGORIES=	multimedia kde
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	KDE
 
 MAINTAINER=	kde@FreeBSD.org
@@ -14,10 +13,6 @@ COMMENT=	KDE multimedia framework
 LICENSE=	LGPL21
 
 LIB_DEPENDS=	libqzeitgeist.so:${PORTSDIR}/sysutils/qzeitgeist
-
-CONFLICTS=	qt4-phonon-4*
-
-PHONON_BRANCH=	stable
 
 USE_KDE4=	kdehier kdeprefix automoc4
 USE_QT4=	corelib dbus gui \
@@ -29,7 +24,7 @@ CMAKE_ARGS=	-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT:BOOL=TRUE \
 		-DPHONON_BUILD_DESIGNER_PLUGIN:BOOL=OFF
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	QT_PREFIX=${QT_PREFIX}
+PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
 OPTIONS_DEFINE=	PULSEAUDIO
 
