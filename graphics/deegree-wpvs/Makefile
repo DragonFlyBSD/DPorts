@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: graphics/deegree-wpvs/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/deegree-wpvs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wpvs
 PORTVERSION=	2.5
