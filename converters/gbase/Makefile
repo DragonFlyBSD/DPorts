@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: converters/gbase/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/gbase/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gbase
 PORTVERSION=	0.5
@@ -8,7 +8,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://www.fluxcode.net/files/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A program to convert between the 4 common bases used in programming
+COMMENT=	Program to convert between the 4 common bases used in programming
 
 LICENSE=	ART10
 
@@ -17,7 +17,6 @@ OPTIONS_DEFINE=	GTK2
 PLIST_FILES=	bin/${PORTNAME}
 USES=		pkgconfig
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK2}
@@ -39,6 +38,6 @@ do-build:
 		-o ${PORTNAME} ${GTK_LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
