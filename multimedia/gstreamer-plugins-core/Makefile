@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-core/Makefile 332647 2013-11-03 20:06:59Z kwm $
+# $FreeBSD: multimedia/gstreamer-plugins-core/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.17 2006/07/17 01:39:57 ahze Exp $
 
 PORTNAME=	gstreamer-plugins-core
