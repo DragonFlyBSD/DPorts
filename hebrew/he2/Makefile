@@ -1,5 +1,5 @@
 # Created by: nadav@libagent.org
-# $FreeBSD: hebrew/he2/Makefile 327734 2013-09-20 18:41:52Z bapt $
+# $FreeBSD: hebrew/he2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	he2
 PORTVERSION=	0.61
