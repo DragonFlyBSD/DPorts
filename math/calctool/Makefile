@@ -1,5 +1,5 @@
 # Created by: nsayer@quack.kfu.com
-# $FreeBSD: math/calctool/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/calctool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	calctool
 PORTVERSION=	2.4.13
