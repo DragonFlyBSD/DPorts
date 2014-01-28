@@ -1,5 +1,5 @@
 # Created by: dbader@ece.unm.edu
-# $FreeBSD: net/mpich2/Makefile 336545 2013-12-15 15:43:22Z wg $
+# $FreeBSD: net/mpich2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mpich2
 DISTVERSION=	1.3.2p1
