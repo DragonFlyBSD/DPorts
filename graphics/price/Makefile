@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: graphics/price/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/price/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	price
 PORTVERSION=	1.1.0
