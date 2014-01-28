@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: cad/kicad/Makefile 336172 2013-12-11 14:53:20Z bapt $
+# $FreeBSD: cad/kicad/Makefile 339847 2014-01-15 22:54:35Z bapt $
 
 PORTNAME=	kicad
 DISTVERSION=	2010-05-05-BZR2356
@@ -54,8 +54,6 @@ BINS=		cvpcb eeschema gerbview kicad pcbnew
 EXTRAS2RM=	linux-non_unicode linux wings3d LINUX.README	\
 		contrib_makefiles.txt running_kicad_under_W98.txt
 
-.include <bsd.port.pre.mk>
-
 .if exists(${LOCALBASE}/bin/konqueror)
 RUN_DEPENDS+=	konqueror:${PORTSDIR}/x11/kdebase3
 .else
@@ -89,4 +87,4 @@ post-install:
 	@${CAT} ${PKGMESSAGE}
 	@${ECHO_MSG}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
