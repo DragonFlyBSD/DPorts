@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: japanese/xpdf/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/xpdf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
