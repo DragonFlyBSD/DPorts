@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/xmms-mailnotify/Makefile 338134 2013-12-30 16:33:20Z arved $
+# $FreeBSD: audio/xmms-mailnotify/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-mailnotify
 PORTVERSION=	0.2.0
