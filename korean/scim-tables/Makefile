@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: korean/scim-tables/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/scim-tables/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/korean/scim-tables/Makefile,v 1.1 2006/09/30 03:44:11 ahze Exp $
 PORTNAME=	scim-tables
 PORTVERSION=	0.5.10
