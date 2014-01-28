@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: editors/emacs21/Makefile 338536 2014-01-03 10:55:40Z ashish $
+# $FreeBSD: editors/emacs21/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	emacs
 PORTVERSION=	21.3
