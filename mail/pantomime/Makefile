@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: mail/pantomime/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pantomime/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pantomime
 PORTVERSION=	1.2.0
