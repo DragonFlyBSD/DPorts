@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD: mail/thunderbird/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	thunderbird
 DISTVERSION=	24.2.0
@@ -25,7 +25,7 @@ L_VERSION=	2.6.4
 
 SSP_UNSAFE=	yes
 USE_AUTOTOOLS=	autoconf213:env
-USE_PYTHON_BUILD=-2.7
+USE_PYTHON_BUILD=2
 OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_GECKO=	gecko
 USE_MOZILLA=	# empty
