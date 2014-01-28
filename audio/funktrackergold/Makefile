@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: audio/funktrackergold/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/funktrackergold/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	funktrackergold
 PORTVERSION=	1.5.2
