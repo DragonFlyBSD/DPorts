@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-toolkits/py-traitsbackendwx/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/enthought/__init__.pyo
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/enthought/traits/ui/__init__.pyc
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%/enthought/traits/ui/__init__.pyo
