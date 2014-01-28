@@ -1,5 +1,5 @@
 # Created by: Jesse Smith <jessefrgsmith@yahoo.ca>
-# $FreeBSD: games/atanks/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/atanks/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	atanks
 PORTVERSION=	5.1
