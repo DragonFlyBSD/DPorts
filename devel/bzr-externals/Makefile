@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-externals/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD: devel/bzr-externals/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-externals
 PORTVERSION=	1.3.3
@@ -20,6 +20,6 @@ WRKSRC=		${WRKDIR}/externals
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
