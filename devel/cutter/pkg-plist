@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/cutter/pkg-plist 307000 2012-11-05 11:38:11Z romain $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h
