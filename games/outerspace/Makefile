@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/outerspace/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/outerspace/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	outerspace
 PORTVERSION=	0.2.2
@@ -12,7 +12,7 @@ COMMENT=	On-line strategy game
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygame/__init__.py:${PORTSDIR}/devel/py-game
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 
 SUB_FILES=	outerspace
