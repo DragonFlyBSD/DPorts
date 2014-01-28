@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-ruby-bugzilla/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-ruby-bugzilla/Makefile 340903 2014-01-24 14:49:29Z miwi $
 
 PORTNAME=	ruby-bugzilla
 PORTVERSION=	0.5.2
@@ -19,5 +19,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/bzconsole
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
