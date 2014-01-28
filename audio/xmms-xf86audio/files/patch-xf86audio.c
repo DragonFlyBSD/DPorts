@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/xmms-xf86audio/files/patch-xf86audio.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/xmms-xf86audio/files/patch-xf86audio.c 340725 2014-01-22 17:40:44Z mat $
 
 --- xf86audio.c.orig
 +++ xf86audio.c
