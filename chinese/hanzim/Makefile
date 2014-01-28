@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: chinese/hanzim/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD: chinese/hanzim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hanzim
 PORTVERSION=	1.3
@@ -24,6 +24,7 @@ ALL_TARGET=	${PORTNAME}
 MAN1=		hanzim.1
 
 NO_STAGE=	yes
+BROKEN_powepc=	Does not install on powerpc: signal 11
 
 .include <bsd.port.options.mk>
 
@@ -41,10 +42,4 @@ do-install:
 .endif
 	${PREFIX}/bin/hanzim -port-install
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "powerpc"
-BROKEN=		Does not install on powerpc: signal 11
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
