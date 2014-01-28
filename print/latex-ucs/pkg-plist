@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/latex-ucs/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/discovermacro.pl
 bin/latexout.pl
 bin/makeunidef.pl
