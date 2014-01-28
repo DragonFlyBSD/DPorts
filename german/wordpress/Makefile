@@ -1,8 +1,8 @@
 # Created by: miwi
-# $FreeBSD: german/wordpress/Makefile 333357 2013-11-09 23:13:24Z sunpoet $
+# $FreeBSD: german/wordpress/Makefile 339750 2014-01-15 04:18:59Z miwi $
 
 PORTNAME=	wordpress
-PORTVERSION=	3.7.1
+PORTVERSION=	3.8
 CATEGORIES=	german www
 MASTER_SITES=	http://de.wordpress.org/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-de_DE
