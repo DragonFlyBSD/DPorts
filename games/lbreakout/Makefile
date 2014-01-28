@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/lbreakout/Makefile 332561 2013-11-02 23:41:51Z danilo $
+# $FreeBSD: games/lbreakout/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lbreakout
 PORTVERSION=	010315
