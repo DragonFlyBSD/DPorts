@@ -1,5 +1,5 @@
 # Created by: Jan Srzednicki <w@wrzask.pl>
-# $FreeBSD: astro/gkrellmoon2/Makefile 338543 2014-01-03 14:49:54Z adamw $
+# $FreeBSD: astro/gkrellmoon2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellmoon2
 PORTVERSION=	0.6
