@@ -1,5 +1,5 @@
 # Created by: olive
-# $FreeBSD: mail/vm/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: mail/vm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vm
 PORTVERSION=	8.1.2
