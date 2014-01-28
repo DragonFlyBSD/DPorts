@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: devel/jcmdline/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/jcmdline/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jcmdline
 PORTVERSION=	2.0.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A Java command line processor
+COMMENT=	Java command line processor
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -21,15 +21,11 @@ PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE}
 DOCFILES=	CHANGES CREDITS README
 PORTDOCS=	*
 
-NO_STAGE=	yes
 do-install:
 	${INSTALL_DATA} ${JARFILE:S|.jar|-${PORTVERSION}.jar|:S|^|${WRKSRC}/|}	\
-		${JAVAJARDIR}/${JARFILE}
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${DOCFILES:S|^|${WRKSRC}/|} ${DOCSDIR}
-	@${CP} -R ${WRKSRC}/doc/* ${DOCSDIR}
-	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
-.endif
+		${STAGEDIR}${JAVAJARDIR}/${JARFILE}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOCFILES:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	${CP} -R ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
