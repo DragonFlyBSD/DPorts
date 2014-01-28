@@ -1,5 +1,5 @@
 # Created by: Bob Bomar <bob@fly.homeunix.org>
-# $FreeBSD: games/eights/Makefile 332342 2013-11-01 03:31:42Z danilo $
+# $FreeBSD: games/eights/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eights
 PORTVERSION=	1.0
