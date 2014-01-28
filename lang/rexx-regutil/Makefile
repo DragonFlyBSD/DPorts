@@ -1,5 +1,5 @@
 # Created by: Bob Eager <bob@eager.cx>
-# $FreeBSD: lang/rexx-regutil/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/rexx-regutil/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	regutil
 PORTVERSION=	1.26
