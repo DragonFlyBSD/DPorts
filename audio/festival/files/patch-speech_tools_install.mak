@@ -1,4 +1,4 @@
-$FreeBSD: audio/festival/files/patch-speech_tools_install.mak 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/festival/files/patch-speech_tools_install.mak 340725 2014-01-22 17:40:44Z mat $
 
 author:  Tod McQuillin
 
