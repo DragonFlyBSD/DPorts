@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/freeciv-sounds/Makefile 332376 2013-11-01 13:53:59Z danilo $
+# $FreeBSD: games/freeciv-sounds/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freeciv
 PORTVERSION=	3
