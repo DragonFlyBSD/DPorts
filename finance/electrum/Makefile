@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD: finance/electrum/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/electrum/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	electrum
 PORTVERSION=	1.7.3
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}slowaes>0:${PORTSDIR}/security/py-slowaes \
 		${PYTHON_PKGNAMEPREFIX}ecdsa>0:${PORTSDIR}/security/py-ecdsa \
 		${PYTHON_PKGNAMEPREFIX}qt4>=4.9:${PORTSDIR}/devel/py-qt4
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=	Electrum
 
