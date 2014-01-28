@@ -1,5 +1,5 @@
 # Created by: znerd@FreeBSD.org
-# $FreeBSD: textproc/xalan-j/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: textproc/xalan-j/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xalan-j
 PORTVERSION=	2.7.1
