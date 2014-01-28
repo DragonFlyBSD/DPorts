@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: devel/ruby-event-loop/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/ruby-event-loop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	event-loop
 PORTVERSION=	0.3
