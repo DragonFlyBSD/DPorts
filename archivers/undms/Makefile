@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/undms/Makefile 328284 2013-09-25 13:16:50Z vanilla $
+# $FreeBSD: archivers/undms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	undms
 PORTVERSION=	1.3
