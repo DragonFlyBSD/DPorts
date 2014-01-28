@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/bugzilla42/Makefile 332097 2013-10-30 12:37:58Z tota $
+# $FreeBSD: japanese/bugzilla42/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.2.7
