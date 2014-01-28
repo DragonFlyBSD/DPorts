@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: math/edenmath/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/edenmath/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	edenmath
 PORTVERSION=	1.1.1
