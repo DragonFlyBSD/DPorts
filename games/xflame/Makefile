@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kkennawa@physics.adelaide.edu.au>
-# $FreeBSD: games/xflame/Makefile 333691 2013-11-13 14:29:06Z danilo $
+# $FreeBSD: games/xflame/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xflame
 PORTVERSION=	1.1.1
