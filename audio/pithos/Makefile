@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@pcbsd.org>
-# $FreeBSD: audio/pithos/Makefile 338506 2014-01-02 22:41:18Z rakuco $
+# $FreeBSD: audio/pithos/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pithos
 PORTVERSION=	0.3.18
@@ -21,7 +21,7 @@ RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
 		${LOCALBASE}/libdata/pkgconfig/notify-python.pc:${PORTSDIR}/devel/py-notify \
 		${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 NO_STAGE=	yes
 USE_GNOME=	pygtk2
 USE_PYDISTUTILS=	easy_install
