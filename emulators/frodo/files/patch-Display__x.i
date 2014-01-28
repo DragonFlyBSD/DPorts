@@ -1,5 +1,5 @@
 
-$FreeBSD: emulators/frodo/files/patch-Display__x.i 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: emulators/frodo/files/patch-Display__x.i 340725 2014-01-22 17:40:44Z mat $
 
 --- Display_x.i.orig	Sat Nov 30 01:11:07 2002
 +++ Display_x.i	Sat Nov 30 01:11:41 2002
