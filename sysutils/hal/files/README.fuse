@@ -1,7 +1,7 @@
 Mounting Fuse File Systems with HAL
 -----------------------------------
 
-$FreeBSD: sysutils/hal/files/README.fuse 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/hal/files/README.fuse 340872 2014-01-24 00:14:07Z mat $
 
 Hal supports mounting Fuse device-backed file systems (e.g. NTFS).  To enable
 this feature, copy the included %%LOCALBASE%%/share/hal/mount-fuse script
