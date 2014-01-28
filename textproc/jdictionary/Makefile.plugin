@@ -1,5 +1,5 @@
 # Created by: hq@FreeBSD.org
-# $FreeBSD: textproc/jdictionary/Makefile.plugin 308606 2012-12-10 13:54:32Z bapt $
+# $FreeBSD: textproc/jdictionary/Makefile.plugin 340722 2014-01-22 17:00:46Z mat $
 
 EXTRACT_SUFX=	#
 
