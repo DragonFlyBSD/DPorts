@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tdb@FreeBSD.org>
-# $FreeBSD: audio/squeezeboxserver-trackstat/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/squeezeboxserver-trackstat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	trackstat
 PORTVERSION=	2.11.3435
