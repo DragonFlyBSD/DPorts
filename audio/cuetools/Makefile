@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: audio/cuetools/Makefile 334781 2013-11-24 19:44:46Z bapt $
+# $FreeBSD: audio/cuetools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cuetools
 PORTVERSION=	1.3.1
