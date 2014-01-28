@@ -1,5 +1,5 @@
 # Created by: Hyogeol Lee <hyogeollee@gmail.com>
-# $FreeBSD: korean/ko.TeX-fonts-extra/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/ko.TeX-fonts-extra/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ko.TeX-fonts-extra
 PORTVERSION=	0.1.0
