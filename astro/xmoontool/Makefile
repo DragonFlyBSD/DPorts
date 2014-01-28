@@ -1,5 +1,5 @@
 # Created by: Frank W. Josellis <frank@dynamical-systems.org>
-# $FreeBSD: astro/xmoontool/Makefile 338543 2014-01-03 14:49:54Z adamw $
+# $FreeBSD: astro/xmoontool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmoontool
 PORTVERSION=	3.0.3
