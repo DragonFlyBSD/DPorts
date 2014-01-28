@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: mail/xcite/Makefile 330174 2013-10-12 18:41:20Z ume $
+# $FreeBSD: mail/xcite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcite
 PORTVERSION=	1.60
