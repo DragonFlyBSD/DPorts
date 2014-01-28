@@ -1,9 +1,8 @@
 # Created by: mat
-# $FreeBSD: lang/perl5.18/Makefile 337195 2013-12-22 16:09:43Z mat $
+# $FreeBSD: lang/perl5.18/Makefile 339451 2014-01-11 20:30:15Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
-PORTREVISION=	6
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	CPAN \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -56,7 +55,7 @@ PERL_MALLOC_CONFIGURE_OFF=	-Dusemymalloc=n
 
 PORTSCOUT=	limitw:1,even
 
-PERL_VERSION=	5.18.1
+PERL_VERSION=	5.18.2
 PERL_VER=	${PERL_VERSION:C/\.[0-9]+$//}
 PERL_ARCH=	mach
 SITE_PERL_REL?=	lib/perl5/site_perl/${PERL_VER}
