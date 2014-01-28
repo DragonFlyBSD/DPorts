@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/qwdtools/Makefile 329800 2013-10-08 15:59:56Z danfe $
+# $FreeBSD: games/qwdtools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qwdtools
 CATEGORIES=	games converters
