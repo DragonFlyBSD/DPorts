@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/libgfx/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libgfx/Makefile 341107 2014-01-25 21:18:33Z bapt $
 
 PORTNAME=	libgfx
 DISTVERSION=	1.1.0
@@ -12,16 +12,16 @@ COMMENT=	OpenGL/FLTK development
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	fltk:${PORTSDIR}/x11-toolkits/fltk \
-		tiff:${PORTSDIR}/graphics/tiff \
-		png15:${PORTSDIR}/graphics/png \
-		gzstream:${PORTSDIR}/devel/gzstream \
-		jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk \
+		libtiff.so:${PORTSDIR}/graphics/tiff \
+		libpng15.so:${PORTSDIR}/graphics/png \
+		libgzstream.so:${PORTSDIR}/devel/gzstream \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 BUILD_WRKSRC=	${WRKSRC}/src
 
+USES=		gmake
 USE_GL=		glu
-USE_GMAKE=	yes
 USE_XORG=	x11 xext xft xinerama
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gzstream --with-libtiff-lzw --with-x
@@ -32,7 +32,6 @@ CFLAGS+=	-fPIC
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^CC /d ; \
@@ -45,8 +44,8 @@ post-patch:
 		'/^FLTK_LIBS/s|"-lfltk"|"`fltk-config --ldflags`"|' ${WRKSRC}/configure
 
 do-install:
-	@(cd ${WRKSRC}/include/gfx && ${COPYTREE_SHARE} . ${PREFIX}/include/gfx)
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME}.so ${PREFIX}/lib
-	@${LN} -sf ${PORTNAME}.so ${PREFIX}/lib/${PORTNAME}.so.0
+	@(cd ${WRKSRC}/include/gfx && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/include/gfx)
+	${INSTALL_LIB} ${WRKSRC}/src/${PORTNAME}.so ${STAGEDIR}${PREFIX}/lib
+	@${LN} -sf ${PORTNAME}.so ${STAGEDIR}${PREFIX}/lib/${PORTNAME}.so.0
 
 .include <bsd.port.mk>
