@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: graphics/freeimage/Makefile 337007 2013-12-20 12:55:36Z gahr $
+# $FreeBSD: graphics/freeimage/Makefile 341353 2014-01-27 09:13:02Z gahr $
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
@@ -38,7 +38,7 @@ CFLAGS+=	-fPIC
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}| ; s|-g root|-g wheel|' \
+	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}| ; s|-o root -g root ||' \
 		${WRKSRC}/Makefile.gnu ${WRKSRC}/Makefile.fip
 
 post-build:
