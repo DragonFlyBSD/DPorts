@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xoids/Makefile 333793 2013-11-14 21:16:47Z danilo $
+# $FreeBSD: games/xoids/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xoids
 PORTVERSION=	1.5
