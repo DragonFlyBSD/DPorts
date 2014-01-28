@@ -1,8 +1,7 @@
-# $FreeBSD: dns/bind96/Makefile 338989 2014-01-07 09:55:06Z erwin $
+# $FreeBSD: dns/bind96/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bind96
-PORTVERSION=	9.6.3.2.ESV.R10
-PORTREVISION=	4
+PORTVERSION=	9.6.3.2.ESV.R10.2
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -14,7 +13,7 @@ COMMENT=	BIND DNS suite with updated DNSSEC and threads
 LICENSE=	ISCL
 
 # ISC releases things like 9.4.0b3, which our versioning doesn't like
-ISCVERSION=	9.6-ESV-R10
+ISCVERSION=	9.6-ESV-R10-P2
 
 MAKE_JOBS_UNSAFE=	yes
 

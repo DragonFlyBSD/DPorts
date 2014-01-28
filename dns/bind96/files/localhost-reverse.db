@@ -1,5 +1,5 @@
 
-; $FreeBSD: dns/bind96/files/localhost-reverse.db 333552 2013-11-12 09:19:19Z erwin $
+; $FreeBSD: dns/bind96/files/localhost-reverse.db 340872 2014-01-24 00:14:07Z mat $
 
 $TTL 3h
 @ SOA localhost. nobody.localhost. 42 1d 12h 1w 3h
