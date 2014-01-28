@@ -1,5 +1,5 @@
 # Created by: Koji Yokota <yokota@res.otaru-uc.ac.jp>
-# $FreeBSD: japanese/platex-japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/platex-japanese/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	japanese
 PORTVERSION=	1.3
