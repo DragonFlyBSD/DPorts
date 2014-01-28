@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/py-imaging/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-imaging/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imaging
 PORTVERSION=	1.1.7
