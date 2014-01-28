@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/delaboratory/Makefile 329778 2013-10-08 12:21:14Z danfe $
+# $FreeBSD: graphics/delaboratory/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	delaboratory
 PORTVERSION=	0.8
