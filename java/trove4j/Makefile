@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: java/trove4j/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/trove4j/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	trove4j
 PORTVERSION=	1.1b5
