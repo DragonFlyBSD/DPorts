@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: astro/planets/Makefile 336362 2013-12-13 17:08:15Z danilo $
+# $FreeBSD: astro/planets/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	planets
 PORTVERSION=	0.1.13
