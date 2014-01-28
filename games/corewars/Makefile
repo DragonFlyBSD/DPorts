@@ -1,4 +1,4 @@
-# $FreeBSD: games/corewars/Makefile 334390 2013-11-20 03:32:49Z danilo $
+# $FreeBSD: games/corewars/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	corewars
 PORTVERSION=	0.9.13
