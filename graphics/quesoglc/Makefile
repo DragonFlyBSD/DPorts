@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/quesoglc/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD: graphics/quesoglc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	quesoglc
 PORTVERSION=	0.7.2
