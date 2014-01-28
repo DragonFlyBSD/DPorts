@@ -1,5 +1,5 @@
 # Created by: Dan Rowe <bsdports@csnstores.com>
-# $FreeBSD: graphics/pecl-gmagick/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/pecl-gmagick/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	gmagick
 PORTVERSION=	1.0.8b1
@@ -21,5 +21,4 @@ IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--with-gmagick=${LOCALBASE}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
