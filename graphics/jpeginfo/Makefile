@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: graphics/jpeginfo/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/jpeginfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jpeginfo
 PORTVERSION=	1.6.1
