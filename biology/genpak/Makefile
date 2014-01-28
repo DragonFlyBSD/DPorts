@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: biology/genpak/Makefile 335949 2013-12-09 01:28:41Z adamw $
+# $FreeBSD: biology/genpak/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	genpak
 PORTVERSION=	0.26
