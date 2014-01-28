@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: deskutils/phpicalendar/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/phpicalendar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phpicalendar
 PORTVERSION=	2.24
