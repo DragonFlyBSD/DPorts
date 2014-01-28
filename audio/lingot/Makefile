@@ -1,5 +1,5 @@
 # Created by: Bartoletti <coder@tuxfamily.org>
-# $FreeBSD: audio/lingot/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/lingot/Makefile 339835 2014-01-15 22:33:28Z bapt $
 
 PORTNAME=	lingot
 PORTVERSION=	0.9.1
@@ -12,7 +12,6 @@ MAINTAINER=	coder@tuxfamily.org
 COMMENT=	LINGOT is a musical instrument tuner
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GNOME=	gtk20 libglade2
 NO_STAGE=	yes
@@ -42,10 +41,8 @@ CONFIGURE_ARGS+=--enable-alsa
 CONFIGURE_ARGS+=--disable-alsa
 .endif
 
-.include <bsd.port.pre.mk>
-
 .if ${OSVERSION} < 802502 || (${OSVERSION} > 900000 && ${OSVERSION} < 900027)
 EXTRA_PATCHES+=	${FILESDIR}/extra-lingot-config-scale.h
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
