@@ -1,5 +1,5 @@
 # Created by: Donn Miller <dmmiller@cvzoom.net>
-# $FreeBSD: graphics/seejpeg/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/seejpeg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	seejpeg
 PORTVERSION=	1.10
