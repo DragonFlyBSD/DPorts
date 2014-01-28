@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/gnustep-ftp/Makefile 329799 2013-10-08 15:47:49Z theraven $
+# $FreeBSD: ftp/gnustep-ftp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ftp
 PORTVERSION=	0.4
