@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <satue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/cwtexttf/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/cwtexttf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cwtexttf
 PORTVERSION=	1.2
