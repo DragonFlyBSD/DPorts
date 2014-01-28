@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/py-gdal/Makefile 334067 2013-11-17 10:27:07Z sunpoet $
+# $FreeBSD: graphics/py-gdal/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gdal
 PORTVERSION=	1.10.1
@@ -21,7 +21,7 @@ NUMPY_DESC=	Enable array support via NumPy
 
 PYEASYINSTALL_ARCHDEP=	yes
 PYDISTUTILS_PKGNAME=	${PORTNAME:tu}
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 WRKSRC=		${WRKDIR}/${DISTNAME}/swig/python
 
