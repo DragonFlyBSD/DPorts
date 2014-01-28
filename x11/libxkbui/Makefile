@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libxkbui/Makefile 330450 2013-10-15 19:49:34Z eadler $
+# $FreeBSD: x11/libxkbui/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libxkbui
 PORTVERSION=	1.0.2
