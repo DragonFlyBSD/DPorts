@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/zephulor/Makefile 335338 2013-11-30 19:30:02Z nemysis $
+# $FreeBSD: games/zephulor/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	zephulor
 PORTVERSION=	1
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYGAME} \
 
 WRKSRC=		${WRKDIR}/zephulor-source
 
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 PORTDOCS=	*
