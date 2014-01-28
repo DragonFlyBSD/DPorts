@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/libsbml/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD: biology/libsbml/Makefile 339844 2014-01-15 22:50:50Z bapt $
 
 PORTNAME=	libsbml
 PORTVERSION=	4.2.0
@@ -24,7 +24,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAKE_JOBS_UNSAFE=	yes
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
@@ -57,4 +56,4 @@ post-install:
 		&& ${FIND} . -type d -exec ${MKDIR} ${EXAMPLESDIR}/\{} \; \
 		&& ${FIND} . -type f -exec ${INSTALL_DATA} \{} ${EXAMPLESDIR}/\{} \;
 .endif
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
