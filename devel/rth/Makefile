@@ -1,5 +1,5 @@
 # Created by: Jan Siml <jsi@jules.de>
-# $FreeBSD: devel/rth/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rth
 PORTVERSION=	1.7.0
