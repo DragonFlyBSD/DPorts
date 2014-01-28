@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11/libsx/Makefile 338759 2014-01-05 12:40:18Z antoine $
+# $FreeBSD: x11/libsx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsx
 PORTVERSION=	1.1
