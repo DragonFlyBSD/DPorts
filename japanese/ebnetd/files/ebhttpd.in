@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: japanese/ebnetd/files/ebhttpd.in 315163 2013-03-24 21:08:06Z tota $
+# $FreeBSD: japanese/ebnetd/files/ebhttpd.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: ebhttpd
