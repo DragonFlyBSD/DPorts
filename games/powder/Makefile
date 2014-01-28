@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/powder/Makefile 337393 2013-12-24 22:36:46Z amdmi3 $
+# $FreeBSD: games/powder/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	powder
 PORTVERSION=	115
