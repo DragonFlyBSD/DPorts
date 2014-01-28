@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: irc/inspircd/files/inspircd.in 319438 2013-05-30 17:48:37Z swills $
+# $FreeBSD: irc/inspircd/files/inspircd.in 339606 2014-01-13 16:13:33Z feld $
 #
 # PROVIDE: inspircd
 # REQUIRE: DAEMON
@@ -47,11 +47,11 @@ inspircd_prestart()
 {
 	piddir=$(dirname ${inspircd_pidfile})
 	if [ ! -d ${piddir} ]; then
-		install -m 755 -o ${inspircd_user} -g ${inspircd_group} ${piddir}
+		install -d -m 755 -o ${inspircd_user} -g ${inspircd_group} ${piddir}
 	fi
 	logdir=$(dirname ${inspircd_logfile})
 	if [ ! -d ${logdir} ]; then
-		install -m 755 -o ${inspircd_user} -g ${inspircd_group} ${logdir}
+		install -d -m 755 -o ${inspircd_user} -g ${inspircd_group} ${logdir}
 	fi
 }
 
