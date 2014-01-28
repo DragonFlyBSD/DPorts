@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro <koma2@jiro.c.u-tokyo.ac.jp>
-# $FreeBSD: japanese/skkinput3/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/skkinput3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	skkinput3
 PORTVERSION=	3.0.6
