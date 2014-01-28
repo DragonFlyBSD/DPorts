@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: mail/svnmailer/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: mail/svnmailer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	svnmailer
 DISTVERSION=	1.1.0-dev-r1373
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}subversion>0:${PORTSDIR}/devel/py-subversi
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_BZIP2=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGVERSION=	${DISTVERSION}
 
