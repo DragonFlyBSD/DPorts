@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/gnurobbo/Makefile 328539 2013-09-28 00:46:09Z amdmi3 $
+# $FreeBSD: games/gnurobbo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnurobbo
 PORTVERSION=	0.66
