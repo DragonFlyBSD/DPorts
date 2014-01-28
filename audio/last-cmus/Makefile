@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/last-cmus/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/last-cmus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	last
 PORTVERSION=	1.0
