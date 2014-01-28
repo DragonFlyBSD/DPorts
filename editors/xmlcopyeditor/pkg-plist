@@ -1,4 +1,3 @@
-@comment $FreeBSD: editors/xmlcopyeditor/pkg-plist 334551 2013-11-22 07:53:52Z gahr $
 bin/xmlcopyeditor
 share/applications/xmlcopyeditor.desktop
 share/pixmaps/xmlcopyeditor.png
