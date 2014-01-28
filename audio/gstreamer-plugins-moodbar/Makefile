@@ -1,5 +1,5 @@
 # Created by: Alexandr Bechikov <goo@t72.ru>
-# $FreeBSD: audio/gstreamer-plugins-moodbar/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/gstreamer-plugins-moodbar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gstreamer-plugins-moodbar
 PORTVERSION=	0.1.2
