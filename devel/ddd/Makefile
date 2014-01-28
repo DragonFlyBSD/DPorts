@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/ddd/Makefile 328032 2013-09-23 19:40:09Z bsam $
+# $FreeBSD: devel/ddd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ddd
 PORTVERSION=	3.3.12
