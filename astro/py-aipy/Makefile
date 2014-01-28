@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-aipy/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: astro/py-aipy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aipy
 PORTVERSION=	1.1.1
