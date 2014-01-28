@@ -1,5 +1,5 @@
 # Created by: brg@dgate.org
-# $FreeBSD: emulators/vmips/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/vmips/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vmips
 PORTVERSION=	1.4.1
