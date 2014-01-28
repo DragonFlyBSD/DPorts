@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/py-apolicy/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: mail/py-apolicy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	apolicy
 PORTVERSION=	0.73
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/spf.py:${PORTSDIR}/mail/py-spf \
 		${PYTHON_SITELIBDIR}/IPy.py:${PORTSDIR}/net-mgmt/py-ipy
 
 USES=		twisted
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 NO_BUILD=	yes
 USE_RC_SUBR=	apolicyd
