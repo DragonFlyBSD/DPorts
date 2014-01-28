@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: mail/biabam/Makefile 338013 2013-12-29 15:46:13Z crees $
+# $FreeBSD: mail/biabam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	biabam
 PORTVERSION=	0.9.7
