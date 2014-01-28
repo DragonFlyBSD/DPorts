@@ -1,5 +1,5 @@
 # Created by: Daniel Eischen <deischen@FreeBSD.org>
-# $FreeBSD: deskutils/plan/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/plan/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # Also update	ports/japanese/plan/ (ja-plan) when this port is updated
 
