@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: print/py-reportlab2/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/py-reportlab2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	reportlab2
 PORTVERSION=	2.5
@@ -26,7 +26,7 @@ CONFLICTS=	py2[0-9]-reportlab-[0-9]*
 
 PFBFER_VERSION=	20070710
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	reportlab
 
