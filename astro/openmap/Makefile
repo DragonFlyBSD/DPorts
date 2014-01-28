@@ -1,4 +1,4 @@
-# $FreeBSD: astro/openmap/Makefile 338543 2014-01-03 14:49:54Z adamw $
+# $FreeBSD: astro/openmap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openmap
 PORTVERSION=	4.6.4
