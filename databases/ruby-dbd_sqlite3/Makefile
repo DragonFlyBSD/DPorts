@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/ruby-dbd_sqlite3/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/ruby-dbd_sqlite3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dbd_sqlite3
 PORTVERSION=	1.2.5
