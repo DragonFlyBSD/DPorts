@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <daniel+mdnsd@pelleg.org>
-# $FreeBSD: dns/mdnsd/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/mdnsd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mdnsd
 PORTVERSION=	0.7G
