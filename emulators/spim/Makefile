@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: emulators/spim/Makefile 331708 2013-10-26 16:06:22Z danilo $
+# $FreeBSD: emulators/spim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spim
 PORTVERSION=	8.0
