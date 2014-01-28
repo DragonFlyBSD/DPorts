@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/flyhard/Makefile 329254 2013-10-04 01:40:00Z amdmi3 $
+# $FreeBSD: games/flyhard/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	flyhard
 PORTVERSION=	0.42
