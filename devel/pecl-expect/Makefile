@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: devel/pecl-expect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-expect/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	expect
 PORTVERSION=	0.2.9
@@ -18,11 +18,9 @@ LICENSE=	PHP301
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
-IGNORE_WITH_PHP=4
 
 CONFIGURE_ARGS+=--with-expect=${LOCALBASE}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 	  's/\(LIBRARY_WITH_PATH(\)expect/\1expect543/' \
