@@ -1,5 +1,5 @@
 # Created by: Marcin Wisnicki <mwisnicki+freebsd@gmail.com>
-# $FreeBSD: games/lucidlife/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/lucidlife/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lucidlife
 PORTVERSION=	0.9.2
