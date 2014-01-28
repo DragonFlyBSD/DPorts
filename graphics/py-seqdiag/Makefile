@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/py-seqdiag/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: graphics/py-seqdiag/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	seqdiag
 PORTVERSION=	0.8.2
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}imaging>=1.1.5:${PORTSDIR}/graphics/py-imaging \
 		${PKGNAMEPREFIX}funcparserlib>=0.3.4:${PORTSDIR}/devel/py-funcparserlib \
 		${PKGNAMEPREFIX}blockdiag>=1.2.4:${PORTSDIR}/graphics/py-blockdiag
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
