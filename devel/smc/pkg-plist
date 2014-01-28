@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/smc/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 include/statemap.h
 include/statemap1.0/pkgIndex.tcl
 include/statemap1.0/statemap.tcl
