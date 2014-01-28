@@ -1,5 +1,5 @@
 # Created by: Hsin-Han You <hhyou@cs.nctu.edu.tw>
-# $FreeBSD: archivers/rubygem-rubyzip2/Makefile 338711 2014-01-05 00:26:40Z bapt $
+# $FreeBSD: archivers/rubygem-rubyzip2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rubyzip2
 PORTVERSION=	2.0.2
