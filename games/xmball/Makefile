@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xmball/Makefile 333722 2013-11-13 20:03:03Z danilo $
+# $FreeBSD: games/xmball/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmball
 PORTVERSION=	5.5.2
