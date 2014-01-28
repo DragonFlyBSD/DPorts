@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/gnome-vfsmm/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gnome-vfsmm/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/devel/gnome-vfsmm/Makefile,v 1.31 2009/03/17 15:22:21 kwm Exp $
 
 PORTNAME=	gnome-vfsmm
