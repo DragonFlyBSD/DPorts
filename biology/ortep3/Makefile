@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: biology/ortep3/Makefile 336770 2013-12-17 21:24:17Z tijl $
+# $FreeBSD: biology/ortep3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ortep3
 PORTVERSION=	1.0.3
