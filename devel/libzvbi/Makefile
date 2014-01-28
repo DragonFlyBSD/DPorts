@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/libzvbi/Makefile 330722 2013-10-18 06:24:04Z oliver $
+# $FreeBSD: devel/libzvbi/Makefile 341342 2014-01-27 08:48:34Z bapt $
 
 PORTNAME=	libzvbi
 PORTVERSION=	0.2.35
@@ -10,19 +10,17 @@ DISTNAME=	${PORTNAME:S/lib//}-${PORTVERSION}
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Routines to access raw VBI capture devices
 
-LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png \
-		unicode.0:${PORTSDIR}/devel/libunicode
+LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png \
+		libunicode.so:${PORTSDIR}/devel/libunicode
 
 USES=		gettext pathfix pkgconfig
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-MAN1=		zvbi-ntsc-cc.1
 
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L/usr/lib"
 CFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#cpu (\([^)]*\))|defined(__\1__)|g' \
 		${WRKSRC}/src/misc.h \
