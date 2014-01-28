@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner (fehlner@gmx.de)
-# $FreeBSD: german/geonext/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD: german/geonext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTREVISION=	1
 CATEGORIES=	german
