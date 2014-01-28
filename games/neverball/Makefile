@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 333163 2013-11-07 23:14:50Z amdmi3 $
+# $FreeBSD: games/neverball/Makefile 339395 2014-01-11 00:50:39Z amdmi3 $
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
@@ -10,6 +10,8 @@ MASTER_SITES=	http://offload1.icculus.org:9090/neverball/ \
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Tilt the floor to guide a ball through an obstacle course
+
+LICENSE=	GPLv2
 
 LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg \
