@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: games/gemrb/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD: games/gemrb/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gemrb
 PORTVERSION=	0.8.0.1
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
 USES=		cmake openal:al,alut
 USE_SDL=	sdl mixer ttf
 USE_LDCONFIG=	yes
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 CFLAGS+=	-L${LOCALBASE}/lib -I${LOCALBASE}/include
 CMAKE_C_FLAGS=	${CFLAGS}
 CMAKE_ARGS=	-DDOC_DIR="${DOCSDIR}" -DMAN_DIR="${MAN6PREFIX}/man/man6/" -DDISABLE_WERROR=1 -DINSOURCEBUILD=1
