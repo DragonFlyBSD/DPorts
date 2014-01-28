@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@FreeBSD.org>
-# $FreeBSD: emulators/x48/Makefile 331480 2013-10-24 12:00:17Z danfe $
+# $FreeBSD: emulators/x48/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	x48
 PORTVERSION=	0.6.4
