@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mhwaveedit/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/mhwaveedit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mhwaveedit
 PORTVERSION=	1.4.22
