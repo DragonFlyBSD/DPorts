@@ -1,4 +1,4 @@
-$FreeBSD: dns/py-namebench/files/patch-libnamebench-util-py 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: dns/py-namebench/files/patch-libnamebench-util-py 340725 2014-01-22 17:40:44Z mat $
 
 Missing comma causes two strings below to be concatenated, making /usr/local/share/namebench and /usr/local/etc/namebench useless. Not great for us!
 
