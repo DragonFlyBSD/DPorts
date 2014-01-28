@@ -1,5 +1,5 @@
 # Created by: Alexander Langer <alex@big.endian.de>
-# $FreeBSD: german/ispell-alt/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: german/ispell-alt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ispell
 CATEGORIES=	german
