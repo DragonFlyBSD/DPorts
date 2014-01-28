@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: devel/gconfmm26/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gconfmm26/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports-stable/devel/gconfmm26/Makefile,v 1.1 2010/06/24 07:51:01 kwm Exp $
 
 PORTNAME=	gconfmm
