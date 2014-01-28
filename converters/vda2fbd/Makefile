@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: converters/vda2fbd/Makefile 338556 2014-01-03 16:12:21Z adamw $
+# $FreeBSD: converters/vda2fbd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vda2fbd
 PORTVERSION=	1.0
