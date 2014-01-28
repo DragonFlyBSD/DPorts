@@ -1,5 +1,5 @@
 # Created by: eivind/dima/jseger
-# $FreeBSD: www/seamonkey/Makefile 336484 2013-12-14 20:45:15Z flo $
+# $FreeBSD: www/seamonkey/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	seamonkey
 DISTVERSION=	2.23
@@ -26,7 +26,7 @@ L_VERSION=	2.8b1
 
 SSP_UNSAFE=	yes
 USE_AUTOTOOLS=	autoconf213:env
-USE_PYTHON_BUILD=-2.7
+USE_PYTHON_BUILD=2
 OBJDIR_BUILD=	# in-tree build broken after bug 789837
 USE_BZIP2=	yes
 USE_GECKO=	gecko
