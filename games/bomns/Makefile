@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/bomns/Makefile 334368 2013-11-20 02:04:55Z danilo $
+# $FreeBSD: games/bomns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bomns
 PORTVERSION=	0.99.2
