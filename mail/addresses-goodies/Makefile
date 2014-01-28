@@ -1,4 +1,4 @@
-# $FreeBSD: mail/addresses-goodies/Makefile 329817 2013-10-08 18:19:42Z theraven $
+# $FreeBSD: mail/addresses-goodies/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	addresses
 PORTVERSION=	0.4.8
