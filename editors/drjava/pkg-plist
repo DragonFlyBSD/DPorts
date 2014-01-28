@@ -1,4 +1,3 @@
-@comment $FreeBSD: editors/drjava/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/drjava
 %%DATADIR%%/%%DRJAVAJAR%%
 @dirrm %%DATADIR%%

@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: editors/drjava/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/drjava/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	drjava
 DISTVERSION=	20100913-r5387
