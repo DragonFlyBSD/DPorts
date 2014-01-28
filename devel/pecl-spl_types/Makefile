@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pecl-spl_types/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/pecl-spl_types/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	spl_types
 PORTVERSION=	0.3.0
@@ -26,5 +26,4 @@ IGNORE_WITH_PHP=5
 CONFIGURE_ARGS=	--enable-spl-types
 CFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
