@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-GraphViz2/Makefile 335473 2013-12-02 09:17:03Z sunpoet $
+# $FreeBSD: graphics/p5-GraphViz2/Makefile 339475 2014-01-12 03:52:28Z sunpoet $
 
 PORTNAME=	GraphViz2
-PORTVERSION=	2.24
+PORTVERSION=	2.25
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RSAVAGE
@@ -42,12 +42,17 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/dot:${PORTSDIR}/graphics/graphviz \
 		p5-XML-Tiny>=2.06:${PORTSDIR}/textproc/p5-XML-Tiny \
 		p5-parent>=0.225:${PORTSDIR}/devel/p5-parent
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Test-Pod>=1.45:${PORTSDIR}/devel/p5-Test-Pod
+TEST_DEPENDS=	p5-Test-Pod>=1.45:${PORTSDIR}/devel/p5-Test-Pod \
+		p5-Test-Version>=0:${PORTSDIR}/devel/p5-Test-Version
 
 OPTIONS_DEFINE=	EXAMPLES
 
 USE_PERL5=	5.14.2+ configure
-USES=		perl5
+USES=		perl5 shebangfix
+
+PORTEXAMPLES=	*
+
+SHEBANG_FILES=	scripts/generate.png.sh scripts/generate.svg.sh scripts/pod2html.sh
 
 .include <bsd.port.options.mk>
 
