@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/gunfudeadlands/Makefile 328589 2013-09-28 15:49:00Z amdmi3 $
+# $FreeBSD: games/gunfudeadlands/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gunfudeadlands
 PORTVERSION=	1.01
