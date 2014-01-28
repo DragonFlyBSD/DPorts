@@ -1,5 +1,5 @@
 # Created by: Daisuke Kawahara <kawahara@pine.kuee.kyoto-u.ac.jp>
-# $FreeBSD: japanese/e2ps/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/e2ps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	e2ps
 PORTVERSION=	4.34
