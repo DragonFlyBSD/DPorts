@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: games/gnustep-ladder/Makefile 333976 2013-11-16 03:20:14Z danilo $
+# $FreeBSD: games/gnustep-ladder/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ladder
 PORTVERSION=	1.0
