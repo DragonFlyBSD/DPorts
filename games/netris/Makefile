@@ -1,5 +1,5 @@
 # Created by: desmo
-# $FreeBSD: games/netris/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/netris/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		netris
 PORTVERSION=		0.52
