@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/vo-amrwbenc/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: audio/vo-amrwbenc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vo-amrwbenc
 PORTVERSION=	0.1.3
