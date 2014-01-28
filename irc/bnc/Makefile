@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: irc/bnc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/bnc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bnc
 PORTVERSION=	2.9.4
