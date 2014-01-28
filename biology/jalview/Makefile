@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/jalview/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/jalview/Makefile 340487 2014-01-20 23:10:10Z bapt $
 
 PORTNAME=	jalview
 PORTVERSION=	2.07
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.jalview.org/source/
 DISTNAME=	${PORTNAME}_${PORTVERSION:S/./_/}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A viewer and editor for multiple sequence alignments
+COMMENT=	Viewer and editor for multiple sequence alignments
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -20,10 +20,9 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 SUB_FILES=	jalview.sh
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/jalview.sh ${PREFIX}/bin/jalview
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/* ${DATADIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/jalview.sh ${STAGEDIR}${PREFIX}/bin/jalview
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/dist/* ${STAGEDIR}${DATADIR}
 
 .include <bsd.port.mk>
