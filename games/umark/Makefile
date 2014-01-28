@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/umark/Makefile 333611 2013-11-12 19:53:01Z danilo $
+# $FreeBSD: games/umark/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	umark
 DISTVERSION=	2.0.0-Beta3
