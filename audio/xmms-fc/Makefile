@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-fc/Makefile 337708 2013-12-27 11:09:35Z bapt $
+# $FreeBSD: audio/xmms-fc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-fc
 PORTVERSION=	0.6
@@ -19,7 +19,6 @@ BUILD_DEPENDS=	xmms-config:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 USE_BZIP2=	yes
-NO_STAGE=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_lib_fc14audiodecoder_fc14dec_new=yes
