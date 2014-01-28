@@ -1,5 +1,5 @@
 # Created by: Brandon S. Allbery KF8NH <allbery@ece.cmu.edu>
-# $FreeBSD: comms/birda/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/birda/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	birda
 PORTVERSION=	1.3
