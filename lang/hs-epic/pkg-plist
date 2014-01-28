@@ -1,4 +1,3 @@
-@comment $FreeBSD: lang/hs-epic/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/evm/closure.h
 lib/evm/libevm.a
 lib/evm/mainprog.c
