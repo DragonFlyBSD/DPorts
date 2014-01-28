@@ -1,5 +1,5 @@
 # Created by: SAITO Itsuro <saito@miv.t.u-tokyo.ac.jp>
-# $FreeBSD: japanese/a2ps/Makefile 331259 2013-10-22 12:28:18Z hrs $
+# $FreeBSD: japanese/a2ps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	a2ps
 PORTVERSION=	1.45
