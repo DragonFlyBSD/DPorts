@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/diameter/Makefile 330800 2013-10-18 23:44:13Z amdmi3 $
+# $FreeBSD: games/diameter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	diameter
 PORTVERSION=	0.4.0.3
