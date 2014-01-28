@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak
-# $FreeBSD: textproc/xerces-j/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xerces-j/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xerces-j
 PORTVERSION=	2.11.0
