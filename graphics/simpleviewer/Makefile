@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/simpleviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/simpleviewer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simpleviewer
 PORTVERSION=	1.7.1553.8560
