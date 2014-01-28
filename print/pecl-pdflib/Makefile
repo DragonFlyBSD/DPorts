@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: print/pecl-pdflib/Makefile 332107 2013-10-30 13:32:02Z ale $
+# $FreeBSD: print/pecl-pdflib/Makefile 341363 2014-01-27 10:07:36Z ale $
 
 PORTNAME=	pdflib
-PORTVERSION=	2.1.10
+PORTVERSION=	3.0.4
 CATEGORIES=	print pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -12,7 +12,9 @@ DIST_SUBDIR=	PECL
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	A PECL extension to create PDF on the fly
 
-LIB_DEPENDS=	pdf.6:${PORTSDIR}/print/pdflib
+LICENSE=	PHP30
+
+LIB_DEPENDS=	libpdf.so:${PORTSDIR}/print/pdflib
 
 USE_PHP=	gd
 USE_PHP_BUILD=	yes
