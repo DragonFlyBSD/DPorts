@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: games/netrek-BRMH-bin/Makefile 334043 2013-11-17 00:57:53Z danilo $
+# $FreeBSD: games/netrek-BRMH-bin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	netrek-BRMH
 PORTVERSION=	2.2.2
