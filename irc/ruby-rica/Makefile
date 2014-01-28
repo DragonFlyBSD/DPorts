@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: irc/ruby-rica/Makefile 334997 2013-11-27 05:58:14Z dinoex $
+# $FreeBSD: irc/ruby-rica/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rica
 PORTVERSION=	0.10
