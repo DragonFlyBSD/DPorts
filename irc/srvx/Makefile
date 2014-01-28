@@ -1,5 +1,5 @@
 # Created by: Walter Venable <weaseal@hotmail.com>
-# $FreeBSD: irc/srvx/Makefile 339277 2014-01-09 21:00:15Z antoine $
+# $FreeBSD: irc/srvx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	srvx
 PORTVERSION=	1.3.1
