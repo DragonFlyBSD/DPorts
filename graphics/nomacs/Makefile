@@ -1,7 +1,8 @@
-# $FreeBSD: graphics/nomacs/Makefile 337207 2013-12-22 18:16:00Z danilo $
+# $FreeBSD: graphics/nomacs/Makefile 341289 2014-01-26 21:20:03Z rakuco $
 
 PORTNAME=	nomacs
 PORTVERSION=	1.6.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/nomacs/nomacs-${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
