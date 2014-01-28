@@ -1,11 +1,11 @@
-# $FreeBSD: devel/rubygem-app_config/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/rubygem-app_config/Makefile 340900 2014-01-24 14:46:28Z miwi $
 
 PORTNAME=	app_config
 PORTVERSION=	2.1.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	A ruby gem for storing application configuration
 
 LICENSE=	MIT
@@ -17,7 +17,6 @@ MONGO_DESC=	mongo backend support
 SQLITE3_DESC=	sqlite3 backend support
 OPTIONSFILE=	${PORT_DBDIR}/rubygem-${PORTNAME}/options
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQLITE3}
