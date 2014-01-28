@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars_Koeller@odie.physik2.uni-rostock.de>
-# $FreeBSD: mail/faces/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/faces/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	faces
 PORTVERSION=	1.7.7
