@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@filez.com>
-# $FreeBSD: archivers/snappy-java/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: archivers/snappy-java/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # Note to committers:
 # With each version update, a new maven repository must be created and distributed
