@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xworm/Makefile 333964 2013-11-16 01:35:38Z danilo $
+# $FreeBSD: games/xworm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xworm
 PORTVERSION=	1.02
