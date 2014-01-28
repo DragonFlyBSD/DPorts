@@ -1,5 +1,5 @@
 # Created by: Tai-hwa Liang <avatar@www.mmlab.cse.yzu.edu.tw>
-# $FreeBSD: chinese/pine4/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD: chinese/pine4/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pine
 PORTVERSION=	4.64
