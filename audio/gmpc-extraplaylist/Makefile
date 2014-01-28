@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-extraplaylist/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/gmpc-extraplaylist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gmpc-extraplaylist
 PORTVERSION=	0.20.0
