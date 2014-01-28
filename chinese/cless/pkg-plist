@@ -1,4 +1,3 @@
-@comment $FreeBSD: chinese/cless/pkg-plist 339152 2014-01-08 15:47:09Z vanilla $
 bin/cless
 bin/clesskey
 man/man1/cless.1.gz

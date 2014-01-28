@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: chinese/cless/Makefile 339152 2014-01-08 15:47:09Z vanilla $
+# $FreeBSD: chinese/cless/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cless
 PORTVERSION=	290
