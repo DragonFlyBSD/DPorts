@@ -1,5 +1,5 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: irc/riece/Makefile 328360 2013-09-26 13:55:26Z wg $
+# $FreeBSD: irc/riece/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	riece
 PORTVERSION=	9.0.0
