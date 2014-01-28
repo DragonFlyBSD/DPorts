@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: converters/libiconv/Makefile 331388 2013-10-23 15:05:04Z uqs $
+# $FreeBSD: converters/libiconv/Makefile 339858 2014-01-15 23:24:19Z bapt $
 
 PORTNAME=	libiconv
 PORTVERSION=	1.14
@@ -49,5 +49,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's:gawk:awk:g' ${WRKSRC}/configure \
 		${WRKSRC}/libcharset/configure \
 		${WRKSRC}/preload/configure
+
 
 .include <bsd.port.mk>
