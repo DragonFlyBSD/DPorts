@@ -1,5 +1,5 @@
 # Created by: Martin Otto
-# $FreeBSD: comms/esmska/Makefile 338555 2014-01-03 16:06:00Z adamw $
+# $FreeBSD: comms/esmska/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	esmska
 PORTVERSION=	0.21
