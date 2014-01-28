@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-wm/compizconfig-python/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/compizconfig.so
 %%PYTHON_SITELIBDIR%%/compizconfig.la
 %%PYTHON_SITELIBDIR%%/compizconfig.a

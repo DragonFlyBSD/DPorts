@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compizconfig-python/Makefile 337382 2013-12-24 20:18:45Z crees $
+# $FreeBSD: x11-wm/compizconfig-python/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	compizconfig-python
 PORTVERSION=	0.8.4
@@ -19,7 +19,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=		pathfix pkgconfig
 USE_GNOME=	glib20
 USE_AUTOTOOLS=	libtool
