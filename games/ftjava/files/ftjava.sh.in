@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/ftjava/files/ftjava.sh.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: games/ftjava/files/ftjava.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 HOME_DIR=${HOME}/.ftjava
 CLASSPATH=".:%%DATADIR%%/FTJava.jar:%%DATADIR%%/xerces.jar:%%DATADIR%%/activation.jar:%%DATADIR%%/mail.jar"
