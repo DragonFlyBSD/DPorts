@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: deskutils/treeline/Makefile 328415 2013-09-26 21:24:49Z pawel $
+# $FreeBSD: deskutils/treeline/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	treeline
 PORTVERSION=	1.4.1
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}qt4-gui>=0:${PORTSDIR}/x11-toolkits/py-qt4-g
 
 WRKSRC=		${WRKDIR}/TreeLine
 USE_QT4=	# empty
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 DESKTOP_ENTRIES=	"TreeLine" "Structured information storage program" \
