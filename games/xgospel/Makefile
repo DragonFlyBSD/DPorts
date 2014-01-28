@@ -1,5 +1,5 @@
 # Created by: Shao Zhang <shaoz@asia.com>
-# $FreeBSD: games/xgospel/Makefile 333695 2013-11-13 14:57:33Z danilo $
+# $FreeBSD: games/xgospel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xgospel
 PORTVERSION=	1.12d
