@@ -1,12 +1,12 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: graphics/gpicview/Makefile 335509 2013-12-02 16:39:13Z naddy $
+# $FreeBSD: graphics/gpicview/Makefile 340324 2014-01-19 16:37:42Z marino $
 
 PORTNAME=	gpicview
 PORTVERSION=	0.2.4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/lxde/GPicView%20%28image%20Viewer%29/GpicView%20${PORTVERSION}/
 
-MAINTAINER=	jmohacsi@bsd.hu
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple and fast image viewer for X11
 
 LICENSE=	GPLv2
