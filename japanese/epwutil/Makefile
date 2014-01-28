@@ -1,5 +1,5 @@
 # Created by: Kazutoki TAKAMUNE <takamune@avrl.mei.co.jp>
-# $FreeBSD: japanese/epwutil/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/epwutil/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	epwutil
 PORTVERSION=	1.1
