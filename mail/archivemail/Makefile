@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: mail/archivemail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/archivemail/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	archivemail
 PORTVERSION=	0.9.0
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Archive or delete mail older than N days
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 
 MAN1=		archivemail.1
