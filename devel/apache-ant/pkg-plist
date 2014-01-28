@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/apache-ant/pkg-plist 339172 2014-01-08 20:39:22Z jkim $
 bin/ant
 man/man1/ant.1.gz
 man/man5/build.xml.5.gz
