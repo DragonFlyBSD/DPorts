@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@FreeBSD.org>
-# $FreeBSD: textproc/ocaml-pxp/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ocaml-pxp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pxp
 PORTVERSION=	1.2.4
