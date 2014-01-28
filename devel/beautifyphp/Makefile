@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/beautifyphp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/beautifyphp/Makefile 341398 2014-01-27 13:13:59Z bapt $
 
 PORTNAME=	beautifyphp
 PORTVERSION=	0.5.0
@@ -19,16 +19,15 @@ PLIST_FILES=	bin/beautify_php share/${PORTNAME}/beautify_php.php \
 		share/pear/beautify_php.class.inc
 PLIST_DIRS=	share/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's,/usr/bin/php,${LOCALBASE}/bin/php,g' ${WRKSRC}/beautify_php
 	@${FIND} ${WRKSRC} -name "*.bak" -or -name "*.orig" -delete
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/beautify_php ${PREFIX}/bin
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/beautify_php.php ${DATADIR}
-	@${MKDIR} ${PREFIX}/share/pear
-	${INSTALL_DATA} ${WRKSRC}/beautify_php.class.inc ${PREFIX}/share/pear
+	${INSTALL_SCRIPT} ${WRKSRC}/beautify_php ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/beautify_php.php ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/pear
+	${INSTALL_DATA} ${WRKSRC}/beautify_php.class.inc ${STAGEDIR}${PREFIX}/share/pear
 
 .include <bsd.port.mk>
