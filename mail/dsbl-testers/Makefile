@@ -1,5 +1,5 @@
 # Created by: Dean Hollister <dean@odyssey.apana.org.au>
-# $FreeBSD: mail/dsbl-testers/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/dsbl-testers/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dsbl-testers
 PORTVERSION=	0.9.5
