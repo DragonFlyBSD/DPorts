@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/dmachine/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/dmachine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dmachine
 PORTVERSION=	0.24
