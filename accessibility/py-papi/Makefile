@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen
-# $FreeBSD: accessibility/py-papi/Makefile 328664 2013-09-29 10:25:56Z mva $
+# $FreeBSD: accessibility/py-papi/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	papi
 PORTVERSION=	0.0.9
@@ -12,7 +12,7 @@ COMMENT=	ATK accessibility wrapper for python
 
 USES=		pkgconfig
 USE_GNOME=	atk
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 
