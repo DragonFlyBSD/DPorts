@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-forecast/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD: math/R-cran-forecast/Makefile 340482 2014-01-20 21:35:05Z tota $
 
 PORTNAME=	forecast
-PORTVERSION=	4.8
-PORTREVISION=	2
+PORTVERSION=	5.0
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
@@ -18,7 +17,8 @@ RUN_DEPENDS=	R-cran-tseries>0:${PORTSDIR}/finance/R-cran-tseries \
 		R-cran-zoo>0:${PORTSDIR}/math/R-cran-zoo \
 		R-cran-Rcpp>=0.9.10:${PORTSDIR}/devel/R-cran-Rcpp \
 		R-cran-RcppArmadillo>=0.2.35:${PORTSDIR}/math/R-cran-RcppArmadillo \
-		R-cran-colorspace>0:${PORTSDIR}/graphics/R-cran-colorspace
+		R-cran-colorspace>0:${PORTSDIR}/graphics/R-cran-colorspace \
+		R-cran-timeDate>0:${PORTSDIR}/finance/R-cran-timeDate
 
 USES=	cran:auto-plist
 
