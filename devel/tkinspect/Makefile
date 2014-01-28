@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: devel/tkinspect/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/tkinspect/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tkinspect
 PORTVERSION=	5.1.6p10
