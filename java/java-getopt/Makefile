@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: java/java-getopt/Makefile 333560 2013-11-12 10:36:16Z bapt $
+# $FreeBSD: java/java-getopt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	java-getopt
 PORTVERSION=	1.0.14
