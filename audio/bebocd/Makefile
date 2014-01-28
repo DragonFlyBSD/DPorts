@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/bebocd/Makefile 339110 2014-01-08 12:10:20Z novel $
+# $FreeBSD: audio/bebocd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bebocd
 PORTVERSION=	0.4
