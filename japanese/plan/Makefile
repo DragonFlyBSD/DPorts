@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: japanese/plan/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/plan/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plan
 PORTVERSION=	1.9
