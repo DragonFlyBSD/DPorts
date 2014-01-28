@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/pythonsudoku/Makefile 335286 2013-11-30 12:08:15Z nemysis $
+# $FreeBSD: games/pythonsudoku/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pythonsudoku
 PORTVERSION=	0.13
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${PYGAME} \
 USE_BZIP2=	yes
 USES=		desktop-file-utils
 USE_GNOME=	pygtk2
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 INSTALLS_ICONS=	yes
 
