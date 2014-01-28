@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/blockrage/Makefile 328204 2013-09-24 22:20:49Z nemysis $
+# $FreeBSD: games/blockrage/Makefile 339345 2014-01-10 12:13:56Z nemysis $
 
 PORTNAME=	blockrage
 PORTVERSION=	0.2.3
@@ -18,7 +18,6 @@ LICENSE=	GPLv2
 USE_SDL=	sdl image mixer
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PORTNAME}
-MAN6=		${PORTNAME}.6
 
 PORTDOCS=	ChangeLog KNOWN_BUGS README TODO
 
@@ -27,43 +26,39 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96
 
 SUB_FILES=	${PORTNAME}
 
-DESKTOP_ENTRIES="Block Rage" "${COMMENT}" ${PORTNAME} \
-		"${PORTNAME}" "Game;ArcadeGame;" false
+DESKTOP_ENTRIES="Block Rage" "" "${PORTNAME}" \
+		"${PORTNAME}" "Game;ArcadeGame;" ""
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} \
-	-e 's|prefix=/usr/local|prefix=${PREFIX}|' \
-	-e 's|MYCC=gcc|MYCC?=${CC}|' \
-	-e 's|-s -O2 -Wall||' \
-	-e 's|sdl-config|$(SDL_CONFIG)|' \
-	-e 's|MAKE=make|MAKE=${MAKE}|' \
+	-e 's|prefix=/usr/local|prefix=${PREFIX}| ; \
+	s|MYCC=gcc|MYCC?=${CC}| ; \
+	s|-s -O2 -Wall|| ; \
+	s|sdl-config|$(SDL_CONFIG)| ; \
+	s|MAKE=make|MAKE=${MAKE}|' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|gcc -s|${CC}|' \
 		${WRKSRC}/src/Makefile.in
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 .for d in data blockrage-fhs.rc blockrage.cfg blockrage.rc
-	@(cd ${WRKSRC} && ${COPYTREE_SHARE} ${d} ${DATADIR})
+	@(cd ${WRKSRC} && ${COPYTREE_SHARE} ${d} ${STAGEDIR}${DATADIR})
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${DATADIR}
 
 .for s in ${ICON_SIZES}
-	@${MKDIR} ${PREFIX}/share/icons/hicolor/${s}/apps/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}/apps/
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}_${s}.png \
-		${PREFIX}/share/icons/hicolor/${s}/apps/${PORTNAME}.png
+		${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}/apps/${PORTNAME}.png
 .endfor
-	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png ${PREFIX}/share/pixmaps/
-	${INSTALL_MAN} ${WRKSRC}/${MAN6} ${MAN6PREFIX}/man/man6/
+	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${MAN6PREFIX}/man/man6/
 
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

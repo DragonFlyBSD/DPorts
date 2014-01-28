@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/blockrage/files/blockrage.in 314185 2013-03-14 21:08:06Z beech $
+# $FreeBSD: games/blockrage/files/blockrage.in 339345 2014-01-10 12:13:56Z nemysis $
 #
 
 cd "%%DATADIR%%"
-exec ./blockrage
+exec ./blockrage "${@}"
