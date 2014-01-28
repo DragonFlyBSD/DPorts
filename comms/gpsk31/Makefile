@@ -1,5 +1,5 @@
 # Created by: Søren Straarup <xride@x12.dk>
-# $FreeBSD: comms/gpsk31/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/gpsk31/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gpsk31
 PORTVERSION=	0.3
