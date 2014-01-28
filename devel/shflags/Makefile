@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@FreeBSD.org>
-# $FreeBSD: devel/shflags/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/shflags/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shflags
 PORTVERSION=	1.0.3
