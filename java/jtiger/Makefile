@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: java/jtiger/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jtiger/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jtiger
 PORTVERSION=	2.1.0376
