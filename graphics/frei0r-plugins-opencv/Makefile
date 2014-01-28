@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/frei0r-plugins-opencv/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/frei0r-plugins-opencv/Makefile 340722 2014-01-22 17:00:46Z mat $
 MASTERDIR=	${.CURDIR}/../frei0r
 
 BUILDING_FREI0R_OPENCV=	yes
