@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/tkmoo/Makefile 333476 2013-11-11 03:10:27Z danilo $
+# $FreeBSD: games/tkmoo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tkmoo
 PORTVERSION=	0.3.32
