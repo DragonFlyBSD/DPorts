@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/mkgmap-splitter/Makefile 328582 2013-09-28 15:32:24Z amdmi3 $
+# $FreeBSD: astro/mkgmap-splitter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	splitter
 PORTVERSION=	r310
