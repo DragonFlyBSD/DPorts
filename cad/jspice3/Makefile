@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: cad/jspice3/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/jspice3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jspice3
 PORTVERSION=	2.5.011109
