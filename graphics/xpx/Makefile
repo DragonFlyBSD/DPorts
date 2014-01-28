@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: graphics/xpx/Makefile 337768 2013-12-27 17:49:07Z bapt $
+# $FreeBSD: graphics/xpx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpx
 PORTVERSION=	1.41
