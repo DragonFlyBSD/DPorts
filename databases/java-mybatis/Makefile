@@ -1,5 +1,5 @@
 # Created by: glewis
-# $FreeBSD: databases/java-mybatis/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: databases/java-mybatis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mybatis
 PORTVERSION=	3.0.3
