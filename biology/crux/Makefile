@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: biology/crux/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD: biology/crux/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	crux
 PORTVERSION=	1.2.0
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-python=${PYTHON_CMD} --disable-mpi
 USE_CSTD=	gnu99
 USE_GMAKE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 OPTIONS_DEFINE=	SYS_LINALG
 SYS_LINALG_DESC=	Enable system ATLAS/LAPACK
