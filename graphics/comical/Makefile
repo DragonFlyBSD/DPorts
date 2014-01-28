@@ -1,5 +1,5 @@
 # Created by: John McAree <john@mcaree.org>
-# $FreeBSD: graphics/comical/Makefile 335432 2013-12-01 18:44:46Z dinoex $
+# $FreeBSD: graphics/comical/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	comical
 PORTVERSION=	0.8
