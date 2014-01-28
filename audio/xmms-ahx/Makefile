@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-ahx/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD: audio/xmms-ahx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-ahx
 PORTVERSION=	0.6
