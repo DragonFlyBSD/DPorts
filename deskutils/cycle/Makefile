@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/cycle/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: deskutils/cycle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cycle
 PORTVERSION=	0.3.1
