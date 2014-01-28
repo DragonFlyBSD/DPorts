@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/duel/Makefile 332343 2013-11-01 03:49:06Z danilo $
+# $FreeBSD: games/duel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	duel
 PORTVERSION=	0.98
