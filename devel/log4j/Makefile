@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: devel/log4j/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/log4j/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	log4j
 PORTVERSION=	1.2.16
