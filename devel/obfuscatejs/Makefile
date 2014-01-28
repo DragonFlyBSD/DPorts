@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: devel/obfuscatejs/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/obfuscatejs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	obfuscatejs
 PORTVERSION=	0.3.6
