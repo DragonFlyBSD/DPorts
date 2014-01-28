@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykdeuic4/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/py-pykdeuic4/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pykdeuic4
 PORTVERSION=	${KDE4_VERSION}
@@ -14,7 +14,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Enhanced version of pyuic4
 
 USE_KDE4=	kdelibs automoc4 pykde4
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 DISTINFO_FILE=	${PORTSDIR}/devel/py-pykde4/distinfo
