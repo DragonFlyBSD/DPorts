@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/hex/Makefile 332447 2013-11-02 03:35:24Z danilo $
+# $FreeBSD: games/hex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hex
 PORTVERSION=	0.0.2
