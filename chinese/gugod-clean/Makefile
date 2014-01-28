@@ -1,5 +1,5 @@
 # Created by: Kang-min Liu <gugod@gugod.org>
-# $FreeBSD: chinese/gugod-clean/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/gugod-clean/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gugod-clean
 PORTVERSION=	1.3
