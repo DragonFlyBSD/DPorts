@@ -1,4 +1,3 @@
-@comment $FreeBSD: databases/powerarchitect/pkg-plist 300962 2012-07-16 17:41:53Z jgh $
 bin/powerarchitect
 %%DATADIR%%/architect.jar
 %%DATADIR%%/jdbc/sqlserver_2005.jar
