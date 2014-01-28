@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/py-ode/Makefile 330702 2013-10-18 00:00:44Z amdmi3 $
+# $FreeBSD: devel/py-ode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ode
 PORTVERSION=	1.2.0
