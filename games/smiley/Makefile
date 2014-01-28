@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: games/smiley/Makefile 333463 2013-11-11 00:56:27Z danilo $
+# $FreeBSD: games/smiley/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	smiley
 PORTVERSION=	4.0
