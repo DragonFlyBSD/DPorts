@@ -1,4 +1,4 @@
-# $FreeBSD: audio/jokosher/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/jokosher/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jokosher
 PORTVERSION=	0.11.5
@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>0:${PORTSDIR}/devel/py-xdg
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 NO_STAGE=	yes
 USE_PYDISTUTILS=yes
 USE_GNOME=	gnomehier
