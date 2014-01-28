@@ -1,5 +1,5 @@
 # Created by: jpbeconne
-# $FreeBSD: java/servingxml/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: java/servingxml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	servingxml
 PORTVERSION=	1.1.2
