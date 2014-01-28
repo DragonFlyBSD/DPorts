@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: x11/p5-Clipboard/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/p5-Clipboard/Makefile 339414 2014-01-11 10:03:45Z vanilla $
 
 PORTNAME=	Clipboard
 PORTVERSION=	0.13
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	clipaccumulate.1 clipbrowse.1 clipedit.1 clipfilter.1 clipjoin.1
-MAN3=	Clipboard.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
