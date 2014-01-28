@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/exiftags/Makefile 330811 2013-10-19 00:22:43Z bapt $
+# $FreeBSD: graphics/exiftags/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	exiftags
 PORTVERSION=	1.01
