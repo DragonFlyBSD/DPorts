@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/charva/Makefile 333560 2013-11-12 10:36:16Z bapt $
+# $FreeBSD: devel/charva/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	charva
 PORTVERSION=	1.1.4
