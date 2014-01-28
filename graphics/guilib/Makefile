@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/guilib/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: graphics/guilib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	guilib
 PORTVERSION=	1.2.1
