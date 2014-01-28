@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/qtweetlib/pkg-plist 313552 2013-03-06 22:54:15Z nivit $
 include/QTweetLib/oauth.h
 include/QTweetLib/oauthtwitter.h
 include/QTweetLib/qtweetaccountratelimitstatus.h
