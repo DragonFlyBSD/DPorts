@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-ingo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/horde-ingo/Makefile 341402 2014-01-27 13:30:28Z miwi $
 
 PORTNAME=	ingo
 PORTVERSION=	3.1.3
@@ -33,7 +33,6 @@ USE_HORDE_RUN=	Horde_Role \
 RUN_DEPENDS+=	${PEARDIR}/Net/Sieve.php:${PORTSDIR}/net/pear-Net_Sieve \
 		${PEARDIR}/Net/Socket.php:${PORTSDIR}/net/pear-Net_Socket
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
