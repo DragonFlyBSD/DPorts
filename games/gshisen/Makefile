@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/gshisen/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gshisen/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gshisen
 PORTVERSION=	1.3.0
