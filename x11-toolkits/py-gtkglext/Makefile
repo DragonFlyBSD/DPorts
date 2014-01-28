@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/py-gtkglext/Makefile 338111 2013-12-30 13:21:49Z wg $
+# $FreeBSD: x11-toolkits/py-gtkglext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.1.0
