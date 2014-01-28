@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: cad/scotch/Makefile 338552 2014-01-03 15:53:42Z adamw $
+# $FreeBSD: cad/scotch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scotch
 DISTVERSION=	5.1.12b_esmumps
