@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: devel/remake/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/remake/Makefile 341317 2014-01-27 00:12:40Z bapt $
 
 PORTNAME=	remake
 PORTVERSION=	0.9
@@ -13,8 +13,6 @@ COMMENT=	Fork of gmake with debugger
 
 GNU_CONFIGURE=	yes
 USES=		gettext
-MAN1=		remake.1
 INFO=		remake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
