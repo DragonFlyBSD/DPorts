@@ -1,5 +1,5 @@
 # Created by: Sean McLaughlin <sigma.zx@gmail.com>
-# $FreeBSD: devel/z80asm/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/z80asm/Makefile 340948 2014-01-24 23:42:35Z bapt $
 
 PORTNAME=	z80asm
 PORTVERSION=	1.8
@@ -10,27 +10,24 @@ MASTER_SITES=	http://nongnu.mirror.ironie.org/releases/${PORTNAME}/ \
 MAINTAINER=	sigma.zx@gmail.com
 COMMENT=	Assembler for the Z80 microprocessor
 
-USE_GMAKE=	yes
-MAN1=		z80asm.1
+OPTIONS_DEFINE=	EXAMPLES
 
-NO_STAGE=	yes
+USES=		gmake
+
 post-patch:
 	@${REINPLACE_CMD} -e 's#/bin/bash#/bin/sh#' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/z80asm.1 ${PREFIX}/man/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/z80asm ${PREFIX}/bin
-
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/examples/hello.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/examples/macro.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/examples/seek.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx-bios.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx2+-bios.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx2-bios.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx2-subrom.asm ${EXAMPLESDIR}
-	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msxturbor-bios.asm ${EXAMPLESDIR}
-.endif
+	${INSTALL_MAN} ${WRKSRC}/z80asm.1 ${STAGEDIR}${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/z80asm ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/examples/hello.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/examples/macro.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/examples/seek.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx-bios.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx2+-bios.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx2-bios.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msx2-subrom.asm ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} -m 444 ${WRKSRC}/headers/msxturbor-bios.asm ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
