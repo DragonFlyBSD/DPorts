@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: irc/irc/Makefile 338008 2013-12-29 15:19:29Z johans $
+# $FreeBSD: irc/irc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	irc
 PORTVERSION=	2.11.2p3
