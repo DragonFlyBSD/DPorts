@@ -1,5 +1,5 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD: net/samba4/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
@@ -67,7 +67,7 @@ CONFIGURE_LOG=		bin/config.log
 CONFIGURE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 			PTHREAD_LDFLAGS="${PTHREAD_LIBS}"
 
-USE_PYTHON_BUILD=	-2.7
+USE_PYTHON_BUILD=	2
 
 USE_PYTHON=		yes
 USES=			compiler perl5 pkgconfig iconv
