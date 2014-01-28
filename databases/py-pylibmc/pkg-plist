@@ -1,4 +1,3 @@
-@comment $FreeBSD: databases/py-pylibmc/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/_pylibmc.so
 %%PYTHON_SITELIBDIR%%/pylibmc/__init__.py
 %%PYTHON_SITELIBDIR%%/pylibmc/__init__.pyc
