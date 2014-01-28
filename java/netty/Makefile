@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: java/netty/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: java/netty/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	netty
 PORTVERSION=	3.5.5
