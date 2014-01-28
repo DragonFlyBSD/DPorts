@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xdeblock/Makefile 331682 2013-10-26 12:46:37Z wg $
+# $FreeBSD: games/xdeblock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xdeblock
 PORTVERSION=	1.0
