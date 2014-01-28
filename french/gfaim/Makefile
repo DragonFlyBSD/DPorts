@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: french/gfaim/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD: french/gfaim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gfaim
 PORTVERSION=	0.30
