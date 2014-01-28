@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@saper.info>
-# $FreeBSD: deskutils/x026/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/x026/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	x026
 PORTVERSION=	1.2
