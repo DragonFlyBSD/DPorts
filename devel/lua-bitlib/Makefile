@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/lua-bitlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/lua-bitlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bitlib
 PORTVERSION=	24
@@ -8,19 +8,19 @@ MASTER_SITES=	http://luaforge.net/frs/download.php/2715/
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	rafan@FreeBSD.org
-COMMENT=	A tiny library for bitwise operations
+COMMENT=	Tiny library for bitwise operations
 
-USE_LUA=	5.0+
+USES=		lua
 
 PLIST_FILES=	%%LUA_MODLIBDIR%%/bit.so
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
 		${CC} -fPIC -shared -o bit.so lbitlib.c \
-		${LUA_LIBDIR}/liblua.a -I${LUA_INCDIR} -lm
+		-I${LUA_INCDIR} -lm
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/bit.so ${LUA_MODLIBDIR}
+	@${MKDIR}  ${STAGEDIR}${LUA_MODLIBDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bit.so ${STAGEDIR}${LUA_MODLIBDIR}
 
 .include <bsd.port.mk>
