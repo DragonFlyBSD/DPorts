@@ -1,5 +1,5 @@
 # Created by: gmarco@giovannelli.it
-# $FreeBSD: games/pmars/Makefile 332796 2013-11-05 00:50:18Z danilo $
+# $FreeBSD: games/pmars/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pmars
 PORTVERSION=	0.9.2
