@@ -1,5 +1,5 @@
 # Created by: Dan Peck <peckdani@msu.edu>
-# $FreeBSD: graphics/bbrb/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/bbrb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bbrb
 PORTVERSION=	0.4.1
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A graphical background manager for the Blackbox window manager
+COMMENT=	Graphical background manager for the Blackbox window manager
 
 RUN_DEPENDS=	xv:${PORTSDIR}/graphics/xv \
 		blackbox:${PORTSDIR}/x11-wm/blackbox
@@ -16,5 +16,4 @@ RUN_DEPENDS=	xv:${PORTSDIR}/graphics/xv \
 USE_GNOME=	imlib
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
