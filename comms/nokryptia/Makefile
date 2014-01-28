@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@fafula.com>
-# $FreeBSD: comms/nokryptia/Makefile 336997 2013-12-20 11:53:44Z antoine $
+# $FreeBSD: comms/nokryptia/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nokryptia
 PORTVERSION=	1.3
