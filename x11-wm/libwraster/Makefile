@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/libwraster/Makefile 335453 2013-12-02 07:16:31Z hrs $
+# $FreeBSD: x11-wm/libwraster/Makefile 340342 2014-01-19 19:08:01Z bapt $
 
 PORTNAME=	libwraster
 PORTVERSION=	0.95.5
@@ -33,8 +33,6 @@ CONFIGURE_ARGS=	--with-pixmapdir=${PREFIX}/include/X11/pixmaps \
 		--with-x
 CPPFLAGS+=	-DPREFIX=\\\"${PREFIX}\\\" -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-MAN1=		get-wraster-flags.1
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} config-paths.h
