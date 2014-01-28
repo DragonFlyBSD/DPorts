@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: graphics/libggi/Makefile 329385 2013-10-04 20:51:45Z antoine $
+# $FreeBSD: graphics/libggi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libggi
 PORTVERSION=	2.2.2
