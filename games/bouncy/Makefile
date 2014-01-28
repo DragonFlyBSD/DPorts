@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/bouncy/Makefile 334963 2013-11-26 18:44:26Z nemysis $
+# $FreeBSD: games/bouncy/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	bouncy
 PORTVERSION=	r6
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYGAME} \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-post-${DISTVERSION}
 
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 
 PORTDOCS=	README.txt
 
