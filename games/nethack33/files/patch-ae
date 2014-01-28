@@ -1,4 +1,4 @@
-$FreeBSD: games/nethack33/files/patch-ae 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: games/nethack33/files/patch-ae 340725 2014-01-22 17:40:44Z mat $
 
 --- sys/unix/Makefile.top.orig	Mon Jul  3 18:42:05 2000
 +++ sys/unix/Makefile.top	Mon Apr 19 14:42:45 2004
