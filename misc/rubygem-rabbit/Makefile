@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: misc/rubygem-rabbit/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/rubygem-rabbit/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	rabbit
 PORTVERSION=	2.1.1
@@ -34,7 +34,6 @@ PLIST_FILES=	bin/rabbit bin/rabbirc bin/rabbit-command bin/rabbit-slide \
 OPTIONS_DEFINE=	MIMETEX
 MIMETEX_DESC=	Run with mimetex
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMIMETEX}
