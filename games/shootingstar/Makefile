@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/shootingstar/Makefile 330839 2013-10-19 02:58:40Z amdmi3 $
+# $FreeBSD: games/shootingstar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shootingstar
 PORTVERSION=	1.2.0
