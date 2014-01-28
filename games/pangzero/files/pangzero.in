@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/pangzero/files/pangzero.in 330550 2013-10-16 21:50:40Z nemysis $
+# $FreeBSD: games/pangzero/files/pangzero.in 339725 2014-01-14 21:47:09Z nemysis $
 #
 
 cd "%%DATADIR%%"/bin
-exec /usr/bin/env perl ./pangzero "${@}"
+exec %%PERL%% ./pangzero "${@}"
