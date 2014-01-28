@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/libcanberra-gtk3/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/libcanberra-gtk3/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.8 2011/03/16 10:24:48 kwm Exp $
 
 PORTREVISION=	1
