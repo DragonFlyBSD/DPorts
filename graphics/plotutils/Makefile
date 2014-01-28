@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@FreeBSD.org>
-# $FreeBSD: graphics/plotutils/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/plotutils/Makefile 341300 2014-01-26 22:54:53Z stephen $
 
 PORTNAME=	plotutils
 PORTVERSION=	2.6
@@ -21,7 +21,6 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		ode.1 plot.1 plotfont.1 spline.1 tek2plot.1
 INFO=		libxmi plotutils
 
 test: build
@@ -30,5 +29,4 @@ test: build
 
 regression-test: test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
