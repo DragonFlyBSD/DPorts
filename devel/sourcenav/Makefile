@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: devel/sourcenav/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sourcenav/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sourcenav
 PORTVERSION=	4.4
