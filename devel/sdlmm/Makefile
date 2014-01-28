@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/sdlmm/Makefile 337240 2013-12-23 13:58:24Z amdmi3 $
+# $FreeBSD: devel/sdlmm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sdlmm
 PORTVERSION=	0.1.8
