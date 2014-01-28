@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: java/jasmin/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: java/jasmin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jasmin
 PORTVERSION=	2.4
