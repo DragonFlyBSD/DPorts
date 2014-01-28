@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/aubio/Makefile 337898 2013-12-28 20:21:11Z antoine $
+# $FreeBSD: audio/aubio/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aubio
 PORTVERSION=	0.3.2
