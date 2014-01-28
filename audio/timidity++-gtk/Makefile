@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@msc.biglobe.ne.jp>
-# $FreeBSD: audio/timidity++-gtk/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/timidity++-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-gtk
 
