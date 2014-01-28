@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/cake/Makefile 334146 2013-11-18 06:00:29Z danfe $
+# $FreeBSD: games/cake/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cake
 PORTVERSION=	2005.12.26
