@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: emulators/mupen64plus-core/Makefile 329344 2013-10-04 17:18:44Z acm $
+# $FreeBSD: emulators/mupen64plus-core/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mupen64plus
 PORTVERSION?=	2.0
