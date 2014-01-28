@@ -1,5 +1,5 @@
 # Created by: Søren Straarup <xride@x12.dk>
-# $FreeBSD: comms/xnecview/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD: comms/xnecview/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xnecview
 PORTVERSION=	1.36
