@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: finance/wmstock/Makefile 339024 2014-01-07 19:48:56Z antoine $
+# $FreeBSD: finance/wmstock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmstock
 PORTVERSION=	0.11
