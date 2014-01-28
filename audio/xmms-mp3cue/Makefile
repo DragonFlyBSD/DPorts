@@ -1,5 +1,5 @@
 # Created by: Vaidas Zlotkus <r2@music.lt>
-# $FreeBSD: audio/xmms-mp3cue/Makefile 337708 2013-12-27 11:09:35Z bapt $
+# $FreeBSD: audio/xmms-mp3cue/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-mp3cue
 PORTVERSION=	0.94
@@ -15,12 +15,12 @@ LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
 GNU_CONFIGURE=	yes
 USES=		gmake
-NO_STAGE=	yes
 
 PLIST_SUB=	PORTDOCS=${DISTNAME}
 
 CFLAGS_x86_64=	-fPIC
 CFLAGS_ia64=	-fPIC
+MAKE_ARGS+=	CC="${CXX}"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/*.c
