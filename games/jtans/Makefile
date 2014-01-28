@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/jtans/Makefile 332487 2013-11-02 14:23:50Z danilo $
+# $FreeBSD: games/jtans/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jtans
 PORTVERSION=	1.0
