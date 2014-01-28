@@ -1,5 +1,5 @@
 # Created by: Frank Gruender
-# $FreeBSD: lang/yabasic/Makefile 330596 2013-10-17 02:06:19Z eadler $
+# $FreeBSD: lang/yabasic/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yabasic
 PORTVERSION=	2.763
