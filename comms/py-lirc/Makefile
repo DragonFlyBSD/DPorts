@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson (purple@lewiz.net)
-# $FreeBSD: comms/py-lirc/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD: comms/py-lirc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lirc
 PORTVERSION=	0.0.5
