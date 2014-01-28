@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: databases/py-dbutils/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/py-dbutils/Makefile 340853 2014-01-23 20:07:31Z mva $
 
 PORTNAME=	dbutils
 PORTVERSION=	1.1
@@ -13,9 +13,8 @@ DISTNAME=	DBUtils-${PORTVERSION}
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Providing solid, persistent, and pooled connections to a database
 
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=easy_install
-PYDISTUTILS_PKGNAME=	DBUtils
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
