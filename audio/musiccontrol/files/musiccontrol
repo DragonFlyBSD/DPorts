@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: audio/musiccontrol/files/musiccontrol 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: audio/musiccontrol/files/musiccontrol 340851 2014-01-23 19:55:14Z mat $
 
 "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/MusicControl-0.3.jar" "$*"
