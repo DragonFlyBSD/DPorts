@@ -1,5 +1,5 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD: devel/php5-dav/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/php5-dav/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dav
 PORTVERSION=	1.2
