@@ -1,5 +1,5 @@
 # Created by: Manuel Creach <manuel.creach@icloud.com>
-# $FreeBSD: audio/libshairport/Makefile 338662 2014-01-04 18:18:55Z bapt $
+# $FreeBSD: audio/libshairport/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libshairport
 PORTVERSION=	1.2.0.20310
