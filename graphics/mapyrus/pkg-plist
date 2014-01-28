@@ -1,4 +1,3 @@
-@comment $FreeBSD: graphics/mapyrus/pkg-plist 320836 2013-06-13 20:18:12Z nivit $
 bin/mapyrus
 %%PORTDOCS%%%%DOCSDIR%%/mapyrus.pdf
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/aust_cities.dat
