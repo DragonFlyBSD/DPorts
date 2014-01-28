@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/geda-examples/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: cad/geda-examples/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	examples
 PORTVERSION=	1.4.3
