@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/rasmol/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/rasmol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rasmol
 PORTVERSION=	2.7.2.1.1
