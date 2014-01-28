@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: games/bugsx/Makefile 332076 2013-10-30 06:17:46Z danilo $
+# $FreeBSD: games/bugsx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bugsx
 PORTVERSION=	1.08
