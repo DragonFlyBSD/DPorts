@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/xpi-displayquota/Makefile 327810 2013-09-21 12:12:51Z flo $
+# $FreeBSD: mail/xpi-displayquota/Makefile 341201 2014-01-26 15:08:31Z miwi $
 
 PORTNAME=	displayquota
 PORTVERSION=	0.3.6
@@ -20,6 +20,5 @@ XPI_DIRS=	defaults/preferences \
 		defaults \
 		chrome
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../www/xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
