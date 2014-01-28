@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/starfighter/Makefile 336529 2013-12-15 13:28:38Z mva $
+# $FreeBSD: games/starfighter/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	starfighter
 PORTVERSION=	1.2
@@ -18,7 +18,7 @@ COMMENT=	Liberate the universe from the evil company WEAPCO
 LICENSE=	GPLv2
 
 USES=		gmake iconv shebangfix
-USE_PYTHON_BUILD=	-2.7
+USE_PYTHON_BUILD=	2
 USE_XORG=	x11 xau xdmcp
 USE_SDL=	image mixer
 WITH_ZLIB=	yes
