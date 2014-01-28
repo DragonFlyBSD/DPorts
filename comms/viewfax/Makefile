@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: comms/viewfax/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/viewfax/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	viewfax
 PORTVERSION=	2.6
