@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <jsutton@bbcon.com.au>
-# $FreeBSD: games/oonsoo/Makefile 332785 2013-11-04 21:15:12Z danilo $
+# $FreeBSD: games/oonsoo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	oonsoo
 PORTVERSION=	1.2
