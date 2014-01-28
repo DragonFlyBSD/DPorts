@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: mail/squirrelmail-plugins/Makefile 335906 2013-12-08 16:01:01Z adamw $
+# $FreeBSD: mail/squirrelmail-plugins/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		squirrelmail-plugins
 PORTVERSION=	1.0
