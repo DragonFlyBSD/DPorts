@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/redis-devel/files/redis.in 301021 2012-07-17 18:23:25Z osa $
+# $FreeBSD: databases/redis-devel/files/redis.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: redis
