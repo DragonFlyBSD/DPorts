@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: audio/pavumeter/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/pavumeter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pavumeter
 PORTVERSION=	0.9.3
