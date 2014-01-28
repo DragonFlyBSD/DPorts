@@ -1,4 +1,4 @@
-# $FreeBSD: games/xtrojka/Makefile 333085 2013-11-07 12:45:47Z bdrewery $
+# $FreeBSD: games/xtrojka/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtrojka
 PORTVERSION=	1.2.3
