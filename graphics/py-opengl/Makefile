@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@ipass.net>
-# $FreeBSD: graphics/py-opengl/Makefile 337763 2013-12-27 17:37:52Z wg $
+# $FreeBSD: graphics/py-opengl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	opengl
 PORTVERSION=	3.0.1
