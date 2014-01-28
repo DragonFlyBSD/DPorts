@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Term-Menus/Makefile 338632 2014-01-04 08:33:06Z culot $
+# $FreeBSD: devel/p5-Term-Menus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Term-Menus
 PORTVERSION=	2.54
