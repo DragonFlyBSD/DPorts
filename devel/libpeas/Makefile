@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/libpeas/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libpeas/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/trunk/devel/libpeas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libpeas
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		valac:${PORTSDIR}/lang/vala
 
 USE_XZ=		yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USES=		pathfix gettext gmake pkgconfig
