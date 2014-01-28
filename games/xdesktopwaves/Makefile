@@ -1,5 +1,5 @@
 # Created by: ericyu@mail2000.com.tw
-# $FreeBSD: games/xdesktopwaves/Makefile 333646 2013-11-13 02:31:18Z danilo $
+# $FreeBSD: games/xdesktopwaves/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xdesktopwaves
 PORTVERSION=	1.3
