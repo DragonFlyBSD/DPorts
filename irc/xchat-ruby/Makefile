@@ -1,4 +1,4 @@
-# $FreeBSD: irc/xchat-ruby/Makefile 335216 2013-11-29 19:55:29Z dinoex $
+# $FreeBSD: irc/xchat-ruby/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ruby
 PORTVERSION=	1.2
