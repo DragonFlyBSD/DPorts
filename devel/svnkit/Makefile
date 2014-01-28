@@ -1,5 +1,5 @@
 # Created by: tux@pinguru.net
-# $FreeBSD: devel/svnkit/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/svnkit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	svnkit
 PORTVERSION=	1.3.0
