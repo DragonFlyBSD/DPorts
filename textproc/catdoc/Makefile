@@ -1,5 +1,5 @@
 # Created by: Brion Moss <brion@queeg.com>
-# $FreeBSD: textproc/catdoc/Makefile 332123 2013-10-30 14:58:58Z amdmi3 $
+# $FreeBSD: textproc/catdoc/Makefile 339590 2014-01-13 11:58:14Z gahr $
 
 PORTNAME=	catdoc
 PORTVERSION=	0.94.2
@@ -33,7 +33,7 @@ CFLAGS+=	-DLATIN1=1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWORDVIEW}
-USE_TK=			84+
+USES+=			tk
 .include "${PORTSDIR}/Mk/bsd.tcl.mk"
 CONFIGURE_ARGS+=	--with-wish=${WISH}
 .else
