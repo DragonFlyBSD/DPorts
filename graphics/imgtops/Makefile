@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: graphics/imgtops/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/imgtops/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imgtops
 PORTVERSION=	1.0
@@ -13,7 +13,7 @@ COMMENT=	Create efficient Encapsulated Postscript files from images
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/PIL.pth:${PORTSDIR}/graphics/py-imaging
 
 USE_GHOSTSCRIPT_RUN=	yes
-USE_PYTHON=		2.2+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
 MAN1=		imgtops.1 epstoimg.1
