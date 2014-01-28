@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: games/d2x/Makefile 332338 2013-11-01 02:50:40Z danilo $
+# $FreeBSD: games/d2x/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	d2x
 PORTVERSION=	0.2.5
