@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: graphics/icoconvert/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/icoconvert/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	icoconvert
 PORTVERSION=	2.0
