@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: mail/opensmtpd/Makefile 335834 2013-12-07 17:14:12Z ashish $
+# $FreeBSD: mail/opensmtpd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	opensmtpd
 PORTVERSION=	5.4.1
