@@ -1,5 +1,5 @@
 # Created by: nordwick@xcf.berkeley.edu
-# $FreeBSD: java/java-cup/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/java-cup/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cup
 PORTVERSION=	11.a
