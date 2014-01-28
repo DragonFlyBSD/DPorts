@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: games/freedink-engine/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/freedink-engine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freedink
 PORTVERSION=	1.08.${PORTVER}
