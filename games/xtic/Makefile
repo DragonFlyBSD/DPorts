@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xtic/Makefile 333957 2013-11-16 01:15:11Z danilo $
+# $FreeBSD: games/xtic/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtic
 PORTVERSION=	1.12
