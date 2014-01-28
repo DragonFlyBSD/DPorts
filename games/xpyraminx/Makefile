@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xpyraminx/Makefile 333806 2013-11-14 23:25:31Z danilo $
+# $FreeBSD: games/xpyraminx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpyraminx
 PORTVERSION=	5.5.2
