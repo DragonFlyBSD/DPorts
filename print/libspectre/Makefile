@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/libspectre/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/libspectre/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/print/libspectre/Makefile,v 1.7 2010/04/19 15:38:43 kwm Exp $
 
 PORTNAME=	libspectre
