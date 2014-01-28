@@ -1,4 +1,3 @@
-@comment $FreeBSD: ftp/wzdftpd/pkg-plist 316874 2013-04-30 03:15:37Z miwi $
 bin/siteconfig
 bin/siteuptime
 bin/sitewho
