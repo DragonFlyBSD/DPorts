@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/pycount/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: devel/pycount/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pycount
 PORTVERSION=	0.0.6
