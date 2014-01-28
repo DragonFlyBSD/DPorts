@@ -1,5 +1,5 @@
 # Created by: Philippe Lefebvre <nemesis@balistik.net>
-# $FreeBSD: editors/nano/Makefile 328634 2013-09-29 00:03:14Z eadler $
+# $FreeBSD: editors/nano/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nano
 PORTVERSION=	2.2.6
