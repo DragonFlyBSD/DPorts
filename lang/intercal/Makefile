@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: lang/intercal/Makefile 338023 2013-12-29 16:19:57Z johans $
+# $FreeBSD: lang/intercal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	intercal
 PORTVERSION=	0.29
