@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: audio/nas/Makefile 330806 2013-10-19 00:01:10Z bapt $
+# $FreeBSD: audio/nas/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nas
 PORTVERSION=	1.9.4
