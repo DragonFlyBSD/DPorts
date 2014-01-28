@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: audio/gkrellmms2/Makefile 330177 2013-10-12 19:05:09Z ume $
+# $FreeBSD: audio/gkrellmms2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellmms
 PORTVERSION=	2.1.22
