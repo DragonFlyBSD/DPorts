@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: games/apoolGL/Makefile 332030 2013-10-30 02:19:57Z danilo $
+# $FreeBSD: games/apoolGL/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	apoolGL
 PORTVERSION=	0.99.22
