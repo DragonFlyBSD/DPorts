@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xtruco/Makefile 333960 2013-11-16 01:21:57Z danilo $
+# $FreeBSD: games/xtruco/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtruco
 PORTVERSION=	1.0
