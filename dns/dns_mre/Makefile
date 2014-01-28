@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: dns/dns_mre/Makefile 334878 2013-11-25 18:17:16Z mat $
+# $FreeBSD: dns/dns_mre/Makefile 339521 2014-01-12 16:40:58Z mat $
 
 PORTNAME=	dns_mre
 PORTVERSION=	1.0
@@ -8,7 +8,7 @@ CATEGORIES=	dns security
 MASTER_SITES=	http://www.securebits.org/tools/
 DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
-MAINTAINER=	perl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DNS Cache Poisoner/Overwriter
 
 NO_WRKSUBDIR=	Yes
