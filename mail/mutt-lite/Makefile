@@ -1,5 +1,5 @@
 # Created by: Udo Schweigert <udo.schweigert@siemens.com>
-# $FreeBSD: mail/mutt-lite/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mutt-lite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # Just to get a mutt-devel-lite pkg on pkg cluster
 MASTERDIR=	${.CURDIR}/../mutt
