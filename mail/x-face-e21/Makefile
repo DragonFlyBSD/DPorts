@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: mail/x-face-e21/Makefile 330175 2013-10-12 18:46:32Z ume $
+# $FreeBSD: mail/x-face-e21/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	x-face-e21
 PORTVERSION=	20070306
