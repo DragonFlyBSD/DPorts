@@ -1,4 +1,3 @@
-@comment $FreeBSD: games/gtypist/pkg-plist 328828 2013-09-30 16:16:06Z naddy $
 bin/gtypist
 bin/typefortune
 man/man1/gtypist.1.gz
