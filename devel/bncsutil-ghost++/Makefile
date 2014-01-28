@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: devel/bncsutil-ghost++/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD: devel/bncsutil-ghost++/Makefile 341406 2014-01-27 13:37:57Z bapt $
 
 PORTNAME=	bncsutil
 PORTVERSION=	1.3.2
@@ -19,8 +19,8 @@ PROJECTVERSION=	17.1
 
 USES=		dos2unix gmake
 WRKSRC=		${WRKDIR}/ghost/bncsutil/src/bncsutil
+MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
