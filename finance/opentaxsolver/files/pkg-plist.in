@@ -1,4 +1,3 @@
-@comment $FreeBSD: finance/opentaxsolver/files/pkg-plist.in 320722 2013-06-12 19:42:46Z rakuco $
 %%X11%%bin/ots_gui
 bin/taxsolve_CA_540_%%TAXYEAR%%
 bin/taxsolve_MA_1_%%TAXYEAR%%
