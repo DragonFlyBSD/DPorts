@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: devel/fnorb/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: devel/fnorb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Fnorb
 PORTVERSION=	1.3
