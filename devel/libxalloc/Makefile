@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/libxalloc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libxalloc/Makefile 341343 2014-01-27 08:52:10Z bapt $
 
 PORTNAME=	libxalloc
 PORTVERSION=	1.0.4
@@ -8,20 +8,19 @@ MASTER_SITES=	http://shh.thathost.com/pub-unix/files/
 DISTNAME=	xalloc-${PORTVERSION}
 
 MAINTAINER=	rodrigo@bebik.net
-COMMENT=	A memory allocation library with error checking
+COMMENT=	Memory allocation library with error checking
+
+OPTIONS_DEFINE=	DOCS
+
+USES=		uidfix
 
 MAKEFILE=	${FILESDIR}/Makefile.lib
 USE_LDCONFIG=	yes
 MAKE_ENV=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/CREDITS ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
