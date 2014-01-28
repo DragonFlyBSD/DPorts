@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/xwpick/Makefile 337770 2013-12-27 18:06:09Z bapt $
+# $FreeBSD: graphics/xwpick/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xwpick
 PORTVERSION=	2.20
