@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: graphics/xdgagrab/Makefile 339289 2014-01-09 21:42:19Z antoine $
+# $FreeBSD: graphics/xdgagrab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xdgagrab
 PORTVERSION=	0.3
