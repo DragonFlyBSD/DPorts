@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: mail/postfix-policyd-sf/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/postfix-policyd-sf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	policyd
 PORTVERSION=	1.82
