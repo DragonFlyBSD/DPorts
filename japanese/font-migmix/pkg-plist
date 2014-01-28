@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/font-migmix/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%DATADIR%%/migmix-1m-bold.ttf
 %%DATADIR%%/migmix-1m-regular.ttf
 %%DATADIR%%/migmix-1p-bold.ttf
