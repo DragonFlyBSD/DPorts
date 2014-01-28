@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: math/jeuclid/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/jeuclid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jeuclid
 PORTVERSION=	3.1.9
