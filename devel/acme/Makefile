@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/acme/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/acme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	acme
 PORTVERSION=	091
@@ -34,29 +34,19 @@ PLIST_DIRSTRY=	%%DATADIR%%/6502 \
 		%%DATADIR%%/Own \
 		%%DATADIR%%
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/acme ${PREFIX}/bin
-
+	${INSTALL_PROGRAM} ${WRKSRC}/src/acme ${STAGEDIR}${PREFIX}/bin
 .for dir in 6502 65816 Own
-	@${MKDIR} ${DATADIR}/${dir}
+	@${MKDIR} ${STAGEDIR}${DATADIR}/${dir}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/ACME_Lib/6502/* ${DATADIR}/6502
-	${INSTALL_DATA} ${WRKSRC}/ACME_Lib/65816/* ${DATADIR}/65816
-	${INSTALL_DATA} ${WRKSRC}/ACME_Lib/Own/* ${DATADIR}/Own
-
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/ReadMe.txt ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}
-.endif
-
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}/me
-	${INSTALL_DATA} ${WRKSRC}/examples/*.a ${EXAMPLESDIR}/
-	${INSTALL_DATA} ${WRKSRC}/examples/me/*.a ${EXAMPLESDIR}/me/
-.endif
+	${INSTALL_DATA} ${WRKSRC}/ACME_Lib/6502/* ${STAGEDIR}${DATADIR}/6502
+	${INSTALL_DATA} ${WRKSRC}/ACME_Lib/65816/* ${STAGEDIR}${DATADIR}/65816
+	${INSTALL_DATA} ${WRKSRC}/ACME_Lib/Own/* ${STAGEDIR}${DATADIR}/Own
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/ReadMe.txt ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/me
+	${INSTALL_DATA} ${WRKSRC}/examples/*.a ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/examples/me/*.a ${STAGEDIR}${EXAMPLESDIR}/me/
 
 .include <bsd.port.mk>
