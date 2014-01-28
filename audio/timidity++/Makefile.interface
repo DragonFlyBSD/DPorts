@@ -1,4 +1,4 @@
-#$FreeBSD: audio/timidity++/Makefile.interface 322579 2013-07-09 21:20:28Z bapt $
+#$FreeBSD: audio/timidity++/Makefile.interface 340722 2014-01-22 17:00:46Z mat $
 
 # Shared by timidity++ interface ports
 
