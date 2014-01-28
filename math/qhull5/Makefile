@@ -1,5 +1,5 @@
 # Created by: pusto@web.de
-# $FreeBSD: math/qhull5/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: math/qhull5/Makefile 341309 2014-01-26 23:32:24Z stephen $
 
 PORTNAME=	qhull
 PORTVERSION=	1.0
@@ -23,11 +23,6 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-.if !defined(NOPORTDOCS)
-MAN1=		qhull.1 rbox.1
-.endif
-
-NO_STAGE=	yes
 pre-configure:
 .if defined(NOPORTDOCS)
 	@${REINPLACE_CMD} -e "s|src html eg config|src config|"		\
