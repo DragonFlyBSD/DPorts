@@ -1,5 +1,5 @@
 # Created by: Devaux Fabien <fab@gcu.info>
-# $FreeBSD: graphics/jpegoptim/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
+# $FreeBSD: graphics/jpegoptim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jpegoptim
 PORTVERSION=	1.3.0
