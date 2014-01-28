@@ -4,7 +4,7 @@
 
 XCOMM Imakefile src for Yamsweeper, created by hirofumi
 XCOMM
-XCOMM $FreeBSD: games/yamsweeper/files/Imakefile 300896 2012-07-14 13:54:48Z beat $
+XCOMM $FreeBSD: games/yamsweeper/files/Imakefile 340872 2014-01-24 00:14:07Z mat $
 XCOMM
 
 #include "REVISION"
