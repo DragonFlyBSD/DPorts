@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/jid3lib/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/jid3lib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jid3lib
 PORTVERSION=	0.5.4
@@ -11,17 +11,14 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java ID3 Tag Library
 
 USE_JAVA=	yes
-NO_STAGE=	yes
 JAVA_VERSION=	1.6+
 USE_ANT=	yes
 
 PLIST_FILES=	%%JAVAJARDIR%%/jid3lib.jar
 
 do-install:
-	@${ECHO_MSG} -n ">> Installing JAR as ${JAVAJARDIR}/jid3lib.jar..."
-	@${MKDIR} ${JAVAJARDIR}
-	@${INSTALL_DATA} ${WRKSRC}/dist/jid3lib-${PORTVERSION}.jar \
-	${JAVAJARDIR}/jid3lib.jar
-	@${ECHO_MSG} " [ DONE ]"
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKSRC}/dist/jid3lib-${PORTVERSION}.jar \
+		${STAGEDIR}${JAVAJARDIR}/jid3lib.jar
 
 .include <bsd.port.mk>
