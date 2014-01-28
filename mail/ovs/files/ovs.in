@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/ovs/files/ovs.in 302142 2012-08-06 00:28:43Z dougb $
+# $FreeBSD: mail/ovs/files/ovs.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: ovs
 # REQUIRE: DAEMON
