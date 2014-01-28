@@ -3,7 +3,7 @@
 # Checks if the '%%USER%%' user and '%%GROUP%%' group exist. If they don't, then
 # an attempt is made to create both.
 #
-# $FreeBSD: www/tomcat6/files/pkg-install.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/tomcat6/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 # Make sure we're called during the 'make install' process
