@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: devel/adime/Makefile 330460 2013-10-15 21:17:55Z eadler $
+# $FreeBSD: devel/adime/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	adime
 PORTVERSION=	2.2.1
