@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xvinfo/Makefile 328643 2013-09-29 03:12:30Z eadler $
+# $FreeBSD: x11/xvinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xvinfo
 PORTVERSION=	1.1.2
