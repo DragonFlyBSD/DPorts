@@ -1,5 +1,5 @@
 # Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-# $FreeBSD: astro/osmosis/Makefile 330590 2013-10-17 01:19:58Z amdmi3 $
+# $FreeBSD: astro/osmosis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	osmosis
 PORTVERSION=	0.43.1
