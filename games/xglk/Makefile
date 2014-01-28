@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: games/xglk/Makefile 333693 2013-11-13 14:36:22Z danilo $
+# $FreeBSD: games/xglk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xglk
 PORTVERSION=	411
