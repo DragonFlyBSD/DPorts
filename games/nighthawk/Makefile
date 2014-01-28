@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/nighthawk/Makefile 334950 2013-11-26 15:51:21Z wg $
+# $FreeBSD: games/nighthawk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nighthawk
 PORTVERSION=	3.0.0
