@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xpr/Makefile 333478 2013-11-11 04:21:03Z eadler $
+# $FreeBSD: x11/xpr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpr
 PORTVERSION=	1.0.4
