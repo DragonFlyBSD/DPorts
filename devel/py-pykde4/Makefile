@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: devel/py-pykde4/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pykde4
 PORTVERSION=	${KDE4_VERSION}
@@ -29,7 +29,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 
 USE_KDE4=	kdehier kdelibs kdeprefix okular pimlibs \
 		akonadi automoc4 soprano
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	corelib dbus designer_build gui network xml \
 		qmake_build moc_build uic_build rcc_build
 USE_XZ=		yes
