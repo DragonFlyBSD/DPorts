@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/apache-solr/pkg-plist 334839 2013-11-25 11:33:59Z sunpoet $
 %%JAVAJARDIR%%/solr-%%PORTVERSION%%.war
 %%JAVAJARDIR%%/solr-analysis-extras-%%PORTVERSION%%.jar
 %%JAVAJARDIR%%/solr-cell-%%PORTVERSION%%.jar

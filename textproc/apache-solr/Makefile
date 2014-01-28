@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/apache-solr/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: textproc/apache-solr/Makefile 341120 2014-01-25 22:03:15Z mat $
 
 PORTNAME=	apache-solr
 PORTVERSION=	4.6.0
@@ -16,6 +16,8 @@ LICENSE=	APACHE20
 
 CONFLICT=	apache-solr-3.6.*
 
+USES=	shebangfix
+SHEBANG_FILES=	example/etc/create-solrtest.keystore.sh
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
@@ -23,14 +25,9 @@ USE_JAVA=	yes
 PORTEXAMPLES=	*
 LATEST_LINK=	apache-solr
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-	cd ${WRKSRC}/dist && ${COPYTREE_SHARE} \* ${JAVAJARDIR}
-.if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}
-	cd ${WRKSRC}/example && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}
-.endif
+	cd ${WRKSRC}/dist && ${COPYTREE_SHARE} . ${STAGEDIR}${JAVAJARDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
