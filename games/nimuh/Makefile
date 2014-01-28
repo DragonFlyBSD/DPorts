@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/nimuh/Makefile 330807 2013-10-19 00:03:12Z amdmi3 $
+# $FreeBSD: games/nimuh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nimuh
 PORTVERSION=	1.02
