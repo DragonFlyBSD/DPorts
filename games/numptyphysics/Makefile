@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/numptyphysics/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/numptyphysics/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	numptyphysics
 DISTVERSION=	0.3.r20090104
