@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-# $FreeBSD: print/xdvik/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/xdvik/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xdvik
 PORTVERSION=	22.84.16
