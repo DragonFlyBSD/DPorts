@@ -1,5 +1,5 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: irc/bip/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/bip/Makefile 339964 2014-01-16 19:00:09Z tabthorpe $
 
 PORTNAME=	bip
 PORTVERSION=	0.8.8
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	https://projects.duckcorp.org/attachments/download/39/
 
-MAINTAINER=	sylvio@FreeBSD.org
+MAINTAINER=	swills@FreeBSD.org
 COMMENT=	A simple IRC proxy with SSL support
 
 LICENSE=	GPLv2
