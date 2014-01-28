@@ -1,5 +1,5 @@
 # Created by: HOTARU-YA <hotaru@tail.net>
-# $FreeBSD: games/oneko-sakura/Makefile 330278 2013-10-14 07:23:08Z bapt $
+# $FreeBSD: games/oneko-sakura/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	oneko
 PORTVERSION=	1.2
