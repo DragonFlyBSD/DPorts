@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/neXtaw/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/neXtaw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	neXtaw
 PORTVERSION=	0.15.1
