@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: www/bluefish/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/bluefish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bluefish
 PORTVERSION=	2.2.3
