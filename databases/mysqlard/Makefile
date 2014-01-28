@@ -1,5 +1,5 @@
 # Created by: Greg Albrecht <gregoryba@gmail.com>
-# $FreeBSD: databases/mysqlard/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/mysqlard/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mysqlard
 PORTVERSION=	1.0.0
