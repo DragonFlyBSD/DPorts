@@ -1,5 +1,5 @@
 # Created by: mm
-# $FreeBSD: multimedia/libquicktime-lame/Makefile 327750 2013-09-20 21:49:30Z mm $
+# $FreeBSD: multimedia/libquicktime-lame/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libquicktime
 PORTREVISION=	3
