@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/tt/Makefile 333543 2013-11-12 02:50:23Z danilo $
+# $FreeBSD: games/tt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tt
 PORTVERSION=	15.1
