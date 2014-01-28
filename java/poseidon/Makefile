@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: java/poseidon/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/poseidon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	poseidon
 PORTVERSION=	6.0.2
