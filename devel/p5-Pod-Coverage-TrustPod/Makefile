@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-Pod-Coverage-TrustPod/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD: devel/p5-Pod-Coverage-TrustPod/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Pod-Coverage-TrustPod
 PORTVERSION=	0.100002
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RJBS
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Declare trusted symbol names in POD
 
 LICENSE=	ART10 GPLv1
