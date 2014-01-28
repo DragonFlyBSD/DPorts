@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: arabic/khotot/Makefile 328292 2013-09-25 13:57:30Z vanilla $
+# $FreeBSD: arabic/khotot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	khotot
 PORTVERSION=	1.0
