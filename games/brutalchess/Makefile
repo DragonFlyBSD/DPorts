@@ -1,5 +1,5 @@
 # Created by: Gustavo Perez Querol <gustau.perez@gmail.com>
-# $FreeBSD: games/brutalchess/Makefile 328996 2013-10-01 21:13:17Z marino $
+# $FreeBSD: games/brutalchess/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		brutalchess
 PORTVERSION=		0.5.2
