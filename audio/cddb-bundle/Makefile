@@ -1,4 +1,4 @@
-# $FreeBSD: audio/cddb-bundle/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/cddb-bundle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cddb
 PORTVERSION=	0.2
