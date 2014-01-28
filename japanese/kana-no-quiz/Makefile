@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: japanese/kana-no-quiz/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: japanese/kana-no-quiz/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	kana-no-quiz
 DISTVERSION=	1.9
@@ -21,7 +21,7 @@ RM_FILES=	CHANGES.txt FAL.txt  GPL.txt
 RM_OPTS=	-f
 
 USES=		gettext
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
 PYDISTUTILS_PKGNAME=	Kana-no-quiz
