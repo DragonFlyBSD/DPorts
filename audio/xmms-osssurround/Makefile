@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: audio/xmms-osssurround/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-osssurround/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-osssurround
 PORTVERSION=	0.1

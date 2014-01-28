@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/xmms-osssurround/files/patch-OSSSurround-0.1_configure.c 300895 2012-07-14 12:56:14Z beat $
+$FreeBSD: audio/xmms-osssurround/files/patch-OSSSurround-0.1_configure.c 340725 2014-01-22 17:40:44Z mat $
 
 --- OSSSurround-0.1/configure.c.orig	Sun Jan  6 14:36:17 2002
 +++ OSSSurround-0.1/configure.c	Thu Aug  1 19:10:21 2002
