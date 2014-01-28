@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: japanese/ptex/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/ptex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ptex
 PORTVERSION=	3.1.10
