@@ -1,5 +1,5 @@
 # Created by: Masanori Kiriake <seiken@nbs.co.jp>
-# $FreeBSD: converters/aish/Makefile 339221 2014-01-09 13:09:44Z bapt $
+# $FreeBSD: converters/aish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aish
 PORTVERSION=	1.13
