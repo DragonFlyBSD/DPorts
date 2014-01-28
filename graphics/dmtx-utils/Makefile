@@ -1,5 +1,5 @@
 # Created by: johans
-# $FreeBSD: graphics/dmtx-utils/Makefile 337995 2013-12-29 14:43:07Z johans $
+# $FreeBSD: graphics/dmtx-utils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dmtx-utils
 PORTVERSION=	0.7.4
