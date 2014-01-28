@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Cairo-GObject/Makefile 338458 2014-01-02 16:23:24Z sunpoet $
+# $FreeBSD: devel/p5-Cairo-GObject/Makefile 340414 2014-01-20 17:02:34Z sunpoet $
 
 PORTNAME=	Cairo-GObject
-PORTVERSION=	1.003
+PORTVERSION=	1.004
 CATEGORIES=	devel graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:XAOC
