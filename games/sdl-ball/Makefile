@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sdl-ball/Makefile 330703 2013-10-18 00:15:22Z amdmi3 $
+# $FreeBSD: games/sdl-ball/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sdl-ball
 PORTVERSION=	1.01
