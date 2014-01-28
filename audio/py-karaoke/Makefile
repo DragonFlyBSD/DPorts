@@ -1,5 +1,5 @@
 # Created by: Elias Mandouvalos <ocean@mail.gr>
-# $FreeBSD: audio/py-karaoke/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/py-karaoke/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	karaoke
 PORTVERSION=	0.7.5
@@ -32,7 +32,7 @@ USE_XORG=	x11 xau xcb xdmcp
 USE_WX=		2.6+
 WX_COMPS=	python:lib
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	py${PORTNAME}
 
