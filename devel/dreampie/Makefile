@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/dreampie/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/dreampie/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dreampie
 PORTVERSION=	1.2.1
@@ -12,12 +12,10 @@ COMMENT=	Python shell which is designed to be reliable and fun
 LICENSE=	GPLv3
 
 USE_GNOME=	pygtk2 pygtksourceview
-USE_PYTHON=	-2.7
-USE_PYDISTUTILS=yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-MAN1=		dreampie.1
-
-NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e "s|share/man/man1|man/man1|" ${WRKSRC}/setup.py
 
