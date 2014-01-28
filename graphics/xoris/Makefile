@@ -1,5 +1,5 @@
 # Created by: Alexander Gromnitsky
-# $FreeBSD: graphics/xoris/Makefile 337772 2013-12-27 18:13:38Z bapt $
+# $FreeBSD: graphics/xoris/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xoris
 PORTVERSION=	0.1e
