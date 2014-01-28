@@ -1,5 +1,5 @@
 # Created by: searle
-# $FreeBSD: games/flying/Makefile 332375 2013-11-01 13:51:11Z danilo $
+# $FreeBSD: games/flying/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	flying
 PORTVERSION=	6.20
