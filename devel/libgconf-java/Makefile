@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libgconf-java/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libgconf-java/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/devel/libgconf-java/Makefile,v 1.9 2005/10/29 22:06:05 marcus Exp $
 
 PORTNAME=	libgconf-java
