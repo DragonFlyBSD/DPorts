@@ -1,5 +1,5 @@
 # Created by: courou <courou@users.sourceforge.net>
-# $FreeBSD: finance/myphpmoney/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/myphpmoney/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		myphpmoney
 PORTVERSION=		1.3.r3
