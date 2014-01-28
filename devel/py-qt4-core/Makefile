@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/py-qt4-core/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD: devel/py-qt4-core/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	core
 PORTVERSION=	${PYQT4_VERSION}
@@ -17,7 +17,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	corelib qmake_build moc_build
 
 OPTIONS_DEFINE=	API
