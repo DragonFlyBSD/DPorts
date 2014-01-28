@@ -1,4 +1,4 @@
-# $FreeBSD: math/calcoo/Makefile 329323 2013-10-04 15:21:09Z naddy $
+# $FreeBSD: math/calcoo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	calcoo
 PORTVERSION=	1.3.18
