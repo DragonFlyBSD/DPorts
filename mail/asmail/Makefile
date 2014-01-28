@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: mail/asmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/asmail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asmail
 PORTVERSION=	2.1
