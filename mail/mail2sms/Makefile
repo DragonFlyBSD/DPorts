@@ -1,5 +1,5 @@
 # Created by: Gerhard Gonter <g.gonter@ieee.org>
-# $FreeBSD: mail/mail2sms/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mail2sms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mail2sms
 PORTVERSION=	1.3.5
