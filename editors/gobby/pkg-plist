@@ -1,4 +1,3 @@
-@comment $FreeBSD: editors/gobby/pkg-plist 324042 2013-07-31 12:40:12Z antoine $
 bin/gobby
 %%DATADIR%%/icons/HighContrastLargePrint/48x48/actions/chat.png
 %%DATADIR%%/icons/HighContrastLargePrint/48x48/actions/document-list.png
