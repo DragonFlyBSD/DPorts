@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mp3asm/Makefile 333182 2013-11-08 05:59:05Z dinoex $
+# $FreeBSD: audio/mp3asm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp3asm
 PORTVERSION=	0.1.3.1
