@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/pyzor/Makefile 331246 2013-10-22 09:53:35Z wg $
+# $FreeBSD: mail/pyzor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyzor
 PORTVERSION=	0.5.0
