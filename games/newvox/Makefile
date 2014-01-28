@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/newvox/Makefile 332778 2013-11-04 20:40:43Z danilo $
+# $FreeBSD: games/newvox/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	newvox
 PORTVERSION=	1.0
