@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/jftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/jftp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jftp
 PORTVERSION=	1.56
