@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: graphics/py-glewpy/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-glewpy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glewpy
 PORTVERSION=	0.7.4
@@ -18,7 +18,7 @@ COMMENT=	Advanced OpenGL extensions to Python
 BUILD_DEPENDS=	pyrex>=0.9.6.2:${PORTSDIR}/devel/pyrex
 
 USE_GL=		glew
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
