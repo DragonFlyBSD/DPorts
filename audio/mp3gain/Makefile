@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: audio/mp3gain/Makefile 338975 2014-01-07 06:57:40Z dinoex $
+# $FreeBSD: audio/mp3gain/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp3gain
 PORTVERSION=	1.5.2
