@@ -1,5 +1,5 @@
 # Created by: dnscheckengine-port@academ.com (Stan Barber)
-# $FreeBSD: dns/dnscheckengine/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dnscheckengine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dnscheckengine
 PORTVERSION=	1.1
