@@ -1,5 +1,5 @@
 # Created by: Yen-Shuo Su <yssu@CCCA.NCTU.edu.tw>
-# $FreeBSD: chinese/tin/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/tin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # Don't reset PORTREVISION and keep bumping it even if PORTVERSION is changed.
 PORTREVISION=	6
@@ -15,7 +15,6 @@ EXTRA_PATCHES=	${.CURDIR}/files/patch-attrib.c \
 MASTERDIR=	${.CURDIR}/../../news/tin
 
 post-patch: post-patch-zh
-NO_STAGE=	yes
 post-patch-zh:
 	${REINPLACE_CMD} -e 's,iso-8859-1,Big5,g' ${WRKSRC}/doc/tin.defaults
 
