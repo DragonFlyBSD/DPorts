@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: japanese/py-mecab/Makefile 337041 2013-12-20 17:10:14Z amdmi3 $
+# $FreeBSD: japanese/py-mecab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
