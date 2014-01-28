@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: games/bloboats/Makefile 331848 2013-10-28 12:31:53Z ehaupt $
+# $FreeBSD: games/bloboats/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bloboats
 PORTVERSION=	1.0.2
