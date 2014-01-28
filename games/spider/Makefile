@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: games/spider/Makefile 333467 2013-11-11 01:31:06Z danilo $
+# $FreeBSD: games/spider/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spider
 PORTVERSION=	1.1
