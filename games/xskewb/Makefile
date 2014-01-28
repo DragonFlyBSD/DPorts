@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xskewb/Makefile 333952 2013-11-16 01:01:03Z danilo $
+# $FreeBSD: games/xskewb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xskewb
 PORTVERSION=	5.5.2
