@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xeyesplus/Makefile 333688 2013-11-13 14:18:04Z danilo $
+# $FreeBSD: games/xeyesplus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xeyes+
 PORTVERSION=	2.02
