@@ -1,5 +1,5 @@
 # Created by: Yuu Yashiki
-# $FreeBSD: graphics/lfview/Makefile 339163 2014-01-08 18:31:40Z antoine $
+# $FreeBSD: graphics/lfview/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lfview
 PORTVERSION=	1.1a
