@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/py-qt4-designerplugin/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD: devel/py-qt4-designerplugin/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	designerplugin
 PORTVERSION=	${PYQT4_VERSION}
@@ -26,7 +26,7 @@ DESTDIRNAME=	INSTALL_ROOT
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	gui xml designer moc_build qmake_build
 
 PATCHDIR=	${.CURDIR}/../py-qt4-core/files
