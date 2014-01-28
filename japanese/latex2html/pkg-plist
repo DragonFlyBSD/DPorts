@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/latex2html/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
