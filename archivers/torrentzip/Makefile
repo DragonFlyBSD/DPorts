@@ -1,5 +1,5 @@
 # Created by: swhetzel@gmail.com
-# $FreeBSD: archivers/torrentzip/Makefile 338690 2014-01-04 23:38:19Z bapt $
+# $FreeBSD: archivers/torrentzip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	torrentzip
 PORTVERSION=	0.2
