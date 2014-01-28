@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: multimedia/py-qt4-multimedia/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD: multimedia/py-qt4-multimedia/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	multimedia
 PORTVERSION=	${PYQT4_VERSION}
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}gui>=${PYQT4_VERSION}:${PORTSDIR}/x11-toolkits/py-q
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	moc_build multimedia qmake_build
 
 OPTIONS_DEFINE=	API
