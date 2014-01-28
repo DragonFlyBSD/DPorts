@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: games/xblood/Makefile 333637 2013-11-13 01:54:10Z danilo $
+# $FreeBSD: games/xblood/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xblood
 PORTVERSION=	2.0
