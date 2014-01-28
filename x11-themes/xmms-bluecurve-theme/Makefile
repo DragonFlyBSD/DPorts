@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/xmms-bluecurve-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/xmms-bluecurve-theme/Makefile 341336 2014-01-27 08:20:05Z miwi $
 
 PORTNAME=	xmms-bluecurve-theme
 PORTREVISION=	2
@@ -18,9 +18,8 @@ NO_BUILD=	yes
 SKIN=		Bluecurve-xmms.zip
 PLIST_FILES=	share/xmms/Skins/${SKIN}
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${PREFIX}/share/xmms/Skins
-	${INSTALL_DATA} ${WRKSRC}/art/xmms/${SKIN} ${PREFIX}/share/xmms/Skins
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/xmms/Skins
+	${INSTALL_DATA} ${WRKSRC}/art/xmms/${SKIN} ${STAGEDIR}${PREFIX}/share/xmms/Skins
 
 .include "${MASTERDIR}/Makefile"
