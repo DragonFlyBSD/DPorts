@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@freebsd-fr.org>
-# $FreeBSD: graphics/hsetroot/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/hsetroot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hsetroot
 PORTVERSION=	1.0.2
@@ -13,10 +13,9 @@ COMMENT=	Wallpaper manipulation utility for X11
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_EFL=	imlib2
 
 PLIST_FILES=	bin/hsetroot
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
