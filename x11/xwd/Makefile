@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xwd/Makefile 331812 2013-10-27 22:50:18Z eadler $
+# $FreeBSD: x11/xwd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xwd
 PORTVERSION=	1.0.6
