@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-scmproj/Makefile 329497 2013-10-05 19:05:57Z cs $
+# $FreeBSD: devel/bzr-scmproj/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bzr-scmproj
 PORTVERSION=	0.6.2
@@ -18,6 +18,6 @@ RUN_DEPENDS=	bzr:${PORTSDIR}/devel/bzr
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
