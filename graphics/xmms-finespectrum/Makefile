@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-finespectrum/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: graphics/xmms-finespectrum/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-finespectrum
 PORTVERSION=	1.0.1.a
