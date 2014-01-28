@@ -1,5 +1,5 @@
 # Created by: Jaap Boender <jaapb@kerguelen.org>
-# $FreeBSD: devel/menhir/Makefile 328748 2013-09-29 22:03:41Z antoine $
+# $FreeBSD: devel/menhir/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	menhir
 PORTVERSION=	20080912
