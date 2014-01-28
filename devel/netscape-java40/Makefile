@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: devel/netscape-java40/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/netscape-java40/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	netscape-java40
 PORTVERSION=	1999.11.15
