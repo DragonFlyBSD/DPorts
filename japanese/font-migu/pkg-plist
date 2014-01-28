@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/font-migu/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%DATADIR%%/migu-1c-bold.ttf
 %%DATADIR%%/migu-1c-regular.ttf
 %%DATADIR%%/migu-1p-bold.ttf
