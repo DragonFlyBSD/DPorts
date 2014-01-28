@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: databases/py-qt4-sql/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/py-qt4-sql/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	sql
 PORTVERSION=	${PYQT4_VERSION}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}gui>=${PYQT4_VERSION}:${PORTSDIR}/x11-toolkits/py-q
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	moc_build sql qmake_build
 
 OPTIONS_DEFINE=	API
