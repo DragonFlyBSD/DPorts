@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@SYSTEM.PL>
-# $FreeBSD: lang/mtasc/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/mtasc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mtasc
 PORTVERSION=	1.14
