@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-ati/Makefile 336658 2013-12-16 19:10:23Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-ati/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xf86-video-ati
 PORTVERSION=	${ATI_VERSION}
