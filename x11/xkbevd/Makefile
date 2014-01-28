@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkbevd/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11/xkbevd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xkbevd
 PORTVERSION=	1.1.3
