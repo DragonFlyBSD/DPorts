@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xlaby/Makefile 333719 2013-11-13 19:40:51Z danilo $
+# $FreeBSD: games/xlaby/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xlaby
 PORTVERSION=	2.0.1
