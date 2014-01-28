@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: x11-themes/icon-bluecurve-theme/scripts/do-build 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: x11-themes/icon-bluecurve-theme/scripts/do-build 340872 2014-01-24 00:14:07Z mat $
 #
 
 ### Adapted from ${WRKSRC}/art/icon/Bluecurve/sheets/Makefile.am
