@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/rubygem-gruff/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/rubygem-gruff/Makefile 340903 2014-01-24 14:49:29Z miwi $
 
 PORTNAME=	gruff
 PORTVERSION=	0.3.7
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
