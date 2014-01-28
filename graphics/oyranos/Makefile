@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/oyranos/Makefile 332219 2013-10-31 10:26:03Z nemysis $
+# $FreeBSD: graphics/oyranos/Makefile 341289 2014-01-26 21:20:03Z rakuco $
 
 PORTNAME=	oyranos
 PORTVERSION=	0.9.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Oyranos/Oyranos%20${PORTVERSION:C|(.*)\.[0-9]*$|\1|}
 
