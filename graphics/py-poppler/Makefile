@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: graphics/py-poppler/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD: graphics/py-poppler/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	poppler
 PORTVERSION=	0.12.1

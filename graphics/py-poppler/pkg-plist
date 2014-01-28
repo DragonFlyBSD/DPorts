@@ -1,3 +1,2 @@
-@comment $FreeBSD: graphics/py-poppler/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 %%PYTHON_SITELIBDIR%%/poppler.la
 %%PYTHON_SITELIBDIR%%/poppler.so
