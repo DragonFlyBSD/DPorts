@@ -1,5 +1,5 @@
 # Created by: Devaux Fabien <fab@gcu.info>
-# $FreeBSD: devel/directfb/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/directfb/Makefile 339876 2014-01-15 23:58:58Z bapt $
 
 PORTNAME=	directfb
 PORTVERSION=	1.4.13
@@ -48,6 +48,8 @@ CONFIGURE_ARGS=	--disable-osx --disable-extra-warnings --disable-profiling \
 		--with-dither-rgb16=advanced
 
 NO_STAGE=	yes
+BROKEN_alpha=	Does not compile on alpha
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
@@ -101,12 +103,6 @@ PLIST_SUB+=	TESTS="@comment "
 MAN1=		directfb-csource.1 dfbg.1
 MAN5=		directfbrc.5
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "alpha"
-BROKEN=		Does not compile on alpha
-.endif
-
 .if ${ARCH} == "arm"
 PLIST_SUB+=	ARCH_ARM=""
 .else
@@ -138,4 +134,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
