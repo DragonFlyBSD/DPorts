@@ -1,9 +1,9 @@
-# $FreeBSD: devel/bugzilla42/Makefile 330666 2013-10-17 19:35:22Z ohauer $
+# $FreeBSD: devel/bugzilla42/Makefile 339753 2014-01-15 05:31:35Z ohauer $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.2.7
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA}
+MASTER_SITES=	BUGZILLA
 MASTER_SITE_SUBDIR=	webtools webtools/archived
 
 MAINTAINER=	bugzilla@FreeBSD.org
