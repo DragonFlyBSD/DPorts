@@ -1,4 +1,3 @@
-@comment $FreeBSD: chinese/hc/pkg-plist 336487 2013-12-14 21:12:23Z antoine $
 bin/b2g
 bin/g2b
 bin/hc
