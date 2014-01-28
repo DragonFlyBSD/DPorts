@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xmines/Makefile 333789 2013-11-14 20:51:43Z danilo $
+# $FreeBSD: games/xmines/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmines
 PORTVERSION=	1.0
