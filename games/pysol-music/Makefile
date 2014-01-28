@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/pysol-music/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pysol-music/Makefile 341142 2014-01-26 00:01:13Z nemysis $
 
 PORTNAME=	pysol-music
 PORTVERSION=	4.40
@@ -15,6 +15,9 @@ RUN_DEPENDS=	pysol:${PORTSDIR}/games/pysol
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
+
+DEPRECATED=	Broken, abondonware, use pysolfc 
+EXPIRATION_DATE=	2014-03-27
 
 NO_STAGE=	yes
 do-install:
