@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/goocanvasmm/Makefile 335595 2013-12-03 22:04:38Z kwm $
+# $FreeBSD: graphics/goocanvasmm/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/graphics/goocanvasmm/Makefile,v 1.4 2010/10/29 10:27:45 kwm Exp $
 
 PORTNAME=	goocanvasmm
