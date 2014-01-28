@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-ride/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/py-robotframework-ride/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	robotframework-ride
 PORTVERSION=	1.2.3
@@ -15,7 +15,7 @@ LICENSE=	APACHE20
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}robotframework>=2.7.5:${PORTSDIR}/devel/py-robotframework \
 		${PYTHON_PKGNAMEPREFIX}robotframework-selenium2library>=1.1.0:${PORTSDIR}/devel/py-robotframework-selenium2library
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 USE_WX=		2.8+
