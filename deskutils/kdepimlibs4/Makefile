@@ -1,9 +1,9 @@
 # Created by: arved
-# $FreeBSD: deskutils/kdepimlibs4/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/kdepimlibs4/Makefile 339537 2014-01-12 19:48:11Z kwm $
 
 PORTNAME=	kdepimlibs
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
