@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/ruby-mecab/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/ruby-mecab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
