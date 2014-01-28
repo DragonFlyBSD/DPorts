@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 341347 2014-01-27 09:04:24Z miwi $
 
 PORTNAME=	murrine
 PORTVERSION=	0.98.2
@@ -22,7 +22,6 @@ USES=		gmake pkgconfig
 OPTIONS_DEFINE=	ANIMATION
 ANIMATION_DESC=	Animation support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMATION} 
