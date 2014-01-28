@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: audio/bmp-htmlplaylist/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/bmp-htmlplaylist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bmp-htmlplaylist
 PORTVERSION=	0.2.1
