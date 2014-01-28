@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: java/jode/Makefile 335029 2013-11-27 16:09:28Z mi $
+# $FreeBSD: java/jode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jode
 PORTVERSION=	1.1.1.1
