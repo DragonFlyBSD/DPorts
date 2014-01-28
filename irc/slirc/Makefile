@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: irc/slirc/Makefile 335950 2013-12-09 02:43:37Z adamw $
+# $FreeBSD: irc/slirc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	slirc
 PORTVERSION=	0.12
