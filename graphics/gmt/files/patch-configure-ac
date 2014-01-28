@@ -1,4 +1,4 @@
-$FreeBSD: graphics/gmt/files/patch-configure-ac 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: graphics/gmt/files/patch-configure-ac 340725 2014-01-22 17:40:44Z mat $
 
 On GNU systems gcc is used as ld, which accepts the -Wl option to pass options
 to ld.  On FreeBSD, ld is used, and gets upset with -Wl.
