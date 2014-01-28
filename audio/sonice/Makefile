@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/sonice/Makefile 328531 2013-09-27 22:39:18Z mva $
+# $FreeBSD: audio/sonice/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	sonice
 PORTVERSION=	2.0
@@ -16,7 +16,7 @@ RUN_DEPENDS=	oggenc:${PORTSDIR}/audio/vorbis-tools \
 		${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml
 
 NO_STAGE=	yes
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 WRKSRC=		${WRKDIR}/sonice
