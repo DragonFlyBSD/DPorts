@@ -1,5 +1,5 @@
 # Created by: mike@LITech.lviv.ua
-# $FreeBSD: ukrainian/gd/Makefile 327774 2013-09-20 23:19:33Z bapt $
+# $FreeBSD: ukrainian/gd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MASTERDIR=	${.CURDIR}/../../graphics/gd
 CATEGORIES=	ukrainian
