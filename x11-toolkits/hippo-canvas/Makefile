@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11-toolkits/hippo-canvas/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/hippo-canvas/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hippo-canvas
 PORTVERSION=	0.3.0
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-c
 USES=		gmake pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gtk20 glib20 pygtk2 pango
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-python
 USE_LDCONFIG=	yes
