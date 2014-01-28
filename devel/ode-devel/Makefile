@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@yahoo.com>
-# $FreeBSD: devel/ode-devel/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/ode-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ode
 DISTVERSION=	${ODEVER}-060223
