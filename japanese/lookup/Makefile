@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/lookup/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/lookup/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lookup
 PORTVERSION=	1.4.1
