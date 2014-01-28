@@ -1,4 +1,3 @@
-@comment $FreeBSD: devel/generatorrunner/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/docgenerator
 bin/generatorrunner
 include/generatorrunner/generator.h
