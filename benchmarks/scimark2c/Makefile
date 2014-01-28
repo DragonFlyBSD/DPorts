@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: benchmarks/scimark2c/Makefile 338722 2014-01-05 00:48:45Z bapt $
+# $FreeBSD: benchmarks/scimark2c/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scimark2c
 DISTVERSION=	2_1
