@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/libshhcards/Makefile 332572 2013-11-03 01:19:03Z danilo $
+# $FreeBSD: games/libshhcards/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libshhcards
 PORTVERSION=	1.0.5
