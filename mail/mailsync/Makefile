@@ -1,5 +1,5 @@
 # Created by: Maxim Tulyuk <mt@primats.org.ua>
-# $FreeBSD: mail/mailsync/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mailsync/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mailsync
 PORTVERSION=	5.2.1
