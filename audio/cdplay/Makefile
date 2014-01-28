@@ -1,5 +1,5 @@
 # Created by: Antti Kaipila <anttik@iki.fi>
-# $FreeBSD: audio/cdplay/Makefile 334769 2013-11-24 19:13:44Z bapt $
+# $FreeBSD: audio/cdplay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cdplay
 PORTVERSION=	0.92
