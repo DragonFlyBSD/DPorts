@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/bmp-songchange/Makefile 338527 2014-01-03 08:21:27Z rene $
+# $FreeBSD: audio/bmp-songchange/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bmp-songchange
 PORTVERSION=	0.0.2
