@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/php5-recode/Makefile 332107 2013-10-30 13:32:02Z ale $
+# $FreeBSD: converters/php5-recode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	converters
 
