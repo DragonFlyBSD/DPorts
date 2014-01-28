@@ -1,8 +1,8 @@
 # Created by: Mykola Dzham <freebsd@levsha.org.ua>
-# $FreeBSD: astro/qlandkartegt/Makefile 330470 2013-10-16 02:36:08Z amdmi3 $
+# $FreeBSD: astro/qlandkartegt/Makefile 340320 2014-01-19 16:02:36Z rakuco $
 
 PORTNAME=	qlandkartegt
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.5
 CATEGORIES=	astro
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/QLandkarteGT%20${PORTVERSION}
 
@@ -19,7 +19,5 @@ USES=		cmake
 USE_QT4=	dbus gui opengl network sql xml linguist_build \
 		moc_build uic_build rcc_build qmake_build
 USE_GL=		glu
-
-MAN1=		qlandkartegt.1
 
 .include <bsd.port.mk>
