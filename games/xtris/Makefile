@@ -1,5 +1,5 @@
 # Created by: sec@42.org
-# $FreeBSD: games/xtris/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xtris/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtris
 PORTVERSION=	1.15
