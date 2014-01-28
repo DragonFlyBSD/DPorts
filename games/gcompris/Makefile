@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: games/gcompris/Makefile 335575 2013-12-03 15:34:59Z kwm $
+# $FreeBSD: games/gcompris/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gcompris
 PORTVERSION=	13.11
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 USES=		display:configure gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_GSTREAMER=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_SQLITE=	3
 USE_SDL=	mixer
 USE_GNOME=	intlhack gnomeprefix gtk20 pygtk2 libxml2 librsvg2
