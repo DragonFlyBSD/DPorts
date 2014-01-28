@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/ivan/pkg-install 334269 2013-11-18 22:49:32Z amdmi3 $
+# $FreeBSD: games/ivan/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 STATEDIR="/var/games/ivan"
 

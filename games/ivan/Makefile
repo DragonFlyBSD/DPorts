@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/ivan/Makefile 334269 2013-11-18 22:49:32Z amdmi3 $
+# $FreeBSD: games/ivan/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ivan
 PORTVERSION=	0.50
