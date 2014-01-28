@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/sdl_console/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sdl_console/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sdl_console
 PORTVERSION=	2.1
