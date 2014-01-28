@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/javaview/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/javaview/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	javaview-lite
 PORTVERSION=	3.95
