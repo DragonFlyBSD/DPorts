@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/kludge3d/Makefile 337252 2013-12-23 14:03:20Z amdmi3 $
+# $FreeBSD: graphics/kludge3d/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kludge3d
 PORTVERSION=	20040822
