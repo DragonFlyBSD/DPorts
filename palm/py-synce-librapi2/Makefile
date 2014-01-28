@@ -1,5 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: palm/py-synce-librapi2/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD: palm/py-synce-librapi2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	palm python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}synce-
