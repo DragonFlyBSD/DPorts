@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-themes/gnome-icons-snowish/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gnome-icons-snowish/Makefile 341370 2014-01-27 10:59:45Z miwi $
 
 PORTNAME=	snowish
 PORTVERSION=	1.0
@@ -14,8 +14,5 @@ COMMENT=	A Mac inspired icon theme for GNOME
 RESTRICTED=	${REASON}
 USE_BZIP2=	yes
 
-#WRKSRC=		${WRKDIR}/snowish-Icons-${PORTVERSION}
-
-NO_STAGE=	yes
 .include "${.CURDIR}/../gnome-icons/bsd.gnome-icons.mk"
 .include <bsd.port.mk>
