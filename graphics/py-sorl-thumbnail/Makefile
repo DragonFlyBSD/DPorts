@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: graphics/py-sorl-thumbnail/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-sorl-thumbnail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sorl-thumbnail
 PORTVERSION=	3.2.5
@@ -15,7 +15,7 @@ LICENSE=	BSD
 
 RUN_DEPENDS=	${LOCALBASE}/bin/pildriver.py:${PORTSDIR}/graphics/py-imaging
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
