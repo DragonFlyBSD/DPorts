@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: devel/maven3/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/maven3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	maven3
 DISTVERSION=	3.0.4
