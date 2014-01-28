@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/garith/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/garith/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	garith
 PORTVERSION=	2.1
