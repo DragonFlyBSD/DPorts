@@ -1,5 +1,5 @@
 # Created by: joes@seaport.net
-# $FreeBSD: comms/qpage/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/qpage/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qpage
 PORTVERSION=	3.3
@@ -20,7 +20,6 @@ IDENT_PATCH_DESC=	Disable libwrap ident lookups
 MAN1=		qpage.1
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIDENT_PATCH}
@@ -80,4 +79,4 @@ post-install:
 	${CHOWN} ${WITH_QPAGE_USER}:dialer /var/spool/${PORTNAME}
 	${CHMOD} 0775 /var/spool/${PORTNAME}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
