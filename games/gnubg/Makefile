@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: games/gnubg/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gnubg/Makefile 340031 2014-01-17 12:40:56Z cs $
 
 PORTNAME=	gnubg
 PORTVERSION=	0.15
@@ -12,7 +12,7 @@ DISTFILES=	gnubg-source-MAIN-20070601.tar.gz:src \
 		gnubg_ts0.bd.gz:ts
 EXTRACT_ONLY=	gnubg-source-MAIN-20070601.tar.gz
 
-MAINTAINER=	gahr@FreeBSD.org
+MAINTAINER=	cs@FreeBSD.org
 COMMENT=	GNU Backgammon
 
 BUILD_DEPENDS=	bison:${PORTSDIR}/devel/bison
@@ -33,7 +33,7 @@ CONFIGURE_ENV=	ac_cv_path_ARTSC_CONFIG=no ac_cv_path_LIBART_CONFIG=no
 
 USE_GNOME=	gnomehack libxml2
 USE_GMAKE=	yes
-USE_PYTHON=	2.0+
+USE_PYTHON=	yes
 USE_AUTOTOOLS=	libtool automake
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
