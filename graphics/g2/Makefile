@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/g2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/g2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	g2
 PORTVERSION=	0.40
