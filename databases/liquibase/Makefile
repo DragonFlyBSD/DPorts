@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/liquibase/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: databases/liquibase/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	liquibase
 PORTVERSION=	2.0.5
