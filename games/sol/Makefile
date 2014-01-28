@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/sol/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/sol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sol
 PORTVERSION=	1.0.7
