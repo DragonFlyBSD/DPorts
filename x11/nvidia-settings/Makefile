@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: x11/nvidia-settings/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/nvidia-settings/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nvidia-settings
 PORTVERSION=	310.14
