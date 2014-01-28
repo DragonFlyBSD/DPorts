@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-# $FreeBSD: devel/hs-drift/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/hs-drift/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	drift
 PORTVERSION=	2.2.3
