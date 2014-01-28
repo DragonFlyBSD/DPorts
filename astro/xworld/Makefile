@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org
-# $FreeBSD: astro/xworld/Makefile 328150 2013-09-24 15:47:01Z naddy $
+# $FreeBSD: astro/xworld/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xworld
 PORTVERSION=	2.0
