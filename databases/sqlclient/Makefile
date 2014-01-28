@@ -1,4 +1,4 @@
-# $FreeBSD: databases/sqlclient/Makefile 329784 2013-10-08 13:29:27Z theraven $
+# $FreeBSD: databases/sqlclient/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlclient
 PORTVERSION=	1.7.0
