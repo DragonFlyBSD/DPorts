@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: databases/libgdamm/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/libgdamm/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/databases/libgdamm/Makefile,v 1.21 2010/10/23 16:04:08 kwm Exp $
 
 PORTNAME=	libgdamm
