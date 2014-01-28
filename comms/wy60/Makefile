@@ -1,4 +1,4 @@
-# $FreeBSD: comms/wy60/Makefile 328593 2013-09-28 16:14:27Z naddy $
+# $FreeBSD: comms/wy60/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wy60
 PORTVERSION=	2.0.9
