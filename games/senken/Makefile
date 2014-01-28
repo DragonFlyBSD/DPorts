@@ -1,5 +1,5 @@
 # Created by: tmartin@andrew.cmu.edu
-# $FreeBSD: games/senken/Makefile 333459 2013-11-11 00:36:55Z danilo $
+# $FreeBSD: games/senken/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	senken
 PORTVERSION=	0.3.0
