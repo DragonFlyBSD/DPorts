@@ -1,5 +1,5 @@
 # Created by: Fumihiko Kimura <jfkimura@yahoo.co.jp>
-# $FreeBSD: mail/relay-ctrl/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/relay-ctrl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	relay-ctrl
 PORTVERSION=	3.1.1
