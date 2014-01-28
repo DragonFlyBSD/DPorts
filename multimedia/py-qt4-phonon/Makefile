@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/py-qt4-phonon/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD: multimedia/py-qt4-phonon/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	phonon
 PORTVERSION=	${PYQT4_VERSION}
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}core>=${PYQT4_VERSION}:${PORTSDIR}/devel/py-qt4-cor
 
 DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 HAS_CONFIGURE=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	moc_build phonon qmake_build
 
 OPTIONS_DEFINE=	API
