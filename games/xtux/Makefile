@@ -1,5 +1,5 @@
 # Created by: Göran Runfeldt <goranrunfeldt@home.se>
-# $FreeBSD: games/xtux/Makefile 333961 2013-11-16 01:28:38Z danilo $
+# $FreeBSD: games/xtux/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtux
 PORTVERSION=	2003.03.06
