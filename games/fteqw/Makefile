@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/fteqw/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: games/fteqw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fteqw
 PORTVERSION=	3343
