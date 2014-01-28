@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-gbsplay/Makefile 333586 2013-11-12 16:10:18Z ehaupt $
+# $FreeBSD: audio/xmms-gbsplay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMEPREFIX=	xmms-
 
