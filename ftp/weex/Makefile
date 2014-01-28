@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: ftp/weex/Makefile 333516 2013-11-11 15:51:55Z ehaupt $
+# $FreeBSD: ftp/weex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	weex
 PORTVERSION=	2.6.1.5
