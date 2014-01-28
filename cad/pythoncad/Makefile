@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/pythoncad/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/pythoncad/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pythoncad
 PORTVERSION=	37
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolki
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PythonCAD
 PYDISTUTILS_PKGVERSION=	DS1-R${PORTVERSION}
