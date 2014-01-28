@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/moettf/Makefile 336214 2013-12-11 19:51:29Z eadler $
+# $FreeBSD: chinese/moettf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	moettf
 PORTVERSION=	2.0
