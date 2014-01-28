@@ -1,7 +1,8 @@
-# $FreeBSD: emulators/openmsx/Makefile 338992 2014-01-07 10:00:52Z johans $
+# $FreeBSD: emulators/openmsx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openmsx
 PORTVERSION=	0.10.0
+PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF
 
@@ -18,14 +19,15 @@ LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
 MAKE_ARGS+=	INSTALL_BINARY_DIR=${PREFIX}/bin \
 		INSTALL_SHARE_DIR=${DATADIR} \
 		INSTALL_DOC_DIR=${DOCSDIR} \
-		OPENMSX_CXX=${CXX}
+		OPENMSX_CXX=${CXX} \
+		CXXFLAGS="${CXXFLAGS}"
 
 MAKEFILE=	GNUmakefile
 USES=		gmake tcl
 USE_GCC=	4.6+
 USE_GL=		glew
 USE_SDL=	sdl ttf
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 PLIST_FILES=	bin/openmsx
 PORTDATA=	*
