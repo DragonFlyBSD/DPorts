@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: devel/libnotify/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libnotify/Makefile 340766 2014-01-23 00:32:52Z bapt $
 #   $MCom: ports/trunk/devel/libnotify/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libnotify
@@ -8,10 +8,9 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A library for desktop notifications
+COMMENT=	Library for desktop notifications
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
 USE_GNOME=	intlhack glib20 gdkpixbuf2 ltverhack introspection:build
@@ -21,5 +20,4 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
