@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: devel/semantic/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/semantic/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	semantic
 PORTVERSION=	1.4.4
