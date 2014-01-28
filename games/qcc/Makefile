@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: games/qcc/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/qcc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qcc
 PORTVERSION=	1.01
