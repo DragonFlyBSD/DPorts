@@ -1,4 +1,4 @@
-# $FreeBSD: converters/chmview/files/Makefile 300895 2012-07-14 12:56:14Z beat $
+# $FreeBSD: converters/chmview/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 BINDIR?=	${PREFIX}/bin
 
