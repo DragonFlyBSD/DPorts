@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/platon/Makefile 336776 2013-12-17 21:55:24Z tijl $
+# $FreeBSD: biology/platon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	platon
 PORTVERSION=	2013.12.12
