@@ -1,4 +1,4 @@
-# $FreeBSD: astro/gmapcatcher/Makefile 338543 2014-01-03 14:49:54Z adamw $
+# $FreeBSD: astro/gmapcatcher/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gmapcatcher
 PORTVERSION=	0.8.0.4
