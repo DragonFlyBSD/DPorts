@@ -1,5 +1,5 @@
 # Created by: Marc van Woerkom <marc.vanwoerkom@fernuni-hagen.de>
-# $FreeBSD: textproc/htmlize.el/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/htmlize.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	htmlize.el
 PORTVERSION=	1.39
