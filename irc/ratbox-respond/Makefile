@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: irc/ratbox-respond/Makefile 335950 2013-12-09 02:43:37Z adamw $
+# $FreeBSD: irc/ratbox-respond/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ratbox-respond
 PORTVERSION=	1.0
