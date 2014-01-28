@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/glsfcave/Makefile 328734 2013-09-29 21:38:37Z amdmi3 $
+# $FreeBSD: games/glsfcave/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glsfcave
 PORTVERSION=	1.0
