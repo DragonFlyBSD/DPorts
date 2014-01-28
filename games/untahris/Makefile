@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/untahris/Makefile 330472 2013-10-16 02:41:20Z amdmi3 $
+# $FreeBSD: games/untahris/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	untahris
 PORTVERSION=	3.1
