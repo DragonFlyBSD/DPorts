@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: x11/rxvt/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/rxvt/Makefile 339339 2014-01-10 09:32:14Z vanilla $
 
 PORTNAME=	rxvt
 PORTVERSION=	2.6.4
@@ -31,11 +31,8 @@ CONFIGURE_ARGS=	--enable-ttygid \
 		--with-xpm --enable-xpm-background \
 		--with-xpm-includes=${LOCALBASE}/include/X11 \
 		--with-xpm-library=${LOCALBASE}/lib
-MAN1=		rxvt.1
-PLIST_FILES=	bin/rxvt
+PLIST_FILES=	bin/rxvt man/man1/${PORTNAME}.1.gz
 
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # fails to build with new utmpx
@@ -96,6 +93,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|getpt()|posix_openpt(0)|' ${WRKSRC}/configure
 
 post-install:
-	@${CHMOD} 4711 ${PREFIX}/bin/rxvt
+	@${CHMOD} 4711 ${STAGEDIR}${PREFIX}/bin/rxvt
 
 .include <bsd.port.post.mk>
