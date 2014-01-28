@@ -1,4 +1,3 @@
-@comment $FreeBSD: audio/tomahawk/pkg-plist 335626 2013-12-04 18:48:48Z makc $
 bin/tomahawk
 include/libtomahawk/AclRegistry.h
 include/libtomahawk/ActionCollection.h
