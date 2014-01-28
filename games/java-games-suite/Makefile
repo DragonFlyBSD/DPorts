@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: games/java-games-suite/Makefile 331222 2013-10-22 06:04:54Z jgh $
+# $FreeBSD: games/java-games-suite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	java-games-suite
 PORTVERSION=	1.0
