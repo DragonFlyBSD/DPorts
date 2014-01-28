@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-sexypsf/Makefile 333585 2013-11-12 16:07:24Z ehaupt $
+# $FreeBSD: audio/xmms-sexypsf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-sexypsf
 PORTVERSION=	0.4.8
