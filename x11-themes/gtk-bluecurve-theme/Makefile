@@ -1,5 +1,5 @@
 # Created by: Eugeney Ryzhyk
-# $FreeBSD: x11-themes/gtk-bluecurve-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk-bluecurve-theme/Makefile 341374 2014-01-27 11:15:57Z miwi $
 
 PORTNAME=	gtk-bluecurve-theme
 
@@ -16,7 +16,6 @@ GTK2_ENGINEDIR=	lib/gtk-2.0/${GTK2_VERSION}/engines
 PLIST=		${WRKDIR}/pkg-plist
 EXTRA_STYLES=	BerriesAndCream Gnome Grape Lime Slate Strawberry Tangerine
 
-NO_STAGE=	yes
 post-patch:
 .for s in ${EXTRA_STYLES}
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|' \
@@ -44,13 +43,13 @@ pre-install:
 .endfor
 
 do-install:
-	${MKDIR} ${PREFIX}/${GTK2_ENGINEDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/art/gtk/Bluecurve/libbluecurve.so ${PREFIX}/${GTK2_ENGINEDIR}
-	${MKDIR} ${PREFIX}/share/themes/Bluecurve/gtk-2.0
-	${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve/gtk-2.0/gtkrc ${PREFIX}/share/themes/Bluecurve/gtk-2.0
+	${MKDIR} ${STAGEDIR}${PREFIX}/${GTK2_ENGINEDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/art/gtk/Bluecurve/libbluecurve.so ${STAGEDIR}${PREFIX}/${GTK2_ENGINEDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/Bluecurve/gtk-2.0
+	${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve/gtk-2.0/gtkrc ${STAGEDIR}${PREFIX}/share/themes/Bluecurve/gtk-2.0
 .for s in ${EXTRA_STYLES}
-	${MKDIR} ${PREFIX}/share/themes/Bluecurve-${s}/gtk-2.0
-	${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve-${s}/gtk-2.0/gtkrc ${PREFIX}/share/themes/Bluecurve-${s}/gtk-2.0
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/Bluecurve-${s}/gtk-2.0
+	${INSTALL_DATA} ${WRKSRC}/art/gtk/Bluecurve-${s}/gtk-2.0/gtkrc ${STAGEDIR}${PREFIX}/share/themes/Bluecurve-${s}/gtk-2.0
 .endfor
 
 .include "${MASTERDIR}/Makefile"
