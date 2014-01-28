@@ -1,5 +1,5 @@
 # Created by: Oh Junseon <hollywar@mail.holywar.net>
-# $FreeBSD: korean/engdic/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD: korean/engdic/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	engdic
 PORTVERSION=	0.2
