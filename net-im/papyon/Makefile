@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/papyon/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/papyon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	papyon
 PORTVERSION=	0.5.4
@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/OpenSSL/SSL.so:${PORTSDIR}/security/py-openssl
 		${PYTHON_SITELIBDIR}/farsight.so:${PORTSDIR}/net-im/farsight2
 
 USE_GNOME=	pygobject
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
