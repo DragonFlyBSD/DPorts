@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: lang/atlast/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/atlast/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	atlast
 PORTVERSION=	1.2
