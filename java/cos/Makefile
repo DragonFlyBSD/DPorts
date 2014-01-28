@@ -1,5 +1,5 @@
 # Created by: Jose Marques <noway@nohow.demon.co.uk>
-# $FreeBSD: java/cos/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/cos/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cos
 PORTVERSION=	2002.11.05
