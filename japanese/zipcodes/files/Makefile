@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/zipcodes/files/Makefile 332458 2013-11-02 08:55:18Z kuriyama $
+# $FreeBSD: japanese/zipcodes/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 .SUFFIXES: .csv .euc-csv
 
 CSV=	ken_all.csv
