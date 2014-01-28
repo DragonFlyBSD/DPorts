@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: www/libgtkhtml/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/libgtkhtml/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/www/libgtkhtml/Makefile,v 1.41 2008/08/23 18:23:00 mezz Exp $
 
 PORTNAME=	libgtkhtml
