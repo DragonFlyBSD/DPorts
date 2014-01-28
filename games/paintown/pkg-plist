@@ -1,4 +1,3 @@
-@comment $FreeBSD: games/paintown/pkg-plist 303693 2012-09-05 09:45:15Z decke $
 bin/paintown
 %%DATADIR%%/data/asteroids/explode/explode01.png
 %%DATADIR%%/data/asteroids/explode/explode02.png
