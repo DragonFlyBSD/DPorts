@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xpuzzletama/Makefile 333805 2013-11-14 23:18:08Z danilo $
+# $FreeBSD: games/xpuzzletama/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xpuzzletama
 PORTVERSION=	1.5b
