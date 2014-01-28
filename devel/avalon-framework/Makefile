@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: devel/avalon-framework/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/avalon-framework/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	avalon-framework
 PORTVERSION=	4.2.0
