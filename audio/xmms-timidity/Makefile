@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: audio/xmms-timidity/Makefile 335381 2013-12-01 12:57:00Z wg $
+# $FreeBSD: audio/xmms-timidity/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-timidity
 PORTVERSION=	0.0.3
