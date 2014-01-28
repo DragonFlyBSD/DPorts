@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libpanelappletmm/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/libpanelappletmm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libpanelappletmm
 PORTVERSION=	2.26.0
