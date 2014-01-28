@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: biology/ruby-bio/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/ruby-bio/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bio
 PORTVERSION=	1.4.1
@@ -22,7 +22,6 @@ USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXMLPARSER}
@@ -62,4 +61,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.rd.ja ${RUBY_MODDOCDIR}/ja/
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
