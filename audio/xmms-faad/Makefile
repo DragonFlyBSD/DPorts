@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-faad/Makefile 334760 2013-11-24 18:49:35Z bapt $
+# $FreeBSD: audio/xmms-faad/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMEPREFIX=	xmms-
 

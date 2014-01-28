@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-faad/Makefile.inc 334760 2013-11-24 18:49:35Z bapt $
+# $FreeBSD: audio/xmms-faad/Makefile.inc 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	faad2
 PORTVERSION=	2.7
