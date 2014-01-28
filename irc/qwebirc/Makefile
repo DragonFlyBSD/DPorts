@@ -1,5 +1,5 @@
 # Created by: Terry (tabmow@freenode.net)
-# $FreeBSD: irc/qwebirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/qwebirc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qwebirc
 PORTVERSION=	0.1
