@@ -1,5 +1,5 @@
 # Created by: rasmus@kaj.se
-# $FreeBSD: mail/gbuffy/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gbuffy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gbuffy
 PORTVERSION=	0.2.6
