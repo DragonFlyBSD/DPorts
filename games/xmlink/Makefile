@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xmlink/Makefile 333791 2013-11-14 21:07:17Z danilo $
+# $FreeBSD: games/xmlink/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmlink
 PORTVERSION=	5.5.2
