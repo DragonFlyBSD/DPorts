@@ -1,5 +1,5 @@
 # Created by: Jeroen Schot <schot@a-eskwadraat.nl>
-# $FreeBSD: x11/dmenu/Makefile 338929 2014-01-06 20:47:02Z bapt $
+# $FreeBSD: x11/dmenu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dmenu
 PORTVERSION=	4.5
