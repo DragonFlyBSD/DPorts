@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: graphics/jumpgis/Makefile 330378 2013-10-15 09:47:11Z bapt $
+# $FreeBSD: graphics/jumpgis/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jumpgis
 PORTVERSION=	1.1.2
