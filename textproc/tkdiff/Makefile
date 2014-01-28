@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: textproc/tkdiff/Makefile 336142 2013-12-11 04:39:47Z sbruno $
+# $FreeBSD: textproc/tkdiff/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tkdiff
 PORTVERSION=	4.2
