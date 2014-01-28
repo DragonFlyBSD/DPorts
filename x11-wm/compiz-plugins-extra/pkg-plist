@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-wm/compiz-plugins-extra/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 include/compiz/compiz-animationaddon.h
 lib/compiz/lib3d.so
 lib/compiz/lib3d.la
