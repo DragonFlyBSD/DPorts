@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/freetar/Makefile 336108 2013-12-10 20:44:05Z bapt $
+# $FreeBSD: archivers/freetar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freetar
 PORTVERSION=	0.9
