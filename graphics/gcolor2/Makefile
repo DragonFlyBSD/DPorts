@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak, piotr.smyrak@heron.pl
-# $FreeBSD: graphics/gcolor2/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD: graphics/gcolor2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gcolor2
 PORTVERSION=	0.4
