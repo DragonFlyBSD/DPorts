@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/pysol-sound-server/Makefile 328530 2013-09-27 22:36:11Z mva $
+# $FreeBSD: audio/pysol-sound-server/Makefile 341142 2014-01-26 00:01:13Z nemysis $
 
 PORTNAME=	pysol-sound-server
 PORTVERSION=	3.01
@@ -15,9 +15,12 @@ LIB_DEPENDS=	libsmpeg.so:${PORTSDIR}/multimedia/smpeg
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
+DEPRECATED=	Broken, abondonware, use pysolfc
+EXPIRATION_DATE=	2014-03-27
+
 USE_SDL=	mixer sdl
 USE_BZIP2=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 HAS_CONFIGURE=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
