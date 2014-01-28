@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-runtime/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD: x11/kde4-runtime/Makefile 339572 2014-01-13 07:23:43Z bapt $
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -70,10 +70,6 @@ RUN_DEPENDS+=	zeitgeist-daemon:${PORTSDIR}/sysutils/zeitgeist
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	lzma:${PORTSDIR}/archivers/xz
-.endif
 
 .if ${KDE4_PREFIX} != ${LOCALBASE}
 PLIST_SUB+=	HACK=""
