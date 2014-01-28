@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: emulators/uae/Makefile 331557 2013-10-25 05:43:41Z dinoex $
+# $FreeBSD: emulators/uae/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uae
 PORTVERSION=	0.8.29
