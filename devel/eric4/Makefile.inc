@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile.inc 339079 2014-01-08 09:26:46Z bsam $
+# $FreeBSD: devel/eric4/Makefile.inc 339634 2014-01-13 21:00:02Z rene $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric4:
@@ -21,7 +21,7 @@ RUN_DEPENDS?=	${PREFIX}/bin/eric4:${PORTSDIR}/devel/eric4
 I18N_LANG?=	ru
 INSTALL_CMD?=	install-i18n.py -p ${STAGEDIR}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 PLIST_FILES?=	%%DATADIR%%/i18n/${PORTNAME}_${I18N_LANG}.qm
 EXTRA_PATCHES?=	${.CURDIR}/../../devel/eric4/files/extra-patch-install-i18n.py
