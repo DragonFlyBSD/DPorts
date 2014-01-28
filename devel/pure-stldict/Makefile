@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-stldict/Makefile 338705 2014-01-05 00:19:04Z nemysis $
+# $FreeBSD: devel/pure-stldict/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pure-stldict
 PORTVERSION=	0.5
