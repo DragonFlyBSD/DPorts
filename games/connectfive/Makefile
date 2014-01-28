@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/connectfive/Makefile 332137 2013-10-30 15:59:07Z amdmi3 $
+# $FreeBSD: games/connectfive/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	connectfive
 PORTVERSION=	1.0.2
