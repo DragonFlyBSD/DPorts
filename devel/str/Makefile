@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: devel/str/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/str/Makefile 341333 2014-01-27 07:29:51Z bapt $
 
 PORTNAME=	str
 PORTVERSION=	0.9.12
@@ -10,13 +10,10 @@ MASTER_SITE_SUBDIR=	lib/${PORTNAME}
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	Generic String Library
 
+USES=		desthack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-MAN1=		str-config.1
-MAN3=		str.3
-
-NO_STAGE=	yes
 post-build:
 	@${ECHO_MSG} "===>  Use 'make check' to run a quick test suite."
 
