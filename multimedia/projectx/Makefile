@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: multimedia/projectx/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/projectx/Makefile 341255 2014-01-26 18:30:23Z nox $
 
 PORTNAME=	projectx
 PORTVERSION=	0.91.0
@@ -22,7 +22,6 @@ DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 WRKSRC=		${WRKDIR}/Project-X_${PORTVERSION}
 EXTRACT_BEFORE_ARGS+=	-aq
 
-NO_STAGE=	yes
 do-configure:
 	${SED} -e "s|^javac|${JAVAC}|" ${WRKSRC}/build.sh >${WRKSRC}/build-fbsd.sh
 
@@ -30,15 +29,24 @@ do-build:
 	cd ${WRKSRC} && ${MKDIR} build && ${SH} build-fbsd.sh
 
 do-install:
-	${MKDIR} ${DATADIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/ProjectX.jar ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/lib/commons-net-1.3.0.jar ${DATADIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/lib/jakarta-oro-2.0.8.jar ${DATADIR}/lib
-	${MKDIR} ${DATADIR}/htmls/images ${DATADIR}/htmls/de
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/htmls/*.html ${DATADIR}/htmls
-	${INSTALL_DATA} ${WRKSRC}/htmls/de/*.html ${DATADIR}/htmls/de
-	${INSTALL_DATA} ${WRKSRC}/htmls/images/* ${DATADIR}/htmls/images
-	${INSTALL_SCRIPT} ${WRKDIR}/project-x.sh ${PREFIX}/bin/project-x
+	${MKDIR} ${STAGEDIR}${DATADIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/ProjectX.jar \
+		${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/lib/commons-net-1.3.0.jar \
+		${STAGEDIR}${DATADIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/lib/jakarta-oro-2.0.8.jar \
+		${STAGEDIR}${DATADIR}/lib
+	${MKDIR} ${STAGEDIR}${DATADIR}/htmls/images \
+		${STAGEDIR}${DATADIR}/htmls/de
+	${INSTALL_DATA} ${WRKSRC}/*.txt \
+		${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/htmls/*.html \
+		${STAGEDIR}${DATADIR}/htmls
+	${INSTALL_DATA} ${WRKSRC}/htmls/de/*.html \
+		${STAGEDIR}${DATADIR}/htmls/de
+	${INSTALL_DATA} ${WRKSRC}/htmls/images/* \
+		${STAGEDIR}${DATADIR}/htmls/images
+	${INSTALL_SCRIPT} ${WRKDIR}/project-x.sh \
+		${STAGEDIR}${PREFIX}/bin/project-x
 
 .include <bsd.port.mk>
