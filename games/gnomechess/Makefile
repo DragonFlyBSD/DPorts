@@ -1,5 +1,5 @@
 # Created by: Jeremy Lea <reg@shale.csir.co.za>
-# $FreeBSD: games/gnomechess/Makefile 333561 2013-11-12 10:45:44Z johans $
+# $FreeBSD: games/gnomechess/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnomechess
 PORTVERSION=	3.10.2
