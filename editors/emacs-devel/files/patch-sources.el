@@ -1,5 +1,5 @@
 
-$FreeBSD: head/editors/emacs-devel/files/patch-sources.el 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: editors/emacs-devel/files/patch-sources.el 340725 2014-01-22 17:40:44Z mat $
 
 --- /dev/null
 +++ sources.el
