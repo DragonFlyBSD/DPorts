@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: x11-toolkits/libgdiplus/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/libgdiplus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libgdiplus
 PORTVERSION=	2.10
