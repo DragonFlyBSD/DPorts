@@ -1,4 +1,4 @@
-# $FreeBSD: mail/noattach/Makefile 336229 2013-12-11 21:55:33Z dinoex $
+# $FreeBSD: mail/noattach/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	noattach
 PORTVERSION=	1.2
