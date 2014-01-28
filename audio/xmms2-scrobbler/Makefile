@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2-scrobbler/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/xmms2-scrobbler/Makefile 340187 2014-01-18 15:28:48Z antoine $
 
 PORTNAME=	xmms2-scrobbler
 PORTVERSION=	0.4.0
@@ -16,7 +16,6 @@ LIB_DEPENDS=	libxmmsclient.so:${PORTSDIR}/audio/xmms2 \
 		libcurl.so:${PORTSDIR}/ftp/curl
 
 USES=		gmake pkgconfig
-NO_STAGE=	yes
 LDFLAGS+=	${PTHREAD_LIBS}
 
 PLIST_FILES=	bin/xmms2-scrobbler
@@ -24,15 +23,10 @@ PORTDOCS=	README
 
 SUB_FILES=	pkg-message
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 post-install:
-	@${ECHO_MSG}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_MSG}
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}; \
-	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTDOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
