@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/schiff/Makefile 335922 2013-12-08 19:04:54Z nemysis $
+# $FreeBSD: games/schiff/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	schiff
 PORTVERSION=	16
@@ -18,7 +18,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYGAME}
 
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 SUB_FILES=	${PORTNAME}
