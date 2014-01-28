@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/cursor-bluecurve-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/cursor-bluecurve-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cursor-bluecurve-theme
 
