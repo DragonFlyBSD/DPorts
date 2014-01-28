@@ -1,4 +1,3 @@
-@comment $FreeBSD: graphics/tgif/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 bin/tgif
 lib/X11/tgif/hicolor/22x22/apps/tgificon.png
 @dirrm lib/X11/tgif/hicolor/22x22/apps
