@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/texlive-base/pkg-plist 319700 2013-06-02 17:53:46Z hrs $
 bin/a2ping
 bin/afm2afm
 bin/afm2pl
