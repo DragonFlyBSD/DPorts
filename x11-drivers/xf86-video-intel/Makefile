@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: x11-drivers/xf86-video-intel/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-drivers/xf86-video-intel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xf86-video-intel
 PORTVERSION=	${INTEL_VERSION}
@@ -26,7 +26,7 @@ USE_XORG=	glproto \
 .include <bsd.port.options.mk>
 
 .if defined(WITH_NEW_XORG)
-.  if ${DFLYVERSION} < 300751
+.  if ${DFLYVERSION} < 300702
 INTEL_VERSION=	2.21.9
 INTEL_REVISION=	0
 CONFIGURE_ARGS+=	--enable-sna --with-default-accel=sna
@@ -42,7 +42,7 @@ LIB_DEPENDS+=	xcb-util:${PORTSDIR}/x11/xcb-util
 INTEL_VERSION=	2.21.15
 INTEL_REVISION=	1
 CONFIGURE_ENV+=	xorg_cv_cc_flag__Wno_maybe_uninitialized=no
-CONFIGURE_ARGS+=	--enable-sna
+CONFIGURE_ARGS+=	--enable-sna --with-default-accel=sna
 MAKE_JOBS_UNSAFE=yes
 PLIST_SUB+=	OLD="@comment "
 EXTRA_PATCHES+=	${PATCHDIR}/extra-src__sna__sna_threads.c \
