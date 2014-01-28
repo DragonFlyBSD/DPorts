@@ -1,5 +1,5 @@
 # Created by: Fredrik Carlsson <fredrik@wasadata.com>
-# $FreeBSD: games/tetrinet/Makefile 337984 2013-12-29 13:51:52Z johans $
+# $FreeBSD: games/tetrinet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tetrinet
 PORTVERSION=	0.11
