@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tdb@FreeBSD.org>
-# $FreeBSD: audio/squeezeboxserver-sqlplaylist/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/squeezeboxserver-sqlplaylist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sqlplaylist
 PORTVERSION=	2.5.3359
