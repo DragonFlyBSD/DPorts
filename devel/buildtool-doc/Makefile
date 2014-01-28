@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: devel/buildtool-doc/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/buildtool-doc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	buildtool-doc
 PORTVERSION=	0.16
