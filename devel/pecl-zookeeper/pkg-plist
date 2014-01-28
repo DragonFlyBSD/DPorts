@@ -1,3 +1,2 @@
-@comment $FreeBSD: devel/pecl-zookeeper/pkg-plist 311924 2013-02-08 09:09:47Z miwi $
 %%DATADIR%%/zookeeper-api.php
 @dirrmtry %%DATADIR%%

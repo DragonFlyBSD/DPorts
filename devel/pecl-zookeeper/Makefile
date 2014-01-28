@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/pecl-zookeeper/Makefile 332171 2013-10-30 20:55:19Z antoine $
+# $FreeBSD: devel/pecl-zookeeper/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zookeeper
 PORTVERSION=	0.2.2
