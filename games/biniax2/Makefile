@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/biniax2/Makefile 337050 2013-12-20 17:30:27Z amdmi3 $
+# $FreeBSD: games/biniax2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	biniax2
 PORTVERSION=	1.30
