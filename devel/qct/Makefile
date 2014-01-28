@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/qct/Makefile 328201 2013-09-24 21:58:37Z bsam $
+# $FreeBSD: devel/qct/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	qct
 PORTVERSION=	1.7
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}qt4-gui>=0:${PORTSDIR}/x11-toolkits/py-qt4-gui
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}qt4-gui>=0:${PORTSDIR}/x11-toolkits/py-qt4-gui
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 WRKSRC=		${WRKDIR}/qct
 OPTIONS_DEFINE=	DOCS
