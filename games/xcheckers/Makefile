@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: games/xcheckers/Makefile 333641 2013-11-13 02:09:18Z danilo $
+# $FreeBSD: games/xcheckers/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcheckers
 PORTVERSION=	2.2.3
