@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: x11/hs-X11/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: x11/hs-X11/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	X11
 PORTVERSION=	1.6.1.1
