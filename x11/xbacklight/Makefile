@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xbacklight/Makefile 333102 2013-11-07 14:13:14Z zeising $
+# $FreeBSD: x11/xbacklight/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xbacklight
 PORTVERSION=	1.2.1
