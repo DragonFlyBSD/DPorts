@@ -1,4 +1,3 @@
-@comment $FreeBSD: biology/paml/pkg-plist 300895 2012-07-14 12:56:14Z beat $
 bin/baseml
 bin/basemlg
 bin/chi2
