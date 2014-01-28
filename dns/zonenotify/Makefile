@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: dns/zonenotify/Makefile 331326 2013-10-22 21:30:14Z ehaupt $
+# $FreeBSD: dns/zonenotify/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zonenotify
 PORTVERSION=	0.1
