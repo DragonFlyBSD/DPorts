@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-qt4/Makefile 333634 2013-11-13 00:38:50Z avilla $
+# $FreeBSD: net-im/telepathy-qt4/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	telepathy-qt4
 PORTVERSION=	0.9.3
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libtelepathy-farsight.so:${PORTSDIR}/net-im/telepathy-farsight \
 
 USE_GNOME=	libxslt:build
 USE_GSTREAMER=	yes
-USE_PYTHON_BUILD=	2.5+
+USE_PYTHON_BUILD=	yes
 USE_QT4=	corelib dbus gui network qtestlib_build xml \
 		moc_build qmake_build rcc_build uic_build
 USES=		cmake pkgconfig
