@@ -1,5 +1,5 @@
 # Created by: cartola (Carlos E. G. Carvalho)
-# $FreeBSD: graphics/vigra/Makefile 336260 2013-12-12 13:01:40Z bapt $
+# $FreeBSD: graphics/vigra/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	vigra
 PORTVERSION=	1.9.0
@@ -47,7 +47,7 @@ CONFLICTS_BUILD=	python3*
 CMAKE_ARGS+=	-DWITH_VIGRANUMPY=1
 USE_GCC=	yes
 USE_FORTRAN=	yes
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 BUILD_DEPENDS+=	nosetests:${PORTSDIR}/devel/py-nose
 BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/numpy/core/numeric.py:${PORTSDIR}/math/py-numpy
 #BUILD_DEPENDS+=	sphinx-build:${PORTSDIR}/textproc/py-sphinx
