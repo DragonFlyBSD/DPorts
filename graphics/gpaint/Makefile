@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/gpaint/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gpaint/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gpaint
 PORTVERSION=	0.3.3
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNU_ALPHA}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A small-scale painting program for GNOME
+COMMENT=	Small-scale painting program for GNOME
 
 USES=		pkgconfig
 USE_GNOME=	libgnomeprint libgnomeprintui
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/gpaint-2 %%DATADIR%%/glade/gpaint.glade
 PLIST_DIRS=	%%DATADIR%%/glade %%DATADIR%%
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|_RESPONSE_DISCARD|_RESPONSE_NO|g' ${WRKSRC}/src/drawing.c
