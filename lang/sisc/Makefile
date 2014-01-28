@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: lang/sisc/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: lang/sisc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sisc
 PORTVERSION=	1.16.6
