@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/glmaze/Makefile 337631 2013-12-27 00:21:56Z amdmi3 $
+# $FreeBSD: games/glmaze/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glmaze
 PORTVERSION=	1.1a
