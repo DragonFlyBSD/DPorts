@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-fonts/liberation-fonts-ttf/pkg-plist 307394 2012-11-13 20:36:49Z thierry $
 %%FONTDIR%%/AUTHORS
 %%FONTDIR%%/LiberationMono-Bold.ttf
 %%FONTDIR%%/LiberationMono-BoldItalic.ttf
