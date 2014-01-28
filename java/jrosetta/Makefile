@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: java/jrosetta/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jrosetta/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jrosetta
 PORTVERSION=	1.0.4
