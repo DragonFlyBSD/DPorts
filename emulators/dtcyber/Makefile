@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: emulators/dtcyber/Makefile 336405 2013-12-14 00:03:57Z danilo $
+# $FreeBSD: emulators/dtcyber/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dtcyber
 PORTVERSION=	2.0b1
