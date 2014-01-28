@@ -1,21 +1,23 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/trayer/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: x11/trayer/Makefile 341411 2014-01-27 14:43:22Z madpilot $
 
 PORTNAME=	trayer
-PORTVERSION=	1.1.5
+PORTVERSION=	1.1.6
 CATEGORIES=	x11
-MASTER_SITES=	http://github.com/sargon/${PORTNAME}-srg/tarball/${PORTNAME}-${PORTVERSION}/
-DISTNAME=	sargon-${PORTNAME}-srg-${PORTNAME}-${PORTVERSION}-${GITVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Lightweight GTK2-based systray for UNIX desktop
 
-GITVERSION=	0-g5353f80
 USE_GNOME=	gtk20 glib20 pango atk
+USE_GITHUB=	yes
 USES=		iconv gmake pkgconfig
 USE_XORG=	xmu
 MAKE_ARGS=	"PREFIX=${PREFIX}"
-WRKSRC=		${WRKDIR}/sargon-${PORTNAME}-srg-${GITVERSION:S/^0-g//}
+
+GH_ACCOUNT=	sargon
+GH_PROJECT=	${PORTNAME}-srg
+GH_COMMIT=	072566c
+GH_TAGNAME=	${GH_COMMIT}
 
 PORTDOCS=	README CREDITS CHANGELOG
 
