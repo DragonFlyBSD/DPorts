@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: irc/ruby-irc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/ruby-irc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	irc
 PORTVERSION=	0.14
