@@ -1,5 +1,5 @@
 # Created by: Brian Dean <bsd@FreeBSD.org>
-# $FreeBSD: devel/avrdude/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/avrdude/Makefile 341395 2014-01-27 12:59:15Z bapt $
 
 PORTNAME=	avrdude
 PORTVERSION=	5.11
@@ -12,13 +12,9 @@ COMMENT=	Program for programming the on-chip memory of Atmel AVR CPUs
 
 LICENSE=	GPLv2
 
-MAN1=		avrdude.1
-MANCOMPRESSED=	no
-
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
