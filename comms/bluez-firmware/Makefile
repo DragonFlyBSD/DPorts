@@ -1,5 +1,5 @@
 # Created by: dirkx@webweaving.org
-# $FreeBSD: comms/bluez-firmware/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: comms/bluez-firmware/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bluez-firmware
 PORTVERSION=	1.2
