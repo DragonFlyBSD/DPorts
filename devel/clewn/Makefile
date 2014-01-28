@@ -1,5 +1,5 @@
 # Created by: Giacomo Mariani <giacomomariani_at_yahoo_dot_it>
-# $FreeBSD: devel/clewn/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/clewn/Makefile 340757 2014-01-23 00:09:17Z bapt $
 
 PORTNAME=	clewn
 PORTVERSION=	1.14
@@ -10,11 +10,10 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 MAINTAINER=	giacomomariani@yahoo.it
 COMMENT=	Clewn provides Gdb support within Vim
 
-RUN_DEPENDS=	vim>=6.3:${PORTSDIR}/editors/vim
+RUN_DEPENDS=	vim:${PORTSDIR}/editors/vim
 
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	vimdir=${PREFIX}/share/vim/vimfiles
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
