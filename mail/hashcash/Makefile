@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: mail/hashcash/Makefile 330457 2013-10-15 20:34:06Z marino $
+# $FreeBSD: mail/hashcash/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hashcash
 PORTVERSION=	1.22
