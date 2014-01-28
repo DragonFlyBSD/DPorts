@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: games/xneko/Makefile 334918 2013-11-26 06:05:19Z dinoex $
+# $FreeBSD: games/xneko/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xneko
 PORTVERSION=	1.0
