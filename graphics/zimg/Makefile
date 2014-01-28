@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: graphics/zimg/Makefile 337769 2013-12-27 17:52:17Z bapt $
+# $FreeBSD: graphics/zimg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zimg
 PORTVERSION=	5.0.0
