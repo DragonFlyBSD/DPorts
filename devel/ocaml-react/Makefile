@@ -1,5 +1,5 @@
 # Created by: Jaap Boender <jaapb@kerguelen.org>
-# $FreeBSD: devel/ocaml-react/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/ocaml-react/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	react
 PORTVERSION=	0.9.2
