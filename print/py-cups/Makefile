@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/py-cups/Makefile 336203 2013-12-11 19:02:47Z sunpoet $
+# $FreeBSD: print/py-cups/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	cups
 PORTVERSION=	1.9.66
@@ -20,7 +20,7 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_BZIP2=	yes
 USE_PYDISTUTILS=yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=		iconv
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/cups.so
