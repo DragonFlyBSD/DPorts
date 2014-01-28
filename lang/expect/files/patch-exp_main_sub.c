@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/expect/files/patch-exp_main_sub.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: lang/expect/files/patch-exp_main_sub.c 340725 2014-01-22 17:40:44Z mat $
 
 --- exp_main_sub.c	2002/08/24 08:04:43	1.1
 +++ exp_main_sub.c	2002/08/24 08:15:33
