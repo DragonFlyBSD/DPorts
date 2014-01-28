@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: graphics/php5-ffmpeg/Makefile 329915 2013-10-09 17:35:36Z wg $
+# $FreeBSD: graphics/php5-ffmpeg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.6.0
