@@ -1,5 +1,5 @@
 # Created by: Peter Wemm <peter@FreeBSD.org>
-# $FreeBSD: editors/hexpert/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: editors/hexpert/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hexpert
 PORTVERSION=	2.4.1
