@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/taskcoach/Makefile 336970 2013-12-20 03:28:22Z kevlo $
+# $FreeBSD: deskutils/taskcoach/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	taskcoach
 PORTVERSION=	1.3.34
