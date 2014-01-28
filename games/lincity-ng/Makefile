@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev
-# $FreeBSD: games/lincity-ng/Makefile 334087 2013-11-17 14:57:03Z danilo $
+# $FreeBSD: games/lincity-ng/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lincity-ng
 PORTVERSION=	2.0
