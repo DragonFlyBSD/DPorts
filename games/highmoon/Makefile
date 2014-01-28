@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/highmoon/Makefile 332450 2013-11-02 03:42:07Z danilo $
+# $FreeBSD: games/highmoon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	highmoon
 PORTVERSION=	1.2.4
