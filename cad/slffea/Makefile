@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/slffea/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/slffea/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	slffea
 PORTVERSION=	1.5
@@ -32,7 +32,6 @@ EXEC=	beam/beam/bm beam/beam_gr/bmpost brick/brick/br \
 	truss/truss_gr/tspost
 PLIST_FILES=	${EXEC:T:S/^/bin\//}
 
-NO_STAGE=	yes
 post-patch:
 	@(${FIND} ${WRKSRC} -name Makefile | ${XARGS} \
 		${REINPLACE_CMD} -E -e "s|^CC = .*|CC = ${CC} ${CFLAGS}|g" \
@@ -44,7 +43,7 @@ post-patch:
 
 do-install:
 .for file in ${EXEC}
-	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
 .include <bsd.port.mk>
