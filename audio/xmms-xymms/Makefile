@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-xymms/Makefile 333584 2013-11-12 16:04:51Z ehaupt $
+# $FreeBSD: audio/xmms-xymms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xymms
 DISTVERSION=	0.9.1
