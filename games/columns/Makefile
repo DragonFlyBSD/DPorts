@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/columns/Makefile 332146 2013-10-30 16:21:08Z danilo $
+# $FreeBSD: games/columns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	columns
 PORTVERSION=	1.2b
