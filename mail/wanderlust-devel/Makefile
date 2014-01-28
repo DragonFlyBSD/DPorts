@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: mail/wanderlust-devel/Makefile 330275 2013-10-14 06:52:32Z bapt $
+# $FreeBSD: mail/wanderlust-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wanderlust
 PORTVERSION=	2.15.9.b.${SNAPDATE}
