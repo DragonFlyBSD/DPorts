@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: print/teTeX-base/files/updmap.wrapper.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: print/teTeX-base/files/updmap.wrapper.in 340872 2014-01-24 00:14:07Z mat $
 EXECBASE=${0##*/}
 EXECPREFIX=%%PREFIX%%/%%UPDMAPDIR%%/updmap
 EXECSUFFIX=dist
