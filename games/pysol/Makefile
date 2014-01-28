@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/pysol/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/pysol/Makefile 341138 2014-01-25 23:39:21Z nemysis $
 
 PORTNAME=	pysol
 PORTVERSION=	4.82
@@ -22,6 +22,9 @@ USE_PYTHON=	yes
 NO_BUILD=	yes
 
 MAN6=		pysol.6
+
+DEPRECATED=	Broken, abondonware, use pysolfc
+EXPIRATION_DATE=	2014-03-27
 
 NO_STAGE=	yes
 post-patch:
