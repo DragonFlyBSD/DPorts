@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: editors/semi-emacs21/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/semi-emacs21/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	SEMI, Library of MIME feature for GNU Emacs for emacs21
