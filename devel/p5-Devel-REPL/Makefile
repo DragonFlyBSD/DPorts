@@ -1,8 +1,8 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: devel/p5-Devel-REPL/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD: devel/p5-Devel-REPL/Makefile 339895 2014-01-16 05:23:33Z ashish $
 
 PORTNAME=	Devel-REPL
-PORTVERSION=	1.003014
+PORTVERSION=	1.003025
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Modern Perl interactive shell
 
-BUILD_DEPENDS=	p5-Moose>=0.74:${PORTSDIR}/devel/p5-Moose \
+BUILD_DEPENDS=	p5-Moose>=0.93:${PORTSDIR}/devel/p5-Moose \
 	p5-MooseX-Object-Pluggable>=0.0009:${PORTSDIR}/devel/p5-MooseX-Object-Pluggable \
 	p5-MooseX-Getopt>=0.18:${PORTSDIR}/devel/p5-MooseX-Getopt \
 	p5-MooseX-AttributeHelpers>=0.16:${PORTSDIR}/devel/p5-MooseX-AttributeHelpers \
