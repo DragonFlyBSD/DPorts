@@ -1,5 +1,5 @@
 # Created by: chris
-# $FreeBSD: mail/spampd/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/spampd/Makefile 340396 2014-01-20 13:44:34Z mat $
 
 PORTNAME=	spampd
 PORTVERSION=	2.30
@@ -15,11 +15,11 @@ RUN_DEPENDS=	spamc:${PORTSDIR}/mail/p5-Mail-SpamAssassin \
 
 NO_BUILD=	yes
 PLIST_FILES=	sbin/spampd
-USES=		perl5
+USES=		perl5 shebangfix
+SHEBANG_FILES=	spampd
 USE_RC_SUBR=	spampd
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/spampd ${PREFIX}/sbin
+	@${INSTALL_SCRIPT} ${WRKSRC}/spampd ${STAGEDIR}${PREFIX}/sbin
 
 .include <bsd.port.mk>
