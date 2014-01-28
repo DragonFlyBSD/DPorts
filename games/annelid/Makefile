@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/annelid/Makefile 331992 2013-10-29 20:24:04Z danilo $
+# $FreeBSD: games/annelid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	annelid
 PORTVERSION=	1
