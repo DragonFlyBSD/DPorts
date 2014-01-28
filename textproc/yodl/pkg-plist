@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/yodl/pkg-plist 335078 2013-11-28 07:15:22Z pgj $
 bin/yodl
 bin/yodl2html
 bin/yodl2latex
