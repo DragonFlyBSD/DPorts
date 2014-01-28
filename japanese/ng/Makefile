@@ -1,5 +1,5 @@
 # Created by: Kawaguti Ginga <ginga@athena.club.ne.jp>
-# $FreeBSD: japanese/ng/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: japanese/ng/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ng
 PORTVERSION=	1.4.4
