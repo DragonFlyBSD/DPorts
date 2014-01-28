@@ -1,10 +1,10 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: java/eclipse-ecj/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-ecj/Makefile 339388 2014-01-10 22:24:49Z jgh $
 
 PORTNAME=	ecj
 PORTVERSION=	3.8.2
 CATEGORIES=	java devel
-MASTER_SITES=	ECLIPSE
+MASTER_SITES=	http://archive.eclipse.org/eclipse/downloads/drops/
 MASTER_SITE_SUBDIR=	R-${PORTVERSION}-${DROPDATE}
 PKGNAMEPREFIX=	eclipse-
 DISTNAME=	ecjsrc-${PORTVERSION}
@@ -30,9 +30,9 @@ DROPDATE=	201301310800
 PLIST_FILES=	bin/${PORTNAME}.sh \
 		%%JAVAJARDIR%%/${PORTNAME}-${PORTVERSION}.jar
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.jar ${JAVAJARDIR}/${PORTNAME}-${PORTVERSION}.jar
-	${INSTALL_SCRIPT} ${WRKDIR}/ecj.sh ${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.jar ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}-${PORTVERSION}.jar
+	${INSTALL_SCRIPT} ${WRKDIR}/ecj.sh ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>
