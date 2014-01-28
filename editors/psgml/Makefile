@@ -1,5 +1,5 @@
 # Created by: Shigeyuki Fukushima <shige@FreeBSD.org>
-# $FreeBSD: editors/psgml/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/psgml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	psgml
 PORTVERSION=	1.3.2
