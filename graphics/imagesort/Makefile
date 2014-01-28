@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: graphics/imagesort/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/imagesort/Makefile 340738 2014-01-22 22:07:20Z antoine $
 
 PORTNAME=	imagesort
 PORTVERSION=	2.0
@@ -12,9 +12,9 @@ COMMENT=	A flexible X utility for managing many image files
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
-		jpeg:${PORTSDIR}/graphics/jpeg \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 OPTIONS_DEFINE=	DOCS
 
@@ -23,9 +23,6 @@ USE_GNOME=	imlib
 
 PORTDOCS=	README imagesortrc.sample
 PLIST_FILES=	bin/imagesort
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -37,12 +34,8 @@ post-patch:
 		 s|^#endif.*|#endif|' ${WRKSRC}/imagesort.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/imagesort ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/imagesort ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
