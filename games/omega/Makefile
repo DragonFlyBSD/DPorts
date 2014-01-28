@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov <andy@icc.surw.chel.su>
-# $FreeBSD: games/omega/Makefile 332784 2013-11-04 21:13:39Z danilo $
+# $FreeBSD: games/omega/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	omega
 PORTVERSION=	0.90.4
