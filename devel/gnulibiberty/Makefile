@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: devel/gnulibiberty/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/gnulibiberty/Makefile 341378 2014-01-27 11:43:25Z bapt $
 
 PORTNAME=	gnulibiberty
 PORTVERSION=	2.19.1
@@ -14,12 +14,12 @@ COMMENT=	Miscellaneous GNU functions
 
 WRKSRC=		${WRKDIR}/binutils-${PORTVERSION}/libiberty
 
+USES=		gmake
+
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 CONFIGURE_ARGS=	--enable-install-libiberty
 GNU_CONFIGURE=	yes
 
 CONFLICTS=	freelibiberty-[0-9]*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
