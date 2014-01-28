@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/libxul/Makefile 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD: www/libxul/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	libxul
 DISTVERSION=	24.2.0
@@ -24,7 +24,7 @@ WRKSRC=		${WRKDIR}/mozilla-esr24
 CONFLICTS=	libxul-1.9.*
 
 USE_AUTOTOOLS=	autoconf213:env
-USE_PYTHON_BUILD=-2.7
+USE_PYTHON_BUILD=2
 WANT_GNOME=	yes
 USE_QT4=	# empty
 QT_NONSTANDARD=	yes
