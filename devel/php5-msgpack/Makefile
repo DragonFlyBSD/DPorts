@@ -1,5 +1,5 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD: devel/php5-msgpack/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: devel/php5-msgpack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	msgpack
 PORTVERSION=	2012.05.05
