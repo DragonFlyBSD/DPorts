@@ -1,5 +1,5 @@
 # Created by: HONDA Yasuhiro <honda@kashio.info.mie-u.ac.jp>
-# $FreeBSD: japanese/ng-canna/Makefile 330460 2013-10-15 21:17:55Z eadler $
+# $FreeBSD: japanese/ng-canna/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-canna
 
