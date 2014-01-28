@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: misc/quick-lounge-applet/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/quick-lounge-applet/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/misc/quick-lounge-applet/Makefile,v 1.15 2010/11/16 10:06:22 kwm Exp $
 
 PORTNAME=	quick-lounge-applet
