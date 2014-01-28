@@ -1,5 +1,5 @@
 # Created by: jnlin@csie.nctu.edu.tw
-# $FreeBSD: databases/pecl-handlersocket/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/pecl-handlersocket/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	handlersocket
 PORTVERSION=	0.3.1
@@ -23,5 +23,4 @@ CONFIGURE_ARGS=	--with-handlersocket=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
