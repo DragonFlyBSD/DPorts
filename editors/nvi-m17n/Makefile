@@ -1,8 +1,9 @@
 # Created by: Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: editors/nvi-m17n/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/nvi-m17n/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nvi
 PORTVERSION=	1.79.20040608
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES?=	editors
 MASTER_SITES=	ftp://ftp.mk.bsdclub.org/pub/FreeBSD/distfiles/	\
@@ -14,7 +15,7 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	nvi-m17n-1.79-20040608.diff.gz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A clone of vi/ex, with multilingual patch, no default settings
+COMMENT=	Clone of vi/ex, with multilingual patch, no default settings
 
 PATCH_DIST_ARGS=	-d ${WRKSRC}/.. --forward --quiet -E -p0 -f
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
@@ -23,10 +24,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
 CONFIGURE_ARGS=	--enable-multibyte --program-prefix=n
 
-MAN1=		nvi.1
-MLINKS=		nvi.1 nex.1  nvi.1 nview.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -34,8 +31,8 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/../docs.m17n/README.english \
-		${PREFIX}/share/vi/
+		${STAGEDIR}${PREFIX}/share/vi/
 	${INSTALL_DATA} ${WRKSRC}/../docs.m17n/README.japanese \
-		 ${PREFIX}/share/vi/
+		${STAGEDIR}${PREFIX}/share/vi/
 
 .include <bsd.port.post.mk>
