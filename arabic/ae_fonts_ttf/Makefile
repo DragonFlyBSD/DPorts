@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: arabic/ae_fonts_ttf/Makefile 328292 2013-09-25 13:57:30Z vanilla $
+# $FreeBSD: arabic/ae_fonts_ttf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ae_fonts1_ttf
 PORTVERSION=	1.1
