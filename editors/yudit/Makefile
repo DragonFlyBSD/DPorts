@@ -1,5 +1,5 @@
 # Created by: rch@richard.eu.org
-# $FreeBSD: editors/yudit/Makefile 339033 2014-01-07 20:42:47Z antoine $
+# $FreeBSD: editors/yudit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yudit
 PORTVERSION=	2.9.2
