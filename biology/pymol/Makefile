@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
-# $FreeBSD: biology/pymol/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD: biology/pymol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pymol
 PORTVERSION=	${VERSION}.${SVNREVISION}
