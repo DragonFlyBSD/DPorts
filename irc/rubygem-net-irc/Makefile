@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: irc/rubygem-net-irc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/rubygem-net-irc/Makefile 340903 2014-01-24 14:49:29Z miwi $
 
 PORTNAME=	net-irc
 PORTVERSION=	0.0.9
@@ -13,5 +13,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
