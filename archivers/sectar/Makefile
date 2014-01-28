@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: archivers/sectar/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: archivers/sectar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sectar
 PORTVERSION=	1.02
