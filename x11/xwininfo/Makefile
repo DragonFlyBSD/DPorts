@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xwininfo/Makefile 328644 2013-09-29 03:14:14Z eadler $
+# $FreeBSD: x11/xwininfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xwininfo
 PORTVERSION=	1.1.3
