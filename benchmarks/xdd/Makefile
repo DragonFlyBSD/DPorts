@@ -1,5 +1,5 @@
 # Created by: Gerhard Gonter <g.gonter@ieee.org>
-# $FreeBSD: benchmarks/xdd/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD: benchmarks/xdd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xdd
 PORTVERSION=	65
