@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/samba36/files/samba.in 334130 2013-11-17 22:16:16Z timur $
+# $FreeBSD: net/samba36/files/samba.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: nmbd smbd
