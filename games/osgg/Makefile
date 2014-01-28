@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/osgg/Makefile 337103 2013-12-20 23:32:26Z amdmi3 $
+# $FreeBSD: games/osgg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	osgg
 PORTVERSION=	0.99
