@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-autoipd/Makefile 336457 2013-12-14 16:25:21Z kwm $
+# $FreeBSD: net/avahi-autoipd/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/net/avahi-autoipd/Makefile,v 1.1 2007/07/31 18:24:12 ahze Exp $
 
 PORTREVISION=	0
