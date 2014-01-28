@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: archivers/ocaml-zip/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD: archivers/ocaml-zip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zip
 PORTVERSION=	1.04
