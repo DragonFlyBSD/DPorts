@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/mp3guessenc/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
+# $FreeBSD: audio/mp3guessenc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp3guessenc
 PORTVERSION=	0.25.0
