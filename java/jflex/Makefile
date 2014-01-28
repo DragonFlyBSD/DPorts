@@ -1,5 +1,5 @@
 # Created by: Conor McDermottroe <ports@mcdermottroe.com>
-# $FreeBSD: java/jflex/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jflex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jflex
 PORTVERSION=	1.4.2
