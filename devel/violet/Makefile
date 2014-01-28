@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/violet/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: devel/violet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	violet
 PORTVERSION=	0.21.1
