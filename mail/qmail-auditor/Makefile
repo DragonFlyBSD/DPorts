@@ -1,5 +1,5 @@
 # Created by: Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
-# $FreeBSD: mail/qmail-auditor/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/qmail-auditor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qmail-auditor
 PORTVERSION=	0.47
