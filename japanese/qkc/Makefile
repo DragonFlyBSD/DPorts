@@ -1,5 +1,5 @@
 # Created by: Masafumi NAKANE <max@FreeBSD.org>
-# $FreeBSD: japanese/qkc/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/qkc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qkc
 PORTVERSION=	1.0
