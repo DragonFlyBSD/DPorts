@@ -1,5 +1,5 @@
 
-$FreeBSD: graphics/py-graph-dot/files/patch-setup.py 324859 2013-08-17 17:19:06Z demon $
+$FreeBSD: graphics/py-graph-dot/files/patch-setup.py 340725 2014-01-22 17:40:44Z mat $
 
 --- setup.py.orig
 +++ setup.py

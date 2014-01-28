@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: graphics/py-graph-dot/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-graph-dot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	graph-dot
 PORTVERSION=	1.8.2
