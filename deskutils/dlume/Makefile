@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/dlume/Makefile 338298 2013-12-31 13:17:05Z antoine $
+# $FreeBSD: deskutils/dlume/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dlume
 PORTVERSION=	0.2.4
