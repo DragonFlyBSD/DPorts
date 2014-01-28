@@ -1,5 +1,5 @@
 # Created by: Mitsuru YOSHIDA
-# $FreeBSD: devel/scalatest/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/scalatest/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scalatest
 PORTVERSION=	1.6.1
