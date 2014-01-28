@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: textproc/xom/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xom/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xom
 PORTVERSION=	1.1
