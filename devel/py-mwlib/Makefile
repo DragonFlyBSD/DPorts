@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-mwlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-mwlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mwlib
 PORTVERSION=	0.15.11
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}parsing>0:${PORTSDIR}/devel/py-parsing \
 		${PYTHON_PKGNAMEPREFIX}sqlite3dbm>=0:${PORTSDIR}/databases/py-sqlite3dbm
 
 USE_ZIP=		yes
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
