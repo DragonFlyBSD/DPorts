@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: mail/pecl-pop3/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/pecl-pop3/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	pop3
 PORTVERSION=	1.0.2
@@ -18,5 +18,4 @@ USE_PHP_BUILD=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	pop3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
