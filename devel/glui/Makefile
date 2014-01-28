@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: devel/glui/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/glui/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glui
 PORTVERSION=	2.36
