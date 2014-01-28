@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: graphics/wings/Makefile 338996 2014-01-07 10:34:48Z amdmi3 $
+# $FreeBSD: graphics/wings/Makefile 339398 2014-01-11 02:49:32Z amdmi3 $
 
 PORTNAME=	wings
 PORTVERSION=	1.4.1
@@ -40,9 +40,9 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 
 do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/lib/erlang/lib/${DISTNAME}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} "src ebin fonts plugins textures shaders patches" \
 		${STAGEDIR}${PREFIX}/lib/erlang/lib/${DISTNAME}
+	${LN} -sf ${DISTNAME} ${STAGEDIR}${PREFIX}/lib/erlang/lib/${PORTNAME}
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/src/${PORTNAME}.icon ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.ico
 
