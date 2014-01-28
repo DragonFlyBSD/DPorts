@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsamn.edu.ar>
-# $FreeBSD: biology/embassy/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD: biology/embassy/Makefile 339842 2014-01-15 22:48:32Z bapt $
 
 PORTNAME=	embassy
 PORTVERSION=	6.2.0
@@ -75,7 +75,6 @@ EMBASSY_APPS=		DOMAINATRIX EMNU ESIM4 HMMER MEMENEW MSE PHYLIPNEW \
 			VIENNA MIRA IPRSCAN CBSTOOLS
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 .include <bsd.port.options.mk>
 
 .for app in ${EMBASSY_APPS}
@@ -127,4 +126,4 @@ do-install:
 	  ${MAKE_ARGS} ${INSTALL_TARGET}
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
