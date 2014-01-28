@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@SYSTEM.PL>
-# $FreeBSD: lang/tinypy/Makefile 336560 2013-12-15 17:21:06Z wg $
+# $FreeBSD: lang/tinypy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tinypy
 PORTVERSION=	1.1
