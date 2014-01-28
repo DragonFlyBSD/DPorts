@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/enscribe/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/enscribe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	enscribe
 PORTVERSION=	0.1.0
