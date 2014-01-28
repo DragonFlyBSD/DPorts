@@ -1,5 +1,5 @@
 # Created by: Sergey Samoyloff <gonza@techline.ru>
-# $FreeBSD: mail/popa3d/Makefile 332209 2013-10-31 07:51:50Z bapt $
+# $FreeBSD: mail/popa3d/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	popa3d
 PORTVERSION=	1.0.3
