@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-Pmw/Makefile 334301 2013-11-19 11:15:07Z gahr $
+# $FreeBSD: x11-toolkits/py-Pmw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Pmw
 PORTVERSION=	1.3.2
