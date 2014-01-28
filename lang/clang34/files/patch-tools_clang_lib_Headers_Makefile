@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/clang34/files/patch-tools_clang_lib_Headers_Makefile 338603 2014-01-04 00:17:38Z brooks $
+$FreeBSD: lang/clang34/files/patch-tools_clang_lib_Headers_Makefile 340725 2014-01-22 17:40:44Z mat $
 
 --- tools/clang/lib/Headers/Makefile.orig
 +++ tools/clang/lib/Headers/Makefile

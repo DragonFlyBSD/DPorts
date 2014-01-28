@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/clang34/files/patch-tools_clang_lib_Analysis_PrintfFormatString.cpp 310189 2013-01-10 16:34:44Z brooks $
+$FreeBSD: lang/clang34/files/patch-tools_clang_lib_Analysis_PrintfFormatString.cpp 340725 2014-01-22 17:40:44Z mat $
 
 --- tools/clang/lib/Analysis/PrintfFormatString.cpp.orig
 +++ tools/clang/lib/Analysis/PrintfFormatString.cpp
