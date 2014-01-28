@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: ftp/wmget/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/wmget/Makefile 341105 2014-01-25 21:12:24Z bapt $
 
 PORTNAME=	wmget
 PORTVERSION=	0.6.0
@@ -13,22 +13,19 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Dock app for Window Maker providing wget functionality
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
 USE_XORG=	x11 xpm
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAKE_ENV+=	${CONFIGURE_ENV}
 
-MAN1=		wmget.1
-PLIST_FILES=	bin/wmget
+PLIST_FILES=	bin/wmget \
+		man/man1/wmget.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmget ${PREFIX}/bin
-.if !defined(NO_INSTALL_MANPAGES)
-	${INSTALL_MAN} ${WRKSRC}/wmget.1 ${PREFIX}/man/man1
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/wmget ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/wmget.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
