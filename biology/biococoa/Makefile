@@ -1,4 +1,4 @@
-# $FreeBSD: biology/biococoa/Makefile 329819 2013-10-08 18:34:45Z theraven $
+# $FreeBSD: biology/biococoa/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	biococoa
 PORTVERSION=	2.2.2
