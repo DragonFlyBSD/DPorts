@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: cad/gdsreader/Makefile 338552 2014-01-03 15:53:42Z adamw $
+# $FreeBSD: cad/gdsreader/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gdsreader
 PORTVERSION=	0.3.2
