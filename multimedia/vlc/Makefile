@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: multimedia/vlc/Makefile 337086 2013-12-20 19:55:29Z nox $
+# $FreeBSD: multimedia/vlc/Makefile 341382 2014-01-27 11:54:47Z mat $
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.2
@@ -399,7 +399,7 @@ WITH_CDROM_DEVICE?=/dev/acd0
 WITH_DVD_DEVICE?=/dev/acd0
 .endif
 
-# If you change this value, the dependancy will not be recorded
+# If you change this value, the dependency will not be recorded
 .if !defined(WITH_VLC_DEFAULT_FONT)
 WITH_VLC_DEFAULT_FONT=		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf
 WITH_VLC_DEFAULT_MONO_FONT=	${LOCALBASE}/lib/X11/fonts/bitstream-vera/VeraMono.ttf
