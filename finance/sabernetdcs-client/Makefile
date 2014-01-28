@@ -1,5 +1,5 @@
 # Created by: Matthew Ranostay <mranostay@saberlogic.com>
-# $FreeBSD: finance/sabernetdcs-client/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/sabernetdcs-client/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sabernetdcs
 PORTVERSION=	2.0.3
@@ -18,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyro>=0:${PORTSDIR}/devel/py-pyro
 
 USE_GNOME=	pygtk2
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_BZIP2=	yes
 DOCSDIR=	${PREFIX}/share/doc/sndcs
