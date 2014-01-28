@@ -1,5 +1,5 @@
 #Korean PDF resources
-# $FreeBSD: korean/xpdf/files/dot.xpdfrc.in 316988 2013-05-01 04:46:29Z hrs $
+# $FreeBSD: korean/xpdf/files/dot.xpdfrc.in 340872 2014-01-24 00:14:07Z mat $
 cidToUnicode	Adobe-Korea1	%%DATADIR%%/korean/Adobe-Korea1.cidToUnicode
 unicodeMap	ISO-2022-KR	%%DATADIR%%/korean/ISO-2022-KR.unicodeMap
 cMapDir		Adobe-Korea1	%%DATADIR%%/korean/CMap
