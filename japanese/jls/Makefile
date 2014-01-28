@@ -1,5 +1,5 @@
 # Created by: shige
-# $FreeBSD: japanese/jls/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/jls/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ls
 PORTVERSION=	0.5
