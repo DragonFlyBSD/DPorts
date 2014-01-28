@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: textproc/p5-xmltv/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-xmltv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmltv
 PORTVERSION=	0.5.61
