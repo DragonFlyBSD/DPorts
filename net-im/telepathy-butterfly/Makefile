@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-butterfly/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/telepathy-butterfly/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/net-im/telepathy-butterfly/Makefile,v 1.3 2009/01/08 06:51:59 marcus Exp $
 
 PORTNAME=	telepathy-butterfly
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/papyon/__init__.py:${PORTSDIR}/net-im/papyo
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/papyon/__init__.py:${PORTSDIR}/net-im/papyon \
     		${PYTHON_SITELIBDIR}/telepathy/__init__.py:${PORTSDIR}/net-im/telepathy-python
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${PREFIX}
 USE_GMAKE=	yes
