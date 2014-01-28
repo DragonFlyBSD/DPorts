@@ -1,5 +1,5 @@
 # Created by: pat
-# $FreeBSD: astro/wmjupiter/Makefile 331558 2013-10-25 06:28:14Z vanilla $
+# $FreeBSD: astro/wmjupiter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmjupiter
 PORTVERSION=	1.2
