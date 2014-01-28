@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: games/xosmulti/Makefile 333797 2013-11-14 21:23:14Z danilo $
+# $FreeBSD: games/xosmulti/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xosmulti
 PORTVERSION=	1.00
