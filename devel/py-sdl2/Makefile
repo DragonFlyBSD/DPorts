@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-sdl2/Makefile 338432 2014-01-02 10:18:37Z mva $
+# $FreeBSD: devel/py-sdl2/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	sdl2
 PORTVERSION=	0.8.0
@@ -13,7 +13,7 @@ COMMENT=	Python bindings to the SDL2 libraries
 LICENSE=	ZLIB
 
 USE_SDL=		sdl2 gfx2 image2 ttf2 mixer2
-USE_PYTHON=		2.7+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
