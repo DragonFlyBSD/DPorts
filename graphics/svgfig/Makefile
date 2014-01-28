@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/svgfig/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/svgfig/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	SVGFig
 PORTVERSION=	1.1.6
@@ -14,7 +14,7 @@ COMMENT=	Draw mathematical figures in SVG using Python
 
 WRKSRC=		${WRKDIR}/${PORTNAME:tl}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
