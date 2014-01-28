@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: x11/emprint/Makefile 329516 2013-10-05 22:07:06Z gblach $
+# $FreeBSD: x11/emprint/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	emprint
 PORTVERSION=	20130520
