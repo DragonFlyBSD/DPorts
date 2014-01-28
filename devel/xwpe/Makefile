@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: devel/xwpe/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/xwpe/Makefile 341341 2014-01-27 08:41:45Z bapt $
 
 PORTNAME=	xwpe
 PORTVERSION=	1.5.30a
@@ -10,20 +10,15 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE} \
 MASTER_SITE_SUBDIR=	apps/editors/X
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A Borland-like IDE programming environment
+COMMENT=	Borland-like IDE programming environment
 
-USE_GMAKE=	yes
+USES=		desthack gmake
+DESTDIRNAME=	STAGEDIR
 USE_XORG=	sm ice x11
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--libdir=${PREFIX}/share
+CONFIGURE_ARGS=	--libdir=\$${STAGEDIR}${PREFIX}/share
 ALL_TARGET=	# none
 
-MAN1=		xwpe.1
-MLINKS=		xwpe.1 xwe.1 \
-		xwpe.1 wpe.1 \
-		xwpe.1 we.1
-
-NO_STAGE=	yes
 post-patch:
 .for file in we_prog.c we_fl_unix.c
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g ; \
