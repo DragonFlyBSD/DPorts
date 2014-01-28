@@ -1,5 +1,5 @@
 # Created by: Beat Gaetzi <beat@chruetertee.ch>
-# $FreeBSD: deskutils/thinkingrock/Makefile 328354 2013-09-26 13:14:25Z beat $
+# $FreeBSD: deskutils/thinkingrock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	thinkingrock
 PORTVERSION=	2.2.1
