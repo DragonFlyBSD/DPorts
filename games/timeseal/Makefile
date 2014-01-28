@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: games/timeseal/Makefile 334039 2013-11-17 00:23:51Z danilo $
+# $FreeBSD: games/timeseal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	timeseal
 PORTVERSION=	1.0
