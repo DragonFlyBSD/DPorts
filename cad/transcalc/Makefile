@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/transcalc/Makefile 338184 2013-12-30 22:19:48Z antoine $
+# $FreeBSD: cad/transcalc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	transcalc
 PORTVERSION=	0.14
