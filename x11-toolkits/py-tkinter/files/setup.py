@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: x11-toolkits/py-tkinter/files/setup.py 313167 2013-03-01 20:12:01Z lwhsu $"
+__version__ = "$FreeBSD: x11-toolkits/py-tkinter/files/setup.py 340872 2014-01-24 00:14:07Z mat $"
 
 import os, string
 
