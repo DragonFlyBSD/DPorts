@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: cad/klayout/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD: cad/klayout/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	klayout
 PORTVERSION=	0.21.19
