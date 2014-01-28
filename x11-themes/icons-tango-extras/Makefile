@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/icons-tango-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/icons-tango-extras/Makefile 341358 2014-01-27 09:35:06Z miwi $
 
 PORTNAME=	icons-tango-extras
 PORTVERSION=	0.1.0
@@ -18,9 +18,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libexec/icon-name-mapping:${PORTSDIR}/x11-themes/ico
 RUN_DEPENDS=	${LOCALBASE}/share/icons/Tango/16x16/actions/add.png:${PORTSDIR}/x11-themes/icons-tango
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=	gmake
 USE_GNOME=	intlhack
 INSTALLS_ICONS=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
