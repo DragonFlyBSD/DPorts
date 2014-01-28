@@ -1,5 +1,5 @@
 # Created by: David Siebörger <drs@rucus.ru.ac.za>
-# $FreeBSD: games/xrick/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xrick/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrick
 PORTVERSION=	021212
