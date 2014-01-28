@@ -1,5 +1,5 @@
 
-$FreeBSD: graphics/xmms-paranormal/files/patch-actuators.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: graphics/xmms-paranormal/files/patch-actuators.c 340725 2014-01-22 17:40:44Z mat $
 
 --- actuators.c.orig	Sun Aug 22 17:55:01 2004
 +++ actuators.c	Sun Aug 22 17:56:02 2004
