@@ -1,5 +1,5 @@
 # Created by: Julian Stacey <jhs@FreeBSD.org>
-# $FreeBSD: comms/hylafax/Makefile 336710 2013-12-17 10:39:33Z dinoex $
+# $FreeBSD: comms/hylafax/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hylafax
 PORTVERSION=	6.0.6
