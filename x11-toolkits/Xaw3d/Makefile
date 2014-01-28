@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11-toolkits/Xaw3d/Makefile 331595 2013-10-25 15:08:37Z dinoex $
+# $FreeBSD: x11-toolkits/Xaw3d/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Xaw3d
 PORTVERSION=	1.5E
