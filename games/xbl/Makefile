@@ -1,5 +1,5 @@
 # Created by: pgs (original)
-# $FreeBSD: games/xbl/Makefile 333621 2013-11-12 20:58:24Z danilo $
+# $FreeBSD: games/xbl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xbl
 PORTVERSION=	1.1.6
