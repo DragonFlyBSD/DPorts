@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/love07/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD: devel/love07/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	love
 PORTVERSION=	0.7.2
