@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@FreeBSD.org>
-# $FreeBSD: astro/wmsolar/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD: astro/wmsolar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmsolar
 PORTVERSION=	1.0
