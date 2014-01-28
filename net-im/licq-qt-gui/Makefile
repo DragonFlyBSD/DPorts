@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael272home.com>
-# $FreeBSD: net-im/licq-qt-gui/Makefile 336722 2013-12-17 13:20:40Z dinoex $
+# $FreeBSD: net-im/licq-qt-gui/Makefile 339400 2014-01-11 06:33:06Z dinoex $
 
 PORTNAME=	qt4-gui
 PORTVERSION=	1.8.0
@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 RUN_DEPENDS=	${LOCALBASE}/lib/licq/protocol_icq.so:${PORTSDIR}/${LICQ_PORT}-icq
 
+USE_GCC=	yes
 USE_XORG=	x11 xext ice xscrnsaver
 USES=		cmake
 USE_QT4=	qmake_build moc_build rcc_build uic_build linguist_build
