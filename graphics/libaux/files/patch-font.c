@@ -1,5 +1,5 @@
 
-$FreeBSD: graphics/libaux/files/patch-font.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: graphics/libaux/files/patch-font.c 340725 2014-01-22 17:40:44Z mat $
 
 --- font.c	2001/03/14 10:51:36	1.1
 +++ font.c	2001/03/14 10:51:48
