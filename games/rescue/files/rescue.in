@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/rescue/files/rescue.in 305790 2012-10-12 17:26:26Z pawel $
+# $FreeBSD: games/rescue/files/rescue.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
