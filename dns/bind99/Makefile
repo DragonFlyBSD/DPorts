@@ -1,4 +1,4 @@
-# $FreeBSD: dns/bind99/Makefile 341073 2014-01-25 18:28:03Z garga $
+# $FreeBSD: dns/bind99/Makefile 341417 2014-01-27 15:43:42Z garga $
 
 PORTNAME?=	bind99
 PORTVERSION=	9.9.4.2
@@ -111,7 +111,6 @@ GSSAPI_CONFIGURE_WITH=	gssapi
 
 .if (${ARCH} == "x86_64")
 ARCH=		x86_64
-CFLAGS+=	-fPIC
 .endif
 
 .if !${PORT_OPTIONS:MLINKS} || ${PORT_OPTIONS:MREPLACE_BASE}
