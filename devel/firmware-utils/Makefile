@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: devel/firmware-utils/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/firmware-utils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	firmware-utils
 PORTVERSION=	20111222
