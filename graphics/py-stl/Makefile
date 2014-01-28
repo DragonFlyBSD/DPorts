@@ -1,5 +1,5 @@
 # Created by: Roland Smith <rsmith@xs4all.nl>
-# $FreeBSD: graphics/py-stl/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-stl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=		stl
 PORTVERSION=		3.1
@@ -17,7 +17,7 @@ LICENSE=		BSD
 OPTIONSFILE=		${PORT_DBDIR}/py-${PORTNAME}/options
 
 USE_ZIP=		YES
-USE_PYTHON=		2.5+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	YES
 PYDISTUTILS_EGGINFO=	py_stl-${PORTVERSION}-py${PYTHON_VER}.egg-info
 
