@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: japanese/asterisk-sounds/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/asterisk-sounds/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asterisk
 PORTVERSION=	1.8

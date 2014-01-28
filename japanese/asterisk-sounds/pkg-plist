@@ -1,4 +1,3 @@
-@comment $FreeBSD: japanese/asterisk-sounds/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 share/asterisk/sounds/ja/1-for-am-2-for-pm.gsm
 share/asterisk/sounds/ja/agent-alreadyon.gsm
 share/asterisk/sounds/ja/agent-incorrect.gsm
