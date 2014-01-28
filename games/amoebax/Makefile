@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/amoebax/Makefile 328651 2013-09-29 08:38:19Z antoine $
+# $FreeBSD: games/amoebax/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	amoebax
 PORTVERSION=	0.2.1
