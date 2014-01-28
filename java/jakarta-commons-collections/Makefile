@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-collections/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jakarta-commons-collections/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	commons-collections
 PORTVERSION=	3.2.1
