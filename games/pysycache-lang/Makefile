@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/pysycache-lang/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/pysycache-lang/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lang
 PORTVERSION=	2.0
