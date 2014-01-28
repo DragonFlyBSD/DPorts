@@ -1,5 +1,5 @@
 # Created by: gnn@FreeBSD.org
-# $FreeBSD: devel/zookeeper/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: devel/zookeeper/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	zookeeper
 PORTVERSION=	3.3.6
@@ -49,7 +49,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 BUILD_DEPENDS+=	ant:${PORTSDIR}/devel/apache-ant
 PLIST_SUB+=	WITH_PYTHON=""
 .else

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: devel/zookeeper/files/zookeeper.in 304838 2012-09-25 14:47:21Z lwhsu $
+# $FreeBSD: devel/zookeeper/files/zookeeper.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: zookeeper
 # REQUIRE: LOGIN
