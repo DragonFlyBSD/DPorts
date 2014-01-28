@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: editors/zim/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: editors/zim/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	zim
 PORTVERSION=	0.60
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>=0:${PORTSDIR}/devel/py-xdg \
 INSTALLS_ICONS=	yes
 USES=		gettext desktop-file-utils
 USE_GNOME=	gtk20 pygtk2 pygobject
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 MAN1=		zim.1
