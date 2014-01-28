@@ -1,13 +1,15 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: mail/swaks/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/swaks/Makefile 340457 2014-01-20 19:39:18Z beat $
 
 PORTNAME=	swaks
-PORTVERSION=	20120320.0
+PORTVERSION=	20130209.0
 CATEGORIES=	mail
 MASTER_SITES=	http://jetmore.org/john/code/swaks/
 
 MAINTAINER=	beat@FreeBSD.org
 COMMENT=	Swiss Army Knife SMTP transaction tester
+
+LICENSE=	GPLv2
 
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -19,7 +21,6 @@ PERL_AUTHEN_NTLM_DESC=	Add support for AUTH NTLM
 USES=		perl5
 USE_PERL5=	run
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPERL_NET_DNS}
@@ -39,7 +40,7 @@ do-build:
 		${WRKSRC}/${PORTNAME} > ${WRKSRC}/${PORTNAME}.pl
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME}.pl ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
