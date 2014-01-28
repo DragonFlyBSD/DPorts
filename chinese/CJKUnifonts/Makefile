@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/CJKUnifonts/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/CJKUnifonts/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	CJKUnifonts
 PORTVERSION=	0.2.20080216.1
