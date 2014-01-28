@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@luna2.org>
-# $FreeBSD: audio/timidity++-emacs/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/timidity++-emacs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-emacs
 
