@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/ccsm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/ccsm/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	ccsm
 PORTVERSION=	0.8.4
@@ -16,7 +16,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USES=		gettext
 USE_GNOME=	pygtk2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 INSTALLS_EGGINFO=	yes
 
