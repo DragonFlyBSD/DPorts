@@ -1,8 +1,8 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: games/mahjong/Makefile 334285 2013-11-19 07:41:52Z madpilot $
+# $FreeBSD: games/mahjong/Makefile 340145 2014-01-18 02:49:11Z danilo $
 
 PORTNAME=	mahjong
-PORTVERSION=	1.13
+PORTVERSION=	1.14
 CATEGORIES=	games net
 MASTER_SITES=	http://mahjong.julianbradfield.org/Source/%SUBDIR%/
 MASTER_SITE_SUBDIR=	. Old
@@ -32,6 +32,9 @@ post-patch:
 		 s|^PERL|#PERL|g ; \
 		 s|^INST|#INST|g ; \
 		 s|make |$$(MAKE) |g' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e \
+		's|"gcc"|"${CC}"| ; \
+		 s|^gcc |${CC} |' ${WRKSRC}/makedep
 	@${REINPLACE_CMD} -e \
 		's|SOL_TCP|IPPROTO_TCP|' ${WRKSRC}/sysdep.c
 
