@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <graudeejs@gmail.com>
-# $FreeBSD: audio/shairport/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/shairport/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	shairport
 PORTVERSION=	0.05
