@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/cyrus2courier/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD: mail/cyrus2courier/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cyrus2courier
 DISTVERSION=	1.4
