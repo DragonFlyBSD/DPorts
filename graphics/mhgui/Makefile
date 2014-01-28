@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/mhgui/Makefile 328214 2013-09-24 23:24:51Z amdmi3 $
+# $FreeBSD: graphics/mhgui/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mhgui
 PORTVERSION=	0.2
