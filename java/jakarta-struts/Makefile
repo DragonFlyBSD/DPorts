@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@toha.org.ua>
-# $FreeBSD: java/jakarta-struts/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/jakarta-struts/Makefile 339310 2014-01-10 03:02:03Z tabthorpe $
 
 PORTNAME=	jakarta-struts
 PORTVERSION=	1.2.4
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=struts/binaries
 DIST_SUBDIR=	jakarta
 
-MAINTAINER=	toha@toha.org.ua
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Struts framework
 
 USE_JAVA=	yes
