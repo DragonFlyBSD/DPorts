@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-ipdb/Makefile 333392 2013-11-10 14:02:44Z wg $
+# $FreeBSD: devel/py-ipdb/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	ipdb
 PORTVERSION=	0.8
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	IPython-enabled pdb
 
 LICENSE=	GPLv2
