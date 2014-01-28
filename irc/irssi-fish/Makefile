@@ -1,5 +1,5 @@
 # Created by: Jens Holmqvist <zparta@hispan.se>
-# $FreeBSD: irc/irssi-fish/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/irssi-fish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	irssi-fish
 DISTVERSION=	1.00-RC5
