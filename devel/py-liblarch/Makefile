@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-liblarch/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-liblarch/Makefile 340928 2014-01-24 19:38:37Z rm $
 
 PORTNAME=	liblarch
 PORTVERSION=	2.1.0
@@ -12,12 +12,12 @@ LICENSE=	LGPL3
 
 USE_GITHUB=	yes
 USE_GNOME=	pygobject
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 GH_ACCOUNT=	${PORTNAME}
 GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	76d6490
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
