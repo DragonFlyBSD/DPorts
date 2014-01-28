@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-wm/awesome/pkg-plist 330217 2013-10-13 10:13:32Z garga $
 bin/awesome
 bin/awesome-client
 etc/xdg/awesome/rc.lua
