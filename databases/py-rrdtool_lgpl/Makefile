@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: databases/py-rrdtool_lgpl/Makefile 328563 2013-09-28 11:13:15Z mva $
+# $FreeBSD: databases/py-rrdtool_lgpl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	rrdtool_lgpl
 PORTVERSION=	1.0b1
@@ -14,7 +14,7 @@ COMMENT=	Python interface to RRDTool, the graphing and logging utility
 
 LIB_DEPENDS=	librrd.so:${PORTSDIR}/databases/rrdtool
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	py-rrdtool
