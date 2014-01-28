@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/clang31/files/patch-utils_llvm-build_llvmbuild_main.py 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: lang/clang31/files/patch-utils_llvm-build_llvmbuild_main.py 340725 2014-01-22 17:40:44Z mat $
 
 --- utils/llvm-build/llvmbuild/main.py.orig
 +++ utils/llvm-build/llvmbuild/main.py
