@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xsokoban/Makefile 333953 2013-11-16 01:04:26Z danilo $
+# $FreeBSD: games/xsokoban/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xsokoban
 PORTVERSION=	3.3c
