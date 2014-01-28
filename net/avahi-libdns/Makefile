@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-libdns/Makefile 336457 2013-12-14 16:25:21Z kwm $
+# $FreeBSD: net/avahi-libdns/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTREVISION=	0
 CATEGORIES=	net
