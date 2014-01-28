@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: deskutils/planner.el/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/planner.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	planner.el
 PORTVERSION=	3.42
