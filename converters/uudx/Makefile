@@ -1,5 +1,5 @@
 # Created by: ABURAYER Rewsirow <pcs51674@asciinet.or.jp>
-# $FreeBSD: converters/uudx/Makefile 339243 2014-01-09 14:34:22Z bapt $
+# $FreeBSD: converters/uudx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uudx
 PORTVERSION=	2.99
