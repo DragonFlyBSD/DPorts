@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: dns/dnsproxy/Makefile 329634 2013-10-06 22:19:27Z marino $
+# $FreeBSD: dns/dnsproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dnsproxy
 PORTVERSION=	1.16
