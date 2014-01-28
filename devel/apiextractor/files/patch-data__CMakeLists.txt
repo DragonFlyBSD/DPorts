@@ -1,4 +1,4 @@
-$FreeBSD: devel/apiextractor/files/patch-data__CMakeLists.txt 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: devel/apiextractor/files/patch-data__CMakeLists.txt 340725 2014-01-22 17:40:44Z mat $
 --- ./data/CMakeLists.txt.orig	2011-11-18 19:10:10.000000000 +0100
 +++ ./data/CMakeLists.txt	2011-12-15 22:29:55.000000000 +0100
 @@ -11,7 +11,7 @@
