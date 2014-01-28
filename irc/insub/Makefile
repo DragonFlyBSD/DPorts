@@ -1,5 +1,5 @@
 # Created by: Alfred Perlstein <alfred@FreeBSD.org>
-# $FreeBSD: irc/insub/Makefile 328792 2013-09-30 14:16:36Z adamw $
+# $FreeBSD: irc/insub/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	insub
 PORTVERSION=	15.1
