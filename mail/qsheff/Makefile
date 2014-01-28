@@ -1,5 +1,5 @@
 # Created by: Ozkan KIRIK <ozkan@enderunix.org>
-# $FreeBSD: mail/qsheff/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/qsheff/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qsheff-II
 PORTVERSION=	2.1.r3
