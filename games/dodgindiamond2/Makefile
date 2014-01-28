@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/dodgindiamond2/Makefile 334106 2013-11-17 17:10:56Z danilo $
+# $FreeBSD: games/dodgindiamond2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		dodgindiamond2
 PORTVERSION=		0.2.2
