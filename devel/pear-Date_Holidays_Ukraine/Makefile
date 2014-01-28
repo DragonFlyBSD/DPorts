@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Ukraine/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: devel/pear-Date_Holidays_Ukraine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Date_Holidays_Ukraine
 PORTVERSION=	0.1.2
