@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/gnudoku/Makefile 332112 2013-10-30 14:11:22Z amdmi3 $
+# $FreeBSD: games/gnudoku/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	GNUDoku
 PORTVERSION=	0.93
