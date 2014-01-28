@@ -1,5 +1,5 @@
 # Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-# $FreeBSD: audio/wmix/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD: audio/wmix/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmix
 PORTVERSION=	3.1
