@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: print/cm-super/Makefile 331256 2013-10-22 12:12:56Z hrs $
+# $FreeBSD: print/cm-super/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cm-super
 PORTVERSION=	0.3.4
