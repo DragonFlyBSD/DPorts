@@ -1,5 +1,5 @@
 # Created by: Keith Gaughan <k@stereochro.me>
-# $FreeBSD: mail/greyfix/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/greyfix/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	greyfix
 PORTVERSION=	0.3.9
