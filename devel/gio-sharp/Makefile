@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: devel/gio-sharp/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gio-sharp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gio-sharp
 PORTVERSION=	2.22.3
