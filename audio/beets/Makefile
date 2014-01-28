@@ -1,8 +1,9 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/beets/Makefile 335852 2013-12-07 22:08:49Z feld $
+# $FreeBSD: audio/beets/Makefile 341385 2014-01-27 12:14:09Z koobs $
 
 PORTNAME=	beets
 PORTVERSION=	1.3.1
+PORTREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 
@@ -20,7 +21,7 @@ MAN1=	beet.1
 MAN5=	beetsconfig.5
 
 NO_STAGE=	yes
-USE_PYTHON=	2.7+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 OPTIONS_DEFINE=	BEATPORT CHROMA DISCOGS LASTFM FFMPEG REPLAYGAIN WEB
@@ -34,7 +35,7 @@ REPLAYGAIN_DESC=	Normalize Audio Loudness
 WEB_DESC=	Webserver Music Player Plugin
 
 CHROMA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyacoustid>=0:${PORTSDIR}/audio/py-pyacoustid
-BEATPORT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:${PORTSDIR}/www/py-requests
+BEATPORT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests1>=0:${PORTSDIR}/www/py-requests1
 DISCOGS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}discogs-client>=0:${PORTSDIR}/audio/py-discogs-client
 FFMPEG_RUN_DEPENDS=	ffmpeg>=2:${PORTSDIR}/multimedia/ffmpeg
 LASTFM_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pylast>=0:${PORTSDIR}/audio/py-pylast
