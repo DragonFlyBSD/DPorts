@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/semantik/Makefile 336452 2013-12-14 14:57:24Z mva $
+# $FreeBSD: deskutils/semantik/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	semantik
 PORTVERSION=	0.8.4
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 USE_KDE4=	kdehier kdelibs kdeprefix
 USE_OCAML=	yes
 NO_OCAML_RUNDEPENDS=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_QT4=	corelib gui linguist_build svg webkit xml \
 		moc_build qmake_build uic_build
 USES=		pkgconfig shebangfix
