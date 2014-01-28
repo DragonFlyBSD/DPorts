@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: japanese/bookview/Makefile 339276 2014-01-09 20:51:09Z antoine $
+# $FreeBSD: japanese/bookview/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bookview
 PORTVERSION=	3.2.1
