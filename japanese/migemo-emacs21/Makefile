@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: japanese/migemo-emacs21/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/migemo-emacs21/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-${EMACS_PORT_NAME}
 COMMENT=	Japanese incremental search tool for emacs21
