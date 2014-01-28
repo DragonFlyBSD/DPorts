@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/unlzx/Makefile 331324 2013-10-22 21:13:49Z ehaupt $
+# $FreeBSD: archivers/unlzx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unlzx
 PORTVERSION=	1.1
