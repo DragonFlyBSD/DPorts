@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: audio/xmms-defx/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-defx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-defx
 PORTVERSION=	0.9.9
