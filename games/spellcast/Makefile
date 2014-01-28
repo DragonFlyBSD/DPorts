@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/spellcast/Makefile 333465 2013-11-11 01:19:32Z danilo $
+# $FreeBSD: games/spellcast/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spellcast
 PORTVERSION=	1.2
