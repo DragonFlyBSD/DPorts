@@ -1,5 +1,5 @@
 # Created by: Zenin <zenin@archive.rhps.org>
-# $FreeBSD: games/wmeyes/Makefile 333614 2013-11-12 20:27:33Z danilo $
+# $FreeBSD: games/wmeyes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmeyes
 PORTVERSION=	1.2
