@@ -1,5 +1,5 @@
 # Created by: ports@rbt.ca
-# $FreeBSD: security/p5-GD-SecurityImage/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-GD-SecurityImage/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	GD-SecurityImage
 PORTVERSION=	1.72
