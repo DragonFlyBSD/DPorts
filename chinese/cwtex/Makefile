@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/cwtex/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD: chinese/cwtex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cwtex
 PORTVERSION=	16.6
