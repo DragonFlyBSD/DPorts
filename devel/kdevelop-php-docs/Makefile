@@ -1,30 +1,26 @@
-# $FreeBSD: devel/kdevelop-php-docs/Makefile 332996 2013-11-06 14:47:14Z rakuco $
+# $FreeBSD: devel/kdevelop-php-docs/Makefile 340104 2014-01-17 20:34:33Z makc $
 
 PORTNAME=	kdevelop-php-docs
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDEVELOP_BRANCH}/kdevelop/${KDEVELOP_VERSION}/src
-DIST_SUBDIR=	KDE
+DIST_SUBDIR=	KDE/kdevelop/${KDEVELOP_VERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	PHP documentation for KDevelop
 
-LIB_DEPENDS=	kdevplatforminterfaces:${PORTSDIR}/devel/kdevplatform
+LIB_DEPENDS=	libkdevplatforminterfaces.so:${PORTSDIR}/devel/kdevplatform
 
 USE_KDE4=	kdehier kdelibs kdeprefix automoc4
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
 USES=		cmake
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
-PLIST_SUB+=	NLS=""
-.else
-CMAKE_ARGS+=	-DBUILD_po:BOOL=Off
-PLIST_SUB+=	NLS="@comment "
-.endif
+NLS_USES=	gettext
+NLS_CMAKE_OFF=	-DBUILD_po:BOOL=FALSE
 
 .include <bsd.port.mk>
