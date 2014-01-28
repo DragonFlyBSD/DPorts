@@ -1,5 +1,5 @@
 # Created by: The 244th namelessness at 2ch.net
-# $FreeBSD: japanese/font-mplus/Makefile 330478 2013-10-16 04:56:32Z hrs $
+# $FreeBSD: japanese/font-mplus/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mplus
 PORTVERSION=	2.2.4.055
