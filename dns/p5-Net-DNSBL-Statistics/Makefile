@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: dns/p5-Net-DNSBL-Statistics/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-DNSBL-Statistics/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	Net-DNSBL-Statistics
 PORTVERSION=	0.12
@@ -7,7 +7,7 @@ CATEGORIES=	dns mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tjs@cdpa.nsysu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gather DNSBL Statistics
 
 RUN_DEPENDS=	p5-Net-DNS-Codes>=0.09:${PORTSDIR}/dns/p5-Net-DNS-Codes \
