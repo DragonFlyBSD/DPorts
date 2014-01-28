@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gorm/Makefile 329783 2013-10-08 13:28:22Z theraven $
+# $FreeBSD: devel/gorm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gorm
 PORTVERSION=	1.2.20
