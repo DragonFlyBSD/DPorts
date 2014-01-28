@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/libtomoe-gtk/Makefile 330233 2013-10-13 15:24:56Z ume $
+# $FreeBSD: japanese/libtomoe-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libtomoe-gtk
 PORTVERSION=	0.6.0
