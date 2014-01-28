@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-wxPython28-unicode/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-wxPython28-unicode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 WITH_WXPYTHON_UNICODE=	yes
 
