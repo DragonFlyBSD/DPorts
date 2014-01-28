@@ -1,5 +1,5 @@
 # Created by: FreeBSD Bio porters (bio@freebsd.net)
-# $FreeBSD: biology/biojava/Makefile 338550 2014-01-03 15:46:52Z adamw $
+# $FreeBSD: biology/biojava/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	biojava
 DISTVERSION=	1.7
