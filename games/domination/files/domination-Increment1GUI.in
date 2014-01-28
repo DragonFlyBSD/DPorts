@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/domination/files/domination-Increment1GUI.in 305276 2012-10-04 19:40:39Z pawel $
+# $FreeBSD: games/domination/files/domination-Increment1GUI.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
