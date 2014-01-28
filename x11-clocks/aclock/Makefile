@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: x11-clocks/aclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/aclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aclock
 PORTVERSION=	0.4.0
