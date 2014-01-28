@@ -1,5 +1,5 @@
 # Created by: bf2006a@yahoo.com
-# $FreeBSD: games/xwordpy/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/xwordpy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xwordpy
 PORTVERSION=	1.0
@@ -12,7 +12,7 @@ MAINTAINER=	bf@FreeBSD.org
 COMMENT=	An application for solving crossword puzzles in the Across Lite format
 
 USE_GNOME=	pygtk2
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 
 PLIST_DIRS=	%%DATADIR%%
