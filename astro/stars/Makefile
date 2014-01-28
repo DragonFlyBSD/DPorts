@@ -1,5 +1,5 @@
 # Created by: searle
-# $FreeBSD: astro/stars/Makefile 331558 2013-10-25 06:28:14Z vanilla $
+# $FreeBSD: astro/stars/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stars
 PORTVERSION=	1.0
