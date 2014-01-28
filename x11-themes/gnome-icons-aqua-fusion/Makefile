@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: x11-themes/gnome-icons-aqua-fusion/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gnome-icons-aqua-fusion/Makefile 341370 2014-01-27 10:59:45Z miwi $
 
 # Port logic gratuitously stolen from x11-themes/kde-icons-noia by
 # lioux@.  If it's not defined here and you think it should be, check
@@ -21,6 +21,5 @@ RESTRICTED=	${REASON}
 USE_BZIP2=	yes
 WRKSRC=		"${WRKDIR}/AquaFusion"
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../gnome-icons/bsd.gnome-icons.mk"
 .include <bsd.port.mk>
