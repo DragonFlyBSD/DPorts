@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-webmail/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: mail/horde-webmail/Makefile 341402 2014-01-27 13:30:28Z miwi $
 
 PORTNAME=	webmail
 PORTVERSION=	5.1.3
@@ -26,7 +26,6 @@ USE_HORDE_RUN=	Horde_Role \
 		trean \
 		turba
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
