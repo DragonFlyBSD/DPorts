@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: astro/wmspaceweather/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/wmspaceweather/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmspaceweather
 PORTVERSION=	1.04
