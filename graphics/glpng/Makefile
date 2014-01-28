@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/glpng/Makefile 330580 2013-10-17 01:01:53Z amdmi3 $
+# $FreeBSD: graphics/glpng/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glpng
 PORTVERSION=	1.45
