@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-gd/Makefile 336231 2013-12-11 21:57:31Z dinoex $
+# $FreeBSD: graphics/ruby-gd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gd
 PORTVERSION=	0.8.0
