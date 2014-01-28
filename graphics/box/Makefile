@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: graphics/box/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/box/Makefile 340000 2014-01-16 23:40:54Z nemysis $
 
 PORTNAME=	box
 PORTVERSION=	0.4.0
@@ -22,31 +22,21 @@ CONFIGURE_ARGS=	--with-cairo
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
 
-MAN1=		${PORTNAME}.1
-
 PORTDOCS=	AUTHORS ChangeLog README STYLE TODO
 PORTEXAMPLES=	*
 
-PLIST_SUB+=	PLIST_VER=${PORTVERSION:R}
-
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+PLIST_SUB+=	PLIST_VER=${PORTVERSION:R}
 
 post-patch:
 	${TOUCH} ${WRKSRC}/man/${PORTNAME}.sgml
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	@(cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${EXAMPLESDIR})
-.endif
+	@(cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
 regression-test: build
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} check)
