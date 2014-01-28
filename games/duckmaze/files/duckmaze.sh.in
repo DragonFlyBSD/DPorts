@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: games/duckmaze/files/duckmaze.sh.in 328709 2013-09-29 16:30:49Z nemysis $
+# $FreeBSD: games/duckmaze/files/duckmaze.sh.in 339714 2014-01-14 20:28:49Z nemysis $
 #
 
 cd "%%DATADIR%%"
-exec /usr/bin/env python ./duckmaze.py
+exec %%PYTHON_CMD%% ./duckmaze.py "${@}"
