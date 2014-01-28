@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: graphics/gcolor/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gcolor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gcolor
 PORTVERSION=	0.4
@@ -16,7 +16,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
