@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-djblets/Makefile 336425 2013-12-14 09:10:39Z mva $
+# $FreeBSD: www/py-djblets/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	djblets
 PORTVERSION=	0.7.9
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django14>=1.4.3<1.5:${PORTSDIR}/www/py-djang
 		${PYTHON_PKGNAMEPREFIX}pytz>0:${PORTSDIR}/devel/py-pytz
 
 USES=		shebangfix
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Djblets
 
