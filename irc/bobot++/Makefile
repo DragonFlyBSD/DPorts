@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: irc/bobot++/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/bobot++/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bobotpp
 PORTVERSION=	2.2.3
