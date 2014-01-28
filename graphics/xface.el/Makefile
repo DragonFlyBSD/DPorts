@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@FreeBSD.org>
-# $FreeBSD: graphics/xface.el/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/xface.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xface.el
 PORTVERSION=	1.3.6.24
