@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/py-gstreamer/Makefile 335337 2013-11-30 19:09:40Z kwm $
+# $FreeBSD: multimedia/py-gstreamer/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.20 2008/07/26 17:21:38 marcus Exp $
 
 PORTNAME=	gstreamer
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2
 
 USES=		gmake pathfix pkgconfig
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_BZIP2=	yes
 USE_GNOME=	pygobject
 USE_GSTREAMER=	yes
