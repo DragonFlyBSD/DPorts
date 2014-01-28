@@ -1,4 +1,4 @@
-$FreeBSD: emulators/xmame/files/patch-src-unix-video-drivers-xf86_dga1.c 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: emulators/xmame/files/patch-src-unix-video-drivers-xf86_dga1.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/unix/video-drivers/xf86_dga1.c.orig	Sun Mar 20 22:10:35 2005
 +++ src/unix/video-drivers/xf86_dga1.c	Sun Mar 20 22:12:24 2005
