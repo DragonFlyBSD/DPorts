@@ -1,8 +1,8 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/legend-of-edgar/Makefile 331907 2013-10-28 23:32:20Z nemysis $
+# $FreeBSD: games/legend-of-edgar/Makefile 339798 2014-01-15 18:18:55Z nemysis $
 
 PORTNAME=	edgar
-DISTVERSION=	1.13-1
+DISTVERSION=	1.14-1
 CATEGORIES=	games
 MASTER_SITES=	SF/legendof${PORTNAME}/${PORTVERSION:R}/
 PKGNAMEPREFIX=	legend-of-
@@ -32,13 +32,13 @@ NLS_USES=		gettext
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|CC       = gcc|CC       = ${CC}|' \
-		-e 's|$$(DESTDIR)/usr|${STAGEDIR}${LOCALBASE}|' \
-		-e 's|$$(PREFIX)/games/|$$(PREFIX)/bin/|' \
-		-e 's|/share/games/edgar/|/share/edgar/|' \
-		-e 's|-Wall ||' \
-		-e 's|sdl-config|$(SDL_CONFIG)|' \
-		-e 's|-s ||' \
+	@${REINPLACE_CMD} -e 's|CC       = gcc|CC       = ${CC}|; \
+		s|$$(DESTDIR)/usr|${STAGEDIR}${LOCALBASE}|; \
+		s|$$(PREFIX)/games/|$$(PREFIX)/bin/|; \
+		s|/share/games/edgar/|/share/edgar/|; \
+		s|-Wall ||; \
+		s|sdl-config|$(SDL_CONFIG)|; \
+		s|-s ||' \
 		${WRKSRC}/makefile
 	@${REINPLACE_CMD} -e 's|SDL/SDL|${LOCALBASE}/include/SDL/SDL|g' \
 		${WRKSRC}/src/headers.h
