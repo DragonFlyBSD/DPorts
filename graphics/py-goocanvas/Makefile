@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/py-goocanvas/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-goocanvas/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/graphics/py-goocanvas/Makefile,v 1.6 2008/09/22 09:14:41 kwm Exp $
 
 PORTNAME=	goocanvas
