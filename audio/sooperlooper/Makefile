@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/sooperlooper/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/sooperlooper/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sooperlooper
 PORTVERSION=	1.6.18
