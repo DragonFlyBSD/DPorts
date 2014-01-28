@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: x11-fonts/wqy/Makefile 332902 2013-11-05 19:40:01Z delphij $
+# $FreeBSD: x11-fonts/wqy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wqy-fonts
 PORTVERSION=	20100803
