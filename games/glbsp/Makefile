@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: games/glbsp/Makefile 332424 2013-11-01 23:28:31Z danilo $
+# $FreeBSD: games/glbsp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	glbsp
 PORTVERSION=	2.20
