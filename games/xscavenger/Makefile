@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: games/xscavenger/Makefile 333950 2013-11-16 00:47:27Z danilo $
+# $FreeBSD: games/xscavenger/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xscavenger
 PORTVERSION=	1.4.4
