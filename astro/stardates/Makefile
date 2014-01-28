@@ -1,5 +1,5 @@
 # Created by: freebsd-ports@henrik.synth.no
-# $FreeBSD: astro/stardates/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/stardates/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stardates
 PORTVERSION=	1.6.1
