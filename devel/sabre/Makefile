@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/sabre/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: devel/sabre/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sabre
 PORTVERSION=	20100501
