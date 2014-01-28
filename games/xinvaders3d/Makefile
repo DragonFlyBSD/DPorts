@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: games/xinvaders3d/Makefile 333698 2013-11-13 15:09:42Z danilo $
+# $FreeBSD: games/xinvaders3d/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xinvaders3d
 PORTVERSION=	1.3.6
