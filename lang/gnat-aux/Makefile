@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat-aux/Makefile 333361 2013-11-09 23:25:23Z marino $
+# $FreeBSD: lang/gnat-aux/Makefile 341146 2014-01-26 00:21:03Z marino $
 
 PORTNAME=	gnat-aux
 PORTVERSION=	${SNAPSHOT}
@@ -14,6 +14,8 @@ MAINTAINER=	marino@FreeBSD.org
 COMMENT=	GNAT Ada compiler based on GCC ${GCC_BRANCH}
 
 LICENSE=	GPLv3
+
+DEPRECATED=	Superceded by gcc4.7-based lang/gcc-aux, use it instead
 
 .include "${.CURDIR}/Makefile.common"
 
