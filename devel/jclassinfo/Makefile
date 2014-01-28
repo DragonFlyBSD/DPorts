@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/jclassinfo/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/jclassinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jclassinfo
 PORTVERSION=	0.19.1
@@ -10,14 +10,10 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shows information about Java class, dependencies, and more
 
 USE_AUTOTOOLS=	libtool
-USES=	pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
-MAN1=	jclassinfo.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s, docs,," ${WRKSRC}/Makefile.in
 
