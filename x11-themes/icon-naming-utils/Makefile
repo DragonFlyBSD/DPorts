@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icon-naming-utils/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/icon-naming-utils/Makefile 341348 2014-01-27 09:04:59Z miwi $
 
 PORTNAME=	icon-naming-utils
 PORTVERSION=	0.8.90
@@ -14,9 +14,7 @@ COMMENT=	Utilities of the Tango project
 BUILD_DEPENDS=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 RUN_DEPENDS=	p5-XML-Simple>=0:${PORTSDIR}/textproc/p5-XML-Simple
 
-USES=		pathfix pkgconfig perl5
+USES=		pathfix pkgconfig perl5 gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
