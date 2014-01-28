@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: x11-toolkits/irrlicht/Makefile 329011 2013-10-02 02:04:16Z acm $
+# $FreeBSD: x11-toolkits/irrlicht/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	irrlicht
 PORTVERSION=	1.8
