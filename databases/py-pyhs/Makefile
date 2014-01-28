@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: databases/py-pyhs/Makefile 334228 2013-11-18 17:02:06Z lwhsu $
+# $FreeBSD: databases/py-pyhs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyhs
 PORTVERSION=	0.2.4
