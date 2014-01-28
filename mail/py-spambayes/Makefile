@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: mail/py-spambayes/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/py-spambayes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spambayes
 PORTVERSION=	1.1b1
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsddb>0:${PORTSDIR}/databases/py-bsddb \
 		${PYTHON_PKGNAMEPREFIX}dns>=2.0:${PORTSDIR}/dns/py-dns \
 		${PYTHON_PKGNAMEPREFIX}lockfile>=0.2:${PORTSDIR}/devel/py-lockfile
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 USE_RC_SUBR=	pyspamd
 
