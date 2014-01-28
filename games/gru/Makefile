@@ -1,5 +1,5 @@
 # Created by: HIYAMA Takeshi <th@cis.ibaraki.ac.jp>
-# $FreeBSD: games/gru/Makefile 332443 2013-11-02 03:17:03Z danilo $
+# $FreeBSD: games/gru/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gru
 PORTVERSION=	8087
