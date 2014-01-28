@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pecl-bbcode/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-bbcode/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	bbcode
 PORTVERSION=	1.0.2
@@ -23,7 +23,6 @@ IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--enable-bbcode
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/#include <malloc.h>/\/\/#include <malloc.h>/g' ${WRKSRC}/lib/bbcode2.c
 
