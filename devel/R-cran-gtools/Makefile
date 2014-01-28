@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/R-cran-gtools/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD: devel/R-cran-gtools/Makefile 339685 2014-01-14 13:46:30Z tota $
 
 PORTNAME=	gtools
-PORTVERSION=	3.1.1
+PORTVERSION=	3.2.1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
