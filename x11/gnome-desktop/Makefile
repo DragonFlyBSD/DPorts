@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-desktop/Makefile 331973 2013-10-29 17:05:50Z kwm $
+# $FreeBSD: x11/gnome-desktop/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/x11/gnome-desktop/Makefile,v 1.190 2010/11/17 12:03:52 kwm Exp $
 
 PORTNAME=	gnome-desktop
@@ -22,7 +22,7 @@ USE_XORG=	xpm
 USES=		bison pathfix gettext pkgconfig gmake
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gconf2 pygtk2 \
 		ltverhack referencehack
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
