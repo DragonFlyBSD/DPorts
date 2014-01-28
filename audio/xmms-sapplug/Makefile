@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/xmms-sapplug/Makefile 337707 2013-12-27 11:05:30Z bapt $
+# $FreeBSD: audio/xmms-sapplug/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-sapplug
 DISTVERSION=	0.3f
