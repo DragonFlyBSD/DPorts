@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: games/gnarr/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gnarr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnarr
 PORTVERSION=	3
