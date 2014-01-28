@@ -1,5 +1,5 @@
 # Created by: Alex Kiesel <kiesel@schlund.de>
-# $FreeBSD: devel/pecl-svn/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-svn/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	svn
 PORTVERSION=	1.0.2
@@ -19,5 +19,4 @@ LIB_DEPENDS=	svn_client-1:${PORTSDIR}/devel/subversion16
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
