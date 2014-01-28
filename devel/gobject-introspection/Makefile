@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/gobject-introspection/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gobject-introspection/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/trunk/devel/gobject-introspection/Makefile 18652 2013-08-18 15:14:13Z kwm $
 
 PORTNAME=	gobject-introspection
@@ -20,7 +20,7 @@ USES=		bison gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehier glib20 ltverhack
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
