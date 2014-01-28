@@ -1,5 +1,5 @@
 # Created by: Valeri Vassiliev
-# $FreeBSD: deskutils/pybookreader/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/pybookreader/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pybookreader
 PORTVERSION=	0.5.0
@@ -13,7 +13,7 @@ COMMENT=	Program for reading e-books
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2
 
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyBookReader
 USE_GNOME=	pygtk2
