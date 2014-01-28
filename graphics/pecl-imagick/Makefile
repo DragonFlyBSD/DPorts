@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: graphics/pecl-imagick/Makefile 328352 2013-09-26 12:34:50Z mm $
+# $FreeBSD: graphics/pecl-imagick/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	imagick
 DISTVERSION=	3.1.2
@@ -20,11 +20,9 @@ LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick
 LIB_DEPENDS=	MagickWand:${PORTSDIR}/graphics/ImageMagick-nox11
 .endif
 
-
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--with-imagick=${LOCALBASE}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
