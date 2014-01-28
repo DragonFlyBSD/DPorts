@@ -1,5 +1,5 @@
 # Created by: Thomas Lotterer <thomas.lotterer@cw.com>
-# $FreeBSD: mail/lmtp2nntp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/lmtp2nntp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lmtp2nntp
 PORTVERSION=	1.4.1
