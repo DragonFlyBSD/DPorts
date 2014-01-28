@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xauth/Makefile 333259 2013-11-08 19:36:14Z zeising $
+# $FreeBSD: x11/xauth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xauth
 PORTVERSION=	1.0.8
