@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-clocks/asclock/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: x11-clocks/asclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asclock
 PORTVERSION=	1.0
