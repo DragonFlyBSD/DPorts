@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: graphics/py-freeimagepy/Makefile 337765 2013-12-27 17:40:35Z wg $
+# $FreeBSD: graphics/py-freeimagepy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freeimagepy
 PORTVERSION=	2.0.1
