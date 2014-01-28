@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/google-appengine/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/google-appengine/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	google-appengine
 PORTVERSION=	1.8.6
@@ -25,7 +25,7 @@ OPTIONS_DEFAULT=	MYSQL
 
 PROJECTHOST=	googleappengine
 
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 USE_ZIP=	yes
 USES=		gettext
 
