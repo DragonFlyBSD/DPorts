@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/at-spi/Makefile 331973 2013-10-29 17:05:50Z kwm $
+# $FreeBSD: accessibility/at-spi/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/accessibility/at-spi/Makefile,v 1.103 2010/09/27 09:47:42 kwm Exp $
 
 PORTNAME=	at-spi
@@ -22,7 +22,7 @@ NO_STAGE=	yes
 USES=		gmake gettext pkgconfig
 USE_GNOME=	gnomehack gnomehier intlhack gtk20 gconf2 libbonobo
 USE_XORG=	x11 xtst
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
