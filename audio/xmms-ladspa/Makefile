@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/xmms-ladspa/Makefile 338133 2013-12-30 16:27:04Z arved $
+# $FreeBSD: audio/xmms-ladspa/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-ladspa
 PORTVERSION=	1.1
