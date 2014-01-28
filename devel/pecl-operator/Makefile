@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: devel/pecl-operator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pecl-operator/Makefile 340830 2014-01-23 15:12:50Z miwi $
 
 PORTNAME=	operator
 PORTVERSION=	0.3
@@ -20,7 +20,6 @@ USE_PHPEXT=	yes
 DEFAULT_PHP_VER?=	53
 PHP_MODNAME=	${PORTNAME}
 
-NO_STAGE=	yes
 post-extract::
 	@${CAT} ${PKGMESSAGE}
 
