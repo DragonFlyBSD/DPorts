@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-netlist/Makefile 338175 2013-12-30 21:46:21Z antoine $
+# $FreeBSD: cad/geda-netlist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	netlist
 PORTVERSION=	1.4.3
