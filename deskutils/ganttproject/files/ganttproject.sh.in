@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: deskutils/ganttproject/files/ganttproject.sh.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: deskutils/ganttproject/files/ganttproject.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 LOCAL_CLASSPATH="%%DATADIR%%/eclipsito.jar"
 CONFIGURATION_FILE="ganttproject-eclipsito-config.xml"
