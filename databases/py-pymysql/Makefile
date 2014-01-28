@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: databases/py-pymysql/Makefile 338532 2014-01-03 08:57:38Z lwhsu $
+# $FreeBSD: databases/py-pymysql/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pymysql
 PORTVERSION=	0.6.1
