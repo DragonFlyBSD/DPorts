@@ -1,5 +1,5 @@
 # Created by: Marc Recht <marc@informatik.uni-bremen.de>
-# $FreeBSD: x11-toolkits/gtkglarea2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/gtkglarea2/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/x11-toolkits/gtkglarea2/Makefile,v 1.2 2006/09/10 00:51:17 mezz Exp $
 
 PORTNAME=	gtkglarea
