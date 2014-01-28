@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: archivers/lbzip2/Makefile 337519 2013-12-26 14:34:42Z bapt $
+# $FreeBSD: archivers/lbzip2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lbzip2
 PORTVERSION=	0.23
