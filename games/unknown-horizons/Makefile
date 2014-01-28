@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: games/unknown-horizons/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/unknown-horizons/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=		unknown-horizons
 PORTVERSION=		2013.2
@@ -23,7 +23,7 @@ ONLY_FOR_ARCHS=		i386 amd64
 USE_XZ=			yes
 USE_GNOME=		intltool
 USES=			gettext:build
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	UnknownHorizons
 
