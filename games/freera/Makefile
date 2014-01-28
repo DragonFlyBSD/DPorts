@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/freera/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
+# $FreeBSD: games/freera/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	freera
 PORTVERSION=	080203
