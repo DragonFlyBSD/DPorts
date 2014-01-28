@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/jools/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: games/jools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jools
 PORTVERSION=	0.20
