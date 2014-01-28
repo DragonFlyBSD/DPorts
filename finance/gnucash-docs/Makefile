@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: finance/gnucash-docs/Makefile 338279 2013-12-31 10:10:07Z kwm $
+# $FreeBSD: finance/gnucash-docs/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/finance/gnucash-docs/Makefile,v 1.7 2007/08/04 03:51:29 marcus Exp $
 
 PORTNAME=	gnucash-docs
