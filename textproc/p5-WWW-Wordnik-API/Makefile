@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-WWW-Wordnik-API/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-WWW-Wordnik-API/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	WWW-Wordnik-API
 PORTVERSION=	0.0.5
@@ -13,19 +13,20 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Wordnik API implementation
 
+LICENSE=	GPLv3
+
 RUN_DEPENDS=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 TEST_DEPENDS=	p5-JSON>=0:${PORTSDIR}/converters/p5-JSON
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::Wordnik::API.3
 PLIST_FILES=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Wordnik/API/.packlist \
-		%%SITE_PERL%%/WWW/Wordnik/API.pm
+		%%SITE_PERL%%/WWW/Wordnik/API.pm \
+		%%PERL5_MAN3%%/WWW::Wordnik::API.3.gz
 PLIST_DIRS=	%%SITE_PERL%%/WWW/Wordnik %%SITE_PERL%%/WWW \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Wordnik/API \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/Wordnik \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
