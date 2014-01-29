@@ -1,5 +1,5 @@
 # Created by: itojun@itojun.org
-# $FreeBSD: misc/magicpoint/Makefile 337836 2013-12-28 06:36:56Z dinoex $
+# $FreeBSD: misc/magicpoint/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	magicpoint
 PORTVERSION=	1.13a
