@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/rubygem-snmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/rubygem-snmp/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	snmp
 PORTVERSION=	1.1.1
@@ -12,5 +12,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
