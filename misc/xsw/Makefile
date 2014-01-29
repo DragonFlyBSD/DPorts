@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: misc/xsw/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD: misc/xsw/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xsw
 PORTVERSION=	0.3.5
