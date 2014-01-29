@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea@FreeBSD.org>
-# $FreeBSD: www/trac-defaultcc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-defaultcc/Makefile 341181 2014-01-26 14:31:18Z miwi $
 
 PORTNAME=	defaultcc
 PORTVERSION=	0.1
@@ -14,7 +14,7 @@ COMMENT=	Plugin that adds default CC value for tickets
 
 RUN_DEPENDS+=	trac>=0.11:${PORTSDIR}/www/trac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_ZIP=	yes
 
 USE_PYDISTUTILS=	easy_install
@@ -24,5 +24,4 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin/trunk
 REL=		10605
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
