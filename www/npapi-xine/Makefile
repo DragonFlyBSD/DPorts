@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/npapi-xine/Makefile 333657 2013-11-13 08:05:05Z bapt $
+# $FreeBSD: www/npapi-xine/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xine
 PORTVERSION=	1.0.2
