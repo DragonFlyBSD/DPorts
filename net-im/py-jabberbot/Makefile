@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: net-im/py-jabberbot/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/py-jabberbot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jabberbot
 PORTVERSION=	0.15
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xmpppy>0:${PORTSDIR}/net-im/py-xmpppy
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/jabberbot.py  \
