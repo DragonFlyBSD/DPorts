@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/rw-aspell/Makefile 332672 2013-11-04 08:30:37Z bapt $
+# $FreeBSD: textproc/rw-aspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	${DICT}-aspell
 DISTVERSION=	-rw-0.50-0
