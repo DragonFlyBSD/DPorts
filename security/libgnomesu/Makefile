@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: security/libgnomesu/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libgnomesu/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/security/libgnomesu/Makefile,v 1.2 2007/05/19 21:36:21 marcus Exp $
 
 PORTNAME=	libgnomesu
