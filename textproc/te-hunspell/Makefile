@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/te-hunspell/Makefile 328058 2013-09-23 21:34:48Z bapt $
+# $FreeBSD: textproc/te-hunspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hunspell
 DISTVERSION=	0.01-2
