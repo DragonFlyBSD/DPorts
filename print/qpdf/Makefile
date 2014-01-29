@@ -1,8 +1,8 @@
 # Created by: Dmitry Kazarov <d.y.kazarov@mail.ru>
-# $FreeBSD: print/qpdf/Makefile 332998 2013-11-06 14:52:04Z bsam $
+# $FreeBSD: print/qpdf/Makefile 340300 2014-01-19 14:10:49Z rakuco $
 
 PORTNAME=	qpdf
-PORTVERSION=	5.0.1
+PORTVERSION=	5.1.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${PORTVERSION}
