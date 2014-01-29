@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: sysutils/no-login/Makefile 333882 2013-11-15 16:05:56Z vanilla $
+# $FreeBSD: sysutils/no-login/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nologin
 PORTVERSION=	1.0
