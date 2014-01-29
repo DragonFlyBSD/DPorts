@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/latex-resume/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/latex-resume/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	resume
 PORTVERSION=	20010823
