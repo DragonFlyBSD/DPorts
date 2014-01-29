@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: www/trac-privatetickets/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-privatetickets/Makefile 341186 2014-01-26 14:32:32Z miwi $
 
 PORTNAME=	privatetickets
 PORTVERSION=	2.0.2
@@ -20,5 +20,4 @@ PYDISTUTILS_PKGNAME=	TracPrivateTickets
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
