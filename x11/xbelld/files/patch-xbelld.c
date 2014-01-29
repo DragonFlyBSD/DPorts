@@ -1,5 +1,5 @@
 
-$FreeBSD: x11/xbelld/files/patch-xbelld.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: x11/xbelld/files/patch-xbelld.c 340725 2014-01-22 17:40:44Z mat $
 
 --- xbelld.c.orig
 +++ xbelld.c
