@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/pygopherd/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: net/pygopherd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pygopherd
 PORTVERSION=	2.0.16
