@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: textproc/rubygem-ezamar/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rubygem-ezamar/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	ezamar
 PORTVERSION=	2009.06
@@ -14,5 +14,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
