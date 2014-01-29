@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-pyramid_rpc/Makefile 338531 2014-01-03 08:57:11Z lwhsu $
+# $FreeBSD: www/py-pyramid_rpc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyramid_rpc
 PORTVERSION=	0.5.2
