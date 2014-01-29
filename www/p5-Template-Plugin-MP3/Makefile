@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/p5-Template-Plugin-MP3/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD: www/p5-Template-Plugin-MP3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Template-Plugin-MP3
 PORTVERSION=	1.02
