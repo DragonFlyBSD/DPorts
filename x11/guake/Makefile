@@ -1,4 +1,4 @@
-# $FreeBSD: x11/guake/Makefile 332170 2013-10-30 20:43:51Z nivit $
+# $FreeBSD: x11/guake/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	guake
 PORTVERSION=	0.4.4.0
@@ -44,7 +44,7 @@ REINPLACE_FILES=	guake guake-prefs prefs.py
 
 #USE_GITHUB=	yes
 USE_GNOME=	gtk20 pygnome2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USES=	desktop-file-utils gmake pkgconfig
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
