@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/py-tgwebservices/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-tgwebservices/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tgwebservices
 PORTVERSION=	1.2.4
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}TurboGears>=1.1.2:${PORTSDIR}/www/py-turbo
 		${PYTHON_PKGNAMEPREFIX}Genshi>=0.3.6:${PORTSDIR}/textproc/py-genshi
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TGWebServices
 
