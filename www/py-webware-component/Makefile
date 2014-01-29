@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/py-webware-component/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-webware-component/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Component
 PORTVERSION=	0.2
@@ -12,7 +12,7 @@ COMMENT=	Webware servlet component extension
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}webware>0:${PORTSDIR}/www/py-webware
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 NO_STAGE=	yes
 do-build:
