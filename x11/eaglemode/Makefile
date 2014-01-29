@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: x11/eaglemode/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD: x11/eaglemode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eaglemode
 PORTVERSION=	0.84.0
