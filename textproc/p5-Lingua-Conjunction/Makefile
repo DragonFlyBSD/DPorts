@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-Conjunction/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Lingua-Conjunction/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Lingua-Conjunction
 PORTVERSION=	2.00
