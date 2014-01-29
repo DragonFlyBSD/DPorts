@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/p5-Web-oEmbed/pkg-plist 338763 2014-01-05 13:05:56Z az $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Web/oEmbed/.packlist
 %%SITE_PERL%%/Web/oEmbed.pm
 %%SITE_PERL%%/Web/oEmbed/Response.pm
