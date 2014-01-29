@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-themes/gtk-gray-theme/Makefile 338923 2014-01-06 19:22:33Z antoine $
+# $FreeBSD: x11-themes/gtk-gray-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gtk-gray-theme
 PORTVERSION=	1.7
