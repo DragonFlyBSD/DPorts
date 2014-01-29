@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: www/twms/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/twms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	twms
 PORTVERSION=	0.02w
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pyproj/__init__.py:${PORTSDIR}/graphics/py-pyp
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging
 
 USE_BZIP2=	yes
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 NO_BUILD=	yes
 
 TWMS_USER?=	twms
