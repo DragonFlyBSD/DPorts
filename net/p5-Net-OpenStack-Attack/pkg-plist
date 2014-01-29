@@ -1,4 +1,3 @@
-@comment $FreeBSD: net/p5-Net-OpenStack-Attack/pkg-plist 311813 2013-02-07 07:37:45Z jadawin $
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Net/OpenStack/Attack/.packlist
 %%SITE_PERL%%/Net/OpenStack/Attack.pm
 bin/stackattack
