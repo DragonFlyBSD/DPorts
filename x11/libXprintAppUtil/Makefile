@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libXprintAppUtil/Makefile 330445 2013-10-15 19:42:56Z eadler $
+# $FreeBSD: x11/libXprintAppUtil/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libXprintAppUtil
 PORTVERSION=	1.0.1
