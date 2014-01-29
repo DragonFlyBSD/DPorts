@@ -1,5 +1,5 @@
 # Created by: Chi
-# $FreeBSD: science/xmakemol/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/xmakemol/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmakemol
 PORTVERSION=	5.16
