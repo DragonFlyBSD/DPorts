@@ -1,7 +1,7 @@
-# $FreeBSD: net/p5-Growl-GNTP/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD: net/p5-Growl-GNTP/Makefile 339628 2014-01-13 20:14:33Z brix $
 
 PORTNAME=	Growl-GNTP
-PORTVERSION=	0.16
+PORTVERSION=	0.20
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,6 +17,6 @@ BUILD_DEPENDS=	p5-Data-UUID>=0:${PORTSDIR}/devel/p5-Data-UUID \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
