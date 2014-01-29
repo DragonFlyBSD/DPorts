@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Bind/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Bind/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Text-Bind
 PORTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Bind Perl structures to text files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Bind.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
