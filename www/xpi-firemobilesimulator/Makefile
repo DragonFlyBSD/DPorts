@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-firemobilesimulator/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-firemobilesimulator/Makefile 341202 2014-01-26 15:08:55Z miwi $
 
 PORTNAME=	firemobilesimulator
 PORTVERSION=	1.2.2
@@ -21,6 +21,5 @@ XPI_FILES=	chrome.manifest chrome/msim.jar \
 XPI_DIRS=	chrome components \
 		defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
