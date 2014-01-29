@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/ruby-rss/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ruby-rss/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rss
 PORTVERSION=	0.9.1
