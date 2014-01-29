@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net-mgmt/ipfm/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: net-mgmt/ipfm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ipfm
 PORTVERSION=	0.11.5
