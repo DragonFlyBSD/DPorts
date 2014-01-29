@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: textproc/py-xmltv/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-xmltv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmltv
 PORTVERSION=	1.3
@@ -14,7 +14,7 @@ COMMENT=	A Python module that provides access to XMLTV TV listings
 
 LICENSE=	LGPL21
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-xmltv
 
