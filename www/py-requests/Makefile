@@ -1,8 +1,8 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: www/py-requests/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-requests/Makefile 341387 2014-01-27 12:21:18Z koobs $
 
 PORTNAME=	requests
-PORTVERSION=	1.2.3
+PORTVERSION=	2.2.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +13,12 @@ COMMENT=	HTTP library written in Python for human beings
 LICENSE=	ISCL
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
+CONFLICTS_INSTALL=	py*-requests1-*
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} test_requests.py
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
