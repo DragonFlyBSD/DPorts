@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: sysutils/pear-File_Gettext/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: sysutils/pear-File_Gettext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	File_Gettext
 PORTVERSION=	0.4.2
