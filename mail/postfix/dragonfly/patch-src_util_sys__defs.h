@@ -1,14 +1,14 @@
---- src/util/sys_defs.h.intermediate	2013-06-14 13:26:32.924447000 +0000
+--- src/util/sys_defs.h.orig	2014-01-29 20:35:04.681607000 +0000
 +++ src/util/sys_defs.h
-@@ -29,6 +29,7 @@
+@@ -30,6 +30,7 @@
      || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
      || defined(OPENBSD5) \
 +    || defined(DRAGONFLY) \
      || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
-     || defined(NETBSD4) \
-     || defined(EKKOBSD1)
-@@ -92,6 +93,17 @@
+     || defined(NETBSD4) || defined(NETBSD5) || defined(NETBSD6) \
+     || defined(EKKOBSD1) || defined(DRAGONFLY)
+@@ -93,6 +94,17 @@
  /* #define HAS_IPV6 find out interface lookup method */
  #endif
  
@@ -26,23 +26,15 @@
  /* __FreeBSD_version version is major+minor */
  
  #if __FreeBSD_version >= 220000
-@@ -167,6 +179,7 @@
+@@ -177,6 +189,7 @@
  
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 105000000) \
      || (defined(__FreeBSD__) && __FreeBSD__ >= 4) \
 +    || defined(DRAGONFLY) \
      || (defined(OpenBSD) && OpenBSD >= 200003) \
+     || defined(__DragonFly__) \
      || defined(USAGI_LIBINET6)
- #ifndef NO_IPV6
-@@ -183,6 +196,7 @@
- #ifndef NO_KQUEUE
- # if (defined(__FreeBSD_version) && __FreeBSD_version >= 410000) \
-     || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 200000000) \
-+    || defined(DRAGONFLY) \
-     || (defined(OpenBSD) && OpenBSD >= 200105)	/* OpenBSD 2.9 */
- #  define EVENTS_STYLE	EVENTS_STYLE_KQUEUE
- # endif
-@@ -191,6 +205,7 @@
+@@ -204,6 +217,7 @@
  #ifndef NO_POSIX_GETPW_R
  # if (defined(__FreeBSD_version) && __FreeBSD_version >= 510000) \
      || (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 300000000) \
