@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: sysutils/sb16config/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sb16config/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sb16config
 PORTVERSION=	1.0
