@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@FreeBSD.org>
-# $FreeBSD: science/bddsolve/Makefile 336262 2013-12-12 14:15:03Z bapt $
+# $FreeBSD: science/bddsolve/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bddsolve
 PORTVERSION=	1.03
