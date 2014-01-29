@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-fm/pbi-thumbnailer/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/pbi-thumbnailer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pbi-thumbnailer
 PORTVERSION=	0.9.2
