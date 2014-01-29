@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: x11-themes/xmms-vumeter-skins/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: x11-themes/xmms-vumeter-skins/Makefile 341376 2014-01-27 11:38:19Z miwi $
 
 PORTNAME=	xmms-vumeter-skins
 PORTVERSION=	0.9.1
@@ -24,14 +24,13 @@ NO_WRKSUBDIR=	yes
 SKINSDIR=	${PREFIX}/share/xmms/VU_Meter_skins
 PLIST_SUB=	SKINSDIR="${SKINSDIR:S,^${PREFIX}/,,}"
 
-NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/X-skin/*.psd
 
 do-install:
 .for s in X-skin by classic vuskin
-	${MKDIR} ${SKINSDIR}/${s}
-	${INSTALL_DATA} ${WRKSRC}/${s}/* ${SKINSDIR}/${s}
+	${MKDIR} ${STAGEDIR}${SKINSDIR}/${s}
+	${INSTALL_DATA} ${WRKSRC}/${s}/* ${STAGEDIR}${SKINSDIR}/${s}
 .endfor
 
 .include <bsd.port.mk>
