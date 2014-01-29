@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: x11/xtermcontrol/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xtermcontrol/Makefile 339339 2014-01-10 09:32:14Z vanilla $
 
 PORTNAME=	xtermcontrol
 PORTVERSION=	2.10
@@ -17,8 +17,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-PLIST_FILES=	bin/xtermcontrol
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/xtermcontrol man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
