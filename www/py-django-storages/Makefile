@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-django-storages/Makefile 327958 2013-09-23 09:19:20Z lwhsu $
+# $FreeBSD: www/py-django-storages/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	django-storages
 PORTVERSION=	1.1.8
