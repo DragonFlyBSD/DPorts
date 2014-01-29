@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@FreeBSD.org>
-# $FreeBSD: misc/elscreen/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/elscreen/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	elscreen
 PORTVERSION=	1.4.6
