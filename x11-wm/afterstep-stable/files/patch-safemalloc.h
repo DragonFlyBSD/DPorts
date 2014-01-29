@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-safemalloc.h 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: x11-wm/afterstep-stable/files/patch-safemalloc.h 340725 2014-01-22 17:40:44Z mat $
 
 --- libAfterBase/safemalloc.h.orig	Mon Sep 13 13:48:08 2004
 +++ libAfterBase/safemalloc.h	Mon Sep 13 13:48:40 2004
