@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: www/dhttpd/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/dhttpd/Makefile 341088 2014-01-25 20:30:10Z lme $
 
 PORTNAME=	dhttpd
 PORTVERSION=	1.02a
@@ -10,16 +10,15 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	Minimal secure webserver. Fast and efficient, no cgi-bin support
 
+LICENSE=	GPLv2
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-1.02-4
 BUILD_WRKSRC=	${WRKSRC}/src
 
-PLIST_FILES=	sbin/dhttpd
-
-MAN1=		dhttpd.1
+PLIST_FILES=	sbin/dhttpd man/man1/dhttpd.1.gz
 
 USE_RC_SUBR=	dhttpd
 
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "=============================================================="
 	@${ECHO_MSG} "To change the default document root"
@@ -33,7 +32,7 @@ post-patch:
 		${WRKSRC}/dhttpd.1
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${PREFIX}/man/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin
 
 .include <bsd.port.mk>
