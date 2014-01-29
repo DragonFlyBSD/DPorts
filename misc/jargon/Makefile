@@ -1,5 +1,5 @@
 # Created by: moeding
-# $FreeBSD: misc/jargon/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/jargon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jargon
 PORTVERSION=	4.4.7
