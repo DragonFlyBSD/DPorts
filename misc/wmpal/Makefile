@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/wmpal/Makefile 335880 2013-12-08 12:51:17Z danilo $
+# $FreeBSD: misc/wmpal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmpal
 PORTVERSION=	0.6.1
