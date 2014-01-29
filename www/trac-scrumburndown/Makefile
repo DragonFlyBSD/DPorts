@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-scrumburndown/Makefile 337585 2013-12-26 18:05:36Z wg $
+# $FreeBSD: www/trac-scrumburndown/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scrumburndown
 PORTVERSION=	1.9.2
