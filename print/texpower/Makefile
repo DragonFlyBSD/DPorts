@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: print/texpower/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/texpower/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	texpower
 PORTVERSION=	0.2

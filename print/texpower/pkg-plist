@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/texpower/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%TEXMFLOCAL%%/tex/latex/texpower/automata.sty
 %%TEXMFLOCAL%%/tex/latex/texpower/fixseminar.sty
 %%TEXMFLOCAL%%/tex/latex/texpower/powersem.cls
