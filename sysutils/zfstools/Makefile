@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/zfstools/Makefile 328732 2013-09-29 20:35:55Z bdrewery $
+# $FreeBSD: sysutils/zfstools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zfstools
 PORTVERSION=	0.3.1
