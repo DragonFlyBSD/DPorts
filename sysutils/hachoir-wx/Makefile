@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/hachoir-wx/Makefile 334329 2013-11-19 17:07:02Z lwhsu $
+# $FreeBSD: sysutils/hachoir-wx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hachoir-wx
 PORTVERSION=	0.3
