@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Regexp-Common-profanity_us/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Regexp-Common-profanity_us/Makefile 340668 2014-01-21 22:29:50Z mat $
 
 PORTNAME=	Regexp-Common-profanity_us
 PORTVERSION=	4.112150
@@ -10,14 +10,13 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	gslin@gslin.org
 COMMENT=	Provide regexes for U.S. profanity
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-Regexp-Common>=0:${PORTSDIR}/textproc/p5-Regexp-Common
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Regexp::Common::profanity_us.3 \
-		Regexp::Profanity::US.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
