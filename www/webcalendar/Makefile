@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: www/webcalendar/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: www/webcalendar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	WebCalendar
 PORTVERSION=	1.0.5
