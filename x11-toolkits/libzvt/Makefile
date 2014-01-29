@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libzvt/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/libzvt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libzvt
 PORTVERSION=	2.0.1
