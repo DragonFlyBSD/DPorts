@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: x11/xkbctrl/Makefile 339245 2014-01-09 14:48:54Z vanilla $
+# $FreeBSD: x11/xkbctrl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xkbctrl
 PORTVERSION=	1.0
