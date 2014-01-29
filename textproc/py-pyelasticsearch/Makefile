@@ -1,8 +1,9 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: textproc/py-pyelasticsearch/Makefile 336592 2013-12-15 22:34:56Z antoine $
+# $FreeBSD: textproc/py-pyelasticsearch/Makefile 341385 2014-01-27 12:14:09Z koobs $
 
 PORTNAME=	pyelasticsearch
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +15,7 @@ LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>0:${PORTSDIR}/devel/py-simplejson \
 		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six \
-		${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
+		${PYTHON_PKGNAMEPREFIX}requests1>0:${PORTSDIR}/www/py-requests1
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
