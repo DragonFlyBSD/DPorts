@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: www/oscommerce/Makefile 329262 2013-10-04 04:59:44Z wen $
+# $FreeBSD: www/oscommerce/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	oscommerce
 DISTVERSION=	2.3.3.4
