@@ -1,5 +1,5 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: x11-wm/spectrwm/Makefile 335947 2013-12-08 23:23:49Z zeising $
+# $FreeBSD: x11-wm/spectrwm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spectrwm
 PORTVERSION=	2.4.0
