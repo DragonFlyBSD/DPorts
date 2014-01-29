@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-privacy-please/Makefile 336838 2013-12-18 15:06:19Z ehaupt $
+# $FreeBSD: net-im/pidgin-privacy-please/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pidgin-privacy-please
 PORTVERSION=	0.7.1
