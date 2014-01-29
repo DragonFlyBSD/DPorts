@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-Canonical/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Canonical/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	XML-Canonical
 PORTVERSION=	0.10
@@ -19,7 +19,4 @@ LIB_DEPENDS=	gdome:${PORTSDIR}/textproc/gdome2
 USES=		perl5 pkgconfig
 USE_PERL5=	configure
 
-MAN3=		XML::Canonical.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
