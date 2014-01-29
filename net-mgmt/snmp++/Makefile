@@ -1,13 +1,13 @@
 # Created by: nicolai@catpipe.net
-# $FreeBSD: net-mgmt/snmp++/Makefile 339140 2014-01-08 14:39:51Z bapt $
+# $FreeBSD: net-mgmt/snmp++/Makefile 341254 2014-01-26 18:22:35Z rm $
 
 PORTNAME=	snmp++
-PORTVERSION=	3.2.25
+PORTVERSION=	3.3.0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://www.agentpp.com/
 DISTNAME=	${PORTNAME}v${PORTVERSION}
 
-MAINTAINER=	nicolai@catpipe.net
+MAINTAINER=	nicolai@petri.dk
 COMMENT=	SNMP C++ library with V3 support
 
 MAKEFILE=	Makefile.FreeBSD
@@ -21,7 +21,7 @@ post-extract:
 	${CP} ${FILESDIR}/Makefile.FreeBSD ${WRKSRC}
 
 post-install:
-	${LN} -sf ${PREFIX}/lib/libsnmp++.so.2.0.0 ${STAGEDIR}${PREFIX}/lib/libsnmp++.so
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libsnmp++.so.2.0.0
+	${LN} -sf ${PREFIX}/lib/libsnmp++.so.3.3.0 ${STAGEDIR}${PREFIX}/lib/libsnmp++.so
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libsnmp++.so.3.3.0
 
 .include <bsd.port.mk>
