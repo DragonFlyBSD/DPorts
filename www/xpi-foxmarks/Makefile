@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-foxmarks/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-foxmarks/Makefile 341205 2014-01-26 15:09:46Z miwi $
 
 PORTNAME=	foxmarks
 PORTVERSION=	2.7.2
@@ -14,6 +14,5 @@ XPI_DISTNAME=	foxmarks_bookmark_synchronizer
 XPI_ID=		foxmarks@kei.com
 XPI_NUM=	2410
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
