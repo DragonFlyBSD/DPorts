@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: x11/alltray/Makefile 338839 2014-01-06 08:24:24Z bapt $
+# $FreeBSD: x11/alltray/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	alltray
 PORTVERSION=	0.70
