@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/superlu_mt/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/superlu_mt/Makefile 341172 2014-01-26 13:20:07Z gerald $
 
 PORTNAME=	superlu_mt
 PORTVERSION=	2.0.20080115
@@ -88,8 +88,8 @@ post-patch:
 		${WRKSRC_SHARED}/make.inc
 
 do-build:
-	cd ${WRKSRC} ; ${GMAKE}
-	cd ${WRKSRC_SHARED} ; ${GMAKE}
+	cd ${WRKSRC} ; ${GMAKE} LDFLAGS="${LDFLAGS}"
+	cd ${WRKSRC_SHARED} ; ${GMAKE} LDFLAGS="${LDFLAGS}"
 	${RM} -rf ${WRKDIR}/tmp_static
 	${MKDIR} ${WRKDIR}/tmp_static
 	cd ${WRKDIR}/tmp_static
