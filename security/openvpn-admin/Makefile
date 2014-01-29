@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: security/openvpn-admin/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
+# $FreeBSD: security/openvpn-admin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openvpn-admin
 PORTVERSION=	1.9.4
