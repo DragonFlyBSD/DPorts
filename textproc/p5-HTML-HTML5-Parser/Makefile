@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: textproc/p5-HTML-HTML5-Parser/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-HTML-HTML5-Parser/Makefile 340610 2014-01-21 14:03:59Z mat $
 
 PORTNAME=	HTML-HTML5-Parser
 PORTVERSION=	0.301
@@ -24,11 +24,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::HTML5::Parser.3 \
-		HTML::HTML5::Parser::Error.3 \
-		HTML::HTML5::Parser::UA.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
