@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-plastex/Makefile 337853 2013-12-28 11:15:35Z wg $
+# $FreeBSD: math/py-plastex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	plastex
 PORTVERSION=	0.9.2
