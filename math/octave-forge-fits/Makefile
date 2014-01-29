@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-fits/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/octave-forge-fits/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	octave-forge-fits
 PORTVERSION=	1.0.3
@@ -9,6 +9,8 @@ CATEGORIES=	math
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
+LICENSE=	GPLv3
+
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 OCTSRC=		${OCTAVE_PKGNAME}
@@ -17,7 +19,6 @@ WRKSRC=	${WRKDIR}/${OCTSRC}/src
 
 LIB_DEPENDS+=	cfitsio:${PORTSDIR}/astro/cfitsio
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
