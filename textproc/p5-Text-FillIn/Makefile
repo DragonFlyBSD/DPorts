@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-FillIn/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-FillIn/Makefile 340908 2014-01-24 14:59:10Z mat $
 
 PORTNAME=	Text-FillIn
 PORTVERSION=	0.05
@@ -13,7 +13,4 @@ COMMENT=	A class implementing a fill-in template
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::FillIn.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
