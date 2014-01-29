@@ -1,5 +1,5 @@
 # Created by: Stepan Zastupov [RedChrom] <redchrom@gmail.com>
-# $FreeBSD: x11/stalonetray/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/stalonetray/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stalonetray
 PORTVERSION=	0.8.1
@@ -17,23 +17,21 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-native-kde \
 		--disable-debug
 
-MAN1=		stalonetray.1
 PORTDOCS=	AUTHORS ChangeLog NEWS README TODO stalonetray.html
 PORTEXAMPLES=	stalonetrayrc.sample
-PLIST_FILES=	bin/stalonetray
+PLIST_FILES=	bin/stalonetray man/man1/stalonetray.1.gz
 
-NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 .if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 .for file in ${PORTEXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
 .endif
 
