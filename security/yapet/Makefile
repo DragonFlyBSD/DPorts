@@ -1,5 +1,5 @@
 # Created by: Rafael Ostertag <rafi@guengel.ch>
-# $FreeBSD: security/yapet/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/yapet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	yapet
 PORTVERSION=	0.7
