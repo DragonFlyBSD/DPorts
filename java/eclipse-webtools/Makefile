@@ -1,5 +1,5 @@
 # Created by: markhobden@gmail.com
-# $FreeBSD: java/eclipse-webtools/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-webtools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	webtools
 PORTVERSION=	3.3.2
