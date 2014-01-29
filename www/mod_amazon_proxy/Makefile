@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/mod_amazon_proxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_amazon_proxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mod_amazon_proxy
 PORTVERSION=	20100913
