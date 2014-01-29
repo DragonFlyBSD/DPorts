@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11-themes/kde-icons-noia/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/kde-icons-noia/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	noia
 PORTVERSION=	1.00
