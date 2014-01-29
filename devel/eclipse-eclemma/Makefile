@@ -1,5 +1,5 @@
 # Created by: kamikaze@bsdforen.de
-# $FreeBSD: devel/eclipse-eclemma/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/eclipse-eclemma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eclemma
 PORTVERSION=	1.5.3
