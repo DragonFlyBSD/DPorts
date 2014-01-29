@@ -1,5 +1,5 @@
 # Created by: Karsten Pedersen <kpedersen@opencde.org>
-# $FreeBSD: x11-themes/nimbus/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/nimbus/Makefile 341351 2014-01-27 09:06:49Z miwi $
 
 PORTNAME=		nimbus
 PORTVERSION=		0.1.7
@@ -22,5 +22,4 @@ INSTALLS_ICONS=		yes
 USE_LDCONFIG=		yes
 USE_GNOME=		gtk20
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
