@@ -1,5 +1,5 @@
 # Created by: Davide D'Amico <dave@gufi.org>
-# $FreeBSD: sysutils/eroaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/eroaster/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	eroaster
 PORTVERSION=	2.2.0.0.6
