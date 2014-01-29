@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/cfengine35/files/cf-serverd.in 320710 2013-06-12 18:00:45Z gjb $
+# $FreeBSD: sysutils/cfengine35/files/cf-serverd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: cf-serverd
 # REQUIRE: LOGIN

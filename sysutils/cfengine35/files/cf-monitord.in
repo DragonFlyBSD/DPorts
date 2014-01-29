@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/cfengine35/files/cf-monitord.in 328875 2013-09-30 21:02:13Z cy $
+# $FreeBSD: sysutils/cfengine35/files/cf-monitord.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: cf-monitord
 # REQUIRE: LOGIN
