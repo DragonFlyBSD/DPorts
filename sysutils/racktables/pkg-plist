@@ -1,4 +1,3 @@
-@comment $FreeBSD: sysutils/racktables/pkg-plist 321793 2013-06-26 11:27:52Z zi $
 %%WWWDIR_REL%%/gateways/netcat
 %%WWWDIR_REL%%/gateways/ssh
 %%WWWDIR_REL%%/gateways/sshnokey
