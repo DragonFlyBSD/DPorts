@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-ltablex/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/latex-ltablex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ltablex
 PORTVERSION=	1.0
