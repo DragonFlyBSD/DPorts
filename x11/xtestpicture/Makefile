@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: x11/xtestpicture/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xtestpicture/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtestpicture
 PORTVERSION=	1.2
@@ -12,8 +12,6 @@ COMMENT=	Create a full-screen image to adjust your monitor
 
 USES=		imake
 USE_XORG=	x11 xext
-MAN1=		xtestpicture.1
-PLIST_FILES=	bin/xtestpicture
+PLIST_FILES=	bin/xtestpicture man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
