@@ -1,5 +1,5 @@
 # Created by: Koji Yokota (yokota@res.otaru-uc.ac.jp)
-# $FreeBSD: print/latex-aastex/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/latex-aastex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	latex-aastex
 PORTVERSION=	5.2
