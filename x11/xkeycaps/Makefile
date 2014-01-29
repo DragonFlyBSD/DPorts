@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xkeycaps/Makefile 336392 2013-12-13 23:43:01Z bapt $
+# $FreeBSD: x11/xkeycaps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xkeycaps
 PORTVERSION=	2.46
