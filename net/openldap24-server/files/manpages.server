@@ -1,4 +1,4 @@
-# $FreeBSD: net/openldap24-server/files/manpages.server 315106 2013-03-24 06:42:13Z delphij $
+# $FreeBSD: net/openldap24-server/files/manpages.server 340872 2014-01-24 00:14:07Z mat $
 
 MAN5+=	slapd-bdb.5 \
 	slapd-config.5 \

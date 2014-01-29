@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 336300 2013-12-13 00:50:43Z delphij $
+# $FreeBSD: net/openldap24-server/Makefile 339653 2014-01-14 01:02:26Z delphij $
 
 PORTNAME=		openldap
 DISTVERSION=		2.4.38
@@ -46,6 +46,7 @@ LATEST_LINK?=		${PKGNAMEPREFIX}openldap24${PKGNAMESUFFIX}
 USE_OPENSSL=		yes
 USE_AUTOTOOLS=		libtool
 .if !defined(CLIENT_ONLY)
+USE_AUTOTOOLS+=		autoconf
 USERS=			ldap
 GROUPS=			ldap
 .endif
