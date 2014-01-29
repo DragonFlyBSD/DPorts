@@ -1,5 +1,5 @@
 # Created by: Kjell Tore Ullavik <ktullavik@gmail.com>
-# $FreeBSD: multimedia/pyjama/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
+# $FreeBSD: multimedia/pyjama/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pyjama
 PORTVERSION=	0.3.0.1
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 
 NO_BUILD=	yes
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_GSTREAMER=	core good bad gnomevfs
 USE_GNOME=	pygtk2
 USES=		gettext
