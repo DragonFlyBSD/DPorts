@@ -1,10 +1,9 @@
-# $FreeBSD: multimedia/phonon-designerplugin/Makefile 338998 2014-01-07 10:46:31Z makc $
+# $FreeBSD: multimedia/phonon-designerplugin/Makefile 340692 2014-01-22 08:19:10Z makc $
 
 PORTNAME=	phonon
-PORTVERSION=	4.7.0
+PORTVERSION=	4.7.1
 CATEGORIES=	multimedia kde
-MASTER_SITES=	${MASTER_SITE_KDE}
-MASTER_SITE_SUBDIR=	${PHONON_BRANCH}/${PORTNAME}/${PORTVERSION}
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 PKGNAMESUFFIX=	-designerplugin
 DIST_SUBDIR=	KDE
 
