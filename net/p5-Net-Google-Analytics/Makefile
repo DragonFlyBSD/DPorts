@@ -1,7 +1,7 @@
-# $FreeBSD: net/p5-Net-Google-Analytics/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD: net/p5-Net-Google-Analytics/Makefile 339510 2014-01-12 15:01:18Z kuriyama $
 
 PORTNAME=	Net-Google-Analytics
-PORTVERSION=	3.01
+PORTVERSION=	3.02
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
