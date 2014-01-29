@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Graphics/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Graphics/Makefile 340908 2014-01-24 14:59:10Z mat $
 
 PORTNAME=	Text-Graphics
 PORTVERSION=	1.0001
@@ -16,11 +16,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Text::Graphics.3
-
-NO_STAGE=	yes
-post-patch:
-	@${RM} ${WRKSRC}/lib/Text/Graphics.pm.orig
 
 .include <bsd.port.mk>
