@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-imdbpreview/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-imdbpreview/Makefile 341207 2014-01-26 15:10:29Z miwi $
 
 PORTNAME=	imdbpreview
 DISTVERSION=	0.5
@@ -17,6 +17,5 @@ XPI_FILES=	chrome/imdb_preview.jar chrome.manifest \
 		defaults/preferences/defaults.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
