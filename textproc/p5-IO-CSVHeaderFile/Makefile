@@ -1,5 +1,5 @@
 # Created by: Vasek Balcar <vasek@ti.cz>
-# $FreeBSD: textproc/p5-IO-CSVHeaderFile/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-IO-CSVHeaderFile/Makefile 340610 2014-01-21 14:03:59Z mat $
 
 PORTNAME=	IO-CSVHeaderFile
 PORTVERSION=	0.04
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		IO::CSVHeaderFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
