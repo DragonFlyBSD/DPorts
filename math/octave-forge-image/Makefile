@@ -1,9 +1,8 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-image/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/octave-forge-image/Makefile 340802 2014-01-23 05:17:57Z stephen $
 
 PORTNAME=	octave-forge-image
-PORTVERSION=	2.0.0
-PORTREVISION=	1
+PORTVERSION=	2.2.0
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -16,8 +15,8 @@ OCTSRC=		${OCTAVE_PKGNAME}
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 RUN_DEPENDS+=	${TARBALLS_DIR}/signal.tar.gz:${PORTSDIR}/math/octave-forge-signal
+RUN_DEPENDS+=	${TARBALLS_DIR}/general.tar.gz:${PORTSDIR}/math/octave-forge-general
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-patch:
