@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: net/reposado/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/reposado/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	reposado
 PORTVERSION=	0.0.20130415
@@ -18,7 +18,7 @@ GH_TAGNAME=	1bcf4f0
 
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 SUB_FILES=	pkg-message
