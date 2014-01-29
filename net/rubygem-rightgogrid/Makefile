@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/rubygem-rightgogrid/Makefile 337612 2013-12-26 20:04:56Z swills $
+# $FreeBSD: net/rubygem-rightgogrid/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	rightgogrid
 PORTVERSION=	0.1.0
@@ -18,5 +18,4 @@ GEM_NAME=	${DISTNAME}
 RUBYGEM_AUTOPLIST=	yes
 UNIQUENAME=	${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
