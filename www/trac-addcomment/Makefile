@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-addcomment/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-addcomment/Makefile 341180 2014-01-26 14:30:59Z miwi $
 
 PORTNAME=	addcomment
 PORTVERSION=	0.3
@@ -16,10 +16,9 @@ RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		trac-macropost>0:${PORTSDIR}/www/trac-macropost
 
 WRKSRC=		${WRKDIR}/${PORTNAME}macro
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracAddCommentMacro
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
