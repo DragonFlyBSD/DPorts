@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippe@freebsdbrasil.com.br>
-# $FreeBSD: mail/xf-spf/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/xf-spf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xf-spf
 PORTVERSION=	0.2
