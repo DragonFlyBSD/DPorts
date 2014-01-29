@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-google-notebook/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-google-notebook/Makefile 341206 2014-01-26 15:10:06Z miwi $
 
 PORTNAME=	google-notebook
 PORTVERSION=	1.0.0.5
@@ -13,6 +13,5 @@ COMMENT=	An extension to allow notetaking while browsing
 
 XPI_ID=		notebook@google.com
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
