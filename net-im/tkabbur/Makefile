@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: net-im/tkabbur/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/tkabbur/Makefile 340023 2014-01-17 10:15:47Z gahr $
 
 PORTNAME=	tkabbur
 PORTVERSION=	0.8
@@ -15,27 +15,23 @@ RUN_DEPENDS=	dtplite:${PORTSDIR}/devel/tcllib \
 		${LOCALBASE}/lib/bwidget/pkgIndex.tcl:${PORTSDIR}/x11-toolkits/bwidget
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
+USES=		tk:run
 USE_BZIP2=	yes
 NO_BUILD=	yes
-
-USE_TK_RUN=	84+
 
 SUBDIRS=	contrib emoticons ifacetk jabberlib mclistbox \
 		msgs pixmaps plugins sounds tclxml trans
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 do-install:
 	${ECHO} -e "#!/bin/sh\nexec ${WISH} ${DATADIR}/tkabbur.tcl \
-		-name tkabbur \"\$$@\"\n" > ${PREFIX}/bin/tkabbur
-	${CHMOD} +x ${PREFIX}/bin/tkabbur
+		-name tkabbur \"\$$@\"\n" > ${STAGEDIR}${PREFIX}/bin/tkabbur
+	${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/tkabbur
 	${CHMOD} 755 ${WRKSRC}/*.tcl
-	${MKDIR} ${DATADIR}
-	${CP} ${WRKSRC}/*.tcl ${DATADIR}
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${CP} ${WRKSRC}/*.tcl ${STAGEDIR}${DATADIR}
 .for i in ${SUBDIRS}
 	${CHMOD} -R 755 ${WRKSRC}/${i}
-	${CP} -R ${WRKSRC}/${i} ${DATADIR}
+	${CP} -R ${WRKSRC}/${i} ${STAGEDIR}${DATADIR}
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
