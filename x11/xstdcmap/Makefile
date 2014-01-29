@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xstdcmap/Makefile 332201 2013-10-31 04:20:50Z eadler $
+# $FreeBSD: x11/xstdcmap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xstdcmap
 PORTVERSION=	1.0.3
