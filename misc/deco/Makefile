@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/deco/Makefile 335980 2013-12-09 13:17:59Z danilo $
+# $FreeBSD: misc/deco/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	deco
 PORTVERSION=	3.9
