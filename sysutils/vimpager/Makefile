@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: sysutils/vimpager/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: sysutils/vimpager/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vimpager
 PORTVERSION=	1.8.3
