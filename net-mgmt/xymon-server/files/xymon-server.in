@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/xymon-server/files/xymon-server.in 332505 2013-11-02 17:06:48Z feld $
+# $FreeBSD: net-mgmt/xymon-server/files/xymon-server.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: xymon_server

@@ -1,5 +1,5 @@
 # Toplevel Makefile for Xymon
-# $FreeBSD: net-mgmt/xymon-server/files/Makefile 334123 2013-11-17 21:08:54Z feld $
+# $FreeBSD: net-mgmt/xymon-server/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 BUILDTOPDIR=`pwd`
 
 # configure settings for Xymon
