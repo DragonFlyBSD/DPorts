@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/libquantum/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/libquantum/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libquantum
 PORTVERSION=	1.1.0
