@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: multimedia/youtube-viewer/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/youtube-viewer/Makefile 340731 2014-01-22 20:52:31Z nemysis $
 
 PORTNAME=	youtube
 PORTVERSION=	2.5.9
@@ -25,6 +25,9 @@ USES=		perl5
 USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/youtube-viewer
+
+DEPRECATED=	Development ceased for 2.5 branch, conflict with gtk-youtube-viewer
+EXPIRATION_DATE=2014-02-23
 
 NO_STAGE=	yes
 post-patch:
