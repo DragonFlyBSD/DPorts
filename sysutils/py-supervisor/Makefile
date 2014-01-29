@@ -1,5 +1,5 @@
 # Created by: Hizbulin Ildar <hizel@vyborg.ru>
-# $FreeBSD: sysutils/py-supervisor/Makefile 337484 2013-12-26 11:49:42Z wg $
+# $FreeBSD: sysutils/py-supervisor/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	supervisor
 PORTVERSION=	3.0
@@ -28,7 +28,7 @@ BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}mock>0:${PORTSDIR}/devel/py-mock
 
 PORTDOCS=	*.txt *.rst
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 PYDISTUTILS_AUTOPLIST=	yes
 PIDDIR?=	/var/run/supervisor
