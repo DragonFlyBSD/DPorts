@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: misc/xgas/Makefile 335901 2013-12-08 15:03:15Z danilo $
+# $FreeBSD: misc/xgas/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xgas
 PORTVERSION=	1.0
