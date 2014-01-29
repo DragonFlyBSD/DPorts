@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: x11/wmxss/Makefile 336403 2013-12-14 00:01:06Z bapt $
+# $FreeBSD: x11/wmxss/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmxss
 PORTVERSION=	0.1
