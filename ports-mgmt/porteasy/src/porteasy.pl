@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: ports-mgmt/porteasy/src/porteasy.pl 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: ports-mgmt/porteasy/src/porteasy.pl 340872 2014-01-24 00:14:07Z mat $
 #
 
 use strict;
