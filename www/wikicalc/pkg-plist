@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/wikicalc/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/1x1.gif
 %%DATADIR%%/WKC.pm
 %%DATADIR%%/WKCBackupCommands.pm
