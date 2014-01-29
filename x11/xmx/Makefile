@@ -1,5 +1,5 @@
 # Created by: Oliver Breuninger <ob@seicom.NET>
-# $FreeBSD: x11/xmx/Makefile 330196 2013-10-13 01:48:11Z eadler $
+# $FreeBSD: x11/xmx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmx
 PORTVERSION=	1.1
