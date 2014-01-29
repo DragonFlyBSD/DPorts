@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/gretools/Makefile 333969 2013-11-16 02:32:56Z danilo $
+# $FreeBSD: games/gretools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gretools
 PORTVERSION=	1.2.4
