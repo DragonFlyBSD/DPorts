@@ -1,5 +1,5 @@
 # Created by: Erik Greenwald <erik@smluc.org>
-# $FreeBSD: games/fgkicker/Makefile 337584 2013-12-26 18:04:55Z marino $
+# $FreeBSD: games/fgkicker/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fgkicker
 PORTVERSION=	1.0
