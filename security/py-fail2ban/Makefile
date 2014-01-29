@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-fail2ban/Makefile 335064 2013-11-27 21:33:18Z sunpoet $
+# $FreeBSD: security/py-fail2ban/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	fail2ban
 PORTVERSION=	0.8.11
@@ -17,7 +17,7 @@ GH_PROJECT=	${PORTNAME}
 GH_COMMIT=	fc213a1
 GH_TAGNAME=	${PORTVERSION}
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 
 USE_RC_SUBR=	fail2ban
