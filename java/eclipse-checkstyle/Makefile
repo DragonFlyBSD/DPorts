@@ -1,5 +1,5 @@
 # Created by: gldisater@gldis.ca
-# $FreeBSD: java/eclipse-checkstyle/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-checkstyle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	checkstyle
 PORTVERSION=	3.4.1.0
