@@ -1,5 +1,5 @@
 # Created by: gugabsd <gugabsd@mundounix.com.br>
-# $FreeBSD: www/py-rhodecode/Makefile 337536 2013-12-26 15:17:10Z wg $
+# $FreeBSD: www/py-rhodecode/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	rhodecode
 PORTVERSION=	1.7.2
@@ -38,7 +38,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pylons>=1.0:${PORTSDIR}/www/py-pylons \
 		${PYTHON_PKGNAMEPREFIX}celery>=0:${PORTSDIR}/devel/py-celery \
 		mercurial>=2.6:${PORTSDIR}/devel/mercurial
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
