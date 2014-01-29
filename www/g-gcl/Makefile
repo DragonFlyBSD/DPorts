@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: www/g-gcl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/g-gcl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	g-gcl
 PORTVERSION=	1.10
