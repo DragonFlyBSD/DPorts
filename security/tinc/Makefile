@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/tinc/Makefile 335810 2013-12-07 05:09:57Z dinoex $
+# $FreeBSD: security/tinc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tinc
 PORTVERSION=	1.0.22
