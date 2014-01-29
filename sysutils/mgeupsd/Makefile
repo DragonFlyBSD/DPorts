@@ -1,5 +1,5 @@
 # Created by: Andreas Dobloug <andreasd@@ifi.uio.no>
-# $FreeBSD: sysutils/mgeupsd/Makefile 333877 2013-11-15 15:25:56Z vanilla $
+# $FreeBSD: sysutils/mgeupsd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mgeupsd
 PORTVERSION=	0.3
