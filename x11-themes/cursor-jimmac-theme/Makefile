@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: x11-themes/cursor-jimmac-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/cursor-jimmac-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cursor-jimmac-theme
 PORTVERSION=	0.1
