@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/y4mscaler/Makefile 331039 2013-10-20 17:37:22Z bapt $
+# $FreeBSD: multimedia/y4mscaler/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	y4mscaler
 PORTVERSION=	9.0
