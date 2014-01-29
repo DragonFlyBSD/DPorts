@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: textproc/py-asv/Makefile 338086 2013-12-30 11:14:37Z wg $
+# $FreeBSD: textproc/py-asv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asv
 PORTVERSION=	0.5
