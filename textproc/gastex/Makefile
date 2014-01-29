@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: textproc/gastex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/gastex/Makefile 341447 2014-01-27 20:46:39Z mat $
 
 PORTNAME=	gastex
 PORTVERSION=	2.7
@@ -20,14 +20,12 @@ TEXMFDIR?=	share/texmf
 GASTEXDIR=	${PREFIX}/${TEXMFDIR}/tex/latex/gastex
 GASDVIDIR=	${PREFIX}/${TEXMFDIR}/dvips/gastex
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${GASTEXDIR}
-	@${MKDIR} ${GASDVIDIR}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${_DISTDIR}/gastex.sty ${GASTEXDIR}
-	${INSTALL_DATA} ${_DISTDIR}/gastex.pro ${GASDVIDIR}
-	${INSTALL_DATA} ${_DISTDIR}/ex-gastex.tex ${EXAMPLESDIR}
-	mktexlsr
+	@${MKDIR} ${STAGEDIR}${GASTEXDIR}
+	@${MKDIR} ${STAGEDIR}${GASDVIDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${_DISTDIR}/gastex.sty ${STAGEDIR}${GASTEXDIR}
+	${INSTALL_DATA} ${_DISTDIR}/gastex.pro ${STAGEDIR}${GASDVIDIR}
+	${INSTALL_DATA} ${_DISTDIR}/ex-gastex.tex ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
