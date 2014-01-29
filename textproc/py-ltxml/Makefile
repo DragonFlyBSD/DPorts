@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: textproc/py-ltxml/Makefile 338094 2013-12-30 11:56:34Z wg $
+# $FreeBSD: textproc/py-ltxml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ltxml
 PORTVERSION=	1.3
