@@ -1,5 +1,5 @@
 # Created by: Roland van Laar <roland@micite.net>
-# $FreeBSD: security/py-kerberos/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: security/py-kerberos/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		kerberos
 PORTVERSION=		1.1.1
