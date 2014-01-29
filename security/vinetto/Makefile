@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@BSDGuru.org>
-# $FreeBSD: security/vinetto/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/vinetto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vinetto
 PORTVERSION=	0.07
@@ -15,7 +15,7 @@ OPTIONS_DEFINE=	IMAGING
 OPTIONS_DEFAULT=	IMAGING
 IMAGING_DESC=	Build with ability to extract graphic thumbnails
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGVERSION=	0.06alpha
 
