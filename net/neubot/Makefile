@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/neubot/Makefile 336463 2013-12-14 17:48:22Z wg $
+# $FreeBSD: net/neubot/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	neubot
 PORTVERSION=	0.4.16.9
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
-USE_PYTHON=	2.5-2.9
+USE_PYTHON=	2
 
 NO_BUILD=	yes
 
