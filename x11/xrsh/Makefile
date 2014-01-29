@@ -1,5 +1,5 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: x11/xrsh/Makefile 336385 2013-12-13 23:30:23Z bapt $
+# $FreeBSD: x11/xrsh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrsh
 PORTVERSION=	5.92
