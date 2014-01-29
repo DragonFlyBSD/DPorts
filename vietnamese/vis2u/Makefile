@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: vietnamese/vis2u/Makefile 327775 2013-09-20 23:20:31Z bapt $
+# $FreeBSD: vietnamese/vis2u/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vis2u
 PORTVERSION=	1.0
