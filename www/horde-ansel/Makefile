@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-ansel/Makefile 332016 2013-10-29 21:46:58Z mm $
+# $FreeBSD: www/horde-ansel/Makefile 341402 2014-01-27 13:30:28Z miwi $
 
 PORTNAME=	ansel
 DISTVERSION=	3.0.1
@@ -40,7 +40,6 @@ USE_HORDE_RUN=	Horde_Role \
 		Horde_View \
 		Horde_Vfs
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
 .include <bsd.port.post.mk>
