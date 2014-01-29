@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-it_s_all_text/Makefile 327812 2013-09-21 12:26:55Z flo $
+# $FreeBSD: www/xpi-it_s_all_text/Makefile 341209 2014-01-26 15:10:59Z miwi $
 
 PORTNAME=	it_s_all_text
 PORTVERSION=	1.8.1
@@ -18,6 +18,5 @@ XPI_FILES=	chrome.manifest \
 XPI_DIRS=	chrome \
 		defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
