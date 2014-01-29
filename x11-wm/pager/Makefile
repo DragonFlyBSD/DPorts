@@ -1,5 +1,5 @@
 # Created by: Michael Ebert <ebert@informatik.unibw-muenchen.de>
-# $FreeBSD: x11-wm/pager/Makefile 337805 2013-12-27 20:57:47Z antoine $
+# $FreeBSD: x11-wm/pager/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pager
 PORTVERSION=	0.90.3
