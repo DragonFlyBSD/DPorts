@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/ontv/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/ontv/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/deskutils/ontv/Makefile,v 1.7 2007/07/23 21:02:59 mezz Exp $
 
 PORTNAME=	ontv
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 USES=		gettext
 USE_GNOME=	gnomehack gnomeprefix pygnomedesktop pygnomeextras pygtk2
 USE_GMAKE=	yes
-USE_PYTHON=	2.5-2.7
+USE_PYTHON=	2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
