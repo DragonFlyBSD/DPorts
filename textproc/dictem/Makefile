@@ -1,5 +1,5 @@
 # Created by: Max N. Boyarov <m.boyarov@gmail.com>
-# $FreeBSD: textproc/dictem/Makefile 335504 2013-12-02 15:12:22Z wg $
+# $FreeBSD: textproc/dictem/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dictem
 PORTVERSION=	1.0.4
