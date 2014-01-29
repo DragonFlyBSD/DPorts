@@ -1,5 +1,5 @@
 # Created by: andreas@FreeBSD.org
-# $FreeBSD: net/utftpd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/utftpd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	utftpd
 PORTVERSION=	0.2.4
