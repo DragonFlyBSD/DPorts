@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Unihan/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Unicode-Unihan/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	Unicode-Unihan
 DISTVERSION=	0.04
@@ -12,11 +12,5 @@ COMMENT=	The Unihan Data Base 5.1.0
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Unicode::Unihan.3
-
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e '/use 5.008001;/d' ${WRKSRC}/Unihan.pm
 
 .include <bsd.port.mk>
