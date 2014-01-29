@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-fl-core/Makefile 335843 2013-12-07 19:23:05Z stephen $
+# $FreeBSD: math/octave-forge-fl-core/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	octave-forge-fl-core
 PORTVERSION=	1.0.0
@@ -9,6 +9,8 @@ CATEGORIES=	math
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
+LICENSE=	GPLv3
+
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 OCTSRC=		${OCTAVE_PKGNAME}
@@ -16,7 +18,6 @@ OCTSRC=		${OCTAVE_PKGNAME}
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 USE_DOS2UNIX=	yes
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
