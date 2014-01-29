@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: textproc/py-dsv/Makefile 338087 2013-12-30 11:29:19Z wg $
+# $FreeBSD: textproc/py-dsv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dsv
 PORTVERSION=	1.4.1
