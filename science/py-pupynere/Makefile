@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-pupynere/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/py-pupynere/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pupynere
 PORTVERSION=	1.0.15
@@ -16,7 +16,7 @@ LICENSE=	MIT
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 
-USE_PYTHON=		-2.7
+USE_PYTHON=		2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
