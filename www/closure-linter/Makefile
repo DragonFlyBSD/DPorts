@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: www/closure-linter/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/closure-linter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	closure-linter
 PORTVERSION=	2.3.5
@@ -14,7 +14,7 @@ LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gflags:${PORTSDIR}/devel/py-gflags
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=easy_install
 
 PLIST_FILES=	bin/fixjsstyle \
