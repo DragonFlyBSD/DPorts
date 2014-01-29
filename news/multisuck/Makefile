@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: news/multisuck/Makefile 337684 2013-12-27 10:12:13Z bapt $
+# $FreeBSD: news/multisuck/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	multisuck
 PORTVERSION=	1.0.4
