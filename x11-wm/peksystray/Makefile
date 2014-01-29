@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: x11-wm/peksystray/Makefile 337821 2013-12-27 22:39:23Z antoine $
+# $FreeBSD: x11-wm/peksystray/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	peksystray
 PORTVERSION=	0.4.0
