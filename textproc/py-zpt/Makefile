@@ -1,5 +1,5 @@
 # Created by: Benno Rice <benno@jeamland.net>
-# $FreeBSD: textproc/py-zpt/Makefile 338101 2013-12-30 12:30:11Z wg $
+# $FreeBSD: textproc/py-zpt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zpt
 PORTVERSION=	2.5
