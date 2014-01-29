@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11/wdm/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/wdm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wdm
 PORTVERSION=	1.28
