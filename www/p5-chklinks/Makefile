@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-chklinks/Makefile 333169 2013-11-08 01:06:34Z vanilla $
+# $FreeBSD: www/p5-chklinks/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	chklinks
 PORTVERSION=	3.09
