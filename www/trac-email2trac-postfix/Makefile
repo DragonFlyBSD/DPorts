@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-email2trac-postfix/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-email2trac-postfix/Makefile 341183 2014-01-26 14:31:44Z miwi $
 
 PKGNAMESUFFIX=		-postfix
 
@@ -6,5 +6,4 @@ WITH_POSTFIX=		yes
 
 MASTERDIR=		${.CURDIR}/../trac-email2trac
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
