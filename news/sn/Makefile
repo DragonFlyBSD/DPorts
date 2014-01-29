@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: news/sn/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/sn/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sn
 PORTVERSION=	0.3.8
