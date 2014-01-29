@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-bim/Makefile 333906 2013-11-15 18:03:38Z stephen $
+# $FreeBSD: math/octave-forge-bim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	octave-forge-bim
 PORTVERSION=	1.1.3
@@ -8,6 +8,8 @@ CATEGORIES=	math
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
+LICENSE=	GPLv2
+
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 OCTSRC=		${OCTAVE_PKGNAME}
@@ -15,7 +17,6 @@ OCTSRC=		${OCTAVE_PKGNAME}
 RUN_DEPENDS+=	${TARBALLS_DIR}/fpl.tar.gz:${PORTSDIR}/math/octave-forge-fpl
 RUN_DEPENDS+=	${TARBALLS_DIR}/msh.tar.gz:${PORTSDIR}/math/octave-forge-msh
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 do-build:
