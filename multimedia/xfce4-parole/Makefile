@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/xfce4-parole/Makefile 335675 2013-12-05 17:18:40Z olivierd $
+# $FreeBSD: multimedia/xfce4-parole/Makefile 341436 2014-01-27 17:35:46Z olivierd $
 
 PORTNAME=	parole
 PORTVERSION=	0.5.4
@@ -15,6 +15,8 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib \
 		libnotify.so:${PORTSDIR}/devel/libnotify \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
+
+PORTSCOUT=	limit:^0\.6\.
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
