@@ -1,9 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/midori/Makefile 338445 2014-01-02 15:19:00Z olivierd $
+# $FreeBSD: www/midori/Makefile 339896 2014-01-16 05:27:36Z olivierd $
 
 PORTNAME=	midori
-PORTVERSION=	0.5.6
-PORTREVISION=	1
+PORTVERSION=	0.5.7
 CATEGORIES=	www xfce
 MASTER_SITES=	http://www.midori-browser.org/downloads/
 DISTNAME=	${PORTNAME}_${PORTVERSION}_all_
@@ -12,7 +11,8 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Lightweight web browser using WebKit browser engine
 
-LICENSE=	LGPL21
+LICENSE=	LGPL21 MIT
+LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2 \
 		valac:${PORTSDIR}/lang/vala
@@ -81,8 +81,9 @@ CMAKE_ARGS+=	-DUSE_ZEITGEIST:BOOL=OFF
 
 post-patch:
 # Avoid errors with CMake
+	@${RM} ${WRKSRC}/*.orig
 .for dir in config extensions
-	@cd ${WRKSRC} && ${RM} ${dir}/*.orig
+	@${RM} ${WRKSRC}/${dir}/*.orig
 .endfor
 
 .include <bsd.port.mk>
