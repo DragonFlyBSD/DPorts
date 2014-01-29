@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-im/jabberd/files/jabberd.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net-im/jabberd/files/jabberd.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: jabberd
 # REQUIRE: %%REQUIRE%%

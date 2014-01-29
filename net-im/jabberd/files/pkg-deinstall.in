@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net-im/jabberd/files/pkg-deinstall.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net-im/jabberd/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 
 if [ "$2" != "POST-DEINSTALL" ]; then
     exit 0
