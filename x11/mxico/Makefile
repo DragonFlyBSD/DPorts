@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: x11/mxico/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/mxico/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # NB: Do not delete or wrap post-install section, since we have to provide
 #     READMEj and README
@@ -16,14 +16,12 @@ COMMENT=	Rotating Object on the screen (Zalgaller polyhedra)
 USES=		imake
 USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAN1=		mxico.1
 
-NO_STAGE=	yes
 post-install:
 .if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@(cd ${WRKSRC}; ${INSTALL_DATA} polyhedron/READMEj ${DOCSDIR})
-	@(cd ${WRKSRC}; ${INSTALL_DATA} polyhedron/README ${DOCSDIR})
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@(cd ${WRKSRC}; ${INSTALL_DATA} polyhedron/READMEj ${STAGEDIR}${DOCSDIR})
+	@(cd ${WRKSRC}; ${INSTALL_DATA} polyhedron/README ${STAGEDIR}${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
