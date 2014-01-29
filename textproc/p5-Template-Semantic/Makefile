@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Template-Semantic/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Template-Semantic/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Template-Semantic
 PORTVERSION=	0.09
@@ -8,6 +8,9 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to use pure XHTML/XML as a template
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	\
 	p5-HTML-Selector-XPath>=0.09:${PORTSDIR}/www/p5-HTML-Selector-XPath \
@@ -19,10 +22,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Semantic.3 \
-	Template::Semantic::Cookbook.3 \
-	Template::Semantic::Document.3 \
-	Template::Semantic::Filter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
