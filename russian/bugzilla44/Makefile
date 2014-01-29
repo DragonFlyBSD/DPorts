@@ -1,4 +1,4 @@
-# $FreeBSD: russian/bugzilla44/Makefile 336450 2013-12-14 14:35:11Z ohauer $
+# $FreeBSD: russian/bugzilla44/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.4.1
