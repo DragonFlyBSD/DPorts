@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: net-p2p/ctorrent/Makefile 331891 2013-10-28 19:10:04Z dinoex $
+# $FreeBSD: net-p2p/ctorrent/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ctorrent
 PORTVERSION=	3.3.2
