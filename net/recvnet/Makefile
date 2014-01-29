@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/recvnet/Makefile 331386 2013-10-23 13:50:35Z ehaupt $
+# $FreeBSD: net/recvnet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	recvnet
 PORTVERSION=	0.0.1
