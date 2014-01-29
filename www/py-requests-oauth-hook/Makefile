@@ -1,8 +1,9 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-requests-oauth-hook/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-requests-oauth-hook/Makefile 341385 2014-01-27 12:14:09Z koobs $
 
 PORTNAME=	requests-oauth-hook
 PORTVERSION=	0.1.4
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +13,7 @@ COMMENT=	This is an OAuth hook for py-requests
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests1>0:${PORTSDIR}/www/py-requests1 \
 		${PYTHON_PKGNAMEPREFIX}oauth2>0:${PORTSDIR}/net/py-oauth2
 
 USE_PYTHON=	yes
