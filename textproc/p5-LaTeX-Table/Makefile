@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-Table/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-LaTeX-Table/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	LaTeX-Table
 PORTVERSION=	1.0.6
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for the automatic generation of LaTeX tables
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Test-NoWarnings>=0.084:${PORTSDIR}/devel/p5-Test-NoWarnings \
 		p5-Moose>=0.76:${PORTSDIR}/devel/p5-Moose \
@@ -39,18 +42,4 @@ RUN_DEPENDS=	p5-Test-NoWarnings>=0.084:${PORTSDIR}/devel/p5-Test-NoWarnings \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=	csv2pdf.1 ltpretty.1
-MAN3=	LaTeX::Table::Types::Ctable.3 \
-	LaTeX::Table::Types::TypeI.3 \
-	LaTeX::Table::Themes::Booktabs.3 \
-	LaTeX::Table::Themes::Classic.3 \
-	LaTeX::Table::Themes::Beamer.3 \
-	LaTeX::Table::Themes::ThemeI.3 \
-	LaTeX::Table::Themes::Modern.3 \
-	LaTeX::Table.3 \
-	LaTeX::Table::Types::Longtable.3 \
-	LaTeX::Table::Types::Xtab.3 \
-	LaTeX::Table::Types::Std.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
