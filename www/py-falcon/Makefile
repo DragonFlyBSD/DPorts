@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: www/py-falcon/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/py-falcon/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	falcon
 PORTVERSION=	0.1.4
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	cython>=0.11.2:${PORTSDIR}/lang/cython
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}testtools>=0:${PORTSDIR}/devel/py-testtools \
 		${PYTHON_PKGNAMEPREFIX}six>=1.1.0:${PORTSDIR}/devel/py-six
 
-USE_PYTHON=	2.7+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYEASYINSTALL_ARCHDEP=	yes
 
