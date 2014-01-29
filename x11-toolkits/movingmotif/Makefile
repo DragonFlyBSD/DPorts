@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/movingmotif/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/movingmotif/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	movingmotif
 PORTVERSION=	2.3.0
