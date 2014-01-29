@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/font-bitstream-speedo/Makefile 336886 2013-12-19 10:49:00Z zeising $
+# $FreeBSD: x11-fonts/font-bitstream-speedo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	font-bitstream-speedo
 PORTVERSION=	1.0.2
