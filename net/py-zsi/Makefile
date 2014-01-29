@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: net/py-zsi/Makefile 337138 2013-12-21 11:03:03Z wg $
+# $FreeBSD: net/py-zsi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zsi
 PORTVERSION=	2.0
