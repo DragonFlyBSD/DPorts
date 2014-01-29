@@ -1,5 +1,5 @@
 # Created by: od <od@iclub.nsu.ru>
-# $FreeBSD: x11/wmappl/Makefile 330201 2013-10-13 02:44:28Z eadler $
+# $FreeBSD: x11/wmappl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmappl
 PORTVERSION=	0.71
