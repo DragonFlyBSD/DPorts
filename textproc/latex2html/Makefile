@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: textproc/latex2html/Makefile 332522 2013-11-02 17:34:44Z hrs $
+# $FreeBSD: textproc/latex2html/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	latex2html
 PORTVERSION=	2008
