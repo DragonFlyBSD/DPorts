@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: x11-wm/awesome-vicious/Makefile 339162 2014-01-08 18:15:32Z wg $
+# $FreeBSD: x11-wm/awesome-vicious/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	awesome-vicious
 PORTVERSION=	2.1.3
