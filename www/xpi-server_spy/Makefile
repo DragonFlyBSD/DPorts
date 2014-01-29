@@ -1,5 +1,5 @@
 # Created by: Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: www/xpi-server_spy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-server_spy/Makefile 341216 2014-01-26 15:13:24Z miwi $
 
 PORTNAME=	server_spy
 PORTVERSION=	0.2.3
@@ -14,11 +14,9 @@ USE_XPI=	*firefox*
 XPI_ID=		ServerSpy@jacquet.eu.org
 XPI_NUM=	2036
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<em:maxVersion>22\.\*<|<em:maxVersion>99.*<|' \
 		${WRKSRC}/install.rdf
-
 
 pre-install:
 	@${RM} -f ${WRKSRC}/install.rdf.bak
