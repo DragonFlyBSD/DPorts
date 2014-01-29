@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: textproc/gladtex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/gladtex/Makefile 341453 2014-01-27 21:17:25Z mat $
 
 PORTNAME=	gladtex
 PORTVERSION=	1.3
@@ -13,8 +13,8 @@ COMMENT=	A program to replace LaTeX formulas in HTML files with images
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gif:${PORTSDIR}/graphics/giflib \
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib \
+		libpng15.so:${PORTSDIR}/graphics/png
 
 USE_TEX=	latex dvipsk
 BINPATH=	${PREFIX}/bin
@@ -23,19 +23,11 @@ LIBPATH=	"-L${LOCALBASE}/lib"
 
 MAKE_ENV+=	BINPATH=${BINPATH} INCPATH="${INCPATH}" LIBPATH="${LIBPATH}"
 
-.if !defined(NO_INSTALL_MANPAGES)
-MAN1=	${PORTNAME}.1
-.endif
-
 USES=		perl5
 
-NO_STAGE=	yes
 do-install:
-	@cd ${WRKSRC}; \
-	${INSTALL_SCRIPT} ${PORTNAME} ${BINPATH}; \
-	${INSTALL_PROGRAM} eqn2img ${BINPATH}
-.if !defined(NO_INSTALL_MANPAGES)
-	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${MANPREFIX}/man/man1/
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${BINPATH}; \
+	${INSTALL_PROGRAM} ${WRKSRC}/eqn2img ${STAGEDIR}${BINPATH}
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1/
 
 .include <bsd.port.mk>
