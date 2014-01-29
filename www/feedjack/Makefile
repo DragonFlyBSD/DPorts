@@ -1,4 +1,4 @@
-# $FreeBSD: www/feedjack/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/feedjack/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	feedjack
 PORTVERSION=	0.9.16
@@ -13,7 +13,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/feedparser.py:${PORTSDIR}/textproc/py-feedpars
 		django-admin.py:${PORTSDIR}/www/py-django
 
 DIST_SUBDIR=	python
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	Feedjack
 
