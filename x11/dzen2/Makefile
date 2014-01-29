@@ -1,5 +1,5 @@
 # Created by: Morten Slot Kristensen
-# $FreeBSD: x11/dzen2/Makefile 338934 2014-01-06 21:10:01Z bapt $
+# $FreeBSD: x11/dzen2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dzen2
 PORTVERSION=	0.8.5
