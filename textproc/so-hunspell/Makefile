@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/so-hunspell/Makefile 332690 2013-11-04 11:02:46Z bapt $
+# $FreeBSD: textproc/so-hunspell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hunspell
 PORTVERSION=	1.0.2
