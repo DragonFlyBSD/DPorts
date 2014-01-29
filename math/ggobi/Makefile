@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: math/ggobi/Makefile 332750 2013-11-04 17:43:48Z wg $
+# $FreeBSD: math/ggobi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ggobi
 PORTVERSION=	2.1.9
