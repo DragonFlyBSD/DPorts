@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: www/php-templates/Makefile 336295 2013-12-12 22:03:07Z antoine $
+# $FreeBSD: www/php-templates/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	php-templates
 PORTVERSION=	1.7.2
