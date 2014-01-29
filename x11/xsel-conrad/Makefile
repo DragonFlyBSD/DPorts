@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/xsel-conrad/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xsel-conrad/Makefile 339414 2014-01-11 10:03:45Z vanilla $
 
 PORTNAME=	xsel
 PORTVERSION=	1.2.0
@@ -21,23 +21,21 @@ CONFLICTS_INSTALL=	xsel-[0-9]*
 USE_XORG=	x11 xext xt xproto ice sm
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lXext -lX11
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 PORTDOCS=	ChangeLog README
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|jmp_buf|sigjmp_buf|g' ${WRKSRC}/xsel.c
 	@${REINPLACE_CMD} -e 's|@X_CFLAGS@|${CFLAGS}|;\
 		s|@X_LIBS@|${LDFLAGS}|' ${WRKSRC}/Makefile.in
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1x ${MAN1PREFIX}/man/man1/${PORTNAME}.1
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1x ${STAGEDIR}${MAN1PREFIX}/man/man1/${PORTNAME}.1
 .ifndef NOPORTDOCS
-	@${INSTALL} -d ${DOCSDIR}/
-	@cd ${WRKSRC}/&&${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}/
+	@${INSTALL} -d ${STAGEDIR}${DOCSDIR}/
+	@cd ${WRKSRC}/&&${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 .endif
 
 .include <bsd.port.mk>
