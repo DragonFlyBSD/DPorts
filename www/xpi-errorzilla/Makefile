@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: www/xpi-errorzilla/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-errorzilla/Makefile 341200 2014-01-26 15:07:51Z miwi $
 
 PORTNAME=	errorzilla
 PORTVERSION=	0.42
@@ -41,6 +41,5 @@ XPI_DIRS=	chrome/content/images \
 		defaults/preferences \
 		defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
