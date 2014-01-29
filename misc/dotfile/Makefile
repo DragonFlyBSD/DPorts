@@ -1,5 +1,5 @@
 # Created by: oly@world.std.com
-# $FreeBSD: misc/dotfile/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/dotfile/Makefile 340605 2014-01-21 12:44:38Z gahr $
 
 PORTNAME=	dotfile
 PORTVERSION=	2.4.1
@@ -15,13 +15,12 @@ BUILD_DEPENDS=	formail:${PORTSDIR}/mail/procmail
 GNU_CONFIGURE=	yes
 PLIST_SUB=	DISTNAME="${DISTNAME}"
 NO_BUILD=	yes
+USES=		tk
 
 MAN1=		dotfile.1
 
 OPTIONS_DEFINE=	JAPANESE
 JAPANESE_DESC=	Use Japanese as default language
-
-USE_TK=		yes
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
