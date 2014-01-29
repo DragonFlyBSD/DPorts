@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-ltfat/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/octave-forge-ltfat/Makefile 340801 2014-01-23 05:05:19Z stephen $
 
 PORTNAME=	octave-forge-ltfat
 PORTVERSION=	1.4.2
@@ -8,6 +8,8 @@ CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+
+LICENSE=	GPLv3
 
 LIB_DEPENDS=	fftw3:${PORTSDIR}/math/fftw3 \
 		portaudio:${PORTSDIR}/audio/portaudio2 \
@@ -19,7 +21,6 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
