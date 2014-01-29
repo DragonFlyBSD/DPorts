@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mheffner@vt.edu>
-# $FreeBSD: security/bfbtester/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/bfbtester/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bfbtester
 PORTVERSION=	2.0.1
