@@ -1,5 +1,5 @@
 # Created by: jabley@clear.co.nz
-# $FreeBSD: x11-servers/Xfstt/Makefile 327782 2013-09-20 23:52:24Z bapt $
+# $FreeBSD: x11-servers/Xfstt/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xfstt
 PORTVERSION=	1.6
