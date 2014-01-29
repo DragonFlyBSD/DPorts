@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: net/hs-pcap/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: net/hs-pcap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pcap
 PORTVERSION=	0.4.5.2
