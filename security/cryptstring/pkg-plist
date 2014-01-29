@@ -1,3 +1,2 @@
-@comment $FreeBSD: security/cryptstring/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/cs.inc.php
 @dirrm %%DATADIR%%
