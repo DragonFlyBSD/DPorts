@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/bluecurve-themes/bsd.bluecurve.mk 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: x11-themes/bluecurve-themes/bsd.bluecurve.mk 340722 2014-01-22 17:00:46Z mat $
 
 _BC_MK_INCLUDED=	yes
 
