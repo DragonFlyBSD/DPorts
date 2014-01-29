@@ -1,5 +1,5 @@
 # Created by: bugghy <bugghy@SAFe-mail.net>
-# $FreeBSD: security/sud/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/sud/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sud
 PORTVERSION=	1.3
