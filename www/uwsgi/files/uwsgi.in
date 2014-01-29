@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/uwsgi/files/uwsgi.in 330678 2013-10-17 21:40:19Z demon $
+# $FreeBSD: www/uwsgi/files/uwsgi.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: uwsgi
 # REQUIRE: DAEMON
