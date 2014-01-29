@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@rabbit.augusta.de>
-# $FreeBSD: misc/xtar/Makefile 327748 2013-09-20 21:23:56Z bdrewery $
+# $FreeBSD: misc/xtar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtar
 PORTVERSION=	1.4
