@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: textproc/pecl-html_parse/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-html_parse/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	html_parse
 PORTVERSION=	1.0.0
@@ -23,5 +23,4 @@ IGNORE_WITH_PHP=5
 
 CONFIGURE_ARGS=	--enable-html_parse
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
