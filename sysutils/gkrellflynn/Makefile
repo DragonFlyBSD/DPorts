@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: sysutils/gkrellflynn/Makefile 330568 2013-10-16 23:49:45Z amdmi3 $
+# $FreeBSD: sysutils/gkrellflynn/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellflynn
 PORTVERSION=	0.8
