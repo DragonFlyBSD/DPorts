@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: security/xinetd/Makefile 329174 2013-10-03 12:54:10Z sem $
+# $FreeBSD: security/xinetd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xinetd
 PORTVERSION=	2.3.15
