@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@spc.org>
-# $FreeBSD: x11/xmon/Makefile 336389 2013-12-13 23:34:17Z bapt $
+# $FreeBSD: x11/xmon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmon
 PORTVERSION=	1.5.6
