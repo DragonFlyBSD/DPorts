@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Version-Next/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Version-Next/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	Version-Next
 PORTVERSION=	0.002
@@ -10,13 +10,12 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lth@FreeBSD.org
 COMMENT=	Increment module version numbers simply and correctly
 
+LICENSE=	APACHE20
+
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Version::Next.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
