@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/links/Makefile 332222 2013-10-31 11:06:16Z bapt $
+# $FreeBSD: www/links/Makefile 339572 2014-01-13 07:23:43Z bapt $
 
 PORTNAME=	links
 DISTVERSION=	2.8
@@ -42,10 +42,6 @@ NO_STAGE=	yes
 
 #CIPHERSTRING must be a valid OpenSSL cipher string(see ciphers(1)):
 CIPHERSTRING?=	HIGH:!SSLv2:!aNULL:!eNULL:@STRENGTH
-
-.if ${OSVERSION} < 800505 || (${OSVERSION} >= 900000 && ${OSVERSION} < 900012)
-LIB_DEPENDS+=	liblzma.so:${PORTSDIR}/archivers/xz
-.endif
 
 .if ${PORT_OPTIONS:MDIRECTFB} || ${PORT_OPTIONS:MSVGALIB} || ${PORT_OPTIONS:MX11}
 LIB_DEPENDS+=	libpng.so:${PORTSDIR}/graphics/png \
