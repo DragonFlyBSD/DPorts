@@ -1,5 +1,5 @@
 # Created by: incabulos@mac.com
-# $FreeBSD: x11/xrootconsole/Makefile 330211 2013-10-13 06:13:53Z eadler $
+# $FreeBSD: x11/xrootconsole/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrootconsole
 PORTVERSION=	0.6
