@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: x11-toolkits/pangoxsl/Makefile 337814 2013-12-27 21:53:47Z antoine $
+# $FreeBSD: x11-toolkits/pangoxsl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pangoxsl
 PORTVERSION=	1.6.0.3
