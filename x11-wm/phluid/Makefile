@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-wm/phluid/Makefile 338005 2013-12-29 15:07:21Z antoine $
+# $FreeBSD: x11-wm/phluid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phluid
 PORTVERSION=	0.0.3
