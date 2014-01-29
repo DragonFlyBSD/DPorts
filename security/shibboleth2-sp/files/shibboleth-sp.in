@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/shibboleth2-sp/files/shibboleth-sp.in 319885 2013-06-04 17:29:21Z girgen $
+# $FreeBSD: security/shibboleth2-sp/files/shibboleth-sp.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: shibboleth_sp
 # REQUIRE: DAEMON
