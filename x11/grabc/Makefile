@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/grabc/Makefile 337985 2013-12-29 13:55:50Z antoine $
+# $FreeBSD: x11/grabc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	grabc
 PORTVERSION=	1.1
