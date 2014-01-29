@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 337845 2013-12-28 10:00:29Z dbn $
+# $FreeBSD: x11-themes/cursor-crystal-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cursor-crystal-theme
 DISTVERSION=	1.1.1
