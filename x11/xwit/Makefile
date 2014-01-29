@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11/xwit/Makefile 331571 2013-10-25 12:42:00Z ehaupt $
+# $FreeBSD: x11/xwit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xwit
 PORTVERSION=	3.4
