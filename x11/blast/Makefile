@@ -1,5 +1,5 @@
 # Created by: searle
-# $FreeBSD: x11/blast/Makefile 337988 2013-12-29 14:06:03Z antoine $
+# $FreeBSD: x11/blast/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	blast
 PORTVERSION=	1.1
