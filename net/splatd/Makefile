@@ -1,5 +1,5 @@
 # Created by: Landon Fuller <landonf@opendarwin.org>
-# $FreeBSD: net/splatd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/splatd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	splatd
 PORTVERSION=	1.2
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/zconfig:${PORTSDIR}/devel/py-zconfig \
 		${PYTHON_SITELIBDIR}/twisted:${PORTSDIR}/devel/py-twistedCore
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	splat
 USE_RC_SUBR=	splatd
