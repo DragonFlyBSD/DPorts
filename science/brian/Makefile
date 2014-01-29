@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: science/brian/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: science/brian/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	brian
 PORTVERSION=	1.4.1
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.1.0:${PORTSDIR}/math/py-numpy \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
