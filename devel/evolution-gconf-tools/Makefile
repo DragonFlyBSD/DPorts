@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/evolution-gconf-tools/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: devel/evolution-gconf-tools/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/devel/evolution-gconf-tools/Makefile,v 1.2 2005/10/14 20:39:56 adamw Exp $
 
 PORTNAME=	evolution-gconf-tools
