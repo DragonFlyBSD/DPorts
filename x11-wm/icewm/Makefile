@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/icewm/Makefile 335812 2013-12-07 05:34:49Z eadler $
+# $FreeBSD: x11-wm/icewm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	icewm
 PORTVERSION=	1.3.7
