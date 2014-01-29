@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/xpi-pdf_download/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-pdf_download/Makefile 341213 2014-01-26 15:12:42Z miwi $
 
 PORTNAME=	pdf_download
 PORTVERSION=	3.0.0.3
@@ -15,6 +15,5 @@ XPI_FILES=	chrome/pdfdownload.jar chrome.manifest install.rdf \
 		defaults/preferences/prefs.js
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
