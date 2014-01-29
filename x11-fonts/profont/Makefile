@@ -1,5 +1,5 @@
 # Created by: Manuel Giraud <manuel.giraud@gmail.com>
-# $FreeBSD: x11-fonts/profont/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/profont/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	profont
 PORTVERSION=	400
