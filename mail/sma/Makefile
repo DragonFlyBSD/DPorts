@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sma/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: mail/sma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sma
 PORTVERSION=	1.4
