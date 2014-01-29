@@ -1,5 +1,5 @@
 # Created by: Jan Srocker <Jan.Stocker@t-online.de>
-# $FreeBSD: math/gdcalc/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: math/gdcalc/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/math/gdcalc/Makefile,v 1.1 2006/10/04 15:51:37 ahze Exp $
 
 PORTNAME=	gdcalc
