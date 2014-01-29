@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: misc/wmjulia/Makefile 336014 2013-12-09 18:55:46Z danilo $
+# $FreeBSD: misc/wmjulia/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmjulia
 PORTVERSION=	0.40
