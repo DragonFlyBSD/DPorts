@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: security/p5-Nmap-Scanner/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: security/p5-Nmap-Scanner/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Nmap-Scanner
 PORTVERSION=	1.0
