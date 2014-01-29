@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: java/eclipse-viplugin/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-viplugin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	viPlugin
 PORTVERSION=	1.14.0
