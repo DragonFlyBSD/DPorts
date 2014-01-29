@@ -1,5 +1,5 @@
 # Created by: Andriy Pylypenko <bamby@sippysoft.com>
-# $FreeBSD: www/py-wsgiauth/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-wsgiauth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wsgiauth
 PORTVERSION=	0.1
