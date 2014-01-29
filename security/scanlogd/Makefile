@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: security/scanlogd/Makefile 332124 2013-10-30 15:06:24Z novel $
+# $FreeBSD: security/scanlogd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scanlogd
 PORTVERSION=	2.2.7
