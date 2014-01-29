@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-wantedpages/Makefile 337589 2013-12-26 18:12:45Z wg $
+# $FreeBSD: www/trac-wantedpages/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wantedpages
 PORTVERSION=	0.3
