@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: sysutils/xfsm/Makefile 334050 2013-11-17 02:58:44Z vanilla $
+# $FreeBSD: sysutils/xfsm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xfsm
 PORTVERSION=	1.99
