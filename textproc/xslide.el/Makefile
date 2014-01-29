@@ -1,5 +1,5 @@
 # Created by: Leo Kim <leo@florida.sarang.net>
-# $FreeBSD: textproc/xslide.el/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xslide.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xslide.el
 PORTVERSION=	0.2.2
