@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: net-im/fugu/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/fugu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fugu
 PORTVERSION=	1.2.3
