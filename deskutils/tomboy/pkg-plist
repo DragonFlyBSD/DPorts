@@ -1,4 +1,3 @@
-@comment $FreeBSD: deskutils/tomboy/pkg-plist 304825 2012-09-25 09:15:28Z romain $
 bin/tomboy
 %%APPLET%%bin/tomboy-panel
 lib/tomboy/Tomboy.exe
