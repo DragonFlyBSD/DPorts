@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/xist/Makefile 337137 2013-12-21 10:39:29Z wg $
+# $FreeBSD: www/xist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xist
 PORTVERSION=	3.25
