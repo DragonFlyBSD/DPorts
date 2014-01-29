@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: x11-themes/gtk-lila-theme/Makefile 338924 2014-01-06 19:26:25Z antoine $
+# $FreeBSD: x11-themes/gtk-lila-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gtk-lila-theme
 PORTVERSION=	0.5.5
