@@ -1,5 +1,5 @@
 # Created by: mj <systemoperator@gmail.com>
-# $FreeBSD: net/kojoney/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: net/kojoney/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	kojoney
 PORTVERSION=	0.0.4.2
@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0_1:${PORTSDIR}/devel/py
 
 WRKSRC=		${WRKDIR}/kojoney
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_OPENSSL=	yes
 USES=		perl5 twisted:conch
 USE_PERL5=	run
