@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: shells/jailkit/Makefile 337650 2013-12-27 08:24:48Z bapt $
+# $FreeBSD: shells/jailkit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jailkit
 PORTVERSION=	2.15
