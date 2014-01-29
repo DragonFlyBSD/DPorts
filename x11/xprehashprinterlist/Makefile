@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xprehashprinterlist/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11/xprehashprinterlist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xprehashprinterlist
 PORTVERSION=	1.0.1
