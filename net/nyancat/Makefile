@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net/nyancat/Makefile 331386 2013-10-23 13:50:35Z ehaupt $
+# $FreeBSD: net/nyancat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nyancat
 PORTVERSION=	1.2
