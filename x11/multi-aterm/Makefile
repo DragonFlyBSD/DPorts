@@ -1,5 +1,5 @@
 # Created by: Sebastian Yepes <esn@x123.info>
-# $FreeBSD: x11/multi-aterm/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/multi-aterm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	multi-aterm
 PORTVERSION=	0.2.1
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=--with-xpm=${LOCALBASE}
 
 DOCS=		AUTHORS ChangeLog INSTALL TODO
-MAN1=		multi-aterm.1
 
 .if defined(WITH_UTMP)
 CONFIGURE_ARGS+=	--enable-utmp
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--enable-utmp
 CONFIGURE_ARGS+=	--enable-wtmp
 .endif
 
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You can specify the following options:"
@@ -34,8 +32,8 @@ pre-everything::
 
 .if !defined(NOPORTDOCS)
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>

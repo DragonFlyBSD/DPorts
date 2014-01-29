@@ -1,5 +1,5 @@
-@comment $FreeBSD: x11/multi-aterm/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/multi-aterm
+man/man1/multi-aterm.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/ChangeLog
 %%PORTDOCS%%%%DOCSDIR%%/INSTALL
