@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: shells/rc/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD: shells/rc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rc
 PORTVERSION=	1.7.1
