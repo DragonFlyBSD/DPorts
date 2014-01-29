@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi
-# $FreeBSD: x11-clocks/gtubeclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/gtubeclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gtubeclock
 PORTVERSION=	0.9.1
