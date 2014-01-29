@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/hextools/Makefile 328560 2013-09-28 07:47:49Z eadler $
+# $FreeBSD: sysutils/hextools/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hextools
 PORTVERSION=	1.1
