@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/euler/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/euler/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	euler
 PORTVERSION=	1.61.0
