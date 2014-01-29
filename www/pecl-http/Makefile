@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/pecl-http/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pecl-http/Makefile 341245 2014-01-26 16:45:01Z miwi $
 
 PORTNAME=	http
 PORTVERSION=	1.7.6
@@ -21,5 +21,4 @@ CONFIGURE_ARGS+=	--with-http-curl-requests \
 			--with-http-zlib-compression \
 			--with-http-magic-mime
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
