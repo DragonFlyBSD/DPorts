@@ -1,5 +1,5 @@
 # Created by: Sverrir Valgeirsson <e96sv@yahoo.se>
-# $FreeBSD: net-p2p/valknut/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/valknut/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	valknut
 PORTVERSION=	0.4.9
