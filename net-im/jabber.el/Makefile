@@ -1,5 +1,5 @@
 # Created by: Max N. Boyarov <m.boyarov@bsd.by>
-# $FreeBSD: net-im/jabber.el/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/jabber.el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jabber.el
 PORTVERSION=	0.8.0
