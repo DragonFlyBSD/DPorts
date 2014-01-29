@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: x11/gcb/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
+# $FreeBSD: x11/gcb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gcb
 PORTVERSION=	0.2.8
@@ -16,7 +16,6 @@ USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gtk20
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#!/bin/bash|#!${SH}|' \
 		${WRKSRC}/configure
@@ -25,10 +24,11 @@ post-patch:
 			${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.png ${PREFIX}/share/icons
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/icons
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.png ${STAGEDIR}${PREFIX}/share/icons
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop \
-		${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.png ${PREFIX}/share/pixmaps
+		${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.png ${STAGEDIR}${PREFIX}/share/pixmaps
 
 .include <bsd.port.mk>
