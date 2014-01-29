@@ -1,4 +1,4 @@
-# $FreeBSD: news/suck-cnews/Makefile 336876 2013-12-19 07:26:07Z dinoex $
+# $FreeBSD: news/suck-cnews/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	news
 
