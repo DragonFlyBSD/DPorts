@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/spfval/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD: mail/spfval/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spfval
 PORTVERSION=	0.0.1
