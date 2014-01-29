@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11-themes/fluxbox-tenr-styles-pack/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/fluxbox-tenr-styles-pack/Makefile 341380 2014-01-27 11:46:37Z miwi $
 
 PORTNAME=	fluxbox-tenr-styles-pack
 PORTVERSION=	20071215
@@ -21,9 +21,8 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/tenr.de-styles-pkg
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${INSTALL_DIR}
-	cd ${WRKSRC}; ${COPYTREE_SHARE} \* ${INSTALL_DIR}
+	${MKDIR} ${STAGEDIR}${INSTALL_DIR}
+	cd ${WRKSRC}; ${COPYTREE_SHARE} \* ${STAGEDIR}${INSTALL_DIR}
 
 .include <bsd.port.mk>
