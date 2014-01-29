@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net-mgmt/mbrowse/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/mbrowse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mbrowse
 PORTVERSION=	0.4.0
