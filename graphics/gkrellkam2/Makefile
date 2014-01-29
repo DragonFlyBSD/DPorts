@@ -1,28 +1,38 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: graphics/gkrellkam2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/gkrellkam2/Makefile 341046 2014-01-25 16:18:31Z miwi $
 
 PORTNAME=	gkrellkam
 PORTVERSION=	2.0.0
 PORTREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}2/${PORTVERSION}
+PKGNAMESUFFIX=	2
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GKrellM plugin that display thumbnails of periodically updated images
 
-BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
-RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
+LICENSE=	GPLv2 # (or later)
+
+BUILD_DEPENDS=	gkrellm2>0:${PORTSDIR}/sysutils/gkrellm2
+RUN_DEPENDS=	gkrellm2>0:${PORTSDIR}/sysutils/gkrellm2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
 USES=		gmake pkgconfig
-LATEST_LINK=	gkrellkam2
 
-MAN5=		gkrellkam-list.5
-PLIST_FILES=	libexec/gkrellm2/plugins/gkrellkam2.so
+PLIST_FILES=	libexec/gkrellm2/plugins/gkrellkam2.so \
+		man/man5/gkrellkam-list.5.gz
 
-MAKE_ENV+=	MKDIR="${MKDIR}" \
-		INSTALL_DATA="${INSTALL_DATA}"
+post-patch:
+	@${REINPLACE_CMD} -e \
+		's|gcc|$$(CC)|' ${WRKSRC}/Makefile
 
-NO_STAGE=	yes
+do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
+	(cd ${WRKSRC} && ${INSTALL_LIB} gkrellkam2.so \
+		${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins)
+	(cd ${WRKSRC} && ${INSTALL_MAN} gkrellkam-list.5 \
+		${STAGEDIR}${MAN5PREFIX}/man/man5)
+
 .include <bsd.port.mk>
