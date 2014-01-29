@@ -1,5 +1,5 @@
 
-$FreeBSD: misc/cdcollect/files/patch-src_DBsql.cs 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: misc/cdcollect/files/patch-src_DBsql.cs 340725 2014-01-22 17:40:44Z mat $
 
 --- src/DBsql.cs.orig
 +++ src/DBsql.cs
