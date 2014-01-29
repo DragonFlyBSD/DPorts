@@ -1,3 +1,2 @@
-@comment $FreeBSD: net/xipdump/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/xipdump
 lib/X11/app-defaults/Xipdump
