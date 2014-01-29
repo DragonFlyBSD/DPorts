@@ -1,4 +1,3 @@
-@comment $FreeBSD: math/minisat/pkg-plist 327544 2013-09-18 13:28:06Z vsevolod $
 
 bin/minisat
 include/minisat/mtl/XAlloc.h
