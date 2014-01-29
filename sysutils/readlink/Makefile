@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: sysutils/readlink/Makefile 337238 2013-12-23 13:58:13Z amdmi3 $
+# $FreeBSD: sysutils/readlink/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	readlink
 PORTVERSION=	20010616
