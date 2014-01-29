@@ -1,5 +1,5 @@
 # Created by: asaddi@philosophysw.com
-# $FreeBSD: security/sha/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/sha/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sha
 PORTVERSION=	1.0.4
