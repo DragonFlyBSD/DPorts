@@ -1,2 +1,1 @@
-@comment $FreeBSD: sysutils/py-drmaa/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
