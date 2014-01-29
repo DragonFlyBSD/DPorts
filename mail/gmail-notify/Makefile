@@ -1,5 +1,5 @@
 # Created by: David
-# $FreeBSD: mail/gmail-notify/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/gmail-notify/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gmail-notify
 PORTVERSION=	1.6.1.1
