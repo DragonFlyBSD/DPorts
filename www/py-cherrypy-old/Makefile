@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: www/py-cherrypy-old/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-cherrypy-old/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cherrypy
 PORTVERSION=	2.3.0
@@ -14,7 +14,7 @@ DISTNAME=	CherryPy-${PORTVERSION:C/\.b$/beta/}
 MAINTAINER=	5u623l20@gmail.com
 COMMENT=	A pythonic, object-oriented web development framework
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	CherryPy
 
