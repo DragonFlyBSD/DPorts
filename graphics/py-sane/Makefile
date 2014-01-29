@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/py-sane/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/py-sane/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sane
 PORTVERSION=	2.0
