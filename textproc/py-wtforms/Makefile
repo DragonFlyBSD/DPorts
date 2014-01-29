@@ -1,5 +1,5 @@
 # Created by: Moggie <moggie@elasticmind.net>
-# $FreeBSD: textproc/py-wtforms/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-wtforms/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	WTForms
 PORTVERSION=	1.0.3
@@ -13,7 +13,7 @@ COMMENT=	Forms validation and rendering library for python web development
 LICENSE=	BSD
 
 USE_ZIP=	yes
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_NOEGGINFO=	yes
 
