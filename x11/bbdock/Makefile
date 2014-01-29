@@ -1,5 +1,5 @@
 # Created by: Francis Bacque <idroxid01@yahoo.fr>
-# $FreeBSD: x11/bbdock/Makefile 330197 2013-10-13 01:51:46Z eadler $
+# $FreeBSD: x11/bbdock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bbdock
 PORTVERSION=	0.2.9
