@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ibus-el/Makefile 329341 2013-10-04 16:59:14Z ume $
+# $FreeBSD: textproc/ibus-el/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ibus-el
 PORTVERSION=	0.3.2
