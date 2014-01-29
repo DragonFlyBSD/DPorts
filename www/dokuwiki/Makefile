@@ -1,5 +1,5 @@
 # Created by: Chin-San Huang <chinsan@mail2000.com.tw>
-# $FreeBSD: www/dokuwiki/Makefile 338960 2014-01-06 23:43:43Z bapt $
+# $FreeBSD: www/dokuwiki/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
