@@ -1,5 +1,5 @@
 # Created by: Kuan-Chung Chiu <buganini@gmail.com>
-# $FreeBSD: textproc/kmfl-khmer/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: textproc/kmfl-khmer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	khmer
 PORTVERSION=	1.0
