@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-adblock/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-adblock/Makefile 341198 2014-01-26 15:07:21Z miwi $
 
 PORTNAME=	adblock
 PORTVERSION=	0.5.3.043
@@ -15,7 +15,6 @@ XPI_FILES=	chrome/adblock.jar chrome.manifest components/.autoreg components/nsA
 		defaults/preferences/adblock.js install.js install.rdf license.txt
 XPI_DIRS=	chrome/adblock chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|2.0a3|2.0.*|g' ${WRKSRC}/install.rdf
 	@${RM} -f ${WRKSRC}/install.rdf?*
