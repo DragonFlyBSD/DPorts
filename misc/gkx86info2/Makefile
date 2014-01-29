@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: misc/gkx86info2/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gkx86info2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkx86info2
 PORTVERSION=	0.0.2
