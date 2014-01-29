@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: x11/xvmcinfo/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11/xvmcinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xvmcinfo
 PORTVERSION=	0.1
