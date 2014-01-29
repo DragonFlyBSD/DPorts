@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: net/44bsd-rdist/Makefile 330038 2013-10-11 00:43:27Z cy $
+# $FreeBSD: net/44bsd-rdist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	44bsd-rdist
 PORTVERSION=	20001111
