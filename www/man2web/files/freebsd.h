@@ -1,4 +1,4 @@
-/* $FreeBSD: www/man2web/files/freebsd.h 300897 2012-07-14 14:29:18Z beat $ */
+/* $FreeBSD: www/man2web/files/freebsd.h 340872 2014-01-24 00:14:07Z mat $ */
 
 /* default section entries that are used if configuration file is disabled*/
 #define SECTION_COUNT 9
