@@ -1,5 +1,5 @@
 # Created by: Matthieu Guegan <matt.guegan@free.fr>
-# $FreeBSD: x11-wm/hs-xmonad-contrib/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: x11-wm/hs-xmonad-contrib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmonad-contrib
 PORTVERSION=	0.11.1
