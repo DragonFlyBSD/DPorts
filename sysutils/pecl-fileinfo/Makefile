@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: sysutils/pecl-fileinfo/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/pecl-fileinfo/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	fileinfo
 PORTVERSION=	1.0.4
@@ -20,5 +20,4 @@ IGNORE_WITH_PHP=5 53
 
 CONFIGURE_ARGS=	--with-fileinfo=/usr
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
