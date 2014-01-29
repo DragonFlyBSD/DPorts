@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/xcurs/Makefile 338587 2014-01-03 22:41:45Z antoine $
+# $FreeBSD: x11/xcurs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcurs
 PORTVERSION=	0.5.1
