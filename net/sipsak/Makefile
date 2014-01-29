@@ -1,5 +1,5 @@
 # Created by: jesusr
-# $FreeBSD: net/sipsak/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/sipsak/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sipsak
 PORTVERSION=	0.9.6
