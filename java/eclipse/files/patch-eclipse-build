@@ -1,4 +1,4 @@
-$FreeBSD: java/eclipse/files/patch-eclipse-build 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: java/eclipse/files/patch-eclipse-build 340725 2014-01-22 17:40:44Z mat $
 
 --- eclipse-build-0.5.0.orig/build.properties	2009-09-30 14:07:21.000000000 -0400
 +++ eclipse-build-0.5.0/build.properties	2009-12-23 16:23:06.355139641 -0500

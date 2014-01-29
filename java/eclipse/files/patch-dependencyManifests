@@ -1,4 +1,4 @@
-$FreeBSD: java/eclipse/files/patch-dependencyManifests 300896 2012-07-14 13:54:48Z beat $
+$FreeBSD: java/eclipse/files/patch-dependencyManifests 340725 2014-01-22 17:40:44Z mat $
 
 --- eclipse-build-914dc6de2bfc5ee5819a229cf4877f7043040a92/dependencyManifests/javax.servlet_3.0.0.jar/META-INF/MANIFEST.MF~	2012-01-26 18:03:49.377369870 +0100
 +++ eclipse-build-914dc6de2bfc5ee5819a229cf4877f7043040a92/dependencyManifests/javax.servlet_3.0.0.jar/META-INF/MANIFEST.MF	2012-01-26 18:18:27.055000978 +0100
