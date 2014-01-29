@@ -1,5 +1,5 @@
 # Created by: Harald Schmalzbauer <h.schmalzbauer@omnisec.de>
-# $FreeBSD: www/xpi-speed-dial/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-speed-dial/Makefile 341217 2014-01-26 15:13:43Z miwi $
 
 PORTNAME=	speed-dial
 PORTVERSION=	0.9.5.9
@@ -15,7 +15,6 @@ XPI_DISTNAME=	speed_dial
 XPI_ID=		{64161300-e22b-11db-8314-0800200c9a66}
 XPI_NUM=	4810
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i "" -e '/loadInNewTab/s|false|true|' \
 		${WRKSRC}/defaults/preferences/speeddial.js
