@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: x11/sisctrl/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/sisctrl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sisctrl
 PORTVERSION=	0.0.20051202
@@ -18,8 +18,6 @@ CONFIGURE_ARGS=	 --with-xv-path=${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PLIST_FILES=	bin/sisctrl
-MAN1=		sisctrl.1x
+PLIST_FILES=	bin/sisctrl man/man1/sisctrl.1x.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
