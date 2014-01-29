@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/mod_gnutls/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%APACHEMODDIR%%/%%AP_MODULE%%
 @exec   '%D/sbin/apxs' -e -a -n '%%AP_NAME%%' '%D/%%APACHEMODDIR%%/%%AP_MODULE%%'
 @unexec '%D/sbin/apxs' -e -A -n '%%AP_NAME%%' '%D/%%APACHEMODDIR%%/%%AP_MODULE%%'
