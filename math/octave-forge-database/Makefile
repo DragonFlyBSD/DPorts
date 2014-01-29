@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-database/Makefile 339054 2014-01-07 23:25:39Z stephen $
+# $FreeBSD: math/octave-forge-database/Makefile 339538 2014-01-12 19:52:20Z stephen $
 
 PORTNAME=	octave-forge-database
 PORTVERSION=	2.3.0
@@ -7,6 +7,8 @@ CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+
+LICENSE=	GPLv3
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
@@ -18,7 +20,6 @@ GNU_CONFIGURE=	yes
 USE_PGSQL=	yes
 ALL_TARGET=
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
