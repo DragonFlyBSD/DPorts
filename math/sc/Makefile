@@ -1,5 +1,5 @@
 # Created by: Heinz Tschabitscher
-# $FreeBSD: math/sc/Makefile 338061 2013-12-30 08:05:33Z johans $
+# $FreeBSD: math/sc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sc
 PORTVERSION=	7.16
