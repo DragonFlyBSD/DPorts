@@ -1,5 +1,5 @@
 # Created by: Loic Pefferkorn <loic-freebsd@loicp.eu>
-# $FreeBSD: net/rubygem-amqp-utils/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-amqp-utils/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	amqp-utils
 PORTVERSION=	0.5.1
@@ -25,5 +25,4 @@ PLIST_FILES+= bin/amqp-deleteq bin/amqp-dequeue bin/amqp-enqueue bin/amqp-peek b
 		bin/amqp-purge bin/amqp-spy bin/amqp-statq bin/amqp-unbind \
 		bin/amqp-delexch bin/amqp-exchange
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
