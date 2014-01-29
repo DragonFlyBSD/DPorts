@@ -1,5 +1,5 @@
 # Created by: Chao Shin <quakelee@cn.freebsd.org>
-# $FreeBSD: www/py-postmarkup/Makefile 337072 2013-12-20 18:51:31Z wg $
+# $FreeBSD: www/py-postmarkup/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	postmarkup
 PORTVERSION=	1.2.0
