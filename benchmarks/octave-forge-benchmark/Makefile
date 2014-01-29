@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: benchmarks/octave-forge-benchmark/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: benchmarks/octave-forge-benchmark/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	octave-forge-benchmark
 PORTVERSION=	1.1.1
@@ -9,6 +9,7 @@ CATEGORIES=	benchmarks math
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
-NO_STAGE=	yes
+LICENSE=	GPLv2
+
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 .include <bsd.port.mk>
