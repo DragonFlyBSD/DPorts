@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/wmdrawer/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/wmdrawer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmdrawer
 PORTVERSION=	0.10.5
@@ -21,10 +21,6 @@ MAKE_ENV+=	${CONFIGURE_ENV}
 
 SUB_FILES+=	pkg-message
 
-MANCOMPRESSED=	yes
-MAN1=	wmdrawer.1x
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%DATADIR%%,${DATADIR},g" ${WRKSRC}/wmdrawerrc.example
 	@${REINPLACE_CMD} -e "s,CFLAGS = -O3,CFLAGS +=,g; \
@@ -34,8 +30,7 @@ post-patch:
 		s,/usr/X11R6,${LOCALBASE},g" ${WRKSRC}/Makefile
 
 post-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${DISTDIR}/logo-beastie.png ${DATADIR}/beastie.png
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${DISTDIR}/logo-beastie.png ${STAGEDIR}${DATADIR}/beastie.png
 
 .include <bsd.port.mk>
