@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <sbahra@kerneled.org>
-# $FreeBSD: x11/hs-xmobar/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: x11/hs-xmobar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmobar
 PORTVERSION=	0.17
