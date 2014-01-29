@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Petal-Mail/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Petal-Mail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Petal-Mail
 PORTVERSION=	0.31
