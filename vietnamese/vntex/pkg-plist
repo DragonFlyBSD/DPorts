@@ -1,4 +1,3 @@
-@comment $FreeBSD: vietnamese/vntex/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 share/texmf/tex/generic/vietnam/dblaccnt.tex
 share/texmf/tex/generic/vietnam/mcviscii.def
 share/texmf/tex/generic/vietnam/plainenc.tex

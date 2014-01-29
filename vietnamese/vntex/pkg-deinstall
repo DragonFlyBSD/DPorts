@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: vietnamese/vntex/pkg-deinstall 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: vietnamese/vntex/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 
 if [ "$2" != "DEINSTALL" ]; then
   exit 0
