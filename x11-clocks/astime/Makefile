@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-clocks/astime/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/astime/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	astime
 PORTVERSION=	2.8
@@ -16,8 +16,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-xpm-library="${LOCALBASE}/lib" --with-xpm-includes="${LOCALBASE}/include/X11"
 INSTALL_TARGET=	install install.man
 
-MAN1=		astime.1
-PLIST_FILES=	bin/astime
+PLIST_FILES=	bin/astime man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
