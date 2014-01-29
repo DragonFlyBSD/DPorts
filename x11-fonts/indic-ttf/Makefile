@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: x11-fonts/indic-ttf/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/indic-ttf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	indic-ttf
 PORTVERSION=	0.5.14
