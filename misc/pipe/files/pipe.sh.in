@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: misc/pipe/files/pipe.sh.in 300896 2012-07-14 13:54:48Z beat $
+# $FreeBSD: misc/pipe/files/pipe.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 cd %%DATADIR%%
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -cp "%%DATADIR%%" RunGui
