@@ -1,9 +1,9 @@
 # Created by: stb
-# $FreeBSD: net/netatalk3/Makefile 335951 2013-12-09 04:12:41Z marcus $
+# $FreeBSD: net/netatalk3/Makefile 340498 2014-01-20 23:47:14Z marcus $
 
 PORTNAME=	netatalk
 PORTVERSION=	3.1.0
-PORTREVISION=	1
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
@@ -15,8 +15,8 @@ COMMENT=	File server for Mac OS X
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt \
-    		event-2:${PORTSDIR}/devel/libevent2
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+    		libevent-2.0.so:${PORTSDIR}/devel/libevent2
 
 USE_AUTOTOOLS=	libtool
 USE_BDB=	46+
