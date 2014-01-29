@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-POSIX-Regex/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-POSIX-Regex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	POSIX-Regex
 PORTVERSION=	1.0003
