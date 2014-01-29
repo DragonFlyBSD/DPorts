@@ -1,4 +1,3 @@
-@comment $FreeBSD: misc/linm/pkg-plist 331270 2013-10-22 13:56:27Z amdmi3 $
 bin/linm
 bin/linm.csh
 bin/linm.sh
