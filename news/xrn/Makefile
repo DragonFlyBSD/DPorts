@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: news/xrn/Makefile 337665 2013-12-27 09:32:18Z bapt $
+# $FreeBSD: news/xrn/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrn
 DISTVERSION=	10.00-beta-3
