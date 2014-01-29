@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: www/xpi-vimperator/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-vimperator/Makefile 341219 2014-01-26 15:14:34Z miwi $
 
 PORTNAME=	vimperator
 PORTVERSION=	3.5
@@ -15,6 +15,5 @@ LICENSE_FILE=${WRKSRC}/License.txt
 XPI_ID=		vimperator@mozdev.org
 XPI_NUM=	4891
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
