@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: ukrainian/ispell/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: ukrainian/ispell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ispell-uk
 PORTVERSION=	0.7
