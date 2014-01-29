@@ -1,4 +1,4 @@
-# $FreeBSD: portuguese/webalizer-pt_PT/Makefile 335144 2013-11-29 04:19:56Z dinoex $
+# $FreeBSD: portuguese/webalizer-pt_PT/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	portuguese
 PKGNAMEPREFIX?=	pt_PT-
