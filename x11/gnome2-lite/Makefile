@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome2-lite/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gnome2-lite/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/x11/gnome2-lite/Makefile,v 1.62 2009/11/26 20:39:06 marcus Exp $
 
 PORTREVISION=	0
