@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: net/kippo/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: net/kippo/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	kippo
 PORTVERSION=	0.5
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>0:${PORTSDIR}/security/py-pycrypt
 		${PYTHON_PKGNAMEPREFIX}zope.interface>0:${PORTSDIR}/devel/py-zope.interface
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USES=		twisted:run,conch,web
 NO_BUILD=	yes
 
