@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/finch/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/finch/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports-stable/net-im/gaim-consoleui-devel/Makefile,v 1.2 2006/10/29 18:55:28 marcus Exp $
 
 PORTNAME=	finch
