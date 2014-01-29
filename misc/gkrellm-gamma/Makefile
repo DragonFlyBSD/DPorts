@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: misc/gkrellm-gamma/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gkrellm-gamma/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellm-gamma
 PORTVERSION=	2.03
