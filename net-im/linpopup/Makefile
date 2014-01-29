@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net-im/linpopup/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/linpopup/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	linpopup
 PORTVERSION=	1.2.0
