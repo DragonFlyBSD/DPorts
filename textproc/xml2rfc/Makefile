@@ -1,20 +1,22 @@
 # Created by: jabley@automagic.org
-# $FreeBSD: textproc/xml2rfc/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xml2rfc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xml2rfc
-PORTVERSION=	2.4.2
+PORTVERSION=	2.4.5
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://tools.ietf.org/tools/xml2rfc2/cli/
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	A tool to create RFCs and related documents from XML, as per RFC2629
 
+LICENSE=	BSD3CLAUSE
+
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.2.8:${PORTSDIR}/devel/py-lxml
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
 
-NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
