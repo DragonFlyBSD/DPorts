@@ -1,5 +1,5 @@
 # Created by: grog
-# $FreeBSD: x11/xtset/Makefile 330190 2013-10-12 21:54:21Z eadler $
+# $FreeBSD: x11/xtset/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtset
 PORTVERSION=	1.1
