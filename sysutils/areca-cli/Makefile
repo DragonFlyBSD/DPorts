@@ -1,5 +1,5 @@
 # Created by: Rink Springer <rink@FreeBSD.org>
-# $FreeBSD: sysutils/areca-cli/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD: sysutils/areca-cli/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	areca-cli
 DISTVERSION=	${CLI_VER}.${CLI_REV}
