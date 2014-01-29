@@ -1,5 +1,5 @@
 # Created by: cy@FreeBSD.org
-# $FreeBSD: security/sudosh2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/sudosh2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		sudosh2
 PORTVERSION=		1.0.4
