@@ -1,5 +1,5 @@
 # Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
-# $FreeBSD: math/simd-viterbi/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/simd-viterbi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simd-viterbi
 PORTVERSION=	2.0.3
