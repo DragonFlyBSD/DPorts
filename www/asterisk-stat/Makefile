@@ -1,5 +1,5 @@
 # Created by: Fumihiko Kimura <jfkimura@yahoo.com>
-# $FreeBSD: www/asterisk-stat/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/asterisk-stat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asterisk-stat
 PORTVERSION=	2.0.1
