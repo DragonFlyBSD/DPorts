@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: x11/thinglaunch/Makefile 331418 2013-10-23 19:36:17Z ehaupt $
+# $FreeBSD: x11/thinglaunch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	thinglaunch
 PORTVERSION=	1.8
