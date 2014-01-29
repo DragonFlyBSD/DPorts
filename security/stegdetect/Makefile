@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: security/stegdetect/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/stegdetect/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stegdetect
 PORTVERSION=	0.6
