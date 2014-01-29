@@ -1,5 +1,5 @@
 # Created by: Thierry Dussuet <dussuett@wigwam.ethz.ch>
-# $FreeBSD: sysutils/ods2/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ods2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ods2
 PORTVERSION=	1.3
