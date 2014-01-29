@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: www/squidclamav/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	squidclamav
 PORTVERSION=	6.10
