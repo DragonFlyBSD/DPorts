@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/diacanvas2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/diacanvas2/Makefile 340642 2014-01-21 19:48:47Z antoine $
 
 PORTNAME=	diacanvas2
 PORTVERSION=	0.15.4
@@ -13,7 +13,7 @@ COMMENT=	General drawing canvas from dia dialog editor
 
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	pygnome2
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -26,7 +26,6 @@ OPTIONS_DEFINE=	PRINT
 OPTIONS_DEFAULT=PRINT
 PRINT_DESC=	GNOME print support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPRINT}
