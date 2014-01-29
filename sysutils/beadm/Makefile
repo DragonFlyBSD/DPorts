@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/beadm/Makefile 331772 2013-10-27 14:04:17Z bdrewery $
+# $FreeBSD: sysutils/beadm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	beadm
 PORTVERSION=	1.0
