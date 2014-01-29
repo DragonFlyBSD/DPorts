@@ -1,5 +1,5 @@
 # Created by: Matt Heckaman <matt@LUCIDA.QC.CA>
-# $FreeBSD: net/mmucl/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/mmucl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mmucl
 PORTVERSION=	1.5.2
