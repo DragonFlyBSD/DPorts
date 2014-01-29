@@ -1,5 +1,5 @@
 # Created by: Max Baryshnikov <mephius@gmail.com>
-# $FreeBSD: www/pecl-sphinx/Makefile 328641 2013-09-29 02:01:12Z sunpoet $
+# $FreeBSD: www/pecl-sphinx/Makefile 340828 2014-01-23 14:32:34Z miwi $
 
 PORTNAME=	sphinx
 DISTVERSION=	1.3.0
@@ -22,6 +22,5 @@ SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 CFLAGS+=	-I${LOCALBASE}/include
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
