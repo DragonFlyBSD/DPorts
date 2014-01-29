@@ -1,5 +1,5 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-# $FreeBSD: misc/xmonad-log-applet/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/xmonad-log-applet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmonad-log-applet
 PORTVERSION=	2.0.0
