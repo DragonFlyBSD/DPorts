@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: net-mgmt/phpip/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD: net-mgmt/phpip/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phpip
 PORTVERSION=	${SNAPSHOT}
