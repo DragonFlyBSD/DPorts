@@ -1,5 +1,5 @@
 # Created by: Honza Betik
-# $FreeBSD: net/radsecproxy/Makefile 339034 2014-01-07 20:52:30Z ohauer $
+# $FreeBSD: net/radsecproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	radsecproxy
 PORTVERSION=	1.6.5
