@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libmovtar/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/libmovtar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libmovtar
 PORTVERSION=	0.1.3
