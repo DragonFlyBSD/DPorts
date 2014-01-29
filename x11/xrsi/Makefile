@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: x11/xrsi/Makefile 336384 2013-12-13 23:28:52Z bapt $
+# $FreeBSD: x11/xrsi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xrsi
 PORTVERSION=	0.9
