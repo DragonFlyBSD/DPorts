@@ -1,4 +1,3 @@
-@comment $FreeBSD: deskutils/labyrinth/pkg-plist 305553 2012-10-08 19:40:56Z romain $
 bin/labyrinth
 %%PYTHON_SITELIBDIR%%/labyrinth/BaseThought.py
 %%PYTHON_SITELIBDIR%%/labyrinth/BaseThought.pyc
