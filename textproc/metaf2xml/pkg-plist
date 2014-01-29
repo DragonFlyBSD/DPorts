@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/metaf2xml/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/metaf-fullhtml.xsl
 %%DATADIR%%/metaf-html.xsl
 %%DATADIR%%/metaf-lang.xsl
