@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: misc/py-yolk/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/py-yolk/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	yolk
 PORTVERSION=	0.4.3
@@ -29,7 +29,7 @@ MAN1=	${PORTNAME}.1
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 .endif
 
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 post-install:
