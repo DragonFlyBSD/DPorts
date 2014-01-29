@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: x11/wmblob/Makefile 338775 2014-01-05 13:48:46Z antoine $
+# $FreeBSD: x11/wmblob/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmblob
 PORTVERSION=	1.0.3
