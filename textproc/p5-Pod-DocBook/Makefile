@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Pod-DocBook/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Pod-DocBook/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Pod-DocBook
 PORTVERSION=	1.2
