@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-mhash/Makefile 338082 2013-12-30 10:59:46Z wg $
+# $FreeBSD: security/py-mhash/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mhash
 PORTVERSION=	1.4
