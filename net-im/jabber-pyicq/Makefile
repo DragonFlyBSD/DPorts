@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/jabber-pyicq/Makefile 329634 2013-10-06 22:19:27Z marino $
+# $FreeBSD: net-im/jabber-pyicq/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyicq
 PORTVERSION=	0.8.1.5
