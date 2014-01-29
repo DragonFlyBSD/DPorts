@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-mgmt/hawk/files/hawk.in 319487 2013-05-31 11:54:01Z crees $
+# $FreeBSD: net-mgmt/hawk/files/hawk.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: hawk
 # REQUIRE: LOGIN mysql
