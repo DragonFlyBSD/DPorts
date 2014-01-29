@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/tkdvd/Makefile 330706 2013-10-18 00:31:22Z amdmi3 $
+# $FreeBSD: sysutils/tkdvd/Makefile 339591 2014-01-13 12:00:43Z gahr $
 
 PORTNAME=	tkdvd
 PORTVERSION=	4.0.9
@@ -14,8 +14,7 @@ COMMENT=	GUI to dvd+rw-tools and cdrecord
 RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		cdrecord:${PORTSDIR}/sysutils/cdrtools
 
-USE_TCL=	84+
-USE_TK=		84+
+USES=		tk
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
