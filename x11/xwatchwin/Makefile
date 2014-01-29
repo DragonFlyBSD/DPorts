@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: x11/xwatchwin/Makefile 336377 2013-12-13 23:10:29Z bapt $
+# $FreeBSD: x11/xwatchwin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xwatchwin
 PORTVERSION=	1.1.1
