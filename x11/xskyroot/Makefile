@@ -1,5 +1,5 @@
 # Created by: nkazushi@highway.or.jp
-# $FreeBSD: x11/xskyroot/Makefile 331822 2013-10-28 01:23:24Z eadler $
+# $FreeBSD: x11/xskyroot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xskyroot
 PORTVERSION=	920428
