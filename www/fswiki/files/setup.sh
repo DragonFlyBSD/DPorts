@@ -4,7 +4,7 @@
 #
 # Stolen from: FreeBSD: ports/www/aswiki/files/setup.sh,v 1.2 2003/06/20 10:46:30 matusita Exp
 #
-# $FreeBSD: www/fswiki/files/setup.sh 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/fswiki/files/setup.sh 340872 2014-01-24 00:14:07Z mat $
 
 ask_noyes()
 {
