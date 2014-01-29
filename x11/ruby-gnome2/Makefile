@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: x11/ruby-gnome2/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/ruby-gnome2/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/x11/ruby-gnome2/Makefile,v 1.6 2007/10/05 05:12:56 mezz Exp $
 
 PORTNAME=	gnome2
