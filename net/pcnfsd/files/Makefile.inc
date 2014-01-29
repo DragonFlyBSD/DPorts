@@ -1,6 +1,6 @@
 #
 # Directories for pcnfsd(8)
-# $FreeBSD: net/pcnfsd/files/Makefile.inc 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net/pcnfsd/files/Makefile.inc 340722 2014-01-22 17:00:46Z mat $
 #
 BINDIR=	${PREFIX}/libexec
 MANDIR=	${PREFIX}/man/man
