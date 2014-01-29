@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: multimedia/mpeg_play/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/mpeg_play/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mpeg_play
 PORTVERSION=	2.4
