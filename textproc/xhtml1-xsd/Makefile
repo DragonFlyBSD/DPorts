@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/xhtml1-xsd/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/xhtml1-xsd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xhtml1-xsd
 PORTVERSION=	200208
