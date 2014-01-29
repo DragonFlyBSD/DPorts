@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: sysutils/hoz/Makefile 329930 2013-10-09 21:15:37Z acm $
+# $FreeBSD: sysutils/hoz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hoz
 PORTVERSION=	1.65
