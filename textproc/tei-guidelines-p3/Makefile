@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: textproc/tei-guidelines-p3/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/tei-guidelines-p3/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tei
 PORTVERSION=	p3
