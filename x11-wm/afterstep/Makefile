@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: x11-wm/afterstep/Makefile 331895 2013-10-28 20:17:49Z dinoex $
+# $FreeBSD: x11-wm/afterstep/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	afterstep
 PORTVERSION=	1.0
