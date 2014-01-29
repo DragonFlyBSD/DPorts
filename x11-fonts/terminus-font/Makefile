@@ -1,5 +1,5 @@
 # Created by: Michael Hsin <mhsin@mhsin.org>
-# $FreeBSD: x11-fonts/terminus-font/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/terminus-font/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	terminus-font
 PORTVERSION=	4.38
