@@ -1,5 +1,5 @@
 # Created by: Hubert Tournier <hubert@frbsd.org>
-# $FreeBSD: www/phpgedview/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: www/phpgedview/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phpGedView
 PORTVERSION=	4.2.3
