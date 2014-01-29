@@ -1,5 +1,5 @@
 # Created by: Joseph S. Atkinson <jsa@wickedmachine.net>
-# $FreeBSD: x11-fonts/ecofont/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/ecofont/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ecofont
 PORTVERSION=	2.05
