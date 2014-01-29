@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/minised/Makefile 328890 2013-09-30 22:47:07Z danilo $
+# $FreeBSD: textproc/minised/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	minised
 PORTVERSION=	1.14
