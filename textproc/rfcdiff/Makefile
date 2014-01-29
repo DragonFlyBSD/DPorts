@@ -1,5 +1,5 @@
 # Created by: lars.eggert@gmx.net
-# $FreeBSD: textproc/rfcdiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/rfcdiff/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rfcdiff
 PORTVERSION=	1.33
