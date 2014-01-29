@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: sysutils/gkrellm-trayicons/Makefile 333734 2013-11-14 01:21:37Z vanilla $
+# $FreeBSD: sysutils/gkrellm-trayicons/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	trayicons
 PORTVERSION=	1.03
