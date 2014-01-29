@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-gtk/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: x11-toolkits/pure-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pure-gtk
 PORTVERSION=	0.11
