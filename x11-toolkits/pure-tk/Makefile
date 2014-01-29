@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-tk/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: x11-toolkits/pure-tk/Makefile 339333 2014-01-10 08:50:56Z gahr $
 
 PORTNAME=	pure-tk
 PORTVERSION=	0.4
@@ -10,11 +10,9 @@ DIST_SUBDIR=	pure
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Basic interface between Pure and Tcl/Tk
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
-USES=		pure
-USE_TK=		86+
-SHORT_TCL_VER=	${TCL_VER:S/8./8/}
+USES=		pure tk:86+
 
 MAKE_ARGS+=	tclvers=${TCL_VER}
 
@@ -25,8 +23,8 @@ PLIST_FILES=	lib/pure/gnocl.pure \
 post-patch:
 	${REINPLACE_CMD} \
 		-e "s|/usr/include|${LOCALBASE}/include|g" \
-		-e "s|-ltcl\$$(tclvers)|-ltcl${SHORT_TCL_VER}|" \
-		-e "s|-ltk\$$(tclvers)|-ltk${SHORT_TCL_VER}|" \
+		-e "s|-ltcl\$$(tclvers)|-ltcl${TCL_SHLIB_VER}|" \
+		-e "s|-ltk\$$(tclvers)|-ltk${TK_SHLIB_VER}|" \
 		${WRKSRC}/Makefile
 
 NO_STAGE=	yes
