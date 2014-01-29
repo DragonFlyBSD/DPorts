@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@chg.ru>
-# $FreeBSD: sysutils/ascpu/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ascpu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ascpu
 PORTVERSION=	1.11
