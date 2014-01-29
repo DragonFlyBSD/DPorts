@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: science/py-paida/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/py-paida/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	paida
 PORTVERSION=	3.2.1.2.10
