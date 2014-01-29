@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@best.com>
-# $FreeBSD: x11-clocks/t3d/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/t3d/Makefile 339424 2014-01-11 12:51:31Z vanilla $
 
 PORTNAME=	t3d
 PORTVERSION=	1.1
@@ -22,8 +22,6 @@ NO_WRKSUBDIR=	yes
 USES=		imake
 USE_XORG=	x11 xext
 
-MAN1=		t3d.1
-PLIST_FILES=	bin/t3d
+PLIST_FILES=	bin/t3d man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
