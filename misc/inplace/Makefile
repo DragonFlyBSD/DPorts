@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: misc/inplace/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/inplace/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	inplace
 PORTVERSION=	1.2.3
