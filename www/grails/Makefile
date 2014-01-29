@@ -1,5 +1,5 @@
 # Created by: Mitchell Smith <mjs@bur.st>
-# $FreeBSD: www/grails/Makefile 328795 2013-09-30 14:23:02Z bdrewery $
+# $FreeBSD: www/grails/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	grails
 DISTVERSION=	1.3.6
