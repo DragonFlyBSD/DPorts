@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: java/eclipse-propedit/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-propedit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PropertiesEditor
 PORTVERSION=	4.8.2
