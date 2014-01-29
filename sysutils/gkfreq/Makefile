@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/gkfreq/Makefile 329300 2013-10-04 12:40:50Z ume $
+# $FreeBSD: sysutils/gkfreq/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellm-gkfreq
 PORTVERSION=	2.2
