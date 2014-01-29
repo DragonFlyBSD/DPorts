@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/xcache/Makefile 336731 2013-12-17 14:56:56Z ale $
+# $FreeBSD: www/xcache/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcache
 DISTVERSION=	3.1.0
