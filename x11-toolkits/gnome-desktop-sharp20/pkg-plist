@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-toolkits/gnome-desktop-sharp20/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 lib/libgnomepanelsharpglue-2.a
 lib/libgnomepanelsharpglue-2.la
 lib/libgnomepanelsharpglue-2.so
