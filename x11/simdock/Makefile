@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: x11/simdock/Makefile 338753 2014-01-05 12:19:31Z antoine $
+# $FreeBSD: x11/simdock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	simdock
 PORTVERSION=	1.2
