@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: palm/pilot_makedoc/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD: palm/pilot_makedoc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pilot_makedoc
 PORTVERSION=	0.7a
