@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/html2hdml/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: www/html2hdml/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	html2hdml
 PORTVERSION=	1.0.5
