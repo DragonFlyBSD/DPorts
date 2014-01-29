@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: science/liblinear/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/liblinear/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	liblinear
 PORTVERSION=	1.80
