@@ -1,5 +1,5 @@
 # Created by: rehsack@web.de
-# $FreeBSD: java/eclipse-RDT/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-RDT/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	RDT
 PORTVERSION=	0.9.1
