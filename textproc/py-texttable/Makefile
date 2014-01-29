@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/py-texttable/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-texttable/Makefile 340987 2014-01-25 05:39:09Z miwi $
 
 PORTNAME=	texttable
 PORTVERSION=	0.8.1
@@ -17,5 +17,4 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/texttable.py \
 		%%PYTHON_SITELIBDIR%%/texttable.pyc \
 		%%PYTHON_SITELIBDIR%%/texttable.pyo
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
