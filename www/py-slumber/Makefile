@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-slumber/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-slumber/Makefile 341385 2014-01-27 12:14:09Z koobs $
 
 PORTNAME=	slumber
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,7 +12,7 @@ COMMENT=	Python library that makes consuming a RESTful API easier
 
 LICENSE=	BSD
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>0:${PORTSDIR}/www/py-requests
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests1>0:${PORTSDIR}/www/py-requests1
 
 OPTIONS_DEFINE=		YAML
 YAML_DESC=		Enable YAML serializer support
