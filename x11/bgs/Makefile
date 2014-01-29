@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: x11/bgs/Makefile 338847 2014-01-06 08:44:25Z bapt $
+# $FreeBSD: x11/bgs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bgs
 PORTVERSION=	0.5
