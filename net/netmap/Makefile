@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/netmap/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/netmap/Makefile 340257 2014-01-19 09:28:21Z miwi $
 
 PORTNAME=	netmap
 PORTVERSION=	0.1.3
@@ -10,15 +10,18 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/NetMap%20${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Make a graphical representation of the surrounding network
 
+LICENSE=	GPLv2
+
 RUN_DEPENDS=	dotty:${PORTSDIR}/graphics/graphviz
 
-USE_GMAKE=	yes
+USES=		gmake
 
 PLIST_FILES=	bin/makelist bin/netmap
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/makelist/makelist ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/netmap/netmap ${PREFIX}/bin
+.for i in makelist netmap
+	(cd ${WRKSRC}/${i} && ${INSTALL_PROGRAM} ${i} \
+		${STAGEDIR}${PREFIX}/bin)
+.endfor
 
 .include <bsd.port.mk>
