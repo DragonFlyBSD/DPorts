@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: textproc/rtfreader/Makefile 338945 2014-01-06 21:47:06Z antoine $
+# $FreeBSD: textproc/rtfreader/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rtfreader
 PORTVERSION=	1.0
