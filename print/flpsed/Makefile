@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/flpsed/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/flpsed/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	flpsed
 PORTVERSION=	0.7.0
