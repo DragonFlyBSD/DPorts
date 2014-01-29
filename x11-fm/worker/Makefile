@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: x11-fm/worker/Makefile 334427 2013-11-20 16:15:07Z danilo $
+# $FreeBSD: x11-fm/worker/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	worker
 PORTVERSION=	3.2.0
