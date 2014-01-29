@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: x11/gmessage/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gmessage/Makefile 339339 2014-01-10 09:32:14Z vanilla $
 
 PORTNAME=	gmessage
 PORTVERSION=	0.2
@@ -13,5 +13,4 @@ COMMENT=	Gtk+ clone of xmessage. displays a given text in a X11 window
 PLIST_FILES=	bin/gmessage
 USE_GNOME=	gtk12
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
