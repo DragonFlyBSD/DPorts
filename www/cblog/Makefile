@@ -1,4 +1,4 @@
-# $FreeBSD: www/cblog/Makefile 336074 2013-12-10 18:16:51Z bapt $
+# $FreeBSD: www/cblog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cblog
 PORTVERSION=	0.1.6

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: www/cblog/files/cblog.in 307542 2012-11-18 16:33:31Z hrs $
+# $FreeBSD: www/cblog/files/cblog.in 340872 2014-01-24 00:14:07Z mat $
 #
 # cblog.fcgi startup script
 #
