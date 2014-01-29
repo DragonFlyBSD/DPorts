@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11/wmbutton/Makefile 338780 2014-01-05 14:16:37Z antoine $
+# $FreeBSD: x11/wmbutton/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmbutton
 PORTVERSION=	0.6.1
