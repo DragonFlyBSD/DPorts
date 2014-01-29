@@ -1,8 +1,9 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-# $FreeBSD: www/p5-WWW-SourceForge/Makefile 332013 2013-10-29 21:42:46Z skreuzer $
+# $FreeBSD: www/p5-WWW-SourceForge/Makefile 341272 2014-01-26 20:15:15Z antoine $
 
 PORTNAME=	WWW-SourceForge
 PORTVERSION=	0.70
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
