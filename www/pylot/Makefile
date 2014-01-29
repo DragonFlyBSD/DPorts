@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/pylot/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: www/pylot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pylot
 PORTVERSION=	1.26
@@ -25,7 +25,7 @@ NO_BUILD=	yes
 SUB_FILES=	${PORTNAME}
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_ZIP=	yes
 
 NO_STAGE=	yes
