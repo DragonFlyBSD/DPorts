@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: textproc/pure-csv/Makefile 333045 2013-11-06 22:50:21Z delphij $
+# $FreeBSD: textproc/pure-csv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pure-csv
 PORTVERSION=	1.5
