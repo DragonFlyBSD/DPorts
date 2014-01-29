@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-mrtech-local-install/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-mrtech-local-install/Makefile 341212 2014-01-26 15:12:21Z miwi $
 
 PORTNAME=	mrtech-local-install
 DISTVERSION=	5.3.2.3
@@ -13,6 +13,5 @@ XPI_DISTNAME=	mr_tech_local_install
 XPI_NUM=	421
 XPI_ID=		{9669CC8F-B388-42FE-86F4-CB5E7F5A8BDC}
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
