@@ -1,12 +1,11 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: textproc/code2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/code2html/Makefile 341161 2014-01-26 11:57:13Z mat $
 
 PORTNAME=	code2html
 PORTVERSION=	0.9.1
 CATEGORIES=	textproc
 MASTER_SITES=	SF \
 		http://www.palfrader.org/code2html/all/
-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sourcecode to HTML converter
@@ -15,10 +14,8 @@ NO_BUILD=	yes
 USES=		perl5
 USE_PERL5=	run
 
-MAN1=		code2html.1
-PLIST_FILES=	bin/code2html
+PLIST_FILES=	bin/code2html man/man1/code2html.1.gz
 
-NO_STAGE=	yes
 do-configure:
 	@${REINPLACE_CMD} \
 		-e 's|/usr/bin/bzip2|${BZIP2_CMD}|' \
@@ -29,7 +26,7 @@ do-configure:
 		${WRKSRC}/code2html.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/code2html ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/code2html.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/code2html ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/code2html.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
