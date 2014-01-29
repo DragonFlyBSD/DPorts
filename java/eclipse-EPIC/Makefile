@@ -1,5 +1,5 @@
 # Created by: tux@pinguru.net
-# $FreeBSD: java/eclipse-EPIC/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-EPIC/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	EPIC
 PORTVERSION=	0.6.35
