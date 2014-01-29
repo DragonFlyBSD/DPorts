@@ -1,4 +1,3 @@
-@comment $FreeBSD: textproc/ecromedos/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/ecmds
 bin/ecromedos
 %%PORTDOCS%%%%DOCSDIR%%/langdef.txt

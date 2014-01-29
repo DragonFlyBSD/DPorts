@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: textproc/ecromedos/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/ecromedos/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ecromedos
 PORTVERSION=	1.0.1
