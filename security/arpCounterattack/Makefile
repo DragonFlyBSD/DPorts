@@ -1,5 +1,5 @@
 # Created by: Boris Kochergin <spawk@acm.poly.edu>
-# $FreeBSD: security/arpCounterattack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/arpCounterattack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	arpCounterattack
 PORTVERSION=	1.2.0
