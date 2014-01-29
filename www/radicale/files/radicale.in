@@ -1,6 +1,6 @@
 #!/bin/sh
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: www/radicale/files/radicale.in 327988 2013-09-23 12:34:10Z feld $
+# $FreeBSD: www/radicale/files/radicale.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: radicale
