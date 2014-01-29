@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/libproxy-webkit/Makefile 332454 2013-11-02 04:19:08Z marino $
+# $FreeBSD: net/libproxy-webkit/Makefile 340722 2014-01-22 17:00:46Z mat $
 #    $MCom: ports/net/libproxy-webkit/Makefile,v 1.13 2011/03/06 23:12:41 kwm Exp $
 
 PORTREVISION=	2
