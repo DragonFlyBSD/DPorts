@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-otr/Makefile 330188 2013-10-12 21:11:48Z cs $
+# $FreeBSD: security/py-otr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	otr
 PORTVERSION=	0.2.1.1
