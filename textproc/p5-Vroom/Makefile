@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: textproc/p5-Vroom/Makefile 327952 2013-09-23 08:41:39Z lwhsu $
+# $FreeBSD: textproc/p5-Vroom/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	Vroom
 PORTVERSION=	0.29
@@ -11,6 +11,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Slide Shows in Vim
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-File-HomeDir>=0:${PORTSDIR}/devel/p5-File-HomeDir \
 		p5-IO-All>=0:${PORTSDIR}/devel/p5-IO-All \
 		p5-Template-Toolkit-Simple>=0:${PORTSDIR}/www/p5-Template-Toolkit-Simple \
@@ -20,9 +23,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Vroom.3
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
