@@ -1,4 +1,3 @@
-@comment $FreeBSD: security/ike-scan/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/ike-scan
 bin/psk-crack
 %%DATADIR%%/ike-backoff-patterns
