@@ -1,5 +1,5 @@
 # Created by: Goran Tal <goran.tal@gmail.com>
-# $FreeBSD: textproc/dikt/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/dikt/Makefile 341230 2014-01-26 15:46:14Z mat $
 
 PORTNAME=	dikt
 PORTVERSION=	2l
@@ -26,5 +26,4 @@ PLIST_FILES=	bin/dikt \
 		share/kde4/services/dict.protocol
 PLIST_DIRS=	share/apps/dikt
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
