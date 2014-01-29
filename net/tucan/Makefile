@@ -1,5 +1,5 @@
 # Created by: Gustau Perez Querol <gustau.perez@gmail.com>
-# $FreeBSD: net/tucan/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
+# $FreeBSD: net/tucan/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	tucan
 PORTVERSION=	0.3.10
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pilconvert.py:${PORTSDIR}/graphics/py-imaging \
 
 NO_BUILD=	yes
 USE_GNOME=	pygtk2 librsvg2
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 
 MANCOMPRESSED=	yes
 MAN1=		tucan.1
