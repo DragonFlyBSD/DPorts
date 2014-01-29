@@ -2,7 +2,7 @@
 <!-- Written by Johnathan James (jjames at haxwell dot org) -2005 -->
 <!-- Copyright by Mario S F Ferreira <lioux@FreeBSD.org> 2005- -->
 <!-- Copyright by jrandom 2005- -->
-<!-- $FreeBSD: net/seda/files/build.xml 300897 2012-07-14 14:29:18Z beat $ -->
+<!-- $FreeBSD: net/seda/files/build.xml 340872 2014-01-24 00:14:07Z mat $ -->
 <project name="Build SEDA" default="dist" basedir=".">
      <description>
 	Builds the SEDA 20020712 JAR file
