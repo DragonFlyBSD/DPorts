@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: deskutils/gruler/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gruler/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gruler
 PORTVERSION=	0.6
