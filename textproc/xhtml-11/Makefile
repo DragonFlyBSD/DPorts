@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: textproc/xhtml-11/Makefile 332222 2013-10-31 11:06:16Z bapt $
+# $FreeBSD: textproc/xhtml-11/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xhtml
 PORTVERSION=	1.1.${RECDATE}
