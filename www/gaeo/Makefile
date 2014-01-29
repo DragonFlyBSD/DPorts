@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/gaeo/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/gaeo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gaeo
 PORTVERSION=	0.3
@@ -16,7 +16,7 @@ RUN_DEPENDS=	google-appengine>=1.1.0:${PORTSDIR}/www/google-appengine \
 PROJECTHOST=	google-app-engine-oil
 
 USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 GAEOHOME=	${PYTHON_SITELIBDIR}/${PYEASYINSTALL_EGG}
