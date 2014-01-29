@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: science/chemtool/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/chemtool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	chemtool
 PORTVERSION=	1.6.11
