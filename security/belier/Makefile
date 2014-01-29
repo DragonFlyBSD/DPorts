@@ -1,5 +1,5 @@
 # Created by: rokaz
-# $FreeBSD: security/belier/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/belier/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	belier
 PORTVERSION=	1.2
@@ -31,7 +31,7 @@ PLIST_FILES=	lib/${PYTHON_VERSION}/site-packages/belier/corps.pyo \
 		share/locale/fr/LC_MESSAGES/bel.mo
 PLIST_DIRS=	lib/${PYTHON_VERSION}/site-packages/belier
 
-USE_PYTHON=		2.6+
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
