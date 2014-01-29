@@ -1,12 +1,12 @@
 # Created by: Winston Weinert <winstonw@lavabit.com>
-# $FreeBSD: x11/tabbed/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/tabbed/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tabbed
 PORTVERSION=	0.3
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/tools/
 
-MAINTAINER=	winstonw@lavabit.com
+MAINTAINER=	mp39590@gmail.com
 COMMENT=	Simple generic tabbed fronted to xembed aware applications
 
 LICENSE=	MIT
