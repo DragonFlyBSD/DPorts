@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-tagzilla/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: www/xpi-tagzilla/Makefile 341218 2014-01-26 15:14:03Z miwi $
 
 PORTNAME=	tagzilla
 PORTVERSION=	0.066.2
@@ -15,9 +15,10 @@ RUN_DEPENDS=	${LOCALBASE}/lib/xpi/{DF8E5247-8E0A-4de6-B393-0735A39DFD80}/install
 LICENSE=	MPL # also "GPL" but doesn't specify version and doesn't contain license text
 
 XPI_ID=		{4eac6fec-f68b-4797-be7a-ffeea73e1495}
-XPI_FILES=	chrome/tagzilla.jar chrome.manifest components/tzprefs-service.js defaults/preferences/tagzilla_prefs.js install.js install.rdf release-notes.txt translator.credits.txt
+XPI_FILES=	chrome/tagzilla.jar chrome.manifest components/tzprefs-service.js \
+		defaults/preferences/tagzilla_prefs.js install.js install.rdf \
+		release-notes.txt translator.credits.txt
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
