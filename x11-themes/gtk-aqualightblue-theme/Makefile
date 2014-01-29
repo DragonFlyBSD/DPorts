@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: x11-themes/gtk-aqualightblue-theme/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/gtk-aqualightblue-theme/Makefile 341354 2014-01-27 09:23:58Z miwi $
 
 PORTNAME=	gtk-aqualightblue-theme
 PORTVERSION=	0.1
@@ -17,10 +17,9 @@ WRKSRC=		${WRKDIR}/AquaLightBlue
 NO_BUILD=	yes
 USE_GNOME=	gtk20
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${PREFIX}/share/themes/AquaLightBlue/gtk-2.0
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/AquaLightBlue/gtk-2.0
 	${FIND} ${WRKSRC}/gtk -type f | ${XARGS} -J % ${INSTALL_DATA} \
-		% ${PREFIX}/share/themes/AquaLightBlue/gtk-2.0
+		% ${STAGEDIR}${PREFIX}/share/themes/AquaLightBlue/gtk-2.0
 
 .include <bsd.port.mk>
