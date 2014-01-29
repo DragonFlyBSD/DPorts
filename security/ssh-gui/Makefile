@@ -1,5 +1,5 @@
 # Created by: Hammurabi Mendes <hmendes@brturbo.com>
-# $FreeBSD: security/ssh-gui/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ssh-gui/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ssh-gui
 PORTVERSION=	0.7.1
