@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: misc/rname/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/rname/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rname
 PORTVERSION=	1.0
