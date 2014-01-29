@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xsm/Makefile 331817 2013-10-28 01:07:28Z eadler $
+# $FreeBSD: x11/xsm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xsm
 PORTVERSION=	1.0.3
