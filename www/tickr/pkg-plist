@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/tickr/pkg-plist 314304 2013-03-15 14:30:21Z nivit $
 bin/tickr
 share/pixmaps/tickr/tickr-icon.png
 share/pixmaps/tickr/tickr-icon.xpm
