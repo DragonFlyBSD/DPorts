@@ -1,5 +1,5 @@
 # Created by: Anonymous
-# $FreeBSD: x11/cl-clx/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/cl-clx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	clx
 PORTVERSION=	0.7.4
