@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/zeroer/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
+# $FreeBSD: sysutils/zeroer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zeroer
 PORTVERSION=	0.1
