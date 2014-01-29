@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/magento/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/magento/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	magento
 PORTVERSION=	1.7.0.2
