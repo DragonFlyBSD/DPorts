@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-Fraction/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-String-Fraction/Makefile 340593 2014-01-21 10:39:04Z mat $
 
 PORTNAME=	String-Fraction
 PORTVERSION=	0.30
@@ -16,10 +16,7 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	p5-HTML-Fraction>=0.40:${PORTSDIR}/textproc/p5-HTML-Fraction
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=	String::Fraction.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
