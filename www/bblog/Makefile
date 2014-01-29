@@ -1,5 +1,5 @@
 # Created by: chinsan@mail2000.com.tw
-# $FreeBSD: www/bblog/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/bblog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bBlog
 PORTVERSION=	0.7.6
