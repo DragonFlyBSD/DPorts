@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/ruby-amazon/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/ruby-amazon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	amazon
 PORTVERSION=	0.9.2
