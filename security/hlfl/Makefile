@@ -1,5 +1,5 @@
 # Created by: Arnaud Launay <alaunay@hlfl.org>
-# $FreeBSD: security/hlfl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/hlfl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hlfl
 PORTVERSION=	0.60.1
