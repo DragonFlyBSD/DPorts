@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: www/zen-cart/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/zen-cart/Makefile 339311 2014-01-10 03:14:45Z tabthorpe $
 
 PORTNAME=	zen-cart
 PORTVERSION=	1.3.9h
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.akherb.com/FreeBSD/source/ \
 		LOCAL/beech
 DISTNAME=	zen-cart-v1.3.9h-full-fileset-10262010
 
-MAINTAINER=	beech@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PHP-based user-friendly, open source shopping cart
 
 LICENSE=	GPLv2
