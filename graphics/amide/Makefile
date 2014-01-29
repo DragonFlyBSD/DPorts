@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/amide/Makefile 329839 2013-10-08 22:11:23Z wg $
+# $FreeBSD: graphics/amide/Makefile 341730 2014-01-29 13:11:37Z madpilot $
 
 PORTNAME=	amide
-PORTVERSION=	1.0.4
-PORTREVISION=	2
+PORTVERSION=	1.0.5
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 EXTRACT_SUFX=	.tgz
@@ -53,7 +53,7 @@ post-patch:
 	@${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in \
 		${WRKSRC}/amide_config.h.in
 	@${REINPLACE_CMD} \
-		-e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		-e 's|libavcodec|libavcodec0|g' \
 		-e 's|libavutil|libavutil0|g' \
 		${WRKSRC}/configure
