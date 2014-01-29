@@ -1,5 +1,5 @@
 # Created by: Aron Schlesinger <as@bsdgroup.de>
-# $FreeBSD: www/groupoffice/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/groupoffice/Makefile 339909 2014-01-16 13:05:20Z zi $
 
 PORTNAME=	groupoffice
 DISTVERSIONPREFIX=	com-
@@ -7,7 +7,7 @@ DISTVERSION=	3.7.24
 CATEGORIES=	www
 MASTER_SITES=	SF/group-office/3.7
 
-MAINTAINER=	as@bsdgroup.de
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A modular web application framework vor office
 
 RESTRICTED=	Free for personal use only
