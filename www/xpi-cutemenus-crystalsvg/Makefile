@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-cutemenus-crystalsvg/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-cutemenus-crystalsvg/Makefile 341199 2014-01-26 15:07:37Z miwi $
 
 PORTNAME=	cutemenus-crystalsvg
 PORTVERSION=	1.9.3
@@ -16,6 +16,5 @@ XPI_FILES=	chrome/cutemenus.jar chrome.manifest components/cutemenus.js\
 		defaults/preferences/cutemenus.js install.js install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
