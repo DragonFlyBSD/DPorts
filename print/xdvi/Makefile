@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: print/xdvi/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/xdvi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xdvi
 PORTVERSION=	pl20
