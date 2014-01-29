@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/iriverter/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/iriverter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iriverter
 PORTVERSION=	0.16
