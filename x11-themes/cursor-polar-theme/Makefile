@@ -1,5 +1,5 @@
 # Created by: Shawn Bell <decept@gmail.com>
-# $FreeBSD: x11-themes/cursor-polar-theme/Makefile 338917 2014-01-06 18:11:15Z antoine $
+# $FreeBSD: x11-themes/cursor-polar-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	polar-theme
 PORTVERSION=	1.4
