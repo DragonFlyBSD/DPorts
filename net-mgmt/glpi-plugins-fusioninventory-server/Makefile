@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: net-mgmt/glpi-plugins-fusioninventory-server/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/glpi-plugins-fusioninventory-server/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	server
 PORTVERSION=	${GLPI_VER}.${FUNV_VER}
