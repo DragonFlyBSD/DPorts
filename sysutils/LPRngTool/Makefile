@@ -1,5 +1,5 @@
 # Created by: papowell@lprng.com
-# $FreeBSD: sysutils/LPRngTool/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/LPRngTool/Makefile 339667 2014-01-14 09:12:21Z gahr $
 
 PORTNAME=	LPRngTool
 PORTVERSION=	1.3.2
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	a2ps:${PORTSDIR}/print/a2ps \
 #RUN_DEPENDS=	ifhp:${PORTSDIR}/print/ifhp
 
 USE_GHOSTSCRIPT_BUILD=	yes
-USE_TK_BUILD=	yes
+USES=		tk
 
 .if defined(SYSCONFDIR)
 PLIST_SUB+=	CWD="" SYSCONFDIR="${SYSCONFDIR:S,^/,,}"
