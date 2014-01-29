@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-CheckUTF8/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Unicode-CheckUTF8/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	Unicode-CheckUTF8
 DISTVERSION=	1.03
@@ -13,7 +13,4 @@ COMMENT=	Check if scalar is valid UTF-8
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Unicode::CheckUTF8.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
