@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <gagnon__s@videotron.ca>
-# $FreeBSD: x11/9box/Makefile 330212 2013-10-13 06:14:24Z eadler $
+# $FreeBSD: x11/9box/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	9box
 PORTVERSION=	0.2.1
