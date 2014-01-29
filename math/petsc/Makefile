@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/petsc/Makefile 336557 2013-12-15 16:58:20Z wg $
+# $FreeBSD: math/petsc/Makefile 340551 2014-01-21 05:34:46Z gerald $
 
 PORTNAME=	petsc
 DISTVERSION=	2.3.3-p0
@@ -25,7 +25,8 @@ CONFIGURE_ENV=		PETSC_ARCH=${TARGET}	\
 CONFIGURE_ARGS=		--prefix=${PREFIX}/${PFX} --COPTFLAGS="${CFLAGS}"	\
 			--CXXOPTFLAGS="${CXXFLAGS}" --FOPTFLAGS="${FFLAGS}"	\
 			--with-shared=1 --with-cc=${CC} --with-fc=${FC}		\
-			--CPPFLAGS="-I${LOCALBASE}/include" --LDFLAGS=${PTHREAD_LIBS}
+			--CPPFLAGS="-I${LOCALBASE}/include"	\
+			--LDFLAGS="${PTHREAD_LIBS} ${LDFLAGS}"
 ALL_TARGET=		all
 MAKEFILE=		makefile
 MAKE_ENV=		PETSC_DIR=${WRKSRC}
