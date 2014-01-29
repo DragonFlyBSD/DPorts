@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: misc/newer/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/newer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	newer
 PORTVERSION=	1.0
