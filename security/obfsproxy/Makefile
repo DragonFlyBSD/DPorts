@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: security/obfsproxy/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: security/obfsproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	obfsproxy
 PORTVERSION=	0.2.4
