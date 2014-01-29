@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: security/cksfv/Makefile 331381 2013-10-23 12:35:04Z ehaupt $
+# $FreeBSD: security/cksfv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cksfv
 PORTVERSION=	1.3.14
