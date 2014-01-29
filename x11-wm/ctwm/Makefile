@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: x11-wm/ctwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/ctwm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ctwm
 PORTVERSION=	3.8.1
@@ -12,13 +12,11 @@ MASTER_SITES=	http://ctwm.free.lp.se/dist/ \
 MAINTAINER=	fullermd@over-yonder.net
 COMMENT=	Extension to twm, with support for multiple virtual screens, etc
 
-LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 USES=		imake
 USE_XORG=	xpm xmu
-MAN1=		ctwm.1
 
-NO_STAGE=	yes
 pre-configure:
 	${CP} ${WRKSRC}/Imakefile.local-template ${WRKSRC}/Imakefile.local
 	${CAT} ${FILESDIR}/Imakefile.local-additional >> ${WRKSRC}/Imakefile.local
