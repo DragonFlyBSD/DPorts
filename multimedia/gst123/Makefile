@@ -1,5 +1,5 @@
 # Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-# $FreeBSD: multimedia/gst123/Makefile 336747 2013-12-17 17:54:54Z danilo $
+# $FreeBSD: multimedia/gst123/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gst123
 PORTVERSION=	0.3.3
