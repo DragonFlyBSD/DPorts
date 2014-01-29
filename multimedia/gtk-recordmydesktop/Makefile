@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gtk-recordmydesktop/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gtk-recordmydesktop/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gtk-recordmydesktop
 PORTVERSION=	0.3.8
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USES=		gettext gmake pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_GNOME=	gtk20 pygtk2 desktopfileutils
 INSTALL_ICONS=	yes
 
