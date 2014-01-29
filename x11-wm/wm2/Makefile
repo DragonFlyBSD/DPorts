@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/wm2/Makefile 330215 2013-10-13 06:29:40Z eadler $
+# $FreeBSD: x11-wm/wm2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wm2
 PORTVERSION=	4.0
