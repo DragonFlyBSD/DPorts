@@ -1,5 +1,5 @@
 # Created by: Lasse L. Johnsen (lasse@freebsdcluster.org)
-# $FreeBSD: news/nnap/Makefile 337675 2013-12-27 09:58:03Z bapt $
+# $FreeBSD: news/nnap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nnap
 PORTVERSION=	1.1
