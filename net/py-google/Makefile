@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: net/py-google/Makefile 337859 2013-12-28 11:29:48Z wg $
+# $FreeBSD: net/py-google/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	google
 PORTVERSION=	0.6
