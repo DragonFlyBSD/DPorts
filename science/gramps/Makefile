@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: science/gramps/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/gramps/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gramps
 PORTVERSION=	3.3.0
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bsddb>0:${PORTSDIR}/databases/py-bsddb \
 		${PYXML}
 
 USE_BDB=	43
-USE_PYTHON=	2.6+
+USE_PYTHON=	yes
 USE_GMAKE=	yes
 USES=		desktop-file-utils gettext pathfix shared-mime-info
 USE_GNOME=	pygnome2 pygnomeextras gnomedocutils
