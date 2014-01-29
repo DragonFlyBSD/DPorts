@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-cms/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-django-cms/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	django-cms
 PORTVERSION=	2.4.1
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}south>=0.7.3:${PORTSDIR}/databases/py-south 
 		${PYTHON_PKGNAMEPREFIX}django-sekizai>=0.6.1:${PORTSDIR}/www/py-django-sekizai \
 		${PYTHON_PKGNAMEPREFIX}html5lib>=0.90:${PORTSDIR}/www/py-html5lib
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 
 OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
