@@ -1,5 +1,5 @@
 # Created by: Ricardo A. Reis <ricardo.areis@gmail.com>
-# $FreeBSD: sysutils/kldfind/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/kldfind/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kldfind
 PORTVERSION=	0.61
