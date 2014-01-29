@@ -1,8 +1,8 @@
 # Created by: cnh@ivmg.net
-# $FreeBSD: net-mgmt/tcpreplay/Makefile 338881 2014-01-06 14:06:57Z ehaupt $
+# $FreeBSD: net-mgmt/tcpreplay/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tcpreplay
-PORTVERSION=	4.0.0
+PORTVERSION=	4.0.2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 
