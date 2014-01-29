@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: x11/wmctrl/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/wmctrl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmctrl
 PORTVERSION=	1.07
@@ -15,9 +15,6 @@ GNU_CONFIGURE=	yes
 USE_XORG=	x11 xmu xext xt
 USE_GNOME=	glib20
 
-PLIST_FILES=	bin/wmctrl
+PLIST_FILES=	bin/wmctrl man/man1/${PORTNAME}.1.gz
 
-MAN1=		wmctrl.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
