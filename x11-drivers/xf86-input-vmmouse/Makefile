@@ -1,5 +1,5 @@
 # Created by: NIIMI Satoshi <sa2c@sa2c.net>
-# $FreeBSD: x11-drivers/xf86-input-vmmouse/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-drivers/xf86-input-vmmouse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xf86-input-vmmouse
 PORTVERSION=	13.0.0
