@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/sippy_b2bua/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: net/sippy_b2bua/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sippy_b2bua
 PORTVERSION=	1.0.2
