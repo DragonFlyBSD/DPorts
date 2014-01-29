@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: math/saga/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD: math/saga/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	saga
 PORTVERSION=	2.1.0
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--enable-python
 BUILD_DEPENDS+=	swig2.0:${PORTSDIR}/devel/swig20
 RUN_DEPENDS+=	swig2.0:${PORTSDIR}/devel/swig20
 CONFIGURE_ENV+=	SWIG="${LOCALBASE}/bin/swig2.0"
-USE_PYTHON=	2.6-2.7
+USE_PYTHON=	2
 PLIST_SUB+=	SAGA_PYTHON=""
 .else
 CONFIGURE_ARGS+=	--disable-python
