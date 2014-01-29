@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: news/knews/Makefile 336737 2013-12-17 16:08:30Z dinoex $
+# $FreeBSD: news/knews/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	knews
 PORTVERSION=	1.0b.1
