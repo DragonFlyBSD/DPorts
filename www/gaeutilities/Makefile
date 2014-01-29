@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/gaeutilities/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/gaeutilities/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gaeutilities
 PORTVERSION=	1.4
@@ -13,7 +13,7 @@ COMMENT=	Utility classes to make working with Google App Engine easier
 
 RUN_DEPENDS=	google-appengine>=1.2.4_1:${PORTSDIR}/www/google-appengine
 
-USE_PYTHON=	2.7 # same as www/google-appengine
+USE_PYTHON=	2 # same as www/google-appengine
 
 WRKSRC=	${WRKDIR}/joerussbowman-gaeutilities-ea3f7e1
 

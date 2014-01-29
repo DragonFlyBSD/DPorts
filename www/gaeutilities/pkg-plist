@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/gaeutilities/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PYTHON_SITELIBDIR%%/appengine_utilities/__init__.py
 %%PYTHON_SITELIBDIR%%/appengine_utilities/__init__.pyc
 %%PYTHON_SITELIBDIR%%/appengine_utilities/__init__.pyo
