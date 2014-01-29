@@ -1,5 +1,5 @@
 # Created by: Marwan Burelle <marwan.burelle@lri.fr>
-# $FreeBSD: sysutils/ledit/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ledit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ledit
 PORTVERSION=	2.03
