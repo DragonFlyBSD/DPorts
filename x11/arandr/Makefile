@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbz@FreeBSD.org>
-# $FreeBSD: x11/arandr/Makefile 338841 2014-01-06 08:30:53Z bapt $
+# $FreeBSD: x11/arandr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	arandr
 PORTVERSION=	0.1.7.1
