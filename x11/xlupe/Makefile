@@ -1,5 +1,5 @@
 # Created by: runge@rostock.zgdv.de
-# $FreeBSD: x11/xlupe/Makefile 336391 2013-12-13 23:41:41Z bapt $
+# $FreeBSD: x11/xlupe/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xlupe
 PORTVERSION=	1.1
