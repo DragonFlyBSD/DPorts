@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-Text-Emoticon-GoogleTalk/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Text-Emoticon-GoogleTalk/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-Emoticon-GoogleTalk
 PORTVERSION=	0.01
