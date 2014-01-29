@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/dvorakng/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/dvorakng/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dvorakng
 PORTVERSION=	0.5.0
