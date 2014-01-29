@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: net-p2p/btqueue/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/btqueue/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	btqueue
 PORTVERSION=	0.1.3
