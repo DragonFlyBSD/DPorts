@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: textproc/loook/Makefile 336558 2013-12-15 17:05:55Z nemysis $
+# $FreeBSD: textproc/loook/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	loook
 PORTVERSION=	0.6.5
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>=0:${PORTSDIR}/x11-toolkits/py-tkint
 WRKSRC=		${WRKDIR}
 
 USE_ZIP=	yes
-USE_PYTHON=	2.7
+USE_PYTHON=	2
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
