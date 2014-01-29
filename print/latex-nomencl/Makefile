@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: print/latex-nomencl/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/latex-nomencl/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nomencl
 PORTVERSION=	4.2.20050922
