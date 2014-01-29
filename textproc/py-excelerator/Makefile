@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: textproc/py-excelerator/Makefile 338088 2013-12-30 11:31:14Z wg $
+# $FreeBSD: textproc/py-excelerator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	excelerator
 PORTVERSION=	0.6.4.1
