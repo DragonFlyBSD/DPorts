@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@mcs.com>
-# $FreeBSD: x11-wm/amiwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/amiwm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	amiwm
 PORTVERSION=	0.21.pl2
