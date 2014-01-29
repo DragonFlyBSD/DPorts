@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: games/gweled/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gweled/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gweled
 PORTVERSION=	0.7
