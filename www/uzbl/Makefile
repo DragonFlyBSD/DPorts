@@ -1,5 +1,5 @@
 # Created by: Klaus Aehlig <aehlig@linta.de>
-# $FreeBSD: www/uzbl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/uzbl/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	uzbl
 DISTVERSION=	0.0.0.${GITDATE}
@@ -20,7 +20,7 @@ RUN_DEPENDS=	socat:${PORTSDIR}/net/socat \
 USES=		gmake pkgconfig
 USE_GNOME=	gtk20 pygtk2
 USE_LDCONFIG=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 
 GITDATE=	2012.05.14
 GITVERSION=	228bc38
