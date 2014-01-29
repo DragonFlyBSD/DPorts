@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: x11/xidle/Makefile 339245 2014-01-09 14:48:54Z vanilla $
+# $FreeBSD: x11/xidle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xidle
 PORTVERSION=	24102005
