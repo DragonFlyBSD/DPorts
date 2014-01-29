@@ -1,5 +1,5 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: math/py-basemap/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: math/py-basemap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	basemap
 PORTVERSION=	0.9.2
@@ -13,7 +13,7 @@ COMMENT=	Plots data on map projections (with continental and political boundarie
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/matplotlib/:${PORTSDIR}/math/py-matplotlib
 
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 DATADIR=	${PREFIX}/share/py-${PORTNAME}-data
