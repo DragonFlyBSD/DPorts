@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
-# $FreeBSD: mail/xpbiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/xpbiff/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME?=	xpbiff
 PORTVERSION?=	1.27
