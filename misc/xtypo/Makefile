@@ -1,5 +1,5 @@
 # Created by: Takeshi MUTOH <tmutoh@mx10.freecom.ne.jp>
-# $FreeBSD: misc/xtypo/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/xtypo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtypo
 PORTVERSION=	1.02
