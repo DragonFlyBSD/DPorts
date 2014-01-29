@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: sysutils/finfo/Makefile 337258 2013-12-23 16:24:11Z mich $
+# $FreeBSD: sysutils/finfo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	finfo
 PORTVERSION=	0.1
