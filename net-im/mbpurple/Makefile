@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/mbpurple/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/mbpurple/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mbpurple
 PORTVERSION=	0.3.0
