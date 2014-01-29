@@ -1,11 +1,11 @@
-# $FreeBSD: sysutils/password-store/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/password-store/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	password-store
 PORTVERSION=	1.4.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 
-MAINTAINER=	milki@rescomp.berkeley.edu
+MAINTAINER=	milki@FreeBSD.org
 COMMENT=	Stores, retrieves, generates, and synchronizes passwords securely
 
 LICENSE=	GPLv2
