@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: russian/xruskb/Makefile 337004 2013-12-20 12:29:56Z ache $
+# $FreeBSD: russian/xruskb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xruskb
 PORTVERSION=	1.15.4
