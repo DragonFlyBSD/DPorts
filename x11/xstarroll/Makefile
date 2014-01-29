@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: x11/xstarroll/Makefile 336381 2013-12-13 23:25:27Z bapt $
+# $FreeBSD: x11/xstarroll/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xstarroll
 PORTVERSION=	1.1b
