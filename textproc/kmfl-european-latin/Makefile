@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/kmfl-european-latin/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/kmfl-european-latin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kmfl-european-latin
 PORTVERSION=	1.6
