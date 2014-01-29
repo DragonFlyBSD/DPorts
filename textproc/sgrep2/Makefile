@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/sgrep2/Makefile 338938 2014-01-06 21:23:31Z antoine $
+# $FreeBSD: textproc/sgrep2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sgrep2
 PORTVERSION=	1.94a
