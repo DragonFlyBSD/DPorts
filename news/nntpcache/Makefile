@@ -1,5 +1,5 @@
 # Created by: proff@suburbia.net
-# $FreeBSD: news/nntpcache/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD: news/nntpcache/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nntpcache
 PORTVERSION=	3.0.2
