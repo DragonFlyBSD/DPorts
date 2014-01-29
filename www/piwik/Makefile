@@ -1,8 +1,8 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/piwik/Makefile 338782 2014-01-05 15:22:48Z rakuco $
+# $FreeBSD: www/piwik/Makefile 339758 2014-01-15 07:19:32Z miwi $
 
 PORTNAME=	piwik
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	www
 MASTER_SITES=	http://builds.piwik.org/
 
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
-USE_PHP=	dom gd iconv json session xml zlib
+USE_PHP=	dom gd iconv json session xml zlib ctype hash
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	PHPPDOMYSQL PHPMYSQLI
