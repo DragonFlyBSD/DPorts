@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: www/hs-fastcgi/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD: www/hs-fastcgi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fastcgi
 PORTVERSION=	3001.0.2.4
