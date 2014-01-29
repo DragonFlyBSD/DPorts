@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen <mva@sysfault.org>
-# $FreeBSD: accessibility/at-poke/Makefile 328663 2013-09-29 10:08:35Z mva $
+# $FreeBSD: accessibility/at-poke/Makefile 340203 2014-01-18 18:58:32Z mva $
 
 PORTNAME=	at-poke
 PORTVERSION=	0.2.3
@@ -10,6 +10,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	mva@FreeBSD.org
 COMMENT=	Accessibility testing and poking tool
+
+LICENSE=	GPLv2
 
 USES=		gmake pkgconfig
 USE_GNOME=	gnomeprefix libglade2 libgailgnome
