@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/bomstrip/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/bomstrip/Makefile 341143 2014-01-26 00:03:51Z mat $
 
 PORTNAME=	bomstrip
 PORTVERSION=	9
@@ -16,15 +16,10 @@ PATCH_SITES=	http://devel.ringlet.net/textproc/bomstrip/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Strip Byte-Order Marks (BOM) from UTF-8 text
 
-USE_GMAKE=	yes
+USES=	gmake
 MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		STRIP=""
 
-MLINKS=		bomstrip.1 bomstrip-files.1
-MAN1=		bomstrip.1
-MANCOMPRESSED=	yes
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
