@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: misc/libsupertone/Makefile 333231 2013-11-08 14:31:40Z kwm $
+# $FreeBSD: misc/libsupertone/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsupertone
 PORTVERSION=	0.0.2
