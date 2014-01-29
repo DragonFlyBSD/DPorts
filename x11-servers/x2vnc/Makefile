@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: x11-servers/x2vnc/Makefile 327782 2013-09-20 23:52:24Z bapt $
+# $FreeBSD: x11-servers/x2vnc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	x2vnc
 PORTVERSION=	1.72
