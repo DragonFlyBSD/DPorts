@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/csv2latex/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/csv2latex/Makefile 341161 2014-01-26 11:57:13Z mat $
 
 PORTNAME=	csv2latex
 PORTVERSION=	0.18
@@ -11,25 +11,26 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Converts a well formed csv file to a LaTeX document
 
+LICENSE=	GPLv2
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_FILES=	bin/csv2latex
 
-NO_STAGE=	yes
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/${PORTNAME} ${WRKSRC}/${PORTNAME}.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .if ( defined(WITH_MAN) &&  !defined(NO_INSTALL_MANPAGES) )
 BUILD_DEPENDS +=	docbook-to-man:${PORTSDIR}/textproc/docbook-to-man
-MAN1=	${PORTNAME}.1
+PLIST_FILES+=	man/man1/${PORTNAME}.1.gz
 
 post-build:
-	docbook-to-man ${WRKSRC}/${PORTNAME}.sgml > ${WRKSRC}/${MAN1}
+	docbook-to-man ${WRKSRC}/${PORTNAME}.sgml > ${WRKSRC}/${PORTNAME}.1
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/${MAN1} ${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .endif
 
