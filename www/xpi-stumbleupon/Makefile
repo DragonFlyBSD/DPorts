@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-stumbleupon/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-stumbleupon/Makefile 341217 2014-01-26 15:13:43Z miwi $
 
 PORTNAME=	stumbleupon
 PORTVERSION=	3.76
@@ -16,6 +16,5 @@ XPI_ID=		{AE93811A-5C9A-4d34-8462-F7B864FC4696}
 XPI_FILES=	chrome/stumbleupon.jar chrome.manifest components/stumbleuponService.js install.js install.rdf
 XPI_DIRS=	chrome components
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
