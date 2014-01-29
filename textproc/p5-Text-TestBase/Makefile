@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-TestBase/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-TestBase/Makefile 340915 2014-01-24 15:52:12Z mat $
 
 PORTNAME=	Text-TestBase
 PORTVERSION=	0.12
@@ -20,12 +20,6 @@ TEST_DEPENDS=	p5-Test-Requires>0:${PORTSDIR}/devel/p5-Test-Requires
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Data::Section::TestBase.3 \
-		Test::Base::Less.3 \
-		Text::TestBase.3 \
-		Text::TestBase::Block.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
