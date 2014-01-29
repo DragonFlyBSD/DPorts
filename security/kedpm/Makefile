@@ -1,5 +1,5 @@
 # Created by: Tim Welch <ports@thepentagon.org>
-# $FreeBSD: security/kedpm/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/kedpm/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	kedpm
 PORTVERSION=	0.4.0
@@ -13,7 +13,7 @@ COMMENT=	Simple application for managing personal data
 RUN_DEPENDS=	${PYTHONPREFIX_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pycrypto
 
 USE_GNOME=	pygtk2
-USE_PYTHON=	2.1+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	YES
 
 DESKTOP_ENTRIES="Ked Password Manager" \
