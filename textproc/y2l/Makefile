@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/y2l/Makefile 328892 2013-09-30 22:48:09Z danilo $
+# $FreeBSD: textproc/y2l/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	y2l
 PORTVERSION=	1.2
