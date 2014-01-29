@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-wmdockapps/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-wmdockapps/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmdockapps
 PORTVERSION=	1.21
