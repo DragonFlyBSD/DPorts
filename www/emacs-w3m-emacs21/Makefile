@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: www/emacs-w3m-emacs21/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/emacs-w3m-emacs21/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MASTERDIR=	${.CURDIR}/../emacs-w3m
 
