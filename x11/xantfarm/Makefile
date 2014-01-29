@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xantfarm/Makefile 336402 2013-12-13 23:57:05Z bapt $
+# $FreeBSD: x11/xantfarm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xantfarm
 PORTVERSION=	1.16
