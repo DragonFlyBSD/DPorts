@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: sysutils/byobu/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/byobu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	byobu
 PORTVERSION=	3.29

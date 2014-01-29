@@ -1,4 +1,3 @@
-@comment $FreeBSD: sysutils/byobu/pkg-plist 331274 2013-10-22 14:01:38Z amdmi3 $
 %%DATADIR%%/ec2/rates.eu_ie
 %%DATADIR%%/ec2/rates.us_ca
 %%DATADIR%%/ec2/rates.us_va
