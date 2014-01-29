@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator/Makefile 336694 2013-12-17 05:35:47Z amdmi3 $
+# $FreeBSD: x11/avant-window-navigator/Makefile 340033 2014-01-17 13:22:17Z bapt $
 
 PORTNAME=	avant-window-navigator
 PORTVERSION=	0.3.2.1
@@ -57,8 +57,6 @@ CONFIGURE_ARGS+=	--with-gconf
 CONFIGURE_ARGS+=	--without-gconf
 .endif
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|#!/usr/bin/python|#!/usr/bin/env python|' \
 		${WRKSRC}/awn-manager/awnManager.py.in \
@@ -72,4 +70,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|glib/gutils.h>|glib.h>|g' \
 		${WRKSRC}/libawn/awn-config-client-gkeyfile.c
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
