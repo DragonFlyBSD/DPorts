@@ -1,5 +1,5 @@
 # Created by: David E. Thiel <lx@FreeBSD.org>
-# $FreeBSD: security/ncrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ncrack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ncrack
 PORTVERSION=	0.4
