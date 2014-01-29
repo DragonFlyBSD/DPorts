@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-urljr/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-urljr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	urljr
 PORTVERSION=	1.0.1
@@ -13,7 +13,7 @@ COMMENT=	Common interface to HTTP fetchers for PycURL or urllib2
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/curl:${PORTSDIR}/ftp/py-curl
 
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	python-urljr
 
