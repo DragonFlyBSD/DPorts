@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-inline-google-definitions/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-inline-google-definitions/Makefile 341209 2014-01-26 15:10:59Z miwi $
 
 PORTNAME=	inline-google-definitions
 PORTVERSION=	1.4
@@ -13,6 +13,5 @@ XPI_DISTNAME=	inline_google_definitions
 XPI_NUM=	2083
 XPI_ID=		{70171e70-9057-11da-9562-00e08161165f}
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
