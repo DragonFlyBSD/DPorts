@@ -1,5 +1,5 @@
 # Created by: Gary Palmer <gpalmer@FreeBSD.org>
-# $FreeBSD: x11/rxvt-devel/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/rxvt-devel/Makefile 339339 2014-01-10 09:32:14Z vanilla $
 
 PORTNAME=	rxvt
 PORTVERSION=	2.7.10
@@ -41,9 +41,6 @@ CONFIGURE_ARGS=	--enable-utmp --enable-lastlog \
 		--enable-mousewheel --disable-languages
 USE_LDCONFIG=	yes
 
-MAN1=		rxvt.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} >= 900007
@@ -144,6 +141,6 @@ post-patch:
 		${WRKSRC}/src/Makefile.in
 
 post-install:
-	@${CHMOD} 4711 ${PREFIX}/bin/rxvt
+	@${CHMOD} 4711 ${STAGEDIR}${PREFIX}/bin/rxvt
 
 .include <bsd.port.post.mk>
