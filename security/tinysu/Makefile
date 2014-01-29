@@ -1,5 +1,5 @@
 # Created by: zakj@nox.cx
-# $FreeBSD: security/tinysu/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/tinysu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tinysu
 PORTVERSION=	0.9
