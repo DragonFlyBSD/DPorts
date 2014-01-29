@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-liveice/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/xmms-liveice/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmms-liveice
 PORTVERSION=	1.0.0
@@ -19,7 +19,6 @@ WRKSRC=		${WRKDIR}/LiveIce-${PORTVERSION}
 PLIST_FILES=	lib/xmms/Effect/libliveice.la \
 		lib/xmms/Effect/libliveice.so
 USE_LDCONFIG=	yes
-NO_STAGE=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 
