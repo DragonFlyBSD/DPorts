@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net-im/cjc/Makefile 336894 2013-12-19 12:49:09Z danilo $
+# $FreeBSD: net-im/cjc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cjc
 PORTVERSION=	1.2.1
