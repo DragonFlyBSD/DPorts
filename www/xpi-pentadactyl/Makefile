@@ -1,5 +1,5 @@
 # Created by: clutton mbsd@isgroup.com.ua
-# $FreeBSD: www/xpi-pentadactyl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-pentadactyl/Makefile 341213 2014-01-26 15:12:42Z miwi $
 
 PORTNAME=	pentadactyl
 PORTVERSION=	20130808
@@ -13,6 +13,5 @@ COMMENT=	Firefox for Vim and Links addicts
 XPI_NUM=	235854
 XPI_ID=		pentadactyl@dactyl.googlecode.com
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
