@@ -1,5 +1,5 @@
 
-$FreeBSD: security/tinyca/files/patch-lib::CA.pm 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: security/tinyca/files/patch-lib::CA.pm 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/CA.pm.orig
 +++ lib/CA.pm
