@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/viewklass/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD: x11-toolkits/viewklass/Makefile 340305 2014-01-19 14:25:38Z miwi $
 
 PORTNAME=	viewklass
 PORTVERSION=	0.7.2
@@ -11,15 +11,16 @@ DISTNAME=	ViewKlass-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ Framework for Motif
 
-BUILD_DEPENDS=	imake:${PORTSDIR}/devel/imake
+LICENSE=	LGPL20 # (or later)
 
-USES=		motif
-GNU_CONFIGURE=	yes
+USES=		imake:env motif
+USE_AUTOTOOLS=	autoconf213
 
-NO_STAGE=	yes
 post-patch:
-	@${REINPLACE_CMD} -e 's/^CFLAGS=/CFLAGS+=/g ; \
-		s/^CXXFLAGS=/CXXFLAGS+=/g ; \
-		s/-g -Wall//g' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e \
+		'/^CFLAGS=/s|-g|@CFLAGS@| ; \
+		 /^CXXFLAGS=/s|-g|@CXXFLAGS@| ; \
+		 s| $$(exec_prefix)| $$(DESTDIR)$$(exec_prefix)| ; \
+		 s| $$(prefix)| $$(DESTDIR)$$(prefix)|' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
