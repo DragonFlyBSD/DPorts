@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-vote/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/trac-vote/Makefile 341188 2014-01-26 14:33:08Z miwi $
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.1.2
@@ -13,9 +13,8 @@ COMMENT=	Plugin for voting on Trac resources
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
-NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	TracVote
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
