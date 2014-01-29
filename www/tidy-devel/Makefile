@@ -1,5 +1,5 @@
 # Created by: Abel Chow <achow@transoft.net>
-# $FreeBSD: www/tidy-devel/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: www/tidy-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME?=	tidy
 DISTVERSION=	090315-cvs
