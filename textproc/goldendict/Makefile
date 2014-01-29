@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: textproc/goldendict/Makefile 334592 2013-11-22 13:34:33Z bsam $
+# $FreeBSD: textproc/goldendict/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	goldendict
 PORTVERSION=	1.0.1
