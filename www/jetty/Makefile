@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@freebsd-fr.org>
-# $FreeBSD: www/jetty/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/jetty/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	jetty
 PORTVERSION=	8.1.11
@@ -15,7 +15,7 @@ JDVDATE=	v20130520
 USE_RC_SUBR=	${PORTNAME}
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
-USE_PYTHON=	2.4+
+USE_PYTHON=	yes
 PLIST=		${WRKDIR}/pkg-plist
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
