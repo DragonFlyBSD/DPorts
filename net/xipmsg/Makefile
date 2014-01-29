@@ -1,5 +1,5 @@
 # Created by: candy@fct.kgc.co.jp
-# $FreeBSD: net/xipmsg/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/xipmsg/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xipmsg
 PORTVERSION=	0.8088
