@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@cowboy.branda.to>
-# $FreeBSD: www/py-GinGin/Makefile 338103 2013-12-30 12:37:25Z wg $
+# $FreeBSD: www/py-GinGin/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	GinGin
 PORTVERSION=	1.0.1
