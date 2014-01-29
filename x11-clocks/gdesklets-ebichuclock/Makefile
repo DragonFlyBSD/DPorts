@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: x11-clocks/gdesklets-ebichuclock/Makefile 330216 2013-10-13 06:36:18Z eadler $
+# $FreeBSD: x11-clocks/gdesklets-ebichuclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ebichuclock
 PORTVERSION=	0.1.1
