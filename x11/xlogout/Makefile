@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xlogout/Makefile 329370 2013-10-04 19:51:40Z naddy $
+# $FreeBSD: x11/xlogout/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xlogout
 PORTVERSION=	1.1
