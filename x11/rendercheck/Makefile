@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/rendercheck/Makefile 337798 2013-12-27 20:21:58Z antoine $
+# $FreeBSD: x11/rendercheck/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rendercheck
 PORTVERSION=	1.4
