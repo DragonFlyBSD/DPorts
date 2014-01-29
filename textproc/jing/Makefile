@@ -1,39 +1,38 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: textproc/jing/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/jing/Makefile 341738 2014-01-29 13:41:17Z mat $
 
 PORTNAME=	jing
 PORTVERSION=	2008.10.28
 CATEGORIES=	textproc java
 MASTER_SITES=	http://jing-trang.googlecode.com/files/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	gabor@FreeBSD.org
 COMMENT=	A RELAX NG validator in Java
 
-USE_ZIP=	yes
+LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/doc/copying.html
+
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_BUILD=	yes
 
-.if !defined(NOPORTDOCS)
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
 PORTDOCS=	*
-.endif
+PORTEXAMPLES=	*
 
 SUB_FILES=	jing.sh
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/jing %%JAVAJARDIR%%/jing.jar
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/jing.sh ${PREFIX}/bin/jing
-	${INSTALL_DATA} ${WRKSRC}/bin/jing.jar ${JAVAJARDIR}
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.html ${DOCSDIR}
-	cd ${WRKSRC}/doc \
-	  && ${FIND} . -type d -exec ${MKDIR} ${DOCSDIR}/{} \; \
-	  && ${FIND} . -type f -exec ${INSTALL_DATA} {} ${DOCSDIR}/{} \;
-	cd ${WRKSRC}/sample \
-	  && ${FIND} . -type d -exec ${MKDIR} ${EXAMPLESDIR}/{} \; \
-	  && ${FIND} . -type f -exec ${INSTALL_DATA} {} ${EXAMPLESDIR}/{} \;
-.endif
+	${INSTALL_SCRIPT} ${WRKDIR}/jing.sh ${STAGEDIR}${PREFIX}/bin/jing
+	${INSTALL_DATA} ${WRKSRC}/bin/jing.jar ${STAGEDIR}${JAVAJARDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.html ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
+	(cd ${WRKSRC}/sample && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
 .include <bsd.port.mk>
