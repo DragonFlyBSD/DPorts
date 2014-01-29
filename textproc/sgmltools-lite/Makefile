@@ -1,5 +1,5 @@
 # Created by: Benno Rice <benno@netizen.com.au>
-# $FreeBSD: textproc/sgmltools-lite/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/sgmltools-lite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sgmltools-lite
 PORTVERSION=	3.0.3
