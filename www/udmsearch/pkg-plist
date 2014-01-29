@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/udmsearch/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%DATADIR%%/create/ibase/create.sql
 %%DATADIR%%/create/msql/crc-multi.txt
 %%DATADIR%%/create/msql/crc.txt
