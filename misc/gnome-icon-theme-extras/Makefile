@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: misc/gnome-icon-theme-extras/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gnome-icon-theme-extras/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/misc/gnome-icon-theme-extras/Makefile,v 1.3 2010/04/20 20:56:39 kwm Exp $
 
 PORTNAME=	gnome-icon-theme-extras
