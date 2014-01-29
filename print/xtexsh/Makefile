@@ -1,5 +1,5 @@
 # Created by: Jean-Sebastien Roy <js@jeannot.org>
-# $FreeBSD: print/xtexsh/Makefile 333668 2013-11-13 10:57:19Z gahr $
+# $FreeBSD: print/xtexsh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtexsh
 PORTVERSION=	1.4.2
