@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/deluge/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD: net-p2p/deluge/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	deluge
 PORTVERSION=	1.3.6
@@ -27,7 +27,7 @@ USE_XZ=		yes
 WANT_GNOME=	yes
 USES=		gettext twisted:run,web
 USE_OPENSSL=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_BUILD_TARGET=	build bdist_egg
 
