@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: math/xgraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/xgraph/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xgraph
 PORTVERSION=	11.3.2.20000910
