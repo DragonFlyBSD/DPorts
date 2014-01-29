@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/burpsuite/files/burpsuite.sh 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: security/burpsuite/files/burpsuite.sh 340872 2014-01-24 00:14:07Z mat $
 #
 
 cd %%PATH%%
