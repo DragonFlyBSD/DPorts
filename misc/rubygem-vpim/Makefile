@@ -1,8 +1,8 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: misc/rubygem-vpim/Makefile 332045 2013-10-30 02:50:05Z swills $
+# $FreeBSD: misc/rubygem-vpim/Makefile 340638 2014-01-21 19:13:02Z swills $
 
 PORTNAME=	vpim
-PORTVERSION=	0.695
+PORTVERSION=	13.11.11
 CATEGORIES=	misc rubygems
 MASTER_SITES=	RG
 
