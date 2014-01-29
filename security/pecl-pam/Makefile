@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: security/pecl-pam/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pecl-pam/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	pam
 PORTVERSION=	1.0.3
@@ -15,5 +15,4 @@ USE_PHP=	yes
 USE_PHPIZE=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
