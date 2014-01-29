@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-noscript/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-noscript/Makefile 341212 2014-01-26 15:12:21Z miwi $
 
 PORTNAME=	noscript
 PORTVERSION=	2.6.6.1
@@ -12,6 +12,5 @@ COMMENT=	A security-enhancing Java/JS filtering extension
 XPI_ID=		{73a6fe31-595d-460b-a920-fcc0f8843232}
 XPI_NUM=	722
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
