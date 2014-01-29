@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: java/eclipse-shelled/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-shelled/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ShellEd
 PORTVERSION=	1.0.2a
