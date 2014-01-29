@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: math/gnubc/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/gnubc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bc
 PORTVERSION=	1.06
