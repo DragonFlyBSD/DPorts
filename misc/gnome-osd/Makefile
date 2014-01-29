@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: misc/gnome-osd/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gnome-osd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnome-osd
 PORTVERSION=	0.20.0
