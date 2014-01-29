@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/wotsap/Makefile 328759 2013-09-29 23:32:33Z danilo $
+# $FreeBSD: misc/wotsap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wotsap
 PORTVERSION=	0.7
@@ -12,7 +12,7 @@ COMMENT=	Web of trust statistics and pathfinder
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}imaging>0:${PORTSDIR}/graphics/py-imaging
 
-USE_PYTHON_RUN=	-2.7
+USE_PYTHON_RUN=	2
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/pks2wot bin/wotsap
