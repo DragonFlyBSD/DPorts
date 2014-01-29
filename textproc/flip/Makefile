@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.dharma>
-# $FreeBSD: textproc/flip/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/flip/Makefile 341283 2014-01-26 20:43:55Z mat $
 
 PORTNAME=	flip
 PORTVERSION=	1.19
@@ -16,12 +16,10 @@ NO_LATEST_LINK=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 ALL_TARGET=	bsd
-PLIST_FILES=	bin/flip
-MAN1=		flip.1
+PLIST_FILES=	bin/flip man/man1/flip.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/flip ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/flip.1 ${MAN1PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/flip ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/flip.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
