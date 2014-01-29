@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: net/sixxs-aiccu/Makefile 338977 2014-01-07 07:04:42Z dinoex $
+# $FreeBSD: net/sixxs-aiccu/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aiccu
 PORTVERSION=	20070115
