@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: multimedia/xmms-status-plugin/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: multimedia/xmms-status-plugin/Makefile 340289 2014-01-19 13:44:36Z miwi $
 
 PORTNAME=	xmms-status-plugin
 PORTVERSION=	1.0
@@ -10,17 +10,19 @@ MASTER_SITES=	http://www.hellion.org.uk/source/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS control applet for GNOME 2 panel / KDE tray
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+LICENSE=	GPLv2 # (or later)
 
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
+
+USES=		gettext gmake
 USE_XORG=	x11 xpm
-USE_GMAKE=	yes
-USE_LDCONFIG=	yes
+USE_CSTD=	gnu89
 USE_AUTOTOOLS=	libtool
+
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
-	${REINPLACE_CMD} -e 's,-Werror,,' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's,-Werror,,' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
