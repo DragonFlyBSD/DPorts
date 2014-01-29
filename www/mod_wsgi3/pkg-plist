@@ -1,4 +1,3 @@
-@comment $FreeBSD: www/mod_wsgi3/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 @unexec /usr/bin/sed -i '' '/LoadModule %%AP_NAME%%_module/d' %D/%%APACHEETCDIR%%/httpd.conf
 %%APACHEMODDIR%%/%%AP_MODULE%%
 @exec %D/sbin/apxs -e -a -n %%AP_NAME%% %D/%F
