@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/oath-toolkit/Makefile 329502 2013-10-05 20:44:50Z ale $
+# $FreeBSD: security/oath-toolkit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	oath-toolkit
 PORTVERSION=	2.4.0
