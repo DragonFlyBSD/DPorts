@@ -1,9 +1,9 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: x11-toolkits/termit/Makefile 339457 2014-01-11 20:54:50Z bapt $
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	http://cloud.github.com/downloads/nonstop/termit/
 
@@ -13,8 +13,7 @@ COMMENT=	Small terminal emulator
 LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USES=		cmake pkgconfig
-USE_LUA=	yes
+USES=		cmake pkgconfig lua
 USE_GNOME=	gdkpixbuf2 vte
 
 CFLAGS+=	-I${LOCALBASE}/include/vte-0.0
@@ -28,8 +27,6 @@ DEBUG_CMAKE_ON=	-DDEBUG:BOOL=YES
 
 NLS_CMAKE_OFF=	-DENABLE_NLS:BOOL=NO
 NLS_USES=	gettext
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} 's|share/man|man|' ${WRKSRC}/doc/CMakeLists.txt
