@@ -1,5 +1,5 @@
 
-$FreeBSD: net/stund/files/patch-server.cxx 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net/stund/files/patch-server.cxx 340725 2014-01-22 17:40:44Z mat $
 
 --- server.cxx.orig
 +++ server.cxx

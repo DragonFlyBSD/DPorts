@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/stund/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/stund/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	stund
 PORTVERSION=	0.96
