@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: accessibility/orca/Makefile 336152 2013-12-11 09:51:36Z bapt $
+# $FreeBSD: accessibility/orca/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/accessibility/orca/Makefile,v 1.90 2010/11/16 12:00:48 avl Exp $
 
 PORTNAME=	orca
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gmake gettext pkgconfig
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_GNOME=	gnomeprefix gnomehack libgnomeui gnomespeech pygnome2 \
 		pygnomedesktop
 INSTALLS_ICONS=	yes
