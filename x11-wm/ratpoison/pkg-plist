@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-wm/ratpoison/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/ratpoison
 %%PORTDATA%%bin/rpws
 %%PORTDATA%%%%DATADIR%%/allwindows.sh

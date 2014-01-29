@@ -1,5 +1,5 @@
 # Created by: Gergely Nagy <8@free.bsd.hu>
-# $FreeBSD: x11-wm/ratpoison/Makefile 336726 2013-12-17 14:00:31Z dhn $
+# $FreeBSD: x11-wm/ratpoison/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ratpoison
 PORTVERSION=	1.4.6
