@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/rubygem-nanoc/Makefile 332433 2013-11-02 00:02:27Z zi $
+# $FreeBSD: www/rubygem-nanoc/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	nanoc
 PORTVERSION=	3.6.5
@@ -18,5 +18,4 @@ RUBYGEM_AUTOPLIST=	yes
 
 PLIST_FILES=	bin/nanoc
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
