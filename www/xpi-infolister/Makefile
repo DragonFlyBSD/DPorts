@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-infolister/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-infolister/Makefile 341209 2014-01-26 15:10:59Z miwi $
 
 PORTNAME=	infolister
 DISTVERSION=	0.9f.2
@@ -17,6 +17,5 @@ XPI_FILES=	chrome/infolister.jar chrome.manifest \
 		license.txt
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
