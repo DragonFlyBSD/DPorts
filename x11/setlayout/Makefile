@@ -1,5 +1,5 @@
 # Created by: oleg@bsdpower.com
-# $FreeBSD: x11/setlayout/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/setlayout/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	setlayout
 DISTVERSION=	20080210
