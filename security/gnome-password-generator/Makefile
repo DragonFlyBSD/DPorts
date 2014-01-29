@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: security/gnome-password-generator/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
+# $FreeBSD: security/gnome-password-generator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnome-password-generator
 PORTVERSION=	1.6
