@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: www/download-gemist/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: www/download-gemist/Makefile 341245 2014-01-26 16:45:01Z miwi $
 
 PORTNAME=	download-gemist
 PORTVERSION=	1.2
@@ -19,10 +19,9 @@ PLIST_FILES=	bin/download-gemist \
 		bin/download-gemist-guide \
 		%%DOCSDIR%%/README.md
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/download-gemist* ${PREFIX}/bin/
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DOCSDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/download-gemist* ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
