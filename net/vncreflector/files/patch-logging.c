@@ -1,5 +1,5 @@
 
-$FreeBSD: net/vncreflector/files/patch-logging.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net/vncreflector/files/patch-logging.c 340725 2014-01-22 17:40:44Z mat $
 
 --- logging.c
 +++ logging.c
