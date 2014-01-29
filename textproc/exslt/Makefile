@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-# $FreeBSD: textproc/exslt/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/exslt/Makefile 341275 2014-01-26 20:20:40Z mat $
 
 PORTNAME=	exslt
 PORTVERSION=	2003.10.24
@@ -17,19 +17,17 @@ NO_BUILD=	yes
 
 DATAFILES=	base.css date dyn exsl func howto.html index.html math random regexp set str
 
-NO_STAGE=	yes
 do-install:
-	@${ECHO_MSG} ">> Installing stylesheets and documentation in ${DATADIR}"
-	@${MKDIR} ${DATADIR}
-	@cd ${WRKSRC} && \
-		${FIND} ${DATAFILES} -type d -exec ${MKDIR} "${DATADIR}/{}" \; && \
-		${FIND} ${DATAFILES} ! -type d -exec ${INSTALL_DATA} "{}" "${DATADIR}/{}" \;
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && \
+		${FIND} ${DATAFILES} -type d -exec ${MKDIR} "${STAGEDIR}${DATADIR}/{}" \; && \
+		${FIND} ${DATAFILES} ! -type d -exec ${INSTALL_DATA} "{}" "${STAGEDIR}${DATADIR}/{}" \;
 
 post-install:
-	@${FIND} -s ${DATAFILES:S/^/${DATADIR}\//} ! -type d 2>/dev/null | \
-		${SED} -ne 's,^${PREFIX}/,,p' >> ${TMPPLIST}
-	@${FIND} -s -d ${DATAFILES:S/^/${DATADIR}\//} -type d 2>/dev/null | \
-		${SED} -ne 's,^${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
+	@${FIND} -s ${STAGEDIR}${DATAFILES:S/^/${DATADIR}\//} ! -type d 2>/dev/null | \
+		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,,p' >> ${TMPPLIST}
+	@${FIND} -s -d ${STAGEDIR}${DATAFILES:S/^/${DATADIR}\//} -type d 2>/dev/null | \
+		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
 	@${ECHO_CMD} '@dirrm ${DATADIR:S,^${PREFIX}/,,}' >> ${TMPPLIST}
 
 .include <bsd.port.mk>
