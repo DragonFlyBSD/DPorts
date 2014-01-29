@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@FreeBSD.org>
-# $FreeBSD: java/eclipse-aptana/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD: java/eclipse-aptana/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	aptana
 PORTVERSION=	1.2.2.024747
