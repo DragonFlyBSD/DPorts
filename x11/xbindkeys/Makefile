@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: x11/xbindkeys/Makefile 331409 2013-10-23 18:57:48Z eadler $
+# $FreeBSD: x11/xbindkeys/Makefile 340876 2014-01-24 03:20:23Z eadler $
 
 PORTNAME=	xbindkeys
-PORTVERSION=	1.8.5
+PORTVERSION=	1.8.6
 CATEGORIES=	x11
 MASTER_SITES=	http://www.nongnu.org/xbindkeys/
 
