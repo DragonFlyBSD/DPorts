@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/gdkxft/Makefile 330199 2013-10-13 02:01:16Z eadler $
+# $FreeBSD: x11/gdkxft/Makefile 339339 2014-01-10 09:32:14Z vanilla $
 
 PORTNAME=	gdkxft
 PORTVERSION=	1.5
@@ -25,9 +25,6 @@ CONFIGURE_ARGS=	--sbindir=${PREFIX}/bin \
 		--without-gnome
 USE_LDCONFIG=	yes
 
-MAN8=		gdkxft_sysinstall.8
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -47,8 +44,8 @@ post-patch:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
