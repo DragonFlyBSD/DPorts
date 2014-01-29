@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: x11/apwal/Makefile 338840 2014-01-06 08:25:43Z bapt $
+# $FreeBSD: x11/apwal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	apwal
 PORTVERSION=	0.4.5
