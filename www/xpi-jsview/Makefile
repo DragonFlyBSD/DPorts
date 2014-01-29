@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-jsview/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-jsview/Makefile 341210 2014-01-26 15:11:22Z miwi $
 
 PORTNAME=	jsview
 PORTVERSION=	2.0.8
@@ -19,7 +19,6 @@ XPI_NUM=	2076
 XPI_FILES=	chrome/jsview.jar chrome.manifest defaults/preferences/jsview.js install.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|<em:maxVersion>9\.0a1<|<em:maxVersion>99.*<|' ${WRKSRC}/install.rdf
 
