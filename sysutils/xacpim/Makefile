@@ -1,5 +1,5 @@
 # Created by: henriknj@0xmilk.org
-# $FreeBSD: sysutils/xacpim/Makefile 337783 2013-12-27 19:15:57Z bapt $
+# $FreeBSD: sysutils/xacpim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xacpim
 PORTVERSION=	0.1.1
