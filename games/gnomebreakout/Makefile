@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/gnomebreakout/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD: games/gnomebreakout/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnomebreakout
 PORTVERSION=	0.5.3
