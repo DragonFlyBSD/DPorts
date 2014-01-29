@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: science/py-scikit-learn/Makefile 332841 2013-11-05 12:37:28Z demon $
+# $FreeBSD: science/py-scikit-learn/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scikit-learn
 PORTVERSION=	0.14.1
