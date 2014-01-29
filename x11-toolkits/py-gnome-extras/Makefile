@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome-extras/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-gnome-extras/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.55 2009/11/28 05:59:04 mezz Exp $
 
 PORTNAME=	gnome-extras
