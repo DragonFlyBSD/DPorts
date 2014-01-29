@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: shells/flash/Makefile 338641 2014-01-04 11:39:08Z antoine $
+# $FreeBSD: shells/flash/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	flash
 PORTVERSION=	0.9.5
