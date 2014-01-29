@@ -1,5 +1,5 @@
 # Created by: jonny
-# $FreeBSD: x11/xtoolwait/Makefile 331553 2013-10-25 04:10:31Z eadler $
+# $FreeBSD: x11/xtoolwait/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtoolwait
 PORTVERSION=	1.3
