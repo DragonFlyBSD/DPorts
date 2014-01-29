@@ -1,5 +1,5 @@
 # Created by: Matthew West <mwest@uct.ac.za>
-# $FreeBSD: x11/xmotd/Makefile 336388 2013-12-13 23:33:05Z bapt $
+# $FreeBSD: x11/xmotd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmotd
 DISTVERSION=	1.17.3b
