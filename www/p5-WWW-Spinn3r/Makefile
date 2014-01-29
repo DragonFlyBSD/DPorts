@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD: www/p5-WWW-Spinn3r/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	WWW-Spinn3r
 PORTVERSION=	3.00700001
