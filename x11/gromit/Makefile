@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: x11/gromit/Makefile 338762 2014-01-05 13:05:48Z antoine $
+# $FreeBSD: x11/gromit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gromit
 PORTVERSION=	20041213
