@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: net-mgmt/airport/files/airport.sh.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: net-mgmt/airport/files/airport.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 case $0 in
 	*airport)
