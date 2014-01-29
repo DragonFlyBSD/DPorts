@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: net-im/pebrot/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/pebrot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pebrot
 PORTVERSION=	0.8.9
