@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 338778 2014-01-05 14:02:22Z az $
+# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 339464 2014-01-12 01:49:19Z kuriyama $
 
 PORTNAME=	jQuery-File-Upload
-PORTVERSION=	0.16
+PORTVERSION=	0.20
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
