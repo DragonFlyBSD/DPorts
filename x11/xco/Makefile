@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA
-# $FreeBSD: x11/xco/Makefile 336396 2013-12-13 23:50:03Z bapt $
+# $FreeBSD: x11/xco/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xco
 PORTVERSION=	1.3
