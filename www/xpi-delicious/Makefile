@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-delicious/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-delicious/Makefile 341200 2014-01-26 15:07:51Z miwi $
 
 PORTNAME=	delicious
 PORTVERSION=	1.3
@@ -14,6 +14,5 @@ XPI_ID=		{3c2f3d50-ec4f-11d8-9669-0800200c9a66}
 XPI_FILES=	chrome/delicious.jar defaults/preferences/delicious.js install.rdf chrome.manifest
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
