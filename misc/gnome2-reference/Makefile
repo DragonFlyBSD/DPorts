@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: misc/gnome2-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
+# $FreeBSD: misc/gnome2-reference/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/misc/gnome2-reference/Makefile,v 1.9 2008/08/23 18:22:59 mezz Exp $
 
 PORTNAME=	gnome2-reference
