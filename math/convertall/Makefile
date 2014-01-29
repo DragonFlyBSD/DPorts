@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: math/convertall/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/convertall/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	convertall
 PORTVERSION=	0.5.2
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/PyQt4/QtGui.so:${PORTSDIR}/x11-toolkits/py-qt4
 
 WRKSRC=		${WRKDIR}/ConvertAll
 
-USE_PYTHON=	2.4+
+USE_PYTHON=	yes
 
 DESKTOP_ENTRIES="ConvertAll" "Unit converter" "${DATADIR}/icons/${PORTNAME}.svg" \
 		"${PORTNAME}" "Utility;Calculator;" true
