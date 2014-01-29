@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/srecite/Makefile 338189 2013-12-30 22:37:50Z antoine $
+# $FreeBSD: chinese/srecite/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	srecite
 PORTVERSION=	0.6.2
