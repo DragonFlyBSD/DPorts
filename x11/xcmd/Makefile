@@ -1,5 +1,5 @@
 # Created by: Oliver Breuninger <ob@breuninger.org>
-# $FreeBSD: x11/xcmd/Makefile 336397 2013-12-13 23:51:18Z bapt $
+# $FreeBSD: x11/xcmd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcmd
 PORTVERSION=	1.8
