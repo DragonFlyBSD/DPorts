@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: mail/roundcube-mvision2/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/roundcube-mvision2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mvision2
 PORTVERSION=	2
