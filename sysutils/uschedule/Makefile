@@ -1,5 +1,5 @@
 # Created by: Thomas Seck <tmseck@netcologne.de>
-# $FreeBSD: sysutils/uschedule/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/uschedule/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	uschedule
 PORTVERSION=	0.7.1
