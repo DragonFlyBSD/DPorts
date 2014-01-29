@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: sysutils/socklog/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/socklog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	socklog
 PORTVERSION=	2.1.0
