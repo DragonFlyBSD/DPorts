@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/diary-hercules/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: misc/diary-hercules/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	hercules
 PORTVERSION=	0.1.1
@@ -18,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlobject>=0.7:${PORTSDIR}/databases/py-sqlo
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:${PORTSDIR}/databases/py-sqlite3
 
 USES=		gettext
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 USE_WX=		2.6+
 WX_UNICODE=	yes
