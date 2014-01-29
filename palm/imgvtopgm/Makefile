@@ -1,5 +1,5 @@
 # Created by: sumikawa@ebina.hitachi.co.jp
-# $FreeBSD: palm/imgvtopgm/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD: palm/imgvtopgm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imgvtopgm
 PORTVERSION=	2.0
