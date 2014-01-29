@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: sysutils/vmdktool/Makefile 337792 2013-12-27 19:29:30Z bapt $
+# $FreeBSD: sysutils/vmdktool/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vmdktool
 PORTVERSION=	1.3
