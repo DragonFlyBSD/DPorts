@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Plucene-Plugin-Analyzer-SnowballAnalyzer/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Plucene-Plugin-Analyzer-SnowballAnalyzer/Makefile 340668 2014-01-21 22:29:50Z mat $
 
 PORTNAME=	Plucene-Plugin-Analyzer-SnowballAnalyzer
 PORTVERSION=	1.1
@@ -20,8 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Plucene::Plugin::Analyzer::SnowballAnalyzer.3 \
-	Plucene::Plugin::Analyzer::SnowballFilter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
