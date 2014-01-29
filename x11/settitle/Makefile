@@ -1,5 +1,5 @@
 # Created by: Andrew Stevenson <andrew@ugh.net.au>
-# $FreeBSD: x11/settitle/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/settitle/Makefile 339339 2014-01-10 09:32:14Z vanilla $
 
 PORTNAME=	settitle
 PORTVERSION=	1.1.1
@@ -11,9 +11,6 @@ COMMENT=	Program for setting the title of terminal emulator windows
 
 WRKSRC=		${WRKDIR}/settitle
 
-MAN1=		settitle.1
-MANCOMPRESSED=	maybe
-PLIST_FILES=	bin/settitle
+PLIST_FILES=	bin/settitle man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
