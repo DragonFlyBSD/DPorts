@@ -1,8 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: net/py-urllib3/Makefile 328571 2013-09-28 14:46:25Z olivierd $
+# $FreeBSD: net/py-urllib3/Makefile 340894 2014-01-24 13:34:31Z olivierd $
 
 PORTNAME=	urllib3
 PORTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +14,9 @@ COMMENT=	Enhance HTTP Python's standard library
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 PYTHON_PY3K_PLIST_HACK=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # ndg_httpclient is only available for Python 2
@@ -27,7 +27,6 @@ PLIST_SUB+=	SSL=""
 PLIST_SUB+=	SSL="@comment "
 .endif
 
-# distutils module can't exclude file (during install step)
 post-extract:
 .if ${PYTHON_REL} >= 300
 	@${RM} ${WRKSRC}/urllib3/contrib/pyopenssl.py
