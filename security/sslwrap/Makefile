@@ -1,5 +1,5 @@
 # Created by: Zahemszky, Gabor <ZGabor at CoDe dot HU>
-# $FreeBSD: security/sslwrap/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/sslwrap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sslwrap
 PORTVERSION=	2.0.6
