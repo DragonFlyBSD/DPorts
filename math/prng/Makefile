@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: math/prng/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/prng/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	prng
 DISTVERSION=	3.0.2
