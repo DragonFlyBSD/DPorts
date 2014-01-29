@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Markapl/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Markapl/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	Markapl
 PORTVERSION=	0.14
@@ -23,9 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Markapl.3 \
-	Markapl::Helpers.3 \
-	Markapl::Tags.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
