@@ -1,5 +1,5 @@
 # Created by: Josh Elsasser <jre@vineyard.net>
-# $FreeBSD: net-p2p/gtkhx/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/gtkhx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gtkhx
 PORTVERSION=	0.9.4
