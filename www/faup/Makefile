@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: www/faup/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: www/faup/Makefile 339804 2014-01-15 18:59:01Z antoine $
 
 PORTNAME=	faup
 PORTVERSION=	1.4
@@ -15,20 +15,21 @@ LICENSE_NAME=	Do What The [expletive] You Want To Public License, Version 2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES=		cmake:outsource
+USES=		cmake:outsource lua
 USE_LDCONFIG=	yes
-USE_LUA=	5.1
 
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
+post-patch:
+	@${REINPLACE_CMD} -e "s/5.1/${LUA_VER}/g" -e \
+		"s/51/${LUA_VER_STR}/g" ${WRKSRC}/cmake/FindLua51.cmake
+	@${REINPLACE_CMD} -e "s/LUA51_FOUND/LUA${LUA_VER_STR}_FOUND/g" \
+		${WRKSRC}/CMakeLists.txt ${WRKSRC}/src/lib/CMakeLists.txt
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
