@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-mgmt/nagstamon/Makefile 333694 2013-11-13 14:42:29Z ehaupt $
+# $FreeBSD: net-mgmt/nagstamon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nagstamon
 PORTVERSION=	0.9.9
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 USE_GNOME=	pygtk2 librsvg2
 
