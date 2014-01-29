@@ -1,5 +1,5 @@
 # Created by: swhetzel@gmail.com
-# $FreeBSD: sysutils/b43-fwcutter/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/b43-fwcutter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	b43-fwcutter
 PORTVERSION=	015
