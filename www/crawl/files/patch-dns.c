@@ -1,4 +1,4 @@
-$FreeBSD: www/crawl/files/patch-dns.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: www/crawl/files/patch-dns.c 340725 2014-01-22 17:40:44Z mat $
 
 --- dns.c.orig	Sun May 18 10:21:33 2003
 +++ dns.c	Mon May 30 16:20:14 2005
