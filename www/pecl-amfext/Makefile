@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki <meritus@innervision.pl>
-# $FreeBSD: www/pecl-amfext/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pecl-amfext/Makefile 340828 2014-01-23 14:32:34Z miwi $
 
 PORTNAME=	amfext
 PORTVERSION=	0.9.2
@@ -21,5 +21,4 @@ IGNORE_WITH_PHP=5
 CONFIGURE_ARGS=	--enable-amf
 CPPFLAGS+=	-I${LOCALBASE}/include/php/ext/standard
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
