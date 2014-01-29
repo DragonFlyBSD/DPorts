@@ -1,5 +1,5 @@
 # Created by: Derek Kulinski <takeda@takeda.tk>
-# $FreeBSD: net-im/jabber-pyaim/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/jabber-pyaim/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pyaim
 PORTVERSION=	0.8a
