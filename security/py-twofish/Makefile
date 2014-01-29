@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-twofish/Makefile 338085 2013-12-30 11:12:10Z wg $
+# $FreeBSD: security/py-twofish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	twofish
 PORTVERSION=	0.7
