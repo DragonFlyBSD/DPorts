@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-HtmlEasy/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Pod-HtmlEasy/Makefile 340668 2014-01-21 22:29:50Z mat $
 
 PORTNAME=	Pod-HtmlEasy
 PORTVERSION=	1.0108
@@ -23,8 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pod2indexed_html.pl.1
-MAN3=		Pod::HtmlEasy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
