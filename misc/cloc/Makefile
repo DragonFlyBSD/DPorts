@@ -1,8 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/cloc/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/cloc/Makefile 339746 2014-01-15 04:17:30Z miwi $
 
 PORTNAME=	cloc
-PORTVERSION=	1.58
+PORTVERSION=	1.60
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/v${PORTVERSION}
 EXTRACT_SUFX=	.pl
