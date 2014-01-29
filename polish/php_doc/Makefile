@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: polish/php_doc/Makefile 327761 2013-09-20 22:34:42Z bapt $
+# $FreeBSD: polish/php_doc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 CATEGORIES=	polish lang
 PKGNAMEPREFIX=
