@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: shells/pear-PHP_Shell/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: shells/pear-PHP_Shell/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PHP_Shell
 PORTVERSION=	0.3.2
