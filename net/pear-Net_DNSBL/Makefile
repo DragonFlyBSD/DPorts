@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: net/pear-Net_DNSBL/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: net/pear-Net_DNSBL/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Net_DNSBL
 PORTVERSION=	1.3.7
