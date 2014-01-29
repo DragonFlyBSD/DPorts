@@ -1,2 +1,1 @@
-@comment $FreeBSD: deskutils/tomboy-plugin-latex/pkg-plist 300896 2012-07-14 13:54:48Z beat $
 lib/tomboy/addins/Latex.dll
