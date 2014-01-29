@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: x11/wmcliphist/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/wmcliphist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmcliphist
 PORTVERSION=	1.0
@@ -12,22 +12,19 @@ MASTER_SITE_SUBDIR=	uqs
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Clipboard history management dockapp for Window Maker
 
+SUB_FILES=	pkg-message
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		pkgconfig
 USE_XORG=	xpm
 USE_GNOME=	gtk20
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	@${MKDIR} ${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/wmcliphistrc ${EXAMPLESDIR}
+	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/wmcliphistrc ${STAGEDIR}${EXAMPLESDIR}
 .ifndef(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif #NOPORTDOCS
-
-post-install:
-	@${SED} 's|%%EXAMPLESDIR%%|${EXAMPLESDIR}|' ${PKGMESSAGE}
 
 .include <bsd.port.mk>
