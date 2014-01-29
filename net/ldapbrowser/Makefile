@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/ldapbrowser/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/ldapbrowser/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ldapbrowser
 PORTVERSION=	2.8.2
