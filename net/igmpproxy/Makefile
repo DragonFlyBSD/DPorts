@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: net/igmpproxy/Makefile 339066 2014-01-08 01:23:03Z garga $
+# $FreeBSD: net/igmpproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	igmpproxy
 PORTVERSION=	0.1
