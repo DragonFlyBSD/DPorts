@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: x11/libsynaptics/Makefile 337800 2013-12-27 20:31:13Z antoine $
+# $FreeBSD: x11/libsynaptics/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsynaptics
 PORTVERSION=	0.14.6b
