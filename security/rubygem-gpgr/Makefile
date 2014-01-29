@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: security/rubygem-gpgr/Makefile 337612 2013-12-26 20:04:56Z swills $
+# $FreeBSD: security/rubygem-gpgr/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	gpgr
 PORTVERSION=	0.0.4
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
