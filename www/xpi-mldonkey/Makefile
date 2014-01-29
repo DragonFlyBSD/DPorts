@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-mldonkey/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-mldonkey/Makefile 341211 2014-01-26 15:11:55Z miwi $
 
 PORTNAME=	mldonkey
 PORTVERSION=	2.5
@@ -15,6 +15,5 @@ XPI_FILES=	chrome/mldonkey.jar components/ed2kprotocol.js defaults/preferences/d
 		install.rdf chrome.manifest
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
