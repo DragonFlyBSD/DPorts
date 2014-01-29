@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: sysutils/sensors-applet/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/sensors-applet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sensors-applet
 PORTVERSION=	1.6.1
