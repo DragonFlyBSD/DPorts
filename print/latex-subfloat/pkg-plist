@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/latex-subfloat/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%%%DOCSDIR%%/ChangeLog
 %%PORTDOCS%%%%DOCSDIR%%/subfloat.dvi
