@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: x11-themes/gtk-qnxtheme/Makefile 338926 2014-01-06 19:31:43Z antoine $
+# $FreeBSD: x11-themes/gtk-qnxtheme/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gtk-qnxtheme
 PORTVERSION=	0.1
