@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kamera-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/kamera-kde4/Makefile 340385 2014-01-20 12:37:32Z kwm $
 
 PORTNAME=	kamera
 PORTVERSION=	${KDE4_VERSION}
@@ -12,7 +12,7 @@ COMMENT=	Digital camera manager for KDE 4
 
 LATEST_LINK=	${PORTNAME}-kde4
 
-LIB_DEPENDS=	gphoto2.2:${PORTSDIR}/graphics/libgphoto2
+LIB_DEPENDS=	libgphoto2.so:${PORTSDIR}/graphics/libgphoto2
 
 CONFLICTS=	kdegraphics-4.[0-6].*
 
