@@ -1,5 +1,5 @@
 # Created by: Dominik Rothert <dr@domix.de>
-# $FreeBSD: x11/xtermset/Makefile 330191 2013-10-12 22:36:22Z eadler $
+# $FreeBSD: x11/xtermset/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtermset
 PORTVERSION=	0.5.2
