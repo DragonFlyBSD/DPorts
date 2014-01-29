@@ -1,5 +1,5 @@
 
-$FreeBSD: www/xpi-conkeror/files/patch-conkeror 335489 2013-12-02 14:02:20Z ashish $
+$FreeBSD: www/xpi-conkeror/files/patch-conkeror 340725 2014-01-22 17:40:44Z mat $
 
 --- conkeror.orig
 +++ conkeror
