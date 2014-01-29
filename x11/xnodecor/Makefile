@@ -1,5 +1,5 @@
 # Created by: Katsura Matsumoto <katsura@cc.okayama-u.ac.jp>
-# $FreeBSD: x11/xnodecor/Makefile 333051 2013-11-07 02:04:11Z danilo $
+# $FreeBSD: x11/xnodecor/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xnodecor
 PORTVERSION=	0.1

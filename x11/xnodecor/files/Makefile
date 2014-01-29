@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xnodecor/files/Makefile 333051 2013-11-07 02:04:11Z danilo $
+# $FreeBSD: x11/xnodecor/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 CFLAGS=		-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 LIBS=		-lX11
