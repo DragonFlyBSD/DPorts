@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: www/phpscheduleit/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/phpscheduleit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	phpscheduleit
 PORTVERSION=	1.2.12
