@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/gnomeattacks/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD: games/gnomeattacks/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gnomeattacks
 PORTVERSION=	0.3
