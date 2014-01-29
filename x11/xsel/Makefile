@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xsel/Makefile 331823 2013-10-28 01:33:51Z eadler $
+# $FreeBSD: x11/xsel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xsel
 PORTVERSION=	0.04.1
