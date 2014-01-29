@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: sysutils/gkrellfire/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/gkrellfire/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellfire
 PORTVERSION=	0.4.2
