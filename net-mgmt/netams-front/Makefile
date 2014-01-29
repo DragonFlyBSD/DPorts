@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: net-mgmt/netams-front/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/netams-front/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	netams-front
 PORTVERSION=	0.4
