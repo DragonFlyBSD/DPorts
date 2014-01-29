@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: net-p2p/tribler/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: net-p2p/tribler/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	tribler
 PORTVERSION=	6.0.3
@@ -29,7 +29,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 
 WRKSRC=		${WRKDIR}/${APSW_DISTNAME}
 
-USE_PYTHON=	2.5-2.7
+USE_PYTHON=	2
 USE_WX=		2.8+
 WX_COMPS=	python
 WX_UNICODE=	yes
