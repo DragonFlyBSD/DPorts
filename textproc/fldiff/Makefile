@@ -1,12 +1,11 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/fldiff/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
+# $FreeBSD: textproc/fldiff/Makefile 340749 2014-01-22 23:37:53Z mandree $
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
 PORTREVISION=	8
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.easysw.com/~mike/fldiff/ \
-		CRITICAL
+MASTER_SITES=	CRITICAL
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	ehaupt@FreeBSD.org
