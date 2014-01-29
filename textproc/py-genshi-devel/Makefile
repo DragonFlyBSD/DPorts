@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: textproc/py-genshi-devel/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-genshi-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Genshi
 PORTVERSION=	0.6.1052
@@ -12,7 +12,7 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	alexey@renatasystems.org
 COMMENT=	Python toolkit for stream-based generation of output for the web
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
 WRKSRC=		${WRKDIR}/genshi
