@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: x11-themes/xmms-eq-skins/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/xmms-eq-skins/Makefile 341376 2014-01-27 11:38:19Z miwi $
 
 PORTNAME=	xmms-eq-skins
 PORTVERSION=	0.2
@@ -20,9 +20,8 @@ NO_BUILD=	yes
 SKINSDIR=	${PREFIX}/lib/xmms/EQskins
 PLIST_SUB=	SKINSDIR="${SKINSDIR:S,^${PREFIX}/,,}"
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${SKINSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.tgz ${SKINSDIR}
+	${MKDIR} ${STAGEDIR}${SKINSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.tgz ${STAGEDIR}${SKINSDIR}
 
 .include <bsd.port.mk>
