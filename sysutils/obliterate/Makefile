@@ -1,5 +1,5 @@
 # Created by: Wes Peters <wes@FreeBSD.org>
-# $FreeBSD: sysutils/obliterate/Makefile 333883 2013-11-15 16:08:13Z vanilla $
+# $FreeBSD: sysutils/obliterate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	obliterate
 PORTVERSION=	0.5
