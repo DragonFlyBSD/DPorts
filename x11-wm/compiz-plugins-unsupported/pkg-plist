@@ -1,4 +1,3 @@
-@comment $FreeBSD: x11-wm/compiz-plugins-unsupported/pkg-plist 321268 2013-06-19 14:51:24Z miwi $
 include/compiz/compiz-elements.h
 lib/compiz/libatlantis.so
 lib/compiz/libatlantis.la
