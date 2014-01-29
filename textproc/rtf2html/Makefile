@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/rtf2html/Makefile 331328 2013-10-22 21:51:59Z ehaupt $
+# $FreeBSD: textproc/rtf2html/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rtf2html
 DISTVERSION=	1.1b
