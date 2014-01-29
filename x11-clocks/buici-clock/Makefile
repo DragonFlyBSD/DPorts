@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hscholz@raisdorf.net>
-# $FreeBSD: x11-clocks/buici-clock/Makefile 338009 2013-12-29 15:22:28Z antoine $
+# $FreeBSD: x11-clocks/buici-clock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	buici-clock
 PORTVERSION=	0.4.9.2
