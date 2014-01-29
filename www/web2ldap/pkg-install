@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/web2ldap/pkg-install 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: www/web2ldap/pkg-install 340719 2014-01-22 15:52:06Z mat $
 #
 
 PREFIX=${PKG_PREFIX:-/usr/local}

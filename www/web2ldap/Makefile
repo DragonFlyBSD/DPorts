@@ -1,11 +1,12 @@
 # Created by: Oddbjorn Steffensen <oddbjorn@tricknology.org>
-# $FreeBSD: www/web2ldap/Makefile 331865 2013-10-28 15:46:59Z bsam $
+# $FreeBSD: www/web2ldap/Makefile 340884 2014-01-24 09:29:00Z bsam $
 
 PORTNAME=	web2ldap
 PORTVERSION=	1.1.47
 CATEGORIES=	www
 MASTER_SITES=	http://www.web2ldap.de/download/ \
-		http://www.sfr-fresh.com/unix/www/
+		http://www.sfr-fresh.com/unix/www/ \
+		LOCAL/bsam
 
 MAINTAINER=	bsam@FreeBSD.org
 COMMENT=	Python-based WWW gateway to LDAP servers
