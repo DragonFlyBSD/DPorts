@@ -1,0 +1,24 @@
+# Created by: Steve Wills <steve@mouf.net>
+# $FreeBSD: print/gnome-specimen/Makefile 339926 2014-01-16 16:02:10Z swills $
+
+PORTNAME=	gnome-specimen
+PORTVERSION=	0.4
+PORTREVISION=	3
+CATEGORIES=	print
+MASTER_SITES=	http://uwstopia.nl/geek/projects/gnome-specimen/releases/
+
+MAINTAINER=	swills@FreeBSD.org
+COMMENT=	Gnome Specimen is a simple tool to preview and compare installed fonts
+
+GNU_CONFIGURE=	yes
+USE_GNOME=	pygnomedesktop
+GCONF_SCHEMAS=	gnome-specimen.schemas
+USE_PYTHON=	yes
+USES=		gettext gmake
+USE_AUTOTOOLS=	automake:env
+INSTALLS_ICONS=	yes
+
+post-configure:
+	@${INSTALL_SCRIPT} ${AUTOMAKE_DIR}/py-compile ${WRKSRC}
+
+.include <bsd.port.mk>
