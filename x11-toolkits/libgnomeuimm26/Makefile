@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@mail.ru>
-# $FreeBSD: x11-toolkits/libgnomeuimm26/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/libgnomeuimm26/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/x11-toolkits/libgnomeuimm26/Makefile,v 1.20 2009/09/22 21:23:48 kwm Exp $
 
 PORTNAME=	libgnomeuimm
