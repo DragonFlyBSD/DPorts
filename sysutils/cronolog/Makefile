@@ -1,5 +1,5 @@
 # Created by: Mark Blackman <tmb_ports@maddog.u-net.com>
-# $FreeBSD: sysutils/cronolog/Makefile 330952 2013-10-20 00:40:34Z bdrewery $
+# $FreeBSD: sysutils/cronolog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cronolog
 PORTVERSION=	1.6.2
