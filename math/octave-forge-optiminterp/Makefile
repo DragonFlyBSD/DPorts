@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-optiminterp/Makefile 335093 2013-11-28 14:36:21Z stephen $
+# $FreeBSD: math/octave-forge-optiminterp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	octave-forge-optiminterp
 PORTVERSION=	0.3.4
@@ -9,6 +9,8 @@ CATEGORIES=	math
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
+LICENSE=	GPLv3
+
 MAKE_JOBS_UNSAFE=	yes
 
 # OCTSRC is the name of the directory of the package.
@@ -17,7 +19,6 @@ OCTSRC=		${OCTAVE_PKGNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 MAKE_ENV+=	MKOCTFILE_FORTRAN_90=yes MKOCTFILE=mkoctfile
