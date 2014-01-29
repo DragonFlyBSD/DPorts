@@ -1,5 +1,5 @@
 # Created by: silence <oksala@videotron.ca>
-# $FreeBSD: www/cherokee/Makefile 339271 2014-01-09 19:53:48Z rakuco $
+# $FreeBSD: www/cherokee/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	cherokee
 PORTVERSION=	1.2.101
@@ -58,7 +58,7 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MADMIN}
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 PLIST_SUB+=	ADMIN=""
 .else
 CONFIGURE_ARGS+=--disable-admin
