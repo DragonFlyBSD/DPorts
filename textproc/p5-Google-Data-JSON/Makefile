@@ -1,8 +1,9 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-Google-Data-JSON/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: textproc/p5-Google-Data-JSON/Makefile 341158 2014-01-26 09:24:41Z antoine $
 
 PORTNAME=	Google-Data-JSON
 PORTVERSION=	0.1.10
+PORTREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TAKERU
