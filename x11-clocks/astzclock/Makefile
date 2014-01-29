@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: x11-clocks/astzclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/astzclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	astzclock
 PORTVERSION=	1.0
@@ -12,10 +12,8 @@ COMMENT=	Afterstep clock with some timezone extensions
 
 USES=		imake
 USE_XORG=	xpm
-MAN1=		astzclock.1
-PLIST_FILES=	bin/astzclock
+PLIST_FILES=	bin/astzclock man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 pre-configure:
 	(cd ${WRKSRC}; \
 	${ECHO_CMD} ${ASCLOCK_LANG} | ${WRKSRC}/configure > /dev/null)
