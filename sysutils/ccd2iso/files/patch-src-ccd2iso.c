@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/ccd2iso/files/patch-src-ccd2iso.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: sysutils/ccd2iso/files/patch-src-ccd2iso.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/ccd2iso.c.orig	Thu Nov 13 06:43:41 2003
 +++ src/ccd2iso.c	Thu Jun 24 15:31:04 2004

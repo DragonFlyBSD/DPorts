@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: sysutils/ccd2iso/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/ccd2iso/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ccd2iso
 PORTVERSION=	0.9
