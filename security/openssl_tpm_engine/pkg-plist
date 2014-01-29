@@ -1,4 +1,3 @@
-@comment $FreeBSD: security/openssl_tpm_engine/pkg-plist 323649 2013-07-25 15:30:11Z hrs $
 bin/create_tpm_key
 lib/openssl/engines/libtpm.a
 lib/openssl/engines/libtpm.la
