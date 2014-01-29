@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: x11-fm/mucommander/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD: x11-fm/mucommander/Makefile 341015 2014-01-25 12:40:42Z lme $
 
 PORTNAME=	mucommander
 PORTVERSION=	0.9.0
@@ -9,6 +9,8 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/./_/g}
 
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	Lightweight file manager featuring a Norton Commander style interface
+
+LICENSE=	GPLv3
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -22,17 +24,12 @@ PORTDOCS=	readme.txt
 
 WRKSRC=		${WRKDIR}/muCommander-${PORTVERSION:S/./_/g}
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/mucommander.jar ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/license.txt ${DATADIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/mucommander ${PREFIX}/bin
-
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/mucommander.jar ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/license.txt ${STAGEDIR}${DATADIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/mucommander ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
