@@ -1,5 +1,5 @@
 # Created by: Marcelo/Porks Rossi <marcelorossi@gmail.com>
-# $FreeBSD: www/monast/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/monast/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	monast
 PORTVERSION=	1.4
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/monast/MonAst%20for%20Asterisk%201.4_1.6/1.4
 MAINTAINER=	marcelorossi@gmail.com
 COMMENT=	A monitoring and an operator panel interface for AsteriskTM
 
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_RC_SUBR=	monast
 
 NO_BUILD=	YES
