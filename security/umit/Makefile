@@ -1,5 +1,5 @@
 # Created by: Elisey Savateev <b3k@mail.ru>
-# $FreeBSD: security/umit/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD: security/umit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	umit
 PORTVERSION=	1.0
