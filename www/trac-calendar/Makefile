@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-calendar/Makefile 337571 2013-12-26 17:37:22Z wg $
+# $FreeBSD: www/trac-calendar/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	calendar
 PORTVERSION=	0.1
