@@ -1,3 +1,2 @@
-@comment $FreeBSD: www/mod_mono/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%MOD_MONOCONFDIR%%/mod_mono.conf
 %%APACHEMODDIR%%/%%AP_MODULE%%
