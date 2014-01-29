@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: www/kplaylist/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/kplaylist/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	kplaylist
 PORTVERSION=	1.8.505
