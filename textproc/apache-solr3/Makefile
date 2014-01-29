@@ -1,13 +1,13 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/apache-solr3/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: textproc/apache-solr3/Makefile 341120 2014-01-25 22:03:15Z mat $
 
 PORTNAME=	apache-solr
 PORTVERSION=	3.6.2
 CATEGORIES=	textproc java
 MASTER_SITES=	APACHE
 MASTER_SITE_SUBDIR=	lucene/solr/${PORTVERSION}/
-EXTRACT_SUFX=	.tgz
 PKGNAMESUFFIX=	3
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	High performance search server built using Lucene Java
@@ -22,12 +22,9 @@ PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 USE_JAVA=	yes
 PORTEXAMPLES=	*
 
-NO_STAGE=	yes
 do-install:
-	cd ${WRKSRC}/dist && ${COPYTREE_SHARE} \* ${JAVAJARDIR}
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-	cd ${WRKSRC}/example && ${COPYTREE_SHARE} \* ${EXAMPLESDIR}
-.endif
+	cd ${WRKSRC}/dist && ${COPYTREE_SHARE} . ${STAGEDIR}${JAVAJARDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
