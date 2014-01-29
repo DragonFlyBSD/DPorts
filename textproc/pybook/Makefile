@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/pybook/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pybook/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pybook
 PORTVERSION=	0.8c
