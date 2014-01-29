@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: textproc/py-libtre/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-libtre/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
