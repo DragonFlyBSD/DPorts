@@ -1,5 +1,5 @@
 # Created by: bz
-# $FreeBSD: security/clamav-milter/Makefile 331427 2013-10-23 21:03:11Z garga $
+# $FreeBSD: security/clamav-milter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PKGNAMESUFFIX=	-milter
 
