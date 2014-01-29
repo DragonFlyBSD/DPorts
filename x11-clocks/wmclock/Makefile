@@ -1,5 +1,5 @@
 # Created by: Per Otterstr=F6m <pelle@fukt.bth.se>
-# $FreeBSD: x11-clocks/wmclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/wmclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
 
 PORTNAME=	wmclock
 PORTVERSION=	1.0.14
@@ -13,11 +13,9 @@ COMMENT=	Dockable clock applet for Window Maker
 
 USES=		imake
 USE_XORG=	xpm
-MAN1=		wmclock.1
-PLIST_FILES=	bin/wmclock
+PLIST_FILES=	bin/wmclock man/man1/${PORTNAME}.1.gz
 WMCLOCK_LANG?=	english
 
-NO_STAGE=	yes
 pre-configure:
 	(cd ${WRKSRC}; \
 	${WRKSRC}/configure --lang ${WMCLOCK_LANG} > /dev/null )
