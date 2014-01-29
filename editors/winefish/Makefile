@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/winefish/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD: editors/winefish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	winefish
 DISTVERSION=	1.3.3
