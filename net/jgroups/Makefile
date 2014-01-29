@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: net/jgroups/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/jgroups/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jgroups
 PORTVERSION=	2.12.0
