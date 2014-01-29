@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: sysutils/battray/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/battray/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	battray
 PORTVERSION=	1.5
