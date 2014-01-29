@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: news/trn4/Makefile 329591 2013-10-06 15:22:10Z johans $
+# $FreeBSD: news/trn4/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	trn
 PORTVERSION=	4.0.b77
@@ -13,13 +13,13 @@ COMMENT=	Version 4.0 of the threaded readnews newsreader
 
 CONFLICTS_INSTALL=trn-3.[0-9]* cnews-* s-news-[0-9]*
 
-MAN1=		trn.1 Pnews.1 Rnmail.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's/pipe[12]/z&/g' ${WRKSRC}/filter.c
+	${REINPLACE_CMD} -e 's/pipe[12]/z&/g' ${WRKSRC}/filter.c
+	${REINPLACE_CMD} -e 's|^dir=|&$${DESTDIR}|' ${WRKSRC}/myinstall.SH
+	${REINPLACE_CMD} -e 's|./makedir |&$${DESTDIR}|' \
+		-e 's|dest=|&$${DESTDIR}|' ${WRKSRC}/Makefile.SH
 
 pre-configure:
 	@${ECHO_MSG} "===>  Running pre-configure target for ${DISTNAME}"
