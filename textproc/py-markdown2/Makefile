@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/py-markdown2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-markdown2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	markdown2
 PORTVERSION=	2.1.0
@@ -11,7 +11,7 @@ MAINTAINER=	wen@FreeBSD.org
 COMMENT=	A fast and complete Python implementation of Markdown
 
 USE_ZIP=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
