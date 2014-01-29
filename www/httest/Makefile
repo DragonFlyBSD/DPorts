@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/httest/Makefile 339326 2014-01-10 08:33:27Z bapt $
 
 PORTNAME=	httest
 PORTVERSION=	2.4.9
@@ -24,24 +24,18 @@ CONFIGURE_ARGS=	--enable-lua-module \
 		--with-ssl="${OPENSSLLIB}"
 CPPFLAGS+=	-I${LUA_INCDIR}
 GNU_CONFIGURE=	yes
-USES=		iconv
-USE_LUA=	yes
+USES=		iconv lua
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
-MAN1=		htntlm.1 htproxy.1 htremote.1 httest.1
 PORTEXAMPLES=	*
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|`$$APR_CONFIG --cflags`||' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|`$$APR_CONFIG --cflags`||; s|-llua|-llua-${LUA_VER}|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|' ${WRKSRC}/generate_modules_c.sh
 
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/*.htt ${STAGEDIR}${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>
