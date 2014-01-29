@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/scss/Makefile 330680 2013-10-17 21:46:25Z cs $
+# $FreeBSD: textproc/scss/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scss
 PORTVERSION=	0.4.2
