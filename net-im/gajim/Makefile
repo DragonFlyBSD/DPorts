@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: net-im/gajim/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/gajim/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gajim
 PORTVERSION=	0.15.4
@@ -21,7 +21,7 @@ USES=		gmake pathfix
 USE_BZIP2=	yes
 USE_DOS2UNIX=	src/plugins/plugins_i18n.py
 USE_GNOME=	pygtk2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_XORG=	x11 xext xscrnsaver
 MAN1=		gajim.1 gajim-remote.1 gajim-history-manager.1
 
