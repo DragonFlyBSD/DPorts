@@ -1,5 +1,5 @@
 # Created by: Florian Smeets <flo@smeets.im>
-# $FreeBSD: textproc/pecl-wbxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-wbxml/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	wbxml
 PORTVERSION=	1.0.3
@@ -19,5 +19,4 @@ CONFIGURE_ARGS=	--with-wbxml=${LOCALBASE} \
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
