@@ -1,5 +1,5 @@
 # Created by: Alexander Matey <matey@cis.ohio-state.edu>
-# $FreeBSD: x11/xxkb/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xxkb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xxkb
 PORTVERSION=	1.11
@@ -16,12 +16,10 @@ USES=		iconv imake
 USE_XORG=	xpm
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAN1=		${PORTNAME}.1
 PORTDOCS=	README CHANGES.ru README.ru
 
 OPTIONS_DEFINE=	LIBRSVG2 DOCS
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLIBRSVG2}
@@ -37,8 +35,8 @@ post-build:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.post.mk>
