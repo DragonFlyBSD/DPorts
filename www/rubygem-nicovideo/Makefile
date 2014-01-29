@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: www/rubygem-nicovideo/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/rubygem-nicovideo/Makefile 340905 2014-01-24 14:55:44Z miwi $
 
 PORTNAME=	nicovideo
 PORTVERSION=	0.1.8
@@ -16,5 +16,4 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
