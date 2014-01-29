@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-tags/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/trac-tags/Makefile 341187 2014-01-26 14:32:48Z miwi $
 
 PORTNAME=	tags
 DISTVERSION=	0.7.r${SVN_REV}
@@ -16,13 +16,12 @@ COMMENT=	Generic tags frontend for trac
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
 USE_BZIP2=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracTags
 PYDISTUTILS_PKGVERSION=	${PORTVERSION:C/\.r.*/dev/}
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(SVN_REV)

@@ -1,5 +1,5 @@
 
-$FreeBSD: www/trac-tags/files/patch-tractags_model.py 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: www/trac-tags/files/patch-tractags_model.py 340725 2014-01-22 17:40:44Z mat $
 
 --- tractags/model.py.orig
 +++ tractags/model.py
