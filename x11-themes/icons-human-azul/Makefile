@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icons-human-azul/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/icons-human-azul/Makefile 341394 2014-01-27 12:58:43Z miwi $
 
 PORTNAME=	icons-human-azul
 PORTVERSION=	0.1
@@ -14,9 +14,8 @@ COMMENT=	A set of icons from the Ubuntu human look
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/HumanAzul
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/share/icons/HumanAzul
-	@${CP} -rip ${WRKSRC} ${PREFIX}/share/icons/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/HumanAzul
+	@${CP} -rip ${WRKSRC} ${STAGEDIR}${PREFIX}/share/icons/
 
 .include <bsd.port.mk>
