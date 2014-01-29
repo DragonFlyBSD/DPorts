@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/py-trans/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-trans/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	trans
 PORTVERSION=	1.5.1
@@ -16,7 +16,7 @@ PLIST_FILES=	%%PYTHON_SITELIBDIR%%/trans.py \
 		%%PYTHON_SITELIBDIR%%/trans.pyo
 
 USE_BZIP2=	yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 NO_STAGE=	yes
