@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/mkxvcd/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/mkxvcd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mkxvcd
 PORTVERSION=	2.0.2
