@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/rubygem-rabbiter/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/rubygem-rabbiter/Makefile 340904 2014-01-24 14:53:03Z miwi $
 
 PORTNAME=	rabbiter
 PORTVERSION=	2.0.1
@@ -22,5 +22,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rabbiter
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
