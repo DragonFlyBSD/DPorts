@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: x11-clocks/stopwatch/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/stopwatch/Makefile 339336 2014-01-10 09:05:46Z gahr $
 
 PORTNAME=	stopwatch
 PORTVERSION=	3.5
@@ -12,17 +12,15 @@ MAINTAINER=	edwin@mavetju.org
 COMMENT=	Stopwatch enables hand timing much like a physical stopwatch
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-3.4
-USE_TK_RUN=	yes
-USE_TK_WRAPPER=	yes
+USES=		tk:run
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/stopwatch
 
-NO_STAGE=	yes
 post-patch:
-	${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE}," ${WRKSRC}/stopwatch
+	${REINPLACE_CMD} -e "s,/depot/path/wish,${WISH}," ${WRKSRC}/stopwatch
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/stopwatch ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/stopwatch ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
