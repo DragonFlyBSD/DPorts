@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: security/switzerland/Makefile 335351 2013-11-30 23:02:31Z cs $
+# $FreeBSD: security/switzerland/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	switzerland
 PORTVERSION=	0.1.0
