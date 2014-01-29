@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net-mgmt/clog/Makefile 329734 2013-10-07 20:12:48Z eadler $
+# $FreeBSD: net-mgmt/clog/Makefile 339615 2014-01-13 17:55:52Z garga $
 
 PORTNAME=	clog
 PORTVERSION=	1.6
@@ -14,11 +14,12 @@ PATCH_DEPENDS=	rcsdiff:${PORTSDIR}/devel/rcs
 
 WRKSRC=		${WRKDIR}/clog
 ALL_TARGET=	freebsd
-MAN8=		clog.8
 
-NO_STAGE=	yes
+post-patch:
+	@${REINPLACE_CMD} -e 's,gcc,$${CC},g' ${WRKSRC}/Makefile
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/clog ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/clog.8 ${PREFIX}/man/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/clog ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/clog.8 ${STAGEDIR}${PREFIX}/man/man8
 
 .include <bsd.port.mk>

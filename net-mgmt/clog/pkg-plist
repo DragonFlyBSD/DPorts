@@ -1,2 +1,2 @@
-@comment $FreeBSD: net-mgmt/clog/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 sbin/clog
+man/man8/clog.8.gz
