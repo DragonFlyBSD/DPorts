@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: print/pcal/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/pcal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pcal
 PORTVERSION=	4.11.0
