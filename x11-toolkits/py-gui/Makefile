@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: x11-toolkits/py-gui/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/py-gui/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gui
 PORTVERSION=	1.7.2
