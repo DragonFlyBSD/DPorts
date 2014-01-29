@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: misc/gkrellmlaunch2/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gkrellmlaunch2/Makefile 341060 2014-01-25 17:00:15Z miwi $
 
 PORTNAME=	gkrellmlaunch
 PORTVERSION=	0.5
@@ -11,15 +11,26 @@ PKGNAMESUFFIX=	2
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Application launcher plugin for GKrellM2
 
-BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
-RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
+LICENSE=	GPLv2 # (or later)
+
+BUILD_DEPENDS=	gkrellm2>0:${PORTSDIR}/sysutils/gkrellm2
+RUN_DEPENDS=	gkrellm2>0:${PORTSDIR}/sysutils/gkrellm2
 
 USES=		pkgconfig
-PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmlaunch.so
-ALL_TARGET=	${PORTNAME}.so
+ALL_TARGET=	gkrellmlaunch.so
 
-NO_STAGE=	yes
+PLIST_FILES=	libexec/gkrellm2/plugins/gkrellmlaunch.so
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/^FLAGS/s|-O[0-9]|| ; \
+		 /^FLAGS/s|-g|| ; \
+		 /^CC/s| =| +=| ; \
+		 /^CC/s|gcc||' ${WRKSRC}/Makefile
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/gkrellmlaunch.so ${PREFIX}/libexec/gkrellm2/plugins
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins
+	(cd ${WRKSRC} && ${INSTALL_LIB} gkrellmlaunch.so \
+		${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins)
 
 .include <bsd.port.mk>
