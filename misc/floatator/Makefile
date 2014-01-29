@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/floatator/Makefile 335984 2013-12-09 14:00:23Z danilo $
+# $FreeBSD: misc/floatator/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	floatator
 PORTVERSION=	0.2.1
