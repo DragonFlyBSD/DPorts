@@ -1,5 +1,5 @@
 # Created by: Gustavo Fukao <gustavofukao@gmail.com>
-# $FreeBSD: www/xpi-flatbmark/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-flatbmark/Makefile 341203 2014-01-26 15:09:17Z miwi $
 
 PORTNAME=	flatbmark
 DISTVERSION=	0.8.1
@@ -15,6 +15,5 @@ XPI_ID=		{5362CD9D-AC69-43e5-8E7D-92EDE5CEF304}
 XPI_FILES=	chrome/flatbmark.jar install.rdf chrome.manifest
 XPI_DIRS=	chrome
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
