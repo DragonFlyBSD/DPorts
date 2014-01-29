@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: net/mping/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/mping/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mping
 PORTVERSION=	2.01
