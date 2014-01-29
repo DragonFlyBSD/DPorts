@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mikeh@FreeBSD.org>
-# $FreeBSD: net-p2p/napshare/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD: net-p2p/napshare/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	napshare
 PORTVERSION=	1.3
