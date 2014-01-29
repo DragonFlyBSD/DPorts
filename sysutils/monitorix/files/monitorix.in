@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/monitorix/files/monitorix.in 319893 2013-06-04 18:52:55Z crees $
+# $FreeBSD: sysutils/monitorix/files/monitorix.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: monitorix
 # REQUIRE: DAEMON
