@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-colorfultabs/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-colorfultabs/Makefile 341199 2014-01-26 15:07:37Z miwi $
 
 PORTNAME=	colorfultabs
 PORTVERSION=	19.0
@@ -13,7 +13,6 @@ COMMENT=	Colors every tab in a different color
 XPI_ID=		{0545b830-f0aa-4d7e-8820-50a4629a56fe}
 XPI_NUM=	1368
 
-NO_STAGE=	yes
 xpi-post-extract:
 	@${FIND} ${WRKSRC} -name .DS_Store -delete
 
