@@ -1,5 +1,5 @@
 # Created by: Thomas Quinot <thomas@cuivre.fr.eu.org>
-# $FreeBSD: security/calife/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/calife/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	calife
 PORTVERSION=	2.8.6.5
