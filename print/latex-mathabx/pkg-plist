@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/latex-mathabx/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%CLASSDIR%%/mathabx.dcl
 %%CLASSDIR%%/mathabx.sty
 %%CLASSDIR%%/mathabx.tex
