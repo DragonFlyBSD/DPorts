@@ -1,4 +1,4 @@
-# $FreeBSD: x11/gskrab/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/gskrab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gskrab
 PORTVERSION=	0.0.1
@@ -20,5 +20,4 @@ USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
 ADDITIONAL_LIB_DIRS+=	-L${WRKSRC}/GSKrabFramework/GSKrab.framework/Versions/Current
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
