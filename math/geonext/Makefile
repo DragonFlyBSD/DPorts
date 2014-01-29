@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner (fehlner@gmx.de)
-# $FreeBSD: math/geonext/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/geonext/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	geonext
 PORTVERSION=	1.71
