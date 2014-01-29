@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: net-im/pidgin-facebookchat/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/pidgin-facebookchat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pidgin-facebookchat
 PORTVERSION=	1.69
