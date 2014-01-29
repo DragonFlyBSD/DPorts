@@ -1,5 +1,5 @@
 # Created by: candy@kgc.co.jp
-# $FreeBSD: x11-clocks/xtimer/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/xtimer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xtimer
 PORTVERSION=	0.8089
@@ -13,8 +13,6 @@ COMMENT=	Simple digital timer for X11
 
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
-MAN1=		xtimer.1
-PLIST_FILES=	bin/xtimer
+PLIST_FILES=	bin/xtimer man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
