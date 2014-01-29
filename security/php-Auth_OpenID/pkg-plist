@@ -1,4 +1,3 @@
-@comment $FreeBSD: security/php-Auth_OpenID/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 %%EXAMPLESDIR%%/README
 %%EXAMPLESDIR%%/consumer/common.php
 %%EXAMPLESDIR%%/consumer/finish_auth.php
