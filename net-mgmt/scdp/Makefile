@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: net-mgmt/scdp/Makefile 338148 2013-12-30 17:22:40Z arved $
+# $FreeBSD: net-mgmt/scdp/Makefile 341125 2014-01-25 22:11:18Z bapt $
 
 PORTNAME=	scdp
 PORTVERSION=	1.0.b
@@ -14,9 +14,8 @@ COMMENT=	Tool that sends CDP (CISCO Discovery Protocol) Packets
 BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet10
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	libnet_config="${LIBNET_CONFIG}"
 CFLAGS+=	`${LIBNET_CONFIG} --cflags`
