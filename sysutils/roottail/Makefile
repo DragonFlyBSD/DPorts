@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: sysutils/roottail/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/roottail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	roottail
 PORTVERSION=	1.2
