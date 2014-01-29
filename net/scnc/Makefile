@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: net/scnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/scnc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	scnc
 PORTVERSION=	1.05
