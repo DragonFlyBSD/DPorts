@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/gourmet/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gourmet/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gourmet
 PORTVERSION=	0.16.0
@@ -27,7 +27,7 @@ PORTSCOUT=	ignore:1
 USE_BZIP2=	yes
 USES=		gettext
 USE_GNOME=	pygnome2 pygnomeextras pygtk2
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 NO_STAGE=	yes
