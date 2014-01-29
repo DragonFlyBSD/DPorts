@@ -1,7 +1,7 @@
-# $FreeBSD: science/fisicalab/Makefile 329828 2013-10-08 19:31:32Z theraven $
+# $FreeBSD: science/fisicalab/Makefile 339559 2014-01-12 22:54:58Z theraven $
 
 PORTNAME=	fisicalab
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.3
 CATEGORIES=	science gnustep
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	fisicalab
@@ -13,7 +13,6 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS+=	libgsl.so:${PORTSDIR}/math/gsl
 
-CONFIGURE_ARGS+=	"LDFLAGS=-L${GNUSTEP_SYSTEM_LIBRARIES} -L${PREFIX}/lib"
 USE_GNUSTEP_CONFIGURE=	yes
 USE_GNUSTEP=	yes
 USE_GNUSTEP_GUI=	yes
