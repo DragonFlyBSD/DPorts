@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: x11/numlockx/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/numlockx/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	numlockx
 PORTVERSION=	1.2
@@ -20,5 +20,4 @@ PLIST_FILES=	bin/numlockx
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
