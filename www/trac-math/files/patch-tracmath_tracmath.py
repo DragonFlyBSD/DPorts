@@ -1,5 +1,5 @@
 
-$FreeBSD: www/trac-math/files/patch-tracmath_tracmath.py 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: www/trac-math/files/patch-tracmath_tracmath.py 340725 2014-01-22 17:40:44Z mat $
 
 --- tracmath/tracmath.py.orig
 +++ tracmath/tracmath.py
