@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim-el-emacs21/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/uim-el-emacs21/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MAINTAINER=	nobutaka@FreeBSD.org
 
