@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/rsyslog7-devel/Makefile 338334 2013-12-31 19:18:42Z jgh $
+# $FreeBSD: sysutils/rsyslog7-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rsyslog
 PORTVERSION=	7.5.7
