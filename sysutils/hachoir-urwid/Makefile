@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/hachoir-urwid/Makefile 334329 2013-11-19 17:07:02Z lwhsu $
+# $FreeBSD: sysutils/hachoir-urwid/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hachoir-urwid
 PORTVERSION=	1.1
