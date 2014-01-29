@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: x11-wm/fbcmd/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD: x11-wm/fbcmd/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fbcmd
 PORTVERSION=	0.5.1
