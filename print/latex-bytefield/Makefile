@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: print/latex-bytefield/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/latex-bytefield/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	latex-bytefield
 PORTVERSION=	1.2.20050731
