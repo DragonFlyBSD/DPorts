@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/openshot/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD: multimedia/openshot/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	openshot
 PORTVERSION=	1.4.3
@@ -22,7 +22,7 @@ RUN_DEPENDS=	ffmpeg:${PORTSDIR}/multimedia/ffmpeg \
 		sox:${PORTSDIR}/audio/sox
 
 USE_GNOME=	pygtk2 desktopfileutils
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 USES=		gettext
 INSTALLS_OMF=	yes
