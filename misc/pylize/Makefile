@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/pylize/Makefile 336551 2013-12-15 16:13:46Z wg $
+# $FreeBSD: misc/pylize/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pylize
 PORTVERSION=	1.3.b
