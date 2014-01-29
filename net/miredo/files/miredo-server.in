@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/miredo/files/miredo-server.in 319422 2013-05-30 12:48:42Z sumikawa $
+# $FreeBSD: net/miredo/files/miredo-server.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: miredo-server
