@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: www/dummyflash/Makefile 333573 2013-11-12 14:12:31Z bapt $
+# $FreeBSD: www/dummyflash/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	dummyflash
 PORTVERSION=	1.0
