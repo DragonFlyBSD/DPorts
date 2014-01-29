@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: x11-themes/cursor-ecliz/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/cursor-ecliz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ecliz
 PORTVERSION=	0.1
