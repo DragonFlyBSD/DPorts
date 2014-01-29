@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: textproc/pecl-ctemplate/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-ctemplate/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	cTemplate
 PORTVERSION=	1.11
@@ -25,5 +25,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
 
 CONFIGURE_ARGS=	--with-cTemplate=${LOCALBASE}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
