@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/gnome-games-extra-data/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/gnome-games-extra-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/games/gnome-games-extra-data/Makefile,v 1.31 2010/04/02 18:32:52 kwm Exp $
 
 PORTNAME=	gnome-games-extra-data
