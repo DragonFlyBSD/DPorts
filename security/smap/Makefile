@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: security/smap/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/smap/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	smap
 PORTVERSION=	0.5.0
