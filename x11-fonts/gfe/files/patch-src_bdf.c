@@ -1,5 +1,5 @@
 
-$FreeBSD: x11-fonts/gfe/files/patch-src_bdf.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: x11-fonts/gfe/files/patch-src_bdf.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/bdf.c.orig	Tue Jun 27 12:36:09 2000
 +++ src/bdf.c	Sat Nov 30 02:04:14 2002
