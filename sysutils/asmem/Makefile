@@ -1,5 +1,5 @@
 # Created by: jack
-# $FreeBSD: sysutils/asmem/Makefile 333216 2013-11-08 12:46:34Z vanilla $
+# $FreeBSD: sysutils/asmem/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	asmem
 PORTVERSION=	1.12
