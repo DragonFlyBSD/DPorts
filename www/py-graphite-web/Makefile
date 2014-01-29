@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <esarmiento@wayfair.com>
-# $FreeBSD: www/py-graphite-web/Makefile 328849 2013-09-30 19:27:16Z swills $
+# $FreeBSD: www/py-graphite-web/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	graphite-web
 PORTVERSION=	0.9.12
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cairo>=1.8.10:${PORTSDIR}/graphics/py-cairo 
 		${PYTHON_PKGNAMEPREFIX}django-tagging>=0.3.1:${PORTSDIR}/www/py-django-tagging
 
 FETCH_ARGS=	-o ${DISTNAME}${EXTRACT_SUFX}
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
 NO_STAGE=	yes
