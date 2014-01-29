@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/oak/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/oak/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	oak
 PORTVERSION=	1.5.0
