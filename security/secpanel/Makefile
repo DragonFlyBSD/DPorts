@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: security/secpanel/Makefile 333160 2013-11-07 22:35:19Z nemysis $
+# $FreeBSD: security/secpanel/Makefile 339670 2014-01-14 09:24:56Z gahr $
 
 PORTNAME=	secpanel
 PORTVERSION=	0.6.1
@@ -23,7 +23,7 @@ RUN_DEPENDS=	ssh-askpass:${PORTSDIR}/security/openssh-askpass
 WRKSRC=		${WRKDIR}/usr/local
 NO_BUILD=	yes
 
-USE_TK_WRAPPER=	yes
+USES=		tk:wrapper
 
 DESKTOP_ENTRIES="SecPanel" "${COMMENT}" "${PORTNAME}" \
 		"${PORTNAME}" "" "false"
