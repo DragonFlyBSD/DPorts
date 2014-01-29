@@ -1,5 +1,5 @@
 # Created by: Pankov Pavel <pankov_p@mail.ru>
-# $FreeBSD: security/vnccrack/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/vnccrack/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vnccrack
 PORTVERSION=	1.0.0
