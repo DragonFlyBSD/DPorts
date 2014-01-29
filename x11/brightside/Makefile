@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/brightside/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/brightside/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	brightside
 PORTVERSION=	1.4.0
