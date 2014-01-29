@@ -1,5 +1,4 @@
-# Created by: Jung-uk Kim <jkim@FreeBSD.org>
-# $FreeBSD: sysutils/asusoled/Makefile 338968 2014-01-07 01:29:30Z jkim $
+# $FreeBSD: sysutils/asusoled/Makefile 340437 2014-01-20 18:25:41Z jkim $
 
 PORTNAME=	asusoled
 PORTVERSION=	0.10
@@ -33,12 +32,10 @@ OPTIONS_DEFINE=	DOCS
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/asusoled ${STAGEDIR}${PREFIX}/sbin
-.if !defined(NOPORTDATA)
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 .for i in ${PORTDATA}
 	@${INSTALL_DATA} ${WRKSRC}/data/${i} ${STAGEDIR}${DATADIR}
 .endfor
-.endif
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@${INSTALL_DATA} ${PKGMESSAGE} ${STAGEDIR}${DOCSDIR}/README.FreeBSD
