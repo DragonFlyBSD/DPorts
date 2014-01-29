@@ -1,5 +1,5 @@
 # Created by: Chris Stuart <firewolf@lightningfire.net>
-# $FreeBSD: misc/gkrellmbgchg2/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gkrellmbgchg2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gkrellmbgchg2
 PORTVERSION=	0.1.11
