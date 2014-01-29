@@ -1,5 +1,5 @@
 # Created by: kapr@crosswinds.net
-# $FreeBSD: russian/pscyr/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/pscyr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PSCyr
 PATCH_LEVEL=	2
