@@ -1,8 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org> et al.
-# $FreeBSD: graphics/shotwell/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/shotwell/Makefile 341289 2014-01-26 21:20:03Z rakuco $
 
 PORTNAME=	shotwell
 PORTVERSION=	0.14.1
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	http://www.yorba.org/download/shotwell/${PORTVERSION:R}/
 
