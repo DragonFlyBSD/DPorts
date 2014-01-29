@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: net/xrdp-devel/Makefile 336734 2013-12-17 15:50:00Z swills $
+# $FreeBSD: net/xrdp-devel/Makefile 341067 2014-01-25 17:42:42Z swills $
 
 PORTNAME=	xrdp
 PORTVERSION=	0.7.0.b20130912
@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 USE_RC_SUBR=	xrdp
 USE_LDCONFIG=	${STAGEDIR}${PREFIX}/lib/xrdp
 USE_GITHUB=	yes
-GH_ACCOUNT=	FreeRDP
+GH_ACCOUNT=	neutrinolabs
 GH_PROJECT=	xrdp
 GH_COMMIT=	64e2291
 GH_TAGNAME=	${GH_COMMIT}
