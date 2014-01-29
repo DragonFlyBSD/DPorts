@@ -1,5 +1,5 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: x11-clocks/wmbinclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/wmbinclock/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmbinclock
 PORTVERSION=	0.3
@@ -11,16 +11,15 @@ MAINTAINER=	logix@foobar.franken.de
 COMMENT=	A binary clock in a windowmaker applet
 
 PLIST_FILES=	bin/wmBinClock
-USE_GMAKE=	yes
+USES=		gmake
 USE_XORG=	xpm
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|#include <values.h>||' ${WRKSRC}/wmBinClock.c
 	@${REINPLACE_CMD} -e 's|^CC.*=|CC ?=|' -e 's|^CFLAGS.*=|CFLAGS +=|' \
 		-e 's|/usr/X11R6|${LOCALBASE}|g' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wmBinClock ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/wmBinClock ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
