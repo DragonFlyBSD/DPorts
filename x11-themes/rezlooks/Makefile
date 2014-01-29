@@ -1,5 +1,5 @@
 # Created by: brandoncash@gmail.com
-# $FreeBSD: x11-themes/rezlooks/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD: x11-themes/rezlooks/Makefile 341356 2014-01-27 09:25:28Z miwi $
 
 PORTNAME=	rezlooks
 PORTVERSION=	0.6
@@ -21,7 +21,6 @@ OPTIONS_DEFINE=	ANIMATION
 OPTIONS_DEFAULT=	ANIMATION
 ANIMATION_DESC=	Animation support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MANIMATION}
