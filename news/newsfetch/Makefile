@@ -1,5 +1,5 @@
 # Created by: Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: news/newsfetch/Makefile 337681 2013-12-27 10:04:01Z bapt $
+# $FreeBSD: news/newsfetch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	newsfetch
 PORTVERSION=	1.21
