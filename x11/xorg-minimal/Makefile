@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xorg-minimal/Makefile 328295 2013-09-25 14:22:23Z eadler $
+# $FreeBSD: x11/xorg-minimal/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xorg
 PORTVERSION=	7.5.2
