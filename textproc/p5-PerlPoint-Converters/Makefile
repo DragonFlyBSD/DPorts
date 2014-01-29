@@ -1,12 +1,12 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 340668 2014-01-21 22:29:50Z mat $
 
 PORTNAME=	PerlPoint-Converters
 PORTVERSION=	1.02.05
-DISTVERSION=	${PORTVERSION:C/\.(..)$/\1/}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${PORTVERSION:C/\.(..)$/\1/}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert PerlPoint docs into various formats
@@ -17,15 +17,11 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure patch
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
 
-MAN1=		pp2html.1 pp2latex.1
-MAN3=		Bundle::PerlPoint.3 \
-		PerlPoint::Converters.3 \
-		PerlPoint::Tags::HTML.3 \
-		PerlPoint::Tags::LaTeX.3
+.include <bsd.port.options.mk>
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	# suck all DOCSDIR
 
 post-patch:
@@ -33,11 +29,11 @@ post-patch:
 	@${PERL} -pi -e 's!../(images|pp2html_styles)!$$1!g' ${WRKSRC}/doc/*.cfg
 
 post-build:
-	@(cd ${WRKSRC}/doc && make)
+	@(cd ${WRKSRC}/doc && ${MAKE})
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${DOCSDIR})
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
