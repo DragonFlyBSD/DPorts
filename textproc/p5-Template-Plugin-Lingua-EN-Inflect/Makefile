@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Template-Plugin-Lingua-EN-Inflect/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Template-Plugin-Lingua-EN-Inflect/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Template-Plugin-Lingua-EN-Inflect
 PORTVERSION=	0.02
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Plugin::Lingua::EN::Inflect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
