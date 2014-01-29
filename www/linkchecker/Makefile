@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/linkchecker/Makefile 334798 2013-11-24 23:40:05Z ohauer $
+# $FreeBSD: www/linkchecker/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	linkchecker
 PORTVERSION=	8.4
@@ -28,7 +28,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	wummel
 
 USE_XZ=		yes
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	LinkChecker
 PYEASYINSTALL_ARCHDEP=	yes
