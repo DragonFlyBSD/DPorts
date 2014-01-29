@@ -1,3 +1,2 @@
-@comment $FreeBSD: vietnamese/unicode-uhoai/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 lib/X11/fonts/TrueType/uhoaiw21.ttf
 @dirrm lib/X11/fonts/TrueType/vietnamese-unicode
