@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <lon_kamikaze@gmx.de>
-# $FreeBSD: sysutils/bsdadminscripts/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/bsdadminscripts/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bsdadminscripts
 PORTVERSION=	6.1.1
