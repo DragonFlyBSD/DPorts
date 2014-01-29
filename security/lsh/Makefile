@@ -1,5 +1,5 @@
 # Created by: Eric Schwertfeger <eric@cybernut.com>
-# $FreeBSD: security/lsh/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/lsh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	lsh
 PORTVERSION=	2.0.4
