@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: x11-clocks/wmbday/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/wmbday/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	wmbday
 PORTVERSION=	0.3.1
@@ -18,8 +18,4 @@ HAS_CONFIGURE=	yes
 MAKEFILE=	BSDmakefile
 MAKE_ENV+=	${CONFIGURE_ENV} X11BASE=${LOCALBASE}
 
-MAN1=		wmbday.1
-MANCOMPRESSED=	yes
-
-NO_STAGE=	yes
 .include <bsd.port.mk>

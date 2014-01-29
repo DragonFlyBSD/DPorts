@@ -1,2 +1,2 @@
-@comment $FreeBSD: x11-clocks/wmbday/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 bin/wmbday
+man/man1/wmbday.1.gz
