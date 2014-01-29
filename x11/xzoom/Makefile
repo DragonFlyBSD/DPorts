@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xzoom/Makefile 328646 2013-09-29 03:22:49Z eadler $
+# $FreeBSD: x11/xzoom/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xzoom
 PORTVERSION=	0.3
