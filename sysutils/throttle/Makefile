@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/throttle/Makefile 333992 2013-11-16 13:25:19Z vanilla $
+# $FreeBSD: sysutils/throttle/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	throttle
 PORTVERSION=	1.2
