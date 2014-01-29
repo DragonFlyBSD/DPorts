@@ -1,5 +1,5 @@
 # Created by: Joshua Goodall <joshua@roughtrade.net>
-# $FreeBSD: net/py-spreadmodule/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-spreadmodule/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	spreadmodule
 PORTVERSION=	1.5
