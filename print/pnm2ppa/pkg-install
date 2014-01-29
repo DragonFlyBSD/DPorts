@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: print/pnm2ppa/pkg-install 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: print/pnm2ppa/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 sysconfdir=${PKG_PREFIX}/etc
 conffile=pnm2ppa.conf

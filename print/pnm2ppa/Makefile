@@ -1,5 +1,5 @@
 # Created by: smace@FreeBSD.org
-# $FreeBSD: print/pnm2ppa/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/pnm2ppa/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pnm2ppa
 PORTVERSION=	1.13
