@@ -1,5 +1,5 @@
 # Created by: Jacek Serwatynski <tutus@trynet.eu.org>
-# $FreeBSD: security/ADMsmb/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/ADMsmb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	ADMsmb
 PORTVERSION=	0.3
