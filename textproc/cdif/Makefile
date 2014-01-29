@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: textproc/cdif/Makefile 331249 2013-10-22 10:29:54Z sanpei $
+# $FreeBSD: textproc/cdif/Makefile 341161 2014-01-26 11:57:13Z mat $
 
 PORTNAME=		cdif
 PORTVERSION=		1.19
@@ -16,7 +16,8 @@ USES=		perl5
 NO_WRKSUBDIR=		yes
 NO_BUILD=		yes
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/cdif
+
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}/${DISTNAME}.dist
@@ -26,6 +27,6 @@ do-patch:
 		< ${WRKSRC}/${DISTNAME}.dist > ${WRKSRC}/${DISTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/cdif
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${STAGEDIR}${PREFIX}/bin/cdif
 
 .include <bsd.port.mk>
