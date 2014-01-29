@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: www/xpi-live_http_headers/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-live_http_headers/Makefile 341210 2014-01-26 15:11:22Z miwi $
 
 PORTNAME=	live_http_headers
 PORTVERSION=	0.17
@@ -34,7 +34,6 @@ XPI_DIRS=	chrome/icons/default \
 USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(js|rdf|txt)
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name \*.orig -exec ${RM} \{} \;
 
