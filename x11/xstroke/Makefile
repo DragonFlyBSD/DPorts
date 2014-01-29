@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xstroke/Makefile 331819 2013-10-28 01:18:16Z eadler $
+# $FreeBSD: x11/xstroke/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xstroke
 PORTVERSION=	0.5.12
