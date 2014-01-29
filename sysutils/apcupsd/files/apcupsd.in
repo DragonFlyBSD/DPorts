@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/apcupsd/files/apcupsd.in 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: sysutils/apcupsd/files/apcupsd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: apcupsd
 # REQUIRE: SERVERS
