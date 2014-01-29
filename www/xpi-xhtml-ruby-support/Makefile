@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-xhtml-ruby-support/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-xhtml-ruby-support/Makefile 341220 2014-01-26 15:14:57Z miwi $
 
 PORTNAME=	xhtml-ruby-support
 PORTVERSION=	3.0.2009060901
@@ -16,6 +16,5 @@ XPI_FILES=	chrome/rubysupport.jar chrome.manifest \
 		defaults/preferences/rubysupport.js install.rdf
 XPI_DIRS=	chrome defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
