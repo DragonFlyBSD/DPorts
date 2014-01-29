@@ -1,5 +1,5 @@
 # Created by: Joe Barbish
-# $FreeBSD: sysutils/qjail2/Makefile 329696 2013-10-07 12:23:05Z bapt $
+# $FreeBSD: sysutils/qjail2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	qjail
 PORTVERSION=	2.2
