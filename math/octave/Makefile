@@ -80,7 +80,7 @@ LAPACK=		-lalapack -lptcblas
 .endif
 
 OCTAVE_VERSION=	${PORTVERSION}
-GNU_HOST=	${ARCH}-portbld-freebsd${OSREL}
+GNU_HOST=	${CONFIGURE_TARGET}
 PLIST_SUB=	OCTAVE_VERSION=${OCTAVE_VERSION} GNU_HOST=${GNU_HOST}
 INCLUDES=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
@@ -97,10 +97,6 @@ CONFIGURE_ARGS=	--host=${GNU_HOST} \
 		--with-lapack="${LAPACK}" \
 		--enable-shared \
 		--disable-jit
-
-.if (${OSVERSION} <= 700000)
-WITH_PTMALLOC=yes
-.endif
 
 .if defined(WITH_PTMALLOC)
 LIB_DEPENDS+=	ptmalloc:${PORTSDIR}/devel/ptmalloc

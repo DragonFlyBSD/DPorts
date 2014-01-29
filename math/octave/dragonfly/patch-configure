@@ -1,0 +1,16 @@
+--- configure.intermediate	2014-01-29 20:07:02.106505000 +0000
++++ configure
+@@ -68387,6 +68387,13 @@ $as_echo_n "checking for include file <j
+         JAVA_CPPFLAGS="-I${JAVA_HOME}/include -I${JAVA_HOME}/include/freebsd"
+       fi
+     ;;
++    dragonfly*)
++      if test -n "$JAVA_CPPFLAGS"; then
++        JAVA_CPPFLAGS="-I${JAVA_CPPFLAGS}/include -I${JAVA_CPPFLAGS}/include/dragonfly"
++      else
++        JAVA_CPPFLAGS="-I${JAVA_HOME}/include -I${JAVA_HOME}/include/dragonfly"
++      fi
++    ;;
+     *)
+       if test -n "$JAVA_CPPFLAGS"; then
+         JAVA_CPPFLAGS="-I${JAVA_CPPFLAGS}/include -I${JAVA_CPPFLAGS}/include/linux"
