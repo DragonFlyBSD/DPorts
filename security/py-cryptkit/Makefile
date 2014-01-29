@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/py-cryptkit/Makefile 337968 2013-12-29 12:08:28Z wg $
+# $FreeBSD: security/py-cryptkit/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cryptkit
 PORTVERSION=	0.9
