@@ -1,5 +1,5 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: security/softhsm/Makefile 329006 2013-10-01 22:24:38Z wg $
+# $FreeBSD: security/softhsm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	softhsm
 PORTVERSION=	1.3.5
