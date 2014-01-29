@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@FreeBSD.org>
-# $FreeBSD: sysutils/hidesvn/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/hidesvn/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	hidesvn
 PORTVERSION=	1.2
