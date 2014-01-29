@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: x11/xballoon/Makefile 336400 2013-12-13 23:55:29Z bapt $
+# $FreeBSD: x11/xballoon/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xballoon
 PORTVERSION=	1.0
