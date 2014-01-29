@@ -1,7 +1,7 @@
-# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 339432 2014-01-11 15:49:19Z kuriyama $
 
 PORTNAME=	Plack-App-Proxy
-PORTVERSION=	0.27
+PORTVERSION=	0.29
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LEEDO
