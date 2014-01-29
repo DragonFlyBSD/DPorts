@@ -1,5 +1,5 @@
 # Created by: Heiner Eichmann <h.eichmann@gmx.de>
-# $FreeBSD: multimedia/gdialog/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/gdialog/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gdialog
 PORTVERSION=	2.5
