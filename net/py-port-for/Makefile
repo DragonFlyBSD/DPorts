@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-port-for/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-port-for/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	port-for
 PORTVERSION=	0.3
@@ -13,7 +13,7 @@ COMMENT=	Python utility and library that helps with TCP ports management
 LICENSE=	MIT
 
 # Python3 Ready
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 NO_STAGE=	yes
