@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: www/imgsizer/Makefile 335850 2013-12-07 21:17:39Z cs $
+# $FreeBSD: www/imgsizer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imgsizer
 PORTVERSION=	2.8
