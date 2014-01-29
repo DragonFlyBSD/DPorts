@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: deskutils/gnochm/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/gnochm/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	gnochm
 PORTVERSION=	0.9.11
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 USES=        pathfix gettext
 USE_GNOME=	gnomeprefix intlhack pygnome2 pygtk2 pygnomeextras
 GNU_CONFIGURE=	yes
-USE_PYTHON=	2.2+
+USE_PYTHON=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
