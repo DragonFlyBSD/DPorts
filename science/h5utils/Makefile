@@ -1,5 +1,5 @@
 # Created by: Klaus Aehlig <aehlig@linta.de>
-# $FreeBSD: science/h5utils/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/h5utils/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	h5utils
 PORTVERSION=	1.12.1
