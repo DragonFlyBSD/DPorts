@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: misc/cuecat/Makefile 336552 2013-12-15 16:17:46Z wg $
+# $FreeBSD: misc/cuecat/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cuecat
 PORTVERSION=	1.1
