@@ -1,5 +1,5 @@
 # Created by: Herbert J. Skuhra <herbert.skuhra@gmx.at>
-# $FreeBSD: x11-fonts/artwiz-aleczapka-se/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD: x11-fonts/artwiz-aleczapka-se/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=		artwiz-aleczapka-se
 PORTVERSION=		1.3
