@@ -1,8 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: textproc/pecl-xslcache/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-xslcache/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	xslcache
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.2
 CATEGORIES=	textproc pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
@@ -18,5 +18,4 @@ USE_PHPEXT=	yes
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
