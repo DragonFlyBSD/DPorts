@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/txt2regex/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/txt2regex/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	txt2regex
 PORTVERSION=	0.8
