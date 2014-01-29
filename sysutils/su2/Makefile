@@ -1,5 +1,5 @@
 # Created by: gurney_j@efn.org
-# $FreeBSD: sysutils/su2/Makefile 331941 2013-10-29 12:25:59Z jhale $
+# $FreeBSD: sysutils/su2/Makefile 339655 2014-01-14 02:13:28Z mandree $
 
 PORTNAME=	su2
 PORTVERSION=	1.3
@@ -12,7 +12,7 @@ COMMENT=	Enhanced su, allows users to su with own password + more
 
 PATCH_DEPENDS=	rcsdiff:${PORTSDIR}/devel/rcs
 
-NO_CDROM=	Don't sell for profit
+NO_CDROM=	Do not sell for profit
 
 PLIST_FILES=	bin/su2 \
 		man/man1/su2.1.gz
