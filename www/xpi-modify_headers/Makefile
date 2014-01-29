@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: www/xpi-modify_headers/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-modify_headers/Makefile 341211 2014-01-26 15:11:55Z miwi $
 
 PORTNAME=	modify_headers
 PORTVERSION=	0.7.1.2b
@@ -66,7 +66,6 @@ XPI_DIRS=	chrome/content/bindings \
 		defaults/preferences \
 		defaults
 
-NO_STAGE=	yes
 post-patch:
 		@${FIND} ${WRKSRC} -name \*.orig -exec ${RM} \{} \;
 
