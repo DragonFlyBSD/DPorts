@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-clocks/sanduhr/Makefile 338027 2013-12-29 16:35:06Z antoine $
+# $FreeBSD: x11-clocks/sanduhr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sanduhr
 PORTVERSION=	1.93
