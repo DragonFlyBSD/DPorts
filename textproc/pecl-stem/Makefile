@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/pecl-stem/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/pecl-stem/Makefile 340835 2014-01-23 16:00:14Z miwi $
 
 PORTNAME=	stem
 PORTVERSION=	1.5.1
@@ -15,7 +15,6 @@ COMMENT=	A PECL extension which provides word stemming
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
-NO_STAGE=	yes
 post-configure:
 	echo "#define HAVE_XDL_ALLOCATOR_PRIV 1" >>${WRKSRC}/config.h
 .include <bsd.port.mk>
