@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-passlib/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/py-passlib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	passlib
 PORTVERSION=	1.6.1
