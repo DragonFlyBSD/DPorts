@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/py-django-registration-defaults/Makefile 331621 2013-10-25 18:25:55Z wg $
+# $FreeBSD: www/py-django-registration-defaults/Makefile 340284 2014-01-19 13:39:33Z mva $
 
 PORTNAME=	django-registration-defaults
 PORTVERSION=	0.4.4
@@ -16,5 +16,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django-registration>=0:${PORTSDIR}/www/py-dj
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
