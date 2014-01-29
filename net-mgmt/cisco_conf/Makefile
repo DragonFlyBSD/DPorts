@@ -1,5 +1,5 @@
 # Created by: Anton Voronin <anton@urc.ac.ru>
-# $FreeBSD: net-mgmt/cisco_conf/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/cisco_conf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cisco_conf
 PORTVERSION=	1.2
