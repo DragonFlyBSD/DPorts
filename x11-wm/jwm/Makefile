@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-wm/jwm/Makefile 331679 2013-10-26 12:43:12Z wg $
+# $FreeBSD: x11-wm/jwm/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jwm
 PORTVERSION=	2.1.0
