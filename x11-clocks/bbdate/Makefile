@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: x11-clocks/bbdate/Makefile 337818 2013-12-27 22:24:59Z antoine $
+# $FreeBSD: x11-clocks/bbdate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bbdate
 PORTVERSION=	0.2.4
