@@ -1,7 +1,7 @@
-# $FreeBSD: x11-themes/gtk3-oxygen-engine/Makefile 336577 2013-12-15 20:18:01Z rakuco $
+# $FreeBSD: x11-themes/gtk3-oxygen-engine/Makefile 341204 2014-01-26 15:09:25Z rakuco $
 
 PORTNAME=	oxygen
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}-gtk3/${PORTVERSION}/src
