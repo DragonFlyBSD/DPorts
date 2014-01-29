@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/gai/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD: x11-toolkits/gai/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	gai
 PORTVERSION=	0.5.10
