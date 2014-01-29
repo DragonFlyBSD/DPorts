@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: print/latex-feynmf/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/latex-feynmf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	latex-feynmf
 PORTVERSION=	1.08.19961202
