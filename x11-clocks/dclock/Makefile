@@ -1,5 +1,5 @@
 # Created by: David Leonard <leonard@dstc.edu.au>
-# $FreeBSD: x11-clocks/dclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/dclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
 
 PORTNAME=	dclock
 PORTVERSION=	2.2.2
@@ -22,16 +22,15 @@ USES=		pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lX11 -lXt -lm
 
-MAN1=		dclock.1
 PORTDOCS=	README TODO
 PLIST_FILES=	bin/dclock \
 		lib/X11/app-defaults/DClock \
+		man/man1/${PORTNAME}.1.gz \
 		%%DATADIR%%/sounds/bell.wav \
 		%%DATADIR%%/sounds/digital.wav
 PLIST_DIRS=	%%DATADIR%%/sounds \
 		%%DATADIR%%
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOX}
@@ -57,16 +56,16 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC} \
-		&& ${INSTALL_PROGRAM} dclock ${PREFIX}/bin \
-		&& ${INSTALL_MAN} dclock.1 ${MANPREFIX}/man/man1 \
+		&& ${INSTALL_PROGRAM} dclock ${STAGEDIR}${PREFIX}/bin \
+		&& ${INSTALL_MAN} dclock.1 ${STAGEDIR}${MANPREFIX}/man/man1 \
 		&& ${INSTALL_DATA} Dclock.ad \
-			${PREFIX}/lib/X11/app-defaults/DClock)
-	@${MKDIR} ${DATADIR}/sounds
-	(cd ${WRKSRC}/sounds && ${INSTALL_DATA} *.wav ${DATADIR}/sounds)
+			${STAGEDIR}${PREFIX}/lib/X11/app-defaults/DClock)
+	@${MKDIR} ${STAGEDIR}${DATADIR}/sounds
+	(cd ${WRKSRC}/sounds && ${INSTALL_DATA} *.wav ${STAGEDIR}${DATADIR}/sounds)
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	(cd ${WRKSRC} && ${INSTALL_DATA} ${f} ${DOCSDIR})
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${f} ${STAGEDIR}${DOCSDIR})
 .endfor
 .endif
 
