@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: textproc/p5-Text-Extract-Word/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-Text-Extract-Word/Makefile 340908 2014-01-24 14:59:10Z mat $
 
 PORTNAME=	Text-Extract-Word
 PORTVERSION=	0.04
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::Extract::Word.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
