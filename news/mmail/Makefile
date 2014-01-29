@@ -1,5 +1,5 @@
 # Created by: Frederic Cambus
-# $FreeBSD: news/mmail/Makefile 337688 2013-12-27 10:18:51Z bapt $
+# $FreeBSD: news/mmail/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mmail
 PORTVERSION=	0.49
