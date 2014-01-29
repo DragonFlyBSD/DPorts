@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: print/apsfilter/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/apsfilter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	apsfilter
 PORTVERSION=	7.2.8
