@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11/xmascot/Makefile 336390 2013-12-13 23:38:04Z bapt $
+# $FreeBSD: x11/xmascot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xmascot
 PORTVERSION=	2.6a
