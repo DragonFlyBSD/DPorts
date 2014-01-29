@@ -1,4 +1,4 @@
-# $FreeBSD: palm/mdbconv/files/Makefile 317435 2013-05-05 21:09:48Z bapt $
+# $FreeBSD: palm/mdbconv/files/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PROG=	mdbconv
 NO_MAN=	yes
