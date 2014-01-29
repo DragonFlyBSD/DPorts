@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: sysutils/anteater/Makefile 333206 2013-11-08 12:14:43Z vanilla $
+# $FreeBSD: sysutils/anteater/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	anteater
 PORTVERSION=	0.4.5
