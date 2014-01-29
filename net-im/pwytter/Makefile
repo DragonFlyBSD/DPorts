@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: net-im/pwytter/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/pwytter/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	pwytter
 PORTVERSION=	0.8
@@ -21,7 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_ZIP=	yes
 USES=		gettext
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
