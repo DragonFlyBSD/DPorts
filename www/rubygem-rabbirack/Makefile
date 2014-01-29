@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-rabbirack/Makefile 334505 2013-11-21 18:20:24Z bapt $
+# $FreeBSD: www/rubygem-rabbirack/Makefile 340906 2014-01-24 14:56:38Z miwi $
 
 PORTNAME=	rabbirack
 PORTVERSION=	2.0.0
@@ -23,5 +23,4 @@ USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 PLIST_FILES=	bin/rabbirack
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
