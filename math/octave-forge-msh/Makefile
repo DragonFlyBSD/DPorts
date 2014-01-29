@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-msh/Makefile 333908 2013-11-15 18:04:33Z stephen $
+# $FreeBSD: math/octave-forge-msh/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	octave-forge-msh
 PORTVERSION=	1.0.9
@@ -7,6 +7,8 @@ CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+
+LICENSE=	GPLv2
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
@@ -18,7 +20,6 @@ GNU_CONFIGURE=	yes
 RUN_DEPENDS+=	${TARBALLS_DIR}/splines.tar.gz:${PORTSDIR}/math/octave-forge-splines
 RUN_DEPENDS+=	gmsh:${PORTSDIR}/cad/gmsh
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 
 post-build:
