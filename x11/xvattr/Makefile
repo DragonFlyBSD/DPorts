@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xvattr/Makefile 336379 2013-12-13 23:13:46Z bapt $
+# $FreeBSD: x11/xvattr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xvattr
 PORTVERSION=	1.3
