@@ -1,23 +1,19 @@
-# $FreeBSD: graphics/skanlite/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/skanlite/Makefile 340693 2014-01-22 08:20:56Z makc $
 
 PORTNAME=	skanlite
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	graphics kde
-MASTER_SITES=	SF/sanewidget/Skanlite/
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 DIST_SUBDIR=	KDE/extragear
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Simple image scanning application for KDE
 
-LIB_DEPENDS=	ksane.0:${PORTSDIR}/graphics/libksane
+LIB_DEPENDS=	libksane.so:${PORTSDIR}/graphics/libksane
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_KDE4=	kdelibs kdeprefix kdehier automoc4
 USE_QT4=	qmake_build moc_build rcc_build uic_build
-USES=		cmake
+USES=		cmake:outsource
 
-# Fix build with no-default PREFIX
-CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${KDE4_PREFIX}
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
