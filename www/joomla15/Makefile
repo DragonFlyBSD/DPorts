@@ -1,5 +1,5 @@
 # Created by: Roberto Nunnari <robi@nunnisoft.ch>
-# $FreeBSD: www/joomla15/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/joomla15/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	joomla15
 PORTVERSION=	1.5.24
