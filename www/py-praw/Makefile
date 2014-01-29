@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-praw/Makefile 331669 2013-10-26 09:36:20Z koobs $
+# $FreeBSD: www/py-praw/Makefile 341385 2014-01-27 12:14:09Z koobs $
 
 PORTNAME=	praw
 PORTVERSION=	2.1.11
+PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,7 +12,7 @@ COMMENT=	Python Reddit API Wrapper
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=1.2.0:${PORTSDIR}/www/py-requests \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests1>=1.2.0:${PORTSDIR}/www/py-requests1 \
 		${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six
 TEST_DEPENDS:=	${RUN_DEPENDS}
 
