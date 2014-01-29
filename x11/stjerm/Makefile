@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11/stjerm/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/stjerm/Makefile 339414 2014-01-11 10:03:45Z vanilla $
 
 PORTNAME=	stjerm
 PORTVERSION=	0.16
@@ -17,9 +17,7 @@ USE_GNOME=	vte gtk20
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 
-MAN8=		stjerm.8
 LICENSE_FILE=	${WRKSRC}/COPYING
-PLIST_FILES=	bin/stjerm
+PLIST_FILES=	bin/stjerm man/man8/${PORTNAME}.8.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
