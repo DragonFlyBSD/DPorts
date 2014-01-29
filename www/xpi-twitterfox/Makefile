@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/xpi-twitterfox/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-twitterfox/Makefile 341219 2014-01-26 15:14:34Z miwi $
 
 PORTNAME=	twitterfox
 PORTVERSION=	1.8.3
@@ -20,6 +20,5 @@ XPI_FILES=	LICENSE.rtf chrome/TwitterFox.jar chrome.manifest \
 		defaults/twitterfox_1.8.sqlite install.rdf
 XPI_DIRS=	chrome components defaults/preferences defaults
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
