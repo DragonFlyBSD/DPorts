@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/pecl-swish/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/pecl-swish/Makefile 340828 2014-01-23 14:32:34Z miwi $
 
 PORTNAME=	swish
 PORTVERSION=	0.5.0
@@ -20,5 +20,4 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--enable-swish --with-swish=${LOCALBASE}/bin
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
