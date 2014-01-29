@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: textproc/prosper/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/prosper/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	prosper
 PORTVERSION=	1.00.4
