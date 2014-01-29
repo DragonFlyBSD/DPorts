@@ -1,5 +1,5 @@
 # Created by: Nick Barkas <snb@threerings.net>
-# $FreeBSD: sysutils/farbot/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/farbot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	farbot
 PORTVERSION=	1.0.b2
@@ -16,7 +16,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_PYTHON=	2.4+
+USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	farb
 PYDISTUTILS_PKGVERSION=	0.1
