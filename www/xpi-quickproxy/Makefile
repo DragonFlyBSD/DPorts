@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-quickproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/xpi-quickproxy/Makefile 341214 2014-01-26 15:13:02Z miwi $
 
 PORTNAME=	quickproxy
 PORTVERSION=	2009.07.19
@@ -14,6 +14,5 @@ XPI_NUM=	1557
 XPI_FILES=	chrome/quickproxy.jar chrome.manifest install.rdf
 XPI_DIRS=	chrome
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../xpi-adblock/Makefile.xpi"
 .include <bsd.port.mk>
