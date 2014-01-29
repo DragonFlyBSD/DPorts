@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/bb/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/bb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bb
 PORTVERSION=	1.3.r1
