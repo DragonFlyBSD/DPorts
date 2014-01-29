@@ -1,5 +1,5 @@
 
-$FreeBSD: net-mgmt/softflowd/files/patch-softflowd.c 300897 2012-07-14 14:29:18Z beat $
+$FreeBSD: net-mgmt/softflowd/files/patch-softflowd.c 340725 2014-01-22 17:40:44Z mat $
 
 --- softflowd.c.orig
 +++ softflowd.c
