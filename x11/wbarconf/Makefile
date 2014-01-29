@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/wbarconf/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
+# $FreeBSD: x11/wbarconf/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	wbarconf
 PORTVERSION=	0.7.2.2
@@ -13,7 +13,7 @@ COMMENT=	Configuration GUI for wbar
 RUN_DEPENDS=	wbar:${PORTSDIR}/x11/wbar
 
 USE_GNOME=	pygobject pygtk2 gtk20
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
 USES=		gettext
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
