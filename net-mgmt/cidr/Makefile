@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: net-mgmt/cidr/Makefile 331308 2013-10-22 19:50:00Z ehaupt $
+# $FreeBSD: net-mgmt/cidr/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cidr
 PORTVERSION=	2.3.2
