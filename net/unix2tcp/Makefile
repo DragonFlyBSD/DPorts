@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: net/unix2tcp/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/unix2tcp/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unix2tcp
 PORTVERSION=	0.8.2
