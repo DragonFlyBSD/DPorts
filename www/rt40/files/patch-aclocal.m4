@@ -1,8 +1,5 @@
-
-$FreeBSD: www/rt40/files/patch-aclocal.m4 300897 2012-07-14 14:29:18Z beat $
-
---- aclocal.m4.orig
-+++ aclocal.m4
+--- ./aclocal.m4.orig	2014-01-07 01:01:22.000000000 +0000
++++ ./aclocal.m4	2014-01-14 07:32:32.020252599 +0000
 @@ -79,7 +79,7 @@
  		s/^#.*$//m;
  		s/^\s+//gim;
