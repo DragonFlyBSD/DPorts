@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: x11-toolkits/v/Makefile 334267 2013-11-18 22:02:53Z bapt $
+# $FreeBSD: x11-toolkits/v/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	v
 PORTVERSION=	1.90
