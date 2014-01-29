@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/py-pymc/Makefile 335765 2013-12-06 15:42:33Z mat $
+# $FreeBSD: math/py-pymc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pymc
 PORTVERSION=	2.3
