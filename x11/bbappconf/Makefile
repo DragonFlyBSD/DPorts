@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: x11/bbappconf/Makefile 338768 2014-01-05 13:29:17Z antoine $
+# $FreeBSD: x11/bbappconf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bbappconf
 PORTVERSION=	0.0.2
