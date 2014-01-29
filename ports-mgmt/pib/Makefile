@@ -1,5 +1,5 @@
 # Created by: Mike Smith <msmith@FreeBSD.org>
-# $FreeBSD: ports-mgmt/pib/Makefile 334646 2013-11-23 06:55:51Z eadler $
+# $FreeBSD: ports-mgmt/pib/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	pib
 PORTVERSION=	1.2
