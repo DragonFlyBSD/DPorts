@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: x11/xcolors/Makefile 336394 2013-12-13 23:47:20Z bapt $
+# $FreeBSD: x11/xcolors/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	xcolors
 PORTVERSION=	1.3
