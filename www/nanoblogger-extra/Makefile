@@ -1,5 +1,5 @@
 # Created by: Tobias Rehbein <tobias.rehbein@web.de>
-# $FreeBSD: www/nanoblogger-extra/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/nanoblogger-extra/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	nanoblogger-extra
 PORTVERSION=	3.4.2
