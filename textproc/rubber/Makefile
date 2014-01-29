@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/rubber/Makefile 336488 2013-12-14 21:27:28Z wg $
+# $FreeBSD: textproc/rubber/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	rubber
 PORTVERSION=	1.1
