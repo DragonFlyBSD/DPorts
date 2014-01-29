@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/gnome2-hacker-tools/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: devel/gnome2-hacker-tools/Makefile 340722 2014-01-22 17:00:46Z mat $
 #   $MCom: ports/devel/gnome2-hacker-tools/Makefile,v 1.47 2009/03/01 08:15:25 marcus Exp $
 
 PORTREVISION=	1
