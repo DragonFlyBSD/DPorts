@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/jvmtop/Makefile 330954 2013-10-20 01:05:33Z jgh $
+# $FreeBSD: sysutils/jvmtop/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jvmtop
 PORTVERSION=	0.8.0
