@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: x11-clocks/xdaliclock/Makefile 337939 2013-12-29 05:23:23Z wxs $
+# $FreeBSD: x11-clocks/xdaliclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
 
 PORTNAME=	xdaliclock
 PORTVERSION=	2.40
@@ -14,8 +14,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/X11
 
 GNU_CONFIGURE=	yes
 USE_XORG=	xt sm ice xext x11
-MAN1=		xdaliclock.1
-PLIST_FILES=	bin/xdaliclock
+PLIST_FILES=	bin/xdaliclock man/man1/${PORTNAME}.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
