@@ -1,4 +1,3 @@
-@comment $FreeBSD: print/splix/pkg-plist 300897 2012-07-14 14:29:18Z beat $
 libexec/cups/filter/rastertoqpdl
 libexec/cups/filter/pstoqpdl
 share/cups/model/dell/1100.ppd
