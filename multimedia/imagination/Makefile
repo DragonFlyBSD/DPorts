@@ -1,5 +1,5 @@
 # Created by: Jesse <jessefrgsmith@yahoo.ca>
-# $FreeBSD: multimedia/imagination/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/imagination/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imagination
 PORTVERSION=	3.0
