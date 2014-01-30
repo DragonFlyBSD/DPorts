@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: math/gnumeric/Makefile 335542 2013-12-02 21:21:35Z kwm $
+# $FreeBSD: math/gnumeric/Makefile 339634 2014-01-13 21:00:02Z rene $
 #   $MCom: ports/trunk/math/gnumeric/Makefile 18444 2013-05-11 12:51:26Z kwm $
 
 PORTNAME=	gnumeric
@@ -23,7 +23,7 @@ USE_XZ=		yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
 		shared-mime-info shebangfix
 USE_GNOME=	gnomehier gnomeprefix intlhack libgsf pygobject3
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
