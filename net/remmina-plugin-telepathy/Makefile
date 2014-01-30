@@ -1,15 +1,15 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/remmina-plugin-telepathy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/remmina-plugin-telepathy/Makefile 339795 2014-01-15 17:28:00Z fluffy $
 
 PKGNAMESUFFIX=	-telepathy
 
 COMMENT=	Remmina plugin for Telepathy support
 
-LIB_DEPENDS=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+USE_GNOME+=	gtk30
+LIB_DEPENDS=	libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
 MASTERDIR=	${.CURDIR}/../remmina-plugins
 
-WITH_TELEP=	yes
+PLIST_SUB+=	ICONS="@comment "
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
