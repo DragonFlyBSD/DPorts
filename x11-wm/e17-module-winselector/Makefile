@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: x11-wm/e17-module-winselector/Makefile 330253 2013-10-13 21:11:17Z gblach $
+# $FreeBSD: x11-wm/e17-module-winselector/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	winselector
 PORTVERSION=	20130510
