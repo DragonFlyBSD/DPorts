@@ -9,3 +9,12 @@
  #    pragma pack(push,2)
  #endif
  
+@@ -813,7 +813,7 @@ gss_set_neg_mechs(
+     gss_cred_id_t,      /* cred_handle */
+     const gss_OID_set); /* mech_set */
+ 
+-#if TARGET_OS_MAC
++#if defined(TARGET_OS_MAC) && TARGET_OS_MAC
+ #    pragma pack(pop)
+ #endif
+ 
