@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-waterfall/Makefile 331305 2013-10-22 18:50:47Z tijl $
+# $FreeBSD: graphics/xmms-waterfall/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	waterfall
 PORTVERSION=	0.11
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	xmms-
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another XMMS spectrum analyzer
 
-LIB_DEPENDS=	xmms.4:${PORTSDIR}/multimedia/xmms
+LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	lib/xmms/Visualization/libwaterfall.la \
 		lib/xmms/Visualization/libwaterfall.so
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2|${CFLAGS}|' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/ltconfig
