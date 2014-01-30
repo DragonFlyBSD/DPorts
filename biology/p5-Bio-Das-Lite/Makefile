@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/p5-Bio-Das-Lite/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD: biology/p5-Bio-Das-Lite/Makefile 341804 2014-01-30 07:34:25Z az $
 
 PORTNAME=	Bio-Das-Lite
 PORTVERSION=	2.11
@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for the DAS (HTTP+XML) Protocol
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-Readonly>=1.03:${PORTSDIR}/devel/p5-Readonly \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-WWW-Curl>=4.07:${PORTSDIR}/www/p5-WWW-Curl
@@ -19,7 +22,4 @@ TEST_DEPENDS=	p5-Test-Simple>0.8:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Bio::Das::Lite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
