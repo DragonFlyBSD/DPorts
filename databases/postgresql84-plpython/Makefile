@@ -1,6 +1,6 @@
-# $FreeBSD: databases/postgresql84-plpython/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/postgresql84-plpython/Makefile 339634 2014-01-13 21:00:02Z rene $
 
-USE_PYTHON=	-2.7
+USE_PYTHON=	2
 WANT_PGSQL_VER=	84
 
 NO_STAGE=	yes
