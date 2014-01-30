@@ -1,0 +1,11 @@
+--- lib/gssapi/generic/gssapi.hin.orig	2014-01-16 00:44:15.000000000 +0000
++++ lib/gssapi/generic/gssapi.hin
+@@ -39,7 +39,7 @@
+ extern "C" {
+ #endif /* __cplusplus */
+ 
+-#if TARGET_OS_MAC
++#if defined(TARGET_OS_MAC) && TARGET_OS_MAC
+ #    pragma pack(push,2)
+ #endif
+ 
