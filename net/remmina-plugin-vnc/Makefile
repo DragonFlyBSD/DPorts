@@ -1,15 +1,17 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/remmina-plugin-vnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/remmina-plugin-vnc/Makefile 339795 2014-01-15 17:28:00Z fluffy $
 
 PKGNAMESUFFIX=	-vnc
 
 COMMENT=	Remmina plugin for VNC protocol
 
-BUILD_DEPENDS=	${LOCALBASE}/include/gcrypt.h:${PORTSDIR}/security/libgcrypt
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
-		gnutls:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libgnutls.so:${PORTSDIR}/security/gnutls \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libvncserver.so:${PORTSDIR}/net/libvncserver
 
 MASTERDIR=	${.CURDIR}/../remmina-plugins
 
-NO_STAGE=	yes
+PLIST_SUB+=	ICONS="" SSH=""
+
 .include "${MASTERDIR}/Makefile"
