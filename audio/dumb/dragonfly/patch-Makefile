@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2014-01-30 09:06:53.854085000 +0000
++++ Makefile
+@@ -321,7 +321,7 @@ $(CORE_EXAMPLES_EXE): examples/%$(EXE_SU
+ 	$(CC) $^ -o $@ $(LDFLAGS) $(LINK_MATH)
+ 
+ $(ALLEGRO_EXAMPLES_EXE): examples/%$(EXE_SUFFIX): examples/%.o $(ALLEGRO_LIB_FILE_RELEASE) $(CORE_LIB_FILE_RELEASE)
+-	$(CC) $^ -o $@ $(LDFLAGS) $(LINK_ALLEGRO)
++	$(CC) $^ -o $@ $(LDFLAGS) $(LINK_ALLEGRO) $(LINK_MATH)
+ 
+ $(CORE_EXAMPLES_OBJ): examples/%.o: examples/%.c include/dumb.h
+ 	$(CC) $(CFLAGS_RELEASE) -c $< -o $@
