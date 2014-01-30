@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice-te/Makefile 331614 2013-10-25 17:05:50Z jkim $
+# $FreeBSD: editors/libreoffice-te/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 LO_I18N=	te
 
