@@ -1,5 +1,5 @@
 # Created by: Uffe Jakobsen <uffe@uffe.org>
-# $FreeBSD: devel/libsigrokdecode/Makefile 338246 2013-12-31 07:01:36Z jgh $
+# $FreeBSD: devel/libsigrokdecode/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libsigrokdecode
 PORTVERSION=	0.2.0
