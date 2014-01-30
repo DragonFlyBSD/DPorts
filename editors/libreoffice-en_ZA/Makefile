@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice-en_ZA/Makefile 331614 2013-10-25 17:05:50Z jkim $
+# $FreeBSD: editors/libreoffice-en_ZA/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 LO_I18N=	en_ZA
 LO_HAS_HELPPACK=	yes
