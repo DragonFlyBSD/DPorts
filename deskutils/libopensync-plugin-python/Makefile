@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-python/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/libopensync-plugin-python/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libopensync-plugin-python
 PORTVERSION=	0.22
