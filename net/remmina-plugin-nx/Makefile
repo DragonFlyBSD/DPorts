@@ -1,16 +1,16 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/remmina-plugin-nx/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/remmina-plugin-nx/Makefile 340367 2014-01-20 04:45:49Z fluffy $
 
 PKGNAMESUFFIX=	-nx
 
-MAINTAINER=	meta+ports@vmeta.jp
 COMMENT=	Remmina plugin for NX
 
 USE_XORG+=	xkbfile
 
 MASTERDIR=	${.CURDIR}/../remmina-plugins
 
-WITH_NX=	yes
+LIB_DEPENDS+=	libssh.so:${PORTSDIR}/security/libssh
 
-NO_STAGE=	yes
+PLIST_SUB+=	ICONS="" SSH="@comment "
+
 .include "${MASTERDIR}/Makefile"
