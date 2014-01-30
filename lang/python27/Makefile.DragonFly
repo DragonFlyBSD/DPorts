@@ -1,1 +1,2 @@
 USES+= readline
+PLATFORMS+= plat-dragonfly3
