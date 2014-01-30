@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: lang/python27/Makefile 341192 2014-01-26 14:47:56Z mva $
+# $FreeBSD: lang/python27/Makefile 341744 2014-01-29 14:54:52Z danfe $
 
 PORTNAME=	python27
 PORTVERSION=	2.7.6
@@ -124,7 +124,7 @@ PLIST_SUB+=	X86_ONLY=""
 .else
 PLIST_SUB+=	X86_ONLY="@comment "
 .endif
-.if ${ARCH} == x86_64 || ${ARCH} == ia64 || ${ARCH} == sparc64 || ${ARCH} == alpha || ${ARCH} == powerpc64
+.if ${ARCH} == x86_64 || ${ARCH} == ia64 || ${ARCH} == sparc64 || ${ARCH} == powerpc64
 PLIST_SUB+=	32BIT_ONLY="@comment "
 .else
 PLIST_SUB+=	32BIT_ONLY=""
