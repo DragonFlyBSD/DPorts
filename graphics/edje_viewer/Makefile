@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: graphics/edje_viewer/Makefile 329524 2013-10-06 01:31:15Z gblach $
+# $FreeBSD: graphics/edje_viewer/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	edje_viewer
 PORTVERSION=	20130520
