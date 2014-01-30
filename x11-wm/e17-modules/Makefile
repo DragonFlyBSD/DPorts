@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-modules/Makefile 330253 2013-10-13 21:11:17Z gblach $
+# $FreeBSD: x11-wm/e17-modules/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	e17-modules
 PORTVERSION=	20130510
