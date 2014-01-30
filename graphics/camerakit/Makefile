@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/camerakit/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/camerakit/Makefile 341175 2014-01-26 13:58:57Z antoine $
 
 PORTNAME=	camerakit
 PORTVERSION=	0.0.1
@@ -10,7 +10,7 @@ DISTNAME=	CameraKit-20041011
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Framework that allows to access digital cameras
 
-LIB_DEPENDS=	gphoto2.2:${PORTSDIR}/graphics/libgphoto2
+LIB_DEPENDS=	libgphoto2.so:${PORTSDIR}/graphics/libgphoto2
 
 USE_BZIP2=	yes
 USE_GNUSTEP=	yes
@@ -21,5 +21,4 @@ USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
 WRKSRC=		${WRKDIR}/CameraKit
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
