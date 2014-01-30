@@ -1,5 +1,5 @@
 # Created by: John Prather
-# $FreeBSD: net-im/pidgin-sipe/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/pidgin-sipe/Makefile 336957 2013-12-19 20:11:14Z swills $
 
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.13.1
@@ -21,8 +21,8 @@ USE_GNOME=	gtk20
 USE_LDCONFIG=	${PREFIX}/lib/pidgin
 PORTDOCS=	AUTHORS ChangeLog COPYING HACKING INSTALL NEWS README TODO VERSION
 
-CFLAGS+=	"-I/${LOCALBASE}/include"
-LIBS+=		"-L/${LOCALBASE}/lib"
+CFLAGS+=	-I/${LOCALBASE}/include
+LIBS+=		-L/${LOCALBASE}/lib -lgssapi_krb5
 
 OPTIONS_DEFINE=		OCS2005 KRB5 DOCS NLS
 OSC2005_DESC=		Message timeout for OCS2005
