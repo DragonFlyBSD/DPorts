@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice-i18n/Makefile 331614 2013-10-25 17:05:50Z jkim $
+# $FreeBSD: editors/libreoffice-i18n/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 .include "${.CURDIR}/../libreoffice/Makefile.common"
 UNIQUENAME=   ${PORTNAME}${PKGNAMESUFFIX}
