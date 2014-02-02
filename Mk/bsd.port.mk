@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.port.mk 341457 2014-01-27 21:23:49Z bapt $
+# $FreeBSD: Mk/bsd.port.mk 341646 2014-01-28 18:25:52Z tijl $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1317,6 +1317,7 @@ WITH_DEBUG=	yes
 # Reset value from bsd.own.mk.
 .if defined(WITH_DEBUG) && !defined(WITHOUT_DEBUG)
 STRIP=	#none
+MAKE_ENV+=	DONTSTRIP=yes
 .endif
 
 .include "${PORTSDIR}/Mk/bsd.options.mk"
@@ -5395,7 +5396,7 @@ actual-package-depends:
 
 package-recursive: package
 	@for dir in $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} package clean); \
+		(cd $$dir; ${MAKE} package-noinstall); \
 	done
 
 # Show missing dependencies
@@ -6488,7 +6489,8 @@ _PATCH_SEQ=		ask-license patch-message patch-depends pathfix-pre-patch dos2unix 
 _CONFIGURE_DEP=	patch
 _CONFIGURE_SEQ=	build-depends lib-depends configure-message run-autotools-fixup \
 				configure-autotools pre-configure pre-configure-script \
-				run-autotools do-configure post-configure post-configure-script
+				run-autotools patch-libtool do-configure post-configure \
+				post-configure-script
 _BUILD_DEP=		configure
 _BUILD_SEQ=		build-message pre-build pre-build-script do-build \
 				post-build post-build-script

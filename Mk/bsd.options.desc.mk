@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.options.desc.mk 341189 2014-01-26 14:34:24Z marino $
+# $FreeBSD: Mk/bsd.options.desc.mk 341780 2014-01-29 20:43:01Z riggs $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -292,6 +292,7 @@ MAD_DESC?=		MAD MP3 audio decoder support
 MAGICK_DESC?=		ImageMagick library support
 MANPAGES_DESC?=		Build and/or install manual pages
 MAPSERVER_DESC?=	Mapserver support
+MATE_DESC?=		MATE desktop environment support
 MATROSKA_DESC?=		Matroska container format support
 MDNSRESPONDER_DESC?=	Zeroconf support via mDNSResponder
 MIKMOD_DESC?=		MOD audio format support

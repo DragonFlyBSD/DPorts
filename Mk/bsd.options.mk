@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.options.mk 336596 2013-12-15 23:44:13Z bapt $
+# $FreeBSD: Mk/bsd.options.mk 341467 2014-01-27 22:53:24Z mat $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -107,10 +107,14 @@
 # ALL_TARGET INSTALL_TARGET USES DISTFILES PLIST_FILES PLIST_DIRS PLIST_DIRSTRY
 # EXTRA_PATCHES PATCHFILES PATCH_SITES CATEGORIES, defining ${opt}_${variable}
 # will add its content to the actual variable when the option is enabled.
+# Defining ${opt}_${variable}_OFF will add its content to the actual variable
+# when the option is disabled.
 #
 # For each of the depends target PKG EXTRACT PATCH FETCH BUILD LIB RUN,
 # defining ${opt}_${deptype}_DEPENDS will add its content to the actual
-# dependency when the option is enabled.
+# dependency when the option is enabled.  Defining
+# ${opt}_${deptype}_DEPENDS_OFF will add its content to the actual dependency
+# when the option is enabled. 
 
 ##
 # Set all the options available for the ports, beginning with the
@@ -416,6 +420,18 @@ CONFIGURE_ARGS+=	--without-${iopt}
 .    for configure in CONFIGURE CMAKE QMAKE
 .      if defined(${opt}_${configure}_OFF)
 ${configure}_ARGS+=	${${opt}_${configure}_OFF}
+.      endif
+.    endfor
+.    for flags in CFLAGS CPPFLAGS CXXFLAGS LDFLAGS CONFIGURE_ENV MAKE_ARGS \
+         MAKE_ENV ALL_TARGET INSTALL_TARGET USES DISTFILES PLIST_FILES \
+         PLIST_DIRS PLIST_DIRSTRY EXTRA_PATCHES PATCHFILES PATCH_SITES CATEGORIES
+.      if defined(${opt}_${flags}_OFF)
+${flags}+=	${${opt}_${flags}_OFF}
+.      endif
+.    endfor
+.    for deptype in PKG EXTRACT PATCH FETCH BUILD LIB RUN
+.      if defined(${opt}_${deptype}_DEPENDS_OFF)
+${deptype}_DEPENDS+=	${${opt}_${deptype}_DEPENDS_OFF}
 .      endif
 .    endfor
 .  endif

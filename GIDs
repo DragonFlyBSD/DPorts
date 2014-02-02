@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 337198 2013-12-22 16:25:58Z swills $
+# $FreeBSD: GIDs 341714 2014-01-29 11:33:02Z mm $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -193,6 +193,7 @@ riak:*:667:
 bnetd:*:700:
 bopm:*:717:
 openxpki:*:777:
+foreman_proxy:*:812:
 puppet:*:814:
 jenkins:*:818:
 openacs:*:820:

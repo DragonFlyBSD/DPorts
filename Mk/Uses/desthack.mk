@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/Uses/desthack.mk 341335 2014-01-27 08:14:30Z bapt $
+# $FreeBSD: Mk/Uses/desthack.mk 341779 2014-01-29 20:42:44Z mat $
 #
 # Handle gnu configure that does not properly support DESTDIR
 #
@@ -7,14 +7,14 @@
 #
 # Feature:	desthack
 # Usage:	USES=desthack
-# Valide ARGS:	none
+# Valid ARGS:	none
 #
 
 .if !defined(_INCLUDE_USES_DESTHACK_MK)
 _INCLUDE_USES_DESTHACK_MK=	yes
 
 .if defined(_desthack_ARGS)
-IGNORE=	USES=desthack valide args are none or 'la'
+IGNORE=	USES=desthack does not require args
 .endif
 
 GNU_CONFIGURE_PREFIX=	\$${${DESTDIRNAME}}${PREFIX}
