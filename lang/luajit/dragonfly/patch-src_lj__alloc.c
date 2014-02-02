@@ -1,12 +1,35 @@
 --- src/lj_alloc.c.orig	2013-06-03 19:00:00.000000000 +0000
 +++ src/lj_alloc.c
-@@ -188,7 +188,8 @@ static LJ_AINLINE void *CALL_MMAP(size_t
+@@ -188,6 +188,32 @@ static LJ_AINLINE void *CALL_MMAP(size_t
    return ptr;
  }
  
--#elif LJ_TARGET_OSX || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__) || defined(__sun__)
-+#elif LJ_TARGET_OSX || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
-+ || defined(__OpenBSD__) || defined(__sun__) || defined(__DragonFly__)
++#elif defined(__DragonFly__)
++
++#define MMAP_REGION_END		((uintptr_t)0x80000000)
++
++static LJ_AINLINE void *CALL_MMAP(size_t size)
++{
++  int olderr = errno;
++  /* Hint for next allocation. Doesn't need to be thread-safe. */
++  static uintptr_t alloc_hint = 0;
++  int retry = 0;
++  for (;;) {
++    void *p = mmap((void *)alloc_hint, size, MMAP_PROT, MMAP_FLAGS, -1, 0);
++    if ((uintptr_t)p >= 0 && (uintptr_t)p + size < MMAP_REGION_END) {
++      alloc_hint = (uintptr_t)p + size;
++      errno = olderr;
++      return p;
++    }
++    if (p != CMFAIL) munmap(p, size);
++    if (retry) break;
++    retry = 1;
++    alloc_hint = 0;
++  }
++  errno = olderr;
++  return CMFAIL;
++}
++
+ #elif LJ_TARGET_OSX || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__) || defined(__sun__)
  
  /* OSX and FreeBSD mmap() use a naive first-fit linear search.
- ** That's perfect for us. Except that -pagezero_size must be set for OSX,
