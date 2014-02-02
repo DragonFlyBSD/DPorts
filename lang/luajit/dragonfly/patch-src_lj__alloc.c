@@ -1,18 +1,19 @@
 --- src/lj_alloc.c.orig	2013-06-03 19:00:00.000000000 +0000
 +++ src/lj_alloc.c
-@@ -188,6 +188,32 @@ static LJ_AINLINE void *CALL_MMAP(size_t
+@@ -188,6 +188,33 @@ static LJ_AINLINE void *CALL_MMAP(size_t
    return ptr;
  }
  
 +#elif defined(__DragonFly__)
 +
++#define MMAP_REGION_START	((uintptr_t)0x1000)
 +#define MMAP_REGION_END		((uintptr_t)0x80000000)
 +
 +static LJ_AINLINE void *CALL_MMAP(size_t size)
 +{
 +  int olderr = errno;
 +  /* Hint for next allocation. Doesn't need to be thread-safe. */
-+  static uintptr_t alloc_hint = 0;
++  static uintptr_t alloc_hint = MMAP_REGION_START;
 +  int retry = 0;
 +  for (;;) {
 +    void *p = mmap((void *)alloc_hint, size, MMAP_PROT, MMAP_FLAGS, -1, 0);
@@ -24,7 +25,7 @@
 +    if (p != CMFAIL) munmap(p, size);
 +    if (retry) break;
 +    retry = 1;
-+    alloc_hint = 0;
++    alloc_hint += 0x100000;
 +  }
 +  errno = olderr;
 +  return CMFAIL;
