@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Tree-Binary/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tree-Binary/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Tree-Binary
 PORTVERSION=	1.05
@@ -16,17 +16,7 @@ LICENSE_COMB=	dual
 
 TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
-MAN3=		Tree::Binary.3 Tree::Binary::Search.3 \
-		Tree::Binary::Search::Node.3 \
-		Tree::Binary::Visitor::Base.3 \
-		Tree::Binary::Visitor::BreadthFirstTraversal.3 \
-		Tree::Binary::Visitor::InOrderTraversal.3 \
-		Tree::Binary::Visitor::PostOrderTraversal.3 \
-		Tree::Binary::Visitor::PreOrderTraversal.3 \
-		Tree::Binary::VisitorFactory.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
