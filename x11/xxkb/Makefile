@@ -1,8 +1,9 @@
 # Created by: Alexander Matey <matey@cis.ohio-state.edu>
-# $FreeBSD: x11/xxkb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: x11/xxkb/Makefile 341895 2014-01-30 22:32:45Z antoine $
 
 PORTNAME=	xxkb
 PORTVERSION=	1.11
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
@@ -23,7 +24,7 @@ OPTIONS_DEFINE=	LIBRSVG2 DOCS
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLIBRSVG2}
-LIB_DEPENDS=	rsvg-2:${PORTSDIR}/graphics/librsvg2
+LIB_DEPENDS+=	librsvg-2.so:${PORTSDIR}/graphics/librsvg2
 XMKMF_ARGS=	-DWITH_SVG_SUPPORT
 .endif
 
