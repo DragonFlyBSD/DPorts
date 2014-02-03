@@ -1,5 +1,5 @@
 # Created by: smace@FreeBSD.org
-# $FreeBSD: devel/libredblack/Makefile 336460 2013-12-14 17:09:34Z mva $
+# $FreeBSD: devel/libredblack/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libredblack
 PORTVERSION=	1.3
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library that provides the red-black balanced tree algorithm
 
 LICENSE=	GPLv2
