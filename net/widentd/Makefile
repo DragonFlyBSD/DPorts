@@ -1,5 +1,5 @@
 # Created by: Dirk-Willem van Gulik / dirkx@webweaving.org
-# $FreeBSD: net/widentd/Makefile 330870 2013-10-19 14:13:27Z tijl $
+# $FreeBSD: net/widentd/Makefile 341964 2014-01-31 09:45:54Z miwi $
 
 PORTNAME=	widentd
 PORTVERSION=	1.03
@@ -11,14 +11,12 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dirkx@webweaving.org
 COMMENT=	RFC1413 auth/identd daemon with fixed fake reply
 
-MAN8=		widentd.8
-MANCOMPRESSED=	yes
-PLIST_FILES=	sbin/widentd
+PLIST_FILES=	sbin/widentd \
+		man/man8/widentd.8.gz
 USE_RC_SUBR=	widentd
 
 MAKE_ENV+=	BINDIR="${PREFIX}/sbin" MANDIR="${PREFIX}/man/man"
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "powerpc"
