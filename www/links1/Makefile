@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/links1/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/links1/Makefile 341693 2014-01-29 07:59:19Z miwi $
 
 PORTNAME=	links
 PORTVERSION=	1.03
@@ -16,7 +16,4 @@ GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 CONFLICTS=	links-2*
 
-MAN1=		links.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
