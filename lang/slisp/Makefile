@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: lang/slisp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: lang/slisp/Makefile 342322 2014-02-02 16:02:32Z miwi $
 
 PORTNAME=	slisp
 PORTVERSION=	1.2
@@ -11,9 +11,8 @@ COMMENT=	A simple Lisp interpreter
 
 GNU_CONFIGURE=	yes
 
-MAN1=		${PORTNAME}.1
 INFO=		slisp
-PLIST_FILES=	bin/slisp
+PLIST_FILES=	bin/slisp \
+		man/man1/slisp.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
