@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/db47/Makefile 336664 2013-12-16 20:46:12Z mandree $
+# $FreeBSD: databases/db47/Makefile 342264 2014-02-02 10:25:49Z miwi $
 
 PORTNAME=	db47
 PORTVERSION=	4.7.25.4
@@ -45,18 +45,15 @@ LIBTOOLFILES=	${CONFIGURE_SCRIPT}
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 USE_LDCONFIG=	yes
 
-.if !defined(NOPORTDOCS)
 INSTALL_TARGET+=	install_docs docdir=${DOCSDIR}
 PORTDOCS=	*
-.endif
 
-NO_STAGE=	yes
 post-install:
 .for i in libdb libdb_cxx
-	${LN} -s -f ${PORTNAME}/${i}-${BDBVER}.so.0 ${PREFIX}/lib
-	${LN} -s -f ${i}-${BDBVER}.so.0 ${PREFIX}/lib/${i}-${BDBVER}.so
+	${LN} -s -f ${PORTNAME}/${i}-${BDBVER}.so.0 ${STAGEDIR}${PREFIX}/lib
+	${LN} -s -f ${i}-${BDBVER}.so.0  ${STAGEDIR}${PREFIX}/lib/${i}-${BDBVER}.so
 .endfor
-	cd ${PREFIX}/bin/${PORTNAME} ; \
+	cd  ${STAGEDIR}${PREFIX}/bin/${PORTNAME} ; \
 	for i in * ; do ${LN} -s -f ${PORTNAME}/$$i ../$$i-${BDBVER} ; done
 
 .include <bsd.port.mk>
