@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: dns/dualserver/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dualserver/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	dualserver
 PORTVERSION=	7.02
@@ -8,7 +8,7 @@ MASTER_SITES=	SF/dhcp-dns-server/Dual%20DHCP%20DNS%20Server/ \
 		http://rodrigo.osorio.free.fr/freebsd/distfiles/
 DISTNAME=	${PORTNAME}V${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Combined DHCP/DNS server for small LANs
 
 USE_DOS2UNIX=	yes
