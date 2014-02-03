@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-BaseCnv/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-BaseCnv/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	Math-BaseCnv
 PORTVERSION=	1.4.75
@@ -19,7 +19,4 @@ RUN_DEPENDS=	p5-Memoize>=0:${PORTSDIR}/devel/p5-Memoize
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::BaseCnv.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
