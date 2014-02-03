@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: databases/p5-Class-DBI-Plugin-Type/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-Plugin-Type/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Class-DBI-Plugin-Type
 PORTVERSION=	0.02
@@ -17,7 +17,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::DBI::Plugin::Type.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
