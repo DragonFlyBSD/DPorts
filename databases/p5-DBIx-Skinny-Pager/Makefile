@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-Pager/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Skinny-Pager/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DBIx-Skinny-Pager
 PORTVERSION=	0.11
@@ -22,13 +22,4 @@ TEST_DEPENDS=	p5-Test-Requires>=0:${PORTSDIR}/devel/p5-Test-Requires \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Skinny::Mixin::Pager.3 \
-	DBIx::Skinny::Mixin::SearchWithPager.3 \
-	DBIx::Skinny::Pager.3 \
-	DBIx::Skinny::Pager::Logic::Count.3 \
-	DBIx::Skinny::Pager::Logic::MySQLFoundRows.3 \
-	DBIx::Skinny::Pager::Logic::PlusOne.3 \
-	DBIx::Skinny::Pager::Page.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
