@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: ftp/wget/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/wget/Makefile 341551 2014-01-28 13:33:39Z miwi $
 
 PORTNAME=	wget
 DISTVERSION=	1.14
@@ -23,7 +23,6 @@ OPTIONS_DEFAULT=OPENSSL IDN
 
 PCRE_DESC=	Support Perl regular expressions in addition to POSIX
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
