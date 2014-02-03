@@ -1,5 +1,5 @@
 # Created by: asaddi@philosophysw.com
-# $FreeBSD: security/sha/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/sha/Makefile 342021 2014-01-31 16:47:48Z miwi $
 
 PORTNAME=	sha
 PORTVERSION=	1.0.4
@@ -10,10 +10,9 @@ MAINTAINER=	allan@saddi.com
 COMMENT=	Simple file hash program utilizing SHA-1, SHA-256, SHA-384, SHA-512
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=	gmake
 
-MAN1=		sha.1
-PLIST_FILES=	bin/sha
+PLIST_FILES=	bin/sha \
+		man/man1/sha.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
