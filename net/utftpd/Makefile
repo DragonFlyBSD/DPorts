@@ -1,5 +1,5 @@
 # Created by: andreas@FreeBSD.org
-# $FreeBSD: net/utftpd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/utftpd/Makefile 341965 2014-01-31 09:46:10Z miwi $
 
 PORTNAME=	utftpd
 PORTVERSION=	0.2.4
@@ -11,11 +11,6 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	secure tftpd server with fine grained access and revision control
 
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USES=		gmake
 
-MAN1=		utftp.1
-MAN5=		utftpd.conf.5
-MAN8=		utftpd.8 utftpd_make.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
