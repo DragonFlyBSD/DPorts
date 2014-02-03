@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: www/p5-PodToHTML/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-PodToHTML/Makefile 341734 2014-01-29 13:22:44Z miwi $
 
 PORTNAME=	PodToHTML
 PORTVERSION=	0.08
@@ -21,9 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		podtohtml.1
-MAN3=		Pod::HTML_Elements.3 \
-		Pod::Links.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
