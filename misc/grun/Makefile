@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: misc/grun/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/grun/Makefile 342326 2014-02-02 16:04:41Z miwi $
 
 PORTNAME=	grun
 PORTVERSION=	0.8.1
@@ -14,10 +14,8 @@ USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-testfile
 
-MAN1=		grun.1x
-
-PLIST_FILES=	bin/grun %%DATADIR%%/consfile %%DATADIR%%/gassoc
+PLIST_FILES=	bin/grun %%DATADIR%%/consfile %%DATADIR%%/gassoc \
+		man/man1/grun.1x.gz
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
