@@ -1,9 +1,9 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-caching-app-plugins/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-django-caching-app-plugins/Makefile 341733 2014-01-29 13:21:31Z miwi $
 
 PORTNAME=	django-caching-app-plugins
 PORTVERSION=	0.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://www.caomhin.org/ports/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,8 +17,9 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_hg>=0.4:${PORTSDIR}/devel/py-se
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-django
 
 WRKSRC=		${WRKDIR}/bkroeze-django-caching-app-plugins-tip
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
 
-NO_STAGE=	yes
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
 .include <bsd.port.mk>
