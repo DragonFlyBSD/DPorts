@@ -1,7 +1,7 @@
-# $FreeBSD: misc/freecode-submit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: misc/freecode-submit/Makefile 342054 2014-01-31 19:45:20Z cs $
 
 PORTNAME=	freecode-submit
-PORTVERSION=	2.6
+PORTVERSION=	2.7
 CATEGORIES=	misc
 MASTER_SITES=	http://www.c-s.li/ports/ \
 		http://www.catb.org/~esr/freecode-submit/
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.c-s.li/ports/ \
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Submission of updates to Freecode via its JSON API
 
-LICENSE=	BSD
+LICENSE=	BSD4CLAUSE
 
 USE_PYTHON=	yes
 NO_BUILD=	yes
