@@ -1,5 +1,5 @@
 # Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
-# $FreeBSD: databases/p5-Test-DatabaseRow/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Test-DatabaseRow/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Test-DatabaseRow
 PORTVERSION=	2.03
@@ -17,9 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::DatabaseRow.3 \
-		Test::DatabaseRow::Result.3 \
-		Test::DatabaseRow::Object.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
