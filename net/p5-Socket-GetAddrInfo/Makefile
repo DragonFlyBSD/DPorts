@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: net/p5-Socket-GetAddrInfo/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Socket-GetAddrInfo/Makefile 341948 2014-01-31 09:01:28Z miwi $
 
 PORTNAME=	Socket-GetAddrInfo
 PORTVERSION=	0.22
@@ -13,19 +13,10 @@ COMMENT=	RFC 2553's getaddrinfo and getnameinfo functions
 
 BUILD_DEPENDS=	p5-ExtUtils-CChecker>=0.06:${PORTSDIR}/devel/p5-ExtUtils-CChecker
 
-MAN1=		getaddrinfo.1 \
-		getnameinfo.1
-
-MAN3=		Socket::GetAddrInfo.3 \
-		Socket::GetAddrInfo::Emul.3 \
-		Socket::GetAddrInfo::Socket6api.3 \
-		Socket::GetAddrInfo::Strict.3
-
 USES=		perl5 shebangfix
 USE_PERL5=	modbuild
 SHEBANG_FILES=	bin/getaddrinfo bin/getnameinfo
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 # It only needs to compile stuff on perl older than 5.16.
