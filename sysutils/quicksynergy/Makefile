@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: sysutils/quicksynergy/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/quicksynergy/Makefile 342204 2014-02-01 19:02:12Z antoine $
 
 PORTNAME=	quicksynergy
 PORTVERSION=	0.9.0
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/Linux/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A graphical interface for easily configuring Synergy2
+COMMENT=	Graphical interface for easily configuring Synergy2
 
 BUILD_DEPENDS=	synergys:${PORTSDIR}/sysutils/synergy
 
@@ -22,5 +22,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	bin/quicksynergy \
 		share/locale/pt_BR/LC_MESSAGES/quicksynergy.mo
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
