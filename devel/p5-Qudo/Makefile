@@ -1,10 +1,10 @@
-# $FreeBSD: devel/p5-Qudo/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Qudo/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Qudo
 PORTVERSION=	0.0213
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	../../authors/id/N/NE/NEKOKAK
+MASTER_SITE_SUBDIR=	CPAN:NEKOKAK
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
@@ -21,12 +21,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Qudo.3 \
-	Qudo::Manager.3 \
-	Qudo::Manual::JA::Functions.3 \
-	Qudo::Manual::JA::Intro.3 \
-	Qudo::Manual::JA::Tutorial.3 \
-	Qudo::Worker.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
