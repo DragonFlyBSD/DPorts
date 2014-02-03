@@ -1,9 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-requests-oauthlib/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD: www/py-requests-oauthlib/Makefile 341731 2014-01-29 13:18:39Z miwi $
 
 PORTNAME=	requests-oauthlib
 PORTVERSION=	0.3.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -22,10 +22,10 @@ GH_TAGNAME=	v${PORTVERSION}
 GH_COMMIT=	0b1fe5c
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
