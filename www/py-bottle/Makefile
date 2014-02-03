@@ -1,8 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/py-bottle/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: www/py-bottle/Makefile 341745 2014-01-29 15:04:46Z miwi $
 
 PORTNAME=	bottle
 PORTVERSION=	0.11.6
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,8 +16,8 @@ LICENSE=	MIT
 # Python3 ready
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 320
