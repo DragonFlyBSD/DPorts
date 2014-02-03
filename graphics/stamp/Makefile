@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/stamp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/stamp/Makefile 342301 2014-02-02 14:41:42Z miwi $
 
 PORTNAME=	stamp
 PORTVERSION=	2.0.8
@@ -19,7 +19,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 USE_GNOME=	gtk12
 .endif
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's#/usr/local/share/stamp#${DATADIR}#' \
 		${WRKSRC}/configure
