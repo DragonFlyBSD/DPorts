@@ -1,5 +1,5 @@
 # Created by: Matthew Dillon <dillon@backplane.com>
-# $FreeBSD: java/jikes/Makefile 330460 2013-10-15 21:17:55Z eadler $
+# $FreeBSD: java/jikes/Makefile 342173 2014-02-01 15:38:50Z miwi $
 
 PORTNAME=	jikes
 PORTVERSION=	1.22
@@ -10,15 +10,11 @@ MASTER_SITES=	SF/${PORTNAME}/Jikes/${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java source to byte-code compiler made available by IBM
 
-MAN1=		jikes.1
-
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		iconv
+USES=		iconv gmake
 USE_BZIP2=	yes
 
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" LIBS="-L${LOCALBASE}/lib"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
