@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-Chart-Graph/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: graphics/p5-Chart-Graph/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Chart-Graph
 PORTVERSION=	3.2
@@ -18,13 +18,6 @@ RUN_DEPENDS=	gnuplot:${PORTSDIR}/math/gnuplot \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Chart::Graph.3 \
-	Chart::Graph::Gnuplot.3 \
-	Chart::Graph::Xmgrace.3 \
-	Chart::Graph::Xrt2d.3 \
-	Chart::Graph::Xrt3d.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE}," ${WRKSRC}/Makefile.PL
 
