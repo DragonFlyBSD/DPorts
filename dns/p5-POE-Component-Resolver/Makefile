@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: dns/p5-POE-Component-Resolver/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-POE-Component-Resolver/Makefile 342156 2014-02-01 14:42:45Z miwi $
 
 PORTNAME=	POE-Component-Resolver
 PORTVERSION=	0.921
@@ -21,10 +21,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Resolver.3 \
-		POE::Component::Resolver::Sidecar.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
