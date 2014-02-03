@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: textproc/libtext-wrapi18n-perl/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/libtext-wrapi18n-perl/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	libtext-wrapi18n-perl
 PORTVERSION=	0.06
@@ -18,9 +18,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Text::WrapI18N.3
-
-NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKSRC}.orig ${WRKSRC}
 
