@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: databases/p5-Class-DBI-DATA-Schema/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-DATA-Schema/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Class-DBI-DATA-Schema
 PORTVERSION=	1.00
@@ -17,7 +17,4 @@ BUILD_DEPENDS+=	p5-Test-Simple>=0:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Class::DBI::DATA::Schema.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
