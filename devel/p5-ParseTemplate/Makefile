@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-ParseTemplate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-ParseTemplate/Makefile 341980 2014-01-31 12:13:45Z miwi $
 
 PORTNAME=	ParseTemplate
 PORTVERSION=	3.08
@@ -16,9 +16,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parse::Template.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
