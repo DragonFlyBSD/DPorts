@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/p5-String-Similarity/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-String-Similarity/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	String-Similarity
 PORTVERSION=	1.04
@@ -13,7 +13,4 @@ COMMENT=	Perl module that calculates the similarity of two strings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::Similarity.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
