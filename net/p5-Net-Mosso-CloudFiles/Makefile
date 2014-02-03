@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 341934 2014-01-31 08:05:15Z miwi $
 
 PORTNAME=	Net-Mosso-CloudFiles
 PORTVERSION=	0.44
@@ -26,13 +26,5 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		Net::Mosso::CloudFiles.3 \
-		Net::Mosso::CloudFiles::Container.3 \
-		Net::Mosso::CloudFiles::Object.3
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
