@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/p5-Jcode/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-Jcode/Makefile 341610 2014-01-28 15:58:59Z miwi $
 
 PORTNAME=	Jcode
 PORTVERSION=	2.07
@@ -11,9 +11,6 @@ COMMENT=	Perl extension interface to convert Japanese text
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Jcode.3 Jcode::Nihongo.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
 .include <bsd.port.post.mk>
