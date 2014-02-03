@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/htable/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/htable/Makefile 341516 2014-01-28 08:37:45Z bapt $
 
 PORTNAME=	htable
 PORTVERSION=	1.2
@@ -10,18 +10,17 @@ MASTER_SITE_SUBDIR=	culot
 MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Lightweight implementation of hash tables in C
 
-USE_GMAKE=	yes
+USES=		gmake
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAN3=		htable.3
-PLIST_FILES=	include/htable.h
+PLIST_FILES=	include/htable.h \
+		man/man3/htable.3.gz
 
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/src/htable.h ${PREFIX}/include
-	${INSTALL_MAN} ${WRKSRC}/src/htable.3 ${MAN3PREFIX}/man/man3
+	${INSTALL_DATA} ${WRKSRC}/src/htable.h ${STAGEDIR}${PREFIX}/include
+	${INSTALL_MAN} ${WRKSRC}/src/htable.3 ${STAGEDIR}${MAN3PREFIX}/man/man3
 
 regression-test:
 	cd ${WRKSRC}/tst && ${GMAKE} test
