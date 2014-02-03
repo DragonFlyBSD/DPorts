@@ -1,5 +1,5 @@
 # Created by: David Barksdale <amatus@gnu.org>
-# $FreeBSD: www/libmicrohttpd/Makefile 337453 2013-12-25 20:16:44Z sunpoet $
+# $FreeBSD: www/libmicrohttpd/Makefile 341847 2014-01-30 15:31:46Z decke $
 
 PORTNAME=	libmicrohttpd
 PORTVERSION=	0.9.33
@@ -17,9 +17,13 @@ GNU_CONFIGURE=	yes
 MAKE_ARGS+=	pkgconfigdir=${PREFIX}/libdata/pkgconfig
 USE_LDCONFIG=	yes
 
-GNUTLS_LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MGNUTLS}
+LIB_DEPENDS+=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
 			libgnutls.so:${PORTSDIR}/security/gnutls
-GNUTLS_CONFIGURE_ARGS=	--with-gnutls=${LOCALBASE} --enable-https
+CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${LOCALBASE} --with-gnutls=${LOCALBASE} --enable-https=yes
+.endif
 
 INFO=		libmicrohttpd libmicrohttpd-tutorial
 
