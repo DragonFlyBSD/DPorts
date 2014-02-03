@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-SSH-Mechanize/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-SSH-Mechanize/Makefile 341934 2014-01-31 08:05:15Z miwi $
 
 PORTNAME=	Net-SSH-Mechanize
 PORTVERSION=	0.1.3
@@ -20,10 +20,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Net::SSH::Mechanize.3 \
-	Net::SSH::Mechanize::ConnectParams.3 \
-	Net::SSH::Mechanize::Multi.3 \
-	Net::SSH::Mechanize::Session.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
