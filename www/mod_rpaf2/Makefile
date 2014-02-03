@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_rpaf2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_rpaf2/Makefile 341554 2014-01-28 13:34:27Z miwi $
 
 PORTNAME=	mod_rpaf2
 PORTVERSION=	0.6
@@ -11,7 +11,6 @@ DISTNAME=	mod_rpaf-${PORTVERSION}
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Make proxied requests appear with client IP
 
-
 USE_APACHE=	22+
 AP_FAST_BUILD=	yes
 AP_GENPLIST=	yes
@@ -19,5 +18,4 @@ SHORTMODNAME=	rpaf
 
 SRC_FILE=	mod_rpaf-2.0.c
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
