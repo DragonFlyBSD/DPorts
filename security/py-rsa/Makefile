@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-rsa/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: security/py-rsa/Makefile 342146 2014-02-01 14:36:14Z koobs $
 
 PORTNAME=	rsa
 PORTVERSION=	3.1.2
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,9 +18,8 @@ TEST_DEPENDS:=	${PYTHON_PKGNAMEPREFIX}unittest2>0:${PORTSDIR}/devel/py-unittest2
 		${RUN_DEPENDS}
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
-
-NO_STAGE=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} run_tests.py
