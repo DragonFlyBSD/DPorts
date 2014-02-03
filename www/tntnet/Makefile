@@ -1,19 +1,18 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: www/tntnet/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/tntnet/Makefile 341460 2014-01-27 21:50:45Z nox $
 
 PORTNAME=	tntnet
-PORTVERSION=	2.1
-PORTREVISION=	1
+PORTVERSION=	2.2.1
 CATEGORIES=	www devel
 MASTER_SITES=	http://www.tntnet.org/download/
 
 MAINTAINER=	nox@FreeBSD.org
 COMMENT=	Webapplicationserver for C++
 
-LIB_DEPENDS=	cxxtools:${PORTSDIR}/devel/cxxtools
+LIB_DEPENDS=	libcxxtools.so:${PORTSDIR}/devel/cxxtools
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 
-USES=		iconv
+USES=		iconv pkgconfig pathfix
 USE_CSTD=	gnu89
 PATCH_STRIP=	-p1
 GNU_CONFIGURE=	yes
@@ -29,26 +28,10 @@ LIB_DEPENDS+=	gnutls:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=	--with-ssl=openssl
 .endif
 
-MAN1=		ecppc.1 ecppl.1 ecppll.1 tntnet-config.1
-MAN7=		ecpp.7 tntnet.conf.7 tntnet.properties.7
-MAN8=		tntnet.8
-
 USERS=		www
 GROUPS=		www
 
-NO_STAGE=	yes
 post-configure:
 	${REINPLACE_CMD} 's/^\(#define[[:space:]]*HAVE_SENDFILE[[:space:]]*\).*/\1\0/' ${WRKSRC}/framework/common/config.h
-
-post-install:
-	@if [ ! -f ${ETCDIR}/tntnet.conf ]; then \
-	    ${CP} -p ${ETCDIR}/tntnet.conf.sample ${ETCDIR}/tntnet.conf ; \
-	fi
-	@if [ ! -f ${ETCDIR}/mime.conf ]; then \
-	    ${CP} -p ${ETCDIR}/mime.conf.sample ${ETCDIR}/mime.conf ; \
-	fi
-	@if [ ! -f ${ETCDIR}/tntnet.properties ]; then \
-	    ${CP} -p ${ETCDIR}/tntnet.properties.sample ${ETCDIR}/tntnet.properties ; \
-	fi
 
 .include <bsd.port.mk>
