@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-DBHResolver/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-DBHResolver/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBIx-DBHResolver
 PORTVERSION=	0.17
@@ -27,13 +27,4 @@ TEST_DEPENDS=	p5-List-MoreUtils>=0:${PORTSDIR}/lang/p5-List-MoreUtils \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::DBHResolver.3 \
-	DBIx::DBHResolver::Strategy.3 \
-	DBIx::DBHResolver::Strategy::Key.3 \
-	DBIx::DBHResolver::Strategy::List.3 \
-	DBIx::DBHResolver::Strategy::Range.3 \
-	DBIx::DBHResolver::Strategy::Remainder.3 \
-	DBIx::DBHResolver::Strategy::RoundRobin.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
