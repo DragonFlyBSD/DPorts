@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2-Plugin-Web-MobileAgent/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Amon2-Plugin-Web-MobileAgent/Makefile 341815 2014-01-30 08:51:45Z miwi $
 
 PORTNAME=	Amon2-Plugin-Web-MobileAgent
 PORTVERSION=	0.09
@@ -32,9 +32,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Amon2::Plugin::Web::MobileAgent.3 \
-	Amon2::Plugin::Web::MobileCharset.3 \
-	Amon2::Setup::Flavor::MobileJP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
