@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-Log-Any-Adapter-Syslog/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Any-Adapter-Syslog/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Log-Any-Adapter-Syslog
 PORTVERSION=	1.5
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Log::Any::Adapter::Syslog.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
