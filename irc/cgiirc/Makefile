@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/cgiirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/cgiirc/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	cgiirc
 PORTVERSION=	0.5.10
@@ -7,7 +7,7 @@ CATEGORIES=	irc www perl5
 MASTER_SITES=	http://cgiirc.org/releases/ \
 		SF/${PORTNAME}/cgi-irc/${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	IRC web gateway written in Perl
 
 LICENSE=	GPLv2
