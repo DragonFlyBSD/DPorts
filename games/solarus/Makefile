@@ -1,7 +1,7 @@
-# $FreeBSD: games/solarus/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD: games/solarus/Makefile 342367 2014-02-02 21:49:27Z eadler $
 
 PORTNAME=	solarus
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	games
 MASTER_SITES=	http://www.solarus-games.org/downloads/solarus/
 DISTNAME=	solarus-${PORTVERSION}-src
