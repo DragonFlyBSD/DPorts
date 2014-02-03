@@ -1,13 +1,16 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: sysutils/py-ezjailremote/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/py-ezjailremote/Makefile 342102 2014-02-01 08:58:10Z koobs $
 
 PORTNAME=	ezjailremote
 PORTVERSION=	0.2.2
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Remote control and convenience wrapper for ezjail
+
+LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	ezjail-admin:${PORTSDIR}/sysutils/ezjail \
 		${PYTHON_PKGNAMEPREFIX}fabric>0:${PORTSDIR}/devel/py-fabric
@@ -18,7 +21,7 @@ GH_PROJECT=	ezjail-remote
 GH_COMMIT=	9ee5f8b
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
