@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Devel-KYTProf
 PORTVERSION=	0.05
@@ -18,9 +18,4 @@ TEST_DEPENDS=	p5-DBI>0:${PORTSDIR}/databases/p5-DBI \
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	Devel::KYTProf.3 \
-	Devel::KYTProf::Logger::LTSV.3 \
-	Devel::README.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
