@@ -1,9 +1,9 @@
 # Created by: David K. Gerry
-# $FreeBSD: accessibility/yasr/Makefile 339617 2014-01-13 18:21:04Z marino $
+# $FreeBSD: accessibility/yasr/Makefile 341894 2014-01-30 22:20:49Z antoine $
 
 PORTNAME=	yasr
 PORTVERSION=	0.6.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	accessibility
 MASTER_SITES=	SF
 
@@ -24,6 +24,7 @@ OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
 
 PLIST_FILES=	bin/yasr \
+		man/man1/yasr.1.gz \
 		%%DATADIR%%/yasr.conf \
 		%%NLS%%share/locale/es/LC_MESSAGES/yasr.mo \
 		%%NLS%%share/locale/fr/LC_MESSAGES/yasr.mo
