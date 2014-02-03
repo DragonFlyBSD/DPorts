@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Statistics-Distributions/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Distributions/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Statistics-Distributions
 PORTVERSION=	1.02
@@ -13,7 +13,4 @@ COMMENT=	Perl module that calculates critical values of common statistical distr
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Statistics::Distributions.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
