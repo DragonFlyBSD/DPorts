@@ -1,5 +1,5 @@
 # Created by: Andrei V. Shetuhin <reki@reki.ru>
-# $FreeBSD: converters/p5-String-SetUTF8/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-String-SetUTF8/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	String-SetUTF8
 PORTVERSION=	1.00
@@ -13,7 +13,4 @@ COMMENT=	Perl module to manipulate internal UTF-8 flag on strings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		String::SetUTF8.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
