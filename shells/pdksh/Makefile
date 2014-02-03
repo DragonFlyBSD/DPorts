@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: shells/pdksh/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: shells/pdksh/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	pdksh
 PORTVERSION=	5.2.14p2
@@ -14,7 +14,7 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	${DISTNAME}-patches.1 ${DISTNAME}-patches.2
 PATCH_DIST_STRIP=	-p2
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	The Public Domain Korn Shell
 
 LICENSE=	BSD
