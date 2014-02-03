@@ -1,8 +1,9 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: www/py-scrapy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-scrapy/Makefile 341733 2014-01-29 13:21:31Z miwi $
 
 PORTNAME=	Scrapy
 PORTVERSION=	0.16.5
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,13 +19,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.0:${PORTSDIR}/devel/py-lxml \
 
 USE_PYTHON=	2
 USES=		twisted:run
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONS_DEFINE=	SSL
 OPTIONS_DEFAULT=SSL
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
