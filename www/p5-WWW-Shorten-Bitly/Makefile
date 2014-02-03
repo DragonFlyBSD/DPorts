@@ -1,5 +1,5 @@
 # Created by: Masafumi NAKANE <max@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Shorten-Bitly/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-Shorten-Bitly/Makefile 341691 2014-01-29 07:59:00Z miwi $
 
 PORTNAME=	WWW-Shorten-Bitly
 PORTVERSION=	1.17
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		bitly_url.1
-MAN3=		WWW::Shorten::Bitly.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
