@@ -1,7 +1,7 @@
-# $FreeBSD: devel/ruby-build/Makefile 334372 2013-11-20 03:14:56Z sunpoet $
+# $FreeBSD: devel/ruby-build/Makefile 341909 2014-01-31 04:48:11Z swills $
 
 PORTNAME=	ruby-build
-PORTVERSION=	20131115
+PORTVERSION=	20140110.1
 CATEGORIES=	devel ruby
 MASTER_SITES=	GH
 
@@ -24,7 +24,7 @@ RBENV_RUN_DEPENDS=	rbenv:${PORTSDIR}/devel/rbenv
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	sstephenson
-GH_COMMIT=	49c1070
+GH_COMMIT=	9cd77be
 GH_TAGNAME=	v${PORTVERSION}
 
 NO_BUILD=	yes
