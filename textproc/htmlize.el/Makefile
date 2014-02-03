@@ -1,5 +1,5 @@
 # Created by: Marc van Woerkom <marc.vanwoerkom@fernuni-hagen.de>
-# $FreeBSD: textproc/htmlize.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/htmlize.el/Makefile 341615 2014-01-28 16:07:37Z mat $
 
 PORTNAME=	htmlize.el
 PORTVERSION=	1.39
@@ -7,8 +7,8 @@ PORTREVISION=	1
 CATEGORIES=	textproc elisp
 MASTER_SITES=	http://fly.srk.fer.hr/~hniksic/emacs/
 DISTNAME=	${PORTNAME}.cgi
-DIST_SUBDIR=	repacked
 EXTRACT_SUFX=
+DIST_SUBDIR=	repacked
 
 MAINTAINER=	dryice@FreeBSD.org
 COMMENT=	Emacs major mode to create HTML files from Emacs buffers (in colour!)
@@ -25,14 +25,10 @@ PLIST_FILES=	${EMACS_SITE_LISPDIR}/htmlize.el \
 
 LISPDIR=	${PREFIX}/${EMACS_SITE_LISPDIR}
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC}; ${EMACS_CMD} -batch -q -f batch-byte-compile htmlize.el
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/htmlize.* ${LISPDIR}
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	${INSTALL_DATA} ${WRKSRC}/htmlize.* ${STAGEDIR}${LISPDIR}
 
 .include <bsd.port.mk>
