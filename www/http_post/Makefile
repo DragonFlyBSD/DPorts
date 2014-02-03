@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: www/http_post/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/http_post/Makefile 341703 2014-01-29 09:17:28Z miwi $
 
 PORTNAME=	http_post
 PORTVERSION=	1.0.20110118
@@ -13,13 +13,11 @@ COMMENT=	Do a POST operaion and Dump http-contents to stdout
 WRKSRC=		${WRKDIR}/http_post
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 
-MAN1=		http_post.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/http_post
+PLIST_FILES=	bin/http_post \
+		man/man1/http_post.1.gz
 
 .ifndef NO_OPENSSL
 USE_OPENSSL=	yes
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
