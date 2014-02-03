@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Authen-DecHpwd/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-DecHpwd/Makefile 342004 2014-01-31 15:24:05Z miwi $
 
 PORTNAME=	Authen-DecHpwd
 PORTVERSION=	2.006
@@ -19,7 +19,4 @@ LICENSE=	GPLv2
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Authen::DecHpwd.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
