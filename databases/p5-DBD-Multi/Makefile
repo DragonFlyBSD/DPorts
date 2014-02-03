@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: databases/p5-DBD-Multi/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBD-Multi/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBD-Multi
 PORTVERSION=	0.16
@@ -27,7 +27,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=1.09:${PORTSDIR}/databases/p5-DBD-SQLite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBD::Multi.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
