@@ -1,5 +1,5 @@
 # Created by: pixel
-# $FreeBSD: emulators/libdsk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: emulators/libdsk/Makefile 342168 2014-02-01 15:19:23Z miwi $
 
 PORTNAME=	libdsk
 PORTVERSION=	1.2.1
@@ -13,11 +13,4 @@ COMMENT=	Enables access to disks and disk images; also via serial line
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
-MAN1=	apriboot.1 dskdump.1 dskform.1 dskid.1 dskscan.1 dsktrans.1\
-	dskutil.1 md3serial.1
-MAN5=	libdskrc.5
-
-NO_MANCOMPRESSED=yes
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
