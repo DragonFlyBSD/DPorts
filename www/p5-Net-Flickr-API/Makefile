@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-Net-Flickr-API/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Net-Flickr-API/Makefile 341705 2014-01-29 09:17:44Z miwi $
 
 PORTNAME=	Net-Flickr-API
 PORTVERSION=	1.7
@@ -23,7 +23,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Net::Flickr::API.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
