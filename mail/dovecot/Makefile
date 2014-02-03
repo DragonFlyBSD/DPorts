@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dominic.marks@btinternet.com>
-# $FreeBSD: mail/dovecot/Makefile 339260 2014-01-09 15:51:57Z mat $
+# $FreeBSD: mail/dovecot/Makefile 341892 2014-01-30 22:05:06Z pawel $
 
 PORTNAME=	dovecot
 PORTVERSION=	1.2.17
@@ -107,6 +107,7 @@ DOCS+=			README.managesieve
 #
 .if ${PORT_OPTIONS:MGSSAPI}
 CONFIGURE_ARGS+=	--with-gssapi
+LDFLAGS+=		-lgssapi_krb5
 .else
 CONFIGURE_ARGS+=	--without-gssapi
 .endif
