@@ -1,9 +1,8 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/libvorbis/Makefile 336736 2013-12-17 16:01:38Z naddy $
+# $FreeBSD: audio/libvorbis/Makefile 341604 2014-01-28 15:52:29Z naddy $
 
 PORTNAME=	libvorbis
-PORTVERSION=	1.3.3
-PORTREVISION=	1
+PORTVERSION=	1.3.4
 PORTEPOCH=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
