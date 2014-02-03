@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: databases/p5-ORLite/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-ORLite/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	ORLite
 PORTVERSION=	1.98
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Test-Script>=1.06:${PORTSDIR}/devel/p5-Test-Script
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	ORLite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
