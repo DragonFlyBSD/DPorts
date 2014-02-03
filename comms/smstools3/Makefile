@@ -1,9 +1,9 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/smstools3/Makefile 331281 2013-10-22 14:54:01Z madpilot $
+# $FreeBSD: comms/smstools3/Makefile 341822 2014-01-30 09:14:15Z madpilot $
 
 PORTNAME=	smstools
 PORTVERSION=	3.1.15
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	http://smstools3.kekekasvi.com/packages/
 DISTNAME=	smstools3-${PORTVERSION}
