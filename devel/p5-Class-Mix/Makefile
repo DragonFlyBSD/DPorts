@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Class-Mix/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Mix/Makefile 342002 2014-01-31 15:23:29Z miwi $
 
 PORTNAME=	Class-Mix
 PORTVERSION=	0.005
@@ -21,7 +21,4 @@ RUN_DEPENDS=	p5-parent>=0:${PORTSDIR}/devel/p5-parent \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Class::Mix.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
