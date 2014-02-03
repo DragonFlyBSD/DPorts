@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/jack_mixer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/jack_mixer/Makefile 341827 2014-01-30 09:45:42Z gahr $
 
 PORTNAME=	jack_mixer
 PORTVERSION=	9
@@ -16,7 +16,6 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/fpconst.py:${PORTSDIR}/math/py-fpconst \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		pkgconfig
-NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gconf2
 GCONF_SCHEMAS=	jack_mixer.schemas
