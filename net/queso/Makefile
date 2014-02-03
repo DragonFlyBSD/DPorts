@@ -1,5 +1,5 @@
 # Created by: Wu Ching-hong <woju@freebsd.ee.ntu.edu.tw>
-# $FreeBSD: net/queso/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/queso/Makefile 342040 2014-01-31 17:07:01Z antoine $
 
 PORTNAME=	queso
 PORTVERSION=	980922
@@ -16,9 +16,6 @@ OPTIONS_DEFINE=	DOCS
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-O2 -pipe|| ; \
@@ -26,11 +23,9 @@ post-patch:
 	@${LN} -sf queso.conf ${WRKSRC}/queso.conf.sample
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} queso ${PREFIX}/sbin)
-	(cd ${WRKSRC} && ${INSTALL_DATA} queso.conf.sample ${PREFIX}/etc)
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC} && ${INSTALL_DATA} Documentation.txt ${DOCSDIR})
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/queso ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/queso.conf.sample ${STAGEDIR}${PREFIX}/etc
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Documentation.txt ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
