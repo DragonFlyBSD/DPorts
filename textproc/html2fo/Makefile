@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/html2fo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/html2fo/Makefile 341602 2014-01-28 15:49:30Z mat $
 
 PORTNAME=	html2fo
 PORTVERSION=	0.4.2
@@ -14,8 +14,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/html2fo ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/html2fo ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
