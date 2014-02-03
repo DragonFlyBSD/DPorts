@@ -1,5 +1,5 @@
 # Created by: Denis Podolskiy <bytestore@yandex.ru>
-# $FreeBSD: graphics/libjpeg-turbo/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/libjpeg-turbo/Makefile 342325 2014-02-02 16:04:24Z miwi $
 
 PORTNAME=	libjpeg-turbo
 PORTVERSION=	1.3.0
@@ -19,7 +19,6 @@ CONFIGURE_ARGS=	--with-jpeg8
 USE_LDCONFIG=	yes
 ALL_TARGET=	test
 
-MAN1=		cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1
 PLIST_SUB=	SOVERSION=${SOVERSION}
 PORTDOCS=	*
 PORTEXAMPLES=	*
@@ -30,7 +29,6 @@ SOVERSION=	11
 OPTIONS_DEFINE=	PIC
 PIC_DESC=	Static library with PIC (required for VirtualGL)
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPIC}
