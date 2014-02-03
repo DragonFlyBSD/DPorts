@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/clpbar/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/clpbar/Makefile 341855 2014-01-30 16:05:12Z miwi $
 
 PORTNAME=	clpbar
 PORTVERSION=	1.11.1
@@ -14,8 +14,7 @@ WRKSRC=		${WRKDIR}/bar-${PORTVERSION}
 GNU_CONFIGURE=	yes
 MAKE_ARGS+=	CFLAGS+="${CFLAGS}"
 
-MAN1=		bar.1
-PLIST_FILES=	bin/bar
+PLIST_FILES=	bin/bar \
+		man/man1/bar.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
