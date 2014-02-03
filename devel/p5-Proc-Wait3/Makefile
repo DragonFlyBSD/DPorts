@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Proc-Wait3/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Proc-Wait3/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Proc-Wait3
 PORTVERSION=	0.04
@@ -14,7 +14,4 @@ COMMENT=	Perl extension for wait3 system call
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Proc::Wait3.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
