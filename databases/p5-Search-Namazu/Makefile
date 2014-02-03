@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: databases/p5-Search-Namazu/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/p5-Search-Namazu/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Search-Namazu
 PORTVERSION=	0.96
@@ -16,7 +16,4 @@ LIB_DEPENDS=	libnmz.so:${PORTSDIR}/databases/namazu2
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Search::Namazu.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
