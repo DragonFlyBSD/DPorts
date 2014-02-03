@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Hash-MultiValue/Makefile 328798 2013-09-30 14:43:41Z sunpoet $
+# $FreeBSD: devel/p5-Hash-MultiValue/Makefile 341614 2014-01-28 16:01:40Z miwi $
 
 PORTNAME=	Hash-MultiValue
 PORTVERSION=	0.15
@@ -11,10 +11,7 @@ COMMENT=	Perl extension to store multiple values per key
 
 TEST_DEPENDS=	p5-UNIVERSAL-ref>0:${PORTSDIR}/devel/p5-UNIVERSAL-ref
 
-NO_STAGE=	yes
 USES=	perl5
 USE_PERL5=	configure
-
-MAN3=	Hash::MultiValue.3
 
 .include <bsd.port.mk>
