@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Clone/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Clone/Makefile 342200 2014-02-01 18:34:35Z miwi $
 
 PORTNAME=	Clone
 PORTVERSION=	0.35
@@ -12,9 +12,6 @@ COMMENT=	Clone - recursively copy Perl datatypes
 USES=		perl5
 USE_PERL5=	patch configure
 
-MAN3=		Clone.3
-
-NO_STAGE=	yes
 post-patch:
 	${PERL} -pi -e 'm.OPTIMIZE.&&s,.,,sg' ${WRKSRC}/Makefile.PL
 
