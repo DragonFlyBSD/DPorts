@@ -1,5 +1,5 @@
 # Created by: Jos Backus <josb@cncdsl.com>
-# $FreeBSD: textproc/gpp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/gpp/Makefile 341484 2014-01-27 23:49:28Z mat $
 
 PORTNAME=	gpp
 PORTVERSION=	2.24
@@ -12,7 +12,6 @@ COMMENT=	The Generic Preprocessor
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=		gpp.1
+PLIST_FILES=	bin/gpp man/man1/gpp.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
