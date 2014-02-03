@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-CLI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-Handler-CLI/Makefile 341747 2014-01-29 15:13:47Z miwi $
 
 PORTNAME=	Plack-Handler-CLI
 PORTVERSION=	0.05
@@ -23,7 +23,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Plack::Handler::CLI.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
