@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Class-Tom/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Tom/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Class-Tom
 PORTVERSION=	3.02
@@ -18,7 +18,4 @@ RUN_DEPENDS=	p5-Devel-Symdump>=0:${PORTSDIR}/devel/p5-Devel-Symdump
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Tom.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
