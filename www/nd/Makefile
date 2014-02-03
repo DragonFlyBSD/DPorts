@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz+nd@i2.informatik.rwth-aachen.de>
-# $FreeBSD: www/nd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/nd/Makefile 341547 2014-01-28 13:32:30Z miwi $
 
 PORTNAME=	nd
 PORTVERSION=	0.8.2
@@ -13,8 +13,7 @@ LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
 
-MAN1=		nd.1
-PLIST_FILES=	bin/nd
+PLIST_FILES=	bin/nd \
+		man/man1/nd.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
