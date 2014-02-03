@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: finance/p5-Finance-YahooQuote/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Finance-YahooQuote/Makefile 342154 2014-02-01 14:42:18Z miwi $
 
 PORTNAME=	Finance-YahooQuote
 PORTVERSION=	0.24
@@ -17,8 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		yahooquote.1
-MAN3=		Finance::YahooQuote.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
