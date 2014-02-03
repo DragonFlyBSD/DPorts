@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-LockedFile/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-LockedFile/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	IO-LockedFile
 PORTVERSION=	0.23
@@ -13,8 +13,4 @@ COMMENT=	IO::LockedFile - supply object methods for locking files
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	IO::LockedFile.3 \
-	IO::LockedFile::Flock.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
