@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-Thumbnail/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: net/p5-Net-Amazon-Thumbnail/Makefile 341963 2014-01-31 09:45:20Z miwi $
 
 PORTNAME=	Net-Amazon-Thumbnail
 PORTVERSION=	0.06
@@ -21,11 +21,5 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
-
-MAN3=		Net::Amazon::Thumbnail.3
-
-NO_STAGE=	yes
-post-install:
-		@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
