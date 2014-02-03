@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Web-Query/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Web-Query/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	Web-Query
 PORTVERSION=	0.17
@@ -19,9 +19,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Web::Query.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
