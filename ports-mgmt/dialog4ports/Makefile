@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 332208 2013-10-31 07:49:27Z bapt $
+# $FreeBSD: ports-mgmt/dialog4ports/Makefile 341617 2014-01-28 16:24:00Z mat $
 
 PORTNAME=	dialog4ports
 PORTVERSION=	0.1.5
@@ -15,6 +15,8 @@ MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT?=	Console Interface to configure ports
+
+LICENSE=	BSD2CLAUSE
 
 USES=		uidfix
 
