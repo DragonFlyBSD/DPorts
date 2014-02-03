@@ -1,8 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sea-defender/Makefile 336634 2013-12-16 13:15:59Z amdmi3 $
+# $FreeBSD: games/sea-defender/Makefile 341657 2014-01-28 21:21:09Z nemysis $
 
 PORTNAME=	sea-defender
 PORTVERSION=	0.9
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/:DEFAULT,icon \
 		SF/nemysisfreebsdp/:icon
@@ -15,7 +16,7 @@ COMMENT=	Simple missile command clone
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libglfw.a:${PORTSDIR}/graphics/glfw
+BUILD_DEPENDS=	${LOCALBASE}/lib/libglfw.a:${PORTSDIR}/graphics/glfw2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	snoutmate
