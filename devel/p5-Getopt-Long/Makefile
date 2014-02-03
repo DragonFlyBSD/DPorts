@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Getopt-Long/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Getopt-Long/Makefile 341624 2014-01-28 16:45:45Z miwi $
 
 PORTNAME=	Getopt-Long
 PORTVERSION=	2.39
@@ -13,7 +13,4 @@ COMMENT=	Perl module for extended processing of command line options
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Getopt::Long.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
