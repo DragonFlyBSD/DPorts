@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-StackTrace-WithLexicals/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-StackTrace-WithLexicals/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Devel-StackTrace-WithLexicals
 PORTVERSION=	0.10
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Devel::StackTrace::WithLexicals.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
