@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libklel/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/libklel/Makefile 342003 2014-01-31 15:23:50Z miwi $
 
 PORTNAME=	libklel
 PORTVERSION=	1.1.0
@@ -17,8 +17,4 @@ USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=--with-pcre=${LOCALBASE}
 
-MAN1=		klel-expr.1
-MAN3=		klelapi.3 klellang.3 klelstdlib.3 kleltut.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
