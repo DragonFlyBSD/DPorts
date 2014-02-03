@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: security/p5-String-MkPasswd/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-String-MkPasswd/Makefile 342155 2014-02-01 14:42:33Z miwi $
 
 PORTNAME=	String-MkPasswd
 PORTVERSION=	0.04
@@ -14,8 +14,4 @@ COMMENT=	A random password generator
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		mkpasswd.pl.1
-MAN3=		String::MkPasswd.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
