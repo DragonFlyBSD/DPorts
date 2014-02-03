@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net-im/p5-Net-NetSend/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/p5-Net-NetSend/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	Net-NetSend
 PORTVERSION=	0.12
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for sending Windows Popup Messages
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::NetSend.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
