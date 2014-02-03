@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero
-# $FreeBSD: www/p5-CGI-FormBuilder/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-FormBuilder/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	CGI-FormBuilder
 PORTVERSION=	3.0800
@@ -27,24 +27,6 @@ CGI_FAST_TEMPLATE_DESC=	CGI::FastTemplate support
 CGI_SSI_DESC=	CGI::SSI support
 CGI_SESSION_DESC=	CGI::Session support
 
-MAN3=	CGI::FormBuilder.3 \
-	CGI::FormBuilder::Field.3 \
-	CGI::FormBuilder::Messages.3 \
-	CGI::FormBuilder::Multi.3 \
-	CGI::FormBuilder::Source.3 \
-	CGI::FormBuilder::Source::File.3 \
-	CGI::FormBuilder::Template.3 \
-	CGI::FormBuilder::Template::Builtin.3 \
-	CGI::FormBuilder::Template::CGI_SSI.3 \
-	CGI::FormBuilder::Template::Div.3 \
-	CGI::FormBuilder::Template::Fast.3 \
-	CGI::FormBuilder::Template::HTML.3 \
-	CGI::FormBuilder::Template::TT2.3 \
-	CGI::FormBuilder::Template::Text.3 \
-	CGI::FormBuilder::Test.3 \
-	CGI::FormBuilder::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTT}
