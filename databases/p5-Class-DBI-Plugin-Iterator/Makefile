@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Class-DBI-Plugin-Iterator/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Class-DBI-Plugin-Iterator/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Class-DBI-Plugin-Iterator
 PORTVERSION=	0.13
@@ -15,8 +15,5 @@ TEST_DEPENDS=	p5-DBD-SQLite>=1.27:${PORTSDIR}/databases/p5-DBD-SQLite \
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Class::DBI::Plugin::Iterator.3 \
-		Class::DBI::Plugin::Iterator::Nihongo.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
