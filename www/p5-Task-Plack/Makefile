@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Task-Plack/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Task-Plack/Makefile 341688 2014-01-29 07:58:06Z miwi $
 
 PORTNAME=	Task-Plack
 PORTVERSION=	0.25
@@ -12,8 +12,6 @@ COMMENT=	Perl module bundle for Plack
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=	Task::Plack.3
 
 OPTIONS_DEFINE=	FASTCGI STACKTRACE HANDLEIO CORE SERVER EXTRASRV MIDDLE \
 		EXTRAMID TOOLS CATALYST SQUATTING CGIAPP
@@ -33,7 +31,6 @@ SQUATTING_DESC=		Squatting::On
 CGIAPP_DESC=		CGI::Application::PSGI
 #OPTIONS:=${OPTIONS:C/off/on/g}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFASTCGI}
