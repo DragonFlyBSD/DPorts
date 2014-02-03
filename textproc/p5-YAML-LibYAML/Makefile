@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: textproc/p5-YAML-LibYAML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-YAML-LibYAML/Makefile 341634 2014-01-28 16:47:39Z miwi $
 
 PORTNAME=	YAML-LibYAML
 PORTVERSION=	0.41
@@ -19,8 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		YAML::XS::LibYAML.3 \
-		YAML::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
