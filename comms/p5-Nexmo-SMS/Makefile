@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: comms/p5-Nexmo-SMS/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/p5-Nexmo-SMS/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	Nexmo-SMS
 PORTVERSION=	0.06
@@ -22,14 +22,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.22:${PORTSDIR}/devel/p5-Test-Pod \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Nexmo::SMS.3 \
-		Nexmo::SMS::BinaryMessage.3 \
-		Nexmo::SMS::GetBalance.3 \
-		Nexmo::SMS::MockLWP.3 \
-		Nexmo::SMS::Response.3 \
-		Nexmo::SMS::Response::Message.3 \
-		Nexmo::SMS::TextMessage.3 \
-		Nexmo::SMS::WAPPushMessage.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
