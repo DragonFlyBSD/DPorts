@@ -1,4 +1,4 @@
-# $FreeBSD: www/multiwatch/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/multiwatch/Makefile 341553 2014-01-28 13:34:13Z miwi $
 
 PORTNAME=	multiwatch
 PORTVERSION=	1.0.0
@@ -13,7 +13,6 @@ LIB_DEPENDS=	ev:${PORTSDIR}/devel/libev
 
 GNU_CONFIGURE=	yes
 
-MAN1=		multiwatch.1
 USES=		pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	glib20
@@ -22,7 +21,7 @@ USE_GNOME=	glib20
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PLIST_FILES=	bin/multiwatch
+PLIST_FILES=	bin/multiwatch \
+		man/man1/multiwatch.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
