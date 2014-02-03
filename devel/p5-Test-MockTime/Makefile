@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-Test-MockTime/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-MockTime/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Test-MockTime
 PORTVERSION=	0.12
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-Time-Piece>=0:${PORTSDIR}/devel/p5-Time-Piece
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::MockTime.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
