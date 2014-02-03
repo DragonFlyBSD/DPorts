@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-APNs-Extended/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-APNs-Extended/Makefile 341980 2014-01-31 12:13:45Z miwi $
 
 PORTNAME=	Net-APNs-Extended
 PORTVERSION=	0.07
@@ -18,8 +18,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Net::APNs::Extended.3 \
-	Net::APNs::Extended::Feedback.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
