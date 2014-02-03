@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: sysutils/tmux/Makefile 331243 2013-10-22 09:06:59Z mat $
+# $FreeBSD: sysutils/tmux/Makefile 341527 2014-01-28 09:49:21Z gahr $
 
 PORTNAME=	tmux
 PORTVERSION=	1.8
@@ -30,6 +30,8 @@ OPTIONS_DEFINE=	LIBEVENT2 LIBEVENT_STATIC BACKSPACE
 LIBEVENT2_DESC=	Use libevent version 2
 LIBEVENT_STATIC_DESC=	Build with static libevent
 BACKSPACE_DESC=	Build with tty/keys patch
+
+CFLAGS+=	-Wno-pointer-sign
 
 .include <bsd.port.options.mk>
 
