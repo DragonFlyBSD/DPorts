@@ -1,5 +1,5 @@
 # Created by: Zahatski Aliaksandr <zag@cpan.org>
-# $FreeBSD: www/p5-WebDAO/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WebDAO/Makefile 341747 2014-01-29 15:13:47Z miwi $
 
 PORTNAME=	WebDAO
 PORTVERSION=	2.14
@@ -26,36 +26,6 @@ TEST_DEPENDS=	p5-Test-Class>=0:${PORTSDIR}/devel/p5-Test-Class
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		wd_fcgi.fpl.1 \
-		wd_shell.pl.1
-MAN3=		WebDAO.3 \
-		WebDAO::Base.3 \
-		WebDAO::CV.3 \
-		WebDAO::CVfcgi.3 \
-		WebDAO::Component.3 \
-		WebDAO::Config.3 \
-		WebDAO::Container.3 \
-		WebDAO::Element.3 \
-		WebDAO::Engine.3 \
-		WebDAO::FCGI::ProcManager.3 \
-		WebDAO::Lex.3 \
-		WebDAO::Lexer::base.3 \
-		WebDAO::Lexer::method.3 \
-		WebDAO::Lexer::object.3 \
-		WebDAO::Lexer::regclass.3 \
-		WebDAO::Lexer::text.3 \
-		WebDAO::Lib::MethodByPath.3 \
-		WebDAO::Lib::RawHTML.3 \
-		WebDAO::Response.3 \
-		WebDAO::Session.3 \
-		WebDAO::SessionSH.3 \
-		WebDAO::Sessionco.3 \
-		WebDAO::Store::Abstract.3 \
-		WebDAO::Store::Storable.3 \
-		WebDAO::Test.3 \
-		WebDAO::Util.3
-
-NO_STAGE=	yes
 # maintainer section:
 x-generate-plist:
 	(${PORTSDIR}/Tools/scripts/plist -d -m ${MTREE_FILE} ${PREFIX} \
