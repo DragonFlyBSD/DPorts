@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/gervill/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/gervill/Makefile 341814 2014-01-30 08:46:51Z gahr $
 
 PORTNAME=	gervill
 PORTVERSION=	1.0
@@ -7,10 +7,13 @@ CATEGORIES=	audio java
 MASTER_SITES=	SF/rasmusdsp/${PORTNAME}/Gervill%20${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A generic sound synthesizer for Java
+COMMENT=	Generic sound synthesizer for Java
+
+LICENSE=	GPLv2
+
+OPTIONS_DEFINE=	DOCS
 
 USE_ZIP=	yes
-NO_STAGE=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 USE_ANT=	yes
@@ -28,11 +31,11 @@ ALL_TARGET+=	javadocs
 .endif
 
 do-install:
-	${MKDIR} ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKSRC}/${JARFILE} ${JAVAJARDIR}
+	${MKDIR} ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${WRKSRC}/${JARFILE} ${STAGEDIR}${JAVAJARDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC}/javadocs && ${COPYTREE_SHARE} \* ${DOCSDIR}
+	cd ${WRKSRC}/javadocs && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.mk>
