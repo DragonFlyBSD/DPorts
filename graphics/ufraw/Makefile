@@ -1,12 +1,12 @@
 # Created by: Mark Murray <markm@FreeBSD.org>
-# $FreeBSD: graphics/ufraw/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/ufraw/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	ufraw
 PORTVERSION=	0.19.2
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Read and manipulate raw images from various digital cameras
 
 LICENSE=	GPLv2
