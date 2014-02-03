@@ -1,5 +1,5 @@
 # Created by: David E. Thiel <lx@FreeBSD.org>
-# $FreeBSD: security/ncrack/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/ncrack/Makefile 342012 2014-01-31 15:54:10Z miwi $
 
 PORTNAME=	ncrack
 PORTVERSION=	0.4
@@ -12,9 +12,6 @@ MAINTAINER=	lx@FreeBSD.org
 COMMENT=	High-speed network authentication cracking tool
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=	gmake
 
-MAN1=	ncrack.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
