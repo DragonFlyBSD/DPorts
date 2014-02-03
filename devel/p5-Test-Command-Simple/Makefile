@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Command-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Command-Simple/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Test-Command-Simple
 PORTVERSION=	0.04
@@ -16,7 +16,4 @@ TEST_DEPENDS=	p5-Test-Simple>=0.96:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::Command::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
