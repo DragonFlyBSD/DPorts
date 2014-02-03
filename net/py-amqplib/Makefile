@@ -1,8 +1,9 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: net/py-amqplib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/py-amqplib/Makefile 341957 2014-01-31 09:23:34Z miwi $
 
 PORTNAME=	amqplib
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		CHEESESHOP
@@ -15,7 +16,7 @@ COMMENT=	AMQP Client Library
 PROJECTHOST=	py-amqplib
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
