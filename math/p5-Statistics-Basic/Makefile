@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Basic/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: math/p5-Statistics-Basic/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Statistics-Basic
 PORTVERSION=	1.6607
@@ -17,19 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Statistics::Basic.3 \
-	Statistics::Basic::ComputedVector.3 \
-	Statistics::Basic::Correlation.3 \
-	Statistics::Basic::Covariance.3 \
-	Statistics::Basic::LeastSquareFit.3 \
-	Statistics::Basic::Mean.3 \
-	Statistics::Basic::Median.3 \
-	Statistics::Basic::Mode.3 \
-	Statistics::Basic::StdDev.3 \
-	Statistics::Basic::Variance.3 \
-	Statistics::Basic::Vector.3 \
-	Statistics::Basic::_OneVectorBase.3 \
-	Statistics::Basic::_TwoVectorBase.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
