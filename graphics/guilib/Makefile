@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/guilib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/guilib/Makefile 342302 2014-02-02 14:55:49Z miwi $
 
 PORTNAME=	guilib
 PORTVERSION=	1.2.1
@@ -12,12 +12,11 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Simple GUI framework for use with SDL
 
 USE_SDL=	sdl
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	 aclocal:env
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
