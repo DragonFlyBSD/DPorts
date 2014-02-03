@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: finance/p5-Finance-Bitcoin/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD: finance/p5-Finance-Bitcoin/Makefile 342154 2014-02-01 14:42:18Z miwi $
 
 PORTNAME=	Finance-Bitcoin
 PORTVERSION=	0.004
@@ -21,15 +21,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Finance::Bitcoin::API.3 \
-	Finance::Bitcoin::Address.3 \
-	Finance::Bitcoin::Wallet.3 \
-	Finance::Bitcoin.3
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 post-patch:
 	-@${RM} ${WRKSRC}/lib/Finance/Bitcoin/API.pm.orig
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
