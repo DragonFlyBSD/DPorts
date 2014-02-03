@@ -1,5 +1,5 @@
 # Created by: saper@system.pl
-# $FreeBSD: graphics/gif2png/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/gif2png/Makefile 342177 2014-02-01 15:54:44Z miwi $
 
 PORTNAME=	gif2png
 PORTVERSION=	2.5.4
@@ -15,11 +15,11 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
 USE_PYTHON_RUN=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=		${PORTNAME}.1 web2png.1
-PLIST_FILES=	bin/${PORTNAME} bin/web2png
+PLIST_FILES=	bin/${PORTNAME} bin/web2png \
+		man/man1/gif2png.1.gz \
+		man/man1/web2png.1.gz
 
 CPPFLAGS+=	`libpng-config --I_opts`
 LDFLAGS+=	`libpng-config --L_opts`
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
