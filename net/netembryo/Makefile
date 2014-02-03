@@ -1,5 +1,5 @@
 # Created by: Emmanuel Richiardone (err@tollari.org)
-# $FreeBSD: net/netembryo/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/netembryo/Makefile 341974 2014-01-31 10:17:50Z miwi $
 
 PORTNAME=	netembryo
 PORTVERSION=	0.1.1
@@ -18,14 +18,12 @@ OPTIONS_DEFINE=	OPENSSL
 OPTIONS_DEFAULT=OPENSSL
 
 USE_BZIP2=	yes
-USES=		pathfix pkgconfig
+USES=		pathfix pkgconfig gmake
 USE_GNOME=	glib20
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-silent-rules
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
