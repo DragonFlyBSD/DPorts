@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Server-Simple-Static/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTTP-Server-Simple-Static/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	HTTP-Server-Simple-Static
 PORTVERSION=	0.09
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	HTTP::Server::Simple::Static.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
