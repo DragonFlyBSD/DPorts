@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/raptor/Makefile 338805 2014-01-05 17:31:27Z rakuco $
+# $FreeBSD: textproc/raptor/Makefile 342205 2014-02-01 19:04:55Z makc $
 
 PORTNAME=	raptor
 PORTVERSION=	1.4.21
@@ -8,7 +8,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	SF/librdf/${PORTNAME}/${PORTVERSION} \
 		http://download.librdf.org/source/
 
-MAINTAINER=	kde@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RDF Parser Toolkit for Redland
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
