@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net/p5-Net-FS-Flickr/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-FS-Flickr/Makefile 341922 2014-01-31 07:17:51Z miwi $
 
 PORTNAME=	Net-FS-Flickr
 PORTVERSION=	0.1
@@ -19,9 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		flickrfs.1
-MAN3=		Net::FS::Flickr.3 \
-		Net::FS::Flickr::Access.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
