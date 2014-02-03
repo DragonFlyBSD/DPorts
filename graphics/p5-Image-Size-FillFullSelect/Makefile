@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: graphics/p5-Image-Size-FillFullSelect/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Size-FillFullSelect/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Image-Size-FillFullSelect
 PORTVERSION=	0.1.0
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Image::Size::FillFullSelect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
