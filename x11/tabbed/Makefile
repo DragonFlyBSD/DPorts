@@ -1,8 +1,8 @@
 # Created by: Winston Weinert <winstonw@lavabit.com>
-# $FreeBSD: x11/tabbed/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: x11/tabbed/Makefile 341784 2014-01-29 21:30:31Z pawel $
 
 PORTNAME=	tabbed
-PORTVERSION=	0.3
+PORTVERSION=	0.6
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/tools/
 
@@ -13,11 +13,12 @@ LICENSE=	MIT
 
 USE_XORG=	x11
 
-MAN1=		tabbed.1
-PLIST_FILES=	bin/tabbed
+OPTIONS_DEFINE=	DOCS
+
+PLIST_FILES=	bin/tabbed \
+		man/man1/tabbed.1.gz
 PORTDOCS=	LICENSE README
 
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "You can build tabbed with your own config.h using the TABBED_CONF knob:"
 	@${ECHO_MSG} "make TABBED_CONF=/path/to/tabbed/config.h install clean"
@@ -27,13 +28,11 @@ post-extract:
 	@${ECHO_MSG} "creating config.h from ${TABBED_CONF}"
 	@${CP} ${TABBED_CONF} ${WRKSRC}/config.h
 .endif
+	@${REINPLACE_CMD} 's|-std=c99 -pedantic -Wall -O0|${CFLAGS}|' \
+		${WRKSRC}/config.mk
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${ECHO_MSG} "installing additional documentation to ${DOCSDIR}"
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_MAN} ${WRKSRC}/LICENSE ${DOCSDIR}
-	@${INSTALL_MAN} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
