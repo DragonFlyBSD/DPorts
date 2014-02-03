@@ -1,4 +1,4 @@
-# $FreeBSD: mail/popa3d-before-sendmail/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/popa3d-before-sendmail/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 CATEGORIES=	mail
 
@@ -10,7 +10,6 @@ MASTERDIR?=	${.CURDIR}/../popa3d
 OPTIONS_DEFAULT=	SMTP_AFTER_POP3
 
 .if exists(${.CURDIR}/Makefile.local)
-NO_STAGE=	yes
 .include "${.CURDIR}/Makefile.local"
 .endif
 
