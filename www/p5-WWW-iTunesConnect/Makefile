@@ -1,5 +1,5 @@
 # Created by: Brandon Fosdick <bfoz@bfoz.net>
-# $FreeBSD: www/p5-WWW-iTunesConnect/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-iTunesConnect/Makefile 341687 2014-01-29 07:57:45Z miwi $
 
 PORTNAME=	WWW-iTunesConnect
 PORTVERSION=	1.16
@@ -21,13 +21,11 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::iTunesConnect.3
-
 PLIST_FILES=	%%SITE_PERL%%/WWW/iTunesConnect.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/iTunesConnect/.packlist
+		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/iTunesConnect/.packlist \
+		%%PERL5_MAN3%%/WWW::iTunesConnect.3.gz
 PLIST_DIRS=	%%SITE_PERL%%/WWW \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW/iTunesConnect \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/WWW
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
