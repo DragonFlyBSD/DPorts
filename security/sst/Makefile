@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: security/sst/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/sst/Makefile 342003 2014-01-31 15:23:50Z miwi $
 
 PORTNAME=	sst
 PORTVERSION=	1.0
@@ -15,12 +15,10 @@ COMMENT=	A simple SSL tunneling tool (uses netcat)
 RUN_DEPENDS=	netcat:${PORTSDIR}/net/netcat
 .endif
 
-USE_OPENSSL=	YES
-MAN1=		sst.1
-MANCOMPRESSED=	maybe
-PLIST_FILES=	sbin/sst
-
 MAKEFILE=	${FILESDIR}/Makefile
+USE_OPENSSL=	YES
 
-NO_STAGE=	yes
+PLIST_FILES=	sbin/sst \
+		man/man1/sst.1.gz
+
 .include <bsd.port.mk>
