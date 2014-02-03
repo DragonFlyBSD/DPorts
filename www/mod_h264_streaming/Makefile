@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/mod_h264_streaming/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/mod_h264_streaming/Makefile 341556 2014-01-28 13:35:05Z miwi $
 
 PORTNAME=	mod_h264_streaming
 PORTVERSION=	2.2.7
@@ -13,7 +13,6 @@ DIST_SUBDIR=	apache2
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Apache H264 streaming module
 
-
 USE_APACHE=	22+
 
 GNU_CONFIGURE=	yes
@@ -24,5 +23,4 @@ RESTRICTED=	no-commercial-use
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_SUB=	SED=${SED}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
