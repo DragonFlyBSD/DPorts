@@ -1,8 +1,8 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 339881 2014-01-16 00:53:51Z mandree $
+# $FreeBSD: graphics/ImageMagick/Makefile 342371 2014-02-02 22:44:22Z riggs $
 
 PORTNAME=	ImageMagick
 DISTVERSION=	6.8.0-7
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
@@ -397,6 +397,12 @@ post-patch:
 # deprecated gvCleanup
 	@${REINPLACE_CMD} -e "s|gvCleanup|gvFreeContext|g" \
 		${WRKSRC}/coders/dot.c
+# freetype headers are in freetype2/ nowadays
+	@${REINPLACE_CMD} -e "s|freetype/|freetype2/|g" \
+		${WRKSRC}/configure \
+		${WRKSRC}/coders/ttf.c \
+		${WRKSRC}/magick/annotate.c \
+		${WRKSRC}/www/api/MagickCore/annotate_8c.html
 
 pre-configure:
 .if defined(_IMAGEMAGICK_THREADS_PERL_MSG)
