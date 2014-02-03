@@ -1,5 +1,5 @@
 # Created by: AlanE <alane@FreeBSD.org>
-# $FreeBSD: devel/cdialog/Makefile 340822 2014-01-23 11:10:46Z bapt $
+# $FreeBSD: devel/cdialog/Makefile 342368 2014-02-02 22:05:08Z antoine $
 
 PORTNAME=	cdialog
 PORTVERSION=	1.1.20120215
@@ -33,7 +33,7 @@ INSTALL_TARGET=	install-strip install-man install-lib
 .include <bsd.port.pre.mk>
 
 .if ${NCURSESBASE} != /usr
-CONFIGURE_ARGS=	--with-curses-dir=${NCURSESBASE}
+CONFIGURE_ARGS+=	--with-curses-dir=${NCURSESBASE}
 .endif
 
 post-patch:
