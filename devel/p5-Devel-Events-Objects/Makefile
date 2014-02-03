@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Events-Objects/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Devel-Events-Objects/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Devel-Events-Objects
 PORTVERSION=	0.05
@@ -24,9 +24,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Devel::Events::Generator::Objects.3 \
-		Devel::Events::Handler::ObjectTracker.3 \
-		Devel::Events::Objects.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
