@@ -1,4 +1,4 @@
-# $FreeBSD: x11/tilda/Makefile 335458 2013-12-02 08:05:23Z sunpoet $
+# $FreeBSD: x11/tilda/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	tilda
 PORTVERSION=	0.9.6
@@ -6,7 +6,7 @@ PORTREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Drop down x11 terminal with transparency support
 
 LICENSE=	GPLv2
