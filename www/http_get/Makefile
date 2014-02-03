@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: www/http_get/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/http_get/Makefile 341687 2014-01-29 07:57:45Z miwi $
 
 PORTNAME=	http_get
 PORTVERSION=	1.0.20100619
@@ -13,13 +13,11 @@ COMMENT=	Dump http-contents to stdout
 WRKSRC=		${WRKDIR}/http_get
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 
-MAN1=		http_get.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/http_get
+PLIST_FILES=	bin/http_get \
+		man/man1/http_get.1.gz
 
 .ifndef NO_OPENSSL
 USE_OPENSSL=	yes
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
