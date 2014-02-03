@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: security/ssdeep/Makefile 340038 2014-01-17 14:03:41Z nobutaka $
+# $FreeBSD: security/ssdeep/Makefile 342012 2014-01-31 15:54:10Z miwi $
 
 PORTNAME=	ssdeep
 PORTVERSION=	2.10
@@ -14,10 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
-MAN1=		ssdeep.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
