@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Dispatch/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Dispatch/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	CGI-Application-Dispatch
 PORTVERSION=	3.12
@@ -25,9 +25,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		CGI::Application::Dispatch.3 \
-		CGI::Application::Dispatch::PSGI.3 \
-		CGI::Application::Dispatch::Regexp.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
