@@ -1,5 +1,5 @@
 # Created by: Andrew Lewis <freeghb@gmail.com>
-# $FreeBSD: textproc/luaexpat/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/luaexpat/Makefile 341652 2014-01-28 20:16:01Z lx $
 
 PORTNAME=	luaexpat
 PORTVERSION=	1.2.0
@@ -13,6 +13,7 @@ COMMENT=	LuaExpat is a SAX XML parser based on the Expat library
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
+USES=		gmake
 MAKEFILE=	makefile
 ALL_TARGET=	lib
 USE_LUA=	5.0-5.1
@@ -21,7 +22,6 @@ WANT_LUA_VER=	5.1
 
 CFLAGS+=	-fPIC
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${LUA_VER} == 5.0
