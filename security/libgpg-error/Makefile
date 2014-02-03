@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: security/libgpg-error/Makefile 338030 2013-12-29 17:16:15Z tijl $
+# $FreeBSD: security/libgpg-error/Makefile 341995 2014-01-31 14:22:18Z miwi $
 
 PORTNAME=	libgpg-error
 PORTVERSION=	1.12
@@ -19,7 +19,6 @@ USE_LDCONFIG=		yes
 GNU_CONFIGURE=		yes
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -34,10 +33,8 @@ PLIST_SUB=	NLS="@comment "
 
 DOCS=		AUTHORS ChangeLog NEWS README
 
-.if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
