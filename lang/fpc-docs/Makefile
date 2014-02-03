@@ -1,5 +1,5 @@
 # Created by: John Merryweather Cooper
-# $FreeBSD: lang/fpc-docs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: lang/fpc-docs/Makefile 341492 2014-01-28 00:16:57Z antoine $
 
 PORTNAME=	docs
 PORTVERSION=	2.6.2
@@ -24,13 +24,8 @@ DOCSDIR=	${PREFIX}/share/doc/fpdocs-${PORTVERSION}
 PORTDOCS=	chart.pdf fcl.pdf fpdoc.pdf prog.pdf ref.pdf rtl.pdf user.pdf
 SUB_FILES=	pkg-message
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKDIR}/doc && \
-		${FIND} * -type f -exec ${INSTALL_DATA} "{}" "${DOCSDIR}/{}" \;
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKDIR}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
