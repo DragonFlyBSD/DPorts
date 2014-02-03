@@ -1,5 +1,5 @@
 # Created by: netch@netch.kiev.ua
-# $FreeBSD: net/freeradius-client/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/freeradius-client/Makefile 341941 2014-01-31 08:44:50Z miwi $
 
 PORTNAME=	freeradius-client
 PORTVERSION=	1.1.6
@@ -11,12 +11,11 @@ MAINTAINER=	netch@portaone.com
 COMMENT=	Client library and basic utilities for RADIUS AAA
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
 CONFLICTS=	radiusclient-ng-[0-9]*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
