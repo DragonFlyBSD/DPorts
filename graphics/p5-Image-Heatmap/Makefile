@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Heatmap/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Heatmap/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Image-Heatmap
 PORTVERSION=	0.565
@@ -11,8 +11,8 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Convert geographic coordinates into a graphical heatmap
 
-LICENSE_COMB=	dual
 LICENSE=	ART20 GPLv1
+LICENSE_COMB=	dual
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick
 
@@ -20,7 +20,4 @@ WRKSRC=	${WRKDIR}/${PORTNAME}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Image::Heatmap.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
