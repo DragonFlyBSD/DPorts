@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: devel/p5-Object-Pluggable/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Object-Pluggable/Makefile 342261 2014-02-02 10:11:12Z miwi $
 
 PORTNAME=	Object-Pluggable
 PORTVERSION=	1.29
@@ -20,18 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Object::Pluggable.3 \
-		Object::Pluggable::Constants.3 \
-		Object::Pluggable::Pipeline.3
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 post-install:
-.ifndef(NOPORTEXAMPLES)
-	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	@${MKDIR} ${EXAMPLESDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${EXAMPLESDIR}/
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}/
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
