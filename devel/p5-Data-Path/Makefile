@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Path/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Path/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Data-Path
 PORTVERSION=	1.4.1
@@ -17,7 +17,4 @@ BUILD_DEPENDS=	p5-Test-MockObject>=1.08:${PORTSDIR}/devel/p5-Test-MockObject \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Path.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
