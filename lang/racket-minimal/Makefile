@@ -1,8 +1,8 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: lang/racket-minimal/Makefile 341390 2014-01-27 12:37:06Z olgeni $
+# $FreeBSD: lang/racket-minimal/Makefile 342142 2014-02-01 14:19:14Z olgeni $
 
 PORTNAME=	racket-minimal
-PORTVERSION=	5.92
+PORTVERSION=	5.93
 CATEGORIES=	lang scheme
 MASTER_SITES=	http://download.racket-lang.org/installers/${PORTVERSION}/ \
 		http://www.eecs.northwestern.edu/racket/${PORTVERSION}/ \
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--disable-places
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-WRKSRC=		${WRKDIR}/racket/src
+WRKSRC=		${WRKDIR}/racket-${PORTVERSION}/src
 USES+=		iconv
 USE_AUTOTOOLS=	libtool:env
 USE_LDCONFIG=	yes
