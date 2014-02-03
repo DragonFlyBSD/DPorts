@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: devel/cvsstat/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/cvsstat/Makefile 341478 2014-01-27 23:35:56Z bapt $
 
 PORTNAME=	cvsstat
 PORTVERSION=	2.24
@@ -17,7 +17,6 @@ USES=		perl5
 NO_BUILD=	yes
 PLIST_FILES=	bin/cvsstat
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} -p ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}
@@ -26,6 +25,6 @@ post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|perl -S|${PERL} -S|' ${WRKSRC}/cvsstat
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/cvsstat ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/cvsstat ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
