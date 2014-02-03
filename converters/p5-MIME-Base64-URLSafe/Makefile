@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: converters/p5-MIME-Base64-URLSafe/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-MIME-Base64-URLSafe/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	MIME-Base64-URLSafe
 PORTVERSION=	0.01
@@ -18,7 +18,4 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/00//}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::Base64::URLSafe.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
