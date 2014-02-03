@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-lib/Makefile 340774 2014-01-23 00:48:05Z bapt $
+# $FreeBSD: devel/m17n-lib/Makefile 341577 2014-01-28 14:25:51Z bapt $
 
 PORTNAME=	m17n-lib
 PORTVERSION=	1.6.4
@@ -39,8 +39,8 @@ THAI_DESC=	Thai language support via libThai
 ANTHY_LIB_DEPENDS=	libanthy.so:${PORTSDIR}/japanese/anthy
 ANTHY_CONFIGURE_OFF+=	--without-anthy
 
-ISPELL_BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
-ISPELL_RUN_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
+ISPELL_BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/aspell-ispell
+ISPELL_RUN_DEPENDS=	ispell:${PORTSDIR}/textproc/aspell-ispell
 ISPELL_CONFIGURE_OFF=	HAVE_ISPELL=no
 
 THAI_LIB_DEPENDS=	libthai.so:${PORTSDIR}/devel/libthai
