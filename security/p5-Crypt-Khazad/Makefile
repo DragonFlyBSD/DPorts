@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Khazad/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Khazad/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Crypt-Khazad
 PORTVERSION=	1.0.3
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for Khazad block cipher
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::Khazad.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
