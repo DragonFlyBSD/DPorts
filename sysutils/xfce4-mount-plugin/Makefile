@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: sysutils/xfce4-mount-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xfce4-mount-plugin/Makefile 341838 2014-01-30 14:06:32Z olivierd $
 
 PORTNAME=	xfce4-mount-plugin
 PORTVERSION=	0.6.4
@@ -12,14 +12,14 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Mount and umount utility for the Xfce4 panel
 
+LICENSE=	GPLv2
+
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	intltool intlhack
-USES=		gettext pathfix pkgconfig
+USES=		gettext pkgconfig gmake
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_XFCE=	configenv libmenu panel
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
