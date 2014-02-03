@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Any-Adapter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Any-Adapter/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Log-Any-Adapter
 PORTVERSION=	0.11
@@ -19,12 +19,4 @@ TEST_DEPENDS=	p5-Capture-Tiny>=0.12:${PORTSDIR}/devel/p5-Capture-Tiny
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Log::Any::Adapter.3 \
-	Log::Any::Adapter::Base.3 \
-	Log::Any::Adapter::Development.3 \
-	Log::Any::Adapter::File.3 \
-	Log::Any::Adapter::Stderr.3 \
-	Log::Any::Adapter::Stdout.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
