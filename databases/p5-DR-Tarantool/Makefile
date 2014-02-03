@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/p5-DR-Tarantool/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DR-Tarantool/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DR-Tarantool
 PORTVERSION=	0.37
@@ -16,17 +16,4 @@ LICENSE=	ART10
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	\
-	DR::README.3 \
-	DR::Tarantool.3 \
-	DR::Tarantool::AsyncClient.3 \
-	DR::Tarantool::CoroClient.3 \
-	DR::Tarantool::Iterator.3 \
-	DR::Tarantool::LLClient.3 \
-	DR::Tarantool::Spaces.3 \
-	DR::Tarantool::StartTest.3 \
-	DR::Tarantool::SyncClient.3 \
-	DR::Tarantool::Tuple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
