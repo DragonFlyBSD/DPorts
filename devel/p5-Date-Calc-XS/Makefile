@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-Date-Calc-XS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Calc-XS/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Date-Calc-XS
 PORTVERSION=	6.3
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Date::Calc::XS.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
