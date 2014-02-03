@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@lansing.dk>
-# $FreeBSD: converters/p5-Encode-compat/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Encode-compat/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Encode-compat
 PORTVERSION=	0.07
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Encode::compat.3 Encode::compat::Alias.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
