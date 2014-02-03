@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-SV1/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-SV1/Makefile 342004 2014-01-31 15:24:05Z miwi $
 
 PORTNAME=	Digest-SV1
 PORTVERSION=	0.01
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1 \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Digest::SV1.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
