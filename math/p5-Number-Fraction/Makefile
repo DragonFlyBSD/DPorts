@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: math/p5-Number-Fraction/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Number-Fraction/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Number-Fraction
 PORTVERSION=	1.14
@@ -14,7 +14,4 @@ COMMENT=	Perl extension to model fractions
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Number::Fraction.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
