@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Accessor-Constructor/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Accessor-Constructor/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Class-Accessor-Constructor
 PORTVERSION=	1.111590
@@ -19,8 +19,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Class::Accessor::Constructor.3 \
-	Class::Accessor::Constructor::Base.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
