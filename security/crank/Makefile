@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/crank/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/crank/Makefile 342014 2014-01-31 16:24:01Z miwi $
 
 PORTNAME=	crank
 PORTVERSION=	0.2.1
@@ -17,9 +17,8 @@ GNU_CONFIGURE=	yes
 GUILE_CONFIG=	${LOCALBASE}/bin/guile-config
 LDFLAGS+=	`${GUILE_CONFIG} link`
 CFLAGS+=	`${GUILE_CONFIG} compile`
-USE_GMAKE=	yes
+USE_USES=	gmake
 
 INFO=		crank
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
