@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-Rijndael/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Rijndael/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Crypt-Rijndael
 PORTVERSION=	1.11
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-Test-Manifest>1.14:${PORTSDIR}/devel/p5-Test-Manifest
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::Rijndael.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
