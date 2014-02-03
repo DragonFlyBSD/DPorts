@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier
-# $FreeBSD: www/p5-Maypole-Authentication-UserSessionCookie/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Maypole-Authentication-UserSessionCookie/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	Maypole-Authentication-UserSessionCookie
 PORTVERSION=	1.4
@@ -15,9 +15,6 @@ COMMENT=	Track sessions and, optionally, users
 USES=		perl5
 USE_PERL5=	configure patch
 
-MAN3=		Maypole::Authentication::UserSessionCookie.3
-
-NO_STAGE=	yes
 post-patch:
 	@${PERL} -pi -e 's/^our (\S+)/use vars qw($$1); $$1/' ${WRKSRC}/UserSessionCookie.pm
 
