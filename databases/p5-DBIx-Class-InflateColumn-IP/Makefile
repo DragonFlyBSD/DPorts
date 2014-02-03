@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-IP/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-IP/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DBIx-Class-InflateColumn-IP
 PORTVERSION=	0.02003
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::InflateColumn::IP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
