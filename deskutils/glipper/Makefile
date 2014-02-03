@@ -1,5 +1,5 @@
 # Created by: Yuri Pankov <yuri.pankov@gmail.com>
-# $FreeBSD: deskutils/glipper/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: deskutils/glipper/Makefile 342279 2014-02-02 12:27:07Z antoine $
 
 PORTNAME=	glipper
 PORTVERSION=	1.0
@@ -16,11 +16,10 @@ USE_GNOME=	gnomeprefix intltool pygnomedesktop pygnomeextras
 USE_PYTHON=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec
+CONFIGURE_ARGS=	--libdir=${PREFIX}/libexec --disable-schemas-install
 
 GCONF_SCHEMAS=	glipper.schemas
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib/gtypes.h|glib.h|g' \
 		${WRKSRC}/glipper/keybinder/tomboykeybinder.h
