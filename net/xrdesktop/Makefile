@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: net/xrdesktop/Makefile 328636 2013-09-29 00:13:38Z eadler $
+# $FreeBSD: net/xrdesktop/Makefile 342249 2014-02-02 08:11:05Z eadler $
 
 PORTNAME=	xrdesktop
 PORTVERSION=	1.2
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://luggage.linux0wnsyou.com/xrdesktop/
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK frontend to rdesktop
 
 RUN_DEPENDS=	rdesktop:${PORTSDIR}/net/rdesktop \
