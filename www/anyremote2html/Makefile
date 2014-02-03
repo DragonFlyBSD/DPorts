@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/anyremote2html/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/anyremote2html/Makefile 341719 2014-01-29 11:52:17Z miwi $
 
 PORTNAME=	anyremote2html
 PORTVERSION=	1.4
@@ -16,7 +16,6 @@ USE_PYTHON_RUN=	yes
 
 PORTDOCS=	ChangeLog README COPYING AUTHORS
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' ${WRKSRC}/${PORTNAME}
 .if defined(NOPORTDOCS)
