@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951#comcast.net>
-# $FreeBSD: deskutils/osmo/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD: deskutils/osmo/Makefile 341874 2014-01-30 19:26:05Z antoine $
 
 PORTNAME=	osmo
 PORTVERSION=	0.2.10
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
 		libical.so:${PORTSDIR}/devel/libical \
 		libtar.so:${PORTSDIR}/devel/libtar \
 		libgringotts.so:${PORTSDIR}/security/libgringotts \
-		libgtkhtml.so:${PORTSDIR}/www/libgtkhtml
+		libgtkhtml-2.so:${PORTSDIR}/www/libgtkhtml
 
 USE_GNOME=	gtk20
 USES=		gettext gmake pkgconfig
@@ -25,14 +25,11 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CFLAGS+=	-I${LOCALBASE}/include/libical
 
-MAN1=		osmo.1
-
 POFILES=	bg ca cs da de el en_GB es fi fr hu it ja lt nl pl pt \
 		ru sv tr uk zh_CN
 
 MSGFMT=		${LOCALBASE}/bin/msgfmt
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/src/Makefile.in
