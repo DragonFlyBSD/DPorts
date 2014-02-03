@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Size/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Size/Makefile 341560 2014-01-28 13:37:53Z miwi $
 
 PORTNAME=	Image-Size
 PORTVERSION=	3.232
@@ -13,8 +13,4 @@ COMMENT=	Perl5 module to determine the size of images in several common formats
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		imgsize.1
-MAN3=		Image::Size.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
