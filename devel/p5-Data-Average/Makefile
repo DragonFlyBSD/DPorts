@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: devel/p5-Data-Average/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Average/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Data-Average
 PORTVERSION=	0.03000
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-UNIVERSAL-isa>=0:${PORTSDIR}/devel/p5-UNIVERSAL-isa
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Average::Bounded.3 Data::Average::BoundedExpires.3 Data::Average::Expires.3 Data::Average.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
