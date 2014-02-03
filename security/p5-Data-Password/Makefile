@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/p5-Data-Password/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Data-Password/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Data-Password
 PORTVERSION=	1.08
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for assessing password quality
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::Password.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
