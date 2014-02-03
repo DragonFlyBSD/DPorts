@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rake/Makefile 340626 2014-01-21 18:13:57Z swills $
+# $FreeBSD: devel/rubygem-rake/Makefile 341518 2014-01-28 08:42:15Z bapt $
 
 PORTNAME=	rake
 PORTVERSION=	10.1.1
@@ -13,16 +13,10 @@ USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
-MANCOMPRESSED=	yes
-MAN1=		rake.1
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-PLIST_FILES=	bin/rake
+PLIST_FILES=	bin/rake \
+		man/man1/rake.1.gz
 
 post-install:
-	${MV} ${PREFIX}/${GEM_LIB_DIR}/doc/rake.1.gz ${PREFIX}/man/man1
-	${CHMOD} ${MANMODE} ${PREFIX}/man/man1/rake.1.gz
-	${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/man/man1/rake.1.gz
+	${INSTALL_MAN} ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/doc/rake.1.gz ${STAGEDIR}${PREFIX}/man/man1
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
