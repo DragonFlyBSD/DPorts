@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: databases/p5-CDB_File/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-CDB_File/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	CDB_File
 PORTVERSION=	0.97
@@ -13,7 +13,4 @@ COMMENT=	Perl5 interface to the CDB package
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CDB_File.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
