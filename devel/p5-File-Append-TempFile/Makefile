@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 335812 2013-12-07 05:34:49Z eadler $
+# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 342249 2014-02-02 08:11:05Z eadler $
 
 PORTNAME=	File-Append-TempFile
 PORTVERSION=	0.05
@@ -8,7 +8,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Append data to files using a temporary copy
 
 TEST_DEPENDS=	p5-Test-Pod-Coverage>=0:${PORTSDIR}/devel/p5-Test-Pod-Coverage
