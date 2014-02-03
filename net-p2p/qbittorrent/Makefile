@@ -1,8 +1,8 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent/Makefile 338121 2013-12-30 15:36:54Z nemysis $
+# $FreeBSD: net-p2p/qbittorrent/Makefile 342089 2014-01-31 22:54:48Z nemysis $
 
 PORTNAME=	qbittorrent
-PORTVERSION=	3.1.4
+PORTVERSION=	3.1.5
 PORTREVISION?=	0
 CATEGORIES=	net-p2p ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
@@ -24,6 +24,7 @@ DESTDIRNAME=	INSTALL_ROOT
 
 .if !defined(SLAVE_PORT)
 LIB_DEPENDS+=	libGeoIP.so:${PORTSDIR}/net/GeoIP
+USES+=		desktop-file-utils
 USE_QT4+=	gui xml
 INSTALLS_ICONS=	yes
 OPTIONS_DEFINE=	DBUS
