@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: dns/p5-Net-DNS-Async/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-DNS-Async/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Net-DNS-Async
 PORTVERSION=	1.07
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::DNS::Async.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
