@@ -1,8 +1,9 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: www/py-django-haystack/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-django-haystack/Makefile 341751 2014-01-29 15:39:37Z miwi $
 
 PORTNAME=	django-haystack
 PORTVERSION=	1.2.7
+PORTREVISION=	1
 CATEGORIES=	www databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,6 +17,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.3:${PORTSDIR}/www/py-django
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
