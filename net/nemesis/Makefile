@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/nemesis/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/nemesis/Makefile 341915 2014-01-31 06:48:18Z miwi $
 
 PORTNAME=	nemesis
 PORTVERSION=	1.4
@@ -17,14 +17,21 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libnet-includes="${LOCALBASE}/include" \
 		--with-libnet-libraries="${LOCALBASE}/lib"
 
-MAN1=		nemesis-arp.1 nemesis-dns.1 nemesis-ethernet.1 nemesis-icmp.1 \
-		nemesis-igmp.1 nemesis-ip.1 nemesis-ospf.1 nemesis-rip.1 \
-		nemesis-tcp.1 nemesis-udp.1 nemesis.1
-PLIST_FILES=	bin/nemesis
+PLIST_FILES=	bin/nemesis \
+		man/man1/nemesis-arp.1.gz \
+		man/man1/nemesis-dns.1.gz \
+		man/man1/nemesis-ethernet.1.gz \
+		man/man1/nemesis-icmp.1.gz \
+		man/man1/nemesis-igmp.1.gz \
+		man/man1/nemesis-ip.1.gz \
+		man/man1/nemesis-ospf.1.gz \
+		man/man1/nemesis-rip.1.gz \
+		man/man1/nemesis-tcp.1.gz \
+		man/man1/nemesis-udp.1.gz \
+		man/man1/nemesis.1.gz
 
 LIBNET_CONFIG?=	${LOCALBASE}/bin/libnet10-config
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|libnet-config|${LIBNET_CONFIG}|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
