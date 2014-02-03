@@ -1,5 +1,5 @@
 # Created by: roland.jesse@gmx.net
-# $FreeBSD: graphics/simage/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/simage/Makefile 342301 2014-02-02 14:41:42Z miwi $
 
 PORTNAME=	simage
 PORTVERSION=	1.7.0
@@ -25,5 +25,4 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
