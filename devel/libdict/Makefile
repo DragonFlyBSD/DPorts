@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: devel/libdict/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libdict/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libdict
 PORTVERSION=	0.2.1
@@ -10,7 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:source treap_insert.pdf:doc \
 		avl_insert.pdf:doc empty.pdf:doc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library providing access to ``dictionary'' data structures
 
 USE_GMAKE=	yes
