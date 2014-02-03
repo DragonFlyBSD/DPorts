@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/ljit/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/ljit/Makefile 342285 2014-02-02 13:26:12Z antoine $
 
 PORTNAME=	ljit
 PORTVERSION=	0.2.5
@@ -25,18 +25,17 @@ USE_GNOME=	gtk20
 PLIST_FILES=	bin/ljit share/locale/ru/LC_MESSAGES/ljit.mo
 PORTDOCS=	BUGS NEWS README THANKS TODO
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 post-extract:
 	@${REINPLACE_CMD} -e 's, -DMTRACE$$,, ; \
 		s,prefix)/$$(DATADIRNAME,datadir,' ${WRKSRC}/src/Makefile.in
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/po/ru_RU.mo \
-		${PREFIX}/share/locale/ru/LC_MESSAGES/${PORTNAME}.mo
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+		${STAGEDIR}${PREFIX}/share/locale/ru/LC_MESSAGES/${PORTNAME}.mo
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
