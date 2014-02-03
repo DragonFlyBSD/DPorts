@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@FreeBSD.org>
-# $FreeBSD: math/minisat/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/minisat/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME=	minisat
 PORTVERSION=	2.2.1
@@ -13,5 +13,4 @@ USES=	gmake
 USE_LDCONFIG=	yes
 MAKE_ENV=	prefix=${PREFIX}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
