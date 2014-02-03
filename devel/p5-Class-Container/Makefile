@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/p5-Class-Container/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-Container/Makefile 341640 2014-01-28 16:48:54Z miwi $
 
 PORTNAME=	Class-Container
 PORTVERSION=	0.12
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Class::Container.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
