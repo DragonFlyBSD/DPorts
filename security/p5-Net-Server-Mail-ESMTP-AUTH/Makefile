@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers <vvelox@vvelox.net>
-# $FreeBSD: security/p5-Net-Server-Mail-ESMTP-AUTH/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Net-Server-Mail-ESMTP-AUTH/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Net-Server-Mail-ESMTP-AUTH
 PORTVERSION=	0.1
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::Server::Mail::ESMTP::AUTH.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
