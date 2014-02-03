@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: devel/obby/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/obby/Makefile 342176 2014-02-01 15:50:41Z miwi $
 
 PORTNAME=	obby
 PORTVERSION=	0.4.8
@@ -18,7 +18,6 @@ USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
