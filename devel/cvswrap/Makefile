@@ -1,5 +1,5 @@
 # Created by: alfred
-# $FreeBSD: devel/cvswrap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/cvswrap/Makefile 341477 2014-01-27 23:34:22Z bapt $
 
 PORTNAME=	cvswrap
 PORTVERSION=	0.2
@@ -10,10 +10,8 @@ MASTER_SITE_SUBDIR=	alfred
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Helper for multiple CVS repositories
 
+USES=		desthack
+
 GNU_CONFIGURE=	yes
 
-MAN1=		cvswrap.1
-MAN5=		cvswrap.conf.5
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
