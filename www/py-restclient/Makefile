@@ -1,8 +1,9 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-restclient/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-restclient/Makefile 341731 2014-01-29 13:18:39Z miwi $
 
 PORTNAME=	restclient
 PORTVERSION=	0.11.0
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,8 +16,9 @@ LICENSE=	BSD
 RUN_DEPENDS=	${PKGNAMEPREFIX}httplib2>=0:${PORTSDIR}/www/py-httplib2
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-NO_STAGE=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
 post-patch:
 	${REINPLACE_CMD} -e 's,install_requires.*,,' ${WRKSRC}/setup.py
 
