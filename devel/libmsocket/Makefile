@@ -1,5 +1,5 @@
 # Created by: Matt Harris <mattdharris@users.sourceforge.net>
-# $FreeBSD: devel/libmsocket/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libmsocket/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libmsocket
 PORTVERSION=	0.4
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	SF/kageki/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	A socket abstraction library for C programmers
 
 LIB_DEPENDS=	event:${PORTSDIR}/devel/libevent
