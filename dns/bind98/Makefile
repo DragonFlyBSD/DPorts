@@ -1,7 +1,7 @@
-# $FreeBSD: dns/bind98/Makefile 341417 2014-01-27 15:43:42Z garga $
+# $FreeBSD: dns/bind98/Makefile 341969 2014-01-31 09:50:56Z mat $
 
 PORTNAME=	bind98
-PORTVERSION=	9.8.6.2
+PORTVERSION=	9.8.7
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
@@ -13,7 +13,7 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	ISCL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.8.6-P2
+ISCVERSION=	9.8.7
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -114,6 +114,10 @@ PKGINSTALL=${NONEXISTENT}
 CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
+.endif
+
+.if ${PORT_OPTIONS:MRPZRRL_PATCH}
+BROKEN=	waiting on an updated patch
 .endif
 
 .if ${PORT_OPTIONS:MGSSAPI}
