@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Memcached-Fast/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Memcached-Fast/Makefile 341722 2014-01-29 12:20:24Z miwi $
 
 PORTNAME=	Catalyst-Plugin-Session-Store-Memcached-Fast
 PORTVERSION=	0.02
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Catalyst::Plugin::Session::Store::Memcached::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
