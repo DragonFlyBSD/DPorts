@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/poker-engine/Makefile 332798 2013-11-05 01:06:39Z danilo $
+# $FreeBSD: games/poker-engine/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	poker-engine
 PORTVERSION=	1.3.6
@@ -23,7 +23,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gmake pkgconfig gettext
-USE_PYTHON=	2.5-2.7
+USE_PYTHON=	2
 GNU_CONFIGURE=	yes
 
 post-patch:
