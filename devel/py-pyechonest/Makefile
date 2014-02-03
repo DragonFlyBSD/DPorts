@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: devel/py-pyechonest/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-pyechonest/Makefile 341541 2014-01-28 12:44:35Z feld $
 
 PORTNAME=	pyechonest
 PORTVERSION=	7.1.1
@@ -16,5 +16,4 @@ USE_PYDISTUTILS=	easy_install
 
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
