@@ -1,4 +1,4 @@
-# $FreeBSD: net/sofia-sip/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/sofia-sip/Makefile 341981 2014-01-31 12:14:30Z miwi $
 
 PORTNAME=	sofia-sip
 PORTVERSION=	1.12.11
@@ -16,12 +16,4 @@ GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_GNOME=	glib20
 
-MAN1=		sip-date.1 \
-		sip-options.1 \
-		localinfo.1 \
-		addrinfo.1 \
-		stunc.1 \
-		sip-dig.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
