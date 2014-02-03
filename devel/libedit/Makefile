@@ -1,5 +1,5 @@
 # Created by: jasone
-# $FreeBSD: devel/libedit/Makefile 335531 2013-12-02 18:53:10Z sunpoet $
+# $FreeBSD: devel/libedit/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libedit
 PORTVERSION=	2.6.10
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.astron.com/pub/libedit/ \
 		http://www.canonware.com/download/libedit/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Command line editing library
 
 LICENSE=	BSD
