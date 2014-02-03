@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-FurlX-Coro/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-FurlX-Coro/Makefile 341703 2014-01-29 09:17:28Z miwi $
 
 PORTNAME=	FurlX-Coro
 PORTVERSION=	1.02
@@ -20,8 +20,4 @@ BUILD_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	FurlX::Coro.3 \
-	FurlX::Coro::HTTP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
