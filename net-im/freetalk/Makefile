@@ -1,5 +1,5 @@
 # Created by: Oleg Ginzburg  (olevole@olevole.ru)
-# $FreeBSD: net-im/freetalk/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/freetalk/Makefile 341966 2014-01-31 09:46:25Z miwi $
 
 PORTNAME=	freetalk
 PORTVERSION=	3.2
@@ -24,10 +24,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-MAN1=		freetalk.1
-INFO=		freetalk
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
