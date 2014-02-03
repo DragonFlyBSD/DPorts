@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: mail/jmba/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/jmba/Makefile 342322 2014-02-02 16:02:32Z miwi $
 
 PORTNAME=	jmba
 PORTVERSION=	0.5.5
@@ -11,11 +11,9 @@ COMMENT=	Junk Mail Buffering Agent
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=	gmake
 
-MAN1=	jmba.1
-PLIST_FILES=	bin/jmba
-MANCOMPRESSED=	yes
+PLIST_FILES=	bin/jmba \
+		man/man1/jmba.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
