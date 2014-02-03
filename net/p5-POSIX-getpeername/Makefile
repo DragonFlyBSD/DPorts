@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-POSIX-getpeername/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/p5-POSIX-getpeername/Makefile 341963 2014-01-31 09:45:20Z miwi $
 
 PORTNAME=	POSIX-getpeername
 PORTVERSION=	0.01
@@ -12,7 +12,4 @@ COMMENT=	Perl extension to provide getpeername(2)
 USES=	perl5
 USE_PERL5=	modbuild
 
-MAN3=	POSIX::getpeername.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
