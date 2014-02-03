@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-django-mezzanine/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: www/py-django-mezzanine/Makefile 341751 2014-01-29 15:39:37Z miwi $
 
 PORTNAME=	django-mezzanine
 PORTVERSION=	1.4.7
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +24,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.4:${PORTSDIR}/www/py-django \
 
 USES=			gettext
 USE_PYTHON=		2
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	Mezzanine
 
 regression-test: build
