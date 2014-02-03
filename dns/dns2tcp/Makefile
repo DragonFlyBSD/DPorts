@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: dns/dns2tcp/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/dns2tcp/Makefile 342192 2014-02-01 17:07:53Z miwi $
 
 PORTNAME=	dns2tcp
 PORTVERSION=	0.5.2
@@ -11,8 +11,8 @@ COMMENT=	Dns2tcp is a tool for relaying TCP connections over DNS
 
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/dns2tcpc bin/dns2tcpd
-MAN1=		dns2tcpc.1 dns2tcpd.1
+PLIST_FILES=	bin/dns2tcpc bin/dns2tcpd \
+		man/man1/dns2tcpc.1.gz \
+		man/man1/dns2tcpd.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
