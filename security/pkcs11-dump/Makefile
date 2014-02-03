@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/pkcs11-dump/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/pkcs11-dump/Makefile 342027 2014-01-31 16:49:39Z miwi $
 
 PORTNAME=	pkcs11-dump
 PORTVERSION=	0.3.4
@@ -18,11 +18,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl"
 
-PLIST_FILES=	bin/pkcs11-dump
+PLIST_FILES=	bin/pkcs11-dump \
+		man/man1/pkcs11-dump.1.gz
 
-MAN1=		pkcs11-dump.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's|install-data-am: install-dist_docDATA|install-data-am:|' \
 		${WRKSRC}/Makefile.in
