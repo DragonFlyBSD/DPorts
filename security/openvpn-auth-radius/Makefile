@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: security/openvpn-auth-radius/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/openvpn-auth-radius/Makefile 342361 2014-02-02 19:06:30Z marino $
 
 PORTNAME=	openvpn-auth-radius
 PORTVERSION=	2.1
@@ -12,12 +12,12 @@ DISTNAME=	radiusplugin_v${PORTVERSION}
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	RADIUS authentication plugin for OpenVPN
 
-RUN_DEPENDS=	openvpn:${PORTSDIR}/security/openvpn
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
-
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
+RUN_DEPENDS=	${LOCALBASE}/sbin/openvpn:${PORTSDIR}/security/openvpn
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
+
+USES=		gmake
 MAKEFILE=	Makefile.bsd
 WRKSRC=		${WRKDIR}/radiusplugin
 
@@ -25,20 +25,19 @@ PORTDOCS=	README
 PORTEXAMPLES=	radiusplugin.cnf
 PLIST_FILES=	lib/radiusplugin.so
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/radiusplugin.so ${LOCALBASE}/lib
+	${INSTALL_LIB} ${WRKSRC}/radiusplugin.so ${STAGEDIR}${LOCALBASE}/lib
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
+.if ${PORT_OPTIONS:MDOCS}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 .endif
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/radiusplugin.cnf ${EXAMPLESDIR}
+.if ${PORT_OPTIONS:MEXAMPLES}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/radiusplugin.cnf ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.post.mk>
