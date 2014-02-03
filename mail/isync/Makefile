@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: mail/isync/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/isync/Makefile 342313 2014-02-02 15:10:39Z ehaupt $
 
 PORTNAME=	isync
 PORTVERSION=	1.0.6
@@ -23,6 +23,9 @@ CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${OPENSSLINC}
 LDFLAGS+=	-L${BDB_LIB_DIR} -L${OPENSSLLIB} -lssl -lcrypto
 
 OPTIONS_DEFINE=	DOCS
+
+# does not compile
+PORTSCOUT=	skipv:1.1.0
 
 .include <bsd.port.options.mk>
 
