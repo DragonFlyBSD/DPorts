@@ -1,8 +1,9 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-filer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-django-filer/Makefile 341733 2014-01-29 13:21:31Z miwi $
 
 PORTNAME=	django-filer
 PORTVERSION=	0.8.6
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,9 +16,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=0:${PORTSDIR}/www/py-django \
 		${PYTHON_PKGNAMEPREFIX}imaging>=0:${PORTSDIR}/graphics/py-imaging
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
