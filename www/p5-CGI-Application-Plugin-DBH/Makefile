@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-CGI-Application-Plugin-DBH/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-DBH/Makefile 341723 2014-01-29 12:22:39Z miwi $
 
 PORTNAME=	CGI-Application-Plugin-DBH
 PORTVERSION=	4.01
@@ -20,7 +20,4 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		CGI::Application::Plugin::DBH.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
