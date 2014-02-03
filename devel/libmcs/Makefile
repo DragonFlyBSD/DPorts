@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/libmcs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libmcs/Makefile 341974 2014-01-31 10:17:50Z miwi $
 
 PORTNAME=	libmcs
 PORTVERSION=	0.7.2
@@ -20,7 +20,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		gmake pkgconfig
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGCONF}
