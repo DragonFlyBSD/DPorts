@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: net-mgmt/smokeping/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/smokeping/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	smokeping
 PORTVERSION=	2.6.9
@@ -7,7 +7,7 @@ CATEGORIES=	net-mgmt www
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/ \
 		http://smokeping.cs.pu.edu.tw/pub/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Latency logging and graphing system
 
 LIB_DEPENDS=	rrd:${PORTSDIR}/databases/rrdtool
