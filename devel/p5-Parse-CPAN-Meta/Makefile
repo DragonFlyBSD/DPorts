@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Parse-CPAN-Meta/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Parse-CPAN-Meta/Makefile 342265 2014-02-02 10:25:57Z miwi $
 
 PORTNAME=	Parse-CPAN-Meta
 PORTVERSION=	1.44.04
@@ -18,9 +18,6 @@ RUN_DEPENDS=	p5-CPAN-Meta-YAML>=0.008:${PORTSDIR}/devel/p5-CPAN-Meta-YAML
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Parse::CPAN::Meta.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501600
