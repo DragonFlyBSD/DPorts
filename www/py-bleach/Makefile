@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-bleach/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-bleach/Makefile 341745 2014-01-29 15:04:46Z miwi $
 
 PORTNAME=	bleach
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -15,7 +16,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}html5lib==0.95:${PORTSDIR}/www/py-html5lib
 
 USE_GITHUB=		yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 GH_ACCOUNT=	jsocol
 GH_TAGNAME=	v${PORTVERSION}
@@ -27,5 +29,4 @@ TEST_DEPENDS:=	${RUN_DEPENDS} \
 regression-test: build
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
