@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/mergelog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/mergelog/Makefile 341723 2014-01-29 12:22:39Z miwi $
 
 PORTNAME=	mergelog
 PORTVERSION=	4.5
@@ -10,10 +10,7 @@ MASTER_SITES=	SF
 MAINTAINER=	tobez@FreeBSD.org
 COMMENT=	A tool to merge and sort by date http log files
 
-USE_GMAKE=	yes
+USES=	gmake
 GNU_CONFIGURE=	yes
 
-MAN1=	mergelog.1 zmergelog.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
