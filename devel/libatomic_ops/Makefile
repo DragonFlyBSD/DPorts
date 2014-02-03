@@ -1,12 +1,12 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/libatomic_ops/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libatomic_ops/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libatomic_ops
 DISTVERSION=	7.3alpha2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Atomic operations access library
 
 LICENSE=	BSD GPLv2
