@@ -1,8 +1,9 @@
 # Created by: Alexander Novitsky
-# $FreeBSD: net/py-smbpasswd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/py-smbpasswd/Makefile 341975 2014-01-31 10:18:44Z miwi $
 
 PORTNAME=	smbpasswd
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	http://barryp.org/static/media/software/download/py-${PORTNAME}/${PORTVERSION}/ \
 		GOOGLE_CODE \
@@ -16,10 +17,9 @@ COMMENT=	SMB/CIFS password generation utility for Python
 
 LICENSE=	GPLv2
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/smbpasswd.so
 # Python3 ready
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
