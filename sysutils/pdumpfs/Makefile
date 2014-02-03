@@ -1,9 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: sysutils/pdumpfs/Makefile 341085 2014-01-25 20:00:33Z swills $
+# $FreeBSD: sysutils/pdumpfs/Makefile 342206 2014-02-01 19:15:00Z antoine $
 
 PORTNAME=	pdumpfs
 PORTVERSION=	1.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://0xcc.net/pdumpfs/
 
@@ -17,24 +17,19 @@ USE_RUBY=	yes
 RUBY_SHEBANG_FILES=	${WRKSRC}/pdumpfs.in
 ALL_TARGET=	pdumpfs
 
-PLIST_FILES=	sbin/pdumpfs
+PLIST_FILES=	man/ja/man8/pdumpfs.8.gz \
+		man/man8/pdumpfs.8.gz \
+		sbin/pdumpfs
 PORTDOCS=	*
-MANLANG=	"" ja
-MAN8=		pdumpfs.8
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pdumpfs ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/man/man8/pdumpfs.8 ${PREFIX}/man/man8/
+	${INSTALL_SCRIPT} ${WRKSRC}/pdumpfs ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/man/man8/pdumpfs.8 ${STAGEDIR}${PREFIX}/man/man8
 	${RUBY} -ni -r nkf -e 'puts NKF.nkf("-e",$$_)' ${WRKSRC}/man/ja/man8/pdumpfs.8
-	${INSTALL_MAN} ${WRKSRC}/man/ja/man8/pdumpfs.8 ${PREFIX}/man/ja/man8/
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${CP} -R ${WRKSRC}/doc ${DOCSDIR}/
-.endif
+	${INSTALL_MAN} ${WRKSRC}/man/ja/man8/pdumpfs.8 ${STAGEDIR}${PREFIX}/man/ja/man8
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
