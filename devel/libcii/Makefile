@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@photino.com>
-# $FreeBSD: devel/libcii/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libcii/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libcii
 PORTVERSION=	1.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cs.princeton.edu/pub/packages/cii/
 DISTNAME=	cii11
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library from "C Interfaces and Implementations" by David Hanson
 
 NO_WRKSUBDIR=	yes
