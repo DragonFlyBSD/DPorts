@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: lang/treecc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: lang/treecc/Makefile 341989 2014-01-31 12:47:06Z miwi $
 
 PORTNAME=	treecc
 PORTVERSION=	0.3.10
@@ -10,10 +10,8 @@ MAINTAINER=	sylvio@FreeBSD.org
 COMMENT=	Treecc is designed to assist in the development of compilers
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-MAN1=		treecc.1
-INFO=		treecc
-PLIST_FILES=	bin/treecc lib/libtreecc.a
+USES=		gmake
+PLIST_FILES=	bin/treecc lib/libtreecc.a \
+		info/treecc.info man/man1/treecc.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
