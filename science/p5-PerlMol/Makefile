@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-PerlMol/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-PerlMol/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	PerlMol
 PORTVERSION=	0.3500
@@ -61,7 +61,4 @@ BUILD_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	PerlMol.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
