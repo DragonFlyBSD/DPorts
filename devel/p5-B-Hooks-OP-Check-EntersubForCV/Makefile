@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Hooks-OP-Check-EntersubForCV/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-B-Hooks-OP-Check-EntersubForCV/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	B-Hooks-OP-Check-EntersubForCV
 PORTVERSION=	0.09
@@ -20,7 +20,4 @@ BUILD_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	B::Hooks::OP::Check::EntersubForCV.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
