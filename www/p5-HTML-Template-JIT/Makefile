@@ -1,5 +1,5 @@
 # Created by: alex@kapranoff.ru
-# $FreeBSD: www/p5-HTML-Template-JIT/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Template-JIT/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	HTML-Template-JIT
 PORTVERSION=	0.05
@@ -19,10 +19,6 @@ USES=		perl5
 USE_PERL5=	configure
 INSTALL_TARGET=	pure_install
 
-MAN3=		HTML::Template::JIT.3 HTML::Template::JIT::Compiler.3 \
-		HTML::Template::JIT::Base.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
