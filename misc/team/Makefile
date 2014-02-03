@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: misc/team/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: misc/team/Makefile 342321 2014-02-02 16:00:44Z miwi $
 
 PORTNAME=	team
 PORTVERSION=	3.1
@@ -11,9 +11,7 @@ MASTER_SITE_SUBDIR=	joerg
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	Portable multi-buffered tape streaming utility
 
-MAN1=		team.1
-MANCOMPRESSED=	maybe
-PLIST_FILES=	bin/team
+PLIST_FILES=	bin/team \
+		man/man1/team.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
