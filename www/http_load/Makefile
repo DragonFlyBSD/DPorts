@@ -1,5 +1,5 @@
 # Created by: Ask Bjoern Hansen <ask@valueclick.com>
-# $FreeBSD: www/http_load/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/http_load/Makefile 341687 2014-01-29 07:57:45Z miwi $
 
 PORTNAME=	http_load
 PORTVERSION=	20060312
@@ -12,13 +12,11 @@ COMMENT=	Multiprocessing http performance test client
 
 MAKEFILE=	${FILESDIR}/Makefile.bsd
 
-MAN1=		http_load.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/http_load
+PLIST_FILES=	bin/http_load \
+		man/man1/http_load.1.gz
 
 .ifndef NO_OPENSSL
 USE_OPENSSL=	yes
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
