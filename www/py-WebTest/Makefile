@@ -1,8 +1,8 @@
 # Created by: Wen Heping
-# $FreeBSD: www/py-WebTest/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-WebTest/Makefile 342056 2014-01-31 19:47:28Z cs $
 
 PORTNAME=	WebTest
-PORTVERSION=	2.0.10
+PORTVERSION=	2.0.14
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,6 +23,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:${PORTSDIR}/devel/py-six \
 
 USE_ZIP=		yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 
 .include <bsd.port.mk>
