@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: security/p5-Authen-OATH/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-OATH/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Authen-OATH
 PORTVERSION=	1.0.0
@@ -22,7 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Authen::OATH.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
