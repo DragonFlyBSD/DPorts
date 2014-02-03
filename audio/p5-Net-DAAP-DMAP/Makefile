@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: audio/p5-Net-DAAP-DMAP/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Net-DAAP-DMAP/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Net-DAAP-DMAP
 PORTVERSION=	1.27
@@ -17,9 +17,6 @@ TEST_DEPENDS=	p5-Data-HexDump>0:${PORTSDIR}/devel/p5-Data-HexDump \
 		p5-Test-Differences>0:${PORTSDIR}/devel/p5-Test-Differences
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		Net::DAAP::DMAP.3
 
 .include <bsd.port.mk>
