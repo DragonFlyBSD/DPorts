@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types-VariantTable/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-MooseX-Types-VariantTable/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	MooseX-Types-VariantTable
 PORTVERSION=	0.04
@@ -18,8 +18,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Types::VariantTable::Declare.3 \
-		MooseX::Types::VariantTable.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
