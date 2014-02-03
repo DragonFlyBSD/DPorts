@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-AppleTwoFish/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-AppleTwoFish/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Crypt-AppleTwoFish
 PORTVERSION=	0.051
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for Apple iTMS internal key descrambling algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::AppleTwoFish.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
