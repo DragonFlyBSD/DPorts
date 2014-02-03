@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: mail/grepmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/grepmail/Makefile 342207 2014-02-01 19:20:19Z antoine $
 
 PORTNAME=	grepmail
 PORTVERSION=	5.3033
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		grepmail.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
