@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: math/p5-Math-Random-OO/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD: math/p5-Math-Random-OO/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	Math-Random-OO
 PORTVERSION=	0.21
@@ -18,11 +18,4 @@ RUN_DEPENDS=	p5-Class-Accessor>=0.18:${PORTSDIR}/devel/p5-Class-Accessor \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Math::Random::OO.3 \
-	Math::Random::OO::Bootstrap.3 \
-	Math::Random::OO::Normal.3 \
-	Math::Random::OO::Uniform.3 \
-	Math::Random::OO::UniformInt.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
