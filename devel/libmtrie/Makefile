@@ -1,5 +1,5 @@
 # Created by: alfred@FreeBSD.org
-# $FreeBSD: devel/libmtrie/Makefile 335494 2013-12-02 14:28:05Z sunpoet $
+# $FreeBSD: devel/libmtrie/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libmtrie
 PORTVERSION=	1.0.3
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://rodrigo.osorio.free.fr/freebsd/distfiles/ \
 		http://people.freebsd.org/~alfred/sources/${PORTNAME}/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library to build an IP-netmask based mtrie
 
 LICENSE=	BSD
