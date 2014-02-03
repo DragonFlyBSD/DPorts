@@ -1,5 +1,5 @@
 # Created by: candy@fct.kgc.co.jp
-# $FreeBSD: net/xipmsg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/xipmsg/Makefile 341967 2014-01-31 09:46:38Z miwi $
 
 PORTNAME=	xipmsg
 PORTVERSION=	0.8088
@@ -13,8 +13,5 @@ COMMENT=	Popup style message communication tool for X11
 
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
-MAN1=		xipmsg.1
-MANCOMPRESSED=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
