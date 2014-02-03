@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <Alex.Deiter@Gmail.COM>
-# $FreeBSD: www/p5-HTML-Toc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Toc/Makefile 341719 2014-01-29 11:52:17Z miwi $
 
 PORTNAME=	HTML-Toc
 PORTVERSION=	1.12
@@ -17,5 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
