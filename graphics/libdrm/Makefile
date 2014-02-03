@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: graphics/libdrm/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: graphics/libdrm/Makefile 342071 2014-01-31 21:01:57Z kwm $
 
 PORTNAME=	libdrm
 PORTVERSION=	${LIBDRM_VERSION}
@@ -65,8 +65,11 @@ LIBDRM_REVISION=1
 PLIST_SUB+=	OLD="" NEW="@comment " NOUVEAU=""
 .endif
 
-.if ${ARCH} == "x86_64" || ${ARCH} == "i386" || ${ARCH} == "ia64" || ${ARCH} == "powerpc"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 PLIST_SUB+=	INTEL_DRIVER=""
+PLIST_SUB+=	RADEON_DRIVERS=""
+.elif ${ARCH} == ia64 || ${ARCH} == powerpc || ${ARCH} == powerpc64
+PLIST_SUB+=	INTEL_DRIVER="@comment "
 PLIST_SUB+=	RADEON_DRIVERS=""
 .else
 PLIST_SUB+=	INTEL_DRIVER="@comment "
