@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: converters/p5-Text-Unidecode/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Text-Unidecode/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Text-Unidecode
 PORTVERSION=	0.04
@@ -13,7 +13,4 @@ COMMENT=	Text::Unidecode -- US-ASCII transliterations of Unicode text
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Text::Unidecode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
