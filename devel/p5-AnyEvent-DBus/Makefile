@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@FreeBSD.org>
-# $FreeBSD: devel/p5-AnyEvent-DBus/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-AnyEvent-DBus/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	AnyEvent-DBus
 PORTVERSION=	0.31
@@ -17,10 +17,7 @@ RUN_DEPENDS=	p5-AnyEvent>=5:${PORTSDIR}/devel/p5-AnyEvent \
 		p5-Net-DBus>=0.33:${PORTSDIR}/devel/p5-Net-DBus \
 		p5-common-sense>=3.2:${PORTSDIR}/devel/p5-common-sense
 
-MAN3=		AnyEvent::DBus.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
