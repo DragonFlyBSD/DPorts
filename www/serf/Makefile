@@ -1,9 +1,8 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: www/serf/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/serf/Makefile 342311 2014-02-02 14:59:45Z ohauer $
 
 PORTNAME=	serf
-PORTVERSION=	1.3.2
-PORTREVISION=	1
+PORTVERSION=	1.3.3
 CATEGORIES=	www
 MASTER_SITES=	GOOGLE_CODE
 
