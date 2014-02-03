@@ -1,9 +1,9 @@
 # Created by: Roberto Pereyra <freebsd@contenidosonline.com.ar>
-# $FreeBSD: net/py-cloudfiles/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/py-cloudfiles/Makefile 341931 2014-01-31 07:53:49Z miwi $
 
 PORTNAME=	cloudfiles
 PORTVERSION=	1.6.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	http://www.contenidosonline.com.ar/freebsd/ports/ \
 		LOCAL/yzlin
@@ -14,7 +14,6 @@ COMMENT=	Python language bindings for Cloud Files API
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-PLIST_SUB+=	PYDISTUTILS_EGGINFO=${PYDISTUTILS_EGGINFO}
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
