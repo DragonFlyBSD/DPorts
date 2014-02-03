@@ -1,5 +1,5 @@
 # Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-# $FreeBSD: net/p5-Net-Google-Calendar/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-Google-Calendar/Makefile 341948 2014-01-31 09:01:28Z miwi $
 
 PORTNAME=	Net-Google-Calendar
 PORTVERSION=	1.01
@@ -21,10 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Net::Google::Calendar.3 Net::Google::Calendar::Base.3 \
-		Net::Google::Calendar::Calendar.3 Net::Google::Calendar::Comments.3 \
-		Net::Google::Calendar::Entry.3 Net::Google::Calendar::FeedLink.3 \
-		Net::Google::Calendar::Person.3 Net::Google::Calendar::WebContent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
