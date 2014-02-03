@@ -1,5 +1,5 @@
 # Created by: mb@imp.ch
-# $FreeBSD: graphics/jpgtn/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/jpgtn/Makefile 342183 2014-02-01 16:21:45Z miwi $
 
 PORTNAME=	jpgtn
 PORTVERSION=	2.06
@@ -16,14 +16,13 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libjpeg=${LOCALBASE}
 
-MAN1=		jpgtn.1
-PLIST_FILES=	bin/jpgtn
+PLIST_FILES=	bin/jpgtn \
+		man/man1/jpgtn.1.gz
 
 WITH_MAXSIZE?=	2048
 WITH_MINSIZE?=	1
 WITH_DEFSIZE?=	128
 
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_MSG} "===>"
 	@${ECHO_MSG} "===> You can control program functionality by defining the following variables:"
