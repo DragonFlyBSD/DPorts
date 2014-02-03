@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: multimedia/clive/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/clive/Makefile 342317 2014-02-02 15:21:20Z miwi $
 
 PORTNAME=	clive
 PORTVERSION=	2.3.3
@@ -24,10 +24,9 @@ CONFLICTS=	py*-clive-[0-1]* ljclive-[0-9]*
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		clive.1
 PLIST_FILES=	bin/clive \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive/.packlist
+		%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive/.packlist \
+		man/man1/clive.1.gz
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/clive
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
