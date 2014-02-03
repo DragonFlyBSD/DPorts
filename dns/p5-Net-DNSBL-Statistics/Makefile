@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: dns/p5-Net-DNSBL-Statistics/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD: dns/p5-Net-DNSBL-Statistics/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Net-DNSBL-Statistics
 PORTVERSION=	0.12
@@ -20,7 +20,4 @@ BUILD_DEPENDS=	p5-Net-DNS-Codes>=0.09:${PORTSDIR}/dns/p5-Net-DNS-Codes \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Net::DNSBL::Statistics.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
