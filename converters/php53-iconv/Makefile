@@ -1,5 +1,6 @@
-# $FreeBSD: converters/php53-iconv/Makefile 332429 2013-11-01 23:49:56Z flo $
+# $FreeBSD: converters/php53-iconv/Makefile 341778 2014-01-29 20:41:27Z tijl $
 
+PORTREVISION=	1
 CATEGORIES=	converters
 
 MASTERDIR=	${.CURDIR}/../../lang/php53
