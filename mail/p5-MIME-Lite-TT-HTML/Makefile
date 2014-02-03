@@ -1,5 +1,5 @@
 # Created by: Tuc <freebsd-ports@t-b-o-h.net>
-# $FreeBSD: mail/p5-MIME-Lite-TT-HTML/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-MIME-Lite-TT-HTML/Makefile 342157 2014-02-01 14:42:58Z miwi $
 
 PORTNAME=	MIME-Lite-TT-HTML
 PORTVERSION=	0.04
@@ -24,7 +24,4 @@ RUN_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	MIME::Lite::TT::HTML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
