@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev
-# $FreeBSD: russian/p5-cyrillic/Makefile 327766 2013-09-20 22:46:16Z bapt $
+# $FreeBSD: russian/p5-cyrillic/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	cyrillic
 PORTVERSION=	2.09
@@ -13,7 +13,4 @@ COMMENT=	Library for fast and easy Cyrillic text manipulation
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	cyrillic.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
