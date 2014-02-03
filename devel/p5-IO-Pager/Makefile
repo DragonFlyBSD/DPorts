@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: devel/p5-IO-Pager/Makefile 327795 2013-09-21 07:41:30Z rafan $
+# $FreeBSD: devel/p5-IO-Pager/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	IO-Pager
 PORTVERSION=	0.31
@@ -13,13 +13,6 @@ COMMENT=	Select a pager, optionally pipe it output if destination is a TTY
 
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		IO::Pager::Buffered.3 \
-		IO::Pager::Page.3 \
-		IO::Pager::Unbuffered.3 \
-		IO::Pager.3
-
-NO_STAGE=	yes
 
 regression-test:
 	@cd ${WRKSRC} && ${MAKE} test
