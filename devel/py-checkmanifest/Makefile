@@ -1,8 +1,8 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-checkmanifest/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: devel/py-checkmanifest/Makefile 342254 2014-02-02 08:46:40Z koobs $
 
 PORTNAME=	checkmanifest
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,9 +17,8 @@ PORTDOCS=	README.rst \
 		CHANGES.rst
 
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
-PYDISTUTILS_PKGNAME=	check_manifest
 
 OPTIONS_DEFINE=	DOCS
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
