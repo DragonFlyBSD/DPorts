@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/hexcompare/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/hexcompare/Makefile 341505 2014-01-28 07:44:39Z bapt $
 
 PORTNAME=	hexcompare
 PORTVERSION=	1.0.2
@@ -14,11 +14,10 @@ LICENSE=	GPLv3
 
 PLIST_FILES=	bin/hexcompare
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|gcc|${CC}|g' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
