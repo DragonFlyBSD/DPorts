@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: astro/p5-ZConf-Weather/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD: astro/p5-ZConf-Weather/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	ZConf-Weather
 PORTVERSION=	1.0.0
@@ -19,8 +19,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		ZConf::Weather.3
 
 .include <bsd.port.mk>
