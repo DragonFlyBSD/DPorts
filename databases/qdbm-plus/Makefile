@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: databases/qdbm-plus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: databases/qdbm-plus/Makefile 342270 2014-02-02 11:00:29Z miwi $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-plus
@@ -14,5 +14,4 @@ PLIST=		${.CURDIR}/pkg-plist
 DESCR=		${.CURDIR}/pkg-descr
 PATCHDIR=	${.CURDIR}/files
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
