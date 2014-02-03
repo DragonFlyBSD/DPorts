@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: editors/2bsd-vi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: editors/2bsd-vi/Makefile 342187 2014-02-01 16:57:04Z miwi $
 
 PORTNAME=	vi
 PORTVERSION=	050325
@@ -20,13 +20,9 @@ USE_BZIP2=	yes
 PRESERVEDIR=	/var/preserve/${UNIQUENAME}
 PLIST_SUB=	PRESERVEDIR="${PRESERVEDIR}"
 
-MAN1=	ex.1 vi.1
-MLINKS=	ex.1 edit.1  vi.1 vedit.1  vi.1 view.1
-
 post-extract:	.SILENT
 	${RM} -fr ${WRKSRC}/libuxre ${WRKSRC}/regexp.h
 
-NO_STAGE=	yes
 post-patch:
 .for f in Makefile ex.1 expreserve.c exrecover.c vi.1
 	@${REINPLACE_CMD} -e 's|/var/preserve|${PRESERVEDIR}|' ${WRKSRC}/${f}
