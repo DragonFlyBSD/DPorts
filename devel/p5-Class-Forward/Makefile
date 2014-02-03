@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Forward/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/p5-Class-Forward/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Class-Forward
 PORTVERSION=	0.100006
@@ -12,7 +12,4 @@ COMMENT=	Perl extension for class dispatcher that handles namespaces like paths
 USES=	perl5
 USE_PERL5=	configure
 
-MAN3=	Class::Forward.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
