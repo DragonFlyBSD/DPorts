@@ -1,11 +1,11 @@
 # Created by: Christopher Preston <rbg@gayteenresource.org>
-# $FreeBSD: games/nettoe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: games/nettoe/Makefile 342055 2014-01-31 19:46:24Z cs $
 
 PORTNAME=	nettoe
-PORTVERSION=	1.4.2
+PORTVERSION=	1.5
 CATEGORIES=	games
-MASTER_SITES=	SF \
-		http://www.c-s.li/ports/
+MASTER_SITES=	http://www.c-s.li/ports/ \
+		SF
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Tic tac toe game playable over the network
