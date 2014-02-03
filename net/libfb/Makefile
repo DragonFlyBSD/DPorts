@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: net/libfb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/libfb/Makefile 341941 2014-01-31 08:44:50Z miwi $
 
 PORTNAME=	libfb
 PORTVERSION=	2.0.2
@@ -27,5 +27,4 @@ LIBNET_CPPFLAGS=	-I${LOCALBASE}/include/libnet11
 LIBNET_LIBS=		-L${LOCALBASE}/lib/libnet11
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
