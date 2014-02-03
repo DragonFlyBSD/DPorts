@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-MySQLSequence/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-MySQLSequence/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DBIx-MySQLSequence
 PORTVERSION=	1.04
@@ -21,9 +21,6 @@ RUN_DEPENDS=	p5-DBD-mysql>0:${PORTSDIR}/databases/p5-DBD-mysql \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::MySQLSequence.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '/Test::More/d' ${WRKSRC}/Makefile.PL
 
