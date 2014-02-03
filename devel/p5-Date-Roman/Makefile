@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: devel/p5-Date-Roman/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Date-Roman/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	Date-Roman
 PORTVERSION=	1.06
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Date::Roman.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
