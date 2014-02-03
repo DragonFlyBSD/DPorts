@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: security/pam_per_user/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/pam_per_user/Makefile 342161 2014-02-01 14:54:06Z miwi $
 
 PORTNAME=	pam_per_user
 PORTVERSION=	0.4
@@ -12,7 +12,4 @@ COMMENT=	PAM module for per-user authentication
 
 USE_AUTOTOOLS=	libtool
 
-MAN5=		pam_per_user.5
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
