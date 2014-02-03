@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-InternalCoords/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-InternalCoords/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Chemistry-InternalCoords
 PORTVERSION=	0.18
@@ -18,10 +18,7 @@ RUN_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol \
 		p5-Chemistry-Bond-Find>=0:${PORTSDIR}/science/p5-Chemistry-Bond-Find \
 		p5-Chemistry-Canonicalize>=0:${PORTSDIR}/science/p5-Chemistry-Canonicalize
 
-MAN3=	Chemistry::InternalCoords.3 Chemistry::InternalCoords::Builder.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
