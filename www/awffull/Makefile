@@ -1,5 +1,5 @@
 # Created by: Chadwick Sorrell chad@wickdev.com
-# $FreeBSD: www/awffull/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/awffull/Makefile 341693 2014-01-29 07:59:19Z miwi $
 
 PORTNAME=	awffull
 PORTVERSION=	3.10.2
@@ -33,10 +33,6 @@ CONFIGURE_ARGS+=--with-font-default=${FONTDEFAULT} \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		awffull.1
-MAN5=		awffull.conf.5
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGEOIP}
