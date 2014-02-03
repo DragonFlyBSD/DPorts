@@ -1,4 +1,4 @@
-# $FreeBSD: www/htmlcxx/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/htmlcxx/Makefile 341718 2014-01-29 11:51:50Z miwi $
 
 PORTNAME=	htmlcxx
 PORTVERSION=	0.85
@@ -23,5 +23,4 @@ MAKE_JOBS_UNSAFE=yes
 
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
