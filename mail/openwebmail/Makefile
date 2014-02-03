@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: mail/openwebmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/openwebmail/Makefile 341583 2014-01-28 14:40:41Z bapt $
 
 PORTNAME=	openwebmail
 PORTVERSION=	2.53
@@ -77,7 +77,7 @@ RUN_DEPENDS+=	convert:${PORTSDIR}/graphics/ImageMagick
 .endif
 
 .if ${PORT_OPTIONS:MISPELL}
-RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
+RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell
 .endif
 
 .if ${PORT_OPTIONS:MLSOF}
