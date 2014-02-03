@@ -1,8 +1,8 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: archivers/upx/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: archivers/upx/Makefile 342105 2014-02-01 09:42:03Z fjoe $
 
 PORTNAME=	upx
-PORTVERSION=	3.09
+PORTVERSION=	3.91
 CATEGORIES=	archivers
 MASTER_SITES=	http://upx.sourceforge.net/download/\
 		SF/sevenzip/7-Zip/${LZMA_VER}:lzma
