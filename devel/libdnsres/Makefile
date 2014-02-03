@@ -1,5 +1,5 @@
 # Created by: Phil Oleson <oz@nixil.net>
-# $FreeBSD: devel/libdnsres/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libdnsres/Makefile 341665 2014-01-28 22:22:08Z bapt $
 
 PORTNAME=	libdnsres
 PORTVERSION=	0.1a
@@ -12,20 +12,14 @@ COMMENT=	Provides a non-blocking thread-safe API for resolving DNS names
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libevent.a:${PORTSDIR}/devel/libevent
 
+USES=		libtool
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--with-libevent=${LOCALBASE}
 MAKE_JOBS_UNSAFE=	yes
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
-MAN3=	dnsres.3
-MLINKS=	dnsres.3 dnsres_init.3 dnsres.3 dnsres_gethostbyname.3 \
-	dnsres.3 dnsres_gethostbyname2.3 dnsres.3 dnsres_gethostbyaddr.3 \
-	dnsres.3 dnsres_getaddrinfo.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,CFLAGS =,CFLAGS +=, ; s|top_buildir|top_builddir|g' \
 		${WRKSRC}/Makefile.in
