@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/linc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/linc/Makefile 341917 2014-01-31 07:04:20Z miwi $
 
 PORTNAME=	linc
 PORTVERSION=	1.0.3
@@ -15,8 +15,7 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 USE_GNOME=	gnomehack glib20
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
@@ -25,7 +24,6 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS/ s|docs||' ${WRKSRC}/Makefile.in
 
