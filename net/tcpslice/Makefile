@@ -1,5 +1,5 @@
 # Created by: smace@FreeBSD.org
-# $FreeBSD: net/tcpslice/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/tcpslice/Makefile 341937 2014-01-31 08:07:58Z miwi $
 
 PORTNAME=	tcpslice
 PORTVERSION=	2008.05.19
@@ -9,10 +9,9 @@ MASTER_SITES=	http://www.tcpdump.org/weekly/
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	A tool for extracting portions of pcap files
 
-MAN1=		tcpslice.1
-PLIST_FILES=	sbin/tcpslice
+PLIST_FILES=	sbin/tcpslice \
+		man/man1/tcpslice.1.gz
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
