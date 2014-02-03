@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: devel/libast/Makefile 335771 2013-12-06 16:16:09Z sunpoet $
+# $FreeBSD: devel/libast/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libast
 PORTVERSION=	0.7
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.eterm.org/download/ \
 		CRITICAL
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library of assorted spiffy things
 
 LICENSE=	BSD
