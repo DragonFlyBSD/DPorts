@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-App-CLI/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-App-CLI/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	App-CLI
 PORTVERSION=	0.313
@@ -13,7 +13,4 @@ COMMENT=	App::CLI - Dispatcher module for command line interface programs
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		App::CLI.3 App::CLI::Command.3 App::CLI::Command::Help.3 App::CLI::Helper.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
