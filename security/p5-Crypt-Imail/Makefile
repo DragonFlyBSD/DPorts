@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-Imail/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Imail/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Crypt-Imail
 PORTVERSION=	0.01
@@ -13,9 +13,6 @@ COMMENT=	Perl extension to encrypt and decrypt Imail passwords
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::Imail.3
-
 WRKSRC=		${WRKDIR}/Imail
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
