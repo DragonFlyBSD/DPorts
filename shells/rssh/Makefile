@@ -1,5 +1,5 @@
 # Created by: enigmatyc
-# $FreeBSD: shells/rssh/Makefile 337656 2013-12-27 09:03:30Z bapt $
+# $FreeBSD: shells/rssh/Makefile 342195 2014-02-01 17:18:14Z pawel $
 
 PORTNAME=	rssh
 PORTVERSION=	2.3.4
@@ -7,15 +7,21 @@ CATEGORIES=	shells security
 MASTER_SITES=	SF
 
 MAINTAINER=	jharris@widomaker.com
-COMMENT=	Restricted Secure SHell only for sftp or/and scp
+COMMENT=	Restricted Secure SHell only for sftp/scp/rdist/rsync/CVS
+
+LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
 
 USE_CSTD=	gnu89
-OPTIONS_DEFINE=	RDIST
+OPTIONS_DEFINE=	RDIST RSYNC3
 RDIST_DESC=	rdist support
 RDIST_RUN_DEPENDS=	rdist6:${PORTSDIR}/net/rdist6
 RDIST_CONFIGURE_ON=	--with-rdist=${LOCALBASE}/bin/rdist6
+
+RSYNC3_DESC=		rsync3 support (Debian patch)
+RSYNC3_EXTRA_PATCHES=	${FILESDIR}/optional-patch-util.c
 
 post-patch:
 	@${REINPLACE_CMD} -E -e 's,(\$$\(DESTDIR\)\$$\(sysconfdir\)/\$$\$$f),\1.dist,g' \
