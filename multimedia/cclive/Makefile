@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/cclive/Makefile 336260 2013-12-12 13:01:40Z bapt $
+# $FreeBSD: multimedia/cclive/Makefile 342325 2014-02-02 16:04:24Z miwi $
 
 PORTNAME=	cclive
 PORTVERSION=	0.7.11
@@ -23,9 +23,8 @@ CONFIGURE_ARGS+=--with-boost=${LOCALBASE}
 USES=		pkgconfig
 USE_XZ=		yes
 
-MAN1=		cclive.1
 PLIST_FILES=	bin/ccl \
-		bin/cclive
+		bin/cclive \
+		man/man1/cclive.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
