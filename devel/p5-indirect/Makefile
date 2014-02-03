@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: devel/p5-indirect/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-indirect/Makefile 341691 2014-01-29 07:59:00Z miwi $
 
 PORTNAME=	indirect
 PORTVERSION=	0.29
@@ -17,7 +17,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		indirect.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
