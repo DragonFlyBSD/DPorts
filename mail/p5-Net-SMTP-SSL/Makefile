@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Net-SMTP-SSL/Makefile 329792 2013-10-08 15:00:29Z eadler $
+# $FreeBSD: mail/p5-Net-SMTP-SSL/Makefile 342249 2014-02-02 08:11:05Z eadler $
 
 PORTNAME=	Net-SMTP-SSL
 PORTVERSION=	1.01
@@ -7,7 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SMTP client supporting SSL
 
 BUILD_DEPENDS=	p5-IO-Socket-SSL>=0:${PORTSDIR}/security/p5-IO-Socket-SSL
