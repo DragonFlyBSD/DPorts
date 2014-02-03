@@ -1,5 +1,5 @@
 # Created by: shanali
-# $FreeBSD: net/raddump/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/raddump/Makefile 341913 2014-01-31 05:26:44Z miwi $
 
 PORTNAME=	raddump
 PORTVERSION=	0.3.1
@@ -11,9 +11,7 @@ COMMENT=	Radius Packet Analyzer
 
 GNU_CONFIGURE=	yes
 
-MAN1=		raddump.1
+PLIST_FILES=	bin/raddump \
+		man/man1/raddump.1.gz
 
-PLIST_FILES=	bin/raddump
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
