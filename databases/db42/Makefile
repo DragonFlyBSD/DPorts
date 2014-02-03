@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: databases/db42/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: databases/db42/Makefile 342272 2014-02-02 11:17:47Z miwi $
 
 PORTNAME=	db42
 PORTVERSION=	4.2.52
@@ -22,7 +22,6 @@ MASTERDIR?=	${.CURDIR}
 
 SLAVE_PORT=	no
 
-NO_STAGE=	yes
 .include <${MASTERDIR}/Makefile.db>
 .include <bsd.port.pre.mk>
 
