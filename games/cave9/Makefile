@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/cave9/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: games/cave9/Makefile 341674 2014-01-28 23:29:48Z amdmi3 $
 
 PORTNAME=	cave9
 PORTVERSION=	0.4
@@ -15,7 +15,7 @@ COMMENT=	Gravity cave-exploration game
 
 DATAVER=	4
 
-USE_GMAKE=	yes
+USES=		gmake
 USE_SDL=	sdl ttf image
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -30,18 +30,14 @@ PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
 post-extract:
 	@${MV} ${WRKDIR}/data ${WRKSRC}/
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cave9 ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/cave9 ${STAGEDIR}${PREFIX}/bin/
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/data/* ${STAGEDIR}${DATADIR}/
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
