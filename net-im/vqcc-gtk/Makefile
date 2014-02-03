@@ -1,5 +1,5 @@
 # Created by: Saulius Menkevicius <bob@nulis.lt>
-# $FreeBSD: net-im/vqcc-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net-im/vqcc-gtk/Makefile 341927 2014-01-31 07:43:16Z miwi $
 
 PORTNAME=	vqcc-gtk
 PORTVERSION=	0.5
@@ -19,5 +19,4 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} -lintl
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
