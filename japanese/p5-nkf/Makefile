@@ -1,5 +1,5 @@
 # Created by: max
-# $FreeBSD: japanese/p5-nkf/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-nkf/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	SFJP/${PORTNAME}/53171
 PKGNAMEPREFIX=	ja-p5-
 
 MAINTAINER=	hrs@FreeBSD.org
-COMMENT=	A perl extension module to use NKF
+COMMENT=	Perl extension module to use NKF
 
 LICENSE=	ZLIB NKF
 LICENSE_COMB=	multi
@@ -22,7 +22,4 @@ USES=		perl5
 USE_PERL5=	configure
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/NKF.mod
 
-MAN3=		NKF.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
