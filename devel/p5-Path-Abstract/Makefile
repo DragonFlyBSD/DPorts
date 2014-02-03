@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Abstract/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Path-Abstract/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Path-Abstract
 PORTVERSION=	0.096
@@ -19,7 +19,4 @@ TEST_DEPENDS=	p5-Test-Most>=0:${PORTSDIR}/devel/p5-Test-Most \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Path::Abstract.3 Path::Abstract::Underload.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
