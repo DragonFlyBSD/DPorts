@@ -1,5 +1,5 @@
-# Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: textproc/p5-libsoldout/Makefile 335772 2013-12-06 16:16:35Z sunpoet $
+# Created by: Rodrigo OSORIO <rodrigo@FreeBSD.org>
+# $FreeBSD: textproc/p5-libsoldout/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libsoldout
 PORTVERSION=	0.02
@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ROS
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Convert Markdown text in (X)HTML
 
 LICENSE=	ART10 GPLv1
