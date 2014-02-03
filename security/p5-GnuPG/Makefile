@@ -1,5 +1,5 @@
 # Created by: Marcello Coutinho
-# $FreeBSD: security/p5-GnuPG/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-GnuPG/Makefile 342032 2014-01-31 16:50:53Z miwi $
 
 PORTNAME=	GnuPG
 PORTVERSION=	0.19
@@ -15,10 +15,4 @@ LICENSE=	GPLv2
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	GnuPG.3 \
-	GnuPG::Tie.3
-
-MAN1=	gpgmailtunl.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
