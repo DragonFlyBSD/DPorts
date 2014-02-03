@@ -1,8 +1,9 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-oauth2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/py-oauth2/Makefile 341755 2014-01-29 16:17:02Z miwi $
 
 PORTNAME=	oauth2
 PORTVERSION=	1.5.211
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +17,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httplib2>0:${PORTSDIR}/www/py-httplib2
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
