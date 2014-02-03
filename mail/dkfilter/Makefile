@@ -1,5 +1,5 @@
 # Created by: Yoshisato YANAGISAWA
-# $FreeBSD: mail/dkfilter/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/dkfilter/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME=	dkfilter
 PORTVERSION=	0.11
@@ -26,5 +26,4 @@ GROUPS=		${DKFILTER_GROUPNAME}
 DKFILTER_USERNAME?=	dkfilter
 DKFILTER_GROUPNAME?=	${DKFILTER_USERNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
