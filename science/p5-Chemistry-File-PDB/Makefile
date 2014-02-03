@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Chemistry-File-PDB/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-File-PDB/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Chemistry-File-PDB
 PORTVERSION=	0.23
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Chemistry::File::PDB.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
