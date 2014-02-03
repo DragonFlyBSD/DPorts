@@ -1,5 +1,5 @@
 # Created by: Alex Pesternikov <ap@page2rss.com>
-# $FreeBSD: www/ctemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/ctemplate/Makefile 341718 2014-01-29 11:51:50Z miwi $
 
 PORTNAME=	ctemplate
 PORTVERSION=	0.5
@@ -9,10 +9,9 @@ MASTER_SITES=	SF
 MAINTAINER=	ap@page2rss.com
 COMMENT=	Template system for C
 
-USE_GMAKE=	yes
+USES=	gmake
 GNU_CONFIGURE=	yes
 
 PLIST_FILES+=	bin/h2ap
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
