@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/redir/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/redir/Makefile 342042 2014-01-31 17:09:15Z antoine $
 
 PORTNAME=	redir
 PORTVERSION=	2.2.1
@@ -8,16 +8,14 @@ CATEGORIES=	net
 MASTER_SITES=	http://sammy.net/~sammy/hacks/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A TCP connection redirection utility
+COMMENT=	TCP connection redirection utility
 
 USE_RC_SUBR=	redir
 
-MAN1=		redir.1
-PLIST_FILES=	bin/redir
+PLIST_FILES=	bin/redir man/man1/redir.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/redir ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/redir.man ${MANPREFIX}/man/man1/redir.1
+	${INSTALL_PROGRAM} ${WRKSRC}/redir ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/redir.man ${STAGEDIR}${MANPREFIX}/man/man1/redir.1
 
 .include <bsd.port.mk>
