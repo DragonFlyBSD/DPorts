@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: devel/p5-Sub-Alias/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Alias/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	Sub-Alias
 PORTVERSION=	0.03
@@ -9,6 +9,8 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	peter@vereshagin.org
 COMMENT=	Simple subroutine alias
+
+LICENSE=	MIT
 
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
 		p5-Devel-Declare>=0:${PORTSDIR}/devel/p5-Devel-Declare \
@@ -20,9 +22,4 @@ RUN_DEPENDS=	p5-Sub-Exporter>=0:${PORTSDIR}/devel/p5-Sub-Exporter \
 USES=		perl5
 USE_PERL5=	configure
 
-LICENSE=	MIT
-
-MAN3=		Sub::Alias.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
