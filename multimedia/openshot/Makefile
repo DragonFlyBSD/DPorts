@@ -1,12 +1,12 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/openshot/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: multimedia/openshot/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	openshot
 PORTVERSION=	1.4.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://launchpad.net/openshot/${PORTVERSION:C/\.[0-9]+$//}/${PORTVERSION}/+download/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Non-linear video editor
 
 LICENSE=	GPLv3
