@@ -1,5 +1,5 @@
 # Created by: Sergei Barbarash <sgt@outline.ru>
-# $FreeBSD: net/wmlj/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/wmlj/Makefile 341965 2014-01-31 09:46:10Z miwi $
 
 PORTNAME=	wmlj
 PORTVERSION=	0.4.0
@@ -15,10 +15,9 @@ LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk12
 
-MAN1=		wmlj.1
-PLIST_FILES=	bin/wmlj
+PLIST_FILES=	bin/wmlj \
+		man/man1/wmlj.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/<curl\/types.h>/d' ${WRKSRC}/src/network.c
 
