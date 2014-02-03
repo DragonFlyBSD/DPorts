@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Proc-Queue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Proc-Queue/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Proc-Queue
 PORTVERSION=	1.23
@@ -13,7 +13,4 @@ COMMENT=	Proc::Queue - limit the number of child processes running
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Proc::Queue.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
