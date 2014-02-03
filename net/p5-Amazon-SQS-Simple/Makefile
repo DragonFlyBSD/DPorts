@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 341924 2014-01-31 07:18:16Z miwi $
 
 PORTNAME=	Amazon-SQS-Simple
 PORTVERSION=	1.06
@@ -20,16 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Amazon::SQS::Simple::Message.3 \
-		Amazon::SQS::Simple::Queue.3 \
-		Amazon::SQS::Simple::Base.3 \
-		Amazon::SQS::Simple::SendResponse.3 \
-		Amazon::SQS::Simple.3
-
 SUB_FILES=	pkg-message
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
