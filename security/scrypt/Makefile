@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/scrypt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/scrypt/Makefile 342023 2014-01-31 16:48:26Z miwi $
 
 PORTNAME=	scrypt
 PORTVERSION=	1.1.6
@@ -11,16 +11,15 @@ MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Key Derivation Function
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=	gmake
 USE_LDCONFIG=	yes
-PLIST_FILES=	bin/scrypt
 
-MAN1=	scrypt.1
+PLIST_FILES=	bin/scrypt \
+		man/man1/scrypt.1.gz
 
 OPTIONS_DEFINE=	SSE2
 SSE2_DESC=	Use SSE2-optimized code
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSE2}
