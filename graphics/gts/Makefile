@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/gts/Makefile 341709 2014-01-29 09:53:10Z gahr $
 
 PORTNAME=	gts
 PORTVERSION=	0.7.6
@@ -11,6 +11,8 @@ MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	GNU Triangulated Surface Library
 
 LICENSE=	LGPL20
+
+CONFLICTS=	pcb-[0-9]*
 
 USES=		pkgconfig
 USE_GNOME=	glib20
