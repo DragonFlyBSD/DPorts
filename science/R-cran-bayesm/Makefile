@@ -1,10 +1,10 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-bayesm/Makefile 339219 2014-01-09 12:36:23Z wen $
+# $FreeBSD: science/R-cran-bayesm/Makefile 342138 2014-02-01 13:58:01Z antoine $
 
 PORTNAME=	bayesm
 PORTVERSION=	2.2.5
 CATEGORIES=	science
-DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/\./1}
+DISTNAME=	${PORTNAME}_${PORTVERSION:C/\./-/g:C/-/./1}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Bayesian Inference for Marketing/Micro-econometrics
