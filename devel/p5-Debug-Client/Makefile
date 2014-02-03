@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: devel/p5-Debug-Client/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Debug-Client/Makefile 342154 2014-02-01 14:42:18Z miwi $
 
 PORTNAME=	Debug-Client
 PORTVERSION=	0.24
@@ -23,9 +23,6 @@ TEST_DEPENDS=	p5-File-HomeDir>=1.00:${PORTSDIR}/devel/p5-File-HomeDir \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Debug::Client.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
