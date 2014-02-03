@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: graphics/cthumb/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/cthumb/Makefile 342354 2014-02-02 18:39:59Z antoine $
 
 PORTNAME=	cthumb
 PORTVERSION=	4.2
@@ -19,8 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pnmscale:${PORTSDIR}/graphics/netpbm \
 USES=		perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-themedir=${DATADIR}
-
-MAN1=		cthumb.1
+CONFIGURE_ENV=	perl_path=${PERL}
 
 PORTDOCS=	ChangeLog INSTALL README TO-DO VERSION cthumbrc.sample
 
@@ -49,20 +48,19 @@ THEMES=		blue-steel.theme \
 		tv-large.theme \
 		tv.theme
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/cthumb ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cthumb.1 ${PREFIX}/man/man1
-	${MKDIR} ${DATADIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/cthumb ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/cthumb.1 ${STAGEDIR}${PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DATADIR}
 .for theme in ${THEMES}
-	${MKDIR} ${DATADIR}/${theme}
-	${INSTALL_DATA} ${WRKSRC}/themes/${theme}/* ${DATADIR}/${theme}
+	@${MKDIR} ${STAGEDIR}${DATADIR}/${theme}
+	${INSTALL_DATA} ${WRKSRC}/themes/${theme}/* ${STAGEDIR}${DATADIR}/${theme}
 .endfor
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
