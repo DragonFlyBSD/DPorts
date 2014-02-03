@@ -1,8 +1,9 @@
 # Created by: olli hauer <ohauer@FreeBSD.org>
-# $FreeBSD: net/py-pysphere/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: net/py-pysphere/Makefile 341945 2014-01-31 08:47:41Z miwi $
 
 PORTNAME=	pysphere
 PORTVERSION=	0.1.8
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	GOOGLE_CODE
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,9 +16,7 @@ LICENSE=	BSD
 USE_ZIP=	yes
 USE_DOS2UNIX=	yes
 USE_PYTHON=	2
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
