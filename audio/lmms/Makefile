@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: audio/lmms/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/lmms/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	lmms
 PORTVERSION=	0.4.15
@@ -7,7 +7,7 @@ PORTEPOCH=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	All-in-one sequencer, drum machine, sampler, and more
 
 LICENSE=	GPLv2
