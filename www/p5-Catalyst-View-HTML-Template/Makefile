@@ -1,5 +1,5 @@
 # Created by: Gruen Christian <kiki@bsdro.org>
-# $FreeBSD: www/p5-Catalyst-View-HTML-Template/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-View-HTML-Template/Makefile 341815 2014-01-30 08:51:45Z miwi $
 
 PORTNAME=	Catalyst-View-HTML-Template
 PORTVERSION=	0.03
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Catalyst::Helper::View::HTML::Template.3 \
-		Catalyst::View::HTML::Template.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
