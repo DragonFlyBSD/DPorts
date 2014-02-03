@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: devel/p5-Template-Provider-Encode/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Template-Provider-Encode/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Template-Provider-Encode
 PORTVERSION=	0.02
@@ -15,8 +15,4 @@ RUN_DEPENDS=	p5-Template-Toolkit>=0:${PORTSDIR}/www/p5-Template-Toolkit
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Template::Provider::Encode.3 \
-		Template::Provider::Encode::Guess.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
