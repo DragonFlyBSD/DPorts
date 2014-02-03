@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/rubberband/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/rubberband/Makefile 341853 2014-01-30 15:58:09Z miwi $
 
 PORTNAME=	rubberband
 PORTVERSION=	1.7.0
@@ -20,7 +20,6 @@ LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile \
 RUN_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 
 USES=		gmake pkgconfig
-NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
