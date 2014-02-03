@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mheffner@vt.edu>
-# $FreeBSD: security/bfbtester/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/bfbtester/Makefile 342015 2014-01-31 16:24:42Z miwi $
 
 PORTNAME=	bfbtester
 PORTVERSION=	2.0.1
@@ -12,7 +12,6 @@ COMMENT=	Security tool for testing binaries for overflows
 
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/bfbtester
-USE_GMAKE=	yes
+USES=		gmake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
