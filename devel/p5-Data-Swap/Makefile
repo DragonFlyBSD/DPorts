@@ -1,5 +1,5 @@
 # Created by: Parv <parv@pair.org>
-# $FreeBSD: devel/p5-Data-Swap/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Swap/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Data-Swap
 PORTVERSION=	0.08
@@ -13,7 +13,4 @@ COMMENT=	XS module to swap the contents and types of referenced variables
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Swap.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
