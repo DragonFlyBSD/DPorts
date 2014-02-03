@@ -1,8 +1,9 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: devel/ChipmunkPhysics/Makefile 339393 2014-01-11 00:22:54Z madpilot $
+# $FreeBSD: devel/ChipmunkPhysics/Makefile 341656 2014-01-28 21:16:10Z nemysis $
 
 PORTNAME=	ChipmunkPhysics
 PORTVERSION=	6.2.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://chipmunk-physics.net/release/Chipmunk-6.x/ \
 		http://files.slembcke.net/chipmunk/release/Chipmunk-6.x/ \
@@ -29,7 +30,7 @@ PORTEXAMPLES=	*.c *.h
 
 .if ${PORT_OPTIONS:MDEMOS}
 USE_GL=		glew
-LIB_DEPENDS+=	libglfw.so:${PORTSDIR}/graphics/glfw
+LIB_DEPENDS+=	libglfw.so:${PORTSDIR}/graphics/glfw2
 PLIST_SUB+=	DEMOS=""
 .else
 CMAKE_ARGS=	-DBUILD_DEMOS=OFF
