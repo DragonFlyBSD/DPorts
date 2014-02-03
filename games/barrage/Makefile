@@ -1,22 +1,35 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: games/barrage/Makefile 329947 2013-10-10 00:15:20Z madpilot $
+# $FreeBSD: games/barrage/Makefile 342172 2014-02-01 15:36:19Z nemysis $
 
 PORTNAME=	barrage
 PORTVERSION=	1.0.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	SF/lgames/${PORTNAME}
+MASTER_SITES=	SF/lgames/${PORTNAME}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Destroy as many targets as possible
 
-USE_SDL=	sdl mixer
+LICENSE=	GPLv2
+
 USES=		gmake
+USE_SDL=	sdl mixer
 GNU_CONFIGURE=	yes
+
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--with-profile-path=/var/games
+
+PORTDOCS=	AUTHORS BUGS ChangeLog README
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/games/|/|g' ${WRKSRC}/configure
+
+post-install:
+	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/
+
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
