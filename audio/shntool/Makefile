@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: audio/shntool/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/shntool/Makefile 341855 2014-01-30 16:05:12Z miwi $
 
 PORTNAME=	shntool
 PORTVERSION=	3.0.10
@@ -11,8 +11,8 @@ COMMENT=	Multi-purpose .wav processing utility
 
 GNU_CONFIGURE=	yes
 SHN_ALIASES=	tool len fix hash pad join split cat cmp cue conv info strip gen trim
-PLIST_FILES=	${SHN_ALIASES:S|^|bin/shn|}
-MAN1=		shntool.1
+PLIST_FILES=	${SHN_ALIASES:S|^|bin/shn|} \
+		man/man1/shntool.1.gz
 
 OPTIONS_DEFINE=	AIFF SHN FLAC APE OFR LPAC WV ALAC LA TTA BONK KXS
 AIFF_DESC=	AIFF support via sox
@@ -29,7 +29,6 @@ KXS_DESC=	Kexis support
 RDEP=	AIFF:sox SHN:shorten FLAC APE:mac OFR:ofr:optimfrog LPAC WV:wavpack \
 	ALAC:alac LA:linux-laudio TTA:ttaenc:tta BONK KXS:kexis
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .for o in ${PORT_OPTIONS}
