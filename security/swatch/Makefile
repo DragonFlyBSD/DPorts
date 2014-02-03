@@ -1,5 +1,5 @@
 # Created by: jfitz
-# $FreeBSD: security/swatch/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/swatch/Makefile 342162 2014-02-01 14:54:17Z miwi $
 
 PORTNAME=	swatch
 PORTVERSION=	3.2.3
@@ -22,10 +22,6 @@ USE_PERL5=	configure
 CONFIGURE_ARGS=	INSTALLMAN1DIR=${PREFIX}/man/man1
 USE_RC_SUBR=	${PORTNAME}
 
-MAN1=	swatch.1
-MAN3=	Swatch::Actions.3 Swatch::Throttle.3 Swatch::Threshold.3
-
-NO_STAGE=	yes
 post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -delete
 
