@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/physfs/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/physfs/Makefile 342176 2014-02-01 15:50:41Z miwi $
 
 PORTNAME=	physfs
 PORTVERSION=	2.0.3
@@ -14,7 +14,6 @@ USES=		cmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 patch-autotools-libtool:
 	@${DO_NADA}
 
