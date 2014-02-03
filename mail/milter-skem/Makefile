@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: mail/milter-skem/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/milter-skem/Makefile 342323 2014-02-02 16:02:58Z miwi $
 
 PORTNAME=	skem
 PORTVERSION=	1.0.1
@@ -11,9 +11,8 @@ COMMENT=	Cache earlier sendmail's verdicts for the relays
 
 USE_BZIP2=	yes
 
-PLIST_FILES=	sbin/skem
-MAN8=		skem.8
-MANCOMPRESSED=	maybe
+PLIST_FILES=	sbin/skem \
+		man/man8/skem.8.gz
 
 OPTIONS_DEFINE=	SKEM_MILTER421 SKEM_NO_CLEANUP SKEM_NO_LOGWATCHER SKEM_NETINET6 SKEM_NETINET
 SKEM_MILTER421_DESC=	Sendmail was built with -D_FFR_MILTER_421
@@ -24,8 +23,6 @@ SKEM_NETINET_DESC=	Support IPv4 addresses
 
 OPTIONS_DEFAULT=	SKEM_NETINET
 
-
-NO_STAGE=	yes
 post-install:
 	@${CAT} ${PKGMESSAGE}
 
