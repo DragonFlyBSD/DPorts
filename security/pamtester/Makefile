@@ -1,5 +1,5 @@
 # Created by: andy@fud.org.nz
-# $FreeBSD: security/pamtester/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/pamtester/Makefile 342012 2014-01-31 15:54:10Z miwi $
 
 PORTNAME=	pamtester
 PORTVERSION=	0.1.2
@@ -9,13 +9,11 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A command line pam authentication tester
 
-MAN1=		pamtester.1
-
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${CFLAGS}
-USE_GMAKE=	yes
+USES=	gmake
 
-PLIST_FILES=	bin/pamtester
+PLIST_FILES=	bin/pamtester \
+		man/man1/pamtester.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
