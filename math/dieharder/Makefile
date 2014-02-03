@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: math/dieharder/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/dieharder/Makefile 342315 2014-02-02 15:20:05Z miwi $
 
 PORTNAME=	dieharder
 PORTVERSION=	3.31.1
@@ -22,10 +22,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-MAN1=		dieharder.1
-MAN3=		libdieharder.3
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "sparc64"
