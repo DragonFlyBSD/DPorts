@@ -1,5 +1,5 @@
 # Created by: Brooks Davis
-# $FreeBSD: lang/clang31/Makefile 329791 2013-10-08 14:59:55Z tijl $
+# $FreeBSD: lang/clang31/Makefile 341852 2014-01-30 15:51:08Z brooks $
 
 PORTNAME=	clang31
 PORTVERSION=	3.1
@@ -13,6 +13,9 @@ EXTRACT_ONLY=	${LLVM_SOURCE}
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	C, Objective-C, and (alpha-quality) C++ compiler
+
+DEPRECATED=	No remaining dependencies
+EXPIRATION_DATE=	2014-03-01
 
 CONFLICTS=	clang-[23]* clang-devel-[23]*
 
