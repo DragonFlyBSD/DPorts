@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: security/p5-Authen-CyrusSASL/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-CyrusSASL/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Authen-CyrusSASL
 PORTVERSION=	0.01
@@ -13,9 +13,6 @@ COMMENT=	Perl5 module for accessing the SASL authentication daemon
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Authen::CyrusSASL.3
-
-NO_STAGE=	yes
 post-patch:
 	@${MKDIR} ${WRKSRC}/lib
 	@${RM} ${WRKSRC}/Authen/*.orig
