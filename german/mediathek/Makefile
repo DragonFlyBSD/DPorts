@@ -1,9 +1,8 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: german/mediathek/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD: german/mediathek/Makefile 341461 2014-01-27 21:53:59Z lme $
 
 PORTNAME=	mediathek
-PORTVERSION=	3.3.0
-PORTREVISION=	1
+PORTVERSION=	4
 CATEGORIES=	german java
 MASTER_SITES=	SF/zdfmediathk/Mediathek/Mediathek%20${PORTVERSION}
 DISTNAME=	MediathekView_${PORTVERSION}
