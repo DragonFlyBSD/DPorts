@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi
-# $FreeBSD: net/tapidbus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/tapidbus/Makefile 341954 2014-01-31 09:20:58Z miwi $
 
 PORTNAME=	tapidbus
 PORTVERSION=	0.2.1
@@ -14,14 +14,12 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		pathfix pkgconfig gmake
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|\-O2||' ${WRKSRC}/configure
 
