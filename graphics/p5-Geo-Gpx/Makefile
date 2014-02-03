@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-Gpx/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Geo-Gpx/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Geo-Gpx
 PORTVERSION=	0.26
@@ -20,10 +20,7 @@ BUILD_DEPENDS=	p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
 		p5-DateTime-Format-ISO8601>=0:${PORTSDIR}/devel/p5-DateTime-Format-ISO8601
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		Geo::Gpx.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
