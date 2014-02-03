@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-# $FreeBSD: devel/p5-Algorithm-Accounting/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Algorithm-Accounting/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Algorithm-Accounting
 PORTVERSION=	0.08
@@ -25,11 +25,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Algorithm::Accounting.3 \
-		Algorithm::Accounting::Report.3 \
-		Algorithm::Accounting::Report::Imager.3 \
-		Algorithm::Accounting::Report::GDGraph.3 \
-		Algorithm::Accounting::Report::Text.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
