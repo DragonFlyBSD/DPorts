@@ -1,5 +1,5 @@
 # Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
-# $FreeBSD: security/p5-Crypt-Twofish_PP/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Twofish_PP/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Crypt-Twofish_PP
 PORTVERSION=	0.17
@@ -18,10 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Crypt::Twofish_PP.3 \
-	Crypt::Twofish_PP::Key16.3 \
-	Crypt::Twofish_PP::Key24.3 \
-	Crypt::Twofish_PP::Key32.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
