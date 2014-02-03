@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: lang/emacs-lisp-intro/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: lang/emacs-lisp-intro/Makefile 342180 2014-02-01 16:03:44Z miwi $
 
 PORTNAME=	emacs-lisp-intro
 PORTVERSION=	2.04
@@ -13,5 +13,4 @@ COMMENT=	An introduction to Emacs Lisp programming
 USE_AUTOTOOLS=	autoconf213
 INFO=		emacs-lisp-intro
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
