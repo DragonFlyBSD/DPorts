@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: math/p5-Graph/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Graph/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Graph
 PORTVERSION=	0.96
@@ -18,22 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Graph.3 \
-		Graph::AdjacencyMap.3 \
-		Graph::AdjacencyMap::Vertex.3 \
-		Graph::AdjacencyMatrix.3 \
-		Graph::BitMatrix.3 \
-		Graph::Directed.3 \
-		Graph::Matrix.3 \
-		Graph::TransitiveClosure.3 \
-		Graph::TransitiveClosure::Matrix.3 \
-		Graph::Traversal.3 \
-		Graph::Traversal::BFS.3 \
-		Graph::Traversal::DFS.3 \
-		Graph::Undirected.3 \
-		Graph::UnionFind.3 \
-		Heap071::Elem.3 \
-		Heap071::Fibonacci.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
