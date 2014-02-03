@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/gnotime/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/gnotime/Makefile 342280 2014-02-02 12:36:36Z antoine $
 
 PORTNAME=	gnotime
 PORTVERSION=	2.4.1
@@ -32,7 +32,6 @@ INSTALLS_OMF=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		gnotime.1 gnotime-remote.1
 GCONF_SCHEMAS=	gnotime.schemas
 
 QOF_VERSION=	0.7.5
@@ -41,7 +40,6 @@ QOF_WRKSRC=	${WRKDIR}/${QOF_DISTNAME}
 LIBQOF_CFLAGS=	-I${QOF_WRKSRC}/qof
 LIBQOF_LIBS=	-L${QOF_WRKSRC}/qof/.libs -lqof
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^AM_CFLAGS =/s|-g||' ${WRKSRC}/src/Makefile.in
