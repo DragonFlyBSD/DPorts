@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: net/ossp-sa/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/ossp-sa/Makefile 341935 2014-01-31 08:05:57Z miwi $
 
 PORTNAME=	sa
 PORTVERSION=	1.2.6
@@ -13,15 +13,12 @@ COMMENT=	An abstraction library for the Unix socket API
 
 LIB_DEPENDS=	ex.10:${PORTSDIR}/devel/ossp-ex
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ex=${LOCALBASE}
 USE_LDCONFIG=	yes
 
-MAN3+=		sa.3
-
 check:	build
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check)
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
