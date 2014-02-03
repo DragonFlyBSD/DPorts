@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/p5-interface/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-interface/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	interface
 PORTVERSION=	0.03
@@ -14,7 +14,4 @@ COMMENT=	Simple compile time interface checking for OO Perl
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		interface.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
