@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-d2to1/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-d2to1/Makefile 342116 2014-02-01 11:24:30Z koobs $
 
 PORTNAME=	d2to1
-PORTVERSION=	0.2.10
+PORTVERSION=	0.2.11
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,10 +10,10 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	koobs@FreeBSD.org
 COMMENT=	Distutils2-like setup.cfg files with setuptools setup.py
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
