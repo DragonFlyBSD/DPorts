@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net-im/twitmail/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/twitmail/Makefile 341861 2014-01-30 16:46:22Z miwi $
 
 PORTNAME=	twitmail
 PORTVERSION=	0.42
@@ -21,7 +21,4 @@ BUILD_DEPENDS=	p5-DBD-SQLite>=1.12:${PORTSDIR}/databases/p5-DBD-SQLite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		twitmail.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
