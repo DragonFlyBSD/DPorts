@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Regression/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Regression/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Statistics-Regression
 PORTVERSION=	0.53
@@ -13,7 +13,4 @@ COMMENT=	Perl module to perform weighted linear regression
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Statistics::Regression.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
