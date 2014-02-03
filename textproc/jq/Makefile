@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: textproc/jq/Makefile 329072 2013-10-02 16:34:01Z knu $
+# $FreeBSD: textproc/jq/Makefile 341746 2014-01-29 15:12:54Z gahr $
 
 PORTNAME=	jq
 PORTVERSION=	1.3
@@ -9,21 +9,20 @@ MASTER_SITES=	http://stedolan.github.io/jq/download/source/
 MAINTAINER=	jnlin@csie.nctu.edu.tw
 COMMENT=	Lightweight and flexible command-line JSON processor
 
+OPTIONS_DEFINE=	DOCS
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs --docdir="${DOCSDIR}"
 USE_CSTD=	gnu99
 
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
-
-NO_STAGE=	yes
-
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 PORTDOCS=	*
-.else
+
+.include <bsd.port.options.mk>
+
+.if !${PORT_OPTIONS:MDOCS}
 MAKE_ARGS=	docdir=
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
