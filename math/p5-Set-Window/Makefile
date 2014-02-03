@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Set-Window/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Set-Window/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Set-Window
 PORTVERSION=	1.01
@@ -13,9 +13,6 @@ COMMENT=	Perl module to manage an interval on the integer line
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Set::Window.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '/use 5/d' ${WRKSRC}/Window.pm
 
