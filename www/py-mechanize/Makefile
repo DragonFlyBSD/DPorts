@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: www/py-mechanize/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-mechanize/Makefile 341731 2014-01-29 13:18:39Z miwi $
 
 PORTNAME=	mechanize
 PORTVERSION=	0.2.5
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		http://wwwsearch.sourceforge.net/mechanize/src/
@@ -12,9 +13,7 @@ MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Stateful programmatic web browsing in Python
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
