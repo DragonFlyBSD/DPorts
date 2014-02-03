@@ -1,5 +1,5 @@
 # Created by: genserg@hotmail.com
-# $FreeBSD: www/spawn-fcgi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/spawn-fcgi/Makefile 341637 2014-01-28 16:48:14Z miwi $
 
 PORTNAME=	spawn-fcgi
 PORTVERSION=	1.6.3
@@ -16,11 +16,9 @@ USE_RC_SUBR=	spawn-fcgi
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		spawn-fcgi.1
+PLIST_FILES=	bin/spawn-fcgi \
+		man/man1/spawn-fcgi.1.gz
 
-PLIST_FILES=	bin/spawn-fcgi
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 SUB_LIST+=	REQUIRE="DAEMON"
