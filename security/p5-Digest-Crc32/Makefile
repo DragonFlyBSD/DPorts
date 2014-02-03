@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-Crc32/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-Crc32/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Digest-Crc32
 PORTVERSION=	0.01
@@ -13,9 +13,6 @@ COMMENT=	Perl extension for calculating 32-bit CRC checksums
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Digest::Crc32.3
-
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION:C/\.//}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
