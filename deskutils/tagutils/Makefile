@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: deskutils/tagutils/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/tagutils/Makefile 342182 2014-02-01 16:16:16Z miwi $
 
 PORTNAME=	tagutils
 PORTVERSION=	0.3.0
@@ -19,5 +19,4 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
