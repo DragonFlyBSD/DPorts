@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DNS-ZoneCheck/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-Net-DNS-ZoneCheck/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	Net-DNS-ZoneCheck
 PORTVERSION=	0.01
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Net::DNS::ZoneCheck.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
