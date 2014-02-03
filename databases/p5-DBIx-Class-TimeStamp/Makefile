@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-TimeStamp/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-TimeStamp/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBIx-Class-TimeStamp
 PORTVERSION=	0.14
@@ -24,9 +24,6 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::TimeStamp.3
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' '/auto_install/d' ${WRKSRC}/Makefile.PL
 
