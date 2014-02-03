@@ -1,8 +1,9 @@
 # Created by: Eugene Grosbein <ports@grosbein.net>
-# $FreeBSD: net/py-msrplib/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/py-msrplib/Makefile 341959 2014-01-31 09:24:25Z miwi $
 
 PORTNAME=	msrplib
 PORTVERSION=	0.14.4
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	http://download.ag-projects.com/SipClient/ \
 		http://www.grosbein.net/python/
@@ -26,6 +27,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
 PYDISTUTILS_PKGNAME=python_${PORTNAME}
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
