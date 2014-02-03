@@ -1,6 +1,7 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/php55-iconv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: converters/php55-iconv/Makefile 341778 2014-01-29 20:41:27Z tijl $
 
+PORTREVISION=	1
 CATEGORIES=	converters
 
 MASTERDIR=	${.CURDIR}/../../lang/php55
