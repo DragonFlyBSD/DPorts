@@ -1,5 +1,5 @@
 # Created by: Tillman Hodgson <tillman@seekingfire.com>
-# $FreeBSD: devel/p5-List-Group/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-List-Group/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	List-Group
 PORTVERSION=	1.3
@@ -15,7 +15,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		List::Group.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
