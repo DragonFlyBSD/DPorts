@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: www/sitecopy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/sitecopy/Makefile 341687 2014-01-29 07:57:45Z miwi $
 
 PORTNAME=	sitecopy
 PORTVERSION=	0.16.6
@@ -22,7 +22,6 @@ CONFIGURE_ARGS=	--with-neon --with-libxml2
 USE_GNOME=	libxml2
 USE_GMAKE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -39,7 +38,6 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-ssl
 .endif
 
-MAN1=		sitecopy.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|;;|;|g' \
