@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro
-# $FreeBSD: x11-fonts/mkbold-mkitalic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: x11-fonts/mkbold-mkitalic/Makefile 342268 2014-02-02 11:00:11Z miwi $
 
 PORTNAME=	mkbold-mkitalic
 PORTVERSION=	0.11
@@ -16,11 +16,8 @@ PLIST_FILES=	bin/mkbold bin/mkitalic bin/mkbolditalic
 PORTDOCS=	ALGORITHM ALGORITHM.eucJP LICENSE README README.eucJP
 USE_BZIP2=	yes
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC}; ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR})
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}; ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
