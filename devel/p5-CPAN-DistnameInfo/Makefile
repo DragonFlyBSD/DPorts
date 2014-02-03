@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-CPAN-DistnameInfo/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-CPAN-DistnameInfo/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	CPAN-DistnameInfo
 PORTVERSION=	0.12
@@ -13,7 +13,4 @@ COMMENT=	Extract distribution name and version from a CPAN filename
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CPAN::DistnameInfo.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
