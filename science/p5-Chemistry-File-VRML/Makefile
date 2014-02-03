@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-File-VRML/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-File-VRML/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Chemistry-File-VRML
 PORTVERSION=	0.10
@@ -14,10 +14,7 @@ COMMENT=	Generate VRML models for molecules
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 RUN_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 
-MAN3=	Chemistry::File::VRML.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
