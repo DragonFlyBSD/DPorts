@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: devel/hgsvn/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/hgsvn/Makefile 341506 2014-01-28 07:47:43Z bapt $
 
 PORTNAME=	hgsvn
 PORTVERSION=	0.2.3
@@ -7,6 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	python
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Scripts to work locally on Subversion checkouts using Mercurial
@@ -14,14 +15,9 @@ COMMENT=	Scripts to work locally on Subversion checkouts using Mercurial
 RUN_DEPENDS=	svn:${PORTSDIR}/devel/subversion \
 		hg:${PORTSDIR}/devel/mercurial
 
-USE_ZIP=	yes
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 PLIST_SUB=	VERSION=${PORTVERSION} PYVER=${PYTHON_VERSION:S/python//}
-
-NO_STAGE=	yes
-
-post-patch:
-	@cd ${WRKSRC} && ${MV} setup.py setup.py.orig && ${GREP} -v use_setuptools setup.py.orig > setup.py && cd -
 
 .include <bsd.port.mk>
