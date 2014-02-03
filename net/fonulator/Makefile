@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: net/fonulator/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/fonulator/Makefile 341966 2014-01-31 09:46:25Z miwi $
 
 PORTNAME=	fonulator
 PORTVERSION=	2.0.1
@@ -19,10 +19,9 @@ BUILD_DEPENDS=	${LIBNET_CONFIG}:${PORTSDIR}/net/libnet\
 		${LOCALBASE}/lib/libfb.a:${PORTSDIR}/net/libfb
 LIBNET_CONFIG=	${LOCALBASE}/bin/libnet11-config
 
-PLIST_FILES=	bin/fonulator
-MAN1=		fonulator.1
+PLIST_FILES=	bin/fonulator \
+		man/man1/fonulator.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD}\
 	    -e 's,/usr/lib/libargtable2.a,${LOCALBASE}/lib/libargtable2.a,'\
