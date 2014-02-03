@@ -1,8 +1,9 @@
 # Created by: Dean Freeman (wfreeman@sourcefire.com)
-# $FreeBSD: net/daq/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/daq/Makefile 342092 2014-01-31 23:10:47Z zi $
 
 PORTNAME=	daq
 PORTVERSION=	2.0.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	SF/snort/snort \
 		http://mirrors.rit.edu/zi/
@@ -13,8 +14,8 @@ COMMENT=	Data Acquisition abstraction library for snort 2.9+
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	dnet:${PORTSDIR}/net/libdnet \
-		pcap:${PORTSDIR}/net/libpcap
+LIB_DEPENDS=	libdnet.so:${PORTSDIR}/net/libdnet \
+		libpcap.so:${PORTSDIR}/net/libpcap
 BUILD_DEPENDS=	flex:${PORTSDIR}/textproc/flex
 
 GNU_CONFIGURE=	yes
@@ -27,5 +28,4 @@ MAKE_JOBS_UNSAFE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
