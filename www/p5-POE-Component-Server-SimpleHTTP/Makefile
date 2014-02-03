@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POE-Component-Server-SimpleHTTP/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-POE-Component-Server-SimpleHTTP/Makefile 341688 2014-01-29 07:58:06Z miwi $
 
 PORTNAME=	POE-Component-Server-SimpleHTTP
 PORTVERSION=	2.18
@@ -21,15 +21,10 @@ TEST_DEPENDS=	p5-POE-Filter-HTTP-Parser>=1.06:${PORTSDIR}/www/p5-POE-Filter-HTTP
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		POE::Component::Server::SimpleHTTP.3 \
-		POE::Component::Server::SimpleHTTP::Connection.3 \
-		POE::Component::Server::SimpleHTTP::Response.3
-
 OPTIONS_DEFINE=	SSL
 SSL_DESC=	SSL support (POE::Component::SSLify)
 OPTIONS_DEFAULT=	SSL
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
