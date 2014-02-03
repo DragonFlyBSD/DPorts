@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: databases/p5-DBIx-Class-FrozenColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-FrozenColumns/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBIx-Class-FrozenColumns
 PORTVERSION=	0.09
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::FrozenColumns.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
