@@ -1,5 +1,5 @@
 # Created by: Sebastian Yepes <esn@x123.info>
-# $FreeBSD: comms/hamlib/Makefile 338178 2013-12-30 21:51:43Z db $
+# $FreeBSD: comms/hamlib/Makefile 341736 2014-01-29 13:32:25Z gahr $
 
 PORTNAME=	hamlib
 PORTVERSION=	1.2.15.3
@@ -13,9 +13,8 @@ LICENSE=	LGPL20
 
 BUILD_DEPENDS=	swig:${PORTSDIR}/devel/swig13
 
-USES=		perl5 pkgconfig pathfix
+USES=		perl5 pkgconfig pathfix tcl
 USE_GNOME=	libxml2
-USE_TCL=	yes
 USE_PYTHON=	yes
 USE_AUTOTOOLS=	autoconf libtool libltdl
 USE_LDCONFIG=	yes
