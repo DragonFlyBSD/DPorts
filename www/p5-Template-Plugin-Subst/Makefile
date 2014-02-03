@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Plugin-Subst/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Plugin-Subst/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	Template-Plugin-Subst
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Template::Plugin::Subst.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
