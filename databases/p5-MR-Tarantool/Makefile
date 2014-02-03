@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/p5-MR-Tarantool/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-MR-Tarantool/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	MR-Tarantool
 PORTVERSION=	0.0.24
@@ -19,23 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	MR::IProto.3 \
-	MR::IProto::Cluster.3 \
-	MR::IProto::Cluster::Server.3 \
-	MR::IProto::Connection.3 \
-	MR::IProto::Connection::Async.3 \
-	MR::IProto::Connection::Sync.3 \
-	MR::IProto::Error.3 \
-	MR::IProto::Message.3 \
-	MR::IProto::NoResponse.3 \
-	MR::IProto::Request.3 \
-	MR::IProto::Response.3 \
-	MR::IProto::Role::Debuggable.3 \
-	MR::IProto::Server.3 \
-	MR::IProto::Server::Connection.3 \
-	MR::SilverBox.3 \
-	MR::Tarantool::Box.3 \
-	MR::Tarantool::Box::Singleton.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
