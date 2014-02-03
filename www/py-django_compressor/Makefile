@@ -1,8 +1,9 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: www/py-django_compressor/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-django_compressor/Makefile 341752 2014-01-29 15:56:23Z miwi $
 
 PORTNAME=	django_compressor
 PORTVERSION=	1.1.2
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,14 +17,14 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}versiontools>=1.8.2:${PORTSDIR}/devel/py-v
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django-appconf>=0.4:${PORTSDIR}/www/py-django-appconf
 
 USE_PYTHON=	2
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONS_DEFINE=	BEAUTIFULSOUP LXML HTML5LIB
 BEAUTIFULSOUP_DESC=	Enable BeautifulSoupParser
 LXML_DESC=		Enable LxmlParser
 HTML5LIB_DESC=		Enable Html5LibParser
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBEAUTIFULSOUP}
