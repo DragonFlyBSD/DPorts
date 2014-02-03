@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: mail/mutt14/Makefile 329692 2013-10-07 11:09:05Z bapt $
+# $FreeBSD: mail/mutt14/Makefile 341583 2014-01-28 14:40:41Z bapt $
 
 PORTNAME=	mutt
 PORTVERSION=	1.4.2.3
@@ -57,8 +57,8 @@ NO_STAGE=	yes
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 .if defined(PACKAGE_BUILDING) && !defined (MUTT_LITE)
 WITH_SLANG=	yes
-BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
-RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell \
+BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/aspell-ispell
+RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell \
 		urlview:${PORTSDIR}/textproc/urlview
 .endif
 
