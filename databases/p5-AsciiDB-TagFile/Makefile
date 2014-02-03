@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-AsciiDB-TagFile/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-AsciiDB-TagFile/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	AsciiDB-TagFile
 PORTVERSION=	1.06
@@ -13,7 +13,4 @@ COMMENT=	Perl tie class for a simple ASCII database
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		AsciiDB::TagFile.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
