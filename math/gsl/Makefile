@@ -1,5 +1,5 @@
 # Created by: Andrew L. Neporada <andrew@chg.ru>
-# $FreeBSD: math/gsl/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/gsl/Makefile 342250 2014-02-02 08:22:22Z miwi $
 
 PORTNAME=	gsl
 PORTVERSION=	1.16
@@ -15,11 +15,8 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	MAKEINFO='makeinfo --no-split'
 
-MAN1=		gsl-config.1 gsl-randist.1 gsl-histogram.1
-MAN3=		gsl.3
 INFO=		gsl-ref
 
-NO_STAGE=	yes
 post-extract:
 	@${RM} -f ${WRKSRC}/doc/gsl-ref.info*
 
