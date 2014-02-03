@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/pbc/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pbc/Makefile 342017 2014-01-31 16:25:56Z miwi $
 
 PORTNAME=	pbc
 PORTVERSION=	0.5.14
@@ -20,7 +20,6 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|^CFLAGS=$$|| ; \
