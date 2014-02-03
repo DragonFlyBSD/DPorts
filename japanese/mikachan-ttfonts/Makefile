@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: japanese/mikachan-ttfonts/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/mikachan-ttfonts/Makefile 342298 2014-02-02 14:27:37Z pawel $
 
 PORTNAME=	mikachan-ttfonts
 PORTVERSION=	9.1
@@ -13,7 +13,7 @@ COMMENT=	Handwritten Japanese TrueType fonts by Mika-chan
 
 EXTRACT_DEPENDS=	lha:${PORTSDIR}/archivers/lha
 
-NO_CDROM=	Don't sell distfile
+NO_CDROM=	Do not sell distfile
 EXTRACT_CMD=	lha
 EXTRACT_BEFORE_ARGS=	pq
 EXTRACT_AFTER_ARGS=	> ${WRKSRC}/mika.ttf
@@ -25,12 +25,11 @@ PLIST_SUB=	FONTSDIR=${FONTSDIR}
 
 FONTSDIR=	lib/X11/fonts/TrueType
 
-NO_STAGE=	yes
 do-install:
-	${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
+	${SETENV} PKG_PREFIX=${STAGEDIR}${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 	${INSTALL_DATA} \
 		${WRKDIR}/mika.ttf ${FILESDIR}/fonts.dir.mika \
-		${PREFIX}/${FONTSDIR}
-	${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+		${STAGEDIR}${PREFIX}/${FONTSDIR}
+	${SETENV} PKG_PREFIX=${STAGEDIR}${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 .include <bsd.port.mk>
