@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-Test-XPath/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD: lang/p5-Test-XPath/Makefile 342156 2014-02-01 14:42:45Z miwi $
 
 PORTNAME=	Test-XPath
 PORTVERSION=	0.16
@@ -18,14 +18,11 @@ RUN_DEPENDS=	p5-XML-LibXML>=1.70:${PORTSDIR}/textproc/p5-XML-LibXML
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Test::XPath.3
-
 OPTIONS_DEFINE=	CSS PODT
 
 CSS_DESC=	Include CSS selectors
 PODT_DESC=	Include Pod package test dependencies
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCSS}
