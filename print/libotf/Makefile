@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: print/libotf/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD: print/libotf/Makefile 341611 2014-01-28 15:59:10Z miwi $
 
 PORTNAME=	libotf
 PORTVERSION=	0.9.13
@@ -18,5 +18,4 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
