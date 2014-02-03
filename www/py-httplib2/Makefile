@@ -1,9 +1,9 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: www/py-httplib2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-httplib2/Makefile 341755 2014-01-29 16:17:02Z miwi $
 
 PORTNAME=	httplib2
 PORTVERSION=	0.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,9 +14,8 @@ COMMENT=	A comprehensive HTTP client library
 LICENSE=	MIT
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-
-NO_STAGE=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.pre.mk>
 
