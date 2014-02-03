@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-# $FreeBSD: devel/p5-Perl6-Export/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Perl6-Export/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Perl6-Export
 PORTVERSION=	0.07
@@ -14,7 +14,4 @@ COMMENT=	Implements the Perl 6 'is export(...)' trait
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Perl6::Export.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
