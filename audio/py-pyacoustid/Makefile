@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-pyacoustid/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/py-pyacoustid/Makefile 341540 2014-01-28 12:42:40Z feld $
 
 PORTNAME=	pyacoustid
 PORTVERSION=	1.0.0
@@ -16,7 +16,6 @@ LICENSE=	MIT
 LIB_DEPENDS=	libchromaprint.so:${PORTSDIR}/audio/chromaprint
 
 USE_PYTHON=	yes
-NO_STAGE=	yes
 USE_PYDISTUTILS=	easy_install
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
