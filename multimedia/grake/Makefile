@@ -1,5 +1,5 @@
 # Created by: Pierre Guinoiseau <geekounet@poildetroll.net>
-# $FreeBSD: multimedia/grake/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: multimedia/grake/Makefile 342317 2014-02-02 15:21:20Z miwi $
 
 PORTNAME=	grake
 PORTVERSION=	0.1.0
@@ -23,9 +23,8 @@ TEST_DEPENDS=	p5-Test-Pod>=1:${PORTSDIR}/devel/p5-Test-Pod
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		grake.1
 PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/grake
-PLIST_FILES=	bin/grake ${SITE_PERL_REL}/${PERL_ARCH}/auto/grake/.packlist
+PLIST_FILES=	bin/grake ${SITE_PERL_REL}/${PERL_ARCH}/auto/grake/.packlist \
+		man/man1/grake.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
