@@ -1,9 +1,8 @@
 # Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-# $FreeBSD: audio/portaudio2/Makefile 339146 2014-01-08 14:59:08Z skreuzer $
+# $FreeBSD: audio/portaudio2/Makefile 342034 2014-01-31 16:54:48Z nemysis $
 
 PORTNAME=	portaudio
-DISTVERSION=	19_20111121
-PORTREVISION=	2
+DISTVERSION=	19_20140130
 CATEGORIES=	audio
 MASTER_SITES=	http://www.portaudio.com/archives/
 PKGNAMESUFFIX=	2
@@ -71,6 +70,8 @@ post-patch:
 .endif
 
 post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/portaudio2/libportaudio.so.2
+
 .if ${PORT_OPTIONS:MEXAMPLES} || ${PORT_OPTIONS:MPATEST}
 	@(cd ${WRKSRC}/bin && for i in *; do ${MV} "$$i" "$${i}"-${PKGNAMESUFFIX}; done)
 .endif
@@ -95,7 +96,7 @@ post-install:
 .if ${PORT_OPTIONS:MDOXYGEN} && ${PORT_OPTIONS:MDOCS}
 	@cd ${WRKSRC} && doxygen
 	@(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR})
-.endif
+.endif 
 
 .if ${PORT_OPTIONS:MEXAMPLES}
 	@(cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
