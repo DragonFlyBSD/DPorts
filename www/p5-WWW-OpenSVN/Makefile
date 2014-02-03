@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-WWW-OpenSVN/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-WWW-OpenSVN/Makefile 341690 2014-01-29 07:58:41Z miwi $
 
 PORTNAME=	WWW-OpenSVN
 PORTVERSION=	0.1.3
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		WWW::OpenSVN.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
