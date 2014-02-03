@@ -1,5 +1,5 @@
 # Created by: obrien@cs.ucdavis.edu
-# $FreeBSD: news/tin/Makefile 337797 2013-12-27 20:20:30Z johans $
+# $FreeBSD: news/tin/Makefile 341596 2014-01-28 15:30:02Z bapt $
 
 PORTNAME=	tin
 PORTVERSION=	2.2.0
@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=	--disable-pgp-gpg
 .endif
 
 .if ${PORT_OPTIONS:MISPELL}
-RUN_DEPENDS+=		ispell:${PORTSDIR}/textproc/ispell
+RUN_DEPENDS+=		ispell:${PORTSDIR}/textproc/aspell-ispell
 CONFIGURE_ARGS+=	--with-ispell=${PREFIX}/bin/ispell
 .endif
 
