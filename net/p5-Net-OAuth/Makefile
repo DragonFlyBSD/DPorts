@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/p5-Net-OAuth/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-Net-OAuth/Makefile 341980 2014-01-31 12:13:45Z miwi $
 
 PORTNAME=	Net-OAuth
 PORTVERSION=	0.28
@@ -20,30 +20,4 @@ TEST_DEPENDS=	p5-Test-Warn>=0:${PORTSDIR}/devel/p5-Test-Warn
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Net::OAuth.3 \
-	Net::OAuth::AccessToken.3 \
-	Net::OAuth::AccessTokenRequest.3 \
-	Net::OAuth::AccessTokenResponse.3 \
-	Net::OAuth::Client.3 \
-	Net::OAuth::ConsumerRequest.3 \
-	Net::OAuth::Message.3 \
-	Net::OAuth::ProtectedResourceRequest.3 \
-	Net::OAuth::Request.3 \
-	Net::OAuth::RequestTokenRequest.3 \
-	Net::OAuth::RequestTokenResponse.3 \
-	Net::OAuth::Response.3 \
-	Net::OAuth::SignatureMethod::HMAC_SHA1.3 \
-	Net::OAuth::SignatureMethod::HMAC_SHA256.3 \
-	Net::OAuth::SignatureMethod::PLAINTEXT.3 \
-	Net::OAuth::SignatureMethod::RSA_SHA1.3 \
-	Net::OAuth::UserAuthRequest.3 \
-	Net::OAuth::UserAuthResponse.3 \
-	Net::OAuth::V1_0A::AccessTokenRequest.3 \
-	Net::OAuth::V1_0A::RequestTokenRequest.3 \
-	Net::OAuth::V1_0A::RequestTokenResponse.3 \
-	Net::OAuth::V1_0A::UserAuthResponse.3 \
-	Net::OAuth::XauthAccessTokenRequest.3 \
-	Net::OAuth::YahooAccessTokenRefreshRequest.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
