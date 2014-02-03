@@ -1,0 +1,15 @@
+
+$FreeBSD: sysutils/squashfs-tools/files/patch-squashfs-tools_Makefile 340725 2014-01-22 17:40:44Z mat $
+
+--- Makefile.orig
++++ Makefile
+@@ -103,8 +103,8 @@
+ 
+ CFLAGS ?= -O2
+ CFLAGS += $(EXTRA_CFLAGS) $(INCLUDEDIR) -D_FILE_OFFSET_BITS=64 \
+-	-D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"$(COMP_DEFAULT)\" \
++	-D_LARGEFILE_SOURCE -DFNM_EXTMATCH=0 -D_GNU_SOURCE -DCOMP_DEFAULT=\"$(COMP_DEFAULT)\" \
+	-Wall
+ 
+ LIBS = -lpthread -lm
+ ifeq ($(GZIP_SUPPORT),1)
