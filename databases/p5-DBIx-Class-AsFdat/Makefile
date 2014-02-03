@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-AsFdat/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-AsFdat/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	DBIx-Class-AsFdat
 PORTVERSION=	0.03
@@ -25,7 +25,4 @@ TEST_DEPENDS=	p5-Test-Declare>=0:${PORTSDIR}/devel/p5-Test-Declare \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::AsFdat.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
