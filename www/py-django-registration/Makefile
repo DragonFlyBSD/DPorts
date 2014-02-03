@@ -1,8 +1,9 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-registration/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/py-django-registration/Makefile 341732 2014-01-29 13:20:13Z miwi $
 
 PORTNAME=	django-registration
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,9 +17,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.4:${PORTSDIR}/www/py-django
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USES=		gettext
 
 CONFLICTS_INSTALL=	pootle-*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
