@@ -1,4 +1,4 @@
-# $FreeBSD: security/rcracki_mt/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/rcracki_mt/Makefile 341795 2014-01-29 23:55:29Z pawel $
 
 PORTNAME=	rcracki_mt
 PORTVERSION=	0.7.0
@@ -16,7 +16,7 @@ EXTRACT_DEPENDS=7z:${PORTSDIR}/archivers/p7zip
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}
 
-USE_GMAKE=	yes
+USES=		gmake
 EXTRACT_CMD=	${LOCALBASE}/bin/7z
 EXTRACT_BEFORE_ARGS=x -o${WRKDIR}
 EXTRACT_AFTER_ARGS=
@@ -24,19 +24,14 @@ EXTRACT_AFTER_ARGS=
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	ChangeLog.txt README.txt
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,CC = g++,CXX ?= g++, ; s,CFLAGS =,CXXFLAGS +=, ; \
 		s,-lpthread,${PTHREAD_LIBS}, ; s,CC,CXX, ; s,CFLAGS,CXXFLAGS,' \
 		${WRKSRC}/Makefile
 
-.include <bsd.port.options.mk>
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
