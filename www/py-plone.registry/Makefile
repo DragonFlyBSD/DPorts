@@ -1,7 +1,8 @@
-# $FreeBSD: www/py-plone.registry/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-plone.registry/Makefile 341702 2014-01-29 09:03:54Z miwi $
 
 PORTNAME=	plone.registry
 PORTVERSION=	1.0.1
+PORTREVISION=	1
 CATEGORIES=	www python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,8 +23,7 @@ RUN_DEPENDS=	zodb${PYTHON_PKGNAMESUFFIX}>=0:${PORTSDIR}/databases/zodb3 \
 DIST_SUBDIR=	zope
 USE_PYTHON=	yes
 USE_PYDISTUTILS=easy_install
+PYDISTUTILS_AUTOPLIST=	yes
 USE_ZIP=	yes
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
