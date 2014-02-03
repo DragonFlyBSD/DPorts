@@ -1,5 +1,5 @@
 # Created by: Mosconi <mosconi.rmg@gmail.com>
-# $FreeBSD: security/p5-Crypt-OpenSSL-CA/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-OpenSSL-CA/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	Crypt-OpenSSL-CA
 PORTVERSION=	0.23
@@ -26,10 +26,4 @@ TEST_DEPENDS=	p5-Test-Group>=0:${PORTSDIR}/devel/p5-Test-Group
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::OpenSSL::CA.3 \
-		Crypt::OpenSSL::CA::AlphabetSoup.3 \
-		Crypt::OpenSSL::CA::Inline::C.3 \
-		Crypt::OpenSSL::CA::Resources.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
