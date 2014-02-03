@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/p5-File-Which/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/p5-File-Which/Makefile 341639 2014-01-28 16:48:45Z miwi $
 
 PORTNAME=	File-Which
 PORTVERSION=	1.09
@@ -15,8 +15,4 @@ TEST_DEPENDS=	p5-Test-Script>=1.05:${PORTSDIR}/devel/p5-Test-Script
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		pwhich.1
-MAN3=		File::Which.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
