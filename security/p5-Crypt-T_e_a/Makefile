@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: security/p5-Crypt-T_e_a/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-T_e_a/Makefile 342154 2014-02-01 14:42:18Z miwi $
 
 PORTNAME=	Crypt-T_e_a
 PORTVERSION=	2.12
@@ -15,8 +15,4 @@ COMMENT=	The Tiny Encryption Algorithm in Perl and JavaScript
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Crypt::Tea.3
-MAN1=	tea.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
