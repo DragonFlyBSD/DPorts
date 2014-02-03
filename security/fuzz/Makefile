@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: security/fuzz/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/fuzz/Makefile 342033 2014-01-31 16:51:13Z miwi $
 
 PORTNAME=	fuzz
 PORTVERSION=	0.6
@@ -12,11 +12,7 @@ COMMENT=	Tool for testing software by bombarding the program with random data
 
 GNU_CONFIGURE=	yes
 
-MAN1=		fuzz.1
-PLIST_FILES=	bin/fuzz
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
+PLIST_FILES=	bin/fuzz \
+		man/man1/fuzz.1.gz
 
 .include <bsd.port.mk>
