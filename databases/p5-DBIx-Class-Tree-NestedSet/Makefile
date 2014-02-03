@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Tree-NestedSet/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-Tree-NestedSet/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBIx-Class-Tree-NestedSet
 PORTVERSION=	0.10
@@ -18,7 +18,4 @@ TEST_DEPENDS=	p5-DBICx-TestDatabase>=0:${PORTSDIR}/databases/p5-DBICx-TestDataba
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::Tree::NestedSet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
