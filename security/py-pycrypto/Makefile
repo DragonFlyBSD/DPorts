@@ -1,11 +1,10 @@
 # Created by: nbm
-# $FreeBSD: security/py-pycrypto/Makefile 330856 2013-10-19 08:41:47Z delphij $
+# $FreeBSD: security/py-pycrypto/Makefile 342144 2014-02-01 14:31:40Z koobs $
 
 PORTNAME=	pycrypto
 PORTVERSION=	2.6.1
 CATEGORIES=	security python
-MASTER_SITES=	CHEESESHOP \
-		https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	koobs@FreeBSD.org
@@ -13,36 +12,25 @@ COMMENT=	The Python Cryptography Toolkit
 
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 HAS_CONFIGURE=	yes
 USE_AUTOTOOLS=	autoconf
 
-OPTIONS_DEFINE=	GMP
+OPTIONS_DEFINE=		GMP
 OPTIONS_DEFAULT=	GMP
-GMP_DESC=	Use GMP for faster DSA/RSA operations
 
-OPTIONSFILE?=		${PORT_DBDIR}/py-${PORTNAME}/options
+GMP_DESC=		Use GMP for faster DSA/RSA operations
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGMP}
-LIB_DEPENDS+=		gmp:${PORTSDIR}/math/gmp
-CONFIGURE_ARGS+=	--with-gmp
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib
-PLIST_SUB+=		GMP=""
-.else
-CONFIGURE_ARGS+=	--without-gmp
-PLIST_SUB+=		GMP="@comment "
-.endif
+GMP_CONFIGURE_WITH=	gmp
+GMP_CPPFLAGS=		-I${LOCALBASE}/include
+GMP_LDFLAGS=		-L${LOCALBASE}/lib
+GMP_LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp
 
 pre-patch:
 	@${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|" ${WRKSRC}/setup.py
 
-test: build
+regression-test: build
 	cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
-
-regression-test: test
 
 .include <bsd.port.mk>
