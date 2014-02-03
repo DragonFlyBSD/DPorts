@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Skinny/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	DBIx-Skinny
 PORTVERSION=	0.0742
@@ -22,20 +22,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Skinny.3 \
-	DBIx::Skinny::Iterator.3 \
-	DBIx::Skinny::Manual.3 \
-	DBIx::Skinny::Manual::EN.3 \
-	DBIx::Skinny::Manual::EN::Intro.3 \
-	DBIx::Skinny::Manual::JA.3 \
-	DBIx::Skinny::Manual::JA::Intro.3 \
-	DBIx::Skinny::Manual::JA::Resultset.3 \
-	DBIx::Skinny::Mixin.3 \
-	DBIx::Skinny::Profiler.3 \
-	DBIx::Skinny::Profiler::Trace.3 \
-	DBIx::Skinny::Row.3 \
-	DBIx::Skinny::SQL.3 \
-	DBIx::Skinny::Schema.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
