@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Amazon-SimpleDB/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Amazon-SimpleDB/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Amazon-SimpleDB
 PORTVERSION=	0.03
@@ -20,14 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Amazon::SimpleDB.3 \
-		Amazon::SimpleDB::Domain.3 \
-		Amazon::SimpleDB::ErrorResponse.3 \
-		Amazon::SimpleDB::GetAttributesResponse.3 \
-		Amazon::SimpleDB::Item.3 \
-		Amazon::SimpleDB::ListDomainsResponse.3 \
-		Amazon::SimpleDB::QueryResponse.3 \
-		Amazon::SimpleDB::Response.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
