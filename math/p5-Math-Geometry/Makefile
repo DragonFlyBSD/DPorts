@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Math-Geometry/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Geometry/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	Math-Geometry
 PORTVERSION=	0.04
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Math-Matrix>=0:${PORTSDIR}/math/p5-Math-Matrix
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::Geometry.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
