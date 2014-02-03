@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Statistics-Benford/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Benford/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Statistics-Benford
 PORTVERSION=	0.08
@@ -13,7 +13,4 @@ COMMENT=	Calculate the deviation from Benford's Law
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Statistics::Benford.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
