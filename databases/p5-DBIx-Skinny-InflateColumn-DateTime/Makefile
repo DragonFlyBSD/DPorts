@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-InflateColumn-DateTime/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Skinny-InflateColumn-DateTime/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	DBIx-Skinny-InflateColumn-DateTime
 PORTVERSION=	0.06
@@ -22,8 +22,4 @@ TEST_DEPENDS=	p5-DBD-Mock>=0:${PORTSDIR}/databases/p5-DBD-Mock
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Skinny::InflateColumn::DateTime.3 \
-	DBIx::Skinny::InflateColumn::DateTime::Auto.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
