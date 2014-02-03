@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-Hash-TwoWay/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-Hash-TwoWay/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Tie-Hash-TwoWay
 PORTVERSION=	1.08
@@ -13,7 +13,4 @@ COMMENT=	Tie::Hash::TwoWay - two-way mapping between disjoint sets
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Tie::Hash::TwoWay.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
