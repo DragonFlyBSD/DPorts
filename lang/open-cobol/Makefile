@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/open-cobol/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/open-cobol/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME=	open-cobol
 PORTVERSION=	1.1
@@ -12,7 +12,7 @@ COMMENT=	An open-source COBOL compiler
 LIB_DEPENDS=	gmp.10:${PORTSDIR}/math/gmp
 
 USE_BDB=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
@@ -21,7 +21,6 @@ INFO=		open-cobol
 CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include  <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
