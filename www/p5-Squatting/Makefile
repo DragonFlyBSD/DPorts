@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Squatting/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Squatting/Makefile 341722 2014-01-29 12:20:24Z miwi $
 
 PORTNAME=	Squatting
 PORTVERSION=	0.82
@@ -27,23 +27,4 @@ RUN_DEPENDS=	${COMMON_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	squatting.1
-MAN3=	\
-	Squatting.3 \
-	Squatting::Controller.3 \
-	Squatting::H.3 \
-	Squatting::Mapper.3 \
-	Squatting::On::CGI.3 \
-	Squatting::On::Catalyst.3 \
-	Squatting::On::Continuity.3 \
-	Squatting::On::MP13.3 \
-	Squatting::On::MP20.3 \
-	Squatting::View.3 \
-	Squatting::With::AccessTrace.3 \
-	Squatting::With::Coro::Debug.3 \
-	Squatting::With::Log.3 \
-	Squatting::With::MockRequest.3 \
-	Squatting::With::Mount.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
