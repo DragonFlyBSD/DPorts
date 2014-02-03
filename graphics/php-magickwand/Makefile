@@ -1,5 +1,5 @@
 # Created by: <mark@goodstorm.com>
-# $FreeBSD: graphics/php-magickwand/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/php-magickwand/Makefile 341858 2014-01-30 16:36:53Z miwi $
 
 PORTNAME=	magickwand
 PORTVERSION=	1.0.9
@@ -19,5 +19,4 @@ USE_PHPEXT=	yes
 
 CONFIGURE_ARGS=	--with-magickwand=${LOCALBASE}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
