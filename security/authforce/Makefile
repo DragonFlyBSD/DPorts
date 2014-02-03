@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/authforce/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/authforce/Makefile 342029 2014-01-31 16:50:10Z miwi $
 
 PORTNAME=	authforce
 PORTVERSION=	0.9.9
@@ -15,13 +15,10 @@ LICENSE=	GPLv2
 OPTIONS_DEFINE=	CURL NLS
 
 USES=		ncurses
-#USE_READLINE=	yes
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 NO_CCACHE=	yes
 
-MANCOMPRESSED=	yes
-MAN1=		authforce.1
 INFO=		authforce
 
 PLIST_FILES=	bin/authforce \
@@ -29,11 +26,11 @@ PLIST_FILES=	bin/authforce \
 		%%DATADIR%%/dummy.lst \
 		%%DATADIR%%/password.lst \
 		%%DATADIR%%/username.lst \
-		%%DATADIR%%/userpass.lst
+		%%DATADIR%%/userpass.lst \
+		man/man1/authforce.1.gz
 
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCURL}
