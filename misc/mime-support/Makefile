@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: misc/mime-support/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/mime-support/Makefile 341598 2014-01-28 15:33:55Z miwi $
 
 PORTNAME=	mime-support
 PORTVERSION=	3.54
@@ -13,13 +13,12 @@ COMMENT=	MIME Media Types list
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/\.2$//}
 
 NO_BUILD=	yes
-PLIST_FILES=	bin/run-mailcap etc/mime.types
-MAN1=		run-mailcap.1
+PLIST_FILES=	bin/run-mailcap etc/mime.types \
+		man/man1/run-mailcap.1.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/run-mailcap ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/mime.types ${PREFIX}/etc
-	${INSTALL_MAN} ${WRKSRC}/run-mailcap.man ${MANPREFIX}/man/man1/run-mailcap.1
+	${INSTALL_SCRIPT} ${WRKSRC}/run-mailcap ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/mime.types ${STAGEDIR}${PREFIX}/etc
+	${INSTALL_MAN} ${WRKSRC}/run-mailcap.man ${STAGEDIR}${MANPREFIX}/man/man1/run-mailcap.1
 
 .include <bsd.port.mk>
