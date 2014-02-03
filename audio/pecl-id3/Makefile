@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: audio/pecl-id3/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/pecl-id3/Makefile 341858 2014-01-30 16:36:53Z miwi $
 
 PORTNAME=	id3
 PORTVERSION=	0.2
@@ -13,7 +13,6 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Extension to read and write ID3 tags in MP3 files
 
 USE_PHP=	yes
-NO_STAGE=	yes
 USE_PHPEXT=	yes
 DEFAULT_PHP_VER=53
 IGNORE_WITH_PHP=5
