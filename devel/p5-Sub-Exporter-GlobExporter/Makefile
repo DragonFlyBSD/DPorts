@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Sub-Exporter-GlobExporter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Sub-Exporter-GlobExporter/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Sub-Exporter-GlobExporter
 PORTVERSION=	0.003
@@ -20,7 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Sub::Exporter::GlobExporter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
