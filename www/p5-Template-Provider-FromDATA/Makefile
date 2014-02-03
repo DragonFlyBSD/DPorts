@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-Template-Provider-FromDATA/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Provider-FromDATA/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	Template-Provider-FromDATA
 PORTVERSION=	0.13
@@ -20,9 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Template::Provider::FromDATA.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501502
