@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Data-AMF/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Data-AMF/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Data-AMF
 PORTVERSION=	0.09
@@ -19,21 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::AMF.3 \
-	Data::AMF::Formatter.3 \
-	Data::AMF::Formatter::AMF0.3 \
-	Data::AMF::Formatter::AMF3.3 \
-	Data::AMF::Header.3 \
-	Data::AMF::IO.3 \
-	Data::AMF::Message.3 \
-	Data::AMF::Packet.3 \
-	Data::AMF::Parser.3 \
-	Data::AMF::Parser::AMF0.3 \
-	Data::AMF::Parser::AMF3.3 \
-	Data::AMF::Remoting.3 \
-	Data::AMF::Type::Boolean.3 \
-	Data::AMF::Type::ByteArray.3 \
-	Data::AMF::Type::Null.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
