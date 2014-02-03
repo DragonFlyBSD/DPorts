@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/llvm31/Makefile 335889 2013-12-08 13:25:49Z mva $
+# $FreeBSD: devel/llvm31/Makefile 341852 2014-01-30 15:51:08Z brooks $
 
 PORTNAME=	llvm31
 PORTVERSION=	3.1
@@ -10,6 +10,9 @@ DISTNAME=	llvm-${PORTVERSION}.src
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	Low Level Virtual Machine
+
+DEPRECATED=	No remaining dependencies (except clang31)
+EXPIRATION_DATE=	2014-03-01
 
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
 .if defined(PACKAGE_BUILDING) || defined(MAINTAINER_MODE)
