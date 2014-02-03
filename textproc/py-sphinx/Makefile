@@ -1,8 +1,8 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: textproc/py-sphinx/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/py-sphinx/Makefile 341497 2014-01-28 03:07:11Z lwhsu $
 
 PORTNAME=	sphinx
-PORTVERSION=	1.2
+PORTVERSION=	1.2.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,14 +26,14 @@ PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	Sphinx
 
 post-build:
-	cd ${WRKSRC} && \
-	${SETENV} PYTHONPATH=${STAGEDIR}/${PYTHONPREFIX_SITELIBDIR}:${PYTHONPREFIX_SITELIBDIR} \
+	cd ${WRKSRC}/build/lib && \
+	${SETENV} PYTHONPATH=${WRKSRC}/build/lib:${PYTHONPREFIX_SITELIBDIR} \
 	${PYTHON_CMD} -m sphinx.pycode.pgen2.driver -c 'import load_grammar'
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/sphinx/pycode/Grammar${PYTHON_VER}.pickle \
+	${INSTALL_DATA} ${WRKSRC}/build/lib/sphinx/pycode/Grammar-py${PYTHON_VER:R}-${PORTNAME}${PORTVERSION:R}.pickle \
 	${STAGEDIR}/${PYTHONPREFIX_SITELIBDIR}/${PYEASYINSTALL_EGG}/sphinx/pycode/
 
-	${ECHO_CMD} ${PYTHON_SITELIBDIR:S;${PYTHONBASE}/;;}/${PYEASYINSTALL_EGG}/sphinx/pycode/Grammar${PYTHON_VER}.pickle >> ${TMPPLIST}
+	@${ECHO_CMD} ${PYTHON_SITELIBDIR:S;${PYTHONBASE}/;;}/${PYEASYINSTALL_EGG}/sphinx/pycode/Grammar-py${PYTHON_VER:R}-${PORTNAME}${PORTVERSION:R}.pickle >> ${TMPPLIST}
 
 .include <bsd.port.mk>
