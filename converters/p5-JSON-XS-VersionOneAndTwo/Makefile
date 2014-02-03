@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: converters/p5-JSON-XS-VersionOneAndTwo/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-JSON-XS-VersionOneAndTwo/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	JSON-XS-VersionOneAndTwo
 PORTVERSION=	0.31
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	JSON::XS::VersionOneAndTwo.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
