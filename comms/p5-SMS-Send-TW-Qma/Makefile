@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: comms/p5-SMS-Send-TW-Qma/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/p5-SMS-Send-TW-Qma/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	SMS-Send-TW-Qma
 PORTVERSION=	0.01
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SMS::Send::TW::Qma.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
