@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/libjreen/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/libjreen/Makefile 341954 2014-01-31 09:20:58Z miwi $
 
 PORTNAME=	libjreen
 PORTVERSION=	1.1.1
@@ -19,14 +19,12 @@ GH_TAGNAME=	v${PORTVERSION}
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 USE_QT4=	moc_build qmake_build rcc_build network
 
 USES=		cmake pkgconfig:build
 
-NO_STAGE=	yes
 pre-configure:
 	${REINPLACE_CMD} -e 's,lib.*/pkgconfig,libdata/pkgconfig,' \
 		${WRKSRC}/CMakeLists.txt
