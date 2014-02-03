@@ -1,5 +1,5 @@
 # Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-# $FreeBSD: devel/libaura/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libaura/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libaura
 PORTVERSION=	3.1.20051222
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	philip
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library of Assorted Useful Reusable Abstractions
 
 USE_BZIP2=	yes
