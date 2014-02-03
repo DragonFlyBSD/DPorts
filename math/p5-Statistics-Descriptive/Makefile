@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: math/p5-Statistics-Descriptive/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Statistics-Descriptive/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Statistics-Descriptive
 PORTVERSION=	3.0605
@@ -13,10 +13,4 @@ COMMENT=	Perl module that supplies statistical methods for perl5
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Statistics::Descriptive.3 \
-	Statistics::Descriptive::Smoother.3 \
-	Statistics::Descriptive::Smoother::Exponential.3 \
-	Statistics::Descriptive::Smoother::Weightedexponential.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
