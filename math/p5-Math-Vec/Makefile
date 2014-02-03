@@ -1,4 +1,4 @@
-# $FreeBSD: math/p5-Math-Vec/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Math-Vec/Makefile 342152 2014-02-01 14:41:49Z miwi $
 
 PORTNAME=	Math-Vec
 PORTVERSION=	1.01
@@ -11,7 +11,5 @@ COMMENT=	Object-Oriented Vector Math Methods in Perl
 
 USES=		perl5
 USE_PERL5=	modbuild
-MAN3=		Math::Vec.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
