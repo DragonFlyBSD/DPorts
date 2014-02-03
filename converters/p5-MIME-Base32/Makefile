@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: converters/p5-MIME-Base32/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-MIME-Base32/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	MIME-Base32
 PORTVERSION=	1.02a
@@ -17,9 +17,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-1.02
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MIME::Base32.3
-
-NO_STAGE=	yes
 post-extract:
 	@${RM} ${WRKSRC}/test1.pl
 
