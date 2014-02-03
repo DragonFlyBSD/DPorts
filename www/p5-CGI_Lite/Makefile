@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-CGI_Lite/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI_Lite/Makefile 341805 2014-01-30 07:55:01Z miwi $
 
 PORTNAME=	CGI-Lite
 PORTVERSION=	2.02
@@ -13,20 +13,13 @@ COMMENT=	Process and decode WWW forms and cookies
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		CGI::Lite.3
-
 DOCS=		CHANGES README TODO
 EXAMPLES=	cookies get_post print upload file post reference
 
-NO_STAGE=	yes
 post-install:
-.ifndef(NOPORTDOCS)
-	@${ECHO_MSG} "===>   Installing docs for ${PKGNAME}"
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
-	@${ECHO_MSG} "===>   Installing examples for ${PKGNAME}"
-	${MKDIR} ${EXAMPLESDIR}
-	cd ${WRKSRC}/examples && ${INSTALL_SCRIPT} ${EXAMPLES} ${EXAMPLESDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${INSTALL_SCRIPT} ${EXAMPLES} ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
