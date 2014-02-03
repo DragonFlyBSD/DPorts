@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: devel/libtai/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libtai/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libtai
 PORTVERSION=	0.60
@@ -9,7 +9,7 @@ MASTER_SITES=	http://cr.yp.to/libtai/ \
 		ftp://ftp.sunsite.auc.dk/disk1/qmail/ \
 		ftp://ftp.task.gda.pl/mirror/mirror.qmail.org/koobera/pub/software/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	A library for storing and manipulating dates and times in second/attosecond
 
 ALL_TARGET=	it
