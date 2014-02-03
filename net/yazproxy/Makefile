@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/yazproxy/Makefile 330628 2013-10-17 11:01:51Z demon $
+# $FreeBSD: net/yazproxy/Makefile 341981 2014-01-31 12:14:30Z miwi $
 
 PORTNAME=	yazproxy
 PORTVERSION=	1.3.9
@@ -15,7 +15,4 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-shared --with-yazpp=${LOCALBASE}/bin
 USE_LDCONFIG=	yes
 
-MAN8=		yazproxy.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
