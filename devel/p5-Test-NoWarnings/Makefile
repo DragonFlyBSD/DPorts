@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: devel/p5-Test-NoWarnings/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-NoWarnings/Makefile 342148 2014-02-01 14:40:51Z miwi $
 
 PORTNAME=	Test-NoWarnings
 PORTVERSION=	1.04
@@ -16,12 +16,9 @@ TEST_DEPENDS=	p5-Test-Tester>=0.10.7:${PORTSDIR}/devel/p5-Test-Tester
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::NoWarnings.3
-
 OPTIONS_DEFINE=	DEVEL_STACKTRACE
 DEVEL_STACKTRACE_DESC=	Stack trace support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEVEL_STACKTRACE}
