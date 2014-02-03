@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev
-# $FreeBSD: devel/p5-Heap/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Heap/Makefile 341625 2014-01-28 16:46:01Z miwi $
 
 PORTNAME=	Heap
 PORTVERSION=	0.80
@@ -13,10 +13,4 @@ COMMENT=	Perl extensions for keeping data partially sorted
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Heap.3 Heap::Binary.3 Heap::Binomial.3 Heap::Elem::Num.3 \
-		Heap::Elem::NumRev.3 Heap::Elem::Ref.3 Heap::Elem::RefRev.3 \
-		Heap::Elem::Str.3 Heap::Elem::StrRev.3 Heap::Elem.3 \
-		Heap::Fibonacci.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
