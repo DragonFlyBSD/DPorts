@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/db48/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/db48/Makefile 342267 2014-02-02 11:00:07Z miwi $
 
 PORTNAME=	db48
 PORTVERSION=	4.8.30.0
@@ -27,13 +27,12 @@ LIBTOOLFILES=	${CONFIGURE_SCRIPT}
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-install:
 .for i in libdb libdb_cxx
-	${LN} -s -f ${PORTNAME}/${i}-${BDBVER}.so.0 ${PREFIX}/lib
-	${LN} -s -f ${i}-${BDBVER}.so.0 ${PREFIX}/lib/${i}-${BDBVER}.so
+	${LN} -s -f ${PORTNAME}/${i}-${BDBVER}.so.0 ${STAGEDIR}${PREFIX}/lib
+	${LN} -s -f ${i}-${BDBVER}.so.0 ${STAGEDIR}${PREFIX}/lib/${i}-${BDBVER}.so
 .endfor
-	cd ${PREFIX}/bin/${PORTNAME}; \
+	cd ${STAGEDIR}${PREFIX}/bin/${PORTNAME}; \
 	for i in *; do ${LN} -s -f ${PORTNAME}/$$i ../$$i-${BDBVER}; done
 
 .include <bsd.port.mk>
