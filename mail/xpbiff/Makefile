@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
-# $FreeBSD: mail/xpbiff/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/xpbiff/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME?=	xpbiff
 PORTVERSION?=	1.27
@@ -27,7 +27,6 @@ YOUBINBINDIR=	${PREFIX}
 YOUBINBINDIR=	${LOCALBASE}
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-extract:
