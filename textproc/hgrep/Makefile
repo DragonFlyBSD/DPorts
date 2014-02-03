@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: textproc/hgrep/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/hgrep/Makefile 341579 2014-01-28 14:31:22Z mat $
 
 PORTNAME=	hgrep
 PORTVERSION=	1.0
@@ -12,8 +12,4 @@ COMMENT=	A nice Highlighting Hack for grep
 
 WRKSRC=		${WRKDIR}/hgrep
 
-MAN1=		hgrep.1
-MANCOMPRESSED=	no
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
