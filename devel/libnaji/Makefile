@@ -1,12 +1,12 @@
 # Created by: NECDET COKYAZICI <cokyazici@yahoo.co.uk>
-# $FreeBSD: devel/libnaji/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libnaji/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libnaji
 PORTVERSION=	0.6.4
 CATEGORIES=	devel
 MASTER_SITES=	SF/najitool/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library that generates, converts, and filters files
 
 MAKE_ARGS=	cc="${CC}"
