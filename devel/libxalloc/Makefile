@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/libxalloc/Makefile 341343 2014-01-27 08:52:10Z bapt $
+# $FreeBSD: devel/libxalloc/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libxalloc
 PORTVERSION=	1.0.4
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://shh.thathost.com/pub-unix/files/
 DISTNAME=	xalloc-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Memory allocation library with error checking
 
 OPTIONS_DEFINE=	DOCS
