@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: devel/p5-constant/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-constant/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	constant
 PORTVERSION=	1.27
@@ -14,7 +14,4 @@ COMMENT=	Perl pragma to declare constants
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		constant.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
