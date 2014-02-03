@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: devel/mm/Makefile 335493 2013-12-02 14:28:01Z sunpoet $
+# $FreeBSD: devel/mm/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	mm
 PORTVERSION=	1.4.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_OSSP}
 MASTER_SITE_SUBDIR=	lib/${PORTNAME}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Shared memory allocation library for pre-forked process models
 
 LICENSE=	BSD
