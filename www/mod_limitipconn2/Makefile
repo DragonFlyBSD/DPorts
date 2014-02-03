@@ -1,9 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: www/mod_limitipconn2/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: www/mod_limitipconn2/Makefile 342319 2014-02-02 15:57:13Z ohauer $
 
 PORTNAME=	mod_limitipconn
-PORTVERSION=	0.23
-PORTREVISION=	3
+PORTVERSION=	0.24
 CATEGORIES=	www
 MASTER_SITES=	http://dominia.org/djao/limit/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -15,7 +14,7 @@ COMMENT=	Allows you to limit the number of simultaneous connexions
 
 LICENSE=	APACHE20
 
-USE_APACHE=	22
+USE_APACHE=	22+
 USE_BZIP2=	yes
 
 AP_FAST_BUILD=	yes
