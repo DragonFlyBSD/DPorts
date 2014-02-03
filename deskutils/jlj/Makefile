@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/jlj/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD: deskutils/jlj/Makefile 341875 2014-01-30 19:32:23Z antoine $
 
 PORTNAME=	jlj
 PORTVERSION=	2.12
@@ -20,25 +20,18 @@ SUB_FILES=	pkg-message
 
 PLIST_FILES=	bin/jlj share/examples/jlj/dot.livejournal.rc
 PLIST_DIRS=	share/examples/jlj
+PORTDOCS=	README
 
 SHEBANG_FILES=	jlj.pl
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MDOCS}
-PORTDOCS=	README
-.endif
+OPTIONS_DEFINE=	DOCS
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/jlj.pl ${PREFIX}/bin/jlj
-	@${MKDIR} ${PREFIX}/share/examples/jlj
+	${INSTALL_SCRIPT} ${WRKSRC}/jlj.pl ${STAGEDIR}${PREFIX}/bin/jlj
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/examples/jlj
 	${INSTALL_DATA} ${WRKSRC}/.livejournal.rc \
-		${PREFIX}/share/examples/jlj/dot.livejournal.rc
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.JLJ ${DOCSDIR}/README
-.endif
-	@${CAT} ${PKGMESSAGE}
+		${STAGEDIR}${PREFIX}/share/examples/jlj/dot.livejournal.rc
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.JLJ ${STAGEDIR}${DOCSDIR}/README
 
 .include <bsd.port.mk>
