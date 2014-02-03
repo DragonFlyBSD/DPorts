@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/libarena/Makefile 335518 2013-12-02 17:31:14Z sunpoet $
+# $FreeBSD: devel/libarena/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libarena
 PORTVERSION=	0.3.6
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.25thandclement.com/~william/projects/releases/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Custom Memory Allocator Interface
 
 LICENSE=	MIT
