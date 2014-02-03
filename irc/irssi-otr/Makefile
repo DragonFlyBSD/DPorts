@@ -1,9 +1,9 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: irc/irssi-otr/Makefile 341430 2014-01-27 16:51:12Z miwi $
+# $FreeBSD: irc/irssi-otr/Makefile 341500 2014-01-28 04:48:10Z miwi $
 
 PORTNAME=	irssi-otr
 PORTVERSION=	0.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	irc
 MASTER_SITES=	ftp://download.tuxfamily.org/${MASTER_SITE_SUBDIR}/
 MASTER_SITE_SUBDIR=	irssiotr
@@ -26,6 +26,6 @@ USE_GNOME=	glib20
 
 PLIST_FILES=	lib/irssi/modules/libotr.so \
 		%%DOCSDIR%%/LICENSE %%DOCSDIR%%/README
-PLIST_DIRS=	%%DOCSDIR%%
+PLIST_DIRS=	lib/irssi lib/irssi/modules/ %%DOCSDIR%%
 
 .include <bsd.port.mk>
