@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-SearchBuilder/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBIx-SearchBuilder
 PORTVERSION=	1.65
@@ -25,21 +25,4 @@ TEST_DEPENDS=	p5-DBD-SQLite>=0:${PORTSDIR}/databases/p5-DBD-SQLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::SearchBuilder.3 DBIx::SearchBuilder::Handle.3 \
-	DBIx::SearchBuilder::Handle::Informix.3 \
-	DBIx::SearchBuilder::Handle::ODBC.3 \
-	DBIx::SearchBuilder::Handle::Oracle.3 \
-	DBIx::SearchBuilder::Handle::Pg.3 \
-	DBIx::SearchBuilder::Handle::SQLite.3 \
-	DBIx::SearchBuilder::Handle::Sybase.3 \
-	DBIx::SearchBuilder::Handle::mysql.3 \
-	DBIx::SearchBuilder::Handle::mysqlPP.3 \
-	DBIx::SearchBuilder::Record.3 \
-	DBIx::SearchBuilder::Record::Cachable.3 \
-	DBIx::SearchBuilder::SchemaGenerator.3 \
-	DBIx::SearchBuilder::Union.3 \
-	DBIx::SearchBuilder::Unique.3 \
-	DBIx::SearchBuilder::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
