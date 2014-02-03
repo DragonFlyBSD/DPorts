@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/libcfg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libcfg/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libcfg
 PORTVERSION=	0.6.2
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://platon.sk/upload/_projects/00003/
 DISTNAME=	${PORTNAME}+-${DISTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library for command line and configuration file parsing
 
 LICENSE=	GPLv2
