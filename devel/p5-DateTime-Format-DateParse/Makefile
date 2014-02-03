@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: devel/p5-DateTime-Format-DateParse/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-DateTime-Format-DateParse/Makefile 342005 2014-01-31 15:24:20Z miwi $
 
 PORTNAME=	DateTime-Format-DateParse
 PORTVERSION=	0.05
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	DateTime::Format::DateParse.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
