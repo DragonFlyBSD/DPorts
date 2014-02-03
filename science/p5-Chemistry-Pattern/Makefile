@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-Pattern/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-Pattern/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Chemistry-Pattern
 PORTVERSION=	0.27
@@ -14,10 +14,7 @@ COMMENT=	Chemical substructure pattern matching
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 RUN_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 
-MAN3=	Chemistry::Pattern.3 Chemistry::Pattern::Atom.3 Chemistry::Pattern::Bond.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
