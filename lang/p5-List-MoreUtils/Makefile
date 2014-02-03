@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: lang/p5-List-MoreUtils/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-List-MoreUtils/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	List-MoreUtils
 DISTVERSION=	0.33
@@ -14,7 +14,4 @@ COMMENT=	Provide the stuff missing in List::Util
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	List::MoreUtils.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
