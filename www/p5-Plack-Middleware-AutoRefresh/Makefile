@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-AutoRefresh/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Plack-Middleware-AutoRefresh/Makefile 342150 2014-02-01 14:41:23Z miwi $
 
 PORTNAME=	Plack-Middleware-AutoRefresh
 PORTVERSION=	0.08
@@ -22,7 +22,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Plack::Middleware::AutoRefresh.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
