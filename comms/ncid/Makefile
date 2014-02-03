@@ -1,5 +1,5 @@
 # Created by: David
-# $FreeBSD: comms/ncid/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/ncid/Makefile 341737 2014-01-29 13:33:39Z gahr $
 
 PORTNAME=	ncid
 PORTVERSION=	0.84
@@ -10,7 +10,6 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 MAINTAINER=	dhn@FreeBSD.org
 COMMENT=	Network based Caller ID package
 
-USE_TK=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 MAN1=		ncid.1 ncid2ncid.1 ncidrotate.1 yac2ncid.1 ncidmodules.1 ncidtools.1 \
 		cidalias.1 cidcall.1 cidupdate.1 ncid-initmodem.1 ncid-kpopup.1 ncid-mythtv.1 \
@@ -19,7 +18,7 @@ MAN5=		ncid.conf.5 ncidmodules.conf.5 ncidd.alias.5 ncidrotate.conf.5 ncidd.blac
 		ncidsip.conf.5 sip2ncid.conf.5 ncidd.conf.5 ncid2ncid.conf.5 yac2ncid.conf.5
 MAN8=		ncidd.8 ncidsip.8 sip2ncid.8
 
-USE_GMAKE=	yes
+USES=		gmake tk
 ALL_TARGET=	local
 MAKE_ARGS=	WISH=${WISH} TCLSH=${TCLSH}
 INSTALL_TARGET=	freebsd-install
