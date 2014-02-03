@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/libaiff/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/libaiff/Makefile 341832 2014-01-30 11:01:48Z gahr $
 
 PORTNAME=	libaiff
 PORTVERSION=	5.0
@@ -12,7 +12,6 @@ COMMENT=	Read and write AIFF files
 
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-NO_STAGE=	yes
 
 PLIST_FILES=	lib/${PORTNAME}.a include/${PORTNAME}/config.h include/${PORTNAME}/endian.h \
 		include/${PORTNAME}/${PORTNAME}.h include/${PORTNAME}/config.vc.h
