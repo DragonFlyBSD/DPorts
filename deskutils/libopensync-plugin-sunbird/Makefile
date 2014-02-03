@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-sunbird/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/libopensync-plugin-sunbird/Makefile 342227 2014-02-02 00:17:35Z antoine $
 
 PORTNAME=	libopensync-plugin-sunbird
 PORTVERSION=	0.22
@@ -20,13 +20,10 @@ USE_GNOME=	glib20 libxml2
 
 PORTDOCS=	AUTHORS COPYING ChangeLog README
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for i in ${PORTDOCS}
-	${INSTALL_DATA} -p ${WRKSRC}/${i} ${DOCSDIR}
-.endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
