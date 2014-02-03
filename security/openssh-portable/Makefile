@@ -1,5 +1,5 @@
 # Created by: dwcjr@inethouston.net
-# $FreeBSD: security/openssh-portable/Makefile 333580 2013-11-12 15:35:02Z bdrewery $
+# $FreeBSD: security/openssh-portable/Makefile 342318 2014-02-02 15:47:08Z bdrewery $
 
 PORTNAME=	openssh
 DISTVERSION=	6.4p1
@@ -12,7 +12,8 @@ PKGNAMESUFFIX?=	-portable
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	The portable version of OpenBSD's OpenSSH
 
-LICENSE=	BSD
+#LICENSE=	BSD2,BSD3,MIT,public domain,BSD-Style,BEER-WARE,"any purpose with notice intact",ISC-Style
+#LICENSE_FILE=	${WRKSRC}/LICENCE
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.*
 
