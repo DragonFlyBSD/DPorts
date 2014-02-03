@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/pushmi/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/pushmi/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	pushmi
 PORTVERSION=	1.0.0
@@ -29,11 +29,4 @@ USES=		perl5
 USE_PERL5=	configure
 USE_APACHE=	22+
 
-MAN3=		Pushmi.3 \
-		Pushmi::Command::Mirror.3 \
-		Pushmi::Command::Runhook.3 \
-		Pushmi::Command::Sync.3 \
-		Pushmi::Command::Verify.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
