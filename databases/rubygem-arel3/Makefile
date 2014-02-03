@@ -1,0 +1,20 @@
+# $FreeBSD: databases/rubygem-arel3/Makefile 342234 2014-02-02 03:01:10Z swills $
+
+PORTNAME=	arel
+PORTVERSION=	3.0.3
+PORTEPOCH=	1
+CATEGORIES=	databases rubygems
+MASTER_SITES=	RG
+
+MAINTAINER=	ruby@FreeBSD.org
+COMMENT=	Relational Algebra for Ruby
+
+LICENSE=	MIT
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
+RUBYGEM_AUTOPLIST=	yes
+
+PKGNAME_SUFFIX=	3
+
+.include <bsd.port.mk>
