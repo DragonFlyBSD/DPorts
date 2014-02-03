@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD: www/chimera/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/chimera/Makefile 341705 2014-01-29 09:17:44Z miwi $
 
 PORTNAME=	chimera
 PORTVERSION=	1.70p0
@@ -16,10 +16,7 @@ NO_LATEST_LINK=	yes
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 
-MAN1=		chimera.1
-
 # Call the port's configure script explicitly, since USES=imake masks it out
-NO_STAGE=	yes
 pre-configure:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
