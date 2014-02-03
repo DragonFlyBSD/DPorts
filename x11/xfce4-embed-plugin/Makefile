@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11/xfce4-embed-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xfce4-embed-plugin/Makefile 341743 2014-01-29 14:51:57Z olivierd $
 
 PORTNAME=	xfce4-embed-plugin
 PORTVERSION=	1.4.1
@@ -11,18 +11,18 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Embed arbitrary windows into the Xfce panel
 
+LICENSE=	GPLv2
+
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=	pkgconfig
+USES=	pkgconfig gmake
 USE_XORG=	x11
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
 
 OPTIONS_DEFINE=	NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
