@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-DJB/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-DJB/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Digest-DJB
 PORTVERSION=	1.00
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for D.J Bernstein's hash algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Digest::DJB.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
