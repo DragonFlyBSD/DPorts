@@ -1,8 +1,9 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: graphics/py-django-easy-thumbnails/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/py-django-easy-thumbnails/Makefile 341731 2014-01-29 13:18:39Z miwi $
 
 PORTNAME=	easy-thumbnails
 PORTVERSION=	1.0.3
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}django-
@@ -16,9 +17,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=0:${PORTSDIR}/www/py-django
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
