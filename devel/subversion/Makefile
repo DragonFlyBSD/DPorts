@@ -1,10 +1,10 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion/Makefile 332916 2013-11-05 22:05:38Z ohauer $
+# $FreeBSD: devel/subversion/Makefile 342335 2014-02-02 16:44:11Z ohauer $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
 
-_CONFLICTS_INSTALL=	subversion-1.[^8].[0-9]* \
+CONFLICTS_INSTALL=	subversion-1.[^8].[0-9]* \
 			subversion1[^8]-1.[^8].[0-9]*
 
 USE_RC_SUBR=	svnserve
