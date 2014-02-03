@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Router-Simple-Sinatraish/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Router-Simple-Sinatraish/Makefile 341636 2014-01-28 16:48:01Z miwi $
 
 PORTNAME=	Router-Simple-Sinatraish
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Router::Simple::Sinatraish.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
