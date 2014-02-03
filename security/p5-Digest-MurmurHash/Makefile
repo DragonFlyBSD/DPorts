@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Digest-MurmurHash/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Digest-MurmurHash/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Digest-MurmurHash
 PORTVERSION=	0.11
@@ -12,7 +12,4 @@ COMMENT=	Perl extension for XS interface to the MurmurHash algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Digest::MurmurHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
