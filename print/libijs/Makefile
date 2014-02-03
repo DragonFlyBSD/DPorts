@@ -1,4 +1,4 @@
-# $FreeBSD: print/libijs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: print/libijs/Makefile 342174 2014-02-01 15:39:05Z miwi $
 
 PORTNAME=	libijs
 PORTVERSION=	0.35
@@ -11,14 +11,10 @@ DIST_SUBDIR=	ghostscript
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library that supports plugin printer driver for Ghostscript
 
-USES=		pkgconfig
+USES=		pkgconfig gmake
 USE_BZIP2=	yes
 USE_GNOME=	lthack
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
-MAN1=		ijs-config.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
