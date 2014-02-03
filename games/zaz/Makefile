@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/zaz/Makefile 329260 2013-10-04 02:15:48Z amdmi3 $
+# $FreeBSD: games/zaz/Makefile 341754 2014-01-29 16:08:46Z amdmi3 $
 
 PORTNAME=	zaz
 PORTVERSION=	1.0.0
@@ -44,5 +44,7 @@ PLIST_SUB+=	NLS="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e '/^zazdocdir =/ s|$${prefix}/doc|$${prefix}/share/doc|' \
 		${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e '/PKG_CONFIG/ s|vorbisfile |&vorbis |' \
+		${WRKSRC}/configure.ac ${WRKSRC}/configure
 
 .include <bsd.port.mk>
