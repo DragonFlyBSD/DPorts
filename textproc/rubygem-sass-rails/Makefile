@@ -1,9 +1,9 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-sass-rails/Makefile 335247 2013-11-29 23:00:15Z sunpoet $
+# $FreeBSD: textproc/rubygem-sass-rails/Makefile 342232 2014-02-02 02:59:46Z swills $
 
 PORTNAME=	sass-rails
 PORTVERSION=	3.2.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
@@ -19,5 +19,8 @@ RUN_DEPENDS=	rubygem-railties>=3.2.0:${PORTSDIR}/www/rubygem-railties \
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+ 
+post-patch:
+	@${REINPLACE_CMD} -e '46 s|~>|>=|' ${WRKSRC}/${GEM_NAME}.gemspec
 
 .include <bsd.port.mk>
