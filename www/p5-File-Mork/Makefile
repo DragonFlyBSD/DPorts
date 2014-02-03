@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-File-Mork/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-File-Mork/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	File-Mork
 PORTVERSION=	0.3
@@ -17,8 +17,4 @@ RUN_DEPENDS=	p5-HTML-Parser>=0:${PORTSDIR}/www/p5-HTML-Parser
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		mork.1
-MAN3=		File::Mork.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
