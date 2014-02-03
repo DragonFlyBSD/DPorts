@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11/xfce4-quicklauncher-plugin/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD: x11/xfce4-quicklauncher-plugin/Makefile 341743 2014-01-29 14:51:57Z olivierd $
 
 PORTNAME=	xfce4-quicklauncher-plugin
 PORTVERSION=	1.9.4
@@ -12,12 +12,12 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Quicklauncher plugin for Xfce
 
+LICENSE=	GPLv2
+
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USES=		gettext pkgconfig
-USE_GMAKE=	yes
+USES=		gettext pkgconfig gmake
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libgui panel
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
