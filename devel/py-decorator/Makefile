@@ -1,8 +1,9 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/py-decorator/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/py-decorator/Makefile 341745 2014-01-29 15:04:46Z miwi $
 
 PORTNAME=	decorator
 PORTVERSION=	3.4.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ COMMENT=	Better living through Python with decorators
 LICENSE=	BSD
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
