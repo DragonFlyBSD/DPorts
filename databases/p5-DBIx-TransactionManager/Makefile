@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-TransactionManager/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-TransactionManager/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DBIx-TransactionManager
 PORTVERSION=	1.12
@@ -18,8 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::TransactionManager.3 \
-	DBIx::TransactionManager::Developers.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
