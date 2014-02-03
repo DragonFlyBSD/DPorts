@@ -1,5 +1,5 @@
 # Created by: Elias Mandouvalos <ocean@compulink.gr>
-# $FreeBSD: net/tn5250/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/tn5250/Makefile 341925 2014-01-31 07:18:28Z miwi $
 
 PORTNAME=	tn5250
 PORTVERSION=	0.17.4
@@ -14,10 +14,6 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-os-dir=no --with-ssl=${OPENSSLBASE}
 USE_LDCONFIG=	yes
 
-MAN1=		lp5250d.1 scs2ascii.1 scs2pdf.1 scs2ps.1 tn5250.1
-MAN5=		tn5250rc.5
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^SUBDIRS =/s|linux||g' ${WRKSRC}/Makefile.in
