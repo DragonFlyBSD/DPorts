@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: deskutils/xmaddressbook/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/xmaddressbook/Makefile 341880 2014-01-30 19:51:54Z antoine $
 
 PORTNAME=	xmaddressbook
 PORTVERSION=	1.5.3
@@ -15,7 +15,5 @@ COMMENT=	X11/Motif-based addressbook program
 USES=		imake motif
 USE_XORG=	ice sm x11 xext xi xp xt oldx
 WRKSRC=		${WRKDIR}/xmaddressbook
-MAN1=		xmaddressbook.1
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
