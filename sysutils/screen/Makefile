@@ -1,5 +1,5 @@
-# Created by: ache
-# $FreeBSD: sysutils/screen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# Created by: Andrey Chernov <ache@FreeBSD.org>
+# $FreeBSD: sysutils/screen/Makefile 341586 2014-01-28 14:45:30Z danfe $
 
 PORTNAME=	screen
 PORTVERSION=	4.0.3
@@ -8,11 +8,10 @@ CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 		http://komquats.com/distfiles/ \
 		http://people.freebsd.org/~cy/distfiles/ \
-		${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	screen
+		GNU
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	A multi-screen window manager
+COMMENT=	Multi-screen window manager
 
 OPTIONS_DEFINE=	CJK INFO MAN NETHACK XTERM_256 HOSTINLOCKED SHOWENC
 OPTIONS_DEFAULT=	INFO MAN NETHACK XTERM_256
@@ -38,10 +37,6 @@ RUN_DEPENDS+=	install-info:${PORTSDIR}/print/texinfo
 .endif
 INFO=		screen
 MAKE_ARGS+=	-DWITH_INFO
-.endif
-
-.if ${ARCH} == "alpha"
-CFLAGS+=	-O0
 .endif
 
 # Enables support for 256 colour xterm.  Note that you may need to
@@ -76,7 +71,7 @@ post-patch:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	@${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc ${STAGEDIR}${EXAMPLESDIR}/screenrc
-
+	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc \
+		${STAGEDIR}${EXAMPLESDIR}/screenrc
 
 .include <bsd.port.mk>
