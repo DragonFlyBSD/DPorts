@@ -1,10 +1,9 @@
-# $FreeBSD: sysutils/ansible/Makefile 339447 2014-01-11 20:03:46Z bdrewery $
+# $FreeBSD: sysutils/ansible/Makefile 341844 2014-01-30 14:50:37Z decke $
 
 PORTNAME=	ansible
 PORTVERSION=	1.4.4
 CATEGORIES=	sysutils python
-MASTER_SITES=	http://ansibleworks.com/releases/ \
-		http://releases.ansible.com/ansible/
+MASTER_SITES=	http://releases.ansible.com/ansible/
 
 MAINTAINER=	lifanov@mail.lifanov.com
 COMMENT=	Simple ssh-based configuration management and orchestration system
