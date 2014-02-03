@@ -1,9 +1,9 @@
 # Created by: Dominic Marks <d.marks@student.umist.ac.uk>
-# $FreeBSD: devel/ccache/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/ccache/Makefile 341862 2014-01-30 17:06:30Z bdrewery $
 
 PORTNAME=	ccache
 PORTVERSION=	3.1.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/ccache/ \
 		CRITICAL
@@ -39,11 +39,12 @@ PLIST_SUB+=	CCLINKDIR="${CCLINKDIR}"
 CCACHE_COMPILERS+=	icc icpc
 .endif
 
-GNU_COMPILERS+=		34 42 43 44 45 46 47 48
+GNU_COMPILERS+=		34 42 43 44 45 46 47 48 49
 CCACHE_COMPILERS+=	cc c++ gcc g++ ${GNU_COMPILERS:S|^|gcc|} ${GNU_COMPILERS:S|^|g++|}
 
 .if ${PORT_OPTIONS:MCLANGLINK}
-CCACHE_COMPILERS+=	clang clang++
+CLANG_COMPILERS+=	31 32 33 34
+CCACHE_COMPILERS+=	clang clang++ ${CLANG_COMPILERS:S|^|clang|} ${CLANG_COMPILERS:S|^|clang++|}
 .endif
 
 .if ${PORT_OPTIONS:MLLVMLINK}
