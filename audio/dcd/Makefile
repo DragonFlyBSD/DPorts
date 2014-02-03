@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/dcd/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/dcd/Makefile 341820 2014-01-30 09:07:53Z gahr $
 
 PORTNAME=	dcd
 PORTVERSION=	0.99.2
@@ -8,17 +8,16 @@ CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}player/${PORTNAME}player/${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A simple, programmable, intelligent CD player
+COMMENT=	Simple, programmable, intelligent CD player
+
+LICENSE=	GPLv2
 
 LIB_DEPENDS=	libcdaudio.so:${PORTSDIR}/audio/libcdaudio
 
 USES=		gmake
-NO_STAGE=	yes
 
-MAN1=	dcd.1
-PLIST_FILES=	bin/dcd
-
-LATEST_LINK=	audio_dcd
+PLIST_FILES=	bin/dcd \
+		man/man1/dcd.1.gz
 
 post-patch:
 	# Handle namespace collision with libcdaudio
