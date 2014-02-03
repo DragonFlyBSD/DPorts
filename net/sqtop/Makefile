@@ -1,5 +1,5 @@
 # Created by: Marco Steinbach <coco@webdev.c0c0.intra>
-# $FreeBSD: net/sqtop/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/sqtop/Makefile 341938 2014-01-31 08:08:07Z miwi $
 
 PORTNAME=	sqtop
 DISTVERSION=	2011-11-01
@@ -13,16 +13,14 @@ LICENSE=	GPLv2
 
 USE_BZIP2=	yes
 
-PLIST_FILES=	bin/sqtop
-
-MAN1=		sqtop.1
+PLIST_FILES=	bin/sqtop \
+		man/man1/sqtop.1.gz
 
 GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=		NCURSES
 OPTIONS_DEFAULT=	NCURSES
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MNCURSES}
