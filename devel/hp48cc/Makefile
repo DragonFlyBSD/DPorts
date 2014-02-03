@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: devel/hp48cc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/hp48cc/Makefile 341508 2014-01-28 08:03:33Z bapt $
 
 PORTNAME=	hp48cc
 PORTVERSION=	1.3
@@ -13,18 +13,17 @@ COMMENT=	C-like compiler that translates input code to the HP48 RPL language
 
 LICENSE=	GPLv2
 
+OPTIONS_DEFINE=	EXAMPLES
+
 USES=		bison
 GNU_CONFIGURE=	yes
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
 
 post-patch:
 # Fix the Makefile to unbreak parallel builds
@@ -32,9 +31,7 @@ post-patch:
 		s,(LEX),& -olexer.c, ; /mv/d' ${WRKSRC}/src/Makefile.in
 
 post-install:
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
