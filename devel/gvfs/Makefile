@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/gvfs/Makefile 340095 2014-01-17 19:09:19Z kwm $
+# $FreeBSD: devel/gvfs/Makefile 341783 2014-01-29 21:13:47Z kwm $
 #   $MCom: ports/devel/gvfs/Makefile,v 1.85 2012/12/14 16:09:28 kwm Exp $
 
 PORTNAME=	gvfs
@@ -94,5 +94,7 @@ PLIST_SUB+=	HAL="@comment "
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.0
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gio/modules/lib*.so
+	@${MKDIR} ${STAGEDIR}${DATADIR}/remote-volume-monitors
+	${TOUCH} ${STAGEDIR}${DATADIR}/remote-volume-monitors/.keep
 
 .include <bsd.port.mk>
