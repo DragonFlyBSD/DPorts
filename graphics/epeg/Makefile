@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: graphics/epeg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/epeg/Makefile 342305 2014-02-02 14:56:09Z miwi $
 
 PORTNAME=	epeg
 PORTVERSION=	0.9.1.042
@@ -21,5 +21,4 @@ USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
