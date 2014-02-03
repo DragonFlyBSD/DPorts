@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/p5-HTML-TreeBuilder-LibXML/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-TreeBuilder-LibXML/Makefile 341594 2014-01-28 15:27:00Z miwi $
 
 PORTNAME=	HTML-TreeBuilder-LibXML
 PORTVERSION=	0.23
@@ -23,8 +23,4 @@ TEST_DEPENDS=	p5-Web-Query>=0:${PORTSDIR}/www/p5-Web-Query
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		HTML::TreeBuilder::LibXML::Node.3 \
-		HTML::TreeBuilder::LibXML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
