@@ -1,5 +1,5 @@
 # Created by: Lucas Holt <luke@justjournal.com>
-# $FreeBSD: deskutils/jjclient/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/jjclient/Makefile 342310 2014-02-02 14:57:32Z miwi $
 
 PORTNAME=	jjclient
 PORTVERSION=	1.0.2
@@ -16,5 +16,4 @@ LIB_DEPENDS+=	libxmlrpc.so:${PORTSDIR}/net/xmlrpc-c
 
 PLIST_FILES=	bin/jjclient
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
