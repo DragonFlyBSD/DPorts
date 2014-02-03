@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: textproc/p5-XML-FOAF/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-FOAF/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	XML-FOAF
 PORTVERSION=	0.04
@@ -20,8 +20,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::FOAF.3	\
-		XML::FOAF::Person.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
