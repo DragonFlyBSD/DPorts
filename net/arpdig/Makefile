@@ -1,5 +1,5 @@
 # Created by: marck@FreeBSD.org
-# $FreeBSD: net/arpdig/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/arpdig/Makefile 341940 2014-01-31 08:09:29Z miwi $
 
 PORTNAME=	arpdig
 PORTVERSION=	0.5.6
@@ -9,9 +9,7 @@ MASTER_SITES=	SF
 MAINTAINER=	marck@FreeBSD.org
 COMMENT=	ARP Digger utility
 
-PLIST_FILES=	bin/arpdig
-MAN1=		arpdig.1
-MANCOMPRESSED=	yes
+PLIST_FILES=	bin/arpdig \
+		man/man1/arpdig.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
