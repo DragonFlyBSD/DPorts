@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Crypt-URandom/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-URandom/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Crypt-URandom
 PORTVERSION=	0.34
@@ -12,7 +12,4 @@ COMMENT=	Perl extension to provide non blocking randomness
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Crypt::URandom.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
