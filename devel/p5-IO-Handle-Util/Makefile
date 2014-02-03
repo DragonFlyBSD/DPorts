@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IO-Handle-Util/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-IO-Handle-Util/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	IO-Handle-Util
 PORTVERSION=	0.01
@@ -19,10 +19,4 @@ TEST_DEPENDS=	p5-Test-use-ok>=0:${PORTSDIR}/devel/p5-Test-use-ok
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	IO::Handle::Iterator.3 \
-	IO::Handle::Prototype.3 \
-	IO::Handle::Prototype::Fallback.3 \
-	IO::Handle::Util.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
