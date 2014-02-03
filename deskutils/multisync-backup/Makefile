@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: deskutils/multisync-backup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/multisync-backup/Makefile 342291 2014-02-02 13:47:56Z antoine $
 
 PORTNAME=	multisync-backup
 
@@ -16,5 +16,4 @@ WRKSRC=		${WRKDIR}/multisync-${PORTVERSION}/plugins/backup_plugin
 
 MASTERDIR=	${.CURDIR}/../multisync
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
