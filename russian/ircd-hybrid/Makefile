@@ -1,5 +1,5 @@
 # Created by: Evgueni V. Gavrilov <aquatique@rusunix.org>
-# $FreeBSD: russian/ircd-hybrid/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: russian/ircd-hybrid/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	ircd
 PORTVERSION=	7.2.4
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}-hybrid-ru/${PORTNAME}-hybrid-ru/${PORTNAME}-hybrid-
 PKGNAMESUFFIX=	-hybrid
 DISTNAME=	ircd-hybrid-ru-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Russian version of well known hybrid IRC server
 
 LICENSE=	GPLv2
