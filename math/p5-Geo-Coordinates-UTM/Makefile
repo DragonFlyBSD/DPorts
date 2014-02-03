@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Geo-Coordinates-UTM/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Geo-Coordinates-UTM/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	Geo-Coordinates-UTM
 PORTVERSION=	0.11
@@ -14,7 +14,4 @@ COMMENT=	Perl extension for converting latitude/longitude to UTM
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Geo::Coordinates::UTM.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
