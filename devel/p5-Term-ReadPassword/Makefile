@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Term-ReadPassword/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Term-ReadPassword/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Term-ReadPassword
 PORTVERSION=	0.11
@@ -11,7 +11,5 @@ COMMENT=	Perl module for asking the user for a password
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Term::ReadPassword.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
