@@ -1,5 +1,5 @@
 # Created by: Gregory Neil Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-HCE_SHA/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-HCE_SHA/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	Crypt-HCE_SHA
 PORTVERSION=	0.70
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::HCE_SHA.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
