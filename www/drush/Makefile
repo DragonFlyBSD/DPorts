@@ -1,5 +1,5 @@
 # Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
-# $FreeBSD: www/drush/Makefile 335962 2013-12-09 10:30:04Z jadawin $
+# $FreeBSD: www/drush/Makefile 342069 2014-01-31 20:56:49Z cs $
 
 PORTNAME=	drush
 PORTVERSION=	6.1.0
@@ -20,7 +20,7 @@ GH_COMMIT=	d948558
 USE_GITHUB=	yes
 
 # set php requirements same as drupal itself
-USE_PHP=	gd pcre session xml mbstring ctype json hash simplexml dom pdo filter
+USE_PHP=	gd pcre session mbstring ctype json hash simplexml dom pdo filter
 IGNORE_WITH_PHP=4
 WANT_PHP_CLI=	yes
 
