@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/nc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/nc/Makefile 341936 2014-01-31 08:07:31Z miwi $
 
 PORTNAME=	nc
 PORTVERSION=	1.0.1
@@ -13,8 +13,8 @@ MAINTAINER=	lx@redundancy.redundancy.org
 COMMENT=	Network aware cat
 
 GNU_CONFIGURE=	yes
-MAN1=		ncat.1
-PLIST_FILES=	bin/ncat
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/ncat \
+		man/man1/ncat.1.gz
+
 .include <bsd.port.mk>
