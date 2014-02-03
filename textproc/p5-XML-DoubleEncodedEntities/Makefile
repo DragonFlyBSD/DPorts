@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-XML-DoubleEncodedEntities/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-DoubleEncodedEntities/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	XML-DoubleEncodedEntities
 PORTVERSION=	1.0
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Test-Simple>=0.64:${PORTSDIR}/devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::DoubleEncodedEntities.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
