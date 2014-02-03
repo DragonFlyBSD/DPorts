@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: mail/mime-construct/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/mime-construct/Makefile 342004 2014-01-31 15:24:05Z miwi $
 
 PORTNAME=	mime-construct
 PORTVERSION=	1.11
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		mime-construct.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
