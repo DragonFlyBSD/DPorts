@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@posi.net>
-# $FreeBSD: www/p5-FCGI/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/p5-FCGI/Makefile 341607 2014-01-28 15:58:32Z miwi $
 
 PORTNAME=	FCGI
 PORTVERSION=	0.74
@@ -21,9 +21,6 @@ PURE_PERL_DESC=	Build pure Perl version (experimental)
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		FCGI.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPURE_PERL}
