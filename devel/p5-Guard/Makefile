@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Guard/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Guard/Makefile 341613 2014-01-28 16:01:24Z miwi $
 
 PORTNAME=	Guard
 PORTVERSION=	1.022
@@ -14,7 +14,4 @@ COMMENT=	Safe cleanup blocks
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Guard.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
