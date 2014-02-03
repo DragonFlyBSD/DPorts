@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 341451 2014-01-27 21:08:45Z decke $
+  $FreeBSD: security/vuxml/vuln.xml 342294 2014-02-02 13:52:18Z zi $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,12 +51,175 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="111f1f84-1d14-4ff2-a9ea-cf07119c0d3b">
+    <topic>libyaml heap overflow resulting in possible code execution</topic>
+    <affects>
+      <package>
+	<name>libyaml</name>
+	<range><lt>0.1.4_3</lt></range>
+      </package>
+      <package>
+	<name>pkg</name>
+	<range><lt>1.2.6</lt></range>
+      </package>
+      <package>
+	<name>pkg-devel</name>
+	<range><lt>1.2.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>libyaml was prone to a heap overflow that could result in
+	  arbitrary code execution. Pkg uses libyaml to parse
+	  the package manifests in some cases. Pkg also used libyaml
+	  to parse the remote repository until 1.2.</p>
+	<p>RedHat Product Security Team reports on libyaml:</p>
+	<blockquote cite="https://bugzilla.redhat.com/show_bug.cgi?id=1033990">
+	  <p>A heap-based buffer overflow flaw was found in the way libyaml
+	    parsed YAML tags. A remote attacker could provide a
+	    specially-crafted YAML document that, when parsed by an application
+	    using libyaml, would cause the application to crash or, potentially,
+	    execute arbitrary code with the privileges of the user running the
+	    application.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-6393</cvename>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=1033990</url>
+    </references>
+    <dates>
+      <discovery>2013-11-24</discovery>
+      <entry>2014-02-01</entry>
+      <modified>2014-02-01</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="a4c9e12d-88b7-11e3-8ada-10bf48e1088e">
+    <topic>socat -- buffer overflow with data from command line</topic>
+    <affects>
+      <package>
+	<name>socat</name>
+	<range><lt>1.7.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Florian Weimer of the Red Hat Product Security Team reports:</p>
+	<blockquote cite="http://www.dest-unreach.org/socat/contrib/socat-secadv5.txt">
+	  <p>Due to a missing check during assembly of the HTTP request line a long
+	    target server name in the PROXY-CONNECT address can cause a stack buffer
+	    overrun. Exploitation requires that the attacker is able to provide the
+	    target server name to the PROXY-CONNECT address in the command line.
+	    This can happen for example in scripts that receive data from untrusted
+	    sources.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0019</cvename>
+      <url>http://www.dest-unreach.org/socat/contrib/socat-secadv5.txt</url>
+    </references>
+    <dates>
+      <discovery>2014-01-24</discovery>
+      <entry>2014-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c7b5d72b-886a-11e3-9533-60a44c524f57">
+    <topic>otrs -- SQL injection issue</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.2.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OTRS Project reports:</p>
+	<blockquote cite="https://www.otrs.com/security-advisory-2014-02-sql-injection-issue/">
+	  <p>SQL injection issue</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-1471</cvename>
+      <url>https://www.otrs.com/security-advisory-2014-02-sql-injection-issue/</url>
+    </references>
+    <dates>
+      <discovery>2014-01-28</discovery>
+      <entry>2014-01-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="080c5370-886a-11e3-9533-60a44c524f57">
+    <topic>otrs -- CSRF issue in customer web interface</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><lt>3.2.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OTRS Project reports:</p>
+	<blockquote cite="https://www.otrs.com/security-advisory-2014-01-csrf-issue-customer-web-interface/">
+	  <p>An attacker that managed to take over the session of a logged in customer
+	    could create tickets and/or send follow-ups to existing tickets due to
+	    missing challenge token checks.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.otrs.com/security-advisory-2014-01-csrf-issue-customer-web-interface/</url>
+    </references>
+    <dates>
+      <discovery>2014-01-28</discovery>
+      <entry>2014-01-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f9810c43-87a5-11e3-9214-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>32.0.1700.102</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>14 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[330420] High CVE-2013-6649: Use-after-free in SVG images.
+	      Credit to Atte Kettunen of OUSPG.</li>
+	    <li>[331444] High CVE-2013-6650: Memory corruption in V8. This
+	      issue was fixed in v8 version 3.22.24.16. Credit to Christian
+	      Holler.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-6649</cvename>
+      <cvename>CVE-2013-6650</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2014-01-27</discovery>
+      <entry>2014-01-27</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="d1dfc4c7-8791-11e3-a371-6805ca0b3d42">
     <topic>rt42 -- denial-of-service attack via the email gateway</topic>
     <affects>
       <package>
 	<name>rt42</name>
-	<range><ge>4.2</ge><lt>4.2.2_2</lt></range>
+	<range><ge>4.2</ge><lt>4.2.1_3</lt></range>
+	<range><ge>4.2.2</ge><lt>4.2.2_2</lt></range>
       </package>
       <package>
 	<name>p5-Email-Address-List</name>
@@ -68,26 +231,26 @@ Note:  Please add new entries to the beginning of this file.
 	<p>The RT development team reports:</p>
 	<blockquote cite="http://blog.bestpractical.com/2014/01/security-vulnerability-in-rt-42.html">
 	  <p>Versions of RT between 4.2.0 and 4.2.2 (inclusive) are
-	  vulnerable to a denial-of-service attack via the email
-	  gateway; any installation which accepts mail from untrusted
-	  sources is vulnerable, regardless of the permissions
-	  configuration inside RT. This vulnerability is assigned
-	  CVE-2014-1474.</p>
+	    vulnerable to a denial-of-service attack via the email
+	    gateway; any installation which accepts mail from untrusted
+	    sources is vulnerable, regardless of the permissions
+	    configuration inside RT. This vulnerability is assigned
+	    CVE-2014-1474.</p>
 	  <p>This vulnerability is caused by poor parsing performance
-	  in the Email::Address::List module, which RT depends on. We
-	  recommend that affected users upgrade their version of
-	  Email::Address::List to v0.02 or above, which resolves the
-	  issue. Due to a communications mishap, the release on CPAN
-	  will temporarily appear as "unauthorized," and the
-	  command-line cpan client will hence not install it. We
-	  expect this to be resolved shortly; in the meantime, the
-	  release is also available from our server.</p>
+	    in the Email::Address::List module, which RT depends on. We
+	    recommend that affected users upgrade their version of
+	    Email::Address::List to v0.02 or above, which resolves the
+	    issue. Due to a communications mishap, the release on CPAN
+	    will temporarily appear as "unauthorized," and the
+	    command-line cpan client will hence not install it. We
+	    expect this to be resolved shortly; in the meantime, the
+	    release is also available from our server.</p>
 	</blockquote>
       </body>
     </description>
     <references>
-      <url>http://blog.bestpractical.com/2014/01/security-vulnerability-in-rt-42.html</url>
       <cvename>CVE-2014-1474</cvename>
+      <url>http://blog.bestpractical.com/2014/01/security-vulnerability-in-rt-42.html</url>
     </references>
     <dates>
       <discovery>2014-01-27</discovery>
@@ -157,8 +320,10 @@ Note:  Please add new entries to the beginning of this file.
 	    there will be a brief interruption of service and the cache will be
 	    emptied, causing more traffic to go to the backend.
 	  </p>
-	  <p>We are releasing this advisory because restarting from vcl_error{} is both fairly common and documented.</p>
-	  <p>This is purely a denial of service vulnerability, there is no risk of privilege escalation.</p>
+	  <p>We are releasing this advisory because restarting from vcl_error{} is
+	    both fairly common and documented.</p>
+	  <p>This is purely a denial of service vulnerability, there is no risk of
+	    privilege escalation.</p>
 	  <p>Workaround</p>
 	  <p>Insert this at the top of your VCL file:</p>
 	  <pre>
