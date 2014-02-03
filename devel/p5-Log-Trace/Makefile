@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Log-Trace/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Trace/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Log-Trace
 PORTVERSION=	1.070
@@ -14,8 +14,4 @@ COMMENT=	Provides a unified approach to tracing
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Log::Trace.3 \
-	Log::Trace::Manual.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
