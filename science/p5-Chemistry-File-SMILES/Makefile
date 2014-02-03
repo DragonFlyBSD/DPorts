@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-File-SMILES/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-File-SMILES/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Chemistry-File-SMILES
 PORTVERSION=	0.47
@@ -20,10 +20,7 @@ RUN_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol \
 		p5-Chemistry-Canonicalize>=0:${PORTSDIR}/science/p5-Chemistry-Canonicalize \
 		p5-Chemistry-Ring>=0:${PORTSDIR}/science/p5-Chemistry-Ring
 
-MAN3=	Chemistry::File::SMILES.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
