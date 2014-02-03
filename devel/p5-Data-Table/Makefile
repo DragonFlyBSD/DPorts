@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Data-Table/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-Table/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	Data-Table
 PORTVERSION=	1.68
@@ -13,7 +13,4 @@ COMMENT=	Data type related to database tables, HTML table displays, etc
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::Table.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
