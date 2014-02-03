@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: security/stegdetect/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/stegdetect/Makefile 342024 2014-01-31 16:48:59Z miwi $
 
 PORTNAME=	stegdetect
 PORTVERSION=	0.6
@@ -15,7 +15,6 @@ COMMENT=	Automated tool for detecting steganographic content in JPEGs
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=	X11
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MX11}
@@ -29,9 +28,8 @@ PLIST_SUB+=	X11="@comment "
 
 # Note: stegdetect includes a modified version of jpeg-6b linked statically
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 CONFIGURE_ARGS+=--program-prefix=''
-MAN1=		stegdetect.1 stegbreak.1
 
 post-patch:
 	@${REINPLACE_CMD} 's;/usr/include/event;${LOCALBASE}/include;g' \
