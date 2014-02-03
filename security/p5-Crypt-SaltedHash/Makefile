@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-SaltedHash/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-SaltedHash/Makefile 342011 2014-01-31 15:53:26Z miwi $
 
 PORTNAME=	Crypt-SaltedHash
 PORTVERSION=	0.06
@@ -14,7 +14,4 @@ COMMENT=	Perl extension to work with salted hashes
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Crypt::SaltedHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
