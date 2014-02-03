@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/formido/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
+# $FreeBSD: games/formido/Makefile 341675 2014-01-28 23:31:19Z amdmi3 $
 
 PORTNAME=	formido
 PORTVERSION=	1.0.1
@@ -11,18 +11,15 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	2D kill-em all with 3D rendered graphics
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/GPL_license.txt
 
 USE_SDL=	sdl mixer image
-USE_GMAKE=	yes
+USES=		gmake
 MAKE_ARGS=	CC="${CXX}" DATDIR="${DATADIR}" DEFCONFIGDIR="${DATADIR}"
 
 PLIST_FILES=	bin/${PORTNAME}
 
 PORTDATA=	*
 PORTDOCS=	*
-
-.include <bsd.port.options.mk>
 
 pre-build:
 	@${MKDIR} ${WRKSRC}/obj
