@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/highlight/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: textproc/highlight/Makefile 341589 2014-01-28 14:59:41Z mat $
 
 PORTNAME=	highlight
 PORTVERSION=	2.16
@@ -10,25 +10,15 @@ MASTER_SITES=	http://www.andre-simon.de/zip/
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Customizable syntax highlighter
 
-USE_GMAKE=	yes
+USES=	gmake
 MAKEFILE=	makefile
 MAKE_ARGS=	CXX="${CXX}" \
 		CFLAGS="${CXXFLAGS} ${CPPFLAGS} -DHAVE_DECL_GETOPT" \
 		LDFLAGS="${LDFLAGS}"
 
-PLIST_FILES=	bin/highlight
-
-MAN1=		${PORTNAME}.1
-MANCOMPRESSED=	yes
-
-.if !defined(NOPORTDOCS)
 PORTDOCS=	ChangeLog INSTALL README README_DE \
 		README_LANGLIST README_REGEX TODO
-
-.endif
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+PORTEXAMPLES=	*
 
 post-patch:
 	@${REINPLACE_CMD} \
@@ -38,29 +28,17 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^CXX=|CXX?=|' ${WRKSRC}/src/${MAKEFILE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/${MAN1}.gz ${MANPREFIX}/man/man1
-	@${MKDIR} ${ETCDIR}
-	${INSTALL_DATA} ${WRKSRC}/filetypes.conf ${ETCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.1.gz ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${ETCDIR}
+	${INSTALL_DATA} ${WRKSRC}/filetypes.conf ${STAGEDIR}${ETCDIR}/filetypes.conf.sample
 .for d in langDefs themes
-	@${MKDIR} ${DATADIR}/$d
-	${INSTALL_DATA} ${WRKSRC}/$d/* ${DATADIR}/$d
+	@${MKDIR} ${STAGEDIR}${DATADIR}/$d
+	cd ${WRKSRC} && ${COPYTREE_SHARE} $d ${STAGEDIR}${DATADIR}/$d
 .endfor
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}
-	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${EXAMPLESDIR})
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
-post-install:
-.for dir in ${ETCDIR} ${DATADIR} ${EXAMPLESDIR}
-	@${FIND} ${dir} ! -type d | \
-		${SED} 's,^${PREFIX}/,,' >> ${TMPPLIST}
-	@${FIND} ${dir} -type d | ${SORT} -r | \
-		${SED} 's,^${PREFIX}/,@dirrm ,' >> ${TMPPLIST}
-.endfor
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
