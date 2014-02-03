@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: devel/libtap/Makefile 335517 2013-12-02 17:31:10Z sunpoet $
+# $FreeBSD: devel/libtap/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libtap
 PORTVERSION=	1.01
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	LOCAL/nik
 DISTNAME=	tap-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library implementing the Test Anything Protocol
 
 LICENSE=	BSD
