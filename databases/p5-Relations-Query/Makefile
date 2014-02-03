@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: databases/p5-Relations-Query/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Relations-Query/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Relations-Query
 PORTVERSION=	0.93
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Relations::Query.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
