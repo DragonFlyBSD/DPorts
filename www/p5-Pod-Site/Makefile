@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Pod-Site/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD: www/p5-Pod-Site/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	Pod-Site
 PORTVERSION=	0.53
@@ -27,10 +27,6 @@ PODT_DESC=	Include Pod package tests
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		podsite.1
-MAN3=		Pod::Site.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPODT}
