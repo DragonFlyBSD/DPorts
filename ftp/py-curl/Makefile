@@ -1,9 +1,9 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ftp/py-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD: ftp/py-curl/Makefile 341811 2014-01-30 08:28:25Z miwi $
 
 PORTNAME=	curl
 PORTVERSION=	7.19.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	ftp python
 MASTER_SITES=	http://pycurl.sourceforge.net/download/ \
 		http://pycurl.sourceforge.net/download/00-OLD-VERSIONS/
@@ -22,31 +22,11 @@ DATADIR=	${PREFIX}/share/py-curl
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	pycurl
-USE_OPENSSL=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's@data_files=@#data_files=t@' \
 		${WRKSRC}/setup.py
-
-post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-.for i in ChangeLog COPYING COPYING2 INSTALL README TODO
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
-.endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DOCSDIR}
-.endif
-
-.if !defined(NOPORTEXAMPLES)
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
-.endif
-
-.if !defined(NOPORDATA)
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/tests/* ${DATADIR}
-.endif
 
 .include <bsd.port.mk>
