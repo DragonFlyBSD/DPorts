@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/gnomehier/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: misc/gnomehier/Makefile 342262 2014-02-02 10:14:08Z kwm $
 #    $MCom: ports/misc/gnomehier/Makefile,v 1.39 2012/12/10 10:58:06 kwm Exp $
 
 PORTNAME=	gnomehier
@@ -17,10 +17,6 @@ PKGINSTALL=	${WRKDIR}/pkg-install
 
 GNOME_MTREE=	BSD.gnome.dist
 GNOME_MTREE_ARGS=${MTREE_ARGS:S|${MTREE_FILE}|${PREFIX}/etc/mtree/${GNOME_MTREE}|}
-
-NO_STAGE=	yes
-do-fetch:
-	@${DO_NADA}
 
 pre-install:
 	@${CP} -f ${FILESDIR}/dirlist ${WRKDIR}
@@ -46,10 +42,8 @@ pre-su-install:
 			> ${WRKDIR}/${GNOME_MTREE}
 
 do-install:
-	${MKDIR} ${PREFIX}/etc/mtree
-	${INSTALL_DATA} ${WRKDIR}/${GNOME_MTREE} ${PREFIX}/etc/mtree
-
-post-install:
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/mtree
+	${INSTALL_DATA} ${WRKDIR}/${GNOME_MTREE} ${STAGEDIR}${PREFIX}/etc/mtree
 
 .include <bsd.port.mk>
