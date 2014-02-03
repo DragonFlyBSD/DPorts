@@ -1,5 +1,5 @@
 # Created by: Mike Bristow <mike@urgle.com>
-# $FreeBSD: textproc/p5-XML-Descent/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Descent/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	XML-Descent
 PORTVERSION=	1.04
@@ -17,7 +17,4 @@ RUN_DEPENDS=	p5-XML-TokeParser>=0:${PORTSDIR}/textproc/p5-XML-TokeParser
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Descent.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
