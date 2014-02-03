@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Test-mysqld/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Test-mysqld/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	Test-mysqld
 PORTVERSION=	0.17
@@ -19,7 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Test::mysqld.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
