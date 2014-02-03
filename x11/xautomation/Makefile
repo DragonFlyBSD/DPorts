@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: x11/xautomation/Makefile 330326 2013-10-14 14:03:14Z nemysis $
+# $FreeBSD: x11/xautomation/Makefile 342107 2014-02-01 10:13:41Z nemysis $
 
 PORTNAME=	xautomation
-PORTVERSION=	1.08
+PORTVERSION=	1.09
 CATEGORIES=	x11
 MASTER_SITES=	http://hoopajoo.net/static/projects/
 
