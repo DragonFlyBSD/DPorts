@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-ACL/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Data-ACL/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Data-ACL
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::ACL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
