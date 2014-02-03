@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-Cache-Memcached-Fast/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-Cache-Memcached-Fast/Makefile 341626 2014-01-28 16:46:12Z miwi $
 
 PORTNAME=	Cache-Memcached-Fast
 PORTVERSION=	0.21
@@ -14,7 +14,4 @@ USES=		perl5
 USE_PERL5=	configure
 MAKE_JOBS_UNSAFE=	yes
 
-MAN3=	Cache::Memcached::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
