@@ -1,9 +1,9 @@
 # Created by: dhagan@cs.vt.edu
-# $FreeBSD: mail/elm/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/elm/Makefile 341574 2014-01-28 14:18:32Z bapt $
 
 PORTNAME=	elm
 PORTVERSION=	2.5.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://instinct.org/elm/files/tarballs/
 DISTNAME=	${PORTNAME}${PORTVERSION}
@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 MAINTAINER=	toasty@dragondata.com
 COMMENT=	A once-popular mail user agent, version 2.5.x
 
-BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/ispell
+BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/aspell-ispell
 
 MAKE_JOBS_UNSAFE=	yes
 
