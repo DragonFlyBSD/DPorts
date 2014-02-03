@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: www/varnish-libvmod-header/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/varnish-libvmod-header/Makefile 341549 2014-01-28 13:33:05Z miwi $
 
 PORTNAME=	libvmod-header
 DISTVERSION=	0.3-5
@@ -29,7 +29,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/varnish
 MAN3=		vmod_header.3
 WRKSRC=		${WRKDIR}/${PORTNAME}-master
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-install:
