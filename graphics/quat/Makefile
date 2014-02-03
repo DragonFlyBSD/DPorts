@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/quat/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/quat/Makefile 342316 2014-02-02 15:20:48Z miwi $
 
 PORTNAME=	quat
 PORTVERSION=	1.20
@@ -21,7 +21,6 @@ CONFIGURE_ARGS=	--disable-gui \
 PORTDOCS=	*
 PLIST_FILES=	bin/quat-txt
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}
@@ -43,10 +42,8 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@(cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
-.endif
 
 .include <bsd.port.mk>
