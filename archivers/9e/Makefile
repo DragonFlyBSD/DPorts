@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks
-# $FreeBSD: archivers/9e/Makefile 335468 2013-12-02 08:25:11Z sunpoet $
+# $FreeBSD: archivers/9e/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	9e
 PORTVERSION=	1.0
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://rodrigo.osorio.free.fr/freebsd/distfiles/
 DISTNAME=	9e
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Explode Plan9 archives
 
 LICENSE=	LPL
