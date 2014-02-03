@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Scalar-String/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Scalar-String/Makefile 342001 2014-01-31 15:23:10Z miwi $
 
 PORTNAME=	Scalar-String
 PORTVERSION=	0.002
@@ -15,7 +15,4 @@ LICENSE=	ART10 GPLv1
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Scalar::String.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
