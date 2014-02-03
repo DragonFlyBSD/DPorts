@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Object-Array/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Object-Array/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Object-Array
 PORTVERSION=	0.060
@@ -19,8 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Object::Array.3 Object::Array::Plugin::Builtins.3 \
-		Object::Array::Plugin::ListMoreUtils.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
