@@ -1,5 +1,5 @@
 # Created by: Helko Glathe <glathe.helko@googlemail.com>
-# $FreeBSD: net/clamz/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/clamz/Makefile 341915 2014-01-31 06:48:18Z miwi $
 
 PORTNAME=	clamz
 PORTVERSION=	0.5
@@ -19,13 +19,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GNU_CONFIGURE=	yes
 USES=		pkgconfig
-
-MAN1=		${PORTNAME}.1
-
-NO_STAGE=	yes
-post-install:
-	@${ECHO}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO}
 
 .include <bsd.port.mk>
