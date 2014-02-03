@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: portuguese/aspell-pt_PT/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: portuguese/aspell-pt_PT/Makefile 341532 2014-01-28 10:58:01Z bapt $
 
 PORTNAME=	aspell
 DISTVERSION=	6-pt_PT-20070510-0
@@ -13,6 +13,5 @@ COMMENT=	Aspell Portuguese dictionary
 
 DICT=	 	pt_PT
 
-NO_STAGE=	yes
 .include "${.CURDIR}/../../textproc/aspell/Makefile.inc"
 .include <bsd.port.post.mk>
