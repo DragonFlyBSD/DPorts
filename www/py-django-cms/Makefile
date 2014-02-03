@@ -1,8 +1,9 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-cms/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: www/py-django-cms/Makefile 341750 2014-01-29 15:27:52Z miwi $
 
 PORTNAME=	django-cms
 PORTVERSION=	2.4.1
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,7 +21,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}south>=0.7.3:${PORTSDIR}/databases/py-south 
 		${PYTHON_PKGNAMEPREFIX}html5lib>=0.90:${PORTSDIR}/www/py-html5lib
 
 USE_PYTHON=	2
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONSFILE=	${PORT_DBDIR}/${PORTNAME}/options
 OPTIONS_MULTI=	DATABASE
