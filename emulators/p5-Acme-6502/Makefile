@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: emulators/p5-Acme-6502/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD: emulators/p5-Acme-6502/Makefile 342154 2014-02-01 14:42:18Z miwi $
 
 PORTNAME=	Acme-6502
 PORTVERSION=	0.77
@@ -17,8 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Acme::6502.3 \
-		Acme::6502::Tube.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
