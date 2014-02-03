@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: www/libepc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/libepc/Makefile 341682 2014-01-29 07:25:06Z miwi $
 
 PORTNAME=	libepc
 PORTVERSION=	0.3.11
@@ -23,5 +23,4 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-static
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
