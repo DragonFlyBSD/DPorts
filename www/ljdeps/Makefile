@@ -1,5 +1,5 @@
 # Created by: Ryan T. Dean <rtdean@cytherianage.net>
-# $FreeBSD: www/ljdeps/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/ljdeps/Makefile 341718 2014-01-29 11:51:50Z miwi $
 
 PORTNAME=	ljdeps
 PORTVERSION=	1.0
@@ -35,5 +35,4 @@ USES=		perl5
 
 do-install:	# Empty
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
