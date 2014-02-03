@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/id3ed/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/id3ed/Makefile 342338 2014-02-02 16:54:09Z pawel $
 
 PORTNAME=	id3ed
 PORTVERSION=	1.10.4
@@ -7,18 +7,17 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_NETBSD}
 
 MAINTAINER=	turutani@scphys.kyoto-u.ac.jp
-COMMENT=	An id3 tag editor for mp3 files
+COMMENT=	Id3 tag editor for mp3 files
 
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 
-MAN1=		id3ed.1
-PLIST_FILES=	bin/id3ed
+PLIST_FILES=	bin/id3ed \
+		man/man1/id3ed.1.gz
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/id3ed ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/id3ed.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/id3ed ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/id3ed.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
