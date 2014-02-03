@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-RBLClient/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: dns/p5-Net-RBLClient/Makefile 342151 2014-02-01 14:41:36Z miwi $
 
 PORTNAME=	Net-RBLClient
 PORTVERSION=	0.5
@@ -19,8 +19,4 @@ WRKSRC=		${WRKDIR}/RBLCLient-${PORTVERSION}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		spamalyze.1
-MAN3=		Net::RBLClient.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
