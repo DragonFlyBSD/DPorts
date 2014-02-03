@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-POE-Filter-DNS-TCP/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: dns/p5-POE-Filter-DNS-TCP/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	POE-Filter-DNS-TCP
 PORTVERSION=	0.04
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tobez@FreeBSD.org
-COMMENT=	A POE Filter to handle DNS over TCP connections
+COMMENT=	POE Filter to handle DNS over TCP connections
 
 BUILD_DEPENDS=	p5-Net-DNS>=0.66:${PORTSDIR}/dns/p5-Net-DNS \
 		p5-Net-DNS>=0:${PORTSDIR}/dns/p5-Net-DNS \
@@ -18,7 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	POE::Filter::DNS::TCP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
