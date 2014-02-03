@@ -1,8 +1,9 @@
 # Created by: Richard Rose <freebsd-security@rikrose.net>
-# $FreeBSD: shells/nologinmsg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: shells/nologinmsg/Makefile 341896 2014-01-30 22:43:17Z antoine $
 
 PORTNAME=	nologinmsg
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	shells sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
