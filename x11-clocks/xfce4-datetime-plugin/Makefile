@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11-clocks/xfce4-datetime-plugin/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/xfce4-datetime-plugin/Makefile 341748 2014-01-29 15:24:59Z olivierd $
 
 PORTNAME=	xfce4-datetime-plugin
 PORTVERSION=	0.6.2
@@ -12,13 +12,13 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Datetime panel plugin for the Xfce desktop
 
-USE_GMAKE=	yes
+LICENSE=	GPLv2
+
 USE_BZIP2=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
-USES=		pkgconfig gettext
+USES=		pkgconfig gettext gmake
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
