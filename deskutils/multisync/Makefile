@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: deskutils/multisync/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/multisync/Makefile 342291 2014-02-02 13:47:56Z antoine $
 
 PORTNAME?=	multisync
 PORTVERSION=	0.82
@@ -14,14 +14,13 @@ COMMENT?=	Synchronize calendars, addressbooks, and other PIM data
 WRKSRC?=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 WRKSRCMASTER=	${WRKDIR}/multisync-${PORTVERSION}
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui
-USES=		gmake pkgconfig
+USE_GNOME=	gnomeprefix libgnomeui
+USES=		gmake pathfix pkgconfig
 USE_AUTOTOOLS=	automake:env libtool
 CONFIGURE_ENV+=	LIBS="-L${LOCALBASE}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 pre-configure:
 	@${FIND} ${WRKDIR} -type l -delete
 .for FILE in missing install-sh mkinstalldirs config.guess config.sub depcomp
