@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Authen-Passphrase/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Authen-Passphrase/Makefile 342149 2014-02-01 14:41:07Z miwi $
 
 PORTNAME=	Authen-Passphrase
 PORTVERSION=	0.008
@@ -29,25 +29,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Authen::Passphrase.3 \
-	Authen::Passphrase::AcceptAll.3 \
-	Authen::Passphrase::BigCrypt.3 \
-	Authen::Passphrase::BlowfishCrypt.3 \
-	Authen::Passphrase::Clear.3 \
-	Authen::Passphrase::Crypt16.3 \
-	Authen::Passphrase::DESCrypt.3 \
-	Authen::Passphrase::EggdropBlowfish.3 \
-	Authen::Passphrase::LANManager.3 \
-	Authen::Passphrase::LANManagerHalf.3 \
-	Authen::Passphrase::MD5Crypt.3 \
-	Authen::Passphrase::MySQL323.3 \
-	Authen::Passphrase::MySQL41.3 \
-	Authen::Passphrase::NTHash.3 \
-	Authen::Passphrase::NetscapeMail.3 \
-	Authen::Passphrase::PHPass.3 \
-	Authen::Passphrase::RejectAll.3 \
-	Authen::Passphrase::SaltedDigest.3 \
-	Authen::Passphrase::VMSPurdy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
