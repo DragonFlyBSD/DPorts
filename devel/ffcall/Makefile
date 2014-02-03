@@ -1,5 +1,5 @@
 # Created by: jagapen@home.com
-# $FreeBSD: devel/ffcall/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/ffcall/Makefile 341635 2014-01-28 16:47:51Z miwi $
 
 PORTNAME=	ffcall
 PORTVERSION=	1.10
@@ -19,11 +19,8 @@ GNU_CONFIGURE=	yes
 
 MAKE_JOBS_UNSAFE=	yes
 
-MAN3=		avcall.3 callback.3 trampoline.3 trampoline_r.3 vacall.3
-MANCOMPRESSED=	no
 CFLAGS+=	-fPIC
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
