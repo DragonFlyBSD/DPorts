@@ -1,4 +1,4 @@
-# $FreeBSD: x11/keybinder/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD: x11/keybinder/Makefile 341759 2014-01-29 16:31:41Z olivierd $
 
 PORTNAME=	keybinder
 PORTVERSION=	0.3.0
@@ -9,12 +9,10 @@ MASTER_SITES=	GENTOO/distfiles
 MAINTAINER=	olivierd@FreeBSD.org
 COMMENT=	Library for registering keyboard shortcuts
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
-USE_GNOME=	gtk20
+USE_GNOME=	gtk20 introspection:build
 USE_XORG=	x11 xext xrender
 USES=		gmake pkgconfig pathfix
 USE_LDCONFIG=	yes
@@ -28,7 +26,7 @@ LUA_DESC=	Lua bindings
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
-USE_PYTHON=	yes
+USE_PYTHON=	2
 USE_GNOME+=	pygtk2
 PLIST_SUB+=	PYTHON=""
 .else
@@ -37,7 +35,7 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MLUA}
-USE_LUA=	5.1+
+USE_LUA=	5.1
 CONFIGURE_ARGS+=	--with-lua-includes=${LUA_INCDIR}
 PLIST_SUB+=	LUA=""
 .else
@@ -58,7 +56,7 @@ PLIST_SUB+=	DOCS="@comment "
 
 post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
-	@${REINPLACE_CMD} -i '' -e 's|lua5.1|lua-5.1|g' ${WRKSRC}/examples/Makefile
+	@${REINPLACE_CMD} -i '' -e 's|lua5.1|lua-${LUA_VER}|g' ${WRKSRC}/examples/Makefile
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 .endif
