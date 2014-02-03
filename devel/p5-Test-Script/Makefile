@@ -1,5 +1,5 @@
 # Created by: lth@FreeBSD.org
-# $FreeBSD: devel/p5-Test-Script/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Test-Script/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Test-Script
 PORTVERSION=	1.07
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Test::Script.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
