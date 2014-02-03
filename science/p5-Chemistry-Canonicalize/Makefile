@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-Canonicalize/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-Canonicalize/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Chemistry-Canonicalize
 PORTVERSION=	0.11
@@ -14,10 +14,7 @@ COMMENT=	Number the atoms in a molecule in a unique way
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 RUN_DEPENDS=	p5-Chemistry-Mol>=0:${PORTSDIR}/science/p5-Chemistry-Mol
 
-MAN3=	Chemistry::Canonicalize.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
