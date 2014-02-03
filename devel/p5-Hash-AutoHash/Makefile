@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 329711 2013-10-07 16:07:29Z culot $
+# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 341989 2014-01-31 12:47:06Z miwi $
 
 PORTNAME=	Hash-AutoHash
 PORTVERSION=	1.17
@@ -22,7 +22,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0.11:${PORTSDIR}/devel/p5-Test-Deep \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Hash::AutoHash.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
