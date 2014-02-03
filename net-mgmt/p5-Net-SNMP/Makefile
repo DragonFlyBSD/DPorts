@@ -1,5 +1,5 @@
 # Created by: Christopher N. Harrell <cnh@ivmg.net>
-# $FreeBSD: net-mgmt/p5-Net-SNMP/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: net-mgmt/p5-Net-SNMP/Makefile 342261 2014-02-02 10:11:12Z miwi $
 
 PORTNAME=	Net-SNMP
 PORTVERSION=	6.0.1
@@ -21,8 +21,4 @@ USES=		perl5
 USE_PERL5=	configure
 CONFLICTS=	p5-Net-SNMP3-[0-9]*
 
-MAN1=		snmpkey.1
-MAN3=		Net::SNMP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
