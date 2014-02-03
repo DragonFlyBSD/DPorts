@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/netrik/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/netrik/Makefile 341562 2014-01-28 13:45:46Z miwi $
 
 PORTNAME=	netrik
 PORTVERSION=	1.16.1
@@ -14,14 +14,12 @@ RUN_DEPENDS=	wget:${PORTSDIR}/ftp/wget
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/netrik
-
-MAN1=		netrik.1
-MAN5=		netrikrc.5
+PLIST_FILES=	bin/netrik \
+		man/man1/netrik.1.gz \
+		man/man5/netrikrc.5.gz
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} "s/#include <ncursesw\//#include </" \
 		${WRKSRC}/*.c
