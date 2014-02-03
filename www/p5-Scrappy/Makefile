@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Scrappy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Scrappy/Makefile 341724 2014-01-29 12:23:20Z miwi $
 
 PORTNAME=	Scrappy
 PORTVERSION=	0.94112090
@@ -33,15 +33,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	scrappy.1
-MAN3=	Scrappy.3 \
-	Scrappy::Logger.3 \
-	Scrappy::Queue.3 \
-	Scrappy::Scraper::Control.3 \
-	Scrappy::Scraper::Parser.3 \
-	Scrappy::Session.3
-
-NO_STAGE=	yes
 post-patch:
 	rm -f ${WRKSRC}/perltidy.pl
 	rm -f ${WRKSRC}/lib/Scrappy.pm.bak
