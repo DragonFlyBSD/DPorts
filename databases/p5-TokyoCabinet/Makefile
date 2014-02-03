@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-TokyoCabinet/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: databases/p5-TokyoCabinet/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	TokyoCabinet
 PORTVERSION=	1.34
@@ -17,7 +17,4 @@ LIB_DEPENDS=	libtokyocabinet.so:${PORTSDIR}/databases/tokyocabinet
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	TokyoCabinet.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
