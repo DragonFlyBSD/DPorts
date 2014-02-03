@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: lang/p5-Modern-Perl/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Modern-Perl/Makefile 342153 2014-02-01 14:42:04Z miwi $
 
 PORTNAME=	Modern-Perl
 PORTVERSION=	1.03
@@ -14,7 +14,4 @@ COMMENT=	Enable all of the features of Modern Perl with one command
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Modern::Perl.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
