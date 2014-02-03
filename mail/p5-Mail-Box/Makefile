@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Box/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/p5-Mail-Box/Makefile 342320 2014-02-02 16:00:04Z miwi $
 
 PORTNAME=	Mail-Box
 PORTVERSION=	2.109
@@ -37,13 +37,5 @@ USE_PERL5=	configure
 CONFIGURE_ARGS=	</dev/null
 CONFIGURE_ENV+=	MAILBOX_INSTALL_OPTIONALS=n
 
-NO_STAGE=	yes
-.include "Makefile.man"
-.include <bsd.port.pre.mk>
 
-# One of it's dependency is p5-GSSAPI which is marked broken for 7.X
-.if ${OSVERSION} < 800000
-BROKEN=	Does not work on FreeBSD 7.x
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
