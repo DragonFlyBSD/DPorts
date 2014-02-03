@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/netsurf/Makefile 329813 2013-10-08 16:56:21Z marino $
+# $FreeBSD: www/netsurf/Makefile 341558 2014-01-28 13:35:50Z miwi $
 
 PORTNAME=	netsurf
 PORTVERSION=	3.0
@@ -35,7 +35,6 @@ OPTIONS_DEFINE=	GSTREAMER WEBP
 
 WEBP_LIB_DEPENDS=	libwebp.so:${PORTSDIR}/graphics/webp
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGSTREAMER}
