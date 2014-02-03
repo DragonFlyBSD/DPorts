@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: lang/p5-Switch/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: lang/p5-Switch/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	Switch
 PORTVERSION=	2.16
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Switch.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
