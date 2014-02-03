@@ -1,5 +1,5 @@
-# Created by: Rodrigo OSORIO <rodrigo@bebik.net>
-# $FreeBSD: editors/omegaT/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# Created by: Rodrigo OSORIO <rodrigo@FreeBSD.org>
+# $FreeBSD: editors/omegaT/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	omegaT
 DISTVERSION=	2.6.3_01
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}/OmegaT%20-%20Standard/OmegaT%202.6.3%20update%20
 DISTNAME=	OmegaT_2.6.3_01_Source
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Powerful translation memory application written in Java
 
 LICENSE=	GPLv2
