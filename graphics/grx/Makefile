@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: graphics/grx/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/grx/Makefile 342182 2014-02-01 16:16:16Z miwi $
 
 PORTNAME=	grx
 PORTVERSION=	2.4.9
@@ -21,7 +21,7 @@ BGI_DESC=	Enable BGI support
 BMP_DESC=	Enable BMP support
 
 USE_XORG=	x11 xau xcb xdmcp
-USE_GMAKE=	yes
+USES=		gmake
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --with-fontpath=${DATADIR}/fonts \
 		--with-x11-base=${LOCALBASE}
@@ -36,7 +36,6 @@ PLIST_SUB=	VERSION="${PORTVERSION}"
 
 INFO=		grx
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBGI}
