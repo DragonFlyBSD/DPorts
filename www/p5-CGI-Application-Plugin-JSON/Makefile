@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: www/p5-CGI-Application-Plugin-JSON/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Application-Plugin-JSON/Makefile 341723 2014-01-29 12:22:39Z miwi $
 
 PORTNAME=	CGI-Application-Plugin-JSON
 PORTVERSION=	1.02
@@ -20,7 +20,4 @@ RUN_DEPENDS=	p5-CGI-Application>4.01:${PORTSDIR}/www/p5-CGI-Application \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	CGI::Application::Plugin::JSON.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
