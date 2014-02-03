@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xbat/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: games/xbat/Makefile 342289 2014-02-02 13:42:22Z pawel $
 
 PORTNAME=	xbat
 PORTVERSION=	1.11
@@ -12,19 +12,13 @@ DISTNAME=	xev111
 MAINTAINER=	turutani@scphys.kyoto-u.ac.jp
 COMMENT=	XEVIOUS like shooting game
 
+LICENSE=	GPLv2
+
 NO_CDROM=	Possible copyright infringement
 
 USES=		imake
 USE_XORG=	x11 xext
 WRKSRC=		${WRKDIR}/Xev111
 ALL_TARGET=	xbat
-
-NO_STAGE=	yes
-post-install:
-	${CHOWN} root:games ${PREFIX}/bin/xbat
-	${CHMOD} 2755 ${PREFIX}/bin/xbat
-	${CHOWN} -R root:games ${PREFIX}/lib/X11/Xbat/Score/
-	${CHMOD} 664 ${PREFIX}/lib/X11/Xbat/Score/*
-	${CHMOD} 755 ${PREFIX}/lib/X11/Xbat/Score/
 
 .include <bsd.port.mk>
