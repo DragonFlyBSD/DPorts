@@ -1,8 +1,8 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: dns/p5-URBL-Prepare/Makefile 337296 2013-12-23 21:02:29Z wg $
+# $FreeBSD: dns/p5-URBL-Prepare/Makefile 342124 2014-02-01 11:54:13Z wg $
 
 PORTNAME=	URBL-Prepare
-PORTVERSION=	0.08
+PORTVERSION=	0.09
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MIKER
