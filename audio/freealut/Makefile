@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: audio/freealut/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/freealut/Makefile 342175 2014-02-01 15:39:21Z miwi $
 
 PORTNAME=	freealut
 PORTVERSION=	1.1.0
@@ -11,18 +11,15 @@ MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	The OpenAL Utility Toolkit
 
 USE_AUTOTOOLS=	libtool
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USES=		gmake openal:al pathfix pkgconfig
 USE_LDCONFIG=	yes
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's/@CFLAGS@/& -lopenal ${PTHREAD_LIBS}/g' \
 		${WRKSRC}/examples/Makefile.in \
 		${WRKSRC}/test_suite/Makefile.in
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
