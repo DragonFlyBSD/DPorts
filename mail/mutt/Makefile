@@ -1,5 +1,5 @@
 # Created by: Udo Schweigert
-# $FreeBSD: mail/mutt/Makefile 333087 2013-11-07 13:01:41Z bsam $
+# $FreeBSD: mail/mutt/Makefile 341583 2014-01-28 14:40:41Z bapt $
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.22
@@ -149,8 +149,8 @@ RUN_DEPENDS+=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
 BUILD_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
 RUN_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
 .elif ${PORT_OPTIONS:MISPELL}
-BUILD_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
-RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
+BUILD_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell
+RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell
 .endif
 .if defined(PACKAGE_BUILDING)
 RUN_DEPENDS+=	urlview:${PORTSDIR}/textproc/urlview
