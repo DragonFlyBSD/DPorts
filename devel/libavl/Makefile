@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/libavl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libavl/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libavl
 PORTVERSION=	1.4.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	avl
 DISTNAME=	avl-${PORTVERSION}
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	A library for balanced binary trees
 
 GNU_CONFIGURE=	yes
