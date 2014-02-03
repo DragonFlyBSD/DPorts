@@ -1,12 +1,12 @@
 # Created by: ijliao
-# $FreeBSD: devel/log4c/Makefile 335516 2013-12-02 17:31:05Z sunpoet $
+# $FreeBSD: devel/log4c/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	log4c
 PORTVERSION=	1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Logging for C Library
 
 LICENSE=	LGPL21
