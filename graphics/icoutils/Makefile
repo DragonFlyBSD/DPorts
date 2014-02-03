@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/icoutils/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/icoutils/Makefile 342317 2014-02-02 15:21:20Z miwi $
 
 PORTNAME=	icoutils
 PORTVERSION=	0.31.0
@@ -25,11 +25,11 @@ CONFIGURE_ARGS=	--disable-nls
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		icotool.1 wrestool.1
 PLIST_FILES=	bin/icotool \
-		bin/wrestool
+		bin/wrestool \
+		man/man1/icotool.1.gz \
+		man/man1/wrestool.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MRESSCRIPTS}
