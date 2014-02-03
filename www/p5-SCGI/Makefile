@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-SCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-SCGI/Makefile 341693 2014-01-29 07:59:19Z miwi $
 
 PORTNAME=	SCGI
 PORTVERSION=	0.6
@@ -14,10 +14,9 @@ COMMENT=	SCGI server interface
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	SCGI.3 SCGI::Request.3
-
-PLIST_FILES=	${SITE_PERL_REL}/SCGI.pm ${SITE_PERL_REL}/SCGI/Request.pm
+PLIST_FILES=	${SITE_PERL_REL}/SCGI.pm ${SITE_PERL_REL}/SCGI/Request.pm \
+		%%PERL5_MAN3%%/SCGI.3.gz \
+		%%PERL5_MAN3%%/SCGI::Request.3.gz
 PLIST_DIRS=	${SITE_PERL_REL}/SCGI
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
