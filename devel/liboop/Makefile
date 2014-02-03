@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/liboop/Makefile 335688 2013-12-05 20:25:59Z sunpoet $
+# $FreeBSD: devel/liboop/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	liboop
 PORTVERSION=	1.0
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	GENTOO/distfiles \
 		http://download.ofb.net/liboop/
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Low-level event loop management library for POSIX-based OS
 
 LICENSE=	GPLv2
