@@ -1,5 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/spybye/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/spybye/Makefile 342028 2014-01-31 16:49:58Z miwi $
 
 PORTNAME=	spybye
 PORTVERSION=	0.3
@@ -18,9 +18,6 @@ CLAMAV_DESC=	Enable CLAMAV support
 USE_RC_SUBR=	spybye
 GNU_CONFIGURE=	yes
 
-MAN1=		spybye.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MCLAMAV}
