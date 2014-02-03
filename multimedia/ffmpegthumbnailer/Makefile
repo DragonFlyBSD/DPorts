@@ -1,5 +1,5 @@
 # Created by: Dierk Sacher <dierk@blaxxtarz.de>
-# $FreeBSD: multimedia/ffmpegthumbnailer/Makefile 331687 2013-10-26 13:32:19Z wg $
+# $FreeBSD: multimedia/ffmpegthumbnailer/Makefile 341780 2014-01-29 20:43:01Z riggs $
 
 PORTNAME=	ffmpegthumbnailer
 PORTVERSION=	2.0.8
@@ -9,6 +9,8 @@ MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	clutton@zoho.com
 COMMENT=	Lightweight video thumbnailer that can be used by file managers
+
+LICENSE=	GPLv2 # (or later)
 
 LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
 		libswscale.so:${PORTSDIR}/multimedia/ffmpeg \
@@ -23,7 +25,10 @@ USES=		pathfix pkgconfig
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	GNOME
+OPTIONS_DEFINE=	GNOME MATE
+OPTIONS_SUB=	yes
+
+MATE_CONFIGURE_ENABLE=	thumbnailer
 
 .include <bsd.port.options.mk>
 
