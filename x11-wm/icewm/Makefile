@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/icewm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: x11-wm/icewm/Makefile 342249 2014-02-02 08:11:05Z eadler $
 
 PORTNAME=	icewm
 PORTVERSION=	1.3.7
@@ -7,7 +7,7 @@ PORTREVISION=	3
 CATEGORIES=	x11-wm
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}/${PORTVERSION}/
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window Manager designed for speed, usability and consistency
 
 LICENSE=	GPLv2
