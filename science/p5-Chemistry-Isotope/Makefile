@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-Isotope/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD: science/p5-Chemistry-Isotope/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Chemistry-Isotope
 PORTVERSION=	0.11
@@ -11,10 +11,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Table of the isotopes exact mass data
 
-MAN3=	Chemistry::Isotope.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
