@@ -1,5 +1,5 @@
 # Created by: Zastupov Stepan [RedChrom] <redchrom@mail.ru>
-# $FreeBSD: multimedia/audacious/Makefile 335006 2013-11-27 10:15:21Z oliver $
+# $FreeBSD: multimedia/audacious/Makefile 341981 2014-01-31 12:14:30Z miwi $
 
 PORTNAME=	audacious
 PORTVERSION=	3.4.2
@@ -14,8 +14,7 @@ LIB_DEPENDS=	mcs:${PORTSDIR}/devel/libmcs \
 		xml2:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
-USES=		pkgconfig
-USE_GMAKE=	yes
+USES=		pkgconfig gmake
 USE_XORG=	x11 sm
 USE_BZIP2=	yes
 USE_GNOME=	gtk30
@@ -25,7 +24,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFIGURE_ARGS=	--disable-chardet --with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
-MAN1=		audacious.1 audtool.1
 
 OPTIONS_DEFINE=	DBUS GNOME ICONV NLS EXECINFO SSE2 CHARSET
 OPTIONS_DEFAULT= DBUS ICONV NLS EXECINFO SSE2 CHARSET
@@ -33,7 +31,6 @@ CHARSET_DESC= Build with automatic charset detection
 EXECINFO_DESC= Build with libexecinfo support
 SSE2_DESC=Build with SSE2 instruction set
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDBUS}
@@ -89,7 +86,6 @@ post-patch:
 .endif
 
 post-install:
-	@${CAT} ${PKGMESSAGE}
 .if defined(WITH_GNOME)
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "You have installed audacious with gconf support."
