@@ -1,5 +1,5 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: net/p5-WebService-Dropbox/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/p5-WebService-Dropbox/Makefile 341989 2014-01-31 12:47:06Z miwi $
 
 PORTNAME=	WebService-Dropbox
 PORTVERSION=	1.18
@@ -25,9 +25,6 @@ LWP_DESC=	Use LWP instead of Furl
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WebService::Dropbox.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLWP}
