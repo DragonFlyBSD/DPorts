@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: devel/p5-List-Uniq/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-List-Uniq/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	List-Uniq
 PORTVERSION=	0.20
@@ -13,7 +13,4 @@ COMMENT=	Extract the unique elements of a list
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		List::Uniq.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
