@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Bit-Vector/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: math/p5-Bit-Vector/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Bit-Vector
 PORTVERSION=	7.3
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Bit::Vector.3 Bit::Vector::Overload.3 Bit::Vector::String.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
