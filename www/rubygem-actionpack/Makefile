@@ -1,8 +1,9 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-actionpack/Makefile 335700 2013-12-05 20:27:25Z sunpoet $
+# $FreeBSD: www/rubygem-actionpack/Makefile 342233 2014-02-02 03:00:27Z swills $
 
 PORTNAME=	actionpack
 PORTVERSION=	3.2.16
+PORTREVISION=	1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -24,5 +25,8 @@ RUN_DEPENDS=	rubygem-activemodel>=${PORTVERSION}:${PORTSDIR}/databases/rubygem-a
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e '115 s|~>|>=|' ${WRKSRC}/${GEM_NAME}.gemspec
 
 .include <bsd.port.mk>
