@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Reporter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-CPAN-Reporter/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	CPAN-Reporter
 PORTVERSION=	1.2006
@@ -28,9 +28,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	CPAN::Reporter::API.3 CPAN::Reporter::Config.3 \
-	CPAN::Reporter::History.3 CPAN::Reporter::PrereqCheck.3 \
-	CPAN::Reporter.3 CPAN::Reporter::FAQ.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
