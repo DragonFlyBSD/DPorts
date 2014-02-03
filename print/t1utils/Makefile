@@ -1,5 +1,5 @@
 # Created by: Mike Meyer <mwm@mired.org>
-# $FreeBSD: print/t1utils/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: print/t1utils/Makefile 342328 2014-02-02 16:05:53Z miwi $
 
 PORTNAME=	t1utils
 PORTVERSION=	1.32
@@ -9,9 +9,6 @@ MASTER_SITES=	http://www.lcdf.org/type/
 MAINTAINER=	mwm@mired.org
 COMMENT=	Six utilities for manipulating t1 fonts
 
-MAN1=		t1ascii.1 t1binary.1 t1asm.1 t1disasm.1 t1unmac.1 t1mac.1
-
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
