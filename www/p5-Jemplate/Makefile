@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Jemplate/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Jemplate/Makefile 341706 2014-01-29 09:17:58Z miwi $
 
 PORTNAME=	Jemplate
 PORTVERSION=	0.270
@@ -19,12 +19,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	jemplate.1
-MAN3=	Jemplate.3 \
-	Jemplate::Directive.3 \
-	Jemplate::Parser.3 \
-	Jemplate::Runtime.3 \
-	Jemplate::Runtime::Compact.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
