@@ -1,13 +1,16 @@
 # Created by: spam@rm-rf.kiev.ua
-# $FreeBSD: databases/phpminiadmin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: databases/phpminiadmin/Makefile 342256 2014-02-02 09:05:59Z ak $
 
 PORTNAME=	phpminiadmin
 DISTVERSION=	1.5.091221
 CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ak@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight alternative to phpMyAdmin
+
+LICENSE=	GPLv2 MIT
+LICENSE_COMB=	dual
 
 USE_ZIP=	yes
 NO_WRKSUBDIR=	yes
@@ -20,9 +23,8 @@ PLIST_DIRS=	${WWWDIR_REL}
 USE_PHP=	mysql session pcre
 .endif
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${WWWDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/phpminiadmin.php ${WWWDIR}
+	@${MKDIR} ${STAGEDIR}${WWWDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/phpminiadmin.php ${STAGEDIR}${WWWDIR}
 
 .include <bsd.port.mk>
