@@ -1,22 +1,21 @@
 # Created by: Pavel I Volkov
-# $FreeBSD: net-mgmt/ssgless/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net-mgmt/ssgless/Makefile 341787 2014-01-29 22:03:24Z pawel $
 
 PORTNAME=	ssgless
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	net-mgmt
 DISTFILES=
 
-MAINTAINER=	pavelivolkov@googlemail.com
+MAINTAINER=	pavelivolkov@gmail.com
 COMMENT=	View ScreenOS configuration files
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 LESS=	`whereis -bq less`
 
 NOFETCHFILES=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
-NO_MTREE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} bin/lesspipe-ssg.awk
 
@@ -24,14 +23,8 @@ SUB_FILES=	${PORTNAME} lesspipe-ssg.awk
 
 SUB_LIST=	"AWK=${AWK}" "LESS=${LESS}"
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/lesspipe-ssg.awk ${PREFIX}/bin
-
-post-install:
-	@${ECHO}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/lesspipe-ssg.awk ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
