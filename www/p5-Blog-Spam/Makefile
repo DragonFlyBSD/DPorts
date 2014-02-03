@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Blog-Spam/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Blog-Spam/Makefile 341690 2014-01-29 07:58:41Z miwi $
 
 PORTNAME=	Blog-Spam
 PORTVERSION=	1.0.2
@@ -20,31 +20,4 @@ RUN_DEPENDS=	p5-Net-CIDR-Lite>=0:${PORTSDIR}/net/p5-Net-CIDR-Lite \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		blogspam.1
-MAN3=		Blog::Spam::API.3 \
-		Blog::Spam::Plugin::00blacklist.3 \
-		Blog::Spam::Plugin::00whitelist.3 \
-		Blog::Spam::Plugin::Sample.3 \
-		Blog::Spam::Plugin::badip.3 \
-		Blog::Spam::Plugin::bayesian.3 \
-		Blog::Spam::Plugin::bogusip.3 \
-		Blog::Spam::Plugin::drone.3 \
-		Blog::Spam::Plugin::dropme.3 \
-		Blog::Spam::Plugin::emailtests.3 \
-		Blog::Spam::Plugin::hashcash.3 \
-		Blog::Spam::Plugin::httpbl.3 \
-		Blog::Spam::Plugin::logger.3 \
-		Blog::Spam::Plugin::lotsaurls.3 \
-		Blog::Spam::Plugin::multilinks.3 \
-		Blog::Spam::Plugin::rdns.3 \
-		Blog::Spam::Plugin::requiremx.3 \
-		Blog::Spam::Plugin::sfs.3 \
-		Blog::Spam::Plugin::size.3 \
-		Blog::Spam::Plugin::stopwords.3 \
-		Blog::Spam::Plugin::strong.3 \
-		Blog::Spam::Plugin::surbl.3 \
-		Blog::Spam::Plugin::wordcount.3 \
-		Blog::Spam::Server.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
