@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/beets/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD: audio/beets/Makefile 341588 2014-01-28 14:49:05Z feld $
 
 PORTNAME=	beets
 PORTVERSION=	1.3.1
@@ -17,10 +17,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mutagen>=1.21:${PORTSDIR}/audio/py-mutagen \
 		${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:${PORTSDIR}/databases/py-sqlite3
 
-MAN1=	beet.1
-MAN5=	beetsconfig.5
-
-NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	easy_install
 
@@ -46,7 +42,7 @@ WEB_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0:${PORTSDIR}/www/py-flask
 .include <bsd.port.pre.mk>
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/beet.1 ${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/man/beetsconfig.5 ${PREFIX}/man/man5/
+	${INSTALL} ${WRKSRC}/man/beet.1 ${STAGEDIR}${PREFIX}/man/man1/
+	${INSTALL} ${WRKSRC}/man/beetsconfig.5 ${STAGEDIR}${PREFIX}/man/man5/
 
 .include <bsd.port.post.mk>
