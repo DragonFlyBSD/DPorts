@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-MooseX-Types-JSON/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD: devel/p5-MooseX-Types-JSON/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	MooseX-Types-JSON
 PORTVERSION=	0.02
@@ -23,7 +23,4 @@ TEST_DEPENDS=	p5-Test-Pod>=1.00:${PORTSDIR}/devel/p5-Test-Pod
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		MooseX::Types::JSON.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
