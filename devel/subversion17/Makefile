@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion17/Makefile 332919 2013-11-05 22:16:34Z ohauer $
+# $FreeBSD: devel/subversion17/Makefile 342334 2014-02-02 16:40:08Z ohauer $
 
 MAINTAINER=	ohauer@FreeBSD.org
 COMMENT=	Version control system
@@ -199,7 +199,7 @@ post-install:	${MKREPOS_TARGET}
 	@${MAKE} -C ${WRKSRC} install-tools ${MAKE_ARGS}
 .endif
 	@${MKDIR} ${STAGEDIR}${DATADIR}
-	@(cd ${WRKSRC}/tools.examples && ${TAR} --exclude '*.in' -cf - * | ${TAR} -C ${STAGEDIR}${DATADIR} -xof - )
+	@(cd ${WRKSRC}/tools.examples && ${TAR} --exclude '*.in' --exclude '*.bak' -cf - * | ${TAR} -C ${STAGEDIR}${DATADIR} -xof - )
 
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
