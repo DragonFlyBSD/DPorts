@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/rexx-wrapper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: lang/rexx-wrapper/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME=	wrapper
 PORTVERSION=	2.4
@@ -26,5 +26,4 @@ post-patch:	.SILENT
 		${WRKSRC}/rexxwrap.cmd
 	@${REINPLACE_CMD} 's/-compiler=$$(CC/&:T/' ${WRKSRC}/Makefile.in
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
