@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: mail/horde3-imp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/horde3-imp/Makefile 341583 2014-01-28 14:40:41Z bapt $
 
 PORTNAME=	imp
 PORTVERSION=	4.3.11
@@ -55,7 +55,7 @@ RUN_DEPENDS+=	${PEARDIR}/Mail/mimeDecode.php:${PORTSDIR}/mail/pear-Mail_mimeDeco
 .if !defined(WITHOUT_ASPELL)
 RUN_DEPENDS+=	${LOCALBASE}/bin/aspell:${PORTSDIR}/textproc/aspell
 .elif defined(WITH_ISPELL)
-RUN_DEPENDS+=	${LOCALBASE}/bin/ispell:${PORTSDIR}/textproc/ispell
+RUN_DEPENDS+=	${LOCALBASE}/bin/ispell:${PORTSDIR}/textproc/aspell-ispell
 .endif
 
 .if defined(WITH_HTML)
