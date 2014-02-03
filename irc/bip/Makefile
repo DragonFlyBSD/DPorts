@@ -1,9 +1,9 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: irc/bip/Makefile 339964 2014-01-16 19:00:09Z tabthorpe $
+# $FreeBSD: irc/bip/Makefile 342339 2014-02-02 17:02:36Z swills $
 
 PORTNAME=	bip
 PORTVERSION=	0.8.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc
 MASTER_SITES=	https://projects.duckcorp.org/attachments/download/39/
 
