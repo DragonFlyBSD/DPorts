@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: security/sshpass/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/sshpass/Makefile 342025 2014-01-31 16:49:13Z miwi $
 
 PORTNAME=	sshpass
 PORTVERSION=	1.05
@@ -13,8 +13,7 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	bin/sshpass
-MAN1=		sshpass.1
+PLIST_FILES=	bin/sshpass \
+		man/man1/sshpass.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
