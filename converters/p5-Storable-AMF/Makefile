@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: converters/p5-Storable-AMF/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Storable-AMF/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Storable-AMF
 PORTVERSION=	1.00
@@ -13,10 +13,4 @@ COMMENT=	Perl extension for serialize/deserialize AMF0/AMF3 data
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Storable::AMF.3 \
-	Storable::AMF0.3 \
-	Storable::AMF3.3 \
-	Storable::AMF::Mapper.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
