@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/p5-Net-ZooKeeper/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Net-ZooKeeper/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Net-ZooKeeper
 PORTVERSION=	0.35
@@ -19,7 +19,4 @@ CONFIGURE_ARGS+=	--zookeeper-include ${PREFIX}/include/c-client-src \
 			--zookeeper-include ${PREFIX}/include/zookeeper \
 			--zookeeper-lib ${PREFIX}/libs
 
-MAN3=	Net::ZooKeeper.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
