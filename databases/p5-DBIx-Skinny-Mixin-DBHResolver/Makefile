@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-Mixin-DBHResolver/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Skinny-Mixin-DBHResolver/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	DBIx-Skinny-Mixin-DBHResolver
 PORTVERSION=	0.04
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Skinny::Mixin::DBHResolver.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
