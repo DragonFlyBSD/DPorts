@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-XML-Parser-Lite-Tree/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Parser-Lite-Tree/Makefile 341608 2014-01-28 15:58:38Z miwi $
 
 PORTNAME=	XML-Parser-Lite-Tree
 PORTVERSION=	0.14
@@ -13,7 +13,4 @@ COMMENT=	Lightweight XML tree builder
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Parser::Lite::Tree.3 XML::Parser::LiteCopy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
