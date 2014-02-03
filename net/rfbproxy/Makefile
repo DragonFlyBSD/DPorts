@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/rfbproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/rfbproxy/Makefile 341981 2014-01-31 12:14:30Z miwi $
 
 PORTNAME=	rfbproxy
 PORTVERSION=	1.1.1
@@ -13,8 +13,8 @@ GNU_CONFIGURE=	yes
 
 USE_BZIP2=	yes
 
-MAN1=		rfbproxy.1
-PLIST_FILES=	bin/rfbproxy
+PLIST_FILES=	bin/rfbproxy \
+		man/man1/rfbproxy.1.gz
 
-NO_STAGE=	yes
+
 .include <bsd.port.mk>
