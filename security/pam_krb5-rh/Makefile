@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: security/pam_krb5-rh/Makefile 332431 2013-11-01 23:55:00Z zi $
+# $FreeBSD: security/pam_krb5-rh/Makefile 342012 2014-01-31 15:54:10Z miwi $
 
 PORTNAME=	pam_krb5
 DISTVERSION=	2.4.8
@@ -24,10 +24,6 @@ CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} --without-afs \
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_UNSAFE=	yes
 
-MAN5=		pam_krb5.5
-MAN8=		pam_krb5.8 pam_krb5_cchelper.8
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
