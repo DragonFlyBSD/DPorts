@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <cy@FreeBSD.org>
-# $FreeBSD: security/p5-File-KeePass-Agent/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-File-KeePass-Agent/Makefile 342157 2014-02-01 14:42:58Z miwi $
 
 PORTNAME=	File-KeePass-Agent
 PORTVERSION=	2.01
@@ -21,10 +21,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		fkp-agent.1
-MAN3=		File::KeePass::Agent.3 \
-		File::KeePass::Agent::linux.3 \
-		File::KeePass::Agent::unix.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
