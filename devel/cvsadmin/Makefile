@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsadmin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/cvsadmin/Makefile 341485 2014-01-27 23:57:31Z bapt $
 
 PORTNAME=	cvsadmin
 PORTVERSION=	1.0.3
@@ -8,18 +8,17 @@ CATEGORIES=	devel
 MASTER_SITES=	LOCAL/gabor
 
 MAINTAINER=	aehlig@linta.de
-COMMENT=	A simple program to administrate users of a CVS repository
+COMMENT=	Simple program to administrate users of a CVS repository
 
 GNU_CONFIGURE=	yes
 
-MAN1=		cvsadmin.1
-PLIST_FILES=	bin/cvsadmin
+PLIST_FILES=	bin/cvsadmin \
+		man/man1/cvsadmin.1.gz
 
-NO_STAGE=	yes
 post-configure:
 	${ECHO_CMD} "#define HAVE_MKDTEMP 1" >> ${WRKSRC}/config.h
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/cvsadmin.1 ${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/cvsadmin.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
