@@ -1,12 +1,12 @@
 # Created by: Andrew <andrew@ugh.net.au>
-# $FreeBSD: devel/libhash/Makefile 335761 2013-12-06 15:25:07Z sunpoet $
+# $FreeBSD: devel/libhash/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	libhash
 PORTVERSION=	1.0.3
 CATEGORIES=	devel
 MASTER_SITES=	GENTOO/distfiles
 
-MAINTAINER=	rodrigo@bebik.net
+MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Library for manipulating hash tables
 
 WRKSRC=		${WRKDIR}/libhash
