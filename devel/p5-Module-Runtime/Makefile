@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Module-Runtime/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Module-Runtime/Makefile 342197 2014-02-01 18:24:29Z miwi $
 
 PORTNAME=	Module-Runtime
 PORTVERSION=	0.013
@@ -16,7 +16,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Module::Runtime.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
