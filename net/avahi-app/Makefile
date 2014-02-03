@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/avahi-app/Makefile 336457 2013-12-14 16:25:21Z kwm $
+# $FreeBSD: net/avahi-app/Makefile 342046 2014-01-31 17:13:46Z kwm $
 #   $MCom: ports/net/avahi-app/Makefile,v 1.25 2012/09/01 23:02:11 mezz Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.31
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 PKGNAMESUFFIX?=	-app
@@ -88,6 +88,7 @@ CONFIGURE_ARGS+=--enable-mono
 .else
 CONFIGURE_ARGS+=--disable-mono
 .endif
+CONFIGURE_ARGS+=--disable-stack-protector
 
 post-patch: avahi-post-patch
 
