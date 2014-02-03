@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: net/p5-XML-RPC-Fast/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/p5-XML-RPC-Fast/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	XML-RPC-Fast
 PORTVERSION=	0.8
@@ -22,15 +22,4 @@ TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::RPC::Enc.3 \
-		XML::RPC::Enc::LibXML.3 \
-		XML::RPC::Fast.3 \
-		XML::RPC::README.3 \
-		XML::RPC::UA.3 \
-		XML::RPC::UA::AnyEvent.3 \
-		XML::RPC::UA::AnyEventSync.3 \
-		XML::RPC::UA::Curl.3 \
-		XML::RPC::UA::LWP.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
