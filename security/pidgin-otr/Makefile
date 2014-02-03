@@ -1,4 +1,4 @@
-# $FreeBSD: security/pidgin-otr/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/pidgin-otr/Makefile 342246 2014-02-02 07:39:09Z jgh $
 
 PORTNAME=	otr
 PORTVERSION=	4.0.0
@@ -27,5 +27,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CONFIGURE_ARGS=	--with-libotr-prefix=${LOCALBASE}/lib \
 		--with-libotr-inc-prefix=${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
