@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Compress-Gzip/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-CGI-Compress-Gzip/Makefile 341689 2014-01-29 07:58:24Z miwi $
 
 PORTNAME=	CGI-Compress-Gzip
 PORTVERSION=	1.03
@@ -18,8 +18,4 @@ RUN_DEPENDS=	p5-IO-Zlib>=1.01:${PORTSDIR}/archivers/p5-IO-Zlib
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	CGI::Compress::Gzip.3 \
-	CGI::Compress::Gzip::FileHandle.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
