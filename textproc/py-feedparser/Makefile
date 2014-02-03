@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-feedparser/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/py-feedparser/Makefile 341799 2014-01-30 03:13:00Z miwi $
 
 PORTNAME=	feedparser
 PORTVERSION=	5.1.3
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,19 +18,17 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}chardet>0:${PORTSDIR}/textproc/py-chardet
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 USE_PYDISTUTILS=yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	NEWS PKG-INFO README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 regression-test: extract
 	@(cd ${WRKSRC}/${PORTNAME}; ${PYTHON_CMD} ${PORTNAME}test.py)
