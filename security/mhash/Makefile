@@ -1,5 +1,5 @@
 # Created by: nsayer@FreeBSD.org
-# $FreeBSD: security/mhash/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: security/mhash/Makefile 342266 2014-02-02 10:29:57Z miwi $
 
 PORTNAME=	mhash
 PORTVERSION=	0.9.9.9
@@ -15,18 +15,13 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-static --with-gnu-ld
 
-MAN3=		mhash.3
-
 PORTDOCS=	example.c skid2-authentication
 
 test:	build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/doc/,} ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/doc/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
