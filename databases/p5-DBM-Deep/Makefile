@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: databases/p5-DBM-Deep/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBM-Deep/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DBM-Deep
 PORTVERSION=	2.0008
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jmohacsi@bsd.hu
-COMMENT=	A pure perl persistent multi-level hash/array DBM
+COMMENT=	Pure perl persistent multi-level hash/array DBM
 
 BUILD_DEPENDS=	p5-Clone>=0:${PORTSDIR}/devel/p5-Clone \
 		p5-FileHandle-Fmode>=0:${PORTSDIR}/devel/p5-FileHandle-Fmode
@@ -22,12 +22,4 @@ TEST_DEPENDS=	p5-Test-Deep>=0.095:${PORTSDIR}/devel/p5-Test-Deep \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DBM::Deep.3 DBM::Deep::Cookbook.3 DBM::Deep::Internals.3 \
-		DBM::Deep::Iterator::File::BucketList.3 \
-		DBM::Deep::Iterator.3 DBM::Deep::Storage::File.3 \
-		DBM::Deep::Engine.3 DBM::Deep::Storage.3 \
-		DBM::Deep::Iterator::File::Index.3 DBM::Deep::Null.3 \
-		DBM::Deep::Engine::File.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
