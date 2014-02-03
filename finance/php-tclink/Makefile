@@ -1,5 +1,5 @@
 # Created by: <mbowie@buzmo.com>
-# $FreeBSD: finance/php-tclink/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: finance/php-tclink/Makefile 342186 2014-02-01 16:56:53Z miwi $
 
 PORTNAME=	tclink
 PORTVERSION=	3.4.4
@@ -16,5 +16,4 @@ USE_PHPEXT=	yes
 USE_OPENSSL=	yes
 DEFAULT_PHP_VER=53
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
