@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-netload-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xfce4-netload-plugin/Makefile 341857 2014-01-30 16:21:49Z olivierd $
 
 PORTNAME=	xfce4-netload-plugin
 PORTVERSION=	1.2.0
@@ -12,17 +12,17 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Network Load plugin for Xfce4
 
+LICENSE=	GPLv2
+
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	intltool intlhack
 USE_XFCE=	configenv libmenu panel
-USES=		pkgconfig pathfix
+USES=		pkgconfig gmake
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
