@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Unicode-RecursiveDowngrade/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Unicode-RecursiveDowngrade/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Unicode-RecursiveDowngrade
 PORTVERSION=	0.04
@@ -11,7 +11,5 @@ COMMENT=	Perl extension to turn off UTF-8 flags inside of comprex variable
 
 USES=		perl5
 USE_PERL5=	configure
-MAN3=		Unicode::RecursiveDowngrade.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
