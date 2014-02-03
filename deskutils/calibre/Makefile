@@ -1,9 +1,8 @@
 # Created by: stas
-# $FreeBSD: deskutils/calibre/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: deskutils/calibre/Makefile 341891 2014-01-30 22:03:16Z madpilot $
 
 PORTNAME=	calibre
-PORTVERSION=	1.13.0
-PORTREVISION=	1
+PORTVERSION=	1.21.0
 CATEGORIES=	deskutils python
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 
