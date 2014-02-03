@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-HashArray/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD: devel/p5-Data-HashArray/Makefile 341711 2014-01-29 10:57:06Z az $
 
 PORTNAME=	Data-HashArray
 PORTVERSION=	1.0
@@ -13,7 +13,4 @@ COMMENT=	Array class of hashes with properties via overloading and AUTOLOAD
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Data::HashArray.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
