@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/gmixer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/gmixer/Makefile 341818 2014-01-30 09:02:46Z gahr $
 
 PORTNAME=	gmixer
 PORTVERSION=	0.98c
@@ -14,12 +14,11 @@ COMMENT=	X11/gtk+ mixer control
 ALL_TARGET=	gmixer
 
 USES=		pkgconfig
-NO_STAGE=	yes
 USE_GNOME=	gtk12
 PLIST_FILES=	bin/gmixer share/pixmaps/gmixer.xpm
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gmixer ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/icons/gmixer.xpm ${PREFIX}/share/pixmaps
+	${INSTALL_PROGRAM} ${WRKSRC}/gmixer ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/icons/gmixer.xpm ${STAGEDIR}${PREFIX}/share/pixmaps
 
 .include <bsd.port.mk>
