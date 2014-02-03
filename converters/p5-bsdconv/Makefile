@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/p5-bsdconv/Makefile 327828 2013-09-21 15:41:53Z sunpoet $
+# $FreeBSD: converters/p5-bsdconv/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	bsdconv
 PORTVERSION=	11.1.0
@@ -19,11 +19,8 @@ GH_ACCOUNT=	buganini
 GH_COMMIT=	75fa7e2
 GH_PROJECT=	perl-${PORTNAME}
 
-NO_STAGE=	yes
 USES=		perl5
 USE_PERL5=	configure
-
-MAN3=		bsdconv.3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' ${WRKSRC}/Makefile.PL
