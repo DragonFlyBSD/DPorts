@@ -1,5 +1,5 @@
 # Created by: Craig Manley
-# $FreeBSD: devel/p5-Scope-Guard/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Scope-Guard/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	Scope-Guard
 PORTVERSION=	0.20
@@ -14,7 +14,4 @@ COMMENT=	Lexically scoped resource management
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Scope::Guard.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
