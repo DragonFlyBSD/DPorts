@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/libevent-hiphop/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: devel/libevent-hiphop/Makefile 342171 2014-02-01 15:33:41Z miwi $
 
 PKGNAMESUFFIX=	-hiphop
 PORTREVISION=	3
@@ -24,5 +24,4 @@ DESCR=		${.CURDIR}/pkg-descr
 
 MASTERDIR=	${.CURDIR}/../libevent
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
