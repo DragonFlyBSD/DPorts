@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: audio/p5-Ogg-Vorbis-Header/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD: audio/p5-Ogg-Vorbis-Header/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	Ogg-Vorbis-Header
 PORTVERSION=	0.03
@@ -8,7 +8,7 @@ CATEGORIES=	audio perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Manipulate / fetch info from Ogg-Vorbis audio files
 
 BUILD_DEPENDS=	p5-Inline>=0:${PORTSDIR}/devel/p5-Inline
@@ -18,9 +18,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 MAKE_JOBS_UNSAFE=	yes
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=		Ogg::Vorbis::Header.3
 
 .include <bsd.port.mk>
