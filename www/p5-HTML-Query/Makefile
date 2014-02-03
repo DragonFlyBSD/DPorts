@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-HTML-Query/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-HTML-Query/Makefile 341722 2014-01-29 12:20:24Z miwi $
 
 PORTNAME=	HTML-Query
 PORTVERSION=	0.08
@@ -16,11 +16,10 @@ RUN_DEPENDS+=	p5-Badger>0.0:${PORTSDIR}/devel/p5-Badger \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::Query.3
 PLIST_FILES=	%%SITE_PERL%%/HTML/Query.pm \
-		%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML-Query/.packlist
+		%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML-Query/.packlist \
+		%%PERL5_MAN3%%/HTML::Query.3.gz
 PLIST_DIRS=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/HTML-Query \
 		%%SITE_PERL%%/HTML
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
