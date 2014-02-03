@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-GML/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Geo-GML/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Geo-GML
 PORTVERSION=	0.15
@@ -16,10 +16,7 @@ RUN_DEPENDS=	p5-Log-Report>=0.18:${PORTSDIR}/devel/p5-Log-Report \
 		p5-XML-Compile>=0.96:${PORTSDIR}/textproc/p5-XML-Compile \
 		p5-XML-Compile-Cache>=0.14:${PORTSDIR}/textproc/p5-XML-Compile-Cache
 
-MAN3=		Geo::GML.3 Geo::GML::Util.3 Geo::GML::GeoPoint.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
