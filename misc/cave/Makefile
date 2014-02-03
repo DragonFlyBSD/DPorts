@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/cave/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: misc/cave/Makefile 342316 2014-02-02 15:20:48Z miwi $
 
 PORTNAME=	cave
 PORTVERSION=	1.0b
@@ -11,10 +11,9 @@ COMMENT=	Character Animation Viewer for Everyone
 
 GNU_CONFIGURE=	yes
 
-MAN1=		${PORTNAME}.1
-PLIST_FILES=	bin/${PORTNAME}
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/cave.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${LN} -sf ${PORTNAME}.man ${WRKSRC}/doc/${PORTNAME}.1
 
