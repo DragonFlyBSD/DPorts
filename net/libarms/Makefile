@@ -1,5 +1,5 @@
 # Created by: shigeru@iij.ad.jp
-# $FreeBSD: net/libarms/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/libarms/Makefile 341914 2014-01-31 06:39:24Z miwi $
 
 PORTNAME=	libarms
 PORTVERSION=	5.01
@@ -12,14 +12,13 @@ COMMENT=	SMFv2/ARMS client library for C
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 post-configure:
 	@${REINPLACE_CMD} 's|$${datarootdir}/doc/$${PACKAGE_TARNAME}|${DOCSDIR}|' \
 		${WRKSRC}/Makefile
