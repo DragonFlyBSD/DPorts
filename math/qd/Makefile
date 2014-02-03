@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <maho@FreeBSD.org>
-# $FreeBSD: math/qd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: math/qd/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME=	qd
 PORTVERSION=	2.3.7
@@ -11,11 +11,7 @@ MAINTAINER=	maho@FreeBSD.org
 COMMENT=	Double-Double and Quad-Double Arithmetic
 
 GNU_CONFIGURE=	yes
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 USE_FORTRAN=	yes
 CONFIGURE_ARGS+=	--enable-shared=yes
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
