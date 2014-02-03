@@ -1,8 +1,9 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-fedex/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: www/py-fedex/Makefile 341732 2014-01-29 13:20:13Z miwi $
 
 PORTNAME=	fedex
 PORTVERSION=	1.0.14
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,6 +17,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}suds>=0:${PORTSDIR}/net/py-suds
 
 USE_PYTHON=	2
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
