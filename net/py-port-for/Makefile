@@ -1,8 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-port-for/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/py-port-for/Makefile 341946 2014-01-31 08:48:25Z miwi $
 
 PORTNAME=	port-for
 PORTVERSION=	0.3
+PORTREVISION=	1
 CATEGORIES=	net devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,8 +16,8 @@ LICENSE=	MIT
 # Python3 Ready
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} '/DEFAULT_CONFIG_PATH/ s|/etc|${PREFIX}&|' ${WRKSRC}/port_for/store.py
 
