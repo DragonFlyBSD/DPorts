@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: irc/p5-Bot-BasicBot/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD: irc/p5-Bot-BasicBot/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	Bot-BasicBot
 PORTVERSION=	0.89
@@ -15,10 +15,7 @@ BUILD_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 RUN_DEPENDS=	p5-POE>=0:${PORTSDIR}/devel/p5-POE \
 		p5-POE-Component-IRC>=0:${PORTSDIR}/irc/p5-POE-Component-IRC
 
-MAN3=	Bot::BasicBot.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
