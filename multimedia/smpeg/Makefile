@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: multimedia/smpeg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: multimedia/smpeg/Makefile 342324 2014-02-02 16:03:27Z miwi $
 
 PORTNAME=	smpeg
 PORTVERSION=	0.4.4
@@ -13,7 +13,7 @@ MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Free MPEG1 video player library with sound support
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 USE_LDCONFIG=	yes
@@ -28,9 +28,6 @@ CONFIGURE_ARGS=	--disable-opengl-player \
 		--disable-gtk-player \
 		--enable-mmx
 
-MAN1=		gtv.1 plaympeg.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
