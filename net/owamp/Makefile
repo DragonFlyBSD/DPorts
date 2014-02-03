@@ -1,4 +1,4 @@
-# $FreeBSD: net/owamp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: net/owamp/Makefile 341981 2014-01-31 12:14:30Z miwi $
 
 PORTNAME=	owamp
 PORTVERSION=	3.3
@@ -12,10 +12,4 @@ LICENSE=	APACHE20
 
 GNU_CONFIGURE=	yes
 
-MAN1=		aespasswd.1 owfetch.1 owping.1 owstats.1 owup.1 \
-		pfstore.1 powstream.1
-MAN5=		owampd.conf.5 owampd.limits.5 owampd.pfs.5
-MAN8=		owampd.8
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
