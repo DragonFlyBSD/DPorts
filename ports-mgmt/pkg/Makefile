@@ -1,10 +1,12 @@
-# $FreeBSD: ports-mgmt/pkg/Makefile 339595 2014-01-13 14:19:29Z bapt $
+# $FreeBSD: ports-mgmt/pkg/Makefile 342212 2014-02-01 21:12:47Z bdrewery $
 
 PORTNAME=	pkg
-DISTVERSION=	1.2.5
+DISTVERSION=	1.2.6
 CATEGORIES=	ports-mgmt
-MASTER_SITES=	http://files.etoilebsd.net/pkg/ \
+MASTER_SITES=	\
+		http://miwibox.org/distfiles/${PORTNAME}/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
+		http://files.etoilebsd.net/pkg/ \
 		LOCAL/portmgr
 
 MAINTAINER=	portmgr@FreeBSD.org
