@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-State-Cookie/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Catalyst-Plugin-Session-State-Cookie/Makefile 341688 2014-01-29 07:58:06Z miwi $
 
 PORTNAME=	Catalyst-Plugin-Session-State-Cookie
 PORTVERSION=	0.17
@@ -21,9 +21,6 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure extract
 
-MAN3=	Catalyst::Plugin::Session::State::Cookie.3
-
-NO_STAGE=	yes
 post-extract:
 	@${PERL} -i.bak -ne 'print unless m,Test::,' ${WRKSRC}/Makefile.PL
 
