@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: comms/p5-Device-Gsm/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD: comms/p5-Device-Gsm/Makefile 341829 2014-01-30 10:27:43Z az $
 
 PORTNAME=	Device-Gsm
 PORTVERSION=	1.60
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-Device-Modem>=0:${PORTSDIR}/comms/p5-Device-Modem
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Device::Gsm::Sms.3 Device::Gsm::Pdu.3 Device::Gsm.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
