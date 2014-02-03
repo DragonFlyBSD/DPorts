@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: sysutils/xfce4-battery-plugin/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: sysutils/xfce4-battery-plugin/Makefile 341838 2014-01-30 14:06:32Z olivierd $
 
 PORTNAME=	xfce4-battery-plugin
 PORTVERSION=	1.0.5
@@ -12,20 +12,20 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Battery monitor panel plugin for Xfce4
 
+LICENSE=	GPLv2
+
 ONLY_FOR_ARCHS=	i386 amd64
 
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk20 glib20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
 INSTALLS_ICONS=	yes
-USES=	pathfix pkgconfig
+USES=	pkgconfig gmake
 
 OPTIONS_DEFINE= NLS
 OPTIONS_DEFAULT=        NLS
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
