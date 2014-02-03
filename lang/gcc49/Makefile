@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc49/Makefile 340365 2014-01-20 02:15:39Z gerald $
+# $FreeBSD: lang/gcc49/Makefile 341744 2014-01-29 14:54:52Z danfe $
 
 PORTNAME=	gcc49
 PORTVERSION=	4.9.0.20140119
@@ -92,8 +92,8 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gccint \
 		gcc${SUFFIX}/gfortran \
 		gcc${SUFFIX}/libgomp
-.if ${ARCH} == "i386" || ${ARCH} == "x86_64" || ${ARCH} == "alpha"
-INFO+=		gcc${SUFFIX}/libquadmath	\
+.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
+INFO+=		gcc${SUFFIX}/libquadmath \
 		gcc${SUFFIX}/libitm
 .endif
 
