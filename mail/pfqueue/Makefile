@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/pfqueue/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/pfqueue/Makefile 342323 2014-02-02 16:02:58Z miwi $
 
 PORTNAME=	pfqueue
 PORTVERSION=	0.5.6
@@ -14,10 +14,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 
-MAN1=		pfqueue.1
-MAN5=		pfqueue.conf.5
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|-lc_r|${PTHREAD_LIBS}|g" \
 		-e "s|-lpthread|${PTHREAD_LIBS}|g" ${WRKSRC}/configure
