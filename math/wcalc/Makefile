@@ -1,5 +1,5 @@
 # Created by: Amarendra Godbole <amarendra.godbole@gmail.com>
-# $FreeBSD: math/wcalc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: math/wcalc/Makefile 342322 2014-02-02 16:02:32Z miwi $
 
 PORTNAME=	wcalc
 PORTVERSION=	2.4
@@ -20,9 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
-MAN1=		wcalc.1
+PLIST_FILES=	bin/wcalc \
+		man/man1/wcalc.1.gz
 
-PLIST_FILES=	bin/wcalc
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
