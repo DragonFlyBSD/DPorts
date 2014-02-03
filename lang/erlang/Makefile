@@ -1,8 +1,8 @@
 # Created by: ruslan@shevchenko.kiev.ua
-# $FreeBSD: lang/erlang/Makefile 339103 2014-01-08 11:45:58Z olgeni $
+# $FreeBSD: lang/erlang/Makefile 341564 2014-01-28 14:02:50Z olgeni $
 
 PORTNAME=	erlang
-PORTVERSION=	16.b.03
+PORTVERSION=	16.b.03.1
 PORTEPOCH=	3
 CATEGORIES=	lang parallel java
 MASTER_SITES=	http://www.erlang.org/download/:erlangorg		\
@@ -23,7 +23,7 @@ PATCH_SITES=	http://www.erlang.org/download
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	A functional programming language from Ericsson
 
-WRKSRC=		${WRKDIR}/otp_src_R16B03
+WRKSRC=		${WRKDIR}/otp_src_${ERL_RELEASE}
 
 ERLANG_LIB=	${PORTNAME}
 
