@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: mail/spamcup/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: mail/spamcup/Makefile 342300 2014-02-02 14:33:37Z miwi $
 
 PORTNAME=	spamcup
 PORTVERSION=	1.09
@@ -24,5 +24,4 @@ PLIST_FILES=	bin/spamcup.pl ${SITE_PERL_REL}/spamcup.pl \
 
 PLIST_DIRS=	${SITE_PERL_REL}/${PERL_ARCH}/auto/Spamcup
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
