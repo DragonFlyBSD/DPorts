@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: security/p5-Auth-YubikeyDecrypter/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Auth-YubikeyDecrypter/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Auth-YubikeyDecrypter
 PORTVERSION=	0.07
@@ -18,7 +18,4 @@ LICENSE=	GPLv2
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Auth::Yubikey_Decrypter.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
