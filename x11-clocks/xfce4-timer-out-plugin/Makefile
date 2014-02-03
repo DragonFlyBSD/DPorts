@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11-clocks/xfce4-timer-out-plugin/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: x11-clocks/xfce4-timer-out-plugin/Makefile 341748 2014-01-29 15:24:59Z olivierd $
 
 PORTNAME=	xfce4-time-out-plugin
 PORTVERSION=	1.0.1
@@ -10,15 +10,15 @@ MASTER_SITE_SUBDIR=src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	A timer out plugin for Xfce
+COMMENT=	Timer out plugin for Xfce
+
+LICENSE=	GPLv2
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
-USES=		gettext pkgconfig pathfix
+USES=		gettext pkgconfig gmake
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	configenv libmenu libutil panel
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
