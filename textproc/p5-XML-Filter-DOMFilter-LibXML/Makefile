@@ -1,5 +1,5 @@
 # Created by: Andrew Humphrey <ahumphrey@realestate.com.au>
-# $FreeBSD: textproc/p5-XML-Filter-DOMFilter-LibXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: textproc/p5-XML-Filter-DOMFilter-LibXML/Makefile 341765 2014-01-29 17:46:33Z az $
 
 PORTNAME=	XML-Filter-DOMFilter-LibXML
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		XML::Filter::DOMFilter::LibXML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
