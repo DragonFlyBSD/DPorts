@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Log-Dispatch-FileRotate/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Log-Dispatch-FileRotate/Makefile 341953 2014-01-31 09:15:24Z az $
 
 PORTNAME=	Log-Dispatch-FileRotate
 PORTVERSION=	1.19
@@ -19,7 +19,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Log::Dispatch::FileRotate.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
