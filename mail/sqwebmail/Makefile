@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/sqwebmail/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD: mail/sqwebmail/Makefile 341596 2014-01-28 15:30:02Z bapt $
 
 PORTNAME=	sqwebmail
 PORTVERSION=	5.7.0
@@ -113,8 +113,8 @@ CONFIGURE_ARGS+=	--without-gzip
 .endif
 
 .if ${PORT_OPTIONS:MISPELL}
-BUILD_DEPENDS+=		${LOCALBASE}/bin/ispell:${PORTSDIR}/textproc/ispell
-RUN_DEPENDS+=		${LOCALBASE}/bin/ispell:${PORTSDIR}/textproc/ispell
+BUILD_DEPENDS+=		${LOCALBASE}/bin/ispell:${PORTSDIR}/textproc/aspell-ispell
+RUN_DEPENDS+=		${LOCALBASE}/bin/ispell:${PORTSDIR}/textproc/aspell-ispell
 CONFIGURE_ARGS+=	--with-ispell=${LOCALBASE}/bin/ispell
 .else
 CONFIGURE_ARGS+=	--without-ispell
