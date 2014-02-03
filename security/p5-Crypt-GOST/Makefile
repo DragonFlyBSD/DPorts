@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-GOST/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-GOST/Makefile 341825 2014-01-30 09:42:48Z az $
 
 PORTNAME=	Crypt-GOST
 PORTVERSION=	1.00
@@ -13,7 +13,4 @@ COMMENT=	Perl extension for GOST Encryption Algorithm
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Crypt::GOST.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
