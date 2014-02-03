@@ -1,9 +1,9 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: net-mgmt/zabbix2-server/Makefile 336610 2013-12-16 06:02:22Z delphij $
+# $FreeBSD: net-mgmt/zabbix2-server/Makefile 342094 2014-02-01 00:57:50Z koobs $
 
 PORTNAME=	zabbix2
 PORTVERSION=	2.0.10
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/zabbix/ZABBIX%20Latest%20Stable/${PORTVERSION}
 PKGNAMESUFFIX?=	-server
