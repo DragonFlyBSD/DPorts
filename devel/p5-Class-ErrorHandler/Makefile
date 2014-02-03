@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-ErrorHandler/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Class-ErrorHandler/Makefile 341948 2014-01-31 09:01:28Z miwi $
 
 PORTNAME=	Class-ErrorHandler
 PORTVERSION=	0.03
@@ -12,9 +12,6 @@ COMMENT=	Base class for error handling
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Class::ErrorHandler.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
