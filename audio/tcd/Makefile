@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/tcd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/tcd/Makefile 341842 2014-01-30 14:26:06Z gahr $
 
 PORTNAME=	tcd
 PORTVERSION=	2.2.0
@@ -9,13 +9,14 @@ MASTER_SITES=	${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A simple, user-friendly ncurses-based CD player
+COMMENT=	Simple, user-friendly ncurses-based CD player
+
+LICENSE=	GPLv2
 
 USE_SDL=	sdl
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=	tcd.1
-PLIST_FILES=	bin/tcd
+PLIST_FILES=	bin/tcd \
+		man/man1/tcd.1.gz
 
 .include <bsd.port.mk>
