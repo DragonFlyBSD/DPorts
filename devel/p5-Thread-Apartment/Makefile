@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Thread-Apartment/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD: devel/p5-Thread-Apartment/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Thread-Apartment
 PORTVERSION=	0.51
@@ -18,7 +18,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Thread::Apartment.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
