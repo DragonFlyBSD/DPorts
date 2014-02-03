@@ -1,5 +1,5 @@
 # Created by: jnlin@csie.nctu.edu.tw
-# $FreeBSD: devel/p5-Tie-ShareLite/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: devel/p5-Tie-ShareLite/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	Tie-ShareLite
 PORTVERSION=	0.03
@@ -16,7 +16,4 @@ RUN_DEPENDS=	p5-IPC-ShareLite>=0:${PORTSDIR}/devel/p5-IPC-ShareLite
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Tie::ShareLite.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
