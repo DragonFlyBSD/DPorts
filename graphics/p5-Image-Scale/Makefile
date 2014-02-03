@@ -1,5 +1,5 @@
 # Created by: Mark Atkinson <atkin901@gmail.com>
-# $FreeBSD: graphics/p5-Image-Scale/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Image-Scale/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Image-Scale
 PORTVERSION=	0.08
@@ -18,10 +18,7 @@ LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
 		gif:${PORTSDIR}/graphics/giflib
 TEST_DEPENDS=	p5-Test-NoWarnings>=0:${PORTSDIR}/devel/p5-Test-NoWarnings
 
-MAN3=		Image::Scale.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
