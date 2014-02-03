@@ -1,4 +1,4 @@
-# $FreeBSD: mail/alpine/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: mail/alpine/Makefile 341572 2014-01-28 14:15:54Z bapt $
 
 PORTNAME?=	alpine
 PORTVERSION=	2.00
@@ -72,8 +72,8 @@ BUILD_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
 RUN_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
 .else
 CONFIGURE_ARGS+=	--with-interactive-spellcheck=${LOCALBASE}/bin/ispell
-BUILD_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
-RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
+BUILD_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell
+RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell
 .endif
 .else
 CONFIGURE_ARGS+=--without-simple-spellcheck --without-interactive-spellcheck
