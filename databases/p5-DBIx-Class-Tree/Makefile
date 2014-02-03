@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Tree/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-DBIx-Class-Tree/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	DBIx-Class-Tree
 PORTVERSION=	0.03003
@@ -18,9 +18,4 @@ TEST_DEPENDS=	p5-Test-Exception>=0:${PORTSDIR}/devel/p5-Test-Exception \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Class::Tree.3 \
-	DBIx::Class::Tree::AdjacencyList.3 \
-	DBIx::Class::Tree::AdjacencyList::Ordered.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
