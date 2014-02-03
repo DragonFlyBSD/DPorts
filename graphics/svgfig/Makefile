@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/svgfig/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: graphics/svgfig/Makefile 342301 2014-02-02 14:41:42Z miwi $
 
 PORTNAME=	SVGFig
 PORTVERSION=	1.1.6
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME:tl}
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST= yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|1.1.2|${PORTVERSION}|' ${WRKSRC}/setup.py
 
