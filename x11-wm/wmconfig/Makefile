@@ -1,8 +1,8 @@
 # Created by: Tommy Scheunemann <net@arrishq.org>
-# $FreeBSD: x11-wm/wmconfig/Makefile 332499 2013-11-02 15:22:51Z wg $
+# $FreeBSD: x11-wm/wmconfig/Makefile 341865 2014-01-30 18:01:38Z pawel $
 
 PORTNAME=	wmconfig
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.4
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://www.arrishq.net/files/
 
