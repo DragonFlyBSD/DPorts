@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: multimedia/szap-s2/Makefile 341253 2014-01-26 18:15:52Z nox $
+# $FreeBSD: multimedia/szap-s2/Makefile 341876 2014-01-30 19:36:27Z nox $
 
 PORTNAME=	szap_s2
 PORTVERSION=	20100129s
@@ -22,13 +22,10 @@ MAKE_ARGS+=	CXX=${CXX}
 WRKSRC=		${WRKDIR}/szap-s2-e34f73b254db
 PORTDOCS=	README
 PLIST_FILES=	bin/szap-s2
-NO_STAGE=	yes
 
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} szap-s2 ${STAGEDIR}/${PREFIX}/bin)
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR})
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
