@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-MySQL/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-MySQL/Makefile 342001 2014-01-31 15:23:10Z miwi $
 
 PORTNAME=	Crypt-MySQL
 PORTVERSION=	0.04
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-Digest-SHA1>=0:${PORTSDIR}/security/p5-Digest-SHA1
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Crypt::MySQL.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
