@@ -1,5 +1,5 @@
 # Created by: nsayer@FreeBSD.org
-# $FreeBSD: security/libmcrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/libmcrypt/Makefile 342006 2014-01-31 15:24:46Z miwi $
 
 PORTNAME=	libmcrypt
 PORTVERSION=	2.5.8
@@ -13,7 +13,4 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-static
 USE_LDCONFIG=	yes
 
-MAN3=		mcrypt.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
