@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: converters/p5-Convert-Recode/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD: converters/p5-Convert-Recode/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Convert-Recode
 PORTVERSION=	1.04
@@ -17,9 +17,6 @@ RUN_DEPENDS=	recode:${PORTSDIR}/converters/recode
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Convert::Recode.3
-
-NO_STAGE=	yes
 post-patch:
 		@${REINPLACE_CMD} -i '' -e 's|recode -\$$|${LOCALBASE}/bin/recode -\$$|' \
 			${WRKSRC}/Recode.pm
