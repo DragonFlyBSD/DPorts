@@ -1,8 +1,9 @@
 # Created by: "Choe, Cheng-Dae" <whitekid@netian.com>
-# $FreeBSD: www/py-clientform/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/py-clientform/Makefile 341732 2014-01-29 13:20:13Z miwi $
 
 PORTNAME=	clientform
 PORTVERSION=	0.2.10
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://wwwsearch.sourceforge.net/ClientForm/src/ \
 		CHEESESHOP
@@ -13,10 +14,9 @@ MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Client-side HTTP Form for Python
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYDISTUTILS_PKGNAME=	ClientForm
 
-PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
