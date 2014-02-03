@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-Eksblowfish/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-Crypt-Eksblowfish/Makefile 342006 2014-01-31 15:24:46Z miwi $
 
 PORTNAME=	Crypt-Eksblowfish
 PORTVERSION=	0.009
@@ -18,12 +18,4 @@ LICENSE=	ART10 GPLv1
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Crypt::Eksblowfish.3 \
-	Crypt::Eksblowfish::Bcrypt.3 \
-	Crypt::Eksblowfish::Blowfish.3 \
-	Crypt::Eksblowfish::Family.3 \
-	Crypt::Eksblowfish::Subkeyed.3 \
-	Crypt::Eksblowfish::Uklblowfish.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
