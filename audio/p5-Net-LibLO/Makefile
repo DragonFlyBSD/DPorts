@@ -1,4 +1,4 @@
-# $FreeBSD: audio/p5-Net-LibLO/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: audio/p5-Net-LibLO/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Net-LibLO
 PORTVERSION=	0.06
@@ -13,13 +13,6 @@ COMMENT=	Perl extension for liblo Lightweight OSC library
 LIB_DEPENDS=	liblo.so:${PORTSDIR}/audio/liblo
 
 USES=		pkgconfig perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=	\
-	Net::LibLO.3 \
-	Net::LibLO::Address.3 \
-	Net::LibLO::Bundle.3 \
-	Net::LibLO::Message.3
 
 .include <bsd.port.mk>
