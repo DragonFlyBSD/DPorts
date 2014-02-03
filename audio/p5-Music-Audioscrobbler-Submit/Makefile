@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/p5-Music-Audioscrobbler-Submit/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: audio/p5-Music-Audioscrobbler-Submit/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Music-Audioscrobbler-Submit
 PORTVERSION=	0.05
@@ -17,9 +17,6 @@ RUN_DEPENDS:=	p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Config-Options>=0.8:${PORTSDIR}/devel/p5-Config-Options
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	configure
-
-MAN3=	Music::Audioscrobbler::Submit.3
 
 .include <bsd.port.mk>
