@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: japanese/p5-WWW-2ch/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: japanese/p5-WWW-2ch/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	WWW-2ch
 PORTVERSION=	0.07
@@ -18,12 +18,4 @@ TEST_DEPENDS=	p5-UNIVERSAL-require>=0:${PORTSDIR}/devel/p5-UNIVERSAL-require
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		WWW::2ch.3	\
-	WWW::2ch::Plugin::Base.3	\
-	WWW::2ch::Res.3		\
-	WWW::2ch::Subject.3	\
-	WWW::2ch::Dat.3		\
-	WWW::2ch::Plugin::Jbbs.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
