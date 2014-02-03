@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: security/p5-File-KeePass/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: security/p5-File-KeePass/Makefile 341821 2014-01-30 09:08:26Z az $
 
 PORTNAME=	File-KeePass
 PORTVERSION=	2.03
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		File::KeePass.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
