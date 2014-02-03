@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: graphics/piddle/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/piddle/Makefile 341885 2014-01-30 20:57:05Z antoine $
 
 PORTNAME=	piddle
 PORTVERSION=	1.0.15
@@ -13,15 +13,13 @@ COMMENT=	Graphical Drawing library for Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 PORTDOCS=	*
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	(cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${DOCSDIR})
-.endif
+	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
