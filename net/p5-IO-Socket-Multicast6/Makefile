@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 341948 2014-01-31 09:01:28Z miwi $
 
 PORTNAME=	IO-Socket-Multicast6
 PORTVERSION=	0.03
@@ -20,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		IO::Socket::Multicast6.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
