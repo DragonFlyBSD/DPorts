@@ -1,5 +1,5 @@
 # Created by: gerard
-# $FreeBSD: graphics/p5-Captcha-reCAPTCHA-Mailhide/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: graphics/p5-Captcha-reCAPTCHA-Mailhide/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Captcha-reCAPTCHA-Mailhide
 PORTVERSION=	0.94
@@ -9,17 +9,14 @@ MASTER_SITE_SUBDIR=	CPAN:ANDYA
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gerard@seibercom.net
-COMMENT=	A Perl implementation of the reCAPTCHA Mailhide API
+COMMENT=	Perl implementation of the reCAPTCHA Mailhide API
 
 BUILD_DEPENDS=	p5-Crypt-Rijndael>=0:${PORTSDIR}/security/p5-Crypt-Rijndael \
 		p5-HTML-Tiny>=0.904:${PORTSDIR}/textproc/p5-HTML-Tiny
 
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		Captcha::reCAPTCHA::Mailhide.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
