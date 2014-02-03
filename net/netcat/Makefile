@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: net/netcat/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: net/netcat/Makefile 342036 2014-01-31 17:01:57Z antoine $
 
 PORTNAME=	netcat
 PORTVERSION=	1.10
@@ -28,24 +28,12 @@ NO_WRKSUBDIR=	yes
 CFLAGS+=	-D${OPSYS:tu}
 LDFLAGS+=	-static
 
-MAN1=		netcat.1
 PORTDOCS=	README
-PLIST_FILES=	bin/netcat
+PLIST_FILES=	bin/netcat man/man1/netcat.1.gz
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MIPV6}
-CFLAGS+=	-DINET6
-.endif
-
-.if ${PORT_OPTIONS:MTELNET}
-CFLAGS+=	-DTELNET
-.endif
-
-.if ${PORT_OPTIONS:MGAPING}
-CFLAGS+=	-DGAPING_SECURITY_HOLE
-.endif
+IPV6_CFLAGS=	-DINET6
+TELNET_CFLAGS=	-DTELNET
+GAPING_CFLAGS=	-DGAPING_SECURITY_HOLE
 
 post-patch:
 	@${SED} -e 's|%%DOCSDIR%%|${DOCSDIR}|g' ${FILESDIR}/nc.1 \
@@ -55,11 +43,9 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} ${PORTNAME}.c -o ${PORTNAME} ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/${PORTNAME}.1 ${MANPREFIX}/man/man1
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKDIR}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
