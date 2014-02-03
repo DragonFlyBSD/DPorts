@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: databases/p5-AnyEvent-Redis/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD: databases/p5-AnyEvent-Redis/Makefile 341762 2014-01-29 17:18:46Z az $
 
 PORTNAME=	AnyEvent-Redis
 PORTVERSION=	0.24
@@ -21,8 +21,4 @@ TEST_DEPENDS=	p5-Test-Simple>=0.88:${PORTSDIR}/devel/p5-Test-Simple \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	AnyEvent::Redis.3 \
-	AnyEvent::Redis::Protocol.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
