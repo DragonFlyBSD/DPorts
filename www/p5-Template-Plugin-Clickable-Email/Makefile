@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Plugin-Clickable-Email/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: www/p5-Template-Plugin-Clickable-Email/Makefile 341690 2014-01-29 07:58:41Z miwi $
 
 PORTNAME=	Template-Plugin-Clickable-Email
 PORTVERSION=	0.01
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Template::Plugin::Clickable::Email.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
