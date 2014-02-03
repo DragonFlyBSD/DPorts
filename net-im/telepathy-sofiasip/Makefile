@@ -1,5 +1,5 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: net-im/telepathy-sofiasip/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD: net-im/telepathy-sofiasip/Makefile 341927 2014-01-31 07:43:16Z miwi $
 
 PORTNAME=	telepathy-sofiasip
 PORTVERSION=	0.4.5
@@ -14,10 +14,8 @@ LIB_DEPENDS=	sofia-sip-ua:${PORTSDIR}/net/sofia-sip \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_OPENSSL=	yes
-USES=		pkgconfig
+USES=		pkgconfig gmake
 USE_GNOME=	glib20
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
