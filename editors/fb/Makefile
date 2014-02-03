@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: editors/fb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: editors/fb/Makefile 342321 2014-02-02 16:00:44Z miwi $
 
 PORTNAME=	fb
 PORTVERSION=	1.5
@@ -13,11 +13,9 @@ COMMENT=	Binary file viewer, editor, and manipulator (and a lot more)
 
 NO_WRKSUBDIR=	Yes
 
-MAN1=		fb.1
-MANCOMPRESSED=	maybe
-PLIST_FILES=	bin/fb
+PLIST_FILES=	bin/fb \
+		man/man1/fb.1.gz
 MAKEFILE=	${FILESDIR}/Makefile.in
 MAKE_ARGS+=	PREFIX="${PREFIX}"
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
