@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD: head/devel/gnustep/Makefile 327723 2013-09-20 17:04:43Z bapt $
 
 PORTNAME=	gnustep
 PORTVERSION=	1.28.0
