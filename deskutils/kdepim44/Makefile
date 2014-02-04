@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/kdepim44/Makefile 341883 2014-01-30 20:46:40Z makc $
 
 PORTNAME=	kdepim
 PORTVERSION=	4.4.11.1
@@ -20,6 +20,9 @@ LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
 RUN_DEPENDS=	${KDE4_PREFIX}/bin/akonadi_mbox_resource:${PORTSDIR}/deskutils/kdepim44-runtime
 
 CONFLICTS_INSTALL=	kdepim-4.*
+
+DEPRECATED=	Not supported upstream, conflicts with upcoming kdepimlibs-4.12
+EXPIRATION_DATE=	2014-02-28
 
 USE_KDE4=	kdelibs pimlibs \
 		akonadi kdeprefix kdehier automoc4 oxygen
