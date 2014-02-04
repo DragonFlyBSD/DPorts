@@ -1,4 +1,4 @@
-# $FreeBSD: finance/kmymoney-kde4/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD: finance/kmymoney-kde4/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kmymoney
 PORTVERSION=	4.6.4
@@ -15,10 +15,10 @@ LIB_DEPENDS=	libboost_graph.so:${PORTSDIR}/devel/boost-libs \
 		libalkimia.so:${PORTSDIR}/finance/libalkimia
 
 USE_XZ=		yes
-USES=		cmake pkgconfig
+USES=		cmake pkgconfig shared-mime-info
 USE_QT4=	gui dbus network phonon sql svg xml \
 		qmake_build moc_build rcc_build uic_build
-USE_KDE4=	kdehier kdeprefix automoc4 kdelibs pimlibs sharedmime
+USE_KDE4=	kdehier kdeprefix automoc4 kdelibs pimlibs
 USE_LDCONFIG=	yes
 
 NO_STAGE=	yes
