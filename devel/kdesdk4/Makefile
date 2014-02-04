@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/kdesdk4/Makefile 336253 2013-12-12 10:53:38Z bapt $
+# $FreeBSD: devel/kdesdk4/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kdesdk
 PORTVERSION=	${KDE4_VERSION}
@@ -25,9 +25,9 @@ CONFLICTS=	kdeutils-4.5.[0-5]
 
 USE_XZ=		yes
 USE_GNOME=	libxml2 libxslt
-USE_KDE4=	kdehier kdelibs kdeprefix libkonq pimlibs sharedmime \
+USE_KDE4=	kdehier kdelibs kdeprefix libkonq pimlibs \
 		akonadi automoc4 qimageblitz_build strigi
-USES=		cmake:outsource perl5 gmake
+USES=		cmake:outsource perl5 gmake shared-mime-info
 USE_QT4=	corelib dbus declarative designer gui qt3support \
 		script scripttools sql xml \
 		qmake_build moc_build rcc_build uic_build uic3_build
