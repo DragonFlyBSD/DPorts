@@ -1,5 +1,5 @@
 # Created by: Michael Ranner
-# $FreeBSD: irc/kvirc/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD: irc/kvirc/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kvirc
 PORTVERSION=	4.2.0
@@ -63,7 +63,8 @@ USE_QT4+=	webkit
 CMAKE_ARGS+=	-DWITHOUT_QTWEBKIT=yes
 . endif
 .else #defined(PKGNAMESUFFIX)
-USE_KDE4=	kdelibs automoc4 kdeprefix sharedmime
+USES+=		shared-mime-info
+USE_KDE4=	kdelibs automoc4 kdeprefix
 PLIST_SUB+=	QT="@comment " KDE=""
 .endif #defined(PKGNAMESUFFIX)
 
