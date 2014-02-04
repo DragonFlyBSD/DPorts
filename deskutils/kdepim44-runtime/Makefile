@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44-runtime/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/kdepim44-runtime/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	4.4.11.1
@@ -17,8 +17,11 @@ LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 CONFLICTS_INSTALL=	kdepim-runtime-4.*
 
-USE_KDE4=	pimlibs kdeprefix kdehier sharedmime automoc4
-USES=		cmake:outsource
+DEPRECATED=	Not supported upstream, conflicts with upcoming kdepimlibs-4.12
+EXPIRATION_DATE=	2014-02-28
+
+USE_KDE4=	pimlibs kdeprefix kdehier automoc4
+USES=		cmake:outsource shared-mime-info
 USE_BZIP2=	yes
 USE_QT4=	qmake_build moc_build rcc_build uic_build \
 		corelib dbus gui network qtestlib xml
