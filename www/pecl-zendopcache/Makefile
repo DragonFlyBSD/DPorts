@@ -1,8 +1,8 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/pecl-zendopcache/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/www/pecl-zendopcache/Makefile 341699 2014-01-29 08:52:13Z ale $
 
 PORTNAME=	zendopcache
-PORTVERSION=	7.0.2
+PORTVERSION=	7.0.3
 CATEGORIES=	www
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
