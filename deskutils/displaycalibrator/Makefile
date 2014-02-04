@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/displaycalibrator/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/displaycalibrator/Makefile 342222 2014-02-01 23:46:57Z antoine $
 
 PORTNAME=	displaycalibrator
 PORTVERSION=	0.7
@@ -14,5 +14,4 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
