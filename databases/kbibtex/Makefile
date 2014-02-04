@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: databases/kbibtex/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD: databases/kbibtex/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kbibtex
 DISTVERSION=	0.4.1
@@ -13,9 +13,9 @@ COMMENT=	Bibliography editor for KDE
 LIB_DEPENDS=	libpoppler-qt4.so:${PORTSDIR}/graphics/poppler-qt4
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake shared-mime-info
 USE_GNOME=	libxml2 libxslt
-USE_KDE4=	kdelibs kdeprefix automoc4 sharedmime
+USE_KDE4=	kdelibs kdeprefix automoc4
 USE_QT4=	qmake_build moc_build uic_build rcc_build \
 		webkit
 
