@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/helpviewer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/helpviewer/Makefile 341878 2014-01-30 19:40:44Z antoine $
 
 PORTNAME=	helpviewer
 PORTVERSION=	0.3
@@ -9,7 +9,7 @@ DISTNAME=	HelpViewer-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An online help viewer for GNUstep programs
+COMMENT=	Online help viewer for GNUstep programs
 
 LICENSE=	GPLv2
 
@@ -20,7 +20,6 @@ USE_GNUSTEP_INSTALL=	yes
 
 FIXME=	HandlerStructureXLP.h TextFormatterXLP.h
 
-NO_STAGE=	yes
 post-patch:
 .for i in ${FIXME}
 	${REINPLACE_CMD} -e 's|Foundation/GSXML.h|GNUstepBase/GSXML.h|' \
