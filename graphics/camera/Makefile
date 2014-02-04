@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: graphics/camera/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: graphics/camera/Makefile 342351 2014-02-02 17:54:46Z antoine $
 
 PORTNAME=	camera
 PORTVERSION=	0.8
@@ -12,9 +12,9 @@ DISTNAME=	Camera-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep application for digital still cameras
 
-LIB_DEPENDS+=	gphoto2_port:${PORTSDIR}/graphics/libgphoto2
-
 LICENSE=	GPLv2
+
+LIB_DEPENDS=	libgphoto2_port.so:${PORTSDIR}/graphics/libgphoto2
 
 USE_BZIP2=	yes
 USE_GNUSTEP=	yes
@@ -24,5 +24,8 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Camera
 
-NO_STAGE=	yes
+post-patch:
+	${REINPLACE_CMD} 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
+		${WRKSRC}/GNUmakefile
+
 .include <bsd.port.mk>
