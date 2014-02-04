@@ -1,4 +1,4 @@
-# $FreeBSD: games/palapeli/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD: games/palapeli/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	palapeli
 PORTVERSION=	${KDE4_VERSION}
@@ -12,8 +12,8 @@ COMMENT=	${${PORTNAME}_DESC}
 
 CONFLICTS_INSTALL=	kdegames-4.[0-9].*
 
-USE_KDE4=	kdehier kdelibs kdeprefix libkdegames automoc4 sharedmime
-USES=		cmake:outsource
+USE_KDE4=	kdehier kdelibs kdeprefix libkdegames automoc4
+USES=		cmake:outsource shared-mime-info
 USE_QT4=	corelib gui gui \
 		moc_build qmake_build rcc_build uic_build
 USE_XZ=		yes
