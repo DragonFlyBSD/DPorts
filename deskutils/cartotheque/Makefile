@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/cartotheque/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/cartotheque/Makefile 342220 2014-02-01 23:44:09Z antoine $
 
 PORTNAME=	cartotheque
 PORTVERSION=	0.1
@@ -18,7 +18,6 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
 		${WRKSRC}/GNUmakefile
