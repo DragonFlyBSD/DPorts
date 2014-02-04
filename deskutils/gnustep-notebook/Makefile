@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gnustep-notebook/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/gnustep-notebook/Makefile 341866 2014-01-30 18:09:14Z antoine $
 
 PORTNAME=	notebook
 PORTVERSION=	0.3
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	gnustep-
 DISTNAME=	NoteBook-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A place to store notes in an organized manner
+COMMENT=	Place to store notes in an organized manner
 
 LICENSE=	GPLv2
 
@@ -19,5 +19,4 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
