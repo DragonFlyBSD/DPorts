@@ -1,0 +1,20 @@
+--- configure.intermediate	2014-02-04 05:23:20.000000000 -0500
++++ configure
+@@ -4079,7 +4079,7 @@ SHFLAGS=
+ OTHERLIBS=
+ if test "$shared" = true; then
+    case "$target_os" in
+-	linux*|k*bsd*-gnu|gnu*|*bsd*)
++	linux*|k*bsd*-gnu|gnu*|*bsd*|dragonfly*)
+ 		SHFLAGS="-fPIC"
+         ;;
+ 	solaris*)
+@@ -4893,7 +4893,7 @@ if test "x$AUDIODEFS" = x; then
+ 	    AUDIODEFS=-DCST_AUDIO_ALSA
+             AUDIOLIBS=-lasound
+ 	    ;;
+-	*bsd*)
++	*bsd*|dragonfly*)
+ 	    AUDIODRIVER=oss
+ 	    AUDIODEFS=-DCST_AUDIO_FREEBSD
+ 	    ;;
