@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-runtime/Makefile 339572 2014-01-13 07:23:43Z bapt $
+# $FreeBSD: x11/kde4-runtime/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
@@ -27,8 +27,8 @@ CONFLICTS=	kdebase-runtime-4.[0-6].* kdebase-workspace-4.5.[0-5] nepomukcontroll
 
 USE_XZ=		yes
 USE_KDE4=	kactivities kdehier kdelibs kdeprefix oxygen \
-		attica automoc4 pimlibs sharedmime strigi nepomuk-core
-USES=		cmake:outsource gettext
+		attica automoc4 pimlibs strigi nepomuk-core
+USES=		cmake:outsource gettext shared-mime-info
 USE_QT4=	corelib dbus declarative designer_build gui phonon \
 		network qtestlib script svg webkit xml \
 		moc_build qmake_build rcc_build uic_build
