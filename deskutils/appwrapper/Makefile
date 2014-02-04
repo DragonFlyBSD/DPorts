@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/appwrapper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: deskutils/appwrapper/Makefile 342274 2014-02-02 11:37:14Z antoine $
 
 PORTNAME=	appwrapper
 PORTVERSION=	0.1
@@ -19,9 +19,10 @@ USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/AppWrapper
 
-NO_STAGE=	yes
 post-patch:
 	${RMDIR} ${WRKSRC}/AppWrapper.app/ix86/linux-gnu
 	${RMDIR} ${WRKSRC}/AppWrapper.app/ix86
+	${REINPLACE_CMD} 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
+		${WRKSRC}/GNUmakefile
 
 .include <bsd.port.mk>
