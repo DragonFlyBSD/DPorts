@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/kdeplasma-addons/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD: deskutils/kdeplasma-addons/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	kdeplasma-addons
 PORTVERSION=	${KDE4_VERSION}
@@ -23,8 +23,8 @@ CONFLICTS_INSTALL=	plasma-applet-icontasks-0.[89].*
 
 USE_XZ=		yes
 USE_KDE4=	kdehier kdelibs kdeprefix libkexiv2 pimlibs workspace \
-		akonadi attica automoc4 qimageblitz sharedmime soprano
-USES=		cmake:outsource
+		akonadi attica automoc4 qimageblitz soprano
+USES=		cmake:outsource shared-mime-info
 USE_QT4=	corelib dbus declarative gui network script sql webkit \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	x11 xrender xtst
