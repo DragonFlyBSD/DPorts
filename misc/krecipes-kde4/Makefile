@@ -1,4 +1,4 @@
-# $FreeBSD: misc/krecipes-kde4/Makefile 329736 2013-10-07 20:17:20Z jhale $
+# $FreeBSD: misc/krecipes-kde4/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	krecipes
 DISTVERSION=	2.0-beta2
@@ -11,9 +11,9 @@ COMMENT=	KDE4 recipe database
 
 LICENSE=	GPLv2
 
-USES=		cmake gettext
+USES=		cmake gettext shared-mime-info
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USE_KDE4=	automoc4 kdeprefix kdelibs qimageblitz sharedmime
+USE_KDE4=	automoc4 kdeprefix kdelibs qimageblitz
 
 NO_STAGE=	yes
 
