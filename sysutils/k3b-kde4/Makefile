@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/k3b-kde4/Makefile 331189 2013-10-21 20:41:54Z wg $
+# $FreeBSD: sysutils/k3b-kde4/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.2
@@ -18,10 +18,10 @@ BUILD_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools
 LATEST_LINK=	${PORTNAME}-kde4
 
 USE_BZIP2=	yes
-USES=		cmake
+USES=		cmake shared-mime-info
 CMAKE_ARGS=	-DK3B_BUILD_K3BSETUP:BOOL=OFF \
 		-DK3B_ENABLE_MUSICBRAINZ:BOOL=OFF
-USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb sharedmime
+USE_KDE4=	automoc4 kdeprefix kdelibs libkcddb
 USE_QT4=	gui dbus network phonon qt3support sql svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
