@@ -1,9 +1,9 @@
 
-$FreeBSD: lang/racket/files/patch-.._.._collects_plot_scribblings_ticks.scrbl 329701 2013-10-07 13:11:03Z olgeni $
+$FreeBSD: head/lang/racket/files/patch-.._share_pkgs_plot-doc_plot_scribblings_ticks.scrbl 341390 2014-01-27 12:37:06Z olgeni $
 
---- ../../collects/plot/scribblings/ticks.scrbl.orig
-+++ ../../collects/plot/scribblings/ticks.scrbl
-@@ -182,22 +182,6 @@
+--- ../share/pkgs/plot-doc/plot/scribblings/ticks.scrbl.orig
++++ ../share/pkgs/plot-doc/plot/scribblings/ticks.scrbl
+@@ -183,22 +183,6 @@
  @doc-apply[plot-y-far-ticks]
  @doc-apply[plot-z-ticks]
  @doc-apply[plot-z-far-ticks]{
