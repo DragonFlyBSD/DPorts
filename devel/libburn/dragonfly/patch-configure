@@ -1,0 +1,11 @@
+--- configure.orig	2013-12-12 05:06:36.000000000 -0500
++++ configure
+@@ -21503,7 +21503,7 @@ echo $ECHO_N "checking target operating
+       LIBBURN_ARCH_LIBS=
+       LIBBURNIA_LDCONFIG_CMD=ldconfig
+       ;;
+-    freebsd*)
++    freebsd*|dragonfly*)
+       ARCH=freebsd
+       LIBBURN_ARCH_LIBS=-lcam
+       LIBBURNIA_PKGCONFDIR=$(echo "$libdir" | sed 's/\/lib$/\/libdata/')/pkgconfig

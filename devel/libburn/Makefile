@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: devel/libburn/Makefile 336298 2013-12-13 00:42:21Z delphij $
+# $FreeBSD: head/devel/libburn/Makefile 341673 2014-01-28 23:23:49Z bapt $
 
 PORTNAME=	libburn
 PORTVERSION=	1.3.4
@@ -15,7 +15,4 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-MAN1=		cdrskin.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
