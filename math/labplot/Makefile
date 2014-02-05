@@ -1,51 +1,42 @@
 # Created by: Kay Lehmann <kay_lehmann@web.de>
-# $FreeBSD: math/labplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: head/math/labplot/Makefile 342128 2014-02-01 12:17:42Z makc $
 
 PORTNAME=	labplot
-DISTVERSION=	2.0.0.alpha3
-PORTREVISION=	1
+DISTVERSION=	2.0.0.beta2
 CATEGORIES=	math kde
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Data plotting and function analysis tool for KDE
 
-LICENSE=	GPLv2
+LICENCE=	GPLv2
 
-LIB_DEPENDS=	gsl:${PORTSDIR}/math/gsl
+LIB_DEPENDS=	libgsl.so:${PORTSDIR}/math/gsl
 
 OPTIONS_DEFINE=	CDF HDF5 NETCDF
 CDF_DESC=	CDF data support
 HDF5_DESC=	HDF5 data support
 NETCDF_DESC=	NetCDF data support
 
+WRKSRC=		${WRKDIR}/beta2
+
 USE_BZIP2=	yes
+USES=		cmake shared-mime-info
 USE_XORG=	xft xpm
+USE_GCC=	yes
 USE_KDE4=	automoc4 kdelibs kdeprefix
 USE_QT4=	moc_build qmake_build rcc_build uic_build
-USES=		cmake
 CMAKE_ARGS=	-DOPJ_LIBRARY:STRING=""
+INSTALLS_ICONS=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+CDF_LIB_DEPENDS=	libcdf.so:${PORTSDIR}/science/cdf
+CDF_CMAKE_OFF=		-DCDF_LIBRARY:STRING=""
 
-.if ${PORT_OPTIONS:MCDF}
-LIB_DEPENDS+=	cdf:${PORTSDIR}/science/cdf
-.else
-CMAKE_ARGS+=	-DCDF_LIBRARY:STRING=""
-.endif
+HDF5_LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5	
+HDF5_CMAKE_OFF=		-DHDF5_LIBRARY:STRING=""
 
-.if ${PORT_OPTIONS:MHDF5}
-LIB_DEPENDS+=	hdf5:${PORTSDIR}/science/hdf5
-.else
-CMAKE_ARGS+=	-DHDF5_LIBRARY:STRING=""
-.endif
-
-.if ${PORT_OPTIONS:MNETCDF}
-LIB_DEPENDS+=	netcdf:${PORTSDIR}/science/netcdf
-.else
-CMAKE_ARGS+=	-DNETCDF_LIBRARY:STRING=""
-.endif
+NETCDF_LIB_DEPENDS=	libnetcdf.so:${PORTSDIR}/science/netcdf
+NETCDF_CMAKE_OFF=	-DNETCDF_LIBRARY:STRING=""
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -53,5 +44,8 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		's|i->\(children<T>\)|\1|' \
 		${WRKSRC}/src/backend/core/AbstractAspect.h
+	@${REINPLACE_CMD} -e \
+		's|!isnan|!std::isnan|' \
+		${WRKSRC}/src/backend/worksheet/plots/cartesian/CartesianCoordinateSystem.cpp 
 
 .include <bsd.port.mk>

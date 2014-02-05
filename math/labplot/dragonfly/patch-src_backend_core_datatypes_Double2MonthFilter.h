@@ -1,4 +1,4 @@
---- src/backend/core/datatypes/Double2MonthFilter.h.orig	2009-04-26 19:22:36.000000000 +0000
+--- src/backend/core/datatypes/Double2MonthFilter.h.orig	2013-12-06 20:45:37.690918000 +0000
 +++ src/backend/core/datatypes/Double2MonthFilter.h
 @@ -32,7 +32,7 @@
  
@@ -6,7 +6,7 @@
  #include <QDateTime>
 -#include <math.h>
 +#include <cmath>
- #include "lib/XmlStreamReader.h"
+ #include "backend/lib/XmlStreamReader.h"
  #include <QXmlStreamWriter>
  
 @@ -50,7 +50,7 @@ class Double2MonthFilter : public Abstra

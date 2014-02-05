@@ -1,4 +1,4 @@
---- src/backend/core/AbstractColumn.cpp.orig	2012-11-04 08:26:43.000000000 +0000
+--- src/backend/core/AbstractColumn.cpp.orig	2013-05-05 11:31:55.563429000 +0000
 +++ src/backend/core/AbstractColumn.cpp
 @@ -39,7 +39,7 @@
  #include <QtCore/QDateTime>
@@ -7,18 +7,18 @@
 -#include <math.h>
 +#include <cmath>
  #include <QMetaType>
+ #include <QDebug>
  
- /**
-@@ -211,7 +211,7 @@ void AbstractColumn::clear() {}
+@@ -208,7 +208,7 @@ void AbstractColumn::clear() {}
  bool AbstractColumn::isValid(int row) const {
  	switch (columnMode()) {
- 		case SciDAVis::Numeric:
+ 		case AbstractColumn::Numeric:
 -			return !isnan(valueAt(row));
 +			return !std::isnan(valueAt(row));
- 		case SciDAVis::Text:
+ 		case AbstractColumn::Text:
  			return !textAt(row).isNull();
- 		case SciDAVis::DateTime:
-@@ -465,7 +465,7 @@ double AbstractColumn::minimum() const{
+ 		case AbstractColumn::DateTime:
+@@ -462,7 +462,7 @@ double AbstractColumn::minimum() const{
  	double min = INFINITY;
  	for (int row = 0; row < rowCount(); row++) {
  		val = valueAt(row);
@@ -27,7 +27,7 @@
  			continue;
  		
  		if (val < min)
-@@ -479,7 +479,7 @@ double AbstractColumn::maximum() const{
+@@ -476,7 +476,7 @@ double AbstractColumn::maximum() const{
  	double max = -INFINITY;
  	for (int row = 0; row < rowCount(); row++) {
  		val = valueAt(row);
