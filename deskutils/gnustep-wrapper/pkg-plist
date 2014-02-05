@@ -12,7 +12,6 @@ GNUstep/System/Applications/WrapperFactory.app/Resources/WrapperFactory.tiff
 GNUstep/System/Applications/WrapperFactory.app/WrapperFactory
 GNUstep/System/Applications/WrapperFactory.app/stamp.make
 GNUstep/System/Library/Libraries/libGSWrapper.so
-GNUstep/System/Library/Libraries/libGSWrapper.so.%%MAJORLIBVERSION%%
 GNUstep/System/Library/Libraries/libGSWrapper.so.%%LIBVERSION%%
 GNUstep/System/Tools/GSWrapper_Launcher
 GNUstep/System/Tools/WrapperFactory

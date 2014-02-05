@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gnustep-wrapper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/deskutils/gnustep-wrapper/Makefile 342281 2014-02-02 12:43:42Z antoine $
 
 PORTNAME=	wrapper
 PORTVERSION=	0.1.0
@@ -25,13 +25,14 @@ ADDITIONAL_LIB_DIRS+=	-L${WRKSRC}/libGSWrapper/obj
 MAKE_ENV+=	GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 MAKE_FLAGS+=	debug=no
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|cp -u|#cp -p|' \
 		${WRKSRC}/WrapperFactory/GNUmakefile.postamble
+	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
+		${WRKSRC}/GNUmakefile
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Launcher/obj/GSWrapper_Launcher \
-		${GNUSTEP_SYSTEM_ROOT}/Applications/WrapperFactory.app/Resources/
+		${STAGEDIR}${GNUSTEP_SYSTEM_ROOT}/Applications/WrapperFactory.app/Resources/
 
 .include <bsd.port.mk>
