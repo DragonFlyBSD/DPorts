@@ -14,13 +14,11 @@ GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVER
 GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/Resources/ObjC.syntax
 GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/Resources/Plist.syntax
 GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/libHighlighterKit.so
-GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/libHighlighterKit.so.%%MAJORLIBVERSION%%
 GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/libHighlighterKit.so.%%LIBVERSION%%
 GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/Current
 GNUstep/Local/Library/Frameworks/HighlighterKit.framework/libHighlighterKit.so
 GNUstep/Local/Library/Headers/HighlighterKit
 GNUstep/Local/Library/Libraries/libHighlighterKit.so
-GNUstep/Local/Library/Libraries/libHighlighterKit.so.%%MAJORLIBVERSION%%
 GNUstep/Local/Library/Libraries/libHighlighterKit.so.%%LIBVERSION%%
 @dirrm GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/Resources
 @dirrm GNUstep/Local/Library/Frameworks/HighlighterKit.framework/Versions/%%MAJORLIBVERSION%%/Headers

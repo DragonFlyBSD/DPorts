@@ -1,4 +1,4 @@
-# $FreeBSD: devel/highlighterkit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/highlighterkit/Makefile 341515 2014-01-28 08:36:05Z bapt $
 
 PORTNAME=	highlighterkit
 PORTVERSION=	0.1
@@ -17,5 +17,4 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
