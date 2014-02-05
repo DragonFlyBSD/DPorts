@@ -1,4 +1,4 @@
-# $FreeBSD: www/rsskit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/www/rsskit/Makefile 341633 2014-01-28 16:47:27Z miwi $
 
 PORTNAME=	rsskit
 PORTVERSION=	0.4
@@ -16,5 +16,4 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 USE_GNUSTEP_LDCONFIG=	${GNUSTEP_LOCAL_LIBRARIES}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
