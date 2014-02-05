@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/fortytwo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/graphics/fortytwo/Makefile 342356 2014-02-02 18:49:14Z antoine $
 
 PORTNAME=	fortytwo
 PORTVERSION=	0.2.0
@@ -31,5 +31,4 @@ FORTYTWO_BDB_PORT?=	databases/fortytwo-bdb
 ADDITIONAL_OBJCFLAGS+=	-I${BDB_INCLUDE_DIR}
 ADDITIONAL_LDFLAGS+=	-L${BDB_LIB_DIR}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>

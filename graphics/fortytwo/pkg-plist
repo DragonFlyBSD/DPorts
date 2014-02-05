@@ -71,13 +71,11 @@ GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/Headers/
 GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/Resources/Info-gnustep.plist
 GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/Resources/Info.plist
 GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/libFT.so
-GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/libFT.so.%%MAJORLIBVERSION%%
 GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/libFT.so.%%LIBVERSION%%
 GNUstep/Local/Library/Frameworks/FT.framework/Versions/Current
 GNUstep/Local/Library/Frameworks/FT.framework/libFT.so
 GNUstep/Local/Library/Headers/FT
 GNUstep/Local/Library/Libraries/libFT.so
-GNUstep/Local/Library/Libraries/libFT.so.%%MAJORLIBVERSION%%
 GNUstep/Local/Library/Libraries/libFT.so.%%LIBVERSION%%
 @dirrm GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/Resources
 @dirrm GNUstep/Local/Library/Frameworks/FT.framework/Versions/%%MAJORVERSION%%/Headers
