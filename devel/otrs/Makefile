@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/otrs/Makefile 328146 2013-09-24 15:18:08Z swills $
+# $FreeBSD: head/devel/otrs/Makefile 342009 2014-01-31 15:44:14Z swills $
 
 PORTNAME=	otrs
-PORTVERSION=	3.2.10
+PORTVERSION=	3.3.3
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.otrs.org/pub/otrs/ \
 		ftp://ftp.samurai.com/pub/otrs/ \
@@ -14,33 +14,30 @@ COMMENT=	Open Ticket Request System
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	p5-Date-Pcalc>=0:${PORTSDIR}/devel/p5-Date-Pcalc \
-		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
-		p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
+BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI \
 		p5-Crypt-PasswdMD5>=0:${PORTSDIR}/security/p5-Crypt-PasswdMD5 \
 		p5-Digest-SHA>=0:${PORTSDIR}/security/p5-Digest-SHA \
-		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
-		p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
-		p5-Mail-Tools>=0:${PORTSDIR}/mail/p5-Mail-Tools \
 		p5-MIME-Tools>=5.427:${PORTSDIR}/mail/p5-MIME-Tools \
+		p5-libwww>=0:${PORTSDIR}/www/p5-libwww \
 		p5-Net-DNS>=0.66:${PORTSDIR}/dns/p5-Net-DNS \
-		p5-Algorithm-Diff>=0:${PORTSDIR}/devel/p5-Algorithm-Diff \
-		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
-		p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV \
-		p5-Text-CSV_XS>=0:${PORTSDIR}/textproc/p5-Text-CSV_XS \
-		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
-		p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
 		p5-CSS-Minifier-XS>=0:${PORTSDIR}/textproc/p5-CSS-Minifier-XS \
 		p5-JavaScript-Minifier-XS>=0:${PORTSDIR}/textproc/p5-JavaScript-Minifier-XS \
-		p5-Text-Diff>=0:${PORTSDIR}/textproc/p5-Text-Diff \
-		p5-XML-FeedPP>=0:${PORTSDIR}/textproc/p5-XML-FeedPP \
+		p5-TimeDate>=0:${PORTSDIR}/devel/p5-TimeDate \
+		p5-Sys-Hostname-Long>=0:${PORTSDIR}/sysutils/p5-Sys-Hostname-Long \
+		p5-Proc-Daemon>=0:${PORTSDIR}/devel/p5-Proc-Daemon \
+		p5-JSON-XS>=0:${PORTSDIR}/converters/p5-JSON-XS \
+		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		p5-IO-Interactive>=0:${PORTSDIR}/devel/p5-IO-Interactive \
+		p5-Email-Valid>=0:${PORTSDIR}/mail/p5-Email-Valid \
+		p5-JSON>=0:${PORTSDIR}/converters/p5-JSON \
 		p5-YAML>=0:${PORTSDIR}/textproc/p5-YAML \
-		p5-YAML-LibYAML>=0:${PORTSDIR}/textproc/p5-YAML-LibYAML \
-		p5-Email-Valid>=0:${PORTSDIR}/mail/p5-Email-Valid
+		p5-Date-Pcalc>=0:${PORTSDIR}/devel/p5-Date-Pcalc \
+		p5-Text-CSV>=0:${PORTSDIR}/textproc/p5-Text-CSV \
+		p5-XML-FeedPP>=0:${PORTSDIR}/textproc/p5-XML-FeedPP \
+		p5-YAML-LibYAML>=0:${PORTSDIR}/textproc/p5-YAML-LibYAML
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		shebangfix
+USES=		shebangfix perl5
 SHEBANG_FILES=	bin/cgi-bin/*.pl bin/fcgi-bin/*.pl bin/*.pl \
 		scripts/auto_build/*.pl scripts/tools/*.pl scripts/*.pl
 
@@ -79,10 +76,9 @@ CLEAN_FILES=	scripts/suse* scripts/redhat* \
 		var/httpd/htdocs/js/thirdparty/ckeditor-4.0/_source \
 		var/httpd/htdocs/skins/Agent/*/img/source
 
-USES=		perl5
 USE_APACHE_RUN=	22+
 
-PLIST_SUB+=	VER_CKEDITOR="4.0"
+PLIST_SUB+=	VER_CKEDITOR="4.3"
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
@@ -97,7 +93,8 @@ RUN_DEPENDS+=	p5-DBD-Pg>=0:${PORTSDIR}/databases/p5-DBD-Pg
 USE_PGSQL=	yes
 .endif
 
-RUN_DEPENDS+=	${APACHE_PKGNAMEPREFIX}mod_perl2>=2.0.5:${PORTSDIR}/www/mod_perl2
+RUN_DEPENDS+=	${APACHE_PKGNAMEPREFIX}mod_perl2>=2.0.5:${PORTSDIR}/www/mod_perl2 \
+		p5-Apache-DBI>0:${PORTSDIR}/www/p5-Apache-DBI
 
 .if ${PORT_OPTIONS:MREPORTS_MODULES}
 RUN_DEPENDS+=	p5-GD>=0:${PORTSDIR}/graphics/p5-GD \
@@ -126,13 +123,10 @@ RUN_DEPENDS+=	p5-perl-ldap>=0:${PORTSDIR}/net/p5-perl-ldap
 
 .if ${PORT_OPTIONS:MPDF}
 RUN_DEPENDS+=	p5-PDF-API2>=0.57:${PORTSDIR}/textproc/p5-PDF-API2
-. if ${PERL_LEVEL} < 500903
-RUN_DEPENDS+=	p5-IO-Compress>=2.017:${PORTSDIR}/archivers/p5-IO-Compress
-. endif
 .endif
 
 .if ${PORT_OPTIONS:MISPELL}
-RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/ispell
+RUN_DEPENDS+=	ispell:${PORTSDIR}/textproc/aspell-ispell
 .endif
 
 .if ${PORT_OPTIONS:MASPELL}
@@ -203,7 +197,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/doc/${D}/*.* ${DOCSDIR}/${D}/
 .endfor
 .endif
-#	@PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	@PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
