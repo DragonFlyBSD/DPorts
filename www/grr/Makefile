@@ -1,4 +1,4 @@
-# $FreeBSD: www/grr/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: www/grr/Makefile 341701 2014-01-29 09:02:29Z miwi $
 
 PORTNAME=	grr
 PORTVERSION=	1.0
@@ -18,5 +18,4 @@ USE_GNUSTEP_LOCAL_LIBS+=	RSSKit:${RSSKIT_PORT}
 
 RSSKIT_PORT?=	www/rsskit
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
