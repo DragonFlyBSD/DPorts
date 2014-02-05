@@ -1,0 +1,21 @@
+# $FreeBSD: head/x11/innerspace/Makefile 340722 2014-01-22 17:00:46Z mat $
+
+PORTNAME=	innerspace
+PORTVERSION=	0.2.0
+PORTREVISION=	2
+CATEGORIES=	x11 gnustep
+MASTER_SITES=	${MASTER_SITE_SAVANNAH}
+MASTER_SITE_SUBDIR=	gap
+DISTNAME=	InnerSpace-${PORTVERSION}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	GNUstep screensaver
+
+LICENSE=	GPLv2
+
+USE_GNUSTEP=	yes
+USE_GNUSTEP_BACK=	yes
+USE_GNUSTEP_BUILD=	yes
+USE_GNUSTEP_INSTALL=	yes
+
+.include <bsd.port.mk>
