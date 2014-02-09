@@ -1,9 +1,9 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: math/qtiplot/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD: head/math/qtiplot/Makefile 342388 2014-02-03 07:35:33Z makc $
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math science
 MASTER_SITES=	BERLIOS http://soft.proindependent.com/src/
 
@@ -26,7 +26,7 @@ QMAKE_ARGS+=	LOCALBASE=${LOCALBASE} PYTHON_CMD=${PYTHON_CMD}
 DOS2UNIX_GLOB=	*.pro
 
 DESKTOP_ENTRIES="QtiPlot" "Data analysis and plotting" \
-		"${DATADIR}/qtiplot.png" \
+		"${PREFIX}/share/pixmaps/qtiplot.png" \
 		"qtiplot" "" true
 
 OPTIONS_DEFINE=	DOCS PYTHON NLS DEBUG
@@ -101,7 +101,7 @@ pre-configure:
 
 post-install:
 	${STRIP_CMD} ${STRIP_FILES:S,^,${STAGEDIR}${PREFIX}/,}
-	${INSTALL_DATA} ${WRKSRC}/qtiplot_logo.png ${STAGEDIR}${DATADIR}/qtiplot.png
+	${INSTALL_DATA} ${WRKSRC}/qtiplot_logo.png ${STAGEDIR}${PREFIX}/share/pixmaps/qtiplot.png
 .if ${PORT_OPTIONS:MPYTHON}
 .for s in qtiplotrc.py qtiUtil.py
 	cd ${WRKSRC}/qtiplot && ${PYTHON_CMD} -c "import py_compile; py_compile.compile('${s}')"
