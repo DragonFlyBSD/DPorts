@@ -1,14 +1,18 @@
 # Created by: gahr
-# $FreeBSD: deskutils/taskwarrior/Makefile 339084 2014-01-08 10:11:55Z gahr $
+# $FreeBSD: head/deskutils/taskwarrior/Makefile 339903 2014-01-16 09:07:09Z gahr $
 
 PORTNAME=	taskwarrior
-PORTVERSION=	2.2.0
+PORTVERSION=	2.3.0
 CATEGORIES=	deskutils
 MASTER_SITES=	http://taskwarrior.org/download/
 DISTNAME=	task-${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
-COMMENT=	A framework for supercharged task and contact management
+COMMENT=	Feature-rich command-line todo list manager
+
+LICENSE=	MIT
+
+LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
 
 WRKSRC=		${WRKDIR}/task-${PORTVERSION}
 
