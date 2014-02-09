@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 328923 2013-10-01 05:54:24Z amdmi3 $
+# $FreeBSD: head/math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 343177 2014-02-07 00:51:51Z amdmi3 $
 
 PORTNAME=	Math-Geometry-Planar-GPC-Polygon
 PORTVERSION=	0.05
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
