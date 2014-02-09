@@ -1,38 +1,35 @@
---- ./lib/blkid/getsize.c.orig	2012-11-30 02:40:18.000000000 +0000
+--- ./lib/blkid/getsize.c.orig	2013-12-16 06:32:00.000000000 +0000
 +++ ./lib/blkid/getsize.c
-@@ -33,6 +33,9 @@
- #ifdef HAVE_SYS_DISKLABEL_H
- #include <sys/disklabel.h>
+@@ -46,6 +46,9 @@
+ #include <sys/stat.h>
  #endif
+ 
 +#ifdef __DragonFly__
-+#include <sys/disklabel32.h>
++#include <sys/diskslice.h>
 +#endif
- #ifdef HAVE_SYS_DISK_H
- #ifdef HAVE_SYS_QUEUE_H
- #include <sys/queue.h> /* for LIST_HEAD */
-@@ -134,8 +137,13 @@ blkid_loff_t blkid_get_dev_size(int fd)
- #ifdef HAVE_SYS_DISKLABEL_H
+ 
+ #if defined(__linux__) && defined(_IO) && !defined(BLKGETSIZE)
+ #define BLKGETSIZE _IO(0x12,96)	/* return device size */
+@@ -123,6 +126,13 @@ blkid_loff_t blkid_get_dev_size(int fd)
+ 		return (off_t)size64;
+ #endif /* DIOCGMEDIASIZE */
+ 
++/* tested on DragonFly 3.1-DEVELOPMENT i386/X86_64 */
++#if defined(__DragonFly__) && defined (DIOCGPART)
++        struct partinfo dp;
++        if (ioctl(fd, DIOCGPART, &dp) >= 0)
++                return (off_t)dp.media_size;
++#endif /* __DragonFly__ */
++
+ #ifdef FDGETPRM
+ 	{
+ 		struct floppy_struct this_floppy;
+@@ -131,7 +141,7 @@ blkid_loff_t blkid_get_dev_size(int fd)
+ 			return (blkid_loff_t)this_floppy.size << 9;
+ 	}
+ #endif
+-#ifdef HAVE_SYS_DISKLABEL_H
++#if defined(HAVE_SYS_DISKLABEL_H) && !defined(__DragonFly__)
  	{
  		int part = -1;
-+#ifdef __DragonFly__
-+                struct disklabel32 lab;
-+                struct partition32 *pp;
-+#else
  		struct disklabel lab;
- 		struct partition *pp;
-+#endif
- 		char ch;
- 		struct stat st;
- 
-@@ -152,7 +160,11 @@ blkid_loff_t blkid_get_dev_size(int fd)
- 		    (S_ISBLK(st.st_mode) || S_ISCHR(st.st_mode)))
- 			part = st.st_rdev & 7;
- 
-+#ifdef __DragonFly__
-+		if (part >= 0 && (ioctl(fd, DIOCGDINFO32, (char *)&lab) >= 0)) {
-+#else
- 		if (part >= 0 && (ioctl(fd, DIOCGDINFO, (char *)&lab) >= 0)) {
-+#endif
- 			pp = &lab.d_partitions[part];
- 			if (pp->p_size)
- 				return pp->p_size << 9;

@@ -1,11 +1,11 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: sysutils/e2fsprogs/Makefile 316884 2013-04-30 07:11:19Z jgh $
+# $FreeBSD: head/sysutils/e2fsprogs/Makefile 338962 2014-01-07 00:00:23Z mandree $
 
 PORTNAME=	e2fsprogs
-PORTVERSION=	1.42.7
+PORTVERSION=	1.42.9
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/v${PORTVERSION}
+MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
 MAINTAINER?=	mandree@FreeBSD.org
 COMMENT?=	Utilities & library to manipulate ext2/3/4 filesystems
@@ -13,29 +13,22 @@ COMMENT?=	Utilities & library to manipulate ext2/3/4 filesystems
 LICENSE=	GPLv2
 
 PATCH_STRIP=	-p1
-USE_GMAKE=	yes
-USE_CSTD=	gnu89
+USES=		gmake pkgconfig
+USE_CSTD=	gnu99
 USE_LDCONFIG=	yes
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-fsck --disable-e2initrd-helper \
 		--with-root-prefix='${PREFIX}'
 CPPFLAGS+=	-I${WRKSRC}/lib -I${LOCALBASE}/include # -D_EXT2_USE_C_VERSIONS
 MAKE_ARGS+=	LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib'
+MAKE_ENV+=	CHECK_CMD=@true
 
 .if !defined(MASTERDIR)
 OPTIONS_DEFINE=		DOCS NLS
 OPTIONS_DEFAULT=	NLS
 OPTIONS_EXCLUDE+=	EXAMPLES
 
-IGNORE=		Will not build on DragonFly
-
-MAN1=		chattr.1 lsattr.1
-MAN5=		e2fsck.conf.5 mke2fs.conf.5
-MAN8=		badblocks.8 debugfs.8 dumpe2fs.8 e2fsck.8 e2image.8 e2label.8 \
-		e2undo.8 mke2fs.8 mklost+found.8 resize2fs.8 tune2fs.8 \
-		fsck.ext2.8 fsck.ext3.8 fsck.ext4.8 fsck.ext4dev.8 \
-		mkfs.ext2.8 mkfs.ext3.8 mkfs.ext4.8 mkfs.ext4dev.8 \
-		findfs.8 blkid.8 logsave.8 fsck_ext2fs.8 e2freefrag.8
 PORTDOCS=	COPYING RELEASE-NOTES
 
 post-extract:
@@ -45,8 +38,6 @@ post-extract:
 
 PKGDEINSTALL=	${PKGINSTALL}
 
-MAKE_JOBS_SAFE=	yes
-
 # get more details into tinderbox logs
 .if defined(PACKAGE_BUILDING)
 MAKE_ARGS+=	V=1
@@ -55,16 +46,23 @@ MAKE_ARGS+=	V=1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USES+=		gettext
+USES+=		gettext iconv:build
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MNLS}
 PLIST_SUB=	NLS=""
+. if empty(ICONV_LIB)
+libintl=	"${LOCALBASE}/lib/libintl.a"
+. else
 libintl=	"${LOCALBASE}/lib/libintl.a ${LOCALBASE}/lib/libiconv.a"
+. endif
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB=	NLS="@comment "
 libintl=
 .endif
-
-.include <bsd.port.pre.mk>
 
 post-patch::
 	@${REINPLACE_CMD} -E -e \
@@ -75,8 +73,10 @@ post-patch::
 	@${REINPLACE_CMD} -E -e 's/md5sum ([^ ]*)/printf "%s  %s\\n" $$(md5 -q \1) \1/' \
 	    -e "s/ == 0/ = 0/" ${WRKSRC}/tests/[a-t]_*/script
 	@${REINPLACE_CMD} -e 's/<malloc\.h>/<stdlib.h>/' ${WRKSRC}/*/*.c
-# disable f_mmp_garbage, fails on FreeBSD
-.for i in f_mmp_garbage m_bigjournal
+# disable f_mmp_garbage, fails on FreeBSD, and the resize*big_expand tests,
+# which are too unwieldy to run automatically (need too much free space).
+# f_extent_oobounds fails in Tinderbox and is fine outside, reason unclear.
+.for i in f_mmp_garbage f_extent_oobounds r_64bit_big_expand r_bigalloc_big_expand r_ext4_big_expand m_bigjournal
 	@${MV} ${WRKSRC}/tests/${i} ${WRKSRC}/tests/disabled_test-${i}
 .endfor
 
@@ -98,8 +98,8 @@ post-build:
 	    | ${GREP} -v 'not a dynamic executable' \
 	    | ${GREP} '=>' \
 	    | ${AWK}  '{print $$3;}' \
-	    | ${EGREP} -v '^/lib/libgcc(_s)?\.so\.' \
-	    | ${GREP} -v '^/lib/libc\.so\.' || :)"; \
+	    | ${EGREP} -v '^/usr/lib/libgcc(_s)?\.so\.' \
+	    | ${GREP} -v '^/usr/lib/libc\.so\.' || :)"; \
 	if test "x$$a" = "x" ; then echo 'PASS' ; else \
 	    echo 'FAIL' ; echo '===>  e2fsck depends on:' ; echo "$$a" ; exit 1 ; fi
 # Update translation binary files
@@ -121,16 +121,15 @@ post-build:
 	    || { head -n30000 ${WRKSRC}/tests/*.failed 2>/dev/null ; exit 1 ; }
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${PREFIX}/sbin/
-	${INSTALL_MAN} ${FILESDIR}/fsck_ext2fs.8 ${PREFIX}/man/man8/
+	${RM} -f ${STAGEDIR}${PREFIX}/sbin/uuidd
+	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${STAGEDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${FILESDIR}/fsck_ext2fs.8 ${STAGEDIR}${PREFIX}/man/man8/
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
-	PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-	@${ECHO_MSG} ; ${CAT} ${PKGMESSAGE} ; ${ECHO_MSG}
 # the next line closes .if ${MASTERDIR} == ${.CURDIR}
 .endif
 

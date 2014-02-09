@@ -1,24 +1,44 @@
---- ./lib/ext2fs/getsize.c.orig	2012-11-30 02:40:18.000000000 +0000
+--- ./lib/ext2fs/getsize.c.orig	2013-09-09 14:29:01.000000000 +0000
 +++ ./lib/ext2fs/getsize.c
-@@ -33,6 +33,9 @@
- #ifdef HAVE_SYS_DISKLABEL_H
- #include <sys/disklabel.h>
+@@ -47,6 +47,10 @@
  #endif
+ #include <ctype.h>
+ 
 +#ifdef __DragonFly__
-+#include <sys/disklabel32.h>
++#include <sys/diskslice.h>
 +#endif
- #ifdef HAVE_SYS_DISK_H
- #ifdef HAVE_SYS_QUEUE_H
- #include <sys/queue.h> /* for LIST_HEAD */
-@@ -201,7 +204,11 @@ errcode_t ext2fs_get_device_size2(const
- #ifdef HAVE_SYS_DISKLABEL_H
++
+ #if defined(__linux__) && defined(_IO) && !defined(BLKGETSIZE)
+ #define BLKGETSIZE _IO(0x12,96)	/* return device size */
+ #endif
+@@ -198,11 +202,13 @@ errcode_t ext2fs_get_device_size2(const
+ 	}
+ #endif
+ 
+-#ifdef HAVE_SYS_DISKLABEL_H
++#if defined(HAVE_SYS_DISKLABEL_H)
  	{
  		int part;
-+#ifdef __DragonFly__
-+                struct disklabel32 lab;
-+#else
++#ifndef __DragonFly__
  		struct disklabel lab;
-+#endif
  		struct partition *pp;
++#endif
  		char ch;
  
+ #if defined(DIOCGMEDIASIZE)
+@@ -233,6 +239,15 @@ errcode_t ext2fs_get_device_size2(const
+ 				goto out;
+ 			}
+ 		}
++#elif defined(DIOCGPART)
++		/* DragonFly partition information */
++		struct partinfo dp;
++		if (ioctl(fd, DIOCGPART, &dp) >= 0) {
++			*retblocks = dp.media_size / blocksize;
++			printf("success!\n");
++			goto out;
++		}
++
+ #endif /* defined(DIOCG*) */
+ 	}
+ #endif /* HAVE_SYS_DISKLABEL_H */
