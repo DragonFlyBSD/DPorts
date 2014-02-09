@@ -1,32 +1,25 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/libcidr/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: head/devel/libcidr/Makefile 343382 2014-02-08 20:06:43Z rakuco $
 
 PORTNAME=	libcidr
-DISTVERSION=	1.2.1
+DISTVERSION=	1.2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.over-yonder.net/~fullermd/projects/${PORTNAME}/ \
 		http://distfiles.over-yonder.net/${PORTNAME}/ \
 		http://mirrors.rit.edu/zi/
 
-MAINTAINER=	zi@FreeBSD.org
+MAINTAINER=	fullermd@over-yonder.net
 COMMENT=	A library to handle manipulating CIDR netblocks
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-MAKE_ENV+=	CIDR_DOCDIR=${DOCSDIR} CIDR_EXDIR=${EXAMPLESDIR}
-
-MAN3=		libcidr.3
-
-.if defined(NOPORTDOCS)
-MAKE_ENV+=	NO_DOCS=yes
-.endif
+MAKE_ENV+=	CIDR_DOCDIR=${DOCSDIR} CIDR_EXDIR=${EXAMPLESDIR} NO_DOCS=yes
 
 .if defined(NOPORTEXAMPLES)
 MAKE_ENV+=	NO_EXAMPLES=yes
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
