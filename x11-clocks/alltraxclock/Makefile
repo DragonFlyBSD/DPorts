@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: x11-clocks/alltraxclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD: head/x11-clocks/alltraxclock/Makefile 342998 2014-02-06 10:15:08Z novel $
 
 PORTNAME=	alltraxclock
 PORTVERSION=	2.0.2
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	novel
 DISTNAME=	${PORTNAME}2_0.2-1
 
 MAINTAINER=	novel@FreeBSD.org
-COMMENT=	An analog clock plugin for gkrellm2
+COMMENT=	Analog clock plugin for gkrellm2
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
@@ -21,11 +21,11 @@ ALL_TARGET=	alltraxclock.so
 PLIST_FILES=	libexec/gkrellm2/plugins/alltraxclock.so
 WRKSRC=		${WRKDIR}/${PORTNAME}2_0.2/
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|gcc|${CC}|;s|-O2||;s|-lpthread|${PTHREAD_LIBS}|' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/alltraxclock.so ${PREFIX}/libexec/gkrellm2/plugins/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins/
+	${INSTALL_PROGRAM} ${WRKSRC}/alltraxclock.so ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins/
 
 .include <bsd.port.mk>
