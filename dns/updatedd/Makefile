@@ -1,5 +1,5 @@
 # Created by: geniusj@ods.org
-# $FreeBSD: dns/updatedd/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD: head/dns/updatedd/Makefile 343489 2014-02-09 12:41:03Z antoine $
 
 PORTNAME=	updatedd
 PORTVERSION=	2.6
@@ -11,23 +11,11 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 MAINTAINER=	geniusj@ods.org
 COMMENT=	Dynamic DNS Update Client supporting multiple services
 
-USES=		perl5
-USE_GMAKE=	yes
+OPTIONS_DEFINE=	DOCS
+
+USES=		gmake perl5
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
-MAN1=		updatedd.1 updatedd-wrapper.1
-MAN5=		updatedd-wrapper.conf.5
-
-.if defined(NOPORTDOCS)
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-disable-portdocs
-.endif
-
-NO_STAGE=	yes
-post-install:
-	@if [ ! -f ${PREFIX}/etc/updatedd-wrapper.conf ]; then \
-		${CP} -p ${PREFIX}/etc/updatedd-wrapper.conf.sample ${PREFIX}/etc/updatedd-wrapper.conf ; \
-	fi
 
 .include <bsd.port.mk>
