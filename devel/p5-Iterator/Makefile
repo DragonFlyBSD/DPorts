@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Iterator/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD: head/devel/p5-Iterator/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Iterator
 PORTVERSION=	0.03
