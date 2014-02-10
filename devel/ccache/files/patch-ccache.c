@@ -1,4 +1,4 @@
-$FreeBSD: devel/ccache/files/patch-ccache.c 317706 2013-05-08 20:06:48Z bdrewery $
+$FreeBSD: head/devel/ccache/files/patch-ccache.c 317706 2013-05-08 20:06:48Z bdrewery $
 
 Disable compiling preprocessed code on CURRENT with default clang. Avoids
 needing to define CCACHE_CPP2 to build with clang. Performance hit but
