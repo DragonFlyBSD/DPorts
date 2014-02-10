@@ -1,5 +1,5 @@
 # Created by: Alex Perel <veers@disturbed.net>
-# $FreeBSD: mail/p5-MIME-Lite/Makefile 332743 2013-11-04 16:58:59Z sunpoet $
+# $FreeBSD: head/mail/p5-MIME-Lite/Makefile 332743 2013-11-04 16:58:59Z sunpoet $
 
 PORTNAME=	MIME-Lite
 PORTVERSION=	3.03.0
