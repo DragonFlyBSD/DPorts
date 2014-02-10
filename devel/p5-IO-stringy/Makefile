@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-stringy/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD: head/devel/p5-IO-stringy/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	IO-stringy
 PORTVERSION=	2.110
