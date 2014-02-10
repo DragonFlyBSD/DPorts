@@ -1,5 +1,5 @@
 # Created by: Justin Stanford <jus@security.za.net>
-# $FreeBSD: devel/p5-File-Remove/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD: head/devel/p5-File-Remove/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Remove
 PORTVERSION=	1.52
