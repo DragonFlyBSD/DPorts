@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Symdump/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD: head/devel/p5-Devel-Symdump/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Devel-Symdump
 PORTVERSION=	2.1000
