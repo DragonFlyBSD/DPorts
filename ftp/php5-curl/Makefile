@@ -1,8 +1,7 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ftp/php5-curl/Makefile 332107 2013-10-30 13:32:02Z ale $
+# $FreeBSD: head/ftp/php5-curl/Makefile 343435 2014-02-09 08:39:00Z ale $
 
 CATEGORIES=	ftp
-PORTREVISION=	1
 
 MASTERDIR=	${.CURDIR}/../../lang/php5
 
