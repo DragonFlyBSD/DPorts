@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-setuptools/Makefile 337409 2013-12-25 12:19:57Z wg $
+# $FreeBSD: head/devel/py-setuptools/Makefile 337409 2013-12-25 12:19:57Z wg $
 
 PORTNAME=	setuptools
 PORTVERSION=	2.0.1
