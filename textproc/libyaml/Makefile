@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libyaml/Makefile 342216 2014-02-01 22:39:00Z jpaetzel $
+# $FreeBSD: head/textproc/libyaml/Makefile 342216 2014-02-01 22:39:00Z jpaetzel $
 
 PORTNAME=	libyaml
 PORTVERSION=	0.1.4
