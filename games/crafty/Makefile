@@ -1,5 +1,5 @@
 # Created by: Stefan Eggers <seggers@semyam.dinoco.de>
-# $FreeBSD: games/crafty/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/games/crafty/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	crafty
 PORTVERSION=	23.4
