@@ -1,5 +1,5 @@
 # Created by: wolman@cs.washington.edu
-# $FreeBSD: databases/p5-SQL-Statement/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD: head/databases/p5-SQL-Statement/Makefile 341764 2014-01-29 17:31:52Z az $
 
 PORTNAME=	SQL-Statement
 PORTVERSION=	1.405
