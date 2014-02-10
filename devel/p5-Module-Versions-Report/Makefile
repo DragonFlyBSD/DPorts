@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Versions-Report/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD: head/devel/p5-Module-Versions-Report/Makefile 332120 2013-10-30 14:44:54Z vanilla $
 
 PORTNAME=	Module-Versions-Report
 PORTVERSION=	1.06
