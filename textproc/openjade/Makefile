@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: textproc/openjade/Makefile 329862 2013-10-09 06:03:46Z bapt $
+# $FreeBSD: head/textproc/openjade/Makefile 329862 2013-10-09 06:03:46Z bapt $
 
 PORTNAME=	openjade
 PORTVERSION=	1.3.3p1
