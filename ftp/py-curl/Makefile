@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: ftp/py-curl/Makefile 341811 2014-01-30 08:28:25Z miwi $
+# $FreeBSD: head/ftp/py-curl/Makefile 341811 2014-01-30 08:28:25Z miwi $
 
 PORTNAME=	curl
 PORTVERSION=	7.19.0
