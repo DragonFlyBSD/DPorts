@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: textproc/syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: head/textproc/syck/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	syck
 PORTVERSION=	0.70
