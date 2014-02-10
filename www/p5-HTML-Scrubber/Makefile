@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Scrubber/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD: head/www/p5-HTML-Scrubber/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Scrubber
 PORTVERSION=	0.11
