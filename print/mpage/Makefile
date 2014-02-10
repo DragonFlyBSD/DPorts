@@ -1,5 +1,5 @@
 # Created by: Kapil Chowksey
-# $FreeBSD: print/mpage/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/print/mpage/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 # To override mpage's default paper size of A4, set PAGESIZE to another
 # page type.  Some common values include "Letter" (8.5" x 11") and
