@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/pear-Horde_Group/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/security/pear-Horde_Group/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Group
 PORTVERSION=	2.0.2
