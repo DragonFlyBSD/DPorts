@@ -1,5 +1,5 @@
 # Created by: Jon M. Dugan <jdugan@x1024.net>
-# $FreeBSD: devel/py-thrift/Makefile 333294 2013-11-09 14:14:50Z wg $
+# $FreeBSD: head/devel/py-thrift/Makefile 333294 2013-11-09 14:14:50Z wg $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with thrift
