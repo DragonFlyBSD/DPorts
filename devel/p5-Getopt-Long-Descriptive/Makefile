@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Getopt-Long-Descriptive/Makefile 329417 2013-10-05 06:05:58Z sunpoet $
+# $FreeBSD: head/devel/p5-Getopt-Long-Descriptive/Makefile 329417 2013-10-05 06:05:58Z sunpoet $
 
 PORTNAME=	Getopt-Long-Descriptive
 PORTVERSION=	0.096
