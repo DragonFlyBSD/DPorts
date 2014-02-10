@@ -1,5 +1,5 @@
 # Created by: Ilia Chipitsine <ilia@cgu.chel.su>
-# $FreeBSD: devel/p5-String-Approx/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD: head/devel/p5-String-Approx/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	String-Approx
 PORTVERSION=	3.27
