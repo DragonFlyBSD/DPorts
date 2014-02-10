@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/libcroco/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: head/textproc/libcroco/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	libcroco
 PORTVERSION=	0.6.8
