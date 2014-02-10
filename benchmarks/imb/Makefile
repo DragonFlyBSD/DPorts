@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: benchmarks/imb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/benchmarks/imb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	imb
 PORTVERSION=	3.0
