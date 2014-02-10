@@ -1,5 +1,5 @@
 # Created by: @BABOLO <.@babolo.ru>
-# $FreeBSD: net-mgmt/flow-tools/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: head/net-mgmt/flow-tools/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	flow-tools
 PORTVERSION=	0.68
