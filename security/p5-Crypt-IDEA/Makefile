@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-IDEA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: head/security/p5-Crypt-IDEA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-IDEA
 PORTVERSION=	1.10
