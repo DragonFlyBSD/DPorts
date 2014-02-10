@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/rexx-regina/Makefile 341981 2014-01-31 12:14:30Z miwi $
+# $FreeBSD: head/lang/rexx-regina/Makefile 341981 2014-01-31 12:14:30Z miwi $
 
 PORTNAME=	regina
 PORTVERSION=	3.7
