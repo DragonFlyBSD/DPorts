@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Tools/Makefile 339503 2014-01-12 13:47:46Z kuriyama $
+# $FreeBSD: head/mail/p5-Mail-Tools/Makefile 339503 2014-01-12 13:47:46Z kuriyama $
 
 PORTNAME=	Mail-Tools
 PORTVERSION=	2.13
