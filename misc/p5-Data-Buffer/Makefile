@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: misc/p5-Data-Buffer/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD: head/misc/p5-Data-Buffer/Makefile 332594 2013-11-03 08:05:18Z az $
 
 PORTNAME=	Data-Buffer
 PORTVERSION=	0.04
