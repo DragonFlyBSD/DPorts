@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: devel/p5-common-sense/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD: head/devel/p5-common-sense/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	common-sense
 PORTVERSION=	3.6
