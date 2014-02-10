@@ -1,5 +1,5 @@
 # Created by: Stephen J. Roznowski <sjr@home.net>
-# $FreeBSD: net-mgmt/p5-SNMP_Session/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: head/net-mgmt/p5-SNMP_Session/Makefile 342659 2014-02-05 08:26:44Z miwi $
 
 PORTNAME=	SNMP_Session
 PORTVERSION=	1.13
@@ -17,18 +17,16 @@ USE_PERL5=	configure
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 post-patch:
 	${RM} ${WRKSRC}/lib/SNMP_Session.pm.orig
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in README README.SNMP_util index.html
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
+
 
 .include <bsd.port.mk>
