@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: shells/p5-Term-ShellUI/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD: head/shells/p5-Term-ShellUI/Makefile 334748 2013-11-24 17:40:44Z mat $
 
 PORTNAME=	Term-ShellUI
 PORTVERSION=	0.92
