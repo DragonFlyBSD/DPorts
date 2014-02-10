@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: lang/v8/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: head/lang/v8/Makefile 343315 2014-02-08 10:05:06Z sunpoet $
 
 PORTNAME=	v8
 PORTVERSION=	3.18.5
@@ -9,24 +9,35 @@ MASTER_SITES=	LOCAL/vanilla
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Google\'s open source JavaScript engine
 
+LICENSE=	BSD3CLAUSE
+
 BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
 
-CONFLICTS=      v8-devel-*
+CONFLICTS=	v8-3.24.*
 
-USES=		gmake
+USES=		gmake compiler
 USE_XZ=		yes
 USE_PYTHON=	2
 USE_LDCONFIG=	yes
 ALL_TARGET=	native
-MAKE_ARGS=	strictaliasing=off
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
-USE_GCC=	4.7
+MAKE_ENV+=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 CFLAGS+=	-D__FreeBSD__=1
 
 .include <bsd.port.pre.mk>
 
+.if ${COMPILER_TYPE} == clang
+MAKE_ENV+=	LINK=clang++
+CFLAGS+=	-Wno-unused-private-field
+.if ${COMPILER_VERSION} >= 33
+CFLAGS+=	-Wno-nested-anon-types -Wno-unused-function
+.endif
+.else
+MAKE_ARGS+=	strictaliasing=off
+USE_GCC=	any
+.endif
 
 ONLY_FOR_ARCHS=	i386 amd64
 
