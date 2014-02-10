@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-# $FreeBSD: devel/p5-Sys-SigAction/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD: head/devel/p5-Sys-SigAction/Makefile 338908 2014-01-06 17:17:09Z az $
 
 PORTNAME=	Sys-SigAction
 PORTVERSION=	0.20
