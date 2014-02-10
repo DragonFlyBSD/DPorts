@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: textproc/p5-Sort-Naturally/Makefile 340672 2014-01-21 23:21:10Z mat $
+# $FreeBSD: head/textproc/p5-Sort-Naturally/Makefile 340672 2014-01-21 23:21:10Z mat $
 
 PORTNAME=	Sort-Naturally
 PORTVERSION=	1.03
