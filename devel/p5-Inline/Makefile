@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD: head/devel/p5-Inline/Makefile 332028 2013-10-30 01:38:24Z vanilla $
 
 PORTNAME=	Inline
 PORTVERSION=	0.53
