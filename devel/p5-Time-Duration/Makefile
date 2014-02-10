@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Time-Duration/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD: head/devel/p5-Time-Duration/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Time-Duration
 PORTVERSION=	1.1
