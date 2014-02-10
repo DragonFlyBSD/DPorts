@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: devel/cl-split-sequence/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: head/devel/cl-split-sequence/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	split-sequence
 PORTVERSION=	20011114.1
