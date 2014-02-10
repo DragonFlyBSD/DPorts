@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: sysutils/p5-Sys-Hostname-Long/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD: head/sysutils/p5-Sys-Hostname-Long/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	Sys-Hostname-Long
 PORTVERSION=	1.4
