@@ -1,5 +1,5 @@
 # Created by: Devon H. O'Dell <devon.odell@gmail.com>
-# $FreeBSD: lang/go/Makefile 335891 2013-12-08 13:33:35Z jlaffaye $
+# $FreeBSD: head/lang/go/Makefile 335891 2013-12-08 13:33:35Z jlaffaye $
 
 PORTNAME=	go
 PORTVERSION=	1.2
