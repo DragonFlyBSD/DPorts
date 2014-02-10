@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: devel/libelf/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD: head/devel/libelf/Makefile 342656 2014-02-05 08:26:28Z miwi $
 
 PORTNAME=	libelf
 PORTVERSION=	0.8.13
@@ -18,14 +18,12 @@ OPTIONS_DEFAULT=	EXTENDED SANITY
 EXTENDED_DESC=	ELF format extensions
 SANITY_DESC=	Avoid loading invalid ELF files
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-shared --disable-compat
 USE_LDCONFIG=	yes
-
-NOMAN=		defined
+USES=		desthack
 
 .if ${PORT_OPTIONS:MNLS}
 CPPFLAGS+=	-I${LOCALBASE}/include
