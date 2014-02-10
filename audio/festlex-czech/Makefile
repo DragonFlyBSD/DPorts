@@ -1,5 +1,5 @@
 # Created by: František Dvořák <valtri@civ.zcu.cz>
-# $FreeBSD: audio/festlex-czech/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/audio/festlex-czech/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	festlex-czech
 PORTVERSION=	0.2.1
