@@ -1,5 +1,5 @@
 # Created by: Adam David <adam@FreeBSD.org>
-# $FreeBSD: mail/procmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: head/mail/procmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
 
 PORTNAME=	procmail
 PORTVERSION=	3.22
