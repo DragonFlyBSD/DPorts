@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/tokyocabinet/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD: head/databases/tokyocabinet/Makefile 336187 2013-12-11 18:08:52Z bapt $
 
 PORTNAME=	tokyocabinet
 PORTVERSION=	1.4.48
