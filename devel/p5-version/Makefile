@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-version/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD: head/devel/p5-version/Makefile 332365 2013-11-01 13:08:11Z vanilla $
 
 PORTNAME=	version
 PORTVERSION=	0.99.04
