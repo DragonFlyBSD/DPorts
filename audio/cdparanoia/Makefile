@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: audio/cdparanoia/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/audio/cdparanoia/Makefile 343483 2014-02-09 12:25:56Z ehaupt $
 
 PORTNAME=	cdparanoia
 PORTVERSION=	3.9.8
@@ -12,14 +12,17 @@ EXTRACT_SUFX=	.src.tgz
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	A CDDA extraction tool (also known as ripper)
 
+LICENSE=	GPLv2
+
 GNU_CONFIGURE=	yes
-NO_STAGE=	yes
 USES=		gmake
 USE_LDCONFIG=	yes
 
-MAN1=		cdparanoia.1
-
 post-patch:
-	@${REINPLACE_CMD} -e 's/\(^ *default:\)/\1break;/' ${WRKSRC}/interface/utils.h
+	@${REINPLACE_CMD} -e 's/\(^ *default:\)/\1break;/' \
+		${WRKSRC}/interface/utils.h
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcdda_*
 
 .include <bsd.port.mk>
