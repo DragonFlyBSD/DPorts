@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Socket/Makefile 331882 2013-10-28 18:39:59Z sunpoet $
+# $FreeBSD: head/net/p5-Socket/Makefile 331882 2013-10-28 18:39:59Z sunpoet $
 
 PORTNAME=	Socket
 PORTVERSION=	2.013
