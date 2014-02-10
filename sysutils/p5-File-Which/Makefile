@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/p5-File-Which/Makefile 341639 2014-01-28 16:48:45Z miwi $
+# $FreeBSD: head/sysutils/p5-File-Which/Makefile 341639 2014-01-28 16:48:45Z miwi $
 
 PORTNAME=	File-Which
 PORTVERSION=	1.09
