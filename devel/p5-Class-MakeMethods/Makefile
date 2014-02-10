@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Class-MakeMethods/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: head/devel/p5-Class-MakeMethods/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-MakeMethods
 PORTVERSION=	1.010
