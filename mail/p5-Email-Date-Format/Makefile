@@ -1,5 +1,5 @@
 # Created by: Anton Yuzhaninov <citrin@rambler-co.ru>
-# $FreeBSD: mail/p5-Email-Date-Format/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD: head/mail/p5-Email-Date-Format/Makefile 338799 2014-01-05 16:55:04Z az $
 
 PORTNAME=	Email-Date-Format
 PORTVERSION=	1.002
