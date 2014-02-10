@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22/Makefile.doc 331788 2013-10-27 17:40:21Z ohauer $
+# $FreeBSD: head/www/apache22/Makefile.doc 331788 2013-10-27 17:40:21Z ohauer $
 #
 # Author:				Clement Laforet <clement@FreeBSD.org>
 #

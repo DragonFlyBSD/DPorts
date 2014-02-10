@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22/Makefile.modules 331788 2013-10-27 17:40:21Z ohauer $
+# $FreeBSD: head/www/apache22/Makefile.modules 331788 2013-10-27 17:40:21Z ohauer $
 #
 # Note by Clement Laforet: (to generate PLIST_SUB entries for modules)
 #	gsed 's/^\(.*\)mod\(.*\)\.so/%%\MOD\U\2%%\L\1mod\2\.so/' pkg-plist > tmp

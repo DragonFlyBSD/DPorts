@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/apache22/files/apache22.in 313287 2013-03-02 19:31:49Z ohauer $
+# $FreeBSD: head/www/apache22/files/apache22.in 313287 2013-03-02 19:31:49Z ohauer $
 #
 
 # PROVIDE: apache22
