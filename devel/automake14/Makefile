@@ -1,5 +1,5 @@
 # Created by: FUJIMOTO Kensaku <fujimoto@oscar.elec.waseda.ac.jp>
-# $FreeBSD: devel/automake14/Makefile 329276 2013-10-04 09:40:59Z bapt $
+# $FreeBSD: head/devel/automake14/Makefile 329276 2013-10-04 09:40:59Z bapt $
 
 PORTNAME=	automake
 PORTVERSION=	1.4.6
