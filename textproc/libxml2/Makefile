@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: textproc/libxml2/Makefile 334822 2013-11-25 08:31:27Z hrs $
+# $FreeBSD: head/textproc/libxml2/Makefile 334822 2013-11-25 08:31:27Z hrs $
 #    $MCom: ports/textproc/libxml2/Makefile,v 1.15 2012/11/26 19:55:23 kwm Exp $
 
 PORTNAME=	libxml2
