@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: devel/cl-asdf/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: head/devel/cl-asdf/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 NO_STAGE=	yes
 # The source tarball was obtained from the project's GIT repository:
