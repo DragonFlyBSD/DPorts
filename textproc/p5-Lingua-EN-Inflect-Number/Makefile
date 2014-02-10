@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Number/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD: head/textproc/p5-Lingua-EN-Inflect-Number/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	Lingua-EN-Inflect-Number
 PORTVERSION=	1.1
