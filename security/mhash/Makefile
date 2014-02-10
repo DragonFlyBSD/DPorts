@@ -1,5 +1,5 @@
 # Created by: nsayer@FreeBSD.org
-# $FreeBSD: security/mhash/Makefile 342266 2014-02-02 10:29:57Z miwi $
+# $FreeBSD: head/security/mhash/Makefile 342266 2014-02-02 10:29:57Z miwi $
 
 PORTNAME=	mhash
 PORTVERSION=	0.9.9.9
