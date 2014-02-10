@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/sary/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: head/textproc/sary/Makefile 327773 2013-09-20 23:17:30Z bapt $
 
 PORTNAME=	sary
 PORTVERSION=	1.2.0
