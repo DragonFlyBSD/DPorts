@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: security/p5-Module-Signature/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: head/security/p5-Module-Signature/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Module-Signature
 PORTVERSION=	0.73
