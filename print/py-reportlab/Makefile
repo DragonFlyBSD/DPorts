@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: print/py-reportlab/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/print/py-reportlab/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	reportlab
 PORTVERSION=	1.21.2
