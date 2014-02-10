@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: textproc/intltool/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: head/textproc/intltool/Makefile 342376 2014-02-03 02:36:27Z miwi $
 #   $MCom: ports/trunk/textproc/intltool/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	intltool
@@ -18,19 +18,15 @@ USES=		iconv gmake perl5
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir="${PREFIX}/libdata"
 
-MAN8=		intltool-extract.8 intltool-merge.8 intltool-prepare.8 \
-		intltool-update.8 intltoolize.8
-
 CONFLICTS=	xml-i18n-tools-[0-9]*
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} \
 		-E -e '/^mkinstalldirs[[:space:]]*=/s^/\.\.^^g'
 
 post-install:
-	${MKDIR} ${PREFIX}/share/intltool/XML/Parser/Style
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/intltool/XML/Parser/Style
 	${INSTALL_DATA} ${FILESDIR}/OrigTree.pm \
-	    	${PREFIX}/share/intltool/XML/Parser/Style
+	    	${STAGEDIR}${PREFIX}/share/intltool/XML/Parser/Style
 
 .include <bsd.port.mk>
