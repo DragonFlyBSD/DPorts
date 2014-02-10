@@ -1,5 +1,5 @@
 # Created by: Stefan Ehmann <shoesoft@gmx.net>
-# $FreeBSD: audio/musepack/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/audio/musepack/Makefile 342450 2014-02-03 14:31:32Z miwi $
 
 PORTNAME=	musepack
 PORTVERSION=	2009.03.01
@@ -12,7 +12,6 @@ MAINTAINER=	shoesoft@gmx.net
 COMMENT=	Decoder, encoder, and replaygain for musepack (mpc)
 
 USE_LDCONFIG=	yes
-NO_STAGE=	yes
 USE_AUTOTOOLS=	aclocal autoheader libtoolize automake autoconf libtool
 ACLOCAL_ARGS=	-I. -I ${LOCALBASE}/share/aclocal
 AUTOMAKE_ARGS=	--add-missing
