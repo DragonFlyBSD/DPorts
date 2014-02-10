@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: multimedia/libvpx/Makefile 339519 2014-01-12 16:08:27Z ashish $
+# $FreeBSD: head/multimedia/libvpx/Makefile 339519 2014-01-12 16:08:27Z ashish $
 
 PORTNAME=	libvpx
 PORTVERSION=	1.3.0
