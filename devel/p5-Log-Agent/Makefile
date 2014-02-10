@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@gallup.com>
-# $FreeBSD: devel/p5-Log-Agent/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD: head/devel/p5-Log-Agent/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Log-Agent
 PORTVERSION=	1.000
