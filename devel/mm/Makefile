@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: devel/mm/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD: head/devel/mm/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
 
 PORTNAME=	mm
 PORTVERSION=	1.4.2
