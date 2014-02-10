@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/libiptcdata/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD: head/graphics/libiptcdata/Makefile 328096 2013-09-24 06:24:17Z bapt $
 
 PORTNAME=	libiptcdata
 PORTVERSION=	1.0.4
