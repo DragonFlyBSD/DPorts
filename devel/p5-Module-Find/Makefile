@@ -1,8 +1,8 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Find/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD: head/devel/p5-Module-Find/Makefile 343259 2014-02-07 15:14:52Z culot $
 
 PORTNAME=	Module-Find
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
