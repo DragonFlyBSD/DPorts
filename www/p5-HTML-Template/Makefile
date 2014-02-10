@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Template/Makefile 332719 2013-11-04 13:46:20Z kuriyama $
+# $FreeBSD: head/www/p5-HTML-Template/Makefile 332719 2013-11-04 13:46:20Z kuriyama $
 
 PORTNAME=	HTML-Template
 PORTVERSION=	2.95
