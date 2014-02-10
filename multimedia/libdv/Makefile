@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libdv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/multimedia/libdv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libdv
 PORTVERSION=	1.0.0
