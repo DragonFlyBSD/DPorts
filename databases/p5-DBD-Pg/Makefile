@@ -1,8 +1,8 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-Pg/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: head/databases/p5-DBD-Pg/Makefile 342744 2014-02-05 15:58:54Z mat $
 
 PORTNAME=	DBD-Pg
-PORTVERSION=	2.19.3
+PORTVERSION=	3.0.0
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,7 +13,7 @@ COMMENT=	Provides access to PostgreSQL databases through the DBI
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-DBI>=1.52:${PORTSDIR}/databases/p5-DBI
+BUILD_DEPENDS=	p5-DBI>=1.614:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
