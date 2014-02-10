@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: shells/bash/Makefile 337433 2013-12-25 17:42:54Z bapt $
+# $FreeBSD: head/shells/bash/Makefile 337433 2013-12-25 17:42:54Z bapt $
 
 PORTNAME=		bash
 PATCHLEVEL=		45
