@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: graphics/exif/Makefile 331616 2013-10-25 17:10:07Z sunpoet $
+# $FreeBSD: head/graphics/exif/Makefile 331616 2013-10-25 17:10:07Z sunpoet $
 
 PORTNAME=	exif
 PORTVERSION=	0.6.21
