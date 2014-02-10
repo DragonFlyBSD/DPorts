@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooX-Types-MooseLike/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
+# $FreeBSD: head/devel/p5-MooX-Types-MooseLike/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
 
 PORTNAME=	MooX-Types-MooseLike
 PORTVERSION=	0.25
