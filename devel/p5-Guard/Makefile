@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Guard/Makefile 341613 2014-01-28 16:01:24Z miwi $
+# $FreeBSD: head/devel/p5-Guard/Makefile 341613 2014-01-28 16:01:24Z miwi $
 
 PORTNAME=	Guard
 PORTVERSION=	1.022
