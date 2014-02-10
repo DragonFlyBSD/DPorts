@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger <netchild@FreeBSD.org>
-# $FreeBSD: security/libssh2/Makefile 339935 2014-01-16 17:06:35Z rakuco $
+# $FreeBSD: head/security/libssh2/Makefile 339935 2014-01-16 17:06:35Z rakuco $
 
 PORTNAME=	libssh2
 PORTVERSION=	1.4.3
