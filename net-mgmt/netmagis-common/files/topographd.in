@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: net-mgmt/netmagis-common/files/topographd.in 306707 2012-10-30 20:27:10Z crees $
+# $FreeBSD: head/net-mgmt/netmagis-common/files/topographd.in 306707 2012-10-30 20:27:10Z crees $
 #
 
 # PROVIDE: topographd
