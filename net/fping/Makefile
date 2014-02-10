@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/fping/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: head/net/fping/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	fping
 PORTVERSION=	3.5
