@@ -1,14 +1,17 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: www/p5-Apache-Session/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/www/p5-Apache-Session/Makefile 343256 2014-02-07 14:58:25Z culot $
 
 PORTNAME=	Apache-Session
-PORTVERSION=	1.90
+PORTVERSION=	1.91
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Persistence framework for session data
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 RUN_DEPENDS:=	${BUILD_DEPENDS}
