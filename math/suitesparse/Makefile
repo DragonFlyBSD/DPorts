@@ -1,5 +1,5 @@
 # Created by: Maho Nakata <maho@FreeBSD.org>
-# $FreeBSD: math/suitesparse/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/math/suitesparse/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	suitesparse
 PORTVERSION=	4.0.2
