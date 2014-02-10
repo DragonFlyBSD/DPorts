@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-PasswdMD5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: head/security/p5-Crypt-PasswdMD5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-PasswdMD5
 PORTVERSION=	1.3
