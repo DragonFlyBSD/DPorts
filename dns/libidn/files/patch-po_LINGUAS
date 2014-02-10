@@ -1,5 +1,5 @@
 
-$FreeBSD: dns/libidn/files/patch-po_LINGUAS 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/dns/libidn/files/patch-po_LINGUAS 340725 2014-01-22 17:40:44Z mat $
 
 --- po/LINGUAS.orig
 +++ po/LINGUAS

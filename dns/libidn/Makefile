@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: dns/libidn/Makefile 328685 2013-09-29 12:53:16Z mandree $
+# $FreeBSD: head/dns/libidn/Makefile 342383 2014-02-03 04:11:31Z miwi $
 
 PORTNAME=	libidn
 PORTVERSION=	1.28
@@ -21,7 +21,6 @@ USES=		iconv pathfix perl5 pkgconfig
 
 INFO=		libidn
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -46,12 +45,9 @@ post-patch:
 .endif
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in FAQ NEWS README
-	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
-.include "Makefile.man"
 .include <bsd.port.mk>
