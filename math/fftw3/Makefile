@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: math/fftw3/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD: head/math/fftw3/Makefile 327746 2013-09-20 20:55:04Z bapt $
 #    $MCom: ports-experimental/math/fftw3/Makefile,v 1.1 2006/03/28 00:08:57 ahze Exp $
 
 PORTNAME=	fftw3
