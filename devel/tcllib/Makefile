@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: devel/tcllib/Makefile 336275 2013-12-12 16:17:42Z gahr $
+# $FreeBSD: head/devel/tcllib/Makefile 342409 2014-02-03 10:00:13Z gahr $
 
 PORTNAME=	tcllib
 PORTVERSION=	1.15
@@ -9,6 +9,11 @@ MASTER_SITES=	SF
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Collection of utility modules for Tcl
+
+LICENSE=	TclTk
+LICENSE_NAME=	Tcl/Tk License
+LICENSE_FILE=	${WRKSRC}/license.terms
+LICENSE_PERMS=	auto-accept dist-mirror dist-sell pkg-mirror pkg-sell
 
 OPTIONS_DEFINE=	DOCS MANPAGES
 
@@ -31,9 +36,10 @@ INSTALL_ARGS=	-pkgs -pkg-path ${STAGEDIR}${PREFIX}/lib/tcllib \
 .if ${PORT_OPTIONS:MMANPAGES}
 ALL_TARGET+=	nroff-doc
 INSTALL_ARGS+=	-nroff-path ${STAGEDIR}${PREFIX}/man/mann
-.include "Makefile.man"
+PLIST_SUB+=	MAN=""
 .else
 INSTALL_ARGS+=	-no-nroff
+PLIST_SUB+=	MAN="@comment "
 .endif
 
 #
