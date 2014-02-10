@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-PSGI/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD: head/www/p5-CGI-PSGI/Makefile 338784 2014-01-05 15:30:10Z az $
 
 PORTNAME=	CGI-PSGI
 PORTVERSION=	0.15
