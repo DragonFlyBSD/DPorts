@@ -1,5 +1,5 @@
 # Created by: markun@onohara.to
-# $FreeBSD: security/clamav/Makefile 339996 2014-01-16 22:56:12Z garga $
+# $FreeBSD: head/security/clamav/Makefile 339996 2014-01-16 22:56:12Z garga $
 
 PORTNAME=	clamav
 PORTVERSION=	0.98.1
