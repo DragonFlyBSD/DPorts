@@ -1,8 +1,9 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: sysutils/coreutils/Makefile 340873 2014-01-24 01:01:53Z jgh $
+# $FreeBSD: head/sysutils/coreutils/Makefile 343591 2014-02-10 07:15:19Z miwi $
 
 PORTNAME=	coreutils
 PORTVERSION=	8.22
+PORTREVISION=	1
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	GNU
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -25,7 +26,7 @@ CONFIGURE_ARGS=	--program-prefix=g	\
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib" FORCE_UNSAFE_CONFIGURE=1
 CPPFLAGS+=	"-I${LOCALBASE}/include"
 
-USES=		gmake perl5
+USES=		gmake perl5 charsetfix
 USE_PERL5=	build	# build - required for tests and man page generation
 USE_XZ=		yes
 USE_LDCONFIG=	yes
