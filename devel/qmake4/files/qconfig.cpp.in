@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: devel/qmake4/files/qconfig.cpp.in 338902 2014-01-06 16:16:52Z makc $
+ * $FreeBSD: head/devel/qmake4/files/qconfig.cpp.in 338902 2014-01-06 16:16:52Z makc $
  */
 
 /* Installation date */
