@@ -1,5 +1,5 @@
 # Created by: Brad Hendrickse <bradh@uunet.co.za>
-# $FreeBSD: devel/p5-Date-Calc/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD: head/devel/p5-Date-Calc/Makefile 331933 2013-10-29 07:56:01Z vanilla $
 
 PORTNAME=	Date-Calc
 PORTVERSION=	6.3
