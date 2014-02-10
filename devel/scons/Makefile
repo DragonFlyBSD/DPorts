@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: devel/scons/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: head/devel/scons/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	scons
 PORTVERSION=	2.3.0
