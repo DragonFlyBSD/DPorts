@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libtre/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/libtre/Makefile 343105 2014-02-06 15:06:58Z miwi $
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
@@ -26,9 +26,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NLS OPTIMIZED_CFLAGS PGO DOCS
 
-MAN1=	tre_agrep.1
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -66,12 +63,10 @@ pre-build: pgo
 .endif
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in tre-api.html tre-syntax.html
-	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 regression-test: build
 	@(cd ${BUILD_WRKSRC} ; ${SETENV} ${MAKE_ENV} ${MAKE} check )
