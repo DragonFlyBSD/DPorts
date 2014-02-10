@@ -1,7 +1,7 @@
-# $FreeBSD: textproc/rubygem-nokogiri/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD: head/textproc/rubygem-nokogiri/Makefile 343073 2014-02-06 13:30:27Z swills $
 
 PORTNAME=	nokogiri
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
