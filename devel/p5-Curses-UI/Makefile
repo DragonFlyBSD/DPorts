@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Curses-UI/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: head/devel/p5-Curses-UI/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Curses-UI
 PORTVERSION=	0.9609
