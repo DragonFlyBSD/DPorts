@@ -1,5 +1,5 @@
 # Created by: Brian Buchanan <brian@CSUA.Berkeley.EDU>
-# $FreeBSD: games/flightgear-data/Makefile 338879 2014-01-06 13:50:21Z martymac $
+# $FreeBSD: head/games/flightgear-data/Makefile 338879 2014-01-06 13:50:21Z martymac $
 
 PORTNAME=	flightgear-data
 PORTVERSION=	2.12.1
