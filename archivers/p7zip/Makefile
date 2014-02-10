@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: archivers/p7zip/Makefile 338521 2014-01-03 04:21:55Z rakuco $
+# $FreeBSD: head/archivers/p7zip/Makefile 338521 2014-01-03 04:21:55Z rakuco $
 
 PORTNAME=	p7zip
 PORTVERSION=	9.20.1
