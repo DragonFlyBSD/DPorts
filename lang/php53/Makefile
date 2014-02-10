@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: lang/php53/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD: head/lang/php53/Makefile 337385 2013-12-24 21:22:21Z kwm $
 
 PORTNAME=	php53
 PORTVERSION=	5.3.28
