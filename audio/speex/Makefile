@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/speex/Makefile 330808 2013-10-19 00:05:32Z bapt $
+# $FreeBSD: head/audio/speex/Makefile 342612 2014-02-04 22:02:31Z naddy $
 
 PORTNAME=	speex
 DISTVERSION=	1.2rc1
@@ -24,7 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.pre.mk>
 
-.if ${MACHINE_CPU:Msse}!=""
+.if defined(MACHINE_CPU) && ${MACHINE_CPU:Msse}!=""
 CONFIGURE_ARGS+=	--enable-sse
 .endif
 
