@@ -1,5 +1,5 @@
 # Created by: jagapen@home.com
-# $FreeBSD: devel/ffcall/Makefile 341635 2014-01-28 16:47:51Z miwi $
+# $FreeBSD: head/devel/ffcall/Makefile 341635 2014-01-28 16:47:51Z miwi $
 
 PORTNAME=	ffcall
 PORTVERSION=	1.10
