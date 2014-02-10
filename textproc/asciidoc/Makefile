@@ -1,9 +1,9 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: textproc/asciidoc/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: head/textproc/asciidoc/Makefile 342575 2014-02-04 16:54:12Z sunpoet $
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
