@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: net/GeoIP/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/net/GeoIP/Makefile 343578 2014-02-10 03:19:23Z miwi $
 
 PORTNAME=	GeoIP
 PORTVERSION=	1.4.8
@@ -16,16 +16,13 @@ CONFIGURE_ARGS=	CC="${CC}" PATH="${PATH}" \
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
-MAN1=		geoiplookup.1 geoipupdate.1 geoiplookup6.1
-
 SUB_FILES=	geoipupdate.sh
 
-NO_STAGE=	yes
 run-autotools:
 	@${REINPLACE_CMD} -e '/^LIBTOOL=/s^\$$(top_builddir)/libtool^${LIBTOOL}^g' \
 	${WRKSRC}/aclocal.m4
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/geoipupdate.sh ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKDIR}/geoipupdate.sh ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
