@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/mp4v2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/multimedia/mp4v2/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	mp4v2
 PORTVERSION=	1.9.1
