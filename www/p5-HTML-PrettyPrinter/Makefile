@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-HTML-PrettyPrinter/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD: head/www/p5-HTML-PrettyPrinter/Makefile 338765 2014-01-05 13:18:23Z az $
 
 PORTNAME=	HTML-PrettyPrinter
 PORTVERSION=	0.03
