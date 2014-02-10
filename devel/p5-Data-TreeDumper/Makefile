@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Data-TreeDumper/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: head/devel/p5-Data-TreeDumper/Makefile 342699 2014-02-05 13:45:39Z miwi $
 
 PORTNAME=	Data-TreeDumper
 PORTVERSION=	0.40
@@ -18,12 +18,9 @@ BUILD_DEPENDS=	p5-Term-Size>=0:${PORTSDIR}/devel/p5-Term-Size \
 		p5-Sort-Naturally>=0:${PORTSDIR}/textproc/p5-Sort-Naturally
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-MAN3=		Data::TreeDumper.3
-
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} >= 501400
