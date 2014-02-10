@@ -1,5 +1,5 @@
 # Created by: Alexandr Kovalenko <never@nevermind.kiev.ua>
-# $FreeBSD: converters/enca/Makefile 339231 2014-01-09 13:33:41Z bapt $
+# $FreeBSD: head/converters/enca/Makefile 339231 2014-01-09 13:33:41Z bapt $
 
 PORTNAME=	enca
 PORTVERSION=	1.13
