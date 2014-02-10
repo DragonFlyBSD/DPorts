@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-PkgConfig/Makefile 328826 2013-09-30 15:52:33Z sunpoet $
+# $FreeBSD: head/devel/p5-ExtUtils-PkgConfig/Makefile 328826 2013-09-30 15:52:33Z sunpoet $
 
 PORTNAME=	ExtUtils-PkgConfig
 PORTVERSION=	1.15
