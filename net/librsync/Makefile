@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: net/librsync/Makefile 341980 2014-01-31 12:13:45Z miwi $
+# $FreeBSD: head/net/librsync/Makefile 341980 2014-01-31 12:13:45Z miwi $
 
 PORTNAME=	librsync
 PORTVERSION=	0.9.7
