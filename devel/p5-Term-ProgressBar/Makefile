@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Term-ProgressBar/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD: head/devel/p5-Term-ProgressBar/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Term-ProgressBar
 PORTVERSION=	2.14
