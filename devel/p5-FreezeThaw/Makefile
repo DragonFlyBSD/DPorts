@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-FreezeThaw/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD: head/devel/p5-FreezeThaw/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	FreezeThaw
 PORTVERSION=	0.50.01
