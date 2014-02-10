@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: lang/luajit/Makefile 342193 2014-02-01 17:10:46Z miwi $
+# $FreeBSD: head/lang/luajit/Makefile 342193 2014-02-01 17:10:46Z miwi $
 
 PORTNAME=	luajit
 DISTVERSION=	2.0.2
