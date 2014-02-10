@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-HTML-RewriteAttributes/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/p5-HTML-RewriteAttributes/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	HTML-RewriteAttributes
 PORTVERSION=	0.05
