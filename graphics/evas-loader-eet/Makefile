@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-eet/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/graphics/evas-loader-eet/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	loader-eet
 PORTVERSION=	1.7.9
