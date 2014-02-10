@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: net/spread/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: head/net/spread/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	spread
 PORTVERSION=	3.17.4
