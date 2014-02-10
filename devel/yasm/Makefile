@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/yasm/Makefile 342252 2014-02-02 08:35:15Z miwi $
+# $FreeBSD: head/devel/yasm/Makefile 343599 2014-02-10 07:54:34Z bapt $
 
 PORTNAME=	yasm
 PORTVERSION=	1.2.0
@@ -7,9 +7,9 @@ CATEGORIES=	devel lang
 MASTER_SITES=	http://www.tortall.net/projects/yasm/releases/
 
 MAINTAINER=	johnson.peter@gmail.com
-COMMENT=	A complete rewrite of the NASM assembler
+COMMENT=	Complete rewrite of the NASM assembler
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 OPTIONS_DEFINE=	NLS
 
@@ -31,5 +31,8 @@ CONFIGURE_ARGS+=--disable-nls --without-libiconv-prefix --without-libintl-prefix
 .endif
 
 INSTALL_TARGET=	install install-man
+
+post-patch:
+	 @${REINPLACE_CMD} -e '/echo.*RANLIB/,+1d' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
