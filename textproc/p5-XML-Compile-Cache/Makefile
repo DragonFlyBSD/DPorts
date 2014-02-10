@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-XML-Compile-Cache/Makefile 330413 2013-10-15 16:59:06Z sunpoet $
+# $FreeBSD: head/textproc/p5-XML-Compile-Cache/Makefile 330413 2013-10-15 16:59:06Z sunpoet $
 
 PORTNAME=	XML-Compile-Cache
 PORTVERSION=	1.00
