@@ -1,5 +1,5 @@
 # Created by: snowchyld
-# $FreeBSD: textproc/p5-Hash-Merge/Makefile 332878 2013-11-05 17:55:51Z sunpoet $
+# $FreeBSD: head/textproc/p5-Hash-Merge/Makefile 332878 2013-11-05 17:55:51Z sunpoet $
 
 PORTNAME=	Hash-Merge
 PORTVERSION=	0.20
