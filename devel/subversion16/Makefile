@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion16/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/subversion16/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
