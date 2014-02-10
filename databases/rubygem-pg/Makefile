@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/rubygem-pg/Makefile 338345 2014-01-01 00:08:46Z sunpoet $
+# $FreeBSD: head/databases/rubygem-pg/Makefile 338345 2014-01-01 00:08:46Z sunpoet $
 
 PORTNAME=	pg
 PORTVERSION=	0.17.1
