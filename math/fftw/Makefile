@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: math/fftw/Makefile 337201 2013-12-22 17:06:45Z tijl $
+# $FreeBSD: head/math/fftw/Makefile 337201 2013-12-22 17:06:45Z tijl $
 
 PORTNAME=	fftw
 PORTVERSION=	2.1.5
