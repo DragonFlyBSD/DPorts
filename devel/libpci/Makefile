@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: devel/libpci/Makefile 333524 2013-11-11 17:17:46Z sunpoet $
+# $FreeBSD: head/devel/libpci/Makefile 333524 2013-11-11 17:17:46Z sunpoet $
 
 PORTNAME=	libpci
 PORTVERSION=	3.2.1
