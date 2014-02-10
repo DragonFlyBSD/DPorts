@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-CreditCard/Makefile 338758 2014-01-05 12:35:44Z az $
+# $FreeBSD: head/finance/p5-Business-CreditCard/Makefile 338758 2014-01-05 12:35:44Z az $
 
 PORTNAME=	Business-CreditCard
 PORTVERSION=	0.32
