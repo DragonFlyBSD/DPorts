@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-subversion/Makefile 330360 2013-10-14 20:56:34Z ohauer $
+# $FreeBSD: head/devel/p5-subversion/Makefile 330360 2013-10-14 20:56:34Z ohauer $
 
 PKGNAMEPREFIX=	p5-
 
