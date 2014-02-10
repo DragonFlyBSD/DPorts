@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@ciam.ru>
-# $FreeBSD: devel/argp-standalone/Makefile 337598 2013-12-26 19:14:52Z bapt $
+# $FreeBSD: head/devel/argp-standalone/Makefile 337598 2013-12-26 19:14:52Z bapt $
 
 PORTNAME=	argp-standalone
 PORTVERSION=	1.3
