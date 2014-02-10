@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Check-ISA/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: head/devel/p5-Check-ISA/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Check-ISA
 PORTVERSION=	0.04
