@@ -1,5 +1,5 @@
 # Created by: Horance Chou <horance@freedom.ie.cycu.edu.tw>
-# $FreeBSD: devel/libffi/Makefile 338001 2013-12-29 14:58:31Z tijl $
+# $FreeBSD: head/devel/libffi/Makefile 338001 2013-12-29 14:58:31Z tijl $
 
 PORTNAME=	libffi
 PORTVERSION=	3.0.13
