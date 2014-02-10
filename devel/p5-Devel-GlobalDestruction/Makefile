@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-GlobalDestruction/Makefile 332515 2013-11-02 17:20:36Z sunpoet $
+# $FreeBSD: head/devel/p5-Devel-GlobalDestruction/Makefile 332515 2013-11-02 17:20:36Z sunpoet $
 
 PORTNAME=	Devel-GlobalDestruction
 PORTVERSION=	0.12
