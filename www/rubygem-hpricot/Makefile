@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-hpricot/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD: head/www/rubygem-hpricot/Makefile 332054 2013-10-30 03:01:19Z swills $
 
 PORTNAME=	hpricot
 PORTVERSION=	0.8.6
