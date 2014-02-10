@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/pear-Horde_Browser/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: head/www/pear-Horde_Browser/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Horde_Browser
 PORTVERSION=	2.0.4
