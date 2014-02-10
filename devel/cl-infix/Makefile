@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: devel/cl-infix/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: head/devel/cl-infix/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	infix
 PORTVERSION=	19960628
