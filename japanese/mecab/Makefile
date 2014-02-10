@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/mecab/Makefile 340097 2014-01-17 19:48:56Z rakuco $
+# $FreeBSD: head/japanese/mecab/Makefile 340097 2014-01-17 19:48:56Z rakuco $
 
 PORTNAME=	mecab
 PORTVERSION=	0.996
