@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-ExtUtils-Depends/Makefile 336249 2013-12-12 07:50:31Z culot $
+# $FreeBSD: head/devel/p5-ExtUtils-Depends/Makefile 336249 2013-12-12 07:50:31Z culot $
 
 PORTNAME=	ExtUtils-Depends
 PORTVERSION=	0.306
