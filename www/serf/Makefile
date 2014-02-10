@@ -1,5 +1,5 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD: www/serf/Makefile 342311 2014-02-02 14:59:45Z ohauer $
+# $FreeBSD: head/www/serf/Makefile 342486 2014-02-04 05:50:01Z ohauer $
 
 PORTNAME=	serf
 PORTVERSION=	1.3.3
@@ -20,7 +20,7 @@ USE_LDCONFIG=	yes
 
 SUB_FILES=	libserf-1.la
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS GSSAPI
 
 SCONS_ENV=	# empty
 SCONS_BUILDENV=	# empty
@@ -31,6 +31,12 @@ SCONS_ARGS+=	PREFIX=${PREFIX}
 SCONS_ARGS+=	CC=${CC}
 SCONS_ARGS+=	CFLAGS="${CFLAGS}"
 SCONS_INSTALL_TARGET=	install --install-sandbox=${STAGEDIR}
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MGSSAPI}
+SCONS_ARGS+=	GSSAPI="/usr"
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^Requires.private/d' ${WRKSRC}/build/serf.pc.in
