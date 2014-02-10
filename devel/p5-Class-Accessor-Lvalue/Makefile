@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Accessor-Lvalue/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: head/devel/p5-Class-Accessor-Lvalue/Makefile 342699 2014-02-05 13:45:39Z miwi $
 
 PORTNAME=	Class-Accessor-Lvalue
 PORTVERSION=	0.11
@@ -17,8 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Class::Accessor::Lvalue.3 \
-		Class::Accessor::Lvalue::Fast.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
