@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/libprelude/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: head/security/libprelude/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	libprelude
 PORTVERSION=	1.0.1
