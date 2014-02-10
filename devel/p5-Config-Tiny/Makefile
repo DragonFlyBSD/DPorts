@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Config-Tiny/Makefile 334742 2013-11-24 16:16:51Z sunpoet $
+# $FreeBSD: head/devel/p5-Config-Tiny/Makefile 334742 2013-11-24 16:16:51Z sunpoet $
 
 PORTNAME=	Config-Tiny
 PORTVERSION=	2.20
