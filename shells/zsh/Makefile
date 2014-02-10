@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: shells/zsh/Makefile 339070 2014-01-08 07:28:43Z bapt $
+# $FreeBSD: head/shells/zsh/Makefile 339070 2014-01-08 07:28:43Z bapt $
 
 PORTNAME=	zsh
 PORTVERSION=	5.0.5
