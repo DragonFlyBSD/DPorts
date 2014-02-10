@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/py-vobject/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/deskutils/py-vobject/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vobject
 PORTVERSION=	0.8.1c
