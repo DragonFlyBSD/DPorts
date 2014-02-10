@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: www/pecl-APC/Makefile 334534 2013-11-21 23:12:18Z sunpoet $
+# $FreeBSD: head/www/pecl-APC/Makefile 334534 2013-11-21 23:12:18Z sunpoet $
 
 PORTNAME=	APC
 PORTVERSION=	3.1.14
