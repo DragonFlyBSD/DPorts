@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rake/Makefile 341518 2014-01-28 08:42:15Z bapt $
+# $FreeBSD: head/devel/rubygem-rake/Makefile 342511 2014-02-04 12:06:56Z sunpoet $
 
 PORTNAME=	rake
 PORTVERSION=	10.1.1
@@ -8,6 +8,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby Make
+
+LICENSE=	MIT
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
