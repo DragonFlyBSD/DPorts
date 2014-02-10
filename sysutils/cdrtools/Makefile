@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: sysutils/cdrtools/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: head/sysutils/cdrtools/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 ###########################################################################
 # This makefile was contributed by Marius Strobl.
