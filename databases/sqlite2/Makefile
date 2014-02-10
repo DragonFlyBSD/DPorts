@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: databases/sqlite2/Makefile 339871 2014-01-15 23:50:27Z bapt $
+# $FreeBSD: head/databases/sqlite2/Makefile 339871 2014-01-15 23:50:27Z bapt $
 
 PORTNAME=	sqlite
 PORTVERSION=	2.8.17
