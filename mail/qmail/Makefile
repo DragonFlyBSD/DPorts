@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br>
-# $FreeBSD: mail/qmail/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD: head/mail/qmail/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
 
 PORTNAME=	qmail
 PORTVERSION?=	${QMAIL_VERSION}
