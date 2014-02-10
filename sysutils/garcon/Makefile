@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: sysutils/garcon/Makefile 330344 2013-10-14 19:18:17Z olivierd $
+# $FreeBSD: head/sysutils/garcon/Makefile 330344 2013-10-14 19:18:17Z olivierd $
 
 PORTNAME=	garcon
 PORTVERSION=	0.2.1
