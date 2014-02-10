@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: mail/razor-agents/Makefile 332302 2013-10-31 23:35:34Z garga $
+# $FreeBSD: head/mail/razor-agents/Makefile 332302 2013-10-31 23:35:34Z garga $
 
 PORTNAME=	razor-agents
 PORTVERSION=	2.84
