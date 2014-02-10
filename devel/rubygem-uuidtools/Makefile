@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-uuidtools/Makefile 332043 2013-10-30 02:47:06Z swills $
+# $FreeBSD: head/devel/rubygem-uuidtools/Makefile 332043 2013-10-30 02:47:06Z swills $
 
 PORTNAME=	uuidtools
 PORTVERSION=	2.1.4
