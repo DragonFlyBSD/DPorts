@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Net-SMTP-SSL/Makefile 342249 2014-02-02 08:11:05Z eadler $
+# $FreeBSD: head/mail/p5-Net-SMTP-SSL/Makefile 342249 2014-02-02 08:11:05Z eadler $
 
 PORTNAME=	Net-SMTP-SSL
 PORTVERSION=	1.01
