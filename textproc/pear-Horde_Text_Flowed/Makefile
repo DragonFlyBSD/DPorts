@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: textproc/pear-Horde_Text_Flowed/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/pear-Horde_Text_Flowed/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Text_Flowed
 PORTVERSION=	2.0.1
