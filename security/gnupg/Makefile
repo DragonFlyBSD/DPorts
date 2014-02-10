@@ -1,4 +1,4 @@
-# $FreeBSD: security/gnupg/Makefile 335479 2013-12-02 12:05:45Z mat $
+# $FreeBSD: head/security/gnupg/Makefile 335479 2013-12-02 12:05:45Z mat $
 
 PORTNAME=	gnupg
 PORTVERSION=	2.0.22
