@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2/Makefile 337435 2013-12-25 18:05:51Z ume $
+# $FreeBSD: head/security/cyrus-sasl2/Makefile 337435 2013-12-25 18:05:51Z ume $
 
 PORTNAME=	cyrus-sasl
 PORTVERSION=	2.1.26
