@@ -1,5 +1,5 @@
 # Created by: ljo
-# $FreeBSD: math/blas/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/math/blas/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	blas
 PORTREVISION=	1
