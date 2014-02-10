@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-feedparser/Makefile 341799 2014-01-30 03:13:00Z miwi $
+# $FreeBSD: head/textproc/py-feedparser/Makefile 341799 2014-01-30 03:13:00Z miwi $
 
 PORTNAME=	feedparser
 PORTVERSION=	5.1.3
