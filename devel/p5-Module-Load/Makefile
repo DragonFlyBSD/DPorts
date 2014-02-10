@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Load/Makefile 340431 2014-01-20 17:24:57Z sunpoet $
+# $FreeBSD: head/devel/p5-Module-Load/Makefile 342564 2014-02-04 16:15:19Z sunpoet $
 
 PORTNAME=	Module-Load
-PORTVERSION=	0.28
+PORTVERSION=	0.30
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
