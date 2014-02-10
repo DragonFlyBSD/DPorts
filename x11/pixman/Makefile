@@ -1,4 +1,4 @@
-# $FreeBSD: x11/pixman/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD: head/x11/pixman/Makefile 342587 2014-02-04 18:39:42Z kwm $
 
 PORTNAME=	pixman
 PORTVERSION=	0.32.4
@@ -18,13 +18,15 @@ OPTIONS_DEFINE=	SIMD
 
 .include <bsd.port.options.mk>
 
-.if ! {PORT_OPTIONS:MSIMD}
+.if ! ${PORT_OPTIONS:MSIMD}
 CONFIGURE_ARGS=	--disable-vmx --disable-arm-simd
+. if defined(MACHINE_CPU)
 . if ! ${MACHINE_CPU:Mmmx}
 CONFIGURE_ARGS+=	--disable-mmx
 . endif
 . if ! ${MACHINE_CPU:Msse2}
 CONFIGURE_ARGS+=	--disable-sse2
+. endif
 . endif
 .endif
 
