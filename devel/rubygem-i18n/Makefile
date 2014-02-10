@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-i18n/Makefile 335697 2013-12-05 20:27:08Z sunpoet $
+# $FreeBSD: head/devel/rubygem-i18n/Makefile 335697 2013-12-05 20:27:08Z sunpoet $
 
 PORTNAME=	i18n
 PORTVERSION=	0.6.9
