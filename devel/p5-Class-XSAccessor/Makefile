@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-XSAccessor/Makefile 334559 2013-11-22 08:55:41Z sunpoet $
+# $FreeBSD: head/devel/p5-Class-XSAccessor/Makefile 334559 2013-11-22 08:55:41Z sunpoet $
 
 PORTNAME=	Class-XSAccessor
 PORTVERSION=	1.19
