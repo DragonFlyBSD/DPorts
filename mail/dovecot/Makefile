@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dominic.marks@btinternet.com>
-# $FreeBSD: mail/dovecot/Makefile 341892 2014-01-30 22:05:06Z pawel $
+# $FreeBSD: head/mail/dovecot/Makefile 341892 2014-01-30 22:05:06Z pawel $
 
 PORTNAME=	dovecot
 PORTVERSION=	1.2.17
