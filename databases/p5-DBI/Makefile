@@ -1,14 +1,14 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: databases/p5-DBI/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD: head/databases/p5-DBI/Makefile 342461 2014-02-03 17:45:10Z culot $
 
 PORTNAME=	DBI
-PORTVERSION=	1.630
+PORTVERSION=	1.631
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	The perl5 Database Interface.  Required for DBD::* modules
+COMMENT=	Perl5 Database Interface, required for DBD::* modules
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
