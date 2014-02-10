@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/libdbi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/databases/libdbi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libdbi
 PORTVERSION=	0.8.4
