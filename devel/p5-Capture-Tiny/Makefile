@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: devel/p5-Capture-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: head/devel/p5-Capture-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Capture-Tiny
 PORTVERSION=	0.23
