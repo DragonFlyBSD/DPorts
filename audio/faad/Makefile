@@ -1,5 +1,5 @@
 # Created by: Sean McGovern <sean@sfarc.net>
-# $FreeBSD: audio/faad/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD: head/audio/faad/Makefile 334194 2013-11-18 13:45:44Z bapt $
 
 PORTNAME=	faad2
 PORTVERSION=	2.7
