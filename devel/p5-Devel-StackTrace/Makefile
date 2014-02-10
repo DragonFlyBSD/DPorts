@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Devel-StackTrace/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD: head/devel/p5-Devel-StackTrace/Makefile 342562 2014-02-04 16:15:10Z sunpoet $
 
 PORTNAME=	Devel-StackTrace
-PORTVERSION=	1.30
+PORTVERSION=	1.31
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
