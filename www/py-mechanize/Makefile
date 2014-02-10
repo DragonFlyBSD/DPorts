@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/py-mechanize/Makefile 341731 2014-01-29 13:18:39Z miwi $
+# $FreeBSD: head/www/py-mechanize/Makefile 341731 2014-01-29 13:18:39Z miwi $
 
 PORTNAME=	mechanize
 PORTVERSION=	0.2.5
