@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Daemon/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: head/net/p5-Net-Daemon/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Daemon
 PORTVERSION=	0.48
