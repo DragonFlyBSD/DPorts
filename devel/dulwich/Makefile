@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/dulwich/Makefile 335926 2013-12-08 19:10:41Z pawel $
+# $FreeBSD: head/devel/dulwich/Makefile 335926 2013-12-08 19:10:41Z pawel $
 
 PORTNAME=	dulwich
 PORTVERSION=	0.9.4
