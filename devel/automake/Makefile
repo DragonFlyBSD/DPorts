@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/automake/Makefile 328071 2013-09-23 22:03:42Z bapt $
+# $FreeBSD: head/devel/automake/Makefile 328071 2013-09-23 22:03:42Z bapt $
 
 PORTNAME=	automake
 PORTVERSION=	1.14
