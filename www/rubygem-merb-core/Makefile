@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-merb-core/Makefile 338347 2014-01-01 00:12:13Z sunpoet $
+# $FreeBSD: head/www/rubygem-merb-core/Makefile 338347 2014-01-01 00:12:13Z sunpoet $
 
 PORTNAME=	merb-core
 PORTVERSION=	1.1.3
