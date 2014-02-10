@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: mail/pear-Mail_Mime/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: head/mail/pear-Mail_Mime/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Mail_Mime
 PORTVERSION=	1.8.8
