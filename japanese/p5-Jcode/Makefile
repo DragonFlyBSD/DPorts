@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/p5-Jcode/Makefile 341610 2014-01-28 15:58:59Z miwi $
+# $FreeBSD: head/japanese/p5-Jcode/Makefile 341610 2014-01-28 15:58:59Z miwi $
 
 PORTNAME=	Jcode
 PORTVERSION=	2.07
