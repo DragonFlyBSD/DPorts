@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-PAR-Dist/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD: head/devel/p5-PAR-Dist/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	PAR-Dist
 PORTVERSION=	0.49
