@@ -1,5 +1,5 @@
 # Created by: Kostya Lukin <lukin@okbmei.msk.su>
-# $FreeBSD: dns/adns/Makefile 329945 2013-10-10 00:03:44Z madpilot $
+# $FreeBSD: head/dns/adns/Makefile 329945 2013-10-10 00:03:44Z madpilot $
 
 PORTNAME=	adns
 PORTVERSION=	1.4
