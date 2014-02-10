@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/converters/iconv/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	iconv
 PORTVERSION=	2.0
