@@ -1,5 +1,5 @@
 # Created by: Stephen J. Roznowski <sjr@home.net>
-# $FreeBSD: devel/p5-Time-HiRes/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD: head/devel/p5-Time-HiRes/Makefile 338916 2014-01-06 18:07:56Z az $
 
 PORTNAME=	Time-HiRes
 PORTVERSION=	1.9726
