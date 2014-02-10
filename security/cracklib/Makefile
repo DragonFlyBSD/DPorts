@@ -1,5 +1,5 @@
 # Created by: ajk@iu.edu
-# $FreeBSD: security/cracklib/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: head/security/cracklib/Makefile 327888 2013-09-22 18:05:04Z bapt $
 
 PORTNAME=	cracklib
 PORTVERSION=	2.9.0
