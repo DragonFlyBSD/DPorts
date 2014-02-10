@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-CSS-Squish/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/p5-CSS-Squish/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	CSS-Squish
 PORTVERSION=	0.10
