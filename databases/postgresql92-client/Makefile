@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: databases/postgresql92-client/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
+# $FreeBSD: head/databases/postgresql92-client/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
 
 PORTNAME=	postgresql
 PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
