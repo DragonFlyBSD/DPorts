@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-CSS-Minifier-XS/Makefile 332514 2013-11-02 17:20:32Z sunpoet $
+# $FreeBSD: head/textproc/p5-CSS-Minifier-XS/Makefile 332514 2013-11-02 17:20:32Z sunpoet $
 
 PORTNAME=	CSS-Minifier-XS
 PORTVERSION=	0.09
