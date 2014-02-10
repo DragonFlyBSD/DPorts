@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Wrapper/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD: head/textproc/p5-Text-Wrapper/Makefile 340922 2014-01-24 18:10:39Z mat $
 
 PORTNAME=	Text-Wrapper
 PORTVERSION=	1.04
