@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: devel/py-twistedCore/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: head/devel/py-twistedCore/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	twistedCore
 PORTVERSION=	13.2.0
