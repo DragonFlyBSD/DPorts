@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: devel/libublio/Makefile 336430 2013-12-14 09:52:41Z mandree $
+# $FreeBSD: head/devel/libublio/Makefile 336430 2013-12-14 09:52:41Z mandree $
 
 PORTNAME=	libublio
 PORTVERSION=	20070103
