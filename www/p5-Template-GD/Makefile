@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/p5-Template-GD/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD: head/www/p5-Template-GD/Makefile 338754 2014-01-05 12:20:02Z az $
 
 PORTNAME=	Template-GD
 PORTVERSION=	2.66
