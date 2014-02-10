@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-channel-symfony2/Makefile 338892 2014-01-06 15:11:43Z sunpoet $
+# $FreeBSD: head/devel/pear-channel-symfony2/Makefile 338892 2014-01-06 15:11:43Z sunpoet $
 
 PORTNAME=	symfony2
 PORTVERSION=	20110826
