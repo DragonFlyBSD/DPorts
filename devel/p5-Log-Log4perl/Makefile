@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Log4perl/Makefile 342002 2014-01-31 15:23:29Z miwi $
+# $FreeBSD: head/devel/p5-Log-Log4perl/Makefile 342002 2014-01-31 15:23:29Z miwi $
 
 PORTNAME=	Log-Log4perl
 PORTVERSION=	1.42
