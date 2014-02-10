@@ -1,5 +1,5 @@
 # Created by: Adam Herzog <adam@herzogdesigns.com>
-# $FreeBSD: textproc/p5-XML-Writer/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: head/textproc/p5-XML-Writer/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	XML-Writer
 PORTVERSION=	0.623
