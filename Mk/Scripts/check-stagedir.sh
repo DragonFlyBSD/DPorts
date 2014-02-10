@@ -1,6 +1,6 @@
 #!/bin/sh
 # ports/Mk/Scripts/check-stagedir.sh - called from ports/Mk/bsd.stage.mk
-# $FreeBSD: head/Mk/Scripts/check-stagedir.sh 341573 2014-01-28 14:16:30Z mat $
+# $FreeBSD: head/Mk/Scripts/check-stagedir.sh 343607 2014-02-10 09:19:28Z mat $
 
 set -e
 export LC_ALL=C
@@ -78,6 +78,7 @@ else
 	# generate plist - pretend the plist had been empty
 	: >${WRKDIR}/.plist-dirs-unsorted
 	: >${WRKDIR}/.plist-files
+	echo '/you/have/to/check/what/makeplist/gives/you'
 fi
 
 ### PRODUCE MTREE FILE
