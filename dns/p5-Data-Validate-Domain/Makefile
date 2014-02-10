@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Data-Validate-Domain/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD: head/dns/p5-Data-Validate-Domain/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Data-Validate-Domain
 PORTVERSION=	0.10
