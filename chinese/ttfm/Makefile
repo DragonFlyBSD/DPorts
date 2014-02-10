@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: chinese/ttfm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/chinese/ttfm/Makefile 343608 2014-02-10 09:37:47Z ehaupt $
 
 PORTNAME=	ttfm
 PORTVERSION=	0.9.5
@@ -17,9 +17,8 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 MAKE_ARGS=	FREETYPE_BASE=${LOCALBASE:Q} CC="${CC}"
 
 PORTDOCS=	README USAGE
-MAN1=		ttfm.sh.1
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
@@ -31,18 +30,16 @@ post-patch:
 		${WRKSRC}/ttfm.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ttfinfo ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/ttfm.sh ${PREFIX}/bin/
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/ttfinfo ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/ttfm.sh ${STAGEDIR}${PREFIX}/bin/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DOCSDIR}/
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}/
 .endfor
-.endif
-	${INSTALL_MAN} ${WRKSRC}/ttfm.sh.1 ${MANPREFIX}/man/man1/
-	@${MKDIR} ${DATADIR}
+	${INSTALL_MAN} ${WRKSRC}/ttfm.sh.1 ${STAGEDIR}${MANPREFIX}/man/man1/
+	@${MKDIR} ${STAGEDIR}${DATADIR}
 .for module in gscjk.ttfm xttfm.ttfm
-	${INSTALL_SCRIPT} ${WRKSRC}/modules/${module} ${DATADIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/modules/${module} ${STAGEDIR}${DATADIR}/
 .endfor
 
 .include <bsd.port.mk>
