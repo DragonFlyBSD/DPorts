@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/vorbisgain/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/audio/vorbisgain/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	vorbisgain
 PORTVERSION=	0.37
