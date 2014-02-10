@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: japanese/eb/Makefile 339761 2014-01-15 07:24:05Z miwi $
+# $FreeBSD: head/japanese/eb/Makefile 339761 2014-01-15 07:24:05Z miwi $
 
 PORTNAME=	eb
 PORTVERSION=	4.4.3
