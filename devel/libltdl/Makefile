@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27x@yahoo.com>
-# $FreeBSD: devel/libltdl/Makefile 341367 2014-01-27 10:37:08Z bapt $
+# $FreeBSD: head/devel/libltdl/Makefile 341367 2014-01-27 10:37:08Z bapt $
 
 PORTNAME=	libltdl
 MASTERDIR=	${.CURDIR}/../../devel/libtool
