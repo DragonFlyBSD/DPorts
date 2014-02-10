@@ -1,4 +1,4 @@
-# $FreeBSD: net/openmpi/Makefile 335250 2013-11-29 23:55:54Z danilo $
+# $FreeBSD: head/net/openmpi/Makefile 335250 2013-11-29 23:55:54Z danilo $
 
 # TODO:
 #  - etc/*.sample support
