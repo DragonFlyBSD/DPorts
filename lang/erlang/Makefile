@@ -1,5 +1,5 @@
 # Created by: ruslan@shevchenko.kiev.ua
-# $FreeBSD: lang/erlang/Makefile 341564 2014-01-28 14:02:50Z olgeni $
+# $FreeBSD: head/lang/erlang/Makefile 341564 2014-01-28 14:02:50Z olgeni $
 
 PORTNAME=	erlang
 PORTVERSION=	16.b.03.1

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: lang/erlang/files/epmd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/lang/erlang/files/epmd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: epmd
 # REQUIRE: LOGIN

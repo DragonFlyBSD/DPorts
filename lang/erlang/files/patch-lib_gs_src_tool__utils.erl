@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/erlang/files/patch-lib_gs_src_tool__utils.erl 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/lang/erlang/files/patch-lib_gs_src_tool__utils.erl 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/gs/src/tool_utils.erl.orig
 +++ lib/gs/src/tool_utils.erl

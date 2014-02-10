@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/erlang/files/patch-lib_stdlib_src_calendar.erl 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/lang/erlang/files/patch-lib_stdlib_src_calendar.erl 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/stdlib/src/calendar.erl.orig
 +++ lib/stdlib/src/calendar.erl
