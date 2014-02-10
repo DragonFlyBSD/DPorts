@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: graphics/p5-Image-Info/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD: head/graphics/p5-Image-Info/Makefile 332801 2013-11-05 01:33:02Z vanilla $
 
 PORTNAME=	Image-Info
 PORTVERSION=	1.36
