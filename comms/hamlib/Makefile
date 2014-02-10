@@ -1,5 +1,5 @@
 # Created by: Sebastian Yepes <esn@x123.info>
-# $FreeBSD: comms/hamlib/Makefile 341736 2014-01-29 13:32:25Z gahr $
+# $FreeBSD: head/comms/hamlib/Makefile 341736 2014-01-29 13:32:25Z gahr $
 
 PORTNAME=	hamlib
 PORTVERSION=	1.2.15.3
