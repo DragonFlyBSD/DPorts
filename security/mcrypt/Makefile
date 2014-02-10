@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/mcrypt/Makefile 339435 2014-01-11 16:24:42Z johans $
+# $FreeBSD: head/security/mcrypt/Makefile 339435 2014-01-11 16:24:42Z johans $
 
 PORTNAME=	mcrypt
 PORTVERSION=	2.6.8
