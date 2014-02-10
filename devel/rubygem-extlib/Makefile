@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-extlib/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD: head/devel/rubygem-extlib/Makefile 332036 2013-10-30 02:32:53Z swills $
 
 PORTNAME=	extlib
 PORTVERSION=	0.9.16
