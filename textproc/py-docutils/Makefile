@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-docutils/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD: head/textproc/py-docutils/Makefile 340894 2014-01-24 13:34:31Z olivierd $
 
 PORTNAME=	docutils
 PORTVERSION=	0.11
