@@ -1,5 +1,5 @@
 # Created by: teramoto@comm.eng.osaka-u.ac.jp
-# $FreeBSD: security/gpgme/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD: head/security/gpgme/Makefile 331057 2013-10-20 19:20:15Z jhale $
 
 PORTNAME=	gpgme
 PORTVERSION=	1.4.3
