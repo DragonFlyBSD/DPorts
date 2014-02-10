@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: net-mgmt/net-snmp/Makefile 340981 2014-01-25 02:24:39Z zi $
+# $FreeBSD: head/net-mgmt/net-snmp/Makefile 340981 2014-01-25 02:24:39Z zi $
 
 PORTNAME=	snmp
 PORTVERSION=	5.7.2
