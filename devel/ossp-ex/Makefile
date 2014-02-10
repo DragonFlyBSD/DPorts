@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: devel/ossp-ex/Makefile 341949 2014-01-31 09:02:06Z miwi $
+# $FreeBSD: head/devel/ossp-ex/Makefile 341949 2014-01-31 09:02:06Z miwi $
 
 PORTNAME=	ex
 PORTVERSION=	1.0.6
