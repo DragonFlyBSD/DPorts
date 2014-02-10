@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-UNIVERSAL-require/Makefile 332702 2013-11-04 12:35:50Z kuriyama $
+# $FreeBSD: head/devel/p5-UNIVERSAL-require/Makefile 332702 2013-11-04 12:35:50Z kuriyama $
 
 PORTNAME=	UNIVERSAL-require
 PORTVERSION=	0.15
