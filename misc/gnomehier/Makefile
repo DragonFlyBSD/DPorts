@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/gnomehier/Makefile 342262 2014-02-02 10:14:08Z kwm $
+# $FreeBSD: head/misc/gnomehier/Makefile 342262 2014-02-02 10:14:08Z kwm $
 #    $MCom: ports/misc/gnomehier/Makefile,v 1.39 2012/12/10 10:58:06 kwm Exp $
 
 PORTNAME=	gnomehier
