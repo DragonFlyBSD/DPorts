@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-thin/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD: head/www/rubygem-thin/Makefile 332200 2013-10-31 04:17:29Z eadler $
 
 PORTNAME=	thin
 PORTVERSION=	1.2.11
