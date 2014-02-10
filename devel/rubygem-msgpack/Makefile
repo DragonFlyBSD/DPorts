@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-msgpack/Makefile 340902 2014-01-24 14:47:11Z miwi $
+# $FreeBSD: head/devel/rubygem-msgpack/Makefile 340902 2014-01-24 14:47:11Z miwi $
 
 PORTNAME=	msgpack
 PORTVERSION=	0.5.5
