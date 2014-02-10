@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: devel/glib12/Makefile 342273 2014-02-02 11:28:02Z miwi $
+# $FreeBSD: head/devel/glib12/Makefile 342273 2014-02-02 11:28:02Z miwi $
 
 PORTNAME=	glib
 PORTVERSION=	1.2.10

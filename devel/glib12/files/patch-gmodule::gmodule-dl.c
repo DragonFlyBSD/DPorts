@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/glib12/files/patch-gmodule::gmodule-dl.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/glib12/files/patch-gmodule::gmodule-dl.c 340725 2014-01-22 17:40:44Z mat $
 
 --- gmodule/gmodule-dl.c	2001/12/12 04:39:42	1.1
 +++ gmodule/gmodule-dl.c	2001/12/12 04:41:05
