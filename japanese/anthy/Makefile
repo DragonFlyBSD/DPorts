@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: japanese/anthy/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: head/japanese/anthy/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	anthy
 PORTVERSION=	9100h
