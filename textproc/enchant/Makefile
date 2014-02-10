@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/enchant/Makefile 341567 2014-01-28 14:07:36Z bapt $
+# $FreeBSD: head/textproc/enchant/Makefile 341567 2014-01-28 14:07:36Z bapt $
 #   $MCom: ports-stable/textproc/enchant/Makefile,v 1.3 2010/07/20 07:48:41 kwm Exp $
 
 PORTNAME=	enchant
