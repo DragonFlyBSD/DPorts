@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-Simple/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD: head/mail/p5-Email-Simple/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Email-Simple
 PORTVERSION=	2.202
