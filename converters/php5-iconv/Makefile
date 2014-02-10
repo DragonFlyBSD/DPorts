@@ -1,7 +1,6 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: converters/php5-iconv/Makefile 341778 2014-01-29 20:41:27Z tijl $
+# $FreeBSD: head/converters/php5-iconv/Makefile 343435 2014-02-09 08:39:00Z ale $
 
-PORTREVISION=	1
 CATEGORIES=	converters
 
 MASTERDIR=	${.CURDIR}/../../lang/php5
