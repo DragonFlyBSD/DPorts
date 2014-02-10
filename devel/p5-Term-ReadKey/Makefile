@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-ReadKey/Makefile 331774 2013-10-27 14:10:27Z demon $
+# $FreeBSD: head/devel/p5-Term-ReadKey/Makefile 331774 2013-10-27 14:10:27Z demon $
 
 PORTNAME=	Term-ReadKey
 PORTVERSION=	2.31
