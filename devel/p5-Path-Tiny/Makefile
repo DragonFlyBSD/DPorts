@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Path-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: head/devel/p5-Path-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
 
 PORTNAME=	Path-Tiny
 PORTVERSION=	0.047
