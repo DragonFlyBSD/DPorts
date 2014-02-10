@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@nigredo.org>
-# $FreeBSD: misc/ossp-uuid/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: head/misc/ossp-uuid/Makefile 327745 2013-09-20 20:50:57Z bapt $
 
 PORTNAME=	uuid
 PORTVERSION=	1.6.2
