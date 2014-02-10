@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: databases/p5-Cache-Memcached/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: head/databases/p5-Cache-Memcached/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	Cache-Memcached
 PORTVERSION=	1.30
