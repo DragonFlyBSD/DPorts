@@ -1,5 +1,5 @@
 # Created by: Jeffrey Hsu <hsu@FreeBSD.org>
-# $FreeBSD: devel/jam/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/jam/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	jam
 PORTVERSION=	2.5
