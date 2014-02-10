@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: textproc/p5-Pod-Eventual/Makefile 333026 2013-11-06 18:58:11Z sunpoet $
+# $FreeBSD: head/textproc/p5-Pod-Eventual/Makefile 333026 2013-11-06 18:58:11Z sunpoet $
 
 PORTNAME=	Pod-Eventual
 PORTVERSION=	0.094001
