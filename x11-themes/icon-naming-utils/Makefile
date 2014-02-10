@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icon-naming-utils/Makefile 341348 2014-01-27 09:04:59Z miwi $
+# $FreeBSD: head/x11-themes/icon-naming-utils/Makefile 341348 2014-01-27 09:04:59Z miwi $
 
 PORTNAME=	icon-naming-utils
 PORTVERSION=	0.8.90
