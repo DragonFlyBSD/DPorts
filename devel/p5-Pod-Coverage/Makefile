@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Pod-Coverage/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD: head/devel/p5-Pod-Coverage/Makefile 332203 2013-10-31 06:20:32Z vanilla $
 
 PORTNAME=	Pod-Coverage
 PORTVERSION=	0.23
