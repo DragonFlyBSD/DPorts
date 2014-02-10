@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/freepwing/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD: head/japanese/freepwing/Makefile 327737 2013-09-20 18:47:54Z bapt $
 
 PORTNAME=	freepwing
 PORTVERSION=	1.4.4
