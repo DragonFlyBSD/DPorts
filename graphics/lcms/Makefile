@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/lcms/Makefile 334538 2013-11-21 23:12:35Z sunpoet $
+# $FreeBSD: head/graphics/lcms/Makefile 334538 2013-11-21 23:12:35Z sunpoet $
 
 PORTNAME=	lcms
 PORTVERSION=	1.19
