@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/pear/Makefile 333261 2013-11-08 21:37:06Z antoine $
+# $FreeBSD: head/devel/pear/Makefile 333261 2013-11-08 21:37:06Z antoine $
 
 PORTNAME=	pear
 PORTVERSION=	1.9.4
