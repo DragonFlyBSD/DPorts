@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/schroedinger/Makefile 330675 2013-10-17 21:09:19Z madpilot $
+# $FreeBSD: head/multimedia/schroedinger/Makefile 330675 2013-10-17 21:09:19Z madpilot $
 
 PORTNAME=	schroedinger
 PORTVERSION=	1.0.11
