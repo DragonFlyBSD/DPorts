@@ -1,14 +1,14 @@
 # Created by: Peter van Heusden <pvh@egenetics.com>
-# $FreeBSD: lang/p5-Error/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD: head/lang/p5-Error/Makefile 342647 2014-02-05 08:06:14Z culot $
 
 PORTNAME=	Error
-PORTVERSION=	0.17021
+PORTVERSION=	0.17022
 CATEGORIES=	lang perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
-COMMENT=	Perl module to provide Error/exception support for perl: Error
+COMMENT=	Error/exception handling in object-oriented programming style
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
