@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-NeatTemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/p5-Text-NeatTemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Text-NeatTemplate
 PORTVERSION=	0.10.01
