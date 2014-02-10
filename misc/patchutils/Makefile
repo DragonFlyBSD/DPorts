@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/patchutils/Makefile 338049 2013-12-29 22:02:31Z johans $
+# $FreeBSD: head/misc/patchutils/Makefile 338049 2013-12-29 22:02:31Z johans $
 
 PORTNAME=	patchutils
 PORTVERSION=	0.3.3
