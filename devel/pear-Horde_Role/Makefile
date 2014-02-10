@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/pear-Horde_Role/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/pear-Horde_Role/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Horde_Role
 PORTVERSION=	1.0.1
