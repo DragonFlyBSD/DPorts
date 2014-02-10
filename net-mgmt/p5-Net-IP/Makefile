@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net-mgmt/p5-Net-IP/Makefile 342249 2014-02-02 08:11:05Z eadler $
+# $FreeBSD: head/net-mgmt/p5-Net-IP/Makefile 342249 2014-02-02 08:11:05Z eadler $
 
 PORTNAME=	Net-IP
 PORTVERSION=	1.26
