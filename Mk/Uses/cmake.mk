@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/cmake.mk 343402 2014-02-08 22:15:14Z bapt $
+# $FreeBSD$
 #
 # Provide support for CMake based projects
 #

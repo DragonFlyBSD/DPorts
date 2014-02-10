@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.kde4.mk 340104 2014-01-17 20:34:33Z makc $
+# $FreeBSD$
 
 .if !defined(_POSTMKINCLUDED) && !defined(Kde_Pre_Include)
 

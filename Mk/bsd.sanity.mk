@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.sanity.mk 341331 2014-01-27 07:23:07Z bapt $
+# $FreeBSD$
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.pbi.mk 328450 2013-09-27 10:10:29Z kmoore $
+# $FreeBSD$
 #
 # Creates a PBI file from a port with just 'make pbi'
 #

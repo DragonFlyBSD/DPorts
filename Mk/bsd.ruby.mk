@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.ruby.mk 343421 2014-02-09 03:05:21Z bdrewery $
+# $FreeBSD$
 #
 
 .if !defined(Ruby_Include)

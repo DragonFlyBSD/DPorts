@@ -7,7 +7,7 @@
 #
 # !!! Here be dragons !!! (yeah, here as well...)
 #
-# $FreeBSD: head/Mk/bsd.xorg.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD$
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Xorg_Pre_Include)

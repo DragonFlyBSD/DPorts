@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 343569 2014-02-10 01:35:05Z bf $
+# $FreeBSD$
 #
 
 # Where to put distfiles that don't have any other master site

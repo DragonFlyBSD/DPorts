@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/tcl.mk 339357 2014-01-10 13:44:54Z gahr $
+# $FreeBSD$
 #
 # vim: ts=8 noexpandtab
 #

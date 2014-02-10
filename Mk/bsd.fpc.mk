@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/Mk/bsd.fpc.mk 318556 2013-05-20 00:45:26Z miwi $
+# $FreeBSD$
 #
 # bsd.fpc.mk - Support for FreePascal based ports.
 #

@@ -9,7 +9,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to svn yourself.
 #
-# $FreeBSD: head/Mk/bsd.java.mk 333560 2013-11-12 10:36:16Z bapt $
+# $FreeBSD$
 #
 
 .if !defined(Java_Include)

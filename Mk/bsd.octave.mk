@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.octave.mk 340801 2014-01-23 05:05:19Z stephen $
+# $FreeBSD$
 #
 # bsd.octave.mk - Octave related macro
 # Common code to install octave-forge packages.

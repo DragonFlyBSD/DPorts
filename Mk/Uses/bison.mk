@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/bison.mk 334363 2013-11-19 23:24:20Z rene $
+# $FreeBSD$
 #
 # handle dependency on the bison port
 #

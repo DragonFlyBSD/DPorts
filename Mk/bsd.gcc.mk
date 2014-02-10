@@ -40,7 +40,7 @@
 # If you are wondering what your port exactly does, use "make test-gcc"
 # to see some debugging.
 #
-# $FreeBSD: head/Mk/bsd.gcc.mk 341241 2014-01-26 16:33:53Z rene $
+# $FreeBSD$
 #
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org

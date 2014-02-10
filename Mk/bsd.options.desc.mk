@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 341780 2014-01-29 20:43:01Z riggs $
+# $FreeBSD$
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.

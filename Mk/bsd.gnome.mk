@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.gnome.mk 337745 2013-12-27 16:05:36Z kwm $
+# $FreeBSD$
 #	$NetBSD: $
 #     $MCom: ports/trunk/Mk/bsd.gnome.mk 18899 2013-11-18 18:34:00Z kwm $
 #

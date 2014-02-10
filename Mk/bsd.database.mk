@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: head/Mk/bsd.database.mk 339570 2014-01-13 06:26:16Z bapt $
+# $FreeBSD$
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Database_Post_Include)

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.lua.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD$
 #
 # bsd.lua.mk - Support for Lua based ports.
 #

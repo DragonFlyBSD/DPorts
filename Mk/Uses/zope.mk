@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/zope.mk 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD$
 #
 # Provide support for Zope-related ports
 #

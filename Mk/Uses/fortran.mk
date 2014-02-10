@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/fortran.mk 337035 2013-12-20 16:33:59Z tijl $
+# $FreeBSD$
 #
 # Fortran support
 #

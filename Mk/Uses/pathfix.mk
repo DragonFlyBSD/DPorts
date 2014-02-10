@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/pathfix.mk 338601 2014-01-04 00:02:08Z bapt $
+# $FreeBSD$
 #
 # Lookup in Makefile.in and configure for common incorrect paths and set them
 # to respect FreeBSD hier

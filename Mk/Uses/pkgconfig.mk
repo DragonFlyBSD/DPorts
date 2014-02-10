@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/pkgconfig.mk 334409 2013-11-20 12:30:29Z rene $
+# $FreeBSD$
 #
 # handle dependency on the pkgconf port
 #

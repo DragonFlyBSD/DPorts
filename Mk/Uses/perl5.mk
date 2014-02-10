@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/perl5.mk 342415 2014-02-03 10:39:28Z mat $
+# $FreeBSD$
 #
 # Provide support to use perl5
 #

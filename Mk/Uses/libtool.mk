@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/libtool.mk 343547 2014-02-09 22:00:35Z tijl $
+# $FreeBSD$
 #
 # Bring libtool scripts up to date.
 #

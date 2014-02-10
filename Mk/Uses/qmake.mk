@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/qmake.mk 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 #
 # Provide support for qmake-based projects
 #

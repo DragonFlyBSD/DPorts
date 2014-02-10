@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/dos2unix.mk 338605 2014-01-04 00:26:03Z bapt $
+# $FreeBSD$
 #
 # Provide support to convert files from dos2unix
 #

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/charsetfix.mk 338601 2014-01-04 00:02:08Z bapt $
+# $FreeBSD$
 #
 # Lookup in Makefile.in to prevent a package from installing/modifying charset.alias
 #

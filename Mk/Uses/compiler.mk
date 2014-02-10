@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/compiler.mk 339386 2014-01-10 22:09:07Z rene $
+# $FreeBSD$
 #
 # Allows to determine the compiler being used
 #

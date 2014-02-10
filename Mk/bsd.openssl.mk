@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/Mk/bsd.openssl.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD$
 # bsd.openssl.mk - Support for OpenSSL based ports.
 #
 # Use of 'USE_OPENSSL=yes' includes this Makefile after bsd.ports.pre.mk

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/fmake.mk 323942 2013-07-30 06:32:01Z bapt $
+# $FreeBSD$
 #
 # Provide support to use the legacy FreeBSD make
 #

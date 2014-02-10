@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/Mk/Uses/desthack.mk 341779 2014-01-29 20:42:44Z mat $
+# $FreeBSD$
 #
 # Handle gnu configure that does not properly support DESTDIR
 #

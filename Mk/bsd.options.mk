@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.options.mk 341467 2014-01-27 22:53:24Z mat $
+# $FreeBSD$
 #
 # These variables are used in port makefiles to define the options for a port.
 #

@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.gecko.mk 342632 2014-02-05 05:23:30Z beat $
+# $FreeBSD$
 #
 # 4 column tabs prevent hair loss and tooth decay!
 

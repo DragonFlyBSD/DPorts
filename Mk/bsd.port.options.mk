@@ -13,7 +13,7 @@
 #
 # Created by: Shaun Amott <shaun@inerd.com>
 #
-# $FreeBSD: head/Mk/bsd.port.options.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD$
 #
 
 OPTIONS_Include_MAINTAINER=		portmgr@FreeBSD.org

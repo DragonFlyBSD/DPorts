@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/imake.mk 325992 2013-09-02 13:26:34Z tijl $
+# $FreeBSD$
 #
 # Provide support for imake based projects
 #

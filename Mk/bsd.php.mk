@@ -7,7 +7,7 @@
 # Please send all suggested changes to the maintainer instead of committing
 # them to SVN yourself.
 #
-# $FreeBSD: head/Mk/bsd.php.mk 332106 2013-10-30 13:28:00Z ale $
+# $FreeBSD$
 #
 # Adding 'USE_PHP=yes' to a port includes this Makefile after bsd.ports.pre.mk.
 # If the port requires a predefined set of PHP extensions, they can be

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/ncurses.mk 325363 2013-08-25 16:38:15Z rakuco $
+# $FreeBSD$
 #
 # handle dependency on the ncurses port
 #
