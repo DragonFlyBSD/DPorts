@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: devel/py-dateutil/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: head/devel/py-dateutil/Makefile 327724 2013-09-20 17:13:42Z bapt $
 
 PORTNAME=	dateutil
 PORTVERSION=	2.1
