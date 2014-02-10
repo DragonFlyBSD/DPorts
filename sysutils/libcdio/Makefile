@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: sysutils/libcdio/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: head/sysutils/libcdio/Makefile 327772 2013-09-20 23:05:58Z bapt $
 
 PORTNAME=	libcdio
 PORTVERSION=	0.83
