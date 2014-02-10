@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: net/pear-Net_Socket/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: head/net/pear-Net_Socket/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Net_Socket
 PORTVERSION=	1.0.14
