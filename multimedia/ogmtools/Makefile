@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/ogmtools/Makefile 330897 2013-10-19 16:03:48Z bapt $
+# $FreeBSD: head/multimedia/ogmtools/Makefile 342392 2014-02-03 08:15:19Z martymac $
 
 PORTNAME=	ogmtools
 PORTVERSION=	1.5
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://www.bunkus.org/videotools/ogmtools/
 
