@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: textproc/p5-URI-Find/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD: head/textproc/p5-URI-Find/Makefile 333056 2013-11-07 03:52:41Z vanilla $
 
 PORTNAME=	URI-Find
 PORTVERSION=	20111103
