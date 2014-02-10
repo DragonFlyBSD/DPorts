@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-channel-horde/bsd.horde.mk 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/pear-channel-horde/bsd.horde.mk 340722 2014-01-22 17:00:46Z mat $
 
 MASTER_SITES?=	http://pear.horde.org/get/
 
