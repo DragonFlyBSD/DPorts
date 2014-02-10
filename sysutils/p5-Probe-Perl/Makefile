@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: sysutils/p5-Probe-Perl/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD: head/sysutils/p5-Probe-Perl/Makefile 338850 2014-01-06 09:24:24Z az $
 
 PORTNAME=	Probe-Perl
 PORTVERSION=	0.02
