@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: multimedia/libdca/Makefile 330673 2013-10-17 21:08:02Z madpilot $
+# $FreeBSD: head/multimedia/libdca/Makefile 330673 2013-10-17 21:08:02Z madpilot $
 
 PORTNAME=	libdca
 PORTVERSION=	0.0.5
