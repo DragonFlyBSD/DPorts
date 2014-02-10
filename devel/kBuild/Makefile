@@ -1,5 +1,5 @@
 # Created by: Bruce Simpson
-# $FreeBSD: devel/kBuild/Makefile 340056 2014-01-17 15:37:33Z decke $
+# $FreeBSD: head/devel/kBuild/Makefile 340056 2014-01-17 15:37:33Z decke $
 
 PORTNAME=	kBuild
 DISTVERSION=	${KBUILD_VERSION}
