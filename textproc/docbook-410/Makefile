@@ -1,5 +1,5 @@
 # Created by: murray
-# $FreeBSD: textproc/docbook-410/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/docbook-410/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook
 PORTVERSION=	4.1
