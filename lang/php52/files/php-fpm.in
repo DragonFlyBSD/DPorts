@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: lang/php52/files/php-fpm.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/lang/php52/files/php-fpm.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: php-fpm
