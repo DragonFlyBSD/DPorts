@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/quake-data/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/games/quake-data/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	data
 PORTVERSION=	1.0.6
