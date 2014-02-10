@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Prompt/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD: head/devel/p5-IO-Prompt/Makefile 341707 2014-01-29 09:19:35Z az $
 
 PORTNAME=	IO-Prompt
 PORTVERSION=	0.99.7002
