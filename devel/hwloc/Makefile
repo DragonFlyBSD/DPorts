@@ -1,10 +1,10 @@
-# $FreeBSD: devel/hwloc/Makefile 341521 2014-01-28 08:49:51Z bapt $
+# $FreeBSD: head/devel/hwloc/Makefile 343246 2014-02-07 14:03:38Z decke $
 
 PORTNAME=	hwloc
-PORTVERSION=	1.7.2
+PORTVERSION=	1.8
 CATEGORIES=	devel
-MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v${PORTVERSION:R}/downloads/ \
-		http://icl.cs.utk.edu/open-mpi/software/hwloc/v${PORTVERSION:R}/downloads/
+MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v${PORTVERSION}/downloads/ \
+		http://icl.cs.utk.edu/open-mpi/software/hwloc/v${PORTVERSION}/downloads/
 
 MAINTAINER=	phd_kimberlite@yahoo.co.jp
 COMMENT=	Portable Hardware Locality software package
@@ -24,10 +24,10 @@ USE_GNOME=	libxml2
 
 PORTDOCS=	*
 
-ONLY_FOR_ARCHS=		i386 amd64
+ONLY_FOR_ARCHS=		i386 amd64 armv6
 ONLY_FOR_ARCHS_REASON=	has not been ported to this architecture
 
-OPTIONS_DEFINE=	DOCS CAIRO
+OPTIONS_DEFINE=	CAIRO
 
 CAIRO_CONFIGURE_OFF=	--disable-cairo --without-x
 CAIRO_CONFIGURE_ON=	--enable-cairo --with-x
