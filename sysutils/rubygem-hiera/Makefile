@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-hiera/Makefile 336741 2013-12-17 16:28:50Z glarkin $
+# $FreeBSD: head/sysutils/rubygem-hiera/Makefile 336741 2013-12-17 16:28:50Z glarkin $
 
 PORTNAME=	hiera
 PORTVERSION=	1.3.0
