@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-highline/Makefile 335244 2013-11-29 23:00:02Z sunpoet $
+# $FreeBSD: head/devel/rubygem-highline/Makefile 335244 2013-11-29 23:00:02Z sunpoet $
 
 PORTNAME=	highline
 PORTVERSION=	1.6.20
