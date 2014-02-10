@@ -1,5 +1,5 @@
 # Created by: Samuel Tardieu <sam@rfc1149.net>
-# $FreeBSD: devel/gputils/Makefile 331294 2013-10-22 16:23:16Z tijl $
+# $FreeBSD: head/devel/gputils/Makefile 331294 2013-10-22 16:23:16Z tijl $
 
 PORTNAME=	gputils
 PORTVERSION=	1.2.0
