@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Want/Makefile 338224 2013-12-31 04:26:16Z sunpoet $
+# $FreeBSD: head/devel/p5-Want/Makefile 338224 2013-12-31 04:26:16Z sunpoet $
 
 PORTNAME=	Want
 PORTVERSION=	0.22
