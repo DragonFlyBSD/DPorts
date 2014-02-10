@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/bft/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/science/bft/Makefile 342402 2014-02-03 09:44:35Z miwi $
 
 PORTNAME=	bft
 PORTVERSION=	1.1.5
@@ -18,11 +18,8 @@ USE_ZIP=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-MAN1=		bft-config.1
-
 TESTSBIN=	bft_test bft_mem_usage_test bft_printf_test
 
-NO_STAGE=	yes
 pre-configure:
 	# No useful doc there
 	${REINPLACE_CMD} -e 's|tests doc|tests|' ${WRKSRC}/Makefile.in
