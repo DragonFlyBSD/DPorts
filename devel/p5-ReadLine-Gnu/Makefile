@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: devel/p5-ReadLine-Gnu/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD: head/devel/p5-ReadLine-Gnu/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	ReadLine-Gnu
 PORTVERSION=	1.20
