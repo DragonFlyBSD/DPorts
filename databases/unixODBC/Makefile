@@ -1,5 +1,5 @@
 # Created by: Nick Sayer <nsayer@FreeBSD.org>
-# $FreeBSD: databases/unixODBC/Makefile 332494 2013-11-02 15:05:30Z wg $
+# $FreeBSD: head/databases/unixODBC/Makefile 332494 2013-11-02 15:05:30Z wg $
 
 PORTNAME=	unixODBC
 PORTVERSION=	2.3.2
