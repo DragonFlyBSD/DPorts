@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: www/p5-HTML-Clean/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD: head/www/p5-HTML-Clean/Makefile 333099 2013-11-07 13:55:25Z vanilla $
 
 PORTNAME=	HTML-Clean
 PORTVERSION=	0.8
