@@ -1,5 +1,5 @@
 # Created by: FreeBSD GNOME Team <gnome@FreeBSD.org>
-# $FreeBSD: devel/ndesk-dbus-glib/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD: head/devel/ndesk-dbus-glib/Makefile 327888 2013-09-22 18:05:04Z bapt $
 #   $MCom: ports/devel/ndesk-dbus-glib/Makefile,v 1.2 2008/01/14 22:35:41 mezz Exp $
 
 PORTNAME=	ndesk-dbus-glib
