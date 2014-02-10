@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/aalib/Makefile 341148 2014-01-26 00:27:55Z eadler $
+# $FreeBSD: head/graphics/aalib/Makefile 341148 2014-01-26 00:27:55Z eadler $
 
 PORTNAME=	aalib
 PORTVERSION=	1.4.r5
