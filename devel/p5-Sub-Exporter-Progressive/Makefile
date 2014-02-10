@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Exporter-Progressive/Makefile 332513 2013-11-02 17:20:26Z sunpoet $
+# $FreeBSD: head/devel/p5-Sub-Exporter-Progressive/Makefile 332513 2013-11-02 17:20:26Z sunpoet $
 
 PORTNAME=	Sub-Exporter-Progressive
 PORTVERSION=	0.001.011
