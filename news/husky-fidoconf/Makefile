@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-fidoconf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/news/husky-fidoconf/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fidoconf
 PORTVERSION=	0.14.4
