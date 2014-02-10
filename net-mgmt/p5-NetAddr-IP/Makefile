@@ -1,5 +1,5 @@
 # Created by: Christopher N. Harrell <cnh@ivmg.net>
-# $FreeBSD: net-mgmt/p5-NetAddr-IP/Makefile 342253 2014-02-02 08:35:23Z miwi $
+# $FreeBSD: head/net-mgmt/p5-NetAddr-IP/Makefile 342253 2014-02-02 08:35:23Z miwi $
 
 PORTNAME=	NetAddr-IP
 PORTVERSION=	4.069
