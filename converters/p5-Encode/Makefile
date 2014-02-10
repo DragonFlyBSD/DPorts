@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: converters/p5-Encode/Makefile 341552 2014-01-28 13:33:56Z miwi $
+# $FreeBSD: head/converters/p5-Encode/Makefile 341552 2014-01-28 13:33:56Z miwi $
 
 PORTNAME=	Encode
 PORTVERSION=	2.55
