@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: devel/re2c/Makefile 341313 2014-01-26 23:53:59Z bapt $
+# $FreeBSD: head/devel/re2c/Makefile 341313 2014-01-26 23:53:59Z bapt $
 
 PORTNAME=	re2c
 PORTVERSION=	0.13.6
