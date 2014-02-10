@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-NFSLock/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD: head/devel/p5-File-NFSLock/Makefile 338880 2014-01-06 13:53:21Z az $
 
 PORTNAME=	File-NFSLock
 PORTVERSION=	1.21
