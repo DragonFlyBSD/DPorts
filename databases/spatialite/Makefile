@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/spatialite/Makefile 335294 2013-11-30 14:55:34Z wg $
+# $FreeBSD: head/databases/spatialite/Makefile 335294 2013-11-30 14:55:34Z wg $
 
 PORTNAME=	spatialite
 PORTVERSION=	4.1.1
