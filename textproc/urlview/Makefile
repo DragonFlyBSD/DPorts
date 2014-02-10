@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: textproc/urlview/Makefile 334855 2013-11-25 15:06:59Z danilo $
+# $FreeBSD: head/textproc/urlview/Makefile 334855 2013-11-25 15:06:59Z danilo $
 
 PORTNAME=	urlview
 PORTVERSION=	0.9
