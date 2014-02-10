@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/py-spf/Makefile 334389 2013-11-20 03:24:31Z sunpoet $
+# $FreeBSD: head/mail/py-spf/Makefile 334389 2013-11-20 03:24:31Z sunpoet $
 
 PORTNAME=	spf
 PORTVERSION=	2.0.8
