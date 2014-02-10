@@ -1,5 +1,5 @@
 # Created by: Yoshisato YANAGISAWA
-# $FreeBSD: mail/p5-Mail-DKIM/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD: head/mail/p5-Mail-DKIM/Makefile 332803 2013-11-05 02:54:53Z vanilla $
 
 PORTNAME=	Mail-DKIM
 PORTVERSION=	0.40
