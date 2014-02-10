@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/py-zope.proxy/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD: head/net/py-zope.proxy/Makefile 343560 2014-02-09 23:40:57Z rm $
 
 PORTNAME=	zope.proxy
 PORTVERSION=	4.1.3
+PORTREVISION=	1
 CATEGORIES=	net python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,11 +16,9 @@ LICENSE=	ZPL21
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0:${PORTSDIR}/devel/py-zope.interface
 
-USE_ZIP=	yes
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYEASYINSTALL_ARCHDEP=	yes
-
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+USE_ZIP=		yes
 
 .include <bsd.port.mk>
