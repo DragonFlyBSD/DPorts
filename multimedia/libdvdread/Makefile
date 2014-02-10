@@ -1,9 +1,8 @@
 # Created by: Marc van Woerkom <3d@FreeBSD.org>
-# $FreeBSD: multimedia/libdvdread/Makefile 333861 2013-11-15 12:51:10Z martymac $
+# $FreeBSD: head/multimedia/libdvdread/Makefile 342392 2014-02-03 08:15:19Z martymac $
 
 PORTNAME=	libdvdread
-PORTVERSION=	4.2.0
-PORTREVISION=	2
+PORTVERSION=	4.2.1
 CATEGORIES=	multimedia
 # Svn repository URL : svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdread
 MASTER_SITES=	http://dvdnav.mplayerhq.hu/releases/ \
@@ -15,7 +14,7 @@ COMMENT=	MPlayer version of the libdvdread project
 
 LICENSE=	GPLv2
 
-USE_BZIP2=	yes
+USE_XZ=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	configure2
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
