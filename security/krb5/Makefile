@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/krb5/Makefile 339911 2014-01-16 13:49:42Z cy $
+# $FreeBSD: head/security/krb5/Makefile 339911 2014-01-16 13:49:42Z cy $
 
 PORTNAME=		krb5
 PORTVERSION=		1.12.1
