@@ -1,5 +1,5 @@
 # Created by: kbyanc
-# $FreeBSD: www/fcgi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/www/fcgi/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	fcgi
 PORTVERSION=	2.4.0
