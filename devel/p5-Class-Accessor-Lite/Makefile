@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: devel/p5-Class-Accessor-Lite/Makefile 341606 2014-01-28 15:58:20Z miwi $
+# $FreeBSD: head/devel/p5-Class-Accessor-Lite/Makefile 341606 2014-01-28 15:58:20Z miwi $
 
 PORTNAME=	Class-Accessor-Lite
 PORTVERSION=	0.05
