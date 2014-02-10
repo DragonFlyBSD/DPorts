@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-pygments.rb/Makefile 338341 2014-01-01 00:08:20Z sunpoet $
+# $FreeBSD: head/devel/rubygem-pygments.rb/Makefile 338341 2014-01-01 00:08:20Z sunpoet $
 
 PORTNAME=	pygments.rb
 PORTVERSION=	0.5.4
