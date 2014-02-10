@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/protobuf/Makefile 339619 2014-01-13 18:44:45Z mandree $
+# $FreeBSD: head/devel/protobuf/Makefile 339619 2014-01-13 18:44:45Z mandree $
 
 PORTNAME=	protobuf
 PORTVERSION=	2.5.0
