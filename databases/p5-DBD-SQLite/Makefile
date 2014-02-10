@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: databases/p5-DBD-SQLite/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD: head/databases/p5-DBD-SQLite/Makefile 332592 2013-11-03 06:53:54Z vanilla $
 
 PORTNAME=	DBD-SQLite
 PORTVERSION=	1.40
