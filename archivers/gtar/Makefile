@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/gtar/Makefile 336736 2013-12-17 16:01:38Z naddy $
+# $FreeBSD: head/archivers/gtar/Makefile 336736 2013-12-17 16:01:38Z naddy $
 
 PORTNAME=	tar
 PORTVERSION=	1.27
