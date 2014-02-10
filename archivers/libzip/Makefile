@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: archivers/libzip/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD: head/archivers/libzip/Makefile 331383 2013-10-23 13:08:41Z makc $
 
 PORTNAME=	libzip
 PORTVERSION=	0.11.1
