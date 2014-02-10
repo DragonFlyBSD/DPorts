@@ -1,5 +1,5 @@
 # Created by: Andrew Khlebutin <andrey@hm.perm.ru>
-# $FreeBSD: sysutils/pwgen/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD: head/sysutils/pwgen/Makefile 342699 2014-02-05 13:45:39Z miwi $
 
 PORTNAME=	pwgen
 PORTVERSION=	2.06
@@ -14,8 +14,7 @@ GNU_CONFIGURE=	yes
 USES=		perl5
 USE_PERL5=	build
 
-MAN1=		pwgen.1
-PLIST_FILES=	bin/pwgen
+PLIST_FILES=	bin/pwgen \
+		man/man1/pwgen.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
