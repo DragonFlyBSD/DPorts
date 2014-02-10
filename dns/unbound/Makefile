@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: dns/unbound/Makefile 340025 2014-01-17 10:30:16Z sem $
+# $FreeBSD: head/dns/unbound/Makefile 340025 2014-01-17 10:30:16Z sem $
 
 PORTNAME=	unbound
 PORTVERSION=	1.4.21
