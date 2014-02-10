@@ -1,5 +1,5 @@
 # Created by: thinker <thinker@branda.to>
-# $FreeBSD: www/clearsilver/Makefile 341687 2014-01-29 07:57:45Z miwi $
+# $FreeBSD: head/www/clearsilver/Makefile 341687 2014-01-29 07:57:45Z miwi $
 
 PORTNAME=	clearsilver
 PORTVERSION=	0.10.5
