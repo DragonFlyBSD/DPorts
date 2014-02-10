@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/rubygem-addressable/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD: head/www/rubygem-addressable/Makefile 332053 2013-10-30 03:00:33Z swills $
 
 PORTNAME=	addressable
 PORTVERSION=	2.3.5
