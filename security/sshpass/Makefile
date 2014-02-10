@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: security/sshpass/Makefile 342025 2014-01-31 16:49:13Z miwi $
+# $FreeBSD: head/security/sshpass/Makefile 342025 2014-01-31 16:49:13Z miwi $
 
 PORTNAME=	sshpass
 PORTVERSION=	1.05
