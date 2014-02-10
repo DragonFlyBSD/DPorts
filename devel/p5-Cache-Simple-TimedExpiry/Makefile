@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: devel/p5-Cache-Simple-TimedExpiry/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: head/devel/p5-Cache-Simple-TimedExpiry/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Cache-Simple-TimedExpiry
 PORTVERSION=	0.27
