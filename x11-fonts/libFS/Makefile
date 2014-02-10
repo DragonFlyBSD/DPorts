@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/libFS/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/x11-fonts/libFS/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libFS
 PORTVERSION=	1.0.5
