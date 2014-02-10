@@ -1,5 +1,5 @@
 # Created by: AlanE <alane@FreeBSD.org>
-# $FreeBSD: devel/cdialog/Makefile 342368 2014-02-02 22:05:08Z antoine $
+# $FreeBSD: head/devel/cdialog/Makefile 342368 2014-02-02 22:05:08Z antoine $
 
 PORTNAME=	cdialog
 PORTVERSION=	1.1.20120215
