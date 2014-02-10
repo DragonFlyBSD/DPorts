@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-thor/Makefile 332043 2013-10-30 02:47:06Z swills $
+# $FreeBSD: head/devel/rubygem-thor/Makefile 332043 2013-10-30 02:47:06Z swills $
 
 PORTNAME=	thor
 PORTVERSION=	0.18.1
