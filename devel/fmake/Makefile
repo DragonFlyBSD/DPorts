@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fmake/Makefile 337999 2013-12-29 14:50:31Z crees $
+# $FreeBSD: head/devel/fmake/Makefile 337999 2013-12-29 14:50:31Z crees $
 
 PORTNAME=	fmake
 PORTVERSION=	r250982
