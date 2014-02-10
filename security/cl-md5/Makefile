@@ -1,4 +1,4 @@
-# $FreeBSD: security/cl-md5/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD: head/security/cl-md5/Makefile 327769 2013-09-20 22:55:24Z bapt $
 
 PORTNAME=	md5
 PORTVERSION=	1.8.5
