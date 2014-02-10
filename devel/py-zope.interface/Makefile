@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: devel/py-zope.interface/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/py-zope.interface/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope.interface
 PORTVERSION=	3.8.0
