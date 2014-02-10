@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-local-lib/Makefile 339504 2014-01-12 13:49:29Z kuriyama $
+# $FreeBSD: head/devel/p5-local-lib/Makefile 339504 2014-01-12 13:49:29Z kuriyama $
 
 PORTNAME=	local-lib
 PORTVERSION=	2.000004
