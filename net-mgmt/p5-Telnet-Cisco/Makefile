@@ -1,5 +1,5 @@
 # Created by: Michael Lyngbøl <lyngbol@wheel.dk>
-# $FreeBSD: net-mgmt/p5-Telnet-Cisco/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD: head/net-mgmt/p5-Telnet-Cisco/Makefile 338790 2014-01-05 15:52:33Z az $
 
 PORTNAME=	Net-Telnet-Cisco
 PORTVERSION=	1.10
