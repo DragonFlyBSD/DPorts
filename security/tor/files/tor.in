@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/tor/files/tor.in 324351 2013-08-07 12:54:37Z bf $
+# $FreeBSD: head/security/tor/files/tor.in 324351 2013-08-07 12:54:37Z bf $
 #
 # PROVIDE: tor
 # REQUIRE: NETWORKING SERVERS USR
