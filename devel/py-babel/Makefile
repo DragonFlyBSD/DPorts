@@ -1,5 +1,5 @@
 # Created by: Dryice Liu<dryice@dryice.name>
-# $FreeBSD: devel/py-babel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/py-babel/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Babel
 PORTVERSION=	1.3
