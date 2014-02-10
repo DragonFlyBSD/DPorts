@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: devel/ecore-main/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD: head/devel/ecore-main/Makefile 333129 2013-11-07 16:00:45Z gblach $
 
 PORTNAME=	main
 PORTVERSION=	1.7.9
