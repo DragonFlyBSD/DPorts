@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/py-decorator/Makefile 341745 2014-01-29 15:04:46Z miwi $
+# $FreeBSD: head/devel/py-decorator/Makefile 341745 2014-01-29 15:04:46Z miwi $
 
 PORTNAME=	decorator
 PORTVERSION=	3.4.0
