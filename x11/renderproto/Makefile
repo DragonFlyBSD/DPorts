@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11/renderproto/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/x11/renderproto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	renderproto
 PORTVERSION=	0.11.1
