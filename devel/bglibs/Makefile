@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: devel/bglibs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/bglibs/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bglibs
 PORTVERSION=	1.106
