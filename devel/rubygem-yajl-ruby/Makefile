@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/rubygem-yajl-ruby/Makefile 338346 2014-01-01 00:08:53Z sunpoet $
+# $FreeBSD: head/devel/rubygem-yajl-ruby/Makefile 338346 2014-01-01 00:08:53Z sunpoet $
 
 PORTNAME=	yajl-ruby
 PORTVERSION=	1.2.0
