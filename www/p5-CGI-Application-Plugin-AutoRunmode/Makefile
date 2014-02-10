@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-AutoRunmode/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD: head/www/p5-CGI-Application-Plugin-AutoRunmode/Makefile 333070 2013-11-07 08:28:22Z vanilla $
 
 PORTNAME=	CGI-Application-Plugin-AutoRunmode
 PORTVERSION=	0.18
