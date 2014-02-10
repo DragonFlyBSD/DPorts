@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: www/w3m/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD: head/www/w3m/Makefile 327776 2013-09-20 23:36:50Z bapt $
 
 PORTNAME=	w3m
 PORTVERSION=	0.5.3
