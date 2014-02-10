@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: textproc/xerces-c3/Makefile 329973 2013-10-10 08:13:00Z gahr $
+# $FreeBSD: head/textproc/xerces-c3/Makefile 329973 2013-10-10 08:13:00Z gahr $
 
 PORTNAME=	xerces-c3
 PORTVERSION=	3.1.1
