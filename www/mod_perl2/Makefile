@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <larse@isi.edu>
-# $FreeBSD: www/mod_perl2/Makefile 333454 2013-11-10 23:11:59Z ohauer $
+# $FreeBSD: head/www/mod_perl2/Makefile 333454 2013-11-10 23:11:59Z ohauer $
 
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.8
