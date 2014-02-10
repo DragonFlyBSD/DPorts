@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/gmake/Makefile 342202 2014-02-01 18:55:33Z miwi $
+# $FreeBSD: head/devel/gmake/Makefile 342391 2014-02-03 07:51:20Z bapt $
 
 PORTNAME=	gmake
 PORTVERSION=	3.82
@@ -22,25 +22,16 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--program-prefix=g
 
 OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
-.include <bsd.port.options.mk>
+NLS_USES=	gettext iconv
+NLS_CONFIGURE_ON=	${ICONV_CONFIGURE_ARG} \
+			--with-libintl-prefix=${LOCALBASE}
+NLS_CONFIGURE_ENABLE=	nls
 
-.if ${PORT_OPTIONS:MNLS}
-USES+=		gettext iconv
-CONFIGURE_ARGS+=${ICONV_CONFIGURE_ARG} \
-		--with-libintl-prefix=${LOCALBASE}
-PLIST_SUB=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB=	NLS="@comment "
-.endif
 CONFIGURE_ENV+=	MAKEINFO="makeinfo --no-split"
 
 INFO=		make
-
-.ifdef USE_GMAKE
-.error You have `USE_GMAKE' variable defined either in environment or in make(1) arguments. Please undefine and try again.
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/no-print-dir/s/@itemx/@item/' \
