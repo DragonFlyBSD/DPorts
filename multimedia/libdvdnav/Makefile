@@ -1,9 +1,8 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: multimedia/libdvdnav/Makefile 333859 2013-11-15 12:49:06Z martymac $
+# $FreeBSD: head/multimedia/libdvdnav/Makefile 342392 2014-02-03 08:15:19Z martymac $
 
 PORTNAME=	libdvdnav
-PORTVERSION=	4.2.0
-PORTREVISION=	1
+PORTVERSION=	4.2.1
 CATEGORIES=	multimedia
 # Svn repository URL : svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdnav
 MASTER_SITES=	http://dvdnav.mplayerhq.hu/releases/ \
@@ -17,7 +16,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libdvdread.so:${PORTSDIR}/multimedia/libdvdread
 
-USE_BZIP2=	yes
+USE_XZ=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	configure2
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
