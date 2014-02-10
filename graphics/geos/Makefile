@@ -1,5 +1,5 @@
 # Created by: Leonardo Martins <lmartins@nepe.eee.ufg.br>
-# $FreeBSD: graphics/geos/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD: head/graphics/geos/Makefile 342699 2014-02-05 13:45:39Z miwi $
 
 PORTNAME=	geos
 PORTVERSION=	3.4.2
@@ -21,7 +21,6 @@ OPTIONS_DEFINE=	PHP PYTHON RUBY
 
 OPTIONS_SUB=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHP} || ${PORT_OPTIONS:MPYTHON} || ${PORT_OPTIONS:MRUBY}
@@ -45,6 +44,6 @@ CONFIGURE_ENV+=		RUBY="${RUBY}"
 .endif
 
 post-install:
-	@${LN} -s ${PREFIX}/lib/libgeos-${PORTVERSION}.so ${PREFIX}/lib/libgeos.so.0
+	@${LN} -s ${PREFIX}/lib/libgeos-${PORTVERSION}.so ${STAGEDIR}${PREFIX}/lib/libgeos.so.0
 
 .include <bsd.port.mk>
