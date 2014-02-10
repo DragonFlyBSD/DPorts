@@ -1,5 +1,5 @@
 # Created by: Alfred Perlstein <alfred@FreeBSD.org>
-# $FreeBSD: net/mDNSResponder/Makefile 340783 2014-01-23 03:27:42Z sunpoet $
+# $FreeBSD: head/net/mDNSResponder/Makefile 340783 2014-01-23 03:27:42Z sunpoet $
 
 PORTNAME=	mDNSResponder
 PORTVERSION=	544

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/mDNSResponder/files/mdnsresponder.in 332470 2013-11-02 12:08:06Z sunpoet $
+# $FreeBSD: head/net/mDNSResponder/files/mdnsresponder.in 332470 2013-11-02 12:08:06Z sunpoet $
 
 # PROVIDE: mdnsresponder
 # REQUIRE: DAEMON
