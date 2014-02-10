@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Glib2/Makefile 336799 2013-12-18 03:21:46Z swills $
+# $FreeBSD: head/devel/p5-Glib2/Makefile 336799 2013-12-18 03:21:46Z swills $
 
 PORTNAME=	Glib
 PORTVERSION=	1.303
