@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Dist-CheckConflicts/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD: head/devel/p5-Dist-CheckConflicts/Makefile 340549 2014-01-21 05:12:40Z milki $
 
 PORTNAME=	Dist-CheckConflicts
 PORTVERSION=	0.09
