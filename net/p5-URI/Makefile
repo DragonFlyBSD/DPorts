@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: net/p5-URI/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: head/net/p5-URI/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	URI
 PORTVERSION=	1.60
