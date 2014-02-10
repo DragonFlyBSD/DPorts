@@ -1,5 +1,5 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD: lang/guile/Makefile 329950 2013-10-10 00:20:42Z madpilot $
+# $FreeBSD: head/lang/guile/Makefile 329950 2013-10-10 00:20:42Z madpilot $
 #    $MCom: ports/lang/guile/Makefile,v 1.1 2006/09/12 14:57:06 ahze Exp $
 
 PORTNAME=	guile
