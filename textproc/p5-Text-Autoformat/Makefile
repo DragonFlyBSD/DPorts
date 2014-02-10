@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-Autoformat/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD: head/textproc/p5-Text-Autoformat/Makefile 340711 2014-01-22 14:35:55Z mat $
 
 PORTNAME=	Text-Autoformat
 PORTVERSION=	1.669.004
