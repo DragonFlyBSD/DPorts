@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: devel/ctags/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: head/devel/ctags/Makefile 342785 2014-02-05 17:10:30Z miwi $
 
 PORTNAME=	ctags
 PORTVERSION=	5.8
@@ -9,16 +9,10 @@ MASTER_SITES=	SF
 MAINTAINER=	zeising@FreeBSD.org
 COMMENT=	A feature-filled tagfile generator for vi and emacs clones
 
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-macro-patterns --with-readlib
-
-MAN1=		exctags.1
+USES=	desthack
 
 SUB_FILES+=	pkg-message
-
-NO_STAGE=	yes
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
