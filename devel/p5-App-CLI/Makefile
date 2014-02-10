@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-App-CLI/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD: head/devel/p5-App-CLI/Makefile 341710 2014-01-29 10:33:57Z az $
 
 PORTNAME=	App-CLI
 PORTVERSION=	0.313
