@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: graphics/jbigkit/Makefile 342112 2014-02-01 10:54:33Z miwi $
+# $FreeBSD: head/graphics/jbigkit/Makefile 342112 2014-02-01 10:54:33Z miwi $
 
 PORTNAME=	jbigkit
 PORTVERSION=	1.6
