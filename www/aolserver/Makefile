@@ -1,5 +1,5 @@
 # Created by: Matthew Braithwaite <mab@red-bean.com>
-# $FreeBSD: www/aolserver/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/www/aolserver/Makefile 342515 2014-02-04 12:50:48Z bapt $
 
 PORTNAME=	aolserver
 PORTVERSION=	4.5.1
@@ -14,6 +14,9 @@ COMMENT=	A multithreaded web server with embedded TCL interpreter
 
 LICENSE=	MPL
 LICENSE_FILE=	${WRKSRC}/license.terms
+
+DEPRECATED=	abandonware, messing up on clusters
+EXPIRATION_DATE=	2014-04-03
 
 MAKE_JOBS_UNSAFE=	yes
 
