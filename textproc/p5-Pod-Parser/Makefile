@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Parser/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/p5-Pod-Parser/Makefile 342648 2014-02-05 08:10:46Z culot $
 
 PORTNAME=	Pod-Parser
-PORTVERSION=	1.61
+PORTVERSION=	1.62
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
