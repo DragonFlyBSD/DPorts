@@ -1,5 +1,5 @@
 # Created by: jedgar@FreeBSD.org
-# $FreeBSD: graphics/proj/Makefile 338006 2013-12-29 15:09:53Z tijl $
+# $FreeBSD: head/graphics/proj/Makefile 338006 2013-12-29 15:09:53Z tijl $
 
 PORTNAME=	proj
 PORTVERSION=	4.8.0
