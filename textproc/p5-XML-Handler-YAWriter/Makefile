@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-Handler-YAWriter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/p5-XML-Handler-YAWriter/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	XML-Handler-YAWriter
 PORTVERSION=	0.23
