@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: www/p5-HTML-Selector-XPath/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD: head/www/p5-HTML-Selector-XPath/Makefile 338771 2014-01-05 13:37:37Z az $
 
 PORTNAME=	HTML-Selector-XPath
 PORTVERSION=	0.14
