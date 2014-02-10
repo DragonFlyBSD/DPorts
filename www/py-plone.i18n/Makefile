@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.i18n/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD: head/www/py-plone.i18n/Makefile 327956 2013-09-23 09:18:55Z rm $
 
 PORTNAME=	plone.i18n
 PORTVERSION=	2.0.9
