@@ -1,5 +1,5 @@
 # Created by: Marc Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: converters/p5-Convert-ASN1/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD: head/converters/p5-Convert-ASN1/Makefile 332379 2013-11-01 14:20:56Z vanilla $
 
 PORTNAME=	Convert-ASN1
 PORTVERSION=	0.26
