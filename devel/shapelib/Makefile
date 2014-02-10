@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: devel/shapelib/Makefile 330291 2013-10-14 11:03:14Z sunpoet $
+# $FreeBSD: head/devel/shapelib/Makefile 330291 2013-10-14 11:03:14Z sunpoet $
 
 PORTNAME=	shapelib
 PORTVERSION=	1.3.0
