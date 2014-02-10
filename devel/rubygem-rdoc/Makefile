@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rdoc/Makefile 338271 2013-12-31 10:09:12Z sunpoet $
+# $FreeBSD: head/devel/rubygem-rdoc/Makefile 338271 2013-12-31 10:09:12Z sunpoet $
 
 PORTNAME=	rdoc
 PORTVERSION=	3.12.2
