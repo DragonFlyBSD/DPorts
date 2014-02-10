@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Std/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD: head/devel/p5-Class-Std/Makefile 341761 2014-01-29 17:00:41Z az $
 
 PORTNAME=	Class-Std
 DISTVERSION=	0.011
