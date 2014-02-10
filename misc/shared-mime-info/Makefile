@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: misc/shared-mime-info/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: head/misc/shared-mime-info/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #   $MCom: ports/trunk/misc/shared-mime-info/Makefile 18394 2013-04-26 21:29:28Z kwm $
 
 PORTNAME=	shared-mime-info
