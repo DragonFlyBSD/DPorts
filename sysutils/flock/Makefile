@@ -1,5 +1,5 @@
 # Created by: Andrey Zonov <andrey@zonov.org>
-# $FreeBSD: sysutils/flock/Makefile 330373 2013-10-15 09:00:49Z az $
+# $FreeBSD: head/sysutils/flock/Makefile 330373 2013-10-15 09:00:49Z az $
 
 PORTNAME=	flock
 PORTVERSION=	2.19
