@@ -1,5 +1,5 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD: www/py-pastedeploy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/www/py-pastedeploy/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	PasteDeploy
 PORTVERSION=	1.5.0
