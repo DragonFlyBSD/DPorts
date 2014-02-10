@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: textproc/p5-Text-WikiFormat/Makefile 334922 2013-11-26 08:13:10Z culot $
+# $FreeBSD: head/textproc/p5-Text-WikiFormat/Makefile 334922 2013-11-26 08:13:10Z culot $
 
 PORTNAME=	Text-WikiFormat
 PORTVERSION=	0.81
