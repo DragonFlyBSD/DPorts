@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-CPAN-Checksums/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: head/devel/p5-CPAN-Checksums/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	CPAN-Checksums
 PORTVERSION=	2.08
