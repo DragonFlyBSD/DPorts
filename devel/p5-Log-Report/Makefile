@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: devel/p5-Log-Report/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD: head/devel/p5-Log-Report/Makefile 339224 2014-01-09 13:14:30Z az $
 
 PORTNAME=	Log-Report
 PORTVERSION=	0.99.4
