@@ -1,5 +1,5 @@
 # Created by: jaharkes
-# $FreeBSD: devel/lwp/Makefile 334075 2013-11-17 11:09:40Z sunpoet $
+# $FreeBSD: head/devel/lwp/Makefile 334075 2013-11-17 11:09:40Z sunpoet $
 
 PORTNAME=	lwp
 PORTVERSION=	2.6
