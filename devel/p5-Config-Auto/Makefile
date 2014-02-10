@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Config-Auto/Makefile 340597 2014-01-21 10:53:40Z bapt $
+# $FreeBSD: head/devel/p5-Config-Auto/Makefile 340597 2014-01-21 10:53:40Z bapt $
 
 PORTNAME=	Config-Auto
 PORTVERSION=	0.42
