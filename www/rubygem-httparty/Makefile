@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/rubygem-httparty/Makefile 335318 2013-11-30 18:28:59Z sunpoet $
+# $FreeBSD: head/www/rubygem-httparty/Makefile 335318 2013-11-30 18:28:59Z sunpoet $
 
 PORTNAME=	httparty
 PORTVERSION=	0.12.0
