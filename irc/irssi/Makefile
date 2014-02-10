@@ -1,8 +1,8 @@
-# $FreeBSD: irc/irssi/Makefile 331144 2013-10-21 14:42:24Z vanilla $
+# $FreeBSD: head/irc/irssi/Makefile 343513 2014-02-09 15:36:09Z antoine $
 
 PORTNAME=	irssi
 PORTVERSION=	0.8.15
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES?=	irc
 MASTER_SITES=	http://mirror.irssi.org/
 
