@@ -1,4 +1,4 @@
-# $FreeBSD: lang/gnat_util/Makefile.sources 323388 2013-07-21 14:12:28Z marino $
+# $FreeBSD: head/lang/gnat_util/Makefile.sources 323388 2013-07-21 14:12:28Z marino $
 
 GNAT_SRCS= \
 	ali-util.adb \
