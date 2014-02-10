@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/namazu2/Makefile 341599 2014-01-28 15:34:13Z miwi $
+# $FreeBSD: head/databases/namazu2/Makefile 341599 2014-01-28 15:34:13Z miwi $
 
 PORTNAME=	namazu
 PORTVERSION=	${NAMAZU_PORTVERSION}
