@@ -1,8 +1,8 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-HTTP-Lite/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD: head/www/p5-HTTP-Lite/Makefile 343237 2014-02-07 13:20:23Z culot $
 
 PORTNAME=	HTTP-Lite
-PORTVERSION=	2.42
+PORTVERSION=	2.43
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
