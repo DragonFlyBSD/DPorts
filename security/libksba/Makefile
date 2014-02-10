@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: security/libksba/Makefile 342180 2014-02-01 16:03:44Z miwi $
+# $FreeBSD: head/security/libksba/Makefile 342180 2014-02-01 16:03:44Z miwi $
 
 PORTNAME=	libksba
 PORTVERSION=	1.3.0
