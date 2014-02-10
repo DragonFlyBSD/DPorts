@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: databases/py-sqlite3/files/setup3.py 313167 2013-03-01 20:12:01Z lwhsu $"
+__version__ = "$FreeBSD: head/databases/py-sqlite3/files/setup3.py 313167 2013-03-01 20:12:01Z lwhsu $"
 
 try:
     import distutils
