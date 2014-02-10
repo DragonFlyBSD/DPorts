@@ -1,5 +1,5 @@
 #Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/mate-common/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD: head/devel/mate-common/Makefile 334661 2013-11-23 11:39:07Z kwm $
 
 PORTNAME=	mate-common
 PORTVERSION=	1.6.2
