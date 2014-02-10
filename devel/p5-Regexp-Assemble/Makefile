@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Regexp-Assemble/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD: head/devel/p5-Regexp-Assemble/Makefile 332205 2013-10-31 07:36:25Z vanilla $
 
 PORTNAME=	Regexp-Assemble
 PORTVERSION=	0.35
