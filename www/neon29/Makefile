@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: www/neon29/Makefile 332923 2013-11-05 22:40:46Z ohauer $
+# $FreeBSD: head/www/neon29/Makefile 332923 2013-11-05 22:40:46Z ohauer $
 
 PORTNAME=	neon29
 PORTVERSION=	0.29.6
