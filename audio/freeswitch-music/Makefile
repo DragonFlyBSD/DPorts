@@ -1,5 +1,5 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: audio/freeswitch-music/Makefile 335817 2013-12-07 09:07:40Z antoine $
+# $FreeBSD: head/audio/freeswitch-music/Makefile 335817 2013-12-07 09:07:40Z antoine $
 
 PORTNAME=	freeswitch
 PORTVERSION=	1.0.8
