@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-UNIVERSAL-isa/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD: head/devel/p5-UNIVERSAL-isa/Makefile 332248 2013-10-31 15:02:49Z vanilla $
 
 PORTNAME=	UNIVERSAL-isa
 PORTVERSION=	1.20120726
