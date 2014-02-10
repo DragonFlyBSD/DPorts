@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cl-trivial-gray-streams/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD: head/devel/cl-trivial-gray-streams/Makefile 327722 2013-09-20 17:03:26Z bapt $
 
 PORTNAME=	trivial-gray-streams
 PORTVERSION=	2008.11.02
