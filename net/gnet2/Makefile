@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/gnet2/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD: head/net/gnet2/Makefile 327755 2013-09-20 22:10:23Z bapt $
 
 PORTNAME=	gnet
 PORTVERSION=	2.0.8
