@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11/libxfce4util/Makefile 330345 2013-10-14 19:42:26Z olivierd $
+# $FreeBSD: head/x11/libxfce4util/Makefile 330345 2013-10-14 19:42:26Z olivierd $
 
 PORTNAME=	libxfce4util
 PORTVERSION=	4.10.1
