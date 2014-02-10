@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/py-zope.configuration/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/py-zope.configuration/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	zope.configuration
 PORTVERSION=	3.8.0
