@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: x11/randrproto/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/x11/randrproto/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	randrproto
 PORTVERSION=	1.4.0
