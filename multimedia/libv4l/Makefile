@@ -1,5 +1,5 @@
 # Created by: Andrew Thompson <thompsa@FreeBSD.org>
-# $FreeBSD: multimedia/libv4l/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD: head/multimedia/libv4l/Makefile 342445 2014-02-03 13:57:46Z miwi $
 
 PORTNAME=	libv4l
 PORTVERSION=	0.8.8
@@ -17,13 +17,10 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg
 MAKE_ARGS=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" LIBDIR="${PREFIX}/lib"
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(LIBDIR)/pkgconfig|${PREFIX}/libdata/pkgconfig|g' \
@@ -33,4 +30,4 @@ post-patch:
 		${WRKSRC}/libv4lconvert/Makefile
 	@${RM} ${WRKSRC}/../include/linux/videodev2.h
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
