@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: misc/e2fsprogs-libuuid/Makefile 336338 2013-12-13 11:39:19Z bapt $
+# $FreeBSD: head/misc/e2fsprogs-libuuid/Makefile 336338 2013-12-13 11:39:19Z bapt $
 
 PORTREVISION=	0
 CATEGORIES=	misc devel
