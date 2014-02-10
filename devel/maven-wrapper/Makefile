@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: devel/maven-wrapper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/maven-wrapper/Makefile 343593 2014-02-10 07:25:07Z miwi $
 
 PORTNAME=	maven-wrapper
 PORTVERSION=	1
@@ -15,12 +15,8 @@ NO_BUILD=	yes
 SUB_FILES=	mvn.sh
 SUB_LIST=	CAT=${CAT} FIND=${FIND} TAIL=${TAIL}
 
-NO_STAGE=	yes
-do-fecth:
-	@${DO_NADA}
-
 do-install:
-	${MKDIR} "${PREFIX}/etc/maven-wrapper/instances.d"
-	${INSTALL_SCRIPT} "${WRKDIR}/mvn.sh" "${PREFIX}/bin/mvn"
+	${MKDIR} "${STAGEDIR}${PREFIX}/etc/maven-wrapper/instances.d"
+	${INSTALL_SCRIPT} "${WRKDIR}/mvn.sh" "${STAGEDIR}${PREFIX}/bin/mvn"
 
 .include <bsd.port.mk>
