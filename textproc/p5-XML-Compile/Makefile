@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: textproc/p5-XML-Compile/Makefile 335004 2013-11-27 09:27:53Z culot $
+# $FreeBSD: head/textproc/p5-XML-Compile/Makefile 335004 2013-11-27 09:27:53Z culot $
 
 PORTNAME=	XML-Compile
 PORTVERSION=	1.40
