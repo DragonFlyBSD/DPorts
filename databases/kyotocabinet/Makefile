@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/kyotocabinet/Makefile 338063 2013-12-30 09:08:08Z sunpoet $
+# $FreeBSD: head/databases/kyotocabinet/Makefile 338063 2013-12-30 09:08:08Z sunpoet $
 
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.2.76
