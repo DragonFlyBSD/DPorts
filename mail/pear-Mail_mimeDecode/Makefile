@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: mail/pear-Mail_mimeDecode/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: head/mail/pear-Mail_mimeDecode/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Mail_mimeDecode
 PORTVERSION=	1.5.5
