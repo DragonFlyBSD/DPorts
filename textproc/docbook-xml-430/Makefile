@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: textproc/docbook-xml-430/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/textproc/docbook-xml-430/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	docbook-xml
 PORTVERSION=	4.3
