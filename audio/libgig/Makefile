@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/libgig/Makefile 337910 2013-12-28 20:52:17Z antoine $
+# $FreeBSD: head/audio/libgig/Makefile 337910 2013-12-28 20:52:17Z antoine $
 
 PORTNAME=	libgig
 PORTVERSION=	3.3.0
