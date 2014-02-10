@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: mail/squirrelmail/Makefile 338015 2013-12-29 15:58:55Z adamw $
+# $FreeBSD: head/mail/squirrelmail/Makefile 338015 2013-12-29 15:58:55Z adamw $
 
 PORTNAME=	squirrelmail
 PORTVERSION=	20131229
