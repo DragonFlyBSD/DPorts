@@ -1,5 +1,5 @@
 # Created by: Peter Schmiedeskamp <pschmied@qwest.net>
-# $FreeBSD: graphics/libexif/Makefile 340381 2014-01-20 10:13:54Z rakuco $
+# $FreeBSD: head/graphics/libexif/Makefile 342643 2014-02-05 07:38:36Z miwi $
 
 PORTNAME=	libexif
 PORTVERSION=	0.6.21
@@ -24,7 +24,6 @@ USE_LDCONFIG=	yes
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -42,11 +41,9 @@ post-patch:
 		 /^install-data-am:/s|install-docDATA||g' ${WRKSRC}/Makefile.in
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
