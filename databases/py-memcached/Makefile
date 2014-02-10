@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: databases/py-memcached/Makefile 334388 2013-11-20 03:24:08Z sunpoet $
+# $FreeBSD: head/databases/py-memcached/Makefile 334388 2013-11-20 03:24:08Z sunpoet $
 
 PORTNAME=	memcached
 PORTVERSION=	1.53
