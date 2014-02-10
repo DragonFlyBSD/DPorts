@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/readline.mk 332853 2013-11-05 14:26:41Z bapt $
+# $FreeBSD: head/Mk/Uses/readline.mk 332853 2013-11-05 14:26:41Z bapt $
 #
 # handle dependency on the readline port
 #

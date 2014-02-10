@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.autotools.mk 336331 2013-12-13 10:44:22Z bapt $
+# $FreeBSD: head/Mk/bsd.autotools.mk 336331 2013-12-13 10:44:22Z bapt $
 #
 # Please view me with 4 column tabs!
 #

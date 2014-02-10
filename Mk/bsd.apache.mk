@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.apache.mk 333452 2013-11-10 23:05:35Z ohauer $
+# $FreeBSD: head/Mk/bsd.apache.mk 333452 2013-11-10 23:05:35Z ohauer $
 #
 # bsd.apache.mk - Apache related macros.
 # Author: Clement Laforet <clement@FreeBSD.org>

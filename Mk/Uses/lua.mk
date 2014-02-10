@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/lua.mk 339363 2014-01-10 15:37:00Z bapt $
+# $FreeBSD: head/Mk/Uses/lua.mk 339363 2014-01-10 15:37:00Z bapt $
 #
 # Provide support for lua
 # 

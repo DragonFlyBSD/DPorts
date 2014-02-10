@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: Tools/scripts/MOVEDlint.awk 340914 2014-01-24 15:44:54Z eadler $
+# $FreeBSD: head/Tools/scripts/MOVEDlint.awk 340914 2014-01-24 15:44:54Z eadler $
 #
 # MOVEDlint - check MOVED for consistency
 #

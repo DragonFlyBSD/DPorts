@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/qmail.mk 321369 2013-06-20 09:57:54Z bapt $
+# $FreeBSD: head/Mk/Uses/qmail.mk 321369 2013-06-20 09:57:54Z bapt $
 #
 # MAINTAINER=	bdrewery@FreeBSD.org
 #

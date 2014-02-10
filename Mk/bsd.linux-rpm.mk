@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.linux-rpm.mk 340032 2014-01-17 13:20:09Z rene $
+# $FreeBSD: head/Mk/bsd.linux-rpm.mk 340032 2014-01-17 13:20:09Z rene $
 #
 
 # Variables:

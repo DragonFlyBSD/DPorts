@@ -1,4 +1,4 @@
-# $FreeBSD: UIDs 341991 2014-01-31 13:23:40Z koobs $
+# $FreeBSD: head/UIDs 342481 2014-02-04 00:52:58Z amdmi3 $
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin
@@ -275,5 +275,6 @@ radicale:*:974:974::0:0:Radicale daemon:/nonexistent:/usr/sbin/nologin
 unifi:*:975:975::0:0:Unifi Wireless Controller:/nonexistent:/usr/sbin/nologin
 minetest:*:976:976::0:0:& server:/nonexistent:/usr/sbin/nologin
 avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
+cbsd:*:60150:150::0:0:Cbsd user:/nonexistent:/bin/sh
 tests:*:977:65534::0:0:Unprivileged user for tests:/nonexistent:/usr/sbin/nologin
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin

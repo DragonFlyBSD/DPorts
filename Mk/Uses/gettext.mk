@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/gettext.mk 334409 2013-11-20 12:30:29Z rene $
+# $FreeBSD: head/Mk/Uses/gettext.mk 334409 2013-11-20 12:30:29Z rene $
 #
 # handle dependency on the gettext (libintl) port
 #

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/zenoss.mk 321369 2013-06-20 09:57:54Z bapt $
+# $FreeBSD: head/Mk/Uses/zenoss.mk 321369 2013-06-20 09:57:54Z bapt $
 #
 # bsd.zenoss.mk - Support for Zenoss ports and Zenpacks.
 #

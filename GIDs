@@ -1,4 +1,4 @@
-# $FreeBSD: GIDs 341714 2014-01-29 11:33:02Z mm $
+# $FreeBSD: head/GIDs 342481 2014-02-04 00:52:58Z amdmi3 $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -269,5 +269,6 @@ radicale:*:974:
 unifi:*:975:
 minetest:*:976:
 avenger:*:60149:
+cbsd:*:60150:
 nogroup:*:65533:
 nobody:*:65534:

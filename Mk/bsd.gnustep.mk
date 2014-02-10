@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.gnustep.mk 341511 2014-01-28 08:15:38Z bapt $
+# $FreeBSD: head/Mk/bsd.gnustep.mk 341511 2014-01-28 08:15:38Z bapt $
 #
 # This file contains some variable definitions that are supposed to
 # make your life easier when dealing with ports related to the GNUstep.

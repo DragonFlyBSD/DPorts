@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: Mk/Scripts/qa.sh 341664 2014-01-28 22:19:30Z antoine $
+# $FreeBSD: head/Mk/Scripts/qa.sh 341664 2014-01-28 22:19:30Z antoine $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2

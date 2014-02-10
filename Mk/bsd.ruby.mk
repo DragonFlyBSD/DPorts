@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.ruby.mk 342184 2014-02-01 16:29:36Z zi $
+# $FreeBSD: head/Mk/bsd.ruby.mk 343421 2014-02-09 03:05:21Z bdrewery $
 #
 
 .if !defined(Ruby_Include)
@@ -554,8 +554,13 @@ do-install:	ruby-setup-install
 
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to install"
+.  if defined(NO_STAGE)
 	@cd ${INSTALL_WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_FLAGS} ${RUBY_SETUP} install
+.  else
+	@cd ${INSTALL_WRKSRC}; \
+	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_FLAGS} ${RUBY_SETUP} install --prefix=${STAGEDIR}
+.  endif
 .endif
 
 .if defined(USE_LIBRUBY)

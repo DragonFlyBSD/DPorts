@@ -1,5 +1,5 @@
 #
-#	$FreeBSD: Mk/bsd.emacs.mk 315598 2013-03-30 05:13:30Z ashish $
+#	$FreeBSD: head/Mk/bsd.emacs.mk 315598 2013-03-30 05:13:30Z ashish $
 #
 #	bsd.emacs.mk - 19990829 Shigeyuki Fukushima.
 #

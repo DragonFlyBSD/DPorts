@@ -1,7 +1,7 @@
 # ex:ts=4
 #
 # $MBSDlabs: portmk/bsd.ocaml.mk,v 1.18 2006/08/06 18:47:23 stas Exp $
-# $FreeBSD: Mk/bsd.ocaml.mk 327696 2013-09-20 12:16:14Z ak $
+# $FreeBSD: head/Mk/bsd.ocaml.mk 327696 2013-09-20 12:16:14Z ak $
 #
 # bsd.ocaml.mk - Support for the Objective Caml language packages
 #

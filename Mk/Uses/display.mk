@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/display.mk 334392 2013-11-20 07:29:08Z bapt $
+# $FreeBSD: head/Mk/Uses/display.mk 334392 2013-11-20 07:29:08Z bapt $
 #
 # MAINTAINER: x11@FreeBSD.org
 #

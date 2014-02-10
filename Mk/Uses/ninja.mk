@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/ninja.mk 339069 2014-01-08 07:23:14Z bapt $
+# $FreeBSD: head/Mk/Uses/ninja.mk 339069 2014-01-08 07:23:14Z bapt $
 #
 # Provide support to use Ninja
 #

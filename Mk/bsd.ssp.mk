@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.ssp.mk 327844 2013-09-22 00:26:05Z bdrewery $
+# $FreeBSD: head/Mk/bsd.ssp.mk 327844 2013-09-22 00:26:05Z bdrewery $
 # SSP Support
 
 SSP_Include_MAINTAINER=	portmgr@FreeBSD.org

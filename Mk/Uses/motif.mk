@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/motif.mk 322576 2013-07-09 21:05:14Z bapt $
+# $FreeBSD: head/Mk/Uses/motif.mk 322576 2013-07-09 21:05:14Z bapt $
 #
 # handle dependency on motif
 #

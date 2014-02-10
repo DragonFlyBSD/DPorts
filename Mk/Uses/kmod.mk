@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/kmod.mk 342051 2014-01-31 18:00:55Z rene $
+# $FreeBSD: head/Mk/Uses/kmod.mk 342051 2014-01-31 18:00:55Z rene $
 #
 # Handles common items for kernel module ports.
 #

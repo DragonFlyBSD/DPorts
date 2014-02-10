@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/pgsql.mk 339571 2014-01-13 07:07:18Z bapt $
+# $FreeBSD: head/Mk/Uses/pgsql.mk 339571 2014-01-13 07:07:18Z bapt $
 #
 # Provide support for PostgreSQL (pgsql)
 #

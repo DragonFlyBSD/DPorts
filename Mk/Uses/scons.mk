@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/scons.mk 329143 2013-10-03 06:41:54Z bapt $
+# $FreeBSD: head/Mk/Uses/scons.mk 329143 2013-10-03 06:41:54Z bapt $
 #
 # Provide support to use the scons
 #

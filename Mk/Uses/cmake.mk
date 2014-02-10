@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/cmake.mk 337190 2013-12-22 14:04:37Z makc $
+# $FreeBSD: head/Mk/Uses/cmake.mk 343402 2014-02-08 22:15:14Z bapt $
 #
 # Provide support for CMake based projects
 #
@@ -18,6 +18,7 @@
 #			Default: not set, until BATCH or PACKAGE_BUILDING is defined
 # CMAKE_NOCOLOR		- Disable colour build output
 #			Default: not set, until BATCH or PACKAGE_BUILDING is defined
+# CMAKE_NINJA		- Use ninja instead of make(1)
 #
 # Variables for ports:
 # CMAKE_ENV		- Environment passed to cmake.
@@ -97,6 +98,10 @@ CMAKE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 .endif
 .if defined(CMAKE_NOCOLOR)
 CMAKE_ARGS+=		-DCMAKE_COLOR_MAKEFILE:BOOL=OFF
+.endif
+
+.if defined(CMAKE_NINJA)
+.include "${USESDIR}/ninja.mk"
 .endif
 
 _CMAKE_MSG=		"===>  Performing in-source build"

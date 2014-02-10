@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.xfce.mk 331053 2013-10-20 18:53:04Z olivierd $
+# $FreeBSD: head/Mk/bsd.xfce.mk 331053 2013-10-20 18:53:04Z olivierd $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Xfce_Pre_Include)

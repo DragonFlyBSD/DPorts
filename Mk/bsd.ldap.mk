@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.ldap.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD: head/Mk/bsd.ldap.mk 340713 2014-01-22 15:12:27Z mat $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Ldap_Post_Include)

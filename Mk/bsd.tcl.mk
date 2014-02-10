@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.tcl.mk 318663 2013-05-21 08:59:02Z gahr $
+# $FreeBSD: head/Mk/bsd.tcl.mk 318663 2013-05-21 08:59:02Z gahr $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Tcl_Pre_Include)

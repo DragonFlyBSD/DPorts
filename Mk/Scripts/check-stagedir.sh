@@ -1,6 +1,6 @@
 #!/bin/sh
 # ports/Mk/Scripts/check-stagedir.sh - called from ports/Mk/bsd.stage.mk
-# $FreeBSD: Mk/Scripts/check-stagedir.sh 341573 2014-01-28 14:16:30Z mat $
+# $FreeBSD: head/Mk/Scripts/check-stagedir.sh 341573 2014-01-28 14:16:30Z mat $
 
 set -e
 export LC_ALL=C

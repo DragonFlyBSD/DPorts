@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/openal.mk 337463 2013-12-25 23:24:54Z antoine $
+# $FreeBSD: head/Mk/Uses/openal.mk 337463 2013-12-25 23:24:54Z antoine $
 #
 # Handle dependency on OpenAL
 #

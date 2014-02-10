@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: Mk/Uses/pure.mk 333577 2013-11-12 15:13:04Z bapt $
+# $FreeBSD: head/Mk/Uses/pure.mk 333577 2013-11-12 15:13:04Z bapt $
 #
 # Provide support for Pure Programming Language based projects
 #

@@ -12,7 +12,7 @@
 # Maxim Sobolev
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: Tools/scripts/checknewver.sh 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/Tools/scripts/checknewver.sh 340851 2014-01-23 19:55:14Z mat $
 #
 # MAINTAINER= sobomax@FreeBSD.org
 

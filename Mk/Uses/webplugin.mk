@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/webplugin.mk 338605 2014-01-04 00:26:03Z bapt $
+# $FreeBSD: head/Mk/Uses/webplugin.mk 338605 2014-01-04 00:26:03Z bapt $
 #
 # MAINTAINER= gecko@FreeBSD.org
 #

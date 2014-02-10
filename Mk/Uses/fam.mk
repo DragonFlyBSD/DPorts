@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/fam.mk 338687 2014-01-04 23:36:50Z antoine $
+# $FreeBSD: head/Mk/Uses/fam.mk 338687 2014-01-04 23:36:50Z antoine $
 #
 # Handle dependency on File Alteration Monitor
 #

@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/Uses/uniquefiles.mk 339436 2014-01-11 16:52:34Z mva $
+# $FreeBSD: head/Mk/Uses/uniquefiles.mk 339436 2014-01-11 16:52:34Z mva $
 #
 # Make files or directories 'unique', by adding a prefix or suffix.
 #

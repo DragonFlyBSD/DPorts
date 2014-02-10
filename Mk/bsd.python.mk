@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: Mk/bsd.python.mk 339635 2014-01-13 21:04:13Z rene $
+# $FreeBSD: head/Mk/bsd.python.mk 339635 2014-01-13 21:04:13Z rene $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Python_Pre_Include)

@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
-# $FreeBSD: Mk/bsd.port.subdir.mk 335587 2013-12-03 19:08:47Z bdrewery $
+# $FreeBSD: head/Mk/bsd.port.subdir.mk 335587 2013-12-03 19:08:47Z bdrewery $
 #
 # The include file <bsd.port.subdir.mk> contains the default targets
 # for building ports subdirectories.

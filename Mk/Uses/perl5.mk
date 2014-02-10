@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/perl5.mk 341314 2014-01-27 00:02:42Z bapt $
+# $FreeBSD: head/Mk/Uses/perl5.mk 342415 2014-02-03 10:39:28Z mat $
 #
 # Provide support to use perl5
 #
@@ -90,6 +90,7 @@ PERL_PORT?=	perl5.16
 PERL_PORT?=	perl5.14
 .else  # ${PERL_LEVEL} < 501400
 PERL_PORT?=	perl5.12
+WARNING+=	"perl 5.12 is deprecated and will be removed on 2014-02-14. Please upgrade to lang/perl5.16"
 .endif
 
 SITE_PERL_REL?=	lib/perl5/site_perl/${PERL_VER}

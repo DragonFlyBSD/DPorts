@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.licenses.db.mk 340932 2014-01-24 21:22:09Z antoine $
+# $FreeBSD: head/Mk/bsd.licenses.db.mk 340932 2014-01-24 21:22:09Z antoine $
 
 Licenses_db_Include_MAINTAINER=         portmgr@FreeBSD.org
 

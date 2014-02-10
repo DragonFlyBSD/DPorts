@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/bsd.default-versions.mk 339550 2014-01-12 21:16:06Z crees $
+# $FreeBSD: head/Mk/bsd.default-versions.mk 339550 2014-01-12 21:16:06Z crees $
 #
 # MAINTAINER:	ports@FreeBSD.org
 #

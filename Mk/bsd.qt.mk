@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.qt.mk 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD: head/Mk/bsd.qt.mk 338902 2014-01-06 16:16:52Z makc $
 #
 # Port variables:
 # USE_QT*			- List of Qt modules to depend on, with optional '_build'

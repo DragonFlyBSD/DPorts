@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# $FreeBSD: Tools/scripts/resolveportsfromlibs.sh 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/Tools/scripts/resolveportsfromlibs.sh 340851 2014-01-23 19:55:14Z mat $
 
 #
 # The purpose of this script is to find the installed port which contains

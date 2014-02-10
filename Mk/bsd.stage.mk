@@ -1,5 +1,5 @@
 #
-# $FreeBSD: Mk/bsd.stage.mk 341664 2014-01-28 22:19:30Z antoine $
+# $FreeBSD: head/Mk/bsd.stage.mk 341664 2014-01-28 22:19:30Z antoine $
 #
 
 STAGEDIR?=	${WRKDIR}/stage

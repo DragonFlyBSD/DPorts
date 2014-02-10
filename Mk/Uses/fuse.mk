@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/fuse.mk 332851 2013-11-05 14:24:45Z bapt $
+# $FreeBSD: head/Mk/Uses/fuse.mk 332851 2013-11-05 14:24:45Z bapt $
 #
 # handle dependency on the fuse port
 #

@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/tk.mk 339357 2014-01-10 13:44:54Z gahr $
+# $FreeBSD: head/Mk/Uses/tk.mk 339357 2014-01-10 13:44:54Z gahr $
 #
 # vim: ts=8 noexpandtab
 #

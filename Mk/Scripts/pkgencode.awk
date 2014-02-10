@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Scripts/pkgencode.awk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD: head/Mk/Scripts/pkgencode.awk 340713 2014-01-22 15:12:27Z mat $
 
 BEGIN {
 	for (i = 0; i <= 255; i++)

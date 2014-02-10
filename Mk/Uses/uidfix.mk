@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/uidfix.mk 339195 2014-01-09 00:21:10Z bapt $
+# $FreeBSD: head/Mk/Uses/uidfix.mk 339195 2014-01-09 00:21:10Z bapt $
 #
 # Changes some default behaviour of build systems to allow installing as user.
 #

@@ -5,7 +5,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.destdir.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD: head/Mk/bsd.destdir.mk 340713 2014-01-22 15:12:27Z mat $
 #
 # Please make sure all changes to this file are passed through the maintainer.
 

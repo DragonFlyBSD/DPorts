@@ -5,7 +5,7 @@
 #
 # Created by: Mark Linimon <linimon@FreeBSD.org>
 #
-# $FreeBSD: Mk/bsd.local.mk 340713 2014-01-22 15:12:27Z mat $
+# $FreeBSD: head/Mk/bsd.local.mk 340713 2014-01-22 15:12:27Z mat $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Local_Pre_Include)

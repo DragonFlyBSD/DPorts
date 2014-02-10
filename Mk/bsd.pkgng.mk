@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: Mk/bsd.pkgng.mk 340084 2014-01-17 17:22:50Z antoine $
+# $FreeBSD: head/Mk/bsd.pkgng.mk 340084 2014-01-17 17:22:50Z antoine $
 #
 
 .if defined(_POSTMKINCLUDED)
