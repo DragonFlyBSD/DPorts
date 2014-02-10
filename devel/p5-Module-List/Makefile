@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Module-List/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: head/devel/p5-Module-List/Makefile 342635 2014-02-05 07:35:14Z miwi $
 
 PORTNAME=	Module-List
 PORTVERSION=	0.003
@@ -15,7 +15,4 @@ RUN_DEPENDS=	p5-parent>=0:${PORTSDIR}/devel/p5-parent
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Module::List.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
