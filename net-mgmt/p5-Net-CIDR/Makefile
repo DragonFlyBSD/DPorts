@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-Net-CIDR/Makefile 337733 2013-12-27 14:47:58Z jadawin $
+# $FreeBSD: head/net-mgmt/p5-Net-CIDR/Makefile 337733 2013-12-27 14:47:58Z jadawin $
 
 PORTNAME=	Net-CIDR
 PORTVERSION=	0.17
