@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: textproc/rubygem-diff-lcs/Makefile 338242 2013-12-31 06:58:42Z sunpoet $
+# $FreeBSD: head/textproc/rubygem-diff-lcs/Makefile 338242 2013-12-31 06:58:42Z sunpoet $
 
 PORTNAME=	diff-lcs
 PORTVERSION=	1.2.5
