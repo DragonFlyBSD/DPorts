@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kdehier4/Makefile 331779 2013-10-27 15:02:55Z antoine $
+# $FreeBSD: head/misc/kdehier4/Makefile 331779 2013-10-27 15:02:55Z antoine $
 
 PORTNAME=	kdehier4
 PORTVERSION=	1.1.1
