@@ -1,5 +1,5 @@
 # Created by: Matt Behrens <matt@zigg.com>
-# $FreeBSD: security/p5-Authen-PAM/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD: head/security/p5-Authen-PAM/Makefile 341813 2014-01-30 08:45:50Z az $
 
 PORTNAME=	Authen-PAM
 PORTVERSION=	0.16
