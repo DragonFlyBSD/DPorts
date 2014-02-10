@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: audio/libcddb/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD: head/audio/libcddb/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
 
 PORTNAME=	libcddb
 PORTVERSION=	1.3.2
