@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: audio/gsm/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD: head/audio/gsm/Makefile 327706 2013-09-20 14:36:35Z bapt $
 
 PORTNAME=	gsm
 PORTVERSION=	1.0.13
