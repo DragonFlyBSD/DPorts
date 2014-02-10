@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-Locale-Maketext-Lexicon/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD: head/devel/p5-Locale-Maketext-Lexicon/Makefile 332046 2013-10-30 02:52:46Z vanilla $
 
 PORTNAME=	Locale-Maketext-Lexicon
 PORTVERSION=	0.96
