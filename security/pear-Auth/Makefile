@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: security/pear-Auth/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/security/pear-Auth/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	Auth
 PORTVERSION=	1.6.4
