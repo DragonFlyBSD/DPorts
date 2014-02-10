@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: textproc/p5-String-RewritePrefix/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD: head/textproc/p5-String-RewritePrefix/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	String-RewritePrefix
 PORTVERSION=	0.006
