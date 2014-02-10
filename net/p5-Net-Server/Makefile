@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@gallup.com>
-# $FreeBSD: net/p5-Net-Server/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: head/net/p5-Net-Server/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-Server
 PORTVERSION=	2.007
