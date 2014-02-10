@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-JavaScript-Minifier-XS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD: head/textproc/p5-JavaScript-Minifier-XS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
 
 PORTNAME=	JavaScript-Minifier-XS
 PORTVERSION=	0.09
