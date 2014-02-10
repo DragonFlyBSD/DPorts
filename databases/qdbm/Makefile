@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@nigredo.org>
-# $FreeBSD: databases/qdbm/Makefile 342270 2014-02-02 11:00:29Z miwi $
+# $FreeBSD: head/databases/qdbm/Makefile 342270 2014-02-02 11:00:29Z miwi $
 #    $MCom: ports-stable/databases/qdbm/Makefile,v 1.6 2008/03/29 20:07:25 ahze Exp $
 
 PORTNAME=	qdbm
