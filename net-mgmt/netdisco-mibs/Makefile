@@ -1,5 +1,5 @@
 # Created by: Geoffroy Desvernay <dgeo@centrale-marseille.fr>
-# $FreeBSD: net-mgmt/netdisco-mibs/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD: head/net-mgmt/netdisco-mibs/Makefile 327757 2013-09-20 22:24:43Z bapt $
 
 PORTNAME=	netdisco-mibs
 PORTVERSION=	1.4
