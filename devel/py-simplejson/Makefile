@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-simplejson/Makefile 329614 2013-10-06 18:28:48Z sunpoet $
+# $FreeBSD: head/devel/py-simplejson/Makefile 329614 2013-10-06 18:28:48Z sunpoet $
 
 PORTNAME=	simplejson
 PORTVERSION=	3.3.1
