@@ -1,12 +1,12 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: www/ump/Makefile 329266 2013-10-04 06:22:19Z bapt $
+# $FreeBSD: head/www/ump/Makefile 336813 2013-12-18 10:38:33Z koobs $
 
 PORTNAME=	ump
 PORTVERSION=	1.10
 PORTREVISION=	12
 CATEGORIES=	www
 MASTER_SITES=	SF/timidity/TiMidity%2B%2B/TiMidity%2B%2B-${TIMIDITY_VERSION}:timidity \
-		http://pubweb.bnl.gov/people/hoff/midi/1.10/:ump \
+		https://pubweb.bnl.gov/~hoff/midi/1.10/:ump \
 		ftp://ftp.fu-berlin.de/unix/network/www/netscape/sdk/plugin/unix/:plugin \
 		ftp://ftp.fh-wolfenbuettel.de/pub/www/netscape/sdk/plugin/unix/:plugin
 DISTFILES=	${BZ2DIST} ${ZDIST}
@@ -15,10 +15,10 @@ EXTRACT_ONLY=	${BZ2DIST:C/:.*$//}
 PATCH_SITES=	http://www.onicos.com/staff/iz/timidity/dist/
 PATCHFILES=	ump-patch-1.gz ump-patch-2.gz ump-patch-3.gz ump-patch-4.gz
 
-MAINTAINER=	llwang@infor.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unix MIDI Plugin based on TiMidity++
 
-LIB_DEPENDS=	arc:${PORTSDIR}/archivers/libarc
+LIB_DEPENDS=	libarc.so:${PORTSDIR}/archivers/libarc
 RUN_DEPENDS=	${LOCALBASE}/share/timidity/timidity.cfg:${PORTSDIR}/audio/eawpats
 
 LATEST_LINK=	UNIXMidiPlugin
@@ -29,11 +29,11 @@ ZDIST=		unix-sdk-3.0b5.tar.Z:plugin ump_with_volume.tar.Z:ump timdiffs.tar.Z:ump
 
 TIMIDITY_VERSION=	2.13.2
 
+USES=		gmake webplugin:native
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-ump --with-default-path=${LOCALBASE}/share/timidity
 LDFLAGS+=	-export-dynamic
-USE_GMAKE=	yes
 USE_XORG=	xpm xmu
 WANT_GNOME=	yes
 # CONFIGURE_ARGS+=	--enable-motif
@@ -45,15 +45,12 @@ EXTRACT_AFTER_ARGS=	--exclude '*/libarc/*'	\
 	--exclude '*/utils/mblock.h' --exclude '*/utils/memb.h'
 ALL_TARGET=	ump
 
-USE_WEBPLUGINS=	native
-WEBPLUGINS_FILES=ump.so
+WEBPLUGIN_FILES=ump.so
 
 # USE_MOTIF=	yes
 # CONFIGURE_ENV=	MOTIFLIB="${MOTIFLIB}"
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 
 .if ${HAVE_GNOME:Mesound}!=""
 USE_GNOME=	esound
@@ -80,7 +77,7 @@ post-configure:
 	@cd ${WRKSRC}; ${SETENV} CONFIG_HEADERS='' CONFIG_FILES=ump/Makefile ${SH} ./config.status
 
 do-install:
-	${MKDIR} ${WEBPLUGINS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/ump/ump.so ${WEBPLUGINS_DIR}
+	${MKDIR} ${STAGEDIR}${WEBPLUGIN_DIR}
+	${INSTALL_DATA} ${WRKSRC}/ump/ump.so ${STAGEDIR}${WEBPLUGIN_DIR}
 
 .include <bsd.port.post.mk>
