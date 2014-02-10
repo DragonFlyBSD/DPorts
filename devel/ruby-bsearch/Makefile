@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-bsearch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/ruby-bsearch/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	bsearch
 PORTVERSION=	1.5
