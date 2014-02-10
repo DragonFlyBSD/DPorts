@@ -1,8 +1,8 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: sysutils/file/Makefile 328271 2013-09-25 12:12:41Z bf $
+# $FreeBSD: head/sysutils/file/Makefile 342867 2014-02-05 21:45:46Z bf $
 
 PORTNAME=	file
-PORTVERSION=	5.15
+PORTVERSION=	5.16
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.astron.com/pub/file/ \
 		ftp://ftp.fu-berlin.de/unix/tools/file/
@@ -10,25 +10,15 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/file/ \
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Utility to determine file type
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS+=	--enable-fsect-man5
+MAKE_ENV+=	INSTALL_STRIP_FLAG="${STRIP}"
 
 CONFLICTS=	tct-[0-9]*
-
-MAN1=		file.1
-MAN3=		libmagic.3
-MAN5=		magic.5
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 800000
-CONFIGURE_ENV+=	gl_cv_cc_visibility=no
-.endif
 
 check regression-test test: build
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} check
@@ -37,4 +27,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|$(datadir)/misc|$(datadir)/${PORTNAME}|g' \
 		${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
