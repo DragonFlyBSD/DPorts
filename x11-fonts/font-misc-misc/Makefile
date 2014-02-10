@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-misc-misc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/x11-fonts/font-misc-misc/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	font-misc-misc
 PORTVERSION=	1.1.2
