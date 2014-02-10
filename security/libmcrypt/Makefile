@@ -1,5 +1,5 @@
 # Created by: nsayer@FreeBSD.org
-# $FreeBSD: security/libmcrypt/Makefile 342006 2014-01-31 15:24:46Z miwi $
+# $FreeBSD: head/security/libmcrypt/Makefile 342006 2014-01-31 15:24:46Z miwi $
 
 PORTNAME=	libmcrypt
 PORTVERSION=	2.5.8
