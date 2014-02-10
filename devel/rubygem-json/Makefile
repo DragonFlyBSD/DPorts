@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-json/Makefile 338267 2013-12-31 10:08:57Z sunpoet $
+# $FreeBSD: head/devel/rubygem-json/Makefile 338267 2013-12-31 10:08:57Z sunpoet $
 
 PORTNAME=	json
 PORTVERSION=	1.8.1
