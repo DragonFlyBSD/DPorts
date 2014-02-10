@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: archivers/p5-PerlIO-gzip/Makefile 328278 2013-09-25 12:39:45Z vanilla $
+# $FreeBSD: head/archivers/p5-PerlIO-gzip/Makefile 328278 2013-09-25 12:39:45Z vanilla $
 
 PORTNAME=	PerlIO-gzip
 PORTVERSION=	0.18
