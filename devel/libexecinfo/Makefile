@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libexecinfo/Makefile 340517 2014-01-21 00:31:31Z bapt $
+# $FreeBSD: head/devel/libexecinfo/Makefile 340517 2014-01-21 00:31:31Z bapt $
 
 PORTNAME=	libexecinfo
 PORTVERSION=	1.1
