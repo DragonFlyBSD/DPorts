@@ -1,5 +1,5 @@
 # Created by: mahonmesr@googlemail.com
-# $FreeBSD: audio/libdssialsacompat/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD: head/audio/libdssialsacompat/Makefile 338511 2014-01-03 00:46:47Z bapt $
 
 PORTNAME=	libdssialsacompat
 PORTVERSION=	1.0.8a
