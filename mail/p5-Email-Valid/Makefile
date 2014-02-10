@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: mail/p5-Email-Valid/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD: head/mail/p5-Email-Valid/Makefile 338797 2014-01-05 16:33:44Z az $
 
 PORTNAME=	Email-Valid
 PORTVERSION=	1.192
