@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-YAML/Makefile 336871 2013-12-19 07:23:49Z sunpoet $
+# $FreeBSD: head/textproc/p5-YAML/Makefile 336871 2013-12-19 07:23:49Z sunpoet $
 
 PORTNAME=	YAML
 PORTVERSION=	0.87
