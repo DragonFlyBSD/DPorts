@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/py-formencode/Makefile 337079 2013-12-20 19:12:56Z wg $
+# $FreeBSD: head/www/py-formencode/Makefile 337079 2013-12-20 19:12:56Z wg $
 
 PORTNAME=	formencode
 PORTVERSION=	1.2.6
