@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python2/Makefile 340997 2014-01-25 09:15:12Z mva $
+# $FreeBSD: head/lang/python2/Makefile 340997 2014-01-25 09:15:12Z mva $
 
 PORTNAME=	python2
 PORTVERSION=	${PYTHON_MAJOR_VER}
