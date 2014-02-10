@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: devel/py-lxml/Makefile 339151 2014-01-08 15:46:48Z wg $
+# $FreeBSD: head/devel/py-lxml/Makefile 339151 2014-01-08 15:46:48Z wg $
 
 PORTNAME=	lxml
 PORTVERSION=	3.2.5
