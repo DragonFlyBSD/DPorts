@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/rubygem-builder/Makefile 338239 2013-12-31 06:58:29Z sunpoet $
+# $FreeBSD: head/devel/rubygem-builder/Makefile 338239 2013-12-31 06:58:29Z sunpoet $
 
 PORTNAME=	builder
 PORTVERSION=	3.0.4
