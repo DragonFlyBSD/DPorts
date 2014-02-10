@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: net/p5-Net-CIDR-Lite/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: head/net/p5-Net-CIDR-Lite/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-CIDR-Lite
 PORTVERSION=	0.21
