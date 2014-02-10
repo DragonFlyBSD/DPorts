@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/libzmq2/Makefile 335619 2013-12-04 14:08:03Z koobs $
+# $FreeBSD: head/net/libzmq2/Makefile 335619 2013-12-04 14:08:03Z koobs $
 
 PORTNAME=	zmq
 PORTVERSION=	2.2.0
