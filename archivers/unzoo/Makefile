@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: archivers/unzoo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/archivers/unzoo/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	unzoo
 PORTVERSION=	4.4
