@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: lang/vala/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD: head/lang/vala/Makefile 327741 2013-09-20 19:53:09Z bapt $
 #   $MCom: ports/trunk/lang/vala/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	vala
