@@ -1,8 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: textproc/py-pygments/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD: head/textproc/py-pygments/Makefile 343353 2014-02-08 15:40:12Z miwi $
 
 PORTNAME=	pygments
 PORTVERSION=	1.6
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,26 +16,8 @@ LICENSE=	BSD
 
 # Python3 ready
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	Pygments
-
-DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
-
-.if !defined(NO_INSTALL_MANPAGES)
-MAN1=	pygmentize.1
-.endif
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-post-install:
-.if !defined(NO_INSTALL_MANPAGES)
-	@${INSTALL_MAN} ${WRKSRC}/docs/${MAN1} ${MANPREFIX}/man/man1/
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	@cd ${WRKSRC}/docs/build && ${COPYTREE_SHARE} . ${DOCSDIR}
-.endif
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.pre.mk>
 
