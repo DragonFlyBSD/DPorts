@@ -1,8 +1,9 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: security/py-zope.security/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/security/py-zope.security/Makefile 343605 2014-02-10 09:09:29Z rm $
 
 PORTNAME=	zope.security
 PORTVERSION=	3.9.0
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,10 +24,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 		${PYTHON_PKGNAMEPREFIX}pytz>=0:${PORTSDIR}/devel/py-pytz \
 		${PYTHON_PKGNAMEPREFIX}zope.configuration>=0:${PORTSDIR}/devel/py-zope.configuration
 
-PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
-
-NO_STAGE=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
