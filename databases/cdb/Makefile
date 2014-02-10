@@ -1,5 +1,5 @@
 # Created by: Gary Palmer <gpalmer@FreeBSD.org>
-# $FreeBSD: databases/cdb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/databases/cdb/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	cdb
 PORTVERSION=	0.75
