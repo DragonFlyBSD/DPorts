@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@FreeBSD.org>
-# $FreeBSD: devel/pwlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD: head/devel/pwlib/Makefile 342887 2014-02-05 23:02:38Z marino $
 
 PORTNAME=	pwlib
 PORTVERSION=	1.12.0
@@ -11,7 +11,7 @@ DISTNAME=	ptlib-v${PORTVERSION:S/./_/g}-src
 DIST_SUBDIR=	openh323
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A cross platform C++ library, used by OpenH323
+COMMENT=	Cross platform C++ library, used by OpenH323
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
@@ -19,8 +19,7 @@ CONFLICTS=	ptlib-2.*
 
 WRKSRC=		${WRKDIR}/ptlib_v${PORTVERSION:S/./_/g}
 
-USES=		bison
-USE_GMAKE=	yes
+USES=		bison gmake
 USE_AUTOTOOLS=	autoconf
 WANT_GNOME=	yes
 WANT_SDL=	yes
