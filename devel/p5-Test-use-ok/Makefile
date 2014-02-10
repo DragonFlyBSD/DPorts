@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-use-ok/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD: head/devel/p5-Test-use-ok/Makefile 332245 2013-10-31 14:31:30Z vanilla $
 
 PORTNAME=	Test-use-ok
 PORTVERSION=	0.11
