@@ -1,5 +1,5 @@
 # Created by: tobez@tobez.org
-# $FreeBSD: mail/libesmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD: head/mail/libesmtp/Makefile 342699 2014-02-05 13:45:39Z miwi $
 
 PORTNAME=	libesmtp
 PORTVERSION=	1.0.6
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	OPENSSL DEBUG DOCS EXAMPLES
 OPTIONS_DEFAULT=	OPENSSL
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
@@ -29,7 +29,6 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
@@ -45,15 +44,11 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in AUTHORS ChangeLog NEWS Notes README TODO
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
