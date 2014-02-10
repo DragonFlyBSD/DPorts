@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-File-Copy-Recursive/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD: head/devel/p5-File-Copy-Recursive/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-Copy-Recursive
 PORTVERSION=	0.38
