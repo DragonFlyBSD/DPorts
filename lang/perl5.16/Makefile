@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: lang/perl5.16/Makefile 337195 2013-12-22 16:09:43Z mat $
+# $FreeBSD: head/lang/perl5.16/Makefile 337195 2013-12-22 16:09:43Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}

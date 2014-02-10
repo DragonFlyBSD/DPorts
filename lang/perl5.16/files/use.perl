@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: lang/perl5.16/files/use.perl 330335 2013-10-14 16:22:34Z ak $
+# $FreeBSD: head/lang/perl5.16/files/use.perl 330335 2013-10-14 16:22:34Z ak $
 
 LINK_USRBIN="%%LINK_USRBIN%%"
 : ${OSVERSION:=`/sbin/sysctl -n kern.osreldate`};
