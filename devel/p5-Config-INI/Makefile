@@ -1,7 +1,7 @@
-# $FreeBSD: devel/p5-Config-INI/Makefile 331113 2013-10-21 09:52:28Z sunpoet $
+# $FreeBSD: head/devel/p5-Config-INI/Makefile 342644 2014-02-05 07:43:28Z culot $
 
 PORTNAME=	Config-INI
-PORTVERSION=	0.021
+PORTVERSION=	0.022
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,10 +12,8 @@ COMMENT=	Simple .ini files emitter and parser for Perl
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
-		p5-Mixin-Linewise>=0:${PORTSDIR}/devel/p5-Mixin-Linewise
+BUILD_DEPENDS=	p5-Mixin-Linewise>=0:${PORTSDIR}/devel/p5-Mixin-Linewise
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-TEST_DEPENDS=	p5-Capture-Tiny>=0:${PORTSDIR}/devel/p5-Capture-Tiny
 
 USES=		perl5
 USE_PERL5=	configure
