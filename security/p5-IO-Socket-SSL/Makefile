@@ -1,8 +1,8 @@
 # Created by: scrappy
-# $FreeBSD: security/p5-IO-Socket-SSL/Makefile 335158 2013-11-29 10:04:22Z jadawin $
+# $FreeBSD: head/security/p5-IO-Socket-SSL/Makefile 343260 2014-02-07 15:15:19Z jadawin $
 
 PORTNAME=	IO-Socket-SSL
-PORTVERSION=	1.962
+PORTVERSION=	1.967
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:SULLR
@@ -10,6 +10,8 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Perl5 interface to SSL sockets
+
+LICENSE=	ARTPERL10
 
 BUILD_DEPENDS=	p5-Net-SSLeay>=1.21:${PORTSDIR}/security/p5-Net-SSLeay
 RUN_DEPENDS:=	${BUILD_DEPENDS}
