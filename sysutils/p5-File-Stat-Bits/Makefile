@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk pirzyk@FreeBSD.org
-# $FreeBSD: sysutils/p5-File-Stat-Bits/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD: head/sysutils/p5-File-Stat-Bits/Makefile 338851 2014-01-06 09:44:19Z az $
 
 PORTNAME=	File-Stat-Bits
 PORTVERSION=	1.01
