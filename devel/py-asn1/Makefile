@@ -1,8 +1,9 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: devel/py-asn1/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/py-asn1/Makefile 343359 2014-02-08 16:03:36Z miwi $
 
 PORTNAME=	asn1
 PORTVERSION=	0.1.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
@@ -17,29 +18,8 @@ LICENSE=	BSD
 
 # Python3 ready
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	pyasn1
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
-
-BASEDOCS=	CHANGES \
-		README \
-		TODO
-
-DOCDOCS=	pyasn1-tutorial.html
-
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-.for f in ${BASEDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.for f in ${DOCDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}
-.endfor
-.endif
 
 .include <bsd.port.mk>
