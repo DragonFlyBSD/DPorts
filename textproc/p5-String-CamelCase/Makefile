@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: textproc/p5-String-CamelCase/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD: head/textproc/p5-String-CamelCase/Makefile 340706 2014-01-22 11:47:22Z mat $
 
 PORTNAME=	String-CamelCase
 PORTVERSION=	0.02
