@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/libggz/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/games/libggz/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	libggz
 PORTVERSION=	${GGZ_VERSION}
