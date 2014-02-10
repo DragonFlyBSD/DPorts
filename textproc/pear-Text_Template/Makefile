@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: textproc/pear-Text_Template/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: head/textproc/pear-Text_Template/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Text_Template
 PORTVERSION=	1.1.4
