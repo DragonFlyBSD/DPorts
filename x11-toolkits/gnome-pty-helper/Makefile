@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gnome-pty-helper/Makefile 335873 2013-12-08 09:55:41Z kwm $
+# $FreeBSD: head/x11-toolkits/gnome-pty-helper/Makefile 335873 2013-12-08 09:55:41Z kwm $
 #   $MCom: ports/trunk/x11-toolkits/gnome-pty-helper/Makefile 18942 2013-12-08 01:31:37Z kwm $
 
 PORTNAME=	gnome-pty-helper
