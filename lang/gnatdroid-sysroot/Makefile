@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-sysroot/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/lang/gnatdroid-sysroot/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	sysroot
 PORTVERSION=	9
