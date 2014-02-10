@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-ISA/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD: head/devel/p5-Class-ISA/Makefile 331856 2013-10-28 13:46:25Z vanilla $
 
 PORTNAME=	Class-ISA
 PORTVERSION=	0.36
