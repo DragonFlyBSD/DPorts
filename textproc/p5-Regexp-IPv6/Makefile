@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Regexp-IPv6/Makefile 340672 2014-01-21 23:21:10Z mat $
+# $FreeBSD: head/textproc/p5-Regexp-IPv6/Makefile 340672 2014-01-21 23:21:10Z mat $
 
 PORTNAME=	Regexp-IPv6
 PORTVERSION=	0.03
