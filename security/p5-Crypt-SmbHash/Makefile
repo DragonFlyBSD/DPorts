@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: security/p5-Crypt-SmbHash/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: head/security/p5-Crypt-SmbHash/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-SmbHash
 PORTVERSION=	0.12
