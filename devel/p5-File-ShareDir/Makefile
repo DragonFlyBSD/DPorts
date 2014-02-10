@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-ShareDir/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD: head/devel/p5-File-ShareDir/Makefile 331943 2013-10-29 12:52:07Z vanilla $
 
 PORTNAME=	File-ShareDir
 PORTVERSION=	1.03
