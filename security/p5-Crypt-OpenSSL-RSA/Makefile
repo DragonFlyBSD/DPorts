@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: security/p5-Crypt-OpenSSL-RSA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD: head/security/p5-Crypt-OpenSSL-RSA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
 
 PORTNAME=	Crypt-OpenSSL-RSA
 PORTVERSION=	0.28
