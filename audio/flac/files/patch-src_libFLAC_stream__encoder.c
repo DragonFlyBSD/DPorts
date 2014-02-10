@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/flac/files/patch-src_libFLAC_stream__encoder.c 323248 2013-07-18 17:47:53Z naddy $
+$FreeBSD: head/audio/flac/files/patch-src_libFLAC_stream__encoder.c 323248 2013-07-18 17:47:53Z naddy $
 
 --- src/libFLAC/stream_encoder.c.orig
 +++ src/libFLAC/stream_encoder.c
