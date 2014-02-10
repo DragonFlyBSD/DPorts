@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-Module-ScanDeps/Makefile 341622 2014-01-28 16:45:19Z miwi $
+# $FreeBSD: head/devel/p5-Module-ScanDeps/Makefile 341622 2014-01-28 16:45:19Z miwi $
 
 PORTNAME=	Module-ScanDeps
 PORTVERSION=	1.10
