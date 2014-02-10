@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/thrift/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD: head/devel/thrift/Makefile 342975 2014-02-06 08:54:09Z ehaupt $
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION}	# get these from bsd.thrift.mk. any upgrade needs to check ALL dependencies
@@ -48,7 +48,6 @@ CONFIGURE_ARGS+=	\
 		--without-python \
 		--without-ruby
 
-NO_STAGE=	yes
 PLIST_FILES=	bin/thrift
 
 .include <bsd.port.pre.mk>
