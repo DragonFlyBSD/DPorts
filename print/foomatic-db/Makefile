@@ -1,5 +1,5 @@
 # Created by: Dima Dorfman <dima@unixfreak.org>
-# $FreeBSD: print/foomatic-db/Makefile 338886 2014-01-06 15:04:09Z bsam $
+# $FreeBSD: head/print/foomatic-db/Makefile 338886 2014-01-06 15:04:09Z bsam $
 
 PORTNAME=	db
 PORTVERSION=	20140106
