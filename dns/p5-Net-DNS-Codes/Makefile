@@ -1,14 +1,17 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-Codes/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD: head/dns/p5-Net-DNS-Codes/Makefile 342570 2014-02-04 16:31:10Z sunpoet $
 
 PORTNAME=	Net-DNS-Codes
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Collection of C library DNS codes
+
+LICENSE=	GPLv2 GPLv3
+LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
