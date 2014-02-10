@@ -1,8 +1,9 @@
 # Created by: Olexandr Davydenko <o.davydenko@gmail.com>
-# $FreeBSD: devel/libftdi/Makefile 331224 2013-10-22 07:46:52Z amdmi3 $
+# $FreeBSD: head/devel/libftdi/Makefile 343214 2014-02-07 11:44:08Z bapt $
 
 PORTNAME=	libftdi
 PORTVERSION=	0.20
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.intra2net.com/en/developer/libftdi/download/
 
