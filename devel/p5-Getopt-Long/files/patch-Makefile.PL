@@ -1,4 +1,4 @@
-$FreeBSD: devel/p5-Getopt-Long/files/patch-Makefile.PL 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/p5-Getopt-Long/files/patch-Makefile.PL 340725 2014-01-22 17:40:44Z mat $
 
 --- Makefile.PL.orig	Fri May 24 17:51:36 2002
 +++ Makefile.PL	Fri May 24 17:52:52 2002

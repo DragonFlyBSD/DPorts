@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Getopt-Long/Makefile 341624 2014-01-28 16:45:45Z miwi $
+# $FreeBSD: head/devel/p5-Getopt-Long/Makefile 341624 2014-01-28 16:45:45Z miwi $
 
 PORTNAME=	Getopt-Long
 PORTVERSION=	2.39
