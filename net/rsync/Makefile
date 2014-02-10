@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: net/rsync/Makefile 332822 2013-11-05 08:56:50Z ehaupt $
+# $FreeBSD: head/net/rsync/Makefile 332822 2013-11-05 08:56:50Z ehaupt $
 
 PORTNAME=	rsync
 PORTVERSION=	3.1.0
