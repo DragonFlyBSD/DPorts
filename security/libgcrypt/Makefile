@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: security/libgcrypt/Makefile 336421 2013-12-14 05:06:17Z koobs $
+# $FreeBSD: head/security/libgcrypt/Makefile 336421 2013-12-14 05:06:17Z koobs $
 
 PORTNAME=	libgcrypt
 PORTVERSION=	1.5.3
