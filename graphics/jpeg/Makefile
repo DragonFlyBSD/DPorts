@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: graphics/jpeg/Makefile 333655 2013-11-13 06:41:00Z dinoex $
+# $FreeBSD: head/graphics/jpeg/Makefile 333655 2013-11-13 06:41:00Z dinoex $
 
 PORTNAME=	jpeg
 PORTVERSION=	8
