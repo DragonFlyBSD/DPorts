@@ -1,5 +1,5 @@
 # Created by: chuck@pkix.net
-# $FreeBSD: sysutils/dvd+rw-tools/Makefile 331228 2013-10-22 07:50:02Z amdmi3 $
+# $FreeBSD: head/sysutils/dvd+rw-tools/Makefile 331228 2013-10-22 07:50:02Z amdmi3 $
 
 PORTNAME=	dvd+rw-tools
 PORTVERSION=	7.1
