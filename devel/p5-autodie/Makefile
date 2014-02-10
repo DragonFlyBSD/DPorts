@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-autodie/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD: head/devel/p5-autodie/Makefile 342646 2014-02-05 07:57:23Z culot $
 
 PORTNAME=	autodie
-PORTVERSION=	2.22
+PORTVERSION=	2.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -13,8 +13,9 @@ COMMENT=	Replace functions with ones that succeed or die with lexical scope
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-TEST_DEPENDS=	p5-BSD-Resource>=0:${PORTSDIR}/devel/p5-BSD-Resource \
-		p5-IPC-System-Simple>=0:${PORTSDIR}/devel/p5-IPC-System-Simple
+TEST_DEPENDS=	p5-BSD-Resource>0:${PORTSDIR}/devel/p5-BSD-Resource \
+		p5-IPC-System-Simple>=0.12:${PORTSDIR}/devel/p5-IPC-System-Simple \
+		p5-Sub-Identify>0:${PORTSDIR}/devel/p5-Sub-Identify
 
 USES=		perl5
 USE_PERL5=	configure
