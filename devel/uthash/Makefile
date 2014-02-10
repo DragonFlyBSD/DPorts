@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/uthash/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD: head/devel/uthash/Makefile 343159 2014-02-06 22:04:33Z bapt $
 
 PORTNAME=	uthash
 PORTVERSION=	1.9.8p2
@@ -7,10 +7,11 @@ CATEGORIES=	devel
 MASTER_SITES=	GH
 
 MAINTAINER=	zi@FreeBSD.org
-COMMENT=	A hash table for C structures
+COMMENT=	hash table for C structures
 
 LICENSE=	BSD
-LICENSE_FILE=	${WRKSRC}/LICENSE
+
+OPTIONS_DEFINE=	DOCS
 
 USE_BZIP2=	yes
 NO_BUILD=	yes
@@ -24,19 +25,14 @@ PORTDOCS=	ChangeLog.txt todo.txt userguide.txt utarray.txt \
 PLIST_FILES=	include/utarray.h include/uthash.h include/utlist.h \
 		include/utstring.h
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 do-install:
-	@${INSTALL_DATA} ${WRKSRC}/src/utarray.h ${PREFIX}/include/
-	@${INSTALL_DATA} ${WRKSRC}/src/uthash.h ${PREFIX}/include/
-	@${INSTALL_DATA} ${WRKSRC}/src/utlist.h ${PREFIX}/include/
-	@${INSTALL_DATA} ${WRKSRC}/src/utstring.h ${PREFIX}/include/
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/src/utarray.h \
+		${WRKSRC}/src/uthash.h \
+		${WRKSRC}/src/utlist.h \
+		${WRKSRC}/src/utstring.h ${STAGEDIR}${PREFIX}/include/
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/doc/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
