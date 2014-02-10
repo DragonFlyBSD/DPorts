@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: textproc/libnxml/Makefile 340559 2014-01-21 07:24:04Z mat $
+# $FreeBSD: head/textproc/libnxml/Makefile 340559 2014-01-21 07:24:04Z mat $
 
 PORTNAME=	libnxml
 PORTVERSION=	0.18.3
