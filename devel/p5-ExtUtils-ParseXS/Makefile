@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-ExtUtils-ParseXS/Makefile 331844 2013-10-28 12:01:59Z mat $
+# $FreeBSD: head/devel/p5-ExtUtils-ParseXS/Makefile 331844 2013-10-28 12:01:59Z mat $
 
 PORTNAME=	ExtUtils-ParseXS
 PORTVERSION=	3.22
