@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: sysutils/pear-Log/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD: head/sysutils/pear-Log/Makefile 334871 2013-11-25 17:59:58Z antoine $
 
 PORTNAME=	Log
 PORTVERSION=	1.12.7
