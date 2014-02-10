@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: textproc/freexl/Makefile 339952 2014-01-16 18:05:51Z pawel $
+# $FreeBSD: head/textproc/freexl/Makefile 339952 2014-01-16 18:05:51Z pawel $
 
 PORTNAME=	freexl
 DISTVERSION=	1.0.0g
