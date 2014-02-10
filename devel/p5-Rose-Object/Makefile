@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Rose-Object/Makefile 329415 2013-10-05 06:05:47Z sunpoet $
+# $FreeBSD: head/devel/p5-Rose-Object/Makefile 329415 2013-10-05 06:05:47Z sunpoet $
 
 PORTNAME=	Rose-Object
 PORTVERSION=	0.860
