@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: misc/gnome-mime-data/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD: head/misc/gnome-mime-data/Makefile 327745 2013-09-20 20:50:57Z bapt $
 #    $MCom: ports/misc/gnome-mime-data/Makefile,v 1.14 2007/05/22 04:59:18 marcus Exp $
 
 PORTNAME=	gnome-mime-data
