@@ -1,5 +1,5 @@
 # Created by: alexander smishlajev
-# $FreeBSD: devel/py-decoratortools/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD: head/devel/py-decoratortools/Makefile 339634 2014-01-13 21:00:02Z rene $
 
 PORTNAME=	DecoratorTools
 PORTVERSION=	1.8
