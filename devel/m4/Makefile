@@ -1,5 +1,5 @@
 # Created by: mr
-# $FreeBSD: devel/m4/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/devel/m4/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	m4
 PORTVERSION=	1.4.17
