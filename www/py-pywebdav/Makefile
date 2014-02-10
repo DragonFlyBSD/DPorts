@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/py-pywebdav/Makefile 341755 2014-01-29 16:17:02Z miwi $
+# $FreeBSD: head/www/py-pywebdav/Makefile 341755 2014-01-29 16:17:02Z miwi $
 
 PORTNAME=	PyWebDAV
 PORTVERSION=	0.9.8
