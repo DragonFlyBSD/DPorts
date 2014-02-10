@@ -1,5 +1,5 @@
 # Created by: yoshiaki Uchikawa
-# $FreeBSD: audio/lame/Makefile 340936 2014-01-24 22:20:42Z netchild $
+# $FreeBSD: head/audio/lame/Makefile 340936 2014-01-24 22:20:42Z netchild $
 
 PORTNAME=	lame
 PORTVERSION=	3.99.5
