@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-Pod-POM/Makefile 338500 2014-01-02 20:57:25Z sunpoet $
+# $FreeBSD: head/textproc/p5-Pod-POM/Makefile 338500 2014-01-02 20:57:25Z sunpoet $
 
 PORTNAME=	Pod-POM
 PORTVERSION=	0.29
