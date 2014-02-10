@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: net/p5-IO-Socket-INET6/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD: head/net/p5-IO-Socket-INET6/Makefile 338800 2014-01-05 17:15:11Z az $
 
 PORTNAME=	IO-Socket-INET6
 PORTVERSION=	2.69
