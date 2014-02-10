@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Exception-Class/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD: head/devel/p5-Exception-Class/Makefile 331936 2013-10-29 09:01:39Z vanilla $
 
 PORTNAME=	Exception-Class
 PORTVERSION=	1.37
