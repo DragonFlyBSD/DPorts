@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: archivers/p5-Archive-Tar/Makefile 332232 2013-10-31 11:53:29Z jadawin $
+# $FreeBSD: head/archivers/p5-Archive-Tar/Makefile 332232 2013-10-31 11:53:29Z jadawin $
 
 PORTNAME=	Archive-Tar
 PORTVERSION=	1.96
