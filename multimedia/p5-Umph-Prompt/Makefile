@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/p5-Umph-Prompt/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
+# $FreeBSD: head/multimedia/p5-Umph-Prompt/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
 
 PORTNAME=	Umph-Prompt
 PORTVERSION=	0.1.0
