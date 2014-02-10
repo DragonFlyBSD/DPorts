@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@kuis.kyoto-u.ac.jp>
-# $FreeBSD: japanese/skk-jisyo/Makefile 334821 2013-11-25 08:25:58Z linimon $
+# $FreeBSD: head/japanese/skk-jisyo/Makefile 334821 2013-11-25 08:25:58Z linimon $
 
 PORTNAME=	skk-jisyo
 PORTVERSION=	201302
