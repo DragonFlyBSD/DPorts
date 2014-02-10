@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-B-Keywords/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD: head/devel/p5-B-Keywords/Makefile 331780 2013-10-27 15:12:16Z vanilla $
 
 PORTNAME=	B-Keywords
 PORTVERSION=	1.13
