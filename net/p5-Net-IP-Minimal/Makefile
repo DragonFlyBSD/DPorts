@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/p5-Net-IP-Minimal/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD: head/net/p5-Net-IP-Minimal/Makefile 332868 2013-11-05 16:42:55Z vanilla $
 
 PORTNAME=	Net-IP-Minimal
 PORTVERSION=	0.06
