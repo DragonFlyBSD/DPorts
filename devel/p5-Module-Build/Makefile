@@ -1,8 +1,8 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build/Makefile 335085 2013-11-28 10:02:37Z mat $
+# $FreeBSD: head/devel/p5-Module-Build/Makefile 343600 2014-02-10 07:54:41Z culot $
 
 PORTNAME=	Module-Build
-PORTVERSION=	0.4203
+PORTVERSION=	0.4205
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
