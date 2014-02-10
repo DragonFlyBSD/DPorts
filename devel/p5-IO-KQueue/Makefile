@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IO-KQueue/Makefile 341808 2014-01-30 08:26:54Z miwi $
+# $FreeBSD: head/devel/p5-IO-KQueue/Makefile 341808 2014-01-30 08:26:54Z miwi $
 
 PORTNAME=	IO-KQueue
 PORTVERSION=	0.34
