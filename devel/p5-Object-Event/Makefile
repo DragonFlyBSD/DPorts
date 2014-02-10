@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: devel/p5-Object-Event/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD: head/devel/p5-Object-Event/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Object-Event
 PORTVERSION=	1.220
