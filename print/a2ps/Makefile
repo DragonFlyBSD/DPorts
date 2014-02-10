@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@FreeBSD.org>
-# $FreeBSD: print/a2ps/Makefile 336696 2013-12-17 08:01:59Z dinoex $
+# $FreeBSD: head/print/a2ps/Makefile 336696 2013-12-17 08:01:59Z dinoex $
 
 PORTNAME=	a2ps
 PORTVERSION=	4.13b
