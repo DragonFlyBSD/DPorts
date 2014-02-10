@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-ClassAPI/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD: head/devel/p5-Test-ClassAPI/Makefile 338856 2014-01-06 11:00:15Z az $
 
 PORTNAME=	Test-ClassAPI
 PORTVERSION=	1.06
