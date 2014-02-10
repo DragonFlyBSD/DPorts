@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-PPI/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD: head/textproc/p5-PPI/Makefile 340622 2014-01-21 17:03:00Z mat $
 
 PORTNAME=	PPI
 PORTVERSION=	1.215
