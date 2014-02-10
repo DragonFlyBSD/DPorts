@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: devel/pear-XML_Serializer/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD: head/devel/pear-XML_Serializer/Makefile 333263 2013-11-08 21:41:53Z antoine $
 
 PORTNAME=	XML_Serializer
 PORTVERSION=	0.20.2
