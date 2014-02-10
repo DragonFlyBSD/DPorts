@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: converters/recode/Makefile 339229 2014-01-09 13:27:26Z bapt $
+# $FreeBSD: head/converters/recode/Makefile 339229 2014-01-09 13:27:26Z bapt $
 
 PORTNAME=	recode
 PORTVERSION=	3.6
