@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: devel/p5-Class-Container/Makefile 341640 2014-01-28 16:48:54Z miwi $
+# $FreeBSD: head/devel/p5-Class-Container/Makefile 341640 2014-01-28 16:48:54Z miwi $
 
 PORTNAME=	Class-Container
 PORTVERSION=	0.12
