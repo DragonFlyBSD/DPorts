@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-FolderType/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD: head/mail/p5-Email-FolderType/Makefile 338794 2014-01-05 16:20:40Z az $
 
 PORTNAME=	Email-FolderType
 PORTVERSION=	0.8.13
