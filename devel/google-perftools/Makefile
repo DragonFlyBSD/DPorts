@@ -1,5 +1,5 @@
 # Created by: Yuri Victorovich <yuri@tsoft.com>
-# $FreeBSD: devel/google-perftools/Makefile 339826 2014-01-15 22:07:44Z mandree $
+# $FreeBSD$
 
 PORTNAME=	google-perftools
 PORTVERSION=	2.1
