@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-coards/Makefile 341150 2014-01-26 00:52:15Z koobs $
+# $FreeBSD$
 
 PORTNAME=	coards
 PORTVERSION=	1.0.5
