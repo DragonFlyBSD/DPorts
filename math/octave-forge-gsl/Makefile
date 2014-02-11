@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-gsl/Makefile 339533 2014-01-12 19:19:56Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-gsl
 PORTVERSION=	1.0.8
