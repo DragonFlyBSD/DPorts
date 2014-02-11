@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Tee/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Tee
 PORTVERSION=	0.14
@@ -19,8 +19,4 @@ RUN_DEPENDS=	p5-IO-CaptureOutput>0:${PORTSDIR}/devel/p5-IO-CaptureOutput
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	ptee.1
-MAN3=	Tee::App.3 Tee.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
