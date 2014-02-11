@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Validator/Makefile 335031 2013-11-27 16:37:18Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-Validator
 PORTVERSION=	1.04
