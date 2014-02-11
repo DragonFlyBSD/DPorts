@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festival/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festival
 PORTVERSION=	2.1
