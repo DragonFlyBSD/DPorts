@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: devel/p5-MouseX-Types-Path-Class/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	MouseX-Types-Path-Class
 PORTVERSION=	0.07
