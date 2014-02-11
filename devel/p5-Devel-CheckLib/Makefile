@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Devel-CheckLib/Makefile 341990 2014-01-31 12:49:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Devel-CheckLib
 PORTVERSION=	1.01
