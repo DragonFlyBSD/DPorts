@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-dogpile.core/Makefile 333383 2013-11-10 11:46:18Z wg $
+# $FreeBSD$
 
 PORTNAME=	dogpile.core
 PORTVERSION=	0.4.1
