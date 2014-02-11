@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: textproc/docbook/Makefile 341240 2014-01-26 16:23:27Z mat $
+# $FreeBSD$
 
 PORTNAME=	docbook
 PORTVERSION=	1.4
