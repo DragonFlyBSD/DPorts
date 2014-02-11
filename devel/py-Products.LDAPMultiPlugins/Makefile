@@ -1,5 +1,5 @@
 # Created by: Lawrence Stewart <lstewart@FreeBSD.org>
-# $FreeBSD: devel/py-Products.LDAPMultiPlugins/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.LDAPMultiPlugins
 PORTVERSION=	1.14
