@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/firefox/Makefile.webplugins 336448 2013-12-14 14:09:13Z flo $
+# $FreeBSD$
 
 # MAINTAINER=	gecko@FreeBSD.org
 #
