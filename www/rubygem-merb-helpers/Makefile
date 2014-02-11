@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-merb-helpers/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	merb-helpers
 PORTVERSION=	1.1.3
