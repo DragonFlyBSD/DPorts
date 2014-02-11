@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <krion@FreeBSD.org>
-# $FreeBSD: net/ipsumdump/Makefile 340990 2014-01-25 06:05:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ipsumdump
 PORTVERSION=	1.82
