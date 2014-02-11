@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau
-# $FreeBSD: x11/libexo/Makefile 330345 2013-10-14 19:42:26Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	libexo
 PORTVERSION=	0.10.2
