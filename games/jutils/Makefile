@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: games/jutils/Makefile 334444 2013-11-20 19:22:25Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jutils
 PORTVERSION=	20070610.r26
