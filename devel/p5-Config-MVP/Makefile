@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: devel/p5-Config-MVP/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Config-MVP
 PORTVERSION=	2.200006
