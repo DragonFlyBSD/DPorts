@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: lang/p5-Quantum-Superpositions/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Quantum-Superpositions
 PORTVERSION=	2.02
