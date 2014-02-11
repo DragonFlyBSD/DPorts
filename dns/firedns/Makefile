@@ -1,5 +1,5 @@
 # Created by: Dean Hollister <dean@odyssey.apana.org.au>
-# $FreeBSD: dns/firedns/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	firedns
 PORTVERSION=	0.9.12
