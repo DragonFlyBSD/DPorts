@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Compress-LZF/Makefile 328601 2013-09-28 17:12:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Compress-LZF
 PORTVERSION=	3.70
