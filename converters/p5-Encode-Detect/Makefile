@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/converters/p5-Encode-Detect/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Encode-Detect
 PORTVERSION=	1.01
