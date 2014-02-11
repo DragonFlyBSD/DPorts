@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/databases/db48/Makefile 342267 2014-02-02 11:00:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	db48
 PORTVERSION=	4.8.30.0
