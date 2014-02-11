@@ -1,5 +1,5 @@
 # Created by: Masafumi NAKANE <max@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Twitter-Lite/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Twitter-Lite
 PORTVERSION=	0.12001
