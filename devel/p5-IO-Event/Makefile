@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Event/Makefile 330306 2013-10-14 11:58:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IO-Event
 PORTVERSION=	0.813
