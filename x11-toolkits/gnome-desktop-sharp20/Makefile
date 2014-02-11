@@ -1,5 +1,5 @@
 # Created by: pneumann@gmail.com
-# $FreeBSD: x11-toolkits/gnome-desktop-sharp20/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnome-desktop-sharp
 PORTVERSION=	2.26.0
