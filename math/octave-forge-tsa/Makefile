@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-tsa/Makefile 340801 2014-01-23 05:05:19Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-tsa
 PORTVERSION=	4.2.7
