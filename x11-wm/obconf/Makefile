@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/obconf/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	obconf
 PORTVERSION=	2.0.4
@@ -26,6 +26,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PORTDOCS=	ABOUT-NLS AUTHORS README TODO
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
