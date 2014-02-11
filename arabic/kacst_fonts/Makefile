@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.com>
-# $FreeBSD: arabic/kacst_fonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kacst_fonts
 PORTVERSION=	2.01
