@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Carp-Assert-More/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Carp-Assert-More
 PORTVERSION=	1.14
