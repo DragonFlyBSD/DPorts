@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/opendx/Makefile 341288 2014-01-26 21:16:43Z stephen $
+# $FreeBSD$
 
 PORTNAME=	opendx
 PORTVERSION=	4.4.4
