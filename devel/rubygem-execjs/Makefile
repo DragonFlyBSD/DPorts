@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-execjs/Makefile 340433 2014-01-20 17:25:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	execjs
 PORTVERSION=	2.0.2
