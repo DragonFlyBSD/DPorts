@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/aria2/Makefile 339479 2014-01-12 03:52:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	aria2
 PORTVERSION=	1.18.3
