@@ -1,5 +1,5 @@
 # Created by: Peter Johnson <johnson.peter@gmail.com>
-# $FreeBSD: textproc/dblatex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dblatex
 PORTVERSION=	0.3.2
