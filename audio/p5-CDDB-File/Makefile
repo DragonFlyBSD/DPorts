@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/p5-CDDB-File/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CDDB-File
 PORTVERSION=	1.05
