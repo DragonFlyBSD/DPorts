@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: devel/p5-MooseX-Object-Pluggable/Makefile 339893 2014-01-16 05:16:43Z ashish $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Object-Pluggable
 PORTVERSION=	0.0012
