@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@luna2.org>
-# $FreeBSD: audio/timidity++/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD$
 
 PORTNAME=	timidity++
 PORTVERSION=	2.13.2
@@ -29,6 +29,8 @@ PLIST_SUB+=	TIMID_LIBDIR=${TIMID_LIBDIR} EUCJP_LOCALE=${EUCJP_LOCALE}
 
 EUCJP_LOCALE=	ja_JP.eucJP
 TIMID_LIBDIR=	lib/timidity
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
