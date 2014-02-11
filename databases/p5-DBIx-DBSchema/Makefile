@@ -1,5 +1,5 @@
 # Created by: Peter Avalos <pavalos@theshell.com>
-# $FreeBSD: databases/p5-DBIx-DBSchema/Makefile 334018 2013-11-16 18:06:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DBIx-DBSchema
 PORTVERSION=	0.44
