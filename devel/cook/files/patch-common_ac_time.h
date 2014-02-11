@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/cook/files/patch-common_ac_time.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/cook/files/patch-common_ac_time.h 340725 2014-01-22 17:40:44Z mat $
 
 --- common/ac/time.h.orig	Fri Nov 29 23:15:13 2002
 +++ common/ac/time.h	Fri Nov 29 23:15:27 2002
