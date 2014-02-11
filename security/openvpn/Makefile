@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: security/openvpn/Makefile 328954 2013-10-01 14:43:26Z mandree $
+# $FreeBSD$
 
 PORTNAME=	openvpn
 DISTVERSION=	2.3.2
