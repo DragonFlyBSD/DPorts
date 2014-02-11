@@ -1,5 +1,5 @@
 # Created by: bruno
-# $FreeBSD: games/childsplay/Makefile 336944 2013-12-19 18:37:10Z danilo $
+# $FreeBSD$
 
 PORTNAME=	childsplay
 PORTVERSION=	2.5
