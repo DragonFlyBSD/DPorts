@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: korean/qt4-codecs-kr/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	codecs
 DISTVERSION=	${QT4_VERSION}
