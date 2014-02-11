@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.OFSP/Makefile 341081 2014-01-25 19:42:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.OFSP
 PORTVERSION=	2.13.2
