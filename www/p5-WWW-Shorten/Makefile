@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Shorten/Makefile 341632 2014-01-28 16:47:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WWW-Shorten
 PORTVERSION=	3.04
