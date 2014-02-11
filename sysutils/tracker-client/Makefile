@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/tracker-client/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 #   $MCom: ports/sysutils/tracker-client/Makefile,v 1.14 2010/05/10 04:21:19 marcus Exp $
 
 PORTNAME=	tracker
