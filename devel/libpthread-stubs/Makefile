@@ -1,5 +1,5 @@
 # Created by: wahjava
-# $FreeBSD: head/devel/libpthread-stubs/Makefile 340531 2014-01-21 00:52:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libpthread-stubs
 PORTVERSION=	0.3
