@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@eborcom.com>
-# $FreeBSD: mail/maildrop/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 # You can define the following to enable further compile time
 # customizations:
