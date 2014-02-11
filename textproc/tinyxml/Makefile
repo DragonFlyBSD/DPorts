@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/tinyxml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tinyxml
 PORTVERSION=	2.6.2
@@ -23,17 +23,13 @@ PLIST_SUB+=	PROFILE="@comment "
 PLIST_SUB+=	PROFILE=""
 .endif
 
-NO_STAGE=	yes
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.prev
 	@${SED} -e "s=%%SHLIB_MAJOR%%=${SHLIB_MAJOR}=g" \
 		${FILESDIR}/Makefile > ${WRKSRC}/Makefile
 
 post-install:
-.ifndef(NOPORTDOCS)
-	@${ECHO_MSG} "===>   Installing documentation for ${PKGNAME}"
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
