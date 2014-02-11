@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-JavaScript-Value-Escape/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	JavaScript-Value-Escape
 PORTVERSION=	0.06
