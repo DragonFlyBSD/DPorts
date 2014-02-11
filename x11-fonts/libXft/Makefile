@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/libXft/Makefile 335678 2013-12-05 18:27:03Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libXft
 PORTVERSION=	2.3.1
