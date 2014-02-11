@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-django-mezzanine-grappelli/Makefile 341751 2014-01-29 15:39:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-mezzanine-grappelli
 PORTVERSION=	0.2.21
