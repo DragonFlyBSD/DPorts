@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11/qimageblitz/Makefile 332999 2013-11-06 14:53:31Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	qimageblitz
 PORTVERSION=	0.0.6
