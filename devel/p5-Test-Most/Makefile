@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Most/Makefile 339577 2014-01-13 09:59:47Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Test-Most
 PORTVERSION=	0.33
