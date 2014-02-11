@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Engine/Makefile 331719 2013-10-26 16:33:19Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Engine
 PORTVERSION=	0.03005
