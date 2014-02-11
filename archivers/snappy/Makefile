@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: head/archivers/snappy/Makefile 339829 2014-01-15 22:22:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=	snappy
 PORTVERSION=	1.1.0
