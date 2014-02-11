@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgnomedb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/databases/libgnomedb/Makefile,v 1.32 2008/02/05 13:09:24 kwm Exp $
 
 PORTNAME=	libgnomedb
