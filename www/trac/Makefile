@@ -1,5 +1,5 @@
 # Created by: Kuei-Feng Li <thinker@branda.to>
-# $FreeBSD: head/www/trac/Makefile 343380 2014-02-08 20:02:33Z rm $
+# $FreeBSD$
 
 PORTNAME=	trac
 PORTVERSION=	1.0.1
