@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-toolkits/scintilla/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scintilla
 PORTVERSION=	3.3.5
