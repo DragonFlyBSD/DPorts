@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/p5-Unicode-Japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Unicode-Japanese
 PORTVERSION=	0.49
@@ -12,10 +12,6 @@ COMMENT=	A Perl5 module to handle Japanese character encodings
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		ujconv.1 ujguess.1
-MAN3=		Unicode::Japanese.3 Unicode::Japanese::JA.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
