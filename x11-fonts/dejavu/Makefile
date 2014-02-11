@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: head/x11-fonts/dejavu/Makefile 335796 2013-12-07 00:50:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	dejavu
 PORTVERSION=	2.34
