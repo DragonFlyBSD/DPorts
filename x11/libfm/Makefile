@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11/libfm/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libfm
 PORTVERSION=	1.1.2.2
