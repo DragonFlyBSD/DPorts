@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: comms/py-serial/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	serial
 PORTVERSION=	2.6
@@ -20,6 +20,8 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
