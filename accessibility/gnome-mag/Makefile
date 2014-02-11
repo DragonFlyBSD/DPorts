@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: accessibility/gnome-mag/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD$
 #   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.54 2010/10/31 11:01:52 kwm Exp $
 
 PORTNAME=	gnome-mag
