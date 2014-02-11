@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-vector-algorithms/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vector-algorithms
 PORTVERSION=	0.5.4.2
