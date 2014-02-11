@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: textproc/p5-Template-Tiny/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Template-Tiny
 PORTVERSION=	1.12
