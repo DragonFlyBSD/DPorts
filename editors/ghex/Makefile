@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: editors/ghex/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 #   $MCom: ports/editors/ghex/Makefile,v 1.13 2008/08/23 18:22:59 mezz Exp $
 
 PORTNAME=	ghex
