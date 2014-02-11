@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.linkintegrity/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.app.linkintegrity
 PORTVERSION=	1.5.3
