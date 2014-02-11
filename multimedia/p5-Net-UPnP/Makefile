@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/p5-Net-UPnP/Makefile 332815 2013-11-05 07:28:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-UPnP
 PORTVERSION=	1.4.2
