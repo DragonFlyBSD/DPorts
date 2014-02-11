@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/devel/libmowgli/Makefile 341672 2014-01-28 23:19:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libmowgli
 PORTVERSION=	1.0.0
