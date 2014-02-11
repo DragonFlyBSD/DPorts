@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: head/devel/p5-String-CRC32/Makefile 338321 2013-12-31 14:59:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	String-CRC32
 PORTVERSION=	1.5
