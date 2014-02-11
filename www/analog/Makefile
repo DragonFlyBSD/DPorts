@@ -1,5 +1,5 @@
 # Created by: jfitz
-# $FreeBSD: www/analog/Makefile 341800 2014-01-30 03:34:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	analog
 PORTVERSION=	6.0
