@@ -1,5 +1,5 @@
 # Created by: kftseng@iyard.org
-# $FreeBSD: security/p5-Crypt-OpenSSL-X509/Makefile 335474 2013-12-02 09:18:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Crypt-OpenSSL-X509
 PORTVERSION=	1.8.04
