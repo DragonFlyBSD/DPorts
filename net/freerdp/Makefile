@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/freerdp/Makefile 340237 2014-01-19 09:00:10Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	freerdp
 PORTVERSION=	1.1.0
