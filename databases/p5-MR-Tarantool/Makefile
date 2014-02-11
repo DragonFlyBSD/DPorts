@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/p5-MR-Tarantool/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	MR-Tarantool
 PORTVERSION=	0.0.24
