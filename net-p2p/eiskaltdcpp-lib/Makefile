@@ -1,9 +1,9 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: net-p2p/eiskaltdcpp-lib/Makefile 336266 2013-12-12 15:24:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eiskaltdcpp-lib
 PORTVERSION=	2.2.4
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-p2p
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	eiskaltdcpp-${DISTVERSION}
