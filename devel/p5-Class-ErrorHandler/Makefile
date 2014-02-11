@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Class-ErrorHandler/Makefile 341948 2014-01-31 09:01:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Class-ErrorHandler
 PORTVERSION=	0.03
