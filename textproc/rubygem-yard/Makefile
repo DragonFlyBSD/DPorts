@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-yard/Makefile 332509 2013-11-02 17:08:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	yard
 PORTVERSION=	0.8.7.3
