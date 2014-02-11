@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: textproc/agrep/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	agrep
 PORTVERSION=	2.04
@@ -19,6 +19,8 @@ ALL_TARGET=
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/agrep man/man1/agrep.1.gz
 PORTDOCS=	COPYRIGHT agrep.algorithms agrep.ps.1.Z agrep.ps.2.Z
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
