@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/urwfonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	urwfonts
 PORTVERSION=	1.0
