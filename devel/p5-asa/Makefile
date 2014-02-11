@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-asa/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	asa
 PORTVERSION=	1.03
