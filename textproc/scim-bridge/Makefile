@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/scim-bridge/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scim-bridge
 PORTVERSION=	0.4.16
