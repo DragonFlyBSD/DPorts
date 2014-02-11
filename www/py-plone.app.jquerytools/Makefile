@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.jquerytools/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plone.app.jquerytools
 PORTVERSION=	1.5.6
