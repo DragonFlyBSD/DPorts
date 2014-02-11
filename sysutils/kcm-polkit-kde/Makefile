@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/kcm-polkit-kde/Makefile 338811 2014-01-05 17:59:25Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	polkit-kde
 DISTVERSION=	0.0-${PORTDATE}
