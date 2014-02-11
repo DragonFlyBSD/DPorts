@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: print/gl2ps/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gl2ps
 PORTVERSION=	1.3.8
