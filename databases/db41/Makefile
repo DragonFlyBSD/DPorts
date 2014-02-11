@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: head/databases/db41/Makefile 343087 2014-02-06 14:11:47Z miwi $
+# $FreeBSD$
 
 PORTNAME=	db41
 PORTVERSION=	4.1.25
@@ -30,6 +30,8 @@ CONFIGURE_ARGS=	--enable-compat185 --enable-dump185 \
 		--enable-cxx --enable-dynamic \
 		--includedir=${STAGEDIR}${PREFIX}/include/db41
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
