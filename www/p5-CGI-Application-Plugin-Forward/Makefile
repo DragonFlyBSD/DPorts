@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Forward/Makefile 341693 2014-01-29 07:59:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-Forward
 PORTVERSION=	1.06
