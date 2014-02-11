@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: security/libsectok/Makefile 337407 2013-12-25 11:34:50Z pawel $
+# $FreeBSD$
 
 PORTNAME=	libsectok
 PORTVERSION=	20030619
