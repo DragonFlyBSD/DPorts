@@ -1,5 +1,5 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: head/security/tor/Makefile 343569 2014-02-10 01:35:05Z bf $
+# $FreeBSD$
 
 PORTNAME=	tor
 DISTVERSION=	0.2.4.20
