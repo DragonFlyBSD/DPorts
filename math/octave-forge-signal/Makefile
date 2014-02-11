@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-signal/Makefile 341486 2014-01-27 23:58:30Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-signal
 PORTVERSION=	1.3.0
