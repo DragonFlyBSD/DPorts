@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: x11-toolkits/ruby-goocanvas/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	goocanvas
 PORTVERSION=	${RUBY_GNOME_PORTVERSION}
