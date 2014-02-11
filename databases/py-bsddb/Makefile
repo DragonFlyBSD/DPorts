@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: head/databases/py-bsddb/Makefile 343501 2014-02-09 13:46:50Z rm $
+# $FreeBSD$
 
 PORTNAME=	bsddb
 PORTVERSION=	${PYTHON_PORTVERSION}
