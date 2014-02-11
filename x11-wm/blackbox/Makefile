@@ -1,5 +1,5 @@
 # Created by: Brian Handy <handy@physics.montana.edu>
-# $FreeBSD: x11-wm/blackbox/Makefile 328492 2013-09-27 15:17:26Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	blackbox
 PORTVERSION=	0.70.1
