@@ -1,5 +1,5 @@
 # Created by: Mina R Waheeb <syncer@gmail.com>
-# $FreeBSD: devel/qtscriptgenerator/Makefile 334684 2013-11-23 16:56:50Z makc $
+# $FreeBSD$
 
 PORTNAME=	qtscriptgenerator
 PORTVERSION=	0.2.0
