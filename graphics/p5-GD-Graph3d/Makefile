@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: graphics/p5-GD-Graph3d/Makefile 334223 2013-11-18 16:45:09Z mat $
+# $FreeBSD$
 
 PORTNAME=	GD-Graph3d
 PORTVERSION=	0.63
