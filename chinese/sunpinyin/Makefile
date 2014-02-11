@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/sunpinyin/Makefile 328492 2013-09-27 15:17:26Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	sunpinyin
 DISTVERSION=	2.0.4rc2
