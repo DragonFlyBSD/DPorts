@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/textproc/p5-Spreadsheet-WriteExcel/Makefile 334223 2013-11-18 16:45:09Z mat $
+# $FreeBSD$
 
 PORTNAME=	Spreadsheet-WriteExcel
 PORTVERSION=	2.40
