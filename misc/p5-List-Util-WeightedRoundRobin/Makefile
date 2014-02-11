@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: misc/p5-List-Util-WeightedRoundRobin/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	List-Util-WeightedRoundRobin
 PORTVERSION=	0.4
