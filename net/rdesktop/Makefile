@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: net/rdesktop/Makefile 331499 2013-10-24 16:41:28Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	rdesktop
 PORTVERSION=	1.7.1
