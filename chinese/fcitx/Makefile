@@ -1,10 +1,10 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fcitx/Makefile 338683 2014-01-04 23:27:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	fcitx
 PORTVERSION=	4.2.6.1
 CATEGORIES=	chinese x11
-PORTREVISION=	2
+PORTREVISION=	3
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		pinyin.tar.gz table.tar.gz en_dict-${_DICT_VER}.tar.gz
