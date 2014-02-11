@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-django-mezzanine-filebrowser/Makefile 341732 2014-01-29 13:20:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-mezzanine-filebrowser
 PORTVERSION=	0.2.27
