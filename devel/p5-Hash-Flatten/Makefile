@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Hash-Flatten/Makefile 336507 2013-12-15 08:55:51Z az $
+# $FreeBSD$
 
 PORTNAME=	Hash-Flatten
 PORTVERSION=	1.19
