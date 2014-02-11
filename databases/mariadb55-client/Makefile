@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mariadb55-client/Makefile 330601 2013-10-17 05:16:44Z flo $
+# $FreeBSD$
 
 PORTNAME=	mariadb
 PORTREVISION=	1
