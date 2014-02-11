@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: ftp/rubygem-curb/Makefile 335340 2013-11-30 19:59:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	curb
 PORTVERSION=	0.8.5
