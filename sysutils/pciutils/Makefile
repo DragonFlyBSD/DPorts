@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: sysutils/pciutils/Makefile 333525 2013-11-11 17:17:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pciutils
 PORTVERSION=	3.2.1
