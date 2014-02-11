@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-# $FreeBSD: graphics/libcaca/Makefile 333521 2013-11-11 16:46:41Z wg $
+# $FreeBSD$
 
 PORTNAME=	libcaca
 DISTVERSION=	0.99.beta18
