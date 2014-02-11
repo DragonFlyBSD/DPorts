@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: head/archivers/rpm2cpio/Makefile 339549 2014-01-12 21:16:05Z naddy $
+# $FreeBSD$
 
 PORTNAME=	rpm2cpio
 PORTVERSION=	1.3
