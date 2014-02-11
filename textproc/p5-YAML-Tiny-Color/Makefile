@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-YAML-Tiny-Color/Makefile 332817 2013-11-05 07:58:00Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	YAML-Tiny-Color
 PORTVERSION=	0.03
