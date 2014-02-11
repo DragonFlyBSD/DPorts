@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Log-Any/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Any
 PORTVERSION=	0.15
