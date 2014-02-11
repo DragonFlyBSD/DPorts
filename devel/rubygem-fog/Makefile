@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-fog/Makefile 338250 2013-12-31 07:24:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	fog
 PORTVERSION=	1.19.0
