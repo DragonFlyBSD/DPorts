@@ -1,4 +1,4 @@
-# $FreeBSD: devel/fossil/Makefile 341590 2014-01-28 15:08:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fossil
 PORTVERSION=	1.28
