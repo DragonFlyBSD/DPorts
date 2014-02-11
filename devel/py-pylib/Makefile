@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: head/devel/py-pylib/Makefile 337205 2013-12-22 18:10:14Z rm $
+# $FreeBSD$
 
 PORTNAME=	pylib
 PORTVERSION=	1.4.19
