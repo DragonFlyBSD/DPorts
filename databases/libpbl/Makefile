@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/libpbl/Makefile 335836 2013-12-07 17:40:05Z adamw $
+# $FreeBSD$
 
 PORTNAME=	libpbl
 PORTVERSION=	1.04.04
