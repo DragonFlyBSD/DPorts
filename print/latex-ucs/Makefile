@@ -1,5 +1,5 @@
 # Created by: thierry@FreeBSD.org
-# $FreeBSD: print/latex-ucs/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	latex-ucs
 PORTVERSION=	20041017
