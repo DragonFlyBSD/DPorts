@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Telescope/Makefile 333825 2013-11-15 09:40:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-Telescope
 PORTVERSION=	0.71
