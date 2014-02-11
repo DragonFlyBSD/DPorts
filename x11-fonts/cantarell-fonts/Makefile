@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-fonts/cantarell-fonts/Makefile 328509 2013-09-27 19:24:33Z kwm $
+# $FreeBSD$
 
 PORTNAME=	cantarell-fonts
 PORTVERSION=	0.0.15
