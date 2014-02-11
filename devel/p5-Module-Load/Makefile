@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Module-Load/Makefile 342564 2014-02-04 16:15:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Module-Load
 PORTVERSION=	0.30
