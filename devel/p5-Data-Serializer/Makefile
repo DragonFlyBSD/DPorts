@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-Data-Serializer/Makefile 342001 2014-01-31 15:23:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Data-Serializer
 PORTVERSION=	0.60
