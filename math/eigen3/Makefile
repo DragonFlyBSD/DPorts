@@ -1,4 +1,4 @@
-# $FreeBSD: math/eigen3/Makefile 333416 2013-11-10 17:46:39Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	eigen
 PORTVERSION=	3.2.0
