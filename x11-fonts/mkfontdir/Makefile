@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: head/x11-fonts/mkfontdir/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mkfontdir
 PORTVERSION=	1.0.7
