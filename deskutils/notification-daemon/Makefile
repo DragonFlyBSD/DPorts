@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: deskutils/notification-daemon/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 
 PORTNAME=	notification-daemon
