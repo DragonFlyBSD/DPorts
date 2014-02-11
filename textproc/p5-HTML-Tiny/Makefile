@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: head/textproc/p5-HTML-Tiny/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Tiny
 PORTVERSION=	1.05
