@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: science/udunits/Makefile 330003 2013-10-10 14:32:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	udunits
 PORTVERSION=	2.1.24
