@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/rubygem-murmurhash3/Makefile 340902 2014-01-24 14:47:11Z miwi $
+# $FreeBSD$
 
 PORTNAME=	murmurhash3
 PORTVERSION=	0.1.3
