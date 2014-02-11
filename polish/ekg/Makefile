@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/ekg/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ekg
 DISTVERSION=	1.8rc2
