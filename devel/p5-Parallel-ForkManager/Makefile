@@ -1,5 +1,5 @@
 # Created by: Nicolas Jombart <Nicolas.Jombart@hsc-labs.com>
-# $FreeBSD: head/devel/p5-Parallel-ForkManager/Makefile 338220 2013-12-31 04:25:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Parallel-ForkManager
 PORTVERSION=	1.06
