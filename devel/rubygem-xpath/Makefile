@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-xpath/Makefile 335759 2013-12-06 15:23:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	xpath
 PORTVERSION=	2.0.0
