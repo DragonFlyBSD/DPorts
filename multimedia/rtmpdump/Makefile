@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/rtmpdump/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rtmpdump
 PORTVERSION=	2.4.20130923
