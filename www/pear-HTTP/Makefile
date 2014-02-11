@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: head/www/pear-HTTP/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTTP
 PORTVERSION=	1.4.1
