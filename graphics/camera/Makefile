@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: graphics/camera/Makefile 342351 2014-02-02 17:54:46Z antoine $
+# $FreeBSD$
 
 PORTNAME=	camera
 PORTVERSION=	0.8
