@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: audio/libworkman/Makefile 330633 2013-10-17 12:00:55Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libworkman
 PORTVERSION=	1.4
