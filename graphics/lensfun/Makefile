@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: graphics/lensfun/Makefile 339754 2014-01-15 05:36:17Z danfe $
+# $FreeBSD$
 
 PORTNAME=	lensfun
 PORTVERSION=	0.2.8
