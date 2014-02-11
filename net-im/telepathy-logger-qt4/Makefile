@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-logger-qt4/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	telepathy-logger-qt4
 PORTVERSION=	0.6.0
