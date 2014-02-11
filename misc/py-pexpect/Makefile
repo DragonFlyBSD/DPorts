@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/py-pexpect/Makefile 340833 2014-01-23 15:44:14Z wg $
+# $FreeBSD$
 
 PORTNAME=	pexpect
 PORTVERSION=	3.1
