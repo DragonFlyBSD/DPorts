@@ -1,5 +1,5 @@
 # Created by: Steven G. Kargl
-# $FreeBSD: head/lang/f2c/Makefile 342703 2014-02-05 13:58:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	f2c
 PORTVERSION=	20060810
