@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-asn1-types/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	asn1-types
 PORTVERSION=	0.1.3
