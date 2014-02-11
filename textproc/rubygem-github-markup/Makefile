@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-github-markup/Makefile 335712 2013-12-05 20:28:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	github-markup
 PORTVERSION=	1.0.0
