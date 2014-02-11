@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci
-# $FreeBSD: devel/p5-Const-Fast/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Const-Fast
 PORTVERSION=	0.014
