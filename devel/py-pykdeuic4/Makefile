@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pykdeuic4/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	pykdeuic4
 PORTVERSION=	${KDE4_VERSION}
