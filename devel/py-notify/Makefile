@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-notify/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	notify
 PORTVERSION=	0.1.1
