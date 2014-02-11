@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Prototyped/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Prototyped
 PORTVERSION=	1.13
