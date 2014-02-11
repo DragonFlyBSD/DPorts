@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: devel/eris/Makefile 334470 2013-11-21 08:19:34Z oliver $
+# $FreeBSD$
 
 PORTNAME=	eris
 PORTVERSION=	1.3.21
