@@ -1,5 +1,5 @@
 # Created by: Toni Viemerö <toni.viemero@iki.fi>
-# $FreeBSD: devel/p5-PatchReader/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	PatchReader
 PORTVERSION=	0.9.6
