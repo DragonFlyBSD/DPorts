@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: head/devel/compiz-bcop/Makefile 342445 2014-02-03 13:57:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	compiz-bcop
 PORTVERSION=	0.8.4
