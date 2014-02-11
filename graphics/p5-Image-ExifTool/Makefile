@@ -1,5 +1,5 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: head/graphics/p5-Image-ExifTool/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 # Note: This port tracks the "production release" of ExifTool as given
 # by http://www.sno.phy.queensu.ca/~phil/exiftool/history.html
