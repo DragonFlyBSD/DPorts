@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: multimedia/swfdec-gnome/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 #   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.29 2010/09/29 14:04:43 kwm Exp $
 
 PORTNAME=	swfdec-gnome
