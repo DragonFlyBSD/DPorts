@@ -1,5 +1,5 @@
 # Created by: Rusty Nejdl
-# $FreeBSD: databases/py-apsw/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	apsw
 PORTVERSION=	3.8.0.2
