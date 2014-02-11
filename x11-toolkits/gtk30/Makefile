@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/gtk30/Makefile 338170 2013-12-30 21:09:09Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk
