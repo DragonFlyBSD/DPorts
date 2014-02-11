@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-Any/Makefile 333311 2013-11-09 18:47:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JSON-Any
 PORTVERSION=	1.32
