@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-ltfat/Makefile 340801 2014-01-23 05:05:19Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-ltfat
 PORTVERSION=	1.4.2
