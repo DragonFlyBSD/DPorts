@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Package-Stash-XS/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	Package-Stash-XS
 PORTVERSION=	0.28
