@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-pycparser/Makefile 335131 2013-11-29 00:15:57Z wg $
+# $FreeBSD$
 
 PORTNAME=	pycparser
 PORTVERSION=	2.10
