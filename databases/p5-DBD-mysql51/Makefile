@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/p5-DBD-mysql51/Makefile 336065 2013-12-10 15:56:24Z jadawin $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	51
 
