@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/p5-GnuPG-Interface/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	GnuPG-Interface
 PORTVERSION=	0.46
