@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: devel/poslib/Makefile 337002 2013-12-20 12:15:04Z pawel $
+# $FreeBSD$
 
 PORTNAME=	poslib
 PORTVERSION=	1.0.6
