@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: devel/libopkele/Makefile 336360 2013-12-13 16:01:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libopkele
 PORTVERSION=	2.0.4
