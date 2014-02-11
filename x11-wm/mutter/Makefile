@@ -1,5 +1,5 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
-# $FreeBSD: x11-wm/mutter/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-wm/mutter/Makefile,v 1.14 2010/06/29 21:14:07 kwm Exp $
 
 PORTNAME=	mutter
