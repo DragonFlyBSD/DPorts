@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: devel/py-robotframework-selenium2library/Makefile 340299 2014-01-19 13:55:57Z mva $
+# $FreeBSD$
 
 PORTNAME=	robotframework-selenium2library
 PORTVERSION=	1.5.0
