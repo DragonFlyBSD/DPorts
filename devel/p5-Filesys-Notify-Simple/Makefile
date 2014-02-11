@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Filesys-Notify-Simple/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	Filesys-Notify-Simple
 PORTVERSION=	0.12
