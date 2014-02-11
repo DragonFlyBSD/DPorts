@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFPlacefulWorkflow/Makefile 341155 2014-01-26 07:57:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFPlacefulWorkflow
 PORTVERSION=	1.5.9
