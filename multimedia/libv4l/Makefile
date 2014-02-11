@@ -1,5 +1,5 @@
 # Created by: Andrew Thompson <thompsa@FreeBSD.org>
-# $FreeBSD: head/multimedia/libv4l/Makefile 342445 2014-02-03 13:57:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libv4l
 PORTVERSION=	0.8.8
