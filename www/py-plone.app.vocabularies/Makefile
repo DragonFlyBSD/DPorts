@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.vocabularies/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.app.vocabularies
 PORTVERSION=	2.1.11
