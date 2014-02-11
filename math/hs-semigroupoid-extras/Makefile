@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-semigroupoid-extras/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	semigroupoid-extras
 PORTVERSION=	3.0.1
