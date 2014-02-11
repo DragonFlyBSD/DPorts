@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/libsoldout/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libsoldout
 DISTVERSION=	1.3
