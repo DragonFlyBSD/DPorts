@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/okular/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	okular
 PORTVERSION=	${KDE4_VERSION}
