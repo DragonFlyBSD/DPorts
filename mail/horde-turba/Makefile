@@ -1,4 +1,4 @@
-# $FreeBSD: mail/horde-turba/Makefile 341402 2014-01-27 13:30:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	turba
 PORTVERSION=	4.1.3
