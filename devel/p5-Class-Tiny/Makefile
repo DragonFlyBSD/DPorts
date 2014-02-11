@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Class-Tiny/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	Class-Tiny
 PORTVERSION=	0.014
