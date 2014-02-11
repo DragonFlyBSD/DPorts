@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: converters/p5-Convert-NLS_DATE_FORMAT/Makefile 328805 2013-09-30 15:10:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Convert-NLS_DATE_FORMAT
 PORTVERSION=	0.05
