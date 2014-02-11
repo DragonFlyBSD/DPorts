@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-xml-simple/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	xml-simple
 PORTVERSION=	1.1.2
