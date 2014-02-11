@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Field/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-Field
 DISTVERSION=	0.15
