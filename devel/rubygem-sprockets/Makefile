@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/rubygem-sprockets/Makefile 342231 2014-02-02 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	sprockets
 PORTVERSION=	2.10.1
