@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/mail/p5-Mail-POP3Client/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-POP3Client
 PORTVERSION=	2.19
