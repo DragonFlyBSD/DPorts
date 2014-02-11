@@ -1,13 +1,24 @@
---- src/api.cpp.orig	2013-10-29 01:24:28.000000000 +0000
+--- src/api.cpp.orig	2014-02-02 14:27:39.000000000 +0000
 +++ src/api.cpp
-@@ -1540,7 +1540,9 @@ const char* short_file_name(const char*
- }
- 
+@@ -34,7 +34,9 @@ using namespace Rcpp ;
+ #endif
+      
  #if defined(__GNUC__)
--#if defined(WIN32) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__sun)
-+#if defined(WIN32) || defined(__FreeBSD__) || defined(__NetBSD__) \
-+ || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__sun) \
-+ || defined(__DragonFly__)
- // Simpler version for Windows and *BSD 
+-    #if defined(WIN32) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__sun)
++    #if defined(WIN32) || defined(__FreeBSD__) || defined(__NetBSD__) \
++     || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__sun) \
++     || defined(__DragonFly__)
+     #else
+         #include <execinfo.h>
+         
+@@ -239,7 +241,9 @@ SEXP rcpp_can_use_cxx0x(){
+ // [[Rcpp::register]]
  SEXP stack_trace( const char* file, int line ){
-     Rcpp::List trace = Rcpp::List::create( 
+     #if defined(__GNUC__)
+-        #if defined(WIN32) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__sun)
++        #if defined(WIN32) || defined(__FreeBSD__) || defined(__NetBSD__) \
++         || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__sun) \
++         || defined(__DragonFly__)
+             // Simpler version for Windows and *BSD 
+             List trace = List::create( 
+                 _[ "file"  ] = file, 
