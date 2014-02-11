@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/gnome-doc-utils/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/trunk/textproc/gnome-doc-utils/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-doc-utils
