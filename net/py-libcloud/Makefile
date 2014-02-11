@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/py-libcloud/Makefile 341928 2014-01-31 07:51:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libcloud
 PORTVERSION=	0.13.3
