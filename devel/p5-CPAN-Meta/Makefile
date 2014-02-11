@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-CPAN-Meta/Makefile 336873 2013-12-19 07:24:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CPAN-Meta
 PORTVERSION=	2.133380
