@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: devel/p5-DateTime-Format-DateParse/Makefile 342005 2014-01-31 15:24:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-DateParse
 PORTVERSION=	0.05
