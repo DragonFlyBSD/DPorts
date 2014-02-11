@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ZCTextIndex/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ZCTextIndex
 PORTVERSION=	2.13.4
