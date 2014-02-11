@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: www/p5-HTML-SimpleParse/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	HTML-SimpleParse
 PORTVERSION=	0.12
