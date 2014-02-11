@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: head/misc/mime-support/Makefile 341598 2014-01-28 15:33:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mime-support
 PORTVERSION=	3.54
