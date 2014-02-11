@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexy/Makefile 339206 2014-01-09 08:53:19Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	libsexy
 PORTVERSION=	0.1.11
