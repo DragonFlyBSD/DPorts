@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/py-game/Makefile 339800 2014-01-15 18:36:44Z mva $
+# $FreeBSD$
 
 PORTNAME=	game
 PORTVERSION=	1.9.1
