@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: multimedia/smplayer/Makefile 340816 2014-01-23 09:05:17Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	smplayer
 DISTVERSION=	0.8.6
