@@ -1,5 +1,5 @@
 # Created by: trasz
-# $FreeBSD: head/textproc/iksemel/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	iksemel
 PORTVERSION=	1.4
