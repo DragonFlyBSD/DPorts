@@ -1,5 +1,5 @@
 # Created by: jmg
-# $FreeBSD: devel/mime/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD$
 
 PORTNAME=	mime
 PORTVERSION=	1.1
