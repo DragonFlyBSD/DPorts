@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov,com>
-# $FreeBSD: databases/rubygem-activerecord-jdbc-adapter/Makefile 340899 2014-01-24 14:45:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	activerecord-jdbc-adapter
 PORTVERSION=	1.2.9.1
