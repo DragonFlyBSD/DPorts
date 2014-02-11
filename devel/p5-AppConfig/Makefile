@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: head/devel/p5-AppConfig/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	AppConfig
 PORTVERSION=	1.66
