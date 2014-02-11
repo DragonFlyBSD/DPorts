@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-pygit2/Makefile 337478 2013-12-26 10:10:59Z wg $
+# $FreeBSD$
 
 PORTNAME=	pygit2
 PORTVERSION=	0.20.1
