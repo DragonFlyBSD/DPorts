@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: head/audio/soundtouch/Makefile 343228 2014-02-07 13:05:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	soundtouch
 PORTVERSION=	1.8.0
