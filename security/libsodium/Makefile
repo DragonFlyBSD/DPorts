@@ -1,4 +1,4 @@
-# $FreeBSD: security/libsodium/Makefile 331534 2013-10-24 21:45:04Z danilo $
+# $FreeBSD$
 
 PORTNAME=	libsodium
 PORTVERSION=	0.4.5
