@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@missouri.edu>
-# $FreeBSD: math/octave-forge-dataframe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-dataframe
 PORTVERSION=	0.9.1
