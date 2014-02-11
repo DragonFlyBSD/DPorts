@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/unoconv/files/unoconv.in 336717 2013-12-17 11:46:29Z nemysis $
+# $FreeBSD: head/textproc/unoconv/files/unoconv.in 336717 2013-12-17 11:46:29Z nemysis $
 #
 
 cd "%%DATADIR%%"

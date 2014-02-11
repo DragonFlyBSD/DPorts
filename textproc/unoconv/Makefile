@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: textproc/unoconv/Makefile 336717 2013-12-17 11:46:29Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	unoconv
 PORTVERSION=	0.6
