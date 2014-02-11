@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: math/R-cran-KFAS/Makefile 338308 2013-12-31 14:17:19Z tota $
+# $FreeBSD$
 
 PORTNAME=	KFAS
 PORTVERSION=	1.0.2
