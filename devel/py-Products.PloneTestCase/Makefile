@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.PloneTestCase/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.PloneTestCase
 PORTVERSION=	0.9.17
