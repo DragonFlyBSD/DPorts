@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/gnome-media/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/audio/gnome-media/Makefile,v 1.164 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	gnome-media
