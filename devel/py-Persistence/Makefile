@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Persistence/Makefile 340933 2014-01-24 21:28:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Persistence
 PORTVERSION=	2.13.2
