@@ -1,5 +1,5 @@
 # Created by: Eugene Grosbein <ports@grosbein.net>
-# $FreeBSD: devel/py-application/Makefile 341976 2014-01-31 10:20:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	application
 PORTVERSION=	1.2.9
