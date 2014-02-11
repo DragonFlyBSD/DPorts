@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: archivers/rubygem-bzip2/Makefile 336307 2013-12-13 01:22:30Z swills $
+# $FreeBSD$
 
 PORTNAME=	bzip2
 PORTVERSION=	0.2.7
