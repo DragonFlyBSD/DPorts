@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-uglifier/Makefile 338278 2013-12-31 10:09:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	uglifier
 PORTVERSION=	2.4.0
