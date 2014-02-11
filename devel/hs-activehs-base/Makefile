@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-activehs-base/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	activehs-base
 PORTVERSION=	0.3.0.2
