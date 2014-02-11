@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: www/tntnet/Makefile 341460 2014-01-27 21:50:45Z nox $
+# $FreeBSD$
 
 PORTNAME=	tntnet
 PORTVERSION=	2.2.1
