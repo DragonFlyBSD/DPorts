@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: devel/p5-File-ReadBackwards/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	File-ReadBackwards
 PORTVERSION=	1.05
