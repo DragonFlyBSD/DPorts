@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: security/opensaml2/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	opensaml2
 PORTVERSION=	2.5.3

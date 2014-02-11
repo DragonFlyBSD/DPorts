@@ -1,5 +1,5 @@
 
-$FreeBSD: security/opensaml2/files/patch-doc_Makefile.in 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/security/opensaml2/files/patch-doc_Makefile.in 340725 2014-01-22 17:40:44Z mat $
 
 --- doc/Makefile.in.orig
 +++ doc/Makefile.in
