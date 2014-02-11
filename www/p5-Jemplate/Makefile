@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Jemplate/Makefile 341706 2014-01-29 09:17:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Jemplate
 PORTVERSION=	0.270
