@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks <wghicks@bellsouth.net>
-# $FreeBSD: head/devel/p5-Parse-RecDescent/Makefile 333358 2013-11-09 23:13:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Parse-RecDescent
 PORTVERSION=	1.967.009
