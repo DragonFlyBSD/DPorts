@@ -1,5 +1,5 @@
 # Created by: lbr@FreeBSD.org
-# $FreeBSD: www/p5-Catalyst-Plugin-Cache/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-Cache
 PORTVERSION=	0.12
