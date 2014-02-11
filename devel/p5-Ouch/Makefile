@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Ouch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Ouch
 PORTVERSION=	0.0408
