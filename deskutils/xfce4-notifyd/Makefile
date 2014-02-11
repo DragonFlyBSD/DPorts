@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notifyd/Makefile 330340 2013-10-14 18:48:19Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-notifyd
 PORTVERSION=	0.2.4
