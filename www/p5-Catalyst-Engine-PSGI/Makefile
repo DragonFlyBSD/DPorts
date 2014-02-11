@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-Engine-PSGI/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Engine-PSGI
 PORTVERSION=	0.13
