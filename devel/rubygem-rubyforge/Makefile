@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: devel/rubygem-rubyforge/Makefile 335323 2013-11-30 18:29:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rubyforge
 PORTVERSION=	2.0.4
