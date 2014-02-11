@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: mail/mime-construct/Makefile 342004 2014-01-31 15:24:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mime-construct
 PORTVERSION=	1.11
