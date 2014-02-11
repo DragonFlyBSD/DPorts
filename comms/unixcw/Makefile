@@ -1,4 +1,4 @@
-# $FreeBSD: comms/unixcw/Makefile 338163 2013-12-30 19:41:21Z db $
+# $FreeBSD$
 
 PORTNAME=	unixcw
 PORTVERSION=	3.3.0
