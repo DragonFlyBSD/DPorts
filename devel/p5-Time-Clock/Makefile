@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Time-Clock/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Time-Clock
 PORTVERSION=	1.02
