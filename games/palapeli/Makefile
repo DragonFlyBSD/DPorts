@@ -1,4 +1,4 @@
-# $FreeBSD: games/palapeli/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	palapeli
 PORTVERSION=	${KDE4_VERSION}
