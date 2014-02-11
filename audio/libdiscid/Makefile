@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libdiscid/Makefile 329272 2013-10-04 09:30:19Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libdiscid
 PORTVERSION=	0.6.1
