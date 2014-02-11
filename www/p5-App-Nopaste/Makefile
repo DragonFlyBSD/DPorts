@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-App-Nopaste/Makefile 340410 2014-01-20 17:00:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	App-Nopaste
 PORTVERSION=	0.94
