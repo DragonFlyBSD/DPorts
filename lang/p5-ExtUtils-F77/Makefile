@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: lang/p5-ExtUtils-F77/Makefile 337188 2013-12-22 13:20:52Z tijl $
+# $FreeBSD$
 
 PORTNAME=	ExtUtils-F77
 PORTVERSION=	1.17
