@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/p5-Gnome2-Canvas/Makefile 333342 2013-11-09 21:46:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gnome2-Canvas
 PORTVERSION=	1.002
