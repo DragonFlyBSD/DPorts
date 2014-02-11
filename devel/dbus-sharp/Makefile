@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: devel/dbus-sharp/Makefile 341977 2014-01-31 10:54:36Z romain $
+# $FreeBSD$
 
 PORTNAME=	dbus-sharp
 PORTVERSION=	0.7.0
