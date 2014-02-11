@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Net-LDAP-posixGroup/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-LDAP-posixGroup
 PORTVERSION=	0.0.2
