@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: comms/scmxx/Makefile 338559 2014-01-03 16:18:05Z adamw $
+# $FreeBSD$
 
 PORTNAME=	scmxx
 PORTVERSION=	0.9.0
@@ -24,6 +24,8 @@ DOCS=		README docs/*.txt
 EXAMPLES=	sms.txt vCalendar.vcs vCard.vcf
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
