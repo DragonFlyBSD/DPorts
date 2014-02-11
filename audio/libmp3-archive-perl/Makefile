@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libmp3-archive-perl/Makefile 331311 2013-10-22 20:02:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libmp3-archive-perl
 PORTVERSION=	0.9
