@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: multimedia/dirac/Makefile 330760 2013-10-18 15:31:20Z tijl $
+# $FreeBSD$
 
 PORTNAME=	dirac
 PORTVERSION=	1.0.2
