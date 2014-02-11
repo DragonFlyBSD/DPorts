@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/glew/Makefile 340112 2014-01-17 21:30:37Z mva $
+# $FreeBSD$
 
 PORTNAME=	glew
 PORTVERSION=	1.10.0

@@ -1,4 +1,4 @@
-$FreeBSD: graphics/glew/files/patch-config_Makefile.freebsd 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/graphics/glew/files/patch-config_Makefile.freebsd 340725 2014-01-22 17:40:44Z mat $
 --- config/Makefile.freebsd.orig	2012-10-04 19:47:46.000000000 +0200
 +++ config/Makefile.freebsd	2012-10-04 19:49:06.000000000 +0200
 @@ -1,22 +1,22 @@
