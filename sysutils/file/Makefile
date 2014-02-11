@@ -1,5 +1,5 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: head/sysutils/file/Makefile 342867 2014-02-05 21:45:46Z bf $
+# $FreeBSD$
 
 PORTNAME=	file
 PORTVERSION=	5.16
