@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: x11-toolkits/phat/Makefile 337813 2013-12-27 21:48:55Z antoine $
+# $FreeBSD$
 
 PORTNAME=	phat
 PORTVERSION=	0.4.1
