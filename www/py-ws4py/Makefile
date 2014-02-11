@@ -1,5 +1,5 @@
 # Created by: rene@FreeBSD.org
-# $FreeBSD: www/py-ws4py/Makefile 336603 2013-12-16 02:38:59Z rene $
+# $FreeBSD$
 
 PORTNAME=	ws4py
 PORTVERSION=	0.3.2
