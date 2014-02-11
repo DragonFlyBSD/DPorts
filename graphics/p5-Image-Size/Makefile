@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/graphics/p5-Image-Size/Makefile 341560 2014-01-28 13:37:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Image-Size
 PORTVERSION=	3.232
