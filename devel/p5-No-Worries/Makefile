@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-No-Worries/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	No-Worries
 PORTVERSION=	1.0
