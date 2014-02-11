@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/httpcore/Makefile 342108 2014-02-01 10:21:52Z ale $
+# $FreeBSD$
 
 PORTNAME=	httpcore
 DISTVERSION=	4.3.1
