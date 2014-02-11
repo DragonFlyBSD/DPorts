@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde4-wallpapers/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kde-wallpapers
 PORTVERSION=	${KDE4_VERSION}
