@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: security/p5-Apache-Htpasswd/Makefile 338072 2013-12-30 09:43:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Apache-Htpasswd
 PORTVERSION=	1.9
