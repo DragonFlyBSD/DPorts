@@ -1,5 +1,5 @@
 # Created by: Juli Mallett
-# $FreeBSD: x11-toolkits/gtk-sharp20/Makefile 334017 2013-11-16 17:58:27Z romain $
+# $FreeBSD$
 
 PORTNAME=	gtk-sharp
 PORTVERSION=	2.12.10
