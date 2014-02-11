@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-pyflakes/Makefile 342113 2014-02-01 11:06:52Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pyflakes
 PORTVERSION=	0.7.3
