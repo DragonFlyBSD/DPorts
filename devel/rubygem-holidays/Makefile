@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-holidays/Makefile 340901 2014-01-24 14:46:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	holidays
 PORTVERSION=	1.0.5
