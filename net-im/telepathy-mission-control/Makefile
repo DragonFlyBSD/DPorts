@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-mission-control/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.23 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	telepathy-mission-control
