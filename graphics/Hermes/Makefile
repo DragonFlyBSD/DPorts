@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: graphics/Hermes/Makefile 340011 2014-01-17 03:31:57Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	Hermes
 PORTVERSION=	1.3.3
