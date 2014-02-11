@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Collect/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Module-Collect
 PORTVERSION=	0.06
