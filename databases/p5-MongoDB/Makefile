@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-MongoDB/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	MongoDB
 PORTVERSION=	0.45
