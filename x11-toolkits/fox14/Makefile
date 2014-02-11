@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: x11-toolkits/fox14/Makefile 329702 2013-10-07 13:14:12Z gahr $
+# $FreeBSD$
 
 PORTNAME=	fox
 PORTVERSION=	1.4.35
