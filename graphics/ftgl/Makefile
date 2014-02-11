@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: graphics/ftgl/Makefile 330565 2013-10-16 23:47:15Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	ftgl
 DISTVERSION=	2.1.3-rc5
