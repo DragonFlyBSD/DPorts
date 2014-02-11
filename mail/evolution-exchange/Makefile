@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger, based off kiesel's ximian-exchange port
-# $FreeBSD: mail/evolution-exchange/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 #   $MCom: ports/mail/evolution-exchange/Makefile,v 1.172 2012/09/20 23:06:27 kwm Exp $
 
 PORTNAME=	evolution-exchange
@@ -21,7 +21,7 @@ CONFLICTS=	evolution-exchange-3.[0-9]*
 USE_BZIP2=	yes
 USES=		gettext gmake pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_BDB=	41
+USE_BDB=	41+
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack ltasneededhack
 CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
