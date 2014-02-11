@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: games/gnome-games/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 #   $MCom: ports/games/gnome-games/Makefile,v 1.240 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	gnome-games
