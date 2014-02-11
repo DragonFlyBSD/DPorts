@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-String-Checker/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	String-Checker
 PORTVERSION=	0.03
