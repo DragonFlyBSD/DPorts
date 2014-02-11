@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: graphics/sodipodi/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #    $MCom: ports/graphics/sodipodi/Makefile,v 1.3 2007/05/30 03:21:43 mezz Exp $
 
 PORTNAME=	sodipodi
