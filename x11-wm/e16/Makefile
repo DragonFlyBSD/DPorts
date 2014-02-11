@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/e16/Makefile 331836 2013-10-28 08:45:13Z gahr $
+# $FreeBSD$
 
 PORTNAME=	e16
 PORTVERSION=	1.0.13.003
