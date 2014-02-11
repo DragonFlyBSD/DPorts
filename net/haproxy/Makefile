@@ -1,5 +1,5 @@
 # Created by: Clement Laforet
-# $FreeBSD: net/haproxy/Makefile 331619 2013-10-25 18:04:26Z demon $
+# $FreeBSD$
 
 PORTNAME=	haproxy
 PORTVERSION=	1.4.24
