@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.workflow/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.app.workflow
 PORTVERSION=	2.1.6
