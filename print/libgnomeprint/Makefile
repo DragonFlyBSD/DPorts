@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: print/libgnomeprint/Makefile 335782 2013-12-06 18:57:55Z kwm $
+# $FreeBSD$
 #   $MCom: ports/print/libgnomeprint/Makefile,v 1.77 2010/09/28 16:38:29 kwm Exp $
 
 PORTNAME=	libgnomeprint
