@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/synergy/Makefile 334913 2013-11-26 02:16:54Z kevlo $
+# $FreeBSD$
 
 PORTNAME=	synergy
 PORTVERSION=	1.3.8
