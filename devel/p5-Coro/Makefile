@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Coro/Makefile 334346 2013-11-19 20:00:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Coro
 PORTVERSION=	6.33
