@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdotool/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xdotool
 DISTVERSION=	2.20110530.1
