@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: head/devel/glibmm/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/glibmm/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	glibmm
