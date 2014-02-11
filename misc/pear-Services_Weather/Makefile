@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@FreeBSD.org>)
-# $FreeBSD: misc/pear-Services_Weather/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Services_Weather
 PORTVERSION=	1.4.6
