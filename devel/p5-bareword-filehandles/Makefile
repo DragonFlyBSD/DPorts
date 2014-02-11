@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-bareword-filehandles/Makefile 336215 2013-12-11 19:55:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	bareword-filehandles
 PORTVERSION=	0.003
