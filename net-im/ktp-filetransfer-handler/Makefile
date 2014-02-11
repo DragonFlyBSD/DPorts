@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-filetransfer-handler/Makefile 338828 2014-01-05 23:05:13Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ktp-filetransfer-handler
 PORTVERSION=	${KTP_VERSION}
