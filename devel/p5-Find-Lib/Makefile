@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Find-Lib/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	Find-Lib
 PORTVERSION=	1.04
