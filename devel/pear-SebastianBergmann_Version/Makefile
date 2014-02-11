@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-SebastianBergmann_Version/Makefile 333599 2013-11-12 18:52:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Version
 PORTVERSION=	1.0.1
