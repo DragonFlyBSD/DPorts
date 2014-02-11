@@ -1,8 +1,9 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/duplicity/Makefile 342199 2014-02-01 18:31:16Z jase $
+# $FreeBSD$
 
 PORTNAME=	duplicity
 PORTVERSION=	0.6.23
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/duplicity/0.6-series/${PORTVERSION}/+download/
 
@@ -10,7 +11,8 @@ MAINTAINER=	jase@FreeBSD.org
 COMMENT=	Backup tool that uses librsync and GnuPG
 
 LIB_DEPENDS=	librsync.so:${PORTSDIR}/net/librsync
-RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
+RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
+		${PYTHON_PKGNAMEPREFIX}lockfile>=0:${PORTSDIR}/devel/py-lockfile
 
 CONFLICTS=	duplicity-0.5.* duplicity-devel-[0-9]*
 
