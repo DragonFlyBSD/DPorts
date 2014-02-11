@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Forest/Makefile 338208 2013-12-31 01:21:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Forest
 PORTVERSION=	0.10
