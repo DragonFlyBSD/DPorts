@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: head/textproc/p5-YAML-LibYAML/Makefile 341634 2014-01-28 16:47:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	YAML-LibYAML
 PORTVERSION=	0.41
