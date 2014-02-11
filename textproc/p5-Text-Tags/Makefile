@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Text-Tags/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Tags
 PORTVERSION=	0.04
