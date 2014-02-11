@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: security/p5-Authen-SASL/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Authen-SASL
 PORTVERSION=	2.16
