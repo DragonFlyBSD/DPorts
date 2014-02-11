@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: www/spawn-fcgi/files/spawn-fcgi.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/spawn-fcgi/files/spawn-fcgi.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: spawn_fcgi
 # REQUIRE: %%REQUIRE%%
