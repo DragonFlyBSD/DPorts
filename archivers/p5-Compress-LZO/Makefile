@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Compress-LZO/Makefile 336153 2013-12-11 10:04:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Compress-LZO
 PORTVERSION=	1.08
