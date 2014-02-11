@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-chef-server-webui/Makefile 338368 2014-01-01 06:51:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	chef-server-webui
 PORTVERSION=	10.30.2
