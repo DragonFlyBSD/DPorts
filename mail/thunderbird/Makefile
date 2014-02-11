@@ -1,8 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: mail/thunderbird/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	thunderbird
-DISTVERSION=	24.2.0
+DISTVERSION=	24.3.0
+PORTREVISION=	1
 CATEGORIES=	mail news net-im ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${PORTNAME}-${DISTVERSION}.source${EXTRACT_SUFX}
@@ -12,7 +13,7 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
 
 BUILD_DEPENDS=	nspr>=4.10:${PORTSDIR}/devel/nspr \
-		nss>=3.15:${PORTSDIR}/security/nss \
+		nss>=3.15.4:${PORTSDIR}/security/nss \
 		sqlite3>=3.7.17:${PORTSDIR}/databases/sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3 \
 		cairo>=1.10.2_1,1:${PORTSDIR}/graphics/cairo \
@@ -36,7 +37,8 @@ QT_NONSTANDARD=	yes
 ALL_TARGET=	default
 USE_BZIP2=	yes
 USE_GL=		gl
-USE_DOS2UNIX=	mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
+USES=		dos2unix
+DOS2UNIX_FILES=	mozilla/media/webrtc/trunk/webrtc/system_wrappers/source/spreadsortlib/spreadsort.hpp
 
 MOZ_PROTOCOLS=	http,ftp,file,viewsource,res,data,wyciwyg,websocket
 MOZ_OPTIONS=	--program-transform-name='s/thunderbird/${MOZILLA}/' \
@@ -71,6 +73,10 @@ WRKSRC=		${WRKDIR}/comm-esr24
 MOZSRC:=	${WRKSRC}/mozilla
 
 XPI_LIBDIR=	${PREFIX}/lib/xpi
+
+.if ${PORT_OPTIONS:MALSA}
+BUILD_DEPENDS+=	alsa-lib>=1.0.27.2_1:${PORTSDIR}/audio/alsa-lib
+.endif
 
 .if ${PORT_OPTIONS:MENIGMAIL}
 MASTER_SITES+=	https://www.enigmail.net/download/source/:enigmail
