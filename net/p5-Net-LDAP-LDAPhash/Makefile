@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Net-LDAP-LDAPhash/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-LDAP-LDAPhash
 PORTVERSION=	1.0.3
