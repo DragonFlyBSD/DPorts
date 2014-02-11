@@ -1,4 +1,4 @@
-# $FreeBSD: mail/cyrus-imapd24/Makefile 338127 2013-12-30 16:01:04Z ume $
+# $FreeBSD$
 
 PORTNAME=	cyrus-imapd
 PORTVERSION=	2.4.17

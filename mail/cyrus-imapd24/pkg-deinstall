@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$FreeBSD: mail/cyrus-imapd24/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+#	$FreeBSD: head/mail/cyrus-imapd24/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 #
 # Created by: hetzels@westbend.net
 
