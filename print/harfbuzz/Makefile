@@ -1,8 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: print/harfbuzz/Makefile 337981 2013-12-29 13:31:28Z kwm $
+# $FreeBSD$
 
 PORTNAME=	harfbuzz
 PORTVERSION=	0.9.25
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.freedesktop.org/software/harfbuzz/release/
 
