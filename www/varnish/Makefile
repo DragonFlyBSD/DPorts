@@ -1,4 +1,4 @@
-# $FreeBSD: www/varnish/Makefile 340999 2014-01-25 09:27:18Z koobs $
+# $FreeBSD$
 
 PORTNAME=	varnish
 PORTVERSION=	3.0.5
