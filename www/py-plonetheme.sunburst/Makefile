@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plonetheme.sunburst/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plonetheme.sunburst
 PORTVERSION=	1.4.5
