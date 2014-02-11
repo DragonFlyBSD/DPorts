@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-URI-Template-Restrict/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	URI-Template-Restrict
 PORTVERSION=	0.06
