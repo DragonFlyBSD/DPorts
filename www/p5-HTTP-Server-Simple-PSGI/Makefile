@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: www/p5-HTTP-Server-Simple-PSGI/Makefile 330290 2013-10-14 11:03:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Server-Simple-PSGI
 PORTVERSION=	0.16
