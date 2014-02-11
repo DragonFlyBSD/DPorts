@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-gio/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	gio
 PORTVERSION=	0.12.4
