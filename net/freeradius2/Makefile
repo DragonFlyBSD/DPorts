@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: net/freeradius2/Makefile 340742 2014-01-22 22:36:13Z zi $
+# $FreeBSD$
 
 PORTNAME=	freeradius
 DISTVERSION=	2.2.3
