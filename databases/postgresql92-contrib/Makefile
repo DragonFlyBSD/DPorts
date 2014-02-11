@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql92-contrib/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	postgresql
 CATEGORIES=	databases
