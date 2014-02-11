@@ -1,5 +1,5 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: head/archivers/p5-Compress-Raw-Zlib/Makefile 342684 2014-02-05 10:44:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Compress-Raw-Zlib
 PORTVERSION=	2.065
