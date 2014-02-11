@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: textproc/p5-XML-Stream/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Stream
 DISTVERSION=	1.23_06
