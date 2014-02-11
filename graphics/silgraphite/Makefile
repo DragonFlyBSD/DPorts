@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: graphics/silgraphite/Makefile 342301 2014-02-02 14:41:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	silgraphite
 PORTVERSION=	2.3.1
