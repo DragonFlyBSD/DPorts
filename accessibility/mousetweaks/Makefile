@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: accessibility/mousetweaks/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD$
 #   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.53 2010/11/15 21:25:36 kwm Exp $
 
 PORTNAME=	mousetweaks
