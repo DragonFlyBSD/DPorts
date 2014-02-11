@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: head/net/GeoIP/Makefile 343578 2014-02-10 03:19:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	GeoIP
 PORTVERSION=	1.4.8
