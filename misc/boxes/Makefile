@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: misc/boxes/Makefile 333105 2013-11-07 14:46:45Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	boxes
 PORTVERSION=	1.1.1
