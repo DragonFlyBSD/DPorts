@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@FreeBSD.org>
-# $FreeBSD: head/devel/pwlib/Makefile 342887 2014-02-05 23:02:38Z marino $
+# $FreeBSD$
 
 PORTNAME=	pwlib
 PORTVERSION=	1.12.0
