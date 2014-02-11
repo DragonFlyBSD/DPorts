@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-benelux/Makefile 335225 2013-11-29 21:13:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	benelux
 PORTVERSION=	0.6.1
