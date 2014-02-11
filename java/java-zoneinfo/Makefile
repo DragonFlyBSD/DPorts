@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: head/java/java-zoneinfo/Makefile 337162 2013-12-21 21:08:42Z glewis $
+# $FreeBSD$
 
 PORTNAME=	zoneinfo
 DISTVERSION=	2013i
