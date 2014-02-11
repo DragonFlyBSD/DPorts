@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: dns/p5-Net-DNS-SEC/Makefile 335202 2013-11-29 17:24:43Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-SEC
 PORTVERSION=	0.17
