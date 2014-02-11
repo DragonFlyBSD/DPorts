@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@uiuc.edu>
-# $FreeBSD: devel/p5-ParseLex/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	ParseLex
 PORTVERSION=	2.21
