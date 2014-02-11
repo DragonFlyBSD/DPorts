@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: textproc/libebml/Makefile 331047 2013-10-20 18:17:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libebml
 PORTVERSION=	1.3.0
