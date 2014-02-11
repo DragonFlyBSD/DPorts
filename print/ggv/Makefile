@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: print/ggv/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 #   $MCom: ports/print/ggv/Makefile,v 1.8 2007/09/24 19:40:45 mezz Exp $
 
 PORTNAME=	ggv
