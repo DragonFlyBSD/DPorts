@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-tkinter/Makefile 339328 2014-01-10 08:39:01Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkinter
 PORTVERSION=	${PYTHON_PORTVERSION}
