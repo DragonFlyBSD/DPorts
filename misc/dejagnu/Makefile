@@ -1,5 +1,5 @@
 # Created by: markm
-# $FreeBSD: misc/dejagnu/Makefile 331838 2013-10-28 09:26:46Z gahr $
+# $FreeBSD$
 
 PORTNAME=	dejagnu
 PORTVERSION=	1.5.1
