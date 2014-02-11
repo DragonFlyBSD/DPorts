@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-em-http-request/Makefile 338362 2014-01-01 06:51:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	em-http-request
 PORTVERSION=	1.1.2
