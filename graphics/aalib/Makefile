@@ -1,9 +1,9 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: head/graphics/aalib/Makefile 341148 2014-01-26 00:27:55Z eadler $
+# $FreeBSD$
 
 PORTNAME=	aalib
 PORTVERSION=	1.4.r5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	SF/aa-project/aa-lib/1.4rc5
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.r/rc/}
@@ -13,8 +13,7 @@ COMMENT=	ASCII art library
 
 OPTIONS_DEFINE=	X11
 
-USES=		ncurses
-USE_AUTOTOOLS=	libtool
+USES=		ncurses libtool
 WRKSRC=		${WRKDIR}/${PORTNAME}-1.4.0
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
