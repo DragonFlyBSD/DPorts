@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-ua_parser/Makefile 341578 2014-01-28 14:26:43Z demon $
+# $FreeBSD$
 
 PORTNAME=	ua_parser
 PORTVERSION=	0.3.4
