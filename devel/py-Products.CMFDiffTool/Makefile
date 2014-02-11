@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFDiffTool/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFDiffTool
 PORTVERSION=	2.1
