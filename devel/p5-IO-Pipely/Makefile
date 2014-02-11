@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold
-# $FreeBSD: devel/p5-IO-Pipely/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IO-Pipely
 PORTVERSION=	0.005
