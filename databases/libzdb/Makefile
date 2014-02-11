@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: databases/libzdb/Makefile 339863 2014-01-15 23:38:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libzdb
 PORTVERSION=	2.11.3
