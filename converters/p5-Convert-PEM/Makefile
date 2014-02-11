@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: converters/p5-Convert-PEM/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Convert-PEM
 PORTVERSION=	0.08
