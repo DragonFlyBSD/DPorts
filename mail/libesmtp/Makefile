@@ -1,5 +1,5 @@
 # Created by: tobez@tobez.org
-# $FreeBSD: head/mail/libesmtp/Makefile 342699 2014-02-05 13:45:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libesmtp
 PORTVERSION=	1.0.6
