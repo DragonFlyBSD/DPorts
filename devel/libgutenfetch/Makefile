@@ -1,5 +1,5 @@
 # Created by: Russell Francis <johntabularasa@users.sf.net>
-# $FreeBSD: devel/libgutenfetch/Makefile 341981 2014-01-31 12:14:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libgutenfetch
 PORTVERSION=	1.2
