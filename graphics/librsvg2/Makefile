@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: graphics/librsvg2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/graphics/librsvg2/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	librsvg
