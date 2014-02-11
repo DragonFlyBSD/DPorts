@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Tree-Simple/Makefile 333369 2013-11-10 10:10:14Z demon $
+# $FreeBSD$
 
 PORTNAME=	Tree-Simple
 PORTVERSION=	1.23
