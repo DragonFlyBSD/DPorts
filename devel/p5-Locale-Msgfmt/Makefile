@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Locale-Msgfmt/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Locale-Msgfmt
 PORTVERSION=	0.15
