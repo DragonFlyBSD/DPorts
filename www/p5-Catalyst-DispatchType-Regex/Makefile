@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-DispatchType-Regex/Makefile 333978 2013-11-16 03:39:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-DispatchType-Regex
 PORTVERSION=	5.90.032
