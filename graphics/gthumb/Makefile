@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: graphics/gthumb/Makefile 330496 2013-10-16 10:50:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	gthumb
 PORTVERSION=	2.14.1
