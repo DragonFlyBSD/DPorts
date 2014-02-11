@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: head/japanese/migemo/Makefile 338480 2014-01-02 20:02:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	migemo
 PORTVERSION=	0.40
