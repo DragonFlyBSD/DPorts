@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-CheckCompiler/Makefile 335638 2013-12-04 21:53:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Devel-CheckCompiler
 PORTVERSION=	0.05
