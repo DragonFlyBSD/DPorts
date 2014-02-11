@@ -1,5 +1,5 @@
 # Created by: Matt Mills <matt_mills@btopenworld.com>
-# $FreeBSD: textproc/p5-String-Format/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	String-Format
 PORTVERSION=	1.17
