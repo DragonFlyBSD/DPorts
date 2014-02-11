@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-ShipIt/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	ShipIt
 PORTVERSION=	0.60
