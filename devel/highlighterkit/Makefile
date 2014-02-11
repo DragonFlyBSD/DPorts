@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/highlighterkit/Makefile 341515 2014-01-28 08:36:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	highlighterkit
 PORTVERSION=	0.1
