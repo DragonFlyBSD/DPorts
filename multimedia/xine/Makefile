@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/xine/Makefile 335174 2013-11-29 12:48:19Z makc $
+# $FreeBSD$
 
 PORTNAME=	xine
 PORTVERSION=	0.99.7
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 
 USE_XZ=		yes
 USE_XORG=	x11 xext xinerama xscrnsaver xt xtst xv xxf86vm
-USES=		desktop-file-utils gmake pkgconfig shared-mime-info
+USES=		desktop-file-utils gmake pkgconfig shared-mime-info readline
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-vdr-keys \
 		--disable-nvtvsimple

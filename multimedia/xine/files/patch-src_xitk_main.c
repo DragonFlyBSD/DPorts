@@ -1,5 +1,3 @@
-$NetBSD: patch-ba,v 1.4 2012/09/01 08:14:22 marino Exp $
-
 --- src/xitk/main.c.orig	2012-01-19 11:04:00.000000000 +0000
 +++ src/xitk/main.c
 @@ -21,7 +21,7 @@
@@ -7,7 +5,7 @@ $NetBSD: patch-ba,v 1.4 2012/09/01 08:14:22 marino Exp $
   */
  /* required for getsubopt(); the __sun test gives us strncasecmp() on solaris */
 -#if !defined(__sun) && ! defined(__FreeBSD__)
-+#if !defined(__sun) && ! defined(__FreeBSD__) && ! defined(__NetBSD__) && ! defined(__DragonFly__)
++#if !defined(__sun) && ! defined(__FreeBSD__) && ! defined(__DragonFly__)
  #define _XOPEN_SOURCE 500
  #endif
  /* required for strncasecmp() */
