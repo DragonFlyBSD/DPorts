@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/sdl12/Makefile 340736 2014-01-22 21:54:49Z mva $
+# $FreeBSD$
 
 PORTNAME=	sdl
 PORTVERSION=	1.2.15
