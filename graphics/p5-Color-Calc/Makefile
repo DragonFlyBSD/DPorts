@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: graphics/p5-Color-Calc/Makefile 333079 2013-11-07 10:45:23Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Color-Calc
 PORTVERSION=	1.073
