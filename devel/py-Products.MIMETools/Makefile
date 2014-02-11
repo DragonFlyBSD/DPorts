@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.MIMETools/Makefile 341081 2014-01-25 19:42:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.MIMETools
 PORTVERSION=	2.13.0
