@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-unf/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	unf
 PORTVERSION=	0.1.1
