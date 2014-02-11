@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zope.error/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zope.error
 PORTVERSION=	3.7.4
