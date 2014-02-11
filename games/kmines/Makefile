@@ -1,4 +1,4 @@
-# $FreeBSD: games/kmines/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kmines
 PORTVERSION=	${KDE4_VERSION}
