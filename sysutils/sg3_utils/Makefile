@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: sysutils/sg3_utils/Makefile 339620 2014-01-13 19:06:58Z mandree $
+# $FreeBSD$
 
 PORTNAME=	sg3_utils
 PORTVERSION=	1.37
