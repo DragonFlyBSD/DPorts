@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFDynamicViewFTI/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFDynamicViewFTI
 PORTVERSION=	4.0.5
