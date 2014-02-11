@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Any-Lite/Makefile 328392 2013-09-26 16:49:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Archive-Any-Lite
 PORTVERSION=	0.07
