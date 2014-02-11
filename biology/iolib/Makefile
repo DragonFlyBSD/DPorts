@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/iolib/Makefile 340411 2014-01-20 17:02:11Z bapt $
+# $FreeBSD$
 
 PORTNAME=	io_lib
 PORTVERSION=	1.13.0
