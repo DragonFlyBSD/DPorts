@@ -1,5 +1,5 @@
 # Created by: @BABOLO <.@babolo.ru>
-# $FreeBSD: net-mgmt/flow-tools-ng/Makefile 334443 2013-11-20 19:12:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	flow-tools
 PORTVERSION=	0.68.5.1
