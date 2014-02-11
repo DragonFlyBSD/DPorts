@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: head/devel/py-parsing/Makefile 343585 2014-02-10 05:32:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	parsing
 PORTVERSION=	2.0.1
