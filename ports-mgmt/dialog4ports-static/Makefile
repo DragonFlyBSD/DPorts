@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/dialog4ports-static/Makefile 341616 2014-01-28 16:22:19Z mat $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-static
 
