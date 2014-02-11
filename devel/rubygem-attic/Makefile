@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-attic/Makefile 335224 2013-11-29 21:12:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	attic
 PORTVERSION=	0.5.3
