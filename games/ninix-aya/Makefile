@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi
-# $FreeBSD: games/ninix-aya/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ninix-aya
 PORTVERSION=	4.4
