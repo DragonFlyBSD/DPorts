@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Proc-Pidfile/Makefile 332704 2013-11-04 13:08:03Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Proc-Pidfile
 PORTVERSION=	1.005
