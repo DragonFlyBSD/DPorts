@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Pod-Readme/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	Pod-Readme
 PORTVERSION=	0.11
