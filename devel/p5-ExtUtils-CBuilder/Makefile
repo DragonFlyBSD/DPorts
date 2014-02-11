@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: head/devel/p5-ExtUtils-CBuilder/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	ExtUtils-CBuilder
 PORTVERSION=	0.2802.12
