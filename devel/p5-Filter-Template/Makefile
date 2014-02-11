@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Filter-Template/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Filter-Template
 PORTVERSION=	1.043
