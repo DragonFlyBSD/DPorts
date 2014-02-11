@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-HTML-Tidy/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Tidy
 PORTVERSION=	1.56
