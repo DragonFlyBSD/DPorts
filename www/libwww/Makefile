@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: head/www/libwww/Makefile 341595 2014-01-28 15:27:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libwww
 PORTVERSION=	5.4.0
