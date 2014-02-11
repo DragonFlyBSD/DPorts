@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: head/games/urbanterror-data/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	data
 PORTVERSION=	4.2.014
@@ -27,6 +27,9 @@ URT_REV=	${PORTVERSION:C/([0-9]+\.[0-9]+).*\.([0-9]+)/\2/}
 PLIST_SUB+=	VER=${URT_VER}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
