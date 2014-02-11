@@ -1,5 +1,5 @@
 # Created by: Dierk Sacher <dierk@blaxxtarz.de>
-# $FreeBSD: multimedia/ffmpegthumbnailer/Makefile 341780 2014-01-29 20:43:01Z riggs $
+# $FreeBSD$
 
 PORTNAME=	ffmpegthumbnailer
 PORTVERSION=	2.0.8
