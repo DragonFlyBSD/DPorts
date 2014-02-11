@@ -1,5 +1,5 @@
 # Created by: thinker@branda.to
-# $FreeBSD: head/devel/py-subversion/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
