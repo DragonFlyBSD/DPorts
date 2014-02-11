@@ -1,5 +1,5 @@
 # Created by: Sergey Osokin aka oZZ <ozz@FreeBSD.org.ru>
-# $FreeBSD: databases/db4/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	db4
 PORTVERSION=	4.0.14
