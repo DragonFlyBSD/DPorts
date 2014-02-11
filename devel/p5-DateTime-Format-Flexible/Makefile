@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-DateTime-Format-Flexible/Makefile 333837 2013-11-15 10:13:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-Flexible
 PORTVERSION=	0.25
