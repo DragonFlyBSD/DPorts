@@ -1,5 +1,5 @@
 # Created by: Yamashiro Jun <yamajun@ofug.net>
-# $FreeBSD: textproc/uim-qt4/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-qt4
 
