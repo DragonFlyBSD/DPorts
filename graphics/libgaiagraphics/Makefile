@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/libgaiagraphics/Makefile 335295 2013-11-30 15:03:28Z wg $
+# $FreeBSD$
 
 PORTNAME=	libgaiagraphics
 PORTVERSION=	0.5
