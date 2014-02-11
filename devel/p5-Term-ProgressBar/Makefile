@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: head/devel/p5-Term-ProgressBar/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Term-ProgressBar
 PORTVERSION=	2.14
@@ -24,6 +24,8 @@ USE_PERL5=	configure
 
 post-patch:
 	${REINPLACE_CMD} -e 's|Term-ProgressBar|Term/ProgressBar|' ${WRKSRC}/Makefile.PL
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
