@@ -1,8 +1,8 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/libgphoto2/Makefile 340071 2014-01-17 16:55:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libgphoto2
-PORTVERSION=	2.5.3
+PORTVERSION=	2.5.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	SF/gphoto/libgphoto/${PORTVERSION}
 
@@ -38,21 +38,16 @@ GD_CONFIGURE_WITH=	gd
 JPEG_LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 JPEG_CONFIGURE_WITH=	jpeg
 LIBEXIF_LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif
-LIBEXIF_CONFIGURE_ON=	--with-libexif=${LOCALBASE}
 LIBEXIF_CONFIGURE_OFF=	--with-libexif=no
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 XML_USE=		GNOME=libxml2
-XML_CPPFLAGS=		$$(pkg-config --cflags-only-I libxml-2.0)
-XML_LDFLAGS=		$$(pkg-config --libs-only-L libxml-2.0)
 XML_CONFIGURE_WITH=	libxml2
 
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000040
 CONFIGURE_ENV+=	LIBUSB1_CFLAGS=" " LIBUSB1_LIBS="-lusb"
-.elif ${OPSYS} == DragonFly
-USES+=		usb
 .endif
 
 post-patch:
