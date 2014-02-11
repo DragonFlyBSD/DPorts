@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/qzeitgeist/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qzeitgeist
 PORTVERSION=	0.8.0
