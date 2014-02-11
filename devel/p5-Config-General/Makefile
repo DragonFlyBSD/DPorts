@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Config-General/Makefile 332679 2013-11-04 10:23:49Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Config-General
 PORTVERSION=	2.52
