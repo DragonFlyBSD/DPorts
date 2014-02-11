@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/dcmtk/Makefile 339769 2014-01-15 09:29:15Z gahr $
+# $FreeBSD$
 
 PORTNAME=	dcmtk
 DISTVERSION=	3.6.0
