@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: java/jakarta-commons-beanutils/Makefile 341416 2014-01-27 15:37:33Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	commons-beanutils
 PORTVERSION=	1.9.1
