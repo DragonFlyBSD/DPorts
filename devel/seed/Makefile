@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/seed/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/seed/Makefile,v 1.35 2013/01/29 16:33:10 kwm Exp $
 
 PORTNAME=	seed
