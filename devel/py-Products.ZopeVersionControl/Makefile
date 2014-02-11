@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ZopeVersionControl/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ZopeVersionControl
 PORTVERSION=	1.1.3
