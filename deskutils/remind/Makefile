@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: deskutils/remind/Makefile 337673 2013-12-27 09:54:22Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	remind
 PORTVERSION=	3.1.12
