@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: www/py-HTMLgen/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	HTMLgen
 PORTVERSION=	2.2.2
