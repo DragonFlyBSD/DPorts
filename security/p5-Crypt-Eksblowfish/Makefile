@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-Eksblowfish/Makefile 342006 2014-01-31 15:24:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Eksblowfish
 PORTVERSION=	0.009
