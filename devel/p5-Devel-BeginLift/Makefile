@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-BeginLift/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-BeginLift
 PORTVERSION=	0.001003
