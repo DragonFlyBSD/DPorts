@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: mail/pear-MIME_Type/Makefile 339747 2014-01-15 04:17:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	MIME_Type
 PORTVERSION=	1.3.3
