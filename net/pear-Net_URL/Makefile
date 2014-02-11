@@ -1,5 +1,5 @@
 # Created by: Roman Neuhauser (<neuhauser@bellavista.cz>)
-# $FreeBSD: net/pear-Net_URL/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net_URL
 PORTVERSION=	1.0.15
