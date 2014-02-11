@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ksaneplugin/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ksaneplugin
 PORTVERSION=	${KDE4_VERSION}
