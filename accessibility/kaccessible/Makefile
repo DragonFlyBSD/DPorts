@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/kaccessible/Makefile 334458 2013-11-20 21:42:20Z avilla $
+# $FreeBSD$
 
 PORTNAME=	kaccessible
 PORTVERSION=	${KDE4_VERSION}
