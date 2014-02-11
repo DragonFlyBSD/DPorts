@@ -1,9 +1,9 @@
 # Created by: Matthew Seaman
-# $FreeBSD: databases/mysql-connector-java/Makefile 337321 2013-12-24 07:57:42Z matthew $
+# $FreeBSD$
 
 
 PORTNAME=	mysql-connector-java
-PORTVERSION=	5.1.28
+PORTVERSION=	5.1.29
 CATEGORIES=	databases java
 MASTER_SITES=	${MASTER_SITE_MYSQL}
 MASTER_SITE_SUBDIR=	Connector-J
@@ -27,6 +27,8 @@ JARFILE=	${DISTNAME}-bin.jar
 JDCLASSPATH=	${SRCDIR}:${CLASSPATH}
 
 PLIST_FILES=	%%JAVAJARDIR%%/${DESTJARFILE}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
