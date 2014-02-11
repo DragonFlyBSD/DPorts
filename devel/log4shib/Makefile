@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/log4shib/Makefile 340770 2014-01-23 00:40:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	log4shib
 DISTVERSION=	1.0.7
