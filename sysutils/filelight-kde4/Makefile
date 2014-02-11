@@ -1,5 +1,5 @@
 # Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
-# $FreeBSD: sysutils/filelight-kde4/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	filelight
 PORTVERSION=	${KDE4_VERSION}
