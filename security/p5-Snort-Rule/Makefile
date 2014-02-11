@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: security/p5-Snort-Rule/Makefile 342151 2014-02-01 14:41:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Snort-Rule
 PORTVERSION=	1.07
