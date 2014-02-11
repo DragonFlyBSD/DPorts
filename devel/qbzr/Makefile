@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/qbzr/Makefile 329496 2013-10-05 19:04:33Z cs $
+# $FreeBSD$
 
 PORTNAME=	qbzr
 PORTVERSION=	0.23.0
