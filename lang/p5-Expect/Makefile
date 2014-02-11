@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: head/lang/p5-Expect/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Expect
 PORTVERSION=	1.21
