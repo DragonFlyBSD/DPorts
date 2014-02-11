@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Polygon-Tree/Makefile 328921 2013-10-01 05:53:51Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Math-Polygon-Tree
 PORTVERSION=	0.05
