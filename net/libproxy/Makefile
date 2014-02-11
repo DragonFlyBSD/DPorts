@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/libproxy/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 #    $MCom: ports/net/libproxy/Makefile,v 1.1 2011/01/12 13:10:52 kwm Exp $
 
 PORTNAME=	libproxy
