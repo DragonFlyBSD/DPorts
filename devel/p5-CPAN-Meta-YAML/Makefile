@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-CPAN-Meta-YAML/Makefile 328177 2013-09-24 17:35:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CPAN-Meta-YAML
 PORTVERSION=	0.010
