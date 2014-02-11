@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-cssmin/Makefile 332051 2013-10-30 02:58:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	cssmin
 PORTVERSION=	1.0.3
