@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: graphics/netpbm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netpbm
 PORTVERSION=	10.35.89
