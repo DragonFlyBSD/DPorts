@@ -1,5 +1,5 @@
 
-$FreeBSD: print/enscript-letter/files/patch-src_gsint.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/print/enscript-letter/files/patch-src_gsint.h 340725 2014-01-22 17:40:44Z mat $
 
 --- src/gsint.h.orig
 +++ src/gsint.h
