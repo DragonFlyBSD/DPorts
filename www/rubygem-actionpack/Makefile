@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-actionpack/Makefile 342233 2014-02-02 03:00:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	actionpack
 PORTVERSION=	3.2.16
