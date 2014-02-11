@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/rubygem-rack/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD$
 
 # XXX: If updating this port, please check compatibality with at least the following ports,
 # XXX: preferably, the full rubygem-* tree.  rack version requirements are specified with ~>
