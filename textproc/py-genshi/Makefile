@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/textproc/py-genshi/Makefile 343352 2014-02-08 15:38:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Genshi
 PORTVERSION=	0.7
