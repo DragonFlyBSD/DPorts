@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-session/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11/gnome-session/Makefile,v 1.187 2010/11/17 12:00:11 kwm Exp $
 
 PORTNAME=	gnome-session
