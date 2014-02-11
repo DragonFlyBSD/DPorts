@@ -1,4 +1,4 @@
-# $FreeBSD: shells/ksh93/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 # Make sure that your configuration DOES NOT set ANY gcc-related
 # variables.  ksh93 will not compile if you set even the seemingly
