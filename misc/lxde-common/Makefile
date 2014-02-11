@@ -1,5 +1,5 @@
 # Created by: sahne
-# $FreeBSD: misc/lxde-common/Makefile 339001 2014-01-07 11:40:58Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxde-common
 PORTVERSION=	0.5.5
