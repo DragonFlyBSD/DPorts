@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFFormController/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFFormController
 PORTVERSION=	3.0.3
