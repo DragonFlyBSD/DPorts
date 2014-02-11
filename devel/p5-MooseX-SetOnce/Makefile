@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-SetOnce/Makefile 329609 2013-10-06 17:45:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-SetOnce
 PORTVERSION=	0.200002
