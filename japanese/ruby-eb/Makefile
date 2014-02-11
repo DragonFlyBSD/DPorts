@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ruby-eb/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eb
 PORTVERSION=	2.6
