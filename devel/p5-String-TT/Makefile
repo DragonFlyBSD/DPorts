@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: devel/p5-String-TT/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	String-TT
 PORTVERSION=	0.03
