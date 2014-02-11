@@ -1,4 +1,4 @@
-# $FreeBSD: print/ghostscript9/files/Makefile.pcl3 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTDOCS+=	pcl3
 PORTDOC_FILES+= pcl3/NEWS pcl3/BUGS pcl3/README pcl3/gs-pcl3.html	\

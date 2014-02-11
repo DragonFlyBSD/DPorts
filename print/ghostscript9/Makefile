@@ -1,4 +1,4 @@
-# $FreeBSD: print/ghostscript9/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ghostscript
 PORTVERSION=	9.06
