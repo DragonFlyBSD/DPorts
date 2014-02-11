@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-gdk_pixbuf2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/graphics/ruby-gdk_pixbuf2/Makefile,v 1.2 2005/10/17 07:05:40 mezz Exp $
 
 PORTNAME=	gdk_pixbuf2
