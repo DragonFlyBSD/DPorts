@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: databases/rubygem-dm-active_model/Makefile 332032 2013-10-30 02:22:05Z swills $
+# $FreeBSD$
 
 PORTNAME=	dm-active_model
 PORTVERSION=	1.2.1
