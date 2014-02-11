@@ -1,8 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Compress-LZW/Makefile 340430 2014-01-20 17:24:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Compress-LZW
-PORTVERSION=	0.02
+PORTVERSION=	0.03
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
