@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Cache/Makefile 333240 2013-11-08 15:17:25Z lth $
+# $FreeBSD$
 
 PORTNAME=	Cache
 PORTVERSION=	2.06
