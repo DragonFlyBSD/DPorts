@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Header/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Header
 PORTVERSION=	0.04
