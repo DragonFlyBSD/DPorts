@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-repoze.tm2/Makefile 341755 2014-01-29 16:17:02Z miwi $
+# $FreeBSD$
 
 PORTNAME=	repoze.tm2
 PORTVERSION=	1.0
