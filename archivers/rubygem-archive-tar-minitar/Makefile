@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/rubygem-archive-tar-minitar/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD$
 
 PORTNAME=	archive-tar-minitar
 PORTVERSION=	0.5.2
