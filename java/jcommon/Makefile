@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: java/jcommon/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jcommon
 PORTVERSION=	1.0.19
