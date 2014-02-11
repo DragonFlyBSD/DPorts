@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-directory_watcher/Makefile 332035 2013-10-30 02:31:04Z swills $
+# $FreeBSD$
 
 PORTNAME=	directory_watcher
 PORTVERSION=	1.4.1
