@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: math/p5-Geo-Distance/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Geo-Distance
 PORTVERSION=	0.20
