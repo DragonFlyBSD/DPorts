@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: textproc/dict/Makefile 341190 2014-01-26 14:42:54Z mat $
+# $FreeBSD$
 
 PORTNAME=	dict
 PORTVERSION=	1.12.1
