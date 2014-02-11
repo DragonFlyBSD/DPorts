@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/common_lib/files/patch-Makefile 318429 2013-05-18 13:02:11Z olgeni $
+$FreeBSD: head/devel/common_lib/files/patch-Makefile 318429 2013-05-18 13:02:11Z olgeni $
 
 --- Makefile.orig
 +++ Makefile

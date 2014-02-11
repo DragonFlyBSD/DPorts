@@ -1,4 +1,4 @@
-# $FreeBSD: devel/common_lib/Makefile 333094 2013-11-07 13:41:52Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	common_lib
 PORTVERSION=	3.3.4
