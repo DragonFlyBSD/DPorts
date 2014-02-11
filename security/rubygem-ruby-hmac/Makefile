@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-ruby-hmac/Makefile 333974 2013-11-16 03:13:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ruby-hmac
 PORTVERSION=	0.4.0
