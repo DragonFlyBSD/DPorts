@@ -1,5 +1,5 @@
 # Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
-# $FreeBSD: security/p5-Nmap-Parser/Makefile 337794 2013-12-27 19:47:35Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Nmap-Parser
 PORTVERSION=	1.31
