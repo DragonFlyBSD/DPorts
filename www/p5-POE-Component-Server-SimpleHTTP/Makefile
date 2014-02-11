@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POE-Component-Server-SimpleHTTP/Makefile 341688 2014-01-29 07:58:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Server-SimpleHTTP
 PORTVERSION=	2.18
