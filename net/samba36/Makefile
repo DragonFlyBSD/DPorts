@@ -1,4 +1,4 @@
-# $FreeBSD: net/samba36/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.22
