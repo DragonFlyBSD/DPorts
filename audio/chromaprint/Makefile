@@ -1,4 +1,4 @@
-# $FreeBSD: audio/chromaprint/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	chromaprint
 PORTVERSION=	1.0
