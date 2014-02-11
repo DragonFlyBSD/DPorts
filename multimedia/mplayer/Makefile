@@ -1,5 +1,5 @@
 # Created by: Thomas E. Zander with help from Vladimir Kushnir
-# $FreeBSD: multimedia/mplayer/Makefile 337376 2013-12-24 17:26:22Z thierry $
+# $FreeBSD$
 
 PORTNAME=	mplayer
 PORTVERSION=	${MPLAYER_PORT_VERSION}

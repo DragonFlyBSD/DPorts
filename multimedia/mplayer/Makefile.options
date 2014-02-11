@@ -5,7 +5,7 @@
 # Some of the knobs are not tunable by the OPTIONS framework. These are
 # explained here in detail.
 #
-# $FreeBSD: multimedia/mplayer/Makefile.options 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 #
 # Feature options:
 # These options influence some general behaviour of mplayer. Almost all of the featues,
