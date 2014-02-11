@@ -1,5 +1,5 @@
 # Created by: Russell Jackson <raj@csub.edu>
-# $FreeBSD: textproc/rubygem-augeas/Makefile 332050 2013-10-30 02:57:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruby-augeas
 PORTVERSION=	0.5.0
