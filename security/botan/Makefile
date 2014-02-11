@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/botan/Makefile 342137 2014-02-01 13:56:20Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	botan
 PORTVERSION=	1.8.14
