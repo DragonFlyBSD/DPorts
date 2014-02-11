@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gnustep-notebook/Makefile 341866 2014-01-30 18:09:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	notebook
 PORTVERSION=	0.3
