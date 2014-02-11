@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: accessibility/gok/Makefile 336152 2013-12-11 09:51:36Z bapt $
+# $FreeBSD$
 #    $MCom: ports/accessibility/gok/Makefile,v 1.112 2010/09/29 07:37:57 kwm Exp $
 
 PORTNAME=	gok
