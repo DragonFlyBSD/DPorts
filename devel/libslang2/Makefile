@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libslang2/Makefile 333212 2013-11-08 12:34:17Z garga $
+# $FreeBSD$
 
 PORTNAME=	libslang2
 PORTVERSION=	2.2.4
