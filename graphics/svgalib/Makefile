@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/graphics/svgalib/Makefile 343361 2014-02-08 16:31:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	svgalib
 PORTVERSION=	1.4.3
