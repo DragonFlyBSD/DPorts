@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/liblastfm/Makefile 339969 2014-01-16 19:45:01Z antoine $
+# $FreeBSD$
 
 PORTNAME=	liblastfm
 PORTVERSION=	1.0.6
