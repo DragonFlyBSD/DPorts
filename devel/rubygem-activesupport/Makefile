@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: head/devel/rubygem-activesupport/Makefile 335704 2013-12-05 20:27:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	activesupport
 PORTVERSION=	3.2.16
