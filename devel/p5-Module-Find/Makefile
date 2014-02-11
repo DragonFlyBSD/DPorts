@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Module-Find/Makefile 343259 2014-02-07 15:14:52Z culot $
+# $FreeBSD$
 
 PORTNAME=	Module-Find
 PORTVERSION=	0.12
