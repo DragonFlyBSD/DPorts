@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11-toolkits/nucleo/Makefile 340302 2014-01-19 14:22:08Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nucleo
 PORTVERSION=	0.7.6
