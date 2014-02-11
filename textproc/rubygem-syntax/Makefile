@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-syntax/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	syntax
 PORTVERSION=	1.0.0
