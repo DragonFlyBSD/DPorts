@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-Repository/Makefile 340053 2014-01-17 14:59:49Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	Git-Repository
 PORTVERSION=	1.310
