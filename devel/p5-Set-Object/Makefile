@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: head/devel/p5-Set-Object/Makefile 338223 2013-12-31 04:26:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Set-Object
 PORTVERSION=	1.34
