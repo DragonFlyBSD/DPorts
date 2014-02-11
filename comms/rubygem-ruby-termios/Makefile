@@ -1,4 +1,4 @@
-# $FreeBSD: comms/rubygem-ruby-termios/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruby-termios
 PORTVERSION=	0.9.6
