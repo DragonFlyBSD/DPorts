@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-docopt/Makefile 337164 2013-12-21 21:34:18Z antoine $
+# $FreeBSD$
 
 PORTNAME=	docopt
 PORTVERSION=	0.6.1
