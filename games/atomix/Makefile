@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: games/atomix/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 #   $MCom: ports/games/atomix/Makefile,v 1.14 2007/09/10 05:39:33 mezz Exp $
 
 PORTNAME=	atomix
