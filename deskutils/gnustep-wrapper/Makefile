@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/gnustep-wrapper/Makefile 342281 2014-02-02 12:43:42Z antoine $
+# $FreeBSD$
 
 PORTNAME=	wrapper
 PORTVERSION=	0.1.0
