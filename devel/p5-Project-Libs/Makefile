@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Project-Libs/Makefile 332805 2013-11-05 04:15:52Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Project-Libs
 PORTVERSION=	0.02
