@@ -1,4 +1,4 @@
-# $FreeBSD: www/webalizer/Makefile 335144 2013-11-29 04:19:56Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	webalizer
 PORTVERSION=	2.23.8
