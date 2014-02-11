@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/lang/tcl85/Makefile 342396 2014-02-03 09:25:40Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tcl
 PORTVERSION=	8.5.15
