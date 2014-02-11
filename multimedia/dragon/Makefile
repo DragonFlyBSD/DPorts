@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/dragon/Makefile 334103 2013-11-17 16:35:31Z makc $
+# $FreeBSD$
 
 PORTNAME=	dragon
 PORTVERSION=	${KDE4_VERSION}
