@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ctpl/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	ctpl
 PORTVERSION=	0.3.3
