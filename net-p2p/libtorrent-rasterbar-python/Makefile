@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/libtorrent-rasterbar-python/Makefile 332965 2013-11-06 11:42:15Z nemysis $
+# $FreeBSD$
 
 CATEGORIES=	net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,7 +22,7 @@ PYDISTUTILS_PKGNAME=	python_libtorrent
 PLIST=		${NONEXISTENT}
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/libtorrent.so
 
-OPTIONS_EXCLUDE=	DOCS EXAMPLES
+OPTIONS_EXCLUDE=	DOCS EXAMPLES STRIP
 
 # insure python paths are correctly identified
 CONFIGURE_ENV=	PYTHON_INCLUDEDIR="${PYTHON_INCLUDEDIR}" \
