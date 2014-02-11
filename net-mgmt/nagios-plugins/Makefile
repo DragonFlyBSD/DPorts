@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: head/net-mgmt/nagios-plugins/Makefile 340917 2014-01-24 16:23:24Z demon $
+# $FreeBSD$
 
 PORTNAME=	nagios-plugins
 PORTVERSION=	1.5
