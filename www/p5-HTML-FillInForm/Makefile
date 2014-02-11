@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: head/www/p5-HTML-FillInForm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-FillInForm
 PORTVERSION=	2.20
