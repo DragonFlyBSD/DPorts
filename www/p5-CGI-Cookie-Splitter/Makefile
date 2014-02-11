@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-CGI-Cookie-Splitter/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Cookie-Splitter
 PORTVERSION=	0.02
