@@ -1,5 +1,5 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-salt/Makefile 341769 2014-01-29 19:05:16Z vg $
+# $FreeBSD$
 
 PORTNAME=	salt
 PORTVERSION=	0.17.5
