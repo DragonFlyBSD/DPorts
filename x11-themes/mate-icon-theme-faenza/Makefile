@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-themes/mate-icon-theme-faenza/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-icon-theme-faenza
 PORTVERSION=	1.6.0
