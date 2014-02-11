@@ -1,4 +1,4 @@
-# $FreeBSD: net/libmediawiki/Makefile 338812 2014-01-05 18:03:11Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libmediawiki
 PORTVERSION=	${DIGIKAM_VER}
