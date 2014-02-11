@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Perl-PrereqScanner/Makefile 338932 2014-01-06 21:03:29Z lth $
+# $FreeBSD$
 
 PORTNAME=	Perl-PrereqScanner
 PORTVERSION=	1.018
