@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-fedex/Makefile 341732 2014-01-29 13:20:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fedex
 PORTVERSION=	1.0.14
