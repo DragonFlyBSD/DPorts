@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-transactionsimple/Makefile 332043 2013-10-30 02:47:06Z swills $
+# $FreeBSD$
 
 PORTNAME=	transactionsimple
 PORTVERSION=	1.4.0.2
