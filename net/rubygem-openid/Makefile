@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/rubygem-openid/Makefile 340661 2014-01-21 21:26:24Z swills $
+# $FreeBSD$
 
 PORTNAME=	openid
 PORTVERSION=	2.3.0
