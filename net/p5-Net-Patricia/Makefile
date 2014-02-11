@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net/p5-Net-Patricia/Makefile 330483 2013-10-16 07:07:00Z culot $
+# $FreeBSD$
 
 PORTNAME=	Net-Patricia
 PORTVERSION=	1.22
