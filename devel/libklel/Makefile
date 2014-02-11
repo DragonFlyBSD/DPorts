@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libklel/Makefile 342003 2014-01-31 15:23:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libklel
 PORTVERSION=	1.1.0
