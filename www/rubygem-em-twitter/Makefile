@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-em-twitter/Makefile 338363 2014-01-01 06:51:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	em-twitter
 PORTVERSION=	0.3.2
