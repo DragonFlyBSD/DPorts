@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: audio/py-ogg/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	ogg
 PORTVERSION=	1.3
