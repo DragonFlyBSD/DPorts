@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/py-fastimport/Makefile 337609 2013-12-26 19:34:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	fastimport
 PORTVERSION=	0.9.2
