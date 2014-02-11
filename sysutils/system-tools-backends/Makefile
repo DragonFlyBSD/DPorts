@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/system-tools-backends/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.60 2010/04/01 22:21:53 kwm Exp $
 
 PORTNAME=	system-tools-backends
