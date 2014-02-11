@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Types-Structured/Makefile 338211 2013-12-31 01:22:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-Structured
 PORTVERSION=	0.30
