@@ -1,5 +1,5 @@
 # Created by: Sean Kelly <kelly@ad1440.net>
-# $FreeBSD: print/jadetex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jadetex
 PORTVERSION=	3.13
