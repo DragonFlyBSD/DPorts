@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: sysutils/mate-polkit/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-polkit
 PORTVERSION=	1.6.0
