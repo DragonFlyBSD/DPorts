@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-liblarch/Makefile 340928 2014-01-24 19:38:37Z rm $
+# $FreeBSD$
 
 PORTNAME=	liblarch
 PORTVERSION=	2.1.0
