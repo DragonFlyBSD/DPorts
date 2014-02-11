@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/sdl2_gfx/Makefile 334079 2013-11-17 12:33:49Z mva $
+# $FreeBSD$
 
 PORTNAME=	sdl2_gfx
 PORTVERSION=	1.0.0
