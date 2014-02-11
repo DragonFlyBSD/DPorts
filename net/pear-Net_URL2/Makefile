@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: net/pear-Net_URL2/Makefile 338215 2013-12-31 02:53:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net_URL2
 PORTVERSION=	2.0.3
