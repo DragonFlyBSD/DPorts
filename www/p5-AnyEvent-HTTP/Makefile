@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: head/www/p5-AnyEvent-HTTP/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-HTTP
 PORTVERSION=	2.15
