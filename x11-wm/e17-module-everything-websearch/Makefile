@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-everything-websearch/Makefile 330253 2013-10-13 21:11:17Z gblach $
+# $FreeBSD$
 
 PORTNAME=	everything-websearch
 PORTVERSION=	20130510
@@ -18,6 +18,8 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_EFL=	edje libtool_hack modarch_hack
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
