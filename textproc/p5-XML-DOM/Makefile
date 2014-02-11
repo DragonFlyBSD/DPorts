@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-DOM/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-DOM
 PORTVERSION=	1.44
