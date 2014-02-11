@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/devel/cvsps/Makefile 331230 2013-10-22 07:52:56Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	cvsps
 PORTVERSION=	2.1
