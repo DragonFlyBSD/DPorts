@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Pod-Spell/Makefile 333258 2013-11-08 18:57:41Z lth $
+# $FreeBSD$
 
 PORTNAME=	Pod-Spell
 PORTVERSION=	1.13
