@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-SearchPath/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-SearchPath
 PORTVERSION=	0.06
