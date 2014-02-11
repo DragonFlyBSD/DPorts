@@ -1,8 +1,8 @@
 # Created by: arved
-# $FreeBSD: net-mgmt/p5-SNMP-Info/Makefile 336832 2013-12-18 14:11:29Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	SNMP-Info
-PORTVERSION=	3.10
+PORTVERSION=	3.11
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Perl5 module for gathering information from network devices
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 LIB_DEPENDS=	libnetsnmp.so:${PORTSDIR}/net-mgmt/net-snmp
 
