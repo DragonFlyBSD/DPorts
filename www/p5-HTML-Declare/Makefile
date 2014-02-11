@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Declare/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTML-Declare
 PORTVERSION=	2.4
