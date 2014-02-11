@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: x11-toolkits/p5-Gtk2/Makefile 336849 2013-12-18 17:02:13Z swills $
+# $FreeBSD$
 
 PORTNAME=	Gtk2
 PORTVERSION=	1.249
