@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: graphics/gegl/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gegl
 PORTVERSION=	0.2.0
