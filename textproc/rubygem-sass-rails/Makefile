@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-sass-rails/Makefile 342232 2014-02-02 02:59:46Z swills $
+# $FreeBSD$
 
 PORTNAME=	sass-rails
 PORTVERSION=	3.2.6
