@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-CAST5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-CAST5
 PORTVERSION=	0.05
