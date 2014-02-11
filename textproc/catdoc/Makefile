@@ -1,5 +1,5 @@
 # Created by: Brion Moss <brion@queeg.com>
-# $FreeBSD: textproc/catdoc/Makefile 339590 2014-01-13 11:58:14Z gahr $
+# $FreeBSD$
 
 PORTNAME=	catdoc
 PORTVERSION=	0.94.2
