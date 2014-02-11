@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/bug-buddy/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/bug-buddy/Makefile,v 1.86 2010/11/16 18:17:55 kwm Exp $
 
 PORTNAME=	bug-buddy
