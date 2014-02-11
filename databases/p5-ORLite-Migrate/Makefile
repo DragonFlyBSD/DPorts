@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: databases/p5-ORLite-Migrate/Makefile 335137 2013-11-29 02:36:38Z eadler $
+# $FreeBSD$
 
 PORTNAME=	ORLite-Migrate
 PORTVERSION=	1.10
