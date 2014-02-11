@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg0/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.7.16
