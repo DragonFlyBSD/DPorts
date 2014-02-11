@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-AnyEvent-Filesys-Notify/Makefile 339576 2014-01-13 09:54:47Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-Filesys-Notify
 PORTVERSION=	1.14
