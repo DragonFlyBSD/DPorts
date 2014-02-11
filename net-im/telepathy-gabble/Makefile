@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-gabble/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	telepathy-gabble
