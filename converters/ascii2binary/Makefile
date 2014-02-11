@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: converters/ascii2binary/Makefile 339221 2014-01-09 13:09:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ascii2binary
 PORTVERSION=	2.14
