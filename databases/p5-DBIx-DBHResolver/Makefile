@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-DBHResolver/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-DBHResolver
 PORTVERSION=	0.17
