@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: head/devel/py-argparse/Makefile 335150 2013-11-29 07:22:49Z koobs $
+# $FreeBSD$
 
 PORTNAME=	argparse
 PORTVERSION=	1.2.1
