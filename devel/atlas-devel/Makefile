@@ -1,5 +1,5 @@
 # Created by: Janni <jannisan@t-online.de>
-# $FreeBSD: devel/atlas-devel/Makefile 341684 2014-01-29 07:46:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Atlas
 PORTVERSION=	0.6.3
