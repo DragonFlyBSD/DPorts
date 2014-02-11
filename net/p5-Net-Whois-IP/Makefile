@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Whois-IP/Makefile 341234 2014-01-26 16:09:07Z culot $
+# $FreeBSD$
 
 PORTNAME=	Net-Whois-IP
 PORTVERSION=	1.15
