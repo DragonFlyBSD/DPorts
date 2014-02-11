@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-safe_yaml/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	safe_yaml
 PORTVERSION=	0.9.4
