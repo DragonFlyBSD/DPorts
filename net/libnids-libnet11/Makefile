@@ -1,4 +1,4 @@
-# $FreeBSD: net/libnids-libnet11/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-libnet11
 
