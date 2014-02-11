@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: head/security/nmap/Makefile 339526 2014-01-12 17:56:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	nmap
 DISTVERSION=	6.40
