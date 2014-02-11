@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/monodevelop/files/patch-src_addins_MonoDevelop.Autotools_SolutionDeployer.cs 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/monodevelop/files/patch-src_addins_MonoDevelop.Autotools_SolutionDeployer.cs 340725 2014-01-22 17:40:44Z mat $
 
 --- src/addins/MonoDevelop.Autotools/SolutionDeployer.cs.orig
 +++ src/addins/MonoDevelop.Autotools/SolutionDeployer.cs
