@@ -1,5 +1,5 @@
 
-; $FreeBSD: dns/bind98/files/localhost-forward.db 340872 2014-01-24 00:14:07Z mat $
+; $FreeBSD: head/dns/bind98/files/localhost-forward.db 340872 2014-01-24 00:14:07Z mat $
 
 $TTL 3h
 localhost. SOA localhost. nobody.localhost. 42 1d 12h 1w 3h

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/bind98/files/named 338989 2014-01-07 09:55:06Z erwin $
+# $FreeBSD: head/dns/bind98/files/named 338989 2014-01-07 09:55:06Z erwin $
 #
 
 # PROVIDE: named
