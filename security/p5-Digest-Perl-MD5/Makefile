@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-Perl-MD5/Makefile 339892 2014-01-16 05:05:00Z ashish $
+# $FreeBSD$
 
 PORTNAME=	Digest-Perl-MD5
 PORTVERSION=	1.9
