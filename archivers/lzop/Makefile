@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: head/archivers/lzop/Makefile 331430 2013-10-23 21:20:18Z mandree $
+# $FreeBSD$
 
 PORTNAME=	lzop
 DISTVERSION=	1.03
