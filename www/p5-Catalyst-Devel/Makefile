@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Devel/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Devel
 PORTVERSION=	1.38
