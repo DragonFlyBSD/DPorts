@@ -1,5 +1,5 @@
 # Created by: Kyle Martin <mkm@ieee.org>
-# $FreeBSD: devel/cmake/Makefile 336159 2013-12-11 12:55:08Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	cmake
 PORTVERSION=	2.8.12.1
