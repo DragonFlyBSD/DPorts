@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: deskutils/tomboy/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tomboy
 PORTVERSION=	1.12.2
