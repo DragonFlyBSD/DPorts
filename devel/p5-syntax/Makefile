@@ -1,5 +1,5 @@
 # Created by: Po-Chien Lin <linpc@cs.nctu.edu.tw>
-# $FreeBSD: devel/p5-syntax/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	syntax
 PORTVERSION=	0.004
