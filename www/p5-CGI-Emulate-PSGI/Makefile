@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Emulate-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Emulate-PSGI
 PORTVERSION=	0.15
