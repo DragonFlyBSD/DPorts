@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: head/graphics/jpeg/Makefile 333655 2013-11-13 06:41:00Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	jpeg
 PORTVERSION=	8
@@ -30,6 +30,8 @@ ADDITIONAL_HEADER=	jinclude.h jpegint.h
 .if defined(J_MAXMEM)
 CONFIGURE_ARGS+=	--enable-maxmem=${J_MAXMEM}
 .endif
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
