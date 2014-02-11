@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Config-INI/Makefile 342644 2014-02-05 07:43:28Z culot $
+# $FreeBSD$
 
 PORTNAME=	Config-INI
 PORTVERSION=	0.022
