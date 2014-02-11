@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: head/devel/zziplib/Makefile 336135 2013-12-11 01:11:31Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	zziplib
 PORTVERSION=	0.13.62
