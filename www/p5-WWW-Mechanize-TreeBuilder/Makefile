@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <Alex.Deiter@Gmail.COM>
-# $FreeBSD: www/p5-WWW-Mechanize-TreeBuilder/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mechanize-TreeBuilder
 PORTVERSION=	1.10003
