@@ -1,5 +1,5 @@
 # Created by: lth@FreeBSD.org
-# $FreeBSD: devel/p5-File-Finder/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Finder
 PORTVERSION=	0.53
