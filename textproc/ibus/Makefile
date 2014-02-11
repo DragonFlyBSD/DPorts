@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: textproc/ibus/Makefile 338683 2014-01-04 23:27:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ibus
 PORTVERSION=	1.4.2
