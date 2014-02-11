@@ -1,5 +1,5 @@
 $NetBSD: patch-lib_Target_X86_X86JITInfo.cpp,v 1.1 2013/04/02 12:00:05 joerg Exp $
-$FreeBSD: devel/llvm32/files/patch-lib_Target_X86_X86JITInfo.cpp 330777 2013-10-18 22:06:39Z brooks $
+$FreeBSD: head/devel/llvm32/files/patch-lib_Target_X86_X86JITInfo.cpp 330777 2013-10-18 22:06:39Z brooks $
 
 It is not yet decided whether extern "C" applies to static functions, so
 be explicit for now.

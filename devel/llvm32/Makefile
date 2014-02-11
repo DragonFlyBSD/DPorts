@@ -1,4 +1,4 @@
-# $FreeBSD: devel/llvm32/Makefile 336462 2013-12-14 17:37:08Z mva $
+# $FreeBSD$
 
 PORTNAME=	llvm
 PORTVERSION=	3.2
