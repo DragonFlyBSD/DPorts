@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: graphics/py-django-easy-thumbnails/Makefile 341731 2014-01-29 13:18:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	easy-thumbnails
 PORTVERSION=	1.0.3
