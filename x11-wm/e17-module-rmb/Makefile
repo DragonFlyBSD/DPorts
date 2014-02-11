@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-wm/e17-module-rmb/Makefile 330253 2013-10-13 21:11:17Z gblach $
+# $FreeBSD$
 
 PORTNAME=	rmb
 PORTVERSION=	20130510
