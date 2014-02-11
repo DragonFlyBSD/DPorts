@@ -1,4 +1,4 @@
-# $FreeBSD: audio/taglib-sharp/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	taglib-sharp
 PORTVERSION=	2.0.3.7
