@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/glib-java/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/glib-java/Makefile,v 1.4 2006/09/14 12:37:40 ahze Exp $
 
 PORTNAME=	glib-java
