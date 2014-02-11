@@ -1,5 +1,5 @@
 # Created by: Trevor Corpropst <tcornpropst@cox.net>
-# $FreeBSD: net/p5-Net-SFTP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-SFTP
 PORTVERSION=	0.10
