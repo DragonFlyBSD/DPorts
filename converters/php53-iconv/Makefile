@@ -1,4 +1,4 @@
-# $FreeBSD: converters/php53-iconv/Makefile 341778 2014-01-29 20:41:27Z tijl $
+# $FreeBSD$
 
 PORTREVISION=	1
 CATEGORIES=	converters
