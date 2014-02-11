@@ -1,5 +1,5 @@
 # Created by: Paul Traina <pst@FreeBSD.org>
-# $FreeBSD: head/palm/pilot-link/Makefile 337929 2013-12-28 23:28:52Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	pilot-link
 PORTVERSION=	0.12.5
