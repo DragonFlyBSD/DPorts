@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-themes/gnome-backgrounds/Makefile 341328 2014-01-27 05:48:29Z miwi $
+# $FreeBSD$
 #   $MCom: ports/x11-themes/gnome-backgrounds/Makefile,v 1.49 2010/09/27 19:52:50 kwm Exp $
 
 PORTNAME=	gnome-backgrounds
