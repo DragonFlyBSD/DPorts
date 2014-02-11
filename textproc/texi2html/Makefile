@@ -1,5 +1,5 @@
 # Created by: Ian Vaudrey <i.vaudrey@bigfoot.com>
-# $FreeBSD: head/textproc/texi2html/Makefile 339525 2014-01-12 17:39:19Z johans $
+# $FreeBSD$
 
 PORTNAME=	texi2html
 PORTVERSION=	5.0
