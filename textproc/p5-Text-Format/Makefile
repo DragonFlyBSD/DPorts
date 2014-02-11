@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Format/Makefile 340908 2014-01-24 14:59:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Format
 PORTVERSION=	0.58
