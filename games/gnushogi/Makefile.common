@@ -1,5 +1,5 @@
 #
-# $FreeBSD: games/gnushogi/Makefile.common 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #
 
 GNUSHOGI_PORTNAME=	gnushogi
