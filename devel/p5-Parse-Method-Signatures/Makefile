@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Parse-Method-Signatures/Makefile 340246 2014-01-19 09:26:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Parse-Method-Signatures
 PORTVERSION=	1.003016
