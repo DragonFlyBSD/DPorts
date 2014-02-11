@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-POE-Component-Pluggable/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Pluggable
 PORTVERSION=	1.26
