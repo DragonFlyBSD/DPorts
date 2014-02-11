@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: head/misc/pciids/Makefile 343525 2014-02-09 17:18:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pciids
 PORTVERSION=	20140206
