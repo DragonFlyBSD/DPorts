@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: head/devel/py-sip/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	sip
 PORTVERSION=	${SIP_VERSION}
