@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Google-ProtocolBuffers/Makefile 338071 2013-12-30 09:42:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Google-ProtocolBuffers
 PORTVERSION=	0.11
