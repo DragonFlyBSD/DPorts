@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/py-testtools/Makefile 342058 2014-01-31 19:49:08Z cs $
+# $FreeBSD$
 
 PORTNAME=	testtools
 PORTVERSION=	0.9.35
