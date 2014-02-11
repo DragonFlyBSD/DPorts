@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/cairo/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 #   $MCom: ports/graphics/cairo/Makefile,v 1.101 2010/10/29 15:40:04 kwm Exp $
 
 PORTNAME=	cairo
