@@ -1,5 +1,5 @@
 # Created by: fluffy@
-# $FreeBSD: graphics/prison/Makefile 333415 2013-11-10 17:39:43Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	prison
 PORTVERSION=	1.0
