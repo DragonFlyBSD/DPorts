@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: head/graphics/exiv2/Makefile 330812 2013-10-19 00:27:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	exiv2
 PORTVERSION=	0.23
