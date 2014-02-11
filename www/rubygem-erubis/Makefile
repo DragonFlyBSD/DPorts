@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: head/www/rubygem-erubis/Makefile 338244 2013-12-31 06:58:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	erubis
 PORTVERSION=	2.7.0
