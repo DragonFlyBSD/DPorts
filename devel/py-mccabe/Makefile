@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-mccabe/Makefile 328416 2013-09-26 21:27:28Z wg $
+# $FreeBSD$
 
 PORTNAME=	mccabe
 PORTVERSION=	0.2.1
