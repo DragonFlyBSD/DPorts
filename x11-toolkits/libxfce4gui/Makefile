@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-toolkits/libxfce4gui/Makefile 331160 2013-10-21 17:24:13Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	libxfce4gui
 PORTVERSION=	4.10.0
