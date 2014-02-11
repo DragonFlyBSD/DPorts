@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11-fm/deforaos-browser/Makefile 332766 2013-11-04 19:58:20Z wg $
+# $FreeBSD$
 
 PORTNAME=	deforaos-browser
 PORTVERSION=	0.4.13
