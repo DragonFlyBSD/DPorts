@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-minitest4/Makefile 333779 2013-11-14 17:46:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	minitest
 PORTVERSION=	4.7.5
