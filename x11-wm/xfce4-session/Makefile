@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-wm/xfce4-session/Makefile 330350 2013-10-14 20:03:16Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-session
 PORTVERSION=	4.10.1
