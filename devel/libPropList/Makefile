@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson
-# $FreeBSD: devel/libPropList/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libproplist
 PORTVERSION=	0.10.1
