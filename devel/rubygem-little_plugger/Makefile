@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-# $FreeBSD: devel/rubygem-little_plugger/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD$
 
 PORTNAME=	little_plugger
 PORTVERSION=	1.1.3
