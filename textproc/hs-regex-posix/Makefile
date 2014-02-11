@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-regex-posix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	regex-posix
 PORTVERSION=	0.95.2
