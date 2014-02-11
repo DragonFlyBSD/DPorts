@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-ISBN/Makefile 340784 2014-01-23 03:27:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Business-ISBN
 PORTVERSION=	2.07
