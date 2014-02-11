@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/libass/Makefile 341147 2014-01-26 00:23:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libass
 PORTVERSION=	0.10.2
