@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: textproc/diffutils/Makefile 339448 2014-01-11 20:04:40Z johans $
+# $FreeBSD$
 
 PORTNAME=	diffutils
 PORTVERSION=	3.3
