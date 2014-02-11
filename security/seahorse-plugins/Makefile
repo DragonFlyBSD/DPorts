@@ -1,5 +1,5 @@
 # Created by: Dave McKay <dave@mu.org>
-# $FreeBSD: security/seahorse-plugins/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 #   $MCom: ports/security/seahorse-plugins/Makefile,v 1.28 2011/07/03 11:57:45 kwm Exp $
 
 PORTNAME=	seahorse-plugins
