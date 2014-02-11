@@ -1,8 +1,9 @@
 # Created by: Alex Trull <freebsd.alex@trull.org>
-# $FreeBSD: games/scummvm/Makefile 328448 2013-09-27 10:02:03Z lme $
+# $FreeBSD$
 
 PORTNAME=	scummvm
 DISTVERSION=	1.6.0
+PORTREVISION=	1
 CATEGORIES=	games emulators
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}/${DISTVERSION}
