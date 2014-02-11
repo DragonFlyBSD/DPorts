@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: www/nginx/Makefile 341828 2014-01-30 10:01:51Z decke $
+# $FreeBSD$
 
 PORTNAME=	nginx
 PORTVERSION=	1.4.4
