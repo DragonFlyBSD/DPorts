@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFCalendar/Makefile 341155 2014-01-26 07:57:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFCalendar
 PORTVERSION=	2.2.2
