@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ExternalEditor/Makefile 340992 2014-01-25 07:19:34Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ExternalEditor
 PORTVERSION=	1.1.0
