@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Cookies/Makefile 333800 2013-11-14 22:36:43Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Cookies
 PORTVERSION=	6.01
