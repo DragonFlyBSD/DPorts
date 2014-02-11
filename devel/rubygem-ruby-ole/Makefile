@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: devel/rubygem-ruby-ole/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruby-ole
 PORTVERSION=	1.2.11.7
