@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net/Sockets/Makefile 339779 2014-01-15 14:30:36Z marino $
+# $FreeBSD$
 
 PORTNAME=	Sockets
 PORTVERSION=	2.3.9.9
