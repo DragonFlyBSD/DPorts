@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-utils/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.159 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	gnome-utils
