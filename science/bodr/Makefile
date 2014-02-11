@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: science/bodr/Makefile 332523 2013-11-02 17:34:59Z pawel $
+# $FreeBSD$
 
 PORTNAME=	bodr
 PORTVERSION=	10
