@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-actionpack4/Makefile 335701 2013-12-05 20:27:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	actionpack
 PORTVERSION=	4.0.2
