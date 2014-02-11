@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: head/www/vtiger/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD$
 
 PORTNAME=	vtiger
 PORTVERSION=	5.0.3
@@ -10,6 +10,9 @@ DISTFILES=	${PORTNAME}crm-${DISTVERSION}.tar.gz \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Vtiger CRM is open source Customer Relationship Management software
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
@@ -55,7 +58,7 @@ do-install:
 	${MKDIR} ${WWWDIR}/${DIR}
 	( cd ${WRKSRC} && ${COPYTREE_SHARE} ${DIR} ${WWWDIR} )
 .endfor
-	@( ${FIND} ${WRKSRC} -type f -maxdepth 1 \( -name \*.php -or -name \*.properties \
+	( ${FIND} ${WRKSRC} -type f -maxdepth 1 \( -name \*.php -or -name \*.properties \
 		-or -name Copyright.txt \) -and -not -name config\* ; ${ECHO} ${WWWDIR} ) \
 		| ${XARGS} ${INSTALL_DATA}
 .for FILE in ${CONFIGS}
