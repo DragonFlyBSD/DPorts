@@ -1,5 +1,5 @@
 # Created by: lewiz <purple@lewiz.net>
-# $FreeBSD: accessibility/dasher/Makefile 336152 2013-12-11 09:51:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/accessibility/dasher/Makefile,v 1.66 2009/03/18 04:59:21 marcus Exp $
 
 PORTNAME=	dasher
