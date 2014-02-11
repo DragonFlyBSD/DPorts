@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/gts/Makefile 341709 2014-01-29 09:53:10Z gahr $
+# $FreeBSD$
 
 PORTNAME=	gts
 PORTVERSION=	0.7.6
