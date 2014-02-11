@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: textproc/p5-podlators/Makefile 329782 2013-10-08 13:28:06Z culot $
+# $FreeBSD$
 
 PORTNAME=	podlators
 PORTVERSION=	2.5.3
