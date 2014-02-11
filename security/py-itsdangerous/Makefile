@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: security/py-itsdangerous/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	itsdangerous
 PORTVERSION=	0.23
