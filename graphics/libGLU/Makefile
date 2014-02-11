@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: graphics/libGLU/Makefile 334975 2013-11-26 21:15:14Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libGLU
 PORTVERSION=	9.0.0
