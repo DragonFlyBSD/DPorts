@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/baekmukfonts-bdf/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	baekmukfonts
 PORTVERSION=	2.0
