@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Dist-Joseki/Makefile 329359 2013-10-04 19:03:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Dist-Joseki
 PORTVERSION=	0.20
