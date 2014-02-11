@@ -1,5 +1,5 @@
 # Created by: Abel Chow <achow@transoft.net>
-# $FreeBSD: www/tidy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tidy4
 PORTVERSION=	20000804
@@ -17,6 +17,8 @@ LICENSE_FILE=	${FILESDIR}/COPYRIGHT
 
 ALL_TARGET=	tidy
 DOCFILES=	Overview.html tidy.gif release-notes.html grid.gif
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
