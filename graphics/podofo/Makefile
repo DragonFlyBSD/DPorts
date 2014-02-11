@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/podofo/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	podofo
 PORTVERSION=	0.9.2
