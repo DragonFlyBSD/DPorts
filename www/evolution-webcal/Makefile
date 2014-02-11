@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: www/evolution-webcal/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 #   $MCom: ports/www/evolution-webcal/Makefile,v 1.69 2010/09/29 12:56:07 kwm Exp $
 
 PORTNAME=	evolution-webcal
