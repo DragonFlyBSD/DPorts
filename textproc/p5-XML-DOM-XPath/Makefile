@@ -1,5 +1,5 @@
 # Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
-# $FreeBSD: textproc/p5-XML-DOM-XPath/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-DOM-XPath
 PORTVERSION=	0.14
