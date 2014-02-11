@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: misc/gnome-icon-theme/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/misc/gnome-icon-theme/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-icon-theme
