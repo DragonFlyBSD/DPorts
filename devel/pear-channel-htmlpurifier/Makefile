@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: devel/pear-channel-htmlpurifier/Makefile 340542 2014-01-21 02:31:58Z feld $
+# $FreeBSD$
 
 PORTNAME=	htmlpurifier
 PORTVERSION=	20140120
