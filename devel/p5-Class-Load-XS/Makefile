@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Load-XS/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Class-Load-XS
 PORTVERSION=	0.06
