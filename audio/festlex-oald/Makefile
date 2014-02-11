@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festlex-oald/Makefile 336296 2013-12-12 22:09:42Z eadler $
+# $FreeBSD$
 
 PORTNAME=	festlex-oald
 PORTVERSION=	1.4.1
