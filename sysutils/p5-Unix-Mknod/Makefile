@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk pirzyk@FreeBSD.org
-# $FreeBSD: sysutils/p5-Unix-Mknod/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Unix-Mknod
 PORTVERSION=	0.04
