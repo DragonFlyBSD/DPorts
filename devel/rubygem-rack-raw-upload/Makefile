@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rack-raw-upload/Makefile 331893 2013-10-28 19:52:21Z zi $
+# $FreeBSD$
 
 PORTNAME=	rack-raw-upload
 PORTVERSION=	1.1.1
