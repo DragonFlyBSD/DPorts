@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-panel/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/x11/gnome-panel/Makefile,v 1.237 2012/10/25 09:21:00 kwm Exp $
 
 PORTNAME=	gnome-panel
