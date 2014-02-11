@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: head/x11-fonts/bdftopcf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bdftopcf
 PORTVERSION=	1.0.4
