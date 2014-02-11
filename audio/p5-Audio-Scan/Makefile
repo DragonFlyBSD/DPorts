@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: audio/p5-Audio-Scan/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Audio-Scan
 PORTVERSION=	0.93
