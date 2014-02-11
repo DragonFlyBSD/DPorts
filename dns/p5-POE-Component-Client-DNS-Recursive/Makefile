@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: dns/p5-POE-Component-Client-DNS-Recursive/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-DNS-Recursive
 PORTVERSION=	1.06
