@@ -1,5 +1,5 @@
 # Created by: Colin Percival
-# $FreeBSD: security/pkesh/Makefile 332947 2013-11-06 07:35:06Z cperciva $
+# $FreeBSD$
 
 PORTNAME=	pkesh
 PORTVERSION=	1.0
