@@ -1,5 +1,5 @@
 # Created by: The Anarcat <anarcat@anarcat.dyndns.org>
-# $FreeBSD: audio/ecasound/Makefile 339624 2014-01-13 19:27:29Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ecasound
 PORTVERSION=	2.9.1
