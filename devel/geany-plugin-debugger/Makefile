@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-debugger/Makefile 331369 2013-10-23 10:52:34Z makc $
+# $FreeBSD$
 
 PORTNAME=	geany-plugin-debugger
 PORTVERSION=	${GEANY_VER}
