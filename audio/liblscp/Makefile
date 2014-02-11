@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/liblscp/Makefile 337911 2013-12-28 20:54:43Z antoine $
+# $FreeBSD$
 
 PORTNAME=	liblscp
 PORTVERSION=	0.5.6
