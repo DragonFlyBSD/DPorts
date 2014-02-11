@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: textproc/rubygem-sax-machine/Makefile 335341 2013-11-30 19:59:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sax-machine
 PORTVERSION=	0.2.1
