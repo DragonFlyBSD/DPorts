@@ -1,5 +1,5 @@
 # Created by: Andreas Heil <ah@linux-hq.de>
-# $FreeBSD: textproc/p5-XML-Generator/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-Generator
 PORTVERSION=	1.04
