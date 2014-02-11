@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Perl-Releases/Makefile 340793 2014-01-23 03:28:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CPAN-Perl-Releases
 PORTVERSION=	1.62
