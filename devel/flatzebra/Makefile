@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin2mavetju.org>
-# $FreeBSD: devel/flatzebra/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	flatzebra
 PORTVERSION=	0.1.6
@@ -23,6 +23,9 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 PORTDOCS=	AUTHORS COPYING INSTALL NEWS README TODO THANKS
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
