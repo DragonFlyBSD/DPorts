@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: lang/p5-Marpa-PP/Makefile 334005 2013-11-16 15:19:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Marpa-PP
 PORTVERSION=	0.014
