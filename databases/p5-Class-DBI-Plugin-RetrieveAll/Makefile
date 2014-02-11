@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: databases/p5-Class-DBI-Plugin-RetrieveAll/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-Plugin-RetrieveAll
 PORTVERSION=	1.04
