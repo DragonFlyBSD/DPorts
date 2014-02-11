@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: editors/mousepad/Makefile 330424 2013-10-15 18:36:02Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	mousepad
 PORTVERSION=	0.3.0
