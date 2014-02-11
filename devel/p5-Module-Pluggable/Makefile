@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Module-Pluggable/Makefile 343257 2014-02-07 15:00:58Z lth $
+# $FreeBSD$
 
 PORTNAME=	Module-Pluggable
 PORTVERSION=	5.1
