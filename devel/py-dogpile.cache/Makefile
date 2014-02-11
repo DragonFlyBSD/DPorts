@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-dogpile.cache/Makefile 339216 2014-01-09 11:41:49Z wg $
+# $FreeBSD$
 
 PORTNAME=	dogpile.cache
 PORTVERSION=	0.5.3
