@@ -1,5 +1,5 @@
 # Created by: Alex Varju <varju@webct.com>
-# $FreeBSD: palm/jpilot/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD$
 
 # "?=" and "+=" are for including this Makefile from japanese/jpilot"
 
@@ -31,6 +31,9 @@ USE_GNOME+=	gtk20
 MAN1=		jpilot-dial.1 jpilot-dump.1 jpilot-sync.1 jpilot.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
