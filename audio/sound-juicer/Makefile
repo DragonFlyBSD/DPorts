@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/sound-juicer/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/audio/sound-juicer/Makefile,v 1.102 2010/09/29 13:19:43 kwm Exp $
 
 PORTNAME=	sound-juicer
