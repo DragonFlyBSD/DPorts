@@ -1,4 +1,4 @@
-# $FreeBSD: audio/gstreamer-plugins-opus/Makefile 336843 2013-12-18 16:04:49Z naddy $
+# $FreeBSD$
 
 PORTREVISION=	2
 CATEGORIES=	audio
