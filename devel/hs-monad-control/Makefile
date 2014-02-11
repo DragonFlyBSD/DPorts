@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-monad-control/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	monad-control
 PORTVERSION=	0.3.2.1
