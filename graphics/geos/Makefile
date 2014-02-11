@@ -1,5 +1,5 @@
 # Created by: Leonardo Martins <lmartins@nepe.eee.ufg.br>
-# $FreeBSD: head/graphics/geos/Makefile 342699 2014-02-05 13:45:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	geos
 PORTVERSION=	3.4.2
