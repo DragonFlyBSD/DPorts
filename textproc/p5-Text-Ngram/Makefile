@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: textproc/p5-Text-Ngram/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Ngram
 PORTVERSION=	0.14
