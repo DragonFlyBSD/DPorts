@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-png/Makefile 338290 2013-12-31 12:56:33Z tota $
+# $FreeBSD$
 
 PORTNAME=	png
 DISTVERSION=	0.1-7
