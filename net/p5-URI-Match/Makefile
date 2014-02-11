@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-URI-Match/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	URI-Match
 PORTVERSION=	0.00001
