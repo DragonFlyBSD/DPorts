@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-timeobjects/Makefile 341400 2014-01-27 13:17:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	timeobjects
 PORTVERSION=	2.0.4
