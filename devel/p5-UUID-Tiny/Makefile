@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: devel/p5-UUID-Tiny/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	UUID-Tiny
 PORTVERSION=	1.04
