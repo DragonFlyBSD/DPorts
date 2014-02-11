@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.i18n/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	plone.app.i18n
 PORTVERSION=	2.0.2
