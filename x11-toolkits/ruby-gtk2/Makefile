@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: x11-toolkits/ruby-gtk2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/ruby-gtk2/Makefile,v 1.5 2007/10/05 05:06:39 mezz Exp $
 
 PORTNAME=	gtk2
