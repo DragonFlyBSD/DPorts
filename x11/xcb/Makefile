@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: x11/xcb/Makefile 336398 2013-12-13 23:51:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xcb
 PORTVERSION=	2.4
