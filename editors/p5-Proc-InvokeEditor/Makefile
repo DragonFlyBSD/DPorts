@@ -1,4 +1,4 @@
-# $FreeBSD: editors/p5-Proc-InvokeEditor/Makefile 332599 2013-11-03 09:39:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Proc-InvokeEditor
 PORTVERSION=	1.06
