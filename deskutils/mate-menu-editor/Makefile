@@ -1,6 +1,6 @@
 
 # Created by: FreeBSD GNOME Team
-# $FreeBSD: deskutils/mate-menu-editor/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-menu-editor
 PORTVERSION=	1.6.0
