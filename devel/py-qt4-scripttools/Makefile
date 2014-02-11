@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-qt4-scripttools/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	scripttools
 PORTVERSION=	${PYQT4_VERSION}
