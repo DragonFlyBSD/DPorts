@@ -1,5 +1,5 @@
 # Created by: Alexander Kabaev <ak03@gte.com>
-# $FreeBSD: x11-toolkits/bwidget/Makefile 334473 2013-11-21 10:54:15Z gahr $
+# $FreeBSD$
 
 PORTNAME=	bwidget
 PORTVERSION=	1.9.7
