@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-Path-Tiny/Makefile 339493 2014-01-12 10:08:38Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-Path-Tiny
 PORTVERSION=	0.007
