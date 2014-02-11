@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<gerrit@beine-computer.de>)
-# $FreeBSD: head/devel/pear-HTML_QuickForm/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML_QuickForm
 PORTVERSION=	3.2.13
