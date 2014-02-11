@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang
-# $FreeBSD: net/x11vnc/Makefile 335147 2013-11-29 07:08:42Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	x11vnc
 PORTVERSION=	0.9.13
