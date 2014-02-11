@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: head/textproc/iso8879/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iso8879
 PORTVERSION=	1986
