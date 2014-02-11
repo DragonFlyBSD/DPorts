@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-cairo-gobject/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	cairo-gobject
 PORTVERSION=	2.0.2
