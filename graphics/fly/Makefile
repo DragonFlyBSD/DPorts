@@ -1,5 +1,5 @@
 # Created by: Juergen Unger <j.unger@choin.net>
-# $FreeBSD: graphics/fly/Makefile 342355 2014-02-02 18:45:27Z antoine $
+# $FreeBSD$
 
 PORTNAME=	fly
 PORTVERSION=	2.0.1
