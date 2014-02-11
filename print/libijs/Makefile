@@ -1,4 +1,4 @@
-# $FreeBSD: print/libijs/Makefile 342174 2014-02-01 15:39:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libijs
 PORTVERSION=	0.35
