@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: head/science/netcdf/Makefile 333015 2013-11-06 17:34:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	netcdf
 PORTVERSION=	3.6.3
