@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: sysutils/lxinput/Makefile 329401 2013-10-04 22:36:31Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxinput
 PORTVERSION=	0.3.2
