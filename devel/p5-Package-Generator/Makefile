@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: devel/p5-Package-Generator/Makefile 338380 2014-01-01 16:41:33Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	Package-Generator
 PORTVERSION=	1.106
