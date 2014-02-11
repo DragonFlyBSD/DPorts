@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-File-ChangeNotify/Makefile 340941 2014-01-24 23:00:08Z antoine $
+# $FreeBSD$
 
 PORTNAME=	File-ChangeNotify
 PORTVERSION=	0.24
