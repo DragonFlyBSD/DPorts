@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: x11-toolkits/ruby-pango/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/ruby-pango/Makefile,v 1.2 2005/10/17 07:05:43 mezz Exp $
 
 PORTNAME=	pango
