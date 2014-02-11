@@ -1,5 +1,5 @@
 # Created by: Philippe Charnier <charnier@lirmm.fr>
-# $FreeBSD: multimedia/mpeg2codec/Makefile 330892 2013-10-19 15:54:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mpeg2codec
 PORTVERSION=	1.2
