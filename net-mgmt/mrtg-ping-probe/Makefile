@@ -1,5 +1,5 @@
 # Created by: sanpei@FreeBSD.org
-# $FreeBSD: net-mgmt/mrtg-ping-probe/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mrtg-ping-probe
 PORTVERSION=	2.2.0
