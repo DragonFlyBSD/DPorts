@@ -1,5 +1,5 @@
 # Created by: Alexander Wittig <alexander@wittig.name>
-# $FreeBSD: head/mail/squirrelmail-compatibility-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	compatibility
 PORTVERSION=2.0.16
