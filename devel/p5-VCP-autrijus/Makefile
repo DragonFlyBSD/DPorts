@@ -1,5 +1,5 @@
 # Created by: autrijus@autrijus.org
-# $FreeBSD: devel/p5-VCP-autrijus/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	VCP
 PORTVERSION=	0.9.20050110
