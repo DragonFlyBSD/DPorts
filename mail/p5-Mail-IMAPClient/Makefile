@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: mail/p5-Mail-IMAPClient/Makefile 334827 2013-11-25 09:43:32Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Mail-IMAPClient
 PORTVERSION=	3.35
