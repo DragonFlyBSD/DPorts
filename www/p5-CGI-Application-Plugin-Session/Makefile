@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Session/Makefile 333923 2013-11-15 20:52:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-Session
 PORTVERSION=	1.04
