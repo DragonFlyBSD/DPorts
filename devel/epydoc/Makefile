@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/epydoc/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	epydoc
 PORTVERSION=	3.0.1
