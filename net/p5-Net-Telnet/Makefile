@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/p5-Net-Telnet/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Telnet
 PORTVERSION=	3.04
