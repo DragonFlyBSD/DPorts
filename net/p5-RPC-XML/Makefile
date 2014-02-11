@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: net/p5-RPC-XML/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	RPC-XML
 PORTVERSION=	0.77
