@@ -1,4 +1,4 @@
-# $FreeBSD: editors/pico-alpine/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pico-alpine
 PORTREVISION=	1
@@ -18,9 +18,6 @@ PKGINSTALL=	/nonexistent	# To void equivalent in master port
 
 PICO_ALPINE_SLAVE=	yes
 
-MAN1=		pico.1 pilot.1
-
-NO_STAGE=	yes
 post-patch:
 	@${CP} ${WRKSRC}/imap/Makefile ${WRKSRC}/imap/Makefile.presed
 	@${SED}	-e "s#^\(all:.*\) bundled\$$#\1#" \
