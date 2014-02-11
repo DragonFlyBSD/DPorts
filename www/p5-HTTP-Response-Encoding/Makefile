@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-HTTP-Response-Encoding/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Response-Encoding
 PORTVERSION=	0.06
