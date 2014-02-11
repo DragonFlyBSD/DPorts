@@ -1,5 +1,5 @@
 # Created by: johans
-# $FreeBSD: graphics/webp/Makefile 337965 2013-12-29 11:42:32Z johans $
+# $FreeBSD$
 
 PORTNAME=	webp
 PORTVERSION=	0.3.1
