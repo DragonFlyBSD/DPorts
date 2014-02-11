@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-DeploymentHandler/Makefile 339467 2014-01-12 02:34:26Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-DeploymentHandler
 PORTVERSION=	0.002209
