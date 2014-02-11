@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libkolab/Makefile 332885 2013-11-05 18:06:57Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libkolab
 PORTVERSION=	0.4.2
