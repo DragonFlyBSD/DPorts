@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-Mok/Makefile 342149 2014-02-01 14:41:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Chemistry-Mok
 PORTVERSION=	0.25
