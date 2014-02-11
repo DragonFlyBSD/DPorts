@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/open-motif/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	open-motif
 PORTVERSION=	2.3.4
