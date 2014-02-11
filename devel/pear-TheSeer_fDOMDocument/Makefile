@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-TheSeer_fDOMDocument/Makefile 336319 2013-12-13 07:27:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	fDOMDocument
 PORTVERSION=	1.4.2
