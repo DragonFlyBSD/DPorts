@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-HTML-Query/Makefile 341722 2014-01-29 12:20:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML-Query
 PORTVERSION=	0.08
