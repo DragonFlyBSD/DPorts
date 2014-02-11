@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: head/science/netcdf4/Makefile 336087 2013-12-10 19:17:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	netcdf
 PORTVERSION=	4.1.3
