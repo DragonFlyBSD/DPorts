@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: comms/deforaos-phone/Makefile 332786 2013-11-04 21:15:51Z wg $
+# $FreeBSD$
 
 PORTNAME=	phone
 PORTVERSION=	0.3.12
