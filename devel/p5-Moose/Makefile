@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Moose/Makefile 340790 2014-01-23 03:28:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Moose
 PORTVERSION=	2.1202
