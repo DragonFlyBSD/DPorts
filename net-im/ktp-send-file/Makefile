@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-send-file/Makefile 338828 2014-01-05 23:05:13Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ktp-send-file
 PORTVERSION=	${KTP_VERSION}
