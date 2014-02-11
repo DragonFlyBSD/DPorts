@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/textproc/gdome2/Makefile 341452 2014-01-27 21:08:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	gdome2
 PORTVERSION=	0.8.1
