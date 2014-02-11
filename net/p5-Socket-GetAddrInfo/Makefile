@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: net/p5-Socket-GetAddrInfo/Makefile 341948 2014-01-31 09:01:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Socket-GetAddrInfo
 PORTVERSION=	0.22
