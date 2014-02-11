@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: head/graphics/ilmbase/Makefile 334331 2013-11-19 17:12:15Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	ilmbase
 PORTVERSION=	2.1.0
