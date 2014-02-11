@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-keysyms/Makefile 332328 2013-10-31 23:52:59Z garga $
+# $FreeBSD$
 
 PORTNAME=	xcb-util-keysyms
 PORTVERSION=	0.3.9
