@@ -1,5 +1,5 @@
 # Created by: John Merryweather Cooper
-# $FreeBSD: lang/fpc-docs/Makefile 341492 2014-01-28 00:16:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	docs
 PORTVERSION=	2.6.2
