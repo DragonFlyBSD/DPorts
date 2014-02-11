@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-errors/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	errors
 PORTVERSION=	1.4.1
