@@ -1,5 +1,5 @@
 # Created by: Alex Miller <asm@asm.kiev.ua>
-# $FreeBSD: net/ilbc/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	ilbc
 DISTVERSION=	rfc3951
