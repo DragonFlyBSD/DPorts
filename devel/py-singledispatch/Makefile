@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: devel/py-singledispatch/Makefile 340994 2014-01-25 08:25:41Z mva $
+# $FreeBSD$
 
 PORTNAME=	singledispatch
 PORTVERSION=	3.4.0.2
