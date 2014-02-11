@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: www/p5-Acme-Monta/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Acme-Monta
 PORTVERSION=	0.01
