@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: japanese/py-tegaki/Makefile 341388 2014-01-27 12:25:24Z danfe $
+# $FreeBSD$
 
 PORTNAME=	tegaki
 PORTVERSION=	0.3.1
