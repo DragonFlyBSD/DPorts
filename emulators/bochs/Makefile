@@ -1,5 +1,5 @@
 # Created by: alex
-# $FreeBSD: emulators/bochs/Makefile 336418 2013-12-14 02:08:19Z danilo $
+# $FreeBSD$
 
 PORTNAME=	bochs
 PORTVERSION=	2.6.2
