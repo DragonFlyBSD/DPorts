@@ -1,5 +1,5 @@
 # Created by: scrappy@FreeBSD.org
-# $FreeBSD: net/p5-perl-ldap/Makefile 337443 2013-12-25 19:39:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	perl-ldap
 PORTVERSION=	0.5800
