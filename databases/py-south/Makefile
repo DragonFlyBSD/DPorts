@@ -1,5 +1,5 @@
 # Created by: Stanislav Svirid <count@211.ru>
-# $FreeBSD: databases/py-south/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	south
 PORTVERSION=	0.8.4
