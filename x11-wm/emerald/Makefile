@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/emerald/Makefile 337997 2013-12-29 14:46:23Z antoine $
+# $FreeBSD$
 
 PORTNAME=	emerald
 PORTVERSION=	0.8.4
