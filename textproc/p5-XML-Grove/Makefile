@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-XML-Grove/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Grove
 DISTVERSION=	0.46alpha
