@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: finance/p5-Finance-Currency-Convert-WebserviceX/Makefile 332622 2013-11-03 16:08:07Z az $
+# $FreeBSD$
 
 PORTNAME=	Finance-Currency-Convert-WebserviceX
 PORTVERSION=	0.07001
