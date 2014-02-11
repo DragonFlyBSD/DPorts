@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Prophet/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Prophet
 PORTVERSION=	0.751
