@@ -1,5 +1,5 @@
 # Created by: ericb@thedeepsky.com
-# $FreeBSD: audio/mp3_check/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mp3_check
 PORTVERSION=	1.98
