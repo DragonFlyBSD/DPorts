@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: head/devel/pear-Console_Table/Makefile 339736 2014-01-15 02:57:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Console_Table
 PORTVERSION=	1.1.6
