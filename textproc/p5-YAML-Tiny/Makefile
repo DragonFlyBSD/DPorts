@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-# $FreeBSD: textproc/p5-YAML-Tiny/Makefile 335292 2013-11-30 14:50:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	YAML-Tiny
 PORTVERSION=	1.56
