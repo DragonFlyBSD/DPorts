@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: graphics/p5-SWF-Builder/Makefile 334223 2013-11-18 16:45:09Z mat $
+# $FreeBSD$
 
 PORTNAME=	SWF-Builder
 PORTVERSION=	0.16
