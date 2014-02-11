@@ -1,5 +1,5 @@
 # Created by: vj562001@yahoo.de
-# $FreeBSD: print/latex-etoolbox/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	etoolbox
 DISTVERSION=	2.1
