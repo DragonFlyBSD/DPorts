@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-File/Makefile 339405 2014-01-11 08:19:57Z culot $
+# $FreeBSD$
 
 PORTNAME=	Test-File
 PORTVERSION=	1.36
