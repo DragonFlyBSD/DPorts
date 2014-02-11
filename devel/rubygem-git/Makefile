@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: devel/rubygem-git/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	git
 PORTVERSION=	1.2.5
