@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/devel/p5-Params-Classify/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Params-Classify
 PORTVERSION=	0.013
