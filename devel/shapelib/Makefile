@@ -1,9 +1,9 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: head/devel/shapelib/Makefile 330291 2013-10-14 11:03:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	shapelib
 PORTVERSION=	1.3.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel geography
 MASTER_SITES=	http://download.osgeo.org/shapelib/ \
 		ftp://ftp.remotesensing.org/shapelib/ \
@@ -41,7 +41,6 @@ ENDIAN=		-D_BIG_ENDIAN	# mips*eb, powerpc, powerpc64 and sparc
 
 post-patch:
 	@${REINPLACE_CMD} \
-		-e 's|%%LIBTOOL%%|${LIBTOOL}|g' \
 		-e 's|%%ENDIAN%%|${ENDIAN}|g' \
 		-e 's|%%PROJ%%|${PROJ}|g' \
 			${WRKSRC}/Makefile ${WRKSRC}/contrib/Makefile
