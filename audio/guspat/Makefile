@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: audio/guspat/Makefile 339956 2014-01-16 18:29:36Z antoine $
+# $FreeBSD$
 
 PORTNAME=	guspat
 PORTVERSION=	20000706
