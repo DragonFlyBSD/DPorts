@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: archivers/p5-PerlIO-via-Bzip2/Makefile 328279 2013-09-25 12:42:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PerlIO-via-Bzip2
 PORTVERSION=	0.02
