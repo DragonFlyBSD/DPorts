@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-mechanize/Makefile 338237 2013-12-31 06:55:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mechanize
 PORTVERSION=	2.7.1
