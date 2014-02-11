@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-SharedFork/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-SharedFork
 PORTVERSION=	0.21
