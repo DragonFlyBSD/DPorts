@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-wxc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wxc
 PORTVERSION=	0.90.0.4
