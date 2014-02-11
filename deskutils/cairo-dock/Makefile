@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/cairo-dock/Makefile 337267 2013-12-23 17:46:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	cairo-dock
 DISTVERSION=	3.2.1
