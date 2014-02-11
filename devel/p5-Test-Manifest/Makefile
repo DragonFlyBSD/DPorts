@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Manifest/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-Manifest
 PORTVERSION=	1.23
