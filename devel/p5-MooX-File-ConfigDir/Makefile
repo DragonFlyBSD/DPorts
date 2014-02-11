@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooX-File-ConfigDir/Makefile 339471 2014-01-12 03:52:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooX-File-ConfigDir
 PORTVERSION=	0.003
