@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Lingua-EN-Inflect-Phrase/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	Lingua-EN-Inflect-Phrase
 PORTVERSION=	0.18
