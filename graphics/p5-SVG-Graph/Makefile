@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: graphics/p5-SVG-Graph/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SVG-Graph
 PORTVERSION=	0.04
