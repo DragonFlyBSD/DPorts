@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: textproc/ekhtml/Makefile 340838 2014-01-23 16:40:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ekhtml
 PORTVERSION=	0.3.2
