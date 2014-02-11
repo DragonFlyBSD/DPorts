@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: head/security/p5-Digest-CRC/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Digest-CRC
 PORTVERSION=	0.18
