@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: x11/rxvt/Makefile 339339 2014-01-10 09:32:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	rxvt
 PORTVERSION=	2.6.4
