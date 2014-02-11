@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: audio/taglib/Makefile 335257 2013-11-30 01:58:17Z sbruno $
+# $FreeBSD$
 
 PORTNAME=	taglib
 PORTVERSION=	1.9.1
