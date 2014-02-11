@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org
-# $FreeBSD: www/p5-Apache2-SiteControl/Makefile 341686 2014-01-29 07:57:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Apache2-SiteControl
 PORTVERSION=	1.05
