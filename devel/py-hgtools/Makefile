@@ -1,5 +1,5 @@
 # Created by: William Grzybowski
-# $FreeBSD: devel/py-hgtools/Makefile 337524 2013-12-26 14:40:41Z wg $
+# $FreeBSD$
 
 PORTNAME=	hgtools
 PORTVERSION=	4.0
