@@ -1,5 +1,5 @@
 # Created by: Geraud Continsouzas <geraud@gcu.info>
-# $FreeBSD: devel/p5-Object-InsideOut/Makefile 329428 2013-10-05 08:41:19Z culot $
+# $FreeBSD$
 
 PORTNAME=	Object-InsideOut
 PORTVERSION=	3.98
