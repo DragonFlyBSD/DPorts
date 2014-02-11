@@ -1,5 +1,5 @@
 # Created by: Akito FUJITA <fujita@zoo.ncl.omron.co.jp>
-# $FreeBSD: japanese/mh/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mh
 PORTVERSION=	${VERSION}.j${JP_VERSION}
