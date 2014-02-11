@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Record/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Record
 PORTVERSION=	0.02
