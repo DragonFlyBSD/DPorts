@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: ports-mgmt/portconf/Makefile 337886 2013-12-28 17:45:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	portconf
 PORTVERSION=	1.6
