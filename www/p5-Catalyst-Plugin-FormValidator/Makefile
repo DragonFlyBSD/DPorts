@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-FormValidator/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-FormValidator
 PORTVERSION=	0.094
