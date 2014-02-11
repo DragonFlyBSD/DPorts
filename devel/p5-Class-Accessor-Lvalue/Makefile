@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Class-Accessor-Lvalue/Makefile 342699 2014-02-05 13:45:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Class-Accessor-Lvalue
 PORTVERSION=	0.11
