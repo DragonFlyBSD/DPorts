@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bugzilla42/Makefile.options 330666 2013-10-17 19:35:22Z ohauer $
+# $FreeBSD$
 
 OPTIONS_DEFINE=		\
 	DOCS		\
