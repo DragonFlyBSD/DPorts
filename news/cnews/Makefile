@@ -1,5 +1,5 @@
 # Created by: adam
-# $FreeBSD: head/news/cnews/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cnews
 PORTVERSION=	cr.g
