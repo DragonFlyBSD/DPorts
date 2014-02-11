@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: head/archivers/arj/Makefile 332292 2013-10-31 23:27:20Z garga $
+# $FreeBSD$
 
 PORTNAME=	arj
 PORTVERSION=	3.10.22
