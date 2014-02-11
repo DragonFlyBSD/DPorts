@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: sysutils/webmin/Makefile 339680 2014-01-14 11:25:55Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	webmin
 PORTVERSION=	1.670

@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/webmin/files/patch-software_freebsd-lib.pl 329458 2013-10-05 13:45:02Z olgeni $
+$FreeBSD: head/sysutils/webmin/files/patch-software_freebsd-lib.pl 329458 2013-10-05 13:45:02Z olgeni $
 
 --- software/freebsd-lib.pl.orig
 +++ software/freebsd-lib.pl
