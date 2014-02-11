@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/gtkhtml3/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 #   $MCom: ports/www/gtkhtml3/Makefile,v 1.184 2012/08/17 19:06:47 kwm Exp $
 
 PORTNAME=	gtkhtml3
