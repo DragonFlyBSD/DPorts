@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: head/databases/db43/Makefile 342260 2014-02-02 10:08:02Z miwi $
+# $FreeBSD$
 
 PORTNAME=	db43
 PORTVERSION=	4.3.29
