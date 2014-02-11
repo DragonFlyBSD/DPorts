@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-repoze.who/Makefile 333348 2013-11-09 21:47:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	repoze.who
 PORTVERSION=	2.2
