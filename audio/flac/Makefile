@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: head/audio/flac/Makefile 336736 2013-12-17 16:01:38Z naddy $
+# $FreeBSD$
 
 PORTNAME=	flac
 PORTVERSION=	1.3.0
