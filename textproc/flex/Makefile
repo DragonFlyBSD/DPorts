@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/flex/Makefile 339569 2014-01-13 05:41:30Z johans $
+# $FreeBSD$
 
 PORTNAME=	flex
 PORTVERSION=	2.5.37
