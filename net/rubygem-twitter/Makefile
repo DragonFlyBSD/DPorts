@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/rubygem-twitter/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	twitter
 PORTVERSION=	4.8.1
