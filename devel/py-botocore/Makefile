@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-botocore/Makefile 336572 2013-12-15 19:30:39Z alexey $
+# $FreeBSD$
 
 PORTNAME=	botocore
 PORTVERSION=	0.28.0
