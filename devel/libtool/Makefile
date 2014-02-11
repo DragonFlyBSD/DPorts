@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: head/devel/libtool/Makefile 341367 2014-01-27 10:37:08Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	libtool
 PORTVERSION=	2.4.2
