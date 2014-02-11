@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/rubygem-rubytree/Makefile 338272 2013-12-31 10:09:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rubytree
 PORTVERSION=	0.8.3
