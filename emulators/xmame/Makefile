@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: emulators/xmame/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	xmame
 PORTVERSION?=	0.106
@@ -14,6 +14,9 @@ DISTNAME=	xmame-${XMAMEVERSION}
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	UNIX/X11 port of the Multi Arcade Machine Emulator (MAME)
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
