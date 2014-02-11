@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Data-MessagePack/Makefile 332382 2013-11-01 14:30:13Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Data-MessagePack
 PORTVERSION=	0.48
