@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: x11-fonts/ttmkfdir/Makefile 335401 2013-12-01 16:10:24Z bsam $
+# $FreeBSD$
 
 PORTNAME=	ttmkfdir
 PORTVERSION=	3.0.9
