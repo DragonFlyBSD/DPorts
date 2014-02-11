@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xset/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xset
 PORTVERSION=	1.2.3
