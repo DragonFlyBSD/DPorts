@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: lang/tcl-wrapper/Makefile 333086 2013-11-07 13:00:22Z gahr $
+# $FreeBSD$
 
 PORTNAME=	wrapper
 PORTVERSION=	1.1
