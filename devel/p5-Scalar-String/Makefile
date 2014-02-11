@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Scalar-String/Makefile 342001 2014-01-31 15:23:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Scalar-String
 PORTVERSION=	0.002
