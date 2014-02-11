@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@FreeBSD.org>
-# $FreeBSD: textproc/fop/Makefile 341286 2014-01-26 21:01:24Z mat $
+# $FreeBSD$
 
 PORTNAME=	fop
 PORTVERSION=	1.1
