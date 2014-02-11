@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/miniupnpc/Makefile 336738 2013-12-17 16:17:01Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	miniupnpc
 PORTVERSION=	1.8
