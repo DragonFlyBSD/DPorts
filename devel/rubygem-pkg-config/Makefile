@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: head/devel/rubygem-pkg-config/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	pkg-config
 PORTVERSION=	1.1.4
