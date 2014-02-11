@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/samba4/files/samba4.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/samba4/files/samba4.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: samba4

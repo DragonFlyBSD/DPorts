@@ -1,5 +1,5 @@
 # Created by: timur@FreeBSD.org
-# $FreeBSD: net/samba4/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME?=		${SAMBA4_PORTNAME}
 PORTVERSION?=		${SAMBA4_VERSION}
