@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/libwraster/Makefile 340342 2014-01-19 19:08:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libwraster
 PORTVERSION=	0.95.5
