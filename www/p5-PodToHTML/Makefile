@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: www/p5-PodToHTML/Makefile 341734 2014-01-29 13:22:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	PodToHTML
 PORTVERSION=	0.08
