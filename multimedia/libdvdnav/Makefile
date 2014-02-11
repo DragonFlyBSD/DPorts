@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: head/multimedia/libdvdnav/Makefile 342392 2014-02-03 08:15:19Z martymac $
+# $FreeBSD$
 
 PORTNAME=	libdvdnav
 PORTVERSION=	4.2.1
