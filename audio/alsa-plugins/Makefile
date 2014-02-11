@@ -1,5 +1,5 @@
 # Created by: Aragon Gouveia <aragon@phat.za.net>
-# $FreeBSD: audio/alsa-plugins/Makefile 336451 2013-12-14 14:41:17Z flo $
+# $FreeBSD$
 
 PORTNAME=	alsa-plugins
 PORTVERSION=	1.0.27
