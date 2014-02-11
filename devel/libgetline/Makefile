@@ -1,5 +1,5 @@
 # Created by: roberto
-# $FreeBSD: devel/libgetline/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	getline
 PORTVERSION=	3.9
