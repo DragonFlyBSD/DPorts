@@ -1,5 +1,5 @@
 # Created by: Matthew Dillon <dillon@backplane.com>
-# $FreeBSD: java/jikes/Makefile 342173 2014-02-01 15:38:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jikes
 PORTVERSION=	1.22
