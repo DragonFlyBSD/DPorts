@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ragel/Makefile 328324 2013-09-25 23:00:31Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ragel
 PORTVERSION=	6.8
