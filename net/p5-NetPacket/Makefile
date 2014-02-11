@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev
-# $FreeBSD: head/net/p5-NetPacket/Makefile 341921 2014-01-31 07:17:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	NetPacket
 PORTVERSION=	1.4.1
