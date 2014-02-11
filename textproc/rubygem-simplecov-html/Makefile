@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-simplecov-html/Makefile 335248 2013-11-29 23:00:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	simplecov-html
 PORTVERSION=	0.8.0
