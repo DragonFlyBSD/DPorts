@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/pulseaudio/Makefile 336169 2013-12-11 14:40:48Z bapt $
+# $FreeBSD$
 #   $MCom: ports-stable/audio/pulseaudio/Makefile,v 1.7 2010/06/25 20:35:01 kwm Exp $
 
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
