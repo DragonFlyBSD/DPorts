@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Parallel-Scoreboard/Makefile 332699 2013-11-04 12:24:33Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Parallel-Scoreboard
 PORTVERSION=	0.04
