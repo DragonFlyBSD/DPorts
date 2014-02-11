@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Server-Simple-Static/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Server-Simple-Static
 PORTVERSION=	0.09
