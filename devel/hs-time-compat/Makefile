@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-time-compat/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	time-compat
 PORTVERSION=	0.1.0.3
