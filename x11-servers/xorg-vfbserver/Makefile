@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-vfbserver/Makefile 341122 2014-01-25 22:05:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xorg-vfbserver
 
