@@ -1,5 +1,5 @@
 # Created by: David Barksdale <amatus@gnu.org>
-# $FreeBSD: www/libmicrohttpd/Makefile 341847 2014-01-30 15:31:46Z decke $
+# $FreeBSD$
 
 PORTNAME=	libmicrohttpd
 PORTVERSION=	0.9.33
