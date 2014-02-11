@@ -1,4 +1,4 @@
-# $FreeBSD: devel/dbus-sharp-glib/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dbus-sharp-glib
 PORTVERSION=	0.5.0
