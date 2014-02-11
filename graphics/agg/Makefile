@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/agg/Makefile 342350 2014-02-02 17:48:46Z antoine $
+# $FreeBSD$
 
 PORTNAME=	agg
 PORTVERSION=	2.5
