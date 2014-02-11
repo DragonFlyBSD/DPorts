@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: net/p5-Net-Google-AuthSub/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Google-AuthSub
 PORTVERSION=	0.5
