@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Script-Run/Makefile 331140 2013-10-21 14:02:55Z wen $
+# $FreeBSD$
 
 PORTNAME=	Test-Script-Run
 PORTVERSION=	0.08
