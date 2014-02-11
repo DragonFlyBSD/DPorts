@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Look/Makefile 338294 2013-12-31 13:04:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	SVN-Look
 PORTVERSION=	0.39
