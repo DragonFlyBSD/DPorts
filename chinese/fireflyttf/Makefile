@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/fireflyttf/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fireflyttf
 PORTVERSION=	1.3.0
