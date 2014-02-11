@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: security/rubygem-rc4/Makefile 332049 2013-10-30 02:56:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	rc4
 PORTVERSION=	0.1.5
