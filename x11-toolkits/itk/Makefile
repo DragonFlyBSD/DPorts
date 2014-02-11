@@ -1,5 +1,5 @@
 # Created by: chuckr
-# $FreeBSD: x11-toolkits/itk/Makefile 339910 2014-01-16 13:25:23Z gahr $
+# $FreeBSD$
 
 PORTNAME=	itk
 PORTVERSION=	3.3
