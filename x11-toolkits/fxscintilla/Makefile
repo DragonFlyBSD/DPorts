@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: x11-toolkits/fxscintilla/Makefile 329703 2013-10-07 13:15:43Z gahr $
+# $FreeBSD$
 
 PORTNAME=	fxscintilla
 PORTVERSION=	2.28.0
