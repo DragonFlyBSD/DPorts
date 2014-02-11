@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Mason-PSGIHandler/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-Mason-PSGIHandler
 PORTVERSION=	0.53
