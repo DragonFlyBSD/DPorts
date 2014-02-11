@@ -1,5 +1,5 @@
 # Created by: jeffhung
-# $FreeBSD: devel/p5-File-Util/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Util
 PORTVERSION=	3.27
