@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: devel/epm/Makefile 340749 2014-01-22 23:37:53Z mandree $
+# $FreeBSD$
 
 PORTNAME=	epm
 PORTVERSION=	4.2
