@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: math/eigen2/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eigen
 PORTVERSION=	2.0.17
