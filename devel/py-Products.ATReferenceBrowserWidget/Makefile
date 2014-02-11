@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ATReferenceBrowserWidget/Makefile 341101 2014-01-25 20:55:47Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ATReferenceBrowserWidget
 PORTVERSION=	3.0
