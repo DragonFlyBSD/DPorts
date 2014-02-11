@@ -1,10 +1,9 @@
-# $FreeBSD: japanese/p5-Lingua-JA-Regular-Unicode/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Lingua-JA-Regular-Unicode
 PORTVERSION=	0.12
 CATEGORIES=	japanese perl5
 MASTER_SITES=	CPAN
-PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Perl extension to convert Japanese chars
@@ -15,7 +14,8 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Lingua::JA::Regular::Unicode.3
+.include <bsd.port.pre.mk>
 
-NO_STAGE=	yes
-.include <bsd.port.mk>
+PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
+
+.include <bsd.port.post.mk>
