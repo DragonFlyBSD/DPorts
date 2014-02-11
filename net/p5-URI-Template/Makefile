@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/p5-URI-Template/Makefile 335755 2013-12-06 15:23:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	URI-Template
 PORTVERSION=	0.18
