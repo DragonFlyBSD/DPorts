@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/misc/p5-Locale-Codes/Makefile 341535 2014-01-28 11:51:32Z demon $
+# $FreeBSD$
 
 PORTNAME=	Locale-Codes
 PORTVERSION=	3.29
