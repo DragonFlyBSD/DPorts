@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MouseX-Getopt/Makefile 341427 2014-01-27 16:41:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	MouseX-Getopt
 PORTVERSION=	${DISTVERSION}00
