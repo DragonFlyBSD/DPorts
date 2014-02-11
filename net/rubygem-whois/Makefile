@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: net/rubygem-whois/Makefile 331699 2013-10-26 14:56:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	whois
 PORTVERSION=	3.3.1
