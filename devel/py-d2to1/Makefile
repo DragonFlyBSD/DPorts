@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-d2to1/Makefile 342116 2014-02-01 11:24:30Z koobs $
+# $FreeBSD$
 
 PORTNAME=	d2to1
 PORTVERSION=	0.2.11
