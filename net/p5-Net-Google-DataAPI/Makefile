@@ -1,5 +1,5 @@
 # Created by: Gunter Wambaugh <gunter@six-two.net>
-# $FreeBSD: net/p5-Net-Google-DataAPI/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Google-DataAPI
 PORTVERSION=	0.28.01
