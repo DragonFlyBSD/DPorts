@@ -1,6 +1,6 @@
 # To avoid a cirular dependency with GPRBuild, this custom BSD Makefile is
 # used instead of the provided asis.gpr file.
-# $FreeBSD: head/lang/gnat_util/files/Makefile 323388 2013-07-21 14:12:28Z marino $
+# $FreeBSD$
 
 CP=cp -p
 MKDIR=mkdir -p
