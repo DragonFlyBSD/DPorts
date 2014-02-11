@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson
-# $FreeBSD: graphics/libimg/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libimg
 PORTVERSION=	1.2.4
