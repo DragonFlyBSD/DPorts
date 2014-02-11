@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkada/Makefile 333425 2013-11-10 18:59:47Z marino $
+# $FreeBSD$
 
 PORTNAME=	gtkada
 PORTVERSION=	2.24.4.0
