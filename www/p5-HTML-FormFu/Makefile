@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-# $FreeBSD: www/p5-HTML-FormFu/Makefile 338233 2013-12-31 05:14:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTML-FormFu
 PORTVERSION=	1.00
