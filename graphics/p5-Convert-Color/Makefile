@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Convert-Color/Makefile 339511 2014-01-12 15:03:28Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Convert-Color
 PORTVERSION=	0.10
