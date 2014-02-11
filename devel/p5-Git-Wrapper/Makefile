@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Git-Wrapper/Makefile 331953 2013-10-29 14:32:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Git-Wrapper
 PORTVERSION=	0.030
