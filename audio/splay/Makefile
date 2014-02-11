@@ -1,5 +1,5 @@
 # Created by: Choi Jun Ho <junker@moderato.snu.ac.kr>
-# $FreeBSD: audio/splay/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	splay
 PORTVERSION=	0.9.5.2
