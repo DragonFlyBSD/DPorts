@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/rubygem-em-websocket/Makefile 335234 2013-11-29 21:31:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	em-websocket
 PORTVERSION=	0.5.0
