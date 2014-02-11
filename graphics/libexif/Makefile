@@ -1,5 +1,5 @@
 # Created by: Peter Schmiedeskamp <pschmied@qwest.net>
-# $FreeBSD: head/graphics/libexif/Makefile 342643 2014-02-05 07:38:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libexif
 PORTVERSION=	0.6.21
