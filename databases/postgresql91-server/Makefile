@@ -1,9 +1,9 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: databases/postgresql91-server/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	postgresql
 DISTVERSION?=	9.1.11
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL
 MASTER_SITE_SUBDIR=	source/v${DISTVERSION}
@@ -20,7 +20,7 @@ CONFLICTS?=	${PORTNAME}[^${PORTVERSION:R:R}]?-client* \
 WRKSRC=		${WRKDIR}/postgresql-${DISTVERSION}
 DIST_SUBDIR=	postgresql
 
-ICU_PATCHFILE?=	pg-910-icu-2012-12-19.diff.gz
+ICU_PATCHFILE?=	pg-923-icu-2014-02-10.diff.gz
 
 .if !defined(SLAVE_ONLY)
 UNIQUENAME?=	${PORTNAME}${DISTVERSION:R:S/.//}
