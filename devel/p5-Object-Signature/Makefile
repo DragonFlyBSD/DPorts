@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Object-Signature/Makefile 332127 2013-10-30 15:19:23Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Object-Signature
 PORTVERSION=	1.07
