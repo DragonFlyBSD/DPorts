@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/graphite2/Makefile 336230 2013-12-11 21:55:53Z bapt $
+# $FreeBSD$
 
 PORTNAME=	graphite2
 PORTVERSION=	1.2.4
