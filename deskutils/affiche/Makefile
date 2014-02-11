@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/affiche/Makefile 342218 2014-02-01 23:33:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	affiche
 PORTVERSION=	0.6.0
