@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: net/liboping/Makefile 341964 2014-01-31 09:45:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	liboping
 PORTVERSION=	0.3.5
