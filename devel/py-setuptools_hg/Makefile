@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/devel/py-setuptools_hg/Makefile 341702 2014-01-29 09:03:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	setuptools_hg
 PORTVERSION=	0.4
