@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/rubygem-redis-store/Makefile 335331 2013-11-30 18:29:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	redis-store
 PORTVERSION=	1.1.4
