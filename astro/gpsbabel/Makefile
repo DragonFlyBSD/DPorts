@@ -1,5 +1,5 @@
 # Created by: Laurent Courty
-# $FreeBSD: astro/gpsbabel/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gpsbabel
 PORTVERSION=	1.4.4
