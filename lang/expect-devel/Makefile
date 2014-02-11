@@ -1,5 +1,5 @@
 # Created by: mm
-# $FreeBSD: lang/expect-devel/Makefile 331099 2013-10-21 07:35:35Z gahr $
+# $FreeBSD$
 
 PORTNAME=	expect
 PORTVERSION=	5.44.1.15
