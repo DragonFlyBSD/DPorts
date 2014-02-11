@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Tie-RefHash-Weak/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Tie-RefHash-Weak
 PORTVERSION=	0.09
