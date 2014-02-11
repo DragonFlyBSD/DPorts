@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/libmcs/Makefile 341974 2014-01-31 10:17:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libmcs
 PORTVERSION=	0.7.2
