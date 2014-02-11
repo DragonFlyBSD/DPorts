@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-common-internals/Makefile 338828 2014-01-05 23:05:13Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ktp-common-internals
 PORTVERSION=	${KTP_VERSION}
