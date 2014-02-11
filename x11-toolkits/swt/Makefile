@@ -1,5 +1,5 @@
 # Created by: Robert C. Noland III <rnoland@FreeBSD.org>
-# $FreeBSD: x11-toolkits/swt/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	swt
 DISTVERSION=	3.5.2
