@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: databases/p5-Class-DBI-Loader/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-Loader
 PORTVERSION=	0.34
