@@ -1,5 +1,5 @@
 # Created by: Mitsuru YOSHIDA <mitsuru@riken.jp>
-# $FreeBSD: lang/scala/Makefile 330465 2013-10-16 00:31:43Z danilo $
+# $FreeBSD$
 
 PORTNAME=	scala
 PORTVERSION=	2.10.3
