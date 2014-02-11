@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: deskutils/splashsetter/Makefile 342333 2014-02-02 16:38:22Z antoine $
+# $FreeBSD$
 
 PORTNAME=	splashsetter
 PORTVERSION=	0.6.5.3
