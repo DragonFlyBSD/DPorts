@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Log-Minimal/Makefile 337428 2013-12-25 15:09:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Log-Minimal
 PORTVERSION=	0.17
