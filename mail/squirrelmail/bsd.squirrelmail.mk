@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/squirrelmail/bsd.squirrelmail.mk 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #
 # $LastChangedDate: 2010-02-01 22:21:34 -0500 (Mon, 01 Feb 2010) $
 #
