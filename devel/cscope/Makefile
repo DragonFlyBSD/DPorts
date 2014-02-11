@@ -1,5 +1,5 @@
 # Created by: Castor Fu
-# $FreeBSD: head/devel/cscope/Makefile 342527 2014-02-04 13:19:33Z gahr $
+# $FreeBSD$
 
 PORTNAME=	cscope
 PORTVERSION=	15.8a
