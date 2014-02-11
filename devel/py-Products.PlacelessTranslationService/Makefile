@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.PlacelessTranslationService/Makefile 341155 2014-01-26 07:57:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.PlacelessTranslationService
 PORTVERSION=	2.0.4
