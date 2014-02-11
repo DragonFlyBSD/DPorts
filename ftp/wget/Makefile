@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: head/ftp/wget/Makefile 341551 2014-01-28 13:33:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wget
 DISTVERSION=	1.14
