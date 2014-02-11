@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: databases/p5-Rose-DB-Object/Makefile 340428 2014-01-20 17:24:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Rose-DB-Object
 PORTVERSION=	0.8100
