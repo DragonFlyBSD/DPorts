@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-journey/Makefile 338256 2013-12-31 07:25:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	journey
 PORTVERSION=	1.0.4
