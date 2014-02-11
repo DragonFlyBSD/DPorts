@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/libumidi/Makefile 339450 2014-01-11 20:15:31Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libumidi
 PORTVERSION=	2.0.11
