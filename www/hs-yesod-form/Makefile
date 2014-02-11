@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-yesod-form/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	yesod-form
 PORTVERSION=	1.3.0
