@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/pcre++/Makefile 337339 2013-12-24 12:42:38Z pawel $
+# $FreeBSD$
 
 PORTNAME=	pcre++
 PORTVERSION=	0.9.5
