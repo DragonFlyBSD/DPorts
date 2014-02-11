@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-multidimensional/Makefile 336216 2013-12-11 19:56:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	multidimensional
 PORTVERSION=	0.011
