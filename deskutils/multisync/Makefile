@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: deskutils/multisync/Makefile 342291 2014-02-02 13:47:56Z antoine $
+# $FreeBSD$
 
 PORTNAME?=	multisync
 PORTVERSION=	0.82
