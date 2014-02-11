@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@FreeBSD.org>
-# $FreeBSD: net/avahi-sharp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	net dns
