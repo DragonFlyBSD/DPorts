@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-cli/Makefile 338028 2013-12-29 17:08:28Z crees $
+# $FreeBSD$
 
 PORTNAME=	transmission
 PORTVERSION=	2.82
