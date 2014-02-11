@@ -1,5 +1,5 @@
 # Created by: marcus@FreeBSD.org
-# $FreeBSD: graphics/poppler/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 #   $MCom: ports/graphics/poppler/Makefile,v 1.84 2013/03/12 14:53:49 kwm Exp $
 
 PORTNAME=	poppler
