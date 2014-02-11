@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/ftplib/Makefile 341095 2014-01-25 20:43:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ftplib
 PORTVERSION=	4.0
