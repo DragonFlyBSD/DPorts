@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: audio/wavegain/Makefile 338712 2014-01-05 00:28:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wavegain
 PORTVERSION=	1.2.8
