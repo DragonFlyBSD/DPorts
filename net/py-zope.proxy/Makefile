@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/net/py-zope.proxy/Makefile 343560 2014-02-09 23:40:57Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.proxy
 PORTVERSION=	4.1.3
