@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: www/weblint++/Makefile 341550 2014-01-28 13:33:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	weblint++
 PORTVERSION=	1.15
