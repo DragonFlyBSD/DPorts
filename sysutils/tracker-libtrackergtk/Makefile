@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/tracker-libtrackergtk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/sysutils/tracker-libtrackergtk/Makefile,v 1.1 2009/08/08 18:46:43 ahze Exp $
 
 PORTREVISION=	2
