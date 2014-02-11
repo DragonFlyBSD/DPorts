@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-Attribute-Handlers-Prospective/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Attribute-Handlers-Prospective
 PORTVERSION=	0.01
