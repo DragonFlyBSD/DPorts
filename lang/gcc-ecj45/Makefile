@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc-ecj45/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gcc-ecj
 PORTVERSION=	4.5
