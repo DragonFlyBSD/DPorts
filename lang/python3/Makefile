@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python3/Makefile 340997 2014-01-25 09:15:12Z mva $
+# $FreeBSD$
 
 PORTNAME=	python3
 PORTVERSION=	${PYTHON_MAJOR_VER}
