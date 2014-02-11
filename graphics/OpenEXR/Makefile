@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: head/graphics/OpenEXR/Makefile 335161 2013-11-29 10:45:22Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	OpenEXR
 PORTVERSION=	2.1.0
