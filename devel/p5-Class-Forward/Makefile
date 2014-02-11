@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Forward/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Forward
 PORTVERSION=	0.100006
