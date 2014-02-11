@@ -1,5 +1,5 @@
 # Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-# $FreeBSD: graphics/dcraw-m/Makefile 339660 2014-01-14 03:25:59Z mandree $
+# $FreeBSD$
 
 PORTNAME=	dcraw-m
 PORTVERSION=	9.17
