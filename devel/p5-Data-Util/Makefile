@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Util/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Util
 PORTVERSION=	0.62
