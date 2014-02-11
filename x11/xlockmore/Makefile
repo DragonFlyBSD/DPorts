@@ -1,5 +1,5 @@
 # Created by: Scott Mace <smace@FreeBSD.org>
-# $FreeBSD: x11/xlockmore/Makefile 337934 2013-12-29 02:56:04Z jgh $
+# $FreeBSD$
 
 PORTNAME=	xlockmore
 PORTVERSION=	5.43
