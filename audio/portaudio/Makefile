@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-# $FreeBSD: head/audio/portaudio/Makefile 339146 2014-01-08 14:59:08Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	portaudio
 PORTVERSION=	18.1
