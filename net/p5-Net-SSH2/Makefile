@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: head/net/p5-Net-SSH2/Makefile 337794 2013-12-27 19:47:35Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Net-SSH2
 PORTVERSION=	0.53
