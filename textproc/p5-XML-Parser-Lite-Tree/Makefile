@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-XML-Parser-Lite-Tree/Makefile 341608 2014-01-28 15:58:38Z miwi $
+# $FreeBSD$
 
 PORTNAME=	XML-Parser-Lite-Tree
 PORTVERSION=	0.14
