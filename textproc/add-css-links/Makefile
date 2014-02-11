@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope
-# $FreeBSD: textproc/add-css-links/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	add-css-links
 PORTVERSION=	1.0
