@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: head/comms/lrzsz/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lrzsz
 PORTVERSION=	0.12.20
@@ -14,6 +14,8 @@ LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all # vcheck
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
