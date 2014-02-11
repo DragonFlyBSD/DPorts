@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-CanonicalizeXML/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-CanonicalizeXML
 PORTVERSION=	0.03
