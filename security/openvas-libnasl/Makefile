@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: security/openvas-libnasl/Makefile 332596 2013-11-03 09:21:59Z novel $
+# $FreeBSD$
 
 PORTNAME=	openvas-libnasl
 PORTVERSION=	2.0.1
