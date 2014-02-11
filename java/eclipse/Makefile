@@ -1,4 +1,4 @@
-# $FreeBSD: java/eclipse/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eclipse
 PORTVERSION=	3.7.1

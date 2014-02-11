@@ -1,4 +1,4 @@
-$FreeBSD: java/eclipse/files/freebsd-support.patch 325397 2013-08-26 13:48:01Z bapt $
+$FreeBSD: head/java/eclipse/files/freebsd-support.patch 325397 2013-08-26 13:48:01Z bapt $
 
 --- build.orig/eclipse-3.5.2-src/features/org.eclipse.equinox.executable/library/gtk/build.sh	2009-12-23 15:12:32.845944760 -0500
 +++ build/eclipse-3.5.2-src/features/org.eclipse.equinox.executable/library/gtk/build.sh	2009-12-23 15:14:12.389807302 -0500

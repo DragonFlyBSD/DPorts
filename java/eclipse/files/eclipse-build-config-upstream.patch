@@ -1,4 +1,4 @@
-$FreeBSD: java/eclipse/files/eclipse-build-config-upstream.patch 340872 2014-01-24 00:14:07Z mat $
+$FreeBSD: head/java/eclipse/files/eclipse-build-config-upstream.patch 340872 2014-01-24 00:14:07Z mat $
 
 ### Eclipse Workspace Patch 1.0
 #P eclipse-build-config
