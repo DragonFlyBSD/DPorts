@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ksysguardd/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ksysguardd
 PORTVERSION=	${KDE4_VERSION}
