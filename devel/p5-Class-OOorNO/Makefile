@@ -1,5 +1,5 @@
 # Created by: jeffhung
-# $FreeBSD: devel/p5-Class-OOorNO/Makefile 341627 2014-01-28 16:46:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Class-OOorNO
 PORTVERSION=	0.011
