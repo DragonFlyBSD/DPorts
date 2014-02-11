@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: databases/cego/Makefile 342123 2014-02-01 11:50:20Z wg $
+# $FreeBSD$
 
 PORTNAME=	cego
 PORTVERSION=	2.20.1
