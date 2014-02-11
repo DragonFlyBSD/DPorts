@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Calendar-Simple/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Calendar-Simple
 PORTVERSION=	1.21
@@ -13,7 +13,4 @@ COMMENT=	Perl extension to create simple calendars
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Calendar::Simple.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
