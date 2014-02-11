@@ -1,5 +1,5 @@
 # Created by: Joe Kelsey
-# $FreeBSD: devel/libical/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libical
 PORTVERSION=	1.0
