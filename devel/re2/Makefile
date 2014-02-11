@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: devel/re2/Makefile 334024 2013-11-16 19:32:53Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	re2
 PORTVERSION=	20131024
