@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: head/lang/tclX/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tclX
 PORTVERSION=	8.4
