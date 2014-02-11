@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/py-scipy/Makefile 334091 2013-11-17 15:54:51Z wen $
+# $FreeBSD$
 
 PORTNAME=	scipy
 PORTVERSION=	0.13.1
