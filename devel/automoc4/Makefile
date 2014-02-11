@@ -1,5 +1,5 @@
 # Created by: miwi
-# $FreeBSD: devel/automoc4/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	automoc4
 PORTVERSION=	0.9.88
