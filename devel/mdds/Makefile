@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/mdds/Makefile 331610 2013-10-25 16:37:57Z jkim $
+# $FreeBSD$
 
 PORTNAME=	mdds
 PORTVERSION=	0.9.1
