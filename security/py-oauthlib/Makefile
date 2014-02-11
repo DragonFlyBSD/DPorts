@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-oauthlib/Makefile 335314 2013-11-30 18:16:08Z koobs $
+# $FreeBSD$
 
 PORTNAME=	oauthlib
 PORTVERSION=	0.6.0
