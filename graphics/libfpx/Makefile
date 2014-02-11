@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: head/graphics/libfpx/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	libfpx
 DISTVERSION=	1.3.1-3
