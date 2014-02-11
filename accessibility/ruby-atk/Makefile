@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/ruby-atk/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD$
 #   $MCom: ports/accessibility/ruby-atk/Makefile,v 1.2 2005/10/17 07:05:39 mezz Exp $
 
 PORTNAME=	atk
