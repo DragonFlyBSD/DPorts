@@ -1,4 +1,4 @@
-# $FreeBSD: games/kpat/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	kpat
 PORTVERSION=	${KDE4_VERSION}
