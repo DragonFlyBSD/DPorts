@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/graphviz/Makefile 340169 2014-01-18 13:48:43Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	graphviz
 PORTVERSION=	2.36.0
