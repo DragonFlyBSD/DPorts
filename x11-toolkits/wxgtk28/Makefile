@@ -1,5 +1,5 @@
 # Created by: fjoe@FreeBSD.org
-# $FreeBSD: x11-toolkits/wxgtk28/Makefile 338620 2014-01-04 01:16:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wx
 PORTVERSION=	2.8.12
