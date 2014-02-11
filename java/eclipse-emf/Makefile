@@ -1,5 +1,5 @@
 # Created by: alex@FreeBSD.org
-# $FreeBSD: java/eclipse-emf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	emf
 PORTVERSION=	2.7.2
