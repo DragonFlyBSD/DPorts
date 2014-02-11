@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/sdl_mixer/files/patch-mixer.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/sdl_mixer/files/patch-mixer.c 340725 2014-01-22 17:40:44Z mat $
 
 --- mixer.c	2001/05/08 07:44:26	1.1
 +++ mixer.c	2001/05/08 07:47:09

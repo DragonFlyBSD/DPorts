@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/sdl_mixer/Makefile 340105 2014-01-17 20:45:42Z mva $
+# $FreeBSD$
 
 PORTNAME=	sdl_mixer
 PORTVERSION=	1.2.12
