@@ -1,9 +1,8 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Hash-Util-FieldHash-Compat/Makefile 331958 2013-10-29 15:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Hash-Util-FieldHash-Compat
-PORTVERSION=	0.03
-PORTREVISION=	1
+PORTVERSION=	0.04
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
