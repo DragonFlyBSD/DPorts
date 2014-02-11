@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net-im/folks04/Makefile 329278 2013-10-04 09:44:40Z bapt $
+# $FreeBSD$
 #   $MCom: ports/net-im/folks04/Makefile,v 1.2 2012/04/27 13:28:44 kwm Exp $
 
 PORTNAME=	folks
