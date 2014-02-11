@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-VCS-Lite/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	VCS-Lite
 PORTVERSION=	0.10
