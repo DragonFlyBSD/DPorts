@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-Rose-DBx-Object-MoreHelpers/Makefile 340989 2014-01-25 06:04:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Rose-DBx-Object-MoreHelpers
 PORTVERSION=	0.09
