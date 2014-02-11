@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-dm-transactions/Makefile 332032 2013-10-30 02:22:05Z swills $
+# $FreeBSD$
 
 PORTNAME=	dm-transactions
 PORTVERSION=	1.2.0
