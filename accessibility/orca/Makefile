@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: accessibility/orca/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/accessibility/orca/Makefile,v 1.90 2010/11/16 12:00:48 avl Exp $
 
 PORTNAME=	orca
