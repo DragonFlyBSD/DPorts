@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Class/Makefile 335696 2013-12-05 20:26:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Class
 PORTVERSION=	0.41
