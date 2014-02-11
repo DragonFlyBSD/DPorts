@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD: graphics/xli/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xli
 PORTVERSION=	1.17.0
@@ -16,15 +16,10 @@ CONFLICTS_INSTALL=	xloadimage-*
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		jpeg.11:${PORTSDIR}/graphics/jpeg
 
-USES=		imake
+USES=		imake desthack
 USE_XORG=	xi
 WRKSRC=		${WRKDIR}/xli-${XLI_SNAPVER}
 
-MAN1=		xli.1 xlito.1
-MLINKS=		xli.1 xview.1 xli.1 xsetbg.1
-PLIST_FILES=	bin/xli bin/xlito bin/xview bin/xsetbg lib/X11/app-defaults/Xli
-
 XLI_SNAPVER=	2006-11-10
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
