@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-Primes/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Primes
 PORTVERSION=	0.50
