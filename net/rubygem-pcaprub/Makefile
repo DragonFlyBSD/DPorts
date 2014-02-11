@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-pcaprub/Makefile 331730 2013-10-26 20:01:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	pcaprub
 PORTVERSION=	0.11.3
