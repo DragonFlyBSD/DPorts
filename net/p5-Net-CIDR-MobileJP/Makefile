@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-CIDR-MobileJP/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-CIDR-MobileJP
 PORTVERSION=	0.24
