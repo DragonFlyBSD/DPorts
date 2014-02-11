@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Googlev3/Makefile 330990 2013-10-20 08:34:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-Googlev3
 PORTVERSION=	0.13
