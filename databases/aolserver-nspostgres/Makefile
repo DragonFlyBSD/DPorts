@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: databases/aolserver-nspostgres/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nspostgres
 PORTVERSION=	4.1
@@ -14,6 +14,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internal PostgreSQL driver for AOLserver
 
 LICENSE=	MPL
+
+DEPRECATED=	abandonware, messing up on clusters
+EXPIRATION_DATE=	2014-04-03
 
 WRKSRC=		${WRKDIR}/nspostgres-${PORTVERSION}
 
