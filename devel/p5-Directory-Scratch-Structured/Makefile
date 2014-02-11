@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Directory-Scratch-Structured/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Directory-Scratch-Structured
 PORTVERSION=	0.04
@@ -25,7 +25,4 @@ TEST_DEPENDS=	p5-Test-Block>0:${PORTSDIR}/devel/p5-Test-Block \
 		p5-Test-Strict>0:${PORTSDIR}/devel/p5-Test-Strict \
 		p5-Test-Warn>0:${PORTSDIR}/devel/p5-Test-Warn
 
-MAN3=	Directory::Scratch::Structured.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
