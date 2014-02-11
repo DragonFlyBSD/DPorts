@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/rubygem-locale/Makefile 340901 2014-01-24 14:46:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	locale
 PORTVERSION=	2.0.8
