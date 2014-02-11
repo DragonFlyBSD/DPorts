@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: x11-toolkits/p5-Gtk/Makefile 329426 2013-10-05 08:10:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk
 PORTVERSION=	0.7010
