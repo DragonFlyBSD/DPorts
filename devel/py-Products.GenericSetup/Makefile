@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.GenericSetup/Makefile 341081 2014-01-25 19:42:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.GenericSetup
 PORTVERSION=	1.7.4
