@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: head/audio/faac/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	faac
 PORTVERSION=	1.28
