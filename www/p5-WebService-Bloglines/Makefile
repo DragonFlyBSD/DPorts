@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-WebService-Bloglines/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	WebService-Bloglines
 PORTVERSION=	0.12
