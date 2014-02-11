@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/gstreamer-plugins-neon/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/www/gstreamer-plugins-neon/Makefile,v 1.5 2008/03/19 14:05:38 ahze Exp $
 
 PORTREVISION=	0
