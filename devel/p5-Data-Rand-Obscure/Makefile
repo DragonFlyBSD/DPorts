@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Rand-Obscure/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Rand-Obscure
 PORTVERSION=	0.021
