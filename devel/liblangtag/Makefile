@@ -1,4 +1,4 @@
-# $FreeBSD: devel/liblangtag/Makefile 329285 2013-10-04 10:36:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	liblangtag
 PORTVERSION=	0.5.1
