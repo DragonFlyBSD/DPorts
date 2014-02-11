@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-View-JSON/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-View-JSON
 PORTVERSION=	0.33
