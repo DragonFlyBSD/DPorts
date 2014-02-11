@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: science/p5-Chemistry-File-XYZ/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	Chemistry-File-XYZ
 PORTVERSION=	0.11
