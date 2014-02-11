@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Object-Accessor/Makefile 332127 2013-10-30 15:19:23Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Object-Accessor
 PORTVERSION=	0.48
