@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# # $FreeBSD: devel/allegro/files/skater.in 332384 2013-11-01 14:45:33Z nemysis $
+# # $FreeBSD: head/devel/allegro/files/skater.in 332384 2013-11-01 14:45:33Z nemysis $
 #
 
 cd "%%EXAMPLESDIR%%/demos/skater"

@@ -1,4 +1,4 @@
-# $FreeBSD: devel/allegro/Makefile 332651 2013-11-03 22:26:52Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	allegro
 DISTVERSION=	4.4.2
