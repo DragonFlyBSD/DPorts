@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: textproc/p5-FormValidator-Lite/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	FormValidator-Lite
 PORTVERSION=	0.37
