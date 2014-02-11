@@ -1,5 +1,5 @@
 # Created by: Jan-Peter Koopmann <Jan-Peter.Koopmann@seceidos.de>
-# $FreeBSD: security/p5-File-Scan-ClamAV/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	File-Scan-ClamAV
 PORTVERSION=	1.9.1
