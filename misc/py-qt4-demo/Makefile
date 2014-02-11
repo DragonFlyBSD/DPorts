@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: misc/py-qt4-demo/Makefile 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	demo
 PORTVERSION=	${PYQT4_VERSION}
