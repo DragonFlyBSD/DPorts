@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-Graph-Writer-GraphViz/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Graph-Writer-GraphViz
 PORTVERSION=	0.11
