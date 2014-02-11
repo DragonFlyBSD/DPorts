@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: security/p5-Crypt-Password-Util/Makefile 333503 2013-11-11 14:08:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Password-Util
 PORTVERSION=	0.09
