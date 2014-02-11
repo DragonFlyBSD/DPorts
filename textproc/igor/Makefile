@@ -1,14 +1,14 @@
-# $FreeBSD: textproc/igor/Makefile 340866 2014-01-23 22:40:23Z eadler $
+# $FreeBSD$
 
 PORTNAME=	igor
-PORTVERSION=	1.419
+PORTVERSION=	1.431
 CATEGORIES=	textproc
 MASTER_SITES=	http://docscripts.glenbarber.us/tags/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	wblock@FreeBSD.org
 COMMENT=	FreeBSD Documentation Project sanity check script
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 USES=		perl5
 USE_PERL5=	run
