@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: head/textproc/p5-MARC-Record/Makefile 332838 2013-11-05 12:08:16Z demon $
+# $FreeBSD$
 
 PORTNAME=	MARC-Record
 PORTVERSION=	2.0.6
