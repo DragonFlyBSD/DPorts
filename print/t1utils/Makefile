@@ -1,5 +1,5 @@
 # Created by: Mike Meyer <mwm@mired.org>
-# $FreeBSD: head/print/t1utils/Makefile 342328 2014-02-02 16:05:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	t1utils
 PORTVERSION=	1.32
