@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Scalar-Does/Makefile 328973 2013-10-01 17:33:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Scalar-Does
 PORTVERSION=	0.201
