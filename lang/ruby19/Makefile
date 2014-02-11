@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/lang/ruby19/Makefile 342539 2014-02-04 14:23:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ruby
 PORTVERSION=	${RUBY_PORTVERSION}
@@ -18,8 +18,11 @@ LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
-		libffi.so:${PORTSDIR}/devel/libffi \
 		libyaml.so:${PORTSDIR}/textproc/libyaml
+
+# Using LIB_DEPENDS finds the libffi from gcc which causes problems
+BUILD_DEPENDS=	libffi>=0:${PORTSDIR}/devel/libffi
+RUN_DEPENDS=	libffi>=0:${PORTSDIR}/devel/libffi
 
 GNU_CONFIGURE=	yes
 WRKSRC=		${RUBY_WRKSRC}
