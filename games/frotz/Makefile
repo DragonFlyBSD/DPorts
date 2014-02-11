@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/frotz/Makefile 336068 2013-12-10 16:37:11Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	frotz
 PORTVERSION=	2.43d
