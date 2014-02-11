@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: devel/pear-OLE/Makefile 333435 2013-11-10 19:49:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	OLE
 DISTVERSION=	1.0.0RC2
