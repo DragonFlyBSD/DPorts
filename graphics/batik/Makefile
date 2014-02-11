@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/batik/Makefile 338385 2014-01-01 18:25:10Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	batik
 PORTVERSION=	1.7
