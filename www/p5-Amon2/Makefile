@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2/Makefile 341691 2014-01-29 07:59:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Amon2
 PORTVERSION=	3.85
