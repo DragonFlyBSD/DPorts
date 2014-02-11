@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libcfu/Makefile 337999 2013-12-29 14:50:31Z crees $
+# $FreeBSD$
 
 PORTNAME=	libcfu
 DISTVERSION=	0.04a
