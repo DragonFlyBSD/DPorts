@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-acts-as-taggable-on/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	acts-as-taggable-on
 PORTVERSION=	2.4.1
