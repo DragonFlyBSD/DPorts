@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-vumeter/Makefile 339283 2014-01-09 21:26:59Z antoine $
+# $FreeBSD$
 
 PORTNAME=	vumeter
 PORTVERSION=	0.9.2
