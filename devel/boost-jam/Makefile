@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: head/devel/boost-jam/Makefile 343213 2014-02-07 11:43:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	boost-jam
 COMMENT=	Build tool from the boost.org
