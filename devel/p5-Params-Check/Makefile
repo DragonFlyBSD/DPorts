@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Params-Check/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Params-Check
 PORTVERSION=	0.38
@@ -17,6 +17,8 @@ USES=		perl5
 USE_PERL5=	configure
 
 PORTDOCS=	CHANGES
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
