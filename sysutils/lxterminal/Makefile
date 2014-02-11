@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: sysutils/lxterminal/Makefile 339062 2014-01-08 00:42:32Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxterminal
 PORTVERSION=	0.1.11
