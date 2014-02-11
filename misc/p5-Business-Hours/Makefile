@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: misc/p5-Business-Hours/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	Business-Hours
 PORTVERSION=	0.12
