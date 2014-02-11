@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/py-avro/Makefile 340584 2014-01-21 09:00:45Z bapt $
+# $FreeBSD$
 
 PORTNAME=	avro
 PORTVERSION=	1.7.4
