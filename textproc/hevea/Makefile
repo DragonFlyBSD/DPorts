@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: textproc/hevea/Makefile 339770 2014-01-15 09:34:27Z gahr $
+# $FreeBSD$
 
 PORTNAME=	hevea
 PORTVERSION=	2.12
