@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Path/Makefile 334664 2013-11-23 12:37:32Z lth $
+# $FreeBSD$
 
 PORTNAME=	Module-Path
 PORTVERSION=	0.09
