@@ -1,4 +1,4 @@
-# $FreeBSD: security/easy-rsa/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	easy-rsa
 DISTVERSION=	2.2.0_master
