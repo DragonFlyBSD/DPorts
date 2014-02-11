@@ -1,4 +1,4 @@
-# $FreeBSD: www/rt42/Makefile 341450 2014-01-27 20:52:51Z matthew $
+# $FreeBSD$
 
 PORTNAME=	rt
 DISTVERSION=	4.2.2
