@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Mouse/Makefile 335052 2013-11-27 20:23:37Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Mouse
 PORTVERSION=	2.1.0
@@ -38,6 +38,10 @@ USE_PERL5=	modbuild
 
 .if ${PERL_LEVEL} < 501400
 BUILD_DEPENDS+=	p5-CPAN-Meta>=0:${PORTSDIR}/devel/p5-CPAN-Meta
+.endif
+
+.if ${PERL_LEVEL} < 501600
+BUILD_DEPENDS+= p5-ExtUtils-ParseXS>=3.16:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
 .endif
 
 .include <bsd.port.post.mk>
