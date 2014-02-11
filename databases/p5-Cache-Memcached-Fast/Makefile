@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/databases/p5-Cache-Memcached-Fast/Makefile 341626 2014-01-28 16:46:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Cache-Memcached-Fast
 PORTVERSION=	0.21
