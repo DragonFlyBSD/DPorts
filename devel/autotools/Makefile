@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/autotools/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	autotools
 PORTVERSION=	20130627
@@ -23,8 +23,7 @@ PLIST_FILES=	share/${PORTNAME}
 NO_BUILD=	yes
 NO_FETCH=	yes
 
-NO_STAGE=	yes
 do-install:
-	@${ECHO_CMD} "Placeholder file" > ${PREFIX}/${PLIST_FILES}
+	@${ECHO_CMD} "Placeholder file" > ${STAGEDIR}${PREFIX}/${PLIST_FILES}
 
 .include <bsd.port.mk>
