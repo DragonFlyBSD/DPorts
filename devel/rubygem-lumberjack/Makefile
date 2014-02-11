@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-lumberjack/Makefile 331833 2013-10-28 06:42:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	lumberjack
 PORTVERSION=	1.0.4
