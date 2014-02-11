@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: dns/rubygem-public_suffix_service/Makefile 335226 2013-11-29 21:24:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	public_suffix_service
 PORTVERSION=	0.9.1
