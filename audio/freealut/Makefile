@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: audio/freealut/Makefile 342175 2014-02-01 15:39:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	freealut
 PORTVERSION=	1.1.0
