@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-amqp/Makefile 340391 2014-01-20 13:20:08Z wg $
+# $FreeBSD$
 
 PORTNAME=	amqp
 PORTVERSION=	1.4.1
