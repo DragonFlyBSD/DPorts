@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Date-Manip/Makefile 342687 2014-02-05 11:36:58Z mat $
+# $FreeBSD$
 
 PORTNAME=	Date-Manip
 PORTVERSION=	6.34
