@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: head/audio/wavpack/Makefile 329376 2013-10-04 20:14:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wavpack
 PORTVERSION=	4.60.1
