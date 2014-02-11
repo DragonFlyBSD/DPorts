@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: sysutils/p5-MogileFS-Server/Makefile 334606 2013-11-22 19:11:55Z trociny $
+# $FreeBSD$
 
 PORTNAME=	MogileFS-Server
 PORTVERSION=	2.70
