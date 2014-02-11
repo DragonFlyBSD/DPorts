@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-Flickr-API/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	Flickr-API
 PORTVERSION=	1.08
