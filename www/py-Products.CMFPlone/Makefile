@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-Products.CMFPlone/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFPlone
 PORTVERSION=	4.3.2
