@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: x11/kdelibs4/Makefile 339572 2014-01-13 07:23:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_VERSION}
