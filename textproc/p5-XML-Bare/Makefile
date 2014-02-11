@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-XML-Bare/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Bare
 PORTVERSION=	0.53
