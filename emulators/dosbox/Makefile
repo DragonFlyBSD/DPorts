@@ -1,5 +1,5 @@
 # Created by: Tom Carrick <knyghtmare@knyghtmare.com>
-# $FreeBSD: emulators/dosbox/Makefile 331434 2013-10-23 22:15:15Z ak $
+# $FreeBSD$
 
 PORTNAME=	dosbox
 PORTVERSION=	0.74
