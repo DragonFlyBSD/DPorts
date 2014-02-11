@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: head/textproc/opensp/Makefile 341501 2014-01-28 07:32:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	OpenSP
 PORTVERSION=	1.5.2
