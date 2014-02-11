@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: x11-themes/gnome-icons-faenza/Makefile 329625 2013-10-06 19:02:37Z pawel $
+# $FreeBSD$
 
 PORTNAME=	faenza
 PORTVERSION=	1.3
