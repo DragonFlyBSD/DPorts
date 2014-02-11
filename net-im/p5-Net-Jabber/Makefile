@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: net-im/p5-Net-Jabber/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Jabber
 PORTVERSION=	2.0
