@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/p5-Cairo/Makefile 336800 2013-12-18 03:46:57Z swills $
+# $FreeBSD$
 
 PORTNAME=	Cairo
 PORTVERSION=	1.104
