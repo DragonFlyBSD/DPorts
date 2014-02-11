@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-sendto/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 #    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.30 2010/09/30 06:21:18 kwm Exp $
 
 PORTNAME=	nautilus-sendto
