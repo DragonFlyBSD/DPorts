@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: head/textproc/hunspell/Makefile 336854 2013-12-18 18:27:04Z tijl $
+# $FreeBSD$
 
 PORTNAME=	hunspell
 PORTVERSION=	1.3.2
