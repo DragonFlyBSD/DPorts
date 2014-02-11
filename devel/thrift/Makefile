@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/thrift/Makefile 342975 2014-02-06 08:54:09Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION}	# get these from bsd.thrift.mk. any upgrade needs to check ALL dependencies

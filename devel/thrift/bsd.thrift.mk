@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/devel/thrift/bsd.thrift.mk 333296 2013-11-09 15:09:13Z wg $
+# $FreeBSD$
 #
 # to use:
 # in your makefile, set:
