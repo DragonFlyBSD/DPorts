@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Lingua-EN-Number-IsOrdinal/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	Lingua-EN-Number-IsOrdinal
 PORTVERSION=	0.04
