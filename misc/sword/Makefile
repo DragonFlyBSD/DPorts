@@ -1,8 +1,9 @@
 # Created by: Willem van Engen <wvengen@stack.nl>
-# $FreeBSD: misc/sword/Makefile 339984 2014-01-16 20:44:20Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	sword
 PORTVERSION=	1.7.2
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.crosswire.org/pub/sword/source/v${PORTVERSION:R}/ \
 		http://crosswire.org/ftpmirror/pub/sword/source/v${PORTVERSION:R}/
