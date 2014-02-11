@@ -1,8 +1,9 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: devel/xsd/Makefile 336253 2013-12-12 10:53:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xsd
 PORTVERSION=	3.3.0
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-2+dep
 CATEGORIES=	devel
 MASTER_SITES=	http://www.codesynthesis.com/download/${PORTNAME}/${PORTVERSION:R}/
