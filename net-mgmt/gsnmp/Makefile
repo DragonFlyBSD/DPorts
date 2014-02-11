@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: net-mgmt/gsnmp/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gsnmp
 PORTVERSION=	0.2.0
