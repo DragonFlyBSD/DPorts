@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/aumix/Makefile 337577 2013-12-26 17:49:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aumix
 PORTVERSION=	2.9.1
