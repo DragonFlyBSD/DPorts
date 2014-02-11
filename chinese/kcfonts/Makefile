@@ -1,5 +1,5 @@
 # Created by: Ming-I Hseh <PA@FreeBSD.Ntu.edu.TW>
-# $FreeBSD: chinese/kcfonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kcfonts
 PORTVERSION=	1.05
@@ -13,6 +13,8 @@ COMMENT=	Kuo Chauo Chinese Fonts collection
 
 BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf
 RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir
+
+MAKE_JOBS_UNSAFE=yes
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
