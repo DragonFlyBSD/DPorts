@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Sub-Exporter/Makefile 330942 2013-10-19 21:37:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Sub-Exporter
 PORTVERSION=	0.987
