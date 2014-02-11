@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-content/Makefile 341400 2014-01-27 13:17:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	content
 PORTVERSION=	2.0.3
