@@ -1,5 +1,5 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-TreeBuilder/Makefile 336269 2013-12-12 15:36:36Z culot $
+# $FreeBSD$
 
 PORTNAME=	XML-TreeBuilder
 PORTVERSION=	5.2
