@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-celluloid/Makefile 338472 2014-01-02 19:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	celluloid
 PORTVERSION=	0.15.2
