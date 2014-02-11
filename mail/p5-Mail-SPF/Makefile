@@ -1,5 +1,5 @@
 # Created by: gmc@sonologic.nl
-# $FreeBSD: mail/p5-Mail-SPF/Makefile 337264 2013-12-23 17:17:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Mail-SPF
 PORTVERSION=	2.9.0
