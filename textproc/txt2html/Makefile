@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: textproc/txt2html/Makefile 333222 2013-11-08 13:35:39Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	txt2html
 PORTVERSION=	2.51
