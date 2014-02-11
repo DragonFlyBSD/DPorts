@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: head/textproc/p5-XML-Hash-LX/Makefile 340560 2014-01-21 07:25:23Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-Hash-LX
 PORTVERSION=	0.0603
