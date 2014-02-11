@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: audio/libsmf/Makefile 338664 2014-01-04 18:22:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libsmf
 PORTVERSION=	1.3
