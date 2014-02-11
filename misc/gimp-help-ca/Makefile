@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s16@gmail.com>
-# $FreeBSD: misc/gimp-help-ca/Makefile 342129 2014-02-01 12:49:26Z makc $
+# $FreeBSD$
 
 CATEGORIES=	misc graphics
 
