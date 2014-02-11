@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: print/tex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tex
 PORTVERSION=	3.14159
