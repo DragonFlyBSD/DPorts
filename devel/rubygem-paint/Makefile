@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-paint/Makefile 332039 2013-10-30 02:39:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	paint
 PORTVERSION=	0.8.6
