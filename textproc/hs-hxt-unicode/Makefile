@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-hxt-unicode/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hxt-unicode
 PORTVERSION=	9.0.2
