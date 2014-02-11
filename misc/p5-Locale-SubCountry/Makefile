@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Locale-SubCountry/Makefile 332733 2013-11-04 14:41:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Locale-SubCountry
 PORTVERSION=	1.62
