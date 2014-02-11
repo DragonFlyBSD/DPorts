@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/speech-dispatcher/Makefile 334013 2013-11-16 16:50:55Z avilla $
+# $FreeBSD$
 
 PORTNAME=	speech-dispatcher
 PORTVERSION=	0.8
