@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: head/net/net6/Makefile 339160 2014-01-08 18:01:20Z antoine $
+# $FreeBSD$
 
 PORTNAME=	net6
 PORTVERSION=	1.3.14
