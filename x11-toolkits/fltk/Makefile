@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@Chg.RU>
-# $FreeBSD: x11-toolkits/fltk/Makefile 330487 2013-10-16 09:03:27Z gahr $
+# $FreeBSD$
 
 PORTNAME=	fltk
 PORTVERSION=	1.3.2
