@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars.eggert@gmx.net>
-# $FreeBSD: multimedia/p5-MP4-Info/Makefile 332815 2013-11-05 07:28:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MP4-Info
 PORTVERSION=	1.13
