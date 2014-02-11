@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Starman/Makefile 332717 2013-11-04 13:37:27Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Starman
 PORTVERSION=	0.4008
