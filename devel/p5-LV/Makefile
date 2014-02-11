@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-LV/Makefile 332870 2013-11-05 16:53:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	LV
 PORTVERSION=	0.006
