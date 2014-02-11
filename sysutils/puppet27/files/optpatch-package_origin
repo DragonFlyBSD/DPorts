@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/puppet27/files/optpatch-package_origin 303746 2012-09-06 06:15:28Z swills $
+$FreeBSD: head/sysutils/puppet27/files/optpatch-package_origin 303746 2012-09-06 06:15:28Z swills $
 
 --- lib/puppet/provider/package/freebsd.rb.orig
 +++ lib/puppet/provider/package/freebsd.rb

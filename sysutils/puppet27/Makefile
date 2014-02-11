@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.mine.nu>
-# $FreeBSD: sysutils/puppet27/Makefile 331926 2013-10-29 02:43:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	puppet
 PORTVERSION=	2.7.23
@@ -53,6 +53,9 @@ PACKAGE_ROOT_DESC=	Use PACKAGEROOT insted of PACKAGESITE
 PATCHES_DESC=		Optional exclusive patches
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPACKAGE_ORIGIN}
