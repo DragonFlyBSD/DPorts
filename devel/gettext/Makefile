@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: head/devel/gettext/Makefile 341775 2014-01-29 20:24:49Z tijl $
+# $FreeBSD$
 
 PORTNAME=	gettext
 PORTVERSION=	0.18.3.1
