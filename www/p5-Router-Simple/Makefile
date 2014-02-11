@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/www/p5-Router-Simple/Makefile 333978 2013-11-16 03:39:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Router-Simple
 PORTVERSION=	0.15
