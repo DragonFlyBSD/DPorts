@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins/Makefile.common 338106 2013-12-30 12:56:11Z kwm $
+# $FreeBSD$
 #    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile.common 11415 2013-04-26 22:58:21Z kwm $
 
 BASE_GST_ALL_PLUGINS= \
