@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: head/devel/ctags/Makefile 342785 2014-02-05 17:10:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ctags
 PORTVERSION=	5.8
