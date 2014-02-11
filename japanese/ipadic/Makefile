@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: japanese/ipadic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ipadic
 PORTVERSION=	2.7.0
