@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-Net-IDN-Nameprep/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Net-IDN-Nameprep
 PORTVERSION=	1.101
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Net::IDN::Nameprep.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
