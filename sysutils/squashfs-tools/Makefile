@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: sysutils/squashfs-tools/Makefile 339572 2014-01-13 07:23:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	squashfs-tools
 PORTVERSION=	4.2
