@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-HTTP-Recorder/Makefile 334223 2013-11-18 16:45:09Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Recorder
 PORTVERSION=	0.07
