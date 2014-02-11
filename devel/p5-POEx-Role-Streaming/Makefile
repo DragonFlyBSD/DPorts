@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-POEx-Role-Streaming/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	POEx-Role-Streaming
 PORTVERSION=	1.102610
