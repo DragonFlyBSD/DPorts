@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-Test-Loops/Makefile 331173 2013-10-21 18:43:00Z jase $
+# $FreeBSD$
 
 PORTNAME=	POE-Test-Loops
 PORTVERSION=	1.354
