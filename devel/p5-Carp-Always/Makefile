@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Carp-Always/Makefile 339489 2014-01-12 09:53:37Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Carp-Always
 PORTVERSION=	0.13
