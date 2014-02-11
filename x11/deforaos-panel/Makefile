@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-panel/Makefile 332769 2013-11-04 20:06:45Z wg $
+# $FreeBSD$
 
 PORTNAME=	deforaos-panel
 PORTVERSION=	0.2.18
