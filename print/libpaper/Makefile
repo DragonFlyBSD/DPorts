@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: head/print/libpaper/Makefile 343089 2014-02-06 14:19:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libpaper
 PORTVERSION=	1.1.24
