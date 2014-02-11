@@ -1,5 +1,5 @@
 # Created by: Eugeney Ryzhyk
-# $FreeBSD: x11-themes/gtk-bluecurve-theme/Makefile 341374 2014-01-27 11:15:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gtk-bluecurve-theme
 
