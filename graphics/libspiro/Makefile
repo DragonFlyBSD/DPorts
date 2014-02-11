@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: graphics/libspiro/Makefile 341111 2014-01-25 21:26:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libspiro
 DISTVERSION=	20071029
