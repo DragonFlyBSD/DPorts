@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-popen4/Makefile 338316 2013-12-31 14:30:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	popen4
 PORTVERSION=	0.1.4
