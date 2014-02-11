@@ -1,5 +1,5 @@
 # Created by: Kuang-che Wu <kcwu@csie.org>
-# $FreeBSD: head/chinese/libchewing/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libchewing
 PORTVERSION=	0.3.4
