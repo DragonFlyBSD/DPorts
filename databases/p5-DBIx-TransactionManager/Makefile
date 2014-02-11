@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/p5-DBIx-TransactionManager/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-TransactionManager
 PORTVERSION=	1.12
