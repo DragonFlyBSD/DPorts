@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/tkpng/Makefile 330747 2013-10-18 14:03:11Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkpng
 PORTVERSION=	0.9
