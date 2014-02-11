@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD: security/py-slowaes/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	slowaes
 DISTVERSION=	0.1a1
