@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-lifted-base/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lifted-base
 PORTVERSION=	0.2.0.5
