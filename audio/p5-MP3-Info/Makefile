@@ -1,5 +1,5 @@
 # Created by: Leo Kim <leo@florida.sarang.net>
-# $FreeBSD: head/audio/p5-MP3-Info/Makefile 341548 2014-01-28 13:32:47Z miwi $
+# $FreeBSD$
 
 PORTNAME=	MP3-Info
 PORTVERSION=	1.24
