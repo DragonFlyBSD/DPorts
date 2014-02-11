@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Event-ExecFlow/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Event-ExecFlow
 PORTVERSION=	0.64
