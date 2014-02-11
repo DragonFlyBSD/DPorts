@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: head/textproc/expat2/Makefile 341273 2014-01-26 20:15:41Z mat $
+# $FreeBSD$
 
 PORTNAME=	expat
 PORTVERSION=	2.1.0
