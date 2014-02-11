@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-sexp_processor/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	sexp_processor
 PORTVERSION=	4.2.1
