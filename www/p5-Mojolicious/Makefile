@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: head/www/p5-Mojolicious/Makefile 340786 2014-01-23 03:27:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Mojolicious
 PORTVERSION=	4.68
