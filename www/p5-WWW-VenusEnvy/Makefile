@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>, Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-VenusEnvy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	WWW-VenusEnvy
 PORTVERSION=	1.10
