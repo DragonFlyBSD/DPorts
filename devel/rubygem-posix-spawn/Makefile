@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@rubick>
-# $FreeBSD: head/devel/rubygem-posix-spawn/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	posix-spawn
 PORTVERSION=	0.3.6
