@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/apiextractor/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	apiextractor
 PORTVERSION=	0.10.10
