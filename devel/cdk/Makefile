@@ -1,13 +1,12 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cdk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cdk
 PORTVERSION=	5.0.20120323
 PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://invisible-island.net/cdk/ \
-		http://fossies.org/linux/misc/
+MASTER_SITES=	ftp://invisible-island.net/cdk/
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}-${PORTVERSION:E}
 EXTRACT_SUFX=	.tgz
 
@@ -25,6 +24,8 @@ CONFIGURE_ARGS+=--with-ncurses
 ALL_TARGET=	default examples demos cli cdkshlib
 INSTALL_TARGET=	install installCDKSHLibrary
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
