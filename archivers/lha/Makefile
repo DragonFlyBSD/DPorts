@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: head/archivers/lha/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lha
 PORTVERSION=	1.14i
