@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-CSS-Minifier/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CSS-Minifier
 PORTVERSION=	0.01
