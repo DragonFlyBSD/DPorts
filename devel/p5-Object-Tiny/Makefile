@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/devel/p5-Object-Tiny/Makefile 332127 2013-10-30 15:19:23Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Object-Tiny
 PORTVERSION=	1.08
