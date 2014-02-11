@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/harminv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	harminv
 PORTVERSION=	1.3.1
