@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: news/p5-NNTPClient/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	NNTPClient
 PORTVERSION=	0.37
