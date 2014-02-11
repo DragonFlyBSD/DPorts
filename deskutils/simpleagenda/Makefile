@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/simpleagenda/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD$
 
 PORTNAME=	simpleagenda
 PORTVERSION=	0.43
