@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: head/audio/id3lib/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	id3lib
 PORTVERSION=	3.8.3
