@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: head/net/rubygem-righthttpconnection/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	righthttpconnection
 PORTVERSION=	1.4.0
