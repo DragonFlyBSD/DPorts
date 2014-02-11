@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-cffi/Makefile 336669 2013-12-16 21:39:52Z wg $
+# $FreeBSD$
 
 PORTNAME=	cffi
 PORTVERSION=	0.8.1
