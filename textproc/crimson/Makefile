@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn
-# $FreeBSD: textproc/crimson/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	crimson
 PORTVERSION=	1.1.3
