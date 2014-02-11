@@ -1,4 +1,4 @@
-# $FreeBSD: games/knetwalk/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	knetwalk
 PORTVERSION=	${KDE4_VERSION}
