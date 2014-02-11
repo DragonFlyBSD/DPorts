@@ -1,5 +1,5 @@
 # Created by: Gregory Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Pcalc/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Date-Pcalc
 PORTVERSION=	6.1
