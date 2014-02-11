@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/liblingoteach/Makefile 330919 2013-10-19 17:24:21Z mva $
+# $FreeBSD$
 
 PORTNAME=	liblingoteach
 PORTVERSION=	0.2.1
