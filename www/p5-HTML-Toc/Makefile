@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <Alex.Deiter@Gmail.COM>
-# $FreeBSD: www/p5-HTML-Toc/Makefile 341719 2014-01-29 11:52:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML-Toc
 PORTVERSION=	1.12
