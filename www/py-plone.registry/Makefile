@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.registry/Makefile 341702 2014-01-29 09:03:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	plone.registry
 PORTVERSION=	1.0.1
