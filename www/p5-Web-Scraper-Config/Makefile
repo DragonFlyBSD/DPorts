@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-Web-Scraper-Config/Makefile 338778 2014-01-05 14:02:22Z az $
+# $FreeBSD$
 
 PORTNAME=	Web-Scraper-Config
 PORTVERSION=	0.01
