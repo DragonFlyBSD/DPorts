@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: head/math/lapack/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME?=	lapack
 PORTVERSION=	3.4.2
