@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: graphics/ogre3d/Makefile 334470 2013-11-21 08:19:34Z oliver $
+# $FreeBSD$
 
 PORTNAME=	ogre3d
 PORTVERSION=	1.8.1
