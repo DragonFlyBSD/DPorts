@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: multimedia/beep-media-player/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	beep-media-player
 PORTVERSION=	0.9.7.1
@@ -11,6 +11,9 @@ DISTNAME=	bmp-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK2 multimedia player
+
+DEPRECATED=	Abandonware, please consider using multimedia/audacious instead
+EXPIRATION_DATE=	2014-03-06
 
 LIB_DEPENDS=	id3-3.8:${PORTSDIR}/audio/id3lib
 
