@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: databases/p5-Class-DBI-Loader-Relationship/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-Loader-Relationship
 PORTVERSION=	1.3
