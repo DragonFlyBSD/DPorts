@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Log-Log4perl/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Log-Log4perl
 PORTVERSION=	0.46
