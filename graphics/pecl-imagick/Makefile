@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: graphics/pecl-imagick/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	imagick
 DISTVERSION=	3.1.2
