@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-RandPasswd/Makefile 332378 2013-11-01 14:10:37Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	Crypt-RandPasswd
 PORTVERSION=	0.04
