@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: textproc/docbook-to-man/Makefile 341591 2014-01-28 15:16:39Z danfe $
+# $FreeBSD$
 
 PORTNAME=	docbook-to-man
 PORTVERSION=	1.0
