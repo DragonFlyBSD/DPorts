@@ -1,5 +1,5 @@
 # Created by: Patrick Powell <papowell@astart.com>
-# $FreeBSD: net/p5-XML-Compile-SOAP-WSA/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-Compile-SOAP-WSA
 PORTVERSION=	0.12
