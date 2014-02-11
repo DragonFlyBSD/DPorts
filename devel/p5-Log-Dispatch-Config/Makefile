@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-Log-Dispatch-Config/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-Config
 PORTVERSION=	1.04
