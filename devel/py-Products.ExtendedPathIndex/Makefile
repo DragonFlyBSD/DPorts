@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ExtendedPathIndex/Makefile 340992 2014-01-25 07:19:34Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ExtendedPathIndex
 PORTVERSION=	3.1
