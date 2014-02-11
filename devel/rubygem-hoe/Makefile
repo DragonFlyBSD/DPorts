@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: head/devel/rubygem-hoe/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD$
 
 PORTNAME=	hoe
 PORTVERSION=	3.6.3
