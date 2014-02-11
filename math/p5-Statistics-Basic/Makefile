@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Basic/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Statistics-Basic
 PORTVERSION=	1.6607
