@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: www/p5-REST-Client/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	REST-Client
 PORTVERSION=	249
