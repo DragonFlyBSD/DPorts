@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: head/devel/p5-IPC-ShareLite/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IPC-ShareLite
 PORTVERSION=	0.17
