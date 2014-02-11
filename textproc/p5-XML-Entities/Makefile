@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tom@tomjudge.com>
-# $FreeBSD: textproc/p5-XML-Entities/Makefile 342006 2014-01-31 15:24:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	XML-Entities
 PORTVERSION=	1.0001
