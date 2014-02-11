@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Test-HTTP-Server-Simple/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-HTTP-Server-Simple
 PORTVERSION=	0.11
