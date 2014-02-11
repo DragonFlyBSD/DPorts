@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-caching-app-plugins/Makefile 341733 2014-01-29 13:21:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-caching-app-plugins
 PORTVERSION=	0.1.3
