@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/libclaw/Makefile 328248 2013-09-25 03:47:08Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libclaw
 PORTVERSION=	1.7.4
