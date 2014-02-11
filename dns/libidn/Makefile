@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: head/dns/libidn/Makefile 342383 2014-02-03 04:11:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libidn
 PORTVERSION=	1.28
