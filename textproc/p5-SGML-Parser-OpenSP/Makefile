@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: textproc/p5-SGML-Parser-OpenSP/Makefile 340672 2014-01-21 23:21:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	SGML-Parser-OpenSP
 PORTVERSION=	0.994
