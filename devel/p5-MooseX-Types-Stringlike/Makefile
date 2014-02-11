@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-Stringlike/Makefile 333168 2013-11-08 01:06:15Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-Stringlike
 PORTVERSION=	0.002
