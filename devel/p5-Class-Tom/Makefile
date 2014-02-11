@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Class-Tom/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Tom
 PORTVERSION=	3.02
