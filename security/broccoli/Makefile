@@ -1,5 +1,5 @@
 # Created by: Craig Leres <leres@ee.lbl.gov>
-# $FreeBSD: security/broccoli/Makefile 342076 2014-01-31 21:19:16Z cs $
+# $FreeBSD$
 
 PORTNAME=	broccoli
 PORTVERSION=	2.2
