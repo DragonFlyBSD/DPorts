@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-cpanminus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	App-cpanminus
 PORTVERSION=	1.7001
