@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	FusionInventory-Agent
 PORTVERSION=	2.2.5
