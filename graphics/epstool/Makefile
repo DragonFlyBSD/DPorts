@@ -1,5 +1,5 @@
 # Created by: Yuzo FURUKAWA <hurukawa@kuee.kyoto-u.ac.jp>
-# $FreeBSD: graphics/epstool/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	epstool
 PORTVERSION=	3.08
