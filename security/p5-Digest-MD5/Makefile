@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: head/security/p5-Digest-MD5/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Digest-MD5
 PORTVERSION=	2.53
