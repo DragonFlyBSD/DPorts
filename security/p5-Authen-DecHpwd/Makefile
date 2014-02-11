@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Authen-DecHpwd/Makefile 342004 2014-01-31 15:24:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Authen-DecHpwd
 PORTVERSION=	2.006
