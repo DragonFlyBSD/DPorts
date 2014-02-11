@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: devel/libglade2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/devel/libglade2/Makefile,v 1.26 2007/08/01 16:13:48 mezz Exp $
 
 PORTNAME=	libglade2
