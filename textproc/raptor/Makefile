@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/textproc/raptor/Makefile 342205 2014-02-01 19:04:55Z makc $
+# $FreeBSD$
 
 PORTNAME=	raptor
 PORTVERSION=	1.4.21
