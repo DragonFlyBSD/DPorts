@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/mtr-nox11/Makefile 329979 2013-10-10 08:59:13Z sunpoet $
+# $FreeBSD$
 
 MASTERDIR=	${.CURDIR}/../mtr
 
