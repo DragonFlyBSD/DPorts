@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
-# $FreeBSD: head/devel/pear-Validate/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Validate
 PORTVERSION=	0.8.5
