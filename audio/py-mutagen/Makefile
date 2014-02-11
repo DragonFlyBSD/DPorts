@@ -1,5 +1,5 @@
 # Created by: Byung-Hee HWANG <bh@izb.knu.ac.kr>
-# $FreeBSD: head/audio/py-mutagen/Makefile 343360 2014-02-08 16:30:58Z feld $
+# $FreeBSD$
 
 PORTNAME=	mutagen
 PORTVERSION=	1.22
