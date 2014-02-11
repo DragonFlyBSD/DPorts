@@ -1,4 +1,4 @@
-# $FreeBSD: converters/cl-babel-clisp/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	babel
 PORTVERSION=	2010.01.16
