@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/net/p5-Net-OAuth/Makefile 341980 2014-01-31 12:13:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-OAuth
 PORTVERSION=	0.28
