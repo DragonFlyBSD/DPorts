@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: deskutils/planner/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #   $MCom: ports-stable/deskutils/planner/Makefile,v 1.4 2009/04/16 00:34:24 kwm Exp $
 
 PORTNAME=	planner
