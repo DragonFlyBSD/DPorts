@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/gstreamer-plugins-hal/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/sysutils/gstreamer-plugins-hal/Makefile,v 1.6 2008/03/19 14:05:38 ahze Exp $
 
 PORTREVISION=	0
