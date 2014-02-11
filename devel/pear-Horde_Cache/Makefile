@@ -1,7 +1,7 @@
-# $FreeBSD: devel/pear-Horde_Cache/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Horde_Cache
-PORTVERSION=	2.3.0
+PORTVERSION=	2.4.0
 CATEGORIES=	devel www pear
 PKGNAMEPREFIX=	pear-
 
