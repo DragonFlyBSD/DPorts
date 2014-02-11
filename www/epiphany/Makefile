@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: www/epiphany/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 #   $MCom: ports/www/epiphany/Makefile,v 1.246 2011/04/30 20:43:27 mezz Exp $
 
 PORTNAME=	epiphany
