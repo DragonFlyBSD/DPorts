@@ -1,4 +1,4 @@
-# $FreeBSD: security/ykclient/Makefile 338406 2014-01-01 23:52:47Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ykclient
 PORTVERSION=	2.12
