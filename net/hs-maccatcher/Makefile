@@ -1,4 +1,4 @@
-# $FreeBSD: net/hs-maccatcher/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	maccatcher
 PORTVERSION=	2.1.5
