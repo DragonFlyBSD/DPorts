@@ -1,5 +1,5 @@
 # Created by: patrick, trevor
-# $FreeBSD: print/lilypond/Makefile 339008 2014-01-07 15:32:24Z gahr $
+# $FreeBSD$
 
 PORTNAME=	lilypond
 PORTVERSION=	2.18.0
@@ -64,6 +64,8 @@ ALL_TARGET=	all
 NO_CCACHE=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
