@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Bing/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-Bing
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	misc geography perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
