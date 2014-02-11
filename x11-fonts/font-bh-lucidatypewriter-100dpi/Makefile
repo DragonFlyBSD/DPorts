@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: x11-fonts/font-bh-lucidatypewriter-100dpi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	font-bh-lucidatypewriter-100dpi
 PORTVERSION=	1.0.3
