@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-MockObject/Makefile 341641 2014-01-28 16:49:08Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Test-MockObject
 PORTVERSION=	1.20120301
