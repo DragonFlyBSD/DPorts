@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: databases/rrdtool/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD$
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.4.8
