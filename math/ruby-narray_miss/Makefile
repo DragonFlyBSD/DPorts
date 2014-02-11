@@ -1,5 +1,5 @@
 # Created by: Shin'ya Murakami <murakami@ahs.scitec.kobe-u.ac.jp>
-# $FreeBSD: math/ruby-narray_miss/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	narray_miss
 PORTVERSION=	1.2.8
