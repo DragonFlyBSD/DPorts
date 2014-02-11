@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/clojure/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clojure
 PORTVERSION=	1.5.1
