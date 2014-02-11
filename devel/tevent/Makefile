@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/tevent/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=		tevent
 PORTVERSION=		0.9.18
