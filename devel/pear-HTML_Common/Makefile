@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: head/devel/pear-HTML_Common/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML_Common
 PORTVERSION=	1.2.5
