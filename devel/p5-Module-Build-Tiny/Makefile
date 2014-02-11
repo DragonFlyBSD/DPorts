@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build-Tiny/Makefile 340776 2014-01-23 03:27:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Module-Build-Tiny
 PORTVERSION=	0.034
