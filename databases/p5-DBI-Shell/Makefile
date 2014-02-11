@@ -1,5 +1,5 @@
 # Created by: dcf@aracnet.com
-# $FreeBSD: databases/p5-DBI-Shell/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBI-Shell
 PORTVERSION=	11.95
