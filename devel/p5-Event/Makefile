@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Event/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Event
 PORTVERSION=	1.21
