@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-Chart/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Chart
 PORTVERSION=	2.4.6
