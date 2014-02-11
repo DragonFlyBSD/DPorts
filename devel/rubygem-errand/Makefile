@@ -1,5 +1,5 @@
 # Created by: Brad Davis <brd@FreeBSD.org>
-# $FreeBSD: devel/rubygem-errand/Makefile 340901 2014-01-24 14:46:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	errand
 PORTVERSION=	0.7.3
