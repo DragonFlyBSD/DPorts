@@ -1,9 +1,9 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/deadbeef/Makefile 339833 2014-01-15 22:31:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.5.5
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}
 
