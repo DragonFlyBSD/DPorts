@@ -1,5 +1,5 @@
 # Created by: Yuri Momotiuk <yurkis@gmail.com>
-# $FreeBSD: devel/qt4-qtsolutions-singleapplication/Makefile 339587 2014-01-13 11:52:27Z gahr $
+# $FreeBSD$
 
 PORTNAME=	qt4-qtsolutions-singleapplication
 PORTVERSION=	20110722
