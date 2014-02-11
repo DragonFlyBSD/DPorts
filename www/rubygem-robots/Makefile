@@ -1,5 +1,5 @@
 # Created by: niels <niels@FreeBSD.org>
-# $FreeBSD: www/rubygem-robots/Makefile 335235 2013-11-29 21:31:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	robots
 PORTVERSION=	0.10.1
