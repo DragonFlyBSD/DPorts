@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/jovie/Makefile 334458 2013-11-20 21:42:20Z avilla $
+# $FreeBSD$
 
 PORTNAME=	jovie
 PORTVERSION=	${KDE4_VERSION}
