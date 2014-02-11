@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-oauth2/Makefile 340250 2014-01-19 09:26:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	oauth2
 PORTVERSION=	0.9.3
