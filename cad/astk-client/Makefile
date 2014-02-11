@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: cad/astk-client/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	astk
 
