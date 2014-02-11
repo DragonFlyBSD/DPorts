@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@amis.net>
-# $FreeBSD: converters/p5-Convert-UUlib/Makefile 333328 2013-11-09 19:13:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Convert-UUlib
 PORTVERSION=	1.40
