@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: head/archivers/unrar/Makefile 338693 2014-01-04 23:45:06Z bapt $
+# $FreeBSD$
 
 PORTNAME=	unrar
 PORTVERSION=	4.20
