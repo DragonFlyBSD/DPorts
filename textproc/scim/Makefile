@@ -1,5 +1,5 @@
 # Created by: Jie Gao	<gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: textproc/scim/Makefile 331255 2013-10-22 12:10:35Z tijl $
+# $FreeBSD$
 
 PORTNAME=	scim
 PORTVERSION=	1.4.9
