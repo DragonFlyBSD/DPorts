@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-EN-Nickname/Makefile 336021 2013-12-09 19:30:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Lingua-EN-Nickname
 PORTVERSION=	1.17
