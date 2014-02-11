@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-Text-QRCode/Makefile 334691 2013-11-23 18:25:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Text-QRCode
 PORTVERSION=	0.02
