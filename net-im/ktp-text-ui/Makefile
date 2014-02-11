@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-text-ui/Makefile 338825 2014-01-05 21:08:49Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ktp-text-ui
 PORTVERSION=	${KTP_VERSION}
