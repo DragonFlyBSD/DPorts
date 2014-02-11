@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/gkrellm2/Makefile 338131 2013-12-30 16:18:01Z ume $
+# $FreeBSD$
 
 PORTNAME=	gkrellm
 PORTVERSION=	2.3.5
