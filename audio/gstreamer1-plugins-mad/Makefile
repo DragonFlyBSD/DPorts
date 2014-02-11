@@ -1,6 +1,6 @@
-# $FreeBSD: audio/gstreamer1-plugins-mad/Makefile 332416 2013-11-01 22:14:07Z kwm $
+# $FreeBSD$
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer mp3 decoder plugin
