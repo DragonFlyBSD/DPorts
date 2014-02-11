@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: x11-toolkits/sdl_pango/Makefile 341112 2014-01-25 21:26:25Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	sdl_pango
 PORTVERSION=	0.1.2
