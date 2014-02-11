@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-bcrypt-ruby/Makefile 332049 2013-10-30 02:56:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	bcrypt-ruby
 PORTVERSION=	3.1.1
