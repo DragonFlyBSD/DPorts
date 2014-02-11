@@ -1,5 +1,5 @@
 # Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
-# $FreeBSD: japanese/rogue_s/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rogue_s
 PORTVERSION=	1.3a
