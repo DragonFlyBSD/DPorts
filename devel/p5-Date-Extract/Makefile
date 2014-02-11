@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: devel/p5-Date-Extract/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	Date-Extract
 PORTVERSION=	0.04
