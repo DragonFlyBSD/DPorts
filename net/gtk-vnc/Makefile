@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/gtk-vnc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.3.10
