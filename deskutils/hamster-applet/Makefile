@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/hamster-applet/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.42 2010/06/06 11:27:47 kwm Exp $
 
 PORTNAME=	hamster-applet
