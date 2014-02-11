@@ -1,5 +1,5 @@
 # Created by: Nick Sayer <nsayer@FreeBSD.org>
-# $FreeBSD: comms/p5-Device-SerialPort/Makefile 332840 2013-11-05 12:30:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Device-SerialPort
 PORTVERSION=	1.040000
