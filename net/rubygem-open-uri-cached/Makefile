@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-open-uri-cached/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD$
 
 PORTNAME=	open-uri-cached
 PORTVERSION=	0.0.5
