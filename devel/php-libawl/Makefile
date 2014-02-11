@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@hotmail.com>
-# $FreeBSD: devel/php-libawl/Makefile 334907 2013-11-26 00:06:57Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	php-libawl
 PORTVERSION=	0.54
