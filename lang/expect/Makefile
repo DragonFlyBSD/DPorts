@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: lang/expect/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	expect
 PORTVERSION=	5.43.0
