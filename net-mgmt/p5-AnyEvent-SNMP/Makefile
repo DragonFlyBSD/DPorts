@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-AnyEvent-SNMP/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-SNMP
 PORTVERSION=	6.0
