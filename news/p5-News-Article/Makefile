@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: news/p5-News-Article/Makefile 332845 2013-11-05 13:01:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	News-Article
 PORTVERSION=	1.27
