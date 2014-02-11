@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: devel/p5-Data-Stag/Makefile 328773 2013-09-30 08:04:05Z culot $
+# $FreeBSD$
 
 PORTNAME=	Data-Stag
 PORTVERSION=	0.14
