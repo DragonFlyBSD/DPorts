@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: devel/p5-Tie-Cache/Makefile 333325 2013-11-09 19:06:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Tie-Cache
 PORTVERSION=	0.19
