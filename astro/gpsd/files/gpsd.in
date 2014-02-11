@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: astro/gpsd/files/gpsd.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/astro/gpsd/files/gpsd.in 340851 2014-01-23 19:55:14Z mat $
 #
 
 # PROVIDE: gpsd

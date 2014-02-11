@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: astro/gpsd/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gpsd
 PORTVERSION=	3.9
