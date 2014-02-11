@@ -1,5 +1,5 @@
 # Created by: Hardy Schumacher <hardy.schumacher@gmx.de>
-# $FreeBSD: devel/z80ex/Makefile 337199 2013-12-22 16:32:32Z danilo $
+# $FreeBSD$
 
 PORTNAME=	z80ex
 PORTVERSION=	1.1.21
