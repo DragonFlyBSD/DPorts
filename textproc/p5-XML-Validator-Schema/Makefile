@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-XML-Validator-Schema/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Validator-Schema
 PORTVERSION=	1.10
