@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IPC-ShellCmd/Makefile 332586 2013-11-03 05:00:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IPC-ShellCmd
 PORTVERSION=	0.005
