@@ -1,5 +1,5 @@
 # Created by: Jonathan Hanna
-# $FreeBSD: japanese/edict-utf-8/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	edict-utf-8
 PORTVERSION=	20100420
