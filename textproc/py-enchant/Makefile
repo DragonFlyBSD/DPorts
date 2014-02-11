@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: textproc/py-enchant/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	enchant
 PORTVERSION=	1.6.5
