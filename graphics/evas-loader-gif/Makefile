@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-loader-gif/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD$
 
 PORTNAME=	loader-gif
 PORTVERSION=	1.7.9
