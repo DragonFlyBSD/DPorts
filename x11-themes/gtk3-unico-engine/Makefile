@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/gtk3-unico-engine/Makefile 339272 2014-01-09 20:06:36Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	unico
 PORTVERSION=	1.0.2
