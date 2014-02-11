@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-crack/Makefile 332035 2013-10-30 02:31:04Z swills $
+# $FreeBSD$
 
 PORTNAME=	crack
 PORTVERSION=	0.4.1
