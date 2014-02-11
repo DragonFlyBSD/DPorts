@@ -1,5 +1,5 @@
 # Created by: ismail@enderunix.org
-# $FreeBSD: mail/eps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	eps
 PORTVERSION=	1.7
