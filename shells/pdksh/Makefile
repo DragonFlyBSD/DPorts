@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: head/shells/pdksh/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	pdksh
 PORTVERSION=	5.2.14p2
