@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: www/p5-Catalyst-Authentication-Credential-HTTP/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Authentication-Credential-HTTP
 PORTVERSION=	1.015
