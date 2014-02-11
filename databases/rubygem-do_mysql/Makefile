@@ -1,5 +1,5 @@
 # Created by: Espen Volden aka voldern <voldern@hoeggen.net>
-# $FreeBSD: databases/rubygem-do_mysql/Makefile 340899 2014-01-24 14:45:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	do_mysql
 PORTVERSION=	0.10.13
