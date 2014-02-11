@@ -1,5 +1,5 @@
 # Created by: Michael Winking <mwfp@foldl.net>
-# $FreeBSD: devel/jakarta-commons-io/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	commons-io
 PORTVERSION=	2.4
