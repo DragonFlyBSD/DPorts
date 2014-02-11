@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: head/converters/p5-MIME-Base64-URLSafe/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	MIME-Base64-URLSafe
 PORTVERSION=	0.01
