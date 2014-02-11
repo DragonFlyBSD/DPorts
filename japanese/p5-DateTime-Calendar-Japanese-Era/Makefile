@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-DateTime-Calendar-Japanese-Era/Makefile 332754 2013-11-04 18:14:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Calendar-Japanese-Era
 PORTVERSION=	0.08001
