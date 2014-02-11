@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/libgsf/Makefile 328512 2013-09-27 20:25:08Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/libgsf/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	libgsf
