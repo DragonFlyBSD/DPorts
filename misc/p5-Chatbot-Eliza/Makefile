@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/p5-Chatbot-Eliza/Makefile 332733 2013-11-04 14:41:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Chatbot-Eliza
 PORTVERSION=	1.04
