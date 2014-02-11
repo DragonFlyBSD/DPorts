@@ -1,5 +1,5 @@
 # Created by: Jacob Atzen <jatzen@gmail.com>
-# $FreeBSD: devel/rubygem-daemon_controller/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	daemon_controller
 PORTVERSION=	1.1.8
