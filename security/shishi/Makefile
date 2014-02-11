@@ -1,4 +1,4 @@
-# $FreeBSD: security/shishi/Makefile 339421 2014-01-11 12:01:40Z johans $
+# $FreeBSD$
 
 PORTNAME=	shishi
 PORTVERSION=	1.0.2
