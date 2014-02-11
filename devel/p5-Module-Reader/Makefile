@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Reader/Makefile 339498 2014-01-12 12:55:32Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Module-Reader
 PORTVERSION=	0.002001
