@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/qmailadmin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	qmailadmin
 PORTVERSION=	1.2.15
@@ -22,7 +22,6 @@ RUN_DEPENDS=	\
 	autorespond:${PORTSDIR}/mail/autorespond \
 	${VPOPMAIL_DIR}/lib/libvpopmail.a:${PORTSDIR}/mail/vpopmail
 
-NO_STAGE=	yes
 USES=		qmail:vars gmake
 
 PATCH_SITES+=	http://qmail.jms1.net/vpopmail/:onchange \
