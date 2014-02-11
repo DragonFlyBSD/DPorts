@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: devel/libgpc/Makefile 341662 2014-01-28 21:58:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libgpc
 PORTVERSION=	2.32
