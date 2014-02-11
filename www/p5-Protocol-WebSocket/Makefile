@@ -1,5 +1,5 @@
 # Created by: Stefan `Sec` Zehl <sec@42.org>
-# $FreeBSD: www/p5-Protocol-WebSocket/Makefile 338778 2014-01-05 14:02:22Z az $
+# $FreeBSD$
 
 PORTNAME=	Protocol-WebSocket
 PORTVERSION=	0.00906
