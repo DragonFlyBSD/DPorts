@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: graphics/gpicview/Makefile 340324 2014-01-19 16:37:42Z marino $
+# $FreeBSD$
 
 PORTNAME=	gpicview
 PORTVERSION=	0.2.4
