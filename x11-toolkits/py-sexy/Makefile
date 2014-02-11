@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-sexy/Makefile 339209 2014-01-09 08:53:56Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sexy
 PORTVERSION=	0.1.9
