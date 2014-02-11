@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: mail/opendkim/Makefile.features 319032 2013-05-25 08:06:10Z az $
+# $FreeBSD$
 
 # This file is used to tune build time options.
 # Please refer FEATURES file distributed with the source for details.
