@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: databases/rubygem-dm-types/Makefile 338269 2013-12-31 10:09:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	dm-types
 PORTVERSION=	1.2.2
