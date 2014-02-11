@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Term-ReadPassword/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Term-ReadPassword
 PORTVERSION=	0.11
