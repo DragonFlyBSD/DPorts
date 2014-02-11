@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: head/devel/p5-Data-Dump/Makefile 332844 2013-11-05 12:56:03Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Data-Dump
 PORTVERSION=	1.22
