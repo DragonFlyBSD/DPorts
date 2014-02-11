@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-PP/Makefile 330923 2013-10-19 18:38:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JSON-PP
 PORTVERSION=	2.27203
