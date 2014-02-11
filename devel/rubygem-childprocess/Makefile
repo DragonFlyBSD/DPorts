@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/rubygem-childprocess/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	childprocess
 PORTVERSION=	0.3.9
