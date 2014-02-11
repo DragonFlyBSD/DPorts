@@ -1,5 +1,5 @@
 # Created by: Olivier Girard <Olivier.Girard@univ-angers.fr>
-# $FreeBSD: textproc/p5-Unicode-LineBreak/Makefile 336082 2013-12-10 19:03:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Unicode-LineBreak
 PORTVERSION=	2013.11
