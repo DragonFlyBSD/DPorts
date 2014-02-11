@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: head/devel/p5-ExtUtils-MakeMaker/Makefile 342560 2014-02-04 16:15:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ExtUtils-MakeMaker
 PORTVERSION=	6.88
