@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-SimpleConfig/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-SimpleConfig
 PORTVERSION=	0.09
