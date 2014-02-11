@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: head/www/weblint/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	weblint
 PORTVERSION=	1.020
