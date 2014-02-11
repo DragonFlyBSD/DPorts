@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: devel/libast/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libast
 PORTVERSION=	0.7
