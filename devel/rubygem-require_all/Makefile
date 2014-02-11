@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-require_all/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	require_all
 PORTVERSION=	1.2.1
