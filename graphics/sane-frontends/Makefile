@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-frontends/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sane-frontends
 PORTVERSION=	1.0.14
