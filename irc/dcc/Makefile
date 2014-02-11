@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: irc/dcc/Makefile 339281 2014-01-09 21:14:38Z antoine $
+# $FreeBSD$
 
 PORTNAME=	dcc
 PORTVERSION=	2.5.6
@@ -15,6 +15,9 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DCC support program for irchat-pj
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LICENSE=	GPLv2 # (or later)
 
