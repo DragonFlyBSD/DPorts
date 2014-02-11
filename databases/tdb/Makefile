@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/tdb/Makefile 339872 2014-01-15 23:51:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=		tdb
 PORTVERSION=		1.2.12
