@@ -1,5 +1,5 @@
 # Created by: tetsushi NAKAI <nakai@tsl.pe.u-tokyo.ac.jp>
-# $FreeBSD: editors/tamago/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tamago
 PORTVERSION=	4.0.6.0.20041122.19
