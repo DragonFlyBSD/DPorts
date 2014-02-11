@@ -1,5 +1,5 @@
 # Created by: Kiyoshi Matsui <kmatsui@t3.rim.or.jp>
-# $FreeBSD: head/devel/mcpp/Makefile 340773 2014-01-23 00:47:11Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mcpp
 PORTVERSION=	2.7.2
