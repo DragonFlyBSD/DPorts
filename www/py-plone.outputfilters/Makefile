@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.outputfilters/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.outputfilters
 PORTVERSION=	1.11.1
