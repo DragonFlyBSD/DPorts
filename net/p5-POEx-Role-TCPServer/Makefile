@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-POEx-Role-TCPServer/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	POEx-Role-TCPServer
 PORTVERSION=	1.102740
