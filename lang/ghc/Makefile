@@ -1,5 +1,5 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD: lang/ghc/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	ghc
 PORTVERSION=	7.6.3
