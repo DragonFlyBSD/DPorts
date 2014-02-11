@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-runtime/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE4_VERSION}
