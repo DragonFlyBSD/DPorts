@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/gwenhywfar/Makefile 329953 2013-10-10 00:58:16Z jhale $
+# $FreeBSD$
 
 PORTNAME=	gwenhywfar
 PORTVERSION=	4.3.3
