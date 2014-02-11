@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MouseX-Traits/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MouseX-Traits
 PORTVERSION=	0.1102
