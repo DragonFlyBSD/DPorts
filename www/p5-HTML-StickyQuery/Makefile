@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-HTML-StickyQuery/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-StickyQuery
 PORTVERSION=	0.13
