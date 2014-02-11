@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/lang/php5/Makefile 343435 2014-02-09 08:39:00Z ale $
+# $FreeBSD$
 
 PORTNAME=	php5
 PORTVERSION=	5.4.25
