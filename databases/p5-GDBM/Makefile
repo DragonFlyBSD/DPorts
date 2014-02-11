@@ -1,5 +1,5 @@
 # Created by: Nick Sayer <nsayer@FreeBSD.org>
-# $FreeBSD: databases/p5-GDBM/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	GDBM
 PORTVERSION=	1.14
