@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-POEx-Types/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	POEx-Types
 PORTVERSION=	1.100910
