@@ -1,5 +1,5 @@
 # Created by: Jeff Brown <jabrown@caida.org>
-# $FreeBSD: lang/clisp/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clisp
 PORTVERSION=	2.49
