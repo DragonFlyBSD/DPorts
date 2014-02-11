@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: textproc/py-charade/Makefile 337536 2013-12-26 15:17:10Z wg $
+# $FreeBSD$
 
 PORTNAME=	charade
 PORTVERSION=	1.0.3
