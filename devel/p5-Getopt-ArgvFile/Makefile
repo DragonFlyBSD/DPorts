@@ -1,5 +1,5 @@
 # Created by: Eric Schnoebelen <eric@cirr.com>
-# $FreeBSD: head/devel/p5-Getopt-ArgvFile/Makefile 331953 2013-10-29 14:32:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Getopt-ArgvFile
 PORTVERSION=	1.11
