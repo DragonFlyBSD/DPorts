@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/textproc/p5-XML-SAX-Expat/Makefile 342403 2014-02-03 09:46:30Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-SAX-Expat
 PORTVERSION=	0.50
