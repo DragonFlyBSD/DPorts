@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-HTML-ResolveLink/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-ResolveLink
 PORTVERSION=	0.05
