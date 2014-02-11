@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/icc-profiles-basiccolor/Makefile 328205 2013-09-24 22:23:45Z bsam $
+# $FreeBSD$
 
 PORTNAME=	icc-profiles-basiccolor
 PORTVERSION=	1.2.0
