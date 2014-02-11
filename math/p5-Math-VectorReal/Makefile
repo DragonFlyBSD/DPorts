@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-VectorReal/Makefile 341829 2014-01-30 10:27:43Z az $
+# $FreeBSD$
 
 PORTNAME=	Math-VectorReal
 PORTVERSION=	1.02
