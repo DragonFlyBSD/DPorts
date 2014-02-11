@@ -1,5 +1,5 @@
 # Created by: Anton Berezin
-# $FreeBSD: devel/p5-File-CountLines/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-CountLines
 PORTVERSION=	0.0.3
