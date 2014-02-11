@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-rack-cache/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD$
 
 PORTNAME=	rack-cache
 PORTVERSION=	1.2
