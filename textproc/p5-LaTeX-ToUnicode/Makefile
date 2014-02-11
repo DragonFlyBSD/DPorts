@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-LaTeX-ToUnicode/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	LaTeX-ToUnicode
 PORTVERSION=	0.03
