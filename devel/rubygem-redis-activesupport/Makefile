@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-redis-activesupport/Makefile 335330 2013-11-30 18:29:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	redis-activesupport
 PORTVERSION=	4.0.0
