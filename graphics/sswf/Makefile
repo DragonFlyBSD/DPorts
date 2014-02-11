@@ -1,5 +1,5 @@
 # Created by: anhot
-# $FreeBSD: graphics/sswf/Makefile 329811 2013-10-08 16:47:00Z pawel $
+# $FreeBSD$
 
 PORTNAME=	sswf
 PORTVERSION=	1.8.4
