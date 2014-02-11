@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@Fluffy.Khv.RU>
-# $FreeBSD: sysutils/polkit-kde/Makefile 338809 2014-01-05 17:51:23Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	polkit-kde
 PORTVERSION=	0.99.1
