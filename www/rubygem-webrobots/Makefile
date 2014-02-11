@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/rubygem-webrobots/Makefile 336370 2013-12-13 19:35:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	webrobots
 PORTVERSION=	0.1.1
