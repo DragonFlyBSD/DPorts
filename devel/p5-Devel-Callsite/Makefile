@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-Callsite/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-Callsite
 PORTVERSION=	0.06
