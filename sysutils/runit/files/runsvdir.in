@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/runit/files/runsvdir.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/runit/files/runsvdir.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: /service
 # BEFORE:  SERVERS
