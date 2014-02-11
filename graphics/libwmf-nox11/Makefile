@@ -1,5 +1,5 @@
 # Created by: mm@FreeBSD.org
-# $FreeBSD: graphics/libwmf-nox11/Makefile 337225 2013-12-23 02:46:49Z amdmi3 $
+# $FreeBSD$
 
 PORTSCOUT=	ignore:1
 
