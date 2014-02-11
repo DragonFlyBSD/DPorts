@@ -1,5 +1,5 @@
 # Created by: Eiji-usagi-MATSUmoto <usagi@ruby.club.or.jp>
-# $FreeBSD: japanese/k10/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	naga10
 PORTVERSION=	1.1
