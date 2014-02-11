@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: head/misc/rubygem-mime-types/Makefile 340552 2014-01-21 05:38:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	mime-types
 PORTVERSION=	1.25.1
