@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Path-IsDev/Makefile 332463 2013-11-02 09:41:06Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Path-IsDev
 PORTVERSION=	1.000000
