@@ -1,5 +1,5 @@
 # Created by: Christoph Moench-Tegeder <cmt@burggraben.net>
-# $FreeBSD: devel/librest/Makefile 340748 2014-01-22 23:32:26Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	rest
 PORTVERSION=	0.7.90
