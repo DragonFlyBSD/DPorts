@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: editors/gedit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 #   $MCom: ports/editors/gedit/Makefile,v 1.125 2010/09/30 19:58:54 kwm Exp $
 
 PORTNAME=	gedit
