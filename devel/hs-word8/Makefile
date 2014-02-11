@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-word8/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	word8
 PORTVERSION=	0.0.3
