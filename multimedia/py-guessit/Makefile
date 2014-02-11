@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-guessit/Makefile 337536 2013-12-26 15:17:10Z wg $
+# $FreeBSD$
 
 PORTNAME=	guessit
 PORTVERSION=	0.6.2
