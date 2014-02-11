@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: x11-toolkits/qt4-gui/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	gui
 DISTVERSION=	${QT4_VERSION}
