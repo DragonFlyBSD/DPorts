@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-astroid/Makefile 330853 2013-10-19 08:11:27Z mva $
+# $FreeBSD$
 
 PORTNAME=	astroid
 PORTVERSION=	1.0.1
