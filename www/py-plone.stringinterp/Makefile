@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.stringinterp/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.stringinterp
 PORTVERSION=	1.0.10
