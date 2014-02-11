@@ -1,5 +1,5 @@
 # Created by: Christoph Kick
-# $FreeBSD: head/devel/rubygem-ffi/Makefile 340696 2014-01-22 08:27:30Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ffi
 PORTVERSION=	1.9.3
