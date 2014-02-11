@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-PopulateMore/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Schema-PopulateMore
 PORTVERSION=	0.17
