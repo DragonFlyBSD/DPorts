@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Path-Iterator-Rule/Makefile 332700 2013-11-04 12:33:08Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Path-Iterator-Rule
 PORTVERSION=	1.006
