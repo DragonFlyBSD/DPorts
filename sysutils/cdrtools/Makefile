@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: head/sysutils/cdrtools/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 ###########################################################################
 # This makefile was contributed by Marius Strobl.
@@ -87,6 +87,9 @@ MAKE_ENV=	CCOM=cc GMAKE_NOWARN=true INS_BASE=${LOCALBASE} \
 CDRTLSTARGET=	${ARCH:S/powerpc64/powerpc/}-freebsd-cc
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if exists(${LOCALBASE}/lib/libiconv.a) || \
