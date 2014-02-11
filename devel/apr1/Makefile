@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: head/devel/apr1/Makefile 334778 2013-11-24 19:42:15Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	apr
 PORTVERSION=	${APR_VERSION}.${APU_VERSION}
