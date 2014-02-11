@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/p5-Gtk2-ImageView/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-ImageView
 PORTVERSION=	0.05
