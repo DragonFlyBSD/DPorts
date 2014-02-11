@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plonetheme.classic/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plonetheme.classic
 PORTVERSION=	1.3.2
