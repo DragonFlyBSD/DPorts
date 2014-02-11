@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: textproc/iso12083/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iso12083
 PORTVERSION=	1993
