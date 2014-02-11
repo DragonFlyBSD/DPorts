@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-gherkin/Makefile 332051 2013-10-30 02:58:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	gherkin
 PORTVERSION=	2.12.1
