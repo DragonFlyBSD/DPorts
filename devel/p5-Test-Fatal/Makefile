@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Fatal/Makefile 328100 2013-09-24 07:58:22Z culot $
+# $FreeBSD$
 
 PORTNAME=	Test-Fatal
 PORTVERSION=	0.013
