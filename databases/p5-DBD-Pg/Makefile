@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/databases/p5-DBD-Pg/Makefile 342744 2014-02-05 15:58:54Z mat $
+# $FreeBSD$
 
 PORTNAME=	DBD-Pg
 PORTVERSION=	3.0.0
