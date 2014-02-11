@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: comms/p5-Nexmo-SMS/Makefile 341829 2014-01-30 10:27:43Z az $
+# $FreeBSD$
 
 PORTNAME=	Nexmo-SMS
 PORTVERSION=	0.06
