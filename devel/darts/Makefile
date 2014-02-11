@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/darts/Makefile 336121 2013-12-10 22:54:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	darts
 PORTVERSION=	0.32
