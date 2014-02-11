@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/fortytwo/Makefile 342356 2014-02-02 18:49:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	fortytwo
 PORTVERSION=	0.2.0
