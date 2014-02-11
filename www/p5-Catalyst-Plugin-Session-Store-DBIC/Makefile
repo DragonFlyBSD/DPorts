@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-DBIC/Makefile 329187 2013-10-03 13:34:43Z danilo $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-Session-Store-DBIC
 PORTVERSION=	0.14
