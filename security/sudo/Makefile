@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: head/security/sudo/Makefile 343397 2014-02-08 21:48:04Z wxs $
+# $FreeBSD$
 
 PORTNAME=	sudo
 DISTVERSION=	1.8.9p5
