@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-activeresource/Makefile 335703 2013-12-05 20:27:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	activeresource
 PORTVERSION=	3.2.16
