@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-RPC-ExtDirect/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	RPC-ExtDirect
 PORTVERSION=	2.13
@@ -8,7 +8,7 @@ MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tj@FreeBSD.org
-COMMENT=	Perl extension for implimenting the Ext.Direct remoting protocol
+COMMENT=	Perl extension for implementing the Ext.Direct remoting protocol
 
 BUILD_DEPENDS=	p5-Attribute-Handlers>=0.93:${PORTSDIR}/devel/p5-Attribute-Handlers \
 		p5-JSON>=2.53:${PORTSDIR}/converters/p5-JSON
