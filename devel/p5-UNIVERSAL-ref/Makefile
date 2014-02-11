@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-UNIVERSAL-ref/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	UNIVERSAL-ref
 PORTVERSION=	0.14
