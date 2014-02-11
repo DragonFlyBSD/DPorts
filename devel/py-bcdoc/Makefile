@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-bcdoc/Makefile 335334 2013-11-30 18:39:03Z alexey $
+# $FreeBSD$
 
 PORTNAME=	bcdoc
 PORTVERSION=	0.12.0
