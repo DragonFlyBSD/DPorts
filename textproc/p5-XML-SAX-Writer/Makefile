@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/textproc/p5-XML-SAX-Writer/Makefile 338228 2013-12-31 04:26:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	XML-SAX-Writer
 PORTVERSION=	0.54
