@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: sysutils/gtk-send-pr/Makefile 333734 2013-11-14 01:21:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	gtk-send-pr
 PORTVERSION=	0.4.9
