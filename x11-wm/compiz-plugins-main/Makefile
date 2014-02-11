@@ -1,5 +1,5 @@
 # Created by: Robert Noland <rnoland@FreeBSD.org>
-# $FreeBSD: x11-wm/compiz-plugins-main/Makefile 331840 2013-10-28 09:58:14Z tijl $
+# $FreeBSD$
 
 PORTNAME=	compiz-plugins-main
 PORTVERSION=	0.8.4
