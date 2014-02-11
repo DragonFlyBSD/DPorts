@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: multimedia/smplayer-themes/Makefile 340817 2014-01-23 09:05:26Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	smplayer-themes
 PORTVERSION=	20120919
