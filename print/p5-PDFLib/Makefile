@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/p5-PDFLib/Makefile 332969 2013-11-06 12:12:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PDFLib
 PORTVERSION=	0.14
