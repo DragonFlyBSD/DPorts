@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Accessor-Constructor/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Accessor-Constructor
 PORTVERSION=	1.111590
