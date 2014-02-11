@@ -1,5 +1,5 @@
 # Created by: takefu <takefu@airport.fm>
-# $FreeBSD: audio/libaacplus/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libaacplus
 PORTVERSION=	2.0.2
