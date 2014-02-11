@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/gnustep-slideshowkit/Makefile 340734 2014-01-22 21:49:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	slideshowkit
 PORTVERSION=	0.0.1
