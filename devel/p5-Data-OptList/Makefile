@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Data-OptList/Makefile 338207 2013-12-31 00:59:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-OptList
 PORTVERSION=	0.109
