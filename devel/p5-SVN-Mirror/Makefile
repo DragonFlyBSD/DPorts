@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: devel/p5-SVN-Mirror/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	SVN-Mirror
 PORTVERSION=	0.75
@@ -25,10 +25,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		svm.1
-MAN3=		SVN::Mirror.3
-
-NO_STAGE=	yes
 regression-test:
 	cd ${WRKSRC} && ${MAKE} test
 
