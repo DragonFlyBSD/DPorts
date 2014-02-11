@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-File-Find-Rule-VCS/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-Find-Rule-VCS
 PORTVERSION=	1.08
