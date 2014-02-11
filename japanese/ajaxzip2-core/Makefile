@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ajaxzip2-core/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ajaxzip2
 PORTVERSION=	20081102
