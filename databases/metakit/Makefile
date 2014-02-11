@@ -1,5 +1,5 @@
 # Created by: Russell L. Carter <rcarter@pinyon.org>
-# $FreeBSD: databases/metakit/Makefile 341740 2014-01-29 14:33:31Z gahr $
+# $FreeBSD$
 
 PORTNAME=	metakit
 PORTVERSION=	2.4.9.7
