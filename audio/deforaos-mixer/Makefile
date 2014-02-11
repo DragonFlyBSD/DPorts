@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: audio/deforaos-mixer/Makefile 332781 2013-11-04 20:51:55Z wg $
+# $FreeBSD$
 
 PORTNAME=	mixer
 PORTVERSION=	0.1.1
