@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/yelp/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11/yelp/Makefile,v 1.171 2012/10/01 16:19:07 kwm Exp $
 
 PORTNAME=	yelp
