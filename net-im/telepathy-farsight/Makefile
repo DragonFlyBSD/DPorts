@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-farsight/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #   $MCom$
 
 PORTNAME=	telepathy-farsight
