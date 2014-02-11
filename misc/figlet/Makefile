@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: head/misc/figlet/Makefile 342705 2014-02-05 13:58:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	figlet
 PORTVERSION=	2.2.5
