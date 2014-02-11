@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: security/libgnome-keyring/Makefile 332666 2013-11-04 04:47:07Z novel $
+# $FreeBSD$
 
 PORTNAME=	libgnome-keyring
 PORTVERSION=	2.32.0
