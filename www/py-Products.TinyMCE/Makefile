@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-Products.TinyMCE/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	Products.TinyMCE
 PORTVERSION=	1.3.5
