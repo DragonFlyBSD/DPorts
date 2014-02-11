@@ -1,5 +1,5 @@
 # Created by: Alfred Perlstein <alfred@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-SSLeay/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-SSLeay
 PORTVERSION=	0.64
