@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-term-ansicolor/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	term-ansicolor
 PORTVERSION=	1.2.2
@@ -20,6 +20,9 @@ PLIST_FILES+=	bin/colortab bin/term_display bin/term_mandel
 PORTEXAMPLES=	cdiff decolor
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-patch:
