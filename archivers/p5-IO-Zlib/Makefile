@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/p5-IO-Zlib/Makefile 338671 2014-01-04 18:50:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	IO-Zlib
 PORTVERSION=	1.10
