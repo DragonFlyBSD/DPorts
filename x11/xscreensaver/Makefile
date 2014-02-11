@@ -1,5 +1,5 @@
 # Created by: dom@myrddin.demon.co.uk
-# $FreeBSD: x11/xscreensaver/Makefile 336780 2013-12-17 22:01:03Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.26
