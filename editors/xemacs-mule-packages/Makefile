@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@pis.toba-cmt.ac.jp>
-# $FreeBSD: head/editors/xemacs-mule-packages/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xemacs-mule-packages
 PORTVERSION=	4.6
