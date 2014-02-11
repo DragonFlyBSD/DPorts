@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl>
-# $FreeBSD: graphics/potrace/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	potrace
 PORTVERSION=	1.11
