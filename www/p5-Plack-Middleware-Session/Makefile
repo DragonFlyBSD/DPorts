@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Session/Makefile 332818 2013-11-05 08:06:28Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Session
 PORTVERSION=	0.21
