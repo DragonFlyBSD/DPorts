@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: textproc/docbook-xsl-ns/files/pkg-install.in 333527 2013-11-11 17:41:15Z hrs $
+# $FreeBSD: head/textproc/docbook-xsl-ns/files/pkg-install.in 333527 2013-11-11 17:41:15Z hrs $
 # This script will create the docbook-xsl catalog and will add entries to xml catalog.
 # WARNING: If you change this script, be sure to check pkg-deinstall.in!
 #
