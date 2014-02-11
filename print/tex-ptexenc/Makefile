@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/tex-ptexenc/Makefile 342450 2014-02-03 14:31:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ptexenc
 PORTVERSION=	1.3.0
