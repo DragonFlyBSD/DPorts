@@ -1,7 +1,8 @@
-# $FreeBSD: print/libmspub/Makefile 336410 2013-12-14 01:01:06Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libmspub
 PORTVERSION=	0.0.6
+PORTREVISION=	1
 CATEGORIES=	print graphics devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 
