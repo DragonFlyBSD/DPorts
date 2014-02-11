@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-CFB/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-CFB
 PORTVERSION=	0.02
