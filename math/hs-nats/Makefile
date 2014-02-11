@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-nats/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	nats
 PORTVERSION=	0.1
