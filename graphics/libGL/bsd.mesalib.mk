@@ -9,7 +9,7 @@
 #    - grahpics/libglesv2
 #    - graphics/dri
 #
-# $FreeBSD: graphics/libGL/bsd.mesalib.mk 338653 2014-01-04 17:35:53Z bapt $
+# $FreeBSD$
 
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
