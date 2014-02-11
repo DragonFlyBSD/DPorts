@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: head/www/p5-CGI-Untaint/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CGI-Untaint
 PORTVERSION=	1.26
