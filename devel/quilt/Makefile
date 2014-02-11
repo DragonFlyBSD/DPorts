@@ -1,5 +1,5 @@
 # Created by: Dirk Jagdmann <doj@cubic.org>
-# $FreeBSD: devel/quilt/Makefile 336888 2013-12-19 11:11:34Z pawel $
+# $FreeBSD$
 
 PORTNAME=	quilt
 PORTVERSION=	0.61
