@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-base64-bytestring/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	base64-bytestring
 PORTVERSION=	1.0.0.1
