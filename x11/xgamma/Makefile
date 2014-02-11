@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xgamma/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xgamma
 PORTVERSION=	1.0.5
