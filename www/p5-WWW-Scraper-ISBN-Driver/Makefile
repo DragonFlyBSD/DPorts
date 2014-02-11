@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: head/www/p5-WWW-Scraper-ISBN-Driver/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Scraper-ISBN-Driver
 PORTVERSION=	0.20
