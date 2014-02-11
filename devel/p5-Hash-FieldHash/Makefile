@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-FieldHash/Makefile 334118 2013-11-17 19:39:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Hash-FieldHash
 PORTVERSION=	0.14
