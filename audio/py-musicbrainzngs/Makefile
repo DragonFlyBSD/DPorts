@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-musicbrainzngs/Makefile 341539 2014-01-28 12:33:21Z feld $
+# $FreeBSD$
 
 PORTNAME=	musicbrainzngs
 PORTVERSION=	0.4
