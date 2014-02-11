@@ -1,5 +1,5 @@
 # Created by: Oliver Braun
-# $FreeBSD: devel/libvc/Makefile 333180 2013-11-08 03:47:39Z jgh $
+# $FreeBSD$
 
 PORTNAME=	libvc
 PORTVERSION=	003
