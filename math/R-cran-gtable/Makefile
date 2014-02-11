@@ -1,4 +1,4 @@
-# $FreeBSD: math/R-cran-gtable/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD$
 
 PORTNAME=	gtable
 PORTVERSION=	0.1.2
