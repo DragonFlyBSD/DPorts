@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-crypto-random-api/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	crypto-random-api
 PORTVERSION=	0.2.0
