@@ -1,5 +1,5 @@
 # Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
-# $FreeBSD: biology/p5-Bio-ASN1-EntrezGene/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Bio-ASN1-EntrezGene
 PORTVERSION=	1.091
