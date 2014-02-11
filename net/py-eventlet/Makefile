@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/py-eventlet/Makefile 341943 2014-01-31 08:46:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	eventlet
 PORTVERSION=	0.14.0
