@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/spatialindex/Makefile 340963 2014-01-25 00:25:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spatialindex
 PORTVERSION=	1.8.0
