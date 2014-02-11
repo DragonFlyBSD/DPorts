@@ -1,8 +1,9 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: databases/mongodb/Makefile 341728 2014-01-29 13:02:50Z ale $
+# $FreeBSD$
 
 PORTNAME=	mongodb
 PORTVERSION=	2.4.9
+PORTREVISION=	1
 CATEGORIES=	databases net
 MASTER_SITES=	http://downloads.mongodb.org/src/
 DISTNAME=	${PORTNAME}-src-r${PORTVERSION}
@@ -38,6 +39,8 @@ USERS=	mongodb
 GROUPS=	mongodb
 
 USE_RC_SUBR=	mongod
+
+PORTSCOUT=	limitw:1,even
 
 .include <bsd.port.options.mk>
 
