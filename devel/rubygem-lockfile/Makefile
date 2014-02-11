@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: devel/rubygem-lockfile/Makefile 333606 2013-11-12 19:44:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	lockfile
 PORTVERSION=	2.1.0
