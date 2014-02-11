@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rbenv/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rbenv
 PORTVERSION=	0.4.0
