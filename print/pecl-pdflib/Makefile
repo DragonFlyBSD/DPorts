@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: print/pecl-pdflib/Makefile 341363 2014-01-27 10:07:36Z ale $
+# $FreeBSD$
 
 PORTNAME=	pdflib
 PORTVERSION=	3.0.4
