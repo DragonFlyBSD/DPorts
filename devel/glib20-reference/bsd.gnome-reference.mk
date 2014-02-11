@@ -1,4 +1,4 @@
-# $FreeBSD: devel/glib20-reference/bsd.gnome-reference.mk 336013 2013-12-09 18:41:16Z antoine $
+# $FreeBSD$
 
 PARENTDIR?=	${.CURDIR:S|-reference$||}
 REFERENCE_PORT=	${PKGORIGIN:S|-reference$||}

@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: devel/glib20-reference/Makefile 335857 2013-12-07 23:05:12Z antoine $
+# $FreeBSD$
 
 PORTREVISION=	3
 
