@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: japanese/canna-lib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	canna
 PORTVERSION=	3.7p3
