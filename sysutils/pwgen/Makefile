@@ -1,5 +1,5 @@
 # Created by: Andrew Khlebutin <andrey@hm.perm.ru>
-# $FreeBSD: head/sysutils/pwgen/Makefile 342699 2014-02-05 13:45:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pwgen
 PORTVERSION=	2.06
