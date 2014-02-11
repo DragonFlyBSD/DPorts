@@ -1,5 +1,5 @@
 # Created by: Eric Stith
-# $FreeBSD: graphics/p5-Geo-Proj4/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Geo-Proj4
 PORTVERSION=	1.04
