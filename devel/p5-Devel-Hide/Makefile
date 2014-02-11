@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Hide/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-Hide
 PORTVERSION=	0.0009
