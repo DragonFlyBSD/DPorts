@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-Title/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Term-Title
 PORTVERSION=	0.03
@@ -14,7 +14,4 @@ COMMENT=	Portable API to set the terminal titlebar
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Term::Title.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
