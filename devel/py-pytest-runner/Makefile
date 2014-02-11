@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-pytest-runner/Makefile 337527 2013-12-26 14:42:19Z wg $
+# $FreeBSD$
 
 PORTNAME=	pytest-runner
 PORTVERSION=	2.0
