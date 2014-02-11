@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/libmatroska/Makefile 331049 2013-10-20 18:27:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libmatroska
 PORTVERSION=	1.4.1
