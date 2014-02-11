@@ -1,5 +1,5 @@
 # Created by: Vadim Vatlin
-# $FreeBSD: devel/p5-JSON-RPC/Makefile 332029 2013-10-30 01:50:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	JSON-RPC
 PORTVERSION=	1.03
