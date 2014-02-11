@@ -1,4 +1,4 @@
-# $FreeBSD: misc/amanda-perl-wrapper/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	amanda-perl-wrapper
 PORTVERSION=	1.01
