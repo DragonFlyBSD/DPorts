@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: science/p5-Geo-WebService-Elevation-USGS/Makefile 332938 2013-11-06 01:32:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Geo-WebService-Elevation-USGS
 PORTVERSION=	0.011
