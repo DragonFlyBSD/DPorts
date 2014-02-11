@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: math/py-patsy/Makefile 333533 2013-11-11 20:32:09Z wg $
+# $FreeBSD$
 
 PORTNAME=	patsy
 PORTVERSION=	0.2.1
