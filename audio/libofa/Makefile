@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/libofa/Makefile 329874 2013-10-09 08:01:13Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libofa
 PORTVERSION=	0.9.3
