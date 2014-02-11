@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: converters/p5-Encode-JIS2K/Makefile 341502 2014-01-28 07:33:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Encode-JIS2K
 PORTVERSION=	0.02
