@@ -1,5 +1,5 @@
 # Created by: ade, archie
-# $FreeBSD: x11-fm/mate-file-manager/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-file-manager
 PORTVERSION=	1.6.2
