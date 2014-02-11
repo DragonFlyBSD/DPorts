@@ -1,4 +1,4 @@
-/* $FreeBSD: devel/gdb/files/fbsd-threads.c 318323 2013-05-16 17:07:13Z rakuco $ */
+/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 318323 2013-05-16 17:07:13Z rakuco $ */
 /* FreeBSD libthread_db assisted debugging support.
    Copyright 1999, 2000, 2001 Free Software Foundation, Inc.
 

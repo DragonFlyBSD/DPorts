@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/gdb/Makefile 340871 2014-01-23 23:48:53Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gdb
 PORTVERSION=	7.6.2
