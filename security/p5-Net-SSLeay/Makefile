@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: head/security/p5-Net-SSLeay/Makefile 340426 2014-01-20 17:24:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-SSLeay
 PORTVERSION=	1.57
