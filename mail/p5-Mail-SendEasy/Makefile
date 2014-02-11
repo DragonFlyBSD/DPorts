@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Mail-SendEasy/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-SendEasy
 PORTVERSION=	1.2
