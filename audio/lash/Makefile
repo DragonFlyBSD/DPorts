@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/lash/Makefile 338138 2013-12-30 16:51:37Z antoine $
+# $FreeBSD$
 
 PORTNAME=	lash
 PORTVERSION=	0.5.4
