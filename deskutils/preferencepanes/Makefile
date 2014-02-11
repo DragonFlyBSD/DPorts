@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/preferencepanes/Makefile 341872 2014-01-30 19:11:04Z antoine $
+# $FreeBSD$
 
 PORTNAME=	preferencepanes
 PORTVERSION=	1.1.0
