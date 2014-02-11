@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: x11-toolkits/girara/Makefile 335121 2013-11-28 21:08:38Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	girara
 PORTVERSION=	0.1.9
