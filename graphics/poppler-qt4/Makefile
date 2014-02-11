@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/poppler-qt4/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 #   $MCom: ports/graphics/poppler-qt4/Makefile,v 1.18 2012/10/14 23:04:21 kwm Exp $
 
 PORTREVISION=	0
