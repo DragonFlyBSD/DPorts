@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gstreamer1-plugins-kate/Makefile 334511 2013-11-21 19:06:50Z kwm $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
