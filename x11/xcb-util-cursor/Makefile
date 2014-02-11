@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-cursor/Makefile 333671 2013-11-13 11:24:03Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xcb-util-cursor
 PORTVERSION=	0.1.1
