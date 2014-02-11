@@ -1,5 +1,5 @@
 # Created by: jesper
-# $FreeBSD: security/p5-Crypt-DES_EDE3/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-DES_EDE3
 PORTVERSION=	0.01
