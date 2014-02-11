@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: devel/ois/Makefile 337450 2013-12-25 20:14:43Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	ois
 PORTVERSION=	1.2.0
