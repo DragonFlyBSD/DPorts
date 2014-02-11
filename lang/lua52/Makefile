@@ -1,5 +1,5 @@
 # Created by: GreenDog <fiziologus@gmail.com>
-# $FreeBSD: head/lang/lua52/Makefile 340106 2014-01-17 20:52:01Z antoine $
+# $FreeBSD$
 
 PORTNAME=	lua
 PORTVERSION=	5.2.3
