@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-rsa/Makefile 342146 2014-02-01 14:36:14Z koobs $
+# $FreeBSD$
 
 PORTNAME=	rsa
 PORTVERSION=	3.1.2
