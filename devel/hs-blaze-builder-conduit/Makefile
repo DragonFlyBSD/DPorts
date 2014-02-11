@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-blaze-builder-conduit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	blaze-builder-conduit
 PORTVERSION=	1.0.0
