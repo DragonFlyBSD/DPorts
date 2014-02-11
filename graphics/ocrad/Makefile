@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <q@uni.de>
-# $FreeBSD: graphics/ocrad/Makefile 329533 2013-10-06 05:06:13Z lippe $
+# $FreeBSD$
 
 PORTNAME=	ocrad
 PORTVERSION=	0.22
@@ -22,6 +22,8 @@ PLIST_FILES=	bin/${PORTNAME} man/man1/ocrad.1.gz
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
