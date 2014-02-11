@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: devel/abi-compliance-checker/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	abi-compliance-checker
 PORTVERSION=	1.99
@@ -30,6 +30,9 @@ PLIST_FILES=	bin/${PORTNAME}.pl
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 CPPFILT?=	/usr/bin/c++filt
