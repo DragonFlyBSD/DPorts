@@ -1,4 +1,4 @@
-# $FreeBSD: net/libkvkontakte/Makefile 333656 2013-11-13 07:37:36Z avilla $
+# $FreeBSD$
 
 PORTNAME=	libkvkontakte
 PORTVERSION=	${DIGIKAM_VER}
