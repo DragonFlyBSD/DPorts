@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Layout-Manager/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Layout-Manager
 PORTVERSION=	0.34
