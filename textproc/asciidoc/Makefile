@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: head/textproc/asciidoc/Makefile 342575 2014-02-04 16:54:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.9
