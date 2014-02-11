@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-# $FreeBSD: www/rubygem-ntlm-http/Makefile 338314 2013-12-31 14:30:46Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ntlm-http
 PORTVERSION=	0.1.1
