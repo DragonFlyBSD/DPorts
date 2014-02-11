@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: security/p5-Crypt-CAST5_PP/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-CAST5_PP
 PORTVERSION=	1.04
