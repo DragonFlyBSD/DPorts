@@ -1,5 +1,5 @@
 # Created by: jaharkes
-# $FreeBSD: devel/rpc2/Makefile 334076 2013-11-17 11:10:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rpc2
 PORTVERSION=	2.10
