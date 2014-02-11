@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Requires/Makefile 341623 2014-01-28 16:45:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Test-Requires
 PORTVERSION=	0.07
