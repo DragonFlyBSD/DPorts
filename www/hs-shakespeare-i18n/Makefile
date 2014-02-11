@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-shakespeare-i18n/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	shakespeare-i18n
 PORTVERSION=	1.0.0.2
