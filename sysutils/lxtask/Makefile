@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/lxtask/Makefile 339061 2014-01-08 00:38:44Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxtask
 PORTVERSION=	0.1.4
