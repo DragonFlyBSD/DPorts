@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-expectations/Makefile 335526 2013-12-02 18:36:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rspec-expectations
 PORTVERSION=	2.14.4
