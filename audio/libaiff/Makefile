@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/libaiff/Makefile 341832 2014-01-30 11:01:48Z gahr $
+# $FreeBSD$
 
 PORTNAME=	libaiff
 PORTVERSION=	5.0
