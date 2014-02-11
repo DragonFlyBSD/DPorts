@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/gstreamer1-plugins-openjpeg/Makefile 334511 2013-11-21 19:06:50Z kwm $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	graphics
