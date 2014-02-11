@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Compile/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Compile
 PORTVERSION=	0.16
