@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-File-pushd/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	File-pushd
 PORTVERSION=	1.005
