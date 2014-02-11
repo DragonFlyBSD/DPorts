@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-Acquisition/Makefile 340933 2014-01-24 21:28:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Acquisition
 PORTVERSION=	4.0a1
