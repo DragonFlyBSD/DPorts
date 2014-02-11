@@ -1,5 +1,5 @@
 # Created by: Oliver Breuninger <ob@seicom.NET>
-# $FreeBSD: print/pstotext/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pstotext
 PORTVERSION=	1.9
@@ -21,6 +21,9 @@ PLIST_FILES=	bin/pstotext
 PORTDOCS=	copyright
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
