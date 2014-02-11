@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: devel/p5-POE-Component-Hailo/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Hailo
 PORTVERSION=	0.10
