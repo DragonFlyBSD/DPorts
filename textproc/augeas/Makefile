@@ -1,5 +1,5 @@
 # Created by: Russell Jackson <raj@csub.edu>
-# $FreeBSD: textproc/augeas/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	augeas
 PORTVERSION=	1.1.0
