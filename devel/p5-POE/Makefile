@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE/Makefile 336018 2013-12-09 19:30:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE
 PORTVERSION=	1.358
