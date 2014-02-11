@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: x11-toolkits/fox16/Makefile 329702 2013-10-07 13:14:12Z gahr $
+# $FreeBSD$
 
 PORTNAME=	fox
 PORTVERSION=	1.6.49
