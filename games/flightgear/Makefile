@@ -1,8 +1,9 @@
 # Created by: Brian Buchanan <brian@CSUA.Berkeley.EDU>
-# $FreeBSD: games/flightgear/Makefile 338879 2014-01-06 13:50:21Z martymac $
+# $FreeBSD$
 
 PORTNAME=	flightgear
 PORTVERSION=	2.12.1
+PORTREVISION=	2
 CATEGORIES=	games
 # see http://www.flightgear.org/templates.js
 MASTER_SITES=	http://mirrors.ibiblio.org/flightgear/ftp/Source/ \
