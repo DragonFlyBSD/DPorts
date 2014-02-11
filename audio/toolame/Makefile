@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: audio/toolame/Makefile 338713 2014-01-05 00:30:21Z bapt $
+# $FreeBSD$
 
 PORTNAME=	toolame
 PORTVERSION=	0.2l
