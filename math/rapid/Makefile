@@ -1,5 +1,5 @@
 # Created by: Jason W. Bacon <jwbacon@tds.net>
-# $FreeBSD: math/rapid/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rapid
 PORTVERSION=	2.01
