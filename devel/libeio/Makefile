@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: devel/libeio/Makefile 340515 2014-01-21 00:27:53Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libeio
 PORTVERSION=	4.18.0

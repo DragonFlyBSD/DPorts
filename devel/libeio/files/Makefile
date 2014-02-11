@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libeio/files/Makefile 319310 2013-05-28 14:06:14Z osa $
+# $FreeBSD$
 
 LIB =	libeio
 SRCS=	eio.c
