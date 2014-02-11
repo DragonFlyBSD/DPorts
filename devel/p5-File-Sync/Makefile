@@ -1,5 +1,5 @@
 # Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-# $FreeBSD: devel/p5-File-Sync/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Sync
 PORTVERSION=	0.11
