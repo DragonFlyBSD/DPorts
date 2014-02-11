@@ -1,5 +1,5 @@
 # Created by: aturetta@commit.it
-# $FreeBSD: head/devel/p5-Module-Refresh/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Module-Refresh
 PORTVERSION=	0.17
