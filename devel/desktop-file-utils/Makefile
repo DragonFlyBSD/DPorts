@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: head/devel/desktop-file-utils/Makefile 331563 2013-10-25 08:46:56Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/desktop-file-utils/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	desktop-file-utils
