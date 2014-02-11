@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: textproc/p5-ElasticSearch-SearchBuilder/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	ElasticSearch-SearchBuilder
 PORTVERSION=	0.18
