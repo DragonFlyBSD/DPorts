@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: databases/p5-SQL-Translator/Makefile 338561 2014-01-03 16:22:02Z antoine $
+# $FreeBSD$
 
 PORTNAME=	SQL-Translator
 PORTVERSION=	0.11018
