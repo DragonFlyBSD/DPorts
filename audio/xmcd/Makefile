@@ -1,5 +1,5 @@
 # Created by: Gennady Sorokopud <gena@NetVision.net.il>
-# $FreeBSD: audio/xmcd/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xmcd
 PORTVERSION=	3.3.2
