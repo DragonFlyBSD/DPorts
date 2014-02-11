@@ -1,5 +1,5 @@
 # Created by: J.F. Dockes
-# $FreeBSD: head/databases/xapian-core/Makefile 342553 2014-02-04 16:14:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	xapian-core
 PORTVERSION=	1.2.17
