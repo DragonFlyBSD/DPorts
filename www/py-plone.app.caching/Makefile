@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.caching/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.app.caching
 PORTVERSION=	1.1.6
