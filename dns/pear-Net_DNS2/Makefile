@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: dns/pear-Net_DNS2/Makefile 339744 2014-01-15 03:51:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net_DNS2
 PORTVERSION=	1.3.2
