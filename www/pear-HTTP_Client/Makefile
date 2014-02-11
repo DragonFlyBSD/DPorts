@@ -1,5 +1,5 @@
 # Created by: Joseph Scott (<joseph@randomnetworks.com>)
-# $FreeBSD: www/pear-HTTP_Client/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTTP_Client
 PORTVERSION=	1.2.1
