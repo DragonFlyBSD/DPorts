@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Diff-HTML/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Diff-HTML
 PORTVERSION=	0.07
