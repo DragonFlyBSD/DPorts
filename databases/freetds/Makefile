@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: head/databases/freetds/Makefile 342649 2014-02-05 08:16:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	freetds
 PORTVERSION=	0.64
