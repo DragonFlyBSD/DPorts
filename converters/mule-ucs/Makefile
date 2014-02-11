@@ -1,5 +1,5 @@
 # Created by: OKAZAKI Tetsurou
-# $FreeBSD: converters/mule-ucs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mule-ucs
 PORTVERSION=	0.85.r3
@@ -29,6 +29,8 @@ MULEUCS_DESTDIR=	${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/mule-ucs
 EMACS_ARGS=	-q --no-site-file -batch
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
