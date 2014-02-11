@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-pyro/Makefile 340883 2014-01-24 09:25:41Z rm $
+# $FreeBSD$
 
 PORTNAME=	pyro
 PORTVERSION=	4.23
