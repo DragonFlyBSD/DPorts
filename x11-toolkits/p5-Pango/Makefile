@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Pango/Makefile 336842 2013-12-18 15:49:52Z swills $
+# $FreeBSD$
 
 PORTNAME=	Pango
 PORTVERSION=	1.224
