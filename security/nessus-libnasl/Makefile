@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: security/nessus-libnasl/Makefile 331628 2013-10-25 19:42:00Z tijl $
+# $FreeBSD$
 
 PORTNAME=	nessus-libnasl
 PORTVERSION=	2.2.9
