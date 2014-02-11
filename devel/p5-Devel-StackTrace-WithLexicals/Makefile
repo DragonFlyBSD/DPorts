@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-StackTrace-WithLexicals/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-StackTrace-WithLexicals
 PORTVERSION=	0.10
