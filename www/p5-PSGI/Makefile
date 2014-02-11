@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	PSGI
 PORTVERSION=	1.102
