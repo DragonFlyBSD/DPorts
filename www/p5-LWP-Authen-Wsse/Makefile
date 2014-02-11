@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-LWP-Authen-Wsse/Makefile 333112 2013-11-07 15:07:21Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	LWP-Authen-Wsse
 PORTVERSION=	0.05
