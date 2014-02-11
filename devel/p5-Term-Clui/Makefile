@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Term-Clui/Makefile 332388 2013-11-01 14:57:51Z tj $
+# $FreeBSD$
 
 PORTNAME=	Term-Clui
 PORTVERSION=	1.68
