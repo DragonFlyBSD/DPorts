@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: head/net/libnet10/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libnet
 PORTVERSION=	1.0.2a
@@ -19,6 +19,8 @@ CFLAGS+=	-fPIC
 USE_AUTOTOOLS=	autoconf
 WRKSRC=		${WRKDIR}/Libnet-${PORTVERSION}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
