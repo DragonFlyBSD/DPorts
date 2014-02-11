@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda4-postgresql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/databases/libgda4-postgresql/Makefile,v 1.7 2012/03/13 01:34:31 mezz Exp $
 
 PORTREVISION=	0
