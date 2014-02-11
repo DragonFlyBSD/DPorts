@@ -1,5 +1,5 @@
 # Created by: giffunip
-# $FreeBSD: head/print/gsfonts/Makefile 342377 2014-02-03 02:49:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gsfonts
 PORTVERSION=	8.11
