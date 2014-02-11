@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-packetfu/Makefile 339636 2014-01-13 21:05:31Z antoine $
+# $FreeBSD$
 
 PORTNAME=	packetfu
 PORTVERSION=	1.1.10
