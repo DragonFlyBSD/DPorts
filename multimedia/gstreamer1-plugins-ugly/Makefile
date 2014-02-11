@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1-plugins-ugly/Makefile 332416 2013-11-01 22:14:07Z kwm $
+# $FreeBSD$
 #    $MCom: ports/multimedia/gstreamer1-plugins-ugly/Makefile,v 1.3 2013/01/15 21:43:46 kwm Exp $
 
 PORTREVISION=	0
