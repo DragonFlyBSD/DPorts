@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-Net-Flickr-API/Makefile 341705 2014-01-29 09:17:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-Flickr-API
 PORTVERSION=	1.7
