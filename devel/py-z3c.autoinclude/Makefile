@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-z3c.autoinclude/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	z3c.autoinclude
 PORTVERSION=	0.3.4
