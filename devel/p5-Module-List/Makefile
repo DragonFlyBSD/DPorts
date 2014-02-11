@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: head/devel/p5-Module-List/Makefile 342635 2014-02-05 07:35:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Module-List
 PORTVERSION=	0.003
