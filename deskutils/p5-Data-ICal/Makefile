@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/deskutils/p5-Data-ICal/Makefile 332385 2013-11-01 14:46:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Data-ICal
 PORTVERSION=	0.21
