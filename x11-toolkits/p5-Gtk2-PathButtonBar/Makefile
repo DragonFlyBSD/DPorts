@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: x11-toolkits/p5-Gtk2-PathButtonBar/Makefile 338757 2014-01-05 12:33:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-PathButtonBar
 PORTVERSION=	0.1.2
