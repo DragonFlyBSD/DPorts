@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: x11-toolkits/xbae/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Xbae
 PORTVERSION=	4.60.4
