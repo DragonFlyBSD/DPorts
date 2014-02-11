@@ -1,5 +1,5 @@
 # Created by: Paul Everlund
-# $FreeBSD: graphics/xmedcon/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xmedcon
 PORTVERSION=	0.13.0
