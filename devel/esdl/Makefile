@@ -1,4 +1,4 @@
-# $FreeBSD: devel/esdl/Makefile 333510 2013-11-11 15:08:48Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	esdl
 PORTVERSION=	1.0.1
