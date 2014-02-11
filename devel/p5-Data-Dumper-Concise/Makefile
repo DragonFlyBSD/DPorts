@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: devel/p5-Data-Dumper-Concise/Makefile 338499 2014-01-02 20:57:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-Dumper-Concise
 PORTVERSION=	2.021
