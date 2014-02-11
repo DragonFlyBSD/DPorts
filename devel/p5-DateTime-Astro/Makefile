@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-Astro/Makefile 328840 2013-09-30 18:22:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Astro
 PORTVERSION=	1.00
