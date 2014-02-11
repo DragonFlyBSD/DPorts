@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IO-Async/Makefile 330408 2013-10-15 16:58:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IO-Async
 PORTVERSION=	0.61
