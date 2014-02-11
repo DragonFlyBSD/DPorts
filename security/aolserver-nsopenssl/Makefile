@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/aolserver-nsopenssl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	aolserver-nsopenssl
 PORTVERSION=	3.0.b26
@@ -16,6 +16,9 @@ WRKSRC=		${WRKDIR}/nsopenssl-3.0beta26
 
 LICENSE=	GPLv1 MPL
 LICENSE_COMB=	dual
+
+DEPRECATED=	abandonware, messing up on clusters
+EXPIRATION_DATE=	2014-04-03
 
 AOLSERVERBASE?=	aolserver
 BUILD_DEPENDS+=	${LOCALBASE}/${AOLSERVERBASE}/bin/nsd:${PORTSDIR}/www/aolserver
