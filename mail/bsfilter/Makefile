@@ -1,5 +1,5 @@
 # Created by: Masafumi Otsune <info@otsune.com>
-# $FreeBSD: mail/bsfilter/Makefile 330043 2013-10-11 01:51:25Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	bsfilter
 PORTVERSION=	1.0.17
