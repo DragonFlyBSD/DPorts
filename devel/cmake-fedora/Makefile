@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: devel/cmake-fedora/Makefile 340756 2014-01-23 00:07:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cmake-fedora
 PORTVERSION=	1.0.5
