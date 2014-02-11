@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: head/textproc/p5-XML-LibXSLT/Makefile 338227 2013-12-31 04:26:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	XML-LibXSLT
 PORTVERSION=	1.84
