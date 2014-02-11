@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-reflection/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	reflection
 PORTVERSION=	1.3.2
