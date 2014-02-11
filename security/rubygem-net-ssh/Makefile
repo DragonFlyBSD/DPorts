@@ -1,5 +1,5 @@
 # Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-# $FreeBSD: security/rubygem-net-ssh/Makefile 338309 2013-12-31 14:30:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	net-ssh
 PORTVERSION=	2.7.0
