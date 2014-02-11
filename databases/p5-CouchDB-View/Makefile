@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-CouchDB-View/Makefile 328817 2013-09-30 15:31:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CouchDB-View
 PORTVERSION=	0.003
