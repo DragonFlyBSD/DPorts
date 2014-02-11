@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: www/aws/Makefile 333409 2013-11-10 16:22:47Z marino $
+# $FreeBSD$
 
 PORTNAME=	aws
 PORTVERSION=	3.1.0.0
