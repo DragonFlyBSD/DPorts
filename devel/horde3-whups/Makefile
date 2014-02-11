@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <horde@FreeBSD.org
-# $FreeBSD: devel/horde3-whups/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	whups
 PORTVERSION=	1.0.1
