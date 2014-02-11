@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@hub.org>
-# $FreeBSD: www/p5-CGI-Untaint-email/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Untaint-email
 PORTVERSION=	0.03
