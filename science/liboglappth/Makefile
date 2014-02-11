@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <maho@FreeBSD.org>
-# $FreeBSD: science/liboglappth/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	liboglappth
 PORTVERSION=	1.0.0
@@ -20,5 +20,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include
 CXXFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
