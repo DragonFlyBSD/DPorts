@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Test-Pod-Coverage/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Pod-Coverage
 PORTVERSION=	1.08
