@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Slurp/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Slurp
 PORTVERSION=	0.4
