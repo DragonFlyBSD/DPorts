@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-HStringTemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HStringTemplate
 PORTVERSION=	0.7.1
