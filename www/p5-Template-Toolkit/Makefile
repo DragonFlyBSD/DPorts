@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: head/www/p5-Template-Toolkit/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Template-Toolkit
 PORTVERSION=	2.25
