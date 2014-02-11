@@ -1,5 +1,5 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
-# $FreeBSD: lang/gjs/Makefile 335890 2013-12-08 13:29:41Z mva $
+# $FreeBSD$
 #   $MCom: ports/trunk/lang/gjs/Makefile 18581 2013-06-23 10:50:00Z kwm $
 
 PORTNAME=	gjs
