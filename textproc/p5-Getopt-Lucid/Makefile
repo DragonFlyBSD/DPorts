@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: textproc/p5-Getopt-Lucid/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	Getopt-Lucid
 PORTVERSION=	1.05
