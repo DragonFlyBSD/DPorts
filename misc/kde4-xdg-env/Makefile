@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kde4-xdg-env/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xdg
 PORTVERSION=	1.0.1
