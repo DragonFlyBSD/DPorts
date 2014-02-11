@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: www/p5-PHP-Session/Makefile 333117 2013-11-07 15:22:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PHP-Session
 PORTVERSION=	0.27
