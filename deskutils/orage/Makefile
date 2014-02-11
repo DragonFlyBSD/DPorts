@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: deskutils/orage/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD$
 
 PORTNAME=	orage
 PORTVERSION=	4.10.0
