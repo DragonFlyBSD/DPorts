@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-blinker/Makefile 342118 2014-02-01 11:27:20Z koobs $
+# $FreeBSD$
 
 PORTNAME=	blinker
 PORTVERSION=	1.3
