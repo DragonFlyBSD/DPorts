@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/ipython/files/patch-setupbase.py 325353 2013-08-25 16:13:06Z olgeni $
+$FreeBSD: head/devel/ipython/files/patch-setupbase.py 325353 2013-08-25 16:13:06Z olgeni $
 
 --- setupbase.py.orig
 +++ setupbase.py

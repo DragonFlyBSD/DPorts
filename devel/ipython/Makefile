@@ -1,5 +1,5 @@
 # Created by: Dryice Liu
-# $FreeBSD: devel/ipython/Makefile 338876 2014-01-06 13:30:01Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	ipython
 PORTVERSION=	1.1.0
