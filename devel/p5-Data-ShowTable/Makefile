@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-ShowTable/Makefile 340798 2014-01-23 03:28:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-ShowTable
 PORTVERSION=	4.6
