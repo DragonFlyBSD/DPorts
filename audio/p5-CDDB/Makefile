@@ -1,5 +1,5 @@
 # Created by: Yar Tikhiy <yar@comp.chem.msu.su>
-# $FreeBSD: audio/p5-CDDB/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CDDB
 PORTVERSION=	1.222
