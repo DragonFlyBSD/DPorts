@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: head/devel/py-urwid/Makefile 340926 2014-01-24 19:16:13Z mva $
+# $FreeBSD$
 
 PORTNAME=	urwid
 PORTVERSION=	1.1.1
