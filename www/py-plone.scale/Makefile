@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.scale/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plone.scale
 PORTVERSION=	1.3.2
