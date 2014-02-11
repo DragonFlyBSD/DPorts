@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/databases/rubygem-redis/Makefile 340781 2014-01-23 03:27:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	redis
 PORTVERSION=	3.0.7
