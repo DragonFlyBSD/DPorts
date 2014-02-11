@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/py-gstreamer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.20 2008/07/26 17:21:38 marcus Exp $
 
 PORTNAME=	gstreamer
@@ -41,9 +41,9 @@ post-patch:
 
 post-install:
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py -d \
-		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} -f ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+		${PYTHONPREFIX_SITELIBDIR} -f ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -d \
-		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} -f ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+		${PYTHONPREFIX_SITELIBDIR} -f ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/gst-0.10/gst/*.so
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/*.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gstreamer-0.10/libgstpython.so
