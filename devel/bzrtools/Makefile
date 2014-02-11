@@ -1,5 +1,5 @@
 # Created by: Ulf Lilleengen
-# $FreeBSD: devel/bzrtools/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bzrtools
 PORTVERSION=	2.6.0
