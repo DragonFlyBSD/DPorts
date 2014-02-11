@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: head/net/p5-Socket6/Makefile 338129 2013-12-30 16:12:16Z ume $
+# $FreeBSD$
 
 PORTNAME=	Socket6
 PORTVERSION=	0.25
