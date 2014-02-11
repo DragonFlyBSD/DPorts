@@ -1,5 +1,5 @@
 # Created by: Rui Lopes <rui@ruilopes.com>
-# $FreeBSD: devel/regexxer/Makefile 336598 2013-12-15 23:46:53Z kwm $
+# $FreeBSD$
 
 PORTNAME=	regexxer
 PORTVERSION=	0.10
