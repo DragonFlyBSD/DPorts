@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: mail/p5-Email-Valid-Loose/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-Valid-Loose
 PORTVERSION=	0.05
