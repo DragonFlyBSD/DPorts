@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Peek/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Data-Peek
 PORTVERSION=	0.39
