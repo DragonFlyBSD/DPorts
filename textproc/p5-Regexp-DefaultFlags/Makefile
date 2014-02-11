@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Regexp-DefaultFlags/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	Regexp-DefaultFlags
 PORTVERSION=	0.01
