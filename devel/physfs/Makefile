@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/physfs/Makefile 342176 2014-02-01 15:50:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	physfs
 PORTVERSION=	2.0.3
