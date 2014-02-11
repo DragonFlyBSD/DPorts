@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/libjreen/Makefile 341954 2014-01-31 09:20:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libjreen
 PORTVERSION=	1.1.1
