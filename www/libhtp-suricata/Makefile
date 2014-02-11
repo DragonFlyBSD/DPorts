@@ -1,4 +1,4 @@
-# $FreeBSD: www/libhtp-suricata/Makefile 334049 2013-11-17 02:51:46Z koobs $
+# $FreeBSD$
 
 PORTNAME=	libhtp
 PORTVERSION=	0.2.14
