@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nacai@iname.com>
-# $FreeBSD: net/p5-Socks/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SOCKS
 PORTVERSION=	0.03
