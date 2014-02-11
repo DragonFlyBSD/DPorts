@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: head/devel/tcllib/Makefile 342409 2014-02-03 10:00:13Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tcllib
 PORTVERSION=	1.15
