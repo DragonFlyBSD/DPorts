@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn
-# $FreeBSD: head/devel/mercurial/Makefile 342290 2014-02-02 13:43:26Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	mercurial
 PORTVERSION=	2.9
