@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: head/math/p5-Math-Geometry-Planar-GPC-Polygon/Makefile 343177 2014-02-07 00:51:51Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Math-Geometry-Planar-GPC-Polygon
 PORTVERSION=	0.05
