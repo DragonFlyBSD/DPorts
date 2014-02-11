@@ -1,5 +1,5 @@
 # Created by: James Raftery <james@now.ie>
-# $FreeBSD: textproc/p5-Text-Netstring/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Netstring
 PORTVERSION=	0.07
