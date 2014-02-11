@@ -1,5 +1,5 @@
 # Created by: Andrey Zonov <andrey@zonov.org>
-# $FreeBSD: devel/py-msgpack/Makefile 340931 2014-01-24 20:05:47Z rm $
+# $FreeBSD$
 
 PORTNAME=	msgpack
 PORTVERSION=	0.4.0
