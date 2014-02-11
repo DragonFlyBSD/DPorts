@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/radius-engine/Makefile 335908 2013-12-08 16:33:00Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	radius-engine
 PORTVERSION=	1.1
