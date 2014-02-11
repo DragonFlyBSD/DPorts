@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: devel/cvsgraph/Makefile 341482 2014-01-27 23:45:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsgraph
 PORTVERSION=	1.7.0
