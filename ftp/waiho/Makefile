@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/waiho/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	waiho
 PORTVERSION=	0.2
@@ -18,5 +18,4 @@ USE_GNUSTEP_BACK=	yes
 USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
