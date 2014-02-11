@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Box/Makefile 342320 2014-02-02 16:00:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Mail-Box
 PORTVERSION=	2.109
