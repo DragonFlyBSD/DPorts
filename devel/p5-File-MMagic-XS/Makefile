@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-File-MMagic-XS/Makefile 335989 2013-12-09 14:09:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	File-MMagic-XS
 PORTVERSION=	0.09007
