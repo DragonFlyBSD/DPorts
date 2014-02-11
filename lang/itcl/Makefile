@@ -1,5 +1,5 @@
 # Created by: chuckr
-# $FreeBSD: head/lang/itcl/Makefile 332710 2013-11-04 13:17:51Z wg $
+# $FreeBSD$
 
 PORTNAME=	itcl
 PORTVERSION=	3.4.1
