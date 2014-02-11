@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-mach64/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xf86-video-mach64
 PORTVERSION=	6.9.4
