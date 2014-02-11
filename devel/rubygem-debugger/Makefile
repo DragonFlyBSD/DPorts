@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: devel/rubygem-debugger/Makefile 334892 2013-11-25 19:58:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	debugger
 PORTVERSION=	1.6.2
