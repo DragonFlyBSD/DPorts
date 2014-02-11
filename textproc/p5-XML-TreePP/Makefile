@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-XML-TreePP/Makefile 333314 2013-11-09 18:48:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	XML-TreePP
 PORTVERSION=	0.42
