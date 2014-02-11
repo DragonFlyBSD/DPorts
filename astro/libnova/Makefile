@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/libnova/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libnova
 PORTVERSION=	0.15.0
