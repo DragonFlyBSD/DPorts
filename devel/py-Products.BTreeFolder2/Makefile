@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.BTreeFolder2/Makefile 340992 2014-01-25 07:19:34Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.BTreeFolder2
 PORTVERSION=	2.13.4
