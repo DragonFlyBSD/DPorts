@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: textproc/p5-XML-LibXML-SAX-ChunkParser/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-LibXML-SAX-ChunkParser
 PORTVERSION=	0.00006
