@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/rubygem-glib2/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	glib2
 PORTVERSION=	2.0.2
