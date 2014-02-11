@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libcxxrt/Makefile 341792 2014-01-29 23:26:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libcxxrt
 PORTVERSION=	20131225
