@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libxdiff/Makefile 331627 2013-10-25 19:35:57Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	libxdiff
 PORTVERSION=	0.23
