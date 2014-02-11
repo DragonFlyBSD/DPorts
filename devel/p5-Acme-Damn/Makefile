@@ -1,5 +1,5 @@
 # Created by: Warner Losh <imp@FreeBSD.org>
-# $FreeBSD: devel/p5-Acme-Damn/Makefile 342155 2014-02-01 14:42:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Acme-Damn
 PORTVERSION=	0.05
