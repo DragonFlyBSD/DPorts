@@ -1,5 +1,5 @@
 # Created by: Jim Geovedi <jim@corebsd.or.id>
-# $FreeBSD: head/security/xmlsec1/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmlsec1
 PORTVERSION=	1.2.19
