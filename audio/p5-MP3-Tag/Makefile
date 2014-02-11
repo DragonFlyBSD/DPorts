@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy
-# $FreeBSD: head/audio/p5-MP3-Tag/Makefile 342693 2014-02-05 13:11:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	MP3-Tag
 PORTVERSION=	1.13
