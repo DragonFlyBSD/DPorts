@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-serpent/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	serpent
 PORTVERSION=	1.3
