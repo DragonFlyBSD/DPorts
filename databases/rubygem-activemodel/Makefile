@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/rubygem-activemodel/Makefile 335699 2013-12-05 20:27:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	activemodel
 PORTVERSION=	3.2.16
