@@ -1,5 +1,5 @@
 # Created by: estith
-# $FreeBSD: devel/p5-Devel-SimpleTrace/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-SimpleTrace
 PORTVERSION=	0.08
