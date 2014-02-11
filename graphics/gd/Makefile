@@ -1,5 +1,5 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD: graphics/gd/Makefile 337838 2013-12-28 06:37:48Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	libgd
 PORTVERSION=	2.1.0
