@@ -1,5 +1,5 @@
 # Created by: Peter Haight <peterh@sapros.com>
-# $FreeBSD: head/security/py-m2crypto/Makefile 342496 2014-02-04 11:37:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	m2crypto
 PORTVERSION=	0.22.3
