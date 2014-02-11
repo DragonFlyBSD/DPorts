@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: head/devel/p5-DateTime-Locale/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Locale
 PORTVERSION=	0.45
@@ -17,6 +17,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
