@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-List-UtilsBy/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	List-UtilsBy
 PORTVERSION=	0.09
