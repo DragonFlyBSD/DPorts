@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-hspec-expectations/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	hspec-expectations
 PORTVERSION=	0.3.2
