@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types/Makefile 337270 2013-12-23 17:54:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types
 PORTVERSION=	0.41
