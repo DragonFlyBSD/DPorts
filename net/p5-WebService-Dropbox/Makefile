@@ -1,5 +1,5 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: net/p5-WebService-Dropbox/Makefile 341989 2014-01-31 12:47:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WebService-Dropbox
 PORTVERSION=	1.18
