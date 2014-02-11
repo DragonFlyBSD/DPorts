@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-zope.schema/Makefile 338824 2014-01-05 21:02:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.schema
 PORTVERSION=	4.2.2
