@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: dns/p5-POE-Component-Client-DNS/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-DNS
 PORTVERSION=	1.053
