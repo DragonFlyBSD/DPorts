@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/displaycalibrator/Makefile 342222 2014-02-01 23:46:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	displaycalibrator
 PORTVERSION=	0.7
