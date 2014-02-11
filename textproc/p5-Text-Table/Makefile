@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: textproc/p5-Text-Table/Makefile 340574 2014-01-21 08:17:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Table
 PORTVERSION=	1.127
