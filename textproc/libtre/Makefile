@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/textproc/libtre/Makefile 343105 2014-02-06 15:06:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libtre
 PORTVERSION=	0.8.0
