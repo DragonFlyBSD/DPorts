@@ -1,5 +1,5 @@
 # Created by: Brian Buchanan <brian@CSUA.Berkeley.EDU>
-# $FreeBSD: x11-toolkits/plib/Makefile 339298 2014-01-09 23:02:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	plib
 PORTVERSION=	1.8.5
