@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/gervill/Makefile 341814 2014-01-30 08:46:51Z gahr $
+# $FreeBSD$
 
 PORTNAME=	gervill
 PORTVERSION=	1.0
