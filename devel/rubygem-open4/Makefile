@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: devel/rubygem-open4/Makefile 336369 2013-12-13 19:34:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	open4
 PORTVERSION=	1.3.0
