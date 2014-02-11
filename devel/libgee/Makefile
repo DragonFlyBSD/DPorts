@@ -1,5 +1,5 @@
 # Created by: Frank Steinborn <steinex@nognu.de>
-# $FreeBSD: devel/libgee/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 #    $MCom: ports/devel/libgee/Makefile,v 1.13 2012/10/14 20:47:22 kwm Exp $
 
 PORTNAME=	libgee
