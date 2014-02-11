@@ -1,5 +1,5 @@
 # Created by: Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-XS/Makefile 332538 2013-11-02 20:02:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JSON-XS
 PORTVERSION=	3.01
