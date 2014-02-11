@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: deskutils/horde-kronolith/Makefile 341400 2014-01-27 13:17:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	kronolith
 PORTVERSION=	4.1.4
