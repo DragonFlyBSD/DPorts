@@ -1,5 +1,5 @@
 # Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-# $FreeBSD: devel/psptoolchain-newlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=		newlib
 PORTVERSION=		1.20.0
