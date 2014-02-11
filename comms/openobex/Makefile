@@ -1,4 +1,4 @@
-# $FreeBSD: comms/openobex/Makefile 328666 2013-09-29 10:44:54Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	openobex
 PORTVERSION=	1.7.1
