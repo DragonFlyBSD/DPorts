@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/rubygem-gibbler/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gibbler
 PORTVERSION=	0.9.0
