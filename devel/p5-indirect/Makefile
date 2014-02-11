@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: devel/p5-indirect/Makefile 341691 2014-01-29 07:59:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	indirect
 PORTVERSION=	0.29
