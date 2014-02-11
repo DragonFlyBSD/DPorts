@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: textproc/libtext-charwidth-perl/Makefile 340562 2014-01-21 07:28:52Z mat $
+# $FreeBSD$
 
 PORTNAME=	libtext-charwidth-perl
 PORTVERSION=	0.04
