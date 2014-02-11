@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s16@gmail.com>
-# $FreeBSD: portuguese/gimp-help-pt_BR/Makefile 342129 2014-02-01 12:49:26Z makc $
+# $FreeBSD$
 
 CATEGORIES=	portuguese graphics
 
