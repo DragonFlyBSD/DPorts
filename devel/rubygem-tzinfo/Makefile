@@ -1,5 +1,5 @@
 # Created by: Rui Lopes (rgl ruilopes com)
-# $FreeBSD: head/devel/rubygem-tzinfo/Makefile 335529 2013-12-02 18:36:18Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tzinfo
 PORTVERSION=	0.3.38
