@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: security/nessus/Makefile 333529 2013-11-11 18:48:29Z tijl $
+# $FreeBSD$
 
 PORTNAME=	nessus
 PORTVERSION=	2.2.9

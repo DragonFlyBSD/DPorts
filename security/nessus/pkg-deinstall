@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/nessus/pkg-deinstall 333529 2013-11-11 18:48:29Z tijl $
+# $FreeBSD: head/security/nessus/pkg-deinstall 333529 2013-11-11 18:48:29Z tijl $
 #
 
 ECHO_CMD=echo
