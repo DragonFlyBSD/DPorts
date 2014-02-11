@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-devise/Makefile 334438 2013-11-20 18:32:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	devise
 PORTVERSION=	3.2.1
