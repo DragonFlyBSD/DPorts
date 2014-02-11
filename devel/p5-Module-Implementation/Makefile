@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Module-Implementation/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Module-Implementation
 PORTVERSION=	0.07
