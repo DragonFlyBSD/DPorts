@@ -1,5 +1,5 @@
 # Created by: David MacKenzie <djm@pix.net>
-# $FreeBSD: audio/id3v2/Makefile 334831 2013-11-25 11:33:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	id3v2
 PORTVERSION=	0.1.12
