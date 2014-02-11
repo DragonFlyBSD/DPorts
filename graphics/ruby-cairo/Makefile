@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ruby-cairo/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/graphics/ruby-cairo/Makefile,v 1.9 2008/10/19 23:20:49 mezz Exp $
 
 PORTNAME=	cairo
