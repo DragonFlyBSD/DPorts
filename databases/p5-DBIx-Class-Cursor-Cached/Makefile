@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Cursor-Cached/Makefile 328821 2013-09-30 15:49:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Cursor-Cached
 PORTVERSION=	1.001.001
