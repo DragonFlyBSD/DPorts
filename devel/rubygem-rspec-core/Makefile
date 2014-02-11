@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-core/Makefile 335525 2013-12-02 18:36:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rspec-core
 PORTVERSION=	2.14.7
