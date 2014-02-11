@@ -1,5 +1,5 @@
 # Created by: Oleg Ukraincev <oleg@ht-systems.ru>
-# $FreeBSD: textproc/py-stripogram/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	stripogram
 PORTVERSION=	1.4
