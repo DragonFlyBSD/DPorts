@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Future/Makefile 341235 2014-01-26 16:13:53Z culot $
+# $FreeBSD$
 
 PORTNAME=	Future
 PORTVERSION=	0.23
