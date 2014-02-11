@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/hwloc/Makefile 343246 2014-02-07 14:03:38Z decke $
+# $FreeBSD$
 
 PORTNAME=	hwloc
 PORTVERSION=	1.8
