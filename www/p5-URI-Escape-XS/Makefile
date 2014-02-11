@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: www/p5-URI-Escape-XS/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	URI-Escape-XS
 PORTVERSION=	0.10
