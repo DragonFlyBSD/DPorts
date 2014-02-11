@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/libechonest/Makefile 340670 2014-01-21 22:55:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libechonest
 PORTVERSION=	2.0.3
