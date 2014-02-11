@@ -1,5 +1,5 @@
 # Created by: shige
-# $FreeBSD: head/sysutils/eject/Makefile 342664 2014-02-05 08:27:43Z miwi $
+# $FreeBSD$
 
 PORTNAME=	eject
 PORTVERSION=	1.5
