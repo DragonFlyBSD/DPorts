@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: textproc/p5-Net-IDN-Encode/Makefile 333844 2013-11-15 10:42:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-IDN-Encode
 PORTVERSION=	2.005
