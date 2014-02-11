@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IPC-Run-SafeHandles/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IPC-Run-SafeHandles
 PORTVERSION=	0.04
