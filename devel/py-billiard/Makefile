@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-billiard/Makefile 340388 2014-01-20 13:12:26Z wg $
+# $FreeBSD$
 
 PORTNAME=	billiard
 PORTVERSION=	3.3.0.14
