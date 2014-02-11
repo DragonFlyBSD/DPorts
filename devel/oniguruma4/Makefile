@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/devel/oniguruma4/Makefile 342699 2014-02-05 13:45:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	oniguruma
 PORTVERSION=	4.7.1
