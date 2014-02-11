@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: head/devel/p5-autodie/Makefile 342646 2014-02-05 07:57:23Z culot $
+# $FreeBSD$
 
 PORTNAME=	autodie
 PORTVERSION=	2.23
