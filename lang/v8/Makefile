@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: head/lang/v8/Makefile 343315 2014-02-08 10:05:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	v8
 PORTVERSION=	3.18.5
