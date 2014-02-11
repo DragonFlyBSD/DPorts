@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Info/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Module-Info
 PORTVERSION=	0.35
@@ -16,8 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		module_info.1 pfunc.1
-MAN3=		B::BUtils.3 B::Module::Info.3 Module::Info.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
