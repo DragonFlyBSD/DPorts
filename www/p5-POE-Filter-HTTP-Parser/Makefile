@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POE-Filter-HTTP-Parser/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Filter-HTTP-Parser
 PORTVERSION=	1.06
