@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Term-Sk/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	Term-Sk
 PORTVERSION=	0.14
