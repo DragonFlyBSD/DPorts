@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-soap4r/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	soap4r
 PORTVERSION=	1.5.8
