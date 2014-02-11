@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc46/Makefile 334934 2013-11-26 14:13:15Z gerald $
+# $FreeBSD$
 
 PORTNAME=	gcc46
 PORTVERSION=	4.6.4
