@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: graphics/libwmf/Makefile 337225 2013-12-23 02:46:49Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libwmf
 PORTVERSION=	0.2.8.4
