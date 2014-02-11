@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libunistring/Makefile 333700 2013-11-13 15:20:19Z wg $
+# $FreeBSD$
 
 PORTNAME=	libunistring
 PORTVERSION=	0.9.3
