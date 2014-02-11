@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@FreeBSD.org>
-# $FreeBSD: devel/gdcm/Makefile 336346 2013-12-13 14:11:16Z gahr $
+# $FreeBSD$
 
 PORTNAME=	gdcm
 PORTVERSION=	${GDCM_MAJOR}.${GDCM_MINOR}.${GDCM_PATCH}
