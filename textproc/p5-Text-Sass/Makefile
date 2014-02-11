@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Sass/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Sass
 PORTVERSION=	0.97
