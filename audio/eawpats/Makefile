@@ -1,5 +1,5 @@
 # Created by: Jonathan Lennox <lennox@cs.columbia.edu>
-# $FreeBSD: head/audio/eawpats/Makefile 343449 2014-02-09 10:32:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	eawpats
 PORTVERSION=	12
