@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: devel/rubygem-method_source/Makefile 332039 2013-10-30 02:39:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	method_source
 PORTVERSION=	0.8.1
