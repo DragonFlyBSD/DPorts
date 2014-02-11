@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs21/files/patch-src_dispnew.c 327953 2013-09-23 08:46:16Z ashish $
+$FreeBSD: head/editors/emacs21/files/patch-src_dispnew.c 327953 2013-09-23 08:46:16Z ashish $
 
 --- src/dispnew.c.orig
 +++ src/dispnew.c

@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs21/files/patch-src_syntax.c 327953 2013-09-23 08:46:16Z ashish $
+$FreeBSD: head/editors/emacs21/files/patch-src_syntax.c 327953 2013-09-23 08:46:16Z ashish $
 
 --- src/syntax.c.orig
 +++ src/syntax.c
