@@ -1,8 +1,8 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: textproc/p5-JavaScript-Minifier/Makefile 340787 2014-01-23 03:28:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JavaScript-Minifier
-PORTVERSION=	1.08
+PORTVERSION=	1.11
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ZOFFIX
