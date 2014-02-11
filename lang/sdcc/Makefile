@@ -1,4 +1,4 @@
-# $FreeBSD: lang/sdcc/Makefile 331302 2013-10-22 18:20:01Z tijl $
+# $FreeBSD$
 
 PORTNAME=	sdcc
 PORTVERSION=	3.3.0
