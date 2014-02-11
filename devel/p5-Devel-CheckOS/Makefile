@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: head/devel/p5-Devel-CheckOS/Makefile 342714 2014-02-05 14:37:24Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	Devel-CheckOS
 PORTVERSION=	1.71
