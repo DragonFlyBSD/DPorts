@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/imageviewer/Makefile 340739 2014-01-22 22:09:20Z antoine $
+# $FreeBSD$
 
 PORTNAME=	imageviewer
 PORTVERSION=	0.6.3
