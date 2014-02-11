@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-Data-Section/Makefile 336271 2013-12-12 15:46:47Z culot $
+# $FreeBSD$
 
 PORTNAME=	Data-Section
 PORTVERSION=	0.200005
