@@ -1,4 +1,4 @@
-# $FreeBSD: audio/kio-audiocd/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kio-audiocd
 PORTVERSION=	${KDE4_VERSION}
