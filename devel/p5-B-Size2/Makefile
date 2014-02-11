@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Size2/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	B-Size2
 PORTVERSION=	2.07
