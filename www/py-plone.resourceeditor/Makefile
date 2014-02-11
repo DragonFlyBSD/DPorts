@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.resourceeditor/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plone.resourceeditor
 PORTVERSION=	1.0
