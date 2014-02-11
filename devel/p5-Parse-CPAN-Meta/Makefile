@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Parse-CPAN-Meta/Makefile 342265 2014-02-02 10:25:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Parse-CPAN-Meta
 PORTVERSION=	1.44.04
