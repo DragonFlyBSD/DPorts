@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/gtkdatabox/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtkdatabox
 PORTVERSION=	0.9.2.0
