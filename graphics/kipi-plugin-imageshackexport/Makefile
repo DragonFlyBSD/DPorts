@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kipi-plugin-imageshackexport/Makefile 340628 2014-01-21 18:17:23Z makc $
+# $FreeBSD$
 
 PORTNAME=	kipi-plugin-${KIPI_PLUGIN}
 PORTVERSION=	${DIGIKAM_VER}
