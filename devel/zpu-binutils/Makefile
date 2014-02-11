@@ -1,4 +1,4 @@
-# $FreeBSD: devel/zpu-binutils/Makefile 339304 2014-01-10 00:14:15Z db $
+# $FreeBSD$
 
 PORTNAME=	zpu-binutils
 PORTVERSION=	1.0
