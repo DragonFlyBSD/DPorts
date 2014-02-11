@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: multimedia/deforaos-player/Makefile 332768 2013-11-04 20:03:46Z wg $
+# $FreeBSD$
 
 PORTNAME=	player
 PORTVERSION=	0.1.6
