@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Loader/Makefile 340432 2014-01-20 17:25:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Schema-Loader
 PORTVERSION=	0.07039
