@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime/Makefile 338456 2014-01-02 16:23:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DateTime
 PORTVERSION=	1.06
