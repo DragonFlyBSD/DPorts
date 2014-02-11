@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/py-RPyC/Makefile 340283 2014-01-19 13:37:38Z mva $
+# $FreeBSD$
 
 PORTNAME=	rpyc
 PORTVERSION=	3.2.3
