@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-MySQL/Makefile 342001 2014-01-31 15:23:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Crypt-MySQL
 PORTVERSION=	0.04
