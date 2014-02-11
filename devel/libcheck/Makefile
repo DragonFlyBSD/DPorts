@@ -1,5 +1,5 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD: head/devel/libcheck/Makefile 340780 2014-01-23 03:27:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libcheck
 PORTVERSION=	0.9.12
