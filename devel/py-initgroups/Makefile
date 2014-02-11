@@ -1,7 +1,8 @@
-# $FreeBSD: devel/py-initgroups/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	initgroups
 PORTVERSION=	2.13.0
+PORTREVISION=	1
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,11 +13,9 @@ COMMENT=	Convenience uid/gid helper function used in Zope2
 
 LICENSE=	ZPL21
 
-PYEASYINSTALL_ARCHDEP=	yes
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_ZIP=		yes
-
-NO_STAGE=	yes
 
 .include <bsd.port.mk>
