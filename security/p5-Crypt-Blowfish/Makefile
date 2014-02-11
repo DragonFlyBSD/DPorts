@@ -1,5 +1,5 @@
 # Created by: patrick@mindstep.com
-# $FreeBSD: head/security/p5-Crypt-Blowfish/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Blowfish
 PORTVERSION=	2.14
