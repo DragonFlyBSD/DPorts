@@ -1,5 +1,5 @@
 # Created by: steve
-# $FreeBSD: textproc/p5-XML-SimpleObject/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-SimpleObject
 PORTVERSION=	0.53
