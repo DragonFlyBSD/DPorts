@@ -1,9 +1,9 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: audio/madplay/Makefile 337251 2013-12-23 14:02:49Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	madplay
 PORTVERSION=	0.15.2b
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	SF/mad/${PORTNAME}/${PORTVERSION} \
 		ftp://ftp.mars.org/pub/mpeg/
