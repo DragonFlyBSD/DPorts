@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/misc/chmlib/Makefile 338991 2014-01-07 09:58:08Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	chmlib
 PORTVERSION=	0.40
