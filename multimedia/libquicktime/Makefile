@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/libquicktime/Makefile 330909 2013-10-19 16:43:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	libquicktime
 PORTVERSION=	1.2.4
