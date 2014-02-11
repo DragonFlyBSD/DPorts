@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Protocol-SocketIO/Makefile 339473 2014-01-12 03:52:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Protocol-SocketIO
 PORTVERSION=	0.06
