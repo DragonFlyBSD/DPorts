@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-z3c.form/Makefile 338852 2014-01-06 09:47:35Z rm $
+# $FreeBSD$
 
 PORTNAME=	z3c.form
 PORTVERSION=	3.0.2
