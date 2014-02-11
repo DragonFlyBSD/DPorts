@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/p5-XML-Handler-Dtd2Html/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Handler-Dtd2Html
 PORTVERSION=	0.42
