@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: head/devel/ecore-main/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD$
 
 PORTNAME=	main
 PORTVERSION=	1.7.9
@@ -24,6 +24,9 @@ USE_LDCONFIG=	yes
 EXAMPLESDIR=	${PREFIX}/share/examples/ecore
 
 .include "Makefile.inc"
+
+OPTIONS_DEFINE=	NLS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
