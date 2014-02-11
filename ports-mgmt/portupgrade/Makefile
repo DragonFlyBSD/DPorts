@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: ports-mgmt/portupgrade/Makefile 336504 2013-12-15 02:25:07Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	portupgrade
 PORTVERSION=	2.4.12
