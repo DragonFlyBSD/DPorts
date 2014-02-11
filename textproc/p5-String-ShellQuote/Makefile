@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: head/textproc/p5-String-ShellQuote/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	String-ShellQuote
 PORTVERSION=	1.04
