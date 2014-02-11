@@ -1,5 +1,5 @@
 # Created by: Dryice Liu
-# $FreeBSD: devel/cedet/Makefile 334078 2013-11-17 11:51:01Z mva $
+# $FreeBSD$
 
 PORTNAME=	cedet
 PORTVERSION=	1.1
