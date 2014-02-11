@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: textproc/qt4-xmlpatterns-tool/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	xmlpatterns-tool
 DISTVERSION=	${QT4_VERSION}
