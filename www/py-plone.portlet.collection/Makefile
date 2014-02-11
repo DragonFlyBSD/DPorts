@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.portlet.collection/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.portlet.collection
 PORTVERSION=	2.1.5
