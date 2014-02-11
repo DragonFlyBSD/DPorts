@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/py-gimp/Makefile 332760 2013-11-04 19:26:51Z kwm $
+# $FreeBSD$
 #    $MCom: ports/graphics/py-gimp/Makefile,v 1.6 2009/08/25 00:06:39 marcus Exp $
 
 PORTNAME=	gimp
