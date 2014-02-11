@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: www/p5-LWPx-ParanoidAgent/Makefile 333911 2013-11-15 18:59:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	LWPx-ParanoidAgent
 PORTVERSION=	1.10
