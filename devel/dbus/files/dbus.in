@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: devel/dbus/files/dbus.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/dbus/files/dbus.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON

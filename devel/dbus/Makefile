@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/dbus/Makefile 340108 2014-01-17 21:04:50Z kwm $
+# $FreeBSD$
 #   $MCom: ports/devel/dbus/Makefile,v 1.58 2013/02/15 15:06:49 kwm Exp $
 
 PORTNAME=	dbus
