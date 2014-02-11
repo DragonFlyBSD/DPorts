@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/dns/p5-Net-Domain-TLD/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Domain-TLD
 PORTVERSION=	1.70
