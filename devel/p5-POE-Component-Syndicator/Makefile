@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: devel/p5-POE-Component-Syndicator/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Syndicator
 PORTVERSION=	0.06
