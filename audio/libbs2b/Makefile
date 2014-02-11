@@ -1,5 +1,5 @@
 # Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-# $FreeBSD: audio/libbs2b/Makefile 338654 2014-01-04 17:50:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libbs2b
 PORTVERSION=	3.1.0
