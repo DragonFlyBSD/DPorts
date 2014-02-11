@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/libgfx/Makefile 341107 2014-01-25 21:18:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libgfx
 DISTVERSION=	1.1.0
