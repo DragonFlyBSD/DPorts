@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: devel/p5-MooseX-Types-Common/Makefile 338219 2013-12-31 04:25:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-Common
 PORTVERSION=	0.001012
