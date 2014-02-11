@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ZSQLMethods/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ZSQLMethods
 PORTVERSION=	2.13.4
