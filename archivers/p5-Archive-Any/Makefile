@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-Archive-Any/Makefile 328597 2013-09-28 17:12:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Archive-Any
 PORTVERSION=	0.09.32
