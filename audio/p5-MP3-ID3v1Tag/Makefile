@@ -1,5 +1,5 @@
 # Created by: Leo Kim <leo@florida.sarang.net>
-# $FreeBSD: audio/p5-MP3-ID3v1Tag/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MP3-ID3v1Tag
 PORTVERSION=	1.11
