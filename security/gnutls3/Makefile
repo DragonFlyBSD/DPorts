@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: security/gnutls3/Makefile 338132 2013-12-30 16:19:54Z wg $
+# $FreeBSD$
 
 PORTNAME=	gnutls
 PORTVERSION=	3.1.18
