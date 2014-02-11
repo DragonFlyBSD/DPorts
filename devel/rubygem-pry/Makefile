@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: devel/rubygem-pry/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	pry
 PORTVERSION=	0.9.12.2
