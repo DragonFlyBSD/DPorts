@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Flux/Makefile 328790 2013-09-30 14:10:43Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-Flux
 PORTVERSION=	0.01
