@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-firebug/Makefile 341202 2014-01-26 15:08:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	firebug
 PORTVERSION=	1.12.6
