@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/p5-CGI.pm/Makefile 341798 2014-01-30 03:11:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI.pm
 PORTVERSION=	3.63
