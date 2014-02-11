@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: security/p5-PGP-Sign/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PGP-Sign
 PORTVERSION=	0.20
