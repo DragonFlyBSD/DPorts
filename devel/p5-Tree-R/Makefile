@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/p5-Tree-R/Makefile 330816 2013-10-19 01:43:19Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Tree-R
 PORTVERSION=	0.06
