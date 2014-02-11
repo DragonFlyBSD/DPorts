@@ -1,8 +1,9 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: www/rubygem-sinatra/Makefile 335497 2013-12-02 14:28:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sinatra
 PORTVERSION=	1.4.4
+PORTREVISION=	1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -18,5 +19,8 @@ RUN_DEPENDS=	rubygem-rack>=1.4:${PORTSDIR}/www/rubygem-rack \
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e '34 s|~>|">="|' ${WRKSRC}/${GEM_NAME}.gemspec
 
 .include <bsd.port.mk>
