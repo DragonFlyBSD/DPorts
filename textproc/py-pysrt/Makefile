@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: textproc/py-pysrt/Makefile 333486 2013-11-11 11:21:37Z wg $
+# $FreeBSD$
 
 PORTNAME=	pysrt
 PORTVERSION=	0.5.1
