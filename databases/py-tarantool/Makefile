@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/py-tarantool/Makefile 332204 2013-10-31 07:14:03Z vg $
+# $FreeBSD$
 
 PORTNAME=	tarantool
 PORTVERSION=	0.3.4
