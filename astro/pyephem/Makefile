@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: astro/pyephem/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pyephem
 PORTVERSION=	3.7.5.1
