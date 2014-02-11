@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: net-mgmt/p5-Net-IPAddress/Makefile 340943 2014-01-24 23:14:40Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net-IPAddress
 PORTVERSION=	1.10
