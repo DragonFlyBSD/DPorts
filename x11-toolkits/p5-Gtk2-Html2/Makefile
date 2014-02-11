@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/p5-Gtk2-Html2/Makefile 333343 2013-11-09 21:46:37Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Html2
 PORTVERSION=	0.03
