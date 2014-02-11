@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@toha.org.ua>
-# $FreeBSD: java/jakarta-commons-pool/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	commons-pool
 PORTVERSION=	1.6
