@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: devel/librcd/Makefile 334809 2013-11-25 03:12:35Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	librcd
 PORTVERSION=	0.1.14
