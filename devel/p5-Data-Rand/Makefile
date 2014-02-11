@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Rand/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Data-Rand
 PORTVERSION=	0.0.4
@@ -15,7 +15,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Data::Rand.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
