@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Reporter/Makefile 333547 2013-11-12 08:03:56Z lth $
+# $FreeBSD$
 
 PORTNAME=	Test-Reporter
 PORTVERSION=	1.60
