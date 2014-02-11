@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/py-chart/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	chart
 PORTVERSION=	1.39
