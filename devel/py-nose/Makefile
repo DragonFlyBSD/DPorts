@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: head/devel/py-nose/Makefile 343585 2014-02-10 05:32:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nose
 PORTVERSION=	1.3.0
