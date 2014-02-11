@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/p5-Music-Audioscrobbler-Submit/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Music-Audioscrobbler-Submit
 PORTVERSION=	0.05
