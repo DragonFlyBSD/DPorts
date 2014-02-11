@@ -1,5 +1,5 @@
 # Created by: ache@FreeBSD.org
-# $FreeBSD: head/databases/p5-MLDBM/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MLDBM
 PORTVERSION=	2.05
