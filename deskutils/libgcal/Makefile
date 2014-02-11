@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: deskutils/libgcal/Makefile 336352 2013-12-13 15:03:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libgcal
 PORTVERSION=	0.9.6
