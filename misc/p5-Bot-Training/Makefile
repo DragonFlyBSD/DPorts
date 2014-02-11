@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: misc/p5-Bot-Training/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	Bot-Training
 PORTVERSION=	0.04
@@ -29,8 +29,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	bot-training.1
-MAN3=	Bot::Training.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
