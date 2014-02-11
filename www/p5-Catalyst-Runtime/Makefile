@@ -1,5 +1,5 @@
 # Created by: lbr
-# $FreeBSD: www/p5-Catalyst-Runtime/Makefile 337447 2013-12-25 19:39:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Runtime
 PORTVERSION=	5.90053
