@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@fruitfly.org>
-# $FreeBSD: textproc/p5-Text-Shellwords/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Text-Shellwords
 PORTVERSION=	1.08
