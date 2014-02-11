@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/py-gtksourceview/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.24 2010/04/19 11:30:28 kwm Exp $
 
 PORTNAME=	gtksourceview
