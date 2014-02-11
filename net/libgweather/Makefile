@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/libgweather/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/net/libgweather/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libgweather
