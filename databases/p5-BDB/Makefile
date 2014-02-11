@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-BDB/Makefile 328812 2013-09-30 15:27:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	BDB
 PORTVERSION=	1.90
