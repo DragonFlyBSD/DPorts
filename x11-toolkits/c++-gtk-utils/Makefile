@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: x11-toolkits/c++-gtk-utils/Makefile 340944 2014-01-24 23:23:49Z pawel $
+# $FreeBSD$
 
 PORTNAME=	c++-gtk-utils
 PORTVERSION=	2.2.5
