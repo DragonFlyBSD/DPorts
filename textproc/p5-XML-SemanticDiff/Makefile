@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-SemanticDiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	XML-SemanticDiff
 PORTVERSION=	1.0002
@@ -15,8 +15,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	XML::SemanticDiff.3 \
-	XML::SemanticDiff::BasicHandler.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
