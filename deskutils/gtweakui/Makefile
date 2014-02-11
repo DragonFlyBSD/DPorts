@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: deskutils/gtweakui/Makefile 341869 2014-01-30 18:12:19Z antoine $
+# $FreeBSD$
 #    $MCom: ports/deskutils/gtweakui/Makefile,v 1.2 2007/05/19 21:36:03 marcus Exp $
 
 PORTNAME=	gTweakUI
