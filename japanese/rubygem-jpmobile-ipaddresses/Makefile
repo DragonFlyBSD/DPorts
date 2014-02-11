@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: japanese/rubygem-jpmobile-ipaddresses/Makefile 340903 2014-01-24 14:49:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jpmobile-ipaddresses
 PORTVERSION=	0.0.2
