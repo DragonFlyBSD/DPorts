@@ -1,5 +1,5 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: audio/p5-Ogg-Vorbis-Header-PurePerl/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Ogg-Vorbis-Header-PurePerl
 PORTVERSION=	1.0
