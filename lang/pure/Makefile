@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: lang/pure/Makefile 339074 2014-01-08 08:32:42Z rene $
+# $FreeBSD$
 
 PORTNAME=	pure
 PORTVERSION=	0.58
