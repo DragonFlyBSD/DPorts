@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: misc/p5-Array-Diff/Makefile 332733 2013-11-04 14:41:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Array-Diff
 PORTVERSION=	0.07
