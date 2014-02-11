@@ -1,5 +1,5 @@
 # Created by: Kirill Bezzubets <kirill@solaris.ru>
-# $FreeBSD: comms/gammu/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gammu
 PORTVERSION=	1.33.0
