@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: www/libepc/Makefile 341682 2014-01-29 07:25:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libepc
 PORTVERSION=	0.3.11
