@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-MethodAttributes/Makefile 333902 2013-11-15 17:55:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-MethodAttributes
 PORTVERSION=	0.29
