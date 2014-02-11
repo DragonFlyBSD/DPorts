@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-ExtUtils-XSpp/Makefile 342157 2014-02-01 14:42:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ExtUtils-XSpp
 PORTVERSION=	0.16.03
