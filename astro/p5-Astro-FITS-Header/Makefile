@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-FITS-Header/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Astro-FITS-Header
 PORTVERSION=	3.07
