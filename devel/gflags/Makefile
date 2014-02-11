@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/gflags/Makefile 337265 2013-12-23 17:18:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gflags
 PORTVERSION=	2.0
