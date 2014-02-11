@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/security/p5-Digest-MD4/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Digest-MD4
 PORTVERSION=	1.9
