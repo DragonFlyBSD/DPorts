@@ -1,5 +1,5 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: security/regripper/Makefile 334358 2013-11-19 22:24:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	regripper
 DISTVERSION=	2.8
