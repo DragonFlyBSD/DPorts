@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: head/devel/uthash/Makefile 343159 2014-02-06 22:04:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	uthash
 PORTVERSION=	1.9.8p2
