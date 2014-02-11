@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/rubygem-drydock/Makefile 335227 2013-11-29 21:31:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	drydock
 PORTVERSION=	0.6.9
