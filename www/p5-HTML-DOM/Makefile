@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-DOM/Makefile 331573 2013-10-25 13:07:04Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	HTML-DOM
 PORTVERSION=	0.053
