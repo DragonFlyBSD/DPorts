@@ -1,5 +1,5 @@
 # Created by: Rouslan Iskhakov <rouslan@rshell.net>
-# $FreeBSD: devel/p5-IPC-Signal/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	IPC-Signal
 PORTVERSION=	1.00
