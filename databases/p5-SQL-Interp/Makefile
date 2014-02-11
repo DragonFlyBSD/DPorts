@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: databases/p5-SQL-Interp/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SQL-Interp
 PORTVERSION=	1.22
