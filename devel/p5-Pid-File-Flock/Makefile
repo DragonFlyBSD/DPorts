@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Pid-File-Flock/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Pid-File-Flock
 PORTVERSION=	0.08
