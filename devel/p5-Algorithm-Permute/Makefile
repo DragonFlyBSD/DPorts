@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Algorithm-Permute/Makefile 338875 2014-01-06 13:26:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-Permute
 PORTVERSION=	0.12
