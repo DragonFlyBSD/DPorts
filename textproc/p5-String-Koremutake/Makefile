@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-Koremutake/Makefile 340601 2014-01-21 11:52:07Z mat $
+# $FreeBSD$
 
 PORTNAME=	String-Koremutake
 PORTVERSION=	0.30
