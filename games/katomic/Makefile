@@ -1,4 +1,4 @@
-# $FreeBSD: games/katomic/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	katomic
 PORTVERSION=	${KDE4_VERSION}
