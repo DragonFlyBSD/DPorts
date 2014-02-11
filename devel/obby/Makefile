@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: devel/obby/Makefile 342176 2014-02-01 15:50:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	obby
 PORTVERSION=	0.4.8
@@ -17,6 +17,8 @@ LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20 \
 USES=	pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
