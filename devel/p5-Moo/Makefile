@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Moo/Makefile 338358 2014-01-01 05:02:57Z wen $
+# $FreeBSD$
 
 PORTNAME=	Moo
 PORTVERSION=	1.004002
