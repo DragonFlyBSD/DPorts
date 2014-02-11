@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-File-Find-Rule-Filesys-Virtual/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Find-Rule-Filesys-Virtual
 PORTVERSION=	1.22
