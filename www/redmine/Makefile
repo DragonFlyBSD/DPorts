@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/redmine/Makefile 342242 2014-02-02 03:42:45Z swills $
+# $FreeBSD$
 
 PORTNAME=	redmine
 PORTVERSION=	2.3.3
