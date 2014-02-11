@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/gnome-common/Makefile 328011 2013-09-23 15:08:15Z kwm $
+# $FreeBSD$
 #    $MCom: ports/trunk/devel/gnome-common/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-common
