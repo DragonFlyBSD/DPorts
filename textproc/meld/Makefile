@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: textproc/meld/Makefile 340861 2014-01-23 20:55:24Z pawel $
+# $FreeBSD$
 
 PORTNAME=	meld
 PORTVERSION=	1.8.4
