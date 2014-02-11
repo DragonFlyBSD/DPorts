@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gdm/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11/gdm/Makefile,v 1.192 2012/09/03 16:28:28 mezz Exp $
 
 PORTNAME=	gdm
