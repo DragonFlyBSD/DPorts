@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: devel/imake/Makefile 336376 2013-12-13 23:09:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	imake
 PORTVERSION=	1.0.6
