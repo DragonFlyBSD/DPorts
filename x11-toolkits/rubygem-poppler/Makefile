@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/rubygem-poppler/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	poppler
 PORTVERSION=	2.0.2
