@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Params-Validate/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Params-Validate
 PORTVERSION=	0.18
