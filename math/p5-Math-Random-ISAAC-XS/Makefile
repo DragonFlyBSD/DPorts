@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Random-ISAAC-XS/Makefile 342152 2014-02-01 14:41:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Math-Random-ISAAC-XS
 PORTVERSION=	1.004
