@@ -1,5 +1,5 @@
 # Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-# $FreeBSD: mail/p5-Mail-Ezmlm/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-Ezmlm
 PORTVERSION=	0.08.2
