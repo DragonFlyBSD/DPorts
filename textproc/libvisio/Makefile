@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/libvisio/Makefile 328065 2013-09-23 21:46:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libvisio
 PORTVERSION=	0.0.31
+PORTREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 
