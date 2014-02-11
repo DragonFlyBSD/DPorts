@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Class-Mix/Makefile 342002 2014-01-31 15:23:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Class-Mix
 PORTVERSION=	0.005
