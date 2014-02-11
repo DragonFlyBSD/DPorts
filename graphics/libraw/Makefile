@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: head/graphics/libraw/Makefile 341289 2014-01-26 21:20:03Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libraw
 PORTVERSION=	0.15.4
