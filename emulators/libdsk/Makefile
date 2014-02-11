@@ -1,5 +1,5 @@
 # Created by: pixel
-# $FreeBSD: emulators/libdsk/Makefile 342168 2014-02-01 15:19:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libdsk
 PORTVERSION=	1.2.1
