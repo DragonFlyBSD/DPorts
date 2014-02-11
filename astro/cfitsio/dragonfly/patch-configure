@@ -1,0 +1,11 @@
+--- configure.orig	2013-06-10 19:04:56.000000000 +0000
++++ configure
+@@ -2304,7 +2304,7 @@ case $host in
+ 	ARCH=`uname -p`
+ 	EXT="darwin"
+ 	;;
+-    *freebsd*)
++    *freebsd*|*dragonfly*)
+ 	ARCH="linux"
+ 	EXT="lnx"
+ 	;;
