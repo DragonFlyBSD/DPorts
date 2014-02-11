@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-Method-Modifiers-Fast/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Method-Modifiers-Fast
 PORTVERSION=	0.041
