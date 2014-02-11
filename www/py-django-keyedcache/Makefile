@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-keyedcache/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	django-keyedcache
 PORTVERSION=	1.4.4
