@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Method-Signatures/Makefile 338210 2013-12-31 01:22:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Method-Signatures
 PORTVERSION=	0.47
