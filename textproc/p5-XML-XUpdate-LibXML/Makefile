@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: textproc/p5-XML-XUpdate-LibXML/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	XML-XUpdate-LibXML
 PORTVERSION=	0.6.0
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		xupdate.1
-MAN3=		XML::Normalize::LibXML.3 XML::XUpdate::LibXML.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
