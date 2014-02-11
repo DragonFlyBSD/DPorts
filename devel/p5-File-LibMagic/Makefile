@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-LibMagic/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	File-LibMagic
 PORTVERSION=	0.96
