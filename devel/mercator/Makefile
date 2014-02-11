@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: devel/mercator/Makefile 334470 2013-11-21 08:19:34Z oliver $
+# $FreeBSD$
 
 PORTNAME=	mercator
 PORTVERSION=	0.3.2
