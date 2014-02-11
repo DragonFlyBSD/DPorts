@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-zope.pagetemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zope.pagetemplate
 PORTVERSION=	3.6.3
