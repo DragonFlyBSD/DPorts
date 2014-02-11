@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: net/qtweetlib/Makefile 341914 2014-01-31 06:39:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	qtweetlib
 PORTVERSION=	0.5
