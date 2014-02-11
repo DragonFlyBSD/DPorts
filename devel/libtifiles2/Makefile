@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libtifiles2/Makefile 331284 2013-10-22 16:01:23Z tijl $
+# $FreeBSD$
 
 PORTNAME=	libtifiles2
 PORTVERSION=	1.1.6
