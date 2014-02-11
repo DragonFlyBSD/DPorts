@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-AnyEvent-ReverseHTTP/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-ReverseHTTP
 PORTVERSION=	0.05
