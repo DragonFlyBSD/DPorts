@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Config-IniFiles/Makefile 341545 2014-01-28 13:17:28Z culot $
+# $FreeBSD$
 
 PORTNAME=	Config-IniFiles
 PORTVERSION=	2.83
