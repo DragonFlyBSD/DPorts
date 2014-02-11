@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: devel/p5-MooseX-InsideOut/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MooseX-InsideOut
 PORTVERSION=	0.106
