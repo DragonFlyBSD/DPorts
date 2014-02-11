@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-ZopeUndo/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	ZopeUndo
 PORTVERSION=	2.12.0
