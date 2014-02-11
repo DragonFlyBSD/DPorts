@@ -1,9 +1,9 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: databases/couchdb/Makefile 339529 2014-01-12 18:50:42Z antoine $
+# $FreeBSD$
 
 PORTNAME=	couchdb
 PORTVERSION=	1.5.0
-PORTEPOCH=	1
+PORTEPOCH=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_APACHE}
 MASTER_SITE_SUBDIR=	couchdb/source/${PORTVERSION}
