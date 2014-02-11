@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/gcc-aux/Makefile.common 333362 2013-11-10 00:16:51Z marino $
+# $FreeBSD$
 
 .include "Makefile.version"
 

@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/lang/gcc-aux/Makefile 333362 2013-11-10 00:16:51Z marino $
+# $FreeBSD$
 
 PORTNAME=	gcc-aux
 PORTVERSION=	${SNAPSHOT}
