@@ -1,5 +1,5 @@
 # Created by: Jeff Burchell <toxic@doobie.com>
-# $FreeBSD: archivers/libpar2/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libpar2
 PORTVERSION=	0.4
@@ -20,6 +20,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 USE_LDCONFIG=	yes
 USES=		pkgconfig
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
