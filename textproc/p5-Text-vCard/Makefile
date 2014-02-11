@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-vCard/Makefile 341600 2014-01-28 15:34:46Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=		Text-vCard
 PORTVERSION=		3.00
