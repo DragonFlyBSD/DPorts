@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: x11-toolkits/hippo-canvas/Makefile 341910 2014-01-31 05:24:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	hippo-canvas
 PORTVERSION=	0.3.0
