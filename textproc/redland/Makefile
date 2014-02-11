@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/textproc/redland/Makefile 342387 2014-02-03 07:16:49Z makc $
+# $FreeBSD$
 
 PORTNAME=	redland
 PORTVERSION=	1.0.17
