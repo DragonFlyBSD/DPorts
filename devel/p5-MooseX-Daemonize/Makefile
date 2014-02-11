@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Daemonize/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Daemonize
 PORTVERSION=	0.18
