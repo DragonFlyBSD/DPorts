@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/p5-Redis/Makefile 335200 2013-11-29 17:22:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Redis
 PORTVERSION=	1.9650
