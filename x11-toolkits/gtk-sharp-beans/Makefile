@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/gtk-sharp-beans/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtk-sharp-beans
 PORTVERSION=	2.14.1
