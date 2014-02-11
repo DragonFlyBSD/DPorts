@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: emulators/mtools/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mtools
 PORTVERSION=	4.0.10
