@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.blob/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plone.app.blob
 PORTVERSION=	1.5.8
