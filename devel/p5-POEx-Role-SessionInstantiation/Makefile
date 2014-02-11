@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-POEx-Role-SessionInstantiation/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	POEx-Role-SessionInstantiation
 PORTVERSION=	1.102610
