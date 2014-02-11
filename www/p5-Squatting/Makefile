@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Squatting/Makefile 341722 2014-01-29 12:20:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Squatting
 PORTVERSION=	0.82
