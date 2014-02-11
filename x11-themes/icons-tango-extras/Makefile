@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/icons-tango-extras/Makefile 341358 2014-01-27 09:35:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	icons-tango-extras
 PORTVERSION=	0.1.0
