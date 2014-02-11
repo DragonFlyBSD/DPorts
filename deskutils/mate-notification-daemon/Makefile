@@ -1,5 +1,5 @@
 # Createdy by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: deskutils/mate-notification-daemon/Makefile 335558 2013-12-03 10:56:52Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-notification-daemon
 PORTVERSION=	1.6.1
