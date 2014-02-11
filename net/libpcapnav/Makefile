@@ -1,5 +1,5 @@
 # Created by: Yann Berthier <yb@sainte-barbe.org>
-# $FreeBSD: net/libpcapnav/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libpcapnav
 PORTVERSION=	0.8
