@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/libsvg/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/graphics/libsvg/Makefile,v 1.3 2005/07/04 00:11:29 marcus Exp $
 
 PORTNAME=	libsvg
