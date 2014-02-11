@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: net/p5-Geo-IP/Makefile 336020 2013-12-09 19:30:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-IP
 PORTVERSION=	1.43
