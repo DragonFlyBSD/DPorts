@@ -1,4 +1,4 @@
-# $FreeBSD: math/cantor/Makefile 336424 2013-12-14 09:01:59Z antoine $
+# $FreeBSD$
 
 PORTNAME=	cantor
 PORTVERSION=	${KDE4_VERSION}
