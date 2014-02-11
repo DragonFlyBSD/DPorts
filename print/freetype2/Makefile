@@ -1,5 +1,5 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD: head/print/freetype2/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD$
 #   $MCom: ports/print/freetype2/Makefile,v 1.28 2011/10/25 18:31:21 kwm Exp $
 
 PORTNAME=	freetype2
