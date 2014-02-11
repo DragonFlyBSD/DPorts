@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: mail/p5-Email-Sender/Makefile 335417 2013-12-01 17:58:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Email-Sender
 PORTVERSION=	1.300006
