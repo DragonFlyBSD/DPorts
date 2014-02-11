@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-themes/xmms-bluecurve-theme/Makefile 341336 2014-01-27 08:20:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xmms-bluecurve-theme
 PORTREVISION=	2
