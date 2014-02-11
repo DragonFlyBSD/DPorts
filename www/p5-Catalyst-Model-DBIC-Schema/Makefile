@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Model-DBIC-Schema/Makefile 341810 2014-01-30 08:28:00Z des $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Model-DBIC-Schema
 PORTVERSION=	0.62
