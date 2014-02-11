@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/p5-Text-Patch/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Patch
 PORTVERSION=	1.8
