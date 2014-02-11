@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/kopete-kde4/Makefile 332698 2013-11-04 12:09:05Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	kopete
 PORTVERSION=	${KDE4_VERSION}
