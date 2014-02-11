@@ -2,7 +2,7 @@
 #
 # Author: Emanuel Haupt <ehaupt@FreeBSD.org>
 #
-# $FreeBSD: net/socat/files/socat.in 341381 2014-01-27 11:50:59Z ehaupt $
+# $FreeBSD: head/net/socat/files/socat.in 342584 2014-02-04 18:26:29Z sunpoet $
 #
 
 # PROVIDE: socat
@@ -24,9 +24,9 @@ load_rc_config $name
 
 start_precmd="socat_prestart"
 pidfile=/var/run/socat.pid
+procname="%%PREFIX%%/bin/socat"
 command=/usr/sbin/daemon
-command_args=" -f -p ${pidfile} /usr/local/bin/socat ${socat_flags}"
-procname=/usr/local/bin/socat
+command_args=" -f -p ${pidfile} ${procname} ${socat_flags}"
 
 socat_prestart()
 {
