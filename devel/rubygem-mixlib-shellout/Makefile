@@ -1,5 +1,5 @@
 # Created by: ndewing@experts-exchange.com
-# $FreeBSD: devel/rubygem-mixlib-shellout/Makefile 340901 2014-01-24 14:46:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mixlib-shellout
 PORTVERSION=	1.2.0
