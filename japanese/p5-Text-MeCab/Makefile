@@ -1,5 +1,5 @@
 # Created by: TAOKA Fumiyoshi <fmysh@iijmio-mail.jp>
-# $FreeBSD: japanese/p5-Text-MeCab/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=		Text-MeCab
 PORTVERSION=		0.20009
