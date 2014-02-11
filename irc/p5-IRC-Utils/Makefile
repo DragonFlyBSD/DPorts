@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: irc/p5-IRC-Utils/Makefile 341420 2014-01-27 16:20:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	IRC-Utils
 PORTVERSION=	0.12
