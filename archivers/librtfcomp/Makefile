@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: archivers/librtfcomp/Makefile 334257 2013-11-18 19:53:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	librtfcomp
 PORTVERSION=	1.3
