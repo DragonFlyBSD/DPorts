@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: math/plplot/Makefile 329045 2013-10-02 13:17:06Z thierry $
+# $FreeBSD$
 
 PORTNAME=	plplot
 PORTVERSION=	5.9.10
