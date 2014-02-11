@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/poker-eval/Makefile 332799 2013-11-05 01:08:11Z danilo $
+# $FreeBSD$
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
