@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/asis/Makefile 333400 2013-11-10 14:59:13Z marino $
+# $FreeBSD$
 
 PORTNAME=	asis
 PORTVERSION=	2011
