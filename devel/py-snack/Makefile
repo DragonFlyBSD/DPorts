@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-snack/Makefile 336855 2013-12-18 18:50:29Z wg $
+# $FreeBSD$
 
 PORTNAME=	snack
 PORTVERSION=	0.52.16
