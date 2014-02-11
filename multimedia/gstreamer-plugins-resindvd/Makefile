@@ -1,7 +1,7 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer-plugins-resindvd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer resindvd plugin
