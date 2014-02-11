@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: news/p5-POE-Component-Client-NNTP/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-NNTP
 PORTVERSION=	2.22
