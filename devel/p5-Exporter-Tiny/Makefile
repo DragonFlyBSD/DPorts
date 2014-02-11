@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Exporter-Tiny/Makefile 340413 2014-01-20 17:02:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Exporter-Tiny
 PORTVERSION=	0.034
