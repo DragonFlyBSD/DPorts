@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Set-CrossProduct/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Set-CrossProduct
 PORTVERSION=	1.95
@@ -14,8 +14,4 @@ COMMENT=	Work with the cross product of two or more sets
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	cross.1
-MAN3=	Set::CrossProduct.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
