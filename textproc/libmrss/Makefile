@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/libmrss/Makefile 340558 2014-01-21 07:22:11Z mat $
+# $FreeBSD$
 
 PORTNAME=	libmrss
 PORTVERSION=	0.19.2
