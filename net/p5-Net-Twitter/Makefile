@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Twitter/Makefile 340047 2014-01-17 14:38:47Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	Net-Twitter
 PORTVERSION=	4.01002
