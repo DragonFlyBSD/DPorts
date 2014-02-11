@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-IO-Socket-Multicast6/Makefile 341948 2014-01-31 09:01:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	IO-Socket-Multicast6
 PORTVERSION=	0.03
