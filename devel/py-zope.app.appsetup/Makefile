@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zope.app.appsetup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zope.app.appsetup
 PORTVERSION=	3.16.0
