@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-locker/Makefile 332770 2013-11-04 20:08:04Z wg $
+# $FreeBSD$
 
 PORTNAME=	locker
 PORTVERSION=	0.2.1
