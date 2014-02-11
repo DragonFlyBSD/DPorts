@@ -1,5 +1,5 @@
 # Created by: Peter Hawkins <thepish@FreeBSD.org>
-# $FreeBSD: x11-toolkits/xmhtml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	XmHTML
 PORTVERSION=	1.1.7
