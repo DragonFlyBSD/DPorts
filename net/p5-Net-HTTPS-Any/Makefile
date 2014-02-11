@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: net/p5-Net-HTTPS-Any/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-HTTPS-Any
 PORTVERSION=	0.10
