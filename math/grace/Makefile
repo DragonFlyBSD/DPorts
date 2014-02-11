@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.de>
-# $FreeBSD: math/grace/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	grace
 PORTVERSION=	5.1.23
