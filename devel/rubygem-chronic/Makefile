@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-chronic/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	chronic
 PORTVERSION=	0.9.1
