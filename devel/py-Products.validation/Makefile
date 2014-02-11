@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-Products.validation/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.validation
 PORTVERSION=	2.0
