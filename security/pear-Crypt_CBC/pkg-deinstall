@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/pear-Crypt_CBC/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/security/pear-Crypt_CBC/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 #
 # Remove package declaration from PEAR's registry.
 
