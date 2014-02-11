@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-gtk2hs-buildtools/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gtk2hs-buildtools
 PORTVERSION=	0.12.4
