@@ -1,5 +1,5 @@
 # Created by: Evgueni V. Gavrilov <aquatique@rusunix.org>
-# $FreeBSD: devel/silc-toolkit/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	silc
 PORTVERSION=	1.1.10
