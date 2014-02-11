@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: multimedia/xmms/Makefile 331565 2013-10-25 09:02:56Z tijl $
+# $FreeBSD$
 
 PORTNAME=	xmms
 PORTVERSION=	1.2.11
