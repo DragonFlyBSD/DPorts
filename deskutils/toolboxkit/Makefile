@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/toolboxkit/Makefile 341881 2014-01-30 19:55:06Z antoine $
+# $FreeBSD$
 
 PORTNAME=	toolbox
 PORTVERSION=	0.8
