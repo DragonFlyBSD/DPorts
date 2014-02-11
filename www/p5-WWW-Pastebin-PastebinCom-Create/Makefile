@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Pastebin-PastebinCom-Create/Makefile 340789 2014-01-23 03:28:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	WWW-Pastebin-PastebinCom-Create
 PORTVERSION=	1.003
