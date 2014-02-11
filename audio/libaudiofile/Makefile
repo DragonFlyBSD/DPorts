@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: head/audio/libaudiofile/Makefile 333231 2013-11-08 14:31:40Z kwm $
+# $FreeBSD$
 #    $MCom: ports/trunk/audio/libaudiofile/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libaudiofile
