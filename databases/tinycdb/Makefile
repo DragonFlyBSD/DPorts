@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/databases/tinycdb/Makefile 336073 2013-12-10 18:13:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tinycdb
 PORTVERSION=	0.78
