@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/py-distutils-extra/Makefile 335315 2013-11-30 18:25:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	distutils-extra
 PORTVERSION=	2.38
