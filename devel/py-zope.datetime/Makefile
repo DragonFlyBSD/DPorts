@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-zope.datetime/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zope.datetime
 PORTVERSION=	3.4.1
