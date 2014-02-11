@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-base64-conduit/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	base64-conduit
 PORTVERSION=	1.0.0
