@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-gtk/Makefile 338028 2013-12-29 17:08:28Z crees $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-gtk
 
