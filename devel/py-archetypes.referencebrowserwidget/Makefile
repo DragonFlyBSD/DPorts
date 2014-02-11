@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-archetypes.referencebrowserwidget/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	archetypes.referencebrowserwidget
 PORTVERSION=	2.4.19
