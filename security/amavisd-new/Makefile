@@ -1,4 +1,4 @@
-# $FreeBSD: security/amavisd-new/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	amavisd-new
 PORTVERSION=	2.8.0
