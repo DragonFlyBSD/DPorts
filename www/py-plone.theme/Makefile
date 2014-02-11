@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.theme/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	plone.theme
 PORTVERSION=	2.1
