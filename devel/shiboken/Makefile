@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/shiboken/Makefile 340659 2014-01-21 20:53:55Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	shiboken
 PORTVERSION=	1.1.1
