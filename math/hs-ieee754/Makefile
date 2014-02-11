@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-ieee754/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ieee754
 PORTVERSION=	0.7.3
