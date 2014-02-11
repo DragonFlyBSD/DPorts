@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Lexical-Persistence/Makefile 332679 2013-11-04 10:23:49Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Lexical-Persistence
 PORTVERSION=	1.023
