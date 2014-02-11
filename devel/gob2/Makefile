@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/devel/gob2/Makefile 342920 2014-02-06 02:41:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gob2
 PORTVERSION=	2.0.17
