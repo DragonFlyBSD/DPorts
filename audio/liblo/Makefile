@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/liblo/Makefile 342059 2014-01-31 19:49:42Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	liblo
 PORTVERSION=	0.28
