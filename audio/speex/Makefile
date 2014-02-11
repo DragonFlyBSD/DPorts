@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/audio/speex/Makefile 342612 2014-02-04 22:02:31Z naddy $
+# $FreeBSD$
 
 PORTNAME=	speex
 DISTVERSION=	1.2rc1
