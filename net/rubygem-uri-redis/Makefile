@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/rubygem-uri-redis/Makefile 335233 2013-11-29 21:31:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	uri-redis
 PORTVERSION=	0.4.2
