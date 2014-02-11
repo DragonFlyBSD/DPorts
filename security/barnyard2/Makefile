@@ -1,4 +1,4 @@
-# $FreeBSD: security/barnyard2/Makefile 335636 2013-12-04 21:41:02Z wg $
+# $FreeBSD$
 
 PORTNAME=	barnyard2
 PORTVERSION=	1.13
