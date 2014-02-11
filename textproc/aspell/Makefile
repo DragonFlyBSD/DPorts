@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: head/textproc/aspell/Makefile 341537 2014-01-28 12:02:27Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aspell
 PORTVERSION=	0.60.6.1
