@@ -1,5 +1,5 @@
 # Created by: Rink Springer <rink@FreeBSD.org>
-# $FreeBSD: www/p5-ClearSilver/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ClearSilver
 PORTVERSION=	0.10.5
