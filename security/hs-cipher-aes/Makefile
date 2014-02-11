@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-cipher-aes/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	cipher-aes
 PORTVERSION=	0.1.8
