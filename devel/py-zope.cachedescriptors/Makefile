@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zope.cachedescriptors/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zope.cachedescriptors
 PORTVERSION=	3.5.1
