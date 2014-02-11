@@ -1,5 +1,5 @@
 # Created by: Stephen Roznowski (sjr@home.com)
-# $FreeBSD: textproc/p5-Parse-Syslog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Parse-Syslog
 PORTVERSION=	1.10
