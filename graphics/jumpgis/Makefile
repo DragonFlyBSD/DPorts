@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: graphics/jumpgis/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jumpgis
 PORTVERSION=	1.1.2
@@ -13,6 +13,9 @@ EXTRACT_ONLY=	jump-${PORTVERSION}.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A GUI based application for viewing and processing spatial data
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 WRKSRC=		${WRKDIR}/jump
 EXTRACT_AFTER_ARGS=	-d ${WRKSRC}
