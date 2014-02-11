@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: multimedia/py-enzyme/Makefile 337481 2013-12-26 10:41:43Z wg $
+# $FreeBSD$
 
 PORTNAME=	enzyme
 PORTVERSION=	0.4.1
