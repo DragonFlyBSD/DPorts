@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: devel/rote/Makefile 340964 2014-01-25 00:28:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rote
 PORTVERSION=	0.2.8
