@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Object-Declare/Makefile 332127 2013-10-30 15:19:23Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Object-Declare
 PORTVERSION=	0.22
