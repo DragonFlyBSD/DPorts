@@ -1,5 +1,5 @@
 # Created by: Rene Ladan
-# $FreeBSD: x11-toolkits/ocaml-lablgtk2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lablgtk2
 PORTVERSION=	2.16.0
