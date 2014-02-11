@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-FatPacker/Makefile 339505 2014-01-12 14:31:58Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	App-FatPacker
 PORTVERSION=	0.010000
