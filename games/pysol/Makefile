@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/pysol/Makefile 341138 2014-01-25 23:39:21Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pysol
 PORTVERSION=	4.82
