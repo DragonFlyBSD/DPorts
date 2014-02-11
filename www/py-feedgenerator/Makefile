@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <jlaffaye@FreeBSD.org>
-# $FreeBSD: www/py-feedgenerator/Makefile 338301 2013-12-31 13:29:31Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	feedgenerator
 PORTVERSION=	1.6
