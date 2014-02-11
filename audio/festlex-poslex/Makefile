@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: head/audio/festlex-poslex/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festlex-poslex
 PORTVERSION=	1.4.1
