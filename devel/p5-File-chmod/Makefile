@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: devel/p5-File-chmod/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	File-chmod
 PORTVERSION=	0.32
