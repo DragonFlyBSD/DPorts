@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Apache-LogFormat-Compiler/Makefile 339488 2014-01-12 09:30:06Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Apache-LogFormat-Compiler
 PORTVERSION=	0.22
