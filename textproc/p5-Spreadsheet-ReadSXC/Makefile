@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: textproc/p5-Spreadsheet-ReadSXC/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	Spreadsheet-ReadSXC
 PORTVERSION=	0.20
