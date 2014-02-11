@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Sereal-Decoder/Makefile 339579 2014-01-13 10:21:14Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Sereal-Decoder
 PORTVERSION=	2.03
