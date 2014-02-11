@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Perl-Critic/Makefile 333896 2013-11-15 17:40:36Z mat $
+# $FreeBSD$
 
 PORTNAME=	Perl-Critic
 PORTVERSION=	1.12.1
