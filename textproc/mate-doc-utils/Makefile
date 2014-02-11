@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/mate-doc-utils/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-doc-utils
 PORTVERSION=	1.6.2
