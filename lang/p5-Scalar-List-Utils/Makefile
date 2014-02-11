@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/lang/p5-Scalar-List-Utils/Makefile 336872 2013-12-19 07:23:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Scalar-List-Utils
 PORTVERSION=	1.35
