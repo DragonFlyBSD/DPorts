@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: head/textproc/py-zope.i18nmessageid/Makefile 343556 2014-02-09 23:13:52Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.i18nmessageid
 PORTVERSION=	3.6.1
