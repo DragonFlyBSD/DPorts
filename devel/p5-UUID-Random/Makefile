@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: devel/p5-UUID-Random/Makefile 333501 2013-11-11 14:07:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	UUID-Random
 PORTVERSION=	0.04
