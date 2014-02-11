@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: textproc/p5-POD2-Base/Makefile 340476 2014-01-20 20:55:48Z mat $
+# $FreeBSD$
 
 PORTNAME=	POD2-Base
 PORTVERSION=	0.043
