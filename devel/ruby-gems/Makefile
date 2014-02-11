@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky <alecn2002@yandex.ru>
-# $FreeBSD: head/devel/ruby-gems/Makefile 334808 2013-11-25 02:43:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	gems
 PORTVERSION=	1.8.29
