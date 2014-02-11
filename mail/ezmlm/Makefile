@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: mail/ezmlm/Makefile 336244 2013-12-12 05:05:56Z eadler $
+# $FreeBSD$
 
 PORTNAME=	ezmlm
 PORTVERSION=	0.53
