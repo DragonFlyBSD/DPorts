@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: www/awstats/Makefile 332874 2013-11-05 17:00:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	awstats
 PORTVERSION=	7.2
