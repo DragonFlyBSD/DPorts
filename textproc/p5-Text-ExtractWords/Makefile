@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: textproc/p5-Text-ExtractWords/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-ExtractWords
 PORTVERSION=	0.08
