@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/llvm31/Makefile 341852 2014-01-30 15:51:08Z brooks $
+# $FreeBSD$
 
 PORTNAME=	llvm31
 PORTVERSION=	3.1
