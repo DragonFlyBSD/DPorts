@@ -1,4 +1,4 @@
-# $FreeBSD: comms/spandsp-devel/Makefile 334264 2013-11-18 21:17:31Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	spandsp
 DISTVERSION=	0.0.6pre21
