@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-django-evolution/Makefile 337180 2013-12-22 10:03:15Z antoine $
+# $FreeBSD$
 
 PORTNAME=	django-evolution
 PORTVERSION=	0.6.8
