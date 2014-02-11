@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/trayer/Makefile 341411 2014-01-27 14:43:22Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	trayer
 PORTVERSION=	1.1.6
