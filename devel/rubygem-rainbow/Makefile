@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rainbow/Makefile 341135 2014-01-25 23:07:59Z tota $
+# $FreeBSD$
 
 PORTNAME=	rainbow
 PORTVERSION=	2.0.0
