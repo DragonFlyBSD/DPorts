@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: head/devel/p5-Params-Validate/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Params-Validate
 PORTVERSION=	1.08
