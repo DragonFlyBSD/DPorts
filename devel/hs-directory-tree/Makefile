@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-directory-tree/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	directory-tree
 PORTVERSION=	0.11.0
