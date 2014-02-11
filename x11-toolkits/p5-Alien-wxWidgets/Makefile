@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: x11-toolkits/p5-Alien-wxWidgets/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Alien-wxWidgets
 PORTVERSION=	0.62
