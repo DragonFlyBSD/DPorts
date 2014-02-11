@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bugzilla40/Makefile 339753 2014-01-15 05:31:35Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	bugzilla
 PORTVERSION=	4.0.11
