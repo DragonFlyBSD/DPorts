@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/tesseract/Makefile 340162 2014-01-18 09:51:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tesseract
 PORTVERSION=	3.02.02
