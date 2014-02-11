@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-Markdown/Makefile 333027 2013-11-06 18:58:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Pod-Markdown
 PORTVERSION=	1.401000
