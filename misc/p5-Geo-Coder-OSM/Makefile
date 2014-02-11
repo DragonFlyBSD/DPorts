@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-OSM/Makefile 333762 2013-11-14 15:18:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-OSM
 PORTVERSION=	0.03
