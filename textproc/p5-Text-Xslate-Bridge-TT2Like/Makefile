@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-Xslate-Bridge-TT2Like/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Xslate-Bridge-TT2Like
 PORTVERSION=	0.00010
