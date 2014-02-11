@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/newt/files/patch-newt.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/newt/files/patch-newt.c 340725 2014-01-22 17:40:44Z mat $
 
 --- newt.c	2009-09-24 11:03:09.000000000 -0400
 +++ newt.c	2010-01-06 01:04:01.000000000 -0500

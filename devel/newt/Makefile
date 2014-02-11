@@ -1,4 +1,4 @@
-# $FreeBSD: devel/newt/Makefile 336856 2013-12-18 18:57:48Z wg $
+# $FreeBSD$
 
 PORTNAME=	newt
 PORTVERSION=	0.52.16
