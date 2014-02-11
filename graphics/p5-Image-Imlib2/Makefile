@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: graphics/p5-Image-Imlib2/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Image-Imlib2
 PORTVERSION=	2.03
