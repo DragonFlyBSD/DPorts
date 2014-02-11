@@ -1,5 +1,5 @@
 # Created by: gary@hotlava.com
-# $FreeBSD: graphics/sane-backends/Makefile 339601 2014-01-13 15:09:33Z danilo $
+# $FreeBSD$
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.24
