@@ -1,4 +1,4 @@
-# $FreeBSD: net/libzmq4/Makefile 335105 2013-11-28 16:07:59Z koobs $
+# $FreeBSD$
 
 PORTNAME=	libzmq4
 PORTVERSION=	4.0.3
