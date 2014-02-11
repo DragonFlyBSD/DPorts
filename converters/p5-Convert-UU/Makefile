@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: converters/p5-Convert-UU/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Convert-UU
 PORTVERSION=	0.52.01
@@ -14,8 +14,4 @@ COMMENT=	Perl5 module for uuencode and uudecode
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		puuencode.1 puudecode.1
-MAN3=		Convert::UU.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
