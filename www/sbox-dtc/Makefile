@@ -1,5 +1,5 @@
 # Created by: Thomas Goirand
-# $FreeBSD: www/sbox-dtc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sbox
 PORTVERSION=	1.10
@@ -9,6 +9,9 @@ MASTER_SITES=	http://files.bsdroot.lv/my/FreeBSD/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A CGI wrapper for Web site hosting services to safely grant CGI
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 SBOX_UIDMIN?=	1000
 SBOX_GIDMIN?=	1000
