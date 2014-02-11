@@ -1,7 +1,8 @@
-# $FreeBSD: net/libcmis/Makefile 336415 2013-12-14 01:13:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libcmis
 PORTVERSION=	0.4.1
+PORTREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	SF/${PORTNAME}
 
