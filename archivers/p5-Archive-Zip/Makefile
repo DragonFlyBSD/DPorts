@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: head/archivers/p5-Archive-Zip/Makefile 343258 2014-02-07 15:08:17Z culot $
+# $FreeBSD$
 
 PORTNAME=	Archive-Zip
 PORTVERSION=	1.37
