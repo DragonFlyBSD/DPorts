@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: devel/py-pyzmq/Makefile 335102 2013-11-28 15:42:34Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pyzmq
 PORTVERSION=	14.0.1
