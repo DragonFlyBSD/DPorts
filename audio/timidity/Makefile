@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/timidity/Makefile 343154 2014-02-06 21:26:25Z antoine $
+# $FreeBSD$
 
 PORTNAME=	timidity
 PORTVERSION=	0.2i
