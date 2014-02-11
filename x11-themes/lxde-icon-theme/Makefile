@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11-themes/lxde-icon-theme/Makefile 339188 2014-01-08 23:38:55Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxde-icon-theme
 PORTVERSION=	0.5.0
