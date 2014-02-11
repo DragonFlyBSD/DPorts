@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: audio/p5-Net-FreeDB/Makefile 332643 2013-11-03 19:58:18Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net-FreeDB
 PORTVERSION=	0.08
