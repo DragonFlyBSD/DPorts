@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Mixin-Linewise/Makefile 337284 2013-12-23 18:30:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Mixin-Linewise
 PORTVERSION=	0.104
