@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: head/devel/p5-PerlIO-eol/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	PerlIO-eol
 PORTVERSION=	0.14
