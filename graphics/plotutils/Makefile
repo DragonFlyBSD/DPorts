@@ -1,5 +1,5 @@
 # Created by: Chuck Robey <chuckr@FreeBSD.org>
-# $FreeBSD: graphics/plotutils/Makefile 341300 2014-01-26 22:54:53Z stephen $
+# $FreeBSD$
 
 PORTNAME=	plotutils
 PORTVERSION=	2.6
