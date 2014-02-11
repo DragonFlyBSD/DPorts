@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: misc/p5-Software-License/Makefile 334344 2013-11-19 19:54:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Software-License
 PORTVERSION=	0.103008
