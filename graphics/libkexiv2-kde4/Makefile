@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libkexiv2-kde4/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libkexiv2
 PORTVERSION=	${KDE4_VERSION}
