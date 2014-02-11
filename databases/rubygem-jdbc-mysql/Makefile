@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov,com>
-# $FreeBSD: databases/rubygem-jdbc-mysql/Makefile 340899 2014-01-24 14:45:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jdbc-mysql
 PORTVERSION=	5.1.25
