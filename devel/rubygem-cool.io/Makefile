@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-cool.io/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cool.io
 PORTVERSION=	1.1.0
