@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Component-ACCEPT_CONTEXT/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Component-ACCEPT_CONTEXT
 PORTVERSION=	0.07
