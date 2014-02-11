@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-# $FreeBSD: head/graphics/freeimage/Makefile 341353 2014-01-27 09:13:02Z gahr $
+# $FreeBSD$
 
 PORTNAME=	freeimage
 PORTVERSION=	3.15.4
