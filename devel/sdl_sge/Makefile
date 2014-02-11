@@ -1,5 +1,5 @@
 # Created by: Jona Joachim <walkingshadow@grummel.net>
-# $FreeBSD: devel/sdl_sge/Makefile 330689 2013-10-17 23:51:12Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	sdl_sge
 PORTVERSION=	0.030809
