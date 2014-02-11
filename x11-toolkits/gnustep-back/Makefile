@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/gnustep-back/Makefile 341514 2014-01-28 08:34:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnustep-back
 PORTVERSION=	0.24.0
