@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: head/games/doom-data/Makefile 341171 2014-01-26 12:55:03Z ak $
+# $FreeBSD$
 
 PORTNAME=	data
 PORTVERSION=	1.0
