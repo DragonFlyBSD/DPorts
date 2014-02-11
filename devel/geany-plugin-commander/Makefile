@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-commander/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	geany-plugin-commander
 PORTVERSION=	${GEANY_VER}
