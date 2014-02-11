@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: devel/p5-Data-Integer/Makefile 342001 2014-01-31 15:23:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Data-Integer
 PORTVERSION=	0.004
