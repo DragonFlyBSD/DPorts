@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/shared-desktop-ontologies/Makefile 332999 2013-11-06 14:53:31Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	shared-desktop-ontologies
 PORTVERSION=	0.11.0
