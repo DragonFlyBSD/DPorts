@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/py-zope.authentication/Makefile 343605 2014-02-10 09:09:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.authentication
 PORTVERSION=	3.7.1
