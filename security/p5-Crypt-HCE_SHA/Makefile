@@ -1,5 +1,5 @@
 # Created by: Gregory Neil Shapiro <gshapiro@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-HCE_SHA/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-HCE_SHA
 PORTVERSION=	0.70
