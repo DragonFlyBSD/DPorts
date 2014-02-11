@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: x11-wm/e17-module-weather/Makefile 330253 2013-10-13 21:11:17Z gblach $
+# $FreeBSD$
 
 PORTNAME=	weather
 PORTVERSION=	20130510
@@ -19,6 +19,8 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig
 USE_EFL=	edje libtool_hack modarch_hack
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
