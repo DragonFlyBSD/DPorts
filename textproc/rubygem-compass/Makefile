@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: textproc/rubygem-compass/Makefile 335246 2013-11-29 23:00:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	compass
 PORTVERSION=	0.12.2
