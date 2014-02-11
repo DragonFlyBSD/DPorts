@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.Archetypes/Makefile 341155 2014-01-26 07:57:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.Archetypes
 PORTVERSION=	1.9.4
