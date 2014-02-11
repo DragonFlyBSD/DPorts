@@ -1,5 +1,5 @@
 # Created by: jeffhung
-# $FreeBSD: devel/p5-Exception-Handler/Makefile 341628 2014-01-28 16:46:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Exception-Handler
 PORTVERSION=	1.004
