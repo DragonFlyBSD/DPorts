@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/snack/Makefile 340823 2014-01-23 11:15:00Z gahr $
+# $FreeBSD$
 
 PORTNAME=	snack
 PORTVERSION=	2.2.10
