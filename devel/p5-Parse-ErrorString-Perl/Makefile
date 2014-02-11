@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-Parse-ErrorString-Perl/Makefile 329712 2013-10-07 16:16:01Z culot $
+# $FreeBSD$
 
 PORTNAME=	Parse-ErrorString-Perl
 PORTVERSION=	0.20
