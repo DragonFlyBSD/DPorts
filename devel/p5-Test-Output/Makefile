@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Test-Output/Makefile 339406 2014-01-11 08:29:45Z culot $
+# $FreeBSD$
 
 PORTNAME=	Test-Output
 PORTVERSION=	1.03
