@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11-fonts/croscorefonts-fonts-ttf/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	croscorefonts
 PORTVERSION=	1.23.0
