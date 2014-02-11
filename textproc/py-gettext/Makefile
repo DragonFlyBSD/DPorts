@@ -1,7 +1,8 @@
-# $FreeBSD: textproc/py-gettext/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gettext
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,13 +13,11 @@ COMMENT=	Python Gettext po to mo file compiler
 
 LICENSE=	BSD
 
-# Python3 and Pypy 1.7 ready
 USE_PYTHON=		yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	python-${PORTNAME}
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_ZIP=		yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} <= 300
