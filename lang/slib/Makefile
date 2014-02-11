@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD: lang/slib/Makefile 329950 2013-10-10 00:20:42Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	slib
 PORTVERSION=	3b3
