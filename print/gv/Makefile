@@ -1,5 +1,5 @@
 # Created by: tg@FreeBSD.org
-# $FreeBSD: print/gv/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gv
 PORTVERSION=	3.7.4
