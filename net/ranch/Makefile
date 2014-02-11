@@ -1,4 +1,4 @@
-# $FreeBSD: net/ranch/Makefile 334516 2013-11-21 20:00:04Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	ranch
 PORTVERSION=	0.9.0
