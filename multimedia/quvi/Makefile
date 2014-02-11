@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/quvi/Makefile 334536 2013-11-21 23:12:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	quvi
 PORTVERSION=	0.4.2
