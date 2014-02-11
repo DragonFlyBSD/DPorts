@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-AutoXS-Header/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	AutoXS-Header
 PORTVERSION=	1.02
