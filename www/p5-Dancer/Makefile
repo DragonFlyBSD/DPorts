@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Dancer/Makefile 339487 2014-01-12 09:08:26Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Dancer
 PORTVERSION=	1.3120
