@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon
-# $FreeBSD: devel/coccinelle/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	coccinelle
 DISTVERSION=	1.0.0-rc18
