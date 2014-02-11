@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-POE-Component-Schedule/Makefile 331279 2013-10-22 14:40:29Z mat $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Schedule
 PORTVERSION=	0.95
