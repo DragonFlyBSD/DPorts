@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: mail/evolution/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/mail/evolution/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution
