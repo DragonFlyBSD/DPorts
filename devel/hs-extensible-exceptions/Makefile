@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-extensible-exceptions/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	extensible-exceptions
 PORTVERSION=	0.1.1.4
