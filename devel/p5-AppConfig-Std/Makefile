@@ -1,8 +1,8 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/p5-AppConfig-Std/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	AppConfig-Std
-PORTVERSION=	1.08
+PORTVERSION=	1.09
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
