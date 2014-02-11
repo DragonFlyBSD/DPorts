@@ -1,5 +1,5 @@
 # Created by: Bryan Drewery <bryan@shatow.net>
-# $FreeBSD: devel/rubygem-backports/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	backports
 PORTVERSION=	3.3.3
