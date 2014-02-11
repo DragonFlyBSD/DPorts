@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: multimedia/gpac-libgpac/Makefile 337879 2013-12-28 16:33:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gpac
 PORTVERSION=	0.5.0
