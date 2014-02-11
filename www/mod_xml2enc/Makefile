@@ -1,5 +1,5 @@
 # Created by: Marin Atanasov Nikolov <dnaeon@gmail.com>
-# $FreeBSD: www/mod_xml2enc/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_xml2enc
 PORTVERSION=	1.0.3
