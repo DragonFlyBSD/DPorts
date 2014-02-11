@@ -1,5 +1,5 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
-# $FreeBSD: multimedia/totem/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 #   $MCom: ports/multimedia/totem/Makefile,v 1.151 2010/09/27 19:04:37 kwm Exp $
 
 PORTNAME=	totem
