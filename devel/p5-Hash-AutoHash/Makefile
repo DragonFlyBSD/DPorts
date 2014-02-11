@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Hash-AutoHash/Makefile 341989 2014-01-31 12:47:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Hash-AutoHash
 PORTVERSION=	1.17
