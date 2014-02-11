@@ -1,2 +1,0 @@
-LIB_DEPENDS+=	GL:${PORTSDIR}/graphics/libGL
-CFLAGS+=	-I${LOCALBASE}/include
