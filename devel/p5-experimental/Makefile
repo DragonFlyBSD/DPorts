@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-experimental/Makefile 340248 2014-01-19 09:26:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	experimental
 PORTVERSION=	0.006
