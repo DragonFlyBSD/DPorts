@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-cabal-install/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cabal-install
 PORTVERSION=	1.16.0.2
