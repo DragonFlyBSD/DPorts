@@ -1,5 +1,5 @@
 # Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-# $FreeBSD: head/devel/p5-Path-Class/Makefile 336272 2013-12-12 15:50:55Z culot $
+# $FreeBSD$
 
 PORTNAME=	Path-Class
 PORTVERSION=	0.33
