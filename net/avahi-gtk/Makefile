@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-gtk/Makefile 336457 2013-12-14 16:25:21Z kwm $
+# $FreeBSD$
 #   $MCom: ports/net/avahi-gtk/Makefile,v 1.9 2012/07/09 18:22:19 kwm Exp $
 
 PORTREVISION=	1
