@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Page-NoTotalEntries/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Page-NoTotalEntries
 PORTVERSION=	0.02
