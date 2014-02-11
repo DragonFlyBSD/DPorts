@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.behavior/Makefile 327899 2013-09-22 22:21:57Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.behavior
 PORTVERSION=	1.0.2
