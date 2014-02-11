@@ -1,5 +1,5 @@
 # Created by: Lars Erik Gullerud <lerik@nolink.net>
-# $FreeBSD: net/ripe-whois/Makefile 332976 2013-11-06 12:22:29Z mat $
+# $FreeBSD$
 
 PORTNAME=	ripe-whois
 PORTVERSION=	3.2.2
@@ -21,6 +21,8 @@ post-patch::
 	${REINPLACE_CMD} -E \
 		-e '/^bin_PROGRAMS =/ s/whois\$$\(EXEEXT\)/whois3$$(EXEEXT)/' \
 		${WRKSRC}/Makefile.in
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
