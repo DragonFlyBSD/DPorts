@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-sequel/Makefile 335799 2013-12-07 01:02:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sequel
 PORTVERSION=	4.5.0
