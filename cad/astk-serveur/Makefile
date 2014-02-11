@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: cad/astk-serveur/Makefile 328008 2013-09-23 14:21:53Z gahr $
+# $FreeBSD$
 
 PORTNAME=	astk
 PORTVERSION=	1.11.0
