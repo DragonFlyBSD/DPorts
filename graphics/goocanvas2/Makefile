@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/goocanvas2/Makefile 335594 2013-12-03 22:00:29Z kwm $
+# $FreeBSD$
 #    $MCom: ports/trunk/graphics/goocanvas2/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goocanvas
@@ -22,6 +22,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/gtk-doc/html/goocanvas2
+
+OPTIONS_DEFINE=	DOCS NLS 
 
 .include <bsd.port.options.mk>
 
