@@ -1,5 +1,5 @@
 # Created by: Andrew L. Neporada <andrew@chg.ru>
-# $FreeBSD: head/math/gsl/Makefile 342250 2014-02-02 08:22:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gsl
 PORTVERSION=	1.16
