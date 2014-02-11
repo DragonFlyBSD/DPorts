@@ -1,5 +1,5 @@
 # Created by: Andrew Wingorodov <mail@andr.ru>
-# $FreeBSD: devel/pstreams/Makefile 331759 2013-10-27 11:50:24Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	pstreams
 PORTVERSION=	0.8.0
