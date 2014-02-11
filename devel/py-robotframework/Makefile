@@ -1,5 +1,5 @@
 # Created by: Vladimir Chukharev
-# $FreeBSD: head/devel/py-robotframework/Makefile 343450 2014-02-09 10:41:00Z rm $
+# $FreeBSD$
 
 PORTNAME=	robotframework
 PORTVERSION=	2.8.4
