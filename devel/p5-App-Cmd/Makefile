@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: devel/p5-App-Cmd/Makefile 332865 2013-11-05 16:21:04Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	App-Cmd
 PORTVERSION=	0.322
