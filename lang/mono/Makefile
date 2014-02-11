@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: head/lang/mono/Makefile 333989 2013-11-16 12:47:59Z romain $
+# $FreeBSD$
 
 PORTNAME=	mono
 PORTVERSION=	3.2.3
