@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: head/dns/c-ares/Makefile 343369 2014-02-08 17:52:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	c-ares
 PORTVERSION=	1.10.0
