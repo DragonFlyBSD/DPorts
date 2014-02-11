@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: databases/p5-Class-DBI-DATA-Schema/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-DATA-Schema
 PORTVERSION=	1.00
