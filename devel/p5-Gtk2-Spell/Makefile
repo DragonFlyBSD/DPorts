@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: devel/p5-Gtk2-Spell/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Spell
 PORTVERSION=	1.04
