@@ -1,5 +1,5 @@
 # Created by: Stephen J. Roznowski <sjr@home.net>
-# $FreeBSD: head/net-mgmt/p5-SNMP_Session/Makefile 342659 2014-02-05 08:26:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	SNMP_Session
 PORTVERSION=	1.13
