@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-css-text/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	css-text
 PORTVERSION=	0.1.1
