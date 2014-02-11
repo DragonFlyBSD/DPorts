@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-webmock/Makefile 332058 2013-10-30 03:05:18Z swills $
+# $FreeBSD$
 
 PORTNAME=	webmock
 PORTVERSION=	1.13.0
