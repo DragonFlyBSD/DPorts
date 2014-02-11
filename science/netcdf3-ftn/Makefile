@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: science/netcdf3-ftn/Makefile 333016 2013-11-06 17:35:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	netcdf
 PKGNAMESUFFIX=	3-ftn
