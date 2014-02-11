@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-Declare-Parser/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Devel-Declare-Parser
 PORTVERSION=	0.017
@@ -20,12 +20,4 @@ TEST_DEPENDS=	p5-Test-Exception-LessClever>=0:${PORTSDIR}/devel/p5-Test-Exceptio
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Devel::Declare::Interface.3 \
-	Devel::Declare::Parser.3 \
-	Devel::Declare::Parser::Codeblock.3 \
-	Devel::Declare::Parser::Emulate.3 \
-	Devel::Declare::Parser::Method.3 \
-	Devel::Declare::Parser::Sublike.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
