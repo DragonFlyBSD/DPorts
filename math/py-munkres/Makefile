@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: math/py-munkres/Makefile 341542 2014-01-28 12:49:19Z feld $
+# $FreeBSD$
 
 PORTNAME=	munkres
 PORTVERSION=	1.0.5.4
