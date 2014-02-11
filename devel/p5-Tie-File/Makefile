@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Tie-File/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Tie-File
 PORTVERSION=	0.98
