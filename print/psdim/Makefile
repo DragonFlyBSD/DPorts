@@ -1,5 +1,5 @@
 # Created by: e-masson@kisoft-services.com
-# $FreeBSD: print/psdim/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	psdim
 PORTVERSION=	1.4
