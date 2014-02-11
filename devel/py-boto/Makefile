@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: devel/py-boto/Makefile 340204 2014-01-18 19:03:44Z rm $
+# $FreeBSD$
 
 PORTNAME=	boto
 PORTVERSION=	2.23.0
