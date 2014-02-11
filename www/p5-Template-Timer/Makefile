@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Timer/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Template-Timer
 PORTVERSION=	1.00
