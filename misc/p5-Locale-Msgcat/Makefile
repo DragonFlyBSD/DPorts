@@ -1,5 +1,5 @@
 # Created by: Sebastien gioria <gioria@FreeBSD.org>
-# $FreeBSD: misc/p5-Locale-Msgcat/Makefile 332733 2013-11-04 14:41:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Msgcat
 PORTVERSION=	1.03
