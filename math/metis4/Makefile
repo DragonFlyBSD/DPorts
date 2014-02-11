@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/metis4/Makefile 334607 2013-11-22 19:24:37Z bf $
+# $FreeBSD$
 
 PORTNAME=	metis4
 PORTVERSION=	4.0.3
