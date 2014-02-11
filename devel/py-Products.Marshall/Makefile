@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.Marshall/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.Marshall
 PORTVERSION=	2.1.2
