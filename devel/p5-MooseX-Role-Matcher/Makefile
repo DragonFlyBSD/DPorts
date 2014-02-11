@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-MooseX-Role-Matcher/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Role-Matcher
 PORTVERSION=	0.05
