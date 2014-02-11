@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Access/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD$
 
 PORTNAME=	SVN-Access
 PORTVERSION=	0.09
@@ -18,11 +18,8 @@ RUN_DEPENDS=	p5-subversion>=0:${PORTSDIR}/devel/p5-subversion \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		SVN::Access.3 \
-		SVN::Access::Group.3 \
-		SVN::Access::Resource.3
+OPTIONS_DEFINE=	EXAMPLES 
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
@@ -30,9 +27,9 @@ STRIP=
 PORTEXAMPLES=	svnaclmgr.pl
 
 post-install:
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	@cd ${WRKSRC}/examples && ${INSTALL_PROGRAM} ${PORTEXAMPLES} \
-		${EXAMPLESDIR}
+		${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 .include <bsd.port.mk>
