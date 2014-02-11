@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: devel/synfig/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	synfig
 DISTVERSION=	0.63.05
