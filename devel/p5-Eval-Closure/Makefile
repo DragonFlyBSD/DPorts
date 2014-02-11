@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Eval-Closure/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Eval-Closure
 PORTVERSION=	0.11
