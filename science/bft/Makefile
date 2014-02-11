@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: head/science/bft/Makefile 342402 2014-02-03 09:44:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bft
 PORTVERSION=	1.1.5
