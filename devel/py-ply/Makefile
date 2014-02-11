@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-ply/Makefile 339801 2014-01-15 18:40:16Z mva $
+# $FreeBSD$
 
 PORTNAME=	ply
 PORTVERSION=	3.4
