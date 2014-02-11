@@ -1,4 +1,4 @@
-# $FreeBSD: www/mochiweb-basho/Makefile 332012 2013-10-29 21:37:59Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	mochiweb
 PORTVERSION=	1.5.1p6
