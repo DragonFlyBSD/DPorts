@@ -1,5 +1,5 @@
 # Created by: aturetta@commit.it
-# $FreeBSD: head/devel/p5-Test-LongString/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-LongString
 PORTVERSION=	0.15
