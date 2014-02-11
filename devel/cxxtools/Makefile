@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: devel/cxxtools/Makefile 341460 2014-01-27 21:50:45Z nox $
+# $FreeBSD$
 
 PORTNAME=	cxxtools
 PORTVERSION=	2.2.1
