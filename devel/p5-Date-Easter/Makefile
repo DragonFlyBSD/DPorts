@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: devel/p5-Date-Easter/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Date-Easter
 PORTVERSION=	1.14
