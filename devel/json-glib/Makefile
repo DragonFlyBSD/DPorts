@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/json-glib/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/json-glib/Makefile,v 1.22 2012/09/01 23:02:09 mezz Exp $
 
 PORTNAME=	json-glib
