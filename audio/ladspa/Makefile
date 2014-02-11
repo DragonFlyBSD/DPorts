@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: head/audio/ladspa/Makefile 332236 2013-10-31 12:56:19Z arved $
+# $FreeBSD$
 
 PORTNAME=	ladspa
 PORTVERSION=	1.13
