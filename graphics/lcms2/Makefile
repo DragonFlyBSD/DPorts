@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: head/graphics/lcms2/Makefile 337449 2013-12-25 20:10:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	lcms2
 PORTVERSION=	2.5
