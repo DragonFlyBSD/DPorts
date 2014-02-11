@@ -1,5 +1,5 @@
 # Created by: Stefan Esser <se@FreeBSD.org>
-# $FreeBSD: head/print/py-pdf/Makefile 341806 2014-01-30 08:07:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pdf
 PORTVERSION=	1.13
