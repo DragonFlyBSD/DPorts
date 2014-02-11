@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/go.text/Makefile 339552 2014-01-12 21:44:19Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	go.text
 PORTVERSION=	20131227
