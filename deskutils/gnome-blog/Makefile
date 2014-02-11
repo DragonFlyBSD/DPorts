@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-blog/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/gnome-blog/Makefile,v 1.5 2007/08/08 21:52:36 mezz Exp $
 
 PORTNAME=	gnome-blog
