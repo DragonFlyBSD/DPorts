@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-panel/Makefile 340827 2014-01-23 13:50:19Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	xfce4-panel
 PORTVERSION=	4.10.1
