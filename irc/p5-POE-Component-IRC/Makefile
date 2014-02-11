@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: irc/p5-POE-Component-IRC/Makefile 341855 2014-01-30 16:05:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-IRC
 PORTVERSION=	6.83
