@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: head/textproc/antiword/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	antiword
 PORTVERSION=	0.37
