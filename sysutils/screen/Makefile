@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: sysutils/screen/Makefile 341586 2014-01-28 14:45:30Z danfe $
+# $FreeBSD$
 
 PORTNAME=	screen
 PORTVERSION=	4.0.3
