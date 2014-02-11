@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: net/dante/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dante
 PORTVERSION=	1.3.2
