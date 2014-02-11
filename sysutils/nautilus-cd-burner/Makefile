@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/nautilus-cd-burner/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 #   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.149 2009/09/25 18:40:01 kwm Exp $
 
 PORTNAME=	nautilus-cd-burner
