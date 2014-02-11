@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-rack-protection/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD$
 
 PORTNAME=	rack-protection
 PORTVERSION=	1.5.0
