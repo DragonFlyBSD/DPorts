@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/gtk-update-icon-cache/Makefile 336476 2013-12-14 19:25:33Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/graphics/gtk-update-icon-cache/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk-update-icon-cache
