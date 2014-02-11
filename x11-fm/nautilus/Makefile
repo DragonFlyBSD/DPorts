@@ -1,5 +1,5 @@
 # Created by: ade, archie
-# $FreeBSD: x11-fm/nautilus/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-fm/nautilus/Makefile,v 1.212 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	nautilus
