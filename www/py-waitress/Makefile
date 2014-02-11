@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: www/py-waitress/Makefile 335384 2013-12-01 14:10:59Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	waitress
 PORTVERSION=	0.8.8
