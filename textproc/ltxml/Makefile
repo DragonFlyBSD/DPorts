@@ -1,5 +1,5 @@
 # Created by: Samuel Tardieu <sam@inf.enst.fr>
-# $FreeBSD: textproc/ltxml/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ltxml
 PORTVERSION=	1.2.9
