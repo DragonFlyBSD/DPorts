@@ -1,5 +1,5 @@
 # Created by: Douglas K. Rand <rand@meridian-enviro.com>
-# $FreeBSD: comms/libirman/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libirman
 PORTVERSION=	0.4.4
