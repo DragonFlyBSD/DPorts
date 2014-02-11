@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/autogen/Makefile 340751 2014-01-22 23:57:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	autogen
 PORTVERSION=	5.12
