@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: security/gnome-keyring/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.32.1
