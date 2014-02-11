@@ -1,17 +1,19 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/py-venusian/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	venusian
-PORTVERSION=	1.0a6
+PORTVERSION=	1.0a8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	clsung@FreeBSD.org
-COMMENT=	A Python library for deferring decorator actions
+COMMENT=	Python library for deferring decorator actions
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
+LICENSE=	BSD4CLAUSE
 
-NO_STAGE=	yes
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
 .include <bsd.port.mk>
