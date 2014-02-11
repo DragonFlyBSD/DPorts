@@ -1,5 +1,5 @@
 # Created by: Alan Somers <asomers@FreeBSD.org>
-# $FreeBSD: devel/lutok/Makefile 340929 2014-01-24 19:46:56Z jmmv $
+# $FreeBSD$
 
 PORTNAME=	lutok
 PORTVERSION=	0.4
