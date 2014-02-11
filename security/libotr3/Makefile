@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/libotr3/Makefile 331737 2013-10-26 21:36:26Z cs $
+# $FreeBSD$
 
 PORTNAME=	libotr
 PORTVERSION=	3.2.1
