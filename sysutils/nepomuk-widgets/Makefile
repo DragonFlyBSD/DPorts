@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/nepomuk-widgets/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nepomuk-widgets
 PORTVERSION=	${KDE4_VERSION}
