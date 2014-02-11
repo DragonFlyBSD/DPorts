@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-Rose-DateTime/Makefile 336019 2013-12-09 19:30:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Rose-DateTime
 PORTVERSION=	0.540
