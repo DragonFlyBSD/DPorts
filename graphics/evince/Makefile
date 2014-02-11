@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/evince/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 #    $MCom: ports/trunk/graphics/evince/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evince
