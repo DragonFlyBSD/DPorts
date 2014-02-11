@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mechanize
 PORTVERSION=	1.73
