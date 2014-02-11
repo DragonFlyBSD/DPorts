@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Perl-Tidy/Makefile 333892 2013-11-15 17:10:53Z mat $
+# $FreeBSD$
 
 PORTNAME=	Perl-Tidy
 PORTVERSION=	20130922
