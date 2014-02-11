@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-fabric/Makefile 342103 2014-02-01 09:13:51Z koobs $
+# $FreeBSD$
 
 PORTNAME=	fabric
 PORTVERSION=	1.8.1
