@@ -1,4 +1,4 @@
-# $FreeBSD: dns/samba-nsupdate/Makefile 330773 2013-10-18 21:14:20Z timur $
+# $FreeBSD$
 
 PORTNAME=		nsupdate
 PORTVERSION=		9.8.6
@@ -37,6 +37,8 @@ CONFIGURE_ARGS+=	\
 			--with-randomdev=/dev/random
 
 NO_STAGE=		yes
+
+OPTIONS_DEFINE=	IPV6 
 
 .include <bsd.port.options.mk>
 
