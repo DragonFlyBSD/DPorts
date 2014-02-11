@@ -1,5 +1,5 @@
 # Created by: luigi@FreeBSD.org
-# $FreeBSD: sysutils/syslinux/Makefile 333988 2013-11-16 12:33:15Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	syslinux
 PORTVERSION=	6.01
