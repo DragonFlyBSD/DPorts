@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@FreeBSD.org>
-# $FreeBSD: security/p5-Crypt-DSA/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-DSA
 PORTVERSION=	1.17
