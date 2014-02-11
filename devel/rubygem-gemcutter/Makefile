@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gemcutter/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	gemcutter
 PORTVERSION=	0.7.1
