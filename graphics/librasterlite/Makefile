@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/librasterlite/Makefile 339962 2014-01-16 18:44:57Z pawel $
+# $FreeBSD$
 
 PORTNAME=	librasterlite
 PORTVERSION=	1.1g
