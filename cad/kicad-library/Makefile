@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: cad/kicad-library/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kicad
 PORTVERSION=	1.0
@@ -21,11 +21,10 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}${PKGNAMESUFFIX}
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${DATADIR})
-	${FIND} ${DATADIR} -name CMakeLists.txt -delete	\
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR})
+	${FIND} ${STAGEDIR}${DATADIR} -name CMakeLists.txt -delete	\
 		-o -name makefile -delete
 
 .include <bsd.port.mk>
