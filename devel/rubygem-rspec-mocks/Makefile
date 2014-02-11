@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rspec-mocks/Makefile 335527 2013-12-02 18:36:10Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rspec-mocks
 PORTVERSION=	2.14.4
