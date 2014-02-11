@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: head/devel/swig20/Makefile 339666 2014-01-14 09:01:38Z koobs $
+# $FreeBSD$
 
 PORTNAME=	swig
 PORTVERSION=	2.0.11
