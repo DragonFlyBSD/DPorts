@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-URI-Fetch/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	URI-Fetch
 PORTVERSION=	0.090
