@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/tomoe/Makefile 330824 2013-10-19 02:00:14Z ume $
+# $FreeBSD$
 
 PORTNAME=	tomoe
 PORTVERSION=	0.6.0
