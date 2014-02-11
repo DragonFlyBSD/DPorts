@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-CompileTime-Traits/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-CompileTime-Traits
 PORTVERSION=	1.102570
