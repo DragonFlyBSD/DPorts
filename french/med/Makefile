@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: french/med/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	med
 DISTVERSION=	3.0.6
