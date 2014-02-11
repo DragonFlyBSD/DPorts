@@ -1,5 +1,5 @@
 # Created by: Brad Hendrickse <bradh@iafrica.com>
-# $FreeBSD: graphics/gifsicle/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gifsicle
 PORTVERSION=	1.71
