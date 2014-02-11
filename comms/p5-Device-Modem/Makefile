@@ -1,14 +1,17 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: comms/p5-Device-Modem/Makefile 332840 2013-11-05 12:30:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Device-Modem
-PORTVERSION=	1.56
+PORTVERSION=	1.57
 CATEGORIES=	comms perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl class to interface generic modems (AT-compliant)
+
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	p5-Device-SerialPort>=0:${PORTSDIR}/comms/p5-Device-SerialPort
 RUN_DEPENDS:=	${BUILD_DEPENDS}
