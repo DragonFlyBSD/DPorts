@@ -1,8 +1,8 @@
 # Created by: Sander Vesik <sander@haldjas.folklore.ee>
-# $FreeBSD: math/p5-Math-MatrixReal/Makefile 334605 2013-11-22 19:07:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Math-MatrixReal
-PORTVERSION=	2.10
+PORTVERSION=	2.11
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
