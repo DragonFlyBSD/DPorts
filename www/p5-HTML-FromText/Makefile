@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-HTML-FromText/Makefile 329187 2013-10-03 13:34:43Z danilo $
+# $FreeBSD$
 
 PORTNAME=		HTML-FromText
 PORTVERSION=		2.07
