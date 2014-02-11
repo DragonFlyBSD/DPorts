@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libmusicbrainz3/Makefile 329873 2013-10-09 07:50:58Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libmusicbrainz
 PORTVERSION=	3.0.3
