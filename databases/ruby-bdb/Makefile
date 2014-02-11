@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/databases/ruby-bdb/Makefile 338518 2014-01-03 02:28:49Z mandree $
+# $FreeBSD$
 
 PORTNAME=	bdb
 PORTVERSION=	0.6.6
