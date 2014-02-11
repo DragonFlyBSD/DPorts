@@ -1,5 +1,5 @@
 # Created by: Arjan van Leeuwen <avleeuwen@piwebs.com>
-# $FreeBSD: head/graphics/dcraw/Makefile 330006 2013-10-10 14:36:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	dcraw
 PORTVERSION=	9.19
