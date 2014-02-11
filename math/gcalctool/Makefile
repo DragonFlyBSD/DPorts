@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: math/gcalctool/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 #   $MCom: ports/math/gcalctool/Makefile,v 1.140 2010/11/15 22:06:10 kwm Exp $
 
 PORTNAME=	gcalctool
