@@ -1,8 +1,9 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD: devel/thrift-cpp/Makefile 333893 2013-11-15 17:21:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with thrift
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 
