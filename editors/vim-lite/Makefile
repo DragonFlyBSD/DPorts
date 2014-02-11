@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: editors/vim-lite/Makefile 335537 2013-12-02 19:48:37Z sunpoet $
+# $FreeBSD$
 
 PORTREVISION=	0
 
