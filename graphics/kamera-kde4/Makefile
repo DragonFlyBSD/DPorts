@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kamera-kde4/Makefile 340385 2014-01-20 12:37:32Z kwm $
+# $FreeBSD$
 
 PORTNAME=	kamera
 PORTVERSION=	${KDE4_VERSION}
