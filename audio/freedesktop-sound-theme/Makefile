@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/freedesktop-sound-theme/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 #   $MCom: ports/audio/freedesktop-sound-theme/Makefile,v 1.6 2009/11/27 22:09:57 marcus Exp $
 
 PORTNAME=	freedesktop-sound-theme
