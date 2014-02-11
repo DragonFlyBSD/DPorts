@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libprojectm/Makefile 338117 2013-12-30 14:30:07Z crees $
+# $FreeBSD$
 
 PORTNAME=	libprojectM
 PORTVERSION=	2.0.1
