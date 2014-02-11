@@ -1,5 +1,5 @@
 # Created by: ljo
-# $FreeBSD: print/afm/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	afm
 PORTVERSION=	1.0
