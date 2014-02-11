@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-archetypes.querywidget/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	archetypes.querywidget
 PORTVERSION=	1.0.9
