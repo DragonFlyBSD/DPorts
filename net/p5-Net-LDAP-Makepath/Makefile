@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Net-LDAP-Makepath/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-LDAP-Makepath
 PORTVERSION=	1.0.1
