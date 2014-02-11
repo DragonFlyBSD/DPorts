@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-ffmpegthumbs/Makefile 331162 2013-10-21 17:32:48Z wg $
+# $FreeBSD$
 
 PORTNAME=	ffmpegthumbs
 PORTVERSION=	${KDE4_VERSION}
