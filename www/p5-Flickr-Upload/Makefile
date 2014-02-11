@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-Flickr-Upload/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Flickr-Upload
 PORTVERSION=	1.32
