@@ -1,5 +1,5 @@
 # Created by: Jason R. Mastaler <jason@mastaler.com>
-# $FreeBSD: databases/py-cdb/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	cdb
 PORTVERSION=	0.34
