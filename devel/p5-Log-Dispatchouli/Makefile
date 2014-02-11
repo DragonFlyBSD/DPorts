@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: devel/p5-Log-Dispatchouli/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatchouli
 PORTVERSION=	2.006
@@ -29,11 +29,6 @@ TEST_DEPENDS=	p5-Test-Deep>=0:${PORTSDIR}/devel/p5-Test-Deep \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Log::Dispatchouli.3 \
-	Log::Dispatchouli::Global.3 \
-	Log::Dispatchouli::Proxy.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
