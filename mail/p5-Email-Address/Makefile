@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/mail/p5-Email-Address/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Email-Address
 PORTVERSION=	1.90.0
