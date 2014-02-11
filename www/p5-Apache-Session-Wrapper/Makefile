@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-Apache-Session-Wrapper/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Apache-Session-Wrapper
 PORTVERSION=	0.34
