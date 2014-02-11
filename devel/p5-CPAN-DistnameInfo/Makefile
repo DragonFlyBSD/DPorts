@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: head/devel/p5-CPAN-DistnameInfo/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	CPAN-DistnameInfo
 PORTVERSION=	0.12
