@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: graphics/djvulibre/Makefile 328492 2013-09-27 15:17:26Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	djvulibre
 PORTVERSION=	3.5.25.3
