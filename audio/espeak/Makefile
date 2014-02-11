@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/audio/espeak/Makefile 343390 2014-02-08 21:19:56Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	espeak
 PORTVERSION=	1.47.11
