@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Interpolate/Makefile 333505 2013-11-11 14:11:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Math-Interpolate
 PORTVERSION=	1.06
