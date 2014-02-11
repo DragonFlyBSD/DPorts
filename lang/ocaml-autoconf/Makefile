@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: lang/ocaml-autoconf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	autoconf
 PORTVERSION=	1.1
