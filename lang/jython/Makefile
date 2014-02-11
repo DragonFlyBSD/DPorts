@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: lang/jython/Makefile 335418 2013-12-01 17:59:07Z mva $
+# $FreeBSD$
 
 PORTNAME=	jython
 PORTVERSION=	2.5.3
