@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-PortNumber/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-PortNumber
 PORTVERSION=	0.02
