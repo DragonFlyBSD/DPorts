@@ -1,5 +1,5 @@
 # Created by: Kenjiro Cho <kjc@csl.sony.co.jp>
-# $FreeBSD: x11-toolkits/blt/Makefile 336373 2013-12-13 22:20:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	blt
 PORTVERSION=	2.5.3
