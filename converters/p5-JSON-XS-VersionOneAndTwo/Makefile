@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: converters/p5-JSON-XS-VersionOneAndTwo/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	JSON-XS-VersionOneAndTwo
 PORTVERSION=	0.31
