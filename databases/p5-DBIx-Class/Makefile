@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class/Makefile 339867 2014-01-15 23:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class
 PORTVERSION=	0.08250
