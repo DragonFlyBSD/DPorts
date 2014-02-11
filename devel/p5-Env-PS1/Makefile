@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Env-PS1/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Env-PS1
 PORTVERSION=	0.06
