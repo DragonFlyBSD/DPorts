@@ -1,5 +1,5 @@
 # Created by: jaharkes
-# $FreeBSD: devel/rvm/Makefile 334074 2013-11-17 11:09:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rvm
 PORTVERSION=	1.17
