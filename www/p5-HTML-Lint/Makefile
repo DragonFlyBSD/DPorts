@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Lint/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-Lint
 PORTVERSION=	2.20
