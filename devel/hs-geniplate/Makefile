@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-geniplate/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	geniplate
 PORTVERSION=	0.6.0.3
