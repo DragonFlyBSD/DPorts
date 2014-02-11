@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: head/devel/p5-Class-MethodMaker/Makefile 342541 2014-02-04 14:35:45Z culot $
+# $FreeBSD$
 
 PORTNAME=	Class-MethodMaker
 PORTVERSION=	2.20
