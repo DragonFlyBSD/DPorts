@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/horde3-base/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/www/horde3-base/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 PATH=/usr/sbin:/usr/bin:/bin ; export PATH

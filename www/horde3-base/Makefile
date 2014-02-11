@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: www/horde3-base/Makefile 340003 2014-01-17 01:10:41Z rene $
+# $FreeBSD$
 
 PORTNAME=	base
 PORTVERSION=	3.3.13
