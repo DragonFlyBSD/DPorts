@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/pgplot/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	pgplot
 PORTVERSION=	5.2.2
@@ -26,6 +26,9 @@ SUFFIXES=	flib clib bin
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${ARCH:M*64*}
