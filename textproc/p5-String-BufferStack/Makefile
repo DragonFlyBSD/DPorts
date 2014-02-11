@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-BufferStack/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	String-BufferStack
 PORTVERSION=	1.16
