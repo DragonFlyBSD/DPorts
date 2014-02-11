@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-libdesktop/Makefile 332764 2013-11-04 19:54:24Z wg $
+# $FreeBSD$
 
 PORTNAME=	libdesktop
 PORTVERSION=	0.0.10
