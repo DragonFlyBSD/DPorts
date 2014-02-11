@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/p5-Imager/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Imager
 PORTVERSION=	0.97
