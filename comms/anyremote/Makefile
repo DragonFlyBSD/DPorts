@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: comms/anyremote/Makefile 341638 2014-01-28 16:48:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	anyremote
 PORTVERSION=	6.3.1
