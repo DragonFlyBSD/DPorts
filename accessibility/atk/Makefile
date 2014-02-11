@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/atk/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/accessibility/atk/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	atk
