@@ -4,7 +4,7 @@
 # databases/postgresql7 port. (Wouldn't it be nice to have a
 # target for making a user in bsd.port.mk or something similar?)
 
-# $FreeBSD: www/py-webware/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/www/py-webware/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 PATH=/bin:/usr/sbin:${LOCALBASE}/bin:
 

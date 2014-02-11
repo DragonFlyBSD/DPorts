@@ -1,5 +1,5 @@
 # Created by: Stefan Schwarzer <sschwarzer@sschwarzer.net>
-# $FreeBSD: www/py-webware/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	webware
 DISTVERSION=	1.1.1
