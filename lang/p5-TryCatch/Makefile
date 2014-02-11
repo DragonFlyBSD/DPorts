@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-TryCatch/Makefile 342153 2014-02-01 14:42:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	TryCatch
 PORTVERSION=	1.003002
