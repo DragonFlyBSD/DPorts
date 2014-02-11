@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: x11-fm/thunar-vfs/Makefile 331421 2013-10-23 20:24:47Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	thunar-vfs
 PORTVERSION=	1.2.0
