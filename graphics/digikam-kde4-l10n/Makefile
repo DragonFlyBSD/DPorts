@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/digikam-kde4-l10n/Makefile 340628 2014-01-21 18:17:23Z makc $
+# $FreeBSD$
 
 PORTNAME=	digikam-l10n
 PORTVERSION=	${DIGIKAM_VER}
