@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: devel/autoconf-archive/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	autoconf-archive
 PORTVERSION=	0.${DISTDATE:C/-/./g}
