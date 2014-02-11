@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: databases/rubygem-activerecord/Makefile 342240 2014-02-02 03:11:49Z swills $
+# $FreeBSD$
 
 PORTNAME=	activerecord
 PORTVERSION=	3.2.16
