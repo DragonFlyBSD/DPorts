@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libwpg/Makefile 336414 2013-12-14 01:08:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libwpg
 PORTVERSION=	0.2.2
