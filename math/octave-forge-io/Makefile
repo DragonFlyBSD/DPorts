@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-io/Makefile 340800 2014-01-23 04:26:38Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-io
 PORTVERSION=	2.0.2
