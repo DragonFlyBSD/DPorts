@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-# $FreeBSD: audio/portaudio2/Makefile 342034 2014-01-31 16:54:48Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	portaudio
 DISTVERSION=	19_20140130
