@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-wxdirect/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wxdirect
 PORTVERSION=	0.90.0.1
