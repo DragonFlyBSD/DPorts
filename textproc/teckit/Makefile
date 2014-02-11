@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/teckit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	teckit
 PORTVERSION=	2.5.1
@@ -20,14 +20,11 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DOCS=		AUTHORS README NEWS docs/*.pdf license/LICENSING.txt
 
-NO_STAGE=	yes
 post-patch:
 	${CHMOD} ${BINMODE} ${WRKSRC}/configure ${WRKSRC}/install-sh
 
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${DOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
