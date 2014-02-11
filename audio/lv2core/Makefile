@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: audio/lv2core/Makefile 334714 2013-11-24 09:32:53Z mva $
+# $FreeBSD$
 
 PORTNAME=	lv2core
 PORTVERSION=	6.0
