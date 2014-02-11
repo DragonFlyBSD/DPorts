@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-climate_control/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	climate_control
 PORTVERSION=	0.0.3
