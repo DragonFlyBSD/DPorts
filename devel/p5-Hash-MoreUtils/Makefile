@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Hash-MoreUtils/Makefile 339490 2014-01-12 09:57:14Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Hash-MoreUtils
 PORTVERSION=	0.05
