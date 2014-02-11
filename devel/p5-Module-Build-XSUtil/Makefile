@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Build-XSUtil/Makefile 340244 2014-01-19 09:26:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Module-Build-XSUtil
 PORTVERSION=	0.06
