@@ -1,5 +1,5 @@
 # Created by: fernan@iib.unsam.edu.ar
-# $FreeBSD: graphics/p5-SpringGraph/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SpringGraph
 PORTVERSION=	0.05
