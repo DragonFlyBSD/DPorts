@@ -1,5 +1,5 @@
 # Created by: Yin-Jieh Chen <yinjieh@csie.nctu.edu.tw>
-# $FreeBSD: chinese/autoconvert/Makefile 329149 2013-10-03 06:57:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	autoconvert
 PORTVERSION=	0.3.16
