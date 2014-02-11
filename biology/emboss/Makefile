@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/emboss/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	emboss
 PORTVERSION=	6.2.0
