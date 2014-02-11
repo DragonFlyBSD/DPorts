@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: www/p5-HTML-Strip/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Strip
 PORTVERSION=	1.06
