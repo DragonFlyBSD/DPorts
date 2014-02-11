@@ -1,5 +1,5 @@
 # Created by: John Marino <draco@marino.st>
-# $FreeBSD: textproc/adabrowse/Makefile 333386 2013-11-10 12:04:13Z marino $
+# $FreeBSD$
 
 PORTNAME=	adabrowse
 PORTVERSION=	4.0.3
