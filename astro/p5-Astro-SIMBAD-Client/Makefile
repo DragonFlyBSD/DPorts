@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-SIMBAD-Client/Makefile 338497 2014-01-02 20:57:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-SIMBAD-Client
 PORTVERSION=	0.030
