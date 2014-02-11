@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icons-tango/Makefile 341357 2014-01-27 09:34:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	icons-tango
 PORTVERSION=	0.8.90
