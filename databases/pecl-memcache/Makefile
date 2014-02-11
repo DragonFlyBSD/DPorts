@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: head/databases/pecl-memcache/Makefile 334245 2013-11-18 19:22:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	memcache
 PORTVERSION=	3.0.8
