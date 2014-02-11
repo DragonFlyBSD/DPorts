@@ -1,5 +1,5 @@
 # Created by: spn
-# $FreeBSD: x11-wm/fluxbox/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fluxbox
 PORTVERSION=	1.3.5
