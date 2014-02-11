@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/clutter/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #  $MCom: ports/graphics/clutter/Makefile,v 1.34 2010/09/24 16:35:42 kwm Exp $
 
 PORTNAME=	clutter
