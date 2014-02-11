@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rr/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	rr
 PORTVERSION=	1.1.1
