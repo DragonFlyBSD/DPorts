@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11/lxmenu-data/Makefile 335353 2013-11-30 23:21:39Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxmenu-data
 PORTVERSION=	0.1.2
@@ -10,6 +10,8 @@ MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Menu data used by lxpanel
 
 LICENSE=	GPLv2
+
+BUILD_DEPENDS=	p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser
 
 USES=		gmake gettext
 USE_XORG=	x11 xmu
