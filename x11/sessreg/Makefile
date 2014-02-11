@@ -1,4 +1,4 @@
-# $FreeBSD: x11/sessreg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sessreg
 PORTVERSION=	1.0.8
