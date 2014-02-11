@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.DCWorkflow/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.DCWorkflow
 PORTVERSION=	2.2.4
