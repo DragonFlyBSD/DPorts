@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: devel/p5-File-DesktopEntry/Makefile 329061 2013-10-02 16:12:31Z acm $
+# $FreeBSD$
 
 PORTNAME=	File-DesktopEntry
 PORTVERSION=	0.05
@@ -17,7 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	File::DesktopEntry.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
