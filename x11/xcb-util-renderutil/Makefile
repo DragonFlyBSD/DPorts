@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-renderutil/Makefile 332329 2013-10-31 23:53:19Z garga $
+# $FreeBSD$
 
 PORTNAME=	xcb-util-renderutil
 PORTVERSION=	0.3.8
