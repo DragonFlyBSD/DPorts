@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-compass-rails/Makefile 335757 2013-12-06 15:23:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	compass-rails
 PORTVERSION=	1.1.2
