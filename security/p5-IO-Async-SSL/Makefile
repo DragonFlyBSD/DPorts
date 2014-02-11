@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: security/p5-IO-Async-SSL/Makefile 330409 2013-10-15 16:58:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IO-Async-SSL
 PORTVERSION=	0.13
