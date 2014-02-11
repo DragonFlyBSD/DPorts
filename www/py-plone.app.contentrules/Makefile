@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.contentrules/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plone.app.contentrules
 PORTVERSION=	3.0.4
