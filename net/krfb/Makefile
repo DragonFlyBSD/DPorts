@@ -1,4 +1,4 @@
-# $FreeBSD: net/krfb/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	krfb
 PORTVERSION=	${KDE4_VERSION}
