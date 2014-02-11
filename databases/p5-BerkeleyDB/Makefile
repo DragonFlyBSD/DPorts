@@ -1,5 +1,5 @@
 # Created by: T. William Wells <bill@twwells.com>
-# $FreeBSD: head/databases/p5-BerkeleyDB/Makefile 333396 2013-11-10 14:10:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	BerkeleyDB
 PORTVERSION=	0.54
