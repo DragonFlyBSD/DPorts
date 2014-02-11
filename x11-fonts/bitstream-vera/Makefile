@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/x11-fonts/bitstream-vera/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/x11-fonts/bitstream-vera/Makefile,v 1.2 2005/10/14 20:39:59 adamw Exp $
 
 PORTNAME=	bitstream-vera
