@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-MooseX-FollowPBP/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-FollowPBP
 PORTVERSION=	0.05
