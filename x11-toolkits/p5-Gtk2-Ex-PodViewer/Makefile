@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-PodViewer/Makefile 333345 2013-11-09 21:46:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Ex-PodViewer
 PORTVERSION=	0.18
