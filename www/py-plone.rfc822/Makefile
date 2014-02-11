@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/py-plone.rfc822/Makefile 327899 2013-09-22 22:21:57Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.rfc822
 PORTVERSION=	1.1
