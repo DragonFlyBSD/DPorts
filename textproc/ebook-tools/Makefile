@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/ebook-tools/Makefile 338807 2014-01-05 17:39:35Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ebook-tools
 PORTVERSION=	0.2.2
