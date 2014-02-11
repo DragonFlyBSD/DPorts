@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: head/archivers/zip/Makefile 338569 2014-01-03 18:29:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zip
 PORTVERSION=	3.0
