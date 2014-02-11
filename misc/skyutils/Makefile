@@ -1,5 +1,5 @@
 # Created by: Machiel Mastenbroek <machiel_mastenbroek@hotmail.com>
-# $FreeBSD: misc/skyutils/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	skyutils
 PORTVERSION=	2.9
@@ -17,7 +17,6 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-NO_STAGE=	yes
 pre-configure:
 	@${REINPLACE_CMD} -e's/[[:cntrl:]]*$$//' ${WRKSRC}/src/skyutils.h
 
