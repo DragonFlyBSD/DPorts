@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-File-Flat/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-Flat
 PORTVERSION=	1.04
