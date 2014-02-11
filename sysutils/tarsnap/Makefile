@@ -1,5 +1,5 @@
 # Created by: Colin Percival
-# $FreeBSD: sysutils/tarsnap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tarsnap
 PORTVERSION=	1.0.35
