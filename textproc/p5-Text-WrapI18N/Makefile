@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-WrapI18N/Makefile 335400 2013-12-01 16:05:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Text-WrapI18N
 PORTVERSION=	0.06
