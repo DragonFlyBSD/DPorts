@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-# $FreeBSD: head/security/p5-Digest-SHA1/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Digest-SHA1
 PORTVERSION=	2.13
