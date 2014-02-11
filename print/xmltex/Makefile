@@ -1,5 +1,5 @@
 # Created by: Nik Clayton <nik@FreeBSD.org>
-# $FreeBSD: print/xmltex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		xmltex
 PORTVERSION=		1.9
