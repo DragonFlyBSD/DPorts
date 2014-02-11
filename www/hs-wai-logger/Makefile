@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-wai-logger/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wai-logger
 PORTVERSION=	0.3.0
