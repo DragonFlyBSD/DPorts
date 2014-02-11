@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gnucap/Makefile 338181 2013-12-30 22:06:56Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gnucap
 PORTVERSION=	2009.12.07
