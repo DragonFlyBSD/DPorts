@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: archivers/rubygem-minitar/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD$
 
 PORTNAME=	minitar
 PORTVERSION=	0.5.4
