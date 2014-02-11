@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: head/devel/ninja/Makefile 338981 2014-01-07 08:16:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ninja
 PORTVERSION=	1.4.0
