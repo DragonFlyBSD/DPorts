@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-NEXT/Makefile 332127 2013-10-30 15:19:23Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	NEXT
 PORTVERSION=	0.65
