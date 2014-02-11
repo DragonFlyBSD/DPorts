@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: net/hupnp/Makefile 334927 2013-11-26 12:59:35Z makc $
+# $FreeBSD$
 
 PORTNAME=	hupnp
 PORTVERSION=	1.0.0
