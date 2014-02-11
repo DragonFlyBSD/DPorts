@@ -1,5 +1,5 @@
 # Created by: reed@pugetsoundtechnology.com
-# $FreeBSD: textproc/libwpd/Makefile 328063 2013-09-23 21:39:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libwpd
 PORTVERSION=	0.9.9
