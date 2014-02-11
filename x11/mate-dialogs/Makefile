@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: x11/mate-dialogs/Makefile 335557 2013-12-03 10:51:17Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-dialogs
 PORTVERSION=	1.6.2
