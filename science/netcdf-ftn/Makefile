@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/netcdf-ftn/Makefile 336088 2013-12-10 19:18:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	netcdf
 
