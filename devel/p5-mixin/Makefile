@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-mixin/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	mixin
 PORTVERSION=	0.07
