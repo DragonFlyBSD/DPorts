@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: net/p5-Net-Traceroute/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Traceroute
 PORTVERSION=	1.14
