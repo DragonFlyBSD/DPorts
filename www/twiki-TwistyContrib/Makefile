@@ -1,4 +1,4 @@
-# $FreeBSD: www/twiki-TwistyContrib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	TwistyContrib
 SVNREV=		17596
