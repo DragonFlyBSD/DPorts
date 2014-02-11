@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-logger/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.14 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	telepathy-logger
