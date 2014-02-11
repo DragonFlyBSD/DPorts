@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ImageMagick/Makefile 342371 2014-02-02 22:44:22Z riggs $
+# $FreeBSD$
 
 PORTNAME=	ImageMagick
 DISTVERSION=	6.8.0-7
@@ -28,7 +28,7 @@ MASTER_SITES=	http://www.imagemagick.org/download/ \
 		ftp://ftp.is.co.za/pub/imagemagick/ \
 		ftp://ftp.fifi.org/pub/ImageMagick/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Image processing tools
 
 LICENSE=	APACHE20
