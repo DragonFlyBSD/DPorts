@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: science/p5-Geo-Coordinates-Converter-iArea/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coordinates-Converter-iArea
 PORTVERSION=	0.14
