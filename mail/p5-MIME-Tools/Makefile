@@ -1,5 +1,5 @@
 # Created by: Eivind Eklund <eivind@FreeBSD.org>
-# $FreeBSD: mail/p5-MIME-Tools/Makefile 333904 2013-11-15 17:55:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MIME-Tools
 PORTVERSION=	5.505
