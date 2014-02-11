@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: textproc/py-sphinxcontrib-adadomain/Makefile 333381 2013-11-10 11:38:03Z marino $
+# $FreeBSD$
 
 PORTNAME=	sphinxcontrib-adadomain
 PORTVERSION=	0.1
