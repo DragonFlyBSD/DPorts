@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-SebastianBergmann_Git/Makefile 334061 2013-11-17 08:30:23Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Git
 PORTVERSION=	1.2.0
