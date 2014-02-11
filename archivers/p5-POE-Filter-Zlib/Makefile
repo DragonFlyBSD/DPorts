@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-POE-Filter-Zlib/Makefile 328606 2013-09-28 17:12:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE-Filter-Zlib
 PORTVERSION=	2.0.2
