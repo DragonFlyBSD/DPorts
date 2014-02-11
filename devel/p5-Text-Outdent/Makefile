@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Text-Outdent/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Text-Outdent
 PORTVERSION=	0.01
