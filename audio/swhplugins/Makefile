@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: head/audio/swhplugins/Makefile 338149 2013-12-30 17:24:31Z antoine $
+# $FreeBSD$
 
 PORTNAME=	swhplugins
 PORTVERSION=	0.4.15
