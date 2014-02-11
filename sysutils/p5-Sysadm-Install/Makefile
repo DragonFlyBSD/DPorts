@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: sysutils/p5-Sysadm-Install/Makefile 332957 2013-11-06 08:54:17Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Sysadm-Install
 PORTVERSION=	0.43
