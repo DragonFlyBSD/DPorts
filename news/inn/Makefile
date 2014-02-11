@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: news/inn/Makefile 334138 2013-11-18 02:14:56Z fluffy $
+# $FreeBSD$
 
 PORTNAME?=	inn
 PORTVERSION?=	2.5.3
