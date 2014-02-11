@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/gnome-spell/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 #   $MCom: ports/textproc/gnome-spell/Makefile,v 1.13 2007/10/15 17:17:18 mezz Exp $
 
 PORTNAME=	gnome-spell
