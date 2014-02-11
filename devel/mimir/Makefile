@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: devel/mimir/Makefile 342170 2014-02-01 15:19:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mimir
 PORTVERSION=	2.15
