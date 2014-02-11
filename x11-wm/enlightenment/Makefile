@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-wm/enlightenment/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD$
 
 PORTNAME=	enlightenment
 PORTVERSION=	0.17.5
