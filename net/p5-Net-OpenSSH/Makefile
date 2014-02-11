@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-OpenSSH/Makefile 328095 2013-09-24 06:17:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-OpenSSH
 PORTVERSION=	0.60
