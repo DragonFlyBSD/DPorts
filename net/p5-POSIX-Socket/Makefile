@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-POSIX-Socket/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	POSIX-Socket
 PORTVERSION=	0.09
