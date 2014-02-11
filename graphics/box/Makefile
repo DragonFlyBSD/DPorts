@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: graphics/box/Makefile 340000 2014-01-16 23:40:54Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	box
 PORTVERSION=	0.4.0
