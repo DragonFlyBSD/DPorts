@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin
-# $FreeBSD: devel/p5-Hash-Case/Makefile 331958 2013-10-29 15:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Hash-Case
 PORTVERSION=	1.020
