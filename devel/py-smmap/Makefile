@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-smmap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	smmap
 PORTVERSION=	0.8.2
