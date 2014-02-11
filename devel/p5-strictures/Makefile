@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-strictures/Makefile 336217 2013-12-11 19:57:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	strictures
 PORTVERSION=	1.005002
