@@ -1,5 +1,5 @@
 # Created by: Petri Totterman <petri.totterman@hmv.fi>
-# $FreeBSD: devel/log4cplus/Makefile 340767 2014-01-23 00:35:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	log4cplus
 PORTVERSION=	1.0.4
