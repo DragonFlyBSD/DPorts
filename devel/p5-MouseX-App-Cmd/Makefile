@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MouseX-App-Cmd/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MouseX-App-Cmd
 PORTVERSION=	0.11
