@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: graphics/p5-Image-Size-FillFullSelect/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Image-Size-FillFullSelect
 PORTVERSION=	0.1.0
