@@ -1,4 +1,4 @@
-# $FreeBSD: databases/percona55-client/Makefile 331877 2013-10-28 18:15:24Z flo $
+# $FreeBSD$
 
 PORTNAME=	percona
 PKGNAMESUFFIX=	55-client
@@ -23,5 +23,4 @@ MANPAGES=	comp_err.1 msql2mysql.1 mysql.1 mysql_config.1 mysql_find_rows.1 \
 
 CLIENT_ONLY=	yes
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
