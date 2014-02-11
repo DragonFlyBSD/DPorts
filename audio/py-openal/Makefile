@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: audio/py-openal/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openal
 PORTVERSION=	0.1.6
@@ -20,6 +20,8 @@ USE_PYDISTUTILS=	yes
 PYDISTUTILS_PKGNAME=	PyOpenAL
 WRKSRC=		${WRKDIR}/PyOpenAL-${PORTVERSION}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-openal
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
