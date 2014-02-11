@@ -1,5 +1,5 @@
 # Created by: ajk@waterspout.com
-# $FreeBSD: head/devel/msrc0/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	msrc0
 PORTVERSION=	0.7
