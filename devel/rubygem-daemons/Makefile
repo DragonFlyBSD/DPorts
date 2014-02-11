@@ -1,5 +1,5 @@
 # Created by: Rui Lopes (<rgl ruilopes com>)
-# $FreeBSD: head/devel/rubygem-daemons/Makefile 332035 2013-10-30 02:31:04Z swills $
+# $FreeBSD$
 
 PORTNAME=	daemons
 PORTVERSION=	1.1.9
