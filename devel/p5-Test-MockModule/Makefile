@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-MockModule/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-MockModule
 PORTVERSION=	0.05
