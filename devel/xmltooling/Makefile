@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi
-# $FreeBSD: devel/xmltooling/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xmltooling
 PORTVERSION=	1.5.3
