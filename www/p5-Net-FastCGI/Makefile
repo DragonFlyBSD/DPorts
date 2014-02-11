@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Net-FastCGI/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-FastCGI
 PORTVERSION=	0.14
