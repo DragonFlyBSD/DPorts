@@ -1,5 +1,5 @@
 # Created by: Charlie & <root@dev2.rambler.ru>
-# $FreeBSD: www/p5-Catalyst-Component-InstancePerContext/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Component-InstancePerContext
 PORTVERSION=	0.001001
