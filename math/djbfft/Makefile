@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: math/djbfft/Makefile 336244 2013-12-12 05:05:56Z eadler $
+# $FreeBSD$
 
 PORTNAME=	djbfft
 PORTVERSION=	0.76
