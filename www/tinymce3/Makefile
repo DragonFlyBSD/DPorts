@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/tinymce3/Makefile 336305 2013-12-13 01:16:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tinymce
 PORTVERSION=	3.5.8
