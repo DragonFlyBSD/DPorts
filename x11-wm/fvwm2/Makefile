@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: x11-wm/fvwm2/Makefile 335956 2013-12-09 08:56:46Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fvwm
 PORTVERSION=	2.6.5
