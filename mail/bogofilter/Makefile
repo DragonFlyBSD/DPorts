@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: mail/bogofilter/Makefile 328952 2013-10-01 14:21:35Z mandree $
+# $FreeBSD$
 
 PORTNAME=	bogofilter
 PORTVERSION=	1.2.4
