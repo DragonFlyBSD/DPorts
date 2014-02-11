@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: graphics/whirlgif/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	whirlgif
 PORTVERSION=	3.04
