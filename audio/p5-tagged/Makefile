@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/p5-tagged/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	tagged
 PORTVERSION=	0.40
