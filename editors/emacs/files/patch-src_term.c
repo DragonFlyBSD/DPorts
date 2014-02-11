@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs/files/patch-src_term.c 315598 2013-03-30 05:13:30Z ashish $
+$FreeBSD: head/editors/emacs/files/patch-src_term.c 315598 2013-03-30 05:13:30Z ashish $
 
 $NetBSD: patch-ag,v 1.13 2010/05/15 10:00:57 roy Exp $
  

@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs/files/patch-src_sysdep.c 338450 2014-01-02 15:43:18Z ashish $
+$FreeBSD: head/editors/emacs/files/patch-src_sysdep.c 338450 2014-01-02 15:43:18Z ashish $
 
 --- src/sysdep.c.orig
 +++ src/sysdep.c

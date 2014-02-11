@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs/files/patch-doc-misc-Makefile.in 301832 2012-08-01 15:20:25Z ashish $
+$FreeBSD: head/editors/emacs/files/patch-doc-misc-Makefile.in 301832 2012-08-01 15:20:25Z ashish $
 
 --- doc/misc/Makefile.in.orig
 +++ doc/misc/Makefile.in

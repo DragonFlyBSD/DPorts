@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs/files/patch-src_process.c 301832 2012-08-01 15:20:25Z ashish $
+$FreeBSD: head/editors/emacs/files/patch-src_process.c 301832 2012-08-01 15:20:25Z ashish $
 
 --- src/process.c.orig
 +++ src/process.c

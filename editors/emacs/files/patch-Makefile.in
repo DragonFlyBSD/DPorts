@@ -1,5 +1,5 @@
 
-$FreeBSD: editors/emacs/files/patch-Makefile.in 315598 2013-03-30 05:13:30Z ashish $
+$FreeBSD: head/editors/emacs/files/patch-Makefile.in 315598 2013-03-30 05:13:30Z ashish $
 
 --- Makefile.in.orig
 +++ Makefile.in
