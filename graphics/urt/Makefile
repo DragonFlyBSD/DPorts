@@ -1,5 +1,5 @@
 # Created by: cfs@ing.puc.cl (original)
-# $FreeBSD: graphics/urt/Makefile 339293 2014-01-09 22:14:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	urt
 PORTVERSION=	3.1b1
