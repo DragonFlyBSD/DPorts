@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-# $FreeBSD: devel/p5-Perl6-Form/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Perl6-Form
 PORTVERSION=	0.04
