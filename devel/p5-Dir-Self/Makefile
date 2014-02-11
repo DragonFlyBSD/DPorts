@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Dir-Self/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Dir-Self
 PORTVERSION=	0.10
