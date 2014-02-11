@@ -1,12 +1,12 @@
 # Created by: Quentin Stievenart <acieroid@awesom.eu>
-# $FreeBSD: graphics/zathura/Makefile 335121 2013-11-28 21:08:38Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	zathura
-PORTVERSION=	0.2.5
+PORTVERSION=	0.2.6
 CATEGORIES=	graphics print
 MASTER_SITES=	http://pwmt.org/projects/zathura/download/
 
-MAINTAINER=	acieroid@awesom.eu
+MAINTAINER=	quentin.stievenart@gmail.com
 COMMENT=	Customizable lightweight pdf viewer
 
 LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
