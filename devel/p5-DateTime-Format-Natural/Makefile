@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-DateTime-Format-Natural/Makefile 333324 2013-11-09 18:57:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-Natural
 PORTVERSION=	1.02
