@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: x11-toolkits/eel/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/eel/Makefile,v 1.90 2010/09/28 09:15:49 kwm Exp $
 
 PORTNAME=	eel
