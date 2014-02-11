@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-stomp/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	stomp
 PORTVERSION=	1.2.10
