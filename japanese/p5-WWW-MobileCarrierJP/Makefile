@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-WWW-MobileCarrierJP/Makefile 341807 2014-01-30 08:18:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WWW-MobileCarrierJP
 PORTVERSION=	0.63
