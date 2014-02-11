@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-rdflib/Makefile 339090 2014-01-08 11:08:29Z wg $
+# $FreeBSD$
 
 PORTNAME=	rdflib
 PORTVERSION=	4.0.1
