@@ -1,5 +1,5 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: dns/idnkit2/Makefile 342167 2014-02-01 15:18:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	idnkit
 PORTVERSION=	2.2
