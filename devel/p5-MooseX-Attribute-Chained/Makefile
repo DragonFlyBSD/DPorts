@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Attribute-Chained/Makefile 333760 2013-11-14 14:21:46Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Attribute-Chained
 PORTVERSION=	1.0.1
