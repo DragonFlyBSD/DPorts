@@ -1,5 +1,5 @@
 # Created by: Guixing Bai<khsing.cn@gmail.com>
-# $FreeBSD: www/py-tornado/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	tornado
 PORTVERSION=	3.1
