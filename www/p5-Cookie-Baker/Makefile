@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Cookie-Baker/Makefile 332730 2013-11-04 14:29:14Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Cookie-Baker
 PORTVERSION=	0.02
