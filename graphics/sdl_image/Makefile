@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/sdl_image/Makefile 340157 2014-01-18 09:12:43Z mva $
+# $FreeBSD$
 
 PORTNAME=	sdl_image
 PORTVERSION=	1.2.12
