@@ -1,6 +1,6 @@
 # bsd.pyqt.mk - Global definitions for PyQt related ports
 #
-# $FreeBSD: devel/py-qt4/bsd.pyqt.mk 330463 2013-10-15 21:52:33Z rakuco $
+# $FreeBSD$
 #
 
 PYQT_MAINTAINER=	kde@FreeBSD.org
