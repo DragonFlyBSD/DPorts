@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/ruby-rsvg2/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/graphics/ruby-rsvg2/Makefile,v 1.2 2005/10/17 07:05:41 mezz Exp $
 
 PORTNAME=	rsvg2
