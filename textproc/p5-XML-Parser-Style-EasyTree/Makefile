@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Parser-Style-EasyTree/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-Parser-Style-EasyTree
 PORTVERSION=	0.09
