@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Object-Array/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Object-Array
 PORTVERSION=	0.060
