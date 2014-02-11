@@ -1,5 +1,5 @@
 # Created by: Frank Mayhar <frank@exit.com>
-# $FreeBSD: head/www/p5-Apache-Session/Makefile 343256 2014-02-07 14:58:25Z culot $
+# $FreeBSD$
 
 PORTNAME=	Apache-Session
 PORTVERSION=	1.91
