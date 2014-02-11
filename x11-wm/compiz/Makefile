@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/compiz/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	compiz
 PORTVERSION=	0.8.4
