@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: astro/p5-Astro-SpaceTrack/Makefile 338498 2014-01-02 20:57:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-SpaceTrack
 PORTVERSION=	0.084
