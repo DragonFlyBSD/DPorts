@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/pstoedit/Makefile 332238 2013-10-31 13:07:20Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pstoedit
 PORTVERSION=	3.62
