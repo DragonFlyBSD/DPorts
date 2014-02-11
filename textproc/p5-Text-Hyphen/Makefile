@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: textproc/p5-Text-Hyphen/Makefile 340908 2014-01-24 14:59:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Hyphen
 PORTVERSION=	0.11
