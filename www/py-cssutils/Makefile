@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/www/py-cssutils/Makefile 337277 2013-12-23 18:29:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	cssutils
 PORTVERSION=	1.0
