@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: head/devel/skalibs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	skalibs
 PORTVERSION=	0.47
