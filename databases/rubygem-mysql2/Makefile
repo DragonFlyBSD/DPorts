@@ -1,5 +1,5 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: databases/rubygem-mysql2/Makefile 332033 2013-10-30 02:26:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	mysql2
 PORTVERSION=	0.3.13
