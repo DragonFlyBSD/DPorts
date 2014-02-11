@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: head/security/libassuan/Makefile 329010 2013-10-02 01:21:18Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libassuan
 PORTVERSION=	2.1.1
