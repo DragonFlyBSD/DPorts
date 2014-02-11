@@ -1,5 +1,5 @@
 # Created by: Chris Larsen <darth@vader.dk>
-# $FreeBSD: www/p5-WWW-Curl/Makefile 329139 2013-10-03 06:04:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	WWW-Curl
 PORTVERSION=	4.15
