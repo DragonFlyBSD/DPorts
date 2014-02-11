@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/mpg321/files/patch-ao.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/mpg321/files/patch-ao.c 340725 2014-01-22 17:40:44Z mat $
 
 --- ao.c.orig
 +++ ao.c

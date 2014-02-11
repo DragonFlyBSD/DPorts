@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/mpg321/files/patch-network.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/mpg321/files/patch-network.c 340725 2014-01-22 17:40:44Z mat $
 
 --- network.c.orig
 +++ network.c
