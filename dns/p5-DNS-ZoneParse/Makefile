@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: dns/p5-DNS-ZoneParse/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DNS-ZoneParse
 PORTVERSION=	1.10
