@@ -1,4 +1,4 @@
-# $FreeBSD: security/hs-cipher-rc4/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	cipher-rc4
 PORTVERSION=	0.1.2
