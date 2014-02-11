@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Debug/Makefile 332723 2013-11-04 14:14:00Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Debug
 PORTVERSION=	0.16
