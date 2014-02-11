@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: mail/pear-Net_IMAP/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net_IMAP
 PORTVERSION=	1.1.0
