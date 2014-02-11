@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/jruby/Makefile 340374 2014-01-20 08:11:51Z knu $
+# $FreeBSD$
 
 PORTNAME=	jruby
 PORTVERSION=	1.7.10
