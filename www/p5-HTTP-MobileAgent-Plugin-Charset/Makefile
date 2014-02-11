@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Charset/Makefile 341815 2014-01-30 08:51:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTTP-MobileAgent-Plugin-Charset
 PORTVERSION=	0.04
