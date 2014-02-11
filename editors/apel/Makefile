@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: editors/apel/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	apel
 PORTVERSION=	${APEL_VER}
