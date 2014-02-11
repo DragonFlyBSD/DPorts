@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Struct/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Struct
 PORTVERSION=	1.21
