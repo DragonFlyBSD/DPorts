@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/iniparser/Makefile 341660 2014-01-28 21:35:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	iniparser
 PORTVERSION=	3.1
