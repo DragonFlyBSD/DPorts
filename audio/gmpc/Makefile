@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidel.info>
-# $FreeBSD: audio/gmpc/Makefile 337178 2013-12-22 09:39:09Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gmpc
 PORTVERSION=	11.8.16
