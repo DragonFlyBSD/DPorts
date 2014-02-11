@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Hash-WithDefaults/Makefile 338875 2014-01-06 13:26:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Hash-WithDefaults
 PORTVERSION=	0.04
