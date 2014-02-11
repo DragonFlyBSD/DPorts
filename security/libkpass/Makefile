@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: security/libkpass/Makefile 341998 2014-01-31 14:57:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libkpass
 PORTVERSION=	5
