@@ -1,5 +1,5 @@
 # Created by: sutra
-# $FreeBSD: www/trac-spam-filter/Makefile 341186 2014-01-26 14:32:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	TracSpamFilter
 PORTVERSION=	0.2.1
