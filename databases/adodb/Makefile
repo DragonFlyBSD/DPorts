@@ -1,5 +1,5 @@
 # Created by: abgoeree@uwnet.nl
-# $FreeBSD: databases/adodb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	adodb
 PORTVERSION=	4.99.2
