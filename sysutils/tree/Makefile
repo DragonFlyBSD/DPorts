@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: sysutils/tree/Makefile 339252 2014-01-09 15:17:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tree
 PORTVERSION=	1.6.0
