@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: head/mail/gmime24/Makefile 333849 2013-11-15 10:44:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gmime
 PORTVERSION=	2.4.33
