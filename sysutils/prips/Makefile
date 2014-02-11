@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: sysutils/prips/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	prips
 PORTVERSION=	0.9.9
