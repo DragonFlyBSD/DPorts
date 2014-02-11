@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.autoform/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.autoform
 PORTVERSION=	1.5
