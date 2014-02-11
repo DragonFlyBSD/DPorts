@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-net-ssh-gateway/Makefile 338310 2013-12-31 14:30:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	net-ssh-gateway
 PORTVERSION=	1.2.0
