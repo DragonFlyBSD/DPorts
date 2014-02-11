@@ -1,5 +1,5 @@
 # Created by: Mike Meyer <mwm@mired.org>
-# $FreeBSD: head/www/py-beautifulsoup32/Makefile 330323 2013-10-14 13:55:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	beautifulsoup
 PORTVERSION=	3.2.1
