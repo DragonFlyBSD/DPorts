@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: head/devel/pear-Symfony_Component_Console/Makefile 339159 2014-01-08 17:38:02Z wg $
+# $FreeBSD$
 
 PORTNAME=	Console
 PORTVERSION=	2.4.1
