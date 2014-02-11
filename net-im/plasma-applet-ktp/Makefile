@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/plasma-applet-ktp/Makefile 338823 2014-01-05 20:54:38Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ktp
 PORTVERSION=	${KTP_VERSION}
