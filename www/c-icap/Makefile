@@ -1,5 +1,5 @@
 # Created by: Elisey Savateev <b3k@mail.ru>
-# $FreeBSD: www/c-icap/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	c-icap
 PORTVERSION=	0.2.5
