@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/p5-Graphics-Color/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Graphics-Color
 PORTVERSION=	0.29
