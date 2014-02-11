@@ -1,5 +1,5 @@
 # Created by: Brian Dean <bsd@FreeBSD.org>
-# $FreeBSD: devel/avrdude/Makefile 341395 2014-01-27 12:59:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	avrdude
 PORTVERSION=	5.11
