@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-threads/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	threads
 PORTVERSION=	0.5.0.2
