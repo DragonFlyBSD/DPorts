@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/volpack/Makefile 328722 2013-09-29 18:07:04Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	volpack
 PORTVERSION=	1.0b3
