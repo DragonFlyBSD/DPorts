@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: head/devel/maven-wrapper/Makefile 343593 2014-02-10 07:25:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	maven-wrapper
 PORTVERSION=	1
