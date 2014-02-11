@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/jsmin/Makefile 328660 2013-09-29 09:41:31Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	jsmin
 PORTVERSION=	20130329
