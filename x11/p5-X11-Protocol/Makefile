@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: x11/p5-X11-Protocol/Makefile 333060 2013-11-07 04:57:21Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	X11-Protocol
 PORTVERSION=	0.56
