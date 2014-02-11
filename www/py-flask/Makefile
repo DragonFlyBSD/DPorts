@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: www/py-flask/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	Flask
 PORTVERSION=	0.10.1
