@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: ftp/R-cran-RCurl/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD$
 
 PORTNAME=	RCurl
 DISTVERSION=	1.95-4.1
