@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: graphics/gimp-app/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 #   $MCom: ports/graphics/gimp-app/Makefile,v 1.65 2012/12/30 18:09:11 mezz Exp $
 
 PORTNAME?=	gimp-app
