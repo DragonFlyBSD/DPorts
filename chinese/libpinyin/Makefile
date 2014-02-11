@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/libpinyin/Makefile 339152 2014-01-08 15:47:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	libpinyin
 PORTVERSION=	0.7.91
