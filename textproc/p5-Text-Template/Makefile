@@ -1,5 +1,5 @@
 # Created by: Bill "I hate Perl" Fumerola
-# $FreeBSD: head/textproc/p5-Text-Template/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Template
 PORTVERSION=	1.46
