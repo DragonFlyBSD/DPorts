@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/devel/libevent2/Makefile 340265 2014-01-19 11:38:34Z mm $
+# $FreeBSD$
 
 PORTNAME=	libevent2
 PORTVERSION=	2.0.21
