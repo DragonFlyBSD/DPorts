@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: textproc/py-twistedLore/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	twistedLore
 PORTVERSION=	13.2.0
