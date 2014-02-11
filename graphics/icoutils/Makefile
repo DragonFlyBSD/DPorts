@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/icoutils/Makefile 342317 2014-02-02 15:21:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	icoutils
 PORTVERSION=	0.31.0
