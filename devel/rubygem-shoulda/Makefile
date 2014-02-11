@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-shoulda/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	shoulda
 PORTVERSION=	3.5.0
