@@ -1,5 +1,5 @@
 # Created by: Zach Zurflu <zach@pabst.bendnet.com>
-# $FreeBSD: audio/libshout/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	libshout
 PORTVERSION=	1.0.7
