@@ -1,5 +1,5 @@
 # Created by: Marc Abramowitz (http://marc.abramowitz.info)
-# $FreeBSD: graphics/opencv/Makefile 336174 2013-12-11 15:04:33Z jhale $
+# $FreeBSD$
 
 PORTNAME?=	opencv
 PORTVERSION=	2.4.7
