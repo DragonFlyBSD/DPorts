@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-net-scp/Makefile 331712 2013-10-26 16:24:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	net-scp
 PORTVERSION=	1.1.2
