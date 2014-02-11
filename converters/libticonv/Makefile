@@ -1,4 +1,4 @@
-# $FreeBSD: converters/libticonv/Makefile 331283 2013-10-22 15:59:35Z tijl $
+# $FreeBSD$
 
 PORTNAME=	libticonv
 PORTVERSION=	1.1.4
