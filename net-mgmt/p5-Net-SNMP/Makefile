@@ -1,5 +1,5 @@
 # Created by: Christopher N. Harrell <cnh@ivmg.net>
-# $FreeBSD: head/net-mgmt/p5-Net-SNMP/Makefile 342261 2014-02-02 10:11:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-SNMP
 PORTVERSION=	6.0.1
