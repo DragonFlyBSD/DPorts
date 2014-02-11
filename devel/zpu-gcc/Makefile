@@ -1,4 +1,4 @@
-# $FreeBSD: devel/zpu-gcc/Makefile 339365 2014-01-10 16:12:13Z db $
+# $FreeBSD$
 
 PORTNAME=	zpu-gcc
 PORTVERSION=	1.0
