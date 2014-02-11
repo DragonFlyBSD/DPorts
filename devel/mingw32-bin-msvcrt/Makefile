@@ -1,5 +1,5 @@
 # Created by: Lev A. Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: head/devel/mingw32-bin-msvcrt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bin-msvcrt
 PORTVERSION=	r${RUNTIMEVERSION}.a${APIVERSION:S/-/./}
