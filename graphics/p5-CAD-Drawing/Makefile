@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: graphics/p5-CAD-Drawing/Makefile 334605 2013-11-22 19:07:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CAD-Drawing
 PORTVERSION=	0.26
