@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: sysutils/rubygem-chef-expander/Makefile 338365 2014-01-01 06:51:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	chef-expander
 PORTVERSION=	10.30.2
