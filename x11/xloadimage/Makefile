@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xloadimage/Makefile 328308 2013-09-25 19:25:12Z ak $
+# $FreeBSD$
 
 PORTNAME=	xloadimage
 PORTVERSION=	4.1.21
