@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gmtk/Makefile 341609 2014-01-28 15:58:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gmtk
 PORTVERSION=	1.0.8
