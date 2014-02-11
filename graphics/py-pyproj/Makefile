@@ -1,5 +1,5 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: graphics/py-pyproj/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pyproj
 PORTVERSION=	1.9.3
