@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: www/mod_log_sql2-dtc/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_log_sql
 PORTVERSION=	1.101
