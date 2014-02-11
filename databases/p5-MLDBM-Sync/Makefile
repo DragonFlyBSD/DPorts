@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: databases/p5-MLDBM-Sync/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MLDBM-Sync
 PORTVERSION=	0.30
