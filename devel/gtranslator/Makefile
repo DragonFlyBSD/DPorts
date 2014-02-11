@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/gtranslator/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/gtranslator/Makefile,v 1.12 2007/07/04 15:52:37 mezz Exp $
 
 PORTNAME=	gtranslator
