@@ -1,5 +1,5 @@
 # Created by: Shell Hung <shell@shellhung.org>
-# $FreeBSD: head/devel/p5-Test-Simple/Makefile 332898 2013-11-05 19:04:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Simple
 PORTVERSION=	1.001.002
