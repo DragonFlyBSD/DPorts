@@ -1,5 +1,5 @@
 # Created by: Juraj Lutter <otis@sk.freebsd.org>
-# $FreeBSD: head/devel/libconfuse/Makefile 328096 2013-09-24 06:24:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libconfuse
 PORTVERSION=	2.7
