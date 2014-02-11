@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/py-bsdconv/Makefile 327831 2013-09-21 15:42:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	bsdconv
 PORTVERSION=	11.1.0
