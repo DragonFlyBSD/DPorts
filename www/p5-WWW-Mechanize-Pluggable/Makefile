@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize-Pluggable/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mechanize-Pluggable
 PORTVERSION=	1.12
