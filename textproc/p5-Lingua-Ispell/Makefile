@@ -1,5 +1,5 @@
 # Created by: -
-# $FreeBSD: textproc/p5-Lingua-Ispell/Makefile 341596 2014-01-28 15:30:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Lingua-Ispell
 PORTVERSION=	0.07
