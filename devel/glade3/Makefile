@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/glade3/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/glade3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	glade3
