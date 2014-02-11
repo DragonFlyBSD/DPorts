@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: textproc/xmlto/Makefile 331640 2013-10-25 22:32:09Z mandree $
+# $FreeBSD$
 
 PORTNAME=	xmlto
 PORTVERSION=	0.0.25
