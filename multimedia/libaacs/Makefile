@@ -1,5 +1,5 @@
 # Created by: kamikaze@bsdforen.de
-# $FreeBSD: multimedia/libaacs/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libaacs
 PORTVERSION=	0.6.0
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
 MAKE_ARGS+=	pkgconfigdir="${PREFIX}/libdata/pkgconfig" \
 		CFLAGS=${CFLAGS:Q}
 
-NO_STAGE=	yes
 run-autotools:
 	@cd ${WRKSRC} && ${SH} bootstrap
 
