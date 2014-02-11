@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/p5-String-Ediff/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	String-Ediff
 PORTVERSION=	0.09
