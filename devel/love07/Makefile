@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/love07/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	love
 PORTVERSION=	0.7.2
@@ -40,6 +40,8 @@ PLIST_FILES=	bin/love07
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}07
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
