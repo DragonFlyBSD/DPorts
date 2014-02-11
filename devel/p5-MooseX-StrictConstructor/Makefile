@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: devel/p5-MooseX-StrictConstructor/Makefile 341431 2014-01-27 16:58:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	MooseX-StrictConstructor
 PORTVERSION=	0.19
