@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooX-late/Makefile 332371 2013-11-01 13:33:34Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	MooX-late
 PORTVERSION=	0.014
