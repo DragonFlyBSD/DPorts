@@ -1,5 +1,5 @@
 # Created by: Peter van Heusden <pvh@egenetics.com>
-# $FreeBSD: head/lang/p5-Error/Makefile 342647 2014-02-05 08:06:14Z culot $
+# $FreeBSD$
 
 PORTNAME=	Error
 PORTVERSION=	0.17022
