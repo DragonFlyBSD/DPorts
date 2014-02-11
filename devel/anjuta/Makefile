@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/anjuta/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/anjuta/Makefile,v 1.72 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	anjuta
