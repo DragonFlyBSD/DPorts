@@ -1,9 +1,9 @@
 # Created by: trevor
-# $FreeBSD: audio/streamripper/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	streamripper
 PORTVERSION=	1.64.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28current%29/${PORTVERSION} \
 		http://gd.tuwien.ac.at/hci/cdk/:cdk
