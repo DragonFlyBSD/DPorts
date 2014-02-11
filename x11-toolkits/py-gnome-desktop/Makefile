@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/py-gnome-desktop/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.103 2010/09/30 06:27:40 kwm Exp $
 
 PORTNAME=	gnome-desktop
