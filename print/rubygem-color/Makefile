@@ -1,4 +1,4 @@
-# $FreeBSD: print/rubygem-color/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	color
 PORTVERSION=	1.4.2
