@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: devel/rubygem-debugger-linecache/Makefile 334891 2013-11-25 19:58:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	debugger-linecache
 PORTVERSION=	1.2.0
