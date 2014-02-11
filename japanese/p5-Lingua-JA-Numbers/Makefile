@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: japanese/p5-Lingua-JA-Numbers/Makefile 332802 2013-11-05 01:40:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Lingua-JA-Numbers
 PORTVERSION=	0.04
