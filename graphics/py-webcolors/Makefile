@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/py-webcolors/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	webcolors
 PORTVERSION=	1.4
@@ -18,6 +18,8 @@ PYDISTUTILS_AUTOPLIST=	yes
 
 DOCSDIR=	${PREFIX}/share/doc/${UNIQUENAME}
 PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
