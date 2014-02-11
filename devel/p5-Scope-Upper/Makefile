@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Scope-Upper/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Scope-Upper
 PORTVERSION=	0.24
