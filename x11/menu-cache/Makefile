@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11/menu-cache/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	menu-cache
 PORTVERSION=	0.5.1
