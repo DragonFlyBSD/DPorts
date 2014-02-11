@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Chemistry-MacroMol/Makefile 332938 2013-11-06 01:32:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Chemistry-MacroMol
 PORTVERSION=	0.06
