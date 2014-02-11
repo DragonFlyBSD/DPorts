@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/p5-HTML-TreeBuilder-LibXML/Makefile 341594 2014-01-28 15:27:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML-TreeBuilder-LibXML
 PORTVERSION=	0.23
