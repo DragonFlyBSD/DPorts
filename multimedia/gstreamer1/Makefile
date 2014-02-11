@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/gstreamer1/Makefile 338106 2013-12-30 12:56:11Z kwm $
+# $FreeBSD$
 #    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.5 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1
