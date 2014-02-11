@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: head/graphics/libmng/Makefile 343324 2014-02-08 12:47:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libmng
 PORTVERSION=	1.0.10
