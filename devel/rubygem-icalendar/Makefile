@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-icalendar/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD$
 
 PORTNAME=	icalendar
 PORTVERSION=	1.4.1
