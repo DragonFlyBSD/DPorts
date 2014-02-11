@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IO-Handle-Util/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	IO-Handle-Util
 PORTVERSION=	0.01
