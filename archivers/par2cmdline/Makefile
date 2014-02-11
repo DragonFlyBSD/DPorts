@@ -1,5 +1,5 @@
 # Created by: Chris Larsen <darth@vader.dk>
-# $FreeBSD: archivers/par2cmdline/Makefile 333076 2013-11-07 10:23:09Z martymac $
+# $FreeBSD$
 
 PORTNAME=	par2cmdline
 PORTVERSION=	0.4
