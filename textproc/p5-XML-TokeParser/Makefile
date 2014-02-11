@@ -1,5 +1,5 @@
 # Created by: Mike Bristow <mike@urgle.com>
-# $FreeBSD: textproc/p5-XML-TokeParser/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-TokeParser
 PORTVERSION=	0.05
