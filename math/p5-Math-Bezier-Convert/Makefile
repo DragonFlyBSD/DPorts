@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: math/p5-Math-Bezier-Convert/Makefile 334223 2013-11-18 16:45:09Z mat $
+# $FreeBSD$
 
 PORTNAME=	Math-Bezier-Convert
 PORTVERSION=	0.02
