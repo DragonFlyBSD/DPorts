@@ -1,9 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/kdesdk4/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdesdk
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	${KDE4_BRANCH}/${PORTVERSION}/src
