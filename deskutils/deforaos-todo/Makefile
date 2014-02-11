@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: deskutils/deforaos-todo/Makefile 332779 2013-11-04 20:46:19Z wg $
+# $FreeBSD$
 
 PORTNAME=	todo
 PORTVERSION=	0.1.2
