@@ -1,5 +1,5 @@
 
-$FreeBSD: textproc/pdftohtml/files/patch-splash::Makefile 311381 2013-02-01 15:04:00Z ak $
+$FreeBSD: head/textproc/pdftohtml/files/patch-splash::Makefile 311381 2013-02-01 15:04:00Z ak $
 
 --- splash/Makefile
 +++ splash/Makefile
