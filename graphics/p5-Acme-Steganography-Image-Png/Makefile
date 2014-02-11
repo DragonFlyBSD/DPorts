@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: graphics/p5-Acme-Steganography-Image-Png/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Acme-Steganography-Image-Png
 PORTVERSION=	0.06
