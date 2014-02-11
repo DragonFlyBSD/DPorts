@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-mygpoclient/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mygpoclient
 PORTVERSION=	1.7
@@ -12,8 +12,8 @@ COMMENT=	gpodder.net API client library for Python
 
 LICENSE=	GPLv3
 
-USE_PYTHON=	2
-USE_PYDISTUTILS=yes
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
