@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Has-Sugar/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Has-Sugar
 PORTVERSION=	0.05070421
@@ -22,9 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		MooseX::Has::Sugar.3 \
-		MooseX::Has::Sugar::Saccharin.3 \
-		MooseX::Has::Sugar::Minimal.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
