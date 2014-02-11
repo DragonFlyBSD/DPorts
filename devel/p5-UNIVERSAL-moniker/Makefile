@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-UNIVERSAL-moniker/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	UNIVERSAL-moniker
 PORTVERSION=	0.08
