@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: audio/alure/Makefile 340678 2014-01-22 01:45:44Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	alure
 PORTVERSION=	1.2
