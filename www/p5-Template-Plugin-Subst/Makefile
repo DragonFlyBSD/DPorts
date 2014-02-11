@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Plugin-Subst/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-Subst
 PORTVERSION=	0.02
