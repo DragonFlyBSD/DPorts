@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-open-terminal/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #    $MCom: ports/deskutils/nautilus-open-terminal/Makefile,v 1.17 2009/08/09 15:30:27 ahze Exp $
 
 PORTNAME=	nautilus-open-terminal
