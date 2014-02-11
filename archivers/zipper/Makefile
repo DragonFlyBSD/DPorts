@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: archivers/zipper/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zipper
 PORTVERSION=	1.5
