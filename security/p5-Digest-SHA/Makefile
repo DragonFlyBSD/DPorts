@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: head/security/p5-Digest-SHA/Makefile 342949 2014-02-06 07:56:47Z culot $
+# $FreeBSD$
 
 PORTNAME=	Digest-SHA
 PORTVERSION=	5.86
