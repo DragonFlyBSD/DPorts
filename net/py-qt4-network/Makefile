@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: net/py-qt4-network/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	network
 PORTVERSION=	${PYQT4_VERSION}
