@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-daemon/Makefile 338648 2014-01-04 15:33:14Z crees $
+# $FreeBSD$
 
 PORTREVISION=	1
 PKGNAMESUFFIX=	-daemon
