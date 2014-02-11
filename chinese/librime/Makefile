@@ -1,8 +1,9 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/librime/Makefile 339153 2014-01-08 16:12:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	librime
 PORTVERSION=	0.9.7
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 MASTER_SITES=	GOOGLE_CODE
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} brise-${DATA_VER}.tar.gz
