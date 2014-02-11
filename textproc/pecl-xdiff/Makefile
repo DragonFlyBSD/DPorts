@@ -1,5 +1,5 @@
 # Created by: Larry Rosenman <ler@lerctr.org>
-# $FreeBSD: textproc/pecl-xdiff/Makefile 340083 2014-01-17 17:10:01Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	xdiff
 PORTVERSION=	1.5.2
