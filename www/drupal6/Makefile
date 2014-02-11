@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/drupal6/Makefile 339914 2014-01-16 15:00:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	drupal6
 PORTVERSION=	6.30
