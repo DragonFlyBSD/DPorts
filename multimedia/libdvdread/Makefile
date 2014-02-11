@@ -1,5 +1,5 @@
 # Created by: Marc van Woerkom <3d@FreeBSD.org>
-# $FreeBSD: head/multimedia/libdvdread/Makefile 342392 2014-02-03 08:15:19Z martymac $
+# $FreeBSD$
 
 PORTNAME=	libdvdread
 PORTVERSION=	4.2.1
