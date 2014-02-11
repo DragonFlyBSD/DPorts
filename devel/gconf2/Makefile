@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: devel/gconf2/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/gconf2/Makefile,v 1.124 2010/11/15 22:14:03 kwm Exp $
 
 PORTNAME=	gconf2
