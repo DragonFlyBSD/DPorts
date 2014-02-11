@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-hike/Makefile 338252 2013-12-31 07:25:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hike
 PORTVERSION=	1.2.3
