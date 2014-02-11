@@ -1,5 +1,5 @@
 # Created by: jasone
-# $FreeBSD: devel/libedit/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libedit
 PORTVERSION=	2.6.10
