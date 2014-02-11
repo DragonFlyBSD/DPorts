@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/hllib/Makefile 328949 2013-10-01 14:10:43Z danilo $
+# $FreeBSD$
 
 PORTNAME=	hllib
 PORTVERSION=	2.4.4
