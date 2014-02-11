@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Catalog/Makefile 334419 2013-11-20 13:52:34Z culot $
+# $FreeBSD$
 
 PORTNAME=	XML-Catalog
 PORTVERSION=	1.0.1
