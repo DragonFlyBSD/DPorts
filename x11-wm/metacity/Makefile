@@ -1,5 +1,5 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-# $FreeBSD: x11-wm/metacity/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-wm/metacity/Makefile,v 1.158 2010/09/30 07:04:02 kwm Exp $
 
 PORTNAME=	metacity
