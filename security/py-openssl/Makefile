@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/security/py-openssl/Makefile 342862 2014-02-05 21:30:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	openssl
 PORTVERSION=	0.13
