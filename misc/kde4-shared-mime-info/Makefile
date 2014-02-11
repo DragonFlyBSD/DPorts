@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kde4-shared-mime-info/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	shared-mime-info
 PORTVERSION=	1.2
