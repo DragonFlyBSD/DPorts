@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-requests-oauthlib/Makefile 341731 2014-01-29 13:18:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	requests-oauthlib
 PORTVERSION=	0.3.2
