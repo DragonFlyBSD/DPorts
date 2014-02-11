@@ -1,5 +1,5 @@
 # Created by: Oleg Sharoiko <os@rsu.ru>
-# $FreeBSD: databases/pear-MDB/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	MDB
 PORTVERSION=	1.3.0
