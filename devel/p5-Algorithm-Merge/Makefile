@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Algorithm-Merge/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-Merge
 PORTVERSION=	0.08
