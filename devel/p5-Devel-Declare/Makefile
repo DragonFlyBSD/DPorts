@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-Devel-Declare/Makefile 342455 2014-02-03 15:37:17Z culot $
+# $FreeBSD$
 
 PORTNAME=	Devel-Declare
 PORTVERSION=	0.006015
