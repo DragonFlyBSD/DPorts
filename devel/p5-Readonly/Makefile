@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-Readonly/Makefile 335058 2013-11-27 20:44:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Readonly
 PORTVERSION=	1.04
