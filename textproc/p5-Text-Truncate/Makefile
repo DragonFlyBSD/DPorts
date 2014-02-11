@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Truncate/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Truncate
 PORTVERSION=	1.04
