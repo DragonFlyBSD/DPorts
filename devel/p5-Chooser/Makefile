@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: devel/p5-Chooser/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Chooser
 PORTVERSION=	2.0.0
