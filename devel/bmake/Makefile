@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/bmake/Makefile 339387 2014-01-10 22:21:24Z trociny $
+# $FreeBSD$
 
 PORTNAME=	bmake
 PORTVERSION=	20140101
