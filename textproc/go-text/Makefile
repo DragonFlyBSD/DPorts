@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: textproc/go-text/Makefile 339441 2014-01-11 17:46:33Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	go-text
 PORTVERSION=	20130502
