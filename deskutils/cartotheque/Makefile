@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/cartotheque/Makefile 342220 2014-02-01 23:44:09Z antoine $
+# $FreeBSD$
 
 PORTNAME=	cartotheque
 PORTVERSION=	0.1
