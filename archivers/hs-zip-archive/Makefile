@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/hs-zip-archive/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zip-archive
 PORTVERSION=	0.1.3.4
