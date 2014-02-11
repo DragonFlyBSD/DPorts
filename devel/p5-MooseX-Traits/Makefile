@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Traits/Makefile 333765 2013-11-14 15:19:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Traits
 PORTVERSION=	0.12
