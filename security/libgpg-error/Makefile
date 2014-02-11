@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: head/security/libgpg-error/Makefile 341995 2014-01-31 14:22:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libgpg-error
 PORTVERSION=	1.12
