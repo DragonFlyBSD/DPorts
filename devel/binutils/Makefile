@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/devel/binutils/Makefile 343349 2014-02-08 15:24:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	binutils
 PORTVERSION=	2.24
