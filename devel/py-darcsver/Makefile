@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/devel/py-darcsver/Makefile 343597 2014-02-10 07:46:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	darcsver
 PORTVERSION=	1.7.4
