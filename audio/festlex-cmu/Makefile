@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: head/audio/festlex-cmu/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festlex-cmu
 PORTVERSION=	1.95
