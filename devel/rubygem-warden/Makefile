@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: devel/rubygem-warden/Makefile 334437 2013-11-20 18:32:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	warden
 PORTVERSION=	1.2.3
