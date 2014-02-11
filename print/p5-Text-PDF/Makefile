@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: print/p5-Text-PDF/Makefile 341805 2014-01-30 07:55:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Text-PDF
 PORTVERSION=	0.29a
