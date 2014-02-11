@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Type-Tiny/Makefile 338454 2014-01-02 16:23:02Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Type-Tiny
 PORTVERSION=	0.038
