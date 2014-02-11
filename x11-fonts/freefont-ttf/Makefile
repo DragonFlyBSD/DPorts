@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: head/x11-fonts/freefont-ttf/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD$
 
 PORTNAME=	freefont-ttf
 PORTVERSION=	20120503
