@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/ktimer/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ktimer
 PORTVERSION=	${KDE4_VERSION}
