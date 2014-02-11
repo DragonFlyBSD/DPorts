@@ -1,5 +1,5 @@
 # Created by: dom
-# $FreeBSD: head/devel/pcre/Makefile 342800 2014-02-05 17:40:42Z bf $
+# $FreeBSD$
 
 PORTNAME=	pcre
 PORTVERSION=	8.34
