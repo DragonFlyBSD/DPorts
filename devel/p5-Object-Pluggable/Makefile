@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: devel/p5-Object-Pluggable/Makefile 342261 2014-02-02 10:11:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Object-Pluggable
 PORTVERSION=	1.29
