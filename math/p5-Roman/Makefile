@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: math/p5-Roman/Makefile 341829 2014-01-30 10:27:43Z az $
+# $FreeBSD$
 
 PORTNAME=	Roman
 PORTVERSION=	1.22
