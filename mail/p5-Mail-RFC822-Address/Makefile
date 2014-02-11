@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@in.tum.de>
-# $FreeBSD: head/mail/p5-Mail-RFC822-Address/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mail-RFC822-Address
 PORTVERSION=	0.3
