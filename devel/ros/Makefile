@@ -1,9 +1,9 @@
 # Created by: Rene Ladan <rene@FreeBSD.org>
-# $FreeBSD: devel/ros/Makefile 336253 2013-12-12 10:53:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ros
 PORTVERSION=	1.4.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://code.ros.org/svn/release/download/stacks/${STACKNAME}/${STACKNAME}-${PORTVERSION}/
 DIST_SUBDIR=	ros
