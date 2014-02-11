@@ -1,5 +1,5 @@
 # Created by: OKAZAKI Tetsurou
-# $FreeBSD: java/junit/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	junit
 PORTVERSION=	4.10
