@@ -1,5 +1,5 @@
 # Created by: Thomas E. Zander
-# $FreeBSD: multimedia/mencoder/Makefile 337376 2013-12-24 17:26:22Z thierry $
+# $FreeBSD$
 
 PORTNAME=	mencoder
 PORTVERSION=	${MPLAYER_PORT_VERSION}
