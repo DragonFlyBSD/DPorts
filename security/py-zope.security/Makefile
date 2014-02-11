@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: head/security/py-zope.security/Makefile 343605 2014-02-10 09:09:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.security
 PORTVERSION=	3.9.0
