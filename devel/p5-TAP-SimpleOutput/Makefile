@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-TAP-SimpleOutput/Makefile 334675 2013-11-23 15:11:09Z lth $
+# $FreeBSD$
 
 PORTNAME=	TAP-SimpleOutput
 PORTVERSION=	0.002
