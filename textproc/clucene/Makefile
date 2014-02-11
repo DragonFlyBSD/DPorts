@@ -1,9 +1,9 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/clucene/Makefile 338985 2014-01-07 08:33:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clucene
 PORTVERSION=	2.3.3.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-core-unstable/2.3
 DISTNAME=	${PORTNAME}-core-${PORTVERSION}
