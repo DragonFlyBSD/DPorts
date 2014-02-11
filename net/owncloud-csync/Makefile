@@ -1,5 +1,5 @@
 # Created by: arrowdodger <6yearold@gmail.com>
-# $FreeBSD: net/owncloud-csync/Makefile 339181 2014-01-08 21:52:43Z mat $
+# $FreeBSD$
 
 PORTNAME=	owncloud-csync
 PORTVERSION=	0.91.4
