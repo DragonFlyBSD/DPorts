@@ -1,5 +1,5 @@
 # Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-# $FreeBSD: devel/psptoolchain-gdb/Makefile 330932 2013-10-19 20:14:14Z tijl $
+# $FreeBSD$
 
 PORTNAME=		gdb
 PORTVERSION=		7.3.1
