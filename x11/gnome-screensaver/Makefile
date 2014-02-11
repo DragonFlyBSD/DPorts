@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11/gnome-screensaver/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.125 2012/09/03 16:28:29 mezz Exp $
 
 PORTNAME=	gnome-screensaver
