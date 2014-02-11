@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <bd_subzero@yahoo.com>
-# $FreeBSD: net/libexosip2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libeXosip2
 PORTVERSION=	3.6.0
