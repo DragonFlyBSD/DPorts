@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/R-cran-scales/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD$
 
 PORTNAME=	scales
 PORTVERSION=	0.2.3
