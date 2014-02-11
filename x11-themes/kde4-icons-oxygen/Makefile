@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde4-icons-oxygen/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	oxygen
 PORTVERSION=	${KDE4_VERSION}
