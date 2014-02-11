@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/openmsx/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openmsx
 PORTVERSION=	0.10.0
@@ -32,6 +32,8 @@ USE_PYTHON=	yes
 PLIST_FILES=	bin/openmsx
 PORTDATA=	*
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
