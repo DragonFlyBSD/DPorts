@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.com>
-# $FreeBSD: devel/gdb66/Makefile 339877 2014-01-16 00:00:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
