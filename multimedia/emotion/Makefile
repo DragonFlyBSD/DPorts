@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: multimedia/emotion/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	emotion
 PORTVERSION=	1.7.9
@@ -28,6 +28,8 @@ CONFIGURE_ARGS=	--disable-generic-vlc
 OPTIONS_MULTI=	BACKEND
 OPTIONS_MULTI_BACKEND=	GSTREAMER LIBXINE
 OPTIONS_DEFAULT=GSTREAMER
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
