@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreBSD.org>
-# $FreeBSD: x11-toolkits/libgnomeprintui/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.75 2010/09/28 16:07:36 kwm Exp $
 
 PORTNAME=	libgnomeprintui
