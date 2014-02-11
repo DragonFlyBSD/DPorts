@@ -1,5 +1,5 @@
 # Created by: Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: devel/pthsem/Makefile 340968 2014-01-25 00:39:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pthsem
 PORTVERSION=	2.0.7
