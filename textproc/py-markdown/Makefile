@@ -1,5 +1,5 @@
 # Created by: Graham Todd <gtodd@bellanet.org>
-# $FreeBSD: head/textproc/py-markdown/Makefile 342412 2014-02-03 10:18:19Z koobs $
+# $FreeBSD$
 
 PORTNAME=	markdown
 PORTVERSION=	2.3.1
