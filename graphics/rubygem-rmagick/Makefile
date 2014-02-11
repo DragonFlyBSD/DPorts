@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-rmagick/Makefile 332045 2013-10-30 02:50:05Z swills $
+# $FreeBSD$
 
 PORTNAME=		rmagick
 PORTVERSION=		2.13.2
