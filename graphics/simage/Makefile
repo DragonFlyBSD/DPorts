@@ -1,5 +1,5 @@
 # Created by: roland.jesse@gmx.net
-# $FreeBSD: graphics/simage/Makefile 342301 2014-02-02 14:41:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	simage
 PORTVERSION=	1.7.0
