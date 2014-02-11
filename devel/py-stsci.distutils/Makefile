@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-stsci.distutils/Makefile 337374 2013-12-24 17:16:59Z wg $
+# $FreeBSD$
 
 PORTNAME=	stsci.distutils
 PORTVERSION=	0.3.7
