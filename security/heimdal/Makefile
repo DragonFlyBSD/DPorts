@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: security/heimdal/Makefile 336247 2013-12-12 05:19:57Z cy $
+# $FreeBSD$
 
 PORTNAME=	heimdal
 PORTVERSION=	1.5.2

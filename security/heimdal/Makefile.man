@@ -1,4 +1,4 @@
-# $FreeBSD: security/heimdal/Makefile.man 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 MAN1+= afslog.1
 MAN1+= ftp.1
 MAN1+= kdestroy.1
