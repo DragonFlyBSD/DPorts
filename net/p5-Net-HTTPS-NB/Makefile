@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-HTTPS-NB/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-HTTPS-NB
 PORTVERSION=	0.13
