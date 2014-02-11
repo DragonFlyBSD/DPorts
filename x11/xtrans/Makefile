@@ -1,5 +1,5 @@
 # Created by: Dejan Lesjak <lesi@FreeBSD.org>
-# $FreeBSD: head/x11/xtrans/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xtrans
 PORTVERSION=	1.3.2
