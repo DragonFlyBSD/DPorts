@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gucharmap/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/gucharmap/Makefile,v 1.75 2010/11/13 13:05:08 kwm Exp $
 
 PORTNAME=	gucharmap
