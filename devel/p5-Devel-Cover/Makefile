@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Devel-Cover/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Devel-Cover
 PORTVERSION=	1.08
@@ -25,6 +25,8 @@ USES=		perl5
 USE_PERL5=	configure
 
 PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
