@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: www/p5-CGI-SpeedyCGI/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	CGI-SpeedyCGI
 PORTVERSION=	2.22
