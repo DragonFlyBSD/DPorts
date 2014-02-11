@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: graphics/p5-Graphics-ColorNames-WWW/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Graphics-ColorNames-WWW
 PORTVERSION=	1.13
