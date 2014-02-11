@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/devel/p5-IO-AIO/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IO-AIO
 PORTVERSION=	4.18
