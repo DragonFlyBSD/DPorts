@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD: graphics/osg/Makefile 340402 2014-01-20 14:35:09Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	osg
 PORTVERSION=	3.2.0
