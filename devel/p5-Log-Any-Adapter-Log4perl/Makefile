@@ -1,5 +1,5 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: devel/p5-Log-Any-Adapter-Log4perl/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Log-Any-Adapter-Log4perl
 PORTVERSION=	0.06
