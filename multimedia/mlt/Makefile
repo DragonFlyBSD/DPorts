@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/mlt/Makefile 331163 2013-10-21 17:37:43Z wg $
+# $FreeBSD$
 
 PORTNAME=	mlt
 PORTVERSION=	0.9.0
