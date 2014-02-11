@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Catalyst-Action-REST/Makefile 338232 2013-12-31 04:26:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Action-REST
 PORTVERSION=	1.14
