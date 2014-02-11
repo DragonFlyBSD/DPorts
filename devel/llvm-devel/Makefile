@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/llvm-devel/Makefile 332935 2013-11-06 00:13:02Z brooks $
+# $FreeBSD$
 
 PORTNAME=	llvm
 DISTVERSION=	3.4.r${SVN_REV}
