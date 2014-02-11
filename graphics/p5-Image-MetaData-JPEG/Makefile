@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: graphics/p5-Image-MetaData-JPEG/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Image-MetaData-JPEG
 PORTVERSION=	0.153
