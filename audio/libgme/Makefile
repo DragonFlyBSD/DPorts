@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libgme/Makefile 339003 2014-01-07 13:14:45Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libgme
 PORTVERSION=	0.5.5
