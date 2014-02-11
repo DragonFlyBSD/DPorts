@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: mail/p5-Net-SMTP-TLS-ButMaintained/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-SMTP-TLS-ButMaintained
 PORTVERSION=	0.24
