@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFUid/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFUid
 PORTVERSION=	2.2.1
