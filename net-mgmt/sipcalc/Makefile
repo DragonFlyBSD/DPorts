@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@dante.org.uk
-# $FreeBSD: net-mgmt/sipcalc/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sipcalc
 PORTVERSION=	1.1.5
