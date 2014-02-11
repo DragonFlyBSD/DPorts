@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: archivers/libarc/Makefile 328241 2013-09-25 02:59:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	libarc
 PORTVERSION=	2.0.2
