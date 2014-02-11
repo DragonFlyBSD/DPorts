@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-attoparsec-conduit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	attoparsec-conduit
 PORTVERSION=	1.0.1
