@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: astro/libroadnav/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libroadnav
 PORTVERSION=	0.19
