@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: head/math/py-numpy/Makefile 336813 2013-12-18 10:38:33Z koobs $
+# $FreeBSD$
 
 PORTNAME=	numpy
 PORTVERSION=	1.7.0
