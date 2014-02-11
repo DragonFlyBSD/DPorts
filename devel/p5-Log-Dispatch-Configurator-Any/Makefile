@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Log-Dispatch-Configurator-Any/Makefile 328857 2013-09-30 20:03:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-Configurator-Any
 PORTVERSION=	1.122.640
