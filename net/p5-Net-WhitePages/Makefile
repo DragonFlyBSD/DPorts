@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Net-WhitePages/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-WhitePages
 PORTVERSION=	1.04
