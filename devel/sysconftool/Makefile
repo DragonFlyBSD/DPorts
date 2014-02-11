@@ -1,5 +1,5 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: devel/sysconftool/Makefile 332298 2013-10-31 23:33:06Z garga $
+# $FreeBSD$
 
 PORTNAME=	sysconftool
 PORTVERSION=	0.17
