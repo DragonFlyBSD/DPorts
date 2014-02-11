@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugin-treebrowser/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	geany-plugin-treebrowser
 PORTVERSION=	${GEANY_VER}
