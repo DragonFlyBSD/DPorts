@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/apache22/Makefile 334783 2013-11-24 19:56:26Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.26
