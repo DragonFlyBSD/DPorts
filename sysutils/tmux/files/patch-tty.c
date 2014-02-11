@@ -1,4 +1,4 @@
-$FreeBSD: sysutils/tmux/files/patch-tty.c 323874 2013-07-29 08:30:06Z gahr $
+$FreeBSD: head/sysutils/tmux/files/patch-tty.c 323874 2013-07-29 08:30:06Z gahr $
 
 Apply upstream commit cbee283c26968304b473e2191d2bb5f52208b58d to prevent
 OS X's Terminal.app turning on underlining when the status bar contains

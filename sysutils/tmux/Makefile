@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: sysutils/tmux/Makefile 341527 2014-01-28 09:49:21Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tmux
 PORTVERSION=	1.8
