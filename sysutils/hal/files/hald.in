@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/hal/files/hald.in 305045 2012-09-29 18:17:59Z kwm $
+# $FreeBSD: head/sysutils/hal/files/hald.in 305045 2012-09-29 18:17:59Z kwm $
 #   $MCom: ports/sysutils/hal/files/hald.in,v 1.22 2010/04/17 19:05:10 marcus Exp $
 #
 # PROVIDE: hald
