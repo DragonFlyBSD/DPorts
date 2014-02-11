@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Google/Makefile 340778 2014-01-23 03:27:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-Google
 PORTVERSION=	0.14
