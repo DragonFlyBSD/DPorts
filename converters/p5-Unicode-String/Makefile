@@ -1,5 +1,5 @@
 # Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
-# $FreeBSD: head/converters/p5-Unicode-String/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Unicode-String
 PORTVERSION=	2.09
