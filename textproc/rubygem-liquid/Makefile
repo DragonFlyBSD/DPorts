@@ -1,5 +1,5 @@
 # Created by: peter.schuller@infidyne.com
-# $FreeBSD: textproc/rubygem-liquid/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	liquid
 PORTVERSION=	2.5.0
