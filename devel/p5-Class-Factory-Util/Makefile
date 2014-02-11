@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Class-Factory-Util/Makefile 332844 2013-11-05 12:56:03Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-Factory-Util
 PORTVERSION=	1.7
