@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/aspell-ispell/Makefile 341537 2014-01-28 12:02:27Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aspell
 PORTVERSION=	0.60.6.1
