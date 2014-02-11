@@ -1,4 +1,4 @@
-# $FreeBSD: net/remotedesk/Makefile 342043 2014-01-31 17:09:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	remotedesk
 PORTVERSION=	0.1
