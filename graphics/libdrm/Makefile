@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: graphics/libdrm/Makefile 342071 2014-01-31 21:01:57Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libdrm
 PORTVERSION=	${LIBDRM_VERSION}
