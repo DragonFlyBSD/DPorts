@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: head/net/py-oauth2/Makefile 341755 2014-01-29 16:17:02Z miwi $
+# $FreeBSD$
 
 PORTNAME=	oauth2
 PORTVERSION=	1.5.211
