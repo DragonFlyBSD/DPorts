@@ -1,4 +1,4 @@
-# $FreeBSD: devel/smokegen/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	smokegen
 PORTVERSION=	${KDE4_VERSION}
