@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: x11/tkXwin/Makefile 339205 2014-01-09 08:49:35Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkXwin
 PORTVERSION=	1.0
