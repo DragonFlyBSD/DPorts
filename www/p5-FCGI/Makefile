@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@posi.net>
-# $FreeBSD: head/www/p5-FCGI/Makefile 341607 2014-01-28 15:58:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	FCGI
 PORTVERSION=	0.74
