@@ -1,5 +1,5 @@
 # Created by: Otacilio de Araujo Ramos Neto <otacilio.neto@bsd.com.br>
-# $FreeBSD: devel/flexdock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	flexdock
 PORTVERSION=	1.1
