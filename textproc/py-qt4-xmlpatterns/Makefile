@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: textproc/py-qt4-xmlpatterns/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	xmlpatterns
 PORTVERSION=	${PYQT4_VERSION}
