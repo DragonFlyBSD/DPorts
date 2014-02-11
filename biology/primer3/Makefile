@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: biology/primer3/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	primer3
 PORTVERSION=	2.3.5
