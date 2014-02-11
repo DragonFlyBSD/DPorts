@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/xincluder/files/xincluder.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/textproc/xincluder/files/xincluder.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 IAM=`basename "$0"`
 
