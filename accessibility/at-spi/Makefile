@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/at-spi/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/accessibility/at-spi/Makefile,v 1.103 2010/09/27 09:47:42 kwm Exp $
 
 PORTNAME=	at-spi
