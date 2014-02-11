@@ -1,8 +1,8 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-EN-Numbers/Makefile 334741 2013-11-24 16:16:46Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Lingua-EN-Numbers
-PORTVERSION=	1.05
+PORTVERSION=	1.06
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
