@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-loggability/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	loggability
 PORTVERSION=	0.6.1
