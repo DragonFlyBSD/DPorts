@@ -1,5 +1,5 @@
 # Created by: erikhb@bgnett.no
-# $FreeBSD: head/databases/libiodbc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libiodbc
 PORTVERSION=	3.52.8
