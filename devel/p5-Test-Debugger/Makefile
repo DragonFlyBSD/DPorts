@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Debugger/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Debugger
 PORTVERSION=	0.14
