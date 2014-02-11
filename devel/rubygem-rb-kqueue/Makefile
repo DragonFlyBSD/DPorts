@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rb-kqueue/Makefile 331721 2013-10-26 17:01:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rb-kqueue
 PORTVERSION=	0.2.0
