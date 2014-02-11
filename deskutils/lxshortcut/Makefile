@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: deskutils/lxshortcut/Makefile 337011 2013-12-20 13:36:07Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxshortcut
 PORTVERSION=	0.1.2
