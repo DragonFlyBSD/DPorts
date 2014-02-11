@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: accessibility/at-spi2-atk/Makefile 336152 2013-12-11 09:51:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/accessibility/at-spi2-atk/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	at-spi2-atk
