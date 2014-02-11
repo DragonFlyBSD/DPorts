@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: textproc/qstardict/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	qstardict
 PORTVERSION=	1.0.1
