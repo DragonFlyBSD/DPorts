@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-XML-AutoWriter/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-AutoWriter
 PORTVERSION=	0.40
