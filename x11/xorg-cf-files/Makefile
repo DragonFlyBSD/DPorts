@@ -1,5 +1,5 @@
 # Created by: Dave Grochowski
-# $FreeBSD: x11/xorg-cf-files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xorg-cf-files
 PORTVERSION=	1.0.5
