@@ -1,5 +1,5 @@
 # Created by: mons
-# $FreeBSD: www/p5-Catalyst-Controller-ActionRole/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Controller-ActionRole
 PORTVERSION=	0.15
