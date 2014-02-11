@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: devel/rlog/Makefile 340965 2014-01-25 00:30:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rlog
 PORTVERSION=	1.4
