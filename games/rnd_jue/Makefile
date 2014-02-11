@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rnd_jue/Makefile 332932 2013-11-05 23:38:08Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	rnd_jue
 PORTVERSION=	3.3.0.0
