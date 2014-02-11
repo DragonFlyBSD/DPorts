@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/cmake-modules/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD$
 
 PORTREVISION=	1
 PKGNAMESUFFIX=	-modules
