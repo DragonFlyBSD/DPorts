@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/deforaos-keyboard/Makefile 332765 2013-11-04 19:55:56Z wg $
+# $FreeBSD$
 
 PORTNAME=	keyboard
 PORTVERSION=	0.2.1
