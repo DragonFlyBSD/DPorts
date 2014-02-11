@@ -1,5 +1,5 @@
 # Created by: Ernst de Haan <znerd@FreeBSD.org>
-# $FreeBSD: devel/apache-ant/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	apache-ant
 PORTVERSION=	1.9.3
