@@ -1,5 +1,5 @@
 # Created by: Alan Somers <asomers@FreeBSD.org>
-# $FreeBSD: devel/kyua/Makefile 340929 2014-01-24 19:46:56Z jmmv $
+# $FreeBSD$
 
 PORTNAME=	kyua
 PORTVERSION=	0.8
