@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: graphics/icon-slicer/Makefile 338421 2014-01-02 07:54:49Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	icon-slicer
 PORTVERSION=	0.3
