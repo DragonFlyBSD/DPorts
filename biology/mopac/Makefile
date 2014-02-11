@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-# $FreeBSD: biology/mopac/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mopac
 PORTVERSION=	7.${MOPAC_SUBVERSION}
