@@ -1,4 +1,4 @@
-# $FreeBSD: math/p5-Math-Vec/Makefile 342152 2014-02-01 14:41:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Math-Vec
 PORTVERSION=	1.01
