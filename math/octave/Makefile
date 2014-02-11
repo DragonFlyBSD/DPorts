@@ -1,5 +1,5 @@
 # Created by: chuckr@FreeBSD.org
-# $FreeBSD: math/octave/Makefile 341013 2014-01-25 12:04:25Z antoine $
+# $FreeBSD$
 
 PORTNAME=	octave
 PORTVERSION=	3.8.0
