@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFActionIcons/Makefile 341094 2014-01-25 20:42:19Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFActionIcons
 PORTVERSION=	2.1.3
