@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/markdown/Makefile 340571 2014-01-21 08:11:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	markdown
 PORTVERSION=	1.0.1
