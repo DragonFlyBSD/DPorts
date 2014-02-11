@@ -1,5 +1,5 @@
 # Created by: Danny Howard <dannyman@tellme.com>
-# $FreeBSD: net/p5-Net-XWhois/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-XWhois
 PORTVERSION=	0.90
