@@ -1,4 +1,4 @@
-# $FreeBSD: misc/qt4-l10n/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	l10n
 DISTVERSION=	${QT4_VERSION}
