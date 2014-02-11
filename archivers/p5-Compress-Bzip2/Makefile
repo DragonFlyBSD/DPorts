@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: head/archivers/p5-Compress-Bzip2/Makefile 338685 2014-01-04 23:32:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Compress-Bzip2
 PORTVERSION=	2.17
