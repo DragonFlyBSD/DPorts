@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: databases/pgtcl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pgtcl
 PORTVERSION=	2.0.0
