@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-Import-Into/Makefile 337764 2013-12-27 17:38:09Z mat $
+# $FreeBSD$
 
 PORTNAME=	Import-Into
 PORTVERSION=	1.002000
