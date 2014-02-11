@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: devel/qt4-linguist/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	linguist
 DISTVERSION=	${QT4_VERSION}
