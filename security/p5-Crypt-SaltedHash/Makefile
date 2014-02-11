@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-SaltedHash/Makefile 342011 2014-01-31 15:53:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Crypt-SaltedHash
 PORTVERSION=	0.06
