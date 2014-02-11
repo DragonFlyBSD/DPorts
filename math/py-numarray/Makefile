@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: math/py-numarray/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	numarray
 PORTVERSION=	1.5.2
