@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/p5-Email-MIME-ContentType/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-MIME-ContentType
 PORTVERSION=	1.01.7
