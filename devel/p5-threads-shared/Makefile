@@ -1,5 +1,5 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: devel/p5-threads-shared/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	threads-shared
 PORTVERSION=	1.43
@@ -17,9 +17,6 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	threads::shared.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501100
