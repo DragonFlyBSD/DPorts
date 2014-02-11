@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/ender/Makefile 329574 2013-10-06 14:41:55Z gblach $
+# $FreeBSD$
 
 PORTNAME=	ender
 PORTVERSION=	20121003
