@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/dssi/Makefile 342060 2014-01-31 19:53:37Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	dssi
 PORTVERSION=	1.1.1
