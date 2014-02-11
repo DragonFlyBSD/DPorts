@@ -1,5 +1,5 @@
 # Created by: roman@xpert.com
-# $FreeBSD: converters/p5-Convert-TNEF/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Convert-TNEF
 PORTVERSION=	0.18
