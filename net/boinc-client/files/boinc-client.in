@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/boinc-client/files/boinc-client.in 325145 2013-08-21 14:45:47Z rene $
+# $FreeBSD: head/net/boinc-client/files/boinc-client.in 325145 2013-08-21 14:45:47Z rene $
 #
 # PROVIDE: boinc-client
 # REQUIRE: LOGIN
