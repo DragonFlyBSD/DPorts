@@ -1,5 +1,5 @@
 # Created by: Marcin Jessa <yazzy@yazzy.org>
-# $FreeBSD: net/py-pcapy/Makefile 334286 2013-11-19 07:42:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pcapy
 PORTVERSION=	0.10.8
