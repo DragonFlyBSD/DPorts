@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/p5-Gnome2-VFS/Makefile 329620 2013-10-06 18:42:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gnome2-VFS
 PORTVERSION=	1.082
