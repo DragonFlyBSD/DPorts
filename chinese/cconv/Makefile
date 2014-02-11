@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/chinese/cconv/Makefile 329145 2013-10-03 06:42:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	cconv
 PORTVERSION=	0.6.2
