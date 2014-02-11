@@ -1,5 +1,5 @@
 # Created by: aturetta@commit.it
-# $FreeBSD: devel/p5-Test-WWW-Mechanize/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-WWW-Mechanize
 PORTVERSION=	1.44
