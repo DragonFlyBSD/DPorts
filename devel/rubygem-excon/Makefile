@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-excon/Makefile 338249 2013-12-31 07:24:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	excon
 PORTVERSION=	0.31.0
