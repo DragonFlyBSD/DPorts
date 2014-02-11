@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/rubygem-jruby-jars/Makefile 335848 2013-12-07 20:27:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	jruby-jars
 PORTVERSION=	1.7.9
