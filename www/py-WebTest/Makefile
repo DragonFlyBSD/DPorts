@@ -1,5 +1,5 @@
 # Created by: Wen Heping
-# $FreeBSD: www/py-WebTest/Makefile 342056 2014-01-31 19:47:28Z cs $
+# $FreeBSD$
 
 PORTNAME=	WebTest
 PORTVERSION=	2.0.14
