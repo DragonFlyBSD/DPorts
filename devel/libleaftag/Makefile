@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: devel/libleaftag/Makefile 342171 2014-02-01 15:33:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libleaftag
 PORTVERSION=	0.3.1
