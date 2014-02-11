@@ -1,5 +1,5 @@
 # Created by: Tim Niemueller <tim@niemueller.de>
-# $FreeBSD: devel/yaml-cpp/Makefile 340585 2014-01-21 09:02:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	yaml-cpp
 PORTVERSION=	0.3.0
