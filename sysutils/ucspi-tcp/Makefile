@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: head/sysutils/ucspi-tcp/Makefile 331449 2013-10-23 23:53:54Z garga $
+# $FreeBSD$
 
 PORTNAME=	ucspi-tcp
 PORTVERSION=	0.88
