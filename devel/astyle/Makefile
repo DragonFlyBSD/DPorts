@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: devel/astyle/Makefile 335828 2013-12-07 14:06:04Z lme $
+# $FreeBSD$
 
 PORTNAME=	astyle
 PORTVERSION=	2.04
