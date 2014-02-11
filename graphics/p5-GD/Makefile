@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/p5-GD/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	GD
 PORTVERSION=	2.50
