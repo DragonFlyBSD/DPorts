@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: mail/claws-mail/Makefile 336489 2013-12-14 22:02:10Z pawel $
+# $FreeBSD$
 
 PORTNAME=	claws-mail
 CATEGORIES=	mail news ipv6

@@ -1,4 +1,4 @@
-# $FreeBSD: mail/claws-mail/Makefile.claws 336489 2013-12-14 22:02:10Z pawel $
+# $FreeBSD$
 
 PORTVERSION=	3.9.3
 CATEGORIES?=	mail
