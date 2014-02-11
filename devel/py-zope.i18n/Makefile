@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: head/devel/py-zope.i18n/Makefile 338824 2014-01-05 21:02:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.i18n
 PORTVERSION=	3.8.0
