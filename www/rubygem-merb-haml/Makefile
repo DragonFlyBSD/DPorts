@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-merb-haml/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	merb-haml
 PORTVERSION=	1.1.3
