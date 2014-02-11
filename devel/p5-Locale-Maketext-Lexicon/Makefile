@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: head/devel/p5-Locale-Maketext-Lexicon/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Locale-Maketext-Lexicon
 PORTVERSION=	0.96
@@ -17,6 +17,8 @@ RUN_DEPENDS=	p5-Locale-Maketext>=1.17:${PORTSDIR}/devel/p5-Locale-Maketext
 
 USES=		perl5
 USE_PERL5=	configure
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
