@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: devel/qt4-qdoc3/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	qdoc3
 DISTVERSION=	${QT4_VERSION}
