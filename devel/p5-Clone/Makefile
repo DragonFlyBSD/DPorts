@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Clone/Makefile 342200 2014-02-01 18:34:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Clone
 PORTVERSION=	0.35
