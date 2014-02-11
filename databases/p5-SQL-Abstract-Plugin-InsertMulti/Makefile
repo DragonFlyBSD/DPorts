@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-SQL-Abstract-Plugin-InsertMulti/Makefile 331908 2013-10-28 23:33:12Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	SQL-Abstract-Plugin-InsertMulti
 PORTVERSION=	0.04
