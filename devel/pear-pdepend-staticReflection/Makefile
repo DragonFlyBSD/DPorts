@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-pdepend-staticReflection/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	staticReflection
 PORTVERSION=	1.0.0
