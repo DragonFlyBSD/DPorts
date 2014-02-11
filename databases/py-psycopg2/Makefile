@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/databases/py-psycopg2/Makefile 341308 2014-01-26 23:32:05Z rm $
+# $FreeBSD$
 
 PORTNAME=	psycopg2
 PORTVERSION=	2.5.2
