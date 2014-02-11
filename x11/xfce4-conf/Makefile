@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11/xfce4-conf/Makefile 330345 2013-10-14 19:42:26Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-conf
 PORTVERSION=	4.10.0
