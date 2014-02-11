@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mjpegtools/Makefile 336409 2013-12-14 00:58:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mjpegtools
 PORTVERSION=	2.0.0
