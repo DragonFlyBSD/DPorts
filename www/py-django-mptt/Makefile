@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: www/py-django-mptt/Makefile 335354 2013-11-30 23:50:10Z cs $
+# $FreeBSD$
 
 PORTNAME=	django-mptt
 PORTVERSION=	0.6.0
