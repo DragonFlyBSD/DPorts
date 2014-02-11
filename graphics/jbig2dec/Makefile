@@ -1,11 +1,10 @@
-# $FreeBSD: graphics/jbig2dec/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jbig2dec
 PORTVERSION=	0.11
 PORTREVISION=	1
 CATEGORIES=	graphics devel
-MASTER_SITES=	SF \
-		http://ghostscript.com/~giles/jbig2/jbig2dec/
+MASTER_SITES=	SF
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
