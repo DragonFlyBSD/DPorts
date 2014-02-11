@@ -1,4 +1,4 @@
-# $FreeBSD: head/irc/irssi/Makefile 343513 2014-02-09 15:36:09Z antoine $
+# $FreeBSD$
 
 PORTNAME=	irssi
 PORTVERSION=	0.8.15
