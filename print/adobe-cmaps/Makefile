@@ -1,5 +1,5 @@
 # Created by: KATO Tsuguru <tkato@prontomail.com>
-# $FreeBSD: head/print/adobe-cmaps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	adobe-cmaps
 PORTVERSION=	20051217
