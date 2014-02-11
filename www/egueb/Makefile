@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/egueb/Makefile 330259 2013-10-13 22:00:06Z gblach $
+# $FreeBSD$
 
 PORTNAME=	egueb
 PORTVERSION=	20121003
