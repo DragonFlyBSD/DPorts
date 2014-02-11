@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: devel/librcc/Makefile 334810 2013-11-25 03:13:52Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	librcc
 PORTVERSION=	0.2.12
