@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: devel/libisofs/Makefile 336363 2013-12-13 18:10:41Z delphij $
+# $FreeBSD$
 
 PORTNAME=	libisofs
 PORTVERSION=	1.3.4
