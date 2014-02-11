@@ -1,5 +1,5 @@
 # Created by: Anthony Kim
-# $FreeBSD: mail/p5-Mail-SpamAssassin/Makefile 340651 2014-01-21 20:17:40Z mat $
+# $FreeBSD$
 
 PORTNAME=	Mail-SpamAssassin
 PORTVERSION=	3.3.2
