@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: security/p5-Net-OpenID-Common/Makefile 333827 2013-11-15 09:49:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-OpenID-Common
 PORTVERSION=	1.18
