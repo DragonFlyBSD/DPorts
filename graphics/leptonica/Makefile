@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/leptonica/Makefile 340161 2014-01-18 09:43:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	leptonica
 PORTVERSION=	1.69
