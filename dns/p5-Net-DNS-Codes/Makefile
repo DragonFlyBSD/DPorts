@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/dns/p5-Net-DNS-Codes/Makefile 342570 2014-02-04 16:31:10Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-Codes
 PORTVERSION=	0.12
