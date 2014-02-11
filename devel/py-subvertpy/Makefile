@@ -1,5 +1,5 @@
 # Created by: Carlo Strub (c-s@c-s.li)
-# $FreeBSD: devel/py-subvertpy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	subvertpy
 PORTVERSION=	0.8.10
