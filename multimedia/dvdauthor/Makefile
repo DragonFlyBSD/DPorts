@@ -1,8 +1,9 @@
 # Created by: pb@FreeBSD.org
-# $FreeBSD: multimedia/dvdauthor/Makefile 333147 2013-11-07 19:14:47Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	dvdauthor
 PORTVERSION=	0.7.1
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
