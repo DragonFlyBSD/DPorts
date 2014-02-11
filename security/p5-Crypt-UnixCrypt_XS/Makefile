@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Crypt-UnixCrypt_XS/Makefile 339626 2014-01-13 19:55:40Z brix $
+# $FreeBSD$
 
 PORTNAME=	Crypt-UnixCrypt_XS
 PORTVERSION=	0.10
