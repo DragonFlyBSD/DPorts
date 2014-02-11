@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: graphics/devil/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	devil
 PORTVERSION=	1.7.8
