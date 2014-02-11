@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-language-javascript/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	language-javascript
 PORTVERSION=	0.5.7
