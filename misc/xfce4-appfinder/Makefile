@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: misc/xfce4-appfinder/Makefile 330342 2013-10-14 18:57:19Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-appfinder
 PORTVERSION=	4.10.1
