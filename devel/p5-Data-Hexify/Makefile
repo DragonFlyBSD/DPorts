@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Hexify/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Hexify
 PORTVERSION=	1.00
