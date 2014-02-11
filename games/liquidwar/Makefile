@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: games/liquidwar/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	liquidwar
 PORTVERSION=	5.6.4
@@ -13,27 +13,21 @@ MASTER_SITE_SUBDIR=	liquidwar
 MAINTAINER=	edwin@mavetju.org
 COMMENT=	You control an army of liquid and have to try and eat your opponents
 
-LIB_DEPENDS=	alleg.4:${PORTSDIR}/devel/allegro
+LIB_DEPENDS=	liballeg.so:${PORTSDIR}/devel/allegro
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 CONFIGURE_ARGS=	--disable-target-opt --disable-doc-ps --disable-doc-pdf
+CONFIGURE_ENV=	ac_cv_prog_PYTHON=yes
 USE_PYTHON_BUILD=yes
 
 INFO=		liquidwar
 
-MANCOMPRESSED=	yes
-MAN6=		liquidwar.6 \
-		liquidwar-server.6 \
-		liquidwar-mapgen.6
-
 OPTIONS_DEFINE=		ASM
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
+ASM_CONFIGURE_OFF=	--disable-asm
 
-.if ! ${PORT_OPTIONS:MASM}
-CONFIGURE_ARGS+=	--disable-asm
-.endif
+post-patch:
+	@${REINPLACE_CMD} 's,python,${PYTHON_CMD},' ${WRKSRC}/doc/Makefile.in
 
 .include <bsd.port.mk>

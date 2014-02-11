@@ -1,6 +1,1 @@
 LDFLAGS+= -lm
-CONFIGURE_ENV+= ac_cv_prog_PYTHON=yes
-
-post-patch:
-	${REINPLACE_CMD} -e 's|python|${PYTHON_VERSION}|g' \
-		${WRKSRC}/doc/Makefile.in
