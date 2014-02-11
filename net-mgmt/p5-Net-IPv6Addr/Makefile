@@ -1,5 +1,5 @@
 # Created by: JJ Behrens <jj@nttmcl.com>
-# $FreeBSD: net-mgmt/p5-Net-IPv6Addr/Makefile 332836 2013-11-05 12:02:05Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-IPv6Addr
 PORTVERSION=	0.2
