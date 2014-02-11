@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Send/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-Send
 PORTVERSION=	2.199
