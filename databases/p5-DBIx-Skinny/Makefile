@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Skinny
 PORTVERSION=	0.0742
