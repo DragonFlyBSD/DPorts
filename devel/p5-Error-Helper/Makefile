@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Error-Helper/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Error-Helper
 PORTVERSION=	1.0.0
