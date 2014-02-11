@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-AMF-Perl/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	AMF-Perl
 PORTVERSION=	0.15
