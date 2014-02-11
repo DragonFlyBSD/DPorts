@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: sysutils/p5-Sys-Group-GIDhelper/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Sys-Group-GIDhelper
 PORTVERSION=	0.0.2
