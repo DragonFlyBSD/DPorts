@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/telepathy-glib/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #    $MCom: ports/trunk/net-im/telepathy-glib/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-glib
