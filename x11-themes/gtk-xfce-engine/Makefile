@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: x11-themes/gtk-xfce-engine/Makefile 330347 2013-10-14 19:48:49Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	gtk-xfce-engine
 PORTVERSION=	3.0.1
