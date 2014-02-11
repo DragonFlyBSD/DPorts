@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/rubygem-sumbur/Makefile 340903 2014-01-24 14:49:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sumbur
 PORTVERSION=	0.1.2
