@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD: head/audio/cdparanoia/Makefile 343483 2014-02-09 12:25:56Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	cdparanoia
 PORTVERSION=	3.9.8
