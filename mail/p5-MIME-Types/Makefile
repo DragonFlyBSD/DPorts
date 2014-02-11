@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/p5-MIME-Types/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MIME-Types
 PORTVERSION=	2.04
