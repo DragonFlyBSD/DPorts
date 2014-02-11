@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: net/netcat/Makefile 342036 2014-01-31 17:01:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	netcat
 PORTVERSION=	1.10
