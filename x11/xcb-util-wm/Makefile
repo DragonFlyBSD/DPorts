@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcb-util-wm/Makefile 332330 2013-10-31 23:53:45Z garga $
+# $FreeBSD$
 
 PORTNAME=	xcb-util-wm
 PORTVERSION=	0.3.9
