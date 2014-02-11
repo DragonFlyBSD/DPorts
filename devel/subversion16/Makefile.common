@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: head/devel/subversion16/Makefile.common 340848 2014-01-23 18:52:31Z mat $
+# $FreeBSD$
 
 PORTNAME=	subversion
 PORTVERSION=	#please edit Makefile.inc for PORTVERSION, so ../svnmerge can stay in sync.
