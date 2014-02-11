@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: head/devel/p5-Exporter-Lite/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Exporter-Lite
 PORTVERSION=	0.02
