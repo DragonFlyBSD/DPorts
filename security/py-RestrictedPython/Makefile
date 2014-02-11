@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/py-RestrictedPython/Makefile 343605 2014-02-10 09:09:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	RestrictedPython
 PORTVERSION=	3.6.0
