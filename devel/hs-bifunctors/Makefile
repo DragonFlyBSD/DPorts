@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-bifunctors/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	bifunctors
 PORTVERSION=	3.2.0.1
