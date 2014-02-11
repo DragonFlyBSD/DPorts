@@ -1,5 +1,5 @@
 # Created by: marc@informatik.uni-bremen.de
-# $FreeBSD: x11-toolkits/py-gtk2/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.78 2011/04/01 12:35:27 kwm Exp $
 
 PORTNAME=	gtk
