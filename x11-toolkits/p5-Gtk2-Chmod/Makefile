@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: x11-toolkits/p5-Gtk2-Chmod/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Chmod
 PORTVERSION=	0.0.0
