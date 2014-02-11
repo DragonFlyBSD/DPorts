@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/vips/Makefile 336037 2013-12-10 01:25:12Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	vips
 PORTVERSION=	7.26.3
