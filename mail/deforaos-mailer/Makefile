@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: mail/deforaos-mailer/Makefile 332776 2013-11-04 20:34:21Z wg $
+# $FreeBSD$
 
 PORTNAME=	mailer
 PORTVERSION=	0.1.6
