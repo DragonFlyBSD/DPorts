@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: audio/vorbis-tools/Makefile 328579 2013-09-28 15:30:08Z naddy $
+# $FreeBSD$
 
 PORTNAME=	vorbis-tools
 PORTVERSION=	1.4.0
