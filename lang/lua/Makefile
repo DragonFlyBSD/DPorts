@@ -1,5 +1,5 @@
 # Created by: Richard Kiss
-# $FreeBSD: head/lang/lua/Makefile 343323 2014-02-08 12:32:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	lua
 PORTVERSION=	5.1.5
