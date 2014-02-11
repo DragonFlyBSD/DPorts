@@ -1,5 +1,5 @@
 # Created by: mwest@uct.ac.za
-# $FreeBSD: devel/libgii/Makefile 329384 2013-10-04 20:48:06Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libgii
 PORTVERSION=	1.0.2
