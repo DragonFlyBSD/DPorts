@@ -1,5 +1,5 @@
 # Created by: Loic Pefferkorn <loic-freebsd@loicp.eu>
-# $FreeBSD: devel/rubygem-clio/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	clio
 PORTVERSION=	0.3.0
