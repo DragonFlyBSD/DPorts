@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Normalize/Makefile 329410 2013-10-05 06:05:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Unicode-Normalize
 PORTVERSION=	1.17
