@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: head/lang/python27/Makefile 342104 2014-02-01 09:21:23Z mva $
+# $FreeBSD$
 
 PORTNAME=	python27
 PORTVERSION=	2.7.6
