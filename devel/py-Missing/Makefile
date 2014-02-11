@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-Missing/Makefile 340933 2014-01-24 21:28:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Missing
 PORTVERSION=	2.13.1
