@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: head/net/libpcap/Makefile 338043 2013-12-29 20:44:39Z wxs $
+# $FreeBSD$
 
 PORTNAME=	libpcap
 PORTVERSION=	1.5.2
