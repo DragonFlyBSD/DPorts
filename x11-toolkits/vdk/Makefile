@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vdk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vdk
 PORTVERSION=	2.5.1
