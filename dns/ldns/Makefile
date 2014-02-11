@@ -1,5 +1,5 @@
 # Created by: Konstantin Saurbier <saurbier@math.uni-bielefeld.de>
-# $FreeBSD: head/dns/ldns/Makefile 343142 2014-02-06 19:17:51Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ldns
 PORTVERSION=	1.6.17
