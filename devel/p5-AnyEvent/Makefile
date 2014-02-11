@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/devel/p5-AnyEvent/Makefile 337425 2013-12-25 15:08:02Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent
 PORTVERSION=	7.07
