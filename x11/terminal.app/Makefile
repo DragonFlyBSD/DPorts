@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: head/x11/terminal.app/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	terminal.app
 PORTVERSION=	0.9.8
