@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/devel/ruby-glib2/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/ruby-glib2/Makefile,v 1.5 2007/10/05 05:06:39 mezz Exp $
 
 PORTNAME=	glib2
