@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: x11-toolkits/gtkmm30/Makefile 329070 2013-10-02 16:24:19Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/x11-toolkits/gtkmm30/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtkmm
