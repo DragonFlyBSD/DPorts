@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/gconf-editor/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 #   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.85 2010/09/27 18:22:59 kwm Exp $
 
 PORTNAME=	gconf-editor
