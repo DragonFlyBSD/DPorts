@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-B-OPCheck/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	B-OPCheck
 PORTVERSION=	0.29
