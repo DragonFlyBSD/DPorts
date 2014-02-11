@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: net/pear-Net_SMTP/Makefile 339745 2014-01-15 04:17:09Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net_SMTP
 PORTVERSION=	1.6.2
