@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Session-Storage-Secure/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Session-Storage-Secure
 PORTVERSION=	0.007
