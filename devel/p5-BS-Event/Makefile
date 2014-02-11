@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-BS-Event/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	BS-Event
 PORTVERSION=	0.3
@@ -14,11 +14,8 @@ COMMENT=	A class that provides an event callback interface
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		BS::Event.3
-
-NO_STAGE=	yes
 post-install:
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/simple_example ${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/samples/simple_example ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
