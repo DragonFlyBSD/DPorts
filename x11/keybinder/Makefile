@@ -1,4 +1,4 @@
-# $FreeBSD: x11/keybinder/Makefile 341759 2014-01-29 16:31:41Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	keybinder
 PORTVERSION=	0.3.0
