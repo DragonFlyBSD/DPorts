@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/shiva-collections/Makefile 342301 2014-02-02 14:41:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	shiva-collections
 PORTVERSION=	1.4
