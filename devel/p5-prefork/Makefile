@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-prefork/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	prefork
 PORTVERSION=	1.04
