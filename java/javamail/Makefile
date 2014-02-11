@@ -1,5 +1,5 @@
 # Created by: Jose Marques
-# $FreeBSD: java/javamail/Makefile 340620 2014-01-21 16:43:00Z ale $
+# $FreeBSD$
 
 PORTNAME=	javamail
 PORTVERSION=	1.5.1
