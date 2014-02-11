@@ -1,5 +1,5 @@
 # Created by: Marcin Jessa <yazzy@yazzy.org>
-# $FreeBSD: textproc/ezxml/Makefile 341276 2014-01-26 20:25:01Z mat $
+# $FreeBSD$
 
 PORTNAME=	ezxml
 PORTVERSION=	0.8.6
