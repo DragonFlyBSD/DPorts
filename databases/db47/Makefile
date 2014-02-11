@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: head/databases/db47/Makefile 342264 2014-02-02 10:25:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	db47
 PORTVERSION=	4.7.25.4
