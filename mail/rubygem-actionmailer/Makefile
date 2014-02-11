@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: mail/rubygem-actionmailer/Makefile 335698 2013-12-05 20:27:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	actionmailer
 PORTVERSION=	3.2.16
