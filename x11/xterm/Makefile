@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: x11/xterm/Makefile 340810 2014-01-23 08:43:08Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	xterm
 PORTVERSION=	301
