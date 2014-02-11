@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-json146/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD$
 
 ## XXX: Legacy for rubygem DM ports
 
