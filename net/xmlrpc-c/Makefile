@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: head/net/xmlrpc-c/Makefile 332308 2013-10-31 23:40:29Z garga $
+# $FreeBSD$
 
 PORTNAME=	xmlrpc-c
 PORTVERSION=	1.25.26
