@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-keyring/Makefile 335271 2013-11-30 09:38:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	keyring
 PORTVERSION=	3.2.1
