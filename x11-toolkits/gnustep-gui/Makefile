@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: head/x11-toolkits/gnustep-gui/Makefile 341513 2014-01-28 08:31:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnustep-gui
 PORTVERSION=	0.24.0
