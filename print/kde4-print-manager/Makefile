@@ -1,4 +1,4 @@
-# $FreeBSD: print/kde4-print-manager/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	print-manager
 PORTVERSION=	${KDE4_VERSION}
