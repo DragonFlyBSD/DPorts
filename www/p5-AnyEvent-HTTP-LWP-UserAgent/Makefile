@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-AnyEvent-HTTP-LWP-UserAgent/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-HTTP-LWP-UserAgent
 PORTVERSION=	0.10
