@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session/Makefile 330929 2013-10-19 19:48:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-Session
 PORTVERSION=	0.39
