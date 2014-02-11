@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/hal-info/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/sysutils/hal-info/Makefile,v 1.6 2010/03/16 19:33:11 mezz Exp $
 
 PORTNAME=	hal-info
