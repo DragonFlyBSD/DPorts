@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/wxsvg/Makefile 331157 2013-10-21 17:00:40Z danilo $
+# $FreeBSD$
 
 PORTNAME=	wxsvg
 PORTVERSION=	1.2.1
