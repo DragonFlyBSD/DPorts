@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-StackTrace-AsHTML/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-StackTrace-AsHTML
 PORTVERSION=	0.14
