@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-rack-mount/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD$
 
 PORTNAME=	rack-mount
 PORTVERSION=	0.8.3
