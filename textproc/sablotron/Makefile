@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/sablotron/Makefile 340376 2014-01-20 09:08:32Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	Sablot
 PORTVERSION=	1.0.3
