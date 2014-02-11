@@ -1,4 +1,4 @@
-# $FreeBSD: print/latex-ifluatex/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	latex-ifluatex
 PORTVERSION=	1.3
