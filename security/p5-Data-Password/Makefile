@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/p5-Data-Password/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Password
 PORTVERSION=	1.08
