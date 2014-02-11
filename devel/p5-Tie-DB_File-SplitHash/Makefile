@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Tie-DB_File-SplitHash/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Tie-DB_File-SplitHash
 PORTVERSION=	1.05
