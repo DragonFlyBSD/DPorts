@@ -1,4 +1,4 @@
-# $FreeBSD: devel/yajl/Makefile 341141 2014-01-25 23:54:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	yajl
 PORTVERSION=	2.0.4
