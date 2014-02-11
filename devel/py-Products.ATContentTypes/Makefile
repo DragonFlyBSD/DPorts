@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.ATContentTypes/Makefile 341155 2014-01-26 07:57:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.ATContentTypes
 PORTVERSION=	2.1.13
