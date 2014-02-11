@@ -1,5 +1,5 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/libexif-gtk/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libexif-gtk
 PORTVERSION=	0.4.0
@@ -24,6 +24,9 @@ USE_LDCONFIG=	yes
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
