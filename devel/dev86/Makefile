@@ -1,5 +1,5 @@
 # Created by: Philip Schulz <phs@deadc0.de>
-# $FreeBSD: head/devel/dev86/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dev86
 PORTVERSION=	0.16.20
