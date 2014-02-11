@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ocaml-sdl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sdl
 PORTVERSION=	0.9.1
