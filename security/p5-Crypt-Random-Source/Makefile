@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: security/p5-Crypt-Random-Source/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Random-Source
 PORTVERSION=	0.07
