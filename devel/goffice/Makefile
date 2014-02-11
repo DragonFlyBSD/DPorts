@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/goffice/Makefile 335038 2013-11-27 17:12:44Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/goffice/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goffice
