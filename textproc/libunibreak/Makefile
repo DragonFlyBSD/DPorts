@@ -1,5 +1,5 @@
 # Created by: Yuri Pankov <yuri.pankov@gmail.com>
-# $FreeBSD: textproc/libunibreak/Makefile 338973 2014-01-07 05:38:26Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	libunibreak
 PORTVERSION=	1.1
