@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/libdbi-drivers/Makefile 329942 2013-10-09 23:53:43Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libdbi-drivers
 DISTVERSION=	0.8.3-1
