@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: databases/db46/Makefile 342255 2014-02-02 08:56:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	db46
 PORTVERSION=	4.6.21.4
