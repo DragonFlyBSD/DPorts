@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: chinese/scim-pinyin/Makefile 339203 2014-01-09 07:20:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	scim-pinyin
 PORTVERSION=	0.5.92
