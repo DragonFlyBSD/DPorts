@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-themeengine/Makefile 341187 2014-01-26 14:32:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	themeengine
 PORTVERSION=	2.1.3
