@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: devel/p5-File-Grep/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Grep
 PORTVERSION=	0.02
