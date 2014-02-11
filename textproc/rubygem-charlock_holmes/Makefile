@@ -1,14 +1,15 @@
-# $FreeBSD: textproc/rubygem-charlock_holmes/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	charlock_holmes
 PORTVERSION=	0.6.9
+PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	kuriyama@FreeBSD.org
 COMMENT=	Gems for character encoding detection
 
-LIB_DEPENDS=	icui18n:${PORTSDIR}/devel/icu
+LIB_DEPENDS=	libicui18n.so:${PORTSDIR}/devel/icu
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
