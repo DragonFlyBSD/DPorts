@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Module-Install/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Module-Install
 PORTVERSION=	1.06
