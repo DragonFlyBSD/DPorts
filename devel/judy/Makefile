@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/judy/Makefile 342716 2014-02-05 15:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	Judy
 PORTVERSION=	1.0.5
