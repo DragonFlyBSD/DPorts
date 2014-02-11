@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: devel/py-jmespath/Makefile 336572 2013-12-15 19:30:39Z alexey $
+# $FreeBSD$
 
 PORTNAME=	jmespath
 PORTVERSION=	0.2.0
