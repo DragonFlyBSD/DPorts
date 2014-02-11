@@ -1,5 +1,5 @@
 # Created by: kai
-# $FreeBSD: net/p5-Net-Ident/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Ident
 PORTVERSION=	1.23
