@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-rails/Makefile 342239 2014-02-02 03:03:11Z swills $
+# $FreeBSD$
 
 PORTNAME=	rails
 PORTVERSION=	3.2.16
