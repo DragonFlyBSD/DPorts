@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: x11-themes/gnome-icons-noia-full/Makefile 341370 2014-01-27 10:59:45Z miwi $
+# $FreeBSD$
 
 # Port logic gratuitously stolen from x11-themes/kde-icons-noia by
 # lioux@.  If it's not defined here and you think it should be, check
