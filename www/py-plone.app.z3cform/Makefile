@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.z3cform/Makefile 328002 2013-09-23 13:42:48Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.app.z3cform
 PORTVERSION=	0.7.4
