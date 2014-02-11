@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: head/devel/libelf/Makefile 342656 2014-02-05 08:26:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libelf
 PORTVERSION=	0.8.13
