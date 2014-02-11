@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Sub-Install/Makefile 330915 2013-10-19 17:19:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Sub-Install
 PORTVERSION=	0.927
