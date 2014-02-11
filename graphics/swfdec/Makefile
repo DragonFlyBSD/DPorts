@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/swfdec/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/graphics/swfdec/Makefile,v 1.28 2009/01/01 13:38:17 kwm Exp $
 
 PORTNAME=	swfdec
