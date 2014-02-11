@@ -1,5 +1,5 @@
 # Created by: Jacques Marneweck <jacques@php.net>
-# $FreeBSD: www/perlbal/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Perlbal
 PORTVERSION=	1.80
