@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-hxt-charproperties/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hxt-charproperties
 PORTVERSION=	9.1.1
