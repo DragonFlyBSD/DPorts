@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/icc-profiles-openicc/Makefile 328205 2013-09-24 22:23:45Z bsam $
+# $FreeBSD$
 
 PORTNAME=	icc-profiles-openicc
 PORTVERSION=	1.3.1
