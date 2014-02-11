@@ -1,5 +1,5 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: x11-fonts/geminifonts/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	gemini
 PORTVERSION=	1.0
