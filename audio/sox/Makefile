@@ -1,9 +1,9 @@
 # Created by: torstenb
-# $FreeBSD: audio/sox/Makefile 336436 2013-12-14 10:52:42Z pawel $
+# $FreeBSD$
 
 PORTNAME=	sox
 PORTVERSION=	14.4.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
