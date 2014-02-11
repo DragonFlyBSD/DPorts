@@ -1,5 +1,5 @@
 # Created by: Vasil Dimov <vd@datamax.bg>
-# $FreeBSD: devel/google-sparsehash/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	google-sparsehash
 PORTVERSION=	2.0.2
