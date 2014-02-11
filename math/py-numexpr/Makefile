@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <ju.pengfei@gmail.com>
-# $FreeBSD: math/py-numexpr/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	numexpr
 PORTVERSION=	2.2.2
