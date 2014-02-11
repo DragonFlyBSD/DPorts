@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-unix-time/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	unix-time
 PORTVERSION=	0.1.8
