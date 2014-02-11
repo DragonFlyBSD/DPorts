@@ -1,5 +1,5 @@
 # Created by: David Gilbert <dgilbert@velocet.ca>
-# $FreeBSD: graphics/gle/Makefile 342183 2014-02-01 16:21:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gle
 PORTVERSION=	3.1.0
