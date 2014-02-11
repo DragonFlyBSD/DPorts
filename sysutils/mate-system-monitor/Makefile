@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: sysutils/mate-system-monitor/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	mate-system-monitor
 PORTVERSION=	1.6.1
