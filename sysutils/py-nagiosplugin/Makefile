@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/py-nagiosplugin/Makefile 342101 2014-02-01 08:57:21Z koobs $
+# $FreeBSD$
 
 PORTNAME=	nagiosplugin
 PORTVERSION=	0.4.5
