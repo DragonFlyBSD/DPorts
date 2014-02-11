@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: devel/tla/Makefile 340957 2014-01-25 00:05:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tla
 PORTVERSION=	1.3.5
