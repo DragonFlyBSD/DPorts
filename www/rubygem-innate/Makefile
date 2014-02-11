@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: www/rubygem-innate/Makefile 338322 2013-12-31 15:00:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	innate
 PORTVERSION=	2013.02.21
