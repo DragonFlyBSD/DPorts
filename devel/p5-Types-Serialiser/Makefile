@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Types-Serialiser/Makefile 335390 2013-12-01 15:02:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Types-Serialiser
 PORTVERSION=	1.0
