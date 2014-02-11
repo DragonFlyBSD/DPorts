@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-# $FreeBSD: multimedia/projectx/Makefile 341255 2014-01-26 18:30:23Z nox $
+# $FreeBSD$
 
 PORTNAME=	projectx
 PORTVERSION=	0.91.0
