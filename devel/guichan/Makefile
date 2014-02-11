@@ -1,5 +1,5 @@
 # Created by: Tobias Gion <freebsd@gionet.de>
-# $FreeBSD: devel/guichan/Makefile 339728 2014-01-14 22:04:12Z mva $
+# $FreeBSD$
 
 PORTNAME=	guichan
 PORTVERSION=	0.8.2
