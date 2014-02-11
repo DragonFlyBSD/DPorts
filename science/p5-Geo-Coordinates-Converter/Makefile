@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Geo-Coordinates-Converter/Makefile 332938 2013-11-06 01:32:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coordinates-Converter
 PORTVERSION=	0.13
