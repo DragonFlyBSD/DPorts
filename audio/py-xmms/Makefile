@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: audio/py-xmms/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	xmms
 PORTVERSION=	2.02
@@ -11,6 +11,9 @@ DISTNAME=	pyxmms-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS Remote Control Library for Python
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 BUILD_DEPENDS=	${XMMS_CONFIG}:${PORTSDIR}/multimedia/xmms
 LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
