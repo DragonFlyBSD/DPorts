@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11/libX11/Makefile 330453 2013-10-15 20:03:47Z eadler $
+# $FreeBSD$
 
 PORTNAME=	libX11
 PORTVERSION=	1.6.2
