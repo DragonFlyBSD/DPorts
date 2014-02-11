@@ -1,5 +1,5 @@
 # Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-# $FreeBSD: devel/rubygem-slop/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	slop
 PORTVERSION=	3.4.5
