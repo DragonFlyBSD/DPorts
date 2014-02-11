@@ -1,5 +1,5 @@
 # Created by: Ralf Meister
-# $FreeBSD: security/opencryptoki/Makefile 335651 2013-12-05 01:10:41Z hrs $
+# $FreeBSD$
 
 PORTNAME=	opencryptoki
 PORTVERSION=	2.3.2
