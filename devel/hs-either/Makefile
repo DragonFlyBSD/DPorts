@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-either/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	either
 PORTVERSION=	3.4
