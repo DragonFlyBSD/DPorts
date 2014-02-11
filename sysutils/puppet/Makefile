@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.mine.nu>
-# $FreeBSD: sysutils/puppet/Makefile 339934 2014-01-16 17:01:45Z swills $
+# $FreeBSD$
 
 PORTNAME=	puppet
 PORTVERSION=	3.4.2
