@@ -1,5 +1,5 @@
 # Created by: IWASHITA Yoji <shuna@pop16.odn.ne.jp>
-# $FreeBSD: head/japanese/libslang/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libslang
 PORTVERSION=	${VERSION}.j${JP_VERSION}
