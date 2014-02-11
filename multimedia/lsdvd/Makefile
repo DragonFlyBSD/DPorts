@@ -1,9 +1,9 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/lsdvd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lsdvd
 PORTVERSION=	0.16
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}%20-%20I%20hate%20James%20Blunt
 
