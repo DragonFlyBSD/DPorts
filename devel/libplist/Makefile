@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libplist/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libplist
 PORTVERSION=	1.10
@@ -27,6 +27,9 @@ USE_LDCONFIG=	${LOCALBASE}/lib
 PORTDOCS=	AUTHORS NEWS README
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
