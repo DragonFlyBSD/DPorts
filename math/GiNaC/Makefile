@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: math/GiNaC/Makefile 341757 2014-01-29 16:18:32Z danfe $
+# $FreeBSD$
 
 PORTNAME=	GiNaC
 PORTVERSION=	1.6.2
