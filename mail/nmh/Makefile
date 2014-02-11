@@ -1,5 +1,5 @@
 # Created by: Scott Blachowicz <scott+ports@sabami.seaslug.org>
-# $FreeBSD: mail/nmh/Makefile 342358 2014-02-02 18:54:56Z cy $
+# $FreeBSD$
 
 PORTNAME=	nmh
 PORTVERSION=	1.5
