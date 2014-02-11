@@ -1,5 +1,5 @@
 # Created by: Boris Lytochkin <lytboris@gmail.com>
-# $FreeBSD: net/rubygem-ipaddress/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD$
 
 PORTNAME=	ipaddress
 PORTVERSION=	0.8.0
