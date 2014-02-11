@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: multimedia/py-mlt/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	multimedia python
@@ -26,6 +26,9 @@ BUILD_WRKSRC=	${WRKSRC}/src/swig/python
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-patch:
