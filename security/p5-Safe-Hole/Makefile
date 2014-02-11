@@ -1,5 +1,5 @@
 # Created by: Seth Kingsley <sethk@meowfishies.com>
-# $FreeBSD: security/p5-Safe-Hole/Makefile 342156 2014-02-01 14:42:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Safe-Hole
 PORTVERSION=	0.13
