@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-cgi/Makefile 339533 2014-01-12 19:19:56Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-cgi
 PORTVERSION=	0.1.0
