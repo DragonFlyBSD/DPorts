@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-vformat-devel/Makefile 328396 2013-09-26 17:20:32Z danilo $
+# $FreeBSD$
 
 PORTNAME=	libopensync-plugin-vformat
 PORTVERSION=	0.39
