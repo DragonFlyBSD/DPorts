@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-sekizai/Makefile 341753 2014-01-29 16:00:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-sekizai
 PORTVERSION=	0.7
