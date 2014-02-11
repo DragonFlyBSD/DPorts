@@ -1,5 +1,5 @@
 # Created by: Yoshiaki UCHIKAWA <yoshiaki@kt.rim.or.jp>
-# $FreeBSD: head/math/pari/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pari
 PORTVERSION=	2.3.5
