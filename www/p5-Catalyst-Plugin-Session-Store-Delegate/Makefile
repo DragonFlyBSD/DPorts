@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-Store-Delegate/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-Session-Store-Delegate
 PORTVERSION=	0.06
