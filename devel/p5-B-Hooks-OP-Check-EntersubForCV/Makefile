@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Hooks-OP-Check-EntersubForCV/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	B-Hooks-OP-Check-EntersubForCV
 PORTVERSION=	0.09
