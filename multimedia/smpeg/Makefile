@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: multimedia/smpeg/Makefile 342324 2014-02-02 16:03:27Z miwi $
+# $FreeBSD$
 
 PORTNAME=	smpeg
 PORTVERSION=	0.4.4
