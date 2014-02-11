@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-Polygon/Makefile 340836 2014-01-23 16:02:43Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	Math-Polygon
 PORTVERSION=	1.03
