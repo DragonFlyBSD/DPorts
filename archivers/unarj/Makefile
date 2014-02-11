@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/unarj/Makefile 331426 2013-10-23 21:02:25Z ak $
+# $FreeBSD$
 
 PORTNAME=	unarj
 PORTVERSION=	2.65
