@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-ansi-wl-pprint/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ansi-wl-pprint
 PORTVERSION=	0.6.6
