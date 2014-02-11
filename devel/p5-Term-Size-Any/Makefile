@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-Size-Any/Makefile 335394 2013-12-01 15:11:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Term-Size-Any
 PORTVERSION=	0.002
