@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/clang32/files/patch-tools_clang_lib_Driver_ToolChains.h 333812 2013-11-15 01:35:17Z brooks $
+$FreeBSD: head/lang/clang32/files/patch-tools_clang_lib_Driver_ToolChains.h 333812 2013-11-15 01:35:17Z brooks $
 
 --- tools/clang/lib/Driver/ToolChains.h.orig
 +++ tools/clang/lib/Driver/ToolChains.h

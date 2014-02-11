@@ -1,4 +1,4 @@
-# $FreeBSD: lang/clang32/Makefile 333812 2013-11-15 01:35:17Z brooks $
+# $FreeBSD$
 
 PORTNAME=	clang
 DISTVERSION=	3.2

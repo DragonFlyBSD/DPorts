@@ -1,4 +1,4 @@
-$FreeBSD: lang/clang32/files/patch-svn-r172354 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/lang/clang32/files/patch-svn-r172354 340725 2014-01-22 17:40:44Z mat $
 ------------------------------------------------------------------------
 r172354 | chandlerc | 2013-01-13 11:46:33 +0000 (Sun, 13 Jan 2013) | 6 lines
 
