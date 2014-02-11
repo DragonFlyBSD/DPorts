@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: head/multimedia/libmpeg2/Makefile 330999 2013-10-20 10:55:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libmpeg2
 PORTVERSION=	0.5.1
