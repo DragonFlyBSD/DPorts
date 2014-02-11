@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Alzabo/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Alzabo
 PORTVERSION=	0.92
