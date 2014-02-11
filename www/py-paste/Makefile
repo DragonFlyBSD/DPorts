@@ -1,5 +1,5 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD: head/www/py-paste/Makefile 343585 2014-02-10 05:32:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Paste
 PORTVERSION=	1.7.5.1
