@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/googletest/Makefile 335888 2013-12-08 13:24:03Z mva $
+# $FreeBSD$
 
 PORTNAME=	googletest
 PORTVERSION=	1.5.0
