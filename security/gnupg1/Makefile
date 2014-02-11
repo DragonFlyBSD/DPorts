@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/gnupg1/Makefile 342704 2014-02-05 13:58:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gnupg
 PORTVERSION=	1.4.16
