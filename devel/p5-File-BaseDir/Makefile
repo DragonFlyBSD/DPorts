@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: head/devel/p5-File-BaseDir/Makefile 342261 2014-02-02 10:11:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	File-BaseDir
 PORTVERSION=	0.03
