@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: security/nessus-libraries/Makefile 331628 2013-10-25 19:42:00Z tijl $
+# $FreeBSD$
 
 # Define NESSUS_CLIENT_ONLY if you only want to build this for the nessus
 # client.
