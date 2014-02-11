@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-dicom/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-dicom
 PORTVERSION=	0.1.1
