@@ -1,5 +1,5 @@
 # Created by: Mike McGaughey <mmcg@cs.monash.edu.au>
-# $FreeBSD: head/devel/boehm-gc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gc
 PORTVERSION=	7.2e
