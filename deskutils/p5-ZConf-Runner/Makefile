@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: deskutils/p5-ZConf-Runner/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	ZConf-Runner
 PORTVERSION=	2.1.4
