@@ -1,5 +1,5 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: sysutils/liburcu/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	liburcu
 PORTVERSION=	0.7.7
