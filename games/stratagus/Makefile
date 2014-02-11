@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/stratagus/Makefile 333469 2013-11-11 02:10:02Z danilo $
+# $FreeBSD$
 
 PORTNAME=	stratagus
 PORTVERSION=	2.2.7
