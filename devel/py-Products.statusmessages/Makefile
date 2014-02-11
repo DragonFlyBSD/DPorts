@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.statusmessages/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.statusmessages
 PORTVERSION=	4.0
