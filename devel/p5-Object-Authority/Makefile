@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Object-Authority/Makefile 332844 2013-11-05 12:56:03Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Object-AUTHORITY
 PORTVERSION=	0.004
