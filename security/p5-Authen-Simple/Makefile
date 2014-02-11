@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: head/security/p5-Authen-Simple/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Authen-Simple
 PORTVERSION=	0.5
