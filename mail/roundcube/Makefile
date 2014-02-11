@@ -1,4 +1,4 @@
-# $FreeBSD: mail/roundcube/Makefile 331561 2013-10-25 07:50:03Z ale $
+# $FreeBSD$
 
 PORTNAME=	roundcube
 DISTVERSION=	0.9.5
