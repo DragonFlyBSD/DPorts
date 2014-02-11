@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/gstreamer-plugins-gdkpixbuf/Makefile 332416 2013-11-01 22:14:07Z kwm $
+# $FreeBSD$
 #   $MCom: ports/graphics/gstreamer-plugins-gdkpixbuf/Makefile,v 1.5 2008/03/19 14:05:34 ahze Exp $
 
 PORTREVISION=	1
