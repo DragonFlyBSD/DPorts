@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: audio/p5-Net-DAAP-Client/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Net-DAAP-Client
 PORTVERSION=	0.42
@@ -17,9 +17,6 @@ RUN_DEPENDS=	p5-Digest-MD5-M4p>=0:${PORTSDIR}/security/p5-Digest-MD5-M4p \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	modbuild
-
-MAN3=		Net::DAAP::Client.3
 
 .include <bsd.port.mk>
