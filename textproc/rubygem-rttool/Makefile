@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-rttool/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	rttool
 PORTVERSION=	1.0.3.0
