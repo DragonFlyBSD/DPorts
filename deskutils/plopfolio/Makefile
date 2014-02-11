@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plopfolio/Makefile 341873 2014-01-30 19:14:54Z antoine $
+# $FreeBSD$
 
 PORTNAME=	plopfolio
 PORTVERSION=	0.1.0
