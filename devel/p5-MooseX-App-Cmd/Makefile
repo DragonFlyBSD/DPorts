@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-MooseX-App-Cmd/Makefile 338461 2014-01-02 16:24:43Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-App-Cmd
 PORTVERSION=	0.27
