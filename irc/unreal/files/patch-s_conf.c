@@ -1,4 +1,4 @@
-$FreeBSD: irc/unreal/files/patch-s_conf.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/irc/unreal/files/patch-s_conf.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/s_conf.c	2011-11-05 02:25:24.000000000 -0700
 +++ src/s_conf.c	2011-11-28 10:21:38.000000000 -0800

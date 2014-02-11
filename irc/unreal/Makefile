@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine (<tux@pinguru.net>)
-# $FreeBSD: irc/unreal/Makefile 338950 2014-01-06 22:36:23Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	Unreal
 PORTVERSION=	3.2.10.2
