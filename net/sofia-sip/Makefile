@@ -1,4 +1,4 @@
-# $FreeBSD: net/sofia-sip/Makefile 341981 2014-01-31 12:14:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sofia-sip
 PORTVERSION=	1.12.11
