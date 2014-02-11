@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/pslib/Makefile 340170 2014-01-18 14:27:31Z mva $
+# $FreeBSD$
 
 PORTNAME=	pslib
 PORTVERSION=	0.4.5
