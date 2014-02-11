@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/converters/php5-iconv/Makefile 343435 2014-02-09 08:39:00Z ale $
+# $FreeBSD$
 
 CATEGORIES=	converters
 
