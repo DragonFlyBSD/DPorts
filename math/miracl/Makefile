@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: math/miracl/Makefile 329883 2013-10-09 11:40:44Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	miracl
 PORTVERSION=	5.6
