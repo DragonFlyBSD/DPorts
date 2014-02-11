@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: net-mgmt/p5-Cflow/Makefile 333631 2013-11-12 22:19:20Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Cflow
 PORTVERSION=	1.053
