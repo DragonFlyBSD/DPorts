@@ -1,5 +1,5 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: head/devel/py-asn1/Makefile 343359 2014-02-08 16:03:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	asn1
 PORTVERSION=	0.1.4
