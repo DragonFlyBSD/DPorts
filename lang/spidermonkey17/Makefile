@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: head/lang/spidermonkey17/Makefile 331572 2013-10-25 12:50:46Z koobs $
+# $FreeBSD$
 
 PORTNAME=	spidermonkey17
 DISTVERSION=	1.7.0
