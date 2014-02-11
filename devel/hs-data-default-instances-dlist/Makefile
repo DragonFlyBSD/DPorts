@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-data-default-instances-dlist/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	data-default-instances-dlist
 PORTVERSION=	0.0.1
