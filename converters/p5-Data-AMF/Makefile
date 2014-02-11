@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Data-AMF/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-AMF
 PORTVERSION=	0.09
