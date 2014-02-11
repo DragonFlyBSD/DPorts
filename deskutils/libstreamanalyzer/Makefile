@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/libstreamanalyzer/Makefile 333412 2013-11-10 17:28:44Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libstreamanalyzer
 PORTVERSION=	${STRIGI_VERSION}
