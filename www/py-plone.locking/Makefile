@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.locking/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	plone.locking
 PORTVERSION=	2.0.4
