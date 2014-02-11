@@ -1,8 +1,9 @@
 # Created by: Anton Yuzhaninov <citrin@citrin.ru>
-# $FreeBSD: audio/libmp3splt/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libmp3splt
 PORTVERSION=	0.8.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	SF/mp3splt/${PORTNAME}/${PORTVERSION}
 
