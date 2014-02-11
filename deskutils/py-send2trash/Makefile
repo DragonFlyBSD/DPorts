@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: deskutils/py-send2trash/Makefile 334263 2013-11-18 20:50:05Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	send2trash
 PORTVERSION=	1.3.0
