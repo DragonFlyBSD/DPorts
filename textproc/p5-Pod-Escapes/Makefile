@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: head/textproc/p5-Pod-Escapes/Makefile 343604 2014-02-10 08:56:36Z culot $
+# $FreeBSD$
 
 PORTNAME=	Pod-Escapes
 PORTVERSION=	1.05
