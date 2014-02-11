@@ -1,4 +1,4 @@
-# $FreeBSD: devel/arm-eabi-gcc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 MAINTAINER=	ports@FreeBSD.org
 
