@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.PortalTransforms/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.PortalTransforms
 PORTVERSION=	2.1.2
