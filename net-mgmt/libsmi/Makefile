@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@system.pl>
-# $FreeBSD: net-mgmt/libsmi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libsmi
 PORTVERSION=	0.4.8
