@@ -1,5 +1,5 @@
 # Created by: mathias.picker@gmx.de
-# $FreeBSD: audio/rubberband/Makefile 341853 2014-01-30 15:58:09Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rubberband
 PORTVERSION=	1.7.0
