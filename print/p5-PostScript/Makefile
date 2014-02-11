@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan.aguero@gmail.com>
-# $FreeBSD: print/p5-PostScript/Makefile 332969 2013-11-06 12:12:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PostScript
 PORTVERSION=	0.06
