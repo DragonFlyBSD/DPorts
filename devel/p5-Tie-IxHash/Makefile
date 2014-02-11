@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: head/devel/p5-Tie-IxHash/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Tie-IxHash
 PORTVERSION=	1.23
