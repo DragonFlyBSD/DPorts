@@ -1,9 +1,9 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: audio/libmad/Makefile 330166 2013-10-12 18:16:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libmad
 PORTVERSION=	0.15.1b
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	SF/mad/${PORTNAME}/${PORTVERSION}
 
@@ -15,8 +15,8 @@ SPEED_DESC=	Optimize for speed over accuracy
 
 CONFIGURE_ARGS=	--disable-debugging --enable-sso
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
+USES=		libtool:oldver
 
 SUB_LIST=	VERSION=${PORTVERSION}
 SUB_FILES=	mad.pc
