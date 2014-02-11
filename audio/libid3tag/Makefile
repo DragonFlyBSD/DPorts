@@ -1,5 +1,5 @@
 # Created by: Sergey Akifyev <asa@gascom.ru>
-# $FreeBSD: head/audio/libid3tag/Makefile 329940 2013-10-09 23:51:05Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libid3tag
 PORTVERSION=	0.15.1b
