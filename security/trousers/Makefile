@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: head/security/trousers/Makefile 335952 2013-12-09 06:35:44Z hrs $
+# $FreeBSD$
 
 PORTNAME=	trousers
 PORTVERSION=	0.3.10
