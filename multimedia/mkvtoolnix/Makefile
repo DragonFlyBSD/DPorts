@@ -1,8 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/mkvtoolnix/Makefile 339673 2014-01-14 10:06:44Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	mkvtoolnix
 PORTVERSION=	6.7.0
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/ \
 		CRITICAL
