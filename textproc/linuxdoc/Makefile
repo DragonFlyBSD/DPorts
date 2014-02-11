@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: textproc/linuxdoc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	linuxdoc
 PORTVERSION=	1.1
