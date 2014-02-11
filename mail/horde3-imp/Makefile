@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@thomas.as>)
-# $FreeBSD: mail/horde3-imp/Makefile 341583 2014-01-28 14:40:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	imp
 PORTVERSION=	4.3.11
