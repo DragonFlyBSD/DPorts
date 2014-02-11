@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Tiny/Makefile 335197 2013-11-29 16:58:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Tiny
 PORTVERSION=	0.039
