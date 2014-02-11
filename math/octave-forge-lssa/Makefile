@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-lssa/Makefile 339538 2014-01-12 19:52:20Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-lssa
 PORTVERSION=	0.1.2
