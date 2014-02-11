@@ -1,5 +1,5 @@
 # Created by: paulo@isr.uc.pt
-# $FreeBSD: graphics/povray36/Makefile 335627 2013-12-04 18:50:37Z makc $
+# $FreeBSD$
 
 PORTNAME=	povray
 PORTVERSION=	3.6.1
