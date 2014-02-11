@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: head/devel/rubygem-eventmachine/Makefile 338245 2013-12-31 06:58:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	eventmachine
 PORTVERSION=	1.0.3
