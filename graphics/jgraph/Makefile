@@ -1,5 +1,5 @@
 # Created by: wolman@cs.washington.edu
-# $FreeBSD: graphics/jgraph/Makefile 331168 2013-10-21 18:01:22Z eadler $
+# $FreeBSD$
 
 PORTNAME=	jgraph
 PORTVERSION=	8.3
