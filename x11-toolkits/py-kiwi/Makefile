@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: x11-toolkits/py-kiwi/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kiwi
 PORTVERSION=	1.9.29
