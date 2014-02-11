@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: head/converters/py-unidecode/Makefile 331473 2013-10-24 10:26:07Z koobs $
+# $FreeBSD$
 
 PORTNAME=	unidecode
 PORTVERSION=	0.04.14
