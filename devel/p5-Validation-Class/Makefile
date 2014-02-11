@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Validation-Class/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Validation-Class
 PORTVERSION=	7.900054
