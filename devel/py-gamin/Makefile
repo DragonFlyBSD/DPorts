@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/py-gamin/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTREVISION=	2
 CATEGORIES=	devel python
