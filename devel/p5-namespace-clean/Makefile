@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-namespace-clean/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	namespace-clean
 PORTVERSION=	0.24
