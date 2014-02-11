@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Hash-Merge-Simple/Makefile 331958 2013-10-29 15:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Hash-Merge-Simple
 PORTVERSION=	0.051
