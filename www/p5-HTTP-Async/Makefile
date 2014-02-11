@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTTP-Async/Makefile 332742 2013-11-04 16:58:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Async
 PORTVERSION=	0.23
