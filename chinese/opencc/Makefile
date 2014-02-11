@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/opencc/Makefile 339854 2014-01-15 23:20:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	opencc
 PORTVERSION=	0.3.0
