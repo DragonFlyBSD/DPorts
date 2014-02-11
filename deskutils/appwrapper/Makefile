@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/appwrapper/Makefile 342274 2014-02-02 11:37:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	appwrapper
 PORTVERSION=	0.1
