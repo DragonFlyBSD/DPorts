@@ -1,5 +1,5 @@
 # Created by: gnn@FreeBSD.org
-# $FreeBSD: devel/zookeeper/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	zookeeper
 PORTVERSION=	3.3.6
