@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreBSD.org>
-# $FreeBSD: x11-toolkits/libgnomeui/Makefile 334429 2013-11-20 16:37:00Z kwm $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.129 2010/09/27 20:16:41 kwm Exp $
 
 PORTNAME=	libgnomeui
