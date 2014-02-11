@@ -1,5 +1,5 @@
 # Created by: Mons Anderson <mons@cpan.org>
-# $FreeBSD: head/devel/p5-lib-abs/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	lib-abs
 PORTVERSION=	0.92
