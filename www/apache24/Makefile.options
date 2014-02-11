@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile.options 323351 2013-07-20 17:11:54Z ohauer $
+# $FreeBSD$
 
 # ===========================================================
 # The list of modules are no longer classified in CATEGORIES.

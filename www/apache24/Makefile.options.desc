@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile.options.desc 323351 2013-07-20 17:11:54Z ohauer $
+# $FreeBSD$
 
 # vim: syntax=make ts=8 noet
 # =====================================

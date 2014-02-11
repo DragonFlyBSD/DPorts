@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache24/Makefile 334790 2013-11-24 20:51:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	apache24
 PORTVERSION=	2.4.6
