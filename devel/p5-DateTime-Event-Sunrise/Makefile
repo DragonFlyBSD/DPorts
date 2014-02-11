@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Event-Sunrise/Makefile 330927 2013-10-19 19:30:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Event-Sunrise
 PORTVERSION=	0.05.03
