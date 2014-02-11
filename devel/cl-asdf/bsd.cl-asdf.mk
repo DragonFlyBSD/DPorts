@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/cl-asdf/bsd.cl-asdf.mk 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #
 # bsd.cl-asdf.mk - Common Lisp related macros
 #
