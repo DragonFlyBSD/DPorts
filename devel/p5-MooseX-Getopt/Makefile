@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Getopt/Makefile 335405 2013-12-01 17:38:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Getopt
 PORTVERSION=	0.59
