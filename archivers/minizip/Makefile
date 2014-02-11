@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: archivers/minizip/Makefile 340138 2014-01-18 00:03:56Z mandree $
+# $FreeBSD$
 
 PORTNAME=	minizip
 PORTVERSION=	1.2.8
