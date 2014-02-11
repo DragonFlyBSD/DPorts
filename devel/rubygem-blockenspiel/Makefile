@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-blockenspiel/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	blockenspiel
 PORTVERSION=	0.4.5
