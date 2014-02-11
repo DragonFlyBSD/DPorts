@@ -1,5 +1,5 @@
 # Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
-# $FreeBSD: textproc/p5-Syntax-Highlight-Perl-Improved/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	Syntax-Highlight-Perl-Improved
 PORTVERSION=	1.01
