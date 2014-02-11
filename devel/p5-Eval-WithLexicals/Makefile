@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Eval-WithLexicals/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Eval-WithLexicals
 PORTVERSION=	1.002000
