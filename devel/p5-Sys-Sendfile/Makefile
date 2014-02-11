@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Sys-Sendfile/Makefile 339499 2014-01-12 12:56:44Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Sys-Sendfile
 PORTVERSION=	0.12
