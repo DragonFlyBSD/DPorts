@@ -1,5 +1,5 @@
 # Created by: Trevor Caira <trevor@bitba.se>
-# $FreeBSD: devel/py-resolver/Makefile 341731 2014-01-29 13:18:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	resolver
 PORTVERSION=	0.2.1
