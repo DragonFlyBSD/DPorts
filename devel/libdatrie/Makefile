@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: devel/libdatrie/Makefile 331650 2013-10-26 04:40:42Z danilo $
+# $FreeBSD$
 
 PORTNAME=	libdatrie
 PORTVERSION=	0.2.7.1
