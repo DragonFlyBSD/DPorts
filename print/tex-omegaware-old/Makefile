@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: print/tex-omegaware-old/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tex-omegaware-old
 PORTVERSION=	2.0.2
