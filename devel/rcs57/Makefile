@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/rcs57/Makefile 341338 2014-01-27 08:29:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rcs
 PORTVERSION=	5.7
