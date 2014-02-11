@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@FreeBSD.org.ua>
-# $FreeBSD: net/p5-Net-Whois-Raw/Makefile 340416 2014-01-20 17:02:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-Whois-Raw
 PORTVERSION=	2.51
