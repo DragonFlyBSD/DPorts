@@ -1,5 +1,5 @@
 # Created by: Piotr Smyrak <smyru@heron.pl> and
-# $FreeBSD: polish/libtlen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libtlen
 PORTVERSION=	20041113
