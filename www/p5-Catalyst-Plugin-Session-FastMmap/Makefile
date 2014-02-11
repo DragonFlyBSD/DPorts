@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Session-FastMmap/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-Session-FastMmap
 PORTVERSION=	0.13
