@@ -1,4 +1,4 @@
-# $FreeBSD: math/kmplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kmplot
 PORTVERSION=	${KDE4_VERSION}
