@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Alien-SDL/Makefile 333134 2013-11-07 16:35:50Z makc $
+# $FreeBSD$
 
 PORTNAME=	Alien-SDL
 PORTVERSION=	1.440
