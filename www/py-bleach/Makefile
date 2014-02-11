@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-bleach/Makefile 341745 2014-01-29 15:04:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bleach
 PORTVERSION=	1.2.2
