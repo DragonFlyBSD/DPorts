@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Syntax-Keyword-Junction/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Syntax-Keyword-Junction
 PORTVERSION=	0.003006
