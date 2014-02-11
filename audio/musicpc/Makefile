@@ -1,5 +1,5 @@
 # Created by: Mark Reidel <ports@mark.reidle.info>
-# $FreeBSD: audio/musicpc/Makefile 334967 2013-11-26 20:35:14Z gblach $
+# $FreeBSD$
 
 PORTNAME=	musicpc
 PORTVERSION=	0.25
