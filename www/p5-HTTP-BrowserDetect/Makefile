@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/www/p5-HTTP-BrowserDetect/Makefile 342956 2014-02-06 08:27:39Z culot $
+# $FreeBSD$
 
 PORTNAME=	HTTP-BrowserDetect
 PORTVERSION=	1.69
