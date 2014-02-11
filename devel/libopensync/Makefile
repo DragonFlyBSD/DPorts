@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/libopensync/Makefile 328424 2013-09-27 01:44:28Z danilo $
+# $FreeBSD$
 
 PORTNAME=	libopensync
 PORTVERSION=	0.39
