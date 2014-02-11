@@ -1,5 +1,5 @@
 # Created by: Ronald Kuehn <rk@ronald.org>
-# $FreeBSD: graphics/ocaml-lablgl/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lablgl
 PORTVERSION=	20120306
