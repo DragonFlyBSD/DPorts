@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-Protocol-https/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	LWP-Protocol-https
 PORTVERSION=	6.04
