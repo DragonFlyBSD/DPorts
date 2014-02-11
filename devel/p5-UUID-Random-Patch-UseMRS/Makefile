@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: devel/p5-UUID-Random-Patch-UseMRS/Makefile 333502 2013-11-11 14:08:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	UUID-Random-Patch-UseMRS
 PORTVERSION=	0.01
