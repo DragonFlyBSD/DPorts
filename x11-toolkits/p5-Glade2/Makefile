@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: x11-toolkits/p5-Glade2/Makefile 333341 2013-11-09 21:46:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Glade
 PORTVERSION=	1.007
