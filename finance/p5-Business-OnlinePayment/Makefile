@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment/Makefile 332621 2013-11-03 16:02:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Business-OnlinePayment
 PORTVERSION=	3.02
