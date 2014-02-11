@@ -1,5 +1,5 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/libcmime/Makefile 339707 2014-01-14 18:57:38Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libcmime
 PORTVERSION=	0.1.11
