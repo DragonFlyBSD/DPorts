@@ -1,5 +1,5 @@
 # Created by: Juha Nygard <juha.nygard1@netikka.fi>
-# $FreeBSD: audio/fluidsynth/Makefile 339004 2014-01-07 13:23:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fluidsynth
 PORTVERSION=	1.1.6
