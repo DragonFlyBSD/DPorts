@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: archivers/py-librtfcomp/Makefile 334258 2013-11-18 19:53:38Z sunpoet $
+# $FreeBSD$
 
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
