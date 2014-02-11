@@ -1,5 +1,5 @@
 # Created by: Daniel Wijnands <daniel@itxl.nl>
-# $FreeBSD: www/p5-CGI-Builder/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CGI-Builder
 PORTVERSION=	1.36
