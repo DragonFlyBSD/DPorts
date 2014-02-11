@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/py-py-restclient/Makefile 341755 2014-01-29 16:17:02Z miwi $
+# $FreeBSD$
 
 PORTNAME=	py-restclient
 PORTVERSION=	1.3.3
