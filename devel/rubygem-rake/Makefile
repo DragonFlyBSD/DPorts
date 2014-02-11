@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: head/devel/rubygem-rake/Makefile 342511 2014-02-04 12:06:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rake
 PORTVERSION=	10.1.1
