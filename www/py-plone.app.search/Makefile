@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.app.search/Makefile 327992 2013-09-23 12:52:16Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.app.search
 PORTVERSION=	1.1.5
