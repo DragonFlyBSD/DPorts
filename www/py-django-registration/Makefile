@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-registration/Makefile 341732 2014-01-29 13:20:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-registration
 PORTVERSION=	1.0
