@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: head/devel/gnulibiberty/Makefile 341378 2014-01-27 11:43:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnulibiberty
 PORTVERSION=	2.19.1
