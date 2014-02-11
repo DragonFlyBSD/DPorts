@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Module-Build/Makefile 343600 2014-02-10 07:54:41Z culot $
+# $FreeBSD$
 
 PORTNAME=	Module-Build
 PORTVERSION=	0.4205
