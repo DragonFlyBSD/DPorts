@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/libtorrent/Makefile 332456 2013-11-02 08:32:28Z az $
+# $FreeBSD$
 
 PORTNAME=	libtorrent
 PORTVERSION=	0.13.2
