@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/rubygem-rye/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rye
 PORTVERSION=	0.9.8
