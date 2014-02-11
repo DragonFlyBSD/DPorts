@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: x11-fonts/p5-Font-AFM/Makefile 333058 2013-11-07 03:59:36Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Font-AFM
 PORTVERSION=	1.20
