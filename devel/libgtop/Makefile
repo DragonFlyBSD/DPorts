@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/devel/libgtop/Makefile 330901 2013-10-19 16:21:20Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/libgtop/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgtop
