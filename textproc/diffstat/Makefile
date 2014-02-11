@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: textproc/diffstat/Makefile 341228 2014-01-26 15:35:16Z mat $
+# $FreeBSD$
 
 PORTNAME=	diffstat
 PORTVERSION=	1.57
