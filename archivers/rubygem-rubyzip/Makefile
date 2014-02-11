@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: archivers/rubygem-rubyzip/Makefile 335324 2013-11-30 18:29:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rubyzip
 PORTVERSION=	1.1.0
