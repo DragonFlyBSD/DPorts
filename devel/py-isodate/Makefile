@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/py-isodate/Makefile 337623 2013-12-26 21:53:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	isodate
 PORTVERSION=	0.4.9
