@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: sysutils/rubygem-facter/Makefile 341091 2014-01-25 20:39:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	facter
 PORTVERSION=	1.7.4
