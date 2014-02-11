@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/talloc/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=		talloc
 PORTVERSION=		2.0.8
