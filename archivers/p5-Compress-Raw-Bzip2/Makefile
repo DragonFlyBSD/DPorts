@@ -1,8 +1,8 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: archivers/p5-Compress-Raw-Bzip2/Makefile 332576 2013-11-03 04:53:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Compress-Raw-Bzip2
-PORTVERSION=	2.063
+PORTVERSION=	2.064
 CATEGORIES=	archivers perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PMQS
