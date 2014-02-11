@@ -1,4 +1,4 @@
-# $FreeBSD: x11/libxkbcommon/Makefile 330450 2013-10-15 19:49:34Z eadler $
+# $FreeBSD$
 
 PORTNAME=	libxkbcommon
 PORTVERSION=	0.3.1
