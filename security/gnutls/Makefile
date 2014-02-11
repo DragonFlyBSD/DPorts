@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: head/security/gnutls/Makefile 340681 2014-01-22 07:06:18Z novel $
+# $FreeBSD$
 
 PORTNAME=	gnutls
 PORTVERSION=	2.12.23
