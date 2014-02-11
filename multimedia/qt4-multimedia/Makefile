@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/qt4-multimedia/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	multimedia
 DISTVERSION=	${QT4_VERSION}
