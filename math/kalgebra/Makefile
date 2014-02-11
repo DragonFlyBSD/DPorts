@@ -1,4 +1,4 @@
-# $FreeBSD: math/kalgebra/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kalgebra
 PORTVERSION=	${KDE4_VERSION}
