@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: archivers/ark/Makefile 336153 2013-12-11 10:04:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ark
 PORTVERSION=	${KDE4_VERSION}
