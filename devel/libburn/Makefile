@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: head/devel/libburn/Makefile 341673 2014-01-28 23:23:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libburn
 PORTVERSION=	1.3.4
