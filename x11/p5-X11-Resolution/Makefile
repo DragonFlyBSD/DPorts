@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: x11/p5-X11-Resolution/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	X11-Resolution
 PORTVERSION=	0.0.0
