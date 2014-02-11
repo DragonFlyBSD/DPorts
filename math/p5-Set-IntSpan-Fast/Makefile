@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Set-IntSpan-Fast/Makefile 341829 2014-01-30 10:27:43Z az $
+# $FreeBSD$
 
 PORTNAME=	Set-IntSpan-Fast
 PORTVERSION=	1.15
