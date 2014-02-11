@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Params-Util/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Params-Util
 PORTVERSION=	1.07
