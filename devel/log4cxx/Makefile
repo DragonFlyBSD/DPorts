@@ -1,5 +1,5 @@
 # Created by: Thaddeus Covert <tcovert@grimmy.sahuagin.net>
-# $FreeBSD: devel/log4cxx/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	log4cxx
 PORTVERSION=	0.10.0
