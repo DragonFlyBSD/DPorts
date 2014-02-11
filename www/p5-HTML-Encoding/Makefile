@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-HTML-Encoding/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Encoding
 PORTVERSION=	0.61
