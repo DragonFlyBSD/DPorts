@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: irc/xchat/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 #   $MCom: ports/irc/xchat/Makefile,v 1.7 2008/08/06 07:59:00 kwm Exp $
 
 PORTNAME=	xchat
