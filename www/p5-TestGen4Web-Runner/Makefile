@@ -1,5 +1,5 @@
 # Created by: Conor McDermottroe <ports@mcdermottroe.com>
-# $FreeBSD: www/p5-TestGen4Web-Runner/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	TestGen4Web-Runner
 PORTVERSION=	0.11
