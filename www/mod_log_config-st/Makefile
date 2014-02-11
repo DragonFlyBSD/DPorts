@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_log_config-st/Makefile 340200 2014-01-18 17:59:23Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_log_config-st
 PORTVERSION=	1.03
