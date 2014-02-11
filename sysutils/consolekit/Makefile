@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/consolekit/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 #    $MCom: ports/sysutils/consolekit/Makefile,v 1.25 2010/10/23 10:12:30 kwm Exp $
 
 PORTNAME=	consolekit
