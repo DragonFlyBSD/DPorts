@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/torque/files/pbs_server.in 315876 2013-04-16 18:23:45Z madpilot $
+# $FreeBSD: head/sysutils/torque/files/pbs_server.in 315876 2013-04-16 18:23:45Z madpilot $
 #
 # PROVIDE: pbs_server
 # REQUIRE: DAEMON

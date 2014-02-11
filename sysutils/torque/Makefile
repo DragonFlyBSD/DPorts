@@ -1,5 +1,5 @@
 # Created by: trasz
-# $FreeBSD: sysutils/torque/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	torque
 PORTVERSION=	2.5.12
@@ -57,6 +57,9 @@ MLINKS=		pbs_sched_cc.8 pbs_sched.8 \
 		pbs_resources_freebsd.7 pbs_resources.7
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-patch:

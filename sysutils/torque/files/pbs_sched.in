@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/torque/files/pbs_sched.in 315876 2013-04-16 18:23:45Z madpilot $
+# $FreeBSD: head/sysutils/torque/files/pbs_sched.in 315876 2013-04-16 18:23:45Z madpilot $
 #
 # PROVIDE: pbs_sched
 # REQUIRE: pbs_server
