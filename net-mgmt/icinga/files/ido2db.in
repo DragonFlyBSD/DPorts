@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/icinga/files/ido2db.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/icinga/files/ido2db.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: ido2db 

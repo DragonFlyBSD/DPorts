@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/icinga/files/icinga.in 337029 2013-12-20 16:05:51Z lme $
+# $FreeBSD: head/net-mgmt/icinga/files/icinga.in 337029 2013-12-20 16:05:51Z lme $
 #
 
 # PROVIDE: icinga

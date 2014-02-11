@@ -1,5 +1,5 @@
 # Created by: Chin-San Huang <chinsan@FreeBSD.org>
-# $FreeBSD: net-mgmt/icinga/Makefile 338116 2013-12-30 14:20:08Z lme $
+# $FreeBSD$
 
 PORTNAME=	icinga
 PORTVERSION=	1.10.2
