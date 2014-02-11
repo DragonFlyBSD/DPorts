@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/adacontrol/Makefile 333403 2013-11-10 15:10:03Z marino $
+# $FreeBSD$
 
 PORTNAME=	adacontrol
 PORTVERSION=	1.15r5
