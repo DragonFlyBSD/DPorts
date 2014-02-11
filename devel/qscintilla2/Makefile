@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/qscintilla2/Makefile 334875 2013-11-25 18:10:12Z makc $
+# $FreeBSD$
 
 PORTNAME=	qscintilla2
 PORTVERSION=	${QSCI2_VERSION}
