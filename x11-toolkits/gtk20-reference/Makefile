@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtk20-reference/Makefile 336476 2013-12-14 19:25:33Z kwm $
+# $FreeBSD$
 
 PORTREVISION=	0
 
