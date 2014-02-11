@@ -1,5 +1,5 @@
 # Created by: Jamie Hermans <jamie@hermans.ca>
-# $FreeBSD: head/graphics/jhead/Makefile 334537 2013-11-21 23:12:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	jhead
 PORTVERSION=	2.97
