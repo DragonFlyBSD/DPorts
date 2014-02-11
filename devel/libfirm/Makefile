@@ -1,5 +1,5 @@
 # Created by: Christoph Mallon <christoph.mallon@gmx.de>
-# $FreeBSD: devel/libfirm/Makefile 340518 2014-01-21 00:34:13Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libfirm
 PORTVERSION=	1.21.0
