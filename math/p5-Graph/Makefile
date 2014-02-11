@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: head/math/p5-Graph/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Graph
 PORTVERSION=	0.96
