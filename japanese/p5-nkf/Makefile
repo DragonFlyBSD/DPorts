@@ -1,5 +1,5 @@
 # Created by: max
-# $FreeBSD: japanese/p5-nkf/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	nkf
 PORTVERSION=	2.1.2
