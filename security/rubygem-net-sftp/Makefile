@@ -1,5 +1,5 @@
 # Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-# $FreeBSD: security/rubygem-net-sftp/Makefile 331713 2013-10-26 16:25:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	net-sftp
 PORTVERSION=	2.1.2
