@@ -1,5 +1,5 @@
 # Created by: r.neese
-# $FreeBSD: audio/sphinxbase/Makefile 340131 2014-01-17 22:29:42Z antoine $
+# $FreeBSD$
 
 PORTNAME=	sphinxbase
 PORTVERSION=	0.8
