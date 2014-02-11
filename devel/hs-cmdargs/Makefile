@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-cmdargs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cmdargs
 PORTVERSION=	0.10.3
