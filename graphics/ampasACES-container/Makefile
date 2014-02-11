@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: graphics/ampasACES-container/Makefile 330319 2013-10-14 13:33:03Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	ampasACES-container
 PORTVERSION=	1.0.0
