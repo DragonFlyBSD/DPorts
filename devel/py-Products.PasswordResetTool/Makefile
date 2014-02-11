@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.PasswordResetTool/Makefile 341100 2014-01-25 20:55:07Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.PasswordResetTool
 PORTVERSION=	2.0.15
