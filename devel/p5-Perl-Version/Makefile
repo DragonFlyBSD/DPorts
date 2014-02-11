@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl-Version/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Perl-Version
 PORTVERSION=	1.011
@@ -17,8 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		perl-reversion.1
-MAN3=		Perl::Version.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
