@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPFR/Makefile 335472 2013-12-02 09:16:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Math-MPFR
 PORTVERSION=	3.21
