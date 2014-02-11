@@ -1,5 +1,5 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: devel/rubygem-awesome_print/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	awesome_print
 PORTVERSION=	1.1.0
