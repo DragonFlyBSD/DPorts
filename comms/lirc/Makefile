@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mikeh@FreeBSD.org>
-# $FreeBSD: comms/lirc/Makefile 341247 2014-01-26 17:37:03Z nox $
+# $FreeBSD$
 
 PORTNAME=	lirc
 PORTVERSION=	0.9.0
