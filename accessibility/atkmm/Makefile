@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: accessibility/atkmm/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD$
 #   $MCom: ports/accessibility/atkmm/Makefile,v 1.12 2012/09/01 23:02:08 mezz Exp $
 
 PORTNAME=	atkmm
