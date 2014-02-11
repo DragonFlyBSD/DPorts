@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ganglia-monitor-core/Makefile 338980 2014-01-07 08:04:09Z martymac $
+# $FreeBSD$
 
 PORTNAME=	monitor-core
 PORTVERSION=	3.4.0
