@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Regression/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Statistics-Regression
 PORTVERSION=	0.53
