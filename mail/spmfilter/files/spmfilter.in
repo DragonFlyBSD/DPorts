@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: mail/spmfilter/files/spmfilter.in 340222 2014-01-18 22:57:37Z danilo $
+# $FreeBSD: head/mail/spmfilter/files/spmfilter.in 340222 2014-01-18 22:57:37Z danilo $
 #
 # PROVIDE: spmfilter
 # REQUIRE: %%REQUIRE%%

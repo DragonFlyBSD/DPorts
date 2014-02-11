@@ -1,4 +1,4 @@
-# $FreeBSD: mail/spmfilter/Makefile 340222 2014-01-18 22:57:37Z danilo $
+# $FreeBSD$
 
 PORTNAME=	spmfilter
 PORTVERSION=	0.6.7
@@ -89,9 +89,6 @@ post-patch:
 	@${REINPLACE_CMD} -E -e 's|\$${CMAKE_INSTALL_LIBDIR}(/pkgconfig)|$${CMAKE_INSTALL_PREFIX}/libdata\1|' \
 		-e 's|(COMMON_LIBS )db|\1${BDB_LIB_NAME}|' \
 		${WRKSRC}/src/CMakeLists.txt
-
-pre-install:
-	@${SH} ${PKGINSTALL} ${DISTNAME} PRE-INSTALL
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.conf.sample ${STAGEDIR}${PREFIX}/etc/
