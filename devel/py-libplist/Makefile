@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-libplist/Makefile 338831 2014-01-05 23:08:44Z avilla $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	devel python
