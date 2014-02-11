@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zope.copypastemove/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zope.copypastemove
 PORTVERSION=	3.8.0
