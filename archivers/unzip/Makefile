@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: head/archivers/unzip/Makefile 337551 2013-12-26 16:44:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	unzip
 PORTVERSION=	6.0
