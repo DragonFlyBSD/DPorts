@@ -1,8 +1,9 @@
 # Created by: bland@FreeBSD.org
-# $FreeBSD: devel/py-icu/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	icu
 PORTVERSION=	1.5
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_CHEESESHOP}
 MASTER_SITE_SUBDIR=	source/P/PyICU
