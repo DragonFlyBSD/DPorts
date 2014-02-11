@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: science/mei/Makefile 334976 2013-11-26 21:30:22Z thierry $
+# $FreeBSD$
 
 PORTNAME=	mei
 PORTVERSION=	1.0.4
