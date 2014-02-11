@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Inline-CPP/Makefile 334677 2013-11-23 15:18:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Inline-CPP
 PORTVERSION=	0.46
