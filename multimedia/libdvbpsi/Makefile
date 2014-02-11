@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/libdvbpsi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libdvbpsi
 PORTVERSION=	0.2.2
