@@ -1,4 +1,4 @@
-# $FreeBSD: math/qtiplot-doc/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
