@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: graphics/py-opencv/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	graphics python
