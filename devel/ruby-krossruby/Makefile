@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-krossruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	krossruby
 PORTVERSION=	${KDE4_VERSION}
