@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: dns/p5-Mozilla-PublicSuffix/Makefile 334005 2013-11-16 15:19:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Mozilla-PublicSuffix
-PORTVERSION=	0.1.16
+PORTVERSION=	0.1.17
 CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
