@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: head/lang/tcl84/Makefile 342395 2014-02-03 09:13:49Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tcl
 PORTVERSION=	8.4.20
