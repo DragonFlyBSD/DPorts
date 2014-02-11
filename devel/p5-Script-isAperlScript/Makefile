@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-Script-isAperlScript/Makefile 333881 2013-11-15 16:04:51Z mat $
+# $FreeBSD$
 
 PORTNAME=	Script-isAperlScript
 PORTVERSION=	1.0.0
