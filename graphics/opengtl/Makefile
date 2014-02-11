@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/opengtl/Makefile 331689 2013-10-26 13:50:36Z avilla $
+# $FreeBSD$
 
 PORTNAME=	opengtl
 PORTVERSION=	0.9.18
