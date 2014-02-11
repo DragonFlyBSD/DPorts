@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/dns/p5-Net-DNS/Makefile 340938 2014-01-24 22:41:21Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS
 PORTVERSION=	0.74
