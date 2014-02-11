@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: security/libmatekeyring/Makefile 334661 2013-11-23 11:39:07Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libmatekeyring
 PORTVERSION=	1.6.0
