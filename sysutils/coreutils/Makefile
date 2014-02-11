@@ -1,5 +1,5 @@
 # Created by: Jason Harris <jharris@widomaker.com>
-# $FreeBSD: head/sysutils/coreutils/Makefile 343591 2014-02-10 07:15:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	coreutils
 PORTVERSION=	8.22
