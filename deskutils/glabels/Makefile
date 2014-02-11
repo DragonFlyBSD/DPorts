@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/glabels/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/glabels/Makefile,v 1.10 2010/04/03 19:25:49 kwm Exp $
 
 PORTNAME=	glabels
