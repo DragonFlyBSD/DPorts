@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/science/hdf5-18/Makefile 336191 2013-12-11 18:38:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hdf5
 PORTVERSION=	1.8.10
