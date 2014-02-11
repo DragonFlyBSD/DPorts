@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-profunctors/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	profunctors
 PORTVERSION=	3.3.0.1
