@@ -1,5 +1,5 @@
 # Created by: dieringe@zedat.fu-berlin.de
-# $FreeBSD: audio/dvda-author/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dvda-author
 PORTVERSION=	09.05
@@ -32,6 +32,8 @@ CONFIGURE_ARGS=	--with-flac=${LOCALBASE}/lib/libFLAC.so \
 	--with-ogg=${LOCALBASE}/lib/libogg.so \
 	--enable-glibc
 USE_CSTD=	gnu89
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
