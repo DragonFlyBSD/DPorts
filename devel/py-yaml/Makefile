@@ -1,5 +1,5 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: head/devel/py-yaml/Makefile 343500 2014-02-09 13:07:02Z koobs $
+# $FreeBSD$
 
 PORTNAME=	yaml
 PORTVERSION=	3.10
