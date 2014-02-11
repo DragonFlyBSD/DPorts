@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/gwenview-kde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	gwenview
 PORTVERSION=	${KDE4_VERSION}
