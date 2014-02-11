@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-W3CDTF/Makefile 332679 2013-11-04 10:23:49Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-W3CDTF
 PORTVERSION=	0.06
