@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: x11-toolkits/gtkglext/Makefile 337245 2013-12-23 13:59:27Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gtkglext
 PORTVERSION=	1.2.0
