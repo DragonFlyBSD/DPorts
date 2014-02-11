@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Headers-Fast/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Headers-Fast
 PORTVERSION=	0.17
