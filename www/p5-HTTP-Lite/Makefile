@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: head/www/p5-HTTP-Lite/Makefile 343237 2014-02-07 13:20:23Z culot $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Lite
 PORTVERSION=	2.43
