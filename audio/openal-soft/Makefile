@@ -1,4 +1,4 @@
-# $FreeBSD: audio/openal-soft/Makefile 340203 2014-01-18 18:58:32Z mva $
+# $FreeBSD$
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.15.1
