@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: textproc/pear-Spreadsheet_Excel_Writer/Makefile 333430 2013-11-10 19:48:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Spreadsheet_Excel_Writer
 PORTVERSION=	0.9.3
