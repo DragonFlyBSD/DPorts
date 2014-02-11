@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Xslate/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Xslate
 PORTVERSION=	2.0009
