@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/openbabel/Makefile 330663 2013-10-17 18:49:09Z makc $
+# $FreeBSD$
 
 PORTNAME=	openbabel
 PORTVERSION=	2.3.2
