@@ -1,4 +1,4 @@
-# $FreeBSD: print/tex-dvipsk/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dvipsk
 PORTVERSION=	5.992
