@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: net/libfixbuf/Makefile 341916 2014-01-31 06:48:40Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libfixbuf
 PORTVERSION=	1.3.0
