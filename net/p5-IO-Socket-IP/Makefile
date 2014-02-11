@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/net/p5-IO-Socket-IP/Makefile 340779 2014-01-23 03:27:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IO-Socket-IP
 PORTVERSION=	0.27
