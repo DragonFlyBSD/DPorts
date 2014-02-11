@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Browser-Open/Makefile 340409 2014-01-20 16:58:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Browser-Open
 PORTVERSION=	0.04
