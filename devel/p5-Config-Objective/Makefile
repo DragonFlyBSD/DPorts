@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@uiuc.edu>
-# $FreeBSD: devel/p5-Config-Objective/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Config-Objective
 PORTVERSION=	0.9.1
