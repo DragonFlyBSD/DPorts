@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: graphics/p5-GraphViz/Makefile 335207 2013-11-29 17:40:21Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	GraphViz
 PORTVERSION=	2.15
