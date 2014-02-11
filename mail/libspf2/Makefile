@@ -1,5 +1,5 @@
 # Created by: snowchyld
-# $FreeBSD: head/mail/libspf2/Makefile 337619 2013-12-26 21:43:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libspf2
 PORTVERSION=	1.2.10
