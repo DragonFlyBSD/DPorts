@@ -1,5 +1,5 @@
 # Created by: Matthew Braithwaite <mab@red-bean.com>
-# $FreeBSD: head/www/aolserver/Makefile 342515 2014-02-04 12:50:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aolserver
 PORTVERSION=	4.5.1
