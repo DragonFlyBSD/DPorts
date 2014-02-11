@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/sharutils/Makefile 332346 2013-11-01 09:57:50Z garga $
+# $FreeBSD$
 
 PORTNAME=	sharutils
 PORTVERSION=	4.13.5
