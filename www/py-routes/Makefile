@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/py-routes/Makefile 341745 2014-01-29 15:04:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	routes
 PORTVERSION=	1.13
