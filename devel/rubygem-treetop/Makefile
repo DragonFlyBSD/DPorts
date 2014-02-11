@@ -1,5 +1,5 @@
 # Created by: Wen Heping <ruby@FreeBSD.org>
-# $FreeBSD: devel/rubygem-treetop/Makefile 340546 2014-01-21 03:43:12Z swills $
+# $FreeBSD$
 
 PORTNAME=	treetop
 PORTVERSION=	1.4.15
