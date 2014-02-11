@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-# $FreeBSD: math/octave-forge-mvn/Makefile 339538 2014-01-12 19:52:20Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-mvn
 PORTVERSION=	1.1.0
