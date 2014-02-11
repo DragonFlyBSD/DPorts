@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile.inc 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric4:

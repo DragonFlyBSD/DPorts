@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: devel/eric4/Makefile 339079 2014-01-08 09:26:46Z bsam $
+# $FreeBSD$
 
 CATEGORIES=	devel python
 DISTNAME=	${PORTNAME}-${PORTVERSION}
