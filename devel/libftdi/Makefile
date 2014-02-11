@@ -1,5 +1,5 @@
 # Created by: Olexandr Davydenko <o.davydenko@gmail.com>
-# $FreeBSD: head/devel/libftdi/Makefile 343214 2014-02-07 11:44:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libftdi
 PORTVERSION=	0.20
