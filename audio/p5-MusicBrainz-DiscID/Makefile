@@ -1,5 +1,5 @@
 # Created by: Tobias Rehbein <tobias.rehbein@web.de>
-# $FreeBSD: audio/p5-MusicBrainz-DiscID/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	MusicBrainz-DiscID
 PORTVERSION=	0.03
@@ -16,9 +16,6 @@ LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		pkgconfig perl5
-NO_STAGE=	yes
 USE_PERL5=	modbuild
-
-MAN3=		MusicBrainz::DiscID.3
 
 .include <bsd.port.mk>
