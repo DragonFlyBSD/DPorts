@@ -1,5 +1,5 @@
 # Created by: Andrey Polyakov <andrey.polyakov@unix.net>
-# $FreeBSD: devel/py-ydbf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ydbf
 PORTVERSION=	0.0.1
