@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: www/p5-HTML-Summary/Makefile 339679 2014-01-14 11:19:12Z demon $
+# $FreeBSD$
 
 PORTNAME=	HTML-Summary
 PORTVERSION=	0.018
