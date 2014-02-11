@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars.eggert@gmx.net>
-# $FreeBSD: net-im/p5-Net-XMPP/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-XMPP
 PORTVERSION=	1.02.04
