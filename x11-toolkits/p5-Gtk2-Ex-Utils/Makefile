@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-Utils/Makefile 338757 2014-01-05 12:33:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Ex-Utils
 PORTVERSION=	0.09
