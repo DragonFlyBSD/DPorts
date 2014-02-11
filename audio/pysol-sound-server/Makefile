@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/pysol-sound-server/Makefile 341142 2014-01-26 00:01:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pysol-sound-server
 PORTVERSION=	3.01
