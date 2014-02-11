@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-Template-Alloy/Makefile 329224 2013-10-03 18:38:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Template-Alloy
 PORTVERSION=	1.020
