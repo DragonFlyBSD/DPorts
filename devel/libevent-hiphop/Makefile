@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: devel/libevent-hiphop/Makefile 342171 2014-02-01 15:33:41Z miwi $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-hiphop
 PORTREVISION=	3
