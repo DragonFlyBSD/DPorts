@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-Event-Join/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	Event-Join
 PORTVERSION=	0.06
