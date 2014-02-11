@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: print/rubygem-prawn/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	prawn
 PORTVERSION=	0.12.0
