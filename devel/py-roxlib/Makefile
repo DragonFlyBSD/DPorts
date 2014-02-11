@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-roxlib/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	roxlib
 PORTVERSION=	2.0.6
