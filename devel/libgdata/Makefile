@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/libgdata/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/libgdata/Makefile,v 1.14 2010/09/30 19:39:17 kwm Exp $
 
 PORTNAME=	libgdata
