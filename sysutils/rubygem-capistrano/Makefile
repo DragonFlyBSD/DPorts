@@ -1,5 +1,5 @@
 # Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-# $FreeBSD: sysutils/rubygem-capistrano/Makefile 340937 2014-01-24 22:23:51Z antoine $
+# $FreeBSD$
 
 PORTNAME=	capistrano
 PORTVERSION=	3.1.0
