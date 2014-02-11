@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: irc/libircclient/Makefile 341458 2014-01-27 21:30:25Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libircclient
 PORTVERSION=	1.6
