@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/rubygem-polyglot/Makefile 338315 2013-12-31 14:30:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	polyglot
 PORTVERSION=	0.3.3
