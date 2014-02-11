@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/xpdf/Makefile 329271 2013-10-04 08:52:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
