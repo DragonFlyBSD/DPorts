@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: net/libfb/Makefile 341941 2014-01-31 08:44:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libfb
 PORTVERSION=	2.0.2
