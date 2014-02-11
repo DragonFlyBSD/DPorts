@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11-toolkits/elementary/Makefile 333733 2013-11-14 00:33:32Z gblach $
+# $FreeBSD$
 
 PORTNAME=	elementary
 PORTVERSION=	1.7.9
@@ -23,6 +23,8 @@ USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
 CONFIGURE_ARGS=	--disable-quick-launch
+
+OPTIONS_DEFINE=	NLS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
