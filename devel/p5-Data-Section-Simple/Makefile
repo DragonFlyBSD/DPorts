@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Data-Section-Simple/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-Section-Simple
 PORTVERSION=	0.05
