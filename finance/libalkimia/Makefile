@@ -1,4 +1,4 @@
-# $FreeBSD: finance/libalkimia/Makefile 329299 2013-10-04 12:38:45Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libalkimia
 PORTVERSION=	4.3.2
