@@ -1,5 +1,5 @@
 # Created by: Wei-chun Chao
-# $FreeBSD: head/mail/p5-Mail-Sendmail/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mail-Sendmail
 PORTVERSION=	0.79
