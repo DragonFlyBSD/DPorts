@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: finance/ktoblzcheck/Makefile 338417 2014-01-02 05:31:07Z jhale $
+# $FreeBSD$
 
 PORTNAME=	ktoblzcheck
 PORTVERSION=	1.44
