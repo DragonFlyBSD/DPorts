@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/cdf/Makefile 341438 2014-01-27 18:00:26Z stephen $
+# $FreeBSD$
 
 PORTNAME=	cdf3
 PORTVERSION=	3.3.0
@@ -44,7 +44,7 @@ pre-configure:
 
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/lib/libcdf.so ${STAGEDIR}${PREFIX}/lib/libcdf.so.0
-	${LN} -sf ${STAGEDIR}${PREFIX}/lib/libcdf.so.0 ${STAGEDIR}${PREFIX}/lib/libcdf.so
+	${LN} -sf libcdf.so.0 ${STAGEDIR}${PREFIX}/lib/libcdf.so
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
