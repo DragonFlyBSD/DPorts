@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/liboop/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	liboop
 PORTVERSION=	1.0
