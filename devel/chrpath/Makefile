@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: head/devel/chrpath/Makefile 336651 2013-12-16 17:46:49Z antoine $
+# $FreeBSD$
 
 PORTNAME=	chrpath
 PORTVERSION=	0.13
