@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-babelfish/Makefile 334666 2013-11-23 13:52:38Z wg $
+# $FreeBSD$
 
 PORTNAME=	babelfish
 PORTVERSION=	0.4.0
