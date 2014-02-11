@@ -1,5 +1,5 @@
 # Created by: Simon Barner <barner@gmx.de>
-# $FreeBSD: head/audio/p5-Ogg-Vorbis-Header/Makefile 341953 2014-01-31 09:15:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Ogg-Vorbis-Header
 PORTVERSION=	0.03
