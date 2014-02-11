@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD: www/webkit-qt4/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	webkit
 DISTVERSION=	${QT4_VERSION}
@@ -50,6 +50,10 @@ GSTREAMER_USE=	GSTREAMER=yes
 # http://bugs.freebsd.org/173042
 .if ${ARCH} == "powerpc"
 BUILD_DEPENDS+= ${LOCALBASE}/bin/ld:${PORTSDIR}/devel/binutils
+.endif
+
+.if ${ARCH} == powerpc64
+CFLAGS+=	-mminimal-toc
 .endif
 
 # Quick hack to avoid messing up qt_webkit_version.pri installation
