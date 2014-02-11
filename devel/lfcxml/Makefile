@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/lfcxml/Makefile 342121 2014-02-01 11:43:49Z wg $
+# $FreeBSD$
 
 PORTNAME=	lfcxml
 PORTVERSION=	1.1.6
