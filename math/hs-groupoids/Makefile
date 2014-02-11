@@ -1,4 +1,4 @@
-# $FreeBSD: math/hs-groupoids/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	groupoids
 PORTVERSION=	3.0.1.1
