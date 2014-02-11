@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: devel/p5-Devel-REPL/Makefile 339895 2014-01-16 05:23:33Z ashish $
+# $FreeBSD$
 
 PORTNAME=	Devel-REPL
 PORTVERSION=	1.003025
