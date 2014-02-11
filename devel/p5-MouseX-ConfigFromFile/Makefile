@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: devel/p5-MouseX-ConfigFromFile/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	MouseX-ConfigFromFile
 PORTVERSION=	0.05
