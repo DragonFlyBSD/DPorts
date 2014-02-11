@@ -1,5 +1,5 @@
 # Created by: Corey Smith
-# $FreeBSD: net/py-suds/Makefile 341731 2014-01-29 13:18:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	suds
 PORTVERSION=	0.4
