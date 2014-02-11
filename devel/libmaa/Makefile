@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: head/devel/libmaa/Makefile 334836 2013-11-25 11:33:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libmaa
 PORTVERSION=	1.3.2
