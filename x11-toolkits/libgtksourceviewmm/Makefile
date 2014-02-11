@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libgtksourceviewmm/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #    $MCom: ports/x11-toolkits/libgtksourceviewmm/Makefile,v 1.4 2008/08/08 21:59:44 kwm Exp $
 
 PORTNAME=	libgtksourceviewmm
