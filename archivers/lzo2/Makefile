@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: head/archivers/lzo2/Makefile 342700 2014-02-05 13:50:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lzo2
 PORTVERSION=	2.06
@@ -18,6 +18,8 @@ USES=		libtool
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --docdir=${DOCSDIR}
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
