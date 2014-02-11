@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-DateTime/Makefile 340933 2014-01-24 21:28:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	DateTime
 PORTVERSION=	3.0.3
