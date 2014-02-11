@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-clutter/Makefile 332044 2013-10-30 02:48:42Z swills $
+# $FreeBSD$
 
 PORTNAME=	clutter
 PORTVERSION=	2.0.2
