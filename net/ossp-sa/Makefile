@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: net/ossp-sa/Makefile 341935 2014-01-31 08:05:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sa
 PORTVERSION=	1.2.6
