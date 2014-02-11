@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: print/py-fonttools/Makefile 337957 2013-12-29 11:24:08Z wg $
+# $FreeBSD$
 
 PORTNAME=	fonttools
 PORTVERSION=	2.4
