@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/ldb/Makefile 339862 2014-01-15 23:34:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=		ldb
 PORTVERSION=		1.1.16
