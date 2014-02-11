@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Plugin-Class/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-Class
 PORTVERSION=	0.14
