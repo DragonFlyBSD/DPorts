@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11-themes/gnome-themes-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-themes/gnome-themes-extras/Makefile,v 1.18 2007/10/04 02:36:16 mezz Exp $
 
 PORTNAME=	gnome-themes-extras
