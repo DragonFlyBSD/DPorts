@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: print/rubygem-afm/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	afm
 PORTVERSION=	0.2.0
