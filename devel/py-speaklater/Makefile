@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: devel/py-speaklater/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	speaklater
 PORTVERSION=	1.3
