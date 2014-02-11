@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-nag/Makefile 341400 2014-01-27 13:17:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nag
 PORTVERSION=	4.1.3
