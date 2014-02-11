@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: palm/synce-libsynce/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libsynce
 PORTVERSION=	0.14
