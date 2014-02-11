@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-network_interface/Makefile 331730 2013-10-26 20:01:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	network_interface
 PORTVERSION=	0.0.1
