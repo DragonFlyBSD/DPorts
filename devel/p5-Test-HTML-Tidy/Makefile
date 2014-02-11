@@ -1,5 +1,5 @@
 # Created by: rafan@FreeBSD.org
-# $FreeBSD: devel/p5-Test-HTML-Tidy/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-HTML-Tidy
 PORTVERSION=	1.00
