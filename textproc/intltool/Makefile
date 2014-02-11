@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: head/textproc/intltool/Makefile 342376 2014-02-03 02:36:27Z miwi $
+# $FreeBSD$
 #   $MCom: ports/trunk/textproc/intltool/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	intltool
