@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gstreamer1-plugins-soup/Makefile 332416 2013-11-01 22:14:07Z kwm $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	devel
