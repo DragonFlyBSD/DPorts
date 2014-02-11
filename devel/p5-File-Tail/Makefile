@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: head/devel/p5-File-Tail/Makefile 338875 2014-01-06 13:26:14Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Tail
 PORTVERSION=	0.99.3
