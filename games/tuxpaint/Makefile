@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxpaint/Makefile 332792 2013-11-05 00:17:33Z danilo $
+# $FreeBSD$
 
 PORTNAME=	tuxpaint
 PORTVERSION=	0.9.21
