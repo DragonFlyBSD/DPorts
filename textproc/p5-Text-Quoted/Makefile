@@ -1,5 +1,5 @@
 # Created by: Erwin Lansing <erwin@FreeBSD.org>
-# $FreeBSD: head/textproc/p5-Text-Quoted/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Quoted
 PORTVERSION=	2.08
