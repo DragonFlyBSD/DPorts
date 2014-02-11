@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Hash-AsObject/Makefile 331958 2013-10-29 15:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Hash-AsObject
 PORTVERSION=	0.13
