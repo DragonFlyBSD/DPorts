@@ -1,4 +1,4 @@
-# $FreeBSD: devel/lua-lgi/Makefile 339364 2014-01-10 16:09:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lgi
 PORTVERSION=	0.7.2
