@@ -1,5 +1,5 @@
 # Created by: Nagy, Attila <bra@fsn.hu>
-# $FreeBSD: mail/dovecot2/Makefile 342000 2014-01-31 15:07:46Z pawel $
+# $FreeBSD$
 
 PORTNAME=	dovecot
 PORTVERSION=	2.2.10
