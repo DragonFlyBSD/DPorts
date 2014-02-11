@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-coffee-script/Makefile 342237 2014-02-02 03:02:23Z swills $
+# $FreeBSD$
 
 PORTNAME=	coffee-script
 PORTVERSION=	2.2.0
