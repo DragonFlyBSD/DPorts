@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Throwable/Makefile 331396 2013-10-23 17:22:12Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Throwable
 PORTVERSION=	0.200009
