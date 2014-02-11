@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: head/japanese/zinnia/Makefile 341530 2014-01-28 10:21:59Z danfe $
+# $FreeBSD$
 
 PORTNAME=	zinnia
 PORTVERSION=	0.06
