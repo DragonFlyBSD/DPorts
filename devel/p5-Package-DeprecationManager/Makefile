@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Package-DeprecationManager/Makefile 341426 2014-01-27 16:40:47Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Package-DeprecationManager
 PORTVERSION=	0.13
