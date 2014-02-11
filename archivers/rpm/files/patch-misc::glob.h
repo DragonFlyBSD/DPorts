@@ -1,5 +1,5 @@
 
-$FreeBSD: archivers/rpm/files/patch-misc::glob.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/archivers/rpm/files/patch-misc::glob.h 340725 2014-01-22 17:40:44Z mat $
 
 --- misc/glob.h	2002/09/23 16:45:45	1.1
 +++ misc/glob.h	2002/09/23 16:46:23

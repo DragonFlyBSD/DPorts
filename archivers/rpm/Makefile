@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: archivers/rpm/Makefile 338667 2014-01-04 18:39:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rpm
 PORTVERSION=	3.0.6
