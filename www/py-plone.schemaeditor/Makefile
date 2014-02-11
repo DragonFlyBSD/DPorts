@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-plone.schemaeditor/Makefile 327899 2013-09-22 22:21:57Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone.schemaeditor
 PORTVERSION=	1.3.3
