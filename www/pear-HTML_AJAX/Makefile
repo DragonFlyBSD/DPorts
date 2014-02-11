@@ -1,5 +1,5 @@
 # Created by: Simun Mikecin <numisemis at yahoo.com>
-# $FreeBSD: www/pear-HTML_AJAX/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML_AJAX
 PORTVERSION=	0.5.6
