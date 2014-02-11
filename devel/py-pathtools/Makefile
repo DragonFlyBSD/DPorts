@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pathtools/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pathtools
 PORTVERSION=	0.1.2
