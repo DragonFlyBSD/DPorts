@@ -1,5 +1,5 @@
 # Created by: Maxim Maximov (mcsi@agava.com)
-# $FreeBSD: devel/p5-enum/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	enum
 PORTVERSION=	1.050
