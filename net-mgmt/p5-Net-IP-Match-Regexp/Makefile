@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: net-mgmt/p5-Net-IP-Match-Regexp/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-IP-Match-Regexp
 PORTVERSION=	1.01
