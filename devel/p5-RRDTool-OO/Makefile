@@ -1,5 +1,5 @@
 # Created by: Stefan Pauly <stefan@fh-mainz.de>
-# $FreeBSD: devel/p5-RRDTool-OO/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	RRDTool-OO
 PORTVERSION=	0.32
