@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-virtus/Makefile 336199 2013-12-11 18:49:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	virtus
 PORTVERSION=	0.5.5
