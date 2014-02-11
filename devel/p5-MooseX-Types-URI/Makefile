@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types-URI/Makefile 337271 2013-12-23 17:54:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-URI
 PORTVERSION=	0.05
