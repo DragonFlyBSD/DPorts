@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/gstreamer-plugins-opencv/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD$
 
 PORTREVISION=	1
 CATEGORIES=	graphics
