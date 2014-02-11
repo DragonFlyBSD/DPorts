@@ -1,5 +1,5 @@
 # Created by: jesper
-# $FreeBSD: security/p5-Crypt-DH/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-DH
 PORTVERSION=	0.07
