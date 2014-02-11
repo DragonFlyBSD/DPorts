@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Gtk2-Ex-Simple-List/Makefile 333344 2013-11-09 21:46:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Ex-Simple-List
 PORTVERSION=	0.50
