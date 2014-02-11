@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: head/devel/libublio/Makefile 336430 2013-12-14 09:52:41Z mandree $
+# $FreeBSD$
 
 PORTNAME=	libublio
 PORTVERSION=	20070103
@@ -22,6 +22,8 @@ SRCCONF=	/dev/null
 MAKE_ENV+=	SRCCONF=${SRCCONF}
 
 NEED_ROOT=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
