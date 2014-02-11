@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libvdpau/Makefile 328672 2013-09-29 10:55:12Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libvdpau
 PORTVERSION=	0.7
