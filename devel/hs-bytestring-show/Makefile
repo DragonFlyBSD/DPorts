@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-bytestring-show/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	bytestring-show
 PORTVERSION=	0.3.5.5
