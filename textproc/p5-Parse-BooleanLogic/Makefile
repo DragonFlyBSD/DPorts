@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: textproc/p5-Parse-BooleanLogic/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	Parse-BooleanLogic
 PORTVERSION=	0.09
