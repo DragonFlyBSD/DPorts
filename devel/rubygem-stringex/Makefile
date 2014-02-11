@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-stringex/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	stringex
 PORTVERSION=	1.5.1
