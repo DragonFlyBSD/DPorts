@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Horde_Cli/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Horde_Cli
 PORTVERSION=	2.0.4
