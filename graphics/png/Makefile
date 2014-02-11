@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: graphics/png/Makefile 334919 2013-11-26 06:16:57Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	png
 PORTVERSION=	1.5.17
