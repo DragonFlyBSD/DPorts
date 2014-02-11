@@ -1,5 +1,5 @@
 # Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-# $FreeBSD: math/p5-Math-Base36/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Math-Base36
 PORTVERSION=	0.10
