@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/databases/rubygem-sqlite3/Makefile 335212 2013-11-29 19:10:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sqlite3
 PORTVERSION=	1.3.8
