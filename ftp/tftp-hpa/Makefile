@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/tftp-hpa/Makefile 341104 2014-01-25 21:10:40Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tftp-hpa
 PORTVERSION=	5.2
