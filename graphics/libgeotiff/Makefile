@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance
-# $FreeBSD: graphics/libgeotiff/Makefile 334540 2013-11-21 23:12:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libgeotiff
 PORTVERSION=	1.4.0
