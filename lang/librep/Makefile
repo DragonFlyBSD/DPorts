@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: lang/librep/Makefile 328402 2013-09-26 18:23:42Z eadler $
+# $FreeBSD$
 
 PORTNAME=	librep
 PORTVERSION=	0.92.3
