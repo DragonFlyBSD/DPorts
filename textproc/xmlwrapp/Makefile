@@ -1,8 +1,9 @@
 # Created by: ijliao
-# $FreeBSD: textproc/xmlwrapp/Makefile 340587 2014-01-21 10:08:52Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmlwrapp
 PORTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
