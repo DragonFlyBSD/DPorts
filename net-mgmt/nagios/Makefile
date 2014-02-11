@@ -1,5 +1,5 @@
 # Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios/Makefile 340945 2014-01-24 23:24:53Z mat $
+# $FreeBSD$
 
 PORTNAME=	nagios
 PORTVERSION=	3.5.1
