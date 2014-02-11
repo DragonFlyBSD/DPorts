@@ -1,16 +1,19 @@
 # Created by: Max Campos <mcampos@bpsw.biz>
-# $FreeBSD: devel/p5-User-Identity/Makefile 341194 2014-01-26 14:53:13Z zi $
+# $FreeBSD$
 
 PORTNAME=	User-Identity
-PORTVERSION=	0.93
+PORTVERSION=	0.94
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	culot@FreeBSD.org
 COMMENT=	Perl module for abstracting information about a physical person
 
-RUN_DEPENDS=	p5-Geography-Countries>=0:${PORTSDIR}/misc/p5-Geography-Countries
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+RUN_DEPENDS=	p5-Geography-Countries>0:${PORTSDIR}/misc/p5-Geography-Countries
 
 USES=		perl5
 USE_PERL5=	configure
