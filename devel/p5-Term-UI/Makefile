@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-UI/Makefile 339404 2014-01-11 08:14:08Z culot $
+# $FreeBSD$
 
 PORTNAME=	Term-UI
 PORTVERSION=	0.42
