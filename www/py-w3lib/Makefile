@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-w3lib/Makefile 333423 2013-11-10 18:40:48Z rm $
+# $FreeBSD$
 
 PORTNAME=	w3lib
 PORTVERSION=	1.5
