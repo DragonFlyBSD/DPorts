@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-wm/lxsession/Makefile 340089 2014-01-17 17:52:26Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxsession
 PORTVERSION=	0.4.6.1
