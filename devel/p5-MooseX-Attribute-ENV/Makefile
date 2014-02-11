@@ -1,5 +1,5 @@
 # Created by: alan <Alan@Wave2.org>
-# $FreeBSD: devel/p5-MooseX-Attribute-ENV/Makefile 338959 2014-01-06 23:41:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Attribute-ENV
 PORTVERSION=	0.02
