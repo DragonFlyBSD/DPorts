@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-asn1-data/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asn1-data
 PORTVERSION=	0.7.1
