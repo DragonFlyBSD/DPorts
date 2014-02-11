@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/rubygem-simple-rss/Makefile 340906 2014-01-24 14:56:38Z miwi $
+# $FreeBSD$
 
 PORTNAME=	simple-rss
 PORTVERSION=	1.3.1
