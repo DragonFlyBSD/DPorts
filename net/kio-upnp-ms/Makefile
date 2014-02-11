@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: net/kio-upnp-ms/Makefile 338814 2014-01-05 18:06:58Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	kio-upnp-ms
 DISTVERSION=	1.0.0.git20110808
