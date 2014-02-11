@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/rubygem-gstreamer/Makefile 332045 2013-10-30 02:50:05Z swills $
+# $FreeBSD$
 
 PORTNAME=	gstreamer
 PORTVERSION=	2.0.2
