@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-MooseX-SemiAffordanceAccessor/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MooseX-SemiAffordanceAccessor
 PORTVERSION=	0.09
