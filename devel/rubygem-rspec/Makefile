@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <romanbsd@yahoo.com>
-# $FreeBSD: devel/rubygem-rspec/Makefile 338261 2013-12-31 08:30:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rspec
 PORTVERSION=	2.14.1
