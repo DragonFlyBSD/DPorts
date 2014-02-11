@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: www/p5-HTML-TagParser/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-TagParser
 PORTVERSION=	0.20
