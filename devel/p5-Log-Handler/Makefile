@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: devel/p5-Log-Handler/Makefile 332744 2013-11-04 16:59:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Log-Handler
 PORTVERSION=	0.82
