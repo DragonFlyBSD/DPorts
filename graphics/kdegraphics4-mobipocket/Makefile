@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kdegraphics4-mobipocket/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	kdegraphics-mobipocket
 PORTVERSION=	${KDE4_VERSION}
