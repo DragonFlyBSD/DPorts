@@ -1,5 +1,5 @@
 # Created by: Nicholas Esborn <nick@netdot.net>
-# $FreeBSD: devel/p5-Time-Period/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Time-Period
 PORTVERSION=	1.20
