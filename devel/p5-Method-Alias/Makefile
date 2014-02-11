@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Method-Alias/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Method-Alias
 PORTVERSION=	1.03
