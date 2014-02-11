@@ -1,4 +1,4 @@
-# $FreeBSD: audio/wildmidi/Makefile 331360 2013-10-23 09:59:18Z tijl $
+# $FreeBSD$
 
 PORTNAME=	wildmidi
 PORTVERSION=	0.2.3.5
