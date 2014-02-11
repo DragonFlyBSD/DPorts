@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: devel/p5-Class-AutoClass/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Class-AutoClass
 PORTVERSION=	1.56
