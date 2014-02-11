@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: devel/p5-System-Command/Makefile 331278 2013-10-22 14:40:02Z culot $
+# $FreeBSD$
 
 PORTNAME=	System-Command
 PORTVERSION=	1.107
