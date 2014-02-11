@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: devel/gnustep-make/Makefile 339559 2014-01-12 22:54:58Z theraven $
+# $FreeBSD$
 
 PORTNAME=	gnustep-make
 PORTVERSION=	2.6.6
