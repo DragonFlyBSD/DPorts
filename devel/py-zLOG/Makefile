@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-zLOG/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zLOG
 PORTVERSION=	2.11.1
