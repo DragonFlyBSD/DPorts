@@ -1,5 +1,5 @@
 # Created by: renchap@cocoa-x.com
-# $FreeBSD: devel/rubygem-mixlib-config/Makefile 340901 2014-01-24 14:46:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mixlib-config
 PORTVERSION=	1.1.2
