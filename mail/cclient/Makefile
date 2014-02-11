@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@FreeBSD.org>
-# $FreeBSD: head/mail/cclient/Makefile 343579 2014-02-10 03:19:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cclient
 PORTVERSION=	2007f
