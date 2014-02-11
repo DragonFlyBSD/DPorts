@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/rubygem-cairo/Makefile 332044 2013-10-30 02:48:42Z swills $
+# $FreeBSD$
 
 PORTNAME=	cairo
 PORTVERSION=	1.12.6
