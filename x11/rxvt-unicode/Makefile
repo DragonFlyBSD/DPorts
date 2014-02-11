@@ -1,5 +1,5 @@
 # Created by: gpalmer@FreeBSD.org
-# $FreeBSD: x11/rxvt-unicode/Makefile 336582 2013-12-15 21:26:47Z thierry $
+# $FreeBSD$
 
 PORTNAME=	rxvt-unicode
 PORTVERSION=	9.19
@@ -18,7 +18,6 @@ RUN_DEPENDS=	${LOCALBASE}/bin/fc-cache:${PORTSDIR}/x11-fonts/fontconfig	\
 		${LOCALBASE}/share/misc/terminfo.db:${PORTSDIR}/devel/ncurses
 
 USES=			pkgconfig shebangfix
-USE_GCC=		yes # segfaults when trying to scroll with the mouse wheel if clang
 USE_XORG=		xpm xft xrender
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
@@ -129,6 +128,8 @@ CONFIGURE_ARGS+=	--disable-delete-key
 # enable scrolling via mouse wheel or buttons 4 & 5
 .if !${PORT_OPTIONS:MMOUSEWHEEL}
 CONFIGURE_ARGS+=	--disable-mousewheel
+.else
+USE_GCC=		yes # segfaults when trying to scroll with the mouse wheel if clang
 .endif
 
 # enable smart resize
