@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: emulators/mupen64plus-video-z64/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-video-z64
 DISTFILES=	${PORTNAME}${PKGNAMESUFFIX}-src-${PORTVERSION}.0${EXTRACT_SUFX}:plugin
