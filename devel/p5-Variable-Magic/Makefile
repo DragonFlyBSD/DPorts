@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Variable-Magic/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Variable-Magic
 PORTVERSION=	0.53
