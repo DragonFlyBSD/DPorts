@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Multimap/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-Multimap
 PORTVERSION=	0.01
