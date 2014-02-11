@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: devel/generatorrunner/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	generatorrunner
 PORTVERSION=	0.6.16
