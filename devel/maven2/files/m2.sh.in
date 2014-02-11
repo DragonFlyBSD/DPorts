@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: devel/maven2/files/m2.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/maven2/files/m2.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 if [ -f /etc/mavenrc ] ; then
 	. /etc/mavenrc
