@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-ParseTemplate/Makefile 341980 2014-01-31 12:13:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ParseTemplate
 PORTVERSION=	3.08
