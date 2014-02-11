@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-filer/Makefile 333241 2013-11-08 15:20:42Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	rox-filer
 PORTVERSION=	2.11
