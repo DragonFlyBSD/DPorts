@@ -1,4 +1,4 @@
-# $FreeBSD: editors/libreoffice-gu/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 LO_I18N=	gu
 LO_HAS_HELPPACK=	yes
