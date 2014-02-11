@@ -1,5 +1,5 @@
 # Created by: Gerhard Haering <gerhard.haering@gmx.de>
-# $FreeBSD: databases/py-pyPgSQL/Makefile 340923 2014-01-24 19:02:47Z mva $
+# $FreeBSD$
 
 PORTNAME=	pyPgSQL
 PORTVERSION=	2.5.1
