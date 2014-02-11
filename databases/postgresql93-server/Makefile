@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: head/databases/postgresql93-server/Makefile 335673 2013-12-05 15:59:53Z girgen $
+# $FreeBSD$
 
 DISTVERSION?=	9.3.2
 PORTREVISION?=	0
