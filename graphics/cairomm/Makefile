@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/cairomm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/graphics/cairomm/Makefile,v 1.19 2011/06/07 14:00:26 kwm Exp $
 
 PORTNAME=	cairomm
