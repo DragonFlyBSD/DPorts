@@ -1,5 +1,5 @@
 # Created by: Rick Elrod <codeblock@eighthbit.net>
-# $FreeBSD: comms/rubygem-callsign/Makefile 338268 2013-12-31 10:09:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	callsign
 PORTVERSION=	2.2.0
