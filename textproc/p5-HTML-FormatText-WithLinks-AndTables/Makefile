@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-HTML-FormatText-WithLinks-AndTables/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	HTML-FormatText-WithLinks-AndTables
 PORTVERSION=	0.02
