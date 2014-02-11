@@ -1,5 +1,5 @@
 # Created by: dwm
-# $FreeBSD: head/devel/icu/Makefile 343212 2014-02-07 11:40:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	icu
 PORTVERSION=	52.1
