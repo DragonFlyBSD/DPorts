@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: head/devel/p5-Test-NoWarnings/Makefile 342148 2014-02-01 14:40:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Test-NoWarnings
 PORTVERSION=	1.04
