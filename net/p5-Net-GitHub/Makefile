@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-GitHub/Makefile 338213 2013-12-31 01:22:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-GitHub
 DISTVERSION=	0.55
