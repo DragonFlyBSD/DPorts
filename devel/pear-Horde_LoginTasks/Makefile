@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/devel/pear-Horde_LoginTasks/Makefile 343567 2014-02-10 00:53:49Z mm $
+# $FreeBSD$
 
 PORTNAME=	Horde_LoginTasks
 PORTVERSION=	2.0.3
