@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz+nd@i2.informatik.rwth-aachen.de>
-# $FreeBSD: www/nd/Makefile 341547 2014-01-28 13:32:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nd
 PORTVERSION=	0.8.2
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www.gohome.org/nd/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simple command line interface for WebDAV (RFC2518) server
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 
