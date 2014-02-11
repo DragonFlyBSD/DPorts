@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/brasero/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 #    $MCom: ports/sysutils/brasero/Makefile,v 1.83 2010/11/15 21:53:38 kwm Exp $
 
 PORTNAME=	brasero
