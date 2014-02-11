@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: devel/grantlee/Makefile 332889 2013-11-05 18:22:09Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	grantlee
 DISTVERSION=	0.3.0
