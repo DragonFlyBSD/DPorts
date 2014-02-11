@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kde4-l10n-eu/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
