@@ -1,5 +1,5 @@
 # Created by: wenheping <wenheping@gmail.com>
-# $FreeBSD: head/net/rubygem-oauth/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD$
 
 PORTNAME=	oauth
 PORTVERSION=	0.4.7
