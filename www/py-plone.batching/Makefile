@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/py-plone.batching/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plone.batching
 PORTVERSION=	1.0
