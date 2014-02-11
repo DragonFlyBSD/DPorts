@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-settings-daemon/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 #   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.75 2011/04/25 19:56:57 mezz Exp $
 
 PORTNAME=	gnome-settings-daemon
