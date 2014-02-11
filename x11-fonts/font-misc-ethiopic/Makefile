@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/font-misc-ethiopic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	font-misc-ethiopic
 PORTVERSION=	1.0.3
