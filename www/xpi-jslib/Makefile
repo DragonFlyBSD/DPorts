@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-jslib/Makefile 341209 2014-01-26 15:10:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jslib
 PORTVERSION=	0.1.371
