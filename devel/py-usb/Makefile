@@ -1,5 +1,5 @@
 # Created by: R.Mahmatkhanov <R.Mahmatkhanov@SKYLINK.ru>
-# $FreeBSD: devel/py-usb/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	usb
 PORTVERSION=	0.4.3
@@ -19,6 +19,9 @@ PYDISTUTILS_PKGNAME=	py${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-install:
