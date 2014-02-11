@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/ethumb/Makefile 333129 2013-11-07 16:00:45Z gblach $
+# $FreeBSD$
 
 PORTNAME=	ethumb
 PORTVERSION=	1.7.9
