@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-rpm-build-perl/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	rpm-build-perl
 PORTVERSION=	0.82
