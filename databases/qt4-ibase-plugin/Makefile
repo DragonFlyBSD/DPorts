@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: databases/qt4-ibase-plugin/Makefile 338902 2014-01-06 16:16:52Z makc $
+# $FreeBSD$
 
 PORTNAME=	qt4-${DB}-plugin
 DISTVERSION=	${QT4_VERSION}
