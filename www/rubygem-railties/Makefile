@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-railties/Makefile 335706 2013-12-05 20:28:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	railties
 PORTVERSION=	3.2.16
