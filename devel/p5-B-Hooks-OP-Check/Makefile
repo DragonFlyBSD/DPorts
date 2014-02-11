@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-B-Hooks-OP-Check/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	B-Hooks-OP-Check
 PORTVERSION=	0.19
