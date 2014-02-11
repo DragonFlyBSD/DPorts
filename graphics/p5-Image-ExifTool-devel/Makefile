@@ -1,5 +1,5 @@
 # Created by: Tod McQuillin <devin@spamcop.net>
-# $FreeBSD: graphics/p5-Image-ExifTool-devel/Makefile 336646 2013-12-16 16:52:06Z swills $
+# $FreeBSD$
 
 PORTNAME=	Image-ExifTool
 PORTVERSION=	9.44
