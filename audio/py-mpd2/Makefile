@@ -1,5 +1,5 @@
 # Created by: rene@FreeBSD.org (repocopied from audio/py-mpd)
-# $FreeBSD: audio/py-mpd2/Makefile 341899 2014-01-30 23:20:24Z rene $
+# $FreeBSD$
 
 PORTNAME=	mpd2
 PORTVERSION=	0.5.3
