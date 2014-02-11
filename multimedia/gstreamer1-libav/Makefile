@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/gstreamer1-libav/Makefile 338106 2013-12-30 12:56:11Z kwm $
+# $FreeBSD$
 #    $MCom: ports/multimedia/gstreamer1-libav/Makefile,v 1.4 2013/01/15 21:43:45 kwm Exp $
 
 PORTNAME=	gstreamer1-libav
