@@ -1,4 +1,4 @@
-# $FreeBSD: accessibility/kmousetool/Makefile 327684 2013-09-20 11:02:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kmousetool
 PORTVERSION=	${KDE4_VERSION}
