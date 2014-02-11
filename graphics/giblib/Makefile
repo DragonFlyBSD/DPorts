@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/giblib/Makefile 330692 2013-10-17 23:51:45Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	giblib
 PORTVERSION=	1.2.4
