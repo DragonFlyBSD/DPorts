@@ -1,5 +1,5 @@
 # Created by: k@123.org
-# $FreeBSD: www/lighttpd/Makefile 340625 2014-01-21 17:18:22Z garga $
+# $FreeBSD$
 
 PORTNAME?=	lighttpd
 PORTVERSION=	1.4.34

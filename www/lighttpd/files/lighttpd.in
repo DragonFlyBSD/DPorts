@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/lighttpd/files/lighttpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/lighttpd/files/lighttpd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: lighttpd
 # REQUIRE: %%REQUIRE%%
