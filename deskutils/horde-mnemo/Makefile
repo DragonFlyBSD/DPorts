@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-mnemo/Makefile 341400 2014-01-27 13:17:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mnemo
 PORTVERSION=	4.1.2
