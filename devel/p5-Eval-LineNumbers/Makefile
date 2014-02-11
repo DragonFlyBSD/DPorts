@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Eval-LineNumbers/Makefile 329787 2013-10-08 14:14:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Eval-LineNumbers
 PORTVERSION=	0.34
