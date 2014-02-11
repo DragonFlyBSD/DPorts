@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@pingpong.net>
-# $FreeBSD: databases/postgresql-libpqxx3/Makefile 341229 2014-01-26 15:41:20Z marino $
+# $FreeBSD$
 
 PORTNAME=	libpqxx
 PORTVERSION=	3.1.1
