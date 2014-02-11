@@ -1,5 +1,5 @@
 # Created by: Robert Jenssen
-# $FreeBSD: math/qrupdate/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qrupdate
 PORTVERSION=	1.1.2
