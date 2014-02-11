@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: editors/deforaos-editor/Makefile 332782 2013-11-04 20:56:58Z wg $
+# $FreeBSD$
 
 PORTNAME=	editor
 PORTVERSION=	0.2.1
