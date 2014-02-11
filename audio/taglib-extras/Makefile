@@ -1,5 +1,5 @@
 # Created by: Matt Tosto <datahead4@gmail.com>
-# $FreeBSD: audio/taglib-extras/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	taglib-extras
 PORTVERSION=	1.0.1
