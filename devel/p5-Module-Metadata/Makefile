@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Module-Metadata/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Module-Metadata
 PORTVERSION=	1.000019
