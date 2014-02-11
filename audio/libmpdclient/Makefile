@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/libmpdclient/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libmpdclient
 PORTVERSION=	2.9
@@ -13,6 +13,8 @@ USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
