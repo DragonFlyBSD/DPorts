@@ -1,5 +1,5 @@
 # Created by: FreeBSD GNOME Team
-# $FreeBSD: deskutils/alacarte/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #    $MCom: ports/deskutils/alacarte/Makefile,v 1.25 2010/03/29 13:19:00 avl Exp $
 
 PORTNAME=	alacarte
