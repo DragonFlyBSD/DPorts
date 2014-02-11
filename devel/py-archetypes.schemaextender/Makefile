@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-archetypes.schemaextender/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	archetypes.schemaextender
 PORTVERSION=	2.1.2
