@@ -1,4 +1,4 @@
-# $FreeBSD: print/rubygem-pdfwriter/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	pdfwriter
 PORTVERSION=	1.1.8
