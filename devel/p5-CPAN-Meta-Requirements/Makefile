@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-CPAN-Meta-Requirements/Makefile 328176 2013-09-24 17:35:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CPAN-Meta-Requirements
 PORTVERSION=	2.125
