@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Router-Simple-Sinatraish/Makefile 341636 2014-01-28 16:48:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Router-Simple-Sinatraish
 PORTVERSION=	0.03
