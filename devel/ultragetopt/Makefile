@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: devel/ultragetopt/Makefile 340954 2014-01-24 23:59:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ultragetopt
 PORTVERSION=	0.6.0
