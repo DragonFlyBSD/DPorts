@@ -1,5 +1,5 @@
 # Created by: chuckr
-# $FreeBSD: x11-toolkits/iwidgets/Makefile 327849 2013-09-22 05:32:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	iwidgets
 PORTVERSION=	4.0.1
