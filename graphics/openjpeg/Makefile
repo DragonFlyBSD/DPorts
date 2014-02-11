@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: graphics/openjpeg/Makefile 334403 2013-11-20 09:59:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	openjpeg
 PORTVERSION=	1.5.0
