@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/gstreamer-plugins-gnomevfs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/devel/gstreamer-plugins-gnomevfs/Makefile,v 1.6 2008/03/21 04:01:31 ahze Exp $
 
 PORTREVISION=	0
