@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: graphics/p5-Graph-ReadWrite/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Graph-ReadWrite
 PORTVERSION=	2.04
