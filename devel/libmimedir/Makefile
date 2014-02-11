@@ -1,5 +1,5 @@
 # Created by: Sam Lawrance <boris@brooknet.com.au>
-# $FreeBSD: head/devel/libmimedir/Makefile 341667 2014-01-28 22:43:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libmimedir
 PORTVERSION=	0.5.1
@@ -12,6 +12,8 @@ COMMENT=	Library for parsing RFC2425 MIME Directory Profile information
 USES=		bison desthack libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+
+MAKE_JOBS_UNSAFE=yes
 
 post-patch:
 	${REINPLACE_CMD} -e 's/444/644/g' ${WRKSRC}/Makefile.in
