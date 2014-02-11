@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/gsasl/Makefile 339416 2014-01-11 10:11:38Z johans $
+# $FreeBSD$
 
 PORTNAME=	gsasl
 PORTVERSION=	1.8.0
