@@ -1,5 +1,5 @@
 # Created by: johans
-# $FreeBSD: graphics/libdmtx/Makefile 337995 2013-12-29 14:43:07Z johans $
+# $FreeBSD$
 
 PORTNAME=	libdmtx
 PORTVERSION=	0.7.4
