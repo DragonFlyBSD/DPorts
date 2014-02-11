@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-SVG-Parser/Makefile 333758 2013-11-14 14:18:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	SVG-Parser
 PORTVERSION=	1.03
