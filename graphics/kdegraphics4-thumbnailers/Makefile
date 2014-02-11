@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/kdegraphics4-thumbnailers/Makefile 336482 2013-12-14 19:52:00Z antoine $
+# $FreeBSD$
 
 PORTNAME=	kdegraphics-thumbnailers
 PORTVERSION=	${KDE4_VERSION}
