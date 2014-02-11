@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: cad/ldraw/Makefile 334271 2013-11-18 22:53:52Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	ldraw
 PORTVERSION=	201301
