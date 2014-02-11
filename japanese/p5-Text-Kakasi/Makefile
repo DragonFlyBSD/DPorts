@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/p5-Text-Kakasi/Makefile 332802 2013-11-05 01:40:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Text-Kakasi
 PORTVERSION=	2.04
