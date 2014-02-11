@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: devel/p5-Errno/Makefile 341629 2014-01-28 16:46:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Errno
 PORTVERSION=	1.10
