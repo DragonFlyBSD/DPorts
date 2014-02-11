@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: head/converters/uulib/Makefile 339244 2014-01-09 14:40:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	uulib
 PORTVERSION=	0.5.20
