@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: sysutils/p5-Unix-Processors/Makefile 333222 2013-11-08 13:35:39Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Unix-Processors
 PORTVERSION=	2.042
