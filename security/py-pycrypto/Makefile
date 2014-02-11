@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: head/security/py-pycrypto/Makefile 342144 2014-02-01 14:31:40Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pycrypto
 PORTVERSION=	2.6.1
