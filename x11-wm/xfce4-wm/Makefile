@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: x11-wm/xfce4-wm/Makefile 330350 2013-10-14 20:03:16Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-wm
 PORTVERSION=	4.10.1
