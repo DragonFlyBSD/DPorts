@@ -1,5 +1,5 @@
 # Created by: Eugene Ossintsev
-# $FreeBSD: lang/ocaml-nox11/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ocaml-nox11
 CATEGORIES=	lang
