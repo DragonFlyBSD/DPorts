@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <demon@gpad.ac.ru>
-# $FreeBSD: head/textproc/man2html/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	man2html
 PORTVERSION=	3.0.1
