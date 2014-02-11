@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Interfaces/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-Interfaces
 PORTVERSION=	0.04
