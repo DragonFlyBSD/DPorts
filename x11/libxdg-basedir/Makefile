@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@cs.uoi.gr>
-# $FreeBSD: head/x11/libxdg-basedir/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libxdg-basedir
 PORTVERSION=	1.2.0
