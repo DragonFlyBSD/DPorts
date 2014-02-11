@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: head/databases/py-gdbm/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD$
 
 PORTNAME=	gdbm
 PORTVERSION=	${PYTHON_PORTVERSION}
