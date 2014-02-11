@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/sdl_ttf/Makefile 340160 2014-01-18 09:37:49Z mva $
+# $FreeBSD$
 
 PORTNAME=	sdl_ttf
 PORTVERSION=	2.0.11
