@@ -1,5 +1,5 @@
 # Created by: skreuzer
-# $FreeBSD: net/p5-Net-OAuth-Simple/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-OAuth-Simple
 PORTVERSION=	1.5
