@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: devel/p5-Test-UseAllModules/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-UseAllModules
 PORTVERSION=	0.14
