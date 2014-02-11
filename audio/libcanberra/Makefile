@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: audio/libcanberra/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/audio/libcanberra/Makefile,v 1.28 2011/06/11 18:55:56 mezz Exp $
 
 PORTNAME=	libcanberra
