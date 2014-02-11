@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-data-pprint/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	data-pprint
 PORTVERSION=	0.2.1.4
