@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: devel/p5-Event-RPC/Makefile 342154 2014-02-01 14:42:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Event-RPC
 PORTVERSION=	1.03
