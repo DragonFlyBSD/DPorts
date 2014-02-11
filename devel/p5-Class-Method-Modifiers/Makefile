@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Method-Modifiers/Makefile 338205 2013-12-31 00:59:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Class-Method-Modifiers
 PORTVERSION=	2.09
