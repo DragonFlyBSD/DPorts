@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/devel/p5-PadWalker/Makefile 331889 2013-10-28 18:53:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	PadWalker
 PORTVERSION=	1.98
