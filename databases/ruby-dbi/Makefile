@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/ruby-dbi/Makefile 331927 2013-10-29 02:53:00Z swills $
+# $FreeBSD$
 
 PORTNAME=	dbi
 PORTVERSION=	0.4.3
