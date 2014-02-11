@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/stfl/Makefile 341863 2014-01-30 17:13:27Z tijl $
+# $FreeBSD$
 
 PORTNAME=	stfl
 PORTVERSION=	0.22
