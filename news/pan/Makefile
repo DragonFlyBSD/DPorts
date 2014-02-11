@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: news/pan/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD$
 #   $MCom: ports/news/pan/Makefile,v 1.7 2008/01/19 22:45:42 mezz Exp $
 
 PORTNAME=	pan
