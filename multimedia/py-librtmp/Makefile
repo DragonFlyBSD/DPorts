@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: multimedia/py-librtmp/Makefile 335220 2013-11-29 20:20:45Z nox $
+# $FreeBSD$
 
 PORTNAME=	librtmp
 PORTVERSION=	0.1.2
