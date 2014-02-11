@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-fattr/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	fattr
 PORTVERSION=	2.2.1
