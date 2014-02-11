@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: www/rubygem-redcloth/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	redcloth
 PORTVERSION=	4.2.9
