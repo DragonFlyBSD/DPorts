@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: head/net/libnet/Makefile 334028 2013-11-16 20:09:42Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	libnet
 PORTVERSION=	1.1.6
