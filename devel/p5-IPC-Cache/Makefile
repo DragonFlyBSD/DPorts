@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/p5-IPC-Cache/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IPC-Cache
 PORTVERSION=	0.02
