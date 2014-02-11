@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: security/py-pyptlib/Makefile 328993 2013-10-01 20:53:32Z cs $
+# $FreeBSD$
 
 PORTNAME=	pyptlib
 PORTVERSION=	0.0.5
