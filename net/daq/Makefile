@@ -1,5 +1,5 @@
 # Created by: Dean Freeman (wfreeman@sourcefire.com)
-# $FreeBSD: net/daq/Makefile 342092 2014-01-31 23:10:47Z zi $
+# $FreeBSD$
 
 PORTNAME=	daq
 PORTVERSION=	2.0.1
