@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/tif22pnm/Makefile 334486 2013-11-21 13:24:27Z martymac $
+# $FreeBSD$
 
 PORTNAME=	tif22pnm
 PORTVERSION=	0.14
