@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: devel/p5-ExtUtils-XSBuilder/Makefile 331936 2013-10-29 09:01:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	ExtUtils-XSBuilder
 PORTVERSION=	0.28
