@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-shape/Makefile 339220 2014-01-09 12:58:46Z tota $
+# $FreeBSD$
 
 PORTNAME=	shape
 PORTVERSION=	1.4.1
