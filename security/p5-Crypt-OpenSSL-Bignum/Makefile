@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: head/security/p5-Crypt-OpenSSL-Bignum/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-OpenSSL-Bignum
 PORTVERSION=	0.04
