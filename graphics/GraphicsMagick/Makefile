@@ -1,5 +1,5 @@
 # Created by: Ron van Daal
-# $FreeBSD: graphics/GraphicsMagick/Makefile 342347 2014-02-02 17:32:24Z antoine $
+# $FreeBSD$
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.1.15
