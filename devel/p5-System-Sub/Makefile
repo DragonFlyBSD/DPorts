@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-System-Sub/Makefile 334509 2013-11-21 19:00:04Z lth $
+# $FreeBSD$
 
 PORTNAME=	System-Sub
 PORTVERSION=	0.130210
