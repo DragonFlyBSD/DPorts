@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-B-Deobfuscate/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	B-Deobfuscate
 PORTVERSION=	0.20
