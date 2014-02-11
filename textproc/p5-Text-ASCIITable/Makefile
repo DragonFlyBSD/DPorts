@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-ASCIITable/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-ASCIITable
 PORTVERSION=	0.20
