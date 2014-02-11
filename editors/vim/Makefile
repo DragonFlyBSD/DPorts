@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD: editors/vim/Makefile 339371 2014-01-10 16:59:28Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vim
 #		! _NEVER_ reduce or lower PATCHLEVEL, even if the PATCHLEVEL
@@ -10,9 +10,9 @@ PORTNAME=	vim
 #		! Doing so is dis-genuine.  It implies we're at a level we are
 #		! not.  The "PATCHLEVEL" patch needs to apply before bumping
 #		! PATCHLEVEL to that level.
-PATCHLEVEL=	110
+PATCHLEVEL=	169
 PORTVERSION=	7.4.${PATCHLEVEL}
-PORTREVISION?=	3
+PORTREVISION?=	0
 CATEGORIES?=	editors
 MASTER_SITES=	VIM
 DISTNAME=	${PORTNAME}-${PORTVERSION:R}
@@ -71,8 +71,8 @@ MLINKS+=	vim.1 gvim.1	vim.1 gview.1	vimdiff.1 gvimdiff.1 \
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-MANLANG+=	fr.ISO8859-1 fr.UTF-8 it it.ISO8859-1 it.UTF-8 ja pl.ISO8859-2 \
-		pl.UTF-8 ru.KOI8-R ru.UTF-8
+MANLANG+=	fr fr.ISO8859-1 fr.UTF-8 it it.ISO8859-1 it.UTF-8 ja pl \
+		pl.ISO8859-2 pl.UTF-8 ru.KOI8-R ru.UTF-8
 USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
