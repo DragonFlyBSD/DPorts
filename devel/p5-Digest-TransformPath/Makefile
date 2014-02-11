@@ -1,5 +1,5 @@
 # Created by: Cory R. King <coryking@mozimedia.com>
-# $FreeBSD: devel/p5-Digest-TransformPath/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	Digest-TransformPath
 PORTVERSION=	1.00
