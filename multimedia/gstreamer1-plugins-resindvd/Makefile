@@ -1,6 +1,6 @@
-# $FreeBSD: multimedia/gstreamer1-plugins-resindvd/Makefile 332416 2013-11-01 22:14:07Z kwm $
+# $FreeBSD$
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer resindvd plugin
