@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: devel/py-pycerberus/Makefile 333451 2013-11-10 22:30:30Z wg $
+# $FreeBSD$
 
 PORTNAME=	pycerberus
 PORTVERSION=	0.5
