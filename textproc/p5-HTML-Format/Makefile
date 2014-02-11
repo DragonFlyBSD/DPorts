@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: textproc/p5-HTML-Format/Makefile 332675 2013-11-04 09:40:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTML-Format
 PORTVERSION=	2.11
