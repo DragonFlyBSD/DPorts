@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: head/devel/p5-B-Hooks-EndOfScope/Makefile 340785 2014-01-23 03:27:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	B-Hooks-EndOfScope
 PORTVERSION=	0.13
