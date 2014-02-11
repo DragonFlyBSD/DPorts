@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: math/octave-forge-statistics/Makefile 341649 2014-01-28 19:50:49Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge-statistics
 PORTVERSION=	1.2.3
