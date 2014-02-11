@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: net/gstreamer-plugins-libmms/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/net/gstreamer-plugins-libmms/Makefile,v 1.3 2008/03/19 14:05:38 ahze Exp $
 
 PORTREVISION=	0
