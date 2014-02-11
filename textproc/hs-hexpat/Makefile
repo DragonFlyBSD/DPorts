@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/hs-hexpat/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	hexpat
 PORTVERSION=	0.20.3
