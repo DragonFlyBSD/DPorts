@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-SCGI/Makefile 341693 2014-01-29 07:59:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	SCGI
 PORTVERSION=	0.6
