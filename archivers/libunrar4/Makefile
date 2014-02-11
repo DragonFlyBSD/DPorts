@@ -1,5 +1,5 @@
 # Created by: Joris Vandalon
-# $FreeBSD: archivers/libunrar4/Makefile 337521 2013-12-26 14:36:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libunrar4
 PORTVERSION=	4.2.4
