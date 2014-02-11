@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: print/dvipdfmx/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dvipdfmx
 PORTVERSION=	20110311
