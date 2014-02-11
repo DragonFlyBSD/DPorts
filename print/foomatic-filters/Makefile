@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: print/foomatic-filters/Makefile 337730 2013-12-27 13:17:27Z bsam $
+# $FreeBSD$
 
 PORTNAME=	foomatic-filters
 PORTVERSION=	4.0.17
