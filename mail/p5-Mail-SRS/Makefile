@@ -1,5 +1,5 @@
 # Created by: snowchyld
-# $FreeBSD: mail/p5-Mail-SRS/Makefile 342153 2014-02-01 14:42:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Mail-SRS
 PORTVERSION=	0.31
