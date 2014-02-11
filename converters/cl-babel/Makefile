@@ -1,4 +1,4 @@
-# $FreeBSD: head/converters/cl-babel/Makefile 338556 2014-01-03 16:12:21Z adamw $
+# $FreeBSD$
 
 PORTNAME=	babel
 PORTVERSION=	2010.01.16
@@ -23,6 +23,8 @@ NO_BUILD=	yes
 USE_ASDF=	yes
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 do-install:
