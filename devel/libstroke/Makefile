@@ -1,5 +1,5 @@
 # Created by: Jerry A! <jerry@thehutt.org>
-# $FreeBSD: devel/libstroke/Makefile 329943 2013-10-09 23:59:14Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libstroke
 PORTVERSION=	0.5.1
