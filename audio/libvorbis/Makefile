@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: head/audio/libvorbis/Makefile 341604 2014-01-28 15:52:29Z naddy $
+# $FreeBSD$
 
 PORTNAME=	libvorbis
 PORTVERSION=	1.3.4
