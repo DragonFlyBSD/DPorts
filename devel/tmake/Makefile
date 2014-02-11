@@ -1,5 +1,5 @@
 # Created by: jesse@cs.uni-magdeburg.de
-# $FreeBSD: devel/tmake/Makefile 335348 2013-11-30 21:07:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tmake
 PORTVERSION=	1.13
