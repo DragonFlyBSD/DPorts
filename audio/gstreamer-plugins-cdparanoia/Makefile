@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: audio/gstreamer-plugins-cdparanoia/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/audio/gstreamer-plugins-cdparanoia/Makefile,v 1.8 2009/11/17 19:08:45 kwm Exp $
 
 PORTREVISION=	0
