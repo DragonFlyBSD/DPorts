@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: devel/p5-Net-DBus/Makefile 341953 2014-01-31 09:15:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-DBus
 PORTVERSION=	1.0.0
