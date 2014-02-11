@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/goprotobuf/Makefile 339441 2014-01-11 17:46:33Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	goprotobuf
 PORTVERSION=	20131010
