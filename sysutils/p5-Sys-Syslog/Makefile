@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/p5-Sys-Syslog/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Sys-Syslog
 PORTVERSION=	0.33
