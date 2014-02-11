@@ -1,5 +1,5 @@
 # Created by: Andrew Arensburger <arensb+freebsd-ports@ooblick.com>
-# $FreeBSD: palm/p5-Palm/Makefile 342153 2014-02-01 14:42:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	p5-Palm
 PORTVERSION=	1.3.0
