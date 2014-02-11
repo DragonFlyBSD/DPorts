@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-Rijndael/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Rijndael
 PORTVERSION=	1.11
