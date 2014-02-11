@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@FreeBSD.org>
-# $FreeBSD: head/net/openh323/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openh323
 PORTVERSION=	1.19.0.1
