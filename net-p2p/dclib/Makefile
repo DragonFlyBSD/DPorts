@@ -1,5 +1,5 @@
 # Created by: Sverrir Valgeirsson <e96sv@yahoo.se> and 
-# $FreeBSD: net-p2p/dclib/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dclib
 PORTVERSION=	0.3.23
