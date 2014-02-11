@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau
-# $FreeBSD: x11/xfce4-terminal/Makefile 337722 2013-12-27 12:25:08Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-terminal
 PORTVERSION=	0.6.3
