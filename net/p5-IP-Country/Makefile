@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: net/p5-IP-Country/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	IP-Country
 PORTVERSION=	2.28
@@ -16,13 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		ip2cc.1
-MAN3=		IP::Authority.3 \
-		IP::Country::Fast.3 \
-		IP::Country::MaxMind.3 \
-		IP::Country::Medium.3 \
-		IP::Country::Slow.3 \
-		IP::Country.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
