@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: graphics/p5-Graphics-GnuplotIF/Makefile 342148 2014-02-01 14:40:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Graphics-GnuplotIF
 PORTVERSION=	1.7
