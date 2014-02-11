@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: math/matio/Makefile 337461 2013-12-25 22:40:54Z tijl $
+# $FreeBSD$
 
 PORTNAME=	matio
 PORTVERSION=	1.3.4
