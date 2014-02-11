@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/libspectrum/Makefile 328447 2013-09-27 09:35:29Z rene $
+# $FreeBSD$
 
 PORTNAME=	libspectrum
 PORTVERSION=	1.1.1
