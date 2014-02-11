@@ -1,5 +1,5 @@
 # Created by: KIKUCHI Koichiro <koichiro@rworks.jp>
-# $FreeBSD: net-mgmt/wmi-client/Makefile 336434 2013-12-14 10:31:16Z mva $
+# $FreeBSD$
 
 PORTNAME=		wmi
 PORTVERSION=		1.3.16
