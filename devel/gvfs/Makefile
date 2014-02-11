@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/gvfs/Makefile 341783 2014-01-29 21:13:47Z kwm $
+# $FreeBSD$
 #   $MCom: ports/devel/gvfs/Makefile,v 1.85 2012/12/14 16:09:28 kwm Exp $
 
 PORTNAME=	gvfs
