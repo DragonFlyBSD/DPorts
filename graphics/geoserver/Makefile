@@ -1,5 +1,5 @@
 # Created by: Wen heping<wenheping@gmail.com>
-# $FreeBSD: graphics/geoserver/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	geoserver
 PORTVERSION=	2.1.1
