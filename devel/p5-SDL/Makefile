@@ -1,5 +1,5 @@
 # Created by: Klaus Goger <klaus.goger@reflex.at>
-# $FreeBSD: devel/p5-SDL/Makefile 333135 2013-11-07 16:37:01Z makc $
+# $FreeBSD$
 
 PORTNAME=	SDL
 PORTVERSION=	2.540
