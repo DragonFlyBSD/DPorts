@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Body/Makefile 336022 2013-12-09 19:30:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Body
 PORTVERSION=	1.19
