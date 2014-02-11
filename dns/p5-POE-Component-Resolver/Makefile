@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: dns/p5-POE-Component-Resolver/Makefile 342156 2014-02-01 14:42:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Resolver
 PORTVERSION=	0.921
