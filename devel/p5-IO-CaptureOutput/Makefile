@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/devel/p5-IO-CaptureOutput/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	IO-CaptureOutput
 PORTVERSION=	1.11.02
