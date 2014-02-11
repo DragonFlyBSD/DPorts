@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/p5-AnyEvent-I3/Makefile 327916 2013-09-23 06:05:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-I3
 PORTVERSION=	0.15
