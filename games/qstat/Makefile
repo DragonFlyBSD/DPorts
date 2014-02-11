@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: head/games/qstat/Makefile 331034 2013-10-20 16:24:04Z danfe $
+# $FreeBSD$
 
 PORTNAME=	qstat
 PORTVERSION=	2.11
