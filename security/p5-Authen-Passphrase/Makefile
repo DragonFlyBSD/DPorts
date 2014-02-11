@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD: security/p5-Authen-Passphrase/Makefile 342149 2014-02-01 14:41:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Authen-Passphrase
 PORTVERSION=	0.008
