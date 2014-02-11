@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Any-Moose/Makefile 341428 2014-01-27 16:41:25Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Any-Moose
 PORTVERSION=	0.21
