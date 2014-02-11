@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: multimedia/smpeg2/Makefile 334671 2013-11-23 14:14:16Z ak $
+# $FreeBSD$
 
 PORTNAME=	smpeg2
 PORTVERSION=	2.0.0
