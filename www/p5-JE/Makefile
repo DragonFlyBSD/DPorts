@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: www/p5-JE/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	JE
 PORTVERSION=	0.060
