@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Compiling/Makefile 332381 2013-11-01 14:23:18Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	B-Compiling
 PORTVERSION=	0.04
