@@ -1,4 +1,4 @@
-# $FreeBSD: www/hs-wai-app-static/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wai-app-static
 PORTVERSION=	1.3.1.2
