@@ -1,4 +1,4 @@
-# $FreeBSD: net/activemq/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	activemq
 PORTVERSION=	5.9.0
@@ -65,6 +65,9 @@ PLIST_SUB=	MQUSER="${MQUSER}" \
 		JETTYVERSION="${JETTYVERSION}" \
 		LVDBVERSION="${LVDBVERSION}" \
 		LVDBJNIVERSION="${LVDBJNIVERSION}"
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 do-install:

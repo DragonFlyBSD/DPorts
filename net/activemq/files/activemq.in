@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/activemq/files/activemq.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/activemq/files/activemq.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: activemq
