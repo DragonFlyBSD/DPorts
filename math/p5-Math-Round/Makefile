@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: head/math/p5-Math-Round/Makefile 342249 2014-02-02 08:11:05Z eadler $
+# $FreeBSD$
 
 PORTNAME=	Math-Round
 PORTVERSION=	0.06
