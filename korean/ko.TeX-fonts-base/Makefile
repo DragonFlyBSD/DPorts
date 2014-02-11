@@ -1,5 +1,5 @@
 # Created by: Hyogeol Lee <hyogeollee@gmail.com>
-# $FreeBSD: korean/ko.TeX-fonts-base/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ko.TeX-fonts-base
 PORTVERSION=	0.1.0.20070927
