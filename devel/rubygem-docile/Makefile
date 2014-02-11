@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-docile/Makefile 333526 2013-11-11 17:26:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	docile
 PORTVERSION=	1.1.0
