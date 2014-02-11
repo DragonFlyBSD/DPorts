@@ -1,4 +1,4 @@
-# $FreeBSD: astro/libkgeomap/Makefile 338834 2014-01-05 23:37:25Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libkgeomap
 PORTVERSION=	${DIGIKAM_VER}
