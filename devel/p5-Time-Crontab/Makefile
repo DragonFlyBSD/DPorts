@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Time-Crontab/Makefile 339507 2014-01-12 14:45:20Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Time-Crontab
 PORTVERSION=	0.02
