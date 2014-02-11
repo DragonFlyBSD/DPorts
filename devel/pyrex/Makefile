@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: head/devel/pyrex/Makefile 340591 2014-01-21 10:33:24Z mva $
+# $FreeBSD$
 
 PORTNAME=	pyrex
 PORTVERSION=	0.9.9
