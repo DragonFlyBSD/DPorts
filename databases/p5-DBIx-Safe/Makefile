@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Safe/Makefile 328822 2013-09-30 15:49:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Safe
 PORTVERSION=	1.2.5
