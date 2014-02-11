@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: math/p5-Bit-Vector-Minimal/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Bit-Vector-Minimal
 PORTVERSION=	1.3
