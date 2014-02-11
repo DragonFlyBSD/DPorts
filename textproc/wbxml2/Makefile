@@ -1,5 +1,5 @@
 # Created by: Clemens Zauner <czauner+ports@onlineloop.com>
-# $FreeBSD: textproc/wbxml2/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wbxml2
 PORTVERSION=	0.10.9
