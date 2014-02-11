@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: textproc/yodl/Makefile 335078 2013-11-28 07:15:22Z pgj $
+# $FreeBSD$
 
 PORTNAME=	yodl
 PORTVERSION=	3.03.0
@@ -26,6 +26,8 @@ PORTDOCS=	*
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
