@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: head/multimedia/ogmtools/Makefile 342392 2014-02-03 08:15:19Z martymac $
+# $FreeBSD$
 
 PORTNAME=	ogmtools
 PORTVERSION=	1.5
