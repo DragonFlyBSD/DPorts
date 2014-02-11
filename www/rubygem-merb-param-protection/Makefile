@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: www/rubygem-merb-param-protection/Makefile 332056 2013-10-30 03:03:35Z swills $
+# $FreeBSD$
 
 PORTNAME=	merb-param-protection
 PORTVERSION=	1.1.3
