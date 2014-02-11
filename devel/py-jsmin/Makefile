@@ -1,5 +1,5 @@
 # Created by: Po-Chien Lin <linpc@cs.nctu.edu.tw>
-# $FreeBSD: devel/py-jsmin/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jsmin
 PORTVERSION=	2.0.2
@@ -19,6 +19,9 @@ PORTDOCS=	PKG-INFO
 PLIST_FILES=	%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
