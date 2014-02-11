@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: print/cups-base/files/cupsd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/print/cups-base/files/cupsd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: cupsd
 # REQUIRE: DAEMON
