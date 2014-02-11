@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: math/ocaml-ocamlgraph/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ocamlgraph
 PORTVERSION=	1.8.3
