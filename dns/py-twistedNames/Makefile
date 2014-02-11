@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: head/dns/py-twistedNames/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	twistedNames
 PORTVERSION=	13.2.0
