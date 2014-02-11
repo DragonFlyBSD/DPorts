@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-MooseX-Storage/Makefile 337445 2013-12-25 19:39:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Storage
 PORTVERSION=	0.45
