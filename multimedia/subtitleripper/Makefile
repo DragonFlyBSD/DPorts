@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/subtitleripper/Makefile 330900 2013-10-19 16:18:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	subtitleripper
 DISTVERSION=	0.3-4
