@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-DBICx-TestDatabase/Makefile 334733 2013-11-24 15:20:32Z az $
+# $FreeBSD$
 
 PORTNAME=	DBICx-TestDatabase
 PORTVERSION=	0.05
