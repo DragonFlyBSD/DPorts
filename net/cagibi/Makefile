@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD: net/cagibi/Makefile 333449 2013-11-10 21:15:09Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	cagibi
 PORTVERSION=	0.2.0
