@@ -1,5 +1,5 @@
 # Created by: Hiroto Kagotani <hiroto.kagotani@gmail.com>
-# $FreeBSD: graphics/O2-tools/Makefile 342183 2014-02-01 16:21:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	O2-tools
 PORTVERSION=	2.00
