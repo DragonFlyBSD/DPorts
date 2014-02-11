@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/yaz++/Makefile 333836 2013-11-15 10:12:49Z demon $
+# $FreeBSD$
 
 PORTNAME=	yaz++
 PORTVERSION=	1.5.2
