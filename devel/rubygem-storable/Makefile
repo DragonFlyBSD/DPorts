@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/rubygem-storable/Makefile 335228 2013-11-29 21:31:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	storable
 PORTVERSION=	0.8.9
