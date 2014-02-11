@@ -1,5 +1,5 @@
 # Created by: Brian Minard <bminard@flatfoot.ca>
-# $FreeBSD: head/devel/p5-Test-Warn/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-Warn
 PORTVERSION=	0.24
