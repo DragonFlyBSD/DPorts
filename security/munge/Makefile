@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: security/munge/Makefile 333900 2013-11-15 17:55:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	munge
 PORTVERSION=	0.5.11
