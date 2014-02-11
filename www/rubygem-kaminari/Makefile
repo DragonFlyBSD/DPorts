@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-kaminari/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	kaminari
 PORTVERSION=	0.14.1
