@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Set-NestedGroups/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Set-NestedGroups
 PORTVERSION=	0.01
