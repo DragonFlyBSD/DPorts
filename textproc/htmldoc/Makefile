@@ -1,5 +1,5 @@
 # Created by: Glenn Trewitt <glenn@trewitt.org>
-# $FreeBSD: textproc/htmldoc/Makefile 341774 2014-01-29 20:18:52Z mandree $
+# $FreeBSD$
 
 PORTNAME=	htmldoc
 PORTVERSION=	1.8.28
