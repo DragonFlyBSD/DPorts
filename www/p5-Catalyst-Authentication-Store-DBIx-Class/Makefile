@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Authentication-Store-DBIx-Class/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Authentication-Store-DBIx-Class
 PORTVERSION=	0.1505
