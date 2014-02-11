@@ -1,5 +1,5 @@
 # Created by: nectar@FreeBSD.org
-# $FreeBSD: x11-toolkits/py-wxPython28/Makefile 338620 2014-01-04 01:16:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wxPython
 PORTVERSION=	2.8.12.1
