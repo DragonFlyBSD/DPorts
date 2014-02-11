@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: german/kde4-l10n/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
