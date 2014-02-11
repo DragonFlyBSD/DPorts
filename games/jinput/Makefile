@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: games/jinput/Makefile 334040 2013-11-17 00:28:16Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jinput
 DISTVERSION=	20110801.r247
