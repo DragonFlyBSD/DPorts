@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/py-bcrypt/Makefile 339748 2014-01-15 04:18:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bcrypt
 PORTVERSION=	0.4
