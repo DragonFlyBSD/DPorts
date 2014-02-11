@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: net/tcpwatch/Makefile 341930 2014-01-31 07:52:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tcpwatch
 PORTVERSION=	1.3
