@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/vte3/Makefile 335873 2013-12-08 09:55:41Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 18941 2013-12-08 01:18:10Z kwm $
 
 PORTNAME?=	vte
