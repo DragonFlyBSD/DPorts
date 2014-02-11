@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/p5-CatalystX-InjectComponent/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	CatalystX-InjectComponent
 PORTVERSION=	0.025
