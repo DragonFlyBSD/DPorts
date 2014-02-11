@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/py-django-classy-tags/Makefile 341750 2014-01-29 15:27:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-classy-tags
 PORTVERSION=	0.4
