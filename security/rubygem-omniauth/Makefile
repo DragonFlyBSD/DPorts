@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/rubygem-omniauth/Makefile 332049 2013-10-30 02:56:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	omniauth
 PORTVERSION=	1.1.4
