@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: sysutils/p5-File-Stat-ModeString/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD$
 
 PORTNAME=	File-Stat-ModeString
 PORTVERSION=	1.00
