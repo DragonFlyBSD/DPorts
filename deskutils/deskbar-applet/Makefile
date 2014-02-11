@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/deskbar-applet/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 #   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.116 2010/09/27 19:36:13 kwm Exp $
 
 PORTNAME=	deskbar-applet
