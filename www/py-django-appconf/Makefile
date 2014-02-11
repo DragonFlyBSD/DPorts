@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-django-appconf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	django-appconf
 PORTVERSION=	0.6
