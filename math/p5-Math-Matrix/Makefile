@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Matrix/Makefile 329087 2013-10-02 17:50:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Math-Matrix
 PORTVERSION=	0.8
