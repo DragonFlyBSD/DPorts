@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@dante.org.uk
-# $FreeBSD: head/net/p5-IO-Socket-Multicast/Makefile 343452 2014-02-09 10:46:23Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	IO-Socket-Multicast
 PORTVERSION=	1.12
