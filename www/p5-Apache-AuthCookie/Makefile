@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-Apache-AuthCookie/Makefile 336321 2013-12-13 07:28:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Apache-AuthCookie
 PORTVERSION=	3.20
