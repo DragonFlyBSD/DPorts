@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: devel/p5-Test-Deep/Makefile 335387 2013-12-01 15:02:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Deep
 PORTVERSION=	0.112
