@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-HTML-Quoted/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Quoted
 PORTVERSION=	0.04
