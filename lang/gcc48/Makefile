@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: head/lang/gcc48/Makefile 341744 2014-01-29 14:54:52Z danfe $
+# $FreeBSD$
 
 PORTNAME=	gcc48
 PORTVERSION=	4.8.3.s20140116
