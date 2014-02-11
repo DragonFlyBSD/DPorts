@@ -1,5 +1,5 @@
 # Created by: Wei-chun Chao
-# $FreeBSD: misc/p5-File-CounterFile/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	File-CounterFile
 PORTVERSION=	1.04
