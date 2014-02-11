@@ -1,5 +1,5 @@
 # Created by: samm@os2.kiev.ua
-# $FreeBSD: archivers/libunrar/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libunrar
 PORTVERSION=	3.9.10
