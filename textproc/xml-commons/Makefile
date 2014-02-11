@@ -1,5 +1,5 @@
 # Created by: rfarmer@predatorlabs.net
-# $FreeBSD: textproc/xml-commons/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xml-commons
 PORTVERSION=	1.4.01
