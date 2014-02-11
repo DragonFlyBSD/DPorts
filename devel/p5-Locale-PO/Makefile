@@ -1,5 +1,5 @@
 # Created by: tabthorpe
-# $FreeBSD: devel/p5-Locale-PO/Makefile 332804 2013-11-05 03:57:35Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	Locale-PO
 PORTVERSION=	0.23
