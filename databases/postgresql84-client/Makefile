@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: head/databases/postgresql84-client/Makefile 330414 2013-10-15 17:17:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	postgresql
 PORTREVISION=	0
