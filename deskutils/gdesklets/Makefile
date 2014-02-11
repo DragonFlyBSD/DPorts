@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gdesklets
 PORTVERSION=	0.36.2
