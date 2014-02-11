@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/gutenprint-ijs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/print/gutenprint-ijs/Makefile,v 1.1 2007/03/30 16:42:47 ahze Exp $
 
 PORTEPOCH=	0
