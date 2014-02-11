@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: head/lang/python/Makefile 340997 2014-01-25 09:15:12Z mva $
+# $FreeBSD$
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_DEFAULT}
