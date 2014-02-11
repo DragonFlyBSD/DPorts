@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Template-Plugin-Clickable-Email/Makefile 341690 2014-01-29 07:58:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-Clickable-Email
 PORTVERSION=	0.01
