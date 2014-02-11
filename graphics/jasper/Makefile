@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/graphics/jasper/Makefile 336227 2013-12-11 21:54:33Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	jasper
 PORTVERSION=	1.900.1
