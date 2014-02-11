@@ -1,5 +1,5 @@
 # Created by: coryking
-# $FreeBSD: www/p5-HTML-Location/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-Location
 PORTVERSION=	1.03
