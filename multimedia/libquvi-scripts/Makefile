@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: multimedia/libquvi-scripts/Makefile 335406 2013-12-01 17:39:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libquvi-scripts
 PORTVERSION=	0.4.21
