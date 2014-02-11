@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.StandardCacheManagers/Makefile 341162 2014-01-26 12:01:03Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.StandardCacheManagers
 PORTVERSION=	2.13.0
