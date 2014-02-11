@@ -1,4 +1,4 @@
-# $FreeBSD: devel/sdl20/Makefile 334079 2013-11-17 12:33:49Z mva $
+# $FreeBSD$
 
 PORTNAME=	sdl2
 PORTVERSION=	2.0.1
