@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/p5-Gnome2/Makefile 336212 2013-12-11 19:42:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gnome2
 PORTVERSION=	1.045
