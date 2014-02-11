@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libwnck/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.133 2010/11/17 11:38:29 kwm Exp $
 
 PORTNAME=	libwnck
