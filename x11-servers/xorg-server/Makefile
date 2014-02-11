@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: x11-servers/xorg-server/Makefile 338091 2013-12-30 11:41:18Z bsam $
+# $FreeBSD$
 
 PORTNAME?=	xorg-server
 PORTVERSION=	${XORG_VERSION}
