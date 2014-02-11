@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Inherited/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Inherited
 PORTVERSION=	1.100860
