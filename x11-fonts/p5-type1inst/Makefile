@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: head/x11-fonts/p5-type1inst/Makefile 343202 2014-02-07 09:02:45Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	type1inst
 PORTVERSION=	0.6.1
