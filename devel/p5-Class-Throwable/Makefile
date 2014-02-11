@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Class-Throwable/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-Throwable
 PORTVERSION=	0.11
