@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: misc/rubygem-rabbit/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rabbit
 PORTVERSION=	2.1.1
