@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: textproc/py-sphinx/Makefile 341497 2014-01-28 03:07:11Z lwhsu $
+# $FreeBSD$
 
 PORTNAME=	sphinx
 PORTVERSION=	1.2.1
