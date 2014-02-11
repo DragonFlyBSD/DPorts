@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/evas-engine-opengl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	engine-opengl
 PORTVERSION=	1.7.9
