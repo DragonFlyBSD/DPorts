@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: graphics/edje/Makefile 341823 2014-01-30 09:24:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	edje
 PORTVERSION=	1.7.9
