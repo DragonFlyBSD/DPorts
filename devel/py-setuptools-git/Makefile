@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: devel/py-setuptools-git/Makefile 341859 2014-01-30 16:37:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	setuptools-git
 PORTVERSION=	1.0
