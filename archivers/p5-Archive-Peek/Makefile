@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Peek/Makefile 338681 2014-01-04 22:54:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Archive-Peek
 PORTVERSION=	0.35
