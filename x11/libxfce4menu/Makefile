@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: x11/libxfce4menu/Makefile 330345 2013-10-14 19:42:26Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	libxfce4menu
 PORTVERSION=	4.10.0
