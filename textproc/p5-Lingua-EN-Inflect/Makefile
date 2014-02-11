@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: head/textproc/p5-Lingua-EN-Inflect/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Lingua-EN-Inflect
 PORTVERSION=	1.89.3
