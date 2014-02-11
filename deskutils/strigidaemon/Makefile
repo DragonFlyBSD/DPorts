@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/strigidaemon/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	strigidaemon
 PORTVERSION=	${STRIGI_VERSION}
