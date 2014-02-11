@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/v4l_compat/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	v4l_compat
 PORTVERSION=	1.0.${DUMMYDATE}
