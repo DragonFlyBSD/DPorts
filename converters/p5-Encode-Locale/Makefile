@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: head/converters/p5-Encode-Locale/Makefile 328918 2013-10-01 05:53:16Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Encode-Locale
 PORTVERSION=	1.03
