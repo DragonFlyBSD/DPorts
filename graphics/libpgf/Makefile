@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libpgf/Makefile 330872 2013-10-19 14:15:46Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libpgf
 PORTVERSION=	6.12.24
