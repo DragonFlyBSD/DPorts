@@ -1,5 +1,5 @@
 # Created by: ws	Christoph Kick
-# $FreeBSD: devel/rubygem-nice-ffi/Makefile 332039 2013-10-30 02:39:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	nice-ffi
 PORTVERSION=	0.4
