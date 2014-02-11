@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: security/apache-xml-security-c/Makefile 341999 2014-01-31 14:57:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xml-security-c
 PORTVERSION=	1.7.2
