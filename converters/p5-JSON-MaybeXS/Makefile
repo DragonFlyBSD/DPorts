@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-MaybeXS/Makefile 336193 2013-12-11 18:49:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JSON-MaybeXS
 PORTVERSION=	1.001000
