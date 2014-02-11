@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-MIME-Encodings/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-MIME-Encodings
 PORTVERSION=	1.315
