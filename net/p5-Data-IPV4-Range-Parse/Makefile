@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Data-IPV4-Range-Parse/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-IPV4-Range-Parse
 PORTVERSION=	1.05
