@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: mail/p5-Email-Address-List/Makefile 341448 2014-01-27 20:48:12Z matthew $
+# $FreeBSD$
 
 PORTNAME=	Email-Address-List
 PORTVERSION=	0.03
