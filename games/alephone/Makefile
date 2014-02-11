@@ -1,8 +1,9 @@
 # Created by: Michael Alyn Miller <malyn@strangeGizmo.com>
-# $FreeBSD: games/alephone/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	alephone
 PORTVERSION=	20120514
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/marathon/Aleph%20One/2012-05-14
 DISTNAME=	AlephOne-${PORTVERSION}
