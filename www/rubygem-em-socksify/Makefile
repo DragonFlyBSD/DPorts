@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-em-socksify/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	em-socksify
 PORTVERSION=	0.3.0
