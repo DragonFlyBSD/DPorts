@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-LoadableClass/Makefile 341831 2014-01-30 10:44:44Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-LoadableClass
 PORTVERSION=	0.012
