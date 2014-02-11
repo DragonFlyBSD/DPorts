@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Devel-PartialDump/Makefile 335429 2013-12-01 18:43:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Devel-PartialDump
 PORTVERSION=	0.17
