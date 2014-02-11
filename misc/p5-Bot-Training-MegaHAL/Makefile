@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: misc/p5-Bot-Training-MegaHAL/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	Bot-Training-MegaHAL
 PORTVERSION=	0.02
