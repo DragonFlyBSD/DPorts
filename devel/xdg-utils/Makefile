@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/xdg-utils/Makefile 328188 2013-09-24 18:37:18Z kwm $
+# $FreeBSD$
 #    $MCom: ports/trunk/devel/xdg-utils/Makefile 18656 2013-08-22 09:09:28Z kwm $
 
 PORTNAME=	xdg-utils
