@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/webpy/Makefile 341557 2014-01-28 13:35:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	webpy
 PORTVERSION=	0.37
