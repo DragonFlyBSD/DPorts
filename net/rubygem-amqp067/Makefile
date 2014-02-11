@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-amqp067/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD$
 
 PORTNAME=	amqp
 PORTVERSION=	0.6.7
