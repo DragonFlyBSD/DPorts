@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann
-# $FreeBSD: devel/libwfut/Makefile 341344 2014-01-27 08:54:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libwfut
 PORTVERSION=	0.2.2
