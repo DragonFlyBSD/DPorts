@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@FreeBSD.org>
-# $FreeBSD: math/clasp/Makefile 339352 2014-01-10 13:33:13Z vsevolod $
+# $FreeBSD$
 
 PORTNAME=	clasp
 PORTVERSION=	2.1.4
