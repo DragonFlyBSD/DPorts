@@ -1,5 +1,5 @@
 # Created by: Aaron Hurt <ahurt@anbcs.com>
-# $FreeBSD: devel/protobuf-c/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	protobuf-c
 PORTVERSION=	0.15
@@ -10,26 +10,19 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MAINTAINER=	ahurt@anbcs.com
 COMMENT=	This package provides a code generator and runtime libraries to use Protocol Buffers from pure C (not C++)
 
-LIB_DEPENDS=	protobuf:${PORTSDIR}/devel/protobuf
+LIB_DEPENDS=	libprotobuf.so:${PORTSDIR}/devel/protobuf
 
-USES=		gmake pathfix pkgconfig
+USES=		gmake pathfix pkgconfig libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|GREP "\\-L"|GREP "bin/ld"|g' ${WRKSRC}/configure
 
 tests: build
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} check)
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "powerpc" && ${OSVERSION} > 900000
-BROKEN=		Does not build on powerpc-9
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
