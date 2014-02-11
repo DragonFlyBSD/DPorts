@@ -1,5 +1,5 @@
 # Created by: Jeff Putsch <jdputsch@comcast.net>
-# $FreeBSD: textproc/p5-POE-Filter-XML/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	POE-Filter-XML
 PORTVERSION=	1.102960
