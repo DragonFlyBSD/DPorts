@@ -1,8 +1,8 @@
 # Created by: Andrew Greenwood <greenwood.andy@gmail.com>
-# $FreeBSD: dns/p5-Net-DNSBL-MultiDaemon/Makefile 337452 2013-12-25 20:16:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-DNSBL-MultiDaemon
-PORTVERSION=	0.37
+PORTVERSION=	0.38
 CATEGORIES=	dns mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
