@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/font-mplus-ipa/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mplus-ipa
 PORTVERSION=	1.0.20060520.p1
