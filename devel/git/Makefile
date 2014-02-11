@@ -1,5 +1,5 @@
 # Created by: Eric Anholt
-# $FreeBSD: devel/git/Makefile 337936 2013-12-29 05:21:58Z wxs $
+# $FreeBSD$
 
 PORTNAME=	git
 PORTVERSION=	1.8.5.2
