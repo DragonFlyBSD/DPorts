@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xkeyboard-config/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xkeyboard-config
 PORTVERSION=	2.10.1
