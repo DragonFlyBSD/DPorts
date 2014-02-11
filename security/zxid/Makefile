@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: security/zxid/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zxid
 PORTVERSION=	1.05
@@ -28,6 +28,9 @@ ZXID_BINS=	smime zxcall zxcot zxdecode zxencdectest zxid zxidhlo \
 		zxidwsctool zxlogview zxpasswd
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
