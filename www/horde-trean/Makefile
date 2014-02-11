@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-trean/Makefile 341402 2014-01-27 13:30:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	trean
 PORTVERSION=	1.0.3
