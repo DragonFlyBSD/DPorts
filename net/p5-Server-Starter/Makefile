@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Server-Starter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Server-Starter
 PORTVERSION=	0.17
