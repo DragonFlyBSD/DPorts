@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Random/Makefile 340797 2014-01-23 03:28:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-Random
 PORTVERSION=	0.11
