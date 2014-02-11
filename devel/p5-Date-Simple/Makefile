@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: head/devel/p5-Date-Simple/Makefile 341630 2014-01-28 16:47:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=		Date-Simple
 PORTVERSION=		3.03
