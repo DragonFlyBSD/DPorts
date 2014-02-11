@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/R-cran-mvtnorm/Makefile 342143 2014-02-01 14:23:20Z antoine $
+# $FreeBSD$
 
 PORTNAME=	mvtnorm
 PORTVERSION=	0.9.96
