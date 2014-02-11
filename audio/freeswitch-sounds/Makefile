@@ -1,5 +1,5 @@
 # Created by: Eric F Crist <ecrist@secure-computing.net>
-# $FreeBSD: audio/freeswitch-sounds/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	freeswitch
 DISTVERSION=	1.0.24
