@@ -1,5 +1,5 @@
 # Created by: Lawrence Stewart <lstewart@FreeBSD.org>
-# $FreeBSD: devel/py-Products.LDAPUserFolder/Makefile 341082 2014-01-25 19:43:35Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.LDAPUserFolder
 PORTVERSION=	2.26
