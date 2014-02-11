@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: sysutils/pstree/Makefile 328337 2013-09-26 06:51:21Z jgh $
+# $FreeBSD$
 
 PORTNAME=	pstree
 PORTVERSION=	2.36
