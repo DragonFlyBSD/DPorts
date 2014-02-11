@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnatdroid-binutils/Makefile 340397 2014-01-20 14:18:07Z marino $
+# $FreeBSD$
 
 PORTNAME=		binutils
 PORTVERSION=		2.24
