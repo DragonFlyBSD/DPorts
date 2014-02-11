@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/evas_generic_loaders-raw/Makefile 341289 2014-01-26 21:20:03Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	raw
 PORTVERSION=	1.7.9
