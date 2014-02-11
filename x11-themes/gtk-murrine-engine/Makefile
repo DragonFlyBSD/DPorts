@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/gtk-murrine-engine/Makefile 341347 2014-01-27 09:04:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	murrine
 PORTVERSION=	0.98.2
