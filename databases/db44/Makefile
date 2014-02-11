@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: databases/db44/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	db44
 PORTVERSION=	4.4.20.4
