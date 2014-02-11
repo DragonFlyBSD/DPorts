@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/libkipiplugins/Makefile 340628 2014-01-21 18:17:23Z makc $
+# $FreeBSD$
 
 PORTNAME=	libkipiplugins
 PORTVERSION=	${DIGIKAM_VER}
