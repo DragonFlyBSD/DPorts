@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: devel/p5-Debug-Client/Makefile 342154 2014-02-01 14:42:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Debug-Client
 PORTVERSION=	0.24
