@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/gdesklets-clock/Makefile 335893 2013-12-08 13:36:11Z mva $
+# $FreeBSD$
 
 PORTNAME=	clock
 PORTVERSION=	0.32
