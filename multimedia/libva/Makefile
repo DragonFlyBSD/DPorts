@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libva/Makefile 328671 2013-09-29 10:54:39Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libva
 PORTVERSION=	1.2.1
