@@ -1,5 +1,5 @@
 # Created by: Vadim Belman <vab@lflat.vas.mobilix.dk>
-# $FreeBSD: net/p5-Net-SSH/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-SSH
 PORTVERSION=	0.09
