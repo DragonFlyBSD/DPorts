@@ -1,5 +1,5 @@
 # Created by: Joep Grooten <joep@di.nl>
-# $FreeBSD: devel/doxygen/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	doxygen
 PORTVERSION=	1.8.3.1
@@ -41,7 +41,6 @@ QT4_DESC=	Install Doxywizard GUI
 HTMLDOCS_DESC=	Install documentation in HTML format
 PDFDOCS_DESC=	Install documentation in PDF format
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTMLDOCS}
@@ -114,14 +113,14 @@ pre-install:
 .endif # HTMLDOCS
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/doxygen ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/doxygen ${STAGEDIR}${PREFIX}/bin/
 .if ${PORT_OPTIONS:MQT4}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/doxywizard ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/doxywizard ${STAGEDIR}${PREFIX}/bin/
 .endif # QT4
 .if ${PORT_OPTIONS:MHTMLDOCS}
-	${MKDIR} ${PREFIX}/share/doc/doxygen
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/doxygen
 	${TAR} -C ${TMPDOCDEST} -cf - doxygen \
-		| ${TAR} -C ${PREFIX}/share/doc --unlink -xf -
+		| ${TAR} -C ${STAGEDIR}${PREFIX}/share/doc --unlink -xf -
 .endif # HTMLDOCS
 
 .include <bsd.port.mk>
