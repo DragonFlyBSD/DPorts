@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Ioctl/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Ioctl
 PORTVERSION=	0.81
