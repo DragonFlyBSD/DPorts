@@ -1,5 +1,5 @@
 # Created by: Pierre David <pdagog@gmail.com>, Jean Benoit <jean@unistra.fr>
-# $FreeBSD: head/net-mgmt/netmagis-common/Makefile 340022 2014-01-17 10:04:47Z gahr $
+# $FreeBSD$
 
 PORTNAME?=	netmagis
 DISTVERSION?=	2.2.0
