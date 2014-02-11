@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-MooseX-Declare/Makefile 338212 2013-12-31 01:22:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Declare
 PORTVERSION=	0.38
