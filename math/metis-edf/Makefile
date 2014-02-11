@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/metis-edf/Makefile 334607 2013-11-22 19:24:37Z bf $
+# $FreeBSD$
 
 PORTNAME=	metis-edf
 DISTVERSION=	4.1-2
