@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/swftools/Makefile 339013 2014-01-07 17:42:09Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	swftools
 PORTVERSION=	0.9.2
