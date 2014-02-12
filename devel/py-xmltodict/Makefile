@@ -1,8 +1,8 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-xmltodict/Makefile 332131 2013-10-30 15:40:20Z wg $
+# $FreeBSD$
 
 PORTNAME=	xmltodict
-PORTVERSION=	0.8.3
+PORTVERSION=	0.8.5
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,5 +15,8 @@ LICENSE=	MIT
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
+
+regression-test: build
+	@cd ${WRKSRC} && nosetests
 
 .include <bsd.port.mk>
