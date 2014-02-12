@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kkennawa@physics.adelaide.edu.au>
-# $FreeBSD: astro/wmmoonclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmMoonClock
 PORTVERSION=	1.27
