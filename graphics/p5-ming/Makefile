@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/p5-ming/Makefile 334071 2013-11-17 10:32:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ming
 PORTREVISION=	0
