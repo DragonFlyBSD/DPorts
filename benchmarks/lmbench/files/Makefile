@@ -1,5 +1,5 @@
 # A Makefile for the installed lmbench
-# $FreeBSD: benchmarks/lmbench/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #
 OS != scripts/os
 BINDIR = bin/${OS}
