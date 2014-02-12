@@ -1,5 +1,5 @@
 # Created by: Dan Rowe <bsdports@csnstores.com>
-# $FreeBSD: graphics/pecl-gmagick/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gmagick
 PORTVERSION=	1.0.8b1
