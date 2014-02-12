@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD: www/chimera/Makefile 341705 2014-01-29 09:17:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	chimera
 PORTVERSION=	1.70p0
