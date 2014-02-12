@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: mail/xfce4-mailwatch-plugin/Makefile 331522 2013-10-24 19:40:41Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-mailwatch-plugin
 PORTVERSION=	1.2.0
