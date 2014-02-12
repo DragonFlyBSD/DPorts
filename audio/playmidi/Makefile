@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: audio/playmidi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	playmidi
 PORTVERSION=	2.5
