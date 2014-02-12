@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-ToolBar/Makefile 336308 2013-12-13 01:41:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Tk-ToolBar
 PORTVERSION=	0.10
