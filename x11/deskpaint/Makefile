@@ -1,5 +1,5 @@
 # Created by: Kirn Gill <segin2005@gmail.com>
-# $FreeBSD: x11/deskpaint/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	deskpaint
 PORTVERSION=	3.1
