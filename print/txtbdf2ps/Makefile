@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/txtbdf2ps/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	txtbdf2ps
 PORTVERSION=	0.7.1
