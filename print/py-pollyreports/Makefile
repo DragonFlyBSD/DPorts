@@ -1,5 +1,5 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: print/py-pollyreports/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	PollyReports
 PORTVERSION=	1.7.6
