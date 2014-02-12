@@ -1,5 +1,5 @@
 # Created by: UMENO Takashi
-# $FreeBSD: games/gbottler/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gbottler
 PORTVERSION=	0.1.7
