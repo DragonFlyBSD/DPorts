@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: www/p5-CGI-EncryptForm/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-EncryptForm
 PORTVERSION=	1.02
