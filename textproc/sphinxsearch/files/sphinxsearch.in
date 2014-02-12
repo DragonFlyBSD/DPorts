@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/sphinxsearch/files/sphinxsearch.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/textproc/sphinxsearch/files/sphinxsearch.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: %%PORTNAME%%
 # REQUIRE: LOGIN

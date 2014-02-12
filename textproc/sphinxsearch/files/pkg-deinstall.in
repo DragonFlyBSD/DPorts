@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/sphinxsearch/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/textproc/sphinxsearch/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 sphinx_usr=%%SPHINX_USR%%
