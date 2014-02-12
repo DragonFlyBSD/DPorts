@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-im/libyahoo2/Makefile 341974 2014-01-31 10:17:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libyahoo2
 PORTVERSION=	1.0.1
