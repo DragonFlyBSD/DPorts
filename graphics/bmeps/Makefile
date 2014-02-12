@@ -1,5 +1,5 @@
 # Created by: Hideyuki KURASHINA <rushani@FreeBSD.org>
-# $FreeBSD: graphics/bmeps/Makefile 340637 2014-01-21 19:12:40Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bmeps
 PORTVERSION=	2.2.26
