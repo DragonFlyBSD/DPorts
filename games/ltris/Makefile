@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/ltris/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ltris
 PORTVERSION=	1.0.19
@@ -16,6 +16,8 @@ USES=		gmake
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--localstatedir=${DATADIR}
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
