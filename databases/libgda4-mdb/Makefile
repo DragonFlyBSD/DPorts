@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda4-mdb/Makefile 333427 2013-11-10 19:18:42Z wg $
+# $FreeBSD$
 #   $MCom: ports/databases/libgda4-mdb/Makefile,v 1.5 2012/03/13 01:34:31 mezz Exp $
 
 PORTREVISION=	1
