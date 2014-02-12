@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/mergelog/Makefile 341723 2014-01-29 12:22:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mergelog
 PORTVERSION=	4.5
