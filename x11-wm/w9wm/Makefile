@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: x11-wm/w9wm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	w9wm
 PORTVERSION=	0.4.2
@@ -15,10 +15,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}.orig
 USES=		imake
 USE_XORG=	x11 xext
 
-MAN1=		w9wm.1
-PLIST_FILES=	bin/w9wm
+PLIST_FILES=	bin/w9wm \
+		man/man1/w9wm.1.gz
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '/malloc\.h/d' ${WRKSRC}/client.c
 
