@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/gtkballs/Makefile 342214 2014-02-01 22:12:52Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gtkballs
 PORTVERSION=	3.1.5
