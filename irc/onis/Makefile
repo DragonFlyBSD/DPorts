@@ -1,5 +1,5 @@
 # Created by: koji@jet.es
-# $FreeBSD: irc/onis/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	onis
 PORTVERSION=	0.8.2
