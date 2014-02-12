@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/fetchyahoo/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fetchyahoo
 PORTVERSION=	2.14.8
@@ -8,6 +8,9 @@ MASTER_SITES=	http://fetchyahoo.twizzler.org/
 
 MAINTAINER=	chalpin@cs.wisc.edu
 COMMENT=	Download e-mail from a Yahoo account to a Berkeley mailbox
+
+DEPRECATED=	Yahoo classic mail interface is discontinued, so this port is permanently broken
+EXPIRATION_DATE=	2014-03-09
 
 RUN_DEPENDS=	\
 	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \
