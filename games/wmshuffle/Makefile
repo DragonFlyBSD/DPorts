@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/wmshuffle/Makefile 333617 2013-11-12 20:36:40Z danilo $
+# $FreeBSD$
 
 PORTNAME=	wmshuffle
 PORTVERSION=	0.6
