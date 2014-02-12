@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: lang/slisp/Makefile 342322 2014-02-02 16:02:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	slisp
 PORTVERSION=	1.2
