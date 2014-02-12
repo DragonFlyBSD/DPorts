@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/p5-PerlIO-via-Unidecode/Makefile 328919 2013-10-01 05:53:26Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	PerlIO-via-Unidecode
 PORTVERSION=	1.01
