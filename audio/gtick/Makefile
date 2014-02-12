@@ -1,5 +1,5 @@
 # Created by: Liam J. Foy <liamfoy@sepulcrum.org>
-# $FreeBSD: audio/gtick/Makefile 333127 2013-11-07 15:55:18Z martymac $
+# $FreeBSD$
 
 PORTNAME=	gtick
 PORTVERSION=	0.5.2
