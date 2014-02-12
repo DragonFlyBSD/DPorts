@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: mail/p5-Mail-OpenRelay-Simple/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD$
 
 PORTNAME=	Mail-OpenRelay-Simple
 PORTVERSION=	0.02
