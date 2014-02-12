@@ -1,4 +1,4 @@
-# $FreeBSD: net/hs-network-multicast/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	network-multicast
 PORTVERSION=	0.0.7
