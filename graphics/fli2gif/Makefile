@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: graphics/fli2gif/Makefile 328303 2013-09-25 18:08:38Z ak $
+# $FreeBSD$
 
 PORTNAME=	fli2gif
 PORTVERSION=	1.1
