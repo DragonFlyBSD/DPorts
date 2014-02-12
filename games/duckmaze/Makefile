@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/duckmaze/Makefile 339714 2014-01-14 20:28:49Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	duckmaze
 DISTVERSION=	0.3r34
