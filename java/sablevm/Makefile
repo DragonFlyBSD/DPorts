@@ -1,4 +1,4 @@
-# $FreeBSD: java/sablevm/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sablevm
 PORTVERSION=	1.13
