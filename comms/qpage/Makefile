@@ -1,5 +1,5 @@
 # Created by: joes@seaport.net
-# $FreeBSD: comms/qpage/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	qpage
 PORTVERSION=	3.3
