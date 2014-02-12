@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: www/p5-Net-Akismet/Makefile 333117 2013-11-07 15:22:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Akismet
 PORTVERSION=	0.05
