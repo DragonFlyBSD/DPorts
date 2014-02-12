@@ -1,5 +1,5 @@
 # Created by: Sébastien Santoro <dereckson@gmail.com>
-# $FreeBSD: devel/p5-ReadLine-TTYtter/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ReadLine-TTYtter
 PORTVERSION=	1.4
@@ -18,5 +18,4 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
