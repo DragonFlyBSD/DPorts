@@ -1,5 +1,5 @@
 # Created by: Jordan DeLong <fracture@allusion.net>
-# $FreeBSD: games/prboom/Makefile 332846 2013-11-05 13:04:51Z danilo $
+# $FreeBSD$
 
 PORTNAME=	prboom
 PORTVERSION=	2.5.0
