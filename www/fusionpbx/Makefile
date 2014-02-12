@@ -1,5 +1,5 @@
 # Created by: Richard Neese <r.neese@gmail.com>
-# $FreeBSD: www/fusionpbx/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	fusionpbx
 DISTVERSION=	3.3
