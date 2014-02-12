@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: games/quake-extras/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	extras
 PORTVERSION=	1.1
@@ -14,6 +14,9 @@ DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Various add-ons for games of Quake/QuakeWorld and alike
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
