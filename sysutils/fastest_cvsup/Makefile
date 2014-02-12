@@ -1,5 +1,5 @@
 # Created by: A.J.Robinson (ajr@subdimension.com)
-# $FreeBSD: sysutils/fastest_cvsup/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fastest_cvsup
 PORTVERSION=	0.3.0
