@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-inline-google-definitions/Makefile 341209 2014-01-26 15:10:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	inline-google-definitions
 PORTVERSION=	1.4
