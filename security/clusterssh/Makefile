@@ -1,5 +1,5 @@
 # Created by: lx
-# $FreeBSD: security/clusterssh/Makefile 341651 2014-01-28 20:05:49Z lx $
+# $FreeBSD$
 
 PORTNAME=	clusterssh
 PORTVERSION=	4.02
