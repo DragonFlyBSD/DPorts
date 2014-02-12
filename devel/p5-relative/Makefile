@@ -1,5 +1,5 @@
 # Created by: skreuzer@exit2shell.com
-# $FreeBSD: devel/p5-relative/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	relative
 PORTVERSION=	0.04
