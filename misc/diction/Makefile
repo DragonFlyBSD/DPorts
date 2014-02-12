@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@best.com>
-# $FreeBSD: misc/diction/Makefile 340166 2014-01-18 11:07:17Z mva $
+# $FreeBSD$
 
 PORTNAME=	diction
 PORTVERSION=	1.11
