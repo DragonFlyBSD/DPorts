@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <bacon11@tds.net>
-# $FreeBSD: devel/libnxt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libnxt
 PORTVERSION=	0.3
