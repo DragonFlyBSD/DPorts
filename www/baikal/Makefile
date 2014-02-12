@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: www/baikal/Makefile 331700 2013-10-26 15:14:28Z adamw $
+# $FreeBSD$
 
 PORTNAME=		baikal
 PORTVERSION=	0.2.6
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		ports@FreeBSD.org
 COMMENT=		Lightweight CalDAV/CardDAV server
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LICENSE=		GPLv3
 

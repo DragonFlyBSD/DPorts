@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/baikal/files/pkg-install.in 308396 2012-12-06 19:27:45Z adamw $
+# $FreeBSD: head/www/baikal/files/pkg-install.in 308396 2012-12-06 19:27:45Z adamw $
 
 PKG_BATCH=${BATCH:=NO}
 PKG_PREFIX=${PREFIX:=/usr/local}
