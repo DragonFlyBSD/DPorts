@@ -1,5 +1,5 @@
 # Created by: kris
-# $FreeBSD: games/mindguard/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mindguard
 PORTVERSION=	0.0.0.4
