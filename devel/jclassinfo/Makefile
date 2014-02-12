@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/jclassinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jclassinfo
 PORTVERSION=	0.19.1
