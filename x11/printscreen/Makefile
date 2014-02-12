@@ -1,4 +1,4 @@
-# $FreeBSD: x11/printscreen/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	printscreen
 PORTVERSION=	1.4
