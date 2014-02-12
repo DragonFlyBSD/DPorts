@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: science/xfce4-equake-plugin/Makefile 341982 2014-01-31 12:27:20Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-equake-plugin
 PORTVERSION=	1.3.4
