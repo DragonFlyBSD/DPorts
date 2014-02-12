@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: deskutils/treeline/Makefile 341678 2014-01-28 23:50:29Z pawel $
+# $FreeBSD$
 
 PORTNAME=	treeline
 PORTVERSION=	1.4.1
