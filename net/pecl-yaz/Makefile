@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: net/pecl-yaz/Makefile 332787 2013-11-04 21:33:00Z antoine $
+# $FreeBSD$
 
 PORTNAME=	yaz
 PORTVERSION=	1.1.6
