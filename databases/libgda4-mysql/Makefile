@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda4-mysql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/databases/libgda4-mysql/Makefile,v 1.7 2011/10/15 15:18:36 kwm Exp $
 
 PORTREVISION=	0
