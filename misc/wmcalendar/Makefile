@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: misc/wmcalendar/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD$
 
 PORTNAME=	wmcalendar
 PORTVERSION=	0.5.2
