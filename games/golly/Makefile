@@ -1,4 +1,4 @@
-# $FreeBSD: games/golly/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	golly
 PORTVERSION=	2.4
