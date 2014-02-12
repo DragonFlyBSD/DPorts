@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: databases/py-sqlkit/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	sqlkit
 PORTVERSION=	0.9.5.1
