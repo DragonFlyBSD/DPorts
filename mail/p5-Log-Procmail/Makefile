@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: mail/p5-Log-Procmail/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Log-Procmail
 PORTVERSION=	0.12
