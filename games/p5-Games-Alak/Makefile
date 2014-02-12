@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: games/p5-Games-Alak/Makefile 332736 2013-11-04 14:49:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Games-Alak
 PORTVERSION=	0.19
