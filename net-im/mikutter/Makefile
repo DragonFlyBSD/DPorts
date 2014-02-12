@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net-im/mikutter/Makefile 339284 2014-01-09 21:27:56Z tota $
+# $FreeBSD$
 
 PORTNAME=	mikutter
 PORTVERSION=	0.2.2.1476
