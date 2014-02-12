@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: net-im/pidgin-fetion/Makefile 341927 2014-01-31 07:43:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fetion
 PORTVERSION=	0.98.5.2
