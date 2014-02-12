@@ -1,5 +1,5 @@
 # Created by: ballen
-# $FreeBSD: biology/phyml/Makefile 341987 2014-01-31 12:32:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	phyml
 PORTVERSION=	20121109
