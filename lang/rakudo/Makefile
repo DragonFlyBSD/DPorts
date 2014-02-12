@@ -1,14 +1,15 @@
 # Created by: Aliaksandr Zahatski <zahatski@gmail.com>
-# $FreeBSD: lang/rakudo/Makefile 332604 2013-11-03 11:29:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rakudo
 PORTVERSION=	2013.10
+PORTREVISION=	1
 PORTEPOCH=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://rakudo.org/downloads/star/
 DISTNAME=	${PORTNAME}-star-${PORTVERSION}
 
-MAINTAINER=	perl@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Rakudo Perl 6 Compiler targets the Parrot Virtual Machine
 
 LICENSE=	ART20
