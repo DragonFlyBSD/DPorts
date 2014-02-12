@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_bw/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_bw
 PORTVERSION=	0.8
