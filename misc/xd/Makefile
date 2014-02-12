@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: misc/xd/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xd
 PORTVERSION=	2.3
