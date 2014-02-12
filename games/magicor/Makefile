@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/magicor/Makefile 333268 2013-11-08 23:08:10Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	magicor
 PORTVERSION=	1.1
