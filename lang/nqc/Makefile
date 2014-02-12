@@ -1,5 +1,5 @@
 # Created by: kbyanc
-# $FreeBSD: lang/nqc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nqc
 PORTVERSION=	3.1.r6
