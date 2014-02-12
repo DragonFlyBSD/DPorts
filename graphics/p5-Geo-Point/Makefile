@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/p5-Geo-Point/Makefile 340837 2014-01-23 16:05:39Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	Geo-Point
 PORTVERSION=	0.96
