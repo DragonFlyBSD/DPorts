@@ -1,5 +1,5 @@
 # Created by: C.S. Peron <bugs@sqrt.ca>
-# $FreeBSD: security/termlog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	termlog
 PORTVERSION=	2.5
