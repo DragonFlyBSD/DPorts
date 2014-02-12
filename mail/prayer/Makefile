@@ -1,4 +1,4 @@
-# $FreeBSD: mail/prayer/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	prayer
 PORTVERSION=	1.3.5
