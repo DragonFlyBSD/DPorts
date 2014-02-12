@@ -1,9 +1,9 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-wikitemplates/Makefile 337595 2013-12-26 18:41:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	wikitemplates
 PORTVERSION=	0.3.0p3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www devel python
 MASTER_SITES=	http://www.sourcehosting.net/freebsd/distfiles/ \
 		LOCAL/glarkin
@@ -19,5 +19,6 @@ RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 WRKSRC=		${WRKDIR}/${PORTNAME}plugin
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
