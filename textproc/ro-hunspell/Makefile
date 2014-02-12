@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ro-hunspell/Makefile 334093 2013-11-17 15:56:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hunspell
 PORTVERSION=	3.3.10
