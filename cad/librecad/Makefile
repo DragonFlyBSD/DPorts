@@ -1,4 +1,4 @@
-# $FreeBSD: cad/librecad/Makefile 336077 2013-12-10 18:42:46Z makc $
+# $FreeBSD$
 
 PORTNAME=	librecad
 DISTVERSION=	2.0.0rc3
