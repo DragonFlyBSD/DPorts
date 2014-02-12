@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: www/p5-Catalyst-Controller-RequestToken/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Controller-RequestToken
 PORTVERSION=	0.07
