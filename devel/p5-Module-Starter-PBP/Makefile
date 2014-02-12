@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Module-Starter-PBP/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Module-Starter-PBP
 PORTVERSION=	0.0.3
