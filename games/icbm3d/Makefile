@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/icbm3d/Makefile 337322 2013-12-24 08:20:21Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	icbm3d
 PORTVERSION=	0.4
