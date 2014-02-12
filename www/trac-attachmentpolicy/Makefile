@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-attachmentpolicy/Makefile 341180 2014-01-26 14:30:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	attachmentpolicy
 PORTVERSION=	0.1.0.${SVN_REV}
