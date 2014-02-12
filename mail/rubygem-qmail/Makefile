@@ -1,5 +1,5 @@
 # Created by: Glen Barber <gjb@FreeBSD.org>
-# $FreeBSD: mail/rubygem-qmail/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ruby-qmail
 PORTVERSION=	0.1.1
