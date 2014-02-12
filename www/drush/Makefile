@@ -1,5 +1,5 @@
 # Created by: Thomas Sandford <freebsduser@paradisegreen.co.uk>
-# $FreeBSD: www/drush/Makefile 342069 2014-01-31 20:56:49Z cs $
+# $FreeBSD$
 
 PORTNAME=	drush
 PORTVERSION=	6.1.0
