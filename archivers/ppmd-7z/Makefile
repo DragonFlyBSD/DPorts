@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: archivers/ppmd-7z/Makefile 338688 2014-01-04 23:37:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ppmd
 PORTVERSION=	9.04
