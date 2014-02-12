@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/biggles/Makefile 336583 2013-12-15 21:33:13Z mva $
+# $FreeBSD$
 
 PORTNAME=	biggles
 PORTVERSION=	1.6.6
