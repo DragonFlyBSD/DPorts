@@ -1,5 +1,5 @@
 # Created by: wosch@FreeBSD.org
-# $FreeBSD: www/checkbot/Makefile 333128 2013-11-07 15:56:48Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	checkbot
 PORTVERSION=	1.80
