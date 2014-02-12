@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: comms/ser2net/files/ser2net.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/comms/ser2net/files/ser2net.in 340851 2014-01-23 19:55:14Z mat $
 #
 
 # PROVIDE: ser2net

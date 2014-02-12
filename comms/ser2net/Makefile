@@ -1,5 +1,5 @@
 # Created by: Devon H. O'Dell <devon.odell@coyotepoint.com>
-# $FreeBSD: comms/ser2net/Makefile 332415 2013-11-01 22:01:49Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ser2net
 PORTVERSION=	2.9.1
