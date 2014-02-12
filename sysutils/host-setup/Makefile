@@ -1,5 +1,5 @@
 # Created by: Devin Teske <dteske@vicor.com>
-# $FreeBSD: sysutils/host-setup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	host-setup
 PORTVERSION=	4.0.2
