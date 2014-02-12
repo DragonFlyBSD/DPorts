@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/xpi-twitterfox/Makefile 341219 2014-01-26 15:14:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	twitterfox
 PORTVERSION=	1.8.3
