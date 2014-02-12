@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-pyaixi/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	pyaixi
 PORTVERSION=	1.0.3
