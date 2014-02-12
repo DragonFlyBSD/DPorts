@@ -1,5 +1,5 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: databases/py-fdb/Makefile 336505 2013-12-15 08:37:06Z koobs $
+# $FreeBSD$
 
 PORTNAME=	fdb
 PORTVERSION=	1.4
