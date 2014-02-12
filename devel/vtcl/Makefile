@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
-# $FreeBSD: devel/vtcl/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	vtcl
 PORTVERSION=	1.6.1a1
