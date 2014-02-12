@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
-# $FreeBSD: mail/exim-doc-info/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 DOCFORMAT=	info
 DISTDOCFORMAT=	texinfo
