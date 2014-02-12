@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: dns/dns2tcp/Makefile 342192 2014-02-01 17:07:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dns2tcp
 PORTVERSION=	0.5.2
