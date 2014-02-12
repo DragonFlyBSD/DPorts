@@ -1,5 +1,5 @@
 # Created by: Kojedzinszky Richard <krichy@tvnetwork.hu>
-# $FreeBSD: devel/libjson++/Makefile 340520 2014-01-21 00:38:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libjson++
 PORTVERSION=	0.5.0
