@@ -1,5 +1,5 @@
 # Created by: Anes Muhametov <anes@anes.su>
-# $FreeBSD: www/p5-FCGI-Engine/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	FCGI-Engine
 PORTVERSION=	0.21
