@@ -1,5 +1,5 @@
 # Created by: rene
-# $FreeBSD: emulators/fuse-utils/Makefile 333231 2013-11-08 14:31:40Z kwm $
+# $FreeBSD$
 
 PORTNAME=	fuse-utils
 PORTVERSION=	1.1.1
