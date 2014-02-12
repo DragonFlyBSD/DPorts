@@ -1,5 +1,5 @@
 # Created by: Nils Vogels <nivo+kw+ports.bfa274@is-root.com>
-# $FreeBSD: mail/dovecot2-pigeonhole/Makefile 342000 2014-01-31 15:07:46Z pawel $
+# $FreeBSD$
 
 PORTNAME=	dovecot-pigeonhole
 PORTVERSION=	0.4.2
