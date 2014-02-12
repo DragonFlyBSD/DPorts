@@ -1,5 +1,5 @@
 # Created by: Trevor Caira <trevor@bitba.se>
-# $FreeBSD: finance/py-stripe/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 #
 
 PORTNAME=	stripe
