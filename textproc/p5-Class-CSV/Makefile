@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Class-CSV/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Class-CSV
 PORTVERSION=	1.03
