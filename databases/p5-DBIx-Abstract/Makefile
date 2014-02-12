@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: databases/p5-DBIx-Abstract/Makefile 341074 2014-01-25 18:45:18Z antoine $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Abstract
 PORTVERSION=	1.010
