@@ -1,5 +1,5 @@
 # Created by: Alexander Kuehn <freebsd@nagilum.org>
-# $FreeBSD: archivers/zopfli/Makefile 340066 2014-01-17 16:17:40Z danilo $
+# $FreeBSD$
 
 PORTNAME=	zopfli
 PORTVERSION=	1.0.0
