@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xdm/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xdm
 PORTVERSION=	1.1.11
