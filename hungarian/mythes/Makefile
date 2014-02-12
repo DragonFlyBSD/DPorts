@@ -1,4 +1,4 @@
-# $FreeBSD: hungarian/mythes/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mythes
 PORTVERSION=	2003.09.29
