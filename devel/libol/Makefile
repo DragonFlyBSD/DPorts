@@ -1,5 +1,5 @@
 # Created by: Vince Valenti <vince@blue-box.net>
-# $FreeBSD: devel/libol/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libol
 PORTVERSION=	0.3.18
