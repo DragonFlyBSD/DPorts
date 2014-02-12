@@ -1,5 +1,5 @@
 # Created by: Harald Wille <harald.wille@students.jku.at>
-# $FreeBSD: misc/wmweather+/Makefile 340013 2014-01-17 04:17:42Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	wmweather+
 PORTVERSION=	2.15
