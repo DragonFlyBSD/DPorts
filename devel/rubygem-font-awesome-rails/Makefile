@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-font-awesome-rails/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	font-awesome-rails
 PORTVERSION=	3.2.1.3
