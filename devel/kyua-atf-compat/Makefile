@@ -1,5 +1,5 @@
 # Created by: Alan Somers <asomers@FreeBSD.org>
-# $FreeBSD: devel/kyua-atf-compat/Makefile 340929 2014-01-24 19:46:56Z jmmv $
+# $FreeBSD$
 
 PORTNAME=	kyua-atf-compat
 PORTVERSION=	0.1
