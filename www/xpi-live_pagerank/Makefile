@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-live_pagerank/Makefile 341211 2014-01-26 15:11:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	live_pagerank
 PORTVERSION=	0.9.7
