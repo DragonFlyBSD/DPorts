@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-Parser-Simple/Makefile 330133 2013-10-12 15:14:37Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTML-Parser-Simple
 PORTVERSION=	2.01
