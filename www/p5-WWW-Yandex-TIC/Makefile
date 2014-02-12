@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-WWW-Yandex-TIC/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Yandex-TIC
 PORTVERSION=	0.07
