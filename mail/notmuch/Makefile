@@ -1,5 +1,5 @@
 # Created by: DarwinSurvivor <darwinsurvivor@gmail.com>
-# $FreeBSD: mail/notmuch/Makefile 338422 2014-01-02 08:10:39Z jgh $
+# $FreeBSD$
 
 PORTNAME=	notmuch
 PORTVERSION=	0.17
