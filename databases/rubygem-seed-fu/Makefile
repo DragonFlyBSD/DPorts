@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-seed-fu/Makefile 332033 2013-10-30 02:26:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	seed-fu
 PORTVERSION=	2.2.0
