@@ -1,5 +1,5 @@
 # Created by: pneumann@gmail.com
-# $FreeBSD: deskutils/gimmie/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gimmie
 PORTVERSION=	0.2.7
@@ -27,6 +27,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
