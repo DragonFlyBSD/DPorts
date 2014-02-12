@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: biology/gperiodic/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
+# $FreeBSD$
 #    $MCom: ports/biology/gperiodic/Makefile,v 1.1 2006/09/29 23:42:13 ahze Exp $
 
 PORTNAME=	gperiodic
