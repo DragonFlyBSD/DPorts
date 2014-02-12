@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/visprint/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	visprint
 PORTVERSION=	2.1
