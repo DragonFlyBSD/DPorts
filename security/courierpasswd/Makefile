@@ -1,5 +1,5 @@
 # Created by: Andrew St. Jean <andrew@arda.homeunix.net>
-# $FreeBSD: security/courierpasswd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	courierpasswd
 PORTVERSION=	1.1.2
