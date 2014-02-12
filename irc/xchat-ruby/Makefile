@@ -1,4 +1,4 @@
-# $FreeBSD: irc/xchat-ruby/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ruby
 PORTVERSION=	1.2
@@ -24,6 +24,8 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 PLIST_FILES=	lib/xchat/plugins/xchat-ruby.so
 PORTDOCS=	README ChangeLog
 PORTEXAMPLES=	embedify.rb TimerSample.rb JFilter.rb JBanner.rb
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
