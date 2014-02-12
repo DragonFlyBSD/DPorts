@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Class-Mixin/Makefile 333864 2013-11-15 13:48:38Z mat $
+# $FreeBSD$
 
 PORTNAME=	Class-Mixin
 PORTVERSION=	1.00
