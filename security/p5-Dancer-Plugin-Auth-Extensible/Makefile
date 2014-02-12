@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: security/p5-Dancer-Plugin-Auth-Extensible/Makefile 333537 2013-11-11 20:38:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-Auth-Extensible
 PORTVERSION=	0.30
