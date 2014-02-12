@@ -1,4 +1,4 @@
-# $FreeBSD: www/grr/Makefile 341701 2014-01-29 09:02:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	grr
 PORTVERSION=	1.0
