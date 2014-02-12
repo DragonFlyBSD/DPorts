@@ -1,5 +1,5 @@
 # Created by: olli hauer <ohauer@FreeBSD.org>
-# $FreeBSD: net/py-pysphere/Makefile 341945 2014-01-31 08:47:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pysphere
 PORTVERSION=	0.1.8
