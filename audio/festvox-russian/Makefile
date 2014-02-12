@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: audio/festvox-russian/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festvox
 PORTVERSION=	0.5
