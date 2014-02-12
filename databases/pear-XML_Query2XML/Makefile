@@ -1,5 +1,5 @@
 # Created by: wenheping<wenheping@gmail.com>
-# $FreeBSD: databases/pear-XML_Query2XML/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	XML_Query2XML
 PORTVERSION=	1.7.2
