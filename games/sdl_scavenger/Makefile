@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/sdl_scavenger/Makefile 339609 2014-01-13 17:03:04Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sdl_scavenger
 PORTVERSION=	145.2014.01.01
