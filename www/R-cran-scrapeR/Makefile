@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/R-cran-scrapeR/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD$
 
 PORTNAME=	scrapeR
 PORTVERSION=	0.1.6
