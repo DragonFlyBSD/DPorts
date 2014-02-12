@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/clearsans/Makefile 338382 2014-01-01 16:50:03Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	clearsans
 PORTVERSION=	1.00
