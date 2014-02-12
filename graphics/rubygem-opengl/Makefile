@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@meatwad.mouf.net>
-# $FreeBSD: graphics/rubygem-opengl/Makefile 338477 2014-01-02 19:57:12Z swills $
+# $FreeBSD$
 
 PORTNAME=	opengl
 PORTVERSION=	0.8.0
