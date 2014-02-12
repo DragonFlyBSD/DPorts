@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: textproc/p5-Tk-XMLViewer/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	Tk-XMLViewer
 PORTVERSION=	0.21
