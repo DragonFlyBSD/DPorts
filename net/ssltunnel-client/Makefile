@@ -1,5 +1,5 @@
 # Created by: at@rominet.net
-# $FreeBSD: net/ssltunnel-client/Makefile 338025 2013-12-29 16:29:03Z crees $
+# $FreeBSD$
 
 PORTNAME=	ssltunnel
 PORTVERSION=	1.18
