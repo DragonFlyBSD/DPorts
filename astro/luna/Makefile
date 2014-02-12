@@ -1,5 +1,5 @@
 # Created by: ABURAYER Rewsirow <rewsirow@ff.iij4u.or.jp>
-# $FreeBSD: astro/luna/Makefile 334184 2013-11-18 13:04:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	luna
 PORTVERSION=	1.9
