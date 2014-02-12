@@ -1,5 +1,5 @@
 # Created by: Dmitry Karasik (<dk@catpipe.net>)
-# $FreeBSD: devel/pear-HTML_QuickForm_Controller/Makefile 333429 2013-11-10 19:48:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTML_QuickForm_Controller
 PORTVERSION=	1.0.10
