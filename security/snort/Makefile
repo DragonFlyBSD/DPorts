@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: security/snort/Makefile 338570 2014-01-03 18:34:46Z zi $
+# $FreeBSD$
 
 PORTNAME=	snort
 PORTVERSION=	2.9.5.6
