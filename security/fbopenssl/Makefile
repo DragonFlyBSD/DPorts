@@ -1,4 +1,4 @@
-# $FreeBSD: security/fbopenssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fbopenssl
 PORTVERSION=	0.0.4
