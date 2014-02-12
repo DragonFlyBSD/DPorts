@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: math/ccmath/Makefile 338198 2013-12-30 23:49:31Z db $
+# $FreeBSD$
 
 PORTNAME=	ccmath
 PORTVERSION=	2.2.1
