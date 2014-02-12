@@ -1,5 +1,5 @@
 # Created by: spf@xslt.cs.nccu.edu.tw
-# $FreeBSD: net/ifstat/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ifstat
 PORTVERSION=	1.1
