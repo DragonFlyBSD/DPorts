@@ -1,5 +1,5 @@
 # Created by: andrewb@cs.cmu.edu
-# $FreeBSD: math/emacs-calc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	calc
 PORTVERSION=	2.02f
