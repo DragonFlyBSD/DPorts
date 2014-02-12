@@ -1,5 +1,5 @@
 # Created by: FreeBSD GNOME Team
-# $FreeBSD: sysutils/pessulus/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 #   $MCom: ports/sysutils/pessulus/Makefile,v 1.30 2010/11/17 11:53:24 kwm Exp $
 
 PORTNAME=	pessulus
