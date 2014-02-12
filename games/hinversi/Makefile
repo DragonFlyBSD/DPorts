@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/hinversi/Makefile 332451 2013-11-02 03:47:37Z danilo $
+# $FreeBSD$
 
 PORTNAME=	hinversi
 PORTVERSION=	0.8.2
