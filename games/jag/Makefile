@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/jag/Makefile 334602 2013-11-22 18:48:31Z makc $
+# $FreeBSD$
 
 PORTNAME=	jag
 PORTVERSION=	0.3.2
