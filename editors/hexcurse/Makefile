@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/hexcurse/Makefile 337727 2013-12-27 13:08:28Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	hexcurse
 PORTVERSION=	1.55
