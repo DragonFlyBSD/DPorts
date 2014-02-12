@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-user_agent_switcher/Makefile 341219 2014-01-26 15:14:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	user_agent_switcher
 PORTVERSION=	0.7.3
