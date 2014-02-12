@@ -1,5 +1,5 @@
 # Created by: Frank Altpeter <frank@altpeter.de>
-# $FreeBSD: net-im/centerim-devel/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 
 PORTNAME=	centerim
 PORTVERSION=	4.22.10.11
