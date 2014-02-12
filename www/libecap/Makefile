@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@web.de>
-# $FreeBSD: www/libecap/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libecap
 PORTVERSION=	0.2.0
