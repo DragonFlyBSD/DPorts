@@ -1,5 +1,5 @@
 # Created by: Alexey A.Ukhov <auk@startext.de>
-# $FreeBSD: www/mod_chroot/Makefile 336534 2013-12-15 13:54:30Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_chroot
 PORTVERSION=	0.5
