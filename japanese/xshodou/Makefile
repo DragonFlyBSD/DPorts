@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: japanese/xshodou/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xshodou
 PORTVERSION=	1.11
