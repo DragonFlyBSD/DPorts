@@ -1,4 +1,4 @@
-# $FreeBSD: comms/vrflash/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vrflash
 PORTVERSION=	0.20
@@ -14,6 +14,8 @@ LICENSE=	GPLv2
 GNU_CONFIGURE=	yes
 DOCS=		agenda-flashing-overview.txt troubleshooting.txt \
 		pmon-protect-unprotect.txt usage.txt
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
