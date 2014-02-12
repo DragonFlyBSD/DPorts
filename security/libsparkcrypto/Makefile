@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: security/libsparkcrypto/Makefile 333385 2013-11-10 11:54:26Z marino $
+# $FreeBSD$
 
 PORTNAME=	libsparkcrypto
 PORTVERSION=	0.1.1
