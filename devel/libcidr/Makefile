@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: head/devel/libcidr/Makefile 343382 2014-02-08 20:06:43Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libcidr
 DISTVERSION=	1.2.2
