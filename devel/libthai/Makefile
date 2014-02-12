@@ -1,5 +1,5 @@
 # Created by: Thawatchai Piyawat <piyawat@usablelabs.com>
-# $FreeBSD: devel/libthai/Makefile 331704 2013-10-26 15:34:55Z danilo $
+# $FreeBSD$
 
 PORTNAME=	libthai
 PORTVERSION=	0.1.20
