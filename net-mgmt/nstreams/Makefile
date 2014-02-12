@@ -1,5 +1,5 @@
 # Created by: darius@dons.net.au
-# $FreeBSD: net-mgmt/nstreams/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nstreams
 PORTVERSION=	1.0.4
