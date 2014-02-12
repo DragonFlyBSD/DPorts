@@ -1,5 +1,5 @@
 # Created by: Chao Shin <quakelee@cn.freebsd.org>
-# $FreeBSD: audio/py-apetag/Makefile 341854 2014-01-30 15:59:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	apetag
 PORTVERSION=	1.2
