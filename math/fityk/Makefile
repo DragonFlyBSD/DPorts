@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/fityk/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fityk
 PORTVERSION=	0.9.8
@@ -43,6 +43,9 @@ LDFLAGS+=	-L${WRKDIR}/${XYLIB_DISTNAME}/xylib/.libs \
 XYLIB_DISTNAME=	xylib-1.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
