@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-FontDialog/Makefile 338757 2014-01-05 12:33:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Tk-FontDialog
 PORTVERSION=	0.17
