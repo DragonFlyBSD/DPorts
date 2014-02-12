@@ -1,5 +1,5 @@
 # Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-# $FreeBSD: multimedia/tivodecode/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tivodecode
 DISTVERSION=	0.2pre4
@@ -9,15 +9,17 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.2pre4
 MAINTAINER=	mhsin@mhsin.org
 COMMENT=	Converts .TiVo files to normal MPEG files
 
-USE_GMAKE=	yes
+OPTIONS_DEFINE=	DOCS
+
+USES=		gmake
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
+post-patch:
+	@${REINPLACE_CMD} -e '/echo.*RANLIB/,+1d' ${WRKSRC}/Makefile.in
+
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING \
+		${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
