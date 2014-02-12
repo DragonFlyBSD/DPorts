@@ -1,5 +1,5 @@
 # Created by: Kimo <kimor79@yahoo.com>
-# $FreeBSD: www/rubygem-eventmachine_httpserver/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	eventmachine_httpserver
 PORTVERSION=	0.2.1
