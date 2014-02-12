@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net >
-# $FreeBSD: mail/p5-Mail-Verify/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-Verify
 PORTVERSION=	0.02
