@@ -1,5 +1,5 @@
 # Created by: Jan Srzednicki <w@wrzask.pl>
-# $FreeBSD: astro/gkrellmoon2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gkrellmoon2
 PORTVERSION=	0.6
@@ -19,6 +19,8 @@ USES=		pkgconfig
 USE_GNOME=	gtk20
 
 ALL_TARGET=	gkrellmoon.so
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
