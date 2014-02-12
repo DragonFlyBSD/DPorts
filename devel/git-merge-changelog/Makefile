@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/git-merge-changelog/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	git-merge-changelog
 PORTVERSION=	${GNULIB_PORTVERSION}
