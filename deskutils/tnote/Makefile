@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: deskutils/tnote/Makefile 342341 2014-02-02 17:06:21Z antoine $
+# $FreeBSD$
 
 PORTNAME=	tnote
 PORTVERSION=	0.2.1
