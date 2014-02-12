@@ -1,5 +1,5 @@
 # Created by: babak@farrokhi.net
-# $FreeBSD: www/textpattern/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	textpattern
 PORTVERSION=	4.2.0
@@ -16,11 +16,9 @@ USE_PHP=	mbstring xml mysql pcre
 
 SUB_FILES=	pkg-message
 
-NO_STAGE=	yes
 do-install:
-	-${MKDIR} ${WWWDIR}
-	@${CP} -R ${WRKSRC}/ ${WWWDIR}/
-	@${CAT} ${PKGMESSAGE}
+	-${MKDIR} ${STAGEDIR}${WWWDIR}
+	@${CP} -R ${WRKSRC}/ ${STAGEDIR}${WWWDIR}/
 
 create-plist:
 	@${FIND} -s ${WRKSRC}/${file} -not -type d \
