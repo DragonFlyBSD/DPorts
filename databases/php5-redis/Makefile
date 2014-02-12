@@ -1,5 +1,5 @@
 # Created by: Benedikt Niessen <ports@niessen.ch>
-# $FreeBSD: databases/php5-redis/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	redis
 PORTVERSION=	2.2.4
