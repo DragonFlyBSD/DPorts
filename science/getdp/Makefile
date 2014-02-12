@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: science/getdp/Makefile 341413 2014-01-27 15:15:04Z stephen $
+# $FreeBSD$
 
 PORTNAME=	getdp
 PORTVERSION=	2.2.1
