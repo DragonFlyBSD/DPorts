@@ -1,5 +1,5 @@
 # Created by: Oyvind Albrigtsen
-# $FreeBSD: x11-themes/fvwm-themes/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fvwm-themes
 PORTVERSION=	0.7.0
