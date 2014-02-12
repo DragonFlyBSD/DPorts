@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/mail2procmailrc/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mail2procmailrc
 PORTVERSION=	0.9
