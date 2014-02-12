@@ -1,5 +1,5 @@
 # Created by: David Leonard <leonard@dstc.edu.au>
-# $FreeBSD: x11-clocks/dclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	dclock
 PORTVERSION=	2.2.2
