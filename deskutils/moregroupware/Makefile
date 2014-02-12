@@ -1,5 +1,5 @@
 # Created by: Rob Evers <rob@debank.tv>
-# $FreeBSD: deskutils/moregroupware/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	moregroupware
 PORTVERSION=	0.7.4
