@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: x11/mxico/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 # NB: Do not delete or wrap post-install section, since we have to provide
 #     READMEj and README
