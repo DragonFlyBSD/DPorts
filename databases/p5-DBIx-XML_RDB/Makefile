@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: databases/p5-DBIx-XML_RDB/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-XML_RDB
 PORTVERSION=	0.05
