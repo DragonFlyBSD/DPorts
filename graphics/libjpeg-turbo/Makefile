@@ -1,5 +1,5 @@
 # Created by: Denis Podolskiy <bytestore@yandex.ru>
-# $FreeBSD: graphics/libjpeg-turbo/Makefile 342325 2014-02-02 16:04:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libjpeg-turbo
 PORTVERSION=	1.3.0
