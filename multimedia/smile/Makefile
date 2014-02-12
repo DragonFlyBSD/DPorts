@@ -1,5 +1,5 @@
 # Created by: Diego Depaoli <trebestie@gmail.com>
-# $FreeBSD: multimedia/smile/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	smile
 PORTVERSION=	1.0
@@ -9,6 +9,9 @@ MASTER_SITES=	http://download.tuxfamily.org/smiletool/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Slideshow Maker
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS=	sox>=14.0:${PORTSDIR}/audio/sox \
 		mencoder:${PORTSDIR}/multimedia/mencoder \
