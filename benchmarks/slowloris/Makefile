@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: benchmarks/slowloris/Makefile 335297 2013-11-30 15:18:49Z alexey $
+# $FreeBSD$
 
 PORTNAME=	slowloris
 PORTVERSION=	0.7
