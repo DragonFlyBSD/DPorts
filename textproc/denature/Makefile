@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/denature/Makefile 341170 2014-01-26 12:36:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	denature
 PORTVERSION=	0.6.5
