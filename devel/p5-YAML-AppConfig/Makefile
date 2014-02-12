@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-YAML-AppConfig/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	YAML-AppConfig
 PORTVERSION=	0.16
