@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/petsc/Makefile 340551 2014-01-21 05:34:46Z gerald $
+# $FreeBSD$
 
 PORTNAME=	petsc
 DISTVERSION=	2.3.3-p0
@@ -56,6 +56,9 @@ CONFIGURE_ARGS+=	--with-umfpack-include="${LOCALBASE}/include/suitesparse"	\
 .endif
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
