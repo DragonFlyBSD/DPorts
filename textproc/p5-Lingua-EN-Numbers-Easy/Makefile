@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: textproc/p5-Lingua-EN-Numbers-Easy/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Lingua-EN-Numbers-Easy
 PORTVERSION=	2009110701
