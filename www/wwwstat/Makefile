@@ -1,4 +1,4 @@
-# $FreeBSD: www/wwwstat/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wwwstat
 PORTVERSION=	2.01
