@@ -1,5 +1,5 @@
 # Created by: Alex Ivasyuv <siegerstein@pochta.ru>
-# $FreeBSD: graphics/blender-doc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	blender
 PORTVERSION=	2.3
