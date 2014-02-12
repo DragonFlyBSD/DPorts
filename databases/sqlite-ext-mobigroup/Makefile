@@ -1,5 +1,5 @@
 # Created by: Pavel Volkov <pavelivolkov@googlemail.com>
-# $FreeBSD: databases/sqlite-ext-mobigroup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sqlite-ext-mobigroup
 PORTVERSION=	3.7.5.1
