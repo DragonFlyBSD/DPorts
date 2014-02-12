@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: net-p2p/torrentsniff/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	torrentsniff
 PORTVERSION=	0.3.0
@@ -16,10 +16,9 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	torrentsniff
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/torrentsniff ${LOCALBASE}/bin
-	${MKDIR} ${SITE_PERL}/BitTorrent
-	${INSTALL_DATA} ${WRKSRC}/BitTorrent/BDecode.pm ${SITE_PERL}/BitTorrent
+	${INSTALL_SCRIPT} ${WRKSRC}/torrentsniff ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${SITE_PERL}/BitTorrent
+	${INSTALL_DATA} ${WRKSRC}/BitTorrent/BDecode.pm ${STAGEDIR}${SITE_PERL}/BitTorrent
 
 .include <bsd.port.mk>
