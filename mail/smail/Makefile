@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: mail/smail/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	smail
 PORTVERSION=	3.2.0.121
