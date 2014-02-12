@@ -1,5 +1,5 @@
 # Created by: doconnor@gsoft.com.au
-# $FreeBSD: net/netpipes/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netpipes
 PORTVERSION=	4.2
