@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <pfgshield-freebsd@yahoo.com>
-# $FreeBSD: graphics/dataplot/Makefile 337157 2013-12-21 18:04:53Z tijl $
+# $FreeBSD$
 
 PORTNAME=	dataplot
 PORTVERSION=	20090821
