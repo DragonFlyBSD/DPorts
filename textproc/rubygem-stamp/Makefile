@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-stamp/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	stamp
 PORTVERSION=	0.5.0
