@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: audio/gnaural/Makefile 332821 2013-11-05 08:16:11Z martymac $
+# $FreeBSD$
 
 PORTNAME=	gnaural
 PORTVERSION=	1.0.20110606
