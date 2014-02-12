@@ -1,5 +1,5 @@
 # Created by: Christophe Labouisse <christophe@labouisse.org>
-# $FreeBSD: www/jdresolve/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jdresolve
 PORTVERSION=	0.6.1
