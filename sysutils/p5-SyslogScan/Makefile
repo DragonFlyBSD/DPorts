@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: sysutils/p5-SyslogScan/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD$
 
 PORTNAME=	SyslogScan
 PORTVERSION=	0.32
