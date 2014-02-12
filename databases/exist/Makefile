@@ -1,5 +1,5 @@
 # Created by: Anton Yudin (<contact@toha.org.ua>)
-# $FreeBSD: databases/exist/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	exist
 PORTVERSION=	1.1.1
@@ -10,7 +10,7 @@ DISTNAME=	eXist-${PORTVERSION}-newcore-build4311
 EXTRACT_SUFX=	.jar
 EXTRACT_ONLY=	#
 
-MAINTAINER=	contact@toha.org.ua
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open Source Native XML Database
 
 USE_ZIP=	yes

@@ -2,7 +2,7 @@
 #
 # eXist startup script.
 #
-# $FreeBSD: databases/exist/files/eXist.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/exist/files/eXist.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: eXist
