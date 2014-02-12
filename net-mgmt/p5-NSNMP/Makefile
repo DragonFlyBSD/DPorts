@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-NSNMP/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	NSNMP
 PORTVERSION=	0.5
