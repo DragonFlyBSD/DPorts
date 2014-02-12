@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda3-odbc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/databases/libgda3-odbc/Makefile,v 1.2 2008/02/26 21:23:35 kwm Exp $
 
 PORTREVISION?=	1
