@@ -1,5 +1,5 @@
 # Created by: jaap
-# $FreeBSD: dns/credns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	credns
 PORTVERSION=	0.2.10

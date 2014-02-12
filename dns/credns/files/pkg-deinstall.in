@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: dns/credns/files/pkg-deinstall.in 302454 2012-08-12 21:00:32Z scheidell $
+# $FreeBSD: head/dns/credns/files/pkg-deinstall.in 302454 2012-08-12 21:00:32Z scheidell $
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 
