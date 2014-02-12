@@ -1,5 +1,5 @@
 # Created by: Frank Fenor <frank@fenor.de>
-# $FreeBSD: sysutils/tclsyslog/Makefile 339592 2014-01-13 12:05:03Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tclsyslog
 PORTVERSION=	2.1
