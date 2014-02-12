@@ -1,5 +1,5 @@
 # Created by: Filipe Rocha <filiperocha@gmail.com>
-# $FreeBSD: www/ojs2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ojs2
 PORTVERSION=	2.2.1
