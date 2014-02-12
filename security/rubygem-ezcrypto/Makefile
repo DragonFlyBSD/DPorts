@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer
-# $FreeBSD: security/rubygem-ezcrypto/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ezcrypto
 PORTVERSION=	0.7.2
