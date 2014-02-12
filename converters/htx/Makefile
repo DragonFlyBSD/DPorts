@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: converters/htx/Makefile 339234 2014-01-09 13:59:28Z bapt $
+# $FreeBSD$
 
 PORTNAME=	htx
 DISTVERSION=	0.7.8
