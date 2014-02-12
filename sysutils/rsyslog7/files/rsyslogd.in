@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/rsyslog7/files/rsyslogd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/rsyslog7/files/rsyslogd.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 
