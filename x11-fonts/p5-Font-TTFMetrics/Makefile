@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: x11-fonts/p5-Font-TTFMetrics/Makefile 333058 2013-11-07 03:59:36Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Font-TTFMetrics
 PORTVERSION=	0.1
