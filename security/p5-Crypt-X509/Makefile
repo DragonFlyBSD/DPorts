@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Crypt-X509/Makefile 339891 2014-01-16 05:00:45Z ashish $
+# $FreeBSD$
 
 PORTNAME=	Crypt-X509
 PORTVERSION=	0.51
