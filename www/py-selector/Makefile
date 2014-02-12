@@ -1,5 +1,5 @@
 # Created by: Trevor Caira <trevor@bitba.se>
-# $FreeBSD: www/py-selector/Makefile 341732 2014-01-29 13:20:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	selector
 PORTVERSION=	0.9.4
