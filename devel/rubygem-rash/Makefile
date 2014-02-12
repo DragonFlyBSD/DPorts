@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rash/Makefile 340903 2014-01-24 14:49:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rash
 PORTVERSION=	0.4.0
