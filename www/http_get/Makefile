@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: www/http_get/Makefile 341687 2014-01-29 07:57:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	http_get
 PORTVERSION=	1.0.20100619
