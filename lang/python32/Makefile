@@ -1,4 +1,4 @@
-# $FreeBSD: lang/python32/Makefile 342104 2014-02-01 09:21:23Z mva $
+# $FreeBSD$
 
 PORTNAME=		python32
 PORTVERSION=		3.2.5
