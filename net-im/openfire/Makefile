@@ -1,5 +1,5 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD: net-im/openfire/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	openfire
 PORTVERSION=	3.8.2
