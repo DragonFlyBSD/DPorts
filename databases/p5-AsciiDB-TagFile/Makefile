@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: databases/p5-AsciiDB-TagFile/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	AsciiDB-TagFile
 PORTVERSION=	1.06
