@@ -1,5 +1,5 @@
 # Created by: Kuan-Chung Chiu <buganini@gmail.com>
-# $FreeBSD: x11-fonts/mondulkiri/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mondulkiri
 PORTVERSION=	2
