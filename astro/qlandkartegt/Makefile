@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <freebsd@levsha.org.ua>
-# $FreeBSD: astro/qlandkartegt/Makefile 340320 2014-01-19 16:02:36Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	qlandkartegt
 PORTVERSION=	1.7.5
