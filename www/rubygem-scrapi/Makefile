@@ -1,5 +1,5 @@
 # Created by: IWATSUKI Hiroyuki <don@na.rim.or.jp>
-# $FreeBSD: www/rubygem-scrapi/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	scrapi
 PORTVERSION=	1.2.0
