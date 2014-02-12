@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <i@levsha.me>
-# $FreeBSD: sysutils/pdsh/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pdsh
 PORTVERSION=	2.28
