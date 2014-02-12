@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$FreeBSD: net-mgmt/flowd/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+#	$FreeBSD: head/net-mgmt/flowd/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 #
 
 FLOWD_USER=${FLOWD_USER:=_flowd}
