@@ -1,5 +1,5 @@
 # Created by: Carl Johan Madestrand <calle.madestrand@norrgarden.se>
-# $FreeBSD: security/saint/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	saint
 PORTVERSION=	3.5.8
