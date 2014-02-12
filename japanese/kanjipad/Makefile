@@ -1,5 +1,5 @@
 # Created by: Christophe Juniet <cjuniet@entreview.com>
-# $FreeBSD: japanese/kanjipad/Makefile 329747 2013-10-07 23:40:23Z marino $
+# $FreeBSD$
 
 PORTNAME=	kanjipad
 PORTVERSION=	2.0.0
