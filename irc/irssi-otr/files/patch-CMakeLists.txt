@@ -1,5 +1,5 @@
 
-$FreeBSD: irc/irssi-otr/files/patch-CMakeLists.txt 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/irc/irssi-otr/files/patch-CMakeLists.txt 340725 2014-01-22 17:40:44Z mat $
 
 --- CMakeLists.txt.orig
 +++ CMakeLists.txt
