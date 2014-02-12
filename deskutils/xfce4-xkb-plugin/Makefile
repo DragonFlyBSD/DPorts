@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/xfce4-xkb-plugin/Makefile 332267 2013-10-31 17:12:58Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-xkb-plugin
 PORTVERSION=	0.5.6
