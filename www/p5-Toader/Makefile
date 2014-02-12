@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers-Hadley <vvelox@vvelox.net>
-# $FreeBSD: www/p5-Toader/Makefile 333884 2013-11-15 16:17:05Z mat $
+# $FreeBSD$
 
 PORTNAME=	Toader
 PORTVERSION=	1.1.1
