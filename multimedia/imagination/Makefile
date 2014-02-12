@@ -1,5 +1,5 @@
 # Created by: Jesse <jessefrgsmith@yahoo.ca>
-# $FreeBSD: multimedia/imagination/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	imagination
 PORTVERSION=	3.0
@@ -22,6 +22,9 @@ INSTALLS_ICONS=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
