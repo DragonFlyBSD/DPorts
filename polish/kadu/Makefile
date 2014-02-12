@@ -1,5 +1,5 @@
 # Created by: Jacek Pelka <jacek@combit.com.pl>
-# $FreeBSD: polish/kadu/Makefile 337613 2013-12-26 20:20:05Z pawel $
+# $FreeBSD$
 
 PORTNAME=	kadu
 PORTVERSION=	0.12.2
