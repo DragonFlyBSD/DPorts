@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/nunnimcax/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 LIB = 	NunniMCAX
 SRCS=	NunniCXMLParser.c NunniCXMLParserFSM.c NunniHashtable.c NunniStack.c
