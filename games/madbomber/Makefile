@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/madbomber/Makefile 337431 2013-12-25 16:53:53Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	madbomber
 PORTVERSION=	0.2.5
