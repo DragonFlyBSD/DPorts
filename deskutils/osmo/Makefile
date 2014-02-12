@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951#comcast.net>
-# $FreeBSD: deskutils/osmo/Makefile 341874 2014-01-30 19:26:05Z antoine $
+# $FreeBSD$
 
 PORTNAME=	osmo
 PORTVERSION=	0.2.10
