@@ -1,5 +1,5 @@
 # Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
-# $FreeBSD: audio/libamrnb/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libamrnb
 PORTVERSION=	11.0.0.0
