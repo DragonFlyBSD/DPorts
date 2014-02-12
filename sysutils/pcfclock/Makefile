@@ -1,5 +1,5 @@
 # Created by: Frank W. Josellis <frank@dynamical-systems.org>
-# $FreeBSD: sysutils/pcfclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pcfclock
 PORTVERSION=	0.44
