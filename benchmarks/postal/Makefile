@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: benchmarks/postal/Makefile 341054 2014-01-25 16:49:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	postal
 PORTVERSION=	0.72
