@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-mark_read-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	mark_read
 PORTVERSION=	1.4.2
