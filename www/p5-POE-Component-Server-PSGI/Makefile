@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POE-Component-Server-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Server-PSGI
 PORTVERSION=	0.6
