@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: editors/leafpad/Makefile 333185 2013-11-08 07:34:49Z jgh $
+# $FreeBSD$
 
 PORTNAME=	leafpad
 PORTVERSION=	0.8.18.1
