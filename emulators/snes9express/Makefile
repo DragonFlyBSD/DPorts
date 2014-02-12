@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: emulators/snes9express/Makefile 330298 2013-10-14 11:20:46Z ak $
+# $FreeBSD$
 
 PORTNAME=	snes9express
 PORTVERSION=	1.43
