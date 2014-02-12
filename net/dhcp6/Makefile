@@ -1,5 +1,5 @@
 # Created by: Munechika SUMIKAWA <sumikawa@FreeBSD.org>
-# $FreeBSD: net/dhcp6/Makefile 330598 2013-10-17 03:31:56Z hrs $
+# $FreeBSD$
 
 PORTNAME=	dhcp6
 PORTVERSION=	20080615
