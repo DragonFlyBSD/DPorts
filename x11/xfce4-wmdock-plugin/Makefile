@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11/xfce4-wmdock-plugin/Makefile 331177 2013-10-21 19:40:09Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-wmdock-plugin
 PORTVERSION=	0.6.0
