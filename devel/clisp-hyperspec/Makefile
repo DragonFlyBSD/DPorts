@@ -1,4 +1,4 @@
-# $FreeBSD: devel/clisp-hyperspec/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clisp-hyperspec
 PORTVERSION=	7.0
