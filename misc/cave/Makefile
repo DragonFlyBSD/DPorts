@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/cave/Makefile 342316 2014-02-02 15:20:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cave
 PORTVERSION=	1.0b
