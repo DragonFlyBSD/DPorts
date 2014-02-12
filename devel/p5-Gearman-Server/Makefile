@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: devel/p5-Gearman-Server/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Gearman-Server
 PORTVERSION=	1.11
@@ -20,11 +20,7 @@ CONFLICTS=	gearmand-0.* gearmand-1.0.* gearmand-1.1.*
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	gearmand.1
-MAN3=	Gearman::Server.3 Gearman::Server::Client.3
-
 USE_RC_SUBR=	gearmand-perl
 SUB_LIST+=	NAME=gearmand
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
