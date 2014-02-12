@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/p5-Array-LineReader/Makefile 334679 2013-11-23 15:48:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Array-LineReader
 PORTVERSION=	1.01
