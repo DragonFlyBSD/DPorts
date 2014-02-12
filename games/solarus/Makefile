@@ -1,4 +1,4 @@
-# $FreeBSD: games/solarus/Makefile 342367 2014-02-02 21:49:27Z eadler $
+# $FreeBSD$
 
 PORTNAME=	solarus
 PORTVERSION=	1.1.1
