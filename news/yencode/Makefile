@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: news/yencode/Makefile 337664 2013-12-27 09:30:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	yencode
 PORTVERSION=	0.46
