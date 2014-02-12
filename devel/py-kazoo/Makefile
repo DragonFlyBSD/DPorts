@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/py-kazoo/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	kazoo
 PORTVERSION=	1.3.1
