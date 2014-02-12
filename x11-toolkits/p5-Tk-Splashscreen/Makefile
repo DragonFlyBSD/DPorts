@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Splashscreen/Makefile 338757 2014-01-05 12:33:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Tk-Splashscreen
 PORTVERSION=	1.0
