@@ -1,5 +1,5 @@
 # Created by: dm
-# $FreeBSD: mail/avenger/Makefile 331991 2013-10-29 20:17:04Z pawel $
+# $FreeBSD$
 
 PORTNAME=	avenger
 PORTVERSION=	0.8.4
