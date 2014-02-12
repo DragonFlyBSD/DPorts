@@ -1,5 +1,5 @@
 # Created by: mark@foster.cc
-# $FreeBSD: dns/scavenge/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scavenge
 PORTVERSION=	2.0
