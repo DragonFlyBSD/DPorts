@@ -1,5 +1,5 @@
 # Created by: Sandro Sigala
-# $FreeBSD: devel/cutils/Makefile 340755 2014-01-23 00:03:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cutils
 PORTVERSION=	1.6
