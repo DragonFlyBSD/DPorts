@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/glame/Makefile 337906 2013-12-28 20:33:05Z antoine $
+# $FreeBSD$
 
 PORTNAME=	glame
 PORTVERSION=	2.0.1
-PORTREVISION=	22
+PORTREVISION=	23
 CATEGORIES=	audio gnome
 MASTER_SITES=	SF
 

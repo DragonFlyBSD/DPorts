@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/glame/files/patch-src::plugins::audio_io_oss.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/glame/files/patch-src::plugins::audio_io_oss.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/plugins/audio_io_oss.c	2003/07/01 12:26:28	1.1
 +++ src/plugins/audio_io_oss.c	2003/07/01 12:26:41
