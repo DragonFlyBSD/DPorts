@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Tenjin/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Tenjin
 PORTVERSION=	0.070001
