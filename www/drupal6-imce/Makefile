@@ -1,5 +1,5 @@
 # Created by: Anderson Soares Ferreira <anderson@cnpm.embrapa.br>
-# $FreeBSD: www/drupal6-imce/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	imce
 DISTVERSION=	6.x-1.4
