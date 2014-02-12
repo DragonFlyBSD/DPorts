@@ -1,5 +1,5 @@
 # Created by: Alex Pesternikov <ap@page2rss.com>
-# $FreeBSD: www/ctemplate/Makefile 341718 2014-01-29 11:51:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ctemplate
 PORTVERSION=	0.5
