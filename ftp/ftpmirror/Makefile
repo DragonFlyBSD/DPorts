@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: ftp/ftpmirror/Makefile 332301 2013-10-31 23:35:00Z garga $
+# $FreeBSD$
 
 PORTNAME=	ftpmirror
 PORTVERSION=	1.96
