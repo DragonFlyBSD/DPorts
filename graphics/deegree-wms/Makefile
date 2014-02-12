@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: graphics/deegree-wms/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wms
 PORTVERSION=	2.5
@@ -30,6 +30,9 @@ OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT6}
