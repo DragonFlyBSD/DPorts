@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: math/pecl-stats/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	stats
 PORTVERSION=	1.0.3
