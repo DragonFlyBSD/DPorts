@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: misc/color-theme.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	color-theme.el
 PORTVERSION=	6.6.0
