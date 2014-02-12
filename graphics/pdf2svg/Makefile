@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <martin.dieringe@gmx.de>
-# $FreeBSD: graphics/pdf2svg/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	pdf2svg
 PORTVERSION=	0.2.2
