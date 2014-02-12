@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: audio/py-pyliblo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pyliblo
 PORTVERSION=	0.9.1
@@ -21,6 +21,8 @@ MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
 LDFLAGS+=		-L${LOCALBASE}/lib
 
 MAN1=	dump_osc.1 send_osc.1
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
