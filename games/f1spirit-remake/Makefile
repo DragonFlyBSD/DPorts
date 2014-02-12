@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/f1spirit-remake/Makefile 339598 2014-01-13 14:20:07Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	f1spirit-remake
 PORTVERSION=	1.0
