@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: comms/tkhylafax/Makefile 331384 2013-10-23 13:15:46Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkhylafax
 PORTVERSION=	3.2b
