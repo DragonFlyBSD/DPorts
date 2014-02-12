@@ -1,5 +1,5 @@
 # Created by: Mykola Dzham <freebsd@levsha.org.ua>
-# $FreeBSD: textproc/apertium/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	apertium
 PORTVERSION=	${APVER}.${APREV}
