@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/blop/Makefile 334762 2013-11-24 18:55:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	blop
 PORTVERSION=	0.2.8
