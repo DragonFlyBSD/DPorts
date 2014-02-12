@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@FreeBSD.org>
-# $FreeBSD: audio/tagger/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tagger
 PORTVERSION=	0.2.7
@@ -11,10 +11,9 @@ MAINTAINER=	lx@FreeBSD.org
 COMMENT=	CLI Ogg/Vorbis and MP3 ID3v1/ID3v1.1 tag editor
 
 USE_BZIP2=	yes
-NO_STAGE=	yes
 USES=		gmake
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS+=prefix=${PREFIX} mandir=${MANPREFIX}/man
+CONFIGURE_ARGS=	prefix=${PREFIX} mandir=${MANPREFIX}/man
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
