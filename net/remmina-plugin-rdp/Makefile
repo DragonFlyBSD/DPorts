@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: net/remmina-plugin-rdp/Makefile 339795 2014-01-15 17:28:00Z fluffy $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-rdp
 
