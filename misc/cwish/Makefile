@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: misc/cwish/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cwish
 PORTVERSION=	3.52
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.predatorlabs.net/dl/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses based user friendly windowing shell
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_WRKSUBDIR=	yes
 ALL_TARGET=	cwish
