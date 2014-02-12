@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/jvgs/Makefile 328740 2013-09-29 21:49:38Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	jvgs
 PORTVERSION=	0.5.1
@@ -25,6 +25,8 @@ NO_CDROM=	contains data under CC-by-NC-SA
 PLIST_FILES=	bin/${PORTNAME} libexec/${PORTNAME}
 PORTDOCS=	*
 PORTDATA=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
