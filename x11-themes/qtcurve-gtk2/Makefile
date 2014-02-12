@@ -1,5 +1,5 @@
 # Created by: Dmitry Klimov <lazyklimm@gmail.com>
-# $FreeBSD: x11-themes/qtcurve-gtk2/Makefile 331366 2013-10-23 10:49:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.16
