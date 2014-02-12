@@ -1,5 +1,5 @@
 # Created by: Manuel Creach <manuel.creach@icloud.com>
-# $FreeBSD: net/libnfs/Makefile 341917 2014-01-31 07:04:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libnfs
 PORTVERSION=	1.3.0
