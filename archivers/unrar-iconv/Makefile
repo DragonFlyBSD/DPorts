@@ -1,5 +1,5 @@
 # Created by: Yarodin <yarodin@gmail.com>
-# $FreeBSD: archivers/unrar-iconv/Makefile 338693 2014-01-04 23:45:06Z bapt $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-iconv
 
