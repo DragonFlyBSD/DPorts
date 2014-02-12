@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/php-memoize/Makefile 331622 2013-10-25 18:33:35Z wg $
+# $FreeBSD$
 
 PORTNAME=	memoize
 PORTVERSION=	0.2.0b1
