@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: science/py-pydap/Makefile 335164 2013-11-29 11:40:24Z wg $
+# $FreeBSD$
 
 PORTNAME=	pydap
 PORTVERSION=	3.1.1
