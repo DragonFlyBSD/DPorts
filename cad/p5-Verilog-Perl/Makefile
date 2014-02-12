@@ -1,5 +1,5 @@
 # Created by: Otacilio de Araujo Ramos Neto <otacilio.neto@ee.ufcg.edu.br>
-# $FreeBSD: cad/p5-Verilog-Perl/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Verilog-Perl
 PORTVERSION=	3.400
