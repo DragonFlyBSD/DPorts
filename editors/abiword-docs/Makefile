@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: editors/abiword-docs/Makefile 329320 2013-10-04 14:51:09Z kwm $
+# $FreeBSD$
 #   $MCom: ports/editors/abiword-docs/Makefile,v 1.1 2009/11/10 14:08:20 kwm Exp $
 
 PORTNAME=	abiword-docs
