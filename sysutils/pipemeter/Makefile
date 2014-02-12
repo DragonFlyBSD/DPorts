@@ -1,5 +1,5 @@
 # Created by: Len Sassama
-# $FreeBSD: sysutils/pipemeter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pipemeter
 PORTVERSION=	1.1.3
