@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/openssl_tpm_engine/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openssl_tpm_engine
 PORTVERSION=	0.4.2
