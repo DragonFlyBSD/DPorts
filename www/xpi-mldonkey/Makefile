@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-mldonkey/Makefile 341211 2014-01-26 15:11:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mldonkey
 PORTVERSION=	2.5
