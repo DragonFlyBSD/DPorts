@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/open-cobol/Makefile 342300 2014-02-02 14:33:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	open-cobol
 PORTVERSION=	1.1
