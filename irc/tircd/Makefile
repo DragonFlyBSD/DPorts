@@ -1,5 +1,5 @@
 # Created by: Gavin Atkinson <gavin@FreeBSD.org>
-# $FreeBSD: irc/tircd/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tircd
 PORTVERSION=	0.10
