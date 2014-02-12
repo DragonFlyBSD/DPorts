@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: mail/p5-WWW-GMail/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-GMail
 PORTVERSION=	0.07
