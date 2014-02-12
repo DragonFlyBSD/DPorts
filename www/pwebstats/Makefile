@@ -1,5 +1,5 @@
 # Created by: HSIN-HSIUNG CHANG <sexbear@tmu.edu.tw>
-# $FreeBSD: www/pwebstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pwebstats
 PORTVERSION=	1.3.8
