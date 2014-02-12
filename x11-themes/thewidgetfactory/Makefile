@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/thewidgetfactory/Makefile 341359 2014-01-27 09:36:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	thewidgetfactory
 PORTVERSION=	0.2.1
