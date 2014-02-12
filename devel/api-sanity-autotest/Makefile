@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: devel/api-sanity-autotest/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	api-sanity-checker
 PORTVERSION=	1.98.4
@@ -31,6 +31,9 @@ PLIST_FILES=	bin/${PORTNAME}.pl
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 CPPFILT?=	/usr/bin/c++filt
