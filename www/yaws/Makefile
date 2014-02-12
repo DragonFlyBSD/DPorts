@@ -1,4 +1,4 @@
-# $FreeBSD: www/yaws/Makefile 333004 2013-11-06 15:35:55Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	yaws
 PORTVERSION=	1.98
