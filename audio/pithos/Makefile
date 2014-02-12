@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@pcbsd.org>
-# $FreeBSD: audio/pithos/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pithos
 PORTVERSION=	0.3.18
