@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/bmp-mac/Makefile 340293 2014-01-19 13:47:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mac
 PORTVERSION=	0.1.1
