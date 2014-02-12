@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: www/mod_proctitle/Makefile 336555 2013-12-15 16:45:38Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_proctitle
 PORTVERSION=	0.4.1
