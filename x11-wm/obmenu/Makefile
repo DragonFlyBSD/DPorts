@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: x11-wm/obmenu/Makefile 330913 2013-10-19 17:00:05Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	obmenu
 PORTVERSION=	1.0
@@ -23,6 +23,8 @@ SUB_FILES=	pkg-message
 
 DESKTOP_ENTRIES="Obmenu" "Menu manager for Openbox" ${PORTNAME} \
 		"${PORTNAME}" "Settings;" false
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
