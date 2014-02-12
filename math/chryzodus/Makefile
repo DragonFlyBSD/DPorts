@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/chryzodus/Makefile 333455 2013-11-10 23:13:21Z nivit $
+# $FreeBSD$
 
 PORTNAME=	chryzodus
 PORTVERSION=	0.32
