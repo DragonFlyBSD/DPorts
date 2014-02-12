@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: textproc/slides/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	slides
 PORTVERSION=	3.3.1
@@ -38,6 +38,9 @@ REPLACE_EXPR=	-e 's,@INSTDIR@,${INSTDIR},g ; \
 	    s,@PORTNAME@,slides,g'
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
