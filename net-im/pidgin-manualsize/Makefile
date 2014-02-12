@@ -1,5 +1,5 @@
 # Created by: Joseph S. Atkinson <jsatkinson@embarqmail.com>
-# $FreeBSD: net-im/pidgin-manualsize/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	manualsize
 PORTVERSION=	0.7
