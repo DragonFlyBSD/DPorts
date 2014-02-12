@@ -1,4 +1,4 @@
-# $FreeBSD: irc/p5-POE-Component-IRC-Plugin-Karma/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-IRC-Plugin-Karma
 PORTVERSION=	0.003
