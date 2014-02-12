@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/fdmf/Makefile 339950 2014-01-16 17:58:47Z antoine $
+# $FreeBSD$
 
 PORTNAME=	fdmf
 DISTVERSION=	0.0.9s
