@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: graphics/kdc2tiff/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kdc2tiff
 PORTVERSION=	0.35
