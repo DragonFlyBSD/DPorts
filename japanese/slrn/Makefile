@@ -1,5 +1,5 @@
 # Created by: Takashi Mega <mega@minz.org>
-# $FreeBSD: japanese/slrn/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	slrn
 PORTVERSION=	0.9.6.2
