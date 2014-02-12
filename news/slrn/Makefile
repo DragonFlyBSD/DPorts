@@ -1,5 +1,5 @@
 # Created by: Carey Jones <mcj@acquiesce.org>
-# $FreeBSD: news/slrn/Makefile 338052 2013-12-29 22:31:27Z johans $
+# $FreeBSD$
 
 PORTNAME=	slrn
 PORTVERSION=	1.0.1
