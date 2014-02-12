@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-ditz/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ditz
 PORTVERSION=	0.5
