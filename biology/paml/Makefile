@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: biology/paml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	paml
 PORTVERSION=	4.4c
@@ -18,6 +18,8 @@ BINARIES=	baseml basemlg chi2 codeml evolver pamp yn00
 DOC_FILES=	MCMCtreeDoc.pdf pamlDOC.pdf pamlFAQs.pdf pamlHistory.txt
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
