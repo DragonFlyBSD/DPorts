@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Parse-HTTP-UserAgent/Makefile 335471 2013-12-02 09:16:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Parse-HTTP-UserAgent
 PORTVERSION=	0.39
