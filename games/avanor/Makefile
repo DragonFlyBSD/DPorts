@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: games/avanor/Makefile 332059 2013-10-30 03:42:03Z danilo $
+# $FreeBSD$
 
 PORTNAME=	avanor
 PORTVERSION=	0.5.8
