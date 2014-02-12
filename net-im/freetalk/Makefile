@@ -1,5 +1,5 @@
 # Created by: Oleg Ginzburg  (olevole@olevole.ru)
-# $FreeBSD: net-im/freetalk/Makefile 341966 2014-01-31 09:46:25Z miwi $
+# $FreeBSD$
 
 PORTNAME=	freetalk
 PORTVERSION=	3.2
