@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/pyspacewar/Makefile 336616 2013-12-16 09:43:55Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pyspacewar
 PORTVERSION=	0.9.7
