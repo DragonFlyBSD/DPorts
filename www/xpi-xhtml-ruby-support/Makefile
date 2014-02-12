@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-xhtml-ruby-support/Makefile 341220 2014-01-26 15:14:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xhtml-ruby-support
 PORTVERSION=	3.0.2009060901
