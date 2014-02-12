@@ -1,5 +1,5 @@
 # Created by: Neil Darlow <neil@darlow.co.uk>
-# $FreeBSD: mail/squirrelmail-avelsieve-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	avelsieve
 PORTVERSION=	1.9.7
