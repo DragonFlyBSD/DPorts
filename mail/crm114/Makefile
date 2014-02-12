@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: mail/crm114/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	crm114
 PORTVERSION=	20100106
