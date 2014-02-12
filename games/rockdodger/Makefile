@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
-# $FreeBSD: games/rockdodger/Makefile 339849 2014-01-15 23:12:36Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	rockdodger
 PORTVERSION=	0.9.2
