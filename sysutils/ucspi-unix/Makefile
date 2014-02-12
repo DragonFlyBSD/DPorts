@@ -1,5 +1,5 @@
 # Created by: Patrick Rinke <patrick@rinke-bochum.de>
-# $FreeBSD: sysutils/ucspi-unix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ucspi-unix
 PORTVERSION=	0.36
@@ -24,6 +24,8 @@ MAN1=		unixclient.1 unixserver.1
 PORTDOCS=	NEWS PROTOCOL README TODO
 
 OPTIONS_DEFINE=	DOCS
+
+MAKE_JOBS_UNSAFE=yes
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
