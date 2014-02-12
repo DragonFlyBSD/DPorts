@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/rubygem-exifr/Makefile 332044 2013-10-30 02:48:42Z swills $
+# $FreeBSD$
 
 PORTNAME=	exifr
 PORTVERSION=	1.1.3
