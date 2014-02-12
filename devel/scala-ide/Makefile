@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/scala-ide/Makefile 328483 2013-09-27 14:28:11Z ale $
+# $FreeBSD$
 
 PORTNAME=	scala-ide
 DISTVERSION=	3.0.1
