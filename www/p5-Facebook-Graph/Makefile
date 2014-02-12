@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Facebook-Graph/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Facebook-Graph
 PORTVERSION=	1.0600
