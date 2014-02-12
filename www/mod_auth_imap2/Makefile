@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_auth_imap2/Makefile 336534 2013-12-15 13:54:30Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_imap
 PORTVERSION=	2.2.0
