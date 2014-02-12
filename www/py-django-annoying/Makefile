@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-django-annoying/Makefile 341750 2014-01-29 15:27:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-annoying
 PORTVERSION=	0.7.7
