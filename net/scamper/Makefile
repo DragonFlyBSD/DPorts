@@ -1,4 +1,4 @@
-# $FreeBSD: net/scamper/Makefile 341782 2014-01-29 21:05:31Z pawel $
+# $FreeBSD$
 
 PORTNAME=	scamper
 PORTVERSION=	20140122
