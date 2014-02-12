@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: math/py-ufl/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	ufl
 PORTVERSION=	${MMVERSION}0
