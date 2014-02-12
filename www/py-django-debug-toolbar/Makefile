@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: www/py-django-debug-toolbar/Makefile 342251 2014-02-02 08:34:08Z koobs $
+# $FreeBSD$
 
 PORTNAME=	django-debug-toolbar
 PORTVERSION=	1.0.1
