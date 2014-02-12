@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: audio/festalon/Makefile 340829 2014-01-23 14:51:06Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	festalon
 PORTVERSION=	0.5.5
