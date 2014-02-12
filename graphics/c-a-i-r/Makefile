@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/c-a-i-r/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	c-a-i-r
 PORTVERSION=	2.19
