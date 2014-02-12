@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: security/safesh/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	safesh
 PORTVERSION=	1.5
