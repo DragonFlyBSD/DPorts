@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: head/x11-clocks/alltraxclock/Makefile 342998 2014-02-06 10:15:08Z novel $
+# $FreeBSD$
 
 PORTNAME=	alltraxclock
 PORTVERSION=	2.0.2
