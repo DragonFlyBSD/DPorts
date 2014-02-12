@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-STF-Dispatcher-PSGI/Makefile 341722 2014-01-29 12:20:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	STF-Dispatcher-PSGI
 PORTVERSION=	1.11
