@@ -1,5 +1,5 @@
 # Created by: Hyper NIKKI System Project <hnsmaster@h14m.org>
-# $FreeBSD: japanese/hns/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hns
 PORTVERSION=	2.19.9
