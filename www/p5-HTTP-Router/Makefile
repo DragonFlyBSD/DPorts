@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Router/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Router
 PORTVERSION=	0.05
