@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-rose/Makefile 333753 2013-11-14 13:20:35Z wg $
+# $FreeBSD$
 
 PORTNAME=	rose
 PORTVERSION=	1.0.0
