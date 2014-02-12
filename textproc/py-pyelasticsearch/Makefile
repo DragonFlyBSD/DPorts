@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: textproc/py-pyelasticsearch/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pyelasticsearch
 PORTVERSION=	0.6.1
