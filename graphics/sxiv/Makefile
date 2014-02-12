@@ -1,5 +1,5 @@
 # Created by: Charles RAPENNE <charles@bsd.zplay.eu>
-# $FreeBSD: graphics/sxiv/Makefile 340065 2014-01-17 16:11:11Z danilo $
+# $FreeBSD$
 
 PORTNAME=	sxiv
 PORTVERSION=	1.1.1
