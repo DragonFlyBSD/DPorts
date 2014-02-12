@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/burgerspace/Makefile 334488 2013-11-21 13:33:27Z martymac $
+# $FreeBSD$
 
 PORTNAME=	burgerspace
 PORTVERSION=	1.9.2
