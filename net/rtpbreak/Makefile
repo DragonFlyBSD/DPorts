@@ -1,5 +1,5 @@
 # Created by: Prudhvi Krishna <prudhvikrishna@gmail.com>
-# $FreeBSD: net/rtpbreak/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rtpbreak
 PORTVERSION=	1.3a
