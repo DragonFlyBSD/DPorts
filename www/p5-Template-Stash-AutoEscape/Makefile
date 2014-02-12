@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Template-Stash-AutoEscape/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Template-Stash-AutoEscape
 PORTVERSION=	0.03
