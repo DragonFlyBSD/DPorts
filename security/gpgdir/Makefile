@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <nukama@gmail.com>
-# $FreeBSD: security/gpgdir/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gpgdir
 PORTVERSION=	1.9.5
