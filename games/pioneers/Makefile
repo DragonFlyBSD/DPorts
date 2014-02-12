@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: games/pioneers/Makefile 332615 2013-11-03 15:07:39Z stefan $
+# $FreeBSD$
 
 PORTNAME=	pioneers
 PORTVERSION=	15.1
