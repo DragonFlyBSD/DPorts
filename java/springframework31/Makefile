@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: java/springframework31/Makefile 334021 2013-11-16 18:49:11Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	springframework
 PORTVERSION=	3.1.4
