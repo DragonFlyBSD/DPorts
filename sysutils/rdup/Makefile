@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/rdup/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rdup
 PORTVERSION=	1.1.14
