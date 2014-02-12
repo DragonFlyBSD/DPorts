@@ -1,5 +1,5 @@
 # Created by: Alex "lissyara" Keda <admin@lissyara.su>
-# $FreeBSD: www/mod_ntlm2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_ntlm2
 PORTVERSION=	0.1
