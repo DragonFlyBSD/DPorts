@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-ManberHash/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Digest-ManberHash
 PORTVERSION=	0.7
