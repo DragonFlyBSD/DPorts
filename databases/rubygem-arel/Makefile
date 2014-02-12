@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-arel/Makefile 338238 2013-12-31 06:58:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	arel
 PORTVERSION=	5.0.0
