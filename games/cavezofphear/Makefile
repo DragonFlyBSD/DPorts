@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/cavezofphear/Makefile 332079 2013-10-30 06:42:56Z danilo $
+# $FreeBSD$
 
 PORTNAME=	cavezofphear
 PORTVERSION=	0.5.1
