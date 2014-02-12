@@ -1,5 +1,5 @@
 # Created by: Frederic Han <han@math.jussieu.fr>
-# $FreeBSD: math/giacxcas/Makefile 342370 2014-02-02 22:31:11Z matthew $
+# $FreeBSD$
 
 PORTNAME=	giacxcas
 PORTVERSION=	1.1.0
