@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/agame/Makefile 337042 2013-12-20 17:10:47Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	agame
 PORTVERSION=	1577
