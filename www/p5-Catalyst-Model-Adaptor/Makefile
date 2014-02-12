@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: www/p5-Catalyst-Model-Adaptor/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Model-Adaptor
 PORTVERSION=	0.10
