@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: mail/p5-FuzzyOcr-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	FuzzyOcr
 DISTVERSION=	3.6.0
