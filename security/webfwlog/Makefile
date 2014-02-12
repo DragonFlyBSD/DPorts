@@ -1,5 +1,5 @@
 # Created by: Bob Hockney <zeus@ix.netcom.com>
-# $FreeBSD: security/webfwlog/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	webfwlog
 PORTVERSION=	0.94
