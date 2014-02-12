@@ -1,5 +1,5 @@
 # Created by: Jamie Heckford <jamie@jamiesdomain.co.uk>
-# $FreeBSD: sysutils/userlist/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	userlist
 PORTVERSION=	0.1
