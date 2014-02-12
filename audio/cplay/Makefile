@@ -1,5 +1,5 @@
 # Created by: Jochem Kossen <j.kossen@home.nl>
-# $FreeBSD: audio/cplay/Makefile 334771 2013-11-24 19:18:07Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cplay
 PORTVERSION=	1.49
