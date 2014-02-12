@@ -1,5 +1,5 @@
 # Created by: Philippe Rocques <phil@teaser.fr>
-# $FreeBSD: security/gtkpasman/Makefile 337230 2013-12-23 08:00:00Z rm $
+# $FreeBSD$
 
 PORTNAME=	gtkpasman
 PORTVERSION=	0.12.1
