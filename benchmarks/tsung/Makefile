@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: benchmarks/tsung/Makefile 338726 2014-01-05 01:01:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tsung
 PORTVERSION=	1.5.0
