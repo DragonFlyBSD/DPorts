@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@plab.ku.dk>
-# $FreeBSD: graphics/Cgraph/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Cgraph
 PORTVERSION=	2.04
