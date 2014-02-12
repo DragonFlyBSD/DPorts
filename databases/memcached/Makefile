@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: databases/memcached/Makefile 341659 2014-01-28 21:34:21Z swills $
+# $FreeBSD$
 
 PORTNAME=	memcached
 PORTVERSION=	1.4.17
