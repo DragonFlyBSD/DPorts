@@ -1,5 +1,5 @@
 # Created by: Eckart "Isegrim" Hofmann
-# $FreeBSD: games/xteddy/Makefile 335959 2013-12-09 10:12:39Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	xteddy
 PORTVERSION=	2.2
