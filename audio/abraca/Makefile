@@ -1,5 +1,5 @@
 # Created by: Olivier Smedts <olivier@gid0.org>
-# $FreeBSD: audio/abraca/Makefile 329290 2013-10-04 11:36:29Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	abraca
 PORTVERSION=	0.7.1
