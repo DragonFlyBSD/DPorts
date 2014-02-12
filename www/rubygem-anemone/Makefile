@@ -1,5 +1,5 @@
 # Created by: niels <niels@FreeBSD.org>
-# $FreeBSD: www/rubygem-anemone/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	anemone
 PORTVERSION=	0.7.2
