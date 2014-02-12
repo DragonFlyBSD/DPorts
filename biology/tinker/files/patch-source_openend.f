@@ -1,5 +1,5 @@
 
-$FreeBSD: biology/tinker/files/patch-source_openend.f 308054 2012-12-01 00:00:43Z sperber $
+$FreeBSD: head/biology/tinker/files/patch-source_openend.f 308054 2012-12-01 00:00:43Z sperber $
 
 --- source/openend.f.orig	Fri Apr 18 13:31:51 2003
 +++ source/openend.f	Mon Jul 21 13:36:11 2003

@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson
-# $FreeBSD: biology/tinker/Makefile 336854 2013-12-18 18:27:04Z tijl $
+# $FreeBSD$
 
 PORTNAME=	tinker
 PORTVERSION=	6.2.06
