@@ -1,5 +1,5 @@
 # Created by: Henrik Friedrichsen <hrkfdn@gmail.com>
-# $FreeBSD: audio/mpdbrowser/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mpdbrowser
 PORTVERSION=	0.9.15
