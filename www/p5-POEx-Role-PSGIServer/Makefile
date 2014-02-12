@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-POEx-Role-PSGIServer/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	POEx-Role-PSGIServer
 PORTVERSION=	1.110670
