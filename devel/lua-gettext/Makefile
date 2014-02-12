@@ -1,5 +1,5 @@
 # Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-# $FreeBSD: devel/lua-gettext/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gettext
 PORTVERSION=	1.5
