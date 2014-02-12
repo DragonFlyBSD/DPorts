@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <ports@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-genmon-plugin/Makefile 341841 2014-01-30 14:24:56Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-genmon-plugin
 PORTVERSION=	3.4.0
