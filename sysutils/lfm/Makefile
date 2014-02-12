@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: sysutils/lfm/Makefile 333873 2013-11-15 14:58:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	lfm
 PORTVERSION=	2.3
