@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: graphics/icontact/Makefile 340737 2014-01-22 21:59:32Z antoine $
+# $FreeBSD$
 
 PORTNAME=	icontact
 PORTVERSION=	1.5
