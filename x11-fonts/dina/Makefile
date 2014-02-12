@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/dina/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dina
 PORTVERSION=	2.89
