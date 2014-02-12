@@ -1,5 +1,5 @@
 # Created by: Xin Li <delphij@FreeBSD.org>
-# $FreeBSD: databases/lmdb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lmdb
 PORTVERSION=	0.9.11
