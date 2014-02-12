@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: graphics/lcms-python/Makefile 336532 2013-12-15 13:50:31Z mva $
+# $FreeBSD$
 
 PORTNAME=	lcms
 PORTVERSION=	1.19
