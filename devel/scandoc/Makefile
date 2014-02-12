@@ -1,5 +1,5 @@
 # Created by: Christopher Elkins <chrise@scardini.com>
-# $FreeBSD: devel/scandoc/Makefile 329047 2013-10-02 14:02:09Z bsam $
+# $FreeBSD$
 
 PORTNAME=	scandoc
 PORTVERSION=	0.14
