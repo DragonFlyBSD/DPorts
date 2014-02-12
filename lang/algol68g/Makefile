@@ -1,4 +1,4 @@
-# $FreeBSD: lang/algol68g/Makefile 329766 2013-10-08 09:08:22Z johans $
+# $FreeBSD$
 
 PORTNAME=	algol68g
 PORTVERSION=	2.8
