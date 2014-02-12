@@ -1,5 +1,5 @@
 # Created by: Patrick MARIE <mycroft@virgaria.org>
-# $FreeBSD: net/yaph/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	yaph
 PORTVERSION=	0.91
