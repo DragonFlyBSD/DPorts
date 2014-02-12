@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-im/py-xmpppy-yahoo/files/xmpppy_yahoo.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-im/py-xmpppy-yahoo/files/xmpppy_yahoo.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: xmpppy_yahoo
 # REQUIRE: DAEMON %%JABBER_REQUIRE%%
