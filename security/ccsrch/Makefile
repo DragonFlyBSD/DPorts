@@ -1,5 +1,5 @@
 # Created by: Pavel I Volkov <pavelivolkov@googlemail.com>
-# $FreeBSD: security/ccsrch/Makefile 338786 2014-01-05 15:39:53Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ccsrch
 PORTVERSION=	1.0.3
