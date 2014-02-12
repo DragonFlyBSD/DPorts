@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: irc/slirc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	slirc
 PORTVERSION=	0.12
@@ -45,6 +45,8 @@ DOCS+=		BUGS \
 NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s,/usr/local,${LOCALBASE}," ${WRKSRC}/Makefile ${WRKSRC}/scripts/init.sl
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 post-install:

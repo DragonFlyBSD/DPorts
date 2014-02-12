@@ -1,5 +1,5 @@
 
-$FreeBSD: irc/slirc/files/patch-lru.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/irc/slirc/files/patch-lru.c 340725 2014-01-22 17:40:44Z mat $
 
 --- lru.c.orig	Sun Aug 22 13:14:28 1999
 +++ lru.c	Sun Aug 22 17:15:12 2004
