@@ -1,5 +1,5 @@
 # Created by: Mezz <mezz@FreeBSD.org>
-# $FreeBSD: graphics/cbview/Makefile 338403 2014-01-01 23:44:27Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	cbview
 PORTVERSION=	0.06
