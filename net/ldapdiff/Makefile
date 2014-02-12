@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org)
-# $FreeBSD: net/ldapdiff/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ldapdiff
 PORTVERSION=	1.4.1
