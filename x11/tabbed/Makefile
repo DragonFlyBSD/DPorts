@@ -1,5 +1,5 @@
 # Created by: Winston Weinert <winstonw@lavabit.com>
-# $FreeBSD: x11/tabbed/Makefile 341784 2014-01-29 21:30:31Z pawel $
+# $FreeBSD$
 
 PORTNAME=	tabbed
 PORTVERSION=	0.6
