@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: audio/ampache/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/audio/ampache/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 PATH=/bin:/usr/bin:/usr/sbin

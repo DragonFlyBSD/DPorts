@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: audio/ampache/Makefile 337673 2013-12-27 09:54:22Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	ampache
 PORTVERSION=	3.5.4
@@ -25,6 +25,8 @@ SUB_LIST=	PORTNAME=${PORTNAME} \
 		WWWGROUP=${WWWGROUP}
 
 PORTDOCS=	CHANGELOG README MIGRATION INSTALL
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
