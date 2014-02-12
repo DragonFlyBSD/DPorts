@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Spec/Makefile 330079 2013-10-11 14:09:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Spec
 PORTVERSION=	0.47
