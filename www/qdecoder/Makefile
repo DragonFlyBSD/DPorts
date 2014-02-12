@@ -1,5 +1,5 @@
 # Created by: CHOI Junho <cjh@FreeBSD.org>
-# $FreeBSD: www/qdecoder/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	qdecoder
 PORTVERSION=	12.0.4
