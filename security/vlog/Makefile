@@ -1,5 +1,5 @@
 # Created by: hannes sowa <satbran@web.de>
-# $FreeBSD: security/vlog/Makefile 337081 2013-12-20 19:25:49Z pawel $
+# $FreeBSD$
 
 PORTNAME=	vlog
 PORTVERSION=	1.1f
