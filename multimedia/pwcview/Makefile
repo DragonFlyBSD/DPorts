@@ -1,5 +1,5 @@
 # Created by: Andrew Thompson <thompsa@FreeBSD.org>
-# $FreeBSD: multimedia/pwcview/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pwcview
 PORTVERSION=	1.4.1
