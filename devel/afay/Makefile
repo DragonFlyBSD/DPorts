@@ -1,5 +1,5 @@
 # Created by: John M. Cooper <john_m_cooper@yahoo.com>
-# $FreeBSD: devel/afay/Makefile 341368 2014-01-27 10:47:06Z bapt $
+# $FreeBSD$
 
 PORTNAME=	afay
 PORTVERSION=	041111
