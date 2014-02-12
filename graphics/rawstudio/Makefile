@@ -1,5 +1,5 @@
 # Created by: Alex Samorukov <samm@os2.kiev.ua>
-# $FreeBSD: graphics/rawstudio/Makefile 340121 2014-01-17 21:52:57Z kwm $
+# $FreeBSD$
 
 PORTNAME=	rawstudio
 PORTVERSION=	2.0
