@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: archivers/p5-Archive-Extract-Libarchive/Makefile 333756 2013-11-14 14:05:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Archive-Extract-Libarchive
 PORTVERSION=	0.38
