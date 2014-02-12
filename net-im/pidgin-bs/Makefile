@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: net-im/pidgin-bs/Makefile 336838 2013-12-18 15:06:19Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	pidgin-bs
 PORTVERSION=	1.3.0
