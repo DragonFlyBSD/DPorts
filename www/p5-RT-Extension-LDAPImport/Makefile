@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Extension-LDAPImport/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	RT-Extension-LDAPImport
 PORTVERSION=	0.35
