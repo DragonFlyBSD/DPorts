@@ -1,5 +1,5 @@
 # Created by: Kouki Hashimoto <hsmtkk@gmail.com>
-# $FreeBSD: devel/py-unittestplus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		unittestplus
 PORTVERSION=		1.1.1
