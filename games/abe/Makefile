@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/abe/Makefile 340345 2014-01-19 19:48:41Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	abe
 PORTVERSION=	1.1
