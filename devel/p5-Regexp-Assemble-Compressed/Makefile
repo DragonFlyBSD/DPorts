@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Regexp-Assemble-Compressed/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Regexp-Assemble-Compressed
 PORTVERSION=	0.02
