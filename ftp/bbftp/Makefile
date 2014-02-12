@@ -1,5 +1,5 @@
 # Created by: Petr Holub <hopet@ics.muni.cz>
-# $FreeBSD: ftp/bbftp/Makefile 341090 2014-01-25 20:32:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bbftp
 PORTVERSION=	3.0.2
