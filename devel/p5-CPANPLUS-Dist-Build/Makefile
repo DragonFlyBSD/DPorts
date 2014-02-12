@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/p5-CPANPLUS-Dist-Build/Makefile 340425 2014-01-20 17:24:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CPANPLUS-Dist-Build
 PORTVERSION=	0.76
