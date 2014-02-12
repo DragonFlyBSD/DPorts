@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: www/p5-WWW-Scraper-ISBN-ORA_Driver/Makefile 333128 2013-11-07 15:56:48Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	WWW-Scraper-ISBN-ORA_Driver
 PORTVERSION=	0.20
