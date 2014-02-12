@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: misc/ondir/Makefile 329917 2013-10-09 18:19:05Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ondir
 PORTVERSION=	0.2.4
