@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: archivers/hlextract/Makefile 328312 2013-09-25 20:16:30Z danilo $
+# $FreeBSD$
 
 PORTNAME=	hlextract
 PORTVERSION=	2.4.4
