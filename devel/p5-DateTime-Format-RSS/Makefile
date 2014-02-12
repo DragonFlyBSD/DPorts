@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-DateTime-Format-RSS/Makefile 333888 2013-11-15 16:48:33Z mat $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-RSS
 PORTVERSION=	0.03000
