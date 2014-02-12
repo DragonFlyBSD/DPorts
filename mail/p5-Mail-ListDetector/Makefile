@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: mail/p5-Mail-ListDetector/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mail-ListDetector
 PORTVERSION=	1.04
