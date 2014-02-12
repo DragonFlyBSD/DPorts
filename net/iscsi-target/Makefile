@@ -1,5 +1,5 @@
 # Created by: Frederic Senault <fred@lacave.net>
-# $FreeBSD: net/iscsi-target/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iscsi
 PORTVERSION=	20080207
