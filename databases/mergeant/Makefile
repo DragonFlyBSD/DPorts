@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/mergeant/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/databases/mergeant/Makefile,v 1.20 2008/02/05 13:30:46 kwm Exp $
 
 PORTNAME=	mergeant
