@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/gnome-icons-gion/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gion
 PORTVERSION=	0.1.2
