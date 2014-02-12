@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/winpdb/Makefile 339813 2014-01-15 20:23:16Z mva $
+# $FreeBSD$
 
 PORTNAME=	winpdb
 PORTVERSION=	1.4.8
