@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: cad/fidocadj/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fidocadj
 PORTVERSION=	0.24

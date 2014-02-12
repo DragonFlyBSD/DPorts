@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: cad/fidocadj/files/fidocadj.sh.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/cad/fidocadj/files/fidocadj.sh.in 340851 2014-01-23 19:55:14Z mat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/fidocadj.jar" "$@"
