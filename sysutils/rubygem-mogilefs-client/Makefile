@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <trociny@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-mogilefs-client/Makefile 336668 2013-12-16 21:15:15Z trociny $
+# $FreeBSD$
 
 PORTNAME=	mogilefs-client
 PORTVERSION=	3.7.1
