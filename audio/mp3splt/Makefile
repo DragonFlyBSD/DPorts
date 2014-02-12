@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <q@uni.de>
-# $FreeBSD: audio/mp3splt/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mp3splt
 PORTVERSION=	2.5.2
