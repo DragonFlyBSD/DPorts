@@ -1,5 +1,5 @@
 # Created by: Sulev-Madis Silber <madis555@hot.ee>
-# $FreeBSD: devel/p5-Number-Bytes-Human/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Number-Bytes-Human
 PORTVERSION=	0.07
