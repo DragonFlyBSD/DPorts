@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Reproxy/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Reproxy
 PORTVERSION=	0.00004
