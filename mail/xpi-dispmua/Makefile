@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: mail/xpi-dispmua/Makefile 341201 2014-01-26 15:08:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dispmua
 PORTVERSION=	1.6.9
