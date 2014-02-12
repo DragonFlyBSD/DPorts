@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xbindkeys/Makefile 340876 2014-01-24 03:20:23Z eadler $
+# $FreeBSD$
 
 PORTNAME=	xbindkeys
 PORTVERSION=	1.8.6
