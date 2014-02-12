@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/clang34/files/patch-tools_clang_lib_Sema_SemaChecking.cpp 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/lang/clang34/files/patch-tools_clang_lib_Sema_SemaChecking.cpp 340725 2014-01-22 17:40:44Z mat $
 
 --- tools/clang/lib/Sema/SemaChecking.cpp.orig
 +++ tools/clang/lib/Sema/SemaChecking.cpp
