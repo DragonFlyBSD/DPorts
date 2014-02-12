@@ -1,8 +1,8 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: www/woof/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	woof
-PORTVERSION=	2009.12.27
+PORTVERSION=	2012.05.31
 CATEGORIES=	www
 MASTER_SITES=	http://www.home.unix-ag.org/simon/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/./-/g}
@@ -18,18 +18,11 @@ USE_PYTHON=	yes
 NO_BUILD=	yes
 PLIST_FILES=	bin/woof
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 270
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-woof-2009-12-27-python27.diff
-.endif
-
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}/${DISTFILES}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTFILES} ${PREFIX}/bin/woof
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTFILES} ${STAGEDIR}${PREFIX}/bin/woof
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
