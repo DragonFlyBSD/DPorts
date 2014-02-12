@@ -1,5 +1,5 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: dns/curvedns/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		curvedns
 PORTVERSION=		0.88.b
