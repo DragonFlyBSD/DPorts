@@ -1,5 +1,5 @@
 # Created by: Alexander Best <arundel@gmx.net>
-# $FreeBSD: emulators/vba/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vba
 PORTVERSION=	1.7.2
