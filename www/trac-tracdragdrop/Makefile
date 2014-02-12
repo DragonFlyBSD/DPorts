@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-tracdragdrop/Makefile 341188 2014-01-26 14:33:08Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tracdragdrop
 PORTVERSION=	0.12.0.10.${SVN_REV}
