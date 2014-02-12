@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: chinese/scim-array/Makefile 338188 2013-12-30 22:26:04Z antoine $
+# $FreeBSD$
 
 PORTNAME=	scim-array
 PORTVERSION=	1.0.1
