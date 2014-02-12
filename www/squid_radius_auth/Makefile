@@ -1,15 +1,18 @@
 # Created by: Michael Capp <myntric@exeonline.com>
-# $FreeBSD: www/squid_radius_auth/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	squid_radius_auth
 PORTVERSION=	1.10
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/contrib/squid_radius_auth/
 
-MAINTAINER=	freebsd@falz.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RADIUS authenticator for squid proxy 2.5 and later
 
-MAN8=		squid_radius_auth.8
+.include <bsd.port.pre.mk>
 
-NO_STAGE=	yes
-.include <bsd.port.mk>
+post-patch:
+	${REINPLACE_CMD} 's|= gcc|?= gcc|' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} 's|PREFIX  = /usr/local|PREFIX  = ${PREFIX}|' ${WRKSRC}/Make.inc
+
+.include <bsd.port.post.mk>
