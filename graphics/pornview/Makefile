@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: graphics/pornview/Makefile 329747 2013-10-07 23:40:23Z marino $
+# $FreeBSD$
 
 PORTNAME=	pornview
 PORTVERSION=	0.2.0.p.1
