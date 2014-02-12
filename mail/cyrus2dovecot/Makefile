@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: mail/cyrus2dovecot/Makefile 334671 2013-11-23 14:14:16Z ak $
+# $FreeBSD$
 
 PORTNAME=	cyrus2dovecot
 PORTVERSION=	1.2
