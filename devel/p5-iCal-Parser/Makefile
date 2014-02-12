@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-iCal-Parser/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	iCal-Parser
 PORTVERSION=	1.20
