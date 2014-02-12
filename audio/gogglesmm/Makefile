@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: audio/gogglesmm/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gogglesmm
 PORTVERSION=	0.12.7
