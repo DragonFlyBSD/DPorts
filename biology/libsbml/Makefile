@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/libsbml/Makefile 339844 2014-01-15 22:50:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libsbml
 PORTVERSION=	4.2.0
