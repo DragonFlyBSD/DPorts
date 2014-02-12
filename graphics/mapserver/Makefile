@@ -1,5 +1,5 @@
 # Created by: Douglas K. Rand <rand@meridian-enviro.com>
-# $FreeBSD: graphics/mapserver/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=		mapserver
 PORTVERSION=		6.4.0
