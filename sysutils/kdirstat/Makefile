@@ -1,5 +1,5 @@
 # Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-# $FreeBSD: sysutils/kdirstat/Makefile 340298 2014-01-19 13:51:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	kdirstat
 PORTVERSION=	2.7.4
