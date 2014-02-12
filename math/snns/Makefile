@@ -1,5 +1,5 @@
 # Created by: reg@shale.csir.co.za
-# $FreeBSD: math/snns/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	snns
 PORTVERSION=	4.3
@@ -20,6 +20,9 @@ CONFIGURE_ARGS=	--prefix=${PREFIX}/lib/snns --enable-global \
 MAKE_JOBS_UNSAFE=	yes
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-extract:
