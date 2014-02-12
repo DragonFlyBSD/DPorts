@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/diffmark/Makefile 336933 2013-12-19 16:06:34Z pawel $
+# $FreeBSD$
 
 PORTNAME=	diffmark
 PORTVERSION=	0.10
