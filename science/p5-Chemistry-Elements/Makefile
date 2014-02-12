@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: science/p5-Chemistry-Elements/Makefile 332938 2013-11-06 01:32:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Chemistry-Elements
 PORTVERSION=	1.07
