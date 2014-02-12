@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: databases/slony1v2/Makefile 333243 2013-11-08 16:09:34Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	slony1v2
 PORTVERSION=	2.2.1

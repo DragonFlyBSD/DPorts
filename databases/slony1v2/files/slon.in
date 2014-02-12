@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/slony1v2/files/slon.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/slony1v2/files/slon.in 340872 2014-01-24 00:14:07Z mat $
 # Modified by Brian A. Seklecki <bseklecki@collaborativefusion.com>
 #                               <lavalamp@spiritual-machines.org>
 # $Id$ 
