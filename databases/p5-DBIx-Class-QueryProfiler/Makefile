@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: databases/p5-DBIx-Class-QueryProfiler/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 PORTNAME=	DBIx-Class-QueryProfiler
 PORTVERSION=	0.05
 CATEGORIES=	databases perl5
