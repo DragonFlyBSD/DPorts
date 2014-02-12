@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: devel/upslug/Makefile 340953 2014-01-24 23:58:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	upslug
 PORTVERSION=	2.11
