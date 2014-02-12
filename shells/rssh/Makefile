@@ -1,5 +1,5 @@
 # Created by: enigmatyc
-# $FreeBSD: shells/rssh/Makefile 342195 2014-02-01 17:18:14Z pawel $
+# $FreeBSD$
 
 PORTNAME=	rssh
 PORTVERSION=	2.3.4
