@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/extace/files/patch-src::color_win.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/extace/files/patch-src::color_win.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/color_win.c.orig	Wed Feb 26 01:22:19 2003
 +++ src/color_win.c	Fri May 23 18:26:18 2003
