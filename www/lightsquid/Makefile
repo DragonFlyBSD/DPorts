@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <info@logvinov.com>
-# $FreeBSD: www/lightsquid/Makefile 339000 2014-01-07 11:15:59Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	lightsquid
 PORTVERSION=	1.8
