@@ -1,5 +1,5 @@
 # Created by: Alan Snelson <alan@wave2.co.uk>
-# $FreeBSD: sysutils/epylog/Makefile 336499 2013-12-14 23:23:45Z wg $
+# $FreeBSD$
 
 PORTNAME=	epylog
 PORTVERSION=	1.0.3
