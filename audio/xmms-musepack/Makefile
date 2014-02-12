@@ -1,5 +1,5 @@
 # Created by: Walter Hop <walter@binity.com>
-# $FreeBSD: audio/xmms-musepack/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xmms-musepack
 PORTVERSION=	1.8.0
@@ -9,6 +9,9 @@ MASTER_SITES=	http://dl.slik.org/musepack/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS input plugin for playing MPC Musepack (.mpc, .mp+) files
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
