@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: textproc/p5-XML-Smart/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-Smart
 PORTVERSION=	1.79
@@ -24,6 +24,8 @@ USES=		perl5
 USE_PERL5=	configure
 
 PORTDOCS=	Changes README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
