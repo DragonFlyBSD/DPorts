@@ -1,5 +1,5 @@
 # Created by: cartola (Carlos E. G. Carvalho)
-# $FreeBSD: deskutils/freemind/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	freemind
 PORTVERSION=	0.9.0
