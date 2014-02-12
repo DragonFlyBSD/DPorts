@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: news/slrnconf/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	slrnconf
 PORTVERSION=	0.8.4
