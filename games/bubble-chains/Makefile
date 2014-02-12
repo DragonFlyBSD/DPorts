@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/bubble-chains/Makefile 334602 2013-11-22 18:48:31Z makc $
+# $FreeBSD$
 
 PORTNAME=	bubble-chains
 PORTVERSION=	0.1.1
