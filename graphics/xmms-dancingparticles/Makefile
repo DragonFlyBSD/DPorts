@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: graphics/xmms-dancingparticles/Makefile 340235 2014-01-19 08:58:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dancingparticles
 PORTVERSION=	0.6
