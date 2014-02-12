@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/rubygem-cuba/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	cuba
 PORTVERSION=	3.1.0
