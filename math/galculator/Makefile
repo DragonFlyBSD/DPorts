@@ -1,4 +1,4 @@
-# $FreeBSD: math/galculator/Makefile 329323 2013-10-04 15:21:09Z naddy $
+# $FreeBSD$
 
 PORTNAME=	galculator
 PORTVERSION=	2.1.2
