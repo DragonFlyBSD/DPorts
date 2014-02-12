@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-CGI-Expand/Makefile 330289 2013-10-14 11:03:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CGI-Expand
 PORTVERSION=	2.04
