@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-playwolf/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	playwolf
 PORTVERSION=	0.8.1
