@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: multimedia/ppm2fli/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ppm2fli
 PORTVERSION=	2.1
