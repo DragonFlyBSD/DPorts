@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: x11-wm/fvwm2-i18n/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 CATEGORIES=	x11-wm
 PKGNAMESUFFIX=	2-i18n
