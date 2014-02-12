@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/twind/Makefile 328506 2013-09-27 17:57:38Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	twind
 PORTVERSION=	1.1.0
