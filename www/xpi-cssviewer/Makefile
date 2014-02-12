@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-cssviewer/Makefile 341199 2014-01-26 15:07:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cssviewer
 PORTVERSION=	1.0.3
