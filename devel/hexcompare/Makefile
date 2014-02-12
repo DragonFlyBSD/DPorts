@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/hexcompare/Makefile 341505 2014-01-28 07:44:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hexcompare
 PORTVERSION=	1.0.2
