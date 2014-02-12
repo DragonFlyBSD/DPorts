@@ -1,5 +1,5 @@
 # Created by: Eric Turgeon <ericturgeon.bsd@gmail.com>
-# $FreeBSD: x11/lxrandr/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	lxrandr
 PORTVERSION=	0.1.2
