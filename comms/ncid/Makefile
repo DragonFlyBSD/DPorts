@@ -1,5 +1,5 @@
 # Created by: David
-# $FreeBSD: comms/ncid/Makefile 341737 2014-01-29 13:33:39Z gahr $
+# $FreeBSD$
 
 PORTNAME=	ncid
 PORTVERSION=	0.84
