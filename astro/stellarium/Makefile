@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: astro/stellarium/Makefile 334279 2013-11-19 01:49:40Z danfe $
+# $FreeBSD$
 
 PORTNAME=	stellarium
 PORTVERSION=	0.12.4
