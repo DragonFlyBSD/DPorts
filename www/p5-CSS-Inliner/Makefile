@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: www/p5-CSS-Inliner/Makefile 340150 2014-01-18 08:14:23Z culot $
+# $FreeBSD$
 
 PORTNAME=	CSS-Inliner
 PORTVERSION=	3936
