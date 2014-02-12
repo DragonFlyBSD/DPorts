@@ -1,5 +1,5 @@
 # Created by: Sue Blake <sue@FreeBSD.org>
-# $FreeBSD: audio/abcselect/Makefile 334752 2013-11-24 18:28:46Z bapt $
+# $FreeBSD$
 
 PORTNAME=	abcselect
 PORTVERSION=	1.5
