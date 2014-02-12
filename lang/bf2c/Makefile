@@ -1,5 +1,5 @@
 # Created by: rene
-# $FreeBSD: lang/bf2c/Makefile 336561 2013-12-15 17:41:39Z rene $
+# $FreeBSD$
 
 PORTNAME=	bf2c
 PORTVERSION=	1.3.1
