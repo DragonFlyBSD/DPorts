@@ -1,5 +1,5 @@
 # Created by: Janky Jay <ek@purplehat.org>
-# $FreeBSD: security/maia/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	maia
 DISTVERSION=	1.0.3-${SVNREVISION}

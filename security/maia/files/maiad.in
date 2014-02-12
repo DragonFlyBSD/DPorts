@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/maia/files/maiad.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/maia/files/maiad.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: maiad
 # REQUIRE: LOGIN
