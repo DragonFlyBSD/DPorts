@@ -1,4 +1,4 @@
-# $FreeBSD: comms/qsstv/Makefile 339075 2014-01-08 08:36:34Z makc $
+# $FreeBSD$
 
 PORTNAME=	qsstv
 PORTVERSION=	7.1.7
