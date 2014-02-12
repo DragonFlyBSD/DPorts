@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: textproc/coccigrep/Makefile 337616 2013-12-26 21:37:51Z pawel $
+# $FreeBSD$
 
 PORTNAME=	coccigrep
 PORTVERSION=	1.12
