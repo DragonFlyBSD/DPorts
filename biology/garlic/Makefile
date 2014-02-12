@@ -1,5 +1,5 @@
 # Created by: maho@FreeBSD.org
-# $FreeBSD: biology/garlic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	garlic
 PORTVERSION=	1.6
