@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: misc/libmetalink/Makefile 338516 2014-01-03 01:53:21Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libmetalink
 PORTVERSION=	0.0.3
