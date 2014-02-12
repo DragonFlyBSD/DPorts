@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/vor/Makefile 329261 2013-10-04 02:17:29Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	vor
 PORTVERSION=	0.5.5
