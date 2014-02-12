@@ -1,5 +1,5 @@
 # Created by: WATANABE junya <junya-w@remus.dti.ne.jp>
-# $FreeBSD: japanese/mtools/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mtools
 PORTVERSION=	3.9.6
