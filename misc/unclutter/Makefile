@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: misc/unclutter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	unclutter
 PORTVERSION=	8
