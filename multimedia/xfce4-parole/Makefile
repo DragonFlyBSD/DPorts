@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/xfce4-parole/Makefile 341436 2014-01-27 17:35:46Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	parole
 PORTVERSION=	0.5.4
