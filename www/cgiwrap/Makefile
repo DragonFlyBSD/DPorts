@@ -1,5 +1,5 @@
 # Created by: Brent J. Nordquist <bjn@visi.com>
-# $FreeBSD: www/cgiwrap/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cgiwrap
 PORTVERSION=	4.1
