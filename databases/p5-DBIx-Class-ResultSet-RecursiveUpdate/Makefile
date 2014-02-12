@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-ResultSet-RecursiveUpdate/Makefile 333318 2013-11-09 18:48:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-ResultSet-RecursiveUpdate
 PORTVERSION=	0.31
