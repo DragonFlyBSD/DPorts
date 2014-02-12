@@ -1,4 +1,4 @@
-# $FreeBSD: audio/opus-tools/Makefile 336844 2013-12-18 16:05:42Z naddy $
+# $FreeBSD$
 
 PORTNAME=	opus-tools
 PORTVERSION=	0.1.8
