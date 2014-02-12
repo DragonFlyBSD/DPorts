@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmmsctrl/Makefile 332299 2013-10-31 23:33:13Z jhale $
+# $FreeBSD$
 
 PORTNAME=	xmmsctrl
 PORTVERSION=	1.8
