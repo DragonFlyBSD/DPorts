@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: astro/starplot/Makefile 331558 2013-10-25 06:28:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	starplot
 PORTVERSION=	0.95.5
