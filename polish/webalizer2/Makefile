@@ -1,5 +1,5 @@
 # Created by: wtp@bsdguru.org
-# $FreeBSD: polish/webalizer2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 CATEGORIES=	polish
 
