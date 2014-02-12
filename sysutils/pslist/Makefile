@@ -1,5 +1,5 @@
 # Created by: roam@orbitel.bg
-# $FreeBSD: sysutils/pslist/Makefile 333977 2013-11-16 03:33:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	pslist
 PORTVERSION=	1.3
