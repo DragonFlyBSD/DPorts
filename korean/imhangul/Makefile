@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/imhangul/Makefile 338683 2014-01-04 23:27:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	imhangul
 PORTVERSION=	${GTKVER}.1.1
