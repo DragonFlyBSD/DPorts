@@ -1,5 +1,5 @@
 # Created by: Autrijus Tang <autrijus@autrijus.org>
-# $FreeBSD: mail/sympa/Makefile 338394 2014-01-01 20:46:35Z crees $
+# $FreeBSD$
 
 PORTNAME=	sympa
 PORTVERSION=	6.1.17

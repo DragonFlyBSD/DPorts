@@ -4,7 +4,7 @@
 # REQUIRE: LOGIN cleanvar %%REQ_MYSQL%% %%REQ_PGSQL%% 
 # KEYWORD: shutdown
 #
-# $FreeBSD: mail/sympa/files/sympa.in 314178 2013-03-14 19:14:47Z crees $
+# $FreeBSD: head/mail/sympa/files/sympa.in 314178 2013-03-14 19:14:47Z crees $
 #
 # Written by Michel Bouissou  20/07/2000
 #
