@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-PassphraseColumn/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-PassphraseColumn
 PORTVERSION=	0.02
