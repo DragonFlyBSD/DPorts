@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: lang/p5-JavaScript-Squish/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	JavaScript-Squish
 PORTVERSION=	0.07
