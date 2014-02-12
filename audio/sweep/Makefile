@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: audio/sweep/Makefile 330544 2013-10-16 21:19:39Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	sweep
 PORTVERSION=	0.9.3
-PORTREVISION=	8
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	SF
