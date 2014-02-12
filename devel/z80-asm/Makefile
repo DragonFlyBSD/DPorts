@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: devel/z80-asm/Makefile 341830 2014-01-30 10:30:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	z80-asm
 PORTVERSION=	2.4.p3
