@@ -1,5 +1,5 @@
 # Created by: Darren Pilgrim <ports.maintainer@evilphi.com>
-# $FreeBSD: mail/postfix-policyd-spf-perl/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	postfix-policyd-spf-perl
 PORTVERSION=	2.007
