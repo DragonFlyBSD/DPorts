@@ -1,5 +1,5 @@
 # Created by: Maksym Sobolyev <sobomax@pbxpress.it>
-# $FreeBSD: net/p5-Net-Syslog/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Syslog
 PORTVERSION=	0.04
