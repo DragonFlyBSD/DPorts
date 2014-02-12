@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: audio/gnormalize/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnormalize
 PORTVERSION=	0.63
