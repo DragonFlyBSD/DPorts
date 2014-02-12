@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: textproc/simplehtmldom/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=		simplehtmldom
 DISTVERSION=		1.5
