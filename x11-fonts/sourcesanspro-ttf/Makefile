@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: x11-fonts/sourcesanspro-ttf/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	sourcesanspro-ttf
 PORTVERSION=	1.050
