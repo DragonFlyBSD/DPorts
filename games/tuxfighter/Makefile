@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/tuxfighter/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tuxfighter
 PORTVERSION=	54
