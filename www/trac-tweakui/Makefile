@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: www/trac-tweakui/Makefile 337587 2013-12-26 18:10:25Z wg $
+# $FreeBSD$
 
 PORTNAME=	tweakui
 PORTVERSION=	0.1.7413
