@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: lang/python-doc-html/Makefile 334353 2013-11-19 21:44:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	python-doc-${DOCFORMAT}
 PORTVERSION=	${PYTHON_PORTVERSION}
