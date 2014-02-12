@@ -1,6 +1,6 @@
 #!/bin/sh
 # Start or stop strongswan
-# $FreeBSD: security/strongswan/files/strongswan.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/strongswan/files/strongswan.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: strongswan
 # REQUIRE: DAEMON

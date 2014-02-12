@@ -1,8 +1,9 @@
 # Created by: Riaan Kruger <riaank@gmail.com>
-# $FreeBSD: security/strongswan/Makefile 341405 2014-01-27 13:35:40Z decke $
+# $FreeBSD$
 
 PORTNAME=	strongswan
 PORTVERSION=	5.1.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://download.strongswan.org/ \
 		http://download2.strongswan.org/
@@ -10,7 +11,7 @@ MASTER_SITES=	http://download.strongswan.org/ \
 MAINTAINER=	strongswan@nanoteq.com
 COMMENT=	Open Source IKEv2 IPsec-based VPN solution
 
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
 
 USE_BZIP2=	yes
 USE_OPENSSL=	yes
@@ -40,10 +41,6 @@ CONFIGURE_ARGS=	--enable-kernel-pfkey \
 		--with-group=wheel  \
 		--with-lib-prefix=${PREFIX}
 
-# Man pages with default install
-MAN5=	ipsec.conf.5 ipsec.secrets.5 strongswan.conf.5
-MAN8=	ipsec.8 _updown.8 _updown_espmark.8
-
 OPTIONS_DEFINE=	CURL EAPAKA3GPP2 EAPDYNAMIC EAPRADIUS EAPSIMFILE IKEv1 \
 		IPSECKEY KERNELLIBIPSEC LOADTESTER LDAP MYSQL SQLITE \
 		TESTVECTOR UNBOUND XAUTH
@@ -63,9 +60,9 @@ XAUTH_DESC=	Enable XAuth password verification
 
 # Extra options
 CURL_CONFIGURE_ON=	--enable-curl
-CURL_LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+CURL_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 EAPAKA3GPP2_CONFIGURE_ON=	--enable-eap-aka --enable-eap-aka-3gpp2
-EAPAKA3GPP2_LIB_DEPENDS=gmp:${PORTSDIR}/math/gmp
+EAPAKA3GPP2_LIB_DEPENDS=libgmp.so:${PORTSDIR}/math/gmp
 EAPDYNAMIC_CONFIGURE_ON=--enable-eap-dynamic
 EAPRADIUS_CONFIGURE_ON=	--enable-eap-radius
 EAPSIMFILE_CONFIGURE_ON=--enable-eap-sim --enable-eap-sim-file
@@ -78,10 +75,10 @@ LDAP_USE=		USE_OPENLDAP=yes
 MYSQL_CONFIGURE_ON=	--enable-mysql
 MYSQL_USE=		USE_MYSQL=yes
 SQLITE_CONFIGURE_ON=	--enable-sqlite
-SQLITE_LIB_DEPENDS=	sqlite3:${PORTSDIR}/databases/sqlite3
+SQLITE_LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 TESTVECTOR_CONFIGURE_ON=--enable-test-vectors
 UNBOUND_CONFIGURE_ON=	--enable-unbound
-UNBOUND_LIB_DEPENDS=	unbound:${PORTSDIR}/dns/unbound
+UNBOUND_LIB_DEPENDS=	libunbound.so:${PORTSDIR}/dns/unbound
 XAUTH_CONFIGURE_ON=	--enable-xauth-eap --enable-xauth-generic
 
 .include <bsd.port.options.mk>
