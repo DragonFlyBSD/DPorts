@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/qorganizer/Makefile 334603 2013-11-22 18:48:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	qorganizer
 PORTVERSION=	3.1
