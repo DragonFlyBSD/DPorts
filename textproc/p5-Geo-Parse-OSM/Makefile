@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: textproc/p5-Geo-Parse-OSM/Makefile 328920 2013-10-01 05:53:47Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Geo-Parse-OSM
 PORTVERSION=	0.42
