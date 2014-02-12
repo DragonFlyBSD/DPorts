@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-optparse-applicative/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	optparse-applicative
 PORTVERSION=	0.5.2.1
