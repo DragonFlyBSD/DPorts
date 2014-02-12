@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: databases/py-rrdtool_lgpl/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	rrdtool_lgpl
 PORTVERSION=	1.0b1
