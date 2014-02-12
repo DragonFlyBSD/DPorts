@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xshisen/Makefile 342275 2014-02-02 12:05:23Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xshisen
 PORTVERSION=	1.51
