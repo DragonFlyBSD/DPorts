@@ -1,4 +1,4 @@
-# $FreeBSD: comms/splat/Makefile 338056 2013-12-30 00:34:53Z db $
+# $FreeBSD$
 
 PORTNAME=	splat
 PORTVERSION=	1.4.0
