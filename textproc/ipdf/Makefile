@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/ipdf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ipdf
 PORTVERSION=	1.0.0
