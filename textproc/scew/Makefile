@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@gahr.ch>
-# $FreeBSD: textproc/scew/Makefile 340018 2014-01-17 09:10:58Z gahr $
+# $FreeBSD$
 
 PORTNAME=	scew
 PORTVERSION=	1.1.5
