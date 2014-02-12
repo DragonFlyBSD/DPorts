@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: www/uwsgi/Makefile 338098 2013-12-30 12:05:01Z demon $
+# $FreeBSD$
 
 PORTNAME=	uwsgi
 PORTVERSION=	2.0
