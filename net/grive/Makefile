@@ -1,8 +1,9 @@
 # Created by: Key-Teck SIN <ktsin@acm.org>
-# $FreeBSD: net/grive/Makefile 335185 2013-11-29 15:13:30Z makc $
+# $FreeBSD$
 
 PORTNAME=	grive
 PORTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	ktsin@acm.org
