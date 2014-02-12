@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: archivers/deb2targz/files/deb2targz.sh 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/archivers/deb2targz/files/deb2targz.sh 340851 2014-01-23 19:55:14Z mat $
 #
 
 PATH=/bin:/usr/bin
