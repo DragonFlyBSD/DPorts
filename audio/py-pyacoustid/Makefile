@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-pyacoustid/Makefile 341540 2014-01-28 12:42:40Z feld $
+# $FreeBSD$
 
 PORTNAME=	pyacoustid
 PORTVERSION=	1.0.0
