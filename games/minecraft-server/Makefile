@@ -1,5 +1,5 @@
 # Created by: Martin Kropfinger
-# $FreeBSD: games/minecraft-server/Makefile 331942 2013-10-29 12:47:01Z jhale $
+# $FreeBSD$
 
 PORTNAME=	minecraft-server
 PORTVERSION=	1.4.7
