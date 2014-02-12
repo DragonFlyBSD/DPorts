@@ -1,5 +1,5 @@
 # Created by: Geistteufel <geistteufel@yahoo.fr>
-# $FreeBSD: devel/p5-Dancer-Debug/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Debug
 PORTVERSION=	0.03
