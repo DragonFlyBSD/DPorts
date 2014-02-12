@@ -1,5 +1,5 @@
 # Created by: wollman
-# $FreeBSD: www/mod_auth_kerb2/Makefile 336512 2013-12-15 10:18:00Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_kerb
 PORTVERSION=	5.4
