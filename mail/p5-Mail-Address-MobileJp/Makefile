@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: mail/p5-Mail-Address-MobileJp/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mail-Address-MobileJp
 PORTVERSION=	0.09
