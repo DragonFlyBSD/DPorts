@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: head/lang/p2c/Makefile 336934 2013-12-19 16:17:39Z pawel $
+# $FreeBSD$
 
 PORTNAME=	p2c
 PORTVERSION=	1.21a
