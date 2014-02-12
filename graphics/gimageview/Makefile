@@ -1,5 +1,5 @@
 # Created by: TATEISHI Katsuyuki <katsu@iec.hiroshima-u.ac.jp>
-# $FreeBSD: graphics/gimageview/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gimageview
 PORTVERSION=	0.2.27
