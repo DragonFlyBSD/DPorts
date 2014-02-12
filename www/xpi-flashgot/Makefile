@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-flashgot/Makefile 341203 2014-01-26 15:09:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	flashgot
 PORTVERSION=	1.3.7
