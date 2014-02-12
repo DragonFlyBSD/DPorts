@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/hs-gtkglext/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	gtkglext
 PORTVERSION=	0.12.1
