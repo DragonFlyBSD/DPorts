@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-bonk/Makefile 328596 2013-09-28 16:59:55Z naddy $
+# $FreeBSD$
 
 PORTNAME=	xmms-bonk
 PORTVERSION=	0.12
