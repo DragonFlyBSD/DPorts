@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/goblin/Makefile 328930 2013-10-01 09:41:10Z gahr $
+# $FreeBSD$
 
 PORTNAME=	goblin
 DISTVERSION=	2.8b30
