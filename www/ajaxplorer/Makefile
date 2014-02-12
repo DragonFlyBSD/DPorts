@@ -1,4 +1,4 @@
-# $FreeBSD: www/ajaxplorer/Makefile 330539 2013-10-16 20:58:10Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	ajaxplorer
 PORTVERSION=	5.0.4

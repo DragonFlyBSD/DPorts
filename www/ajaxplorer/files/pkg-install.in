@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/ajaxplorer/files/pkg-install.in 322446 2013-07-07 15:48:16Z madpilot $
+# $FreeBSD: head/www/ajaxplorer/files/pkg-install.in 322446 2013-07-07 15:48:16Z madpilot $
 
 if [ "$2" != "POST-INSTALL" ]; then
 	exit 0

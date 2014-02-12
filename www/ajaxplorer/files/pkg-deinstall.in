@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/ajaxplorer/files/pkg-deinstall.in 319563 2013-06-01 13:05:48Z madpilot $
+# $FreeBSD: head/www/ajaxplorer/files/pkg-deinstall.in 319563 2013-06-01 13:05:48Z madpilot $
 
 if [ "$2" != "POST-DEINSTALL" ]; then
 	exit 0
