@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/avoision/Makefile 334649 2013-11-23 08:57:06Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	avoision
 PORTVERSION=	1.1
