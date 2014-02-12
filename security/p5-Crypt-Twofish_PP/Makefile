@@ -1,5 +1,5 @@
 # Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
-# $FreeBSD: security/p5-Crypt-Twofish_PP/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Twofish_PP
 PORTVERSION=	0.17
