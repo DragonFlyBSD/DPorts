@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-newmail/Makefile 329440 2013-10-05 11:25:29Z pawel $
+# $FreeBSD$
 
 PORTNAME=	newmail
 PORTREVISION=	0
