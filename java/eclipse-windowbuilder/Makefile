@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: java/eclipse-windowbuilder/Makefile 340896 2014-01-24 13:54:42Z ale $
+# $FreeBSD$
 
 PORTNAME=	windowbuilder
 PORTVERSION=	1.6.1
