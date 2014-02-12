@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: irc/p5-POE-Component-IRC-Object/Makefile 332729 2013-11-04 14:28:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-IRC-Object
 PORTVERSION=	0.02
