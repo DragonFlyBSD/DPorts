@@ -1,5 +1,5 @@
 # Created by: Igor Vinokurov <igor@zynaps.ru>
-# $FreeBSD: www/p5-Apache-ASP/Makefile 334678 2013-11-23 15:25:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Apache-ASP
 PORTVERSION=	2.62
