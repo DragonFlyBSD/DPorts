@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: deskutils/p5-Goo/Makefile 333896 2013-11-15 17:40:36Z mat $
+# $FreeBSD$
 
 PORTNAME=	Goo
 PORTVERSION=	0.09
