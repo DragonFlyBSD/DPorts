@@ -1,5 +1,5 @@
 # Created by: jmacd@FreeBSD.org
-# $FreeBSD: lang/mit-scheme/Makefile 333106 2013-11-07 14:59:22Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	mit-scheme
 PORTVERSION=	9.1.1
