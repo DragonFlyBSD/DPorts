@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/R-cran-diagram/Makefile 339351 2014-01-10 13:20:23Z tota $
+# $FreeBSD$
 
 PORTNAME=	diagram
 PORTVERSION=	1.6.2
