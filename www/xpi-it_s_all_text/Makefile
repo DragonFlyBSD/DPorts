@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-it_s_all_text/Makefile 341209 2014-01-26 15:10:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	it_s_all_text
 PORTVERSION=	1.8.1
