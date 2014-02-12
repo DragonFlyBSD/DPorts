@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: graphics/barbecue/Makefile 338373 2014-01-01 09:16:24Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	barbecue
 DISTVERSION=	1.5-beta1
@@ -32,6 +32,8 @@ PLIST_SUB=	TOMCATDIR=${TOMCATDIR:S|^${PREFIX}/||}
 OPTIONS_SINGLE=	AS
 OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
