@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: emulators/wine-mono-devel/Makefile 338579 2014-01-03 20:14:20Z dbn $
+# $FreeBSD$
 
 PORTNAME=	wine-mono
 DISTVERSION=	4.5.2
