@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-BSON/Makefile 328813 2013-09-30 15:27:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	BSON
 PORTVERSION=	0.11
