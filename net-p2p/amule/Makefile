@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net-p2p/amule/Makefile 339446 2014-01-11 20:03:27Z bar $
+# $FreeBSD$
 
 PORTNAME=	amule
 PORTVERSION=	2.3.1
