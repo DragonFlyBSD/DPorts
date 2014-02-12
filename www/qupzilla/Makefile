@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/qupzilla/Makefile 342544 2014-02-04 14:53:26Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	qupzilla
 PORTVERSION=	1.6.1
