@@ -1,5 +1,5 @@
 # Created by: Alexander <alexander.4mail@gmail.com>
-# $FreeBSD: misc/fbless/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fbless
 PORTVERSION=	0.2.2
