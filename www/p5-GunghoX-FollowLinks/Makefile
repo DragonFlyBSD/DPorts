@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-GunghoX-FollowLinks/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	GunghoX-FollowLinks
 PORTVERSION=	0.00006
