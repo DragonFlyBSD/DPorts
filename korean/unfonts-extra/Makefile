@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: korean/unfonts-extra/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTVERSION=	1.0.1
 PORTREVISION=	1
