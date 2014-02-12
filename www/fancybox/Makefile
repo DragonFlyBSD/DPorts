@@ -1,21 +1,24 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/fancybox/Makefile 341245 2014-01-26 16:45:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fancybox
-PORTVERSION=	1.3.4
+PORTVERSION=	2.1.5
 CATEGORIES=	www
-MASTER_SITES=	GOOGLE_CODE
-DISTNAME=	jquery.${PORTNAME}-${PORTVERSION}
+MASTER_SITES=	GH
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JavaScript library for image/html/multimedia content display
 
 NO_BUILD=	yes
-USE_ZIP=	yes
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	fancyapps
+GH_PROJECT=	fancyBox
+GH_TAGNAME=	v${PORTVERSION}
+GH_COMMIT=	18d1712
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}/
-	cd ${WRKSRC}/${PORTNAME}/ && ${INSTALL_DATA} * ${STAGEDIR}${WWWDIR}/
-	${CHOWN} -R ${WWWOWN}:${WWWGRP} ${STAGEDIR}${WWWDIR}/
+	cd ${WRKSRC}/source/ && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}/
 
 .include <bsd.port.mk>
