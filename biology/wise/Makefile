@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: biology/wise/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wise
 PORTVERSION=	2.4.1
