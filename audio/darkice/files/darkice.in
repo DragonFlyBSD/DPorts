@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: audio/darkice/files/darkice.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/audio/darkice/files/darkice.in 340851 2014-01-23 19:55:14Z mat $
 #
 # PROVIDE: darkice
 # REQUIRE: LOGIN
