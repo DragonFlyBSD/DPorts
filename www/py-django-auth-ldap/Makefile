@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: www/py-django-auth-ldap/Makefile 340647 2014-01-21 20:02:18Z rm $
+# $FreeBSD$
 
 PORTNAME=	django-auth-ldap
 PORTVERSION=	1.1.7
