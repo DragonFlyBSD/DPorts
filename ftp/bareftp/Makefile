@@ -1,5 +1,5 @@
 # Created by: Chris Petrik (chris@officialunix.com)
-# $FreeBSD: ftp/bareftp/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bareftp
 PORTVERSION=	0.3.10
