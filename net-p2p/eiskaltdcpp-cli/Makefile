@@ -1,5 +1,5 @@
 # Created by: Maxim Ignatenko <gelraen.ua@gmail.com>
-# $FreeBSD: net-p2p/eiskaltdcpp-cli/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eiskaltdcpp-cli
 PORTVERSION=	2.2.4
