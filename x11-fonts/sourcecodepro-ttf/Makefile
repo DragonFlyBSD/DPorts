@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: x11-fonts/sourcecodepro-ttf/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	sourcecodepro-ttf
 PORTVERSION=	1.017
