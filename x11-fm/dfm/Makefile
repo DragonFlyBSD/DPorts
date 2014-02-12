@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: x11-fm/dfm/Makefile 341176 2014-01-26 14:06:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dfm
 PORTVERSION=	0.99.9
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.kaisersite.de/dfm/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OS/2 - like Desktop-File-Manager for X Window System
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
