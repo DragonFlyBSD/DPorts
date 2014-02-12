@@ -1,5 +1,5 @@
 
-$FreeBSD: comms/tits/files/patch-tty.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/comms/tits/files/patch-tty.c 340725 2014-01-22 17:40:44Z mat $
 
 --- tty.c	2001/04/18 14:43:52	1.1
 +++ tty.c	2001/04/18 14:45:57
