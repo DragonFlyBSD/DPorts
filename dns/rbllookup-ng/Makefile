@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/rbllookup-ng/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rbllookup-ng
 PORTVERSION=	1.0
