@@ -1,8 +1,9 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond28_product_cost_fifo/Makefile 334432 2013-11-20 17:20:57Z bsam $
+# $FreeBSD$
 
 PORTNAME=	trytond28_product_cost_fifo
 PORTVERSION=	2.8.1
+PORTREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	https://pypi.python.org/packages/source/t/trytond_product_cost_fifo/ \
 		http://downloads.tryton.org/${PORTVERSION:R}/
@@ -19,7 +20,8 @@ RUN_DEPENDS=	trytond28_product>=2.8.0:${PORTSDIR}/finance/trytond28_product \
 CONFLICTS=	trytond_product_cost_fifo-2.[46].*
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYEASYINSTALL_EGG=${DISTNAME}-py${PYTHON_VER}${PYEASYINSTALL_OSARCH}.egg
 
 .include <bsd.port.mk>
