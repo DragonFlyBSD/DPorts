@@ -1,5 +1,5 @@
 # Created by: Martin Blapp <mbr@FreeBSD.org>
-# $FreeBSD: audio/uade/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	uade
 PORTVERSION=	2.13
