@@ -1,5 +1,5 @@
 # Created by: Frank Gruender
-# $FreeBSD: lang/yabasic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	yabasic
 PORTVERSION=	2.763
@@ -16,6 +16,8 @@ GNU_CONFIGURE=	yes
 
 PORTDOCS=	yabasic.htm
 PLIST_FILES=	bin/yabasic man/man1/yabasic.1.gz
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
