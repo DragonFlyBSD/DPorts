@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: archivers/ruby-lha/Makefile 338706 2014-01-05 00:19:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lha
 PORTVERSION=	0.8.1
