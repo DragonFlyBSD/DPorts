@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/clawsker/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD$
 
 PORTNAME=	clawsker
 PORTVERSION=	0.7.10
