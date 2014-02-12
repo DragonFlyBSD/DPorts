@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: chinese/p5-Text-Greeking-zh_TW/Makefile 328366 2013-09-26 14:35:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Text-Greeking-zh_TW
 PORTVERSION=	1.0
