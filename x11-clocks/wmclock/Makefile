@@ -1,5 +1,5 @@
 # Created by: Per Otterstr=F6m <pelle@fukt.bth.se>
-# $FreeBSD: x11-clocks/wmclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	wmclock
 PORTVERSION=	1.0.14
