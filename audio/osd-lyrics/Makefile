@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/osd-lyrics/Makefile 337367 2013-12-24 16:03:44Z pawel $
+# $FreeBSD$
 
 PORTNAME=	osdlyrics
 PORTVERSION=	0.4.3
