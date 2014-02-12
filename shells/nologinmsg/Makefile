@@ -1,5 +1,5 @@
 # Created by: Richard Rose <freebsd-security@rikrose.net>
-# $FreeBSD: shells/nologinmsg/Makefile 341896 2014-01-30 22:43:17Z antoine $
+# $FreeBSD$
 
 PORTNAME=	nologinmsg
 PORTVERSION=	1.0
