@@ -1,5 +1,5 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: devel/py-tables/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tables
 PORTVERSION=	3.0.0
