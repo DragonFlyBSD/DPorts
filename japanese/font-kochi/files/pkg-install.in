@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: japanese/font-kochi/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/japanese/font-kochi/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 
 X_FONTSDIR=%%X_FONTSDIR%%/TTF
 
