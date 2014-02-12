@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: mail/dbmail22/Makefile 333846 2013-11-15 10:44:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	dbmail
 PORTVERSION=	2.2.18
