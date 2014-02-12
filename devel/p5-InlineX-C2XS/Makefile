@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-InlineX-C2XS/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	InlineX-C2XS
 PORTVERSION=	0.22
