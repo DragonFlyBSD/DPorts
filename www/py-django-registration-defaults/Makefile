@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/py-django-registration-defaults/Makefile 340284 2014-01-19 13:39:33Z mva $
+# $FreeBSD$
 
 PORTNAME=	django-registration-defaults
 PORTVERSION=	0.4.4
