@@ -1,5 +1,5 @@
 # Created by: Dan Phillips <dan-ports@dp.id.au>
-# $FreeBSD: french/verbiste/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=	verbiste
 PORTVERSION=	0.1.33
