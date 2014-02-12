@@ -1,5 +1,5 @@
 # Created by: Pavel Motyrev <legioner.r@gmail.com>
-# $FreeBSD: audio/scmpc/Makefile 334145 2013-11-18 05:53:34Z danfe $
+# $FreeBSD$
 
 PORTNAME=	scmpc
 PORTVERSION=	0.4.1
