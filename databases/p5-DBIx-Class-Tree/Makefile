@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Tree/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Tree
 PORTVERSION=	0.03003
