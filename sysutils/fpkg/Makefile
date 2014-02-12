@@ -1,5 +1,5 @@
 # Created by: Yuki SHIMAZU  <y.shimazu@nifty.com>
-# $FreeBSD: sysutils/fpkg/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fpkg
 PORTVERSION=	0.2
@@ -18,8 +18,7 @@ NO_WRKSUBDIR=	YES
 NO_BUILD=	YES
 PLIST_FILES=	bin/fpkg
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_SCRIPT} ${DISTDIR}/${DISTNAME} ${PREFIX}/bin/${PORTNAME}
+	@${INSTALL_SCRIPT} ${DISTDIR}/${DISTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
