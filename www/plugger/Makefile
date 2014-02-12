@@ -1,5 +1,5 @@
 # Created by: Jay Sachs <sachs@cs.williams.edu>
-# $FreeBSD: www/plugger/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	plugger
 PORTVERSION=	5.1.5

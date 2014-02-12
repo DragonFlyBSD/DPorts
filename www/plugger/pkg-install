@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/plugger/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/www/plugger/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 [ $# != 2 ] && exit 1
 PKGNAME=$1
