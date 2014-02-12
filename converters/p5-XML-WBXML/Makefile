@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: converters/p5-XML-WBXML/Makefile 336177 2013-12-11 15:15:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	XML-WBXML
 PORTVERSION=	0.03
