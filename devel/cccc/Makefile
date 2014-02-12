@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: devel/cccc/Makefile 337352 2013-12-24 13:26:57Z pawel $
+# $FreeBSD$
 
 PORTNAME=	cccc
 PORTVERSION=	3.1.4
