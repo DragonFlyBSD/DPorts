@@ -1,5 +1,5 @@
 # Created by: Vladimir Kotal <vlada@devnull.cz>
-# $FreeBSD: net-mgmt/ipv6gen/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ipv6gen
 PORTVERSION=	1.0
