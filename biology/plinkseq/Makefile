@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: biology/plinkseq/Makefile 341988 2014-01-31 12:33:11Z miwi $
+# $FreeBSD$
 
 PORTNAME=	plinkseq
 PORTVERSION=	0.08
