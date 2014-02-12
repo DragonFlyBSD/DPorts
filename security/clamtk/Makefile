@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: security/clamtk/Makefile 331274 2013-10-22 14:01:38Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	clamtk
 PORTVERSION=	4.44
