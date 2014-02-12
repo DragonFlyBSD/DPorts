@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WebService-Linode/Makefile 340788 2014-01-23 03:28:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	WebService-Linode
 PORTVERSION=	0.16
