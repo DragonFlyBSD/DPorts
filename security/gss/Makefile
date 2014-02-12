@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/gss/Makefile 339422 2014-01-11 12:02:46Z johans $
+# $FreeBSD$
 
 PORTNAME=	gss
 PORTVERSION=	1.0.2
