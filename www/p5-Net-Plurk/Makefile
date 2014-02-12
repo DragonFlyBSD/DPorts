@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-Net-Plurk/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-Plurk
 PORTVERSION=	0.11
