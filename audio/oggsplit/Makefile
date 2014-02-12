@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: audio/oggsplit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	oggsplit
 PORTVERSION=	0.1.0
@@ -9,6 +9,9 @@ MASTER_SITES=	http://homepage.ntlworld.com/jfe1205/OggVorbis/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Split multiplexed (grouped or chained) Ogg files into separate streams
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LIB_DEPENDS=	libogg.so:${PORTSDIR}/audio/libogg
 
