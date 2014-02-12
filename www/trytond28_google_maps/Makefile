@@ -1,8 +1,9 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: www/trytond28_google_maps/Makefile 334432 2013-11-20 17:20:57Z bsam $
+# $FreeBSD$
 
 PORTNAME=	trytond28_google_maps
 PORTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	www finance python
 MASTER_SITES=	https://pypi.python.org/packages/source/t/trytond_google_maps/ \
 		http://downloads.tryton.org/${PORTVERSION:R}/
@@ -18,7 +19,8 @@ RUN_DEPENDS=	trytond28_party>=2.8.0:${PORTSDIR}/finance/trytond28_party
 CONFLICTS=	trytond_google_maps-2.[46].*
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 PYEASYINSTALL_EGG=${DISTNAME}-py${PYTHON_VER}${PYEASYINSTALL_OSARCH}.egg
 
 .include <bsd.port.mk>
