@@ -1,5 +1,5 @@
 # Created by: James Flemer <jflemer@alum.rpi.edu>
-# $FreeBSD: textproc/l2a/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	l2a
 PORTVERSION=	1.2
