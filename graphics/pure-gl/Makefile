@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: graphics/pure-gl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pure-gl
 PORTVERSION=	0.8
@@ -23,6 +23,8 @@ NO_STAGE=	yes
 PORTDOCS=	README
 
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
