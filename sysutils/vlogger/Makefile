@@ -1,5 +1,5 @@
 # Created by: Linh Pham <question+fbsdports@closedsrc.org>
-# $FreeBSD: sysutils/vlogger/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vlogger
 PORTVERSION=	1.3
