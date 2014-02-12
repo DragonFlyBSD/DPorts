@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/nec2c/Makefile 338180 2013-12-30 21:59:55Z db $
+# $FreeBSD$
 
 PORTNAME=	nec2c
 PORTVERSION=	.9
