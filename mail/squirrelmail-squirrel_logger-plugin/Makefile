@@ -1,5 +1,5 @@
 # Created by: Satoru Suzuki <xsuzu@yokohama.riken.jp>
-# $FreeBSD: mail/squirrelmail-squirrel_logger-plugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	squirrel_logger
 PORTVERSION=	2.3
