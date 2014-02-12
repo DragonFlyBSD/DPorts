@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/symbion-sslproxy/Makefile 337416 2013-12-25 13:49:07Z pawel $
+# $FreeBSD$
 
 PORTNAME=	symbion-sslproxy
 PORTVERSION=	1.0.5
