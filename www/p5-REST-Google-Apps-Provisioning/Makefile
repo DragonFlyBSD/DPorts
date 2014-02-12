@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-REST-Google-Apps-Provisioning/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	REST-Google-Apps-Provisioning
 PORTVERSION=	1.1.10
