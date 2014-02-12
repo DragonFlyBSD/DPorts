@@ -1,5 +1,5 @@
 # Created by: Maxime Henrion <mux@FreeBSD.org>
-# $FreeBSD: games/armagetron/Makefile 341168 2014-01-26 12:30:01Z marino $
+# $FreeBSD$
 
 PORTNAME=	armagetron
 PORTVERSION=	0.2.8.3.2
