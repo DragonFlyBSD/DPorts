@@ -1,5 +1,5 @@
 # Created by: Patrick Seal <patseal@hyperhost.net>
-# $FreeBSD: misc/tkregexp/Makefile 333711 2013-11-13 17:08:16Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkregexp
 PORTVERSION=	3.1
