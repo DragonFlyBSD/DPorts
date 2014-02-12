@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-bdb1/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bdb1
 PORTVERSION=	0.2.5
