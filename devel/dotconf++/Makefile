@@ -1,5 +1,5 @@
 # Created by: Mark Starovoytov <mark_sf@kikg.ifmo.ru>
-# $FreeBSD: devel/dotconf++/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dotconfpp
 PORTVERSION=	0.0.5
@@ -8,7 +8,7 @@ MASTER_SITES=	SF \
 		http://voodoo.com.ua/dotconfpp/
 
 
-MAINTAINER=	mark_sf@kikg.ifmo.ru
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Configuration file parser written in C++
 
 USE_AUTOTOOLS=	libtool
