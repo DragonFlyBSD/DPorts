@@ -1,4 +1,4 @@
-# $FreeBSD: audio/py-al/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	al
 PORTVERSION=	0.1.0
