@@ -1,5 +1,5 @@
 # Created by: Sarod Yatawatta <sarod@cs.pdn.ac.lk>
-# $FreeBSD: cad/pdnmesh/Makefile 337590 2013-12-26 18:17:07Z marino $
+# $FreeBSD$
 
 PORTNAME=	pdnmesh
 PORTVERSION=	0.2.2
