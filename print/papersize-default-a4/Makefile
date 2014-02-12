@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: print/papersize-default-a4/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	papersize-default
 PORTVERSION=	0.0.20120302
