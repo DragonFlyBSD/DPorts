@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: devel/p5-AnyEvent-Graphite/Makefile 338909 2014-01-06 17:28:12Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-Graphite
 PORTVERSION=	0.08
