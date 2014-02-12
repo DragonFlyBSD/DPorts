@@ -1,5 +1,5 @@
 # Created by: Andrei V. Shetuhin <reki@reki.ru>
-# $FreeBSD: converters/p5-String-SetUTF8/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	String-SetUTF8
 PORTVERSION=	1.00
