@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-ExtractContent/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-ExtractContent
 PORTVERSION=	0.10
