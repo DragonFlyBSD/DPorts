@@ -1,4 +1,4 @@
-# $FreeBSD: databases/pear-Horde_Mongo/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Horde_Mongo
 PORTVERSION=	1.0.2
