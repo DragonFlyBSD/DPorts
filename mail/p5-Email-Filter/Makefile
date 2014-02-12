@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-Filter/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Email-Filter
 PORTVERSION=	1.03.3
