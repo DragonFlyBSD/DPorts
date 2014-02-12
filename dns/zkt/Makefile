@@ -1,5 +1,5 @@
 # Created by: Frank Behrens
-# $FreeBSD: dns/zkt/Makefile 338789 2014-01-05 15:50:50Z rakuco $
+# $FreeBSD$
 
 PORTNAME=		zkt
 DISTVERSION=		1.1.2
