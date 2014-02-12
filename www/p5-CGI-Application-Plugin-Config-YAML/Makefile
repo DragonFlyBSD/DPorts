@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Config-YAML/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-Config-YAML
 PORTVERSION=	0.01
