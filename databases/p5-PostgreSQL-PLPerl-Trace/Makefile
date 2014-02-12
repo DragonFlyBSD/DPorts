@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: databases/p5-PostgreSQL-PLPerl-Trace/Makefile 328824 2013-09-30 15:49:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	PostgreSQL-PLPerl-Trace
 PORTVERSION=	1.001
