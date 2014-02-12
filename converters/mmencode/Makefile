@@ -1,5 +1,5 @@
 # Created by: kbyanc
-# $FreeBSD: converters/mmencode/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mmencode
 PORTVERSION=	2.7
