@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: games/scare/Makefile 333406 2013-11-10 15:41:29Z danilo $
+# $FreeBSD$
 
 PORTNAME=	scare
 PORTVERSION=	1.3.10
