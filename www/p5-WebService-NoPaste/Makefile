@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@netnews.NCTU.edu.tw>
-# $FreeBSD: www/p5-WebService-NoPaste/Makefile 341723 2014-01-29 12:22:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WebService-NoPaste
 PORTVERSION=	0.03
