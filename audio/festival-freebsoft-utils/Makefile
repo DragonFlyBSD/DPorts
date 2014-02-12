@@ -1,4 +1,4 @@
-# $FreeBSD: audio/festival-freebsoft-utils/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD$
 
 PORTNAME=	festival-freebsoft-utils
 PORTVERSION=	0.10
@@ -19,6 +19,8 @@ NO_STAGE=	yes
 PORTDOCS=	ANNOUNCE NEWS README
 
 INFO=		${PORTNAME}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
