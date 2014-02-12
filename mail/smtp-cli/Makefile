@@ -1,4 +1,4 @@
-# $FreeBSD: mail/smtp-cli/Makefile 341897 2014-01-30 23:05:50Z matthew $
+# $FreeBSD$
 
 PORTNAME=	smtp
 PORTVERSION=	3.6
