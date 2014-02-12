@@ -1,5 +1,5 @@
 # Created by: Douglas Fraser <doug@idmf.net>
-# $FreeBSD: net-mgmt/grepcidr/Makefile 335112 2013-11-28 17:49:05Z alexey $
+# $FreeBSD$
 
 PORTNAME=	grepcidr
 PORTVERSION=	1.4
