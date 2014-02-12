@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: net-mgmt/cnagios/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cnagios
 PORTVERSION=	0.30
