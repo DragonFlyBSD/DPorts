@@ -1,8 +1,8 @@
-# $FreeBSD: security/spass/Makefile 328559 2013-09-28 07:33:27Z eadler $
+# $FreeBSD$
 
 PORTNAME=	spass
 PORTVERSION=	3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	eadler@FreeBSD.org
