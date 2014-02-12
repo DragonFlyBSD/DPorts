@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Task-Catalyst/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Task-Catalyst
 PORTVERSION=	4.02
