@@ -1,5 +1,5 @@
 # Created by: Heiner Eichmann <h.eichmann@gmx.de>
-# $FreeBSD: textproc/kdiff3/Makefile 339808 2014-01-15 19:25:17Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	kdiff3
 PORTVERSION=	0.9.97
