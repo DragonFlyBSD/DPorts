@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: dns/dualserver/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	dualserver
 PORTVERSION=	7.02
