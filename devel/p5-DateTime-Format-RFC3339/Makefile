@@ -1,5 +1,5 @@
 # Created by: Dan Rench <citric@cubicone.tmetic.com>
-# $FreeBSD: devel/p5-DateTime-Format-RFC3339/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-RFC3339
 PORTVERSION=	1.0.5
