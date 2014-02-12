@@ -1,4 +1,4 @@
-# $FreeBSD: databases/epgsql/Makefile 333093 2013-11-07 13:38:45Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	epgsql
 PORTVERSION=	1.4
