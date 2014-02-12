@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/asclock-xlib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asclock-xlib
 PORTVERSION=	2.0.11
