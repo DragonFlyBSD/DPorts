@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Z3950-SimpleServer/Makefile 337159 2013-12-21 18:57:08Z demon $
+# $FreeBSD$
 
 PORTNAME=	Net-Z3950-SimpleServer
 PORTVERSION=	1.19
