@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@FreeBSD.org>
-# $FreeBSD: audio/sbagen/Makefile 340128 2014-01-17 22:11:12Z antoine $
+# $FreeBSD$
 
 PORTNAME=	sbagen
 PORTVERSION=	1.4.5
