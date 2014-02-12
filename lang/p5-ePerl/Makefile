@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall <rse@engelschall.com>
-# $FreeBSD: lang/p5-ePerl/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	eperl
 PORTVERSION=	2.2.14
