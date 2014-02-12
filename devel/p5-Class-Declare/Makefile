@@ -1,5 +1,5 @@
 # Created by: kevit
-# $FreeBSD: devel/p5-Class-Declare/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Declare
 PORTVERSION=	0.17
