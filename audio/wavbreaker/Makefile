@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: audio/wavbreaker/Makefile 341950 2014-01-31 09:04:51Z gahr $
+# $FreeBSD$
 
 PORTNAME=	wavbreaker
 PORTVERSION=	0.11
