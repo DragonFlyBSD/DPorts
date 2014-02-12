@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: editors/hexedit/Makefile 341419 2014-01-27 15:52:56Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	hexedit
 PORTVERSION=	1.2.13
