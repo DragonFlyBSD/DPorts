@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-SRU/Makefile 330930 2013-10-19 19:51:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	SRU
 PORTVERSION=	1.01
