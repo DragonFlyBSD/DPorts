@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/rgbpaint/Makefile 337767 2013-12-27 17:45:19Z pawel $
+# $FreeBSD$
 
 PORTNAME=	rgbpaint
 PORTVERSION=	0.8.7
