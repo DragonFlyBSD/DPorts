@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: lang/chicken/Makefile 329461 2013-10-05 13:51:51Z danilo $
+# $FreeBSD$
 
 PORTNAME=	chicken
 PORTVERSION=	4.8.0.5
