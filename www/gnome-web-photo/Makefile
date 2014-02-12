@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/gnome-web-photo/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 #   $MCom: ports/www/gnome-web-photo/Makefile,v 1.5 2007/08/07 03:27:32 mezz Exp $
 
 PORTNAME=	gnome-web-photo
