@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/tong/Makefile 335270 2013-11-30 09:33:51Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	tong
 PORTVERSION=	1.2
