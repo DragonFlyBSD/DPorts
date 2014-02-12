@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/textmail/Makefile 329638 2013-10-06 23:11:56Z marino $
+# $FreeBSD$
 
 PORTNAME=	textmail
 PORTVERSION=	20070803
