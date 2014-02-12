@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: hungarian/hu-phone/Makefile 327735 2013-09-20 18:43:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	phone
 PORTVERSION=	20020622
