@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: net/gnome-nettool/Makefile 331273 2013-10-22 13:59:53Z amdmi3 $
+# $FreeBSD$
 #   $MCom: ports/net/gnome-nettool/Makefile,v 1.58 2010/09/28 09:03:44 kwm Exp $
 
 PORTNAME=	gnome-nettool
