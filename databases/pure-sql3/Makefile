@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: databases/pure-sql3/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pure-sql3
 PORTVERSION=	0.4
@@ -25,6 +25,8 @@ NO_STAGE=	yes
 PORTDOCS=	README
 
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
