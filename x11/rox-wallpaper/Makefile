@@ -1,4 +1,4 @@
-# $FreeBSD: x11/rox-wallpaper/Makefile 333246 2013-11-08 16:28:37Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	rox-wallpaper
 PORTVERSION=	2.3
