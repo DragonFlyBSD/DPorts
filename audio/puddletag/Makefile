@@ -1,4 +1,4 @@
-# $FreeBSD: audio/puddletag/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	puddletag
 PORTVERSION=	1.0.2
