@@ -1,5 +1,5 @@
 # Created by: quest <quest@mac.com>
-# $FreeBSD: net/throttled/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	throttled
 PORTVERSION=	0.5.2
