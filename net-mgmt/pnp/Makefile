@@ -1,5 +1,5 @@
 # Created by: rea-fbsd@codelabs.ru
-# $FreeBSD: net-mgmt/pnp/Makefile 328653 2013-09-29 09:00:04Z lme $
+# $FreeBSD$
 
 PORTNAME=	pnp
 PORTVERSION=	0.6.18
