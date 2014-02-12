@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/pacmanarena/Makefile 334844 2013-11-25 11:50:18Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pacmanarena
 PORTVERSION=	0.15
