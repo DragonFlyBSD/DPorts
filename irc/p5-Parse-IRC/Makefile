@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: irc/p5-Parse-IRC/Makefile 341855 2014-01-30 16:05:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Parse-IRC
 PORTVERSION=	1.20
