@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-rich/Makefile 331894 2013-10-28 19:54:08Z zi $
+# $FreeBSD$
 
 PORTNAME=	rich
 PORTVERSION=	1.4.6
