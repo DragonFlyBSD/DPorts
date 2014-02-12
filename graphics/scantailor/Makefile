@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: graphics/scantailor/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	scantailor
 PORTVERSION=	0.9.11.1
@@ -36,6 +36,9 @@ HTML_DESC=	Install HTML Doxygen files
 LATEX_DESC=	Install LaTeX Doxygen files
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTML} || ${PORT_OPTIONS:MLATEX}
