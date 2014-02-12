@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/exmars/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	exmars
 PORTVERSION=	0.01
