@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/axpoint/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	axpoint
 PORTVERSION=	1.50
