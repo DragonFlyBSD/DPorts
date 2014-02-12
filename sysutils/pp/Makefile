@@ -1,5 +1,5 @@
 # Created by: Artem Zaytsev <a.arepo@gmail.com>
-# $FreeBSD: sysutils/pp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pp
 PORTVERSION=	1.03
