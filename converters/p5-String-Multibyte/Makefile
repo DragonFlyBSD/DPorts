@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: converters/p5-String-Multibyte/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	String-Multibyte
 PORTVERSION=	1.10
