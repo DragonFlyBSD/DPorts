@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-TeX-Hyphen/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	TeX-Hyphen
 PORTVERSION=	1.01
