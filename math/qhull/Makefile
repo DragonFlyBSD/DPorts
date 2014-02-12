@@ -1,5 +1,5 @@
 # Created by: pusto@web.de
-# $FreeBSD: math/qhull/Makefile 341306 2014-01-26 23:20:22Z stephen $
+# $FreeBSD$
 
 PORTNAME=	qhull
 PORTVERSION=	2012.1
