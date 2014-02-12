@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-emk-sinatra-url-for/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	emk-sinatra-url-for
 PORTVERSION=	0.2.1
