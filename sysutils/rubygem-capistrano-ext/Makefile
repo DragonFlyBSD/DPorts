@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-capistrano-ext/Makefile 331714 2013-10-26 16:25:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	capistrano-ext
 PORTVERSION=	1.2.1
