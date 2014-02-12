@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/xombrero/files/xombrero.in 304901 2012-09-26 11:28:56Z zeising $
+# $FreeBSD: head/www/xombrero/files/xombrero.in 304901 2012-09-26 11:28:56Z zeising $
 #
 # A wrapper script for xombrero
 # Created by HU Dong <itechbear@gmail.com>

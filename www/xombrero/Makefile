@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: www/xombrero/Makefile 335965 2013-12-09 11:01:59Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xombrero
 PORTVERSION=	1.6.3
