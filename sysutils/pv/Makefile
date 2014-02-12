@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: sysutils/pv/Makefile 334817 2013-11-25 07:51:23Z martymac $
+# $FreeBSD$
 
 PORTNAME=	pv
 PORTVERSION=	1.4.6
