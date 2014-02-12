@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-libservlet/Makefile 333169 2013-11-08 01:06:34Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	libservlet
 PORTVERSION=	0.9.2
