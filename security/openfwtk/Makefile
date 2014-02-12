@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: security/openfwtk/Makefile 333667 2013-11-13 10:41:33Z gahr $
+# $FreeBSD$
 
 PORTNAME=	openfwtk
 PORTVERSION=	2.0
