@@ -1,5 +1,5 @@
 # Created by: Jan Henrik Sylvester <me@janh.de>
-# $FreeBSD: graphics/xournal/Makefile 337773 2013-12-27 18:22:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xournal
 PORTVERSION=	0.4.7
