@@ -1,5 +1,5 @@
 # Created by: Glen Barber <gjb@FreeBSD.org>
-# $FreeBSD: databases/php53-redis/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	redis
 PORTVERSION=	2.2.1
