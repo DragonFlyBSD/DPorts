@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: x11-clocks/stopwatch/Makefile 339336 2014-01-10 09:05:46Z gahr $
+# $FreeBSD$
 
 PORTNAME=	stopwatch
 PORTVERSION=	3.5
