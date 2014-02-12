@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: x11-fonts/inconsolata-lgc-ttf/Makefile 332094 2013-10-30 11:28:20Z danfe $
+# $FreeBSD$
 
 PORTNAME=	Inconsolata-LGC
 PORTVERSION=	20131024
