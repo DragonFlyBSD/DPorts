@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: misc/colortail/Makefile 333003 2013-11-06 15:23:38Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	colortail
 PORTVERSION=	0.3.3
