@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: net/onenetd/Makefile 341918 2014-01-31 07:16:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	onenetd
 PORTVERSION=	1.11
