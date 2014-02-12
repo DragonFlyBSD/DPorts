@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: www/rssowl/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	rssowl
 PORTVERSION=	1.2.3
