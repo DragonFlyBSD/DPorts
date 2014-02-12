@@ -1,5 +1,5 @@
 # Created by: Stephen Hurd <shurd@sasktel.net>
-# $FreeBSD: comms/fl_moxgen/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fl_moxgen
 PORTVERSION=	0.05
