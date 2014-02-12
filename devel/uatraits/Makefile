@@ -1,8 +1,9 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/uatraits/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	uatraits
 PORTVERSION=	20130430
+PORTREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://people.freebsd.org/~demon/
 
