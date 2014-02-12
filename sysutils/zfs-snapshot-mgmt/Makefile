@@ -1,5 +1,5 @@
 # Created by: Marcin Simonides <marcin@studio4plus.com>
-# $FreeBSD: sysutils/zfs-snapshot-mgmt/Makefile 342194 2014-02-01 17:17:52Z antoine $
+# $FreeBSD$
 
 PORTNAME=	zfs-snapshot-mgmt
 PORTVERSION=	20090201
