@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: security/py-pysha3/Makefile 342158 2014-02-01 14:43:46Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pysha3
 PORTVERSION=	0.3
