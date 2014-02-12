@@ -1,5 +1,5 @@
 # Created by: Dario Freni <saturnero@gufi.org>
-# $FreeBSD: lang/python-mode.el/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	python-mode.el
 PORTVERSION=	1.0
