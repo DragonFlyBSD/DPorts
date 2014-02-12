@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/py-pydasm/Makefile 340864 2014-01-23 21:47:41Z antoine $
+# $FreeBSD$
 
 PORTNAME=	pydasm
 PORTVERSION=	1.5
