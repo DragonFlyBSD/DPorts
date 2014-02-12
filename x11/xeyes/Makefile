@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xeyes/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xeyes
 PORTVERSION=	1.1.1
