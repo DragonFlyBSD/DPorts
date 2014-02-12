@@ -1,5 +1,5 @@
 # Created by: jsellens
-# $FreeBSD: mail/biffer/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	biffer
 PORTVERSION=	1.0
