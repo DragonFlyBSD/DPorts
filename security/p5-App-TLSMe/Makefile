@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-App-TLSMe/Makefile 332819 2013-11-05 08:11:44Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	App-TLSMe
 PORTVERSION=	0.110000
