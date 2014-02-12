@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: www/xpi-deepestsender/Makefile 341200 2014-01-26 15:07:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	deepestsender
 PORTVERSION=	0.9.3
