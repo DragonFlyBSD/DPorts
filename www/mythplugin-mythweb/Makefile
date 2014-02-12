@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: www/mythplugin-mythweb/Makefile 334175 2013-11-18 12:03:42Z decke $
+# $FreeBSD$
 
 PORTNAME=	mythweb
 PORTVERSION=	0.27
