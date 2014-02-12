@@ -1,5 +1,5 @@
 # Created by: Nick Hibma <n_hibma@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Sys-Gamin/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Sys-Gamin
 PORTVERSION=	0.1
