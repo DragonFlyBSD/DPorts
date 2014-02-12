@@ -1,5 +1,5 @@
 # Created by: tg
-# $FreeBSD: editors/uemacs/Makefile 327857 2013-09-22 09:35:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	uemacs
 PORTVERSION=	4.0
