@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Authorization/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-Authorization
 PORTVERSION=	0.07
