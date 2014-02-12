@@ -1,5 +1,5 @@
 # Created by: Philippe Lefebvre <nemesis@balistik.net>
-# $FreeBSD: editors/nano/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nano
 PORTVERSION=	2.2.6
@@ -20,6 +20,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	DOCS NLS 
 
 .include <bsd.port.options.mk>
 
