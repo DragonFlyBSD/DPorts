@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/csmash/Makefile 332335 2013-11-01 02:24:14Z danilo $
+# $FreeBSD$
 
 PORTNAME=	csmash
 PORTVERSION=	0.6.6
