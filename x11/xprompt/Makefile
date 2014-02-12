@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: x11/xprompt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xprompt
 PORTVERSION=	1.4
