@@ -1,5 +1,5 @@
 # Created by: Andy Gilligan
-# $FreeBSD: mail/mb2md/Makefile 330244 2013-10-13 18:52:54Z garga $
+# $FreeBSD$
 
 PORTNAME=	mb2md
 PORTVERSION=	3.20
