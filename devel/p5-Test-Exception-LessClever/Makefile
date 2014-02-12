@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Exception-LessClever/Makefile 333759 2013-11-14 14:20:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Exception-LessClever
 PORTVERSION=	0.006
