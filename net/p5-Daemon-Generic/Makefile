@@ -1,5 +1,5 @@
 # Created by: BluePex Security Solutions <freebsd-ports@bluepex.com>
-# $FreeBSD: net/p5-Daemon-Generic/Makefile 329571 2013-10-06 14:18:52Z danilo $
+# $FreeBSD$
 
 PORTNAME=	Daemon-Generic
 PORTVERSION=	0.84
