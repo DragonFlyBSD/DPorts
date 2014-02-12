@@ -1,5 +1,5 @@
 # Created by: Dorit Rottner (<rottner@punkt.de>)
-# $FreeBSD: finance/pear_Payment_DTA/Makefile 342307 2014-02-02 14:56:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Payment_DTA
 PORTVERSION=	1.2.1
