@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: net/p5-ResourcePool-Resource-Net-LDAP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	ResourcePool-Resource-Net-LDAP
 PORTVERSION=	1.0002
