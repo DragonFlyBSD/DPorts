@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ftwin/Makefile 338837 2014-01-06 02:38:03Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ftwin
 PORTVERSION=	0.8.8
