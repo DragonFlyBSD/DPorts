@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: games/gti/Makefile 339482 2014-01-12 05:12:19Z tota $
+# $FreeBSD$
 
 PORTNAME=	gti
 PORTVERSION=	1.2.0
