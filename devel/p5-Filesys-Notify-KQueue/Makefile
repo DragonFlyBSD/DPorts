@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Filesys-Notify-KQueue/Makefile 332389 2013-11-01 14:58:06Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Filesys-Notify-KQueue
 PORTVERSION=	0.09
