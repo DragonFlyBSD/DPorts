@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: sysutils/evtviewer/Makefile 334816 2013-11-25 07:48:48Z martymac $
+# $FreeBSD$
 
 PORTNAME=	evtViewer
 PORTVERSION=	0.5
