@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/comix/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 #   $MCom: ports-stable/graphics/comix/Makefile,v 1.1 2006/10/21 18:39:46 mezz Exp $
 
 PORTNAME=	comix
