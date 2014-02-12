@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: net-im/pidgin-twitter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pidgin-twitter
 PORTVERSION=	0.9.2
