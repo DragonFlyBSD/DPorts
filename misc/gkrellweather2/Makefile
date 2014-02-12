@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: misc/gkrellweather2/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gkrellweather
 PORTVERSION=	2.0.8
