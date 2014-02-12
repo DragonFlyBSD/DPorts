@@ -1,5 +1,5 @@
 # Created by: John D. "Trix" Farrar <trix@basement.net>
-# $FreeBSD: sysutils/logwatch/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	logwatch
 PORTVERSION=	7.4.0
