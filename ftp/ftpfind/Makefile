@@ -1,5 +1,5 @@
 # Created by: Tomokazu ISHII <t-ishii@tryplanet.com>
-# $FreeBSD: ftp/ftpfind/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	ftpfind
 PORTVERSION=	0.996
@@ -11,5 +11,10 @@ COMMENT=	Find directory&file on a ftp server
 
 PLIST_FILES=	bin/ftpfind
 
-NO_STAGE=	yes
+USES=		shebangfix
+SHEBANG_FILES=	ftpfind
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/ftpfind ${STAGEDIR}${PREFIX}/bin/
+
 .include <bsd.port.mk>
