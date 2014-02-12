@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-google-notebook/Makefile 341206 2014-01-26 15:10:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	google-notebook
 PORTVERSION=	1.0.0.5
