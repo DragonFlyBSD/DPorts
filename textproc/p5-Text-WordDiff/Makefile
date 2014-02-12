@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: textproc/p5-Text-WordDiff/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-WordDiff
 PORTVERSION=	0.08
