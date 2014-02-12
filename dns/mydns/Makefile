@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: dns/mydns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mydns
 PORTVERSION=	1.1.0
@@ -27,6 +27,9 @@ MAN8=		mydns.8 mydnscheck.8 mydnsexport.8 mydnsimport.8 mydnsptrconvert.8 mydns-
 DOCS=		AUTHORS COPYING ChangeLog NEWS QUICKSTART.mysql QUICKSTART.postgres README TODO
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALIAS}
