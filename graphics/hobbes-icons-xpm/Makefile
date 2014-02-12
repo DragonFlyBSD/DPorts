@@ -1,5 +1,5 @@
 # Created by: pgs
-# $FreeBSD: graphics/hobbes-icons-xpm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hobbes-icons-xpm3
 PORTVERSION=	1.0
@@ -14,6 +14,8 @@ COMMENT=	Collection of over 3000 icons in XPM3 format
 NO_BUILD=	yes
 
 LIBDIR=		${STAGEDIR}${PREFIX}/include/X11/pixmaps
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
