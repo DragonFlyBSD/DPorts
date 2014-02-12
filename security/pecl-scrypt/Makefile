@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: security/pecl-scrypt/Makefile 332772 2013-11-04 20:12:04Z antoine $
+# $FreeBSD$
 
 PORTNAME=	scrypt
 PORTVERSION=	1.2
