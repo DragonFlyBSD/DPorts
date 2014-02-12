@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/stardict-dict-fa_IR/Makefile 333413 2013-11-10 17:29:21Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-dict-fa_IR
 PORTVERSION=	1.0.0
