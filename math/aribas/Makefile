@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: math/aribas/Makefile 329546 2013-10-06 09:58:28Z lme $
+# $FreeBSD$
 
 PORTNAME=	aribas
 PORTVERSION=	1.64
