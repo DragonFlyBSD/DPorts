@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-gmail-manager/Makefile 341206 2014-01-26 15:10:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gmail-manager
 DISTVERSION=	0.6.1
