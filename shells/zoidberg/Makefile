@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: shells/zoidberg/Makefile 327770 2013-09-20 22:57:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zoidberg
 PORTVERSION=	0.96
