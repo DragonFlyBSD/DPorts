@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/ploticus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ploticus
 PORTVERSION=	2.40
