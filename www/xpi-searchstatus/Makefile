@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-searchstatus/Makefile 341216 2014-01-26 15:13:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	searchstatus
 PORTVERSION=	1.39
