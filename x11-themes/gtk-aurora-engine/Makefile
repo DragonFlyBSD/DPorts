@@ -1,5 +1,5 @@
 # Created by: okeeblow <root@cooltrainer.org>
-# $FreeBSD: x11-themes/gtk-aurora-engine/Makefile 341397 2014-01-27 13:06:09Z miwi $
+# $FreeBSD$
 
 PORTNAME=	aurora
 PORTVERSION=	1.5.1
