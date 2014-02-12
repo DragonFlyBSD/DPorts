@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson
-# $FreeBSD: lang/ficl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ficl
 PORTVERSION=	4.1.0
