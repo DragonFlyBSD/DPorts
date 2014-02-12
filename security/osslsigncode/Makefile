@@ -1,5 +1,5 @@
 # Created by: snb@threerings.net
-# $FreeBSD: security/osslsigncode/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	osslsigncode
 PORTVERSION=	1.3
