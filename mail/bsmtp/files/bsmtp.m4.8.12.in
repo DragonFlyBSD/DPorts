@@ -32,7 +32,7 @@ POPDIVERT
 ###   BSMTP Mailer specification   ###
 ######################################
 
-VERSIONID(`$FreeBSD: mail/bsmtp/files/bsmtp.m4.8.12.in 340872 2014-01-24 00:14:07Z mat $')
+VERSIONID(`$FreeBSD: head/mail/bsmtp/files/bsmtp.m4.8.12.in 340872 2014-01-24 00:14:07Z mat $')
 
 ifdef(`_MAILER_smtp_', `
 Mbsmtp,		P=BSMTP_MAILER_PATH,

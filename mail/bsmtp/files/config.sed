@@ -1,4 +1,4 @@
-# $FreeBSD: mail/bsmtp/files/config.sed 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/bsmtp/files/config.sed 340872 2014-01-24 00:14:07Z mat $
 s,@CC@,%%CC%%,
 s,@INSTALL@,/usr/bin/install,
 s,@SH@,/bin/sh,

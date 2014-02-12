@@ -1,4 +1,4 @@
-# $FreeBSD: mail/bsmtp/Makefile 332607 2013-11-03 12:32:32Z naddy $
+# $FreeBSD$
 
 PORTNAME=	bsmtp
 PORTVERSION=	1.02
