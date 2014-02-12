@@ -1,5 +1,5 @@
 # Created by: David Johnson <david@usermode.org>
-# $FreeBSD: misc/qbrew/Makefile 334931 2013-11-26 13:27:45Z makc $
+# $FreeBSD$
 
 PORTNAME=	qbrew
 PORTVERSION=	0.4.1
