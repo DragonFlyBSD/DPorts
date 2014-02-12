@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/anubis/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 
 PORTNAME=	anubis
 PORTVERSION=	4.1.1
