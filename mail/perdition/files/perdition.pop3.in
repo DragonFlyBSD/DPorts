@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/perdition/files/perdition.pop3.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/perdition/files/perdition.pop3.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: perdition_pop3
 # REQUIRE: DAEMON
