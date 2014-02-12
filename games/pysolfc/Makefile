@@ -1,4 +1,4 @@
-# $FreeBSD: games/pysolfc/Makefile 340109 2014-01-17 21:22:05Z mva $
+# $FreeBSD$
 
 PORTNAME=	pysolfc
 PORTVERSION=	2.0
