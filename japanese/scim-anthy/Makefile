@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/scim-anthy/Makefile 330170 2013-10-12 18:32:05Z ume $
+# $FreeBSD$
 
 PORTNAME=	scim-anthy
 PORTVERSION=	1.2.7
