@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: dns/inadyn-mt/Makefile 330499 2013-10-16 12:16:14Z wg $
+# $FreeBSD$
 
 PORTNAME=	inadyn-mt
 PORTVERSION=	02.24.38
