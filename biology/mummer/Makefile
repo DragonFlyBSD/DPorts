@@ -1,5 +1,5 @@
 # Created by: Tony Maher
-# $FreeBSD: biology/mummer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mummer
 PORTVERSION=	3.23
@@ -20,6 +20,8 @@ SCRIPTS=	dnadiff exact-tandems mapview mummerplot nucmer \
 DOCUMENTS=	COPYRIGHT INSTALL LICENSE README
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
