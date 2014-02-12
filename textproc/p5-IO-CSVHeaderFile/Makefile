@@ -1,5 +1,5 @@
 # Created by: Vasek Balcar <vasek@ti.cz>
-# $FreeBSD: textproc/p5-IO-CSVHeaderFile/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	IO-CSVHeaderFile
 PORTVERSION=	0.04
