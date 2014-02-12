@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/formido/Makefile 341675 2014-01-28 23:31:19Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	formido
 PORTVERSION=	1.0.1
