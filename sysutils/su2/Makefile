@@ -1,5 +1,5 @@
 # Created by: gurney_j@efn.org
-# $FreeBSD: sysutils/su2/Makefile 339655 2014-01-14 02:13:28Z mandree $
+# $FreeBSD$
 
 PORTNAME=	su2
 PORTVERSION=	1.3
