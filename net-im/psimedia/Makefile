@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/psimedia/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	psimedia
 PORTVERSION=	1.0.3
