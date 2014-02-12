@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/p5-X11-GUITest/Makefile 333060 2013-11-07 04:57:21Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	X11-GUITest
 PORTVERSION=	0.25
