@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kde4-baseapps/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	kde-baseapps
 PORTVERSION=	${KDE4_VERSION}
