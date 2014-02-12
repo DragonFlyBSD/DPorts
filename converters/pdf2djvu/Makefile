@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: converters/pdf2djvu/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	pdf2djvu
 PORTVERSION=	0.7.17
