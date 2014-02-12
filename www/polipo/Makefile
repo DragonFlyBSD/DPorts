@@ -1,5 +1,5 @@
 # Created by: Frank Behrens <frank@pinky.sax.de>
-# $FreeBSD: www/polipo/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	polipo
 PORTVERSION=	1.0.4.1
