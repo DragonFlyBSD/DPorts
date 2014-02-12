@@ -1,5 +1,5 @@
 # Created by: faber@lunabase.org
-# $FreeBSD: textproc/grap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	grap
 PORTVERSION=	1.44
