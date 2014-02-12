@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: math/add/Makefile 336046 2013-12-10 04:56:34Z culot $
+# $FreeBSD$
 
 PORTNAME=	add
 PORTVERSION=	20131208
