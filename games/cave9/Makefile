@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/cave9/Makefile 341674 2014-01-28 23:29:48Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	cave9
 PORTVERSION=	0.4
