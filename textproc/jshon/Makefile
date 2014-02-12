@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/jshon/Makefile 336661 2013-12-16 20:29:02Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	jshon
 PORTVERSION=	20121210
