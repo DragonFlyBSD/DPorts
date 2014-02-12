@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: www/py-django-appmedia/Makefile 341750 2014-01-29 15:27:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-appmedia
 PORTVERSION=	1.0.1
