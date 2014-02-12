@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-video-s3virge/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xf86-video-s3virge
 PORTVERSION=	1.10.6
