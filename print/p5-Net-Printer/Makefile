@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: print/p5-Net-Printer/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Printer
 PORTVERSION=	1.12
