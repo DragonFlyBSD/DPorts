@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: audio/p5-MPEG-ID3v2Tag/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MPEG-ID3v2Tag
 PORTVERSION=	0.39
