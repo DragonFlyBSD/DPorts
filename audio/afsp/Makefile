@@ -1,5 +1,5 @@
 # Created by: Kawaguti Ginga <ginga@athena.club.ne.jp>
-# $FreeBSD: audio/afsp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	afsp
 PORTVERSION=	8.2
