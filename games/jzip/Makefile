@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@FreeBSD.org>
-# $FreeBSD: games/jzip/Makefile 332484 2013-11-02 13:59:11Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jzip
 PORTVERSION=	2.0.1g
