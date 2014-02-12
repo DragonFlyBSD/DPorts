@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/optimax/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	optimax
 PORTVERSION=	0.63
