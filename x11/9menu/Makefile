@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@rrnet.com>
-# $FreeBSD: x11/9menu/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	9menu
 PORTVERSION=	1.8
