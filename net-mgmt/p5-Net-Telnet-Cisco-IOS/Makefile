@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yunteche.du.tw>
-# $FreeBSD: net-mgmt/p5-Net-Telnet-Cisco-IOS/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Telnet-Cisco-IOS
 PORTVERSION=	0.6
