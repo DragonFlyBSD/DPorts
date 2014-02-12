@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: textproc/p5-Lingua-Ident/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Lingua-Ident
 PORTVERSION=	1.7
