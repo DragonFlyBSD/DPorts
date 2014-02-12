@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pyxml2obj/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pyxml2obj
 PORTVERSION=	0.1.2.9
