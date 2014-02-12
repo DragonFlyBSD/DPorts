@@ -1,5 +1,5 @@
 # Created by: Allan Jude <ports@scaleengine.com>
-# $FreeBSD: dns/gdnsd/Makefile 336012 2013-12-09 18:36:54Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gdnsd
 PORTVERSION=	1.11.0
