@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko <dima@chg.ru>
-# $FreeBSD: benchmarks/polygraph/Makefile 341989 2014-01-31 12:47:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	polygraph
 PORTVERSION=	4.3.2
