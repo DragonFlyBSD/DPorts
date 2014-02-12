@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: sysutils/powerman/files/powerman.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/powerman/files/powerman.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: powermand
 # REQUIRE: NETWORKING
