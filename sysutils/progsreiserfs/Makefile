@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: sysutils/progsreiserfs/Makefile 333977 2013-11-16 03:33:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	progsreiserfs
 PORTVERSION=	0.3.1.r8
@@ -17,6 +17,8 @@ CONFIGURE_ARGS=	--disable-debug --disable-Werror
 CFLAGS+=	-Dgetopt_long_only=getopt_long
 
 EXTRA_PATCHES=	${FILESDIR}/extrapatch-progsreiserfs::libmisc::Makefile.in
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
