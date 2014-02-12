@@ -1,5 +1,5 @@
 # Created by: James Howard <howardj@wam.umd.edu>
-# $FreeBSD: misc/orville-write/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	orville-write
 PORTVERSION=	2.55
@@ -16,6 +16,8 @@ PLIST_FILES=	bin/amin bin/helpers bin/huh bin/jot bin/mesg bin/tel \
 		bin/telegram bin/write etc/orville.conf etc/wrthist etc/wrttmp \
 		man/man1/amin.1.gz man/man1/helpers.1.gz man/man1/huh.1.gz \
 		man/man1/mesg.1.gz man/man1/write.1.gz
+
+MAKE_JOBS_UNSAFE=yes
 
 .include <bsd.port.pre.mk>
 
