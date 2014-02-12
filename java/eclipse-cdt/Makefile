@@ -1,5 +1,5 @@
 # Created by: gldisater@gldis.ca
-# $FreeBSD: java/eclipse-cdt/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	${PLUGIN}
 PORTVERSION=	6.0.2
