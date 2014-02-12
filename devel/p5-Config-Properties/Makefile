@@ -1,5 +1,5 @@
 # Created by: Craig Manley
-# $FreeBSD: devel/p5-Config-Properties/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	Config-Properties
 PORTVERSION=	1.75
