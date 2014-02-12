@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-batchmodify/Makefile 337567 2013-12-26 17:34:43Z wg $
+# $FreeBSD$
 
 PORTNAME=	batchmodify
 PORTVERSION=	0.8.0.9694
