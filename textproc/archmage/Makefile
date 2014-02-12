@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: textproc/archmage/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	archmage
 PORTVERSION=	0.2.4
