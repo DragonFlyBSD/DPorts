@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: x11-fonts/alfont/Makefile 341287 2014-01-26 21:09:15Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	alfont
 PORTVERSION=	209
