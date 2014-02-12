@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: misc/xpns/Makefile 335894 2013-12-08 14:11:54Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xpns
 PORTVERSION=	1.0
