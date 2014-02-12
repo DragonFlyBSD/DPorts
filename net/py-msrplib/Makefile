@@ -1,5 +1,5 @@
 # Created by: Eugene Grosbein <ports@grosbein.net>
-# $FreeBSD: net/py-msrplib/Makefile 341959 2014-01-31 09:24:25Z miwi $
+# $FreeBSD$
 
 PORTNAME=	msrplib
 PORTVERSION=	0.14.4
