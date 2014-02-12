@@ -1,5 +1,5 @@
 # Created by: Daniel Thiele
-# $FreeBSD: sysutils/scanbuttond/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scanbuttond
 PORTVERSION=	0.2.3
