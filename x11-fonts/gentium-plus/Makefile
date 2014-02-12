@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: x11-fonts/gentium-plus/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	GentiumPlus
 PORTVERSION=	1.510
@@ -33,6 +33,8 @@ SUB_FILES=	pkg-message
 DOCSLIST=	FONTLOG.txt GENTIUM-FAQ.txt OFL-FAQ.txt OFL.txt README.txt \
 		documentation/GentiumPlus-features.pdf
 PORTDOCS=	${DOCSLIST:C,^.*/,,}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
