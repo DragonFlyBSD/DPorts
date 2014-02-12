@@ -1,4 +1,4 @@
-# $FreeBSD: mail/spamass-rules/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	spamass-rules
 PORTVERSION=	20120817
