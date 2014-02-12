@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/gmidimonitor/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gmidimonitor
 PORTVERSION=	3.6
