@@ -1,5 +1,5 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: graphics/apngasm/Makefile 337611 2013-12-26 19:50:48Z marino $
+# $FreeBSD$
 
 PORTNAME=	apngasm
 PORTVERSION=	2.8
