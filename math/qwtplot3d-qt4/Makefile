@@ -1,4 +1,4 @@
-# $FreeBSD: math/qwtplot3d-qt4/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	qwtplot3d
 PORTVERSION=	0.2.7
