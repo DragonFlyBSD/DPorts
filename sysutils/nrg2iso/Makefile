@@ -1,5 +1,5 @@
 # Created by: dieringe
-# $FreeBSD: sysutils/nrg2iso/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nrg2iso
 PORTVERSION=	0.4
