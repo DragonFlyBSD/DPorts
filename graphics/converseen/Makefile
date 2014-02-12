@@ -1,5 +1,5 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: graphics/converseen/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	converseen
 PORTVERSION=	0.6.4
