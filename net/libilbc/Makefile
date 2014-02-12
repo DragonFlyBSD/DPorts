@@ -1,4 +1,4 @@
-# $FreeBSD: net/libilbc/Makefile 340167 2014-01-18 11:12:17Z mva $
+# $FreeBSD$
 
 PORTNAME=	libilbc
 DISTVERSION=	1.1.1
