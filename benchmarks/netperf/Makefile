@@ -1,5 +1,5 @@
 # Created by: koshy
-# $FreeBSD: benchmarks/netperf/Makefile 338738 2014-01-05 01:31:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	netperf
 PORTVERSION=	2.6.0
