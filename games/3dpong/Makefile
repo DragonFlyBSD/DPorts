@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov <andy@icc.surw.chel.su>
-# $FreeBSD: games/3dpong/Makefile 340346 2014-01-19 19:59:10Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	3dpong
 PORTVERSION=	0.5
