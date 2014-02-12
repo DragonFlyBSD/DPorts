@@ -1,5 +1,5 @@
 # Created by: Andrew Stevenson <andrew@ugh.net.au>
-# $FreeBSD: mail/poppwd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	poppwd
 PORTVERSION=	2.0
@@ -12,9 +12,7 @@ COMMENT=	Implementation of the Eudora password changing protocol
 
 WRKSRC=		${WRKDIR}/poppwd
 
-MAN8=		poppwd.8
-MANCOMPRESSED=	maybe
-PLIST_FILES=	libexec/poppwd
+PLIST_FILES=	libexec/poppwd \
+		man/man8/poppwd.8.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
