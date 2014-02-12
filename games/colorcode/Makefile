@@ -1,4 +1,4 @@
-# $FreeBSD: games/colorcode/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	colorcode
 PORTVERSION=	0.7.2
