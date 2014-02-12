@@ -1,5 +1,5 @@
 # Created by: Martin Blapp
-# $FreeBSD: mail/up-imapproxy/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	imapproxy
 PORTVERSION=	1.2.7
