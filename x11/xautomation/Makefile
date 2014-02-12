@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/xautomation/Makefile 342107 2014-02-01 10:13:41Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xautomation
 PORTVERSION=	1.09
