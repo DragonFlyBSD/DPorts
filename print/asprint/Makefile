@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: print/asprint/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asprint
 PORTVERSION=	1.0
