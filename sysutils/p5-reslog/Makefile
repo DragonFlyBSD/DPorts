@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: sysutils/p5-reslog/Makefile 332957 2013-11-06 08:54:17Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	reslog
 PORTVERSION=	3.16
