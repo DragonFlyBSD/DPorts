@@ -1,5 +1,5 @@
 # Created by: Nicholas Esborn <nick@netdot.net>
-# $FreeBSD: net-mgmt/p5-Mon/Makefile 332836 2013-11-05 12:02:05Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mon
 PORTVERSION=	0.11
