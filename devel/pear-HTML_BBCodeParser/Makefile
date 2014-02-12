@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: devel/pear-HTML_BBCodeParser/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML_BBCodeParser
 PORTVERSION=	1.1
