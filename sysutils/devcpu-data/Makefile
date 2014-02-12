@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: sysutils/devcpu-data/Makefile 333535 2013-11-11 20:34:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	data
 PORTVERSION=	0.6
