@@ -1,4 +1,4 @@
-# $FreeBSD: math/slgrace/Makefile 336342 2013-12-13 12:58:42Z garga $
+# $FreeBSD$
 
 PORTNAME=	slgrace
 PORTVERSION=	0.2.2
