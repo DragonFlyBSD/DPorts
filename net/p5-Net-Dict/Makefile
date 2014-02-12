@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: net/p5-Net-Dict/Makefile 337442 2013-12-25 19:39:10Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-Dict
 PORTVERSION=	2.13
