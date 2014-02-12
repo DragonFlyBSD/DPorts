@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: benchmarks/p5-Benchmark-Stopwatch/Makefile 331290 2013-10-22 16:14:19Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Benchmark-Stopwatch
 PORTVERSION=	0.05
