@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/glightoff/Makefile 337229 2013-12-23 06:51:39Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	glightoff
 PORTVERSION=	1.0.0
