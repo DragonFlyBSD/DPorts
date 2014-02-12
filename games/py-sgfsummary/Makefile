@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: games/py-sgfsummary/Makefile 337753 2013-12-27 17:24:21Z wg $
+# $FreeBSD$
 
 PORTNAME=	sgfsummary
 PORTVERSION=	1.0
