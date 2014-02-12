@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: x11-fm/tdfsb/Makefile 341177 2014-01-26 14:07:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tdfsb
 PORTVERSION=	0.0.10
