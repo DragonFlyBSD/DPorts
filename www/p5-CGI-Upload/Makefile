@@ -1,5 +1,5 @@
 # Created by: Daniel B. Hemmerich
-# $FreeBSD: www/p5-CGI-Upload/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CGI-Upload
 PORTVERSION=	1.11
