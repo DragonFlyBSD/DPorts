@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/f-prot/files/900.fpupdate.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/f-prot/files/900.fpupdate.in 340872 2014-01-24 00:14:07Z mat $
 #
 # f-prot update script
 
