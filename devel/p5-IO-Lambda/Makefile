@@ -1,5 +1,5 @@
 # Created by: Vany Serezhkin <ivan@serezhkin.com>
-# $FreeBSD: devel/p5-IO-Lambda/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	IO-Lambda
 PORTVERSION=	1.23
