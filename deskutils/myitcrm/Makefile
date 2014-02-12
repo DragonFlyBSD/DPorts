@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: deskutils/myitcrm/Makefile 339311 2014-01-10 03:14:45Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	myitcrm
 PORTVERSION=	0.2.9.3
