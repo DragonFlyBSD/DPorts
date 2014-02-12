@@ -1,5 +1,5 @@
 # Created by: Tatsuya Ueda <ml+freebsd@tatsuya.info>
-# $FreeBSD: devel/p5-Path-Class-File-Lockable/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Path-Class-File-Lockable
 PORTVERSION=	0.03
