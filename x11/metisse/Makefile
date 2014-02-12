@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/metisse/Makefile 330378 2013-10-15 09:47:11Z bapt $
+# $FreeBSD$
 
 PORTNAME=	metisse
 PORTVERSION=	0.4.1
