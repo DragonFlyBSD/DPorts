@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-Rose-HTML-Objects/Makefile 338231 2013-12-31 04:26:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Rose-HTML-Objects
 PORTVERSION=	0.620
