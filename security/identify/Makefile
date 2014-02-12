@@ -1,5 +1,5 @@
 # Created by: nsayer@quack.kfu.com
-# $FreeBSD: security/identify/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	identify
 PORTVERSION=	0.7
@@ -16,6 +16,9 @@ PORTDOCS=	README
 PLIST_FILES=	libexec/identify
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
