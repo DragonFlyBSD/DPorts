@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: devel/hgsvn/Makefile 341506 2014-01-28 07:47:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hgsvn
 PORTVERSION=	0.2.3
