@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: multimedia/youtube-viewer/Makefile 340731 2014-01-22 20:52:31Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	youtube
 PORTVERSION=	2.5.9
