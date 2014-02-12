@@ -1,5 +1,5 @@
 # Created by: Shen Chun-Hsing <statue@freebsd.netlab.cse.yzu.edu.tw>
-# $FreeBSD: textproc/stardict-rptts/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-rptts
 PORTVERSION=	2.1.0
