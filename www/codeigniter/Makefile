@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/codeigniter/Makefile 335985 2013-12-09 14:09:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	codeigniter
 PORTVERSION=	2.1.4
