@@ -1,5 +1,5 @@
 # Created by: wenheping@gmail.com
-# $FreeBSD: www/jspwiki/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jspwiki
 PORTVERSION=	2.8.4
@@ -31,6 +31,9 @@ OPTIONS_SINGLE_AS=	TOMCAT6 TOMCAT7
 OPTIONS_DEFAULT=	TOMCAT6
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOMCAT6}
