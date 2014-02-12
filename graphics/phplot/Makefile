@@ -1,5 +1,5 @@
 # Created by: yukinopo@livedoor.com
-# $FreeBSD: graphics/phplot/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	phplot
 PORTVERSION=	6.1.0
