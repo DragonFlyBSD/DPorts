@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: editors/editorconfig-core-c/Makefile 331364 2013-10-23 10:29:10Z knu $
+# $FreeBSD$
 
 PORTNAME=	editorconfig-core-c
 PORTVERSION=	0.11.5
