@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: devel/jenkins-lts/files/jenkins.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/jenkins-lts/files/jenkins.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: jenkins
 # REQUIRE: LOGIN

@@ -1,4 +1,4 @@
-# $FreeBSD: devel/jenkins-lts/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jenkins
 PORTVERSION=	1.532.1
