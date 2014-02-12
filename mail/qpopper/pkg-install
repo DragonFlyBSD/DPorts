@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: mail/qpopper/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/mail/qpopper/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 # based on original from op port, written by Cyrille Lefevre
 # <clefevre@citeweb.net>

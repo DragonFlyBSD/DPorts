@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: mail/qpopper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	qpopper
 PORTVERSION=	4.1.0
