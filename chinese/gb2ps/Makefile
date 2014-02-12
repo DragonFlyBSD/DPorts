@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: chinese/gb2ps/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD$
 
 PORTNAME=	gb2ps
 PORTVERSION=	2.02
@@ -16,6 +16,8 @@ COMMENT=	Converts Chinese GB (simple) encoded text to PostScript
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=		${WRKDIR}/GB2PS
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
