@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: math/p5-Math-MPC/Makefile 340043 2014-01-17 14:11:32Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	Math-MPC
 PORTVERSION=	1.01
