@@ -1,5 +1,5 @@
 # Created by: is grammatically incorrect in this context.
-# $FreeBSD: devel/ptmalloc/Makefile 340967 2014-01-25 00:37:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ptmalloc
 PORTVERSION=	3.0
