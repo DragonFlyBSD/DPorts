@@ -1,5 +1,5 @@
 # Created by: Mike Carlson <carlson39@llnl.gov>
-# $FreeBSD: net/rubygem-stompserver/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	stompserver
 PORTVERSION=	0.9.9
