@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/zephulor/files/zephulor.in 335338 2013-11-30 19:30:02Z nemysis $
+# $FreeBSD: head/games/zephulor/files/zephulor.in 335338 2013-11-30 19:30:02Z nemysis $
 #
 
 cd "%%DATADIR%%"
