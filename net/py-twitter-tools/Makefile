@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-twitter-tools/Makefile 335312 2013-11-30 18:05:33Z koobs $
+# $FreeBSD$
 
 PORTNAME=	twitter-tools
 PORTVERSION=	1.10.2
