@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/krank/Makefile 333052 2013-11-07 02:51:32Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	krank
 PORTVERSION=	07
