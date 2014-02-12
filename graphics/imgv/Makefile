@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: graphics/imgv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	imgv
 PORTVERSION=	3.1.6
