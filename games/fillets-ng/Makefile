@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/fillets-ng/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	fillets-ng
 PORTVERSION=	1.0.1
