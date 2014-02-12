@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-unsafe_image_rules-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	unsafe_image_rules
 PORTVERSION=	0.8
