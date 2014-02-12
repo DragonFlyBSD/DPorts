@@ -1,5 +1,5 @@
 # Created by: Greg Becker <greg@codeconcepts.com>
-# $FreeBSD: devel/dits/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dits
 PORTVERSION=	2.3.202
