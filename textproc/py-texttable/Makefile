@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/py-texttable/Makefile 340987 2014-01-25 05:39:09Z miwi $
+# $FreeBSD$
 
 PORTNAME=	texttable
 PORTVERSION=	0.8.1
