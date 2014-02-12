@@ -1,5 +1,5 @@
 # Created by: andy@fud.org.nz
-# $FreeBSD: security/pamtester/Makefile 342012 2014-01-31 15:54:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pamtester
 PORTVERSION=	0.1.2
