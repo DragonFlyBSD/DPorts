@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: databases/postgresql-plv8js/Makefile 328230 2013-09-25 01:19:21Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	plv8js
 PORTVERSION=	1.4.1
