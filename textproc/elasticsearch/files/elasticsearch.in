@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: textproc/elasticsearch/files/elasticsearch.in 313904 2013-03-11 14:14:30Z tj $
+# $FreeBSD: head/textproc/elasticsearch/files/elasticsearch.in 313904 2013-03-11 14:14:30Z tj $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: NETWORKING SERVERS
