@@ -1,5 +1,5 @@
 # Created by: mt@primats.org.ua
-# $FreeBSD: www/sarg/Makefile 332346 2013-11-01 09:57:50Z garga $
+# $FreeBSD$
 
 PORTNAME=	sarg
 PORTVERSION=	2.3.6
