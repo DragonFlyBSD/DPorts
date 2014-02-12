@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: databases/py-pgxnclient/Makefile 334221 2013-11-18 16:21:31Z lwhsu $
+# $FreeBSD$
 
 PORTNAME=	pgxnclient
 PORTVERSION=	1.2.1
