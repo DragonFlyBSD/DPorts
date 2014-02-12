@@ -1,5 +1,5 @@
 # Created by: Dale Woolridge <dale.woolridge@gmail.com>
-# $FreeBSD: sysutils/ucspi-proxy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ucspi-proxy
 PORTVERSION=	0.98
