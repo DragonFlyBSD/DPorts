@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: misc/xfce4-wm-themes/Makefile 330424 2013-10-15 18:36:02Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-wm-themes
 PORTVERSION=	4.10.0
