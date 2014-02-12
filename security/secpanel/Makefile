@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: security/secpanel/Makefile 339670 2014-01-14 09:24:56Z gahr $
+# $FreeBSD$
 
 PORTNAME=	secpanel
 PORTVERSION=	0.6.1
