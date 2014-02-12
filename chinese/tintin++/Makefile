@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: chinese/tintin++/Makefile 336080 2013-12-10 18:59:35Z sunpoet $
+# $FreeBSD$
 
 CATEGORIES=	chinese
 
