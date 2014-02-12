@@ -1,5 +1,5 @@
 # Created by: Takahiro Morishita <morishita@skywing.org>
-# $FreeBSD: japanese/multiskkserv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	multiskkserv
 PORTVERSION=	0.20020201
