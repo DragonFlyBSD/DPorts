@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/puppet-mode.el/Makefile 334400 2013-11-20 08:38:37Z demon $
+# $FreeBSD$
 
 PORTNAME=	puppet-mode.el
 PORTVERSION=	0.2
