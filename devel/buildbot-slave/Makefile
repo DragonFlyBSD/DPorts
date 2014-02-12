@@ -1,5 +1,5 @@
 # Created by: Frederic Praca <frederic.praca@freebsd-fr.org>
-# $FreeBSD: devel/buildbot-slave/Makefile 341524 2014-01-28 09:33:51Z koobs $
+# $FreeBSD$
 
 PORTNAME=	buildbot-slave
 PORTVERSION=	0.8.8
