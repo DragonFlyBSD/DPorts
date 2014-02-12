@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: www/lionwiki/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lionwiki
 PORTVERSION=	3.2.7
