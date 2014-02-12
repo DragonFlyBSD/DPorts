@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/wordnet-fpw/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wordnet-fpw
 PORTVERSION=	${WN_VER}.${WNFPW_VER}
