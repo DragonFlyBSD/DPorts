@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/ack/Makefile 335695 2013-12-05 20:26:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ack
 PORTVERSION=	2.12
