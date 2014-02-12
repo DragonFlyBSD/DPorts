@@ -1,5 +1,5 @@
 # Created by: Shinsuke Matsui <smatsui@karashi.org>
-# $FreeBSD: comms/jerm/Makefile 329077 2013-10-02 17:12:26Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	jerm
 PORTVERSION=	8096
