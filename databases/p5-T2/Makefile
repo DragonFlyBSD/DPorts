@@ -1,5 +1,5 @@
 # Created by: Scott McWhirter <scott@surreytech.co.uk>
-# $FreeBSD: databases/p5-T2/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	T2
 PORTVERSION=	0.10
