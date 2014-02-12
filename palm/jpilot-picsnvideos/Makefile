@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: palm/jpilot-picsnvideos/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	picsnvideos
 PORTVERSION=	0.2
