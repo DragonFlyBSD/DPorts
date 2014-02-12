@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: mail/msgconvert/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	msgconvert
 PORTVERSION=	20060330
