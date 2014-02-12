@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: databases/p5-DBIx-Class-EncodeColumns/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-EncodeColumns
 PORTVERSION=	0.02
@@ -16,7 +16,4 @@ BUILD_DEPENDS=	p5-DBIx-Class>=0.06002:${PORTSDIR}/databases/p5-DBIx-Class
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	DBIx::Class::EncodeColumns.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
