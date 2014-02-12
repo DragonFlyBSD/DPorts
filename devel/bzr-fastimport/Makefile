@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-fastimport/Makefile 340125 2014-01-17 21:57:41Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bzr-fastimport
 PORTVERSION=	0.13.0
