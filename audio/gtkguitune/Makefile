@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: audio/gtkguitune/Makefile 337114 2013-12-21 01:05:38Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gtkguitune
 PORTVERSION=	0.8
