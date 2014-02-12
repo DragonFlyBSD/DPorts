@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: audio/crip/Makefile 337591 2013-12-26 18:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	crip
 PORTVERSION=	3.9
