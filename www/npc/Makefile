@@ -1,5 +1,5 @@
 # Created by: Yasuhiro Fukuma <yasuf@big.or.jp>
-# $FreeBSD: www/npc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	npc
 PORTVERSION=	0.83
