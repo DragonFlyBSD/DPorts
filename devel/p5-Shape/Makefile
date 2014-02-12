@@ -1,5 +1,5 @@
 # Created by: Leif Pedersen <pedersen@meridian-enviro.com>
-# $FreeBSD: devel/p5-Shape/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Shape
 PORTVERSION=	0.04
