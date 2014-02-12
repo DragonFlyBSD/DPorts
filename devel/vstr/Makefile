@@ -1,5 +1,5 @@
 # Created by: Robert Schlotterbeck <robert@rs.tarrant.tx.us>
-# $FreeBSD: devel/vstr/Makefile 340952 2014-01-24 23:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vstr
 PORTVERSION=	1.0.15
