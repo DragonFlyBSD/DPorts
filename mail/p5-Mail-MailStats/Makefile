@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-MailStats/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	MailStats
 PORTVERSION=	0.02
