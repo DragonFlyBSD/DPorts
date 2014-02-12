@@ -1,5 +1,5 @@
 # Created by: Alan Snelson <alan@wave2.co.uk>
-# $FreeBSD: www/planet/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	planet
 PORTVERSION=	2.0
