@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/pnp-icinga/Makefile 328653 2013-09-29 09:00:04Z lme $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-icinga
 
