@@ -1,4 +1,4 @@
-# $FreeBSD: devel/meck/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	meck
 PORTVERSION=	0.8.1
