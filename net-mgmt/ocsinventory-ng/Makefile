@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ocsinventory-ng/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD$
 
 PORTNAME=	ocsinventory-ng
 PORTVERSION=	2.0.5
