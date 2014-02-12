@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/pysol-music/Makefile 341142 2014-01-26 00:01:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pysol-music
 PORTVERSION=	4.40
