@@ -1,5 +1,5 @@
 # Created by: Thomas Hentschel <thomas at hentschel dot net>
-# $FreeBSD: devel/orbitcpp/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	orbitcpp
 PORTVERSION=	1.3.9
