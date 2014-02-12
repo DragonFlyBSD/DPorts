@@ -1,5 +1,5 @@
 # Created by: Joe Clarke <marcus@marcuscom.com>
-# $FreeBSD: security/pam_ldap/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pam_ldap
 PORTVERSION=	1.8.6
