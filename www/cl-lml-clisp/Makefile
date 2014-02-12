@@ -1,5 +1,5 @@
 # Created by: Henrik Motakef <henrik.motakef@web.de>
-# $FreeBSD: www/cl-lml-clisp/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lml
 PORTVERSION=	2.5.7
