@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wen@FreeBSD.org>
-# $FreeBSD: astro/p5-Starlink-AST/Makefile 332850 2013-11-05 14:23:29Z wen $
+# $FreeBSD$
 
 PORTNAME=	Starlink-AST
 PORTVERSION=	1.02
