@@ -1,5 +1,5 @@
 # Created by: Michael Ranner
-# $FreeBSD: irc/kvirc/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	kvirc
 PORTVERSION=	4.2.0
