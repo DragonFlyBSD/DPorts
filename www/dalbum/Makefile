@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: www/dalbum/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dalbum
 PORTVERSION=	140.152
