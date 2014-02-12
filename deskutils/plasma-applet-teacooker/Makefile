@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-teacooker/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	teacooker
 PORTVERSION=	0.3.0
