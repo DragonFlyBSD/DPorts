@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-TokyoCabinet/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	TokyoCabinet
 PORTVERSION=	1.34
