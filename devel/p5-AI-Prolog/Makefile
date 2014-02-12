@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-AI-Prolog/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	AI-Prolog
 PORTVERSION=	0.741
