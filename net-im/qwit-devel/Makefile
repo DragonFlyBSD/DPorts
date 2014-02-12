@@ -1,5 +1,5 @@
 # Created by: Sokolov Alexey <sokolov@TrueBSD.org>
-# $FreeBSD: net-im/qwit-devel/Makefile 334590 2013-11-22 12:55:26Z makc $
+# $FreeBSD$
 
 PORTNAME=	qwit
 DISTVERSION=	r215
