@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: games/inform7/files/i7.sh.in 317571 2013-05-07 05:33:17Z az $
+# $FreeBSD: head/games/inform7/files/i7.sh.in 317571 2013-05-07 05:33:17Z az $
 
 #
 #  Copyright (c) 2010-2013 Andy Kosela <akosela@andykosela.com>

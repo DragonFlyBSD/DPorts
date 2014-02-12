@@ -1,5 +1,5 @@
 # Created by: Andy Kosela <akosela@andykosela.com>
-# $FreeBSD: games/inform7/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	inform7
 PORTVERSION=	6G60
