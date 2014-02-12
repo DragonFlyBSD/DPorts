@@ -1,5 +1,5 @@
 # Created by: Alexander Best
-# $FreeBSD: editors/py-room/Makefile 338516 2014-01-03 01:53:21Z bapt $
+# $FreeBSD$
 
 PORTNAME=	room
 PORTVERSION=	0.4.1
