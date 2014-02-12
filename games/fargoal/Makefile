@@ -1,5 +1,5 @@
 # Created by: chris_pressey@yahoo.ca
-# $FreeBSD: games/fargoal/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fargoal
 PORTVERSION=	20040629
