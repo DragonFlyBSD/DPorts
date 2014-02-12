@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: devel/p5-Locale-PGetText/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Locale-PGetText
 PORTVERSION=	0.16
