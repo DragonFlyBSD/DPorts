@@ -1,5 +1,5 @@
 # Created by: anholt
-# $FreeBSD: www/swfdec-plugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	swfdec-plugin
 PORTVERSION=	0.8.2
