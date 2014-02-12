@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: www/xpi-modify_headers/Makefile 341211 2014-01-26 15:11:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	modify_headers
 PORTVERSION=	0.7.1.2b
