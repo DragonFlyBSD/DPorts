@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: devel/cvslines/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=		cvslines
 PORTVERSION=		1.6.9
