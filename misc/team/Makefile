@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: misc/team/Makefile 342321 2014-02-02 16:00:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	team
 PORTVERSION=	3.1
