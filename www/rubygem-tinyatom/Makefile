@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-tinyatom/Makefile 335753 2013-12-06 15:23:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tinyatom
 PORTVERSION=	0.3.6
