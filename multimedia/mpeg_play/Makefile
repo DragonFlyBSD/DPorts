@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: multimedia/mpeg_play/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mpeg_play
 PORTVERSION=	2.4
@@ -15,10 +15,10 @@ COMMENT=	Program to play mpeg movies on X displays
 WRKSRC=		${WRKDIR}/mpeg_play
 USES=		imake
 USE_XORG=	x11 xext
-MAN1=		mpeg_play.1
-PLIST_FILES=	bin/mpeg_play
 
-NO_STAGE=	yes
+PLIST_FILES=	bin/mpeg_play \
+		man/man1/mpeg_play.1.gz
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "powerpc"
