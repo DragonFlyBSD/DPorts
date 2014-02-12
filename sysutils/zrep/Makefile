@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/zrep/Makefile 338574 2014-01-03 19:28:01Z vg $
+# $FreeBSD$
 
 PORTNAME=	zrep
 PORTVERSION=	1.0.1
