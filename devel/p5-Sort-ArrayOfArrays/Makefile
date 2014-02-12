@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: devel/p5-Sort-ArrayOfArrays/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Sort-ArrayOfArrays
 PORTVERSION=	1.00
