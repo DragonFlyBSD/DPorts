@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: math/pure-rational/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pure-rational
 PORTVERSION=	0.1
@@ -21,6 +21,8 @@ PLIST_FILES=	lib/pure/rational.pure \
 NO_STAGE=	yes
 
 PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
