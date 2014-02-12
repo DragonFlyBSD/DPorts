@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Netherlands/Makefile 339738 2014-01-15 03:01:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Date_Holidays_Netherlands
 PORTVERSION=	0.1.4
