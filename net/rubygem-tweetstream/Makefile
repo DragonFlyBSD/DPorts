@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: net/rubygem-tweetstream/Makefile 338364 2014-01-01 06:51:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tweetstream
 PORTVERSION=	2.6.0
