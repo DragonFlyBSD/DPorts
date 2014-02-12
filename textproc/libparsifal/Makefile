@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/libparsifal/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libparsifal
 PORTVERSION=	1.1.0
