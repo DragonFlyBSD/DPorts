@@ -1,5 +1,5 @@
 # Created by: John Capo <jc@irbs.com>
-# $FreeBSD: editors/axe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	aXe
 PORTVERSION=	6.1.2
