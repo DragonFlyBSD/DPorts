@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: astro/weather/Makefile 338287 2013-12-31 12:47:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	weather
 PORTVERSION=	2.0
