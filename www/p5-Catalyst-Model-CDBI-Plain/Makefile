@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-Model-CDBI-Plain/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Model-CDBI-Plain
 PORTVERSION=	0.03
