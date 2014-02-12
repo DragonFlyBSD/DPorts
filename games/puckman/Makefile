@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/puckman/Makefile 338332 2013-12-31 18:18:06Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	puckman
 PORTVERSION=	1.0
