@@ -1,5 +1,5 @@
 # Created by: Reinier de Blois <rddeblois@gmail.com>
-# $FreeBSD: graphics/squish/Makefile 336891 2013-12-19 12:22:41Z pawel $
+# $FreeBSD$
 
 PORTNAME=	squish
 PORTVERSION=	1.10
