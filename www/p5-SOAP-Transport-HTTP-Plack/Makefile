@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-SOAP-Transport-HTTP-Plack/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	SOAP-Transport-HTTP-Plack
 PORTVERSION=	0.03
