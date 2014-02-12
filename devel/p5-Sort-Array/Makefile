@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: devel/p5-Sort-Array/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	Sort-Array
 DISTVERSION=	0.26
