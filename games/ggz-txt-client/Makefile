@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/ggz-txt-client/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ggz-txt-client
 PORTVERSION=	${GGZ_VERSION}
