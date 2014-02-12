@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Directory-Queue/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Directory-Queue
 PORTVERSION=	1.8
