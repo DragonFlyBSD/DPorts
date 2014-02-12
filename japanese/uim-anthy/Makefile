@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: japanese/uim-anthy/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 CATEGORIES=	japanese
 .if defined(WITHOUT_X11)
