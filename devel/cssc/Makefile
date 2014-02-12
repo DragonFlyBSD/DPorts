@@ -1,5 +1,5 @@
 # Created by: Oliver Fromme
-# $FreeBSD: devel/cssc/Makefile 329964 2013-10-10 05:49:31Z jhale $
+# $FreeBSD$
 
 PORTNAME=	cssc
 PORTVERSION=	1.3.0
