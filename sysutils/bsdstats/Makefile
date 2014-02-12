@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD: sysutils/bsdstats/Makefile 339133 2014-01-08 13:53:59Z lme $
+# $FreeBSD$
 
 PORTNAME=	bsdstats
 PORTVERSION=	5.5
