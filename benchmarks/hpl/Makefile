@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: benchmarks/hpl/Makefile 338744 2014-01-05 02:00:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hpl
 PORTVERSION=	2.1
