@@ -1,5 +1,5 @@
 # Created by: pst
-# $FreeBSD: mail/imap-uw/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	imap
 PORTVERSION=	2007f
