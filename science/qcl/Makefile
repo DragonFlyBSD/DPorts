@@ -1,5 +1,5 @@
 # Created by: Brad Huntting <huntting@glarp.com>
-# $FreeBSD: science/qcl/Makefile 332159 2013-10-30 17:57:33Z pawel $
+# $FreeBSD$
 
 PORTNAME=	qcl
 PORTVERSION=	0.6.3
