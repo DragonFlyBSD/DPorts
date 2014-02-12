@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: textproc/p5-XML-Mini/Makefile 340469 2014-01-20 20:43:29Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-Mini
 PORTVERSION=	1.38
