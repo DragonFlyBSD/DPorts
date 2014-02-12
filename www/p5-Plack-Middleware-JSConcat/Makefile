@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-JSConcat/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-JSConcat
 PORTVERSION=	0.29
