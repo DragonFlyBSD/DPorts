@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/qross/Makefile 338906 2014-01-06 16:24:22Z makc $
+# $FreeBSD$
 
 PORTNAME=	qross
 PORTVERSION=	0.2.2
