@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-deprecated/Makefile 332035 2013-10-30 02:31:04Z swills $
+# $FreeBSD$
 
 PORTNAME=	deprecated
 PORTVERSION=	3.0.1
