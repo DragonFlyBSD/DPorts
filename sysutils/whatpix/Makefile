@@ -1,5 +1,5 @@
 # Created by: Philippe Casidy <pcasidy@casidy.com>
-# $FreeBSD: sysutils/whatpix/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	whatpix
 PORTVERSION=	1.2
