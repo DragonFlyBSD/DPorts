@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@dante.org.uk>
-# $FreeBSD: www/www6to4/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	www6to4
 PORTVERSION=	1.6
