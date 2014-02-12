@@ -1,5 +1,5 @@
 # Created by: steve farrell
-# $FreeBSD: games/xqf/Makefile 337113 2013-12-21 00:58:05Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xqf
 PORTVERSION=	1.0.5
