@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/pgpool-II-30/files/pgpool_copy_backup 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/pgpool-II-30/files/pgpool_copy_backup 340872 2014-01-24 00:14:07Z mat $
 #
 # In postgresql.conf:
 #   archive_command = 'test -f /proj/pgsql/data/archive_log/%f || cp %p /proj/pgsql/data/archive_log/%f'

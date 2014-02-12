@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/pgpool-II-30/files/pgpool_switch_xlog 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/pgpool-II-30/files/pgpool_switch_xlog 340872 2014-01-24 00:14:07Z mat $
 
 logger="logger -t pgpool -p local0.info"
 psql=/usr/local/bin/psql

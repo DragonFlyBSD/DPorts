@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# $FreeBSD: databases/pgpool-II-30/files/pgpool_remote_start 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/pgpool-II-30/files/pgpool_remote_start 340872 2014-01-24 00:14:07Z mat $
 
 use strict;
 use warnings;
