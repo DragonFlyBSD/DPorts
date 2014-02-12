@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: databases/sqlite-ext-miscfuncs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sqlite-ext-miscfuncs
 PORTVERSION=	1.1
