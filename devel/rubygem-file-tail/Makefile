@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-file-tail/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	file-tail
 PORTVERSION=	1.0.12
