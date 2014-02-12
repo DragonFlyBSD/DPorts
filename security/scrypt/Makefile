@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/scrypt/Makefile 342023 2014-01-31 16:48:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	scrypt
 PORTVERSION=	1.1.6
