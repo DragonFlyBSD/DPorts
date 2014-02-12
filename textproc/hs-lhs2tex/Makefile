@@ -1,5 +1,5 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: textproc/hs-lhs2tex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lhs2tex
 PORTVERSION=	1.18.1
