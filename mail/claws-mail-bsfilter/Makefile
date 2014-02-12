@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: mail/claws-mail-bsfilter/Makefile 336489 2013-12-14 22:02:10Z pawel $
+# $FreeBSD$
 
 PORTNAME=	bsfilter
 PORTREVISION=	0
