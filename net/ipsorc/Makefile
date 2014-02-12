@@ -1,4 +1,4 @@
-# $FreeBSD: net/ipsorc/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ipsorc
 PORTVERSION=	1.7.5
