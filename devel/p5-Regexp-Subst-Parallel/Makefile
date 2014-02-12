@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: devel/p5-Regexp-Subst-Parallel/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Regexp-Subst-Parallel
 PORTVERSION=	0.11
