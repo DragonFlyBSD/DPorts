@@ -1,5 +1,5 @@
 # Created by: saper@system.pl
-# $FreeBSD: graphics/gif2png/Makefile 342177 2014-02-01 15:54:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gif2png
 PORTVERSION=	2.5.4
