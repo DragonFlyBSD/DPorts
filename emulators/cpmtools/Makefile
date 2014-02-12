@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: emulators/cpmtools/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cpmtools
 PORTVERSION=	1.1
