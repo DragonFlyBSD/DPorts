@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-AnyEvent-SCGI/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Handler-AnyEvent-SCGI
 PORTVERSION=	0.02
