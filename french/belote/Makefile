@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: french/belote/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	belote
 PORTVERSION=	20061109
