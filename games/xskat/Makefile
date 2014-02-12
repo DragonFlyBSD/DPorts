@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xskat/Makefile 342185 2014-02-01 16:31:45Z riggs $
+# $FreeBSD$
 
 PORTNAME=	xskat
 PORTVERSION=	4.0
