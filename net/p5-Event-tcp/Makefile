@@ -1,5 +1,5 @@
 # Created by: steinex
-# $FreeBSD: net/p5-Event-tcp/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Event-tcp
 PORTVERSION=	0.14
