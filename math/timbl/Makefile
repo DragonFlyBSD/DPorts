@@ -1,5 +1,5 @@
 # Created by: Yuri Victorovich <yuri@tsoft.com>
-# $FreeBSD: math/timbl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	timbl
 PORTVERSION=	6.4.2
@@ -11,7 +11,6 @@ COMMENT=	Tilburg Memory Based Learner
 
 LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
 
-MAN1=	timbl.1
 
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
@@ -19,7 +18,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} 's#doc/@PACKAGE@/examples#examples/@PACKAGE@#' ${WRKSRC}/demos/Makefile.in
 
