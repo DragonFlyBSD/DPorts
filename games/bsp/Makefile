@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: games/bsp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bsp
 PORTVERSION=	5.2
