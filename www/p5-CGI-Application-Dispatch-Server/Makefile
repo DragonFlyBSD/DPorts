@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Dispatch-Server/Makefile 333346 2013-11-09 21:46:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Dispatch-Server
 PORTVERSION=	0.53
