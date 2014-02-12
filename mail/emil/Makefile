@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: mail/emil/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	emil
 PORTVERSION=	2.1b9
