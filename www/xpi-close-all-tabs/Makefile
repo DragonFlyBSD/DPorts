@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/xpi-close-all-tabs/Makefile 341199 2014-01-26 15:07:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	close-all-tabs
 PORTVERSION=	1.1
