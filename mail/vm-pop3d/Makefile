@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-# $FreeBSD: mail/vm-pop3d/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vm-pop3d
 PORTVERSION=	1.1.6
