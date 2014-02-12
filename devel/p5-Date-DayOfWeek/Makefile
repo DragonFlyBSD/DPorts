@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Date-DayOfWeek/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Date-DayOfWeek
 PORTVERSION=	1.22
