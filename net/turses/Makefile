@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/turses/Makefile 342189 2014-02-01 17:04:17Z koobs $
+# $FreeBSD$
 
 PORTNAME=	turses
 PORTVERSION=	0.2.20
