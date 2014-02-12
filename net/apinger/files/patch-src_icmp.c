@@ -1,5 +1,5 @@
 
-$FreeBSD: net/apinger/files/patch-src_icmp.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/apinger/files/patch-src_icmp.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/icmp.c.orig
 +++ src/icmp.c

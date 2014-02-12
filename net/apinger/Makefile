@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: net/apinger/Makefile 339608 2014-01-13 16:57:22Z garga $
+# $FreeBSD$
 
 PORTNAME=	apinger
 PORTVERSION=	0.6.1
