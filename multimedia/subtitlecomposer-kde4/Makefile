@@ -1,7 +1,8 @@
-# $FreeBSD: multimedia/subtitlecomposer-kde4/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	subtitlecomposer
 PORTVERSION=	0.5.6
+PORTREVISION=	1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	GITHUB
 
