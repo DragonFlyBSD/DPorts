@@ -1,5 +1,5 @@
 # Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-# $FreeBSD: editors/emacs-devel/Makefile 338536 2014-01-03 10:55:40Z ashish $
+# $FreeBSD$
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}.${EMACS_REV}
