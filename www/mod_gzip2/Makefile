@@ -1,5 +1,5 @@
 # Created by: Stefan `Sec` Zehl <sec@42.org>
-# $FreeBSD: www/mod_gzip2/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_gzip2
 PORTVERSION=	2.1.0
