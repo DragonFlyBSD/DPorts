@@ -1,5 +1,5 @@
 # Created by: Maksym Sobolyev <sobomax@pbxpress.it>
-# $FreeBSD: misc/p5-Asterisk-FastAGI/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Asterisk-FastAGI
 PORTVERSION=	0.02
