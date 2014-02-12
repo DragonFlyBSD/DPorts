@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.dharma>
-# $FreeBSD: devel/bzr-gtk/Makefile 340452 2014-01-20 19:24:43Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bzr-gtk
 PORTVERSION=	0.100.0
