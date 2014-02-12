@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/syndigator/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 # $MCom: ports/www/syndigator/Makefile,v 1.4 2007/09/09 22:45:27 mezz Exp $
 
 PORTNAME=	syndigator
