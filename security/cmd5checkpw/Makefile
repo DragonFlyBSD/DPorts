@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/cmd5checkpw/Makefile 332315 2013-10-31 23:43:26Z garga $
+# $FreeBSD$
 
 PORTNAME=	cmd5checkpw
 PORTVERSION=	0.22
