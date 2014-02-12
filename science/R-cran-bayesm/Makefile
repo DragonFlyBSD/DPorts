@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-bayesm/Makefile 342138 2014-02-01 13:58:01Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bayesm
 PORTVERSION=	2.2.5
