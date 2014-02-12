@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-ansel/Makefile 341402 2014-01-27 13:30:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ansel
 DISTVERSION=	3.0.1
