@@ -1,4 +1,4 @@
-# $FreeBSD: net/bittwist/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bittwist
 PORTVERSION=	1.1
