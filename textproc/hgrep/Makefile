@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: textproc/hgrep/Makefile 341579 2014-01-28 14:31:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	hgrep
 PORTVERSION=	1.0
