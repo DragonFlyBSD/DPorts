@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Throttle/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Throttle
 PORTVERSION=	0.01
