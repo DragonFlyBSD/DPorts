@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-blessings/Makefile 341584 2014-01-28 14:43:06Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	blessings
 PORTVERSION=	1.5.1
