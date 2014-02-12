@@ -1,5 +1,5 @@
 # Created by: Matthieu Guegan <matt.guegan@free.fr>
-# $FreeBSD: audio/gimmix/Makefile 337904 2013-12-28 20:29:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gimmix
 PORTVERSION=	0.5.7.1
