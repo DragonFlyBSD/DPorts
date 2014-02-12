@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/libsocketcpp/Makefile 339718 2014-01-14 21:09:27Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libsocketcpp
 PORTVERSION=	1.0.7
