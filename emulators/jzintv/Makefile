@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: emulators/jzintv/Makefile 336058 2013-12-10 11:56:41Z martymac $
+# $FreeBSD$
 
 PORTNAME=	jzintv
 PORTVERSION=	1.0b4
