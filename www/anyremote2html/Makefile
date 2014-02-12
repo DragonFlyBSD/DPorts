@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/anyremote2html/Makefile 341719 2014-01-29 11:52:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	anyremote2html
 PORTVERSION=	1.4
