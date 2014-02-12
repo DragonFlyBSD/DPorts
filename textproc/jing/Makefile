@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: textproc/jing/Makefile 341738 2014-01-29 13:41:17Z mat $
+# $FreeBSD$
 
 PORTNAME=	jing
 PORTVERSION=	2008.10.28
