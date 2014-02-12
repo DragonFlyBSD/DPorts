@@ -1,9 +1,9 @@
 # Created by: miwi
-# $FreeBSD: deskutils/kdepim44/Makefile 341883 2014-01-30 20:46:40Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdepim
 PORTVERSION=	4.4.11.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	deskutils kde ipv6
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/kdepim-${PORTVERSION}/src
