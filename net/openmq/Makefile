@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.iol.cz>
-# $FreeBSD: net/openmq/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openmq
 PORTVERSION=	4.5.1.b.3
