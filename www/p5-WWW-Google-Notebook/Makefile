@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: www/p5-WWW-Google-Notebook/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Google-Notebook
 PORTVERSION=	0.01
