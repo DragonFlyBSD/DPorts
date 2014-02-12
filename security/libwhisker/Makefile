@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: security/libwhisker/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD$
 
 PORTNAME=	libwhisker
 PORTVERSION=	2.5
