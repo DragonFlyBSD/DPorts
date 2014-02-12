@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/entr/Makefile 340927 2014-01-24 19:26:03Z danilo $
+# $FreeBSD$
 
 PORTNAME=	entr
 PORTVERSION=	2.6
