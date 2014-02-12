@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: astro/p5-GPS/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	GPS
 PORTVERSION=	0.17
