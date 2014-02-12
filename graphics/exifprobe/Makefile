@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: graphics/exifprobe/Makefile 331921 2013-10-29 02:03:55Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	exifprobe
 DISTVERSION=	2.0.1
