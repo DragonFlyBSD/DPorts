@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: audio/mp3mover/Makefile 337247 2013-12-23 14:02:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	mp3mover
 PORTVERSION=	2.1.1
