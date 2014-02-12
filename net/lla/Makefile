@@ -1,5 +1,5 @@
 # Created by: Sunagawa Koji <koj@ofug.net>
-# $FreeBSD: net/lla/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lla
 PORTVERSION=	0.99.1
@@ -24,8 +24,7 @@ EXTRACT_CMD=		${CP}
 EXTRACT_BEFORE_ARGS=	
 EXTRACT_AFTER_ARGS=	./${PORTNAME}
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
