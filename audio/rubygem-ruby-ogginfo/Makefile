@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: audio/rubygem-ruby-ogginfo/Makefile 335300 2013-11-30 15:43:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ruby-ogginfo
 PORTVERSION=	0.7.2
