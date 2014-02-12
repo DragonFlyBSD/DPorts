@@ -1,5 +1,5 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: games/paintown/Makefile 330756 2013-10-18 14:46:42Z decke $
+# $FreeBSD$
 
 PORTNAME=	paintown
 PORTVERSION=	3.6.0
