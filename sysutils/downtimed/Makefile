@@ -1,5 +1,5 @@
 # Created by: Janne Snabb <snabb@epipe.com>
-# $FreeBSD: sysutils/downtimed/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	downtimed
 PORTVERSION=	0.6
