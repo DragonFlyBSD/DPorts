@@ -1,5 +1,5 @@
 # Created by: Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: www/xpi-server_spy/Makefile 341216 2014-01-26 15:13:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	server_spy
 PORTVERSION=	0.2.3
