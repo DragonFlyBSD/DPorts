@@ -1,5 +1,5 @@
 # Created by: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: textproc/pdfgrep/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	pdfgrep
 PORTVERSION=	1.3.0
