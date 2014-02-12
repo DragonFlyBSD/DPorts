@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: audio/rubygem-librmpd/Makefile 340899 2014-01-24 14:45:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	librmpd
 PORTVERSION=	0.1.1
