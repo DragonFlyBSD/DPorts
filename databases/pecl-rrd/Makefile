@@ -1,4 +1,4 @@
-# $FreeBSD: databases/pecl-rrd/Makefile 340266 2014-01-19 11:40:17Z flo $
+# $FreeBSD$
 
 PORTNAME=	rrd
 DISTVERSION=	1.1.3
