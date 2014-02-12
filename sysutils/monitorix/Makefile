@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/monitorix/Makefile 337166 2013-12-21 21:50:02Z crees $
+# $FreeBSD$
 
 PORTNAME=	monitorix
 PORTVERSION=	3.4.0
