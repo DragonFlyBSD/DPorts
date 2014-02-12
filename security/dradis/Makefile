@@ -1,5 +1,5 @@
 # Created by: Dax Labrador <semprix@bsdmail.org>
-# $FreeBSD: security/dradis/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dradis
 DISTVERSION=	2.6.1
