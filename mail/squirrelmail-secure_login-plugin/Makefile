@@ -1,4 +1,4 @@
-# $FreeBSD: mail/squirrelmail-secure_login-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	secure_login
 PORTVERSION=	1.4
