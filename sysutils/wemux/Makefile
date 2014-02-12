@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: sysutils/wemux/Makefile 329650 2013-10-07 04:51:52Z cs $
+# $FreeBSD$
 
 PORTNAME=	wemux
 PORTVERSION=	2.2.0
