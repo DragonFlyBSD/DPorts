@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/lianliankan/Makefile 337706 2013-12-27 11:01:19Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lianliankan
 DISTVERSION=	2.3beta1
