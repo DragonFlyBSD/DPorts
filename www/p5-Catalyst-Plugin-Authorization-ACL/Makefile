@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-Authorization-ACL/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-Authorization-ACL
 PORTVERSION=	0.15
