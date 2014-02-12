@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/iceicepenguin/files/iceicepenguin.in 336745 2013-12-17 17:50:17Z nemysis $
+# $FreeBSD: head/games/iceicepenguin/files/iceicepenguin.in 336745 2013-12-17 17:50:17Z nemysis $
 #
 
 cd "%%DATADIR%%"

@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/iceicepenguin/Makefile 336745 2013-12-17 17:50:17Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	iceicepenguin
 PORTVERSION=	1.5.1
