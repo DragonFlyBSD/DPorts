@@ -1,5 +1,5 @@
 # Created by: Junji NAKANISHI <jun-g@daemonfreaks.com>
-# $FreeBSD: www/py-amf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	amf
 PORTVERSION=	0.6.1
