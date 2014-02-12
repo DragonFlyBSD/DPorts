@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: x11/xbanner/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xbanner
 PORTVERSION=	1.31
@@ -13,6 +13,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Make your XDM login screen look beautiful
 
 USE_XORG=	xpm x11
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
