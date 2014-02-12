@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: mail/p5-Mail-OpenDKIM/Makefile 342299 2014-02-02 14:29:02Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-OpenDKIM
 PORTVERSION=	4201
