@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon <avg@icyb.net.ua>
-# $FreeBSD: devel/universalindentgui/Makefile 334683 2013-11-23 16:52:43Z makc $
+# $FreeBSD$
 
 PORTNAME=	universalindentgui
 PORTVERSION=	1.2.0
