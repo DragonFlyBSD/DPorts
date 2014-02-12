@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@langille.org>
-# $FreeBSD: sysutils/bacula-bat/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bacula
 PKGNAMESUFFIX=	-bat
