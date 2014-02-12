@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: sysutils/symlinks/Makefile 332015 2013-10-29 21:45:25Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	symlinks
 PORTVERSION=	1.4

@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/symlinks/files/patch-Makefile 334532 2013-11-21 22:37:24Z olgeni $
+$FreeBSD: head/sysutils/symlinks/files/patch-Makefile 334532 2013-11-21 22:37:24Z olgeni $
 
 --- Makefile.orig
 +++ Makefile
