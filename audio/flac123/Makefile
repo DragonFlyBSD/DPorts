@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: audio/flac123/Makefile 330803 2013-10-18 23:46:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	flac123
 PORTVERSION=	0.0.11
