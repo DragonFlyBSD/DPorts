@@ -1,5 +1,5 @@
 # Created by: Stefan Zehl <sec@42.org>
-# $FreeBSD: x11/xmove/Makefile 328723 2013-09-29 18:19:03Z ak $
+# $FreeBSD$
 
 PORTNAME=	xmove
 PORTVERSION=	2.0b2
