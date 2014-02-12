@@ -1,5 +1,5 @@
 # Created by: Daniel Eischen <deischen@FreeBSD.org>
-# $FreeBSD: editors/nedit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nedit
 PORTVERSION=	5.5
