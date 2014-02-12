@@ -1,4 +1,4 @@
-# $FreeBSD: misc/bibletime/Makefile 339988 2014-01-16 20:47:10Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	bibletime
 PORTVERSION=	2.10.0
