@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: textproc/highlight/Makefile 341589 2014-01-28 14:59:41Z mat $
+# $FreeBSD$
 
 PORTNAME=	highlight
 PORTVERSION=	2.16
