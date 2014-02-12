@@ -1,5 +1,5 @@
 # Created by: John Reynolds <johnjen@reynoldsnet.org>
-# $FreeBSD: sysutils/flexbackup/Makefile 340190 2014-01-18 15:46:24Z mva $
+# $FreeBSD$
 
 PORTNAME=	flexbackup
 PORTVERSION=	1.2.1
