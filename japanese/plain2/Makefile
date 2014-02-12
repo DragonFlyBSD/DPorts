@@ -1,5 +1,5 @@
 # Created by: nkazushi@highway.or.jp
-# $FreeBSD: japanese/plain2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	plain2
 PORTVERSION=	2.54.1
