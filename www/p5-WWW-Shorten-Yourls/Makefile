@@ -1,5 +1,5 @@
 # Created by: Lawrence Chen <beastie@tardisi.com>
-# $FreeBSD: www/p5-WWW-Shorten-Yourls/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Shorten-Yourls
 PORTVERSION=	0.06
