@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: www/mod_log_firstbyte/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_log_firstbyte
 PORTVERSION=	1.01
