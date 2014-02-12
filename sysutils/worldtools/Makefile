@@ -1,5 +1,5 @@
 # Created by: anarcat
-# $FreeBSD: sysutils/worldtools/Makefile 337789 2013-12-27 19:21:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	worldtools
 PORTVERSION=	1.3.1
