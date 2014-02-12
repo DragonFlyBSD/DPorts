@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: deskutils/gcal/Makefile 337919 2013-12-28 21:33:14Z johans $
+# $FreeBSD$
 
 PORTNAME=	gcal
 PORTVERSION=	3.6.3
@@ -17,6 +17,8 @@ USES=		shebangfix
 SHEBANG_FILES=	misc/gcalltx/gcalltxp.in misc/gcalltx/gcalltx.pl
 
 INFO=		gcal
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
