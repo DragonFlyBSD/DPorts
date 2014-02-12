@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/rubygem-taggable/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	taggable
 PORTVERSION=	2.0.2
