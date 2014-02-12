@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: deskutils/drivel/Makefile 342224 2014-02-01 23:59:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	drivel
 PORTVERSION=	3.0.5
