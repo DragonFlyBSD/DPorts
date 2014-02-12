@@ -1,5 +1,5 @@
 # Created by: ijlioa
-# $FreeBSD: databases/p5-DBD-AnyData/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBD-AnyData
 PORTVERSION=	0.110
