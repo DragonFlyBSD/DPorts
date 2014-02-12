@@ -1,5 +1,5 @@
 # Created by: asaddi@philosophysw.com
-# $FreeBSD: security/sha/Makefile 342021 2014-01-31 16:47:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sha
 PORTVERSION=	1.0.4
