@@ -1,5 +1,5 @@
 # Created by: jodocus <jodocus@jodocus.org>
-# $FreeBSD: net-im/py-punjab/Makefile 337601 2013-12-26 19:21:50Z wg $
+# $FreeBSD$
 
 PORTNAME=	punjab
 PORTVERSION=	0.14

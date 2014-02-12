@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-im/py-punjab/files/punjab.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-im/py-punjab/files/punjab.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: punjab
 # REQUIRE: DAEMON
