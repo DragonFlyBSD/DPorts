@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rb-inotify/Makefile 336882 2013-12-19 08:00:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rb-inotify
 PORTVERSION=	0.9.3
