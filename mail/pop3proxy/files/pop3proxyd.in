@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/pop3proxy/files/pop3proxyd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/pop3proxy/files/pop3proxyd.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: pop3proxyd
