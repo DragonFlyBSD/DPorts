@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Sort-Key-DateTime/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Sort-Key-DateTime
 PORTVERSION=	0.07
