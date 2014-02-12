@@ -1,5 +1,5 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: devel/log4cpp/Makefile 340771 2014-01-23 00:41:11Z bapt $
+# $FreeBSD$
 
 PORTNAME=	log4cpp
 DISTVERSION=	1.1
