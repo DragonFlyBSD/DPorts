@@ -1,4 +1,4 @@
-# $FreeBSD: games/neverball/Makefile 339395 2014-01-11 00:50:39Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
