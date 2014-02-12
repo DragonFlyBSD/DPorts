@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: www/p5-Apache-ParseFormData/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Apache-ParseFormData
 PORTVERSION=	0.09
