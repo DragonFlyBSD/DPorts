@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: devel/p5-Proc-BackOff/Makefile 332269 2013-10-31 17:29:55Z tj $
+# $FreeBSD$
 
 PORTNAME=	Proc-BackOff
 PORTVERSION=	0.02
