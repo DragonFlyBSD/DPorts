@@ -1,5 +1,5 @@
 # Created by: Evan Sarmiento <esarmiento@wayfair.com>
-# $FreeBSD: www/py-graphite-web/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	graphite-web
 PORTVERSION=	0.9.12
