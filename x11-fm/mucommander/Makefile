@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: x11-fm/mucommander/Makefile 341015 2014-01-25 12:40:42Z lme $
+# $FreeBSD$
 
 PORTNAME=	mucommander
 PORTVERSION=	0.9.0
