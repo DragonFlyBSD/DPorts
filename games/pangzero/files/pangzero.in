@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/pangzero/files/pangzero.in 339725 2014-01-14 21:47:09Z nemysis $
+# $FreeBSD: head/games/pangzero/files/pangzero.in 339725 2014-01-14 21:47:09Z nemysis $
 #
 
 cd "%%DATADIR%%"/bin

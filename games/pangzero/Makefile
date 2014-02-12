@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/pangzero/Makefile 339725 2014-01-14 21:47:09Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pangzero
 PORTVERSION=	1.3
