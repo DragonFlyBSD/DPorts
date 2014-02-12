@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-evolution2-devel/Makefile 338469 2014-01-02 19:41:57Z danilo $
+# $FreeBSD$
 
 PORTNAME=	libopensync-plugin-evolution2
 PORTVERSION=	0.39
