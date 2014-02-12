@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-Divert/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Divert
 PORTVERSION=	0.01
