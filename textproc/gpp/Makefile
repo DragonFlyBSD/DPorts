@@ -1,5 +1,5 @@
 # Created by: Jos Backus <josb@cncdsl.com>
-# $FreeBSD: textproc/gpp/Makefile 341484 2014-01-27 23:49:28Z mat $
+# $FreeBSD$
 
 PORTNAME=	gpp
 PORTVERSION=	2.24
