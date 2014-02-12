@@ -1,5 +1,5 @@
 # Created by: kirk@daycos.com
-# $FreeBSD: databases/pgdbf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pgdbf
 PORTVERSION=	0.6.2
