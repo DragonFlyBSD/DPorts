@@ -1,5 +1,5 @@
 # Created by: Michael Neumann <mneumann@ntecs.de>
-# $FreeBSD: emulators/hatari/Makefile 331635 2013-10-25 20:38:03Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	hatari
 PORTVERSION=	1.7.0
