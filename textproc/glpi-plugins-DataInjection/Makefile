@@ -1,5 +1,5 @@
 # Created by: ddurieux <d.durieux@siprossii.com>
-# $FreeBSD: textproc/glpi-plugins-DataInjection/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	DataInjection
 DISTVERSION=	1.7.2
