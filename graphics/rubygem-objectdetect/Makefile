@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: graphics/rubygem-objectdetect/Makefile 340903 2014-01-24 14:49:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	objectdetect
 PORTVERSION=	0.0.3
