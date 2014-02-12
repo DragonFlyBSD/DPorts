@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-Geo-Caching/Makefile 333084 2013-11-07 12:33:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Geo-Caching
 PORTVERSION=	0.11
