@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: www/p5-Mojolicious-Plugin-YamlConfig/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	Mojolicious-Plugin-YamlConfig
 PORTVERSION=	0.1.5
