@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: editors/gnotepad+/Makefile 330378 2013-10-15 09:47:11Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnotepad+
 PORTVERSION=	1.3.3
