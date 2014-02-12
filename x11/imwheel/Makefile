@@ -1,5 +1,5 @@
 # Created by: jhb
-# $FreeBSD: x11/imwheel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	imwheel
 PORTVERSION=	1.0.0.p12
@@ -17,6 +17,8 @@ USE_XORG=	x11 xpm xtst xext xmu
 USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gpm
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
