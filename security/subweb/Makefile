@@ -1,4 +1,4 @@
-# $FreeBSD: security/subweb/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	subweb
 PORTVERSION=	1.0
