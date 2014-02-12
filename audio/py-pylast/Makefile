@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-pylast/Makefile 341440 2014-01-27 18:31:42Z feld $
+# $FreeBSD$
 
 PORTNAME=	pylast
 PORTVERSION=	0.5.11
