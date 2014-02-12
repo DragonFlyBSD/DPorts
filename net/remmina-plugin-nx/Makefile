@@ -1,5 +1,5 @@
 # Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-# $FreeBSD: net/remmina-plugin-nx/Makefile 340367 2014-01-20 04:45:49Z fluffy $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-nx
 
