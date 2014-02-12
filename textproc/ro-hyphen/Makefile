@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/ro-hyphen/Makefile 334094 2013-11-17 15:56:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hyphen
 PORTVERSION=	3.3.10
