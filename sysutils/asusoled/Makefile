@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/asusoled/Makefile 340437 2014-01-20 18:25:41Z jkim $
+# $FreeBSD$
 
 PORTNAME=	asusoled
 PORTVERSION=	0.10
