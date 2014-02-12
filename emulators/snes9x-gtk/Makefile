@@ -1,5 +1,5 @@
 # Created by: okeeblow <root@cooltrainer.org>
-# $FreeBSD: emulators/snes9x-gtk/Makefile 340316 2014-01-19 15:00:24Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	snes9x
 PORTVERSION=	1.53r81
