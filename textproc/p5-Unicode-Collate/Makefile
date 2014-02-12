@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Unicode-Collate/Makefile 335845 2013-12-07 20:25:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Unicode-Collate
 PORTVERSION=	1.04
