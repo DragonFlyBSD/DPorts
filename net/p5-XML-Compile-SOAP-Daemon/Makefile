@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: net/p5-XML-Compile-SOAP-Daemon/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Compile-SOAP-Daemon
 PORTVERSION=	3.06
