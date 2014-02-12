@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Group/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Test-Group
 PORTVERSION=	0.19
@@ -16,11 +16,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Test::Group.3 \
-		Test::Group::Extending.3 \
-		Test::Group::NoWarnings.3 \
-		Test::Group::Plan.3 \
-		Test::Group::Tester.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
