@@ -1,5 +1,5 @@
 # Created by: Erik Greenwald <erik@smluc.org>
-# $FreeBSD: sysutils/diskscrub/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	diskscrub
 PORTVERSION=	2.5.2
