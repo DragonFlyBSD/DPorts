@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22-itk-mpm/Makefile 333336 2013-11-09 20:53:16Z ohauer $
+# $FreeBSD$
 
 # To build this port with the additional mpm-itk-perdir-regex
 # patch use -DWITH_ITK_PERDIR_REGEX
