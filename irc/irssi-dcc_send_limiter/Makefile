@@ -1,5 +1,5 @@
 # Created by: Timothy Redaelli <drizzt@gufi.org>
-# $FreeBSD: irc/irssi-dcc_send_limiter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dcc_send_limiter
 PORTVERSION=	0.8.10
