@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: biology/genpak/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	genpak
 PORTVERSION=	0.26
@@ -22,6 +22,8 @@ MAN1=	Genpak.1 gp_acc.1 gp_adjust.1 gp_cdndev.1 gp_cusage.1 gp_digest.1 \
 	gp_trimer.1 gp_primer.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MDOCS}
