@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-gen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pure-gen
 PORTVERSION=	0.16
@@ -31,6 +31,8 @@ PLIST_DIRS=	lib/${PORTNAME}
 PORTDOCS=	README README.dump-ast
 
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
