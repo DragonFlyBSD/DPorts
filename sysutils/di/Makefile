@@ -1,5 +1,5 @@
 # Created by: Brad Lanam <bll@gentoo.com>
-# $FreeBSD: sysutils/di/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	di
 PORTVERSION=	4.34
