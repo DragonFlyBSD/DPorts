@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: audio/py-discogs-client/Makefile 341582 2014-01-28 14:37:13Z feld $
+# $FreeBSD$
 
 PORTNAME=	discogs-client
 PORTVERSION=	1.1.1
