@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/nasawash/Makefile 338173 2013-12-30 21:37:31Z db $
+# $FreeBSD$
 
 PORTNAME=	nasawash
 PORTVERSION=	0.50
