@@ -1,5 +1,5 @@
 # Created by: Sergey Osokin aka oZZ <ozz@FreeBSD.org.ru>
-# $FreeBSD: graphics/wmgrabimage/Makefile 340988 2014-01-25 05:47:47Z ak $
+# $FreeBSD$
 
 PORTNAME=	wmGrabImage
 PORTVERSION=	0.72
