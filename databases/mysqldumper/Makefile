@@ -1,5 +1,5 @@
 # Created by: Marek Holienka <marekholienka@gmail.com>
-# $FreeBSD: databases/mysqldumper/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mysqldumper
 PORTVERSION=	1.24.2
