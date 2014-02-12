@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-BBS-UserInfo-SOB/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	BBS-UserInfo-SOB
 PORTVERSION=	0.01
