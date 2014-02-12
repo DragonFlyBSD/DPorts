@@ -1,5 +1,5 @@
 # Created by: gmarco@giovannelli.it
-# $FreeBSD: games/tetrinet-x/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tetrinet-x
 PORTVERSION=	1.13.16
