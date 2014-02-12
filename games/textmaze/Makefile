@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/textmaze/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	textmaze
 PORTVERSION=	1.2
