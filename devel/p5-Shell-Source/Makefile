@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <bat@cpan.org>
-# $FreeBSD: devel/p5-Shell-Source/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Shell-Source
 PORTVERSION=	0.01
