@@ -1,5 +1,5 @@
 # Created by: n@nectar.com
-# $FreeBSD: dns/hesiod/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hesiod
 PORTVERSION=	3.2.1
