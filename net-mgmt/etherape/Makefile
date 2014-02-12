@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@eit.uni-kl.de>
-# $FreeBSD: net-mgmt/etherape/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	etherape
 PORTVERSION=	0.9.9
@@ -20,6 +20,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		etherape.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
