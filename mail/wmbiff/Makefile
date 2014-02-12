@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: mail/wmbiff/Makefile 332303 2013-10-31 23:36:06Z garga $
+# $FreeBSD$
 
 PORTNAME=	wmbiff
 PORTVERSION=	0.4.27
