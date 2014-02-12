@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: www/bkmrkconv/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bkmrkconv
 PORTVERSION=	1.12
