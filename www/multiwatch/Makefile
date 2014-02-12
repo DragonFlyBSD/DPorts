@@ -1,4 +1,4 @@
-# $FreeBSD: www/multiwatch/Makefile 341553 2014-01-28 13:34:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	multiwatch
 PORTVERSION=	1.0.0
