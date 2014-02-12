@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: security/arirang/Makefile 338486 2014-01-02 20:08:18Z swills $
+# $FreeBSD$
 
 PORTNAME=	arirang
 PORTVERSION=	2.03
