@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/timer-applet/Makefile 342337 2014-02-02 16:52:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	timer-applet
 PORTVERSION=	2.1.4
