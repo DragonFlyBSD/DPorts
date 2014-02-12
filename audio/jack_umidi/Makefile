@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/jack_umidi/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jack_umidi
 PORTVERSION=	1.0.4
