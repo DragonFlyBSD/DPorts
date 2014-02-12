@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-Heap-Simple-XS/Makefile 331958 2013-10-29 15:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Heap-Simple-XS
 PORTVERSION=	0.10
