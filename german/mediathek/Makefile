@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: german/mediathek/Makefile 341461 2014-01-27 21:53:59Z lme $
+# $FreeBSD$
 
 PORTNAME=	mediathek
 PORTVERSION=	4
