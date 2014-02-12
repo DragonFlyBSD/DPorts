@@ -1,5 +1,5 @@
 # Created by: moeti <freebsd@simplerezo.com>
-# $FreeBSD: mail/qmail-scanner/Makefile 338615 2014-01-04 00:57:53Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qmail-scanner
 PORTVERSION=	2.10
