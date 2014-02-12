@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/structuresynth/Makefile 334584 2013-11-22 12:54:48Z makc $
+# $FreeBSD$
 
 PORTNAME=	structuresynth
 PORTVERSION=	1.5.0
