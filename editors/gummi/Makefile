@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <Nukama@gmail.com>
-# $FreeBSD: editors/gummi/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	gummi
 PORTVERSION=	0.6.5
