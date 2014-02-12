@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xrisk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xrisk
 PORTVERSION=	2.15
