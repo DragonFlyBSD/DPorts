@@ -1,5 +1,5 @@
 # Created by: verm@drunkmonk.net
-# $FreeBSD: games/lmarbles/Makefile 337817 2013-12-27 22:16:47Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lmarbles
 PORTVERSION=	1.0.8
