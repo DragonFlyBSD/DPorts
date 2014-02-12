@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/grig/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	grig
 PORTVERSION=	0.8.0
