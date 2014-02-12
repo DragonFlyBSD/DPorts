@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: ftp/horde3-gollem/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gollem
 PORTVERSION=	1.1.2
