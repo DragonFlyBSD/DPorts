@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/labyrinth/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	labyrinth
 PORTVERSION=	0.5
