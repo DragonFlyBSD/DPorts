@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: net/p5-Net-TiVo/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-TiVo
 PORTVERSION=	0.11
