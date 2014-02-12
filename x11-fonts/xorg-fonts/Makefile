@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/xorg-fonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xorg-fonts
 PORTVERSION=	7.7
