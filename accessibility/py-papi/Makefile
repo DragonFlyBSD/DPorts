@@ -1,5 +1,5 @@
 # Created by: Marcus von Appen
-# $FreeBSD: accessibility/py-papi/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	papi
 PORTVERSION=	0.0.9
