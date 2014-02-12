@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/p5-Net-FTP-Recursive/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-FTP-Recursive
 PORTVERSION=	2.04
