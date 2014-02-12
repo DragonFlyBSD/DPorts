@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: astro/roadnav/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	roadnav
 PORTVERSION=	0.19
