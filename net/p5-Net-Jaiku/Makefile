@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: net/p5-Net-Jaiku/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Jaiku
 PORTVERSION=	0.0501
