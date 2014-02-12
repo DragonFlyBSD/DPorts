@@ -1,5 +1,5 @@
 # Created by: Vasil Dimov <vd@datamax.bg>
-# $FreeBSD: sysutils/rdiff-backup-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rdiff-backup
 PORTVERSION=	1.3.3
