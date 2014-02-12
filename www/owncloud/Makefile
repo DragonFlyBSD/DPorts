@@ -1,4 +1,4 @@
-# $FreeBSD: www/owncloud/Makefile 341679 2014-01-29 02:14:35Z kevlo $
+# $FreeBSD$
 
 PORTNAME=	owncloud
 PORTVERSION=	6.0.1
