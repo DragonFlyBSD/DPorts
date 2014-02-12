@@ -1,5 +1,5 @@
 # Created by: Hakisho Nukama <nukama@gmail.com>
-# $FreeBSD: devel/fuel/Makefile 334873 2013-11-25 18:01:01Z makc $
+# $FreeBSD$
 
 PORTNAME=	fuel
 DISTVERSION=	0.9.6
