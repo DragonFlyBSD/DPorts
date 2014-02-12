@@ -1,5 +1,5 @@
 # Created by: rsmith@xs4all.nl
-# $FreeBSD: science/lamprop/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lamprop
 PORTVERSION=	1.3.3
