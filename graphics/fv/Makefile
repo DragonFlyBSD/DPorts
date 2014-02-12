@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: graphics/fv/Makefile 339558 2014-01-12 22:53:59Z naddy $
+# $FreeBSD$
 
 PORTNAME=	fv
 PORTVERSION=	1.03
@@ -31,6 +31,9 @@ PORTDOCS=	AUTHORS ChangeLog README
 PLIST_FILES=	bin/${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if !defined(WITH_DEBUG)
