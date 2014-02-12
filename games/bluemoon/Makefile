@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/bluemoon/Makefile 337177 2013-12-22 09:19:40Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	bluemoon
 PORTVERSION=	2.11
