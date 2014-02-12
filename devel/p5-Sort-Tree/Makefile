@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: devel/p5-Sort-Tree/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Sort-Tree
 PORTVERSION=	1.09
