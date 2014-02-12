@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/ioquake3/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME?=	ioquake3
 DISTVERSION?=	1.36
