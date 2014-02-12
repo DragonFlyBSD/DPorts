@@ -1,5 +1,5 @@
 # Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-# $FreeBSD: sysutils/mapchan/Makefile 334513 2013-11-21 19:43:18Z bsam $
+# $FreeBSD$
 
 PORTNAME=	mapchan
 PORTVERSION=	3.2
