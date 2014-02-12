@@ -1,5 +1,5 @@
 # Created by: Zahemszky, Gabor <ZGabor at CoDe dot HU>
-# $FreeBSD: security/sslwrap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sslwrap
 PORTVERSION=	2.0.6
@@ -19,6 +19,9 @@ PORTDOCS=	README docs.html
 PLIST_FILES=	bin/sslwrap
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
