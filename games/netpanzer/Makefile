@@ -1,4 +1,4 @@
-# $FreeBSD: games/netpanzer/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	netpanzer
 PORTVERSION=	0.8.4
