@@ -1,5 +1,5 @@
 # Created by: Yeti <yeti@gwyddion.net>
-# $FreeBSD: science/gwyddion/Makefile 338508 2014-01-03 00:08:56Z danilo $
+# $FreeBSD$
 
 PORTNAME=	gwyddion
 PORTVERSION=	2.34
