@@ -1,5 +1,5 @@
 # Created by: tux@pinguru.net
-# $FreeBSD: devel/subclipse/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	subclipse
 PORTVERSION=	1.6.5
