@@ -1,5 +1,5 @@
 # Created by: milki@rescomp.berkeley.edu
-# $FreeBSD: devel/p5-Test-EOL/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	Test-EOL
 PORTVERSION=	1.5
