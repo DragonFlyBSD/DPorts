@@ -1,5 +1,5 @@
 # Created by: Stephon Chen <stephon@gmail.com>
-# $FreeBSD: textproc/p5-Term-QRCode/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Term-QRCode
 PORTVERSION=	0.01
