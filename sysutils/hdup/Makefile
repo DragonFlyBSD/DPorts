@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: sysutils/hdup/Makefile 339922 2014-01-16 15:43:27Z sem $
+# $FreeBSD$
 
 PORTNAME=	hdup
 PORTVERSION=	2.0.14
@@ -12,6 +12,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The little, spiffy, backup tool
 
 #WRKSRC=		${WRKDIR}/hdup2
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 OPTIONS_DEFINE=	GNUTAR_PORT DOCS
 GNUTAR_PORT_DESC=	GNU tar from ports
