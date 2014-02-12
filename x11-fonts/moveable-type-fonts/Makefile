@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/moveable-type-fonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	moveable-type-fonts
 PORTVERSION=	20100801
