@@ -1,8 +1,9 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/flvtool++/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	flvtool++
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirror.facebook.net/facebook/flvtool++/
 
