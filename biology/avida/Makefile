@@ -1,5 +1,5 @@
 # Created by: Jeremy <karlj000@unbc.ca>
-# $FreeBSD: biology/avida/Makefile 335028 2013-11-27 16:07:51Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	avida
 PORTVERSION=	2.12.4
