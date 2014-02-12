@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: editors/le/Makefile 340062 2014-01-17 15:57:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	le
 PORTVERSION=	1.14.9
