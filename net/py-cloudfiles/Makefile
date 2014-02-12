@@ -1,5 +1,5 @@
 # Created by: Roberto Pereyra <freebsd@contenidosonline.com.ar>
-# $FreeBSD: net/py-cloudfiles/Makefile 341931 2014-01-31 07:53:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cloudfiles
 PORTVERSION=	1.6.0
