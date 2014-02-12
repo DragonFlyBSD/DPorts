@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-firefox-showcase/Makefile 341202 2014-01-26 15:08:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	firefox-showcase
 PORTVERSION=	0.9.5.6
