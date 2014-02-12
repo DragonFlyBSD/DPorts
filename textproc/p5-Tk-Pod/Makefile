@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Tk-Pod/Makefile 333316 2013-11-09 18:48:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Tk-Pod
 PORTVERSION=	0.9942
