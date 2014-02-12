@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mp32ogg/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mp32ogg
 PORTVERSION=	0.11
