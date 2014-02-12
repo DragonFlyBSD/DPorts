@@ -1,5 +1,5 @@
 # Created by: Jan-Peter Koopmann <j.koopmann@seceidos.de>
-# $FreeBSD: mail/mailscanner/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	MailScanner
 PORTVERSION=	4.84.5

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/mailscanner/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/mail/mailscanner/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 
 CHMOD=/bin/chmod
 CP=/bin/cp
