@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: deskutils/plasma-applet-cwp/Makefile 341246 2014-01-26 17:34:06Z dbn $
+# $FreeBSD$
 
 PORTNAME=	cwp
 PORTVERSION=	1.10.0
