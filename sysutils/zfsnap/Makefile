@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: sysutils/zfsnap/Makefile 337775 2013-12-27 18:32:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zfsnap
 PORTVERSION=	1.11.0
