@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: www/py-requests/Makefile 341387 2014-01-27 12:21:18Z koobs $
+# $FreeBSD$
 
 PORTNAME=	requests
 PORTVERSION=	2.2.1
