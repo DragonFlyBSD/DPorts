@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/firstboot-freebsd-update/Makefile 335824 2013-12-07 10:50:23Z gjb $
+# $FreeBSD$
 
 PORTNAME=	firstboot-freebsd-update
 PORTVERSION=	1.1
