@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: databases/p5-DBIx-Class-Helpers/Makefile 332386 2013-11-01 14:51:01Z tj $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Helpers
 PORTVERSION=	2.019000
