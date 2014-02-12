@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-port-for/Makefile 341946 2014-01-31 08:48:25Z miwi $
+# $FreeBSD$
 
 PORTNAME=	port-for
 PORTVERSION=	0.3
