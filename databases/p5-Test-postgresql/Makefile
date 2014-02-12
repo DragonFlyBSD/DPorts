@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Test-postgresql/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-postgresql
 PORTVERSION=	0.09
