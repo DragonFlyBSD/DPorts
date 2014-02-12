@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/spblas/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spblas
 DISTVERSION=	1_02
