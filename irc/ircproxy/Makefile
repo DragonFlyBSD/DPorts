@@ -1,5 +1,5 @@
 # Created by: Jonas Kvinge <jonas@night-light.net>
-# $FreeBSD: irc/ircproxy/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ircproxy
 PORTVERSION=	1.3.6
