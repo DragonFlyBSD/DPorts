@@ -1,5 +1,5 @@
 # Created by: mk
-# $FreeBSD: devel/hcs12mem/Makefile 341504 2014-01-28 07:43:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hcs12mem
 PORTVERSION=	1.4.1
