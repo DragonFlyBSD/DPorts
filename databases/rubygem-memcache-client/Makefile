@@ -1,5 +1,5 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD: databases/rubygem-memcache-client/Makefile 338296 2013-12-31 13:08:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	memcache-client
 PORTVERSION=	1.8.5
