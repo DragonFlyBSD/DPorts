@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: devel/p5-Data-RoundRobin/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Data-RoundRobin
 PORTVERSION=	0.03
@@ -13,9 +13,6 @@ COMMENT=	Serve data in a round robin manner
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Data::RoundRobin.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
