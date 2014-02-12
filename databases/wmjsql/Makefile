@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: databases/wmjsql/Makefile 341051 2014-01-25 16:45:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wmjsql
 PORTVERSION=	0.5
