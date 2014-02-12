@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: editors/gedit-plugins/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 #   $MCom: ports/editors/gedit-plugins/Makefile,v 1.48 2010/10/29 14:47:24 kwm Exp $
 
 PORTNAME=	gedit-plugins
