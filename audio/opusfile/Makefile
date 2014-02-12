@@ -1,4 +1,4 @@
-# $FreeBSD: audio/opusfile/Makefile 341456 2014-01-27 21:21:51Z makc $
+# $FreeBSD$
 
 PORTNAME=	opusfile
 PORTVERSION=	0.5
