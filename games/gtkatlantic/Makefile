@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: games/gtkatlantic/Makefile 341979 2014-01-31 11:41:42Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gtkatlantic
 PORTVERSION=	0.4.4
