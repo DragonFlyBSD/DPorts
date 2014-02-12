@@ -1,4 +1,4 @@
-# $FreeBSD: security/pidgin-otr/Makefile 342246 2014-02-02 07:39:09Z jgh $
+# $FreeBSD$
 
 PORTNAME=	otr
 PORTVERSION=	4.0.0
