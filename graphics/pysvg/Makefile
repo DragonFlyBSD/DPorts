@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: graphics/pysvg/Makefile 340892 2014-01-24 12:27:55Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	pysvg
 PORTVERSION=	0.2.2
