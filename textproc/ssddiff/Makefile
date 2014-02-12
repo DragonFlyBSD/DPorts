@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: textproc/ssddiff/Makefile 341052 2014-01-25 16:46:40Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ssddiff
 PORTVERSION=	0.2
