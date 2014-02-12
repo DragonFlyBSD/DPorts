@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: archivers/pbzip2/Makefile 338568 2014-01-03 18:26:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pbzip2
 PORTVERSION=	1.1.6
