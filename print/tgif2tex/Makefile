@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: print/tgif2tex/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tgif2tex
 PORTVERSION=	2.13
