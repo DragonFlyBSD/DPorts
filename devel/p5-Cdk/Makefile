@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@clkao.org>
-# $FreeBSD: devel/p5-Cdk/Makefile 341315 2014-01-27 00:04:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Cdk
 PORTVERSION=	5.20120324
