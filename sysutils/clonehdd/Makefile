@@ -1,5 +1,5 @@
 # Created by: Anton Lysenok <bart@tapolsky.net.ua>
-# $FreeBSD: sysutils/clonehdd/Makefile 340147 2014-01-18 07:46:27Z jgh $
+# $FreeBSD$
 
 PORTNAME=	clonehdd
 PORTVERSION=	2.0.3
