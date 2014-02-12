@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-File-CreationTime/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	File-CreationTime
 PORTVERSION=	2.04
