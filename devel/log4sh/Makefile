@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: devel/log4sh/Makefile 340768 2014-01-23 00:36:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	log4sh
 PORTVERSION=	1.4.2
