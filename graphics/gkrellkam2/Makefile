@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: graphics/gkrellkam2/Makefile 341046 2014-01-25 16:18:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gkrellkam
 PORTVERSION=	2.0.0
