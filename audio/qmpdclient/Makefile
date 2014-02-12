@@ -1,5 +1,5 @@
 # Created by: uyamba@gmail.com
-# $FreeBSD: audio/qmpdclient/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	qmpdclient
 PORTVERSION=	1.2.2
