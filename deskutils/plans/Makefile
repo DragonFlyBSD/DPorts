@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: deskutils/plans/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	plans
 PORTVERSION=	8.2.1
