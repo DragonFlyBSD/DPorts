@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/pidgin-hotkeys/Makefile 332310 2013-10-31 23:41:22Z garga $
+# $FreeBSD$
 
 PORTNAME=	pidgin-hotkeys
 PORTVERSION=	0.2.4
