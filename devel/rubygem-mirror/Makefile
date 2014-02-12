@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-mirror/Makefile 332039 2013-10-30 02:39:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	mirror
 PORTVERSION=	1.0.1
