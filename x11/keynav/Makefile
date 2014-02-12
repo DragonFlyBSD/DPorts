@@ -1,4 +1,4 @@
-# $FreeBSD: x11/keynav/Makefile 339245 2014-01-09 14:48:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	keynav
 DISTVERSION=	0.20110708.0
