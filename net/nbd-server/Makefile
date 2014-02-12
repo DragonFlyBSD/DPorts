@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: net/nbd-server/Makefile 335399 2013-12-01 15:49:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	nbd
 PORTVERSION=	3.5
