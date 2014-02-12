@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/entombed/Makefile 334929 2013-11-26 13:21:14Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	entombed
 PORTVERSION=	2007.07.04
