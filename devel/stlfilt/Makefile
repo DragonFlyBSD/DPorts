@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/stlfilt/Makefile 331409 2013-10-23 18:57:48Z eadler $
+# $FreeBSD$
 
 PORTNAME=	stlfilt
 PORTVERSION=	20080203
