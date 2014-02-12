@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/graphos/Makefile 330618 2013-10-17 09:14:41Z theraven $
+# $FreeBSD$
 
 PORTNAME=	graphos
 PORTVERSION=	0.5
