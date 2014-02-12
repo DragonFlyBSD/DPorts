@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: finance/p5-Math-Financial/Makefile 338757 2014-01-05 12:33:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Math-Financial
 PORTVERSION=	0.76
