@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: security/py-certify/Makefile 340891 2014-01-24 12:23:42Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	certifi
 PORTVERSION=	1.0.0
