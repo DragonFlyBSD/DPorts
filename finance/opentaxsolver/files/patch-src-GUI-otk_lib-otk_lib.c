@@ -1,4 +1,4 @@
-$FreeBSD: finance/opentaxsolver/files/patch-src-GUI-otk_lib-otk_lib.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/finance/opentaxsolver/files/patch-src-GUI-otk_lib-otk_lib.c 340725 2014-01-22 17:40:44Z mat $
 --- src/GUI/otk_lib/otk_lib.c.orig	Fri Mar 31 21:42:34 2006
 +++ src/GUI/otk_lib/otk_lib.c	Sat Apr  8 11:50:21 2006
 @@ -38,6 +38,10 @@

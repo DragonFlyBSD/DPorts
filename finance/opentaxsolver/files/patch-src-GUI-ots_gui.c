@@ -1,4 +1,4 @@
-$FreeBSD: finance/opentaxsolver/files/patch-src-GUI-ots_gui.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/finance/opentaxsolver/files/patch-src-GUI-ots_gui.c 340725 2014-01-22 17:40:44Z mat $
 --- src/GUI/ots_gui.c.orig	2012-01-13 07:12:50.000000000 -0700
 +++ src/GUI/ots_gui.c	2012-02-07 08:14:06.000000000 -0700
 @@ -731,7 +731,7 @@
