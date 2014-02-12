@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: benchmarks/blogbench/Makefile 338548 2014-01-03 15:34:13Z adamw $
+# $FreeBSD$
 
 PORTNAME=	blogbench
 PORTVERSION=	1.1
@@ -18,6 +18,8 @@ PLIST_FILES=	bin/blogbench
 PORTDOCS=	README
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
