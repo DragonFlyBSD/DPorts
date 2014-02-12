@@ -1,5 +1,5 @@
 # Created by: Marcin Jessa <yazzy@yazzy.org>
-# $FreeBSD: net/py-impacket/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	impacket
 PORTVERSION=	0.9.10
