@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Lingua-Identify/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	Lingua-Identify
 PORTVERSION=	0.56
