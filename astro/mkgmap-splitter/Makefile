@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: astro/mkgmap-splitter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	splitter
 PORTVERSION=	r310
@@ -23,6 +23,8 @@ PORTDOCS=	*
 PORTDATA=	*
 
 DATADIR=	${PREFIX}/share/${PKGNAMEPREFIX}${PORTNAME}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
