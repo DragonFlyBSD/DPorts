@@ -1,5 +1,5 @@
 # Created by: Gerhard Gonter <g.gonter@ieee.org>
-# $FreeBSD: benchmarks/xdd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xdd
 PORTVERSION=	65
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for measuring and characterizing disk subsystem I/O
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 PLIST_FILES=	bin/xdd bin/timeserver bin/gettime
