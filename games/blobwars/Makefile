@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang <lorenl@alzatex.com>
-# $FreeBSD: games/blobwars/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	blobwars
 PORTVERSION=	1.19
