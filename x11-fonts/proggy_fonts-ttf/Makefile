@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/proggy_fonts-ttf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	proggy_fonts-ttf
 PORTVERSION=	1.0
