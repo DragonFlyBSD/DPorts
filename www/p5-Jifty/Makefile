@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-Jifty/Makefile 333112 2013-11-07 15:07:21Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Jifty
 PORTVERSION=	1.10518
