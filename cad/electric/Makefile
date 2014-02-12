@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: cad/electric/Makefile 338159 2013-12-30 18:39:48Z antoine $
+# $FreeBSD$
 
 PORTNAME=	electric
 PORTVERSION=	7.0.0
