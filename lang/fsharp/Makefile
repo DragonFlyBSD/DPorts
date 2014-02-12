@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: lang/fsharp/Makefile 341526 2014-01-28 09:42:03Z romain $
+# $FreeBSD$
 
 PORTNAME=	fsharp
 PORTVERSION=	3.0.34
