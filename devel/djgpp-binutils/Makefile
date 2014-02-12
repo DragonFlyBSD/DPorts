@@ -1,5 +1,5 @@
 # Created by: Peter Johnson <johnson.peter@gmail.com>
-# $FreeBSD: devel/djgpp-binutils/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	binutils
 PORTVERSION=	2.17
