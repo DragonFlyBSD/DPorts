@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: sysutils/runwhen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	runwhen
 PORTVERSION=	2003.10.31
