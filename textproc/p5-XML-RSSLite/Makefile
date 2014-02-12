@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: textproc/p5-XML-RSSLite/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-RSSLite
 PORTVERSION=	0.15
