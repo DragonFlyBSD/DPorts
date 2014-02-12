@@ -1,5 +1,5 @@
 # Created by: Adrian Chadd <adrian@FreeBSD.org>
-# $FreeBSD: www/squidstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	squidstats
 PORTVERSION=	54
