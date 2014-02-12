@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: converters/chmview/Makefile 328282 2013-09-25 13:02:26Z ak $
+# $FreeBSD$
 
 PORTNAME=	chmview
 PORTVERSION=	2.0b4
