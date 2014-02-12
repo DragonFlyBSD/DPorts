@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-i18n/files/patch-afterstep::icons.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/x11-wm/afterstep-i18n/files/patch-afterstep::icons.c 340725 2014-01-22 17:40:44Z mat $
 
 --- afterstep/icons.c.orig	Thu Mar 20 19:09:21 1997
 +++ afterstep/icons.c	Sun May 26 18:15:10 2002

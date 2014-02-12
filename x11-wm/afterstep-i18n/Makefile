@@ -1,5 +1,5 @@
 # Created by: issei@jp.FreeBSD.org
-# $FreeBSD: x11-wm/afterstep-i18n/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	afterstep-i18n
 PORTVERSION=	1.0
