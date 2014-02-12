@@ -1,5 +1,5 @@
 # Created by: obrien@cs.ucdavis.edu
-# $FreeBSD: news/tin/Makefile 341596 2014-01-28 15:30:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tin
 PORTVERSION=	2.2.0
