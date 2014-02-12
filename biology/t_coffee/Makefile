@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/t_coffee/Makefile 336851 2013-12-18 17:24:51Z tijl $
+# $FreeBSD$
 
 PORTNAME=	t_coffee
 PORTVERSION=	9.03
