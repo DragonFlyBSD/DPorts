@@ -1,5 +1,5 @@
 # Created by: The Anarcat <anarcat@anarcat.ath.cx>
-# $FreeBSD: mail/mls/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mls
 PORTVERSION=	1.3
