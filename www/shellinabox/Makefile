@@ -1,9 +1,9 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: www/shellinabox/Makefile 341337 2014-01-27 08:22:55Z ak $
+# $FreeBSD$
 
 PORTNAME=	shellinabox
 PORTVERSION=	2.14
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	GOOGLE_CODE
 
