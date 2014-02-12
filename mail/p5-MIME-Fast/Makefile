@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-MIME-Fast/Makefile 338751 2014-01-05 12:07:20Z az $
+# $FreeBSD$
 
 PORTNAME=	MIME-Fast
 PORTVERSION=	1.6
