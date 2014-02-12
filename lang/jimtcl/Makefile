@@ -1,4 +1,4 @@
-# $FreeBSD: lang/jimtcl/Makefile 341715 2014-01-29 11:34:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jimtcl
 PORTVERSION=	0.74
