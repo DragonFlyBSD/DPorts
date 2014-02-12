@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/lagan/Makefile 335011 2013-11-27 13:16:47Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	lagan
 PORTVERSION=	2.0
