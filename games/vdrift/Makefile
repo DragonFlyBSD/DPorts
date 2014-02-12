@@ -1,9 +1,9 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/vdrift/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vdrift
 PORTVERSION=	20100630
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${DATE_VERSION}
 DISTNAME=	${PORTNAME}-${DATE_VERSION}-src
