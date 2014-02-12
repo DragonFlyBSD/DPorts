@@ -1,5 +1,5 @@
 # Created by: Martin Mersberger
-# $FreeBSD: security/pam_mkhomedir/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pam_mkhomedir
 PORTVERSION=	0.2
