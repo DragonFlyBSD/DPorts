@@ -1,4 +1,4 @@
-# $FreeBSD: security/cyrus-sasl2-ldapdb/Makefile 338126 2013-12-30 15:55:08Z ume $
+# $FreeBSD$
 
 PORTNAME=	ldapdb
 PORTVERSION=	2.1.26
