@@ -1,5 +1,5 @@
 # Created by: Mykola Marzhan <delgod@portaone.com>
-# $FreeBSD: www/p5-HTTP-Daemon-SSL/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Daemon-SSL
 PORTVERSION=	1.04
