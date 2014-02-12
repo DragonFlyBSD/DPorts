@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-Google-Analytics/Makefile 339510 2014-01-12 15:01:18Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Net-Google-Analytics
 PORTVERSION=	3.02
