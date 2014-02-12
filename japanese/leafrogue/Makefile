@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru
-# $FreeBSD: japanese/leafrogue/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	leafrogue
 PORTVERSION=	0.72
