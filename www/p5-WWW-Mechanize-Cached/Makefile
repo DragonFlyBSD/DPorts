@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-WWW-Mechanize-Cached/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mechanize-Cached
 PORTVERSION=	1.43
