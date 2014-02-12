@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko<kiri@pis.toba-cmt.ac.jp>
-# $FreeBSD: graphics/fujiplay/Makefile 342357 2014-02-02 18:53:04Z antoine $
+# $FreeBSD$
 
 PORTNAME=	fujiplay
 PORTVERSION=	1.33
