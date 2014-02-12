@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: sysutils/fpart/Makefile 333132 2013-11-07 16:06:22Z martymac $
+# $FreeBSD$
 
 PORTNAME=	fpart
 PORTVERSION=	0.9
@@ -10,7 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Sort and pack files into partitions
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-embfts
