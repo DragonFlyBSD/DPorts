@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: graphics/goom/Makefile 335108 2013-11-28 17:14:06Z nox $
+# $FreeBSD$
 
 PORTNAME=	goom
 PORTVERSION=	2k4.0
