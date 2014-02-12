@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: devel/p5-Sub-Signatures/Makefile 329843 2013-10-08 22:41:35Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Sub-Signatures
 PORTVERSION=	0.21
