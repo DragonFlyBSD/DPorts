@@ -1,8 +1,9 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: net-p2p/bitcoin/Makefile 339968 2014-01-16 19:44:58Z swills $
+# $FreeBSD$
 
 PORTNAME=	bitcoin
 PORTVERSION=	0.8.6
+PORTREVISION=	1
 CATEGORIES=	net-p2p finance
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://people.freebsd.org/~swills/ \
