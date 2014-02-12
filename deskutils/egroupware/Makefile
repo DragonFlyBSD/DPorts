@@ -1,5 +1,5 @@
 # Created by: Jimmy Olgeni <olgeni@uli.it>
-# $FreeBSD: deskutils/egroupware/Makefile 330866 2013-10-19 13:29:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	eGroupware
 PORTVERSION=	1.8.005.20131007
