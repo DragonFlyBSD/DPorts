@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/thebridge/Makefile 332762 2013-11-04 19:52:36Z db $
+# $FreeBSD$
 
 PORTNAME=	thebridge
 PORTVERSION=	1.09
