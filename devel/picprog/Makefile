@@ -1,5 +1,5 @@
 # Created by: Johan Kerckaert <kirk@bricsnet.com>
-# $FreeBSD: devel/picprog/Makefile 340971 2014-01-25 00:46:21Z bapt $
+# $FreeBSD$
 
 PORTNAME=	picprog
 PORTVERSION=	1.9.1
