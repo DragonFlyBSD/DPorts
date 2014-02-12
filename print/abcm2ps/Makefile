@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: print/abcm2ps/Makefile 328769 2013-09-30 04:13:18Z araujo $
+# $FreeBSD$
 
 PORTNAME=	abcm2ps
 PORTVERSION=	6.6.22
