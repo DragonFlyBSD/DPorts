@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/battalion/Makefile 332067 2013-10-30 05:26:42Z danilo $
+# $FreeBSD$
 
 PORTNAME=	battalion
 PORTVERSION=	1.4b
