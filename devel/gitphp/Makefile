@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gitphp/Makefile 332806 2013-11-05 04:26:15Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	gitphp
 PORTVERSION=	0.2.8
