@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/texi2db/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	texi2db
 PORTVERSION=	0.5
