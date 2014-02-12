@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: misc/xyzcmd/Makefile 329245 2013-10-03 22:35:12Z vg $
+# $FreeBSD$
 
 PORTNAME=	xyzcmd
 PORTVERSION=	0.0.4
