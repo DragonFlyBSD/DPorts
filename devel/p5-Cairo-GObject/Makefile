@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Cairo-GObject/Makefile 340414 2014-01-20 17:02:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Cairo-GObject
 PORTVERSION=	1.004
