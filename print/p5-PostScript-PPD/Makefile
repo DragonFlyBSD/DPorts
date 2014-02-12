@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: print/p5-PostScript-PPD/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	PostScript-PPD
 PORTVERSION=	0.0205
