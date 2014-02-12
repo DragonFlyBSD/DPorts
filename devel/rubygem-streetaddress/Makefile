@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-streetaddress/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	StreetAddress
 PORTVERSION=	1.0.5
