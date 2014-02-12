@@ -1,5 +1,5 @@
 # Created by: <swhetzel@gmail.com>
-# $FreeBSD: graphics/php5-chartdirector/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	chartdirector
 PORTVERSION=	5.0.2
