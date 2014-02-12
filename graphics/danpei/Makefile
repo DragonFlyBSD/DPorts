@@ -1,5 +1,5 @@
 # Created by: Andrey V. Elsukov <bu7cher@yandex.ru>
-# $FreeBSD: graphics/danpei/Makefile 333221 2013-11-08 13:35:07Z wg $
+# $FreeBSD$
 
 PORTNAME=	danpei
 PORTVERSION=	2.9.7
