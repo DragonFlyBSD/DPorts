@@ -1,5 +1,5 @@
 # Created by: Sunagawa Koji <koj@ofug.net>
-# $FreeBSD: japanese/mailman/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mailman
 PORTVERSION=	2.1.14.j7
