@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@pfeifer.com>
-# $FreeBSD: textproc/bibtex2html/Makefile 341151 2014-01-26 00:53:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	bibtex2html
 PORTVERSION=	1.97
