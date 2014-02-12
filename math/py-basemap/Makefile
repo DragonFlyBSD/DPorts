@@ -1,5 +1,5 @@
 # Created by: mainland@apeiron.net
-# $FreeBSD: math/py-basemap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	basemap
 PORTVERSION=	0.9.2
