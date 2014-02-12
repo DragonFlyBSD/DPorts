@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: math/p5-Math-SimpleVariable/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-SimpleVariable
 PORTVERSION=	0.03
