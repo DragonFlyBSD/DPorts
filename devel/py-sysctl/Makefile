@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-sysctl/Makefile 337536 2013-12-26 15:17:10Z wg $
+# $FreeBSD$
 
 PORTNAME=	sysctl
 PORTVERSION=	0.1b7
