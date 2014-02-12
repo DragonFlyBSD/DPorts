@@ -1,5 +1,5 @@
 # Created by: Norberto Lopes <nlopes.ml@gmail.com>
-# $FreeBSD: x11-fonts/anonymous-pro/Makefile 333089 2013-11-07 13:09:34Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	anonymous-pro
 PORTVERSION=	1.002
@@ -24,18 +24,18 @@ SUB_FILES=	pkg-message
 
 WRKSRC=		${WRKDIR}/${DISTNAME}.001
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
 do-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/*.txt ${DOCSDIR}
-.endif
-	@${MKDIR} ${FONTSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${STAGEDIR}${FONTSDIR}
 
 post-install:
 	@${ECHO_MSG} "===> Running fc-cache"
 	-${LOCALBASE}/bin/fc-cache -f -v ${FONTSDIR}
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
