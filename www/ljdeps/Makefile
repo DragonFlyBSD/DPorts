@@ -1,5 +1,5 @@
 # Created by: Ryan T. Dean <rtdean@cytherianage.net>
-# $FreeBSD: www/ljdeps/Makefile 341718 2014-01-29 11:51:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ljdeps
 PORTVERSION=	1.0
