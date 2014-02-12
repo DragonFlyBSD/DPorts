@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: games/opengfx/Makefile 333625 2013-11-12 21:44:04Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	opengfx
 PORTVERSION=	0.4.7
