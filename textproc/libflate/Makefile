@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: textproc/libflate/Makefile 330657 2013-10-17 17:13:37Z vg $
+# $FreeBSD$
 
 PORTNAME=	libflate
 PORTVERSION=	2.0
