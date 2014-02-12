@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/gtk-recordmydesktop/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	gtk-recordmydesktop
 PORTVERSION=	0.3.8
