@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@rulez.sk>
-# $FreeBSD: www/autoindex2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	AutoIndex
 PORTVERSION=	2.2.4
