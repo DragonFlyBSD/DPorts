@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: x11-themes/kde4-style-oxygen-transparent/Makefile 336926 2013-12-19 15:30:51Z dbn $
+# $FreeBSD$
 
 PORTNAME=	oxygen-transparent
 PORTVERSION=	2013.01.02
