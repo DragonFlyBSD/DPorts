@@ -1,5 +1,5 @@
 # Created by: Carsten Jensen <carsten@sitracker.org>
-# $FreeBSD: www/sit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sit
 PORTVERSION=	3.67
