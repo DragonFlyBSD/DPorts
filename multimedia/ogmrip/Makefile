@@ -1,8 +1,9 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: multimedia/ogmrip/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ogmrip
 PORTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}/${PORTVERSION}
 
