@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: math/mbasecalc/Makefile 337418 2013-12-25 14:25:22Z pawel $
+# $FreeBSD$
 
 PORTNAME=	mbasecalc
 PORTVERSION=	1.1
