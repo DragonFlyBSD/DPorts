@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: net-im/komclean/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	komclean
 PORTVERSION=	1.2.1
