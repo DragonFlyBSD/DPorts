@@ -1,5 +1,5 @@
 # Created by: MITA Yoshio <mita@FreeBSD.org>
-# $FreeBSD: comms/efax/Makefile 332066 2013-10-30 05:09:22Z eadler $
+# $FreeBSD$
 
 PORTNAME=	efax-0.9a
 PORTVERSION=	001114a7
@@ -29,6 +29,8 @@ post-build:
 	${MV} ${WRKSRC}/fax ${WRKSRC}/fax.orig
 	${CAT} ${WRKSRC}/fax.orig | ${SED} -e s!%%PREFIX%%!${PREFIX}!g > \
 		${WRKSRC}/fax
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
