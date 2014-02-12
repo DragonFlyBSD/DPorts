@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: mail/pfqueue/Makefile 342323 2014-02-02 16:02:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pfqueue
 PORTVERSION=	0.5.6
