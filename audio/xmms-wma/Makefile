@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: audio/xmms-wma/Makefile 340234 2014-01-19 08:57:40Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xmms-wma
 PORTVERSION=	1.0.5
@@ -9,6 +9,9 @@ MASTER_SITES=	http://mcmcc.bat.ru/xmms-wma/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WMA plugin for xmms
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
 
