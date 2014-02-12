@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: russian/artwiz-ru/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	artwiz-ru
 PORTVERSION=	20041031
