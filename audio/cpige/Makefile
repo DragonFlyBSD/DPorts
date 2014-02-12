@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/cpige/Makefile 337588 2013-12-26 18:12:28Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cpige
 DISTVERSION=	1.5
