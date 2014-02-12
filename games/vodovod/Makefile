@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/vodovod/Makefile 330687 2013-10-17 23:36:50Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	vodovod
 PORTVERSION=	1.10
