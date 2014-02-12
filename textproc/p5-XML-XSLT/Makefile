@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: textproc/p5-XML-XSLT/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-XSLT
 PORTVERSION=	0.48
