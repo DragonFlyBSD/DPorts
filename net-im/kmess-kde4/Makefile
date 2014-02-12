@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: net-im/kmess-kde4/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kmess
 PORTVERSION=	2.0.6.2
