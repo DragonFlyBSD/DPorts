@@ -1,5 +1,5 @@
 # Created by: Nick F <ffault@gmail.com>
-# $FreeBSD: net-mgmt/dhcdrop/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dhcdrop
 PORTVERSION=	0.5
