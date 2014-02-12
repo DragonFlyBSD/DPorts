@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-hpucode/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hpucode
 PORTVERSION=	1.2.4
