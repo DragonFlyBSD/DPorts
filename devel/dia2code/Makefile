@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/dia2code/Makefile 333942 2013-11-15 22:20:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dia2code
 PORTVERSION=	0.8.5
