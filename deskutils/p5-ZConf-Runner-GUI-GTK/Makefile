@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: deskutils/p5-ZConf-Runner-GUI-GTK/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	ZConf-Runner-GUI-GTK
 PORTVERSION=	0.0.2
