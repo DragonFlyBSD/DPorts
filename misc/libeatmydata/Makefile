@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: misc/libeatmydata/Makefile 340041 2014-01-17 14:10:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libeatmydata
 PORTVERSION=	9
