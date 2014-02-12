@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/mod_h264_streaming/Makefile 341556 2014-01-28 13:35:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mod_h264_streaming
 PORTVERSION=	2.2.7
