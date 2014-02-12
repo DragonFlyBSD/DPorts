@@ -1,5 +1,5 @@
 # Created by: Martin Horcicka <martin@horcicka.eu>
-# $FreeBSD: devel/py-lock_file/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lock_file
 PORTVERSION=	2.0
