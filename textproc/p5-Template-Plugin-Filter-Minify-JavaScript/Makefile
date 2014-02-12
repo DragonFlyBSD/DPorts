@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Template-Plugin-Filter-Minify-JavaScript/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-Filter-Minify-JavaScript
 PORTVERSION=	0.93
