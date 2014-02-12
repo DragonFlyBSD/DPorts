@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: sysutils/xfce4-netload-plugin/Makefile 341857 2014-01-30 16:21:49Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-netload-plugin
 PORTVERSION=	1.2.0
