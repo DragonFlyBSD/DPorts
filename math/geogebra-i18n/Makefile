@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: math/geogebra-i18n/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	geogebra
 PORTVERSION=	4.2.47.0
