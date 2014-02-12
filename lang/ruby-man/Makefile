@@ -1,5 +1,5 @@
 # Created by: olgeni@uli.it
-# $FreeBSD: lang/ruby-man/Makefile 341096 2014-01-25 20:47:28Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruby-man
 PORTVERSION=	1.4.6
