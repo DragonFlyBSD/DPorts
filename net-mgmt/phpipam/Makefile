@@ -1,5 +1,5 @@
 # Created by: Jake Smith <jake@xz.cx>
-# $FreeBSD: net-mgmt/phpipam/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	phpipam
 PORTVERSION=	0.9
