@@ -1,5 +1,5 @@
 # Created by: MIHIRA Yoshiro <sanpei@jp.FreeBSD.org>
-# $FreeBSD: dns/doc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	doc
 PORTVERSION=	2.2.3
