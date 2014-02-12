@@ -1,5 +1,5 @@
 # Created by: Jim Geovedi <jim@corebsd.or.id>
-# $FreeBSD: security/libbf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libbf
 PORTVERSION=	0.8.2b
