@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: deskutils/everygui/Makefile 328649 2013-09-29 07:13:33Z mva $
+# $FreeBSD$
 
 PORTNAME=	everygui
 PORTVERSION=	0.99.b
