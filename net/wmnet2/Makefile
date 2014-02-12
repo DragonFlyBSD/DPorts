@@ -1,5 +1,5 @@
 # Created by: Paolo Pisati <flag@libero.it>
-# $FreeBSD: net/wmnet2/Makefile 336964 2013-12-19 21:48:22Z pawel $
+# $FreeBSD$
 
 PORTNAME=	wmnet2
 PORTVERSION=	1.06
