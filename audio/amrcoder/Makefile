@@ -1,5 +1,5 @@
 # Created by: Andrew Wingorodov (Wingborn) <programmer@coolsoft.ru>
-# $FreeBSD: audio/amrcoder/Makefile 334754 2013-11-24 18:32:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	amrcoder
 PORTVERSION=	1.0
