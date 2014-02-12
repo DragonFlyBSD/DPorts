@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Aggregate/Makefile 328379 2013-09-26 16:46:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Aggregate
 PORTVERSION=	0.371
