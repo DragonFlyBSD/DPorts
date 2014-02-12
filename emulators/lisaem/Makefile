@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: emulators/lisaem/Makefile 337039 2013-12-20 16:43:48Z pawel $
+# $FreeBSD$
 
 PORTNAME=	lisaem
 DISTVERSION=	1.2.6
