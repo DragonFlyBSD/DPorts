@@ -1,4 +1,4 @@
-# $FreeBSD: print/cups-cloud-print/Makefile 341742 2014-01-29 14:43:47Z eadler $
+# $FreeBSD$
 
 PORTNAME=	cups-cloud-print
 PORTVERSION=	0.0.1
