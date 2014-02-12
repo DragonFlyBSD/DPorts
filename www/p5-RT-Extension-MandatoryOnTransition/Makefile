@@ -1,9 +1,8 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: www/p5-RT-Extension-MandatoryOnTransition/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	RT-Extension-MandatoryOnTransition
-DISTVERSION=	0.04
-PORTREVISION=	2
+DISTVERSION=	0.06
 CATEGORIES=	www net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
