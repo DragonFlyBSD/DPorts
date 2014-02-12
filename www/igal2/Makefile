@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: www/igal2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	igal2
 PORTVERSION=	2.1
