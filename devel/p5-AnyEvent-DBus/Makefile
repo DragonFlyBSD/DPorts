@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@FreeBSD.org>
-# $FreeBSD: devel/p5-AnyEvent-DBus/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-DBus
 PORTVERSION=	0.31
