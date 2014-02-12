@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: vietnamese/unicode-uhoai/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/vietnamese/unicode-uhoai/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 if [ "$2" != "POST-INSTALL" ]; then
 	exit 0
