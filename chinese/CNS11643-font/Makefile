@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: chinese/CNS11643-font/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	CNS11643-font
 PORTVERSION=	98.1
