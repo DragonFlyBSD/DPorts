@@ -1,4 +1,4 @@
-# $FreeBSD: audio/tagutil/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tagutil
 PORTVERSION=	2.1
@@ -8,6 +8,9 @@ MASTER_SITES=	http://files.kaworu.ch/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to manage tags in music files
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib
 
