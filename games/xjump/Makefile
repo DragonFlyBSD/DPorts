@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: games/xjump/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xjump
 PORTVERSION=	2.7.5
