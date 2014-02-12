@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/rubygem-twitter4r/Makefile 338273 2013-12-31 10:09:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	twitter4r
 PORTVERSION=	0.7.0
