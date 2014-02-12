@@ -1,5 +1,5 @@
 # Created by: Tom Rhodes <trhodes@FreeBSD.org>
-# $FreeBSD: misc/window/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	window
 PORTVERSION=	1.0
