@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-hierwiki/Makefile 341223 2014-01-26 15:28:09Z rm $
+# $FreeBSD$
 
 PORTNAME=	hierwiki
 PORTVERSION=	1.0
