@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rocksndiamonds-data/Makefile 339627 2014-01-13 19:56:55Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	rocksndiamonds-data
 PORTVERSION=	20131106
