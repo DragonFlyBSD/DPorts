@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: www/http_post/Makefile 341703 2014-01-29 09:17:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	http_post
 PORTVERSION=	1.0.20110118
