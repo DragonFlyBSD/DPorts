@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Server-Coro/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Server-Coro
 PORTVERSION=	0.02
