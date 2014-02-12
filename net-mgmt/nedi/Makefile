@@ -1,5 +1,5 @@
 # Created by: cristi <cristi@net.utcluj.ro>
-# $FreeBSD: net-mgmt/nedi/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nedi
 DISTVERSION=	1.0.w
