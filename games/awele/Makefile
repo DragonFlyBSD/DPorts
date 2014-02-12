@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/awele/Makefile 334320 2013-11-19 14:20:27Z gahr $
+# $FreeBSD$
 
 PORTNAME=	awele
 PORTVERSION=	1.0
