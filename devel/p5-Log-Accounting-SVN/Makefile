@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao & <ychsiao@ychsiao.org>
-# $FreeBSD: devel/p5-Log-Accounting-SVN/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Accounting-SVN
 PORTVERSION=	0.01
