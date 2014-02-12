@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: audio/p5-xmms2/Makefile 328665 2013-09-29 10:41:24Z madpilot $
+# $FreeBSD$
 
 PORTREVISION=	1
 CATEGORIES=	audio perl5
