@@ -28,7 +28,7 @@
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
 #
-# $FreeBSD: databases/cassandra/files/cassandra.in 319455 2013-05-31 01:32:45Z bdrewery $
+# $FreeBSD: head/databases/cassandra/files/cassandra.in 319455 2013-05-31 01:32:45Z bdrewery $
 
 . /etc/rc.subr
 
