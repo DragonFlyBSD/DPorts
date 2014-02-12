@@ -1,5 +1,5 @@
 # Created by: Martin Otto
-# $FreeBSD: comms/esmska/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	esmska
 PORTVERSION=	0.21
@@ -22,6 +22,8 @@ SUB_FILES=	esmska
 PORTDOCS=	readme.txt
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: comms/esmska/files/esmska.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/comms/esmska/files/esmska.in 340851 2014-01-23 19:55:14Z mat $
 
 cd "%%DATADIR%%"
 JAVA_VERSION="%%JAVA_VERSION%%" exec "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/esmska.jar" "$@"
