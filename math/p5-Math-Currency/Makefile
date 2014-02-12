@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Math-Currency/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-Currency
 PORTVERSION=	0.47
