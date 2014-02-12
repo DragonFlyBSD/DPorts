@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@FreeBSD.org>
-# $FreeBSD: devel/bpython/Makefile 331397 2013-10-23 17:22:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	bpython
 PORTVERSION=	0.12
