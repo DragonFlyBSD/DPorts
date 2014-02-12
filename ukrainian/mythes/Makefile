@@ -1,4 +1,4 @@
-# $FreeBSD: ukrainian/mythes/Makefile 338075 2013-12-30 09:51:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mythes
 PORTVERSION=	1.7.0
