@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: cad/geda/Makefile 332488 2013-11-02 14:28:26Z wg $
+# $FreeBSD$
 
 PORTNAME=	geda
 PORTVERSION=	1.8.2
