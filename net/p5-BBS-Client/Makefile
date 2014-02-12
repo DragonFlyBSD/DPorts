@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng, Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: net/p5-BBS-Client/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	BBS-Client
 PORTVERSION=	0.03
