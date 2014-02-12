@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: net-im/p5-Net-AIM/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-AIM
 PORTVERSION=	1.22
