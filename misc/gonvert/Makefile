@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/gonvert/Makefile 333146 2013-11-07 18:39:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gonvert
 PORTVERSION=	0.2.34
