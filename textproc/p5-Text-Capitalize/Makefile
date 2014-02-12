@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: textproc/p5-Text-Capitalize/Makefile 328922 2013-10-01 05:54:10Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Text-Capitalize
 PORTVERSION=	1.3
