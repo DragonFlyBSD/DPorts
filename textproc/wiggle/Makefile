@@ -1,5 +1,5 @@
 # Created by: mandree@FreeBSD.org
-# $FreeBSD: textproc/wiggle/Makefile 336359 2013-12-13 15:48:13Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wiggle
 PORTVERSION=	1.0
