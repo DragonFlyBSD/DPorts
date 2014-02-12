@@ -1,5 +1,5 @@
 # Created by: Alexander@Leidinger.net
-# $FreeBSD: textproc/modlogan/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	modlogan
 PORTVERSION=	0.8.13
