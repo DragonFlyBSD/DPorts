@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: sysutils/cw/Makefile 333299 2013-11-09 15:18:18Z jhale $
+# $FreeBSD$
 
 PORTNAME=	cw
 PORTVERSION=	1.0.16
