@@ -1,5 +1,5 @@
 # Created by: Tomasz Paszkowski <ns88@k.pl>
-# $FreeBSD: mail/ssmtp/Makefile 342208 2014-02-01 19:35:39Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ssmtp
 PORTVERSION=	2.64
