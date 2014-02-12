@@ -1,5 +1,5 @@
 # Created by: kappa@FreeBSD.org.ua
-# $FreeBSD: lang/p5-JavaScript-SpiderMonkey/Makefile 328843 2013-09-30 18:43:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JavaScript-SpiderMonkey
 PORTVERSION=	0.21
