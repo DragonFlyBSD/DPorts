@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-blursk/Makefile 340236 2014-01-19 08:59:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	blursk
 PORTVERSION=	1.3
