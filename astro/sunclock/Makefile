@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: astro/sunclock/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sunclock
 PORTVERSION=	3.57
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www.arvernes.com/files/jpd/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shows which portion of the Earth's surface is illuminated by the Sun
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LICENSE=	GPLv2
 
