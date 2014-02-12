@@ -1,4 +1,4 @@
-# $FreeBSD: korean/ibus-hangul/Makefile 338970 2014-01-07 01:33:35Z jkim $
+# $FreeBSD$
 
 PORTNAME=	ibus-hangul
 PORTVERSION=	1.4.2
