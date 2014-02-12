@@ -1,5 +1,5 @@
 # Created by: Gen Otsuji<otsuji@users.sourceforge.jp>
-# $FreeBSD: japanese/prime-el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	prime
 PORTVERSION=	1.5.1.3
