@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: misc/pecl-timezonedb/Makefile 337288 2013-12-23 20:08:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	timezonedb
 DISTVERSION=	2013.9
