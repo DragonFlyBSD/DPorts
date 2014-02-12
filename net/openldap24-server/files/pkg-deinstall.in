@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/openldap24-server/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/net/openldap24-server/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 ECHO_CMD=echo

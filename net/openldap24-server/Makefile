@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: net/openldap24-server/Makefile 342258 2014-02-02 09:51:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=		openldap
 DISTVERSION=		2.4.38
@@ -556,7 +556,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/libexec/openldap/
 	@${INSTALL_PROGRAM} ${WRKSRC}/contrib/slapd-modules/passwd/sha2/.libs/pw-sha2.so.0 \
 		${STAGEDIR}${PREFIX}/libexec/openldap/
-	@${LN} -s pw-sha2.so.0 ${PREFIX}/libexec/openldap/pw-sha2.so
+	@${LN} -s pw-sha2.so.0 ${STAGEDIR}${PREFIX}/libexec/openldap/pw-sha2.so
 .endif
 .endif
 
