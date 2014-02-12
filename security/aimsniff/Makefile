@@ -1,5 +1,5 @@
 # Created by: Andrew Marks <andrew@amrx.net>
-# $FreeBSD: security/aimsniff/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aimsniff
 PORTVERSION=	0.9d
