@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-clocks/intclock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	intclock
 PORTVERSION=	2.13
