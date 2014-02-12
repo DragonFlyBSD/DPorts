@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan
-# $FreeBSD: net-mgmt/netleak/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	netleak
 PORTVERSION=	0.1a
