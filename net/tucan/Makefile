@@ -1,5 +1,5 @@
 # Created by: Gustau Perez Querol <gustau.perez@gmail.com>
-# $FreeBSD: net/tucan/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	tucan
 PORTVERSION=	0.3.10
