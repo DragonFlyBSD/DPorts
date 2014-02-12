@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: www/twiki-LDAPPasswordChangerPlugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	LDAPPasswordChangerPlugin
 PORTVERSION=	0.0.${SVNREV}
