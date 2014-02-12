@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Class-Closure/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Closure
 PORTVERSION=	0.30
