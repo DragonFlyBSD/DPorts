@@ -1,5 +1,5 @@
 # Created by: John McAree <john@mcaree.org>
-# $FreeBSD: graphics/comical/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	comical
 PORTVERSION=	0.8
