@@ -1,5 +1,5 @@
 # Created by: Oliver Braun <obraun@FreeBSD.org>
-# $FreeBSD: mail/mairix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mairix
 PORTVERSION=	0.22
@@ -27,10 +27,11 @@ BZIP2_DESC=	bzip2 compressed mbox support
 GZIP_CONFIGURE_ENABLE=	gzip-mbox
 BZIP2_CONFIGURE_ENABLE=	bzip-mbox
 
+MAKE_JOBS_UNSAFE=	yes
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-# Do not hardcode make(1) binary name and fix atomicity to allow -jX builds
+# Do not hardcode make(1) binary name
 post-patch:
 	@${REINPLACE_CMD} -E 's|cd (.+) ; make|$$(MAKE) -C \1|' \
 		${WRKSRC}/Makefile.in
