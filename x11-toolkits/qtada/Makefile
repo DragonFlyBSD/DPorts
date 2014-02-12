@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: x11-toolkits/qtada/Makefile 333448 2013-11-10 21:06:15Z marino $
+# $FreeBSD$
 
 PORTNAME=	qtada
 PORTVERSION=	3.2.0.0
