@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/gmanedit/Makefile 329743 2013-10-07 23:03:12Z marino $
+# $FreeBSD$
 
 PORTNAME=	gmanedit
 PORTVERSION=	0.4.2
