@@ -1,5 +1,5 @@
 # Created by: rokaz
-# $FreeBSD: security/belier/Makefile 342016 2014-01-31 16:25:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	belier
 PORTVERSION=	1.2
