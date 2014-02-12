@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-APNs-Extended/Makefile 341980 2014-01-31 12:13:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-APNs-Extended
 PORTVERSION=	0.07
