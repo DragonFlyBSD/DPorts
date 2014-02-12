@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/greed/Makefile 335019 2013-11-27 14:58:29Z culot $
+# $FreeBSD$
 
 PORTNAME=	greed
 PORTVERSION=	3.9
