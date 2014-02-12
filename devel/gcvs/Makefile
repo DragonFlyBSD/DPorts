@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gcvs/Makefile 328441 2013-09-27 08:30:27Z gahr $
+# $FreeBSD$
 
 PORTNAME=	gcvs
 PORTVERSION=	1.0
