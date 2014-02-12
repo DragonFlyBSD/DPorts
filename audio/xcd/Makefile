@@ -1,5 +1,5 @@
 # Created by: Jean-Marc Zucconi <jmz@FreeBSD.org>
-# $FreeBSD: audio/xcd/Makefile 335840 2013-12-07 18:38:36Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xcd
 PORTVERSION=	1.7
