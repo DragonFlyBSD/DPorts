@@ -1,5 +1,5 @@
 # Created by: Pedro Garcia Freitas <sawp@sawp.com.br>
-# $FreeBSD: graphics/mahotas/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	mahotas
 PORTVERSION=	0.9.6
