@@ -1,8 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-av/Makefile 337788 2013-12-27 19:21:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gupnp-av
-PORTVERSION=	0.12.4
+PORTVERSION=	0.12.5
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
