@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-d3_rails/Makefile 335798 2013-12-07 01:02:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	d3_rails
 PORTVERSION=	3.3.11
