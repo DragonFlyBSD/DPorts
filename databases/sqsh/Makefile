@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: databases/sqsh/Makefile 338292 2013-12-31 12:59:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	sqsh
 PORTVERSION=	2.1.8
