@@ -1,5 +1,5 @@
 # Created by: Dan Smith <dan@algenta.com>
-# $FreeBSD: dns/dnsmax-perl/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dnsmax-perl
 PORTVERSION=	1.0.1
