@@ -1,5 +1,5 @@
 # Created by: gldisater@gldis.ca
-# $FreeBSD: java/eclipse-uml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	uml
 PORTVERSION=	1.1.1
