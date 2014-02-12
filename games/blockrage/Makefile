@@ -1,9 +1,9 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/blockrage/Makefile 339345 2014-01-10 12:13:56Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	blockrage
 PORTVERSION=	0.2.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
 		SF/nemysisfreebsdp/:icons
