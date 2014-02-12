@@ -1,5 +1,5 @@
 # Created by: Alexander Novitsky
-# $FreeBSD: net/py-smbpasswd/Makefile 341975 2014-01-31 10:18:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	smbpasswd
 PORTVERSION=	1.0.2
