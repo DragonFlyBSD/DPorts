@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>)
-# $FreeBSD: net/pear-Net_Vpopmaild/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net_Vpopmaild
 PORTVERSION=	0.3.2
