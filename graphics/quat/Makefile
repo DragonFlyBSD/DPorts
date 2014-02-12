@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/quat/Makefile 342316 2014-02-02 15:20:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	quat
 PORTVERSION=	1.20
