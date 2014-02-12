@@ -1,5 +1,5 @@
 # Created by: lichray@gmail.com
-# $FreeBSD: graphics/pinpoint/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pinpoint
 DISTVERSION=	0.1.4
