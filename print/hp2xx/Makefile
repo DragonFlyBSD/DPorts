@@ -1,5 +1,5 @@
 # Created by: Lars Koeller
-# $FreeBSD: print/hp2xx/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hp2xx
 PORTVERSION=	3.4.4
