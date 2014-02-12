@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/rexx-curl/Makefile 341106 2014-01-25 21:15:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	curl
 PORTVERSION=	1.4
