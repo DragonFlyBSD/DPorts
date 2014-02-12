@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-Sender/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-Sender
 PORTVERSION=	0.8.22
