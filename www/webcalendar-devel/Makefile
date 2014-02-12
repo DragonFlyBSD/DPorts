@@ -1,4 +1,4 @@
-# $FreeBSD: www/webcalendar-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	WebCalendar
 PORTVERSION=	1.2.5
