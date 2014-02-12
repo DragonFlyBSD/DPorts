@@ -1,5 +1,5 @@
 # Created by: KIMURA Shigekazu <rikimura@a011.broada.jp>
-# $FreeBSD: archivers/untar/Makefile 333822 2013-11-15 09:29:35Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	untar
 PORTVERSION=	1.4
