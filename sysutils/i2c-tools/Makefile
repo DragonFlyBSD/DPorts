@@ -1,5 +1,5 @@
 # Created by: Andriy Gapon <avg@icyb.net.ua>
-# $FreeBSD: sysutils/i2c-tools/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	i2c-tools
 PORTVERSION=	3.1.0
