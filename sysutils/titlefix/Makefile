@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/titlefix/Makefile 333992 2013-11-16 13:25:19Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	titlefix
 PORTVERSION=	0.5.3
