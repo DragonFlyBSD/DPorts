@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: devel/p5-Log-Dispatch-File-Stamped/Makefile 338916 2014-01-06 18:07:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-File-Stamped
 PORTVERSION=	0.12
