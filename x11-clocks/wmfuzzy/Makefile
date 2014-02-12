@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adam@vectors.cx>
-# $FreeBSD: x11-clocks/wmfuzzy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmfuzzy
 PORTVERSION=	0.7.1
