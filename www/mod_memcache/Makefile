@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/mod_memcache/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_memcache
 PORTVERSION=	0.1.0
