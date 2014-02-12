@@ -1,5 +1,5 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: misc/spamcalc/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spamcalc
 PORTVERSION=	0.5
