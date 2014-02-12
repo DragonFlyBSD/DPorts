@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: mail/getmail/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	getmail
 PORTVERSION=	4.43.0
@@ -19,6 +19,9 @@ MAN1=		getmail.1 getmail_fetch.1 getmail_maildir.1 getmail_mbox.1
 PORTDOCS=	README BUGS CHANGELOG THANKS TODO *.txt *.html *.css
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-install:
