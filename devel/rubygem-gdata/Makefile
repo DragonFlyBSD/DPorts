@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-gdata/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	gdata
 PORTVERSION=	1.1.2
