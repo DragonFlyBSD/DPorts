@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: security/p5-POE-Filter-SSL/Makefile 329699 2013-10-07 12:52:34Z mat $
+# $FreeBSD$
 
 PORTNAME=	POE-Filter-SSL
 PORTVERSION=	0.27
