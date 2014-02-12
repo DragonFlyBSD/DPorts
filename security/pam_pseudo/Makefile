@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: security/pam_pseudo/Makefile 342020 2014-01-31 16:47:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pam_pseudo
 PORTVERSION=	0.5
