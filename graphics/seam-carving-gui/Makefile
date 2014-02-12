@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/seam-carving-gui/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	seam-carving-gui
 PORTVERSION=	1.11
