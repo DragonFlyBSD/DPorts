@@ -1,5 +1,5 @@
 # Created by: Joachim Strombergson <watchman@ludd.ltu.se>
-# $FreeBSD: cad/dinotrace/Makefile 340466 2014-01-20 20:33:59Z antoine $
+# $FreeBSD$
 
 PORTNAME=	dinotrace
 PORTVERSION=	9.4c
