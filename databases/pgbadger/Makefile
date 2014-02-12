@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@FreeBSD.org>
-# $FreeBSD: databases/pgbadger/Makefile 335091 2013-11-28 13:23:47Z girgen $
+# $FreeBSD$
 
 PORTNAME=	pgbadger
 PORTVERSION=	4.1
