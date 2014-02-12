@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: math/ent/Makefile 329312 2013-10-04 14:20:29Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ent
 PORTVERSION=	0.20080128
