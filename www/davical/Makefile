@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@castro.aus.net>
-# $FreeBSD: www/davical/Makefile 334908 2013-11-26 00:07:41Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	davical
 PORTVERSION=	1.1.2
