@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/xpi-displayquota/Makefile 341201 2014-01-26 15:08:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	displayquota
 PORTVERSION=	0.3.6
