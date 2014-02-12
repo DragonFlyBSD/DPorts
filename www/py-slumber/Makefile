@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-slumber/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 
 PORTNAME=	slumber
 PORTVERSION=	0.6.0
