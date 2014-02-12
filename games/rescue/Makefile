@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/rescue/Makefile 339656 2014-01-14 02:31:29Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	rescue
 PORTVERSION=	1.0.0.3
