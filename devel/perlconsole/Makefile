@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: devel/perlconsole/Makefile 337673 2013-12-27 09:54:22Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	perlconsole
 PORTVERSION=	0.4
@@ -31,6 +31,8 @@ PLIST_FILES=	bin/perlconsole \
 		${SITE_PERL_REL}/PerlConsole.pm
 
 PLIST_DIRS=	${SITE_PERL_REL}/PerlConsole
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
