@@ -1,5 +1,5 @@
 
-$FreeBSD: games/nadar/files/patch-server_Game.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/games/nadar/files/patch-server_Game.c 340725 2014-01-22 17:40:44Z mat $
 
 --- server/Game.c.orig	Sun Aug 22 16:35:40 2004
 +++ server/Game.c	Sun Aug 22 16:35:50 2004
