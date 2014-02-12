@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/p5-Net-MAC/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-MAC
 PORTVERSION=	2.103622
