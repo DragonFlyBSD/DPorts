@@ -1,5 +1,5 @@
 # Created by: Russell Cloran <russell@rucus.ru.ac.za>
-# $FreeBSD: textproc/redland-bindings/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	redland-bindings
 PORTVERSION=	1.0.16.1
