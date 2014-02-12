@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/statsd/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	statsd
 PORTVERSION=	0.7.0

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/statsd/files/statsd.in 337198 2013-12-22 16:25:58Z swills $
+# $FreeBSD: head/net-mgmt/statsd/files/statsd.in 337198 2013-12-22 16:25:58Z swills $
 #
 
 # PROVIDE: statsd
