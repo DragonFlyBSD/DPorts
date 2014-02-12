@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <martin@arp242.net>
-# $FreeBSD: www/download-gemist/Makefile 341245 2014-01-26 16:45:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	download-gemist
 PORTVERSION=	1.2
