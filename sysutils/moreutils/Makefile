@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: sysutils/moreutils/Makefile 329327 2013-10-04 15:36:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	moreutils
 PORTVERSION=	0.50
