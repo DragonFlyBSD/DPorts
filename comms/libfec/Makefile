@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/libfec/Makefile 333513 2013-11-11 15:31:16Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	libfec
 PORTVERSION=	3.0.1
