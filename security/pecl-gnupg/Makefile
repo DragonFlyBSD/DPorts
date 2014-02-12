@@ -1,5 +1,5 @@
 # Created by: mnag@FreeBSD.org
-# $FreeBSD: security/pecl-gnupg/Makefile 337263 2013-12-23 17:16:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gnupg
 PORTVERSION=	1.3.3
