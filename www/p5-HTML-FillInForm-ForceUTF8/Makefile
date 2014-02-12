@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: www/p5-HTML-FillInForm-ForceUTF8/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-FillInForm-ForceUTF8
 PORTVERSION=	0.02
