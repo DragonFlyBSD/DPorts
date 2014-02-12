@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: devel/p5-File-Tail-Scribe/Makefile 335461 2013-12-02 08:14:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	File-Tail-Scribe
 PORTVERSION=	0.13
