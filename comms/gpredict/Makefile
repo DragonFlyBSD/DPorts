@@ -1,5 +1,5 @@
 # Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-# $FreeBSD: comms/gpredict/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	gpredict
 PORTVERSION=	1.3
