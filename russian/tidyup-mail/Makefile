@@ -1,5 +1,5 @@
 # Created by: Alexander Gromnizki
-# $FreeBSD: russian/tidyup-mail/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tidyup-mail
 PORTVERSION=	0.12
