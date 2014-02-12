@@ -1,5 +1,5 @@
 # Created by: Manuel Rábade <mig@mig-29.net>
-# $FreeBSD: www/p5-HTML-Template-Associate/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-Template-Associate
 PORTVERSION=	2.01
