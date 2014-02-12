@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Business-UPS/Makefile 332733 2013-11-04 14:41:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Business-UPS
 PORTVERSION=	2.0
