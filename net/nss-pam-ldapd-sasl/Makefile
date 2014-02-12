@@ -1,5 +1,5 @@
 # Created by: rflynn@acsalaska.net
-# $FreeBSD: net/nss-pam-ldapd-sasl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nss-pam-ldapd
 PKGNAMESUFFIX=	-sasl
