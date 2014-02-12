@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-GraphViz2/Makefile 339475 2014-01-12 03:52:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	GraphViz2
-PORTVERSION=	2.25
+PORTVERSION=	2.26
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:RSAVAGE
