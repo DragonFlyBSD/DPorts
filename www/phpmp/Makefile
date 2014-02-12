@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: www/phpmp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phpmp
 PORTVERSION=	0.12.0
