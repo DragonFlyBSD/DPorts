@@ -1,5 +1,5 @@
 # Created by: mdh <mdh@solitox.net>
-# $FreeBSD: security/xyssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xyssl
 PORTVERSION=	0.9
@@ -13,6 +13,9 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight SSL and TLS toolkit for C developers
 
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
+
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/BSD.txt
 
@@ -21,6 +24,9 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
