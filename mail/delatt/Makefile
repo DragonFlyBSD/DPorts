@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: mail/delatt/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	delatt
 DISTVERSION=	1.1.3
