@@ -1,9 +1,9 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/evolvotron/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	evolvotron
 PORTVERSION=	0.6.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	SF \
 		SF/nemysisfreebsdp/:icons
