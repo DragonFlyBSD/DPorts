@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kris@pcbsd.org>
-# $FreeBSD: x11-themes/gtk-qt4-engine/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	gtk-qt-engine
 PORTVERSION=	1.1
