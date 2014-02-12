@@ -1,5 +1,5 @@
 # Created by: uwe.pierau@tu-clausthal.de
-# $FreeBSD: www/mysqlphp2postgres/Makefile 330106 2013-10-11 22:56:23Z ak $
+# $FreeBSD$
 
 PORTNAME=	mysqlphp2postgres
 PORTVERSION=	0.95
