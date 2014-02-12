@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/netwalk/Makefile 330670 2013-10-17 20:25:25Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	netwalk
 PORTVERSION=	0.4.10
