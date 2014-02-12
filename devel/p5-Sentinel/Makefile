@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Sentinel/Makefile 332869 2013-11-05 16:51:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Sentinel
 PORTVERSION=	0.05
