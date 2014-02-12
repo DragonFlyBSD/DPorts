@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: lang/p5-Data-JavaScript/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-JavaScript
 PORTVERSION=	1.13
