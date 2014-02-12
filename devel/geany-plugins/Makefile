@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/geany-plugins/Makefile 340813 2014-01-23 08:54:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	geany-plugins
 PORTVERSION=	${GEANY_VER}

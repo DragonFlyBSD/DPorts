@@ -1,4 +1,4 @@
-# $FreeBSD: devel/geany-plugins/files/bsd.geany-plugins.mk 314846 2013-03-21 14:43:24Z makc $
+# $FreeBSD$
 
 GEANY_VER=	1.23
 GEANY_PLUGINS_ALL=	addons \
