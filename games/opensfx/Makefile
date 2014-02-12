@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arhipov <admin@gorodkirov.ru>
-# $FreeBSD: games/opensfx/Makefile 333625 2013-11-12 21:44:04Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	opensfx
 PORTVERSION=	0.2.3
