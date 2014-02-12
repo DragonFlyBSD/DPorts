@@ -1,5 +1,5 @@
 # Created by: Cory R. King <coryking@mozimedia.com>
-# $FreeBSD: net/p5-Net-Trackback/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Trackback
 PORTVERSION=	1.01
