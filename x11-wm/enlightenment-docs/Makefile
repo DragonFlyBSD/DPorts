@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: x11-wm/enlightenment-docs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	enlightenment-docs
 PORTVERSION=	0.16.8.0.2
