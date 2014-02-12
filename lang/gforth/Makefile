@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: lang/gforth/Makefile 338020 2013-12-29 16:09:58Z johans $
+# $FreeBSD$
 
 PORTNAME=	gforth
 PORTVERSION=	0.7.2
