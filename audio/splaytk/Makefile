@@ -1,5 +1,5 @@
 # Created by: Brett Taylor <brett@peloton.physics.montana.edu>
-# $FreeBSD: audio/splaytk/Makefile 340132 2014-01-17 22:35:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	splaytk
 PORTVERSION=	2.0
