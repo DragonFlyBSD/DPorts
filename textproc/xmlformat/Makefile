@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: textproc/xmlformat/Makefile 332524 2013-11-02 17:51:34Z hrs $
+# $FreeBSD$
 
 PORTNAME=	xmlformat
 PORTVERSION=	1.04
