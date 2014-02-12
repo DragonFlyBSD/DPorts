@@ -1,5 +1,5 @@
 # Created by: Vick Khera <vivek@khera.org>
-# $FreeBSD: finance/p5-Business-Stripe/Makefile 338757 2014-01-05 12:33:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Business-Stripe
 PORTVERSION=	0.04
