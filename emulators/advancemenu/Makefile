@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: emulators/advancemenu/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	advancemenu
 PORTVERSION=	2.6
