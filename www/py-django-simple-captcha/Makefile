@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@ixsystems.com>
-# $FreeBSD: www/py-django-simple-captcha/Makefile 338437 2014-01-02 12:42:28Z wg $
+# $FreeBSD$
 
 PORTNAME=	django-simple-captcha
 PORTVERSION=	0.4.1
