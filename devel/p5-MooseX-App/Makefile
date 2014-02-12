@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-App/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-App
-PORTVERSION=	1.22
+PORTVERSION=	1.23
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
