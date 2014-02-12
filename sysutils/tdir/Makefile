@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: sysutils/tdir/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tdir
 PORTVERSION=	1.69
