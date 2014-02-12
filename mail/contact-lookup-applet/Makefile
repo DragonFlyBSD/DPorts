@@ -1,5 +1,5 @@
 # Created by: kwm@rainbow-runner.nl
-# $FreeBSD: mail/contact-lookup-applet/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 #   $MCom: ports/mail/contact-lookup-applet/Makefile,v 1.15 2007/07/29 22:17:31 mezz Exp $
 
 PORTNAME=	contact
