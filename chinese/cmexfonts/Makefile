@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/cmexfonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cmexfonts
 PORTVERSION=	0.1
