@@ -1,5 +1,5 @@
 # Created by: Chifeng Qu <chifeng@gmail.com>
-# $FreeBSD: sysutils/moosefs-master/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	moosefs
 PORTVERSION=	#set via include
