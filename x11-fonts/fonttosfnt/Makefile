@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/fonttosfnt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fonttosfnt
 PORTVERSION=	1.0.4
