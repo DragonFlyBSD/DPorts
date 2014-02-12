@@ -1,5 +1,5 @@
 # Created by: Brooks Davis
-# $FreeBSD: lang/clang-devel/Makefile 333647 2013-11-13 02:38:26Z brooks $
+# $FreeBSD$
 
 PORTNAME=	clang
 PORTVERSION=	3.4.r${SVN_REV}
