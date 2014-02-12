@@ -1,5 +1,5 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: net-im/chattahoochie/Makefile 330717 2013-10-18 02:47:04Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	chattahoochie
 PORTVERSION=	1.8
