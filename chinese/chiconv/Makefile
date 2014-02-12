@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/chiconv/Makefile 339203 2014-01-09 07:20:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	chiconv
 PORTVERSION=	11.1
