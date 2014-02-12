@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: devel/piklab/Makefile 342127 2014-02-01 12:16:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	piklab
 PORTVERSION=	0.16.2
