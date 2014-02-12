@@ -1,5 +1,5 @@
 # Created by: shanali
-# $FreeBSD: net/raddump/Makefile 341913 2014-01-31 05:26:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	raddump
 PORTVERSION=	0.3.1
