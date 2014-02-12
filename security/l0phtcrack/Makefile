@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/l0phtcrack/Makefile 334286 2013-11-19 07:42:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	l0phtcrack
 PORTVERSION=	1.5
