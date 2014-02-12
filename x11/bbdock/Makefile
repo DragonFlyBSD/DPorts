@@ -1,5 +1,5 @@
 # Created by: Francis Bacque <idroxid01@yahoo.fr>
-# $FreeBSD: x11/bbdock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bbdock
 PORTVERSION=	0.2.9
@@ -20,6 +20,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include/libpng15
 PORTDOCS=	README
 
 PLIST_FILES=	bin/bbdock
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
