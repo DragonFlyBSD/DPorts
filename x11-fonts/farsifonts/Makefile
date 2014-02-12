@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: x11-fonts/farsifonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	farsifonts
 PORTVERSION=	0.4
