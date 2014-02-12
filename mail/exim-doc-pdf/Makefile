@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: mail/exim-doc-pdf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 DOCFORMAT=	pdf
 MASTERDIR=	${.CURDIR}/../exim-doc-html
