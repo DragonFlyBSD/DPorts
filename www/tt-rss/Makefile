@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: www/tt-rss/Makefile 337094 2013-12-20 21:55:01Z thierry $
+# $FreeBSD$
 
 PORTNAME=	tt-rss
 PORTVERSION=	1.11
