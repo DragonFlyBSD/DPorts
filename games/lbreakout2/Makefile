@@ -1,5 +1,5 @@
 # Created by: verm@drunkmonk.net
-# $FreeBSD: games/lbreakout2/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lbreakout2
 PORTVERSION=	2.6
