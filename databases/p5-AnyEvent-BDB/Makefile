@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-AnyEvent-BDB/Makefile 328810 2013-09-30 15:26:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-BDB
 PORTVERSION=	1.1
