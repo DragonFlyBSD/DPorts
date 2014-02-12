@@ -1,5 +1,5 @@
 # Created by: Jesper Dalberg <jesper@jdn.dk>
-# $FreeBSD: devel/p5-POE-Component-Server-XMLRPC/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Server-XMLRPC
 PORTVERSION=	0.05
