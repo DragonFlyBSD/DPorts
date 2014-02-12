@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-pydotorgtheme/Makefile 341186 2014-01-26 14:32:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;:tl}
 PORTVERSION=	2.0
