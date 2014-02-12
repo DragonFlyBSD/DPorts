@@ -1,5 +1,5 @@
 # Created by: Sander Vesik <sander@haldjas.folklore.ee>
-# $FreeBSD: misc/tkcron/Makefile 340598 2014-01-21 10:58:52Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkcron
 PORTVERSION=	2.12
