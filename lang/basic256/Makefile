@@ -1,5 +1,5 @@
 # Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
-# $FreeBSD: lang/basic256/Makefile 335118 2013-11-28 18:16:33Z makc $
+# $FreeBSD$
 
 PORTNAME=	basic256
 PORTVERSION=	1.0.0.0
