@@ -1,5 +1,5 @@
 # Created by: Jens Rehsack <rehsack@liwing.de>
-# $FreeBSD: devel/php-xdebug/Makefile 337037 2013-12-20 16:38:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	xdebug
 PORTVERSION=	2.2.3
