@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/grok/Makefile 330021 2013-10-10 17:34:34Z wxs $
+# $FreeBSD$
 
 PORTNAME=	grok
 PORTVERSION=	1.20110708.1
