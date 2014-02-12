@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-DSS/Makefile 328610 2013-09-28 17:13:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-DSS
 PORTVERSION=	1.6.1
