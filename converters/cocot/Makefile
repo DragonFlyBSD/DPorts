@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: converters/cocot/Makefile 339228 2014-01-09 13:23:06Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cocot
 PORTVERSION=	20120313
