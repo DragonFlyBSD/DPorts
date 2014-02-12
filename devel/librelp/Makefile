@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: devel/librelp/Makefile 340532 2014-01-21 00:53:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	librelp
 PORTVERSION=	1.2.0
