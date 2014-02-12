@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@pis.toba-cmt.ac.jp>
-# $FreeBSD: x11-clocks/eyeclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	eyeclock
 PORTVERSION=	2.0
