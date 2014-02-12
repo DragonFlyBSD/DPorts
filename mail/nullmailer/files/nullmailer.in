@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: mail/nullmailer/files/nullmailer.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/nullmailer/files/nullmailer.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: nullmailer
 # REQUIRE: LOGIN
