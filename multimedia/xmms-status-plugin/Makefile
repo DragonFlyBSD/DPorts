@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: multimedia/xmms-status-plugin/Makefile 340289 2014-01-19 13:44:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xmms-status-plugin
 PORTVERSION=	1.0
