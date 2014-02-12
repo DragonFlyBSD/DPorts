@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/ruby-rbbr/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rbbr
 PORTVERSION=	0.6.0
