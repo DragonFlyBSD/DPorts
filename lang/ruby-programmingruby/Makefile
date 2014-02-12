@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby-programmingruby/Makefile 341096 2014-01-25 20:47:28Z swills $
+# $FreeBSD$
 
 PORTNAME=	programmingruby
 PORTVERSION=	0.4
