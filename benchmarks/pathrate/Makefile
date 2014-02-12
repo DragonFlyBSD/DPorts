@@ -1,5 +1,5 @@
 # Created by: dikshie <dikshie@lapi.itb.ac.id>
-# $FreeBSD: benchmarks/pathrate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pathrate
 PORTVERSION=	2.4.1
