@@ -1,5 +1,5 @@
 # Created by: roland.jesse@gmx.net
-# $FreeBSD: x11-toolkits/SoXt/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	SoXt
 PORTVERSION=	1.3.0
