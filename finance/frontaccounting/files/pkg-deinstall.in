@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: finance/frontaccounting/files/pkg-deinstall.in 309465 2012-12-24 21:49:21Z crees $
+# $FreeBSD: head/finance/frontaccounting/files/pkg-deinstall.in 309465 2012-12-24 21:49:21Z crees $
 #
 
 FAWEB=%%WWWDIR%%

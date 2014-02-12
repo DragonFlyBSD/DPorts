@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: finance/frontaccounting/files/pkg-install.in 309465 2012-12-24 21:49:21Z crees $
+# $FreeBSD: head/finance/frontaccounting/files/pkg-install.in 309465 2012-12-24 21:49:21Z crees $
 #
 # Works around a deficiency in pkg_install; directory ownerships
 # are not preserved.  This should be removed when ports-mgmt/pkg rules

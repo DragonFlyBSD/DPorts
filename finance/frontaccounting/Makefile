@@ -1,5 +1,5 @@
 # Created by: Janky Jay <ek@purplehat.org>
-# $FreeBSD: finance/frontaccounting/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	frontaccounting
 DISTVERSION=	2.3.15
