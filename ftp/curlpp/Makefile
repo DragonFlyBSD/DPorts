@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/curlpp/Makefile 334837 2013-11-25 11:33:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	curlpp
 PORTVERSION=	0.7.3
