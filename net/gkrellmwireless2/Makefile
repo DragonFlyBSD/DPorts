@@ -1,5 +1,5 @@
 # Created by: KT Sin <ktsin@acm.org>
-# $FreeBSD: net/gkrellmwireless2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gkrellmwireless
 PORTVERSION=	2.0.2
