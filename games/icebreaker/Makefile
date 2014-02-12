@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/icebreaker/Makefile 337570 2013-12-26 17:37:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	icebreaker
 PORTVERSION=	1.9.8
