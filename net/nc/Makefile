@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/nc/Makefile 341936 2014-01-31 08:07:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nc
 PORTVERSION=	1.0.1
