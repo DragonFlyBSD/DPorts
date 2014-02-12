@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/megamario/Makefile 339563 2014-01-13 01:08:11Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	megamario
 PORTVERSION=	1.7
