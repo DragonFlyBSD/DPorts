@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/p5-Bio-Das-Lite/Makefile 341804 2014-01-30 07:34:25Z az $
+# $FreeBSD$
 
 PORTNAME=	Bio-Das-Lite
 PORTVERSION=	2.11
