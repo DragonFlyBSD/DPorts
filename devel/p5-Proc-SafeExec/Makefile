@@ -1,5 +1,5 @@
 # Created by: Sergei Vyshenski <svysh@pn.sinp.msu.ru>
-# $FreeBSD: devel/p5-Proc-SafeExec/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Proc-SafeExec
 PORTVERSION=	1.5
