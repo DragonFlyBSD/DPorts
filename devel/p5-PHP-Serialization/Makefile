@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-PHP-Serialization/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PHP-Serialization
 PORTVERSION=	0.34
