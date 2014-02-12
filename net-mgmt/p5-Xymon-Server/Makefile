@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-mgmt/p5-Xymon-Server/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Xymon-Server
 PORTVERSION=	0.02
