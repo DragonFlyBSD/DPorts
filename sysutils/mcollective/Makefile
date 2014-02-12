@@ -1,5 +1,5 @@
 # Created by: Russell Jackson <raj@csub.edu>
-# $FreeBSD: sysutils/mcollective/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mcollective
 PORTVERSION=	2.2.4
