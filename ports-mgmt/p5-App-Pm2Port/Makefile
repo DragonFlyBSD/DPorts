@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: ports-mgmt/p5-App-Pm2Port/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	App-Pm2Port
 PORTVERSION=	0.29
@@ -20,8 +20,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN1=		pm2port.1
-MAN3=		App::Pm2Port.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
