@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@vlink.ru>
-# $FreeBSD: net-mgmt/nagiosgraph/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nagiosgraph
 PORTVERSION=	1.4.4
