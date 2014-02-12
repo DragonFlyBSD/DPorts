@@ -1,5 +1,5 @@
 # Created by: Jung-uk Kim <jkim@FreeBSD.org>
-# $FreeBSD: korean/xpdf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xpdf
 PORTVERSION=	3.03
