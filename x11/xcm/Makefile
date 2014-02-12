@@ -1,4 +1,4 @@
-# $FreeBSD: x11/xcm/Makefile 328626 2013-09-28 19:46:53Z bsam $
+# $FreeBSD$
 
 PORTNAME=	xcm
 PORTVERSION=	0.5.2
