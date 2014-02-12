@@ -1,5 +1,5 @@
 # Created by: M. Possamai
-# $FreeBSD: misc/callid/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	callid
 PORTVERSION=	1.2
@@ -22,6 +22,9 @@ PORTDOCS=	CHANGES README TODO make-db.mysql
 RUN_DEPENDS+=	p5-DBI>=0:${PORTSDIR}/databases/p5-DBI
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 pre-everything::
