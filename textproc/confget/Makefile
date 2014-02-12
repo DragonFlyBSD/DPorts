@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/confget/Makefile 337622 2013-12-26 21:51:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	confget
 PORTVERSION=	1.05
