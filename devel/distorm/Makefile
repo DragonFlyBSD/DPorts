@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: devel/distorm/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME?=	distorm
 DISTVERSION=	20121220-r230
