@@ -1,4 +1,4 @@
-# $FreeBSD: www/edbrowse/Makefile 340081 2014-01-17 17:08:41Z danilo $
+# $FreeBSD$
 
 PORTNAME=	edbrowse
 PORTVERSION=	3.4.10
