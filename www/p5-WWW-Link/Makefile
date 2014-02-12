@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-WWW-Link/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Link
 PORTVERSION=	0.036
