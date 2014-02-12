@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: deskutils/charmap/Makefile 342221 2014-02-01 23:45:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	charmap
 PORTVERSION=	0.2
