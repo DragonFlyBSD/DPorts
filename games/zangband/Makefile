@@ -1,5 +1,5 @@
 # Created by: Makoto YAMAKURA <makoto@pinpott.spnet.ne.jp>
-# $FreeBSD: games/zangband/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zangband
 PORTVERSION=	2.6.2
