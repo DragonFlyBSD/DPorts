@@ -1,4 +1,4 @@
-$FreeBSD: games/wmfortune/files/patch-wmfortune.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/games/wmfortune/files/patch-wmfortune.c 340725 2014-01-22 17:40:44Z mat $
 
 --- wmfortune.c.orig	Thu May 16 11:01:43 2002
 +++ wmfortune.c	Thu May 16 11:02:18 2002
