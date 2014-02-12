@@ -1,5 +1,5 @@
 
-$FreeBSD: multimedia/opencinematools/files/patch-build_unix_Makefile 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/multimedia/opencinematools/files/patch-build_unix_Makefile 340725 2014-01-22 17:40:44Z mat $
 
 --- build/unix/Makefile.orig
 +++ build/unix/Makefile

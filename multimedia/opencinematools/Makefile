@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/opencinematools/Makefile 338857 2014-01-06 11:01:05Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	opencinematools
 PORTVERSION=	1.1.2
