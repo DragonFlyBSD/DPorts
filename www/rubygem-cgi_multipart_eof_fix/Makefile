@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-cgi_multipart_eof_fix/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	cgi_multipart_eof_fix
 PORTVERSION=	2.5.0
