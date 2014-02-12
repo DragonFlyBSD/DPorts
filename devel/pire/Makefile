@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/pire/Makefile 333253 2013-11-08 18:18:08Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	pire
 PORTVERSION=	0.0.5
