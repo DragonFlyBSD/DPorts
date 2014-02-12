@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/zend-framework/Makefile 332910 2013-11-05 21:16:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	ZendFramework
 PORTVERSION=	2.2.5
