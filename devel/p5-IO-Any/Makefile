@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-IO-Any/Makefile 337441 2013-12-25 19:39:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IO-Any
 PORTVERSION=	0.07
