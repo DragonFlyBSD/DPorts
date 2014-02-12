@@ -1,5 +1,5 @@
 
-$FreeBSD: mail/wanderlust/files/patch-utils_ptexinfmt.el 303709 2012-09-05 15:10:13Z nobutaka $
+$FreeBSD: head/mail/wanderlust/files/patch-utils_ptexinfmt.el 303709 2012-09-05 15:10:13Z nobutaka $
 
 --- utils/ptexinfmt.el.orig
 +++ utils/ptexinfmt.el
