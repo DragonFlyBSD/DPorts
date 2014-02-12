@@ -1,5 +1,5 @@
 # Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-# $FreeBSD: comms/efax-gtk/Makefile 331800 2013-10-27 19:35:12Z pawel $
+# $FreeBSD$
 
 PORTNAME=	efax-gtk
 PORTVERSION=	3.2.12
