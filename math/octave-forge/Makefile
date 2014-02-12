@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <maho@FreeBSD.org>
-# $FreeBSD: math/octave-forge/Makefile 341322 2014-01-27 04:24:43Z stephen $
+# $FreeBSD$
 
 PORTNAME=	octave-forge
 PORTVERSION=	20140127
