@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/comfortaa-ttf/Makefile 332789 2013-11-04 22:07:30Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	comfortaa-ttf
 PORTVERSION=	2.004
