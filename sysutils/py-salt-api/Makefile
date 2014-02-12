@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/py-salt-api/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	salt-api
 PORTVERSION=	0.8.3
