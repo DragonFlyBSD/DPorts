@@ -1,5 +1,5 @@
 # Created by: Jona Joachim <jaj@hcl-club.lu>
-# $FreeBSD: audio/soundconverter/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	soundconverter
 PORTVERSION=	1.5.4
