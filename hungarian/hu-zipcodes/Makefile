@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: hungarian/hu-zipcodes/Makefile 327735 2013-09-20 18:43:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zipcodes
 PORTVERSION=	20020622
