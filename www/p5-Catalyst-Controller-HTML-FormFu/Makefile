@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-# $FreeBSD: www/p5-Catalyst-Controller-HTML-FormFu/Makefile 338234 2013-12-31 05:14:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Controller-HTML-FormFu
 PORTVERSION=	1.00
