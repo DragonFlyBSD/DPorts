@@ -1,8 +1,8 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/otrs/Makefile 342009 2014-01-31 15:44:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	otrs
-PORTVERSION=	3.3.3
+PORTVERSION=	3.3.4
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.otrs.org/pub/otrs/ \
 		ftp://ftp.samurai.com/pub/otrs/ \
