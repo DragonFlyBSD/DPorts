@@ -1,4 +1,4 @@
-# $FreeBSD: russian/hunspell/Makefile 334153 2013-11-18 07:10:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hunspell
 PORTVERSION=	20131101
