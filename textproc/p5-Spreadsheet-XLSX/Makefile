@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: textproc/p5-Spreadsheet-XLSX/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	Spreadsheet-XLSX
 PORTVERSION=	0.13
