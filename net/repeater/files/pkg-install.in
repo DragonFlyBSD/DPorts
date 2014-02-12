@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net/repeater/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/net/repeater/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 PW="/usr/sbin/pw"
