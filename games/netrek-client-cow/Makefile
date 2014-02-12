@@ -1,5 +1,5 @@
 # Created by: Kevin Zheng <kevinz5000@gmail.com>
-# $FreeBSD: games/netrek-client-cow/Makefile 341424 2014-01-27 16:31:54Z decke $
+# $FreeBSD$
 
 PORTNAME=	netrek-client-cow
 PORTVERSION=	3.3.1
