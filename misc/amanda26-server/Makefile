@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: misc/amanda26-server/Makefile 333014 2013-11-06 17:28:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	amanda
 PORTVERSION=	2.6.1p2
