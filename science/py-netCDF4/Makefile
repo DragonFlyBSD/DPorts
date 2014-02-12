@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/py-netCDF4/Makefile 337963 2013-12-29 11:41:17Z wg $
+# $FreeBSD$
 
 PORTNAME=	netCDF4
 PORTVERSION=	1.0.5
