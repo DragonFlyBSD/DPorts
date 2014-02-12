@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgollucci@p6m7g8.com>
-# $FreeBSD: www/rubygem-geminabox/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	geminabox
 PORTVERSION=	0.11.0
