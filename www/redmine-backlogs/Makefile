@@ -1,4 +1,4 @@
-# $FreeBSD: www/redmine-backlogs/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	backlogs
 PORTVERSION=	1.0.2
