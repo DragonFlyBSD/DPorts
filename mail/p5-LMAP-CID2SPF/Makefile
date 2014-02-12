@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: mail/p5-LMAP-CID2SPF/Makefile 333174 2013-11-08 01:28:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	LMAP-CID2SPF
 DISTVERSION=	0.9
