@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Logfile-Rotate/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Logfile-Rotate
 PORTVERSION=	1.04
