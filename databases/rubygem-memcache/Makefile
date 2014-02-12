@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: databases/rubygem-memcache/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	memcache
 PORTVERSION=	1.4.1
