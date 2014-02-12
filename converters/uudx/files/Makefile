@@ -1,7 +1,7 @@
 #
 # makefile of uudx
 #
-# $FreeBSD: converters/uudx/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 CFLAGS += -DBSD=1 -DEUC=1 -DUTIME_EXIST -DMKDIR_HAS_MODE
 PROGRAM = uudx
