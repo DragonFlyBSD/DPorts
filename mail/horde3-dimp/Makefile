@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: mail/horde3-dimp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dimp
 PORTVERSION=	1.1.8
