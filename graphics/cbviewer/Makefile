@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/cbviewer/Makefile 338420 2014-01-02 07:20:46Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	cbviewer
 PORTVERSION=	0.8
