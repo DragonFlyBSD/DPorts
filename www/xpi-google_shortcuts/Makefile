@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-google_shortcuts/Makefile 341206 2014-01-26 15:10:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	google_shortcuts
 PORTVERSION=	2.1.5
