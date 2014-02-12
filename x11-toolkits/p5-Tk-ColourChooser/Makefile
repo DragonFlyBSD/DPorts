@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: x11-toolkits/p5-Tk-ColourChooser/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	Tk-ColourChooser
 PORTVERSION=	1.52
