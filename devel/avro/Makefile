@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/avro/Makefile 340573 2014-01-21 08:14:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	avro
 PORTVERSION=	1.7.3
