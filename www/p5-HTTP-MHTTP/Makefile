@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-HTTP-MHTTP/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	HTTP-MHTTP
 PORTVERSION=	0.15
