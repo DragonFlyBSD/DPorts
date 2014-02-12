@@ -1,5 +1,5 @@
 # Created by: Tim Welch <ports@thepentagon.org>
-# $FreeBSD: sysutils/dvdimagecmp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dvdimagecmp
 PORTVERSION=	0.3
