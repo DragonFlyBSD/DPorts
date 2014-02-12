@@ -1,5 +1,5 @@
 # Created by: Dominik Brettnacher <domi@nonsensss.de>
-# $FreeBSD: graphics/xsane/Makefile 329075 2013-10-02 16:55:16Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xsane
 PORTVERSION=	0.999
