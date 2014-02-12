@@ -1,4 +1,4 @@
-# $FreeBSD: devel/kdevelop-php-docs/Makefile 340104 2014-01-17 20:34:33Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdevelop-php-docs
 PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
