@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/pidgin-encryption/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pidgin
 PORTVERSION=	3.1
@@ -28,6 +28,9 @@ CONFIGURE_ARGS=	--with-nspr-includes=${LOCALBASE}/include/nspr	\
 		--with-nss-libs=${LOCALBASE}/lib/nss
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
