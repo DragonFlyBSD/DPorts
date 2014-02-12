@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: multimedia/phonon-xine/Makefile 340691 2014-01-22 08:18:16Z makc $
+# $FreeBSD$
 
 PORTNAME=	phonon
 PORTVERSION=	4.4.4
