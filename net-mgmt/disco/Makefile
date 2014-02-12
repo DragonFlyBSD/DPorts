@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: net-mgmt/disco/Makefile 337733 2013-12-27 14:47:58Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	disco
 PORTVERSION=	1.2
@@ -17,6 +17,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/disco bin/disco.fp
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
