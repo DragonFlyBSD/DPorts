@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/phpbb-tw/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phpbb
 PORTVERSION=	2.0.23
@@ -52,6 +52,8 @@ PKGOPTS=	${FILESDIR}/pkg-opts
 EXCEPTFILES=	${PREFIX}/${PHPBBDIR}/install/install.php \
 		${PREFIX}/${PHPBBDIR}/install/upgrade.php \
 		${PREFIX}/${PHPBBDIR}/install/update_to_latest.php
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
