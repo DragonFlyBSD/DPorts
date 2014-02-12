@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: sysutils/memfetch/Makefile 340555 2014-01-21 06:21:35Z danfe $
+# $FreeBSD$
 
 PORTNAME=	memfetch
 PORTVERSION=	0.05b
