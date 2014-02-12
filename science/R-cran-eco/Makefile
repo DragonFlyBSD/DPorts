@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-eco/Makefile 342136 2014-02-01 13:49:09Z antoine $
+# $FreeBSD$
 
 PORTNAME=	eco
 PORTVERSION=	3.1.6
