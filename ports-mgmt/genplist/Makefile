@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: ports-mgmt/genplist/Makefile 336897 2013-12-19 12:57:03Z danilo $
+# $FreeBSD$
 
 PORTNAME=	genplist
 PORTVERSION=	1.1
