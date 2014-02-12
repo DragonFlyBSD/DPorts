@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev <tolid@plab.ku.dk>
-# $FreeBSD: www/p5-WWW-TV/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-TV
 PORTVERSION=	0.14
