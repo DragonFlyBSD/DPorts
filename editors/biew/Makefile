@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: editors/biew/Makefile 337415 2013-12-25 13:47:13Z danfe $
+# $FreeBSD$
 
 PORTNAME=	biew
 PORTVERSION=	6.1.0
