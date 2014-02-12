@@ -1,5 +1,5 @@
 # Created by: Andrei Antoukh <niwi@niwi.be>
-# $FreeBSD: databases/py-couchdb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	CouchDB
 PORTVERSION=	0.8
