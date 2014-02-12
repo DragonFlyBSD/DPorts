@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: sysutils/dt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dt
 PORTVERSION=	17.07
