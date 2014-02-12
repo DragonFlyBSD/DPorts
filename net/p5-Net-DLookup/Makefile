@@ -1,5 +1,5 @@
 # Created by: Danny Howard <dannyman@tellme.com>
-# $FreeBSD: net/p5-Net-DLookup/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-DLookup
 PORTVERSION=	1.01
