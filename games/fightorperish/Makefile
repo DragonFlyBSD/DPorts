@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/fightorperish/Makefile 335119 2013-11-28 19:05:58Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	fightorperish
 PORTVERSION=	0.5
