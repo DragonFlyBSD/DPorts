@@ -1,5 +1,5 @@
 # Created by: markm@FreeBSD.org
-# $FreeBSD: mail/exim/Makefile 335913 2013-12-08 16:58:55Z rea $
+# $FreeBSD$
 
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}

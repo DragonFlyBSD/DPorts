@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/exim/files/150.exim-tidydb.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/exim/files/150.exim-tidydb.sh 340872 2014-01-24 00:14:07Z mat $
 #
 # Exim hints database maintenance
 # 
