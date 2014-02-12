@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-feedzirra/Makefile 335802 2013-12-07 01:03:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	feedzirra
 PORTVERSION=	0.5.0
