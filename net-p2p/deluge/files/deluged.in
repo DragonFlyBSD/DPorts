@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-p2p/deluge/files/deluged.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-p2p/deluge/files/deluged.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: deluged
 # REQUIRE: LOGIN

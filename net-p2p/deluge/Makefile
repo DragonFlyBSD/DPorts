@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/deluge/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	deluge
 PORTVERSION=	1.3.6
