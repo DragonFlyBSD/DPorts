@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@FreeBSD.org>)
-# $FreeBSD: net/pear-Net_DIME/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net_DIME
 PORTVERSION=	1.0.2
