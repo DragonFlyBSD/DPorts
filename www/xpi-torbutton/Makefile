@@ -1,5 +1,5 @@
 # Created by: Andreas Donig <a.donig@gmx.net>
-# $FreeBSD: www/xpi-torbutton/Makefile 341218 2014-01-26 15:14:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	torbutton
 PORTVERSION=	1.5.2
