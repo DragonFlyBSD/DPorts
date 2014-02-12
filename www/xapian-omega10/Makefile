@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-# $FreeBSD: www/xapian-omega10/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xapian-omega10
 PORTVERSION=	1.0.23
