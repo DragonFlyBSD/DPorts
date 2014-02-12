@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Authen-TacacsPlus/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Authen-TacacsPlus
 PORTVERSION=	0.24
