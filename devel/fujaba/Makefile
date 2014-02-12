@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: devel/fujaba/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fujaba
 PORTVERSION=	4.3.2
