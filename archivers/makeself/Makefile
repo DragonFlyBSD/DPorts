@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: archivers/makeself/Makefile 337673 2013-12-27 09:54:22Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	makeself
 PORTVERSION=	2.1.5
@@ -23,6 +23,8 @@ PLIST_FILES=	bin/makeself bin/makeself-header \
 		bin/makeself-header.sh bin/makeself.sh
 
 PORTDOCS=	README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
