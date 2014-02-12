@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: editors/tweak/Makefile 342316 2014-02-02 15:20:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tweak
 PORTVERSION=	3.01
