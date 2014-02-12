@@ -1,5 +1,5 @@
 # Created by: Michael Lednev <liettneff@bk.ru>
-# $FreeBSD: net/abills/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	abills
 PORTVERSION=	0.54
