@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/slump/Makefile 333462 2013-11-11 00:50:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	slump
 PORTVERSION=	0.003.02
