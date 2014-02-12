@@ -1,5 +1,5 @@
 # Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-# $FreeBSD: dns/opendnssec13/Makefile 335686 2013-12-05 20:25:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	opendnssec
 PORTVERSION=	1.3.16
