@@ -1,5 +1,5 @@
 # Created by: Lev Walkin <vlm@lionet.info>
-# $FreeBSD: lang/asn1c/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	asn1c
 PORTVERSION=	0.9.24
