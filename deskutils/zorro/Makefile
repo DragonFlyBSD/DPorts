@@ -1,5 +1,5 @@
 # Created by: shanee@rabbit.augusta.de
-# $FreeBSD: deskutils/zorro/Makefile 328259 2013-09-25 09:55:38Z gahr $
+# $FreeBSD$
 
 PORTNAME=	zorro
 PORTVERSION=	1.1.8
