@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: databases/rubygem-rbase/Makefile 332033 2013-10-30 02:26:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	rbase
 PORTVERSION=	0.1.3
