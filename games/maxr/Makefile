@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/maxr/Makefile 330506 2013-10-16 12:58:10Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	maxr
 PORTVERSION=	0.2.8
