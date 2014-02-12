@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/scid/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scid
 PORTVERSION=	4.3
