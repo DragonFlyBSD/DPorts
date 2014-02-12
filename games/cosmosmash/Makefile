@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/cosmosmash/Makefile 334490 2013-11-21 13:36:51Z martymac $
+# $FreeBSD$
 
 PORTNAME=	cosmosmash
 DISTVERSION=	1.4.7
