@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-xf86audio/Makefile 328596 2013-09-28 16:59:55Z naddy $
+# $FreeBSD$
 
 PORTNAME=	xmms-xf86audio
 PORTVERSION=	0.4.4

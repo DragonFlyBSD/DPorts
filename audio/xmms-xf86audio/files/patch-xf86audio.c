@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/xmms-xf86audio/files/patch-xf86audio.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/xmms-xf86audio/files/patch-xf86audio.c 340725 2014-01-22 17:40:44Z mat $
 
 --- xf86audio.c.orig
 +++ xf86audio.c
