@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/solfege/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 #   $MCom: ports/audio/solfege/Makefile,v 1.7 2007/09/09 23:47:50 mezz Exp $
 
 PORTNAME=	solfege
