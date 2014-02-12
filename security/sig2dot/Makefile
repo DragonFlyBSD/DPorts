@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/sig2dot/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sig2dot
 PORTVERSION=	0.35
