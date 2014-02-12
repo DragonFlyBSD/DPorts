@@ -1,5 +1,5 @@
 # Created by: brett@peloton.physics.montana.edu
-# $FreeBSD: mail/asmail/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asmail
 PORTVERSION=	2.1
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.tigr.net/afterstep/download/asmail/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Biff-type program, designed to match AfterStep
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 USE_XORG=	xpm
 USE_OPENSSL=	yes
