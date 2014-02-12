@@ -1,7 +1,7 @@
 #!/bin/sh
 # Created by: Created by: KalleDK <plexmaintainer@k-moeller.dk>
 #
-# $FreeBSD: multimedia/plexmediaserver/files/plexmediaserver.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/multimedia/plexmediaserver/files/plexmediaserver.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: plexmediaserver
 # REQUIRE: LOGIN
