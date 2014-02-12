@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@wirespeed.org.uk>
-# $FreeBSD: mail/dspam/Makefile 338031 2013-12-29 17:37:35Z crees $
+# $FreeBSD$
 
 # Note to committers: If don't commit a maintainer patch and as a result PKGNAME
 # or user variables (WITH*) changes please add an entry in ${FILESDIR}/UPDATING

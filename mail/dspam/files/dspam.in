@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: mail/dspam/files/dspam.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/dspam/files/dspam.in 340872 2014-01-24 00:14:07Z mat $
 # formerly $ FreeBSD: ports/mail/dspam/files/dspam,v 1.1 2005/05/05 21:03:37 pav Exp $
 #
 
