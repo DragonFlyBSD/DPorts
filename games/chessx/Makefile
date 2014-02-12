@@ -1,4 +1,4 @@
-# $FreeBSD: games/chessx/Makefile 334863 2013-11-25 16:33:39Z makc $
+# $FreeBSD$
 
 PORTNAME=	chessx
 DISTVERSION=	1-0-0
