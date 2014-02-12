@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: games/banihstypos/Makefile 337727 2013-12-27 13:08:28Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	banihstypos
 PORTVERSION=	0.2
@@ -15,6 +15,8 @@ SUB_FILES=	pkg-message
 SUB_LIST=	PORTNAME=${PORTNAME}
 
 PLIST_FILES=	bin/banihstypos
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
