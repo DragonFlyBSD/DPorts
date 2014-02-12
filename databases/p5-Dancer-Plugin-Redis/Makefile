@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: databases/p5-Dancer-Plugin-Redis/Makefile 331041 2013-10-20 17:46:54Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-Redis
 PORTVERSION=	0.7
