@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: converters/nomyso/Makefile 340446 2014-01-20 18:39:49Z antoine $
+# $FreeBSD$
 
 PORTNAME=	nomyso
 PORTVERSION=	4.3
