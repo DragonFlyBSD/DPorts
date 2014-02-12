@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-POE-Component-Client-UserAgent/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-UserAgent
 PORTVERSION=	0.08
