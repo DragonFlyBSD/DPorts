@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: net/neubot/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	neubot
 PORTVERSION=	0.4.16.9
