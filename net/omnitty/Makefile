@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: net/omnitty/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	omnitty
 PORTVERSION=	0.3.0
