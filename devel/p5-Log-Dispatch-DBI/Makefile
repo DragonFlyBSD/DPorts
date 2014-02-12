@@ -1,5 +1,5 @@
 # Created by: Ralf Gebhart <gebhart@secnetix.de>
-# $FreeBSD: devel/p5-Log-Dispatch-DBI/Makefile 329901 2013-10-09 14:14:59Z culot $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-DBI
 PORTVERSION=	0.02
