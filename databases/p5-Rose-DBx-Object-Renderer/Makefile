@@ -1,5 +1,5 @@
 # Created by: Wen Heping
-# $FreeBSD: databases/p5-Rose-DBx-Object-Renderer/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Rose-DBx-Object-Renderer
 PORTVERSION=	0.77
