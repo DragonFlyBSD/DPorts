@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-ruport/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruport
 PORTVERSION=	1.6.3
