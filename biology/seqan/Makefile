@@ -1,5 +1,5 @@
 # Created by: h2
-# $FreeBSD: biology/seqan/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	seqan
 PORTVERSION=	1.3.1
