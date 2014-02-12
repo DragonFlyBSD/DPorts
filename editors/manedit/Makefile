@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/manedit/Makefile 337949 2013-12-29 09:51:52Z johans $
+# $FreeBSD$
 
 PORTNAME=	manedit
 PORTVERSION=	1.2.1
