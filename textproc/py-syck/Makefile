@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: textproc/py-syck/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	syck
 PORTVERSION=	0.61.2
