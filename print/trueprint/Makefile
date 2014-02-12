@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: print/trueprint/Makefile 328888 2013-09-30 22:44:26Z danilo $
+# $FreeBSD$
 
 PORTNAME=	trueprint
 PORTVERSION=	5.4
