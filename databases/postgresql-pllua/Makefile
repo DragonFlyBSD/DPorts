@@ -1,5 +1,5 @@
 # Created by: sunghyuk
-# $FreeBSD: databases/postgresql-pllua/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pllua
 PORTVERSION=	0.3.2
