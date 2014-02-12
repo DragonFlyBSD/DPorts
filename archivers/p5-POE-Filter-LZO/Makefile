@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-POE-Filter-LZO/Makefile 328604 2013-09-28 17:12:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE-Filter-LZO
 PORTVERSION=	1.7.0
