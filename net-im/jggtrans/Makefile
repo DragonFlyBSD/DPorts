@@ -1,5 +1,5 @@
 # Created by: Bartek Rutkowski <r@robakdesign.com>
-# $FreeBSD: net-im/jggtrans/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jggtrans
 PORTVERSION=	2.2.4
