@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/srecite/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	srecite
 PORTVERSION=	0.6.2
@@ -13,6 +13,9 @@ EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for the Chinese people to study foreign language
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
