@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: textproc/dtdinst/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dtdinst
 PORTVERSION=	2009.11.11
