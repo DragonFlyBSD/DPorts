@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: print/a2pdf/Makefile 333896 2013-11-15 17:40:36Z mat $
+# $FreeBSD$
 
 PORTNAME=	a2pdf
 PORTVERSION=	1.13
@@ -20,7 +20,5 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-MAN1=	${PORTNAME}.1
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
