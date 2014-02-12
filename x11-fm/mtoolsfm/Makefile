@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: x11-fm/mtoolsfm/Makefile 337820 2013-12-27 22:36:08Z antoine $
+# $FreeBSD$
 
 PORTNAME=	mtoolsfm
 PORTVERSION=	1.9.5
