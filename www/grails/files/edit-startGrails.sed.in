@@ -1,4 +1,4 @@
-# $FreeBSD: www/grails/files/edit-startGrails.sed.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/grails/files/edit-startGrails.sed.in 340872 2014-01-24 00:14:07Z mat $
 14i\
 : ${GRAILS_HOME="%%DATADIR%%"}
 14i\
