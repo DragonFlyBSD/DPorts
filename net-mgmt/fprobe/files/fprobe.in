@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/fprobe/files/fprobe.in 311223 2013-01-30 16:01:32Z jadawin $
+# $FreeBSD: head/net-mgmt/fprobe/files/fprobe.in 311223 2013-01-30 16:01:32Z jadawin $
 #
 # PROVIDE: fprobe
 # REQUIRE: NETWORKING
