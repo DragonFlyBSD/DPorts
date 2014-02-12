@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: mail/p5-Email-Sender-Transport-SMTP-TLS/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-Sender-Transport-SMTP-TLS
 PORTVERSION=	0.14
