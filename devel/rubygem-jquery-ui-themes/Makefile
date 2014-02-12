@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-jquery-ui-themes/Makefile 335319 2013-11-30 18:29:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	jquery-ui-themes
 PORTVERSION=	0.0.11
