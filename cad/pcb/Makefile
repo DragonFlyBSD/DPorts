@@ -1,5 +1,5 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/pcb/Makefile 341708 2014-01-29 09:52:04Z gahr $
+# $FreeBSD$
 
 PORTNAME=	pcb
 PORTVERSION=	20110918
