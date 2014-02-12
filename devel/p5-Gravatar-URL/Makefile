@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: devel/p5-Gravatar-URL/Makefile 331953 2013-10-29 14:32:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Gravatar-URL
 PORTVERSION=	1.06
