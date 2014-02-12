@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/wol/Makefile 342045 2014-01-31 17:13:02Z antoine $
+# $FreeBSD$
 
 PORTNAME=	wol
 PORTVERSION=	0.7.1
