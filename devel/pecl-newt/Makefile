@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pecl-newt/Makefile 332297 2013-10-31 23:32:31Z garga $
+# $FreeBSD$
 
 PORTNAME=	newt
 PORTVERSION=	1.2.8
