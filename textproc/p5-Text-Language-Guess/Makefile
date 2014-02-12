@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: textproc/p5-Text-Language-Guess/Makefile 340908 2014-01-24 14:59:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Language-Guess
 PORTVERSION=	0.02
