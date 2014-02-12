@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/xmms2-scrobbler/Makefile 340187 2014-01-18 15:28:48Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xmms2-scrobbler
 PORTVERSION=	0.4.0
