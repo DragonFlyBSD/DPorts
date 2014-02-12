@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: ftp/yafc/Makefile 328269 2013-09-25 11:39:38Z wg $
+# $FreeBSD$
 
 PORTNAME=	yafc
 PORTVERSION=	1.2.5
