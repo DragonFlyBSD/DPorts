@@ -1,5 +1,5 @@
 # Created by: Max E. Kuznecov <mek@mek.uz.ua>
-# $FreeBSD: net-im/sendxmpp/Makefile 341915 2014-01-31 06:48:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sendxmpp
 PORTVERSION=	0.0.8
