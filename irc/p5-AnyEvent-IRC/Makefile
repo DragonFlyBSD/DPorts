@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: irc/p5-AnyEvent-IRC/Makefile 332729 2013-11-04 14:28:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-IRC
 PORTVERSION=	0.97
