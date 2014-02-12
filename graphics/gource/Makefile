@@ -1,8 +1,9 @@
 # Created by: demon@FreeBSD.org
-# $FreeBSD: graphics/gource/Makefile 331625 2013-10-25 19:06:47Z demon $
+# $FreeBSD$
 
 PORTNAME=	gource
 PORTVERSION=	0.40
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
