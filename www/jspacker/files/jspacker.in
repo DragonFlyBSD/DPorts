@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: www/jspacker/files/jspacker.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/jspacker/files/jspacker.in 340872 2014-01-24 00:14:07Z mat $
 #
 %%PERL5%% -I%%DATADIR%% %%DATADIR%%/%%JSPACKER%% $@
