@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: net/p5-Net-Random/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Random
 PORTVERSION=	2.3
