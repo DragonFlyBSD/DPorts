@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/fbg2/Makefile 335910 2013-12-08 16:37:55Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	fbg2
 PORTVERSION=	0.4
