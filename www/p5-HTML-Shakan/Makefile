@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Shakan/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Shakan
 PORTVERSION=	2.00
