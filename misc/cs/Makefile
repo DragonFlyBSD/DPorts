@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/cs/Makefile 332511 2013-11-02 17:11:24Z pawel $
+# $FreeBSD$
 
 PORTNAME=	cs
 PORTVERSION=	0.9.6
