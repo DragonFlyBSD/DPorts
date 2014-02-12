@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-ZeroMQ/Makefile 341980 2014-01-31 12:13:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ZeroMQ
 PORTVERSION=	0.21
