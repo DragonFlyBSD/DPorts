@@ -1,5 +1,5 @@
 # Created by: Eoin Lawless (eoin@maths.tcd.ie)
-# $FreeBSD: math/parmetis/Makefile 337824 2013-12-27 23:33:34Z marino $
+# $FreeBSD$
 
 PORTNAME=	ParMetis
 PORTVERSION=	4.0
