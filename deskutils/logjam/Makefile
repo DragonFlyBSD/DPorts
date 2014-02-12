@@ -1,5 +1,5 @@
 # Created by: alanp@unixpower.org
-# $FreeBSD: deskutils/logjam/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	logjam
 PORTVERSION=	4.6.2
