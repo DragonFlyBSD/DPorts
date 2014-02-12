@@ -1,5 +1,5 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-# $FreeBSD: audio/spek/Makefile 336348 2013-12-13 14:48:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spek
 PORTVERSION=	0.8.2
