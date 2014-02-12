@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: devel/stormlib-ghost++/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	stormlib
 PORTVERSION=	6.25
