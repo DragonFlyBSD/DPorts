@@ -1,5 +1,5 @@
 # Created by: Masanori OZAWA (ozawa@ongs.co.jp)
-# $FreeBSD: deskutils/fusenshi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fusenshi
 PORTVERSION=	0.9.0
