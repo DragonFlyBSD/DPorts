@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/glchess/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	glchess
 PORTVERSION=	1.0.6
@@ -20,6 +20,9 @@ USE_PYDISTUTILS=	yes
 GCONF_SCHEMAS=	glchess.schemas
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
