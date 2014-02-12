@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: sysutils/p5-ZConf-Cron/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD$
 
 PORTNAME=	ZConf-Cron
 PORTVERSION=	1.1.1
