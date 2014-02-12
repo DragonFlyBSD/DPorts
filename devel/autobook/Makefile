@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: devel/autobook/Makefile 341392 2014-01-27 12:56:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	autobook
 PORTVERSION=	1.5
