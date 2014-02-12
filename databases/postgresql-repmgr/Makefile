@@ -1,5 +1,5 @@
 # Created by: alp@sfedu.ru
-# $FreeBSD: databases/postgresql-repmgr/Makefile 331217 2013-10-22 03:19:13Z danilo $
+# $FreeBSD$
 
 PORTNAME=	postgresql-repmgr
 PORTVERSION=	1.2.0
