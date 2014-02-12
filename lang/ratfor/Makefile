@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: lang/ratfor/Makefile 339045 2014-01-07 22:55:35Z mat $
+# $FreeBSD$
 
 PORTNAME=	ratfor
 PORTVERSION=	1985.06
