@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero  <fernan@iib.unsam.edu.ar>
-# $FreeBSD: www/p5-Catalyst-Controller-BindLex/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Controller-BindLex
 PORTVERSION=	0.03
