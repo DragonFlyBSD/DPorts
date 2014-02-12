@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/irrlamb/Makefile 337111 2013-12-21 00:43:38Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	irrlamb
 PORTVERSION=	0.1.0
