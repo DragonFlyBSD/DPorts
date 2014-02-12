@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@FreeBSD.org>
-# $FreeBSD: editors/omegaT/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	omegaT
 DISTVERSION=	2.6.3_01
