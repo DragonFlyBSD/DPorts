@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: dns/walker/Makefile 337947 2013-12-29 09:06:42Z johans $
+# $FreeBSD$
 
 PORTNAME=	walker
 PORTVERSION=	3.8
@@ -19,6 +19,8 @@ NO_BUILD=	yes
 
 PLIST_FILES=	bin/walker man/man1/walker.1.gz
 PORTDOCS=	index.html
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
