@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <stast@bsdportal.ru>
-# $FreeBSD: games/opensonic/Makefile 341263 2014-01-26 19:42:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	opensonic
 PORTVERSION=	0.1.4
