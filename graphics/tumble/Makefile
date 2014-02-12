@@ -1,5 +1,5 @@
 # Created by: Rob Farmer <rfarmer@predatorlabs.net>
-# $FreeBSD: graphics/tumble/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tumble
 PORTVERSION=	0.33
