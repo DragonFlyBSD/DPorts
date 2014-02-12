@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/sbt/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	sbt
 PORTVERSION=	0.13.1
