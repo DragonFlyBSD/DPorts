@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/popstar/Makefile 334930 2013-11-26 13:26:59Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	popstar
 PORTVERSION=	0.0.2
