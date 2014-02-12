@@ -1,8 +1,9 @@
 # Created by: Brad Allen <braddo@tranceaddict.net>
-# $FreeBSD: games/stepmania-devel/Makefile 337597 2013-12-26 18:49:00Z marino $
+# $FreeBSD$
 
 PORTNAME=	stepmania
 PORTVERSION=	5.0.a3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	games
 MASTER_SITES=	GOOGLE_CODE
