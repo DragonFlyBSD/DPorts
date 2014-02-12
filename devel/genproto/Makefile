@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/genproto/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	genproto
 PORTVERSION=	0.4.1
