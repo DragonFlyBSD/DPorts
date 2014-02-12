@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: graphics/p5-Graph-Easy/Makefile 342150 2014-02-01 14:41:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Graph-Easy
 PORTVERSION=	0.73
