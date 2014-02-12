@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: net/py-urllib3/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	urllib3
 PORTVERSION=	1.7.1
