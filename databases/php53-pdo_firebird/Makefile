@@ -1,4 +1,4 @@
-# $FreeBSD: databases/php53-pdo_firebird/Makefile 336500 2013-12-14 23:30:36Z flo $
+# $FreeBSD$
 
 CATEGORIES=	databases
 
