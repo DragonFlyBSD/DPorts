@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/ruby-langscan/Makefile 338471 2014-01-02 19:45:16Z swills $
+# $FreeBSD$
 
 PORTNAME=	langscan
 PORTVERSION=	1.2.20070115
