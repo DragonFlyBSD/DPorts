@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/james/files/james.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/james/files/james.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 #

@@ -1,5 +1,5 @@
 # Created by: Nemo Liu <nemoliu@FreeBSD.org>
-# $FreeBSD: mail/james/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	james
 PORTVERSION=	2.3.1
