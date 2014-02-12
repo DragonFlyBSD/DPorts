@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: databases/dbview/Makefile 331399 2013-10-23 17:51:19Z ak $
+# $FreeBSD$
 
 PORTNAME=	dbview
 PORTVERSION=	1.0.4
