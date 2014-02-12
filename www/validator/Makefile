@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: www/validator/Makefile 341503 2014-01-28 07:39:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	validator
 PORTVERSION=	1.3
