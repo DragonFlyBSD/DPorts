@@ -1,5 +1,5 @@
 # Created by: Dave Grochowski <malus.x@gmail.com>
-# $FreeBSD: devel/libdlna/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libdlna
 PORTVERSION=	0.2.3
