@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sendmail.cz>
-# $FreeBSD: net/openmq-client/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-client
 
