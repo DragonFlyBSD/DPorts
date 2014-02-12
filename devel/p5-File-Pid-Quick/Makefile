@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-File-Pid-Quick/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-Pid-Quick
 PORTVERSION=	1.02
