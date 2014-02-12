@@ -1,5 +1,5 @@
 # Created by: Fabian Keil <fk@fabiankeil.de>
-# $FreeBSD: sysutils/zogftw/Makefile 329739 2013-10-07 20:56:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	zogftw
 PORTVERSION=	0.0.2013.10.06
