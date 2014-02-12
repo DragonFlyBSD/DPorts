@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung
-# $FreeBSD: devel/p5-POE-Component-RSSAggregator/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-RSSAggregator
 PORTVERSION=	1.11
