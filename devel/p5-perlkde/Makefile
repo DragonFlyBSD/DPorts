@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-perlkde/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	perlkde
 PORTVERSION=	${KDE4_VERSION}
@@ -32,7 +32,6 @@ CMAKE_ARGS+=	-DSmoke_DIR=${KDE4_PREFIX}/lib/cmake/smoke \
 OPTIONS_DEFINE=	ATTICA
 ATTICA_DESC=	Bindings for libattica (may crash build)
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MATTICA}
