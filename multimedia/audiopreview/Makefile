@@ -1,5 +1,5 @@
 # Created by: kevlo 
-# $FreeBSD: multimedia/audiopreview/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	audiopreview
 PORTVERSION=	0.6
