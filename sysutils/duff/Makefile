@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/duff/Makefile 329136 2013-10-03 03:26:20Z jhale $
+# $FreeBSD$
 
 PORTNAME=	duff
 PORTVERSION=	0.5.2
