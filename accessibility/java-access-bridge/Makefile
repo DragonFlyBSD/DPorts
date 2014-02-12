@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: accessibility/java-access-bridge/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/accessibility/java-access-bridge/Makefile,v 1.2 2007/03/06 14:03:02 ahze Exp $
 
 PORTNAME=	java-access-bridge
