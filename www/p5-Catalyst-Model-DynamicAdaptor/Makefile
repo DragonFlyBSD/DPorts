@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: www/p5-Catalyst-Model-DynamicAdaptor/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Model-DynamicAdaptor
 PORTVERSION=	0.02
