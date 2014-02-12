@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: devel/p5-MooseX-MultiInitArg/Makefile 331214 2013-10-22 00:22:41Z danilo $
+# $FreeBSD$
 
 PORTNAME=	MooseX-MultiInitArg
 PORTVERSION=	0.02
