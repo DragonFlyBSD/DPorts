@@ -1,5 +1,5 @@
 # Created by: Juan Salaverria <rael@vectorstar.net>
-# $FreeBSD: games/gturing/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gturing
 PORTVERSION=	0.1.1
