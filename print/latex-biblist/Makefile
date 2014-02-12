@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: print/latex-biblist/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	latex-biblist
 PORTVERSION=	1.4.19920113
