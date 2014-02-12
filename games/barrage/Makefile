@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: games/barrage/Makefile 342172 2014-02-01 15:36:19Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	barrage
 PORTVERSION=	1.0.4
