@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Command/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Command
 PORTVERSION=	0.11
