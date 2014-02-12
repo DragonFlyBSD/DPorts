@@ -1,5 +1,5 @@
 # Created by: Mattis Michel <sic_zer0@hotmail.com>
-# $FreeBSD: x11-wm/matwm2/Makefile 340775 2014-01-23 03:06:15Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	matwm2
 DISTVERSION=	0.1.2pre3
