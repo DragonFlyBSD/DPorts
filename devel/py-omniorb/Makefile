@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: devel/py-omniorb/Makefile 339922 2014-01-16 15:43:27Z sem $
+# $FreeBSD$
 
 PORTNAME=	omniorb
 PORTVERSION=	3.6
