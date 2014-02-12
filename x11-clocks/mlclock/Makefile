@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: x11-clocks/mlclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	mlclock
 PORTVERSION=	1.1
