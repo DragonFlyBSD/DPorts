@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/when/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD$
 
 PORTNAME=	when
 PORTVERSION=	1.1.22
