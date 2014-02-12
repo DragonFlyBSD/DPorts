@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-gemoji/Makefile 332051 2013-10-30 02:58:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	gemoji
 PORTVERSION=	1.4.0
