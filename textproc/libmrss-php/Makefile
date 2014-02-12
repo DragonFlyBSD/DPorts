@@ -1,5 +1,5 @@
 # Created by: Rodrigo Osorio <rodrigo@FreeBSD.org>
-# $FreeBSD: textproc/libmrss-php/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libmrss
 PORTVERSION=	0.19.2
