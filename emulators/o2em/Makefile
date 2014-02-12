@@ -1,5 +1,5 @@
 # Created by: Gunter Wambaugh <techgunter@yahoo.com>
-# $FreeBSD: emulators/o2em/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		o2em
 PORTVERSION=		1.17
