@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: www/py-django15/Makefile 334107 2013-11-17 17:35:13Z lwhsu $
+# $FreeBSD$
 
 PORTNAME=	django
 PORTVERSION=	1.5.5
