@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz
-# $FreeBSD: net-mgmt/nagios-check_hp_bladechassis/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	check_hp_bladechassis
 PORTVERSION=	1.0.1
