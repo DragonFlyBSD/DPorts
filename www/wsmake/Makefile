@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: www/wsmake/Makefile 334425 2013-11-20 15:13:26Z gahr $
+# $FreeBSD$
 
 PORTNAME=	wsmake
 PORTVERSION=	0.7.901
