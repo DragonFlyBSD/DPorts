@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/pecl-swish/Makefile 340828 2014-01-23 14:32:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	swish
 PORTVERSION=	0.5.0
