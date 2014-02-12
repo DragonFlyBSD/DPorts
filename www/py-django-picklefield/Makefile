@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: www/py-django-picklefield/Makefile 339546 2014-01-12 20:44:24Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	picklefield
 PORTVERSION=	0.3.1
