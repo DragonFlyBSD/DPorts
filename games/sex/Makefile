@@ -1,5 +1,5 @@
 # Created by: Nick Johnson <freebsd@spatula.net>
-# $FreeBSD: games/sex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sex
 PORTVERSION=	1.0
