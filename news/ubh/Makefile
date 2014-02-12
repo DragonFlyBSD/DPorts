@@ -1,5 +1,5 @@
 # Created by: John Holland <john@zoner.org>
-# $FreeBSD: news/ubh/Makefile 337667 2013-12-27 09:35:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ubh
 PORTVERSION=	2.5
