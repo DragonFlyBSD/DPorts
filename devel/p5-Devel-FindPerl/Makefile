@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-FindPerl/Makefile 334660 2013-11-23 11:28:55Z lth $
+# $FreeBSD$
 
 PORTNAME=	Devel-FindPerl
 PORTVERSION=	0.012
