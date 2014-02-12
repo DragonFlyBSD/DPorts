@@ -1,5 +1,5 @@
 # Created by: Krzysztof Kowalewski <pyzmen@kam.pl>
-# $FreeBSD: polish/sms2/Makefile 327761 2013-09-20 22:34:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sms
 PORTVERSION=	2.1.0
