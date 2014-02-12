@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/gnono/Makefile 333973 2013-11-16 02:56:36Z danilo $
+# $FreeBSD$
 
 PORTNAME=	gnono
 PORTVERSION=	1.9.1
