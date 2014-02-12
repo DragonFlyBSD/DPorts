@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/munin-node/files/munin-node.in 319487 2013-05-31 11:54:01Z crees $
+# $FreeBSD: head/sysutils/munin-node/files/munin-node.in 319487 2013-05-31 11:54:01Z crees $
 #
 # PROVIDE: munin-node
 # REQUIRE: DAEMON

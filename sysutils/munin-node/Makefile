@@ -1,5 +1,5 @@
 # Created by: Lupe Christoph <lupe@lupe-christoph.de>
-# $FreeBSD: sysutils/munin-node/Makefile 327814 2013-09-21 13:19:59Z flo $
+# $FreeBSD$
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
