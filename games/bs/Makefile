@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/bs/Makefile 335576 2013-12-03 15:44:07Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	bs
 PORTVERSION=	2.9
