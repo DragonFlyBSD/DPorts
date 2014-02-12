@@ -1,5 +1,5 @@
 # Created by: Michael C . Wu <keichii@iteration.net>
-# $FreeBSD: chinese/auto-tw-l10n/Makefile 329141 2013-10-03 06:39:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	auto-tw-l10n
 PORTVERSION=	1.14
