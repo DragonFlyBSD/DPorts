@@ -1,5 +1,5 @@
 
-$FreeBSD: lang/clang31/files/patch-tools_clang_lib_Sema_SemaDeclCXX.cpp 303039 2012-08-23 21:02:09Z jkim $
+$FreeBSD: head/lang/clang31/files/patch-tools_clang_lib_Sema_SemaDeclCXX.cpp 303039 2012-08-23 21:02:09Z jkim $
 
 --- tools/clang/lib/Sema/SemaDeclCXX.cpp.orig
 +++ tools/clang/lib/Sema/SemaDeclCXX.cpp
