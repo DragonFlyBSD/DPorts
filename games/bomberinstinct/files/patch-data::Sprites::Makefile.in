@@ -1,5 +1,5 @@
 
-$FreeBSD: games/bomberinstinct/files/patch-data::Sprites::Makefile.in 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/games/bomberinstinct/files/patch-data::Sprites::Makefile.in 340725 2014-01-22 17:40:44Z mat $
 
 --- data/Sprites/Makefile.in	2002/07/02 12:58:45	1.1
 +++ data/Sprites/Makefile.in	2002/07/02 13:05:49
