@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: sysutils/gai-leds/Makefile 335030 2013-11-27 16:18:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gai-leds
 PORTVERSION=	0.6
