@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: security/dropbear/Makefile 340879 2014-01-24 06:35:29Z ak $
+# $FreeBSD$
 
 PORTNAME=	dropbear
 PORTVERSION=	2013.62
