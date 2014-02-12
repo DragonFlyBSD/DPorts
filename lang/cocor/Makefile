@@ -1,5 +1,5 @@
 # Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-# $FreeBSD: lang/cocor/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	cocor
 PORTVERSION=	1.7
@@ -24,6 +24,9 @@ ALL_TARGET=	all1
 MAN1=		${PORTNAME}.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-patch:
