@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD: textproc/kmfl-varamozhi-malayalam/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kmfl-varamozhi-malayalam
 PORTVERSION=	1.1.1
