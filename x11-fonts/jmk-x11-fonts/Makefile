@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/jmk-x11-fonts/Makefile 339253 2014-01-09 15:18:54Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	jmk-x11-fonts
 PORTVERSION=	3.0
