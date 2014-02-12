@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: www/p5-MasonX-Profiler/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	MasonX-Profiler
 PORTVERSION=	0.06
