@@ -1,4 +1,4 @@
-# $FreeBSD: games/hlstatsx/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hlstatsx
 DISTVERSION=	1.20RC2
