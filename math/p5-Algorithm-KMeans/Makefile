@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Algorithm-KMeans/Makefile 338751 2014-01-05 12:07:20Z az $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-KMeans
 PORTVERSION=	1.40
