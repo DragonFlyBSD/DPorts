@@ -1,4 +1,4 @@
-# $FreeBSD: portuguese/php_doc-br/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 CATEGORIES=	portuguese lang
 PKGNAMEPREFIX=
