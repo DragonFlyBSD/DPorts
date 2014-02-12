@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: security/ranpwd/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ranpwd
 PORTVERSION=	1.2
