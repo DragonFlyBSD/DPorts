@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <koshy@india.hp.com>
-# $FreeBSD: graphics/xaos/Makefile 334203 2013-11-18 14:55:59Z makc $
+# $FreeBSD$
 
 PORTNAME=	xaos
 PORTVERSION=	3.6
