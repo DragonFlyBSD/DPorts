@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/libdkim/Makefile 342300 2014-02-02 14:33:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libdkim
 PORTVERSION=	1.0.21

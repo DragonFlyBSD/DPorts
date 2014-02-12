@@ -1,4 +1,4 @@
-# $FreeBSD: mail/libdkim/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 LIB = 	dkim
 SRCS=	dkim.cpp dns.cpp dkimbase.cpp dkimsign.cpp dkimverify.cpp
