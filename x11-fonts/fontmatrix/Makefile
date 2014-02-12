@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/fontmatrix/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	fontmatrix
 DISTVERSION=	0.4.2
