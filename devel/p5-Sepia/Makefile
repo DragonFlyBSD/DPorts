@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: devel/p5-Sepia/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Sepia
 PORTVERSION=	0.992
@@ -25,11 +25,8 @@ USE_PERL5=	configure
 USE_EMACS=	yes
 USE_GMAKE=	yes
 
-MAN3=	Sepia.3 Sepia::Xref.3
-MAN1=	sepl.1
 INFO=	sepia
 
 CONFIGURE_ARGS+=	--emacs ${EMACS_CMD} --lisp ${PREFIX}/${EMACS_SITE_LISPDIR}/sepia --info ${PREFIX}/${INFO_PATH}
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
