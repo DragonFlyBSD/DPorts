@@ -1,5 +1,5 @@
 # Created by: Josh Gilliam <josh@quick.net>
-# $FreeBSD: mail/mbx2mbox/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mbx2mbox
 PORTVERSION=	0.34
@@ -15,7 +15,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	mbx2mbox.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
