@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: x11/xdtm/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xdtm
 PORTVERSION=	2.5.8
