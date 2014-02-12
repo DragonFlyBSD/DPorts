@@ -1,5 +1,5 @@
 # Created by: Andrey Chernov <ache@FreeBSD.org>
-# $FreeBSD: www/sfnt2woff/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sfnt2woff
 PORTVERSION=	20091004
