@@ -1,5 +1,5 @@
 # Created by: Lutz Boehne <lboehne@damogran.de>
-# $FreeBSD: devel/libdisasm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libdisasm
 PORTVERSION=	0.23
