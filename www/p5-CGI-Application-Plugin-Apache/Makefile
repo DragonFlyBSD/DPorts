@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Apache/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-Apache
 PORTVERSION=	1.02
