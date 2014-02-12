@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-InDistDir/Makefile 338875 2014-01-06 13:26:14Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-InDistDir
 PORTVERSION=	1.112071
