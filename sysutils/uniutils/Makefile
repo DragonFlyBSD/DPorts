@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: sysutils/uniutils/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	uniutils
 PORTVERSION=	2.27
