@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/gemdropx/Makefile 337721 2013-12-27 12:22:58Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gemdropx
 PORTVERSION=	0.9
