@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>)
-# $FreeBSD: www/pear-Services_Facebook/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Services_Facebook
 PORTVERSION=	0.2.14
