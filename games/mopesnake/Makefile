@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/mopesnake/Makefile 336048 2013-12-10 06:33:45Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	mopesnake
 PORTVERSION=	0.5

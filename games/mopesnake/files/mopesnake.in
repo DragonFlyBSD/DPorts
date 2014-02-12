@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/mopesnake/files/mopesnake.in 336048 2013-12-10 06:33:45Z nemysis $
+# $FreeBSD: head/games/mopesnake/files/mopesnake.in 336048 2013-12-10 06:33:45Z nemysis $
 #
 
 cd "%%DATADIR%%"
