@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: misc/kcd/Makefile 339712 2014-01-14 20:23:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	kcd
 PORTVERSION=	7.15.0
