@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: astro/rmap/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rmap
 PORTVERSION=	1.2
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.reza.net/rmap/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generates images of the Earth centered at a particular location
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LIB_DEPENDS=	libgd.so:${PORTSDIR}/graphics/gd
 
