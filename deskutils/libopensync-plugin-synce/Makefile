@@ -1,11 +1,14 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-synce/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libopensync-plugin-synce
 CATEGORIES=	deskutils palm
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SynCE plugin for the OpenSync framework
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 RUN_DEPENDS=	sync-engine:${PORTSDIR}/palm/synce-sync-engine \
 		${LOCALBASE}/lib/opensync/plugins/python_module.so:${PORTSDIR}/deskutils/libopensync-plugin-python
