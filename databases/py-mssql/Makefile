@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: databases/py-mssql/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	mssql
 PORTVERSION=	1.0.2
