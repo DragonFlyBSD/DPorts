@@ -1,5 +1,5 @@
 # Created by: Brad Hendrickse <bradh@uunet.co.za>
-# $FreeBSD: net-mgmt/isic/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	isic
 PORTVERSION=	0.07
