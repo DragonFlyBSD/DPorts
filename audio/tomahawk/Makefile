@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: audio/tomahawk/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tomahawk
 PORTVERSION=	0.7.0
-#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	nivit@FreeBSD.org
