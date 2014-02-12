@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Discordian/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Date_Holidays_Discordian
 PORTVERSION=	0.1.1
