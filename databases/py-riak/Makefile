@@ -1,5 +1,5 @@
 # Created by: TJ Ninneman <tj@harperdog.com>
-# $FreeBSD: databases/py-riak/Makefile 339331 2014-01-10 08:47:02Z koobs $
+# $FreeBSD$
 
 PORTNAME=	riak
 PORTVERSION=	1.4.1
