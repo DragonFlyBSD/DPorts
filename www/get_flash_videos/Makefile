@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: www/get_flash_videos/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	get_flash_videos
 DISTVERSION=	1.24.${DISTFILE_DATE}
