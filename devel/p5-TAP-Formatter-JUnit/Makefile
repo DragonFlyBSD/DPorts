@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-TAP-Formatter-JUnit/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	TAP-Formatter-JUnit
 PORTVERSION=	0.09
@@ -22,10 +22,4 @@ TEST_DEPENDS=	p5-Test-Differences>=0.61:${PORTSDIR}/devel/p5-Test-Differences \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=	tap2junit.1
-MAN3=	TAP::Formatter::JUnit.3 \
-	TAP::Formatter::JUnit::Result.3 \
-	TAP::Formatter::JUnit::Session.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
