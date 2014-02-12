@@ -1,5 +1,5 @@
 # Created by: Alexander Wittig <alexander@wittig.name>
-# $FreeBSD: mail/squirrelmail-change_ldappass-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=		change_ldappass
 PORTVERSION=	2.2
