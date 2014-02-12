@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: japanese/sj3-server/files/sj3.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/japanese/sj3-server/files/sj3.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: sj3
