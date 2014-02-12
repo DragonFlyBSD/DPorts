@@ -1,5 +1,5 @@
 # Created by: Makoto Matsushita <matusita@FreeBSD.org>
-# $FreeBSD: irc/keitairc2/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=		keitairc
 PORTVERSION=		2.0
