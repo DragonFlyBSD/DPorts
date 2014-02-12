@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-POE-Component-RRDTool/Makefile 330515 2013-10-16 14:19:06Z mat $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-RRDTool
 PORTVERSION=	0.18
