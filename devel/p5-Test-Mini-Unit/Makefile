@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Test-Mini-Unit/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Mini-Unit
 PORTVERSION=	v1.0.3
