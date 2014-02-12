@@ -1,5 +1,5 @@
 # Created by: Shigeyuki Fukushima <shige@FreeBSD.org>
-# $FreeBSD: japanese/eblook/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	eblook
 PORTVERSION=	1.6.1
