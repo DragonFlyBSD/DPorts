@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@freebsd-fr.org>
-# $FreeBSD: astro/glunarclock/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD$
 #   $MCom: ports/astro/glunarclock/Makefile,v 1.12 2009/04/07 03:25:51 marcus Exp $
 
 PORTNAME=	glunarclock
