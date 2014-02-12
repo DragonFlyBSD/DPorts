@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: audio/funktrackergold/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	funktrackergold
 PORTVERSION=	1.5.2
@@ -24,6 +24,8 @@ MAKE_ARGS=	EXTRA_CFLAGS="${PTHREAD_CFLAGS}" \
 
 PORTDOCS=	INSTALL
 PLIST_FILES=	bin/funkgold
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
