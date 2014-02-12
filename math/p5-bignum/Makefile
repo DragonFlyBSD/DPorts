@@ -1,4 +1,4 @@
-# $FreeBSD: math/p5-bignum/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	bignum
 PORTVERSION=	0.32
