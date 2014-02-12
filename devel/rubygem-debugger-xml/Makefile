@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: devel/rubygem-debugger-xml/Makefile 334893 2013-11-25 19:59:02Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	debugger-xml
 PORTVERSION=	0.3.2
