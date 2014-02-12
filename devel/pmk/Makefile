@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: devel/pmk/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD$
 
 PORTNAME=	pmk
 PORTVERSION=	0.10.4
