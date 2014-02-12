@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/sdcv/Makefile 340306 2014-01-19 14:28:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sdcv
 PORTVERSION=	0.4.2
