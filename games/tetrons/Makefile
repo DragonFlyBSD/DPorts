@@ -1,5 +1,5 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: games/tetrons/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tetrons
 PORTVERSION=	1.10
