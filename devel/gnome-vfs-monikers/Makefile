@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: devel/gnome-vfs-monikers/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #    $MCom: ports/devel/gnome-vfs-monikers/Makefile,v 1.4 2006/07/18 11:37:57 ahze Exp $
 
 PORTNAME=	gnome-vfs-monikers
