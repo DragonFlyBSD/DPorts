@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: emulators/pcsxr/Makefile 335549 2013-12-03 08:34:29Z martymac $
+# $FreeBSD$
 
 PORTNAME=	pcsxr
 PORTVERSION=	1.9.94.r87113
