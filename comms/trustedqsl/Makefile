@@ -1,4 +1,4 @@
-# $FreeBSD: head/comms/trustedqsl/Makefile 342230 2014-02-02 02:16:37Z db $
+# $FreeBSD$
 
 PORTNAME=	trustedqsl
 PORTVERSION=	2.0
