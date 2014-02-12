@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/hgview/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD$
 
 PORTNAME=	hgview
 PORTVERSION=	1.6.2
@@ -28,6 +28,9 @@ PORTDOCS=	*
 MAN1=		hgview.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
