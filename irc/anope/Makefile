@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: irc/anope/Makefile 336805 2013-12-18 08:59:06Z dhn $
+# $FreeBSD$
 
 PORTNAME=	anope
 PORTVERSION=	1.8.8
