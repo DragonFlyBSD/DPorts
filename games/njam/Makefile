@@ -1,5 +1,5 @@
 # Created by: <janos.mohacsi@bsd.hu>
-# $FreeBSD: games/njam/Makefile 339599 2014-01-13 14:20:32Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	njam
 PORTVERSION=	1.25
