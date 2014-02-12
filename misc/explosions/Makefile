@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: head/misc/explosions/Makefile 342369 2014-02-02 22:20:34Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	explosions
 PORTVERSION=	0.2005.07.31
