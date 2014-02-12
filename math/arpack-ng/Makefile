@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: math/arpack-ng/Makefile 334433 2013-11-20 17:20:57Z bf $
+# $FreeBSD$
 
 PORTNAME=	arpack-ng
 PORTVERSION=	3.1.4
