@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-subatom/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	subatom
 PORTVERSION=	0.12
@@ -16,9 +16,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	modbuild
-PLIST_FILES=	bin/subatom
+PLIST_FILES=	bin/subatom man/man1/subatom.1.gz
 
-MAN1=		subatom.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
