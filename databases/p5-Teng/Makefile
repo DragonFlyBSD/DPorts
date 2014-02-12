@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Teng/Makefile 332344 2013-11-01 05:59:50Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Teng
 PORTVERSION=	0.20
