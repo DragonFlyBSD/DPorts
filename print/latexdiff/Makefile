@@ -1,5 +1,5 @@
 # Created by: Maxim Loginov <Zeliboba@mail.ru>
-# $FreeBSD: print/latexdiff/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	latexdiff
 PORTVERSION=	0.5
