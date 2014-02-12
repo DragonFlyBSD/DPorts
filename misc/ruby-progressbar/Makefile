@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: misc/ruby-progressbar/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	progressbar
 PORTVERSION=	0.9
