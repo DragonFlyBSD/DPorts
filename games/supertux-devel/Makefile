@@ -1,4 +1,4 @@
-# $FreeBSD: games/supertux-devel/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	supertux
 PORTVERSION=	0.3.4
