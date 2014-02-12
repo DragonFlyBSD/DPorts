@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: textproc/p5-XML-XBEL/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-XBEL
 PORTVERSION=	1.4
