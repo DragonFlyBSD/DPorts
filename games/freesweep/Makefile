@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/freesweep/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	freesweep
 PORTVERSION=	0.92
@@ -12,25 +12,22 @@ COMMENT=	Minesweeper-style game for text-mode terminals
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USE_GMAKE=	yes
+USES=			gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-prefsdir=${DATADIR} \
 		--with-scoresdir=${DATADIR} \
 		--disable-debug-log
 ALL_TARGET=	${PORTNAME}
 
-MAN6=		freesweep.6
 PORTDOCS=	CHANGES README
-PLIST_FILES=	bin/freesweep %%DATADIR%%/sweeprc %%DATADIR%%/sweeptimes
+PLIST_FILES=	bin/${PORTNAME} man/man6/${PORTNAME}.6.gz \
+				%%DATADIR%%/sweeprc %%DATADIR%%/sweeptimes
 PLIST_DIRS=	%%DATADIR%%
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
