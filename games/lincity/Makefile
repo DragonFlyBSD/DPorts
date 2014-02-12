@@ -1,5 +1,5 @@
 # Created by: Julian Assange
-# $FreeBSD: games/lincity/Makefile 332574 2013-11-03 01:50:12Z danilo $
+# $FreeBSD$
 
 PORTNAME=	lincity
 PORTVERSION=	1.13.1
