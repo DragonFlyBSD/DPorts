@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/py-sgrep/Makefile 341242 2014-01-26 16:40:14Z mva $
+# $FreeBSD$
 
 PORTNAME=	sgrep
 PORTVERSION=	1.1a
