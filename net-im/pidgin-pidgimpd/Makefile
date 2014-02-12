@@ -1,5 +1,5 @@
 # Created by: hrkfrd@googlemail.com
-# $FreeBSD: net-im/pidgin-pidgimpd/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pidgimpd
 PORTVERSION=	1.1.1
