@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: finance/p5-Business-MaxMind-CreditCardFraudDetection/Makefile 342152 2014-02-01 14:41:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Business-MaxMind-CreditCardFraudDetection
 PORTVERSION=	1.54
