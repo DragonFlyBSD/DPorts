@@ -1,5 +1,5 @@
 # Created by: Andrea Sozzi <as@g-cows.org>
-# $FreeBSD: www/g-cows/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	g-cows
 PORTVERSION=	1.12
