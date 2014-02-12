@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson
-# $FreeBSD: www/xpi-flashblock/Makefile 341203 2014-01-26 15:09:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	flashblock
 PORTVERSION=	1.5.17
