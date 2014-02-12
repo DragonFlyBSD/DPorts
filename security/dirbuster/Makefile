@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/dirbuster/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dirbuster
 PORTVERSION=	1.0r1
