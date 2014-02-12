@@ -1,5 +1,5 @@
 # Created by: Charlie & <root@meatwad.mouf.net>
-# $FreeBSD: devel/rubygem-bacon/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	bacon
 PORTVERSION=	1.2.0
