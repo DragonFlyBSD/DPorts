@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-CoreStack/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-CoreStack
 PORTVERSION=	1.3
