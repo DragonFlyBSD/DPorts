@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/udpxy/files/udpxy.in 304312 2012-09-15 09:38:26Z ak $
+# $FreeBSD: head/net/udpxy/files/udpxy.in 304312 2012-09-15 09:38:26Z ak $
 #
 
 # PROVIDE: udpxy
