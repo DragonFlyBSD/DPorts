@@ -1,4 +1,4 @@
-# $FreeBSD: www/twiki-EditTablePlugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	EditTablePlugin
 SVNREV=		17542
