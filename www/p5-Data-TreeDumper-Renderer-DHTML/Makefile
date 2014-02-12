@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: www/p5-Data-TreeDumper-Renderer-DHTML/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-TreeDumper-Renderer-DHTML
 PORTVERSION=	0.09
