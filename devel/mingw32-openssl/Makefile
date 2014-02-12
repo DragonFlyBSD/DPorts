@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/mingw32-openssl/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.0k
