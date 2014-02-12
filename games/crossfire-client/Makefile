@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: games/crossfire-client/Makefile 341422 2014-01-27 16:26:08Z decke $
+# $FreeBSD$
 
 PORTNAME=	crossfire-client
 PORTVERSION=	1.70.0
