@@ -1,5 +1,5 @@
 # Created by: Dmitry Frolov <frol@nov.net>
-# $FreeBSD: sysutils/ipmitool/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ipmitool
 PORTVERSION=	1.8.12
