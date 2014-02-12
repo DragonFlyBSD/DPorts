@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: databases/recutils/Makefile 339198 2014-01-09 03:01:23Z danfe $
+# $FreeBSD$
 
 PORTNAME=	recutils
 PORTVERSION=	1.6
