@@ -1,5 +1,5 @@
 # Created by: Winston Weinert <winstonw@lavabit.com>
-# $FreeBSD: x11-fonts/roboto-fonts-ttf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	roboto-fonts-ttf
 PORTVERSION=	20111129
