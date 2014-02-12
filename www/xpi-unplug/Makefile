@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-unplug/Makefile 341219 2014-01-26 15:14:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	unplug
 DISTVERSION=	2.054
