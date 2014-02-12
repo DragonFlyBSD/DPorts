@@ -1,5 +1,5 @@
 # Created by: Don Croyle <croyle@gelemna.org>
-# $FreeBSD: lang/emacs-lisp-intro/Makefile 342180 2014-02-01 16:03:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	emacs-lisp-intro
 PORTVERSION=	2.04
