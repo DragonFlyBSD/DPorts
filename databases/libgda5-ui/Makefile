@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: databases/libgda5-ui/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/trunk/databases/libgda5-ui/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTREVISION=	1
