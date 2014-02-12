@@ -1,5 +1,5 @@
 # Created by: Golyashov Sergei <svvord@mail.ru>
-# $FreeBSD: devel/kdevelop-kde4/Makefile 340104 2014-01-17 20:34:33Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdevelop
 DISTVERSION=	${KDEVELOP_VERSION}
