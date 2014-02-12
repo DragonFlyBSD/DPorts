@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: x11/florence/Makefile 331200 2013-10-21 22:00:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	florence
 PORTVERSION=	0.6.0
