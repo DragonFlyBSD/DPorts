@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/exabgp/files/exabgp.in 336900 2013-12-19 13:27:24Z zi $
+# $FreeBSD: head/net/exabgp/files/exabgp.in 336900 2013-12-19 13:27:24Z zi $
 #
 # PROVIDE: exabgp
 # REQUIRE: LOGIN

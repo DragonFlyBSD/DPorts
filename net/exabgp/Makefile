@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/exabgp/Makefile 336900 2013-12-19 13:27:24Z zi $
+# $FreeBSD$
 
 PORTNAME=	exabgp
 PORTVERSION=	3.2.18
@@ -29,6 +29,9 @@ GROUPS=		_bgpd
 MAN1=		${PORTNAME}.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-extract:
