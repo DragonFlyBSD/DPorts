@@ -1,4 +1,4 @@
-# $FreeBSD: misc/krecipes-kde4/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	krecipes
 DISTVERSION=	2.0-beta2
