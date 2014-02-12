@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: databases/pgagent/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pgagent
 PORTVERSION=	3.3.0
