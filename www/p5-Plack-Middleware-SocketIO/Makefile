@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-SocketIO/Makefile 335428 2013-12-01 18:39:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-SocketIO
 PORTVERSION=	0.00904
