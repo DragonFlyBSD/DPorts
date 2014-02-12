@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: textproc/gnugrep/Makefile 338463 2014-01-02 17:33:44Z johans $
+# $FreeBSD$
 
 PORTNAME=	grep
 PORTVERSION=	2.16
