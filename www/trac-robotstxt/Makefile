@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/trac-robotstxt/Makefile 341186 2014-01-26 14:32:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	robotxt
 PORTVERSION=	1.0.1
