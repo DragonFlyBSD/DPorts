@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: multimedia/kaffeine/Makefile 338429 2014-01-02 09:15:39Z arved $
+# $FreeBSD$
 
 PORTNAME=	kaffeine
 PORTVERSION=	1.2.2
