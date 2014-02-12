@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Append-TempFile/Makefile 342249 2014-02-02 08:11:05Z eadler $
+# $FreeBSD$
 
 PORTNAME=	File-Append-TempFile
 PORTVERSION=	0.05
