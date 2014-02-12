@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: archivers/dact/Makefile 338542 2014-01-03 14:42:07Z adamw $
+# $FreeBSD$
 
 PORTNAME=	dact
 PORTVERSION=	0.8.42
@@ -22,6 +22,8 @@ MAKE_ARGS=	TOBUILD="dact libdact.so dact.conf"
 
 MAN1=		dact.1
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 post-patch:
