@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Corona/Makefile 341705 2014-01-29 09:17:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Corona
 PORTVERSION=	0.1004
