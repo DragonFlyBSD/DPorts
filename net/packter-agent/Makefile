@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: net/packter-agent/Makefile 333769 2013-11-14 16:23:54Z swills $
+# $FreeBSD$
 
 PORTNAME=	packter-agent
 PORTVERSION=	2.5
