@@ -1,5 +1,5 @@
 # Created by: lyngbol@candid.dk
-# $FreeBSD: games/xpenguins/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xpenguins
 PORTVERSION=	2.2
