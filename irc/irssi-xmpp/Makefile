@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: irc/irssi-xmpp/Makefile 337727 2013-12-27 13:08:28Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	irssi-xmpp
 PORTVERSION=	0.52
