@@ -1,5 +1,5 @@
 # Created by: tobez@plab.ku.dk
-# $FreeBSD: www/mathopd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mathopd
 PORTVERSION=	1.5p8
