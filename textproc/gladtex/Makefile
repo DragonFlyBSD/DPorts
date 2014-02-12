@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: textproc/gladtex/Makefile 341453 2014-01-27 21:17:25Z mat $
+# $FreeBSD$
 
 PORTNAME=	gladtex
 PORTVERSION=	1.3
