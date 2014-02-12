@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: games/wmtictactoe/Makefile 333618 2013-11-12 20:38:47Z danilo $
+# $FreeBSD$
 
 PORTNAME=	wmtictactoe
 PORTVERSION=	1.1
