@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: www/openxmldir/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openxmldir
 PORTVERSION=	1.2
