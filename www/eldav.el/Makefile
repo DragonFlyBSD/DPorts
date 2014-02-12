@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-# $FreeBSD: www/eldav.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	eldav.el
 PORTVERSION=	0.8.1
@@ -10,6 +10,9 @@ DISTNAME=	eldav-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An interface to WebDAV servers for Emacs
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS=	nd:${PORTSDIR}/www/nd
 
