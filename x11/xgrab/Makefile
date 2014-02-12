@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: x11/xgrab/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xgrab
 PORTVERSION=	2.41
