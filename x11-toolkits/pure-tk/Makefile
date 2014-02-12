@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-toolkits/pure-tk/Makefile 339333 2014-01-10 08:50:56Z gahr $
+# $FreeBSD$
 
 PORTNAME=	pure-tk
 PORTVERSION=	0.4
@@ -32,6 +32,8 @@ NO_STAGE=	yes
 PORTDOCS=	README
 
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
