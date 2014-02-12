@@ -1,5 +1,5 @@
 # Created by: Alex Stangl <alex@stangl.us>
-# $FreeBSD: ports-mgmt/portupdate-scan/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	portupdate-scan
 PORTVERSION=	0.3
