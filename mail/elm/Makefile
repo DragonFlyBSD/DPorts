@@ -1,5 +1,5 @@
 # Created by: dhagan@cs.vt.edu
-# $FreeBSD: mail/elm/Makefile 341574 2014-01-28 14:18:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	elm
 PORTVERSION=	2.5.8
