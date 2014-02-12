@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: net-mgmt/nagios-check_cpu_usage/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nagios-check_cpu_usage
 PORTVERSION=	1.0
