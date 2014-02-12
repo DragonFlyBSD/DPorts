@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/ktp-approver/Makefile 338828 2014-01-05 23:05:13Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	ktp-approver
 PORTVERSION=	${KTP_VERSION}
