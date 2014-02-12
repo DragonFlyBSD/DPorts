@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz
-# $FreeBSD: net-mgmt/nagios-check_mysql_slave/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	check_mysql_slave
 PORTVERSION=	0.1.1
