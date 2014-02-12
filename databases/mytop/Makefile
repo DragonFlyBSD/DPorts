@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: databases/mytop/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	mytop
 PORTVERSION=	1.6

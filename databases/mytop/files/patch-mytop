@@ -1,5 +1,5 @@
 
-$FreeBSD: databases/mytop/files/patch-mytop 310838 2013-01-22 22:17:27Z matthew $
+$FreeBSD: head/databases/mytop/files/patch-mytop 310838 2013-01-22 22:17:27Z matthew $
 
 --- mytop.orig
 +++ mytop
