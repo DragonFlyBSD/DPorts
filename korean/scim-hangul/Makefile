@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/scim-hangul/Makefile 338972 2014-01-07 01:38:37Z jkim $
+# $FreeBSD$
 
 PORTNAME=	scim-hangul
 PORTVERSION=	0.4.0
