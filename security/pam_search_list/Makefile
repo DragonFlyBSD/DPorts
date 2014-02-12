@@ -1,5 +1,5 @@
 # Created by: Victor Popov
-# $FreeBSD: head/security/pam_search_list/Makefile 342030 2014-01-31 16:50:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pam_search_list
 PORTVERSION=	0.1
