@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: net/morebalance/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	morebalance
 PORTVERSION=	0.4
@@ -18,7 +18,8 @@ CFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
 MAKE_ARGS+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 USES=		gettext
 
-LDFLAGS+=	-L${LOCALBASE}/lib -lpcre -lggz -lgnutls -lintl ${PTHREAD_LIBS}
+LDFLAGS+=	-lz ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -lpcre -lggz -lgnutls -lintl
 
 MAN1=		morebalance.1
 MAN5=		morebalance.conf.5
