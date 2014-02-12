@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@FreeBSD.org>
-# $FreeBSD: games/warmux/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	warmux
 DISTVERSION=	11.04.1
