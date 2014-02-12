@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-classy-prelude-conduit/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	classy-prelude-conduit
 PORTVERSION=	0.5.3
