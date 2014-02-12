@@ -1,5 +1,5 @@
 # Created by: Ask Bjoern Hansen <ask@valueclick.com>
-# $FreeBSD: www/http_load/Makefile 341687 2014-01-29 07:57:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	http_load
 PORTVERSION=	20060312
