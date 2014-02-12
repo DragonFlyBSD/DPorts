@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-ADS/Makefile 328608 2013-09-28 17:12:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-ADS
 PORTVERSION=	1.25.1
