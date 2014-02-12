@@ -1,4 +1,4 @@
-# $FreeBSD: print/rubygem-prawn-js/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	prawn-js
 PORTVERSION=	0.7.1
