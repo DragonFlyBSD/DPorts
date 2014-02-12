@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-MooseColumns/Makefile 336507 2013-12-15 08:55:51Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-MooseColumns
 PORTVERSION=	0.22
