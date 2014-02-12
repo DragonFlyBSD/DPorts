@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-CheckDeps/Makefile 330060 2013-10-11 07:31:44Z culot $
+# $FreeBSD$
 
 PORTNAME=	Test-CheckDeps
 PORTVERSION=	0.010
