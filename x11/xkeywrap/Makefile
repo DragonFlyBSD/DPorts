@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
-# $FreeBSD: x11/xkeywrap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xkeywrap
 PORTVERSION=	1.1
