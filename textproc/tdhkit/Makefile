@@ -1,5 +1,5 @@
 # Created by: corky1951@comcast.net
-# $FreeBSD: textproc/tdhkit/Makefile 337059 2013-12-20 18:21:04Z pawel $
+# $FreeBSD$
 
 PORTNAME=	tdhkit
 PORTVERSION=	1.0
