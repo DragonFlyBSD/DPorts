@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/sdl_lopan/Makefile 337402 2013-12-25 08:20:15Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sdl_lopan
 PORTVERSION=	10
