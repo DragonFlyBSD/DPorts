@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/bombz/Makefile 337438 2013-12-25 18:38:20Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	bombz
 PORTVERSION=	0.2
