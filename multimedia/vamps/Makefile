@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: multimedia/vamps/Makefile 330904 2013-10-19 16:23:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vamps
 PORTVERSION=	0.99.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	SF/${PORTNAME}/Vamps/${PORTVERSION}
 
