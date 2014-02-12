@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-FurlX-Coro/Makefile 341703 2014-01-29 09:17:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	FurlX-Coro
 PORTVERSION=	1.02
