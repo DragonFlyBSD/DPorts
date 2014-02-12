@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: devel/arm-elf-binutils/Makefile 335677 2013-12-05 18:04:43Z danilo $
+# $FreeBSD$
 
 PORTNAME=	binutils
 PORTVERSION=	2.24
