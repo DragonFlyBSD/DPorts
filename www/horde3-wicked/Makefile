@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: www/horde3-wicked/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wicked
 DISTVERSIONPREFIX?=
@@ -11,6 +11,9 @@ MASTER_SITES?=	LOCAL/beech \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Wiki module for Horde
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_HORDE=	base pkg-message
 USES=		gettext
