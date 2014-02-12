@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/3dc/Makefile 331961 2013-10-29 15:30:11Z danilo $
+# $FreeBSD$
 
 PORTNAME=	3dc
 PORTVERSION=	0.8.1
