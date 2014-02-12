@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <henrik@brixandersen.dk>
-# $FreeBSD: www/ikiwiki/Makefile 339632 2014-01-13 20:51:18Z brix $
+# $FreeBSD$
 
 PORTNAME=	ikiwiki
 PORTVERSION=	3.20140102
