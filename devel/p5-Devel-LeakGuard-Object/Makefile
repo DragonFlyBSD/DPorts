@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: devel/p5-Devel-LeakGuard-Object/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Devel-LeakGuard-Object
 PORTVERSION=	0.06
@@ -18,8 +18,4 @@ TEST_DEPENDS=	p5-latest>0:${PORTSDIR}/devel/p5-latest
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Devel::LeakGuard::Object.3 \
-		Devel::LeakGuard::Object::State.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
