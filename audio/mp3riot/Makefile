@@ -1,5 +1,5 @@
 # Created by: Francisco Gomez <francisco@gomezmarin.com>
-# $FreeBSD: audio/mp3riot/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD$
 
 PORTNAME=	mp3riot
 PORTVERSION=	1.3
