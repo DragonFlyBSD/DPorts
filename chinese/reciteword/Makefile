@@ -1,5 +1,5 @@
 # Created by: hamigua <hamigua@cuc.cn>
-# $FreeBSD: chinese/reciteword/Makefile 340480 2014-01-20 21:17:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	reciteword
 PORTVERSION=	0.8.5
