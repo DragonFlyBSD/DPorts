@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/tai64nfrac/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tai64nfrac
 PORTVERSION=	1.4
