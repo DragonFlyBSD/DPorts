@@ -1,5 +1,5 @@
 # Created by: oyvindmo@initio.no
-# $FreeBSD: audio/ripit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ripit
 PORTVERSION=	3.9.0
@@ -28,6 +28,8 @@ USE_PERL5=	run
 USE_BZIP2=	yes
 SHEBANG_FILES=	ripit.pl
 perl_OLD_CMD=	/usr/bin/env perl
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
