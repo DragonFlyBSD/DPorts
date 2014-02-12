@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/osynctool/Makefile 328419 2013-09-26 21:55:12Z danilo $
+# $FreeBSD$
 
 PORTNAME=	osynctool
 PORTVERSION=	0.39
