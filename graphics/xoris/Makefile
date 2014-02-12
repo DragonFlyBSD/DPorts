@@ -1,5 +1,5 @@
 # Created by: Alexander Gromnitsky
-# $FreeBSD: graphics/xoris/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xoris
 PORTVERSION=	0.1e
@@ -12,6 +12,8 @@ COMMENT=	X11 pixel color grabber
 
 USES=		imake
 USE_XORG=	x11
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
