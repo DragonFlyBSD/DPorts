@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-base/Makefile 332439 2013-11-02 01:51:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	base
 PORTVERSION=	2.18
