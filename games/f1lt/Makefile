@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: games/f1lt/Makefile 334685 2013-11-23 16:56:54Z makc $
+# $FreeBSD$
 
 PORTNAME=	f1lt
 PORTVERSION=	2.1.1
