@@ -1,5 +1,5 @@
 # Created by: Mike Krutov <neko@takino.org>
-# $FreeBSD: graphics/zathura-pdf-poppler/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	zathura-pdf-poppler
 PORTVERSION=	0.2.4
