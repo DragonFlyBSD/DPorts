@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Dir-Project/Makefile 333838 2013-11-15 10:13:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Dir-Project
 PORTVERSION=	3.024
