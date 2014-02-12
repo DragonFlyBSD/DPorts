@@ -1,5 +1,5 @@
 # Created by: Jason Burgess <dev@fenux.net>
-# $FreeBSD: textproc/p5-Text-Chomp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Chomp
 PORTVERSION=	0.02
