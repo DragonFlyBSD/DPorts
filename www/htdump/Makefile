@@ -1,5 +1,5 @@
 # Created by: Maxime Henrion (mux@FreeBSD.org)
-# $FreeBSD: www/htdump/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	htdump
 PORTVERSION=	0.9y
