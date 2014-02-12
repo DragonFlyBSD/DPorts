@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: astro/p5-Astro-MoonPhase/Makefile 328613 2013-09-28 17:13:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-MoonPhase
 PORTVERSION=	0.60
