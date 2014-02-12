@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: graphics/py-gvgen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gvgen
 PORTVERSION=	0.9
