@@ -1,5 +1,5 @@
 # Created by: James Raftery <james@now.ie>
-# $FreeBSD: mail/p5-Net-QMTP/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-QMTP
 PORTVERSION=	0.06
