@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: converters/gbsdconv/Makefile 327834 2013-09-21 15:42:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gbsdconv
 PORTVERSION=	11.1
