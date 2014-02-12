@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: sysutils/gkleds2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gkleds2
 PORTVERSION=	0.8.2
