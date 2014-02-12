@@ -1,5 +1,5 @@
 # Created by: antoine@FreeBSD.org
-# $FreeBSD: security/rifiuti2/Makefile 337217 2013-12-22 20:35:21Z antoine $
+# $FreeBSD$
 
 PORTNAME=	rifiuti2
 DISTVERSION=	0.5.1
