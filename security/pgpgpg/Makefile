@@ -1,5 +1,5 @@
 # Created by: Matt Behrens <matt@zigg.com>
-# $FreeBSD: security/pgpgpg/Makefile 342190 2014-02-01 17:04:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pgpgpg
 PORTVERSION=	0.13
