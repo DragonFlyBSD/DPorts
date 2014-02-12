@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooseX-Types-ISO8601/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-ISO8601
 PORTVERSION=	0.14
