@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/dcd/Makefile 341820 2014-01-30 09:07:53Z gahr $
+# $FreeBSD$
 
 PORTNAME=	dcd
 PORTVERSION=	0.99.2
