@@ -1,5 +1,5 @@
 # Created by: David Magda <dmagda+howl@ee.ryerson.ca>
-# $FreeBSD: net/howl/Makefile 341911 2014-01-31 05:24:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	howl
 PORTVERSION=	1.0.0

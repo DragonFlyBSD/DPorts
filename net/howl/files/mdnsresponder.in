@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/howl/files/mdnsresponder.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/howl/files/mdnsresponder.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: mdnsresponder
 # REQUIRE: DAEMON
