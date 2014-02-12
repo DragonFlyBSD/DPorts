@@ -1,4 +1,4 @@
-# $FreeBSD: www/surfraw/Makefile 336833 2013-12-18 14:13:11Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	surfraw
 PORTVERSION=	2.2.9
