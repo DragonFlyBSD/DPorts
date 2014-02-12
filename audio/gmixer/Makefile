@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/gmixer/Makefile 341818 2014-01-30 09:02:46Z gahr $
+# $FreeBSD$
 
 PORTNAME=	gmixer
 PORTVERSION=	0.98c
