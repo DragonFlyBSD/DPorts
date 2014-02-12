@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-DateTime-Format-Japanese/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-Japanese
 PORTVERSION=	0.04000
@@ -20,11 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		DateTime::Format::Japanese.3 \
-		DateTime::Format::Japanese::Common.3 \
-		DateTime::Format::Japanese::Traditional.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
