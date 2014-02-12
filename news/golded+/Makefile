@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/golded+/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	golded+
 PORTVERSION=	1.1.5.a${SNAPDATE}
