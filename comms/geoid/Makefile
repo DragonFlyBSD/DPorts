@@ -1,4 +1,4 @@
-# $FreeBSD: comms/geoid/Makefile 338171 2013-12-30 21:12:16Z db $
+# $FreeBSD$
 
 PORTNAME=	geoid
 PORTVERSION=	1.0
