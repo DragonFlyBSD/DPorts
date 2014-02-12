@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/cretan-hubris/Makefile 335909 2013-12-08 16:36:00Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	cretan-hubris
 PORTVERSION=	0.2
