@@ -1,5 +1,5 @@
 # Created by: sergey@migsoft.com.ua
-# $FreeBSD: databases/mysql-connector-odbc/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mysql-connector-odbc
 PORTVERSION=	5.1.9
