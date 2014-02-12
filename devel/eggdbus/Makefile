@@ -1,5 +1,5 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
-# $FreeBSD: devel/eggdbus/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/eggdbus/Makefile,v 1.3 2009/11/24 01:46:27 marcus Exp $
 
 PORTNAME=	eggdbus
