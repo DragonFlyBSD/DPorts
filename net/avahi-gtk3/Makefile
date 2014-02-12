@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net/avahi-gtk3/Makefile 336457 2013-12-14 16:25:21Z kwm $
+# $FreeBSD$
 
 PORTREVISION=	1
 CATEGORIES=	net
