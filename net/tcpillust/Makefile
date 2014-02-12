@@ -1,5 +1,5 @@
 # Created by: nishida@sfc.wide.ad.jp
-# $FreeBSD: net/tcpillust/Makefile 339688 2014-01-14 14:22:55Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tcpillust
 PORTVERSION=	2.01
