@@ -1,5 +1,5 @@
 # Created by: Marcin Gondek <drixter@e-utp.net>
-# $FreeBSD: dns/rbllookup/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rbllookup
 PORTVERSION=	0.0.1.1
