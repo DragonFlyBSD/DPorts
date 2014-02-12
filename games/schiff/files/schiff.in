@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/schiff/files/schiff.in 335922 2013-12-08 19:04:54Z nemysis $
+# $FreeBSD: head/games/schiff/files/schiff.in 335922 2013-12-08 19:04:54Z nemysis $
 #
 
 cd "%%DATADIR%%"
