@@ -1,5 +1,5 @@
 # Created by: Paul Chvostek <paul+ports@it.ca>
-# $FreeBSD: textproc/xmldiff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xmldiff
 PORTVERSION=	0.01
@@ -21,12 +21,11 @@ SHEBANG_FILES=	xmldiff.pl
 
 PLIST_FILES=	bin/xmldiff
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} -f ${_DISTDIR}/${_DISTFILES} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/xmldiff.pl ${PREFIX}/bin/xmldiff
+	${INSTALL_SCRIPT} ${WRKSRC}/xmldiff.pl ${STAGEDIR}${PREFIX}/bin/xmldiff
 
 .include <bsd.port.mk>
