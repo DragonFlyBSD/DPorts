@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD: net/tcptrace/Makefile 342044 2014-01-31 17:11:32Z antoine $
+# $FreeBSD$
 
 PORTNAME=	tcptrace
 PORTVERSION=	6.6.7
