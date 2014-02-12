@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: www/extjs/Makefile 328978 2013-10-01 18:04:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	extjs
 PORTVERSION=	4.2.2
