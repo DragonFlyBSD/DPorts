@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/diffuse/Makefile 330307 2013-10-14 12:00:22Z wg $
+# $FreeBSD$
 
 PORTNAME=	diffuse
 PORTVERSION=	0.4.7
