@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: devel/rsvndump/Makefile 338389 2014-01-01 19:39:41Z danilo $
+# $FreeBSD$
 
 PORTNAME=	rsvndump
 PORTVERSION=	0.6
