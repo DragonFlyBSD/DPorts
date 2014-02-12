@@ -1,5 +1,5 @@
 # Created by: Eric Blood <eblood@cs.unr.edu>
-# $FreeBSD: x11/xautolock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xautolock
 PORTVERSION=	2.2
