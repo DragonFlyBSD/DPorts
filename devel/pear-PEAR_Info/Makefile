@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: devel/pear-PEAR_Info/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	PEAR_Info
 PORTVERSION=	1.9.2
