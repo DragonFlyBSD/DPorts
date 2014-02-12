@@ -1,5 +1,5 @@
 # Created by: Peter Wemm <peter@netplex.com.au>
-# $FreeBSD: www/transproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	transproxy
 PORTVERSION=	1.6
