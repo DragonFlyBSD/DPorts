@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/pam_ssh_agent_auth/Makefile 332971 2013-11-06 12:16:26Z mat $
+# $FreeBSD$
 
 PORTNAME=	pam_ssh_agent_auth
 PORTVERSION=	0.9.5
