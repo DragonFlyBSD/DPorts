@@ -1,5 +1,5 @@
 # Created by: Jamie Heckford <jamie@blackhole.net>
-# $FreeBSD: audio/cd2mp3/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cd2mp3
 PORTVERSION=	0.82
