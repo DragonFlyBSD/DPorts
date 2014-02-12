@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: games/py-mnemosyne/Makefile 337752 2013-12-27 17:23:11Z wg $
+# $FreeBSD$
 
 PORTNAME=	mnemosyne
 PORTVERSION=	2.2.1
