@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-toolkits/rep-gtk2/Makefile 337816 2013-12-27 22:16:08Z antoine $
+# $FreeBSD$
 
 PORTNAME=	rep-gtk2
 PORTVERSION=	0.90.8.1
