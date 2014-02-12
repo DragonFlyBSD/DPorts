@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: net/p5-Net-DHCPClient/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-DHCPClient
 PORTVERSION=	1.0
