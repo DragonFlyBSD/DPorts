@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/kudu/Makefile 330579 2013-10-17 01:00:09Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	kudu
 PORTVERSION=	0.1.2
