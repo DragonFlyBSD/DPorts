@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-CGI-Application-Plugin-DBH/Makefile 341723 2014-01-29 12:22:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-DBH
 PORTVERSION=	4.01
