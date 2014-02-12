@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/splatd/files/splatd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/splatd/files/splatd.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: splatd 
