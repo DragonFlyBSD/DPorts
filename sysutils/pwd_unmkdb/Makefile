@@ -1,5 +1,5 @@
 # Created by: Matthew Fuller <fullermd@over-yonder.net>
-# $FreeBSD: sysutils/pwd_unmkdb/Makefile 339918 2014-01-16 15:07:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pwd_unmkdb
 PORTVERSION=	1.3.1
