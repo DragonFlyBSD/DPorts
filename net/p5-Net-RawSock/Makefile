@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-RawSock/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Net-RawSock
 PORTVERSION=	1.0
@@ -12,21 +12,23 @@ COMMENT=	Net::RawSock provides a base function to send raw IP packets from Perl
 USES=		perl5
 USE_PERL5=	configure patch
 
-MAN3=		Net::RawSock.3
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+PORTDOCS=	README demo.pl
+
+.include <bsd.port.options.mk>
+
 post-patch:
 	${PERL} -pi -e 's/^our\s+([\$$\@\%]\w+)/use vars qw($$1);$$1/;' \
 		-e '$$_="" if /use warnings/;' \
 		${WRKSRC}/RawSock.pm
 
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for f in README demo.pl
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
+	${STRIP_CMD} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto/Net/RawSock/RawSock.so
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+.for f in ${PORTDOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
