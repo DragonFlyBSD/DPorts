@@ -1,4 +1,4 @@
-# $FreeBSD: games/simutrans/Makefile 331672 2013-10-26 10:22:52Z tijl $
+# $FreeBSD$
 
 PORTNAME=	simutrans
 DISTVERSION=	112-3
