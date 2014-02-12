@@ -1,5 +1,5 @@
 # Created by: Chadwick Sorrell chad@wickdev.com
-# $FreeBSD: www/awffull/Makefile 341693 2014-01-29 07:59:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	awffull
 PORTVERSION=	3.10.2
