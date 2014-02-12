@@ -1,5 +1,5 @@
 # Created by: rea@FreeBSD.org
-# $FreeBSD: mail/mu/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mu
 PORTVERSION=	0.9.9
