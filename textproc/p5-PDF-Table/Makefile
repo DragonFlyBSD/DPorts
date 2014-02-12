@@ -1,5 +1,5 @@
 # Created by: scheidell@secnap.net
-# $FreeBSD: textproc/p5-PDF-Table/Makefile 329183 2013-10-03 13:27:52Z danilo $
+# $FreeBSD$
 
 PORTNAME=	PDF-Table
 DISTVERSION=	0.9.6_h3
