@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@pompo.net>)
-# $FreeBSD: deskutils/horde3-mnemo/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mnemo
 PORTVERSION=	2.2.5
