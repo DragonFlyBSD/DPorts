@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: irc/irssi-scripts/Makefile 333242 2013-11-08 15:51:47Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	irssi-scripts
 PORTVERSION=	20131030
