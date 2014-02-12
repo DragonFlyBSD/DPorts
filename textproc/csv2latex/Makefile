@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/csv2latex/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	csv2latex
 PORTVERSION=	0.18
