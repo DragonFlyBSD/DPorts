@@ -1,5 +1,5 @@
 # Created by: netch@netch.kiev.ua
-# $FreeBSD: net/freeradius-client/Makefile 341941 2014-01-31 08:44:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	freeradius-client
 PORTVERSION=	1.1.6
