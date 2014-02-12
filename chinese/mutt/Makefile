@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: chinese/mutt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTREVISION=	3
 CATEGORIES=	chinese
