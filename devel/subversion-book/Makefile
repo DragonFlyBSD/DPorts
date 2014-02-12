@@ -1,4 +1,4 @@
-# $FreeBSD: devel/subversion-book/Makefile 332915 2013-11-05 22:02:04Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	subversion-book
 DISTVERSION=	4515
