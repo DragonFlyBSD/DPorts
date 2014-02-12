@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/etcd/Makefile 339366 2014-01-10 16:28:07Z gahr $
+# $FreeBSD$
 
 PORTNAME=	etcd
 PORTVERSION=	1.0.1
