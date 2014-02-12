@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: security/ccrypt/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ccrypt
 PORTVERSION=	1.10
@@ -12,6 +12,9 @@ COMMENT=	Command-line utility for encrypting and decrypting files and streams
 
 USES=		gmake
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
