@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/py3-cairo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #	$MCom: ports/graphics/py-cairo/Makefile,v 1.28 2010/11/15 14:12:13 kwm Exp $
 
 PORTNAME=	cairo
