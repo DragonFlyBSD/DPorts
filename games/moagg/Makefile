@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/moagg/Makefile 339015 2014-01-07 17:46:08Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	moagg
 PORTVERSION=	1.95b
