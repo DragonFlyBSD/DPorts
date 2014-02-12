@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-AnyEvent-HTTPD/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Handler-AnyEvent-HTTPD
 PORTVERSION=	0.03
