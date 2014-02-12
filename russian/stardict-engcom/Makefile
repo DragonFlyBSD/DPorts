@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: russian/stardict-engcom/Makefile 333307 2013-11-09 16:00:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-engcom
 PORTVERSION=	2.4.2
