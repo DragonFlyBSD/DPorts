@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: net/jags/Makefile 339078 2014-01-08 09:19:59Z gahr $
+# $FreeBSD$
 
 PORTNAME=	jags
 PORTVERSION=	0.22.1
