@@ -1,5 +1,5 @@
 # Created by: Nick Barkas <snb@threerings.net>
-# $FreeBSD: sysutils/farbot/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	farbot
 PORTVERSION=	1.0.b2
