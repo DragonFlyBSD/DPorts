@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: net/tcpsplit/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tcpsplit
 PORTVERSION=	0.2
@@ -17,6 +17,8 @@ PORTDOCS=	README
 NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -E '/^(CC|CFLAGS|INC|LD)/d' ${WRKSRC}/Makefile
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
