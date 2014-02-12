@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: japanese/jacode.pl/Makefile 335435 2013-12-01 19:50:25Z antoine $
+# $FreeBSD$
 
 PORTNAME=	jacode.pl
 PORTVERSION=	2.13.4.10
