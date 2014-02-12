@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@f2o.org>
-# $FreeBSD: mail/p5-WWW-Hotmail/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Hotmail
 PORTVERSION=	0.10
