@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/simsu/Makefile 335171 2013-11-29 12:41:59Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	simsu
 PORTVERSION=	1.2.3
@@ -21,9 +21,20 @@ INSTALLS_ICONS=	yes
 
 PORTDOCS=	CREDITS ChangeLog
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS NLS
+OPTIONS_SUB=	yes
+
+.include <bsd.port.options.mk>
+
+post-patch:
+.if ! ${PORT_OPTIONS:MNLS}
+	@${REINPLACE_CMD} -i '' '/qm.files/,/qm.path/s/^/#/' \
+		${WRKSRC}/${PORTNAME}.pro
+.endif
 
 post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
 	${LN} -sf ${PREFIX}/share/icons/hicolor/48x48/apps/${PORTNAME}.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/
 
