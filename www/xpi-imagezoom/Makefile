@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: www/xpi-imagezoom/Makefile 341207 2014-01-26 15:10:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	imagezoom
 PORTVERSION=	0.3.1
