@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: head/www/trac-ccselector/Makefile 343330 2014-02-08 13:54:59Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ccselector
 PORTVERSION=	0.0.2.4001
