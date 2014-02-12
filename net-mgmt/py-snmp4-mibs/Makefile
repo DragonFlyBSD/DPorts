@@ -1,8 +1,9 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: net-mgmt/py-snmp4-mibs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	snmp4-mibs
 PORTVERSION=	0.1.4
+PORTREVISION=	1
 CATEGORIES=	net-mgmt python
 MASTER_SITES=	CHEESESHOP \
 		SF/pysnmp/pysnmp-mibs/${PORTVERSION}
@@ -12,30 +13,23 @@ DISTNAME=	pysnmp-mibs-${PORTVERSION}
 MAINTAINER=	mhjacks@swbell.net
 COMMENT=	Additional python MIB files for pysnmp4 and friends
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}snmp4>=4.2.3:${PORTSDIR}/net-mgmt/py-snmp4
 
-# Python3 ready
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	pysnmp-mibs
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-PLIST_FILES+=	bin/rebuild-pysnmp-mibs \
-		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 
-DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
+PORTDOCS=	CHANGES README
 
-PORTDOCS=	CHANGES \
-		README
+post-patch:
+	${REINPLACE_CMD} -e 's,/bin/bash,/bin/sh,' ${WRKSRC}/tools/rebuild-pysnmp-mibs
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-.for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-.endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
