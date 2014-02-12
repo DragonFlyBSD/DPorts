@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Enurl/Makefile 338028 2013-12-29 17:08:28Z crees $
+# $FreeBSD$
 
 PORTNAME=	CGI-Enurl
 PORTVERSION=	1.07
