@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/wmminichess/Makefile 333616 2013-11-12 20:32:10Z danilo $
+# $FreeBSD$
 
 PORTNAME=	wmminichess
 PORTVERSION=	0.8
@@ -10,6 +10,9 @@ DISTNAME=	miniCHESS-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window Maker chess dockapp game
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LICENSE=	GPLv2 # (or later)
 
