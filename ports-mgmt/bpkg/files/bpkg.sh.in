@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports-mgmt/bpkg/files/bpkg.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/ports-mgmt/bpkg/files/bpkg.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 #  Copyright (c) 2007-2012 Andy Kosela <akosela@andykosela.com>
 #  All rights reserved.

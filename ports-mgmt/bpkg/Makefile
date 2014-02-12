@@ -1,5 +1,5 @@
 # Created by: Andy Kosela <akosela@andykosela.com>
-# $FreeBSD: ports-mgmt/bpkg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bpkg
 PORTVERSION=	2.1.7
