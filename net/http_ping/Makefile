@@ -1,5 +1,5 @@
 # Created by: Dima Dorfman <dd@FreeBSD.org>
-# $FreeBSD: net/http_ping/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	http_ping
 PORTVERSION=	20050629
