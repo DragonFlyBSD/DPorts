@@ -1,4 +1,4 @@
-# $FreeBSD: misc/lingoteach/Makefile 335372 2013-12-01 10:33:35Z mva $
+# $FreeBSD$
 
 PORTNAME=	lingoteach
 PORTVERSION=	0.3.9
