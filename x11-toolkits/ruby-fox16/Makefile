@@ -1,5 +1,5 @@
 # Created by: Luiz Eduardo Roncato Cordeiro <lercordeiro@gmail.com>
-# $FreeBSD: x11-toolkits/ruby-fox16/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fox
 PORTVERSION=	1.6.19
