@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-WWW-HatenaStar/Makefile 329364 2013-10-04 19:26:04Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-HatenaStar
 PORTVERSION=	0.04
