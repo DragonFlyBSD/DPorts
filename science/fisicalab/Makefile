@@ -1,4 +1,4 @@
-# $FreeBSD: science/fisicalab/Makefile 339559 2014-01-12 22:54:58Z theraven $
+# $FreeBSD$
 
 PORTNAME=	fisicalab
 PORTVERSION=	0.3.3
