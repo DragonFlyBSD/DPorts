@@ -1,5 +1,5 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD: audio/midipp/Makefile 339419 2014-01-11 11:05:34Z kwm $
+# $FreeBSD$
 
 PORTNAME=	midipp
 PORTVERSION=	1.2.5
