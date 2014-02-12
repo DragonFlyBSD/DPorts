@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-memoryprofiler/Makefile 332831 2013-11-05 11:20:30Z wg $
+# $FreeBSD$
 
 PORTNAME=	memoryprofiler
 PORTVERSION=	0.30
