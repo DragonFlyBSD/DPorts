@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: www/p5-URI-Sequin/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	URI-Sequin
 PORTVERSION=	1.2
@@ -13,15 +13,10 @@ COMMENT=	Extract information from the URLs of Search-Engines
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
 
-MAN3=		URI::Sequin.3
-
-.ifndef (NOPORTDOCS)
 post-install:
-	@${MKDIR} ${PREFIX}/${SITE_PERL_REL}/URI/Sequin/examples
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/URI/Sequin/examples
 	@${INSTALL_DATA} ${WRKSRC}/example.pl ${WRKSRC}/ref?.log \
-		${PREFIX}/${SITE_PERL_REL}/URI/Sequin/examples
-.endif
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/URI/Sequin/examples
 
 .include <bsd.port.mk>
