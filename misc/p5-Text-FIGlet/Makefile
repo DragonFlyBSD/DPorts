@@ -1,5 +1,5 @@
 # Created by: Daniel B. Hemmerich <dan@spot.org>
-# $FreeBSD: misc/p5-Text-FIGlet/Makefile 328845 2013-09-30 18:44:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Text-FIGlet
 PORTVERSION=	2.19.3
