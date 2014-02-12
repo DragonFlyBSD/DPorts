@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/odt2txt/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	odt2txt
 PORTVERSION=	0.4
