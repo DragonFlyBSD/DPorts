@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/flare-game/Makefile 336034 2013-12-09 23:48:14Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	flare
 PORTVERSION=	0.19
