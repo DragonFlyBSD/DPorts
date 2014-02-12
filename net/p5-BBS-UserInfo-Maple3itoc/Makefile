@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-BBS-UserInfo-Maple3itoc/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	BBS-UserInfo-Maple3itoc
 PORTVERSION=	0.01
