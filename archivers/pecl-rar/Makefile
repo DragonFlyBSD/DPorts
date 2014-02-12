@@ -1,5 +1,5 @@
 # Created by: Chin-San Huang <chinsan.tw@gmail.com>
-# $FreeBSD: archivers/pecl-rar/Makefile 335816 2013-12-07 09:01:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	rar
 PORTVERSION=	3.0.2
