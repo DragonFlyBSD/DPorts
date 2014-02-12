@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <martin.dieringer@gmx.de>
-# $FreeBSD: math/clipper/Makefile 332134 2013-10-30 15:52:49Z danilo $
+# $FreeBSD$
 
 PORTNAME=	clipperlib
 PORTVERSION=	6.0.0
