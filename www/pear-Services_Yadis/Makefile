@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: www/pear-Services_Yadis/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Services_Yadis
 PORTVERSION=	0.5.1
