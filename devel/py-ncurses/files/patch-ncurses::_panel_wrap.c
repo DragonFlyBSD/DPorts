@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/py-ncurses/files/patch-ncurses::_panel_wrap.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/py-ncurses/files/patch-ncurses::_panel_wrap.c 340725 2014-01-22 17:40:44Z mat $
 
 --- ncurses/_panel_wrap.c	2001/03/13 17:00:02	1.1
 +++ ncurses/_panel_wrap.c	2001/03/13 17:00:26
