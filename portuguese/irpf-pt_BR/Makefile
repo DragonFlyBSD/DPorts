@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: portuguese/irpf-pt_BR/Makefile 327763 2013-09-20 22:38:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	irpf
 PORTVERSION=	2010.1.0
