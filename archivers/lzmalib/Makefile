@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: archivers/lzmalib/Makefile 337526 2013-12-26 14:42:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lzmalib
 PORTVERSION=	0.0.1
