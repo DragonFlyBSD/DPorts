@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: security/p5-Unix-Passwd-File/Makefile 333504 2013-11-11 14:08:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Unix-Passwd-File
 PORTVERSION=	0.10
