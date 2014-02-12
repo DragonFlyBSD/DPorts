@@ -1,5 +1,5 @@
 # Created by: Johan Str??m <johna@stromnet.se>
-# $FreeBSD: devel/jsoncpp/Makefile 340636 2014-01-21 18:43:56Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jsoncpp
 DISTVERSION=	0.6.0-rc2
