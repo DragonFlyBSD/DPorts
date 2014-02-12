@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans <jille@quis.cx>
-# $FreeBSD: devel/pecl-ncurses/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ncurses
 PORTVERSION=	1.0.2
