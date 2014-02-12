@@ -1,5 +1,5 @@
 # Created by: Yuri <yuri@tsoft.com>
-# $FreeBSD: net-im/telepathy-sofiasip/Makefile 341927 2014-01-31 07:43:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	telepathy-sofiasip
 PORTVERSION=	0.4.5
