@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/p5-Net-OpenSSH-Parallel/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-OpenSSH-Parallel
 PORTVERSION=	0.12
