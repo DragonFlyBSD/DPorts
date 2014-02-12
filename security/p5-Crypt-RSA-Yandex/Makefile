@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: security/p5-Crypt-RSA-Yandex/Makefile 333871 2013-11-15 14:42:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	Crypt-RSA-Yandex
 PORTVERSION=	0.06
