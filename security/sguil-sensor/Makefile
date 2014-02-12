@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: security/sguil-sensor/Makefile 332503 2013-11-02 16:50:54Z feld $
+# $FreeBSD$
 
 PORTNAME=	sguil-sensor
 PORTVERSION=	0.8.0

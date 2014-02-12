@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/sguil-sensor/files/pcap_agent-sancp.in 312466 2013-02-18 00:56:47Z miwi $
+# $FreeBSD: head/security/sguil-sensor/files/pcap_agent-sancp.in 312466 2013-02-18 00:56:47Z miwi $
 
 # PROVIDE: pcap_agent-sancp
 # REQUIRE: DAEMON

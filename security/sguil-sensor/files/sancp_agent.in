@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/sguil-sensor/files/sancp_agent.in 312466 2013-02-18 00:56:47Z miwi $
+# $FreeBSD: head/security/sguil-sensor/files/sancp_agent.in 312466 2013-02-18 00:56:47Z miwi $
 
 # PROVIDE: sancp_agent
 # REQUIRE: DAEMON
