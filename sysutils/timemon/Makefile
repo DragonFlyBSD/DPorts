@@ -1,5 +1,5 @@
 # Created by: gurkan@phys.ethz.ch
-# $FreeBSD: head/sysutils/timemon/Makefile 342201 2014-02-01 18:47:07Z antoine $
+# $FreeBSD$
 
 PORTNAME=	timemon
 PORTVERSION=	4.1
