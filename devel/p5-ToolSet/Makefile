@@ -1,5 +1,5 @@
 # Created by: Vladimir Perepelitsa <mons@cpan.org>
-# $FreeBSD: devel/p5-ToolSet/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	ToolSet
 PORTVERSION=	1.00
