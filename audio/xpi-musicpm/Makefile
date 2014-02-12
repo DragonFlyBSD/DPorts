@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/xpi-musicpm/Makefile 341201 2014-01-26 15:08:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	musicpm
 PORTVERSION=	1.4.4
