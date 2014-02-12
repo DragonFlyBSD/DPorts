@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@rulez.sk>
-# $FreeBSD: security/bruteforceblocker/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bruteforceblocker
 PORTVERSION=	1.2.3
