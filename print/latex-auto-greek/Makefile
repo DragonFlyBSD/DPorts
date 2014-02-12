@@ -1,5 +1,5 @@
 # Created by: EelVex
-# $FreeBSD: print/latex-auto-greek/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	latex-auto-greek
 PORTVERSION=	1.0b
