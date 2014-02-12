@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: graphics/autoq3d/Makefile 338349 2014-01-01 02:11:18Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	autoq3d
 PORTVERSION=	1.40
