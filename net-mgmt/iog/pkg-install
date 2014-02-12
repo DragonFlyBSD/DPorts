@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net-mgmt/iog/pkg-install 340719 2014-01-22 15:52:06Z mat $ 
+# $FreeBSD: head/net-mgmt/iog/pkg-install 340719 2014-01-22 15:52:06Z mat $ 
 #
 
 if [ "$2" != "PRE-INSTALL" ]; then

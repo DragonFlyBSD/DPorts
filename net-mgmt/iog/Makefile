@@ -1,5 +1,5 @@
 # Created by: Larry Rosenman <ler@lerctr.org>
-# $FreeBSD: net-mgmt/iog/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	iog
 PORTVERSION=	1.03
