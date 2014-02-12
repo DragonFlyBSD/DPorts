@@ -1,5 +1,5 @@
 # Created by: Erich Zigler <erich@tacni.net>
-# $FreeBSD: net/p5-Net-SCP/Makefile 334679 2013-11-23 15:48:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-SCP
 PORTVERSION=	0.08
