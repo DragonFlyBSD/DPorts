@@ -1,5 +1,5 @@
 # Created by: Alexander Churannov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: devel/exercisix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	exercisix
 PORTVERSION=	1.2
