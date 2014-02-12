@@ -1,5 +1,5 @@
 # Created by: Anthony Ginepro <anthony.ginepro@laposte.net>
-# $FreeBSD: audio/tagtool/Makefile 338150 2013-12-30 17:27:37Z antoine $
+# $FreeBSD$
 #    $MCom: ports/audio/tagtool/Makefile,v 1.1 2006/09/30 01:15:37 ahze Exp $
 
 PORTNAME=	tagtool
