@@ -1,5 +1,5 @@
 # Created by: gmarco@scotty.masternet.it
-# $FreeBSD: mail/minimalist/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	minimalist
 PORTVERSION=	2.5.3
