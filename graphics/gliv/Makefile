@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27@home.com>
-# $FreeBSD: graphics/gliv/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gliv
 PORTVERSION=	1.9.7
