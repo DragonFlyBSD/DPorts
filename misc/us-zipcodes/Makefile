@@ -1,5 +1,5 @@
 # Created by: wosch
-# $FreeBSD: misc/us-zipcodes/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zipcodes
 PORTVERSION=	1.0
