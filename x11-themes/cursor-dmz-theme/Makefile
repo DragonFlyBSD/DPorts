@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/cursor-dmz-theme/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cursor-dmz-theme
 PORTVERSION=	0.3
@@ -15,10 +15,9 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 
-NO_STAGE=	yes
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/icons/Vanilla-DMZ/cursors
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/icons/Vanilla-DMZ/cursors
 	cd ${WRKSRC}/Vanilla-DMZ/cursors \
-		&& ${FIND} * | ${CPIO} -pdmu ${PREFIX}/lib/X11/icons/Vanilla-DMZ/cursors
+		&& ${FIND} * | ${CPIO} -pdmu ${STAGEDIR}${PREFIX}/lib/X11/icons/Vanilla-DMZ/cursors
 
 .include <bsd.port.mk>
