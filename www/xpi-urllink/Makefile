@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-urllink/Makefile 341219 2014-01-26 15:14:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	urllink
 PORTVERSION=	2.03.3
