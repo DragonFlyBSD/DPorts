@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/spoofer/Makefile 337794 2013-12-27 19:47:35Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	spoofer
 PORTVERSION=	0.8
@@ -13,6 +13,8 @@ PLIST_FILES=	bin/spoofer
 PORTDOCS=	README CHANGES
 
 HAS_CONFIGURE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
