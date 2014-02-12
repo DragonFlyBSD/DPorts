@@ -1,5 +1,5 @@
 # Created by: Stefan Schmidt <stefan.schmidt@stadtbuch.de>
-# $FreeBSD: databases/isql-viewer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	isql-viewer
 PORTVERSION=	2.1.8
