@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-Descriptive-Discrete/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Statistics-Descriptive-Discrete
 PORTVERSION=	0.07
