@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: www/choqok/Makefile 333013 2013-11-06 17:11:14Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	choqok
 PORTVERSION=	1.4
