@@ -1,5 +1,5 @@
 # Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-# $FreeBSD: games/yamsweeper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	yamsweeper
 PORTVERSION=	1.9
