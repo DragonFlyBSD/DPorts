@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: www/p5-Catalyst-Plugin-RunAfterRequest/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-RunAfterRequest
 PORTVERSION=	0.04
