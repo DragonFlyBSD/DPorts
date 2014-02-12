@@ -1,5 +1,5 @@
 # Created by: Alexander Matey <matey@cis.ohio-state.edu>
-# $FreeBSD: x11/xxkb/Makefile 341895 2014-01-30 22:32:45Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xxkb
 PORTVERSION=	1.11
