@@ -1,5 +1,5 @@
 # Created by: Michael Neumann <mneumann@ntecs.de>
-# $FreeBSD: math/algae/Makefile 337197 2013-12-22 16:22:28Z tijl $
+# $FreeBSD$
 
 PORTNAME=	algae
 PORTVERSION=	4.3.6
