@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: textproc/py-pyscss/Makefile 342259 2014-02-02 10:05:42Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pyscss
 PORTVERSION=	1.2.0
