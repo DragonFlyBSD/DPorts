@@ -1,5 +1,5 @@
 # Created by: OISHI Masakuni <yamasa@bsdhouse.org>
-# $FreeBSD: java/jai/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jai
 PORTVERSION=	1.1.3
