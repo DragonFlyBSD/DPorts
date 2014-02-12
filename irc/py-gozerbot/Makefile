@@ -1,5 +1,5 @@
 # Created by: Sten Spans <sten@blinkenlights.nl>
-# $FreeBSD: irc/py-gozerbot/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gozerbot
 PORTVERSION=	0.8.1.1
