@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/kippo/files/kippo.in 312776 2013-02-22 16:22:49Z culot $
+# $FreeBSD: head/net/kippo/files/kippo.in 312776 2013-02-22 16:22:49Z culot $
 #
 # PROVIDE: kippo
 # REQUIRE: LOGIN
