@@ -1,5 +1,5 @@
 # Created by: Chris Larsen <darth@vader.dk>
-# $FreeBSD: databases/p5-SQLite-Work/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SQLite-Work
 PORTVERSION=	0.13
