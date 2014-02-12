@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: games/xpacman/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xpacman
 PORTVERSION=	1.0
