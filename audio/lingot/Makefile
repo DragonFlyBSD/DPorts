@@ -1,5 +1,5 @@
 # Created by: Bartoletti <coder@tuxfamily.org>
-# $FreeBSD: audio/lingot/Makefile 339835 2014-01-15 22:33:28Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lingot
 PORTVERSION=	0.9.1
