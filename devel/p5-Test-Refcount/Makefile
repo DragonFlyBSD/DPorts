@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Refcount/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Refcount
 PORTVERSION=	0.07
