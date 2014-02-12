@@ -1,5 +1,5 @@
 # Created by: anholt@FreeBSD.org
-# $FreeBSD: science/paraview/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	paraview
 PORTVERSION=	3.10.1
