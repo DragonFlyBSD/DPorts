@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: x11/keylaunch/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	keylaunch
 PORTVERSION=	1.3.0
