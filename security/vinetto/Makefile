@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@BSDGuru.org>
-# $FreeBSD: security/vinetto/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vinetto
 PORTVERSION=	0.07
