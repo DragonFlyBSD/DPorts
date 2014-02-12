@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ansible/Makefile 341844 2014-01-30 14:50:37Z decke $
+# $FreeBSD$
 
 PORTNAME=	ansible
 PORTVERSION=	1.4.4
