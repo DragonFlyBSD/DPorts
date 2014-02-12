@@ -1,5 +1,5 @@
 # Created by: Anton Yudin <toha@toha.org.ua>
-# $FreeBSD: java/jakarta-struts/Makefile 339310 2014-01-10 03:02:03Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	jakarta-struts
 PORTVERSION=	1.2.4
