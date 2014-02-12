@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: sysutils/dvdisaster/Makefile 339154 2014-01-08 16:13:03Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	dvdisaster
 PORTVERSION=	0.72.5
