@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Growl-GNTP/Makefile 339628 2014-01-13 20:14:33Z brix $
+# $FreeBSD$
 
 PORTNAME=	Growl-GNTP
 PORTVERSION=	0.20
