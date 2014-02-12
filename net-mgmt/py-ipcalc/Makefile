@@ -1,5 +1,5 @@
 # Created by: ehaupt@FreeBSD.org
-# $FreeBSD: net-mgmt/py-ipcalc/Makefile 332857 2013-11-05 15:12:48Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	ipcalc
 PORTVERSION=	1.1.1
