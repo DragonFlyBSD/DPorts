@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: deskutils/tine20/Makefile 339874 2014-01-15 23:55:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tine20
 PORTVERSION=	0.0.2012.10.04
