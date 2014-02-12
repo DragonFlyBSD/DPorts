@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: databases/tcl-Mysql/Makefile 329731 2013-10-07 20:11:41Z eadler $
+# $FreeBSD$
 
 PORTNAME=	${TCL_NODOT}-sql
 PORTVERSION=	20000114
