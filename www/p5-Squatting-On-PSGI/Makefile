@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Squatting-On-PSGI/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Squatting-On-PSGI
 PORTVERSION=	0.06
