@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Algorithm-Binpack/Makefile 335957 2013-12-09 09:37:22Z culot $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-BinPack
 PORTVERSION=	0.5
