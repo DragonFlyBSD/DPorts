@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu<itetcu@people.tecnik93.com>
-# $FreeBSD: devel/libbnr/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libbnr
 PORTVERSION=	2.0.3
