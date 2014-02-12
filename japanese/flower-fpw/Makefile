@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/flower-fpw/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	flower-fpw
 PORTVERSION=	1.0
