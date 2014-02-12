@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-codetags/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	codetags
 PORTVERSION=	0.1
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}plugin-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin for displaying code tags
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac
 
