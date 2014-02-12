@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: net-mgmt/nagios-check_puppet/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	check_puppet
 PORTVERSION=	1.3
