@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: graphics/claraocr/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	claraocr
 PORTVERSION=	20031214
