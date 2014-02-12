@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Feersum/Makefile 329849 2013-10-08 23:07:39Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Feersum
 PORTVERSION=	1.400
