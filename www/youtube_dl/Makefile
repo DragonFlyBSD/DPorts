@@ -1,4 +1,4 @@
-# $FreeBSD: www/youtube_dl/Makefile 341248 2014-01-26 17:48:12Z ak $
+# $FreeBSD$
 
 PORTNAME=	youtube_dl
 PORTVERSION=	2014.01.23.4
