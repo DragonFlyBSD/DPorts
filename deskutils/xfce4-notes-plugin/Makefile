@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: deskutils/xfce4-notes-plugin/Makefile 332715 2013-11-04 13:28:27Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-notes-plugin
 PORTVERSION=	1.7.7
