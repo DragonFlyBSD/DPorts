@@ -1,5 +1,5 @@
 # Created by: Saulius Menkevicius <bob@nulis.lt>
-# $FreeBSD: net-im/vqcc-gtk/Makefile 341927 2014-01-31 07:43:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	vqcc-gtk
 PORTVERSION=	0.5
