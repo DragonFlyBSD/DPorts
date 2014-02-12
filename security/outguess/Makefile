@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: security/outguess/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	outguess
 PORTVERSION=	0.2
