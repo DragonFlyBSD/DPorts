@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: irc/dircproxy/Makefile 340273 2014-01-19 12:41:08Z mm $
+# $FreeBSD$
 
 PORTNAME=	dircproxy
 DISTVERSION=	1.2.0-RC1
