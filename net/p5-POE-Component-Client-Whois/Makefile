@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Client-Whois/Makefile 331005 2013-10-20 11:48:46Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-Whois
 PORTVERSION=	1.30
