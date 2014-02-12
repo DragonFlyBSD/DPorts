@@ -1,5 +1,5 @@
 # Created by: Marzhan Mykola <delgod@portaone.com>
-# $FreeBSD: devel/p5-libalarm/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	libalarm
 PORTVERSION=	1.0
