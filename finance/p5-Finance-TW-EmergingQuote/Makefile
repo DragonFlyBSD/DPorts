@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: finance/p5-Finance-TW-EmergingQuote/Makefile 332622 2013-11-03 16:08:07Z az $
+# $FreeBSD$
 
 PORTNAME=	Finance-TW-EmergingQuote
 PORTVERSION=	0.26
