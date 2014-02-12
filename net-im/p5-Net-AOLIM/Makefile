@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: net-im/p5-Net-AOLIM/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-AOLIM
 PORTVERSION=	1.61
