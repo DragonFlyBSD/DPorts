@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Benchmark-Timer/Makefile 342249 2014-02-02 08:11:05Z eadler $
+# $FreeBSD$
 
 PORTNAME=	Benchmark-Timer
 PORTVERSION=	0.7102
