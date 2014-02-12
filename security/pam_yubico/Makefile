@@ -1,4 +1,4 @@
-# $FreeBSD: security/pam_yubico/Makefile 340142 2014-01-18 02:35:59Z danilo $
+# $FreeBSD$
 
 PORTNAME=	pam_yubico
 PORTVERSION=	2.14
