@@ -1,5 +1,5 @@
 # Created by: Maxim Tuliuk <mt@primats.org.ua>
-# $FreeBSD: net-mgmt/ipplan/Makefile 337310 2013-12-24 00:42:51Z feld $
+# $FreeBSD$
 
 PORTNAME=	ipplan
 PORTVERSION=	4.92b
