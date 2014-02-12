@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: games/freecell-solver/Makefile 329562 2013-10-06 13:37:53Z danilo $
+# $FreeBSD$
 
 PORTNAME=	freecell-solver
 PORTVERSION=	3.22.0
