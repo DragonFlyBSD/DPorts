@@ -1,5 +1,5 @@
 # Created by: Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: graphics/qvplay/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qvplay
 PORTVERSION=	0.95
@@ -26,6 +26,9 @@ PORTDOCS=	FAQ.txt HISTORY PROTOCOL.eng PROTOCOL.txt \
 		README README.FreeBSD README.eng
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
