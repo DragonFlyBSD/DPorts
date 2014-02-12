@@ -1,5 +1,5 @@
 # Created by: Gautam Mani <execve@gmail.com>
-# $FreeBSD: games/stockfish/Makefile 340159 2014-01-18 09:35:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	stockfish
 PORTVERSION=	4
