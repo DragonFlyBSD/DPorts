@@ -1,5 +1,5 @@
 # Created by: Zahemszky, Gábor <Gabor@Zahemszky.HU>
-# $FreeBSD: multimedia/xfce4-xmms-plugin/Makefile 341756 2014-01-29 16:17:10Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-xmms-plugin
 PORTVERSION=	0.5.3
