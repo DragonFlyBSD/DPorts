@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pecl-automap/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	automap
 PORTVERSION=	2.1.0
