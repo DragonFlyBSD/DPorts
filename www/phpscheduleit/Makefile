@@ -1,5 +1,5 @@
 # Created by: jamrich.majo@gmail.com
-# $FreeBSD: www/phpscheduleit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phpscheduleit
 PORTVERSION=	1.2.12
@@ -9,6 +9,9 @@ DISTNAME=	phpScheduleIt_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A web-based resource scheduling and management system
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS+=	php:${PORTSDIR}/lang/php5 \
 		${PEARDIR}/DB.php:${PORTSDIR}/databases/pear-DB
