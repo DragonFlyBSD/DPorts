@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-omniauth-github/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD$
 
 PORTNAME=	omniauth-github
 PORTVERSION=	1.1.1
