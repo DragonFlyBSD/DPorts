@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xf86-input-fpit/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xf86-input-fpit
 PORTVERSION=	1.4.0
