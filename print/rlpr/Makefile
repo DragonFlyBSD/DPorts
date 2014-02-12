@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: print/rlpr/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rlpr
 PORTVERSION=	2.06
