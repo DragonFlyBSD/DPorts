@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/cfengine34/files/cf-execd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/cfengine34/files/cf-execd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: cf-execd
 # REQUIRE: LOGIN
