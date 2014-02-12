@@ -1,5 +1,5 @@
 # Created by: Matthew Will <mwill@spingen.com>
-# $FreeBSD: mail/qmqtool/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qmqtool
 PORTVERSION=	1.12
