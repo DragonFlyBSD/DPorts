@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: graphics/php5-swfed/Makefile 336447 2013-12-14 13:55:46Z tota $
+# $FreeBSD$
 
 PORTNAME=	swfed
 PORTVERSION=	0.61
@@ -28,6 +28,8 @@ PLIST_SUB=	WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 
 PORTDOCS=	readme.txt
 PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
