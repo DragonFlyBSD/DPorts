@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-Pod-HtmlEasy/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	Pod-HtmlEasy
 PORTVERSION=	1.0108
