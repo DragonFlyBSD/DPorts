@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/py-oops/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	oops
 PORTVERSION=	0.9.1
