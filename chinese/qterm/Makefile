@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/qterm/Makefile 339152 2014-01-08 15:47:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	qterm
 PORTVERSION=	0.5.12
