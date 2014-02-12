@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: x11-toolkits/ruby-poppler/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	poppler
 PORTVERSION=	${RUBY_GNOME_PORTVERSION}
