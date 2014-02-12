@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-JSON/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-JSON
 PORTVERSION=	0.11
