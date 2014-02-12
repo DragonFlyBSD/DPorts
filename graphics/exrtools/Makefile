@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/exrtools/Makefile 336836 2013-12-18 14:35:53Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	exrtools
 PORTVERSION=	0.4
