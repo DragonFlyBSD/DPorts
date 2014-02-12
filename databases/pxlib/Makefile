@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: databases/pxlib/Makefile 339922 2014-01-16 15:43:27Z sem $
+# $FreeBSD$
 
 PORTNAME=	pxlib
 PORTVERSION=	0.6.3
