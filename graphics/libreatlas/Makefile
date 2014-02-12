@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: graphics/libreatlas/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	libreatlas
 PORTVERSION=	1.0.0a
