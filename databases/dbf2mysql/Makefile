@@ -1,5 +1,5 @@
 # Created by: jedgar@fxp.org
-# $FreeBSD: databases/dbf2mysql/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dbf2mysql
 PORTVERSION=	1.14
