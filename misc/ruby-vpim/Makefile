@@ -1,5 +1,5 @@
 # Created by: Yuichiro AIZAWA aka yaizawa <yaizawa@mdbl.sfc.keio.ac.jp>
-# $FreeBSD: misc/ruby-vpim/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vpim
 PORTVERSION=	0.695
