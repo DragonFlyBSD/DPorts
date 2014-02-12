@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/digikam-kde4/Makefile.common 340628 2014-01-21 18:17:23Z makc $
+# $FreeBSD$
 #
 # Make sure when DIGIKAM_VER is updated that the following ports are updated:
 #	astro/libkgeomap
