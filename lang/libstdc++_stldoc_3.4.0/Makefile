@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson
-# $FreeBSD: lang/libstdc++_stldoc_3.4.0/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libstdc++_stldoc_3.4.0
 PORTVERSION=	20040609
