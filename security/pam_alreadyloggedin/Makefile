@@ -1,5 +1,5 @@
 # Created by: green@FreeBSD.org
-# $FreeBSD: security/pam_alreadyloggedin/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pam_alreadyloggedin
 PORTVERSION=	0.3
