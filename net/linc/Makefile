@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: net/linc/Makefile 341917 2014-01-31 07:04:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	linc
 PORTVERSION=	1.0.3

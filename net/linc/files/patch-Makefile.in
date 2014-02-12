@@ -1,5 +1,5 @@
 
-$FreeBSD: net/linc/files/patch-Makefile.in 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/linc/files/patch-Makefile.in 340725 2014-01-22 17:40:44Z mat $
 
 --- Makefile.in	2002/02/12 12:58:07	1.1
 +++ Makefile.in	2002/02/12 13:09:12
