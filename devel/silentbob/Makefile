@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: devel/silentbob/Makefile 339784 2014-01-15 15:20:21Z tota $
+# $FreeBSD$
 
 PORTNAME=	silentbob
 PORTVERSION=	3.0
