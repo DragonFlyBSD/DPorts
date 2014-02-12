@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: textproc/java2html/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		java2html
 PORTVERSION=		0.9.2
