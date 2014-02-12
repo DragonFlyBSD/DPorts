@@ -1,5 +1,5 @@
 # Created by: Johan van Selst <johans@stack.nl>
-# $FreeBSD: security/py-pyme/Makefile 336519 2013-12-15 12:25:13Z wg $
+# $FreeBSD$
 
 PORTNAME=	pyme
 PORTVERSION=	0.8.1
@@ -21,7 +21,6 @@ PYDISTUTILS_PKGNAME=pygpgme
 
 MAKE_ARGS=	PYTHON=${PYTHON_CMD}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -30,6 +29,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,include/,&gpgme/,' ${WRKSRC}/Makefile
 
 pre-build:
-	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} build)
+	cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} build
 
 .include <bsd.port.post.mk>
