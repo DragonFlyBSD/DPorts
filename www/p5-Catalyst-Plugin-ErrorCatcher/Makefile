@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: www/p5-Catalyst-Plugin-ErrorCatcher/Makefile 338462 2014-01-02 16:32:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-ErrorCatcher
 PORTVERSION=	0.0.8.15
