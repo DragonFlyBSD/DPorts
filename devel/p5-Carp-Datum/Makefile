@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: devel/p5-Carp-Datum/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Carp-Datum
 PORTVERSION=	0.1.3
@@ -17,13 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		datum_strip.1
-MAN3=		Carp::Datum::Assert.3 \
-		Carp::Datum.3 \
-		Carp::Datum::Strip.3 \
-		Carp::Datum::MakeMaker.3 \
-		Carp::Datum::Cfg.3 \
-		Carp::Datum::Flags.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
