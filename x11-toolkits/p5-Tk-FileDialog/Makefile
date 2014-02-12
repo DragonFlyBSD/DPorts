@@ -1,5 +1,5 @@
 # Created by: minter@lunenburg.org
-# $FreeBSD: x11-toolkits/p5-Tk-FileDialog/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Tk-FileDialog
 PORTVERSION=	1.3
