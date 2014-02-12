@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DRI/Makefile 341587 2014-01-28 14:46:47Z feld $
+# $FreeBSD$
 
 PORTNAME=	Net-DRI
 PORTVERSION=	0.96
