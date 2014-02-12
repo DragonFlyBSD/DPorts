@@ -1,5 +1,5 @@
 # Created by: Dan Papasian <bugg@bugg.strangled.net>
-# $FreeBSD: games/gtetrinet/Makefile 332444 2013-11-02 03:23:02Z danilo $
+# $FreeBSD$
 
 PORTNAME=	gtetrinet
 PORTVERSION=	0.7.11
