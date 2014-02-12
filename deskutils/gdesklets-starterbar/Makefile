@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets-starterbar/Makefile 334744 2013-11-24 16:21:08Z mva $
+# $FreeBSD$
 
 PORTNAME=	starterbar
 PORTVERSION=	0.31.3
