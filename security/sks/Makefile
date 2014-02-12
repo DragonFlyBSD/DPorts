@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/sks/Makefile 341014 2014-01-25 12:10:59Z johans $
+# $FreeBSD$
 
 PORTNAME=	sks
 PORTVERSION=	1.1.4
