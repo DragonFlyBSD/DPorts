@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: sysutils/hfsexplorer/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hfsexplorer
 PORTVERSION=	0.21
