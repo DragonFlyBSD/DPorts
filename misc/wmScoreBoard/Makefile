@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: misc/wmScoreBoard/Makefile 336004 2013-12-09 16:41:34Z danilo $
+# $FreeBSD$
 
 PORTNAME=	wmScoreBoard
 PORTVERSION=	0.30
