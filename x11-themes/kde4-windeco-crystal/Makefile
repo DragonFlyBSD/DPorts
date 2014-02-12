@@ -1,5 +1,5 @@
 # Created by: decept
-# $FreeBSD: x11-themes/kde4-windeco-crystal/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	crystal
 PORTVERSION=	2.2.1
