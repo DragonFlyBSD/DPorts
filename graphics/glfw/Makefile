@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: graphics/glfw/Makefile 341653 2014-01-28 20:31:49Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	glfw
 PORTVERSION=	3.0.4
