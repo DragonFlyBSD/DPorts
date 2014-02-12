@@ -1,5 +1,5 @@
 # Created by: lars.eggert@gmx.net
-# $FreeBSD: devel/p5-Algorithm-ChooseSubsets/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-ChooseSubsets
 PORTVERSION=	0.02
