@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/nhpf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nhpf
 PORTVERSION=	1.42
