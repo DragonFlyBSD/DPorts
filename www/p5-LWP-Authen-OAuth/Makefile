@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-LWP-Authen-OAuth/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	LWP-Authen-OAuth
 PORTVERSION=	1.02
