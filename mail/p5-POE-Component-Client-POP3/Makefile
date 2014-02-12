@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@FreeBSD.org>
-# $FreeBSD: mail/p5-POE-Component-Client-POP3/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-POP3
 PORTVERSION=	0.02
