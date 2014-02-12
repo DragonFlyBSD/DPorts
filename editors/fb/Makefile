@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: editors/fb/Makefile 342321 2014-02-02 16:00:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fb
 PORTVERSION=	1.5
