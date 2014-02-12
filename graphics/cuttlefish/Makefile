@@ -1,5 +1,5 @@
 # Created by: Matthew Luckie <mjl@luckie.org.nz>
-# $FreeBSD: graphics/cuttlefish/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cuttlefish
 PORTVERSION=	1.3
