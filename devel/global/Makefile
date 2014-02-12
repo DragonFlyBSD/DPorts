@@ -1,5 +1,5 @@
 # Created by: chuckr@FreeBSD.org
-# $FreeBSD: devel/global/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	global
 PORTVERSION=	6.2.8
