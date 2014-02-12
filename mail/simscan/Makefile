@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: mail/simscan/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	simscan
 PORTVERSION=	1.4.0

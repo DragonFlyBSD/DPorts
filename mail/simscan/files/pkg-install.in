@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/simscan/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/mail/simscan/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 
 USER=simscan
 GROUP=${USER}
