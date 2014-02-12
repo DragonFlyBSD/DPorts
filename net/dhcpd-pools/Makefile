@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/dhcpd-pools/Makefile 332655 2013-11-03 23:22:27Z zi $
+# $FreeBSD$
 
 PORTNAME=	dhcpd-pools
 PORTVERSION=	2.24
