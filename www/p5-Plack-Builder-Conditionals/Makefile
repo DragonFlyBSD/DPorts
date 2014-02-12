@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Builder-Conditionals/Makefile 332659 2013-11-04 01:58:30Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Plack-Builder-Conditionals
 PORTVERSION=	0.05
