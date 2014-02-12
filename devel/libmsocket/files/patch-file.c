@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/libmsocket/files/patch-file.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/libmsocket/files/patch-file.c 340725 2014-01-22 17:40:44Z mat $
 
 --- file.c.orig
 +++ file.c

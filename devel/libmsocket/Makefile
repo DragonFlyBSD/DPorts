@@ -1,5 +1,5 @@
 # Created by: Matt Harris <mattdharris@users.sourceforge.net>
-# $FreeBSD: devel/libmsocket/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libmsocket
 PORTVERSION=	0.4
