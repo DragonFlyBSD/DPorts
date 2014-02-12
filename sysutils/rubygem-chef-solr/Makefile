@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: sysutils/rubygem-chef-solr/Makefile 338366 2014-01-01 06:51:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	chef-solr
 PORTVERSION=	10.30.2
