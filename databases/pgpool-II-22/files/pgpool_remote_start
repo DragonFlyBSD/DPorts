@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/pgpool-II-22/files/pgpool_remote_start 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/pgpool-II-22/files/pgpool_remote_start 340872 2014-01-24 00:14:07Z mat $
 
 DEST=pgsql@$1
 

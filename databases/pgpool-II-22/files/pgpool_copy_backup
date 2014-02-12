@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/pgpool-II-22/files/pgpool_copy_backup 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/pgpool-II-22/files/pgpool_copy_backup 340872 2014-01-24 00:14:07Z mat $
 
 SRC=pgsql@$(hostname)
 SRCDIR=$1
