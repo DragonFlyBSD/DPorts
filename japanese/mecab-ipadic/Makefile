@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: japanese/mecab-ipadic/Makefile 328625 2013-09-28 19:41:54Z antoine $
+# $FreeBSD$
 
 PORTNAME=	mecab-ipadic
 DISTVERSION=	2.7.0-20070801
