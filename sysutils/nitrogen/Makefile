@@ -1,5 +1,5 @@
 # Created by: Jonathan Liu <Net147@hotmail.com>
-# $FreeBSD: sysutils/nitrogen/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	nitrogen
 PORTVERSION=	1.5.2
