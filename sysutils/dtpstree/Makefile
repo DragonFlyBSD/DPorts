@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: sysutils/dtpstree/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	dtpstree
 PORTVERSION=	1.0.3
