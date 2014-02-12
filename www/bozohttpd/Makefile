@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: www/bozohttpd/Makefile 332216 2013-10-31 08:50:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bozohttpd
 PORTVERSION=	20130711
