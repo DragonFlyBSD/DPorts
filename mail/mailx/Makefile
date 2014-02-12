@@ -1,5 +1,5 @@
 # Created by: Issei Suzuki <issei@jp.FreeBSD.org>
-# $FreeBSD: mail/mailx/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mailx
 PORTVERSION=	0.5
