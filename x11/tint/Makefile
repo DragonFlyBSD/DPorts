@@ -1,4 +1,4 @@
-# $FreeBSD: x11/tint/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	tint2
 PORTVERSION=	0.11
