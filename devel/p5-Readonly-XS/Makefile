@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Readonly-XS/Makefile 335059 2013-11-27 20:45:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Readonly-XS
 PORTVERSION=	1.05
