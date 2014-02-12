@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/quake2-zaero/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zaero
 PORTVERSION=	1.1
