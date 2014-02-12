@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/gupnp-ui/Makefile 331582 2013-10-25 13:36:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gupnp-ui
 PORTVERSION=	0.1.1
