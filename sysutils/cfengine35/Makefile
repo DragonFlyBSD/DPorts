@@ -1,5 +1,5 @@
 # Created by: jrhett@netconsonance.com
-# $FreeBSD: sysutils/cfengine35/Makefile 336792 2013-12-17 23:54:04Z jgh $
+# $FreeBSD$
 
 PORTNAME=	cfengine
 PORTVERSION=	3.5.3
