@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: mail/mailutils/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	mailutils
 PORTVERSION=	2.2
