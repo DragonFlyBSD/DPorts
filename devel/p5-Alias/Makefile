@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Alias/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Alias
 PORTVERSION=	2.32
