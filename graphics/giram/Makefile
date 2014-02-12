@@ -1,5 +1,5 @@
 # Created by: Brandon Fosdick <bfoz@glue.umd.edu>
-# $FreeBSD: graphics/giram/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	giram
 PORTVERSION=	0.3.5
