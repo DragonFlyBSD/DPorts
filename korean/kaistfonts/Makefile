@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/kaistfonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kaistfonts-ksc
 PORTVERSION=	1.0
