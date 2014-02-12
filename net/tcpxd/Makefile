@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: net/tcpxd/Makefile 332003 2013-10-29 20:57:21Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	tcpxd
 PORTVERSION=	1.4
