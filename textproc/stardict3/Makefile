@@ -1,5 +1,5 @@
 # Created by: eric
-# $FreeBSD: textproc/stardict3/Makefile 329107 2013-10-02 20:50:35Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict
 PORTVERSION=	3.0.4
