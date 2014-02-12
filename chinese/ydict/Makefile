@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/ydict/Makefile 331091 2013-10-21 06:01:57Z delphij $
+# $FreeBSD$
 
 PORTNAME=	ydict
 PORTVERSION=	1.3.1
