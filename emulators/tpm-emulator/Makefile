@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: emulators/tpm-emulator/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tpm-emulator
 PORTVERSION=	0.7.4
