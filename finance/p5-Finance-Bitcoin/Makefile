@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: finance/p5-Finance-Bitcoin/Makefile 342154 2014-02-01 14:42:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Finance-Bitcoin
 PORTVERSION=	0.004
