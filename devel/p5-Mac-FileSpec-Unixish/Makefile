@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Mac-FileSpec-Unixish/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mac-FileSpec-Unixish
 PORTVERSION=	1.12
