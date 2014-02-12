@@ -1,5 +1,5 @@
 # Created by: Javad Kouhi <javad.kouhi@gmail.com>
-# $FreeBSD: math/gkmap/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gkmap
 PORTVERSION=	0.2
