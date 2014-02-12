@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: www/p5-CGI-Application-Plugin-Stream/Makefile 338459 2014-01-02 16:23:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-Stream
 PORTVERSION=	2.11
