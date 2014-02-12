@@ -1,5 +1,5 @@
 # Created by: Christopher Elkins <chrise@scardini.com>
-# $FreeBSD: mail/gotmail/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD$
 
 PORTNAME=	gotmail
 PORTVERSION=	0.9.0
