@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: www/llgal/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	llgal
 PORTVERSION=	0.13.17
