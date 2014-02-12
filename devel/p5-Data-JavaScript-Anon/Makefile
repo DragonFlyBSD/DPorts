@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-Data-JavaScript-Anon/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Data-JavaScript-Anon
 PORTVERSION=	1.03
