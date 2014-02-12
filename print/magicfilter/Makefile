@@ -1,5 +1,5 @@
 # Created by: CHOI Junho <cjh@FreeBSD.org>
-# $FreeBSD: print/magicfilter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	magicfilter
 PORTVERSION=	2.3.h
