@@ -1,5 +1,5 @@
 # Created by: Uwe Pierau <uwe.pierau@tu-clausthal.de>
-# $FreeBSD: textproc/lacheck/Makefile 330106 2013-10-11 22:56:23Z ak $
+# $FreeBSD$
 
 PORTNAME=	lacheck
 PORTVERSION=	1.26
