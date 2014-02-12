@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: security/p5-Digest-SHA-PurePerl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Digest-SHA-PurePerl
 PORTVERSION=	5.85
