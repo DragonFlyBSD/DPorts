@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/pngwriter/Makefile 340002 2014-01-17 00:33:46Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pngwriter
 PORTVERSION=	0.5.4
