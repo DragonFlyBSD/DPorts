@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: astro/openmap/files/openmap.sh.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/astro/openmap/files/openmap.sh.in 340851 2014-01-23 19:55:14Z mat $
 #
 
 cd "%%DATADIR%%"

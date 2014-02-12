@@ -1,4 +1,4 @@
-# $FreeBSD: astro/openmap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openmap
 PORTVERSION=	4.6.4
@@ -21,6 +21,8 @@ MAKE_ARGS+=	-Dopenmap.home=${WRKSRC} \
 		-Didl2java.compiler=${JAVA_HOME}/bin/idlj
 
 SUB_FILES=	openmap.sh
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
