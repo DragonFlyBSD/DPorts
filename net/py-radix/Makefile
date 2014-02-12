@@ -1,5 +1,5 @@
 # Created by: Lars Erik Gullerud <lerik@nolink.net>
-# $FreeBSD: net/py-radix/Makefile 341956 2014-01-31 09:22:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	radix
 PORTVERSION=	0.5
