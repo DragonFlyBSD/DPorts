@@ -1,5 +1,5 @@
 # Created by: Alexandre Biancalana <ale@biancalanas.net>
-# $FreeBSD: net/p5-Net-Google-SafeBrowsing2/Makefile 341963 2014-01-31 09:45:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-Google-SafeBrowsing2
 PORTVERSION=	1.09
