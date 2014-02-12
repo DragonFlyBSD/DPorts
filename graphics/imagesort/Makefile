@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: graphics/imagesort/Makefile 340738 2014-01-22 22:07:20Z antoine $
+# $FreeBSD$
 
 PORTNAME=	imagesort
 PORTVERSION=	2.0
