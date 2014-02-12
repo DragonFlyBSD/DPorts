@@ -1,5 +1,5 @@
 # Created by: clive
-# $FreeBSD: chinese/bitchx/Makefile 331078 2013-10-21 01:09:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	BitchX
 PORTREVISION=	5
