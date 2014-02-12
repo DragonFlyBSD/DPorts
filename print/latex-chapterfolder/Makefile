@@ -1,5 +1,5 @@
 # Created by: hrs
-# $FreeBSD: print/latex-chapterfolder/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	chapterfolder
 PORTVERSION=	2.0.20051124
