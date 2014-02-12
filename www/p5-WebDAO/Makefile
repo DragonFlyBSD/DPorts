@@ -1,5 +1,5 @@
 # Created by: Zahatski Aliaksandr <zag@cpan.org>
-# $FreeBSD: www/p5-WebDAO/Makefile 341747 2014-01-29 15:13:47Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WebDAO
 PORTVERSION=	2.14
