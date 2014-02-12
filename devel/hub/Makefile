@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: devel/hub/Makefile 341517 2014-01-28 08:41:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hub
 PORTVERSION=	1.10.6
