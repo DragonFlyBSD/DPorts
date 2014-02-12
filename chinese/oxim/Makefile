@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@infor.org>
-# $FreeBSD: chinese/oxim/Makefile 338683 2014-01-04 23:27:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	oxim
 PORTVERSION=	1.2.2
