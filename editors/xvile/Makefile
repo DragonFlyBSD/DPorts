@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/xvile/Makefile 339035 2014-01-07 20:55:37Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xvile
 PORTVERSION=	9.8k
