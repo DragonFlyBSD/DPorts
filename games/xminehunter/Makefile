@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xminehunter/Makefile 337083 2013-12-20 19:43:05Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xminehunter
 PORTVERSION=	0.4
