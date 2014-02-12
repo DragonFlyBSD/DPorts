@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Handler-CLI/Makefile 341747 2014-01-29 15:13:47Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Plack-Handler-CLI
 PORTVERSION=	0.05
