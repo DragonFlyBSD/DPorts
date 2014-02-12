@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: devel/tpasm/Makefile 339898 2014-01-16 06:00:17Z danfe $
+# $FreeBSD$
 
 PORTNAME=	tpasm
 PORTVERSION=	1.8
