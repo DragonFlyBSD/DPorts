@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/linsmith/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	linsmith
 PORTVERSION=	0.99.26
