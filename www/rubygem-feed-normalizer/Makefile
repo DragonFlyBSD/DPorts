@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: www/rubygem-feed-normalizer/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	feed-normalizer
 PORTVERSION=	1.5.2
