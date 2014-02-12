@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: deskutils/xpostit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xpostit
 PORTVERSION=	3.3.1
@@ -15,7 +15,5 @@ COMMENT=	PostIt (R) messages onto your X11 screen
 USES=		imake
 USE_XORG=	ice sm x11 xaw xext xmu xpm xt
 WRKSRC=		${WRKDIR}/xpostit
-MAN1=		xpostit.1
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
