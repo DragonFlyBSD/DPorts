@@ -1,5 +1,5 @@
 # Created by: Brooks Davis
-# $FreeBSD: devel/compiler-rt/Makefile 330742 2013-10-18 13:33:45Z brooks $
+# $FreeBSD$
 
 PORTNAME=	compiler-rt
 DISTVERSION=	0.r${SVN_REV}
