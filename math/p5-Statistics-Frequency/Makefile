@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: math/p5-Statistics-Frequency/Makefile 342149 2014-02-01 14:41:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Statistics-Frequency
 PORTVERSION=	0.03
