@@ -1,5 +1,5 @@
 # Created by: vsevolod
-# $FreeBSD: net-im/mcabber/Makefile 336778 2013-12-17 21:58:08Z dhn $
+# $FreeBSD$
 
 PORTNAME=	mcabber
 PORTVERSION=	0.10.2
