@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: japanese/mikachan-ttfonts/Makefile 342298 2014-02-02 14:27:37Z pawel $
+# $FreeBSD$
 
 PORTNAME=	mikachan-ttfonts
 PORTVERSION=	9.1
