@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-# $FreeBSD: textproc/p5-XML-XSH/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-XSH
 PORTVERSION=	1.8.2
