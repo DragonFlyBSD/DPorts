@@ -1,5 +1,5 @@
 # Created by: James Bowman <jamesb-bsd@excamera.com>
-# $FreeBSD: graphics/py-openexr/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	openexr
 PORTVERSION=	1.2.0
