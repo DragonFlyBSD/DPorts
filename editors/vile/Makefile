@@ -1,5 +1,5 @@
 # Created by: pgf
-# $FreeBSD: editors/vile/Makefile 339036 2014-01-07 21:06:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	vile
 PORTVERSION=	9.8k
