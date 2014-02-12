@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-accessors-fast/Makefile 334246 2013-11-18 19:23:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	accessors-fast
 PORTVERSION=	0.03
