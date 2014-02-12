@@ -1,8 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: databases/vsqlite/Makefile 338041 2013-12-29 20:37:27Z kwm $
+# $FreeBSD$
 
 PORTNAME=	vsqlite
 PORTVERSION=	0.3.12
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	kwm@FreeBSD.org
