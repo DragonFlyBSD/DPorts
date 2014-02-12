@@ -1,5 +1,5 @@
 # Created by: Marco Molteni <molter@gufi.org>
-# $FreeBSD: astro/gpsdrive/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	gpsdrive
 PORTVERSION=	2.09
