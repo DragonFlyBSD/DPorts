@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kappa@rambler-co.ru>
-# $FreeBSD: security/p5-Net-OpenID-Server/Makefile 333829 2013-11-15 09:49:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-OpenID-Server
 PORTVERSION=	1.09
