@@ -1,5 +1,5 @@
 # Created by: Alexander@Leidinger.net
-# $FreeBSD: graphics/xmms-gdancer/Makefile 340231 2014-01-19 08:53:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xmms-gdancer
 PORTVERSION=	0.4.6
