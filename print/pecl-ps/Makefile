@@ -1,5 +1,5 @@
 # Created by: Alan Garfield <alan@fromorbit.com>
-# $FreeBSD: print/pecl-ps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ps
 PORTVERSION=	1.3.6
