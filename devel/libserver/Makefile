@@ -1,5 +1,5 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: devel/libserver/Makefile 329807 2013-10-08 16:20:31Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	libserver
 PORTVERSION=	1.17
