@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: graphics/gimp-save-for-web/Makefile 328985 2013-10-01 19:34:29Z gblach $
+# $FreeBSD$
 
 PORTNAME=	gimp-save-for-web
 PORTVERSION=	0.29.3
