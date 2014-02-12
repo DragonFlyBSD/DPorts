@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/exhaust-doc/Makefile 332369 2013-11-01 13:27:16Z danilo $
+# $FreeBSD$
 
 PORTNAME=	exhaust
 PORTVERSION=	1.9.2
