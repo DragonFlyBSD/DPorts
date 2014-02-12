@@ -1,5 +1,5 @@
 # Created by: barnhart@genetics.wustl.edu
-# $FreeBSD: biology/hmmer/Makefile 338155 2013-12-30 18:08:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	hmmer
 PORTVERSION=	3.0
