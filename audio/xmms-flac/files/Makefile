@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-flac/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 SUBDIRS= src/share src/plugin_common src/plugin_xmms
 

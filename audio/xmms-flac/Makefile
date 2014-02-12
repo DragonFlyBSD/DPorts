@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-flac/Makefile 328596 2013-09-28 16:59:55Z naddy $
+# $FreeBSD$
 
 PORTNAME=	xmms-flac
 PORTVERSION=	1.3.0

@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/xmms-flac/files/patch-src_plugin__xmms_plugin.c 320405 2013-06-09 19:30:58Z naddy $
+$FreeBSD: head/audio/xmms-flac/files/patch-src_plugin__xmms_plugin.c 320405 2013-06-09 19:30:58Z naddy $
 
 --- src/plugin_xmms/plugin.c.orig
 +++ src/plugin_xmms/plugin.c
