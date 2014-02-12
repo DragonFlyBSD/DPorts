@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: irc/p5-POE-Session-Irssi/Makefile 331186 2013-10-21 20:18:26Z jase $
+# $FreeBSD$
 
 PORTNAME=	POE-Session-Irssi
 PORTVERSION=	0.50
