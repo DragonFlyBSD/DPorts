@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: ftp/axel/Makefile 341089 2014-01-25 20:30:21Z bapt $
+# $FreeBSD$
 
 PORTNAME=	axel
 PORTVERSION=	2.4
