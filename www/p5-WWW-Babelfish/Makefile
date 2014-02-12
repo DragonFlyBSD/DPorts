@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-WWW-Babelfish/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Babelfish
 PORTVERSION=	0.16
