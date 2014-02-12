@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: multimedia/p5-FLV-Info/Makefile 332815 2013-11-05 07:28:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	FLV-Info
 PORTVERSION=	0.24
