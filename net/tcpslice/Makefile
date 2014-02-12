@@ -1,5 +1,5 @@
 # Created by: smace@FreeBSD.org
-# $FreeBSD: net/tcpslice/Makefile 341937 2014-01-31 08:07:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tcpslice
 PORTVERSION=	2008.05.19
