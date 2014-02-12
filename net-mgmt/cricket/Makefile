@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: net-mgmt/cricket/Makefile 336210 2013-12-11 19:35:22Z eadler $
+# $FreeBSD$
 
 PORTNAME=	cricket
 PORTVERSION=	1.0.5
