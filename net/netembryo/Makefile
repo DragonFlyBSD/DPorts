@@ -1,5 +1,5 @@
 # Created by: Emmanuel Richiardone (err@tollari.org)
-# $FreeBSD: net/netembryo/Makefile 341974 2014-01-31 10:17:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	netembryo
 PORTVERSION=	0.1.1
