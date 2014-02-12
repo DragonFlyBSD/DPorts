@@ -1,5 +1,5 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: devel/py-mongoengine/Makefile 335842 2013-12-07 19:01:36Z wg $
+# $FreeBSD$
 
 PORTNAME=	mongoengine
 PORTVERSION=	0.8.6
