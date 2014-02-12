@@ -1,5 +1,5 @@
 # Created by: nik
-# $FreeBSD: graphics/eps2png/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eps2png
 PORTVERSION=	2.7
