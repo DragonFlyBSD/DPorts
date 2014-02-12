@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/ri-li/Makefile 330711 2013-10-18 01:20:05Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	Ri-li
 PORTVERSION=	2.0.1
