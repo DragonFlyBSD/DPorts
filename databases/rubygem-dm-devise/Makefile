@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: databases/rubygem-dm-devise/Makefile 334439 2013-11-20 18:32:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	dm-devise
 PORTVERSION=	2.2.1
