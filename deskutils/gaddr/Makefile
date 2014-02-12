@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: deskutils/gaddr/Makefile 330379 2013-10-15 09:50:13Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gaddr
 PORTVERSION=	1.1.4
