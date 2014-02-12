@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: math/bamg/Makefile 341299 2014-01-26 22:45:51Z stephen $
+# $FreeBSD$
 
 PORTNAME=	bamg
 PORTVERSION=	1.01
