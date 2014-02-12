@@ -1,5 +1,5 @@
 # Created by: Shane Bell <decept0@gmail.com>
-# $FreeBSD: x11/yakuake-kde4/Makefile 337983 2013-12-29 13:51:46Z antoine $
+# $FreeBSD$
 
 PORTNAME=	yakuake
 PORTVERSION=	2.9.9
