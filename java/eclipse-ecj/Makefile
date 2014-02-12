@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: java/eclipse-ecj/Makefile 339388 2014-01-10 22:24:49Z jgh $
+# $FreeBSD$
 
 PORTNAME=	ecj
 PORTVERSION=	3.8.2
