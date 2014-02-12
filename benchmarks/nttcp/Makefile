@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: benchmarks/nttcp/Makefile 333130 2013-11-07 16:01:06Z martymac $
+# $FreeBSD$
 
 PORTNAME=	nttcp
 PORTVERSION=	1.47
