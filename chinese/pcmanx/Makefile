@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: chinese/pcmanx/Makefile 339203 2014-01-09 07:20:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	pcmanx
 PORTVERSION=	1.2
