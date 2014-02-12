@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: security/p5-Authen-Bitcard/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Authen-Bitcard
 PORTVERSION=	0.90
