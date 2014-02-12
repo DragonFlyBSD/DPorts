@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@netability.ie>
-# $FreeBSD: www/drupal6-nodewords/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nodewords
 DISTVERSION=	6.x-1.14
