@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Tiffany/Makefile 332706 2013-11-04 13:11:16Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Tiffany
 PORTVERSION=	1.01
