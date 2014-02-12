@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <trociny@FreeBSD.org>
-# $FreeBSD: sysutils/p5-MogileFS-Network/Makefile 330768 2013-10-18 19:38:41Z trociny $
+# $FreeBSD$
 
 PORTNAME=	MogileFS-Network
 PORTVERSION=	0.06
