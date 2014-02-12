@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/qprint/Makefile 334426 2013-11-20 16:13:13Z danilo $
+# $FreeBSD$
 
 PORTNAME=	qprint
 PORTVERSION=	1.0
