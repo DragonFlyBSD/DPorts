@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: mail/grepmail/Makefile 342207 2014-02-01 19:20:19Z antoine $
+# $FreeBSD$
 
 PORTNAME=	grepmail
 PORTVERSION=	5.3033
