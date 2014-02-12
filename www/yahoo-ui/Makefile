@@ -1,4 +1,4 @@
-# $FreeBSD: www/yahoo-ui/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD$
 
 PORTNAME=	yahoo
 DISTVERSION=	2.8.2
