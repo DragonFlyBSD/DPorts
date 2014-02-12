@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: devel/svn_load_dirs/Makefile 333080 2013-11-07 11:28:36Z knu $
+# $FreeBSD$
 
 PORTNAME=	svn_load_dirs
 PORTVERSION=	1.8.4
@@ -12,7 +12,9 @@ DISTFILES=	LICENSE_AFL3.txt \
 DIST_SUBDIR=	subversion/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	knu@FreeBSD.org
-COMMENT=	A Perl script to load directories into a Subversion repository
+COMMENT=	Perl script to load directories into a Subversion repository
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 RUN_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		${LOCALBASE}/bin/svn:${PORTSDIR}/devel/subversion
@@ -21,15 +23,8 @@ USES=		perl5
 
 PLIST_FILES=	bin/svn_load_dirs
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MEXAMPLES}
 PORTEXAMPLES=	*
-.endif
-.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	*
-.endif
 
 do-extract:
 	${MKDIR} ${WRKSRC}
@@ -44,16 +39,12 @@ do-build:
 		${WRKSRC}/svn_load_dirs.pl.in > ${WRKSRC}/svn_load_dirs.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/svn_load_dirs.pl ${PREFIX}/bin/svn_load_dirs
-.if ${PORT_OPTIONS:MEXAMPLES}
-	${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/svn_load_dirs_property_table.example ${EXAMPLESDIR}/
-.endif
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/svn_load_dirs.pl ${STAGEDIR}${PREFIX}/bin/svn_load_dirs
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/svn_load_dirs_property_table.example ${STAGEDIR}${EXAMPLESDIR}/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	for f in LICENSE_AFL3.txt svn_load_dirs.README; do \
-		${INSTALL_DATA} ${WRKSRC}/"$$f" ${DOCSDIR}/; \
+		${INSTALL_DATA} ${WRKSRC}/"$$f" ${STAGEDIR}${DOCSDIR}/; \
 	done
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
