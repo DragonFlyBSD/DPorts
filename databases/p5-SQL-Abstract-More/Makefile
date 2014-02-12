@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: databases/p5-SQL-Abstract-More/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	SQL-Abstract-More
 PORTVERSION=	1.15
