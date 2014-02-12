@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/gimp-resynthesizer/Makefile 333214 2013-11-08 12:39:52Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	resynthesizer
 PORTVERSION=	2.0
