@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-# $FreeBSD: audio/ices/Makefile 337907 2013-12-28 20:35:26Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ices
 PORTVERSION=	2.0.2
