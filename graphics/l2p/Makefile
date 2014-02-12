@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/l2p/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	l2p
 PORTVERSION=	1.1.1
