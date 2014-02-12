@@ -1,5 +1,5 @@
 # Created by: John Reynolds <johnjen@reynoldsnet.org>
-# $FreeBSD: graphics/imageindex/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	imageindex
 PORTVERSION=	1.1
