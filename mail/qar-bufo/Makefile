@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: mail/qar-bufo/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qar-bufo
 PORTVERSION=	1.3.1
