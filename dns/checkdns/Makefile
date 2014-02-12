@@ -1,5 +1,5 @@
 # Created by: Ozkan KIRIK <ozkan@enderunix.org>
-# $FreeBSD: dns/checkdns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	checkdns
 PORTVERSION=	0.5
