@@ -1,5 +1,5 @@
 # Created by: Danny Pansters <danny@ricin.com>
-# $FreeBSD: devel/qscintilla2-designerplugin/Makefile 333044 2013-11-06 22:48:02Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	designerplugin
 PORTVERSION=	${QSCI2_VERSION}
