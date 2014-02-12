@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: www/rubygem-ramaze/Makefile 338323 2013-12-31 15:00:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ramaze
 PORTVERSION=	2012.12.08
