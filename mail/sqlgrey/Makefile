@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: mail/sqlgrey/Makefile 335776 2013-12-06 16:59:37Z feld $
+# $FreeBSD$
 
 PORTNAME=	sqlgrey
 PORTVERSION=	1.8.0
