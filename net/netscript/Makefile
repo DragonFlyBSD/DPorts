@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/netscript/Makefile 337410 2013-12-25 12:45:39Z pawel $
+# $FreeBSD$
 
 PORTNAME=	netscript
 PORTVERSION=	1.7.1
