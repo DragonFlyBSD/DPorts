@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: devel/rubygem-warbler/Makefile 335325 2013-11-30 18:29:29Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	warbler
 PORTVERSION=	1.4.0
