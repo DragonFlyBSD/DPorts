@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: audio/p5-Test-Corpus-Audio-MPD/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-Corpus-Audio-MPD
 PORTVERSION=	1.120990
