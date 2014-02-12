@@ -1,5 +1,5 @@
 # Created by: William Ward <William.Ward@ericsson.com>
-# $FreeBSD: net/nylon/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nylon
 PORTVERSION=	1.21
