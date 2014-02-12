@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@FreeBSD.org>
-# $FreeBSD: www/py-scgi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	scgi
 PORTVERSION=	1.14
