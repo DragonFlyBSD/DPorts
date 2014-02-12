@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/kdeplasma-addons/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdeplasma-addons
 PORTVERSION=	${KDE4_VERSION}
