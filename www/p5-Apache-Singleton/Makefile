@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: www/p5-Apache-Singleton/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Apache-Singleton
 PORTVERSION=	0.15
