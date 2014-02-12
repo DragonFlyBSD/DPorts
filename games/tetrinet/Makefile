@@ -1,5 +1,5 @@
 # Created by: Fredrik Carlsson <fredrik@wasadata.com>
-# $FreeBSD: games/tetrinet/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tetrinet
 PORTVERSION=	0.11
@@ -11,6 +11,8 @@ COMMENT=	Console tetrinet client
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DHAVE_IPV6 -fno-builtin-log"
 PLIST_FILES=	bin/tetrinet bin/tetrinet-server
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
