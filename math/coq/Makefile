@@ -1,5 +1,5 @@
 # Created by: Rene Ladan <r.c.ladan@student.tue.nl>
-# $FreeBSD: math/coq/Makefile 339411 2014-01-11 09:31:40Z johans $
+# $FreeBSD$
 
 PORTNAME=	coq
 PORTVERSION=	8.4.3
