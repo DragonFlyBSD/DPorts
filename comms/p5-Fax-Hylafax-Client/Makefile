@@ -1,5 +1,5 @@
 # Created by: Tony Shadwick <tshadwick@oss-solutions.com>
-# $FreeBSD: comms/p5-Fax-Hylafax-Client/Makefile 332840 2013-11-05 12:30:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Fax-Hylafax-Client
 PORTVERSION=	1.02
