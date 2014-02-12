@@ -1,5 +1,5 @@
 # Created by: Christoph Moench-Tegeder <cmt@burggraben.net>
-# $FreeBSD: graphics/gimpfx-foundry/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gimpfx-foundry
 PORTVERSION=	2.6
