@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Data-Thunk/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Thunk
 PORTVERSION=	0.07
