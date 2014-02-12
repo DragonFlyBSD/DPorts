@@ -1,5 +1,5 @@
 # Created by: jmacd
-# $FreeBSD: games/xpilot/Makefile 329380 2013-10-04 20:36:55Z lme $
+# $FreeBSD$
 
 PORTNAME=	xpilot
 PORTVERSION=	4.5.5
