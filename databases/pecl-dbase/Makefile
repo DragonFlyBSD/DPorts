@@ -1,5 +1,5 @@
 # Created by: toomas <toomas@median.ee>
-# $FreeBSD: databases/pecl-dbase/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dbase
 PORTVERSION=	5.1.0
