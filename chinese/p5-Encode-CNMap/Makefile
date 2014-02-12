@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/p5-Encode-CNMap/Makefile 328366 2013-09-26 14:35:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Encode-CNMap
 PORTVERSION=	0.32
