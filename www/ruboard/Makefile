@@ -1,5 +1,5 @@
 # Created by: Andrew Maltsev <am@amsoft.ru>
-# $FreeBSD: www/ruboard/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ruboard
 PORTVERSION=	1.2.2
