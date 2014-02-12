@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: mail/squirrelmail-login_auth-plugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		login_auth
 PORTVERSION=		3.0
