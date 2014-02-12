@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/ruby-ming/Makefile 341908 2014-01-31 02:58:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	ming
 PORTVERSION=	0.2a.${RUBY_MING_VERSION}
