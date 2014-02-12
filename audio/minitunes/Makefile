@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: audio/minitunes/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	minitunes
 PORTVERSION=	0.1.1
