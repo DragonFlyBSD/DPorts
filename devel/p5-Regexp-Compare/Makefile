@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Regexp-Compare/Makefile 331583 2013-10-25 13:37:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Regexp-Compare
 PORTVERSION=	0.22
