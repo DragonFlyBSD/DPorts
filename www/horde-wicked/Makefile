@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-wicked/Makefile 341402 2014-01-27 13:30:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wicked
 DISTVERSION=	2.0.1
