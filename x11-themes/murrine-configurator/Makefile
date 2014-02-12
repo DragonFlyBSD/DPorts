@@ -1,5 +1,5 @@
 # Created by: Ted Stodgell <tstodgell@gmail.com>
-# $FreeBSD: x11-themes/murrine-configurator/Makefile 341375 2014-01-27 11:33:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	murrine-configurator
 PORTVERSION=	0.5
