@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-session/Makefile 331275 2013-10-22 14:04:01Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	rox-session
 PORTVERSION=	0.40.0
