@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/uim-tomoe-gtk/Makefile 330521 2013-10-16 16:40:39Z ume $
+# $FreeBSD$
 
 PORTNAME=	uim-tomoe-gtk
 PORTVERSION=	0.6.0
