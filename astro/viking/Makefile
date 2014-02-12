@@ -1,5 +1,5 @@
 # Created by: David Le Brun <david@trucs.org>
-# $FreeBSD: astro/viking/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	viking
 PORTVERSION=	1.5
