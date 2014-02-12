@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/rubygem-prototype-rails/Makefile 340902 2014-01-24 14:47:11Z miwi $
+# $FreeBSD$
 
 PORTNAME=	prototype-rails
 PORTVERSION=	3.2.1
