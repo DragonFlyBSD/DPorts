@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Types-Set-Object/Makefile 340245 2014-01-19 09:26:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Types-Set-Object
 PORTVERSION=	0.04
