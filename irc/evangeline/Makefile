@@ -1,5 +1,5 @@
 # Created by: Edini <ports@edini.net>
-# $FreeBSD: irc/evangeline/Makefile 334493 2013-11-21 13:55:27Z gahr $
+# $FreeBSD$
 
 PORTNAME=	evangeline
 PORTVERSION=	1.1.4
