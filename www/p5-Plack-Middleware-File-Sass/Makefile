@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-File-Sass/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-File-Sass
 PORTVERSION=	0.03
