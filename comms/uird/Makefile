@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: comms/uird/Makefile 338555 2014-01-03 16:06:00Z adamw $
+# $FreeBSD$
 
 PORTNAME=	uird
 PORTVERSION=	1.1
@@ -21,6 +21,8 @@ PLIST_FILES=	bin/uird
 PORTDOCS=	Documentation
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
