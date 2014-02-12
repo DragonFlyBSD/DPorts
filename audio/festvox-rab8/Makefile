@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festvox-rab8/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festvox-rab8
 PORTVERSION=	1.4.1
