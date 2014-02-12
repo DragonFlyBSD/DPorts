@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/gbirthday/Makefile 340201 2014-01-18 18:49:16Z rm $
+# $FreeBSD$
 
 PORTNAME=	gbirthday
 PORTVERSION=	0.6.7
