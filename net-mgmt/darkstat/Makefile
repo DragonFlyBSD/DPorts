@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: net-mgmt/darkstat/Makefile 341251 2014-01-26 18:06:45Z jgh $
+# $FreeBSD$
 
 PORTNAME=	darkstat
 PORTVERSION=	3.0.718
