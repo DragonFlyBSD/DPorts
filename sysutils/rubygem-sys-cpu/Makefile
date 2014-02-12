@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: sysutils/rubygem-sys-cpu/Makefile 332050 2013-10-30 02:57:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	sys-cpu
 PORTVERSION=	0.7.0
