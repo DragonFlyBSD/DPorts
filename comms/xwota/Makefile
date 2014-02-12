@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/xwota/Makefile 338057 2013-12-30 01:03:13Z db $
+# $FreeBSD$
 
 PORTNAME=	xwota
 PORTVERSION=	0.4
