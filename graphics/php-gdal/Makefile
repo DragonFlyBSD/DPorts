@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/php-gdal/Makefile 334068 2013-11-17 10:27:10Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gdal
 PORTVERSION=	1.10.1
