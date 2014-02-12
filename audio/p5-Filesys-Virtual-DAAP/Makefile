@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: audio/p5-Filesys-Virtual-DAAP/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Filesys-Virtual-DAAP
 PORTVERSION=	0.04
@@ -18,9 +18,6 @@ RUN_DEPENDS=	p5-Class-Accessor>=0:${PORTSDIR}/devel/p5-Class-Accessor \
 BUILD_DEPENDS:=	${RUN_DEPENDS}
 
 USES=		perl5
-NO_STAGE=	yes
 USE_PERL5=	modbuild
-
-MAN3=		Filesys::Virtual::DAAP.3
 
 .include <bsd.port.mk>
