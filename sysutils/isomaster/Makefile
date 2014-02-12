@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD: sysutils/isomaster/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	isomaster
 PORTVERSION=	1.3.9
