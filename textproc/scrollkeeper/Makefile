@@ -1,5 +1,5 @@
 # Created by: Rene Hexel <rh@netbsd.org>
-# $FreeBSD: textproc/scrollkeeper/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 #    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.12 2007/10/17 21:36:13 mezz Exp $
 
 PORTNAME=	scrollkeeper
