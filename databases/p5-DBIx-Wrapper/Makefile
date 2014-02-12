@@ -1,5 +1,5 @@
 # Created by: Don Owens <don@regexguy.com>
-# $FreeBSD: databases/p5-DBIx-Wrapper/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Wrapper
 PORTVERSION=	0.28
