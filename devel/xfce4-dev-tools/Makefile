@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/xfce4-dev-tools/Makefile 330341 2013-10-14 18:51:52Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-dev-tools
 PORTVERSION=	4.10.0
