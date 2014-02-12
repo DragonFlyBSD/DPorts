@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: head/math/qtiplot/Makefile 342388 2014-02-03 07:35:33Z makc $
+# $FreeBSD$
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
