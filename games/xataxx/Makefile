@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xataxx/Makefile 333970 2013-11-16 02:43:26Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xataxx
 PORTVERSION=	1.0
