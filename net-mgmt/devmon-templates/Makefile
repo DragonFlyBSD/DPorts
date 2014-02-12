@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: net-mgmt/devmon-templates/Makefile 332419 2013-11-01 23:00:20Z feld $
+# $FreeBSD$
 
 PORTNAME=	devmon-templates
 DISTVERSION=	20080206
