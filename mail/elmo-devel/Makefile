@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo-devel/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.2
@@ -24,9 +24,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		elmo.1 elmoconf.pl.1
+OPTIONS_DEFINE=	NLS 
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -53,8 +52,5 @@ post-patch:
 		${WRKSRC}/src/elmoconf.pl
 	@${REINPLACE_CMD} -e 's|gpgme4|gpgme|g' -e 's|== "|= "|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|gpgme4|gpgme|g' ${WRKSRC}/src/pgp.c
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
