@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: games/tuxpuck/Makefile 337448 2013-12-25 19:45:08Z pawel $
+# $FreeBSD$
 
 PORTNAME=	tuxpuck
 PORTVERSION=	0.8.2
