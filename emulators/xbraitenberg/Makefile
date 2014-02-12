@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: emulators/xbraitenberg/Makefile 340240 2014-01-19 09:24:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xbraitenberg
 PORTVERSION=	0.9
