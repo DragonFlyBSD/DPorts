@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/bombherman/Makefile 331194 2013-10-21 21:23:34Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	bomb-her-man
 PORTVERSION=	0.3
