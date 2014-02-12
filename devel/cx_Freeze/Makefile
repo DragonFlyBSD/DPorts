@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cx_Freeze/Makefile 335997 2013-12-09 15:12:08Z wg $
+# $FreeBSD$
 
 PORTNAME=	cx_Freeze
 PORTVERSION=	4.3.2
