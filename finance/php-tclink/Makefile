@@ -1,15 +1,15 @@
 # Created by: <mbowie@buzmo.com>
-# $FreeBSD: finance/php-tclink/Makefile 342186 2014-02-01 16:56:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tclink
-PORTVERSION=	3.4.4
+PORTVERSION=	4.0.2
 CATEGORIES=	finance
-MASTER_SITES=	http://www.trustcommerce.com/downloads/
+MASTER_SITES=	https://vault.trustcommerce.com/downloads/
 PKGNAMEPREFIX=	php-
 DISTNAME=	${PORTNAME}-${PORTVERSION}-php
 
 MAINTAINER=	mbowie@buzmo.com
-COMMENT=	A PHP extension for TrustCommerce credit card processing
+COMMENT=	PHP extension for TrustCommerce credit card processing
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
