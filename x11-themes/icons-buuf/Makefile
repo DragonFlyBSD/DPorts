@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icons-buuf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	icons-buuf
 PORTVERSION=	1.6r2
