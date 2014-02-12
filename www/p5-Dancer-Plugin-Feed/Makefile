@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Plugin-Feed/Makefile 329846 2013-10-08 22:45:27Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-Feed
 PORTVERSION=	1.131470
