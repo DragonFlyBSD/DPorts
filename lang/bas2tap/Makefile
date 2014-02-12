@@ -1,5 +1,5 @@
 # Created by: rene
-# $FreeBSD: lang/bas2tap/Makefile 328129 2013-09-24 13:30:45Z rene $
+# $FreeBSD$
 
 PORTNAME=	bas2tap
 PORTVERSION=	2.5
