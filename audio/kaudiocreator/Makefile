@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/kaudiocreator/Makefile 333118 2013-11-07 15:29:22Z dbn $
+# $FreeBSD$
 
 PORTNAME=	kaudiocreator
 PORTVERSION=	1.3
