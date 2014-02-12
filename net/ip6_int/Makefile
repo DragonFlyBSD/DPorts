@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: net/ip6_int/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ip6_int
 PORTVERSION=	1.0
@@ -17,12 +17,11 @@ NO_BUILD=	yes
 USES=		shebangfix perl5
 SHEBANG_FILES=	ip6_int
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ip6_int ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/ip6_int ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
