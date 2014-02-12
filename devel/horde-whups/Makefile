@@ -1,4 +1,4 @@
-# $FreeBSD: devel/horde-whups/Makefile 341400 2014-01-27 13:17:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	whups
 DISTVERSION=	3.0.0RC2
