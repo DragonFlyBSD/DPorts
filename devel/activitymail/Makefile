@@ -1,5 +1,5 @@
 # Created by: Joseph Scott <joseph@randomnetworks.com>
-# $FreeBSD: devel/activitymail/Makefile 340708 2014-01-22 13:29:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	activitymail
 PORTVERSION=	1.26
