@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Git-Sub/Makefile 334510 2013-11-21 19:01:51Z lth $
+# $FreeBSD$
 
 PORTNAME=	Git-Sub
 PORTVERSION=	0.130270
