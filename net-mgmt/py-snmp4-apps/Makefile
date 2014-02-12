@@ -1,8 +1,8 @@
 # Created by: Martin Jackson <mhjacks@swbell.net>
-# $FreeBSD: net-mgmt/py-snmp4-apps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	snmp4-apps
-PORTVERSION=	0.3.3
+PORTVERSION=	0.3.4
 CATEGORIES=	net-mgmt python
 MASTER_SITES=	CHEESESHOP \
 		SF/pysnmp/pysnmp-apps/${PORTVERSION}
@@ -12,27 +12,20 @@ DISTNAME=	pysnmp-apps-${PORTVERSION}
 MAINTAINER=	mhjacks@swbell.net
 COMMENT=	Command line utilities for pysnmp4
 
-LICENSE=	BSD
+LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}snmp4>=4.2.3:${PORTSDIR}/net-mgmt/py-snmp4
 
-# Python3 ready
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_PKGNAME=	pysnmp-apps
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
+DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
 
-PORTDOCS=	CHANGES \
-		README
+PORTDOCS=	CHANGES README
 
-NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-. for f in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-. endfor
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
