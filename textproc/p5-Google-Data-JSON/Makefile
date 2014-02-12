@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/p5-Google-Data-JSON/Makefile 341158 2014-01-26 09:24:41Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Google-Data-JSON
 PORTVERSION=	0.1.10
