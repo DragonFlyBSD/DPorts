@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: games/blockade/Makefile 332072 2013-10-30 05:49:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	blockade
 PORTVERSION=	1.00
