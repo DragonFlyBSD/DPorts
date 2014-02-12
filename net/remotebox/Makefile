@@ -1,8 +1,8 @@
 # Created by: Haowu Ge <ghw@7axu.com>
-# $FreeBSD: net/remotebox/Makefile 341851 2014-01-30 15:45:16Z decke $
+# $FreeBSD$
 
 PORTNAME=	remotebox
-PORTVERSION=	1.6
+PORTVERSION=	1.7
 CATEGORIES=	net
 MASTER_SITES=	http://remotebox.knobgoblin.org.uk/downloads/
 DISTNAME=	RemoteBox-${PORTVERSION}
