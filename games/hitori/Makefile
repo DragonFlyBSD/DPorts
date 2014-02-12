@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/hitori/Makefile 334274 2013-11-18 23:26:09Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	hitori
 PORTVERSION=	0.4.2
