@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-MIME-Creator-ISO_2022_JP/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-MIME-Creator-ISO_2022_JP
 PORTVERSION=	0.02
