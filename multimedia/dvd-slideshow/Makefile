@@ -1,5 +1,5 @@
 # Created by: Phil Oleson <oz@nixil.net>
-# $FreeBSD: multimedia/dvd-slideshow/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dvd-slideshow
 PORTVERSION=	0.8.4
