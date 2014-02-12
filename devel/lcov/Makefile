@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@FreeBSD.org>
-# $FreeBSD: devel/lcov/Makefile 341670 2014-01-28 23:11:27Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lcov
 PORTVERSION=	1.10
