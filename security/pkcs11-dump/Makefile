@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: security/pkcs11-dump/Makefile 342027 2014-01-31 16:49:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pkcs11-dump
 PORTVERSION=	0.3.4
