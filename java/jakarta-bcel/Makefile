@@ -1,4 +1,4 @@
-# $FreeBSD: java/jakarta-bcel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bcel
 PORTVERSION=	5.2
