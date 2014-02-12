@@ -1,5 +1,5 @@
 # Created by: Danny Howard <dannyman@toldme.com>
-# $FreeBSD: sysutils/enteruser/Makefile 333275 2013-11-09 05:55:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	enteruser
 PORTVERSION=	1.0
