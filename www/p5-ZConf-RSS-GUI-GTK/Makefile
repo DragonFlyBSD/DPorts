@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: www/p5-ZConf-RSS-GUI-GTK/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	ZConf-RSS-GUI-GTK
 PORTVERSION=	0.0.1
