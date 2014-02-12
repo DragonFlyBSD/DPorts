@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-leechblock/Makefile 341210 2014-01-26 15:11:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	leechblock
 PORTVERSION=	0.5.2
