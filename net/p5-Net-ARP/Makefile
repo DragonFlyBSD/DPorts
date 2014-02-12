@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-Net-ARP/Makefile 336834 2013-12-18 14:22:11Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Net-ARP
 PORTVERSION=	1.0.8
