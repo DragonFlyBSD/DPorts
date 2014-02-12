@@ -1,5 +1,5 @@
 # Created by: Slaven Rezic <eserte@cs.tu-berlin.de>
-# $FreeBSD: german/BBBike/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	BBBike
 PORTVERSION=	3.18
