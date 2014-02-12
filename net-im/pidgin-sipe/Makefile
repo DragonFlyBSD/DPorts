@@ -1,5 +1,5 @@
 # Created by: John Prather
-# $FreeBSD: net-im/pidgin-sipe/Makefile 336957 2013-12-19 20:11:14Z swills $
+# $FreeBSD$
 
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.13.1
