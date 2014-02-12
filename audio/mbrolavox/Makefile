@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/mbrolavox/Makefile 337917 2013-12-28 21:16:26Z antoine $
+# $FreeBSD$
 
 PORTNAME=	mbrolavox
 PORTVERSION=	3.0.1
