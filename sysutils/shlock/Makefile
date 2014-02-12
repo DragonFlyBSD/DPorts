@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/shlock/Makefile 333988 2013-11-16 12:33:15Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	shlock
 PORTVERSION=	2.5.3
