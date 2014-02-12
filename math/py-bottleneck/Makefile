@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: math/py-bottleneck/Makefile 335898 2013-12-08 14:19:34Z wg $
+# $FreeBSD$
 
 PORTNAME=	bottleneck
 PORTVERSION=	0.7.0
