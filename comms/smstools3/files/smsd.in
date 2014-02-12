@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: comms/smstools3/files/smsd.in 341822 2014-01-30 09:14:15Z madpilot $
+# $FreeBSD: head/comms/smstools3/files/smsd.in 341822 2014-01-30 09:14:15Z madpilot $
 #
 # PROVIDE: smsd 
 # REQUIRE: LOGIN

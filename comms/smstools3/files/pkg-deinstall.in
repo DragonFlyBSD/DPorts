@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: comms/smstools3/files/pkg-deinstall.in 331281 2013-10-22 14:54:01Z madpilot $
+# $FreeBSD: head/comms/smstools3/files/pkg-deinstall.in 331281 2013-10-22 14:54:01Z madpilot $
 #
 
 if [ "x$2" = "xPOST-DEINSTALL" ]; then

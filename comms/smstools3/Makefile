@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: comms/smstools3/Makefile 341822 2014-01-30 09:14:15Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	smstools
 PORTVERSION=	3.1.15
