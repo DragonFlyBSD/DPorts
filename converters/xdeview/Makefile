@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-# $FreeBSD: converters/xdeview/Makefile 338556 2014-01-03 16:12:21Z adamw $
+# $FreeBSD$
 
 PORTNAME=	xdeview
 PORTVERSION=	0.5.20
