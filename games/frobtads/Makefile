@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: games/frobtads/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	frobtads
 PORTVERSION=	1.2.2
