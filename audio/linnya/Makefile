@@ -1,4 +1,4 @@
-# $FreeBSD: audio/linnya/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	linnya
 PORTVERSION=	2.3.0
