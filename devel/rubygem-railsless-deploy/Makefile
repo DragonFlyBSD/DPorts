@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-railsless-deploy/Makefile 338313 2013-12-31 14:30:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	railsless-deploy
 PORTVERSION=	1.1.2
