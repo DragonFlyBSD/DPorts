@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: devel/picasm/Makefile 340049 2014-01-17 14:45:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	picasm
 PORTVERSION=	1.14
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable assembler for 16C84 series PICs
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
