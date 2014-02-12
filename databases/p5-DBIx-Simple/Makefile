@@ -1,5 +1,5 @@
 # Created by: Parv <parv@pair.org>
-# $FreeBSD: databases/p5-DBIx-Simple/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Simple
 PORTVERSION=	1.35
@@ -21,12 +21,6 @@ TEXT_TABLE_DESC=	Create plain text table from data
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	DBIx::Simple.3 \
-	DBIx::Simple::Examples.3 \
-	DBIx::Simple::Comparison.3 \
-	DBIx::Simple::Result::RowObject.3
-
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSQL_INTERP}
