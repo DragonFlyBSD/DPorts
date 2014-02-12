@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-SebastianBergmann_PHPLOC/Makefile 335049 2013-11-27 19:40:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	PHPLOC
 PORTVERSION=	2.0.3
