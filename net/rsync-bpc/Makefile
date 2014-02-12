@@ -1,5 +1,5 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: net/rsync-bpc/Makefile 341310 2014-01-26 23:37:32Z rm $
+# $FreeBSD$
 
 PORTNAME=	rsync-bpc
 PORTVERSION=	3.0.9.3
