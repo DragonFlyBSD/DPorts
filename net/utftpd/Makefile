@@ -1,5 +1,5 @@
 # Created by: andreas@FreeBSD.org
-# $FreeBSD: net/utftpd/Makefile 341965 2014-01-31 09:46:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	utftpd
 PORTVERSION=	0.2.4
