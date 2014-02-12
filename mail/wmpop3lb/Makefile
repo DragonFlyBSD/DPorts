@@ -1,5 +1,5 @@
 # Created by: Otavio Fernandes <otaviof@gmail.com>
-# $FreeBSD: mail/wmpop3lb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmpop3lb
 PORTVERSION=	2.4.2
@@ -29,6 +29,8 @@ post-patch:
 			  -e "s,^FLAGS *=.*$$,FLAGS = ${CFLAGS}," \
 			  -e "s,/usr/X11R6,${LOCALBASE},g" \
 		${BUILD_WRKSRC}/Makefile
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
