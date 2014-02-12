@@ -1,5 +1,5 @@
 # Created by: Ali Mashtizadeh <ali@mashtizadeh.org>
-# $FreeBSD: mail/p5-GMail-IMAPD/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	GMail-IMAPD
 PORTVERSION=	0.94
