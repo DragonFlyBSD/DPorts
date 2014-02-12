@@ -1,5 +1,5 @@
 # Created by: anderson@cnpm.embrapa.br
-# $FreeBSD: www/drupal6-image/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	image
 DISTVERSION=	6.x-1.0-beta5
