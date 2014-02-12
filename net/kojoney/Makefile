@@ -1,5 +1,5 @@
 # Created by: mj <systemoperator@gmail.com>
-# $FreeBSD: net/kojoney/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	kojoney
 PORTVERSION=	0.0.4.2
