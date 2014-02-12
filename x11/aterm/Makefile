@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11/aterm/Makefile 338842 2014-01-06 08:35:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
