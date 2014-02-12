@@ -1,5 +1,5 @@
 # Created by: Andrew J. Caines <A.J.Caines@halplant.com>
-# $FreeBSD: mail/pflogstats/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pflogstats
 PORTVERSION=	1.1.1
