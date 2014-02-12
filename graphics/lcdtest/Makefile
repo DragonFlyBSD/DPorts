@@ -1,5 +1,5 @@
 # Created by: Eric P. Scott <eps+pbug0703@ana.com>
-# $FreeBSD: graphics/lcdtest/Makefile 338467 2014-01-02 19:28:05Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lcdtest
 PORTVERSION=	1.18
