@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-WebTest/Makefile 341705 2014-01-29 09:17:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTTP-WebTest
 PORTVERSION=	2.04
