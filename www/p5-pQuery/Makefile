@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-pQuery/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	pQuery
 PORTVERSION=	0.09
