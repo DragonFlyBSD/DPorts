@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: finance/rubygem-money/Makefile 335709 2013-12-05 20:28:37Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	money
 PORTVERSION=	6.0.0
