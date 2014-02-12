@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <pgpollucci@p6m7g8.com>
-# $FreeBSD: print/rubygem-prawn-graph/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	prawn-graph
 PORTVERSION=	0.0.4
