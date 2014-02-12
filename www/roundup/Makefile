@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: www/roundup/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	roundup
 PORTVERSION=	1.4.21
