@@ -1,5 +1,5 @@
 # Created by: Timothy Beyer <beyert@cs.ucr.edu>
-# $FreeBSD: audio/arss/Makefile 337574 2013-12-26 17:43:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	arss
 PORTVERSION=	0.2.3
