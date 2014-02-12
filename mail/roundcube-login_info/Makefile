@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: mail/roundcube-login_info/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	login_info
 DISTVERSION=	1.2
