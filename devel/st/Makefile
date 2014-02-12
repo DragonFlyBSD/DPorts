@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: devel/st/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	st
 PORTVERSION=	1.9
