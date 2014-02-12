@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: devel/p5-Test-Class-Most/Makefile 339698 2014-01-14 16:27:08Z mat $
+# $FreeBSD$
 
 PORTNAME=	Test-Class-Most
 PORTVERSION=	0.08
