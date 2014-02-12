@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: print/detex/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	detex
 PORTVERSION=	2.8
