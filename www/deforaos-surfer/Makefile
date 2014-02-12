@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: www/deforaos-surfer/Makefile 332783 2013-11-04 20:59:58Z wg $
+# $FreeBSD$
 
 PORTNAME=	surfer
 PORTVERSION=	0.2.6
