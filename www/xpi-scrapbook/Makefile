@@ -1,5 +1,5 @@
 # Created by: Hannes Frederic Sowa <hannes@stressinduktion.org>
-# $FreeBSD: www/xpi-scrapbook/Makefile 341214 2014-01-26 15:13:02Z miwi $
+# $FreeBSD$
 
 PORTNAME=	scrapbook
 PORTVERSION=	1.2.0.8
