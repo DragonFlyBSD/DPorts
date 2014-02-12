@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/qtgtl/Makefile 333663 2013-11-13 08:42:09Z avilla $
+# $FreeBSD$
 
 PORTNAME=	qtgtl
 PORTVERSION=	0.9.3
