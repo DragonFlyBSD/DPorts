@@ -1,5 +1,5 @@
 # Created by: Tom Judge <tj@FreeBSD.org>
-# $FreeBSD: www/p5-LWP-Authen-Negotiate/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	LWP-Authen-Negotiate
 PORTVERSION=	0.08
