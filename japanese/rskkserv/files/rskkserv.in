@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: japanese/rskkserv/files/rskkserv.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/japanese/rskkserv/files/rskkserv.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: rskkserv
 # REQUIRE: DAEMON
