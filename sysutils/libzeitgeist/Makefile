@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/libzeitgeist/Makefile 341437 2014-01-27 17:55:28Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	libzeitgeist
 PORTVERSION=	0.3.18
