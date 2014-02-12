@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: russian/rubygem-russian/Makefile 335711 2013-12-05 20:28:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	russian
 PORTVERSION=	0.6.0
