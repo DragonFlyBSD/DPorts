@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/prelude-lml/files/prelude-lml.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/prelude-lml/files/prelude-lml.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: prelude_lml
 # REQUIRE: LOGIN postgresql mysql
