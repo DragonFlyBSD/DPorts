@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: graphics/py-PyX/Makefile 340155 2014-01-18 08:59:01Z mva $
+# $FreeBSD$
 
 PORTNAME=	PyX
 PORTVERSION=	0.12.1
