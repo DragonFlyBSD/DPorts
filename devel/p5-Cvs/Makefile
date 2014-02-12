@@ -1,5 +1,5 @@
 # Created by: Philip Drapeau <pdrapeau@advanis.ca>
-# $FreeBSD: devel/p5-Cvs/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Cvs
 PORTVERSION=	0.07
