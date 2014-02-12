@@ -1,5 +1,5 @@
 # Created by: Alexander Langer <alex@FreeBSD.org>
-# $FreeBSD: games/tuxkart/Makefile 337456 2013-12-25 21:23:12Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	tuxkart
 PORTVERSION=	0.4.0
