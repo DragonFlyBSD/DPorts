@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/sets/Makefile 337388 2013-12-24 21:32:01Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sets
 PORTVERSION=	1.0.0
