@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: www/py-dotcloud.cli/Makefile 341752 2014-01-29 15:56:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dotcloud.cli
 PORTVERSION=	0.4.3
