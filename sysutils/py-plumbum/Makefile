@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: sysutils/py-plumbum/Makefile 336924 2013-12-19 15:21:49Z dbn $
+# $FreeBSD$
 
 PORTNAME=	plumbum
 PORTVERSION=	1.4.0
