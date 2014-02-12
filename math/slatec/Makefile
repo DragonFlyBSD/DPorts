@@ -1,5 +1,5 @@
 # Created by: Anton Shterenlikht
-# $FreeBSD: math/slatec/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	slatec
 PORTVERSION=	4.1
