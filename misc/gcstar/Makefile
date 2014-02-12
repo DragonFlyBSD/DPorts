@@ -1,5 +1,5 @@
 # Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-# $FreeBSD: misc/gcstar/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gcstar
 PORTVERSION=	1.7.0
