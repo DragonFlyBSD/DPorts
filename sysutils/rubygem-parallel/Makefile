@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-parallel/Makefile 340251 2014-01-19 09:27:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	parallel
 PORTVERSION=	0.9.2
