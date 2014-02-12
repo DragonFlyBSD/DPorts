@@ -1,5 +1,5 @@
 # Created by: Brian Candler <B.Candler@pobox.com>
-# $FreeBSD: print/pmw/Makefile 335685 2013-12-05 20:25:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pmw
 PORTVERSION=	4.27
