@@ -1,5 +1,5 @@
 # Created by: Alexey Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: databases/mysqlbackup/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mysqlbackup
 PORTVERSION=	2.7
