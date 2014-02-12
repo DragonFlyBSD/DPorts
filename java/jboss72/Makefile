@@ -1,5 +1,5 @@
 # Created by: Alexander Yerenkow <yerenkow@gmail.com>
-# $FreeBSD: java/jboss72/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jboss72
 PORTVERSION=	7.2.0
