@@ -1,5 +1,5 @@
 # Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
-# $FreeBSD: databases/p5-DBD-XBase/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBD-XBase
 PORTVERSION=	1.05
