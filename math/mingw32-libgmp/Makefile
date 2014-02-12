@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: math/mingw32-libgmp/Makefile 334163 2013-11-18 09:40:02Z marino $
+# $FreeBSD$
 
 PORTNAME=	libgmp
 PORTVERSION=	5.1.2
