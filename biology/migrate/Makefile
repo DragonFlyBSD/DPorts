@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: biology/migrate/Makefile 341721 2014-01-29 12:08:29Z danfe $
+# $FreeBSD$
 
 PORTNAME=	migrate
 PORTVERSION=	3.5.1
