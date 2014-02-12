@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/elfio/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	elfio
 PORTVERSION=	1.0.3
@@ -24,6 +24,9 @@ OPTIONE_DEFINE=	EXAMPLES DOCS
 PORTDOCS=	*
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MEXAMPLES}
