@@ -1,5 +1,5 @@
 # Created by: Malte Lance <malte.lance@gmx.net>
-# $FreeBSD: graphics/4va/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	4va
 PORTVERSION=	1.21
