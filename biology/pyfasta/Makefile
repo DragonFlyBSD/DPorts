@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: biology/pyfasta/Makefile 341984 2014-01-31 12:31:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pyfasta
 PORTVERSION=	0.5.1
