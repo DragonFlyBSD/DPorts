@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/xsc/Makefile 335789 2013-12-06 23:22:17Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xsc
 PORTVERSION=	1.6
