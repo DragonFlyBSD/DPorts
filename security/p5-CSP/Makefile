@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: security/p5-CSP/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	CSP
 PORTVERSION=	0.34
