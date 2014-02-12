@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung
-# $FreeBSD: devel/p5-Module-Dependency/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Module-Dependency
 PORTVERSION=	1.86
