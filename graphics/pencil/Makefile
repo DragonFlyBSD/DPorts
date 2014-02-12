@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: graphics/pencil/Makefile 335003 2013-11-27 07:38:08Z martymac $
+# $FreeBSD$
 
 PORTNAME=	pencil
 PORTVERSION=	0.4.4b
