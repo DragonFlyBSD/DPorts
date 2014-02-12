@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/cre/Makefile 335107 2013-11-28 16:49:31Z mat $
+# $FreeBSD$
 
 PORTNAME=	cre
 DISTVERSION=	1.2beta_r2
