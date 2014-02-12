@@ -1,5 +1,5 @@
 # Created by: simond@irrelevant.org
-# $FreeBSD: devel/p5-Module-Reload-Sel/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Module-Reload-Sel
 PORTVERSION=	1.02
