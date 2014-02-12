@@ -1,5 +1,5 @@
 # Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-# $FreeBSD: security/py-clamav/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	clamav
 PORTVERSION=	0.4.1
