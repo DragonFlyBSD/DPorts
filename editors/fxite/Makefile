@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: editors/fxite/Makefile 340821 2014-01-23 10:15:29Z gahr $
+# $FreeBSD$
 
 PORTNAME=	fxite
 PORTVERSION=	0.92
