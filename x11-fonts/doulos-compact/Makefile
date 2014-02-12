@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: x11-fonts/doulos-compact/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	DoulosSILCompact
 PORTVERSION=	4.110
