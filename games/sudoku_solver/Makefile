@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/sudoku_solver/Makefile 333349 2013-11-09 21:47:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sudoku_solver
 PORTVERSION=	1.20
