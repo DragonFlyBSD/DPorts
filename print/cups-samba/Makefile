@@ -1,5 +1,5 @@
 # Created by: John Merryweather Cooper <coop9211@uidaho.edu>
-# $FreeBSD: print/cups-samba/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cups-samba
 PORTVERSION=	6.0
