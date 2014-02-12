@@ -1,5 +1,5 @@
 # Created by: killer	<killer@prosalg.no>
-# $FreeBSD: mail/pronto/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD$
 
 PORTNAME=	pronto
 PORTVERSION=	2.4.0
