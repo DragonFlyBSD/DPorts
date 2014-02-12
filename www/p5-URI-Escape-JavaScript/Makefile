@@ -1,5 +1,5 @@
 # Created by: Konstantin Menshikov <kostjnspb@yandex.ru>
-# $FreeBSD: www/p5-URI-Escape-JavaScript/Makefile 338758 2014-01-05 12:35:44Z az $
+# $FreeBSD$
 
 PORTNAME=	URI-Escape-JavaScript
 PORTVERSION=	0.04
