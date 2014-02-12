@@ -1,5 +1,5 @@
 # Created by: svmohr
-# $FreeBSD: comms/gscmxx/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gscmxx
 PORTVERSION=	0.4.1
