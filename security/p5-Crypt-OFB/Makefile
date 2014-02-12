@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: security/p5-Crypt-OFB/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-OFB
 PORTVERSION=	0.01
