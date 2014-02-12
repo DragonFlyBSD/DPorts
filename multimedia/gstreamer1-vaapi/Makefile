@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: multimedia/gstreamer1-vaapi/Makefile 335124 2013-11-28 21:57:01Z kwm $
+# $FreeBSD$
 
 PORTNAME=	gstreamer1-vaapi
 PORTVERSION=	0.5.7
