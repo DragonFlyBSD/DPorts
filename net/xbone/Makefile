@@ -1,5 +1,5 @@
 # Created by: Yu-Shun Wang <xbone@isi.edu>
-# $FreeBSD: net/xbone/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	XBone
 PORTVERSION=	3.2
