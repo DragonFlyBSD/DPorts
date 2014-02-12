@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: graphics/aoi/files/aoi.in 306827 2012-11-01 23:09:41Z jkim $
+# $FreeBSD: head/graphics/aoi/files/aoi.in 306827 2012-11-01 23:09:41Z jkim $
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
 

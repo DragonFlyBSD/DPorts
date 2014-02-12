@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: graphics/aoi/Makefile 338348 2014-01-01 01:56:22Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	aoi
 PORTVERSION=	3.0
