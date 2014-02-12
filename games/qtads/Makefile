@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiwang27@gmail.com>
-# $FreeBSD: games/qtads/Makefile 334603 2013-11-22 18:48:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	qtads
 PORTVERSION=	2.1.6
