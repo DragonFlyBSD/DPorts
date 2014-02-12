@@ -1,5 +1,5 @@
 # Created by: Bartek Rutkowski <r@robakdesign.com>
-# $FreeBSD: databases/pgtop/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pgtop
 PORTVERSION=	0.05
