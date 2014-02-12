@@ -1,5 +1,5 @@
 # Created by: Thomas Abthorpe <thomas@goodking.ca>
-# $FreeBSD: mail/squirrelmail-pupdate-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	pupdate
 PORTVERSION=	0.7
