@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/p5-DBD-Google/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBD-Google
 PORTVERSION=	0.51
