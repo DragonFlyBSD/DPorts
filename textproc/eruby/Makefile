@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: textproc/eruby/Makefile 338490 2014-01-02 20:25:40Z swills $
+# $FreeBSD$
 
 PORTNAME=	eruby
 PORTVERSION=	1.0.5
