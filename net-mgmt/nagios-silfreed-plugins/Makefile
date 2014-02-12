@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net-mgmt/nagios-silfreed-plugins/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nagios-silfreed-plugins
 PORTVERSION=	1.1
