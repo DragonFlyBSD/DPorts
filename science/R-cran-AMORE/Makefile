@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/R-cran-AMORE/Makefile 342139 2014-02-01 14:02:24Z antoine $
+# $FreeBSD$
 
 PORTNAME=	AMORE
 PORTVERSION=	0.2.14
