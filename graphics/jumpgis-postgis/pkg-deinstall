@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: graphics/jumpgis-postgis/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/graphics/jumpgis-postgis/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 
 if [ "$2" != "DEINSTALL" ]; then
     exit
