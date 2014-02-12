@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner (fehlner@gmx.de)
-# $FreeBSD: sysutils/userneu-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	userneu
 PORTVERSION=	1.43
