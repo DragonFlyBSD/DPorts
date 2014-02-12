@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Warnings/Makefile 336883 2013-12-19 08:01:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-Warnings
 PORTVERSION=	0.013
