@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: biology/phylip/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	phylip
 PORTVERSION=	3.695
