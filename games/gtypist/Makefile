@@ -1,4 +1,4 @@
-# $FreeBSD: games/gtypist/Makefile 328864 2013-09-30 20:23:38Z naddy $
+# $FreeBSD$
 
 PORTNAME=	gtypist
 PORTVERSION=	2.9.3
