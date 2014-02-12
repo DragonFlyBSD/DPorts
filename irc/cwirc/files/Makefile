@@ -15,7 +15,7 @@
 #   (for example, "-lossaudio" with NetBSD 1.6.1)
 ################################################################################
 #
-# $FreeBSD: irc/cwirc/files/Makefile 338196 2013-12-30 23:37:14Z db $
+# $FreeBSD$
 TARGET_OS=FREEBSD
 PLUGIN_INSTALL_DIRECTORY=%%STAGEDIR%%%%PREFIX%%/lib/xchat/plugins
 FRONTEND_INSTALL_DIRECTORY=%%STAGEDIR%%%%PREFIX%%/bin

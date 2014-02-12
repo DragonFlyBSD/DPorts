@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: irc/cwirc/Makefile 338196 2013-12-30 23:37:14Z db $
+# $FreeBSD$
 
 PORTNAME=	cwirc
 PORTVERSION=	2.0.0
