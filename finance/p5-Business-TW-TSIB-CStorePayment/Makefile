@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Business-TW-TSIB-CStorePayment/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	Business-TW-TSIB-CStorePayment
 PORTVERSION=	0.04
