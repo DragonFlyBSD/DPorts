@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: devel/ecb/Makefile 339799 2014-01-15 18:33:22Z mva $
+# $FreeBSD$
 
 PORTNAME=	ecb
 PORTVERSION=	2.40
