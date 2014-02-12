@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: www/p5-RT-Authen-ExternalAuth/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	RT-Authen-ExternalAuth
 DISTVERSION=	0.17
