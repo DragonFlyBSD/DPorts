@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgis20/Makefile 337295 2013-12-23 20:59:44Z rm $
+# $FreeBSD$
 
 PORTNAME=	postgis
 PORTVERSION=	2.0.4
