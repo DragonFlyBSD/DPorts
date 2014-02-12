@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-Calendar-Discordian/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Calendar-Discordian
 PORTVERSION=	1.0
