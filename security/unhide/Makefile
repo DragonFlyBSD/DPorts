@@ -1,5 +1,5 @@
 # Created by: ntarmos@cs.uoi.gr
-# $FreeBSD: security/unhide/Makefile 333032 2013-11-06 19:05:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	unhide
 PORTVERSION=	20121229
