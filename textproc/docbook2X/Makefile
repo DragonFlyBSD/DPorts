@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: textproc/docbook2X/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD$
 
 PORTNAME=	docbook2X
 PORTVERSION=	0.8.8
