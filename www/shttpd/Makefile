@@ -1,5 +1,5 @@
 # Created by: Sergey Lyubka (valenok@gmail.com)
-# $FreeBSD: www/shttpd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	shttpd
 PORTVERSION=	1.42
