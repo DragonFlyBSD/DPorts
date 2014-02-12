@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Variable-Eject/Makefile 333886 2013-11-15 16:37:49Z mat $
+# $FreeBSD$
 
 PORTNAME=	Variable-Eject
 PORTVERSION=	0.02
