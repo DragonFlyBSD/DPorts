@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: www/p5-Catalyst-Controller-RateLimit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Controller-RateLimit
 PORTVERSION=	0.28
