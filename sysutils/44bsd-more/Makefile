@@ -1,5 +1,5 @@
 # Created by: Tim van der Hoek <hoek@FreeBSD.org>
-# $FreeBSD: sysutils/44bsd-more/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	44bsd-more
 PORTVERSION=	${RELDATE}
