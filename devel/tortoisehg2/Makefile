@@ -1,4 +1,4 @@
-# $FreeBSD: devel/tortoisehg2/Makefile 336746 2013-12-17 17:51:02Z danilo $
+# $FreeBSD$
 
 PORTNAME=	tortoisehg
 PORTVERSION=	2.10.1
