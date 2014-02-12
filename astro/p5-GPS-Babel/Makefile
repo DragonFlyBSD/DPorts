@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-GPS-Babel/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	GPS-Babel
 PORTVERSION=	0.11
