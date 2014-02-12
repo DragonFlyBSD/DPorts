@@ -1,5 +1,5 @@
 # Created by: Romain Tartière <romain@blogreen.org>
-# $FreeBSD: x11-clocks/alarm-clock/Makefile 327778 2013-09-20 23:44:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	alarm-clock
 PORTVERSION=	1.4
@@ -20,6 +20,9 @@ USE_GSTREAMER=	yes
 USE_GNOME=	gtk20
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
