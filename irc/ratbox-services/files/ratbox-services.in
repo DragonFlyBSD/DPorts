@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: irc/ratbox-services/files/ratbox-services.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/irc/ratbox-services/files/ratbox-services.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: ratbox-services
 # REQUIRE: DAEMON
