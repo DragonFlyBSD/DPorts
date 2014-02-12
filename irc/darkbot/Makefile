@@ -1,5 +1,5 @@
 # Created by: A. Gabriel <backslash@BSDCode.org>
-# $FreeBSD: irc/darkbot/Makefile 341057 2014-01-25 16:54:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	darkbot
 PORTVERSION=	6f6.r6
@@ -18,6 +18,8 @@ SUB_FILES=	pkg-message
 PORTDOCS=	README
 PLIST_FILES=	bin/darkbot %%ETCDIR%%/logs/.pkgcreate man/man1/darkbot.1.gz
 PLIST_DIRSTRY=	%%ETCDIR%%/logs/ %%ETCDIR%%/dat/ %%ETCDIR%%
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
