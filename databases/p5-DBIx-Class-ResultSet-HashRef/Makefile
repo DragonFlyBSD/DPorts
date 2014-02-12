@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: databases/p5-DBIx-Class-ResultSet-HashRef/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-ResultSet-HashRef
 PORTVERSION=	1.002
