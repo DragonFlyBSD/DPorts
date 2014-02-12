@@ -1,5 +1,5 @@
 # Created by: Kristopher Zentner <kzentner@u.washington.edu>
-# $FreeBSD: audio/soundtracker/Makefile 338145 2013-12-30 17:16:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	soundtracker
 PORTVERSION=	0.6.8
