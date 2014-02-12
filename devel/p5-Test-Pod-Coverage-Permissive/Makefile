@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: devel/p5-Test-Pod-Coverage-Permissive/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-Pod-Coverage-Permissive
 PORTVERSION=	0.05
