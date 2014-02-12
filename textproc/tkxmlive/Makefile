@@ -1,5 +1,5 @@
 # Created by: nivit@users.sourceforge.net
-# $FreeBSD: textproc/tkxmlive/Makefile 339581 2014-01-13 10:44:50Z gahr $
+# $FreeBSD$
 
 PORTNAME=		tkxmlive
 PORTVERSION=		0.1.5
