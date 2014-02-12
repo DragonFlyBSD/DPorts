@@ -1,5 +1,5 @@
 # Created by: mich@freebsdcluster.org
-# $FreeBSD: security/hackbot/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hackbot
 PORTVERSION=	2.21
