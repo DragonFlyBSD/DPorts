@@ -1,5 +1,5 @@
 # Created by: Joerg Wunsch <joerg@FreeBSD.org>
-# $FreeBSD: graphics/sketch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sketch
 PORTVERSION=	0.3.7
@@ -21,6 +21,9 @@ USE_DOS2UNIX=	yes
 PLIST_FILES=	bin/sketch
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
