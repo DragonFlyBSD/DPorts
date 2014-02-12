@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-mastertickets/Makefile 337583 2013-12-26 18:03:12Z wg $
+# $FreeBSD$
 
 PORTNAME=	mastertickets
 PORTVERSION=	3.0.2
