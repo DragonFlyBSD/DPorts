@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/nfsping/Makefile 330948 2013-10-20 00:18:16Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	nfsping
 PORTVERSION=	0.1.20131017
