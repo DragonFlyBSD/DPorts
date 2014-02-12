@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: mail/exmh2/scripts/install 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/exmh2/scripts/install 340872 2014-01-24 00:14:07Z mat $
 #
 
 VERSION="`sed -ne 's/^set vers \(.*\)/\1/p' ${WRKSRC}/exmh.install`"
