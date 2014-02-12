@@ -1,5 +1,5 @@
 # Created by: Ricky E. <codeblock@eighthbit.net>
-# $FreeBSD: www/gist/Makefile 338493 2014-01-02 20:30:09Z swills $
+# $FreeBSD$
 
 PORTNAME=	gist
 PORTVERSION=	3.1.0
