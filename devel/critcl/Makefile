@@ -1,5 +1,5 @@
 # Created by: gahr@FreeBSD.org
-# $FreeBSD: devel/critcl/Makefile 332823 2013-11-05 08:59:18Z gahr $
+# $FreeBSD$
 
 PORTNAME=	critcl
 PORTVERSION=	3.1.10
