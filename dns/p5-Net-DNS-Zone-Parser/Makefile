@@ -1,5 +1,5 @@
 # Created by: Jimmy Bergman jimmy@sigint.se
-# $FreeBSD: dns/p5-Net-DNS-Zone-Parser/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-Zone-Parser
 PORTVERSION=	0.02
