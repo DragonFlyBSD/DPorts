@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-Cover-Report-Clover/Makefile 338908 2014-01-06 17:17:09Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-Cover-Report-Clover
 PORTVERSION=	0.35
