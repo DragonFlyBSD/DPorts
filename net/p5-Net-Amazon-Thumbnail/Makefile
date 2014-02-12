@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-Thumbnail/Makefile 341963 2014-01-31 09:45:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-Amazon-Thumbnail
 PORTVERSION=	0.06
