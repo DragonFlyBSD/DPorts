@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: sysutils/p5-Sys-CpuLoad/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Sys-CpuLoad
 PORTVERSION=	0.03
