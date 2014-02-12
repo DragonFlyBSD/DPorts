@@ -1,5 +1,5 @@
 # Created by: Michael Fausten <ports@michael-fausten.de>
-# $FreeBSD: www/smarty3/Makefile 331265 2013-10-22 13:48:22Z danilo $
+# $FreeBSD$
 
 PORTNAME=	smarty3
 PORTVERSION=	3.1.15
