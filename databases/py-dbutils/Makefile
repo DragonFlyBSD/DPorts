@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: databases/py-dbutils/Makefile 340853 2014-01-23 20:07:31Z mva $
+# $FreeBSD$
 
 PORTNAME=	dbutils
 PORTVERSION=	1.1
