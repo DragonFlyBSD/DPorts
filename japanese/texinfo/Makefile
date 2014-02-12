@@ -1,5 +1,5 @@
 # Created by: Mitsuru Yoshida <mitsuru@riken.go.jp>
-# $FreeBSD: japanese/texinfo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	texinfo
 PORTVERSION=	4.7
