@@ -1,5 +1,5 @@
 # Created by: Petr Rehor <prehor@gmail.com>
-# $FreeBSD: security/amavisd-milter/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	amavisd-milter
 PORTVERSION=	1.6.0
