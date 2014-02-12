@@ -1,5 +1,5 @@
 # Created by: Joe Barbish <fbsd_user@a1poweruser.com>
-# $FreeBSD: security/ppars/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ppars
 PORTVERSION=	1.0
