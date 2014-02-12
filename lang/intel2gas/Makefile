@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav
-# $FreeBSD: lang/intel2gas/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	intel2gas
 PORTVERSION=	1.3.3
