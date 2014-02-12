@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/geomorph/Makefile 339396 2014-01-11 00:52:02Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	geomorph
 PORTVERSION=	0.60.1
