@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: games/xbattle/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xbattle
 PORTVERSION=	5.4.1
@@ -18,6 +18,9 @@ MAN1=		xbattle.1
 CFLAGS+=	-Wno-return-type
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
