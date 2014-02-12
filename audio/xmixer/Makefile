@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/xmixer/Makefile 337243 2013-12-23 13:59:06Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xmixer
 PORTVERSION=	0.9.4
