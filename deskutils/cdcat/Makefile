@@ -1,5 +1,5 @@
 # Created by: Aren Tyr <aren.tyr@gawab.com>
-# $FreeBSD: deskutils/cdcat/Makefile 334952 2013-11-26 16:17:43Z makc $
+# $FreeBSD$
 
 PORTNAME=	cdcat
 PORTVERSION=	2.1
