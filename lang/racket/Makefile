@@ -1,5 +1,5 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-# $FreeBSD: head/lang/racket/Makefile 342142 2014-02-01 14:19:14Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	racket
 PORTVERSION=	5.93
