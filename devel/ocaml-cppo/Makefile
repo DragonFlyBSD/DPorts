@@ -1,5 +1,5 @@
 # Created by: Michael Grunewald
-# $FreeBSD: devel/ocaml-cppo/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cppo
 PORTVERSION=	0.9.2
