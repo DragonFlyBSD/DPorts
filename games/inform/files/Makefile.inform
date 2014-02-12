@@ -1,4 +1,4 @@
-# $FreeBSD: games/inform/files/Makefile.inform 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 OBJS=	arrays.o asm.o bpatch.o chars.o directs.o errors.o expressc.o \
 	expressp.o files.o inform.o lexer.o linker.o memory.o objects.o \
