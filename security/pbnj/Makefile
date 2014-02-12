@@ -1,5 +1,5 @@
 # Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
-# $FreeBSD: security/pbnj/Makefile 342160 2014-02-01 14:53:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pbnj
 PORTVERSION=	2.04
