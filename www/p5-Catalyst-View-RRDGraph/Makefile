@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-View-RRDGraph/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-View-RRDGraph
 PORTVERSION=	0.08
