@@ -1,5 +1,5 @@
 # Created by: David Le Brun <david@dyn-ns.net>
-# $FreeBSD: sysutils/p5-Filesys-DiskFree/Makefile 332957 2013-11-06 08:54:17Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Filesys-DiskFree
 PORTVERSION=	0.06
