@@ -1,5 +1,5 @@
 # Created by: sumikawa
-# $FreeBSD: audio/raop_play/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	raop_play
 PORTVERSION=	0.5.1
