@@ -1,4 +1,4 @@
-# $FreeBSD: www/kpartsplugin/Makefile 333596 2013-11-12 18:18:38Z avilla $
+# $FreeBSD$
 
 PORTNAME=	kpartsplugin
 DISTVERSION=	0.0-${PORTDATE}
