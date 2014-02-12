@@ -1,8 +1,8 @@
 # Created by: tobez
-# $FreeBSD: devel/p5-Devel-Constants/Makefile 332747 2013-11-04 17:01:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Devel-Constants
-PORTVERSION=	1.02
+PORTVERSION=	1.03
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
