@@ -1,5 +1,5 @@
 # Created by: Raul Pollicino <email-freebsd@def-defying.com>
-# $FreeBSD: mail/squirrelmail-tmda-plugin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	squirrelmail-tmda-plugin
 PORTVERSION=	1.0.2
