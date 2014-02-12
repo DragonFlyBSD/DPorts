@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: textproc/uim-m17nlib/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 .if defined(WITHOUT_X11)
 PKGNAMESUFFIX=	-m17nlib-nox11
