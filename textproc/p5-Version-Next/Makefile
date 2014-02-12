@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Version-Next/Makefile 340922 2014-01-24 18:10:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	Version-Next
 PORTVERSION=	0.002
