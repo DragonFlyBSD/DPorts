@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@tutopia.com>
-# $FreeBSD: science/silo/Makefile 336861 2013-12-18 23:27:40Z danilo $
+# $FreeBSD$
 
 PORTNAME=	silo
 PORTVERSION=	4.9.1
