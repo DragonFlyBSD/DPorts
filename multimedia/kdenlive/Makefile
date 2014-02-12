@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/kdenlive/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdenlive
 PORTVERSION=	0.9.6
