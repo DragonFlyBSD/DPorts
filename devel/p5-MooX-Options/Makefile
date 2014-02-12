@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-MooX-Options/Makefile 336881 2013-12-19 07:58:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooX-Options
 PORTVERSION=	4.003
