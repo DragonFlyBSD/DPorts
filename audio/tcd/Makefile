@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/tcd/Makefile 341842 2014-01-30 14:26:06Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tcd
 PORTVERSION=	2.2.0
