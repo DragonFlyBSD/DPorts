@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Net-SAML/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	Net-SAML
 PORTVERSION=	1.18
