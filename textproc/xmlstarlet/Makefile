@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/xmlstarlet/Makefile 332529 2013-11-02 18:08:12Z hrs $
+# $FreeBSD$
 
 PORTNAME=	xmlstarlet
 PORTVERSION=	1.4.2
