@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net-p2p/lopster/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lopster
 PORTVERSION=	1.2.2
