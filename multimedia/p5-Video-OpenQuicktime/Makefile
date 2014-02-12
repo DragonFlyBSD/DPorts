@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: multimedia/p5-Video-OpenQuicktime/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	Video-OpenQuicktime
 PORTVERSION=	1.02
