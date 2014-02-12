@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: mail/kshowmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kshowmail
 PORTVERSION=	4.1
