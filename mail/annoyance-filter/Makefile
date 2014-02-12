@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: mail/annoyance-filter/Makefile 333802 2013-11-14 22:55:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	annoyance-filter
 PORTVERSION=	1.0d
