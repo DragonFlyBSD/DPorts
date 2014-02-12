@@ -1,5 +1,5 @@
 # Created by: dbader@ece.unm.edu
-# $FreeBSD: biology/grappa/Makefile 337010 2013-12-20 13:27:13Z pawel $
+# $FreeBSD$
 
 PORTNAME=	grappa
 PORTVERSION=	2.0
