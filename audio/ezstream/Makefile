@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: audio/ezstream/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD$
 
 PORTNAME=	ezstream
 PORTVERSION=	0.5.6
