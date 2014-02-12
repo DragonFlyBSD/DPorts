@@ -1,5 +1,5 @@
 # Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-# $FreeBSD: devel/pear-PHP_Compat/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	PHP_Compat
 PORTVERSION=	1.5.0
