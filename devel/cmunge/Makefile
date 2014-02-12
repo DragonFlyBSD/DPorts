@@ -1,5 +1,5 @@
 # Created by: Frerich Raabe <frerich.raabe@gmx.de>
-# $FreeBSD: devel/cmunge/Makefile 329363 2013-10-04 19:25:55Z lme $
+# $FreeBSD$
 
 PORTNAME=	cmunge
 PORTVERSION=	1.0
@@ -17,6 +17,8 @@ MAKE_ARGS=	CC="${CC} ${CFLAGS}"
 
 PLIST_FILES=	bin/cmunge bin/ctran bin/proc-incl
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
