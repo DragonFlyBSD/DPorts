@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Moose-Test/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Moose-Test
 PORTVERSION=	0.01
