@@ -1,5 +1,5 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: www/py-django-haystack/Makefile 341751 2014-01-29 15:39:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-haystack
 PORTVERSION=	1.2.7
