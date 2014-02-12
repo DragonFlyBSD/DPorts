@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/tclhttpd/files/tclhttpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/tclhttpd/files/tclhttpd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: tclhttpd
 # REQUIRE: NETWORKING SERVERS
