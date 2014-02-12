@@ -1,8 +1,8 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: chinese/wordpress-zh_CN/Makefile 337280 2013-12-23 18:30:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	wordpress
-PORTVERSION=	3.8
+PORTVERSION=	3.8.1
 CATEGORIES=	chinese www
 MASTER_SITES=	http://cn.wordpress.org/ \
 		http://mirror.joehorn.idv.tw/wordpress/
