@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/pchecker/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	pchecker
 PORTVERSION=	1.15
