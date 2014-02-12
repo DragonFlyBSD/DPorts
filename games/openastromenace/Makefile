@@ -1,5 +1,5 @@
 # Created by: Oleg Alexeenkov
-# $FreeBSD: games/openastromenace/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	openastromenace
 PORTVERSION=	1.2.0
