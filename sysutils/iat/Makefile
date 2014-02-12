@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: sysutils/iat/Makefile 330477 2013-10-16 03:29:08Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	iat
 PORTVERSION=	0.1.7
