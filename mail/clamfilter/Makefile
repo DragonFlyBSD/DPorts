@@ -1,5 +1,5 @@
 # Created by: SeaD
-# $FreeBSD: mail/clamfilter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 # Anyone upgrading this port is advised to check all changes since the
 # previous tarball; I have updated MASTER_SITES to an alternative
@@ -15,6 +15,9 @@ MASTER_SITES=	http://www.wyae.de/software/Retired/ensita-clamfilter/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A small, efficient clamav content filter for Postfix
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 .if defined(WITH_CLAMAV_DEVEL)
 RUN_DEPENDS=	${LOCALBASE}/bin/clamdscan:${PORTSDIR}/security/clamav-devel
