@@ -1,5 +1,5 @@
 # Created by: Chip Marshall <chip@eboai.org>
-# $FreeBSD: audio/icecast2/Makefile 337636 2013-12-27 02:16:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	icecast2
 PORTVERSION=	2.3.3

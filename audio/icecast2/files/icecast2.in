@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: audio/icecast2/files/icecast2.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/audio/icecast2/files/icecast2.in 340851 2014-01-23 19:55:14Z mat $
 #
 
 # PROVIDE: icecast2
