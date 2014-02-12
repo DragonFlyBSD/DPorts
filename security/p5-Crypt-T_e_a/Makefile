@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: security/p5-Crypt-T_e_a/Makefile 342154 2014-02-01 14:42:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Crypt-T_e_a
 PORTVERSION=	2.12
