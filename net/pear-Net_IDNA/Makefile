@@ -1,5 +1,5 @@
 # Created by: Michael Frey <frey@raum3.de>
-# $FreeBSD: net/pear-Net_IDNA/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net_IDNA
 PORTVERSION=	0.8.1
