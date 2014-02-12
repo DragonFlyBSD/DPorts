@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-StickyQuery-DoCoMoGUID/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-StickyQuery-DoCoMoGUID
 PORTVERSION=	0.03
