@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/goonies/Makefile 329256 2013-10-04 01:47:03Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	goonies
 PORTVERSION=	1.0.1
@@ -25,6 +25,8 @@ PLIST_FILES=	bin/${PORTNAME}
 
 PORTDOCS=	*
 PORTDATA=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
