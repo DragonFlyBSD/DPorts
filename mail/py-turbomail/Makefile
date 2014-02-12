@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: mail/py-turbomail/Makefile 341197 2014-01-26 15:06:29Z mva $
+# $FreeBSD$
 
 PORTNAME=	turbomail
 PORTVERSION=	3.0.3
