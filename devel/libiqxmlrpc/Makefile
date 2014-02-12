@@ -1,9 +1,9 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD: devel/libiqxmlrpc/Makefile 336253 2013-12-12 10:53:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libiqxmlrpc
 PORTVERSION=	0.12.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel net
 MASTER_SITES=	SF
 
