@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/yfklog/Makefile 338555 2014-01-03 16:06:00Z adamw $
+# $FreeBSD$
 
 PORTNAME=	yfklog
 PORTVERSION=	0.3.5
@@ -26,6 +26,8 @@ NO_BUILD=	yes
 MAN1=		yfklog.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
