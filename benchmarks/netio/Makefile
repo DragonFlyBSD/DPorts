@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: benchmarks/netio/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netio
 PORTVERSION=	1.26
