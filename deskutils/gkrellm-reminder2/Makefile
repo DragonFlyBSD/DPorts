@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: deskutils/gkrellm-reminder2/Makefile 342277 2014-02-02 12:13:06Z antoine $
+# $FreeBSD$
 
 PORTNAME=	reminder
 PORTVERSION=	2.0.0
