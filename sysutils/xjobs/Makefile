@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/xjobs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xjobs
 PORTVERSION=	20120412
