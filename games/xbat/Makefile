@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xbat/Makefile 342289 2014-02-02 13:42:22Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xbat
 PORTVERSION=	1.11
