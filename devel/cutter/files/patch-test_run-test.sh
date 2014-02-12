@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/cutter/files/patch-test_run-test.sh 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/cutter/files/patch-test_run-test.sh 340725 2014-01-22 17:40:44Z mat $
 
 --- test/run-test.sh.orig
 +++ test/run-test.sh
