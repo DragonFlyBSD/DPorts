@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-app_config/Makefile 340900 2014-01-24 14:46:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	app_config
 PORTVERSION=	2.1.3
