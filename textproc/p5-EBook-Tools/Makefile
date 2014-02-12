@@ -1,5 +1,5 @@
 # Created by: simond@irrelevant.org
-# $FreeBSD: textproc/p5-EBook-Tools/Makefile 340601 2014-01-21 11:52:07Z mat $
+# $FreeBSD$
 
 PORTNAME=	EBook-Tools
 PORTVERSION=	0.4.9
