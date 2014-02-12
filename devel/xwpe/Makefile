@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: devel/xwpe/Makefile 341341 2014-01-27 08:41:45Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xwpe
 PORTVERSION=	1.5.30a
