@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: math/p5-Math-FFT/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-FFT
 PORTVERSION=	1.28
