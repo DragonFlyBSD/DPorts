@@ -1,5 +1,5 @@
 # Created by: Kentaro Inagaki <inagaki@tg.rim.or.jp>
-# $FreeBSD: japanese/xdvik/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xdvik
 PORTVERSION=	${VERSION_XDVIK}.${VERSION_JPATCH}
