@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav
-# $FreeBSD: converters/i18ntools/Makefile 337361 2013-12-24 15:34:38Z pawel $
+# $FreeBSD$
 
 PORTNAME=	i18ntools
 PORTVERSION=	1.0
