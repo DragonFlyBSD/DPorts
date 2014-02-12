@@ -1,4 +1,4 @@
-# $FreeBSD: databases/pear-Horde_Memcache/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Horde_Memcache
 PORTVERSION=	2.0.3
