@@ -1,5 +1,5 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
-# $FreeBSD: archivers/laszip/Makefile 333280 2013-11-09 11:31:36Z wg $
+# $FreeBSD$
 
 PORTNAME=	laszip
 PORTVERSION=	2.1.0
