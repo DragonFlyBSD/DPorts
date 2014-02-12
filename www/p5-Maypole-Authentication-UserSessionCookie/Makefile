@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier
-# $FreeBSD: www/p5-Maypole-Authentication-UserSessionCookie/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Maypole-Authentication-UserSessionCookie
 PORTVERSION=	1.4
