@@ -1,5 +1,5 @@
 # Created by: Alexandr Kovalenko <never@nevermind.kiev.ua>
-# $FreeBSD: audio/p5-MIDI/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MIDI
 PORTVERSION=	0.83
