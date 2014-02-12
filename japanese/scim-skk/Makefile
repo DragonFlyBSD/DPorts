@@ -1,5 +1,5 @@
 # Created by: Jun Mukai <mukai@jmuk.org>
-# $FreeBSD: japanese/scim-skk/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 #    $MCom: ports/japanese/scim-skk/Makefile,v 1.1 2006/09/30 05:17:05 ahze Exp $
 
 PORTNAME=	scim-skk
