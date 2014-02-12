@@ -1,5 +1,5 @@
 # Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-# $FreeBSD: biology/mapm3/Makefile 339532 2014-01-12 19:07:28Z riggs $
+# $FreeBSD$
 
 PORTNAME=	mapm3
 PORTVERSION=	3.0
