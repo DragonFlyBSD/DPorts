@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <alex@kapranoff.ru>
-# $FreeBSD: www/p5-CGI-Application-Plugin-ConfigAuto/Makefile 341747 2014-01-29 15:13:47Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-ConfigAuto
 PORTVERSION=	1.33
