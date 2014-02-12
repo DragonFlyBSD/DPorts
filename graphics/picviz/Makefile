@@ -1,5 +1,5 @@
 # Created by: Tim Hemel
-# $FreeBSD: graphics/picviz/Makefile 341075 2014-01-25 18:52:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	picviz
 PORTVERSION=	0.4
