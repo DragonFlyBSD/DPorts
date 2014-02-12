@@ -1,5 +1,5 @@
 # Created by: michaelnottebrock@gmx.net
-# $FreeBSD: security/dirmngr/Makefile 333558 2013-11-12 10:06:18Z tijl $
+# $FreeBSD$
 
 PORTNAME=	dirmngr
 PORTVERSION=	1.1.0
