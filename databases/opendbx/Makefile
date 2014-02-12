@@ -1,5 +1,5 @@
 # Created by: tremere@cainites.net
-# $FreeBSD: databases/opendbx/Makefile 340229 2014-01-19 02:36:25Z danilo $
+# $FreeBSD$
 
 PORTNAME=	opendbx
 PORTVERSION=	1.4.6
