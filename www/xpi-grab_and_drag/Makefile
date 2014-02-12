@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-grab_and_drag/Makefile 341206 2014-01-26 15:10:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	grab_and_drag
 PORTVERSION=	2.7.6
