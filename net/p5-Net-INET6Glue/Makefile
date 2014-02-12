@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: net/p5-Net-INET6Glue/Makefile 329356 2013-10-04 18:33:50Z ume $
+# $FreeBSD$
 
 PORTNAME=	Net-INET6Glue
 PORTVERSION=	0.6
