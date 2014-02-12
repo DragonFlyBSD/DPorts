@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/squid33/files/squid.in 324248 2013-08-04 19:40:27Z tmseck $
+# $FreeBSD: head/www/squid33/files/squid.in 324248 2013-08-04 19:40:27Z tmseck $
 #
 # PROVIDE: squid
 # REQUIRE: LOGIN

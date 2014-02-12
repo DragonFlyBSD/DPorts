@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/squid33/files/pkg-install.in 320406 2013-06-09 19:47:46Z tmseck $
+# $FreeBSD: head/www/squid33/files/pkg-install.in 320406 2013-06-09 19:47:46Z tmseck $
 #
 
 PATH=/bin:/usr/bin:/usr/sbin
