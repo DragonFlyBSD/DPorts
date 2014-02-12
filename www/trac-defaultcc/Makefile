@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea@FreeBSD.org>
-# $FreeBSD: www/trac-defaultcc/Makefile 341181 2014-01-26 14:31:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	defaultcc
 PORTVERSION=	0.1
