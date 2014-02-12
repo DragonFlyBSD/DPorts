@@ -1,5 +1,5 @@
 # Created by: Christoph Mallon <christoph.mallon@gmx.de>
-# $FreeBSD: lang/cparser/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cparser
 PORTVERSION=	0.9.14

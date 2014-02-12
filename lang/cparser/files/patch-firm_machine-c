@@ -1,4 +1,4 @@
-$FreeBSD: lang/cparser/files/patch-firm_machine-c 316956 2013-04-30 17:48:36Z sperber $
+$FreeBSD: head/lang/cparser/files/patch-firm_machine-c 316956 2013-04-30 17:48:36Z sperber $
 
 By rdivacky@, enables cparser to work out of the box on amd64
 
