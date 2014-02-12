@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/critterding/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	critterding
 DISTVERSION=	beta12
@@ -24,6 +24,8 @@ CONFIGURE_ARGS=	--disable-system-ftgl
 USE_GCC=	yes
 
 PORTDOCS=	README AUTHORS Changelog
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
