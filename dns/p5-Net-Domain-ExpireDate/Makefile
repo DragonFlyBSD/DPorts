@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: dns/p5-Net-Domain-ExpireDate/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Domain-ExpireDate
 PORTVERSION=	1.11
