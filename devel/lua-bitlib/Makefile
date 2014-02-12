@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: devel/lua-bitlib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bitlib
 PORTVERSION=	24
