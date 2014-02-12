@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxmath/Makefile 333544 2013-11-12 03:18:09Z danilo $
+# $FreeBSD$
 
 PORTNAME=	tuxmath
 PORTVERSION=	2.0.3
