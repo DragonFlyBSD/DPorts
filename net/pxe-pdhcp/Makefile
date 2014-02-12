@@ -1,4 +1,4 @@
-# $FreeBSD: net/pxe-pdhcp/Makefile 330609 2013-10-17 06:36:32Z hrs $
+# $FreeBSD$
 
 PORTNAME=	pxe-pdhcp
 PORTVERSION=	0.0.2007
