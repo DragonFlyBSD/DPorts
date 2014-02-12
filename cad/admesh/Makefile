@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/admesh/Makefile 338157 2013-12-30 18:31:26Z antoine $
+# $FreeBSD$
 
 PORTNAME=	admesh
 PORTVERSION=	0.95
