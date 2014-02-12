@@ -1,5 +1,5 @@
 # Created by: Geoffroy Desvernay <dgeo@ec-marseille.fr>
-# $FreeBSD: mail/dovecot-managesieve/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dovecot-managesieve
 PORTVERSION=	0.11.13
