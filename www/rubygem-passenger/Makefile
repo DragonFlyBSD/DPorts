@@ -1,5 +1,5 @@
 # Created by: Jacob Atzen <jatzen@gmail.com>
-# $FreeBSD: www/rubygem-passenger/Makefile 340006 2014-01-17 01:27:34Z osa $
+# $FreeBSD$
 
 PORTNAME=	passenger
 PORTVERSION=	4.0.35
