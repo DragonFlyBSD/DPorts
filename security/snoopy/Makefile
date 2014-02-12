@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: security/snoopy/Makefile 330225 2013-10-13 12:59:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	snoopy
 PORTVERSION=	1.9.0
