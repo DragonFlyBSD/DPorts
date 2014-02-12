@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/aqemu/Makefile 335998 2013-12-09 15:32:46Z makc $
+# $FreeBSD$
 
 PORTNAME=	aqemu
 PORTVERSION=	0.8.2
