@@ -1,5 +1,5 @@
 # Created by: joerg
-# $FreeBSD: sysutils/manck/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	manck
 PORTVERSION=	1.2
