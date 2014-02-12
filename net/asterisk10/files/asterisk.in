@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/asterisk10/files/asterisk.in 316277 2013-04-22 21:11:34Z flo $
+# $FreeBSD: head/net/asterisk10/files/asterisk.in 316277 2013-04-22 21:11:34Z flo $
 #
 
 # PROVIDE: asterisk
