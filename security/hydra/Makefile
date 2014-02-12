@@ -1,5 +1,5 @@
 # Created by: Laurent LEVIER <llevier@argosnet.com>
-# $FreeBSD: security/hydra/Makefile 338034 2013-12-29 19:02:08Z rm $
+# $FreeBSD$
 
 PORTNAME=	hydra
 PORTVERSION=	7.6
