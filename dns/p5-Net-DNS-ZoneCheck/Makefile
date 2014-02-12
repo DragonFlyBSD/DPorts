@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: dns/p5-Net-DNS-ZoneCheck/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-ZoneCheck
 PORTVERSION=	0.01
