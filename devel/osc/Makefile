@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: devel/osc/Makefile 330819 2013-10-19 01:46:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	osc
 PORTVERSION=	0.140.0
