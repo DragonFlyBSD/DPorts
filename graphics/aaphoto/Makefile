@@ -1,5 +1,5 @@
 # Created by: Andras Horvath <han@log69.com>
-# $FreeBSD: graphics/aaphoto/Makefile 332613 2013-11-03 13:28:32Z feld $
+# $FreeBSD$
 
 PORTNAME=	aaphoto
 PORTVERSION=	0.43.1
