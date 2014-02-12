@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/libole2/files/patch-ltmain.sh 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/libole2/files/patch-ltmain.sh 340725 2014-01-22 17:40:44Z mat $
 
 --- ltmain.sh	2001/08/27 09:51:26	1.1
 +++ ltmain.sh	2001/08/27 09:51:42
