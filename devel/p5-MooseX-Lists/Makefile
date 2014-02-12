@@ -1,5 +1,5 @@
 # Created by: andrey@kostenko.name
-# $FreeBSD: devel/p5-MooseX-Lists/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Lists
 PORTVERSION=	0.05
