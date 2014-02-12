@@ -1,5 +1,5 @@
 
-$FreeBSD: net/rabbitmq/files/patch-rabbitmqctl 325310 2013-08-24 20:04:01Z olgeni $
+$FreeBSD: head/net/rabbitmq/files/patch-rabbitmqctl 325310 2013-08-24 20:04:01Z olgeni $
 
 --- scripts/rabbitmqctl.orig
 +++ scripts/rabbitmqctl
