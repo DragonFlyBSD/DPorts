@@ -1,5 +1,5 @@
 # Created by: Sean Farley <sean-freebsd@farley.org>
-# $FreeBSD: devel/p5-Mknod/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Mknod
 PORTVERSION=	0.02
