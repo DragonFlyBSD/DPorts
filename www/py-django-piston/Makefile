@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: www/py-django-piston/Makefile 341751 2014-01-29 15:39:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-piston
 PORTVERSION=	0.2.3
