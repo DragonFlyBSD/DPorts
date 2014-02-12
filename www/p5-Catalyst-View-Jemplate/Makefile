@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-View-Jemplate/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-View-Jemplate
 PORTVERSION=	0.06
