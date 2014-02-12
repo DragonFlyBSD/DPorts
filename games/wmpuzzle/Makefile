@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: games/wmpuzzle/Makefile 328695 2013-09-29 13:48:26Z danilo $
+# $FreeBSD$
 
 PORTNAME=	wmpuzzle
 PORTVERSION=	0.5.2
