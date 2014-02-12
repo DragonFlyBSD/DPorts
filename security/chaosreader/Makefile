@@ -1,5 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/chaosreader/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	chaosreader
 PORTVERSION=	0.94
