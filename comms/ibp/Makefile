@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/ibp/Makefile 338172 2013-12-30 21:30:58Z db $
+# $FreeBSD$
 
 PORTNAME=	ibp
 PORTVERSION=	0.21
