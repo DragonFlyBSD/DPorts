@@ -1,5 +1,5 @@
 # Created by: Anton Yudin (<contact@toha.org.ua>)
-# $FreeBSD: java/dbvis/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dbvis
 PORTVERSION=	7.1
