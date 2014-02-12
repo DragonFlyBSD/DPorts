@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/prelude-manager/files/prelude-manager.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/prelude-manager/files/prelude-manager.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: prelude_manager
 # REQUIRE: NETWORKING SERVERS
