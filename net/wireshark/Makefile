@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/wireshark/Makefile 337226 2013-12-23 04:30:36Z marcus $
+# $FreeBSD$
 
 PORTNAME?=	wireshark
 PORTVERSION=	1.10.5
