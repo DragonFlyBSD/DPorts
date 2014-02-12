@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/build/Makefile 341407 2014-01-27 13:47:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	build
 PORTVERSION=	0.3.9
