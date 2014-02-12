@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-qtruby/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qtruby
 PORTVERSION=	${KDE4_VERSION}
