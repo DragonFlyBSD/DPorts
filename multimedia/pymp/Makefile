@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: multimedia/pymp/Makefile 331149 2013-10-21 15:10:23Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pymp
 PORTVERSION=	1.1
