@@ -1,5 +1,5 @@
 # Created by: Greg Hewgill <greg@hewgill.com>
-# $FreeBSD: security/zebedee/Makefile 334309 2013-11-19 12:56:31Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	zebedee
 PORTVERSION=	2.5.3
