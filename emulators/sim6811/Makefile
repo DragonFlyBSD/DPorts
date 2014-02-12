@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: emulators/sim6811/Makefile 337012 2013-12-20 13:36:41Z pawel $
+# $FreeBSD$
 
 PORTNAME=	sim6811
 PORTVERSION=	1.6
