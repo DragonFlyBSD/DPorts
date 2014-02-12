@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-simplecov/Makefile 333608 2013-11-12 19:45:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	simplecov
 PORTVERSION=	0.8.1
