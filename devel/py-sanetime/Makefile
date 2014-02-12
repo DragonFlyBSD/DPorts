@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-sanetime/Makefile 342100 2014-02-01 08:55:13Z koobs $
+# $FreeBSD$
 
 PORTNAME=	sanetime
 PORTVERSION=	4.2.3
