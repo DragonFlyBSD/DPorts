@@ -1,5 +1,5 @@
 # Created by: simonm@dcs.gla.ac.uk
-# $FreeBSD: games/cgoban/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cgoban
 PORTVERSION=	1.9.14
