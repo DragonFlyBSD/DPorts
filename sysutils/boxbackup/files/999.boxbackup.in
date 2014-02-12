@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/boxbackup/files/999.boxbackup.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/boxbackup/files/999.boxbackup.in 340872 2014-01-24 00:14:07Z mat $
 #
 # Box Backup monthly store compare
 #
