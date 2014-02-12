@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: graphics/gsnapshot/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gsnapshot
 PORTVERSION=	1.1
@@ -12,6 +12,9 @@ COMMENT=	GTK+ based screen capture
 
 OPTIONS_DEFINE=	DOCS
 
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
+
 USES=		pkgconfig gmake
 USE_AUTOTOOLS=	aclocal autoheader automake autoconf libtool
 AUTOMAKE_ARGS=	--add-missing
@@ -19,6 +22,7 @@ USE_GNOME=	gtk20 libwnck libxml2
 USE_XORG=	x11 xmu
 
 CFLAGS+=	-fPIC -I${LOCALBASE}/include/libxml2
+LDFLAGS+=	-lm -L${LOCALBASE}/lib -lgmodule-2.0
 
 PORTDOCS=	AUTHORS COPYING INSTALL README TODO
 

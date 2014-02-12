@@ -1,1 +1,0 @@
-LDFLAGS+= -lm -L${LOCALBASE}/lib -lgmodule-2.0
