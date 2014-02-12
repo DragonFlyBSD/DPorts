@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: net/p5-XML-RPC-Fast/Makefile 341953 2014-01-31 09:15:24Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-RPC-Fast
 PORTVERSION=	0.8
