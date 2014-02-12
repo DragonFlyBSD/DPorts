@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: deskutils/narval/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	narval
 PORTVERSION=	2.0.2
