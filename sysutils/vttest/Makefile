@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: sysutils/vttest/Makefile 335652 2013-12-05 02:42:11Z nivit $
+# $FreeBSD$
 
 PORTNAME=	vttest
 PORTVERSION=	2013.08.18
