@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: sysutils/comconsole/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	comconsole
 PORTVERSION=	0.1
