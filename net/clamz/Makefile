@@ -1,5 +1,5 @@
 # Created by: Helko Glathe <glathe.helko@googlemail.com>
-# $FreeBSD: net/clamz/Makefile 341915 2014-01-31 06:48:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	clamz
 PORTVERSION=	0.5
