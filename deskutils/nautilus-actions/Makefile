@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: deskutils/nautilus-actions/Makefile 335773 2013-12-06 16:32:34Z kwm $
+# $FreeBSD$
 #   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.21 2010/04/16 23:41:09 kwm Exp $
 
 PORTNAME=	nautilus-actions
