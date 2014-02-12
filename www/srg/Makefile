@@ -1,5 +1,5 @@
 # Created by: Dmitry Semkin <lslarry@gmail.com>
-# $FreeBSD: www/srg/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	srg
 PORTVERSION=	1.3.6
@@ -19,6 +19,9 @@ GNU_CONFIGURE=	yes
 MAN1=		srg.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-patch:
