@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: sysutils/automounter/Makefile 334736 2013-11-24 15:35:59Z ak $
+# $FreeBSD$
 
 PORTNAME=	automounter
 PORTVERSION=	1.5
