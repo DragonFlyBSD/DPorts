@@ -1,5 +1,5 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: editors/xmlcopyeditor/Makefile 334551 2013-11-22 07:53:52Z gahr $
+# $FreeBSD$
 
 PORTNAME=	xmlcopyeditor
 PORTVERSION=	1.2.0.11
