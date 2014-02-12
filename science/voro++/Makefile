@@ -1,5 +1,5 @@
 # Created by: Jason Bacon
-# $FreeBSD: science/voro++/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	voro++
 PORTVERSION=	0.4.5
