@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <graudeejs@gmail.com>
-# $FreeBSD: audio/shairport/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	shairport
 PORTVERSION=	0.05
@@ -32,6 +32,8 @@ PLIST_FILES=	bin/${PORTNAME} bin/hairtunes bin/${PORTNAME}.pl
 PORTDOCS=	README.md
 
 REV=		b1cb9ea
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 

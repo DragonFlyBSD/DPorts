@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: audio/shairport/files/shairport.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/audio/shairport/files/shairport.in 340851 2014-01-23 19:55:14Z mat $
 #
 # PROVIDE: shairport
 # REQUIRE: LOGIN avahi_daemon
