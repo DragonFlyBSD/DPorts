@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: textproc/p5-Text-Format+NWrap/Makefile 340474 2014-01-20 20:52:54Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Format+NWrap
 PORTVERSION=	0.52
