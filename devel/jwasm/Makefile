@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: devel/jwasm/Makefile 331148 2013-10-21 15:05:55Z ak $
+# $FreeBSD$
 
 PORTNAME=	jwasm
 PORTVERSION=	211
