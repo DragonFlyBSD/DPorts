@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: www/p5-Mobile-UserAgent/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	Mobile-UserAgent
 PORTVERSION=	1.05
