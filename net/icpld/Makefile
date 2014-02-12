@@ -1,5 +1,5 @@
 # Created by: krion@FreeBSD.org
-# $FreeBSD: net/icpld/Makefile 340986 2014-01-25 05:38:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	icpld
 PORTVERSION=	1.1.5
