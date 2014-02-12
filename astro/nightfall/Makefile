@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: astro/nightfall/Makefile 336769 2013-12-17 20:57:25Z tijl $
+# $FreeBSD$
 
 PORTNAME=	nightfall
 PORTVERSION=	1.70
