@@ -1,5 +1,5 @@
 # Created by: Dmitry Shulgachik <legh@legh.ru>
-# $FreeBSD: sysutils/jx/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jx
 PORTVERSION=	1.23
