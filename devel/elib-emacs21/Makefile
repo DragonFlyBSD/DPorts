@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-# $FreeBSD: devel/elib-emacs21/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 MAINTAINER=	ports@FreeBSD.org
 
