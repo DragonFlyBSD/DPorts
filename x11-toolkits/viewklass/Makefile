@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11-toolkits/viewklass/Makefile 340305 2014-01-19 14:25:38Z miwi $
+# $FreeBSD$
 
 PORTNAME=	viewklass
 PORTVERSION=	0.7.2
