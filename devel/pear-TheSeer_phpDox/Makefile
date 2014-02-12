@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pear-TheSeer_phpDox/Makefile 333401 2013-11-10 15:03:21Z antoine $
+# $FreeBSD$
 
 PORTNAME=	phpDox
 PORTVERSION=	0.5.0
