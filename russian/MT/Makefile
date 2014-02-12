@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: russian/MT/Makefile 338047 2013-12-29 21:48:08Z rakuco $
+# $FreeBSD$
 
 CATEGORIES=	russian www
 MASTER_SITES=	http://movable-type.ru/downloads/
