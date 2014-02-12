@@ -1,5 +1,5 @@
 # Created by: Alexander Kuehn
-# $FreeBSD: graphics/import-pictures/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	import-pictures
 PORTVERSION=	1.4
@@ -25,6 +25,9 @@ MAN1=		${PORTNAME}.1
 PORTDOCS=	import-pictures.html
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
