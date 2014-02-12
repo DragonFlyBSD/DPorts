@@ -1,5 +1,5 @@
 # Created by: Joshua Goodall <joshua@roughtrade.net>
-# $FreeBSD: net/spread-j/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	spread
 PORTVERSION=	3.17.3
