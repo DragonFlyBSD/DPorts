@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/domination/Makefile 339551 2014-01-12 21:44:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	domination
 PORTVERSION=	1.1.1.5
