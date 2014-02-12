@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: multimedia/freetuxtv/Makefile 342095 2014-02-01 01:16:58Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	freetuxtv
 PORTVERSION=	0.6.5
