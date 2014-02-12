@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: mail/mutt14/Makefile 341583 2014-01-28 14:40:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mutt
 PORTVERSION=	1.4.2.3
