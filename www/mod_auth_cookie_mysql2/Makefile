@@ -1,5 +1,5 @@
 # Created by: clement
-# $FreeBSD: www/mod_auth_cookie_mysql2/Makefile 336534 2013-12-15 13:54:30Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_cookie_mysql2
 PORTVERSION=	1.0
