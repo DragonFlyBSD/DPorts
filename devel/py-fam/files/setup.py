@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-fam/files/setup.py 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/py-fam/files/setup.py 340872 2014-01-24 00:14:07Z mat $
 from distutils.core import setup, Extension
 import os
 LOCALBASE = os.environ.get('LOCALBASE', '/usr/local')
