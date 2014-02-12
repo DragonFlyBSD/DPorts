@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Git-Repository-Plugin-Log/Makefile 333088 2013-11-07 13:03:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Git-Repository-Plugin-Log
 PORTVERSION=	1.310
