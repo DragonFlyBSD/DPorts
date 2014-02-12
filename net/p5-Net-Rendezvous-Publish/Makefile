@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: net/p5-Net-Rendezvous-Publish/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Rendezvous-Publish
 PORTVERSION=	0.04
