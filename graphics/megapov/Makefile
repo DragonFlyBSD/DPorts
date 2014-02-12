@@ -1,5 +1,5 @@
 # Created by: maho@FreeBSD.org
-# $FreeBSD: graphics/megapov/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	megapov
 PORTVERSION=	1.2.1
