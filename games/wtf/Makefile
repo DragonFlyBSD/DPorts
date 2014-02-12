@@ -1,5 +1,5 @@
 # Created by: Maxime Henrion <mux@FreeBSD.org>
-# $FreeBSD: games/wtf/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	wtf
 PORTVERSION=	20130928
