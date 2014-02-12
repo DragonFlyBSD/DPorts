@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: x11-clocks/xdaliclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xdaliclock
 PORTVERSION=	2.40
