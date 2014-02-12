@@ -1,5 +1,5 @@
 # Created by: J. Giovannangeli
-# $FreeBSD: devel/ocaml-opam/Makefile 340403 2014-01-20 14:48:06Z marino $
+# $FreeBSD$
 
 PORTNAME=	opam
 PORTVERSION=	1.1.0
