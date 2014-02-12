@@ -1,5 +1,5 @@
 # Created by: Mun-Kyo Seo <munggo@gmail.com>
-# $FreeBSD: www/skytemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	skytemplate
 PORTVERSION=	1.4.0
