@@ -1,4 +1,4 @@
-# $FreeBSD: irc/weechat-devel/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	weechat
 PORTVERSION=	20140110
