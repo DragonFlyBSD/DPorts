@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: textproc/p5-Text-SpellChecker-GUI/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-SpellChecker-GUI
 PORTVERSION=	0.0.2
