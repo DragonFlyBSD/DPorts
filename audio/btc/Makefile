@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chimesnet.com>
-# $FreeBSD: audio/btc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	btc
 PORTVERSION=	258
