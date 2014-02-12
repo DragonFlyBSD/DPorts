@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: sysutils/gnome-schedule/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 #   $MCom: ports/sysutils/gnome-schedule/Makefile,v 1.5 2007/09/10 06:20:14 mezz Exp $
 
 PORTNAME=	gnome-schedule
