@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-themes/clearlooks-themes/Makefile 341355 2014-01-27 09:24:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	clearlooks
 PKGNAMESUFFIX+=	-themes
