@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/extman/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	extman
 PORTVERSION=	1.1
