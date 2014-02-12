@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-watchdog/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	watchdog
 PORTVERSION=	0.6.0
