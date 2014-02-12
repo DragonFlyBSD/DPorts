@@ -1,5 +1,5 @@
 # Created by: Dan Langille <dan@freebsddiary.org>
-# $FreeBSD: security/logcheck/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	logcheck
 PORTVERSION=	1.3.15
