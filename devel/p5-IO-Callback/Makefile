@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-IO-Callback/Makefile 329623 2013-10-06 18:47:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	IO-Callback
 PORTVERSION=	1.10
@@ -21,7 +21,4 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	IO::Callback.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
