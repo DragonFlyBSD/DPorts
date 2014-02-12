@@ -1,5 +1,5 @@
 # Created by: Lukasz Stelmach <lukasz.stelmach@iem.pw.edu.pl>
-# $FreeBSD: www/mathjax/Makefile 334355 2013-11-19 22:04:57Z cs $
+# $FreeBSD$
 
 PORTNAME=	MathJax
 PORTVERSION=	2.2
