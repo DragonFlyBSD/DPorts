@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/capicity/Makefile 339425 2014-01-11 13:32:35Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	capicity
 PORTVERSION=	1.0
