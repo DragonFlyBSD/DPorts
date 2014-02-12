@@ -1,5 +1,5 @@
 # Created by: Natacha Porte <natbsd@instinctive.eu>
-# $FreeBSD: dns/ddns/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ddns
 PORTVERSION=	1.0
