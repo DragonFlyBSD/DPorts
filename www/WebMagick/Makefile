@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/WebMagick/Makefile 338883 2014-01-06 14:35:06Z ache $
+# $FreeBSD$
 
 PORTNAME=	WebMagick
 PORTVERSION=	2.03p24
