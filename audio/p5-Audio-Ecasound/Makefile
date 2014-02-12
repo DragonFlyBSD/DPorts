@@ -1,4 +1,4 @@
-# $FreeBSD: audio/p5-Audio-Ecasound/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Audio-Ecasound
 PORTVERSION=	1.01
