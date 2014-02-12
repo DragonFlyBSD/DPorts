@@ -1,5 +1,5 @@
 # Created by: Nate Lawson <njl@FreeBSD.org>
-# $FreeBSD: print/xpp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xpp
 PORTVERSION=	1.5
