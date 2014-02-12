@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: irc/ircd-ratbox-devel/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ircd-ratbox
 PORTVERSION=	3.0.7
