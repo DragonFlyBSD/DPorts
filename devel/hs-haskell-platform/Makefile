@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-haskell-platform/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	haskell-platform
 PORTVERSION=	2013.2.0.0
