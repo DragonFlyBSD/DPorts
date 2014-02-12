@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: misc/e2fsprogs-libblkid/Makefile 329746 2013-10-07 23:19:49Z mandree $
+# $FreeBSD$
 
 PORTREVISION=	0
 CATEGORIES=	misc devel
