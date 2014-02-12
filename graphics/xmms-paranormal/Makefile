@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-paranormal/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmms-paranormal
 PORTVERSION=	0.2.0
@@ -17,12 +17,14 @@ RUN_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 
 CFLAGS+=	-I${LOCALBASE}/include/libxml2/libxml
 
+USES=		gmake
 USE_GL=		glut
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 USE_LDCONFIG=	yes
 USE_GNOME=	gtk12
-USE_GMAKE=	yes
+
+MAKE_JOBS_UNSAFE=yes
 
 NO_STAGE=	yes
 post-patch:
