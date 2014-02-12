@@ -1,8 +1,9 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/trytond_calendar_scheduling/Makefile 334432 2013-11-20 17:20:57Z bsam $
+# $FreeBSD$
 
 PORTNAME=	trytond_calendar_scheduling
 PORTVERSION=	2.4.1
+PORTREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/${PORTVERSION:R}/
 
@@ -17,6 +18,7 @@ RUN_DEPENDS=	trytond>=2.4.0:${PORTSDIR}/finance/trytond \
 CONFLICTS=	trytond28_calendar_scheduling-2.8.*
 
 USE_PYTHON=	yes
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
