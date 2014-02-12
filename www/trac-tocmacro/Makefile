@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-tocmacro/Makefile 337589 2013-12-26 18:12:45Z wg $
+# $FreeBSD$
 
 PORTNAME=	tocmacro
 PORTVERSION=	11.0.0.3
