@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/nocatsplash/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nocatsplash
 PORTVERSION=	0.82
