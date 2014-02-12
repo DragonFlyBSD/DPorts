@@ -1,5 +1,5 @@
 # Created by: Giacomo Mariani <giacomomariani@yahoo.it>
-# $FreeBSD: x11-wm/fvwm-crystal/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fvwm-crystal
 PORTVERSION=	3.0.6
