@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/kye/Makefile 336145 2013-12-11 05:35:50Z eadler $
+# $FreeBSD$
 
 PORTNAME=	kye
 PORTVERSION=	1.0
