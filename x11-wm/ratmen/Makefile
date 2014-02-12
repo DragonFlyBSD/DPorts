@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: x11-wm/ratmen/Makefile 338000 2013-12-29 14:56:54Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ratmen
 PORTVERSION=	2.2.3
