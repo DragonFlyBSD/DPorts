@@ -1,4 +1,4 @@
-# $FreeBSD: math/libmissing/Makefile 333636 2013-11-13 01:38:47Z bf $
+# $FreeBSD$
 
 PORTNAME=	libmissing
 DISTVERSION=	20130815
