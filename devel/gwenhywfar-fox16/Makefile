@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gwenhywfar-fox16/Makefile 329953 2013-10-10 00:58:16Z jhale $
+# $FreeBSD$
 
 PORTREVISION=	3
 PKGNAMESUFFIX=	-${SLAVEPORT}
