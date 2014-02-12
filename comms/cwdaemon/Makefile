@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/cwdaemon/Makefile 338022 2013-12-29 16:17:51Z db $
+# $FreeBSD$
 
 PORTNAME=	cwdaemon
 PORTVERSION=	0.9.4
