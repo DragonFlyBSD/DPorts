@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: archivers/bicom/Makefile 328236 2013-09-25 02:06:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	bicom
 PORTVERSION=	1.01
