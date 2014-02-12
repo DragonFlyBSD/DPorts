@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev
-# $FreeBSD: net-im/cicquin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cicquin
 PORTVERSION=	0.1
