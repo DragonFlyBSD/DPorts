@@ -1,5 +1,5 @@
 # Created by: Alexey Zaytsev
-# $FreeBSD: sysutils/gkrellmwho2/Makefile 333734 2013-11-14 01:21:37Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	gkrellmwho2
 PORTVERSION=	0.2.8
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Displays logged in users
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:${PORTSDIR}/sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:${PORTSDIR}/sysutils/gkrellm2
