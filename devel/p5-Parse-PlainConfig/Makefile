@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: devel/p5-Parse-PlainConfig/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Parse-PlainConfig
 PORTVERSION=	2.06
