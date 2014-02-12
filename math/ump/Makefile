@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: math/ump/Makefile 334676 2013-11-23 15:18:03Z nivit $
+# $FreeBSD$
 
 PORTNAME=	ump
 PORTVERSION=	0.8.6
