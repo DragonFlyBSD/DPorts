@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-WWW-Mechanize-PSGI/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-WWW-Mechanize-PSGI
 PORTVERSION=	0.35
