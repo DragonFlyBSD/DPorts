@@ -1,5 +1,5 @@
 # Created by: Yusuke Nawano <azuki@azkey.org>
-# $FreeBSD: japanese/skkfep/Makefile 335731 2013-12-06 11:23:15Z ak $
+# $FreeBSD$
 
 PORTNAME=	skkfep
 PORTVERSION=	0.87
