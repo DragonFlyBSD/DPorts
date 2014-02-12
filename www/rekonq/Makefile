@@ -1,4 +1,4 @@
-# $FreeBSD: www/rekonq/Makefile 339965 2014-01-16 19:31:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	rekonq
 PORTVERSION=	2.4.2
