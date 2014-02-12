@@ -1,4 +1,4 @@
-# $FreeBSD: russian/stardict-dal/Makefile 333307 2013-11-09 16:00:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-dal
 PORTVERSION=	2.4.2
