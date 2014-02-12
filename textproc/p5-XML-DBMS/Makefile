@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/p5-XML-DBMS/Makefile 334287 2013-11-19 08:13:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	XML-DBMS
 PORTVERSION=	1.03
