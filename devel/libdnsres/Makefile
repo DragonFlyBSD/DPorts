@@ -1,5 +1,5 @@
 # Created by: Phil Oleson <oz@nixil.net>
-# $FreeBSD: devel/libdnsres/Makefile 341665 2014-01-28 22:22:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libdnsres
 PORTVERSION=	0.1a
