@@ -1,5 +1,5 @@
 # Created by: Slaven Rezic <slaven@rezic.de>
-# $FreeBSD: misc/lesspipe/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lesspipe
 PORTVERSION=	1.55
