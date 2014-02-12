@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net/vncreflector/files/vncreflector.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/vncreflector/files/vncreflector.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: vncreflector
 # REQUIRE: DAEMON

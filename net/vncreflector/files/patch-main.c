@@ -1,5 +1,5 @@
 
-$FreeBSD: net/vncreflector/files/patch-main.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/vncreflector/files/patch-main.c 340725 2014-01-22 17:40:44Z mat $
 
 --- main.c.orig
 +++ main.c
