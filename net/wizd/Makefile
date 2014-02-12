@@ -1,9 +1,9 @@
 # Created by: Ayumi M <ayu@commun.jp>
-# $FreeBSD: net/wizd/Makefile 333588 2013-11-12 16:28:52Z tijl $
+# $FreeBSD$
 
 PORTNAME=	wizd
 PORTVERSION=	24
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net multimedia
 MASTER_SITES=	SF/${PORTNAME}/Sources/Sources%20v${PORTVERSION}
 DISTFILES=	wizd_sources_v${PORTVERSION}.zip simplicity_v1-2.zip

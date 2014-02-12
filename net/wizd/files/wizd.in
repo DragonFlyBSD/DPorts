@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/wizd/files/wizd.in 333588 2013-11-12 16:28:52Z tijl $
+# $FreeBSD: head/net/wizd/files/wizd.in 333588 2013-11-12 16:28:52Z tijl $
 #
 # PROVIDE: wizd
 # REQUIRE: LOGIN cleanvar
