@@ -1,5 +1,5 @@
 # Created by: Eugene M. Kim <ab@astralblue.net>
-# $FreeBSD: mail/spamass-milter/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spamass-milter
 PORTVERSION=	0.3.2

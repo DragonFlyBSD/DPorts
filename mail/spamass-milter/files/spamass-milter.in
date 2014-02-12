@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/spamass-milter/files/spamass-milter.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/spamass-milter/files/spamass-milter.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: spamass-milter
