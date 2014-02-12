@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/undms/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	undms
 PORTVERSION=	1.3
