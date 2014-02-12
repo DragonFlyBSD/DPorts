@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xtron/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xtron
 PORTVERSION=	1.1a
