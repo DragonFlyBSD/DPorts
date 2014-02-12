@@ -1,5 +1,5 @@
 # Created by: martin.dieringer@gmx.de
-# $FreeBSD: textproc/html2tex/Makefile 341603 2014-01-28 15:51:25Z mat $
+# $FreeBSD$
 
 PORTNAME=	html2tex
 PORTVERSION=	2.7
