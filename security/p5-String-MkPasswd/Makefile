@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: security/p5-String-MkPasswd/Makefile 342155 2014-02-01 14:42:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	String-MkPasswd
 PORTVERSION=	0.04
