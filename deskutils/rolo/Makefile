@@ -1,5 +1,5 @@
 # Created by: Andrew Hsu <ahsu@users.sf.net>
-# $FreeBSD: deskutils/rolo/Makefile 342330 2014-02-02 16:15:24Z antoine $
+# $FreeBSD$
 
 PORTNAME=	rolo
 PORTVERSION=	011
