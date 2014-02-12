@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: dns/vizone/Makefile 331326 2013-10-22 21:30:14Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	vizone
 PORTVERSION=	0.1
