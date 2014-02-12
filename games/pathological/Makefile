@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: games/pathological/Makefile 341887 2014-01-30 21:04:38Z pawel $
+# $FreeBSD$
 
 PORTNAME=	pathological
 PORTVERSION=	1.1.3
