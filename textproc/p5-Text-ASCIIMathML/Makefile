@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: textproc/p5-Text-ASCIIMathML/Makefile 340594 2014-01-21 10:43:14Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-ASCIIMathML
 PORTVERSION=	0.81
