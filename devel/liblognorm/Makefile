@@ -1,4 +1,4 @@
-# $FreeBSD: devel/liblognorm/Makefile 336758 2013-12-17 19:37:20Z pawel $
+# $FreeBSD$
 
 PORTNAME=	liblognorm
 PORTVERSION=	1.0.0
