@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippe@freebsdbrasil.com.br>
-# $FreeBSD: mail/xf-spf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xf-spf
 PORTVERSION=	0.2
@@ -24,6 +24,9 @@ PLIST_SUB=	QMAIL_PREFIX=${QMAIL_PREFIX}
 PORTDOCS=	README TODO CHANGELOG COPYRIGHT
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
