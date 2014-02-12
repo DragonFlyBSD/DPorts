@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: games/tomenet/Makefile 335101 2013-11-28 15:31:40Z culot $
+# $FreeBSD$
 
 PORTNAME=	tomenet
 PORTVERSION=	4.5.5
@@ -27,6 +27,8 @@ do-install:
 	(cd ${WRKDIR}/${DISTNAME} && ${COPYTREE_SHARE} lib ${STAGEDIR}${DATADIR})
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/.tomenetrc ${STAGEDIR}${ETCDIR}/tomenetrc
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
