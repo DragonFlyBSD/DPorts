@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/freedroidrpg/Makefile 334270 2013-11-18 22:52:46Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	freedroidrpg
 PORTVERSION=	0.15
