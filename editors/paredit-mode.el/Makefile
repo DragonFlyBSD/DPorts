@@ -1,4 +1,4 @@
-# $FreeBSD: editors/paredit-mode.el/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	paredit-mode.el
 PORTVERSION=	23
