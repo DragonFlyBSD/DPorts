@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: x11/wmctrl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmctrl
 PORTVERSION=	1.07
