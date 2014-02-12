@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: sysutils/rtty/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rtty
 PORTVERSION=	4.0
