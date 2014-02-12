@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-yunomi/Makefile 335841 2013-12-07 19:00:07Z wg $
+# $FreeBSD$
 
 PORTNAME=	yunomi
 PORTVERSION=	0.3.0
