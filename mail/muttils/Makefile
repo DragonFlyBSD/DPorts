@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jhelfman@experts-exchange.com>
-# $FreeBSD: mail/muttils/Makefile 333048 2013-11-07 01:20:48Z jgh $
+# $FreeBSD$
 
 PORTNAME=	muttils
 PORTVERSION=	1.3
