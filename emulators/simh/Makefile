@@ -1,5 +1,5 @@
 # Created by: jraynard
-# $FreeBSD: emulators/simh/Makefile 334361 2013-11-19 23:08:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	simh
 PORTVERSION=	3.9.0
