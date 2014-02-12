@@ -1,5 +1,5 @@
 # Created by: Soeren Boll Overgaard <boll@tolkien.dk>
-# $FreeBSD: sysutils/wmcpuload/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmcpuload
 PORTVERSION=	1.0.1
