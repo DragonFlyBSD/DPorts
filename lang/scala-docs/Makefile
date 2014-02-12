@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: lang/scala-docs/Makefile 330493 2013-10-16 10:29:26Z ale $
+# $FreeBSD$
 
 PORTNAME=	scala-docs
 PORTVERSION=	2.10.3
@@ -14,6 +14,8 @@ USE_XZ=		yes
 NO_BUILD=	yes
 
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
