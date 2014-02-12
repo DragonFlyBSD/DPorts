@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: security/p5-App-Genpass/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	App-Genpass
 PORTVERSION=	2.33
