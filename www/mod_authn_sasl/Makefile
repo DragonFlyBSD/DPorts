@@ -1,5 +1,5 @@
 # Created by: Joerg Pulz <Joerg.Pulz@frm2.tum.de>
-# $FreeBSD: www/mod_authn_sasl/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_authn_sasl
 PORTVERSION=	1.2
