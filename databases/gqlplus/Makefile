@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: databases/gqlplus/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gqlplus
 PORTVERSION=	1.15
@@ -18,6 +18,9 @@ USE_AUTOTOOLS=	autoconf automake aclocal
 AUTOMAKE_ARGS=	--add-missing
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
