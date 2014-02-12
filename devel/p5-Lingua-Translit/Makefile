@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Lingua-Translit/Makefile 333869 2013-11-15 14:24:29Z mat $
+# $FreeBSD$
 
 PORTNAME=	Lingua-Translit
 PORTVERSION=	0.19
