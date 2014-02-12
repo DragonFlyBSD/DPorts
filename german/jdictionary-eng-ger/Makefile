@@ -1,5 +1,5 @@
 # Created by: hq@FreeBSD.org
-# $FreeBSD: german/jdictionary-eng-ger/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jdictionary-eng-ger
 PORTVERSION=	1.4
