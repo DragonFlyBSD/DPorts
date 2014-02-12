@@ -1,5 +1,5 @@
 # Created by: Nikola Kolev <koue@chaosophia.net>
-# $FreeBSD: sysutils/graffer/Makefile 337466 2013-12-25 23:50:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	graffer
 PORTVERSION=	1.0
