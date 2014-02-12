@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/greybird-theme/Makefile 331055 2013-10-20 19:00:14Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	greybird
 PORTVERSION=	1.2.2
