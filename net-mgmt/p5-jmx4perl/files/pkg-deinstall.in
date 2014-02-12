@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net-mgmt/p5-jmx4perl/files/pkg-deinstall.in 308361 2012-12-06 02:50:17Z tj $
+# $FreeBSD: head/net-mgmt/p5-jmx4perl/files/pkg-deinstall.in 308361 2012-12-06 02:50:17Z tj $
 
 ETCDIR=%%ETCDIR%%
 ETC_FILES="%%ETC_FILES%%"
