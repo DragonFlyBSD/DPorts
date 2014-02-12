@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-lens/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	lens
 PORTVERSION=	3.9.0.2
