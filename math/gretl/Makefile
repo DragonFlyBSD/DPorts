@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/gretl/Makefile 334399 2013-11-20 08:34:26Z bf $
+# $FreeBSD$
 
 PORTNAME=	gretl
 PORTVERSION=	1.9.13
