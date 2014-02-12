@@ -1,5 +1,5 @@
 # Created by: Takefu
-# $FreeBSD: devel/p5-POE-Quickie/Makefile 334404 2013-11-20 10:01:07Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	POE-Quickie
 PORTVERSION=	0.18
