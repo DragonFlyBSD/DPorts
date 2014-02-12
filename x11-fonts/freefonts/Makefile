@@ -1,5 +1,5 @@
 # Created by: erich@FreeBSD.org
-# $FreeBSD: x11-fonts/freefonts/Makefile 339119 2014-01-08 13:22:46Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	freefonts
 PORTVERSION=	0.10
