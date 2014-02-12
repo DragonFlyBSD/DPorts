@@ -1,9 +1,9 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD: cad/kicad-devel/Makefile 336172 2013-12-11 14:53:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=		kicad
 DISTVERSION=    r${BZR_SRC_REV}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=		cad
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=     mr
