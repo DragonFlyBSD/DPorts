@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: devel/p5-CBOR-XS/Makefile 339017 2014-01-07 18:51:38Z wg $
+# $FreeBSD$
 
 PORTNAME=	CBOR-XS
 PORTVERSION=	1.25
