@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: www/dhttpd/Makefile 341088 2014-01-25 20:30:10Z lme $
+# $FreeBSD$
 
 PORTNAME=	dhttpd
 PORTVERSION=	1.02a
