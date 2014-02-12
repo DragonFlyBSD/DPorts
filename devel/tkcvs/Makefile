@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@augusta.de>
-# $FreeBSD: devel/tkcvs/Makefile 334313 2013-11-19 13:09:11Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkcvs
 PORTVERSION=	8.2.3
