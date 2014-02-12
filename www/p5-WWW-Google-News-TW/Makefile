@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-WWW-Google-News-TW/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Google-News-TW
 PORTVERSION=	0.12
