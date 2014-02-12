@@ -1,5 +1,5 @@
 # Created by: Lapo Luchin <lapo@lapo.it>
-# $FreeBSD: devel/commit-patch/Makefile 341009 2014-01-25 11:06:11Z ak $
+# $FreeBSD$
 
 PORTNAME=	commit-patch
 PORTVERSION=	2.5
