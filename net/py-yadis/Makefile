@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: net/py-yadis/Makefile 341932 2014-01-31 07:54:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	yadis
 PORTVERSION=	1.1.0
