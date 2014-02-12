@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/dailystrips/Makefile 333184 2013-11-08 07:32:59Z jgh $
+# $FreeBSD$
 
 PORTNAME=	dailystrips
 PORTVERSION=	1.0.28
