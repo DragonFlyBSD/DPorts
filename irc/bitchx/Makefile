@@ -1,5 +1,5 @@
 # Created by: Jimbo Bahooli <griffin@blackhole.iceworld.org>
-# $FreeBSD: irc/bitchx/Makefile 334941 2013-11-26 14:59:40Z mat $
+# $FreeBSD$
 
 PORTNAME=	BitchX
 DISTVERSION=	1.2-final
