@@ -1,5 +1,5 @@
 # Created by: msciciel
-# $FreeBSD: mail/smtp-gated/Makefile 328760 2013-09-29 23:36:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	smtp-gated
 PORTVERSION=	1.4.20.0
