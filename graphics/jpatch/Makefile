@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/jpatch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jpatch
 DISTVERSION=	0.4p1
