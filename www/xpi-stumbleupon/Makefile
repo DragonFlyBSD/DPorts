@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-stumbleupon/Makefile 341217 2014-01-26 15:13:43Z miwi $
+# $FreeBSD$
 
 PORTNAME=	stumbleupon
 PORTVERSION=	3.76
