@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/ipfmeta/Makefile 339486 2014-01-12 08:09:12Z cy $
+# $FreeBSD$
 
 PORTNAME=	ipfmeta
 PORTVERSION=	1.3
