@@ -1,5 +1,5 @@
 # Created by: Jose M Rodriguez <josemi@freebsd.jazztel.es>
-# $FreeBSD: mail/mutt14-lite/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 # Just to get a mutt-lite pkg on pkg cluster
 
