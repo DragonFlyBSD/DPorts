@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: www/p5-Apache-MP3/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Apache-MP3
 PORTVERSION=	4.00
