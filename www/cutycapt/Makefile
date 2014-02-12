@@ -1,5 +1,5 @@
 # Created by: Axel Gonzalez <loox@e-shell.net>
-# $FreeBSD: www/cutycapt/Makefile 334912 2013-11-26 01:46:40Z makc $
+# $FreeBSD$
 
 PORTNAME=	cutycapt
 PORTVERSION=	20100608
