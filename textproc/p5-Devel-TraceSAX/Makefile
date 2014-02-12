@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: textproc/p5-Devel-TraceSAX/Makefile 340601 2014-01-21 11:52:07Z mat $
+# $FreeBSD$
 
 PORTNAME=	Devel-TraceSAX
 PORTVERSION=	0.021
