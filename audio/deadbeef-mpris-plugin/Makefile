@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/deadbeef-mpris-plugin/Makefile 337899 2013-12-28 20:22:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	deadbeef-mpris-plugin
 PORTVERSION=	2.1.3
