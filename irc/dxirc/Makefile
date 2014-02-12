@@ -1,4 +1,4 @@
-# $FreeBSD: irc/dxirc/Makefile 329703 2013-10-07 13:15:43Z gahr $
+# $FreeBSD$
 
 PORTNAME=	dxirc
 PORTVERSION=	1.10.0
