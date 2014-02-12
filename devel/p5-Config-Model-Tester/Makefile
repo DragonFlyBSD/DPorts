@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Config-Model-Tester/Makefile 334034 2013-11-16 21:44:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Config-Model-Tester
 PORTVERSION=	2.047
