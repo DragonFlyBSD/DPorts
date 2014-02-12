@@ -1,5 +1,5 @@
 # Created by: Alex Allan <alex@kamaz.org.uk>
-# $FreeBSD: audio/taglookup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	taglookup
 PORTVERSION=	0.2
