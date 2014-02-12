@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: games/holotz-castle/Makefile 335615 2013-12-04 10:26:55Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	holotz-castle
 PORTVERSION=	1.3.14
