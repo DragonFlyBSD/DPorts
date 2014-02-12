@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ftp/filezilla/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	filezilla
 PORTVERSION=	3.6.0.2
