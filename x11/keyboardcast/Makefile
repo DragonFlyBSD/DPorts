@@ -1,5 +1,5 @@
 # Created by: eimar.koort
-# $FreeBSD: x11/keyboardcast/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	keyboardcast
 PORTVERSION=	0.1.1
