@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: databases/p5-Search-InvertedIndex/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Search-InvertedIndex
 PORTVERSION=	1.14
