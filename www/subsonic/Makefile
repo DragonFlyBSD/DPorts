@@ -1,5 +1,5 @@
 # Created by: Nicole Reid <root@cooltrainer.org>
-# $FreeBSD: www/subsonic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	subsonic
 PORTVERSION=	4.8
