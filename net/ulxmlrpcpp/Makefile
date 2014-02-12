@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/ulxmlrpcpp/Makefile 331873 2013-10-28 17:23:35Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ulxmlrpcpp
 PORTVERSION=	1.7.5
