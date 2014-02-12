@@ -1,5 +1,5 @@
 # Created by: Denis Rakhmangulov <danfocus@gmail.com>
-# $FreeBSD: net-im/iserverd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iserverd
 PORTVERSION=	2.5.5
