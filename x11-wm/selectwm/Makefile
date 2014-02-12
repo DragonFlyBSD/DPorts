@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/selectwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	selectwm
 PORTVERSION=	0.4.1
