@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/bug5/Makefile 339155 2014-01-08 16:15:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	bug5
 PORTVERSION=	1.17
