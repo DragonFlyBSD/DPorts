@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@FreeBSD.org>
-# $FreeBSD: cad/kicad/Makefile 339847 2014-01-15 22:54:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kicad
 DISTVERSION=	2010-05-05-BZR2356
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://iut-tice.ujf-grenoble.fr/cao/	\
@@ -39,6 +39,9 @@ WRKSRC=		${WRKDIR}/${SFNAME}
 PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S|^${PREFIX}/||}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
