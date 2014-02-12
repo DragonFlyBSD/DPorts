@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/pixz/files/Makefile.in 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PROG=	pixz
 SRCS=	pixz.c common.c endian.c cpu.c read.c write.c list.c
