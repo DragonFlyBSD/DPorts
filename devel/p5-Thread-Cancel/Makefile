@@ -1,5 +1,5 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: devel/p5-Thread-Cancel/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Thread-Cancel
 PORTVERSION=	1.13
