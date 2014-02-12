@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: devel/p5-Devel-Size-Report/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Devel-Size-Report
 PORTVERSION=	0.13
@@ -17,16 +17,13 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
-NO_STAGE=	yes
-
-MAN3=		Devel::Size::Report.3
 
 .if !defined(NOPORTDOCS)
 PORTDOCS=	CHANGES
 
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${ECHO_MSG} "===> Documentation installed in ${DOCSDIR}."
 .endif
 
