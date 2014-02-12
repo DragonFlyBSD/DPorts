@@ -1,5 +1,5 @@
 # Created by: Sutra Zhou <zhoushuqun@gmail.com>
-# $FreeBSD: www/xpi-yslow/Makefile 341220 2014-01-26 15:14:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	yslow
 PORTVERSION=	3.1.0
