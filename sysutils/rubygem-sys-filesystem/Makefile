@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: sysutils/rubygem-sys-filesystem/Makefile 332050 2013-10-30 02:57:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	sys-filesystem
 PORTVERSION=	1.1.0
