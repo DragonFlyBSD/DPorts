@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/ncdu/Makefile 329478 2013-10-05 16:52:12Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ncdu
 PORTVERSION=	1.10
