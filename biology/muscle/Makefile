@@ -1,5 +1,5 @@
 # Created by: Motomichi Matsuzaki <mzaki@biol.s.u-tokyo.ac.jp>
-# $FreeBSD: biology/muscle/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	muscle
 PORTVERSION=	3.6
