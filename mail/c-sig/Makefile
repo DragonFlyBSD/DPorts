@@ -1,5 +1,5 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD: mail/c-sig/Makefile 328375 2013-09-26 16:03:43Z wg $
+# $FreeBSD$
 
 PORTNAME=	c-sig
 PORTVERSION=	3.8
