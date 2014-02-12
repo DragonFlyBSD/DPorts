@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/gnotime/Makefile 342280 2014-02-02 12:36:36Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gnotime
 PORTVERSION=	2.4.1
