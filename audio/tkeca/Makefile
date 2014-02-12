@@ -1,4 +1,4 @@
-# $FreeBSD: audio/tkeca/Makefile 337989 2013-12-29 14:17:15Z crees $
+# $FreeBSD$
 
 PORTNAME=	tkeca
 PORTVERSION=	4.4.3
