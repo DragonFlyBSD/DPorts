@@ -1,5 +1,5 @@
 # Created by: Harald Schmalzbauer <h.schmalzbauer@omnisec.de>
-# $FreeBSD: www/xpi-neo-diggler/Makefile 341212 2014-01-26 15:12:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	neo-diggler
 PORTVERSION=	1.0.6
