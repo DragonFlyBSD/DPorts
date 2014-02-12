@@ -1,5 +1,5 @@
 # Created by: Cyril Guibourg
-# $FreeBSD: mail/milter-greylist-devel/Makefile 336739 2013-12-17 16:25:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	milter-greylist
 PORTVERSION=	4.5.7
