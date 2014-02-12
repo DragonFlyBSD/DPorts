@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/mp3asm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mp3asm
 PORTVERSION=	0.1.3.1
@@ -19,6 +19,8 @@ GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-0.1
 PLIST_FILES=	bin/mp3asm
 PORTDOCS=	Changelog README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
