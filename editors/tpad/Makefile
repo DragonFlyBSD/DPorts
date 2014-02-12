@@ -1,5 +1,5 @@
 # Created by: Antonio Bonifati <ant@monitor.deis.unical.it>
-# $FreeBSD: editors/tpad/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tpad
 PORTVERSION=	1.3
