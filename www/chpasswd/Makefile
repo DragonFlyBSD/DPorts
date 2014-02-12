@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: www/chpasswd/Makefile 329122 2013-10-02 22:56:00Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	chpasswd
 PORTVERSION=	2.2.4
