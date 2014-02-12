@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/gscan2pdf/Makefile 332387 2013-11-01 14:52:57Z marino $
+# $FreeBSD$
 
 PORTNAME=	gscan2pdf
 PORTVERSION=	1.0.4
@@ -69,6 +69,9 @@ MAN1=		${PORTNAME}.1 scanadf-perl.1 scanimage-perl.1
 PORT_VERBS=	${PORTNAME} Gscan2pdf
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
