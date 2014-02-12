@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: graphics/p5-GD-Barcode/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	GD-Barcode
 PORTVERSION=	1.15
