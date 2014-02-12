@@ -1,5 +1,5 @@
 # Created by: Lucas Holt <luke@justjournal.com>
-# $FreeBSD: deskutils/jjclient/Makefile 342310 2014-02-02 14:57:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jjclient
 PORTVERSION=	1.0.2
