@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/qfsm/Makefile 340471 2014-01-20 20:48:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	qfsm
 PORTVERSION=	0.53.0
