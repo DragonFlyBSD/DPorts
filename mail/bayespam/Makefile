@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: mail/bayespam/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bayespam
 PORTVERSION=	0.9.2
@@ -22,6 +22,9 @@ FILES_DOCS=	AUTHORS COPYING Changelog INSTALL README TODO \
 FILES_SCRIPTS=	bayes_process_email.pl bayes_spam_check.pl bayestest.pl
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
