@@ -1,5 +1,5 @@
 #!/bin/csh
-# $FreeBSD: emulators/javatari/files/javatari.in 317067 2013-05-01 23:27:09Z bdrewery $
+# $FreeBSD: head/emulators/javatari/files/javatari.in 317067 2013-05-01 23:27:09Z bdrewery $
 
 set JAVA = "%%LOCALBASE%%/bin/java"
 set JARPATH = "%%JAVALIBDIR%%"

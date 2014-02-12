@@ -1,5 +1,5 @@
 # Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-# $FreeBSD: emulators/javatari/Makefile 336918 2013-12-19 14:43:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	javatari
 PORTVERSION=	4.0
