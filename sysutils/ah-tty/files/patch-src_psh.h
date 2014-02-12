@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/ah-tty/files/patch-src_psh.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/sysutils/ah-tty/files/patch-src_psh.h 340725 2014-01-22 17:40:44Z mat $
 
 --- src/psh.h.orig
 +++ src/psh.h
