@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: converters/showkey/Makefile 335851 2013-12-07 21:20:25Z cs $
+# $FreeBSD$
 
 PORTNAME=	showkey
 PORTVERSION=	1.5
