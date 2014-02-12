@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/epix/Makefile 334898 2013-11-25 22:04:36Z antoine $
+# $FreeBSD$
 
 PORTNAME=	epix
 PORTVERSION=	1.2.13
