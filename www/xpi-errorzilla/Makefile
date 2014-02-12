@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: www/xpi-errorzilla/Makefile 341200 2014-01-26 15:07:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	errorzilla
 PORTVERSION=	0.42
