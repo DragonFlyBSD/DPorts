@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Module-Install-AuthorRequires/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Module-Install-AuthorRequires
 PORTVERSION=	0.02
