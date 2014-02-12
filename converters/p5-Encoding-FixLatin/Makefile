@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: converters/p5-Encoding-FixLatin/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Encoding-FixLatin
 PORTVERSION=	1.02
@@ -14,8 +14,4 @@ COMMENT=	Takes mixed encoding input and produces UTF-8 output
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	fix_latin.1
-MAN3=	Encoding::FixLatin.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
