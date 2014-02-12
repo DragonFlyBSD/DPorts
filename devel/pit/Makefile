@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/pit/Makefile 337405 2013-12-25 11:24:39Z pawel $
+# $FreeBSD$
 
 PORTNAME=	pit
 PORTVERSION=	0.1.0
