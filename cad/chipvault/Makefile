@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/chipvault/Makefile 340465 2014-01-20 20:30:18Z antoine $
+# $FreeBSD$
 
 PORTNAME=	chipvault
 PORTVERSION=	200607
