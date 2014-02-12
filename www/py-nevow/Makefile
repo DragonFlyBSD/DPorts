@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/py-nevow/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD$
 
 PORTNAME=	nevow
 PORTVERSION=	0.10.0
