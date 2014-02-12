@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/stardict-MerrianWebster/Makefile 333307 2013-11-09 16:00:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-merrianwebster
 PORTVERSION=	2.4.2
