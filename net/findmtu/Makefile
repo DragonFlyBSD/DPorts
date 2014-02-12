@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net/findmtu/Makefile 330165 2013-10-12 18:11:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	findmtu
 PORTVERSION=	0.9
