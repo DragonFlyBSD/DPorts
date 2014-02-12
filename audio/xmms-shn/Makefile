@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: audio/xmms-shn/Makefile 328596 2013-09-28 16:59:55Z naddy $
+# $FreeBSD$
 
 PORTNAME=	xmms-shn
 PORTVERSION=	2.4.1
