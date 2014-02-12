@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-deeptest/Makefile 332035 2013-10-30 02:31:04Z swills $
+# $FreeBSD$
 
 PORTNAME=	deep_test
 PORTVERSION=	1.2.2
