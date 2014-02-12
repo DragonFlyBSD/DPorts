@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/msort/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	msort
 PORTVERSION=	8.53
