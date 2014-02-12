@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: audio/id3ed/Makefile 342338 2014-02-02 16:54:09Z pawel $
+# $FreeBSD$
 
 PORTNAME=	id3ed
 PORTVERSION=	1.10.4
