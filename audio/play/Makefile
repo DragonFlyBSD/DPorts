@@ -1,5 +1,5 @@
 # Created by: Masanori Kiriake <seiken@nbs.co.jp>
-# $FreeBSD: audio/play/Makefile 330543 2013-10-16 21:18:48Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	play
 PORTVERSION=	1.0
