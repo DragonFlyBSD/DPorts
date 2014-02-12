@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: mail/exipick/Makefile 335151 2013-11-29 07:37:52Z araujo $
+# $FreeBSD$
 
 PORTNAME=	exipick
 PORTVERSION=	20100323.0
