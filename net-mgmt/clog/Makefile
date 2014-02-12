@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net-mgmt/clog/Makefile 339615 2014-01-13 17:55:52Z garga $
+# $FreeBSD$
 
 PORTNAME=	clog
 PORTVERSION=	1.6
