@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: multimedia/py-ffmpeg/Makefile 340843 2014-01-23 18:06:23Z dbn $
+# $FreeBSD$
 
 PORTNAME=	ffmpeg
 PORTVERSION=	1.2.4
