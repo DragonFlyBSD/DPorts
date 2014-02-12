@@ -1,5 +1,5 @@
 # Created by: Jan Jungnickel <jan@jungnickel.com>
-# $FreeBSD: games/crimson/Makefile 332286 2013-10-31 21:16:15Z danilo $
+# $FreeBSD$
 
 PORTNAME=	crimson
 PORTVERSION=	0.5.3
