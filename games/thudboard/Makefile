@@ -1,5 +1,5 @@
 # Created by: Jan Stocker <Jan.Stocker@t-online.de>
-# $FreeBSD: games/thudboard/Makefile 329394 2013-10-04 21:54:54Z lme $
+# $FreeBSD$
 
 PORTNAME=	thudboard
 PORTVERSION=	1.8
