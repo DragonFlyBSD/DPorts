@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: net-mgmt/netdisco/Makefile 333292 2013-11-09 14:05:30Z wg $
+# $FreeBSD$
 
 PORTNAME=	netdisco
 PORTVERSION=	1.3.2
