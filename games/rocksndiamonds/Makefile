@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/rocksndiamonds/Makefile 334841 2013-11-25 11:37:34Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	rocksndiamonds
 PORTVERSION=	3.3.1.2
