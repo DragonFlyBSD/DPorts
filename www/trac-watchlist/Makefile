@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-watchlist/Makefile 341188 2014-01-26 14:33:08Z miwi $
+# $FreeBSD$
 
 PORTNAME=	watchlist
 PORTVERSION=	1.0.${SVN_REV}
