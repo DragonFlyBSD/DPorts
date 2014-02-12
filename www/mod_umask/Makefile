@@ -1,5 +1,5 @@
 # Created by: Ralf Gebhart <gebhart@secnetix.de>
-# $FreeBSD: www/mod_umask/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_umask
 PORTVERSION=	0.1.0
