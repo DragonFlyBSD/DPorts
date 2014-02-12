@@ -1,5 +1,5 @@
 # Created by: Rodrigo Nicola Lombardo <rodnic@gmail.com>
-# $FreeBSD: www/rubygem-url-mount/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME= 	url_mount
 PORTVERSION=	0.2.1
