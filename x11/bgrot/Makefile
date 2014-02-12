@@ -1,5 +1,5 @@
 # Created by: Matthew Fuller <fullermd@futuresouth.com>
-# $FreeBSD: x11/bgrot/Makefile 339247 2014-01-09 14:56:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bgrot
 PORTVERSION=	1.31
