@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/interlogic/Makefile 328736 2013-09-29 21:42:52Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	interlogic
 PORTVERSION=	0.30
