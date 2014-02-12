@@ -1,5 +1,5 @@
 # Created by: Bjoern A. Zeeb <bzeeb+freebsd+ports@zabbadoz.net>
-# $FreeBSD: sysutils/amrstat/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	amrstat
 PORTVERSION=	20070216

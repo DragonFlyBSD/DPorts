@@ -2,7 +2,7 @@
 #
 # Show status of LSI Logic's MegaRAID RAID controllers.
 #
-# $FreeBSD: sysutils/amrstat/files/407.status-amr-raid.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/amrstat/files/407.status-amr-raid.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # If there is a global system configuration file, suck it in.
