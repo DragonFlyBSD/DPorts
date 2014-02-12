@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/luckybackup/Makefile 334502 2013-11-21 16:14:42Z jhale $
+# $FreeBSD$
 
 PORTNAME=	luckybackup
 PORTVERSION=	0.4.7
