@@ -1,5 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/spybye/Makefile 342028 2014-01-31 16:49:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	spybye
 PORTVERSION=	0.3

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: security/spybye/files/spybye.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/spybye/files/spybye.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: spybye
 # REQUIRE: DAEMON
