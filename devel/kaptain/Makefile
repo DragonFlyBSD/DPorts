@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: devel/kaptain/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	kaptain
 PORTVERSION=	0.73
