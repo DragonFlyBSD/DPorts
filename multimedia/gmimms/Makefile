@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-# $FreeBSD: multimedia/gmimms/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gmimms
 DISTVERSION=	0.0.9
