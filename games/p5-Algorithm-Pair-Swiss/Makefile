@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: games/p5-Algorithm-Pair-Swiss/Makefile 332736 2013-11-04 14:49:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-Pair-Swiss
 PORTVERSION=	0.14
