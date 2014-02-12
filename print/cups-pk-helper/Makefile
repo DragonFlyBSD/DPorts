@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: print/cups-pk-helper/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 #   $MCom: ports/print/cups-pk-helper/Makefile,v 1.1 2009/12/29 16:01:07 ahze Exp $
 
 PORTNAME=	cups-pk-helper
