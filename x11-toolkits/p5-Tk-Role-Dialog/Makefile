@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: x11-toolkits/p5-Tk-Role-Dialog/Makefile 333894 2013-11-15 17:24:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Tk-Role-Dialog
 PORTVERSION=	1.112.380
